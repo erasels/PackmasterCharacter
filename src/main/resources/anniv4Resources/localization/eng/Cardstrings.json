@@ -1,0 +1,339 @@
+{
+  "${ModID}:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:Rummage": {
+    "NAME": "Rummage",
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random card in hand by 1.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of !M! random cards in hand by 1."
+  },
+  "${ModID}:Cardistry": {
+    "NAME": "Cardistry",
+    "DESCRIPTION": "Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile."
+  },
+  "${ModID}:GreedyPitch": {
+    "NAME": "Greedy Pitch",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Greedy: Deal !D! damage again."
+  },
+  "${ModID}:PreppingUp": {
+    "NAME": "Prepping Up",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! additional cards."
+  },
+  "${ModID}:FullHouse": {
+    "NAME": "Full House",
+    "DESCRIPTION": "Gain !M! Strength. NL If your hand is full, gain 1 Intangible.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Strength. NL If your hand is full, gain 1 Intangible."
+  },
+  "${ModID}:PocketLint": {
+    "NAME": "Pocket Lint",
+    "DESCRIPTION": "Gain !B! Block. NL Retain your hand this turn."
+  },
+  "${ModID}:RoadRage": {
+    "NAME": "Road Rage",
+    "DESCRIPTION": "Draw !M! cards. NL After you play 1 card, discard your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Road Rage",
+      "After you play a card, discard your hand."
+    ]
+  },
+  "${ModID}:HeavySlam": {
+    "NAME": "Heavy SLam",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Greedy: Enemy loses !M! Strength."
+  },
+  "${ModID}:GreedIsGood": {
+    "NAME": "Greed is Good",
+    "DESCRIPTION": "While you're ${ModID}:Greedy, cards deal !M! additional damage and grant !M! additional Block."
+  },
+  "${ModID}:HitTheBooks": {
+    "NAME": "Hit the Books",
+    "DESCRIPTION": "${ModID}:Greedy: Deal !D! damage to ALL enemies. NL Otherwise, draw !M! cards."
+  },
+  "${ModID}:GrandSlam": {
+    "NAME": "Grand Slam",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
+  },
+  "${ModID}:BurningPocket": {
+    "NAME": "Burning Pocket",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Apply !M! Vulnerable. NL If this is Exhausted, add a *Miracle into your hand."
+  },
+  "${ModID}:FromMyHat": {
+    "NAME": "From My Hat",
+    "DESCRIPTION": "Gain !B! Block. NL Add a random Attack into your hand. NL It gains Retain."
+  },
+  "${ModID}:AwakenDeath": {
+    "NAME": "Awaken",
+    "DESCRIPTION": "When you would die, heal !M! HP instead and remove this buff. NL At the end of combat (if untriggered), heals for half as much."
+  },
+  "${ModID}:Chronoboost": {
+    "NAME": "Chrono-Boost",
+    "DESCRIPTION": "Gain !M! Strength. NL Gain 1 Strength for every 12th card you play."
+  },
+  "${ModID}:DefensiveMode": {
+    "NAME": "Defensive Mode",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Weak."
+  },
+  "${ModID}:Execute": {
+    "NAME": "Execute",
+    "DESCRIPTION": "Deal !D! damage twice. NL If you are in a Stance, deal !D! damage a third time."
+  },
+  "${ModID}:GhostflameStrike": {
+    "NAME": "Ghostflame Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Channel !M! Ghostflame."
+  },
+  "${ModID}:HyperBeam": {
+    "NAME": "HYPER BEAM",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E] [E].",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]."
+  },
+  "${ModID}:InvincibleStrength": {
+    "NAME": "Invincible",
+    "DESCRIPTION": "Gain !M! ${ModID}:Invincible. NL If you already had Invincible, it lasts another turn instead."
+  },
+  "${ModID}:PrepareCrush": {
+    "NAME": "Prepare Crush",
+    "DESCRIPTION": "Gain !B! Block. NL On your next turn, gain [E] and add *SLIME *CRUSH! to your hand."
+  },
+  "${ModID}:ShapersBlessing": {
+    "NAME": "Shaper's Blessing",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Enter Ancient Stance.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block and !M! Plated Armor. NL Enter Ancient Stance."
+  },
+  "${ModID}:SlimeCrush": {
+    "NAME": "SLIME CRUSH!",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+  },
+  "${ModID}:YouAreMine": {
+    "NAME": "YOU ARE MINE!",
+    "DESCRIPTION": "Apply !M! Vulnerable and remove the target's Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !M! Weak, and remove the target's Block. NL Exhaust."
+  },
+  "${ModID}:Anemia": {
+    "NAME": "Anemia",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to any Poisoned enemies."
+  },
+  "${ModID}:ArsenalGear": {
+    "NAME": "Arsenal Gear",
+    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare cards to your hand. They cost 0."
+  },
+  "${ModID}:ConjureBarrage": {
+    "NAME": "Conjure Barrage",
+    "DESCRIPTION": "Fill your hand with *Magic *Missiles. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Fill your hand with *Magic *Missiles+. NL Exhaust."
+  },
+  "${ModID}:DarkRitual": {
+    "NAME": "Dark Ritual",
+    "DESCRIPTION": "Lose !M! HP. NL Gain 100 Gold. NL Exhaust."
+  },
+  "${ModID}:Knighthood": {
+    "NAME": "Knighthood",
+    "DESCRIPTION": "Choose a card in hand to Upgrade permanently. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " to upgrade permanently."
+    ]
+  },
+  "${ModID}:Inferno": {
+    "NAME": "Inferno",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If this didn't end combat, take !D! damage."
+  },
+  "${ModID}:LethalShot": {
+    "NAME": "Lethal Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison and !${ModID}:m2! Vulnerable."
+  },
+  "${ModID}:MagicMissile": {
+    "NAME": "Magic Missile",
+    "DESCRIPTION": "Deal !D! damage. NL Increase the damage dealt by *Magic *Missiles by !M! this turn."
+  },
+  "${ModID}:Minniegun": {
+    "NAME": "Minniegun",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  },
+  "${ModID}:PackRat": {
+    "NAME": "Pack Rat",
+    "DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and remove this from your deck permanently.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and Downgrade this permanently. NL Exhaust."
+  },
+  "${ModID}:ScorchedEarth": {
+    "NAME": "Scorched Earth",
+    "DESCRIPTION": "Exhaust all non-Attacks in your discard pile. Deal !D! damage for each. NL Exhaust."
+  },
+  "${ModID}:SmithingHammer": {
+    "NAME": "Smithing Hammer",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Upgrade a card in your hand for the rest of combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL Upgrade !M! cards in your hand for the rest of combat."
+  },
+  "${ModID}:Flick": {
+    "NAME": "Flick",
+    "DESCRIPTION": "Discard a card. NL Deal !D! damage a number of times equal to that card's energy cost."
+  },
+  "${ModID}:Synergize": {
+    "NAME": "Synergize",
+    "DESCRIPTION": "Gain !B! Block. NL If the last card played was from a different Pack, deal !D! damage to ALL enemies."
+  },
+  "${ModID}:Sideboard": {
+    "NAME": "Sideboard",
+    "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile on top of your draw pile."
+  },
+  "${ModID}:BoosterTutor": {
+    "NAME": "Booster Tutor",
+    "DESCRIPTION": "Draw !M! cards from different Packs."
+  },
+  "${ModID}:BackpackSmack": {
+    "NAME": "Backpack Smack",
+    "DESCRIPTION": "Deal !D! damage. NL If your draw pile contains 10 or more cards, gain [E] and draw a card."
+  },
+  "${ModID}:Showoff": {
+    "NAME": "Showoff",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw 2 additional cards."
+  },
+  "${ModID}:DestinyDraw": {
+    "NAME": "Destiny Draw",
+    "DESCRIPTION": "Choose 1 of 3 Packs. NL Gain a random card from the chosen Pack. It costs 0 this turn. NL Exhaust."
+  },
+  "${ModID}:MayhemForm": {
+    "NAME": "Mayhem Form",
+    "DESCRIPTION": "Draw 1 fewer card per turn. NL At the start of your turn, choose a card from the top 3 in your draw pile and play it.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, choose a card from the top 3 in your draw pile and play it."
+  },
+  "${ModID}:PackRip": {
+    "NAME": "Pack Rip",
+    "DESCRIPTION": "Choose 1 of 3 Packs. NL Play 3 random cards from the chosen Pack. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Packs.  NL Play 3 random cards from the chosen Pack."
+  },
+  "${ModID}:AcidicSpray": {
+    "NAME": "Acidic Spray",
+    "DESCRIPTION": "Deal !D! damage for each debuff on the target. NL Apply !M! Weak."
+  },
+  "${ModID}:PoisonMastery": {
+    "NAME": "Poison Mastery",
+    "DESCRIPTION": "Increase HP loss from Poison by 100%. NL Gain a *Poison *Potion.",
+    "UPGRADE_DESCRIPTION": "Increase HP loss from Poison by 100%. NL Gain !M! *Poison *Potions."
+  },
+  "${ModID}:Cannonball": {
+    "NAME": "Cannonball",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+  },
+  "${ModID}:CaptainsCabin": {
+    "NAME": "Captain's Cabin",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Cannonball into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Cannonballs into your hand."
+  },
+  "${ModID}:TerrorOfTheSeas": {
+    "NAME": "Terror of the Seas",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL Exhaust."
+  },
+  "${ModID}:MassProduction": {
+    "NAME": "Mass Production",
+    "DESCRIPTION": "Choose a card in your draw pile. Exhaust your hand and replace it with copies of that card. Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to Mass Produce."
+    ]
+  },
+  "${ModID}:ScrapCannon": {
+    "NAME": "Scrap Cannon",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card."
+  },
+  "${ModID}:BloodRitual": {
+    "NAME": "Blood Ritual",
+    "DESCRIPTION": "Lose !M! HP. NL Gain 1 Ritual."
+  },
+  "${ModID}:HuntressEssence": {
+    "NAME": "Huntress Essence",
+    "DESCRIPTION": "Heal !M! HP and draw 1 card for each card in your Exhaust pile. NL Exhaust."
+  },
+  "${ModID}:OverTime": {
+    "NAME": "Over Time",
+    "DESCRIPTION": "Deal !D! damage. NL For each card that you've *Exhausted this combat, increase damage by !M!."
+  },
+  "${ModID}:SlimeSpray": {
+    "NAME": "Slime Spray",
+    "DESCRIPTION": "Retain. NL Deal !D! damage and apply Slow to ALL enemies."
+  },
+  "${ModID}:Sharpen": {
+    "NAME": "Sharpen",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a random damaging card in hand: 'Add !M! Damage'"
+  },
+  "${ModID}:Fortify": {
+    "NAME": "Fortify",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a random Block card in hand: 'Add !M! Block'"
+  },
+  "${ModID}:Winterize": {
+    "NAME": "Winterize",
+    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your draw pile: 'Apply !M! Frostbite.'"
+  },
+  "${ModID}:Throw Wrench": {
+    "NAME": "Throw Wrench",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have a Modified card in hand, deals damage twice."
+  },
+  "${ModID}:Lighten": {
+    "NAME": "Lighten",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a card in hand: 'Retain.' and 'Float this'."
+  },
+  "${ModID}:Improve": {
+    "NAME": "Improve",
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a random card in hand: 'Draw a card.' NL Exhaust."
+  },
+  "${ModID}:Enhance": {
+    "NAME": "Enhance",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a card in hand: 'Gain !M! Block.'"
+  },
+  "${ModID}:Cheapen": {
+    "NAME": "Cheapen",
+    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: 'Costs 0.' NL Exhaust, unless Amplify 2."
+  },
+  "${ModID}:Expand": {
+    "NAME": "Expand",
+    "DESCRIPTION": "${ModID}:Modify a card in your discard pile: 'Ethereal.' and 'Remove Exhaust.' NL Exhaust."
+  },
+  "${ModID}:Piratify": {
+    "NAME": "Piratify",
+    "DESCRIPTION": "At the start of each turn, Modify a random card in hand: 'Gain a Cannonball.'",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, Modify a random card in hand: 'Gain a Cannonball+.'"
+  },
+  "${ModID}:StrikeOfMidnight": {
+    "NAME": "Strike of Midnight",
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 Dark."
+  },
+  "${ModID}:StrikeOfLuck": {
+    "NAME": "Strike of Luck",
+    "DESCRIPTION": "Deal !D! damage to a random enemy 1 to 3 times."
+  },
+  "${ModID}:LightningStrike": {
+    "NAME": "Lightning Strike",
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 Lightning."
+  },
+  "${ModID}:PenaltyStrike": {
+    "NAME": "Penalty Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength. NL Exhaust."
+  },
+  "${ModID}:Backstrike": {
+    "NAME": "Backstrike",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify all Attacks in hand: 'Name gains Strike.'"
+  },
+  "${ModID}:WorkersStrike": {
+    "NAME": "Worker's Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Draw an Attack. If it is a Strike, gain [E]."
+  },
+  "${ModID}:StrikeDummyJr": {
+    "NAME": "Strike Dummy Jr.",
+    "DESCRIPTION": "Gain !M! Strength. NL Strikes deal 2 more damage this combat."
+  },
+  "${ModID}:DifferentStrikes": {
+    "NAME": "Different Strikes",
+    "DESCRIPTION": "Exhaust all cards in hand. Replace them with random Strikes that cost 1 less. NL Exhaust."
+  },
+  "${ModID}:StrikeOfGenius": {
+    "NAME": "Strike of Genius",
+    "DESCRIPTION": "At the start of your turn, gain a random \"Strike\". NL It costs 0 until played and gains Exhaust.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain a random Upgraded \"Strike\". NL It costs 0 until played and gains Exhaust."
+  },
+  "${ModID}:StrikeABargain": {
+    "NAME": "Strike a Bargain",
+    "DESCRIPTION": "Your attacks costs 0 this turn. You cannot play non-Attacks this turn."
+  }
+}

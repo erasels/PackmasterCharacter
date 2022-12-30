@@ -1,0 +1,69 @@
+{
+  "${ModID}:TodoItem": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:BagOfHolding": {
+    "NAME": "Bag of Holding",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:BanishingDecree": {
+    "NAME": "Banishing Decree",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+        "Upon pickup, choose a Pack. Cards from it will no longer appear in card rewards.",
+        "Choose a card for ",
+        "Cards from the Pack '",
+        "' will no longer appear in card rewards."
+      ]
+  },
+  "${ModID}:CollectorBadge": {
+    "NAME": "Collector Badge",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:GemOfUnity": {
+    "NAME": "Gem of Unity",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Once per combat, after you have played a card from each different Pack available this run, gain 20 Block and heal 5 HP.",
+      " Packs played this combat: "
+    ]
+  },
+  "${ModID}:HandyHaversack": {
+    "NAME": "Handy Haversack",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain [E] for every 10 cards in your draw pile, up to a maximum of 3."
+    ]
+  },
+  "${ModID}:PMBoosterBox": {
+    "NAME": "P.M. Booster Box",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:PMBoosterPack": {
+    "NAME": "P.M. Booster Pack",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "${ModID}:PMCollection": {
+    "NAME": "P.M. Collection",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  }
+}

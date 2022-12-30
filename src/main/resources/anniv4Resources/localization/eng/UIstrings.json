@@ -1,0 +1,91 @@
+{
+  "${ModID}:ModalChoice": {
+    "TEXT": [
+      "Choose a Pack."
+    ]
+  },
+  "${ModID}:AtGameStart": {
+    "TEXT": [
+      "These are the Packs available to you this run. Click Confirm to Proceed."
+    ]
+  },
+  "${ModID}:CoreSetPack": {
+    "TEXT": [
+      "Core Set",
+      "A reliable suite of simple, useful cards. NL NL By: Packmaster Team"
+    ]
+  },
+  "${ModID}:DemoPack": {
+    "TEXT": [
+      "Greedy Pack",
+      "Focuses on draw and having a full hand of cards. NL NL By: Vex"
+    ]
+  },
+  "${ModID}:IroncladPack": {
+    "TEXT": [
+      "Ironclad Ideals",
+      "A collection of reliable Ironclad cards, including access to Strength. NL NL By: MegaCrit"
+    ]
+  },
+  "${ModID}:SilentPack": {
+    "TEXT": [
+      "Silent Showdown",
+      "A collection of reliable Silent cards, including access to Poison and Discard. NL NL By: MegaCrit"
+    ]
+  },
+  "${ModID}:DefectPack": {
+    "TEXT": [
+      "Defective Dreams",
+      "A collection of reliable Defect cards, including access to Orbs. NL NL By: MegaCrit"
+    ]
+  },
+  "${ModID}:WatcherPack": {
+    "TEXT": [
+      "Will of the Watcher",
+      "A collection of reliable Watcher cards, including access to Stances. NL NL By: MegaCrit"
+    ]
+  },
+  "${ModID}:DownfallPack": {
+    "TEXT": [
+      "Downfall",
+      "A potent pack featuring a card from each of the Spire’s Bosses. NL NL By: Downfall Team"
+    ]
+  },
+  "${ModID}:DimensionGatePack": {
+    "TEXT": [
+      "Dimension Gate",
+      "A variety pack of oddball cards from other games. Can you name them all? NL NL By: MichaelMayhem"
+    ]
+  },
+  "${ModID}:LegacyPack": {
+    "TEXT": [
+      "A Grand Legacy",
+      "A blast from the past. NL NL By: celicath, moocowgoesmoo, johnnyBazooka, chronometrics, fiiiiilth"
+    ]
+  },
+  "${ModID}:MadSciencePack": {
+    "TEXT": [
+      "Mad Science!",
+      "Modify your cards with bonus effects, break the game! NL NL By: MichaelMayhem"
+    ]
+  },
+  "${ModID}:StrikesPack": {
+    "TEXT": [
+      "Strikes? STRIKES!",
+      "Deal 6 damage. NL NL By: MichaelMayhem"
+    ]
+  },
+  "MadScienceModifiers": {
+    "TEXT": [
+      " NL Apply 2 Frostbite.",
+      " NL Apply 3 Frostbite.",
+      "Retain. NL ",
+      " NL Float this.",
+      " NL Gain 6 Block.",
+      " NL Gain 8 Block.",
+      "Ethereal. NL ",
+      " NL Gain a Cannonball.",
+      " NL Draw a card."
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+A character mod called The Packmaster. Upon choosing the class, a UI is revealed which selects, at random, 6 Booster Packs to be added to the character’s existing card library of 14 cards (4 starter cards, and one ‘standard booster pack’.  Those booster packs make up the entire card pool (74 cards) for the run. 
+Think of the animator if you've played the character before. A contribution would be a booster pack, of course you can make multiple. I'm sure many of you have ideas for archetypes but were too lazy to think up an entire character to fit it into, this is your chance to make a self-contained archetype of 10 cards.
+
+There's a few rules in place to make this character actually playable and make sure this project doesn't end up quite the trainwreck that Gartic ended up being sadly.
+The full rules, examples and explanations are in this google doc:
+https://docs.google.com/document/d/1Gs004Gur4DfZ8vly8rFDjcnRojt6Ptsk6rH_GyZx_XY
+The sheet for maintaining information on your booster pack can be found here:
+https://docs.google.com/spreadsheets/d/1MoLN5qyNtclCqOPgAW9_poDS4HPhTGOmahWSIA1FgCg 
+
+The cut-off point for PRs that will be included in the first release will be 18 January 2023. Although, PRs made after that point will still be merged and maintained, so don't be discouraged if you're late.
