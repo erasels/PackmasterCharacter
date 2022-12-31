@@ -25,8 +25,6 @@ public abstract class AbstractCardPack {
 
     public void initializePack() {
         for (String s : getCards()) {
-            //TODO - Still something wrong here with the global AbstractCard var initialization.
-            //TODO - While we're at it, display it on the card text as a subtype above the type.
             AbstractCard c = CardLibrary.getCard(s);
             CardParentPackPatch.parentPack.set(c, this);
             cards.add(c.makeStatEquivalentCopy());

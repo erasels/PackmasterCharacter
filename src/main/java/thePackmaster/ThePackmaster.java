@@ -19,10 +19,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import thePackmaster.cards.Cardistry;
-import thePackmaster.cards.Defend;
-import thePackmaster.cards.Rummage;
-import thePackmaster.cards.Strike;
+import thePackmaster.cards.*;
 import thePackmaster.packs.*;
 import thePackmaster.relics.HandyHaversack;
 
