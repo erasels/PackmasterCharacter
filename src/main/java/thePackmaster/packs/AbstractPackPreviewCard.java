@@ -26,7 +26,7 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         name = originalName = parentPack.name;
         initializeTitle();
         initializeDescription();
-        this.setBackgroundTexture("anniv4Resources/images/512/boosterpackframe.png", "anniv4Resources/images/1024/boosterpackframe.png");
+        this.setBackgroundTexture("anniv5Resources/images/512/boosterpackframe.png", "anniv5Resources/images/1024/boosterpackframe.png");
 
         //TODO - change its type to 'Pack', or just don't render the type text.
     }

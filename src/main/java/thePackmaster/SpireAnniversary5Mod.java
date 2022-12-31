@@ -45,7 +45,7 @@ public class SpireAnniversary5Mod implements
 
     public static int PACKS_PER_RUN = 7;
 
-    public static final String modID = "anniv4";
+    public static final String modID = "anniv5";
 
     public static String makeID(String idText) {
         return modID + ":" + idText;

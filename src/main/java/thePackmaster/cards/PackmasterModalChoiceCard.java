@@ -32,7 +32,7 @@ public class PackmasterModalChoiceCard extends CustomCard {
         initializeTitle();
         initializeDescription();
         if (this.passedusePackFrame){
-            this.setBackgroundTexture("anniv4Resources/images/512/boosterpackframe.png", "anniv4Resources/images/1024/boosterpackframe.png");
+            this.setBackgroundTexture("anniv5Resources/images/512/boosterpackframe.png", "anniv5Resources/images/1024/boosterpackframe.png");
         }
     }
 

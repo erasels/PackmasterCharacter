@@ -25,7 +25,7 @@ public class Cannonball extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ShootAnythingAction(m, TexLoader.getTexture("anniv4resources/images/vfx/Cannonball.png"), false));
+        AbstractDungeon.actionManager.addToBottom(new ShootAnythingAction(m, TexLoader.getTexture("anniv5resources/images/vfx/Cannonball.png"), false));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
