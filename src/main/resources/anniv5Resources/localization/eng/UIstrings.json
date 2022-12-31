@@ -38,18 +38,5 @@
       "Will of the Watcher",
       "A collection of reliable Watcher cards, including access to Stances. NL NL By: MegaCrit"
     ]
-  },
-  "MadScienceModifiers": {
-    "TEXT": [
-      " NL Apply 2 Frostbite.",
-      " NL Apply 3 Frostbite.",
-      "Retain. NL ",
-      " NL Float this.",
-      " NL Gain 6 Block.",
-      " NL Gain 8 Block.",
-      "Ethereal. NL ",
-      " NL Gain a Cannonball.",
-      " NL Draw a card."
-    ]
   }
 }
