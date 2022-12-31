@@ -63,7 +63,7 @@ public class MainMenuUIPatch {
             DropdownMenu d = new DropdownMenu((dropdownMenu, q, s) -> {
                 packSetups.set(dropdowns.indexOf(dropdownMenu), s);
                 for (DropdownMenu other : dropdowns) {
-                    if (other != dropdownMenu && other.getSelectedIndex() == q) {
+                    if (!s.equals("Random") && !s.equals("Choice of 3") && other != dropdownMenu && other.getSelectedIndex() == q) {
                         other.setSelectedIndex(0);
                     }
                 }

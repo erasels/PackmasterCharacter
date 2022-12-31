@@ -180,14 +180,10 @@ public class ThePackmaster extends CustomPlayer {
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
-    /*
     @Override
     public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
 
         ArrayList<AbstractCard> poolCards = new ArrayList<>();
-
-        SpireAnniversary5Mod.randomizePackSet();
-
         for (AbstractCardPack pack : SpireAnniversary5Mod.currentPoolPacks) {
             for (AbstractCard c : pack.cards) {
                 poolCards.add(c);
@@ -207,5 +203,4 @@ public class ThePackmaster extends CustomPlayer {
 
         return poolCards;
     }
-    */
 }
