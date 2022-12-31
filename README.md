@@ -22,6 +22,9 @@ https://desktop.github.com/
 
 ## Technical
 ### How to make a Pack
+First, to make intellij understand that this is a maven project, copy the example-pom.xml and rename the copy to pom.xml. Adjust it to the correct steam path if necessary. 
+**DO NOT DELETE THE EXAMPLE POM!**
+
 TBD
 
 ### How to test your Pack
