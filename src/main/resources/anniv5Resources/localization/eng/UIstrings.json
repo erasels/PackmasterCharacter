@@ -6,7 +6,8 @@
   },
   "${ModID}:AbstractPackPreviewCard": {
     "TEXT": [
-      " NL NL By: "
+      "Creator: ",
+      "Pack"
     ]
   },
   "${ModID}:AtGameStart": {
