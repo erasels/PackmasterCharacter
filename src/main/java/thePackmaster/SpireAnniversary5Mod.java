@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import javassist.CtClass;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
@@ -26,6 +27,10 @@ import thePackmaster.relics.AbstractPackmasterRelic;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -162,23 +167,49 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostInitialize() {
         declarePacks();
+        BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
     }
 
     @Override
     public void receiveEditStrings() {
         BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + getLangString() + "/Cardstrings.json");
-
         BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + getLangString() + "/Relicstrings.json");
-
         BaseMod.loadCustomStringsFile(CharacterStrings.class, modID + "Resources/localization/" + getLangString() + "/Charstrings.json");
-
         BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + getLangString() + "/Powerstrings.json");
-
         BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + getLangString() + "/UIstrings.json");
-
         BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + getLangString() + "/Stancestrings.json");
-
         BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + getLangString() + "/Orbstrings.json");
+
+        loadPackStrings();
+    }
+
+    public void loadPackStrings() {
+        // These packs are excluded from loading of pack-specific string files because they consistent entirely of base game cards.
+        // If you're making a pack that also consists of only base game cards, add it to this list.
+        List<String> baseGamePacks = Arrays.asList(IroncladPack.class.getName(), SilentPack.class.getName(), DefectPack.class.getName(), WatcherPack.class.getName());
+
+        // These packs are excluded from loading of pack-specific string files because they were created before this system.
+        // Please do not add elements to this list.
+        List<String> originalPacks = Arrays.asList(DownfallPack.class.getName(), DimensionGatePack.class.getName(), LegacyPack.class.getName(), MadSciencePack.class.getName(), StrikesPack.class.getName());
+
+        Collection<CtClass> packClasses = new AutoAdd(modID)
+                .packageFilter(AbstractCardPack.class)
+                .findClasses(AbstractCardPack.class)
+                .stream()
+                .filter(c -> !baseGamePacks.contains(c.getName()) && !originalPacks.contains(c.getName()))
+                .collect(Collectors.toList());
+        BaseMod.logger.info("Found pack classes with AutoAdd: " + packClasses.size());
+        for (CtClass packClass : packClasses) {
+            String packName = packClass.getSimpleName().toLowerCase();
+            String languageAndPack = getLangString() + "/" + packName;
+            BaseMod.logger.info("Loading pack strings for pack " + packClass.getName() + ". Strings expected to be in folder Resources/localization/" + languageAndPack);
+            BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + languageAndPack + "/Cardstrings.json");
+            BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + languageAndPack + "/Relicstrings.json");
+            BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + languageAndPack + "/Powerstrings.json");
+            BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + languageAndPack + "/UIstrings.json");
+            BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + languageAndPack + "/Stancestrings.json");
+            BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + languageAndPack + "/Orbstrings.json");
+        }
     }
 
     @Override
@@ -195,17 +226,12 @@ public class SpireAnniversary5Mod implements
     }
 
 
-    public void declarePacks(){
-        allPacks.add(new CoreSetPack());
-        allPacks.add(new IroncladPack());
-        allPacks.add(new SilentPack());
-        allPacks.add(new DefectPack());
-        allPacks.add(new WatcherPack());
-        allPacks.add(new DimensionGatePack());
-        allPacks.add(new DownfallPack());
-        allPacks.add(new LegacyPack());
-        allPacks.add(new MadSciencePack());
-        allPacks.add(new StrikesPack());
+    public static void declarePacks(){
+        new AutoAdd(modID)
+            .packageFilter(AbstractCardPack.class)
+            .any(AbstractCardPack.class, (info, pack) -> {
+                allPacks.add(pack);
+            });
     }
 
     public static AbstractCardPack getRandomPackFromAll(){

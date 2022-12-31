@@ -162,49 +162,6 @@
     "NAME": "Scorched Earth",
     "DESCRIPTION": "Exhaust all non-Attacks in your discard pile. Deal !D! damage for each. NL Exhaust."
   },
-  "${ModID}:SmithingHammer": {
-    "NAME": "Smithing Hammer",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Upgrade a card in your hand for the rest of combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL Upgrade !M! cards in your hand for the rest of combat."
-  },
-  "${ModID}:Flick": {
-    "NAME": "Flick",
-    "DESCRIPTION": "Discard a card. NL Deal !D! damage a number of times equal to that card's energy cost."
-  },
-  "${ModID}:Synergize": {
-    "NAME": "Synergize",
-    "DESCRIPTION": "Gain !B! Block. NL If the last card played was from a different Pack, deal !D! damage to ALL enemies."
-  },
-  "${ModID}:Sideboard": {
-    "NAME": "Sideboard",
-    "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile on top of your draw pile."
-  },
-  "${ModID}:BoosterTutor": {
-    "NAME": "Booster Tutor",
-    "DESCRIPTION": "Draw !M! cards from different Packs."
-  },
-  "${ModID}:BackpackSmack": {
-    "NAME": "Backpack Smack",
-    "DESCRIPTION": "Deal !D! damage. NL If your draw pile contains 10 or more cards, gain [E] and draw a card."
-  },
-  "${ModID}:Showoff": {
-    "NAME": "Showoff",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw 2 additional cards."
-  },
-  "${ModID}:DestinyDraw": {
-    "NAME": "Destiny Draw",
-    "DESCRIPTION": "Choose 1 of 3 Packs. NL Gain a random card from the chosen Pack. It costs 0 this turn. NL Exhaust."
-  },
-  "${ModID}:MayhemForm": {
-    "NAME": "Mayhem Form",
-    "DESCRIPTION": "Draw 1 fewer card per turn. NL At the start of your turn, choose a card from the top 3 in your draw pile and play it.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, choose a card from the top 3 in your draw pile and play it."
-  },
-  "${ModID}:PackRip": {
-    "NAME": "Pack Rip",
-    "DESCRIPTION": "Choose 1 of 3 Packs. NL Play 3 random cards from the chosen Pack. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Packs.  NL Play 3 random cards from the chosen Pack."
-  },
   "${ModID}:AcidicSpray": {
     "NAME": "Acidic Spray",
     "DESCRIPTION": "Deal !D! damage for each debuff on the target. NL Apply !M! Weak."

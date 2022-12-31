@@ -9,12 +9,6 @@
       "These are the Packs available to you this run. Click Confirm to Proceed."
     ]
   },
-  "${ModID}:CoreSetPack": {
-    "TEXT": [
-      "Core Set",
-      "A reliable suite of simple, useful cards. NL NL By: Packmaster Team"
-    ]
-  },
   "${ModID}:DemoPack": {
     "TEXT": [
       "Greedy Pack",
