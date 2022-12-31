@@ -233,9 +233,12 @@ public class SpireAnniversary5Mod implements
             String packName = packClass.getSimpleName().toLowerCase();
             String languageAndPack = getLangString() + "/" + packName;
             BaseMod.logger.info("Loading pack keywords for pack " + packClass.getName() + ". Strings expected to be in folder Resources/localization/" + languageAndPack);
-            String packJson = Gdx.files.internal(modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-            List<com.evacipated.cardcrawl.mod.stslib.Keyword> packKeywords = new ArrayList<>(Arrays.asList(gson.fromJson(packJson, com.evacipated.cardcrawl.mod.stslib.Keyword[].class)));
-            keywords.addAll(packKeywords);
+            try {
+                String packJson = Gdx.files.internal(modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+                List<com.evacipated.cardcrawl.mod.stslib.Keyword> packKeywords = new ArrayList<>(Arrays.asList(gson.fromJson(packJson, com.evacipated.cardcrawl.mod.stslib.Keyword[].class)));
+                keywords.addAll(packKeywords);
+            }
+            catch (Exception ignored) {}
         }
 
         for (Keyword keyword : keywords) {

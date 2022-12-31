@@ -4,6 +4,11 @@
       "Choose a Pack."
     ]
   },
+  "${ModID}:AbstractPackPreviewCard": {
+    "TEXT": [
+      " NL NL By: "
+    ]
+  },
   "${ModID}:AtGameStart": {
     "TEXT": [
       "These are the Packs available to you this run. Click Confirm to Proceed."
@@ -18,25 +23,29 @@
   "${ModID}:IroncladPack": {
     "TEXT": [
       "Ironclad Ideals",
-      "A collection of reliable Ironclad cards, including access to Strength. NL NL By: MegaCrit"
+      "A collection of reliable Ironclad cards, including access to Strength.",
+      "MegaCrit"
     ]
   },
   "${ModID}:SilentPack": {
     "TEXT": [
       "Silent Showdown",
-      "A collection of reliable Silent cards, including access to Poison and Discard. NL NL By: MegaCrit"
+      "A collection of reliable Silent cards, including access to Poison and Discard.",
+      "MegaCrit"
     ]
   },
   "${ModID}:DefectPack": {
     "TEXT": [
       "Defective Dreams",
-      "A collection of reliable Defect cards, including access to Orbs. NL NL By: MegaCrit"
+      "A collection of reliable Defect cards, including access to Orbs.",
+      "MegaCrit"
     ]
   },
   "${ModID}:WatcherPack": {
     "TEXT": [
       "Will of the Watcher",
-      "A collection of reliable Watcher cards, including access to Stances. NL NL By: MegaCrit"
+      "A collection of reliable Watcher cards, including access to Stances.",
+      "MegaCrit"
     ]
   }
 }
