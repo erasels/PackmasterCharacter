@@ -7,13 +7,6 @@
       " #yDexterity."
     ]
   },
-  "${ModID}:MagicMissilePower": {
-    "NAME": "Missile Power",
-    "DESCRIPTIONS": [
-      "Magic Missiles deal ",
-      " more damage this turn."
-    ]
-  },
   "${ModID}:StrikeDummyJrPower": {
     "NAME": "Strike Dummy Jr.",
     "DESCRIPTIONS": [
