@@ -306,7 +306,9 @@ public class SpireAnniversary5Mod implements
 
         SpireAnniversary5Mod.currentPoolPacks.clear();
 
-        currentPoolPacks.add(allPacks.get(0));  //CORE SET PACK
+        AbstractCardPack coreSetPack = poolPacks.stream().filter(p -> p.packID.equals(CoreSetPack.ID)).findFirst().get();
+        currentPoolPacks.add(coreSetPack);
+        poolPacks.remove(coreSetPack);
         for (int i = 0; i < PACKS_PER_RUN - 1; i++) {
             SpireAnniversary5Mod.currentPoolPacks.add(poolPacks.get(AbstractDungeon.cardRandomRng.random(1,poolPacks.size()-1)));
             poolPacks.remove(currentPoolPacks.get(i+1));
