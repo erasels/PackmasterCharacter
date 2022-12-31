@@ -1,5 +1,6 @@
 package thePackmaster.patches;
 
+import basemod.AutoAdd;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import javassist.*;
 import org.clapper.util.classutil.*;
+import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.AbstractCardPack;
 
 import java.io.File;
@@ -61,6 +63,8 @@ public class CardParentPackPatch {
 
             // Get all classes for AbstractCard
             ClassFilter filter = new AndClassFilter(
+                    new AutoAdd.PackageFilter(AbstractCard.class),
+                    new AutoAdd.PackageFilter(AbstractPackmasterCard.class),
                     new NotClassFilter(new InterfaceOnlyClassFilter()),
                     new ClassModifiersClassFilter(Modifier.PUBLIC),
                     new OrClassFilter(
