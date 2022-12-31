@@ -26,10 +26,7 @@ import thePackmaster.packs.*;
 import thePackmaster.relics.AbstractPackmasterRelic;
 
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -227,9 +224,15 @@ public class SpireAnniversary5Mod implements
 
 
     public static void declarePacks(){
+        // We prefer to catch duplicate patch IDs here, instead of letting them break in unexpected ways downstream of this code
+        HashMap<String, AbstractCardPack> packs = new HashMap<>();
         new AutoAdd(modID)
             .packageFilter(AbstractCardPack.class)
             .any(AbstractCardPack.class, (info, pack) -> {
+                if (packs.containsKey(pack.packID)) {
+                    throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Pack class 1: " + packs.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
+                }
+                packs.put(pack.packID, pack);
                 allPacks.add(pack);
             });
     }
