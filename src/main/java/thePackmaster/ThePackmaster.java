@@ -180,6 +180,7 @@ public class ThePackmaster extends CustomPlayer {
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
+    /*
     @Override
     public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
 
@@ -206,4 +207,5 @@ public class ThePackmaster extends CustomPlayer {
 
         return poolCards;
     }
+    */
 }

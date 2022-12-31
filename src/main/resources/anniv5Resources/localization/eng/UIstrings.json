@@ -47,5 +47,11 @@
       "A collection of reliable Watcher cards, including access to Stances.",
       "MegaCrit"
     ]
+  },
+  "${ModID}:PackMainMenuUI": {
+    "TEXT": [
+      "Custom Draft Mode",
+      "Turn this on to choose how your Packs are determined."
+    ]
   }
 }
