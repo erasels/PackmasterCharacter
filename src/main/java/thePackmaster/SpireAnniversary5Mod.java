@@ -225,7 +225,7 @@ public class SpireAnniversary5Mod implements
 
 
     public static void declarePacks(){
-        // We prefer to catch duplicate patch IDs here, instead of letting them break in unexpected ways downstream of this code
+        // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
         HashMap<String, AbstractCardPack> packs = new HashMap<>();
         new AutoAdd(modID)
             .packageFilter(AbstractCardPack.class)
