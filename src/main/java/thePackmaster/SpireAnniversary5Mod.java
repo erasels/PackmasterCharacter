@@ -197,12 +197,23 @@ public class SpireAnniversary5Mod implements
             String packName = packClass.getSimpleName().toLowerCase();
             String languageAndPack = getLangString() + "/" + packName;
             BaseMod.logger.info("Loading pack strings for pack " + packClass.getName() + ". Strings expected to be in folder Resources/localization/" + languageAndPack);
+            //Do not need to be checked as these always need to exist
             BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + languageAndPack + "/Cardstrings.json");
-            BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + languageAndPack + "/Relicstrings.json");
-            BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + languageAndPack + "/Powerstrings.json");
-            BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + languageAndPack + "/UIstrings.json");
-            BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + languageAndPack + "/Stancestrings.json");
-            BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + languageAndPack + "/Orbstrings.json");
+            try {
+                BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + languageAndPack + "/Relicstrings.json");
+            } catch (Exception ignored){}
+            try {
+                BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + languageAndPack + "/Powerstrings.json");
+            } catch (Exception ignored){}
+            try {
+                BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + languageAndPack + "/UIstrings.json");
+            } catch (Exception ignored){}
+            try {
+                BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + languageAndPack + "/Stancestrings.json");
+            } catch (Exception ignored){}
+            try {
+                BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + languageAndPack + "/Orbstrings.json");
+            } catch (Exception ignored){}
         }
     }
 
