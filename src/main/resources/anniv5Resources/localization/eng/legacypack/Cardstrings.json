@@ -1,0 +1,51 @@
+{
+  "${ModID}:AcidicSpray": {
+    "NAME": "Acidic Spray",
+    "DESCRIPTION": "Deal !D! damage for each debuff on the target. NL Apply !M! Weak."
+  },
+  "${ModID}:PoisonMastery": {
+    "NAME": "Poison Mastery",
+    "DESCRIPTION": "Increase HP loss from Poison by 100%. NL Gain a *Poison *Potion.",
+    "UPGRADE_DESCRIPTION": "Increase HP loss from Poison by 100%. NL Gain !M! *Poison *Potions."
+  },
+  "${ModID}:Cannonball": {
+    "NAME": "Cannonball",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+  },
+  "${ModID}:CaptainsCabin": {
+    "NAME": "Captain's Cabin",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Cannonball into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Cannonballs into your hand."
+  },
+  "${ModID}:TerrorOfTheSeas": {
+    "NAME": "Terror of the Seas",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL Exhaust."
+  },
+  "${ModID}:MassProduction": {
+    "NAME": "Mass Production",
+    "DESCRIPTION": "Choose a card in your draw pile. Exhaust your hand and replace it with copies of that card. Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to Mass Produce."
+    ]
+  },
+  "${ModID}:ScrapCannon": {
+    "NAME": "Scrap Cannon",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card."
+  },
+  "${ModID}:BloodRitual": {
+    "NAME": "Blood Ritual",
+    "DESCRIPTION": "Lose !M! HP. NL Gain 1 Ritual."
+  },
+  "${ModID}:HuntressEssence": {
+    "NAME": "Huntress Essence",
+    "DESCRIPTION": "Heal !M! HP and draw 1 card for each card in your Exhaust pile. NL Exhaust."
+  },
+  "${ModID}:OverTime": {
+    "NAME": "Over Time",
+    "DESCRIPTION": "Deal !D! damage. NL For each card that you've *Exhausted this combat, increase damage by !M!."
+  },
+  "${ModID}:SlimeSpray": {
+    "NAME": "Slime Spray",
+    "DESCRIPTION": "Retain. NL Deal !D! damage and apply Slow to ALL enemies."
+  }
+}

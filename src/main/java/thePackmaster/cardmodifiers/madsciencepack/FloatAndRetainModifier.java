@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import thePackmaster.SpireAnniversary5Mod;
 
 public class FloatAndRetainModifier extends AbstractMadScienceModifier {
 
@@ -14,7 +15,7 @@ public class FloatAndRetainModifier extends AbstractMadScienceModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return CardCrawlGame.languagePack.getUIString("MadScienceModifiers").TEXT[2] + rawDescription + CardCrawlGame.languagePack.getUIString("MadScienceModifiers").TEXT[3];
+        return CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("MadScienceModifiers")).TEXT[2] + rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("MadScienceModifiers")).TEXT[3];
     }
 
     public void onInitialApplication(AbstractCard card) {

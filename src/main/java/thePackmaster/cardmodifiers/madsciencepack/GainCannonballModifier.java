@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.legacypack.Cannonball;
 
 public class GainCannonballModifier extends AbstractMadScienceModifier {
@@ -18,9 +19,9 @@ public class GainCannonballModifier extends AbstractMadScienceModifier {
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         if (value > 0) {
-            return rawDescription + CardCrawlGame.languagePack.getUIString("MadScienceModifiers").TEXT[7] + "+";
+            return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("MadScienceModifiers")).TEXT[7] + "+";
         } else {
-            return rawDescription + CardCrawlGame.languagePack.getUIString("MadScienceModifiers").TEXT[7];
+            return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("MadScienceModifiers")).TEXT[7];
         }
     }
 

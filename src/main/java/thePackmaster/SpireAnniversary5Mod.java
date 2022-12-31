@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import javassist.CtClass;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
@@ -25,7 +26,8 @@ import thePackmaster.packs.*;
 import thePackmaster.relics.AbstractPackmasterRelic;
 
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -162,50 +164,87 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostInitialize() {
         declarePacks();
+        BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
     }
 
     @Override
     public void receiveEditStrings() {
         BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + getLangString() + "/Cardstrings.json");
-
         BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + getLangString() + "/Relicstrings.json");
-
         BaseMod.loadCustomStringsFile(CharacterStrings.class, modID + "Resources/localization/" + getLangString() + "/Charstrings.json");
-
         BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + getLangString() + "/Powerstrings.json");
-
         BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + getLangString() + "/UIstrings.json");
-
         BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + getLangString() + "/Stancestrings.json");
-
         BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + getLangString() + "/Orbstrings.json");
+
+        loadPackStrings();
+    }
+
+    // These packs are excluded from loading of pack-specific string files because they consistent entirely of base game cards.
+    // If you're making a pack that also consists of only base game cards, add it to this list.
+    // The name and description of the pack can go in the main UIstrings.json file.
+    private static final List<String> baseGamePacks = Arrays.asList(IroncladPack.class.getName(), SilentPack.class.getName(), DefectPack.class.getName(), WatcherPack.class.getName());
+
+    public void loadPackStrings() {
+        Collection<CtClass> packClasses = new AutoAdd(modID)
+                .packageFilter(AbstractCardPack.class)
+                .findClasses(AbstractCardPack.class)
+                .stream()
+                .filter(c -> !baseGamePacks.contains(c.getName()))
+                .collect(Collectors.toList());
+        BaseMod.logger.info("Found pack classes with AutoAdd: " + packClasses.size());
+        for (CtClass packClass : packClasses) {
+            String packName = packClass.getSimpleName().toLowerCase();
+            String languageAndPack = getLangString() + "/" + packName;
+            BaseMod.logger.info("Loading pack strings for pack " + packClass.getName() + ". Strings expected to be in folder Resources/localization/" + languageAndPack);
+            BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + languageAndPack + "/Cardstrings.json");
+            BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + languageAndPack + "/Relicstrings.json");
+            BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + languageAndPack + "/Powerstrings.json");
+            BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + languageAndPack + "/UIstrings.json");
+            BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + languageAndPack + "/Stancestrings.json");
+            BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + languageAndPack + "/Orbstrings.json");
+        }
     }
 
     @Override
     public void receiveEditKeywords() {
         Gson gson = new Gson();
-        String json = Gdx.files.internal(modID + "Resources/localization/eng/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
+        String json = Gdx.files.internal(modID + "Resources/localization/" + getLangString() + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        List<com.evacipated.cardcrawl.mod.stslib.Keyword> keywords = new ArrayList<>(Arrays.asList(gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class)));
 
-        if (keywords != null) {
-            for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-            }
+        Collection<CtClass> packClasses = new AutoAdd(modID)
+                .packageFilter(AbstractCardPack.class)
+                .findClasses(AbstractCardPack.class)
+                .stream()
+                .filter(c -> !baseGamePacks.contains(c.getName()))
+                .collect(Collectors.toList());
+        for (CtClass packClass : packClasses) {
+            String packName = packClass.getSimpleName().toLowerCase();
+            String languageAndPack = getLangString() + "/" + packName;
+            BaseMod.logger.info("Loading pack keywords for pack " + packClass.getName() + ". Strings expected to be in folder Resources/localization/" + languageAndPack);
+            String packJson = Gdx.files.internal(modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+            List<com.evacipated.cardcrawl.mod.stslib.Keyword> packKeywords = new ArrayList<>(Arrays.asList(gson.fromJson(packJson, com.evacipated.cardcrawl.mod.stslib.Keyword[].class)));
+            keywords.addAll(packKeywords);
+        }
+
+        for (Keyword keyword : keywords) {
+            BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
         }
     }
 
 
-    public void declarePacks(){
-        allPacks.add(new CoreSetPack());
-        allPacks.add(new IroncladPack());
-        allPacks.add(new SilentPack());
-        allPacks.add(new DefectPack());
-        allPacks.add(new WatcherPack());
-        allPacks.add(new DimensionGatePack());
-        allPacks.add(new DownfallPack());
-        allPacks.add(new LegacyPack());
-        allPacks.add(new MadSciencePack());
-        allPacks.add(new StrikesPack());
+    public static void declarePacks(){
+        // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
+        HashMap<String, AbstractCardPack> packs = new HashMap<>();
+        new AutoAdd(modID)
+            .packageFilter(AbstractCardPack.class)
+            .any(AbstractCardPack.class, (info, pack) -> {
+                if (packs.containsKey(pack.packID)) {
+                    throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Pack class 1: " + packs.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
+                }
+                packs.put(pack.packID, pack);
+                allPacks.add(pack);
+            });
     }
 
     public static AbstractCardPack getRandomPackFromAll(){
@@ -276,7 +315,9 @@ public class SpireAnniversary5Mod implements
 
         SpireAnniversary5Mod.currentPoolPacks.clear();
 
-        currentPoolPacks.add(allPacks.get(0));  //CORE SET PACK
+        AbstractCardPack coreSetPack = poolPacks.stream().filter(p -> p.packID.equals(CoreSetPack.ID)).findFirst().get();
+        currentPoolPacks.add(coreSetPack);
+        poolPacks.remove(coreSetPack);
         for (int i = 0; i < PACKS_PER_RUN - 1; i++) {
             SpireAnniversary5Mod.currentPoolPacks.add(poolPacks.get(AbstractDungeon.cardRandomRng.random(1,poolPacks.size()-1)));
             poolPacks.remove(currentPoolPacks.get(i+1));

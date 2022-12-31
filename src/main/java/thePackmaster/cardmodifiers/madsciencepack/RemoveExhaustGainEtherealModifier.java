@@ -3,6 +3,7 @@ package thePackmaster.cardmodifiers.madsciencepack;
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import thePackmaster.SpireAnniversary5Mod;
 
 public class RemoveExhaustGainEtherealModifier extends AbstractMadScienceModifier {
 
@@ -12,7 +13,7 @@ public class RemoveExhaustGainEtherealModifier extends AbstractMadScienceModifie
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return (CardCrawlGame.languagePack.getUIString("MadScienceModifiers").TEXT[6] + rawDescription).replace(
+        return (CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("MadScienceModifiers")).TEXT[6] + rawDescription).replace(
                 "Exhaust.",""
         );
     }

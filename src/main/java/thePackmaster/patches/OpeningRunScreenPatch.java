@@ -2,9 +2,11 @@ package thePackmaster.patches;
 
 import basemod.BaseMod;
 import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.neow.NeowEvent;
 import javassist.CtBehavior;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.ThePackmaster;
 
 @SpirePatch(
         clz = NeowEvent.class,
@@ -15,8 +17,10 @@ public class OpeningRunScreenPatch {
             locator = Locator.class
     )
     public static void SetTheThing(NeowEvent __instance) {
-        BaseMod.logger.info("Packmaster is Ready To Do Thing");
-        SpireAnniversary5Mod.readyToDoThing = true;
+        if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
+            BaseMod.logger.info("Packmaster is Ready To Do Thing");
+            SpireAnniversary5Mod.readyToDoThing = true;
+        }
     }
 
     private static class Locator extends SpireInsertLocator {

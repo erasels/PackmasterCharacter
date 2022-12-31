@@ -1,0 +1,9 @@
+{
+  "${ModID}:MagicMissilePower": {
+    "NAME": "Missile Power",
+    "DESCRIPTIONS": [
+      "Magic Missiles deal ",
+      " more damage this turn."
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "${ModID}:Sharpen": {
+    "NAME": "Sharpen",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a random damaging card in hand: 'Add !M! Damage'"
+  },
+  "${ModID}:Fortify": {
+    "NAME": "Fortify",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a random Block card in hand: 'Add !M! Block'"
+  },
+  "${ModID}:Winterize": {
+    "NAME": "Winterize",
+    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your draw pile: 'Apply !M! Frostbite.'"
+  },
+  "${ModID}:Throw Wrench": {
+    "NAME": "Throw Wrench",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have a Modified card in hand, deals damage twice."
+  },
+  "${ModID}:Lighten": {
+    "NAME": "Lighten",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a card in hand: 'Retain.' and 'Float this'."
+  },
+  "${ModID}:Improve": {
+    "NAME": "Improve",
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a random card in hand: 'Draw a card.' NL Exhaust."
+  },
+  "${ModID}:Enhance": {
+    "NAME": "Enhance",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a card in hand: 'Gain !M! Block.'"
+  },
+  "${ModID}:Cheapen": {
+    "NAME": "Cheapen",
+    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: 'Costs 0.' NL Exhaust, unless Amplify 2."
+  },
+  "${ModID}:Expand": {
+    "NAME": "Expand",
+    "DESCRIPTION": "${ModID}:Modify a card in your discard pile: 'Ethereal.' and 'Remove Exhaust.' NL Exhaust."
+  },
+  "${ModID}:Piratify": {
+    "NAME": "Piratify",
+    "DESCRIPTION": "At the start of each turn, Modify a random card in hand: 'Gain a Cannonball.'",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, Modify a random card in hand: 'Gain a Cannonball+.'"
+  }
+}
