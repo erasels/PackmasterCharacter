@@ -180,12 +180,12 @@ public class SpireAnniversary5Mod implements
         loadPackStrings();
     }
 
-    public void loadPackStrings() {
-        // These packs are excluded from loading of pack-specific string files because they consistent entirely of base game cards.
-        // If you're making a pack that also consists of only base game cards, add it to this list.
-        // The name and description of the pack can go in the main UIstrings.json file.
-        List<String> baseGamePacks = Arrays.asList(IroncladPack.class.getName(), SilentPack.class.getName(), DefectPack.class.getName(), WatcherPack.class.getName());
+    // These packs are excluded from loading of pack-specific string files because they consistent entirely of base game cards.
+    // If you're making a pack that also consists of only base game cards, add it to this list.
+    // The name and description of the pack can go in the main UIstrings.json file.
+    private static final List<String> baseGamePacks = Arrays.asList(IroncladPack.class.getName(), SilentPack.class.getName(), DefectPack.class.getName(), WatcherPack.class.getName());
 
+    public void loadPackStrings() {
         Collection<CtClass> packClasses = new AutoAdd(modID)
                 .packageFilter(AbstractCardPack.class)
                 .findClasses(AbstractCardPack.class)
@@ -209,13 +209,26 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveEditKeywords() {
         Gson gson = new Gson();
-        String json = Gdx.files.internal(modID + "Resources/localization/eng/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
+        String json = Gdx.files.internal(modID + "Resources/localization/" + getLangString() + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        List<com.evacipated.cardcrawl.mod.stslib.Keyword> keywords = new ArrayList<>(Arrays.asList(gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class)));
 
-        if (keywords != null) {
-            for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-            }
+        Collection<CtClass> packClasses = new AutoAdd(modID)
+                .packageFilter(AbstractCardPack.class)
+                .findClasses(AbstractCardPack.class)
+                .stream()
+                .filter(c -> !baseGamePacks.contains(c.getName()))
+                .collect(Collectors.toList());
+        for (CtClass packClass : packClasses) {
+            String packName = packClass.getSimpleName().toLowerCase();
+            String languageAndPack = getLangString() + "/" + packName;
+            BaseMod.logger.info("Loading pack keywords for pack " + packClass.getName() + ". Strings expected to be in folder Resources/localization/" + languageAndPack);
+            String packJson = Gdx.files.internal(modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+            List<com.evacipated.cardcrawl.mod.stslib.Keyword> packKeywords = new ArrayList<>(Arrays.asList(gson.fromJson(packJson, com.evacipated.cardcrawl.mod.stslib.Keyword[].class)));
+            keywords.addAll(packKeywords);
+        }
+
+        for (Keyword keyword : keywords) {
+            BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
         }
     }
 
