@@ -2,7 +2,8 @@
   "${ModID}:LegacyPack": {
     "TEXT": [
       "A Grand Legacy",
-      "A blast from the past. NL NL By: celicath, moocowgoesmoo, johnnyBazooka, chronometrics, fiiiiilth"
+      "A blast from the past.",
+      "celicath, moocowgoesmoo, johnnyBazooka, chronometrics, fiiiiilth"
     ]
   }
 }

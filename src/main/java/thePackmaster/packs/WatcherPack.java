@@ -12,9 +12,10 @@ public class WatcherPack extends AbstractCardPack {
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
     public static final String NAME = UI_STRINGS.TEXT[0];
     public static final String DESC = UI_STRINGS.TEXT[1];
+    public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public WatcherPack() {
-        super(ID, NAME, DESC);
+        super(ID, NAME, DESC, AUTHOR);
     }
 
     @Override

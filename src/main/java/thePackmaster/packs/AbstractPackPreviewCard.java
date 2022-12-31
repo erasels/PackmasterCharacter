@@ -5,6 +5,9 @@ import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.UIStrings;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.util.CardArtRoller;
 
@@ -13,6 +16,8 @@ import static thePackmaster.SpireAnniversary5Mod.modID;
 
 @AutoAdd.Ignore
 public abstract class AbstractPackPreviewCard extends CustomCard {
+    public static final String ID = SpireAnniversary5Mod.makeID("AbstractPackPreviewCard");
+    private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
 
     private boolean needsArtRefresh = false;
 
@@ -22,7 +27,7 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         super(cardID, "", getCardTextureString(cardID.replace(modID + ":", ""), CardType.SKILL),
                 -2, "", CardType.SKILL, ThePackmaster.Enums.PACKMASTER_RAINBOW, CardRarity.SPECIAL, CardTarget.SELF);
         parentPack = owningParent;
-        rawDescription = parentPack.description;
+        rawDescription = parentPack.description + UI_STRINGS.TEXT[0] + parentPack.author;
         name = originalName = parentPack.name;
         initializeTitle();
         initializeDescription();
