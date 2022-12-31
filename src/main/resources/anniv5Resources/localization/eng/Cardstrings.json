@@ -66,55 +66,6 @@
     "NAME": "From My Hat",
     "DESCRIPTION": "Gain !B! Block. NL Add a random Attack into your hand. NL It gains Retain."
   },
-  "${ModID}:Anemia": {
-    "NAME": "Anemia",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to any Poisoned enemies."
-  },
-  "${ModID}:ArsenalGear": {
-    "NAME": "Arsenal Gear",
-    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare cards to your hand. They cost 0."
-  },
-  "${ModID}:ConjureBarrage": {
-    "NAME": "Conjure Barrage",
-    "DESCRIPTION": "Fill your hand with *Magic *Missiles. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Fill your hand with *Magic *Missiles+. NL Exhaust."
-  },
-  "${ModID}:DarkRitual": {
-    "NAME": "Dark Ritual",
-    "DESCRIPTION": "Lose !M! HP. NL Gain 100 Gold. NL Exhaust."
-  },
-  "${ModID}:Knighthood": {
-    "NAME": "Knighthood",
-    "DESCRIPTION": "Choose a card in hand to Upgrade permanently. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      " to upgrade permanently."
-    ]
-  },
-  "${ModID}:Inferno": {
-    "NAME": "Inferno",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If this didn't end combat, take !D! damage."
-  },
-  "${ModID}:LethalShot": {
-    "NAME": "Lethal Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison and !${ModID}:m2! Vulnerable."
-  },
-  "${ModID}:MagicMissile": {
-    "NAME": "Magic Missile",
-    "DESCRIPTION": "Deal !D! damage. NL Increase the damage dealt by *Magic *Missiles by !M! this turn."
-  },
-  "${ModID}:Minniegun": {
-    "NAME": "Minniegun",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
-  },
-  "${ModID}:PackRat": {
-    "NAME": "Pack Rat",
-    "DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and remove this from your deck permanently.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and Downgrade this permanently. NL Exhaust."
-  },
-  "${ModID}:ScorchedEarth": {
-    "NAME": "Scorched Earth",
-    "DESCRIPTION": "Exhaust all non-Attacks in your discard pile. Deal !D! damage for each. NL Exhaust."
-  },
   "${ModID}:AcidicSpray": {
     "NAME": "Acidic Spray",
     "DESCRIPTION": "Deal !D! damage for each debuff on the target. NL Apply !M! Weak."
