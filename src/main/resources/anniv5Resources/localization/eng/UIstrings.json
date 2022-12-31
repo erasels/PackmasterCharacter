@@ -6,7 +6,7 @@
   },
   "${ModID}:AbstractPackPreviewCard": {
     "TEXT": [
-      "Creator: ",
+      "By: ",
       "Pack"
     ]
   },
