@@ -2,6 +2,7 @@ package thePackmaster;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.abstracts.CustomSavable;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -24,6 +25,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.packs.*;
+import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.relics.AbstractPackmasterRelic;
 
 import java.nio.charset.StandardCharsets;
@@ -40,9 +42,8 @@ public class SpireAnniversary5Mod implements
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
-        PostUpdateSubscriber
-
-{
+        PostUpdateSubscriber,
+        CustomSavable<ArrayList<String>> {
 
     public static boolean readyToDoThing = false;
     public static boolean openedStarterScreen = false;
@@ -73,6 +74,7 @@ public class SpireAnniversary5Mod implements
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
 
     public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
+    public static HashMap<String, AbstractCardPack> packsByID;
     public static ArrayList<AbstractCardPack> currentPoolPacks = new ArrayList<>();
 
     public static CardGroup packsToDisplay;
@@ -80,7 +82,6 @@ public class SpireAnniversary5Mod implements
 
     @SpireEnum
     public static AbstractCard.CardTags ISCARDMODIFIED;
-
 
 
     public static Settings.GameLanguage[] SupportedLanguages = {
@@ -202,22 +203,26 @@ public class SpireAnniversary5Mod implements
             BaseMod.logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             //Do not need to be checked as these always need to exist
             BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + languageAndPack + "/Cardstrings.json");
+            try {
+                BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + languageAndPack + "/Relicstrings.json");
+            } catch (Exception ignored) {
+            }
+            try {
+                BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + languageAndPack + "/Powerstrings.json");
+            } catch (Exception ignored) {
+            }
+            try {
+                BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + languageAndPack + "/UIstrings.json");
+            } catch (Exception ignored) {
+            }
+            try {
+                BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + languageAndPack + "/Stancestrings.json");
+            } catch (Exception ignored) {
+            }
+            try {
+                BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + languageAndPack + "/Orbstrings.json");
+            } catch (Exception ignored) {
 
-            String filepath = modID + "Resources/localization/" + languageAndPack + "/";
-            if (Gdx.files.internal(filepath + "Relicstrings.json").exists()) {
-                BaseMod.loadCustomStringsFile(RelicStrings.class, filepath + "Relicstrings.json");
-            }
-            if (Gdx.files.internal(filepath + "Powerstrings.json").exists()) {
-                BaseMod.loadCustomStringsFile(PowerStrings.class, filepath + "Powerstrings.json");
-            }
-            if (Gdx.files.internal(filepath + "UIstrings.json").exists()) {
-                BaseMod.loadCustomStringsFile(UIStrings.class, filepath + "UIstrings.json");
-            }
-            if (Gdx.files.internal(filepath + "Stancestrings.json").exists()) {
-                BaseMod.loadCustomStringsFile(StanceStrings.class, filepath + "Stancestrings.json");
-            }
-            if (Gdx.files.internal(filepath + "Orbstrings.json").exists()) {
-                BaseMod.loadCustomStringsFile(OrbStrings.class, filepath + "Orbstrings.json");
             }
         }
     }
@@ -245,6 +250,7 @@ public class SpireAnniversary5Mod implements
                 packJson = handle.readString(String.valueOf(StandardCharsets.UTF_8));
                 List<Keyword> packKeywords = new ArrayList<>(Arrays.asList(gson.fromJson(packJson, Keyword[].class)));
                 keywords.addAll(packKeywords);
+            } catch (Exception ignored) {
             }
         }
 
@@ -254,44 +260,43 @@ public class SpireAnniversary5Mod implements
     }
 
 
-    public static void declarePacks(){
+    public static void declarePacks() {
         // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
-        HashMap<String, AbstractCardPack> packs = new HashMap<>();
+        packsByID = new HashMap<>();
         new AutoAdd(modID)
-            .packageFilter(AbstractCardPack.class)
-            .any(AbstractCardPack.class, (info, pack) -> {
-                if (packs.containsKey(pack.packID)) {
-                    throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Pack class 1: " + packs.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
-                }
-                packs.put(pack.packID, pack);
-                allPacks.add(pack);
-            });
+                .packageFilter(AbstractCardPack.class)
+                .any(AbstractCardPack.class, (info, pack) -> {
+                    if (packsByID.containsKey(pack.packID)) {
+                        throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Pack class 1: " + packsByID.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
+                    }
+                    packsByID.put(pack.packID, pack);
+                    allPacks.add(pack);
+                });
     }
 
-    public static AbstractCardPack getRandomPackFromAll(){
-        return allPacks.get(AbstractDungeon.cardRandomRng.random(0,allPacks.size()-1));
+    public static AbstractCardPack getRandomPackFromAll() {
+        return allPacks.get(AbstractDungeon.cardRandomRng.random(0, allPacks.size() - 1));
     }
 
-    public static AbstractCardPack getRandomPackFromCurrentPool(){
-        return currentPoolPacks.get(AbstractDungeon.cardRandomRng.random(0,currentPoolPacks.size()-1));
+    public static AbstractCardPack getRandomPackFromCurrentPool() {
+        return currentPoolPacks.get(AbstractDungeon.cardRandomRng.random(0, currentPoolPacks.size() - 1));
     }
 
-    public static AbstractCard getRandomCardFromPack(AbstractCardPack pack){
-        return pack.cards.get(AbstractDungeon.cardRandomRng.random(0,pack.cards.size()-1)).makeCopy();
+    public static AbstractCard getRandomCardFromPack(AbstractCardPack pack) {
+        return pack.cards.get(AbstractDungeon.cardRandomRng.random(0, pack.cards.size() - 1)).makeCopy();
     }
 
-    public static ArrayList<AbstractCard> getPreviewCardsFromCurrentSet(){
+    public static ArrayList<AbstractCard> getPreviewCardsFromCurrentSet() {
         ArrayList<AbstractCard> valid = new ArrayList<>();
-        for (AbstractCardPack cp:currentPoolPacks
-             ) {
+        for (AbstractCardPack cp : currentPoolPacks
+        ) {
             valid.add(cp.previewPackCard);
         }
         return valid;
     }
 
 
-    public static ArrayList<AbstractCardPack> getRandomPacks(boolean onlyCurrent, int count){
-
+    public static ArrayList<AbstractCardPack> getRandomPacks(boolean onlyCurrent, int count) {
         ArrayList<AbstractCardPack> allChoices = new ArrayList<>();
         ArrayList<AbstractCardPack> valid = new ArrayList<>();
 
@@ -302,7 +307,7 @@ public class SpireAnniversary5Mod implements
         }
 
         for (int i = 0; i < count; i++) {
-            AbstractCardPack p = allChoices.get(AbstractDungeon.cardRandomRng.random(0,allChoices.size()-1));
+            AbstractCardPack p = allChoices.get(AbstractDungeon.cardRandomRng.random(0, allChoices.size() - 1));
             valid.add(p);
             allChoices.remove(p);
         }
@@ -311,24 +316,7 @@ public class SpireAnniversary5Mod implements
 
 
 
-    public static void displayOpeningPacks() {
-        //TODO - Don't render the title screen for act 1
-        CardGroup charChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-
-        for (int i = 0; i < PACKS_PER_RUN; i++) {
-            charChoices.addToBottom(currentPoolPacks.get(i).previewPackCard);
-        }
-
-        BaseMod.logger.info(CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
-        AbstractDungeon.gridSelectScreen.open(charChoices, 0, true, CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
-    }
-
-    public static void randomizePackSet(){
-
-        // TODO - Save and load this.  Shouldn't need to do anything except save the packs list by ID?
-
-        // TODO - This only triggers once, won't work properly on a 2nd run in the same session.
-        // TODO - Also crashes at the completion of the first boss on this function, so this is happening a 2nd time.
+    private static void startOfGameRandomPacks(int amount) {
 
         ArrayList<AbstractCardPack> poolPacks = new ArrayList<>();
 
@@ -340,20 +328,98 @@ public class SpireAnniversary5Mod implements
         currentPoolPacks.add(coreSetPack);
         poolPacks.remove(coreSetPack);
         for (int i = 0; i < PACKS_PER_RUN - 1; i++) {
-            SpireAnniversary5Mod.currentPoolPacks.add(poolPacks.get(AbstractDungeon.cardRandomRng.random(1,poolPacks.size()-1)));
-            poolPacks.remove(currentPoolPacks.get(i+1));
+            SpireAnniversary5Mod.currentPoolPacks.add(poolPacks.get(AbstractDungeon.cardRandomRng.random(1, poolPacks.size() - 1)));
+            poolPacks.remove(currentPoolPacks.get(i + 1));
         }
 
+    }
+
+    public static void startOfGamePackChoices(int amount) {
+        //TODO: Open choice of 3. Then reduce amount by 1. If 0, move to start of game pack reveals, otherwise choice again
+    }
+
+    public static void startOfGamePackSetup() {
+        //TODO: Ignore dropdown values if the box is unchecked (IE: player played custom mode, then unchecks box)
+        int randomsToSetup = 0;
+        int choicesToSetup = 0;
+        for (String setupType : MainMenuUIPatch.packSetups) {
+            BaseMod.logger.info("Setting up Pack type " + setupType + ".");
+            switch (setupType) {
+                case "Random":
+                    BaseMod.logger.info("Adding 1 more pack to random selection later on.");
+                    randomsToSetup++;
+                    break;
+                case "Choice of 3":
+                    BaseMod.logger.info("Adding 1 more pack to choice-of-3 selection later on.");
+                    choicesToSetup++;
+                    break;
+                default:
+                    //TODO: These are working off names instead of IDs - bad!
+                    for (AbstractCardPack pack : allPacks) {
+                        if (pack.name.equals(setupType)) {
+                            BaseMod.logger.info("Found pack matching name " + pack.name);
+                            currentPoolPacks.add(pack);
+                        }
+                    }
+            }
+        }
+
+        BaseMod.logger.info("OK, we've looked at all the pack settings.");
+        if (randomsToSetup > 0) {
+            BaseMod.logger.info("Let's add randomized packs. We need to add " + randomsToSetup);
+            startOfGameRandomPacks(randomsToSetup);
+        }
+        else {
+            BaseMod.logger.info("No randomized packs to add. Moving on");
+        }
+        if (choicesToSetup > 0) {
+            BaseMod.logger.info("There are choices to be made. We need to choose for " + choicesToSetup);
+
+        }
+        else {
+            BaseMod.logger.info("No choice packs to add, so we're done. Revealing packs.");
+            startOfGamePackReveals();
+        }
+
+        BaseMod.logger.info("All pack selections made or queued.");
+    }
+
+    private static void startOfGamePackReveals() {
+        //TODO - Don't render the title screen for act 1
+        CardGroup charChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+
+        for (int i = 0; i < PACKS_PER_RUN; i++) {
+            charChoices.addToBottom(currentPoolPacks.get(i).previewPackCard);
+        }
+
+        BaseMod.logger.info(CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
+        AbstractDungeon.gridSelectScreen.open(charChoices, 0, true, CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
     }
 
     @Override
     public void receivePostUpdate() {
         if (!openedStarterScreen) {
             if (CardCrawlGame.isInARun() && readyToDoThing) {
-                BaseMod.logger.info("Opening Packmaster start run screen");
-                displayOpeningPacks();
+                BaseMod.logger.info("Starting Packmaster setup.");
+                startOfGamePackSetup();
                 openedStarterScreen = true;
             }
+        }
+    }
+
+    @Override
+    public ArrayList<String> onSave() {
+        ArrayList<String> packIDs = new ArrayList<>();
+        for (AbstractCardPack pack : currentPoolPacks) {
+            packIDs.add(pack.packID);
+        }
+        return packIDs;
+    }
+
+    @Override
+    public void onLoad(ArrayList<String> strings) {
+        for (String s : strings) {
+            currentPoolPacks.add(packsByID.get(s));
         }
     }
 }
