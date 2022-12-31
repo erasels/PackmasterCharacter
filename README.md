@@ -31,20 +31,20 @@ TBD
 TBD
 
 ### Notes
-..* A Secondary magic number is already defined in case you need it.
-..* If you make patches/powers/actions/or similar often-used classes, please do so in your own sub-folder/package.
-..* We have a utility class called Wiz, you can make use of it to get access to general utility methods (like accessing the player quicker than using AbstractDeungon.player)
-..* We have our own AbstractCard Class, **AbstractPackmasterCard** please make use of it for your cards
+* A Secondary magic number is already defined in case you need it.
+* If you make patches/powers/actions/or similar often-used classes, please do so in your own sub-folder/package.
+* We have a utility class called Wiz, you can make use of it to get access to general utility methods (like accessing the player quicker than using AbstractDeungon.player)
+* We have our own AbstractCard Class, **AbstractPackmasterCard** please make use of it for your cards
 
 ### Reminders and veto ruling
 Please look at the google docs to get a full refresher of the rules for your contribution. Specifically the complxity cap is important.
 Here is a TL;DR:
-..* 10 cards per pack, token cards are allowed but please be reasonable (high amount of tokens is allowed by precedent, only if these cards cannot be easily obtained)
-..* No additional UI, please use powers/orbs/stances if you need them
-..* Most of your cards should have less than 6 lines of text.
-..* Don't outsource complexity to single-use Keywords
-..* Artwork needs to be included for all cards in the pack
-..* You may add relics that only spawn if your pack is selected, however these must interact with the pack's mechanic, they should not be generic effects
+* 10 cards per pack, token cards are allowed but please be reasonable (high amount of tokens is allowed by precedent, only if these cards cannot be easily obtained)
+* No additional UI, please use powers/orbs/stances if you need them
+* Most of your cards should have less than 6 lines of text.
+* Don't outsource complexity to single-use Keywords
+* Artwork needs to be included for all cards in the pack
+* You may add relics that only spawn if your pack is selected, however these must interact with the pack's mechanic, they should not be generic effects
 
 And finally, as the person merging all PRs other reviwers or I (Gk/erasels) may ask you to make changes to your Pack in case some cards lie outside the power curve or skirt the rules too much.
 Please don't be discouraged if your Pack isn't instantly merged.
