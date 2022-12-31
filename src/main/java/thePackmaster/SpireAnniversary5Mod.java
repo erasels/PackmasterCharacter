@@ -203,26 +203,22 @@ public class SpireAnniversary5Mod implements
             BaseMod.logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             //Do not need to be checked as these always need to exist
             BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + languageAndPack + "/Cardstrings.json");
-            try {
-                BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + languageAndPack + "/Relicstrings.json");
-            } catch (Exception ignored) {
-            }
-            try {
-                BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + languageAndPack + "/Powerstrings.json");
-            } catch (Exception ignored) {
-            }
-            try {
-                BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + languageAndPack + "/UIstrings.json");
-            } catch (Exception ignored) {
-            }
-            try {
-                BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + languageAndPack + "/Stancestrings.json");
-            } catch (Exception ignored) {
-            }
-            try {
-                BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + languageAndPack + "/Orbstrings.json");
-            } catch (Exception ignored) {
 
+            String filepath = modID + "Resources/localization/" + languageAndPack + "/";
+            if (Gdx.files.internal(filepath + "Relicstrings.json").exists()) {
+                BaseMod.loadCustomStringsFile(RelicStrings.class, filepath + "Relicstrings.json");
+            }
+            if (Gdx.files.internal(filepath + "Powerstrings.json").exists()) {
+                BaseMod.loadCustomStringsFile(PowerStrings.class, filepath + "Powerstrings.json");
+            }
+            if (Gdx.files.internal(filepath + "UIstrings.json").exists()) {
+                BaseMod.loadCustomStringsFile(UIStrings.class, filepath + "UIstrings.json");
+            }
+            if (Gdx.files.internal(filepath + "Stancestrings.json").exists()) {
+                BaseMod.loadCustomStringsFile(StanceStrings.class, filepath + "Stancestrings.json");
+            }
+            if (Gdx.files.internal(filepath + "Orbstrings.json").exists()) {
+                BaseMod.loadCustomStringsFile(OrbStrings.class, filepath + "Orbstrings.json");
             }
         }
     }
@@ -250,7 +246,6 @@ public class SpireAnniversary5Mod implements
                 packJson = handle.readString(String.valueOf(StandardCharsets.UTF_8));
                 List<Keyword> packKeywords = new ArrayList<>(Arrays.asList(gson.fromJson(packJson, Keyword[].class)));
                 keywords.addAll(packKeywords);
-            } catch (Exception ignored) {
             }
         }
 
