@@ -6,28 +6,5 @@
       " #yStrength and #b",
       " #yDexterity."
     ]
-  },
-  "${ModID}:StrikeDummyJrPower": {
-    "NAME": "Strike Dummy Jr.",
-    "DESCRIPTIONS": [
-      "Your Strikes deal ",
-      " more damage."
-    ]
-  },
-  "${ModID}:StrikeOfGeniusPower": {
-    "NAME": "Strike of Genius",
-    "DESCRIPTIONS": [
-      "At the start of your turn, gain a random \"Strike\". It costs #b0 until played and Exhausts.",
-      "At the start of your turn, gain #b",
-      " random \"Strike\"s. They cost #b0 until played and Exhaust."
-    ]
-  },
-  "${ModID}:StrikeOfGeniusUpgradedPower": {
-    "NAME": "Strike of Genius+",
-    "DESCRIPTIONS": [
-      "At the start of your turn, gain a random #yupgraded \"Strike\". It costs #b0 until played and Exhausts.",
-      "At the start of your turn, gain #b",
-      " random #yupgraded \"Strike\"s. They cost #b0 until played and Exhaust."
-    ]
   }
 }

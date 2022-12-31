@@ -186,15 +186,11 @@ public class SpireAnniversary5Mod implements
         // The name and description of the pack can go in the main UIstrings.json file.
         List<String> baseGamePacks = Arrays.asList(IroncladPack.class.getName(), SilentPack.class.getName(), DefectPack.class.getName(), WatcherPack.class.getName());
 
-        // These packs are excluded from loading of pack-specific string files because they were created before this system.
-        // Please do not add elements to this list.
-        List<String> originalPacks = Arrays.asList(StrikesPack.class.getName());
-
         Collection<CtClass> packClasses = new AutoAdd(modID)
                 .packageFilter(AbstractCardPack.class)
                 .findClasses(AbstractCardPack.class)
                 .stream()
-                .filter(c -> !baseGamePacks.contains(c.getName()) && !originalPacks.contains(c.getName()))
+                .filter(c -> !baseGamePacks.contains(c.getName()))
                 .collect(Collectors.toList());
         BaseMod.logger.info("Found pack classes with AutoAdd: " + packClasses.size());
         for (CtClass packClass : packClasses) {
