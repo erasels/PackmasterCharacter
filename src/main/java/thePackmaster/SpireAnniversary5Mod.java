@@ -6,6 +6,7 @@ import basemod.abstracts.CustomSavable;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
@@ -29,6 +30,7 @@ import thePackmaster.relics.AbstractPackmasterRelic;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.logging.FileHandler;
 import java.util.stream.Collectors;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -194,10 +196,11 @@ public class SpireAnniversary5Mod implements
                 .filter(c -> !baseGamePacks.contains(c.getName()))
                 .collect(Collectors.toList());
         BaseMod.logger.info("Found pack classes with AutoAdd: " + packClasses.size());
+
         for (CtClass packClass : packClasses) {
             String packName = packClass.getSimpleName().toLowerCase();
             String languageAndPack = getLangString() + "/" + packName;
-            BaseMod.logger.info("Loading pack strings for pack " + packClass.getName() + ". Strings expected to be in folder Resources/localization/" + languageAndPack);
+            BaseMod.logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             //Do not need to be checked as these always need to exist
             BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + languageAndPack + "/Cardstrings.json");
             try {
@@ -219,6 +222,7 @@ public class SpireAnniversary5Mod implements
             try {
                 BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + languageAndPack + "/Orbstrings.json");
             } catch (Exception ignored) {
+
             }
         }
     }
@@ -227,7 +231,7 @@ public class SpireAnniversary5Mod implements
     public void receiveEditKeywords() {
         Gson gson = new Gson();
         String json = Gdx.files.internal(modID + "Resources/localization/" + getLangString() + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        List<com.evacipated.cardcrawl.mod.stslib.Keyword> keywords = new ArrayList<>(Arrays.asList(gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class)));
+        List<Keyword> keywords = new ArrayList<>(Arrays.asList(gson.fromJson(json, Keyword[].class)));
 
         Collection<CtClass> packClasses = new AutoAdd(modID)
                 .packageFilter(AbstractCardPack.class)
@@ -235,13 +239,16 @@ public class SpireAnniversary5Mod implements
                 .stream()
                 .filter(c -> !baseGamePacks.contains(c.getName()))
                 .collect(Collectors.toList());
+
         for (CtClass packClass : packClasses) {
             String packName = packClass.getSimpleName().toLowerCase();
             String languageAndPack = getLangString() + "/" + packName;
-            BaseMod.logger.info("Loading pack keywords for pack " + packClass.getName() + ". Strings expected to be in folder Resources/localization/" + languageAndPack);
-            try {
-                String packJson = Gdx.files.internal(modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-                List<com.evacipated.cardcrawl.mod.stslib.Keyword> packKeywords = new ArrayList<>(Arrays.asList(gson.fromJson(packJson, com.evacipated.cardcrawl.mod.stslib.Keyword[].class)));
+            BaseMod.logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
+            String packJson = modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json";
+            FileHandle handle = Gdx.files.internal(packJson);
+            if (handle.exists()) {
+                packJson = handle.readString(String.valueOf(StandardCharsets.UTF_8));
+                List<Keyword> packKeywords = new ArrayList<>(Arrays.asList(gson.fromJson(packJson, Keyword[].class)));
                 keywords.addAll(packKeywords);
             } catch (Exception ignored) {
             }

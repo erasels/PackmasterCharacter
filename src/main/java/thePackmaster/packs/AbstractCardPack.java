@@ -33,6 +33,5 @@ public abstract class AbstractCardPack {
 
         }
         previewPackCard = new CardPackPreview(packID, this);
-
     }
 }
