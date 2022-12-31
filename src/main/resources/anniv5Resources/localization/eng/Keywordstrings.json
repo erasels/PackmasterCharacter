@@ -5,12 +5,5 @@
       "greedy"
     ],
     "DESCRIPTION": "Bonus effect that triggers only if you have 7 or more cards in hand."
-  },
-  {
-    "PROPER_NAME": "Modify",
-    "NAMES": [
-      "modify"
-    ],
-    "DESCRIPTION": "Alter a card for the rest of combat. Modified cards cannot be modified again until the combat ends."
   }
 ]

@@ -14,20 +14,6 @@
       " more damage this turn."
     ]
   },
-  "${ModID}:PiratifyPower": {
-    "NAME": "Piratify",
-    "DESCRIPTIONS": [
-      "At the start of each turn, Modify ",
-      " random cards in hand: 'Gain a Cannonball.'"
-    ]
-  },
-  "${ModID}:PiratifyPowerUpp": {
-    "NAME": "Piratify+",
-    "DESCRIPTIONS": [
-      "At the start of each turn, Modify ",
-      " random cards in hand: 'Gain a Cannonball+.'"
-    ]
-  },
   "${ModID}:StrikeDummyJrPower": {
     "NAME": "Strike Dummy Jr.",
     "DESCRIPTIONS": [
