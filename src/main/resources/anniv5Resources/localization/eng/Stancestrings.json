@@ -1,8 +1,2 @@
 {
-  "${ModID}:Ancient": {
-    "NAME": "Ancient",
-    "DESCRIPTION": [
-      "If you have less than 6 Plated Armor at the start of your turn, gain 2 Plated Armor."
-    ]
-  }
 }

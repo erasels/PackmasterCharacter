@@ -190,7 +190,7 @@ public class SpireAnniversary5Mod implements
 
         // These packs are excluded from loading of pack-specific string files because they were created before this system.
         // Please do not add elements to this list.
-        List<String> originalPacks = Arrays.asList(DownfallPack.class.getName(), DimensionGatePack.class.getName(), LegacyPack.class.getName(), MadSciencePack.class.getName(), StrikesPack.class.getName());
+        List<String> originalPacks = Arrays.asList(DimensionGatePack.class.getName(), LegacyPack.class.getName(), MadSciencePack.class.getName(), StrikesPack.class.getName());
 
         Collection<CtClass> packClasses = new AutoAdd(modID)
                 .packageFilter(AbstractCardPack.class)

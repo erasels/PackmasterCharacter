@@ -66,53 +66,6 @@
     "NAME": "From My Hat",
     "DESCRIPTION": "Gain !B! Block. NL Add a random Attack into your hand. NL It gains Retain."
   },
-  "${ModID}:AwakenDeath": {
-    "NAME": "Awaken",
-    "DESCRIPTION": "When you would die, heal !M! HP instead and remove this buff. NL At the end of combat (if untriggered), heals for half as much."
-  },
-  "${ModID}:Chronoboost": {
-    "NAME": "Chrono-Boost",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain 1 Strength for every 12th card you play."
-  },
-  "${ModID}:DefensiveMode": {
-    "NAME": "Defensive Mode",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Weak."
-  },
-  "${ModID}:Execute": {
-    "NAME": "Execute",
-    "DESCRIPTION": "Deal !D! damage twice. NL If you are in a Stance, deal !D! damage a third time."
-  },
-  "${ModID}:GhostflameStrike": {
-    "NAME": "Ghostflame Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Channel !M! Ghostflame."
-  },
-  "${ModID}:HyperBeam": {
-    "NAME": "HYPER BEAM",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E] [E].",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]."
-  },
-  "${ModID}:InvincibleStrength": {
-    "NAME": "Invincible",
-    "DESCRIPTION": "Gain !M! ${ModID}:Invincible. NL If you already had Invincible, it lasts another turn instead."
-  },
-  "${ModID}:PrepareCrush": {
-    "NAME": "Prepare Crush",
-    "DESCRIPTION": "Gain !B! Block. NL On your next turn, gain [E] and add *SLIME *CRUSH! to your hand."
-  },
-  "${ModID}:ShapersBlessing": {
-    "NAME": "Shaper's Blessing",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Enter Ancient Stance.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block and !M! Plated Armor. NL Enter Ancient Stance."
-  },
-  "${ModID}:SlimeCrush": {
-    "NAME": "SLIME CRUSH!",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
-  },
-  "${ModID}:YouAreMine": {
-    "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Apply !M! Vulnerable and remove the target's Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !M! Weak, and remove the target's Block. NL Exhaust."
-  },
   "${ModID}:Anemia": {
     "NAME": "Anemia",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to any Poisoned enemies."

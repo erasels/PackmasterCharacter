@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Invincible",
+    "NAMES": [
+      "invincible"
+    ],
+    "DESCRIPTION": "You cannot lose more than a given amount of HP in a single turn. NL At the end of any round in which Invincible prevented HP loss, remove it."
+  },
+  {
+    "PROPER_NAME": "Ghostflame",
+    "NAMES": [
+      "ghostflame"
+    ],
+    "DESCRIPTION": "Orb: Deals damage to ALL enemies."
+  }
+]

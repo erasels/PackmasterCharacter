@@ -7,49 +7,11 @@
       " #yDexterity."
     ]
   },
-  "${ModID}:AwakenDeathPower": {
-    "NAME": "Awakening",
-    "DESCRIPTIONS": [
-      "When you would die, heal #b",
-      " HP and remove this effect. Heals half this value at end of combat if untriggered."
-    ]
-  },
-  "${ModID}:ChronoBoostPower": {
-    "NAME": "Chrono Boost",
-    "DESCRIPTIONS": [
-      "After playing #b",
-      " more cards, gain #b1 #yStrength. This can trigger ",
-      " more times."
-    ]
-  },
-  "${ModID}:DeEnergizedPower": {
-    "NAME": "De-Energized",
-    "DESCRIPTIONS": [
-      "At the start of your next turn, lose #b",
-      " [E] ."
-    ]
-  },
-  "${ModID}:VexVinciblePower": {
-    "NAME": "Invincible",
-    "DESCRIPTIONS": [
-      "Caps all damage and HP loss taken to #b",
-      " in a turn. Removed after activation.",
-      "Caps all damage and HP loss taken to #b",
-      " in a turn. Removed after #b",
-      " activations."
-    ]
-  },
   "${ModID}:MagicMissilePower": {
     "NAME": "Missile Power",
     "DESCRIPTIONS": [
       "Magic Missiles deal ",
       " more damage this turn."
-    ]
-  },
-  "${ModID}:NextTurnGainSlimeCrushPower": {
-    "NAME": "Preparing Crush",
-    "DESCRIPTIONS": [
-      "This shouldn't ever actually appear, right?"
     ]
   },
   "${ModID}:PiratifyPower": {
