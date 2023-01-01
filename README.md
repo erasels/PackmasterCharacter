@@ -18,7 +18,9 @@ For the specifics of how to fork this repo and then make a pull request, please 
 https://docs.github.com/en/get-started/quickstart/contributing-to-projects  
   
 I recommend using the Github desktop client for this if you have no experience with Github  
-https://desktop.github.com/
+https://desktop.github.com/  
+  
+**MAKE YOUR PRs TO THE DEVELOPMENT BRANCH**
 
 ## Technical
 ### How to make a Pack
