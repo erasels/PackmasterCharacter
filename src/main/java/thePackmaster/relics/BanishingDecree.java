@@ -10,6 +10,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.AbstractPackPreviewCard;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -86,7 +87,7 @@ public class BanishingDecree extends AbstractPackmasterRelic //implements Custom
         super.update();
         if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             cardSelected = true;
-            AbstractCardPack cp = ((AbstractPackPreviewCard)card).parentPack;
+            AbstractCardPack cp = Wiz.getPackByCard(card);
             SpireAnniversary5Mod.currentPoolPacks.remove(cp);
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
 
