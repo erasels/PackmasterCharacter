@@ -54,8 +54,8 @@ public class MainMenuUIPatch {
         packSetups.add("Core Set");
         packSetups.add("Random");
         packSetups.add("Random");
-        packSetups.add("Choice of 3");
-        packSetups.add("Choice of 3");
+        packSetups.add("Random");
+        packSetups.add("Random");
         packSetups.add("Choice of 3");
         packSetups.add("Choice of 3");
 
@@ -73,7 +73,7 @@ public class MainMenuUIPatch {
 
             if (i == 0) {
                 d.setSelectedIndex(2);
-            } else if (i >= 2) {
+            } else if (i >= 5) {
                 d.setSelectedIndex(1);
             }
         }

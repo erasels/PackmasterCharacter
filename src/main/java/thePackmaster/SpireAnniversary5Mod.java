@@ -25,12 +25,12 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.packs.*;
+import thePackmaster.patches.CardParentPackPatch;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.relics.AbstractPackmasterRelic;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.logging.FileHandler;
 import java.util.stream.Collectors;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -310,33 +310,70 @@ public class SpireAnniversary5Mod implements
     }
 
 
-
     private static void startOfGameRandomPacks(int amount) {
-
         ArrayList<AbstractCardPack> poolPacks = new ArrayList<>();
 
-        poolPacks.addAll(allPacks);
+        for (AbstractCardPack p : allPacks) {
+            if (!currentPoolPacks.contains(p) && !p.packID.equals(CoreSetPack.ID)) {
+                poolPacks.add(p);
+            }
+        }
 
-        SpireAnniversary5Mod.currentPoolPacks.clear();
-
-        AbstractCardPack coreSetPack = poolPacks.stream().filter(p -> p.packID.equals(CoreSetPack.ID)).findFirst().get();
-        currentPoolPacks.add(coreSetPack);
-        poolPacks.remove(coreSetPack);
-        for (int i = 0; i < PACKS_PER_RUN - 1; i++) {
-            SpireAnniversary5Mod.currentPoolPacks.add(poolPacks.get(AbstractDungeon.cardRandomRng.random(1, poolPacks.size() - 1)));
-            poolPacks.remove(currentPoolPacks.get(i + 1));
+        for (int i = 0; i < amount; i++) {
+            AbstractCardPack target = poolPacks.get(AbstractDungeon.cardRandomRng.random(0, poolPacks.size() - 1));
+            BaseMod.logger.info("Randomly selected: " + target.packID);
+            SpireAnniversary5Mod.currentPoolPacks.add(target);
+            poolPacks.remove(target);
         }
 
     }
 
-    public static void startOfGamePackChoices(int amount) {
-        //TODO: Open choice of 3. Then reduce amount by 1. If 0, move to start of game pack reveals, otherwise choice again
+    private static int ongoingPackChoiceOfThrees = 0;
+
+    private static void startOfGamePackChoices(int amount) {
+        ongoingPackChoiceOfThrees = amount;
+        individualPackChoiceOfThree();
+    }
+
+    private static void individualPackChoiceOfThree() {
+        ArrayList<AbstractCardPack> poolPacks = new ArrayList<>();
+
+        for (AbstractCardPack p : allPacks) {
+            if (!currentPoolPacks.contains(p) && !p.packID.equals(CoreSetPack.ID)) {
+                poolPacks.add(p);
+            }
+        }
+
+        CardGroup packChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (int i = 0; i < 3; i++) {
+            AbstractCardPack target = poolPacks.get(AbstractDungeon.cardRandomRng.random(0, poolPacks.size() - 1));
+            packChoices.addToBottom(target.previewPackCard);
+            poolPacks.remove(target);
+        }
+
+        BaseMod.logger.info("Queueing a choice between " + packChoices.getCardNames());
+        AbstractDungeon.gridSelectScreen.open(packChoices, 1, false, "Blah blah localize this!"); // TODO: Localize that!
     }
 
     public static void startOfGamePackSetup() {
-        //TODO: Ignore dropdown values if the box is unchecked (IE: player played custom mode, then unchecks box)
+        currentPoolPacks.clear();
+
+        ArrayList<String> packSetup = new ArrayList<>();
+        if (MainMenuUIPatch.customDraft) {
+            packSetup.addAll(MainMenuUIPatch.packSetups);
+        } else {
+            packSetup.add("Core Set"); //TODO: ID swap
+            packSetup.add("Random");
+            packSetup.add("Random");
+            packSetup.add("Random");
+            packSetup.add("Random");
+            packSetup.add("Choice of 3");
+            packSetup.add("Choice of 3");
+        }
+
         int randomsToSetup = 0;
         int choicesToSetup = 0;
+
         for (String setupType : MainMenuUIPatch.packSetups) {
             BaseMod.logger.info("Setting up Pack type " + setupType + ".");
             switch (setupType) {
@@ -360,18 +397,18 @@ public class SpireAnniversary5Mod implements
         }
 
         BaseMod.logger.info("OK, we've looked at all the pack settings.");
+
         if (randomsToSetup > 0) {
             BaseMod.logger.info("Let's add randomized packs. We need to add " + randomsToSetup);
             startOfGameRandomPacks(randomsToSetup);
-        }
-        else {
+        } else {
             BaseMod.logger.info("No randomized packs to add. Moving on");
         }
+
         if (choicesToSetup > 0) {
             BaseMod.logger.info("There are choices to be made. We need to choose for " + choicesToSetup);
-
-        }
-        else {
+            startOfGamePackChoices(choicesToSetup);
+        } else {
             BaseMod.logger.info("No choice packs to add, so we're done. Revealing packs.");
             startOfGamePackReveals();
         }
@@ -380,15 +417,16 @@ public class SpireAnniversary5Mod implements
     }
 
     private static void startOfGamePackReveals() {
+        BaseMod.logger.info("Total packs: " + currentPoolPacks.toString());
         //TODO - Don't render the title screen for act 1
-        CardGroup charChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        CardGroup packDisplays = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
         for (int i = 0; i < PACKS_PER_RUN; i++) {
-            charChoices.addToBottom(currentPoolPacks.get(i).previewPackCard);
+            packDisplays.addToBottom(currentPoolPacks.get(i).previewPackCard);
         }
 
         BaseMod.logger.info(CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
-        AbstractDungeon.gridSelectScreen.open(charChoices, 0, true, CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
+        AbstractDungeon.gridSelectScreen.open(packDisplays, 0, true, CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
     }
 
     @Override
@@ -398,6 +436,21 @@ public class SpireAnniversary5Mod implements
                 BaseMod.logger.info("Starting Packmaster setup.");
                 startOfGamePackSetup();
                 openedStarterScreen = true;
+            }
+        } else if (ongoingPackChoiceOfThrees > 0) {
+            if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+                BaseMod.logger.info("Player selected " + AbstractDungeon.gridSelectScreen.selectedCards.get(0).cardID);
+                currentPoolPacks.add(CardParentPackPatch.parentPack.get(AbstractDungeon.gridSelectScreen.selectedCards.get(0)));
+
+                AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                ongoingPackChoiceOfThrees -= 1;
+                if (ongoingPackChoiceOfThrees != 0) {
+                    BaseMod.logger.info(ongoingPackChoiceOfThrees + " choices left.");
+                    individualPackChoiceOfThree();
+                } else {
+                    BaseMod.logger.info("No more choices left, displaying the full set of packs.");
+                    startOfGamePackReveals();
+                }
             }
         }
     }
