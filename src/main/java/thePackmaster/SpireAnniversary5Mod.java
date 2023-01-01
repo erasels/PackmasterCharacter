@@ -356,6 +356,7 @@ public class SpireAnniversary5Mod implements
         currentPoolPacks.clear();
 
         ArrayList<String> packSetup = new ArrayList<>();
+
         if (MainMenuUIPatch.customDraft) {
             packSetup.addAll(MainMenuUIPatch.packSetups);
         } else {
@@ -371,8 +372,9 @@ public class SpireAnniversary5Mod implements
         int randomsToSetup = 0;
         int choicesToSetup = 0;
 
-        for (String setupType : MainMenuUIPatch.packSetups) {
+        for (String setupType : packSetup) {
             BaseMod.logger.info("Setting up Pack type " + setupType + ".");
+            
             switch (setupType) {
                 case "Random":
                     BaseMod.logger.info("Adding 1 more pack to random selection later on.");
