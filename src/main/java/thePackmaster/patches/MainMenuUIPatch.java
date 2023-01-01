@@ -92,14 +92,14 @@ public class MainMenuUIPatch {
                 packDraftToggle.render(sb);
 
                 sb.setColor(Color.WHITE);
+                //TODO: These are misaligned on 720p (and probably other resolutions)
                 sb.draw(ImageMaster.CHECKBOX, packDraftToggle.x - (12f * Settings.scale), packDraftToggle.y - (12f * Settings.scale), 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale, Settings.scale, 0.0f, 0, 0, 64, 64, false, false);
                 if (customDraft) {
                     sb.draw(ImageMaster.TICK, packDraftToggle.x - (12f * Settings.scale), packDraftToggle.y - (12f * Settings.scale), 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale, Settings.scale, 0.0f, 0, 0, 64, 64, false, false);
                 }
                 FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], packDraftToggle.cX + 25f * Settings.scale, packDraftToggle.cY + FontHelper.getHeight(FontHelper.tipHeaderFont)*0.5f, Settings.BLUE_TEXT_COLOR);
-                
-                // If toggle button is checked, render the dropdowns, too
 
+                // If toggle button is checked, render the dropdowns, too
                 if (customDraft) {
                     for (int i = dropdowns.size() - 1; i >= 0; i--) {
                         dropdowns.get(i).render(sb, DROPDOWNS_START_X, DROPDOWNS_START_Y - (DROPDOWNS_SPACING * i)); //TODO: Place correctly
