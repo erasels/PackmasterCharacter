@@ -360,13 +360,13 @@ public class SpireAnniversary5Mod implements
         if (MainMenuUIPatch.customDraft) {
             packSetup.addAll(MainMenuUIPatch.packSetups);
         } else {
-            packSetup.add("Core Set"); //TODO: ID swap
-            packSetup.add("Random");
-            packSetup.add("Random");
-            packSetup.add("Random");
-            packSetup.add("Random");
-            packSetup.add("Choice of 3");
-            packSetup.add("Choice of 3");
+            packSetup.add(CoreSetPack.ID);
+            packSetup.add(MainMenuUIPatch.RANDOM);
+            packSetup.add(MainMenuUIPatch.RANDOM);
+            packSetup.add(MainMenuUIPatch.RANDOM);
+            packSetup.add(MainMenuUIPatch.RANDOM);
+            packSetup.add(MainMenuUIPatch.CHOICE);
+            packSetup.add(MainMenuUIPatch.CHOICE);
         }
 
         int randomsToSetup = 0;
@@ -376,18 +376,17 @@ public class SpireAnniversary5Mod implements
             BaseMod.logger.info("Setting up Pack type " + setupType + ".");
             
             switch (setupType) {
-                case "Random":
+                case MainMenuUIPatch.RANDOM:
                     BaseMod.logger.info("Adding 1 more pack to random selection later on.");
                     randomsToSetup++;
                     break;
-                case "Choice of 3":
+                case MainMenuUIPatch.CHOICE:
                     BaseMod.logger.info("Adding 1 more pack to choice-of-3 selection later on.");
                     choicesToSetup++;
                     break;
                 default:
-                    //TODO: These are working off names instead of IDs - bad!
                     for (AbstractCardPack pack : allPacks) {
-                        if (pack.name.equals(setupType)) {
+                        if (pack.packID.equals(setupType)) {
                             BaseMod.logger.info("Found pack matching name " + pack.name);
                             currentPoolPacks.add(pack);
                         }
