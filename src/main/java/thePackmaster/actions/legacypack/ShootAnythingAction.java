@@ -1,10 +1,10 @@
-package thePackmaster.actions;
+package thePackmaster.actions.legacypack;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import thePackmaster.vfx.ShootAnythingEffect;
+import thePackmaster.vfx.legacypack.ShootAnythingEffect;
 
 public class ShootAnythingAction extends AbstractGameAction {
 

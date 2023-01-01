@@ -1,4 +1,4 @@
-package thePackmaster.vfx;
+package thePackmaster.vfx.downfallpack;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;

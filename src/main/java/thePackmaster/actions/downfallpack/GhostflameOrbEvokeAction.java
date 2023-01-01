@@ -3,7 +3,7 @@
 // (powered by FernFlower decompiler)
 //
 
-package thePackmaster.actions;
+package thePackmaster.actions.downfallpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
