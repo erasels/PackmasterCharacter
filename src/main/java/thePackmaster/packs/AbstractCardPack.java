@@ -2,7 +2,7 @@ package thePackmaster.packs;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import thePackmaster.patches.CardParentPackPatch;
+import thePackmaster.SpireAnniversary5Mod;
 
 import java.util.ArrayList;
 
@@ -28,9 +28,8 @@ public abstract class AbstractCardPack {
     public void initializePack() {
         for (String s : getCards()) {
             AbstractCard c = CardLibrary.getCard(s);
-            CardParentPackPatch.parentPack.set(c, this);
+            SpireAnniversary5Mod.cardParentMap.put(c.cardID, packID);
             cards.add(c.makeStatEquivalentCopy());
-
         }
         previewPackCard = new CardPackPreview(packID, this);
     }

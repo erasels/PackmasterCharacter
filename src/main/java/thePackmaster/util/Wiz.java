@@ -17,7 +17,9 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.TimedVFXAction;
+import thePackmaster.packs.AbstractCardPack;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
@@ -194,5 +196,10 @@ public class Wiz {
             return found.amount;
         }
         return 0;
+    }
+
+    // Packmaster specific utilities
+    public static AbstractCardPack getPackByCard(AbstractCard c) {
+        return SpireAnniversary5Mod.packsByID.get(SpireAnniversary5Mod.cardParentMap.get(c.cardID));
     }
 }

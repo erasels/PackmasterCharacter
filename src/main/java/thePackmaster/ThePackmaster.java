@@ -182,7 +182,6 @@ public class ThePackmaster extends CustomPlayer {
 
     @Override
     public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
-
         ArrayList<AbstractCard> poolCards = new ArrayList<>();
         for (AbstractCardPack pack : SpireAnniversary5Mod.currentPoolPacks) {
             for (AbstractCard c : pack.cards) {

@@ -23,8 +23,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.patches.CardParentPackPatch;
 import thePackmaster.util.CardArtRoller;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.SpireAnniversary5Mod.modID;
@@ -242,7 +242,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     }
 
     public AbstractCardPack getParent() {
-        return CardParentPackPatch.parentPack.get(this);
+        return Wiz.getPackByCard(this);
     }
 
     public String getParentName() {

@@ -25,9 +25,9 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.packs.*;
-import thePackmaster.patches.CardParentPackPatch;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.relics.AbstractPackmasterRelic;
+import thePackmaster.util.Wiz;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -47,19 +47,22 @@ public class SpireAnniversary5Mod implements
 
     private static UIStrings uiStrings;
 
-    public static boolean readyToDoThing = false;
-    public static boolean openedStarterScreen = false;
-
-    public static int PACKS_PER_RUN = 7;
-
-    public static final String modID = "anniv5";
-
-    public static String makeID(String idText) {
-        return modID + ":" + idText;
-    }
+    public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
+    public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
+    public static HashMap<String, AbstractCardPack> packsByID;
+    public static ArrayList<AbstractCardPack> currentPoolPacks = new ArrayList<>();
+    public static CardGroup packsToDisplay;
+    public static Settings.GameLanguage[] SupportedLanguages = {
+            Settings.GameLanguage.ENG,
+    };
 
     public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
 
+    public static boolean readyToDoThing = false;
+    public static boolean openedStarterScreen = false;
+    public static int PACKS_PER_RUN = 7;
+
+    public static final String modID = "anniv5";
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = modID + "Resources/images/char/mainChar/corpse.png";
@@ -75,29 +78,12 @@ public class SpireAnniversary5Mod implements
     private static final String CHARSELECT_BUTTON = modID + "Resources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
 
-    public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
-    public static HashMap<String, AbstractCardPack> packsByID;
-    public static ArrayList<AbstractCardPack> currentPoolPacks = new ArrayList<>();
-
-    public static CardGroup packsToDisplay;
-
+    public static String makeID(String idText) {
+        return modID + ":" + idText;
+    }
 
     @SpireEnum
     public static AbstractCard.CardTags ISCARDMODIFIED;
-
-
-    public static Settings.GameLanguage[] SupportedLanguages = {
-            Settings.GameLanguage.ENG,
-    };
-
-    private String getLangString() {
-        for (Settings.GameLanguage lang : SupportedLanguages) {
-            if (lang.equals(Settings.language)) {
-                return Settings.language.name().toLowerCase();
-            }
-        }
-        return "eng";
-    }
 
     public SpireAnniversary5Mod() {
         BaseMod.subscribe(this);
@@ -172,6 +158,15 @@ public class SpireAnniversary5Mod implements
             uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Main"));
         declarePacks();
         BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
+    }
+
+    private String getLangString() {
+        for (Settings.GameLanguage lang : SupportedLanguages) {
+            if (lang.equals(Settings.language)) {
+                return Settings.language.name().toLowerCase();
+            }
+        }
+        return "eng";
     }
 
     @Override
@@ -431,6 +426,8 @@ public class SpireAnniversary5Mod implements
 
         BaseMod.logger.info(CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
         AbstractDungeon.gridSelectScreen.open(packDisplays, 0, true, CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
+        //Calling this to fill the card pool after the currentPoolPacks are filled
+        CardCrawlGame.dungeon.initializeCardPools();
     }
 
     @Override
@@ -445,7 +442,7 @@ public class SpireAnniversary5Mod implements
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 AbstractCard selected = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                 BaseMod.logger.info("Player selected " + selected.cardID);
-                AbstractCardPack parentPack = CardParentPackPatch.parentPack.get(selected);
+                AbstractCardPack parentPack = Wiz.getPackByCard(selected);
                 BaseMod.logger.info("Card has corresponding parent pack of " + parentPack.packID);
                 currentPoolPacks.add(parentPack);
 

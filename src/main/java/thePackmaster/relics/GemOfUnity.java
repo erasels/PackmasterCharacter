@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.patches.CardParentPackPatch;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -41,10 +41,11 @@ public class GemOfUnity extends AbstractPackmasterRelic {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (CardParentPackPatch.parentPack.get(c)!= null){
-            if (!packsPlayed.contains(CardParentPackPatch.parentPack.get(c))){
+        AbstractCardPack pack = Wiz.getPackByCard(c);
+        if (pack != null){
+            if (!packsPlayed.contains(pack)){
                 counter--;
-                packsPlayed.add(CardParentPackPatch.parentPack.get(c));
+                packsPlayed.add(pack);
                 if (counter == 0){
                     AbstractDungeon.player.heal(5);
                     addToBot(new GainBlockAction(AbstractDungeon.player, 20));
