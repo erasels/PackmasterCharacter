@@ -1,4 +1,4 @@
-package thePackmaster.stances;
+package thePackmaster.stances.downfallpack;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
-import thePackmaster.vfx.AncientStanceParticleEffect;
+import thePackmaster.vfx.downfallpack.AncientStanceParticleEffect;
 
 import static thePackmaster.util.Wiz.*;
 import static thePackmaster.SpireAnniversary5Mod.makeID;

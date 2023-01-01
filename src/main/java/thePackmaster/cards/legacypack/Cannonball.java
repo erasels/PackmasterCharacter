@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.ShootAnythingAction;
+import thePackmaster.actions.legacypack.ShootAnythingAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.TexLoader;
 

@@ -1,4 +1,4 @@
-package thePackmaster.actions;
+package thePackmaster.actions.dimensiongatepack;
 
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;

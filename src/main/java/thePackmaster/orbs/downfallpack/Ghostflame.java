@@ -1,4 +1,4 @@
-package thePackmaster.orbs;
+package thePackmaster.orbs.downfallpack;
 
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.Gdx;
@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect;
 import com.megacrit.cardcrawl.vfx.combat.*;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect.OrbFlareColor;
-import thePackmaster.actions.GhostflameOrbEvokeAction;
+import thePackmaster.actions.downfallpack.GhostflameOrbEvokeAction;
 
 import static thePackmaster.util.Wiz.atb;
 
