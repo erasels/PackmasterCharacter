@@ -439,8 +439,11 @@ public class SpireAnniversary5Mod implements
             }
         } else if (ongoingPackChoiceOfThrees > 0) {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                BaseMod.logger.info("Player selected " + AbstractDungeon.gridSelectScreen.selectedCards.get(0).cardID);
-                currentPoolPacks.add(CardParentPackPatch.parentPack.get(AbstractDungeon.gridSelectScreen.selectedCards.get(0)));
+                AbstractCard selected = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                BaseMod.logger.info("Player selected " + selected.cardID);
+                AbstractCardPack parentPack = CardParentPackPatch.parentPack.get(selected);
+                BaseMod.logger.info("Card has corresponding parent pack of " + parentPack.packID);
+                currentPoolPacks.add(parentPack);
 
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 ongoingPackChoiceOfThrees -= 1;
