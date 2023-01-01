@@ -46,7 +46,9 @@
   "${ModID}:PackMainMenuUI": {
     "TEXT": [
       "Custom Draft Mode",
-      "Turn this on to choose how your Packs are determined."
+      "Turn this on to choose how your Packs are determined.",
+      "Random",
+      "Choice of 3"
     ]
   },
   "${ModID}:Main": {
