@@ -31,14 +31,14 @@ public class MainMenuUIPatch {
     public static final ArrayList<String> options = new ArrayList<>();
     public static final ArrayList<ArrayList<String>> optionsPerDropdown = new ArrayList<>();
 
-    public static final float CHECKBOX_X = Settings.WIDTH - 200F * Settings.scale;
+    public static final float CHECKBOX_X = Settings.WIDTH - 50F * Settings.scale - FontHelper.getWidth(FontHelper.tipHeaderFont, uiStrings.TEXT[0], 1);
     public static final float CHECKBOX_Y = Settings.HEIGHT / 2.0f - 175.0f * Settings.scale;
 
     public static final float DROPDOWNS_START_X = Settings.WIDTH - 800F * Settings.scale;
     public static final float DROPDOWNS_START_Y = Settings.HEIGHT / 2.0F + 175F * Settings.scale;
     public static final float DROPDOWNS_SPACING = 50F * Settings.scale;
 
-    static { // Todo: find a way to use enums for this maybe, while still allowing for specific names.
+    static { //Todo: find a way to use enums for this maybe, while still allowing for specific names.
         options.add("Random");
         options.add("Choice of 3");
         for (AbstractCardPack c : SpireAnniversary5Mod.allPacks) {
@@ -93,11 +93,11 @@ public class MainMenuUIPatch {
                 packDraftToggle.render(sb);
 
                 sb.setColor(Color.WHITE);
-                sb.draw(ImageMaster.CHECKBOX, packDraftToggle.cX - 32.0f, packDraftToggle.cY - 32.0f, 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
+                sb.draw(ImageMaster.CHECKBOX, packDraftToggle.cX - 32.0f * Settings.scale, packDraftToggle.cY - 32.0f * Settings.scale, 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
                 if (customDraft) {
-                    sb.draw(ImageMaster.TICK, packDraftToggle.cX - 32.0f, packDraftToggle.cY - 32.0f, 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
+                    sb.draw(ImageMaster.TICK, packDraftToggle.cX - 32.0f, packDraftToggle.cY - 32.0f * Settings.scale, 32.0f * Settings.scale, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
                 }
-                FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], packDraftToggle.cX + 25f * Settings.scale, packDraftToggle.cY, Settings.BLUE_TEXT_COLOR);
+                FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], packDraftToggle.cX + 25f * Settings.scale, packDraftToggle.cY + packDraftToggle.height*0.5f, Settings.BLUE_TEXT_COLOR);
 
                 // If toggle button is checked, render the dropdowns, too
 
