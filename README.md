@@ -40,6 +40,7 @@ TBD
 Please look at the google docs to get a full refresher of the rules for your contribution. Specifically the complxity cap is important.
 Here is a TL;DR:
 * 10 cards per pack, token cards are allowed but please be reasonable (high amount of tokens is allowed by precedent, only if these cards cannot be easily obtained)
+* No duplicate cards, if a card exists in another pack, it may not be in another.
 * No additional UI, please use powers/orbs/stances if you need them
 * Most of your cards should have less than 6 lines of text.
 * Don't outsource complexity to single-use Keywords
