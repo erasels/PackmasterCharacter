@@ -27,21 +27,27 @@ First, to make intellij understand that this is a maven project, copy the exampl
 
 Once you've got the project up and running, navigate to the **packs** package.  
 Create a new class that extends from AbstractCardPack. You can copy the basic structure from an existing pack like the DownfallPack. Somply change the ID line to use the ID you want to use for you pack, example:  
-*public static final String ID = SpireAnniversary5Mod.makeID("ExamplePack");*  
-and define the cards your pack has in *getCards()* once you've made them.  
-Strings are done in a per-pack basis. So create a directory with the same name as your pack's ID with no capitalization in resources/localization/eng. Everything other than the *Cardstrings.json* and *UIstrings.json* is optional.  
+`public static final String ID = SpireAnniversary5Mod.makeID("ExamplePack"); `
+and define the cards your pack has in `getCards()` once you've made them.  
+Strings are done in a per-pack basis. So create a directory with the same name as your pack's ID with no capitalization in `resources/localization/eng`. Everything other than the *Cardstrings.json* and *UIstrings.json* is optional.  
 In your *UIstrings.json* the first entry should be the strings for your card pack preview card.  
-"${ModID}:ExamplePack": {
-  "TEXT": [
-    "Example Name",
-    "Example Description",
-    "Pack Author Name"
-  ]
+```
+"${ModID}:ExamplePack": {  
+  "TEXT": [  
+    "Example Name",  
+    "Example Description",  
+    "Pack Author Name"  
+  ]  
 }  
+```
   
 Then it's time make your cards!  
 To create a relic for your pack, simply create a class that extends AbstractPackmasterRelic and give the pack it can show up for with the second constructor (the longer one). Example:  
-public ExampleRelic() {super(ID, RelicTier.COMMON, LandingSound.FLAT, ExamplePack.ID);}  
+```
+   public ExampleRelic() {
+      super(ID, RelicTier.COMMON, LandingSound.FLAT, ExamplePack.ID);
+   }  
+```
   
   
 To test your cards simply use the Custom Draft toggle in the character select screen and make sure your pack is selected.
