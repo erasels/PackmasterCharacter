@@ -97,7 +97,7 @@ public class MainMenuUIPatch {
                 if (customDraft) {
                     sb.draw(ImageMaster.TICK, packDraftToggle.cX - 32.0f, packDraftToggle.cY - 32.0f * Settings.scale, 32.0f * Settings.scale, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
                 }
-                FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], packDraftToggle.cX + 25f * Settings.scale, packDraftToggle.cY + packDraftToggle.height*0.5f, Settings.BLUE_TEXT_COLOR);
+                FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], packDraftToggle.cX + 25f * Settings.scale, packDraftToggle.cY + FontHelper.getHeight(FontHelper.tipHeaderFont)*0.5f, Settings.BLUE_TEXT_COLOR);
 
                 // If toggle button is checked, render the dropdowns, too
 

@@ -48,5 +48,10 @@
       "Custom Draft Mode",
       "Turn this on to choose how your Packs are determined."
     ]
+  },
+  "${ModID}:Main": {
+    "TEXT": [
+      "Draft a Pack!"
+    ]
   }
 }

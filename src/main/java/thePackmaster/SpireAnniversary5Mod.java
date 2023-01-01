@@ -45,6 +45,8 @@ public class SpireAnniversary5Mod implements
         PostUpdateSubscriber,
         CustomSavable<ArrayList<String>> {
 
+    private static UIStrings uiStrings;
+
     public static boolean readyToDoThing = false;
     public static boolean openedStarterScreen = false;
 
@@ -166,6 +168,8 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostInitialize() {
+        if(uiStrings == null)
+            uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Main"));
         declarePacks();
         BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
     }
@@ -352,7 +356,7 @@ public class SpireAnniversary5Mod implements
         }
 
         BaseMod.logger.info("Queueing a choice between " + packChoices.getCardNames());
-        AbstractDungeon.gridSelectScreen.open(packChoices, 1, false, "Blah blah localize this!"); // TODO: Localize that!
+        AbstractDungeon.gridSelectScreen.open(packChoices, 1, false, uiStrings.TEXT[0]);
     }
 
     public static void startOfGamePackSetup() {
