@@ -1,2 +1,6 @@
 {
+  "${ModID}:Ignite": {
+    "NAME": "Ignite",
+    "DESCRIPTIONS": ["At the end of your turn, lose #b{0} HP.", "At the start of its turn, loses #b{0} HP."]
+  }
 }

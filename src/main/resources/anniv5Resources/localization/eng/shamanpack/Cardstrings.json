@@ -1,2 +1,6 @@
 {
+  "${ModID}:Flare": {
+    "NAME": "Flare",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Ignite."
+  }
 }
