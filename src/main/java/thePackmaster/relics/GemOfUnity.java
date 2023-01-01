@@ -19,7 +19,7 @@ public class GemOfUnity extends AbstractPackmasterRelic {
     private static ArrayList<AbstractCardPack> packsPlayed = new ArrayList<>();
 
     public GemOfUnity() {
-        super(ID, RelicTier.UNCOMMON, LandingSound.FLAT, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, RelicTier.UNCOMMON, LandingSound.FLAT);
         packsPlayed = new ArrayList<>();
         resetCounter();
         this.description = getUpdatedDescription();

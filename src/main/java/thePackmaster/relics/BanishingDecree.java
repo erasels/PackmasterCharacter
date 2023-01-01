@@ -21,7 +21,7 @@ public class BanishingDecree extends AbstractPackmasterRelic //implements Custom
     private boolean cardSelected = true;
 
     public BanishingDecree() {
-        super(ID, RelicTier.COMMON, LandingSound.FLAT, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, RelicTier.COMMON, LandingSound.FLAT);
     }
 
     /*

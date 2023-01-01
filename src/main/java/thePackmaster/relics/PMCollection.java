@@ -8,6 +8,6 @@ public class PMCollection extends AbstractPackmasterRelic {
     public static final String ID = makeID("PMCollection");
 
     public PMCollection() {
-        super(ID, RelicTier.SHOP, LandingSound.FLAT, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, RelicTier.SHOP, LandingSound.FLAT);
     }
 }

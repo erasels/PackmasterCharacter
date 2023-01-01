@@ -12,7 +12,7 @@ public class BagOfHolding extends AbstractPackmasterRelic {
     private boolean firstTurn = true;
 
     public BagOfHolding() {
-        super(ID, RelicTier.BOSS, LandingSound.FLAT, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, RelicTier.BOSS, LandingSound.FLAT);
     }
 
     public void atPreBattle() {

@@ -8,6 +8,6 @@ public class CollectorBadge extends AbstractPackmasterRelic {
     public static final String ID = makeID("CollectorBadge");
 
     public CollectorBadge() {
-        super(ID, RelicTier.RARE, LandingSound.FLAT, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, RelicTier.RARE, LandingSound.FLAT);
     }
 }

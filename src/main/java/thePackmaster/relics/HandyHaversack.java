@@ -11,7 +11,7 @@ public class HandyHaversack extends AbstractPackmasterRelic {
     private boolean firstTurn = true;
 
     public HandyHaversack() {
-        super(ID, RelicTier.STARTER, LandingSound.FLAT, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, RelicTier.STARTER, LandingSound.FLAT);
     }
 
 

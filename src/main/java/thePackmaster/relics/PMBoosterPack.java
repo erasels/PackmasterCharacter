@@ -8,6 +8,6 @@ public class PMBoosterPack extends AbstractPackmasterRelic {
     public static final String ID = makeID("PMBoosterPack");
 
     public PMBoosterPack() {
-        super(ID, RelicTier.COMMON, LandingSound.FLAT, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, RelicTier.COMMON, LandingSound.FLAT);
     }
 }
