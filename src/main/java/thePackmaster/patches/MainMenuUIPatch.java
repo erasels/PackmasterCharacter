@@ -22,51 +22,64 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MainMenuUIPatch {
     public static boolean customDraft = false;
-    public static final Hitbox packDraftToggle = new Hitbox(40.0f * Settings.scale, 40.0f * Settings.scale);
-    public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("PackMainMenuUI"));
-    public static final ArrayList<PowerTip> toggleTips = new ArrayList<>();
 
-    public static final ArrayList<DropdownMenu> dropdowns = new ArrayList<>();
+    private static final Hitbox packDraftToggle = new Hitbox(40.0f * Settings.scale, 40.0f * Settings.scale);
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("PackMainMenuUI"));
+    private static final String[] TEXT = uiStrings.TEXT;
+
+    private static final ArrayList<PowerTip> toggleTips = new ArrayList<>();
+
+    private static final ArrayList<DropdownMenu> dropdowns = new ArrayList<>();
     public static final ArrayList<String> packSetups = new ArrayList<>();
-    public static final ArrayList<String> options = new ArrayList<>();
-    public static final ArrayList<ArrayList<String>> optionsPerDropdown = new ArrayList<>();
 
-    public static final float CHECKBOX_X = Settings.WIDTH - 50F * Settings.scale - FontHelper.getWidth(FontHelper.tipHeaderFont, uiStrings.TEXT[0], 1);
-    public static final float CHECKBOX_Y = Settings.HEIGHT / 2.0f - 175.0f * Settings.scale;
+    private static final ArrayList<String> options = new ArrayList<>();
+    private static final String[] optionIDs;
+    public static final String RANDOM = "Random";
+    public static final String CHOICE = "Choice";
 
-    public static final float DROPDOWNS_START_X = Settings.WIDTH - 800F * Settings.scale;
-    public static final float DROPDOWNS_START_Y = Settings.HEIGHT / 2.0F + 175F * Settings.scale;
-    public static final float DROPDOWNS_SPACING = 50F * Settings.scale;
+    private static final float CHECKBOX_X_OFF = 32.0f * Settings.scale;
+    private static final float CHECKBOX_X;
+    private static final float CHECKBOX_Y = Settings.HEIGHT / 2.0f - 175.0f * Settings.scale;
 
-    static { //Todo: find a way to use enums for this maybe, while still allowing for specific names.
-        options.add("Random");
-        options.add("Choice of 3");
+    private static final int PACK_COUNT = 7;
+    private static final float DROPDOWNS_SPACING = 50F * Settings.scale;
+    private static final float DROPDOWN_X;
+    private static final float DROPDOWNS_START_Y = CHECKBOX_Y + DROPDOWNS_SPACING * (PACK_COUNT + 0.5f);
+
+    static {
+        options.add(TEXT[2]);
+        options.add(TEXT[3]);
         for (AbstractCardPack c : SpireAnniversary5Mod.allPacks) {
             options.add(c.name);
         }
 
-        for (int i = 0; i < 7; i++) {
-            ArrayList<String> specificOptions = new ArrayList<>(options);
-            optionsPerDropdown.add(specificOptions);
+        optionIDs = new String[options.size()];
+        optionIDs[0] = RANDOM;
+        optionIDs[1] = CHOICE;
+        for (int i = 2; i < optionIDs.length; ++i) {
+            optionIDs[i] = SpireAnniversary5Mod.allPacks.get(i - 2).packID;
         }
 
-        packSetups.add("Core Set");
-        packSetups.add("Random");
-        packSetups.add("Random");
-        packSetups.add("Random");
-        packSetups.add("Random");
-        packSetups.add("Choice of 3");
-        packSetups.add("Choice of 3");
+        packSetups.add(optionIDs[2]);
+        packSetups.add(optionIDs[0]);
+        packSetups.add(optionIDs[0]);
+        packSetups.add(optionIDs[0]);
+        packSetups.add(optionIDs[0]);
+        packSetups.add(optionIDs[1]);
+        packSetups.add(optionIDs[1]);
 
-        for (int i = 0; i < 7; i++) {
-            DropdownMenu d = new DropdownMenu((dropdownMenu, q, s) -> {
-                packSetups.set(dropdowns.indexOf(dropdownMenu), s);
-                for (DropdownMenu other : dropdowns) {
-                    if (!s.equals("Random") && !s.equals("Choice of 3") && other != dropdownMenu && other.getSelectedIndex() == q) {
-                        other.setSelectedIndex(0);
+        for (int i = 0; i < PACK_COUNT; i++) {
+            int index = i;
+            DropdownMenu d = new DropdownMenu((dropdownMenu, optionIndex, s) -> {
+                packSetups.set(index, optionIDs[optionIndex]);
+                if (optionIndex >= 2) {
+                    for (DropdownMenu other : dropdowns) {
+                        if (other != dropdownMenu && other.getSelectedIndex() == optionIndex) {
+                            other.setSelectedIndex(0);
+                        }
                     }
                 }
-            }, optionsPerDropdown.get(i), FontHelper.tipBodyFont, Settings.CREAM_COLOR);
+            }, options, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
 
             dropdowns.add(d);
 
@@ -75,6 +88,18 @@ public class MainMenuUIPatch {
             } else if (i >= 5) {
                 d.setSelectedIndex(1);
             }
+        }
+
+        float dropdownX = Settings.WIDTH - (50.0f * Settings.scale) - dropdowns.get(0).approximateOverallWidth();
+        float checkboxX = Settings.WIDTH - 82F * Settings.scale - FontHelper.getWidth(FontHelper.tipHeaderFont, uiStrings.TEXT[0], 1);
+
+        if (checkboxX - dropdownX >= 60) {
+            DROPDOWN_X = dropdownX;
+            CHECKBOX_X = checkboxX + CHECKBOX_X_OFF;
+        }
+        else {
+            DROPDOWN_X = Math.min(dropdownX, checkboxX);
+            CHECKBOX_X = DROPDOWN_X + CHECKBOX_X_OFF;
         }
     }
 
@@ -86,23 +111,22 @@ public class MainMenuUIPatch {
             CharSelectInfo c = ReflectionHacks.getPrivate(obj, CharacterOption.class, "charInfo");
 
             if (c.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && obj.selected) {
-
                 // Render toggle button
                 packDraftToggle.move(CHECKBOX_X, CHECKBOX_Y);
                 packDraftToggle.render(sb);
 
                 sb.setColor(Color.WHITE);
-                sb.draw(ImageMaster.CHECKBOX, packDraftToggle.x - (12f * Settings.scale), packDraftToggle.y - (12f * Settings.scale), 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale, Settings.scale, 0.0f, 0, 0, 64, 64, false, false);
+                float checkScale = Settings.scale * 0.8f;
+                sb.draw(ImageMaster.CHECKBOX, packDraftToggle.cX - 32f, packDraftToggle.cY - 32f, 32.0f, 32.0f, 64.0f, 64.0f, checkScale, checkScale, 0.0f, 0, 0, 64, 64, false, false);
                 if (customDraft) {
-                    sb.draw(ImageMaster.TICK, packDraftToggle.x - (12f * Settings.scale), packDraftToggle.y - (12f * Settings.scale), 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale, Settings.scale, 0.0f, 0, 0, 64, 64, false, false);
+                    sb.draw(ImageMaster.TICK, packDraftToggle.cX - 32f, packDraftToggle.cY - 32f, 32.0f, 32.0f, 64.0f, 64.0f, checkScale, checkScale, 0.0f, 0, 0, 64, 64, false, false);
                 }
                 FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], packDraftToggle.cX + 25f * Settings.scale, packDraftToggle.cY + FontHelper.getHeight(FontHelper.tipHeaderFont)*0.5f, Settings.BLUE_TEXT_COLOR);
-                
-                // If toggle button is checked, render the dropdowns, too
 
+                // If toggle button is checked, render the dropdowns, too
                 if (customDraft) {
                     for (int i = dropdowns.size() - 1; i >= 0; i--) {
-                        dropdowns.get(i).render(sb, DROPDOWNS_START_X, DROPDOWNS_START_Y - (DROPDOWNS_SPACING * i)); //TODO: Place correctly
+                        dropdowns.get(i).render(sb, DROPDOWN_X, DROPDOWNS_START_Y - (DROPDOWNS_SPACING * i)); //TODO: Place correctly
                     }
                 }
 
