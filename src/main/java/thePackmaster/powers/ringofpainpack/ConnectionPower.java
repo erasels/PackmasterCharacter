@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -22,8 +21,8 @@ public class ConnectionPower extends AbstractPackmasterPower implements Cloneabl
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public ConnectionPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+    public ConnectionPower(AbstractCreature owner) {
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, 0);
     }
 
     @Override
@@ -31,14 +30,12 @@ public class ConnectionPower extends AbstractPackmasterPower implements Cloneabl
         atb(new AbstractGameAction() {
             @Override
             public void update() {
-                if (this.duration == Settings.ACTION_DUR_MED) {
-                    AbstractPlayer p = AbstractDungeon.player;
-                    upgradeAllSameCardsInGroup(p.hand, card);
-                    upgradeAllSameCardsInGroup(p.drawPile, card);
-                    upgradeAllSameCardsInGroup(p.discardPile, card);
-                    upgradeAllSameCardsInGroup(p.exhaustPile, card);
-                    this.isDone = true;
-                }
+                AbstractPlayer p = AbstractDungeon.player;
+                upgradeAllSameCardsInGroup(p.hand, card);
+                upgradeAllSameCardsInGroup(p.drawPile, card);
+                upgradeAllSameCardsInGroup(p.discardPile, card);
+                upgradeAllSameCardsInGroup(p.exhaustPile, card);
+                this.isDone = true;
             }
         });
     }
@@ -57,7 +54,7 @@ public class ConnectionPower extends AbstractPackmasterPower implements Cloneabl
 
     @Override
     public AbstractPower makeCopy() {
-        return new ConnectionPower(owner, amount);
+        return new ConnectionPower(owner);
     }
 
     @Override

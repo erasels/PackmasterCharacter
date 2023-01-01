@@ -31,7 +31,7 @@ public class Slime extends AbstractEvolveCard {
                 public void update() {
                     AbstractPower poison = m.getPower(PoisonPower.POWER_ID);
                     if (poison != null) {
-                        atb(new DamageAction(m, new DamageInfo(null, poison.amount, DamageInfo.DamageType.HP_LOSS)));
+                        atb(new DamageAction(m, new DamageInfo(p, poison.amount, DamageInfo.DamageType.HP_LOSS)));
                     }
                     this.isDone = true;
                 }
