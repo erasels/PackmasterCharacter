@@ -2,5 +2,9 @@
   "${ModID}:Flare": {
     "NAME": "Flare",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Ignite."
+  },
+  "${ModID}:FlameBlast": {
+    "NAME": "Flame Blast",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If the enemy has Vulnerable, apply !M! ${ModID}:Ignite again. NL Apply !${ModID}:m2! Vulnerable."
   }
 }
