@@ -16,54 +16,5 @@
     "NAME": "Cardistry",
     "DESCRIPTION": "Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile.",
     "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile."
-  },
-  "${ModID}:GreedyPitch": {
-    "NAME": "Greedy Pitch",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Greedy: Deal !D! damage again."
-  },
-  "${ModID}:PreppingUp": {
-    "NAME": "Prepping Up",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! additional cards."
-  },
-  "${ModID}:FullHouse": {
-    "NAME": "Full House",
-    "DESCRIPTION": "Gain !M! Strength. NL If your hand is full, gain 1 Intangible.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Strength. NL If your hand is full, gain 1 Intangible."
-  },
-  "${ModID}:PocketLint": {
-    "NAME": "Pocket Lint",
-    "DESCRIPTION": "Gain !B! Block. NL Retain your hand this turn."
-  },
-  "${ModID}:RoadRage": {
-    "NAME": "Road Rage",
-    "DESCRIPTION": "Draw !M! cards. NL After you play 1 card, discard your hand.",
-    "EXTENDED_DESCRIPTION": [
-      "Road Rage",
-      "After you play a card, discard your hand."
-    ]
-  },
-  "${ModID}:HeavySlam": {
-    "NAME": "Heavy SLam",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Greedy: Enemy loses !M! Strength."
-  },
-  "${ModID}:GreedIsGood": {
-    "NAME": "Greed is Good",
-    "DESCRIPTION": "While you're ${ModID}:Greedy, cards deal !M! additional damage and grant !M! additional Block."
-  },
-  "${ModID}:HitTheBooks": {
-    "NAME": "Hit the Books",
-    "DESCRIPTION": "${ModID}:Greedy: Deal !D! damage to ALL enemies. NL Otherwise, draw !M! cards."
-  },
-  "${ModID}:GrandSlam": {
-    "NAME": "Grand Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
-  },
-  "${ModID}:BurningPocket": {
-    "NAME": "Burning Pocket",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Apply !M! Vulnerable. NL If this is Exhausted, add a *Miracle into your hand."
-  },
-  "${ModID}:FromMyHat": {
-    "NAME": "From My Hat",
-    "DESCRIPTION": "Gain !B! Block. NL Add a random Attack into your hand. NL It gains Retain."
   }
 }
