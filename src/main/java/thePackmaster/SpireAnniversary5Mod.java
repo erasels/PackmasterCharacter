@@ -58,7 +58,7 @@ public class SpireAnniversary5Mod implements
 
     public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
 
-    public static boolean readyToDoThing = false;
+    public static boolean doPackSetup = false;
     public static boolean openedStarterScreen = false;
     public static int PACKS_PER_RUN = 7;
 
@@ -433,7 +433,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostUpdate() {
         if (!openedStarterScreen) {
-            if (CardCrawlGame.isInARun() && readyToDoThing) {
+            if (CardCrawlGame.isInARun() && doPackSetup) {
                 BaseMod.logger.info("Starting Packmaster setup.");
                 startOfGamePackSetup();
                 openedStarterScreen = true;
