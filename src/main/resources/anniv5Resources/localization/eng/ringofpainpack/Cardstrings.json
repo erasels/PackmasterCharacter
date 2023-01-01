@@ -1,0 +1,54 @@
+{
+  "${ModID}:Hound": {
+    "NAME": "Rot Hound",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Evolves when you play an *Attack.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies.",
+    "EXTENDED_DESCRIPTION": ["Huge Rot Hound"]
+  },
+  "${ModID}:Slime": {
+    "NAME": "Viscid One",
+    "DESCRIPTION": "Apply !M! Poison. NL ${ModID}:Evolves when you apply a debuff.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Enemy loses HP equal to its Poison.",
+    "EXTENDED_DESCRIPTION": ["Viscid Twins"]
+  },
+  "${ModID}:Fright": {
+    "NAME": "Skittering Fright",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, draw !M! cards."
+  },
+  "${ModID}:Shackles": {
+    "NAME": "Shackles",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Evolves when you play a card that costs at least !M! .",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your turn. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Huge Shackles"]
+  },
+  "${ModID}:IceBeast": {
+    "NAME": "Ice Beast",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Evolves when you gain Block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Channel !M! Frost.",
+    "EXTENDED_DESCRIPTION": ["Ancient Ice Beast"]
+  },
+  "${ModID}:Loombird": {
+    "NAME": "Crooked Loombird",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Rend."
+  },
+  "${ModID}:Hollower": {
+    "NAME": "Hollower",
+    "DESCRIPTION": "Ethereal. NL Exhaust !M! cards. NL Put a card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. NL Put a card from your discard pile into your hand."
+  },
+  "${ModID}:Owl": {
+    "NAME": "Owl",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL ${ModID}:Evolves when you Exhaust a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply ${ModID}:Rend equal to unblocked damage dealt. NL Apply !M! Vulnerable.",
+    "EXTENDED_DESCRIPTION": ["Owl, Nightmare Incarnate"]
+  },
+  "${ModID}:Vision": {
+    "NAME": "Vision",
+    "DESCRIPTION": "Put !M! cards from your draw pile into your hand. NL Retain your hand this turn."
+  },
+  "${ModID}:Connection": {
+    "NAME": "Connection",
+    "DESCRIPTION": "Whenever you play a card, upgrade it and ALL copies of it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, upgrade it and ALL copies of it."
+  }
+}

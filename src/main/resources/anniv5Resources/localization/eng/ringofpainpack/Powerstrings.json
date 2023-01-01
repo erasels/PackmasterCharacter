@@ -1,0 +1,15 @@
+{
+  "${ModID}:RendPower": {
+    "NAME": "Rend",
+    "DESCRIPTIONS": [
+      "Receives #b",
+      " more damage from attacks. Reduced by half at end of round."
+    ]
+  },
+  "${ModID}:ConnectionPower": {
+    "NAME": "Connection",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, upgrade it and ALL copies of it."
+    ]
+  }
+}

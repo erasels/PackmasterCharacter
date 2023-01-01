@@ -1,0 +1,54 @@
+package thePackmaster.cards.ringofpainpack;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import thePackmaster.actions.ringofpainpack.OwlAction;
+
+import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.applyToEnemy;
+import static thePackmaster.util.Wiz.atb;
+
+public class Owl extends AbstractEvolveCard {
+    public final static String ID = makeID(Owl.class.getSimpleName());
+
+    private static final int DAMAGE = 24;
+    private static final int UPGRADE_DAMAGE = 4;
+    private static final int VULNERABLE = 2;
+
+    public Owl() {
+        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        baseDamage = DAMAGE;
+        magicNumber = baseMagicNumber = VULNERABLE;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if (timesUpgraded >= AbstractEvolveCard.MAX_UPGRADES) {
+            atb(new OwlAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        } else {
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        }
+        applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
+
+    }
+
+    @Override
+    public float getTitleFontSize()
+    {
+        if (timesUpgraded >= AbstractEvolveCard.MAX_UPGRADES) {
+            return 16;
+        } else {
+            return 21;
+        }
+    }
+
+    public void triggerEvolveOnExhaust() {
+        evolve();
+    }
+
+    public void upp() {
+        upgradeDamage(UPGRADE_DAMAGE);
+    }
+}

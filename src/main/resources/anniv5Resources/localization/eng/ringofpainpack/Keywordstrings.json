@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Evolve",
+    "NAMES": [
+      "evolves"
+    ],
+    "DESCRIPTION": "Evolving cards can be upgraded up to #b3 times. They are upgraded this combat whenever the listed condition is met while the card is in your hand and gain bonus effects when fully upgraded."
+  },
+  {
+    "PROPER_NAME": "Rend",
+    "NAMES": [
+      "rend"
+    ],
+    "DESCRIPTION": "Receives more damage from attacks equal to Rend. Reduced by half at end of round."
+  }
+]
