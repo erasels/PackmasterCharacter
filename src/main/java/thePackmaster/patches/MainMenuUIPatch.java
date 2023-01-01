@@ -22,7 +22,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MainMenuUIPatch {
     public static boolean customDraft = false;
-    public static final Hitbox packDraftToggle = new Hitbox(40.0f * Settings.scale * (0.01f + (1.0f - 0.019f)), 40.0f * Settings.scale);
+    public static final Hitbox packDraftToggle = new Hitbox(40.0f * Settings.scale, 40.0f * Settings.scale);
     public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("PackMainMenuUI"));
     public static final ArrayList<PowerTip> toggleTips = new ArrayList<>();
 
@@ -46,8 +46,7 @@ public class MainMenuUIPatch {
         }
 
         for (int i = 0; i < 7; i++) {
-            ArrayList<String> specificOptions = new ArrayList<>();
-            specificOptions.addAll(options);
+            ArrayList<String> specificOptions = new ArrayList<>(options);
             optionsPerDropdown.add(specificOptions);
         }
 
@@ -93,12 +92,12 @@ public class MainMenuUIPatch {
                 packDraftToggle.render(sb);
 
                 sb.setColor(Color.WHITE);
-                sb.draw(ImageMaster.CHECKBOX, packDraftToggle.cX - 32.0f * Settings.scale, packDraftToggle.cY - 32.0f * Settings.scale, 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
+                sb.draw(ImageMaster.CHECKBOX, packDraftToggle.x - (12f * Settings.scale), packDraftToggle.y - (12f * Settings.scale), 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale, Settings.scale, 0.0f, 0, 0, 64, 64, false, false);
                 if (customDraft) {
-                    sb.draw(ImageMaster.TICK, packDraftToggle.cX - 32.0f, packDraftToggle.cY - 32.0f * Settings.scale, 32.0f * Settings.scale, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
+                    sb.draw(ImageMaster.TICK, packDraftToggle.x - (12f * Settings.scale), packDraftToggle.y - (12f * Settings.scale), 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale, Settings.scale, 0.0f, 0, 0, 64, 64, false, false);
                 }
                 FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], packDraftToggle.cX + 25f * Settings.scale, packDraftToggle.cY + FontHelper.getHeight(FontHelper.tipHeaderFont)*0.5f, Settings.BLUE_TEXT_COLOR);
-
+                
                 // If toggle button is checked, render the dropdowns, too
 
                 if (customDraft) {
