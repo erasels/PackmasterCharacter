@@ -2,7 +2,6 @@ package thePackmaster.packs;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import thePackmaster.SpireAnniversary5Mod;
 
 import java.util.ArrayList;
@@ -13,7 +12,6 @@ public abstract class AbstractCardPack {
     public String description;
     public String author;
     public ArrayList<AbstractCard> cards;
-    public ArrayList<AbstractRelic> relics;
     public AbstractCard previewPackCard;
 
     public AbstractCardPack(String id, String name, String description, String author) {
@@ -22,7 +20,6 @@ public abstract class AbstractCardPack {
         this.description = description;
         this.author = author;
         this.cards = new ArrayList<>();
-        this.relics = new ArrayList<>();
         initializePack();
     }
 
