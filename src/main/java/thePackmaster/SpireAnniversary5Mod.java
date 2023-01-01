@@ -154,7 +154,7 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostInitialize() {
-        if(uiStrings == null)
+        if (uiStrings == null)
             uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Main"));
         declarePacks();
         BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
@@ -282,13 +282,11 @@ public class SpireAnniversary5Mod implements
 
     public static ArrayList<AbstractCard> getPreviewCardsFromCurrentSet() {
         ArrayList<AbstractCard> valid = new ArrayList<>();
-        for (AbstractCardPack cp : currentPoolPacks
-        ) {
+        for (AbstractCardPack cp : currentPoolPacks) {
             valid.add(cp.previewPackCard);
         }
         return valid;
     }
-
 
     public static ArrayList<AbstractCardPack> getRandomPacks(boolean onlyCurrent, int count) {
         ArrayList<AbstractCardPack> allChoices = new ArrayList<>();

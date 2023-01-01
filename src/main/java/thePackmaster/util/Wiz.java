@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -30,6 +31,18 @@ public class Wiz {
 
     public static AbstractPlayer adp() {
         return AbstractDungeon.player;
+    }
+
+    public static AbstractPlayer p() {
+        return AbstractDungeon.player;
+    }
+
+    public static CardGroup hand() {
+        return AbstractDungeon.player.hand;
+    }
+
+    public static CardGroup deck() {
+        return AbstractDungeon.player.masterDeck;
     }
 
     public static void forAllCardsInList(Consumer<AbstractCard> consumer, ArrayList<AbstractCard> cardsList) {
@@ -174,12 +187,122 @@ public class Wiz {
         att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
     }
 
+    public static void reducePower(AbstractPower p, int amount) {
+        atb(new ReducePowerAction(p.owner, p.owner, p, amount));
+    }
+
+    public static void reducePower(AbstractPower p) {
+        reducePower(p, 1);
+    }
+
+    public static void removePower(AbstractPower p, boolean top) {
+        if (top) {
+            att(new RemoveSpecificPowerAction(p.owner, p.owner, p));
+        } else {
+            atb(new RemoveSpecificPowerAction(p.owner, p.owner, p));
+        }
+    }
+
+    public static void removePower(AbstractPower p) {
+        removePower(p, false);
+    }
+
+    public static void doDmg(AbstractCreature target, AbstractCard c) {
+        doDmg(target, c.damage, c.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE);
+    }
+
+    public static void doDmg(AbstractCreature target, AbstractCard c, AbstractGameAction.AttackEffect ae) {
+        doDmg(target, c.damage, c.damageTypeForTurn, ae);
+    }
+
+    public static void doDmg(AbstractCreature target, AbstractCard c, AbstractGameAction.AttackEffect ae, boolean top) {
+        doDmg(target, c.damage, c.damageTypeForTurn, ae, false, top);
+    }
+
+    public static void doDmg(AbstractCreature target, int amount) {
+        doDmg(target, amount, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE);
+    }
+
+    public static void doDmg(AbstractCreature target, int amount, DamageInfo.DamageType dt) {
+        doDmg(target, amount, dt, AbstractGameAction.AttackEffect.NONE);
+    }
+
+    public static void doDmg(AbstractCreature target, int amount, AbstractGameAction.AttackEffect ae) {
+        doDmg(target, amount, DamageInfo.DamageType.NORMAL, ae);
+    }
+
+    public static void doDmg(AbstractCreature target, int amount, DamageInfo.DamageType dt, AbstractGameAction.AttackEffect ae) {
+        doDmg(target, amount, dt, ae, false);
+    }
+
+    public static void doDmg(AbstractCreature target, int amount, DamageInfo.DamageType dt, AbstractGameAction.AttackEffect ae, boolean fast) {
+        doDmg(target, amount, dt, ae, fast, false);
+    }
+
+    public static void doDmg(AbstractCreature target, int amount, DamageInfo.DamageType dt, AbstractGameAction.AttackEffect ae, boolean fast, boolean top) {
+        if (target == null) {
+            target = AbstractDungeon.getRandomMonster();
+        }
+        if (top) {
+            att(new DamageAction(target, new DamageInfo(p(), amount, dt), ae, fast));
+        } else {
+            atb(new DamageAction(target, new DamageInfo(p(), amount, dt), ae, fast));
+        }
+    }
+
     public static void thornDmg(AbstractCreature m, int amount, AbstractGameAction.AttackEffect AtkFX) {
         atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, amount, DamageInfo.DamageType.THORNS), AtkFX));
     }
 
     public static void thornDmg(AbstractCreature m, int amount) {
         thornDmg(m, amount, AbstractGameAction.AttackEffect.NONE);
+    }
+
+    public static void doAllDmg(int amount, AbstractGameAction.AttackEffect ae, DamageInfo.DamageType dt, boolean top) {
+        if (top) {
+            att(new DamageAllEnemiesAction(p(), amount, dt, ae));
+        } else {
+            atb(new DamageAllEnemiesAction(p(), amount, dt, ae));
+        }
+    }
+
+    public static void doAllDmg(AbstractCard c, AbstractGameAction.AttackEffect ae, boolean top) {
+        if (top) {
+            att(new DamageAllEnemiesAction(p(), c.multiDamage, c.damageTypeForTurn, ae));
+        } else {
+            atb(new DamageAllEnemiesAction(p(), c.multiDamage, c.damageTypeForTurn, ae));
+        }
+    }
+
+    public static void doBlk(AbstractCard c) {
+        doBlk(c.block, false);
+    }
+
+    public static void doBlk(int amount) {
+        doBlk(amount, false);
+    }
+
+    public static void doBlk(int amount, boolean top) {
+        if (top) {
+            att(new GainBlockAction(p(), p(), amount));
+        } else {
+            atb(new GainBlockAction(p(), p(), amount));
+        }
+    }
+
+    public static void doBlk(int amount, AbstractCreature source, boolean top) {
+        if (top) {
+            att(new GainBlockAction(p(), source, amount));
+        } else {
+            atb(new GainBlockAction(p(), source, amount));
+        }
+    }
+
+    public static boolean isAttacking(AbstractCreature m) {
+        if (m instanceof AbstractMonster) {
+            return ((AbstractMonster) m).getIntentBaseDmg() >= 0;
+        }
+        return false;
     }
 
     public static void discard(int amount, boolean isRandom) {
@@ -194,6 +317,13 @@ public class Wiz {
         AbstractPower found = check.getPower(ID);
         if (found != null) {
             return found.amount;
+        }
+        return 0;
+    }
+
+    public static int getLogicalCardCost(AbstractCard c) {
+        if (c.costForTurn > 0 && !c.freeToPlayOnce) {
+            return c.costForTurn;
         }
         return 0;
     }
