@@ -15,12 +15,6 @@
       "These are the Packs available to you this run. Click Confirm to Proceed."
     ]
   },
-  "${ModID}:DemoPack": {
-    "TEXT": [
-      "Greedy Pack",
-      "Focuses on draw and having a full hand of cards. NL NL By: Vex"
-    ]
-  },
   "${ModID}:IroncladPack": {
     "TEXT": [
       "Ironclad Ideals",
