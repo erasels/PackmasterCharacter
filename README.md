@@ -1,34 +1,50 @@
 # MtS Modding Anniversary 5: The Packmaster
 ## Preamble
-A group-effort character mod. Upon choosing the class, a UI is revealed which selects, at random, 6 Booster Packs to be added to the character’s existing card library of 14 cards (4 starter cards, and one ‘standard booster pack’.  Those booster packs make up the entire card pool (74 cards) for the run. (This will probably change in the future)
-
-A contribution is a booster pack, of course you can make multiple. I'm sure many of you have ideas for archetypes but were too lazy to think up an entire character to fit it into, this is your chance to make a self-contained archetype of 10 cards.
+A group-effort character mod. Upon choosing the class, a UI is revealed which selects, at random, 6 Booster Packs to be added to the character’s existing card library of 14 cards (4 starter cards, and one ‘standard booster pack’.  Those booster packs make up the entire card pool (74 cards) for the run. (This will probably change in the future)  
+  
+A contribution is a booster pack, of course you can make multiple. I'm sure many of you have ideas for archetypes but were too lazy to think up an entire character to fit it into, this is your chance to make a self-contained archetype of 10 cards.  
 
 ## Contribution
 There's a few rules in place to make this character great despite the minds working on it at the same time.
 The full rules, examples and explanations are in this google doc:
-https://docs.google.com/document/d/1Gs004Gur4DfZ8vly8rFDjcnRojt6Ptsk6rH_GyZx_XY
-The sheet for maintaining information on your booster pack can be found here:
-https://docs.google.com/spreadsheets/d/1MoLN5qyNtclCqOPgAW9_poDS4HPhTGOmahWSIA1FgCg 
-
-The cut-off point for PRs that will be included in the first release will be 18th of January 2023. Although, PRs made after that point will still be merged and maintained, so don't be discouraged if you're late.
-
+https://docs.google.com/document/d/1Gs004Gur4DfZ8vly8rFDjcnRojt6Ptsk6rH_GyZx_XY  
+The sheet for maintaining information on your booster pack can be found here:  
+https://docs.google.com/spreadsheets/d/1MoLN5qyNtclCqOPgAW9_poDS4HPhTGOmahWSIA1FgCg  
+  
+The cut-off point for PRs that will be included in the first release will be 18th of January 2023. Although, PRs made after that point will still be merged and maintained, so don't be discouraged if you're late.  
+  
 To make a contribution, you must have a Github account. 
 For the specifics of how to fork this repo and then make a pull request, please look at this guide:
-https://docs.github.com/en/get-started/quickstart/contributing-to-projects
-
-I recommend using the Github desktop client for this if you have no experience with Github
+https://docs.github.com/en/get-started/quickstart/contributing-to-projects  
+  
+I recommend using the Github desktop client for this if you have no experience with Github  
 https://desktop.github.com/
 
 ## Technical
 ### How to make a Pack
-First, to make intellij understand that this is a maven project, copy the example-pom.xml and rename the copy to pom.xml. Adjust it to the correct steam path if necessary. 
+First, to make intellij understand that this is a maven project, copy the example-pom.xml and rename the copy to pom.xml. Adjust it to the correct steam path if necessary.  
 **DO NOT DELETE THE EXAMPLE POM!**
 
-TBD
-
-### How to test your Pack
-TBD
+Once you've got the project up and running, navigate to the **packs** package.  
+Create a new class that extends from AbstractCardPack. You can copy the basic structure from an existing pack like the DownfallPack. Somply change the ID line to use the ID you want to use for you pack, example:  
+*public static final String ID = SpireAnniversary5Mod.makeID("ExamplePack");*  
+and define the cards your pack has in *getCards()* once you've made them.  
+Strings are done in a per-pack basis. So create a directory with the same name as your pack's ID with no capitalization in resources/localization/eng. Everything other than the *Cardstrings.json* and *UIstrings.json* is optional.  
+In your *UIstrings.json* the first entry should be the strings for your card pack preview card.  
+"${ModID}:ExamplePack": {
+  "TEXT": [
+    "Example Name",
+    "Example Description",
+    "Pack Author Name"
+  ]
+}  
+  
+Then it's time make your cards!  
+To create a relic for your pack, simply create a class that extends AbstractPackmasterRelic and give the pack it can show up for with the second constructor (the longer one). Example:  
+public ExampleRelic() {super(ID, RelicTier.COMMON, LandingSound.FLAT, ExamplePack.ID);}  
+  
+  
+To test your cards simply use the Custom Draft toggle in the character select screen and make sure your pack is selected.
 
 ### Notes
 * A Secondary magic number is already defined in case you need it.
