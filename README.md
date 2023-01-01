@@ -35,6 +35,8 @@ TBD
 * If you make patches/powers/actions/or similar often-used classes, please do so in your own sub-folder/package.
 * We have a utility class called Wiz, you can make use of it to get access to general utility methods (like accessing the player quicker than using AbstractDeungon.player)
 * We have our own AbstractCard Class, **AbstractPackmasterCard** please make use of it for your cards
+* To get a card's Pack, you can call getParent on a PackmasterCard or use the method in the Wiz class getPackByCard
+* We have some lists and maps to get card packs, these are allPacks, packsByID, cardParentMap
 
 ### Reminders and veto ruling
 Please look at the google docs to get a full refresher of the rules for your contribution. Specifically the complxity cap is important.
