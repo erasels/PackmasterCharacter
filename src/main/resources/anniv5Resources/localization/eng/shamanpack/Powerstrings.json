@@ -2,5 +2,9 @@
   "${ModID}:Ignite": {
     "NAME": "Ignite",
     "DESCRIPTIONS": ["At the end of your turn, lose #b{0} HP.", "At the start of its turn, loses #b{0} HP."]
+  },
+  "${ModID}:FreezeAndBurn": {
+    "NAME": "Freeze and Burn",
+    "DESCRIPTIONS": ["At the start of your next turn, deal #b{0} damage to ALL enemies."]
   }
 }
