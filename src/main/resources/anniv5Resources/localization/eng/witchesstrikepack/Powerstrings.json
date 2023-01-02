@@ -3,7 +3,14 @@
     "NAME": "Moonlight Flight",
     "DESCRIPTIONS": [
       "Whenever you channel an orb, gain #b",
-      " focus until your next turn."
+      " Focus until your next turn."
+    ]
+  },
+  "${ModID}:LoseFocusPower": {
+    "NAME": "Discharge",
+    "DESCRIPTIONS": [
+      "At the start of your turn lose #b",
+      " Focus."
     ]
   }
 }

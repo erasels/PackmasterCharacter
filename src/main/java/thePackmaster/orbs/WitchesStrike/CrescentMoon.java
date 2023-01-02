@@ -64,7 +64,7 @@ public class CrescentMoon extends AbstractPackMasterOrb {
     @Override
     public void updateDescription() { // Set the on-hover description of the orb
         applyFocus(); // Apply Focus (Look at the next method)
-        description = DESCRIPTIONS[0];
+        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1]+EVOKE_AMOUNT+DESCRIPTIONS[2]+passiveAmount+DESCRIPTIONS[3];
     }
 
     @Override

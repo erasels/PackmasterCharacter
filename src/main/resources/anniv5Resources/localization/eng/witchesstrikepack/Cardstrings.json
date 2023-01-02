@@ -7,5 +7,22 @@
     "NAME": "Mystic Flourish",
     "DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your leftmost orb.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your leftmost orb twice."
+  },
+  "${ModID}:CrystalMoonlight": {
+    "NAME": "Crystal Moonlight",
+    "DESCRIPTION": "${ModID}:Manifest a random orb. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "${ModID}:Manifest !M! random orbs. NL Exhaust"
+  },
+  "${ModID}:FullMoonHalo": {
+    "NAME": "Full Moon Halo",
+    "DESCRIPTION": "Gain !B! Block. NL Draw a card. NL Manifest ${ModID}:Full_Moon."
+  },
+  "${ModID}:MoonlightBarrage": {
+    "NAME": "Moonlight Barrage",
+    "DESCRIPTION": "Activate the passive effect of all your orbs. NL Deal !D! damage to a random enemy for each."
+  },
+  "${ModID}:WitchTwist": {
+    "NAME": "Witch Twist",
+    "DESCRIPTION": "Activate the passive effect of your leftmost orb !M! times. NL Gain !anniv5:m2! Focus."
   }
 }
