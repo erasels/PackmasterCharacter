@@ -3,7 +3,9 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.downfallpack.*;
+import thePackmaster.cards.shamanpack.FlameBlast;
+import thePackmaster.cards.shamanpack.Flare;
+import thePackmaster.cards.shamanpack.IceWall;
 
 import java.util.ArrayList;
 
@@ -21,6 +23,9 @@ public class ShamanPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
+        cards.add(Flare.ID);
+        cards.add(FlameBlast.ID);
+        cards.add(IceWall.ID);
         return cards;
     }
 }
