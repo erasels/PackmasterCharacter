@@ -1,0 +1,26 @@
+{
+  "SwarmOfBees": {
+    "NAME": "Swarm Of Bees",
+    "DESCRIPTION": [
+      "#yPassive: Whenever you play a card, deal #b",
+      " damage to a random enemy. NL #yEvoke: Deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "Panda": {
+    "NAME": "PAnda",
+    "DESCRIPTION": [
+      "#yPassive: At the end of your turn, deal #b",
+      " damage to a random enemy. NL #yEvoke: Deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "RainbowLouse": {
+    "NAME": "Rainbow Louse",
+    "DESCRIPTION": [
+      "#yPassive: At the end of your turn, deal #b",
+      " damage to a random enemy and gain that much #yTemporary #yHP. NL #yEvoke: Deal #b",
+      " damage to a random enemy and gain that much #yTemporary #yHP."
+    ]
+  }
+}
