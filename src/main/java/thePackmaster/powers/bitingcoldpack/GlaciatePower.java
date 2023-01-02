@@ -12,7 +12,7 @@ public class GlaciatePower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public GlaciatePower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
     // Hey there! Welcome to my code!
