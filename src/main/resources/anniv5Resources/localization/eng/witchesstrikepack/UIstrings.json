@@ -1,0 +1,9 @@
+{
+  "${ModID}:WitchesStrikePack": {
+    "TEXT": [
+      "Witches Strike",
+      "Directly activate your orbs abilities, care not for maximum orb slots with the Manifest ability creating more as you channel.",
+      "Silver"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "${ModID}:CrescentMoon": {
+    "NAME": "Ghostflame",
+    "DESCRIPTION": [
+      "#yPassive: When activated, deal #b",
+      " damage to a random enemy, #yEvoke this if this has activated twice. NL #yEvoke: deal #b",
+      " damage to a random enemy for each remaining #ypassive use and lose an orb slot."
+    ]
+  }
+}

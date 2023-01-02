@@ -1,0 +1,10 @@
+{
+  "${ModID}:CrescentSweep": {
+    "NAME": "Crescent Sweep",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Crescent_Moon."
+  },
+  "${ModID}:MysticFlourish": {
+    "NAME": "Mystic Flourish",
+    "DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your leftmost orb."
+  }
+}

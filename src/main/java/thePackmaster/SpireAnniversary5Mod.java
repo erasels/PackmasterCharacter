@@ -127,6 +127,8 @@ public class SpireAnniversary5Mod implements
         return modID + "Resources/images/cards/" + resourcePath;
     }
 
+    public static String makeOrbPath(String resourcePath) { return modID +"Resources/images/orbs/" + resourcePath; }
+
     public static void initialize() {
         SpireAnniversary5Mod thismod = new SpireAnniversary5Mod();
     }
