@@ -8,6 +8,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import thePackmaster.util.TexLoader;
 
 public class ElephantPieceEffect extends AbstractGameEffect {
     private static final float DURATION = 10.0F;
@@ -23,7 +24,7 @@ public class ElephantPieceEffect extends AbstractGameEffect {
     private float vRot;
 
     public ElephantPieceEffect(String fileName, float x, float y) {
-        img = ImageMaster.loadImage(fileName);
+        img = TexLoader.getTexture(fileName);
         this.x = x;
         this.y = y;
         rotation = 0f;

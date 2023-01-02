@@ -12,7 +12,7 @@ import static thePackmaster.SpireAnniversary5Mod.makePath;
 
 public class ElephantDropEffect extends AbstractGameEffect {
     private static final float DURATION = 0.4F;
-    private static final String IMG_PATH = makePath("images/vfx/summonspack/Elephant.png");
+    private static final String IMG_PATH = makePath("images/vfx/summonspack/elephant/Elephant.png");
     private static final Texture IMG = ImageMaster.loadImage(IMG_PATH);
     private static final float ELEPHANT_WIDTH = IMG.getWidth();
     private static final float ELEPHANT_HEIGHT = IMG.getHeight();

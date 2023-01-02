@@ -44,7 +44,7 @@ public class Louse extends CustomOrb {
     private final float timerOffset;
     private float spinTime = 0f;
 
-    private static int BASE_DAMAGE = 5;
+    public static int BASE_DAMAGE = 5;
 
     private float rotation;
 
@@ -57,7 +57,7 @@ public class Louse extends CustomOrb {
         rotation = 0.0f;
         applyFocus();
         updateDescription();
-        timerOffset = MathUtils.random(0f, 360f);
+        timerOffset = MathUtils.random(0f, 2f);
     }
 
     @Override
@@ -102,6 +102,7 @@ public class Louse extends CustomOrb {
 
     @Override
     public void updateAnimation() {
+        spinTime += Gdx.graphics.getDeltaTime();
         if (channelAnimTimer != 0.0F) {
             channelAnimTimer -= Gdx.graphics.getDeltaTime();
             if (channelAnimTimer < 0.0F) {
@@ -136,13 +137,12 @@ public class Louse extends CustomOrb {
 
     @Override
     public void render(SpriteBatch sb) {
-        spinTime += Gdx.graphics.getDeltaTime();
         if (PandaPatch.AbstractOrbIsInPlayerRender.isPlayerRender.get(this))
             return;
-        color.set((MathUtils.cosDeg((float) ((spinTime + timerOffset) / 10L % 360L)) + 1.25F) / 2.3F,
-                (MathUtils.cosDeg((float) ((spinTime + 1000L + timerOffset) / 10L % 360L)) + 1.25F) / 2.3F,
-                (MathUtils.cosDeg((float) ((spinTime + 2000L + timerOffset) / 10L % 360L)) + 1.25F) / 2.3F,
-                0f);
+        color.set((MathUtils.cosDeg((spinTime + timerOffset) * 180f ) + 1.5F) / 2.5F,
+                (MathUtils.cosDeg( (spinTime + (1f/3f) + timerOffset) * 180f ) + 1.5F) / 2.5F,
+                (MathUtils.cosDeg((spinTime + (2f/3f) + timerOffset) * 180f ) + 1.5F) / 2.5F,
+                1f);
         sb.setColor(color);
         sb.setBlendFunction(770, 771);
         sb.draw(img, cX - LOUSE_WIDTH/2F, cY - LOUSE_WIDTH/2F, LOUSE_WIDTH/2F, LOUSE_WIDTH/2F,
@@ -181,14 +181,3 @@ public class Louse extends CustomOrb {
         return copy;
     }
 }
-
-/*
-    ym - ys = xm*xm*a/2
-    ym - yt = (dur - xm)^2 *a/2
-    ym = xm*xm*a/2 + ys
-    xm*xm*a/2 + ys - yt = (dur - xm)^2 *a/2 = [dur^2 -2dur*xm + xm^2]*a/2
-    ys - yt = [dur^2 - 2dur*xm]*a/2
-    ys - yt - dur^2 *a/2 = -dur*xm * a
-    [ys - yt - dur^2 * a/2] / -dur*a = xm
-    xm = (yt - ys)/dur/a + dur/2
- */

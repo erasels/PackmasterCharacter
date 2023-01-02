@@ -177,14 +177,14 @@ public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
     @Override
     public void onPlayCard(AbstractCard card) {
         AbstractMonster m = Wiz.getRandomEnemy();
-        Wiz.thornDmgTop(m, passiveAmount, getRandomSlash(), true);
+        Wiz.thornDmg(m, passiveAmount, getRandomSlash());
     }
 
     @Override
     public void onEvoke() {
         AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster(true);
         if (target != null)
-            Wiz.thornDmgTop(target, evokeAmount, getRandomSlash(), true);
+            Wiz.thornDmg(target, evokeAmount, getRandomSlash());
     }
 
     @Override

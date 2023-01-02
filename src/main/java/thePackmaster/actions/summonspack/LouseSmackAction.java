@@ -1,5 +1,6 @@
 package thePackmaster.actions.summonspack;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -62,6 +63,7 @@ public class LouseSmackAction extends AbstractGameAction {
             louse.cY = targetY;
             if (target != null && target.currentHealth > 0 && adp() != null) {
                 DamageInfo info = new DamageInfo(adp(), louse.passiveAmount, DamageInfo.DamageType.THORNS);
+                att(new FastTempHPAction(adp(), adp(), Louse.BASE_DAMAGE));
                 att(new DamageAction(target, info, AttackEffect.BLUNT_HEAVY, true));
             }
             louse.startBounce(targetX, targetY);

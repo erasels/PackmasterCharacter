@@ -1,9 +1,10 @@
 package thePackmaster.cards.summonspack;
 
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.summonspack.SummonBeesAction;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.orbs.summonspack.Louse;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -25,7 +26,8 @@ public class SummonLice extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SummonBeesAction(freeToPlayOnce, energyOnUse, upgraded));
+        for (int i = 0; i < magicNumber; i++)
+            atb(new ChannelAction(new Louse()));
     }
 
     @Override

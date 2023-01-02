@@ -99,7 +99,7 @@ public class SpireAnniversary5Mod implements
 
     public static final String BEES_KEY = makeID("SwarmOfBees");
     private static final String BEES_OGG = makePath("audio/summonspack/SwarmOfBees.ogg");
-    public static final String ELEPHANT_KEY = makeID("Elephant");
+    public static final String ELEPHANT_KEY = makeID("elephant");
     private static final String ELEPHANT_OGG = makePath("audio/summonspack/Elephant.ogg");
     public static final String PEW_KEY = makeID("Pew");
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");

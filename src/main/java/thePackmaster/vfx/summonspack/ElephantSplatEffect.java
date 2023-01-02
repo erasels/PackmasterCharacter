@@ -14,19 +14,19 @@ public class ElephantSplatEffect extends AbstractGameEffect {
     private final float xCenter;
     private final float yCenter;
 
-    public static final String ELEPHANT_HEAD_FILE = makePath("images/vfx/Elephant/ElephantHead.png");
-    public static final String ELEPHANT_LEG_ONE_FILE = makePath("images/vfx/Elephant/ElephantLegOne.png");
-    public static final String ELEPHANT_LEG_TWO_FILE = makePath("images/vfx/Elephant/ElephantLegTwo.png");
-    public static final String ELEPHANT_LEG_THREE_FILE = makePath("images/vfx/Elephant/ElephantLegThree.png");
-    public static final String ELEPHANT_LEG_FOUR_FILE = makePath("images/vfx/Elephant/ElephantLegFour.png");
-    public static final String ELEPHANT_TAIL_FILE = makePath("images/vfx/Elephant/ElephantTail.png");
-    public static final String ELEPHANT_RUMP_FILE = makePath("images/vfx/Elephant/ElephantRump.png");
-    public static final String ELEPHANT_TRUNK_FILE = makePath("images/vfx/Elephant/ElephantTrunk.png");
-    public static final String ELEPHANT_EAR_TOP_FILE = makePath("images/vfx/Elephant/ElephantEarTop.png");
-    public static final String ELEPHANT_EAR_BOTTOM_FILE = makePath("images/vfx/Elephant/ElephantEarBottom.png");
-    public static final String ELEPHANT_TOP_TORSO_FILE = makePath("images/vfx/Elephant/ElephantTopTorso.png");
-    public static final String ELEPHANT_LEFT_TORSO_FILE = makePath("images/vfx/Elephant/ElephantBottomLeftTorso.png");
-    public static final String ELEPHANT_RIGHT_TORSO_FILE = makePath("images/vfx/Elephant/ElephantBottomRightTorso.png");
+    public static final String ELEPHANT_HEAD_FILE = makePath("images/vfx/summonspack/elephant/ElephantHead.png");
+    public static final String ELEPHANT_LEG_ONE_FILE = makePath("images/vfx/summonspack/elephant/ElephantLegOne.png");
+    public static final String ELEPHANT_LEG_TWO_FILE = makePath("images/vfx/summonspack/elephant/ElephantLegTwo.png");
+    public static final String ELEPHANT_LEG_THREE_FILE = makePath("images/vfx/summonspack/elephant/ElephantLegThree.png");
+    public static final String ELEPHANT_LEG_FOUR_FILE = makePath("images/vfx/summonspack/elephant/ElephantLegFour.png");
+    public static final String ELEPHANT_TAIL_FILE = makePath("images/vfx/summonspack/elephant/ElephantTail.png");
+    public static final String ELEPHANT_RUMP_FILE = makePath("images/vfx/summonspack/elephant/ElephantRump.png");
+    public static final String ELEPHANT_TRUNK_FILE = makePath("images/vfx/summonspack/elephant/ElephantTrunk.png");
+    public static final String ELEPHANT_EAR_TOP_FILE = makePath("images/vfx/summonspack/elephant/ElephantEarTop.png");
+    public static final String ELEPHANT_EAR_BOTTOM_FILE = makePath("images/vfx/summonspack/elephant/ElephantEarBottom.png");
+    public static final String ELEPHANT_TOP_TORSO_FILE = makePath("images/vfx/summonspack/elephant/ElephantTopTorso.png");
+    public static final String ELEPHANT_LEFT_TORSO_FILE = makePath("images/vfx/summonspack/elephant/ElephantBottomLeftTorso.png");
+    public static final String ELEPHANT_RIGHT_TORSO_FILE = makePath("images/vfx/summonspack/elephant/ElephantBottomRightTorso.png");
 
     public ElephantSplatEffect(float x, float y) {
         xCenter = x;

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.actions.summonspack.PewcumberAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.vfx.summonspack.ElephantDropEffect;
@@ -38,8 +39,9 @@ public class SummonElephant extends AbstractPackmasterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!seenThisSession) {
-            vfx(new LongElephantDropEffect(), 2.35f);
             seenThisSession = true;
+            AbstractGameEffect effect = new LongElephantDropEffect();
+            vfx(effect, 2.35f);
         }  else if (MathUtils.random(0, 1f) < 0.05f)
             vfx(new LongElephantDropEffect(), 2.35f);
         else

@@ -34,7 +34,7 @@
   },
   "${ModID}:SummonLice": {
     "NAME": "Summon Lice",
-    "DESCRIPTION": "Channel a !M! damage ${ModID}:Rainbow\u00a0Louse !${ModID}:m2! times."
+    "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse !M! times."
   },
   "${ModID}:SummonPandas": {
     "NAME": "Summon Pandas",

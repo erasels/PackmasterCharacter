@@ -18,7 +18,7 @@ public class SummonPython extends AbstractPackmasterCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final int MAGIC = 12;
-    private static final int UPGRADE_MAGIC = 16;
+    private static final int UPGRADE_MAGIC = 4;
 
     public SummonPython() {
         super(ID, COST, TYPE, RARITY, TARGET);
