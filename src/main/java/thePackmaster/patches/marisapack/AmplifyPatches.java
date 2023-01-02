@@ -45,7 +45,7 @@ public class AmplifyPatches {
             }
         }
 
-        @SpireInsertPatch(locator = Locator.class)
+        @SpireInsertPatch(locator = Locator2.class)
         public static void beforeEndUseCard(AbstractPlayer __instance, AbstractCard c, AbstractMonster monster) {
             if(amplified) {
                 __instance.energy.use(((AmplifyCard)c).getAmplifyCost());
@@ -78,7 +78,6 @@ public class AmplifyPatches {
 
     public static boolean shouldAmplify(AbstractCard c) {
         int cardCost = Wiz.getLogicalCardCost(c);
-        System.out.printf("Logical cost: %s\nEnergy on use: %s\n", cardCost, c.energyOnUse);
         return c instanceof AmplifyCard &&
                 EnergyPanel.totalCount >= cardCost + ((AmplifyCard)c).getAmplifyCost();
     }
