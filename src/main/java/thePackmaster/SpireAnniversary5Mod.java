@@ -13,25 +13,36 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.powers.bitingcoldpack.FrostbitePower;
+import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.util.Wiz;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
+
+import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -43,6 +54,7 @@ public class SpireAnniversary5Mod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         PostUpdateSubscriber,
+        PostPowerApplySubscriber,
         CustomSavable<ArrayList<String>> {
 
     private static UIStrings uiStrings;
@@ -455,6 +467,38 @@ public class SpireAnniversary5Mod implements
                 }
             }
         }
+    }
+
+    @Override
+    public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        // Biting Cold Pack - Enbeon
+        if (power.type == AbstractPower.PowerType.DEBUFF && source == AbstractDungeon.player && target != AbstractDungeon.player) {
+            // Growing Affliction (Return to hand)
+            for (AbstractCard c : AbstractDungeon.player.discardPile.group)
+                if (c.cardID.equals(GrowingAffliction.ID))
+                    AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(c));
+
+            // Glaciate (Gain Vigor)
+            if (power.ID.equals(FrostbitePower.POWER_ID) && source.hasPower(GlaciatePower.POWER_ID)) {
+                AbstractPower glaciate = source.getPower(GlaciatePower.POWER_ID);
+
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        glaciate.flash();
+                        if (Settings.FAST_MODE)
+                            addToBot(new WaitAction(0.1F));
+                        else
+                            addToBot(new WaitAction(0.2F));
+                        applyToSelf(new VigorPower(AbstractDungeon.player, glaciate.amount));
+                        this.isDone = true;
+                    }
+                });
+            }
+        }
+        // end: Biting Cold Pack
+
+        // Everyone feel free to put code here if you want/need to!
     }
 
     @Override

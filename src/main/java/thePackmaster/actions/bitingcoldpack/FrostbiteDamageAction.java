@@ -15,6 +15,7 @@ import thePackmaster.powers.bitingcoldpack.ColdSeasonPower;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.relics.bitingcoldpack.Snowglobe;
 
+import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.applyToEnemyTop;
 
 public class FrostbiteDamageAction extends AbstractGameAction {
@@ -39,13 +40,12 @@ public class FrostbiteDamageAction extends AbstractGameAction {
         } else {
             tickDuration();
             if (this.isDone) {
-
                 // Snowglobe
-                if (AbstractDungeon.player.hasRelic(Snowglobe.ID)) {
-                    AbstractRelic s = AbstractDungeon.player.getRelic(Snowglobe.ID);
-                    s.flash();
+                AbstractRelic s = AbstractDungeon.player.getRelic(Snowglobe.ID);
+                if (s != null) {
                     addToTop(new WaitAction(0.1F));
                     addToTop(new RelicAboveCreatureAction(info.owner, s));
+                    s.flash();
                     damage += 1;
                 }
 
@@ -57,8 +57,8 @@ public class FrostbiteDamageAction extends AbstractGameAction {
                 this.target.damage(new DamageInfo(info.owner, damage, this.info.type));
 
                 // Cold Season
-                if (isItColdSeason && AbstractDungeon.player.hasPower(ColdSeasonPower.POWER_ID)) {
-                    AbstractPower t = AbstractDungeon.player.getPower(ColdSeasonPower.POWER_ID);
+                AbstractPower t = AbstractDungeon.player.getPower(ColdSeasonPower.POWER_ID);
+                if (isItColdSeason && t != null) {
                     t.flash();
                     applyToEnemyTop((AbstractMonster)this.info.owner, new FrostbitePower(this.info.owner, t.amount));
                 }

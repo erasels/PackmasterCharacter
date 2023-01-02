@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.bitingcoldpack.FrostbiteDamageAction;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.relics.bitingcoldpack.Snowglobe;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -59,7 +59,7 @@ public class FrostbitePower extends AbstractPackmasterPower implements HealthBar
 
     @Override
     public int getHealthBarAmount() {
-        if(AbstractDungeon.player.hasRelic(SpireAnniversary5Mod.makeID("Snowglobe"))) {
+        if(AbstractDungeon.player.hasRelic(Snowglobe.ID)) {
             return this.amount + 1;
         } else {
             return this.amount;
