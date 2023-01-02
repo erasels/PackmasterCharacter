@@ -22,5 +22,10 @@
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! ${ModID}:Ignite."
+  },
+  "${ModID}:SnowMelt": {
+    "NAME": "Snow Melt",
+    "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL Next turn, draw !M! additional cards.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Next turn, draw !M! additional cards."
   }
 }
