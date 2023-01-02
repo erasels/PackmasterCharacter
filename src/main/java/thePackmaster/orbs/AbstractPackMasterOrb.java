@@ -1,6 +1,19 @@
 package thePackmaster.orbs;
 
 import basemod.abstracts.CustomOrb;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.orbs.*;
+import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.orbs.WitchesStrike.CrescentMoon;
+import thePackmaster.orbs.WitchesStrike.FullMoon;
+import thePackmaster.orbs.downfallpack.Ghostflame;
+import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.DefectPack;
+import thePackmaster.packs.DownfallPack;
+import thePackmaster.packs.WitchesStrikePack;
+
+import java.util.ArrayList;
 
 public abstract class AbstractPackMasterOrb extends CustomOrb {
     public AbstractPackMasterOrb(String ID, String NAME, int basePassiveAmount, int baseEvokeAmount, String passiveDescription, String evokeDescription, String imgPath) {
@@ -8,5 +21,26 @@ public abstract class AbstractPackMasterOrb extends CustomOrb {
     }
     public void PassiveEffect(){
 
+    }
+    public static AbstractOrb getPackLimitedOrb(boolean useCardRng) {
+        ArrayList<AbstractOrb> orbs = new ArrayList();
+        for (AbstractCardPack pack : SpireAnniversary5Mod.currentPoolPacks){
+            if (pack instanceof DefectPack){
+                orbs.add(new Dark());
+                orbs.add(new Frost());
+                orbs.add(new Lightning());
+                orbs.add(new Plasma());
+            }
+            if (pack instanceof DownfallPack){
+                orbs.add(new Ghostflame());
+            }
+            if (pack instanceof WitchesStrikePack){
+                orbs.add(new CrescentMoon());
+                orbs.add(new FullMoon());
+            }
+        }
+        if (orbs.isEmpty()){
+            return AbstractOrb.getRandomOrb(useCardRng);
+        } else return useCardRng ? orbs.get(AbstractDungeon.cardRandomRng.random(orbs.size() - 1)) : orbs.get(MathUtils.random(orbs.size() - 1));
     }
 }

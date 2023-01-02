@@ -5,6 +5,7 @@
   },
   "${ModID}:MysticFlourish": {
     "NAME": "Mystic Flourish",
-    "DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your leftmost orb."
+    "DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your leftmost orb.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your leftmost orb twice."
   }
 }
