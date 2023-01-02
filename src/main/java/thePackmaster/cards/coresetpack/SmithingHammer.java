@@ -1,10 +1,15 @@
 package thePackmaster.cards.coresetpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
 import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -19,12 +24,15 @@ public class SmithingHammer extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        Wiz.vfx(new UpgradeShineEffect(m.hb.cX, m.hb.cY));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         dmg(m, AbstractGameAction.AttackEffect.NONE);
+        Wiz.atb(new WaitAction(Settings.ACTION_DUR_FAST));
+        Wiz.vfx(new UpgradeShineEffect(m.hb.cX, m.hb.cY));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        //TODO - Smithing visual effect sync'ed to the 3 hits
         for (int i = 0; i < magicNumber; i++) {
-            this.addToBot(new ArmamentsAction(this.upgraded));
+            this.addToBot(new UpgradeRandomCardAction());
+            if(!upgraded) break;
         }
     }
 
