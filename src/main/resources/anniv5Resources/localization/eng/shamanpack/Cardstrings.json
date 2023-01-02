@@ -36,6 +36,11 @@
     "NAME": "Read the Flames",
     "DESCRIPTION": "Draw !M! cards. NL Scry !${ModID}:m2!. NL Shuffle a *Fading *Ember into your draw pile."
   },
+  "${ModID}:FueledByEmbers": {
+    "NAME": "Fueled by Embers",
+    "DESCRIPTION": "At the start of your turn, draw !M! card and add !M! *Fading *Ember to your hand and draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! card and add !M! *Fading *Ember to your hand and draw pile."
+  },
   "${ModID}:FadingEmber": {
     "NAME": "Fading Ember",
     "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL Exhaust."

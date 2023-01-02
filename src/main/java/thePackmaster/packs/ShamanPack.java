@@ -30,6 +30,7 @@ public class ShamanPack extends AbstractCardPack {
         cards.add(SnowMelt.ID);
         cards.add(Pyromastery.ID);
         cards.add(ReadTheFlames.ID);
+        cards.add(FueledByEmbers.ID);
         return cards;
     }
 }
