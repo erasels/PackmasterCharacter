@@ -23,8 +23,7 @@ public class ThrowWrench extends AbstractDimensionalCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        for (AbstractCard c:AbstractDungeon.player.hand.group
-             ) {
+        for (AbstractCard c:AbstractDungeon.player.hand.group) {
             if (c.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED)){
                 allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
                 return;
