@@ -7,6 +7,7 @@ import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
+import thePackmaster.cards.shamanpack.FreezeAndBurn;
 import thePackmaster.cards.shamanpack.FueledByEmbers;
 
 @SpirePatch(clz = AbstractCard.class, method = "initializeDescription")
@@ -16,7 +17,8 @@ public class FineTuneLineWidthPatch {
 
     private static boolean matches(AbstractCard card, String word) {
         return (card.cardID.equals(FueledByEmbers.ID) && word.equals("*Ember"))
-                || (card.cardID.equals(FueledByEmbers.ID) && word.equals("pile"));
+                || (card.cardID.equals(FueledByEmbers.ID) && word.equals("pile"))
+                || (card.cardID.equals(FreezeAndBurn.ID) && word.equals("enemies"));
     }
 
     @SpireInsertPatch(locator = Locator.class, localvars = {"word", "currentWidth"})
