@@ -3,6 +3,7 @@ package thePackmaster;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
+import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -26,14 +27,17 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
+import thePackmaster.cards.marisapack.AmplifyCard;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.util.Wiz;
 
@@ -41,8 +45,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static thePackmaster.util.Wiz.adp;
-import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -170,6 +173,23 @@ public class SpireAnniversary5Mod implements
             uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Main"));
         declarePacks();
         BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
+
+        CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
+            @Override
+            public boolean test(AbstractCard c) {
+                return AmplifyPatches.shouldAmplify(c);
+            }
+
+            @Override
+            public Color getColor(AbstractCard c) {
+                return AmplifyCard.AMPLIFY_GLOW_COLOR.cpy();
+            }
+
+            @Override
+            public String glowID() {
+                return makeID("AmplifyGlow");
+            }
+        });
     }
 
     private String getLangString() {
