@@ -31,5 +31,13 @@
   "${ModID}:Pyromastery": {
     "NAME": "Pyromastery",
     "DESCRIPTION": "When you apply ${ModID}:Ignite, apply an additional !M! ${ModID}:Ignite."
+  },
+  "${ModID}:ReadTheFlames": {
+    "NAME": "Read the Flames",
+    "DESCRIPTION": "Draw !M! cards. NL Scry !${ModID}:m2!. NL Shuffle a *Fading *Ember into your draw pile."
+  },
+  "${ModID}:FadingEmber": {
+    "NAME": "Fading Ember",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL Exhaust."
   }
 }

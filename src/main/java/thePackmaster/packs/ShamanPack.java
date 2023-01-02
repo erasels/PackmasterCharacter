@@ -27,7 +27,9 @@ public class ShamanPack extends AbstractCardPack {
         cards.add(FreezeAndBurn.ID);
         cards.add(Frostfire.ID);
         cards.add(FieryMantle.ID);
+        cards.add(SnowMelt.ID);
         cards.add(Pyromastery.ID);
+        cards.add(ReadTheFlames.ID);
         return cards;
     }
 }
