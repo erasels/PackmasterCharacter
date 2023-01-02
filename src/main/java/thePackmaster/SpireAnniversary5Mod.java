@@ -13,17 +13,25 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
+import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.relics.AbstractPackmasterRelic;
@@ -32,6 +40,9 @@ import thePackmaster.util.Wiz;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
+
+import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.atb;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -43,6 +54,7 @@ public class SpireAnniversary5Mod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         PostUpdateSubscriber,
+        PostPowerApplySubscriber,
         CustomSavable<ArrayList<String>> {
 
     private static UIStrings uiStrings;
@@ -471,6 +483,25 @@ public class SpireAnniversary5Mod implements
     public void onLoad(ArrayList<String> strings) {
         for (String s : strings) {
             currentPoolPacks.add(packsByID.get(s));
+        }
+    }
+
+    @Override
+    public void receivePostPowerApplySubscriber(AbstractPower p, AbstractCreature target, AbstractCreature source) {
+        if (source == AbstractDungeon.player && target != AbstractDungeon.player && !target.hasPower(ArtifactPower.POWER_ID)) {
+            if (p.type == AbstractPower.PowerType.DEBUFF) {
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        for (AbstractCard card : adp().hand.group) {
+                            if (card instanceof Slime) {
+                                ((Slime) card).triggerOnDebuff();
+                            }
+                        }
+                        this.isDone = true;
+                    }
+                });
+            }
         }
     }
 }
