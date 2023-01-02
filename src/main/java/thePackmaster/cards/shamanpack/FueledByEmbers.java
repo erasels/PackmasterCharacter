@@ -20,6 +20,7 @@ public class FueledByEmbers extends AbstractPackmasterCard {
     public FueledByEmbers() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = CARDS;
+        this.cardsToPreview = new FadingEmber();
     }
 
     @Override
