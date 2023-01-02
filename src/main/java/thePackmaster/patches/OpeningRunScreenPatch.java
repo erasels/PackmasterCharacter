@@ -19,6 +19,7 @@ public class OpeningRunScreenPatch {
     public static void SetTheThing(NeowEvent __instance) {
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.logger.info("Packmaster is Ready To Do Thing");
+            SpireAnniversary5Mod.openedStarterScreen = false;
             SpireAnniversary5Mod.doPackSetup = true;
         }
     }

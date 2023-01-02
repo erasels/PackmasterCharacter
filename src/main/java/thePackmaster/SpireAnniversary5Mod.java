@@ -16,8 +16,10 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -25,23 +27,24 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
+import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.util.Wiz;
-
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
-
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -368,36 +371,37 @@ public class SpireAnniversary5Mod implements
         currentPoolPacks.clear();
 
         ArrayList<String> packSetup = new ArrayList<>();
+
         if (MainMenuUIPatch.customDraft) {
             packSetup.addAll(MainMenuUIPatch.packSetups);
         } else {
-            packSetup.add("Core Set"); //TODO: ID swap
-            packSetup.add("Random");
-            packSetup.add("Random");
-            packSetup.add("Random");
-            packSetup.add("Random");
-            packSetup.add("Choice of 3");
-            packSetup.add("Choice of 3");
+            packSetup.add(CoreSetPack.ID);
+            packSetup.add(MainMenuUIPatch.RANDOM);
+            packSetup.add(MainMenuUIPatch.RANDOM);
+            packSetup.add(MainMenuUIPatch.RANDOM);
+            packSetup.add(MainMenuUIPatch.RANDOM);
+            packSetup.add(MainMenuUIPatch.CHOICE);
+            packSetup.add(MainMenuUIPatch.CHOICE);
         }
 
         int randomsToSetup = 0;
         int choicesToSetup = 0;
 
-        for (String setupType : MainMenuUIPatch.packSetups) {
+        for (String setupType : packSetup) {
             BaseMod.logger.info("Setting up Pack type " + setupType + ".");
+            
             switch (setupType) {
-                case "Random":
+                case MainMenuUIPatch.RANDOM:
                     BaseMod.logger.info("Adding 1 more pack to random selection later on.");
                     randomsToSetup++;
                     break;
-                case "Choice of 3":
+                case MainMenuUIPatch.CHOICE:
                     BaseMod.logger.info("Adding 1 more pack to choice-of-3 selection later on.");
                     choicesToSetup++;
                     break;
                 default:
-                    //TODO: These are working off names instead of IDs - bad!
                     for (AbstractCardPack pack : allPacks) {
-                        if (pack.name.equals(setupType)) {
+                        if (pack.packID.equals(setupType)) {
                             BaseMod.logger.info("Found pack matching name " + pack.name);
                             currentPoolPacks.add(pack);
                         }
@@ -471,8 +475,8 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        // Biting Cold Pack - Enbeon
         if (power.type == AbstractPower.PowerType.DEBUFF && source == AbstractDungeon.player && target != AbstractDungeon.player) {
+            // Biting Cold Pack
             // Growing Affliction (Return to hand)
             for (AbstractCard c : AbstractDungeon.player.discardPile.group)
                 if (c.cardID.equals(GrowingAffliction.ID))
@@ -495,10 +499,22 @@ public class SpireAnniversary5Mod implements
                     }
                 });
             }
+          
+            //Ring of Pain pack
+            if(!target.hasPower(ArtifactPower.POWER_ID)) {
+              atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        for (AbstractCard card : adp().hand.group) {
+                            if (card instanceof Slime) {
+                                ((Slime) card).triggerOnDebuff();
+                            }
+                        }
+                        this.isDone = true;
+                    }
+                });
+            }
         }
-        // end: Biting Cold Pack
-
-        // Everyone feel free to put code here if you want/need to!
     }
 
     @Override

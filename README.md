@@ -18,11 +18,11 @@ For the specifics of how to fork this repo and then make a pull request, please 
 https://docs.github.com/en/get-started/quickstart/contributing-to-projects  
   
 I recommend using the Github desktop client for this if you have no experience with Github  
-https://desktop.github.com/
+https://desktop.github.com/  
 
 ## Technical
 ### How to make a Pack
-First, to make intellij understand that this is a maven project, copy the example-pom.xml and rename the copy to pom.xml. Adjust it to the correct steam path if necessary.  
+First, navigate to the project on your system and copy the example-pom.xml and rename the copy to pom.xml. Adjust it to the correct steam path if necessary. Do this before you load the project in intellij to ward off some issues.  
 **DO NOT DELETE THE EXAMPLE POM!**
 
 Once you've got the project up and running, navigate to the **packs** package.  
