@@ -9,10 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.shamanpack.IgnitePower;
 
 public class IceWall extends AbstractPackmasterCard {
     public static final String ID = SpireAnniversary5Mod.makeID("IceWall");
