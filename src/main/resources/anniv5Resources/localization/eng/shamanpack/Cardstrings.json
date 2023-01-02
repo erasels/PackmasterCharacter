@@ -18,5 +18,9 @@
   "${ModID}:Frostfire": {
     "NAME": "Frostfire",
     "DESCRIPTION": "Apply !M! ${ModID}:Ignite and !${ModID}:m2! Weak to ALL enemies. NL Exhaust."
+  },
+  "${ModID}:FieryMantle": {
+    "NAME": "Fiery Mantle",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! ${ModID}:Ignite."
   }
 }

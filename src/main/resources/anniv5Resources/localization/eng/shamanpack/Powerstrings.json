@@ -6,5 +6,9 @@
   "${ModID}:FreezeAndBurn": {
     "NAME": "Freeze and Burn",
     "DESCRIPTIONS": ["At the start of your next turn, deal #b{0} damage to ALL enemies."]
+  },
+  "${ModID}:FieryMantle": {
+    "NAME": "Fiery Mantle",
+    "DESCRIPTIONS": ["Whenever you are attacked this turn, apply #b{0} #yIgnite."]
   }
 }
