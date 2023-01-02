@@ -1,0 +1,7 @@
+[
+  {
+    "PROPER_NAME": "Ignite",
+    "NAMES": ["ignite"],
+    "DESCRIPTION": "Ignited creatures lose #b1 HP per stack at the start of their turn."
+  }
+]

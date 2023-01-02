@@ -15,6 +15,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -25,12 +27,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.marisapack.AmplifyCard;
@@ -38,9 +42,10 @@ import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
+import thePackmaster.powers.bitingcoldpack.FrostbitePower;
+import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.util.Wiz;
-
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -491,6 +496,50 @@ public class SpireAnniversary5Mod implements
     }
 
     @Override
+    public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        if (power.type == AbstractPower.PowerType.DEBUFF && source == AbstractDungeon.player && target != AbstractDungeon.player) {
+            // Biting Cold Pack
+            // Growing Affliction (Return to hand)
+            for (AbstractCard c : AbstractDungeon.player.discardPile.group)
+                if (c.cardID.equals(GrowingAffliction.ID))
+                    AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(c));
+
+            // Glaciate (Gain Vigor)
+            if (power.ID.equals(FrostbitePower.POWER_ID) && source.hasPower(GlaciatePower.POWER_ID)) {
+                AbstractPower glaciate = source.getPower(GlaciatePower.POWER_ID);
+
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        glaciate.flash();
+                        if (Settings.FAST_MODE)
+                            addToBot(new WaitAction(0.1F));
+                        else
+                            addToBot(new WaitAction(0.2F));
+                        applyToSelf(new VigorPower(AbstractDungeon.player, glaciate.amount));
+                        this.isDone = true;
+                    }
+                });
+            }
+          
+            //Ring of Pain pack
+            if(!target.hasPower(ArtifactPower.POWER_ID)) {
+              atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        for (AbstractCard card : adp().hand.group) {
+                            if (card instanceof Slime) {
+                                ((Slime) card).triggerOnDebuff();
+                            }
+                        }
+                        this.isDone = true;
+                    }
+                });
+            }
+        }
+    }
+
+    @Override
     public ArrayList<String> onSave() {
         ArrayList<String> packIDs = new ArrayList<>();
         for (AbstractCardPack pack : currentPoolPacks) {
@@ -503,25 +552,6 @@ public class SpireAnniversary5Mod implements
     public void onLoad(ArrayList<String> strings) {
         for (String s : strings) {
             currentPoolPacks.add(packsByID.get(s));
-        }
-    }
-
-    @Override
-    public void receivePostPowerApplySubscriber(AbstractPower p, AbstractCreature target, AbstractCreature source) {
-        if (source == AbstractDungeon.player && target != AbstractDungeon.player && !target.hasPower(ArtifactPower.POWER_ID)) {
-            if (p.type == AbstractPower.PowerType.DEBUFF) {
-                atb(new AbstractGameAction() {
-                    @Override
-                    public void update() {
-                        for (AbstractCard card : adp().hand.group) {
-                            if (card instanceof Slime) {
-                                ((Slime) card).triggerOnDebuff();
-                            }
-                        }
-                        this.isDone = true;
-                    }
-                });
-            }
         }
     }
 }

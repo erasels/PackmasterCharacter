@@ -7,8 +7,11 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -16,6 +19,8 @@ import java.util.function.Predicate;
 import static thePackmaster.util.Wiz.atb;
 
 public class FindCardForAddModifierAction extends AbstractGameAction {
+    private static final UIStrings uiSTRINGS = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("AddModifierUI"));
+
     private AbstractCardModifier mod;
     private int count;
     private boolean random;
@@ -36,7 +41,6 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
         this.random = random;
         this.targetgroup = targetgroup;
         this.requirements = requirements;
-
     }
 
     @Override
@@ -50,33 +54,31 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
 
             if (random) {
                 ArrayList<AbstractCard> chosen = new ArrayList<>();
-                AbstractCard n;
                 ArrayList<AbstractCard> potentialTargets = new ArrayList<>(targetgroup.group);
-                for (int i = 0; i < count; i++) {
-                    n = potentialTargets.get(AbstractDungeon.cardRandomRng.random(0, potentialTargets.size()-1));
-                    potentialTargets.remove(n);
-                    if (combinedRequirements.test(n)){
+                potentialTargets.removeIf(combinedRequirements);
+                AbstractCard n;
+
+                if(count >= potentialTargets.size()) {
+                    chosen.addAll(potentialTargets);
+                } else {
+                    for (int i = 0; i < count; i++) {
+                        if (potentialTargets.isEmpty()) return; //Sanity check
+                        n = Wiz.getRandomItem(potentialTargets);
+                        potentialTargets.remove(n);
                         chosen.add(n);
-                    } else {
-                        i--;
-                        if (potentialTargets.isEmpty()){
-                            return;
-                        }
                     }
                 }
 
-                for (AbstractCard c2 : chosen
-                ) {
+                for (AbstractCard c2 : chosen) {
                     CardModifierManager.addModifier(c2, mod);
                     c2.superFlash(Color.CHARTREUSE);
                 }
             } else {
-                atb(new SelectCardsAction(targetgroup.group, count, " to Modify", false,
+                atb(new SelectCardsAction(targetgroup.group, count, uiSTRINGS.TEXT[0], false,
                         combinedRequirements,
 
                         (cards) -> {
-                            for (AbstractCard c2 : cards
-                            ) {
+                            for (AbstractCard c2 : cards) {
                                 CardModifierManager.addModifier(c2, mod);
                                 c2.superFlash(Color.CHARTREUSE);
                             }
