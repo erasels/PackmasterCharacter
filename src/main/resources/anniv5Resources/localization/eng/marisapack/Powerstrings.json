@@ -1,0 +1,8 @@
+{
+  "${ModID}:ChargeUp": {
+    "NAME": "Charge Up",
+    "DESCRIPTIONS": [
+      "At #b8 or more stacks, double the damage of the next Attack and lose #b8 stacks."
+    ]
+  }
+}
