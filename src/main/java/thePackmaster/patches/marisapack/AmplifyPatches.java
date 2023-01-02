@@ -1,5 +1,6 @@
 package thePackmaster.patches.marisapack;
 
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -39,6 +40,7 @@ public class AmplifyPatches {
         public static void afterUse(AbstractPlayer __instance, AbstractCard c, AbstractMonster monster) {
             if (shouldAmplify(c)) {
                 ((AmplifyCard)c).useAmplified(__instance, monster);
+                c.superFlash(AmplifyCard.AMPLIFY_GLOW_COLOR.cpy());
                 amplified = true;
             }
         }
