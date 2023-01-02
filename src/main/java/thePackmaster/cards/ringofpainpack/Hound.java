@@ -18,7 +18,11 @@ public class Hound extends AbstractEvolveCard {
     private static final int WEAK = 1;
 
     public Hound() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        this(false);
+    }
+
+    public Hound(boolean isPreviewCopy) {
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY, isPreviewCopy);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = WEAK;
     }
@@ -40,5 +44,10 @@ public class Hound extends AbstractEvolveCard {
 
     public void upp() {
         upgradeDamage(UPGRADE_DAMAGE);
+    }
+
+    @Override
+    protected AbstractCard getPreviewCard() {
+        return new Hound(true);
     }
 }

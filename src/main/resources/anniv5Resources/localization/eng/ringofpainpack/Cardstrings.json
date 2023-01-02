@@ -17,8 +17,8 @@
   },
   "${ModID}:Shackles": {
     "NAME": "Shackles",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Evolves when you play a card that costs at least !M! .",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your turn. NL Exhaust.",
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL ${ModID}:Evolves when you play a card that costs at least !M! .",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL Block is not removed at the start of your turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Huge Shackles"]
   },
   "${ModID}:IceBeast": {
@@ -40,7 +40,7 @@
     "NAME": "Owl",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL ${ModID}:Evolves when you Exhaust a card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply ${ModID}:Rend equal to unblocked damage dealt. NL Apply !M! Vulnerable.",
-    "EXTENDED_DESCRIPTION": ["Owl, Nightmare Incarnate"]
+    "EXTENDED_DESCRIPTION": ["Nightmare Owl"]
   },
   "${ModID}:Vision": {
     "NAME": "Vision",

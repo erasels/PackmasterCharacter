@@ -2,6 +2,7 @@ package thePackmaster.cards.ringofpainpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,7 +20,11 @@ public class Slime extends AbstractEvolveCard {
     private static final int UPGRADE_POISON = 1;
 
     public Slime() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        this(false);
+    }
+
+    public Slime(boolean isPreviewCard) {
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY, isPreviewCard);
         magicNumber = baseMagicNumber = POISON;
     }
 
@@ -45,5 +50,10 @@ public class Slime extends AbstractEvolveCard {
 
     public void upp() {
         upgradeMagicNumber(UPGRADE_POISON);
+    }
+
+    @Override
+    protected AbstractCard getPreviewCard() {
+        return new Slime(true);
     }
 }

@@ -2,6 +2,7 @@ package thePackmaster.cards.ringofpainpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Frost;
@@ -19,7 +20,11 @@ public class IceBeast extends AbstractEvolveCard {
     private static final int FROST = 1;
 
     public IceBeast() {
-        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this(false);
+    }
+
+    public IceBeast(boolean isPreviewCard) {
+        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, isPreviewCard);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = FROST;
@@ -45,6 +50,10 @@ public class IceBeast extends AbstractEvolveCard {
         } else {
             upgradeBlock(UPGRADE_BLOCK);
         }
+    }
 
+    @Override
+    protected AbstractCard getPreviewCard() {
+        return new IceBeast(true);
     }
 }

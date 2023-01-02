@@ -30,6 +30,7 @@ public class ConnectionPower extends AbstractPackmasterPower implements Cloneabl
         atb(new AbstractGameAction() {
             @Override
             public void update() {
+                card.upgrade();
                 AbstractPlayer p = AbstractDungeon.player;
                 upgradeAllSameCardsInGroup(p.hand, card);
                 upgradeAllSameCardsInGroup(p.drawPile, card);

@@ -17,7 +17,11 @@ public class Shackles extends AbstractEvolveCard {
     private static final int EVOLVE_COST = 2;
 
     public Shackles() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        this(false);
+    }
+    public Shackles(boolean isPreviewCard) {
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, isPreviewCard);
+        selfRetain = true;
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = EVOLVE_COST;
     }
@@ -42,5 +46,10 @@ public class Shackles extends AbstractEvolveCard {
         if (c.costForTurn >= magicNumber) {
             evolve();
         }
+    }
+
+    @Override
+    protected AbstractCard getPreviewCard() {
+        return new Shackles(true);
     }
 }

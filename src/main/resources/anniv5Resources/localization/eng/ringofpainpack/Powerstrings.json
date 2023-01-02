@@ -9,7 +9,7 @@
   "${ModID}:ConnectionPower": {
     "NAME": "Connection",
     "DESCRIPTIONS": [
-      "Whenever you play a card, upgrade it and ALL copies of it."
+      "Whenever you play a card, #yupgrade it and ALL copies of it."
     ]
   }
 }

@@ -1,6 +1,7 @@
 package thePackmaster.cards.ringofpainpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,7 +20,11 @@ public class Owl extends AbstractEvolveCard {
     private static final int VULNERABLE = 2;
 
     public Owl() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        this(false);
+    }
+
+    public Owl(boolean isPreviewCard) {
+        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, isPreviewCard);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = VULNERABLE;
     }
@@ -34,21 +39,16 @@ public class Owl extends AbstractEvolveCard {
 
     }
 
-    @Override
-    public float getTitleFontSize()
-    {
-        if (timesUpgraded >= AbstractEvolveCard.MAX_UPGRADES) {
-            return 16;
-        } else {
-            return 21;
-        }
-    }
-
     public void triggerEvolveOnExhaust() {
         evolve();
     }
 
     public void upp() {
         upgradeDamage(UPGRADE_DAMAGE);
+    }
+
+    @Override
+    protected AbstractCard getPreviewCard() {
+        return new Owl(true);
     }
 }

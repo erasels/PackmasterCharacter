@@ -2,6 +2,7 @@ package thePackmaster.cards.ringofpainpack;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.TexLoader;
@@ -13,9 +14,18 @@ public abstract class AbstractEvolveCard extends AbstractPackmasterCard {
 
     public static final int MAX_UPGRADES = 3;
 
-    public AbstractEvolveCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
+    public AbstractEvolveCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, boolean isPreviewCopy) {
         super(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        if (!isPreviewCopy) {
+            AbstractCard previewCard = this.getPreviewCard();
+            for (int i = 0; i < MAX_UPGRADES; i++) {
+                previewCard.upgrade();
+            }
+            cardsToPreview = previewCard;
+        }
     }
+
+    protected abstract AbstractCard getPreviewCard();
 
     @Override
     public boolean canUpgrade() {
@@ -56,6 +66,7 @@ public abstract class AbstractEvolveCard extends AbstractPackmasterCard {
             String newArtPath = str[1] + "Evolved" + ".png";
             loadCardImage(makeCardPath(newArtPath));
             uDesc();
+            this.cardsToPreview = null;
         }
     }
 
