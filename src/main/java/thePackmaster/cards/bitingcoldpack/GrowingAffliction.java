@@ -25,6 +25,6 @@ public class GrowingAffliction extends AbstractPackmasterCard {
 
     // Hey there! Welcome to my code!
     // This card returns to hand when the player applies a debuff
-    // That functionality is in my OnApplyDebuffPatch!
+    // That functionality is in SpireAnniversary5Mod, in receivePostPowerApplySubscriber()!
     // If you want to see the code for it, go there ^^
 }
