@@ -27,5 +27,9 @@
     "NAME": "Snow Melt",
     "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL Next turn, draw !M! additional cards.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Next turn, draw !M! additional cards."
+  },
+  "${ModID}:Pyromastery": {
+    "NAME": "Pyromastery",
+    "DESCRIPTION": "When you apply ${ModID}:Ignite, apply an additional !M! ${ModID}:Ignite."
   }
 }

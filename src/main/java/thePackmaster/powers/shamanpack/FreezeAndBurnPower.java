@@ -22,12 +22,8 @@ public class FreezeAndBurnPower extends AbstractPackmasterPower implements NonSt
 
     public FreezeAndBurnPower(AbstractCreature owner, FreezeAndBurn freezeAndBurn) {
         super(POWER_ID, NAME, PowerType.BUFF,false, owner, 0);
-        this.name = NAME;
-        this.ID = POWER_ID;
-        this.owner = owner;
         this.freezeAndBurn = (FreezeAndBurn)freezeAndBurn.makeSameInstanceOf();
         this.updateDescription();
-        this.priority = 50;
     }
 
     @Override

@@ -10,5 +10,9 @@
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",
     "DESCRIPTIONS": ["Whenever you are attacked this turn, apply #b{0} #yIgnite."]
+  },
+  "${ModID}:Pyromastery": {
+    "NAME": "Pyromastery",
+    "DESCRIPTIONS": ["When you apply #yIgnite, apply an additional #b{0} #yIgnite."]
   }
 }
