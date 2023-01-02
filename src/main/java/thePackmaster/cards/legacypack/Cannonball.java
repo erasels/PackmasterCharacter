@@ -19,7 +19,7 @@ public class Cannonball extends AbstractPackmasterCard {
     private static final int UPGRADE_BONUS = 2;
 
     public Cannonball() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         this.baseDamage = POWER;
     }
 

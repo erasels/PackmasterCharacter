@@ -1,7 +1,7 @@
 {
   "${ModID}:Sharpen": {
     "NAME": "Sharpen",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a random damaging card in hand: 'Add !M! Damage'"
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a random Attack in hand: 'Add !M! Damage'"
   },
   "${ModID}:Fortify": {
     "NAME": "Fortify",

@@ -23,7 +23,7 @@ public class Sharpen extends AbstractDimensionalCard {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        addToBot(new FindCardForAddModifierAction(new AddDamageModifier(magicNumber),1,true, AbstractDungeon.player.hand, card->card.baseDamage>0));
+        addToBot(new FindCardForAddModifierAction(new AddDamageModifier(magicNumber),1,true, AbstractDungeon.player.hand, card->card.type==CardType.ATTACK));
 
     }
 
