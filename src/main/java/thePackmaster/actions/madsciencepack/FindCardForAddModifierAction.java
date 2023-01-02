@@ -46,54 +46,51 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (!isDone) {
-            Predicate<AbstractCard> tagCheck = card -> !card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED);
+        Predicate<AbstractCard> tagCheck = card -> !card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED);
 
-            if (random) {
-                ArrayList<AbstractCard> chosen = new ArrayList<>();
-                ArrayList<AbstractCard> potentialTargets = new ArrayList<>();
+        if (random) {
+            ArrayList<AbstractCard> chosen = new ArrayList<>();
+            ArrayList<AbstractCard> potentialTargets = new ArrayList<>();
 
-                for (AbstractCard c : targetgroup.group) {
-                    if (requirements.and(tagCheck).test(c)) {
-                        potentialTargets.add(c);
-                    }
+            for (AbstractCard c : targetgroup.group) {
+                if (requirements.and(tagCheck).test(c)) {
+                    potentialTargets.add(c);
                 }
-                AbstractCard n;
+            }
+            AbstractCard n;
 
-                if (count >= potentialTargets.size()) {
-                    chosen.addAll(potentialTargets);
-                } else {
-                    for (int i = 0; i < count; i++) {
-                        if (potentialTargets.isEmpty()) {
-                            isDone = true;
-                            break;
-                        } else {
-                            n = Wiz.getRandomItem(potentialTargets);
-                            potentialTargets.remove(n);
-                            chosen.add(n);
-                        }
-                    }
-                }
-
-                if (chosen.size() > 0) {
-                    for (AbstractCard c2 : chosen) {
-                        CardModifierManager.addModifier(c2, mod);
-                        c2.superFlash(Color.CHARTREUSE);
-                    }
-                }
+            if (count >= potentialTargets.size()) {
+                chosen.addAll(potentialTargets);
             } else {
-                atb(new SelectCardsAction(targetgroup.group, count, uiSTRINGS.TEXT[0], false,
-                        requirements.and(tagCheck),
-
-                        (cards) -> {
-                            for (AbstractCard c2 : cards) {
-                                CardModifierManager.addModifier(c2, mod);
-                                c2.superFlash(Color.CHARTREUSE);
-                            }
-                        }
-                ));
+                for (int i = 0; i < count; i++) {
+                    if (potentialTargets.isEmpty()) {
+                        isDone = true;
+                        break;
+                    } else {
+                        n = Wiz.getRandomItem(potentialTargets);
+                        potentialTargets.remove(n);
+                        chosen.add(n);
+                    }
+                }
             }
 
+            if (!chosen.isEmpty()) {
+                for (AbstractCard c2 : chosen) {
+                    CardModifierManager.addModifier(c2, mod);
+                    c2.superFlash(Color.CHARTREUSE);
+                }
+            }
+        } else {
+            atb(new SelectCardsAction(targetgroup.group, count, uiSTRINGS.TEXT[0], false,
+                    requirements.and(tagCheck),
+
+                    (cards) -> {
+                        for (AbstractCard c2 : cards) {
+                            CardModifierManager.addModifier(c2, mod);
+                            c2.superFlash(Color.CHARTREUSE);
+                        }
+                    }
+            ));
         }
         isDone = true;
     }
