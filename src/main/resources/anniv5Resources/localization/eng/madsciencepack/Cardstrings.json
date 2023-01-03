@@ -1,7 +1,7 @@
 {
   "${ModID}:Sharpen": {
     "NAME": "Sharpen",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a random damaging card in hand: 'Add !M! Damage'"
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a random Attack in hand: 'Add !M! Damage'"
   },
   "${ModID}:Fortify": {
     "NAME": "Fortify",
@@ -11,7 +11,7 @@
     "NAME": "Winterize",
     "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your draw pile: 'Apply !M! Frostbite.'"
   },
-  "${ModID}:Throw Wrench": {
+  "${ModID}:ThrowWrench": {
     "NAME": "Throw Wrench",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have a Modified card in hand, deals damage twice."
   },

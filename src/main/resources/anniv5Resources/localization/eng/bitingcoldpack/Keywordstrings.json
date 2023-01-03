@@ -1,0 +1,6 @@
+[
+  {
+    "NAMES": ["frostbite"],
+    "DESCRIPTION": "At the start of its turn, a creature with #yFrostbite loses HP and its #yFrostbite is halved. NL Whenever a creature with #yFrostbite receives attack damage, apply #b1 #yFrostbite."
+  }
+]
