@@ -1,0 +1,6 @@
+{
+  "${ModID}:ShedWeight": {
+    "NAME": "Shed Weight",
+    "DESCRIPTION": "Gain !B! Block. Discard a card. NL If that card was *Unplayable, draw a card."
+  }
+}
