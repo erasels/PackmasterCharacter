@@ -12,5 +12,9 @@
   "${ModID}:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, deal !D! damage again."
+  },
+  "${ModID}:PlasmaShield": {
+    "NAME": "Plasma Shield",
+    "DESCRIPTION": "At the end of your turn, gain !M! Block for each Plasma. NL Channel !${ModID}:m2! Plasma."
   }
 }

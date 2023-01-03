@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.utilitypack.Excitement;
 import thePackmaster.cards.utilitypack.LayeredDefenses;
+import thePackmaster.cards.utilitypack.PlasmaShield;
 import thePackmaster.cards.utilitypack.PreemptiveStrike;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class UtilityPack extends AbstractCardPack {
         cards.add(Excitement.ID);
         cards.add(LayeredDefenses.ID);
         cards.add(PreemptiveStrike.ID);
+        cards.add(PlasmaShield.ID);
         return cards;
     }
 }
