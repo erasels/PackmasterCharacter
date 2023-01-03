@@ -20,7 +20,7 @@
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Thorns."
   },
   "${ModID}:SummonPython": {
-    "NAME": "Pack Rip",
+    "NAME": "Summon Python",
     "DESCRIPTION": "Apply !M! ${ModID}:Constricted."
   },
   "${ModID}:SummonBees": {
