@@ -1,2 +1,7 @@
 {
+  "${ModID}:Excitement": {
+    "NAME": "Excitement",
+    "DESCRIPTION": "Gain [E] [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] . NL Exhaustive !stslib:ex!."
+  }
 }
