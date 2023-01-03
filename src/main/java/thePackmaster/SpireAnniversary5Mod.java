@@ -41,6 +41,7 @@ import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.relics.AbstractPackmasterRelic;
+import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.util.Wiz;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -177,6 +178,8 @@ public class SpireAnniversary5Mod implements
             uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Main"));
         declarePacks();
         BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
+
+        BaseMod.addTopPanelItem(new CurrentRunCardsTopPanelItem());
     }
 
     private String getLangString() {
