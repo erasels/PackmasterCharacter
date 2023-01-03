@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
@@ -32,7 +31,7 @@ public class PewcumberAction extends AbstractGameAction {
     private static final String BELL_ORANGE_PATH = makePath("images/vfx/summonspack/BellPepperOrange.png");
 
     private static final float AIR_TIME = 0.3f;
-    private static final float FADE_TIME = 0.3f;
+    private static final float FADE_TIME = 0.5f;
     
     private AbstractPlayer p = adp();
     private DamageInfo info;

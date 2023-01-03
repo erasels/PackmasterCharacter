@@ -18,8 +18,8 @@ public class SummonVegetables extends AbstractPackmasterCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int DAMAGE = 3;
-    private static final int UPGRADE_DAMAGE = 1;
+    private static final int DAMAGE = 4;
+    private static final int UPGRADE_DAMAGE = 2;
 
     public SummonVegetables() {
         super(ID, COST, TYPE, RARITY, TARGET);
