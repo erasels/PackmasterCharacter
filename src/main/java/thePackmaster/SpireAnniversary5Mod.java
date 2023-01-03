@@ -19,8 +19,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
+import thePackmaster.actions.distortionpack.ImproveAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
@@ -43,6 +45,7 @@ public class SpireAnniversary5Mod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         PostUpdateSubscriber,
+        PostBattleSubscriber,
         CustomSavable<ArrayList<String>> {
 
     private static UIStrings uiStrings;
@@ -456,6 +459,11 @@ public class SpireAnniversary5Mod implements
                 }
             }
         }
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        ImproveAction._clean();
     }
 
     @Override

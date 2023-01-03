@@ -1,0 +1,47 @@
+{
+  "${ModID}:S_r_ke": {
+    "NAME": "S r ke",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Distortion."
+  },
+  "${ModID}:Deconstruct": {
+    "NAME": "Deconstruct",
+    "DESCRIPTION": "Apply !M! ${ModID}:Distortion to ALL enemies. NL Exhaust."
+  },
+  "${ModID}:Darken": {
+    "NAME": "Darken",
+    "DESCRIPTION": "Apply !M! ${ModID}:Distortion. If the enemy has another debuff, apply !${ModID}:m2! more."
+  },
+  "${ModID}:BurningAct": {
+    "NAME": "Burning Act",
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust 2 of them randomly.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust 2 of them."
+  },
+  "${ModID}:MindMaze": {
+    "NAME": "Mind Maze",
+    "DESCRIPTION": "Gain !B! Block X times. NL Put X *Dazed on top of your draw pile."
+  },
+  "${ModID}:Deterioration": {
+    "NAME": "Deterioration",
+    "DESCRIPTION": "At the end of your turn, Exhaust a random card in your discard pile and gain !M! Block."
+  },
+  "${ModID}:Shatter": {
+    "NAME": "Shatter",
+    "DESCRIPTION": "{@@}Deal !D! damage for each time the enemy has lost HP this turn.",
+    "EXTENDED_DESCRIPTION": [
+      "{@@}Deal !D! damage for each time the enemy has lost HP this turn. NL (Hits !M! time{!M!|1=|@=s}.)"
+    ]
+  },
+  "${ModID}:Rue": {
+    "NAME": "Rue",
+    "DESCRIPTION": "{@@}Gain [E] [E] and draw !M! card{!M!|>1=s}. NL Exhaust the next 3 cards you play."
+  },
+  "${ModID}:Static": {
+    "NAME": "Static",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Apply ${ModID}:Distortion equal to the unblocked damage dealt."
+  },
+  "${ModID}:CursedCircle": {
+    "NAME": "Cursed Circle",
+    "DESCRIPTION": "You and ALL enemies lose Strength equal to the number of cards in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "You and ALL enemies lose Strength equal to the number of cards in your hand."
+  }
+}
