@@ -29,5 +29,14 @@
     "NAME": "Replenish",
     "DESCRIPTION": "Put two cards from your discard pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Put two cards from your discard pile into your hand."
+  },
+  "${ModID}:LesserHex": {
+    "NAME": "Lesser Hex",
+    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater *Hex to your discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater *Hex+ to your discard pile. NL Exhaust."
+  },
+  "${ModID}:GreaterHex": {
+    "NAME": "Greater Hex",
+    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Exhaust."
   }
 }
