@@ -82,18 +82,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     }
 
     public static String getCardTextureString(final String cardName, final AbstractCard.CardType cardType) {
-        String textureString;
-
-        switch (cardType) {
-            case ATTACK:
-            case POWER:
-            case SKILL:
-                textureString = makeImagePath("cards/" + cardName + ".png");
-                break;
-            default:
-                textureString = makeImagePath("ui/missing.png");
-                break;
-        }
+        String textureString = makeImagePath("cards/" + cardName + ".png");
 
         FileHandle h = Gdx.files.internal(textureString);
         if (!h.exists()) {
