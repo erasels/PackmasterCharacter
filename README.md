@@ -64,7 +64,7 @@ To test your cards simply use the Custom Draft toggle in the character select sc
 ### Reminders and veto ruling
 Please look at the google docs to get a full refresher of the rules for your contribution. Specifically the complxity cap is important.
 Here is a TL;DR:
-* 10 cards per pack, token cards are allowed but please be reasonable (high amount of tokens is allowed by precedent, only if these cards cannot be easily obtained)
+* 10 cards per pack, token cards are allowed but please be reasonable (3 token cards max, no exceptions other than the few made already)
 * No duplicate cards, if a card exists in another pack, it may not be in another.
 * No additional UI, please use powers/orbs/stances if you need them
 * Most of your cards should have less than 6 lines of text.
