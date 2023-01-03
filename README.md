@@ -59,6 +59,7 @@ To test your cards simply use the Custom Draft toggle in the character select sc
 * We have our own AbstractCard Class, **AbstractPackmasterCard** please make use of it for your cards
 * To get a card's Pack, you can call getParent on a PackmasterCard or use the method in the Wiz class getPackByCard
 * We have some lists and maps to get card packs, these are allPacks, packsByID, cardParentMap
+* If you want to add your own CardBack for your Pack preview card, you can do so by adding it to the images/512 and 1024 with the png file having the same name as your pack
 * AbstractPackMasterOrb is a utility file that extends Custom orb and contains PassiveEffect() to easily store passive effects of orb for access by direct activation effects if they aren't start or end of turn passives.
 * Additionally this file contains getPackLimitedOrb(boolean useCardRng) this method pulls a random orb from your current available packs, Acts like Chaos if no active packs add orbs. Chaos is not affected.
 
