@@ -31,3 +31,4 @@ public class WitchTwist extends AbstractPackmasterCard {
         upgradeSecondDamage(1);
     }
 }
+
