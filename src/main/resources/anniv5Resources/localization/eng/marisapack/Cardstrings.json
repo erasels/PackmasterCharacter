@@ -6,5 +6,9 @@
   "${ModID}:RisingStrike": {
     "NAME": "Rising Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Charge Up."
+  },
+  "${ModID}:GalacticHalo": {
+    "NAME": "Galactic Halo",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Charge Up."
   }
 }

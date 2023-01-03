@@ -1,11 +1,9 @@
 package thePackmaster.cards.marisapack;
 
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
