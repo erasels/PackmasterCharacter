@@ -15,7 +15,7 @@ public class Fright extends AbstractPackmasterCard {
     public final static String ID = makeID(Fright.class.getSimpleName());
 
     private static final int DAMAGE = 9;
-    private static final int UPGRADE_DAMAGE = 1;
+    private static final int UPGRADE_DAMAGE = 2;
     private static final int DRAW = 2;
     private static final int UPGRADE_DRAW = 1;
 
