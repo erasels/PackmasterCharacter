@@ -3,6 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.intothebreachpack.*;
 
 import java.util.ArrayList;
 
@@ -20,8 +21,16 @@ public class IntoTheBreachPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        // TODO: cards.add(Card.ID);
-        // you better not forget this time
+        cards.add(AcidProjector.ID);
+        cards.add(ElectricWhip.ID);
+        cards.add(EnrageShot.ID);
+        cards.add(MercuryFist.ID);
+        cards.add(ReboundVolley.ID);
+        cards.add(SmokePellets.ID);
+        cards.add(SmolderingShell.ID);
+        cards.add(SpartanShield.ID);
+        cards.add(StormGenerator.ID);
+        cards.add(VoidShocker.ID);
         return cards;
     }
 }

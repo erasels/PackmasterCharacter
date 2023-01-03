@@ -33,16 +33,15 @@ public class ReboundVolley extends AbstractPackmasterCard implements BranchingUp
             branchUpgrade();
         else
             baseUpgrade();
+        baseSecondDamage = baseDamage;
     }
 
     public void baseUpgrade() {
         upgradeDamage(2);
-        baseSecondDamage = baseDamage;
     }
 
     public void branchUpgrade() {
         upgradeDamage(-2);
-        baseSecondDamage = baseDamage;
         upgradeMagicNumber(1);
         rawDescription = CardCrawlGame.languagePack.getCardStrings(ReboundVolley.ID).EXTENDED_DESCRIPTION[0];
     }
