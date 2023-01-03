@@ -16,5 +16,9 @@
   "${ModID}:PlasmaShield": {
     "NAME": "Plasma Shield",
     "DESCRIPTION": "At the end of your turn, gain !M! Block for each Plasma. NL Channel !${ModID}:m2! Plasma."
+  },
+  "${ModID}:Enrage": {
+    "NAME": "Enrage",
+    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! cards. NL Enter ${ModID}:Aggression."
   }
 }
