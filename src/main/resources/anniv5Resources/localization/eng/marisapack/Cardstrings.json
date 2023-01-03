@@ -1,6 +1,6 @@
 {
-  "${ModID}:MarisaExmaple": {
-    "NAME": "---",
-    "DESCRIPTION": "asdasdasd"
+  "${ModID}:MasterSpark": {
+    "NAME": "Master Spark",
+    "DESCRIPTION": "Deal !D! damage. ${ModID}:Amplify [E] : NL Deal !${ModID}:sd! damage instead."
   }
 }
