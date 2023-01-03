@@ -20,5 +20,9 @@
   "${ModID}:Enrage": {
     "NAME": "Enrage",
     "DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! cards. NL Enter ${ModID}:Aggression."
+  },
+  "${ModID}:Whispers": {
+    "NAME": "Whispers",
+    "DESCRIPTION": "Draw !M! cards. NL Add a *Dazed to your hand."
   }
 }
