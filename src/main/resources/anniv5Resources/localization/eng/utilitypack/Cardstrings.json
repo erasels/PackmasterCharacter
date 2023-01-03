@@ -3,5 +3,10 @@
     "NAME": "Excitement",
     "DESCRIPTION": "Gain [E] [E] . NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain [E] [E] . NL Exhaustive !stslib:ex!."
+  },
+  "${ModID}:LayeredDefenses": {
+    "NAME": "Layered Defenses",
+    "DESCRIPTION": "Gain !B! Block for each card type in your hand.",
+    "EXTENDED_DESCRIPTION": [" NL ({0} card types.)"]
   }
 }
