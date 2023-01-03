@@ -38,5 +38,10 @@
   "${ModID}:GreaterHex": {
     "NAME": "Greater Hex",
     "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Exhaust."
+  },
+  "${ModID}:Conjuration": {
+    "NAME": "Conjuration",
+    "DESCRIPTION": "Choose a card from your draw pile. NL Play and Exhaust it.",
+    "UPGRADE_DESCRIPTION": "Choose a card from your draw pile. NL Play it."
   }
 }

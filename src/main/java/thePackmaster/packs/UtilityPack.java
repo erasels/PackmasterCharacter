@@ -29,6 +29,7 @@ public class UtilityPack extends AbstractCardPack {
         cards.add(Whispers.ID);
         cards.add(Replenish.ID);
         cards.add(LesserHex.ID);
+        cards.add(Conjuration.ID);
         return cards;
     }
 }

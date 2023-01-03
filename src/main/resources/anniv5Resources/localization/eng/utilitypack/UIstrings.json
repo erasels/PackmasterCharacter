@@ -5,5 +5,10 @@
       "Cards that synergize well with a wide range of mechanics and packs.",
       "modargo"
     ]
+  },
+  "${ModID}:ConjurationAction": {
+    "TEXT": [
+      "Choose a Card to play."
+    ]
   }
 }
