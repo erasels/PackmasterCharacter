@@ -46,6 +46,10 @@ public class ReboundVolley extends AbstractPackmasterCard implements BranchingUp
         rawDescription = CardCrawlGame.languagePack.getCardStrings(ReboundVolley.ID).EXTENDED_DESCRIPTION[0];
     }
 
+    // This method is used so the second damage value on the card
+    // (the "to a random enemy" one)
+    // doesn't change based on the targeted enemy's powers
+    // (e.g. Vulnerable)
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         super.applyPowers();
