@@ -44,7 +44,7 @@
   },
   "${ModID}:Vision": {
     "NAME": "Vision",
-    "DESCRIPTION": "Put !M! cards from your draw pile into your hand. NL Retain your hand this turn."
+    "DESCRIPTION": "Put !M! cards from your draw pile into your hand. NL Retain your hand this turn. NL Exhaust."
   },
   "${ModID}:Connection": {
     "NAME": "Connection",
