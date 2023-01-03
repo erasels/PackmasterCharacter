@@ -18,5 +18,10 @@
       " NL Gain a Cannonball.",
       " NL Draw a card."
     ]
+  },
+  "${ModID}:AddModifierUI": {
+    "TEXT": [
+      " to Modify"
+    ]
   }
 }
