@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public interface AmplifyCard {
     //Amplify glow is handled in the main mod file receivePostInitialize by adding the GlowInfo
-    Color AMPLIFY_GLOW_COLOR = Color.BLUE;
+    Color AMPLIFY_GLOW_COLOR = Color.WHITE;
 
     //When true, skips card's normal use method if amplify is activated
     boolean skipUseOnAmplify();
