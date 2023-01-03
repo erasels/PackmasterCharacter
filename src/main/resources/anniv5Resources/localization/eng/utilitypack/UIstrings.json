@@ -1,0 +1,9 @@
+{
+  "${ModID}:UtilityPack": {
+    "TEXT": [
+      "Utility",
+      "Cards that synergize well with a wide range of mechanics and packs.",
+      "modargo"
+    ]
+  }
+}
