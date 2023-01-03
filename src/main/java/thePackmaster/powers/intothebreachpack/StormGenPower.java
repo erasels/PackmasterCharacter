@@ -3,7 +3,6 @@ package thePackmaster.powers.intothebreachpack;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Lightning;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -13,6 +12,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.att;
+import static thePackmaster.util.Wiz.getEnemies;
 
 public class StormGenPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("StormGenPower");
@@ -27,7 +27,7 @@ public class StormGenPower extends AbstractPackmasterPower {
     public void atEndOfTurn(boolean isPlayer) {
         ArrayList<AbstractMonster> withDebuff = new ArrayList<>();
 
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters)
+        for (AbstractMonster m : getEnemies())
             for (AbstractPower p : m.powers)
                 if (p.type == PowerType.DEBUFF && !withDebuff.contains(m)) {
                     withDebuff.add(m);

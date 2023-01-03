@@ -26,5 +26,6 @@ public class SpartanShield extends AbstractPackmasterCard {
 
     public void upp() {
         upgradeBlock(2);
+        upgradeMagicNumber(1);
     }
 }
