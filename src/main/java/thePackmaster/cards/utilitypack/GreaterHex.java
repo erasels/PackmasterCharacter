@@ -23,7 +23,7 @@ public class GreaterHex extends AbstractPackmasterCard {
     private static final int UPGRADE_STATS = 1;
 
     public GreaterHex() {
-        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         this.magicNumber = this.baseMagicNumber = STATS;
         this.exhaust = true;
     }
