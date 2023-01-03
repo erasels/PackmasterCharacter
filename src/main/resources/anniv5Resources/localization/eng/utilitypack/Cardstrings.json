@@ -43,5 +43,9 @@
     "NAME": "Conjuration",
     "DESCRIPTION": "Choose a card from your draw pile. NL Play and Exhaust it.",
     "UPGRADE_DESCRIPTION": "Choose a card from your draw pile. NL Play it."
+  },
+  "${ModID}:RareStrike": {
+    "NAME": "Rare Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your *Rares."
   }
 }
