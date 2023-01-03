@@ -24,5 +24,10 @@
   "${ModID}:Whispers": {
     "NAME": "Whispers",
     "DESCRIPTION": "Draw !M! cards. NL Add a *Dazed to your hand."
+  },
+  "${ModID}:Replenish": {
+    "NAME": "Replenish",
+    "DESCRIPTION": "Put two cards from your discard pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put two cards from your discard pile into your hand."
   }
 }
