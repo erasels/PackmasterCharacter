@@ -26,7 +26,7 @@ First, navigate to the project on your system and copy the example-pom.xml and r
 **DO NOT DELETE THE EXAMPLE POM!**
 
 Once you've got the project up and running, navigate to the **packs** package.  
-Create a new class that extends from AbstractCardPack. You can copy the basic structure from an existing pack like the DownfallPack. Somply change the ID line to use the ID you want to use for you pack, example:  
+Create a new class that extends from AbstractCardPack. You can copy the basic structure from an existing pack like the DownfallPack. Simply change the ID line to use the ID you want to use for you pack, example:  
 `public static final String ID = SpireAnniversary5Mod.makeID("ExamplePack"); `
 and define the cards your pack has in `getCards()` once you've made them.  
 Strings are done in a per-pack basis. So create a directory with the same name as your pack's ID with no capitalization in `resources/localization/eng`. Everything other than the *Cardstrings.json* and *UIstrings.json* is optional.  
