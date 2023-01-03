@@ -8,5 +8,9 @@
     "NAME": "Layered Defenses",
     "DESCRIPTION": "Gain !B! Block for each card type in your hand.",
     "EXTENDED_DESCRIPTION": [" NL ({0} card types.)"]
+  },
+  "${ModID}:PreemptiveStrike": {
+    "NAME": "Preemptive Strike",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, deal !D! damage again."
   }
 }
