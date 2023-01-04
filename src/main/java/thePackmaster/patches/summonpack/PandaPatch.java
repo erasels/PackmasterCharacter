@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import javassist.CtBehavior;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 
 import static thePackmaster.util.Wiz.adp;
@@ -54,16 +53,12 @@ public class PandaPatch {
         public static void Prefix(AbstractPlayer __instance, SpriteBatch sb) {
             for (AbstractOrb o : __instance.orbs) {
                 AbstractOrbIsInPlayerRender.isPlayerRender.set(o, false);
-                if (o instanceof Panda || o instanceof Louse)
+                if (o instanceof Panda)
                     o.render(sb);
             }
             for (Panda panda : SpireAnniversary5Mod.pandaList) {
                 AbstractOrbIsInPlayerRender.isPlayerRender.set(panda, false);
                 panda.render(sb);
-            }
-            for (Louse louse : SpireAnniversary5Mod.louseList) {
-                AbstractOrbIsInPlayerRender.isPlayerRender.set(louse, false);
-                louse.render(sb);
             }
         }
     }

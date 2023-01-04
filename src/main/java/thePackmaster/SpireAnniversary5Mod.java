@@ -18,7 +18,6 @@ import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -35,7 +34,6 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
-import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
@@ -105,7 +103,6 @@ public class SpireAnniversary5Mod implements
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
-    public static final ArrayList<Louse> louseList = new ArrayList<>();
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
@@ -292,7 +289,6 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
-        louseList.clear();
     }
 
     public static void declarePacks() {

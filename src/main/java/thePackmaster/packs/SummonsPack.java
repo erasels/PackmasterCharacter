@@ -29,9 +29,9 @@ public class SummonsPack extends AbstractCardPack {
         cards.add(SummonBrambles.ID);
         cards.add(SummonPython.ID);
         cards.add(SummonBees.ID);
-        cards.add(Control.ID);
+        cards.add(SummonDemon.ID);
         cards.add(SummonPandas.ID);
-        cards.add(SummonLice.ID);
+        cards.add(SummonDisease.ID);
         return cards;
     }
 }
