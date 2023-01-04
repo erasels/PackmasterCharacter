@@ -1,2 +1,6 @@
 {
+  "${ModID}:Vindicate": {
+    "NAME": "Vindicate",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play an Attack this turn, gain !M! Block."
+  }
 }
