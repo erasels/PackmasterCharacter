@@ -3,6 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.aggressionpack.DarkLance;
 import thePackmaster.cards.aggressionpack.Vindicate;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class AggressionPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(Vindicate.ID);
+        cards.add(DarkLance.ID);
         return cards;
     }
 }

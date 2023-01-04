@@ -2,5 +2,9 @@
   "${ModID}:Vindicate": {
     "NAME": "Vindicate",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you play an Attack this turn, gain !M! Block."
+  },
+  "${ModID}:DarkLance": {
+    "NAME": "Dark Lance",
+    "DESCRIPTION": "Deal !D! damage. NL If you've changed Stances this turn, draw !M! cards."
   }
 }
