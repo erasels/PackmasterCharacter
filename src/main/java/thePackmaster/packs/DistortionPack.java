@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.actions.distortionpack.ImproveAction;
-import thePackmaster.cards.dimensiongatepack.*;
+import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.distortionpack.*;
 
 import java.util.ArrayList;
@@ -64,8 +64,10 @@ public class DistortionPack extends AbstractCardPack {
             if (distortionPackTexture == null) {
                 List<String> skills = new ArrayList<>();
                 for (AbstractCard c : CardLibrary.getAllCards()) {
-                    if (c.color == ThePackmaster.Enums.PACKMASTER_RAINBOW && c.type == CardType.SKILL)
-                        skills.add(c.cardID);
+                    if (c instanceof AbstractPackmasterCard && c.color == ThePackmaster.Enums.PACKMASTER_RAINBOW && c.type == CardType.SKILL) {
+                        if (c.portrait != null && c.portrait.originalWidth == 500 && c.portrait.originalHeight == 380)
+                            skills.add(c.cardID);
+                    }
                 }
                 String imgID = skills.get(MathUtils.random(skills.size() - 1));
                 this.textureImg = getCardTextureString(imgID.replace(modID + ":", ""), CardType.SKILL);
