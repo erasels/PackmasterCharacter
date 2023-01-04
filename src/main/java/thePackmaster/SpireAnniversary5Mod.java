@@ -63,6 +63,7 @@ public class SpireAnniversary5Mod implements
     private static UIStrings uiStrings;
 
     public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
+    public static HashMap<Class<? extends AbstractCard>, String> cardClassParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <card Class, packID>
     public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
     public static HashMap<String, AbstractCardPack> packsByID;
     public static ArrayList<AbstractCardPack> currentPoolPacks = new ArrayList<>();
