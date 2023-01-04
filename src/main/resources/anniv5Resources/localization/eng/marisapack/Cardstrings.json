@@ -19,5 +19,10 @@
   "${ModID}:ShootingEcho": {
     "NAME": "Shooting Echo",
     "DESCRIPTION": "Deal !D! damage. Exhaust a card to ${ModID}:Duplicate. NL Exhaust."
+  },
+  "${ModID}:StardustReverie": {
+    "NAME": "Stardust Reverie",
+    "DESCRIPTION": "Exhaust !M! card. Gain ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify.",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. Gain ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify."
   }
 }
