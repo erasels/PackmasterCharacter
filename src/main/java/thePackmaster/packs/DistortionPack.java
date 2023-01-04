@@ -65,7 +65,7 @@ public class DistortionPack extends AbstractCardPack {
                 List<String> skills = new ArrayList<>();
                 for (AbstractCard c : CardLibrary.getAllCards()) {
                     if (c instanceof AbstractPackmasterCard && c.color == ThePackmaster.Enums.PACKMASTER_RAINBOW && c.type == CardType.SKILL) {
-                        if (c.portrait != null && c.portrait.originalWidth == 500 && c.portrait.originalHeight == 380)
+                        if (c.portrait != null && c.portrait.originalWidth == 250 && c.portrait.originalHeight == 190)
                             skills.add(c.cardID);
                     }
                 }
