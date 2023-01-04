@@ -111,6 +111,9 @@ public class SpireAnniversary5Mod implements
     @SpireEnum
     public static AbstractCard.CardTags ISCARDMODIFIED;
 
+    @SpireEnum
+    public static AbstractCard.CardTags MAGIC;
+
     public SpireAnniversary5Mod() {
         BaseMod.subscribe(this);
 
