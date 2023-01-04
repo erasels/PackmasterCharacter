@@ -50,9 +50,6 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
 
     @Override
     public void render(SpriteBatch sb) {
-        if (AbstractDungeon.player.chosenClass != ThePackmaster.Enums.THE_PACKMASTER) {
-            return;
-        }
         super.render(sb);
         renderFlash(sb);
         renderHover(sb);
