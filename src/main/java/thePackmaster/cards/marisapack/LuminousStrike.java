@@ -5,12 +5,16 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.util.Wiz;
+import thePackmaster.vfx.marisapack.CasualFlameParticleEffect;
+import thePackmaster.vfx.marisapack.FireIgniteEffect;
 
 import java.util.Locale;
 
@@ -33,6 +37,9 @@ public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCar
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        for (int i = 0; i < damage/2; i++) {
+            Wiz.vfx(new StarBounceEffect(m.hb.cX, m.hb.cY));
+        }
     }
 
     public void upp() {
@@ -47,7 +54,8 @@ public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCar
 
     @Override
     public void useAmplified(AbstractPlayer p, AbstractMonster m) {
-        Wiz.vfx(new ExplosionSmallEffect(m.hb.cX, m.hb.cY));
+        Wiz.vfx(new FireIgniteEffect(m.hb.cX, m.hb.cY, 6));
+        Wiz.vfx(new CasualFlameParticleEffect(m.hb.cX, m.hb.cY));
     }
 
     @Override
