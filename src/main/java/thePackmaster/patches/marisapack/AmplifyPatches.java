@@ -14,6 +14,7 @@ import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 import thePackmaster.cards.marisapack.AmplifyCard;
+import thePackmaster.powers.marisapack.AmplifyHook;
 import thePackmaster.util.Wiz;
 
 public class AmplifyPatches {
@@ -49,6 +50,7 @@ public class AmplifyPatches {
         public static void beforeEndUseCard(AbstractPlayer __instance, AbstractCard c, AbstractMonster monster) {
             if(amplified) {
                 __instance.energy.use(((AmplifyCard)c).getAmplifyCost());
+                Wiz.p().powers.stream().filter(p -> p instanceof AmplifyHook).forEach(p -> ((AmplifyHook) p).onAmplify(c));
                 amplified = false;
             }
         }
