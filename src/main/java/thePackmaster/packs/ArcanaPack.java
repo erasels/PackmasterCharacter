@@ -34,7 +34,7 @@ public class ArcanaPack extends AbstractCardPack {
         cards.add(Temperance.ID);
         cards.add(TheHierophant.ID);
         cards.add(TheSun.ID);
-        cards.add(Prepared.ID);
+        cards.add(TheChariot.ID);
         return cards;
     }
 
