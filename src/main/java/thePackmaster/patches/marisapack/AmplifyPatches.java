@@ -1,20 +1,18 @@
 package thePackmaster.patches.marisapack;
 
-import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.neow.NeowEvent;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 import thePackmaster.cards.marisapack.AmplifyCard;
-import thePackmaster.powers.marisapack.AmplifyHook;
+import thePackmaster.powers.marisapack.AmplifyPowerHook;
 import thePackmaster.util.Wiz;
 
 public class AmplifyPatches {
@@ -50,7 +48,7 @@ public class AmplifyPatches {
         public static void beforeEndUseCard(AbstractPlayer __instance, AbstractCard c, AbstractMonster monster) {
             if(amplified) {
                 __instance.energy.use(((AmplifyCard)c).getAmplifyCost());
-                Wiz.p().powers.stream().filter(p -> p instanceof AmplifyHook).forEach(p -> ((AmplifyHook) p).onAmplify(c));
+                Wiz.p().powers.stream().filter(p -> p instanceof AmplifyPowerHook).forEach(p -> ((AmplifyPowerHook) p).onAmplify(c));
                 amplified = false;
             }
         }
