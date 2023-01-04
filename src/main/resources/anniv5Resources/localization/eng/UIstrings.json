@@ -55,5 +55,12 @@
     "TEXT": [
       "Draft a Pack!"
     ]
+  },
+  "${ModID}:CurrentRunCardsTopPanelItem": {
+    "TEXT": [
+      "Packs",
+      "{0} NL NL Click to view card pool for this run.",
+      "Cards available in this run"
+    ]
   }
 }

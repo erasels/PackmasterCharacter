@@ -41,6 +41,7 @@ import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.relics.AbstractPackmasterRelic;
+import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.util.Wiz;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -58,6 +59,7 @@ public class SpireAnniversary5Mod implements
         PostInitializeSubscriber,
         PostUpdateSubscriber,
         PostPowerApplySubscriber,
+        StartGameSubscriber,
         CustomSavable<ArrayList<String>> {
 
     private static UIStrings uiStrings;
@@ -77,6 +79,7 @@ public class SpireAnniversary5Mod implements
     public static boolean doPackSetup = false;
     public static boolean openedStarterScreen = false;
     public static int PACKS_PER_RUN = 7;
+    public static CurrentRunCardsTopPanelItem currentRunCardsTopPanelItem;
 
     public static final String modID = "anniv5";
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
@@ -177,6 +180,8 @@ public class SpireAnniversary5Mod implements
             uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Main"));
         declarePacks();
         BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
+
+        currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
     }
 
     private String getLangString() {
@@ -534,6 +539,14 @@ public class SpireAnniversary5Mod implements
     public void onLoad(ArrayList<String> strings) {
         for (String s : strings) {
             currentPoolPacks.add(packsByID.get(s));
+        }
+    }
+
+    @Override
+    public void receiveStartGame() {
+        BaseMod.removeTopPanelItem(currentRunCardsTopPanelItem);
+        if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
+            BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
         }
     }
 }
