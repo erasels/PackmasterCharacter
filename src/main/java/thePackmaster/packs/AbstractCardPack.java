@@ -29,6 +29,7 @@ public abstract class AbstractCardPack {
         for (String s : getCards()) {
             AbstractCard c = CardLibrary.getCard(s);
             SpireAnniversary5Mod.cardParentMap.put(c.cardID, packID);
+            SpireAnniversary5Mod.cardClassParentMap.put(c.getClass(), packID);
             cards.add(c.makeStatEquivalentCopy());
         }
         previewPackCard = new CardPackPreview(packID, this);
