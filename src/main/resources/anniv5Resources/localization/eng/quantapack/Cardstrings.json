@@ -24,7 +24,7 @@
   },
   "${ModID}:MAXPOWER": {
     "NAME": "MAX POWER",
-    "DESCRIPTION": "Raise your Strength to 11."
+    "DESCRIPTION": "Raise your Strength NL to 11."
   },
   "${ModID}:Flow": {
     "NAME": "Flow",
