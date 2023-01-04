@@ -1,0 +1,25 @@
+{
+  "${ModID}:DistortionPower": {
+    "NAME": "Distortion",
+    "DESCRIPTIONS": [
+      "Whenever a card is #yExhausted, lose #b",
+      "Whenever a card is #yExhausted, loses #b",
+      " HP."
+    ]
+  },
+  "${ModID}:RuePower": {
+    "NAME": "Rue",
+    "DESCRIPTIONS": [
+      "#yExhaust the next #b",
+      " cards you play.",
+      "#yExhaust the next card you play."
+    ]
+  },
+  "${ModID}:DeteriorationPower": {
+    "NAME": "Deterioration",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yExhaust a random card in your discard pile and gain #b",
+      " #yBlock."
+    ]
+  }
+}

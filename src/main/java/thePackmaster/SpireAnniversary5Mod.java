@@ -29,8 +29,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
+import thePackmaster.actions.distortionpack.ImproveAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
@@ -58,6 +60,7 @@ public class SpireAnniversary5Mod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         PostUpdateSubscriber,
+        PostBattleSubscriber,
         PostPowerApplySubscriber,
         StartGameSubscriber,
         CustomSavable<ArrayList<String>> {
@@ -483,6 +486,11 @@ public class SpireAnniversary5Mod implements
     }
 
     @Override
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        ImproveAction._clean();
+    }
+
+    @Override
     public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power.type == AbstractPower.PowerType.DEBUFF && source == AbstractDungeon.player && target != AbstractDungeon.player) {
             // Biting Cold Pack
@@ -508,7 +516,7 @@ public class SpireAnniversary5Mod implements
                     }
                 });
             }
-          
+
             //Ring of Pain pack
             if(!target.hasPower(ArtifactPower.POWER_ID)) {
               atb(new AbstractGameAction() {
