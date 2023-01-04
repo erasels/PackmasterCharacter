@@ -6,5 +6,9 @@
   "${ModID}:DarkLance": {
     "NAME": "Dark Lance",
     "DESCRIPTION": "Deal !D! damage. NL If you've changed Stances this turn, draw !M! cards."
+  },
+  "${ModID}:FuriousAssault": {
+    "NAME": "Furious Assault",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Aggression. NL Exhaust."
   }
 }
