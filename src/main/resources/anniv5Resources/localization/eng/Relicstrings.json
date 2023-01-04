@@ -1,20 +1,13 @@
 {
-  "${ModID}:TodoItem": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
-    "DESCRIPTIONS": [
-      "Has no effect."
-    ]
-  },
   "${ModID}:BagOfHolding": {
-    "NAME": "Bag of Holding",
+    "NAME": "(NYI) Bag of Holding",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
       "Has no effect."
     ]
   },
   "${ModID}:BanishingDecree": {
-    "NAME": "Banishing Decree",
+    "NAME": "(NYI) Banishing Decree",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
         "Upon pickup, choose a Pack. Cards from it will no longer appear in card rewards.",
@@ -24,7 +17,7 @@
       ]
   },
   "${ModID}:CollectorBadge": {
-    "NAME": "Collector Badge",
+    "NAME": "(NYI) Collector Badge",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
       "Has no effect."
@@ -46,21 +39,21 @@
     ]
   },
   "${ModID}:PMBoosterBox": {
-    "NAME": "P.M. Booster Box",
+    "NAME": "(NYI) P.M. Booster Box",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
       "Has no effect."
     ]
   },
   "${ModID}:PMBoosterPack": {
-    "NAME": "P.M. Booster Pack",
+    "NAME": "(NYI) P.M. Booster Pack",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
       "Has no effect."
     ]
   },
   "${ModID}:PMCollection": {
-    "NAME": "P.M. Collection",
+    "NAME": "(NYI) P.M. Collection",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
       "Has no effect."
