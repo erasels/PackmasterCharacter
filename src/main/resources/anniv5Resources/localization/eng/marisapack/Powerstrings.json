@@ -4,5 +4,11 @@
     "DESCRIPTIONS": [
       "At #b%s or more stacks, double the damage of the next Attack and lose #b%s stacks."
     ]
+  },
+  "${ModID}:Inertia": {
+    "NAME": "Inertia",
+    "DESCRIPTIONS": [
+      "Whenever a card is #yExhausted or #yAmplified, gain #b%s #yCharge #yUp."
+    ]
   }
 }

@@ -24,5 +24,9 @@
     "NAME": "Stardust Reverie",
     "DESCRIPTION": "Exhaust !M! card. Gain ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify.",
     "UPGRADE_DESCRIPTION": "Exhaust !M! cards. Gain ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify."
+  },
+  "${ModID}:Inertia": {
+    "NAME": "Inertia",
+    "DESCRIPTION": "Whenever a card is Exhausted or ${ModID}:Amplified, gain !M! ${ModID}:Charge Up."
   }
 }
