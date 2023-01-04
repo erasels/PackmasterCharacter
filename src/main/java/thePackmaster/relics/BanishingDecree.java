@@ -49,7 +49,7 @@ public class BanishingDecree extends AbstractPackmasterRelic //implements Custom
 
     }
     */
-
+/*
     @Override
     public void onEquip() {
         cardSelected = false;
@@ -68,10 +68,12 @@ public class BanishingDecree extends AbstractPackmasterRelic //implements Custom
                 false, false, false, false);
     }
 
+ */
+
+        /*
     @Override
     public void onUnequip() {
         //TODO
-        /*
         if (card != null) {
             AbstractCard cardInDeck = AbstractDungeon.player.masterDeck.getSpecificCard(card);
             if (cardInDeck != null) {
@@ -79,9 +81,10 @@ public class BanishingDecree extends AbstractPackmasterRelic //implements Custom
             }
         }
 
-         */
     }
 
+         */
+    /*
     @Override
     public void update() {
         super.update();
@@ -99,6 +102,8 @@ public class BanishingDecree extends AbstractPackmasterRelic //implements Custom
             setDescriptionAfterLoading();
         }
     }
+
+     */
 
 
     /*

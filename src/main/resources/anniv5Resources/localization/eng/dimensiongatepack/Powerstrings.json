@@ -1,9 +1,16 @@
 {
   "${ModID}:MagicMissilePower": {
-    "NAME": "Missile Power",
+    "NAME": "Magical Power",
     "DESCRIPTIONS": [
-      "Magic Missiles deal ",
+      "Magic cards deal ",
       " more damage this turn."
+    ]
+  },
+  "${ModID}:ArsenalGearPower": {
+    "NAME": "Arsenal Gear",
+    "DESCRIPTIONS": [
+      "At the start of your next ",
+      " turn(s), add a random Uncommon or Rare card to your hand. It costs 0."
     ]
   }
 }

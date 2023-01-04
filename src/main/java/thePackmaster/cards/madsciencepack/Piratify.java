@@ -20,9 +20,9 @@ public class Piratify extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) {
-            Wiz.applyToSelf(new PiratifyPowerUpp(p, magicNumber));
+            Wiz.applyToSelf(new PiratifyPowerUpp(p, 1));
         } else {
-            Wiz.applyToSelf(new PiratifyPower(p, magicNumber));
+            Wiz.applyToSelf(new PiratifyPower(p, 1));
         }
     }
 

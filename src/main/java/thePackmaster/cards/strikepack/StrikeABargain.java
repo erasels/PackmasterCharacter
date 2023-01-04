@@ -3,6 +3,8 @@ package thePackmaster.cards.strikepack;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.powers.strikepack.StrikeABargainPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -15,8 +17,7 @@ public class StrikeABargain extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO - Uhoh.  How do dis.. Bullet Time is hardcoded shenanigans.
-        //"Your attacks costs 0 this turn. You cannot play non-Attacks."
+        Wiz.applyToSelf(new StrikeABargainPower(p));
     }
 
     public void upp() {

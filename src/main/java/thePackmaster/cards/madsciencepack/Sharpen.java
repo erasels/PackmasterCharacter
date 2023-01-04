@@ -6,15 +6,16 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
 import thePackmaster.cardmodifiers.madsciencepack.AddDamageModifier;
+import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.dimensiongatepack.AbstractDimensionalCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Sharpen extends AbstractDimensionalCard {
+public class Sharpen extends AbstractPackmasterCard {
     public final static String ID = makeID("Sharpen");
 
     public Sharpen() {
-        super(ID, 1, CardRarity.COMMON, CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 5;
 

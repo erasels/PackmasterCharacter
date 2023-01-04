@@ -14,7 +14,7 @@ public class Anemia extends AbstractDimensionalCard {
     public Anemia() {
         super(ID, 1, CardRarity.COMMON, CardType.SKILL, CardTarget.SELF);
         baseBlock = 8;
-        baseMagicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         setFrame("anemiaframe.png");
 
     }
@@ -32,8 +32,7 @@ public class Anemia extends AbstractDimensionalCard {
     }
 
     public void upp() {
-        upgradeBlock(2);
-        upgradeMagicNumber(1);
+        upgradeBlock(3);
 
     }
 }
