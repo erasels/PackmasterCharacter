@@ -27,6 +27,7 @@ public class SummonDisease extends AbstractPackmasterCard {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
         baseSecondMagic = secondMagic = SECOND_MAGIC;
+        exhaust = true;
     }
 
     @Override

@@ -29,7 +29,7 @@ public class SummonDemonAction extends AbstractGameAction {
     public void update() {
         int totalCost = upgraded ? 1 : 0;
         for (AbstractCard c : adp().hand.group)
-            if (totalCost > 0)
+            if (c.costForTurn > 0)
                 totalCost += c.costForTurn;
 
         for(int i = 0; i < adp().hand.size(); ++i)

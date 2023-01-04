@@ -35,7 +35,7 @@
   "${ModID}:SummonDemon": {
     "NAME": "Summon Demon",
     "DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost.",
-    "EXTENDED_DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + 1."
+    "UPGRADE_DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + 1."
   },
   "${ModID}:SummonPandas": {
     "NAME": "Summon Pandas",
