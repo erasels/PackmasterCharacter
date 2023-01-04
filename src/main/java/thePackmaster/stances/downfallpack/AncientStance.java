@@ -9,11 +9,13 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
+import thePackmaster.util.Wiz;
 import thePackmaster.vfx.downfallpack.AncientStanceParticleEffect;
 
 import static thePackmaster.util.Wiz.*;
@@ -73,6 +75,11 @@ public class AncientStance extends AbstractStance {
                 applyToSelf(new PlatedArmorPower(AbstractDungeon.player, 2));
             }
         }
+    }
+
+    @Override
+    public void onExitStance() {
+        applyToSelf(new ArtifactPower(Wiz.p(), 1));
     }
 
     @Override

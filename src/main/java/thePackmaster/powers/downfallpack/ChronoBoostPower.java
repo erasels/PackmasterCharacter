@@ -24,17 +24,19 @@ public class ChronoBoostPower extends AbstractPackmasterPower implements Cloneab
     public ChronoBoostPower(AbstractCreature owner, int amount) {
         super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
         isTwoAmount = true;
-        amount2 = 0;
+        amount2 = 12;
+        updateDescription();
+        this.loadRegion("time");
     }
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         super.onPlayCard(card, m);
-        if (this.amount2 == 11) {
-            this.amount2 = 0;
+        if (this.amount2 == 1) {
+            this.amount2 = 12;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
         } else {
-            this.amount2++;
+            this.amount2--;
         }
         this.updateDescription();
     }
@@ -46,7 +48,7 @@ public class ChronoBoostPower extends AbstractPackmasterPower implements Cloneab
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + (12 - (amount2)) + DESCRIPTIONS[1] +amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 
 }

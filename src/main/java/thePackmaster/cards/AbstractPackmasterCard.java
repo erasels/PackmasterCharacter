@@ -166,6 +166,16 @@ public abstract class AbstractPackmasterCard extends CustomCard {
         initializeDescription();
     }
 
+    public void downgrade() {
+        if (upgraded) {
+            upgraded = false;
+            name = cardStrings.NAME;
+            rawDescription = cardStrings.DESCRIPTION;
+            initializeTitle();
+            initializeDescription();
+        }
+    }
+
     public void upgrade() {
         if (!upgraded) {
             upgradeName();

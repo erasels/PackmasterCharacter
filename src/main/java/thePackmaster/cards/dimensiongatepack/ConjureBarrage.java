@@ -11,11 +11,11 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class ConjureBarrage extends AbstractDimensionalCard {
     public final static String ID = makeID("ConjureBarrage");
-    // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public ConjureBarrage() {
         super(ID, 0, CardRarity.UNCOMMON, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.SELF);
 
+        baseMagicNumber = magicNumber = 3;
         setFrame("conjurebarrageframe.png");
         exhaust = true;
         cardsToPreview = new MagicMissile();
@@ -28,7 +28,7 @@ public class ConjureBarrage extends AbstractDimensionalCard {
         if (upgraded){
             c.upgrade();
         }
-        for (int i = 0; i < BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.group.size() + 1; i++) {
+        for (int i = 0; i < magicNumber; i++) {
             addToBot(new MakeTempCardInHandAction(c.makeStatEquivalentCopy()));
         }
 

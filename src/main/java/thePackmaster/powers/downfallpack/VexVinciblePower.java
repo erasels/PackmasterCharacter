@@ -20,6 +20,7 @@ public class VexVinciblePower extends AbstractPackmasterPower {
         this.isTwoAmount = true;
         this.amount2 = amount2;
         this.updateDescription();
+        this.loadRegion("heartDef");
     }
 
     public int onLoseHp(int damageAmount) {

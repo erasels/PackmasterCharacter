@@ -1,0 +1,8 @@
+{
+  "${ModID}:Nightmare": {
+    "NAME": "Nightmare",
+    "DESCRIPTION": [
+      "Lose 1 HP and draw a card at the start of each turn. When you exit Nightmare Stance, add a Madness to your hand."
+    ]
+  }
+}

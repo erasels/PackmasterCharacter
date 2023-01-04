@@ -6,15 +6,16 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.dimensiongatepack.AbstractDimensionalCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ThrowWrench extends AbstractDimensionalCard {
-    public final static String ID = makeID("ThrowWrench");
+public class Discombobulate extends AbstractPackmasterCard {
+    public final static String ID = makeID("Discombobulate");
 
-    public ThrowWrench() {
-        super(ID, 1, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ENEMY);
+    public Discombobulate() {
+        super(ID, 1,  CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 7;
         this.isMultiDamage = true;
 

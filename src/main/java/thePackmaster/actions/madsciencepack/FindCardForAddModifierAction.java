@@ -33,7 +33,12 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
         this.count = count;
         this.random = random;
         this.targetgroup = targetgroup;
-        this.requirements = null;
+        this.requirements = new Predicate<AbstractCard>() {
+            @Override
+            public boolean test(AbstractCard abstractCard) {
+                return true;
+            }
+        };
     }
 
     public FindCardForAddModifierAction(AbstractCardModifier mod, int count, boolean random, CardGroup targetgroup, Predicate<AbstractCard> requirements) {
