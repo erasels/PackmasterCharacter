@@ -22,35 +22,30 @@ public class Rummage extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        for (int i = 0; i < magicNumber; i++) {
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    int x = 0;
-                    for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                        if (!q.freeToPlay())
-                            if (q.costForTurn > x)
-                                x = q.costForTurn;
-                    }
-                    ArrayList<AbstractCard> possCardsList = new ArrayList<>();
-                    for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                        if (!q.freeToPlay())
-                            if (q.costForTurn == x)
-                                possCardsList.add(q);
-                    }
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                ArrayList<AbstractCard> possCardsList = new ArrayList<>();
+
+                for (AbstractCard q : AbstractDungeon.player.hand.group) {
+                    if (!q.freeToPlay())
+                        possCardsList.add(q);
+                }
+
+                for (int i = 0; i < magicNumber; i++) {
                     if (!possCardsList.isEmpty()) {
-                        flash();
                         AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
+                        possCardsList.remove(q);
                         q.setCostForTurn(q.costForTurn - 1);
                         q.isCostModifiedForTurn = true;
                         q.superFlash();
                     }
                 }
-            });
-        }
-
+            }
+        });
     }
+
 
     public void upp() {
         upgradeMagicNumber(1);
