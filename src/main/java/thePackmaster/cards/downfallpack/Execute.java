@@ -33,7 +33,7 @@ public class Execute extends AbstractPackmasterCard {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
 
         if (!(AbstractDungeon.player.stance instanceof NeutralStance)){
-            atb(new VFXAction(new GoldenSlashEffect(m.hb.cX - 30.0F * Settings.scale, m.hb.cY, false), 0.1F));
+            atb(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true), 0.1F));
             dmg(m, AbstractGameAction.AttackEffect.NONE);
         }
       }

@@ -22,7 +22,6 @@ public class HyperBeam extends AbstractPackmasterCard {
 
 
     private static final int DAMAGE = 28;
-    private static final int UPGRADE_DAMAGE = 8;
 
     public HyperBeam() {
         super(ID, 2, AbstractCard.CardType.ATTACK, CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY);

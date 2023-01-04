@@ -20,6 +20,8 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import thePackmaster.cards.*;
+import thePackmaster.cards.dimensiongatepack.DarkRitual;
+import thePackmaster.cards.dimensiongatepack.PackRat;
 import thePackmaster.packs.*;
 import thePackmaster.relics.HandyHaversack;
 
@@ -80,6 +82,10 @@ public class ThePackmaster extends CustomPlayer {
         }
         retVal.add(Rummage.ID);
         retVal.add(Cardistry.ID);
+        retVal.add(PackRat.ID);
+        retVal.add(DarkRitual.ID);
+        retVal.add(PackRat.ID);
+        retVal.add(DarkRitual.ID);
         return retVal;
     }
 

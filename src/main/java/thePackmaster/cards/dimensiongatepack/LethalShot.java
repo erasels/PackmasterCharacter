@@ -19,7 +19,6 @@ public class LethalShot extends AbstractDimensionalCard {
         baseDamage = 12;
         baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 1;
-        exhaust = true;
 
 
         setFrame("lethalshotframe.png");
