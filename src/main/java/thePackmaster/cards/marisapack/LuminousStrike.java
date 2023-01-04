@@ -54,7 +54,7 @@ public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCar
 
     @Override
     public void useAmplified(AbstractPlayer p, AbstractMonster m) {
-        Wiz.vfx(new FireIgniteEffect(m.hb.cX, m.hb.cY, 6));
+        Wiz.vfx(new FireIgniteEffect(m.hb.cX, m.hb.cY, damage));
         Wiz.vfx(new CasualFlameParticleEffect(m.hb.cX, m.hb.cY));
     }
 
