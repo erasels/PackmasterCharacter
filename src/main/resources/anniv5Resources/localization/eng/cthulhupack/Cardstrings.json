@@ -1,7 +1,7 @@
 {
   "${ModID}:BeyondTheStars": {
       "NAME": "Beyond the Stars",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Entropy."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL (NYI) Gain !M! Entropy."
   },
   "${ModID}:NamelessMist": {
     "NAME": "Nameless Mist",
@@ -9,7 +9,7 @@
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Distortion."
+    "DESCRIPTION": "Deal !D! damage. NL (NYI) Apply !M! Distortion."
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
