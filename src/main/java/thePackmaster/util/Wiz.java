@@ -324,7 +324,9 @@ public class Wiz {
 
     public static int getLogicalCardCost(AbstractCard c) {
         if (!c.freeToPlay()) {
-            if(c.cost == -1)
+            if(c.cost <= -2) {
+                return 0;
+            } else if(c.cost == -1)
                 return EnergyPanel.totalCount;
             return c.costForTurn;
         }
