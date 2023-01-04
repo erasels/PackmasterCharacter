@@ -42,7 +42,7 @@ public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCar
 
     @Override
     public boolean skipUseOnAmplify() {
-        return true;
+        return false;
     }
 
     @Override
