@@ -28,5 +28,10 @@
   "${ModID}:Inertia": {
     "NAME": "Inertia",
     "DESCRIPTION": "Whenever a card is Exhausted or ${ModID}:Amplified, gain !M! ${ModID}:Charge Up."
+  },
+  "${ModID}:UltimateShortwave": {
+    "NAME": "Ultimate Shortwave",
+    "DESCRIPTION": "Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat."
   }
 }
