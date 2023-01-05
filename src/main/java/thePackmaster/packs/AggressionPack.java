@@ -30,6 +30,7 @@ public class AggressionPack extends AbstractCardPack {
         cards.add(Epiphany.ID);
         cards.add(InnerFury.ID);
         cards.add(LunaticRage.ID);
+        cards.add(Animosity.ID);
         return cards;
     }
 }

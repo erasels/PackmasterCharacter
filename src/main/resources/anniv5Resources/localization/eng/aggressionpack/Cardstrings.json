@@ -34,5 +34,9 @@
   "${ModID}:LunaticRage": {
     "NAME": "Lunatic Rage",
     "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E] . NL Discard all non-Attack cards. NL Exhaust."
+  },
+  "${ModID}:Animosity": {
+    "NAME": "Animosity",
+    "DESCRIPTION": "When you enter, exit, or start your turn in ${ModID}:Aggression, gain !M! Strength."
   }
 }
