@@ -7,11 +7,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BlizzardEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class RelentlessHail extends AbstractPackmasterCard {
+public class RelentlessHail extends BitingColdCard {
     public final static String ID = makeID("RelentlessHail");
 
     public RelentlessHail() {

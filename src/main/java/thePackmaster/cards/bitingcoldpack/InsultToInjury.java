@@ -6,11 +6,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class InsultToInjury extends AbstractPackmasterCard {
+public class InsultToInjury extends BitingColdCard {
     public final static String ID = makeID("InsultToInjury");
 
     public InsultToInjury() {
