@@ -31,7 +31,7 @@ public class DistortionPower extends AbstractPackmasterPower implements EnemyOnE
     private final ArrayList<AbstractGameEffect> powerEffects;
 
     public DistortionPower(AbstractCreature owner, AbstractCreature source, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.DEBUFF, true, owner, amount);
         this.source = source;
 
         powerEffects = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
