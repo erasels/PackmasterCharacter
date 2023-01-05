@@ -16,6 +16,8 @@ public class Deconstruct extends AbstractPackmasterCard {
     public Deconstruct() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 4;
+
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

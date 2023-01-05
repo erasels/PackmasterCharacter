@@ -1,14 +1,20 @@
 package thePackmaster.cards.distortionpack;
 
+import basemod.Pair;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.patches.BetterPowerNegationCheckPatch;
 import thePackmaster.vfx.distortionpack.DarkCirclesEffect;
+
+import java.util.*;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
@@ -29,23 +35,38 @@ public class CursedCircle extends AbstractPackmasterCard {
                 ++amt;
         }
 
+        List<Pair<ApplyPowerAction, AbstractCreature>> targetMap = new ArrayList<>();
+
         if (amt > 0) {
             atb(new VFXAction(new DarkCirclesEffect(p, amt * 2)));
 
             int finalAmt = amt;
-            applyToSelf(new StrengthPower(p, -finalAmt));
+            debuffTarget(p, p, finalAmt, targetMap);
 
             forAllMonstersLiving((mo)->{
-                applyToEnemy(mo, new StrengthPower(mo, -finalAmt));
+                debuffTarget(p, mo, finalAmt, targetMap);
             });
 
-            if (!p.hasPower(ArtifactPower.POWER_ID))
-                applyToSelf(new GainStrengthPower(p, finalAmt));
-            forAllMonstersLiving((mo)->{
-                if (!mo.hasPower(ArtifactPower.POWER_ID))
-                    applyToEnemy(mo, new GainStrengthPower(mo, finalAmt));
+            Collections.reverse(targetMap);
+
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    for (Pair<ApplyPowerAction, AbstractCreature> applied : targetMap) {
+                        if (BetterPowerNegationCheckPatch.Field.appliedSuccess.get(applied.getKey())) {
+                            att(new ApplyPowerAction(applied.getValue(), p, new GainStrengthPower(applied.getValue(), finalAmt)));
+                        }
+                    }
+                    this.isDone = true;
+                }
             });
         }
+    }
+
+    private void debuffTarget(AbstractPlayer p, AbstractCreature target, int amount, List<Pair<ApplyPowerAction, AbstractCreature>> targetMap) {
+        ApplyPowerAction a = new ApplyPowerAction(target, p, new StrengthPower(target, -amount));
+        atb(a);
+        targetMap.add(new Pair<>(a, target));
     }
 
     public void upp() {
