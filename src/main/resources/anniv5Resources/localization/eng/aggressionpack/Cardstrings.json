@@ -17,7 +17,7 @@
   },
   "${ModID}:Decapitate": {
     "NAME": "Decapitate",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength this turn. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength this turn. NL Exhaust."
   },
   "${ModID}:TitansStrength": {
     "NAME": "Titan's Strength",

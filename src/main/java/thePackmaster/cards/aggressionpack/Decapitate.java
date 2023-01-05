@@ -29,6 +29,7 @@ public class Decapitate extends AbstractPackmasterCard {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = TEMP_STRENGTH_DOWN;
+        this.exhaust = true;
     }
 
     @Override
