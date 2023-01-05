@@ -1,7 +1,7 @@
 {
   "${ModID}:MissileStrike": {
     "NAME": "Missile Strike",
-    "DESCRIPTION": "Deal !D! damage, then deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL Deal !M! damage to ALL enemies."
   },
   "${ModID}:MagicDart": {
     "NAME": "Magic Dart",
@@ -37,8 +37,8 @@
   },
   "${ModID}:Dominate": {
     "NAME": "Dominate",
-    "DESCRIPTION": "Apply !M! ${ModID}:Stun. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Stun to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "${ModID}:Stun an enemy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Stun ALL enemies. NL Exhaust."
   },
   "${ModID}:IchorGoblet": {
     "NAME": "Ichor Goblet",

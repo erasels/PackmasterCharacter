@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
 import thePackmaster.powers.AbstractPackmasterPower;
 
@@ -23,7 +22,7 @@ public class IchorGobletPower extends AbstractPackmasterPower {
     }
 
     public void atStartOfTurn() {
-        this.addToBot(new ReducePowerAction(this.owner, AbstractDungeon.player, this, 1));
+        this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
         this.addToBot(new GainEnergyAction(1));
     }
 

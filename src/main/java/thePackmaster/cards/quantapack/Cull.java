@@ -3,13 +3,10 @@ package thePackmaster.cards.quantapack;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.OfferingEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
-
-import java.util.Iterator;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -28,13 +25,8 @@ public class Cull extends AbstractPackmasterCard {
         this.addToBot(new GainBlockAction(p, p, block));
         this.addToBot(new LoseHPAction(p, p, this.magicNumber));
 
-        Iterator var3 = AbstractDungeon.getMonsters().monsters.iterator();
-
-        while(var3.hasNext()) {
-            AbstractMonster monster = (AbstractMonster)var3.next();
-            if (!monster.isDead && !monster.isDying) {
-                this.addToBot(new LoseHPAction(monster, p, this.magicNumber));
-            }
+        for(AbstractMonster monster: Wiz.getEnemies()) {
+            this.addToBot(new LoseHPAction(monster, p, this.magicNumber));
         }
     }
 

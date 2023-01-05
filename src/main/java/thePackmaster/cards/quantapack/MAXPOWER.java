@@ -21,7 +21,7 @@ public class MAXPOWER extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
         {
-            int str = this.baseMagicNumber - AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+            int str = this.magicNumber - AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
 
             if (str > 0)
             this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, str), str));

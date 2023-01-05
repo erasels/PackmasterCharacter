@@ -1,22 +1,21 @@
 package thePackmaster.cards.metapack;
 
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.cards.green.Survivor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.OfferingEffect;
-import thePackmaster.actions.metapack.ShedWeightAction;
 import thePackmaster.cards.AbstractPackmasterCard;
-
-import java.util.Iterator;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class ShedWeight extends AbstractPackmasterCard {
     public final static String ID = makeID("ShedWeight");
+    UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardAction");
 
     public ShedWeight() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -27,7 +26,14 @@ public class ShedWeight extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, block));
-        this.addToBot(new ShedWeightAction(p, p, false));
+        Wiz.discard(magicNumber);
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractDungeon.handCardSelectScreen.selectedCards.group.stream().filter(c -> c.cost == -2).forEach(c -> Wiz.att(new DrawCardAction(1)));
+                isDone = true;
+            }
+        });
     }
 
     public void upp() {

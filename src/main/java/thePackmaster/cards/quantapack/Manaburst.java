@@ -1,13 +1,19 @@
 package thePackmaster.cards.quantapack;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.quantapack.ManaburstAction;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -27,7 +33,20 @@ public class Manaburst extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        this.addToBot(new ManaburstAction(this.magicNumber, CardType.ATTACK));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                tmp.group = (ArrayList<AbstractCard>) Wiz.p().discardPile.group.stream()
+                        .filter(c -> c.cost == 0 && c.type == CardType.ATTACK)
+                        .collect(Collectors.toList());
+                for (int i = 0; i < magicNumber; i++) {
+                    if(!tmp.isEmpty() && Wiz.hand().size() < BaseMod.MAX_HAND_SIZE)
+                        Wiz.p().discardPile.moveToHand(tmp.getRandomCard(AbstractDungeon.cardRandomRng));
+                }
+                isDone = true;
+            }
+        });
     }
 
     public void upp() {
