@@ -26,5 +26,9 @@
   "${ModID}:Epiphany": {
     "NAME": "Epiphany",
     "DESCRIPTION": "If you are in ${ModID}:Aggression, exit it and draw !M! cards. NL Otherwise, enter ${ModID}:Aggression."
+  },
+  "${ModID}:LunaticRage": {
+    "NAME": "Lunatic Rage",
+    "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E] . NL Discard all non-Attack cards. NL Exhaust."
   }
 }
