@@ -39,24 +39,28 @@
     ]
   },
   "${ModID}:PMBoosterBox": {
-    "NAME": "(NYI) P.M. Booster Box",
+    "NAME": "P.M. Booster Box",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "When acquired, choose 1 of 3 Packmaster Boosters, three times. Earn one additional card reward from these boosters at the end of each combat.",
+      " NL Chosen Boosters: ",
+      "Chooose a Booster Pack."
     ]
   },
   "${ModID}:PMBoosterPack": {
-    "NAME": "(NYI) P.M. Booster Pack",
+    "NAME": "P.M. Booster Pack",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "When acquired, from a randomly chosen Packmaster Booster, you may add any one of its cards to your deck.",
+      "Choose a card to add to your deck."
     ]
   },
   "${ModID}:PMCollection": {
-    "NAME": "(NYI) P.M. Collection",
+    "NAME": "P.M. Collection",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "When acquired, from a randomly chosen Packmaster Booster, you may add each card from it to your deck.",
+      "You may add this to your deck."
     ]
   }
 }

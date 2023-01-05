@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
@@ -45,9 +46,11 @@ import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.util.Wiz;
+
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
+
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -307,6 +310,31 @@ public class SpireAnniversary5Mod implements
         return pack.cards.get(AbstractDungeon.cardRandomRng.random(0, pack.cards.size() - 1)).makeCopy();
     }
 
+    public static ArrayList<AbstractCard> getCardsFromPacks(ArrayList<String> packs, int count) {
+        ArrayList<AbstractCard> cards = new ArrayList<>();
+        for (String s : packs
+        ) {
+            AbstractCardPack p = packsByID.get(s);
+            for (String s2 : p.getCards()
+            ) {
+                cards.add(CardLibrary.getCard(s2));
+            }
+        }
+
+        //If count is 0 or less, return everything.
+        if (count <= 0) {
+            return cards;
+        }
+
+        //Otherwise make a new list with random N cards from the original list and return that
+        Collections.shuffle(cards);
+        ArrayList<AbstractCard> cards2 = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            cards2.add(cards.get(i));
+        }
+        return cards2;
+    }
+
     public static ArrayList<AbstractCard> getPreviewCardsFromCurrentSet() {
         ArrayList<AbstractCard> valid = new ArrayList<>();
         for (AbstractCardPack cp : currentPoolPacks) {
@@ -401,7 +429,7 @@ public class SpireAnniversary5Mod implements
 
         for (String setupType : packSetup) {
             BaseMod.logger.info("Setting up Pack type " + setupType + ".");
-            
+
             switch (setupType) {
                 case MainMenuUIPatch.RANDOM:
                     BaseMod.logger.info("Adding 1 more pack to random selection later on.");
@@ -518,8 +546,8 @@ public class SpireAnniversary5Mod implements
             }
 
             //Ring of Pain pack
-            if(!target.hasPower(ArtifactPower.POWER_ID)) {
-              atb(new AbstractGameAction() {
+            if (!target.hasPower(ArtifactPower.POWER_ID)) {
+                atb(new AbstractGameAction() {
                     @Override
                     public void update() {
                         for (AbstractCard card : adp().hand.group) {

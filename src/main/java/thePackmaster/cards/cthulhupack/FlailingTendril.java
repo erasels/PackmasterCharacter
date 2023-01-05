@@ -11,7 +11,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class FlailingTendril extends AbstractPackmasterCard {
+public class FlailingTendril extends AbstractCthulhuCard {
     public final static String ID = makeID("FlailingTendril");
 
     private static final int ATTACK_DMG = 9;
