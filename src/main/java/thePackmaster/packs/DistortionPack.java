@@ -64,11 +64,12 @@ public class DistortionPack extends AbstractCardPack {
             if (distortionPackTexture == null) {
                 List<String> skills = new ArrayList<>();
                 for (AbstractCard c : CardLibrary.getAllCards()) {
-                    if (c instanceof AbstractPackmasterCard && c.color == ThePackmaster.Enums.PACKMASTER_RAINBOW && c.type == CardType.SKILL) {
-                        if (c.portrait != null && c.portrait.originalWidth == 250 && c.portrait.originalHeight == 190)
+                    if (c instanceof AbstractPackmasterCard && c.color == ThePackmaster.Enums.PACKMASTER_RAINBOW && c.type == CardType.SKILL
+                        && c.portrait != null
+                        && imgMap.containsKey(c.cardID) && imgMap.get(c.cardID).getWidth() == 250 && imgMap.get(c.cardID).getHeight() == 190)
                             skills.add(c.cardID);
-                    }
                 }
+
                 String imgID = skills.get(MathUtils.random(skills.size() - 1));
                 this.textureImg = getCardTextureString(imgID.replace(modID + ":", ""), CardType.SKILL);
                 Texture cardTexture;
