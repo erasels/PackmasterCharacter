@@ -82,6 +82,8 @@ public class SpireAnniversary5Mod implements
 
     public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
 
+    public static SpireAnniversary5Mod thismod;
+
     public static boolean doPackSetup = false;
     public static String lastCardsPackID = null;
     public static boolean openedStarterScreen = false;
@@ -145,7 +147,7 @@ public class SpireAnniversary5Mod implements
     }
 
     public static void initialize() {
-        SpireAnniversary5Mod thismod = new SpireAnniversary5Mod();
+        thismod = new SpireAnniversary5Mod();
     }
 
     @Override
@@ -189,6 +191,9 @@ public class SpireAnniversary5Mod implements
         BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
 
         currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
+        BaseMod.addSaveField("Anniversary5Mod", thismod);
+        BaseMod.addSaveField("BanishingDecreeID", thismod);
+
     }
 
     private String getLangString() {
@@ -567,7 +572,6 @@ public class SpireAnniversary5Mod implements
     public ArrayList<String> onSave() {
         ArrayList<String> packIDs = new ArrayList<>();
         for (AbstractCardPack pack : currentPoolPacks) {
-            BaseMod.logger.info("Saving pack: " + pack.packID);
             packIDs.add(pack.packID);
         }
         return packIDs;
@@ -575,8 +579,8 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void onLoad(ArrayList<String> strings) {
+        currentPoolPacks.clear();
         for (String s : strings) {
-            BaseMod.logger.info("Loading pack: " + s);
             currentPoolPacks.add(packsByID.get(s));
         }
     }

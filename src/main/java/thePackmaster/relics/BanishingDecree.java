@@ -1,5 +1,6 @@
 package thePackmaster.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -26,22 +27,16 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
         super(ID, RelicTier.COMMON, LandingSound.FLAT);
     }
 
-
-    @Override
-    public String onSave() {
-        return bannedPack;
-    }
-
-    @Override
-    public void onLoad(String bannedPackID) {
-
-        if (bannedPackID != null) {
-            SpireAnniversary5Mod.currentPoolPacks.remove(packsByID.get(bannedPackID));
-            CardCrawlGame.dungeon.initializeCardPools();
+        @Override
+        public String onSave() {
+            return bannedPack;
         }
 
-    }
-
+        @Override
+        public void onLoad(String bannedPackID) {
+            bannedPack = bannedPackID;
+            if (bannedPack != null) setDescriptionAfterLoading();
+        }
 
     @Override
     public void onEquip() {
@@ -79,7 +74,7 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
             cardSelected = true;
             AbstractCard card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             AbstractCardPack cp = Wiz.getPackByCard(card);
-            bannedPack = cp.packID;
+            bannedPack = cp.name;
             SpireAnniversary5Mod.currentPoolPacks.remove(cp);
             CardCrawlGame.dungeon.initializeCardPools();
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
@@ -90,7 +85,7 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
     }
 
     private void setDescriptionAfterLoading() {
-        this.description = this.DESCRIPTIONS[2] + packsByID.get(bannedPack).name + this.DESCRIPTIONS[3];
+        this.description = this.DESCRIPTIONS[2] + bannedPack + this.DESCRIPTIONS[3];
         tips.clear();
         tips.add(new PowerTip(name, description));
         initializeTips();
