@@ -43,7 +43,8 @@ public class SpireAnniversary5Mod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         PostUpdateSubscriber,
-        CustomSavable<ArrayList<String>> {
+        CustomSavable<ArrayList<String>>,
+        AddAudioSubscriber {
 
     private static UIStrings uiStrings;
 
@@ -472,5 +473,10 @@ public class SpireAnniversary5Mod implements
         for (String s : strings) {
             currentPoolPacks.add(packsByID.get(s));
         }
+    }
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio("UpgradesPack_ShortUpgrade",makePath("audio/UpgradesPack_ShortUpgrade.ogg"));
     }
 }
