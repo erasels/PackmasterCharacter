@@ -1,6 +1,8 @@
 package thePackmaster.cards.WitchesStrike;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.purple.CutThroughFate;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
@@ -27,5 +29,9 @@ public class FullMoonHalo extends AbstractPackmasterCard {
 
     public void upp() {
         upgradeBlock(4);
+    }
+    @Override
+    public String cardArtCopy() {
+        return VoidCard.ID;
     }
 }

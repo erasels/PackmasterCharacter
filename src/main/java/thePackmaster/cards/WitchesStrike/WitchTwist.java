@@ -1,6 +1,8 @@
 package thePackmaster.cards.WitchesStrike;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.blue.Leap;
+import com.megacrit.cardcrawl.cards.optionCards.LiveForever;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FocusPower;
@@ -8,6 +10,7 @@ import thePackmaster.actions.witchesstrikepack.ManifestAction;
 import thePackmaster.actions.witchesstrikepack.MysticFlourishAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
+import thePackmaster.util.CardArtRoller;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -17,8 +20,9 @@ public class WitchTwist extends AbstractPackmasterCard {
 
     public WitchTwist() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 2;
         secondMagic = baseSecondMagic =1;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,7 +32,11 @@ public class WitchTwist extends AbstractPackmasterCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondDamage(1);
+        upgradeSecondMagic(1);
+    }
+    @Override
+    public String cardArtCopy() {
+        return Leap.ID;
     }
 }
 

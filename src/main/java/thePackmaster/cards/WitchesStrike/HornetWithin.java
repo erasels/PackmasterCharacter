@@ -2,6 +2,8 @@ package thePackmaster.cards.WitchesStrike;
 
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.green.DeadlyPoison;
+import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
@@ -33,5 +35,9 @@ public class HornetWithin extends AbstractPackmasterCard implements OnInfestCard
     public void upp() {
         upgradeDamage(2);
         upgradeBlock(2);
+    }
+    @Override
+    public String cardArtCopy() {
+        return DeadlyPoison.ID;
     }
 }

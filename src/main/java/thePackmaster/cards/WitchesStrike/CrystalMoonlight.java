@@ -1,5 +1,7 @@
 package thePackmaster.cards.WitchesStrike;
 
+import com.megacrit.cardcrawl.cards.status.VoidCard;
+import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -28,5 +30,9 @@ public class CrystalMoonlight extends AbstractPackmasterCard {
 
     public void upp() {
         upgradeMagicNumber(1);
+    }
+    @Override
+    public String cardArtCopy() {
+        return Miracle.ID;
     }
 }

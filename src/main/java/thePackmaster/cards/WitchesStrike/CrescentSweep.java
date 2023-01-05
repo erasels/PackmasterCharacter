@@ -1,5 +1,7 @@
 package thePackmaster.cards.WitchesStrike;
 
+import com.megacrit.cardcrawl.cards.green.LegSweep;
+import com.megacrit.cardcrawl.cards.optionCards.LiveForever;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
@@ -21,8 +23,11 @@ public class CrescentSweep extends AbstractPackmasterCard {
         blck();
         addToBot(new ManifestAction(new CrescentMoon()));
     }
-
     public void upp() {
         upgradeBlock(2);
+    }
+    @Override
+    public String cardArtCopy() {
+        return LegSweep.ID;
     }
 }

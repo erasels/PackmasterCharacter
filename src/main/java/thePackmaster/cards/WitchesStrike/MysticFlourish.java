@@ -1,6 +1,7 @@
 package thePackmaster.cards.WitchesStrike;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.purple.CutThroughFate;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.MysticFlourishAction;
@@ -26,5 +27,10 @@ public class MysticFlourish extends AbstractPackmasterCard {
     public void upp() {
         upgradeDamage(2);
         upgradeMagicNumber(1);
+    }
+
+    @Override
+    public String cardArtCopy() {
+        return CutThroughFate.ID;
     }
 }

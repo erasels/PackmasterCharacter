@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
@@ -40,7 +41,7 @@ public class FullMoon extends AbstractPackMasterOrb {
     private static final float PI_4 = 12.566371f;
     private boolean possible = false;
     private boolean betterPossible = false;
-
+    boolean evoking = false;
     public FullMoon() {
         super(ORB_ID, orbString.NAME, PASSIVE_AMOUNT, EVOKE_AMOUNT, DESCRIPTIONS[0], DESCRIPTIONS[0], makeOrbPath("default_orb.png"));
         img = TexLoader.getTexture(makeOrbPath("default_orb.png"));
@@ -71,20 +72,29 @@ public class FullMoon extends AbstractPackMasterOrb {
 
     public void PassiveEffect(){
         System.out.println("Full Moon orb activated");
+        applyFocus();
+        showEvokeValue();
+        updateDescription();
+        if (!evoking){
+            evoking = false;
+        }
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
-        updateDescription();
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
         evokeAmount -= 1;
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            @Override
-            public void update() {
-                if (evokeAmount < 1){
-                    addToBot(new EvokeSpecificOrbAction(FullMoon.this));
+        if (evokeAmount < 1 && !evoking) {
+            evoking = true;
+            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    if (evokeAmount < 1) {
+                        addToBot(new EvokeSpecificOrbAction(FullMoon.this));
+                    }
+                    isDone = true;
                 }
-                isDone = true;
-            }
-        });
+            });
+        }
+
     }
     @Override
     public void playChannelSFX() {
@@ -113,6 +123,10 @@ public class FullMoon extends AbstractPackMasterOrb {
         sb.setBlendFunction(770, 771);
         renderText(sb);
         hb.render(sb);
+    }
+    protected void renderText(SpriteBatch sb) {
+        FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET - 4.0F * Settings.scale, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
+        FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET + 20.0F * Settings.scale, this.c, this.fontScale);
     }
 }
 
