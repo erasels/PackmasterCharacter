@@ -1,15 +1,10 @@
 package thePackmaster.cards.marisapack;
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.StarBounceEffect;
-import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.util.Wiz;
@@ -65,7 +60,7 @@ public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCar
 
     @Override
     public void applyPowers() {
-        boolean amp = AmplifyPatches.shouldAmplify(this);
+        boolean amp = shouldAmplify(this);
         int bd = baseDamage;
         if(amp) {
             baseDamage = baseDamage + EnergyPanel.totalCount * magicNumber;
@@ -77,7 +72,7 @@ public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCar
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-        boolean amp = AmplifyPatches.shouldAmplify(this);
+        boolean amp = shouldAmplify(this);
         int bd = baseDamage;
         if(amp) {
             baseDamage = baseDamage + EnergyPanel.totalCount * magicNumber;

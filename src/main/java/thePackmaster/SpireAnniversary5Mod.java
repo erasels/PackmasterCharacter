@@ -179,22 +179,7 @@ public class SpireAnniversary5Mod implements
         declarePacks();
         BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
 
-        CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
-            @Override
-            public boolean test(AbstractCard c) {
-                return AmplifyPatches.shouldAmplify(c);
-            }
-
-            @Override
-            public Color getColor(AbstractCard c) {
-                return AmplifyCard.AMPLIFY_GLOW_COLOR.cpy();
-            }
-
-            @Override
-            public String glowID() {
-                return makeID("AmplifyGlow");
-            }
-        });
+        AmplifyPatches.receivePostInit();
     }
 
     private String getLangString() {
