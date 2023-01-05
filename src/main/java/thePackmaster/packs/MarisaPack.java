@@ -3,6 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.marisapack.*;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,16 @@ public class MarisaPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        //E-TODO: add cards
+        cards.add(MasterSpark.ID);
+        cards.add(GalacticHalo.ID);
+        cards.add(RisingStrike.ID);
+        cards.add(LuminousStrike.ID);
+        cards.add(ShootingEcho.ID);
+        cards.add(Inertia.ID);
+        cards.add(StardustReverie.ID);
+        cards.add(UltimateShortwave.ID);
+        cards.add(DragonMeteor.ID);
+        cards.add(EarthlightRay.ID);
         return cards;
     }
 }

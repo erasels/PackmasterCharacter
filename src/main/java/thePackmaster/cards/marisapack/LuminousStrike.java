@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.marisapack.CasualFlameParticleEffect;
 import thePackmaster.vfx.marisapack.FireIgniteEffect;
