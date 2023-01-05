@@ -22,5 +22,9 @@
   "${ModID}:TitansStrength": {
     "NAME": "Titan's Strength",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength."
+  },
+  "${ModID}:Epiphany": {
+    "NAME": "Epiphany",
+    "DESCRIPTION": "If you are in ${ModID}:Aggression, exit it and draw !M! cards. NL Otherwise, enter ${ModID}:Aggression."
   }
 }

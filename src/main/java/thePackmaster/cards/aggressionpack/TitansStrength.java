@@ -21,7 +21,7 @@ public class TitansStrength extends AbstractPackmasterCard {
     private static final int STRENGTH = 1;
 
     public TitansStrength() {
-        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = BLOCK;
         this.magicNumber = this.baseMagicNumber = STRENGTH;
     }
