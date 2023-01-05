@@ -9,7 +9,7 @@ import thePackmaster.stances.cthulhupack.NightmareStance;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class GazeTheVoid extends AbstractPackmasterCard {
+public class GazeTheVoid extends AbstractCthulhuCard {
     public final static String ID = makeID("GazeTheVoid");
 
     private static final int ATTACK_DMG = 4;
@@ -17,7 +17,7 @@ public class GazeTheVoid extends AbstractPackmasterCard {
     private static final int UPGRADE_PLUS_HITS = 1;
 
     public GazeTheVoid() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = HITS;
     }

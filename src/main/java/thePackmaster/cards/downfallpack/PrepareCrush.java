@@ -18,7 +18,7 @@ import thePackmaster.powers.downfallpack.NextTurnGainSlimeCrushPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class PrepareCrush extends AbstractPackmasterCard {
+public class PrepareCrush extends AbstractDownfallCard {
     public final static String ID = makeID("PrepareCrush");
 
 

@@ -1,0 +1,47 @@
+{
+  "${ModID}:BuggyBash": {
+    "NAME": "Buggy Bash",
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Deals !M! additional damage for each infestation counter."
+  },
+  "${ModID}:SwarmSword": {
+    "NAME": "Swarm Sword",
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Draw 1 card for each infestation counter."
+  },
+  "${ModID}:GrassHop": {
+    "NAME": "Swarm Surge",
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL When this gains an infestation counter, ALL enemies lose !M! HP."
+  },
+  "${ModID}:Bzzzzz": {
+    "NAME": "Bzzzzzz",
+    "DESCRIPTION": "Apply !M! Weak. NL Draw !M! cards."
+  },
+  "${ModID}:BugOut": {
+    "NAME": "Bug Out",
+    "DESCRIPTION": "${ModID}:Infest. NL Gain 1 Strength and Dexterity for each infestation counter."
+  },
+  "${ModID}:ScarabShield": {
+    "NAME": "Scarab Shield",
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL If this has 2 or more infestation counters, gain !M! Artifact."
+  },
+  "${ModID}:Entomology": {
+    "NAME": "Entomology",
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL If this has any infestation counters, remove one and gain [E] ."
+  },
+  "${ModID}:Compoundeyes": {
+    "NAME": "Compoundeyes",
+    "DESCRIPTION": "Draw !M! cards. NL When you next play a card, end your turn."
+  },
+  "${ModID}:Bees": {
+    "NAME": "BEES!!!",
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage !M! times. NL Deals 1 additional damage for each infestation counter.",
+    "EXTENDED_DESCRIPTION": [
+      "B",
+      "E",
+      "S!!!"
+    ]
+  },
+  "${ModID}:LordOfTheFlies": {
+    "NAME": "Lord of the Flies",
+    "DESCRIPTION": "Draw 1 additional card each turn. NL When your cards ${ModID}:Infest, put an additional counter on them."
+  }
+}

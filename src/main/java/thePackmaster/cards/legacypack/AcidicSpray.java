@@ -9,11 +9,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import thePackmaster.cards.AbstractPackmasterCard;
+
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class AcidicSpray extends AbstractPackmasterCard {
+public class AcidicSpray extends AbstractLegacyCard {
     public final static String ID = makeID("AcidicSpray");
 
     private static final int POWER = 4;

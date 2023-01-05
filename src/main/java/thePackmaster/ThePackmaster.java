@@ -82,10 +82,6 @@ public class ThePackmaster extends CustomPlayer {
         }
         retVal.add(Rummage.ID);
         retVal.add(Cardistry.ID);
-        retVal.add(PackRat.ID);
-        retVal.add(DarkRitual.ID);
-        retVal.add(PackRat.ID);
-        retVal.add(DarkRitual.ID);
         return retVal;
     }
 
@@ -134,8 +130,7 @@ public class ThePackmaster extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        System.out.println("YOU NEED TO SET getStartCardForEvent() in your " + getClass().getSimpleName() + " file!");
-        return null;
+        return new Rummage();
     }
 
     @Override

@@ -6,12 +6,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
 import thePackmaster.cardmodifiers.madsciencepack.AddDamageModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
 import thePackmaster.cards.dimensiongatepack.AbstractDimensionalCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Sharpen extends AbstractPackmasterCard {
+public class Sharpen extends AbstractMadScienceCard {
     public final static String ID = makeID("Sharpen");
 
     public Sharpen() {

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.actions.FilteredExhaustAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
@@ -46,13 +47,8 @@ public class BurningAct extends AbstractPackmasterCard {
 
                         if (BurningAct.this.upgraded) {
                             //select exhaust
-                            atb(new SelectCardsInHandAction(EXHAUST, ExhaustAction.TEXT[0],
-                                    drawnCards::contains,
-                                    (cards)->{
-                                        for (AbstractCard c : cards)
-                                            att(new ExhaustSpecificCardAction(c, p.hand));
-                                    })
-                            );
+                            atb(new FilteredExhaustAction(EXHAUST, false, false, false)
+                                    .filter(drawnCards::contains));
                         }
                         else {
                             //random exhaust

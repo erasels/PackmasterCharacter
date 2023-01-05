@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import thePackmaster.cards.AbstractPackmasterCard;
+
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class TerrorOfTheSeas extends AbstractPackmasterCard {
+public class TerrorOfTheSeas extends AbstractLegacyCard {
     public final static String ID = makeID("TerrorOfTheSeas");
 
     private static final int VULNERABLE_VALUE = 3;

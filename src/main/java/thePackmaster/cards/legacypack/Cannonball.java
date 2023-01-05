@@ -7,19 +7,19 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.legacypack.ShootAnythingAction;
-import thePackmaster.cards.AbstractPackmasterCard;
+
 import thePackmaster.util.TexLoader;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Cannonball extends AbstractPackmasterCard {
+public class Cannonball extends AbstractLegacyCard {
     public final static String ID = makeID("Cannonball");
 
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 2;
 
     public Cannonball() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         this.baseDamage = POWER;
     }
 
@@ -31,6 +31,6 @@ public class Cannonball extends AbstractPackmasterCard {
     }
 
     public void upp() {
-            upgradeDamage(UPGRADE_BONUS);
+        upgradeDamage(UPGRADE_BONUS);
     }
 }
