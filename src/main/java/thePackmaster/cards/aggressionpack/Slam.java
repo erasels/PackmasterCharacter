@@ -10,7 +10,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public class Slam extends AbstractPackmasterCard {
-    public static final String ID = SpireAnniversary5Mod.makeID("Vindicate");
+    public static final String ID = SpireAnniversary5Mod.makeID("Slam");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

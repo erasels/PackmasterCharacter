@@ -14,5 +14,9 @@
   "${ModID}:Slam": {
     "NAME": "Slam",
     "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
+  },
+  "${ModID}:Decapitate": {
+    "NAME": "Decapitate",
+    "DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength this turn. Exhaust."
   }
 }
