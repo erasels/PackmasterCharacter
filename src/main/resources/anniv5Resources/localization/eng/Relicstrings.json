@@ -7,7 +7,7 @@
     ]
   },
   "${ModID}:BanishingDecree": {
-    "NAME": "(NYI) Banishing Decree",
+    "NAME": "Banishing Decree",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
         "Upon pickup, choose a Pack. Cards from it will no longer appear in card rewards.",
