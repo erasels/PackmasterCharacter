@@ -20,8 +20,8 @@ public class BoosterTutor extends AbstractPackmasterCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public BoosterTutor() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
