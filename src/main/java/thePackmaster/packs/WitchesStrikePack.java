@@ -28,6 +28,10 @@ public class WitchesStrikePack extends AbstractCardPack {
         cards.add(MysticFlourish.ID);
         cards.add(CrystalMoonlight.ID);
         cards.add(MoonlightBarrage.ID);
+        cards.add(HornetWithin.ID);
+        cards.add(ChitteringPunt.ID);
+        cards.add(ScarabPlague.ID);
+        cards.add(MoonlightFlight.ID);
         cards.add(WitchTwist.ID);
         return cards;
     }

@@ -18,7 +18,7 @@ public class WitchTwist extends AbstractPackmasterCard {
     public WitchTwist() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = 2;
-        secondMagic =1;
+        secondMagic = baseSecondMagic =1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -11,7 +11,7 @@ import thePackmaster.orbs.WitchesStrike.FullMoon;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class FullMoonHalo extends AbstractPackmasterCard {
-    public final static String ID = makeID("CrescentSweep");
+    public final static String ID = makeID("FullMoonHalo");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public FullMoonHalo() {

@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
+import org.lwjgl.Sys;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.AbstractPackMasterOrb;
@@ -72,7 +73,8 @@ public class CrescentMoon extends AbstractPackMasterOrb {
         return new CrescentMoon();
     }
 
-    public void PassiveTrigger(){
+    public void PassiveEffect(){
+        System.out.println("Crescent Moon orb activated");
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
         updateDescription();

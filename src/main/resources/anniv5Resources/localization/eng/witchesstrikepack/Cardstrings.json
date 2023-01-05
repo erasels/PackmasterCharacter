@@ -5,8 +5,8 @@
   },
   "${ModID}:MysticFlourish": {
     "NAME": "Mystic Flourish",
-    "DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your leftmost orb.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your leftmost orb twice."
+    "DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your next orb.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your next orb twice."
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
@@ -21,8 +21,24 @@
     "NAME": "Moonlight Barrage",
     "DESCRIPTION": "Activate the passive effect of all your orbs. NL Deal !D! damage to a random enemy for each."
   },
+  "${ModID}:ChitteringPunt": {
+    "NAME": "Chittering Punt",
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL ${ModID}:Manifest ${ModID}:Crescent_Moon for each infestation counter."
+  },
+  "${ModID}:HornetWithin": {
+    "NAME": "Hornet Within",
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this infests, activate the passive effect of your next orb."
+  },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "Activate the passive effect of your leftmost orb !M! times. NL Gain !anniv5:m2! Focus."
+    "DESCRIPTION": "Activate the passive effect of your next orb !M! times. NL Gain !anniv5:m2! Focus."
+  },
+  "${ModID}:MoonlightFlight": {
+    "NAME": "Moonlight Flight",
+    "DESCRIPTION": "Whenever you channel an orb gain !M! Focus until your next turn."
+  },
+  "${ModID}:ScarabPlague": {
+    "NAME": "Scarab Plague",
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Gain !B! Block. NL When this infests, ${ModID}:Manifest ${ModID}:Full_Moon."
   }
 }

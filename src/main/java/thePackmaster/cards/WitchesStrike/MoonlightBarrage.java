@@ -15,7 +15,7 @@ public class MoonlightBarrage extends AbstractPackmasterCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public MoonlightBarrage() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 7;
     }
 

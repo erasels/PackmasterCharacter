@@ -69,7 +69,8 @@ public class FullMoon extends AbstractPackMasterOrb {
         return new CrescentMoon();
     }
 
-    public void PassiveTrigger(){
+    public void PassiveEffect(){
+        System.out.println("Full Moon orb activated");
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
         updateDescription();
