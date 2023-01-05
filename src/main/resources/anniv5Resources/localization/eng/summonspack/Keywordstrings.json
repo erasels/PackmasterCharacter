@@ -1,0 +1,31 @@
+[
+  {
+    "PROPER_NAME": "Constricted",
+    "NAMES": [
+      "constricted"
+    ],
+    "DESCRIPTION": "Constricted creatures lose HP at the end of their turn."
+  },
+  {
+    "PROPER_NAME": "Swarm\u00a0Of\u00a0Bees",
+    "NAMES": [
+      "swarm\u00a0of\u00a0bees",
+      "Swarm\u00a0of\u00a0Bees"
+    ],
+    "DESCRIPTION": "Orb: Deals damage to a random enemy whenever you play a card."
+  },
+  {
+    "PROPER_NAME": "Panda",
+    "NAMES": [
+      "panda"
+    ],
+    "DESCRIPTION": "Orb: Deals damage to a random enemy at the end of your turn."
+  },
+  {
+    "PROPER_NAME": "Rainbow\u00a0Louse",
+    "NAMES": [
+      "rainbow\u00a0louse"
+    ],
+    "DESCRIPTION": "Orb: Deals damage to a random enemy at the end of your turn. Gain #yTemporary #yHP."
+  }
+]

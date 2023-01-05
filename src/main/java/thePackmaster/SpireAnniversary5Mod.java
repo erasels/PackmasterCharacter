@@ -16,10 +16,8 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -27,9 +25,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
@@ -39,6 +38,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
@@ -63,6 +63,8 @@ public class SpireAnniversary5Mod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         PostUpdateSubscriber,
+        OnStartBattleSubscriber,
+        AddAudioSubscriber,
         PostBattleSubscriber,
         PostPowerApplySubscriber,
         StartGameSubscriber,
@@ -105,6 +107,15 @@ public class SpireAnniversary5Mod implements
     private static final String CARD_ENERGY_L = modID + "Resources/images/1024/energy.png";
     private static final String CHARSELECT_BUTTON = modID + "Resources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = modID + "Resources/images/charSelect/charBG.png";
+
+    public static final String BEES_KEY = makeID("SwarmOfBees");
+    private static final String BEES_OGG = makePath("audio/summonspack/SwarmOfBees.ogg");
+    public static final String ELEPHANT_KEY = makeID("elephant");
+    private static final String ELEPHANT_OGG = makePath("audio/summonspack/Elephant.ogg");
+    public static final String PEW_KEY = makeID("Pew");
+    private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
+
+    public static final ArrayList<Panda> pandaList = new ArrayList<>();
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
@@ -288,6 +299,17 @@ public class SpireAnniversary5Mod implements
         }
     }
 
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(BEES_KEY, BEES_OGG);
+        BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
+        BaseMod.addAudio(PEW_KEY, PEW_OGG);
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom room) {
+        pandaList.clear();
+    }
 
     public static void declarePacks() {
         // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
