@@ -7,11 +7,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Frost;
 import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
 import thePackmaster.cardmodifiers.madsciencepack.ApplyFrosbiteModifier;
-import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
+import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Winterize extends AbstractMadScienceCard {
+public class Winterize extends AbstractPackmasterCard {
     public final static String ID = makeID("Winterize");
 
     public Winterize() {

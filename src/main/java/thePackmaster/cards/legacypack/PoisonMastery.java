@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.PoisonPotion;
-
+import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.legacypack.PoisonMasteryPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class PoisonMastery extends AbstractLegacyCard {
+public class PoisonMastery extends AbstractPackmasterCard {
     public final static String ID = makeID("PoisonMastery");
 
 

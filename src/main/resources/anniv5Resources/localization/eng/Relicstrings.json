@@ -1,13 +1,13 @@
 {
   "${ModID}:BagOfHolding": {
-    "NAME": "Bag of Holding",
+    "NAME": "(NYI) Bag of Holding",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "At the start of each combat: NL Gain [E] if you have 10 or cards in your deck. This happens every turn if you have 30 or more. NL Draw 2 cards if you have 20 or more cards in your deck. This happens every turn if you have 40 or more."
+      "Has no effect."
     ]
   },
   "${ModID}:BanishingDecree": {
-    "NAME": "Banishing Decree",
+    "NAME": "(NYI) Banishing Decree",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
         "Upon pickup, choose a Pack. Cards from it will no longer appear in card rewards.",
@@ -17,52 +17,46 @@
       ]
   },
   "${ModID}:CollectorBadge": {
-    "NAME": "Collector Badge",
+    "NAME": "(NYI) Collector Badge",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "At the start of each turn, if you played a card from 3 different Booster Packs the previous turn, gain [E] .",
-      " NL NL Packs used this turn: ",
-      " NL NL This will trigger next turn. "
+      "Has no effect."
     ]
   },
   "${ModID}:GemOfUnity": {
     "NAME": "Gem of Unity",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "Once per combat, after you have played a card from each different Pack available this run, gain 20 Block, 1 Strength, 1 Dexterity, and heal 5 HP.",
-      "Packs played this combat: "
+      "Once per combat, after you have played a card from each different Pack available this run, gain 20 Block and heal 5 HP.",
+      " Packs played this combat: "
     ]
   },
   "${ModID}:HandyHaversack": {
     "NAME": "Handy Haversack",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "At the start of each combat: NL Gain [E] if you have 10 or cards in your deck. NL Draw 2 cards if you have 20 or more cards in your deck."
+      "At the start of each combat, gain [E] for every 10 cards in your draw pile, up to a maximum of 3."
     ]
   },
   "${ModID}:PMBoosterBox": {
-    "NAME": "P.M. Booster Box",
+    "NAME": "(NYI) P.M. Booster Box",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "When acquired, choose 1 of 3 Packmaster Boosters, three times. Earn one additional card reward from these boosters at the end of each combat.",
-      " NL Chosen Boosters: ",
-      "Chooose a Booster Pack."
+      "Has no effect."
     ]
   },
   "${ModID}:PMBoosterPack": {
-    "NAME": "P.M. Booster Pack",
+    "NAME": "(NYI) P.M. Booster Pack",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "When acquired, from a randomly chosen Packmaster Booster, you may add any one of its cards to your deck.",
-      "Choose a card to add to your deck."
+      "Has no effect."
     ]
   },
   "${ModID}:PMCollection": {
-    "NAME": "P.M. Collection",
+    "NAME": "(NYI) P.M. Collection",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "When acquired, from a randomly chosen Packmaster Booster, you may add each card from it to your deck.",
-      "You may add this to your deck."
+      "Has no effect."
     ]
   }
 }

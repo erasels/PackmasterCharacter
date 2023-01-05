@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.SlowPower;
-
+import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.vfx.legacypack.SlimeSplashEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SlimeSpray extends AbstractLegacyCard {
+public class SlimeSpray extends AbstractPackmasterCard {
     public final static String ID = makeID("SlimeSpray");
 
     private static final int ATTACK_DMG = 7;

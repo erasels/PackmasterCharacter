@@ -2,13 +2,14 @@ package thePackmaster.cards.strikepack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.strikepack.StrikeOfGeniusPower;
 import thePackmaster.powers.strikepack.StrikeOfGeniusUpgradedPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class StrikeOfGenius extends AbstractStrikePackCard {
+public class StrikeOfGenius extends AbstractPackmasterCard {
     public final static String ID = makeID("StrikeOfGenius");
 
     public StrikeOfGenius() {

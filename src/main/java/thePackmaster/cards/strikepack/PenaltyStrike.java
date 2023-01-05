@@ -7,11 +7,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class PenaltyStrike extends AbstractStrikePackCard {
+public class PenaltyStrike extends AbstractPackmasterCard {
     public final static String ID = makeID("PenaltyStrike");
 
     private static final int ATTACK_DMG = 6;

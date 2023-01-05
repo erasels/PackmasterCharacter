@@ -7,12 +7,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.distortionpack.DistortionPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class FlailingTendril extends AbstractCthulhuCard {
+public class FlailingTendril extends AbstractPackmasterCard {
     public final static String ID = makeID("FlailingTendril");
 
     private static final int ATTACK_DMG = 9;
@@ -28,7 +27,8 @@ public class FlailingTendril extends AbstractCthulhuCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        Wiz.applyToEnemy(m, new DistortionPower(m, p, magicNumber));
+        //TODO - Distortion
+       // Wiz.applyToEnemy(m, );
     }
 
     public void upp() {

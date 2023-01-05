@@ -5,11 +5,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
 import thePackmaster.cardmodifiers.madsciencepack.FloatAndRetainModifier;
-import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
+import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Lighten extends AbstractMadScienceCard {
+public class Lighten extends AbstractPackmasterCard {
     public final static String ID = makeID("Lighten");
 
     public Lighten() {

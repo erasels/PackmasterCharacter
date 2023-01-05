@@ -11,7 +11,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class NamelessMist extends AbstractCthulhuCard {
+public class NamelessMist extends AbstractPackmasterCard {
     public final static String ID = makeID("NamelessMist");
 
     private static final int BLOCK_VALUE = 4;

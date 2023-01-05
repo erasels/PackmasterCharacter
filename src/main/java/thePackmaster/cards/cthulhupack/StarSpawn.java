@@ -12,7 +12,7 @@ import thePackmaster.stances.cthulhupack.NightmareStance;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class StarSpawn extends AbstractCthulhuCard {
+public class StarSpawn extends AbstractPackmasterCard {
     public final static String ID = makeID("StarSpawn");
 
     private static final int ATTACK_DMG = 13;

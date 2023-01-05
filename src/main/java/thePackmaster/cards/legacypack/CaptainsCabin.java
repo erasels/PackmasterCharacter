@@ -5,11 +5,11 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
+import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class CaptainsCabin extends AbstractLegacyCard {
+public class CaptainsCabin extends AbstractPackmasterCard {
     public final static String ID = makeID("CaptainsCabin");
 
     private static final int AMOUNT_OF_CANNONBALLS = 1;

@@ -7,10 +7,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.strikepack.WorkersStrikeAction;
+import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WorkersStrike extends AbstractStrikePackCard {
+public class WorkersStrike extends AbstractPackmasterCard {
     public final static String ID = makeID("WorkersStrike");
 
     private static final int ATTACK_DMG = 6;
