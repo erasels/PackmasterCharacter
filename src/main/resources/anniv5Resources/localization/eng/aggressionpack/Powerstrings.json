@@ -1,2 +1,6 @@
 {
+  "${ModID}:InnerFury": {
+    "NAME": "Inner Fury",
+    "DESCRIPTIONS": ["When you enter #yAggression, gain #b{0} temporary #yStrength and #b{0} #yBlock."]
+  }
 }

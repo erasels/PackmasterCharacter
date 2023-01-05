@@ -27,6 +27,10 @@
     "NAME": "Epiphany",
     "DESCRIPTION": "If you are in ${ModID}:Aggression, exit it and draw !M! cards. NL Otherwise, enter ${ModID}:Aggression."
   },
+  "${ModID}:InnerFury": {
+    "NAME": "Inner Fury",
+    "DESCRIPTION": "When you enter ${ModID}:Aggression, gain !M! temporary Strength and !M! Block. NL Enter ${ModID}:Aggression."
+  },
   "${ModID}:LunaticRage": {
     "NAME": "Lunatic Rage",
     "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E] . NL Discard all non-Attack cards. NL Exhaust."

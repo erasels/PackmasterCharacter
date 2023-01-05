@@ -28,6 +28,7 @@ public class AggressionPack extends AbstractCardPack {
         cards.add(Decapitate.ID);
         cards.add(TitansStrength.ID);
         cards.add(Epiphany.ID);
+        cards.add(InnerFury.ID);
         cards.add(LunaticRage.ID);
         return cards;
     }
