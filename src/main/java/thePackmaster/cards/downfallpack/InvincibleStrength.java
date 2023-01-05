@@ -11,7 +11,7 @@ import thePackmaster.powers.downfallpack.VexVinciblePower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class InvincibleStrength extends AbstractPackmasterCard {
+public class InvincibleStrength extends AbstractDownfallCard {
     public final static String ID = makeID("InvincibleStrength");
 
     public InvincibleStrength() {

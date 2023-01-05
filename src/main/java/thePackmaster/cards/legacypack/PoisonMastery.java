@@ -6,12 +6,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.PoisonPotion;
-import thePackmaster.cards.AbstractPackmasterCard;
+
 import thePackmaster.powers.legacypack.PoisonMasteryPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class PoisonMastery extends AbstractPackmasterCard {
+public class PoisonMastery extends AbstractLegacyCard {
     public final static String ID = makeID("PoisonMastery");
 
 
@@ -24,7 +25,8 @@ public class PoisonMastery extends AbstractPackmasterCard {
         for (int i = 0; i < magicNumber; i++) {
             addToBot(new ObtainPotionAction(new PoisonPotion()));
         }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonMasteryPower(m, this.magicNumber), this.magicNumber));
+
+        Wiz.applyToSelf(new PoisonMasteryPower(p, 1));
     }
 
     public void upp() {

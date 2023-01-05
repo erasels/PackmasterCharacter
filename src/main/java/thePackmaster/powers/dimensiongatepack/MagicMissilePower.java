@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import thePackmaster.cards.dimensiongatepack.MagicMissile;
 import thePackmaster.powers.AbstractPackmasterPower;
 
+import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MagicMissilePower extends AbstractPackmasterPower {
@@ -28,7 +29,7 @@ public class MagicMissilePower extends AbstractPackmasterPower {
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        if (card instanceof MagicMissile) return damage + amount;
+        if (card.hasTag(MAGIC)) return damage + amount;
         return damage;
     }
 

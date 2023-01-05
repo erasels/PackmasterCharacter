@@ -1,0 +1,9 @@
+{
+  "${ModID}:BardInspirePack": {
+    "TEXT": [
+      "Bardic Inspiration",
+      "A collection of Bard cards to give you some ${ModID}:Inspiration.",
+      "kiooeht"
+    ]
+  }
+}

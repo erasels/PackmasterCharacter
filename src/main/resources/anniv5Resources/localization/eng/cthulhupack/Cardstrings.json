@@ -1,0 +1,44 @@
+{
+  "${ModID}:BeyondTheStars": {
+      "NAME": "Beyond the Stars",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL (NYI) Gain !M! Entropy."
+  },
+  "${ModID}:NamelessMist": {
+    "NAME": "Nameless Mist",
+    "DESCRIPTION": "Gain !B! Block. NL Gain another !M! whenever you play a card this turn."
+  },
+  "${ModID}:FlailingTendril": {
+    "NAME": "Flailing Tendril",
+    "DESCRIPTION": "Deal !D! damage. NL (NYI) Apply !M! Distortion."
+  },
+  "${ModID}:PageOfTheDead": {
+    "NAME": "Page of the Dead",
+    "DESCRIPTION": "Gain a *Necronomicurse. NL The next attack you play that costs 2 or more is played twice.",
+    "UPGRADE_DESCRIPTION": "The next attack you play that costs 2 or more is played twice."
+  },
+  "${ModID}:FamilialCurse": {
+    "NAME": "Familial Curse",
+    "DESCRIPTION": "Apply !M! Ruin to ALL enemies. NL Discard your hand."
+  },
+  "${ModID}:GazeTheVoid": {
+    "NAME": "Gaze the Void",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Nightmare."
+  },
+  "${ModID}:AllSeeing": {
+    "NAME": "All Seeing",
+    "DESCRIPTION": "At the end of each turn, Scry !M! and take 3 damage."
+  },
+  "${ModID}:EndOfDays": {
+    "NAME": "End of Days",
+    "DESCRIPTION": "Gain an Orb Slot. NL Channel a Dark for each of your Orb slots."
+  },
+  "${ModID}:RlyehFhtagn": {
+    "NAME": "R'lyeh Fhtagn",
+    "DESCRIPTION": "Put EVERYONE to sleep. NL Next turn, gain 3 Madness and lose 3 HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. NL Next turn, gain 3 Madness+ and lose 3 HP. NL Exhaust."
+  },
+  "${ModID}:StarSpawn": {
+    "NAME": "Star Spawn",
+    "DESCRIPTION": "Deal 13 damage twice. NL Manifest a Plasma. NL Exhaust."
+  }
+}

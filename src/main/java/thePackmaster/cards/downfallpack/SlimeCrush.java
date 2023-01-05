@@ -17,7 +17,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 
-public class SlimeCrush extends AbstractPackmasterCard {
+public class SlimeCrush extends AbstractDownfallCard {
     public final static String ID = makeID("SlimeCrush");
 
 
@@ -25,7 +25,7 @@ public class SlimeCrush extends AbstractPackmasterCard {
     private static final int UPGRADE_DAMAGE = 5;
 
     public SlimeCrush() {
-        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
 
         baseDamage = DAMAGE;
         exhaust = true;

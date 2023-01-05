@@ -31,6 +31,7 @@ public class LegacyPack extends AbstractCardPack {
         cards.add(ScrapCannon.ID);
         cards.add(SlimeSpray.ID);
         cards.add(TerrorOfTheSeas.ID);
+        cards.add(Cannonball.ID);
         return cards;
     }
 }

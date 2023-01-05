@@ -106,7 +106,6 @@ public class Wiz {
         return getRandomItem(getCardsMatchingPredicate(pred, allCards));
     }
 
-
     public static AbstractCard returnTrulyRandomPrediCardInCombat(Predicate<AbstractCard> pred) {
         return returnTrulyRandomPrediCardInCombat(pred, false);
     }
@@ -258,6 +257,22 @@ public class Wiz {
         thornDmg(m, amount, AbstractGameAction.AttackEffect.NONE);
     }
 
+    public static void thornDmgAll(int amount, AbstractGameAction.AttackEffect effect) {
+        forAllMonstersLiving(mon -> thornDmg(mon, amount, effect));
+    }
+
+    public static void thornDmgTop(AbstractCreature m, int amount, AbstractGameAction.AttackEffect AtkFX) {
+        att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, amount, DamageInfo.DamageType.THORNS), AtkFX));
+    }
+
+    public static void thornDmgTop(AbstractCreature m, int amount, AbstractGameAction.AttackEffect AtkFX, boolean superfast) {
+        att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, amount, DamageInfo.DamageType.THORNS), AtkFX, superfast));
+    }
+
+    public static void thornDmgTop(AbstractCreature m, int amount) {
+        thornDmgTop(m, amount, AbstractGameAction.AttackEffect.NONE);
+    }
+
     public static void doAllDmg(int amount, AbstractGameAction.AttackEffect ae, DamageInfo.DamageType dt, boolean top) {
         if (top) {
             att(new DamageAllEnemiesAction(p(), amount, dt, ae));
@@ -303,6 +318,41 @@ public class Wiz {
             return ((AbstractMonster) m).getIntentBaseDmg() >= 0;
         }
         return false;
+    }
+
+    public static AbstractGameAction.AttackEffect getRandomSlash() {
+        int x = AbstractDungeon.miscRng.random(0, 2);
+        if (x == 0)
+            return AbstractGameAction.AttackEffect.SLASH_DIAGONAL;
+        if (x == 1)
+            return AbstractGameAction.AttackEffect.SLASH_HORIZONTAL;
+        return AbstractGameAction.AttackEffect.SLASH_VERTICAL;
+    }
+
+    public static AbstractMonster getRandomEnemy() {
+        return AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
+    }
+
+    public static AbstractMonster getLowestHealthEnemy() {
+        AbstractMonster weakest = null;
+        for (AbstractMonster m : getEnemies()) {
+            if (weakest == null)
+                weakest = m;
+            else if (weakest.currentHealth > m.currentHealth)
+                weakest = m;
+        }
+        return weakest;
+    }
+
+    public static AbstractMonster getHighestHealthEnemy() {
+        AbstractMonster strongest = null;
+        for (AbstractMonster m : getEnemies()) {
+            if (strongest == null)
+                strongest = m;
+            else if (strongest.currentHealth < m.currentHealth)
+                strongest = m;
+        }
+        return strongest;
     }
 
     public static void discard(int amount, boolean isRandom) {

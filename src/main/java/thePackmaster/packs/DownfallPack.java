@@ -31,6 +31,7 @@ public class DownfallPack extends AbstractCardPack {
         cards.add(PrepareCrush.ID);
         cards.add(ShapersBlessing.ID);
         cards.add(YouAreMine.ID);
+        cards.add(SlimeCrush.ID);
         return cards;
     }
 }

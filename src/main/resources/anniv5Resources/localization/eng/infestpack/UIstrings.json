@@ -1,0 +1,9 @@
+{
+  "${ModID}:InfestPack": {
+    "TEXT": [
+      "The Swarm",
+      "Bug out with the new Infest keyword, which makes cards burrow into your draw pile!",
+      "Vex"
+    ]
+  }
+}

@@ -5,7 +5,10 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.powers.bitingcoldpack.FrostbitePower;
+import thePackmaster.util.Wiz;
 
 public class ApplyFrosbiteModifier extends AbstractMadScienceModifier {
 
@@ -21,7 +24,7 @@ public class ApplyFrosbiteModifier extends AbstractMadScienceModifier {
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
-        //TODO - Frostbite
+        Wiz.applyToEnemy((AbstractMonster)target, new FrostbitePower(target, value));
     }
 
     @Override

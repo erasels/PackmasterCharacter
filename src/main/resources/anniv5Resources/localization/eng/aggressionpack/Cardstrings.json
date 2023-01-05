@@ -1,0 +1,42 @@
+{
+  "${ModID}:Vindicate": {
+    "NAME": "Vindicate",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play an Attack this turn, gain !M! Block."
+  },
+  "${ModID}:DarkLance": {
+    "NAME": "Dark Lance",
+    "DESCRIPTION": "Deal !D! damage. NL If you've changed Stances this turn, draw !M! cards."
+  },
+  "${ModID}:FuriousAssault": {
+    "NAME": "Furious Assault",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Aggression. NL Exhaust."
+  },
+  "${ModID}:Slam": {
+    "NAME": "Slam",
+    "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
+  },
+  "${ModID}:Decapitate": {
+    "NAME": "Decapitate",
+    "DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength this turn. NL Exhaust."
+  },
+  "${ModID}:TitansStrength": {
+    "NAME": "Titan's Strength",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength."
+  },
+  "${ModID}:Epiphany": {
+    "NAME": "Epiphany",
+    "DESCRIPTION": "If you are in ${ModID}:Aggression, exit it and draw !M! cards. NL Otherwise, enter ${ModID}:Aggression."
+  },
+  "${ModID}:InnerFury": {
+    "NAME": "Inner Fury",
+    "DESCRIPTION": "When you enter ${ModID}:Aggression, gain !M! temporary Strength and !M! Block. NL Enter ${ModID}:Aggression."
+  },
+  "${ModID}:LunaticRage": {
+    "NAME": "Lunatic Rage",
+    "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E] . NL Discard all non-Attack cards. NL Exhaust."
+  },
+  "${ModID}:Animosity": {
+    "NAME": "Animosity",
+    "DESCRIPTION": "When you enter, exit, or start your turn in ${ModID}:Aggression, gain !M! Strength."
+  }
+}

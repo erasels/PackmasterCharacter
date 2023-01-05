@@ -20,6 +20,8 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import thePackmaster.cards.*;
+import thePackmaster.cards.dimensiongatepack.DarkRitual;
+import thePackmaster.cards.dimensiongatepack.PackRat;
 import thePackmaster.packs.*;
 import thePackmaster.relics.HandyHaversack;
 
@@ -65,7 +67,7 @@ public class ThePackmaster extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                80, 80, 0, 99, 5, this, getStartingRelics(),
+                80, 80, 3, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
@@ -128,8 +130,7 @@ public class ThePackmaster extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        System.out.println("YOU NEED TO SET getStartCardForEvent() in your " + getClass().getSimpleName() + " file!");
-        return null;
+        return new Rummage();
     }
 
     @Override

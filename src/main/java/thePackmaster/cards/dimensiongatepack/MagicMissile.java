@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.dimensiongatepack.MagicMissilePower;
 import thePackmaster.util.Wiz;
 
+import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MagicMissile extends AbstractDimensionalCard {
@@ -18,6 +19,7 @@ public class MagicMissile extends AbstractDimensionalCard {
         baseDamage = 5;
         baseMagicNumber = magicNumber = 5;
         setFrame("magicmissileframe.png");
+        tags.add(MAGIC);
     }
 
 

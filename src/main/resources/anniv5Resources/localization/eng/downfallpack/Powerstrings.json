@@ -10,8 +10,8 @@
     "NAME": "Chrono Boost",
     "DESCRIPTIONS": [
       "After playing #b",
-      " more cards, gain #b1 #yStrength. This can trigger ",
-      " more times."
+      " more cards, gain ",
+      " #yStrength."
     ]
   },
   "${ModID}:DeEnergizedPower": {
