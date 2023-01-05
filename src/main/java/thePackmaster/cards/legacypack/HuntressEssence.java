@@ -5,11 +5,11 @@ import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
+
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class HuntressEssence extends AbstractPackmasterCard {
+public class HuntressEssence extends AbstractLegacyCard {
     public final static String ID = makeID("HuntressEssence");
 
     public static final int HEAL_AMT = 1;
