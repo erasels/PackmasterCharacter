@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
 
+import static org.apache.commons.lang3.math.NumberUtils.max;
 import static thePackmaster.util.Wiz.removePower;
 
 public class TreeBlockadePower extends AbstractPackmasterPower {
@@ -19,8 +20,8 @@ public class TreeBlockadePower extends AbstractPackmasterPower {
 
     @Override
     public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {
-        if (type != DamageInfo.DamageType.HP_LOSS)
-            return damage - amount;
+        if (type == DamageInfo.DamageType.NORMAL)
+            return max(0, damage - amount);
         return damage;
     }
 
