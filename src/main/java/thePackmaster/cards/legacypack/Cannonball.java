@@ -19,7 +19,7 @@ public class Cannonball extends AbstractPackmasterCard {
     private static final int UPGRADE_BONUS = 2;
 
     public Cannonball() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         this.baseDamage = POWER;
     }
 
@@ -31,6 +31,6 @@ public class Cannonball extends AbstractPackmasterCard {
     }
 
     public void upp() {
-            upgradeDamage(UPGRADE_BONUS);
+        upgradeDamage(UPGRADE_BONUS);
     }
 }

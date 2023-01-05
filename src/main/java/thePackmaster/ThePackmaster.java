@@ -82,10 +82,6 @@ public class ThePackmaster extends CustomPlayer {
         }
         retVal.add(Rummage.ID);
         retVal.add(Cardistry.ID);
-        retVal.add(PackRat.ID);
-        retVal.add(DarkRitual.ID);
-        retVal.add(PackRat.ID);
-        retVal.add(DarkRitual.ID);
         return retVal;
     }
 

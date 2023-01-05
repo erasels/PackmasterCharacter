@@ -25,7 +25,7 @@ public class SlimeCrush extends AbstractPackmasterCard {
     private static final int UPGRADE_DAMAGE = 5;
 
     public SlimeCrush() {
-        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
 
         baseDamage = DAMAGE;
         exhaust = true;
