@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class InfestModifier extends AbstractCardModifier {
 
-    public static String MOD_ID = "anniv5:Infest";
+    public static String MOD_ID = SpireAnniversary5Mod.makeID("Infest");
 
     private int infestCounter = 0;
     private static final TextureAtlas.AtlasRegion infestImage = ImageHelper.asAtlasRegion(TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/infestIcon.png"));

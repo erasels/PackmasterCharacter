@@ -19,11 +19,26 @@ public class LordOfTheFliesPower extends AbstractPackmasterPower implements OnIn
 
     public LordOfTheFliesPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
+    }
+
+    @Override
+    public void onInitialApplication() {
         AbstractDungeon.player.gameHandSize += amount;
     }
 
     @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        AbstractDungeon.player.gameHandSize += stackAmount;
+    }
+
+    @Override
     public void onRemove() {
+        AbstractDungeon.player.gameHandSize -= amount;
+    }
+
+    @Override
+    public void onVictory() {
         AbstractDungeon.player.gameHandSize -= amount;
     }
 
