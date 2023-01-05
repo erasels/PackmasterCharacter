@@ -8,10 +8,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 import thePackmaster.orbs.WitchesStrike.FullMoon;
 import thePackmaster.orbs.downfallpack.Ghostflame;
-import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.packs.DefectPack;
-import thePackmaster.packs.DownfallPack;
-import thePackmaster.packs.WitchesStrikePack;
+import thePackmaster.packs.*;
 
 import java.util.ArrayList;
 
@@ -37,6 +34,10 @@ public abstract class AbstractPackMasterOrb extends CustomOrb {
             if (pack instanceof WitchesStrikePack){
                 orbs.add(new CrescentMoon());
                 orbs.add(new FullMoon());
+            }
+            if (pack instanceof StrikesPack){
+                orbs.add(new Dark());
+                orbs.add(new Lightning());
             }
         }
         if (orbs.isEmpty()){
