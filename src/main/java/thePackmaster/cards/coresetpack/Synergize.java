@@ -37,7 +37,7 @@ public class Synergize extends AbstractPackmasterCard {
                 if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2) {
                     AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2);
                     if (SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null) {
-                        if (!Objects.equals(SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null, makeID("CoreSetPack"))) {
+                        if (!Objects.equals(SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null, CoreSetPack.ID)) {
                             allDmg(AbstractGameAction.AttackEffect.LIGHTNING);
                         }
                     }
