@@ -1,7 +1,7 @@
 {
   "${ModID}:SummonBulldog": {
     "NAME": "Summon Bulldog",
-    "DESCRIPTION": "Deal !D! damage. NL Discard a card."
+    "DESCRIPTION": "Channel a !M! damage ${ModID}:Bulldog."
   },
   "${ModID}:SummonVegetables": {
     "NAME": "Summon Vegetables",

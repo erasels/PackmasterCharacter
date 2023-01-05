@@ -1,5 +1,5 @@
 {
-  "SwarmOfBees": {
+  "${ModID}:SwarmOfBees": {
     "NAME": "Swarm Of Bees",
     "DESCRIPTION": [
       "#yPassive: Whenever you play a card, deal #b",
@@ -7,20 +7,20 @@
       " damage to a random enemy."
     ]
   },
-  "Panda": {
-    "NAME": "PAnda",
+  "${ModID}:Panda": {
+    "NAME": "Panda",
     "DESCRIPTION": [
-      "#yPassive: At the end of your turn, deal #b",
+      "#yPassive: At the end of turn, deal #b",
       " damage to a random enemy. NL #yEvoke: Deal #b",
       " damage to a random enemy."
     ]
   },
-  "RainbowLouse": {
-    "NAME": "Rainbow Louse",
+  "${ModID}:Bulldog": {
+    "NAME": "Bulldog",
     "DESCRIPTION": [
-      "#yPassive: At the end of your turn, deal #b",
-      " damage to a random enemy and gain that much #yTemporary #yHP. NL #yEvoke: Deal #b",
-      " damage to a random enemy and gain that much #yTemporary #yHP."
+      "#yPassive: At the end of turn, deal #b",
+      " damage to the enemy with the lowest HP. NL #yEvoke: Deal #b",
+      " damage to the enemy with the lowest HP."
     ]
   }
 }

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.summonspack.PandaEvokeAction;
 import thePackmaster.actions.summonspack.PandaSmackAction;
@@ -58,7 +59,7 @@ public class Panda extends CustomOrb {
     }
 
     public void applyFocus() {
-        AbstractPower power = adp().getPower("Focus");
+        AbstractPower power = adp().getPower(FocusPower.POWER_ID);
         if (power != null)
             passiveAmount = Math.max(0, basePassiveAmount + power.amount);
         else
