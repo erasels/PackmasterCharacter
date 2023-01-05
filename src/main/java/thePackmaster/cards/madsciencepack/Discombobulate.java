@@ -6,12 +6,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
 import thePackmaster.cards.dimensiongatepack.AbstractDimensionalCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Discombobulate extends AbstractPackmasterCard {
+public class Discombobulate extends AbstractMadScienceCard {
     public final static String ID = makeID("Discombobulate");
 
     public Discombobulate() {

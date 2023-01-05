@@ -5,11 +5,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Lightning;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class LightningStrike extends AbstractPackmasterCard {
+public class LightningStrike extends AbstractStrikePackCard {
     public final static String ID = makeID("LightningStrike");
 
     private static final int BLOCK_VALUE = 7;

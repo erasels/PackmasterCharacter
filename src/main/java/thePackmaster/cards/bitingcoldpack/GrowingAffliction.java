@@ -3,11 +3,10 @@ package thePackmaster.cards.bitingcoldpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class GrowingAffliction extends AbstractPackmasterCard {
+public class GrowingAffliction extends BitingColdCard {
     public final static String ID = makeID("GrowingAffliction");
 
     public GrowingAffliction() {

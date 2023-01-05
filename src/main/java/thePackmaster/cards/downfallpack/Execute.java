@@ -13,7 +13,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class Execute extends AbstractPackmasterCard {
+public class Execute extends AbstractDownfallCard {
     public final static String ID = makeID("Execute");
 
     private static final int DAMAGE = 7;

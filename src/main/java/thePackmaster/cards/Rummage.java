@@ -29,7 +29,7 @@ public class Rummage extends AbstractPackmasterCard {
                 ArrayList<AbstractCard> possCardsList = new ArrayList<>();
 
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (!q.freeToPlay())
+                    if (!q.freeToPlay() && q.cost>0)
                         possCardsList.add(q);
                 }
 

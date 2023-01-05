@@ -1,8 +1,11 @@
 package thePackmaster.relics;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.BlurPower;
 import thePackmaster.ThePackmaster;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -20,23 +23,27 @@ public class BagOfHolding extends AbstractPackmasterRelic {
     }
 
     public void atTurnStart() {
+        int count = AbstractDungeon.player.masterDeck.size();
         if (this.firstTurn) {
             flash();
-            int count = AbstractDungeon.player.drawPile.size();
-            if (count >= 10) {
+            if (count >= 10){
                 addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                addToTop(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
             }
-            for (int i = 0; i < 3; i++) {
-                if (count >= 10) {
-                    count -= 10;
-                    addToTop(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
-                    addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(1));
-                }
+            if (count >= 20){
+                addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(2));
             }
             this.firstTurn = false;
+        } else {
+            if (count >= 30){
+                addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                addToTop(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
+            }
+            if (count >= 40){
+                addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(2));
+            }
         }
     }
-
     @Override
     public void obtain() {
         if (AbstractDungeon.player.hasRelic(HandyHaversack.ID)) {

@@ -13,7 +13,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class AllSeeing extends AbstractPackmasterCard {
+public class AllSeeing extends AbstractCthulhuCard {
     public final static String ID = makeID("AllSeeing");
 
 

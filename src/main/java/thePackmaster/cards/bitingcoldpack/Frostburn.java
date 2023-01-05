@@ -8,13 +8,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
-public class Frostburn extends AbstractPackmasterCard {
+public class Frostburn extends BitingColdCard {
     public final static String ID = makeID("Frostburn");
 
     public Frostburn() {

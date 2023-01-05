@@ -5,11 +5,10 @@ import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class StrikeOfLuck extends AbstractPackmasterCard {
+public class StrikeOfLuck extends AbstractStrikePackCard {
     public final static String ID = makeID("StrikeOfLuck");
 
     private static final int ATTACK_DMG = 6;
