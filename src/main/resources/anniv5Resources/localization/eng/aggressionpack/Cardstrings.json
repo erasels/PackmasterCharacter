@@ -10,5 +10,9 @@
   "${ModID}:FuriousAssault": {
     "NAME": "Furious Assault",
     "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Aggression. NL Exhaust."
+  },
+  "${ModID}:Slam": {
+    "NAME": "Slam",
+    "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
   }
 }
