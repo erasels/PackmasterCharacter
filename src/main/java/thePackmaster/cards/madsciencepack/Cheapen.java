@@ -23,6 +23,6 @@ public class Cheapen extends AbstractMadScienceCard {
     }
 
     public void upp() {
-
+        upgradeBaseCost(0);
     }
 }

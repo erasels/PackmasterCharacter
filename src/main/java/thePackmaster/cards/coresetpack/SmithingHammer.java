@@ -20,7 +20,7 @@ public class SmithingHammer extends AbstractPackmasterCard {
     public SmithingHammer() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 3;
-        baseMagicNumber = 3;
+        baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

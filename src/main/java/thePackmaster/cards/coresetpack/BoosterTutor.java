@@ -31,58 +31,48 @@ public class BoosterTutor extends AbstractPackmasterCard {
                 isDone = true;
 
                 ArrayList<String> bannedPacks = new ArrayList<>();
-                ArrayList<AbstractCard> targets = new ArrayList<>(AbstractDungeon.player.drawPile.group);
+                ArrayList<AbstractCard> targets = new ArrayList<>();
+
+                for (AbstractCard c : AbstractDungeon.player.drawPile.group
+                ) {
+                    if ((c instanceof AbstractPackmasterCard) && c.rarity != CardRarity.BASIC) {
+                        targets.add(c);
+                    }
+                }
 
                 boolean cardFound = false;
 
                 for (int i = 0; i < magicNumber; i++) {
                     if (targets.size() == 0) return;
 
-                    AbstractCard current = targets.get(AbstractDungeon.cardRandomRng.random(0, targets.size() - 1));
+                    AbstractPackmasterCard current = (AbstractPackmasterCard) targets.get(AbstractDungeon.cardRandomRng.random(0, targets.size() - 1));
 
-                    //Basic cards are never a part of a pack, no need to search more.
-                    if (current.rarity == CardRarity.BASIC) {
-                        targets.remove(current);
-                        i--;
-                        current = null;
-                    }
-
-                    cardFound = false;
                     if (current != null) {
-                        for (AbstractCardPack p : SpireAnniversary5Mod.currentPoolPacks) {
-                            if (!bannedPacks.contains(p.packID)) {
-                                if (p.getCards().contains(current.cardID)) {
-                                    cardFound = true;
-                                    bannedPacks.add(p.packID);
-
-                                    if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
-                                        AbstractDungeon.player.drawPile.moveToDiscardPile(current);
-                                        AbstractDungeon.player.createHandIsFullDialog();
-                                    } else {
-                                        current.unhover();
-                                        current.lighten(true);
-                                        current.setAngle(0.0F);
-                                        current.drawScale = 0.12F;
-                                        current.targetDrawScale = 0.75F;
-                                        current.current_x = CardGroup.DRAW_PILE_X;
-                                        current.current_y = CardGroup.DRAW_PILE_Y;
-                                        AbstractDungeon.player.drawPile.removeCard(current);
-                                        AbstractDungeon.player.hand.addToTop(current);
-                                        AbstractDungeon.player.hand.refreshHandLayout();
-                                        AbstractDungeon.player.hand.applyPowers();
-                                    }
-                                    this.isDone = true;
-
-                                    targets.remove(current);
-                                    break;
-                                }
+                        if (!bannedPacks.contains(current.getParent().packID)) {
+                            cardFound = true;
+                            bannedPacks.add(current.getParent().packID);
+                            if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
+                                AbstractDungeon.player.drawPile.moveToDiscardPile(current);
+                                AbstractDungeon.player.createHandIsFullDialog();
+                            } else {
+                                current.unhover();
+                                current.lighten(true);
+                                current.setAngle(0.0F);
+                                current.drawScale = 0.12F;
+                                current.targetDrawScale = 0.75F;
+                                current.current_x = CardGroup.DRAW_PILE_X;
+                                current.current_y = CardGroup.DRAW_PILE_Y;
+                                AbstractDungeon.player.drawPile.removeCard(current);
+                                AbstractDungeon.player.hand.addToTop(current);
+                                AbstractDungeon.player.hand.refreshHandLayout();
+                                AbstractDungeon.player.hand.applyPowers();
                             }
-
+                            targets.remove(current);
                         }
-                        if (!cardFound) {
-                            targets.remove(current);  //Means the current card was not part of a pack.
-                            i--;
-                        }
+                    }
+                    if (!cardFound) {
+                        targets.remove(current);  //Means the current card was not eligible.
+                        i--;
                     }
                 }
             }
