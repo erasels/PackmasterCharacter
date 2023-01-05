@@ -26,6 +26,7 @@ public class AggressionPack extends AbstractCardPack {
         cards.add(FuriousAssault.ID);
         cards.add(Slam.ID);
         cards.add(Decapitate.ID);
+        cards.add(TitansStrength.ID);
         return cards;
     }
 }
