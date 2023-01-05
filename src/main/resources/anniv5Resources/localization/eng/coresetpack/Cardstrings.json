@@ -5,7 +5,7 @@
   },
   "${ModID}:BoosterTutor": {
     "NAME": "Booster Tutor",
-    "DESCRIPTION": "Draw !M! cards from different Packs."
+    "DESCRIPTION": "Put !M! cards from different Packs in your draw pile into your hand."
   },
   "${ModID}:DestinyDraw": {
     "NAME": "Destiny Draw",
