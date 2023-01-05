@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -51,7 +52,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (Wiz.getPackByCard(c) != null) {
+        if (SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null) {
             if (!usedPacks.contains(Wiz.getPackByCard(c).name)) {
                 usedPacks.add(Wiz.getPackByCard(c).name);
                 if (usedPacks.size() >= 3 && grayscale) {

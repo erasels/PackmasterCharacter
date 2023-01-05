@@ -36,7 +36,7 @@ public class BoosterTutor extends AbstractPackmasterCard {
 
                 for (AbstractCard c : AbstractDungeon.player.drawPile.group
                 ) {
-                    if (Wiz.getPackByCard(c) != null && c.rarity != CardRarity.BASIC) {
+                    if (SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null && c.rarity != CardRarity.BASIC) {
                         targets.add(c);
                     }
                 }
@@ -49,9 +49,9 @@ public class BoosterTutor extends AbstractPackmasterCard {
                     AbstractCard current = targets.get(AbstractDungeon.cardRandomRng.random(0, targets.size() - 1));
 
                     if (current != null) {
-                        if (!bannedPacks.contains(Wiz.getPackByCard(current).packID)) {
+                        if (!bannedPacks.contains(SpireAnniversary5Mod.cardParentMap.get(current.cardID))) {
                             cardFound = true;
-                            bannedPacks.add(Wiz.getPackByCard(current).packID);
+                            bannedPacks.add(SpireAnniversary5Mod.cardParentMap.get(current.cardID));
                             if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
                                 AbstractDungeon.player.drawPile.moveToDiscardPile(current);
                                 AbstractDungeon.player.createHandIsFullDialog();

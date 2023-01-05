@@ -84,12 +84,12 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         ArrayList<AbstractCardPack> packs = SpireAnniversary5Mod.allPacks;
         if (myPackOne != null) {
-            if (!myPackOne.equals("")) {
+            if (!myPackOne.isEmpty()) {
                 packs.remove(packsByID.get(myPackOne));
             }
         }
         if (myPackTwo != null) {
-            if (!myPackTwo.equals("")) {
+            if (!myPackTwo.isEmpty()) {
                 packs.remove(packsByID.get(myPackTwo));
             }
         }
