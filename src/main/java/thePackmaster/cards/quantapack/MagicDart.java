@@ -49,8 +49,5 @@ public class MagicDart extends AbstractPackmasterCard {
 
     public void upp() {
             this.selfRetain = true;
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            upgradeName();
-            initializeDescription();
     }
 }
