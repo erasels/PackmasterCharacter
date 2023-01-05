@@ -1,0 +1,8 @@
+{
+  "${ModID}:CrystalResonance": {
+    "NAME": "Crystal Resonance",
+    "DESCRIPTIONS": [
+      "Whenever you #yTransmute a card, the new card is upgraded."
+    ]
+  }
+}

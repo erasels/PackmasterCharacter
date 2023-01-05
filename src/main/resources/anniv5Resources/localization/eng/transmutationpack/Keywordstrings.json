@@ -1,0 +1,18 @@
+[
+  {
+    "PROPER_NAME": "Transmute",
+    "NAMES": [
+      "transmute",
+      "transmuted"
+    ],
+    "DESCRIPTION": "Transforms a card in combat into any card of the same rarity available to your current run. The new card deals 1 more damage and gains 1 more #yBlock for the rest of combat. This effect stacks."
+  },
+  {
+    "PROPER_NAME": "Mutable",
+    "NAMES": [
+      "mutable",
+      "mutable:"
+    ],
+    "DESCRIPTION": "When a card is #yTransmuted, any #yMutable effect is passed on to the next card for the rest of combat."
+  }
+]
