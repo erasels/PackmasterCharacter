@@ -1,10 +1,18 @@
 package thePackmaster.cards.coresetpack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.SpireAnniversary5Mod.packsByID;
 
 public class Synergize extends AbstractPackmasterCard {
     public final static String ID = makeID("Synergize");
@@ -19,7 +27,20 @@ public class Synergize extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        //TODO Conditonal AOE
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2){
+                    AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2);
+                    if (c instanceof AbstractPackmasterCard){
+                        if (((AbstractPackmasterCard)c).getParent().packID != getParent().packID){
+                            allDmg(AbstractGameAction.AttackEffect.LIGHTNING);
+                        }
+                    }
+                }
+            }
+        });
     }
 
     public void upp() {

@@ -83,6 +83,7 @@ public class SpireAnniversary5Mod implements
     public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
 
     public static boolean doPackSetup = false;
+    public static String lastCardsPackID = null;
     public static boolean openedStarterScreen = false;
     public static int PACKS_PER_RUN = 7;
     public static CurrentRunCardsTopPanelItem currentRunCardsTopPanelItem;
@@ -566,6 +567,7 @@ public class SpireAnniversary5Mod implements
     public ArrayList<String> onSave() {
         ArrayList<String> packIDs = new ArrayList<>();
         for (AbstractCardPack pack : currentPoolPacks) {
+            BaseMod.logger.info("Saving pack: " + pack.packID);
             packIDs.add(pack.packID);
         }
         return packIDs;
@@ -574,6 +576,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void onLoad(ArrayList<String> strings) {
         for (String s : strings) {
+            BaseMod.logger.info("Loading pack: " + s);
             currentPoolPacks.add(packsByID.get(s));
         }
     }
@@ -585,4 +588,5 @@ public class SpireAnniversary5Mod implements
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
         }
     }
+
 }
