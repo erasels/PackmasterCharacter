@@ -7,12 +7,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.legacypack.ShootAnythingAction;
-import thePackmaster.cards.AbstractPackmasterCard;
+
 import thePackmaster.util.TexLoader;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Cannonball extends AbstractPackmasterCard {
+public class Cannonball extends AbstractLegacyCard {
     public final static String ID = makeID("Cannonball");
 
     private static final int POWER = 6;

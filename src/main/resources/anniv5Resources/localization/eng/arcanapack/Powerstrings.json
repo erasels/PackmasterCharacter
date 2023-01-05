@@ -1,0 +1,16 @@
+{
+  "${ModID}:HangedPower": {
+    "NAME": "Hanged",
+    "DESCRIPTIONS": [
+      "Whenever you draw a card this turn, ALL enemies lose #b",
+      " HP."
+    ]
+  },
+  "${ModID}:TheChariotPower": {
+    "NAME": "The Chariot",
+    "DESCRIPTIONS": [
+      "Whenever you discard a card during your turn, gain #b",
+      " #yVigor."
+    ]
+  }
+}

@@ -39,6 +39,6 @@ public class FieryMantlePower extends AbstractPackmasterPower {
 
     @Override
     public void atStartOfTurn() {
-        this.addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
+       removeThis();
     }
 }

@@ -20,7 +20,7 @@ public class SmithingHammer extends AbstractPackmasterCard {
     public SmithingHammer() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 3;
-        baseMagicNumber = 3;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,7 +32,6 @@ public class SmithingHammer extends AbstractPackmasterCard {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         for (int i = 0; i < magicNumber; i++) {
             this.addToBot(new UpgradeRandomCardAction());
-            if(!upgraded) break;
         }
     }
 

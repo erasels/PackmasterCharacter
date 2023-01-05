@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.dimensiongatepack.SelfDamageAction;
 
@@ -15,7 +16,7 @@ public class Inferno extends AbstractDimensionalCard {
 
     public Inferno() {
         super(ID, 1, CardRarity.UNCOMMON, AbstractCard.CardType.ATTACK, AbstractCard.CardTarget.ALL);
-        baseDamage = 10;
+        baseDamage = 15;
         exhaust = true;
         setFrame("infernoframe.png");
         isMultiDamage = true;
@@ -25,10 +26,15 @@ public class Inferno extends AbstractDimensionalCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.FIRE);
-        //TODO - In practice this actual does still fire even if the combat ends!  Actually kinda cool mechanic though, should we make that happen?
-        addToBot(new SelfDamageAction(new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
-
-
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()){
+                    addToBot(new SelfDamageAction(new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
+                }
+                this.isDone = true;
+            }
+        });
     }
 
     public void upp() {

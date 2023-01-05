@@ -21,5 +21,11 @@
       "At the start of your turn, gain #b",
       " random #yupgraded \"Strike\"s. They cost #b0 until played and Exhaust."
     ]
+  },
+  "${ModID}:StrikeABargainPower": {
+    "NAME": "Strike a Bargain",
+    "DESCRIPTIONS": [
+      "Your Attacks cost 0 this turn, but you cannot play non-Attacks."
+    ]
   }
 }

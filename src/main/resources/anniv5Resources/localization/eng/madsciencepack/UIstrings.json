@@ -21,7 +21,7 @@
   },
   "${ModID}:AddModifierUI": {
     "TEXT": [
-      " to Modify"
+      "Choose a card to Modify."
     ]
   }
 }

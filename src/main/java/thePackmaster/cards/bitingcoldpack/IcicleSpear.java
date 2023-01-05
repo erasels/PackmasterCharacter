@@ -3,13 +3,12 @@ package thePackmaster.cards.bitingcoldpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
-public class IcicleSpear extends AbstractPackmasterCard {
+public class IcicleSpear extends BitingColdCard {
     public final static String ID = makeID("IcicleSpear");
 
     public IcicleSpear() {

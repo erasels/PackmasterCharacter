@@ -3,7 +3,10 @@ package thePackmaster.relics;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
@@ -36,6 +39,9 @@ public class GemOfUnity extends AbstractPackmasterRelic {
             counter = SpireAnniversary5Mod.PACKS_PER_RUN;
             if (AbstractDungeon.player.hasRelic(BanishingDecree.ID)) counter--;
             this.description = getUpdatedDescription();
+            tips.clear();
+            tips.add(new PowerTip(name, description));
+            initializeTips();
         }
     }
 
@@ -48,12 +54,17 @@ public class GemOfUnity extends AbstractPackmasterRelic {
                 packsPlayed.add(pack);
                 if (counter == 0){
                     AbstractDungeon.player.heal(5);
-                    addToBot(new GainBlockAction(AbstractDungeon.player, 20));
+                    addToBot(new GainBlockAction(Wiz.p(), 20));
+                    Wiz.applyToSelf(new StrengthPower(Wiz.p(), 1));
+                    Wiz.applyToSelf(new DexterityPower(Wiz.p(), 1));
                     resetCounter();
                 }
             }
         }
         this.description = getUpdatedDescription();
+        tips.clear();
+        tips.add(new PowerTip(name, description));
+        initializeTips();
         super.onPlayCard(c, m);
     }
 
@@ -61,6 +72,7 @@ public class GemOfUnity extends AbstractPackmasterRelic {
         StringBuilder desc = new StringBuilder(DESCRIPTIONS[0]);
         if (AbstractDungeon.isPlayerInDungeon()) {
             if (packsPlayed.size() > 0) {
+                desc.append(" NL ");
                 desc.append(DESCRIPTIONS[1]);
                 for (AbstractCardPack p : packsPlayed) {
                     desc.append(" NL ");

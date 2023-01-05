@@ -11,13 +11,13 @@
     "NAME": "Winterize",
     "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your draw pile: 'Apply !M! Frostbite.'"
   },
-  "${ModID}:ThrowWrench": {
-    "NAME": "Throw Wrench",
+"${ModID}:Discombobulate": {
+    "NAME": "Discombobulate",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have a Modified card in hand, deals damage twice."
   },
   "${ModID}:Lighten": {
     "NAME": "Lighten",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a card in hand: 'Retain.' and 'Float this'."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a card in hand: 'Retain.' and (NYI) 'Float this'."
   },
   "${ModID}:Improve": {
     "NAME": "Improve",
@@ -37,7 +37,7 @@
   },
   "${ModID}:Piratify": {
     "NAME": "Piratify",
-    "DESCRIPTION": "At the start of each turn, Modify a random card in hand: 'Gain a Cannonball.'",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, Modify a random card in hand: 'Gain a Cannonball+.'"
+    "DESCRIPTION": "At the start of each turn, Modify a random card in hand: 'Gain a *Cannonball.'",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, Modify a random card in hand: 'Gain a *Cannonball+.'"
   }
 }

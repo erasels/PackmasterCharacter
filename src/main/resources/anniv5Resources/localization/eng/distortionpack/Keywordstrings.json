@@ -1,0 +1,9 @@
+[
+  {
+    "PROPER_NAME": "Distortion",
+    "NAMES": [
+      "distortion"
+    ],
+    "DESCRIPTION": "Creatures with #yDistortion lose HP whenever a card is #yExhausted."
+  }
+]

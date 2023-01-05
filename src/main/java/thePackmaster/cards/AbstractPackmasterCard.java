@@ -68,6 +68,11 @@ public abstract class AbstractPackmasterCard extends CustomCard {
             } else
                 needsArtRefresh = true;
         }
+
+        setBackgroundTexture(
+                "anniv5Resources/images/512/coreset/" + type.name().toLowerCase() + ".png",
+                "anniv5Resources/images/1024/coreset/" + type.name().toLowerCase() + ".png"
+        );
     }
 
 
@@ -164,6 +169,16 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     protected void uDesc() {
         rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         initializeDescription();
+    }
+
+    public void downgrade() {
+        if (upgraded) {
+            upgraded = false;
+            name = cardStrings.NAME;
+            rawDescription = cardStrings.DESCRIPTION;
+            initializeTitle();
+            initializeDescription();
+        }
     }
 
     public void upgrade() {

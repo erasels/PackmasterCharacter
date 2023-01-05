@@ -44,16 +44,18 @@ public abstract class AbstractEvolveCard extends AbstractPackmasterCard {
     }
 
     protected void evolve() {
-        AbstractEvolveCard c = this;
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                c.upgrade();
-                c.superFlash();
-                c.applyPowers();
-                this.isDone = true;
-            }
-        });
+        if (canUpgrade()) {
+            AbstractEvolveCard c = this;
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    c.upgrade();
+                    c.superFlash();
+                    c.applyPowers();
+                    this.isDone = true;
+                }
+            });
+        }
     }
 
     private void changeArtAndText() {
