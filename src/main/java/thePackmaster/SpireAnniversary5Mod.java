@@ -579,8 +579,10 @@ public class SpireAnniversary5Mod implements
     @Override
     public void onLoad(ArrayList<String> strings) {
         currentPoolPacks.clear();
-        for (String s : strings) {
-            currentPoolPacks.add(packsByID.get(s));
+        if (strings != null) {
+            for (String s : strings) {
+                currentPoolPacks.add(packsByID.get(s));
+            }
         }
     }
 
