@@ -192,7 +192,6 @@ public class SpireAnniversary5Mod implements
 
         currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
         BaseMod.addSaveField("Anniversary5Mod", thismod);
-        BaseMod.addSaveField("BanishingDecreeID", thismod);
 
     }
 
