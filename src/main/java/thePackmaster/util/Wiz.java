@@ -333,6 +333,28 @@ public class Wiz {
         return AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
     }
 
+    public static AbstractMonster getLowestHealthEnemy() {
+        AbstractMonster weakest = null;
+        for (AbstractMonster m : getEnemies()) {
+            if (weakest == null)
+                weakest = m;
+            else if (weakest.currentHealth > m.currentHealth)
+                weakest = m;
+        }
+        return weakest;
+    }
+
+    public static AbstractMonster getHighestHealthEnemy() {
+        AbstractMonster strongest = null;
+        for (AbstractMonster m : getEnemies()) {
+            if (strongest == null)
+                strongest = m;
+            else if (strongest.currentHealth < m.currentHealth)
+                strongest = m;
+        }
+        return strongest;
+    }
+
     public static void discard(int amount, boolean isRandom) {
         atb(new DiscardAction(adp(), adp(), amount, isRandom));
     }
