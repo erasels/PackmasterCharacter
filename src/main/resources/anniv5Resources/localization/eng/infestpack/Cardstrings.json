@@ -8,7 +8,7 @@
     "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Draw 1 card for each infestation counter."
   },
   "${ModID}:GrassHop": {
-    "NAME": "Grass Hop",
+    "NAME": "Swarm Surge",
     "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL When this gains an infestation counter, ALL enemies lose !M! HP."
   },
   "${ModID}:Bzzzzz": {
