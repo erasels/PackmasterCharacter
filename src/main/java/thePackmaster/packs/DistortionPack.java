@@ -1,5 +1,6 @@
 package thePackmaster.packs;
 
+import basemod.Pair;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
@@ -62,35 +63,32 @@ public class DistortionPack extends AbstractCardPack {
             super(cardID, parentPack);
 
             if (distortionPackTexture == null) {
-                List<String> skills = new ArrayList<>();
+                List<Pair<String, Texture>> skillTextures = new ArrayList<>();
                 for (AbstractCard c : CardLibrary.getAllCards()) {
-                    if (c instanceof AbstractPackmasterCard && c.color == ThePackmaster.Enums.PACKMASTER_RAINBOW && c.type == CardType.SKILL
-                        && c.portrait != null
-                        && imgMap.containsKey(c.cardID) && imgMap.get(c.cardID).getWidth() == 250 && imgMap.get(c.cardID).getHeight() == 190)
-                            skills.add(c.cardID);
+                    if (c instanceof AbstractPackmasterCard && c.type == CardType.SKILL
+                        && c.portrait != null) {
+                        String path = getCardTextureString(c.cardID.replace(modID + ":", ""), CardType.SKILL);
+                        Texture imgFromMap = imgMap.get(path);
+                        if (imgFromMap != null && imgFromMap.getWidth() == 250 && imgFromMap.getHeight() == 190) {
+                            skillTextures.add(new Pair<>(path, imgFromMap));
+                        }
+                    }
                 }
 
-                String imgID = skills.get(MathUtils.random(skills.size() - 1));
-                this.textureImg = getCardTextureString(imgID.replace(modID + ":", ""), CardType.SKILL);
-                Texture cardTexture;
-                if (imgMap.containsKey(textureImg)) {
-                    cardTexture = imgMap.get(textureImg);
-                } else {
-                    cardTexture = ImageMaster.loadImage(textureImg);
-                    if (cardTexture != null) {
+                Texture cardTexture = null;
+                if (!skillTextures.isEmpty()) {
+                    Pair<String, Texture> chosenImg = skillTextures.get(MathUtils.random(skillTextures.size() - 1));
+                    this.textureImg = chosenImg.getKey();
+                    cardTexture = chosenImg.getValue();
+                }
+                else {
+                    this.textureImg = getCardTextureString(S_r_ke.ID.replace(modID + ":", ""), CardType.SKILL);
+                    if (imgMap.containsKey(textureImg)) {
+                        cardTexture = imgMap.get(textureImg);
+                    } else {
+                        cardTexture = ImageMaster.loadImage(textureImg);
                         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
                         imgMap.put(textureImg, cardTexture);
-                    }
-                    else {
-                        imgID = S_r_ke.ID;
-                        this.textureImg = getCardTextureString(imgID.replace(modID + ":", ""), CardType.SKILL);
-                        if (imgMap.containsKey(textureImg)) {
-                            cardTexture = imgMap.get(textureImg);
-                        } else {
-                            cardTexture = ImageMaster.loadImage(textureImg);
-                            cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-                            imgMap.put(textureImg, cardTexture);
-                        }
                     }
                 }
 
