@@ -11,7 +11,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class BeyondTheStars extends AbstractPackmasterCard {
+public class BeyondTheStars extends AbstractCthulhuCard {
     public final static String ID = makeID("BeyondTheStars");
 
     public BeyondTheStars() {

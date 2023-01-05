@@ -4,11 +4,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.legacypack.MassProductionAction;
-import thePackmaster.cards.AbstractPackmasterCard;
+
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MassProduction extends AbstractPackmasterCard {
+public class MassProduction extends AbstractLegacyCard {
     public final static String ID = makeID("MassProduction");
 
     private static final int UPGRADE_COST = 2;

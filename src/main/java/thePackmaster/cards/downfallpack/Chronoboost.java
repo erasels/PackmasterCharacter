@@ -13,7 +13,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class Chronoboost extends AbstractPackmasterCard {
+public class Chronoboost extends AbstractDownfallCard {
     public final static String ID = makeID("Chronoboost");
 
     public Chronoboost() {
