@@ -304,6 +304,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(BEES_KEY, BEES_OGG);
         BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
+        BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
     }
 
     @Override
