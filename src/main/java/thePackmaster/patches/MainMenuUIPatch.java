@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.CoreSetPack;
 
 import java.util.ArrayList;
 
@@ -53,14 +54,19 @@ public class MainMenuUIPatch {
             options.add(c.name);
         }
 
+        int coreSetPackIndex = 0;
         optionIDs = new String[options.size()];
         optionIDs[0] = RANDOM;
         optionIDs[1] = CHOICE;
         for (int i = 2; i < optionIDs.length; ++i) {
-            optionIDs[i] = SpireAnniversary5Mod.allPacks.get(i - 2).packID;
+            String packID = SpireAnniversary5Mod.allPacks.get(i - 2).packID;
+            optionIDs[i] = packID;
+            if (packID.equals(CoreSetPack.ID)) {
+                coreSetPackIndex = i;
+            }
         }
 
-        packSetups.add(optionIDs[2]);
+        packSetups.add(CoreSetPack.ID);
         packSetups.add(optionIDs[0]);
         packSetups.add(optionIDs[0]);
         packSetups.add(optionIDs[0]);
@@ -84,7 +90,7 @@ public class MainMenuUIPatch {
             dropdowns.add(d);
 
             if (i == 0) {
-                d.setSelectedIndex(2);
+                d.setSelectedIndex(coreSetPackIndex);
             } else if (i >= 5) {
                 d.setSelectedIndex(1);
             }
