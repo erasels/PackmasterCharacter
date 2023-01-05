@@ -2,16 +2,12 @@ package thePackmaster.relics;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.ThePackmaster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
-import static thePackmaster.SpireAnniversary5Mod.SupportedLanguages;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class CollectorBadge extends AbstractPackmasterRelic {
@@ -55,7 +51,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (c instanceof AbstractPackmasterCard) {
+        if (Wiz.getPackByCard(c) != null) {
             if (!usedPacks.contains(Wiz.getPackByCard(c).name)) {
                 usedPacks.add(Wiz.getPackByCard(c).name);
                 if (usedPacks.size() >= 3 && grayscale) {
@@ -74,7 +70,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
         } else if (usedPacks.size() > 0) {
             String st = usedPacks.get(0);
 
-            if (usedPacks.size()>1) {
+            if (usedPacks.size() > 1) {
                 for (int i = 1; i < usedPacks.size(); i++) {
                     st = st + ", " + usedPacks.get(i);
                 }

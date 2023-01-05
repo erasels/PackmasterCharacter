@@ -25,23 +25,21 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
     private String myPackTwo = "";
     private String myPackThree = "";
     private ArrayList<String> myPacks = new ArrayList<>();
-    private static boolean allDone = false;
 
 
     public PMBoosterBox() {
         super(ID, RelicTier.RARE, LandingSound.FLAT);
-        allDone = false;
     }
 
     public void onVictory() {
+        //TODO - Known issue: if you exit the run during a reward screen, you lose this reward on load.
         RewardItem r = new RewardItem();
         r.cards = getCardsFromPacks(myPacks, 3);
-        AbstractDungeon.getCurrRoom().rewards.add(new RewardItem());
+        AbstractDungeon.getCurrRoom().rewards.add(r);
     }
 
     @Override
     public void onEquip() {
-        allDone = false;
         openScreen();
     }
 
@@ -66,7 +64,7 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
         makeIDArray();
     }
 
-    public void makeIDArray(){
+    public void makeIDArray() {
         myPacks.clear();
         myPacks.add(myPackOne);
         myPacks.add(myPackTwo);
@@ -85,11 +83,15 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
         CenterGridCardSelectScreen.centerGridSelect = true;
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         ArrayList<AbstractCardPack> packs = SpireAnniversary5Mod.allPacks;
-        if (myPackOne != "" && myPackOne != null){
-            packs.remove(packsByID.get(myPackOne));
+        if (myPackOne != null) {
+            if (!myPackOne.equals("")) {
+                packs.remove(packsByID.get(myPackOne));
+            }
         }
-        if (myPackTwo != "" && myPackTwo != null){
-            packs.remove(packsByID.get(myPackTwo));
+        if (myPackTwo != null) {
+            if (!myPackTwo.equals("")) {
+                packs.remove(packsByID.get(myPackTwo));
+            }
         }
         Collections.shuffle(packs);
         for (AbstractCardPack p : packs) {
@@ -124,7 +126,6 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
             if (numPicked == 3) {
-                allDone = true;
                 AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
                 setDescriptionAfterLoading();
                 makeIDArray();
@@ -135,7 +136,7 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
     }
 
     private void setDescriptionAfterLoading() {
-        this.description =getUpdatedDescription();
+        this.description = getUpdatedDescription();
         tips.clear();
         tips.add(new PowerTip(name, description));
         initializeTips();

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -35,7 +36,7 @@ public class BoosterTutor extends AbstractPackmasterCard {
 
                 for (AbstractCard c : AbstractDungeon.player.drawPile.group
                 ) {
-                    if ((c instanceof AbstractPackmasterCard) && c.rarity != CardRarity.BASIC) {
+                    if (Wiz.getPackByCard(c) != null && c.rarity != CardRarity.BASIC) {
                         targets.add(c);
                     }
                 }
@@ -45,12 +46,12 @@ public class BoosterTutor extends AbstractPackmasterCard {
                 for (int i = 0; i < magicNumber; i++) {
                     if (targets.size() == 0) return;
 
-                    AbstractPackmasterCard current = (AbstractPackmasterCard) targets.get(AbstractDungeon.cardRandomRng.random(0, targets.size() - 1));
+                    AbstractCard current = targets.get(AbstractDungeon.cardRandomRng.random(0, targets.size() - 1));
 
                     if (current != null) {
-                        if (!bannedPacks.contains(current.getParent().packID)) {
+                        if (!bannedPacks.contains(Wiz.getPackByCard(current).packID)) {
                             cardFound = true;
-                            bannedPacks.add(current.getParent().packID);
+                            bannedPacks.add(Wiz.getPackByCard(current).packID);
                             if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
                                 AbstractDungeon.player.drawPile.moveToDiscardPile(current);
                                 AbstractDungeon.player.createHandIsFullDialog();

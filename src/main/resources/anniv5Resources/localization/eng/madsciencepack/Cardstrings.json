@@ -29,7 +29,7 @@
   },
   "${ModID}:Cheapen": {
     "NAME": "Cheapen",
-    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: 'Costs 0.' NL Exhaust, (NYI) unless Amplify 2."
+    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: 'Costs 0.' NL Exhaust, unless Amplify 2."
   },
   "${ModID}:Expand": {
     "NAME": "Expand",
