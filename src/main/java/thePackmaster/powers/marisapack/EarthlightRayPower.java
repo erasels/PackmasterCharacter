@@ -39,7 +39,7 @@ public class EarthlightRayPower extends AbstractPackmasterPower implements Clone
                     Wiz.att(new DamageAllEnemiesAction(owner,
                             arr,
                             DamageInfo.DamageType.THORNS,
-                            AbstractGameAction.AttackEffect.NONE,
+                            AbstractGameAction.AttackEffect.FIRE,
                             true));
                     isDone = true;
                 }
