@@ -85,7 +85,7 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
     }
 
     private void setDescriptionAfterLoading() {
-        this.description = this.DESCRIPTIONS[2] + bannedPack + this.DESCRIPTIONS[3];
+        this.description = this.DESCRIPTIONS[2] + packsByID.get(bannedPack).name + this.DESCRIPTIONS[3];
         tips.clear();
         tips.add(new PowerTip(name, description));
         initializeTips();
