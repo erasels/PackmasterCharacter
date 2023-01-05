@@ -17,7 +17,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class HyperBeam extends AbstractDownfallCard {
+public class HyperBeam extends AbstractPackmasterCard {
     public final static String ID = makeID("HyperBeam");
 
 

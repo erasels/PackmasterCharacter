@@ -17,7 +17,7 @@
   },
   "${ModID}:Lighten": {
     "NAME": "Lighten",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a card in hand: 'Retain.' and (NYI) 'Float this'."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a card in hand: 'Retain.' and 'Float this'."
   },
   "${ModID}:Improve": {
     "NAME": "Improve",
@@ -29,7 +29,7 @@
   },
   "${ModID}:Cheapen": {
     "NAME": "Cheapen",
-    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: 'Costs 0.' NL Exhaust, (NYI) unless Amplify 2."
+    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: 'Costs 0.' NL Exhaust, unless Amplify 2."
   },
   "${ModID}:Expand": {
     "NAME": "Expand",

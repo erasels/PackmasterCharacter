@@ -11,7 +11,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class PageOfTheDead extends AbstractCthulhuCard {
+public class PageOfTheDead extends AbstractPackmasterCard {
     public final static String ID = makeID("PageOfTheDead");
 
     public PageOfTheDead() {

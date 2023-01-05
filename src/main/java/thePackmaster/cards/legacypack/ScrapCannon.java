@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
+import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ScrapCannon extends AbstractLegacyCard {
+public class ScrapCannon extends AbstractPackmasterCard {
     public final static String ID = makeID("ScrapCannon");
 
     private static final int ATTACK_DMG = 9;

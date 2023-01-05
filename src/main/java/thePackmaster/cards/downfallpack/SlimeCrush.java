@@ -17,7 +17,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 
-public class SlimeCrush extends AbstractDownfallCard {
+public class SlimeCrush extends AbstractPackmasterCard {
     public final static String ID = makeID("SlimeCrush");
 
 

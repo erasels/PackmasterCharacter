@@ -1,10 +1,7 @@
 package thePackmaster.relics;
 
-import basemod.BaseMod;
-import basemod.abstracts.CustomSavable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
@@ -16,28 +13,43 @@ import thePackmaster.packs.AbstractPackPreviewCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.SpireAnniversary5Mod.packsByID;
 
-public class BanishingDecree extends AbstractPackmasterRelic implements CustomSavable<String> {
+public class BanishingDecree extends AbstractPackmasterRelic //implements CustomBottleRelic, CustomSavable<Integer>
+{
     public static final String ID = makeID("BanishingDecree");
-    public String bannedPack = null;
+    public AbstractCard card = null;
     private boolean cardSelected = true;
 
     public BanishingDecree() {
         super(ID, RelicTier.COMMON, LandingSound.FLAT);
     }
 
-        @Override
-        public String onSave() {
-            return bannedPack;
+    /*
+    @Override
+    public Integer onSave() {
+         //TODO
+        return 0;
+    }
+
+    @Override
+    public void onLoad(Integer cardIndex) {
+        //TODO when pools are saving and loading
+
+        if (cardIndex == null) {
+            return;
+        }
+        if (cardIndex >= 0 && cardIndex < AbstractDungeon.player.masterDeck.group.size()) {
+            card = AbstractDungeon.player.masterDeck.group.get(cardIndex);
+            if (card != null) {
+                BottledD8Patch.inD8.set(card, true);
+                setDescriptionAfterLoading();
+            }
         }
 
-        @Override
-        public void onLoad(String bannedPackID) {
-            bannedPack = bannedPackID;
-            if (bannedPack != null) setDescriptionAfterLoading();
-        }
 
+    }
+    */
+/*
     @Override
     public void onEquip() {
         cardSelected = false;
@@ -56,27 +68,34 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 false, false, false, false);
     }
 
+ */
 
+        /*
     @Override
     public void onUnequip() {
-        if (bannedPack != null) {
-            SpireAnniversary5Mod.currentPoolPacks.add(packsByID.get(bannedPack));
-            CardCrawlGame.dungeon.initializeCardPools();
+        //TODO
+        if (card != null) {
+            AbstractCard cardInDeck = AbstractDungeon.player.masterDeck.getSpecificCard(card);
+            if (cardInDeck != null) {
+                BottledD8Patch.inD8.set(cardInDeck, false);
+            }
         }
 
     }
 
-
+         */
+    /*
     @Override
     public void update() {
         super.update();
         if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             cardSelected = true;
-            AbstractCard card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             AbstractCardPack cp = Wiz.getPackByCard(card);
-            bannedPack = cp.name;
             SpireAnniversary5Mod.currentPoolPacks.remove(cp);
-            CardCrawlGame.dungeon.initializeCardPools();
+            card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+
+            //TODO - will this be needed for saving/loading?
+            //BottledD8Patch.inD8.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
@@ -84,8 +103,20 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
         }
     }
 
+     */
+
+
+    /*
+    @Override
+    public Predicate<AbstractCard> isOnCard() {
+
+        return BottledD8Patch.inD8::get;
+    }
+
+     */
+
     private void setDescriptionAfterLoading() {
-        this.description = this.DESCRIPTIONS[2] + bannedPack + this.DESCRIPTIONS[3];
+        this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
         tips.clear();
         tips.add(new PowerTip(name, description));
         initializeTips();

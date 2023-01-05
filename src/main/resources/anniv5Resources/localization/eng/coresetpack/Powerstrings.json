@@ -1,10 +1,2 @@
 {
-  "${ModID}:MayhemFormPower": {
-    "NAME": "Mayhem Form",
-    "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " [E] and #b",
-      " Block for every 10 cards in your draw pile."
-    ]
-  }
 }

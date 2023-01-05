@@ -5,10 +5,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.strikepack.AddStrikeTagModifier;
+import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Backstrike extends AbstractStrikePackCard {
+public class Backstrike extends AbstractPackmasterCard {
     public final static String ID = makeID("Backstrike");
 
     private static final int BLOCK_VALUE = 12;

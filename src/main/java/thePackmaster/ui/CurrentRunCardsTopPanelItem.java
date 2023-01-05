@@ -57,7 +57,6 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
 
     @Override
     protected void onClick() {
-        //TODO - Close the panel on click if it is already open.
         CardCrawlGame.sound.play("RELIC_DROP_MAGICAL");
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 

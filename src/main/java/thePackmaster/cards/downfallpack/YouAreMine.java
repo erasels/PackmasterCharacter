@@ -16,7 +16,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class YouAreMine extends AbstractDownfallCard {
+public class YouAreMine extends AbstractPackmasterCard {
     public final static String ID = makeID("YouAreMine");
 
     private static final int MAGIC = 2;

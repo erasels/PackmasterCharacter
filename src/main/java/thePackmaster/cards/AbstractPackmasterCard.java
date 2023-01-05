@@ -68,11 +68,6 @@ public abstract class AbstractPackmasterCard extends CustomCard {
             } else
                 needsArtRefresh = true;
         }
-
-        setBackgroundTexture(
-                "anniv5Resources/images/512/coreset/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/coreset/" + type.name().toLowerCase() + ".png"
-        );
     }
 
 

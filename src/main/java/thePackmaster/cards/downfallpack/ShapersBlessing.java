@@ -10,7 +10,7 @@ import thePackmaster.stances.downfallpack.AncientStance;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class ShapersBlessing extends AbstractDownfallCard {
+public class ShapersBlessing extends AbstractPackmasterCard {
     public final static String ID = makeID("ShapersBlessing");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 

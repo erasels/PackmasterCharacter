@@ -2,7 +2,7 @@ package thePackmaster.cards.madsciencepack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
+import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.legacypack.Cannonball;
 import thePackmaster.powers.madsciencepack.PiratifyPower;
 import thePackmaster.powers.madsciencepack.PiratifyPowerUpp;
@@ -10,7 +10,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Piratify extends AbstractMadScienceCard {
+public class Piratify extends AbstractPackmasterCard {
     public final static String ID = makeID("Piratify");
 
     public Piratify() {

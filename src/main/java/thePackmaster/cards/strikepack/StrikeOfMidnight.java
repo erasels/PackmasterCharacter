@@ -8,10 +8,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Dark;
+import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class StrikeOfMidnight extends AbstractStrikePackCard {
+public class StrikeOfMidnight extends AbstractPackmasterCard {
     public final static String ID = makeID("StrikeOfMidnight");
 
     private static final int ATTACK_DMG = 6;

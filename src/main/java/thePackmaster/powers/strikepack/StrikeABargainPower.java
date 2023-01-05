@@ -27,7 +27,7 @@ public class StrikeABargainPower extends AbstractPackmasterPower {
 
     @Override
     public void atEndOfRound() {
-        removeThis();
+        addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
     }
 
     @Override

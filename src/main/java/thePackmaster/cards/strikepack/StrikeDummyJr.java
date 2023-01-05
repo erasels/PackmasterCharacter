@@ -3,12 +3,13 @@ package thePackmaster.cards.strikepack;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.strikepack.StrikeDummyJrPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class StrikeDummyJr extends AbstractStrikePackCard {
+public class StrikeDummyJr extends AbstractPackmasterCard {
     public final static String ID = makeID("StrikeDummyJr");
 
     public StrikeDummyJr() {

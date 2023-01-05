@@ -10,7 +10,7 @@ import thePackmaster.orbs.downfallpack.Ghostflame;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class GhostflameStrike extends AbstractDownfallCard {
+public class GhostflameStrike extends AbstractPackmasterCard {
     public final static String ID = makeID("GhostflameStrike");
 
     public GhostflameStrike() {

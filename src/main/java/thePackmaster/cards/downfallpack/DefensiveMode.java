@@ -8,7 +8,7 @@ import static thePackmaster.util.Wiz.*;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class DefensiveMode extends AbstractDownfallCard {
+public class DefensiveMode extends AbstractPackmasterCard {
     public final static String ID = makeID("DefensiveMode");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 

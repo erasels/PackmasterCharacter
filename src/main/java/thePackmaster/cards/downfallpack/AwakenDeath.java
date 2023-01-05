@@ -12,7 +12,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class AwakenDeath extends AbstractDownfallCard {
+public class AwakenDeath extends AbstractPackmasterCard {
     public final static String ID = makeID("AwakenDeath");
 
     private static final int MAGIC = 20;
