@@ -35,7 +35,7 @@
   },
   "${ModID}:TheSun": {
     "NAME": "The Sun",
-    "DESCRIPTION": "Deal !D! to ALL enemies. NL Apply !M! Vulnerable to the highest HP enemy. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable to the highest HP enemy. NL Exhaust."
   },
   "${ModID}:TheChariot": {
     "NAME": "The Chariot",

@@ -10,11 +10,13 @@
     "NAME": "Banishing Decree",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-        "Upon pickup, choose a Pack. Cards from it will no longer appear in card rewards.",
-        "Choose a card for ",
-        "Cards from the Pack '",
-        "' will no longer appear in card rewards."
-      ]
+      "Upon pickup, choose one of your Packs. Cards from it will no longer appear in card rewards. Then, choose a new Pack to replace it with, and gain up to 3 card rewards from that pack.",
+      "Choose a Pack to banish with ",
+      "Cards from the Pack '",
+      "' will no longer appear in card rewards.",
+      "' will appear in card rewards.",
+      "Choose a Pack to gain with "
+    ]
   },
   "${ModID}:CollectorBadge": {
     "NAME": "Collector Badge",

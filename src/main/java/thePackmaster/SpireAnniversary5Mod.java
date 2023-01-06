@@ -26,8 +26,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -44,10 +42,11 @@ import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.relics.AbstractPackmasterRelic;
+import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
-import thePackmaster.util.Wiz;
 
 import java.nio.charset.StandardCharsets;
+import java.text.MessageFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -69,9 +68,6 @@ public class SpireAnniversary5Mod implements
         PostPowerApplySubscriber,
         StartGameSubscriber,
         CustomSavable<ArrayList<String>> {
-
-    private static UIStrings uiStrings;
-
     public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
     public static HashMap<Class<? extends AbstractCard>, String> cardClassParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <card Class, packID>
     public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
@@ -89,6 +85,7 @@ public class SpireAnniversary5Mod implements
     public static boolean doPackSetup = false;
     public static String lastCardsPackID = null;
     public static boolean openedStarterScreen = false;
+    public static boolean skipDefaultCardRewards = false;
     public static int PACKS_PER_RUN = 7;
     public static CurrentRunCardsTopPanelItem currentRunCardsTopPanelItem;
 
@@ -116,6 +113,8 @@ public class SpireAnniversary5Mod implements
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
+
+    public static boolean selectedCards = false;
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
@@ -196,10 +195,10 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostInitialize() {
-        if (uiStrings == null)
-            uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Main"));
         declarePacks();
         BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
+
+        BaseMod.addCustomScreen(new PackSetupScreen());
 
         currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
         BaseMod.addSaveField("Anniversary5Mod", thismod);
@@ -338,6 +337,13 @@ public class SpireAnniversary5Mod implements
         return pack.cards.get(AbstractDungeon.cardRandomRng.random(0, pack.cards.size() - 1)).makeCopy();
     }
 
+
+    public static ArrayList<AbstractCard> getCardsFromPacks(String pack, int count) {
+        ArrayList<String> quick = new ArrayList<>();
+        quick.add(pack);
+        return getCardsFromPacks(quick, count);
+    }
+
     public static ArrayList<AbstractCard> getCardsFromPacks(ArrayList<String> packs, int count) {
         ArrayList<AbstractCard> cards = new ArrayList<>();
         for (String s : packs
@@ -345,7 +351,7 @@ public class SpireAnniversary5Mod implements
             AbstractCardPack p = packsByID.get(s);
             for (String s2 : p.getCards()
             ) {
-                cards.add(CardLibrary.getCard(s2));
+                cards.add(CardLibrary.getCard(s2).makeCopy());
             }
         }
 
@@ -371,6 +377,15 @@ public class SpireAnniversary5Mod implements
         return valid;
     }
 
+
+    public static ArrayList<AbstractCard> getPreviewCardsNotFromCurrentSet() {
+        ArrayList<AbstractCard> valid = new ArrayList<>();
+        for (AbstractCardPack cp : allPacks) {
+            if (!currentPoolPacks.contains(cp)) valid.add(cp.previewPackCard);
+        }
+        return valid;
+    }
+
     public static ArrayList<AbstractCardPack> getRandomPacks(boolean onlyCurrent, int count) {
         ArrayList<AbstractCardPack> allChoices = new ArrayList<>();
         ArrayList<AbstractCardPack> valid = new ArrayList<>();
@@ -389,54 +404,9 @@ public class SpireAnniversary5Mod implements
         return valid;
     }
 
-
-    private static void startOfGameRandomPacks(int amount) {
-        ArrayList<AbstractCardPack> poolPacks = new ArrayList<>();
-
-        for (AbstractCardPack p : allPacks) {
-            if (!currentPoolPacks.contains(p) && !p.packID.equals(CoreSetPack.ID)) {
-                poolPacks.add(p);
-            }
-        }
-
-        for (int i = 0; i < amount; i++) {
-            AbstractCardPack target = poolPacks.get(AbstractDungeon.cardRandomRng.random(0, poolPacks.size() - 1));
-            BaseMod.logger.info("Randomly selected: " + target.packID);
-            SpireAnniversary5Mod.currentPoolPacks.add(target);
-            poolPacks.remove(target);
-        }
-
-    }
-
-    private static int ongoingPackChoiceOfThrees = 0;
-
-    private static void startOfGamePackChoices(int amount) {
-        ongoingPackChoiceOfThrees = amount;
-        individualPackChoiceOfThree();
-    }
-
-    private static void individualPackChoiceOfThree() {
-        ArrayList<AbstractCardPack> poolPacks = new ArrayList<>();
-
-        for (AbstractCardPack p : allPacks) {
-            if (!currentPoolPacks.contains(p) && !p.packID.equals(CoreSetPack.ID)) {
-                poolPacks.add(p);
-            }
-        }
-
-        CardGroup packChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        for (int i = 0; i < 3; i++) {
-            AbstractCardPack target = poolPacks.get(AbstractDungeon.cardRandomRng.random(0, poolPacks.size() - 1));
-            packChoices.addToBottom(target.previewPackCard);
-            poolPacks.remove(target);
-        }
-
-        BaseMod.logger.info("Queueing a choice between " + packChoices.getCardNames());
-        AbstractDungeon.gridSelectScreen.open(packChoices, 1, false, uiStrings.TEXT[0]);
-    }
-
     public static void startOfGamePackSetup() {
         currentPoolPacks.clear();
+        selectedCards = false;
 
         ArrayList<String> packSetup = new ArrayList<>();
 
@@ -460,11 +430,9 @@ public class SpireAnniversary5Mod implements
 
             switch (setupType) {
                 case MainMenuUIPatch.RANDOM:
-                    BaseMod.logger.info("Adding 1 more pack to random selection later on.");
                     randomsToSetup++;
                     break;
                 case MainMenuUIPatch.CHOICE:
-                    BaseMod.logger.info("Adding 1 more pack to choice-of-3 selection later on.");
                     choicesToSetup++;
                     break;
                 default:
@@ -477,24 +445,7 @@ public class SpireAnniversary5Mod implements
             }
         }
 
-        BaseMod.logger.info("OK, we've looked at all the pack settings.");
-
-        if (randomsToSetup > 0) {
-            BaseMod.logger.info("Let's add randomized packs. We need to add " + randomsToSetup);
-            startOfGameRandomPacks(randomsToSetup);
-        } else {
-            BaseMod.logger.info("No randomized packs to add. Moving on");
-        }
-
-        if (choicesToSetup > 0) {
-            BaseMod.logger.info("There are choices to be made. We need to choose for " + choicesToSetup);
-            startOfGamePackChoices(choicesToSetup);
-        } else {
-            BaseMod.logger.info("No choice packs to add, so we're done. Revealing packs.");
-            startOfGamePackReveals();
-        }
-
-        BaseMod.logger.info("All pack selections made or queued.");
+        BaseMod.openCustomScreen(PackSetupScreen.Enum.PACK_SETUP_SCREEN, randomsToSetup, choicesToSetup);
     }
 
     private static void startOfGamePackReveals() {
@@ -502,41 +453,27 @@ public class SpireAnniversary5Mod implements
         //TODO - Don't render the title screen for act 1
         CardGroup packDisplays = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
-        for (int i = 0; i < PACKS_PER_RUN; i++) {
-            packDisplays.addToBottom(currentPoolPacks.get(i).previewPackCard);
+        if(currentPoolPacks.size() != PACKS_PER_RUN) {
+            BaseMod.logger.error( MessageFormat.format("Less packs in pool than expected: {0}/{1}", currentPoolPacks.size(), PACKS_PER_RUN));
         }
 
-        BaseMod.logger.info(CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
+        for (AbstractCardPack pack : currentPoolPacks) {
+            packDisplays.addToTop(pack.previewPackCard);
+        }
+
         AbstractDungeon.gridSelectScreen.open(packDisplays, 0, true, CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
         //Calling this to fill the card pool after the currentPoolPacks are filled
+        selectedCards = true;
         CardCrawlGame.dungeon.initializeCardPools();
     }
 
     @Override
     public void receivePostUpdate() {
         if (!openedStarterScreen) {
-            if (CardCrawlGame.isInARun() && doPackSetup) {
+            if (CardCrawlGame.isInARun() && doPackSetup && !AbstractDungeon.isScreenUp) {
                 BaseMod.logger.info("Starting Packmaster setup.");
                 startOfGamePackSetup();
                 openedStarterScreen = true;
-            }
-        } else if (ongoingPackChoiceOfThrees > 0) {
-            if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                AbstractCard selected = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-                BaseMod.logger.info("Player selected " + selected.cardID);
-                AbstractCardPack parentPack = Wiz.getPackByCard(selected);
-                BaseMod.logger.info("Card has corresponding parent pack of " + parentPack.packID);
-                currentPoolPacks.add(parentPack);
-
-                AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                ongoingPackChoiceOfThrees -= 1;
-                if (ongoingPackChoiceOfThrees != 0) {
-                    BaseMod.logger.info(ongoingPackChoiceOfThrees + " choices left.");
-                    individualPackChoiceOfThree();
-                } else {
-                    BaseMod.logger.info("No more choices left, displaying the full set of packs.");
-                    startOfGamePackReveals();
-                }
             }
         }
     }

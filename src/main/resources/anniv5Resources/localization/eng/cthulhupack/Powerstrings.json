@@ -9,14 +9,14 @@
   "${ModID}:PageOfTheDeadPower": {
     "NAME": "Page of the Dead",
     "DESCRIPTIONS": [
-      "The next ",
+      "The next #b",
       " Attack(s) played each turn that costs 2 or more is played twice."
     ]
   },
   "${ModID}:AllSeeingPower": {
     "NAME": "All Seeing",
     "DESCRIPTIONS": [
-      "At the end of each turn, Scry ",
+      "At the end of each turn, Scry #b",
       " and take ",
       " damage."
     ]

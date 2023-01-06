@@ -2,13 +2,12 @@ package thePackmaster.cards.intothebreachpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.intothebreachpack.AcidPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
-public class AcidProjector extends AbstractPackmasterCard {
+public class AcidProjector extends IntoTheBreachCard {
     public final static String ID = makeID("AcidProjector");
 
     public AcidProjector() {

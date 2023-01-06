@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -31,49 +30,39 @@ public class BoosterTutor extends AbstractPackmasterCard {
             public void update() {
                 isDone = true;
 
-                ArrayList<String> bannedPacks = new ArrayList<>();
+                //Fill list with non-basic cards from packs
                 ArrayList<AbstractCard> targets = new ArrayList<>();
-
-                for (AbstractCard c : AbstractDungeon.player.drawPile.group
-                ) {
+                for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
                     if (SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null && c.rarity != CardRarity.BASIC) {
                         targets.add(c);
                     }
                 }
 
-                boolean cardFound = false;
-
+                //Add cards equals to magicNumber into your hand, if into discard
                 for (int i = 0; i < magicNumber; i++) {
-                    if (targets.size() == 0) return;
+                    if (targets.isEmpty()) return;
 
-                    AbstractCard current = targets.get(AbstractDungeon.cardRandomRng.random(0, targets.size() - 1));
-
+                    AbstractCard current = Wiz.getRandomItem(targets, AbstractDungeon.cardRandomRng);
                     if (current != null) {
-                        if (!bannedPacks.contains(SpireAnniversary5Mod.cardParentMap.get(current.cardID))) {
-                            cardFound = true;
-                            bannedPacks.add(SpireAnniversary5Mod.cardParentMap.get(current.cardID));
-                            if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
-                                AbstractDungeon.player.drawPile.moveToDiscardPile(current);
-                                AbstractDungeon.player.createHandIsFullDialog();
-                            } else {
-                                current.unhover();
-                                current.lighten(true);
-                                current.setAngle(0.0F);
-                                current.drawScale = 0.12F;
-                                current.targetDrawScale = 0.75F;
-                                current.current_x = CardGroup.DRAW_PILE_X;
-                                current.current_y = CardGroup.DRAW_PILE_Y;
-                                AbstractDungeon.player.drawPile.removeCard(current);
-                                AbstractDungeon.player.hand.addToTop(current);
-                                AbstractDungeon.player.hand.refreshHandLayout();
-                                AbstractDungeon.player.hand.applyPowers();
-                            }
-                            targets.remove(current);
+                        String parentID = SpireAnniversary5Mod.cardParentMap.get(current.cardID);
+                        if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
+                            AbstractDungeon.player.drawPile.moveToDiscardPile(current);
+                            AbstractDungeon.player.createHandIsFullDialog();
+                        } else {
+                            current.unhover();
+                            current.lighten(true);
+                            current.setAngle(0.0F);
+                            current.drawScale = 0.12F;
+                            current.targetDrawScale = 0.75F;
+                            current.current_x = CardGroup.DRAW_PILE_X;
+                            current.current_y = CardGroup.DRAW_PILE_Y;
+                            AbstractDungeon.player.drawPile.removeCard(current);
+                            AbstractDungeon.player.hand.addToTop(current);
+                            AbstractDungeon.player.hand.refreshHandLayout();
+                            AbstractDungeon.player.hand.applyPowers();
                         }
-                    }
-                    if (!cardFound) {
-                        targets.remove(current);  //Means the current card was not eligible.
-                        i--;
+                        //Remove all cards from targets that have the same parent as card added to hand
+                        targets.removeIf(c -> SpireAnniversary5Mod.cardParentMap.get(c.cardID).equals(parentID));
                     }
                 }
             }
