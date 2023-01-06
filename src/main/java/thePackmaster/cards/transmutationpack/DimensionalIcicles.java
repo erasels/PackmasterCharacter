@@ -12,7 +12,7 @@ public class DimensionalIcicles extends AbstractHydrologistCard {
     // intellij stuff attack, enemy, uncommon, 3, , 2, 1, , 
 
     public DimensionalIcicles() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, Subtype.ICE);
         baseDamage = 3;
         baseBlock = 2;
     }

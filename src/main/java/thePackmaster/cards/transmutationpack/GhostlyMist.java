@@ -12,7 +12,7 @@ public class GhostlyMist extends AbstractHydrologistCard {
     // intellij stuff skill, none, rare, , , , , 5, 
 
     public GhostlyMist() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE, Subtype.STEAM);
         baseMagicNumber = magicNumber = 5;
     }
 

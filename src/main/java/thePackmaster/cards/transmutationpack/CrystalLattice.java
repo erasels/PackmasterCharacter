@@ -12,7 +12,7 @@ public class CrystalLattice extends AbstractHydrologistCard {
     // intellij stuff SKILL, NONE, UNCOMMON, , , , , 2, 1
 
     public CrystalLattice() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE, Subtype.ICE);
         baseMagicNumber = magicNumber = 2;
     }
 

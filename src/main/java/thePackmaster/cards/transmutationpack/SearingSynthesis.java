@@ -12,7 +12,7 @@ public class SearingSynthesis extends AbstractHydrologistCard {
     // intellij stuff ATTACK, ENEMY, COMMON, 9, , , , 1, 1
 
     public SearingSynthesis() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, Subtype.STEAM);
         baseDamage = 9;
         baseMagicNumber = magicNumber = 1;
     }

@@ -12,7 +12,7 @@ public class GlacialSynthesis extends AbstractHydrologistCard {
     // intellij stuff SKILL, SELF, COMMON, , , 7, , 1, 1
 
     public GlacialSynthesis() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, Subtype.ICE);
         baseBlock = 7;
         baseMagicNumber = magicNumber = 1;
     }

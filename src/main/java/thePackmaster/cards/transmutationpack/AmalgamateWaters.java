@@ -12,7 +12,7 @@ public class AmalgamateWaters extends AbstractHydrologistCard {
     // intellij stuff , none, rare, , , , , , 
 
     public AmalgamateWaters() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.NONE, Subtype.WATER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

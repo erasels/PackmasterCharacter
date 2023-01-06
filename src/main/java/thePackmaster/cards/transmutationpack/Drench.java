@@ -12,7 +12,7 @@ public class Drench extends AbstractHydrologistCard {
     // intellij stuff ATTACK, ENEMY, UNCOMMON, 6, 2, 5, 2, , 
 
     public Drench() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, Subtype.WATER);
         baseDamage = 6;
         baseBlock = 5;
     }

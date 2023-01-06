@@ -12,7 +12,7 @@ public class ViscousShell extends AbstractHydrologistCard {
     // intellij stuff SKILL, SELF, COMMON, , , 5, 3, , 
 
     public ViscousShell() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, Subtype.WATER);
         baseBlock = 5;
     }
 

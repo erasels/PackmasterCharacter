@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.transmutationpack.TransmuteCardAction;
+import thePackmaster.cards.transmutationpack.AbstractHydrologistCard;
 
 import java.util.HashMap;
 
@@ -31,8 +32,8 @@ public class TransmuteCardEffect extends AbstractGameEffect {
     private static final float PARTICLE_SPAWN_WIDTH = 300.0f;
     private static final int PARTICLES_PER_SECOND = 60;
     private static final float DURATION_PER_PARTICLE = 1.0f / PARTICLES_PER_SECOND;
-    private static final TextureRegion MASK = new TextureRegion(new Texture("anniv5Resources/images/vfx/transmutationpack/TransmuteMask.png"), 512, 1024);
-    private static final TextureRegion LINE = new TextureRegion(new Texture("anniv5Resources/images/vfx/transmutationpack/TransmuteLine.png"), 512, 1024);
+    private static final TextureRegion MASK = new TextureRegion(new Texture(SpireAnniversary5Mod.makePath("images/vfx/transmutationpack/TransmuteMask.png")), 512, 1024);
+    private static final TextureRegion LINE = new TextureRegion(new Texture(SpireAnniversary5Mod.makePath("images/vfx/transmutationpack/TransmuteLine.png")), 512, 1024);
     private final HashMap<AbstractCard, TextureRegion> textureMap = new HashMap<>();
     private final HashMap<AbstractCard, AbstractCard> transmutedPairs;
     private final TransmuteCardAction action;
@@ -189,7 +190,7 @@ public class TransmuteCardEffect extends AbstractGameEffect {
                     float x = center_x + (AbstractDungeon.miscRng.random(0.0f, PARTICLE_SPAWN_WIDTH * Settings.scale) - ((PARTICLE_SPAWN_WIDTH * Settings.scale) / 2));
                     if (x < card.hb.x + card.hb.height) {
                         float y = center_y + (AbstractDungeon.miscRng.random(0.0f, PARTICLE_SPAWN_HEIGHT * Settings.scale) - ((PARTICLE_SPAWN_HEIGHT * Settings.scale) / 2));
-                        AbstractDungeon.topLevelEffectsQueue.add(new HydrologistParticle(x, y, rotation, scale));
+                        AbstractDungeon.topLevelEffectsQueue.add(new HydrologistParticle(AbstractHydrologistCard.Subtype.WATER, x, y, rotation, scale));
                     }
                 }
             }

@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.transmutationpack.HydrologistDamageAction;
+import thePackmaster.cards.transmutationpack.AbstractHydrologistCard;
 
 import java.util.ArrayList;
 
@@ -28,12 +30,12 @@ public class DamageEffect extends AbstractExtraEffectModifier {
 
     @Override
     public void doExtraEffects(AbstractCard card, AbstractPlayer p, AbstractCreature m) {
-        //if (attachedCard instanceof AbstractHydrologistCard) {
-        //    AbstractHydrologistCard elementalCard = (AbstractHydrologistCard)attachedCard;
-        //    addToBot(new HydrologistDamageAction(elementalCard.getHydrologistSubtype(), m, new DamageInfo(p, value, DamageInfo.DamageType.NORMAL)));
-        //} else {
+        if (attachedCard instanceof AbstractHydrologistCard) {
+            AbstractHydrologistCard elementalCard = (AbstractHydrologistCard)attachedCard;
+            addToBot(new HydrologistDamageAction(elementalCard.getSubtype(), m, new DamageInfo(p, value, DamageInfo.DamageType.NORMAL)));
+        } else {
             addToBot(new DamageAction(m, new DamageInfo(p, value, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
-        //}
+        }
     }
 
     @Override

@@ -12,7 +12,7 @@ public class FrozenCapsule extends AbstractHydrologistCard {
     // intellij stuff attack, enemy, rare, 8, , , , 1, 1
 
     public FrozenCapsule() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, Subtype.ICE);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 1;
     }
