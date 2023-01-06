@@ -295,6 +295,9 @@ public class TransmuteCardAction extends AbstractGameAction {
                     ((AbstractExtraEffectModifier) effect).onCardTransmuted(oldCard, newCard);
                 }
             }
+            if (effect instanceof PurityModifier) {
+                CardModifierManager.addModifier(newCard, effect.makeCopy());
+            }
         }
         newCard.applyPowers();
     }
