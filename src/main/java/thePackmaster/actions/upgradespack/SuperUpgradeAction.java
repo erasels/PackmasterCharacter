@@ -2,6 +2,7 @@ package thePackmaster.actions.upgradespack;
 
 import basemod.BaseMod;
 import com.badlogic.gdx.utils.compression.lzma.Base;
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.BranchingUpgradesCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -44,21 +45,26 @@ public class SuperUpgradeAction extends AbstractGameAction {
 
         int originalCost = CardLibrary.getCard(card.cardID).cost;
         int diff = card.costForTurn - card.cost;
-        BaseMod.logger.info("Original cost of " + card + " is " + originalCost);
 
         card.upgraded = false;
-        card.upgrade();
+        if (card instanceof BranchingUpgradesCard) {
+            BranchingUpgradesCard c = (BranchingUpgradesCard)card;
+            if (c.isBranchUpgrade()) {
+                c.doBranchUpgrade();
+            } else {
+                c.doNormalUpgrade();
+            }
+        } else {
+            card.upgrade();
+        }
         if (card.baseMagicNumber < 1) {
             card.baseMagicNumber = card.magicNumber = oldMagic;
         }
 
-        BaseMod.logger.info("Upgraded cost of " + card + " is " + card.cost);
 
 
         int costReduction = originalCost - card.cost;
-        BaseMod.logger.info("Cost reduction of " + card + " is " + costReduction);
         if (oldCost >= 0 && oldCost - costReduction >= 0) {
-            BaseMod.logger.info("Changing cost to "+ (oldCost - costReduction));
             int newBaseCost = oldCost - costReduction;
 
 
@@ -77,6 +83,9 @@ public class SuperUpgradeAction extends AbstractGameAction {
         AbstractDungeon.topLevelEffects.add(new LightUpgradeShineEffect(card.current_x, card.current_y));
         if (card.timesUpgraded > 1) {
             card.name = card.originalName + "+" + card.timesUpgraded;
+        }
+        if (card.timesUpgraded < 1) {
+            card.name = card.originalName + "*" + (-card.timesUpgraded);
         }
     }
 }

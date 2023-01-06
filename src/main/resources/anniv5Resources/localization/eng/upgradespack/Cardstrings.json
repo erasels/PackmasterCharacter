@@ -25,7 +25,7 @@
   },
   "${ModID}:MastersStrike": {
     "NAME": "Master's Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each one of your Upgrades."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each Upgrade on ALL your cards."
   },
   "${ModID}:ScrapMetal": {
     "NAME": "Scrap Metal",
@@ -37,6 +37,6 @@
   },
   "${ModID}:Masterwork": {
     "NAME": "Masterwork",
-    "DESCRIPTION": "{@@}Upgrade a card{!M!|2= twice|>2= !M! times}. NL Can upgrade all cards any number of times."
+    "DESCRIPTION": "{@@}Upgrade a card{!M!|2= twice|>2= !M! times}. NL Can upgrade cards any number of times."
   }
 }

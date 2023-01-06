@@ -14,7 +14,7 @@ public class MastersStrike extends AbstractPackmasterCard {
 
     public MastersStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 10;
         baseMagicNumber = magicNumber = 1;
         tags.add(CardTags.STRIKE);
     }
@@ -36,15 +36,27 @@ public class MastersStrike extends AbstractPackmasterCard {
         int count = 0;// 36
 
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-            count += c.timesUpgraded;
+            if (c.timesUpgraded < 0) {
+                count -= c.timesUpgraded;
+            } else {
+                count += c.timesUpgraded;
+            }
         }
 
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            count += c.timesUpgraded;
+            if (c.timesUpgraded < 0) {
+                count -= c.timesUpgraded;
+            } else {
+                count += c.timesUpgraded;
+            }
         }
 
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            count += c.timesUpgraded;
+            if (c.timesUpgraded < 0) {
+                count -= c.timesUpgraded;
+            } else {
+                count += c.timesUpgraded;
+            }
         }
 
         return count;// 52

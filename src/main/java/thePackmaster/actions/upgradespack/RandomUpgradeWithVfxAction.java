@@ -23,14 +23,11 @@ public class RandomUpgradeWithVfxAction extends AbstractGameAction {
         if (duration == Settings.ACTION_DUR_XFAST) {
             CardGroup upgradables = group.getUpgradableCards();
             if (upgradables.size() >= 1) {
-                AbstractCard c = upgradables.getRandomCard(true);
-                //if (group.type == CardGroup.CardGroupType.HAND) {
-                    AbstractDungeon.topLevelEffects.add(new LightUpgradeShineEffect(c.current_x, c.current_y));
-                //}
+                int r = AbstractDungeon.cardRandomRng.random(upgradables.size() -1);
+                AbstractCard c = upgradables.group.get(r);
+                AbstractDungeon.topLevelEffects.add(new LightUpgradeShineEffect(c.current_x, c.current_y));
                 c.upgrade();
-                BaseMod.logger.info("Upgraded " + c);
                 if (amount > 1) {
-                    BaseMod.logger.info("Added action with amount " + (amount - 1));
                     addToBot(new RandomUpgradeWithVfxAction(amount - 1, group));
                 }
             }

@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 public class SetUpShop extends AbstractPackmasterCard {
 
     public final static String ID = SpireAnniversary5Mod.makeID("SetUpShop");
-
+    private static final String SCREEN_MSG = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("SetUpShopScreen")).TEXT[0];
 
     public SetUpShop() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -20,7 +20,7 @@ public class SetUpShop extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        String SCREEN_MSG = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("SetUpShopScreen")).TEXT[0];
+
         addToBot(new MultiGroupSelectAction(SCREEN_MSG,(list,map) ->
         {
             for (AbstractCard c : list) {
