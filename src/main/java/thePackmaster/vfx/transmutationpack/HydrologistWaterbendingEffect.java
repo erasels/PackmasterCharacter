@@ -56,6 +56,7 @@ public class HydrologistWaterbendingEffect extends AbstractGameEffect {
     private final HashMap<Coordinates, Float> times;
     private float timer;
     private AbstractHydrologistCard.Subtype type;
+    private boolean controlled = false;
 
     //add to this to define tile modes
     private static HashMap<AbstractHydrologistCard.Subtype, BehaviourPackage> effectsMap;
@@ -154,12 +155,18 @@ public class HydrologistWaterbendingEffect extends AbstractGameEffect {
 
     public void set(Vector2 coords) {
         Coordinates point = new Coordinates(coords.x, coords.y);
-        spline.add(point);
-        times.put(point, Gdx.graphics.getDeltaTime());
+        recordPoint(point);
+        controlled = true;
     }
 
     @Override
     public void update() {
+        if (!controlled) {
+            Coordinates last = spline.get(spline.size() - 1).cpy();
+            recordPoint(last);
+        } else {
+            controlled = false;
+        }
         float length = 0.0f;
         for (float time : times.values()) {
             length += time;
@@ -172,6 +179,24 @@ public class HydrologistWaterbendingEffect extends AbstractGameEffect {
         }
         timer = effectsMap.get(type).updater.apply(timer);
         currentWaterTile = (int)Math.floor((timer / WATER_ANIMATION_DURATION) * waterTileCount);
+        if (spline.size() > 2) {
+            Coordinates last = spline.get(spline.size() - 1);
+            boolean allSame = true;
+            for (Coordinates vector : spline) {
+                if (!vector.isSame(last)) {
+                    allSame = false;
+                    break;
+                }
+            }
+            if (allSame) {
+                isDone = true;
+            }
+        }
+    }
+
+    private void recordPoint(Coordinates point) {
+        spline.add(point);
+        times.put(point, Gdx.graphics.getDeltaTime());
     }
 
     @Override
@@ -410,6 +435,10 @@ public class HydrologistWaterbendingEffect extends AbstractGameEffect {
         public void add(int x, int y) {
             this.x += x;
             this.y += y;
+        }
+
+        public boolean isSame(Coordinates other) {
+            return x == other.x && y == other.y;
         }
     }
 }

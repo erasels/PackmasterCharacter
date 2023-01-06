@@ -12,9 +12,9 @@ import thePackmaster.cards.transmutationpack.AbstractHydrologistCard;
 import java.util.HashMap;
 
 public class HydrologistParticle extends AbstractGameEffect {
-    private static final Texture ICE_TEXTURE = new Texture(SpireAnniversary5Mod.makePath("images/vfx/IceSprite.png"));
-    private static final Texture WATER_TEXTURE = new Texture(SpireAnniversary5Mod.makePath("images/vfx/WaterSprite.png"));
-    private static final Texture STEAM_TEXTURE = new Texture(SpireAnniversary5Mod.makePath("images/vfx/SteamSprite.png"));
+    private static final Texture ICE_TEXTURE = new Texture(SpireAnniversary5Mod.makePath("images/vfx/transmutationpack/IceSprite.png"));
+    private static final Texture WATER_TEXTURE = new Texture(SpireAnniversary5Mod.makePath("images/vfx/transmutationpack/WaterSprite.png"));
+    private static final Texture STEAM_TEXTURE = new Texture(SpireAnniversary5Mod.makePath("images/vfx/transmutationpack/SteamSprite.png"));
     private static final TextureRegion[] ICE = new TextureRegion[6];
     private static final TextureRegion[] WATER = new TextureRegion[8];
     private static final TextureRegion[] STEAM = new TextureRegion[9];
@@ -30,6 +30,9 @@ public class HydrologistParticle extends AbstractGameEffect {
     private int index = 0;
 
     public HydrologistParticle(AbstractHydrologistCard.Subtype type, float x, float y, float rotation, float scale) {
+        if (WATER[0] == null) {
+            initializeRegions();
+        }
         if (type != null) {
             region = regions.get(type);
         } else {
@@ -79,9 +82,6 @@ public class HydrologistParticle extends AbstractGameEffect {
     }
 
     public void render(SpriteBatch sb) {
-        if (WATER[0] == null) {
-            initializeRegions();
-        }
         TextureRegion img = region[index];
         float w = img.getRegionWidth();
         float h = img.getRegionHeight();

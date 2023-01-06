@@ -83,7 +83,7 @@ public class HydrologistDamageAction extends AbstractGameAction {
         Random random = new Random();
         float width = info.owner.hb_w;
         float height = info.owner.hb_h;
-        return new Vector2(random.nextFloat() * width + info.owner.hb_x, random.nextFloat() * height + info.owner.hb_y);
+        return new Vector2(random.nextFloat() * width + info.owner.drawX, random.nextFloat() * height + info.owner.drawY);
     }
 
     private void doDamage() {
