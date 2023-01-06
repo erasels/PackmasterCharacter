@@ -2,7 +2,7 @@
   "${ModID}:StrikeDummyJrPower": {
     "NAME": "Strike Dummy Jr.",
     "DESCRIPTIONS": [
-      "Your Strikes deal ",
+      "Your Strikes deal #b",
       " more damage."
     ]
   },
@@ -25,7 +25,7 @@
   "${ModID}:StrikeABargainPower": {
     "NAME": "Strike a Bargain",
     "DESCRIPTIONS": [
-      "Your Attacks cost 0 this turn, but you cannot play non-Attacks."
+      "Your Attacks cost #b0 this turn, but you cannot play non-Attacks."
     ]
   }
 }
