@@ -20,6 +20,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.transmutationpack.TransmuteCardAction;
 import thePackmaster.cards.transmutationpack.AbstractHydrologistCard;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TransmuteCardEffect extends AbstractGameEffect {
@@ -34,13 +35,11 @@ public class TransmuteCardEffect extends AbstractGameEffect {
     private static final float DURATION_PER_PARTICLE = 1.0f / PARTICLES_PER_SECOND;
     private static final TextureRegion MASK = new TextureRegion(new Texture(SpireAnniversary5Mod.makePath("images/vfx/transmutationpack/TransmuteMask.png")), 512, 1024);
     private static final TextureRegion LINE = new TextureRegion(new Texture(SpireAnniversary5Mod.makePath("images/vfx/transmutationpack/TransmuteLine.png")), 512, 1024);
+    private static final ArrayList<BufferWrapper> bufferCache = new ArrayList<>();
     private final HashMap<AbstractCard, TextureRegion> textureMap = new HashMap<>();
     private final HashMap<AbstractCard, AbstractCard> transmutedPairs;
     private final TransmuteCardAction action;
     private final CardGroup.CardGroupType targetGroup;
-    private final FrameBuffer fb1;
-    private final FrameBuffer fb2;
-    private final FrameBuffer fb3;
     private float offsetPercent;
     private float particleTimer;
 
@@ -50,9 +49,6 @@ public class TransmuteCardEffect extends AbstractGameEffect {
         this.targetGroup = targetGroup;
         this.duration = duration;
         this.startingDuration = duration;
-        fb1 = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
-        fb2 = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
-        fb3 = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
     }
 
     @Override
@@ -64,6 +60,7 @@ public class TransmuteCardEffect extends AbstractGameEffect {
             AbstractCard copyCard = keyCard.makeStatEquivalentCopy();
             sb.end();
 
+            FrameBuffer fb1 = getUnusedBuffer();
             fb1.begin();
             Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
             Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
@@ -84,6 +81,7 @@ public class TransmuteCardEffect extends AbstractGameEffect {
             TextureRegion tmpMask = new TextureRegion(fb1.getColorBufferTexture());
             tmpMask.flip(false, true);
 
+            FrameBuffer fb2 = getUnusedBuffer();
             fb2.begin();
             Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
             Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
@@ -106,6 +104,7 @@ public class TransmuteCardEffect extends AbstractGameEffect {
             TextureRegion tmpLine = new TextureRegion(fb2.getColorBufferTexture());
             tmpLine.flip(false, true);
 
+            FrameBuffer fb3 = getUnusedBuffer();
             fb3.begin();
             Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
             Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
@@ -143,6 +142,7 @@ public class TransmuteCardEffect extends AbstractGameEffect {
                 sb.draw(img,card.current_x - 256f,card.current_y - 256f,256f,256f, img.getRegionWidth(), img.getRegionHeight(),card.drawScale * Settings.scale,card.drawScale * Settings.scale, card.angle);
             }
         }
+        resetBuffers();
     }
 
     private void setCardAttributes(AbstractCard card) {
@@ -264,8 +264,30 @@ public class TransmuteCardEffect extends AbstractGameEffect {
 
     @Override
     public void dispose() {
-        fb1.dispose();
-        fb2.dispose();
-        fb3.dispose();
+        bufferCache.forEach(buffer -> buffer.buffer.dispose());
+    }
+
+    private void resetBuffers() {
+        for (BufferWrapper bufferWrapper : bufferCache) {
+            bufferWrapper.inUse = false;
+        }
+    }
+
+    private FrameBuffer getUnusedBuffer() {
+        for (BufferWrapper buffer : bufferCache) {
+            if (!buffer.inUse) {
+                buffer.inUse = true;
+                return buffer.buffer;
+            }
+        }
+        BufferWrapper newBuffer = new BufferWrapper();
+        newBuffer.inUse = true;
+        bufferCache.add(newBuffer);
+        return newBuffer.buffer;
+    }
+
+    private static class BufferWrapper {
+        private boolean inUse = false;
+        private final FrameBuffer buffer = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false, false);
     }
 }
