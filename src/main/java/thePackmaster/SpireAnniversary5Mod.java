@@ -26,8 +26,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -48,6 +46,7 @@ import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.util.Wiz;
 
 import java.nio.charset.StandardCharsets;
+import java.text.MessageFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -521,11 +520,14 @@ public class SpireAnniversary5Mod implements
         //TODO - Don't render the title screen for act 1
         CardGroup packDisplays = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
-        for (int i = 0; i < PACKS_PER_RUN; i++) {
-            packDisplays.addToBottom(currentPoolPacks.get(i).previewPackCard);
+        if(currentPoolPacks.size() != PACKS_PER_RUN) {
+            BaseMod.logger.error( MessageFormat.format("Less packs in pool than expected: {0}/{1}", currentPoolPacks.size(), PACKS_PER_RUN));
         }
 
-        BaseMod.logger.info(CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
+        for (AbstractCardPack pack : currentPoolPacks) {
+            packDisplays.addToTop(pack.previewPackCard);
+        }
+
         AbstractDungeon.gridSelectScreen.open(packDisplays, 0, true, CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
         //Calling this to fill the card pool after the currentPoolPacks are filled
         selectedCards = true;
