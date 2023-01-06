@@ -21,7 +21,6 @@ public class RenderBaseGameCardPackTopTextPatches {
     public static void patch(AbstractCard __instance, SpriteBatch sb) {
         if(!Settings.hideCards && AbstractDungeon.player != null &&
                 AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER && __instance.getClass().getSuperclass().equals(AbstractCard.class)) {
-            System.out.println(__instance.name);
             AbstractCardPack pack = Wiz.getPackByCard(__instance);
             if (pack != null) {
                 float xPos, yPos, offsetY;
