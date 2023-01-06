@@ -9,7 +9,7 @@
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
-    "DESCRIPTION": "Deal !D! damage. NL (NYI) Apply !M! Distortion."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Distortion."
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
