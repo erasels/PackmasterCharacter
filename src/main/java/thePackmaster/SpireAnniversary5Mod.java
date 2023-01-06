@@ -117,6 +117,8 @@ public class SpireAnniversary5Mod implements
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
 
+    public static boolean selectedCards = false;
+
     public static String makeID(String idText) {
         return modID + ":" + idText;
     }
@@ -436,6 +438,7 @@ public class SpireAnniversary5Mod implements
 
     public static void startOfGamePackSetup() {
         currentPoolPacks.clear();
+        selectedCards = false;
 
         ArrayList<String> packSetup = new ArrayList<>();
 
@@ -508,6 +511,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.logger.info(CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
         AbstractDungeon.gridSelectScreen.open(packDisplays, 0, true, CardCrawlGame.languagePack.getUIString(makeID("AtGameStart")).TEXT[0]);
         //Calling this to fill the card pool after the currentPoolPacks are filled
+        selectedCards = true;
         CardCrawlGame.dungeon.initializeCardPools();
     }
 
