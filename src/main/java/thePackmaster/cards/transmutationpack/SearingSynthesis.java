@@ -1,7 +1,10 @@
 package thePackmaster.cards.transmutationpack;
 
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.actions.transmutationpack.HydrologistDamageAction;
+import thePackmaster.actions.transmutationpack.TransmuteCardAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -18,7 +21,8 @@ public class SearingSynthesis extends AbstractHydrologistCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        hydrologistDamage(p, m, damage);
+        atb(new TransmuteCardAction(magicNumber));
     }
 
     public void upp() {

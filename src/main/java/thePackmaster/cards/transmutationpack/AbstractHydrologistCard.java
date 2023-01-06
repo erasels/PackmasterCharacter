@@ -1,5 +1,9 @@
 package thePackmaster.cards.transmutationpack;
 
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.actions.transmutationpack.HydrologistDamageAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractHydrologistCard extends AbstractPackmasterCard {
@@ -16,6 +20,10 @@ public abstract class AbstractHydrologistCard extends AbstractPackmasterCard {
                 "anniv5Resources/images/1024/hydrologist/orb.png"
         );
         this.subtype = subtype;
+    }
+
+    protected void hydrologistDamage(AbstractPlayer source, AbstractMonster target, int damage) {
+        addToBot(new HydrologistDamageAction(getSubtype(), target, new DamageInfo(source, damage)));
     }
 
     public Subtype getSubtype() {
