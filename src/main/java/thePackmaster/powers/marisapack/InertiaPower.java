@@ -16,7 +16,6 @@ public class InertiaPower extends AbstractPackmasterPower implements CloneablePo
 
     public InertiaPower(int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, Wiz.p(), amount);
-        this.loadRegion("rupture");
     }
 
     @Override

@@ -20,7 +20,6 @@ public class EarthlightRayPower extends AbstractPackmasterPower implements Clone
 
     public EarthlightRayPower(int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, Wiz.p(), amount);
-        this.loadRegion("rupture");
     }
 
     @Override
