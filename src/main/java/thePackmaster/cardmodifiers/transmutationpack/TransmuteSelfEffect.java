@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.transmutationpack.TransmuteCardAction;
+import thePackmaster.cards.transmutationpack.GhostlyMist;
 
 @AbstractCardModifier.SaveIgnore
 public class TransmuteSelfEffect extends AbstractExtraEffectModifier {
@@ -40,6 +41,9 @@ public class TransmuteSelfEffect extends AbstractExtraEffectModifier {
 
     @Override
     public boolean shouldApply(AbstractCard card) {
+        if (card instanceof GhostlyMist) {
+            return false;
+        }
         return !CardModifierManager.hasModifier(card, ID);
     }
 
