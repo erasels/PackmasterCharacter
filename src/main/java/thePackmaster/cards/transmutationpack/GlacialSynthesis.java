@@ -1,8 +1,9 @@
 package thePackmaster.cards.transmutationpack;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.actions.transmutationpack.TransmuteCardAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
@@ -18,7 +19,8 @@ public class GlacialSynthesis extends AbstractHydrologistCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        atb(new GainBlockAction(p, block));
+        atb(new TransmuteCardAction(magicNumber));
     }
 
     public void upp() {
