@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class EnrageShot extends AbstractPackmasterCard {
+public class EnrageShot extends IntoTheBreachCard {
     public final static String ID = makeID("EnrageShot");
 
     public EnrageShot() {

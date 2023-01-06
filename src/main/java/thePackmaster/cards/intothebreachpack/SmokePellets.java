@@ -9,7 +9,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.getEnemies;
 
-public class SmokePellets extends AbstractPackmasterCard {
+public class SmokePellets extends IntoTheBreachCard {
     public final static String ID = makeID("SmokePellets");
 
     public SmokePellets() {

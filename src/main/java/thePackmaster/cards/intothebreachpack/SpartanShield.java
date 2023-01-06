@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class SpartanShield extends AbstractPackmasterCard {
+public class SpartanShield extends IntoTheBreachCard {
     public final static String ID = makeID("SpartanShield");
 
     public SpartanShield() {

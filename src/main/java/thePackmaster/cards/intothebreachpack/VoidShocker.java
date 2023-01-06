@@ -8,7 +8,7 @@ import thePackmaster.powers.intothebreachpack.VoidShockPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class VoidShocker extends AbstractPackmasterCard {
+public class VoidShocker extends IntoTheBreachCard {
     public final static String ID = makeID("VoidShocker");
 
     public VoidShocker() {

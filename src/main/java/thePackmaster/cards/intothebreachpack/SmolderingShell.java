@@ -13,7 +13,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.getEnemies;
 
-public class SmolderingShell extends AbstractPackmasterCard {
+public class SmolderingShell extends IntoTheBreachCard {
     public final static String ID = makeID("SmolderingShell");
 
     public SmolderingShell() {

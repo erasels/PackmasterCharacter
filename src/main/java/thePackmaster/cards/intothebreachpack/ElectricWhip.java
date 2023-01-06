@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ElectricWhip extends AbstractPackmasterCard {
+public class ElectricWhip extends IntoTheBreachCard {
     public final static String ID = makeID("ElectricWhip");
 
     public ElectricWhip() {
