@@ -35,7 +35,7 @@ public class GemOfUnity extends AbstractPackmasterRelic {
     public void resetCounter(){
         if (AbstractDungeon.isPlayerInDungeon()) {
             packsPlayed.clear();
-            counter = SpireAnniversary5Mod.PACKS_PER_RUN;
+            counter = SpireAnniversary5Mod.currentPoolPacks.size();
             if (AbstractDungeon.player.hasRelic(BanishingDecree.ID)) counter--;
             this.description = getUpdatedDescription();
             tips.clear();
