@@ -41,5 +41,37 @@
   "${ModID}:DimensionalIcicles": {
     "NAME": "Dimensional Icicles",
     "DESCRIPTION": "Deal !D! damage !B! times. The number of hits is affected by Block modifiers."
+  },
+  "${ModID}:AbstractExtraEffectModifier": {
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Mutable: ",
+      " ",
+      " times.",
+      "."
+    ]
+  },
+  "${ModID}:DamageEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Deal ",
+      " damage"
+    ]
+  },
+  "${ModID}:DrawCardEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Draw a card.",
+      "Draw ",
+      " cards."
+    ]
+  },
+  "${ModID}:GainBlockEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Gain ",
+      " Block"
+    ]
+  },
+  "${ModID}:TransmuteSelfEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Transmute this card."
+    ]
   }
 }

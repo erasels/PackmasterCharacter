@@ -31,6 +31,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import thePackmaster.actions.distortionpack.ImproveAction;
+import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
@@ -111,6 +112,26 @@ public class SpireAnniversary5Mod implements
     private static final String ELEPHANT_OGG = makePath("audio/summonspack/Elephant.ogg");
     public static final String PEW_KEY = makeID("Pew");
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
+    public static final String TRANSMUTATION_KEY = makeID("Transmutation");
+    private static final String TRANSMUTATION_OGG = makePath("audio/transmutationpack/Transmutation.ogg");
+    public static final String WATER_IMPACT_1_KEY = makeID("WaterImpactOne");
+    private static final String WATER_IMPACT_1_OGG = makePath("audio/transmutationpack/WaterImpactOne.ogg");
+    public static final String WATER_IMPACT_2_KEY = makeID("WaterImpactTwo");
+    private static final String WATER_IMPACT_2_OGG = makePath("audio/transmutationpack/WaterImpactTwo.ogg");
+    public static final String WATER_IMPACT_3_KEY = makeID("WaterImpactThree");
+    private static final String WATER_IMPACT_3_OGG = makePath("audio/transmutationpack/WaterImpactThree.ogg");
+    public static final String ICE_IMPACT_1_KEY = makeID("IceImpactOne");
+    private static final String ICE_IMPACT_1_OGG = makePath("audio/transmutationpack/IceImpactOne.ogg");
+    public static final String ICE_IMPACT_2_KEY = makeID("IceImpactTwo");
+    private static final String ICE_IMPACT_2_OGG = makePath("audio/transmutationpack/IceImpactTwo.ogg");
+    public static final String ICE_IMPACT_3_KEY = makeID("IceImpactThree");
+    private static final String ICE_IMPACT_3_OGG = makePath("audio/transmutationpack/IceImpactThree.ogg");
+    public static final String STEAM_IMPACT_1_KEY = makeID("SteamImpactOne");
+    private static final String STEAM_IMPACT_1_OGG = makePath("audio/transmutationpack/SteamImpactOne.ogg");
+    public static final String STEAM_IMPACT_2_KEY = makeID("SteamImpactTwo");
+    private static final String STEAM_IMPACT_2_OGG = makePath("audio/transmutationpack/SteamImpactTwo.ogg");
+    public static final String STEAM_IMPACT_3_KEY = makeID("StreamImpactThree");
+    private static final String STEAM_IMPACT_3_OGG = makePath("audio/transmutationpack/StreamImpactThree.ogg");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
 
@@ -303,6 +324,16 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(BEES_KEY, BEES_OGG);
         BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
+        BaseMod.addAudio(TRANSMUTATION_KEY, TRANSMUTATION_OGG);
+        BaseMod.addAudio(WATER_IMPACT_1_KEY, WATER_IMPACT_1_OGG);
+        BaseMod.addAudio(WATER_IMPACT_2_KEY, WATER_IMPACT_2_OGG);
+        BaseMod.addAudio(WATER_IMPACT_3_KEY, WATER_IMPACT_3_OGG);
+        BaseMod.addAudio(ICE_IMPACT_1_KEY, ICE_IMPACT_1_OGG);
+        BaseMod.addAudio(ICE_IMPACT_2_KEY, ICE_IMPACT_2_OGG);
+        BaseMod.addAudio(ICE_IMPACT_3_KEY, ICE_IMPACT_3_OGG);
+        BaseMod.addAudio(STEAM_IMPACT_1_KEY, STEAM_IMPACT_1_OGG);
+        BaseMod.addAudio(STEAM_IMPACT_2_KEY, STEAM_IMPACT_2_OGG);
+        BaseMod.addAudio(STEAM_IMPACT_3_KEY, STEAM_IMPACT_3_OGG);
     }
 
     @Override
@@ -480,6 +511,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         ImproveAction._clean();
+        DynamicDynamicVariableManager.clearVariables();
     }
 
     @Override
