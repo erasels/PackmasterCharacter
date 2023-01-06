@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
 
@@ -19,7 +18,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class GemOfUnity extends AbstractPackmasterRelic {
     public static final String ID = makeID("GemOfUnity");
 
-    private static ArrayList<AbstractCardPack> packsPlayed = new ArrayList<>();
+    private ArrayList<AbstractCardPack> packsPlayed;
 
     public GemOfUnity() {
         super(ID, RelicTier.UNCOMMON, LandingSound.FLAT);
