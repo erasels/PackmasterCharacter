@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.CurrentScreen.GRID;
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.CurrentScreen.NONE;
 import static thePackmaster.SpireAnniversary5Mod.selectedCards;
 
 public class CurrentRunCardsTopPanelItem extends TopPanelItem {
@@ -35,6 +36,8 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
     private static final UIStrings STRINGS = CardCrawlGame.languagePack.getUIString(ID);
     private static final String[] TEXT = STRINGS.TEXT;
 
+    private boolean open = false;
+
     public float flashTimer;
 
     public CurrentRunCardsTopPanelItem() {
@@ -43,7 +46,7 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
 
     @Override
     public boolean isClickable() {
-        return selectedCards;
+        return true;// selectedCards;
     }
 
     @Override
@@ -61,11 +64,15 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
 
     @Override
     protected void onClick() {
-        if(isClickable()) {
-            if (AbstractDungeon.screen == GRID) {
-                AbstractDungeon.closeCurrentScreen();
-                CardCrawlGame.sound.play("MAP_CLOSE");
-            } else {
+        if (isClickable()) {
+            if (open && AbstractDungeon.isScreenUp) {
+                if (AbstractDungeon.screen == GRID) {
+                    AbstractDungeon.closeCurrentScreen();
+                    CardCrawlGame.sound.play("MAP_CLOSE");
+                }
+                open = false;
+            }
+            else if (AbstractDungeon.previousScreen == null) { //Don't allow opening a third layer and losing a screen
                 CardCrawlGame.sound.play("RELIC_DROP_MAGICAL");
                 CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
@@ -86,7 +93,10 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
                     }
                 }
 
+                if (AbstractDungeon.screen != NONE)
+                    AbstractDungeon.previousScreen = AbstractDungeon.screen;
                 AbstractDungeon.gridSelectScreen.open(group, 0, true, TEXT[2]);
+                open = true;
             }
         }
     }
