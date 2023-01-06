@@ -22,29 +22,28 @@ public class CollectorBadge extends AbstractPackmasterRelic {
 
     @Override
     public void onEquip() {
-        grayscale = true;
         setDescriptionAfterLoading();
     }
 
     @Override
     public void atBattleStart() {
-        grayscale = true;
         setDescriptionAfterLoading();
+        counter = 0;
     }
 
     @Override
     public void onVictory() {
         usedPacks.clear();
-        grayscale = true;
         setDescriptionAfterLoading();
+        counter = -1;
     }
 
     @Override
     public void atTurnStart() {
-        if (!grayscale) {
-            grayscale = true;
+        if (pulse) {
             flash();
             addToBot(new GainEnergyAction(1));
+            stopPulse();
         }
         usedPacks.clear();
         setDescriptionAfterLoading();
@@ -52,12 +51,11 @@ public class CollectorBadge extends AbstractPackmasterRelic {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null) {
+        if (!pulse && SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null) {
             if (!usedPacks.contains(Wiz.getPackByCard(c).name)) {
                 usedPacks.add(Wiz.getPackByCard(c).name);
-                if (usedPacks.size() >= 3 && grayscale) {
-                    this.grayscale = false;
-                    flash();
+                if (usedPacks.size() >= 3) {
+                    beginLongPulse();
                 }
                 setDescriptionAfterLoading();
             }
