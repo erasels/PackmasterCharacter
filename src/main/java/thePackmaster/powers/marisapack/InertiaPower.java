@@ -22,11 +22,13 @@ public class InertiaPower extends AbstractPackmasterPower implements CloneablePo
     @Override
     public void onExhaust(AbstractCard card) {
         Wiz.applyToSelf(new ChargeUpPower(amount));
+        flashWithoutSound();
     }
 
     @Override
     public void onAmplify(AbstractCard c) {
         Wiz.applyToSelf(new ChargeUpPower(amount));
+        flashWithoutSound();
     }
 
     @Override

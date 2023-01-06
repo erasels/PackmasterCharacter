@@ -35,6 +35,7 @@ public class EarthlightRayPower extends AbstractPackmasterPower implements Clone
             Wiz.atb(new AbstractGameAction() {
                 @Override
                 public void update() {
+                    EarthlightRayPower.this.flash();
                     int[] arr = DamageInfo.createDamageMatrix((power.amount + finalCur)*EarthlightRayPower.this.amount, true);
                     Wiz.att(new DamageAllEnemiesAction(owner,
                             arr,
