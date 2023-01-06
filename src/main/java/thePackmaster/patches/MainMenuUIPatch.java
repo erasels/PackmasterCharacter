@@ -174,8 +174,16 @@ public class MainMenuUIPatch {
                 // If custom draft is enabled, update the dropdowns, too.
 
                 if (customDraft) {
+                    boolean update = true;
                     for (DropdownMenu d : dropdowns) {
-                        d.update();
+                        if (update) {
+                            d.update();
+                            if (d.isOpen)
+                                update = false;
+                        }
+                        else {
+                            d.isOpen = false;
+                        }
                     }
                 }
 
