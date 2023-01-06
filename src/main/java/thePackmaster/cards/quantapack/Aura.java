@@ -13,8 +13,7 @@ public class Aura extends AbstractPackmasterCard {
 
     public Aura() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
