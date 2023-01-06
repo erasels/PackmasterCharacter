@@ -47,7 +47,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
 
     private boolean needsArtRefresh = false;
 
-    private static Color packNameDisplayColor = Settings.CREAM_COLOR.cpy();
+    public static Color packNameDisplayColor = Settings.CREAM_COLOR.cpy();
 
     public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW);
