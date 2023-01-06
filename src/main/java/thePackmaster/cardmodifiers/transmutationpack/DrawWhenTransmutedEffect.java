@@ -11,20 +11,22 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 
+import static thePackmaster.util.Wiz.p;
+
 @AbstractCardModifier.SaveIgnore
-public class DrawCardEffect extends AbstractExtraEffectModifier {
-    private static final String ID = SpireAnniversary5Mod.makeID("DrawCardEffect");
+public class DrawWhenTransmutedEffect extends AbstractExtraEffectModifier {
+    private static final String ID = SpireAnniversary5Mod.makeID("DrawWhenTransmutedEffect");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String[] TEXT = cardStrings.EXTENDED_DESCRIPTION;
 
-    public DrawCardEffect(AbstractCard card, boolean isMutable, int times) {
+    public DrawWhenTransmutedEffect(AbstractCard card, boolean isMutable, int times) {
         super(card, VariableType.MAGIC, isMutable, times);
         priority = 0;
     }
 
     @Override
-    public void doExtraEffects(AbstractCard card, AbstractPlayer p, AbstractCreature m) {
-        addToBot(new DrawCardAction(p, value));
+    public void onCardTransmuted(AbstractCard card, AbstractCard newCard) {
+        addToBot(new DrawCardAction(p(), value));
     }
 
     @Override
@@ -75,7 +77,12 @@ public class DrawCardEffect extends AbstractExtraEffectModifier {
     }
 
     @Override
+    public void doExtraEffects(AbstractCard card, AbstractPlayer p, AbstractCreature m) {
+
+    }
+
+    @Override
     public AbstractCardModifier makeCopy() {
-        return new DrawCardEffect(attachedCard, isMutable, amount);
+        return new DrawWhenTransmutedEffect(attachedCard, isMutable, amount);
     }
 }
