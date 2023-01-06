@@ -334,6 +334,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(STEAM_IMPACT_1_KEY, STEAM_IMPACT_1_OGG);
         BaseMod.addAudio(STEAM_IMPACT_2_KEY, STEAM_IMPACT_2_OGG);
         BaseMod.addAudio(STEAM_IMPACT_3_KEY, STEAM_IMPACT_3_OGG);
+        BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
     }
 
     @Override

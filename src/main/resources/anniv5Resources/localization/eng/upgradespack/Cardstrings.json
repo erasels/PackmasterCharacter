@@ -1,0 +1,42 @@
+{
+  "${ModID}:QuickFix": {
+  "NAME": "Quick Fix",
+  "DESCRIPTION": "Gain !B! Block. NL Upgrade a random card in your hand."
+  },
+  "${ModID}:RedHotHammer": {
+    "NAME": "Red-Hot Hammer",
+    "DESCRIPTION": "Deal !D! damage. NL Can be Upgraded any number of times."
+  },
+  "${ModID}:HeartOfTheForge": {
+    "NAME": "Heart of the Forge",
+    "DESCRIPTION": "{@@}Retain. NL Gain{!M!|>1= !M!} [E]. NL Can be Upgraded any number of times. NL Exhaust."
+  },
+  "${ModID}:SharpeningSheath": {
+    "NAME": "Sharpening Sheath",
+    "DESCRIPTION": "Draw !M! cards and Upgrade them."
+  },
+  "${ModID}:CarelessSwing": {
+    "NAME": "Careless Swing",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a random *Unupgraded card in your hand."
+  },
+  "${ModID}:SetUpShop": {
+    "NAME": "Set Up Shop",
+    "DESCRIPTION": "Upgrade !M! cards from your draw or discard pile and put them on top of your draw pile."
+  },
+  "${ModID}:MastersStrike": {
+    "NAME": "Master's Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each Upgrade on ALL your cards."
+  },
+  "${ModID}:ScrapMetal": {
+    "NAME": "Scrap Metal",
+    "DESCRIPTION": "Upgrade a random card from any pile for every !M! Block you have. NL Exhaust."
+  },
+  "${ModID}:BlacksmithsShield": {
+    "NAME": "Blacksmith's Shield",
+    "DESCRIPTION": "After you play a card, gain 1 Block for each Upgrade on it."
+  },
+  "${ModID}:Masterwork": {
+    "NAME": "Masterwork",
+    "DESCRIPTION": "{@@}Upgrade a card{!M!|2= twice|>2= !M! times}. NL Can upgrade cards any number of times."
+  }
+}
