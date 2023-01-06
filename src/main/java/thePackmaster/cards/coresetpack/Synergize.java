@@ -22,7 +22,7 @@ public class Synergize extends AbstractPackmasterCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public Synergize() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseBlock = 7;
         baseDamage = 7;
         isMultiDamage = true;
