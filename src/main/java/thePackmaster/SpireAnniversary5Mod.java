@@ -637,6 +637,11 @@ public class SpireAnniversary5Mod implements
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
         }
+
+        //Fix Compendium top panel item not being clickable after reload
+        if(CardCrawlGame.loadingSave) {
+            selectedCards = true;
+        }
     }
 
 }
