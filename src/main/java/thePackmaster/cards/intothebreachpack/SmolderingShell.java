@@ -7,13 +7,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.getEnemies;
 
-public class SmolderingShell extends AbstractPackmasterCard {
+public class SmolderingShell extends IntoTheBreachCard {
     public final static String ID = makeID("SmolderingShell");
 
     public SmolderingShell() {
