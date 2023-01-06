@@ -89,6 +89,7 @@ public class SpireAnniversary5Mod implements
     public static boolean doPackSetup = false;
     public static String lastCardsPackID = null;
     public static boolean openedStarterScreen = false;
+    public static boolean skipDefaultCardRewards = false;
     public static int PACKS_PER_RUN = 7;
     public static CurrentRunCardsTopPanelItem currentRunCardsTopPanelItem;
 
@@ -337,6 +338,13 @@ public class SpireAnniversary5Mod implements
         return pack.cards.get(AbstractDungeon.cardRandomRng.random(0, pack.cards.size() - 1)).makeCopy();
     }
 
+
+    public static ArrayList<AbstractCard> getCardsFromPacks(String pack, int count) {
+        ArrayList<String> quick = new ArrayList<>();
+        quick.add(pack);
+        return getCardsFromPacks(quick, count);
+    }
+
     public static ArrayList<AbstractCard> getCardsFromPacks(ArrayList<String> packs, int count) {
         ArrayList<AbstractCard> cards = new ArrayList<>();
         for (String s : packs
@@ -344,7 +352,7 @@ public class SpireAnniversary5Mod implements
             AbstractCardPack p = packsByID.get(s);
             for (String s2 : p.getCards()
             ) {
-                cards.add(CardLibrary.getCard(s2));
+                cards.add(CardLibrary.getCard(s2).makeCopy());
             }
         }
 
@@ -366,6 +374,15 @@ public class SpireAnniversary5Mod implements
         ArrayList<AbstractCard> valid = new ArrayList<>();
         for (AbstractCardPack cp : currentPoolPacks) {
             valid.add(cp.previewPackCard);
+        }
+        return valid;
+    }
+
+
+    public static ArrayList<AbstractCard> getPreviewCardsNotFromCurrentSet() {
+        ArrayList<AbstractCard> valid = new ArrayList<>();
+        for (AbstractCardPack cp : allPacks) {
+            if (!currentPoolPacks.contains(cp)) valid.add(cp.previewPackCard);
         }
         return valid;
     }
