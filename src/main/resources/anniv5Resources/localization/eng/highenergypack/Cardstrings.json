@@ -1,0 +1,41 @@
+{
+  "${ModID}:MiracleWorker": {
+    "NAME": "Miracle Worker",
+    "DESCRIPTION": "Gain !B! Block. NL Put a *Miracle on top of your draw pile."
+  },
+  "${ModID}:Trash": {
+    "NAME": "Trash",
+    "DESCRIPTION": "Exhaust 1 card. NL Gain [E] .",
+    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust 1 card. NL Gain [E] ."
+  },
+  "${ModID}:MultiTool": {
+    "NAME": "Multi-Tool",
+    "DESCRIPTION": "Deal !D! damage. NL If you end your turn with unused Energy, ALL enemies lose !M! HP."
+  },
+  "${ModID}:LastResort": {
+    "NAME": "Last Resort",
+    "DESCRIPTION": "Gain !B! Block X times. NL If X is 0, gain [E] and Exhaust."
+  },
+  "${ModID}:LotsOfIronWaves": {
+    "NAME": "Lots of Iron Waves",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  },
+  "${ModID}:ManifestMeal": {
+    "NAME": "Manifest Meal",
+    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your draw pile."
+  },
+  "${ModID}:Food": {
+    "NAME": "Food",
+    "DESCRIPTION": "Gain X [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain X [E] . NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Gain ",
+      "Retain. NL Gain ",
+      " . NL Exhaust."
+    ]
+  },
+  "${ModID}:Investor": {
+    "NAME": "Investor",
+    "DESCRIPTION": "Whenever you spend 2 or more Energy on a card, gain !M! Block."
+  }
+}
