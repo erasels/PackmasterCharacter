@@ -1,0 +1,48 @@
+{
+  "${ModID}:Weight": {
+    "NAME": "Weight",
+    "DESCRIPTION": "Unplayable. Retain. NL If this card is discarded from your hand, Exhaust it."
+  },
+  "${ModID}:Oppressor": {
+    "NAME": "Oppressor",
+    "DESCRIPTION": "Deal !D! damage. NL Discard 1 card."
+  },
+  "${ModID}:IronShield": {
+    "NAME": "Iron Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Weight to your hand."
+  },
+  "${ModID}:Shine": {
+    "NAME": "Shine",
+    "DESCRIPTION": "Unplayable. Retain. NL When you draw this card, upgrade another random card in your hand for the rest of the combat.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When you draw this card, upgrade ALL cards in your hand for the rest of the combat."
+  },
+  "${ModID}:GlaiveThrow": {
+    "NAME": "Glaive Throw",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Discard !M! cards."
+  },
+  "${ModID}:Crunch": {
+    "NAME": "Crunch",
+    "DESCRIPTION": "Unplayable. Retain. NL When you draw this card, draw !M! cards."
+  },
+  "${ModID}:Lie": {
+    "NAME": "Lie",
+    "DESCRIPTION": "Enemy loses !M! Strength for 1 turn. NL Add a *Weight to your hand."
+  },
+  "${ModID}:Frontflip": {
+    "NAME": "Frontflip",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards, discard Unplayable cards drawn."
+  },
+  "${ModID}:HammerThrow": {
+    "NAME": "Hammer Throw",
+    "DESCRIPTION": "Whenever a card is Retained, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:Flail": {
+    "NAME": "Flail",
+    "DESCRIPTION": "Deal !D! damage. NL Add 2 *Weights to your hand."
+  },
+  "${ModID}:Wisdom": {
+    "NAME": "Wisdom",
+    "DESCRIPTION": "Gain [E]. NL Discard any number of cards in your hand. Draw that many card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Discard any number of cards in your hand. Draw that many card. NL Exhaust."
+  }
+}
