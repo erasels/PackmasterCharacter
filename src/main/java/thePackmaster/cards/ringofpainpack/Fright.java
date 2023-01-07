@@ -23,6 +23,10 @@ public class Fright extends AbstractPackmasterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = DRAW;
+        setBackgroundTexture(
+                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
+                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
+        );
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -64,6 +64,11 @@
       "Cards available in this run"
     ]
   },
+  "${ModID}:CreditsRenderStrings": {
+    "TEXT": [
+      "Additional Credits"
+    ]
+  },
   "${ModID}:PackFilterMenu": {
     "TEXT": [
       "Enable Pack"
