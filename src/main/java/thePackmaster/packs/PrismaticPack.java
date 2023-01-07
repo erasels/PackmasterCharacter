@@ -30,6 +30,7 @@ public class PrismaticPack extends AbstractCardPack {
         cards.add(QuirionDryad.ID);
         cards.add(ManyAsOne.ID);
         cards.add(PremiumSelection.ID);
+        cards.add(FlawlessPrism.ID);
         return cards;
     }
 }
