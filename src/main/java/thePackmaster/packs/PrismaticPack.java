@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.prismaticpack.GrabBag;
 import thePackmaster.cards.prismaticpack.PrismaticBarrier;
+import thePackmaster.cards.prismaticpack.ShimmeringStrike;
 import thePackmaster.cards.prismaticpack.SwordAndDagger;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class PrismaticPack extends AbstractCardPack {
         cards.add(SwordAndDagger.ID);
         cards.add(PrismaticBarrier.ID);
         cards.add(GrabBag.ID);
+        cards.add(ShimmeringStrike.ID);
         return cards;
     }
 }

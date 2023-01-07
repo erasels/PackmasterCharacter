@@ -11,5 +11,9 @@
   "${ModID}:GrabBag": {
     "NAME": "Grab Bag",
     "DESCRIPTION": "Add !M! random ${ModID}:different\u00a0color cards to your hand. NL Exhaust."
+  },
+  "${ModID}:ShimmeringStrike": {
+    "NAME": "Shimmering Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each ${ModID}:different\u00a0color card played this combat."
   }
 }
