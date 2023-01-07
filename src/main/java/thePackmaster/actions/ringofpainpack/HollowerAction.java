@@ -29,8 +29,11 @@ public class HollowerAction extends AbstractGameAction {
 
             for (AbstractCard abstractCard : this.p.drawPile.group) {
                 card = abstractCard;
-                tmp.addToRandomSpot(card);
+                tmp.addToTop(card);
             }
+
+            tmp.sortAlphabetically(true);
+            tmp.sortByRarityPlusStatusCardType(false);
 
             if (tmp.size() == 0) {
                 this.isDone = true;
