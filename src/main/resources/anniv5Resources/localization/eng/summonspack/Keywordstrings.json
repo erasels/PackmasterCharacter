@@ -22,10 +22,10 @@
     "DESCRIPTION": "Orb: Deals damage to a random enemy at the end of your turn."
   },
   {
-    "PROPER_NAME": "Rainbow\u00a0Louse",
+    "PROPER_NAME": "Bulldog",
     "NAMES": [
-      "rainbow\u00a0louse"
+      "bulldog"
     ],
-    "DESCRIPTION": "Orb: Deals damage to a random enemy at the end of your turn. Gain #yTemporary #yHP."
+    "DESCRIPTION": "Orb: Deals damage to the enemy with the lowest health at the end of your turn."
   }
 ]
