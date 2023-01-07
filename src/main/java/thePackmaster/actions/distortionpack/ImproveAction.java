@@ -7,10 +7,12 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import thePackmaster.patches.BetterPowerNegationCheckPatch;
 
 import java.util.ArrayList;
 
@@ -18,6 +20,9 @@ public class ImproveAction extends AbstractGameAction {
     private static final Logger logger = LogManager.getLogger("Distortion");
     
     private static final ArrayList<Texture> tempTextures = new ArrayList<>();
+
+    private ApplyPowerAction distortionApplier = null;
+
 
     public static void _clean() {
         for (Texture t : tempTextures) {
@@ -30,12 +35,22 @@ public class ImproveAction extends AbstractGameAction {
 
     private AbstractMonster materia;
 
+    public ImproveAction(AbstractMonster m, ApplyPowerAction distortionApplier) {
+        this(m);
+        this.distortionApplier = distortionApplier;
+    }
+
     public ImproveAction(AbstractMonster target) {
         this.materia = target;
         this.actionType = ActionType.SPECIAL;
     }
 
     public void update() {
+        if (distortionApplier != null && !BetterPowerNegationCheckPatch.Field.appliedSuccess.get(distortionApplier)) {
+            this.isDone = true;
+            return;
+        }
+
         try {
             TextureAtlas _form = ReflectionHacks.getPrivate(this.materia, AbstractCreature.class, "atlas");
             if (_form != null) {

@@ -1,5 +1,6 @@
 package thePackmaster.cards.distortionpack;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.distortionpack.ImproveAction;
@@ -23,8 +24,9 @@ public class Deconstruct extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         forAllMonstersLiving(
                 (mo)->{
-                    applyToEnemy(mo, new DistortionPower(mo, p, this.magicNumber));
-                    atb(new ImproveAction(mo));
+                    ApplyPowerAction distortion = new ApplyPowerAction(mo, p, new DistortionPower(mo, p, this.magicNumber), this.magicNumber);
+                    atb(distortion);
+                    atb(new ImproveAction(mo, distortion));
                 }
         );
     }
