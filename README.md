@@ -60,7 +60,7 @@ To test your cards simply use the Custom Draft toggle in the character select sc
 * To get a card's Pack, you can call getParent on a PackmasterCard or use the method in the Wiz class getPackByCard
 * We have some lists and maps to get card packs, these are allPacks, packsByID, cardParentMap
 * If you want to add your own CardBack for your Pack preview card, you can do so by adding it to the `images/512` and `1024` with the png file having the same name as your pack
-* Additional Credits can be added to a pack where assets or inspiration have been taken from elsewhere. This can simply be done by passing the credits string to the super method of the pack's constructor
+* Additional Credits can be added to a pack where assets or inspiration have been taken from elsewhere. This can simply be done by passing a credits string to the super method of the pack's constructor
 
 ### Reminders and veto ruling
 Please look at the Google Docs to get a full refresher of the rules for your contribution. Specifically the complexity cap is important.
