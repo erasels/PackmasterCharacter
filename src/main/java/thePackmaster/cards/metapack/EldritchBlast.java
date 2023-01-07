@@ -38,7 +38,7 @@ public class EldritchBlast extends AbstractPackmasterCard {
             public void update() {
                 CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
                 tmp.group = (ArrayList<AbstractCard>) Wiz.p().hand.group.stream()
-                        .filter(c -> c.costForTurn > 0 && !c.freeToPlayOnce && c.hasTag(MAGIC))
+                        .filter(c -> Wiz.getLogicalCardCost(c) > 0 && c.hasTag(MAGIC))
                         .collect(Collectors.toList());
                 for (int i = 0; i < magicNumber; i++) {
                     if(!tmp.isEmpty()) {

@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -26,7 +28,7 @@ public class Masterstroke extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower dex = AbstractDungeon.player.getPower("Dexterity");
+        AbstractPower dex = AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
         if (dex != null) {
             dex.amount *= this.magicNumber;
         }
@@ -43,12 +45,12 @@ public class Masterstroke extends AbstractPackmasterCard {
 
     public void applyPowers() {
         // Ahahahahahaha. Hahahahahaha. Ahahahahahahahahaha.
-        AbstractPower strength = AbstractDungeon.player.getPower("Strength");
+        AbstractPower strength = AbstractDungeon.player.getPower(StrengthPower.POWER_ID);
         if (strength != null) {
             strength.amount *= this.magicNumber;
         }
 
-        AbstractPower dex = AbstractDungeon.player.getPower("Dexterity");
+        AbstractPower dex = AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
         if (dex != null) {
             dex.amount *= this.magicNumber;
         }
@@ -64,7 +66,7 @@ public class Masterstroke extends AbstractPackmasterCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        AbstractPower strength = AbstractDungeon.player.getPower("Strength");
+        AbstractPower strength = AbstractDungeon.player.getPower(StrengthPower.POWER_ID);
         if (strength != null) {
             strength.amount *= this.magicNumber;
         }
