@@ -3,6 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.entropypack.*;
 
 import java.util.ArrayList;
 
@@ -20,6 +21,16 @@ public class EntropyPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
+        cards.add(Disorder.ID);
+        cards.add(Wither.ID);
+        cards.add(Collapse.ID);
+        cards.add(Construct.ID);
+        cards.add(Freedom.ID);
+        cards.add(RuinousPortent.ID);
+        cards.add(Unbind.ID);
+        cards.add(Diffusion.ID);
+        cards.add(Waning.ID);
+        cards.add(Entanglement.ID);
         return cards;
     }
 }
