@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
@@ -22,8 +23,9 @@ public class Flick extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SelectCardsInHandAction(1, name + ".", (cards) -> {
             att(new DiscardSpecificCardAction(cards.get(0)));
-            if (cards.get(0).costForTurn > 0) {
-                for (int i = 0; i < cards.get(0).costForTurn; i++) {
+            int cost = Wiz.getLogicalCardCost(cards.get(0));
+            if (cost > 0) {
+                for (int i = 0; i < cost; i++) {
                     dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
                 }
             }
