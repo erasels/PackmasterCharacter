@@ -23,7 +23,14 @@ public class Frontflip extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        this.addToBot(new DrawCardAction(this.magicNumber, new FrontflipAction()));
+        addToBot(new DrawCardAction(magicNumber, new AbstractGameAction() {
+            @Override
+            public void update() {
+                Wiz.att(new WaitAction(3));
+                DrawCardAction.drawnCards.stream().filter(c -> c.cost == -2).forEach(c -> Wiz.att(new DiscardSpecificCardAction(c)));
+
+            }
+        }));
     }
 
     @Override
