@@ -51,7 +51,7 @@ public class BlueSkull extends AbstractPackmasterRelic {
     }
 
     public void onNotBloodied() {
-        if (isActive && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
+        if (isActive && Wiz.isInCombat())
             att(new ApplyPowerAction(adp(), adp(), new FocusPower(adp(), -FOCUS_AMOUNT), -FOCUS_AMOUNT));
 
         stopPulse();
