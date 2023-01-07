@@ -9,8 +9,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.relics.AbstractPackmasterRelic;
 
-import static thePackmaster.util.Wiz.adp;
-import static thePackmaster.util.Wiz.att;
+import static thePackmaster.util.Wiz;
 
 public class BlueSkull extends AbstractPackmasterRelic {
     public static final String ID = SpireAnniversary5Mod.makeID(BlueSkull.class.getSimpleName());
