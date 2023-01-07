@@ -3,7 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.aggressionpack.*;
+import thePackmaster.cards.prismaticpack.GrabBag;
 import thePackmaster.cards.prismaticpack.PrismaticBarrier;
 import thePackmaster.cards.prismaticpack.SwordAndDagger;
 
@@ -25,6 +25,7 @@ public class PrismaticPack extends AbstractCardPack {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(SwordAndDagger.ID);
         cards.add(PrismaticBarrier.ID);
+        cards.add(GrabBag.ID);
         return cards;
     }
 }

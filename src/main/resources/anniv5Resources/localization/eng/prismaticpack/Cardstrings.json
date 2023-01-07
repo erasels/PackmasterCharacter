@@ -7,5 +7,9 @@
   "${ModID}:PrismaticBarrier": {
     "NAME": "Prismatic Barrier",
     "DESCRIPTION": "Gain !B! Block. NL If you've played a ${ModID}:different\u00a0color card this turn, gain !M! *Plated *Armor and Exhaust."
+  },
+  "${ModID}:GrabBag": {
+    "NAME": "Grab Bag",
+    "DESCRIPTION": "Add !M! random ${ModID}:different\u00a0color cards to your hand. NL Exhaust."
   }
 }
