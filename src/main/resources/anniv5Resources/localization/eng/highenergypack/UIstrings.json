@@ -1,8 +1,8 @@
 {
-  "${ModID}:InfestPack": {
+  "${ModID}:HighEnergyPack": {
     "TEXT": [
-      "The Swarm",
-      "Bug out with the new Infest keyword, which makes cards burrow into your draw pile!",
+      "Energized",
+      "Focus your power on gaining tons of Energy and spending it on costly cards!",
       "Vex"
     ]
   }

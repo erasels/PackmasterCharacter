@@ -37,5 +37,18 @@
   "${ModID}:Investor": {
     "NAME": "Investor",
     "DESCRIPTION": "Whenever you spend 2 or more Energy on a card, gain !M! Block."
+  },
+  "${ModID}:StruckByATrain": {
+    "NAME": "Struck By A Train",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable to the frontmost enemy."
+  },
+  "${ModID}:StormForm": {
+    "NAME": "Storm Form",
+    "DESCRIPTION": "At the start of your turn, gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E] [E] [E] ."
+  },
+  "${ModID}:SuperNova": {
+    "NAME": "Super Nova",
+    "DESCRIPTION": "ALL enemies lose !M! HP. NL Apply !${ModID}:m2! Weak and Vulnerable to ALL enemies."
   }
 }
