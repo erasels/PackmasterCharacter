@@ -24,5 +24,10 @@
     "NAME": "Choice Cut",
     "DESCRIPTION": "Choose one of *Uppercut, *Doom *and *Gloom, *Predator, or *Reach *Heaven to add to your hand. It costs 0 this turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose one of *Uppercut+, *Doom *and *Gloom+, *Predator+, or *Reach *Heaven+ to add to your hand. It costs 0 this turn. NL Exhaust."
+  },
+  "${ModID}:QuirionDryad": {
+    "NAME": "Quirion Dryad",
+    "DESCRIPTION": "The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity."
   }
 }
