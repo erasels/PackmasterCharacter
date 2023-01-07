@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.aggressionpack.*;
+import thePackmaster.cards.prismaticpack.SwordAndDagger;
 
 import java.util.ArrayList;
 
@@ -21,6 +22,7 @@ public class PrismaticPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
+        cards.add(SwordAndDagger.ID);
         return cards;
     }
 }

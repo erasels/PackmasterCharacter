@@ -1,2 +1,7 @@
 {
+  "${ModID}:SwordAndDagger": {
+    "NAME": "Sword and Dagger",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! *Shiv to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add !M! *Shivs to your hand."
+  }
 }
