@@ -1,5 +1,6 @@
 package thePackmaster.patches;
 
+import basemod.ModLabeledButton;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -17,6 +18,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.CoreSetPack;
+import thePackmaster.ui.PackFilterMenu;
 
 import java.util.ArrayList;
 
@@ -47,6 +49,13 @@ public class MainMenuUIPatch {
     private static final float DROPDOWNS_SPACING = 50F * Settings.scale;
     private static final float DROPDOWN_X;
     private static final float DROPDOWNS_START_Y = CHECKBOX_Y + DROPDOWNS_SPACING * (PACK_COUNT + 0.5f);
+
+    //filter button fields
+    private static final float FILTERBUTTON_X = 60f*Settings.xScale;
+    private static final float FILTERBUTTON_Y = Settings.HEIGHT - 122f*Settings.yScale;
+
+    private static final PackFilterMenu filterMenu = new PackFilterMenu();
+    private static final ModLabeledButton openFilterMenuButton;
 
     static {
         options.add(TEXT[2]);
@@ -108,6 +117,9 @@ public class MainMenuUIPatch {
             DROPDOWN_X = Math.min(dropdownX, checkboxX);
             CHECKBOX_X = DROPDOWN_X + CHECKBOX_X_OFF;
         }
+
+        openFilterMenuButton = new ModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X, FILTERBUTTON_Y,null,
+                (button) -> filterMenu.toggle());
     }
 
 
@@ -137,6 +149,10 @@ public class MainMenuUIPatch {
                     }
                 }
 
+                if (filterMenu.isOpen) {
+                    filterMenu.render(sb);
+                }
+                openFilterMenuButton.render(sb);
             }
         }
     }
@@ -189,6 +205,11 @@ public class MainMenuUIPatch {
                     }
                 }
                 else {
+                }
+
+                openFilterMenuButton.update();
+                if (filterMenu.isOpen) {
+                    filterMenu.update();
                 }
             }
         }

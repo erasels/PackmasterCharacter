@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.random.Random;
@@ -22,6 +21,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.ui.PackFilterMenu;
 
 import java.util.*;
 
@@ -87,7 +87,7 @@ public class PackSetupScreen extends CustomScreen {
 
         packPool.clear();
         for (AbstractCardPack p : SpireAnniversary5Mod.allPacks) {
-            if (!currentPoolPacks.contains(p)) {
+            if (!currentPoolPacks.contains(p) && PackFilterMenu.getFilterConfig(p.packID)) {
                 packPool.add(p);
             }
         }
