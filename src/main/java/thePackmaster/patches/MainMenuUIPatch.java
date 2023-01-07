@@ -43,7 +43,8 @@ public class MainMenuUIPatch {
     private static final float CHECKBOX_X;
     private static final float CHECKBOX_Y = Settings.HEIGHT / 2.0f - 175.0f * Settings.scale;
 
-    private static final int PACK_COUNT = 7;
+    private static final int PACK_COUNT = SpireAnniversary5Mod.PACKS_PER_RUN;
+    private static final int DROPDOWN_ROWCOUNT = 10;
     private static final float DROPDOWNS_SPACING = 50F * Settings.scale;
     private static final float DROPDOWN_X;
     private static final float DROPDOWNS_START_Y = CHECKBOX_Y + DROPDOWNS_SPACING * (PACK_COUNT + 0.5f);
@@ -86,7 +87,7 @@ public class MainMenuUIPatch {
                         }
                     }
                 }
-            }, options, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
+            }, options, FontHelper.tipBodyFont, Settings.CREAM_COLOR, DROPDOWN_ROWCOUNT);
 
             dropdowns.add(d);
 
