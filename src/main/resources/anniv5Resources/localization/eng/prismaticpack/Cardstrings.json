@@ -3,5 +3,9 @@
     "NAME": "Sword and Dagger",
     "DESCRIPTION": "Deal !D! damage. NL Add !M! *Shiv to your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add !M! *Shivs to your hand."
+  },
+  "${ModID}:PrismaticBarrier": {
+    "NAME": "Prismatic Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL If you've played a ${ModID}:different\u00a0color card this turn, gain !M! *Plated *Armor and Exhaust."
   }
 }
