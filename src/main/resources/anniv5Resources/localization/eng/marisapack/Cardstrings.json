@@ -23,7 +23,7 @@
   "${ModID}:StardustReverie": {
     "NAME": "Stardust Reverie",
     "DESCRIPTION": "Exhaust !M! card. Gain ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify.",
-    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. Gain ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify."
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. Gain ${ModID}:Charge Up equal to two times their costs including ${ModID}:Amplify."
   },
   "${ModID}:Inertia": {
     "NAME": "Inertia",
