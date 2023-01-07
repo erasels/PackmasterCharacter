@@ -13,17 +13,17 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class Chronoboost extends AbstractPackmasterCard {
+public class Chronoboost extends AbstractDownfallCard {
     public final static String ID = makeID("Chronoboost");
 
     public Chronoboost() {
-        super(ID, 2, AbstractCard.CardType.POWER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        super(ID, 1, AbstractCard.CardType.POWER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) atb(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-        atb(new ApplyPowerAction(p, p, new ChronoBoostPower(p, 3), 3));
+        atb(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
+        atb(new ApplyPowerAction(p, p, new ChronoBoostPower(p, 1), 1));
     }
 
     @Override

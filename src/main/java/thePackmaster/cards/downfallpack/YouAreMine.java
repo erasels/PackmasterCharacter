@@ -16,7 +16,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class YouAreMine extends AbstractPackmasterCard {
+public class YouAreMine extends AbstractDownfallCard {
     public final static String ID = makeID("YouAreMine");
 
     private static final int MAGIC = 2;
@@ -33,8 +33,8 @@ public class YouAreMine extends AbstractPackmasterCard {
         atb(new VFXAction(new CollectorCurseEffect(m.hb.cX, m.hb.cY), .5F));
         atb(new RemoveAllBlockAction(m, p));
 
-        if (upgraded) atb(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         atb(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        if (upgraded) atb(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
 

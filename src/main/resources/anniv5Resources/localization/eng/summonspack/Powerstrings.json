@@ -1,0 +1,16 @@
+{
+  "${ModID}:TreeBlockadePower": {
+    "NAME": "Tree Blockade",
+    "DESCRIPTIONS": [
+      "Take #b",
+      " less damage this turn."
+    ]
+  },
+  "${ModID}:SummonPandasPower": {
+    "NAME": "Summoning Pandas",
+    "DESCRIPTIONS": [
+      "At the start of your turn, Channel a #b",
+      " damage #yPanda."
+    ]
+  }
+}

@@ -2,7 +2,7 @@
   "${ModID}:StrikeDummyJrPower": {
     "NAME": "Strike Dummy Jr.",
     "DESCRIPTIONS": [
-      "Your Strikes deal ",
+      "Your Strikes deal #b",
       " more damage."
     ]
   },
@@ -20,6 +20,12 @@
       "At the start of your turn, gain a random #yupgraded \"Strike\". It costs #b0 until played and Exhausts.",
       "At the start of your turn, gain #b",
       " random #yupgraded \"Strike\"s. They cost #b0 until played and Exhaust."
+    ]
+  },
+  "${ModID}:StrikeABargainPower": {
+    "NAME": "Strike a Bargain",
+    "DESCRIPTIONS": [
+      "Your Attacks cost #b0 this turn, but you cannot play non-Attacks."
     ]
   }
 }

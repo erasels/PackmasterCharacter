@@ -47,7 +47,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
 
     private boolean needsArtRefresh = false;
 
-    private static Color packNameDisplayColor = Settings.CREAM_COLOR.cpy();
+    public static Color packNameDisplayColor = Settings.CREAM_COLOR.cpy();
 
     public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW);
@@ -68,6 +68,11 @@ public abstract class AbstractPackmasterCard extends CustomCard {
             } else
                 needsArtRefresh = true;
         }
+
+        setBackgroundTexture(
+                "anniv5Resources/images/512/coreset/" + type.name().toLowerCase() + ".png",
+                "anniv5Resources/images/1024/coreset/" + type.name().toLowerCase() + ".png"
+        );
     }
 
 
@@ -82,18 +87,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     }
 
     public static String getCardTextureString(final String cardName, final AbstractCard.CardType cardType) {
-        String textureString;
-
-        switch (cardType) {
-            case ATTACK:
-            case POWER:
-            case SKILL:
-                textureString = makeImagePath("cards/" + cardName + ".png");
-                break;
-            default:
-                textureString = makeImagePath("ui/missing.png");
-                break;
-        }
+        String textureString = makeImagePath("cards/" + cardName + ".png");
 
         FileHandle h = Gdx.files.internal(textureString);
         if (!h.exists()) {
@@ -175,6 +169,16 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     protected void uDesc() {
         rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         initializeDescription();
+    }
+
+    public void downgrade() {
+        if (upgraded) {
+            upgraded = false;
+            name = cardStrings.NAME;
+            rawDescription = cardStrings.DESCRIPTION;
+            initializeTitle();
+            initializeDescription();
+        }
     }
 
     public void upgrade() {

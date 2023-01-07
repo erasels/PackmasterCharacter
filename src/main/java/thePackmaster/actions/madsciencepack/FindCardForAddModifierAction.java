@@ -1,5 +1,6 @@
 package thePackmaster.actions.madsciencepack;
 
+import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
@@ -7,8 +8,11 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -16,6 +20,8 @@ import java.util.function.Predicate;
 import static thePackmaster.util.Wiz.atb;
 
 public class FindCardForAddModifierAction extends AbstractGameAction {
+    private static final UIStrings uiSTRINGS = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("AddModifierUI"));
+
     private AbstractCardModifier mod;
     private int count;
     private boolean random;
@@ -27,7 +33,12 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
         this.count = count;
         this.random = random;
         this.targetgroup = targetgroup;
-        this.requirements = null;
+        this.requirements = new Predicate<AbstractCard>() {
+            @Override
+            public boolean test(AbstractCard abstractCard) {
+                return true;
+            }
+        };
     }
 
     public FindCardForAddModifierAction(AbstractCardModifier mod, int count, boolean random, CardGroup targetgroup, Predicate<AbstractCard> requirements) {
@@ -36,54 +47,55 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
         this.random = random;
         this.targetgroup = targetgroup;
         this.requirements = requirements;
-
     }
 
     @Override
     public void update() {
-        if (!isDone){
-            Predicate<AbstractCard> combinedRequirements = card -> !card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED);
+        Predicate<AbstractCard> tagCheck = card -> !card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED);
 
-            if (requirements != null){
-                combinedRequirements = combinedRequirements.and(requirements);
+        if (random) {
+            ArrayList<AbstractCard> chosen = new ArrayList<>();
+            ArrayList<AbstractCard> potentialTargets = new ArrayList<>();
+
+            for (AbstractCard c : targetgroup.group) {
+                if (requirements.and(tagCheck).test(c)) {
+                    potentialTargets.add(c);
+                }
             }
+            AbstractCard n;
 
-            if (random) {
-                ArrayList<AbstractCard> chosen = new ArrayList<>();
-                AbstractCard n;
-                ArrayList<AbstractCard> potentialTargets = new ArrayList<>(targetgroup.group);
+            if (count >= potentialTargets.size()) {
+                chosen.addAll(potentialTargets);
+            } else {
                 for (int i = 0; i < count; i++) {
-                    n = potentialTargets.get(AbstractDungeon.cardRandomRng.random(0, potentialTargets.size()-1));
-                    potentialTargets.remove(n);
-                    if (combinedRequirements.test(n)){
-                        chosen.add(n);
+                    if (potentialTargets.isEmpty()) {
+                        isDone = true;
+                        break;
                     } else {
-                        i--;
-                        if (potentialTargets.isEmpty()){
-                            return;
-                        }
+                        n = Wiz.getRandomItem(potentialTargets);
+                        potentialTargets.remove(n);
+                        chosen.add(n);
                     }
                 }
+            }
 
-                for (AbstractCard c2 : chosen
-                ) {
+            if (!chosen.isEmpty()) {
+                for (AbstractCard c2 : chosen) {
                     CardModifierManager.addModifier(c2, mod);
                     c2.superFlash(Color.CHARTREUSE);
                 }
-            } else {
-                atb(new SelectCardsAction(targetgroup.group, count, " to Modify", false,
-                        combinedRequirements,
-
-                        (cards) -> {
-                            for (AbstractCard c2 : cards
-                            ) {
-                                CardModifierManager.addModifier(c2, mod);
-                                c2.superFlash(Color.CHARTREUSE);
-                            }
-                        }
-                ));
             }
+        } else {
+            atb(new SelectCardsAction(targetgroup.group, count, uiSTRINGS.TEXT[0], false,
+                    requirements.and(tagCheck),
 
+                    (cards) -> {
+                        for (AbstractCard c2 : cards) {
+                            CardModifierManager.addModifier(c2, mod);
+                            c2.superFlash(Color.CHARTREUSE);
+                        }
+                    }
+            ));
         }
         isDone = true;
     }

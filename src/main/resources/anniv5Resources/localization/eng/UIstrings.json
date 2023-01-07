@@ -46,12 +46,26 @@
   "${ModID}:PackMainMenuUI": {
     "TEXT": [
       "Custom Draft Mode",
-      "Turn this on to choose how your Packs are determined."
+      "Turn this on to choose how your Packs are determined.",
+      "Random",
+      "Choice of 3"
     ]
   },
-  "${ModID}:Main": {
+  "${ModID}:PackSetup": {
     "TEXT": [
       "Draft a Pack!"
+    ]
+  },
+  "${ModID}:CurrentRunCardsTopPanelItem": {
+    "TEXT": [
+      "Packs",
+      "{0} NL NL Click to view card pool for this run.",
+      "Cards available in this run"
+    ]
+  },
+  "${ModID}:CreditsRenderStrings": {
+    "TEXT": [
+      "Additional Credits"
     ]
   }
 }

@@ -1,7 +1,7 @@
 {
   "${ModID}:AwakenDeath": {
     "NAME": "Awaken",
-    "DESCRIPTION": "When you would die, heal !M! HP instead and remove this buff. NL At the end of combat (if untriggered), heals for half as much."
+    "DESCRIPTION": "When you would die, heal !M! HP instead and remove this buff. NL After combat, heals for half as much."
   },
   "${ModID}:Chronoboost": {
     "NAME": "Chrono-Boost",
@@ -17,7 +17,7 @@
   },
   "${ModID}:GhostflameStrike": {
     "NAME": "Ghostflame Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Channel !M! Ghostflame."
+    "DESCRIPTION": "Deal !D! damage. NL Channel !M! ${ModID}:Ghostflame."
   },
   "${ModID}:HyperBeam": {
     "NAME": "HYPER BEAM",
@@ -26,7 +26,7 @@
   },
   "${ModID}:InvincibleStrength": {
     "NAME": "Invincible",
-    "DESCRIPTION": "Gain !M! ${ModID}:Invincible. NL If you already had Invincible, it lasts another turn instead."
+    "DESCRIPTION": "Gain !M! ${ModID}:Invincible. NL If you already had *Invincible, it lasts another turn instead."
   },
   "${ModID}:PrepareCrush": {
     "NAME": "Prepare Crush",
@@ -34,8 +34,8 @@
   },
   "${ModID}:ShapersBlessing": {
     "NAME": "Shaper's Blessing",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Enter Ancient Stance.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block and !M! Plated Armor. NL Enter Ancient Stance."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Enter ${ModID}:Ancient.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block and !M! Plated Armor. NL Enter ${ModID}:Ancient."
   },
   "${ModID}:SlimeCrush": {
     "NAME": "SLIME CRUSH!",

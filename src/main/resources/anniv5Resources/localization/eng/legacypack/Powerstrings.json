@@ -1,0 +1,9 @@
+{
+  "${ModID}:PoisonMasteryPower": {
+    "NAME": "Poison Mastery",
+    "DESCRIPTIONS": [
+      "Poison causes #b",
+      "% more HP loss."
+    ]
+  }
+}

@@ -5,11 +5,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
 import thePackmaster.cardmodifiers.madsciencepack.RemoveExhaustGainEtherealModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Expand extends AbstractPackmasterCard {
+public class Expand extends AbstractMadScienceCard {
     public final static String ID = makeID("Expand");
 
     public Expand() {

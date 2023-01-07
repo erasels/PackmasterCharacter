@@ -41,7 +41,7 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         author = parentPack.author;
         initializeTitle();
         initializeDescription();
-        this.setBackgroundTexture("anniv5Resources/images/512/boosterpackframe.png", "anniv5Resources/images/1024/boosterpackframe.png");
+        setBackgroundTextures();
     }
 
     @Override
@@ -124,5 +124,22 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         if (!(SingleCardViewPopup.isViewingUpgrade && this.isSeen && !this.isLocked)) {
             renderAuthorText(sb);
         }
+    }
+
+    private void setBackgroundTextures() {
+        String path512 = "";
+        String path1024 = "";
+        String name = parentPack.getClass().getSimpleName();
+        if (!Gdx.files.internal("anniv5Resources/images/512/"+ name +".png").exists()) {
+            path512 = "anniv5Resources/images/512/boosterpackframe.png";
+        } else {
+            path512 = "anniv5Resources/images/512/"+ name +".png";
+        }
+        if (!Gdx.files.internal("anniv5Resources/images/1024/"+ name +".png").exists()) {
+            path1024 = "anniv5Resources/images/1024/boosterpackframe.png";
+        } else {
+            path1024 = "anniv5Resources/images/1024/"+ name +".png";
+        }
+        this.setBackgroundTexture(path512, path1024);
     }
 }

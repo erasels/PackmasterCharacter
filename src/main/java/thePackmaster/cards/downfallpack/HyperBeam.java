@@ -17,12 +17,11 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class HyperBeam extends AbstractPackmasterCard {
+public class HyperBeam extends AbstractDownfallCard {
     public final static String ID = makeID("HyperBeam");
 
 
     private static final int DAMAGE = 28;
-    private static final int UPGRADE_DAMAGE = 8;
 
     public HyperBeam() {
         super(ID, 2, AbstractCard.CardType.ATTACK, CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY);

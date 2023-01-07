@@ -5,13 +5,12 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.Strike;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class DifferentStrikes extends AbstractPackmasterCard {
+public class DifferentStrikes extends AbstractStrikePackCard {
     public final static String ID = makeID("DifferentStrikes");
 
     public DifferentStrikes() {
