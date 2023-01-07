@@ -136,8 +136,7 @@ public class PackSetupScreen extends CustomScreen {
                 TipHelper.renderGenericTip(
                         pack.previewPackCard.hb.x + pack.previewPackCard.hb.width,
                         pack.previewPackCard.hb.y + pack.previewPackCard.hb.height,
-                        ((AbstractPackPreviewCard)pack.previewPackCard).creditsHeader,
-                        pack.credits);
+                        pack.creditsHeader, pack.credits);
             if (pack.previewPackCard.hb.justHovered)
                 CardCrawlGame.sound.playV("CARD_OBTAIN", 0.4F);
 
@@ -158,8 +157,7 @@ public class PackSetupScreen extends CustomScreen {
                     TipHelper.renderGenericTip(
                             pack.previewPackCard.hb.x + pack.previewPackCard.hb.width,
                             pack.previewPackCard.hb.y + pack.previewPackCard.hb.height,
-                            ((AbstractPackPreviewCard)pack.previewPackCard).creditsHeader,
-                            pack.credits);
+                            pack.creditsHeader, pack.credits);
 
                 if (pack.previewPackCard.hb.justHovered)
                     CardCrawlGame.sound.playV("CARD_OBTAIN", 0.4F);

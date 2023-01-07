@@ -1,16 +1,20 @@
 package thePackmaster.packs;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import thePackmaster.SpireAnniversary5Mod;
 
 import java.util.ArrayList;
+
+import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public abstract class AbstractCardPack {
     public String packID;
     public String name;
     public String description;
     public String author;
+    public String creditsHeader;
     public String credits;
     public ArrayList<AbstractCard> cards;
     public AbstractCard previewPackCard;
@@ -21,6 +25,7 @@ public abstract class AbstractCardPack {
         this.description = description;
         this.author = author;
         this.credits = credits;
+        this.creditsHeader = CardCrawlGame.languagePack.getUIString(makeID("CreditsRenderStrings")).TEXT[0];
         this.cards = new ArrayList<>();
         initializePack();
     }

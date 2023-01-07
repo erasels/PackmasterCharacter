@@ -31,8 +31,6 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
     private Color typeColor = new Color(0.35F, 0.35F, 0.35F, 1f);
     protected String author;
-    public String creditsHeader;
-    public String credits;
 
     private boolean needsArtRefresh = false;
 
@@ -45,8 +43,6 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         rawDescription = parentPack.description;
         name = originalName = parentPack.name;
         author = parentPack.author;
-        creditsHeader = CardCrawlGame.languagePack.getUIString(makeID("CreditsRenderStrings")).TEXT[0];
-        credits = parentPack.credits;
         initializeTitle();
         initializeDescription();
         setBackgroundTextures();
