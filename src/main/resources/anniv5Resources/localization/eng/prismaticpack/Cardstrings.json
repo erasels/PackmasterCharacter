@@ -19,5 +19,10 @@
   "${ModID}:ExoticKnowledge": {
     "NAME": "Exotic Knowledge",
     "DESCRIPTION": "Draw !M! cards. NL If you've played a ${ModID}:different\u00a0color card this turn, draw !${ModID}:m2! more cards."
+  },
+  "${ModID}:ChoiceCut": {
+    "NAME": "Choice Cut",
+    "DESCRIPTION": "Choose one of *Uppercut, *Doom *and *Gloom, *Predator, or *Reach *Heaven to add to your hand. It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose one of *Uppercut+, *Doom *and *Gloom+, *Predator+, or *Reach *Heaven+ to add to your hand. It costs 0 this turn. NL Exhaust."
   }
 }
