@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
@@ -24,6 +24,7 @@ public class AmplifyPatches {
 
     @SpirePatch2(clz= AbstractPlayer.class, method="useCard")
     public static class CatchUse {
+        public static boolean didCost = true;
         @SpireInsertPatch(locator = Locator3.class)
         public static void beforeUse(AbstractPlayer __instance, AbstractCard c) {
             if(c instanceof AmplifyCard && ((AmplifyCard) c).shouldAmplify(c)) {
@@ -61,10 +62,37 @@ public class AmplifyPatches {
             }
         }
 
+        //Patches the energy use to sum up the amplify cost with original cost
+        @SpireInstrumentPatch
+        public static ExprEditor sumEnergyCost() {
+            return new ExprEditor() {
+                @Override
+                public void edit(MethodCall m) throws CannotCompileException {
+                    if (m.getClassName().equals(EnergyManager.class.getName()) && m.getMethodName().equals("use")) {
+                        m.replace(
+                                        "$proceed(" + AmplifyPatches.CatchUse.class.getName() + ".getTotalCost(c, $1));"
+                                );
+                    }
+                }
+            };
+        }
+        public static int getTotalCost(AbstractCard c, int costForTurn) {
+            if(c == amplified) {
+                costForTurn += ((AmplifyCard)c).getAmplifyCost();
+                didCost = true;
+            }
+
+            return costForTurn;
+        }
+
+
         @SpireInsertPatch(locator = Locator2.class)
         public static void beforeEndUseCard(AbstractPlayer __instance, AbstractCard c, AbstractMonster monster) {
             if(amplified == c) {
-                __instance.energy.use(((AmplifyCard)c).getAmplifyCost());
+                if(!didCost) {
+                    __instance.energy.use(((AmplifyCard) c).getAmplifyCost());
+                } else
+                    didCost = false;
                 Wiz.p().powers.stream().filter(p -> p instanceof AmplifyPowerHook).forEach(p -> ((AmplifyPowerHook) p).onAmplify(c));
                 amplified = null;
             }
