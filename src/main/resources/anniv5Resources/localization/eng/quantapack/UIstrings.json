@@ -1,0 +1,9 @@
+{
+  "${ModID}:QuantaPack": {
+    "TEXT": [
+      "Quanta",
+      "Card pack based on a homebrew card game.",
+      "AlexMdle"
+    ]
+  }
+}

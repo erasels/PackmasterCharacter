@@ -7,13 +7,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.atb;
 
-public class MercuryFist extends AbstractPackmasterCard {
+public class MercuryFist extends IntoTheBreachCard {
     public final static String ID = makeID("MercuryFist");
 
     public MercuryFist() {

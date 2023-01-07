@@ -2,13 +2,12 @@ package thePackmaster.cards.intothebreachpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.intothebreachpack.StormGenPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class StormGenerator extends AbstractPackmasterCard {
+public class StormGenerator extends IntoTheBreachCard {
     public final static String ID = makeID("StormGenerator");
 
     public StormGenerator() {

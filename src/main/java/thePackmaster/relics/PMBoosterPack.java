@@ -4,6 +4,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.ShopRoom;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
@@ -20,16 +22,20 @@ public class PMBoosterPack extends AbstractPackmasterRelic {
         RewardItem r = new RewardItem();
         r.cards.clear();
 
-        for (String s:
-                getRandomPackFromAll().getCards() ) {
+        if (AbstractDungeon.getCurrRoom() instanceof ShopRoom) {
+            AbstractDungeon.getCurrRoom().rewards.clear();
+        }
+
+        for (String s :
+                getRandomPackFromAll().getCards()) {
             r.cards.add(CardLibrary.getCard(s).makeCopy());
         }
-
         AbstractDungeon.getCurrRoom().addCardReward(r);
 
-        if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMPLETE) {
-            AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[1]);
-            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
-        }
+        skipDefaultCardRewards = true;
+        AbstractDungeon.combatRewardScreen.open();
+        skipDefaultCardRewards = false;
+
+        AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
     }
 }
