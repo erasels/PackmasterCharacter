@@ -18,7 +18,7 @@
   "${ModID}:Shackles": {
     "NAME": "Shackles",
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL ${ModID}:Evolves when you play a card that costs at least !M! .",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL Block is not removed at the start of your turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL Block is not removed at the start of your next turn.",
     "EXTENDED_DESCRIPTION": ["Huge Shackles"]
   },
   "${ModID}:IceBeast": {
@@ -33,8 +33,8 @@
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
-    "DESCRIPTION": "Ethereal. NL Exhaust !M! cards. NL Put a card from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. NL Put a card from your discard pile into your hand."
+    "DESCRIPTION": "Ethereal. NL Exhaust !M! cards in your draw pile. NL Put a card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your draw pile. NL Put a card from your discard pile into your hand."
   },
   "${ModID}:Owl": {
     "NAME": "Owl",
