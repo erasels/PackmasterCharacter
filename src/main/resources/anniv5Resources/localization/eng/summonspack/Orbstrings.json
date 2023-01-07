@@ -3,7 +3,6 @@
     "NAME": "Swarm Of Bees",
     "DESCRIPTION": [
       "#yPassive: Whenever you play a card, deal #b",
-      " damage to a random enemy. NL #yEvoke: Deal #b",
       " damage to a random enemy."
     ]
   },
