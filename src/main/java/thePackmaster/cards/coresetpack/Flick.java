@@ -22,8 +22,8 @@ public class Flick extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SelectCardsInHandAction(1, name + ".", (cards) -> {
             att(new DiscardSpecificCardAction(cards.get(0)));
-            if (cards.get(0).cost > 0) {
-                for (int i = 0; i < cards.get(0).cost; i++) {
+            if (cards.get(0).costForTurn > 0) {
+                for (int i = 0; i < cards.get(0).costForTurn; i++) {
                     dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
                 }
             }
