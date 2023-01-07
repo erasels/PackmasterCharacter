@@ -15,5 +15,9 @@
   "${ModID}:ShimmeringStrike": {
     "NAME": "Shimmering Strike",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each ${ModID}:different\u00a0color card played this combat."
+  },
+  "${ModID}:ExoticKnowledge": {
+    "NAME": "Exotic Knowledge",
+    "DESCRIPTION": "Draw !M! cards. NL If you've played a ${ModID}:different\u00a0color card this turn, draw !${ModID}:m2! more cards."
   }
 }
