@@ -33,5 +33,9 @@
   "${ModID}:ManyAsOne": {
     "NAME": "Many as One",
     "DESCRIPTION": "Deal !D! damage. NL Put all ${ModID}:different\u00a0color cards from your discard pile into your hand."
+  },
+  "${ModID}:PremiumSelection": {
+    "NAME": "Premium Selection",
+    "DESCRIPTION": "Choose 1 of !M! random *Rare ${ModID}:different\u00a0color cards to add to your hand. It costs 0 this turn. NL Exhaust."
   }
 }

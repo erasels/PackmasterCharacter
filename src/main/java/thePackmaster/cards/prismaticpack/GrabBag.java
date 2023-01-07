@@ -37,7 +37,7 @@ public class GrabBag extends AbstractPackmasterCard {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                List<AbstractCard> cards = PrismaticUtil.getRandomDifferentColorCardInCombat(null, magicNumber);
+                List<AbstractCard> cards = PrismaticUtil.getRandomDifferentColorCardInCombat(null, null, magicNumber);
                 for (AbstractCard c : cards) {
                     this.addToTop(new MakeTempCardInHandAction(c));
                 }
