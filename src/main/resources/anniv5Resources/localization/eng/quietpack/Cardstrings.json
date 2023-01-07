@@ -26,7 +26,7 @@
   },
   "${ModID}:Lie": {
     "NAME": "Lie",
-    "DESCRIPTION": "Enemy loses !M! Strength for 1 turn. NL Add a *Weight to your hand."
+    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL Add a *Weight to your hand."
   },
   "${ModID}:Frontflip": {
     "NAME": "Frontflip",

@@ -23,6 +23,7 @@ public class QuietPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(Crunch.ID);
+        cards.add(Flail.ID);
         cards.add(Frontflip.ID);
         cards.add(GlaiveThrow.ID);
         cards.add(HammerThrow.ID);
