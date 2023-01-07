@@ -21,7 +21,7 @@
   },
   "${ModID}:SummonPython": {
     "NAME": "Summon Python",
-    "DESCRIPTION": "Apply !M! ${ModID}:Constricted."
+    "DESCRIPTION": "Apply !M! ${ModID}:Constricted. NL Exhaust."
   },
   "${ModID}:SummonBees": {
     "NAME": "Summon Bees",
