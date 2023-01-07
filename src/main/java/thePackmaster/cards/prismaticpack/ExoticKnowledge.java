@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public class ExoticKnowledge extends AbstractPackmasterCard {
@@ -50,6 +49,6 @@ public class ExoticKnowledge extends AbstractPackmasterCard {
     }
 
     private boolean playedDifferentColorCardCheck() {
-        return AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().anyMatch(c -> c.color != ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        return AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().anyMatch(c -> c.color != AbstractDungeon.player.getCardColor());
     }
 }

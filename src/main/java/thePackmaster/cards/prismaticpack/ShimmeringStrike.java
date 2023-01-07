@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public class ShimmeringStrike extends AbstractPackmasterCard {
@@ -58,6 +57,6 @@ public class ShimmeringStrike extends AbstractPackmasterCard {
     }
 
     public int countDifferentColorCardsPlayedThisCombat() {
-        return (int)AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(c -> c.color != ThePackmaster.Enums.PACKMASTER_RAINBOW).count();
+        return (int)AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(c -> c.color != AbstractDungeon.player.getCardColor()).count();
     }
 }

@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import thePackmaster.ThePackmaster;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +15,7 @@ public class PrismaticUtil {
         CardGroup validCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
         for (AbstractCard card : CardLibrary.cards.values()) {
-            boolean isDifferentColor = card.color != ThePackmaster.Enums.PACKMASTER_RAINBOW;
+            boolean isDifferentColor = card.color != AbstractDungeon.player.getCardColor();
             boolean isValidRarity = card.rarity == AbstractCard.CardRarity.COMMON || card.rarity == AbstractCard.CardRarity.UNCOMMON || card.rarity == AbstractCard.CardRarity.RARE;
             boolean isValidType = card.type == cardType || (cardType == null && card.type != AbstractCard.CardType.STATUS && card.type != AbstractCard.CardType.CURSE);
             boolean isUnlocked = Settings.treatEverythingAsUnlocked() || !UnlockTracker.isCardLocked(card.cardID);

@@ -29,5 +29,9 @@
     "NAME": "Quirion Dryad",
     "DESCRIPTION": "The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity."
+  },
+  "${ModID}:ManyAsOne": {
+    "NAME": "Many as One",
+    "DESCRIPTION": "Deal !D! damage. NL Put all ${ModID}:different\u00a0color cards from your discard pile into your hand."
   }
 }
