@@ -21,21 +21,20 @@
   },
   "${ModID}:SummonPython": {
     "NAME": "Summon Python",
-    "DESCRIPTION": "Apply !M! ${ModID}:Constricted."
+    "DESCRIPTION": "Apply !M! ${ModID}:Constricted. NL Exhaust."
   },
   "${ModID}:SummonBees": {
     "NAME": "Summon Bees",
     "DESCRIPTION": "Channel a ${ModID}:Swarm\u00a0of\u00a0Bees X times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Swarm\u00a0of\u00a0Bees X+1 times. NL Exhaust."
   },
-  "${ModID}:SummonDisease": {
-    "NAME": "Summon Disease",
-    "DESCRIPTION": "Apply !${ModID}:m2! Weak. NL Enemy loses !M! Strength. NL Exhaust."
+  "${ModID}:Control": {
+    "NAME": "Control",
+    "DESCRIPTION": "Gain !M! Orb slots and !M! Focus."
   },
-  "${ModID}:SummonDemon": {
-    "NAME": "Summon Demon",
-    "DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost.",
-    "UPGRADE_DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + 1."
+  "${ModID}:DemonicRitual": {
+    "NAME": "Demonic Ritual",
+    "DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + !M!."
   },
   "${ModID}:SummonPandas": {
     "NAME": "Summon Pandas",

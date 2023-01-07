@@ -28,8 +28,9 @@ public class SummonVegetables extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < getAttackCount(); i++) {
-            if (i % 2 == 0)
+        int n = getAttackCount();
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0 && n >= 5 )
                 atb(new PewcumberAction(m, new DamageInfo(adp(), damage, DamageInfo.DamageType.NORMAL), true));
             else
                 atb(new PewcumberAction(m, new DamageInfo(adp(), damage, DamageInfo.DamageType.NORMAL), false));
