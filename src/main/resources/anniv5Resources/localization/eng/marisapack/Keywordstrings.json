@@ -13,12 +13,5 @@
       "charge up"
     ],
     "DESCRIPTION": "At #b8 or more stacks, double the damage of the next Attack and lose #b8 stacks."
-  },
-  {
-    "PROPER_NAME": "Duplicate",
-    "NAMES": [
-      "duplicate"
-    ],
-    "DESCRIPTION": "Put a copy of the card into your hand."
   }
 ]
