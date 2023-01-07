@@ -20,6 +20,10 @@ public class Vision extends AbstractPackmasterCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         magicNumber = baseMagicNumber = SEEK;
         exhaust = true;
+        setBackgroundTexture(
+                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
+                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
+        );
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

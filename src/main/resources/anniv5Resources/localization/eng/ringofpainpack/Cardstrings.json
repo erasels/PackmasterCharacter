@@ -18,7 +18,7 @@
   "${ModID}:Shackles": {
     "NAME": "Shackles",
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL ${ModID}:Evolves when you play a card that costs at least !M! .",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL Block is not removed at the start of your turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL Block is not removed at the start of your next turn.",
     "EXTENDED_DESCRIPTION": ["Huge Shackles"]
   },
   "${ModID}:IceBeast": {
@@ -33,13 +33,13 @@
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
-    "DESCRIPTION": "Ethereal. NL Exhaust !M! cards. NL Put a card from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. NL Put a card from your discard pile into your hand."
+    "DESCRIPTION": "Ethereal. NL Exhaust !M! cards in your draw pile. NL Put a card from your discard pile into your hand and give it Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your draw pile. NL Put a card from your discard pile into your hand and give it Exhaust."
   },
   "${ModID}:Owl": {
     "NAME": "Owl",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL ${ModID}:Evolves when you Exhaust a card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply ${ModID}:Rend equal to unblocked damage dealt. NL Apply !M! Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply ${ModID}:Rend equal to half of the unblocked damage dealt. NL Apply !M! Vulnerable.",
     "EXTENDED_DESCRIPTION": ["Nightmare Owl"]
   },
   "${ModID}:Vision": {

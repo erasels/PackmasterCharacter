@@ -19,7 +19,7 @@
   "${ModID}:ReboundVolley": {
     "NAME": "Rebound Volley",
     "DESCRIPTION": "Deal !D! damage. NL Deal !${ModID}:sd! damage to a random enemy.",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Deal !${ModID}:sd! damage to a random enemy twice."]
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Deal !${ModID}:sd! damage to a random enemy !M! times."]
   },
   "${ModID}:SmokePellets": {
     "NAME": "Smoke Pellets",

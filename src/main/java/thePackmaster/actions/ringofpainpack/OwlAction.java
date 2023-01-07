@@ -30,7 +30,8 @@ public class OwlAction extends AbstractGameAction {
                 AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SLASH_HEAVY, false));
                 this.target.damage(this.info);
                 if (this.target.lastDamageTaken > 0) {
-                    this.addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new RendPower(target, target.lastDamageTaken)));
+                    int powerAmt = this.target.lastDamageTaken / 2;
+                    this.addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new RendPower(target, powerAmt), powerAmt));
                 }
 
                 if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {

@@ -11,7 +11,7 @@ public class EnrageShot extends IntoTheBreachCard {
     public final static String ID = makeID("EnrageShot");
 
     public EnrageShot() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         magicNumber = baseMagicNumber = 2;
         this.exhaust = true;
     }
@@ -21,6 +21,6 @@ public class EnrageShot extends IntoTheBreachCard {
     }
 
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeBaseCost(1);
     }
 }
