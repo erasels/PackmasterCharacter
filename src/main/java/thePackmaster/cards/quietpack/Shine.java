@@ -1,0 +1,43 @@
+package thePackmaster.cards.quietpack;
+
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.actions.quietpack.ShineAction;
+import thePackmaster.cards.AbstractPackmasterCard;
+
+import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.atb;
+
+
+public class Shine extends AbstractPackmasterCard {
+    public final static String ID = makeID("Shine");
+
+    public Shine() {
+        super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
+        selfRetain = true;
+    }
+
+    @Override
+    public void triggerWhenDrawn() {
+        atb(new ShineAction(this, this.upgraded));
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
+    }
+
+    @Override
+    public void upp() {
+    }
+
+}
+
+
