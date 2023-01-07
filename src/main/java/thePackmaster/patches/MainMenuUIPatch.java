@@ -7,6 +7,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.CoreSetPack;
 
 import java.util.ArrayList;
 
@@ -53,14 +55,19 @@ public class MainMenuUIPatch {
             options.add(c.name);
         }
 
+        int coreSetPackIndex = 0;
         optionIDs = new String[options.size()];
         optionIDs[0] = RANDOM;
         optionIDs[1] = CHOICE;
         for (int i = 2; i < optionIDs.length; ++i) {
-            optionIDs[i] = SpireAnniversary5Mod.allPacks.get(i - 2).packID;
+            String packID = SpireAnniversary5Mod.allPacks.get(i - 2).packID;
+            optionIDs[i] = packID;
+            if (packID.equals(CoreSetPack.ID)) {
+                coreSetPackIndex = i;
+            }
         }
 
-        packSetups.add(optionIDs[2]);
+        packSetups.add(CoreSetPack.ID);
         packSetups.add(optionIDs[0]);
         packSetups.add(optionIDs[0]);
         packSetups.add(optionIDs[0]);
@@ -84,7 +91,7 @@ public class MainMenuUIPatch {
             dropdowns.add(d);
 
             if (i == 0) {
-                d.setSelectedIndex(2);
+                d.setSelectedIndex(coreSetPackIndex);
             } else if (i >= 5) {
                 d.setSelectedIndex(1);
             }
@@ -137,42 +144,52 @@ public class MainMenuUIPatch {
     @SpirePatch(clz = CharacterOption.class, method = "updateHitbox")
     public static class UpdateOptions {
         public static void Postfix(CharacterOption obj) {
-
             CharSelectInfo c = ReflectionHacks.getPrivate(obj, CharacterOption.class, "charInfo");
 
             if (c.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && obj.selected) {
+                // If custom draft is enabled, update the dropdowns
 
-                // Update the toggle button.
-
-                packDraftToggle.update();
-                if (packDraftToggle.hovered) {
-                    if (toggleTips.isEmpty()) {
-                        toggleTips.add(new PowerTip(uiStrings.TEXT[0], uiStrings.TEXT[1]));
-                    }
-                    if (InputHelper.mX < 1400.0f * Settings.scale) {
-                        TipHelper.queuePowerTips(InputHelper.mX + 60.0f * Settings.scale, InputHelper.mY - 50.0f * Settings.scale, toggleTips);
-                    } else {
-                        TipHelper.queuePowerTips(InputHelper.mX - 350.0f * Settings.scale, InputHelper.mY - 50.0f * Settings.scale, toggleTips);
-                    }
-
-                    if (InputHelper.justClickedLeft) {
-                        CardCrawlGame.sound.playA("UI_CLICK_1", -0.4f);
-                        packDraftToggle.clickStarted = true;
-                    }
-                    if (packDraftToggle.clicked) {
-                        customDraft = !customDraft;
-                        packDraftToggle.clicked = false;
-                    }
-                }
-
-                // If custom draft is enabled, update the dropdowns, too.
-
+                boolean stopInput = false;
                 if (customDraft) {
                     for (DropdownMenu d : dropdowns) {
+                        if (d.isOpen)
+                            stopInput = true;
                         d.update();
+                        if (d.isOpen || stopInput) {
+                            stopInput = true;
+                            InputHelper.justClickedLeft = false;
+                            InputHelper.justReleasedClickLeft = false;
+                            CInputActionSet.select.unpress();
+                            CInputActionSet.proceed.unpress();
+                        }
                     }
                 }
 
+                // Update the toggle button.
+                if (!stopInput) {
+                    packDraftToggle.update();
+                    if (packDraftToggle.hovered) {
+                        if (toggleTips.isEmpty()) {
+                            toggleTips.add(new PowerTip(uiStrings.TEXT[0], uiStrings.TEXT[1]));
+                        }
+                        if (InputHelper.mX < 1400.0f * Settings.scale) {
+                            TipHelper.queuePowerTips(InputHelper.mX + 60.0f * Settings.scale, InputHelper.mY - 50.0f * Settings.scale, toggleTips);
+                        } else {
+                            TipHelper.queuePowerTips(InputHelper.mX - 350.0f * Settings.scale, InputHelper.mY - 50.0f * Settings.scale, toggleTips);
+                        }
+
+                        if (InputHelper.justClickedLeft) {
+                            CardCrawlGame.sound.playA("UI_CLICK_1", -0.4f);
+                            packDraftToggle.clickStarted = true;
+                        }
+                        if (packDraftToggle.clicked) {
+                            customDraft = !customDraft;
+                            packDraftToggle.clicked = false;
+                        }
+                    }
+                }
+                else {
+                }
             }
         }
     }

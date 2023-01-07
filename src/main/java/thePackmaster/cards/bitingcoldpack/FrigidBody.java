@@ -2,13 +2,12 @@ package thePackmaster.cards.bitingcoldpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.bitingcoldpack.FrigidBodyPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class FrigidBody extends AbstractPackmasterCard {
+public class FrigidBody extends BitingColdCard {
     public final static String ID = makeID("FrigidBody");
 
     public FrigidBody() {

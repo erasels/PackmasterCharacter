@@ -11,10 +11,11 @@ import thePackmaster.cardmodifiers.madsciencepack.CheapenModifier;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.marisapack.AmplifyCard;
 import thePackmaster.util.Wiz;
+import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Cheapen extends AbstractPackmasterCard implements AmplifyCard {
+public class Cheapen extends AbstractMadScienceCard implements AmplifyCard {
     public final static String ID = makeID("Cheapen");
     private static final int AMP_COST = 2;
 
@@ -28,7 +29,7 @@ public class Cheapen extends AbstractPackmasterCard implements AmplifyCard {
     }
 
     public void upp() {
-
+        upgradeBaseCost(0);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package thePackmaster.actions.madsciencepack;
 
+import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
@@ -32,7 +33,12 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
         this.count = count;
         this.random = random;
         this.targetgroup = targetgroup;
-        this.requirements = null;
+        this.requirements = new Predicate<AbstractCard>() {
+            @Override
+            public boolean test(AbstractCard abstractCard) {
+                return true;
+            }
+        };
     }
 
     public FindCardForAddModifierAction(AbstractCardModifier mod, int count, boolean random, CardGroup targetgroup, Predicate<AbstractCard> requirements) {
@@ -45,47 +51,51 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (!isDone){
-            Predicate<AbstractCard> combinedRequirements = card -> !card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED);
+        Predicate<AbstractCard> tagCheck = card -> !card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED);
 
-            if (requirements != null){
-                combinedRequirements = combinedRequirements.and(requirements);
+        if (random) {
+            ArrayList<AbstractCard> chosen = new ArrayList<>();
+            ArrayList<AbstractCard> potentialTargets = new ArrayList<>();
+
+            for (AbstractCard c : targetgroup.group) {
+                if (requirements.and(tagCheck).test(c)) {
+                    potentialTargets.add(c);
+                }
             }
+            AbstractCard n;
 
-            if (random) {
-                ArrayList<AbstractCard> chosen = new ArrayList<>();
-                ArrayList<AbstractCard> potentialTargets = new ArrayList<>(targetgroup.group);
-                potentialTargets.removeIf(combinedRequirements);
-                AbstractCard n;
-
-                if(count >= potentialTargets.size()) {
-                    chosen.addAll(potentialTargets);
-                } else {
-                    for (int i = 0; i < count; i++) {
-                        if (potentialTargets.isEmpty()) return; //Sanity check
+            if (count >= potentialTargets.size()) {
+                chosen.addAll(potentialTargets);
+            } else {
+                for (int i = 0; i < count; i++) {
+                    if (potentialTargets.isEmpty()) {
+                        isDone = true;
+                        break;
+                    } else {
                         n = Wiz.getRandomItem(potentialTargets);
                         potentialTargets.remove(n);
                         chosen.add(n);
                     }
                 }
+            }
 
+            if (!chosen.isEmpty()) {
                 for (AbstractCard c2 : chosen) {
                     CardModifierManager.addModifier(c2, mod);
                     c2.superFlash(Color.CHARTREUSE);
                 }
-            } else {
-                atb(new SelectCardsAction(targetgroup.group, count, uiSTRINGS.TEXT[0], false,
-                        combinedRequirements,
-
-                        (cards) -> {
-                            for (AbstractCard c2 : cards) {
-                                CardModifierManager.addModifier(c2, mod);
-                                c2.superFlash(Color.CHARTREUSE);
-                            }
-                        }
-                ));
             }
+        } else {
+            atb(new SelectCardsAction(targetgroup.group, count, uiSTRINGS.TEXT[0], false,
+                    requirements.and(tagCheck),
 
+                    (cards) -> {
+                        for (AbstractCard c2 : cards) {
+                            CardModifierManager.addModifier(c2, mod);
+                            c2.superFlash(Color.CHARTREUSE);
+                        }
+                    }
+            ));
         }
         isDone = true;
     }

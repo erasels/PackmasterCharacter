@@ -5,7 +5,7 @@
   },
   "${ModID}:BoosterTutor": {
     "NAME": "Booster Tutor",
-    "DESCRIPTION": "Draw !M! cards from different Packs."
+    "DESCRIPTION": "Put !M! cards from different Packs in your draw pile into your hand."
   },
   "${ModID}:DestinyDraw": {
     "NAME": "Destiny Draw",
@@ -22,8 +22,8 @@
   },
   "${ModID}:PackRip": {
     "NAME": "Pack Rip",
-    "DESCRIPTION": "Choose 1 of 3 Packs. NL Play 3 random cards from the chosen Pack. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Packs.  NL Play 3 random cards from the chosen Pack."
+    "DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand and Upgrade them. NL Exhaust."
   },
   "${ModID}:Showoff": {
     "NAME": "Showoff",
@@ -35,8 +35,8 @@
   },
   "${ModID}:SmithingHammer": {
     "NAME": "Smithing Hammer",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Upgrade a card in your hand for the rest of combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL Upgrade !M! cards in your hand for the rest of combat."
+    "DESCRIPTION": "Deal !D! damage 3 times. NL Upgrade a card in your hand for the rest of combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL Upgrade !M! cards in your hand for the rest of combat."
   },
   "${ModID}:Synergize": {
     "NAME": "Synergize",

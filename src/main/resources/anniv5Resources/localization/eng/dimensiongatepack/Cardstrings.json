@@ -5,16 +5,17 @@
   },
   "${ModID}:ArsenalGear": {
     "NAME": "Arsenal Gear",
-    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare cards to your hand. They cost 0."
+    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare card to your hand. It costs 0."
   },
   "${ModID}:ConjureBarrage": {
     "NAME": "Conjure Barrage",
-    "DESCRIPTION": "Fill your hand with *Magic *Missiles. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Fill your hand with *Magic *Missiles+. NL Exhaust."
+    "DESCRIPTION": "Add !M! *Magic *Missiles to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Magic *Missiles+ to your hand. NL Exhaust."
   },
   "${ModID}:DarkRitual": {
     "NAME": "Dark Ritual",
-    "DESCRIPTION": "Lose !M! HP. NL Gain 100 Gold. NL Exhaust."
+    "DESCRIPTION": "Lose 10 HP. NL Gain !M! Gold. NL Remove this from your deck permanently.",
+    "UPGRADE_DESCRIPTION": "Lose 10 HP. NL Gain !M! Gold. NL *Downgrade this permanently."
   },
   "${ModID}:Knighthood": {
     "NAME": "Knighthood",
@@ -33,7 +34,7 @@
   },
   "${ModID}:MagicMissile": {
     "NAME": "Magic Missile",
-    "DESCRIPTION": "Deal !D! damage. NL Increase the damage dealt by *Magic *Missiles by !M! this turn."
+    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL Increase the damage dealt by *Magic cards by !M! this turn."
   },
   "${ModID}:Minniegun": {
     "NAME": "Minniegun",
@@ -42,7 +43,7 @@
   "${ModID}:PackRat": {
     "NAME": "Pack Rat",
     "DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and remove this from your deck permanently.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and Downgrade this permanently. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and *Downgrade this permanently."
   },
   "${ModID}:ScorchedEarth": {
     "NAME": "Scorched Earth",

@@ -7,11 +7,11 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
+
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class OverTime extends AbstractPackmasterCard {
+public class OverTime extends AbstractLegacyCard {
     public final static String ID = makeID("OverTime");
 
     private static final int ATTACK_PER_CARD = 4;

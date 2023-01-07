@@ -3,7 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.madsciencepack.Sharpen;
+import thePackmaster.cards.madsciencepack.*;
 
 import java.util.ArrayList;
 
@@ -21,7 +21,16 @@ public class MadSciencePack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
+        cards.add(Cheapen.ID);
+        cards.add(Enhance.ID);
+        cards.add(Expand.ID);
+        cards.add(Fortify.ID);
+        cards.add(Improve.ID);
+        cards.add(Lighten.ID);
+        cards.add(Piratify.ID);
         cards.add(Sharpen.ID);
+        cards.add(Discombobulate.ID);
+        cards.add(Winterize.ID);
         return cards;
     }
 }

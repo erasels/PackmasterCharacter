@@ -1,0 +1,22 @@
+{
+  "${ModID}:Inspiration": {
+    "NAME": "Inspiration",
+    "DESCRIPTIONS": [
+      "The next",
+      "The next #b",
+      " card you play has its",
+      " cards you play have their",
+      " damage and #yBlock increased by #b",
+      "%."
+    ]
+  },
+  "${ModID}:SplendidForm": {
+    "NAME": "Splendid Form",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #yInspiration #b",
+      "At the start of your turn, gain #b",
+      " #yInspiration #b",
+      "."
+    ]
+  }
+}

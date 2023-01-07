@@ -26,7 +26,7 @@ First, navigate to the project on your system and copy the example-pom.xml and r
 **DO NOT DELETE THE EXAMPLE POM!**
 
 Once you've got the project up and running, navigate to the **packs** package.  
-Create a new class that extends from AbstractCardPack. You can copy the basic structure from an existing pack like the DownfallPack. Somply change the ID line to use the ID you want to use for you pack, example:  
+Create a new class that extends from AbstractCardPack. You can copy the basic structure from an existing pack like the DownfallPack. Simply change the ID line to use the ID you want to use for you pack, example:  
 `public static final String ID = SpireAnniversary5Mod.makeID("ExamplePack"); `
 and define the cards your pack has in `getCards()` once you've made them.  
 Strings are done in a per-pack basis. So create a directory with the same name as your pack's ID with no capitalization in `resources/localization/eng`. Everything other than the *Cardstrings.json* and *UIstrings.json* is optional.  
@@ -59,11 +59,12 @@ To test your cards simply use the Custom Draft toggle in the character select sc
 * We have our own AbstractCard Class, **AbstractPackmasterCard** please make use of it for your cards
 * To get a card's Pack, you can call getParent on a PackmasterCard or use the method in the Wiz class getPackByCard
 * We have some lists and maps to get card packs, these are allPacks, packsByID, cardParentMap
+* If you want to add your own CardBack for your Pack preview card, you can do so by adding it to the `images/512` and `1024` with the png file having the same name as your pack
 
 ### Reminders and veto ruling
 Please look at the google docs to get a full refresher of the rules for your contribution. Specifically the complxity cap is important.
 Here is a TL;DR:
-* 10 cards per pack, token cards are allowed but please be reasonable (high amount of tokens is allowed by precedent, only if these cards cannot be easily obtained)
+* 10 cards per pack, token cards are allowed but please be reasonable (3 token cards max, no exceptions other than the few made already)
 * No duplicate cards, if a card exists in another pack, it may not be in another.
 * No additional UI, please use powers/orbs/stances if you need them
 * Most of your cards should have less than 6 lines of text.

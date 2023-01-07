@@ -17,7 +17,7 @@ public class GlaciatePower extends AbstractPackmasterPower {
 
     // Hey there! Welcome to my code!
     // I know that this power doesn't look to be doing anything...
-    // Its functionality is actually in my OnApplyDebuffPatch!
+    // Its functionality is actually in SpireAnniversary5Mod, in receivePostPowerApplySubscriber()!
     // If you want to see this power's code, go there ^^
 
     @Override

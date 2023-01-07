@@ -31,6 +31,7 @@ public class DimensionGatePack extends AbstractCardPack {
         cards.add(Minniegun.ID);
         cards.add(PackRat.ID);
         cards.add(ScorchedEarth.ID);
+        cards.add(MagicMissile.ID);
         return cards;
     }
 }

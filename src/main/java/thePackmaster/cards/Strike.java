@@ -18,7 +18,7 @@ public class Strike extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 
     public void upp() {

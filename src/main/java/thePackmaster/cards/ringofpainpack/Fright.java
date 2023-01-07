@@ -15,7 +15,7 @@ public class Fright extends AbstractPackmasterCard {
     public final static String ID = makeID(Fright.class.getSimpleName());
 
     private static final int DAMAGE = 9;
-    private static final int UPGRADE_DAMAGE = 1;
+    private static final int UPGRADE_DAMAGE = 2;
     private static final int DRAW = 2;
     private static final int UPGRADE_DRAW = 1;
 
@@ -23,6 +23,10 @@ public class Fright extends AbstractPackmasterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = DRAW;
+        setBackgroundTexture(
+                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
+                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
+        );
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
