@@ -2,6 +2,7 @@ package thePackmaster.packs;
 
 import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;
+import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
@@ -12,14 +13,17 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.util.CardArtRoller;
 
-import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
-import static thePackmaster.SpireAnniversary5Mod.modID;
+import java.util.ArrayList;
+import java.util.List;
+
+import static thePackmaster.SpireAnniversary5Mod.*;
 
 @AutoAdd.Ignore
 public abstract class AbstractPackPreviewCard extends CustomCard {
@@ -27,6 +31,8 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
     private Color typeColor = new Color(0.35F, 0.35F, 0.35F, 1f);
     protected String author;
+    public String creditsHeader;
+    public String credits;
 
     private boolean needsArtRefresh = false;
 
@@ -39,6 +45,8 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         rawDescription = parentPack.description;
         name = originalName = parentPack.name;
         author = parentPack.author;
+        creditsHeader = CardCrawlGame.languagePack.getUIString(makeID("CreditsRenderStrings")).TEXT[0];
+        credits = parentPack.credits;
         initializeTitle();
         initializeDescription();
         setBackgroundTextures();
@@ -142,4 +150,16 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         }
         this.setBackgroundTexture(path512, path1024);
     }
+
+    /*
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        if (credits != null) {
+            List<TooltipInfo> tips = new ArrayList<>();
+            tips.add(new TooltipInfo(creditsHeader, credits));
+            return tips;
+        }
+        else return null;
+    }
+     */
 }

@@ -11,16 +11,22 @@ public abstract class AbstractCardPack {
     public String name;
     public String description;
     public String author;
+    public String credits;
     public ArrayList<AbstractCard> cards;
     public AbstractCard previewPackCard;
 
-    public AbstractCardPack(String id, String name, String description, String author) {
+    public AbstractCardPack(String id, String name, String description, String author, String credits) {
         this.packID = id;
         this.name = name;
         this.description = description;
         this.author = author;
+        this.credits = credits;
         this.cards = new ArrayList<>();
         initializePack();
+    }
+
+    public AbstractCardPack(String id, String name, String description, String author) {
+        this(id, name, description, author, null);
     }
 
     public abstract ArrayList<String> getCards();
