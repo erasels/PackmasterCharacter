@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -29,7 +30,7 @@ public class Rummage extends AbstractPackmasterCard {
                 ArrayList<AbstractCard> possCardsList = new ArrayList<>();
 
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (!q.freeToPlay() && q.cost>0)
+                    if (Wiz.getLogicalCardCost(q) > 0)
                         possCardsList.add(q);
                 }
 
