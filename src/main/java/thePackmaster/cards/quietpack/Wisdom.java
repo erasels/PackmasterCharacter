@@ -19,13 +19,12 @@ public class Wisdom extends AbstractPackmasterCard {
 
     public Wisdom() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        magicNumber = baseMagicNumber = 1;
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new GainEnergyAction(1));
-        if (upgraded)
-            atb(new GainEnergyAction(1));
+        atb(new GainEnergyAction(magicNumber));
         atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -40,7 +39,7 @@ public class Wisdom extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-
+        upMagic(1);
     }
 }
 

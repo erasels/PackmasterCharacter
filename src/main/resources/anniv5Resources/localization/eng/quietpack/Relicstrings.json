@@ -1,0 +1,9 @@
+{
+  "${ModID}:TarredFeather": {
+    "NAME": "Tarred Feather",
+    "FLAVOR": "You wouldn't want to meet its previous wearer.",
+    "DESCRIPTIONS": [
+      "Increase you max hand size by #b2. NL At the start of each combat, add #b2 #yWeights into your hand."
+    ]
+  }
+}

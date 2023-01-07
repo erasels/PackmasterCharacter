@@ -44,7 +44,7 @@ public class ShineAction extends AbstractGameAction {
     private AbstractCard randomOtherCard() {
         AbstractCard c = adp().hand.getRandomCard(AbstractDungeon.cardRandomRng);
         if (c == originalCard) {
-           return randomOtherCard();
+            return randomOtherCard();
         }
         return c;
     }

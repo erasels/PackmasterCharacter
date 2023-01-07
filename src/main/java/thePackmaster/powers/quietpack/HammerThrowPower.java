@@ -41,21 +41,11 @@ public class HammerThrowPower extends AbstractPackmasterPower {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                Iterator var1 = AbstractDungeon.player.hand.group.iterator();
-
-                while(true) {
-                    AbstractCard c;
-                    do {
-                        if (!var1.hasNext()) {
-                            this.isDone = true;
-                            return;
-                        }
-
-                        c = (AbstractCard)var1.next();
-                    } while(!c.selfRetain && !c.retain);
-
-                    this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(damage, true), DamageInfo.DamageType.THORNS, AttackEffect.NONE, true));
-                }
+                    for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                        if (c.selfRetain || c.retain)
+                            this.addToBot(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(damage, true), DamageInfo.DamageType.THORNS, AttackEffect.NONE, true));
+                    }
+                    this.isDone = true;
             }
         });
     }

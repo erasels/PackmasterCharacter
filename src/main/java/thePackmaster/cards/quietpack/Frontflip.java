@@ -1,13 +1,14 @@
 package thePackmaster.cards.quietpack;
 
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.defect.ScrapeFollowUpAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.quietpack.FrontflipAction;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -26,7 +27,7 @@ public class Frontflip extends AbstractPackmasterCard {
         addToBot(new DrawCardAction(magicNumber, new AbstractGameAction() {
             @Override
             public void update() {
-                Wiz.att(new WaitAction(3));
+                Wiz.att(new WaitAction(0.4F));
                 DrawCardAction.drawnCards.stream().filter(c -> c.cost == -2).forEach(c -> Wiz.att(new DiscardSpecificCardAction(c)));
 
             }
