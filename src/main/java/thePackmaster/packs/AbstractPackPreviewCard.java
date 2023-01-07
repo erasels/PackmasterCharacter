@@ -2,7 +2,6 @@ package thePackmaster.packs;
 
 import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;
-import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
@@ -13,15 +12,11 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.util.CardArtRoller;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 
@@ -146,16 +141,4 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         }
         this.setBackgroundTexture(path512, path1024);
     }
-
-    /*
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        if (credits != null) {
-            List<TooltipInfo> tips = new ArrayList<>();
-            tips.add(new TooltipInfo(creditsHeader, credits));
-            return tips;
-        }
-        else return null;
-    }
-     */
 }
