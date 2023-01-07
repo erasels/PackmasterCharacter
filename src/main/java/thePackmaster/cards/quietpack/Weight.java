@@ -26,7 +26,7 @@ public class Weight extends AbstractPackmasterCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
-                adp().discardPile.moveToExhaustPile(c);
+                adp().discardPile.moveToExhaustPile(Weight.this);
                 isDone = true;
             }
         });
