@@ -20,7 +20,7 @@ public class SeedsOfDestruction extends AbstractPackmasterCard {
     private static final int DISCARD_OPTION = -2;
 
     public SeedsOfDestruction() {
-        super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         magicNumber = baseMagicNumber = 2;
         cardsToPreview = new Imp();
     }
