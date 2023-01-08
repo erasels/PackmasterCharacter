@@ -24,7 +24,6 @@ public class MalchezaarsImp extends AbstractPackmasterCard {
         applyToSelf(new MalchezaarsImpPower(p, 1));
     }
 
-
     @Override
     public void upp() {
         upgradeBaseCost(UPGRADE_COST);
