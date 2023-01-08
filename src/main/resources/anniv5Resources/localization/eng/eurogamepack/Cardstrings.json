@@ -1,7 +1,7 @@
 {
   "${ModID}:Auctioneering": {
     "NAME": "Auctioneering",
-    "DESCRIPTION": "Gain !${ModID}:m2! ${ModID}:VP. NL Gain Block equal to 1 / !M! your current ${ModID}:VP. NL Draw a Card."
+    "DESCRIPTION": "Gain !${ModID}:m2! ${ModID}:VP. NL Gain Block equal to NL 1 / !M! your current ${ModID}:VP. NL Draw a Card."
   },
   "${ModID}:Prosper": {
     "NAME": "Prosper",
