@@ -5,11 +5,12 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.FocusPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.relics.AbstractPackmasterRelic;
+import thePackmaster.util.Wiz;
 
-import static thePackmaster.util.Wiz;
+import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.att;
 
 public class BlueSkull extends AbstractPackmasterRelic {
     public static final String ID = SpireAnniversary5Mod.makeID(BlueSkull.class.getSimpleName());
@@ -40,7 +41,7 @@ public class BlueSkull extends AbstractPackmasterRelic {
     public void onBloodied() {
         flash();
         pulse = true;
-        if (!isActive && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+        if (!isActive && Wiz.isInCombat()) {
             att(new ApplyPowerAction(adp(), adp(), new FocusPower(adp(), FOCUS_AMOUNT), FOCUS_AMOUNT));
             att(new RelicAboveCreatureAction(adp(), this));
             isActive = true;

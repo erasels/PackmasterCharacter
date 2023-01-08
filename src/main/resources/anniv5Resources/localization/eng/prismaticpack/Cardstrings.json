@@ -1,0 +1,46 @@
+{
+  "${ModID}:SwordAndDagger": {
+    "NAME": "Sword and Dagger",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! *Shiv to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add !M! *Shivs to your hand."
+  },
+  "${ModID}:PrismaticBarrier": {
+    "NAME": "Prismatic Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL If you've played a ${ModID}:different\u00a0color card this turn, gain !M! *Plated *Armor and Exhaust."
+  },
+  "${ModID}:GrabBag": {
+    "NAME": "Grab Bag",
+    "DESCRIPTION": "Add !M! random ${ModID}:different\u00a0color cards to your hand. NL Exhaust."
+  },
+  "${ModID}:ShimmeringStrike": {
+    "NAME": "Shimmering Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each ${ModID}:different\u00a0color card played this combat."
+  },
+  "${ModID}:ExoticKnowledge": {
+    "NAME": "Exotic Knowledge",
+    "DESCRIPTION": "Draw !M! cards. NL If you've played a ${ModID}:different\u00a0color card this turn, draw !${ModID}:m2! more cards."
+  },
+  "${ModID}:ChoiceCut": {
+    "NAME": "Choice Cut",
+    "DESCRIPTION": "Choose one of *Uppercut, *Doom *and *Gloom, *Predator, or *Reach *Heaven to add to your hand. It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose one of *Uppercut+, *Doom *and *Gloom+, *Predator+, or *Reach *Heaven+ to add to your hand. It costs 0 this turn. NL Exhaust."
+  },
+  "${ModID}:QuirionDryad": {
+    "NAME": "Quirion Dryad",
+    "DESCRIPTION": "The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity."
+  },
+  "${ModID}:ManyAsOne": {
+    "NAME": "Many as One",
+    "DESCRIPTION": "Deal !D! damage. NL Put all ${ModID}:different\u00a0color cards from your discard pile into your hand."
+  },
+  "${ModID}:PremiumSelection": {
+    "NAME": "Premium Selection",
+    "DESCRIPTION": "Choose 1 of !M! random ${ModID}:different\u00a0color Rare cards to add to your hand. It costs 0 this turn. NL Exhaust."
+  },
+  "${ModID}:FlawlessPrism": {
+    "NAME": "Flawless Prism",
+    "DESCRIPTION": "At the start of your turn, add !M! ${ModID}:different\u00a0color Power card to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add !M! ${ModID}:different\u00a0color Power cards to your hand."
+  }
+}

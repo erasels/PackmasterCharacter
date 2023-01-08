@@ -1,16 +1,10 @@
 package thePackmaster.cards.coresetpack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
-import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
-import com.megacrit.cardcrawl.actions.utility.QueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
@@ -18,6 +12,7 @@ import thePackmaster.actions.EasyModalChoiceAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.PackmasterModalChoiceCard;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -37,8 +32,7 @@ public class PackRip extends AbstractPackmasterCard {
 
         ArrayList<AbstractCard> packCards = new ArrayList<>();
 
-        for (AbstractCardPack pack:choices
-        ) {
+        for (AbstractCardPack pack:choices) {
             packCards.add(new PackmasterModalChoiceCard(pack.previewPackCard.cardID, pack.previewPackCard.name, pack.previewPackCard.rawDescription, true, () -> action(pack)));
         }
 
@@ -46,13 +40,12 @@ public class PackRip extends AbstractPackmasterCard {
     }
 
     public void action(AbstractCardPack pack) {
-
-        addToBot(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, 10, true, false));
-
-        for (AbstractCard c:pack.cards
-             ) {
-            if (upgraded) c.upgrade();
-            addToBot(new MakeTempCardInHandAction(c));
+        addToBot(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, Wiz.hand().size(), true, false));
+        for (AbstractCard c : pack.cards) {
+            if(c.rarity == CardRarity.COMMON || c.rarity == CardRarity.UNCOMMON || c.rarity == CardRarity.RARE) {
+                if (upgraded) c.upgrade();
+                addToBot(new MakeTempCardInHandAction(c));
+            }
         }
     }
 

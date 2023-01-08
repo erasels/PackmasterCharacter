@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.AbstractPackPreviewCard;
+import thePackmaster.ui.PackFilterMenu;
 
 import java.util.*;
 

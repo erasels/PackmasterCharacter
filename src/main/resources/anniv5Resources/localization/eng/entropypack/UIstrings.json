@@ -1,0 +1,9 @@
+{
+  "${ModID}:EntropyPack": {
+    "TEXT": [
+      "Entropy",
+      "Discard what you don't need, and what you do.",
+      "Alchyr"
+    ]
+  }
+}

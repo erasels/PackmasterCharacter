@@ -1,0 +1,9 @@
+{
+  "${ModID}:MiniHakkero": {
+    "NAME": "Mini Hakkero",
+    "FLAVOR": "A small elemental furnace, generates enough heat and energy to destroy a mountain.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b%s #y${ModID}:Charge Up."
+    ]
+  }
+}
