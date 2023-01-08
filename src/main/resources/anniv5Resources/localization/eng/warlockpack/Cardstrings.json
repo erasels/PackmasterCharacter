@@ -1,48 +1,35 @@
 {
-  "${ModID}:Weight": {
-    "NAME": "Weight",
-    "DESCRIPTION": "Unplayable. Retain. NL If this card is discarded from your hand, Exhaust it."
+  "${ModID}:Imp": {
+    "NAME": "Imp",
+    "DESCRIPTION": "Autoplay. NL Deal 4 damage to a random enemy. Increase the damage of *Imp cards by 1 this combat. NL Draw a card. NL Exhaust."
   },
-  "${ModID}:Oppressor": {
-    "NAME": "Oppressor",
-    "DESCRIPTION": "Deal !D! damage. NL Discard 1 card."
+  "${ModID}:HighPriestessJeklik": {
+    "NAME": "High Priestess Jeklik",
+    "DESCRIPTION": "Gain !B! Block. NL If this card is Exhausted, add 2 copies of it to your hand."
   },
-  "${ModID}:IronShield": {
-    "NAME": "Iron Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Add a *Weight to your hand."
+  "${ModID}:SoulShear": {
+    "NAME": "Soul Shear",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle 1 *Imp into your draw pile."
   },
-  "${ModID}:Shine": {
-    "NAME": "Shine",
-    "DESCRIPTION": "Unplayable. Retain. NL When you draw this card, upgrade another random card in your hand for the rest of the combat.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When you draw this card, upgrade ALL cards in your hand for the rest of the combat."
+  "${ModID}:Soulfire": {
+    "NAME": "Soulfire",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a random card in your hand.",
+    "UPGRADED_DESCRIPTION": "Deal !D! damage. NL Exhaust a card in your hand."
   },
-  "${ModID}:GlaiveThrow": {
-    "NAME": "Glaive Throw",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Discard !M! cards."
+  "${ModID}:Doomguard": {
+    "NAME": "Doomguard",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 2 random cards in your hand."
   },
-  "${ModID}:Crunch": {
-    "NAME": "Crunch",
-    "DESCRIPTION": "Unplayable. Retain. NL When you draw this card, draw !M! cards."
+  "${ModID}:HandOfGulDan": {
+    "NAME": "Hand of Gul'dan",
+    "DESCRIPTION": "Draw !M! cards. NL If this card is Exhausted, draw !M! cards."
   },
-  "${ModID}:Lie": {
-    "NAME": "Lie",
-    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL Add a *Weight to your hand."
+  "${ModID}:SeedsOfDestruction": {
+    "NAME": "Seeds of Destruction",
+    "DESCRIPTION": "Choose to shuffle !M! *Imps into your draw pile or one more into your discard pile."
   },
-  "${ModID}:Frontflip": {
-    "NAME": "Frontflip",
-    "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards, discard Unplayable cards drawn."
-  },
-  "${ModID}:HammerThrow": {
-    "NAME": "Hammer Throw",
-    "DESCRIPTION": "Whenever a card is Retained, deal !M! damage to ALL enemies."
-  },
-  "${ModID}:Flail": {
-    "NAME": "Flail",
-    "DESCRIPTION": "Deal !D! damage. NL Add 2 *Weights to your hand."
-  },
-  "${ModID}:Wisdom": {
-    "NAME": "Wisdom",
-    "DESCRIPTION": "Gain [E]. NL Discard any number of cards in your hand. Draw that many card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Discard any number of cards in your hand. Draw that many card. NL Exhaust."
+  "${ModID}:AranasiBroodmother": {
+    "NAME": "Aranasi Broodmother",
+    "DESCRIPTION": "Gain !B! Block. NL Shuffle this card into your draw pile. NL When you draw this card, gain !M! Block."
   }
 }
