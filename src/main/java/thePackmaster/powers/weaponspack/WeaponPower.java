@@ -1,5 +1,7 @@
 package thePackmaster.powers.weaponspack;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.NeutralPowertypePatch;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.InvisiblePower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,21 +21,15 @@ import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WeaponPower extends AbstractPackmasterPower {
+public class WeaponPower extends AbstractPackmasterPower implements InvisiblePower {
 
     public static final String POWER_ID = makeID("WeaponPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
-    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public WeaponPower(AbstractCreature owner) {
-        super(POWER_ID, NAME, PowerType.BUFF, false, owner, -1);
+        super(POWER_ID, NAME, NeutralPowertypePatch.NEUTRAL, false, owner, -1);
         this.loadRegion("painfulStabs");
-    }
-
-    @Override
-    public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
     }
 
     @Override

@@ -24,6 +24,11 @@ public class SwordOfWisdom extends AbstractWeaponsPackCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        onChoseThisOption();
+    }
+
+    @Override
+    public void onChoseThisOption(){
         AbstractDungeon.actionManager.addToBottom(new EquipAction(new SwordOfWisdomOrb(WEAPON_ATTACK, this.magicNumber, false)));
     }
 

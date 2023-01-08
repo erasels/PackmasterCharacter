@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.orbs.weaponspack.AbstractWeaponOrb;
-import thePackmaster.util.CombatUtils;
+import thePackmaster.util.Wiz;
 
 import java.util.Iterator;
 
@@ -28,7 +28,7 @@ public class AgileStrike extends AbstractWeaponsPackCard {
 
         this.tags.add(CardTags.STRIKE);
 
-        if (CombatUtils.isIndeedWithoutADoubtInCombat()) {
+        if (Wiz.isInCombat()) {
             reduceCostToZeroForATurnIfNeeded();
         }
     }
@@ -47,6 +47,9 @@ public class AgileStrike extends AbstractWeaponsPackCard {
     }
 
     private void reduceCostToZeroForATurnIfNeeded() {
+        if (costForTurn == 0) {
+            return;
+        }
         boolean shouldCostBeReduced = false;
         Iterator<AbstractOrb> orbsChanneledThisTurn = AbstractDungeon.actionManager.orbsChanneledThisTurn.iterator();
 
