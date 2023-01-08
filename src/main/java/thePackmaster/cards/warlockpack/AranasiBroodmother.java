@@ -14,7 +14,7 @@ import static thePackmaster.util.Wiz.atb;
 public class AranasiBroodmother extends AbstractPackmasterCard {
     public final static String ID = makeID(AranasiBroodmother.class.getSimpleName());
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     public AranasiBroodmother() {
         super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
