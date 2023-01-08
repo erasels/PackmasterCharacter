@@ -29,6 +29,7 @@ public class WarlockPack extends AbstractCardPack {
         cards.add(SeedsOfDestruction.ID);
         cards.add(AranasiBroodmother.ID);
         cards.add(MalchezaarsImp.ID);
+        cards.add(TheSoularium.ID);
         return cards;
     }
 }

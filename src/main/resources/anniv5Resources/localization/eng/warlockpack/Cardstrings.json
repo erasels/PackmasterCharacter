@@ -36,5 +36,9 @@
   "${ModID}:MalchezaarsImp": {
     "NAME": "Malchezaar's Imp",
     "DESCRIPTION": "Whenenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your draw pile."
+  },
+  "${ModID}:TheSoularium": {
+    "NAME": "The Soularium",
+    "DESCRIPTION": "Draw !M! cards. NL Give them Ethereal. NL Exhaust."
   }
 }
