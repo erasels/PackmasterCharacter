@@ -16,7 +16,7 @@ public class AranasiBroodmother extends AbstractPackmasterCard {
     private static final int COST = 1;
 
     public AranasiBroodmother() {
-        super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+        super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         baseBlock = 5;
         magicNumber = baseMagicNumber = 3;
         this.shuffleBackIntoDrawPile = true;
