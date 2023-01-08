@@ -14,7 +14,7 @@ public class Bulwark extends AbstractPackmasterCard {
     public Bulwark() {
         super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 0;
-        selfRetain = true;
+        isInnate = true;
         exhaust = true;
     }
 

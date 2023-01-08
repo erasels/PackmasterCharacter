@@ -2,7 +2,7 @@
   "${ModID}:Ancient": {
     "NAME": "Ancient",
     "DESCRIPTION": [
-      "If you have less than 6 Plated Armor at the start of your turn, gain 2 Plated Armor. NL When you leave this stance, gain 1 Artifact."
+      "If you have less than #b6 Plated Armor at the start of your turn, gain #b2 Plated Armor. NL When you leave this stance, gain #b1 Artifact."
     ]
   }
 }
