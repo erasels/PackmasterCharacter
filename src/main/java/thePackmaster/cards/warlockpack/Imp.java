@@ -1,6 +1,5 @@
 package thePackmaster.cards.warlockpack;
 
-import basemod.BaseMod;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AutoplayField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -14,7 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.thornDmg;
 
 public class Imp extends AbstractPackmasterCard {
     public final static String ID = makeID(Imp.class.getSimpleName());
@@ -49,7 +49,6 @@ public class Imp extends AbstractPackmasterCard {
                     if (c instanceof Imp) {
                         c.applyPowers();
                         c.initializeDescription();
-                        BaseMod.logger.info("Updating Imp card");
                     }
                 }
 
