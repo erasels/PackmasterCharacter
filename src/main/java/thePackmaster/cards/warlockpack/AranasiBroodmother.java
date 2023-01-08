@@ -38,4 +38,9 @@ public class AranasiBroodmother extends AbstractPackmasterCard {
         upgradeBlock(2);
         upMagic(1);
     }
+
+    @Override
+    public float getTitleFontSize() {
+        return 20.0f;
+    }
 }

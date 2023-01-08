@@ -59,4 +59,9 @@ public class SeedsOfDestruction extends AbstractPackmasterCard {
     public void upp() {
         upMagic(1);
     }
+
+    @Override
+    public float getTitleFontSize() {
+        return 20.0f;
+    }
 }
