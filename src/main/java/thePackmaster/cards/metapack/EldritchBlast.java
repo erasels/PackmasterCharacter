@@ -25,7 +25,7 @@ public class EldritchBlast extends AbstractPackmasterCard {
     private static final int DAMAGE_UPGRADE = 3;
 
     public EldritchBlast() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 1;
         tags.add(MAGIC);

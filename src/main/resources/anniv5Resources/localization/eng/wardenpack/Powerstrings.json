@@ -1,0 +1,15 @@
+{
+  "${ModID}:EnigmancyPower": {
+    "NAME": "Enigmancy",
+    "DESCRIPTIONS": [
+      "Each turn, gain #b",
+      " Energy and decrease this gain by #b1."
+    ]
+  },
+  "${ModID}:DivineMightPower": {
+    "NAME": "Divine Might",
+    "DESCRIPTIONS": [
+      "When #yDivine #yMight is played again, #yAscend."
+    ]
+  }
+}

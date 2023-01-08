@@ -1,41 +1,50 @@
-package thePackmaster.cards.metapack;
+package thePackmaster.cards.wardenpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Swipe extends AbstractPackmasterCard {
-    public final static String ID = makeID("Swipe");
+public class RiskOfBlades extends AbstractPackmasterCard {
+    public final static String ID = makeID("RiskOfBlades");
 
     private static final int DAMAGE = 6;
     private static final int DAMAGE_UPGRADE = 2;
 
-    public Swipe() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+    public RiskOfBlades() {
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.magicNumber = Math.max(p.energy.energyMaster - EnergyPanel.totalCount,0);
-        this.baseMagicNumber = magicNumber;
+
+        this.magicNumber = this.baseMagicNumber = hitAmount(4);
 
         for (int a = 0; a < this.magicNumber; a++)
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+    }
 
-        this.initializeDescription();
+    public int hitAmount(int hits)
+    {
+        int a = 0;
+
+        for(int i = 0; i < Math.min(hits, AbstractDungeon.player.drawPile.size()); ++i) {
+            if (Wiz.p().drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1).type == CardType.ATTACK)
+            a++;
+        }
+
+        return a;
     }
 
     public void applyPowers() {
-        this.magicNumber = Math.max(Wiz.p().energy.energyMaster - EnergyPanel.totalCount,0);
-        this.baseMagicNumber = magicNumber;
+        this.magicNumber = this.baseMagicNumber = hitAmount(4);
 
         super.applyPowers();
 
