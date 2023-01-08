@@ -23,7 +23,7 @@ public class Synergize extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        allDmg(AbstractGameAction.AttackEffect.LIGHTNING);
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
@@ -32,7 +32,7 @@ public class Synergize extends AbstractPackmasterCard {
                     AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2);
                     String parentID = SpireAnniversary5Mod.cardParentMap.get(c.cardID);
                     if (!CoreSetPack.ID.equals(parentID)) {
-                        allDmg(AbstractGameAction.AttackEffect.LIGHTNING);
+                        blck();
                     }
                 }
             }
