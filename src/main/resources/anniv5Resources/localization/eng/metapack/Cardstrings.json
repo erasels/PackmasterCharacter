@@ -36,7 +36,7 @@
   },
   "${ModID}:Bulwark": {
     "NAME": "Bulwark",
-    "DESCRIPTION": "Retain. NL Gain Temporary HP equal to your draw pile size. NL Exhaust.",
+    "DESCRIPTION": "Innate. NL Gain Temporary HP equal to your draw pile size. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [" NL (Gain !M! Temporary HP.)"]
   },
   "${ModID}:Masterstroke": {

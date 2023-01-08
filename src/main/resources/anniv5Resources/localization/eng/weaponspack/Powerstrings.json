@@ -1,0 +1,21 @@
+{
+  "${ModID}:WeaponPower": {
+    "NAME": "Weapons",
+    "DESCRIPTIONS": []
+  },
+  "${ModID}:SalvagerPower": {
+    "NAME": "Salvager",
+    "DESCRIPTIONS": [
+      "Whenever a #yWeapon is destroyed, gain #b",
+      " [E] ."
+    ]
+  },
+  "${ModID}:WeaponMasteryPower": {
+    "NAME": "Weapon Mastery",
+    "DESCRIPTIONS": [
+      "Whenever you equip a #yWeapon, draw #b",
+      " card.",
+      " cards."
+    ]
+  }
+}

@@ -20,7 +20,7 @@ public class RayOfFrost extends AbstractPackmasterCard {
     private static final int FROST_AMOUNT = 1;
 
     public RayOfFrost() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = FROST_AMOUNT;
         tags.add(MAGIC);

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import org.lwjgl.Sys;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
@@ -16,15 +17,13 @@ import java.util.ArrayList;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class GemOfUnity extends AbstractPackmasterRelic {
-    public static final String ID = makeID("GemOfUnity");
-
-    private ArrayList<AbstractCardPack> packsPlayed;
+    public static final String ID = makeID(GemOfUnity.class.getSimpleName());
+    private static final ArrayList<AbstractCardPack> packsPlayed = new ArrayList<>();
 
     public GemOfUnity() {
         super(ID, RelicTier.UNCOMMON, LandingSound.FLAT);
-        packsPlayed = new ArrayList<>();
         resetCounter();
-        this.description = getUpdatedDescription();
+        description = getUpdatedDescription();
     }
 
     @Override

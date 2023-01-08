@@ -48,7 +48,8 @@
       "Custom Draft Mode",
       "Turn this on to choose how your Packs are determined.",
       "Random",
-      "Choice of 3"
+      "Choice of 3",
+      "Pack filtering menu"
     ]
   },
   "${ModID}:PackSetup": {
@@ -66,6 +67,11 @@
   "${ModID}:CreditsRenderStrings": {
     "TEXT": [
       "Additional Credits"
+    ]
+  },
+  "${ModID}:PackFilterMenu": {
+    "TEXT": [
+      "Enable Pack"
     ]
   }
 }
