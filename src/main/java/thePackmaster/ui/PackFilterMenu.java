@@ -34,17 +34,19 @@ public class PackFilterMenu {
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));
 
     //positions
+    private static final float BG_X_SCALE = Settings.scale * 0.31f;
+    private static final float BG_Y_SCALE = Settings.scale * 0.8f;
     private static final float BG_X = 25f * Settings.xScale;
-    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * 0.8f;
+    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
     private static final float DROPDOWN_X = 90f * Settings.xScale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
-    private static final float CHECKBOX_X = 150f * Settings.xScale;
-    private static final float CHECKBOX_Y = 490f * Settings.yScale;
+    private static final float CHECKBOX_X = 150f;
+    private static final float CHECKBOX_Y = 490f;
     private static final float PREVIEW_X = 235f * Settings.xScale;
     private static final float PREVIEW_Y = 700f * Settings.yScale;
 
     public PackFilterMenu() {
-
+        BaseMod.logger.info("Settings.HEIGHT = " + Settings.HEIGHT);
         ArrayList<String> optionNames = new ArrayList<>();
         for (AbstractCardPack pack : SpireAnniversary5Mod.allPacks) {
             packs.add(pack);
@@ -97,7 +99,7 @@ public class PackFilterMenu {
     }
 
     public void render(SpriteBatch sb) {
-        sb.draw(MENU_BG, BG_X, BG_Y,0f,0f,MENU_BG.getRegionWidth(),MENU_BG.getRegionHeight(),0.31f,0.8f,0f);
+        sb.draw(MENU_BG, BG_X, BG_Y,0f,0f,MENU_BG.getRegionWidth(),MENU_BG.getRegionHeight(),BG_X_SCALE,BG_Y_SCALE,0f);
 
         checkbox.render(sb);
         previewCard.render(sb);

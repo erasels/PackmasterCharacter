@@ -1,5 +1,6 @@
 package thePackmaster.patches;
 
+import basemod.BaseMod;
 import basemod.ModLabeledButton;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
@@ -21,6 +22,7 @@ import thePackmaster.packs.CoreSetPack;
 import thePackmaster.ui.PackFilterMenu;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -52,8 +54,8 @@ public class MainMenuUIPatch {
     private static final float DROPDOWNS_START_Y = CHECKBOX_Y + DROPDOWNS_SPACING * (PACK_COUNT + 0.5f);
 
     //filter button fields
-    private static final float FILTERBUTTON_X = 60f*Settings.xScale;
-    private static final float FILTERBUTTON_Y = Settings.HEIGHT - 122f*Settings.yScale;
+    private static final float FILTERBUTTON_X = 60f;
+    private static final float FILTERBUTTON_Y = 1080f - 122f;
 
     private static final PackFilterMenu filterMenu = new PackFilterMenu();
     private static final ModLabeledButton openFilterMenuButton;
