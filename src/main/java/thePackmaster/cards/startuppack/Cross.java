@@ -22,6 +22,7 @@ public class Cross extends AbstractStartUpCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = this.damage = 7;
         this.baseSecondDamage = this.secondDamage = 0;
+        cardsToPreview= new Cross();
     }
 
     @Override
