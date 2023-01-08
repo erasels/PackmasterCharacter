@@ -23,15 +23,16 @@ public class Improvise extends AbstractStartUpCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        int cardsDiscarded = -1;
+        int cardsDiscarded = 0;
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.isInnate) {
-                addToTop((AbstractGameAction) new DiscardSpecificCardAction(c));
+            if (c.isInnate && c != this) {
+                addToBot((AbstractGameAction) new DiscardSpecificCardAction(c));
                 cardsDiscarded++;
             }
         }
         addToBot(new GainBlockAction(AbstractDungeon.player, this.block));
-        addToBot(new DrawCardAction(cardsDiscarded));
+        if(cardsDiscarded > 0)
+            addToBot(new DrawCardAction(cardsDiscarded));
     }
 
     @Override

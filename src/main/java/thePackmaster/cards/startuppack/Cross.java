@@ -22,24 +22,29 @@ public class Cross extends AbstractStartUpCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = this.damage = 7;
         this.baseSecondDamage = this.secondDamage = 0;
+        cardsToPreview = new Cross(true);
+    }
+
+    public Cross(boolean preview) {
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.baseDamage = this.damage = 7;
+        this.baseSecondDamage = this.secondDamage = 0;
+        if(!preview)
+            cardsToPreview = new Cross(true);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractMonster, this.secondDamage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        AbstractPackmasterCard cross = new Cross();
         Wiz.applyToSelf(new CrossPower(abstractPlayer, 1));
-        if(this.upgraded){
-            cross.upgrade();
-        }
-        addToBot(new MakeTempCardInDrawPileAction(cross, 1, true, false));
+        addToBot(new MakeTempCardInDrawPileAction(cardsToPreview, 1, true, false));
     }
 
     public void applyPowers() {
         this.baseSecondDamage = 0;
         for(AbstractPower p : AbstractDungeon.player.powers){
-            if(Objects.equals(p.ID, makeID("CrossPower"))){
+            if(CrossPower.POWER_ID.equals(p.ID)){
                 this.baseSecondDamage += p.amount;
             }
         }
@@ -59,5 +64,6 @@ public class Cross extends AbstractStartUpCard {
     @Override
     public void upp() {
         this.isInnate = true;
+        cardsToPreview.upgrade();
     }
 }

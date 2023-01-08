@@ -9,11 +9,11 @@
   },
   "${ModID}:PlannedDefense": {
     "NAME": "Planned Defense",
-    "DESCRIPTION": "Innate NL Gain !B! Block. If you played another Innate card this turn, also gain !B! Block next turn"
+    "DESCRIPTION": "Innate. NL Gain !B! Block. If you played another Innate card this turn, also gain !B! Block next turn."
   },
   "${ModID}:SecondStrike": {
     "NAME": "Second Strike",
-    "DESCRIPTION": "Innate Retain NL Deal !D! damage. If it is not the first turn, play this again"
+    "DESCRIPTION": "Innate. Retain. NL Deal !D! damage. If it is not the first turn, play this again."
   },
   "${ModID}:DashIn": {
     "NAME": "Dash In",
@@ -26,25 +26,28 @@
   },
   "${ModID}:Cross": {
     "NAME": "Cross",
-    "DESCRIPTION": "Deal !D! damage. Deal damage for all your created Crosses. Shuffle a Cross into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate NL Deal !D! damage. Deal damage for all your created Crosses. Shuffle a Cross+ into your draw pile.",
+    "DESCRIPTION": "Deal !D! damage. Deal damage for all your created *Crosses. Shuffle a *Cross into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. Deal damage for all your created *Crosses. Shuffle a *Cross+ into your draw pile.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! and !${ModID}:sd! damage.)"
     ]
   },
   "${ModID}:Improvise": {
     "NAME": "Improvise",
-    "DESCRIPTION": "Innate NL Gain !B! Block. Discard all Innate cards in your hand and draw 1 card for each card discarded."
+    "DESCRIPTION": "Innate. NL Gain !B! Block. Discard all Innate cards in your hand and draw 1 card for each card discarded."
   },
   "${ModID}:Debut": {
     "NAME": "Debut",
     "DESCRIPTION": "Your Innate cards Refund 1.",
-    "UPGRADE_DESCRIPTION": "Innate NL Your Innate cards Refund 1."
+    "UPGRADE_DESCRIPTION": "Innate. NL Your Innate cards Refund 1."
   },
   "${ModID}:BattlePrep": {
     "NAME": "Battle Prep",
     "DESCRIPTION": "Choose a card in your hand and permanently give it Innate. Remove this from your deck, permanently.",
-    "UPGRADE_DESCRIPTION": "Retain NL Choose a card in your hand and permanently give it Innate. Remove this from your deck, permanently."
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in your hand and permanently give it Innate. Remove this from your deck, permanently.",
+    "EXTENDED_DESCRIPTION": [
+      "Make Innate (Permanently)"
+    ]
   },
   "${ModID}:Surge": {
     "NAME": "Surge",

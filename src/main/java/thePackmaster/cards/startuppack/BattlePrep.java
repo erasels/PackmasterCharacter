@@ -25,7 +25,7 @@ public class BattlePrep extends AbstractStartUpCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        atb(new SelectCardsInHandAction("Make Innate (Battle Prep)", (cards) -> {
+        atb(new SelectCardsInHandAction(this.cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             AbstractCard q = cards.get(0);
             CardModifierManager.addModifier(q, new InnateMod());
 

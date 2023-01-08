@@ -29,6 +29,7 @@ public class PlannedDefense extends AbstractStartUpCard {
         for(int c = 0; c<AbstractDungeon.actionManager.cardsPlayedThisTurn.size()-1; c++) {
             if(AbstractDungeon.actionManager.cardsPlayedThisTurn.get(c).isInnate) {
                 innatePlayed = true;
+                break;
             }
         }
         if (innatePlayed) {
