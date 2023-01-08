@@ -21,7 +21,7 @@ public class Soulfire extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         if (this.upgraded) {
             this.addToBot(new ExhaustAction(1, false));
         } else {
