@@ -119,6 +119,12 @@ public class SpireAnniversary5Mod implements
     private static final String ELEPHANT_OGG = makePath("audio/summonspack/Elephant.ogg");
     public static final String PEW_KEY = makeID("Pew");
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
+    public static final String GUN1_KEY = makeID("Gun1");
+    private static final String GUN1_OGG = makePath("audio/hermitpack/GUN1.ogg");
+    public static final String GUN2_KEY = makeID("Gun2");
+    private static final String GUN2_OGG = makePath("audio/hermitpack/GUN2.ogg");
+    public static final String GUN3_KEY = makeID("Gun3");
+    private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
 
@@ -330,6 +336,9 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(BEES_KEY, BEES_OGG);
         BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
+        BaseMod.addAudio(GUN1_KEY,GUN1_OGG);
+        BaseMod.addAudio(GUN2_KEY,GUN2_OGG);
+        BaseMod.addAudio(GUN3_KEY,GUN3_OGG);
         BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
     }
 
