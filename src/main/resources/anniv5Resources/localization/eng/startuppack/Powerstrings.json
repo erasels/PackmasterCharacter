@@ -1,0 +1,31 @@
+{
+  "${ModID}:CrossPower": {
+    "NAME": "Cross",
+    "DESCRIPTIONS": [
+      "Your Crosses deal #b",
+      " more damage."
+    ]
+  },
+  "${ModID}:InstinctsPower": {
+    "NAME": "Instincts",
+    "DESCRIPTIONS": [
+      "Each turn, if the first card you play is Innate, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:KickoffPower": {
+    "NAME": "Kickoff",
+    "DESCRIPTIONS": [
+      "Your Innate cards Refund ",
+      "."
+    ]
+  },
+  "${ModID}:SurgePower": {
+    "NAME": "Surge",
+    "DESCRIPTIONS": [
+      "Your next #yInnate card is played twice this turn.",
+      "Your next #b",
+      " #yInnate cards are played twice this turn."
+    ]
+  }
+}

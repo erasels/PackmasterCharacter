@@ -1,0 +1,9 @@
+{
+  "${ModID}:StartUpPack": {
+    "TEXT": [
+      "Start Up",
+      "The beginning is the half of every action. Adds Innate Synergies and cards.",
+      "Jack Renoson"
+    ]
+  }
+}
