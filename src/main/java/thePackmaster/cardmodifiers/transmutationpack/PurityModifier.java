@@ -1,27 +1,19 @@
 package thePackmaster.cardmodifiers.transmutationpack;
 
-import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 
 public class PurityModifier extends AbstractCardModifier {
     public static final String ID = SpireAnniversary5Mod.makeID("PurityModifier");
-    public static final TextureRegion purityIcon = new TextureAtlas.AtlasRegion(new Texture("anniv5Resources/images/512/hydrologist/purity.png"), 0, 0, 512, 512);
+    public static final Texture purityIcon = new Texture("anniv5Resources/images/512/hydrologist/purity.png");
     public int amount;
-    private static final float PURITY_TEXT_OFFSET_X = -132.0f;
-    private static final float PURITY_TEXT_OFFSET_Y = 125.0f;
 
     public PurityModifier(int amount) {
         this.amount = amount;
@@ -41,10 +33,7 @@ public class PurityModifier extends AbstractCardModifier {
 
     @Override
     public void onRender(AbstractCard card, SpriteBatch sb) {
-        ReflectionHacks.privateMethod(AbstractCard.class, "renderHelper", SpriteBatch.class, Color.class, TextureAtlas.AtlasRegion.class, float.class, float.class)
-                .invoke(card, sb, Color.WHITE.cpy(), purityIcon, card.current_x, card.current_y);
-        BitmapFont font = ReflectionHacks.privateMethod(AbstractCard.class, "getEnergyFont").invoke(card);
-        FontHelper.renderRotatedText(sb, font, String.valueOf(amount), card.current_x, card.current_y, PURITY_TEXT_OFFSET_X * card.drawScale * Settings.scale, PURITY_TEXT_OFFSET_Y * card.drawScale * Settings.scale, card.angle, false, Color.WHITE.cpy());
+        ExtraIcons.icon(purityIcon).offsetX(-2f).text(String.valueOf(amount)).render(card);
     }
 
     public boolean shouldApply(AbstractCard card) {
