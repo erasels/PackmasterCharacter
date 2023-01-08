@@ -17,6 +17,7 @@ public class RefractEnergy extends AbstractPackmasterCard implements AmplifyCard
     public RefractEnergy() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         damage = baseDamage = 11;
+        this.isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

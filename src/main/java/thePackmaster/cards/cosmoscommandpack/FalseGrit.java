@@ -14,7 +14,7 @@ public class FalseGrit extends AbstractPackmasterCard implements AmplifyCard {
 
     public FalseGrit() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 2;
+        secondMagic = baseSecondMagic = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,11 +33,11 @@ public class FalseGrit extends AbstractPackmasterCard implements AmplifyCard {
 
     @Override
     public int getAmplifyCost() {
-        return baseMagicNumber;
+        return secondMagic;
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(-1);
+        upgradeSecondMagic(-1);
     }
 }
