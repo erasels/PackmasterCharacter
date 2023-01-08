@@ -28,19 +28,25 @@ public class Masterstroke extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new GainBlockAction(p, p, block));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+    }
+
+    @Override
+    public void applyPowersToBlock()
+    {
+        this.block = baseBlock;
+
         AbstractPower dex = AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
         if (dex != null) {
             dex.amount *= this.magicNumber;
         }
 
-        applyPowersToBlock();
+        super.applyPowersToBlock();
 
         if (dex != null) {
             dex.amount /= this.magicNumber;
         }
-
-        this.addToBot(new GainBlockAction(p, p, block));
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
     public void applyPowers() {
@@ -50,18 +56,10 @@ public class Masterstroke extends AbstractPackmasterCard {
             strength.amount *= this.magicNumber;
         }
 
-        AbstractPower dex = AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
-        if (dex != null) {
-            dex.amount *= this.magicNumber;
-        }
-
         super.applyPowers();
 
         if (strength != null) {
             strength.amount /= this.magicNumber;
-        }
-        if (dex != null) {
-            dex.amount /= this.magicNumber;
         }
     }
 

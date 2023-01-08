@@ -28,7 +28,7 @@ public class Swipe extends AbstractPackmasterCard {
         this.baseMagicNumber = magicNumber;
 
         for (int a = 0; a < this.magicNumber; a++)
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
         this.initializeDescription();
     }
