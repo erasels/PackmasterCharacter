@@ -46,6 +46,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     public boolean isSecondDamageModified;
 
     private boolean needsArtRefresh = false;
+    private String bottomText;
 
     public static Color packNameDisplayColor = Settings.CREAM_COLOR.cpy();
 
@@ -256,25 +257,22 @@ public abstract class AbstractPackmasterCard extends CustomCard {
         return "No Parent Pack!";
     }
 
-    public void renderTopText(SpriteBatch sb, boolean isCardPopup) {
-        AbstractCardPack parent = getParent();
-        if (parent != null) {
+    public void renderBorderText(SpriteBatch sb, boolean renderBottom) {
+        String text = renderBottom? getBottomText() : getTopText();
+        if (text != null) {
             float xPos, yPos, offsetY;
             BitmapFont font;
-            String text = parent.name;
-            if (text == null || this.isFlipped || this.isLocked || this.transparency <= 0.0F)
+            if (this.isFlipped || this.isLocked || this.transparency <= 0.0F)
                 return;
-            if (isCardPopup) {
-                font = FontHelper.SCP_cardTitleFont_small;
-                xPos = Settings.WIDTH / 2.0F + 10.0F * Settings.scale;
-                yPos = Settings.HEIGHT / 2.0F + 393.0F * Settings.scale;
-                offsetY = 0.0F;
-            } else {
-                font = FontHelper.cardTitleFont;
-                xPos = this.current_x;
-                yPos = this.current_y;
-                offsetY = 400.0F * Settings.scale * this.drawScale / 2.0F;
+            font = FontHelper.cardTitleFont;
+            xPos = this.current_x;
+            yPos = this.current_y;
+            float yOffsetBase = 400;
+            if(renderBottom) {
+                yOffsetBase *= -1;
+                yOffsetBase += 15f;
             }
+            offsetY = yOffsetBase * Settings.scale * this.drawScale / 2.0F;
             BitmapFont.BitmapFontData fontData = font.getData();
             float originalScale = fontData.scaleX;
             float scaleMulti = 0.8F;
@@ -284,25 +282,46 @@ public abstract class AbstractPackmasterCard extends CustomCard {
                 if (scaleMulti < 0.5F)
                     scaleMulti = 0.5F;
             }
-            fontData.setScale(scaleMulti * (isCardPopup ? 1.0F : this.drawScale * 0.85f));
-            Color color = packNameDisplayColor.cpy();
+            fontData.setScale(scaleMulti * (this.drawScale * 0.85f));
+            Color color = renderBottom? getBottomTextColor().cpy() : getTopTextColor().cpy();
             color.a = this.transparency;
             FontHelper.renderRotatedText(sb, font, text, xPos, yPos, 0.0F, offsetY, this.angle, true, color);
             fontData.setScale(originalScale);
         }
     }
 
+    public String getBottomText() {return null;}
+
+    public String getTopText() {
+        AbstractCardPack parent = getParent();
+        if(parent != null) {
+            return parent.name;
+        }
+
+        return null;
+    }
+
+    public Color getTopTextColor() {
+        return packNameDisplayColor;
+    }
+
+    public Color getBottomTextColor() {
+        return Settings.CREAM_COLOR;
+    }
+
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        renderTopText(sb, false);
+        renderBorderText(sb, false);
+        renderBorderText(sb, true);
     }
 
     @Override
     public void renderInLibrary(SpriteBatch sb) {
         super.renderInLibrary(sb);
         if (!(SingleCardViewPopup.isViewingUpgrade && this.isSeen && !this.isLocked)) {
-            renderTopText(sb, false);
+            renderBorderText(sb, false);
+            renderBorderText(sb, true);
         }
     }
 }

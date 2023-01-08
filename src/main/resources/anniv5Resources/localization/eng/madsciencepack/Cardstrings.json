@@ -29,7 +29,8 @@
   },
   "${ModID}:Cheapen": {
     "NAME": "Cheapen",
-    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: 'Costs 0.' NL Exhaust, unless Amplify 2."
+    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: 'Costs 0.' NL ${ModID}:Amplify [E] [E] : Don't Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Modify a card in your draw pile: 'Costs 0.' NL ${ModID}:Amplify [E] [E] : Don't Exhaust."
   },
   "${ModID}:Expand": {
     "NAME": "Expand",

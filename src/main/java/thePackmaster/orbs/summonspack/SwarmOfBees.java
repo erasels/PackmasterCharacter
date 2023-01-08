@@ -37,7 +37,6 @@ public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
     private static final Texture BEE_IMG = ImageMaster.loadImage(IMG_PATH);
     private static final int BEE_COUNT = 120;
     public static final int STING_DAMAGE = 1;
-    public static final int EVOKE_BONUS = 5;
 
     private final ArrayList<Bee> bees = new ArrayList<>();
 
@@ -141,8 +140,8 @@ public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
     {
         super(ORB_ID, NAME, STING_DAMAGE, 0, "", "", IMG_PATH_O);
         basePassiveAmount = STING_DAMAGE;
-        baseEvokeAmount = basePassiveAmount + EVOKE_BONUS;
-        showEvokeValue = true;
+        baseEvokeAmount = 0;
+        showEvokeValue = false;
 
         generateBees();
 
@@ -162,11 +161,10 @@ public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
     public void applyFocus() {
         AbstractPower power = adp().getPower("Focus");
         if (power != null)
-            passiveAmount = Math.max(0, basePassiveAmount + power.amount);
+            passiveAmount = Math.max(0, basePassiveAmount + power.amount/2);
         else
             passiveAmount = basePassiveAmount;
-
-        evokeAmount = passiveAmount + EVOKE_BONUS;
+        evokeAmount = 0;
     }
 
     @Override
@@ -182,9 +180,6 @@ public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
 
     @Override
     public void onEvoke() {
-        AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster(true);
-        if (target != null)
-            Wiz.thornDmg(target, evokeAmount, getRandomSlash());
     }
 
     @Override
@@ -219,7 +214,7 @@ public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
     @Override
     public void updateDescription() {
         applyFocus();
-        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + evokeAmount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1];
     }
 
     @Override

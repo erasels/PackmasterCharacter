@@ -1,0 +1,17 @@
+[
+  {
+    "PROPER_NAME": "Amplify",
+    "NAMES": [
+      "amplify",
+      "amplified"
+    ],
+    "DESCRIPTION": "If you have enough [E] pay the additional cost to activate the effect."
+  },
+  {
+    "PROPER_NAME": "Charge Up",
+    "NAMES": [
+      "charge up"
+    ],
+    "DESCRIPTION": "At #b8 or more stacks, double the damage of the next Attack and lose #b8 stacks."
+  }
+]
