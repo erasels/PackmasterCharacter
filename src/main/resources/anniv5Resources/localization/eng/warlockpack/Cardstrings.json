@@ -32,5 +32,9 @@
   "${ModID}:AranasiBroodmother": {
     "NAME": "Aranasi Broodmother",
     "DESCRIPTION": "Gain !B! Block. NL Shuffle this card into your draw pile. NL When you draw this card, gain !M! Block."
+  },
+  "${ModID}:MalchezaarsImp": {
+    "NAME": "Malchezaar's Imp",
+    "DESCRIPTION": "Whenenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your draw pile."
   }
 }

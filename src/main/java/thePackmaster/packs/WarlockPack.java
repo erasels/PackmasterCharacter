@@ -3,7 +3,6 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.quietpack.*;
 import thePackmaster.cards.warlockpack.*;
 
 import java.util.ArrayList;
@@ -29,6 +28,7 @@ public class WarlockPack extends AbstractCardPack {
         cards.add(HandOfGulDan.ID);
         cards.add(SeedsOfDestruction.ID);
         cards.add(AranasiBroodmother.ID);
+        cards.add(MalchezaarsImp.ID);
         return cards;
     }
 }
