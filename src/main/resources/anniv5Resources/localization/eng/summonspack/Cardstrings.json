@@ -5,7 +5,12 @@
   },
   "${ModID}:SummonVegetables": {
     "NAME": "Summon Vegetables",
-    "DESCRIPTION": "Deal !D! damage for each attack played this turn, including this one."
+    "DESCRIPTION": "Deal !D! damage for each Skill played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Skill played.)",
+      " Skills played.)"
+      ]
   },
   "${ModID}:SummonTrees": {
     "NAME": "Summon Trees",
@@ -25,8 +30,8 @@
   },
   "${ModID}:SummonBees": {
     "NAME": "Summon Bees",
-    "DESCRIPTION": "Channel a ${ModID}:Swarm\u00a0of\u00a0Bees X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Swarm\u00a0of\u00a0Bees X+1 times. NL Exhaust."
+    "DESCRIPTION": "Channel a ${ModID}:Swarm\u00a0of\u00a0Bees X times.",
+    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Swarm\u00a0of\u00a0Bees X+1 times."
   },
   "${ModID}:Control": {
     "NAME": "Control",
