@@ -22,7 +22,7 @@ public class SoulShear extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         this.addToBot(new MakeTempCardInDrawPileAction(new Imp(), 1, true, true));
     }
 

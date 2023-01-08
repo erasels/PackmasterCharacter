@@ -10,14 +10,13 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.adp;
 import static thePackmaster.util.Wiz.atb;
 
-
 public class AranasiBroodmother extends AbstractPackmasterCard {
     public final static String ID = makeID(AranasiBroodmother.class.getSimpleName());
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     public AranasiBroodmother() {
-        super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+        super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         baseBlock = 5;
         magicNumber = baseMagicNumber = 3;
         this.shuffleBackIntoDrawPile = true;
@@ -37,5 +36,10 @@ public class AranasiBroodmother extends AbstractPackmasterCard {
     public void upp() {
         upgradeBlock(2);
         upMagic(1);
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        return 20.0f;
     }
 }

@@ -3,7 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.quietpack.*;
+import thePackmaster.cards.warlockpack.*;
 
 import java.util.ArrayList;
 
@@ -21,17 +21,16 @@ public class WarlockPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(Crunch.ID);
-        cards.add(Flail.ID);
-        cards.add(Frontflip.ID);
-        cards.add(GlaiveThrow.ID);
-        cards.add(HammerThrow.ID);
-        cards.add(IronShield.ID);
-        cards.add(Lie.ID);
-        cards.add(Oppressor.ID);
-        cards.add(Shine.ID);
-        cards.add(Weight.ID);
-        cards.add(Wisdom.ID);
+        cards.add(HighPriestessJeklik.ID);
+        cards.add(SoulShear.ID);
+        cards.add(Soulfire.ID);
+        cards.add(Doomguard.ID);
+        cards.add(HandOfGulDan.ID);
+        cards.add(SeedsOfDestruction.ID);
+        cards.add(AranasiBroodmother.ID);
+        cards.add(MalchezaarsImp.ID);
+        cards.add(TheSoularium.ID);
+        cards.add(RunedMithrilRod.ID);
         return cards;
     }
 }

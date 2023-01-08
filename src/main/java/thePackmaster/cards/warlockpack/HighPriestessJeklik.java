@@ -33,4 +33,9 @@ public class HighPriestessJeklik extends AbstractPackmasterCard {
     public void upp() {
         upgradeBlock(2);
     }
+
+    @Override
+    public float getTitleFontSize() {
+        return 20.0f;
+    }
 }

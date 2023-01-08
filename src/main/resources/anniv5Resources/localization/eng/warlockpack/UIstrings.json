@@ -2,7 +2,7 @@
   "${ModID}:WarlockPack": {
     "TEXT": [
       "Warlock",
-      "Be a Warlock and channel Fel energy, exhausting cards and creating imps to destroy your enemies.",
+      "Be a Warlock and channel\u00a0Fel energy, exhausting cards and creating imps to destroy your enemies.",
       "Diamsword & modargo"
     ]
   }

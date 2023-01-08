@@ -16,12 +16,12 @@ public class Soulfire extends AbstractPackmasterCard {
 
     public Soulfire() {
         super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 10;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         if (this.upgraded) {
             this.addToBot(new ExhaustAction(1, false));
         } else {
