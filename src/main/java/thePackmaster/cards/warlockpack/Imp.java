@@ -25,7 +25,7 @@ public class Imp extends AbstractPackmasterCard {
     private static final int UPGRADE_DAMAGE_INCREASE = 1;
 
     public Imp() {
-        super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ALL_ENEMY, CardColor.COLORLESS);
+        super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ALL_ENEMY, CardColor.COLORLESS);
         magicNumber = baseMagicNumber = DAMAGE;
         secondDamage = baseSecondMagic = DAMAGE_INCREASE;
         AutoplayField.autoplay.set(this, true);
