@@ -86,16 +86,21 @@ public class InfestModifier extends AbstractCardModifier {
         return 0;
     }
 
-    private void addInfestCounter(AbstractCard card) {
+    private void addInfestCounter(AbstractCard card, boolean triggerPowers) {
         infestCounter += 1;
         if (card instanceof OnInfestCard) {
             ((OnInfestCard) card).onInfest(infestCounter);
         }
-        for (AbstractPower p : AbstractDungeon.player.powers) {
-            if (p instanceof OnInfestPower) {
-                ((OnInfestPower) p).receiveInfest(card);
+        if (triggerPowers)
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof OnInfestPower) {
+                    ((OnInfestPower) p).receiveInfest(card);
+                }
             }
-        }
+    }
+
+    private void addInfestCounter(AbstractCard card) {
+        addInfestCounter(card, true);
     }
 
     private void removeInfestCounter(AbstractCard card) {
@@ -103,12 +108,12 @@ public class InfestModifier extends AbstractCardModifier {
     }
 
 
-    public static void incrementInfestCount(AbstractCard card) {
+    public static void incrementInfestCount(AbstractCard card, boolean triggerPowers) {
         if (hasInfest(card)) {
             ArrayList<AbstractCardModifier> mods = CardModifierManager.getModifiers(card, MOD_ID);
             AbstractCardModifier mod = mods.get(0);
             if (mod instanceof InfestModifier) {
-                ((InfestModifier) mod).addInfestCounter(card);
+                ((InfestModifier) mod).addInfestCounter(card, triggerPowers);
             }
         }
     }
