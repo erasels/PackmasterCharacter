@@ -33,8 +33,8 @@
     "NAME": "Sideboard",
     "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile on top of your draw pile."
   },
-  "${ModID}:SmithingHammer": {
-    "NAME": "Smithing Hammer",
+  "${ModID}:ForgingHammer": {
+    "NAME": "Forging Hammer",
     "DESCRIPTION": "Deal !D! damage 3 times. NL Upgrade a card in your hand for the rest of combat.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL Upgrade !M! cards in your hand for the rest of combat."
   },

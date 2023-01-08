@@ -1,0 +1,23 @@
+{
+  "${ModID}:WeaponPower": {
+    "NAME": "Weapons",
+    "DESCRIPTIONS": [
+      "Whenever you play an attack card, one Durability of your rightmost Weapon is used and card's damage is increased by Weapon's Attack. NL Orb slots are created and destroyed automatically."
+    ]
+  },
+  "${ModID}:SalvagerPower": {
+    "NAME": "Salvager",
+    "DESCRIPTIONS": [
+      "Whenever a #yWeapon is destroyed, gain #b",
+      " [E] ."
+    ]
+  },
+  "${ModID}:WeaponMasteryPower": {
+    "NAME": "Weapon Mastery",
+    "DESCRIPTIONS": [
+      "Whenever you equip a #yWeapon, draw #b",
+      " card.",
+      " cards."
+    ]
+  }
+}
