@@ -20,7 +20,7 @@ public class Prosper extends AbstractVPCard{
         this.addToBot(new SkipEnemiesTurnAction());
     }
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (p.stance.ID == modID + ":VictoryStance") {
+        if (p.stance.ID == new VictoryStance().ID) {
             return super.canUse(p, m);
         } else {
             this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
