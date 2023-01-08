@@ -15,7 +15,7 @@ public class StruckByATrain extends AbstractPackmasterCard {
     // intellij stuff attack, enemy, uncommon, 25, 5, , , 2, 1
 
     public StruckByATrain() {
-        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 25;
         baseMagicNumber = magicNumber = 2;
     }

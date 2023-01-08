@@ -31,7 +31,8 @@
     "EXTENDED_DESCRIPTION": [
       "Gain ",
       "Retain. NL Gain ",
-      " . NL Exhaust."
+      " . NL Exhaust.",
+      "You gain nothing! NL Good day, sir! NL Exhaust."
     ]
   },
   "${ModID}:Investor": {

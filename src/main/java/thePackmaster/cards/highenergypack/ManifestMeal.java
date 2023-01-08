@@ -26,12 +26,12 @@ public class ManifestMeal extends AbstractPackmasterCard {
             this.energyOnUse = EnergyPanel.totalCount;
         }
         atb(new EasyXCostAction(this, (effect, params) -> {
-            for (int i = 0; i < effect; i++) {
-                dmgTop(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-            }
             Food delociousFoob = new Food();
             delociousFoob.setX(effect);
             att(new MakeTempCardInDrawPileAction(delociousFoob, 1, true, true));
+            for (int i = 0; i < effect; i++) {
+                dmgTop(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            }
             return true;
         }));
     }

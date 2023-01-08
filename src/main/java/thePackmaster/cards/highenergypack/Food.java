@@ -16,7 +16,7 @@ public class Food extends AbstractPackmasterCard {
     // intellij stuff skill, self, special, , , , , , 
 
     public Food() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
     }
 
@@ -27,14 +27,20 @@ public class Food extends AbstractPackmasterCard {
     public void setX(int amount) {
         this.magicNumber = amount;
         this.baseMagicNumber = this.magicNumber;
-        StringBuilder sb = new StringBuilder();
-        sb.append(upgraded ? cardStrings.EXTENDED_DESCRIPTION[1] : cardStrings.EXTENDED_DESCRIPTION[0]);
-        for (int i = 0; i < magicNumber; i++) {
-            sb.append(" [E] ");
+
+        if (amount == 0) {
+            rawDescription = cardStrings.EXTENDED_DESCRIPTION[3];
         }
-        sb.append(cardStrings.EXTENDED_DESCRIPTION[2]);
-        rawDescription = sb.toString();
-        this.initializeDescription();
+        else {
+            StringBuilder sb = new StringBuilder();
+            sb.append(upgraded ? cardStrings.EXTENDED_DESCRIPTION[1] : cardStrings.EXTENDED_DESCRIPTION[0]);
+            for (int i = 0; i < magicNumber; i++) {
+                sb.append(" [E] ");
+            }
+            sb.append(cardStrings.EXTENDED_DESCRIPTION[2]);
+            rawDescription = sb.toString();
+            this.initializeDescription();
+        }
     }
 
     public void upp() {
