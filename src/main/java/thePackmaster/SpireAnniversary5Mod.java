@@ -10,6 +10,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -47,11 +48,14 @@ import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static thePackmaster.patches.MainMenuUIPatch.CHOICE;
+import static thePackmaster.patches.MainMenuUIPatch.RANDOM;
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -84,6 +88,7 @@ public class SpireAnniversary5Mod implements
     public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
 
     public static SpireAnniversary5Mod thismod;
+    public static SpireConfig modConfig = null;
 
     public static boolean doPackSetup = false;
     public static String lastCardsPackID = null;
@@ -161,6 +166,24 @@ public class SpireAnniversary5Mod implements
 
     public static void initialize() {
         thismod = new SpireAnniversary5Mod();
+
+        try {
+            Properties defaults = new Properties();
+            defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, RANDOM, CHOICE, CHOICE));
+            modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static ArrayList<String> getSavedCDraftSelection() {
+        if(modConfig == null) return new ArrayList<>();
+        return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterCustomDraftSelection").split(",")));
+    }
+    public static void saveCDraftSelection(ArrayList<String> input) throws IOException {
+        if(modConfig == null) return;
+        modConfig.setString("PackmasterCustomDraftSelection", String.join(",", input));
+        modConfig.save();
     }
 
     @Override
@@ -421,12 +444,12 @@ public class SpireAnniversary5Mod implements
             packSetup.addAll(MainMenuUIPatch.packSetups);
         } else {
             packSetup.add(CoreSetPack.ID);
-            packSetup.add(MainMenuUIPatch.RANDOM);
-            packSetup.add(MainMenuUIPatch.RANDOM);
-            packSetup.add(MainMenuUIPatch.RANDOM);
-            packSetup.add(MainMenuUIPatch.RANDOM);
-            packSetup.add(MainMenuUIPatch.CHOICE);
-            packSetup.add(MainMenuUIPatch.CHOICE);
+            packSetup.add(RANDOM);
+            packSetup.add(RANDOM);
+            packSetup.add(RANDOM);
+            packSetup.add(RANDOM);
+            packSetup.add(CHOICE);
+            packSetup.add(CHOICE);
         }
 
         int randomsToSetup = 0;
@@ -436,10 +459,10 @@ public class SpireAnniversary5Mod implements
             BaseMod.logger.info("Setting up Pack type " + setupType + ".");
 
             switch (setupType) {
-                case MainMenuUIPatch.RANDOM:
+                case RANDOM:
                     randomsToSetup++;
                     break;
-                case MainMenuUIPatch.CHOICE:
+                case CHOICE:
                     choicesToSetup++;
                     break;
                 default:

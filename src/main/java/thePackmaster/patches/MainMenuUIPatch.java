@@ -1,6 +1,5 @@
 package thePackmaster.patches;
 
-import basemod.BaseMod;
 import basemod.ModLabeledButton;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
@@ -18,11 +17,11 @@ import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.packs.CoreSetPack;
 import thePackmaster.ui.PackFilterMenu;
 
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Set;
+import java.util.HashMap;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -59,6 +58,7 @@ public class MainMenuUIPatch {
 
     private static final PackFilterMenu filterMenu = new PackFilterMenu();
     private static final ModLabeledButton openFilterMenuButton;
+    private static final HashMap<String, Integer> idToIndex = new HashMap<>();
 
     static {
         options.add(TEXT[2]);
@@ -67,25 +67,18 @@ public class MainMenuUIPatch {
             options.add(c.name);
         }
 
-        int coreSetPackIndex = 0;
         optionIDs = new String[options.size()];
         optionIDs[0] = RANDOM;
         optionIDs[1] = CHOICE;
+        idToIndex.put(RANDOM, 0);
+        idToIndex.put(CHOICE, 1);
         for (int i = 2; i < optionIDs.length; ++i) {
             String packID = SpireAnniversary5Mod.unfilteredAllPacks.get(i - 2).packID;
             optionIDs[i] = packID;
-            if (packID.equals(CoreSetPack.ID)) {
-                coreSetPackIndex = i;
-            }
+            idToIndex.put(packID, i);
         }
 
-        packSetups.add(CoreSetPack.ID);
-        packSetups.add(optionIDs[0]);
-        packSetups.add(optionIDs[0]);
-        packSetups.add(optionIDs[0]);
-        packSetups.add(optionIDs[0]);
-        packSetups.add(optionIDs[1]);
-        packSetups.add(optionIDs[1]);
+        packSetups.addAll(SpireAnniversary5Mod.getSavedCDraftSelection());
 
         for (int i = 0; i < PACK_COUNT; i++) {
             int index = i;
@@ -98,15 +91,18 @@ public class MainMenuUIPatch {
                         }
                     }
                 }
+                try {
+                    SpireAnniversary5Mod.saveCDraftSelection(packSetups);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }, options, FontHelper.tipBodyFont, Settings.CREAM_COLOR, DROPDOWN_ROWCOUNT);
 
             dropdowns.add(d);
-
-            if (i == 0) {
-                d.setSelectedIndex(coreSetPackIndex);
-            } else if (i >= 5) {
-                d.setSelectedIndex(1);
-            }
+        }
+        for (int i = 0; i < dropdowns.size(); i++) {
+            DropdownMenu ddm = dropdowns.get(i);
+            ddm.setSelectedIndex(idToIndex.get(packSetups.get(i)));
         }
 
         float dropdownX = Settings.WIDTH - (50.0f * Settings.scale) - dropdowns.get(0).approximateOverallWidth();
