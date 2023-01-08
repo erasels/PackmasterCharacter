@@ -22,10 +22,10 @@ public class Auctioneering extends AbstractVPCard{
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         if (!p.hasPower(VictoryPoints.POWER_ID)){this.applyToSelf(new VictoryPoints(AbstractDungeon.player, 0));}
         this.applyToSelf(new VictoryPoints(AbstractDungeon.player, this.secondMagic));
-        this.block = Math.round(AbstractDungeon.player.getPower(VictoryPoints.POWER_ID).amount/magicNumber);
+        if (!p.hasPower(VictoryPoints.POWER_ID)){this.block = Math.round(secondMagic/magicNumber);}
+        else{this.block = Math.round(AbstractDungeon.player.getPower(VictoryPoints.POWER_ID).amount/magicNumber);}
         this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
         this.addToBot(new DrawCardAction(p, 1));
     }
@@ -34,3 +34,4 @@ public class Auctioneering extends AbstractVPCard{
             this.upgradeMagicNumber(-1);
     }
 }
+
