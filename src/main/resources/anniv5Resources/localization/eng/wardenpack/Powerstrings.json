@@ -9,7 +9,7 @@
   "${ModID}:DivineMightPower": {
     "NAME": "Divine Might",
     "DESCRIPTIONS": [
-      "When #yDivine #yMight is played again, #yAscend. Upon #yAscending gain [E] [E] , draw #b2 cards and gain #b10 Strength that turn."
+      "When #yDivine #yMight is played again, gain [E] [E] , draw #b2 cards and gain #b10 Strength this turn."
     ]
   }
 }
