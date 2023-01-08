@@ -1,0 +1,8 @@
+{
+  "${ModID}:MalchezaarsImpPower": {
+    "NAME": "Malchezaar's Imp",
+    "DESCRIPTIONS": [
+      "Whenever a non-Imp card is Exhausted, shuffle an #yImp into your draw pile."
+    ]
+  }
+}
