@@ -29,7 +29,7 @@ public class Frontflip extends AbstractPackmasterCard {
             public void update() {
                 Wiz.att(new WaitAction(0.4F));
                 DrawCardAction.drawnCards.stream().filter(c -> c.cost == -2).forEach(c -> Wiz.att(new DiscardSpecificCardAction(c)));
-
+                isDone = true;
             }
         }));
     }
