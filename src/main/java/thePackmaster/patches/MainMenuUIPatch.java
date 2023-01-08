@@ -1,5 +1,7 @@
 package thePackmaster.patches;
 
+import basemod.BaseMod;
+import basemod.ModLabeledButton;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -17,8 +19,10 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.CoreSetPack;
+import thePackmaster.ui.PackFilterMenu;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -49,10 +53,17 @@ public class MainMenuUIPatch {
     private static final float DROPDOWN_X;
     private static final float DROPDOWNS_START_Y = CHECKBOX_Y + DROPDOWNS_SPACING * (PACK_COUNT + 0.5f);
 
+    //filter button fields
+    private static final float FILTERBUTTON_X = 60f;
+    private static final float FILTERBUTTON_Y = 1080f - 122f;
+
+    private static final PackFilterMenu filterMenu = new PackFilterMenu();
+    private static final ModLabeledButton openFilterMenuButton;
+
     static {
         options.add(TEXT[2]);
         options.add(TEXT[3]);
-        for (AbstractCardPack c : SpireAnniversary5Mod.allPacks) {
+        for (AbstractCardPack c : SpireAnniversary5Mod.unfilteredAllPacks) {
             options.add(c.name);
         }
 
@@ -61,7 +72,7 @@ public class MainMenuUIPatch {
         optionIDs[0] = RANDOM;
         optionIDs[1] = CHOICE;
         for (int i = 2; i < optionIDs.length; ++i) {
-            String packID = SpireAnniversary5Mod.allPacks.get(i - 2).packID;
+            String packID = SpireAnniversary5Mod.unfilteredAllPacks.get(i - 2).packID;
             optionIDs[i] = packID;
             if (packID.equals(CoreSetPack.ID)) {
                 coreSetPackIndex = i;
@@ -109,6 +120,9 @@ public class MainMenuUIPatch {
             DROPDOWN_X = Math.min(dropdownX, checkboxX);
             CHECKBOX_X = DROPDOWN_X + CHECKBOX_X_OFF;
         }
+
+        openFilterMenuButton = new ModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X, FILTERBUTTON_Y,null,
+                (button) -> filterMenu.toggle());
     }
 
 
@@ -138,6 +152,10 @@ public class MainMenuUIPatch {
                     }
                 }
 
+                if (filterMenu.isOpen) {
+                    filterMenu.render(sb);
+                }
+                openFilterMenuButton.render(sb);
             }
         }
     }
@@ -190,6 +208,11 @@ public class MainMenuUIPatch {
                     }
                 }
                 else {
+                }
+
+                openFilterMenuButton.update();
+                if (filterMenu.isOpen) {
+                    filterMenu.update();
                 }
             }
         }
