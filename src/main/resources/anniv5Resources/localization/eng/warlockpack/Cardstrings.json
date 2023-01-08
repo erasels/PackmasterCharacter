@@ -26,7 +26,8 @@
   },
   "${ModID}:SeedsOfDestruction": {
     "NAME": "Seeds of Destruction",
-    "DESCRIPTION": "Choose to shuffle !M! *Imps into your draw pile or one more into your discard pile."
+    "DESCRIPTION": "Choose to shuffle !M! *Imps into your draw pile or one more into your discard pile.",
+    "EXTENDED_DESCRIPTION": ["Shuffle !M! *Imps into your draw pile.", "Add !M! *Imps to your discard pile."]
   },
   "${ModID}:AranasiBroodmother": {
     "NAME": "Aranasi Broodmother",
