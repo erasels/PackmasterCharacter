@@ -5,18 +5,14 @@ import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingFie
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.potions.PotionSlot;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class DarkRitual extends AbstractDimensionalCard {
     public final static String ID = makeID("DarkRitual");
@@ -39,12 +35,14 @@ public class DarkRitual extends AbstractDimensionalCard {
             @Override
             public void update() {
                 isDone = true;
-                        q.baseMagicNumber -= 50;
-                        q.magicNumber = q.baseMagicNumber;
-                        AbstractCard tar = StSLib.getMasterDeckEquivalent(q); // Slightly iffy code here, downgrading is weird.
-                        int idx = AbstractDungeon.player.masterDeck.group.indexOf(tar);
-                        AbstractDungeon.player.masterDeck.group.set(idx, CardLibrary.getCard(cardID));
-                        downgrade();
+                q.baseMagicNumber -= 50;
+                q.magicNumber = q.baseMagicNumber;
+                AbstractCard tar = StSLib.getMasterDeckEquivalent(q); // Slightly iffy code here, downgrading is weird.
+                int idx = AbstractDungeon.player.masterDeck.group.indexOf(tar);
+                if(idx >= 0) {
+                    AbstractDungeon.player.masterDeck.group.set(idx, CardLibrary.getCard(cardID));
+                }
+                downgrade();
             }
         });
     }

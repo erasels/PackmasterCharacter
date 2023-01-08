@@ -12,13 +12,13 @@ import static thePackmaster.util.Wiz.adp;
 
 public class SummonPython extends AbstractPackmasterCard {
     public final static String ID = makeID(SummonPython.class.getSimpleName());
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int MAGIC = 13;
-    private static final int UPGRADE_MAGIC = 4;
+    private static final int MAGIC = 7;
+    private static final int UPGRADE_MAGIC = 3;
 
     public SummonPython() {
         super(ID, COST, TYPE, RARITY, TARGET);
