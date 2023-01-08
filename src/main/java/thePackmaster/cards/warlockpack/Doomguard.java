@@ -21,7 +21,7 @@ public class Doomguard extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         this.addToBot(new ExhaustAction(2, true, false, false));
     }
 
