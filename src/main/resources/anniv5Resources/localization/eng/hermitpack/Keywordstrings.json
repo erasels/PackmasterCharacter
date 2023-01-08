@@ -1,0 +1,9 @@
+[
+  {
+    "PROPER_NAME": "Bounty",
+    "NAMES": [
+      "bounty"
+    ],
+    "DESCRIPTION": "Normal Enemy: #b15 gold.      Elite Enemy: #b40 gold.            Boss: #b100 gold."
+  }
+]
