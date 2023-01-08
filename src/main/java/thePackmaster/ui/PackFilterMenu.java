@@ -107,6 +107,7 @@ public class PackFilterMenu {
         previewCard.update();
         previewCard.current_x = PREVIEW_X;
         previewCard.current_y = PREVIEW_Y;
+        FontHelper.cardTitleFont.getData().setScale(1f);
     }
 
     public void render(SpriteBatch sb) {
