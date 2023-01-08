@@ -15,7 +15,7 @@
   },
   "${ModID}:PlasmaShield": {
     "NAME": "Plasma Shield",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block for each Plasma. NL Channel !${ModID}:m2! Plasma."
+    "DESCRIPTION": "At the end of your turn, gain !M! Block if you have Plasma. NL Channel !${ModID}:m2! Plasma."
   },
   "${ModID}:Enrage": {
     "NAME": "Enrage",

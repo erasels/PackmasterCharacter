@@ -1,0 +1,30 @@
+[
+  {
+    "PROPER_NAME": "Entropy",
+    "NAMES": [
+      "entropy"
+    ],
+    "DESCRIPTION": "Whenever you play a card, discard a random card, draw a card, and lose #b1 #yEntropy."
+  },
+  {
+    "PROPER_NAME": "Unstable",
+    "NAMES": [
+      "unstable"
+    ],
+    "DESCRIPTION": "When this card is discarded from your hand, apply its effects to you and ALL enemies."
+  },
+  {
+    "PROPER_NAME": "Ruin",
+    "NAMES": [
+      "ruin"
+    ],
+    "DESCRIPTION": "The next time a creature with #yRuin takes unblocked attack damage, they lose HP equal to their #yRuin."
+  },
+  {
+    "PROPER_NAME": "Oblivion",
+    "NAMES": [
+      "oblivion"
+    ],
+    "DESCRIPTION": "Orb: When evoked, applies #yRuin to the enemy with the most HP. Increases #yRuin applied whenever you discard a card."
+  }
+]

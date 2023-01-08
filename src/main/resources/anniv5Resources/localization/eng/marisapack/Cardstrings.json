@@ -1,0 +1,45 @@
+{
+  "${ModID}:MasterSpark": {
+    "NAME": "Master Spark",
+    "DESCRIPTION": "Deal !D! damage. ${ModID}:Amplify [E] : NL Deal !${ModID}:sd! damage instead."
+  },
+  "${ModID}:RisingStrike": {
+    "NAME": "Rising Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Charge Up."
+  },
+  "${ModID}:GalacticHalo": {
+    "NAME": "Galactic Halo",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Charge Up."
+  },
+  "${ModID}:LuminousStrike": {
+    "NAME": "Luminous Strike",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] [E] : Increase damage equal to current energy times !M!.",
+    "EXTENDED_DESCRIPTION": ["Amplified damage: "]
+  },
+  "${ModID}:ShootingEcho": {
+    "NAME": "Shooting Echo",
+    "DESCRIPTION": "Deal !D! damage. Exhaust a card to add a copy of this into your hand. NL Exhaust."
+  },
+  "${ModID}:StardustReverie": {
+    "NAME": "Stardust Reverie",
+    "DESCRIPTION": "Exhaust !M! card. Gain ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify.",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. Gain ${ModID}:Charge Up equal to two times their costs including ${ModID}:Amplify."
+  },
+  "${ModID}:Inertia": {
+    "NAME": "Inertia",
+    "DESCRIPTION": "Whenever a card is Exhausted or ${ModID}:Amplified, gain !M! ${ModID}:Charge Up."
+  },
+  "${ModID}:UltimateShortwave": {
+    "NAME": "Ultimate Shortwave",
+    "DESCRIPTION": "Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat."
+  },
+  "${ModID}:DragonMeteor": {
+    "NAME": "Dragon Meteor",
+    "DESCRIPTION": "Deal !D! damage. Deals an additional !M! damage for each card in your exhaust pile."
+  },
+  "${ModID}:EarthlightRay": {
+    "NAME": "Earthlight Ray",
+    "DESCRIPTION": "After you gain ${ModID}:Charge Up, deal damage equal to its total to ALL enemies."
+  }
+}

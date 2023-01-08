@@ -48,7 +48,8 @@
       "Custom Draft Mode",
       "Turn this on to choose how your Packs are determined.",
       "Random",
-      "Choice of 3"
+      "Choice of 3",
+      "Pack filtering menu"
     ]
   },
   "${ModID}:PackSetup": {
@@ -61,6 +62,16 @@
       "Packs",
       "{0} NL NL Click to view card pool for this run.",
       "Cards available in this run"
+    ]
+  },
+  "${ModID}:CreditsRenderStrings": {
+    "TEXT": [
+      "Additional Credits"
+    ]
+  },
+  "${ModID}:PackFilterMenu": {
+    "TEXT": [
+      "Enable Pack"
     ]
   }
 }

@@ -14,6 +14,10 @@ public class Connection extends AbstractPackmasterCard {
 
     public Connection() {
         super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        setBackgroundTexture(
+                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
+                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
+        );
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

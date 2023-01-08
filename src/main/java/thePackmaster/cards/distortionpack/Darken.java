@@ -1,5 +1,6 @@
 package thePackmaster.cards.distortionpack;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -31,8 +32,9 @@ public class Darken extends AbstractPackmasterCard {
                 }
             }
 
-            applyToEnemy(m, new DistortionPower(m, p, amt));
-            atb(new ImproveAction(m));
+            ApplyPowerAction distortion = new ApplyPowerAction(m, p, new DistortionPower(m, p, amt), amt);
+            atb(distortion);
+            atb(new ImproveAction(m, distortion));
         }
     }
 

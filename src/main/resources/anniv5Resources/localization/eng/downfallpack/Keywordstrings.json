@@ -18,6 +18,6 @@
     "NAMES": [
       "ancient"
     ],
-    "DESCRIPTION": "Stance: If you have less than 6 Plated Armor at the start of your turn, gain 2 Plated Armor. NL When you leave this Stance, gain 1 Artifact."
+    "DESCRIPTION": "Stance: If you have less than #b6 Plated Armor at the start of your turn, gain #b2 Plated Armor. NL When you leave this Stance, gain #b1 Artifact."
   }
 ]

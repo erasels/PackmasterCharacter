@@ -34,7 +34,11 @@ public class MagicDart extends AbstractPackmasterCard {
         if(tmp != baseDamage) isDamageModified = true;
         baseDamage = tmp;
 
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        if (this.upgraded)
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        else
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+
         this.initializeDescription();
     }
 
