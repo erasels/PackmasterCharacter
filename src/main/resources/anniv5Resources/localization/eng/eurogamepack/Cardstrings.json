@@ -1,0 +1,46 @@
+{
+  "${ModID}:Auctioneering": {
+    "NAME": "Auctioneering",
+    "DESCRIPTION": "Gain !${ModID}:m2! ${ModID}:VP. NL Gain Block equal to 1 / !M! your current ${ModID}:VP. NL Draw a Card."
+  },
+  "${ModID}:Prosper": {
+    "NAME": "Prosper",
+    "DESCRIPTION": "Take an extra turn. NL Can only be played during ${ModID}:Victory. NL Purge.",
+    "EXTENDED_DESCRIPTION": ["I am not in Victory!"]
+  },
+  "${ModID}:Harvest": {
+    "NAME": "Harvest",
+    "DESCRIPTION": "Deal !D! damage. NL Gain ${ModID}:VP equal to double unblocked damage dealt."
+  },
+  "${ModID}:IronMining": {
+    "NAME": "Iron Mining",
+    "DESCRIPTION": "Gain !B! Block. NL If target enemy does not intend to attack, gain !${ModID}:m2! ${ModID}:VP."
+  },
+  "${ModID}:LumberFelling": {
+    "NAME": "Lumber Felling",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain !${ModID}:m2! ${ModID}:VP."
+  },
+  "${ModID}:MilitaryExpansion": {
+    "NAME": "Military Expansion",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to 1 / !${ModID}:m2! the amount of ${ModID}:VP gained this combat. NL ( !D! )",
+    "EXTENDED_DESCRIPTION": ["I haven't gained any VP yet!"]
+  },
+  "${ModID}:NetFishing": {
+    "NAME": "Net Fishing",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !${ModID}:m2! ${ModID}:VP."
+  },
+  "${ModID}:QuickGame": {
+    "NAME": "Quick Game",
+    "DESCRIPTION": "Entering ${ModID}:Victory requires 25 less ${ModID}:VP. NL Minimum of 25.",
+    "EXTENDED_DESCRIPTION": ["Entering Victory requires 25 less VP. NL Minimum of 25. NL Innate"]
+  },
+  "${ModID}:Roadbuilding": {
+    "NAME": "Roadbuilding",
+    "DESCRIPTION": "Whenever you gain ${ModID}:VP from cards, gain !M! more."
+  },
+  "${ModID}:SteelMilling": {
+    "NAME": "Steel Milling",
+    "DESCRIPTION": "Deal !D! damage. NL Can only be used if you have entered ${ModID}:Victory this combat",
+    "EXTENDED_DESCRIPTION": ["I have not entered Victory yet!"]
+  }
+}
