@@ -63,7 +63,7 @@ public class MainMenuUIPatch {
     static {
         options.add(TEXT[2]);
         options.add(TEXT[3]);
-        for (AbstractCardPack c : SpireAnniversary5Mod.allPacks) {
+        for (AbstractCardPack c : SpireAnniversary5Mod.unfilteredAllPacks) {
             options.add(c.name);
         }
 
@@ -72,7 +72,7 @@ public class MainMenuUIPatch {
         optionIDs[0] = RANDOM;
         optionIDs[1] = CHOICE;
         for (int i = 2; i < optionIDs.length; ++i) {
-            String packID = SpireAnniversary5Mod.allPacks.get(i - 2).packID;
+            String packID = SpireAnniversary5Mod.unfilteredAllPacks.get(i - 2).packID;
             optionIDs[i] = packID;
             if (packID.equals(CoreSetPack.ID)) {
                 coreSetPackIndex = i;

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
+import sun.security.provider.ConfigFile;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 
@@ -48,7 +49,7 @@ public class PackFilterMenu {
     public PackFilterMenu() {
         BaseMod.logger.info("Settings.HEIGHT = " + Settings.HEIGHT);
         ArrayList<String> optionNames = new ArrayList<>();
-        for (AbstractCardPack pack : SpireAnniversary5Mod.allPacks) {
+        for (AbstractCardPack pack : SpireAnniversary5Mod.unfilteredAllPacks) {
             packs.add(pack);
             optionNames.add(pack.name);
         }
@@ -86,6 +87,16 @@ public class PackFilterMenu {
 
     public void clickCheckmark(boolean wasUnticked) {
         setFilterConfig(viewedPack.packID, wasUnticked);
+        updateFilter();
+    }
+
+    public void updateFilter() {
+        SpireAnniversary5Mod.allPacks.clear();
+        for (AbstractCardPack pack : SpireAnniversary5Mod.unfilteredAllPacks) {
+            if (getFilterConfig(pack.packID)) {
+                SpireAnniversary5Mod.allPacks.add(pack);
+            }
+        }
     }
 
     public void update() {

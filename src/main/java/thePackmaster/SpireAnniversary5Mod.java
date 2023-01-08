@@ -3,7 +3,6 @@ package thePackmaster;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
-import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -27,8 +26,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -38,7 +35,6 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
-import thePackmaster.cards.marisapack.AmplifyCard;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
@@ -49,6 +45,7 @@ import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
+import thePackmaster.ui.PackFilterMenu;
 
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
@@ -76,6 +73,7 @@ public class SpireAnniversary5Mod implements
     public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
     public static HashMap<Class<? extends AbstractCard>, String> cardClassParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <card Class, packID>
     public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
+    public static ArrayList<AbstractCardPack> unfilteredAllPacks = new ArrayList<>();
     public static HashMap<String, AbstractCardPack> packsByID;
     public static ArrayList<AbstractCardPack> currentPoolPacks = new ArrayList<>();
     public static CardGroup packsToDisplay;
@@ -201,7 +199,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostInitialize() {
         declarePacks();
-        BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
+        BaseMod.logger.info("Full list of packs: " + unfilteredAllPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
 
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
@@ -327,7 +325,10 @@ public class SpireAnniversary5Mod implements
                         throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Pack class 1: " + packsByID.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
                     }
                     packsByID.put(pack.packID, pack);
-                    allPacks.add(pack);
+                    unfilteredAllPacks.add(pack);
+                    if (PackFilterMenu.getFilterConfig(pack.packID)) {
+                        allPacks.add(pack);
+                    }
                 });
     }
 
@@ -442,7 +443,7 @@ public class SpireAnniversary5Mod implements
                     choicesToSetup++;
                     break;
                 default:
-                    for (AbstractCardPack pack : allPacks) {
+                    for (AbstractCardPack pack : unfilteredAllPacks) {
                         if (pack.packID.equals(setupType)) {
                             BaseMod.logger.info("Found pack matching name " + pack.name);
                             currentPoolPacks.add(pack);

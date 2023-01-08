@@ -90,7 +90,7 @@ public class PackSetupScreen extends CustomScreen {
 
         packPool.clear();
         for (AbstractCardPack p : SpireAnniversary5Mod.allPacks) {
-            if (!currentPoolPacks.contains(p) && PackFilterMenu.getFilterConfig(p.packID)) {
+            if (!currentPoolPacks.contains(p)) {
                 packPool.add(p);
             }
         }
