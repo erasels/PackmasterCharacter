@@ -17,7 +17,7 @@ public class Imp extends AbstractPackmasterCard {
     private static final int COST = -2;
 
     public Imp() {
-        super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ALL_ENEMY);
+        super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ALL_ENEMY, CardColor.COLORLESS);
         magicNumber = baseMagicNumber = 4;
         secondDamage = baseSecondMagic = 1;
         exhaust = true;
