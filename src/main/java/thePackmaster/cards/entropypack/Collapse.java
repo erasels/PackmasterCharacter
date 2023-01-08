@@ -3,6 +3,7 @@ package thePackmaster.cards.entropypack;
 import basemod.Pair;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -30,6 +31,8 @@ public class Collapse extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new DrawCardAction(1));
+
         int amt = this.magicNumber;
         ApplyPowerAction strength = new ApplyPowerAction(p, p, new StrengthPower(p, amt));
         atb(strength);
@@ -77,6 +80,8 @@ public class Collapse extends AbstractPackmasterCard {
             for (Pair<ApplyPowerAction, AbstractCreature> notYetApplied : targetMap) {
                 att(notYetApplied.getKey());
             }
+
+            att(new DrawCardAction(targetMap.size()));
         }
     }
 

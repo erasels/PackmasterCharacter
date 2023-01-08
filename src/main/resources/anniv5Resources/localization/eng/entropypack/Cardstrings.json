@@ -10,7 +10,7 @@
   },
   "${ModID}:Collapse": {
     "NAME": "Collapse",
-    "DESCRIPTION": "${ModID}:Unstable. NL Gain !M! temporary Strength. NL Gain 1 Vulnerable."
+    "DESCRIPTION": "${ModID}:Unstable. NL Draw a card. NL Gain !M! temporary Strength. NL Gain 1 Vulnerable."
   },
   "${ModID}:Construct": {
     "NAME": "Construct",
