@@ -28,17 +28,31 @@ public class Synergize extends AbstractPackmasterCard {
             @Override
             public void update() {
                 isDone = true;
-                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2) {
-                    AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2);
-                    String parentID = SpireAnniversary5Mod.cardParentMap.get(c.cardID);
-                    if (!CoreSetPack.ID.equals(parentID)) {
-                        blck();
-                    }
+                if (lastCardDifferentPackCheck()) {
+                    blck();
                 }
             }
         });
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if (this.lastCardDifferentPackCheck()) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
+    }
+
+    private boolean lastCardDifferentPackCheck() {
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2) {
+            AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2);
+            String parentID = SpireAnniversary5Mod.cardParentMap.get(c.cardID);
+            return !CoreSetPack.ID.equals(parentID);
+        }
+        return false;
+    }
+
+    @Override
     public void upp() {
         upgradeBlock(2);
         upgradeDamage(2);
