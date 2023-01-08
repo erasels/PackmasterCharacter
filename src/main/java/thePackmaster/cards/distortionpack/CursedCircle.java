@@ -35,9 +35,9 @@ public class CursedCircle extends AbstractPackmasterCard {
                 ++amt;
         }
 
-        List<Pair<ApplyPowerAction, AbstractCreature>> targetMap = new ArrayList<>();
-
         if (amt > 0) {
+            List<Pair<ApplyPowerAction, AbstractCreature>> targetMap = new ArrayList<>();
+
             atb(new VFXAction(new DarkCirclesEffect(p, amt * 2)));
 
             int finalAmt = amt;

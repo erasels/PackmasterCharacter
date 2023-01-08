@@ -1,0 +1,10 @@
+[
+  {
+    "PROPER_NAME": "Weapon",
+    "NAMES": [
+      "weapon",
+      "weapons"
+    ],
+    "DESCRIPTION": "Whenever you play an attack card, one Durability of your rightmost Weapon is used and card's damage is increased by Weapon's Attack. NL Orb slots are created and destroyed automatically."
+  }
+]

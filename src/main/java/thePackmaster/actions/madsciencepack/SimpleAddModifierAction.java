@@ -20,7 +20,7 @@ public class SimpleAddModifierAction extends AbstractGameAction {
         if (!isDone) {
             if (!card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED)) {
                 CardModifierManager.addModifier(card, mod);
-                card.superFlash(Color.CHARTREUSE);
+                card.superFlash(Color.CHARTREUSE.cpy());
             }
 
             isDone = true;
