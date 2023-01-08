@@ -21,7 +21,7 @@ public class EntropyPower extends AbstractPackmasterPower {
     }
 
     @Override
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+    public void onUseCard(AbstractCard card, UseCardAction action) {
         if (amount > 0) {
             this.flash();
             addToBot(new FastDiscardAction(1));
