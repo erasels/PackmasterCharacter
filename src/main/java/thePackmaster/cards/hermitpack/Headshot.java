@@ -1,7 +1,6 @@
 package thePackmaster.cards.hermitpack;
 
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,10 +23,8 @@ public class Headshot extends AbstractHermitCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int dam = this.damage;
-
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn), EnumPatch.HERMIT_GUN));
+                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), EnumPatch.HERMIT_GUN));
     }
 
     public void triggerOnGlowCheck() {
@@ -43,8 +40,7 @@ public class Headshot extends AbstractHermitCard {
         super.calculateCardDamage(mo);
 
         if (isDeadOnPos()) {
-            int base_dam = this.damage;
-            this.damage += base_dam;
+            this.damage *= 2;
         }
 
         isDamageModified = damage != baseDamage;
