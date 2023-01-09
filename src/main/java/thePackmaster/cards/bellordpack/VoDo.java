@@ -22,6 +22,7 @@ public class VoDo extends AbstractPackmasterCard implements OnObtainCard {
     public VoDo() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        cardsToPreview = new CurseOfTheBell();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

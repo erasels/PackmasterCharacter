@@ -9,7 +9,10 @@
   },
   "${ModID}:Clang": {
     "NAME": "Clang",
-    "DESCRIPTION": "Can only be played if there is a Curse or Status in your hand. NL Deal !D! damage."
+    "DESCRIPTION": "Can only be played if there is a Curse or Status in your hand. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have a Curse or Status card."
+    ]
   },
   "${ModID}:VoDo": {
     "NAME": "Vo-Do",

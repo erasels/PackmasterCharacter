@@ -1,8 +1,8 @@
 {
-  "${ModID}:Bellord": {
+  "${ModID}:BellordPack": {
     "TEXT": [
       "Bellord",
-      "Clobber foes with cursed cards!",
+      "Clobber foes with cursed cards! Drain to dust with Strength reduction!",
       "Vex"
     ]
   }

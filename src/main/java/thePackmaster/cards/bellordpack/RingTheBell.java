@@ -21,6 +21,7 @@ public class RingTheBell extends AbstractPackmasterCard implements OnObtainCard 
     public RingTheBell() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 13;
+        cardsToPreview = new CurseOfTheBell();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

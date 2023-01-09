@@ -27,6 +27,7 @@ public class TimeOut extends AbstractPackmasterCard {
         atb(new DrawCardAction(1, new AbstractGameAction() {
             @Override
             public void update() {
+                isDone = true;
                 if (DrawCardAction.drawnCards.stream().anyMatch(q -> q.type == CardType.CURSE || q.type == CardType.STATUS || q.color == CardColor.CURSE)) {
                     att(new AllEnemyApplyPowerAction(p, -magicNumber, (q) -> new StrengthPower(q, -magicNumber)));
                 }

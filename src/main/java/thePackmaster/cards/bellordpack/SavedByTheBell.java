@@ -19,6 +19,7 @@ public class SavedByTheBell extends AbstractPackmasterCard implements OnObtainCa
 
     public SavedByTheBell() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        cardsToPreview = new CurseOfTheBell();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

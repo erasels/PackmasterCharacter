@@ -22,6 +22,7 @@ public class Dong extends AbstractPackmasterCard implements OnObtainCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 20;
         baseMagicNumber = magicNumber = 2;
+        cardsToPreview = new CurseOfTheBell();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
