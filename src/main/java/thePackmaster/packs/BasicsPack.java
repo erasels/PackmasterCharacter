@@ -26,7 +26,7 @@ public class BasicsPack extends AbstractCardPack {
         cards.add(DefectKit.ID);
         cards.add(WatcherKit.ID);
         cards.add(PackmasterKit.ID);
-        cards.add(BasicKit.ID);
+        cards.add(BasicSupply.ID);
         return cards;
     }
 }

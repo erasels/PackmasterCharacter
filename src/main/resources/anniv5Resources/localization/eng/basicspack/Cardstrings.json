@@ -1,23 +1,33 @@
 {
-  "${ModID}:IroncladKit": {
-  "NAME": "Ironclad Kit",
-  "DESCRIPTION": "Add a *Bash and *Strike to your hand. Exhaust."
+    "${ModID}:IroncladKit": {
+    "NAME": "Ironclad Kit",
+    "DESCRIPTION": "You may add a *Bash or *Strike to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "You may add a *Bash and *Strike to your hand. Exhaust."
   },
   "${ModID}:SilentKit": {
     "NAME": "Silent Kit",
-    "DESCRIPTION": "Add a *Survivor and *Neutralize to your hand. Exhaust."
+    "DESCRIPTION": "You may add a *Survivor or *Neutralize to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "You may add a *Survivor and *Neutralize to your hand. Exhaust."
   },
   "${ModID}:DefectKit": {
     "NAME": "Defect Kit",
-    "DESCRIPTION": "Add a *Zap and *Dualcast to your hand. Exhaust."
+    "DESCRIPTION": "You may add a *Zap or *Dualcast to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "You may add a *Zap and *Dualcast to your hand. Exhaust."
   },
   "${ModID}:WatcherKit": {
     "NAME": "Watcher Kit",
-    "DESCRIPTION": "Add a *Eruption and *Vigilance to your hand. Exhaust."
+    "DESCRIPTION": "You may add an *Eruption or *Vigilance to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "You may add an *Eruption and *Vigilance to your hand. Exhaust."
   },
   "${ModID}:PackmasterKit": {
     "NAME": "Packmaster Kit",
-    "DESCRIPTION": "Add a *Rummage and *Cardistry to your hand. Exhaust."
+    "DESCRIPTION": "You may add a *Rummage or *Cardistry to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "You may add a *Rummage and *Cardistry to your hand. Exhaust."
+  },
+  "${ModID}:BasicSupply": {
+    "NAME": "Basic Supply",
+    "DESCRIPTION": "At the start of your turn, you may add a *Strike or *Defend to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, you may add a *Strike and *Defend to your hand."
   },
   "${ModID}:Both": {
     "NAME": "Both",
