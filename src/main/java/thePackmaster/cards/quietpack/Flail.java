@@ -15,7 +15,7 @@ public class Flail extends AbstractPackmasterCard {
 
     public Flail() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 26;
+        baseDamage = 25;
         cardsToPreview = new Weight();
     }
 
@@ -26,7 +26,7 @@ public class Flail extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        upgradeDamage(7);
+        upgradeDamage(6);
     }
 }
 

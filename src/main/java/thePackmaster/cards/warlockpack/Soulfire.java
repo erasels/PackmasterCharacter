@@ -16,7 +16,7 @@ public class Soulfire extends AbstractPackmasterCard {
 
     public Soulfire() {
         super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
-        baseDamage = 10;
+        baseDamage = 9;
     }
 
     @Override
