@@ -2,13 +2,13 @@
   "${ModID}:SwarmOfBees": {
     "NAME": "Swarm Of Bees",
     "DESCRIPTION": [
-      "#yPassive: Whenever you play a card, deal #b",
-      " damage to a random enemy. NL #yEvoke: Deal #b",
-      " damage to a random enemy."
+      "#yPassive: Whenever you lose HP, deal #b",
+      " damage to a random enemy. NL #yEvoke: Gain #b",
+      " #yThorns."
     ]
   },
   "${ModID}:Panda": {
-    "NAME": "PAnda",
+    "NAME": "Panda",
     "DESCRIPTION": [
       "#yPassive: At the end of your turn, deal #b",
       " damage to a random enemy. NL #yEvoke: Deal #b",

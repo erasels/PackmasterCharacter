@@ -40,6 +40,6 @@
   },
   "${ModID}:Synergize": {
     "NAME": "Synergize",
-    "DESCRIPTION": "Gain !B! Block. NL If the last card played was from a different Pack, deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If the last card played was from a different Pack, gain !B! Block."
   }
 }

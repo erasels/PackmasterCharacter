@@ -1,0 +1,9 @@
+{
+  "${ModID}:HammerThrowPower": {
+    "NAME": "Hammer Throw",
+    "DESCRIPTIONS": [
+      "Whenever a card is Retained, deal #b",
+      " damage to ALL enemies."
+    ]
+  }
+}

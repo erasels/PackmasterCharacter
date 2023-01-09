@@ -6,12 +6,11 @@ import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class ReboundVolley extends AbstractPackmasterCard implements BranchingUpgradesCard {
+public class ReboundVolley extends IntoTheBreachCard implements BranchingUpgradesCard {
     public final static String ID = makeID("ReboundVolley");
 
     public ReboundVolley() {
@@ -33,7 +32,7 @@ public class ReboundVolley extends AbstractPackmasterCard implements BranchingUp
             branchUpgrade();
         else
             baseUpgrade();
-        baseSecondDamage = baseDamage;
+        upgradeSecondDamage(baseDamage - baseSecondDamage);
     }
 
     public void baseUpgrade() {
@@ -44,6 +43,7 @@ public class ReboundVolley extends AbstractPackmasterCard implements BranchingUp
         upgradeDamage(-2);
         upgradeMagicNumber(1);
         rawDescription = CardCrawlGame.languagePack.getCardStrings(ReboundVolley.ID).EXTENDED_DESCRIPTION[0];
+        initializeDescription();
     }
 
     // This method is used so the second damage value on the card

@@ -1,6 +1,7 @@
 package thePackmaster.relics;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,29 +23,30 @@ public class CollectorBadge extends AbstractPackmasterRelic {
 
     @Override
     public void onEquip() {
-        grayscale = true;
         setDescriptionAfterLoading();
     }
 
     @Override
     public void atBattleStart() {
-        grayscale = true;
         setDescriptionAfterLoading();
+        counter = 0;
     }
 
     @Override
     public void onVictory() {
         usedPacks.clear();
-        grayscale = true;
         setDescriptionAfterLoading();
+        counter = -1;
     }
 
     @Override
     public void atTurnStart() {
-        if (!grayscale) {
-            grayscale = true;
+        if (pulse) {
+            counter = 0;
             flash();
+            Wiz.atb(new RelicAboveCreatureAction(Wiz.p(), this));
             addToBot(new GainEnergyAction(1));
+            stopPulse();
         }
         usedPacks.clear();
         setDescriptionAfterLoading();
@@ -55,9 +57,9 @@ public class CollectorBadge extends AbstractPackmasterRelic {
         if (SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null) {
             if (!usedPacks.contains(Wiz.getPackByCard(c).name)) {
                 usedPacks.add(Wiz.getPackByCard(c).name);
-                if (usedPacks.size() >= 3 && grayscale) {
-                    this.grayscale = false;
-                    flash();
+                counter++;
+                if (!pulse && usedPacks.size() >= 3) {
+                    beginLongPulse();
                 }
                 setDescriptionAfterLoading();
             }

@@ -15,11 +15,12 @@
   },
   "${ModID}:PlasmaShield": {
     "NAME": "Plasma Shield",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block for each Plasma. NL Channel !${ModID}:m2! Plasma."
+    "DESCRIPTION": "At the end of your turn, gain !M! Block if you have Plasma. NL Channel !${ModID}:m2! Plasma."
   },
   "${ModID}:Enrage": {
     "NAME": "Enrage",
-    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! cards. NL Enter ${ModID}:Aggression."
+    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! card. NL Enter ${ModID}:Aggression.",
+    "UPGRADE_DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! cards. NL Enter ${ModID}:Aggression."
   },
   "${ModID}:Whispers": {
     "NAME": "Whispers",
@@ -32,8 +33,8 @@
   },
   "${ModID}:LesserHex": {
     "NAME": "Lesser Hex",
-    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater *Hex to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater *Hex+ to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex to your discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex+ to your discard pile. NL Exhaust."
   },
   "${ModID}:GreaterHex": {
     "NAME": "Greater Hex",

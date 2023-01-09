@@ -17,6 +17,8 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FocusPower;
+import com.megacrit.cardcrawl.powers.ThornsPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.util.Wiz;
 
@@ -24,10 +26,9 @@ import java.util.ArrayList;
 
 import static com.badlogic.gdx.math.MathUtils.*;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
-import static thePackmaster.util.Wiz.adp;
-import static thePackmaster.util.Wiz.getRandomSlash;
+import static thePackmaster.util.Wiz.*;
 
-public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
+public class SwarmOfBees extends CustomOrb implements OnLoseHpOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(SwarmOfBees.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
@@ -36,8 +37,8 @@ public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
     private static final String IMG_PATH = makePath("images/vfx/summonspack/Bee.png");
     private static final Texture BEE_IMG = ImageMaster.loadImage(IMG_PATH);
     private static final int BEE_COUNT = 120;
-    public static final int STING_DAMAGE = 1;
-    public static final int EVOKE_BONUS = 5;
+    public static final int STING_DAMAGE = 5;
+    public static final int EVOKE_THORNS = 1;
 
     private final ArrayList<Bee> bees = new ArrayList<>();
 
@@ -139,10 +140,9 @@ public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
 
     public SwarmOfBees()
     {
-        super(ORB_ID, NAME, STING_DAMAGE, 0, "", "", IMG_PATH_O);
+        super(ORB_ID, NAME, STING_DAMAGE, EVOKE_THORNS, "", "", IMG_PATH_O);
         basePassiveAmount = STING_DAMAGE;
-        baseEvokeAmount = basePassiveAmount + EVOKE_BONUS;
-        showEvokeValue = true;
+        showEvokeValue = false;
 
         generateBees();
 
@@ -160,13 +160,15 @@ public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
 
     @Override
     public void applyFocus() {
-        AbstractPower power = adp().getPower("Focus");
-        if (power != null)
+        AbstractPower power = adp().getPower(FocusPower.POWER_ID);
+        if (power != null) {
             passiveAmount = Math.max(0, basePassiveAmount + power.amount);
-        else
+            evokeAmount = Math.max(0, baseEvokeAmount + power.amount);
+        }
+        else {
             passiveAmount = basePassiveAmount;
-
-        evokeAmount = passiveAmount + EVOKE_BONUS;
+            evokeAmount = baseEvokeAmount;
+        }
     }
 
     @Override
@@ -175,16 +177,14 @@ public class SwarmOfBees extends CustomOrb implements OnPlayCardOrb {
     }
 
     @Override
-    public void onPlayCard(AbstractCard card) {
+    public void onLoseHp(int loss) {
         AbstractMonster m = Wiz.getRandomEnemy();
-        Wiz.thornDmg(m, passiveAmount, getRandomSlash());
+        thornDmgTop(m, passiveAmount, Wiz.getRandomSlash());
     }
 
     @Override
     public void onEvoke() {
-        AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster(true);
-        if (target != null)
-            Wiz.thornDmg(target, evokeAmount, getRandomSlash());
+        applyToSelf(new ThornsPower(adp(), evokeAmount));
     }
 
     @Override

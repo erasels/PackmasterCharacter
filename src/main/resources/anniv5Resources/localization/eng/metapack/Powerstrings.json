@@ -1,0 +1,16 @@
+{
+  "${ModID}:RayOfFrostPower": {
+    "NAME": "Magic Protection",
+    "DESCRIPTIONS": [
+      "Channel #b",
+      " #yFrost whenever you play a #yMagic card this turn."
+    ]
+  },
+  "${ModID}:DiehardPower": {
+    "NAME": "Diehard",
+    "DESCRIPTIONS": [
+      "Next turn, gain #b",
+      " #yWeak and #yFrail."
+    ]
+  }
+}

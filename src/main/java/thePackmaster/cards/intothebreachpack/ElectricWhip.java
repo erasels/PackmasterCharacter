@@ -8,16 +8,16 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Lightning;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ElectricWhip extends AbstractPackmasterCard {
+public class ElectricWhip extends IntoTheBreachCard {
     public final static String ID = makeID("ElectricWhip");
 
     public ElectricWhip() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         damage = baseDamage = 4;
+        this.isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

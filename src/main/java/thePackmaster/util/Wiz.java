@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.TimedVFXAction;
@@ -72,7 +73,7 @@ public class Wiz {
 
     public static ArrayList<AbstractMonster> getEnemies() {
         ArrayList<AbstractMonster> monsters = new ArrayList<>(AbstractDungeon.getMonsters().monsters);
-        monsters.removeIf(m -> m.isDead || m.isDying);
+        monsters.removeIf(AbstractCreature::isDeadOrEscaped);
         return monsters;
     }
 
@@ -372,7 +373,11 @@ public class Wiz {
     }
 
     public static int getLogicalCardCost(AbstractCard c) {
-        if (c.costForTurn > 0 && !c.freeToPlayOnce) {
+        if (!c.freeToPlay()) {
+            if(c.cost <= -2) {
+                return 0;
+            } else if(c.cost == -1)
+                return EnergyPanel.totalCount;
             return c.costForTurn;
         }
         return 0;

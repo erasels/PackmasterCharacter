@@ -1,0 +1,21 @@
+{
+  "${ModID}:ChargeUp": {
+    "NAME": "Charge Up",
+    "DESCRIPTIONS": [
+      "At #b%s or more stacks, double the damage of the next Attack and lose #b%s stacks."
+    ]
+  },
+  "${ModID}:Inertia": {
+    "NAME": "Inertia",
+    "DESCRIPTIONS": [
+      "Whenever a card is #yExhausted or #yAmplified, gain #b%s #yCharge #yUp."
+    ]
+  },
+  "${ModID}:EarthlightRay": {
+    "NAME": "Earthlight Ray",
+    "DESCRIPTIONS": [
+      "After you gain #yCharge #yUp, deal damage equal to its total to ALL enemies.",
+      "After you gain #yCharge #yUp, deal damage equal to its total times #b%s to ALL enemies."
+    ]
+  }
+}

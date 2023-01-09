@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import org.lwjgl.Sys;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
 
@@ -17,15 +17,13 @@ import java.util.ArrayList;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class GemOfUnity extends AbstractPackmasterRelic {
-    public static final String ID = makeID("GemOfUnity");
-
-    private static ArrayList<AbstractCardPack> packsPlayed = new ArrayList<>();
+    public static final String ID = makeID(GemOfUnity.class.getSimpleName());
+    private static final ArrayList<AbstractCardPack> packsPlayed = new ArrayList<>();
 
     public GemOfUnity() {
         super(ID, RelicTier.UNCOMMON, LandingSound.FLAT);
-        packsPlayed = new ArrayList<>();
         resetCounter();
-        this.description = getUpdatedDescription();
+        description = getUpdatedDescription();
     }
 
     @Override
@@ -36,7 +34,7 @@ public class GemOfUnity extends AbstractPackmasterRelic {
     public void resetCounter(){
         if (AbstractDungeon.isPlayerInDungeon()) {
             packsPlayed.clear();
-            counter = SpireAnniversary5Mod.PACKS_PER_RUN;
+            counter = SpireAnniversary5Mod.currentPoolPacks.size();
             if (AbstractDungeon.player.hasRelic(BanishingDecree.ID)) counter--;
             this.description = getUpdatedDescription();
             tips.clear();

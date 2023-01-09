@@ -1,51 +1,60 @@
 package thePackmaster.cards.coresetpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.CoreSetPack;
-import thePackmaster.util.Wiz;
-
-import java.util.Objects;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.SpireAnniversary5Mod.packsByID;
 
 public class Synergize extends AbstractPackmasterCard {
     public final static String ID = makeID("Synergize");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public Synergize() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseBlock = 7;
         baseDamage = 7;
         isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        allDmg(AbstractGameAction.AttackEffect.LIGHTNING);
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2) {
-                    AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2);
-                    if (SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null) {
-                        if (!Objects.equals(SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null, CoreSetPack.ID)) {
-                            allDmg(AbstractGameAction.AttackEffect.LIGHTNING);
-                        }
-                    }
+                if (lastCardDifferentPackCheck(false)) {
+                    blck();
                 }
             }
         });
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if (this.lastCardDifferentPackCheck(true)) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
+    }
+
+    private boolean lastCardDifferentPackCheck(boolean forGlow) {
+        int n = forGlow ? 1 : 2;
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= n) {
+            AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - n);
+            String parentID = SpireAnniversary5Mod.cardParentMap.get(c.cardID);
+            // Cards without a pack shouldn't count as being from a "different pack"
+            return parentID != null && !CoreSetPack.ID.equals(parentID);
+        }
+        return false;
+    }
+
+    @Override
     public void upp() {
         upgradeBlock(2);
         upgradeDamage(2);

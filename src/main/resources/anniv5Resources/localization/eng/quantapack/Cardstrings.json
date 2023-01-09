@@ -1,0 +1,47 @@
+{
+  "${ModID}:MissileStrike": {
+    "NAME": "Missile Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deal !M! damage to ALL enemies."
+  },
+  "${ModID}:MagicDart": {
+    "NAME": "Magic Dart",
+    "DESCRIPTION": "Deal damage equal to your hand size.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal damage equal to your hand size.",
+    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
+  },
+  "${ModID}:Cull": {
+    "NAME": "Cull",
+    "DESCRIPTION": "Gain !B! Block. NL EVERYONE loses !M! HP."
+  },
+  "${ModID}:Potential": {
+    "NAME": "Potential",
+    "DESCRIPTION": "Gain !M! Temporary HP. NL Draw !${ModID}:m2! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Temporary HP. NL Draw !${ModID}:m2! cards. NL Exhaust."
+  },
+  "${ModID}:Aura": {
+    "NAME": "Aura",
+    "DESCRIPTION": "Prevent the next time you would lose HP."
+  },
+  "${ModID}:MAXPOWER": {
+    "NAME": "MAX POWER",
+    "DESCRIPTION": "Raise your Strength NL to 11."
+  },
+  "${ModID}:Flow": {
+    "NAME": "Flow",
+    "DESCRIPTION": "Gain !B! Block. NL If the last card played this turn was an Attack, draw !M! cards."
+  },
+  "${ModID}:Manaburst": {
+    "NAME": "Manaburst",
+    "DESCRIPTION": "Deal !D! damage. NL Add a random 0-cost Attack from your discard pile to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add !M! random 0-cost Attacks from your discard pile to your hand."
+  },
+  "${ModID}:Dominate": {
+    "NAME": "Dominate",
+    "DESCRIPTION": "${ModID}:Stun an enemy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Stun ALL enemies. NL Exhaust."
+  },
+  "${ModID}:IchorGoblet": {
+    "NAME": "Ichor Goblet",
+    "DESCRIPTION": "Gain [E] at the start of next !M! turns. If you lose HP, gain it all immediately."
+  }
+}

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.GhostlyFireEffect;
 import com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect;
 import com.megacrit.cardcrawl.vfx.combat.*;
@@ -62,7 +63,7 @@ public class Ghostflame extends AbstractOrb {
                 speedTime = 0.0F;
             }
             OrbFlareEffect flare = new OrbFlareEffect(this, OrbFlareColor.LIGHTNING);
-            ReflectionHacks.setPrivate(flare, OrbFlareEffect.class, "color", color);
+            ReflectionHacks.setPrivate(flare, AbstractGameEffect.class, "color", color);
             ReflectionHacks.setPrivate(flare, OrbFlareEffect.class, "color2", color2);
             AbstractDungeon.actionManager.addToBottom(new VFXAction(flare, speedTime));
             AbstractDungeon.actionManager.addToBottom(new GhostflameOrbEvokeAction(new DamageInfo(AbstractDungeon.player, this.passiveAmount, DamageType.THORNS)));
