@@ -15,7 +15,7 @@
     "NAME": "Victory Points",
     "DESCRIPTIONS": [
       "Whenever this reaches #b",
-      " stacks, enter #yVictory. Is increased by 25% of current stacks whenever you play a card."
+      " stacks, enter #yVictory. Is increased by #b25% of current stacks whenever you play a card."
     ]
   },
   "${ModID}:TotalTrackerPower": {
