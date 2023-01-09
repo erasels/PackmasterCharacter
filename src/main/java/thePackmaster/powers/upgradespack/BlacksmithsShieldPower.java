@@ -26,9 +26,9 @@ public class BlacksmithsShieldPower extends AbstractPackmasterPower {
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if (card.timesUpgraded>0) {
-            addToBot(new GainBlockAction(AbstractDungeon.player,card.timesUpgraded));
+            addToBot(new GainBlockAction(AbstractDungeon.player,card.timesUpgraded*amount));
         } else if (card.timesUpgraded < 0) {
-            addToBot(new GainBlockAction(AbstractDungeon.player,-card.timesUpgraded));
+            addToBot(new GainBlockAction(AbstractDungeon.player,(-card.timesUpgraded)*amount));
         }
     }
 
