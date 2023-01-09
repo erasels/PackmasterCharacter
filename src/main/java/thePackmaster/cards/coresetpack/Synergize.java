@@ -23,22 +23,38 @@ public class Synergize extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        allDmg(AbstractGameAction.AttackEffect.LIGHTNING);
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2) {
-                    AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2);
-                    String parentID = SpireAnniversary5Mod.cardParentMap.get(c.cardID);
-                    if (!CoreSetPack.ID.equals(parentID)) {
-                        allDmg(AbstractGameAction.AttackEffect.LIGHTNING);
-                    }
+                if (lastCardDifferentPackCheck(false)) {
+                    blck();
                 }
             }
         });
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if (this.lastCardDifferentPackCheck(true)) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
+    }
+
+    private boolean lastCardDifferentPackCheck(boolean forGlow) {
+        int n = forGlow ? 1 : 2;
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= n) {
+            AbstractCard c = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - n);
+            String parentID = SpireAnniversary5Mod.cardParentMap.get(c.cardID);
+            // Cards without a pack shouldn't count as being from a "different pack"
+            return parentID != null && !CoreSetPack.ID.equals(parentID);
+        }
+        return false;
+    }
+
+    @Override
     public void upp() {
         upgradeBlock(2);
         upgradeDamage(2);

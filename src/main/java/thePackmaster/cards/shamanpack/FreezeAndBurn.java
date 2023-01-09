@@ -28,7 +28,7 @@ public class FreezeAndBurn extends AbstractPackmasterCard {
     private static final int COST = 1;
     private static final int DAMAGE = 10;
     private static final int UPGRADE_DAMAGE = 1;
-    private static final int TEMP_STRENGTH_DOWN = 1;
+    private static final int TEMP_STRENGTH_DOWN = 2;
     private static final int UPGRADE_TEMP_STRENGTH_DOWN = 1;
 
     public boolean nextTurnEffect = false;

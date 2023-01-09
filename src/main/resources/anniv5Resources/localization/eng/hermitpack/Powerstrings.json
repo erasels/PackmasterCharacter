@@ -1,0 +1,10 @@
+{
+  "${ModID}:DeterminationPower": {
+    "NAME": "Determination",
+    "DESCRIPTIONS": ["Whenever a debuff is applied to you, gain #b", " #yStrength."]
+  },
+  "${ModID}:OverwhelmingPowerPower": {
+    "NAME": "Overwhelming Power",
+    "DESCRIPTIONS": ["Lose #b"," HP if you end your turn with 0 Energy."]
+  }
+}
