@@ -3,19 +3,17 @@ package thePackmaster.cardmodifiers.infestpack;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.infestpack.OnInfestCard;
 import thePackmaster.powers.infestpack.OnInfestPower;
-import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
@@ -26,7 +24,7 @@ public class InfestModifier extends AbstractCardModifier {
     public static String MOD_ID = SpireAnniversary5Mod.makeID("Infest");
 
     private int infestCounter = 0;
-    private static final TextureAtlas.AtlasRegion infestImage = ImageHelper.asAtlasRegion(TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/infestIcon.png"));
+    private static final Texture tex = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/infestIcon.png");
 
     @Override
     public boolean isInherent(AbstractCard card) {
@@ -50,14 +48,7 @@ public class InfestModifier extends AbstractCardModifier {
 
     @Override
     public void onRender(AbstractCard card, SpriteBatch sb) {
-        if (Wiz.isInCombat()) {
-            Color color = Color.WHITE.cpy();
-            color.a = card.transparency;
-            sb.setColor(color);
-            sb.draw(infestImage, card.current_x + infestImage.offsetX - (float) infestImage.originalWidth / 2.0F, card.current_y + infestImage.offsetY - (float) infestImage.originalHeight / 2.0F, (float) infestImage.originalWidth / 2.0F - infestImage.offsetX, (float) infestImage.originalHeight / 2.0F - infestImage.offsetY, (float) infestImage.packedWidth, (float) infestImage.packedHeight, card.drawScale * Settings.scale, card.drawScale * Settings.scale, card.angle);
-            FontHelper.cardEnergyFont_L.getData().setScale(card.drawScale);
-            FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, Integer.toString(infestCounter), card.current_x, card.current_y, -133.0F * card.drawScale * Settings.scale, 115.0F * card.drawScale * Settings.scale, card.angle, false, Color.WHITE.cpy());
-        }
+        ExtraIcons.icon(tex).text(String.valueOf(infestCounter)).render(card);
     }
 
     @Override
