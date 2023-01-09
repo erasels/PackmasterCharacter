@@ -18,7 +18,7 @@
   },
   "${ModID}:SummonElephant": {
     "NAME": "Summon Elephant",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Take !M! damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Take !M! damage."
   },
   "${ModID}:SummonBrambles": {
     "NAME": "Summon Brambles",
@@ -30,8 +30,7 @@
   },
   "${ModID}:SummonBees": {
     "NAME": "Summon Bees",
-    "DESCRIPTION": "Channel a ${ModID}:Swarm\u00a0of\u00a0Bees X times.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Swarm\u00a0of\u00a0Bees X+1 times."
+    "DESCRIPTION": "Channel !M! ${ModID}:Swarms\u00a0of\u00a0Bees. NL Exhaust."
   },
   "${ModID}:Control": {
     "NAME": "Control",
