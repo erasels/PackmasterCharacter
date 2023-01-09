@@ -27,6 +27,7 @@ public class Spark extends AbstractPackmasterCard implements AmplifyCard{
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         damage = baseDamage = DMG;
         baseMagicNumber = magicNumber = MAGIC;
+        exhaust = true;
 
         setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
                 "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
