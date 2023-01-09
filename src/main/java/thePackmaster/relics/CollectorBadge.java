@@ -36,6 +36,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
     public void onVictory() {
         usedPacks.clear();
         setDescriptionAfterLoading();
+        stopPulse();
         counter = -1;
     }
 
@@ -58,7 +59,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
             if (!usedPacks.contains(Wiz.getPackByCard(c).name)) {
                 usedPacks.add(Wiz.getPackByCard(c).name);
                 counter++;
-                if (!pulse && usedPacks.size() >= 3) {
+                if (!pulse && usedPacks.size() >= 4) {
                     beginLongPulse();
                 }
                 setDescriptionAfterLoading();
@@ -68,7 +69,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
 
     private void setDescriptionAfterLoading() {
 
-        if (usedPacks.size() > 2) {
+        if (usedPacks.size() > 3) {
             description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
         } else if (usedPacks.size() > 0) {
             String st = usedPacks.get(0);

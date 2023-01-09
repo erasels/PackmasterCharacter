@@ -18,12 +18,15 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
+// This card used to be in the Core Set pack but no longer is
+// However, we've kept it around since we may want to give it to the player from a Packmaster-specific event
+// (with an appropriate cost, like an unremovable curse)
 public class PackRip extends AbstractPackmasterCard {
     public final static String ID = makeID("PackRip");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public PackRip() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         exhaust = true;
     }
 
