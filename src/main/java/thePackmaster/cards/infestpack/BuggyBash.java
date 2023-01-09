@@ -18,7 +18,7 @@ public class BuggyBash extends AbstractPackmasterCard {
     public BuggyBash() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 14;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 4;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
 
