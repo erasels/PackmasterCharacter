@@ -42,7 +42,7 @@
   },
   "${ModID}:MagnumOpus": {
     "NAME": "Magnum Opus",
-    "DESCRIPTION": "Gain !${ModID}:m2! ${ModID}:Inspiration. NL Permanently increase this card's ${ModID}:Inspiration by !M!. NL Exhaust."
+    "DESCRIPTION": "Gain ${ModID}:Inspiration !${ModID}:m2!. NL Permanently increase this card's ${ModID}:Inspiration by !M!. NL Exhaust."
   },
   "${ModID}:SplendidForm": {
     "NAME": "Splendid Form",
