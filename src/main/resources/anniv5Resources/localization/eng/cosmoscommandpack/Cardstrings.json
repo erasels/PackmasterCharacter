@@ -39,6 +39,6 @@
   },
   "${ModID}:SubtleKnife": {
     "NAME": "Subtle Knife",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Distortion. NL ${ModID}:Amplify [E] : Exhaust, then put this into your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Distortion. NL ${ModID}:Amplify [E] : Exhaust, then add a copy of this to your discard pile."
   }
 }
