@@ -18,7 +18,7 @@ public class DashIn extends AbstractStartUpCard {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.isInnate = true;
         this.baseDamage = this.damage = 4;
-        this.baseBlock = this.block = 3;
+        this.baseBlock = this.block = 4;
         this.baseMagicNumber = this.magicNumber = 0;
         this.isMultiDamage = true;
     }
