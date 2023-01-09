@@ -22,7 +22,7 @@
     "NAME": "Collector Badge",
     "FLAVOR": "TODO: make this a sweet relic.",
     "DESCRIPTIONS": [
-      "At the start of each turn, if you played a card from 3 different Booster Packs the previous turn, gain [E] .",
+      "At the start of each turn, if you played a card from 4 different Booster Packs the previous turn, gain [E] .",
       " NL NL Packs used this turn: ",
       " NL NL This will trigger next turn. "
     ]
