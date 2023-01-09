@@ -23,14 +23,13 @@ public class ManifestAction extends AbstractGameAction
     public void update()
     {
         if (p.maxOrbs < 10) {
-            addToBot(new ChannelAction(coalesceOrb, false));
             p.maxOrbs += 1;
             p.orbs.add(new EmptyOrbSlot());
-
             for (int i = 0; i < p.orbs.size(); ++i) {
                 ((AbstractOrb) p.orbs.get(i)).setSlot(i, p.maxOrbs);
             }
         }
+        addToBot(new ChannelAction(coalesceOrb, false));
         isDone = true;
     }
 }

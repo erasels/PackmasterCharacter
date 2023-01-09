@@ -22,7 +22,7 @@ public class MoonlightBarrage extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new MoonlightBarrageAction(new DamageInfo(p,baseDamage)));
+        addToBot(new MoonlightBarrageAction(this, AbstractGameAction.AttackEffect.LIGHTNING));
     }
 
     public void upp() {

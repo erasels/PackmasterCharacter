@@ -20,6 +20,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -28,7 +30,7 @@ import static com.badlogic.gdx.math.MathUtils.*;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
-public class SwarmOfBees extends CustomOrb implements OnLoseHpOrb {
+public class SwarmOfBees extends AbstractPackMasterOrb implements OnLoseHpOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(SwarmOfBees.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
@@ -181,7 +183,9 @@ public class SwarmOfBees extends CustomOrb implements OnLoseHpOrb {
         AbstractMonster m = Wiz.getRandomEnemy();
         thornDmgTop(m, passiveAmount, Wiz.getRandomSlash());
     }
-
+    public void PassiveEffect(){
+        onLoseHp(0);
+    }
     @Override
     public void onEvoke() {
         applyToSelf(new ThornsPower(adp(), evokeAmount));

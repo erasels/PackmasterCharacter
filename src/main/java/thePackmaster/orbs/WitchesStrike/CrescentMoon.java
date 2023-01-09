@@ -68,7 +68,7 @@ public class CrescentMoon extends AbstractPackMasterOrb {
     @Override
     public void updateDescription() { // Set the on-hover description of the orb
         applyFocus(); // Apply Focus (Look at the next method)
-        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1]+EVOKE_AMOUNT+DESCRIPTIONS[2]+passiveAmount+DESCRIPTIONS[3];
+        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1]+evokeAmount+DESCRIPTIONS[2]+passiveAmount+DESCRIPTIONS[3];
     }
 
     @Override
@@ -79,7 +79,6 @@ public class CrescentMoon extends AbstractPackMasterOrb {
     public void PassiveEffect(){
         System.out.println("Crescent Moon orb activated");
         applyFocus();
-        updateDescription();
         if (!evoking){
             evoking = false;
         }
@@ -100,6 +99,7 @@ public class CrescentMoon extends AbstractPackMasterOrb {
                 }
             });
         }
+        updateDescription();
     }
     @Override
     public void playChannelSFX() {

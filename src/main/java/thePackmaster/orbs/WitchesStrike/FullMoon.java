@@ -74,7 +74,6 @@ public class FullMoon extends AbstractPackMasterOrb {
         System.out.println("Full Moon orb activated");
         applyFocus();
         showEvokeValue();
-        updateDescription();
         if (!evoking){
             evoking = false;
         }
@@ -94,7 +93,7 @@ public class FullMoon extends AbstractPackMasterOrb {
                 }
             });
         }
-
+        updateDescription();
     }
     @Override
     public void playChannelSFX() {

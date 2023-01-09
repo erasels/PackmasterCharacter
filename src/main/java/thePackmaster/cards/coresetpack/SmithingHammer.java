@@ -27,8 +27,6 @@ public class SmithingHammer extends AbstractPackmasterCard {
         Wiz.vfx(new UpgradeShineEffect(m.hb.cX, m.hb.cY));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        Wiz.atb(new WaitAction(Settings.ACTION_DUR_FAST));
-        Wiz.vfx(new UpgradeShineEffect(m.hb.cX, m.hb.cY));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         for (int i = 0; i < magicNumber; i++) {
             this.addToBot(new UpgradeRandomCardAction());

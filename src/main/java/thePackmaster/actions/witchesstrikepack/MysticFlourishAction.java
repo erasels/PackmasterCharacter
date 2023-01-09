@@ -25,20 +25,17 @@ public class MysticFlourishAction extends AbstractGameAction
         if (!AbstractDungeon.player.orbs.isEmpty()) {
             if (AbstractDungeon.player.orbs.get(0) instanceof AbstractPackMasterOrb) {
                 for (int i = 0; i < this.amount; i++) {
-                    System.out.println("Packmaster Orb found : " + AbstractDungeon.player.orbs.get(0).name);
                     ((AbstractPackMasterOrb) AbstractDungeon.player.orbs.get(0)).PassiveEffect();
                 }
                 isDone = true;
             } else {
                 for (int i = 0; i < this.amount; i++) {
-                    System.out.println("Vanilla Orb found : " + AbstractDungeon.player.orbs.get(0).name);
                     AbstractDungeon.player.orbs.get(0).onStartOfTurn();
                     AbstractDungeon.player.orbs.get(0).onEndOfTurn();
                 }
                 isDone = true;
             }
         } else {
-            System.out.println("Orbs Array Empty");
             isDone = true;
         }
     }

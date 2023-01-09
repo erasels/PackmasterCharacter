@@ -5,8 +5,8 @@
   },
   "${ModID}:MysticFlourish": {
     "NAME": "Mystic Flourish",
-    "DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your next orb.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL activate the passive effect of your next orb twice."
+    "DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next orb.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next orb twice."
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
@@ -27,7 +27,7 @@
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this infests, activate the passive effect of your next orb."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this ${ModID}:infests, activate the passive effect of your next orb."
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
@@ -39,6 +39,6 @@
   },
   "${ModID}:ScarabPlague": {
     "NAME": "Scarab Plague",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Gain !B! Block. NL When this infests, ${ModID}:Manifest ${ModID}:Full_Moon."
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Gain !B! Block. NL When this ${ModID}:infests, ${ModID}:Manifest ${ModID}:Full_Moon."
   }
 }

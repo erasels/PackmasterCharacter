@@ -18,7 +18,7 @@ public class CrystalMoonlight extends AbstractPackmasterCard {
 
     public CrystalMoonlight() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 1;
         exhaust = true;
     }
 

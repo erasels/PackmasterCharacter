@@ -19,11 +19,12 @@ public class FullMoonHalo extends AbstractPackmasterCard {
     public FullMoonHalo() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 10;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        addToBot(new DrawCardAction(1));
+        addToBot(new DrawCardAction(magicNumber));
         addToBot(new ManifestAction(new FullMoon()));
     }
 
