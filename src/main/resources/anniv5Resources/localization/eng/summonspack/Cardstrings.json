@@ -16,7 +16,7 @@
   },
   "${ModID}:SummonTrees": {
     "NAME": "Summon Trees",
-    "DESCRIPTION": "Gain !B! Block. NL Take !M! less damage from Attacks this turn.",
+    "DESCRIPTION": "Gain !B! Block. NL Take !M! less damage from Attacks this turn."
   },
   "${ModID}:SummonElephant": {
     "NAME": "Summon Elephant",
@@ -29,7 +29,7 @@
   "${ModID}:SummonPython": {
     "NAME": "Summon Python",
     "DESCRIPTION": "Apply !M! ${ModID}:Constricted. NL Exhaust.",
-    "FLAVOR": "It's a little disquiting."
+    "FLAVOR": "It's a little disquieting to watch it eat its prey."
   },
   "${ModID}:SummonBees": {
     "NAME": "Summon Bees",
