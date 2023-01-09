@@ -25,6 +25,12 @@
     "DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand and Upgrade them. NL Exhaust."
   },
+  "${ModID}:RippedPecs": {
+    "NAME": "Ripped Pecs",
+    "DESCRIPTION": "Gain 1 Strength for each pack you've played a card from this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Strength for each pack you've played a card from this combat.",
+    "EXTENDED_DESCRIPTION": [" NL (Gains {0} Strength.)"]
+  },
   "${ModID}:Showoff": {
     "NAME": "Showoff",
     "DESCRIPTION": "Gain !B! Block. NL Next turn, draw 2 additional cards."
@@ -40,6 +46,6 @@
   },
   "${ModID}:Synergize": {
     "NAME": "Synergize",
-    "DESCRIPTION": "Gain !B! Block. NL If the last card played was from a different Pack, deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If the last card played was from a different Pack, gain !B! Block."
   }
 }

@@ -10,10 +10,10 @@ public class HandyHaversack extends AbstractPackmasterRelic {
     public static final String ID = makeID("HandyHaversack");
     private boolean firstTurn = true;
 
+
     public HandyHaversack() {
         super(ID, RelicTier.STARTER, LandingSound.FLAT);
     }
-
 
     public void atPreBattle() {
         this.firstTurn = true;
@@ -28,7 +28,7 @@ public class HandyHaversack extends AbstractPackmasterRelic {
                 addToTop(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
             }
             if (count >= 20) {
-                addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(2));
+                addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(1));
             }
             this.firstTurn = false;
         }

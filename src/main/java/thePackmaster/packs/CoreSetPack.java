@@ -27,7 +27,7 @@ public class CoreSetPack extends AbstractCardPack {
         cards.add(DestinyDraw.ID);
         cards.add(Flick.ID);
         cards.add(MayhemForm.ID);
-        cards.add(PackRip.ID);
+        cards.add(RippedPecs.ID);
         cards.add(Showoff.ID);
         cards.add(Sideboard.ID);
         cards.add(SmithingHammer.ID);

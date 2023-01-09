@@ -17,7 +17,7 @@ public class SwarmSword extends AbstractPackmasterCard {
 
     public SwarmSword() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 10;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
 
