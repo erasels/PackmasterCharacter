@@ -54,7 +54,7 @@ public class SubtleKnife extends AbstractPackmasterCard implements AmplifyCard {
 
     @Override
     public int getAmplifyCost() {
-        return 2;
+        return 1;
     }
 
     public void upp() {
