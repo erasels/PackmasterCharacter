@@ -15,7 +15,7 @@ public class DemonicRitual extends AbstractPackmasterCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 2;
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 0;
     private static final int UPGRADE_MAGIC = 1;
 
     public DemonicRitual() {

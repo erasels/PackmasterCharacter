@@ -1,6 +1,5 @@
 package thePackmaster.orbs.summonspack;
 
-import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -15,13 +14,14 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.summonspack.PandaEvokeAction;
 import thePackmaster.actions.summonspack.PandaSmackAction;
+import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.patches.summonpack.PandaPatch;
 
 import static java.lang.Math.pow;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
-public class Panda extends CustomOrb {
+public class Panda extends AbstractPackMasterOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(Panda.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;

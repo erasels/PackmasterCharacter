@@ -18,7 +18,7 @@
   },
   "${ModID}:SummonElephant": {
     "NAME": "Summon Elephant",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Take !M! damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Take !M! damage."
   },
   "${ModID}:SummonBrambles": {
     "NAME": "Summon Brambles",
@@ -30,8 +30,7 @@
   },
   "${ModID}:SummonBees": {
     "NAME": "Summon Bees",
-    "DESCRIPTION": "Channel a ${ModID}:Swarm\u00a0of\u00a0Bees X times.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Swarm\u00a0of\u00a0Bees X+1 times."
+    "DESCRIPTION": "Channel !M! ${ModID}:Swarms\u00a0of\u00a0Bees. NL Exhaust."
   },
   "${ModID}:Control": {
     "NAME": "Control",
@@ -39,7 +38,8 @@
   },
   "${ModID}:DemonicRitual": {
     "NAME": "Demonic Ritual",
-    "DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + !M!."
+    "DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost.",
+    "UPGRADE_DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + !M!."
   },
   "${ModID}:SummonPandas": {
     "NAME": "Summon Pandas",

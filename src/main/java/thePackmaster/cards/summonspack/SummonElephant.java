@@ -23,9 +23,9 @@ public class SummonElephant extends AbstractPackmasterCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
-    private static final int DAMAGE = 13;
+    private static final int DAMAGE = 12;
     private static final int UPGRADE_DAMAGE = 4;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 2;
 
     private static boolean seenThisSession;
 
