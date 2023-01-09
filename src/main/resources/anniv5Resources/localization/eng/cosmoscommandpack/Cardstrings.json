@@ -7,6 +7,10 @@
     "NAME": "Cognition",
     "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Amplify [E] : Scry !M! before drawing."
   },
+  "${ModID}:EternalStrike": {
+    "NAME": "Eternal Strike",
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Exhausted, add a copy of it to your hand with !M! more damage."
+  },
   "${ModID}:FalseGrit": {
     "NAME": "False Grit",
     "DESCRIPTION": "Exhaust 2 cards. NL Gain Block equal to twice their total cost. NL ${ModID}:Amplify [E] [E] : Gain that much Block again.",
@@ -28,16 +32,13 @@
     "NAME": "Rope Trick",
     "DESCRIPTION": "Apply !M! ${ModID}:Distortion. NL Gain !B! Block."
   },
-  "${ModID}:SpacialRend": {
-    "NAME": "Spacial Rend",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Distortion. NL Apply !${ModID}:m2! Vulnerable. "
-  },
   "${ModID}:Subspace": {
     "NAME": "Subspace",
-    "DESCRIPTION": "ALL enemies lose HP equal to their ${ModID}:Distortion."
+    "DESCRIPTION": "ALL enemies lose HP equal to their ${ModID}:Distortion. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose HP equal to !M! times their ${ModID}:Distortion. NL Exhaust."
   },
   "${ModID}:SubtleKnife": {
     "NAME": "Subtle Knife",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Distortion. NL ${ModID}:Amplify [E] [E] : Exhaust, then put this into your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Distortion. NL ${ModID}:Amplify [E] : Exhaust, then add a copy of this to your discard pile."
   }
 }

@@ -22,7 +22,7 @@ public class SummonBulldog extends AbstractPackmasterCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 4;
     private static final int UPGRADE_MAGIC = 1;
 
     public SummonBulldog() {

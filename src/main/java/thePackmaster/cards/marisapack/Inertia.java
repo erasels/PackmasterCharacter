@@ -15,7 +15,7 @@ public class Inertia extends AbstractPackmasterCard {
     private static final int MAGIC = 1, UPG_MAGIC = 1;
 
     public Inertia() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
 
         setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",

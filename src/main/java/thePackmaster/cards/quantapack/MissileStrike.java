@@ -22,6 +22,7 @@ public class MissileStrike extends AbstractPackmasterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = SPLASH;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
