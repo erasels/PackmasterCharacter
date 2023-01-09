@@ -36,6 +36,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
     public void onVictory() {
         usedPacks.clear();
         setDescriptionAfterLoading();
+        stopPulse();
         counter = -1;
     }
 
