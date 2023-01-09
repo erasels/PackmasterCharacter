@@ -1,7 +1,8 @@
 {
   "${ModID}:SummonBulldog": {
     "NAME": "Summon Bulldog",
-    "DESCRIPTION": "Channel a !M! damage ${ModID}:Bulldog."
+    "DESCRIPTION": "Channel a !M! damage ${ModID}:Bulldog.",
+    "FLAVOR": "I call him Bitey McBiteFace."
   },
   "${ModID}:SummonVegetables": {
     "NAME": "Summon Vegetables",
@@ -10,11 +11,12 @@
       " NL (",
       " Skill played.)",
       " Skills played.)"
-      ]
+      ],
+    "FLAVOR": "Eat your vegetables."
   },
   "${ModID}:SummonTrees": {
     "NAME": "Summon Trees",
-    "DESCRIPTION": "Gain !B! Block. NL Take !M! less damage from Attacks this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Take !M! less damage from Attacks this turn.",
   },
   "${ModID}:SummonElephant": {
     "NAME": "Summon Elephant",
@@ -26,20 +28,24 @@
   },
   "${ModID}:SummonPython": {
     "NAME": "Summon Python",
-    "DESCRIPTION": "Apply !M! ${ModID}:Constricted. NL Exhaust."
+    "DESCRIPTION": "Apply !M! ${ModID}:Constricted. NL Exhaust.",
+    "FLAVOR": "It's a little disquiting."
   },
   "${ModID}:SummonBees": {
     "NAME": "Summon Bees",
-    "DESCRIPTION": "Channel !M! ${ModID}:Swarms\u00a0of\u00a0Bees. NL Exhaust."
+    "DESCRIPTION": "Channel !M! ${ModID}:Swarms\u00a0of\u00a0Bees. NL Exhaust.",
+    "FLAVOR": "Absolutely terrifying."
   },
   "${ModID}:Control": {
     "NAME": "Control",
-    "DESCRIPTION": "Gain !M! Orb slots and !M! Focus."
+    "DESCRIPTION": "Gain !M! Orb slots and !M! Focus.",
+    "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
   },
   "${ModID}:DemonicRitual": {
     "NAME": "Demonic Ritual",
     "DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost.",
-    "UPGRADE_DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + !M!."
+    "UPGRADE_DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + !M!.",
+    "FLAVOR": "This is a good idea and can not in anyway backfire."
   },
   "${ModID}:SummonPandas": {
     "NAME": "Summon Pandas",
