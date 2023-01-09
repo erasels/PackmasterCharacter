@@ -3,7 +3,7 @@ package thePackmaster.cards.ringofpainpack;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BarricadePower;
+import com.megacrit.cardcrawl.powers.BlurPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
@@ -24,19 +24,22 @@ public class Shackles extends AbstractEvolveCard {
         selfRetain = true;
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = EVOLVE_COST;
+        setBackgroundTexture(
+                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
+                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
+        );
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         if (this.timesUpgraded >= AbstractEvolveCard.MAX_UPGRADES) {
-            applyToSelf(new BarricadePower(p));
+            applyToSelf(new BlurPower(p, 1));
         }
     }
 
     public void upp() {
         if (timesUpgraded == AbstractEvolveCard.MAX_UPGRADES) {
             upgradeBlock(UPGRADE_BLOCK_FINAL);
-            exhaust = true;
         } else {
             upgradeBlock(UPGRADE_BLOCK);
         }

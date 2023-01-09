@@ -10,6 +10,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -40,17 +41,22 @@ import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
+import thePackmaster.ui.PackFilterMenu;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static thePackmaster.patches.MainMenuUIPatch.CHOICE;
+import static thePackmaster.patches.MainMenuUIPatch.RANDOM;
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -72,6 +78,7 @@ public class SpireAnniversary5Mod implements
     public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
     public static HashMap<Class<? extends AbstractCard>, String> cardClassParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <card Class, packID>
     public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
+    public static ArrayList<AbstractCardPack> unfilteredAllPacks = new ArrayList<>();
     public static HashMap<String, AbstractCardPack> packsByID;
     public static ArrayList<AbstractCardPack> currentPoolPacks = new ArrayList<>();
     public static CardGroup packsToDisplay;
@@ -82,6 +89,7 @@ public class SpireAnniversary5Mod implements
     public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
 
     public static SpireAnniversary5Mod thismod;
+    public static SpireConfig modConfig = null;
 
     public static boolean doPackSetup = false;
     public static String lastCardsPackID = null;
@@ -132,6 +140,12 @@ public class SpireAnniversary5Mod implements
     private static final String STEAM_IMPACT_2_OGG = makePath("audio/transmutationpack/SteamImpactTwo.ogg");
     public static final String STEAM_IMPACT_3_KEY = makeID("StreamImpactThree");
     private static final String STEAM_IMPACT_3_OGG = makePath("audio/transmutationpack/StreamImpactThree.ogg");
+    public static final String GUN1_KEY = makeID("Gun1");
+    private static final String GUN1_OGG = makePath("audio/hermitpack/GUN1.ogg");
+    public static final String GUN2_KEY = makeID("Gun2");
+    private static final String GUN2_OGG = makePath("audio/hermitpack/GUN2.ogg");
+    public static final String GUN3_KEY = makeID("Gun3");
+    private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
 
@@ -179,6 +193,24 @@ public class SpireAnniversary5Mod implements
 
     public static void initialize() {
         thismod = new SpireAnniversary5Mod();
+
+        try {
+            Properties defaults = new Properties();
+            defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, RANDOM, CHOICE, CHOICE));
+            modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static ArrayList<String> getSavedCDraftSelection() {
+        if(modConfig == null) return new ArrayList<>();
+        return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterCustomDraftSelection").split(",")));
+    }
+    public static void saveCDraftSelection(ArrayList<String> input) throws IOException {
+        if(modConfig == null) return;
+        modConfig.setString("PackmasterCustomDraftSelection", String.join(",", input));
+        modConfig.save();
     }
 
     @Override
@@ -217,8 +249,9 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostInitialize() {
         declarePacks();
-        BaseMod.logger.info("Full list of packs: " + allPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
+        BaseMod.logger.info("Full list of packs: " + unfilteredAllPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
 
+        AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
 
         currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
@@ -334,6 +367,9 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(STEAM_IMPACT_1_KEY, STEAM_IMPACT_1_OGG);
         BaseMod.addAudio(STEAM_IMPACT_2_KEY, STEAM_IMPACT_2_OGG);
         BaseMod.addAudio(STEAM_IMPACT_3_KEY, STEAM_IMPACT_3_OGG);
+        BaseMod.addAudio(GUN1_KEY,GUN1_OGG);
+        BaseMod.addAudio(GUN2_KEY,GUN2_OGG);
+        BaseMod.addAudio(GUN3_KEY,GUN3_OGG);
         BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
     }
 
@@ -352,7 +388,10 @@ public class SpireAnniversary5Mod implements
                         throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Pack class 1: " + packsByID.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
                     }
                     packsByID.put(pack.packID, pack);
-                    allPacks.add(pack);
+                    unfilteredAllPacks.add(pack);
+                    if (PackFilterMenu.getFilterConfig(pack.packID)) {
+                        allPacks.add(pack);
+                    }
                 });
     }
 
@@ -382,7 +421,9 @@ public class SpireAnniversary5Mod implements
             AbstractCardPack p = packsByID.get(s);
             for (String s2 : p.getCards()
             ) {
-                cards.add(CardLibrary.getCard(s2).makeCopy());
+                if (CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.COMMON ||
+                        CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.UNCOMMON ||
+                        CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.RARE) cards.add(CardLibrary.getCard(s2).makeCopy());
             }
         }
 
@@ -445,12 +486,12 @@ public class SpireAnniversary5Mod implements
             packSetup.addAll(MainMenuUIPatch.packSetups);
         } else {
             packSetup.add(CoreSetPack.ID);
-            packSetup.add(MainMenuUIPatch.RANDOM);
-            packSetup.add(MainMenuUIPatch.RANDOM);
-            packSetup.add(MainMenuUIPatch.RANDOM);
-            packSetup.add(MainMenuUIPatch.RANDOM);
-            packSetup.add(MainMenuUIPatch.CHOICE);
-            packSetup.add(MainMenuUIPatch.CHOICE);
+            packSetup.add(RANDOM);
+            packSetup.add(RANDOM);
+            packSetup.add(RANDOM);
+            packSetup.add(RANDOM);
+            packSetup.add(CHOICE);
+            packSetup.add(CHOICE);
         }
 
         int randomsToSetup = 0;
@@ -460,14 +501,14 @@ public class SpireAnniversary5Mod implements
             BaseMod.logger.info("Setting up Pack type " + setupType + ".");
 
             switch (setupType) {
-                case MainMenuUIPatch.RANDOM:
+                case RANDOM:
                     randomsToSetup++;
                     break;
-                case MainMenuUIPatch.CHOICE:
+                case CHOICE:
                     choicesToSetup++;
                     break;
                 default:
-                    for (AbstractCardPack pack : allPacks) {
+                    for (AbstractCardPack pack : unfilteredAllPacks) {
                         if (pack.packID.equals(setupType)) {
                             BaseMod.logger.info("Found pack matching name " + pack.name);
                             currentPoolPacks.add(pack);

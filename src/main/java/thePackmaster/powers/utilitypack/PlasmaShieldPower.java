@@ -1,8 +1,6 @@
 package thePackmaster.powers.utilitypack;
 
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -27,8 +25,6 @@ public class PlasmaShieldPower extends AbstractPackmasterPower {
             long plasmaOrbs = AbstractDungeon.player.orbs.stream().filter(o -> o instanceof Plasma).count();
             if (plasmaOrbs > 0) {
                 this.flashWithoutSound();
-            }
-            for (int i = 0; i < plasmaOrbs; i++) {
                 this.addToBot(new GainBlockAction(this.owner, this.amount));
             }
         }
