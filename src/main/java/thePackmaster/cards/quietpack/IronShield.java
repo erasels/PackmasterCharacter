@@ -17,7 +17,7 @@ public class IronShield extends AbstractPackmasterCard {
 
     public IronShield() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 12;
+        baseBlock = 11;
         cardsToPreview = new Weight();
     }
 

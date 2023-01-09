@@ -2,6 +2,13 @@
   "${ModID}:MalchezaarsImpPower": {
     "NAME": "Malchezaar's Imp",
     "DESCRIPTIONS": [
+      "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImp into your discard pile.",
+      "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImps into your discard pile."
+    ]
+  },
+  "${ModID}:MalchezaarsImpUpgradedPower": {
+    "NAME": "Malchezaar's Imp+",
+    "DESCRIPTIONS": [
       "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImp into your draw pile.",
       "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImps into your draw pile."
     ]
