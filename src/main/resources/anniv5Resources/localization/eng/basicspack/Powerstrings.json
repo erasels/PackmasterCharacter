@@ -1,0 +1,9 @@
+{
+  "${ModID}:BlacksmithsShieldPower": {
+    "NAME": "Blacksmith's Shield",
+    "DESCRIPTIONS": [
+      "After you play a card, gain #b",
+      " #yBlock for each #yUpgrade on it."
+    ]
+  }
+}

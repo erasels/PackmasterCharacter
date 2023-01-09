@@ -1,0 +1,27 @@
+{
+  "${ModID}:IroncladKit": {
+  "NAME": "Ironclad Kit",
+  "DESCRIPTION": "Add a *Bash and *Strike to your hand. Exhaust."
+  },
+  "${ModID}:SilentKit": {
+    "NAME": "Silent Kit",
+    "DESCRIPTION": "Add a *Survivor and *Neutralize to your hand. Exhaust."
+  },
+  "${ModID}:DefectKit": {
+    "NAME": "Defect Kit",
+    "DESCRIPTION": "Add a *Zap and *Dualcast to your hand. Exhaust."
+  },
+  "${ModID}:WatcherKit": {
+    "NAME": "Watcher Kit",
+    "DESCRIPTION": "Add a *Eruption and *Vigilance to your hand. Exhaust."
+  },
+  "${ModID}:PackmasterKit": {
+    "NAME": "Packmaster Kit",
+    "DESCRIPTION": "Add a *Rummage and *Cardistry to your hand. Exhaust."
+  },
+  "${ModID}:Both": {
+    "NAME": "Both",
+    "DESCRIPTION": "Add both to your hand."
+  }
+
+}
