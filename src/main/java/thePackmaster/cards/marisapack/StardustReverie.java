@@ -1,5 +1,6 @@
 package thePackmaster.cards.marisapack;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.marisapack.ExhaustForChargeAction;
@@ -25,6 +26,7 @@ public class StardustReverie extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.atb(new ExhaustForChargeAction(magicNumber));
+        Wiz.atb(new DrawCardAction(magicNumber));
     }
 
     public void upp() {
