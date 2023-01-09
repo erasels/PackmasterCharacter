@@ -13,7 +13,7 @@ public class Prosper extends AbstractVPCard{
 
     public Prosper() {
         super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        purgeOnUse = true;
+        this.exhaust = true;
 
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
