@@ -39,7 +39,8 @@
   },
   "${ModID}:DemonicRitual": {
     "NAME": "Demonic Ritual",
-    "DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + !M!."
+    "DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost.",
+    "UPGRADE_DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + !M!."
   },
   "${ModID}:SummonPandas": {
     "NAME": "Summon Pandas",
