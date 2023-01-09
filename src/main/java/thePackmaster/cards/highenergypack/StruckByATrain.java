@@ -2,10 +2,10 @@ package thePackmaster.cards.highenergypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
@@ -31,12 +31,10 @@ public class StruckByATrain extends AbstractPackmasterCard {
     private static AbstractMonster getFrontmostEnemy() {
         AbstractMonster foe = null;
         float bestPos = 10000F;
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            if (!m.isDead && !m.isDying) {
-                if (m.drawX < bestPos) {
-                    foe = m;
-                    bestPos = m.drawX;
-                }
+        for (AbstractMonster m : Wiz.getEnemies()) {
+            if (m.drawX < bestPos) {
+                foe = m;
+                bestPos = m.drawX;
             }
         }
         return foe;

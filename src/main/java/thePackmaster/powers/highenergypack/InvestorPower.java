@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -23,7 +24,7 @@ public class InvestorPower extends AbstractPackmasterPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.costForTurn >= 2 && !card.freeToPlayOnce) {
+        if (Wiz.getLogicalCardCost(card) >= 2) {
             flash();
             addToBot(new GainBlockAction(owner, amount));
         }
