@@ -1,0 +1,9 @@
+{
+  "${ModID}:Bellord": {
+    "TEXT": [
+      "Bellord",
+      "Clobber foes with cursed cards!",
+      "Vex"
+    ]
+  }
+}
