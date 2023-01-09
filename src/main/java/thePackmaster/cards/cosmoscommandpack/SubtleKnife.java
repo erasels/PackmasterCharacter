@@ -1,8 +1,7 @@
 package thePackmaster.cards.cosmoscommandpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
@@ -40,15 +39,7 @@ public class SubtleKnife extends AbstractPackmasterCard implements AmplifyCard {
     public void triggerOnExhaust() {
         if (wasJustPlayed) {
             wasJustPlayed = false;
-            atb(new DiscardSpecificCardAction(this, adp().exhaustPile));
-            atb(new WaitAction(0.1F));
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    unfadeOut();
-                    this.isDone = true;
-                }
-            });
+            atb(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
         }
     }
 
