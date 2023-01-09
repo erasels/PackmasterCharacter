@@ -390,7 +390,9 @@ public class SpireAnniversary5Mod implements
             AbstractCardPack p = packsByID.get(s);
             for (String s2 : p.getCards()
             ) {
-                cards.add(CardLibrary.getCard(s2).makeCopy());
+                if (CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.COMMON ||
+                        CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.UNCOMMON ||
+                        CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.RARE) cards.add(CardLibrary.getCard(s2).makeCopy());
             }
         }
 
