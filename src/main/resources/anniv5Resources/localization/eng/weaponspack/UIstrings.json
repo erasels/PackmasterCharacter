@@ -1,0 +1,9 @@
+{
+  "${ModID}:WeaponsPack": {
+    "TEXT": [
+      "Weapons",
+      "Weapons from the Blackbeard. NL Every time you play an attack card, one Durability of your rightmost Weapon is used and card's damage is increased by Weapon's Attack.",
+      "JohnnyBazooka89"
+    ]
+  }
+}

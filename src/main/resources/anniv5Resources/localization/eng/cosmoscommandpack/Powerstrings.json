@@ -1,0 +1,16 @@
+{
+  "${ModID}:HeatEnginePower": {
+    "NAME": "Heat Engine",
+    "DESCRIPTIONS": [
+      "Whenever a card with a cost of #b",
+      " or greater is #yExhausted, gain #b",
+      " #yStrength."
+      ]
+  },
+  "${ModID}:RecallPower": {
+    "NAME": "Recall",
+    "DESCRIPTIONS": [
+      "Whenever a card is #yAmplified, put a card from your #yExhaust pile into your hand."
+    ]
+  }
+}

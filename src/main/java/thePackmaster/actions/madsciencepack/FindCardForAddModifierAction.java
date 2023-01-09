@@ -82,7 +82,7 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
             if (!chosen.isEmpty()) {
                 for (AbstractCard c2 : chosen) {
                     CardModifierManager.addModifier(c2, mod);
-                    c2.superFlash(Color.CHARTREUSE);
+                    c2.superFlash(Color.CHARTREUSE.cpy());
                 }
             }
         } else {
@@ -92,7 +92,7 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
                     (cards) -> {
                         for (AbstractCard c2 : cards) {
                             CardModifierManager.addModifier(c2, mod);
-                            c2.superFlash(Color.CHARTREUSE);
+                            c2.superFlash(Color.CHARTREUSE.cpy());
                         }
                     }
             ));
