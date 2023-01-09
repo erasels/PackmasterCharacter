@@ -1,5 +1,6 @@
 package thePackmaster.powers.warlockpack;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -28,7 +29,7 @@ public class MalchezaarsImpPower extends AbstractPackmasterPower {
     public void onExhaust(AbstractCard c) {
         if (!(c instanceof Imp)) {
             this.flash();
-            this.addToBot(new MakeTempCardInDrawPileAction(new Imp(), this.amount, true, true));
+            this.addToBot(new MakeTempCardInDiscardAction(new Imp(), this.amount));
         }
 
     }

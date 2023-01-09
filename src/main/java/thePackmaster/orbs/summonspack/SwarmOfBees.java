@@ -1,6 +1,5 @@
 package thePackmaster.orbs.summonspack;
 
-import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -18,6 +17,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ import static com.badlogic.gdx.math.MathUtils.*;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
-public class SwarmOfBees extends CustomOrb {
+public class SwarmOfBees extends AbstractPackMasterOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(SwarmOfBees.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
@@ -173,7 +173,7 @@ public class SwarmOfBees extends CustomOrb {
     public void playChannelSFX() {
         CardCrawlGame.sound.play(SpireAnniversary5Mod.BEES_KEY, 0.1f);
     }
-    
+
     @Override
     public void onEndOfTurn() {
         Wiz.thornDmgAll(passiveAmount, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);

@@ -1,0 +1,77 @@
+{
+  "${ModID}:AmalgamateWaters": {
+    "NAME": "Amalgamate Waters",
+    "DESCRIPTION": "This gains all ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmutes them."
+  },
+  "${ModID}:CrystalLattice": {
+    "NAME": "Crystal Lattice",
+    "DESCRIPTION": "${ModID}:Transmute a card. Add 2 additional copies of the new card to your hand. NL Exhaust."
+  },
+  "${ModID}:CrystalResonance": {
+    "NAME": "Crystal Resonance",
+    "DESCRIPTION": "Whenever you ${ModID}:Transmute a card, the new card is Upgraded."
+  },
+  "${ModID}:Drench": {
+    "NAME": "Drench",
+    "DESCRIPTION": "${ModID}:Mutable: Gain !B! Block. NL ${ModID}:Mutable: Deal !D! damage."
+  },
+  "${ModID}:FrozenCapsule": {
+    "NAME": "Frozen Capsule",
+    "DESCRIPTION": "${ModID}:Mutable: Deal !D! damage. NL ${ModID}:Mutable: When ${ModID}:Transmuted, draw a card.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Mutable: Deal !D! damage. NL ${ModID}:Mutable: When ${ModID}:Transmuted, draw !M! cards."
+  },
+  "${ModID}:GhostlyMist": {
+    "NAME": "Ghostly Mist",
+    "DESCRIPTION": "When ${ModID}:Transmuted, the new card gains !M! extra damage and Block. NL ${ModID}:Mutable: ${ModID}:Transmute this card."
+  },
+  "${ModID}:GlacialSynthesis": {
+    "NAME": "Glacial Synthesis",
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Transmute a card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ${ModID}:Transmute up to !M! cards."
+  },
+  "${ModID}:SearingSynthesis": {
+    "NAME": "SearingSynthesis",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Transmute a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Transmute up to !M! cards."
+  },
+  "${ModID}:ViscousShell": {
+    "NAME": "Viscous Shell",
+    "DESCRIPTION": "${ModID}:Mutable: gain !B! Block. NL ${ModID}:Transmute this card."
+  },
+  "${ModID}:DimensionalIcicles": {
+    "NAME": "Dimensional Icicles",
+    "DESCRIPTION": "Deal !D! damage !B! times. The number of hits is affected by Block modifiers."
+  },
+  "${ModID}:AbstractExtraEffectModifier": {
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Mutable: ",
+      " ",
+      " times.",
+      "."
+    ]
+  },
+  "${ModID}:DamageEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Deal ",
+      " damage"
+    ]
+  },
+  "${ModID}:DrawWhenTransmutedEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "When ${ModID}:Transmuted, draw a card.",
+      "When ${ModID}:Transmuted, draw ",
+      " cards."
+    ]
+  },
+  "${ModID}:GainBlockEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Gain ",
+      " Block"
+    ]
+  },
+  "${ModID}:TransmuteSelfEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Transmute this card."
+    ]
+  }
+}

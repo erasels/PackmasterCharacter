@@ -1,0 +1,15 @@
+{
+  "${ModID}:TransmutationPack": {
+    "TEXT": [
+      "Transmutation",
+      "Temporarily change your cards into other cards, making them stronger.",
+      "NellyDevo"
+    ]
+  },
+  "${ModID}:TransmuteCardAction": {
+    "TEXT": [
+      "transmute.",
+      "Choose your new card."
+    ]
+  }
+}

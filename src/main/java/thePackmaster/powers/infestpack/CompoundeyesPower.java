@@ -1,9 +1,9 @@
 package thePackmaster.powers.infestpack;
 
 
-import com.megacrit.cardcrawl.actions.common.EndTurnAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -25,7 +25,7 @@ public class CompoundeyesPower extends AbstractPackmasterPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        addToBot(new EndTurnAction());
+        addToBot(new PressEndTurnButtonAction());
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 

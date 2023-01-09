@@ -1,0 +1,16 @@
+{
+  "${ModID}:MultiToolPower": {
+    "NAME": "Multi-Tool",
+    "DESCRIPTIONS": [
+      "If you end your turn with unused Energy, ALL enemies lose #b",
+      " HP."
+    ]
+  },
+  "${ModID}:InvestorPower": {
+    "NAME": "Investor",
+    "DESCRIPTIONS": [
+      "Whenever you spend #b2 or more Energy on a card, gain #b",
+      " #yBlock."
+    ]
+  }
+}

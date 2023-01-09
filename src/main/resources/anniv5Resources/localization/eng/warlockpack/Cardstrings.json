@@ -14,7 +14,7 @@
   "${ModID}:Soulfire": {
     "NAME": "Soulfire",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust a random card in your hand.",
-    "UPGRADED_DESCRIPTION": "Deal !D! damage. NL Exhaust a card in your hand."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card in your hand."
   },
   "${ModID}:Doomguard": {
     "NAME": "Doomguard",
@@ -35,7 +35,8 @@
   },
   "${ModID}:MalchezaarsImp": {
     "NAME": "Malchezaar's Imp",
-    "DESCRIPTION": "Whenenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your draw pile."
+    "DESCRIPTION": "Whenenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Whenenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your draw pile."
   },
   "${ModID}:TheSoularium": {
     "NAME": "The Soularium",

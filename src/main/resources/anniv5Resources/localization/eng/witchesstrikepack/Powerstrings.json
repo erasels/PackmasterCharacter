@@ -1,0 +1,16 @@
+{
+  "${ModID}:MoonlightFlightPower": {
+    "NAME": "Moonlight Flight",
+    "DESCRIPTIONS": [
+      "Whenever you #ychannel an orb, gain #b",
+      " #yFocus until your next turn."
+    ]
+  },
+  "${ModID}:LoseFocusPower": {
+    "NAME": "Discharge",
+    "DESCRIPTIONS": [
+      "At the start of your turn lose #b",
+      " #yFocus."
+    ]
+  }
+}

@@ -11,7 +11,7 @@
     "NAME": "Winterize",
     "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your draw pile: 'Apply !M! Frostbite.'"
   },
-  "${ModID}:Discombobulate": {
+"${ModID}:Discombobulate": {
     "NAME": "Discombobulate",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have a Modified card in hand, deals damage twice."
   },
