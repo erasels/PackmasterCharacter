@@ -23,7 +23,7 @@ public class PackRip extends AbstractPackmasterCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public PackRip() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
     }
 
@@ -43,12 +43,13 @@ public class PackRip extends AbstractPackmasterCard {
         addToBot(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, Wiz.hand().size(), true, false));
         for (AbstractCard c : pack.cards) {
             if(c.rarity == CardRarity.COMMON || c.rarity == CardRarity.UNCOMMON || c.rarity == CardRarity.RARE) {
-                if (upgraded) c.upgrade();
+               // if (upgraded) c.upgrade();
                 addToBot(new MakeTempCardInHandAction(c));
             }
         }
     }
 
     public void upp() {
+        upgradeBaseCost(0);
     }
 }
