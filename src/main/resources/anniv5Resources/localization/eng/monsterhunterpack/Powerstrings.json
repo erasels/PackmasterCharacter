@@ -16,7 +16,7 @@
   "${ModID}:PerfectGuardPower": {
     "NAME": "Perfect Guard",
     "DESCRIPTIONS": [
-      "If your Block is broken exactly this turn, gain #b",
+      "If your #yBlock is broken exactly this turn, gain #b",
       " Strength."
     ]
   },
