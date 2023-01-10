@@ -5,7 +5,7 @@
   },
   "${ModID}:Focus": {
     "NAME": "Track",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! testmod:Hunted"
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! ${ModID}:Hunted"
   },
   "${ModID}:PerfectDodge": {
     "NAME": "Perfect Dodge",
@@ -21,12 +21,12 @@
   },
   "${ModID}:SkullClub": {
     "NAME": "Skull Club",
-    "DESCRIPTION": "Deal !D! damage. NL If the target survives, become testmod:Enraged! NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If the target survives, become ${ModID}:Enraged! NL Exhaust."
   },
   "${ModID}:ShellPauldrons": {
     "NAME": "Shell Platemail",
-    "DESCRIPTION": "Gain !M! testmod:Glass_Armor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! testmod:Glass_Armor."
+    "DESCRIPTION": "Gain !M! ${ModID}:Glass_Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! ${ModID}:Glass_Armor."
   },
   "${ModID}:CoreBlaster": {
     "NAME": "Core Blaster",
@@ -115,7 +115,7 @@
   },
   "${ModID}:HuntingContract": {
     "NAME": "Hunting Contract",
-    "DESCRIPTION": "Innate. NL Apply !M! testmod:Hunted. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Apply !M! ${ModID}:Hunted. NL Exhaust."
   },
   "${ModID}:HunterRank": {
     "NAME": "Hunter Rank",
