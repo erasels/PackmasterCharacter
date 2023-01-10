@@ -1,0 +1,29 @@
+package thePackmaster.cards.monsterhunterpack;
+
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import thePackmaster.cards.AbstractPackmasterCard;
+
+import static thePackmaster.SpireAnniversary5Mod.makeID;
+
+public class DecaAmulet extends AbstractPackmasterCard {
+    public final static String ID = makeID("DecaAmulet");
+    public final static int MAGIC = 10;
+    public final static int UPG_MAGIC = 2;
+
+    public DecaAmulet() {
+        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        baseMagicNumber = magicNumber = MAGIC;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, magicNumber), magicNumber));
+    }
+
+    public void upp() {
+        upgradeMagicNumber(UPG_MAGIC);
+        initializeDescription();
+    }
+}
