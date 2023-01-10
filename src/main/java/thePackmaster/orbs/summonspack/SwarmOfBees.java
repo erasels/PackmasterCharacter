@@ -1,23 +1,27 @@
 package thePackmaster.orbs.summonspack;
 
+import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.patches.ColoredDamagePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -26,7 +30,7 @@ import static com.badlogic.gdx.math.MathUtils.*;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
-public class SwarmOfBees extends AbstractPackMasterOrb {
+public class SwarmOfBees extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(SwarmOfBees.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
@@ -37,6 +41,7 @@ public class SwarmOfBees extends AbstractPackMasterOrb {
     private static final int BEE_COUNT = 120;
     public static final int BASE_PASSIVE = 2;
     public static final int BASE_EVOKE = 6;
+    private static final Color STING_COLOR = Color.GOLDENROD.cpy();
 
     private final ArrayList<Bee> bees = new ArrayList<>();
 
@@ -176,12 +181,24 @@ public class SwarmOfBees extends AbstractPackMasterOrb {
 
     @Override
     public void onEndOfTurn() {
-        Wiz.thornDmgAll(passiveAmount, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        for (AbstractMonster m : Wiz.getEnemies()) {
+            DamageInfo info = new DamageInfo(adp(), passiveAmount, DamageInfo.DamageType.THORNS);
+            AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
+            atb(action);
+        }
     }
 
     @Override
     public void onEvoke() {
-        Wiz.thornDmgAll(evokeAmount, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        for (AbstractMonster m : Wiz.getEnemies()) {
+            DamageInfo info = new DamageInfo(adp(), passiveAmount, DamageInfo.DamageType.THORNS);
+            AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
+            atb(action);
+        }
     }
 
     @Override
