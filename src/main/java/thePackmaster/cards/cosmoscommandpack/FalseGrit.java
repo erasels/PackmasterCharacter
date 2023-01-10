@@ -39,5 +39,7 @@ public class FalseGrit extends AbstractPackmasterCard implements AmplifyCard {
     @Override
     public void upp() {
         secondMagic = baseSecondMagic = 1;
+        uDesc();
+        initializeDescription();
     }
 }
