@@ -20,7 +20,7 @@ public class SteelMilling extends AbstractVPCard {
 
     public SteelMilling() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = this.damage = 25;
+        this.baseDamage = this.damage = 20;
         //this.isMultiDamage = true;
         //this.basevp = vp = 8;
 
@@ -39,7 +39,7 @@ public class SteelMilling extends AbstractVPCard {
     }
 
     public void upp() {
-            this.upgradeDamage(10);
+            this.upgradeDamage(8);
     }
 
 
