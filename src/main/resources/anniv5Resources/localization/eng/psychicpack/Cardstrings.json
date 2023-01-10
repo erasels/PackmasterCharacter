@@ -1,0 +1,60 @@
+{
+  "${ModID}:RuleCancel": {
+    "NAME": "Rule Cancel",
+    "DESCRIPTION": "Make a card in your hand ${ModID}:Occult. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Make a card in your hand ${ModID}:Occult."
+  },
+  "${ModID}:Brainwave": {
+    "NAME": "Brainwave",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Make a random Attack in your hand ${ModID}:Occult."
+  },
+  "${ModID}:TelephonePole": {
+    "NAME": "Telephone Pole",
+    "DESCRIPTION": "${ModID}:Locking. NL Deal !D! damage. NL Apply !M! Vulnerable.",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Locked. NL Deal !D! damage. NL Apply !M! Vulnerable."
+    ]
+  },
+  "${ModID}:Gravity": {
+    "NAME": "Gravity",
+    "DESCRIPTION": "Ethereal. NL Whenever you draw a ${ModID}:Locked or Unplayable card, draw a card.",
+    "UPGRADE_DESCRIPTION": "Whenever you draw a ${ModID}:Locked or Unplayable card, draw a card."
+  },
+  "${ModID}:PhantomStep": {
+    "NAME": "Phantom Step",
+    "DESCRIPTION": "Gain !B! Block. NL Make a card in your draw pile ${ModID}:Occult."
+  },
+  "${ModID}:Repel": {
+    "NAME": "Repel",
+    "DESCRIPTION": "${ModID}:Locking. NL Gain !B! Block. Deal !D! damage. Apply !M! Weak.",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Locked. NL Gain !B! Block. Deal !D! damage. Apply !M! Weak."
+    ]
+  },
+  "${ModID}:OneIsEnough": {
+    "NAME": "One Is Enough",
+    "DESCRIPTION": "{@@}Draw !M! card{!M!|0=s.|1=.|2=s and choose one. NL You cannot play the other this turn.|@=s and choose one. NL You cannot play the others this turn.}",
+    "EXTENDED_DESCRIPTION": [
+      "be Playable"
+    ]
+  },
+  "${ModID}:Curse": {
+    "NAME": "Curse",
+    "DESCRIPTION": "${ModID}:Locking. NL Enemy loses !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Locked. NL Enemy loses !M! Strength."
+    ]
+  },
+  "${ModID}:MalleableFire": {
+    "NAME": "Malleable Fire",
+    "DESCRIPTION": "Deal !D! damage X times. NL Add a *Molded *Fire that costs X to your draw pile. NL Exhaust."
+  },
+  "${ModID}:MoldedFire": {
+    "NAME": "Molded Fire",
+    "DESCRIPTION": "${ModID}:Occult. NL Deal !D! damage for each [E] more this costs than your current energy."
+  },
+  "${ModID}:DeepDream": {
+    "NAME": "Deep Dream",
+    "DESCRIPTION": "Use the top !M! cards of your draw pile as your hand until the end of the turn. NL Exhaust."
+  }
+}

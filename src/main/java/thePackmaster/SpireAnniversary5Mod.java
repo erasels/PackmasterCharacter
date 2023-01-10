@@ -32,6 +32,8 @@ import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import thePackmaster.actions.distortionpack.ImproveAction;
 import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
@@ -45,6 +47,9 @@ import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
+import thePackmaster.patches.psychicpack.DeepDreamPatch;
+import thePackmaster.patches.psychicpack.occult.OccultDescription;
+import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.powers.eurogamepack.VictoryPoints;
@@ -79,6 +84,8 @@ public class SpireAnniversary5Mod implements
         PostPowerApplySubscriber,
         StartGameSubscriber,
         CustomSavable<ArrayList<String>> {
+    private static final Logger logger = LogManager.getLogger("Packmaster");
+
     public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
     public static HashMap<Class<? extends AbstractCard>, String> cardClassParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <card Class, packID>
     public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
@@ -256,14 +263,19 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostInitialize() {
         declarePacks();
-        BaseMod.logger.info("Full list of packs: " + unfilteredAllPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
+        logger.info("Full list of packs: " + unfilteredAllPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
 
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
 
+        logger.info("Prepping dream hand");
+        DeepDreamPatch.dreamHand = new DeepDreamPatch.DreamHand();
+
+        logger.info("Checking playability annotations");
+        OccultPatch.testPlayability();
+
         currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
         BaseMod.addSaveField("Anniversary5Mod", thismod);
-
     }
 
     private String getLangString() {
@@ -300,12 +312,12 @@ public class SpireAnniversary5Mod implements
                 .stream()
                 .filter(c -> !baseGamePacks.contains(c.getName()))
                 .collect(Collectors.toList());
-        BaseMod.logger.info("Found pack classes with AutoAdd: " + packClasses.size());
+        logger.info("Found pack classes with AutoAdd: " + packClasses.size());
 
         for (CtClass packClass : packClasses) {
             String packName = packClass.getSimpleName().toLowerCase();
             String languageAndPack = getLangString() + "/" + packName;
-            BaseMod.logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
+            logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             //Do not need to be checked as these always need to exist
             BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + languageAndPack + "/Cardstrings.json");
 
@@ -344,7 +356,7 @@ public class SpireAnniversary5Mod implements
         for (CtClass packClass : packClasses) {
             String packName = packClass.getSimpleName().toLowerCase();
             String languageAndPack = getLangString() + "/" + packName;
-            BaseMod.logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
+            logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             String packJson = modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json";
             FileHandle handle = Gdx.files.internal(packJson);
             if (handle.exists()) {
@@ -511,7 +523,7 @@ public class SpireAnniversary5Mod implements
         int choicesToSetup = 0;
 
         for (String setupType : packSetup) {
-            BaseMod.logger.info("Setting up Pack type " + setupType + ".");
+            logger.info("Setting up Pack type " + setupType + ".");
 
             switch (setupType) {
                 case RANDOM:
@@ -523,7 +535,7 @@ public class SpireAnniversary5Mod implements
                 default:
                     for (AbstractCardPack pack : unfilteredAllPacks) {
                         if (pack.packID.equals(setupType)) {
-                            BaseMod.logger.info("Found pack matching name " + pack.name);
+                            logger.info("Found pack matching name " + pack.name);
                             currentPoolPacks.add(pack);
                         }
                     }
@@ -534,12 +546,11 @@ public class SpireAnniversary5Mod implements
     }
 
     private static void startOfGamePackReveals() {
-        BaseMod.logger.info("Total packs: " + currentPoolPacks.toString());
-        //TODO - Don't render the title screen for act 1
+        logger.info("Total packs: " + currentPoolPacks.toString());
         CardGroup packDisplays = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
-        if(currentPoolPacks.size() != PACKS_PER_RUN) {
-            BaseMod.logger.error( MessageFormat.format("Less packs in pool than expected: {0}/{1}", currentPoolPacks.size(), PACKS_PER_RUN));
+        if (currentPoolPacks.size() != PACKS_PER_RUN) {
+            logger.error( MessageFormat.format("Less packs in pool than expected: {0}/{1}", currentPoolPacks.size(), PACKS_PER_RUN));
         }
 
         for (AbstractCardPack pack : currentPoolPacks) {
@@ -556,7 +567,7 @@ public class SpireAnniversary5Mod implements
     public void receivePostUpdate() {
         if (!openedStarterScreen) {
             if (CardCrawlGame.isInARun() && doPackSetup && !AbstractDungeon.isScreenUp) {
-                BaseMod.logger.info("Starting Packmaster setup.");
+                logger.info("Starting Packmaster setup.");
                 startOfGamePackSetup();
                 openedStarterScreen = true;
             }
@@ -565,6 +576,7 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
+        DeepDreamPatch.wakeUp();
         ImproveAction._clean();
         DynamicDynamicVariableManager.clearVariables();
     }
