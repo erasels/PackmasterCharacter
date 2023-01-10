@@ -17,8 +17,8 @@
   },
   "${ModID}:MayhemForm": {
     "NAME": "Mayhem Form",
-    "DESCRIPTION": "Draw 1 fewer card per turn. NL At the start of your turn, choose a card from the top 3 in your draw pile and play it.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, choose a card from the top 3 in your draw pile and play it."
+    "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Retain. NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] ."
   },
   "${ModID}:PackRip": {
     "NAME": "Pack Rip",

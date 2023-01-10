@@ -22,7 +22,6 @@ public class BeyondTheStars extends AbstractCthulhuCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.FIRE);
-
         Wiz.applyToSelf(new EntropyPower(p, this.magicNumber));
     }
 

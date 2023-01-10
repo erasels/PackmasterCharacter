@@ -1,26 +1,27 @@
-package thePackmaster.cards.infestpack;
+package thePackmaster.cards.bellordpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.infestpack.LordOfTheFliesPower;
+import thePackmaster.powers.bellordpack.LikeClockworkPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class LordOfTheFlies extends AbstractPackmasterCard {
-    public final static String ID = makeID("LordOfTheFlies");
-    // intellij stuff power, self, rare, , , , , , 
+public class LikeClockwork extends AbstractPackmasterCard {
+    public final static String ID = makeID("LikeClockwork");
+    // intellij stuff power, self, rare, , , , , 5, 2
 
-    public LordOfTheFlies() {
+    public LikeClockwork() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new LordOfTheFliesPower(p, 1));
+        applyToSelf(new LikeClockworkPower(magicNumber));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(2);
     }
 }
