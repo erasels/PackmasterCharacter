@@ -1,8 +1,10 @@
 package thePackmaster.cards.intothebreachpack;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.intothebreachpack.EnrageShotAction;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -17,7 +19,8 @@ public class EnrageShot extends IntoTheBreachCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new EnrageShotAction(this.magicNumber, m));
+        atb(new StunMonsterAction(m, p));
+        atb(new ApplyPowerAction(m, p, new StrengthPower(m, magicNumber), magicNumber));
     }
 
     public void upp() {

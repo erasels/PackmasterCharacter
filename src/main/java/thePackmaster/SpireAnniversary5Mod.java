@@ -40,6 +40,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
@@ -155,6 +156,7 @@ public class SpireAnniversary5Mod implements
     private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
+    public static final ArrayList<Louse> louseList = new ArrayList<>();
 
     public static boolean selectedCards = false;
 
@@ -390,6 +392,14 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
+        Iterator<AbstractCard> deckDetect = p().masterDeck.group.iterator();
+        while (deckDetect.hasNext()){
+            AbstractCard cardInDeck = deckDetect.next();
+            if (AbstractVPCard.class.isAssignableFrom(cardInDeck.getClass()) )  {
+                atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
+                break;
+            }
+        }
     }
 
     public static void declarePacks() {
