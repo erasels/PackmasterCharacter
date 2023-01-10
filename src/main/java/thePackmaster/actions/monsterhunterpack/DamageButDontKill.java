@@ -82,7 +82,7 @@ public class DamageButDontKill extends AbstractGameAction {
                     this.target.tint.color.set(Color.CHARTREUSE.cpy());
                     this.target.tint.changeColor(Color.WHITE.cpy());
                 } else if (this.attackEffect == AttackEffect.FIRE) {
-                    this.target.tint.color.set(Color.RED);
+                    this.target.tint.color.set(Color.RED.cpy());
                     this.target.tint.changeColor(Color.WHITE.cpy());
                 }
 
