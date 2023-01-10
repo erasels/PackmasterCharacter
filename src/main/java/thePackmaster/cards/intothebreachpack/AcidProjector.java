@@ -16,7 +16,7 @@ public class AcidProjector extends IntoTheBreachCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new AcidPower(m));
+        applyToEnemy(m, new AcidPower(m,1));
     }
 
     public void upp() {

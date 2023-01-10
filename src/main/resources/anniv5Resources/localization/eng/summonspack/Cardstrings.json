@@ -16,20 +16,23 @@
   },
   "${ModID}:SummonTrees": {
     "NAME": "Summon Trees",
-    "DESCRIPTION": "Gain !B! Block. NL Take !M! less damage from Attacks this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Take !M! less damage from Attacks this turn.",
+    "FLAVOR": "There's a lot of weapons that are awkward to swing when you're surrounded by obstacles.  Like trees."
   },
   "${ModID}:SummonElephant": {
     "NAME": "Summon Elephant",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Take !M! damage."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Take !M! damage.",
+    "FLAVOR": "This is my favorite card.  I hope you like it."
   },
   "${ModID}:SummonBrambles": {
     "NAME": "Summon Brambles",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Thorns."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Thorns.",
+    "FLAVOR": "I'm feeling thorny."
   },
-  "${ModID}:SummonPython": {
-    "NAME": "Summon Python",
-    "DESCRIPTION": "Apply !M! ${ModID}:Constricted. NL Exhaust.",
-    "FLAVOR": "It's a little disquieting to watch it eat its prey."
+  "${ModID}:RainbowLouse": {
+    "NAME": "Rainbow Louse",
+    "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
+    "FLAVOR": "The result of an unwise magic experiment."
   },
   "${ModID}:SummonBees": {
     "NAME": "Summon Bees",
@@ -49,6 +52,7 @@
   },
   "${ModID}:SummonPandas": {
     "NAME": "Summon Pandas",
-    "DESCRIPTION": "At the start of your turn, Channel a !M! damage ${ModID}:Panda."
+    "DESCRIPTION": "At the start of your turn, Channel a !M! damage ${ModID}:Panda.",
+    "FLAVOR": "Pandamonium."
   }
 }

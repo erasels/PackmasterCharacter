@@ -24,7 +24,7 @@ public class Spark extends AbstractPackmasterCard implements AmplifyCard{
     private static final int MAGIC = 1, UPG_MAGIC = 1;
 
     public Spark() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         damage = baseDamage = DMG;
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
