@@ -1,12 +1,9 @@
 package thePackmaster.packs;
 
-import com.megacrit.cardcrawl.cards.purple.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.WitchesStrike.*;
-import thePackmaster.cards.dimensiongatepack.*;
-import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 
 import java.util.ArrayList;
 
@@ -33,6 +30,7 @@ public class WitchesStrikePack extends AbstractCardPack {
         cards.add(ScarabPlague.ID);
         cards.add(MoonlightFlight.ID);
         cards.add(WitchTwist.ID);
+        cards.add(FullMoonHalo.ID);
         return cards;
     }
 }
