@@ -31,8 +31,8 @@
   },
   "${ModID}:QuickGame": {
     "NAME": "Quick Game",
-    "DESCRIPTION": "Entering ${ModID}:Victory requires #b25 less ${ModID}:VP. NL Minimum of #b25.",
-    "UPGRADE_DESCRIPTION": "Entering ${ModID}:Victory requires #b25 less ${ModID}:VP. NL Minimum of #b25. NL Innate"
+    "DESCRIPTION": "Entering ${ModID}:Victory requires 25 less ${ModID}:VP. NL Minimum of 25.",
+    "UPGRADE_DESCRIPTION": "Entering ${ModID}:Victory requires 25 less ${ModID}:VP. NL Minimum of 25. NL Innate"
   },
   "${ModID}:Roadbuilding": {
     "NAME": "Roadbuilding",
