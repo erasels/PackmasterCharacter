@@ -22,7 +22,7 @@ public class EnrageFollowupAction extends AbstractGameAction {
 
     @Override
     public void update(){
-        if (!target.isDead && !target.isDying && !target.isEscaping && !target.halfDead){
+        if (!target.isDeadOrEscaped()){
             int roll = MathUtils.random(2);
             if (roll == 0) {
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_GREMLINNOB_1A"));
