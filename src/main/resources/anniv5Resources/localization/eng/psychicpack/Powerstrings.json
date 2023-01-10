@@ -1,10 +1,10 @@
 {
-  "${ModID}:Entropy": {
-    "NAME": "Entropy",
+  "${ModID}:GravityPower": {
+    "NAME": "Gravity",
     "DESCRIPTIONS": [
-      "The next #b",
-      " times you play a card, discard a random card and draw a card.",
-      "The next time you play a card, discard a random card and draw a card."
+      "Whenever you draw a #yLocked or #yUnplayable card, draw a card.",
+      "Whenever you draw a #yLocked or #yUnplayable card, draw #b",
+      " cards."
     ]
   }
 }
