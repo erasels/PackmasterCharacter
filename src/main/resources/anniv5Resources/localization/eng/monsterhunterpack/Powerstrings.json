@@ -10,7 +10,7 @@
     "NAME": "Not Hunted",
     "DESCRIPTIONS": [
       "Takes #b",
-      "% less damage from attacks. When the hunted enemy dies, remove this."
+      "% less damage from attacks. When the #yhunted enemy dies, remove this."
     ]
   },
   "${ModID}:PerfectGuardPower": {
