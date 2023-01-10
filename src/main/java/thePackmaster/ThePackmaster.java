@@ -67,7 +67,7 @@ public class ThePackmaster extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                80, 80, 3, 99, 5, this, getStartingRelics(),
+                75, 75, 3, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 

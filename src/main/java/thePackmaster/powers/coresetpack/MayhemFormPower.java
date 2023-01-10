@@ -56,5 +56,6 @@ public class MayhemFormPower extends AbstractPackmasterPower implements OnRefres
         }
         sb.append(DESCRIPTIONS[3]);
         sb.append(activatedThisTurn ? DESCRIPTIONS[5] : DESCRIPTIONS[4]);
+        description = sb.toString();
     }
 }

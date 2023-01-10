@@ -19,6 +19,7 @@ public class ManifestMeal extends AbstractPackmasterCard {
     public ManifestMeal() {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 5;
+        cardsToPreview = new Food();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
