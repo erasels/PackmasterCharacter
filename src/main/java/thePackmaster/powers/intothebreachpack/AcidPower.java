@@ -1,7 +1,6 @@
 package thePackmaster.powers.intothebreachpack;
 
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -26,10 +25,7 @@ public class AcidPower extends AbstractPackmasterPower {
 
     @Override
     public void atEndOfRound() {
-        if (this.amount == 0)
-            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
-        else
-            addToBot(new ReducePowerAction(owner, owner, this, 1));
+        addToBot(new ReducePowerAction(owner, owner, this, 1));
     }
 
     @Override
