@@ -26,7 +26,7 @@ public class MilitaryExpansion extends AbstractPackmasterCard {
     public MilitaryExpansion() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.baseMagicNumber = this.magicNumber = 1;
-        this.baseSecondMagic = this.secondMagic = 5;
+        this.baseSecondMagic = this.secondMagic = 8;
         this.baseDamage = this.damage = 0;
         this.isMultiDamage = true;
         setBackgroundTexture(
@@ -79,7 +79,7 @@ public class MilitaryExpansion extends AbstractPackmasterCard {
     }
 
     public void upp() {
-            this.upgradeSecondMagic(-1);
+            this.upgradeSecondMagic(-2);
     }
 //upgrade by -1 hehe
 
