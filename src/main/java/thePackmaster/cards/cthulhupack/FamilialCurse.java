@@ -1,13 +1,9 @@
 package thePackmaster.cards.cthulhupack;
 
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.curses.Necronomicurse;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.cthulhupack.PageOfTheDeadPower;
+import thePackmaster.powers.entropypack.RuinPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -22,13 +18,9 @@ public class FamilialCurse extends AbstractCthulhuCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster m2: AbstractDungeon.getCurrRoom().monsters.monsters
-             ) {
-            //TODO - Apply Ruin
-            //Wiz.applyToEnemy(m2, new );
-        }
-
-        addToBot(new DiscardAction(p, p, 10, true, false));
+        Wiz.forAllMonstersLiving((mo)->
+                Wiz.applyToEnemy(mo, new RuinPower(mo, this.magicNumber)));
+        addToBot(new DiscardAction(p, p, 999, true, false));
     }
 
     public void upp() {
