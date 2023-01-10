@@ -43,12 +43,12 @@ public class CollectorBadge extends AbstractPackmasterRelic {
     @Override
     public void atTurnStart() {
         if (pulse) {
-            counter = 0;
             flash();
             Wiz.atb(new RelicAboveCreatureAction(Wiz.p(), this));
             addToBot(new GainEnergyAction(1));
             stopPulse();
         }
+        counter = 0;
         usedPacks.clear();
         setDescriptionAfterLoading();
     }
