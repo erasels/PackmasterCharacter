@@ -80,6 +80,5 @@ public class TheHermit extends AbstractAstrologerCard {
 
     public void upp() {
         exhaust = false;
-        uDesc();
     }
 }

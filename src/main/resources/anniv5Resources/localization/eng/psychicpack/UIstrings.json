@@ -1,0 +1,19 @@
+{
+  "${ModID}:PsychicPack": {
+    "TEXT": [
+      "Psychic",
+      "Do the impossible through powers beyond reason.",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:Occult": {
+    "TEXT": [
+      "${ModID}:Occult. NL "
+    ]
+  },
+  "${ModID}:RuleCancel": {
+    "TEXT": [
+      "Make Occult"
+    ]
+  }
+}
