@@ -26,6 +26,7 @@ public class GravityPower extends AbstractPackmasterPower {
     public void onCardDraw(AbstractCard c) {
         if ((c instanceof LockingCardInterface && ((LockingCardInterface) c).isLocked()) ||
                 OccultPatch.isUnplayable(AbstractDungeon.player, c)) {
+            this.flash();
             addToTop(new DrawCardAction(this.amount));
         }
     }
