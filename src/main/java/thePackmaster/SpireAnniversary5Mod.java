@@ -380,9 +380,13 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
-        louseList.clear();
-        if (p().masterDeck.contains(new Auctioneering()) || p().masterDeck.contains(new Harvest()) || p().masterDeck.contains(new NetFishing()) || p().masterDeck.contains(new IronMining()) || p().masterDeck.contains(new LumberFelling())) {
-            atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
+        Iterator<AbstractCard> deckDetect = p().masterDeck.group.iterator();
+        while (deckDetect.hasNext()){
+            AbstractCard cardInDeck = deckDetect.next();
+            if (AbstractVPCard.class.isAssignableFrom(cardInDeck.getClass()) )  {
+                atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
+                break;
+            }
         }
     }
 
