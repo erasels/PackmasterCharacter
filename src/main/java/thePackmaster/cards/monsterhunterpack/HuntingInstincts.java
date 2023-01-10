@@ -20,7 +20,7 @@ public class HuntingInstincts extends AbstractMonsterHunterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
+        for (AbstractMonster mo : Wiz.getEnemies()){
             if (mo.type == AbstractMonster.EnemyType.BOSS || mo.type == AbstractMonster.EnemyType.ELITE){
                 addToBot(new GainBlockAction(p, block*2));
                 return;
