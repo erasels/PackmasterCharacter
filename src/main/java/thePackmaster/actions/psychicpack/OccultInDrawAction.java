@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -30,7 +31,9 @@ public class OccultInDrawAction extends AbstractGameAction {
                     for (AbstractCard c : this.player.drawPile.group) {
                         OccultFields.isOccult.set(c, true);
                         c.initializeDescription();
-                        AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+                        if (!DeepDreamPatch.isDreaming(AbstractDungeon.player)) {
+                            AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+                        }
                     }
 
                     this.isDone = true;
@@ -55,7 +58,9 @@ public class OccultInDrawAction extends AbstractGameAction {
                 for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                     OccultFields.isOccult.set(c, true);
                     c.initializeDescription();
-                    AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+                    if (!DeepDreamPatch.isDreaming(AbstractDungeon.player)) {
+                        AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+                    }
                 }
 
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();

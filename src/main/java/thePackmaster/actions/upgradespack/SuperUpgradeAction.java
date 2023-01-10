@@ -98,7 +98,7 @@ public class SuperUpgradeAction extends AbstractGameAction {
         int oldMagic = card.baseMagicNumber;
         int oldCost = card.cost;
 
-        int originalCost = CardLibrary.getCard(card.cardID).cost;
+        int originalCost = card.makeCopy().cost;
         int diff = card.costForTurn - card.cost;
 
         card.upgraded = false;
