@@ -378,6 +378,9 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
+        if (p().masterDeck.contains(new Auctioneering()) || p().masterDeck.contains(new Harvest()) || p().masterDeck.contains(new NetFishing()) || p().masterDeck.contains(new IronMining()) || p().masterDeck.contains(new LumberFelling())) {
+            atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
+        }
     }
 
     public static void declarePacks() {
