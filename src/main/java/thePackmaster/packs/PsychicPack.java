@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.psychicpack.*;
+import thePackmaster.cards.psychicpack.OneIsEnough;
 
 import java.util.ArrayList;
 
@@ -21,16 +22,17 @@ public class PsychicPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        /*cards.add(TheFool.ID);
-        cards.add(Justice.ID);
-        cards.add(TheHermit.ID);
-        cards.add(TheHangedMan.ID);
-        cards.add(TheTower.ID);
-        cards.add(Death.ID);
-        cards.add(Temperance.ID);
-        cards.add(TheHierophant.ID);
-        cards.add(TheSun.ID);
-        cards.add(TheChariot.ID);*/
+        cards.add(RuleCancel.ID);
+        cards.add(Brainwave.ID);
+        cards.add(TelephonePole.ID);
+        cards.add(Gravity.ID);
+        cards.add(Repel.ID);
+        cards.add(OneIsEnough.ID);
+        cards.add(PhantomStep.ID);
+        cards.add(Curse.ID);
+        cards.add(MalleableFire.ID);
+        cards.add(DeepDream.ID);
+        cards.add(MoldedFire.ID);
         return cards;
     }
 }

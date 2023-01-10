@@ -15,5 +15,15 @@
     "TEXT": [
       "Make Occult"
     ]
+  },
+  "${ModID}:OccultInDrawPile": {
+    "TEXT": [
+      "Choose a Card to Make Occult"
+    ]
+  },
+  "${ModID}:UnplayableTurnModifier": {
+    "TEXT": [
+      "Cannot be played this turn. NL "
+    ]
   }
 }

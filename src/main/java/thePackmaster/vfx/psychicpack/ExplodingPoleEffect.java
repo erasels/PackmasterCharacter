@@ -22,6 +22,8 @@ public class ExplodingPoleEffect extends AbstractGameEffect {
     private final float tx, ty, ix, iy;
     float x, y;
 
+    boolean exploded = false;
+
     public ExplodingPoleEffect(AbstractCreature target, AbstractCreature source) {
         tx = target.hb.cX;
         ty = target.hb.cY;
@@ -33,34 +35,39 @@ public class ExplodingPoleEffect extends AbstractGameEffect {
         float angle;
 
         if (target.hb.cX < source.hb.cX) {
-            rotation = -MathUtils.random(120f, 140f);
-            angle = 180 + rotation;
+            rotation = MathUtils.random(120f, 140f);
+            angle = 180 - rotation;
             dx = -MathUtils.cosDeg(angle) * dy;
         }
         else {
-            rotation = MathUtils.random(120f, 140f);
-            angle = 180 - rotation;
+            rotation = -MathUtils.random(120f, 140f);
+            angle = 180 + rotation;
             dx = MathUtils.cosDeg(angle) * dy;
         }
 
         ix = tx - dx;
 
-        duration = startingDuration = 0.6f;
+        duration = startingDuration = 0.5f;
         color = Color.WHITE.cpy();
 
         x = ix;
         y = iy;
     }
 
+    private static final float EXPLOSION_RANGE = 150f * Settings.scale;
     @Override
     public void update() {
         duration -= Gdx.graphics.getDeltaTime();
+        if (duration <= 0.12f && !exploded) {
+            exploded = true;
+
+            int explosions = MathUtils.random(4, 7);
+            for (int i = 0; i < explosions; ++i)
+                AbstractDungeon.effectsQueue.add(new EXPLOSIONEffect(tx + MathUtils.random(-EXPLOSION_RANGE, EXPLOSION_RANGE), ty + MathUtils.random(-EXPLOSION_RANGE, EXPLOSION_RANGE), 0.12f));
+        }
         if (duration <= 0) {
             duration = 0;
             this.isDone = true;
-            int explosions = MathUtils.random(3, 5);
-            for (int i = 0; i < explosions; ++i)
-                AbstractDungeon.effectsQueue.add(new EXPLOSIONEffect(tx + MathUtils.random(-100f, 100f), ty + MathUtils.random(-100f, 100f)));
         }
         float prog = 1 - (duration / startingDuration);
         x = MathUtils.lerp(ix, tx, prog);
