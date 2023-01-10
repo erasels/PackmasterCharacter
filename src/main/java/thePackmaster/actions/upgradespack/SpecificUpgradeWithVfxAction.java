@@ -20,7 +20,7 @@ public class SpecificUpgradeWithVfxAction extends AbstractGameAction {
                 //if (AbstractDungeon.player.hand.contains(card)) {
                     AbstractDungeon.topLevelEffects.add(new LightUpgradeShineEffect(card.current_x, card.current_y));
                 //}
-                card.upgrade();
+                if (card.canUpgrade()) card.upgrade();
             }
         }
         isDone = true;
