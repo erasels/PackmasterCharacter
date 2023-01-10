@@ -18,7 +18,7 @@ public class FieryMantle extends AbstractPackmasterCard {
     private static final int COST = 2;
     private static final int BLOCK = 12;
     private static final int UPGRADE_BLOCK = 2;
-    private static final int IGNITE_THORNS = 1;
+    private static final int IGNITE_THORNS = 2;
     private static final int UPGRADE_IGNITE_THORNS = 1;
 
     public FieryMantle() {

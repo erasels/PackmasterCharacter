@@ -22,7 +22,6 @@ public class Cardistry extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeBlock(1);
-        selfRetain = true;
+        upgradeBlock(2);
     }
 }
