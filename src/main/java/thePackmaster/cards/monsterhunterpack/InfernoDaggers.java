@@ -14,7 +14,7 @@ import thePackmaster.effects.monsterhunterpack.ScreenOnFireEffectButDoesntCrash;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class InfernoDaggers extends AbstractPackmasterCard {
+public class InfernoDaggers extends AbstractMonsterHunterCard {
     public final static String ID = makeID("InfernoDaggers");
 
     public static final int DAMAGE = 6;

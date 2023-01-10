@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class GuardianShield extends AbstractPackmasterCard {
+public class GuardianShield extends AbstractMonsterHunterCard {
     public final static String ID = makeID("GuardianShield");
 
     private static final int MAGIC = 4;

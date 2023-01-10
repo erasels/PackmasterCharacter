@@ -11,7 +11,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class HunterRank extends AbstractPackmasterCard {
+public class HunterRank extends AbstractMonsterHunterCard {
     public final static String ID = makeID("HunterRank");
     public final static int UPGRADED_COST = 2;
 

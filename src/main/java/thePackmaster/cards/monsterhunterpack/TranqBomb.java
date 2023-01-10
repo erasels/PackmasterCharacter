@@ -20,7 +20,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class TranqBomb extends AbstractPackmasterCard {
+public class TranqBomb extends AbstractMonsterHunterCard {
     public final static String ID = makeID("TranqBomb");
 
     public static final int DAMAGE = 20;

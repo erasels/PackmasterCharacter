@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Focus extends AbstractPackmasterCard {
+public class Focus extends AbstractMonsterHunterCard {
     public final static String ID = makeID("Focus");
 
     private static final int MAGIC = 3;

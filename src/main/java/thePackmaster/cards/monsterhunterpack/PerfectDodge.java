@@ -9,7 +9,7 @@ import thePackmaster.powers.monsterhunterpack.PerfectGuardPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class PerfectDodge extends AbstractPackmasterCard {
+public class PerfectDodge extends AbstractMonsterHunterCard {
     public final static String ID = makeID("PerfectDodge");
 
     private static final int MAGIC = 2;

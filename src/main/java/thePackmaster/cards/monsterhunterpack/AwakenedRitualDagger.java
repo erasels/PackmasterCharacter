@@ -11,7 +11,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class AwakenedRitualDagger extends AbstractPackmasterCard {
+public class AwakenedRitualDagger extends AbstractMonsterHunterCard {
     public final static String ID = makeID("AwakenedRitualDagger");
 
     public static final int DAMAGE = 45;

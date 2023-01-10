@@ -7,7 +7,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SpireShield extends AbstractPackmasterCard {
+public class SpireShield extends AbstractMonsterHunterCard {
     public final static String ID = makeID("SpireShield");
 
     public static final int BLOCK = 30;

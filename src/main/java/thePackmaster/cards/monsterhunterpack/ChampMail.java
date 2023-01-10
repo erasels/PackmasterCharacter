@@ -13,7 +13,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ChampMail extends AbstractPackmasterCard {
+public class ChampMail extends AbstractMonsterHunterCard {
     public final static String ID = makeID("ChampMail");
 
     private static final int MAGIC = 2;

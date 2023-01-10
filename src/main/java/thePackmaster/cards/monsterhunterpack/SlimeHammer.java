@@ -12,7 +12,7 @@ import thePackmaster.powers.monsterhunterpack.DelayedDamagePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SlimeHammer extends AbstractPackmasterCard {
+public class SlimeHammer extends AbstractMonsterHunterCard {
     public final static String ID = makeID("SlimeHammer");
 
     public static final int DAMAGE = 32;

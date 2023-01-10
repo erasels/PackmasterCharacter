@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class CarvingKnife extends AbstractPackmasterCard {
+public class CarvingKnife extends AbstractMonsterHunterCard {
     public final static String ID = makeID("CarvingKnife");
 
     public static final int DAMAGE = 5;

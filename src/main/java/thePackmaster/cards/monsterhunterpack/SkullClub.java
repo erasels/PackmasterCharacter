@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SkullClub extends AbstractPackmasterCard {
+public class SkullClub extends AbstractMonsterHunterCard {
     public final static String ID = makeID("SkullClub");
 
     public static final int DAMAGE = 20;

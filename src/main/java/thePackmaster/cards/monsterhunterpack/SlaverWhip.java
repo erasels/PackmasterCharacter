@@ -15,7 +15,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 
-public class SlaverWhip extends AbstractPackmasterCard {
+public class SlaverWhip extends AbstractMonsterHunterCard {
     public final static String ID = makeID("SlaverWhip");
 
     public static final int DAMAGE = 12;

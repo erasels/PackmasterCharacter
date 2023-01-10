@@ -10,7 +10,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class EphemeralShroud extends AbstractPackmasterCard {
+public class EphemeralShroud extends AbstractMonsterHunterCard {
     public final static String ID = makeID("EphemeralShroud");
 
     private static final int MAGIC = 1;

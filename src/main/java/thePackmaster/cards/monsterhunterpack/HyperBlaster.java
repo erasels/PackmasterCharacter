@@ -17,7 +17,7 @@ import thePackmaster.effects.monsterhunterpack.LaserBeamEffectReversed;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class HyperBlaster extends AbstractPackmasterCard {
+public class HyperBlaster extends AbstractMonsterHunterCard {
     public final static String ID = makeID("HyperBlaster");
 
     public static final int DAMAGE = 50;

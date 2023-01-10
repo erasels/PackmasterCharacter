@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class DecaAmulet extends AbstractPackmasterCard {
+public class DecaAmulet extends AbstractMonsterHunterCard {
     public final static String ID = makeID("DecaAmulet");
     public final static int MAGIC = 10;
     public final static int UPG_MAGIC = 2;

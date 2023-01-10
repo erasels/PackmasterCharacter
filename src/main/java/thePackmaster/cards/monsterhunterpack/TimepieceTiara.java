@@ -8,7 +8,7 @@ import thePackmaster.powers.monsterhunterpack.TimePiecePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class TimepieceTiara extends AbstractPackmasterCard {
+public class TimepieceTiara extends AbstractMonsterHunterCard {
     public final static String ID = makeID("TimepieceTiara");
 
     public TimepieceTiara() {

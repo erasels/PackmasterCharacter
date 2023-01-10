@@ -10,7 +10,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SpireSpear extends AbstractPackmasterCard {
+public class SpireSpear extends AbstractMonsterHunterCard {
     public final static String ID = makeID("SpireSpear");
 
     public static final int DAMAGE = 9;

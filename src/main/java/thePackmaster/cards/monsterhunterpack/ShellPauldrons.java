@@ -9,7 +9,7 @@ import thePackmaster.powers.monsterhunterpack.GlassArmorPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ShellPauldrons extends AbstractPackmasterCard {
+public class ShellPauldrons extends AbstractMonsterHunterCard {
     public final static String ID = makeID("ShellPauldrons");
 
     private static final int MAGIC = 8;

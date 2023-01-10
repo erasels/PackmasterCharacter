@@ -7,7 +7,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class HuntingContract extends AbstractPackmasterCard {
+public class HuntingContract extends AbstractMonsterHunterCard {
     public final static String ID = makeID("HuntingContract");
 
     private static final int MAGIC = 4;

@@ -12,7 +12,7 @@ import thePackmaster.powers.monsterhunterpack.TempRetainCardsPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Paintball extends AbstractPackmasterCard {
+public class Paintball extends AbstractMonsterHunterCard {
     public final static String ID = makeID("Paintball");
 
     private static final int MAGIC = 2;

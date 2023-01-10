@@ -18,7 +18,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class CoreBlinder extends AbstractPackmasterCard {
+public class CoreBlinder extends AbstractMonsterHunterCard {
     public final static String ID = makeID("CoreBlinder");
 
     public static final int MAGIC = 2;
