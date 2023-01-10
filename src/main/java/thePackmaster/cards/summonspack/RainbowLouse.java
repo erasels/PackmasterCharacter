@@ -19,10 +19,10 @@ public class RainbowLouse extends AbstractPackmasterCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int UPGRADED_COST = 2;
 
     public RainbowLouse() {
         super(ID, COST, TYPE, RARITY, TARGET);
+        exhaust = true;
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         AnimatedCardsPatch.loadFrames(this, 36, 2f/36f);
@@ -35,6 +35,6 @@ public class RainbowLouse extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(UPGRADED_COST);
+        exhaust = false;
     }
 }

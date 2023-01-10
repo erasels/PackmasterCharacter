@@ -31,7 +31,8 @@
   },
   "${ModID}:RainbowLouse": {
     "NAME": "Rainbow Louse",
-    "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
+    "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
     "FLAVOR": "The result of an unwise magic experiment."
   },
   "${ModID}:SummonBees": {

@@ -40,8 +40,8 @@ public class Louse extends CustomOrb implements OnPlayCardOrb {
     private Color color = Color.WHITE.cpy();
     private float spinTime = 0f;
 
-    private final static int BASE_DAMAGE = 4;
-    private final static int BASE_PASSIVE = 4;
+    private final static int BASE_DAMAGE = 12;
+    private final static int BASE_PASSIVE = 6;
 
     private float rotation;
 
