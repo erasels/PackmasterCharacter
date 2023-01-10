@@ -150,7 +150,7 @@ public class SpireAnniversary5Mod implements
     public static final String STEAM_IMPACT_2_KEY = makeID("SteamImpactTwo");
     private static final String STEAM_IMPACT_2_OGG = makePath("audio/transmutationpack/SteamImpactTwo.ogg");
     public static final String STEAM_IMPACT_3_KEY = makeID("StreamImpactThree");
-    private static final String STEAM_IMPACT_3_OGG = makePath("audio/transmutationpack/StreamImpactThree.ogg");
+    private static final String STEAM_IMPACT_3_OGG = makePath("audio/transmutationpack/SteamImpactThree.ogg");
     public static final String GUN1_KEY = makeID("Gun1");
     private static final String GUN1_OGG = makePath("audio/hermitpack/GUN1.ogg");
     public static final String GUN2_KEY = makeID("Gun2");
@@ -386,9 +386,9 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(STEAM_IMPACT_1_KEY, STEAM_IMPACT_1_OGG);
         BaseMod.addAudio(STEAM_IMPACT_2_KEY, STEAM_IMPACT_2_OGG);
         BaseMod.addAudio(STEAM_IMPACT_3_KEY, STEAM_IMPACT_3_OGG);
-        BaseMod.addAudio(GUN1_KEY,GUN1_OGG);
-        BaseMod.addAudio(GUN2_KEY,GUN2_OGG);
-        BaseMod.addAudio(GUN3_KEY,GUN3_OGG);
+        BaseMod.addAudio(GUN1_KEY, GUN1_OGG);
+        BaseMod.addAudio(GUN2_KEY, GUN2_OGG);
+        BaseMod.addAudio(GUN3_KEY, GUN3_OGG);
         BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
     }
 
