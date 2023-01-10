@@ -24,7 +24,7 @@
     "NAME": "Enraged",
     "DESCRIPTIONS": [
       "If no enemy intends to attack you, gain #b",
-      " Strength at the end of the turn."
+      " #yStrength at the end of the turn."
     ]
   },
   "${ModID}:GlassArmorPower": {
