@@ -5,39 +5,36 @@ import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.orbs.summonspack.SwarmOfBees;
+import thePackmaster.orbs.summonspack.Louse;
+import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.atb;
 
-public class SummonBees extends AbstractPackmasterCard {
-    public final static String ID = makeID(SummonBees.class.getSimpleName());
-    private static final int COST = 1;
+public class RainbowLouse extends AbstractPackmasterCard {
+    public final static String ID = makeID(RainbowLouse.class.getSimpleName());
+    private static final int COST = 3;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
+    private static final int UPGRADED_COST = 2;
 
-    private static final int MAGIC = 2;
-    private static final int UPGRADE_MAGIC = 1;
-
-    public SummonBees() {
+    public RainbowLouse() {
         super(ID, COST, TYPE, RARITY, TARGET);
-        baseMagicNumber = magicNumber = MAGIC;
-        exhaust = true;
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
+        AnimatedCardsPatch.loadFrames(this, 36, 2f/36f);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++)
-            atb(new ChannelAction(new SwarmOfBees()));
+        atb(new ChannelAction(new Louse()));
     }
 
     @Override
     public void upp() {
-        upMagic(UPGRADE_MAGIC);
+        upgradeBaseCost(UPGRADED_COST);
     }
 }
