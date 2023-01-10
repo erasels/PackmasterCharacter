@@ -9,8 +9,7 @@
   },
   "${ModID}:EnrageShot": {
     "NAME": "Enrage Shot",
-    "DESCRIPTION": "If the enemy does NOT intend to attack, Stun it and apply 2 Strength. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": ["That enemy intends to attack!"]
+    "DESCRIPTION": "Stun the enemy and apply 2 Strength. NL Exhaust."
   },
   "${ModID}:MercuryFist": {
     "NAME": "Mercury Fist",
