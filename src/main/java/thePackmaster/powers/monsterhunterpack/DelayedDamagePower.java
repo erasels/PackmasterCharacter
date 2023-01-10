@@ -36,12 +36,8 @@ public class DelayedDamagePower extends AbstractPackmasterPower {
 
     @Override
     public void stackPower(int stackAmount) {
-        if (this.amount == -1) {
-            System.out.println(this.name + " does not stack");
-        } else {
-            this.fontScale = 8.0F;
-            this.amount2 += stackAmount;
-        }
+        this.fontScale = 8.0F;
+        this.amount2 += stackAmount;
     }
 
     @Override

@@ -40,6 +40,5 @@ public class StoneHelm extends AbstractMonsterHunterCard {
     public void upp() {
             upgradeBlock(UPG_BLOCK);
             originalBlock += UPG_BLOCK;
-            System.out.println(originalBlock);
     }
 }

@@ -74,10 +74,8 @@ public class CoreBlinder extends AbstractMonsterHunterCard {
 
     public void upp() {
         this.target = CardTarget.ALL_ENEMY;
-        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         if (!previewCard) {
             prev.upgrade();
         }
-        initializeDescription();
     }
 }

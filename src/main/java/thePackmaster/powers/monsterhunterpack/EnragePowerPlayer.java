@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -32,12 +33,7 @@ public class EnragePowerPlayer extends AbstractPackmasterPower {
     public void atEndOfTurn(boolean isPlayer) {
         boolean applyStr = true;
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters){
-            boolean isAttacking =
-                    (m.intent == AbstractMonster.Intent.ATTACK) ||
-                    (m.intent == AbstractMonster.Intent.ATTACK_DEBUFF) ||
-                    (m.intent == AbstractMonster.Intent.ATTACK_BUFF) ||
-                    (m.intent == AbstractMonster.Intent.ATTACK_DEFEND);
-            if (isAttacking){
+            if (Wiz.isAttacking(m)){
                 applyStr = false;
             }
         }

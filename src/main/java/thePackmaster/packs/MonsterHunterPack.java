@@ -3,6 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.dimensiongatepack.Inferno;
 import thePackmaster.cards.metapack.*;
 import thePackmaster.cards.monsterhunterpack.*;
 
@@ -33,6 +34,28 @@ public class MonsterHunterPack extends AbstractCardPack {
         cards.add(Paintball.ID);
         cards.add(PerfectDodge.ID);
         cards.add(HunterRank.ID);
+        cards.add(AwakenedRitualDagger.ID);
+        cards.add(ChampMail.ID);
+        cards.add(CoreBlaster.ID);
+        cards.add(CoreBlinder.ID);
+        cards.add(CursedBow.ID);
+        cards.add(DecaAmulet.ID);
+        cards.add(DonuAmulet.ID);
+        cards.add(EphemeralShroud.ID);
+        cards.add(GremlinLance.ID);
+        cards.add(GuardianShield.ID);
+        cards.add(HyperBlaster.ID);
+        cards.add(InfernoDaggers.ID);
+        cards.add(ShellPauldrons.ID);
+        cards.add(SkullClub.ID);
+        cards.add(SlaverWhip.ID);
+        cards.add(SlimeHammer.ID);
+        cards.add(SpireShield.ID);
+        cards.add(SpireSpear.ID);
+        cards.add(StabManual.ID);
+        cards.add(StoneHelm.ID);
+        cards.add(TimepieceTiara.ID);
+
         return cards;
     }
 }

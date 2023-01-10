@@ -27,7 +27,5 @@ public class ShellPauldrons extends AbstractMonsterHunterCard {
 
     public void upp() {
         this.isInnate = true;
-        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

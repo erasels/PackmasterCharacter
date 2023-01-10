@@ -39,7 +39,5 @@ public class ChampMail extends AbstractMonsterHunterCard {
 
     public void upp() {
         this.exhaust = false;
-        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

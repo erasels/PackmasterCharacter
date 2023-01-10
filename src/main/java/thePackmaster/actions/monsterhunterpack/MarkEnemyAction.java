@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.monsterhunterpack.HuntersMark;
 import thePackmaster.powers.monsterhunterpack.NotHunted;
+import thePackmaster.util.Wiz;
 
 public class MarkEnemyAction extends AbstractGameAction {
 

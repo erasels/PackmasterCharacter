@@ -24,6 +24,5 @@ public class DecaAmulet extends AbstractMonsterHunterCard {
 
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);
-        initializeDescription();
     }
 }

@@ -48,7 +48,5 @@ public class InfernoDaggers extends AbstractMonsterHunterCard {
 
     public void upp() {
         this.isInnate = true;
-        this.rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

@@ -37,7 +37,5 @@ public class SlimeHammer extends AbstractMonsterHunterCard {
     }
 
     public void upp() {
-        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

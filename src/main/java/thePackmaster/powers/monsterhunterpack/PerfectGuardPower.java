@@ -33,7 +33,6 @@ public class PerfectGuardPower extends AbstractPackmasterPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        System.out.println("test: " + info.output + "/" + this.owner.currentBlock);
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner &&
                 info.output > 0 && this.owner.currentBlock == 0 && damageAmount == 0){
             addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount)));

@@ -22,13 +22,10 @@ public class HuntingStrike extends AbstractMonsterHunterCard {
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    int originalBaseDamage;
-    boolean isDoubled = false;
 
     public HuntingStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
-        originalBaseDamage = baseDamage;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,38 +34,22 @@ public class HuntingStrike extends AbstractMonsterHunterCard {
 
     @Override
     public void applyPowers(){
-        super.applyPowers();
         AbstractMonster hoveredMonster = AbstractDungeon.getCurrRoom().monsters.hoveredMonster;
-        if (hoveredMonster != null){
-            if ((hoveredMonster.type == AbstractMonster.EnemyType.ELITE || hoveredMonster.type == AbstractMonster.EnemyType.BOSS)){
-                if (!isDoubled) {
-                    System.out.println(hoveredMonster.name + "/" + hoveredMonster.type);
-                    this.baseDamage = baseDamage * 2;
-                    if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-                        this.baseDamage += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-                    }
-                    isDoubled = true;
-                    this.rawDescription = DESCRIPTION;
-                    initializeDescription();
-                    applyPowers();
-                }
-        }
-        else if (isDoubled){
-            this.baseDamage = originalBaseDamage;
-            this.rawDescription = DESCRIPTION;
-            isDoubled = false;
+        if (hoveredMonster != null) {
+            calculateCardDamage(hoveredMonster);
             initializeDescription();
-            applyPowers();
-            }
-        }
-        else if (isDoubled){
-            this.baseDamage = originalBaseDamage;
-            this.rawDescription = DESCRIPTION;
-            isDoubled = false;
-            initializeDescription();
-            applyPowers();
         }
     }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
+        if (mo.type == AbstractMonster.EnemyType.BOSS || mo.type == AbstractMonster.EnemyType.ELITE){
+            isDamageModified = true;
+            damage *= 2;
+        }
+    }
+
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);

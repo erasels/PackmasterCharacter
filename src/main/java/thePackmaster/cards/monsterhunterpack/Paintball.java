@@ -35,7 +35,5 @@ public class Paintball extends AbstractMonsterHunterCard {
     public void upp() {
         upgradeSecondMagic(UPG_MAGIC);
         upgradeMagicNumber(UPG_MAGIC);
-        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

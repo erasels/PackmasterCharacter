@@ -30,7 +30,7 @@ public class HuntersMark extends AbstractPackmasterPower {
 
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
         if (type == DamageInfo.DamageType.NORMAL) {
-            return this.owner != null && !this.owner.isPlayer ? damage * (1 + (amount * 0.1f)) : damage;
+            return !this.owner.isPlayer ? damage * (1 + (amount * 0.1f)) : damage;
         }
         return damage;
     }
