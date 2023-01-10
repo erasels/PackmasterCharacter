@@ -42,7 +42,6 @@ public class HuntingStrike extends AbstractMonsterHunterCard {
         if (hoveredMonster != null){
             if ((hoveredMonster.type == AbstractMonster.EnemyType.ELITE || hoveredMonster.type == AbstractMonster.EnemyType.BOSS)){
                 if (!isDoubled) {
-                    System.out.println(hoveredMonster.name + "/" + hoveredMonster.type);
                     this.baseDamage = baseDamage * 2;
                     if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
                         this.baseDamage += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
