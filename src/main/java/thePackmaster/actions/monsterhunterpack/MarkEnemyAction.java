@@ -23,7 +23,7 @@ public class MarkEnemyAction extends AbstractGameAction {
     @Override
     public void update(){
         addToBot(new ApplyPowerAction(target, source, new HuntersMark(target, amount), amount));
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters){
+        for (AbstractMonster mo : Wiz.getEnemies()){
             if (mo != target) {
                 if (mo.hasPower(HuntersMark.POWER_ID)) {
                     addToBot(new RemoveSpecificPowerAction(mo, mo, HuntersMark.POWER_ID));
