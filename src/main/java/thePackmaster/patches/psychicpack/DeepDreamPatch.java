@@ -52,7 +52,7 @@ public class DeepDreamPatch {
             dreamHand.setHand(AbstractDungeon.player.drawPile);
         }
         else {
-            logger.info("Played another dream. Adjusting max hand size.");
+            logger.info("Played another dream. Adjusting dream size.");
             DeepDreamPatch.dreamLimit.set(AbstractDungeon.player, DeepDreamPatch.dreamLimit.get(AbstractDungeon.player) + dreamLimit);
         }
     }

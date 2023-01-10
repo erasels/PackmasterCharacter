@@ -11,11 +11,7 @@ import com.megacrit.cardcrawl.vfx.campfire.CampfireSleepScreenCoverEffect;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.vfx.psychicpack.DreamFadeEffect;
 
-import static thePackmaster.SpireAnniversary5Mod.makeID;
-
 public class DeepDreamAction extends AbstractGameAction {
-    private static final String[] TEXT;
-
     private int phase;
     private boolean phaseTriggered;
 
@@ -28,14 +24,6 @@ public class DeepDreamAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (DeepDreamPatch.isDreaming.get(AbstractDungeon.player) && phase == 0)
-        {
-            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[0], true));
-
-            this.isDone = true;
-            return;
-        }
-
         duration += Gdx.graphics.getDeltaTime();
 
         switch (phase)
@@ -60,16 +48,18 @@ public class DeepDreamAction extends AbstractGameAction {
                 }
                 break;
             case 1: //do the swap.
-                for (AbstractCard c : AbstractDungeon.player.hand.group)
-                    c.unhover();
+                if (!DeepDreamPatch.isDreaming(AbstractDungeon.player)) {
+                    for (AbstractCard c : AbstractDungeon.player.hand.group)
+                        c.unhover();
 
-                //actionManager.cleanCardQueue but without fading every other card for no reason
-                AbstractDungeon.actionManager.cardQueue.removeIf(e -> AbstractDungeon.player.hand.contains(e.card));
-                AbstractDungeon.player.releaseCard();
-                AbstractDungeon.player.hand.stopGlowing();
-                AbstractDungeon.player.resetControllerValues(); //also refreshes hand layout
-                if (!Settings.isControllerMode) //only if you're in controller mode, though.
-                    AbstractDungeon.player.hand.refreshHandLayout();
+                    //actionManager.cleanCardQueue but without fading every other card for no reason
+                    AbstractDungeon.actionManager.cardQueue.removeIf(e -> AbstractDungeon.player.hand.contains(e.card));
+                    AbstractDungeon.player.releaseCard();
+                    AbstractDungeon.player.hand.stopGlowing();
+                    AbstractDungeon.player.resetControllerValues(); //also refreshes hand layout
+                    if (!Settings.isControllerMode) //only if you're in controller mode, though.
+                        AbstractDungeon.player.hand.refreshHandLayout();
+                }
 
                 DeepDreamPatch.startDream(this.amount);
 
@@ -85,9 +75,5 @@ public class DeepDreamAction extends AbstractGameAction {
                 }
                 break;
         }
-    }
-
-    static {
-        TEXT = CardCrawlGame.languagePack.getUIString(makeID("DeepDream")).TEXT;
     }
 }
