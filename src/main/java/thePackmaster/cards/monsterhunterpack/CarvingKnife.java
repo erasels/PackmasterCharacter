@@ -61,7 +61,7 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
     public void applyPowers(){
         super.applyPowers();
         this.cardToPreview.clear();
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters){
+        for (AbstractMonster m : Wiz.getEnemies()){
             if (!m.isDead && m.type == AbstractMonster.EnemyType.ELITE || m.type == AbstractMonster.EnemyType.BOSS){
                 this.cardToPreview.add(MonsterWeapon(m.id));
             }
