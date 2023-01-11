@@ -1,0 +1,23 @@
+{
+  "${ModID}:FastHandsPower": {
+    "NAME": "Fast Hands",
+    "DESCRIPTIONS": [
+      "After playing a foreign card, draw ",
+      " cards."
+    ]
+  },
+  "${ModID}:UpgradedFastHandsPower": {
+    "NAME": "Fast Hands",
+    "DESCRIPTIONS": [
+      "After playing a foreign card, draw ",
+      " cards and reduce their cost by 1 this turn."
+    ]
+  },
+  "${ModID}:HorizonboundPower": {
+    "NAME": "Horizonbound",
+    "DESCRIPTIONS": [
+      "Your foreign cards cost ",
+      " less. Increases with each foreign card played. Resets every turn."
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "${ModID}:DimensionCore": {
+    "NAME": "Dimension Core",
+    "FLAVOR": "A crystal sphere containing infinite possibilities. It's cracked.",
+    "DESCRIPTIONS": [
+      "At the start of combat for every 10 cards in your deck shuffle 3 foreign cards into your drawpile. Draw an extra card each turn."
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "${ModID}:BoosterPack": {
+    "NAME": "Booster Pack",
+    "DESCRIPTION": "Add !M! random ${ModID}:different color cards to your hand. NL Give them Ethereal."
+  },
+  "${ModID}:StardustShield": {
+    "NAME": "Stardust Shield",
+    "DESCRIPTION": "Skill ${ModID}:Enchantment. NL Gain !B! Block."
+  },
+  "${ModID}:StarShower": {
+    "NAME": "Star Shower",
+    "DESCRIPTION": "Attack ${ModID}:Enchantment. NL Deal !D! damage."
+  },
+  "${ModID}:PortalPunch": {
+    "NAME": "Portal Punch",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Add {!M!|@=a|>1=!M!} random ${ModID}:different color {!M!|@=card|>1=cards} to your hand. Give {!M!|@=it|>1=them} Ethereal."
+  },
+  "${ModID}:BackupRift": {
+    "NAME": "Enchanted Rift",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Draw {!M!|@=an|>1=!M!} ${ModID}:Enchantment {!M!|@=card|>1=cards}."
+  },
+  "${ModID}:StarLane": {
+    "NAME": "Fetch!",
+    "DESCRIPTION": "Ethereal. NL Skill ${ModID}:Enchantment. NL Draw a card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Skill ${ModID}:Enchantment. NL Draw a Card."
+  },
+  "${ModID}:NeutronStar": {
+    "NAME": "Neutron Star",
+    "DESCRIPTION": "Ethereal. NL Attack ${ModID}:Enchantment. NL Gain !M! Strength NL this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Attack ${ModID}:Enchantment. NL Gain !M! Strength NL this turn."
+  },
+  "${ModID}:FastHands": {
+    "NAME": "Fast Hands",
+    "DESCRIPTION": "After playing a ${ModID}:different color card, draw a card.",
+    "UPGRADE_DESCRIPTION": "After playing a ${ModID}:different color card, draw a card and reduce its cost by 1 this turn."
+  },
+  "${ModID}:DimensionBreach": {
+    "NAME": "Dimension Breach",
+    "DESCRIPTION": "Play !M! random ${ModID}:different color attacks on the enemy."
+  },
+  "${ModID}:Horizonbound": {
+    "NAME": "Horizonbound",
+    "DESCRIPTION": "Ethereal. NL ${ModID}:Different color cards cost 1 less for each other ${ModID}:different color card played this turn.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Different color cards cost 1 less for each other ${ModID}:different color card played this turn."
+  }
+}
