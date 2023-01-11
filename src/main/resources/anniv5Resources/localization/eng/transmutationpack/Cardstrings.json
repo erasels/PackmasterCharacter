@@ -36,7 +36,7 @@
   },
   "${ModID}:ViscousShell": {
     "NAME": "Viscous Shell",
-    "DESCRIPTION": "${ModID}:Mutable: gain !B! Block. NL ${ModID}:Transmute this card."
+    "DESCRIPTION": "${ModID}:Mutable: Gain !B! Block. NL ${ModID}:Transmute this card."
   },
   "${ModID}:DimensionalIcicles": {
     "NAME": "Dimensional Icicles",
