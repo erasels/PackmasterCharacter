@@ -15,9 +15,10 @@
     "NAME": "Discombobulate",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have a Modified card in hand, deals damage twice."
   },
-  "${ModID}:Lighten": {
-    "NAME": "Lighten",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a card in hand: 'Retain.' and (NYI) 'Float this'."
+  "${ModID}:Attach": {
+    "NAME": "Attach",
+    "DESCRIPTION": "Choose a card in hand to ${ModID}:Absorb into a discarded card, then ${ModID}:Modify that card: 'Play the *Absorbed card.'. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Absorb. You will choose the discarded card to Modify after."]
   },
   "${ModID}:Improve": {
     "NAME": "Improve",
