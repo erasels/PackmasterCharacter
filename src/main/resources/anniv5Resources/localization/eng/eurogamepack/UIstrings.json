@@ -1,0 +1,9 @@
+{
+  "${ModID}:EurogamePack": {
+    "TEXT": [
+      "Eurogame",
+      "A pack inspired by the idea of eurogames. Gather ${ModID}:VP to enter ${ModID}:Victory!",
+      "DJM"
+    ]
+  }
+}

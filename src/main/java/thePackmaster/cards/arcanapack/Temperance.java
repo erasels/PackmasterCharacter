@@ -27,6 +27,5 @@ public class Temperance extends AbstractAstrologerCard {
 
     public void upp() {
         exhaust = false;
-        uDesc();
     }
 }

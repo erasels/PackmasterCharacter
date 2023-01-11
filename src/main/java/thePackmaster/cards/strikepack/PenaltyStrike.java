@@ -23,6 +23,7 @@ public class PenaltyStrike extends AbstractStrikePackCard {
         this.damage = this.baseDamage = ATTACK_DMG;
         baseMagicNumber = magicNumber = STR_LOSS;
         this.tags.add(CardTags.STRIKE);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

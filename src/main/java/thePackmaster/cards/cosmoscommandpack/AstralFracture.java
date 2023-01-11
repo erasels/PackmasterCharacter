@@ -17,7 +17,7 @@ public class AstralFracture extends AbstractPackmasterCard implements AmplifyCar
     public final static String ID = makeID("AstralFracture");
 
     public AstralFracture() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         magicNumber = baseMagicNumber = 2;
     }
 

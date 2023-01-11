@@ -73,5 +73,17 @@
     "TEXT": [
       "Enable Pack"
     ]
+  },
+  "${ModID}:Compendium": {
+    "TEXT": [
+      "By Packs"
+    ]
+  },
+  "${ModID}:CardTypeStrings": {
+    "TEXT": [
+      "Chance",
+      "Inspiration",
+      "Mental Break"
+    ]
   }
 }

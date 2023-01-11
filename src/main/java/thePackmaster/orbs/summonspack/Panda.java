@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.summonspack.PandaEvokeAction;
 import thePackmaster.actions.summonspack.PandaSmackAction;
+import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.patches.summonpack.PandaPatch;
 
 import static java.lang.Math.pow;

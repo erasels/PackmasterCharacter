@@ -1,0 +1,35 @@
+[
+  {
+    "PROPER_NAME": "Hunted",
+    "NAMES": [
+      "hunted",
+      "hunted"
+    ],
+    "DESCRIPTION": "Takes 10% more damage for each stack of Hunted on them. When applied, all other hunted enemies are no longer hunted, and other enemies take 10% less damage for each stack."
+  },
+  {
+    "PROPER_NAME": "Not Hunted",
+    "NAMES": [
+      "nothunted",
+      "nothunted"
+    ],
+    "DESCRIPTION": "Takes 10% less damage from attacks for each stack. When the hunted enemy dies, remove this."
+  },
+  {
+    "PROPER_NAME": "Enraged",
+    "NAMES": [
+      "enraged",
+      "enraged!"
+    ],
+    "DESCRIPTION": "At the end of the turn that no enemy intends to attack you, gain 2 Strength."
+  },
+  {
+    "PROPER_NAME": "Glass Armor",
+    "NAMES": [
+      "Glass Armor",
+      "Glass_Armor",
+      "glass_armor"
+    ],
+    "DESCRIPTION": "At the end of the turn, gain Block. When taking unblocked attack damage, remove this."
+  }
+]
