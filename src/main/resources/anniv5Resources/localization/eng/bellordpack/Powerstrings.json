@@ -1,0 +1,16 @@
+{
+  "${ModID}:CuckooPower": {
+    "NAME": "Cuckoo",
+    "DESCRIPTIONS": [
+      "Whenever you draw a #rCurse card, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "${ModID}:LikeClockworkPower": {
+    "NAME": "Like Clockwork",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " #yBlock for each #rCurse or #yStatus card in your hand."
+    ]
+  }
+}

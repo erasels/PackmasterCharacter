@@ -1,0 +1,76 @@
+
+rune.png
+size: 60,150
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a
+  rotate: false
+  xy: 0, 0
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+b
+  rotate: false
+  xy: 30, 0
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+c
+  rotate: false
+  xy: 0, 30
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+d
+  rotate: false
+  xy: 30, 30
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+e
+  rotate: false
+  xy: 0, 60
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+f
+  rotate: false
+  xy: 30, 60
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+g
+  rotate: false
+  xy: 0, 90
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+h
+  rotate: false
+  xy: 30, 90
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+i
+  rotate: false
+  xy: 0, 120
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+j
+  rotate: false
+  xy: 30, 120
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1

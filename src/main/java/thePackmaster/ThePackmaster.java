@@ -6,6 +6,7 @@ import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -50,13 +51,19 @@ public class ThePackmaster extends CustomPlayer {
 
 
     public ThePackmaster(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
-                modID + "Resources/images/char/mainChar/static.scml"));
+        super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), null, null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
-                getLoadout(), 20.0F, -10.0F, 166.0F, 327.0F, new EnergyManager(3));
+                getLoadout(), 0.0F, -10.0F, 206.0F, 230.0F, new EnergyManager(3));
+
+        loadAnimation(
+                SKELETON_ATLAS,
+                SKELETON_JSON,
+                1.0f);
+        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
 
 
         dialogX = (drawX + 0.0F * Settings.scale);
@@ -67,7 +74,7 @@ public class ThePackmaster extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                80, 80, 3, 99, 5, this, getStartingRelics(),
+                75, 75, 3, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 

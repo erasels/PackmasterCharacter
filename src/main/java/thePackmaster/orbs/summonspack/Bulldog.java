@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;

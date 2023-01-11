@@ -3,6 +3,7 @@ package thePackmaster.actions.summonspack;
 import basemod.helpers.VfxBuilder;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.patches.ColoredDamagePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import com.badlogic.gdx.graphics.Color;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.util.TexLoader;
 
@@ -53,32 +55,68 @@ public class PewcumberAction extends AbstractGameAction {
 
         // I'm sure there's a better way but this is fine
         int x = MathUtils.random(0, 9);
-        if (x == 0)
+        if (x == 0) {
             vegetableImage = TexLoader.getTexture(CUCUMBER_PATH);
-        else if (x == 1)
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(this, new Color(0, 0.6f, 0, 1f));
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+        }
+        else if (x == 1) {
             vegetableImage = TexLoader.getTexture(POTATO_PATH);
-        else if (x == 2)
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(this, Color.TAN.cpy());
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+        }
+        else if (x == 2) {
             vegetableImage = TexLoader.getTexture(EGGPLANT_PATH);
-        else if (x == 3)
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(this, new Color(0.5f, 0, 0.6f, 1));
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+        }
+        else if (x == 3) {
             vegetableImage = TexLoader.getTexture(CARROT_PATH);
-        else if (x == 4)
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(this, Color.ORANGE.cpy());
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+        }
+        else if (x == 4) {
             vegetableImage = TexLoader.getTexture(ONION_PATH);
-        else if (x == 5)
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(this, new Color(1f, 0.95f, 0.85f, 1f));
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+        }
+        else if (x == 5) {
             vegetableImage = TexLoader.getTexture(BROCCOLI_PATH);
-        else if (x == 6)
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(this, Color.GREEN.cpy());
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+        }
+        else if (x == 6) {
             vegetableImage = TexLoader.getTexture(TOMATO_PATH);
-        else if (x == 7)
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(this, Color.RED.cpy());
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+        }
+        else if (x == 7) {
             vegetableImage = TexLoader.getTexture(LETTUCE_PATH);
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(this, Color.GREEN.cpy());
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+        }
         else {
             int y = MathUtils.random(0, 3);
-            if (y == 0)
+            if (y == 0) {
                 vegetableImage = TexLoader.getTexture(BELL_GREEN_PATH);
-            else if (y == 1)
+                ColoredDamagePatch.DamageActionColorField.damageColor.set(this, Color.GREEN.cpy());
+                ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+            }
+            else if (y == 1) {
                 vegetableImage = TexLoader.getTexture(BELL_RED_PATH);
-            else if (y == 2)
+                ColoredDamagePatch.DamageActionColorField.damageColor.set(this, Color.RED.cpy());
+                ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+            }
+            else if (y == 2) {
                 vegetableImage = TexLoader.getTexture(BELL_YELLOW_PATH);
-            else
+                ColoredDamagePatch.DamageActionColorField.damageColor.set(this, Color.YELLOW.cpy());
+                ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+            }
+            else {
                 vegetableImage = TexLoader.getTexture(BELL_ORANGE_PATH);
+                ColoredDamagePatch.DamageActionColorField.damageColor.set(this, Color.ORANGE.cpy());
+                ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+            }
         }
     }
 

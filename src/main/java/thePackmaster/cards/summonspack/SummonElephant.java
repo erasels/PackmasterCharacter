@@ -1,6 +1,7 @@
 package thePackmaster.cards.summonspack;
 
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -14,6 +15,8 @@ import thePackmaster.vfx.summonspack.ElephantDropEffect;
 import thePackmaster.vfx.summonspack.LongElephantDropEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
+import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.*;
 
 public class SummonElephant extends AbstractPackmasterCard {
@@ -23,9 +26,9 @@ public class SummonElephant extends AbstractPackmasterCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 14;
     private static final int UPGRADE_DAMAGE = 4;
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 3;
 
     private static boolean seenThisSession;
 
@@ -34,6 +37,8 @@ public class SummonElephant extends AbstractPackmasterCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
+        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
+        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
     }
 
     @Override

@@ -41,8 +41,11 @@ public class Manaburst extends AbstractPackmasterCard {
                         .filter(c -> c.cost == 0 && c.type == CardType.ATTACK)
                         .collect(Collectors.toList());
                 for (int i = 0; i < magicNumber; i++) {
-                    if(!tmp.isEmpty() && Wiz.hand().size() < BaseMod.MAX_HAND_SIZE)
-                        Wiz.p().discardPile.moveToHand(tmp.getRandomCard(AbstractDungeon.cardRandomRng));
+                    if (!tmp.isEmpty() && Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
+                        AbstractCard tar = tmp.getRandomCard(AbstractDungeon.cardRandomRng);
+                        tmp.removeCard(tar);
+                        Wiz.p().discardPile.moveToHand(tar);
+                    }
                 }
                 isDone = true;
             }

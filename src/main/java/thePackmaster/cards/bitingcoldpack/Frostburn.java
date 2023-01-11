@@ -18,10 +18,8 @@ public class Frostburn extends BitingColdCard {
 
     public Frostburn() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        magicNumber = baseMagicNumber = 12;
-        secondMagic = baseSecondMagic = 2;
+        magicNumber = baseMagicNumber = 16;
         this.cardsToPreview = new Burn();
-        this.cardsToPreview.upgrade();
 
     }
 
@@ -34,10 +32,10 @@ public class Frostburn extends BitingColdCard {
             applyToEnemy(mo, new FrostbitePower(mo, magicNumber));
 
         addToBot(new WaitAction(0.6F));
-        addToBot(new MakeTempCardInDiscardAction(this.cardsToPreview, 2));
+        addToBot(new MakeTempCardInDiscardAction(this.cardsToPreview,1));
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(4);
     }
 }

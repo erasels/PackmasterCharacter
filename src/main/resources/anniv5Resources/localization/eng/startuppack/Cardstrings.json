@@ -1,7 +1,7 @@
 {
   "${ModID}:MessUp": {
     "NAME": "Mess Up",
-    "DESCRIPTION": "Deal damage equal to the amount of cards in your draw pile. NL Shuffle your Discard pile into your deck.",
+    "DESCRIPTION": "Deal damage equal to the amount of cards in your draw pile. NL Shuffle your Discard pile into your draw pile.",
     "UPGRADE_DESCRIPTION": "Shuffle your Discard pile into your deck. NL Deal damage equal to the amount of cards in your draw pile.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"

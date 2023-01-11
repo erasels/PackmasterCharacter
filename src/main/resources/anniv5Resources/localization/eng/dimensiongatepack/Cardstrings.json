@@ -34,7 +34,7 @@
   },
   "${ModID}:MagicMissile": {
     "NAME": "Magic Missile",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL Increase the damage dealt by *Magic cards by !M! this turn."
+    "DESCRIPTION": "*Magic. Retain. NL Deal !D! damage. NL Increase the damage dealt by *Magic cards by !M! this turn."
   },
   "${ModID}:Minniegun": {
     "NAME": "Minniegun",
