@@ -11,7 +11,7 @@ public class MiniHakkero extends AbstractPackmasterRelic {
     private static final int GAIN_AMT = 2;
 
     public MiniHakkero() {
-        super(ID, RelicTier.COMMON, LandingSound.MAGICAL, MarisaPack.ID);
+        super(ID, RelicTier.UNCOMMON, LandingSound.MAGICAL, MarisaPack.ID);
     }
 
     @Override
