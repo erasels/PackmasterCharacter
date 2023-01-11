@@ -16,7 +16,7 @@ public class ChargeUpPower extends AbstractPackmasterPower implements CloneableP
     public static final String POWER_ID = makeID(ChargeUpPower.class.getSimpleName().replace("Power", ""));
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
-    public static int THRESHOLD = 8, MODIFY_AMT = 2;
+    public static int THRESHOLD = 6, MODIFY_AMT = 2;
 
     public ChargeUpPower(int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, Wiz.p(), amount);
