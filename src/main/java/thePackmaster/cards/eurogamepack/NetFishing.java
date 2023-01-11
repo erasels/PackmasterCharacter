@@ -13,7 +13,7 @@ public class NetFishing extends AbstractVPCard{
     public NetFishing() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         //this.baseMagicNumber = this.magicNumber = 4;
-        this.baseSecondMagic = secondMagic = 8;
+        this.baseSecondMagic = secondMagic = 7;
         this.baseBlock = 7;
 
     }
@@ -24,6 +24,6 @@ public class NetFishing extends AbstractVPCard{
     }
     public void upp() {
             this.upgradeBlock(4);
-            this.upgradeSecondMagic(6);
+            this.upgradeSecondMagic(3);
     }
 }
