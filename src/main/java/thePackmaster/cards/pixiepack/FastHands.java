@@ -2,14 +2,9 @@ package thePackmaster.cards.pixiepack;
 
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.ThePackmaster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.pixiepack.FastHandsPower;
 import thePackmaster.powers.pixiepack.UpgradedFastHandsPower;
-
-import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

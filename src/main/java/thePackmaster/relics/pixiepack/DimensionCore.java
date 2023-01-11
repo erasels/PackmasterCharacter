@@ -1,15 +1,11 @@
 package thePackmaster.relics.pixiepack;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.packs.MarisaPack;
 import thePackmaster.packs.PixiePack;
-import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
-import thePackmaster.util.Wiz;
 
 public class DimensionCore extends AbstractPackmasterRelic {
     public static final String ID = SpireAnniversary5Mod.makeID("DimensionCore");

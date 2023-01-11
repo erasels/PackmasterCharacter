@@ -1,24 +1,13 @@
 package thePackmaster.cards.pixiepack;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
-import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
-import thePackmaster.ThePackmaster;
 import thePackmaster.actions.pixiepack.EnchantmentAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.PixiePack;
-
-import javax.swing.text.html.HTMLDocument;
-
-import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

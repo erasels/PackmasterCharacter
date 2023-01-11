@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.ThePackmaster;
-import thePackmaster.cards.downfallpack.*;
 import thePackmaster.cards.pixiepack.*;
 
 import java.util.ArrayList;
