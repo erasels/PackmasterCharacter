@@ -30,7 +30,7 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ${ModID}:Transmute up to !M! cards."
   },
   "${ModID}:SearingSynthesis": {
-    "NAME": "SearingSynthesis",
+    "NAME": "Searing Synthesis",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Transmute a card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Transmute up to !M! cards."
   },
