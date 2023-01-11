@@ -15,7 +15,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class GalacticHalo extends AbstractPackmasterCard {
     public final static String ID = makeID(GalacticHalo.class.getSimpleName());
-    private static final int BLK = 9, BLK_UPG = 4;
+    private static final int BLK = 10, BLK_UPG = 3;
     private static final int MAGIC = 3;
 
     public GalacticHalo() {
