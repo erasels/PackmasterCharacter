@@ -18,7 +18,6 @@ public class Curse extends LockingCard {
     public Curse() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 3;
-        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -31,6 +30,6 @@ public class Curse extends LockingCard {
     }
 
     public void upp() {
-        isEthereal = false;
+        upgradeBaseCost(0);
     }
 }

@@ -20,7 +20,7 @@ public class CurseEffect extends AbstractGameEffect {
             method = SpirePatch.CLASS
     )
     public static class Field {
-        public static SpireField<Integer> curseCount = new SpireField<>(()->0);
+        public static SpireField<Integer> curseCount = new SpireField<>(()->2);
     }
 
     private static final Color ANGRY = new Color(0.3f, 0.0f, 0.1f, 1.0f);
