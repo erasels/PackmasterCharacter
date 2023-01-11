@@ -12,7 +12,7 @@ public class Recall extends AbstractPackmasterCard {
     public final static String ID = makeID("Recall");
 
     public Recall() {
-        super(ID, 3, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override
