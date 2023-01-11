@@ -15,6 +15,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -37,13 +38,16 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
+import thePackmaster.cards.eurogamepack.AbstractVPCard;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
+import thePackmaster.powers.eurogamepack.VictoryPoints;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
@@ -148,6 +152,7 @@ public class SpireAnniversary5Mod implements
     private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
+    public static final ArrayList<Louse> louseList = new ArrayList<>();
 
     public static boolean selectedCards = false;
 
@@ -378,6 +383,12 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
+        for (AbstractCard cardInDeck : p().masterDeck.group) {
+            if (cardInDeck instanceof AbstractVPCard) {
+                atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
+                break;
+            }
+        }
     }
 
     public static void declarePacks() {

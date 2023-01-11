@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Victory",
+    "NAMES": [
+      "victory"
+    ],
+    "DESCRIPTION": "#yStance. NL Gain [E] [E] and deal #b50% more damage. NL When exited, draw #b2 cards. NL Exited at start of turn."
+  },
+  {
+    "PROPER_NAME": "Victory Points",
+    "NAMES": [
+      "vp"
+    ],
+    "DESCRIPTION": "When you obtain #b100 stacks of this, enter #yVictory."
+  }
+]

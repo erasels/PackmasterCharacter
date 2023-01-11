@@ -15,8 +15,8 @@
   },
   "${ModID}:Potential": {
     "NAME": "Potential",
-    "DESCRIPTION": "Gain !M! Temporary HP. NL Draw !${ModID}:m2! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Temporary HP. NL Draw !${ModID}:m2! cards. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL Draw !${ModID}:m2! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Temporary_HP. NL Draw !${ModID}:m2! cards. NL Exhaust."
   },
   "${ModID}:Aura": {
     "NAME": "Aura",

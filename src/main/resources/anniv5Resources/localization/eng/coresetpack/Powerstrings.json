@@ -2,9 +2,12 @@
   "${ModID}:MayhemFormPower": {
     "NAME": "Mayhem Form",
     "DESCRIPTIONS": [
-      "(NYI) At the start of your turn, gain #b",
-      " [E] and #b",
-      " Block for every 10 cards in your draw pile."
+      "Once per turn, when you reach #b2 or fewer cards in hand, draw #b",
+      " cards and gain ",
+      "[E]",
+      " . ",
+      " Hasn't triggered this turn.",
+      " Has triggered this turn."
     ]
   }
 }

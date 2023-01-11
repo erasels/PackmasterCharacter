@@ -73,5 +73,10 @@
     "TEXT": [
       "Enable Pack"
     ]
+  },
+  "${ModID}:Compendium": {
+    "TEXT": [
+      "By Packs"
+    ]
   }
 }

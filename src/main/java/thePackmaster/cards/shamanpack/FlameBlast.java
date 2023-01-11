@@ -16,9 +16,9 @@ public class FlameBlast extends AbstractPackmasterCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int IGNITE = 3;
-    private static final int UPGRADE_IGNITE = 1;
+    private static final int IGNITE = 4;
     private static final int VULNERABLE = 2;
+    private static final int UPGRADE_VULNERABLE = 1;
 
     public FlameBlast() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
@@ -28,7 +28,7 @@ public class FlameBlast extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        this.upgradeMagicNumber(UPGRADE_IGNITE);
+        this.upgradeSecondMagic(UPGRADE_VULNERABLE);
     }
 
     @Override

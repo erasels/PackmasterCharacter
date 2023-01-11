@@ -1,0 +1,133 @@
+{
+  "${ModID}:HuntingStrike": {
+    "NAME": "Hunting Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals double damage to elites and bosses."
+  },
+  "${ModID}:Focus": {
+    "NAME": "Track",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! ${ModID}:Hunted"
+  },
+  "${ModID}:PerfectDodge": {
+    "NAME": "Perfect Dodge",
+    "DESCRIPTION": "Gain !B! Block. NL If your block is broken exactly this turn, gain !M! Strength."
+  },
+  "${ModID}:Greatsword": {
+    "NAME": "Greatsword",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each until played."
+  },
+  "${ModID}:HuntingInstincts": {
+    "NAME": "Hunter's Instincts",
+    "DESCRIPTION": "Gain !B! Block. NL Gains double Block if facing an elite or boss."
+  },
+  "${ModID}:SkullClub": {
+    "NAME": "Skull Club",
+    "DESCRIPTION": "Deal !D! damage. NL If the target survives, become ${ModID}:Enraged! NL Exhaust."
+  },
+  "${ModID}:ShellPauldrons": {
+    "NAME": "Shell Platemail",
+    "DESCRIPTION": "Gain !M! ${ModID}:Glass_Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! ${ModID}:Glass_Armor."
+  },
+  "${ModID}:CoreBlaster": {
+    "NAME": "Core Blaster",
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Core *Blinder to your draw pile. NL Exhaust."
+  },
+  "${ModID}:CoreBlinder": {
+    "NAME": "Core Blinder",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster to your draw pile. NL Exhaust."
+  },
+  "${ModID}:GuardianShield": {
+    "NAME": "Guardian Shield",
+    "DESCRIPTION": "Gain !M! Block at the end of your turn. NL Whenever you are attacked, deal !M! damage back."
+  },
+  "${ModID}:InfernoDaggers": {
+    "NAME": "Inferno Daggers",
+    "DESCRIPTION": "Retain. NL Deal !D! damage !M! times and set this card's cost to 6. NL When Retained, reduce this card's cost by 1.",
+    "UPGRADE_DESCRIPTION": "Innate. Retain. NL Deal !D! damage !M! times and set this card's cost to 6. NL When Retained, reduce this card's cost by 1."
+  },
+  "${ModID}:StabManual": {
+    "NAME": "Stabbing Manual",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Shivs to your hand. Increase the number of *Shivs this adds by 1 for the rest of combat."
+  },
+  "${ModID}:SlimeHammer": {
+    "NAME": "Slime Hammer",
+    "DESCRIPTION": "Deal !D! damage at the end of the next turn.",
+    "UPGRADE_DESCRIPTION": "Apply 1 Weak. NL Deal !D! damage at the end of the next turn."
+  },
+  "${ModID}:SlaverWhip": {
+    "NAME": "Slaver's Whip",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak and Vulnerable. NL If this kills an enemy, add it back to your hand and it costs 0 this turn."
+  },
+  "${ModID}:GremlinLance": {
+    "NAME": "Gremlin Lance",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E] and draw a card."
+  },
+  "${ModID}:ChampMail": {
+    "NAME": "Champion's Platemail",
+    "DESCRIPTION": "Gain !B! Block. NL If you are at 50% Health or below, remove all your debuffs and gain !M! Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you are at 50% Health or below, remove all your debuffs and gain !M! Strength."
+  },
+  "${ModID}:CursedBow": {
+    "NAME": "Cursed Bow",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak and Vulnerable. NL Exhaust."
+  },
+  "${ModID}:HyperBlaster": {
+    "NAME": "Hyper Blaster",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! Voids into your draw pile."
+  },
+  "${ModID}:EphemeralShroud": {
+    "NAME": "Ephemeral Shroud",
+    "DESCRIPTION": "Gain !M! Intangible. NL Exhaust."
+  },
+  "${ModID}:StoneHelm": {
+    "NAME": "Stone Helm",
+    "DESCRIPTION": "Gain !B! Block. Reduced by 2 for every card you've played this turn. NL End your turn."
+  },
+  "${ModID}:TimepieceTiara": {
+    "NAME": "Timepiece Tiara",
+    "DESCRIPTION": "Gain 3 Strength every 12 cards you play.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain 3 Strength every 12 cards you play."
+  },
+  "${ModID}:DonuAmulet": {
+    "NAME": "Donu Amulet",
+    "DESCRIPTION": "Gain !M! Strength."
+  },
+  "${ModID}:DecaAmulet": {
+    "NAME": "Deca Amulet",
+    "DESCRIPTION": "Gain !M! *Plated *Armor."
+  },
+  "${ModID}:SpireSpear": {
+    "NAME": "Spire Spear",
+    "DESCRIPTION": "Deal !D! damage. !M! times."
+  },
+  "${ModID}:SpireShield": {
+    "NAME": "Spire Shield",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:CarvingKnife": {
+    "NAME": "Carving Knife",
+    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss enemy, gain its weapon or armor card. NL Exhaust."
+  },
+  "${ModID}:AwakenedRitualDagger": {
+    "NAME": "Awakened Dagger",
+    "DESCRIPTION": "Deal !D! damage. If Fatal, Heal to full HP. NL Exhaust."
+  },
+  "${ModID}:HuntingContract": {
+    "NAME": "Hunting Contract",
+    "DESCRIPTION": "Innate. NL Apply !M! ${ModID}:Hunted. NL Exhaust."
+  },
+  "${ModID}:HunterRank": {
+    "NAME": "Hunter Rank",
+    "DESCRIPTION": "Gain !M! Strength and Dexterity. Increases by 1 for each Elite and Boss enemy you've defeated."
+  },
+  "${ModID}:TranqBomb": {
+    "NAME": "Tranquilizer Bomb",
+    "DESCRIPTION": "Deal !D! damage. NL Target enemy loses !M! Strength. NL If this would kill an enemy, reduce it to 1 hp instead. NL Exhaust."
+  },
+  "${ModID}:Paintball": {
+    "NAME": "Paintball",
+    "DESCRIPTION": "Apply !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! card this turn.",
+    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! cards this turn."
+  }
+}

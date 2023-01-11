@@ -1,12 +1,11 @@
 package thePackmaster.cards.marisapack;
 
-import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.marisapack.BetterFireballEffect;
@@ -18,6 +17,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class ShootingEcho extends AbstractPackmasterCard {
     public final static String ID = makeID(ShootingEcho.class.getSimpleName());
+    private static final String text = CardCrawlGame.languagePack.getUIString("ExhaustAction").TEXT[0];
     private static final int DMG = 11, UPG_DMG = 3;
 
     public ShootingEcho() {
@@ -25,23 +25,20 @@ public class ShootingEcho extends AbstractPackmasterCard {
         damage = baseDamage = DMG;
         exhaust = true;
 
-        setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
+        setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT) + ".png",
+                "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT) + ".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.vfx(new MissileStrikeEffect(m.hb.cX, m.hb.cY, BetterFireballEffect.randomFlareColor()), Settings.ACTION_DUR_MED);
+        Wiz.vfx(new MissileStrikeEffect(m.hb.cX, m.hb.cY, BetterFireballEffect.randomFlareColor()), Settings.ACTION_DUR_FASTER);
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                if(!Wiz.hand().isEmpty()) {
-                    Wiz.makeInHand(ShootingEcho.this);
-                }
-                isDone = true;
-            }
-        });
-        Wiz.atb(new ExhaustAction(1, false, false, false));
+        Wiz.atb(new SelectCardsInHandAction(1, text, false, false, c -> true, list -> {
+            ShootingEcho.this.resetAttributes();
+            Wiz.makeInHand(ShootingEcho.this, list.size());
+
+            list.forEach(c -> Wiz.hand().moveToExhaustPile(c));
+            list.clear();
+        }));
     }
 
     public void upp() {
