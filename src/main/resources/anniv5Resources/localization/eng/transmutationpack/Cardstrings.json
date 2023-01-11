@@ -9,7 +9,7 @@
   },
   "${ModID}:CrystalResonance": {
     "NAME": "Crystal Resonance",
-    "DESCRIPTION": "Whenever you ${ModID}:Transmute a card, the new card is Upgraded."
+    "DESCRIPTION": "Whenever you ${ModID}:Transmute a card, draw a card."
   },
   "${ModID}:Drench": {
     "NAME": "Drench",
