@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 
 public class EXPLOSIONEffect extends AbstractGameEffect {
-    private static final float PER_FRAME = 0.02f;
+    private static final float PER_FRAME = 0.04f;
     private static final int FRAME_COUNT = 17;
     private static final int WIDTH = 71, HEIGHT = 100;
     private static final float X_OFF = WIDTH / 2f, Y_OFF = HEIGHT / 2f;
@@ -47,18 +47,20 @@ public class EXPLOSIONEffect extends AbstractGameEffect {
     private float frameTime;
     private int currentFrame = -1;
 
+    private final float frameRate = PER_FRAME * MathUtils.random(0.9f, 1.4f);
+
     public EXPLOSIONEffect(float x, float y, float maxDelay) {
         this.x = x;
         this.y = y;
         this.color = Color.WHITE.cpy();
-        frameTime = PER_FRAME + MathUtils.random(maxDelay);
+        frameTime = frameRate + MathUtils.random(maxDelay);
     }
 
     @Override
     public void update() {
         frameTime -= Gdx.graphics.getDeltaTime();
         if (frameTime <= 0) {
-            frameTime = PER_FRAME;
+            frameTime += frameRate;
             ++currentFrame;
             if (currentFrame >= frames.length) {
                 isDone = true;
@@ -70,7 +72,7 @@ public class EXPLOSIONEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         if (currentFrame >= 0 && currentFrame < frames.length) {
             sb.setColor(color);
-            sb.draw(frames[currentFrame], x - X_OFF, y - Y_OFF, X_OFF, Y_OFF, WIDTH, HEIGHT, Settings.scale * 2, Settings.scale * 2, 0);
+            sb.draw(frames[currentFrame], x - X_OFF, y - Y_OFF, X_OFF, Y_OFF, WIDTH, HEIGHT, Settings.scale * 4, Settings.scale * 4, 0);
         }
     }
 
