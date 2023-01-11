@@ -383,10 +383,8 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
-        Iterator<AbstractCard> deckDetect = p().masterDeck.group.iterator();
-        while (deckDetect.hasNext()){
-            AbstractCard cardInDeck = deckDetect.next();
-            if (AbstractVPCard.class.isAssignableFrom(cardInDeck.getClass()) )  {
+        for (AbstractCard cardInDeck : p().masterDeck.group) {
+            if (cardInDeck instanceof AbstractVPCard) {
                 atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
                 break;
             }
