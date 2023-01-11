@@ -21,7 +21,7 @@ public class Brainwave extends AbstractPackmasterCard {
 
     public Brainwave() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 9;
+        baseDamage = 10;
         isMultiDamage = true;
     }
 
@@ -35,6 +35,6 @@ public class Brainwave extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
     }
 }
