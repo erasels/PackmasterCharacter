@@ -3,6 +3,7 @@ package thePackmaster.cards.psychicpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -46,5 +47,16 @@ public class MalleableFire extends AbstractPackmasterCard {
         upgradeDamage(3);
         if (cardsToPreview.timesUpgraded < this.timesUpgraded)
             SuperUpgradeAction.silentForceUpgrade(cardsToPreview);
+    }
+
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        AbstractCard c = super.makeStatEquivalentCopy();
+        if (c.cardsToPreview != null) {
+            while (c.cardsToPreview.timesUpgraded < this.timesUpgraded) {
+                SuperUpgradeAction.silentForceUpgrade(c.cardsToPreview);
+            }
+        }
+        return c;
     }
 }

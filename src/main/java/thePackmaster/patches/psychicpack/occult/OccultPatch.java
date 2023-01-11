@@ -27,7 +27,7 @@ import java.util.Set;
 //hooray for dynamic patching
 public class OccultPatch {
     public static void patch(ClassFinder finder, ClassPool pool) throws NotFoundException {
-        System.out.println("- Occult patch:");
+        //System.out.println("- Occult patch:");
 
         // Get all classes for AbstractCards
         ClassFilter filter = new AndClassFilter(
@@ -42,7 +42,7 @@ public class OccultPatch {
         ArrayList<ClassInfo> foundClasses = new ArrayList<>();
         finder.findClasses(foundClasses, filter);
 
-        System.out.println("\t- Potential targets found.\n\t- Patching:");
+        //System.out.println("\t- Potential targets found.\n\t- Patching:");
 
         int skipped = 0, patched = 0;
 
@@ -69,7 +69,7 @@ public class OccultPatch {
                 for (String s : references) {
                     if (pool.getOrNull(s) == null)
                     {
-                        System.out.println("\t\t- Class " + ctClass.getSimpleName() + " refers to an unloaded class, " + s + ", and will be skipped.");
+                        //System.out.println("\t\t- Class " + ctClass.getSimpleName() + " refers to an unloaded class, " + s + ", and will be skipped.");
                         continue outer;
                     }
                 }
@@ -112,8 +112,8 @@ public class OccultPatch {
 
                 if (changed)
                 {
-                    if (!logged)
-                        System.out.println("\t\t- Class patched: " + ctClass.getSimpleName());
+                    /*if (!logged)
+                        System.out.println("\t\t- Class patched: " + ctClass.getSimpleName());*/
                     ++patched;
                 }
                 else
@@ -218,7 +218,7 @@ public class OccultPatch {
         }
         if (canUse != null) {
             //Check if canUse method directly returns false
-            System.out.println("\t\t- Class has canUse: " + cardClass.getSimpleName());
+            //System.out.println("\t\t- Class has canUse: " + cardClass.getSimpleName());
             StringBuilder opCode = new StringBuilder();
             CodeAttribute ca = canUse.getMethodInfo().getCodeAttribute();
 
@@ -246,14 +246,14 @@ public class OccultPatch {
                 }
                 lastOp = op;
             }
-            System.out.println("\t\t\t- Opcodes: " + opCode);
+            //System.out.println("\t\t\t- Opcodes: " + opCode);
 
             if (unplayable) {
-                System.out.println("\t\t\t- " + "Unplayable.");
+                //System.out.println("\t\t\t- " + "Unplayable.");
                 addUnusableAnnotation(cardClass);
             }
             else {
-                System.out.println("\t\t\t- " + (hardFalse ? "Sometimes unplayable?" : "Not unplayable."));
+                //System.out.println("\t\t\t- " + (hardFalse ? "Sometimes unplayable?" : "Not unplayable."));
                 addPlayableAnnotation(cardClass, hardFalse);
             }
             return true;
@@ -363,17 +363,17 @@ public class OccultPatch {
                 //unplayableCards shouldn't contain this since its superclass is just AbstractCard, which doesn't guarantee unplayability.
                 if (!hasPlayableAnnotation(c)) {
                     //Does not have a canUse override that sometimes returns true.
-                    System.out.println("\t- Unplayable: " + c.name);
+                    //System.out.println("\t- Unplayable: " + c.name);
                     alwaysUnplayable.add(c.getClass().getName());
                 }
             }
             else {
                 if (hasUnplayableAnnotation(c)) {
-                    System.out.println("\t- Unplayable: " + c.name);
+                    //System.out.println("\t- Unplayable: " + c.name);
                     alwaysUnplayable.add(c.getClass().getName());
                 }
                 if (sometimesUnplayable(c)) {
-                    System.out.println("\t- Sometimes unplayable? " + c.name);
+                    //System.out.println("\t- Sometimes unplayable? " + c.name);
                     sometimesUnplayable.add(c.getClass().getName());
                 }
             }
