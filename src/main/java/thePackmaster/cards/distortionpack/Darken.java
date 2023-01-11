@@ -39,6 +39,7 @@ public class Darken extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeSecondMagic(4);
+        upgradeMagicNumber(2);
+        upgradeSecondMagic(2);
     }
 }
