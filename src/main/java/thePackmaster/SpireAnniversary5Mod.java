@@ -378,6 +378,11 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(GUN2_KEY,GUN2_OGG);
         BaseMod.addAudio(GUN3_KEY,GUN3_OGG);
         BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
+
+        BaseMod.addAudio(modID + "dice1",  modID + "Resources/audio/DiceRoll1.wav");
+        BaseMod.addAudio(modID + "dice2",  modID + "Resources/audio/DiceRoll2.wav");
+        BaseMod.addAudio(modID + "dice3",  modID + "Resources/audio/DiceRoll3.wav");
+        BaseMod.addAudio(modID + "dice4",  modID + "Resources/audio/DiceRoll4.wav");
     }
 
     @Override
