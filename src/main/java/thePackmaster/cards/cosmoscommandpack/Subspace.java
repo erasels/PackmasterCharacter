@@ -12,7 +12,7 @@ public class Subspace extends AbstractPackmasterCard {
     public final static String ID = makeID("Subspace");
 
     public Subspace() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         magicNumber = baseMagicNumber = 1;
         this.exhaust = true;
     }
