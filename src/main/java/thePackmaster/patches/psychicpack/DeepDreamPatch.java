@@ -98,7 +98,7 @@ public class DeepDreamPatch {
         ArrayList<ClassInfo> foundClasses = new ArrayList<>();
         finder.findClasses(foundClasses, filter);
 
-        System.out.println("\t- Potential targets found.\n\t- Patching:");
+        //System.out.println("\t- Potential targets found.\n\t- Patching:");
 
         int skipped = 0, patched = 0;
         HandAccessEditor exprEditor = new HandAccessEditor();
@@ -122,7 +122,7 @@ public class DeepDreamPatch {
                 for (String s : references) {
                     if (pool.getOrNull(s) == null)
                     {
-                        System.out.println("\t\t- Class " + ctClass.getSimpleName() + " refers to an unloaded class, " + s + ", and will be skipped.");
+                        //System.out.println("\t\t- Class " + ctClass.getSimpleName() + " refers to an unloaded class, " + s + ", and will be skipped.");
                         continue outer;
                     }
                 }
@@ -145,7 +145,7 @@ public class DeepDreamPatch {
 
                 if (exprEditor.changed)
                 {
-                    System.out.println("\t\t- Class patched: " + ctClass.getSimpleName());
+                    //System.out.println("\t\t- Class patched: " + ctClass.getSimpleName());
                     ++patched;
                 }
                 else
