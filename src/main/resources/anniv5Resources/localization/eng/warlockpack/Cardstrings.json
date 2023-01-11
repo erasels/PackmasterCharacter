@@ -45,6 +45,6 @@
   "${ModID}:RunedMithrilRod": {
     "NAME": "Runed Mithril Rod",
     "DESCRIPTION": "Retain. NL After you draw !M! cards while this is in your hand, reduce the cost of cards in your hand by 1 this turn and discard this.",
-    "EXTENDED_DESCRIPTION": ["I can't play this card.", " NL ({0} drawn.)"]
+    "EXTENDED_DESCRIPTION": ["I can't play this card.", " ({0} drawn.)"]
   }
 }
