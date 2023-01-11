@@ -61,6 +61,7 @@ import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
 
+import javax.smartcardio.Card;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
@@ -452,7 +453,12 @@ public class SpireAnniversary5Mod implements
     }
 
     public static AbstractCard getRandomCardFromPack(AbstractCardPack pack) {
-        return pack.cards.get(AbstractDungeon.cardRandomRng.random(0, pack.cards.size() - 1)).makeCopy();
+        List<AbstractCard> validCards = pack.cards
+                .stream()
+                .filter(c -> c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
+                .filter(c -> !c.hasTag(AbstractCard.CardTags.HEALING))
+                .collect(Collectors.toList());
+        return validCards.get(AbstractDungeon.cardRandomRng.random(0, validCards.size() - 1)).makeCopy();
     }
 
 
