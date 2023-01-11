@@ -81,7 +81,7 @@ public class DicePower extends AbstractPackmasterPower {
         int advantage = getAdvantage();
         for(int roll = 0; roll <= advantage; roll++)
         {
-            int newRoll = AbstractDungeon.miscRng.random(sides - 1) + 1;
+            int newRoll = AbstractDungeon.cardRandomRng.random(sides - 1) + 1;
             //ADD VFX HERE
             if(newRoll > curRoll)
                 curRoll = newRoll;

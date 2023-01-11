@@ -3,14 +3,7 @@ package thePackmaster.cards.boardgamepack;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import thePackmaster.actions.boardgamepack.RollDiceAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.boardgamepack.DicePower;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

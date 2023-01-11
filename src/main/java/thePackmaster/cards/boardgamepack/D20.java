@@ -5,6 +5,7 @@ import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.actions.boardgamepack.DelayedDiceRollAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.boardgamepack.DicePower;
 import thePackmaster.powers.boardgamepack.OneTimeAdvantagePower;
@@ -26,15 +27,8 @@ public class D20 extends AbstractBoardCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        addToBot(new RollDiceAction(DICE));
-
-        if(p.powers.contains(OneTimeAdvantagePower.POWER_ID))
-            p.powers.get(p.powers.indexOf(OneTimeAdvantagePower.POWER_ID)).amount++;
-        else
-            p.powers.add(new OneTimeAdvantagePower(p, 1));
-
-        //addToTop(new ApplyPowerAction(p, p, new OneTimeAdvantagePower(p, 1), 1));
-        addToBot(new ApplyPowerAction(p, p, new DicePower(p, DICE), DICE));
+        addToBot(new ApplyPowerAction(p, p, new OneTimeAdvantagePower(p, 1), 1));
+        addToBot(new DelayedDiceRollAction(DICE, 1));
     }
 
     @Override

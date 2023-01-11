@@ -17,16 +17,16 @@
   "${ModID}:OneTimeAdvantagePower": {
     "NAME": "Advantage",
     "DESCRIPTIONS": [
-      "Roll the next Dice an additional time and take the highest value.",
-      "Roll the next Dice an additional #b",
+      "Roll the next #yDice an additional time and take the highest value.",
+      "Roll the next #yDice an additional #b",
       " times and take the highest value."
     ]
   },
   "${ModID}:AdvantagePower": {
     "NAME": "Advantage",
     "DESCRIPTIONS": [
-      "Roll Dice an additional time and take the highest value.",
-      "Roll Dice an additional #b",
+      "Roll #yDice an additional time and take the highest value.",
+      "Roll #yDice an additional #b",
       " times and take the highest value."
     ]
   },
