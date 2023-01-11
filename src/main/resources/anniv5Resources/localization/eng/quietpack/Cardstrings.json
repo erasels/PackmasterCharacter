@@ -38,7 +38,7 @@
   },
   "${ModID}:Flail": {
     "NAME": "Flail",
-    "DESCRIPTION": "Deal !D! damage. NL Add 2 *Weights to your hand."
+    "DESCRIPTION": "Deal !D! damage twice. NL Add 2 *Weights to your hand."
   },
   "${ModID}:Wisdom": {
     "NAME": "Wisdom",

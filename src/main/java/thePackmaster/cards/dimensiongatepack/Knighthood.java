@@ -20,7 +20,7 @@ public class Knighthood extends AbstractDimensionalCard {
 
         setFrame("knighthoodframe.png");
         exhaust = true;
-
+        tags.add(CardTags.HEALING);
     }
 
 
