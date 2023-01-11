@@ -2,31 +2,42 @@ package thePackmaster.cards.pixiepack;
 
 import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.PixiePack;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class BoosterPack extends AbstractPackmasterCard {
+public class BoosterPack extends AbstractPixieCard {
     public final static String ID = makeID("BoosterPack");
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     private static final int baseMagic = 3;
     private static final int upgradeMagic = 5;
 
     public BoosterPack() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = baseMagic;
+    }
 
-        setBackgroundTexture("anniv5Resources/images/512/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png");
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(EXTENDED_DESCRIPTION[0], EXTENDED_DESCRIPTION[1]));
+        return tooltips;
     }
 
     @Override

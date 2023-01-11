@@ -1,6 +1,7 @@
 package thePackmaster.powers.pixiepack;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -18,20 +19,8 @@ public class UpgradedFastHandsPower extends AbstractPackmasterPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    int costReductionAmount;
-
     public UpgradedFastHandsPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF,false, owner, amount);
-    }
-
-    @Override
-    public void onCardDraw(AbstractCard card) {
-        super.onCardDraw(card);
-        if (costReductionAmount > 0)
-        {
-            costReductionAmount--;
-            if (card.costForTurn > 0) card.setCostForTurn(card.costForTurn - 1);
-        }
     }
 
     @Override
@@ -39,8 +28,15 @@ public class UpgradedFastHandsPower extends AbstractPackmasterPower {
         super.onPlayCard(card, m);
         if (PixiePack.isForeign(card))
         {
-            AbstractDungeon.actionManager.addToTop(new DrawCardAction(amount));
-            costReductionAmount = amount;
+            AbstractDungeon.actionManager.addToTop(new DrawCardAction(amount, new AbstractGameAction() {
+                @Override
+                public void update() {
+                    for (AbstractCard card : DrawCardAction.drawnCards) {
+                        if (card.costForTurn > 0 && card.cost >= 0) card.setCostForTurn(card.costForTurn - 1);
+                    }
+                    this.isDone = true;
+                }
+            }));
         }
     }
 

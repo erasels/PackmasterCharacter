@@ -19,21 +19,18 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class StarLane extends AbstractPackmasterCard {
+public class StarLane extends AbstractPixieCard {
     public final static String ID = makeID("StarLane");
 
     private static final int baseMag = 1;
 
     public StarLane() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = baseMag;
         this.tags.add(PixiePack.pixieTags.ENCHANTMENT);
         this.isEthereal = true;
         this.exhaust = true;
-
-        setBackgroundTexture("anniv5Resources/images/512/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png");
-    }
+     }
 
     @Override
     public void upp() {

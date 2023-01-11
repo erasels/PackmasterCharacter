@@ -2,11 +2,14 @@ package thePackmaster.cards.pixiepack;
 
 import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
@@ -14,12 +17,16 @@ import thePackmaster.packs.PixiePack;
 
 import javax.swing.text.html.HTMLDocument;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class PortalPunch extends AbstractPackmasterCard {
+public class PortalPunch extends AbstractPixieCard {
     public final static String ID = makeID("PortalPunch");
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     private static final int baseAtk = 9;
     private static final int upgradeAtk = 12;
@@ -27,12 +34,16 @@ public class PortalPunch extends AbstractPackmasterCard {
     private static final int upgradeMgk = 2;
 
     public PortalPunch() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = this.damage = baseAtk;
         this.baseMagicNumber = this.magicNumber = baseMgk;
+    }
 
-        setBackgroundTexture("anniv5Resources/images/512/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png");
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(EXTENDED_DESCRIPTION[0], EXTENDED_DESCRIPTION[1]));
+        return tooltips;
     }
 
     @Override

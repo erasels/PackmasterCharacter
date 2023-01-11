@@ -20,7 +20,7 @@ public class HorizonboundPower extends AbstractPackmasterPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    ArrayList<AbstractCard> alreadyApplied = new ArrayList<>();
+    private ArrayList<AbstractCard> alreadyApplied = new ArrayList<>();
 
     public HorizonboundPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF,false, owner, amount);
@@ -34,7 +34,7 @@ public class HorizonboundPower extends AbstractPackmasterPower {
         {
             if (PixiePack.isForeign(C)) amount++;
             for (AbstractCard K:AbstractDungeon.player.hand.group) {
-                if (PixiePack.isForeign(K))
+                if (PixiePack.isForeign(K) && K.cost >= 0)
                 {
                     if(K.costForTurn <= amount) K.setCostForTurn(0);
                     else K.setCostForTurn(K.costForTurn - amount);
@@ -57,9 +57,9 @@ public class HorizonboundPower extends AbstractPackmasterPower {
         {
             amount++;
             for (AbstractCard C:AbstractDungeon.player.hand.group) {
-                if (PixiePack.isForeign(C))
+                if (PixiePack.isForeign(C) && C.cost >= 0)
                 {
-                    if (C.costForTurn>0)C.setCostForTurn(C.costForTurn - 1);
+                    if (C.costForTurn>0) C.setCostForTurn(C.costForTurn - 1);
                 }
             }
         }
@@ -75,7 +75,7 @@ public class HorizonboundPower extends AbstractPackmasterPower {
     public void update(int slot) {
         super.update(slot);
         for (AbstractCard C:AbstractDungeon.player.hand.group) {
-            if (PixiePack.isForeign(C) && !alreadyApplied.contains(C)) {
+            if (PixiePack.isForeign(C) && !alreadyApplied.contains(C) && C.cost >= 0) {
                 alreadyApplied.add(C);
                 if (C.costForTurn <= amount) C.setCostForTurn(0);
                 else C.setCostForTurn(C.costForTurn - amount);

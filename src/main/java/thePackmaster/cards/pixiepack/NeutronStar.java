@@ -26,19 +26,16 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class NeutronStar extends AbstractPackmasterCard {
+public class NeutronStar extends AbstractPixieCard {
     public final static String ID = makeID("NeutronStar");
 
     private static final int baseMgk = 1;
     private static final int upgradeMgk = 2;
 
     public NeutronStar() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = baseMgk;
         this.tags.add(PixiePack.pixieTags.ENCHANTMENT);
-
-        setBackgroundTexture("anniv5Resources/images/512/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
 
     @Override

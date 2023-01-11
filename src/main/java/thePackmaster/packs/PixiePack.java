@@ -56,8 +56,10 @@ public class PixiePack extends AbstractCardPack {
         for (AbstractCard C : CardLibrary.getAllCards())
         {
             if ((cost != null && C.cost != cost) || (color != null && C.color != color) || (type != null && C.type != type)) continue;
-            if (isForeign(C))
-            {
+            if (isForeign(C)
+            && C.rarity == AbstractCard.CardRarity.COMMON || C.rarity == AbstractCard.CardRarity.UNCOMMON || C.rarity == AbstractCard.CardRarity.RARE
+            && !C.hasTag(AbstractCard.CardTags.HEALING)
+            && C.type != AbstractCard.CardType.STATUS && C.type != AbstractCard.CardType.CURSE){
                 int amt = 4;
                 if (C.rarity== AbstractCard.CardRarity.UNCOMMON) amt = 2 ;
                 if (C.rarity== AbstractCard.CardRarity.RARE) amt = 1 ;

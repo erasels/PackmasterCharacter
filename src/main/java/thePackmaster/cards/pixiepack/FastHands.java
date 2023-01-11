@@ -13,14 +13,11 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class FastHands extends AbstractPackmasterCard {
+public class FastHands extends AbstractPixieCard {
     public final static String ID = makeID("FastHands");
 
     public FastHands() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW);
-
-        setBackgroundTexture("anniv5Resources/images/512/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png");
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override

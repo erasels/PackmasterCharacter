@@ -26,15 +26,12 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Horizonbound extends AbstractPackmasterCard {
+public class Horizonbound extends AbstractPixieCard {
     public final static String ID = makeID("Horizonbound");
 
     public Horizonbound() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.isEthereal = true;
-
-        setBackgroundTexture("anniv5Resources/images/512/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
 
     @Override

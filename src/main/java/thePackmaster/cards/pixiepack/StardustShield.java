@@ -22,19 +22,16 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class StardustShield extends AbstractPackmasterCard {
+public class StardustShield extends AbstractPixieCard {
     public final static String ID = makeID("StardustShield");
 
     private static final int baseDef = 2;
     private static final int upgradeDef = 3;
 
     public StardustShield() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = this.block = baseDef;
         this.tags.add(PixiePack.pixieTags.ENCHANTMENT);
-
-        setBackgroundTexture("anniv5Resources/images/512/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/pixie/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
 
     @Override
