@@ -10,6 +10,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.getLogicalCardCost;
 
 public class HeatEnginePower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("HeatEnginePower");
@@ -22,7 +23,7 @@ public class HeatEnginePower extends AbstractPackmasterPower {
 
     @Override
     public void onExhaust(AbstractCard card) {
-        if (card.costForTurn >= 2 || (card instanceof AmplifyCard && card.costForTurn + ((AmplifyCard) card).getAmplifyCost() >= 2)) {
+        if (getLogicalCardCost(card) >= 2 || (card instanceof AmplifyCard && getLogicalCardCost(card) + ((AmplifyCard) card).getAmplifyCost() >= 2)) {
             this.flash();
             atb(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
         }
