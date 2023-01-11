@@ -15,8 +15,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class GalacticHalo extends AbstractPackmasterCard {
     public final static String ID = makeID(GalacticHalo.class.getSimpleName());
-    private static final int BLK = 10, BLK_UPG = 3;
-    private static final int MAGIC = 3, UPG_MAGIC = 1;
+    private static final int BLK = 9, BLK_UPG = 4;
+    private static final int MAGIC = 3;
 
     public GalacticHalo() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -35,6 +35,5 @@ public class GalacticHalo extends AbstractPackmasterCard {
 
     public void upp() {
        upgradeBlock(BLK_UPG);
-        upgradeMagicNumber(UPG_MAGIC);
     }
 }
