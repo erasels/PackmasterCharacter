@@ -20,6 +20,7 @@ public class Flare extends AbstractPackmasterCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 0;
     private static final int DAMAGE = 2;
+    private static final int UPGRADE_DAMAGE = 1;
     private static final int IGNITE = 2;
     private static final int UPGRADE_IGNITE = 1;
 
@@ -31,6 +32,7 @@ public class Flare extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
+        this.upgradeDamage(UPGRADE_DAMAGE);
         this.upgradeMagicNumber(UPGRADE_IGNITE);
     }
 

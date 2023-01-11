@@ -28,6 +28,11 @@ public class BackpackSmack extends AbstractPackmasterCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.player.drawPile.size() > 9 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeDamage(3);
     }

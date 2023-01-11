@@ -1,5 +1,6 @@
 package thePackmaster.powers.transmutationpack;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,17 +14,17 @@ public class CrystalResonancePower extends AbstractPackmasterPower implements Tr
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public CrystalResonancePower(AbstractCreature owner) {
-        super(POWER_ID, NAME, PowerType.BUFF, false, owner, -1);
+    public CrystalResonancePower(AbstractCreature owner, int amount) {
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = amount == 1 ? DESCRIPTIONS[0] : DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 
     @Override
     public void affectTransmutedCard(AbstractCard newCard) {
-        newCard.upgrade();
+        addToBot(new DrawCardAction(amount));
     }
 }

@@ -9,7 +9,7 @@
   },
   "${ModID}:Frostburn": {
     "NAME": "Frostburn",
-    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add !${ModID}:m2! *Burn+ into your discard pile."
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add a *Burn into your discard pile."
   },
   "${ModID}:Glaciate": {
     "NAME": "Glaciate",

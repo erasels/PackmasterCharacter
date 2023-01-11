@@ -1,18 +1,21 @@
 [
   {
-    "PROPER_NAME": "Constricted",
-    "NAMES": [
-      "constricted"
-    ],
-    "DESCRIPTION": "Constricted creatures lose HP at the end of their turn."
-  },
-  {
     "PROPER_NAME": "Swarm\u00a0Of\u00a0Bees",
     "NAMES": [
       "swarm\u00a0of\u00a0bees",
-      "Swarm\u00a0of\u00a0Bees"
+      "Swarm\u00a0of\u00a0bees",
+      "swarms\u00a0of\u00a0bees",
+      "Swarms\u00a0of\u00a0bees"
     ],
-    "DESCRIPTION": "Orb: Deals damage to a random enemy whenever you lose HP. Gain #yThorns when #yEvoked."
+    "DESCRIPTION": "Orb: Deals damage to ALL enemies."
+  },
+  {
+    "PROPER_NAME": "Rainbow\u00a0Louse",
+    "NAMES": [
+      "rainbow\u00a0louse",
+      "Rainbow\u00a0louse"
+    ],
+    "DESCRIPTION": "Orb: Increases damage when you play a card. When evoked, deals damage to the enemy with the most HP."
   },
   {
     "PROPER_NAME": "Panda",
@@ -26,6 +29,6 @@
     "NAMES": [
       "bulldog"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the enemy with the lowest health at the end of your turn."
+    "DESCRIPTION": "Orb: Deals damage to the enemy with the least HP at the end of your turn."
   }
 ]

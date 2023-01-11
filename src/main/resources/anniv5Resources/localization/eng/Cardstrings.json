@@ -14,7 +14,6 @@
   },
   "${ModID}:Cardistry": {
     "NAME": "Cardistry",
-    "DESCRIPTION": "Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile."
   }
 }

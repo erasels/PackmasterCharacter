@@ -8,11 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.startuppack.CrossPower;
 import thePackmaster.util.Wiz;
-
-import java.util.Objects;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -22,15 +19,6 @@ public class Cross extends AbstractStartUpCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = this.damage = 7;
         this.baseSecondDamage = this.secondDamage = 0;
-        cardsToPreview = new Cross(true);
-    }
-
-    public Cross(boolean preview) {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = this.damage = 7;
-        this.baseSecondDamage = this.secondDamage = 0;
-        if(!preview)
-            cardsToPreview = new Cross(true);
     }
 
     @Override
@@ -38,7 +26,7 @@ public class Cross extends AbstractStartUpCard {
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractMonster, this.secondDamage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         Wiz.applyToSelf(new CrossPower(abstractPlayer, 1));
-        addToBot(new MakeTempCardInDrawPileAction(cardsToPreview, 1, true, false));
+        addToBot(new MakeTempCardInDrawPileAction(new Cross(), 1, true, false));
     }
 
     public void applyPowers() {
@@ -64,6 +52,5 @@ public class Cross extends AbstractStartUpCard {
     @Override
     public void upp() {
         this.isInnate = true;
-        cardsToPreview.upgrade();
     }
 }

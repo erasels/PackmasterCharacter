@@ -1,7 +1,11 @@
 {
   "${ModID}:AcidPower": {
     "NAME": "A.C.I.D.",
-    "DESCRIPTIONS": ["Takes double damage from Attacks this turn."]
+    "DESCRIPTIONS": [
+      "Takes double damage from Attacks this turn.",
+      "Takes double damage from Attacks for #b",
+      " turns."
+    ]
   },
   "${ModID}:StormGenPower": {
     "NAME": "Storm Generator",
