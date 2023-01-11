@@ -27,6 +27,10 @@ public class BasicsPack extends AbstractCardPack {
         cards.add(WatcherKit.ID);
         cards.add(PackmasterKit.ID);
         cards.add(BasicSupply.ID);
+        cards.add(SimplifiedStrike.ID);
+        cards.add(PerfectBasics.ID);
+        cards.add(Simplicity.ID);
+        cards.add(BackToBasics.ID);
         return cards;
     }
 }

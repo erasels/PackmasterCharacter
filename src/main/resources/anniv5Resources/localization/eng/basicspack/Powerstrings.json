@@ -1,9 +1,21 @@
 {
-  "${ModID}:BlacksmithsShieldPower": {
-    "NAME": "Blacksmith's Shield",
+  "${ModID}:BasicPerfectionPower": {
+    "NAME": "Basic Perfection",
     "DESCRIPTIONS": [
-      "After you play a card, gain #b",
-      " #yBlock for each #yUpgrade on it."
+      "After you play a #yBasic card, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:BasicSupplyPower": {
+    "NAME": "Basic Supply",
+    "DESCRIPTIONS": [
+      "At the start of your turn, you may add a #yStrike or #yDefend to your hand."
+    ]
+  },
+  "${ModID}:BasicSupplyPlusPower": {
+    "NAME": "Basic Supply+",
+    "DESCRIPTIONS": [
+      "At the start of your turn, you may add a #yStrike and #yDefend to your hand."
     ]
   }
 }

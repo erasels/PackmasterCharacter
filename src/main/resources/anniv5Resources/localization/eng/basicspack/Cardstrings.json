@@ -32,6 +32,22 @@
   "${ModID}:Both": {
     "NAME": "Both",
     "DESCRIPTION": "Add both to your hand."
+  },
+  "${ModID}:SimplifiedStrike": {
+    "NAME": "Simplified Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your *Basic cards."
+  },
+  "${ModID}:PerfectBasics": {
+    "NAME": "Perfect Basics",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you play a *Basic card, gain !M! Block. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Whenever you play a *Basic card, gain !M! Block."
+  },
+  "${ModID}:BackToBasics": {
+    "NAME": "Back to Basics",
+    "DESCRIPTION": "Discard your hand. Add a *Bash, *Strike, *Neutralize, *Survivor, *Zap, *Dualcast, *Eruption, *Vigilance, *Rummage and *Cardistry to your hand. Exhaust."
+  },
+  "${ModID}:Simplicity": {
+    "NAME": "Simplicity",
+    "DESCRIPTION": "Place !M! random *Basic cards from your draw pile into your hand."
   }
-
 }

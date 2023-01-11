@@ -16,7 +16,7 @@
   "${ModID}:KickoffPower": {
     "NAME": "Kickoff",
     "DESCRIPTIONS": [
-      "Your #yInnate cards #yRefund #b",
+      "Once each turn, playing an #yInnate card #yRefunds #b",
       "."
     ]
   },

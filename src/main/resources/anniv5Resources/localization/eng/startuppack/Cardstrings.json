@@ -38,8 +38,8 @@
   },
   "${ModID}:Debut": {
     "NAME": "Debut",
-    "DESCRIPTION": "Your Innate cards Refund 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Your Innate cards Refund 1."
+    "DESCRIPTION": "Once each turn, playing an Innate card Refunds 1.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Once each turn, playing an Innate card Refunds 1."
   },
   "${ModID}:BattlePrep": {
     "NAME": "Battle Prep",
