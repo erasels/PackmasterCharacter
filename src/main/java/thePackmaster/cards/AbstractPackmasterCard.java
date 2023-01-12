@@ -48,6 +48,8 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     private boolean needsArtRefresh = false;
     private String bottomText;
 
+    public boolean isUnnate = false;
+
     public static Color packNameDisplayColor = Settings.CREAM_COLOR.cpy();
 
     public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
@@ -55,8 +57,11 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     }
 
     public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
-        super(cardID, "", getCardTextureString(cardID.replace(modID + ":", ""), type),
-                cost, "", type, color, rarity, target);
+        this(cardID, cost, type, rarity, target, color, getCardTextureString(cardID.replace(modID + ":", ""), type));
+    }
+
+    public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color, final String textureString) {
+        super(cardID, "", textureString, cost, "", type, color, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(this.cardID);
         rawDescription = cardStrings.DESCRIPTION;
         name = originalName = cardStrings.NAME;
@@ -75,8 +80,6 @@ public abstract class AbstractPackmasterCard extends CustomCard {
                 "anniv5Resources/images/1024/coreset/" + type.name().toLowerCase() + ".png"
         );
     }
-
-
 
     @Override
     protected Texture getPortraitImage() {

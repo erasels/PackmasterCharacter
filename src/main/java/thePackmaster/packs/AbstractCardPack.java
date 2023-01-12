@@ -50,4 +50,9 @@ public abstract class AbstractCardPack {
         previewPackCard = new CardPackPreview(packID, this);
     }
 
+
+    public ArrayList<String> getPackPotions() {
+        return new ArrayList<>();
+    }
+
 }
