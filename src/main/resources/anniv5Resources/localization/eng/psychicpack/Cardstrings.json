@@ -26,9 +26,9 @@
   },
   "${ModID}:Repel": {
     "NAME": "Repel",
-    "DESCRIPTION": "${ModID}:Locking. NL Gain !B! Block. Deal !D! damage. Apply !M! Weak.",
+    "DESCRIPTION": "${ModID}:Locking. NL Gain !B! Block. NL Deal !D! damage. NL Apply !M! Weak.",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL Gain !B! Block. Deal !D! damage. Apply !M! Weak."
+      "${ModID}:Locked. NL Gain !B! Block. NL Deal !D! damage. NL Apply !M! Weak."
     ]
   },
   "${ModID}:OneIsEnough": {

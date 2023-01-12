@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
@@ -70,8 +71,8 @@ public class ExplodingPoleEffect extends AbstractGameEffect {
             this.isDone = true;
         }
         float prog = 1 - (duration / startingDuration);
-        x = MathUtils.lerp(ix, tx, prog);
-        y = MathUtils.lerp(iy, ty, prog);
+        x = Interpolation.linear.apply(ix, tx, prog);
+        y = Interpolation.linear.apply(iy, ty, prog);
     }
 
     @Override
