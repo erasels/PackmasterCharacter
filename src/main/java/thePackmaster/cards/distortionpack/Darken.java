@@ -34,7 +34,7 @@ public class Darken extends AbstractPackmasterCard {
 
             ApplyPowerAction distortion = new ApplyPowerAction(m, p, new DistortionPower(m, p, amt), amt);
             atb(distortion);
-            atb(new ImproveAction(m, distortion));
+            atb(new ImproveAction(m, amt, distortion));
         }
     }
 

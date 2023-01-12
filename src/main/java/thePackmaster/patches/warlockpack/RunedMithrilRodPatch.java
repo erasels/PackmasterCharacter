@@ -13,11 +13,11 @@ import thePackmaster.cards.warlockpack.RunedMithrilRod;
     paramtypez = { int.class }
 )
 public class RunedMithrilRodPatch {
-    @SpireInsertPatch(locator = Locator.class)
-    public static void onCardDrawWhileInHand(AbstractPlayer __instance, int n) {
-        for (AbstractCard c : __instance.hand.group) {
-            if (c instanceof RunedMithrilRod) {
-                ((RunedMithrilRod)c).onCardDrawWhileInHand();
+    @SpireInsertPatch(locator = Locator.class, localvars = { "c" })
+    public static void onCardDrawWhileInHand(AbstractPlayer __instance, int n, AbstractCard c) {
+        for (AbstractCard card : __instance.hand.group) {
+            if (card != c && card instanceof RunedMithrilRod) {
+                ((RunedMithrilRod)card).onCardDrawWhileInHand();
             }
         }
     }

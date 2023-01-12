@@ -36,7 +36,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import thePackmaster.actions.distortionpack.ImproveAction;
 import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
@@ -50,7 +49,6 @@ import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
-import thePackmaster.patches.psychicpack.occult.OccultDescription;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
@@ -60,6 +58,7 @@ import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
+import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -610,7 +609,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         DeepDreamPatch.wakeUp();
-        ImproveAction._clean();
+        ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
     }
 

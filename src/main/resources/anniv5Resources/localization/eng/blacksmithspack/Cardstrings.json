@@ -9,7 +9,7 @@
   },
   "${ModID}:HeartOfTheForge": {
     "NAME": "Heart of the Forge",
-    "DESCRIPTION": "{@@}Retain. NL Gain{!M!|>1= !M!} [E]. NL Can be Upgraded any number of times. NL Exhaust."
+    "DESCRIPTION": "{@@}Retain. NL Gain{!M!|>1= !M!} [E]. When Retained, Upgrade this. NL Can be Upgraded any number of times. NL Exhaust."
   },
   "${ModID}:SharpeningSheath": {
     "NAME": "Sharpening Sheath",
