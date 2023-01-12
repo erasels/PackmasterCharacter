@@ -32,6 +32,5 @@ public class Wither extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        uDesc();
     }
 }
