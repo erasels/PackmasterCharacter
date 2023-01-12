@@ -207,6 +207,10 @@ public class SpireAnniversary5Mod implements
         return modID + "Resources/images/cards/" + resourcePath;
     }
 
+    public static String makeShaderPath(String resourcePath) {
+        return modID + "Resources/shaders/" + resourcePath;
+    }
+    
     public static String makeOrbPath(String resourcePath) { return modID +"Resources/images/orbs/" + resourcePath; }
 
     public static void initialize() {
@@ -412,7 +416,17 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(GUN2_KEY, GUN2_OGG);
         BaseMod.addAudio(GUN3_KEY, GUN3_OGG);
         BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
-
+        BaseMod.addAudio(makeID("RipPack_Rip"), makePath("audio/rippack/rip.mp3"));
+        BaseMod.addAudio(makeID("RipPack_Yay"), makePath("audio/rippack/yay.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Ding"), makePath("audio/rippack/ding.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Charge"), makePath("audio/rippack/spearcharge.mp3"));
+        BaseMod.addAudio(makeID("RipPack_SpearThrow"), makePath("audio/rippack/spearthrow.mp3"));
+        BaseMod.addAudio(makeID("RipPack_MorningStarThrow"), makePath("audio/rippack/scythe.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Party"), makePath("audio/rippack/party.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Splash"), makePath("audio/rippack/splash.mp3"));
+        BaseMod.addAudio(makeID("RipPack_Ahh"), makePath("audio/rippack/ahh.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Ohh"), makePath("audio/rippack/ohh.mp3"));
+        BaseMod.addAudio(makeID("RipPack_Sword"), makePath("audio/rippack/sword.ogg"));
         BaseMod.addAudio(modID + "dice1",  modID + "Resources/audio/DiceRoll1.wav");
         BaseMod.addAudio(modID + "dice2",  modID + "Resources/audio/DiceRoll2.wav");
         BaseMod.addAudio(modID + "dice3",  modID + "Resources/audio/DiceRoll3.wav");
