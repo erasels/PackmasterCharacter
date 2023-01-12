@@ -1,0 +1,38 @@
+[
+  {
+    "PROPER_NAME": "Rippable",
+    "NAMES": [
+      "rippable",
+      "ripped",
+      "rip"
+    ],
+    "DESCRIPTION": "Right click to rip in half."
+  },
+  {
+    "PROPER_NAME": "Art Card",
+    "NAMES": [
+      "art card",
+      "art_card",
+      "art cards",
+      "art_cards"
+    ],
+    "DESCRIPTION": "The art half of a ripped card. It does nothing and always exhausts."
+  },
+  {
+    "PROPER_NAME": "Text Card",
+    "NAMES": [
+      "text card",
+      "text_card",
+      "text cards",
+      "text_cards"
+    ],
+    "DESCRIPTION": "The text half of a ripped card. It always exhausts."
+  },
+  {
+    "PROPER_NAME": "Unnate",
+    "NAMES": [
+      "unnate"
+    ],
+    "DESCRIPTION": "Starts each combat at the bottom of your draw pile."
+  }
+]

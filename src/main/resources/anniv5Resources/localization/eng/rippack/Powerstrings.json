@@ -1,0 +1,10 @@
+{
+  "${ModID}:DividedFuryPower": {
+    "NAME": "Divided Fury",
+    "DESCRIPTIONS": [
+      "When you rip an Attack card, deal #b",
+      " damage to ALL enemies. NL When you rip a Skill card, gain #b",
+      " Block."
+    ]
+  }
+}
