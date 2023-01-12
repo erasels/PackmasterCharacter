@@ -254,7 +254,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
         AbstractCardPack p = getParent();
         if(p != null)
             return p.name;
-        return "No Parent Pack!";
+        return "No Parent Ambush!";
     }
 
     public void renderBorderText(SpriteBatch sb, boolean renderBottom) {

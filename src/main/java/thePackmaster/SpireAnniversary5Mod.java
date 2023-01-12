@@ -438,7 +438,7 @@ public class SpireAnniversary5Mod implements
                 .packageFilter(AbstractCardPack.class)
                 .any(AbstractCardPack.class, (info, pack) -> {
                     if (packsByID.containsKey(pack.packID)) {
-                        throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Pack class 1: " + packsByID.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
+                        throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Ambush class 1: " + packsByID.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
                     }
                     packsByID.put(pack.packID, pack);
                     unfilteredAllPacks.add(pack);
@@ -556,7 +556,7 @@ public class SpireAnniversary5Mod implements
         int choicesToSetup = 0;
 
         for (String setupType : packSetup) {
-            logger.info("Setting up Pack type " + setupType + ".");
+            logger.info("Setting up Ambush type " + setupType + ".");
 
             switch (setupType) {
                 case RANDOM:
@@ -617,7 +617,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power.type == AbstractPower.PowerType.DEBUFF && source == AbstractDungeon.player && target != AbstractDungeon.player) {
-            // Biting Cold Pack
+            // Biting Cold Ambush
             // Growing Affliction (Return to hand)
             for (AbstractCard c : AbstractDungeon.player.discardPile.group)
                 if (c.cardID.equals(GrowingAffliction.ID))

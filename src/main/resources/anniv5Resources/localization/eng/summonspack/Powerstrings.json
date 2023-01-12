@@ -9,15 +9,17 @@
   "${ModID}:SummonPandasPower": {
     "NAME": "Summoning Pandas",
     "DESCRIPTIONS": [
-      "At the start of your turn, Channel a #b",
-      " damage #yPanda."
+      "At the start of your turn, Channel #b1 Panda",
+      "At the start of your turn, Channel #b",
+      " #yPandas."
     ]
   },
-  "${ModID}:PackPower": {
-    "NAME": "Packmaster",
+  "${ModID}:AmbushPower": {
+    "NAME": "Ambush",
     "DESCRIPTIONS": [
-      "Whenever you #yEvoke an orb, gain #b",
-      " Block."
+      "Whenever you #yChannel an orb, #yEvoke #b1 time without removing it.",
+      "Whenever you #yChannel an orb, #yEvoke #b",
+      " times without removing it."
     ]
   }
 }

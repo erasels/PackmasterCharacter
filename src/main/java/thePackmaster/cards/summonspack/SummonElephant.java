@@ -6,10 +6,12 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.actions.summonspack.PewcumberAction;
+import thePackmaster.actions.summonspack.SetCardTargetCoordinatesAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.vfx.summonspack.ElephantDropEffect;
 import thePackmaster.vfx.summonspack.LongElephantDropEffect;
@@ -43,6 +45,7 @@ public class SummonElephant extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new SetCardTargetCoordinatesAction(this, Settings.WIDTH/2f -400f*Settings.scale,-1f));
         if (!seenThisSession) {
             seenThisSession = true;
             AbstractGameEffect effect = new LongElephantDropEffect();

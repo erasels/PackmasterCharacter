@@ -141,7 +141,7 @@ public class PackFilterMenu {
                 e.printStackTrace();
             }
         } else {
-            BaseMod.logger.info("Error in the Packmaster Pack filter menu : Config wasn't initialized.");
+            BaseMod.logger.info("Error in the Packmaster Ambush filter menu : Config wasn't initialized.");
         }
     }
 
@@ -153,7 +153,7 @@ public class PackFilterMenu {
                 return true;
             }
         }
-        BaseMod.logger.info("Error in the Packmaster Pack filter menu : Config wasn't initialized.");
+        BaseMod.logger.info("Error in the Packmaster Ambush filter menu : Config wasn't initialized.");
         return true;
     }
 

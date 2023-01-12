@@ -9,7 +9,7 @@ import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 import thePackmaster.orbs.WitchesStrike.FullMoon;
 import thePackmaster.orbs.downfallpack.Ghostflame;
 import thePackmaster.orbs.entropy.Oblivion;
-import thePackmaster.orbs.summonspack.Bulldog;
+import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.orbs.summonspack.SwarmOfBees;
 import thePackmaster.packs.*;
@@ -45,8 +45,8 @@ public abstract class AbstractPackMasterOrb extends CustomOrb {
                 orbs.add(new Lightning());
             }
             if (pack instanceof SummonsPack){
-                orbs.add(new Bulldog(3));
-                orbs.add(new Panda(5));
+                orbs.add(new Louse());
+                orbs.add(new Panda());
                 orbs.add(new SwarmOfBees());
             }
             if (pack instanceof EntropyPack){

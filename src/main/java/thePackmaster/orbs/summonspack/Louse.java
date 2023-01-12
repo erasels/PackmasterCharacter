@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.AbstractPackMasterOrb;
-import thePackmaster.patches.summonpack.PandaPatch;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
@@ -33,14 +32,14 @@ public class Louse extends AbstractPackMasterOrb implements OnPlayCardOrb {
     private Color color = Color.WHITE.cpy();
     private float spinTime = 0f;
 
-    private final static int BASE_DAMAGE = 2;
+    private final static int BASE_TEMP_HP = 6;
     private final static int BASE_PASSIVE = 2;
 
     private float rotation;
 
     public Louse()
     {
-        super(ORB_ID, NAME, BASE_PASSIVE, BASE_DAMAGE, "", "", IMG_PATH);
+        super(ORB_ID, NAME, BASE_PASSIVE, BASE_TEMP_HP, "", "", IMG_PATH);
         showEvokeValue = true;
         rotation = 0.0f;
         applyFocus();

@@ -18,12 +18,12 @@ import static thePackmaster.util.Wiz.atb;
 
 public class RainbowLouse extends AbstractPackmasterCard {
     public final static String ID = makeID(RainbowLouse.class.getSimpleName());
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 3;
 
     public RainbowLouse() {
         super(ID, COST, TYPE, RARITY, TARGET);
