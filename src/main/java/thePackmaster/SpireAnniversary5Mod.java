@@ -116,6 +116,8 @@ public class SpireAnniversary5Mod implements
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = modID + "Resources/images/char/mainChar/corpse.png";
+    public static final String SKELETON_JSON = modID + "Resources/images/char/mainChar/PackmasterAnim.json";
+    public static final String SKELETON_ATLAS = modID + "Resources/images/char/mainChar/PackmasterAnim.atlas";
     private static final String ATTACK_S_ART = modID + "Resources/images/512/attack.png";
     private static final String SKILL_S_ART = modID + "Resources/images/512/skill.png";
     private static final String POWER_S_ART = modID + "Resources/images/512/power.png";
@@ -411,6 +413,11 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(GUN2_KEY, GUN2_OGG);
         BaseMod.addAudio(GUN3_KEY, GUN3_OGG);
         BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
+
+        BaseMod.addAudio(modID + "dice1",  modID + "Resources/audio/DiceRoll1.wav");
+        BaseMod.addAudio(modID + "dice2",  modID + "Resources/audio/DiceRoll2.wav");
+        BaseMod.addAudio(modID + "dice3",  modID + "Resources/audio/DiceRoll3.wav");
+        BaseMod.addAudio(modID + "dice4",  modID + "Resources/audio/DiceRoll4.wav");
     }
 
     @Override
@@ -450,7 +457,12 @@ public class SpireAnniversary5Mod implements
     }
 
     public static AbstractCard getRandomCardFromPack(AbstractCardPack pack) {
-        return pack.cards.get(AbstractDungeon.cardRandomRng.random(0, pack.cards.size() - 1)).makeCopy();
+        List<AbstractCard> validCards = pack.cards
+                .stream()
+                .filter(c -> c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
+                .filter(c -> !c.hasTag(AbstractCard.CardTags.HEALING))
+                .collect(Collectors.toList());
+        return validCards.get(AbstractDungeon.cardRandomRng.random(0, validCards.size() - 1)).makeCopy();
     }
 
 

@@ -15,7 +15,7 @@ public class IronMining extends AbstractVPCard{
     public IronMining() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseSecondMagic = this.secondMagic = 15;
-        this.baseBlock = 16;
+        this.baseBlock = 20;
 
     }
 
@@ -32,7 +32,7 @@ public class IronMining extends AbstractVPCard{
         this.blck();
     }
     public void upp() {
-            this.upgradeBlock(6);
+            this.upgradeBlock(5);
             this.upgradeSecondMagic(5);
     }
 }

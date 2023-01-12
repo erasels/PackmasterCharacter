@@ -18,7 +18,7 @@ public class ViscousShell extends AbstractHydrologistCard implements Transmutabl
 
     public ViscousShell() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, Subtype.WATER);
-        baseBlock = 5;
+        baseBlock = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

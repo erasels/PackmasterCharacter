@@ -19,14 +19,15 @@ public class PrismaticUtil {
             boolean isValidRarity = card.rarity == rarity || (rarity == null && (card.rarity == AbstractCard.CardRarity.COMMON || card.rarity == AbstractCard.CardRarity.UNCOMMON || card.rarity == AbstractCard.CardRarity.RARE));
             boolean isValidType = card.type == cardType || (cardType == null && card.type != AbstractCard.CardType.STATUS && card.type != AbstractCard.CardType.CURSE);
             boolean isUnlocked = Settings.treatEverythingAsUnlocked() || !UnlockTracker.isCardLocked(card.cardID);
-            if (isDifferentColor && isValidRarity && isValidType && isUnlocked) {
+            boolean isNotHealing = !card.hasTag(AbstractCard.CardTags.HEALING);
+            if (isDifferentColor && isValidRarity && isValidType && isUnlocked && isNotHealing) {
                 validCards.addToTop(card);
             }
         }
 
         List<AbstractCard> cards = new ArrayList<>();
         for (int i = 0; i < amount; i++) {
-            cards.add(validCards.getRandomCard(AbstractDungeon.cardRandomRng));
+            cards.add(validCards.getRandomCard(AbstractDungeon.cardRandomRng).makeCopy());
         }
 
         return cards;

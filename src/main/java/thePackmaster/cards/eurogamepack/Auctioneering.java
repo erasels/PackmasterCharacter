@@ -15,7 +15,7 @@ public class Auctioneering extends AbstractVPCard{
     public Auctioneering() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 3;
-        this.baseSecondMagic = this.secondMagic = 6;
+        this.baseSecondMagic = this.secondMagic = 8;
 
         this.baseBlock = block = Math.round(secondMagic/2);
 
@@ -30,6 +30,7 @@ public class Auctioneering extends AbstractVPCard{
     }
     public void upp() {
             this.upgradeMagicNumber(-1);
+            this.upgradeSecondMagic(2);
     }
 }
 
