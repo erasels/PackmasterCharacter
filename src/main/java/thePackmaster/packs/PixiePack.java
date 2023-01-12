@@ -72,10 +72,9 @@ public class PixiePack extends AbstractCardPack {
     }
 
     public static AbstractCard pixieGenerate(Integer cost, Enum color, AbstractCard.CardType type) {
-        if (possibleToGenerate == null) fillGenerateList();
-        ArrayList<AbstractCard> AllCards = new ArrayList<>();
-        AllCards.addAll(possibleToGenerate);
-        AllCards.removeIf(C -> (cost != null && C.cost != cost) || (type != null && C.type != type) || (type != null && C.color != color));
+        if (possibleToGenerate == null || possibleToGenerate.size() == 0) fillGenerateList();
+        ArrayList<AbstractCard> AllCards = new ArrayList<>(possibleToGenerate);
+        AllCards.removeIf(C -> (cost != null && C.cost != cost) || (type != null && C.type != type) || (color != null && C.color != color));
         AbstractCard output = null;
         output = AllCards.get(AbstractDungeon.cardRandomRng.random(0, AllCards.size() - 1));
         return output.makeStatEquivalentCopy();
