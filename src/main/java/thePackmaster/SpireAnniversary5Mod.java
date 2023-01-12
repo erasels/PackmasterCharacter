@@ -39,6 +39,7 @@ import org.apache.logging.log4j.Logger;
 import thePackmaster.actions.distortionpack.ImproveAction;
 import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
@@ -429,6 +430,8 @@ public class SpireAnniversary5Mod implements
                 break;
             }
         }
+
+        UltimateHomerun.HIGH_SCORE = 0;
     }
 
     public static void declarePacks() {
