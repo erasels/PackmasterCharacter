@@ -2,7 +2,7 @@ package thePackmaster.cards.warlockpack;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,7 +20,7 @@ public class RunedMithrilRod extends AbstractPackmasterCard {
 
     private static final int COST = -2;
     private static final int CARDS = 15;
-    private static final int UPGRADE_CARDS = -3;
+    private static final int UPGRADE_CARDS = -5;
 
     private int cardsDrawnWhileInHand = 0;
 
@@ -68,25 +68,24 @@ public class RunedMithrilRod extends AbstractPackmasterCard {
     }
 
     private void trigger() {
-        this.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
-        this.addToTop(new AbstractGameAction() {
+        this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 for (AbstractCard c : AbstractDungeon.player.hand.group) {
                     if (c.cost > 0 || c.costForTurn > 0) {
                         c.superFlash(Color.GOLD.cpy());
                     }
-                    if (c.cost > 0) {
-                        c.cost = c.cost - 1;
-                        c.isCostModified = true;
-                    }
                     if (c.costForTurn > 0) {
                         c.costForTurn = c.costForTurn - 1;
+                        c.isCostModifiedForTurn = true;
                     }
                 }
 
+                cardsDrawnWhileInHand = 0;
+                applyPowers();
                 this.isDone = true;
             }
         });
+        this.addToBot(new DiscardSpecificCardAction(this));
     }
 }
