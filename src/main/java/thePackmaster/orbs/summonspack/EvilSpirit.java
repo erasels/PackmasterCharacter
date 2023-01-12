@@ -3,15 +3,19 @@ package thePackmaster.orbs.summonspack;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.powers.SadisticPower;
+import com.megacrit.cardcrawl.vfx.BobEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.util.Wiz;
@@ -33,6 +37,8 @@ public class EvilSpirit extends AbstractPackMasterOrb implements OnApplyPowerOrb
     private Color color = Color.WHITE.cpy();
     private double colorTime = 0d;
 
+    private BobEffect GhostBobEffect = new BobEffect(4f, 3f);
+
     public EvilSpirit()
     {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH);
@@ -43,13 +49,13 @@ public class EvilSpirit extends AbstractPackMasterOrb implements OnApplyPowerOrb
 
     @Override
     public void playChannelSFX() {
-        CardCrawlGame.sound.play("ORB_DARK_CHANNEL", 0.1f);
+        CardCrawlGame.sound.play(SpireAnniversary5Mod.EVIL_KEY, 0.1f);
     }
 
     @Override
     public void onApplyPower(AbstractCreature target, AbstractPower power) {
         if (target != null && target != adp() && power.type == AbstractPower.PowerType.DEBUFF)
-            Wiz.thornDmgTop(target, passiveAmount, AbstractGameAction.AttackEffect.POISON);
+            Wiz.thornDmgTop(target, passiveAmount, SpireAnniversary5Mod.Enums.EVIL);
     }
 
     @Override
@@ -76,16 +82,26 @@ public class EvilSpirit extends AbstractPackMasterOrb implements OnApplyPowerOrb
 
     @Override
     public void updateAnimation() {
-        super.updateAnimation();
+        cX = MathHelper.orbLerpSnap(cX, AbstractDungeon.player.animX + tX);
+        cY = MathHelper.orbLerpSnap(cY, AbstractDungeon.player.animY + tY);
+        if (channelAnimTimer != 0.0F) {
+            channelAnimTimer -= Gdx.graphics.getDeltaTime();
+            if (channelAnimTimer < 0.0F) {
+                channelAnimTimer = 0.0F;
+            }
+        }
+
+        c.a = Interpolation.pow2In.apply(1.0F, 0.01F, channelAnimTimer / 0.5F);
+        scale = Interpolation.swingIn.apply(Settings.scale, 0.01F, channelAnimTimer / 0.5F);
         colorTime += Gdx.graphics.getDeltaTime();
-        color.set(1f, 1f, 1f, 0.75f + (float)(0.25f*Math.cos(colorTime * 0.8f * Math.PI)));
+        color.set(1f, 1f, 1f, 0.75f + (float)(0.25f*Math.cos(colorTime * 0.6f * Math.PI)));
     }
 
     @Override
     public void render(SpriteBatch sb) {
         sb.setColor(color);
         sb.setBlendFunction(770, 771);
-        sb.draw(img, cX - SPIRIT_WIDTH /2F, cY - SPIRIT_WIDTH /2F, SPIRIT_WIDTH /2F, SPIRIT_WIDTH /2F,
+        sb.draw(img, cX - SPIRIT_WIDTH /2F, cY - SPIRIT_WIDTH /2F + GhostBobEffect.y, SPIRIT_WIDTH /2F, SPIRIT_WIDTH /2F,
                 SPIRIT_WIDTH, SPIRIT_WIDTH, scale, scale, 0f, 0, 0, (int) SPIRIT_WIDTH, (int) SPIRIT_WIDTH,
                 false, false);
         renderText(sb);

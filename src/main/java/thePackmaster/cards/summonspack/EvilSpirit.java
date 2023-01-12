@@ -1,11 +1,16 @@
 package thePackmaster.cards.summonspack;
 
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
@@ -22,6 +27,8 @@ public class EvilSpirit extends AbstractPackmasterCard {
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
 
+    private static final String SADISTIC_TIP = "Sadistic\u00a0Nature";
+
     public EvilSpirit() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
@@ -33,6 +40,13 @@ public class EvilSpirit extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ChannelAction(new thePackmaster.orbs.summonspack.EvilSpirit()));
         atb(new DrawCardAction(magicNumber));
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        ArrayList<TooltipInfo> extraTooltips = new ArrayList();
+        extraTooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(SADISTIC_TIP), BaseMod.getKeywordDescription(SADISTIC_TIP)));
+        return extraTooltips;
     }
 
     @Override

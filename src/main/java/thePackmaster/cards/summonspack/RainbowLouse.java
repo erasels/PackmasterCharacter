@@ -1,5 +1,7 @@
 package thePackmaster.cards.summonspack;
 
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
@@ -9,6 +11,9 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
@@ -24,6 +29,7 @@ public class RainbowLouse extends AbstractPackmasterCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int MAGIC = 3;
+    private static final String HP_TIP = "Temporary HP";
 
     public RainbowLouse() {
         super(ID, COST, TYPE, RARITY, TARGET);
@@ -32,6 +38,13 @@ public class RainbowLouse extends AbstractPackmasterCard {
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         AnimatedCardsPatch.loadFrames(this, 36, 2f/36f);
         baseMagicNumber = magicNumber = MAGIC;
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        ArrayList<TooltipInfo> extraTooltips = new ArrayList();
+        extraTooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(HP_TIP), BaseMod.getKeywordDescription(HP_TIP)));
+        return extraTooltips;
     }
 
     @Override

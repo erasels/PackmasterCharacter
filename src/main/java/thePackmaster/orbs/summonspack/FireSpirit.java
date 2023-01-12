@@ -39,7 +39,7 @@ public class FireSpirit extends AbstractPackMasterOrb {
 
     @Override
     public void playChannelSFX() {
-        CardCrawlGame.sound.play("ORB_DARK_CHANNEL", 0.1f);
+        CardCrawlGame.sound.play("SOTE_SFX_FireIgnite_2_v1.ogg", 0.1f);
     }
 
     @Override
@@ -72,8 +72,11 @@ public class FireSpirit extends AbstractPackMasterOrb {
     @Override
     public void updateAnimation() {
         super.updateAnimation();
-        //colorTime += Gdx.graphics.getDeltaTime();
-        //color.set(1f, 1f, 1f, 0.75f + (float)(0.25f*Math.cos(colorTime * 2d * Math.PI)));
+        colorTime += Gdx.graphics.getDeltaTime();
+        color.set(1f,
+                0.9f + (float)(0.1f*Math.cos(colorTime * 1.5d * Math.PI)),
+                0.75f + (float)(0.25f*Math.cos(colorTime * 3d * Math.PI)),
+                0.85f + (float)(0.15f*Math.cos(colorTime * 2d * Math.PI)));
     }
 
     @Override

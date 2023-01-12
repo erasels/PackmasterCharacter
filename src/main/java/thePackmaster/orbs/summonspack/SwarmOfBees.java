@@ -41,7 +41,7 @@ public class SwarmOfBees extends CustomOrb {
     private static final int BEE_COUNT = 120;
     public static final int BASE_PASSIVE = 2;
     public static final int BASE_EVOKE = 6;
-    private static final Color STING_COLOR = Color.GOLDENROD.cpy();
+    private static final Color STING_COLOR = Color.YELLOW.cpy();
 
     private static final float SPAWN_DISTANCE = 40f*Settings.scale;
     private static final float TETHER_DISTANCE = SPAWN_DISTANCE;
