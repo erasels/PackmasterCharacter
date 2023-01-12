@@ -51,4 +51,8 @@ public abstract class AbstractCardPack {
     }
 
 
+    public ArrayList<String> getPackPotions() {
+        return new ArrayList<>();
+    }
+
 }
