@@ -2,14 +2,14 @@
   "${ModID}:FastHandsPower": {
     "NAME": "Fast Hands",
     "DESCRIPTIONS": [
-      "After playing a different color card, draw #b",
+      "After playing a #ydifferent #ycolor card, draw #b",
       " cards."
     ]
   },
   "${ModID}:UpgradedFastHandsPower": {
     "NAME": "Fast Hands",
     "DESCRIPTIONS": [
-      "After playing a different color card, draw #b",
+      "After playing a #ydifferent #ycolor card, draw #b",
       " cards and reduce their cost by 1 this turn."
     ]
   },
@@ -17,7 +17,7 @@
     "NAME": "Horizonbound",
     "DESCRIPTIONS": [
       "Your different color cards cost #b",
-      " less. Increases with each different color card played. Resets every turn."
+      " less. Increases with each #ydifferent #ycolor card played. Resets every turn."
     ]
   }
 }
