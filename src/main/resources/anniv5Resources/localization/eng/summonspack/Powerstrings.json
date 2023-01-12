@@ -12,5 +12,12 @@
       "At the start of your turn, Channel a #b",
       " damage #yPanda."
     ]
+  },
+  "${ModID}:PackPower": {
+    "NAME": "Packmaster",
+    "DESCRIPTIONS": [
+      "Whenever you #yEvoke an orb, gain #b",
+      " Block."
+    ]
   }
 }

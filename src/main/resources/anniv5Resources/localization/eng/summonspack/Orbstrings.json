@@ -10,9 +10,9 @@
   "${ModID}:Louse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": [
-      "#yPassive: Whenever you play a card, increase this orb's damage by #b",
-      ". NL #yEvoke: Deal #b",
-      " damage to the enemy with the most HP."
+      "#yPassive: Whenever you play a card, increase this orb's Temporary HP by #b",
+      ". NL #yEvoke: Gain #b",
+      " Temporary HP."
     ]
   },
   "${ModID}:Panda": {

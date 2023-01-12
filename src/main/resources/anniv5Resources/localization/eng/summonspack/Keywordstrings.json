@@ -15,7 +15,7 @@
       "rainbow\u00a0louse",
       "Rainbow\u00a0louse"
     ],
-    "DESCRIPTION": "Orb: Increases damage when you play a card. When evoked, deals damage to the enemy with the most HP."
+    "DESCRIPTION": "Orb: Increases Temporary HP when you play a card. When evoked, gain the Temporary HP."
   },
   {
     "PROPER_NAME": "Panda",

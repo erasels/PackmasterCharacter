@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.summonspack.PandaEvokeAction;
 import thePackmaster.actions.summonspack.PandaSmackAction;
-import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.patches.summonpack.PandaPatch;
 
 import static java.lang.Math.pow;
@@ -33,7 +33,7 @@ public class Panda extends CustomOrb {
 
     // DO NOT SET EITHER OF THESE TO ZERO
     public static final float BOUNCE_DURATION = 1.0f;
-    public static final float GRAVITY = 2700.0f;
+    public static final float GRAVITY = 2700.0f*Settings.scale;
 
     private float bounceTime = 0;
     private boolean shooting = false;
@@ -59,7 +59,7 @@ public class Panda extends CustomOrb {
     }
 
     public void applyFocus() {
-        AbstractPower power = adp().getPower("Focus");
+        AbstractPower power = adp().getPower(FocusPower.POWER_ID);
         if (power != null)
             passiveAmount = Math.max(0, basePassiveAmount + power.amount);
         else

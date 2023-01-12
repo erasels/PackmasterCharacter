@@ -31,13 +31,13 @@
   },
   "${ModID}:RainbowLouse": {
     "NAME": "Rainbow Louse",
-    "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
+    "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
+    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Trigger the passive ability of *Rainbow *Lice !M! times.",
     "FLAVOR": "The result of an unwise magic experiment."
   },
   "${ModID}:SummonBees": {
     "NAME": "Summon Bees",
-    "DESCRIPTION": "Channel !M! ${ModID}:Swarms\u00a0of\u00a0Bees. NL Exhaust.",
+    "DESCRIPTION": "Channel !M! ${ModID}:Swarms\u00a0of\u00a0Bees.",
     "FLAVOR": "Absolutely terrifying."
   },
   "${ModID}:Control": {
@@ -45,11 +45,10 @@
     "DESCRIPTION": "Gain !M! Orb slots and !M! Focus.",
     "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
   },
-  "${ModID}:DemonicRitual": {
-    "NAME": "Demonic Ritual",
-    "DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost.",
-    "UPGRADE_DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + !M!.",
-    "FLAVOR": "This is a good idea and can not in anyway backfire."
+  "${ModID}:Pack": {
+    "NAME": "Pack",
+    "DESCRIPTION": "Gain !M! Block whenever you Evoke an orb.",
+    "FLAVOR": "A different kind of Packmaster."
   },
   "${ModID}:SummonPandas": {
     "NAME": "Summon Pandas",

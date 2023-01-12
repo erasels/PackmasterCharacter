@@ -40,7 +40,7 @@ public class PandaSmackAction extends AbstractGameAction {
                 amount = Panda.applyLockOn(target, amount);
             targetX = target.hb.cX;
             targetY = target.hb.cY;
-            thunkTiming = (targetX - sourceX)/3200.0f;
+            thunkTiming = (targetX - sourceX)/Settings.scale/3200.0f;
             if (thunkTiming > 0.25f)
                 thunkTiming = 0.25f;
             if (thunkTiming < 0.1f)

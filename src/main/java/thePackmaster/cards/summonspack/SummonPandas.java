@@ -17,7 +17,7 @@ public class SummonPandas extends AbstractPackmasterCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int MAGIC = 10;
+    private static final int MAGIC = 9;
     private static final int UPGRADE_MAGIC = 3;
 
     public SummonPandas() {
