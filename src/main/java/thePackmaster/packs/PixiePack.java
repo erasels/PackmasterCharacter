@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.pixiepack.*;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +19,8 @@ public class PixiePack extends AbstractCardPack {
     public static final String NAME = UI_STRINGS.TEXT[0];
     public static final String DESC = UI_STRINGS.TEXT[1];
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
+
+    private static ArrayList<AbstractCard> possibleToGenerate;
 
     public PixiePack() {
         super(ID, NAME, DESC, AUTHOR);
@@ -49,25 +52,32 @@ public class PixiePack extends AbstractCardPack {
         return card.color != AbstractDungeon.player.getCardColor();
     }
 
-    public static AbstractCard pixieGenerate(Integer cost, Enum color, AbstractCard.CardType type) {
-        List<AbstractCard> AllCards = new ArrayList<>();
+    public static void fillGenerateList()
+    {
+        possibleToGenerate = new ArrayList<>();
         for (AbstractCard C : CardLibrary.getAllCards())
         {
-            if ((cost != null && C.cost != cost) || (color != null && C.color != color) || (type != null && C.type != type)) continue;
             if (isForeign(C)
-            && (C.rarity == AbstractCard.CardRarity.COMMON || C.rarity == AbstractCard.CardRarity.UNCOMMON || C.rarity == AbstractCard.CardRarity.RARE)
-            && (!C.hasTag(AbstractCard.CardTags.HEALING))
-            && (C.type != AbstractCard.CardType.STATUS && C.type != AbstractCard.CardType.CURSE)){
+                    && (C.rarity == AbstractCard.CardRarity.COMMON || C.rarity == AbstractCard.CardRarity.UNCOMMON || C.rarity == AbstractCard.CardRarity.RARE)
+                    && (!C.hasTag(AbstractCard.CardTags.HEALING))
+                    && (C.type != AbstractCard.CardType.STATUS && C.type != AbstractCard.CardType.CURSE)){
                 int amt = 4;
                 if (C.rarity== AbstractCard.CardRarity.UNCOMMON) amt = 2 ;
                 if (C.rarity== AbstractCard.CardRarity.RARE) amt = 1 ;
                 for(int i = 0; i < amt; i++) {
-                    AllCards.add(C);
+                    possibleToGenerate.add(C);
                 }
             }
         }
+    }
+
+    public static AbstractCard pixieGenerate(Integer cost, Enum color, AbstractCard.CardType type) {
+        if (possibleToGenerate.size()==0) fillGenerateList();
+        ArrayList<AbstractCard> AllCards = new ArrayList<>();
+        AllCards.addAll(possibleToGenerate);
+        AllCards.removeIf(C -> (cost != null && C.cost != cost) || (type != null && C.type != type) || (type != null && C.color != color));
         AbstractCard output = null;
-        output = AllCards.get(AbstractDungeon.miscRng.random(0, AllCards.size() - 1));
+        output = AllCards.get(AbstractDungeon.cardRandomRng.random(0, AllCards.size() - 1));
         return output.makeStatEquivalentCopy();
     }
 }

@@ -23,7 +23,6 @@ public class FastHandsPower extends AbstractPackmasterPower {
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        super.onPlayCard(card, m);
         if (PixiePack.isForeign(card))
         {
             AbstractDungeon.actionManager.addToTop(new DrawCardAction(amount));

@@ -26,7 +26,6 @@ public class HorizonboundPower extends AbstractPackmasterPower {
 
     @Override
     public void onInitialApplication() {
-        super.onInitialApplication();
         amount = 0;
         for (AbstractCard C:AbstractDungeon.actionManager.cardsPlayedThisTurn)
         {
@@ -43,14 +42,12 @@ public class HorizonboundPower extends AbstractPackmasterPower {
 
     @Override
     public void atStartOfTurn() {
-        super.atStartOfTurnPostDraw();
         amount = 0;
         alreadyApplied.clear();
     }
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        super.onPlayCard(card, m);
         if (PixiePack.isForeign(card))
         {
             amount++;
@@ -65,7 +62,6 @@ public class HorizonboundPower extends AbstractPackmasterPower {
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        super.onCardDraw(card);
         if (alreadyApplied.contains(card)) alreadyApplied.remove(card);
     }
 

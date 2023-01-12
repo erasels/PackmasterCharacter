@@ -2,22 +2,22 @@
   "${ModID}:FastHandsPower": {
     "NAME": "Fast Hands",
     "DESCRIPTIONS": [
-      "After playing a foreign card, draw ",
+      "After playing a different color card, draw #b",
       " cards."
     ]
   },
   "${ModID}:UpgradedFastHandsPower": {
     "NAME": "Fast Hands",
     "DESCRIPTIONS": [
-      "After playing a foreign card, draw ",
+      "After playing a different color card, draw #b",
       " cards and reduce their cost by 1 this turn."
     ]
   },
   "${ModID}:HorizonboundPower": {
     "NAME": "Horizonbound",
     "DESCRIPTIONS": [
-      "Your foreign cards cost #b",
-      " less. Increases with each foreign card played. Resets every turn."
+      "Your different color cards cost #b",
+      " less. Increases with each different color card played. Resets every turn."
     ]
   }
 }
