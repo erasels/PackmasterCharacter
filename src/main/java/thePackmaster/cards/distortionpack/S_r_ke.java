@@ -25,7 +25,7 @@ public class S_r_ke extends AbstractPackmasterCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         ApplyPowerAction distortion = new ApplyPowerAction(m, p, new DistortionPower(m, p, this.magicNumber), this.magicNumber);
         atb(distortion);
-        atb(new ImproveAction(m, distortion));
+        atb(new ImproveAction(m, this.magicNumber * 2, distortion));
     }
 
     public void upp() {
