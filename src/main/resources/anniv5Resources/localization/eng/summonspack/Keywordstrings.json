@@ -33,6 +33,7 @@
     "DESCRIPTION": "Orb: Enemies take damage whenever they are debuffed. When #yEvoked, gain #ySadistic #yNature"
   },
   {
+    "ID": "Sad",
     "PROPER_NAME": "Sadistic\u00a0Nature",
     "NAMES": [
       "Sadistic\u00a0nature",

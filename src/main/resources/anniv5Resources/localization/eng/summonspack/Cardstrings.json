@@ -3,6 +3,10 @@
     "NAME": "Evil Spirit",
     "DESCRIPTION": "Channel an ${ModID}:Evil\u00a0Spirit. NL Draw a card.",
     "UPGRADE_DESCRIPTION": "Channel an ${ModID}:Evil\u00a0Spirit. NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Sadistic Nature",
+      "Deals damage when you apply debuffs."
+    ],
     "FLAVOR": "This is a good idea and can not in any way backfire."
   },
   "${ModID}:SummonVegetables": {
@@ -28,12 +32,20 @@
   "${ModID}:FireSpirit": {
     "NAME": "Fire Spirit",
     "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Fire\u00a0Spirit.",
+    "EXTENDED_DESCRIPTION": [
+      "Flame Barrier",
+      "When attacked, deal damage back."
+    ],
     "FLAVOR": "Burninating the Spire."
   },
   "${ModID}:RainbowLouse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
     "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Trigger the passive ability of *Rainbow *Lice !M! times.",
+    "EXTENDED_DESCRIPTION": [
+      "Temporary HP",
+      "Temporary HP disappears at the end of combat."
+    ],
     "FLAVOR": "The result of an unwise magic experiment."
   },
   "${ModID}:SummonBees": {

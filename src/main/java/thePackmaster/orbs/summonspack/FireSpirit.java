@@ -3,12 +3,19 @@ package thePackmaster.orbs.summonspack;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Interpolation;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FlameBarrierPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
+import com.megacrit.cardcrawl.vfx.BobEffect;
+import com.megacrit.cardcrawl.vfx.scene.TorchParticleXLEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.util.Wiz;
@@ -28,7 +35,10 @@ public class FireSpirit extends AbstractPackMasterOrb {
     private final static int BASE_EVOKE = 4;
 
     private Color color = Color.WHITE.cpy();
-    private double colorTime = 0d;
+
+    private float sparkTimer = 0.2f;
+
+    private BobEffect fireBobEffect = new BobEffect(2f, 3f);
 
     public FireSpirit()
     {
@@ -71,19 +81,35 @@ public class FireSpirit extends AbstractPackMasterOrb {
 
     @Override
     public void updateAnimation() {
-        super.updateAnimation();
-        colorTime += Gdx.graphics.getDeltaTime();
-        color.set(1f,
-                0.9f + (float)(0.1f*Math.cos(colorTime * 1.5d * Math.PI)),
-                0.75f + (float)(0.25f*Math.cos(colorTime * 3d * Math.PI)),
-                0.85f + (float)(0.15f*Math.cos(colorTime * 2d * Math.PI)));
+        fireBobEffect.update();
+
+        sparkTimer -= Gdx.graphics.getDeltaTime();
+
+        cX = MathHelper.orbLerpSnap(cX, adp().animX + tX);
+        cY = MathHelper.orbLerpSnap(cY, adp().animY + tY);
+        if (channelAnimTimer != 0.0F) {
+            channelAnimTimer -= Gdx.graphics.getDeltaTime();
+            if (channelAnimTimer < 0.0F) {
+                channelAnimTimer = 0.0F;
+            }
+        }
+
+        c.a = Interpolation.pow2In.apply(1.0F, 0.01F, channelAnimTimer / 0.5F);
+        scale = Interpolation.swingIn.apply(Settings.scale, 0.01F, channelAnimTimer / 0.5F);
+
+        if (sparkTimer <= 0) {
+            AbstractDungeon.effectsQueue.add(
+                    new TorchParticleXLEffect(cX + MathUtils.random(-30.0F, 30.0F) * Settings.scale,
+                            cY + MathUtils.random(-25.0F, 25.0F) * Settings.scale));
+            sparkTimer = MathUtils.random(0.05f, 0.5f);
+        }
     }
 
     @Override
     public void render(SpriteBatch sb) {
         sb.setColor(color);
         sb.setBlendFunction(770, 771);
-        sb.draw(img, cX - SPIRIT_WIDTH /2F, cY - SPIRIT_WIDTH /2F, SPIRIT_WIDTH /2F, SPIRIT_WIDTH /2F,
+        sb.draw(img, cX - SPIRIT_WIDTH /2F, cY - SPIRIT_WIDTH /2F + fireBobEffect.y, SPIRIT_WIDTH /2F, SPIRIT_WIDTH /2F,
                 SPIRIT_WIDTH, SPIRIT_WIDTH, scale, scale, 0f, 0, 0, (int) SPIRIT_WIDTH, (int) SPIRIT_WIDTH,
                 false, false);
         renderText(sb);

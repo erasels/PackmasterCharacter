@@ -17,8 +17,8 @@
   "${ModID}:AmbushPower": {
     "NAME": "Ambush",
     "DESCRIPTIONS": [
-      "Whenever you #yChannel an orb, #yEvoke #b1 time without removing it.",
-      "Whenever you #yChannel an orb, #yEvoke #b",
+      "Whenever you #yChannel an orb, #yEvoke it #b1 time without removing it.",
+      "Whenever you #yChannel an orb, #yEvoke it #b",
       " times without removing it."
     ]
   }

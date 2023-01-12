@@ -96,9 +96,9 @@ public class Louse extends AbstractPackMasterOrb implements OnPlayCardOrb {
     @Override
     public void render(SpriteBatch sb) {
         spinTime += Gdx.graphics.getDeltaTime();
-        color.set((MathUtils.cosDeg(spinTime * 120f) + 1f)/2f,
-                (MathUtils.cosDeg(spinTime * 120f + 120f) + 1f)/2f,
-                (MathUtils.cosDeg(spinTime * 120f + 240f) + 1f)/2f,
+        color.set((MathUtils.cosDeg(spinTime * 120f) + 1.3f)/2.3f,
+                (MathUtils.cosDeg(spinTime * 120f + 120f) + 1.3f)/2.3f,
+                (MathUtils.cosDeg(spinTime * 120f + 240f) + 1.3f)/2.3f,
                 1f);
         sb.setColor(color);
         sb.setBlendFunction(770, 771);

@@ -29,21 +29,21 @@ public class RainbowLouse extends AbstractPackmasterCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int MAGIC = 3;
-    private static final String HP_TIP = "Temporary HP";
+    private final TooltipInfo hpTip;
 
     public RainbowLouse() {
         super(ID, COST, TYPE, RARITY, TARGET);
-        exhaust = true;
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         AnimatedCardsPatch.loadFrames(this, 36, 2f/36f);
         baseMagicNumber = magicNumber = MAGIC;
+        hpTip = new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1]);
     }
 
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         ArrayList<TooltipInfo> extraTooltips = new ArrayList();
-        extraTooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(HP_TIP), BaseMod.getKeywordDescription(HP_TIP)));
+        extraTooltips.add(hpTip);
         return extraTooltips;
     }
 

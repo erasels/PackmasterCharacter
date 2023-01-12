@@ -27,13 +27,14 @@ public class EvilSpirit extends AbstractPackmasterCard {
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
 
-    private static final String SADISTIC_TIP = "Sadistic\u00a0Nature";
+    private final TooltipInfo sadisticTip;
 
     public EvilSpirit() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
+        sadisticTip = new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1]);
     }
 
     @Override
@@ -45,7 +46,7 @@ public class EvilSpirit extends AbstractPackmasterCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         ArrayList<TooltipInfo> extraTooltips = new ArrayList();
-        extraTooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(SADISTIC_TIP), BaseMod.getKeywordDescription(SADISTIC_TIP)));
+        extraTooltips.add(sadisticTip);
         return extraTooltips;
     }
 
