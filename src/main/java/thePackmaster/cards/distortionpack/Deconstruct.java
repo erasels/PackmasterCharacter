@@ -26,7 +26,7 @@ public class Deconstruct extends AbstractPackmasterCard {
                 (mo)->{
                     ApplyPowerAction distortion = new ApplyPowerAction(mo, p, new DistortionPower(mo, p, this.magicNumber), this.magicNumber);
                     atb(distortion);
-                    atb(new ImproveAction(mo, distortion));
+                    atb(new ImproveAction(mo, this.magicNumber, distortion));
                 }
         );
     }
