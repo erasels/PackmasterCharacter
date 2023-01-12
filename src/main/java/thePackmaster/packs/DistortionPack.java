@@ -14,6 +14,7 @@ import thePackmaster.ThePackmaster;
 import thePackmaster.actions.distortionpack.ImproveAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.distortionpack.*;
+import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,7 +93,7 @@ public class DistortionPack extends AbstractCardPack {
                     }
                 }
 
-                distortionPackTexture = ImproveAction._refactor(cardTexture, false);
+                distortionPackTexture = ImproveEffect._refactor(cardTexture, false);
             }
 
             int tw = distortionPackTexture.getWidth();

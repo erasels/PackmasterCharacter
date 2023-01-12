@@ -24,7 +24,7 @@ public class SetUpShop extends AbstractPackmasterCard {
         addToBot(new MultiGroupSelectAction(SCREEN_MSG,(list,map) ->
         {
             for (AbstractCard c : list) {
-                c.upgrade();
+                if (c.canUpgrade()) c.upgrade();
                 CardGroup group = map.get(c);
                 group.moveToDeck(c,false);
             }
