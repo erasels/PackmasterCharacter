@@ -16,7 +16,7 @@
   "${ModID}:HorizonboundPower": {
     "NAME": "Horizonbound",
     "DESCRIPTIONS": [
-      "Your foreign cards cost ",
+      "Your foreign cards cost #b",
       " less. Increases with each foreign card played. Resets every turn."
     ]
   }
