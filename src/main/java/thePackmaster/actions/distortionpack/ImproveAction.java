@@ -34,8 +34,10 @@ public class ImproveAction extends AbstractGameAction {
 
         for (AbstractGameEffect e : AbstractDungeon.effectList) {
             if (e instanceof ImproveEffect) {
-                if (materia.equals(((ImproveEffect) e).m))
+                if (materia.equals(((ImproveEffect) e).m)) {
+                    ((ImproveEffect) e).addFollowup(amount);
                     return;
+                }
             }
         }
 

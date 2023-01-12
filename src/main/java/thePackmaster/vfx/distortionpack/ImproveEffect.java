@@ -33,22 +33,29 @@ public class ImproveEffect extends AbstractGameEffect {
 
     public final AbstractMonster m;
     private final List<NotFinalPair<Texture, Consumer<Texture>>> textureSetters = new ArrayList<>();
-    private final int amount;
+    private int amount;
+
+    private ImproveFollowup followup = null;
 
     public ImproveEffect(AbstractMonster m, int amount) {
         this.m = m;
         this.amount = amount;
 
+        prep();
+    }
+
+    private void prep() {
         try {
             TextureAtlas _form = ReflectionHacks.getPrivate(this.m, AbstractCreature.class, "atlas");
             if (_form != null) {
                 for (TextureRegion r : _form.getRegions()) {
-                    textureSetters.add(new NotFinalPair<>(r.getTexture(), r::setTexture));
+                    textureSetters.add(new NotFinalPair<>(r.getTexture(), (t)->r.setTexture(_refactor(t, amount, true))));
                 }
             } else {
                 Texture img = ReflectionHacks.getPrivate(this.m, AbstractMonster.class, "img");
                 if (img != null) {
-                    textureSetters.add(new NotFinalPair<>(img, (t)->ReflectionHacks.setPrivate(m, AbstractMonster.class, "img", t)));
+                    textureSetters.add(new NotFinalPair<>(img,
+                            (t)->ReflectionHacks.setPrivate(m, AbstractMonster.class, "img", _refactor(t, amount, tempTextures.contains(t)))));
                 } else {
                     logger.error("Materia has no data: " + this.m.id);
                     this.isDone = true;
@@ -58,18 +65,52 @@ public class ImproveEffect extends AbstractGameEffect {
             logger.error("Failed to reconstruct m: " + this.m.id);
             e.printStackTrace();
         }
+    }
 
+    public void addFollowup(int amount) {
+        if (this.followup == null) {
+            this.followup = new ImproveFollowup(amount);
+        }
+        else {
+            followup.addFollowup(amount);
+        }
+    }
+    private static class ImproveFollowup {
+        final int amount;
+        ImproveFollowup followup;
+        public ImproveFollowup(int amount) {
+            this.amount = amount;
+        }
+        public void addFollowup(int amount) {
+            if (followup == null) {
+                followup = new ImproveFollowup(amount);
+            }
+            else {
+                followup.addFollowup(amount);
+            }
+        }
     }
 
     @Override
     public void update() {
         if (textureSetters.isEmpty()) {
-            isDone = true;
-            return;
+            if (followup == null) {
+                isDone = true;
+                return;
+            }
+
+            this.amount = followup.amount;
+            this.followup = followup.followup;
+            prep();
+
+            if (textureSetters.isEmpty()) {
+                isDone = true;
+                return;
+            }
         }
 
         NotFinalPair<Texture, Consumer<Texture>> tex = textureSetters.remove(textureSetters.size() - 1);
-        tex.b.accept(_refactor(tex.a, amount));
+        tex.b.accept(tex.a);
     }
 
     @Override
@@ -183,6 +224,7 @@ public class ImproveEffect extends AbstractGameEffect {
 
             if (dispose) {
                 t.dispose();
+                tempTextures.remove(t);
             }
 
             return new Texture(re);
