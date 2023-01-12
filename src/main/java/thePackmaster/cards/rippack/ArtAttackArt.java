@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
@@ -31,7 +30,7 @@ public class ArtAttackArt extends AbstractRippedArtCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractGameEffect rainbowEffect = ArtAttackArtEffect.RainbowBoomerang(m);
 
-        CardCrawlGame.sound.play(makeID("RipPack_Yay"));
+        atb(new SFXAction(makeID("RipPack_Yay")));
         atb(new VFXAction(rainbowEffect));
         atb(new AbstractGameAction() {
             @Override

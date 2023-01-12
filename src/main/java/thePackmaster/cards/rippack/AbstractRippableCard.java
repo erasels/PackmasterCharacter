@@ -5,6 +5,7 @@ import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.patches.HitboxRightClick;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -52,7 +53,7 @@ public abstract class AbstractRippableCard extends AbstractRipCard {
     public void onRightClick() {
         if(action == null) {
             if (canRip()) {
-                CardCrawlGame.sound.play("MAP_CLOSE", 0.0F);
+                att(new SFXAction("MAP_CLOSE"));
                 action = new RipCardAction(this, rippedParts.get(0), rippedParts.get(1));
                 att(action);
                 att(new WaitAction(0.1f));
@@ -91,7 +92,7 @@ public abstract class AbstractRippableCard extends AbstractRipCard {
     }
 
     public boolean canRip() {
-        return AbstractDungeon.player.hand.group.size() != BaseMod.MAX_HAND_SIZE;
+        return AbstractDungeon.player.hand.size() != BaseMod.MAX_HAND_SIZE;
     }
 
     public void onRip() {

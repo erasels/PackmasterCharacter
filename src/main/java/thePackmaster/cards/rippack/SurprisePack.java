@@ -42,7 +42,6 @@ public class SurprisePack extends AbstractRippableCard {
     public void upp() {
         upgradeSecondMagic(1);
         loadCardImage(makeImagePath("cards/SurprisePack_u.png"));
-        uDesc();
     }
 
     @Override

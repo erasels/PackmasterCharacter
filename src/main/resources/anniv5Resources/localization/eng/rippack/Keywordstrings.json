@@ -16,7 +16,7 @@
       "art cards",
       "art_cards"
     ],
-    "DESCRIPTION": "The art half of a ripped card. It does nothing and always exhausts."
+    "DESCRIPTION": "The art half of a #yripped card. It does nothing and always #yexhausts."
   },
   {
     "PROPER_NAME": "Text Card",
@@ -26,7 +26,7 @@
       "text cards",
       "text_cards"
     ],
-    "DESCRIPTION": "The text half of a ripped card. It always exhausts."
+    "DESCRIPTION": "The text half of a #yripped card. It always #yexhausts."
   },
   {
     "PROPER_NAME": "Unnate",
