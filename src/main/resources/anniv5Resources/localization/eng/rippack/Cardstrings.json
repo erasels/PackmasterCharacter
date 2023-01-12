@@ -1,7 +1,7 @@
 {
   "${ModID}:DividedFury": {
     "NAME": "Divided Fury",
-    "DESCRIPTION": "When you ${ModID}:rip, an Attack card, deal !M! damage to ALL enemies. NL When you ${ModID}:rip, a Skill card, gain !M! Block."
+    "DESCRIPTION": "When you *rip an Attack, deal !M! damage to ALL enemies. NL When you *rip a Skill, gain !M! Block."
   },
   "${ModID}:ViciousCycle": {
     "NAME": "Vicious Cycle",
