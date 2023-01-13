@@ -25,8 +25,8 @@
     "${ModID}:SpontaneousRitual": {
     "NAME": "Spontaneous Ritual",
     "DESCRIPTION": "Exhaust your hand. NL Deal damage equal to the number of cards Exhausted this combat.",
-    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your hand. NL Exhaust your hand. NL Deal damage equal to the number of cards Exhausted this combat.",
-  	"EXTENDED_DESCRIPTION": [" NL ( !M! cards so far )"]
+    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your hand then Exhaust it. NL Deal damage equal to the number of cards Exhausted this combat.",
+  	"EXTENDED_DESCRIPTION": [" NL ( !D! damage )"]
   },
     "${ModID}:FuneraryJewels": {
     "NAME": "Funerary Jewels",

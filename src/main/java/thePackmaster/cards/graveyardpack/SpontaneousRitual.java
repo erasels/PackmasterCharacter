@@ -42,57 +42,53 @@ public class SpontaneousRitual extends AbstractGraveyardCard {
 		this.magicNumber=this.baseMagicNumber;
 		
 	}
-
-	  public void applyPowers() {
-	    super.applyPowers();
-	    
-	    this.baseDamage=SpireAnniversary5Mod.combatExhausts;
-	    this.damage=this.baseDamage;
-	    this.baseMagicNumber=SpireAnniversary5Mod.combatExhausts;
-		this.magicNumber=this.baseMagicNumber;
-	    
-	    if (this.magicNumber > 0) {
-	    	if(this.upgraded) {
-	    		this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-	    	}else {
-	    		this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-	    	}
-	    	initializeDescription();
+	
+	private int sumDamage() {
+		int tempDamage=SpireAnniversary5Mod.combatExhausts+AbstractDungeon.player.hand.size();
+	    if(AbstractDungeon.player.hand.contains(this)) {
+	    	tempDamage-= 1;
 	    }
 	    
+		if(this.upgraded) {
+			tempDamage+= 3 - java.lang.Math.max(AbstractDungeon.player.hand.size()-BaseMod.MAX_HAND_SIZE+2, 0);	//when hand is too large, don't add the full 3 to damage (extra wounds are automatically discarded)
+		}
+	    
+		return tempDamage;
+	}
 
+	  public void applyPowers() {
+		this.baseDamage=sumDamage();
+		
+	    super.applyPowers();
+
+	    
+    	if(this.upgraded) {
+    		this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+    	}else {
+    		this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+    	}
+    	initializeDescription();
+	    
 	  }
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-
-	    this.baseDamage=SpireAnniversary5Mod.combatExhausts;
-	    this.damage=this.baseDamage;
-	    
-	    int tempDamage=this.damage+p.hand.size();
-	    if(p.hand.contains(this)) {
-	    	tempDamage-= 1;
-	    }
-
-	    
-		if(this.upgraded) {
-				tempDamage+= 3 - java.lang.Math.max(p.hand.size()-BaseMod.MAX_HAND_SIZE+2, 0);	//when hand is too large, don't add the full 3 to damage (extra wounds are automatically discarded)
-				AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new Dazed(), 3));
-		}
-		
 		AbstractDungeon.actionManager.addToBottom(new ExhaustHandAction());
 
 		AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_DARK_EVOKE"));
-	    
-	    
-		DamageInfo d = new DamageInfo(p, tempDamage, this.damageTypeForTurn);
-		d.applyPowers(p, m);
 		
-	    AbstractDungeon.actionManager.addToBottom(new DamageAction(m, d, AbstractGameAction.AttackEffect.FIRE));
-	    
+		if(this.upgraded) {
+			AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new Dazed(), 3));
+		}
+		
+		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 	}
 	
 	  public void calculateCardDamage(AbstractMonster mo) {
+
+	    this.baseDamage = sumDamage();
+		  
 	    super.calculateCardDamage(mo);
+	    
 	    if (SpireAnniversary5Mod.combatExhausts > 0) {
 	    	if(this.upgraded) {
 	    		this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
