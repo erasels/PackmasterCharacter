@@ -30,6 +30,7 @@ public class SummonBees extends AbstractPackmasterCard {
         baseDamage = DAMAGE;
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
+        isMultiDamage = true;
     }
 
     @Override

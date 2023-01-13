@@ -145,7 +145,6 @@ public class SwarmOfBees extends CustomOrb {
     public SwarmOfBees()
     {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH_O);
-        basePassiveAmount = BASE_PASSIVE;
         showEvokeValue = false;
 
         generateBees();
@@ -194,7 +193,7 @@ public class SwarmOfBees extends CustomOrb {
     @Override
     public void onEvoke() {
         for (AbstractMonster m : Wiz.getEnemies()) {
-            DamageInfo info = new DamageInfo(adp(), passiveAmount, DamageInfo.DamageType.THORNS);
+            DamageInfo info = new DamageInfo(adp(), evokeAmount, DamageInfo.DamageType.THORNS);
             AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
             ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
             ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
