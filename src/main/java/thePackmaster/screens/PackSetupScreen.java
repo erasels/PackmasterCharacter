@@ -12,10 +12,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.ui.buttons.GridSelectConfirmButton;
@@ -175,7 +177,9 @@ public class PackSetupScreen extends CustomScreen {
 
                     currentPoolPacks.sort(Comparator.comparing((pack)->pack.packID));
                     SpireAnniversary5Mod.selectedCards = true;
+                    editPotionPool();
                     CardCrawlGame.dungeon.initializeCardPools();
+
                 }
                 break;
             case DRAFTING:
@@ -372,6 +376,17 @@ public class PackSetupScreen extends CustomScreen {
             BaseMod.logger.info("Randomly selected: " + target.packID);
             currentPoolPacks.add(target);
             --amount;
+        }
+    }
+
+    public static void editPotionPool() {
+        ArrayList<String> pool = PotionHelper.potions;
+        for (AbstractCardPack pack : currentPoolPacks) {
+            for (String potionID : pack.getPackPotions()) {
+                if (pool.stream().noneMatch((s) -> s.equals(potionID))) {
+                    pool.add(potionID);
+                }
+            }
         }
     }
 
