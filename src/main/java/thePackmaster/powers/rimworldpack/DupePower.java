@@ -45,6 +45,7 @@ public class DupePower extends AbstractPackmasterPower {
             amount--;
             if (amount == 0)
                 addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            updateDescription();
         }
     }
 

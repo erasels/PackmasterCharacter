@@ -36,8 +36,14 @@ public class TradeBeaconPower extends AbstractPackmasterPower implements Discard
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                if(adp() != null && adp().hasPower(TradeBeaconPower.POWER_ID))
-                    ((TradeBeaconPower)adp().getPower(TradeBeaconPower.POWER_ID)).postStartDraw = true;
+                addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        if(adp() != null && adp().hasPower(TradeBeaconPower.POWER_ID))
+                            ((TradeBeaconPower)adp().getPower(TradeBeaconPower.POWER_ID)).postStartDraw = true;
+                        isDone = true;
+                    }
+                });
                 isDone = true;
             }
         });

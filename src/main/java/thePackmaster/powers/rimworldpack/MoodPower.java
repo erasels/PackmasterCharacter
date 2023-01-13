@@ -34,6 +34,7 @@ public class MoodPower extends AbstractPackmasterPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     public static UIStrings inspirationStrings = CardCrawlGame.languagePack.getUIString(modID + ":Inspirations");
+    public static UIStrings mentalBreakStrings = CardCrawlGame.languagePack.getUIString(modID + ":MentalBreaks");
 
     public MoodPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
@@ -164,12 +165,12 @@ public class MoodPower extends AbstractPackmasterPower {
 
         public static void mentalBreak(AbstractCreature owner)
         {
-            int rand = AbstractDungeon.cardRandomRng.random(3) + 4;
+            int rand = AbstractDungeon.cardRandomRng.random(3);
             Wiz.atb(new VFXAction(owner, new VerticalAuraEffect(new Color(1, 0, 0, .5f), owner.hb.cX, owner.hb.cY), 0.25F));
-            Wiz.atb(new TalkAction(true, inspirationStrings.TEXT[rand], 2.5f, 2.5f));
+            Wiz.atb(new TalkAction(true, mentalBreakStrings.TEXT[rand], 2.5f, 2.5f));
             if(owner instanceof AbstractPlayer)
             {
-                switch (rand - 4)
+                switch (rand)
                 {
                     case 1:
                         Wiz.atb(new MakeTempCardInHandAction(new Slimed(), 2));
