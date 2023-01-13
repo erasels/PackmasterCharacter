@@ -12,8 +12,16 @@
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random card in hand by 1 this turn.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of !M! random cards in hand by 1 this turn."
   },
+  "${ModID}:Rummage2": {
+    "NAME": "Rummage II",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw a card and reduce its cost by !M! this turn."
+  },
   "${ModID}:Cardistry": {
     "NAME": "Cardistry",
     "DESCRIPTION": "Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile."
+  },
+  "${ModID}:Cardistry2": {
+    "NAME": "Cardistry II",
+    "DESCRIPTION": "{@@}Reduce the cost of !M! random card{!M!|>1=s} in your hand by 1 this turn."
   }
 }
