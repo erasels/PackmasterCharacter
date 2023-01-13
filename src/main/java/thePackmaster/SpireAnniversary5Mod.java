@@ -136,6 +136,8 @@ public class SpireAnniversary5Mod implements
     private static final String ELEPHANT_OGG = makePath("audio/summonspack/Elephant.ogg");
     public static final String PEW_KEY = makeID("Pew");
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
+    public static final String EVIL_KEY = makeID("Evil");
+    private static final String EVIL_OGG = makePath("audio/summonspack/Evil.ogg");
     public static final String TRANSMUTATION_KEY = makeID("Transmutation");
     private static final String TRANSMUTATION_OGG = makePath("audio/transmutationpack/Transmutation.ogg");
     public static final String WATER_IMPACT_1_KEY = makeID("WaterImpactOne");
@@ -162,6 +164,8 @@ public class SpireAnniversary5Mod implements
     private static final String GUN2_OGG = makePath("audio/hermitpack/GUN2.ogg");
     public static final String GUN3_KEY = makeID("Gun3");
     private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
+
+    public static final String EVIL_EFFECT_FILE = makePath("images/vfx/summonspack/Evil.png");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
     public static final ArrayList<Louse> louseList = new ArrayList<>();
@@ -403,6 +407,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(BEES_KEY, BEES_OGG);
         BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
+        BaseMod.addAudio(EVIL_KEY, EVIL_OGG);
         BaseMod.addAudio(TRANSMUTATION_KEY, TRANSMUTATION_OGG);
         BaseMod.addAudio(WATER_IMPACT_1_KEY, WATER_IMPACT_1_OGG);
         BaseMod.addAudio(WATER_IMPACT_2_KEY, WATER_IMPACT_2_OGG);
@@ -699,6 +704,11 @@ public class SpireAnniversary5Mod implements
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
         }
+    }
+
+    public static class Enums {
+        @SpireEnum
+        public static AbstractGameAction.AttackEffect EVIL;
     }
 
 }

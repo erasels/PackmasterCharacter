@@ -2,17 +2,17 @@
   "${ModID}:SwarmOfBees": {
     "NAME": "Swarm Of Bees",
     "DESCRIPTION": [
-      "#yPassive: Whenever you lose HP, deal #b",
-      " damage to a random enemy. NL #yEvoke: Gain #b",
-      " #yThorns."
+      "#yPassive: Deal #b",
+      " damage to ALL enemies. NL #yEvoke: Deal #b",
+      " damage to ALL enemies."
     ]
   },
   "${ModID}:Louse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": [
-      "#yPassive: Whenever you play a card, increase this orb's damage by #b",
-      ". NL #yEvoke: Deal #b",
-      " damage to the enemy with the most HP."
+      "#yPassive: Whenever you play a card, increase this orb's #yTemporary #yHP by #b",
+      ". NL #yEvoke: Gain #b",
+      " #yTemporary #yHP."
     ]
   },
   "${ModID}:Panda": {
@@ -23,12 +23,20 @@
       " damage to a random enemy."
     ]
   },
-  "${ModID}:Bulldog": {
-    "NAME": "Bulldog",
+  "${ModID}:EvilSpirit": {
+    "NAME": "Evil Spirit",
     "DESCRIPTION": [
-      "#yPassive: At the end of your turn, deal #b",
-      " damage to the enemy with the lowest HP. NL #yEvoke: Deal #b",
-      " damage to the enemy with the lowest HP."
+      "#yPassive: Whenever you apply a debuff to an enemy, deal #b",
+      " damage. NL #yEvoke: Gain #b",
+      " #ySadistic #yNature."
+    ]
+  },
+  "${ModID}:FireSpirit": {
+    "NAME": "Fire Spirit",
+    "DESCRIPTION": [
+      "#yPassive: Gain #b",
+      " #yFlame #yBarrier at the end of your turn. NL #yEvoke: Gain #b",
+      " #yFlame #yBarrier."
     ]
   }
 }
