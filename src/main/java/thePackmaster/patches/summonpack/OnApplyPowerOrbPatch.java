@@ -24,7 +24,7 @@ public class OnApplyPowerOrbPatch
         )
         public static SpireReturn<Void> Insert(ApplyPowerAction __instance, @ByRef float[] duration, AbstractPower powerToApply)
         {
-            if (__instance.source.isPlayer && __instance.target != null)
+            if (__instance.source != null && __instance.source.isPlayer && __instance.target != null)
                 for (AbstractOrb orb : adp().orbs)
                     if (orb instanceof OnApplyPowerOrb)
                         ((OnApplyPowerOrb) orb).onApplyPower(__instance.target, powerToApply);
