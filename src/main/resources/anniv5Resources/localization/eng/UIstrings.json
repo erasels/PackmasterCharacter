@@ -49,7 +49,8 @@
       "Turn this on to choose how your Packs are determined.",
       "Random",
       "Choice of 3",
-      "Pack filtering menu"
+      "Pack filtering menu",
+      "HAT MENU"
     ]
   },
   "${ModID}:PackSetup": {
@@ -84,6 +85,11 @@
       "Chance",
       "Inspiration",
       "Mental Break"
+    ]
+  },
+  "${ModID}:HatMenu": {
+    "TEXT": [
+      "No Hat"
     ]
   }
 }
