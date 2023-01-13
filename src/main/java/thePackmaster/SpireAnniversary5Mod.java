@@ -93,6 +93,7 @@ public class SpireAnniversary5Mod implements
     public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
     public static ArrayList<AbstractCardPack> unfilteredAllPacks = new ArrayList<>();
     public static HashMap<String, AbstractCardPack> packsByID;
+    public static Set<String> packExclusivePotions = new HashSet<>();
     public static ArrayList<AbstractCardPack> currentPoolPacks = new ArrayList<>();
     public static CardGroup packsToDisplay;
     public static Settings.GameLanguage[] SupportedLanguages = {
@@ -458,7 +459,9 @@ public class SpireAnniversary5Mod implements
                     if (PackFilterMenu.getFilterConfig(pack.packID)) {
                         allPacks.add(pack);
                     }
+                    packExclusivePotions.addAll(pack.getPackPotions());
                 });
+
     }
 
     public static AbstractCardPack getRandomPackFromAll() {
