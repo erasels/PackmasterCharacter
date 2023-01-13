@@ -1,0 +1,9 @@
+{
+  "${ModID}:EnergyAndEchoPack": {
+    "TEXT": [
+      "Energy & Echo",
+      "Generate [E] and do your best at spending it through echoing cards.",
+      "Diamsword"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "${ModID}:ShadowStrike": {
+    "NAME": "Shadow Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Echo."
+  },
+  "${ModID}:MagnetRise": {
+    "NAME": "Magnet rise",
+    "DESCRIPTION": "Gain !B! Block. NL If you generated extra [E] this turn, this card costs 0."
+  },
+  "${ModID}:LunchBreak": {
+    "NAME": "Lunch Break",
+    "DESCRIPTION": "Next turn draw !M! cards and gain [E]."
+  },
+  "${ModID}:TearApart": {
+    "NAME": "Tear Apart",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E]. NL Echo."
+  },
+  "${ModID}:Voices": {
+    "NAME": "Voices",
+    "DESCRIPTION": "Draw !M! cards. NL Echo. NL Exhaust."
+  },
+  "${ModID}:Receptor": {
+    "NAME": "Receptor",
+    "DESCRIPTION": "Gain !M! Block for each extra [E] that you generate."
+  }
+  "${ModID}:Flashlight": {
+    "NAME": "Flashlight",
+    "DESCRIPTION": "Innate. NL Gain [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain [E] . NL Next turn, Gain [E]. NL Exhaust."
+  },
+  "${ModID}:Discharge": {
+    "NAME": "Discharge",
+    "DESCRIPTION": "Deal damage equal to 5 times [E] spent this turn.",
+    "EXTENDED_DESCRIPTION": ["Deal damage equal to 5 times [E] spent this turn. NL (Deals !D! damage.)"]
+  },
+  "${ModID}:Overload": {
+    "NAME": "Overload",
+    "DESCRIPTION": "Deal !D! damage. NL Increase this card's damage by !M! and cost by 1 this combat."
+  },
+  "${ModID}:TRBO": {
+    "NAME": "TRBO",
+    "DESCRIPTION": "XXX."
+  }
+}

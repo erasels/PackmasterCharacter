@@ -7,35 +7,38 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cardmodifiers.energyandechopack.GlowEchoMod;
 import thePackmaster.cardmodifiers.warlockpack.GlowTheSoulariumMod;
-import thePackmaster.cards.warlockpack.*;
+import thePackmaster.cards.energyandechopack.*;
+import thePackmaster.cards.quietpack.*;
 
 import java.util.ArrayList;
 
-public class WarlockPack extends AbstractCardPack {
-    public static final String ID = SpireAnniversary5Mod.makeID("WarlockPack");
+public class EnergyAndEchoPack extends AbstractCardPack {
+    public static final String ID = SpireAnniversary5Mod.makeID("EnergyAndEchoPack");
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
     public static final String NAME = UI_STRINGS.TEXT[0];
     public static final String DESC = UI_STRINGS.TEXT[1];
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
-    public WarlockPack() {
+    public EnergyAndEchoPack() {
         super(ID, NAME, DESC, AUTHOR);
     }
+    public static int generatedEnergy;
+    public static int usedEnergy;
 
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(HighPriestessJeklik.ID);
-        cards.add(SoulShear.ID);
-        cards.add(Soulfire.ID);
-        cards.add(Doomguard.ID);
-        cards.add(HandOfGulDan.ID);
-        cards.add(SeedsOfDestruction.ID);
-        cards.add(AranasiBroodmother.ID);
-        cards.add(MalchezaarsImp.ID);
-        cards.add(TheSoularium.ID);
-        cards.add(RunedMithrilRod.ID);
+        cards.add(Discharge.ID);
+        cards.add(Flashlight.ID);
+        cards.add(LunchBreak.ID);
+        cards.add(MagnetRise.ID);
+        cards.add(Overload.ID);
+        cards.add(Receptor.ID);
+        cards.add(ShadowStrike.ID);
+        cards.add(TearApart.ID);
+        cards.add(Voices.ID);
         return cards;
     }
 
@@ -43,17 +46,17 @@ public class WarlockPack extends AbstractCardPack {
         CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
             @Override
             public boolean test(AbstractCard card) {
-                return CardModifierManager.hasModifier(card, GlowTheSoulariumMod.ID);
+                return CardModifierManager.hasModifier(card, GlowEchoMod.ID);
             }
 
             @Override
             public Color getColor(AbstractCard card) {
-                return Color.PURPLE.cpy();
+                return Color.SLATE.cpy();
             }
 
             @Override
             public String glowID() {
-                return "anniv5:GlowTheSoularium";
+                return "anniv5:GlowEcho";
             }
         });
 

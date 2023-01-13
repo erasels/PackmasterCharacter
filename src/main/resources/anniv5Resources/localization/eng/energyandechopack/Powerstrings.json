@@ -1,0 +1,19 @@
+{
+  "${ModID}:ReceptorPower": {
+    "NAME": "Receptor",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Block for each extra [E] that you generate."
+    ]
+  },
+  "${ModID}:DivineTouchPower": {
+    "NAME": "Divine Touch",
+    "DESCRIPTIONS": [
+      "The",
+      " #b",
+      " first time",
+      "s",
+      " a card is created each turn, replace it with #yDouble #yEnergy"
+    ]
+  }
+}
