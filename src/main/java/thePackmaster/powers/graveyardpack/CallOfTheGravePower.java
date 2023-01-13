@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
 
-import thePackmaster.actions.graveyardpack.PlayRandomFromExhaustAction;
+import thePackmaster.actions.graveyardpack.PlayFromExhaustAction;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 
@@ -33,7 +33,7 @@ public class CallOfTheGravePower extends AbstractPackmasterPower {
     	flash();
     	for(int i=0;i<this.amount;i++) {
     		AbstractDungeon.actionManager.addToBottom(new WaitAction(Settings.ACTION_DUR_FAST));
-    		AbstractDungeon.actionManager.addToBottom(new PlayRandomFromExhaustAction(false));
+    		AbstractDungeon.actionManager.addToBottom(new PlayFromExhaustAction(true));
     	}
     }
     

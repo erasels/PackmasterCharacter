@@ -18,8 +18,6 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
-import thePackmaster.actions.graveyardpack.CleanUpCardAction;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -31,15 +29,21 @@ public class PlayFromExhaustAction extends AbstractGameAction
 {
 	private AbstractPlayer p;
 	private ArrayList<AbstractCard> classless;
+	private final boolean random;
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("PlayFromExhaustAction"));
 	public static final String[] TEXT = uiStrings.TEXT;
 	
-	public PlayFromExhaustAction() {
+	public PlayFromExhaustAction(boolean random) {
+		this.random = random;
 		this.classless = new ArrayList();
 		this.p = AbstractDungeon.player;
 		setValues(this.p, AbstractDungeon.player, this.amount);
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
 		this.duration = Settings.ACTION_DUR_FAST;
+	}
+	
+	public PlayFromExhaustAction(){
+		this(false);
 	}
 	  
 	public void update() {
@@ -48,10 +52,10 @@ public class PlayFromExhaustAction extends AbstractGameAction
   	        this.isDone = true;
   	        return;
   	      }
-  	      
+  	      //set aside colorless cards, curses, and cards you can't play
   	    	for (Iterator<AbstractCard> ex = this.p.exhaustPile.group.iterator(); ex.hasNext(); ) {
   		        AbstractCard derp = (AbstractCard)ex.next();
-  		        if (derp.color.equals(AbstractCard.CardColor.COLORLESS) || derp.color.equals(AbstractCard.CardColor.CURSE)) {
+  		        if (derp.color.equals(AbstractCard.CardColor.COLORLESS) || derp.color.equals(AbstractCard.CardColor.CURSE) || !derp.canUse(p, AbstractDungeon.getMonsters().getRandomMonster(true))) {
   		          this.classless.add(derp);
   		          ex.remove();
   		        } 
@@ -60,8 +64,8 @@ public class PlayFromExhaustAction extends AbstractGameAction
   	      if (this.p.exhaustPile.isEmpty()) {
   	    	  this.p.exhaustPile.group.addAll(classless);
   	    	  this.classless.clear();
-  		        this.isDone = true;
-  		        return;
+  		      this.isDone = true;
+  		      return;
   	      }
   	      
   	      if (this.p.exhaustPile.size() == 1) {
@@ -75,18 +79,26 @@ public class PlayFromExhaustAction extends AbstractGameAction
   	        return;
   	      } 
   	      
+  	      if(this.random) {
+  	    	  playCard(p.exhaustPile.getRandomCard(true));
+  	    	  this.p.exhaustPile.group.addAll(classless);
+  	    	  this.classless.clear();
+  	    	  this.isDone = true;
+  	    	  return;
+  	      }
+  	      
+  	      
   	      for (AbstractCard cx : this.p.exhaustPile.group) {
   	        cx.stopGlowing();
   	        cx.unfadeOut();
   	      }
-  	      
   	      AbstractDungeon.gridSelectScreen.open(this.p.exhaustPile, 1, TEXT[0], false);
-  	      tickDuration();
   	      
+  	      tickDuration();
   	      return;
   	    } 
   	    
-  	    if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+  	    if(!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
   	      for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
   	    	playCard(c);
   	      } 
@@ -109,26 +121,9 @@ public class PlayFromExhaustAction extends AbstractGameAction
 	public static void playCard(AbstractCard c) {
 		AbstractMonster t = AbstractDungeon.getMonsters().getRandomMonster(true);
 		
-		
-//		c.freeToPlayOnce = true;
-//		c.purgeOnUse=true;
-		
 		c.applyPowers();
-//		c.freeToPlayOnce=true;
-//		c.purgeOnUse=true;
 		
-		/*
-		AbstractCard c2 = c.makeStatEquivalentCopy();
-        c2.current_y = -200.0F * Settings.scale;
-        c2.target_x = Settings.WIDTH / 2.0F + 200.0F * Settings.scale;
-        c2.target_y = Settings.HEIGHT / 2.0F;
-        c2.targetAngle = 0.0F;
-        c2.lighten(false);
-        c2.drawScale = 0.12F;
-        c2.targetDrawScale = 0.75F;
-        AbstractDungeon.actionManager.addToBottom(new ShowCardAndPoofAction(c2));
-		*/
-		
+		//make a temporary copy and play that
         AbstractCard tmp = c.makeSameInstanceOf();
         tmp.magicNumber = c.magicNumber;
         AbstractDungeon.player.limbo.addToBottom(tmp);
@@ -145,8 +140,13 @@ public class PlayFromExhaustAction extends AbstractGameAction
         AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, t, AbstractDungeon.player.energy.energy, true, true), true);
 
         
-		//AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, t, false, true));
-		AbstractDungeon.actionManager.addToTop(new CleanUpCardAction(c, "exhaust", "nowhere", -1));
+		//clean up the original card
+		AbstractDungeon.player.exhaustPile.removeCard(c);
+		for (AbstractCard d : AbstractDungeon.player.exhaustPile.group) {
+			d.stopGlowing();
+			d.unfadeOut();
+		}
+        
 		if (!Settings.FAST_MODE) {
 			AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_MED));
 		} else {

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Dazed;
@@ -15,10 +16,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.UnceasingTop;
 
 import basemod.BaseMod;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.graveyardpack.ExhaustFromHandAction;
+import thePackmaster.actions.graveyardpack.ExhaustHandAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -77,21 +79,15 @@ public class SpontaneousRitual extends AbstractGraveyardCard {
 				AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new Dazed(), 3));
 		}
 		
-		AbstractDungeon.actionManager.addToBottom(new ExhaustFromHandAction(BaseMod.MAX_HAND_SIZE,true,false,false));	//p.hand.size() not updating correctly for some reason
+		AbstractDungeon.actionManager.addToBottom(new ExhaustHandAction());
 
-	    CardCrawlGame.sound.play("ORB_DARK_EVOKE", 0.1F);
+		AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_DARK_EVOKE"));
 	    
 	    
 		DamageInfo d = new DamageInfo(p, tempDamage, this.damageTypeForTurn);
 		d.applyPowers(p, m);
 		
 	    AbstractDungeon.actionManager.addToBottom(new DamageAction(m, d, AbstractGameAction.AttackEffect.FIRE));
-
-	    
-	    if(AbstractDungeon.player.hasRelic("Unceasing Top"))	//hack to get around unceasing top not triggering correctly
-		{
-			  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p,1));
-		}
 	    
 	}
 	
@@ -128,5 +124,6 @@ public class SpontaneousRitual extends AbstractGraveyardCard {
 	}
 
 	public void upp() {
+		cardsToPreview = new Dazed();
 	}
 }

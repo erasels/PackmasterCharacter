@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 
@@ -24,7 +24,7 @@ public class FuneraryJewels
   private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
   
 
-  private static final int COST = 0;
+  private static final int COST = 1;
   
 	public FuneraryJewels() {
 		super(ID, COST, TYPE, RARITY, TARGET);
@@ -38,12 +38,13 @@ public class FuneraryJewels
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-	    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p,this.magicNumber));
+	    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p,1));
+	    AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
 	}
 
 
   
 	public void upp() {
-		upgradeBlock(2);
+		upgradeBlock(3);
 	}
 }

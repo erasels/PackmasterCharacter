@@ -9,11 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import thePackmaster.actions.graveyardpack.ReturnExhaustedToDeckAction;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.ShuffleAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
+import java.util.function.Predicate;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -35,7 +37,9 @@ public class GreyBargain
 
   public void use(AbstractPlayer p, AbstractMonster m) {
 	  if(p.hand.size()>0) {
-		  AbstractDungeon.actionManager.addToBottom(new ReturnExhaustedToDeckAction(false));
+		  Predicate<AbstractCard> classy = card -> !(card.color.equals(AbstractCard.CardColor.COLORLESS) || card.color.equals(AbstractCard.CardColor.CURSE));
+		  AbstractDungeon.actionManager.addToBottom(new MoveCardsAction(p.drawPile, p.exhaustPile, classy));
+		  AbstractDungeon.actionManager.addToBottom(new ShuffleAction(p.drawPile));
 		  AbstractDungeon.actionManager.addToBottom(new ExhaustAction(p,p,1,false));
 	  }
 	  if(this.upgraded) {

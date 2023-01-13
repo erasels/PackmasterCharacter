@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 
 import thePackmaster.powers.graveyardpack.DarkOfNightPower;
 
@@ -35,7 +36,7 @@ public class DarkOfNight
 
   public void use(AbstractPlayer p, AbstractMonster m) {
       AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DarkOfNightPower(p,this.magicNumber), this.magicNumber));
-      CardCrawlGame.sound.play("EVENT_SPIRITS", 0.05F);
+      AbstractDungeon.actionManager.addToBottom(new SFXAction("EVENT_SPIRITS"));
   }
 
   

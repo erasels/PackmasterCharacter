@@ -5,13 +5,5 @@
       "buried"
     ],
     "DESCRIPTION": "A class card (not Colorless, Status, or Curse) from your exhaust pile."
-  },
-  {
-    "PROPER_NAME": "Purge",
-    "NAMES": [
-      "purge",
-      "purges"
-    ],
-    "DESCRIPTION": "Removed from play until the end of combat."
   }
 ]

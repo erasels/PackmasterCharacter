@@ -7,7 +7,7 @@
   },
     "${ModID}:ExtraLimbs": {
     "NAME": "Extra Limbs",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL When Exhausted, increase the number of strikes by 1 this combat. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL When Exhausted, increase the number of hits by 1 this combat. NL Exhaust."
   },
     "${ModID}:AncientSpear": {
     "NAME": "Ancient Spear",
@@ -19,8 +19,8 @@
   },
     "${ModID}:CallOfTheGrave": {
     "NAME": "Call of the Grave",
-    "DESCRIPTION": "At the start of your turn, play a random ${ModID}:Buried card and ${ModID}:Purge it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, play a random ${ModID}:Buried card and ${ModID}:Purge it."
+    "DESCRIPTION": "At the start of your turn, play a random ${ModID}:Buried card and stslib:Purge it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, play a random ${ModID}:Buried card and stslib:Purge it."
   },
     "${ModID}:SpontaneousRitual": {
     "NAME": "Spontaneous Ritual",
@@ -30,7 +30,7 @@
   },
     "${ModID}:FuneraryJewels": {
     "NAME": "Funerary Jewels",
-    "DESCRIPTION": "Gain !B! Block. Draw !M! card. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. Draw !M! card. Gain [E]. NL Exhaust."
   },
     "${ModID}:Tombstone": {
     "NAME": "Tombstone",
@@ -43,7 +43,7 @@
   },
     "${ModID}:LastGasp": {
     "NAME": "Last Gasp",
-    "DESCRIPTION": "Ethereal. NL Choose a ${ModID}:Buried card, play it, and ${ModID}:Purge it.",
-    "UPGRADE_DESCRIPTION": "Choose a ${ModID}:Buried card, play it, and ${ModID}:Purge it."
+    "DESCRIPTION": "Ethereal. NL Choose a ${ModID}:Buried card, play it, and stslib:Purge it.",
+    "UPGRADE_DESCRIPTION": "Choose a ${ModID}:Buried card, play it, and stslib:Purge it."
   }
 }
