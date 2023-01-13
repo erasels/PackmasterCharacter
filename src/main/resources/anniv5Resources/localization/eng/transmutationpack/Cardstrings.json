@@ -1,7 +1,8 @@
 {
   "${ModID}:AmalgamateWaters": {
     "NAME": "Amalgamate Waters",
-    "DESCRIPTION": "This gains all ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmutes them."
+    "DESCRIPTION": "Draw a ${ModID}:Mutable card. NL Gain ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them.",
+    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Mutable cards. NL Gain ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them."
   },
   "${ModID}:CrystalLattice": {
     "NAME": "Crystal Lattice",
