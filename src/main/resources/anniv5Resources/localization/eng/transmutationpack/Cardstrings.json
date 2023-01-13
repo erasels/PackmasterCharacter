@@ -1,11 +1,12 @@
 {
   "${ModID}:AmalgamateWaters": {
     "NAME": "Amalgamate Waters",
-    "DESCRIPTION": "This gains all ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmutes them."
+    "DESCRIPTION": "Draw a ${ModID}:Mutable card. NL Gain ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them.",
+    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Mutable cards. NL Gain ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them."
   },
   "${ModID}:CrystalLattice": {
     "NAME": "Crystal Lattice",
-    "DESCRIPTION": "${ModID}:Transmute a card. Add 2 additional copies of the new card to your hand. NL Exhaust."
+    "DESCRIPTION": "${ModID}:Transmute a card. Add !M! additional copies of the new card to your hand. NL Exhaust."
   },
   "${ModID}:CrystalResonance": {
     "NAME": "Crystal Resonance",
@@ -22,7 +23,8 @@
   },
   "${ModID}:GhostlyMist": {
     "NAME": "Ghostly Mist",
-    "DESCRIPTION": "When ${ModID}:Transmuted, the new card gains !M! extra damage and Block. NL ${ModID}:Mutable: ${ModID}:Transmute this card."
+    "DESCRIPTION": "${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your draw pile."
   },
   "${ModID}:GlacialSynthesis": {
     "NAME": "Glacial Synthesis",
@@ -63,10 +65,20 @@
       " cards."
     ]
   },
+  "${ModID}:FreeToPlayEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Free to play."
+    ]
+  },
   "${ModID}:GainBlockEffect": {
     "EXTENDED_DESCRIPTION": [
       "Gain ",
       " Block"
+    ]
+  },
+  "${ModID}:ReboundSelfEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Shuffle this card into your draw pile."
     ]
   },
   "${ModID}:TransmuteSelfEffect": {
