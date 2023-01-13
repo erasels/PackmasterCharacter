@@ -20,7 +20,7 @@ public class HatMenu {
     public boolean isOpen = false;
 
     private final DropdownMenu dropdown;
-    private final ArrayList<String> hats = new ArrayList<>();
+    public final ArrayList<String> hats = new ArrayList<>();
 
     private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));

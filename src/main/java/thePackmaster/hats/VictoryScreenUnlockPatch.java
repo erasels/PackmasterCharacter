@@ -8,6 +8,9 @@ import javassist.CtBehavior;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.patches.MainMenuUIPatch;
+
+import java.io.IOException;
 
 
 @SpirePatch(
@@ -25,7 +28,12 @@ public class VictoryScreenUnlockPatch {
 
         if (AbstractDungeon.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER)) {
             for (AbstractCardPack p : SpireAnniversary5Mod.currentPoolPacks) {
-
+                MainMenuUIPatch.hatMenu.hats.add(p.packID);
+            }
+            try {
+                SpireAnniversary5Mod.saveUnlockedHats(MainMenuUIPatch.hatMenu.hats);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         }
 

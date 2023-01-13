@@ -65,7 +65,7 @@ public class MainMenuUIPatch {
     private static final float HATBUTTON_X = 560f;
     private static final float HATBUTTON_Y = 1080f - 122f;
 
-    private static final HatMenu hatMenu = new HatMenu();
+    public static final HatMenu hatMenu = new HatMenu();
     private static final ModLabeledButton openHatMenuButton;
 
     static {
