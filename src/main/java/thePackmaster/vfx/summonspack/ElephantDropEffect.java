@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
+import java.util.Set;
+
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 
 public class ElephantDropEffect extends AbstractGameEffect {
@@ -16,9 +18,9 @@ public class ElephantDropEffect extends AbstractGameEffect {
     private static final Texture IMG = ImageMaster.loadImage(IMG_PATH);
     private static final float ELEPHANT_WIDTH = IMG.getWidth();
     private static final float ELEPHANT_HEIGHT = IMG.getHeight();
-    private static final float START_Y = 1080f + ELEPHANT_HEIGHT/2f;
-    private static final float FLOOR_Y = 400f;
-    private static final float HIT_X = 1250f;
+    private static final float START_Y = (1080f + ELEPHANT_HEIGHT/2f)*Settings.yScale;
+    private static final float FLOOR_Y = 400f * Settings.scale;
+    private static final float HIT_X = 1250f * Settings.scale;
 
     private float y;
 

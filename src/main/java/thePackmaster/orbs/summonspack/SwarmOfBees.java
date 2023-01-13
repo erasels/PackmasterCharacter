@@ -41,15 +41,16 @@ public class SwarmOfBees extends CustomOrb {
     private static final int BEE_COUNT = 120;
     public static final int BASE_PASSIVE = 2;
     public static final int BASE_EVOKE = 6;
-    private static final Color STING_COLOR = Color.GOLDENROD.cpy();
+    private static final Color STING_COLOR = Color.YELLOW.cpy();
+
+    private static final float SPAWN_DISTANCE = 40f*Settings.scale;
+    private static final float TETHER_DISTANCE = SPAWN_DISTANCE;
+    private static final float SPAWN_VELOCITY_VAR = 40f*Settings.scale;
+    private static final float ACC_VAR = 40f*Settings.scale;
 
     private final ArrayList<Bee> bees = new ArrayList<>();
 
     private class Bee {
-        private static final float SPAWN_DISTANCE = 40f;
-        private static final float TETHER_DISTANCE = SPAWN_DISTANCE;
-        private static final float SPAWN_VELOCITY_VAR = 40f;
-        private static final float ACC_VAR = 40f;
 
         private float x, y;
         private float vMag, vAngle;
@@ -144,7 +145,6 @@ public class SwarmOfBees extends CustomOrb {
     public SwarmOfBees()
     {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH_O);
-        basePassiveAmount = BASE_PASSIVE;
         showEvokeValue = false;
 
         generateBees();
@@ -193,7 +193,7 @@ public class SwarmOfBees extends CustomOrb {
     @Override
     public void onEvoke() {
         for (AbstractMonster m : Wiz.getEnemies()) {
-            DamageInfo info = new DamageInfo(adp(), passiveAmount, DamageInfo.DamageType.THORNS);
+            DamageInfo info = new DamageInfo(adp(), evokeAmount, DamageInfo.DamageType.THORNS);
             AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
             ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
             ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);

@@ -32,8 +32,8 @@ public class ElephantPieceEffect extends AbstractGameEffect {
         duration = DURATION;
         scale = Settings.scale;
         renderBehind = false;
-        vx = MathUtils.random(-1000f, 1000f);
-        vy = MathUtils.random(200f, 1000f);
+        vx = MathUtils.random(-1000f, 1000f)*Settings.scale;
+        vy = MathUtils.random(200f, 1000f)*Settings.scale;
         vRot = MathUtils.random(-180f, 180f);
     }
 

@@ -24,6 +24,7 @@ public class DarkRitual extends AbstractDimensionalCard {
         setFrame("darkritualframe.png");
         baseMagicNumber = magicNumber = 100;
         FleetingField.fleeting.set(this, true);
+        tags.add(CardTags.HEALING);
     }
 
 

@@ -15,7 +15,7 @@
       "rainbow\u00a0louse",
       "Rainbow\u00a0louse"
     ],
-    "DESCRIPTION": "Orb: Increases damage when you play a card. When evoked, deals damage to the enemy with the most HP."
+    "DESCRIPTION": "Orb: Increases #yTemporary #yHP when you play a card. When #yEvoked, gain the #yTemporary #yHP."
   },
   {
     "PROPER_NAME": "Panda",
@@ -25,10 +25,36 @@
     "DESCRIPTION": "Orb: Deals damage to a random enemy at the end of your turn."
   },
   {
-    "PROPER_NAME": "Bulldog",
+    "PROPER_NAME": "Evil\u00a0Spirit",
     "NAMES": [
-      "bulldog"
+      "evil\u00a0spirit",
+      "Evil\u00a0spirit"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the enemy with the least HP at the end of your turn."
+    "DESCRIPTION": "Orb: Enemies take damage whenever they are debuffed. When #yEvoked, gain #ySadistic #yNature"
+  },
+  {
+    "ID": "Sad",
+    "PROPER_NAME": "Sadistic\u00a0Nature",
+    "NAMES": [
+      "Sadistic\u00a0nature",
+      "sadistic\u00a0nature"
+    ],
+    "DESCRIPTION": "Deal damage when you apply debuffs."
+  },
+  {
+    "PROPER_NAME": "Fire\u00a0Spirit",
+    "NAMES": [
+      "fire\u00a0spirit",
+      "Fire\u00a0spirit"
+    ],
+    "DESCRIPTION": "Orb: Gain #yFlame #yBarrier."
+  },
+  {
+    "PROPER_NAME": "Flame\u00a0Barrier",
+    "NAMES": [
+      "Flame\u00a0barrier",
+      "flame\u00a0barrier"
+    ],
+    "DESCRIPTION": "Deal damage back when attacked."
   }
 ]

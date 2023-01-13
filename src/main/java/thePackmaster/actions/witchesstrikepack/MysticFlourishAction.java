@@ -25,7 +25,7 @@ public class MysticFlourishAction extends AbstractGameAction
         if (!AbstractDungeon.player.orbs.isEmpty()) {
             if (AbstractDungeon.player.orbs.get(0) instanceof AbstractPackMasterOrb) {
                 for (int i = 0; i < this.amount; i++) {
-                    ((AbstractPackMasterOrb) AbstractDungeon.player.orbs.get(0)).PassiveEffect();
+                    ((AbstractPackMasterOrb) AbstractDungeon.player.orbs.get(0)).passiveEffect();
                 }
                 isDone = true;
             } else {
