@@ -1,0 +1,38 @@
+{
+  "${ModID}:MoodPower": {
+    "NAME": "Mood",
+    "DESCRIPTIONS": [
+      "Your current #yMood is #b",
+      ". If you get #b4 or more, gain a random #yInspiration and lose #b4 #yMood.",
+      ". If you get #b-4 or less, gain a random #yMental #yBreak and gain #b4 #yMood."
+    ]
+  },
+  "${ModID}:SpikeTrapPower": {
+    "NAME": "Spike Trap",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " damage to the next enemy that hits you."
+    ]
+  },
+  "${ModID}:SanguinePower": {
+    "NAME": "Sanguine",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yIncrease #yMood by #b",
+      "."
+    ]
+  },
+  "${ModID}:BurningPassionPower": {
+    "NAME": "Burning Passion",
+    "DESCRIPTIONS": [
+      "Whenever you gain a buff, multiply it by #b",
+      "."
+    ]
+  },
+  "${ModID}:TradeBeaconPower": {
+    "NAME": "Trade Beacon",
+    "DESCRIPTIONS": [
+      "The first time you draw or discard during your turn, draw #b",
+      " cards."
+    ]
+  }
+}

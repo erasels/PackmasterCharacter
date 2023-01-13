@@ -1,0 +1,26 @@
+{
+  "${ModID}:RimworldPack": {
+    "TEXT": [
+      "Rimworld",
+      "Balance your ${ModID}:Mood in this Rimworld themed pack!",
+      "Laugic"
+    ]
+  },
+  "${ModID}:BoardGameChance": {
+    "TEXT": [
+      "Chance"
+    ]
+  },
+  "${ModID}:Inspirations": {
+    "TEXT": [
+      "I feel Fast!",
+      "I feel Nimble!",
+      "I feel Clearheaded!",
+      "===Mental Breaks===",
+      "In a Daze.",
+      "On a Food Binge.",
+      "On a Fire Starting Spree.",
+      "Fighting Recklessly."
+    ]
+  }
+}
