@@ -2,13 +2,8 @@
   "${ModID}:RimworldPack": {
     "TEXT": [
       "Rimworld",
-      "Balance your ${ModID}:Mood in this Rimworld themed pack!",
+      "Balance your Mood in this Rimworld themed pack!",
       "Laugic"
-    ]
-  },
-  "${ModID}:BoardGameChance": {
-    "TEXT": [
-      "Chance"
     ]
   },
   "${ModID}:Inspirations": {
