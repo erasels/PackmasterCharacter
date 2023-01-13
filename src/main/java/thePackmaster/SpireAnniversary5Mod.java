@@ -43,6 +43,7 @@ import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.eurogamepack.AbstractVPCard;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.hats.Hats;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
@@ -210,8 +211,10 @@ public class SpireAnniversary5Mod implements
     public static String makeShaderPath(String resourcePath) {
         return modID + "Resources/shaders/" + resourcePath;
     }
-    
-    public static String makeOrbPath(String resourcePath) { return modID +"Resources/images/orbs/" + resourcePath; }
+
+    public static String makeOrbPath(String resourcePath) {
+        return modID + "Resources/images/orbs/" + resourcePath;
+    }
 
     public static void initialize() {
         thismod = new SpireAnniversary5Mod();
@@ -219,6 +222,7 @@ public class SpireAnniversary5Mod implements
         try {
             Properties defaults = new Properties();
             defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, RANDOM, CHOICE, CHOICE));
+            defaults.put("PackmasterUnlockedHats", "");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
         } catch (Exception e) {
             e.printStackTrace();
@@ -226,12 +230,25 @@ public class SpireAnniversary5Mod implements
     }
 
     public static ArrayList<String> getSavedCDraftSelection() {
-        if(modConfig == null) return new ArrayList<>();
+        if (modConfig == null) return new ArrayList<>();
         return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterCustomDraftSelection").split(",")));
     }
+
     public static void saveCDraftSelection(ArrayList<String> input) throws IOException {
-        if(modConfig == null) return;
+        if (modConfig == null) return;
         modConfig.setString("PackmasterCustomDraftSelection", String.join(",", input));
+        modConfig.save();
+    }
+
+
+    public static ArrayList<String> getUnlockedHats() {
+        if (modConfig == null) return new ArrayList<>();
+        return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterUnlockedHats").split(",")));
+    }
+
+    public static void saveUnlockedHats(ArrayList<String> input) throws IOException {
+        if (modConfig == null) return;
+        modConfig.setString("PackmasterUnlockedHats", String.join(",", input));
         modConfig.save();
     }
 
@@ -415,7 +432,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(GUN1_KEY, GUN1_OGG);
         BaseMod.addAudio(GUN2_KEY, GUN2_OGG);
         BaseMod.addAudio(GUN3_KEY, GUN3_OGG);
-        BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
+        BaseMod.addAudio("UpgradesPack_ShortUpgrade", "anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
         BaseMod.addAudio(makeID("RipPack_Rip"), makePath("audio/rippack/rip.mp3"));
         BaseMod.addAudio(makeID("RipPack_Yay"), makePath("audio/rippack/yay.ogg"));
         BaseMod.addAudio(makeID("RipPack_Ding"), makePath("audio/rippack/ding.ogg"));
@@ -427,10 +444,10 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(makeID("RipPack_Ahh"), makePath("audio/rippack/ahh.ogg"));
         BaseMod.addAudio(makeID("RipPack_Ohh"), makePath("audio/rippack/ohh.mp3"));
         BaseMod.addAudio(makeID("RipPack_Sword"), makePath("audio/rippack/sword.ogg"));
-        BaseMod.addAudio(modID + "dice1",  modID + "Resources/audio/DiceRoll1.wav");
-        BaseMod.addAudio(modID + "dice2",  modID + "Resources/audio/DiceRoll2.wav");
-        BaseMod.addAudio(modID + "dice3",  modID + "Resources/audio/DiceRoll3.wav");
-        BaseMod.addAudio(modID + "dice4",  modID + "Resources/audio/DiceRoll4.wav");
+        BaseMod.addAudio(modID + "dice1", modID + "Resources/audio/DiceRoll1.wav");
+        BaseMod.addAudio(modID + "dice2", modID + "Resources/audio/DiceRoll2.wav");
+        BaseMod.addAudio(modID + "dice3", modID + "Resources/audio/DiceRoll3.wav");
+        BaseMod.addAudio(modID + "dice4", modID + "Resources/audio/DiceRoll4.wav");
     }
 
     @Override
@@ -494,7 +511,8 @@ public class SpireAnniversary5Mod implements
             ) {
                 if (CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.COMMON ||
                         CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.UNCOMMON ||
-                        CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.RARE) cards.add(CardLibrary.getCard(s2).makeCopy());
+                        CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.RARE)
+                    cards.add(CardLibrary.getCard(s2).makeCopy());
             }
         }
 
@@ -596,7 +614,7 @@ public class SpireAnniversary5Mod implements
         CardGroup packDisplays = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
         if (currentPoolPacks.size() != PACKS_PER_RUN) {
-            logger.error( MessageFormat.format("Less packs in pool than expected: {0}/{1}", currentPoolPacks.size(), PACKS_PER_RUN));
+            logger.error(MessageFormat.format("Less packs in pool than expected: {0}/{1}", currentPoolPacks.size(), PACKS_PER_RUN));
         }
 
         for (AbstractCardPack pack : currentPoolPacks) {
@@ -696,6 +714,8 @@ public class SpireAnniversary5Mod implements
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
         }
+
+        Hats.atRunStart();
     }
 
 }

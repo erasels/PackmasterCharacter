@@ -6,12 +6,15 @@ import com.badlogic.gdx.utils.Array;
 import com.esotericsoftware.spine.*;
 import com.esotericsoftware.spine.attachments.RegionAttachment;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.util.TexLoader;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Hats {
+
+    public static String currentHat;
 
     private static Map<String, AttachPoint> map = new HashMap<>();
     private static float hatHeight;
@@ -140,5 +143,12 @@ public class Hats {
             this.y = y;
             this.angle = angle;
         }
+    }
+
+
+
+
+    public static void atRunStart() {
+        //TODO: Add the current hat to the player
     }
 }

@@ -18,7 +18,6 @@ public class HatMenu {
     public boolean isOpen = false;
 
     private final DropdownMenu dropdown;
-    private String currentHat;
     private final ArrayList<String> hats = new ArrayList<>();
 
     private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
@@ -70,7 +69,7 @@ public class HatMenu {
     }
 
     public void setCurrentHat(int index) {
-        currentHat = hats.get(index);
+        Hats.currentHat = hats.get(index);
     }
 
     public void update() {
@@ -83,10 +82,5 @@ public class HatMenu {
         dropdown.render(sb, DROPDOWN_X, DROPDOWN_Y);
         dummy.renderPlayerImage(sb);
     }
-
-
-    // CONFIG AND UNLOCKS
-
-
 
 }
