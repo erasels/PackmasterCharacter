@@ -36,6 +36,7 @@ public class FreezeAndBurnPower extends AbstractPackmasterPower implements NonSt
         this.flash();
         this.freezeAndBurn.purgeOnUse = true;
         this.freezeAndBurn.nextTurnEffect = true;
+        this.freezeAndBurn.dontTriggerOnUseCard = true;
         AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(this.freezeAndBurn, null, this.freezeAndBurn.energyOnUse, true, true), true);
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
