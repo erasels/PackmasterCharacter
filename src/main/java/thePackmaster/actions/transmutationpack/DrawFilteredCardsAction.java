@@ -30,7 +30,7 @@ public class DrawFilteredCardsAction extends AbstractGameAction {
                 }
             }
         }
-        if (foundInDraw.size() <= amount) {
+        if (foundInDraw.size() < amount) {
             for (int i = p().discardPile.group.size() - 1; i >= 0; --i) {
                 AbstractCard card = p().discardPile.group.get(i);
                 if (filter.test(card)) {
