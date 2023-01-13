@@ -63,6 +63,7 @@ import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
+import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
@@ -269,6 +270,7 @@ public class SpireAnniversary5Mod implements
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
+        BaseMod.addDynamicVariable(new HoardVar());
         new AutoAdd(modID)
                 .packageFilter(AbstractPackmasterCard.class)
                 .setDefaultSeen(true)

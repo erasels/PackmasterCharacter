@@ -26,7 +26,7 @@
   },
   "${ModID}:Inferno": {
     "NAME": "Inferno",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If this didn't end combat, take !D! damage."
+    "DESCRIPTION": "Retain. NL ${ModID}:Hoard !hoard!: Deal !D! damage to ALL enemies. NL stslib:Persist 2."
   },
   "${ModID}:LethalShot": {
     "NAME": "Lethal Shot",

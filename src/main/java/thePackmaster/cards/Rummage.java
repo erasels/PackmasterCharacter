@@ -28,19 +28,29 @@ public class Rummage extends AbstractPackmasterCard {
             public void update() {
                 isDone = true;
                 ArrayList<AbstractCard> possCardsList = new ArrayList<>();
-
-                for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (Wiz.getLogicalCardCost(q) > 0)
-                        possCardsList.add(q);
-                }
+                ArrayList<AbstractCard> chosenCards = new ArrayList<>();
+                int highestcost = 0;
 
                 for (int i = 0; i < magicNumber; i++) {
+                    for (AbstractCard q : AbstractDungeon.player.hand.group) {
+                        if (!chosenCards.contains(q)) {
+                            if (Wiz.getLogicalCardCost(q) == highestcost) {
+                                possCardsList.add(q);
+                            } else if (Wiz.getLogicalCardCost(q) > highestcost) {
+                                highestcost = Wiz.getLogicalCardCost(q);
+                                possCardsList.clear();
+                                possCardsList.add(q);
+                            }
+                        }
+                    }
+
                     if (!possCardsList.isEmpty()) {
                         AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
                         possCardsList.remove(q);
                         q.setCostForTurn(q.costForTurn - 1);
                         q.isCostModifiedForTurn = true;
                         q.superFlash();
+                        chosenCards.add(q);
                     }
                 }
             }
