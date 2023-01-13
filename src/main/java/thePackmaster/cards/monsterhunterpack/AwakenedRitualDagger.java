@@ -21,6 +21,7 @@ public class AwakenedRitualDagger extends AbstractMonsterHunterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
         this.exhaust = true;
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
