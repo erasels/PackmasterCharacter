@@ -1,9 +1,12 @@
 package thePackmaster.hats;
 
 import basemod.BaseMod;
+import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.esotericsoftware.spine.Skeleton;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -14,6 +17,8 @@ import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
 
 import java.util.ArrayList;
+
+import static thePackmaster.hats.Hats.currentHat;
 
 public class HatMenu {
 
@@ -37,12 +42,21 @@ public class HatMenu {
 
     private static AbstractPlayer dummy;
 
+    private static final boolean UNLOCK_ALL_HATS = true;
+
     public HatMenu() {
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
-        for (String s : SpireAnniversary5Mod.getUnlockedHats()) {
-            hats.add(s);
-            optionNames.add(s);
+        if (UNLOCK_ALL_HATS) {
+            for (AbstractCardPack s : SpireAnniversary5Mod.unfilteredAllPacks) {
+                hats.add(s.packID);
+                optionNames.add(s.name);
+            }
+        } else {
+            for (String s : SpireAnniversary5Mod.getUnlockedHats()) {
+                hats.add(s);
+                optionNames.add(SpireAnniversary5Mod.packsByID.get(s).name);
+            }
         }
 
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index)),
@@ -74,7 +88,18 @@ public class HatMenu {
     }
 
     public void setCurrentHat(int index) {
-        Hats.currentHat = hats.get(index);
+        currentHat = hats.get(index);
+
+        if (index == 0) {
+            //TODO: Remove hat
+        } else {
+            Skeleton skel = ReflectionHacks.getPrivate(dummy, AbstractCreature.class, "skeleton");
+            Hats.addHat(skel, currentHat, getImagePathFromHatID(currentHat), 1, 1, 0, 0, 0);
+        }
+    }
+
+    private static String getImagePathFromHatID(String hatID) {
+        return SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
     }
 
     public void update() {
