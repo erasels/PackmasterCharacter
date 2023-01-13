@@ -2,13 +2,11 @@ package thePackmaster.cardmodifiers.clawpack;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Claw;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
-import thePackmaster.cards.clawpack.ClawForOne;
+import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifierWithName;
 
-public class AddClawTagModifier extends AbstractMadScienceModifier {
+public class AddClawTagModifier extends AbstractMadScienceModifierWithName {
 
     public AddClawTagModifier(int valueIn){
         super(valueIn);
@@ -24,9 +22,8 @@ public class AddClawTagModifier extends AbstractMadScienceModifier {
     }
 
     @Override
-    public void alterName(AbstractCard card) {
-        modifyName(card.name + " Claw", card);
-        super.alterName(card);
+    public String nameSuffix(String cardName) {
+        return " Claw";
     }
 
     @Override

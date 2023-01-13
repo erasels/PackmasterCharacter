@@ -4,8 +4,9 @@ import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
+import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifierWithName;
 
-public class AddStrikeTagModifier extends AbstractMadScienceModifier {
+public class AddStrikeTagModifier extends AbstractMadScienceModifierWithName {
 
     public AddStrikeTagModifier(int valueIn){
         super(valueIn);
@@ -21,10 +22,10 @@ public class AddStrikeTagModifier extends AbstractMadScienceModifier {
     }
 
     @Override
-    public void alterName(AbstractCard card) {
-        modifyName(card.name + " Strike", card);
-        super.alterName(card);
+    public String nameSuffix(String cardName) {
+        return " Strike";
     }
+
 
     @Override
     public AbstractCardModifier makeCopy() {

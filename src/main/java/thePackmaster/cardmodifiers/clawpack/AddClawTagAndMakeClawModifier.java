@@ -13,10 +13,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import sun.util.resources.cldr.ti.CalendarData_ti_ER;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
+import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifierWithName;
 import thePackmaster.cards.clawpack.GhostClaw;
 import thePackmaster.util.Wiz;
 
-public class AddClawTagAndMakeClawModifier extends AbstractMadScienceModifier {
+public class AddClawTagAndMakeClawModifier extends AbstractMadScienceModifierWithName {
 
     public AddClawTagAndMakeClawModifier(int valueIn){
         super(valueIn);
@@ -40,16 +41,15 @@ public class AddClawTagAndMakeClawModifier extends AbstractMadScienceModifier {
     }
 
     @Override
-    public void alterName(AbstractCard card) {
-        modifyName(card.name + " Claw", card);
-        super.alterName(card);
-    }
-
-    @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
         AbstractCard c = new GhostClaw();
         Wiz.atb(new MakeTempCardInHandAction(c));
+    }
+
+    @Override
+    public String nameSuffix(String cardName) {
+        return " Claw";
     }
 
     @Override
