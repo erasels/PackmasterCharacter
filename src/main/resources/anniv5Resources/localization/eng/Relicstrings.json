@@ -20,7 +20,7 @@
   },
   "${ModID}:CollectorBadge": {
     "NAME": "Collector Badge",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "FLAVOR": "Gotta collect 'em all.",
     "DESCRIPTIONS": [
       "At the start of each turn, if you played a card from 4 different Booster Packs the previous turn, gain [E] .",
       " NL NL Packs used this turn: ",
