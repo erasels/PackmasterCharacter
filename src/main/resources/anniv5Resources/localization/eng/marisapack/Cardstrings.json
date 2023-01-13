@@ -5,7 +5,7 @@
   },
   "${ModID}:RisingStrike": {
     "NAME": "Rising Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Charge Up. NL Startup: Gain !M! ${ModID}:Charge Up."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Flurry: Gain !M! ${ModID}:Charge Up."
   },
   "${ModID}:GalacticHalo": {
     "NAME": "Galactic Halo",
@@ -31,16 +31,15 @@
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "Ultimate Shortwave",
-    "DESCRIPTION": "Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat."
+    "DESCRIPTION": "Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat."
   },
   "${ModID}:DragonMeteor": {
     "NAME": "Dragon Meteor",
-    "DESCRIPTION": "Deal !D! damage. Deals an additional !M! damage for each card in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each card in your exhaust pile."
   },
   "${ModID}:EarthlightRay": {
     "NAME": "Earthlight Ray",
-    "DESCRIPTION": "After you gain ${ModID}:Charge Up, deal damage equal to its total to ALL enemies."
+    "DESCRIPTION": "After you gain ${ModID}:Charge Up, deal damage equal to !M! times its total to ALL enemies."
   },
   "${ModID}:Spark": {
     "NAME": "Spark",
