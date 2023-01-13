@@ -37,7 +37,7 @@ public class MoonlightBarrageAction extends AbstractGameAction
                     addToBot(new AttackDamageRandomEnemyAction(card,effect));
                     if (orb instanceof AbstractPackMasterOrb) {
                         for (int i = 0; i < this.amount; ++i) {
-                            ((AbstractPackMasterOrb)orb).PassiveEffect();
+                            ((AbstractPackMasterOrb)orb).passiveEffect();
                         }
                     } else {
                         for (int i = 0; i < this.amount; ++i) {

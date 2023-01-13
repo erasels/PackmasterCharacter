@@ -25,6 +25,7 @@ public class GoToJail extends AbstractBoardCard {
         super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         isChance = true;
+        tags.add(CardTags.HEALING);
     }
 
     @Override

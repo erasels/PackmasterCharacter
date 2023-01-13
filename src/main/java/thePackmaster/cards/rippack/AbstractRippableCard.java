@@ -103,6 +103,13 @@ public abstract class AbstractRippableCard extends AbstractRipCard {
         }
     }
 
+
+    @Override
+    public void atTurnStart() {
+        super.atTurnStart();
+        cardsRippedThisTurn = 0;
+    }
+
     @Override
     public List<String> getCardDescriptors() {
         ArrayList<String> retVal = new ArrayList<>();

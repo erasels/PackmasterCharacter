@@ -30,6 +30,6 @@ public class TelephonePole extends LockingCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
     }
 }

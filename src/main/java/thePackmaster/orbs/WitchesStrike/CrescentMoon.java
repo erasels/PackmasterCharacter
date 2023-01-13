@@ -76,7 +76,7 @@ public class CrescentMoon extends AbstractPackMasterOrb {
         return new CrescentMoon();
     }
 
-    public void PassiveEffect(){
+    public void passiveEffect(){
         System.out.println("Crescent Moon orb activated");
         applyFocus();
         if (!evoking){

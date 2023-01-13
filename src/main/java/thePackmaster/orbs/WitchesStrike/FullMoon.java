@@ -70,7 +70,7 @@ public class FullMoon extends AbstractPackMasterOrb {
         return new CrescentMoon();
     }
 
-    public void PassiveEffect(){
+    public void passiveEffect(){
         System.out.println("Full Moon orb activated");
         applyFocus();
         showEvokeValue();
