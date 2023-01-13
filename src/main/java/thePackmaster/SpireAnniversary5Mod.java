@@ -440,6 +440,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(modID + "dice2",  modID + "Resources/audio/DiceRoll2.wav");
         BaseMod.addAudio(modID + "dice3",  modID + "Resources/audio/DiceRoll3.wav");
         BaseMod.addAudio(modID + "dice4",  modID + "Resources/audio/DiceRoll4.wav");
+        BaseMod.addAudio(modID + "fast",  modID + "Resources/audio/rimworldpack/fast.wav");
     }
 
     @Override
