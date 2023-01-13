@@ -1,7 +1,8 @@
 {
   "${ModID}:BeyondTheStars": {
       "NAME": "Beyond the Stars",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! ${ModID}:Entropy."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain a *Madness.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain a *Madness+."
   },
   "${ModID}:NamelessMist": {
     "NAME": "Nameless Mist",
