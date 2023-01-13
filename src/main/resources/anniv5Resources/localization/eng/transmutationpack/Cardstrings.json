@@ -5,7 +5,7 @@
   },
   "${ModID}:CrystalLattice": {
     "NAME": "Crystal Lattice",
-    "DESCRIPTION": "${ModID}:Transmute a card. Add 2 additional copies of the new card to your hand. NL Exhaust."
+    "DESCRIPTION": "${ModID}:Transmute a card. Add !M! additional copies of the new card to your hand. NL Exhaust."
   },
   "${ModID}:CrystalResonance": {
     "NAME": "Crystal Resonance",
