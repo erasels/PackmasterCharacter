@@ -1,0 +1,51 @@
+{
+  "${ModID}:ThrowHorseshoe": {
+    "NAME": "Throw Horseshoe",
+    "DESCRIPTION": "Deal !D! damage. NL Discard a random card. NL ${ModID}:Increase_Mood by !M!."
+  },
+  "${ModID}:ChainShotgun": {
+    "NAME": "Chain Shotgun",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  },
+  "${ModID}:Relax": {
+    "NAME": "Relax",
+    "DESCRIPTION": "{@@}Discard !${ModID}:m2! cards. NL ${ModID}:Increase_Mood by !M!."
+  },
+  "${ModID}:Overwork": {
+    "NAME": "Overwork",
+    "DESCRIPTION": "{@@}Draw !M! cards. NL Gain [E] . NL ${ModID}:Decrease_Mood by !M!.",
+    "UPGRADE_DESCRIPTION": "{@@}Draw !M! cards. NL Gain [E] [E] . NL ${ModID}:Decrease_Mood by !M!."
+  },
+  "${ModID}:Betrayal": {
+    "NAME": "Betrayal",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Decrease_Mood by !M!."
+  },
+  "${ModID}:SpikeTrap": {
+    "NAME": "Spike Trap",
+    "DESCRIPTION": "Gain !B! Block. NL Deal that much damage to the next enemy that attacks you."
+  },
+  "${ModID}:Catharsis": {
+    "NAME": "Catharsis",
+    "DESCRIPTION": "Gain 1 random ${ModID}:Mental_Break and !M! random ${ModID}:Inspirations. NL Exhaust."
+  },
+  "${ModID}:TradeBeacon": {
+    "NAME": "Trade Beacon",
+    "DESCRIPTION": "The first time you draw or discard during your turn, draw !M! cards."
+  },
+  "${ModID}:Sanguine": {
+    "NAME": "Sanguine",
+    "DESCRIPTION": "At the start of your turn, ${ModID}:Increase_Mood by !M!."
+  },
+  "${ModID}:BurningPassion": {
+    "NAME": "Burning Passion",
+    "DESCRIPTION": "Whenever you gain a Buff, double it."
+  },
+  "${ModID}:RimworldKeywordManager": {
+    "NAME": "KeywordManager",
+    "DESCRIPTION": "Stuff for translations and easy access to keyword ids",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:inspiration",
+      "${ModID}:mental_break"
+    ]
+  }
+}

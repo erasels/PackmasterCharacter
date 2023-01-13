@@ -1,0 +1,19 @@
+{
+  "${ModID}:GraveyardPack": {
+    "TEXT": [
+      "Graveyard",
+      "A pack for burying your cards... or un-burying them.",
+      "Charlie"
+    ]
+  },
+  "${ModID}:ReturnExhaustedToDeckAction": {
+    "TEXT": [
+      "Select a Card to Return to Your Draw Pile"
+    ]
+  },
+  "${ModID}:PlayFromExhaustAction": {
+    "TEXT": [
+      "Select a Card to Play"
+    ]
+  }
+}

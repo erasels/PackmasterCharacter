@@ -26,7 +26,7 @@
   },
   "${ModID}:AllIn": {
     "NAME": "All In",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw !M! cards. NL Gain !M! [E] . NL Skip next turn. NL Exhaust."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw !M! cards. NL Gain !M! [E] . NL Skip your next turn. NL Exhaust."
   },
   "${ModID}:D20": {
     "NAME": "D20!",

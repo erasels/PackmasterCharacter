@@ -1,0 +1,18 @@
+{
+	"${ModID}:DarkOfNightPower": {
+		"NAME": "Dark Night",
+		"DESCRIPTIONS": [
+			"The next card that #yExhausts is played twice.",
+			"The next #b",
+			" cards that #yExhaust are played twice."
+		]
+	},
+	"${ModID}:CallOfTheGravePower": {
+		"NAME": "Call of the Grave",
+			"DESCRIPTIONS": [
+				"At the start of your turn, play a random #yBuried card, then #yPurge it.",
+				"At the start of your turn, play #b",
+				" random #yBuried cards, then #yPurge them."
+			]
+	}
+}
