@@ -17,6 +17,8 @@ import thePackmaster.packs.AbstractCardPack;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class PackFilterMenu {
 
@@ -48,7 +50,9 @@ public class PackFilterMenu {
     public PackFilterMenu() {
         BaseMod.logger.info("Settings.HEIGHT = " + Settings.HEIGHT);
         ArrayList<String> optionNames = new ArrayList<>();
-        for (AbstractCardPack pack : SpireAnniversary5Mod.unfilteredAllPacks) {
+        List<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
+        sortedPacks.sort(Comparator.comparing((pack)->pack.name));
+        for (AbstractCardPack pack : sortedPacks) {
             packs.add(pack);
             optionNames.add(pack.name);
         }

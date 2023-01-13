@@ -70,10 +70,10 @@ public class CompendiumPatches {
 
         public static String getParnetNameFromObject(Object o) {
             if(o instanceof AbstractCard) {
-                String s = SpireAnniversary5Mod.cardParentMap.get(((AbstractCard) o).cardID);
-                if(s == null)
+                String packId = SpireAnniversary5Mod.cardParentMap.get(((AbstractCard) o).cardID);
+                if(packId == null)
                     return "ZZZZZZZ";
-                return s;
+                return SpireAnniversary5Mod.packsByID.get(packId).name;
             }
             return "ZZZZZZZ";
         }
