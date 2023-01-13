@@ -30,8 +30,8 @@ public class EvilSpirit extends AbstractPackMasterOrb implements OnApplyPowerOrb
     private static final String IMG_PATH = makePath("/images/vfx/summonspack/EvilSpirit.png");
     private static final float SPIRIT_WIDTH = 96.0f;
 
-    private final static int BASE_PASSIVE = 3;
-    private final static int BASE_EVOKE = 1;
+    private final static int BASE_PASSIVE = 4;
+    private final static int BASE_EVOKE = 2;
 
     private Color color = Color.WHITE.cpy();
     private double colorTime = 0d;

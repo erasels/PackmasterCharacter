@@ -23,7 +23,7 @@ public class FireSpirit extends AbstractPackmasterCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BLOCK = 11;
+    private static final int BLOCK = 12;
     private static final int UPGRADE_BLOCK = 4;
 
     private final TooltipInfo flameTip;
