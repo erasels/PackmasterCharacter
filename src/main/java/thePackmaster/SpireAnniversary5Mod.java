@@ -42,6 +42,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.eurogamepack.AbstractVPCard;
+import thePackmaster.cards.graveyardpack.AbstractGraveyardCard;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
@@ -85,6 +86,7 @@ public class SpireAnniversary5Mod implements
         PostBattleSubscriber,
         PostPowerApplySubscriber,
         StartGameSubscriber,
+        PostExhaustSubscriber,
         CustomSavable<ArrayList<String>> {
     private static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -171,6 +173,7 @@ public class SpireAnniversary5Mod implements
     public static final ArrayList<Louse> louseList = new ArrayList<>();
 
     public static boolean selectedCards = false;
+    public static int combatExhausts = 0;
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
@@ -449,7 +452,13 @@ public class SpireAnniversary5Mod implements
                 break;
             }
         }
+        combatExhausts = 0;
     }
+    
+	@Override
+	public void receivePostExhaust(AbstractCard arg0) {
+		combatExhausts++;
+	}
 
     public static void declarePacks() {
         // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
@@ -634,6 +643,7 @@ public class SpireAnniversary5Mod implements
         DeepDreamPatch.wakeUp();
         ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
+        combatExhausts=0;
     }
 
     @Override
