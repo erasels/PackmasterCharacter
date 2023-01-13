@@ -22,7 +22,7 @@ public class HuntersMark extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public HuntersMark(AbstractCreature owner, int amount) {
-        super(POWER_ID, LOC_NAME, PowerType.DEBUFF, false, owner, amount);
+        super(POWER_ID, LOC_NAME, PowerType.DEBUFF, true, owner, amount);
         name = LOC_NAME;
         canGoNegative = false;
         updateDescription();

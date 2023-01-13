@@ -1,10 +1,12 @@
 package thePackmaster.cards.monsterhunterpack;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -19,14 +21,29 @@ public class HuntingInstincts extends AbstractMonsterHunterCard {
         baseBlock = block = BLOCK;
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if (hasHuntTarget()) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
+    }
+
+
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster mo : Wiz.getEnemies()){
-            if (mo.type == AbstractMonster.EnemyType.BOSS || mo.type == AbstractMonster.EnemyType.ELITE){
-                addToBot(new GainBlockAction(p, block*2));
-                return;
-            }
+        if (hasHuntTarget()){
+            addToBot(new GainBlockAction(p, block*2));
+            return;
         }
         addToBot(new GainBlockAction(p, block));
+    }
+
+    public boolean hasHuntTarget() {
+        for (AbstractMonster mo : Wiz.getEnemies()) {
+            if (mo.type == AbstractMonster.EnemyType.BOSS || mo.type == AbstractMonster.EnemyType.ELITE) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void upp() {

@@ -20,7 +20,7 @@ public class NotHunted extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public NotHunted(AbstractCreature owner, int amount) {
-        super(POWER_ID, LOC_NAME, PowerType.BUFF, false, owner, amount);
+        super(POWER_ID, LOC_NAME, PowerType.BUFF, true, owner, amount);
         name = LOC_NAME;
         canGoNegative = false;
         updateDescription();

@@ -9,7 +9,7 @@
   },
   "${ModID}:PerfectDodge": {
     "NAME": "Perfect Dodge",
-    "DESCRIPTION": "Gain !B! Block. NL If your block is broken exactly this turn, gain !M! Strength."
+    "DESCRIPTION": "Gain !B! Block. NL If your Block is broken exactly this turn, gain !M! Strength."
   },
   "${ModID}:Greatsword": {
     "NAME": "Greatsword",
@@ -30,12 +30,13 @@
   },
   "${ModID}:CoreBlaster": {
     "NAME": "Core Blaster",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Core *Blinder to your draw pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Core *Blinder to your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Core *Blinder+ to your draw pile. NL Exhaust."
   },
   "${ModID}:CoreBlinder": {
     "NAME": "Core Blinder",
     "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster to your draw pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster+ to your draw pile. NL Exhaust."
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",
@@ -107,7 +108,7 @@
   },
   "${ModID}:CarvingKnife": {
     "NAME": "Carving Knife",
-    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss enemy, gain its weapon or armor card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss enemy, gain its weapon or armor card. NL Fleeting."
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "Awakened Dagger",
@@ -123,7 +124,7 @@
   },
   "${ModID}:TranqBomb": {
     "NAME": "Tranquilizer Bomb",
-    "DESCRIPTION": "Deal !D! damage. NL Target enemy loses !M! Strength. NL If this would kill an enemy, reduce it to 1 hp instead. NL Exhaust."
+    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target enemy loses !M! Strength. NL Exhaust."
   },
   "${ModID}:Paintball": {
     "NAME": "Paintball",

@@ -7,7 +7,9 @@ package thePackmaster.actions.monsterhunterpack;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,6 +19,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_L;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
@@ -28,13 +32,15 @@ public class CarveAction extends AbstractGameAction {
     private DamageInfo info;
     private UUID uuid;
     private AbstractMonster monsterTarget;
+    private AbstractCard thisKnife;
 
-    public CarveAction(AbstractCreature target, DamageInfo info) {
+    public CarveAction(AbstractCreature target, DamageInfo info, AbstractCard knife) {
         this.info = info;
         this.setValues(target, info);
         this.actionType = ActionType.DAMAGE;
         monsterTarget = (AbstractMonster) target;
         this.duration = 0.1F;
+        thisKnife = knife;
     }
 
     public void update() {
@@ -43,16 +49,28 @@ public class CarveAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SLASH_HORIZONTAL));
             this.target.damage(this.info);
             if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.monsterTarget.type == AbstractMonster.EnemyType.BOSS || this.monsterTarget.type == AbstractMonster.EnemyType.ELITE)) {
-                addToBot(new VFXAction(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F)));
-                addToBot(new WaitAction(1.6f));
-                addToBot(new AddCardToDeckAction(MonsterWeapon(this.target.id)));
+                addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id)));
+            }
+            else if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.target.id.equals("SpikeSlime_L") || this.target.id.equals("AcidSlime_L"))){
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
+                    addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id)));
+                }
+            }
+            else if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.target.id.equals("AcidSlime_M") || this.target.id.equals("SpikeSlime_M"))){
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
+                    addToTop(new AddCardToDeckAction(thisKnife.makeStatEquivalentCopy()));
+                    addToTop(new MakeTempCardInDiscardAction(thisKnife.makeStatEquivalentCopy(), 1));
+                    addToBot(new TalkAction(AbstractDungeon.player, "Not enough materials", 1.0f, 1.4f));
+                }
             }
         }
         this.tickDuration();
     }
 
     public AbstractCard MonsterWeapon(String id){
-        System.out.println(id);
+        if (id == null){
+            return new Hyperbeam();
+        }
         switch (id){
             case "GremlinNob":
                 return new SkullClub();
@@ -66,6 +84,14 @@ public class CarveAction extends AbstractGameAction {
                 return new InfernoDaggers();
             case "SlimeBoss":
                 return new SlimeHammer();
+            case "SpikeSlime_L":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
+            case "AcidSlime_L":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
             case "BookOfStabbing":
                 return new StabManual();
             case "SlaverBoss":
