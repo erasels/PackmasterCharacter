@@ -89,7 +89,7 @@
   },
   "${ModID}:HatMenu": {
     "TEXT": [
-      "No Hat"
+      "Base Hat"
     ]
   }
 }

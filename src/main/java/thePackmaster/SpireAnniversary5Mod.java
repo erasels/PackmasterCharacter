@@ -240,7 +240,6 @@ public class SpireAnniversary5Mod implements
         modConfig.save();
     }
 
-
     public static ArrayList<String> getUnlockedHats() {
         if (modConfig == null) return new ArrayList<>();
         return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterUnlockedHats").split(",")));
