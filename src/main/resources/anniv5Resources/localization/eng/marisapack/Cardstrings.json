@@ -35,11 +35,11 @@
   },
   "${ModID}:DragonMeteor": {
     "NAME": "Dragon Meteor",
-    "DESCRIPTION": "Deal !D! damage. Deals an additional !M! damage for each card in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each card in your exhaust pile."
   },
   "${ModID}:EarthlightRay": {
     "NAME": "Earthlight Ray",
-    "DESCRIPTION": "After you gain ${ModID}:Charge Up, deal damage equal to its total to ALL enemies."
+    "DESCRIPTION": "After you gain ${ModID}:Charge Up, deal damage equal to !M! times its total to ALL enemies."
   },
   "${ModID}:Spark": {
     "NAME": "Spark",
