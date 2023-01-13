@@ -18,8 +18,8 @@ public class GhostlyMist extends AbstractHydrologistCard implements Transmutable
     // intellij stuff skill, none, rare, , , , , 5, 
 
     public GhostlyMist() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE, Subtype.STEAM);
-        baseMagicNumber = magicNumber = 5;
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.NONE, Subtype.STEAM);
+        shuffleBackIntoDrawPile = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -27,18 +27,20 @@ public class GhostlyMist extends AbstractHydrologistCard implements Transmutable
     }
 
     public void upp() {
-        upgradeBaseCost(0);
-    }
-    
-    @Override
-    public ArrayList<AbstractExtraEffectModifier> getMutableAbilities() {
-        ArrayList<AbstractExtraEffectModifier> list = new ArrayList<>();
-        list.add(new TransmuteSelfEffect(this, true));
-        return list;
+        isInnate = true;
     }
 
     @Override
-    public void onTransmuted(AbstractCard newCard) {
-        CardModifierManager.addModifier(newCard, new PurityModifier(magicNumber));
+    public boolean freeToPlay() {
+        return true;
+    }
+
+    @Override
+    public ArrayList<AbstractExtraEffectModifier> getMutableAbilities() {
+        ArrayList<AbstractExtraEffectModifier> list = new ArrayList<>();
+        list.add(new FreeToPlayEffect(true));
+        list.add(new TransmuteSelfEffect(this, true));
+        list.add(new ReboundSelfEffect(true));
+        return list;
     }
 }

@@ -22,7 +22,8 @@
   },
   "${ModID}:GhostlyMist": {
     "NAME": "Ghostly Mist",
-    "DESCRIPTION": "When ${ModID}:Transmuted, the new card gains !M! extra damage and Block. NL ${ModID}:Mutable: ${ModID}:Transmute this card."
+    "DESCRIPTION": "${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your draw pile."
   },
   "${ModID}:GlacialSynthesis": {
     "NAME": "Glacial Synthesis",
@@ -63,10 +64,20 @@
       " cards."
     ]
   },
+  "${ModID}:FreeToPlayEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Free to play."
+    ]
+  },
   "${ModID}:GainBlockEffect": {
     "EXTENDED_DESCRIPTION": [
       "Gain ",
       " Block"
+    ]
+  },
+  "${ModID}:ReboundSelfEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Shuffle this card into your draw pile."
     ]
   },
   "${ModID}:TransmuteSelfEffect": {
