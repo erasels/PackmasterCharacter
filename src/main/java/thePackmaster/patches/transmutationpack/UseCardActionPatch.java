@@ -1,11 +1,13 @@
 package thePackmaster.patches.transmutationpack;
 
 import basemod.ReflectionHacks;
+import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CtBehavior;
+import thePackmaster.cardmodifiers.transmutationpack.ReboundSelfEffect;
 
 public class UseCardActionPatch {
     @SpirePatch(
@@ -35,13 +37,16 @@ public class UseCardActionPatch {
                 card.dontTriggerOnUseCard = false;
                 AbstractDungeon.player.limbo.removeCard(card);
                 ReflectionHacks.setPrivate(__instance, UseCardAction.class, "targetCard", newCard);
-                AbstractDungeon.player.hand.moveToDiscardPile(newCard);
+                if (CardModifierManager.hasModifier(newCard, ReboundSelfEffect.ID)) {
+                    AbstractDungeon.player.hand.moveToDeck(newCard, true);
+                } else {
+                    AbstractDungeon.player.hand.moveToDiscardPile(newCard);
+                }
                 AbstractDungeon.player.limbo.removeCard(newCard);
                 __instance.isDone = true;
                 return SpireReturn.Return(null);
-            } else {
-                return SpireReturn.Continue();
             }
+            return SpireReturn.Continue();
         }
 
         private static class Locator extends SpireInsertLocator {
