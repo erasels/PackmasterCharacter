@@ -5,7 +5,7 @@
   },
   "${ModID}:RisingStrike": {
     "NAME": "Rising Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Charge Up. NL Add a *Spark to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Charge Up. NL Startup: Gain !M! ${ModID}:Charge Up."
   },
   "${ModID}:GalacticHalo": {
     "NAME": "Galactic Halo",

@@ -3,7 +3,7 @@
     "NAME": "Heat Engine",
     "DESCRIPTIONS": [
       "Whenever a card with a cost of #b",
-      " or greater is #yExhausted, gain #b",
+      " or greater, including #yAmplify, is #yExhausted, gain #b",
       " #yStrength."
       ]
   },

@@ -4,9 +4,11 @@ import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.summonspack.PewcumberAction;
+import thePackmaster.actions.summonspack.SetCardTargetCoordinatesAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.Iterator;
@@ -40,6 +42,8 @@ public class SummonVegetables extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new SetCardTargetCoordinatesAction(this, -1.0f,
+                Settings.HEIGHT / 2.0f + 300f * Settings.scale));
         int n = getSkillCount();
         for (int i = 0; i < n; i++) {
             if (i % 2 == 0 && n >= 5 )

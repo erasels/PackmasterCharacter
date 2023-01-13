@@ -1,0 +1,14 @@
+[
+  {
+    "PROPER_NAME": "Different Color",
+    "NAMES": ["different\u00a0color"],
+    "DESCRIPTION": "Any color other than your character's normal card color."
+  },
+  {
+    "PROPER_NAME": "Enchantment",
+    "NAMES": [
+      "enchantment","Enchantment"
+    ],
+    "DESCRIPTION": "When you play a card with a different color any applicable #yEnchantments are copied and played onto the same target."
+  }
+]

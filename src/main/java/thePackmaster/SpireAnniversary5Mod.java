@@ -36,7 +36,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import thePackmaster.actions.distortionpack.ImproveAction;
 import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
@@ -50,7 +49,6 @@ import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
-import thePackmaster.patches.psychicpack.occult.OccultDescription;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
@@ -60,6 +58,7 @@ import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
+import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -94,6 +93,7 @@ public class SpireAnniversary5Mod implements
     public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
     public static ArrayList<AbstractCardPack> unfilteredAllPacks = new ArrayList<>();
     public static HashMap<String, AbstractCardPack> packsByID;
+    public static Set<String> packExclusivePotions = new HashSet<>();
     public static ArrayList<AbstractCardPack> currentPoolPacks = new ArrayList<>();
     public static CardGroup packsToDisplay;
     public static Settings.GameLanguage[] SupportedLanguages = {
@@ -136,6 +136,8 @@ public class SpireAnniversary5Mod implements
     private static final String ELEPHANT_OGG = makePath("audio/summonspack/Elephant.ogg");
     public static final String PEW_KEY = makeID("Pew");
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
+    public static final String EVIL_KEY = makeID("Evil");
+    private static final String EVIL_OGG = makePath("audio/summonspack/Evil.ogg");
     public static final String TRANSMUTATION_KEY = makeID("Transmutation");
     private static final String TRANSMUTATION_OGG = makePath("audio/transmutationpack/Transmutation.ogg");
     public static final String WATER_IMPACT_1_KEY = makeID("WaterImpactOne");
@@ -162,6 +164,8 @@ public class SpireAnniversary5Mod implements
     private static final String GUN2_OGG = makePath("audio/hermitpack/GUN2.ogg");
     public static final String GUN3_KEY = makeID("Gun3");
     private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
+
+    public static final String EVIL_EFFECT_FILE = makePath("images/vfx/summonspack/Evil.png");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
     public static final ArrayList<Louse> louseList = new ArrayList<>();
@@ -208,6 +212,10 @@ public class SpireAnniversary5Mod implements
         return modID + "Resources/images/cards/" + resourcePath;
     }
 
+    public static String makeShaderPath(String resourcePath) {
+        return modID + "Resources/shaders/" + resourcePath;
+    }
+    
     public static String makeOrbPath(String resourcePath) { return modID +"Resources/images/orbs/" + resourcePath; }
 
     public static void initialize() {
@@ -399,6 +407,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(BEES_KEY, BEES_OGG);
         BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
+        BaseMod.addAudio(EVIL_KEY, EVIL_OGG);
         BaseMod.addAudio(TRANSMUTATION_KEY, TRANSMUTATION_OGG);
         BaseMod.addAudio(WATER_IMPACT_1_KEY, WATER_IMPACT_1_OGG);
         BaseMod.addAudio(WATER_IMPACT_2_KEY, WATER_IMPACT_2_OGG);
@@ -413,6 +422,21 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(GUN2_KEY, GUN2_OGG);
         BaseMod.addAudio(GUN3_KEY, GUN3_OGG);
         BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
+        BaseMod.addAudio(makeID("RipPack_Rip"), makePath("audio/rippack/rip.mp3"));
+        BaseMod.addAudio(makeID("RipPack_Yay"), makePath("audio/rippack/yay.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Ding"), makePath("audio/rippack/ding.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Charge"), makePath("audio/rippack/spearcharge.mp3"));
+        BaseMod.addAudio(makeID("RipPack_SpearThrow"), makePath("audio/rippack/spearthrow.mp3"));
+        BaseMod.addAudio(makeID("RipPack_MorningStarThrow"), makePath("audio/rippack/scythe.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Party"), makePath("audio/rippack/party.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Splash"), makePath("audio/rippack/splash.mp3"));
+        BaseMod.addAudio(makeID("RipPack_Ahh"), makePath("audio/rippack/ahh.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Ohh"), makePath("audio/rippack/ohh.mp3"));
+        BaseMod.addAudio(makeID("RipPack_Sword"), makePath("audio/rippack/sword.ogg"));
+        BaseMod.addAudio(modID + "dice1",  modID + "Resources/audio/DiceRoll1.wav");
+        BaseMod.addAudio(modID + "dice2",  modID + "Resources/audio/DiceRoll2.wav");
+        BaseMod.addAudio(modID + "dice3",  modID + "Resources/audio/DiceRoll3.wav");
+        BaseMod.addAudio(modID + "dice4",  modID + "Resources/audio/DiceRoll4.wav");
     }
 
     @Override
@@ -440,7 +464,9 @@ public class SpireAnniversary5Mod implements
                     if (PackFilterMenu.getFilterConfig(pack.packID)) {
                         allPacks.add(pack);
                     }
+                    packExclusivePotions.addAll(pack.getPackPotions());
                 });
+
     }
 
     public static AbstractCardPack getRandomPackFromAll() {
@@ -605,7 +631,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         DeepDreamPatch.wakeUp();
-        ImproveAction._clean();
+        ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
     }
 
@@ -678,6 +704,11 @@ public class SpireAnniversary5Mod implements
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
         }
+    }
+
+    public static class Enums {
+        @SpireEnum
+        public static AbstractGameAction.AttackEffect EVIL;
     }
 
 }

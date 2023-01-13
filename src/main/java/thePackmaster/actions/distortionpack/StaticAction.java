@@ -15,8 +15,6 @@ public class StaticAction extends AbstractGameAction {
     private final AbstractPlayer p;
     private final AbstractCard card;
 
-    public boolean distort = true;
-
     public StaticAction(AbstractPlayer p, AbstractCard c) {
         this.p = p;
         this.card = c;
@@ -40,18 +38,7 @@ public class StaticAction extends AbstractGameAction {
             ApplyPowerAction instant = new ApplyPowerAction(m, p, new DistortionPower(m, p, m.lastDamageTaken), m.lastDamageTaken);
             ReflectionHacks.setPrivate(instant, ApplyPowerAction.class, "startingDuration", 0.01f);
             ReflectionHacks.setPrivate(instant, AbstractGameAction.class, "duration", 0.01f);
-            if (distort) {
-                this.addToTop(new ImproveAction(m, instant));
-
-                boolean disable = false; //Disable every other. If two in a row deal damage, they'll all be disabled.
-                for (AbstractGameAction action : AbstractDungeon.actionManager.actions) {
-                    if (action instanceof StaticAction) {
-                        if (disable)
-                            ((StaticAction) action).distort = false;
-                        disable = !disable;
-                    }
-                }
-            }
+            this.addToTop(new ImproveAction(m, m.lastDamageTaken, instant));
             this.addToTop(instant);
         }
 

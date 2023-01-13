@@ -19,17 +19,18 @@ public class ShapersBlessing extends AbstractDownfallCard {
     public ShapersBlessing() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 0;
         isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (upgraded) applyToSelf(new PlatedArmorPower(p, magicNumber));
+        if (magicNumber > 0) applyToSelf(new PlatedArmorPower(p, magicNumber));
         addToBot(new ChangeStanceAction(new AncientStance()));
 
     }
 
     public void upp() {
+        upgradeMagicNumber(2);
     }
 }
