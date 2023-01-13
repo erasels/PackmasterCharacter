@@ -47,7 +47,7 @@ public class HatMenu {
     public HatMenu() {
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
-        if (UNLOCK_ALL_HATS) {
+        if (UNLOCK_ALL_HATS) { //TODO: Check if a hat exists for this character
             for (AbstractCardPack s : SpireAnniversary5Mod.unfilteredAllPacks) {
                 hats.add(s.packID);
                 optionNames.add(s.name);
