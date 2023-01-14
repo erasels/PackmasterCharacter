@@ -1,0 +1,23 @@
+{
+  "${ModID}:CunningPower": {
+    "NAME": "Cunning",
+    "DESCRIPTIONS": [
+      "Whenever you gain a buff, draw #b",
+      " card.",
+      " cards."
+    ]
+  },
+  "${ModID}:ThieveryMasteryPower": {
+    "NAME": "Thievery Mastery",
+    "DESCRIPTIONS": [
+      "Whenever you steal something, gain #b",
+      "00% more of it."
+    ]
+  },
+  "${ModID}:MindControlledPower": {
+    "NAME": "Mind Controlled",
+    "DESCRIPTIONS": [
+      "This enemy became your ally and will start attacking other enemies."
+    ]
+  }
+}
