@@ -35,8 +35,8 @@ public class SwarmOfBees extends CustomOrb {
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH_O = makePath("images/vfx/summonspack/Empty.png");
-    private static final String IMG_PATH = makePath("images/vfx/summonspack/Bee.png");
+    private static final String IMG_PATH_O = makePath("images/orbs/summonspack/Empty.png");
+    private static final String IMG_PATH = makePath("images/orbs/summonspack/Bee.png");
     private static final Texture BEE_IMG = ImageMaster.loadImage(IMG_PATH);
     private static final int BEE_COUNT = 120;
     public static final int BASE_PASSIVE = 2;
@@ -167,11 +167,15 @@ public class SwarmOfBees extends CustomOrb {
         if (power != null) {
             passiveAmount = Math.max(0, basePassiveAmount + power.amount);
             evokeAmount = Math.max(0, baseEvokeAmount + power.amount);
-        }
-        else {
+        } else {
             passiveAmount = basePassiveAmount;
             evokeAmount = baseEvokeAmount;
         }
+
+        if (passiveAmount < 0)
+            passiveAmount = 0;
+        if (evokeAmount < 0)
+            evokeAmount = 0;
     }
 
     @Override

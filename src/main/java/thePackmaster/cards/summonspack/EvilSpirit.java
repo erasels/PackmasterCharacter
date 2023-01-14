@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.List;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
+import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.atb;
 
 public class EvilSpirit extends AbstractPackmasterCard {
@@ -22,7 +24,7 @@ public class EvilSpirit extends AbstractPackmasterCard {
     private static final int COST = 1;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
@@ -40,7 +42,7 @@ public class EvilSpirit extends AbstractPackmasterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ChannelAction(new thePackmaster.orbs.summonspack.EvilSpirit()));
-        atb(new DrawCardAction(magicNumber));
+        applyToEnemy(m, new WeakPower(m, magicNumber, false));
     }
 
     @Override

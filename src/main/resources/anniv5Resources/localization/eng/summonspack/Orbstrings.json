@@ -10,9 +10,7 @@
   "${ModID}:Louse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": [
-      "#yPassive: Whenever you play a card, increase this orb's #yTemporary #yHP by #b",
-      ". NL #yEvoke: Gain #b",
-      " #yTemporary #yHP."
+      "#yPassive: Draw a card at the start of your turn. #yEvoke: Draw 2 cards."
     ]
   },
   "${ModID}:Panda": {
@@ -21,6 +19,21 @@
       "#yPassive: At the end of your turn, deal #b",
       " damage to a random enemy. NL #yEvoke: Deal #b",
       " damage to a random enemy."
+    ]
+  },
+  "${ModID}:Porcupine": {
+    "NAME": "Porcupine",
+    "DESCRIPTION": [
+      "#yPassive: At the start of your turn add a #b",
+      " damage #yQuill into your hand. NL #yEvoke: Add two #b",
+      " damage #yQuills into your hand."
+    ]
+  },
+  "${ModID}:Wolf": {
+    "NAME": "Wolf",
+    "DESCRIPTION": [
+      "#yPassive: At the end of your turn, deal #b",
+      " damage to the enemy with the least HP. NL #yEvoke: Gain an orb slot."
     ]
   },
   "${ModID}:EvilSpirit": {
@@ -34,9 +47,8 @@
   "${ModID}:FireSpirit": {
     "NAME": "Fire Spirit",
     "DESCRIPTION": [
-      "#yPassive: Gain #b",
-      " #yFlame #yBarrier at the end of your turn. NL #yEvoke: Gain #b",
-      " #yFlame #yBarrier."
+      "#yPassive: Deal #b",
+      " damage back when attacked. NL #yEvoke: Gain 1 #yFocus."
     ]
   }
 }
