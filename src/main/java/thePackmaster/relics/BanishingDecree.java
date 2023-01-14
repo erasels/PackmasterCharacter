@@ -5,9 +5,11 @@ import basemod.abstracts.CustomSavable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
@@ -18,6 +20,8 @@ import thePackmaster.packs.AbstractPackPreviewCard;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 
@@ -89,8 +93,12 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 BaseMod.logger.info("Banned Pack" + bannedPack);
                 SpireAnniversary5Mod.currentPoolPacks.remove(cp);
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+                List<AbstractCard> allOtherPackPreviewCards = SpireAnniversary5Mod.getPreviewCardsNotFromCurrentSet();
+                Collections.shuffle(allOtherPackPreviewCards, new Random(Settings.seed).random);
                 CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                for (AbstractCard c : SpireAnniversary5Mod.getPreviewCardsNotFromCurrentSet()) {
+                for (int i = 0; i < 5; i++) {
+                    AbstractCard c = allOtherPackPreviewCards.get(i);
                     if (c != cp.previewPackCard) tmp.addToTop(c);
                 }
                 AbstractDungeon.gridSelectScreen.open(tmp,
