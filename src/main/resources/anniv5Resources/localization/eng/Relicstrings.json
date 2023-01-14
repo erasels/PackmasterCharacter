@@ -49,7 +49,7 @@
     "DESCRIPTIONS": [
       "When acquired, choose 1 of 3 Packmaster Boosters, three times. Earn one additional card reward from these boosters at the end of each combat.",
       " NL Chosen Boosters: ",
-      "Chooose a Booster Pack."
+      "Choose a Booster Pack."
     ]
   },
   "${ModID}:PMBoosterPack": {
