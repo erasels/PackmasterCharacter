@@ -1,5 +1,6 @@
 package thePackmaster.cards.batterpack;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -54,7 +55,7 @@ public class OpenBracket extends AbstractPackmasterCard {
                         tmp.shuffle();
                         caard = tmp.getBottomCard();
                         tmp.removeCard(caard);
-                        if (p.hand.size() == 10) {
+                        if (p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                             p.createHandIsFullDialog();
                         } else {
                             if (!AbstractDungeon.player.hasPower(NoDrawPower.POWER_ID))
