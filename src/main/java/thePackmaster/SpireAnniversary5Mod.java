@@ -39,6 +39,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
@@ -490,10 +491,9 @@ public class SpireAnniversary5Mod implements
             }
         }
 
+        UltimateHomerun.HIGH_SCORE = 0;
         CLAW_SHARP_TRACKER = 0;
-
         combatExhausts = 0;
-
     }
     
 	@Override
