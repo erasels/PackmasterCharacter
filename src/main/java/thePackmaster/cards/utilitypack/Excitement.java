@@ -11,9 +11,6 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 public class Excitement extends AbstractPackmasterCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Excitement");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 0;
     private static final int ENERGY = 2;
     private static final int EXHAUSTIVE = 2;

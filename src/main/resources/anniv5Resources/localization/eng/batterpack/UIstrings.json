@@ -1,0 +1,9 @@
+{
+  "${ModID}:BatterPack": {
+    "TEXT": [
+      "Batter",
+      "Highly aggressive booster pack. Deliver righteous fury towards your enemies with singular, powerful hits.",
+      "AlexMdle"
+    ]
+  }
+}

@@ -39,6 +39,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
@@ -68,9 +69,12 @@ import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.CHOICE;
@@ -326,24 +330,37 @@ public class SpireAnniversary5Mod implements
         addPotions();
     }
 
-
     public static void addPotions() {
-
         BaseMod.addPotion(AttackPotionButClaw.class, Color.RED, Color.WHITE, Color.FIREBRICK, AttackPotionButClaw.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
 
-        /*
-        //TODO - Just before ship, add this cause otherwise we'll trigger a dependency for everyone.
         if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(AttackPotionButClaw.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(ClawPowerPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(DrawClawsPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(GenerateClawsPotion.POTION_ID);
+            Consumer<String> whitelist = getWidePotionsWhitelistMethod();
+            whitelist.accept(AttackPotionButClaw.POTION_ID);
+            whitelist.accept(ClawPowerPotion.POTION_ID);
+            whitelist.accept(DrawClawsPotion.POTION_ID);
+            whitelist.accept(GenerateClawsPotion.POTION_ID);
         }
+    }
 
-         */
+    private static Consumer<String> getWidePotionsWhitelistMethod() {
+        // To avoid the need for a dependency of any kind, we call Wide Potions through reflection
+        try {
+            Method whitelistMethod = Class.forName("com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod").getMethod("whitelistSimplePotion", String.class);
+            return s -> {
+                try {
+                    whitelistMethod.invoke(null, s);
+                } catch (IllegalAccessException | InvocationTargetException e) {
+                    e.printStackTrace();
+                    throw new RuntimeException("Error trying to whitelist wide potion for " + s, e);
+                }
+            };
+        } catch (NoSuchMethodException | ClassNotFoundException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Could not find method WidePotionsMod.whitelistSimplePotion", e);
+        }
     }
 
     private String getLangString() {
@@ -490,10 +507,9 @@ public class SpireAnniversary5Mod implements
             }
         }
 
+        UltimateHomerun.HIGH_SCORE = 0;
         CLAW_SHARP_TRACKER = 0;
-
         combatExhausts = 0;
-
     }
     
 	@Override
