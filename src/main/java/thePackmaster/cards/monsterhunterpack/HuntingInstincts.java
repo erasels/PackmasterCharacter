@@ -26,13 +26,18 @@ public class HuntingInstincts extends AbstractMonsterHunterCard {
         }
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+
+        if(hasHuntTarget()) {
+            block *= 2;
+            isBlockModified = true;
+        }
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (hasHuntTarget()){
-            addToBot(new GainBlockAction(p, block*2));
-            return;
-        }
-        addToBot(new GainBlockAction(p, block));
+        addToBot(new GainBlockAction(p, block * (hasHuntTarget()? 2 : 1)));
     }
 
     public boolean hasHuntTarget() {
