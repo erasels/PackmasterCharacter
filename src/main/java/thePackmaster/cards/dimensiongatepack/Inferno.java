@@ -19,7 +19,7 @@ public class Inferno extends AbstractDimensionalCard {
     public final static String ID = makeID("Inferno");
 
     public Inferno() {
-        super(ID, -1, CardRarity.RARE, AbstractCard.CardType.ATTACK, AbstractCard.CardTarget.ALL);
+        super(ID, -1, CardRarity.RARE, AbstractCard.CardType.ATTACK, CardTarget.ALL_ENEMY);
         baseDamage = 100;
         setFrame("infernoframe.png");
         isMultiDamage = true;
