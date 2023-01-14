@@ -10,7 +10,7 @@
   "${ModID}:ReturnBlockOnClawPower": {
     "NAME": "Talk to the Claw",
     "DESCRIPTIONS": [
-      "When attacked with a Claw, you gain #b",
+      "When attacked with a #yClaw, you gain #b",
       " #yBlock."
     ]
   }
