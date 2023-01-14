@@ -41,12 +41,15 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
             if (hb.hovered) {
                 if (rotationTimer <= 0F) {
                     rotationTimer = getRotationTimeNeeded();
-                    cardsToPreview = cardToPreview.get(previewIndex);
                     if (previewIndex == cardToPreview.size() - 1) {
                         previewIndex = 0;
                     } else {
                         previewIndex++;
                     }
+                    if (previewIndex >= cardToPreview.size()){
+                        previewIndex = cardToPreview.size()-1;
+                    }
+                    cardsToPreview = cardToPreview.get(previewIndex);
                 } else {
                     rotationTimer -= Gdx.graphics.getDeltaTime();
                 }
