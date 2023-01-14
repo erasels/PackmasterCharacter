@@ -1,8 +1,0 @@
-{
-  "${ModID}:Victory": {
-    "NAME": "Victory",
-    "DESCRIPTION": [
-      "Gain [E] [E] . Deal #b50% more damage. NL Exited at start of turn. NL Draw #b2 cards when exited."
-    ]
-  }
-}
