@@ -381,13 +381,13 @@ public class PackSetupScreen extends CustomScreen {
 
     public static void editPotionPool() {
         ArrayList<String> pool = PotionHelper.potions;
+        pool.removeIf(potionID -> SpireAnniversary5Mod.packExclusivePotions.contains(potionID));
+
+        Set<String> potionsToAdd = new HashSet<>();
         for (AbstractCardPack pack : currentPoolPacks) {
-            for (String potionID : pack.getPackPotions()) {
-                if (pool.stream().noneMatch((s) -> s.equals(potionID))) {
-                    pool.add(potionID);
-                }
-            }
+            potionsToAdd.addAll(pack.getPackPotions());
         }
+        pool.addAll(potionsToAdd);
     }
 
     public static class Enum

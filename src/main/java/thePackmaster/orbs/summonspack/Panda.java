@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.summonspack.PandaEvokeAction;
 import thePackmaster.actions.summonspack.PandaSmackAction;
-import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.patches.summonpack.PandaPatch;
 
 import static java.lang.Math.pow;
@@ -30,10 +30,12 @@ public class Panda extends CustomOrb {
     private static final String IMG_PATH = makePath("/images/vfx/summonspack/Panda.png");
     private static final float PANDA_WIDTH = 96.0f;
     private static final Color TEXT_COLOR = new Color(1.0f, 0.25f, 0.25f, 1.0f);
+    private static final int BASE_PASSIVE = 8;
+    private static final int BASE_EVOKE = 12;
 
     // DO NOT SET EITHER OF THESE TO ZERO
     public static final float BOUNCE_DURATION = 1.0f;
-    public static final float GRAVITY = 2700.0f;
+    public static final float GRAVITY = 2700.0f*Settings.scale;
 
     private float bounceTime = 0;
     private boolean shooting = false;
@@ -47,11 +49,9 @@ public class Panda extends CustomOrb {
 
     public boolean isCopy = false;
 
-    public Panda(int passive)
+    public Panda()
     {
-        super(ORB_ID, NAME, passive, 0, "", "", IMG_PATH);
-        basePassiveAmount = passive;
-        baseEvokeAmount = basePassiveAmount;
+        super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH);
         showEvokeValue = false;
         rotation = 0.0f;
         applyFocus();
@@ -59,13 +59,15 @@ public class Panda extends CustomOrb {
     }
 
     public void applyFocus() {
-        AbstractPower power = adp().getPower("Focus");
-        if (power != null)
+        AbstractPower power = adp().getPower(FocusPower.POWER_ID);
+        if (power != null) {
             passiveAmount = Math.max(0, basePassiveAmount + power.amount);
-        else
-            passiveAmount = basePassiveAmount;
+            evokeAmount = Math.max(0, baseEvokeAmount + power.amount);
+            return;
+        }
 
-        evokeAmount = passiveAmount;
+        passiveAmount = basePassiveAmount;
+        evokeAmount = baseEvokeAmount;
     }
 
     @Override
@@ -166,12 +168,12 @@ public class Panda extends CustomOrb {
     @Override
     public void updateDescription() {
         applyFocus();
-        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + passiveAmount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + evokeAmount + DESCRIPTIONS[2];
     }
 
     @Override
     public AbstractOrb makeCopy() {
-        Panda copy = new Panda(passiveAmount);
+        Panda copy = new Panda();
         copy.cX = cX;
         copy.cY = cY;
         copy.tX = tX;
