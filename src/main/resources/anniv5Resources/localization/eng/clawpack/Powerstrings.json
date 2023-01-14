@@ -1,0 +1,17 @@
+{
+  "${ModID}:InfiniteClawsPower": {
+    "NAME": "Infinite Claws",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yGhost #yClaws.",
+      " #yGhost #yClaw."
+    ]
+  },
+  "${ModID}:ReturnBlockOnClawPower": {
+    "NAME": "Talk to the Claw",
+    "DESCRIPTIONS": [
+      "When attacked with a #yClaw, you gain #b",
+      " #yBlock."
+    ]
+  }
+}

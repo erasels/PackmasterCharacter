@@ -20,9 +20,9 @@ public class Repel extends LockingCard {
 
     public Repel() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 7;
         baseBlock = 7;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -49,8 +49,7 @@ public class Repel extends LockingCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeBlock(1);
-        upgradeMagicNumber(1);
+        upgradeDamage(2);
+        upgradeBlock(2);
     }
 }

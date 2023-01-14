@@ -83,3 +83,4 @@ $RECYCLE.BIN/
 *.autosave.scml
 
 pom.xml
+example-pom.xml

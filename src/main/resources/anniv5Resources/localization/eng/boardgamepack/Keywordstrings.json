@@ -17,7 +17,7 @@
     "NAMES": [
       "reroll"
     ],
-    "DESCRIPTION": "Any Dice this card uses are rerolled instead of removed."
+    "DESCRIPTION": "Any #yDice this card uses are rerolled instead of removed."
   },
   {
     "PROPER_NAME": "Jail",
@@ -38,6 +38,6 @@
     "NAMES": [
       "advantage"
     ],
-    "DESCRIPTION": "Roll Dice an additional number of times and take the highest value of the rolls."
+    "DESCRIPTION": "Roll #yDice an additional number of times and take the highest value of the rolls."
   }
 ]

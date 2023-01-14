@@ -2,9 +2,13 @@ package thePackmaster.cardmodifiers.strikepack;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
+import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifierWithName;
 
-public class AddStrikeTagModifier extends AbstractMadScienceModifier {
+public class AddStrikeTagModifier extends AbstractMadScienceModifierWithName {
 
     public AddStrikeTagModifier(int valueIn){
         super(valueIn);
@@ -15,14 +19,15 @@ public class AddStrikeTagModifier extends AbstractMadScienceModifier {
         super.onInitialApplication(card);
         if (!card.hasTag(AbstractCard.CardTags.STRIKE)){
             card.tags.add(AbstractCard.CardTags.STRIKE);
+            card.applyPowers();
         }
     }
 
     @Override
-    public void alterName(AbstractCard card) {
-        modifyName(card.name + " Strike", card);
-        super.alterName(card);
+    public String nameSuffix(String cardName) {
+        return CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("AddStrikeTagModifier")).TEXT[0];
     }
+
 
     @Override
     public AbstractCardModifier makeCopy() {

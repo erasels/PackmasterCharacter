@@ -1,0 +1,49 @@
+{
+  "${ModID}:Alclawmize": {
+    "NAME": "Alclawmize",
+    "DESCRIPTION": "Obtain a random unique *Claw-themed potion. NL Exhaust."
+  },
+  "${ModID}:ClawForOne": {
+    "NAME": "Claw For One",
+    "DESCRIPTION": "Deal !D! damage. NL Put all *Claw cards from your discard pile into your hand."
+  },
+  "${ModID}:CloakAndClaw": {
+    "NAME": "Cloak and Claw",
+    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ghost *Claw.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! *Ghost *Claws."
+  },
+  "${ModID}:Conclawd": {
+    "NAME": "Conclawd",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Sharpen !M!. NL End your turn."
+  },
+  "${ModID}:InfiniteClaws": {
+    "NAME": "Infinite Claws",
+    "DESCRIPTION": "At the start of your turn, gain a *Ghost *Claw.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain a *Ghost *Claw."
+  },
+  "${ModID}:MutateClaw": {
+    "NAME": "Mutate Claw",
+    "DESCRIPTION": "Choose an Attack in hand to ${ModID}:Modify: 'Name gains Claw' and 'Gain a *Ghost *Claw'. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose an Attack in hand to ${ModID}:Modify: 'Name gains Claw' and 'Gain a *Ghost *Claw'."
+  },
+  "${ModID}:SearingClaw": {
+    "NAME": "Searing Claw",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Sharpen !M!. NL Can be Upgraded any number of times."
+  },
+  "${ModID}:TalkToTheClaw": {
+    "NAME": "Talk to the Claw",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy with a *Claw, gain !M! Block. NL Exhaust."
+  },
+  "${ModID}:TwinClaw": {
+    "NAME": "Twin Claw",
+    "DESCRIPTION": "Deal !D! damage twice. NL ${ModID}:Sharpen !M!."
+  },
+  "${ModID}:GhostClaw": {
+    "NAME": "Ghost Claw",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Sharpen !M!. NL Exhaust."
+  },
+  "${ModID}:PMClaw": {
+    "NAME": "Claw",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Sharpen !M!."
+  }
+}

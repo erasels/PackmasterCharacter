@@ -1,0 +1,129 @@
+{
+  "${ModID}:DividedFury": {
+    "NAME": "Divided Fury",
+    "DESCRIPTION": "When you *rip an Attack, deal !M! damage to ALL enemies. NL When you *rip a Skill, gain !M! Block."
+  },
+  "${ModID}:ViciousCycle": {
+    "NAME": "Vicious Cycle",
+    "DESCRIPTION": "Deal !D! damage. NL Deal an additional !D! damage for each card *ripped this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " card ripped.)",
+      " cards ripped.)"
+    ]
+  },
+  "${ModID}:ViciousCycleArt": {
+    "NAME": "Vicious Cycle",
+    "DESCRIPTION": ""
+  },
+  "${ModID}:ViciousCycleText": {
+    "NAME": "",
+    "DESCRIPTION": "Deal !D! damage. NL Deal an additional !D! damage for each card *ripped this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " card ripped.)",
+      " cards ripped.)"
+    ]
+  },
+  "${ModID}:ArtAttack": {
+    "NAME": "Art Attack",
+    "DESCRIPTION": "Deal !D! damage. NL The ${ModID}:Art Card causes the target to lose !M! HP."
+  },
+  "${ModID}:ArtAttackArt": {
+    "NAME": "Art Attack",
+    "DESCRIPTION": ""
+  },
+  "${ModID}:ArtAttackText": {
+    "NAME": "",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:SurprisePack": {
+    "NAME": "Surprise Pack",
+    "DESCRIPTION": "Draw !M! cards. NL When *ripped, gain [E].",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL When *ripped, NL gain [E] [E]."
+  },
+  "${ModID}:SurprisePackArt": {
+    "NAME": "Surprise Pack",
+    "DESCRIPTION": ""
+  },
+  "${ModID}:SurprisePackText": {
+    "NAME": "",
+    "DESCRIPTION": "Draw !M! cards."
+  },
+  "${ModID}:Inspiration": {
+    "NAME": "Inspiration",
+    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art Cards in your exhaust pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art Cards in your exhaust pile.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Draw ",
+      " card.)",
+      " cards.)"
+    ]
+  },
+  "${ModID}:InspirationArt": {
+    "NAME": "Inspiration",
+    "DESCRIPTION": ""
+  },
+  "${ModID}:InspirationText": {
+    "NAME": "",
+    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art Cards in your exhaust pile.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Draw ",
+      " card.)",
+      " cards.)"
+    ]
+  },
+  "${ModID}:FlimsyBash": {
+    "NAME": "Flimsy Bash",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+  },
+  "${ModID}:FlimsyBashArt": {
+    "NAME": "Flimsy Bash",
+    "DESCRIPTION": ""
+  },
+  "${ModID}:FlimsyBashText": {
+    "NAME": "",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+  },
+  "${ModID}:FragileShrug": {
+    "NAME": "Fragile Shrug",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL When *ripped, draw !M! card."
+  },
+  "${ModID}:FragileShrugArt": {
+    "NAME": "Fragile Shrug",
+    "DESCRIPTION": ""
+  },
+  "${ModID}:FragileShrugText": {
+    "NAME": "",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card."
+  },
+  "${ModID}:HazardousStrike": {
+    "NAME": "Hazardous Strike",
+    "DESCRIPTION": "Deal !D! Damage. NL When *ripped, exhaust !M! cards at random."
+  },
+  "${ModID}:HazardousStrikeArt": {
+    "NAME": "Hazardous Strike",
+    "DESCRIPTION": ""
+  },
+  "${ModID}:HazardousStrikeText": {
+    "NAME": "",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "${ModID}:TotalWeakness": {
+    "NAME": "Total Weakness",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies."
+  },
+  "${ModID}:TotalWeaknessArt": {
+    "NAME": "Total Weakness",
+    "DESCRIPTION": ""
+  },
+  "${ModID}:TotalWeaknessText": {
+    "NAME": "",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies."
+  },
+  "${ModID}:LeftBrain": {
+    "NAME": "Left Brain",
+    "DESCRIPTION": "Exhaust all Art cards in your hand, draw pile, and discard pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL Exhaust all Art cards in your hand, draw pile, and discard pile. NL Exhaust."
+  }
+}

@@ -5,7 +5,7 @@
       "hunted",
       "hunted"
     ],
-    "DESCRIPTION": "Takes 10% more damage for each stack of Hunted on them. When applied, all other hunted enemies are no longer hunted, and other enemies take 10% less damage for each stack."
+    "DESCRIPTION": "Takes #b10% more damage for each stack of Hunted on them. When applied, all other hunted enemies are no longer hunted, and other enemies take #b10% less damage for each stack. Reduces by #b1 each turn."
   },
   {
     "PROPER_NAME": "Not Hunted",
@@ -13,7 +13,7 @@
       "nothunted",
       "nothunted"
     ],
-    "DESCRIPTION": "Takes 10% less damage from attacks for each stack. When the hunted enemy dies, remove this."
+    "DESCRIPTION": "Takes #b10% less damage from attacks for each stack. Reduces by #b1 each turn. When the hunted enemy dies, remove this."
   },
   {
     "PROPER_NAME": "Enraged",
@@ -21,7 +21,7 @@
       "enraged",
       "enraged!"
     ],
-    "DESCRIPTION": "At the end of the turn that no enemy intends to attack you, gain 2 Strength."
+    "DESCRIPTION": "At the end of the turn that no enemy intends to attack you, gain #b2 Strength."
   },
   {
     "PROPER_NAME": "Glass Armor",
@@ -31,5 +31,14 @@
       "glass_armor"
     ],
     "DESCRIPTION": "At the end of the turn, gain Block. When taking unblocked attack damage, remove this."
+  },
+  {
+    "PROPER_NAME": "Nonlethal",
+    "NAMES": [
+      "nonlethal",
+      "non-lethal",
+      "non_lethal"
+    ],
+    "DESCRIPTION": "Non-lethal damage will leave targets at 1 hp."
   }
 ]

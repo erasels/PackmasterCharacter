@@ -27,7 +27,7 @@ public class PrismaticUtil {
 
         List<AbstractCard> cards = new ArrayList<>();
         for (int i = 0; i < amount; i++) {
-            cards.add(validCards.getRandomCard(AbstractDungeon.cardRandomRng));
+            cards.add(validCards.getRandomCard(AbstractDungeon.cardRandomRng).makeCopy());
         }
 
         return cards;

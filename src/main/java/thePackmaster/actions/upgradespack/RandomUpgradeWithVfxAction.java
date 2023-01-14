@@ -25,10 +25,14 @@ public class RandomUpgradeWithVfxAction extends AbstractGameAction {
         //Skip vfx and waiting for 10+ amount
         while (amount > 10) {
             CardGroup upgradableCards = group.getUpgradableCards();
-            int rIndex = AbstractDungeon.cardRandomRng.random(upgradableCards.size() -1);
-            AbstractCard c = upgradableCards.group.get(rIndex);
-            c.upgrade();
-            amount --;
+            if (upgradableCards.size() > 0) {
+                int rIndex = AbstractDungeon.cardRandomRng.random(upgradableCards.size() - 1);
+                AbstractCard c = upgradableCards.group.get(rIndex);
+                c.upgrade();
+                amount--;
+            } else {
+                break;
+            }
         }
 
 
