@@ -1,12 +1,10 @@
 package thePackmaster.hats;
 
 import basemod.BaseMod;
-import basemod.ReflectionHacks;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.esotericsoftware.spine.Skeleton;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -47,28 +45,32 @@ public class HatMenu {
     public HatMenu() {
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
-        if (UNLOCK_ALL_HATS) { //TODO: Check if a hat exists for this character
+        if (UNLOCK_ALL_HATS) {
             for (AbstractCardPack s : SpireAnniversary5Mod.unfilteredAllPacks) {
-                hats.add(s.packID);
-                optionNames.add(s.name);
+                if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists()) {
+                    hats.add(s.packID);
+                    optionNames.add(s.name);
+                }
             }
         } else {
             for (String s : SpireAnniversary5Mod.getUnlockedHats()) {
-                hats.add(s);
-                optionNames.add(SpireAnniversary5Mod.packsByID.get(s).name);
+                if (Gdx.files.internal(Hats.getImagePathFromHatID(s)).exists()) {
+                    hats.add(s);
+                    optionNames.add(SpireAnniversary5Mod.packsByID.get(s).name);
+                }
             }
         }
 
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
 
-        setCurrentHat(0);
-
         dummy = BaseMod.findCharacter(ThePackmaster.Enums.THE_PACKMASTER);
         dummy.drawX = PREVIEW_X;
         dummy.drawY = PREVIEW_Y;
 
         dummy.animX = dummy.animY = 0;
+
+        setCurrentHat(0);
     }
 
     public void toggle() {
@@ -88,19 +90,14 @@ public class HatMenu {
     }
 
     public void setCurrentHat(int index) {
-        currentHat = hats.get(index);
-
         if (index == 0) {
             //TODO: Remove hat
         } else {
-            Skeleton skel = ReflectionHacks.getPrivate(dummy, AbstractCreature.class, "skeleton");
-            Hats.addHat(skel, currentHat, getImagePathFromHatID(currentHat), 1, 1, 0, 0, 0);
+            currentHat = hats.get(index - 1);
+            Hats.addHat(currentHat, 1, 1, 0, 0, 0);
         }
     }
 
-    private static String getImagePathFromHatID(String hatID) {
-        return SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
-    }
 
     public void update() {
         dropdown.update();
