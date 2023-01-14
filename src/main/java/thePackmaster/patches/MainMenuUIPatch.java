@@ -22,6 +22,7 @@ import thePackmaster.ui.PackFilterMenu;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -78,7 +79,22 @@ public class MainMenuUIPatch {
             idToIndex.put(packID, i);
         }
 
-        packSetups.addAll(SpireAnniversary5Mod.getSavedCDraftSelection());
+        //Validate the saved CDraftSelection - this is necessary in the event that any packs are removed.
+        //Without this validation, Packmaster will crash on attempting to load a Pack that is no longer in the pack list.
+        ArrayList<String> packSetupsInit = new ArrayList<>(SpireAnniversary5Mod.getSavedCDraftSelection());
+
+        for (String s : packSetupsInit
+        ) {
+            if (Objects.equals(s, RANDOM) || Objects.equals(s, CHOICE)) {
+                packSetups.add(s);
+            } else if (SpireAnniversary5Mod.packsByID.get(s) != null) {
+                packSetups.add(s);
+            } else {
+                packSetups.add(RANDOM); //This will only get hit if there is an invalid entry being loaded, such as Pack that no longer exists.  In that event, replace it with RANDOM.
+            }
+
+        }
+        packSetupsInit.clear();
 
         for (int i = 0; i < PACK_COUNT; i++) {
             int index = i;
