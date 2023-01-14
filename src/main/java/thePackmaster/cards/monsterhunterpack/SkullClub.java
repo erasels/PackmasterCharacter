@@ -24,7 +24,7 @@ public class SkullClub extends AbstractMonsterHunterCard {
     private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     public SkullClub() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;
