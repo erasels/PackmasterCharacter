@@ -14,12 +14,30 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
+import thePackmaster.util.Wiz;
 
 public class Hats {
 
+    public static int headslotIndex = -1;
     public static String currentHat;
 
-    public static void removeHat() {
+    public static void removeHat(boolean inRun) {
+        if (headslotIndex == -1) {
+            setupMenuSkeleton(HatMenu.dummy);
+        }
+        if (inRun) {
+            skeleton = ReflectionHacks.getPrivate(Wiz.p(), AbstractCreature.class, "skeleton");
+        } else {
+            skeleton = ReflectionHacks.getPrivate(HatMenu.dummy, AbstractCreature.class, "skeleton");
+        }
+        skeleton.findBone("HatBone").setScale(1F);
+        skeleton.findBone("HairBone").setScale(1F);
+        skeleton.getAttachment(attachmentSlotIndex, "hat");
+        if (attachment != null) {
+            String imgPath = getImagePathFromHatID("NoHat.png");
+            TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
+            attachment.setRegion(region);
+        }
 
     }
 
@@ -28,23 +46,26 @@ public class Hats {
     private static Bone headbone;
     private static Slot headslot;
     private static int foundHeadSlot;
+    private static int attachmentSlotIndex;
 
     private static RegionAttachment attachment;
+    private static RegionAttachment attachmentDummy;
 
-    private static void setupMenuSkeleton() {
-        AbstractPlayer p = BaseMod.findCharacter(ThePackmaster.Enums.THE_PACKMASTER);
+    private static void setupMenuSkeleton(AbstractPlayer p) {
         skeleton = ReflectionHacks.getPrivate(p, AbstractCreature.class, "skeleton");
+        if (skeleton == null) {
+            BaseMod.logger.info("Hats error! Skeleton is null when attempting setup!");
+            return;
+        }
 
         String bonename;
         String slotname;
-
-        int headslotIndex = 0;
 
 
         Array<Bone> possiblebones = skeleton.getBones();
         for (Bone b : possiblebones) {
             bonename = b.toString().toLowerCase();
-            if (bonename.equals("head") || bonename.equals("skull") || bonename.equals("neck_3")) {
+            if (bonename.equals("head")) {
                 headbone = b;
                 break;
             }
@@ -64,58 +85,110 @@ public class Hats {
         foundHeadSlot = headslotIndex;
     }
 
-    public static void addHat(boolean inRun, String hatID, float scaleX, float scaleY, float offsetX, float offsetY, float angle) {
+    public static void addHat(boolean inRun, String hatID) {
+        if (headslotIndex == -1) {
+            setupMenuSkeleton(HatMenu.dummy);
+        }
         if (inRun) {
-            Skeleton found = ReflectionHacks.getPrivate(AbstractDungeon.player, AbstractCreature.class, "skeleton");
+            skeleton = ReflectionHacks.getPrivate(Wiz.p(), AbstractCreature.class, "skeleton");
         } else {
-            if (skeleton == null) {
-                setupMenuSkeleton();
-            }
+            skeleton = ReflectionHacks.getPrivate(HatMenu.dummy, AbstractCreature.class, "skeleton");
+        }
 
-            String imgPath = getImagePathFromHatID(hatID);
+        String imgPath = getImagePathFromHatID(hatID);
 
-            if (attachment == null) {
-                String attachName = headbone.toString();
-                int slotIndex = foundHeadSlot;
 
-                // Create a new slot for the attachment
-                Slot origSlot = headslot;
-                Slot slotClone = new Slot(new SlotData(origSlot.getData().getIndex(), attachName, origSlot.getBone().getData()), origSlot.getBone());
-                slotClone.getData().setBlendMode(origSlot.getData().getBlendMode());
-                skeleton.getSlots().insert(slotIndex, slotClone);
+        if (skeleton.getAttachment(headslotIndex, "hat") == null) {
+            BaseMod.logger.info("starting attachment process, in run = " + inRun);
+            String attachName = headbone.toString();
+            int slotIndex = foundHeadSlot;
 
-                Array<Slot> drawOrder = skeleton.getDrawOrder();
-                drawOrder.add(slotClone);
-                skeleton.setDrawOrder(drawOrder);
+            BaseMod.logger.info("creating slot on " + slotIndex);
+            // Create a new slot for the attachment
+            Slot origSlot = headslot;
+            Slot slotClone = new Slot(new SlotData(origSlot.getData().getIndex(), attachName, origSlot.getBone().getData()), origSlot.getBone());
+            slotClone.getData().setBlendMode(origSlot.getData().getBlendMode());
+            skeleton.getSlots().insert(slotIndex, slotClone);
 
-                Texture tex = TexLoader.getTexture(imgPath);
-                tex.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-                TextureRegion region = new TextureRegion(tex);
-                attachment = new RegionAttachment(hatID);
+            Array<Slot> drawOrder = skeleton.getDrawOrder();
+            drawOrder.add(slotClone);
+            skeleton.setDrawOrder(drawOrder);
+
+            TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
+            Texture tex = TexLoader.getTexture(imgPath);
+            BaseMod.logger.info("texture loading as " + imgPath);
+            tex.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+
+            if (inRun) {
+                BaseMod.logger.info("creating attachment in run");
+                attachment = new RegionAttachment("hat");
                 attachment.setRegion(region);
                 attachment.setWidth(tex.getWidth());
                 attachment.setHeight(tex.getHeight());
+                attachment.setY(tex.getHeight() / 2);
                 attachment.updateOffset();
+                attachment.setScaleX(1.25F);
+                attachment.setScaleY(1.25F);
 
                 Skin skin = skeleton.getData().getDefaultSkin();
                 skin.addAttachment(slotIndex, attachment.getName(), attachment);
+                attachmentSlotIndex = slotIndex;
+                BaseMod.logger.info("attachment slot completed at index " + attachmentSlotIndex);
 
                 skeleton.setAttachment(attachName, attachment.getName());
-
             } else {
-                TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
+                BaseMod.logger.info("creating attachment in hat menu");
+                attachmentDummy = new RegionAttachment("hat");
+                attachmentDummy.setRegion(region);
+                attachmentDummy.setWidth(tex.getWidth());
+                attachmentDummy.setHeight(tex.getHeight());
+                attachmentDummy.setY(tex.getHeight() / 2);
+                attachmentDummy.updateOffset();
+                attachmentDummy.setScaleX(1.25F);
+                attachmentDummy.setScaleY(1.25F);
+
+                Skin skin = skeleton.getData().getDefaultSkin();
+                skin.addAttachment(slotIndex, attachmentDummy.getName(), attachmentDummy);
+                attachmentSlotIndex = slotIndex;
+                BaseMod.logger.info("attachment slot completed at index " + attachmentSlotIndex);
+
+                skeleton.setAttachment(attachName, attachmentDummy.getName());
+            }
+
+
+            skeleton.findBone("HatBone").setScale(0F);
+            if (SpireAnniversary5Mod.packsByID.get(hatID).hatHidesHair){
+                skeleton.findBone("HairBone").setScale(0F);
+            }
+
+        } else {
+            TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
+            if (inRun){
                 attachment.setRegion(region);
+            } else {
+                attachmentDummy.setRegion(region);
+
+            }
+            skeleton.findBone("HatBone").setScale(0F);
+            if (SpireAnniversary5Mod.packsByID.get(hatID).hatHidesHair){
+                skeleton.findBone("HairBone").setScale(0F);
             }
         }
     }
 
+
     public static String getImagePathFromHatID(String hatID) {
+
+        BaseMod.logger.info(SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png");
         return SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
     }
 
     public static void atRunStart() {
         if (currentHat != null) {
-            addHat(true, currentHat, 1, 1, 0, 0, 0);
+            BaseMod.logger.info("adding run start hat");
+            addHat(true, currentHat);
+        } else {
+            removeHat(true);
         }
     }
 }

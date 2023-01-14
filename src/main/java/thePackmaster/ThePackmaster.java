@@ -25,6 +25,8 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import thePackmaster.cards.*;
 import thePackmaster.cards.dimensiongatepack.DarkRitual;
 import thePackmaster.cards.dimensiongatepack.PackRat;
+import thePackmaster.hats.HatMenu;
+import thePackmaster.hats.Hats;
 import thePackmaster.packs.*;
 import thePackmaster.relics.HandyHaversack;
 
@@ -33,6 +35,7 @@ import java.util.List;
 
 import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 import static thePackmaster.SpireAnniversary5Mod.*;
+import static thePackmaster.hats.Hats.currentHat;
 
 public class ThePackmaster extends CustomPlayer {
     private static final String[] orbTextures = {

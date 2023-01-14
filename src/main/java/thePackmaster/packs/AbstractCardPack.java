@@ -18,6 +18,7 @@ public abstract class AbstractCardPack {
     public String credits;
     public ArrayList<AbstractCard> cards;
     public AbstractCard previewPackCard;
+    public boolean hatHidesHair;
 
     public AbstractCardPack(String id, String name, String description, String author, String credits) {
         this.packID = id;

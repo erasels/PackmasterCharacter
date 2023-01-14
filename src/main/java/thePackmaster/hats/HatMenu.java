@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
@@ -38,9 +39,11 @@ public class HatMenu {
     private static final float PREVIEW_X = Settings.WIDTH / 2 - (200 * Settings.scale);
     private static final float PREVIEW_Y = Settings.HEIGHT / 2 + (100 * Settings.scale);
 
-    private static AbstractPlayer dummy;
+    public static AbstractPlayer dummy;
 
     private static final boolean UNLOCK_ALL_HATS = true;
+
+    public static int currentHatIndex;
 
     public HatMenu() {
         ArrayList<String> optionNames = new ArrayList<>();
@@ -64,7 +67,8 @@ public class HatMenu {
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
 
-        dummy = BaseMod.findCharacter(ThePackmaster.Enums.THE_PACKMASTER);
+
+        dummy = new ThePackmaster("", ThePackmaster.Enums.THE_PACKMASTER);
         dummy.drawX = PREVIEW_X;
         dummy.drawY = PREVIEW_Y;
 
@@ -90,11 +94,14 @@ public class HatMenu {
     }
 
     public void setCurrentHat(int index) {
+        currentHatIndex = index;
         if (index == 0) {
-            Hats.removeHat();
+            BaseMod.logger.info("Removing hat.");
+            Hats.removeHat(false);
         } else {
+            BaseMod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index - 1);
-            Hats.addHat(false, currentHat, 1, 1, 0, 0, 0);
+            Hats.addHat(false, currentHat);
         }
     }
 
