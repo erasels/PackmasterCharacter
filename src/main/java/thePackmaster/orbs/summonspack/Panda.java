@@ -19,6 +19,7 @@ import thePackmaster.actions.summonspack.PandaSmackAction;
 import thePackmaster.patches.summonpack.PandaPatch;
 
 import static java.lang.Math.pow;
+import static thePackmaster.SpireAnniversary5Mod.PANDA_KEY;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
@@ -27,7 +28,7 @@ public class Panda extends CustomOrb {
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH = makePath("/images/vfx/summonspack/Panda.png");
+    private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Panda.png");
     private static final float PANDA_WIDTH = 96.0f;
     private static final Color TEXT_COLOR = new Color(1.0f, 0.25f, 0.25f, 1.0f);
     private static final int BASE_PASSIVE = 8;
@@ -63,16 +64,20 @@ public class Panda extends CustomOrb {
         if (power != null) {
             passiveAmount = Math.max(0, basePassiveAmount + power.amount);
             evokeAmount = Math.max(0, baseEvokeAmount + power.amount);
-            return;
+        } else {
+            passiveAmount = basePassiveAmount;
+            evokeAmount = baseEvokeAmount;
         }
 
-        passiveAmount = basePassiveAmount;
-        evokeAmount = baseEvokeAmount;
+        if (passiveAmount < 0)
+            passiveAmount = 0;
+        if (evokeAmount < 0)
+            evokeAmount = 0;
     }
 
     @Override
     public void playChannelSFX() {
-        CardCrawlGame.sound.play("ORB_SLOT_GAIN", 0.1f);
+        CardCrawlGame.sound.playV(PANDA_KEY, 0.6f);
     }
 
     @Override
