@@ -44,6 +44,6 @@ public class EnragePowerPlayer extends AbstractPackmasterPower {
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount * 10 + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

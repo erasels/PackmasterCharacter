@@ -34,6 +34,10 @@ public abstract class AbstractRippableCard extends AbstractRipCard {
 
     public AbstractRippableCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {
         super(cardID, cost, type, rarity, target);
+        setBackgroundTexture(
+                "anniv5Resources/images/512/rip/" + type.name().toLowerCase() + "-rippable.png",
+                "anniv5Resources/images/1024/rip/" + type.name().toLowerCase() + "-rippable.png"
+        );
     }
 
     protected void setRippedCards(AbstractRippedArtCard artCard, AbstractRippedTextCard textCard) {
@@ -101,6 +105,13 @@ public abstract class AbstractRippableCard extends AbstractRipCard {
         if(pow != null) {
             atb(new DividedFuryAction(this));
         }
+    }
+
+
+    @Override
+    public void atTurnStart() {
+        super.atTurnStart();
+        cardsRippedThisTurn = 0;
     }
 
     @Override
