@@ -1,0 +1,9 @@
+[
+  {
+    "PROPER_NAME": "Sharpen",
+    "NAMES": [
+      "sharpen"
+    ],
+    "DESCRIPTION": "Raises the damage dealt by all existing Claw cards and any Ghost Claws created this combat."
+  }
+]
