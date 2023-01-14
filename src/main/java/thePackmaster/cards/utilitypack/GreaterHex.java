@@ -15,9 +15,6 @@ import thePackmaster.vfx.utilitypack.HexEffect;
 
 public class GreaterHex extends AbstractPackmasterCard {
     public static final String ID = SpireAnniversary5Mod.makeID("GreaterHex");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
     private static final int STATS = 2;
