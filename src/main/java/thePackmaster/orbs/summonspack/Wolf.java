@@ -82,6 +82,10 @@ public class Wolf extends AbstractPackMasterOrb {
             @Override
             public void update() {
                 AbstractMonster m = Wiz.getLowestHealthEnemy();
+                if (m == null) {
+                    isDone = true;
+                    return;
+                }
                 doDmg(m, passiveAmount, DamageInfo.DamageType.THORNS, AttackEffect.NONE, false, true);
                 Wiz.att(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F));
                 isDone = true;
