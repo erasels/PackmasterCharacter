@@ -10,6 +10,7 @@ import com.esotericsoftware.spine.attachments.RegionAttachment;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.util.ImageHelper;
@@ -25,8 +26,8 @@ public class Hats {
     private static Map<String, AttachPoint> map = new HashMap<>();
     private static float hatHeight;
 
-    public static void removeHat(Skeleton skeleton, String hatID) {
-        //Write this if its ever needed some day.
+    public static void removeHat() {
+
     }
 
     private static Skeleton playerSkeleton;
@@ -37,8 +38,13 @@ public class Hats {
 
     private static RegionAttachment attachment;
 
-    private static void setupSkeleton() {
-        AbstractPlayer p = BaseMod.findCharacter(ThePackmaster.Enums.THE_PACKMASTER);
+    private static void setupSkeleton(boolean mainMenu) {
+        AbstractPlayer p;
+        if (mainMenu) {
+            p = BaseMod.findCharacter(ThePackmaster.Enums.THE_PACKMASTER);
+        } else {
+            p = AbstractDungeon.player;
+        }
         playerSkeleton = ReflectionHacks.getPrivate(p, AbstractCreature.class, "skeleton");
 
         String bonename;
@@ -72,7 +78,7 @@ public class Hats {
 
     public static void addHat(String hatID, float scaleX, float scaleY, float offsetX, float offsetY, float angle) {
         if (playerSkeleton == null) {
-            setupSkeleton();
+            setupSkeleton(true);
         }
 
         String imgPath = getImagePathFromHatID(hatID);
@@ -159,6 +165,9 @@ public class Hats {
     }
 
     public static void atRunStart() {
-        //TODO: Add the current hat to the player
+        if (currentHat != null) {
+            setupSkeleton(false);
+            addHat(currentHat, 1, 1, 0, 0, 0);
+        }
     }
 }
