@@ -14,7 +14,7 @@
   "${ModID}:Voices": {
     "NAME": "Voices",
     "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Echo. NL Exhaust."
-  }
+  },
   "${ModID}:Flashlight": {
     "NAME": "Flashlight",
     "DESCRIPTION": "Innate. NL Gain [E] . NL Exhaust.",
