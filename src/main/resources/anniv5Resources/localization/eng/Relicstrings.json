@@ -10,12 +10,13 @@
     "NAME": "Banishing Decree",
     "FLAVOR": "Absorb what is useful, reject what is useless and add what is essentially your own.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose one of your Packs. Cards from it will no longer appear in card rewards. Then, choose a new Pack to replace it with, and gain up to 3 card rewards from that pack.",
+      "Upon pickup, choose one of your Packs. Cards from it will no longer appear in card rewards. Then, choose #b1 of #b5 new Packs to replace it with, and gain up to #b3 card rewards from that pack.",
       "Choose a Pack to banish with ",
       "Cards from the Pack '",
       "' will no longer appear in card rewards.",
       "' will appear in card rewards.",
-      "Choose a Pack to gain with "
+      "Choose a Pack to gain with ",
+      "Power!"
     ]
   },
   "${ModID}:CollectorBadge": {
