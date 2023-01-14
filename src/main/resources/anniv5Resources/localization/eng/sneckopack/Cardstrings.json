@@ -1,0 +1,26 @@
+{
+  "${ModID}:Whirligig": {
+  "NAME": "Whirligig",
+  "DESCRIPTION": "Deal !D! damage to a random enemy for each enemy in combat."
+  },
+  "${ModID}:Sliiiiither": {
+    "NAME": "Sliiiiither",
+    "DESCRIPTION": "Next turn, draw !M! to 3 additional cards."
+  },
+  "${ModID}:TailFlail": {
+    "NAME": "Tail Flail",
+    "DESCRIPTION": "Deal !D! damage to a random enemy."
+  },
+  "${ModID}:Sneckpot": {
+    "NAME": "Sneckpot",
+    "DESCRIPTION": "Deal 1 to !D! damage. Roll the damage X times and take the highest result."
+  },
+  "${ModID}:WhipNSnapper": {
+    "NAME": "Whip 'n Snapper",
+    "DESCRIPTION": "Deal !D! damage. Apply 0 to !M! Weak and 0 to !M! Vulnerable."
+  },
+  "${ModID}:Twitch": {
+    "NAME": "Twitch",
+    "DESCRIPTION": "Randomize the cost of !M! cards."
+  }
+}

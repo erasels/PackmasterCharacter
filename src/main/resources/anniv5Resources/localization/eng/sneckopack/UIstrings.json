@@ -1,0 +1,14 @@
+{
+  "${ModID}:SneckoPack": {
+    "TEXT": [
+      "Snecko Pack",
+      "Unrelieable but powerful effects as befitting of our lord.",
+      "Gk, Pandemonium"
+    ]
+  },
+  "${ModID}:TwitchScreen": {
+    "TEXT": [
+      "Randomize their costs."
+    ]
+  }
+}
