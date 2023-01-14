@@ -1,7 +1,8 @@
 {
   "${ModID}:BeyondTheStars": {
       "NAME": "Beyond the Stars",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! ${ModID}:Entropy."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain a *Madness.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain a *Madness+."
   },
   "${ModID}:NamelessMist": {
     "NAME": "Nameless Mist",
@@ -30,7 +31,8 @@
   },
   "${ModID}:EndOfDays": {
     "NAME": "End of Days",
-    "DESCRIPTION": "Gain an Orb Slot. NL Channel a Dark for each of your Orb slots."
+    "DESCRIPTION": "Gain an Orb Slot. NL Channel a Dark for each of your Orb slots.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Orb Slots. NL Channel a Dark for each of your Orb slots."
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "R'lyeh Fhtagn",
