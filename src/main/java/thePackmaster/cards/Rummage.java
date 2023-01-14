@@ -33,7 +33,7 @@ public class Rummage extends AbstractPackmasterCard {
 
                 for (int i = 0; i < magicNumber; i++) {
                     for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                        if (!chosenCards.contains(q)) {
+                        if (!chosenCards.contains(q) && q.cost >= 0 && q.costForTurn > 0) {
                             if (Wiz.getLogicalCardCost(q) == highestcost) {
                                 possCardsList.add(q);
                             } else if (Wiz.getLogicalCardCost(q) > highestcost) {
