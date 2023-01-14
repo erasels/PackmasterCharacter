@@ -1,21 +1,15 @@
 package thePackmaster.vfx.summonspack;
 
-import basemod.ReflectionHacks;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.util.TexLoader;
 
-import static java.lang.Math.pow;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
-import static thePackmaster.orbs.summonspack.Panda.BOUNCE_DURATION;
 import static thePackmaster.orbs.summonspack.Panda.GRAVITY;
 
 public class QuillEffect extends AbstractGameEffect {
@@ -28,20 +22,20 @@ public class QuillEffect extends AbstractGameEffect {
 
     private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Needle.png");
     private static final Texture IMG = TexLoader.getTexture(IMG_PATH);
-    private static final float QUILL_WIDTH = 24f;
+    private static final float QUILL_WIDTH = 36f;
 
     public QuillEffect(float x, float y) {
         this.x = x;
         this.y = y;
-        vX = MathUtils.random(-50f, 50f);
-        vY = MathUtils.random(0f, 50f);
+        vX = MathUtils.random(-1000f, 1000f);
+        vY = MathUtils.random(250f, 1200f);
         sound = false;
     }
 
     @Override
     public void update() {
         if (!sound) {
-            CardCrawlGame.sound.play("DROP_RELIC_FLAT", 0.1F);
+            CardCrawlGame.sound.play("RELIC_DROP_FLAT", 0.1F);
             sound = true;
         }
         float delta = Gdx.graphics.getDeltaTime();

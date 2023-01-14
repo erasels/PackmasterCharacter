@@ -24,6 +24,7 @@ import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.summonspack.QuillEffect;
 
+import static thePackmaster.SpireAnniversary5Mod.PORCUPINE_KEY;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
@@ -41,18 +42,19 @@ public class Porcupine extends AbstractPackMasterOrb {
     private final static int NUM_EVOKE = 2;
 
     private final BobEffect porcBobEffect = new BobEffect(2f, 3f);
-    private float quillTimer = 4f;
+    private float quillTimer;
 
     public Porcupine()
     {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH);
+        quillTimer = MathUtils.random(2f, 10f);
         applyFocus();
         updateDescription();
     }
 
     @Override
     public void playChannelSFX() {
-        CardCrawlGame.sound.play("SOTE_SFX_Relic_Caxixi", 0.1F);
+        CardCrawlGame.sound.play(PORCUPINE_KEY, 0.1F);
     }
 
     @Override
@@ -104,7 +106,7 @@ public class Porcupine extends AbstractPackMasterOrb {
             float x = MathUtils.random(-20f, 20f);
             float y = MathUtils.random(-20f, 20f);
             Wiz.vfx(new QuillEffect(hb.cX + x, hb.cY + y));
-            quillTimer = MathUtils.random(3f, 5f);
+            quillTimer = MathUtils.random(2f, 10f);
         }
     }
 

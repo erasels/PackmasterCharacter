@@ -6,6 +6,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -41,13 +43,14 @@ public class Wolf extends AbstractPackMasterOrb {
     private final static int BASE_EVOKE = 1;
 
     private final BobEffect wolfBobEffect = new BobEffect(2f, 3f);
-    private float glintTimer = 10f;
+    private float glintTimer;
     private Color colorNormal = Color.WHITE.cpy();
-    private Color colorGlint = new Color(1, 1, 1, 0);
+    private Color colorGlint = Color.WHITE.cpy();
 
     public Wolf()
     {
         super(ORB_ID, NAME, 0, BASE_EVOKE, "", "", IMG_PATH);
+        glintTimer = MathUtils.random(5f, 15f);
         applyFocus();
         updateDescription();
     }
@@ -75,9 +78,15 @@ public class Wolf extends AbstractPackMasterOrb {
     @Override
     public void onEndOfTurn() {
         applyFocus();
-        AbstractMonster m = Wiz.getLowestHealthEnemy();
-        Wiz.vfx(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F);
-        doDmg(m, passiveAmount, DamageInfo.DamageType.THORNS);
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractMonster m = Wiz.getLowestHealthEnemy();
+                doDmg(m, passiveAmount, DamageInfo.DamageType.THORNS, AttackEffect.NONE, false, true);
+                Wiz.att(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F));
+                isDone = true;
+            }
+        });
     }
 
     @Override
@@ -93,6 +102,7 @@ public class Wolf extends AbstractPackMasterOrb {
     @Override
     public void updateAnimation() {
         wolfBobEffect.update();
+        glintTimer -= Gdx.graphics.getDeltaTime();
         cX = MathHelper.orbLerpSnap(cX, AbstractDungeon.player.animX + tX);
         cY = MathHelper.orbLerpSnap(cY, AbstractDungeon.player.animY + tY);
         if (channelAnimTimer != 0.0F) {
@@ -105,20 +115,17 @@ public class Wolf extends AbstractPackMasterOrb {
         c.a = Interpolation.pow2In.apply(1.0F, 0.01F, channelAnimTimer / 0.5F);
         scale = Interpolation.swingIn.apply(Settings.scale, 0.01F, channelAnimTimer / 0.5F);
 
-        if (glintTimer <= 0) {
-            glintTimer = MathUtils.random(6f, 20f);
-        }
+        if (glintTimer <= 0)
+            glintTimer = MathUtils.random(5f, 15f);
 
-        if (glintTimer <= 2f && glintTimer >= 1.5f) {
-            colorNormal.set(1, 1, 1, (glintTimer - 1.5f) * 2);
-            colorGlint.set(1, 1, 1, (2f - glintTimer) * 2);
-        } else if (glintTimer < 1.5f && glintTimer > 0.5f) {
-            colorNormal.set(1, 1, 1, 0);
+        if (glintTimer <= 1.5f && glintTimer >= 1f)
+            colorGlint.set(1, 1, 1, (1.5f - glintTimer) * 2);
+        else if (glintTimer < 1f && glintTimer > 0.5f)
             colorGlint.set(1, 1, 1, 1);
-        } else if (glintTimer <= 0.5f) {
-            colorNormal.set(1, 1, 1, (0.5f - glintTimer) * 2);
+        else if (glintTimer <= 0.5f)
             colorGlint.set(1, 1, 1, (glintTimer) * 2);
-        }
+        else
+            colorGlint.set(1, 1, 1, 0);
     }
 
     @Override
@@ -132,6 +139,7 @@ public class Wolf extends AbstractPackMasterOrb {
         sb.draw(IMG2, cX - WOLF_WIDTH /2F, cY - WOLF_WIDTH /2F + wolfBobEffect.y, WOLF_WIDTH /2F, WOLF_WIDTH /2F,
                 WOLF_WIDTH, WOLF_WIDTH, scale, scale, 0f, 0, 0, (int) WOLF_WIDTH, (int) WOLF_WIDTH,
                 false, false);
+        sb.setColor(Color.WHITE.cpy());
         renderText(sb);
         hb.render(sb);
     }

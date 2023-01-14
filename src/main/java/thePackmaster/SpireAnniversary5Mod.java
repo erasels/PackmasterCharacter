@@ -43,8 +43,6 @@ import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
-import thePackmaster.cards.eurogamepack.AbstractVPCard;
-import thePackmaster.cards.graveyardpack.AbstractGraveyardCard;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
@@ -60,7 +58,6 @@ import thePackmaster.potions.clawpack.DrawClawsPotion;
 import thePackmaster.potions.clawpack.GenerateClawsPotion;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
-import thePackmaster.powers.eurogamepack.VictoryPoints;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
@@ -152,6 +149,8 @@ public class SpireAnniversary5Mod implements
     private static final String EVIL_OGG = makePath("audio/summonspack/Evil.ogg");
     public static final String PANDA_KEY = makeID("Panda");
     private static final String PANDA_OGG = makePath("audio/summonspack/Panda.ogg");
+    public static final String PORCUPINE_KEY = makeID("Porcupine");
+    private static final String PORCUPINE_OGG = makePath("audio/summonspack/Porcupine.ogg");
     public static final String TRANSMUTATION_KEY = makeID("Transmutation");
     private static final String TRANSMUTATION_OGG = makePath("audio/transmutationpack/Transmutation.ogg");
     public static final String WATER_IMPACT_1_KEY = makeID("WaterImpactOne");
@@ -468,6 +467,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
         BaseMod.addAudio(EVIL_KEY, EVIL_OGG);
         BaseMod.addAudio(PANDA_KEY, PANDA_OGG);
+        BaseMod.addAudio(PORCUPINE_KEY, PORCUPINE_OGG);
         BaseMod.addAudio(TRANSMUTATION_KEY, TRANSMUTATION_OGG);
         BaseMod.addAudio(WATER_IMPACT_1_KEY, WATER_IMPACT_1_OGG);
         BaseMod.addAudio(WATER_IMPACT_2_KEY, WATER_IMPACT_2_OGG);
@@ -503,12 +503,6 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
-        for (AbstractCard cardInDeck : p().masterDeck.group) {
-            if (cardInDeck instanceof AbstractVPCard) {
-                atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
-                break;
-            }
-        }
 
         UltimateHomerun.HIGH_SCORE = 0;
         CLAW_SHARP_TRACKER = 0;
