@@ -16,8 +16,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCard{
     public final static String ID = makeID(LuminousStrike.class.getSimpleName());
-    private static final int DMG = 6, UPG_DMG = 1;
-    private static final int MAGIC = 3, UPG_MAGIC = 1;
+    private static final int DMG = 5, UPG_DMG = 4;
+    private static final int MAGIC = 4;
 
     public LuminousStrike() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -38,7 +38,6 @@ public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCar
 
     public void upp() {
         upgradeDamage(UPG_DMG);
-        upgradeMagicNumber(UPG_MAGIC);
     }
 
     @Override

@@ -5,5 +5,10 @@
       "Deal 6 damage.",
       "MichaelMayhem"
     ]
+  },
+  "${ModID}:AddStrikeTagModifier": {
+    "TEXT": [
+      " Strike"
+    ]
   }
 }

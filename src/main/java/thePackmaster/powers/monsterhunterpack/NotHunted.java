@@ -1,6 +1,8 @@
 package thePackmaster.powers.monsterhunterpack;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,11 +22,20 @@ public class NotHunted extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public NotHunted(AbstractCreature owner, int amount) {
-        super(POWER_ID, LOC_NAME, PowerType.BUFF, false, owner, amount);
+        super(POWER_ID, LOC_NAME, PowerType.BUFF, true, owner, amount);
         name = LOC_NAME;
         canGoNegative = false;
         updateDescription();
     }
+
+    public void atEndOfRound() {
+        if (this.amount <= 1) {
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        } else {
+            this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
+        }
+    }
+
 
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
         if (type == DamageInfo.DamageType.NORMAL) {
