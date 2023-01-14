@@ -112,7 +112,6 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 BaseMod.logger.info("New Pack" + newPack);
                 SpireAnniversary5Mod.currentPoolPacks.add(cp);
                 CardCrawlGame.dungeon.initializeCardPools();
-                AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
 
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 setDescriptionAfterLoading();
@@ -128,7 +127,7 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 }
 
                 skipDefaultCardRewards = true;
-                AbstractDungeon.combatRewardScreen.open();
+                AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[6]);
                 skipDefaultCardRewards = false;
                 AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
 

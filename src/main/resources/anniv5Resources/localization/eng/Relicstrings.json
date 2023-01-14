@@ -15,7 +15,8 @@
       "Cards from the Pack '",
       "' will no longer appear in card rewards.",
       "' will appear in card rewards.",
-      "Choose a Pack to gain with "
+      "Choose a Pack to gain with ",
+      "Power!"
     ]
   },
   "${ModID}:CollectorBadge": {
