@@ -46,6 +46,6 @@
   },
   "${ModID}:Synergize": {
     "NAME": "Synergize",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If the last card played was from a different Pack, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have cards from at least two other Packs in your hand, gain !B! Block."
   }
 }

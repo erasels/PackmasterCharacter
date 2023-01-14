@@ -15,9 +15,6 @@ import thePackmaster.patches.aggressionpack.DarkLancePatch;
 
 public class DarkLance extends AbstractPackmasterCard {
     public static final String ID = SpireAnniversary5Mod.makeID("DarkLance");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int DAMAGE = 9;
     private static final int UPGRADE_DAMAGE = 1;

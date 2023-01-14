@@ -10,9 +10,6 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 public class PremiumSelection extends AbstractPackmasterCard {
     public static final String ID = SpireAnniversary5Mod.makeID("PremiumSelection");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int CHOICES = 3;
     private static final int UPGRADE_CHOICES = 1;

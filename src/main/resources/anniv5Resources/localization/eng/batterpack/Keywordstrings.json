@@ -1,0 +1,12 @@
+[
+  {
+    "PROPER_NAME": "Critical Hit",
+    "NAMES": [
+      "Critical Hit",
+      "critical hit",
+      "Critical_Hit",
+      "critical_hit"
+    ],
+    "DESCRIPTION": "Critical Hits deal #b50% more damage."
+  }
+]

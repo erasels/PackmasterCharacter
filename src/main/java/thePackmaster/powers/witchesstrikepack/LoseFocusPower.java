@@ -1,5 +1,7 @@
 package thePackmaster.powers.witchesstrikepack;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,10 +19,14 @@ public class LoseFocusPower extends AbstractPackmasterPower {
 
     public LoseFocusPower(AbstractCreature owner, int amount) {
         super(POWER_ID,NAME,PowerType.DEBUFF,false,owner,amount);
-
+        this.loadRegion("static_discharge");
     }
     public void atStartOfTurn() {
         this.addToBot(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, -this.amount), -this.amount));
+    }
+    @Override
+    public void renderIcons(SpriteBatch sb, float x, float y, Color c) {
+        super.renderIcons(sb, x, y, Color.RED.cpy());
     }
     @Override
     public void updateDescription() {
