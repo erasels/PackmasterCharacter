@@ -19,7 +19,6 @@ public class MoonlightFlightPower extends AbstractPackmasterPower {
 
     public MoonlightFlightPower(AbstractCreature owner, int amount) {
         super(POWER_ID,NAME,PowerType.BUFF,false,owner,amount);
-
     }
     public void onChannel(AbstractOrb orb) {
         addToBot(new ApplyPowerAction(owner,owner,new FocusPower(owner,amount)));
