@@ -7,16 +7,13 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.packs.AbstractPackPreviewCard;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
