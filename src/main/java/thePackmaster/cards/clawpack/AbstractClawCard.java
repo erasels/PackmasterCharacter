@@ -9,6 +9,7 @@ import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public abstract class AbstractClawCard extends AbstractPackmasterCard {
@@ -33,7 +34,7 @@ public abstract class AbstractClawCard extends AbstractPackmasterCard {
 
         SpireAnniversary5Mod.CLAW_SHARP_TRACKER += value;
 
-         List<AbstractCard> cards = new ArrayList<>();
+        ArrayList<AbstractCard> cards = new ArrayList<>();
         cards.addAll(AbstractDungeon.player.hand.group);
         cards.addAll(AbstractDungeon.player.drawPile.group);
         cards.addAll(AbstractDungeon.player.discardPile.group);
@@ -42,11 +43,6 @@ public abstract class AbstractClawCard extends AbstractPackmasterCard {
             if (!(excludeClaws && (c instanceof Claw)) && c.hasTag(SpireAnniversary5Mod.CLAW)) {
                 c.baseDamage += value;
                 c.applyPowers();
-                if (c.cardsToPreview != null){
-                    if (c.cardsToPreview instanceof GhostClaw){
-                        ((GhostClaw)c.cardsToPreview).refreshDamage();
-                    }
-                }
             }
         }
 

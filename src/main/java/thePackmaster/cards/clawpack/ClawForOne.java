@@ -40,7 +40,6 @@ public class ClawForOne extends AbstractClawCard {
             @Override
             public void update() {
                 this.isDone = true;
-                ArrayList<AbstractCard> discards = new ArrayList<>(p.discardPile.group);
                 addToBot(new MoveCardsAction(p.hand, p.discardPile, (c) -> { return (c.hasTag(CLAW) && c != ClawForOne.this); }, BaseMod.MAX_HAND_SIZE));
             }
         });

@@ -23,7 +23,7 @@ public class ClawPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(Claw.ID);
+        cards.add(PMClaw.ID);
         cards.add(Alclawmize.ID);
         cards.add(ClawForOne.ID);
         cards.add(CloakAndClaw.ID);

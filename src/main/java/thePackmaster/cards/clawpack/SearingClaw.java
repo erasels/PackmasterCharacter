@@ -28,7 +28,9 @@ public class SearingClaw extends AbstractClawCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.ORANGE, Color.WHITE), 0.1F));
+        for (int i = 0; i < timesUpgraded+1; i++) {
+            this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.ORANGE, Color.WHITE), 0.2F));
+        }
 
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
 

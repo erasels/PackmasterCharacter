@@ -41,5 +41,9 @@
   "${ModID}:GhostClaw": {
     "NAME": "Ghost Claw",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Sharpen !M!. NL Exhaust."
+  },
+  "${ModID}:PMClaw": {
+    "NAME": "Claw",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Sharpen !M!."
   }
 }

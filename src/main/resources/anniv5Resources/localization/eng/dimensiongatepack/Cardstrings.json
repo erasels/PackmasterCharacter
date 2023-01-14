@@ -20,6 +20,7 @@
   "${ModID}:Knighthood": {
     "NAME": "Knighthood",
     "DESCRIPTION": "Ethereal. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in hand to Upgrade permanently. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " to upgrade permanently."
     ]
