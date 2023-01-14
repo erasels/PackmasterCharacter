@@ -1,0 +1,9 @@
+{
+  "${ModID}:WomanInBluePack": {
+    "TEXT": [
+      "Blue's Brews",
+      "A collection of useful Exhaust cards themed around Potions. Contains several multi-choice cards.",
+      "MichaelMayhem"
+    ]
+  }
+}

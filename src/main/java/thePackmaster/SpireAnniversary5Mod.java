@@ -17,7 +17,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -43,8 +42,6 @@ import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
-import thePackmaster.cards.eurogamepack.AbstractVPCard;
-import thePackmaster.cards.graveyardpack.AbstractGraveyardCard;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
@@ -60,7 +57,6 @@ import thePackmaster.potions.clawpack.DrawClawsPotion;
 import thePackmaster.potions.clawpack.GenerateClawsPotion;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
-import thePackmaster.powers.eurogamepack.VictoryPoints;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
@@ -500,13 +496,6 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
-        for (AbstractCard cardInDeck : p().masterDeck.group) {
-            if (cardInDeck instanceof AbstractVPCard) {
-                atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
-                break;
-            }
-        }
-
         UltimateHomerun.HIGH_SCORE = 0;
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
