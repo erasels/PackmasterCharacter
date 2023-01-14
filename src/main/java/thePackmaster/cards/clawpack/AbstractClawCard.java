@@ -1,17 +1,14 @@
 package thePackmaster.cards.clawpack;
 
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.defect.GashAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Claw;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public abstract class AbstractClawCard extends AbstractPackmasterCard {
     public AbstractClawCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color) {
@@ -45,7 +42,7 @@ public abstract class AbstractClawCard extends AbstractPackmasterCard {
                 c.baseDamage += value;
                 c.applyPowers();
                 if (AbstractDungeon.player.hand.group.contains(c)) {
-                    c.flash(Color.RED);
+                    c.flash(Color.RED.cpy());
                 }
             }
         }
