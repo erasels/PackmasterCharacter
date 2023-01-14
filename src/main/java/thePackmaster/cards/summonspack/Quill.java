@@ -13,7 +13,7 @@ import static thePackmaster.util.Wiz.doDmg;
 
 public class Quill extends AbstractPackmasterCard {
     public final static String ID = makeID(Quill.class.getSimpleName());
-    private static final int COST = 2;
+    private static final int COST = 0;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;

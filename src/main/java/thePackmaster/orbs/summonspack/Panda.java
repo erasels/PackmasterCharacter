@@ -28,7 +28,7 @@ public class Panda extends CustomOrb {
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH = makePath("/images/orbs/summonspack/Panda.png");
+    private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Panda.png");
     private static final float PANDA_WIDTH = 96.0f;
     private static final Color TEXT_COLOR = new Color(1.0f, 0.25f, 0.25f, 1.0f);
     private static final int BASE_PASSIVE = 8;
@@ -77,7 +77,7 @@ public class Panda extends CustomOrb {
 
     @Override
     public void playChannelSFX() {
-        CardCrawlGame.sound.play(PANDA_KEY, 0.1f);
+        CardCrawlGame.sound.playV(PANDA_KEY, 0.6f);
     }
 
     @Override

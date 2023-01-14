@@ -1,7 +1,7 @@
 {
   "${ModID}:EvilSpirit": {
     "NAME": "Evil Spirit",
-    "DESCRIPTION": "Channel an ${ModID}:Evil\u00a0Spirit. NL Apply !M! Weak.",
+    "DESCRIPTION": "Apply !M! Weak. NL Channel an ${ModID}:Evil\u00a0Spirit.",
     "EXTENDED_DESCRIPTION": [
       "Sadistic Nature",
       "Deals damage when you apply debuffs."
@@ -10,8 +10,8 @@
   },
   "${ModID}:SummonPorcupine": {
     "NAME": "Summon Porcupine",
-    "DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Gain a *Quill.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Gain !M! *Quills.",
+    "DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add a *Quill into your hand.",
+    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add !M! *Quills into your hand.",
     "FLAVOR": "The Silent in animal form."
   },
   "${ModID}:SummonWolf": {

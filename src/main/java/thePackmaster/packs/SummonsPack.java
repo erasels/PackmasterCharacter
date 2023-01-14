@@ -24,8 +24,8 @@ public class SummonsPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(EvilSpirit.ID);
-        cards.add(SummonVegetables.ID);
-        cards.add(SummonTrees.ID);
+        cards.add(SummonWolf.ID);
+        cards.add(SummonPorcupine.ID);
         cards.add(SummonElephant.ID);
         cards.add(FireSpirit.ID);
         cards.add(RainbowLouse.ID);

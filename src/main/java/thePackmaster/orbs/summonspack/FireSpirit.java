@@ -35,7 +35,7 @@ public class FireSpirit extends AbstractPackMasterOrb implements OnAttackedOrb {
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH = makePath("/images/orbs/summonspack/FireSpirit.png");
+    private static final String IMG_PATH = makePath("/images/orbs/summonsPack/FireSpirit.png");
     private static final float SPIRIT_WIDTH = 96.0f;
 
     private final static int BASE_PASSIVE = 2;
@@ -63,7 +63,7 @@ public class FireSpirit extends AbstractPackMasterOrb implements OnAttackedOrb {
             return;
         DamageInfo info2 = new DamageInfo(adp(), passiveAmount, THORNS);
         DamageAction action = new DamageAction(info.owner, info2, AbstractGameAction.AttackEffect.FIRE);
-        ColoredDamagePatch.DamageActionColorField.damageColor.set(action, Color.ORANGE.cpy());
+        ColoredDamagePatch.DamageActionColorField.damageColor.set(action, Color.FIREBRICK.cpy());
         ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
         att(action);
     }

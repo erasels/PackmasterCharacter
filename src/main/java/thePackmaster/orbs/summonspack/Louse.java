@@ -22,7 +22,7 @@ public class Louse extends AbstractPackMasterOrb {
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH = makePath("/images/orbs/summonspack/Louse.png");
+    private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Louse.png");
     private static final float LOUSE_WIDTH = 96.0f;
 
     private Color color = Color.WHITE.cpy();
@@ -93,6 +93,10 @@ public class Louse extends AbstractPackMasterOrb {
                 false, false);
         renderText(sb);
         hb.render(sb);
+    }
+
+    @Override
+    protected void renderText(SpriteBatch sb) {
     }
 
     @Override

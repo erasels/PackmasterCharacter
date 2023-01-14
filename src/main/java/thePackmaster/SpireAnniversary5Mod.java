@@ -175,7 +175,7 @@ public class SpireAnniversary5Mod implements
     public static final String GUN3_KEY = makeID("Gun3");
     private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
 
-    public static final String EVIL_EFFECT_FILE = makePath("images/vfx/summonspack/Evil.png");
+    public static final String EVIL_EFFECT_FILE = makePath("images/orbs/summonsPack/Evil.png");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
     public static final ArrayList<Louse> louseList = new ArrayList<>();

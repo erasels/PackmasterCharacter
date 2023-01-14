@@ -32,7 +32,7 @@ public class Porcupine extends AbstractPackMasterOrb {
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH = makePath("/images/orbs/summonspack/ORB_SLOT_GAIN.png");
+    private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Porcupine.png");
     private static final float PORC_WIDTH = 96.0f;
 
     private final static int BASE_PASSIVE = 2;
@@ -87,6 +87,7 @@ public class Porcupine extends AbstractPackMasterOrb {
     @Override
     public void updateAnimation() {
         porcBobEffect.update();
+        quillTimer -= Gdx.graphics.getDeltaTime();
         cX = MathHelper.orbLerpSnap(cX, AbstractDungeon.player.animX + tX);
         cY = MathHelper.orbLerpSnap(cY, AbstractDungeon.player.animY + tY);
         if (channelAnimTimer != 0.0F) {

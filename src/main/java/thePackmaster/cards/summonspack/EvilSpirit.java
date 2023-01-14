@@ -41,8 +41,8 @@ public class EvilSpirit extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ChannelAction(new thePackmaster.orbs.summonspack.EvilSpirit()));
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
+        atb(new ChannelAction(new thePackmaster.orbs.summonspack.EvilSpirit()));
     }
 
     @Override

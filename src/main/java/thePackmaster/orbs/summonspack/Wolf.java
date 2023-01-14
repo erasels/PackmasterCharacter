@@ -32,8 +32,8 @@ public class Wolf extends AbstractPackMasterOrb {
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH = makePath("/images/orbs/summonspack/Wolf.png");
-    private static final String IMG_PATH2 = makePath("/images/orbs/summonspack/Wolf2.png");
+    private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Wolf.png");
+    private static final String IMG_PATH2 = makePath("/images/orbs/summonsPack/Wolf2.png");
     private static final Texture IMG2 = TexLoader.getTexture(IMG_PATH2);
     private static final float WOLF_WIDTH = 96.0f;
 
@@ -62,7 +62,7 @@ public class Wolf extends AbstractPackMasterOrb {
         passiveAmount = 0;
         AbstractPower pow = adp().getPower(FocusPower.POWER_ID);
         if (pow != null)
-            passiveAmount = basePassiveAmount + pow.amount;
+            passiveAmount = pow.amount;
         for (AbstractOrb orb : adp().orbs) {
             if (orb instanceof Wolf)
                 passiveAmount += BASE_PASSIVE;
@@ -74,6 +74,7 @@ public class Wolf extends AbstractPackMasterOrb {
 
     @Override
     public void onEndOfTurn() {
+        applyFocus();
         AbstractMonster m = Wiz.getLowestHealthEnemy();
         Wiz.vfx(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F);
         doDmg(m, passiveAmount, DamageInfo.DamageType.THORNS);
@@ -82,6 +83,11 @@ public class Wolf extends AbstractPackMasterOrb {
     @Override
     public void onEvoke() {
         att(new IncreaseMaxOrbAction(evokeAmount));
+    }
+
+    @Override
+    public void update() {
+        super.update();
     }
 
     @Override
