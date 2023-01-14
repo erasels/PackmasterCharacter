@@ -18,7 +18,7 @@ public class MutateClaw extends AbstractClawCard {
     public MutateClaw() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust=true;
-        cardsToPreview = new GhostClaw();
+        cardsToPreview = new GhostClaw(true);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

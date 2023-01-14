@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.clawpack.AddClawTagModifier;
-import thePackmaster.powers.clawpack.ClawStrengthPower;
+import thePackmaster.cards.clawpack.AbstractClawCard;
 import thePackmaster.util.Wiz;
 
 
@@ -39,17 +39,17 @@ public class ClawPowerPotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        this.description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
+        this.description = potionStrings.DESCRIPTIONS[0] + potency + ".";
     }
 
     public void use(AbstractCreature target) {
-        Wiz.applyToSelf(new ClawStrengthPower(Wiz.p(), potency));
         for (AbstractCard c : Wiz.p().hand.group
         ) {
             if (!c.hasTag(SpireAnniversary5Mod.CLAW) && c.type == AbstractCard.CardType.ATTACK) {
                 Wiz.atb(new SimpleAddModifierAction(new AddClawTagModifier(1), c));
             }
         }
+        AbstractClawCard.ClawUp(potency);
     }
 
     public CustomPotion makeCopy() {

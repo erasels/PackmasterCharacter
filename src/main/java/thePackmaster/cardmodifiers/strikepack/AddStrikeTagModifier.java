@@ -2,7 +2,9 @@ package thePackmaster.cardmodifiers.strikepack;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifierWithName;
 
@@ -23,7 +25,7 @@ public class AddStrikeTagModifier extends AbstractMadScienceModifierWithName {
 
     @Override
     public String nameSuffix(String cardName) {
-        return " Strike";
+        return CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("AddStrikeTagModifier")).TEXT[0];
     }
 
 

@@ -1,6 +1,8 @@
 package thePackmaster.patches.clawpack;
 
+import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.GashAction;
@@ -10,16 +12,20 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.powers.clawpack.ClawStrengthPower;
+import thePackmaster.cards.clawpack.AbstractClawCard;
 import thePackmaster.util.Wiz;
+
+import java.util.Iterator;
 
 @SpirePatch(
         clz = GashAction.class,
         method = "update"
 )
 public class ClawUsePatch {
-        public static SpireReturn Postfix(GashAction __instance) {
-            Wiz.applyToSelf(new ClawStrengthPower(Wiz.p(), __instance.amount));
-            return SpireReturn.Return();
-        }
+
+    @SpirePrefixPatch
+    public static void Prefix(GashAction __instance) {
+        AbstractClawCard.ClawUp(__instance.amount, true);
+
     }
+}

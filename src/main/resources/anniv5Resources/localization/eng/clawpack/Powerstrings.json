@@ -1,11 +1,4 @@
 {
-  "${ModID}:ClawStrengthPower": {
-    "NAME": "Sharpen",
-    "DESCRIPTIONS": [
-      "Your Claws deal #b",
-      " more damage."
-    ]
-  },
   "${ModID}:InfiniteClawsPower": {
     "NAME": "Infinite Claws",
     "DESCRIPTIONS": [

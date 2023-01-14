@@ -29,7 +29,7 @@ public class MakeClawModifier extends AbstractMadScienceModifier {
     public void onInitialApplication(AbstractCard card) {
         super.onInitialApplication(card);
         if (card.cardsToPreview == null){
-            card.cardsToPreview = new GhostClaw();
+            card.cardsToPreview = new GhostClaw(true);
         }
     }
 

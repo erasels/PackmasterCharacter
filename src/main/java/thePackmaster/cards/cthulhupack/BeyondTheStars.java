@@ -27,7 +27,7 @@ public class BeyondTheStars extends AbstractCthulhuCard {
         allDmg(AbstractGameAction.AttackEffect.FIRE);
         AbstractCard c = new Madness();
         if (upgraded) c.upgrade();
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c.makeCopy(), 1));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
     }
 
     public void upp() {

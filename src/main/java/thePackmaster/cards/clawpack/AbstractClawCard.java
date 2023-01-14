@@ -1,13 +1,17 @@
 package thePackmaster.cards.clawpack;
 
+import com.megacrit.cardcrawl.actions.defect.GashAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.Claw;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.clawpack.ClawStrengthPower;
 import thePackmaster.util.Wiz;
 
-public abstract class AbstractClawCard extends AbstractPackmasterCard
-{
+import java.util.Iterator;
+
+public abstract class AbstractClawCard extends AbstractPackmasterCard {
     public AbstractClawCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color) {
         super(cardID, cost, type, rarity, target, color);
         setBackgroundTexture(
@@ -17,10 +21,64 @@ public abstract class AbstractClawCard extends AbstractPackmasterCard
     }
 
     public AbstractClawCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {
-        this (cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        this(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW);
     }
 
-    public void ClawUp(int value){
-        Wiz.applyToSelf(new ClawStrengthPower(AbstractDungeon.player, value));
+
+    public static void ClawUp(int value) {
+    ClawUp(value, false);
+    }
+
+    public static void ClawUp(int value, boolean excludeClaws) {
+
+        SpireAnniversary5Mod.CLAW_SHARP_TRACKER += value;
+
+        Iterator<AbstractCard> var1 = AbstractDungeon.player.discardPile.group.iterator();
+
+        AbstractCard c;
+        while (var1.hasNext()) {
+            c = var1.next();
+            if (!(excludeClaws && (c instanceof Claw)) && c.hasTag(SpireAnniversary5Mod.CLAW)) {
+                c.baseDamage += value;
+                c.applyPowers();
+                if (c.cardsToPreview != null){
+                    if (c.cardsToPreview instanceof GhostClaw){
+                        ((GhostClaw)c).refreshDamage();
+                    }
+                }
+            }
+        }
+
+        var1 = AbstractDungeon.player.drawPile.group.iterator();
+
+        while (var1.hasNext()) {
+            c = var1.next();
+            if (!(excludeClaws && (c instanceof Claw)) && c.hasTag(SpireAnniversary5Mod.CLAW)) {
+                c.baseDamage += value;
+                c.applyPowers();
+                if (c.cardsToPreview != null){
+                    if (c.cardsToPreview instanceof GhostClaw){
+                        ((GhostClaw)c).refreshDamage();
+                    }
+                }
+            }
+
+        }
+
+        var1 = AbstractDungeon.player.hand.group.iterator();
+
+        while (var1.hasNext()) {
+            c = var1.next();
+            if (!(excludeClaws && (c instanceof Claw)) && c.hasTag(SpireAnniversary5Mod.CLAW)) {
+                c.baseDamage += value;
+                c.applyPowers();
+                if (c.cardsToPreview != null){
+                    if (c.cardsToPreview instanceof GhostClaw){
+                        ((GhostClaw)c).refreshDamage();
+                    }
+                }
+            }
+        }
+
     }
 }

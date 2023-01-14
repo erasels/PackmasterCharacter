@@ -2,6 +2,7 @@ package thePackmaster.cardmodifiers.clawpack;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifierWithName;
@@ -23,7 +24,7 @@ public class AddClawTagModifier extends AbstractMadScienceModifierWithName {
 
     @Override
     public String nameSuffix(String cardName) {
-        return " Claw";
+        return CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("AddClawTagAndMakeClawModifier")).TEXT[1];
     }
 
     @Override

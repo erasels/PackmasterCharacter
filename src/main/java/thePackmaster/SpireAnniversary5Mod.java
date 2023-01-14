@@ -173,6 +173,8 @@ public class SpireAnniversary5Mod implements
 
     public static boolean selectedCards = false;
 
+    public static int CLAW_SHARP_TRACKER = 0;
+
     public static String makeID(String idText) {
         return modID + ":" + idText;
     }
@@ -316,6 +318,26 @@ public class SpireAnniversary5Mod implements
         addPotions();
     }
 
+
+    public static void addPotions() {
+
+        BaseMod.addPotion(AttackPotionButClaw.class, Color.RED, Color.WHITE, Color.FIREBRICK, AttackPotionButClaw.POTION_ID);
+        BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID);
+        BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID);
+        BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID);
+
+        /*
+        //TODO - Just before ship, add this cause otherwise we'll trigger a dependency for everyone.
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(AttackPotionButClaw.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(ClawPowerPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DrawClawsPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(GenerateClawsPotion.POTION_ID);
+        }
+
+         */
+    }
+
     private String getLangString() {
         for (Settings.GameLanguage lang : SupportedLanguages) {
             if (lang.equals(Settings.language)) {
@@ -457,6 +479,7 @@ public class SpireAnniversary5Mod implements
                 break;
             }
         }
+        CLAW_SHARP_TRACKER = 0;
     }
 
     public static void declarePacks() {
@@ -711,25 +734,6 @@ public class SpireAnniversary5Mod implements
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
         }
-    }
-
-    public static void addPotions() {
-
-        BaseMod.addPotion(AttackPotionButClaw.class, Color.RED, Color.WHITE, Color.FIREBRICK, AttackPotionButClaw.POTION_ID);
-        BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID);
-        BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID);
-        BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID);
-
-        /*
-        //TODO - Just before ship, add this cause otherwise we'll trigger a dependency for everyone.
-        if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(AttackPotionButClaw.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(ClawPowerPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(DrawClawsPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(GenerateClawsPotion.POTION_ID);
-        }
-
-         */
     }
 
 }

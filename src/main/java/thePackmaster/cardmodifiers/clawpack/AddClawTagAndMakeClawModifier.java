@@ -1,18 +1,12 @@
 package thePackmaster.cardmodifiers.clawpack;
 
 import basemod.abstracts.AbstractCardModifier;
-import basemod.cardmods.ExhaustMod;
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Claw;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import sun.util.resources.cldr.ti.CalendarData_ti_ER;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifierWithName;
 import thePackmaster.cards.clawpack.GhostClaw;
 import thePackmaster.util.Wiz;
@@ -31,7 +25,7 @@ public class AddClawTagAndMakeClawModifier extends AbstractMadScienceModifierWit
             card.applyPowers();
         }
         if (card.cardsToPreview == null){
-            card.cardsToPreview = new GhostClaw();
+            card.cardsToPreview = new GhostClaw(true);
         }
     }
 
@@ -49,7 +43,7 @@ public class AddClawTagAndMakeClawModifier extends AbstractMadScienceModifierWit
 
     @Override
     public String nameSuffix(String cardName) {
-        return " Claw";
+        return CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("AddClawTagAndMakeClawModifier")).TEXT[1];
     }
 
     @Override

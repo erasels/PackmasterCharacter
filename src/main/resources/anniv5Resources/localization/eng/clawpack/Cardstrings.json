@@ -14,7 +14,7 @@
   },
   "${ModID}:Conclawd": {
     "NAME": "Conclawd",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! ${ModID}:Sharpen. NL End your turn."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Sharpen !M!. NL End your turn."
   },
   "${ModID}:InfiniteClaws": {
     "NAME": "Infinite Claws",
@@ -28,7 +28,7 @@
   },
   "${ModID}:SearingClaw": {
     "NAME": "Searing Claw",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Sharpen. NL Can be Upgraded any number of times."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Sharpen !M!. NL Can be Upgraded any number of times."
   },
   "${ModID}:TalkToTheClaw": {
     "NAME": "Talk to the Claw",
@@ -36,10 +36,10 @@
   },
   "${ModID}:TwinClaw": {
     "NAME": "Twin Claw",
-    "DESCRIPTION": "Deal !D! damage twice. NL Gain !M! ${ModID}:Sharpen."
+    "DESCRIPTION": "Deal !D! damage twice. NL ${ModID}:Sharpen !M!."
   },
   "${ModID}:GhostClaw": {
     "NAME": "Ghost Claw",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${ModID}:Sharpen. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Sharpen !M!. NL Exhaust."
   }
 }

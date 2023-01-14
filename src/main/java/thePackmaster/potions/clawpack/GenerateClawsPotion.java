@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.clawpack.GhostClaw;
 import thePackmaster.util.Wiz;
 
 
@@ -38,7 +39,7 @@ public class GenerateClawsPotion extends CustomPotion {
 
     public void use(AbstractCreature target) {
         for (int i = 0; i < potency; i++) {
-            Wiz.atb(new MakeTempCardInHandAction(new Claw()));
+            Wiz.atb(new MakeTempCardInHandAction(new GhostClaw()));
         }
     }
 
@@ -47,7 +48,7 @@ public class GenerateClawsPotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 2;
+        return 3;
     }
 }
 

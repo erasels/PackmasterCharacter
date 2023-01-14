@@ -23,7 +23,7 @@ public class InfiniteClaws extends AbstractClawCard {
 
     public InfiniteClaws() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        cardsToPreview = new GhostClaw();
+        cardsToPreview = new GhostClaw(true);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

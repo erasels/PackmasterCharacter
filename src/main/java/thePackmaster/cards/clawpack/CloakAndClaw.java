@@ -15,7 +15,7 @@ public class CloakAndClaw extends AbstractClawCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 6;
         baseMagicNumber = magicNumber = 1;
-        cardsToPreview = new GhostClaw();
+        cardsToPreview = new GhostClaw(true);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

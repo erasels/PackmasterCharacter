@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
+import thePackmaster.SpireAnniversary5Mod;
 
 import static thePackmaster.SpireAnniversary5Mod.CLAW;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -16,12 +17,24 @@ public class GhostClaw extends AbstractClawCard {
     public final static String ID = makeID("GhostClaw");
 
     public GhostClaw() {
+        this(false);
+    }
+
+    public GhostClaw(boolean isPreview) {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 3;
-        baseMagicNumber = magicNumber = 2;
+        if (isPreview){
+            baseDamage = 2;
+        } else {
+            baseDamage = 2 + SpireAnniversary5Mod.CLAW_SHARP_TRACKER;
+        }
+        baseMagicNumber = magicNumber = 1;
         tags.add(CLAW);
         exhaust = true;
+    }
 
+    public void refreshDamage(){
+        baseDamage = 2 + SpireAnniversary5Mod.CLAW_SHARP_TRACKER;
+        applyPowers();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,6 +47,7 @@ public class GhostClaw extends AbstractClawCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 }

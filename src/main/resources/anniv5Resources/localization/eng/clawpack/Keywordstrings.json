@@ -4,6 +4,6 @@
     "NAMES": [
       "sharpen"
     ],
-    "DESCRIPTION": "Increases the damage dealt by Claw Attacks."
+    "DESCRIPTION": "Raises the damage dealt by all existing Claw cards and any Ghost Claws created this combat."
   }
 ]
