@@ -33,7 +33,7 @@
   },
   "${ModID}:Dong": {
     "NAME": "DONG!",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Weak. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak and Vulnerable. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
   },
   "${ModID}:LikeClockwork": {
     "NAME": "Like Clockwork",

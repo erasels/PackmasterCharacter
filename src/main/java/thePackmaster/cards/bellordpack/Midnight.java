@@ -18,8 +18,8 @@ public class Midnight extends AbstractPackmasterCard implements OnObtainCard {
 
     public Midnight() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
-        baseBlock = 9;
+        baseDamage = 10;
+        baseBlock = 10;
         cardsToPreview = new CurseOfTheBell();
     }
 

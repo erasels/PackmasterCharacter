@@ -7,12 +7,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class Dong extends AbstractPackmasterCard implements OnObtainCard {
     public final static String ID = makeID("Dong");
@@ -28,6 +29,7 @@ public class Dong extends AbstractPackmasterCard implements OnObtainCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
+        applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
     }
 
     @Override
