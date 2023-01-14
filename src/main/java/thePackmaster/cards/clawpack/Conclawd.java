@@ -23,7 +23,7 @@ public class Conclawd extends AbstractClawCard {
         baseDamage = 10;
         baseMagicNumber = magicNumber = 2;
         tags.add(CLAW);
-
+isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
