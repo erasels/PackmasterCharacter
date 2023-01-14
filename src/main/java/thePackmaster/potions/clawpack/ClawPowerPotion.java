@@ -4,12 +4,10 @@ package thePackmaster.potions.clawpack;
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Claw;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
@@ -49,7 +47,15 @@ public class ClawPowerPotion extends CustomPotion {
                 Wiz.atb(new SimpleAddModifierAction(new AddClawTagModifier(1), c));
             }
         }
-        AbstractClawCard.ClawUp(potency);
+
+        //Game action here to wait for the Modifiers to get added to cards, so that ClawUp will then hit those cards.
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractClawCard.ClawUp(potency);
+                this.isDone = true;
+            }
+        });
     }
 
     public CustomPotion makeCopy() {

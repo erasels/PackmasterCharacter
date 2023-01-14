@@ -1,5 +1,6 @@
 package thePackmaster.cards.clawpack;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.defect.GashAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Claw;
@@ -43,6 +44,9 @@ public abstract class AbstractClawCard extends AbstractPackmasterCard {
             if (!(excludeClaws && (c instanceof Claw)) && c.hasTag(SpireAnniversary5Mod.CLAW)) {
                 c.baseDamage += value;
                 c.applyPowers();
+                if (AbstractDungeon.player.hand.group.contains(c)) {
+                    c.flash(Color.RED);
+                }
             }
         }
 

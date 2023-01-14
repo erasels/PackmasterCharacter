@@ -6,23 +6,17 @@ import basemod.abstracts.CustomPotion;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.screens.CardRewardScreen;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.clawpack.AddClawTagAndMakeClawModifier;
-import thePackmaster.cardmodifiers.clawpack.AddClawTagModifier;
 import thePackmaster.cardmodifiers.clawpack.MakeClawModifier;
-import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -85,6 +79,7 @@ public class AttackPotionButClaw extends CustomPotion {
 
                 (cards) -> {
                     for (AbstractCard c2 : cards) {
+                        c2.setCostForTurn(0);
                         for (int i = 0; i < potency; i++) {
                             atb(new MakeTempCardInHandAction(c2.makeStatEquivalentCopy()));
                         }
