@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.womaninbluepack.PotionThrowEffect;
 
@@ -17,6 +18,7 @@ public class ExplosiveVial extends AbstractWomanInBlueCard {
         baseDamage = 10;
         isMultiDamage = true;
         exhaust = true;
+        baseMagicNumber = magicNumber = 3;
     }
 
 
@@ -28,11 +30,19 @@ public class ExplosiveVial extends AbstractWomanInBlueCard {
                 addToBot(new VFXAction(new PotionThrowEffect(getPotionResourcePath("ExplosivePotion.png"), p.hb.cX, p.hb.cY, m2.hb.cX, m2.hb.cY, 3F, 0.6F, false, false), 0.6F));
             }
             allDmg(AbstractGameAction.AttackEffect.FIRE);
+            if (upgraded) {
+                for (AbstractMonster m3 : Wiz.getEnemies()
+                ) {
+
+                    Wiz.applyToEnemy(m3, new IgnitePower(m3, magicNumber));
+
+                }
+
+            }
         }
     }
 
 
     public void upp() {
-        setExhaustive2();
     }
 }

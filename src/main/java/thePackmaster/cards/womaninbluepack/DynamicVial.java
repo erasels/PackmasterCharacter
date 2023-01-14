@@ -69,6 +69,6 @@ public class DynamicVial extends AbstractWomanInBlueCard {
 
 
     public void upp() {
-        setExhaustive2();
+        upgradeBaseCost(0);
     }
 }

@@ -2,22 +2,21 @@
   "${ModID}:FireVial": {
     "NAME": "Fire Vial",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL stslib:Exhaustive 2."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Ignite. NL Exhaust."
   },
   "${ModID}:ExplosiveVial": {
     "NAME": "Explosive Vial",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL stslib:Exhaustive 2."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Ignite to ALL enemies. NL Exhaust."
   },
   "${ModID}:BlockVial": {
     "NAME": "Block Vial",
     "DESCRIPTION": "Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL stslib:Exhaustive 2."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Your Block is not removed at the start of your next turn. NL Exhaust."
   },
   "${ModID}:DynamicVial": {
     "NAME": "Dynamic Vial",
     "DESCRIPTION": "Choose: Gain [E] [E] or Draw 3 cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose: Gain [E] [E] or Draw 3 cards. NL stslib:Exhaustive 2.",
     "EXTENDED_DESCRIPTION": ["Gain [E] [E] .", "Draw 3 cards."]
   },
   "${ModID}:MetallicVial": {
