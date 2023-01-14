@@ -329,10 +329,10 @@ public class SpireAnniversary5Mod implements
 
     public static void addPotions() {
 
-        BaseMod.addPotion(AttackPotionButClaw.class, Color.RED, Color.WHITE, Color.FIREBRICK, AttackPotionButClaw.POTION_ID);
-        BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID);
-        BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID);
-        BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID);
+        BaseMod.addPotion(AttackPotionButClaw.class, Color.RED, Color.WHITE, Color.FIREBRICK, AttackPotionButClaw.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
 
         /*
         //TODO - Just before ship, add this cause otherwise we'll trigger a dependency for everyone.
