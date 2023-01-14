@@ -1,27 +1,19 @@
 {
   "${ModID}:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Echo."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Echo."
   },
   "${ModID}:MagnetRise": {
     "NAME": "Magnet rise",
     "DESCRIPTION": "Gain !B! Block. NL If you generated extra [E] this turn, this card costs 0."
   },
-  "${ModID}:LunchBreak": {
-    "NAME": "Lunch Break",
-    "DESCRIPTION": "Next turn draw !M! cards and gain [E]."
-  },
   "${ModID}:TearApart": {
     "NAME": "Tear Apart",
-    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E]. NL Echo."
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E]. NL ${ModID}:Echo."
   },
   "${ModID}:Voices": {
     "NAME": "Voices",
-    "DESCRIPTION": "Draw !M! cards. NL Echo. NL Exhaust."
-  },
-  "${ModID}:Receptor": {
-    "NAME": "Receptor",
-    "DESCRIPTION": "Gain !M! Block for each extra [E] that you generate."
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Echo. NL Exhaust."
   }
   "${ModID}:Flashlight": {
     "NAME": "Flashlight",
@@ -37,8 +29,17 @@
     "NAME": "Overload",
     "DESCRIPTION": "Deal !D! damage. NL Increase this card's damage by !M! and cost by 1 this combat."
   },
-  "${ModID}:TRBO": {
-    "NAME": "TRBO",
-    "DESCRIPTION": "XXX."
+  "${ModID}:DivineTouch": {
+    "NAME": "Divine Touch",
+    "DESCRIPTION": "The first time a card is created each turn, replace it with Double energy."
+  },
+  "${ModID}:Panacher": {
+    "NAME": "Panacher",
+    "DESCRIPTION": "Every time you create 5 cards, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:Slowing": {
+    "NAME": "Slowing",
+    "DESCRIPTION": "At the start of your turn, gain [E] . NL Add !M! *Wounds into your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E] . NL Add a *Wound into your hand."
   }
 }

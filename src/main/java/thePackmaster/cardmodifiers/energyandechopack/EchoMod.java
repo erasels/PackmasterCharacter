@@ -16,16 +16,11 @@ public class EchoMod extends AbstractCardModifier {
 
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         AbstractCard c = card.makeCopy();
-
-        boolean temp = c.exhaust;
+        if (card.upgraded)
+            c.upgrade();
 
         CardModifierManager.addModifier(c, new ExhaustMod());
-
-        if (temp)
-            CardModifierManager.addModifier(c, new EchoedEtherealMod());
-        else
-            CardModifierManager.addModifier(c, new EtherealMod());
-
+        CardModifierManager.addModifier(c, new EchoedEtherealMod());
         CardModifierManager.addModifier(c, new GlowEchoMod());
 
         atb(new MakeTempCardInHandAction(c));

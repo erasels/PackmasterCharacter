@@ -27,7 +27,7 @@ public class MagnetRise extends AbstractPackmasterCard {
 
     @Override
     public void applyPowers() {
-        if (EnergyAndEchoPack.generatedEnergy > 1)
+        if (EnergyAndEchoPack.generatedEnergy > 0)
             this.setCostForTurn(0);
         super.applyPowers();
     }

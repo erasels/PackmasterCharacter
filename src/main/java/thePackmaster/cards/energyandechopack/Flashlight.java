@@ -29,7 +29,6 @@ public class Flashlight extends AbstractPackmasterCard {
         atb(new GainEnergyAction(1));
         if (upgraded)
             applyToSelf(new EnergizedBluePower(p, 1));
-
     }
 
     @Override

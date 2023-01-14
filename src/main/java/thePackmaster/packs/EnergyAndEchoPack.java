@@ -5,7 +5,9 @@ import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.energyandechopack.GlowEchoMod;
 import thePackmaster.cardmodifiers.warlockpack.GlowTheSoulariumMod;
@@ -24,25 +26,27 @@ public class EnergyAndEchoPack extends AbstractCardPack {
     public EnergyAndEchoPack() {
         super(ID, NAME, DESC, AUTHOR);
     }
-    public static int generatedEnergy;
-    public static int usedEnergy;
+    public static int generatedEnergy = 0;
+    public static int usedEnergy = 0;
+    public static int cardsCreatedThisTurn = 0;
 
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(Discharge.ID);
+        cards.add(DivineTouch.ID);
         cards.add(Flashlight.ID);
-        cards.add(LunchBreak.ID);
         cards.add(MagnetRise.ID);
         cards.add(Overload.ID);
-        cards.add(Receptor.ID);
+        cards.add(Panacher.ID);
         cards.add(ShadowStrike.ID);
+        cards.add(Slowing.ID);
         cards.add(TearApart.ID);
         cards.add(Voices.ID);
         return cards;
     }
 
-    public void initializePack() {
+    public void initializePack() {//This is for echo-ed cards to glow
         CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
             @Override
             public boolean test(AbstractCard card) {
@@ -61,5 +65,15 @@ public class EnergyAndEchoPack extends AbstractCardPack {
         });
 
         super.initializePack();
+    }
+
+    public void receiveOnBattleStart (AbstractRoom room) {
+        resetvalues();
+    }
+
+    public static void resetvalues() {
+        generatedEnergy = 0;
+        usedEnergy = 0;
+        cardsCreatedThisTurn = 0;
     }
 }

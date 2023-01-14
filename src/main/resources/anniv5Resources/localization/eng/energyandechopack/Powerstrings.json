@@ -1,11 +1,4 @@
 {
-  "${ModID}:ReceptorPower": {
-    "NAME": "Receptor",
-    "DESCRIPTIONS": [
-      "Gain #b",
-      " Block for each extra [E] that you generate."
-    ]
-  },
   "${ModID}:DivineTouchPower": {
     "NAME": "Divine Touch",
     "DESCRIPTIONS": [
@@ -14,6 +7,15 @@
       " first time",
       "s",
       " a card is created each turn, replace it with #yDouble #yEnergy"
+    ]
+  },
+  "${ModID}:PanacherPower": {
+    "NAME": "Panacher",
+    "DESCRIPTIONS": [
+      "If you create #b",
+      " more card, deal #b",
+      " more cards, deal #b",
+      " damage to ALL enemies."
     ]
   }
 }

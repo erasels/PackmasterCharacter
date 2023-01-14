@@ -39,7 +39,7 @@ public class WarlockPack extends AbstractCardPack {
         return cards;
     }
 
-    public void initializePack() {
+    public void initializePack() {//This is for THe Soularium cards to glow
         CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
             @Override
             public boolean test(AbstractCard card) {
