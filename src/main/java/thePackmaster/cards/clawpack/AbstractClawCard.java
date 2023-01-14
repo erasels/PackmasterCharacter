@@ -33,48 +33,18 @@ public abstract class AbstractClawCard extends AbstractPackmasterCard {
 
         SpireAnniversary5Mod.CLAW_SHARP_TRACKER += value;
 
-        Iterator<AbstractCard> var1 = AbstractDungeon.player.discardPile.group.iterator();
-
-        AbstractCard c;
-        while (var1.hasNext()) {
-            c = var1.next();
+         List<AbstractCard> cards = new ArrayList<>();
+        cards.addAll(AbstractDungeon.player.hand.group);
+        cards.addAll(AbstractDungeon.player.drawPile.group);
+        cards.addAll(AbstractDungeon.player.discardPile.group);
+        
+        for (AbstractCard c : cards) {
             if (!(excludeClaws && (c instanceof Claw)) && c.hasTag(SpireAnniversary5Mod.CLAW)) {
                 c.baseDamage += value;
                 c.applyPowers();
                 if (c.cardsToPreview != null){
                     if (c.cardsToPreview instanceof GhostClaw){
-                        ((GhostClaw)c).refreshDamage();
-                    }
-                }
-            }
-        }
-
-        var1 = AbstractDungeon.player.drawPile.group.iterator();
-
-        while (var1.hasNext()) {
-            c = var1.next();
-            if (!(excludeClaws && (c instanceof Claw)) && c.hasTag(SpireAnniversary5Mod.CLAW)) {
-                c.baseDamage += value;
-                c.applyPowers();
-                if (c.cardsToPreview != null){
-                    if (c.cardsToPreview instanceof GhostClaw){
-                        ((GhostClaw)c).refreshDamage();
-                    }
-                }
-            }
-
-        }
-
-        var1 = AbstractDungeon.player.hand.group.iterator();
-
-        while (var1.hasNext()) {
-            c = var1.next();
-            if (!(excludeClaws && (c instanceof Claw)) && c.hasTag(SpireAnniversary5Mod.CLAW)) {
-                c.baseDamage += value;
-                c.applyPowers();
-                if (c.cardsToPreview != null){
-                    if (c.cardsToPreview instanceof GhostClaw){
-                        ((GhostClaw)c).refreshDamage();
+                        ((GhostClaw)c.cardsToPreview).refreshDamage();
                     }
                 }
             }
