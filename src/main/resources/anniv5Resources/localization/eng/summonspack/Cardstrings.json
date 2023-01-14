@@ -1,8 +1,13 @@
 {
-  "${ModID}:SummonBulldog": {
-    "NAME": "Summon Bulldog",
-    "DESCRIPTION": "Channel a !M! damage ${ModID}:Bulldog.",
-    "FLAVOR": "I call him Bitey McBiteFace."
+  "${ModID}:EvilSpirit": {
+    "NAME": "Evil Spirit",
+    "DESCRIPTION": "Channel an ${ModID}:Evil\u00a0Spirit. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Channel an ${ModID}:Evil\u00a0Spirit. NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Sadistic Nature",
+      "Deals damage when you apply debuffs."
+    ],
+    "FLAVOR": "This is a good idea and can not in any way backfire."
   },
   "${ModID}:SummonVegetables": {
     "NAME": "Summon Vegetables",
@@ -16,24 +21,36 @@
   },
   "${ModID}:SummonTrees": {
     "NAME": "Summon Trees",
-    "DESCRIPTION": "Gain !B! Block. NL Take !M! less damage from Attacks this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Take !M! less damage from Attacks this turn.",
+    "FLAVOR": "There's a lot of weapons that are awkward to swing when you're surrounded by obstacles.  Like trees."
   },
   "${ModID}:SummonElephant": {
     "NAME": "Summon Elephant",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Take !M! damage."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Take !M! damage.",
+    "FLAVOR": "This is my favorite card.  I hope you like it."
   },
-  "${ModID}:SummonBrambles": {
-    "NAME": "Summon Brambles",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Thorns."
+  "${ModID}:FireSpirit": {
+    "NAME": "Fire Spirit",
+    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Fire\u00a0Spirit.",
+    "EXTENDED_DESCRIPTION": [
+      "Flame Barrier",
+      "When attacked, deal damage back."
+    ],
+    "FLAVOR": "Burninating the Spire."
   },
-  "${ModID}:SummonPython": {
-    "NAME": "Summon Python",
-    "DESCRIPTION": "Apply !M! ${ModID}:Constricted. NL Exhaust.",
-    "FLAVOR": "It's a little disquieting to watch it eat its prey."
+  "${ModID}:RainbowLouse": {
+    "NAME": "Rainbow Louse",
+    "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
+    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Trigger the passive ability of *Rainbow *Lice !M! times.",
+    "EXTENDED_DESCRIPTION": [
+      "Temporary HP",
+      "Temporary HP disappears at the end of combat."
+    ],
+    "FLAVOR": "The result of an unwise magic experiment."
   },
   "${ModID}:SummonBees": {
     "NAME": "Summon Bees",
-    "DESCRIPTION": "Channel !M! ${ModID}:Swarms\u00a0of\u00a0Bees. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel a ${ModID}:Swarm\u00a0of\u00a0Bees.",
     "FLAVOR": "Absolutely terrifying."
   },
   "${ModID}:Control": {
@@ -41,14 +58,15 @@
     "DESCRIPTION": "Gain !M! Orb slots and !M! Focus.",
     "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
   },
-  "${ModID}:DemonicRitual": {
-    "NAME": "Demonic Ritual",
-    "DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost.",
-    "UPGRADE_DESCRIPTION": "Exhaust your hand. NL Gain Strength equal to its total cost + !M!.",
-    "FLAVOR": "This is a good idea and can not in anyway backfire."
+  "${ModID}:Ambush": {
+    "NAME": "Ambush",
+    "DESCRIPTION": "Whenever you Channel an Orb, Evoke it without removing it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Channel an Orb, Evoke it without removing it.",
+    "FLAVOR": "I couldn't find good ambush art so have a pun."
   },
   "${ModID}:SummonPandas": {
     "NAME": "Summon Pandas",
-    "DESCRIPTION": "At the start of your turn, Channel a !M! damage ${ModID}:Panda."
+    "DESCRIPTION": "At the start of your turn, Channel a ${ModID}:Panda.",
+    "FLAVOR": "Pandamonium."
   }
 }

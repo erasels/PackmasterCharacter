@@ -13,7 +13,7 @@ public class LordOfTheFlies extends AbstractPackmasterCard {
     // intellij stuff power, self, rare, , , , , , 
 
     public LordOfTheFlies() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,6 +21,6 @@ public class LordOfTheFlies extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }

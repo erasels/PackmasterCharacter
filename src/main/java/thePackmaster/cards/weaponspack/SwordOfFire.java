@@ -11,14 +11,14 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class SwordOfFire extends AbstractWeaponsPackCard {
 
     public static final String ID = makeID("SwordOfFire");
-    private static final int COST = 0;
+    private static final int COST = -2;
     private static final int WEAPON_ATTACK = 3;
     private static final int WEAPON_DURABILITY = 3;
     private static final int UPGRADE_PLUS_WEAPON_DURABILITY = 1;
 
 
     public SwordOfFire() {
-        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
 
         this.baseMagicNumber = this.magicNumber = WEAPON_DURABILITY;
     }

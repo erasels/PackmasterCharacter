@@ -1,0 +1,9 @@
+[
+  {
+    "PROPER_NAME": "Hoard",
+    "NAMES": [
+      "hoard"
+    ],
+    "DESCRIPTION": "When played, reduce Hoard by X (the card's cost). When Hoard reaches 0, its effects trigger."
+  }
+]

@@ -21,14 +21,14 @@ public class SummonsPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(SummonBulldog.ID);
+        cards.add(EvilSpirit.ID);
         cards.add(SummonVegetables.ID);
         cards.add(SummonTrees.ID);
         cards.add(SummonElephant.ID);
-        cards.add(SummonBrambles.ID);
-        cards.add(SummonPython.ID);
+        cards.add(FireSpirit.ID);
+        cards.add(RainbowLouse.ID);
         cards.add(SummonBees.ID);
-        cards.add(DemonicRitual.ID);
+        cards.add(Ambush.ID);
         cards.add(SummonPandas.ID);
         cards.add(Control.ID);
         return cards;

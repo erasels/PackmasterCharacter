@@ -21,7 +21,10 @@ import thePackmaster.ui.PackFilterMenu;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Objects;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -63,7 +66,9 @@ public class MainMenuUIPatch {
     static {
         options.add(TEXT[2]);
         options.add(TEXT[3]);
-        for (AbstractCardPack c : SpireAnniversary5Mod.unfilteredAllPacks) {
+        List<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
+        sortedPacks.sort(Comparator.comparing((pack)->pack.name));
+        for (AbstractCardPack c : sortedPacks) {
             options.add(c.name);
         }
 
@@ -73,12 +78,27 @@ public class MainMenuUIPatch {
         idToIndex.put(RANDOM, 0);
         idToIndex.put(CHOICE, 1);
         for (int i = 2; i < optionIDs.length; ++i) {
-            String packID = SpireAnniversary5Mod.unfilteredAllPacks.get(i - 2).packID;
+            String packID = sortedPacks.get(i - 2).packID;
             optionIDs[i] = packID;
             idToIndex.put(packID, i);
         }
 
-        packSetups.addAll(SpireAnniversary5Mod.getSavedCDraftSelection());
+        //Validate the saved CDraftSelection - this is necessary in the event that any packs are removed.
+        //Without this validation, Packmaster will crash on attempting to load a Pack that is no longer in the pack list.
+        ArrayList<String> packSetupsInit = new ArrayList<>(SpireAnniversary5Mod.getSavedCDraftSelection());
+
+        for (String s : packSetupsInit
+        ) {
+            if (Objects.equals(s, RANDOM) || Objects.equals(s, CHOICE)) {
+                packSetups.add(s);
+            } else if (SpireAnniversary5Mod.packsByID.get(s) != null) {
+                packSetups.add(s);
+            } else {
+                packSetups.add(RANDOM); //This will only get hit if there is an invalid entry being loaded, such as Pack that no longer exists.  In that event, replace it with RANDOM.
+            }
+
+        }
+        packSetupsInit.clear();
 
         for (int i = 0; i < PACK_COUNT; i++) {
             int index = i;

@@ -20,6 +20,7 @@ public class HuntressEssence extends AbstractLegacyCard {
 
         this.magicNumber = this.baseMagicNumber = HEAL_AMT;
         this.exhaustOnUseOnce = true;
+        this.tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

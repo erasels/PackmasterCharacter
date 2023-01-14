@@ -12,13 +12,10 @@ import thePackmaster.powers.shamanpack.FieryMantlePower;
 
 public class FieryMantle extends AbstractPackmasterCard {
     public static final String ID = SpireAnniversary5Mod.makeID("FieryMantle");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
     private static final int BLOCK = 12;
     private static final int UPGRADE_BLOCK = 2;
-    private static final int IGNITE_THORNS = 1;
+    private static final int IGNITE_THORNS = 2;
     private static final int UPGRADE_IGNITE_THORNS = 1;
 
     public FieryMantle() {

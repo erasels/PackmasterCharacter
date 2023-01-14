@@ -1,0 +1,35 @@
+[
+  {
+    "PROPER_NAME": "Mood",
+    "NAMES": [
+      "increase mood",
+      "increase_mood"
+    ],
+    "DESCRIPTION": "If Mood gets to #b4 or more, gain a random #yInspiration, which is a powerful positive one-time effect, and then lose #b4 Mood."
+  },
+  {
+    "PROPER_NAME": "Mood",
+    "NAMES": [
+      "decrease mood",
+      "decrease_mood"
+    ],
+    "DESCRIPTION": "If Mood gets to #b-4 or below, gain a random #yMental #yBreak, which gives #b2 #yStatuses based on its type, then gain #b4 Mood."
+  },
+  {
+    "PROPER_NAME": "Inspiration",
+    "NAMES": [
+      "inspiration",
+      "inspirations"
+    ],
+    "DESCRIPTION": "Various positive one-time effects."
+  },
+  {
+    "PROPER_NAME": "Mental Break",
+    "NAMES": [
+      "mental break",
+      "mental_break",
+      "mental_breaks"
+    ],
+    "DESCRIPTION": "Gain #b2 random #yStatus cards based on the type of break."
+  }
+]

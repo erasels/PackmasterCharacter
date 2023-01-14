@@ -1,0 +1,33 @@
+{
+  "${ModID}:QuickGamePower": {
+    "NAME": "Quick Game",
+    "DESCRIPTIONS": [
+      "Entering #yVictory requires 25 less #yVP."
+    ]
+  },
+  "${ModID}:RoadbuildingPower": {
+    "NAME": "Roadbuilding",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yVP from cards, gain #b", " more."
+    ]
+  },
+  "${ModID}:VictoryPoints": {
+    "NAME": "Victory Points",
+    "DESCRIPTIONS": [
+      "Whenever this reaches #b",
+      " stacks, enter #yVictory. Is increased by #b10% of current stacks whenever you play a card."
+    ]
+  },
+  "${ModID}:TotalTrackerPower": {
+    "NAME": "TotalTrackerPower",
+    "DESCRIPTIONS": [
+      "If you're seeing this, something went wrong."
+    ]
+  },
+  "${ModID}:EntranceTrackerPower": {
+    "NAME": "EntranceTrackerPower",
+    "DESCRIPTIONS": [
+      "If you're seeing this, something went wrong."
+    ]
+  }
+}

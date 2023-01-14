@@ -1,0 +1,10 @@
+{
+  "${ModID}:DividedFuryPower": {
+    "NAME": "Divided Fury",
+    "DESCRIPTIONS": [
+      "When you #yrip an Attack, deal #b",
+      " damage to ALL enemies. NL When you #yrip a Skill, gain #b",
+      " #yBlock."
+    ]
+  }
+}
