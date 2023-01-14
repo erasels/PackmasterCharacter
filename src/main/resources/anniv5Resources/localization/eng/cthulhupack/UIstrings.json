@@ -1,9 +1,0 @@
-{
-  "${ModID}:CthulhuPack": {
-    "TEXT": [
-      "Eldritch Horror",
-      "The obligatory C'thulhu expansion. Features orbs, Nightmare stance, Distortion, and Entropy mechanics.",
-      "MichaelMayhem"
-    ]
-  }
-}

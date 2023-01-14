@@ -2,12 +2,8 @@ package thePackmaster.cards.madsciencepack;
 
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Frost;
-import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
-import thePackmaster.cardmodifiers.madsciencepack.ApplyFrosbiteModifier;
-import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -23,7 +19,6 @@ public class Winterize extends AbstractMadScienceCard {
         addToBot(new ChannelAction(new Frost()));
         addToBot(new ChannelAction(new Frost()));
         addToBot(new ChannelAction(new Frost()));
-        addToBot(new FindCardForAddModifierAction(new ApplyFrosbiteModifier(magicNumber),magicNumber,true, AbstractDungeon.player.drawPile, card->card.target==CardTarget.ENEMY));
 
     }
 

@@ -1,9 +1,7 @@
 package thePackmaster;
 
-import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -21,16 +19,17 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import thePackmaster.cards.*;
-import thePackmaster.cards.dimensiongatepack.DarkRitual;
-import thePackmaster.cards.dimensiongatepack.PackRat;
-import thePackmaster.packs.*;
+import thePackmaster.cards.Cardistry;
+import thePackmaster.cards.Defend;
+import thePackmaster.cards.Rummage;
+import thePackmaster.cards.Strike;
+import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.relics.HandyHaversack;
 
 import java.util.ArrayList;
 
-import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 import static thePackmaster.SpireAnniversary5Mod.*;
+import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 
 public class ThePackmaster extends CustomPlayer {
     private static final String[] orbTextures = {

@@ -3,7 +3,6 @@ package thePackmaster;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
-import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -17,52 +16,37 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.cards.batterpack.UltimateHomerun;
-import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
-import thePackmaster.orbs.summonspack.Louse;
-import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
-import thePackmaster.patches.psychicpack.DeepDreamPatch;
-import thePackmaster.patches.psychicpack.occult.OccultFields;
-import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
 import thePackmaster.potions.clawpack.DrawClawsPotion;
 import thePackmaster.potions.clawpack.GenerateClawsPotion;
-import thePackmaster.powers.bitingcoldpack.FrostbitePower;
-import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.cardvars.HoardVar;
-import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -75,7 +59,8 @@ import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.CHOICE;
 import static thePackmaster.patches.MainMenuUIPatch.RANDOM;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.atb;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -174,9 +159,6 @@ public class SpireAnniversary5Mod implements
     private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
 
     public static final String EVIL_EFFECT_FILE = makePath("images/vfx/summonspack/Evil.png");
-
-    public static final ArrayList<Panda> pandaList = new ArrayList<>();
-    public static final ArrayList<Louse> louseList = new ArrayList<>();
 
     public static boolean selectedCards = false;
     public static int combatExhausts = 0;
@@ -297,28 +279,8 @@ public class SpireAnniversary5Mod implements
         BaseMod.addCustomScreen(new PackSetupScreen());
 
         logger.info("Prepping dream hand");
-        DeepDreamPatch.dreamHand = new DeepDreamPatch.DreamHand();
 
         logger.info("Checking playability annotations");
-        OccultPatch.testPlayability();
-
-        final Color occultGlow = CardHelper.getColor(88.0f, 26.0f, 150.0f);
-        CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
-            @Override
-            public boolean test(AbstractCard card) {
-                return OccultFields.isOccult.get(card);
-            }
-
-            @Override
-            public Color getColor(AbstractCard card) {
-                return occultGlow.cpy();
-            }
-
-            @Override
-            public String glowID() {
-                return makeID("OccultGlow");
-            }
-        });
 
         currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
         BaseMod.addSaveField("Anniversary5Mod", thismod);
@@ -495,8 +457,6 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
-        pandaList.clear();
-        UltimateHomerun.HIGH_SCORE = 0;
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
     }
@@ -686,39 +646,12 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        DeepDreamPatch.wakeUp();
-        ImproveEffect._clean();
-        DynamicDynamicVariableManager.clearVariables();
         combatExhausts=0;
     }
 
     @Override
     public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power.type == AbstractPower.PowerType.DEBUFF && source == AbstractDungeon.player && target != AbstractDungeon.player) {
-            // Biting Cold Pack
-            // Growing Affliction (Return to hand)
-            for (AbstractCard c : AbstractDungeon.player.discardPile.group)
-                if (c.cardID.equals(GrowingAffliction.ID))
-                    AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(c));
-
-            // Glaciate (Gain Vigor)
-            if (power.ID.equals(FrostbitePower.POWER_ID) && source.hasPower(GlaciatePower.POWER_ID)) {
-                AbstractPower glaciate = source.getPower(GlaciatePower.POWER_ID);
-
-                atb(new AbstractGameAction() {
-                    @Override
-                    public void update() {
-                        glaciate.flash();
-                        if (Settings.FAST_MODE)
-                            addToBot(new WaitAction(0.1F));
-                        else
-                            addToBot(new WaitAction(0.2F));
-                        applyToSelf(new VigorPower(AbstractDungeon.player, glaciate.amount));
-                        this.isDone = true;
-                    }
-                });
-            }
-
             //Ring of Pain pack
             if (!target.hasPower(ArtifactPower.POWER_ID)) {
                 atb(new AbstractGameAction() {

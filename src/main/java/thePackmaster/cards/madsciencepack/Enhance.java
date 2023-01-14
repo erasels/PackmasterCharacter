@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
 import thePackmaster.cardmodifiers.madsciencepack.GainBlockModifier;
-import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
-import thePackmaster.cards.dimensiongatepack.AbstractDimensionalCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
