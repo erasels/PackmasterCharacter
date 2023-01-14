@@ -94,7 +94,7 @@ public class HatMenu {
             Hats.removeHat();
         } else {
             currentHat = hats.get(index - 1);
-            Hats.addHat(currentHat, 1, 1, 0, 0, 0);
+            Hats.addHat(false, currentHat, 1, 1, 0, 0, 0);
         }
     }
 

@@ -9,28 +9,20 @@ import com.esotericsoftware.spine.*;
 import com.esotericsoftware.spine.attachments.RegionAttachment;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Hats {
 
     public static String currentHat;
-
-    private static Map<String, AttachPoint> map = new HashMap<>();
-    private static float hatHeight;
 
     public static void removeHat() {
 
     }
 
-    private static Skeleton playerSkeleton;
+    private static Skeleton skeleton;
 
     private static Bone headbone;
     private static Slot headslot;
@@ -38,14 +30,9 @@ public class Hats {
 
     private static RegionAttachment attachment;
 
-    private static void setupSkeleton(boolean mainMenu) {
-        AbstractPlayer p;
-        if (mainMenu) {
-            p = BaseMod.findCharacter(ThePackmaster.Enums.THE_PACKMASTER);
-        } else {
-            p = AbstractDungeon.player;
-        }
-        playerSkeleton = ReflectionHacks.getPrivate(p, AbstractCreature.class, "skeleton");
+    private static void setupMenuSkeleton() {
+        AbstractPlayer p = BaseMod.findCharacter(ThePackmaster.Enums.THE_PACKMASTER);
+        skeleton = ReflectionHacks.getPrivate(p, AbstractCreature.class, "skeleton");
 
         String bonename;
         String slotname;
@@ -53,7 +40,7 @@ public class Hats {
         int headslotIndex = 0;
 
 
-        Array<Bone> possiblebones = playerSkeleton.getBones();
+        Array<Bone> possiblebones = skeleton.getBones();
         for (Bone b : possiblebones) {
             bonename = b.toString().toLowerCase();
             if (bonename.equals("head") || bonename.equals("skull") || bonename.equals("neck_3")) {
@@ -63,7 +50,7 @@ public class Hats {
 
         }
 
-        Array<Slot> possibleslots = playerSkeleton.getSlots();
+        Array<Slot> possibleslots = skeleton.getSlots();
         for (Slot s : possibleslots) {
             slotname = s.getBone().toString().toLowerCase();
             if (slotname.equals("head")) {
@@ -76,89 +63,50 @@ public class Hats {
         foundHeadSlot = headslotIndex;
     }
 
-    public static void addHat(String hatID, float scaleX, float scaleY, float offsetX, float offsetY, float angle) {
-        if (playerSkeleton == null) {
-            setupSkeleton(true);
-        }
-
-        String imgPath = getImagePathFromHatID(hatID);
-
-        if (attachment == null) {
-            map.put(hatID, new AttachPoint(hatID, headbone.toString(), map.size() + 1, imgPath, scaleX, scaleY, offsetX, offsetY, angle));
-
-            AttachPoint attachPoint = map.get(hatID);
-
-            String attachName = attachPoint.attachName;
-            int slotIndex = foundHeadSlot;
-
-            if (attachPoint.attachIndex != null) {
-                if (playerSkeleton.findSlotIndex(attachName + attachPoint.attachIndex) < 0) {
-                    // Create a new slot for the attachment
-                    Slot origSlot = headslot;
-                    Slot slotClone = new Slot(new SlotData(origSlot.getData().getIndex(), attachName + attachPoint.attachIndex, origSlot.getBone().getData()), origSlot.getBone());
-                    slotClone.getData().setBlendMode(origSlot.getData().getBlendMode());
-                    playerSkeleton.getSlots().insert(slotIndex, slotClone);
-
-                    Array<Slot> drawOrder = playerSkeleton.getDrawOrder();
-                    drawOrder.add(slotClone);
-                    playerSkeleton.setDrawOrder(drawOrder);
-                }
-                attachName = attachName + attachPoint.attachIndex;
-            }
-
-            Texture tex = TexLoader.getTexture(map.get(hatID).imgPath);
-            tex.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-            TextureRegion region = new TextureRegion(tex);
-            attachment = new RegionAttachment(attachPoint.ID);
-            attachment.setRegion(region);
-            attachment.setWidth(tex.getWidth());
-            attachment.setHeight(tex.getHeight());
-            attachment.setX(attachPoint.x * Settings.scale);
-            attachment.setY(attachPoint.y * Settings.scale + ((map.size() - 1) * hatHeight));
-            attachment.setScaleX(attachPoint.scaleX * Settings.scale);
-            attachment.setScaleY(attachPoint.scaleY * Settings.scale);
-            attachment.setRotation(attachPoint.angle);
-            attachment.updateOffset();
-
-            Skin skin = playerSkeleton.getData().getDefaultSkin();
-            skin.addAttachment(slotIndex, attachment.getName(), attachment);
-
-            playerSkeleton.setAttachment(attachName, attachment.getName());
+    public static void addHat(boolean inRun, String hatID, float scaleX, float scaleY, float offsetX, float offsetY, float angle) {
+        if (inRun) {
 
         } else {
-            TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
-            attachment.setRegion(region);
+            if (skeleton == null) {
+                setupMenuSkeleton();
+            }
+
+            String imgPath = getImagePathFromHatID(hatID);
+
+            if (attachment == null) {
+                String attachName = headbone.toString();
+                int slotIndex = foundHeadSlot;
+
+                // Create a new slot for the attachment
+                Slot origSlot = headslot;
+                Slot slotClone = new Slot(new SlotData(origSlot.getData().getIndex(), attachName, origSlot.getBone().getData()), origSlot.getBone());
+                slotClone.getData().setBlendMode(origSlot.getData().getBlendMode());
+                skeleton.getSlots().insert(slotIndex, slotClone);
+
+                Array<Slot> drawOrder = skeleton.getDrawOrder();
+                drawOrder.add(slotClone);
+                skeleton.setDrawOrder(drawOrder);
+
+                Texture tex = TexLoader.getTexture(imgPath);
+                tex.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+                TextureRegion region = new TextureRegion(tex);
+                attachment = new RegionAttachment(hatID);
+                attachment.setRegion(region);
+                attachment.setWidth(tex.getWidth());
+                attachment.setHeight(tex.getHeight());
+                attachment.updateOffset();
+
+                Skin skin = skeleton.getData().getDefaultSkin();
+                skin.addAttachment(slotIndex, attachment.getName(), attachment);
+
+                skeleton.setAttachment(attachName, attachment.getName());
+
+            } else {
+                TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
+                attachment.setRegion(region);
+            }
         }
     }
-
-    public static class AttachPoint {
-        final String ID;
-        final String attachName;
-        final Integer attachIndex;
-        final String imgPath;
-        final float scaleX;
-        final float scaleY;
-        final float x;
-        final float y;
-        final float angle;
-
-        public AttachPoint(String id, String attachName, String img, float scaleX, float scaleY, float x, float y, float angle) {
-            this(id, attachName, null, img, scaleX, scaleY, x, y, angle);
-        }
-
-        public AttachPoint(String id, String attachName, Integer attachIndex, String img, float scaleX, float scaleY, float x, float y, float angle) {
-            ID = id;
-            this.attachName = attachName;
-            this.attachIndex = attachIndex;
-            imgPath = img;
-            this.scaleX = scaleX;
-            this.scaleY = scaleY;
-            this.x = x;
-            this.y = y;
-            this.angle = angle;
-        }
-    }
-
 
     public static String getImagePathFromHatID(String hatID) {
         return SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
@@ -166,8 +114,7 @@ public class Hats {
 
     public static void atRunStart() {
         if (currentHat != null) {
-            setupSkeleton(false);
-            addHat(currentHat, 1, 1, 0, 0, 0);
+            addHat(true, currentHat, 1, 1, 0, 0, 0);
         }
     }
 }
