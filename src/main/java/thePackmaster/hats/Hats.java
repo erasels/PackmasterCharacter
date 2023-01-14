@@ -9,6 +9,7 @@ import com.esotericsoftware.spine.*;
 import com.esotericsoftware.spine.attachments.RegionAttachment;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.util.ImageHelper;
@@ -65,7 +66,7 @@ public class Hats {
 
     public static void addHat(boolean inRun, String hatID, float scaleX, float scaleY, float offsetX, float offsetY, float angle) {
         if (inRun) {
-
+            Skeleton found = ReflectionHacks.getPrivate(AbstractDungeon.player, AbstractCreature.class, "skeleton");
         } else {
             if (skeleton == null) {
                 setupMenuSkeleton();
