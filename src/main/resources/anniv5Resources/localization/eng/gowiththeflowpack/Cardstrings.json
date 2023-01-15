@@ -9,7 +9,8 @@
   },
   "${ModID}:Hail": {
     "NAME": "Hail",
-    "DESCRIPTION": "Deal !D! damage. NL Deal an additional !D! damage for each time this was discarded this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Deal an additional !D! damage for each time this was discarded this combat.",
+    "EXTENDED_DESCRIPTION": [" NL (Hits !M! times)"]
   },
   "${ModID}:HighTide": {
     "NAME": "High Tide",
