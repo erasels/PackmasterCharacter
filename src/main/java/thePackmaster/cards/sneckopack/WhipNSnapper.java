@@ -24,7 +24,7 @@ public class WhipNSnapper extends AbstractPackmasterCard {
 
     public WhipNSnapper() {
         super(ID, 2, AbstractCard.CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 8;
         baseMagicNumber = magicNumber = 3;
     }
 
@@ -44,6 +44,6 @@ public class WhipNSnapper extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(4);
     }
 }
