@@ -84,7 +84,7 @@ Packmaster can equip different cosmetic hats, one for every pack. Each one is lo
 
 This does not add any mandatory work for packs. There are three ways to get a hat added to your pack:
 
-1) Art it yourself, using the new Hat template PSD.  Add a png export of your hat into the resources/hats folder, with the naming convention of <PackID>Hat.png, and it will automatically be detected and used.
+1) Art it yourself, using the new Hat template PSD (PackmasterHatTemplate.psd, included in this repo).  Add a png export of your hat into the resources/hats folder, with the naming convention of <PackID>Hat.png, and it will automatically be detected and used.
 
 2) Write up a simple description to AlexMdle of your requested hat.
 
