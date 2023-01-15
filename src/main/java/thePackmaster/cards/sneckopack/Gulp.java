@@ -11,7 +11,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Gulp extends AbstractPackmasterCard {
 
     public final static String ID = makeID("Gulp");
-    private static final int DMG = 20, UPG_DMG = 5;
+    private static final int DMG = 17, UPG_DMG = 5;
 
     public Gulp() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
