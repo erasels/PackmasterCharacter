@@ -46,11 +46,12 @@ public class Rummage extends AbstractPackmasterCard {
 
                     if (!possCardsList.isEmpty()) {
                         AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
-                        possCardsList.remove(q);
+                        possCardsList.clear();
+                        chosenCards.add(q);
+                        highestcost = 0;
                         q.setCostForTurn(q.costForTurn - 1);
                         q.isCostModifiedForTurn = true;
                         q.superFlash();
-                        chosenCards.add(q);
                     }
                 }
             }
