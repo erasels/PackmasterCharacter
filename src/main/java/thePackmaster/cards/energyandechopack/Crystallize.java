@@ -37,7 +37,7 @@ public class Crystallize extends AbstractPackmasterCard {
     public void applyPowers() {
         this.baseBlock = EnergyPanel.totalCount * this.magicNumber;
         super.applyPowers();
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 

@@ -41,6 +41,6 @@
   "${ModID}:Crystallize": {
     "NAME": "Crystallize",
     "DESCRIPTION": "Gain !M! Block for each [E] available.",
-    "EXTENDED_DESCRIPTION": ["Gain !M! Block for each [E] available. NL (Gain !B! Block.)"]
+    "EXTENDED_DESCRIPTION": ["Gain !M! Block for each [E] available. NL (Gains !B! Block.)"]
   }
 }
