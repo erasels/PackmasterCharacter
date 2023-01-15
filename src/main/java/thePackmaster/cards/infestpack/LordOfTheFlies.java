@@ -8,7 +8,7 @@ import thePackmaster.powers.infestpack.LordOfTheFliesPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class LordOfTheFlies extends AbstractPackmasterCard {
+public class LordOfTheFlies extends AbstractInfestCard {
     public final static String ID = makeID("LordOfTheFlies");
     // intellij stuff power, self, rare, , , , , , 
 

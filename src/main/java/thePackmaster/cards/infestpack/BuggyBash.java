@@ -11,7 +11,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class BuggyBash extends AbstractPackmasterCard {
+public class BuggyBash extends AbstractInfestCard {
     public final static String ID = makeID("BuggyBash");
     // intellij stuff attac, enemy, common, 14, 1, , , 2, 1
 

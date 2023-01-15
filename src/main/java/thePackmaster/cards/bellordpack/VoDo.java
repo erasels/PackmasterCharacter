@@ -15,7 +15,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
-public class VoDo extends AbstractPackmasterCard implements OnObtainCard {
+public class VoDo extends AbstractBellordCard implements OnObtainCard {
     public final static String ID = makeID("VoDo");
     // intellij stuff power, self, uncommon, , , , , 2, 1
 
