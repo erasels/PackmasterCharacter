@@ -9,11 +9,8 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.prismaticpack.FlawlessPrismPower;
 
-public class FlawlessPrism extends AbstractPackmasterCard {
+public class FlawlessPrism extends AbstractPrismaticCard {
     public static final String ID = SpireAnniversary5Mod.makeID("FlawlessPrism");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
     private static final int CARDS = 1;
     private static final int UPGRADE_CARDS = 1;

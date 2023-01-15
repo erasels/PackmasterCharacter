@@ -4,6 +4,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
+import com.evacipated.cardcrawl.mod.stslib.patches.ColoredDamagePatch;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -21,19 +24,21 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.att;
 
 public class EvilSpirit extends AbstractPackMasterOrb implements OnApplyPowerOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(EvilSpirit.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH = makePath("/images/vfx/summonspack/EvilSpirit.png");
+    private static final String IMG_PATH = makePath("/images/orbs/summonsPack/EvilSpirit.png");
     private static final float SPIRIT_WIDTH = 96.0f;
 
     private final static int BASE_PASSIVE = 4;
     private final static int BASE_EVOKE = 2;
 
     private Color color = Color.WHITE.cpy();
+    public static final Color JINX_COLOR = new Color(0, 0, 204f/255f, 1f);
     private double colorTime = 0d;
 
     private BobEffect ghostBobEffect = new BobEffect(4f, 3.2f);
@@ -53,8 +58,13 @@ public class EvilSpirit extends AbstractPackMasterOrb implements OnApplyPowerOrb
 
     @Override
     public void onApplyPower(AbstractCreature target, AbstractPower power) {
-        if (target != null && target != adp() && power.type == AbstractPower.PowerType.DEBUFF)
-            Wiz.thornDmgTop(target, passiveAmount, SpireAnniversary5Mod.Enums.EVIL);
+        if (target != null && target != adp() && power.type == AbstractPower.PowerType.DEBUFF) {
+            DamageInfo info = new DamageInfo(adp(), passiveAmount, DamageInfo.DamageType.THORNS);
+            DamageAction action = new DamageAction(target, info, SpireAnniversary5Mod.Enums.EVIL);
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(action, JINX_COLOR);
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
+            att(action);
+        }
     }
 
     @Override
@@ -68,10 +78,14 @@ public class EvilSpirit extends AbstractPackMasterOrb implements OnApplyPowerOrb
         if (pow == null) {
             passiveAmount = basePassiveAmount;
             evokeAmount = baseEvokeAmount;
-            return;
+        } else {
+            passiveAmount = basePassiveAmount + pow.amount;
+            evokeAmount = baseEvokeAmount + pow.amount;
         }
-        passiveAmount = basePassiveAmount + pow.amount;
-        evokeAmount = baseEvokeAmount + pow.amount;
+        if (passiveAmount < 0)
+            passiveAmount = 0;
+        if (evokeAmount < 0)
+            evokeAmount = 0;
     }
 
     @Override

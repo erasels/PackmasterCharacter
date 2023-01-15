@@ -20,7 +20,7 @@ public class MoonlightFlight extends AbstractPackmasterCard
 
     public MoonlightFlight() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = 3;
+         magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

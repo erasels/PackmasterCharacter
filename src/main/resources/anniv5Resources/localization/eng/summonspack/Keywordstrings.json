@@ -15,7 +15,7 @@
       "rainbow\u00a0louse",
       "Rainbow\u00a0louse"
     ],
-    "DESCRIPTION": "Orb: Increases #yTemporary #yHP when you play a card. When #yEvoked, gain the #yTemporary #yHP."
+    "DESCRIPTION": "Orb: Draw a card at the start of your turn. When #yEvoked, draw 2 cards."
   },
   {
     "PROPER_NAME": "Panda",
@@ -23,6 +23,20 @@
       "panda"
     ],
     "DESCRIPTION": "Orb: Deals damage to a random enemy at the end of your turn."
+  },
+  {
+    "PROPER_NAME": "Wolf",
+    "NAMES": [
+      "wolf"
+    ],
+    "DESCRIPTION": "Orb: Deals damage to the enemy with the least HP. Damage is boosted by other wolves. When #yEvoked, gain an orb slot."
+  },
+  {
+    "PROPER_NAME": "Porcupine",
+    "NAMES": [
+      "porcupine"
+    ],
+    "DESCRIPTION": "Orb: Generates #yQuills."
   },
   {
     "PROPER_NAME": "Evil\u00a0Spirit",
@@ -47,14 +61,6 @@
       "fire\u00a0spirit",
       "Fire\u00a0spirit"
     ],
-    "DESCRIPTION": "Orb: Gain #yFlame #yBarrier."
-  },
-  {
-    "PROPER_NAME": "Flame\u00a0Barrier",
-    "NAMES": [
-      "Flame\u00a0barrier",
-      "flame\u00a0barrier"
-    ],
-    "DESCRIPTION": "Deal damage back when attacked."
+    "DESCRIPTION": "Orb: Deal damage back when attacked. Gain #yFocus when evoked."
   }
 ]

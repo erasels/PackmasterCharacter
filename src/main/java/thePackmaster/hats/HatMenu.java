@@ -35,7 +35,7 @@ public class HatMenu {
     private static final float BG_Y_SCALE = Settings.scale * 0.8f;
     private static final float BG_X = 525f * Settings.xScale;
     private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
-    private static final float DROPDOWN_X = 590f * Settings.xScale;
+    private static final float DROPDOWN_X = 575f * Settings.xScale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
     private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
     private static final float PREVIEW_Y = BG_Y + (225 * Settings.scale);

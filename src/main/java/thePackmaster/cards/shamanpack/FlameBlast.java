@@ -10,11 +10,8 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.shamanpack.IgnitePower;
 
-public class FlameBlast extends AbstractPackmasterCard {
+public class FlameBlast extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("FlameBlast");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int IGNITE = 4;
     private static final int VULNERABLE = 2;

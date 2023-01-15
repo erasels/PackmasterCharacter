@@ -9,11 +9,8 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.utilitypack.ConjurationAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class Conjuration extends AbstractPackmasterCard {
+public class Conjuration extends AbstractUtilityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Conjuration");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
 
     public Conjuration() {
