@@ -49,8 +49,8 @@
       "Turn this on to choose how your Packs are determined.",
       "Random",
       "Choice of 3",
-      "Pack filtering menu",
-      "HAT MENU"
+      "Pack Filtering Menu",
+      "Hat Menu"
     ]
   },
   "${ModID}:PackSetup": {

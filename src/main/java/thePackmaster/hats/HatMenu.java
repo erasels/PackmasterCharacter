@@ -30,14 +30,14 @@ public class HatMenu {
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));
 
     //positions
-    private static final float BG_X_SCALE = Settings.scale * 0.31f;
+    private static final float BG_X_SCALE = Settings.scale * 0.275f;
     private static final float BG_Y_SCALE = Settings.scale * 0.8f;
     private static final float BG_X = 525f * Settings.xScale;
     private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
     private static final float DROPDOWN_X = 590f * Settings.xScale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
-    private static final float PREVIEW_X = Settings.WIDTH / 2 - (200 * Settings.scale);
-    private static final float PREVIEW_Y = Settings.HEIGHT / 2 + (100 * Settings.scale);
+    private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
+    private static final float PREVIEW_Y = BG_Y + (200 * Settings.scale);
 
     public static AbstractPlayer dummy;
 
