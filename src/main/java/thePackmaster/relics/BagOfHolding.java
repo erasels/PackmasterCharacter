@@ -1,49 +1,44 @@
 package thePackmaster.relics;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.BlurPower;
-import thePackmaster.ThePackmaster;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class BagOfHolding extends AbstractPackmasterRelic {
     public static final String ID = makeID("BagOfHolding");
 
-    private boolean firstTurn = true;
-
     public BagOfHolding() {
         super(ID, RelicTier.BOSS, LandingSound.FLAT);
     }
 
+    @Override
     public void atPreBattle() {
-        this.firstTurn = true;
+        this.counter = AbstractDungeon.player.masterDeck.size() / 5;
     }
 
+    @Override
     public void atTurnStart() {
-        int count = AbstractDungeon.player.masterDeck.size();
-        if (this.firstTurn) {
+        if (!this.grayscale) {
             flash();
-            if (count >= 10){
-                addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                addToTop(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
-            }
-            if (count >= 20){
-                addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(2));
-            }
-            this.firstTurn = false;
-        } else {
-            if (count >= 30){
-                addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                addToTop(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
-            }
-            if (count >= 40){
-                addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(2));
+            addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            addToTop(new GainEnergyAction(1));
+            this.counter--;
+
+            if (this.counter <= 0) {
+                this.counter = -1;
+                this.grayscale = true;
             }
         }
     }
+
+    @Override
+    public void onVictory() {
+        this.grayscale = false;
+        this.counter = -1;
+    }
+
     @Override
     public void obtain() {
         if (AbstractDungeon.player.hasRelic(HandyHaversack.ID)) {
