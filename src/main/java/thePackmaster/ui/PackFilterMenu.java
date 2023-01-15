@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
@@ -109,6 +110,14 @@ public class PackFilterMenu {
         previewCard.update();
         previewCard.current_x = PREVIEW_X;
         previewCard.current_y = PREVIEW_Y;
+        previewCard.hb.move(previewCard.current_x, previewCard.current_y);
+        previewCard.hb.update();
+        if (viewedPack.credits != null) {
+            TipHelper.renderGenericTip(
+                    previewCard.current_x + previewCard.hb.width,
+                    previewCard.current_y + previewCard.hb.height,
+                    viewedPack.creditsHeader, viewedPack.credits);
+        }
         FontHelper.cardTitleFont.getData().setScale(1f);
     }
 

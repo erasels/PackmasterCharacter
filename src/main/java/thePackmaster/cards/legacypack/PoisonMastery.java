@@ -19,6 +19,7 @@ public class PoisonMastery extends AbstractLegacyCard {
     public PoisonMastery() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

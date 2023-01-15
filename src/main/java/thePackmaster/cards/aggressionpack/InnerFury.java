@@ -14,7 +14,7 @@ import thePackmaster.stances.aggressionpack.AggressionStance;
 public class InnerFury extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("InnerFury");
     private static final int COST = 1;
-    private static final int TEMP_STRENGTH_AND_BLOCK = 3;
+    private static final int TEMP_STRENGTH_AND_BLOCK = 4;
     private static final int UPGRADE_TEMP_STRENGTH_AND_BLOCK = 2;
 
     public InnerFury() {

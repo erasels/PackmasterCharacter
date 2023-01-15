@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Midnight extends AbstractPackmasterCard implements OnObtainCard {
+public class Midnight extends AbstractBellordCard implements OnObtainCard {
     public final static String ID = makeID("Midnight");
     // intellij stuff attack, enemy, common, 9, 3, 9, 3, , 
 

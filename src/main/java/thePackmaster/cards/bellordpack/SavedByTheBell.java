@@ -13,7 +13,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class SavedByTheBell extends AbstractPackmasterCard implements OnObtainCard {
+public class SavedByTheBell extends AbstractBellordCard implements OnObtainCard {
     public final static String ID = makeID("SavedByTheBell");
     // intellij stuff skill, self, rare, , , , , , 
 

@@ -10,7 +10,7 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class StruckByATrain extends AbstractPackmasterCard {
+public class StruckByATrain extends AbstractHighEnergyCard {
     public final static String ID = makeID("StruckByATrain");
     // intellij stuff attack, enemy, uncommon, 25, 5, , , 2, 1
 

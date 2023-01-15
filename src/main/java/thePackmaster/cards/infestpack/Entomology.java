@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class Entomology extends AbstractPackmasterCard {
+public class Entomology extends AbstractInfestCard {
     public final static String ID = makeID("Entomology");
     // intellij stuff attack, enemy, uncommon, 6, 4, , , , 
 

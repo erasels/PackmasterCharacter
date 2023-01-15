@@ -32,9 +32,11 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
@@ -48,6 +50,7 @@ import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.hats.Hats;
+import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
@@ -56,12 +59,15 @@ import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
+import thePackmaster.patches.sneckopack.EnergyCountPatch;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
 import thePackmaster.potions.clawpack.DrawClawsPotion;
 import thePackmaster.potions.clawpack.GenerateClawsPotion;
+import thePackmaster.potions.thieverypack.DivinePotion;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
+import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
@@ -98,8 +104,10 @@ public class SpireAnniversary5Mod implements
         PostBattleSubscriber,
         PostPowerApplySubscriber,
         StartGameSubscriber,
-        PostExhaustSubscriber {
-    public static final Logger logger = LogManager.getLogger("Packmaster");
+        PostExhaustSubscriber,
+        OnPlayerTurnStartSubscriber {
+        
+        public static final Logger logger = LogManager.getLogger("Packmaster");
 
     public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
     public static HashMap<Class<? extends AbstractCard>, String> cardClassParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <card Class, packID>
@@ -155,6 +163,12 @@ public class SpireAnniversary5Mod implements
     private static final String PANDA_OGG = makePath("audio/summonspack/Panda.ogg");
     public static final String PORCUPINE_KEY = makeID("Porcupine");
     private static final String PORCUPINE_OGG = makePath("audio/summonspack/Porcupine.ogg");
+    public static final String DIE_KEY = makeID("Die");
+    private static final String DIE_OGG = makePath("audio/summonspack/Die.ogg");
+    public static final String DICE_KEY = makeID("Dice");
+    private static final String DICE_OGG = makePath("audio/summonspack/Dice.ogg");
+    public static final String DICELOTS_KEY = makeID("DiceLots");
+    private static final String DICELOTS_OGG = makePath("audio/summonspack/DiceLots.ogg");
     public static final String TRANSMUTATION_KEY = makeID("Transmutation");
     private static final String TRANSMUTATION_OGG = makePath("audio/transmutationpack/Transmutation.ogg");
     public static final String WATER_IMPACT_1_KEY = makeID("WaterImpactOne");
@@ -248,7 +262,7 @@ public class SpireAnniversary5Mod implements
 
         try {
             Properties defaults = new Properties();
-            defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, RANDOM, CHOICE, CHOICE));
+            defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, CHOICE, CHOICE, CHOICE));
             defaults.put("PackmasterUnlockedHats", "");
             defaults.put("PackmasterAllPacksMode", "FALSE");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
@@ -387,6 +401,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(DivinePotion.class, Color.ORANGE, Color.YELLOW, Color.ORANGE, DivinePotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
 
         if (Loader.isModLoaded("widepotions")) {
             Consumer<String> whitelist = getWidePotionsWhitelistMethod();
@@ -394,6 +409,7 @@ public class SpireAnniversary5Mod implements
             whitelist.accept(ClawPowerPotion.POTION_ID);
             whitelist.accept(DrawClawsPotion.POTION_ID);
             whitelist.accept(GenerateClawsPotion.POTION_ID);
+            whitelist.accept(DivinePotion.POTION_ID);
         }
     }
 
@@ -519,6 +535,9 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(EVIL_KEY, EVIL_OGG);
         BaseMod.addAudio(PANDA_KEY, PANDA_OGG);
         BaseMod.addAudio(PORCUPINE_KEY, PORCUPINE_OGG);
+        BaseMod.addAudio(DIE_KEY, DIE_OGG);
+        BaseMod.addAudio(DICE_KEY, DICE_OGG);
+        BaseMod.addAudio(DICELOTS_KEY, DICELOTS_OGG);
         BaseMod.addAudio(TRANSMUTATION_KEY, TRANSMUTATION_OGG);
         BaseMod.addAudio(WATER_IMPACT_1_KEY, WATER_IMPACT_1_OGG);
         BaseMod.addAudio(WATER_IMPACT_2_KEY, WATER_IMPACT_2_OGG);
@@ -557,11 +576,19 @@ public class SpireAnniversary5Mod implements
         UltimateHomerun.HIGH_SCORE = 0;
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
+        MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
+        EnergyAndEchoPack.resetvalues();
+        EnergyCountPatch.energySpentThisCombat = 0;
     }
 
     @Override
     public void receivePostExhaust(AbstractCard arg0) {
         combatExhausts++;
+    }
+
+    @Override
+    public void receiveOnPlayerTurnStart() {
+        Leprechaun.staticStartOfTurn();
     }
 
     public static void declarePacks() {
@@ -683,7 +710,7 @@ public class SpireAnniversary5Mod implements
             packSetup.add(RANDOM);
             packSetup.add(RANDOM);
             packSetup.add(RANDOM);
-            packSetup.add(RANDOM);
+            packSetup.add(CHOICE);
             packSetup.add(CHOICE);
             packSetup.add(CHOICE);
         }

@@ -1,8 +1,13 @@
 package thePackmaster.packs;
 
+import basemod.helpers.CardBorderGlowManager;
+import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cardmodifiers.warlockpack.GlowTheSoulariumMod;
 import thePackmaster.cards.warlockpack.*;
 
 import java.util.ArrayList;
@@ -13,9 +18,10 @@ public class WarlockPack extends AbstractCardPack {
     public static final String NAME = UI_STRINGS.TEXT[0];
     public static final String DESC = UI_STRINGS.TEXT[1];
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
+    public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public WarlockPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, CREDITS);
     }
 
     @Override
@@ -32,5 +38,26 @@ public class WarlockPack extends AbstractCardPack {
         cards.add(TheSoularium.ID);
         cards.add(RunedMithrilRod.ID);
         return cards;
+    }
+
+    public void initializePack() {//This is for THe Soularium cards to glow
+        CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
+            @Override
+            public boolean test(AbstractCard card) {
+                return CardModifierManager.hasModifier(card, GlowTheSoulariumMod.ID);
+            }
+
+            @Override
+            public Color getColor(AbstractCard card) {
+                return Color.PURPLE.cpy();
+            }
+
+            @Override
+            public String glowID() {
+                return "anniv5:GlowTheSoularium";
+            }
+        });
+
+        super.initializePack();
     }
 }

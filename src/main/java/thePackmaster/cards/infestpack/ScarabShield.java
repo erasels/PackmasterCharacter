@@ -10,7 +10,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class ScarabShield extends AbstractPackmasterCard {
+public class ScarabShield extends AbstractInfestCard {
     public final static String ID = makeID("ScarabShield");
     // intellij stuff skill, self, uncommon, , , 15, 5, , 
 
