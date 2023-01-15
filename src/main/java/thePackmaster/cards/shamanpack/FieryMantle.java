@@ -10,7 +10,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.shamanpack.FieryMantlePower;
 
-public class FieryMantle extends AbstractPackmasterCard {
+public class FieryMantle extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("FieryMantle");
     private static final int COST = 2;
     private static final int BLOCK = 12;

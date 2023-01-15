@@ -9,7 +9,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.aggressionpack.AnimosityPower;
 
-public class Animosity extends AbstractPackmasterCard {
+public class Animosity extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Animosity");
     private static final int COST = 2;
     private static final int STRENGTH = 1;

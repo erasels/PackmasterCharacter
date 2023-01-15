@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.List;
 
-public class GrabBag extends AbstractPackmasterCard {
+public class GrabBag extends AbstractPrismaticCard {
     public static final String ID = SpireAnniversary5Mod.makeID("GrabBag");
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
