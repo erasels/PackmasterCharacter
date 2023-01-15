@@ -1,0 +1,6 @@
+{
+  "${ModID}:AqueductsPower": {
+    "NAME": "Aqueducts",
+    "DESCRIPTIONS": ["Whenever you draw an extra card, deal #b", " damage to ALL enemies."]
+  }
+}
