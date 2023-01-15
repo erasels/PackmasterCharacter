@@ -14,7 +14,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class RingTheBell extends AbstractPackmasterCard implements OnObtainCard {
+public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
     public final static String ID = makeID("RingTheBell");
     // intellij stuff skill, all_enemy, uncommon, , , , , 13, 4
 

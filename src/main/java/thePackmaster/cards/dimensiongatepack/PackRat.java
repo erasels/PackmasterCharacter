@@ -24,6 +24,7 @@ public class PackRat extends AbstractDimensionalCard {
         baseBlock = 14;
         setFrame("packratframe.png");
         FleetingField.fleeting.set(this, true);
+        tags.add(CardTags.HEALING);
     }
 
 

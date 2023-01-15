@@ -22,6 +22,7 @@ public class Alclawmize extends AbstractClawCard {
     public Alclawmize() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust=true;
+        tags.add(CardTags.HEALING);
 
         potions.add(AttackPotionButClaw.POTION_ID);
         potions.add(ClawPowerPotion.POTION_ID);

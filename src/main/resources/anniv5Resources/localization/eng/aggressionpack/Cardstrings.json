@@ -33,7 +33,7 @@
   },
   "${ModID}:LunaticRage": {
     "NAME": "Lunatic Rage",
-    "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E] . NL Discard all non-Attack cards. NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E] . NL Discard all non-Attack non-Status cards. NL Exhaust."
   },
   "${ModID}:Animosity": {
     "NAME": "Animosity",

@@ -8,7 +8,7 @@ import thePackmaster.powers.bellordpack.LikeClockworkPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class LikeClockwork extends AbstractPackmasterCard {
+public class LikeClockwork extends AbstractBellordCard {
     public final static String ID = makeID("LikeClockwork");
     // intellij stuff power, self, rare, , , , , 5, 2
 
