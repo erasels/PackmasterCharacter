@@ -32,7 +32,7 @@
     "NAME": "Gem of Unity",
     "FLAVOR": "In union there is strength.",
     "DESCRIPTIONS": [
-      "Once per combat, after you have played a card from each different Pack available this run, gain 20 Block, 1 Strength, 1 Dexterity, and heal 5 HP.",
+      "Once per combat, after you have played a card from each different Pack available this run, gain #b20 Block, #b1 Strength, #b1 Dexterity, and heal #b5 HP.",
       "Packs played this combat: "
     ]
   },
