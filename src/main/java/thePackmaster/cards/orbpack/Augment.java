@@ -17,9 +17,11 @@ public class Augment extends AbstractPackmasterCard {
 
     public Augment() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
+        this.baseBlock = this.block = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         atb(new AbstractGameAction() {
             @Override
             public void update() {

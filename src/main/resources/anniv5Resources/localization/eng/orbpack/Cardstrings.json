@@ -5,8 +5,8 @@
   },
   "${ModID}:Augment": {
     "NAME": "Augment",
-    "DESCRIPTION": "If you have no empty Orb slots, gain 1 Orb slot.",
-    "UPGRADE_DESCRIPTION": "Retain. NL If you have no empty Orb slots, gain 1 Orb slot."
+    "DESCRIPTION": "Gain !B! Block. NL If you have no empty Orb slots, gain 1 Orb slot.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL If you have no empty Orb slots, gain 1 Orb slot."
   },
   "${ModID}:Allocate": {
     "NAME": "Allocate",
