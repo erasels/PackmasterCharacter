@@ -40,7 +40,7 @@ public class PanacherPower extends AbstractPackmasterPower {
 
     @Override
     public void updateDescription() {
-        if (this.amount == 1) {
+        if (this.amount2 == 1) {
             this.description = DESCRIPTIONS[0] + this.amount2 + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[3];
         } else {
             this.description = DESCRIPTIONS[0] + this.amount2 + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3];

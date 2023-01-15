@@ -10,9 +10,9 @@
   "${ModID}:PanacherPower": {
     "NAME": "Panacher",
     "DESCRIPTIONS": [
-      "If you create #b",
-      " more card, deal #b",
-      " more cards, deal #b",
+      "If #b",
+      " more card is created, deal #b",
+      " more cards are created, deal #b",
       " damage to ALL enemies."
     ]
   }

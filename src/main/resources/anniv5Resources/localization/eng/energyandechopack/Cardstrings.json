@@ -31,7 +31,7 @@
   },
   "${ModID}:Panacher": {
     "NAME": "Panacher",
-    "DESCRIPTION": "Every time you create 5 cards, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Every time 5 cards are created, deal !M! damage to ALL enemies."
   },
   "${ModID}:Slowing": {
     "NAME": "Slowing",

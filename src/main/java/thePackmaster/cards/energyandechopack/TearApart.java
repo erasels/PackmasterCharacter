@@ -22,7 +22,7 @@ public class TearApart extends AbstractPackmasterCard {
 
     public TearApart(){
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 16;
+        baseDamage = 17;
         CardModifierManager.addModifier(this, new EchoMod());
     }
 
@@ -37,6 +37,6 @@ public class TearApart extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(5);
     }
 }
