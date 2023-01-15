@@ -9,7 +9,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.shamanpack.FueledByEmbersPower;
 
-public class FueledByEmbers extends AbstractPackmasterCard {
+public class FueledByEmbers extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("FueledByEmbers");
     private static final int COST = 2;
     private static final int CARDS = 1;

@@ -12,7 +12,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
-public class LastResort extends AbstractPackmasterCard {
+public class LastResort extends AbstractHighEnergyCard {
     public final static String ID = makeID("LastResort");
     // intellij stuff skill, self, uncommon, , , 6, 2, , 
 

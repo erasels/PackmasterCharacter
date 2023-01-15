@@ -27,12 +27,18 @@ public class DicePower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public List<Integer> dice = new ArrayList<>();
+    public boolean sound;
 
-    public DicePower(AbstractCreature owner, int sides) {
+    public DicePower(AbstractCreature owner, int sides, boolean sound) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, sides);
+        this.sound = sound;
         dice.add(sides);
         amount =  roll(sides);
         updateDescription();
+    }
+
+    public DicePower(AbstractCreature owner, int sides) {
+        this(owner, sides, true);
     }
 
     @Override

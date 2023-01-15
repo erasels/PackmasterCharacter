@@ -19,8 +19,7 @@
   },
   "${ModID}:Enrage": {
     "NAME": "Enrage",
-    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! card. NL Enter ${ModID}:Aggression.",
-    "UPGRADE_DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! cards. NL Enter ${ModID}:Aggression."
+    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! cards. NL Enter ${ModID}:Aggression."
   },
   "${ModID}:Whispers": {
     "NAME": "Whispers",

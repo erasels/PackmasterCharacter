@@ -13,7 +13,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 
-public class Epiphany extends AbstractPackmasterCard {
+public class Epiphany extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Epiphany");
     private static final int COST = 1;
     private static final int DRAW = 3;

@@ -13,7 +13,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.shamanpack.IgnitePower;
 
-public class Flare extends AbstractPackmasterCard {
+public class Flare extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Flare");
     private static final int COST = 0;
     private static final int DAMAGE = 2;
