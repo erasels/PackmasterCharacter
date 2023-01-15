@@ -22,7 +22,7 @@ public class Gulp extends AbstractPackmasterCard {
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
-                for (int i = 0; i < costForTurn; i++) {
+                for (int i = 0; i < Wiz.getLogicalCardCost(Gulp.this); i++) {
                     Wiz.doDmg(m, Gulp.this, AttackEffect.POISON, true);
                 }
                 isDone = true;
