@@ -48,7 +48,7 @@ public class PackFilterMenu {
     private static final float PREVIEW_Y = 700f * Settings.yScale;
 
     public PackFilterMenu() {
-        BaseMod.logger.info("Settings.HEIGHT = " + Settings.HEIGHT);
+        SpireAnniversary5Mod.logger.info("Settings.HEIGHT = " + Settings.HEIGHT);
         ArrayList<String> optionNames = new ArrayList<>();
         List<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
         sortedPacks.sort(Comparator.comparing((pack)->pack.name));
@@ -145,7 +145,7 @@ public class PackFilterMenu {
                 e.printStackTrace();
             }
         } else {
-            BaseMod.logger.info("Error in the Packmaster Pack filter menu : Config wasn't initialized.");
+            SpireAnniversary5Mod.logger.info("Error in the Packmaster Pack filter menu : Config wasn't initialized.");
         }
     }
 
@@ -157,7 +157,7 @@ public class PackFilterMenu {
                 return true;
             }
         }
-        BaseMod.logger.info("Error in the Packmaster Pack filter menu : Config wasn't initialized.");
+        SpireAnniversary5Mod.logger.info("Error in the Packmaster Pack filter menu : Config wasn't initialized.");
         return true;
     }
 

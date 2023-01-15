@@ -28,9 +28,9 @@ public class VictoryScreenUnlockPatch {
         // HAT UNLOCKS
 
         if (AbstractDungeon.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER)) {
-            BaseMod.logger.info("Unlocking new hats!");
+            SpireAnniversary5Mod.logger.info("Unlocking new hats!");
             for (AbstractCardPack p : SpireAnniversary5Mod.currentPoolPacks) {
-                BaseMod.logger.info("Adding " + p.packID + " to unlocked hats!");
+                SpireAnniversary5Mod.logger.info("Adding " + p.packID + " to unlocked hats!");
                 if (!HatMenu.hats.contains(p.packID)) {
                     HatMenu.hats.add(p.packID);
                 }
@@ -38,7 +38,7 @@ public class VictoryScreenUnlockPatch {
 
             }
             try {
-                BaseMod.logger.info("Saving unlocked hats!");
+                SpireAnniversary5Mod.logger.info("Saving unlocked hats!");
                 SpireAnniversary5Mod.saveUnlockedHats(HatMenu.hats);
             } catch (IOException e) {
                 throw new RuntimeException(e);

@@ -818,7 +818,7 @@ public class SpireAnniversary5Mod implements
             }
         }
 
-        BaseMod.logger.info("Loading run. Hat: " + saved.currentHat);
+        SpireAnniversary5Mod.logger.info("Loading run. Hat: " + saved.currentHat);
         if (saved.currentHat != null) {
             Hats.currentHat = saved.currentHat;
             Hats.addHat(true, saved.currentHat);
@@ -832,7 +832,7 @@ public class SpireAnniversary5Mod implements
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
 
             Hats.atRunStart();
-            BaseMod.logger.info("completed start of game hats");
+            SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
     }

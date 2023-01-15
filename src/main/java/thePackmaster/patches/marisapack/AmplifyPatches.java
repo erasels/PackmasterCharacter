@@ -29,7 +29,7 @@ public class AmplifyPatches {
         public static void beforeUse(AbstractPlayer __instance, AbstractCard c) {
             if(c instanceof AmplifyCard && ((AmplifyCard) c).shouldAmplify(c)) {
                 if(amplified != null) {
-                    BaseMod.logger.error("Previous amplified card didn't correctly resolve. Please yell at (Gk) Erasels to fix.");
+                    SpireAnniversary5Mod.logger.error("Previous amplified card didn't correctly resolve. Please yell at (Gk) Erasels to fix.");
                 }
                 amplified = c;
             }

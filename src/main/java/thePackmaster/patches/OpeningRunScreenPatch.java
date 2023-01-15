@@ -20,12 +20,12 @@ public class OpeningRunScreenPatch {
     public static void SetTheThing(NeowEvent __instance) {
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             if (SpireAnniversary5Mod.allPacksMode) {
-                BaseMod.logger.info("Vex's All Packs Override Enabled. Skipping intro screen");
+                SpireAnniversary5Mod.logger.info("Vex's All Packs Override Enabled. Skipping intro screen");
                 SpireAnniversary5Mod.currentPoolPacks.clear();
-                SpireAnniversary5Mod.currentPoolPacks.addAll(SpireAnniversary5Mod.unfilteredAllPacks);
+                SpireAnniversary5Mod.currentPoolPacks.addAll(SpireAnniversary5Mod.allPacks);
                 CardCrawlGame.dungeon.initializeCardPools();
             } else {
-                BaseMod.logger.info("Packmaster is Ready To Do Thing");
+                SpireAnniversary5Mod.logger.info("Packmaster is Ready To Do Thing");
                 SpireAnniversary5Mod.openedStarterScreen = false;
                 SpireAnniversary5Mod.doPackSetup = true;
             }

@@ -80,8 +80,8 @@ public class HatMenu {
         optionNames.add(TEXT[0]);
         for (AbstractCardPack s : SpireAnniversary5Mod.unfilteredAllPacks) {
             if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists()) {
-                if (unlockedHats.contains(s.packID)) BaseMod.logger.info("Hat unlock exists: " + s.packID);
-                if (UNLOCK_ALL_HATS) BaseMod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
+                if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
+                if (UNLOCK_ALL_HATS) SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
                 if (UNLOCK_ALL_HATS || unlockedHats.contains(s.packID)) {
                     hats.add(s.packID);
                     optionNames.add(s.getHatName());
@@ -118,22 +118,22 @@ public class HatMenu {
         currentHatIndex = index;
         if (index == 0) {
             invalidHatSelected = false;
-            BaseMod.logger.info("Removing hat.");
+            SpireAnniversary5Mod.logger.info("Removing hat.");
             Hats.removeHat(false);
             flavorText = "";
         } else if (name.contains(TEXT[1])) {
-            BaseMod.logger.info("Selected a locked hat.");
+            SpireAnniversary5Mod.logger.info("Selected a locked hat.");
             invalidHatSelected = true;
             Hats.addHat(false, "Locked");
             flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index - 1)).name + TEXT[3];
         } else if (name.contains(TEXT[6])) {
             invalidHatSelected = true;
-            BaseMod.logger.info("Selected a missing hat.");
+            SpireAnniversary5Mod.logger.info("Selected a missing hat.");
             Hats.removeHat(false);
             flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index - 1)).name + TEXT[7];
         } else {
             invalidHatSelected = false;
-            BaseMod.logger.info("Add new hat at index " + index);
+            SpireAnniversary5Mod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index - 1);
             Hats.addHat(false, currentHat);
             flavorText = SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();

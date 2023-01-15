@@ -32,7 +32,7 @@ public class Hats {
         }
 
         if (skeleton == null) {
-            BaseMod.logger.info("Hats error! Skeleton is null when attempting removeHat!");
+            SpireAnniversary5Mod.logger.info("Hats error! Skeleton is null when attempting removeHat!");
             return;
         }
 
@@ -72,7 +72,7 @@ public class Hats {
         int headslotIndex = 0;
         skeleton = ReflectionHacks.getPrivate(p, AbstractCreature.class, "skeleton");
         if (skeleton == null) {
-            BaseMod.logger.info("Hats error! Skeleton is null when attempting setup!");
+            SpireAnniversary5Mod.logger.info("Hats error! Skeleton is null when attempting setup!");
             return;
         }
 
@@ -130,11 +130,11 @@ public class Hats {
 
 
         if (skeleton.getAttachment(inRun ? playerFoundHeadSlot : foundHeadSlot, "hat") == null) {
-            BaseMod.logger.info("starting attachment process, in run = " + inRun);
+            SpireAnniversary5Mod.logger.info("starting attachment process, in run = " + inRun);
             String attachName = inRun ? playerbone.toString() : headbone.toString();
             int slotIndex = inRun ? playerFoundHeadSlot : foundHeadSlot;
 
-            BaseMod.logger.info("creating slot on " + slotIndex);
+            SpireAnniversary5Mod.logger.info("creating slot on " + slotIndex);
             // Create a new slot for the attachment
             Slot origSlot = inRun ? playerHeadSlot : headslot;
             Slot slotClone = new Slot(new SlotData(origSlot.getData().getIndex(), attachName, origSlot.getBone().getData()), origSlot.getBone());
@@ -147,11 +147,11 @@ public class Hats {
 
             TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
             Texture tex = TexLoader.getTexture(imgPath);
-            BaseMod.logger.info("texture loading as " + imgPath);
+            SpireAnniversary5Mod.logger.info("texture loading as " + imgPath);
             tex.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
 
             if (inRun) {
-                BaseMod.logger.info("creating attachment in run");
+                SpireAnniversary5Mod.logger.info("creating attachment in run");
                 attachment = new RegionAttachment("hat");
                 attachment.setRegion(region);
                 attachment.setWidth(tex.getWidth());
@@ -164,11 +164,11 @@ public class Hats {
                 Skin skin = skeleton.getData().getDefaultSkin();
                 skin.addAttachment(slotIndex, attachment.getName(), attachment);
                 attachmentSlotIndex = slotIndex;
-                BaseMod.logger.info("attachment slot completed at index " + attachmentSlotIndex);
+                SpireAnniversary5Mod.logger.info("attachment slot completed at index " + attachmentSlotIndex);
 
                 skeleton.setAttachment(attachName, attachment.getName());
             } else {
-                BaseMod.logger.info("creating attachment in hat menu");
+                SpireAnniversary5Mod.logger.info("creating attachment in hat menu");
                 attachmentDummy = new RegionAttachment("hat");
                 attachmentDummy.setRegion(region);
                 attachmentDummy.setWidth(tex.getWidth());
@@ -181,7 +181,7 @@ public class Hats {
                 Skin skin = skeleton.getData().getDefaultSkin();
                 skin.addAttachment(slotIndex, attachmentDummy.getName(), attachmentDummy);
                 attachmentSlotIndex = slotIndex;
-                BaseMod.logger.info("attachment slot completed at index " + attachmentSlotIndex);
+                SpireAnniversary5Mod.logger.info("attachment slot completed at index " + attachmentSlotIndex);
 
                 skeleton.setAttachment(attachName, attachmentDummy.getName());
             }
@@ -213,7 +213,7 @@ public class Hats {
 
 
     public static String getImagePathFromHatID(String hatID) {
-        BaseMod.logger.info(SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png");
+        SpireAnniversary5Mod.logger.info(SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png");
         return SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
 
     }
@@ -221,9 +221,9 @@ public class Hats {
     public static void atRunStart() {
         playerHeadSlot = null;
         if (currentHat != null) {
-            BaseMod.logger.info("adding run start hat");
+            SpireAnniversary5Mod.logger.info("adding run start hat");
             if (HatMenu.invalidHatSelected) {
-                BaseMod.logger.info("an invalid hat was used. returning to default.");
+                SpireAnniversary5Mod.logger.info("an invalid hat was used. returning to default.");
                 currentHat = null;
                 removeHat(true);
                 return;
