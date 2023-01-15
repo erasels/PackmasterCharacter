@@ -32,6 +32,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
@@ -58,8 +59,10 @@ import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
 import thePackmaster.potions.clawpack.DrawClawsPotion;
 import thePackmaster.potions.clawpack.GenerateClawsPotion;
+import thePackmaster.potions.thieverypack.DivinePotion;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
+import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
@@ -345,6 +348,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(DivinePotion.class, Color.ORANGE, Color.YELLOW, Color.ORANGE, DivinePotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
 
         if (Loader.isModLoaded("widepotions")) {
             Consumer<String> whitelist = getWidePotionsWhitelistMethod();
@@ -352,6 +356,7 @@ public class SpireAnniversary5Mod implements
             whitelist.accept(ClawPowerPotion.POTION_ID);
             whitelist.accept(DrawClawsPotion.POTION_ID);
             whitelist.accept(GenerateClawsPotion.POTION_ID);
+            whitelist.accept(DivinePotion.POTION_ID);
         }
     }
 
@@ -518,6 +523,7 @@ public class SpireAnniversary5Mod implements
         UltimateHomerun.HIGH_SCORE = 0;
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
+        MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
         EnergyAndEchoPack.resetvalues();
         EnergyCountPatch.energySpentThisCombat = 0;
     }
