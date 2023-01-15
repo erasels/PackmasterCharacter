@@ -15,7 +15,7 @@ public class StormFront extends AbstractHydrologistCard {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, Subtype.STEAM);
         damage = baseDamage = 30;
         magicNumber = baseMagicNumber = 10;
-        retain = true;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
