@@ -77,3 +77,19 @@ Here is a TL;DR:
 
 And finally, as the person merging all PRs other reviewers or I (Gk/erasels) may ask you to make changes to your Pack in case some cards lie outside the power curve or skirt the rules too much.
 Please don't be discouraged if your Pack isn't instantly merged.
+
+### HATS
+
+Packmaster can equip different cosmetic hats, one for every pack. Each one is locked until you've won a run with its respective pack in your pool.
+
+This does not add any mandatory work for packs. There are three ways to get a hat added to your pack:
+
+1) Art it yourself, using the new Hat template PSD.  Add a png export of your hat into the resources/hats folder, with the naming convention of <PackID>Hat.png, and it will automatically be detected and used.
+
+2) Write up a simple description to AlexMdle of your requested hat.
+
+3) Do nothing, in which case a hat will be generated for your pack by AlexMdle.
+
+Hats also come with a display name and flavor text, which are plucked from the UIStrings.json of your respective pack, with the ID "<yourID>Hat".  See the DownfallPack UIStrings for examples.
+
+Optionally, hats can hide the character's hair, for cases like Helmets.  This is done by adding "hatHidesHair = true" to your pack initialization. See the Bellord pack initialization file for an example.
