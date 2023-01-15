@@ -729,10 +729,11 @@ public class SpireAnniversary5Mod implements
         BaseMod.removeTopPanelItem(currentRunCardsTopPanelItem);
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
+
+            Hats.atRunStart();
+            BaseMod.logger.info("completed start of game hats");
         }
 
-        Hats.atRunStart();
-        BaseMod.logger.info("completed start of game hats");
     }
 
     public static class Enums {

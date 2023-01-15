@@ -5,5 +5,11 @@
       "A reliable suite of simple, useful cards.",
       "Packmaster Team"
     ]
+  },
+  "${ModID}:CoreSetPackHat": {
+    "TEXT": [
+      "Sometimes less is more.",
+      "Hatless"
+    ]
   }
 }

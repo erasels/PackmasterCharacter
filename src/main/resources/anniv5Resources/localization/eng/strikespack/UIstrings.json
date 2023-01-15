@@ -5,5 +5,11 @@
       "Deal 6 damage.",
       "MichaelMayhem"
     ]
+  },
+  "${ModID}:StrikesPackHat": {
+    "TEXT": [
+      "Striking.",
+      "Strike Pin"
+    ]
   }
 }
