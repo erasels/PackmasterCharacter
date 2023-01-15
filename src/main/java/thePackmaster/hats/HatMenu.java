@@ -122,11 +122,11 @@ public class HatMenu {
         } else if (name.equals(TEXT[1])) {
             BaseMod.logger.info("Selected a locked hat.");
             Hats.addHat(false, "Locked");
-            flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[3];
+            flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index - 1)).name + TEXT[3];
         } else if (name.equals(TEXT[6])) {
             BaseMod.logger.info("Selected a missing hat.");
             Hats.removeHat(false);
-            flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[7];
+            flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index - 1)).name + TEXT[7];
         } else {
             BaseMod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index - 1);
