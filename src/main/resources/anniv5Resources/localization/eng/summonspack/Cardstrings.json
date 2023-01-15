@@ -1,26 +1,25 @@
 {
-  "${ModID}:EvilSpirit": {
-    "NAME": "Evil Spirit",
-    "DESCRIPTION": "Apply !M! Weak. NL Channel an ${ModID}:Evil\u00a0Spirit.",
+  "${ModID}:Leprechaun": {
+    "NAME": "Leprechaun",
+    "DESCRIPTION": "Channel a ${ModID}:Leprechaun. NL Apply !M! ${ModID}:Jinx.",
     "EXTENDED_DESCRIPTION": [
-      "Sadistic Nature",
-      "Deals damage when you apply debuffs."
+      "Dice",
+      "Dice increase the damage or #yBlock of the next card you play that deals damage or #yBlocks."
     ],
-    "FLAVOR": "This is a good idea and can not in any way backfire."
+    "FLAVOR": "Praise RNGesus."
   },
-  "${ModID}:SummonPorcupine": {
-    "NAME": "Summon Porcupine",
-    "DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add a *Quill into your hand.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add !M! *Quills into your hand.",
+  "${ModID}:Porcupine": {
+    "NAME": "Porcupine",
+    "DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add !M! *Quills into your hand.",
     "FLAVOR": "The Silent in animal form."
   },
-  "${ModID}:SummonWolf": {
-    "NAME": "Summon Wolf",
+  "${ModID}:Wolves": {
+    "NAME": "Wolves",
     "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Wolf.",
     "FLAVOR": "Pack animals for the Packmaster."
   },
-  "${ModID}:SummonElephant": {
-    "NAME": "Summon Elephant",
+  "${ModID}:Elephant": {
+    "NAME": "Elephant",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Take !M! damage.",
     "FLAVOR": "This is my favorite card.  I hope you like it."
   },
@@ -35,8 +34,8 @@
     "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Draw a card.",
     "FLAVOR": "The result of an unwise magic experiment."
   },
-  "${ModID}:SummonBees": {
-    "NAME": "Summon Bees",
+  "${ModID}:SwarmOfBees": {
+    "NAME": "Swarm of Bees",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel a ${ModID}:Swarm\u00a0of\u00a0Bees.",
     "FLAVOR": "Absolutely terrifying."
   },
@@ -48,11 +47,10 @@
   "${ModID}:Ambush": {
     "NAME": "Ambush",
     "DESCRIPTION": "Whenever you Channel an Orb, Evoke it without removing it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Channel an Orb, Evoke it without removing it.",
     "FLAVOR": "I couldn't find good ambush art so have a pun."
   },
-  "${ModID}:SummonPandas": {
-    "NAME": "Summon Pandas",
+  "${ModID}:Pandas": {
+    "NAME": "Pandas",
     "DESCRIPTION": "At the start of your turn, Channel a ${ModID}:Panda.",
     "FLAVOR": "Pandamonium."
   },

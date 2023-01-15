@@ -12,7 +12,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
-public class TimeOut extends AbstractPackmasterCard {
+public class TimeOut extends AbstractBellordCard {
     public final static String ID = makeID("TimeOut");
     // intellij stuff skill, self, uncommon, , , 7, 2, 1, 1
 

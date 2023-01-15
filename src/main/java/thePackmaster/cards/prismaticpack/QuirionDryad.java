@@ -9,7 +9,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.prismaticpack.QuirionDryadPower;
 
-public class QuirionDryad extends AbstractPackmasterCard {
+public class QuirionDryad extends AbstractPrismaticCard {
     public static final String ID = SpireAnniversary5Mod.makeID("QuirionDryad");
     private static final int COST = 1;
     private static final int STATS = 1;

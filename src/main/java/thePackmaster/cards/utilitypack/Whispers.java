@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class Whispers extends AbstractPackmasterCard {
+public class Whispers extends AbstractUtilityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Whispers");
     private static final int COST = 1;
     private static final int DRAW = 3;

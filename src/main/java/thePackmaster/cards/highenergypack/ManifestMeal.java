@@ -12,7 +12,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
-public class ManifestMeal extends AbstractPackmasterCard {
+public class ManifestMeal extends AbstractHighEnergyCard {
     public final static String ID = makeID("ManifestMeal");
     // intellij stuff attack, enemy, uncommon, 5, 2, , , , 
 

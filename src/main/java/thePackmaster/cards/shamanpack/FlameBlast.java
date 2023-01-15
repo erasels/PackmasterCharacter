@@ -10,7 +10,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.shamanpack.IgnitePower;
 
-public class FlameBlast extends AbstractPackmasterCard {
+public class FlameBlast extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("FlameBlast");
     private static final int COST = 1;
     private static final int IGNITE = 4;

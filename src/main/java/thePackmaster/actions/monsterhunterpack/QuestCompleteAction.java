@@ -23,8 +23,11 @@ public class QuestCompleteAction extends AbstractGameAction {
 
     public void update() {
         AbstractDungeon.effectList.add(new BorderLongFlashEffect(Color.LIGHT_GRAY));
-        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.cardToObtain, (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
-        AbstractDungeon.effectList.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+        ShowCardAndObtainEffect s = new ShowCardAndObtainEffect(this.cardToObtain, (float) Settings.WIDTH * 3.0f / 4.0F, (float)Settings.HEIGHT / 2.0F);
+        s.duration = 1.4f;
+        s.startingDuration = 1.4f;
+        AbstractDungeon.effectList.add(s);
+        AbstractDungeon.effectList.add(new UpgradeShineEffect( (float) Settings.WIDTH * 3.0f / 4.0F, (float)Settings.HEIGHT / 2.0F));
         this.isDone = true;
     }
 

@@ -11,10 +11,10 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 
-public class Enrage extends AbstractPackmasterCard {
+public class Enrage extends AbstractUtilityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Enrage");
     private static final int COST = 1;
-    private static final int DRAW = 1;
+    private static final int DRAW = 2;
     private static final int UPGRADE_DRAW = 1;
     private static final int DISCARD = 2;
 

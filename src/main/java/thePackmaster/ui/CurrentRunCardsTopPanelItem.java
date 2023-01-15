@@ -13,10 +13,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.util.TexLoader;
 
 import java.util.ArrayList;
@@ -46,7 +45,7 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
 
     @Override
     public boolean isClickable() {
-        return true;// selectedCards;
+        return !(AbstractDungeon.screen == PackSetupScreen.Enum.PACK_SETUP_SCREEN);// selectedCards;
     }
 
     @Override

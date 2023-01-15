@@ -13,9 +13,10 @@ public class UtilityPack extends AbstractCardPack {
     public static final String NAME = UI_STRINGS.TEXT[0];
     public static final String DESC = UI_STRINGS.TEXT[1];
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
+    public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public UtilityPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, CREDITS);
     }
 
     @Override
@@ -29,6 +30,7 @@ public class UtilityPack extends AbstractCardPack {
         cards.add(Whispers.ID);
         cards.add(Replenish.ID);
         cards.add(LesserHex.ID);
+        cards.add(GreaterHex.ID);
         cards.add(Conjuration.ID);
         cards.add(RareStrike.ID);
         return cards;

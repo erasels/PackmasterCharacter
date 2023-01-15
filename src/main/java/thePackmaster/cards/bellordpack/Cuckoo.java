@@ -8,7 +8,7 @@ import thePackmaster.powers.bellordpack.CuckooPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class Cuckoo extends AbstractPackmasterCard {
+public class Cuckoo extends AbstractBellordCard {
     public final static String ID = makeID("Cuckoo");
     // intellij stuff power, self, uncommon, , , , , 13, 
 

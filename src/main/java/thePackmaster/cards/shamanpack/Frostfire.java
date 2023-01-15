@@ -11,7 +11,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.shamanpack.IgnitePower;
 
-public class Frostfire extends AbstractPackmasterCard {
+public class Frostfire extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Frostfire");
     private static final int COST = 0;
     private static final int IGNITE = 1;
