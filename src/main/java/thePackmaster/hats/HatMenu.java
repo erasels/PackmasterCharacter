@@ -2,6 +2,7 @@ package thePackmaster.hats;
 
 import basemod.BaseMod;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -99,6 +100,7 @@ public class HatMenu {
         } else if (name.equals(TEXT[1])) {
             BaseMod.logger.info("Selected a locked hat.");
             Hats.addHat(false, "LockedHat");
+            flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[3];
         } else {
             BaseMod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index - 1);
@@ -106,6 +108,7 @@ public class HatMenu {
         }
     }
 
+    private static String flavorText = "";
 
     public void update() {
         dropdown.update();
@@ -118,6 +121,8 @@ public class HatMenu {
         dummy.renderPlayerImage(sb);
 
         dropdown.render(sb, DROPDOWN_X, DROPDOWN_Y);
+
+        FontHelper.renderFontLeftTopAligned(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X, DROPDOWN_Y + (300 * Settings.scale), Color.YELLOW.cpy());
     }
 
 }

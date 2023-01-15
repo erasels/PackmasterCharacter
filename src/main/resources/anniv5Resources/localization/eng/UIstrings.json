@@ -90,7 +90,9 @@
   "${ModID}:HatMenu": {
     "TEXT": [
       "Base Hat",
-      "LOCKED"
+      "LOCKED",
+      "Win a run with the ",
+      " pack to unlock this hat for future runs."
     ]
   }
 }

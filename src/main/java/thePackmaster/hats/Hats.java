@@ -196,7 +196,8 @@ public class Hats {
 
             }
             skeleton.findBone("HatBone").setScale(0F);
-            if (SpireAnniversary5Mod.packsByID.get(hatID).hatHidesHair) {
+            AbstractCardPack p = SpireAnniversary5Mod.packsByID.get(hatID);
+            if (p != null && p.hatHidesHair) {
                 skeleton.findBone("HairBone").setScale(0F);
             } else {
                 skeleton.findBone("HairBone").setScale(1F);
