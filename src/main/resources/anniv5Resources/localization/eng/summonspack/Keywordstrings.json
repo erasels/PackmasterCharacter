@@ -36,24 +36,21 @@
     "NAMES": [
       "porcupine"
     ],
-    "DESCRIPTION": "Orb: Generates #yQuills."
+    "DESCRIPTION": "Orb: Generates #yQuills. When #yEvoked, gain #yThorns."
   },
   {
-    "PROPER_NAME": "Evil\u00a0Spirit",
+    "PROPER_NAME": "Leprechaun",
     "NAMES": [
-      "evil\u00a0spirit",
-      "Evil\u00a0spirit"
+      "leprechaun"
     ],
-    "DESCRIPTION": "Orb: Enemies take damage whenever they are debuffed. When #yEvoked, gain #ySadistic #yNature"
+    "DESCRIPTION": "Orb: Rolls #yDice."
   },
   {
-    "ID": "Sad",
-    "PROPER_NAME": "Sadistic\u00a0Nature",
+    "PROPER_NAME": "Jinx",
     "NAMES": [
-      "Sadistic\u00a0nature",
-      "sadistic\u00a0nature"
+      "jinx"
     ],
-    "DESCRIPTION": "Deal damage when you apply debuffs."
+    "DESCRIPTION": "Jinxed enemies lose HP whenever they receive a debuff."
   },
   {
     "PROPER_NAME": "Fire\u00a0Spirit",
@@ -61,6 +58,6 @@
       "fire\u00a0spirit",
       "Fire\u00a0spirit"
     ],
-    "DESCRIPTION": "Orb: Deal damage back when attacked. Gain #yFocus when evoked."
+    "DESCRIPTION": "Orb: Apply #yIgnite to ALL enemies. Gain #yFocus when evoked."
   }
 ]

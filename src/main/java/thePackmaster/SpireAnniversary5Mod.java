@@ -28,6 +28,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
@@ -43,6 +44,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
@@ -93,6 +95,7 @@ public class SpireAnniversary5Mod implements
         PostPowerApplySubscriber,
         StartGameSubscriber,
         PostExhaustSubscriber,
+        OnPlayerTurnStartSubscriber,
         CustomSavable<ArrayList<String>> {
     private static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -150,6 +153,12 @@ public class SpireAnniversary5Mod implements
     private static final String PANDA_OGG = makePath("audio/summonspack/Panda.ogg");
     public static final String PORCUPINE_KEY = makeID("Porcupine");
     private static final String PORCUPINE_OGG = makePath("audio/summonspack/Porcupine.ogg");
+    public static final String DIE_KEY = makeID("Die");
+    private static final String DIE_OGG = makePath("audio/summonspack/Die.ogg");
+    public static final String DICE_KEY = makeID("Dice");
+    private static final String DICE_OGG = makePath("audio/summonspack/Dice.ogg");
+    public static final String DICELOTS_KEY = makeID("DiceLots");
+    private static final String DICELOTS_OGG = makePath("audio/summonspack/DiceLots.ogg");
     public static final String TRANSMUTATION_KEY = makeID("Transmutation");
     private static final String TRANSMUTATION_OGG = makePath("audio/transmutationpack/Transmutation.ogg");
     public static final String WATER_IMPACT_1_KEY = makeID("WaterImpactOne");
@@ -467,6 +476,9 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(EVIL_KEY, EVIL_OGG);
         BaseMod.addAudio(PANDA_KEY, PANDA_OGG);
         BaseMod.addAudio(PORCUPINE_KEY, PORCUPINE_OGG);
+        BaseMod.addAudio(DIE_KEY, DIE_OGG);
+        BaseMod.addAudio(DICE_KEY, DICE_OGG);
+        BaseMod.addAudio(DICELOTS_KEY, DICELOTS_OGG);
         BaseMod.addAudio(TRANSMUTATION_KEY, TRANSMUTATION_OGG);
         BaseMod.addAudio(WATER_IMPACT_1_KEY, WATER_IMPACT_1_OGG);
         BaseMod.addAudio(WATER_IMPACT_2_KEY, WATER_IMPACT_2_OGG);
@@ -506,8 +518,13 @@ public class SpireAnniversary5Mod implements
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
     }
-    
-	@Override
+
+    @Override
+    public void receiveOnPlayerTurnStart() {
+        Leprechaun.staticStartOfTurn();
+    }
+
+    @Override
 	public void receivePostExhaust(AbstractCard arg0) {
 		combatExhausts++;
 	}
