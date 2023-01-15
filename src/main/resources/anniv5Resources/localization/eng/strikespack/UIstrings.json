@@ -10,13 +10,11 @@
     "TEXT": [
       "Striking.",
       "Strike Pin"
-      ]
-    },
-
+    ]
+  },
   "${ModID}:AddStrikeTagModifier": {
     "TEXT": [
       " Strike"
-
     ]
   }
 }
