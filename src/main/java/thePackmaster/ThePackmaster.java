@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -21,11 +22,14 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import thePackmaster.cards.*;
 import thePackmaster.cards.dimensiongatepack.DarkRitual;
 import thePackmaster.cards.dimensiongatepack.PackRat;
 import thePackmaster.packs.*;
 import thePackmaster.relics.HandyHaversack;
+import thePackmaster.vfx.VictoryConfettiEffect;
 
 import java.util.ArrayList;
 
@@ -49,6 +53,7 @@ public class ThePackmaster extends CustomPlayer {
     static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
+    public static float update_timer = 0;
 
 
     public ThePackmaster(String name, PlayerClass setClass) {
@@ -177,6 +182,15 @@ public class ThePackmaster extends CustomPlayer {
     @Override
     public String getVampireText() {
         return TEXT[2];
+    }
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+        update_timer += Gdx.graphics.getDeltaTime();
+
+        for(float i = 0; i+(1.0/30.0) <= update_timer; update_timer -= (1.0/30.0)) {
+            effects.add(new VictoryConfettiEffect());
+        }
     }
 
     public static class Enums {
