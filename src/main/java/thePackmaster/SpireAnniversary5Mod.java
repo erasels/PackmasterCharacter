@@ -521,52 +521,7 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveOnPlayerTurnStart() {
-        if (adp() == null)
-            return;
-        int dice = 0;
-        int leps = 0;
-        boolean diceCalc = false;
-        for (AbstractOrb orb : adp().orbs)
-            if (orb instanceof Leprechaun) {
-                ((Leprechaun) orb).setDice();
-                if (!diceCalc) {
-                    diceCalc = true;
-                    dice = ((Leprechaun) orb).getDiceCount();
-                }
-                leps++;
-            }
-
-        int diceCount = dice * leps;
-        if (diceCount == 0)
-            return;
-
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (diceCount == 1)
-                    CardCrawlGame.sound.play(DIE_KEY, 0.1f);
-                else if (diceCount >= 2 && diceCount <= 4)
-                    CardCrawlGame.sound.play(DICE_KEY, 0.1f);
-                else if (diceCount >= 5) {
-                    int times = diceCount / 5;
-                    if (times > 5)
-                        times = 5;
-                    for (int i = 0; i < times; i++) {
-                        att(new AbstractGameAction() {
-                            @Override
-                            public void update() {
-                                CardCrawlGame.sound.play(DICELOTS_KEY, 0.1f);
-                                isDone = true;
-                            }
-                        });
-                        if (i != 0) {
-                            att(new WaitAction(0.1f));
-                        }
-                    }
-                }
-            }
-        });
+        Leprechaun.staticStartOfTurn();
     }
 
     @Override
