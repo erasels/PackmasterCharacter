@@ -9,6 +9,7 @@ import com.esotericsoftware.spine.*;
 import com.esotericsoftware.spine.attachments.RegionAttachment;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
@@ -156,9 +157,10 @@ public class Hats {
                 attachment.setRegion(region);
                 attachment.setWidth(tex.getWidth());
                 attachment.setHeight(tex.getHeight());
-                attachment.setY(tex.getHeight() / 2);
-                attachment.setScaleX(1.25F);
-                attachment.setScaleY(1.25F);
+                attachment.setX(-3F * Settings.scale);
+                attachment.setY(35F * Settings.scale);
+                attachment.setScaleX(Settings.scale);
+                attachment.setScaleY(Settings.scale);
                 attachment.updateOffset();
 
                 Skin skin = skeleton.getData().getDefaultSkin();
@@ -173,9 +175,10 @@ public class Hats {
                 attachmentDummy.setRegion(region);
                 attachmentDummy.setWidth(tex.getWidth());
                 attachmentDummy.setHeight(tex.getHeight());
-                attachmentDummy.setY(tex.getHeight() / 2);
-                attachmentDummy.setScaleX(1.25F);
-                attachmentDummy.setScaleY(1.25F);
+                attachmentDummy.setX(-3F * Settings.scale);
+                attachmentDummy.setY(35F * Settings.scale);
+                attachmentDummy.setScaleX(Settings.scale);
+                attachmentDummy.setScaleY(Settings.scale);
                 attachmentDummy.updateOffset();
 
                 Skin skin = skeleton.getData().getDefaultSkin();
