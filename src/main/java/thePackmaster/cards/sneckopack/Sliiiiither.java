@@ -14,7 +14,7 @@ public class Sliiiiither extends AbstractPackmasterCard {
     public final static String ID = makeID("Sliiiiither");
 
     public Sliiiiither() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
     }
 
