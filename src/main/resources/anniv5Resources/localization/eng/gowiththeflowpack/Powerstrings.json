@@ -14,5 +14,9 @@
   "${ModID}:PneumaticsPower": {
     "NAME": "Pneumatics",
     "DESCRIPTIONS": ["At the start of next turn, #yFlow.", "At the start of the next #b", " turns, #yFlow."]
+  },
+  "${ModID}:ReleaseValvePower": {
+    "NAME": "Release Valve",
+    "DESCRIPTIONS": ["When you play #yFlow, this enemy takes #b", " damage for each card discarded."]
   }
 }
