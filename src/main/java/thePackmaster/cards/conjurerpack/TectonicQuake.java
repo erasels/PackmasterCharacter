@@ -14,22 +14,22 @@ import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class TectonicQuake extends ConjurerCard
 {
-    public final static String ID = makeID("SandAttack");
+    public final static String ID = makeID(TectonicQuake.class);
     private static final int DAMAGE = 27;
     private static final int MAGIC = 1;
 
     public TectonicQuake() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters) {
-            if (!m.isDead && !m.isDying) {
-                this.addToBot(new ApplyPowerAction(m, p, new PetraPower(m, this.magicNumber)));
-                this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false)));
+            if (!mo.isDead && !mo.isDying) {
+                this.addToBot(new ApplyPowerAction(mo, p, new PetraPower(mo, this.magicNumber)));
+                this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false)));
             }
         }
     }

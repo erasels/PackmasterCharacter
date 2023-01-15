@@ -1,7 +1,6 @@
 package thePackmaster.cards.conjurerpack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,13 +12,13 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Enervate extends ConjurerCard
 {
-    public final static String ID = makeID("DustTornado");
+    public final static String ID = makeID(Enervate.class);
     private static final int MAGIC = 2;
 
 
     public Enervate() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = MAGIC;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
     }
 
@@ -28,9 +27,9 @@ public class Enervate extends ConjurerCard
         {
             int decAmount = magicNumber;
             AbstractPower strPower = m.getPower(StrengthPower.POWER_ID);
-            if (strPower != null)
+            if (strPower != null && strPower.amount > 0)
             {
-                decAmount += strPower.amount;
+                decAmount += strPower.amount / 2;
             }
             this.addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -decAmount), -decAmount));
         }

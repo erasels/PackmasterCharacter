@@ -13,7 +13,7 @@ import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class GeothermalHeating extends ConjurerCard
 {
-    public final static String ID = makeID("GeothermalHeating");
+    public final static String ID = makeID(GeothermalHeating.class);
     private static final int BLOCK = 5;
     private static final int MAGIC = 3;
 
@@ -21,7 +21,7 @@ public class GeothermalHeating extends ConjurerCard
     public GeothermalHeating() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseBlock = BLOCK;
-        baseMagicNumber = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

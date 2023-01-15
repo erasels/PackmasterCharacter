@@ -13,7 +13,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Excavation extends ConjurerCard
 {
-    public final static String ID = makeID("Excavation");
+    public final static String ID = makeID(Excavation.class);
     private static final int BLOCK = 9;
     private static final int MAGIC = 2;
 
@@ -21,12 +21,12 @@ public class Excavation extends ConjurerCard
     public Excavation() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        baseMagicNumber = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        AbstractDungeon.actionManager.addToBottom(new MoveCardsAction(p.drawPile, p.exhaustPile, magicNumber, (cards -> {
+        AbstractDungeon.actionManager.addToBottom(new MoveCardsAction(p.hand, p.discardPile, magicNumber, (cards -> {
             for (AbstractCard c : cards)
             {
                 if (!c.isEthereal) {

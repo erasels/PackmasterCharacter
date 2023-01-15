@@ -39,15 +39,9 @@ public class PlayRandomCardAction extends AbstractGameAction
             AbstractCard c = tmp.getRandomCard(AbstractDungeon.cardRng);
             if (c != null)
             {
-                tmp.removeCard(c);
-                if (target != null && !target.isDead && !target.isDying)
-                {
-                    this.addToBot(new NewQueueCardAction(c, target, false, true));
-                }
-                else
-                {
-                    this.addToBot(new NewQueueCardAction(c, true, false, true));
-                }
+                group.group.remove(c);
+                AbstractDungeon.getCurrRoom().souls.remove(c);
+                this.addToBot(new NewQueueCardAction(c, target, false, true));
             }
         }
 

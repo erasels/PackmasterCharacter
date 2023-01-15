@@ -12,14 +12,14 @@ import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class RagingInferno extends ConjurerCard
 {
-    public final static String ID = makeID("RagingInferno");
+    public final static String ID = makeID(RagingInferno.class);
     private static final int DAMAGE = 35;
     private static final int MAGIC = 6;
 
     public RagingInferno() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
     }
 

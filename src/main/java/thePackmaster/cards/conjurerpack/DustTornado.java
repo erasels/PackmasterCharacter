@@ -10,28 +10,28 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.conjurerpack.PlayRandomCardAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
 public class DustTornado extends ConjurerCard
 {
-    public final static String ID = makeID("DustTornado");
+    public final static String ID = makeID(DustTornado.class);
     private static final int MAGIC = 2;
     private static final int SECONDARY = 1;
 
 
     public DustTornado() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = MAGIC;
-        baseSecondMagic = SECONDARY;
+        baseMagicNumber = magicNumber = MAGIC;
+        baseSecondMagic = secondMagic = SECONDARY;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-        if (p.hand.size() > 0)
+        if (AbstractDungeon.player.hand.size() > 0)
         {
-            AbstractDungeon.actionManager.addToBottom(new ExhaustAction(secondMagic, false, false, false));
-            AbstractDungeon.actionManager.addToBottom(new PlayRandomCardAction(m, p.discardPile, magicNumber));
+            atb(new ExhaustAction(secondMagic, false));
+            atb(new PlayRandomCardAction(m, p.discardPile, magicNumber));
         }
-
     }
 
     public void upp() {

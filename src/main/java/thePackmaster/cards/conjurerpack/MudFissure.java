@@ -11,7 +11,7 @@ import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class MudFissure extends ConjurerCard
 {
-    public final static String ID = makeID("MudFissure");
+    public final static String ID = makeID(MudFissure.class);
     private static final int DAMAGE = 7;
 
     public MudFissure() {

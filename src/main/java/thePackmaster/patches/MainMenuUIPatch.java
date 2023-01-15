@@ -181,7 +181,7 @@ public class MainMenuUIPatch {
         public static void Postfix(CharacterOption obj) {
             CharSelectInfo c = ReflectionHacks.getPrivate(obj, CharacterOption.class, "charInfo");
 
-            if (c.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && obj.selected) {
+            if (c != null && c.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && obj.selected) {
                 // If custom draft is enabled, update the dropdowns
 
                 boolean stopInput = false;
