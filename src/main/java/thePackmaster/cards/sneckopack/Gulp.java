@@ -17,7 +17,7 @@ public class Gulp extends AbstractPackmasterCard {
     public final static String ID = makeID("Gulp");
 
     public Gulp() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 0;
     }
 
