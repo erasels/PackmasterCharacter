@@ -1,5 +1,6 @@
 package thePackmaster.hats;
 
+import basemod.BaseMod;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.VictoryScreen;
@@ -27,10 +28,13 @@ public class VictoryScreenUnlockPatch {
         // HAT UNLOCKS
 
         if (AbstractDungeon.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER)) {
+            BaseMod.logger.info("Unlocking new hats!");
             for (AbstractCardPack p : SpireAnniversary5Mod.currentPoolPacks) {
+                BaseMod.logger.info("Adding " + p.packID + " to unlocked hats!");
                 MainMenuUIPatch.hatMenu.hats.add(p.packID);
             }
             try {
+                BaseMod.logger.info("Saving unlocked hats!");
                 SpireAnniversary5Mod.saveUnlockedHats(MainMenuUIPatch.hatMenu.hats);
             } catch (IOException e) {
                 throw new RuntimeException(e);

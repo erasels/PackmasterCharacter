@@ -76,6 +76,10 @@ public class HatMenu {
         setCurrentHat(0, optionNames.get(0));
     }
 
+    public static void setupOptions() {
+
+    }
+
     public void toggle() {
         if (isOpen) {
             close();
