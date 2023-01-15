@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class Slam extends AbstractPackmasterCard {
+public class Slam extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Slam");
     private static final int COST = 1;
     private static final int DAMAGE = 5;

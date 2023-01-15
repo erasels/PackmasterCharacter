@@ -11,7 +11,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.utilitypack.PlasmaShieldPower;
 
-public class PlasmaShield extends AbstractPackmasterCard {
+public class PlasmaShield extends AbstractUtilityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("PlasmaShield");
     private static final int COST = 2;
     private static final int AMOUNT = 3;

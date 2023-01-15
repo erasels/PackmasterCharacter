@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class PrismaticBarrier extends AbstractPackmasterCard {
+public class PrismaticBarrier extends AbstractPrismaticCard {
     public static final String ID = SpireAnniversary5Mod.makeID("PrismaticBarrier");
     private static final int COST = 1;
     private static final int BLOCK = 7;

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.RagePower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class Vindicate extends AbstractPackmasterCard {
+public class Vindicate extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Vindicate");
     private static final int COST = 1;
     private static final int DAMAGE = 7;

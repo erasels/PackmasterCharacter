@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class SnowMelt extends AbstractPackmasterCard {
+public class SnowMelt extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("SnowMelt");
     private static final int COST = 1;
     private static final int DRAW = 2;

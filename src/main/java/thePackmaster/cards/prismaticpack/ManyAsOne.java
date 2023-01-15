@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class ManyAsOne extends AbstractPackmasterCard {
+public class ManyAsOne extends AbstractPrismaticCard {
     public static final String ID = SpireAnniversary5Mod.makeID("ManyAsOne");
     private static final int COST = 2;
     private static final int DAMAGE = 10;
