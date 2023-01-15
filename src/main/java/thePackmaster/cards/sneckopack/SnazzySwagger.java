@@ -15,7 +15,7 @@ public class SnazzySwagger extends AbstractPackmasterCard {
     public final static String ID = makeID("SnazzySwagger");
 
     public SnazzySwagger() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
