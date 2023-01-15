@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
@@ -181,7 +182,8 @@ public class Hats {
 
 
             skeleton.findBone("HatBone").setScale(0F);
-            if (SpireAnniversary5Mod.packsByID.get(hatID).hatHidesHair) {
+            AbstractCardPack p = SpireAnniversary5Mod.packsByID.get(hatID);
+            if (p != null && p.hatHidesHair) {
                 skeleton.findBone("HairBone").setScale(0F);
             }
 
