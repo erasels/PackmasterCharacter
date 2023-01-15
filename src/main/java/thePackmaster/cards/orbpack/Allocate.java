@@ -14,7 +14,7 @@ public class Allocate extends AbstractPackmasterCard {
     // intellij stuff power, none, uncommon, , , , , , 
 
     public Allocate() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
