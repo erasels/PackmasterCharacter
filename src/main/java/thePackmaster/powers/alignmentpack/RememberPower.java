@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class RememberPower extends AbstractPackmasterPower {
-    public static final String POWER_ID = makeID("TrinePower");
+    public static final String POWER_ID = makeID("RememberPower");
     private static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     private static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
