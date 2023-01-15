@@ -31,11 +31,19 @@ public class Hats {
         }
         skeleton.findBone("HatBone").setScale(1F);
         skeleton.findBone("HairBone").setScale(1F);
-        skeleton.getAttachment(attachmentSlotIndex, "hat");
-        if (attachment != null) {
-            String imgPath = getImagePathFromHatID("NoHat.png");
-            TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
-            attachment.setRegion(region);
+        String imgPath = getImagePathFromHatID("No");
+        if (inRun) {
+            skeleton.getAttachment(attachmentSlotIndex, "hat");
+            if (attachment != null) {
+                TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
+                attachment.setRegion(region);
+            }
+        } else {
+            skeleton.getAttachment(attachmentSlotIndex, "hat");
+            if (attachmentDummy != null) {
+                TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
+                attachmentDummy.setRegion(region);
+            }
         }
 
     }
@@ -188,6 +196,8 @@ public class Hats {
             skeleton.findBone("HatBone").setScale(0F);
             if (SpireAnniversary5Mod.packsByID.get(hatID).hatHidesHair) {
                 skeleton.findBone("HairBone").setScale(0F);
+            } else {
+                skeleton.findBone("HairBone").setScale(1F);
             }
         }
     }
