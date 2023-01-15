@@ -21,11 +21,7 @@ import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.ui.PackFilterMenu;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -75,7 +71,7 @@ public class MainMenuUIPatch {
         options.add(TEXT[2]);
         options.add(TEXT[3]);
         List<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
-        sortedPacks.sort(Comparator.comparing((pack)->pack.name));
+        sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
         for (AbstractCardPack c : sortedPacks) {
             options.add(c.name);
         }
@@ -157,7 +153,7 @@ public class MainMenuUIPatch {
 
             CharSelectInfo c = ReflectionHacks.getPrivate(obj, CharacterOption.class, "charInfo");
 
-            if (c.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && obj.selected) {
+            if (c != null && c.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && obj.selected) {
                 // Render toggle button
                 packDraftToggle.move(CHECKBOX_X, CHECKBOX_Y);
                 packDraftToggle.render(sb);

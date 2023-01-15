@@ -2,6 +2,8 @@ package thePackmaster;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
 import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
@@ -9,6 +11,7 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -27,6 +30,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
@@ -63,6 +67,7 @@ import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.SpireAnniversary5SaveWrapper;
+import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
@@ -247,7 +252,11 @@ public class SpireAnniversary5Mod implements
             Properties defaults = new Properties();
             defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, RANDOM, CHOICE, CHOICE));
             defaults.put("PackmasterUnlockedHats", "");
+            defaults.put("PackmasterAllPacksMode", "FALSE");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
+            modConfig.load();
+
+            loadModConfigData();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -262,6 +271,20 @@ public class SpireAnniversary5Mod implements
         if (modConfig == null) return;
         modConfig.setString("PackmasterCustomDraftSelection", String.join(",", input));
         modConfig.save();
+    }
+
+    public static void saveAllPacksMode() {
+        try {
+            if (modConfig == null) return;
+            modConfig.setBool("PackmasterAllPacksMode", allPacksMode);
+            modConfig.save();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void loadModConfigData() {
+        allPacksMode = modConfig.getBool("PackmasterAllPacksMode");
     }
 
     public static ArrayList<String> getUnlockedHats() {
@@ -345,6 +368,8 @@ public class SpireAnniversary5Mod implements
         BaseMod.addSaveField("Anniversary5Mod", thismod);
 
         addPotions();
+
+        initializeConfig();
     }
 
     public static void addPotions() {
@@ -509,11 +534,11 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(makeID("RipPack_Ahh"), makePath("audio/rippack/ahh.ogg"));
         BaseMod.addAudio(makeID("RipPack_Ohh"), makePath("audio/rippack/ohh.mp3"));
         BaseMod.addAudio(makeID("RipPack_Sword"), makePath("audio/rippack/sword.ogg"));
-        BaseMod.addAudio(modID + "dice1",  modID + "Resources/audio/DiceRoll1.wav");
-        BaseMod.addAudio(modID + "dice2",  modID + "Resources/audio/DiceRoll2.wav");
-        BaseMod.addAudio(modID + "dice3",  modID + "Resources/audio/DiceRoll3.wav");
-        BaseMod.addAudio(modID + "dice4",  modID + "Resources/audio/DiceRoll4.wav");
-        BaseMod.addAudio(modID + "fast",  modID + "Resources/audio/rimworldpack/fast.wav");
+        BaseMod.addAudio(modID + "dice1", modID + "Resources/audio/DiceRoll1.wav");
+        BaseMod.addAudio(modID + "dice2", modID + "Resources/audio/DiceRoll2.wav");
+        BaseMod.addAudio(modID + "dice3", modID + "Resources/audio/DiceRoll3.wav");
+        BaseMod.addAudio(modID + "dice4", modID + "Resources/audio/DiceRoll4.wav");
+        BaseMod.addAudio(modID + "fast", modID + "Resources/audio/rimworldpack/fast.wav");
     }
 
     @Override
@@ -523,11 +548,11 @@ public class SpireAnniversary5Mod implements
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
     }
-    
-	@Override
-	public void receivePostExhaust(AbstractCard arg0) {
-		combatExhausts++;
-	}
+
+    @Override
+    public void receivePostExhaust(AbstractCard arg0) {
+        combatExhausts++;
+    }
 
     public static void declarePacks() {
         // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
@@ -713,7 +738,7 @@ public class SpireAnniversary5Mod implements
         DeepDreamPatch.wakeUp();
         ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
-        combatExhausts=0;
+        combatExhausts = 0;
     }
 
     @Override
@@ -804,4 +829,28 @@ public class SpireAnniversary5Mod implements
         public static AbstractGameAction.AttackEffect EVIL;
     }
 
+    private ModPanel settingsPanel;
+
+    public static boolean allPacksMode = false;
+
+    private void initializeConfig() {
+        UIStrings configStrings = CardCrawlGame.languagePack.getUIString(makeID("ConfigMenuText"));
+
+        Texture badge = TexLoader.getTexture(makeImagePath("ui/badge.png"));
+
+        settingsPanel = new ModPanel();
+        int configPos = 600;
+        //int configStep = 40;
+
+        ModLabeledToggleButton allPacksModeBtn = new ModLabeledToggleButton(configStrings.TEXT[3], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
+
+        }, (button) -> {
+            allPacksMode = button.enabled;
+            saveAllPacksMode();
+        });
+
+        settingsPanel.addUIElement(allPacksModeBtn);
+
+        BaseMod.registerModBadge(badge, configStrings.TEXT[0], configStrings.TEXT[1], configStrings.TEXT[2], settingsPanel);
+    }
 }
