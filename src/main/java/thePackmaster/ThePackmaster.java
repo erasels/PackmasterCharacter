@@ -11,6 +11,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -64,6 +65,7 @@ public class ThePackmaster extends CustomPlayer {
                 SKELETON_JSON,
                 1.0f);
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
+        this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTime(e.getEndTime() * MathUtils.random());
 
 
@@ -77,6 +79,17 @@ public class ThePackmaster extends CustomPlayer {
         return new CharSelectInfo(NAMES[0], TEXT[0],
                 75, 75, 3, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
+    }
+
+
+    public void damage(DamageInfo info) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
+            AnimationState.TrackEntry e = this.state.setAnimation(0, "Hit", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
+            e.setTimeScale(0.6F);
+        }
+
+        super.damage(info);
     }
 
     @Override
