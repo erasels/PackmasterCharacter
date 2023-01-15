@@ -11,11 +11,14 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.gowiththeflowpack.OnFlowCard;
 import thePackmaster.powers.gowiththeflowpack.FlowAffectingPower;
 import thePackmaster.powers.gowiththeflowpack.FlowPower;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
+
+import static thePackmaster.util.Wiz.p;
 
 public class FlowAction extends AbstractGameAction {
     private static final String ID = SpireAnniversary5Mod.makeID("FlowAction");
@@ -38,10 +41,12 @@ public class FlowAction extends AbstractGameAction {
         if (duration == DURATION) {
             if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 this.isDone = true;
+                checkFlowCards();
                 return;
             }
             if (AbstractDungeon.player.hand.size() < 1) {
                 isDone = true;
+                checkFlowCards();
                 return;
             } else {
                 AbstractDungeon.handCardSelectScreen.open(TEXT[0], 99, true, true);
@@ -79,5 +84,31 @@ public class FlowAction extends AbstractGameAction {
             }
         }
         tickDuration();
+        if (isDone) {
+            checkFlowCards();
+        }
+    }
+
+    private void checkFlowCards() {
+        for (AbstractCard card : p().discardPile.group) {
+            if (card instanceof OnFlowCard) {
+                ((OnFlowCard)card).onFlow(p().discardPile);
+            }
+        }
+        for (AbstractCard card : p().drawPile.group) {
+            if (card instanceof OnFlowCard) {
+                ((OnFlowCard)card).onFlow(p().drawPile);
+            }
+        }
+        for (AbstractCard card : p().hand.group) {
+            if (card instanceof OnFlowCard) {
+                ((OnFlowCard)card).onFlow(p().hand);
+            }
+        }
+        for (AbstractCard card : p().exhaustPile.group) {
+            if (card instanceof OnFlowCard) {
+                ((OnFlowCard)card).onFlow(p().exhaustPile);
+            }
+        }
     }
 }
