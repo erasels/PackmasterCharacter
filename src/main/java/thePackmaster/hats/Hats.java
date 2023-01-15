@@ -30,6 +30,12 @@ public class Hats {
         } else {
             skeleton = ReflectionHacks.getPrivate(HatMenu.dummy, AbstractCreature.class, "skeleton");
         }
+
+        if (skeleton == null) {
+            BaseMod.logger.info("Hats error! Skeleton is null when attempting removeHat!");
+            return;
+        }
+
         skeleton.findBone("HatBone").setScale(1F);
         skeleton.findBone("HairBone").setScale(1F);
         String imgPath = getImagePathFromHatID("No");

@@ -23,8 +23,8 @@ public class HatMenu {
 
     public boolean isOpen = false;
 
-    private final DropdownMenu dropdown;
-    public final ArrayList<String> hats = new ArrayList<>();
+    private static DropdownMenu dropdown;
+    public static final ArrayList<String> hats = new ArrayList<>();
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));
@@ -47,12 +47,40 @@ public class HatMenu {
 
 
     public HatMenu() {
+        refreshHatDropdown();
+
+        dummy = new ThePackmaster("", ThePackmaster.Enums.THE_PACKMASTER);
+        dummy.drawX = PREVIEW_X;
+        dummy.drawY = PREVIEW_Y;
+
+        dummy.animX = dummy.animY = 0;
+    }
+
+    public static void refreshHatDropdown() {
+        boolean init = false;
+        if (dropdown == null){
+            init = true;
+        } else {
+            dropdown.rows.clear();
+        }
+
+        ArrayList<String> optionNames = new ArrayList<>(getHatDropdownStrings());
+
+        dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index, s)),
+                optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
+
+        if (init) setCurrentHat(0, optionNames.get(0));
+    }
+
+    public static ArrayList<String> getHatDropdownStrings() {
         ArrayList<String> unlockedHats = SpireAnniversary5Mod.getUnlockedHats();
 
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
         for (AbstractCardPack s : SpireAnniversary5Mod.unfilteredAllPacks) {
             if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists()) {
+                if (unlockedHats.contains(s.packID)) BaseMod.logger.info("Hat unlock exists: " + s.packID);
+                if (UNLOCK_ALL_HATS) BaseMod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
                 if (UNLOCK_ALL_HATS || unlockedHats.contains(s.packID)) {
                     hats.add(s.packID);
                     optionNames.add(s.getHatName());
@@ -60,24 +88,13 @@ public class HatMenu {
                     hats.add(s.packID);
                     optionNames.add(TEXT[1]);
                 }
+            } else {
+                hats.add(s.packID);
+                optionNames.add(TEXT[6] + " " + s.getHatName());
             }
         }
 
-        dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index, s)),
-                optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
-
-
-        dummy = new ThePackmaster("", ThePackmaster.Enums.THE_PACKMASTER);
-        dummy.drawX = PREVIEW_X;
-        dummy.drawY = PREVIEW_Y;
-
-        dummy.animX = dummy.animY = 0;
-
-        setCurrentHat(0, optionNames.get(0));
-    }
-
-    public static void setupOptions() {
-
+        return optionNames;
     }
 
     public void toggle() {
@@ -96,7 +113,7 @@ public class HatMenu {
         isOpen = false;
     }
 
-    public void setCurrentHat(int index, String name) {
+    public static void setCurrentHat(int index, String name) {
         currentHatIndex = index;
         if (index == 0) {
             BaseMod.logger.info("Removing hat.");
@@ -106,6 +123,10 @@ public class HatMenu {
             BaseMod.logger.info("Selected a locked hat.");
             Hats.addHat(false, "Locked");
             flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[3];
+        } else if (name.equals(TEXT[6])) {
+            BaseMod.logger.info("Selected a missing hat.");
+            Hats.removeHat(false);
+            flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[7];
         } else {
             BaseMod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index - 1);

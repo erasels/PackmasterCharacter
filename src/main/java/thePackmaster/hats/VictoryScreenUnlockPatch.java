@@ -31,11 +31,15 @@ public class VictoryScreenUnlockPatch {
             BaseMod.logger.info("Unlocking new hats!");
             for (AbstractCardPack p : SpireAnniversary5Mod.currentPoolPacks) {
                 BaseMod.logger.info("Adding " + p.packID + " to unlocked hats!");
-                MainMenuUIPatch.hatMenu.hats.add(p.packID);
+                if (!HatMenu.hats.contains(p.packID)) {
+                    HatMenu.hats.add(p.packID);
+                }
+                HatMenu.refreshHatDropdown();
+
             }
             try {
                 BaseMod.logger.info("Saving unlocked hats!");
-                SpireAnniversary5Mod.saveUnlockedHats(MainMenuUIPatch.hatMenu.hats);
+                SpireAnniversary5Mod.saveUnlockedHats(HatMenu.hats);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
