@@ -16,8 +16,6 @@ import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
 public class Hats {
-
-    public static int headslotIndex = -1;
     public static String currentHat;
 
     public static void removeHat(boolean inRun) {
@@ -56,6 +54,7 @@ public class Hats {
     private static RegionAttachment attachmentDummy;
 
     private static void setupSkeleton(AbstractPlayer p, boolean isDummy) {
+        int headslotIndex = 0;
         skeleton = ReflectionHacks.getPrivate(p, AbstractCreature.class, "skeleton");
         if (skeleton == null) {
             BaseMod.logger.info("Hats error! Skeleton is null when attempting setup!");
