@@ -13,7 +13,7 @@ public class Glimpse extends AbstractAstrologerCard {
     public final static String ID = makeID("Glimpse");
 
     public Glimpse() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
     }
 
