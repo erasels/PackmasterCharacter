@@ -16,7 +16,7 @@ public class Augment extends AbstractPackmasterCard {
     // intellij stuff skill, none, common, , , , , , 
 
     public Augment() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = this.block = 5;
     }
 
