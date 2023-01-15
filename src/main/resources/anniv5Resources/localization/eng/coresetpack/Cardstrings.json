@@ -5,7 +5,7 @@
   },
   "${ModID}:BoosterTutor": {
     "NAME": "Booster Tutor",
-    "DESCRIPTION": "Put !M! cards from different Packs in your draw pile into your hand."
+    "DESCRIPTION": "Put !M! random cards from different Packs from your draw pile into your hand."
   },
   "${ModID}:DestinyDraw": {
     "NAME": "Destiny Draw",
@@ -46,6 +46,6 @@
   },
   "${ModID}:Synergize": {
     "NAME": "Synergize",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If the last card played was from a different Pack, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have cards from at least two other Packs in your hand, gain !B! Block."
   }
 }

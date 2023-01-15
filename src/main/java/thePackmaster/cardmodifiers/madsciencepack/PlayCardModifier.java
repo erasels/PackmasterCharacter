@@ -25,17 +25,15 @@ public class PlayCardModifier extends AbstractMadScienceModifier {
         toPlayCard = absorbed;
     }
 
-    //TODO: For reasons I don't know, this doesn't actually add the card preview.  Maybe happening too early in the stack, that toPlayCard is still null. Commenting out for now.
-    /*
+
+
     public void onInitialApplication(AbstractCard card) {
         super.onInitialApplication(card);
         if (card.cardsToPreview == null){
-            card.cardsToPreview = toPlayCard;
+            card.cardsToPreview = toPlayCard.makeStatEquivalentCopy();
         }
 
     }
-
-     */
 
     @Override
     public void onExhausted(AbstractCard card) {

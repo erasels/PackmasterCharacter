@@ -175,7 +175,7 @@ public class PackSetupScreen extends CustomScreen {
                     genericScreenOverlayReset();
                     AbstractDungeon.closeCurrentScreen();
 
-                    currentPoolPacks.sort(Comparator.comparing((pack)->pack.packID));
+                    currentPoolPacks.sort(Comparator.comparing((pack)->pack.name));
                     SpireAnniversary5Mod.selectedCards = true;
                     editPotionPool();
                     CardCrawlGame.dungeon.initializeCardPools();

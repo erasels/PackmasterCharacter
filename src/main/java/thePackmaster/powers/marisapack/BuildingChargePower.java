@@ -1,10 +1,10 @@
 package thePackmaster.powers.marisapack;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashPowerEffect;
 import thePackmaster.powers.AbstractPackmasterPower;
@@ -22,7 +22,7 @@ public class BuildingChargePower  extends AbstractPackmasterPower implements Clo
     }
 
     @Override
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
         Wiz.applyToSelf(new ChargeUpPower(amount));
         AbstractDungeon.effectList.add(new FlashPowerEffect(this));
     }

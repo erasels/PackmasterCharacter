@@ -11,6 +11,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -38,6 +39,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
@@ -52,7 +54,10 @@ import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
-import thePackmaster.patches.sneckopack.EnergyCountPatch;
+import thePackmaster.potions.clawpack.AttackPotionButClaw;
+import thePackmaster.potions.clawpack.ClawPowerPotion;
+import thePackmaster.potions.clawpack.DrawClawsPotion;
+import thePackmaster.potions.clawpack.GenerateClawsPotion;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.powers.eurogamepack.VictoryPoints;
@@ -60,12 +65,16 @@ import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
+import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.CHOICE;
@@ -176,6 +185,8 @@ public class SpireAnniversary5Mod implements
     public static boolean selectedCards = false;
     public static int combatExhausts = 0;
 
+    public static int CLAW_SHARP_TRACKER = 0;
+
     public static String makeID(String idText) {
         return modID + ":" + idText;
     }
@@ -185,6 +196,9 @@ public class SpireAnniversary5Mod implements
 
     @SpireEnum
     public static AbstractCard.CardTags MAGIC;
+
+    @SpireEnum
+    public static AbstractCard.CardTags CLAW;
 
     public SpireAnniversary5Mod() {
         BaseMod.subscribe(this);
@@ -270,6 +284,7 @@ public class SpireAnniversary5Mod implements
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
+        BaseMod.addDynamicVariable(new HoardVar());
         new AutoAdd(modID)
                 .packageFilter(AbstractPackmasterCard.class)
                 .setDefaultSeen(true)
@@ -311,6 +326,41 @@ public class SpireAnniversary5Mod implements
 
         currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
         BaseMod.addSaveField("Anniversary5Mod", thismod);
+
+        addPotions();
+    }
+
+    public static void addPotions() {
+        BaseMod.addPotion(AttackPotionButClaw.class, Color.RED, Color.WHITE, Color.FIREBRICK, AttackPotionButClaw.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+
+        if (Loader.isModLoaded("widepotions")) {
+            Consumer<String> whitelist = getWidePotionsWhitelistMethod();
+            whitelist.accept(AttackPotionButClaw.POTION_ID);
+            whitelist.accept(ClawPowerPotion.POTION_ID);
+            whitelist.accept(DrawClawsPotion.POTION_ID);
+            whitelist.accept(GenerateClawsPotion.POTION_ID);
+        }
+    }
+
+    private static Consumer<String> getWidePotionsWhitelistMethod() {
+        // To avoid the need for a dependency of any kind, we call Wide Potions through reflection
+        try {
+            Method whitelistMethod = Class.forName("com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod").getMethod("whitelistSimplePotion", String.class);
+            return s -> {
+                try {
+                    whitelistMethod.invoke(null, s);
+                } catch (IllegalAccessException | InvocationTargetException e) {
+                    e.printStackTrace();
+                    throw new RuntimeException("Error trying to whitelist wide potion for " + s, e);
+                }
+            };
+        } catch (NoSuchMethodException | ClassNotFoundException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Could not find method WidePotionsMod.whitelistSimplePotion", e);
+        }
     }
 
     private String getLangString() {
@@ -371,6 +421,9 @@ public class SpireAnniversary5Mod implements
             }
             if (Gdx.files.internal(filepath + "Orbstrings.json").exists()) {
                 BaseMod.loadCustomStringsFile(OrbStrings.class, filepath + "Orbstrings.json");
+            }
+            if (Gdx.files.internal(filepath + "Potionstrings.json").exists()) {
+                BaseMod.loadCustomStringsFile(PotionStrings.class, filepath + "Potionstrings.json");
             }
         }
     }
@@ -453,6 +506,9 @@ public class SpireAnniversary5Mod implements
                 break;
             }
         }
+
+        UltimateHomerun.HIGH_SCORE = 0;
+        CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
     }
     
@@ -645,7 +701,6 @@ public class SpireAnniversary5Mod implements
         ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
         combatExhausts=0;
-        EnergyCountPatch.energySpentThisCombat = 0;
     }
 
     @Override
@@ -717,7 +772,6 @@ public class SpireAnniversary5Mod implements
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
         }
-        EnergyCountPatch.energySpentThisCombat = 0;
     }
 
     public static class Enums {
