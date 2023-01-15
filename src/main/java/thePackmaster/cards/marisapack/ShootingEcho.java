@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.marisapack.BetterFireballEffect;
@@ -25,6 +26,7 @@ public class ShootingEcho extends AbstractPackmasterCard {
         damage = baseDamage = DMG;
         exhaust = true;
 
+        if (!SpireAnniversary5Mod.oneFrameMode)
         setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT) + ".png",
                 "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT) + ".png");
     }

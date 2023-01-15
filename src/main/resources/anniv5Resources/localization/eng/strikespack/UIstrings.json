@@ -6,6 +6,12 @@
       "MichaelMayhem"
     ]
   },
+  "${ModID}:StrikesPackHat": {
+    "TEXT": [
+      "A tiny sword, about large enough to be used as a hairpin.",
+      "Strike Pin"
+    ]
+  },
   "${ModID}:AddStrikeTagModifier": {
     "TEXT": [
       " Strike"

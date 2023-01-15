@@ -373,7 +373,7 @@ public class PackSetupScreen extends CustomScreen {
     private void randomPacks(int amount) {
         while (amount > 0 && !packPool.isEmpty()) {
             AbstractCardPack target = packPool.remove(rng.random(packPool.size() - 1));
-            BaseMod.logger.info("Randomly selected: " + target.packID);
+            SpireAnniversary5Mod.logger.info("Randomly selected: " + target.packID);
             currentPoolPacks.add(target);
             --amount;
         }

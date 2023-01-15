@@ -5,5 +5,11 @@
       "Manipulate the power of foresight, think ahead, bend the unknown into your favor.",
       "AlexMdle"
     ]
+  },
+  "${ModID}:WardenPackHat": {
+    "TEXT": [
+      "What secrets lie in the shadowed vaults of this spacious headwear?",
+      "Godhood"
+    ]
   }
 }
