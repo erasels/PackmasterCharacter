@@ -115,7 +115,7 @@ public class SpireAnniversary5Mod implements
             Settings.GameLanguage.ENG,
     };
 
-    public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
+    public static Color characterColor = new Color(0.76f, 0.65f, 0.52f, 1);
 
     public static SpireAnniversary5Mod thismod;
     public static SpireConfig modConfig = null;
