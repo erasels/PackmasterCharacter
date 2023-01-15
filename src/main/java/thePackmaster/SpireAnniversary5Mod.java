@@ -59,6 +59,7 @@ import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
+import thePackmaster.util.SpireAnniversary5SaveWrapper;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
@@ -86,7 +87,7 @@ public class SpireAnniversary5Mod implements
         PostBattleSubscriber,
         PostPowerApplySubscriber,
         StartGameSubscriber,
-        CustomSavable<ArrayList<String>> {
+        CustomSavable<SpireAnniversary5SaveWrapper> {
     private static final Logger logger = LogManager.getLogger("Packmaster");
 
     public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
@@ -697,22 +698,28 @@ public class SpireAnniversary5Mod implements
     }
 
     @Override
-    public ArrayList<String> onSave() {
+    public SpireAnniversary5SaveWrapper onSave() {
+        SpireAnniversary5SaveWrapper wrapper = new SpireAnniversary5SaveWrapper();
         ArrayList<String> packIDs = new ArrayList<>();
         for (AbstractCardPack pack : currentPoolPacks) {
             packIDs.add(pack.packID);
         }
-        return packIDs;
+        wrapper.currentPoolPacks = packIDs;
+        wrapper.currentHat = Hats.currentHat;
+        return wrapper;
     }
 
     @Override
-    public void onLoad(ArrayList<String> strings) {
+    public void onLoad(SpireAnniversary5SaveWrapper saved) {
         currentPoolPacks.clear();
+        ArrayList<String> strings = saved.currentPoolPacks;
         if (strings != null) {
             for (String s : strings) {
                 currentPoolPacks.add(packsByID.get(s));
             }
         }
+
+        Hats.addHat(true, saved.currentHat);
     }
 
     @Override

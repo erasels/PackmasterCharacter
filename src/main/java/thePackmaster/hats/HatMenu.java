@@ -92,16 +92,13 @@ public class HatMenu {
     }
 
     public void setCurrentHat(int index, String name) {
-        if (name.equals(TEXT[1])) {
-            //TODO: Further locked handling
-        }
         currentHatIndex = index;
         if (index == 0) {
             BaseMod.logger.info("Removing hat.");
             Hats.removeHat(false);
         } else if (name.equals(TEXT[1])) {
             BaseMod.logger.info("Selected a locked hat.");
-            //TODO: Locked handling
+            Hats.addHat(false, "LockedHat");
         } else {
             BaseMod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index - 1);
