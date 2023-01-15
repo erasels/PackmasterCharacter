@@ -1,2 +1,7 @@
 {
+  "${ModID}:SheddingPower": {
+  "NAME": "Shedding",
+  "DESCRIPTIONS": ["At the start of your turn, randomize the cost of the card in your hand with the highest cost.",
+  "At the start of your turn, randomize the cost of the #b", " cards in your hand with the highest cost." ]
+  }
 }

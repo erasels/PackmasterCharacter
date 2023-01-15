@@ -2,7 +2,9 @@ package thePackmaster.packs;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.rooms.RestRoom;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.sneckopack.*;
 
 import java.util.ArrayList;
 
@@ -20,6 +22,17 @@ public class SneckoPack extends AbstractCardPack {
 
     @Override
     public ArrayList<String> getCards() {
-        return new ArrayList<>();
+        ArrayList<String> result = new ArrayList<>();
+        result.add(Gulp.ID);
+        result.add(Shedding.ID);
+        result.add(Sliiiiither.ID);
+        result.add(SnazzySwagger.ID);
+        result.add(SneckoEyes.ID);
+        result.add(Sneckpot.ID);
+        result.add(TailFlail.ID);
+        result.add(Twitch.ID);
+        result.add(WhipNSnapper.ID);
+        result.add(Whirligig.ID);
+        return result;
     }
 }

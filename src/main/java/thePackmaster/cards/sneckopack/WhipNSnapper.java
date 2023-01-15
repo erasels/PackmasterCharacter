@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -31,6 +32,7 @@ public class WhipNSnapper extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.GREEN.cpy()), 0.2F));
+        addToBot(new WaitAction(0.2f));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
 
         int r = AbstractDungeon.cardRandomRng.random(magicNumber);

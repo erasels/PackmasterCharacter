@@ -52,6 +52,7 @@ import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
+import thePackmaster.patches.sneckopack.EnergyCountPatch;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.powers.eurogamepack.VictoryPoints;
@@ -644,6 +645,7 @@ public class SpireAnniversary5Mod implements
         ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
         combatExhausts=0;
+        EnergyCountPatch.energySpentThisCombat = 0;
     }
 
     @Override
@@ -715,6 +717,7 @@ public class SpireAnniversary5Mod implements
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
         }
+        EnergyCountPatch.energySpentThisCombat = 0;
     }
 
     public static class Enums {
