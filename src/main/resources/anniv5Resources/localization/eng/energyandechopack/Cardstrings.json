@@ -18,7 +18,7 @@
   "${ModID}:Flashlight": {
     "NAME": "Flashlight",
     "DESCRIPTION": "Innate. NL Gain [E] . NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain [E] . NL Next turn, Gain [E]. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain [E] . NL Next turn, gain [E]. NL Exhaust."
   },
   "${ModID}:Discharge": {
     "NAME": "Discharge",
