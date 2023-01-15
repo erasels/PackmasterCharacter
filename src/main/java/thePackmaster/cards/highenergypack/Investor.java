@@ -8,7 +8,7 @@ import thePackmaster.powers.highenergypack.InvestorPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class Investor extends AbstractPackmasterCard {
+public class Investor extends AbstractHighEnergyCard {
     public final static String ID = makeID("Investor");
     // intellij stuff power, self, uncommon, , , , , 6, 3
 

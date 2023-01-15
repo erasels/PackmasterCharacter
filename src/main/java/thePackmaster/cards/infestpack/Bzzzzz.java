@@ -10,7 +10,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.atb;
 
-public class Bzzzzz extends AbstractPackmasterCard {
+public class Bzzzzz extends AbstractInfestCard {
     public final static String ID = makeID("Bzzzzz");
     // intellij stuff skill, enemy, uncommon, , , , , 2, 1
 

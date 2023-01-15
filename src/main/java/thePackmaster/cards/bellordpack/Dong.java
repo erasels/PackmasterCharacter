@@ -14,7 +14,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Dong extends AbstractPackmasterCard implements OnObtainCard {
+public class Dong extends AbstractBellordCard implements OnObtainCard {
     public final static String ID = makeID("Dong");
     // intellij stuff attack, enemy, uncommon, 20, 4, , , 2, 1
 
