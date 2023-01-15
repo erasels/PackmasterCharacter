@@ -13,7 +13,7 @@ public class Remember extends AbstractAstrologerCard {
     public final static String ID = makeID("Remember");
 
     public Remember() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
     }
 
