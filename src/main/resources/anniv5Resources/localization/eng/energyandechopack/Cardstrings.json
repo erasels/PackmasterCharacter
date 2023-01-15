@@ -4,7 +4,7 @@
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Echo."
   },
   "${ModID}:MagnetRise": {
-    "NAME": "Magnet rise",
+    "NAME": "Magnet Rise",
     "DESCRIPTION": "Gain !B! Block. NL If you generated extra [E] this turn, this card costs 0."
   },
   "${ModID}:TearApart": {
