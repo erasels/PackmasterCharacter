@@ -59,6 +59,10 @@ import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.patches.sneckopack.EnergyCountPatch;
+import thePackmaster.potions.BoosterBrew;
+import thePackmaster.potions.ModdersDelight;
+import thePackmaster.potions.PackInAJar;
+import thePackmaster.potions.SmithingOil;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
 import thePackmaster.potions.clawpack.DrawClawsPotion;
@@ -396,6 +400,11 @@ public class SpireAnniversary5Mod implements
     }
 
     public static void addPotions() {
+        BaseMod.addPotion(BoosterBrew.class, Color.TAN, Color.WHITE, Color.BLACK, BoosterBrew.POTION_ID);
+        BaseMod.addPotion(ModdersDelight.class, Color.TAN, Color.WHITE, Color.BLACK, ModdersDelight.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(PackInAJar.class, Color.TAN, Color.WHITE, Color.BLACK, PackInAJar.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE,null, SmithingOil.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+
         BaseMod.addPotion(AttackPotionButClaw.class, Color.RED, Color.WHITE, Color.FIREBRICK, AttackPotionButClaw.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
@@ -409,6 +418,10 @@ public class SpireAnniversary5Mod implements
             whitelist.accept(DrawClawsPotion.POTION_ID);
             whitelist.accept(GenerateClawsPotion.POTION_ID);
             whitelist.accept(DivinePotion.POTION_ID);
+            whitelist.accept(BoosterBrew.POTION_ID);
+            whitelist.accept(ModdersDelight.POTION_ID);
+            whitelist.accept(PackInAJar.POTION_ID);
+            whitelist.accept(SmithingOil.POTION_ID);
         }
     }
 
@@ -448,6 +461,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + getLangString() + "/UIstrings.json");
         BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + getLangString() + "/Stancestrings.json");
         BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + getLangString() + "/Orbstrings.json");
+        BaseMod.loadCustomStringsFile(PotionStrings.class, modID + "Resources/localization/" + getLangString() + "/Potionstrings.json");
 
         loadPackStrings();
     }

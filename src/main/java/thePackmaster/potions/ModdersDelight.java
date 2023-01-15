@@ -1,26 +1,27 @@
-package thePackmaster.potions.clawpack;
+package thePackmaster.potions;
 
 
 import basemod.abstracts.CustomPotion;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
+import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.clawpack.GhostClaw;
-import thePackmaster.util.Wiz;
+import thePackmaster.actions.BoosterTutorAction;
 
 
-public class GenerateClawsPotion extends CustomPotion {
-    public static final String POTION_ID = SpireAnniversary5Mod.makeID("GenerateClawsPotion");
+public class ModdersDelight extends CustomPotion {
+    public static final String POTION_ID = SpireAnniversary5Mod.makeID("ModdersDelight");
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
-    public GenerateClawsPotion() {
-        super(NAME, POTION_ID, PotionRarity.PLACEHOLDER, PotionSize.BOLT, PotionColor.NONE);
+    public ModdersDelight() {
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.SNECKO, PotionColor.NONE);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = Color.TAN.cpy();
@@ -35,17 +36,20 @@ public class GenerateClawsPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        for (int i = 0; i < potency; i++) {
-            Wiz.atb(new MakeTempCardInHandAction(new GhostClaw()));
+        if (AbstractDungeon.player.discardPile.size() > 0) {
+            this.addToBot(new EmptyDeckShuffleAction());
+            this.addToBot(new ShuffleAction(AbstractDungeon.player.drawPile, false));
         }
+
+        addToBot(new BoosterTutorAction(potency));
     }
 
     public CustomPotion makeCopy() {
-        return new GenerateClawsPotion();
+        return new ModdersDelight();
     }
 
     public int getPotency(int ascensionLevel) {
-        return 3;
+        return 4;
     }
 }
 
