@@ -26,7 +26,8 @@ public class Sliiiiither extends AbstractPackmasterCard {
         } else {
             amount = magicNumber;
         }
-        addToBot(new ApplyPowerAction(p,p, new DrawCardNextTurnPower(p,amount)));
+        if(amount > 0)
+            addToBot(new ApplyPowerAction(p,p, new DrawCardNextTurnPower(p,amount)));
     }
 
     public void upp() {
