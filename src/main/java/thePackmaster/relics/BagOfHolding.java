@@ -63,7 +63,7 @@ public class BagOfHolding extends AbstractPackmasterRelic {
 
     @Override
     public String getUpdatedDescription() {
-        // Colorize the starter relic's name. Thanks Bard!!! Thanks Jobby!!! HAPPY BIRTHDAY, STS MODDING!!!
+        // Colorize the starter relic's name. Thanks Bard!!! Thanks Nelly!!!!! HAPPY BIRTHDAY, STS MODDING!!!
         String name = new HandyHaversack().name;
         StringBuilder sb = new StringBuilder();
         for (String word : name.split(" ")) {
