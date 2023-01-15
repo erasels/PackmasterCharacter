@@ -3,7 +3,8 @@
     "NAME": "Bag of Holding",
     "FLAVOR": "\"Incredible! It appears that this bag connects to an extradimensional space. What if I jump inside?\" - Ranwid",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of each turn, lasting one turn for every #b5 cards in your deck."
+      "Replaces ",
+      ".[] NL Gain [E] at the start of each turn, lasting one turn for every #b5 cards in your deck."
     ]
   },
   "${ModID}:BanishingDecree": {
