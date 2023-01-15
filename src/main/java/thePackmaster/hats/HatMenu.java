@@ -42,7 +42,7 @@ public class HatMenu {
 
     public static AbstractPlayer dummy;
 
-    private static final boolean UNLOCK_ALL_HATS = true;
+    private static final boolean UNLOCK_ALL_HATS = false;
 
     public static int currentHatIndex;
 
