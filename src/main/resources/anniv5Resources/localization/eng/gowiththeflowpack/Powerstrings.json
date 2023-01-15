@@ -10,5 +10,9 @@
   "${ModID}:FlowPower": {
     "NAME": "Flowing",
     "DESCRIPTIONS": ["At the start of your next turn, ", "draw #b", " cards.", "draw a card."]
+  },
+  "${ModID}:PneumaticsPower": {
+    "NAME": "Pneumatics",
+    "DESCRIPTIONS": ["At the start of next turn, #yFlow.", "At the start of the next #b", " turns, #yFlow."]
   }
 }
