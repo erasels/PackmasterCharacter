@@ -94,7 +94,7 @@ public class SpireAnniversary5Mod implements
         PostBattleSubscriber,
         PostPowerApplySubscriber,
         StartGameSubscriber,
-        CustomSavable<SpireAnniversary5SaveWrapper>, {
+        CustomSavable<SpireAnniversary5SaveWrapper>,
         PostExhaustSubscriber {
     private static final Logger logger = LogManager.getLogger("Packmaster");
 
