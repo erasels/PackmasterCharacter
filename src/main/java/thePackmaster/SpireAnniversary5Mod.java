@@ -54,6 +54,7 @@ import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
+import thePackmaster.patches.sneckopack.EnergyCountPatch;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
 import thePackmaster.potions.clawpack.DrawClawsPotion;
@@ -253,7 +254,7 @@ public class SpireAnniversary5Mod implements
 
         try {
             Properties defaults = new Properties();
-            defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, RANDOM, CHOICE, CHOICE));
+            defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, CHOICE, CHOICE, CHOICE));
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
         } catch (Exception e) {
             e.printStackTrace();
@@ -523,6 +524,8 @@ public class SpireAnniversary5Mod implements
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
         MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
+        EnergyAndEchoPack.resetvalues();
+        EnergyCountPatch.energySpentThisCombat = 0;
     }
 
     @Override
@@ -653,7 +656,7 @@ public class SpireAnniversary5Mod implements
             packSetup.add(RANDOM);
             packSetup.add(RANDOM);
             packSetup.add(RANDOM);
-            packSetup.add(RANDOM);
+            packSetup.add(CHOICE);
             packSetup.add(CHOICE);
             packSetup.add(CHOICE);
         }
