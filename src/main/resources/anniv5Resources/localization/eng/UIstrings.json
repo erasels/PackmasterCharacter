@@ -49,7 +49,8 @@
       "Turn this on to choose how your Packs are determined.",
       "Random",
       "Choice of 3",
-      "Pack filtering menu"
+      "Pack Filtering Menu",
+      "Hat Menu"
     ]
   },
   "${ModID}:PackSetup": {
@@ -77,6 +78,34 @@
   "${ModID}:Compendium": {
     "TEXT": [
       "By Packs"
+    ]
+  },
+  "${ModID}:CardTypeStrings": {
+    "TEXT": [
+      "Chance",
+      "Inspiration",
+      "Mental Break"
+    ]
+  },
+  "${ModID}:HatMenu": {
+    "TEXT": [
+      "Base Hat",
+      "(L)",
+      "Win a run with the ",
+      " pack to unlock this hat for future runs.",
+      "The hat for the ",
+      " pack. Real flavor soon!",
+      "(!)",
+      " has no corresponding hat image. Please fix."
+    ]
+  },
+  "${ModID}:ConfigMenuText": {
+    "TEXT": [
+      "The Packmaster",
+      "StS Modding Community",
+      "Adds a new character: The Packmaster.",
+      "ALL PACKS MODE. Ignores Custom Draft",
+      "One Frame For All. All Pack cards have normal Packmaster frames (Requires Restart)."
     ]
   }
 }

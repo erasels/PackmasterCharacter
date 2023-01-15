@@ -1,0 +1,27 @@
+package thePackmaster.patches.energyandechopack;
+
+import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import javassist.CtBehavior;
+import thePackmaster.packs.EnergyAndEchoPack;
+
+
+@SpirePatch(
+        clz = GameActionManager.class,
+        method = "getNextAction"
+)
+public class TurnStartCheckPatch {
+    @SpireInsertPatch(
+            locator = Locator.class
+    )
+    public static void Insert(GameActionManager __instance) {
+        EnergyAndEchoPack.resetvalues();
+    }
+    private static class Locator extends SpireInsertLocator {
+        public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
+            Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractPlayer.class, "applyStartOfTurnRelics");
+            return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
+        }
+    }
+}

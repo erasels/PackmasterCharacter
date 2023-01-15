@@ -35,21 +35,22 @@ public class SwarmOfBees extends CustomOrb {
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH_O = makePath("images/vfx/summonspack/Empty.png");
-    private static final String IMG_PATH = makePath("images/vfx/summonspack/Bee.png");
+    private static final String IMG_PATH_O = makePath("images/orbs/summonsPack/Empty.png");
+    private static final String IMG_PATH = makePath("images/orbs/summonsPack/Bee.png");
     private static final Texture BEE_IMG = ImageMaster.loadImage(IMG_PATH);
     private static final int BEE_COUNT = 120;
     public static final int BASE_PASSIVE = 2;
     public static final int BASE_EVOKE = 6;
-    private static final Color STING_COLOR = Color.GOLDENROD.cpy();
+    private static final Color STING_COLOR = Color.YELLOW.cpy();
+
+    private static final float SPAWN_DISTANCE = 40f*Settings.scale;
+    private static final float TETHER_DISTANCE = SPAWN_DISTANCE;
+    private static final float SPAWN_VELOCITY_VAR = 40f*Settings.scale;
+    private static final float ACC_VAR = 40f*Settings.scale;
 
     private final ArrayList<Bee> bees = new ArrayList<>();
 
     private class Bee {
-        private static final float SPAWN_DISTANCE = 40f;
-        private static final float TETHER_DISTANCE = SPAWN_DISTANCE;
-        private static final float SPAWN_VELOCITY_VAR = 40f;
-        private static final float ACC_VAR = 40f;
 
         private float x, y;
         private float vMag, vAngle;
@@ -144,7 +145,6 @@ public class SwarmOfBees extends CustomOrb {
     public SwarmOfBees()
     {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH_O);
-        basePassiveAmount = BASE_PASSIVE;
         showEvokeValue = false;
 
         generateBees();
@@ -167,11 +167,15 @@ public class SwarmOfBees extends CustomOrb {
         if (power != null) {
             passiveAmount = Math.max(0, basePassiveAmount + power.amount);
             evokeAmount = Math.max(0, baseEvokeAmount + power.amount);
-        }
-        else {
+        } else {
             passiveAmount = basePassiveAmount;
             evokeAmount = baseEvokeAmount;
         }
+
+        if (passiveAmount < 0)
+            passiveAmount = 0;
+        if (evokeAmount < 0)
+            evokeAmount = 0;
     }
 
     @Override
@@ -193,7 +197,7 @@ public class SwarmOfBees extends CustomOrb {
     @Override
     public void onEvoke() {
         for (AbstractMonster m : Wiz.getEnemies()) {
-            DamageInfo info = new DamageInfo(adp(), passiveAmount, DamageInfo.DamageType.THORNS);
+            DamageInfo info = new DamageInfo(adp(), evokeAmount, DamageInfo.DamageType.THORNS);
             AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
             ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
             ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);

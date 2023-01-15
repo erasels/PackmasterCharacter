@@ -60,6 +60,5 @@ public class BurningAct extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        uDesc();
     }
 }

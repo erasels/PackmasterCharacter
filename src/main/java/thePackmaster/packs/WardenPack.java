@@ -17,6 +17,7 @@ public class WardenPack extends AbstractCardPack {
 
     public WardenPack() {
         super(ID, NAME, DESC, AUTHOR);
+        hatHidesHair = true;
     }
 
     @Override

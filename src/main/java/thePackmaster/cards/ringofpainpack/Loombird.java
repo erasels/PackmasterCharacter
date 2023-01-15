@@ -3,6 +3,7 @@ package thePackmaster.cards.ringofpainpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.ringofpainpack.RendPower;
 
@@ -21,6 +22,8 @@ public class Loombird extends AbstractPackmasterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = REND;
+
+        if (!SpireAnniversary5Mod.oneFrameMode)
         setBackgroundTexture(
                 "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
                 "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"

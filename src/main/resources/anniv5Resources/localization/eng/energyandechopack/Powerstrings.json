@@ -1,0 +1,19 @@
+{
+  "${ModID}:SlowingPower": {
+    "NAME": "Slowing",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain",
+      " #b",
+      " [E] ."
+    ]
+  },
+  "${ModID}:PanacherPower": {
+    "NAME": "Panacher",
+    "DESCRIPTIONS": [
+      "If #b",
+      " more card is created, deal #b",
+      " more cards are created, deal #b",
+      " damage to ALL enemies."
+    ]
+  }
+}

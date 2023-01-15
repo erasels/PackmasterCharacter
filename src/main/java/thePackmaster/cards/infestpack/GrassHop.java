@@ -11,7 +11,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class GrassHop extends AbstractPackmasterCard implements OnInfestCard {
+public class GrassHop extends AbstractInfestCard implements OnInfestCard {
     public final static String ID = makeID("GrassHop");
     // intellij stuff skill, self, common, , , 8, 2, 3, 1
 

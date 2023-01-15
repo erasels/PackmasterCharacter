@@ -2,20 +2,24 @@ package thePackmaster;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
+import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,39 +28,60 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
-import thePackmaster.actions.distortionpack.ImproveAction;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
-import thePackmaster.cards.eurogamepack.AbstractVPCard;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.hats.Hats;
+import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
+import thePackmaster.patches.psychicpack.DeepDreamPatch;
+import thePackmaster.patches.psychicpack.occult.OccultFields;
+import thePackmaster.patches.psychicpack.occult.OccultPatch;
+import thePackmaster.patches.sneckopack.EnergyCountPatch;
+import thePackmaster.potions.clawpack.AttackPotionButClaw;
+import thePackmaster.potions.clawpack.ClawPowerPotion;
+import thePackmaster.potions.clawpack.DrawClawsPotion;
+import thePackmaster.potions.clawpack.GenerateClawsPotion;
+import thePackmaster.potions.thieverypack.DivinePotion;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
-import thePackmaster.powers.eurogamepack.VictoryPoints;
+import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
+import thePackmaster.util.TexLoader;
+import thePackmaster.util.cardvars.HoardVar;
+import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.CHOICE;
@@ -78,19 +103,24 @@ public class SpireAnniversary5Mod implements
         PostBattleSubscriber,
         PostPowerApplySubscriber,
         StartGameSubscriber,
-        CustomSavable<ArrayList<String>> {
+        PostExhaustSubscriber,
+        OnPlayerTurnStartSubscriber {
+
+    public static final Logger logger = LogManager.getLogger("Packmaster");
+
     public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
     public static HashMap<Class<? extends AbstractCard>, String> cardClassParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <card Class, packID>
     public static ArrayList<AbstractCardPack> allPacks = new ArrayList<>();
     public static ArrayList<AbstractCardPack> unfilteredAllPacks = new ArrayList<>();
     public static HashMap<String, AbstractCardPack> packsByID;
+    public static Set<String> packExclusivePotions = new HashSet<>();
     public static ArrayList<AbstractCardPack> currentPoolPacks = new ArrayList<>();
     public static CardGroup packsToDisplay;
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
     };
 
-    public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
+    public static Color characterColor = new Color(0.76f, 0.65f, 0.52f, 1);
 
     public static SpireAnniversary5Mod thismod;
     public static SpireConfig modConfig = null;
@@ -106,6 +136,8 @@ public class SpireAnniversary5Mod implements
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = modID + "Resources/images/char/mainChar/corpse.png";
+    public static final String SKELETON_JSON = modID + "Resources/images/char/mainChar/PackmasterAnim.json";
+    public static final String SKELETON_ATLAS = modID + "Resources/images/char/mainChar/PackmasterAnim.atlas";
     private static final String ATTACK_S_ART = modID + "Resources/images/512/attack.png";
     private static final String SKILL_S_ART = modID + "Resources/images/512/skill.png";
     private static final String POWER_S_ART = modID + "Resources/images/512/power.png";
@@ -124,6 +156,18 @@ public class SpireAnniversary5Mod implements
     private static final String ELEPHANT_OGG = makePath("audio/summonspack/Elephant.ogg");
     public static final String PEW_KEY = makeID("Pew");
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
+    public static final String EVIL_KEY = makeID("Evil");
+    private static final String EVIL_OGG = makePath("audio/summonspack/Evil.ogg");
+    public static final String PANDA_KEY = makeID("Panda");
+    private static final String PANDA_OGG = makePath("audio/summonspack/Panda.ogg");
+    public static final String PORCUPINE_KEY = makeID("Porcupine");
+    private static final String PORCUPINE_OGG = makePath("audio/summonspack/Porcupine.ogg");
+    public static final String DIE_KEY = makeID("Die");
+    private static final String DIE_OGG = makePath("audio/summonspack/Die.ogg");
+    public static final String DICE_KEY = makeID("Dice");
+    private static final String DICE_OGG = makePath("audio/summonspack/Dice.ogg");
+    public static final String DICELOTS_KEY = makeID("DiceLots");
+    private static final String DICELOTS_OGG = makePath("audio/summonspack/DiceLots.ogg");
     public static final String TRANSMUTATION_KEY = makeID("Transmutation");
     private static final String TRANSMUTATION_OGG = makePath("audio/transmutationpack/Transmutation.ogg");
     public static final String WATER_IMPACT_1_KEY = makeID("WaterImpactOne");
@@ -143,7 +187,7 @@ public class SpireAnniversary5Mod implements
     public static final String STEAM_IMPACT_2_KEY = makeID("SteamImpactTwo");
     private static final String STEAM_IMPACT_2_OGG = makePath("audio/transmutationpack/SteamImpactTwo.ogg");
     public static final String STEAM_IMPACT_3_KEY = makeID("StreamImpactThree");
-    private static final String STEAM_IMPACT_3_OGG = makePath("audio/transmutationpack/StreamImpactThree.ogg");
+    private static final String STEAM_IMPACT_3_OGG = makePath("audio/transmutationpack/SteamImpactThree.ogg");
     public static final String GUN1_KEY = makeID("Gun1");
     private static final String GUN1_OGG = makePath("audio/hermitpack/GUN1.ogg");
     public static final String GUN2_KEY = makeID("Gun2");
@@ -151,10 +195,15 @@ public class SpireAnniversary5Mod implements
     public static final String GUN3_KEY = makeID("Gun3");
     private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
 
+    public static final String EVIL_EFFECT_FILE = makePath("images/orbs/summonsPack/Evil.png");
+
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
     public static final ArrayList<Louse> louseList = new ArrayList<>();
 
     public static boolean selectedCards = false;
+    public static int combatExhausts = 0;
+
+    public static int CLAW_SHARP_TRACKER = 0;
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
@@ -165,6 +214,9 @@ public class SpireAnniversary5Mod implements
 
     @SpireEnum
     public static AbstractCard.CardTags MAGIC;
+
+    @SpireEnum
+    public static AbstractCard.CardTags CLAW;
 
     public SpireAnniversary5Mod() {
         BaseMod.subscribe(this);
@@ -196,27 +248,75 @@ public class SpireAnniversary5Mod implements
         return modID + "Resources/images/cards/" + resourcePath;
     }
 
-    public static String makeOrbPath(String resourcePath) { return modID +"Resources/images/orbs/" + resourcePath; }
+    public static String makeShaderPath(String resourcePath) {
+        return modID + "Resources/shaders/" + resourcePath;
+    }
+
+    public static String makeOrbPath(String resourcePath) {
+        return modID + "Resources/images/orbs/" + resourcePath;
+    }
 
     public static void initialize() {
         thismod = new SpireAnniversary5Mod();
 
         try {
             Properties defaults = new Properties();
-            defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, RANDOM, CHOICE, CHOICE));
+            defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, CHOICE, CHOICE, CHOICE));
+            defaults.put("PackmasterUnlockedHats", "");
+            defaults.put("PackmasterAllPacksMode", "FALSE");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
+            modConfig.load();
+
+            loadModConfigData();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public static ArrayList<String> getSavedCDraftSelection() {
-        if(modConfig == null) return new ArrayList<>();
+        if (modConfig == null) return new ArrayList<>();
         return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterCustomDraftSelection").split(",")));
     }
+
     public static void saveCDraftSelection(ArrayList<String> input) throws IOException {
-        if(modConfig == null) return;
+        if (modConfig == null) return;
         modConfig.setString("PackmasterCustomDraftSelection", String.join(",", input));
+        modConfig.save();
+    }
+
+    public static void saveAllPacksMode() {
+        try {
+            if (modConfig == null) return;
+            modConfig.setBool("PackmasterAllPacksMode", allPacksMode);
+            modConfig.save();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void saveOneFrameMode() {
+        try {
+            if (modConfig == null) return;
+            modConfig.setBool("PackmasterOneFrameMode", oneFrameMode);
+            modConfig.save();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void loadModConfigData() {
+        allPacksMode = modConfig.getBool("PackmasterAllPacksMode");
+        oneFrameMode = modConfig.getBool("PackmasterOneFrameMode");
+    }
+
+    public static ArrayList<String> getUnlockedHats() {
+        if (modConfig == null) return new ArrayList<>();
+        return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterUnlockedHats").split(",")));
+    }
+
+    public static void saveUnlockedHats(ArrayList<String> input) throws IOException {
+        if (modConfig == null) return;
+        modConfig.setString("PackmasterUnlockedHats", String.join(",", input));
         modConfig.save();
     }
 
@@ -246,6 +346,7 @@ public class SpireAnniversary5Mod implements
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
+        BaseMod.addDynamicVariable(new HoardVar());
         new AutoAdd(modID)
                 .packageFilter(AbstractPackmasterCard.class)
                 .setDefaultSeen(true)
@@ -256,14 +357,77 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostInitialize() {
         declarePacks();
-        BaseMod.logger.info("Full list of packs: " + unfilteredAllPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
+        logger.info("Full list of packs: " + unfilteredAllPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
 
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
 
-        currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
-        BaseMod.addSaveField("Anniversary5Mod", thismod);
+        logger.info("Prepping dream hand");
+        DeepDreamPatch.dreamHand = new DeepDreamPatch.DreamHand();
 
+        logger.info("Checking playability annotations");
+        OccultPatch.testPlayability();
+
+        final Color occultGlow = CardHelper.getColor(88.0f, 26.0f, 150.0f);
+        CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
+            @Override
+            public boolean test(AbstractCard card) {
+                return OccultFields.isOccult.get(card);
+            }
+
+            @Override
+            public Color getColor(AbstractCard card) {
+                return occultGlow.cpy();
+            }
+
+            @Override
+            public String glowID() {
+                return makeID("OccultGlow");
+            }
+        });
+
+        currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
+
+        addPotions();
+
+        initializeConfig();
+
+        initializeSavedData();
+    }
+
+    public static void addPotions() {
+        BaseMod.addPotion(AttackPotionButClaw.class, Color.RED, Color.WHITE, Color.FIREBRICK, AttackPotionButClaw.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(DivinePotion.class, Color.ORANGE, Color.YELLOW, Color.ORANGE, DivinePotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+
+        if (Loader.isModLoaded("widepotions")) {
+            Consumer<String> whitelist = getWidePotionsWhitelistMethod();
+            whitelist.accept(AttackPotionButClaw.POTION_ID);
+            whitelist.accept(ClawPowerPotion.POTION_ID);
+            whitelist.accept(DrawClawsPotion.POTION_ID);
+            whitelist.accept(GenerateClawsPotion.POTION_ID);
+            whitelist.accept(DivinePotion.POTION_ID);
+        }
+    }
+
+    private static Consumer<String> getWidePotionsWhitelistMethod() {
+        // To avoid the need for a dependency of any kind, we call Wide Potions through reflection
+        try {
+            Method whitelistMethod = Class.forName("com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod").getMethod("whitelistSimplePotion", String.class);
+            return s -> {
+                try {
+                    whitelistMethod.invoke(null, s);
+                } catch (IllegalAccessException | InvocationTargetException e) {
+                    e.printStackTrace();
+                    throw new RuntimeException("Error trying to whitelist wide potion for " + s, e);
+                }
+            };
+        } catch (NoSuchMethodException | ClassNotFoundException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Could not find method WidePotionsMod.whitelistSimplePotion", e);
+        }
     }
 
     private String getLangString() {
@@ -300,12 +464,12 @@ public class SpireAnniversary5Mod implements
                 .stream()
                 .filter(c -> !baseGamePacks.contains(c.getName()))
                 .collect(Collectors.toList());
-        BaseMod.logger.info("Found pack classes with AutoAdd: " + packClasses.size());
+        logger.info("Found pack classes with AutoAdd: " + packClasses.size());
 
         for (CtClass packClass : packClasses) {
             String packName = packClass.getSimpleName().toLowerCase();
             String languageAndPack = getLangString() + "/" + packName;
-            BaseMod.logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
+            logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             //Do not need to be checked as these always need to exist
             BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + languageAndPack + "/Cardstrings.json");
 
@@ -324,6 +488,9 @@ public class SpireAnniversary5Mod implements
             }
             if (Gdx.files.internal(filepath + "Orbstrings.json").exists()) {
                 BaseMod.loadCustomStringsFile(OrbStrings.class, filepath + "Orbstrings.json");
+            }
+            if (Gdx.files.internal(filepath + "Potionstrings.json").exists()) {
+                BaseMod.loadCustomStringsFile(PotionStrings.class, filepath + "Potionstrings.json");
             }
         }
     }
@@ -344,7 +511,7 @@ public class SpireAnniversary5Mod implements
         for (CtClass packClass : packClasses) {
             String packName = packClass.getSimpleName().toLowerCase();
             String languageAndPack = getLangString() + "/" + packName;
-            BaseMod.logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
+            logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             String packJson = modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json";
             FileHandle handle = Gdx.files.internal(packJson);
             if (handle.exists()) {
@@ -364,6 +531,12 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(BEES_KEY, BEES_OGG);
         BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
+        BaseMod.addAudio(EVIL_KEY, EVIL_OGG);
+        BaseMod.addAudio(PANDA_KEY, PANDA_OGG);
+        BaseMod.addAudio(PORCUPINE_KEY, PORCUPINE_OGG);
+        BaseMod.addAudio(DIE_KEY, DIE_OGG);
+        BaseMod.addAudio(DICE_KEY, DICE_OGG);
+        BaseMod.addAudio(DICELOTS_KEY, DICELOTS_OGG);
         BaseMod.addAudio(TRANSMUTATION_KEY, TRANSMUTATION_OGG);
         BaseMod.addAudio(WATER_IMPACT_1_KEY, WATER_IMPACT_1_OGG);
         BaseMod.addAudio(WATER_IMPACT_2_KEY, WATER_IMPACT_2_OGG);
@@ -374,21 +547,47 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(STEAM_IMPACT_1_KEY, STEAM_IMPACT_1_OGG);
         BaseMod.addAudio(STEAM_IMPACT_2_KEY, STEAM_IMPACT_2_OGG);
         BaseMod.addAudio(STEAM_IMPACT_3_KEY, STEAM_IMPACT_3_OGG);
-        BaseMod.addAudio(GUN1_KEY,GUN1_OGG);
-        BaseMod.addAudio(GUN2_KEY,GUN2_OGG);
-        BaseMod.addAudio(GUN3_KEY,GUN3_OGG);
-        BaseMod.addAudio("UpgradesPack_ShortUpgrade","anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
+        BaseMod.addAudio(GUN1_KEY, GUN1_OGG);
+        BaseMod.addAudio(GUN2_KEY, GUN2_OGG);
+        BaseMod.addAudio(GUN3_KEY, GUN3_OGG);
+        BaseMod.addAudio("UpgradesPack_ShortUpgrade", "anniv5Resources/audio/UpgradesPack_ShortUpgrade.ogg");
+        BaseMod.addAudio(makeID("RipPack_Rip"), makePath("audio/rippack/rip.mp3"));
+        BaseMod.addAudio(makeID("RipPack_Yay"), makePath("audio/rippack/yay.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Ding"), makePath("audio/rippack/ding.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Charge"), makePath("audio/rippack/spearcharge.mp3"));
+        BaseMod.addAudio(makeID("RipPack_SpearThrow"), makePath("audio/rippack/spearthrow.mp3"));
+        BaseMod.addAudio(makeID("RipPack_MorningStarThrow"), makePath("audio/rippack/scythe.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Party"), makePath("audio/rippack/party.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Splash"), makePath("audio/rippack/splash.mp3"));
+        BaseMod.addAudio(makeID("RipPack_Ahh"), makePath("audio/rippack/ahh.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Ohh"), makePath("audio/rippack/ohh.mp3"));
+        BaseMod.addAudio(makeID("RipPack_Sword"), makePath("audio/rippack/sword.ogg"));
+        BaseMod.addAudio(modID + "dice1", modID + "Resources/audio/DiceRoll1.wav");
+        BaseMod.addAudio(modID + "dice2", modID + "Resources/audio/DiceRoll2.wav");
+        BaseMod.addAudio(modID + "dice3", modID + "Resources/audio/DiceRoll3.wav");
+        BaseMod.addAudio(modID + "dice4", modID + "Resources/audio/DiceRoll4.wav");
+        BaseMod.addAudio(modID + "fast", modID + "Resources/audio/rimworldpack/fast.wav");
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
-        for (AbstractCard cardInDeck : p().masterDeck.group) {
-            if (cardInDeck instanceof AbstractVPCard) {
-                atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
-                break;
-            }
-        }
+        UltimateHomerun.HIGH_SCORE = 0;
+        CLAW_SHARP_TRACKER = 0;
+        combatExhausts = 0;
+        MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
+        EnergyAndEchoPack.resetvalues();
+        EnergyCountPatch.energySpentThisCombat = 0;
+    }
+
+    @Override
+    public void receivePostExhaust(AbstractCard arg0) {
+        combatExhausts++;
+    }
+
+    @Override
+    public void receiveOnPlayerTurnStart() {
+        Leprechaun.staticStartOfTurn();
     }
 
     public static void declarePacks() {
@@ -405,7 +604,9 @@ public class SpireAnniversary5Mod implements
                     if (PackFilterMenu.getFilterConfig(pack.packID)) {
                         allPacks.add(pack);
                     }
+                    packExclusivePotions.addAll(pack.getPackPotions());
                 });
+
     }
 
     public static AbstractCardPack getRandomPackFromAll() {
@@ -417,7 +618,12 @@ public class SpireAnniversary5Mod implements
     }
 
     public static AbstractCard getRandomCardFromPack(AbstractCardPack pack) {
-        return pack.cards.get(AbstractDungeon.cardRandomRng.random(0, pack.cards.size() - 1)).makeCopy();
+        List<AbstractCard> validCards = pack.cards
+                .stream()
+                .filter(c -> c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
+                .filter(c -> !c.hasTag(AbstractCard.CardTags.HEALING))
+                .collect(Collectors.toList());
+        return validCards.get(AbstractDungeon.cardRandomRng.random(0, validCards.size() - 1)).makeCopy();
     }
 
 
@@ -436,7 +642,8 @@ public class SpireAnniversary5Mod implements
             ) {
                 if (CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.COMMON ||
                         CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.UNCOMMON ||
-                        CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.RARE) cards.add(CardLibrary.getCard(s2).makeCopy());
+                        CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.RARE)
+                    cards.add(CardLibrary.getCard(s2).makeCopy());
             }
         }
 
@@ -502,7 +709,7 @@ public class SpireAnniversary5Mod implements
             packSetup.add(RANDOM);
             packSetup.add(RANDOM);
             packSetup.add(RANDOM);
-            packSetup.add(RANDOM);
+            packSetup.add(CHOICE);
             packSetup.add(CHOICE);
             packSetup.add(CHOICE);
         }
@@ -511,7 +718,7 @@ public class SpireAnniversary5Mod implements
         int choicesToSetup = 0;
 
         for (String setupType : packSetup) {
-            BaseMod.logger.info("Setting up Pack type " + setupType + ".");
+            logger.info("Setting up Pack type " + setupType + ".");
 
             switch (setupType) {
                 case RANDOM:
@@ -523,7 +730,7 @@ public class SpireAnniversary5Mod implements
                 default:
                     for (AbstractCardPack pack : unfilteredAllPacks) {
                         if (pack.packID.equals(setupType)) {
-                            BaseMod.logger.info("Found pack matching name " + pack.name);
+                            logger.info("Found pack matching name " + pack.name);
                             currentPoolPacks.add(pack);
                         }
                     }
@@ -534,12 +741,11 @@ public class SpireAnniversary5Mod implements
     }
 
     private static void startOfGamePackReveals() {
-        BaseMod.logger.info("Total packs: " + currentPoolPacks.toString());
-        //TODO - Don't render the title screen for act 1
+        logger.info("Total packs: " + currentPoolPacks.toString());
         CardGroup packDisplays = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
-        if(currentPoolPacks.size() != PACKS_PER_RUN) {
-            BaseMod.logger.error( MessageFormat.format("Less packs in pool than expected: {0}/{1}", currentPoolPacks.size(), PACKS_PER_RUN));
+        if (currentPoolPacks.size() != PACKS_PER_RUN) {
+            logger.error(MessageFormat.format("Less packs in pool than expected: {0}/{1}", currentPoolPacks.size(), PACKS_PER_RUN));
         }
 
         for (AbstractCardPack pack : currentPoolPacks) {
@@ -556,7 +762,7 @@ public class SpireAnniversary5Mod implements
     public void receivePostUpdate() {
         if (!openedStarterScreen) {
             if (CardCrawlGame.isInARun() && doPackSetup && !AbstractDungeon.isScreenUp) {
-                BaseMod.logger.info("Starting Packmaster setup.");
+                logger.info("Starting Packmaster setup.");
                 startOfGamePackSetup();
                 openedStarterScreen = true;
             }
@@ -565,8 +771,10 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        ImproveAction._clean();
+        DeepDreamPatch.wakeUp();
+        ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
+        combatExhausts = 0;
     }
 
     @Override
@@ -613,31 +821,94 @@ public class SpireAnniversary5Mod implements
         }
     }
 
-    @Override
-    public ArrayList<String> onSave() {
-        ArrayList<String> packIDs = new ArrayList<>();
-        for (AbstractCardPack pack : currentPoolPacks) {
-            packIDs.add(pack.packID);
-        }
-        return packIDs;
-    }
-
-    @Override
-    public void onLoad(ArrayList<String> strings) {
-        currentPoolPacks.clear();
-        if (strings != null) {
-            for (String s : strings) {
-                currentPoolPacks.add(packsByID.get(s));
-            }
-        }
-    }
 
     @Override
     public void receiveStartGame() {
         BaseMod.removeTopPanelItem(currentRunCardsTopPanelItem);
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
+
+            Hats.atRunStart();
+            SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
+
     }
 
+    public static class Enums {
+        @SpireEnum
+        public static AbstractGameAction.AttackEffect EVIL;
+    }
+
+    private ModPanel settingsPanel;
+
+    public static boolean allPacksMode = false;
+    public static boolean oneFrameMode = false;
+
+    private void initializeConfig() {
+        UIStrings configStrings = CardCrawlGame.languagePack.getUIString(makeID("ConfigMenuText"));
+
+        Texture badge = TexLoader.getTexture(makeImagePath("ui/badge.png"));
+
+        settingsPanel = new ModPanel();
+        //int configStep = 40;
+
+        ModLabeledToggleButton allPacksModeBtn = new ModLabeledToggleButton(configStrings.TEXT[3], 350.0f, 600F, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
+
+        }, (button) -> {
+            allPacksMode = button.enabled;
+            saveAllPacksMode();
+        });
+
+        settingsPanel.addUIElement(allPacksModeBtn);
+
+        ModLabeledToggleButton oneFrameModeBtn = new ModLabeledToggleButton(configStrings.TEXT[4], 350.0f, 400F, Settings.CREAM_COLOR, FontHelper.charDescFont, oneFrameMode, settingsPanel, (label) -> {
+
+        }, (button) -> {
+            oneFrameMode = button.enabled;
+            saveOneFrameMode();
+        });
+
+        settingsPanel.addUIElement(oneFrameModeBtn);
+
+        BaseMod.registerModBadge(badge, configStrings.TEXT[0], configStrings.TEXT[1], configStrings.TEXT[2], settingsPanel);
+    }
+
+    private void initializeSavedData() {
+        BaseMod.addSaveField("PackmasterPacksSelected", new CustomSavable<ArrayList<String>>() {
+            @Override
+            public ArrayList<String> onSave() {
+                ArrayList<String> packIDs = new ArrayList<>();
+                for (AbstractCardPack p : currentPoolPacks) {
+                    packIDs.add(p.packID);
+                }
+                return packIDs;
+            }
+
+            @Override
+            public void onLoad(ArrayList<String> strings) {
+                logger.info("Loading. Packs cleared.");
+                currentPoolPacks.clear();
+                for (String packID : strings) {
+                    logger.info("adding pack " + packID + " from load");
+                    currentPoolPacks.add(packsByID.get(packID));
+                }
+            }
+        });
+
+        BaseMod.addSaveField("PackmasterWornHat", new CustomSavable<String>() {
+            @Override
+            public String onSave() {
+                return Hats.currentHat;
+            }
+
+            @Override
+            public void onLoad(String s) {
+                logger.info("Loading. Hat: " + s);
+                if (s != null) {
+                    Hats.currentHat = s;
+                    Hats.addHat(true, Hats.currentHat);
+                }
+            }
+        });
+    }
 }

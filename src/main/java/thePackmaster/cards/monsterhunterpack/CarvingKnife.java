@@ -1,18 +1,24 @@
 package thePackmaster.cards.monsterhunterpack;
 
 import com.badlogic.gdx.Gdx;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.blue.Hyperbeam;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.MonsterRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import thePackmaster.actions.monsterhunterpack.CarveAction;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
+import static com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField.fleeting;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class CarvingKnife extends AbstractMonsterHunterCard {
@@ -31,16 +37,19 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
     @Override
     public void update() {
         super.update();
-        if (!cardToPreview.isEmpty()) {
+        if (!cardToPreview.isEmpty() && AbstractDungeon.actionManager.isEmpty()) {
             if (hb.hovered) {
                 if (rotationTimer <= 0F) {
                     rotationTimer = getRotationTimeNeeded();
-                    cardsToPreview = cardToPreview.get(previewIndex);
                     if (previewIndex == cardToPreview.size() - 1) {
                         previewIndex = 0;
                     } else {
                         previewIndex++;
                     }
+                    if (previewIndex >= cardToPreview.size()){
+                        previewIndex = cardToPreview.size()-1;
+                    }
+                    cardsToPreview = cardToPreview.get(previewIndex);
                 } else {
                     rotationTimer -= Gdx.graphics.getDeltaTime();
                 }
@@ -52,24 +61,38 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
     public CarvingKnife() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
-        this.exhaust = true;
+        FleetingField.fleeting.set(this, true);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new CarveAction(m, new DamageInfo(m, damage, DamageInfo.DamageType.NORMAL)));
+        addToBot(new CarveAction(m, new DamageInfo(m, damage, DamageInfo.DamageType.NORMAL), this));
+        this.cardToPreview.clear();
+        this.previewIndex = 0;
     }
 
     public void applyPowers(){
         super.applyPowers();
         this.cardToPreview.clear();
         for (AbstractMonster m : Wiz.getEnemies()){
-            if ( m.type == AbstractMonster.EnemyType.ELITE || m.type == AbstractMonster.EnemyType.BOSS){
-                this.cardToPreview.add(MonsterWeapon(m.id));
+            if (!m.isDeadOrEscaped() && (m.type == AbstractMonster.EnemyType.ELITE || m.type == AbstractMonster.EnemyType.BOSS)){
+                if (!this.cardToPreview.contains(MonsterWeapon(m.id))) {
+                    this.cardToPreview.add(MonsterWeapon(m.id));
+                }
+            }
+            if (!m.isDeadOrEscaped() && AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
+                if (m.id.equals("AcidSlime_L") || m.id.equals("SpikeSlime_L")) {
+                    if (!this.cardToPreview.contains(MonsterWeapon(m.id))) {
+                        this.cardToPreview.add(MonsterWeapon(m.id));
+                    }
+                }
             }
         }
     }
 
     public AbstractCard MonsterWeapon(String id){
+        if (id == null){
+            return new Hyperbeam();
+        }
         switch (id){
             case "GremlinNob":
                 return new SkullClub();
@@ -79,10 +102,18 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
                 return new ShellPauldrons();
             case "TheGuardian":
                 return new GuardianShield();
-            case "Hexaghost:":
+            case "Hexaghost":
                 return new InfernoDaggers();
             case "SlimeBoss":
                 return new SlimeHammer();
+            case "SpikeSlime_L":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
+            case "AcidSlime_L":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
             case "BookOfStabbing":
                 return new StabManual();
             case "SlaverBoss":

@@ -12,6 +12,13 @@
     "NAMES": [
       "charge up"
     ],
-    "DESCRIPTION": "At #b8 or more stacks, double the damage of the next Attack and lose #b8 stacks."
+    "DESCRIPTION": "At #b6 or more stacks, double the damage of the next Attack and lose #b6 stacks."
+  },
+  {
+    "PROPER_NAME": "Flurry",
+    "NAMES": [
+      "flurry"
+    ],
+    "DESCRIPTION": "Specified effect triggers every time you play a card this turn."
   }
 ]

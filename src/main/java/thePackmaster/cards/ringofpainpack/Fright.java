@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -23,6 +24,8 @@ public class Fright extends AbstractPackmasterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = DRAW;
+
+        if (!SpireAnniversary5Mod.oneFrameMode)
         setBackgroundTexture(
                 "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
                 "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"

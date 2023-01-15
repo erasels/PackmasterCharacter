@@ -15,11 +15,8 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RareStrike extends AbstractPackmasterCard {
+public class RareStrike extends AbstractUtilityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("RareStrike");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int DAMAGE = 6;
     private static final int EXTRA_DAMAGE = 2;

@@ -20,7 +20,8 @@ public class Knighthood extends AbstractDimensionalCard {
 
         setFrame("knighthoodframe.png");
         exhaust = true;
-
+        tags.add(CardTags.HEALING);
+        isEthereal = true;
     }
 
 
@@ -38,6 +39,6 @@ public class Knighthood extends AbstractDimensionalCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        isEthereal = false;
     }
 }

@@ -1,16 +1,13 @@
 package thePackmaster.cards.marisapack;
 
-import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
-import com.megacrit.cardcrawl.vfx.combat.ViceCrushEffect;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
@@ -21,13 +18,14 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class UltimateShortwave extends AbstractPackmasterCard implements AmplifyCard {
     public final static String ID = makeID(UltimateShortwave.class.getSimpleName());
-    private static final int MAGIC = 1, S_MAGIC = 2, INC = 1;
+    private static final int MAGIC = 1, S_MAGIC = 1, UPG_MAG = 2, INC = 1;
 
     public UltimateShortwave() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         baseSecondMagic = secondMagic = S_MAGIC;
 
+        if (!SpireAnniversary5Mod.oneFrameMode)
         setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
                 "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
@@ -39,7 +37,7 @@ public class UltimateShortwave extends AbstractPackmasterCard implements Amplify
     }
 
     public void upp() {
-        isInnate = true;
+        upgradeSecondMagic(UPG_MAG);
     }
 
     @Override

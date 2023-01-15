@@ -11,7 +11,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class SwarmSword extends AbstractPackmasterCard {
+public class SwarmSword extends AbstractInfestCard {
     public final static String ID = makeID("SwarmSword");
     // intellij stuff attack, enemy, common, 9, 3, , , , 
 
