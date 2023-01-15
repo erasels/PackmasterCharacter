@@ -3,9 +3,8 @@ package thePackmaster.cards.energyandechopack;
 import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BerserkPower;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.energyandechopack.ReceptorPower;
+import thePackmaster.powers.energyandechopack.SlowingPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
@@ -26,7 +25,7 @@ public class Slowing extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new BerserkPower(p, 1));
+        applyToSelf(new SlowingPower(p, 1));
         makeInHand(cardsToPreview.makeCopy(), magicNumber);
     }
 

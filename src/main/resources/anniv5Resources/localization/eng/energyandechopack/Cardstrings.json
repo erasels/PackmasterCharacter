@@ -29,10 +29,6 @@
     "NAME": "Overload",
     "DESCRIPTION": "Deal !D! damage. NL Increase this card's damage by !M! and cost by 1 this combat."
   },
-  "${ModID}:DivineTouch": {
-    "NAME": "Divine Touch",
-    "DESCRIPTION": "The first time a card is created each turn, replace it with Double energy."
-  },
   "${ModID}:Panacher": {
     "NAME": "Panacher",
     "DESCRIPTION": "Every time you create 5 cards, deal !M! damage to ALL enemies."
@@ -41,5 +37,10 @@
     "NAME": "Slowing",
     "DESCRIPTION": "At the start of your turn, gain [E] . NL Add !M! *Wounds into your hand.",
     "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E] . NL Add a *Wound into your hand."
+  },
+  "${ModID}:Crystallize": {
+    "NAME": "Crystallize",
+    "DESCRIPTION": "Gain !M! Block for each [E] available.",
+    "EXTENDED_DESCRIPTION": ["Gain !M! Block for each [E] available. NL (Gain !B! Block.)"]
   }
 }

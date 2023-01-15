@@ -33,8 +33,8 @@ public class EnergyAndEchoPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
+        cards.add(Crystallize.ID);
         cards.add(Discharge.ID);
-        cards.add(DivineTouch.ID);
         cards.add(Flashlight.ID);
         cards.add(MagnetRise.ID);
         cards.add(Overload.ID);

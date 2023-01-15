@@ -1,12 +1,10 @@
 {
-  "${ModID}:DivineTouchPower": {
-    "NAME": "Divine Touch",
+  "${ModID}:SlowingPower": {
+    "NAME": "Slowing",
     "DESCRIPTIONS": [
-      "The",
+      "At the start of your turn, gain",
       " #b",
-      " first time",
-      "s",
-      " a card is created each turn, replace it with #yDouble #yEnergy"
+      " [E] ."
     ]
   },
   "${ModID}:PanacherPower": {

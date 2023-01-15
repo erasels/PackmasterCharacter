@@ -8,11 +8,12 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import thePackmaster.SpireAnniversary5Mod;
 
 import static thePackmaster.util.Wiz.atb;
 
 public class EchoMod extends AbstractCardModifier {
-    public static String ID = "anniv5:EchoMod";
+    public static String ID = SpireAnniversary5Mod.makeID("EchoMod");
 
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         AbstractCard c = card.makeCopy();

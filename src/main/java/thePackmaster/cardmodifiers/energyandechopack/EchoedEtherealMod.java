@@ -14,7 +14,7 @@ import thePackmaster.cards.marisapack.AmplifyCard;
 
 //Basically Ethereal Modifier but it will go at the bottom and won't NL
 public class EchoedEtherealMod extends AbstractCardModifier {
-    public static String ID = "anniv5:EchoedEtherealMod";
+    public static String ID = SpireAnniversary5Mod.makeID("EchoedEtherealMod");
 
     public String modifyDescription(String rawDescription, AbstractCard card) {
         return rawDescription + " " + StringUtils.capitalize(GameDictionary.ETHEREAL.NAMES[0]) + (Settings.lineBreakViaCharacter ? " " : "") + LocalizedStrings.PERIOD;

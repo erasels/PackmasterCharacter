@@ -33,9 +33,9 @@ public class PanacherPower extends AbstractPackmasterPower {
         if (this.amount2 <= 0) {
             this.flash();
             this.amount2 = 5;
-            this.updateDescription();
             this.addToBot(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
+        this.updateDescription();
     }
 
     @Override
