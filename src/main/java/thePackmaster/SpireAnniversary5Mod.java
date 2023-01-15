@@ -53,6 +53,7 @@ import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
+import thePackmaster.patches.sneckopack.EnergyCountPatch;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
 import thePackmaster.potions.clawpack.DrawClawsPotion;
@@ -518,6 +519,7 @@ public class SpireAnniversary5Mod implements
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
         EnergyAndEchoPack.resetvalues();
+        EnergyCountPatch.energySpentThisCombat = 0;
     }
 
     @Override
