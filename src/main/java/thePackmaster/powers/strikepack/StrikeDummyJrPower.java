@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import thePackmaster.powers.AbstractPackmasterPower;
 
+import static thePackmaster.SpireAnniversary5Mod.CLAW;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class StrikeDummyJrPower extends AbstractPackmasterPower {
@@ -21,9 +22,11 @@ public class StrikeDummyJrPower extends AbstractPackmasterPower {
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        return card.hasTag(AbstractCard.CardTags.STRIKE) ? super.atDamageGive(damage, type, card) + amount : super.atDamageGive(damage, type, card);
+        if (card.hasTag(AbstractCard.CardTags.STRIKE)) {
+            return damage + amount;
+        }
+        return damage;
     }
-
 
     @Override
     public void updateDescription() {

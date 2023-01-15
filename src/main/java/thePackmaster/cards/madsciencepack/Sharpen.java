@@ -18,6 +18,7 @@ public class Sharpen extends AbstractMadScienceCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 5;
+        tags.add(CardTags.STRIKE);
 
     }
 

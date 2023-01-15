@@ -11,11 +11,8 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.aggressionpack.InnerFuryPower;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 
-public class InnerFury extends AbstractPackmasterCard {
+public class InnerFury extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("InnerFury");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int TEMP_STRENGTH_AND_BLOCK = 3;
     private static final int UPGRADE_TEMP_STRENGTH_AND_BLOCK = 2;

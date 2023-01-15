@@ -12,11 +12,8 @@ import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class IceWall extends AbstractPackmasterCard {
+public class IceWall extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("IceWall");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int BLOCK = 7;
     private static final int UPGRADE_BLOCK = 3;

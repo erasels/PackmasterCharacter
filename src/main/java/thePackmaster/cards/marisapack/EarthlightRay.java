@@ -12,7 +12,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class EarthlightRay extends AbstractPackmasterCard {
     public final static String ID = makeID(EarthlightRay.class.getSimpleName());
-    private static final int UPG_COST = 2, MAGIC = 1;
+    private static final int UPG_COST = 2, MAGIC = 3;
 
     public EarthlightRay() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);

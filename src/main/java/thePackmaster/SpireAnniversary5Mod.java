@@ -11,12 +11,12 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -38,10 +38,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
-import thePackmaster.cards.eurogamepack.AbstractVPCard;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.hats.Hats;
 import thePackmaster.orbs.summonspack.Louse;
@@ -52,20 +52,27 @@ import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
+import thePackmaster.potions.clawpack.AttackPotionButClaw;
+import thePackmaster.potions.clawpack.ClawPowerPotion;
+import thePackmaster.potions.clawpack.DrawClawsPotion;
+import thePackmaster.potions.clawpack.GenerateClawsPotion;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
-import thePackmaster.powers.eurogamepack.VictoryPoints;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.SpireAnniversary5SaveWrapper;
+import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.CHOICE;
@@ -87,7 +94,8 @@ public class SpireAnniversary5Mod implements
         PostBattleSubscriber,
         PostPowerApplySubscriber,
         StartGameSubscriber,
-        CustomSavable<SpireAnniversary5SaveWrapper> {
+        CustomSavable<SpireAnniversary5SaveWrapper>, {
+        PostExhaustSubscriber {
     private static final Logger logger = LogManager.getLogger("Packmaster");
 
     public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
@@ -140,6 +148,10 @@ public class SpireAnniversary5Mod implements
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
     public static final String EVIL_KEY = makeID("Evil");
     private static final String EVIL_OGG = makePath("audio/summonspack/Evil.ogg");
+    public static final String PANDA_KEY = makeID("Panda");
+    private static final String PANDA_OGG = makePath("audio/summonspack/Panda.ogg");
+    public static final String PORCUPINE_KEY = makeID("Porcupine");
+    private static final String PORCUPINE_OGG = makePath("audio/summonspack/Porcupine.ogg");
     public static final String TRANSMUTATION_KEY = makeID("Transmutation");
     private static final String TRANSMUTATION_OGG = makePath("audio/transmutationpack/Transmutation.ogg");
     public static final String WATER_IMPACT_1_KEY = makeID("WaterImpactOne");
@@ -167,12 +179,15 @@ public class SpireAnniversary5Mod implements
     public static final String GUN3_KEY = makeID("Gun3");
     private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
 
-    public static final String EVIL_EFFECT_FILE = makePath("images/vfx/summonspack/Evil.png");
+    public static final String EVIL_EFFECT_FILE = makePath("images/orbs/summonsPack/Evil.png");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
     public static final ArrayList<Louse> louseList = new ArrayList<>();
 
     public static boolean selectedCards = false;
+    public static int combatExhausts = 0;
+
+    public static int CLAW_SHARP_TRACKER = 0;
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
@@ -183,6 +198,9 @@ public class SpireAnniversary5Mod implements
 
     @SpireEnum
     public static AbstractCard.CardTags MAGIC;
+
+    @SpireEnum
+    public static AbstractCard.CardTags CLAW;
 
     public SpireAnniversary5Mod() {
         BaseMod.subscribe(this);
@@ -283,6 +301,7 @@ public class SpireAnniversary5Mod implements
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
+        BaseMod.addDynamicVariable(new HoardVar());
         new AutoAdd(modID)
                 .packageFilter(AbstractPackmasterCard.class)
                 .setDefaultSeen(true)
@@ -324,6 +343,41 @@ public class SpireAnniversary5Mod implements
 
         currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
         BaseMod.addSaveField("Anniversary5Mod", thismod);
+
+        addPotions();
+    }
+
+    public static void addPotions() {
+        BaseMod.addPotion(AttackPotionButClaw.class, Color.RED, Color.WHITE, Color.FIREBRICK, AttackPotionButClaw.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+
+        if (Loader.isModLoaded("widepotions")) {
+            Consumer<String> whitelist = getWidePotionsWhitelistMethod();
+            whitelist.accept(AttackPotionButClaw.POTION_ID);
+            whitelist.accept(ClawPowerPotion.POTION_ID);
+            whitelist.accept(DrawClawsPotion.POTION_ID);
+            whitelist.accept(GenerateClawsPotion.POTION_ID);
+        }
+    }
+
+    private static Consumer<String> getWidePotionsWhitelistMethod() {
+        // To avoid the need for a dependency of any kind, we call Wide Potions through reflection
+        try {
+            Method whitelistMethod = Class.forName("com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod").getMethod("whitelistSimplePotion", String.class);
+            return s -> {
+                try {
+                    whitelistMethod.invoke(null, s);
+                } catch (IllegalAccessException | InvocationTargetException e) {
+                    e.printStackTrace();
+                    throw new RuntimeException("Error trying to whitelist wide potion for " + s, e);
+                }
+            };
+        } catch (NoSuchMethodException | ClassNotFoundException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Could not find method WidePotionsMod.whitelistSimplePotion", e);
+        }
     }
 
     private String getLangString() {
@@ -385,6 +439,9 @@ public class SpireAnniversary5Mod implements
             if (Gdx.files.internal(filepath + "Orbstrings.json").exists()) {
                 BaseMod.loadCustomStringsFile(OrbStrings.class, filepath + "Orbstrings.json");
             }
+            if (Gdx.files.internal(filepath + "Potionstrings.json").exists()) {
+                BaseMod.loadCustomStringsFile(PotionStrings.class, filepath + "Potionstrings.json");
+            }
         }
     }
 
@@ -425,6 +482,8 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
         BaseMod.addAudio(EVIL_KEY, EVIL_OGG);
+        BaseMod.addAudio(PANDA_KEY, PANDA_OGG);
+        BaseMod.addAudio(PORCUPINE_KEY, PORCUPINE_OGG);
         BaseMod.addAudio(TRANSMUTATION_KEY, TRANSMUTATION_OGG);
         BaseMod.addAudio(WATER_IMPACT_1_KEY, WATER_IMPACT_1_OGG);
         BaseMod.addAudio(WATER_IMPACT_2_KEY, WATER_IMPACT_2_OGG);
@@ -450,22 +509,25 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(makeID("RipPack_Ahh"), makePath("audio/rippack/ahh.ogg"));
         BaseMod.addAudio(makeID("RipPack_Ohh"), makePath("audio/rippack/ohh.mp3"));
         BaseMod.addAudio(makeID("RipPack_Sword"), makePath("audio/rippack/sword.ogg"));
-        BaseMod.addAudio(modID + "dice1", modID + "Resources/audio/DiceRoll1.wav");
-        BaseMod.addAudio(modID + "dice2", modID + "Resources/audio/DiceRoll2.wav");
-        BaseMod.addAudio(modID + "dice3", modID + "Resources/audio/DiceRoll3.wav");
-        BaseMod.addAudio(modID + "dice4", modID + "Resources/audio/DiceRoll4.wav");
+        BaseMod.addAudio(modID + "dice1",  modID + "Resources/audio/DiceRoll1.wav");
+        BaseMod.addAudio(modID + "dice2",  modID + "Resources/audio/DiceRoll2.wav");
+        BaseMod.addAudio(modID + "dice3",  modID + "Resources/audio/DiceRoll3.wav");
+        BaseMod.addAudio(modID + "dice4",  modID + "Resources/audio/DiceRoll4.wav");
+        BaseMod.addAudio(modID + "fast",  modID + "Resources/audio/rimworldpack/fast.wav");
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
-        for (AbstractCard cardInDeck : p().masterDeck.group) {
-            if (cardInDeck instanceof AbstractVPCard) {
-                atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
-                break;
-            }
-        }
+        UltimateHomerun.HIGH_SCORE = 0;
+        CLAW_SHARP_TRACKER = 0;
+        combatExhausts = 0;
     }
+    
+	@Override
+	public void receivePostExhaust(AbstractCard arg0) {
+		combatExhausts++;
+	}
 
     public static void declarePacks() {
         // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
@@ -651,6 +713,7 @@ public class SpireAnniversary5Mod implements
         DeepDreamPatch.wakeUp();
         ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
+        combatExhausts=0;
     }
 
     @Override
