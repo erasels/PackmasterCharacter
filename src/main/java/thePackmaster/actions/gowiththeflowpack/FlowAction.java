@@ -25,8 +25,7 @@ public class FlowAction extends AbstractGameAction {
     private final Consumer<ArrayList<AbstractCard>> followup;
 
     public FlowAction() {
-        duration = DURATION;
-        followup = null;
+        this(null);
     }
 
     public FlowAction(Consumer<ArrayList<AbstractCard>> followup) {
