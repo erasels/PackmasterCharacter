@@ -3,6 +3,7 @@ package thePackmaster.cards.ringofpainpack;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.ringofpainpack.ConnectionPower;
 
@@ -14,6 +15,8 @@ public class Connection extends AbstractPackmasterCard {
 
     public Connection() {
         super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+
+        if (!SpireAnniversary5Mod.oneFrameMode)
         setBackgroundTexture(
                 "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
                 "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"

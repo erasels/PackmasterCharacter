@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Frost;
+import thePackmaster.SpireAnniversary5Mod;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -28,6 +29,8 @@ public class IceBeast extends AbstractEvolveCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = FROST;
+
+        if (!SpireAnniversary5Mod.oneFrameMode)
         setBackgroundTexture(
                 "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
                 "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"

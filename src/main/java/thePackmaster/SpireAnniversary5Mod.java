@@ -283,8 +283,19 @@ public class SpireAnniversary5Mod implements
         }
     }
 
+    public static void saveOneFrameMode() {
+        try {
+            if (modConfig == null) return;
+            modConfig.setBool("PackmasterOneFrameMode", oneFrameMode);
+            modConfig.save();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static void loadModConfigData() {
         allPacksMode = modConfig.getBool("PackmasterAllPacksMode");
+        oneFrameMode = modConfig.getBool("PackmasterOneFrameMode");
     }
 
     public static ArrayList<String> getUnlockedHats() {
@@ -834,6 +845,7 @@ public class SpireAnniversary5Mod implements
     private ModPanel settingsPanel;
 
     public static boolean allPacksMode = false;
+    public static boolean oneFrameMode = false;
 
     private void initializeConfig() {
         UIStrings configStrings = CardCrawlGame.languagePack.getUIString(makeID("ConfigMenuText"));
@@ -841,10 +853,9 @@ public class SpireAnniversary5Mod implements
         Texture badge = TexLoader.getTexture(makeImagePath("ui/badge.png"));
 
         settingsPanel = new ModPanel();
-        int configPos = 600;
         //int configStep = 40;
 
-        ModLabeledToggleButton allPacksModeBtn = new ModLabeledToggleButton(configStrings.TEXT[3], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
+        ModLabeledToggleButton allPacksModeBtn = new ModLabeledToggleButton(configStrings.TEXT[3], 350.0f, 600F, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             allPacksMode = button.enabled;
@@ -852,6 +863,15 @@ public class SpireAnniversary5Mod implements
         });
 
         settingsPanel.addUIElement(allPacksModeBtn);
+
+        ModLabeledToggleButton oneFrameModeBtn = new ModLabeledToggleButton(configStrings.TEXT[4], 350.0f, 400F, Settings.CREAM_COLOR, FontHelper.charDescFont, oneFrameMode, settingsPanel, (label) -> {
+
+        }, (button) -> {
+            oneFrameMode = button.enabled;
+            saveOneFrameMode();
+        });
+
+        settingsPanel.addUIElement(oneFrameModeBtn);
 
         BaseMod.registerModBadge(badge, configStrings.TEXT[0], configStrings.TEXT[1], configStrings.TEXT[2], settingsPanel);
     }
