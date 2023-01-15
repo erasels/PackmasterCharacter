@@ -21,7 +21,7 @@ public class Hats {
     public static void removeHat(boolean inRun) {
         if (headbone == null && !inRun) {
             setupSkeleton(HatMenu.dummy, true);
-        } else {
+        } else if (playerbone == null && inRun) {
             setupSkeleton(AbstractDungeon.player, false);
         }
         if (inRun) {
