@@ -28,11 +28,12 @@ public class Rummage extends AbstractPackmasterCard {
             public void update() {
                 isDone = true;
                 ArrayList<AbstractCard> possCardsList = new ArrayList<>();
+                ArrayList<AbstractCard> chosenCards = new ArrayList<>();
                 int highestcost = 0;
 
                 for (int i = 0; i < magicNumber; i++) {
                     for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                        if (q.cost >= 0 && q.costForTurn > 0) {
+                        if (!chosenCards.contains(q) && q.cost >= 0 && q.costForTurn > 0) {
                             if (Wiz.getLogicalCardCost(q) == highestcost) {
                                 possCardsList.add(q);
                             } else if (Wiz.getLogicalCardCost(q) > highestcost) {
@@ -46,6 +47,7 @@ public class Rummage extends AbstractPackmasterCard {
                     if (!possCardsList.isEmpty()) {
                         AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
                         possCardsList.clear();
+                        chosenCards.add(q);
                         highestcost = 0;
                         q.setCostForTurn(q.costForTurn - 1);
                         q.isCostModifiedForTurn = true;
