@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.hats.HatMenu;
 
 import java.util.ArrayList;
 
@@ -58,6 +59,10 @@ public abstract class AbstractCardPack {
 
     public String getHatName() {
         return this.name;
+    }
+
+    public String getHatFlavor() {
+        return HatMenu.TEXT[4] + this.name + HatMenu.TEXT[5];
     }
 
 }

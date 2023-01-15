@@ -26,7 +26,7 @@ public class HatMenu {
     private final DropdownMenu dropdown;
     public final ArrayList<String> hats = new ArrayList<>();
 
-    private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));
 
     //positions
@@ -37,7 +37,7 @@ public class HatMenu {
     private static final float DROPDOWN_X = 590f * Settings.xScale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
     private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
-    private static final float PREVIEW_Y = BG_Y + (200 * Settings.scale);
+    private static final float PREVIEW_Y = BG_Y + (225 * Settings.scale);
 
     public static AbstractPlayer dummy;
 
@@ -97,6 +97,7 @@ public class HatMenu {
         if (index == 0) {
             BaseMod.logger.info("Removing hat.");
             Hats.removeHat(false);
+            flavorText = "";
         } else if (name.equals(TEXT[1])) {
             BaseMod.logger.info("Selected a locked hat.");
             Hats.addHat(false, "Locked");
@@ -105,6 +106,7 @@ public class HatMenu {
             BaseMod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index - 1);
             Hats.addHat(false, currentHat);
+            flavorText = SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
         }
     }
 
@@ -118,11 +120,13 @@ public class HatMenu {
     public void render(SpriteBatch sb) {
         sb.draw(MENU_BG, BG_X, BG_Y, 0f, 0f, MENU_BG.getRegionWidth(), MENU_BG.getRegionHeight(), BG_X_SCALE, BG_Y_SCALE, 0f);
 
+        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (125 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 300 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
+
         dummy.renderPlayerImage(sb);
 
         dropdown.render(sb, DROPDOWN_X, DROPDOWN_Y);
 
-        FontHelper.renderFontLeftTopAligned(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X, DROPDOWN_Y - (300 * Settings.scale), Color.YELLOW.cpy());
+
     }
 
 }
