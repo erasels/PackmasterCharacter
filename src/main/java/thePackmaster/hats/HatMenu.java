@@ -99,7 +99,7 @@ public class HatMenu {
             Hats.removeHat(false);
         } else if (name.equals(TEXT[1])) {
             BaseMod.logger.info("Selected a locked hat.");
-            Hats.addHat(false, "LockedHat");
+            Hats.addHat(false, "Locked");
             flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[3];
         } else {
             BaseMod.logger.info("Add new hat at index " + index);
@@ -122,7 +122,7 @@ public class HatMenu {
 
         dropdown.render(sb, DROPDOWN_X, DROPDOWN_Y);
 
-        FontHelper.renderFontLeftTopAligned(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X, DROPDOWN_Y + (300 * Settings.scale), Color.YELLOW.cpy());
+        FontHelper.renderFontLeftTopAligned(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X, DROPDOWN_Y - (300 * Settings.scale), Color.YELLOW.cpy());
     }
 
 }
