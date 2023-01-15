@@ -56,7 +56,7 @@
     "NAME": "P.M. Booster Pack",
     "FLAVOR": "A package of cards in a foil wrapper. How did it end up in the Spire?",
     "DESCRIPTIONS": [
-      "Upon pickup, from a randomly chosen Packmaster Booster, you may add any one of its cards to your deck.",
+      "Upon pickup, you may add any one card from a random Packmaster Booster to your deck.",
       "Choose a card to add to your deck."
     ]
   },
@@ -64,7 +64,7 @@
     "NAME": "P.M. Collection",
     "FLAVOR": "Said to have been assembled by a consortium of wizards.",
     "DESCRIPTIONS": [
-      "Upon pickup, from a randomly chosen Packmaster Booster, you may add each card from it to your deck.",
+      "Upon pickup, you may add each card from a random Packmaster Booster to your deck.",
       "You may add this to your deck."
     ]
   }
