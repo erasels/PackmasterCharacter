@@ -7,10 +7,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import thePackmaster.actions.summonspack.PewcumberAction;
 import thePackmaster.actions.summonspack.SetCardTargetCoordinatesAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.vfx.summonspack.ElephantDropEffect;
@@ -21,8 +19,8 @@ import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.*;
 
-public class SummonElephant extends AbstractPackmasterCard {
-    public final static String ID = makeID(SummonElephant.class.getSimpleName());
+public class Elephant extends AbstractPackmasterCard {
+    public final static String ID = makeID(Elephant.class.getSimpleName());
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
@@ -34,7 +32,7 @@ public class SummonElephant extends AbstractPackmasterCard {
 
     private static boolean seenThisSession;
 
-    public SummonElephant() {
+    public Elephant() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;

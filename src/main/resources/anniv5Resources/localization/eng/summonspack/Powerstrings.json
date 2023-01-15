@@ -1,9 +1,9 @@
 {
-  "${ModID}:TreeBlockadePower": {
-    "NAME": "Tree Blockade",
+  "${ModID}:JinxPower": {
+    "NAME": "Jinxed",
     "DESCRIPTIONS": [
-      "Take #b",
-      " less damage this turn."
+      "When debuffed with another debuff, this creature will lose #b",
+      " HP."
     ]
   },
   "${ModID}:SummonPandasPower": {

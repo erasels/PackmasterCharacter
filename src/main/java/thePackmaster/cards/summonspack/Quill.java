@@ -18,7 +18,7 @@ public class Quill extends AbstractPackmasterCard {
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 3;
     private static final int UPGRADE_DAMAGE = 3;
 
     public Quill() {

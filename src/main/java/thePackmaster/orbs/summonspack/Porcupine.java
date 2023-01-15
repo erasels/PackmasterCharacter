@@ -36,8 +36,8 @@ public class Porcupine extends AbstractPackMasterOrb {
     private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Porcupine.png");
     private static final float PORC_WIDTH = 96.0f;
 
-    private final static int BASE_PASSIVE = 2;
-    private final static int BASE_EVOKE = 2;
+    private final static int BASE_PASSIVE = 3;
+    private final static int BASE_EVOKE = 3;
     private final static int NUM_PASSIVE = 1;
     private final static int NUM_EVOKE = 2;
 

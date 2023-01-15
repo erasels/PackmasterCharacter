@@ -33,22 +33,22 @@
     "NAME": "Wolf",
     "DESCRIPTION": [
       "#yPassive: At the end of your turn, deal #b",
-      " damage to the enemy with the least HP. NL #yEvoke: Gain an orb slot."
+      " damage to the enemy with the least HP. NL Damage increases with more #yWolves. NL #yEvoke: Gain an orb slot."
     ]
   },
-  "${ModID}:EvilSpirit": {
-    "NAME": "Evil Spirit",
+  "${ModID}:Leprechaun": {
+    "NAME": "Leprechaun",
     "DESCRIPTION": [
-      "#yPassive: Whenever you apply a debuff to an enemy, deal #b",
-      " damage. NL #yEvoke: Gain #b",
-      " #ySadistic #yNature."
+      "#yPassive: At the end of your turn roll #b",
+      ". NL #yEvoke: Apply #b",
+      " #yJinx to ALL enemies."
     ]
   },
   "${ModID}:FireSpirit": {
     "NAME": "Fire Spirit",
     "DESCRIPTION": [
-      "#yPassive: Deal #b",
-      " damage back when attacked. NL #yEvoke: Gain 1 #yFocus."
+      "#yPassive: At the end of your turn apply #b",
+      " #yIgnite to ALL enemies. NL #yEvoke: Gain 1 #yFocus."
     ]
   }
 }

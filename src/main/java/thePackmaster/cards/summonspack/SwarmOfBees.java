@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.orbs.summonspack.SwarmOfBees;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -15,8 +14,8 @@ import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.doDmg;
 
-public class SummonBees extends AbstractPackmasterCard {
-    public final static String ID = makeID(SummonBees.class.getSimpleName());
+public class SwarmOfBees extends AbstractPackmasterCard {
+    public final static String ID = makeID(SwarmOfBees.class.getSimpleName());
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
@@ -25,7 +24,7 @@ public class SummonBees extends AbstractPackmasterCard {
     private static final int DAMAGE = 5;
     private static final int UPGRADED_DAMAGE = 3;
 
-    public SummonBees() {
+    public SwarmOfBees() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseDamage = DAMAGE;
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
@@ -36,7 +35,7 @@ public class SummonBees extends AbstractPackmasterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, false);
-        atb(new ChannelAction(new SwarmOfBees()));
+        atb(new ChannelAction(new thePackmaster.orbs.summonspack.SwarmOfBees()));
     }
 
     @Override

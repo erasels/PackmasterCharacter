@@ -1,17 +1,12 @@
 {
-  "${ModID}:EvilSpirit": {
-    "NAME": "Evil Spirit",
-    "DESCRIPTION": "Apply !M! Weak. NL Channel an ${ModID}:Evil\u00a0Spirit.",
-    "EXTENDED_DESCRIPTION": [
-      "Sadistic Nature",
-      "Deals damage when you apply debuffs."
-    ],
-    "FLAVOR": "This is a good idea and can not in any way backfire."
+  "${ModID}:Leprechaun": {
+    "NAME": "Leprechaun",
+    "DESCRIPTION": "Channel a ${ModID}:Leprechaun. NL Apply !M! ${ModID}:Jinx.",
+    "FLAVOR": "Praise RNGesus."
   },
   "${ModID}:SummonPorcupine": {
     "NAME": "Summon Porcupine",
-    "DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add a *Quill into your hand.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add !M! *Quills into your hand.",
+    "DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add !M! *Quills into your hand.",
     "FLAVOR": "The Silent in animal form."
   },
   "${ModID}:SummonWolf": {
