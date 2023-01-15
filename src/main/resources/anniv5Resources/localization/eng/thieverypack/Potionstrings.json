@@ -2,7 +2,7 @@
   "${ModID}:DivinePotion": {
     "NAME": "Divine Potion",
     "DESCRIPTIONS": [
-      "Deal #b",
+      "Gain #b",
       " #yTemporary #yHP [REMOVE_SPACE]."
     ]
   }
