@@ -24,13 +24,6 @@ public class MultiTool extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         applyToSelf(new MultiToolPower(magicNumber));
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                Hats.addHat(true, Hats.currentHat);
-            }
-        });
     }
 
     public void upp() {

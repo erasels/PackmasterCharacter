@@ -22,6 +22,7 @@ import static thePackmaster.hats.Hats.currentHat;
 public class HatMenu {
 
     public boolean isOpen = false;
+    public static boolean invalidHatSelected = false;
 
     private static DropdownMenu dropdown;
     public static final ArrayList<String> hats = new ArrayList<>();
@@ -58,7 +59,7 @@ public class HatMenu {
 
     public static void refreshHatDropdown() {
         boolean init = false;
-        if (dropdown == null){
+        if (dropdown == null) {
             init = true;
         } else {
             dropdown.rows.clear();
@@ -86,7 +87,7 @@ public class HatMenu {
                     optionNames.add(s.getHatName());
                 } else {
                     hats.add(s.packID);
-                    optionNames.add(TEXT[1]);
+                    optionNames.add(TEXT[1] + " " + s.getHatName());
                 }
             } else {
                 hats.add(s.packID);
@@ -116,18 +117,22 @@ public class HatMenu {
     public static void setCurrentHat(int index, String name) {
         currentHatIndex = index;
         if (index == 0) {
+            invalidHatSelected = false;
             BaseMod.logger.info("Removing hat.");
             Hats.removeHat(false);
             flavorText = "";
-        } else if (name.equals(TEXT[1])) {
+        } else if (name.contains(TEXT[1])) {
             BaseMod.logger.info("Selected a locked hat.");
+            invalidHatSelected = true;
             Hats.addHat(false, "Locked");
             flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index - 1)).name + TEXT[3];
-        } else if (name.equals(TEXT[6])) {
+        } else if (name.contains(TEXT[6])) {
+            invalidHatSelected = true;
             BaseMod.logger.info("Selected a missing hat.");
             Hats.removeHat(false);
             flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index - 1)).name + TEXT[7];
         } else {
+            invalidHatSelected = false;
             BaseMod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index - 1);
             Hats.addHat(false, currentHat);
