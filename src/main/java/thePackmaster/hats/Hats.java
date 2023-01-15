@@ -142,9 +142,9 @@ public class Hats {
                 attachment.setWidth(tex.getWidth());
                 attachment.setHeight(tex.getHeight());
                 attachment.setY(tex.getHeight() / 2);
-                attachment.updateOffset();
                 attachment.setScaleX(1.25F);
                 attachment.setScaleY(1.25F);
+                attachment.updateOffset();
 
                 Skin skin = skeleton.getData().getDefaultSkin();
                 skin.addAttachment(slotIndex, attachment.getName(), attachment);
@@ -159,9 +159,9 @@ public class Hats {
                 attachmentDummy.setWidth(tex.getWidth());
                 attachmentDummy.setHeight(tex.getHeight());
                 attachmentDummy.setY(tex.getHeight() / 2);
-                attachmentDummy.updateOffset();
                 attachmentDummy.setScaleX(1.25F);
                 attachmentDummy.setScaleY(1.25F);
+                attachmentDummy.updateOffset();
 
                 Skin skin = skeleton.getData().getDefaultSkin();
                 skin.addAttachment(slotIndex, attachmentDummy.getName(), attachmentDummy);
