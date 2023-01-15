@@ -25,8 +25,8 @@
     "NAME": "Porcupine",
     "DESCRIPTION": [
       "#yPassive: At the start of your turn add a #b",
-      " damage #yQuill into your hand. NL #yEvoke: Add two #b",
-      " damage #yQuills into your hand."
+      " damage #yQuill into your hand. NL #yEvoke: Gain #b",
+      " #yThorns."
     ]
   },
   "${ModID}:Wolf": {

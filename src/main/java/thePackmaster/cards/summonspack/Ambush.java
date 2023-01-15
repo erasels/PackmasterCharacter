@@ -17,7 +17,8 @@ public class Ambush extends AbstractPackmasterCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
+    private static final int UPGRADED_COST = 1;
 
     public Ambush() {
         super(ID, COST, TYPE, RARITY, TARGET);
@@ -32,6 +33,6 @@ public class Ambush extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        isInnate = true;
+        upgradeBaseCost(UPGRADED_COST);
     }
 }

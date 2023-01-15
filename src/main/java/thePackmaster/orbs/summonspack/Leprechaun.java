@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
-import org.lwjgl.Sys;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.powers.boardgamepack.DicePower;

@@ -5,19 +5,16 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
+import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
-import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.summonspack.Quill;
 import thePackmaster.orbs.AbstractPackMasterOrb;
@@ -37,9 +34,8 @@ public class Porcupine extends AbstractPackMasterOrb {
     private static final float PORC_WIDTH = 96.0f;
 
     private final static int BASE_PASSIVE = 3;
-    private final static int BASE_EVOKE = 3;
+    private final static int BASE_EVOKE = 1;
     private final static int NUM_PASSIVE = 1;
-    private final static int NUM_EVOKE = 2;
 
     private final BobEffect porcBobEffect = new BobEffect(2f, 3f);
     private float quillTimer;
@@ -81,9 +77,7 @@ public class Porcupine extends AbstractPackMasterOrb {
 
     @Override
     public void onEvoke() {
-        Quill quill = new Quill();
-        quill.baseDamage = passiveAmount;
-        Wiz.makeInHand(quill, NUM_EVOKE);
+        applyToSelf(new ThornsPower(adp(), evokeAmount));
     }
 
     @Override
