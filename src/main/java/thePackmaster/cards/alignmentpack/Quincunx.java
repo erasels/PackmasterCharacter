@@ -40,7 +40,6 @@ public class Quincunx extends AbstractAstrologerCard {
 
         AbstractPlayer p = AbstractDungeon.player;
         int finalAmt = this.magicNumber;
-        debuffTarget(p, p, finalAmt, targetMap);
         forAllMonstersLiving((mo)->debuffTarget(p, mo, finalAmt, targetMap));
 
         Collections.reverse(targetMap);
