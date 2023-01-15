@@ -164,7 +164,7 @@ public class MainMenuUIPatch {
                 // If toggle button is checked, render the dropdowns, too
                 if (customDraft) {
                     for (int i = dropdowns.size() - 1; i >= 0; i--) {
-                        dropdowns.get(i).render(sb, DROPDOWN_X, DROPDOWNS_START_Y - (DROPDOWNS_SPACING * i)); //TODO: Place correctly
+                        dropdowns.get(i).render(sb, DROPDOWN_X, DROPDOWNS_START_Y - (DROPDOWNS_SPACING * i));
                     }
                 }
 
