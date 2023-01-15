@@ -1,0 +1,8 @@
+{
+  "${ModID}:DefectPackHat": {
+    "TEXT": [
+      "You feel a strange urge to enforce balance.",
+      "Defect Interface"
+    ]
+  }
+}

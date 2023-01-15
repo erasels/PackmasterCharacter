@@ -5,5 +5,11 @@
       "Cards from and inspired by the Shaman character mod.",
       "modargo"
     ]
+  },
+  "${ModID}:ShamanPackHat": {
+    "TEXT": [
+      "Imbued with the power over elements.",
+      "Bead Chain"
+    ]
   }
 }
