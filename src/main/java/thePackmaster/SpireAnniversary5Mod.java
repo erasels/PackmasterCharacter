@@ -518,6 +518,7 @@ public class SpireAnniversary5Mod implements
         UltimateHomerun.HIGH_SCORE = 0;
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
+        EnergyAndEchoPack.resetvalues();
         EnergyCountPatch.energySpentThisCombat = 0;
     }
 
