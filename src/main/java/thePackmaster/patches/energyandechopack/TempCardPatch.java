@@ -37,9 +37,6 @@ public class TempCardPatch
                         isDone = true;
                     }
                 });
-
-
-                EnergyAndEchoPack.cardsCreatedThisTurn++;
             }
         }
     }

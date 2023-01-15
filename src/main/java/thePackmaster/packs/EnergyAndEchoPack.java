@@ -28,7 +28,6 @@ public class EnergyAndEchoPack extends AbstractCardPack {
     }
     public static int generatedEnergy = 0;
     public static int usedEnergy = 0;
-    public static int cardsCreatedThisTurn = 0;
 
     @Override
     public ArrayList<String> getCards() {
@@ -74,6 +73,5 @@ public class EnergyAndEchoPack extends AbstractCardPack {
     public static void resetvalues() {
         generatedEnergy = 0;
         usedEnergy = 0;
-        cardsCreatedThisTurn = 0;
     }
 }
