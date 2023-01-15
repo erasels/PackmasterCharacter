@@ -47,7 +47,7 @@
     "NAME": "P.M. Booster Box",
     "FLAVOR": "Better price for buying in bulk.",
     "DESCRIPTIONS": [
-      "When acquired, choose 1 of 3 Packmaster Boosters, three times. Earn one additional card reward from these boosters at the end of each combat.",
+      "Upon pickup, choose 1 of 3 Packmaster Boosters, three times. Earn one additional card reward from these boosters at the end of each combat.",
       " NL Chosen Boosters: ",
       "Choose a Booster Pack."
     ]
@@ -56,7 +56,7 @@
     "NAME": "P.M. Booster Pack",
     "FLAVOR": "A package of cards in a foil wrapper. How did it end up in the Spire?",
     "DESCRIPTIONS": [
-      "When acquired, from a randomly chosen Packmaster Booster, you may add any one of its cards to your deck.",
+      "Upon pickup, from a randomly chosen Packmaster Booster, you may add any one of its cards to your deck.",
       "Choose a card to add to your deck."
     ]
   },
@@ -64,7 +64,7 @@
     "NAME": "P.M. Collection",
     "FLAVOR": "Said to have been assembled by a consortium of wizards.",
     "DESCRIPTIONS": [
-      "When acquired, from a randomly chosen Packmaster Booster, you may add each card from it to your deck.",
+      "Upon pickup, from a randomly chosen Packmaster Booster, you may add each card from it to your deck.",
       "You may add this to your deck."
     ]
   }
