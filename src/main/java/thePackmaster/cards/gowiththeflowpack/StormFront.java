@@ -12,7 +12,7 @@ public class StormFront extends AbstractHydrologistCard {
     public final static String ID = makeID("StormFront");
 
     public StormFront() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.NONE, Subtype.STEAM);
+        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, Subtype.STEAM);
         damage = baseDamage = 30;
         magicNumber = baseMagicNumber = 10;
         retain = true;
