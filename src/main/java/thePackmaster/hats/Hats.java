@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.ThePackmaster;
 import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
@@ -22,8 +21,10 @@ public class Hats {
     public static String currentHat;
 
     public static void removeHat(boolean inRun) {
-        if (headslotIndex == -1) {
-            setupMenuSkeleton(HatMenu.dummy);
+        if (headbone == null && !inRun) {
+            setupSkeleton(HatMenu.dummy, true);
+        } else {
+            setupSkeleton(AbstractDungeon.player, false);
         }
         if (inRun) {
             skeleton = ReflectionHacks.getPrivate(Wiz.p(), AbstractCreature.class, "skeleton");
@@ -44,14 +45,17 @@ public class Hats {
     private static Skeleton skeleton;
 
     private static Bone headbone;
+    private static Bone playerbone;
     private static Slot headslot;
+    private static Slot playerHeadSlot;
     private static int foundHeadSlot;
+    private static int playerFoundHeadSlot;
     private static int attachmentSlotIndex;
 
     private static RegionAttachment attachment;
     private static RegionAttachment attachmentDummy;
 
-    private static void setupMenuSkeleton(AbstractPlayer p) {
+    private static void setupSkeleton(AbstractPlayer p, boolean isDummy) {
         skeleton = ReflectionHacks.getPrivate(p, AbstractCreature.class, "skeleton");
         if (skeleton == null) {
             BaseMod.logger.info("Hats error! Skeleton is null when attempting setup!");
@@ -66,7 +70,11 @@ public class Hats {
         for (Bone b : possiblebones) {
             bonename = b.toString().toLowerCase();
             if (bonename.equals("head")) {
-                headbone = b;
+                if (isDummy)
+                    headbone = b;
+                else {
+                    playerbone = b;
+                }
                 break;
             }
 
@@ -76,18 +84,27 @@ public class Hats {
         for (Slot s : possibleslots) {
             slotname = s.getBone().toString().toLowerCase();
             if (slotname.equals("head")) {
-                headslot = s;
+                if (isDummy) {
+                    headslot = s;
+                } else {
+                    playerHeadSlot = s;
+                }
                 break;
             }
             headslotIndex++;
         }
 
-        foundHeadSlot = headslotIndex;
+        if (isDummy)
+            foundHeadSlot = headslotIndex;
+        else
+            playerFoundHeadSlot = headslotIndex;
     }
 
     public static void addHat(boolean inRun, String hatID) {
-        if (headslotIndex == -1) {
-            setupMenuSkeleton(HatMenu.dummy);
+        if (headslot == null && !inRun) {
+            setupSkeleton(HatMenu.dummy, true);
+        } else if (playerHeadSlot == null && inRun) {
+            setupSkeleton(AbstractDungeon.player, false);
         }
         if (inRun) {
             skeleton = ReflectionHacks.getPrivate(Wiz.p(), AbstractCreature.class, "skeleton");
@@ -98,14 +115,14 @@ public class Hats {
         String imgPath = getImagePathFromHatID(hatID);
 
 
-        if (skeleton.getAttachment(headslotIndex, "hat") == null) {
+        if (skeleton.getAttachment(inRun ? playerFoundHeadSlot : foundHeadSlot, "hat") == null) {
             BaseMod.logger.info("starting attachment process, in run = " + inRun);
-            String attachName = headbone.toString();
-            int slotIndex = foundHeadSlot;
+            String attachName = inRun ? playerbone.toString() : headbone.toString();
+            int slotIndex = inRun ? playerFoundHeadSlot : foundHeadSlot;
 
             BaseMod.logger.info("creating slot on " + slotIndex);
             // Create a new slot for the attachment
-            Slot origSlot = headslot;
+            Slot origSlot = inRun ? playerHeadSlot : headslot;
             Slot slotClone = new Slot(new SlotData(origSlot.getData().getIndex(), attachName, origSlot.getBone().getData()), origSlot.getBone());
             slotClone.getData().setBlendMode(origSlot.getData().getBlendMode());
             skeleton.getSlots().insert(slotIndex, slotClone);
@@ -157,20 +174,20 @@ public class Hats {
 
 
             skeleton.findBone("HatBone").setScale(0F);
-            if (SpireAnniversary5Mod.packsByID.get(hatID).hatHidesHair){
+            if (SpireAnniversary5Mod.packsByID.get(hatID).hatHidesHair) {
                 skeleton.findBone("HairBone").setScale(0F);
             }
 
         } else {
             TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
-            if (inRun){
+            if (inRun) {
                 attachment.setRegion(region);
             } else {
                 attachmentDummy.setRegion(region);
 
             }
             skeleton.findBone("HatBone").setScale(0F);
-            if (SpireAnniversary5Mod.packsByID.get(hatID).hatHidesHair){
+            if (SpireAnniversary5Mod.packsByID.get(hatID).hatHidesHair) {
                 skeleton.findBone("HairBone").setScale(0F);
             }
         }

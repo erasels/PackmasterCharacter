@@ -4,10 +4,12 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.hats.Hats;
 import thePackmaster.powers.highenergypack.MultiToolPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToSelf;
+import static thePackmaster.util.Wiz.atb;
 
 public class MultiTool extends AbstractPackmasterCard {
     public final static String ID = makeID("MultiTool");
@@ -22,6 +24,13 @@ public class MultiTool extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         applyToSelf(new MultiToolPower(magicNumber));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                Hats.addHat(true, Hats.currentHat);
+            }
+        });
     }
 
     public void upp() {
