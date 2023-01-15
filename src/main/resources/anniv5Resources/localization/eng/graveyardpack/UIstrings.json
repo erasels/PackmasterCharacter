@@ -15,5 +15,11 @@
     "TEXT": [
       "Select a Card to Play"
     ]
+  },
+  "${ModID}:GraveyardPackHat": {
+    "TEXT": [
+      "Your head feels much lighter.",
+      "Lichdom"
+    ]
   }
 }
