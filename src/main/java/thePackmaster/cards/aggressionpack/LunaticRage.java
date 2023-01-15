@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class LunaticRage extends AbstractPackmasterCard {
+public class LunaticRage extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("LunaticRage");
     private static final int COST = 0;
     private static final int DRAW = 2;

@@ -10,9 +10,7 @@
   "${ModID}:Louse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": [
-      "#yPassive: Whenever you play a card, increase this orb's #yTemporary #yHP by #b",
-      ". NL #yEvoke: Gain #b",
-      " #yTemporary #yHP."
+      "#yPassive: Draw a card at the start of your turn. #yEvoke: Draw 2 cards."
     ]
   },
   "${ModID}:Panda": {
@@ -23,20 +21,34 @@
       " damage to a random enemy."
     ]
   },
-  "${ModID}:EvilSpirit": {
-    "NAME": "Evil Spirit",
+  "${ModID}:Porcupine": {
+    "NAME": "Porcupine",
     "DESCRIPTION": [
-      "#yPassive: Whenever you apply a debuff to an enemy, deal #b",
-      " damage. NL #yEvoke: Gain #b",
-      " #ySadistic #yNature."
+      "#yPassive: At the start of your turn add a #b",
+      " damage #yQuill into your hand. NL #yEvoke: Gain #b",
+      " #yThorns."
+    ]
+  },
+  "${ModID}:Wolf": {
+    "NAME": "Wolf",
+    "DESCRIPTION": [
+      "#yPassive: At the end of your turn, deal #b",
+      " damage to the enemy with the least HP. NL Damage increases with more #yWolves. NL #yEvoke: Gain an orb slot."
+    ]
+  },
+  "${ModID}:Leprechaun": {
+    "NAME": "Leprechaun",
+    "DESCRIPTION": [
+      "#yPassive: At the end of your turn roll #b",
+      ". NL #yEvoke: Apply #b",
+      " #yJinx to ALL enemies."
     ]
   },
   "${ModID}:FireSpirit": {
     "NAME": "Fire Spirit",
     "DESCRIPTION": [
-      "#yPassive: Gain #b",
-      " #yFlame #yBarrier at the end of your turn. NL #yEvoke: Gain #b",
-      " #yFlame #yBarrier."
+      "#yPassive: At the end of your turn apply #b",
+      " #yIgnite to ALL enemies. NL #yEvoke: Gain 1 #yFocus."
     ]
   }
 }

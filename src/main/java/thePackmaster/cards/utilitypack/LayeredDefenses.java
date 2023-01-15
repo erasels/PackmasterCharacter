@@ -13,7 +13,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.HashSet;
 
-public class LayeredDefenses extends AbstractPackmasterCard {
+public class LayeredDefenses extends AbstractUtilityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("LayeredDefenses");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;

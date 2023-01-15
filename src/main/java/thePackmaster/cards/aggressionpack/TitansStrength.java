@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class TitansStrength extends AbstractPackmasterCard {
+public class TitansStrength extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("TitansStrength");
     private static final int COST = 2;
     private static final int BLOCK = 14;

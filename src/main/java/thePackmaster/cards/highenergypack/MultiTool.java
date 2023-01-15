@@ -9,7 +9,7 @@ import thePackmaster.powers.highenergypack.MultiToolPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class MultiTool extends AbstractPackmasterCard {
+public class MultiTool extends AbstractHighEnergyCard {
     public final static String ID = makeID("MultiTool");
     // intellij stuff attack, enemy, common, 8, 3, , , 8, 3
 

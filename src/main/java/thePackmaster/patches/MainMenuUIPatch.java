@@ -91,7 +91,7 @@ public class MainMenuUIPatch {
         ) {
             if (Objects.equals(s, RANDOM) || Objects.equals(s, CHOICE)) {
                 packSetups.add(s);
-            } else if (SpireAnniversary5Mod.packsByID.get(s) != null) {
+            } else if (SpireAnniversary5Mod.packsByID.getOrDefault(s, null) != null) {
                 packSetups.add(s);
             } else {
                 packSetups.add(RANDOM); //This will only get hit if there is an invalid entry being loaded, such as Pack that no longer exists.  In that event, replace it with RANDOM.
@@ -164,7 +164,7 @@ public class MainMenuUIPatch {
                 // If toggle button is checked, render the dropdowns, too
                 if (customDraft) {
                     for (int i = dropdowns.size() - 1; i >= 0; i--) {
-                        dropdowns.get(i).render(sb, DROPDOWN_X, DROPDOWNS_START_Y - (DROPDOWNS_SPACING * i)); //TODO: Place correctly
+                        dropdowns.get(i).render(sb, DROPDOWN_X, DROPDOWNS_START_Y - (DROPDOWNS_SPACING * i));
                     }
                 }
 

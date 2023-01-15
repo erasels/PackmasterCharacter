@@ -8,7 +8,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.prismaticpack.PremiumSelectionAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class PremiumSelection extends AbstractPackmasterCard {
+public class PremiumSelection extends AbstractPrismaticCard {
     public static final String ID = SpireAnniversary5Mod.makeID("PremiumSelection");
     private static final int COST = 1;
     private static final int CHOICES = 3;

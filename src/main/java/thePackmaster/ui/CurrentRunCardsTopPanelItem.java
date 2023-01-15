@@ -13,9 +13,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.TexLoader;
 
@@ -46,7 +44,7 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
 
     @Override
     public boolean isClickable() {
-        return true;// selectedCards;
+        return !AbstractDungeon.isScreenUp || open;
     }
 
     @Override
@@ -57,7 +55,8 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
 
     @Override
     public void render(SpriteBatch sb) {
-        super.render(sb);
+        boolean ic = isClickable();
+        render(sb, ic? Color.WHITE : Color.DARK_GRAY);
         renderFlash(sb);
         renderHover(sb);
     }
@@ -71,8 +70,7 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
                     CardCrawlGame.sound.play("MAP_CLOSE");
                 }
                 open = false;
-            }
-            else if (AbstractDungeon.previousScreen == null) { //Don't allow opening a third layer and losing a screen
+            } else {
                 CardCrawlGame.sound.play("RELIC_DROP_MAGICAL");
                 CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
@@ -119,7 +117,7 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
     }
 
     private void updateFlash() {
-        if(flashTimer != 0.0f) {
+        if (flashTimer != 0.0f) {
             flashTimer -= Gdx.graphics.getDeltaTime();
         }
     }
@@ -127,9 +125,9 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
     public void renderHover(SpriteBatch sb) {
         if (this.getHitbox().hovered) {
             float xPos = this.x - this.hb_w;
-            String packNames = SpireAnniversary5Mod.currentPoolPacks.stream().map(p -> p.name).collect(Collectors.joining(" NL " ));
+            String packNames = SpireAnniversary5Mod.currentPoolPacks.stream().map(p -> p.name).collect(Collectors.joining(" NL "));
             String text = TEXT[1].replace("{0}", packNames);
-            if(selectedCards) {
+            if (selectedCards) {
                 TipHelper.renderGenericTip(xPos, tipYpos, TEXT[0], text);
             } else {
                 TipHelper.renderGenericTip(xPos, tipYpos, TEXT[0], packNames); //if you haven't selected yet, don't tell the player the book is clickable
@@ -142,11 +140,11 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
         sb.setBlendFunction(770, 1);
         sb.setColor(new Color(1.0F, 1.0F, 1.0F, flashTimer * FLASH_ANIM_TIME));
 
-        float halfWidth = (float)this.image.getWidth() / 2.0F;
-        float halfHeight = (float)this.image.getHeight() / 2.0F;
-        sb.draw(this.image, this.x - halfWidth + halfHeight * Settings.scale, this.y - halfHeight + halfHeight * Settings.scale, halfWidth, halfHeight, (float)this.image.getWidth(), (float)this.image.getHeight(), Settings.scale+tmp, Settings.scale+tmp, this.angle, 0, 0, this.image.getWidth(), this.image.getHeight(), false, false);
-        sb.draw(this.image, this.x - halfWidth + halfHeight * Settings.scale, this.y - halfHeight + halfHeight * Settings.scale, halfWidth, halfHeight, (float)this.image.getWidth(), (float)this.image.getHeight(), Settings.scale+tmp* 0.66F, Settings.scale+tmp* 0.66F, this.angle, 0, 0, this.image.getWidth(), this.image.getHeight(), false, false);
-        sb.draw(this.image, this.x - halfWidth + halfHeight * Settings.scale, this.y - halfHeight + halfHeight * Settings.scale, halfWidth, halfHeight, (float)this.image.getWidth(), (float)this.image.getHeight(), Settings.scale+tmp/ 3.0F, Settings.scale+tmp/ 3.0F, this.angle, 0, 0, this.image.getWidth(), this.image.getHeight(), false, false);
+        float halfWidth = (float) this.image.getWidth() / 2.0F;
+        float halfHeight = (float) this.image.getHeight() / 2.0F;
+        sb.draw(this.image, this.x - halfWidth + halfHeight * Settings.scale, this.y - halfHeight + halfHeight * Settings.scale, halfWidth, halfHeight, (float) this.image.getWidth(), (float) this.image.getHeight(), Settings.scale + tmp, Settings.scale + tmp, this.angle, 0, 0, this.image.getWidth(), this.image.getHeight(), false, false);
+        sb.draw(this.image, this.x - halfWidth + halfHeight * Settings.scale, this.y - halfHeight + halfHeight * Settings.scale, halfWidth, halfHeight, (float) this.image.getWidth(), (float) this.image.getHeight(), Settings.scale + tmp * 0.66F, Settings.scale + tmp * 0.66F, this.angle, 0, 0, this.image.getWidth(), this.image.getHeight(), false, false);
+        sb.draw(this.image, this.x - halfWidth + halfHeight * Settings.scale, this.y - halfHeight + halfHeight * Settings.scale, halfWidth, halfHeight, (float) this.image.getWidth(), (float) this.image.getHeight(), Settings.scale + tmp / 3.0F, Settings.scale + tmp / 3.0F, this.angle, 0, 0, this.image.getWidth(), this.image.getHeight(), false, false);
 
         sb.setBlendFunction(770, 771);
     }

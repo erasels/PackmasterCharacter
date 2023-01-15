@@ -11,7 +11,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class BugOut extends AbstractPackmasterCard {
+public class BugOut extends AbstractInfestCard {
     public final static String ID = makeID("BugOut");
     // intellij stuff power, self, uncommon, , , , , , 
 

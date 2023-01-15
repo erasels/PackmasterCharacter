@@ -8,7 +8,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.prismaticpack.ChoiceCutAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class ChoiceCut extends AbstractPackmasterCard {
+public class ChoiceCut extends AbstractPrismaticCard {
     public static final String ID = SpireAnniversary5Mod.makeID("ChoiceCut");
     private static final int COST = 2;
 

@@ -10,7 +10,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Bees extends AbstractPackmasterCard implements OnInfestCard {
+public class Bees extends AbstractInfestCard implements OnInfestCard {
     public final static String ID = makeID("Bees");
     // intellij stuff attack, enemy, rare, 1, , , , 8, 2
 

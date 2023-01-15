@@ -15,7 +15,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RareStrike extends AbstractPackmasterCard {
+public class RareStrike extends AbstractUtilityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("RareStrike");
     private static final int COST = 1;
     private static final int DAMAGE = 6;

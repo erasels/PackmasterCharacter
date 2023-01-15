@@ -17,7 +17,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -29,6 +28,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
@@ -43,9 +43,8 @@ import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
-import thePackmaster.cards.eurogamepack.AbstractVPCard;
-import thePackmaster.cards.graveyardpack.AbstractGraveyardCard;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
@@ -54,13 +53,13 @@ import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
+import thePackmaster.patches.sneckopack.EnergyCountPatch;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
 import thePackmaster.potions.clawpack.DrawClawsPotion;
 import thePackmaster.potions.clawpack.GenerateClawsPotion;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
-import thePackmaster.powers.eurogamepack.VictoryPoints;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
@@ -97,6 +96,7 @@ public class SpireAnniversary5Mod implements
         PostPowerApplySubscriber,
         StartGameSubscriber,
         PostExhaustSubscriber,
+        OnPlayerTurnStartSubscriber,
         CustomSavable<ArrayList<String>> {
     private static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -150,6 +150,16 @@ public class SpireAnniversary5Mod implements
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
     public static final String EVIL_KEY = makeID("Evil");
     private static final String EVIL_OGG = makePath("audio/summonspack/Evil.ogg");
+    public static final String PANDA_KEY = makeID("Panda");
+    private static final String PANDA_OGG = makePath("audio/summonspack/Panda.ogg");
+    public static final String PORCUPINE_KEY = makeID("Porcupine");
+    private static final String PORCUPINE_OGG = makePath("audio/summonspack/Porcupine.ogg");
+    public static final String DIE_KEY = makeID("Die");
+    private static final String DIE_OGG = makePath("audio/summonspack/Die.ogg");
+    public static final String DICE_KEY = makeID("Dice");
+    private static final String DICE_OGG = makePath("audio/summonspack/Dice.ogg");
+    public static final String DICELOTS_KEY = makeID("DiceLots");
+    private static final String DICELOTS_OGG = makePath("audio/summonspack/DiceLots.ogg");
     public static final String TRANSMUTATION_KEY = makeID("Transmutation");
     private static final String TRANSMUTATION_OGG = makePath("audio/transmutationpack/Transmutation.ogg");
     public static final String WATER_IMPACT_1_KEY = makeID("WaterImpactOne");
@@ -177,7 +187,7 @@ public class SpireAnniversary5Mod implements
     public static final String GUN3_KEY = makeID("Gun3");
     private static final String GUN3_OGG = makePath("audio/hermitpack/GUN3.ogg");
 
-    public static final String EVIL_EFFECT_FILE = makePath("images/vfx/summonspack/Evil.png");
+    public static final String EVIL_EFFECT_FILE = makePath("images/orbs/summonsPack/Evil.png");
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
     public static final ArrayList<Louse> louseList = new ArrayList<>();
@@ -465,6 +475,11 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
         BaseMod.addAudio(EVIL_KEY, EVIL_OGG);
+        BaseMod.addAudio(PANDA_KEY, PANDA_OGG);
+        BaseMod.addAudio(PORCUPINE_KEY, PORCUPINE_OGG);
+        BaseMod.addAudio(DIE_KEY, DIE_OGG);
+        BaseMod.addAudio(DICE_KEY, DICE_OGG);
+        BaseMod.addAudio(DICELOTS_KEY, DICELOTS_OGG);
         BaseMod.addAudio(TRANSMUTATION_KEY, TRANSMUTATION_OGG);
         BaseMod.addAudio(WATER_IMPACT_1_KEY, WATER_IMPACT_1_OGG);
         BaseMod.addAudio(WATER_IMPACT_2_KEY, WATER_IMPACT_2_OGG);
@@ -500,19 +515,18 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
-        for (AbstractCard cardInDeck : p().masterDeck.group) {
-            if (cardInDeck instanceof AbstractVPCard) {
-                atb(new ApplyPowerAction(p(), p(), new VictoryPoints(p(), 0)));
-                break;
-            }
-        }
-
         UltimateHomerun.HIGH_SCORE = 0;
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
+        EnergyCountPatch.energySpentThisCombat = 0;
     }
-    
-	@Override
+
+    @Override
+    public void receiveOnPlayerTurnStart() {
+        Leprechaun.staticStartOfTurn();
+    }
+
+    @Override
 	public void receivePostExhaust(AbstractCard arg0) {
 		combatExhausts++;
 	}
