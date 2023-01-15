@@ -808,8 +808,10 @@ public class SpireAnniversary5Mod implements
         }
 
         BaseMod.logger.info("Loading run. Hat: " + saved.currentHat);
-        Hats.currentHat = saved.currentHat;
-        Hats.addHat(true, saved.currentHat);
+        if (saved.currentHat != null) {
+            Hats.currentHat = saved.currentHat;
+            Hats.addHat(true, saved.currentHat);
+        }
     }
 
     @Override
