@@ -66,7 +66,6 @@ import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
-import thePackmaster.util.SpireAnniversary5SaveWrapper;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
@@ -99,9 +98,8 @@ public class SpireAnniversary5Mod implements
         PostBattleSubscriber,
         PostPowerApplySubscriber,
         StartGameSubscriber,
-        CustomSavable<SpireAnniversary5SaveWrapper>,
         PostExhaustSubscriber {
-    private static final Logger logger = LogManager.getLogger("Packmaster");
+    public static final Logger logger = LogManager.getLogger("Packmaster");
 
     public static HashMap<String, String> cardParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <cardID, packID>
     public static HashMap<Class<? extends AbstractCard>, String> cardClassParentMap = new HashMap<>(); //Is filled in initializePack from AbstractCardPack. <card Class, packID>
@@ -376,11 +374,12 @@ public class SpireAnniversary5Mod implements
         });
 
         currentRunCardsTopPanelItem = new CurrentRunCardsTopPanelItem();
-        BaseMod.addSaveField("Anniversary5Mod", thismod);
 
         addPotions();
 
         initializeConfig();
+
+        initializeSavedData();
     }
 
     public static void addPotions() {
@@ -796,34 +795,6 @@ public class SpireAnniversary5Mod implements
         }
     }
 
-    @Override
-    public SpireAnniversary5SaveWrapper onSave() {
-        SpireAnniversary5SaveWrapper wrapper = new SpireAnniversary5SaveWrapper();
-        ArrayList<String> packIDs = new ArrayList<>();
-        for (AbstractCardPack pack : currentPoolPacks) {
-            packIDs.add(pack.packID);
-        }
-        wrapper.currentPoolPacks = packIDs;
-        wrapper.currentHat = Hats.currentHat;
-        return wrapper;
-    }
-
-    @Override
-    public void onLoad(SpireAnniversary5SaveWrapper saved) {
-        currentPoolPacks.clear();
-        ArrayList<String> strings = saved.currentPoolPacks;
-        if (strings != null) {
-            for (String s : strings) {
-                currentPoolPacks.add(packsByID.get(s));
-            }
-        }
-
-        SpireAnniversary5Mod.logger.info("Loading run. Hat: " + saved.currentHat);
-        if (saved.currentHat != null) {
-            Hats.currentHat = saved.currentHat;
-            Hats.addHat(true, saved.currentHat);
-        }
-    }
 
     @Override
     public void receiveStartGame() {
@@ -874,5 +845,44 @@ public class SpireAnniversary5Mod implements
         settingsPanel.addUIElement(oneFrameModeBtn);
 
         BaseMod.registerModBadge(badge, configStrings.TEXT[0], configStrings.TEXT[1], configStrings.TEXT[2], settingsPanel);
+    }
+
+    private void initializeSavedData() {
+        BaseMod.addSaveField("PackmasterPacksSelected", new CustomSavable<ArrayList<String>>() {
+            @Override
+            public ArrayList<String> onSave() {
+                ArrayList<String> packIDs = new ArrayList<>();
+                for (AbstractCardPack p : currentPoolPacks) {
+                    packIDs.add(p.packID);
+                }
+                return packIDs;
+            }
+
+            @Override
+            public void onLoad(ArrayList<String> strings) {
+                logger.info("Loading. Packs cleared.");
+                currentPoolPacks.clear();
+                for (String packID : strings) {
+                    logger.info("adding pack " + packID + " from load");
+                    currentPoolPacks.add(packsByID.get(packID));
+                }
+            }
+        });
+
+        BaseMod.addSaveField("PackmasterWornHat", new CustomSavable<String>() {
+            @Override
+            public String onSave() {
+                return Hats.currentHat;
+            }
+
+            @Override
+            public void onLoad(String s) {
+                logger.info("Loading. Hat: " + s);
+                if (s != null) {
+                    Hats.currentHat = s;
+                    Hats.addHat(true, Hats.currentHat);
+                }
+            }
+        });
     }
 }

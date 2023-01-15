@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.vfx.upgradespack.LightUpgradeShineEffect;
 
 import java.util.ArrayList;
