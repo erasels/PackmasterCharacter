@@ -1,10 +1,12 @@
 package thePackmaster.cards.gowiththeflowpack;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.transmutationpack.AbstractHydrologistCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.p;
 
 public class StormFront extends AbstractHydrologistCard {
     public final static String ID = makeID("StormFront");
@@ -23,6 +25,7 @@ public class StormFront extends AbstractHydrologistCard {
     @Override
     public void triggerOnManualDiscard() {
         baseDamage += magicNumber;
+        addToBot(new MoveCardsAction(p().hand, p().discardPile, c -> c == this));
     }
 
     public void upp() {
