@@ -13,7 +13,7 @@ public class Thunderstruck extends AbstractPackmasterCard {
     // intellij stuff power, none, rare, , , , , 1, 
 
     public Thunderstruck() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.NONE);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
