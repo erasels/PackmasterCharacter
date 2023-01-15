@@ -1,10 +1,14 @@
 {
+  "${ModID}:AccumulatorPower": {
+    "NAME": "Accumulator",
+    "DESCRIPTIONS": ["Your maximum hand size is increased by #b", "."]
+  },
   "${ModID}:AqueductsPower": {
     "NAME": "Aqueducts",
     "DESCRIPTIONS": ["Whenever you draw an extra card, deal #b", " damage to ALL enemies."]
   },
   "${ModID}:FlowPower": {
-  "NAME": "Flowing",
-  "DESCRIPTIONS": ["At the start of your next turn, ", "draw #b", " cards.", "draw a card."]
+    "NAME": "Flowing",
+    "DESCRIPTIONS": ["At the start of your next turn, ", "draw #b", " cards.", "draw a card."]
   }
 }
