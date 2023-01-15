@@ -35,7 +35,7 @@ public class HatMenu {
     private static final float BG_Y_SCALE = Settings.scale * 0.8f;
     private static final float BG_X = 525f * Settings.xScale;
     private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
-    private static final float DROPDOWN_X = 575f * Settings.xScale;
+    private static final float DROPDOWN_X = 550f * Settings.xScale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
     private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
     private static final float PREVIEW_Y = BG_Y + (225 * Settings.scale);
@@ -150,7 +150,7 @@ public class HatMenu {
     public void render(SpriteBatch sb) {
         sb.draw(MENU_BG, BG_X, BG_Y, 0f, 0f, MENU_BG.getRegionWidth(), MENU_BG.getRegionHeight(), BG_X_SCALE, BG_Y_SCALE, 0f);
 
-        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (125 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 300 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
+        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (175 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 300 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
 
         dummy.renderPlayerImage(sb);
 

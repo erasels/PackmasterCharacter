@@ -98,5 +98,13 @@
       "(!)",
       " has no corresponding hat image. Please fix."
     ]
+  },
+  "${ModID}:ConfigMenuText": {
+    "TEXT": [
+      "The Packmaster",
+      "StS Modding Community",
+      "Adds a new character: The Packmaster.",
+      "ALL PACKS MODE. Ignores Custom Draft"
+    ]
   }
 }
