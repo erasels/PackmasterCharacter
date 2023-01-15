@@ -14,7 +14,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 
-public class FuriousAssault extends AbstractPackmasterCard {
+public class FuriousAssault extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("FuriousAssault");
     private static final int COST = 1;
     private static final int DAMAGE = 2;

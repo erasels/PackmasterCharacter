@@ -7,7 +7,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class LotsOfIronWaves extends AbstractPackmasterCard {
+public class LotsOfIronWaves extends AbstractHighEnergyCard {
     public final static String ID = makeID("LotsOfIronWaves");
     // intellij stuff attack, enemy, uncommon, 22, 5, 22, 5, , 
 

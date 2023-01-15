@@ -11,7 +11,7 @@ import static com.megacrit.cardcrawl.cards.AbstractCard.CardColor.CURSE;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.vfx;
 
-public class Clang extends AbstractPackmasterCard {
+public class Clang extends AbstractBellordCard {
     public final static String ID = makeID("Clang");
     // intellij stuff attack, enemy, common, 14, 18, , , , 
 

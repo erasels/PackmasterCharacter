@@ -9,7 +9,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.utilitypack.ConjurationAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class Conjuration extends AbstractPackmasterCard {
+public class Conjuration extends AbstractUtilityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Conjuration");
     private static final int COST = 2;
 

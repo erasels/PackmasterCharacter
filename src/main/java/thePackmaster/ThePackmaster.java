@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -11,6 +12,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -21,11 +23,14 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import thePackmaster.cards.*;
 import thePackmaster.cards.dimensiongatepack.DarkRitual;
 import thePackmaster.cards.dimensiongatepack.PackRat;
 import thePackmaster.packs.*;
 import thePackmaster.relics.HandyHaversack;
+import thePackmaster.vfx.VictoryConfettiEffect;
 
 import java.util.ArrayList;
 
@@ -49,6 +54,7 @@ public class ThePackmaster extends CustomPlayer {
     static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
+    public static float update_timer = 0;
 
 
     public ThePackmaster(String name, PlayerClass setClass) {
@@ -64,6 +70,7 @@ public class ThePackmaster extends CustomPlayer {
                 SKELETON_JSON,
                 1.0f);
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
+        this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTime(e.getEndTime() * MathUtils.random());
 
 
@@ -77,6 +84,17 @@ public class ThePackmaster extends CustomPlayer {
         return new CharSelectInfo(NAMES[0], TEXT[0],
                 75, 75, 3, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
+    }
+
+
+    public void damage(DamageInfo info) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
+            AnimationState.TrackEntry e = this.state.setAnimation(0, "Hit", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
+            e.setTimeScale(0.6F);
+        }
+
+        super.damage(info);
     }
 
     @Override
@@ -177,6 +195,15 @@ public class ThePackmaster extends CustomPlayer {
     @Override
     public String getVampireText() {
         return TEXT[2];
+    }
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+        update_timer += Gdx.graphics.getDeltaTime();
+
+        for(float i = 0; i+(1.0/30.0) <= update_timer; update_timer -= (1.0/30.0)) {
+            effects.add(new VictoryConfettiEffect());
+        }
     }
 
     public static class Enums {

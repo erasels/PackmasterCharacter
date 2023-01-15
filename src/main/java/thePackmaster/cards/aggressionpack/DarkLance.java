@@ -13,11 +13,11 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.aggressionpack.DarkLancePatch;
 
-public class DarkLance extends AbstractPackmasterCard {
+public class DarkLance extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("DarkLance");
     private static final int COST = 1;
     private static final int DAMAGE = 9;
-    private static final int UPGRADE_DAMAGE = 1;
+    private static final int UPGRADE_DAMAGE = 2;
     private static final int DRAW = 2;
     private static final int UPGRADE_DRAW = 1;
 

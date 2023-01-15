@@ -1,0 +1,14 @@
+{
+  "${ModID}:GoWithTheFlowPack": {
+    "TEXT": [
+      "Go With The Flow",
+      "Get rid of cards you don't need this turn for a bigger hand next turn.",
+      "NellyDevo"
+    ]
+  },
+  "${ModID}:FlowAction": {
+    "TEXT": [
+      "discard."
+    ]
+  }
+}
