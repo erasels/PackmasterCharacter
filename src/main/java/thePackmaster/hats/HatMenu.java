@@ -7,7 +7,6 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
@@ -45,26 +44,25 @@ public class HatMenu {
 
     public static int currentHatIndex;
 
+
     public HatMenu() {
+        ArrayList<String> unlockedHats = SpireAnniversary5Mod.getUnlockedHats();
+
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
-        if (UNLOCK_ALL_HATS) {
-            for (AbstractCardPack s : SpireAnniversary5Mod.unfilteredAllPacks) {
-                if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists()) {
+        for (AbstractCardPack s : SpireAnniversary5Mod.unfilteredAllPacks) {
+            if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists()) {
+                if (UNLOCK_ALL_HATS || unlockedHats.contains(s.packID)) {
                     hats.add(s.packID);
-                    optionNames.add(s.name);
-                }
-            }
-        } else {
-            for (String s : SpireAnniversary5Mod.getUnlockedHats()) {
-                if (Gdx.files.internal(Hats.getImagePathFromHatID(s)).exists()) {
-                    hats.add(s);
-                    optionNames.add(SpireAnniversary5Mod.packsByID.get(s).name);
+                    optionNames.add(s.getHatName());
+                } else {
+                    hats.add(s.packID);
+                    optionNames.add(TEXT[1]);
                 }
             }
         }
 
-        dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index)),
+        dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index, s)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
 
 
@@ -74,7 +72,7 @@ public class HatMenu {
 
         dummy.animX = dummy.animY = 0;
 
-        setCurrentHat(0);
+        setCurrentHat(0, optionNames.get(0));
     }
 
     public void toggle() {
@@ -93,11 +91,17 @@ public class HatMenu {
         isOpen = false;
     }
 
-    public void setCurrentHat(int index) {
+    public void setCurrentHat(int index, String name) {
+        if (name.equals(TEXT[1])) {
+            //TODO: Further locked handling
+        }
         currentHatIndex = index;
         if (index == 0) {
             BaseMod.logger.info("Removing hat.");
             Hats.removeHat(false);
+        } else if (name.equals(TEXT[1])) {
+            BaseMod.logger.info("Selected a locked hat.");
+            //TODO: Locked handling
         } else {
             BaseMod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index - 1);

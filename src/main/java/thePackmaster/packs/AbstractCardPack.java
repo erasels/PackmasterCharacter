@@ -56,4 +56,8 @@ public abstract class AbstractCardPack {
         return new ArrayList<>();
     }
 
+    public String getHatName() {
+        return this.name;
+    }
+
 }

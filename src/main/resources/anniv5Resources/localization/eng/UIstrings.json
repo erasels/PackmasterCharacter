@@ -89,7 +89,8 @@
   },
   "${ModID}:HatMenu": {
     "TEXT": [
-      "Base Hat"
+      "Base Hat",
+      "LOCKED"
     ]
   }
 }
