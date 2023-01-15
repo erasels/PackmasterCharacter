@@ -2,7 +2,6 @@ package thePackmaster.hats;
 
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.utils.Array;
@@ -214,12 +213,13 @@ public class Hats {
 
 
     public static String getImagePathFromHatID(String hatID) {
-            BaseMod.logger.info(SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png");
-            return SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
+        BaseMod.logger.info(SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png");
+        return SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
 
     }
 
     public static void atRunStart() {
+        playerHeadSlot = null;
         if (currentHat != null) {
             BaseMod.logger.info("adding run start hat");
             if (HatMenu.invalidHatSelected) {
