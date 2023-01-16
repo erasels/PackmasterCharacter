@@ -400,7 +400,7 @@ public class SpireAnniversary5Mod implements
     }
 
     public static void addPotions() {
-        BaseMod.addPotion(BoosterBrew.class, Color.TAN, Color.WHITE, Color.BLACK, BoosterBrew.POTION_ID);
+        BaseMod.addPotion(BoosterBrew.class, Color.TAN, Color.WHITE, Color.BLACK, BoosterBrew.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(ModdersDelight.class, Color.TAN, Color.WHITE, Color.BLACK, ModdersDelight.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(PackInAJar.class, Color.TAN, Color.WHITE, Color.BLACK, PackInAJar.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE,null, SmithingOil.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
