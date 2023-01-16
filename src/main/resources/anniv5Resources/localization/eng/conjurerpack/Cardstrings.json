@@ -4,7 +4,7 @@
 		"NAME": "Air Current"
 	},
 	"${ModID}:DustTornado":	{
-		"DESCRIPTION": "Exhaust a card in hand to play !M! random cards from your discard pile. Exhaust.",
+		"DESCRIPTION": "Exhaust a card in hand to play !M! random cards from your discard pile. NL Exhaust.",
 		"NAME": "Dust Tornado"
 	},
 	"${ModID}:Enervate":	{
