@@ -1,5 +1,6 @@
 package thePackmaster.orbs.summonspack;
 
+import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -22,14 +23,13 @@ import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
-public class Wolf extends PackmasterOrb {
+public class Wolf extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(Wolf.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;

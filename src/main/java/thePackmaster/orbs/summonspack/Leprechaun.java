@@ -20,7 +20,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.powers.boardgamepack.DicePower;
 import thePackmaster.powers.summonspack.JinxPower;
 import thePackmaster.util.Wiz;
