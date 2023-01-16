@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -47,12 +48,10 @@ public class ZaHando extends AbstractPackmasterCard {
     @Override
     public void hover() {
         super.hover();
-        if (CardCrawlGame.isInARun()) {
-            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-                for (AbstractCard q : getMiddleCards()) {
-                    q.glowColor = Color.RED.cpy();
-                    q.beginGlowing();
-                }
+        if (Wiz.isInCombat()) {
+            for (AbstractCard q : getMiddleCards()) {
+                q.glowColor = Color.RED.cpy();
+                q.beginGlowing();
             }
         }
     }

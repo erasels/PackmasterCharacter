@@ -6,7 +6,6 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
 import basemod.helpers.CardBorderGlowManager;
-import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -56,13 +55,11 @@ import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
-import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.patches.sneckopack.EnergyCountPatch;
 import thePackmaster.potions.BoosterBrew;
 import thePackmaster.potions.ModdersDelight;
-import thePackmaster.potions.PackInAJar;
 import thePackmaster.potions.SmithingOil;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
@@ -348,7 +345,7 @@ public class SpireAnniversary5Mod implements
                 .packageFilter(AbstractPackmasterRelic.class)
                 .any(AbstractPackmasterRelic.class, (info, relic) -> {
                     if (relic.color == null) {
-                        if (sharedContentMode){
+                        if (sharedContentMode) {
                             BaseMod.addRelic(relic, RelicType.SHARED);
                         } else {
                             BaseMod.addRelicToCustomPool(relic, relic.color);
@@ -414,12 +411,12 @@ public class SpireAnniversary5Mod implements
 
     public static void addPotions() {
 
-        if (sharedContentMode){
+        if (sharedContentMode) {
             BaseMod.addPotion(BoosterBrew.class, Color.TAN, Color.WHITE, Color.BLACK, BoosterBrew.POTION_ID);
-            BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE,null, SmithingOil.POTION_ID);
+            BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE, null, SmithingOil.POTION_ID);
         } else {
             BaseMod.addPotion(BoosterBrew.class, Color.TAN, Color.WHITE, Color.BLACK, BoosterBrew.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
-            BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE,null, SmithingOil.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+            BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE, null, SmithingOil.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         }
 
         BaseMod.addPotion(ModdersDelight.class, Color.TAN, Color.WHITE, Color.BLACK, ModdersDelight.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);

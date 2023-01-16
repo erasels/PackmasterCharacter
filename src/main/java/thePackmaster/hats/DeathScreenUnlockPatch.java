@@ -22,7 +22,7 @@ public class DeathScreenUnlockPatch {
             locator = Locator.class
     )
 
-    public static SpireReturn Insert(DeathScreen __instance) {
+    public static void Insert(DeathScreen __instance) {
         // HAT UNLOCKS
 
         if (__instance.isVictory) {
@@ -46,7 +46,6 @@ public class DeathScreenUnlockPatch {
             }
 
         }
-        return SpireReturn.Continue();
     }
 
 

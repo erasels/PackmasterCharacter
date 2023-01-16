@@ -22,7 +22,7 @@ public class VictoryScreenUnlockPatch {
             locator = Locator.class
     )
 
-    public static SpireReturn Insert(VictoryScreen __instance) {
+    public static void Insert(VictoryScreen __instance) {
         // HAT UNLOCKS
 
         if (SpireAnniversary5Mod.allPacksMode) SpireAnniversary5Mod.logger.info("All packs mode - no Hat unlocks!");
@@ -43,8 +43,6 @@ public class VictoryScreenUnlockPatch {
                 throw new RuntimeException(e);
             }
         }
-
-        return SpireReturn.Continue();
     }
 
 

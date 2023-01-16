@@ -16,6 +16,7 @@ public class MidnightStrike extends AbstractPackmasterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 12;
         baseSecondDamage = 60;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
