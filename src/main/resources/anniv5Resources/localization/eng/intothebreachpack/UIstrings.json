@@ -6,5 +6,11 @@
       "Enbeon",
       "#bInto #bthe #bBreach originally created by #bSubset #bGames"
     ]
+  },
+  "${ModID}:IntoTheBreachPackHat": {
+    "TEXT": [
+      "The perfect helmet for fighting giant bugs.",
+      "Archive Helmet"
+    ]
   }
 }
