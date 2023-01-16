@@ -8,7 +8,7 @@ import thePackmaster.powers.sneckopack.SheddingPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Shedding extends AbstractPackmasterCard {
+public class Shedding extends AbstractSneckoCard {
 
 
     public final static String ID = makeID("Shedding");

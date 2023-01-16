@@ -8,7 +8,7 @@ import thePackmaster.powers.entropypack.EntanglementPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Entanglement extends AbstractPackmasterCard {
+public class Entanglement extends AbstractEntropyCard {
     public final static String ID = makeID("Entanglement");
     // intellij stuff power, none, rare, , , , , 5, 
 

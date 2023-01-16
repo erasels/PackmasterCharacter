@@ -28,11 +28,7 @@ public class Hound extends AbstractEvolveCard {
         magicNumber = baseMagicNumber = WEAK;
         this.isMultiDamage = true;
 
-        if (!SpireAnniversary5Mod.oneFrameMode)
-        setBackgroundTexture(
-                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
-        );
+        
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

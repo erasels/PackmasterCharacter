@@ -15,7 +15,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Sneckpot extends AbstractPackmasterCard {
+public class Sneckpot extends AbstractSneckoCard {
 
 
     public final static String ID = makeID("Sneckpot");
