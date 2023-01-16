@@ -25,6 +25,7 @@ public class BoosterBrew extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.CARD, PotionColor.NONE);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = Color.TAN.cpy();
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
     }

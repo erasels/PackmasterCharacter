@@ -28,7 +28,7 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
 
 
     public PMBoosterBox() {
-        super(ID, RelicTier.RARE, LandingSound.FLAT);
+        super(ID, RelicTier.RARE, LandingSound.FLAT, null, true);
     }
 
     public void onVictory() {

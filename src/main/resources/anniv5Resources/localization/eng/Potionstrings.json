@@ -10,8 +10,8 @@
   "${ModID}:ModdersDelight": {
     "NAME": "Modder's Delight",
     "DESCRIPTIONS": [
-      "Return all cards in your discard pile to your hand. Draw #b",
-      " cards from different Packs in your draw pile."
+      "Shuffle your discard pile into your draw pile. Put #b",
+      "X random cards from different Packs from your draw pile into your hand."
     ]
   },
   "${ModID}:PackInAJar": {

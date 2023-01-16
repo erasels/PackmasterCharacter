@@ -12,7 +12,7 @@ public class PMCollection extends AbstractPackmasterRelic {
     public static final String ID = makeID("PMCollection");
 
     public PMCollection() {
-        super(ID, RelicTier.SHOP, LandingSound.FLAT);
+        super(ID, RelicTier.SHOP, LandingSound.FLAT, null, true);
     }
 
     @Override

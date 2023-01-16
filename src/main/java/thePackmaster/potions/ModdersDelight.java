@@ -49,7 +49,7 @@ public class ModdersDelight extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 4;
+        return 3;
     }
 }
 

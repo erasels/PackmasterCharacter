@@ -29,7 +29,7 @@ public class PackInAJar extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public PackInAJar() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.GHOST, PotionColor.NONE);
+        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.GHOST, PotionColor.NONE);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = Color.TAN.cpy();
@@ -40,11 +40,8 @@ public class PackInAJar extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        if (potency > 1){
-            this.description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[2];
-        } else {
-            this.description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
-        }
+        this.description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
+
     }
 
     public void use(AbstractCreature target) {
@@ -61,13 +58,11 @@ public class PackInAJar extends CustomPotion {
 
     public void action(AbstractCardPack pack) {
         addToBot(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, Wiz.hand().size(), true, false));
-        for (int i = 0; i < potency; i++) {
             for (AbstractCard c : pack.cards) {
                 if (c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE) {
                     addToBot(new MakeTempCardInHandAction(c));
                 }
             }
-        }
     }
 
     public CustomPotion makeCopy() {
