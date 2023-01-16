@@ -2,7 +2,7 @@
   "${ModID}:BoosterBrew": {
     "NAME": "Booster Brew",
     "DESCRIPTIONS": [
-      "Choose 1 of 3 random cards from different Packs. Add #b1 copy of it to your hand. It costs 0 this turn.",
+      "Choose #b1 of #b3 random cards from different Packs. Add #b1 copy of it to your hand. It costs 0 this turn.",
       " Repeat this effect #b",
       " times."
     ]
