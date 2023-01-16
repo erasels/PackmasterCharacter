@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
 import thePackmaster.actions.witchesstrikepack.MoonlightBarrageAction;
 import thePackmaster.cardmodifiers.infestpack.InfestModifier;
+import thePackmaster.cardmodifiers.witchesstrikepack.InscribedMod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 
@@ -23,6 +24,7 @@ public class ChitteringPunt extends AbstractPackmasterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
         CardModifierManager.addModifier(this, new InfestModifier());
+        CardModifierManager.addModifier(this,new InscribedMod(true,false));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
