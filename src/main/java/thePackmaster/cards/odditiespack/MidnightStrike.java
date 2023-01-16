@@ -43,7 +43,7 @@ public class MidnightStrike extends AbstractPackmasterCard {
 
         this.initializeDescription();
 
-        loadCardImage("anniv5Resources/images/cards/MidnightStrike" + ((count) % 13 + 1) + ".png");
+        loadCardImage("anniv5Resources/images/cards/MidnightStrike" + ((count + 1) % 13) + ".png");
     }
 
     public void onMoveToDiscard() {
