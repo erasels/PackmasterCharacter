@@ -4,6 +4,6 @@
     "NAMES": [
       "petra"
     ],
-    "DESCRIPTION": "Removed at the end of round. When you attack a target with #yPetra, gain #yBlock equal to #b50% of damage dealt on your next turn."
+    "DESCRIPTION": "When you attack a target with #yPetra, gain #yBlock equal to #b35% of damage dealt on your next turn. Reduced by #b1 at the end of turn."
   }
 ]

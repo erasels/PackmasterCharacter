@@ -9,7 +9,7 @@
   "${ModID}:PetraPower": {
     "NAME": "Petra",
     "DESCRIPTIONS": [
-      "Removed at the end of round. When you attack this creature, gain ",
+      "When you attack this creature, gain ",
       "% of damage dealt as Block next turn."
     ]
   }
