@@ -1,6 +1,5 @@
 package thePackmaster.hats;
 
-import basemod.BaseMod;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.VictoryScreen;
@@ -9,7 +8,6 @@ import javassist.CtBehavior;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.patches.MainMenuUIPatch;
 
 import java.io.IOException;
 
@@ -24,28 +22,27 @@ public class VictoryScreenUnlockPatch {
             locator = Locator.class
     )
 
-    public static SpireReturn Insert(VictoryScreen __instance) {
+    public static void Insert(VictoryScreen __instance) {
         // HAT UNLOCKS
 
-        if (AbstractDungeon.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER)) {
+        if (SpireAnniversary5Mod.allPacksMode) SpireAnniversary5Mod.logger.info("All packs mode - no Hat unlocks!");
+        if (AbstractDungeon.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && !SpireAnniversary5Mod.allPacksMode) {
             SpireAnniversary5Mod.logger.info("Unlocking new hats!");
             for (AbstractCardPack p : SpireAnniversary5Mod.currentPoolPacks) {
                 SpireAnniversary5Mod.logger.info("Adding " + p.packID + " to unlocked hats!");
-                if (!HatMenu.hats.contains(p.packID)) {
-                    HatMenu.hats.add(p.packID);
+                if (!HatMenu.currentlyUnlockedHats.contains(p.packID)) {
+                    HatMenu.currentlyUnlockedHats.add(p.packID);
                 }
                 HatMenu.refreshHatDropdown();
 
             }
             try {
                 SpireAnniversary5Mod.logger.info("Saving unlocked hats!");
-                SpireAnniversary5Mod.saveUnlockedHats(HatMenu.hats);
+                SpireAnniversary5Mod.saveUnlockedHats(HatMenu.currentlyUnlockedHats);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
-
-        return SpireReturn.Continue();
     }
 
 
