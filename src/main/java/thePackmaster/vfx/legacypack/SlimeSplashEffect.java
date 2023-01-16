@@ -72,5 +72,7 @@ public class SlimeSplashEffect
                 this.rotation, 0, 0, this.img.getWidth(), this.img.getHeight(), false, false);
     }
 
-    public void dispose() {}
+    public void dispose() {
+        img.dispose();
+    }
 }

@@ -34,6 +34,7 @@ import thePackmaster.hats.Hats;
 import thePackmaster.packs.*;
 import thePackmaster.relics.HandyHaversack;
 import thePackmaster.vfx.VictoryConfettiEffect;
+import thePackmaster.vfx.VictoryGlow;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,6 +61,7 @@ public class ThePackmaster extends CustomPlayer {
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
     public static float update_timer = 0;
+    public static boolean glow_fade = false;
 
 
     public ThePackmaster(String name, PlayerClass setClass) {
@@ -204,6 +206,11 @@ public class ThePackmaster extends CustomPlayer {
 
     @Override
     public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+        if (!glow_fade) {
+            effects.add(new VictoryGlow());
+            glow_fade = true;
+        }
+
         update_timer += Gdx.graphics.getDeltaTime();
 
         for(float i = 0; i+(1.0/30.0) <= update_timer; update_timer -= (1.0/30.0)) {
@@ -247,7 +254,10 @@ public class ThePackmaster extends CustomPlayer {
     @Override
     public List<CutscenePanel> getCutscenePanels() {
         ArrayList<CutscenePanel> panels = new ArrayList<>();
-        panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_1.png")));
+
+        glow_fade = false;
+
+        panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_1.png"), "ATTACK_DAGGER_2"));
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_2.png")));
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_3.png")));
         return panels;

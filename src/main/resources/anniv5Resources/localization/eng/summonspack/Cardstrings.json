@@ -1,7 +1,7 @@
 {
   "${ModID}:Leprechaun": {
     "NAME": "Leprechaun",
-    "DESCRIPTION": "Channel a ${ModID}:Leprechaun. NL Apply !M! ${ModID}:Jinx.",
+    "DESCRIPTION": "Channel a ${ModID}:Leprechaun. NL Roll 2d6.",
     "EXTENDED_DESCRIPTION": [
       "Dice",
       "Dice increase the damage or #yBlock of the next card you play that deals damage or #yBlocks."
@@ -39,9 +39,10 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel a ${ModID}:Swarm\u00a0of\u00a0Bees.",
     "FLAVOR": "Absolutely terrifying."
   },
-  "${ModID}:Control": {
-    "NAME": "Control",
-    "DESCRIPTION": "Gain !M! Orb slots and !M! Focus.",
+  "${ModID}:Training": {
+    "NAME": "Training",
+    "DESCRIPTION": "At the start of your turn Evoke your next orb 1 time without removing it.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn Evoke your next orb !M! times without removing it.",
     "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
   },
   "${ModID}:Ambush": {

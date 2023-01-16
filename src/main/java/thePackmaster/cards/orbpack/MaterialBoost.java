@@ -23,7 +23,7 @@ public class MaterialBoost extends AbstractPackmasterCard {
     // intellij stuff skill, none, rare, , , , , , 
 
     public MaterialBoost() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -46,6 +46,6 @@ public class MaterialBoost extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        selfRetain = true;
     }
 }
