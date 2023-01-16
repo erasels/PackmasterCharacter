@@ -1,5 +1,6 @@
 package thePackmaster.orbs.WitchesStrike;
 
+import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -8,7 +9,6 @@ import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.DecreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,18 +17,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
-import org.lwjgl.Sys;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.orbs.AbstractPackMasterOrb;
+import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.util.TexLoader;
 
 import static thePackmaster.SpireAnniversary5Mod.makeOrbPath;
 
-public class CrescentMoon extends AbstractPackMasterOrb {
+public class CrescentMoon extends CustomOrb implements PackmasterOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID("CrescentMoon");
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
