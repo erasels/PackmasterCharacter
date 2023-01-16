@@ -8,7 +8,8 @@
   },
   "${ModID}:Occult": {
     "TEXT": [
-      "${ModID}:Occult. NL "
+      "${ModID}:Occult. NL ",
+      "NL ${ModID}:Occult. NL"
     ]
   },
   "${ModID}:RuleCancel": {

@@ -17,7 +17,7 @@ public class Bees extends AbstractInfestCard implements OnInfestCard {
     public Bees() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 1;
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 6;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
 
