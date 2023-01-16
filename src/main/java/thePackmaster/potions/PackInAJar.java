@@ -29,7 +29,7 @@ public class PackInAJar extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public PackInAJar() {
-        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.GHOST, PotionColor.NONE);
+        super(NAME, POTION_ID, PotionRarity.PLACEHOLDER, PotionSize.GHOST, PotionColor.NONE);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = Color.TAN.cpy();

@@ -2,9 +2,8 @@
   "${ModID}:BoosterBrew": {
     "NAME": "Booster Brew",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random cards from different Packs. Add #b1 copy of it to your hand. It costs 0 this turn.",
-      " Repeat this effect #b",
-      " times."
+      "Choose #b1 of #b3 Packs. Add #b",
+      " random cards from it into your draw pile. They cost 0 this combat."
     ]
   },
   "${ModID}:ModdersDelight": {

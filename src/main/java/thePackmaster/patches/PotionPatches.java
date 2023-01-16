@@ -24,7 +24,7 @@ public class PotionPatches {
 
         @SpireInsertPatch(locator = Locator.class, localvars = {"temp"})
         public static void Insert(AbstractPotion.PotionRarity rarity, boolean limited, @ByRef AbstractPotion[] temp) {
-            if (temp[0] instanceof SmithingOil || temp[0] instanceof PackInAJar) {
+            if (temp[0] instanceof SmithingOil) {
                 returnTo = temp[0];
                 temp[0] = new FruitJuice();
             }

@@ -426,7 +426,7 @@ public class SpireAnniversary5Mod implements
         }
 
         BaseMod.addPotion(ModdersDelight.class, Color.TAN, Color.WHITE, Color.BLACK, ModdersDelight.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
-        BaseMod.addPotion(PackInAJar.class, Color.TAN, Color.WHITE, Color.BLACK, PackInAJar.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        //BaseMod.addPotion(PackInAJar.class, Color.TAN, Color.WHITE, Color.BLACK, PackInAJar.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
 
         BaseMod.addPotion(AttackPotionButClaw.class, Color.RED, Color.WHITE, Color.FIREBRICK, AttackPotionButClaw.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(ClawPowerPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, ClawPowerPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
