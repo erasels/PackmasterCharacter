@@ -13,6 +13,8 @@ import java.util.ArrayList;
 public abstract class AbstractClawCard extends AbstractPackmasterCard {
     public AbstractClawCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color) {
         super(cardID, cost, type, rarity, target, color);
+
+        if (!SpireAnniversary5Mod.oneFrameMode)
         setBackgroundTexture(
                 "anniv5Resources/images/512/claw/" + type.name().toLowerCase() + ".png",
                 "anniv5Resources/images/1024/claw/" + type.name().toLowerCase() + ".png"

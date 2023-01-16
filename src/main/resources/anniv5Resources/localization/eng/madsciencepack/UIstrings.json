@@ -23,5 +23,11 @@
     "TEXT": [
       "Choose a card to Modify."
     ]
+  },
+  "${ModID}:MadSciencePackHat": {
+    "TEXT": [
+      "You'll show them. You'll show them all!!",
+      "Mad Mad Science"
+    ]
   }
 }

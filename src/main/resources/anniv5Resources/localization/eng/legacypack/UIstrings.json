@@ -5,5 +5,11 @@
       "A blast from the past, featuring cards from the oldest mods in the Workshop. Credits: celicath, moocowgoesmoo, JohnnyBazooka, chronometrics, fiiiiilth",
       "Original Authors"
     ]
+  },
+  "${ModID}:LegacyPackHat": {
+    "TEXT": [
+      "Happy birthday, STS modding!",
+      "Birthday Boy"
+    ]
   }
 }

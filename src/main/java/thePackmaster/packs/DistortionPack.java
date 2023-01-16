@@ -51,7 +51,12 @@ public class DistortionPack extends AbstractCardPack {
     public void initializePack() {
         for (String s : getCards()) {
             AbstractCard c = CardLibrary.getCard(s);
+            if (c == null) {
+                System.out.println("CARD FOR PACK NOT FOUND: " + s);
+                //And then it'll crash.
+            }
             SpireAnniversary5Mod.cardParentMap.put(c.cardID, packID);
+            SpireAnniversary5Mod.cardClassParentMap.put(c.getClass(), packID);
             cards.add(c.makeStatEquivalentCopy());
         }
         previewPackCard = new DistortionPackPreview(packID, this);

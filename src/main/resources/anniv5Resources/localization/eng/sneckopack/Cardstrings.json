@@ -17,15 +17,15 @@
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "Whip 'n Snapper",
-    "DESCRIPTION": "Deal !D! damage. Apply 0 to !M! Weak and 0 to !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 0 to !M! Weak and 0 to !M! Vulnerable."
   },
   "${ModID}:Twitch": {
     "NAME": "Twitch",
     "DESCRIPTION": "Randomize the cost of !M! cards."
   },
   "${ModID}:Gulp": {
-    "NAME": "Gulp",
-    "DESCRIPTION" : "{@@}{!Upgrades!|>0=Apply Poison|@=Enemy loses HP} equal to the amount of energy spent this combat.{!M!|>0= NL ( !M! energy spent this combat)}"
+    "NAME": "Meal Prep",
+    "DESCRIPTION" : "Deal !D! damage for each energy this card costs."
   },
   "${ModID}:SnazzySwagger": {
     "NAME": "Snazzy Swagger",

@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -28,14 +29,18 @@ import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import thePackmaster.cards.*;
 import thePackmaster.cards.dimensiongatepack.DarkRitual;
 import thePackmaster.cards.dimensiongatepack.PackRat;
+import thePackmaster.hats.HatMenu;
+import thePackmaster.hats.Hats;
 import thePackmaster.packs.*;
 import thePackmaster.relics.HandyHaversack;
 import thePackmaster.vfx.VictoryConfettiEffect;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 import static thePackmaster.SpireAnniversary5Mod.*;
+import static thePackmaster.hats.Hats.currentHat;
 
 public class ThePackmaster extends CustomPlayer {
     private static final String[] orbTextures = {
@@ -237,5 +242,14 @@ public class ThePackmaster extends CustomPlayer {
         }
 
         return poolCards;
+    }
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        ArrayList<CutscenePanel> panels = new ArrayList<>();
+        panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_1.png")));
+        panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_2.png")));
+        panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_3.png")));
+        return panels;
     }
 }

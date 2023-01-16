@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.marisapack.BuildingChargePower;
 import thePackmaster.util.Wiz;
@@ -25,6 +26,7 @@ public class RisingStrike extends AbstractPackmasterCard {
         tags.add(CardTags.STRIKE);
         //cardsToPreview = new Spark();
 
+        if (!SpireAnniversary5Mod.oneFrameMode)
         setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
                 "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }

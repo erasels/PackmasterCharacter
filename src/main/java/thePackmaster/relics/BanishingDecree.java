@@ -87,7 +87,7 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 AbstractCard card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                 AbstractCardPack cp = Wiz.getPackByCard(card);
                 bannedPack = cp.name;
-                BaseMod.logger.info("Banned Pack" + bannedPack);
+                SpireAnniversary5Mod.logger.info("Banned Pack" + bannedPack);
                 SpireAnniversary5Mod.currentPoolPacks.remove(cp);
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
@@ -106,7 +106,7 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 AbstractCard card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                 AbstractCardPack cp = Wiz.getPackByCard(card);
                 newPack = cp.name;
-                BaseMod.logger.info("New Pack" + newPack);
+                SpireAnniversary5Mod.logger.info("New Pack" + newPack);
                 SpireAnniversary5Mod.currentPoolPacks.add(cp);
                 CardCrawlGame.dungeon.initializeCardPools();
 
@@ -133,8 +133,8 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
     }
 
     private void setDescriptionAfterLoading() {
-        BaseMod.logger.info("Banned Pack" + bannedPack);
-        BaseMod.logger.info("New Pack" + newPack);
+        SpireAnniversary5Mod.logger.info("Banned Pack" + bannedPack);
+        SpireAnniversary5Mod.logger.info("New Pack" + newPack);
         this.description = this.DESCRIPTIONS[2] + bannedPack + this.DESCRIPTIONS[3];
         this.description = this.description + " NL " + this.DESCRIPTIONS[2] + newPack + this.DESCRIPTIONS[4];
         tips.clear();
