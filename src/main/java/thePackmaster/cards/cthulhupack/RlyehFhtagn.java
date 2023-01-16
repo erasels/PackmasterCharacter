@@ -21,6 +21,7 @@ public class RlyehFhtagn extends AbstractCthulhuCard {
     public RlyehFhtagn() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         cardsToPreview = new Madness();
+        exhaust = true;
 
     }
 

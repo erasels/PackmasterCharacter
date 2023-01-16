@@ -22,11 +22,23 @@
       "MegaCrit"
     ]
   },
+  "${ModID}:IroncladPackHat": {
+    "TEXT": [
+      "A tough mask for a tough guy.",
+      "Ironclad Helm"
+    ]
+  },
   "${ModID}:SilentPack": {
     "TEXT": [
       "Silent Showdown",
       "A collection of reliable Silent cards, including access to Poison and Discard.",
       "MegaCrit"
+    ]
+  },
+  "${ModID}:SilentPackHat": {
+    "TEXT": [
+      "A macabre keepsake, now adorning your noggin.",
+      "Silent Trophy"
     ]
   },
   "${ModID}:DefectPack": {
@@ -36,11 +48,23 @@
       "MegaCrit"
     ]
   },
+  "${ModID}:DefectPackHat": {
+    "TEXT": [
+      "You feel a strange urge to enforce balance.",
+      "Defect Interface"
+    ]
+  },
   "${ModID}:WatcherPack": {
     "TEXT": [
       "Will of the Watcher",
       "A collection of reliable Watcher cards, including access to Stances.",
       "MegaCrit"
+    ]
+  },
+  "${ModID}:WatcherPackHat": {
+    "TEXT": [
+      "Contemplative facewear & accessories.",
+      "Watcher Veil"
     ]
   },
   "${ModID}:PackMainMenuUI": {
@@ -105,7 +129,8 @@
       "StS Modding Community",
       "Adds a new character: The Packmaster.",
       "ALL PACKS MODE. Ignores Custom Draft",
-      "One Frame For All. All Pack cards have normal Packmaster frames (Requires Restart)."
+      "One Frame For All. All Pack cards have normal Packmaster frames (Requires Restart).",
+      "Share Content. Some Relics/ Potions can appear on other characters (Requires Restart)."
     ]
   }
 }

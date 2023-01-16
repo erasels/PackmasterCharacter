@@ -15,6 +15,7 @@ import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 import static thePackmaster.hats.Hats.currentHat;
 
@@ -78,7 +79,9 @@ public class HatMenu {
 
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
-        for (AbstractCardPack s : SpireAnniversary5Mod.unfilteredAllPacks) {
+        ArrayList<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
+        sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
+        for (AbstractCardPack s : sortedPacks) {
             if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists()) {
                 if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
                 if (UNLOCK_ALL_HATS)

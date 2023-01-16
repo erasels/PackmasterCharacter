@@ -22,6 +22,7 @@ public class WarlockPack extends AbstractCardPack {
 
     public WarlockPack() {
         super(ID, NAME, DESC, AUTHOR, CREDITS);
+        hatHidesHair = true;
     }
 
     @Override

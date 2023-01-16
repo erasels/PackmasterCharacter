@@ -1,6 +1,5 @@
 package thePackmaster.orbs;
 
-import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.*;
@@ -16,18 +15,16 @@ import thePackmaster.packs.*;
 
 import java.util.ArrayList;
 
-public abstract class AbstractPackMasterOrb extends CustomOrb {
-    public static ArrayList<AbstractOrb> orbs = new ArrayList();
-    public AbstractPackMasterOrb(String ID, String NAME, int basePassiveAmount, int baseEvokeAmount, String passiveDescription, String evokeDescription, String imgPath) {
-        super(ID, NAME, basePassiveAmount, baseEvokeAmount, passiveDescription, evokeDescription, imgPath);
-    }
-    public void passiveEffect(){
+public interface PackmasterOrb {
+    ArrayList<AbstractOrb> orbs = new ArrayList<>();
 
-    }
-    public static AbstractOrb getPackLimitedOrb(boolean useCardRng) {
-       orbs.clear();
+    //If your orb has a non-start of turn/end of turn passive effect, implement this interface/method.
+    void passiveEffect();
+
+    static AbstractOrb getPackLimitedOrb(boolean useCardRng) {
+        orbs.clear();
         for (AbstractCardPack pack : SpireAnniversary5Mod.currentPoolPacks){
-            if (pack instanceof DefectPack){
+            if (pack instanceof DefectPack) {
                 orbs.add(new Dark());
                 orbs.add(new Frost());
                 orbs.add(new Lightning());
@@ -53,6 +50,7 @@ public abstract class AbstractPackMasterOrb extends CustomOrb {
                 orbs.add(new Oblivion());
             }
         }
+
         if (orbs.isEmpty()){
             return AbstractOrb.getRandomOrb(useCardRng);
         } else {

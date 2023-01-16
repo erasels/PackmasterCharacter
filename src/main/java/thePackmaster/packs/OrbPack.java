@@ -40,19 +40,8 @@ public class OrbPack extends AbstractCardPack {
         return cards;
     }
 
-    public void initializePack() {
-        for (String s : getCards()) {
-            AbstractCard c = CardLibrary.getCard(s);
-            if (c == null) {
-                System.out.println("CARD FOR PACK NOT FOUND: " + s);
-                //And then it'll crash.
-            }
-            SpireAnniversary5Mod.cardParentMap.put(c.cardID, packID);
-            SpireAnniversary5Mod.cardClassParentMap.put(c.getClass(), packID);
-            cards.add(c.makeStatEquivalentCopy());
-        }
-
-        SpireAnniversary5Mod.cardParentMap.put(packID, packID);
-        previewPackCard = new CardPackPreview(packID, "blue/skill/chaos", this);
+    @Override
+    public AbstractCard makePreviewCard() {
+        return new CardPackPreview(packID, "blue/skill/chaos", this);
     }
 }
