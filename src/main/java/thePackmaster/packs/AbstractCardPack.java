@@ -51,9 +51,12 @@ public abstract class AbstractCardPack {
             SpireAnniversary5Mod.cardClassParentMap.put(c.getClass(), packID);
             cards.add(c.makeStatEquivalentCopy());
         }
-        previewPackCard = new CardPackPreview(packID, this);
+        previewPackCard = makePreviewCard();
     }
 
+    public AbstractCard makePreviewCard() {
+        return new CardPackPreview(packID, this);
+    }
 
     public ArrayList<String> getPackPotions() {
         return new ArrayList<>();
