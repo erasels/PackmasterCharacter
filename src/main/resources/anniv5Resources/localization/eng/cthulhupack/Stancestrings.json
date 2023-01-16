@@ -2,7 +2,7 @@
   "${ModID}:Nightmare": {
     "NAME": "Nightmare",
     "DESCRIPTION": [
-      "When you use 'Madness', exit Nightmare Stance. NL When you exit Nightmare Stance, draw 2 cards gain [E], and lose 1 HP."
+      "When you play #yMadness, exit #yNightmare #yStance. NL When you exit #yNightmare #yStance, draw #b2 cards gain [E] , and lose #b1 HP."
     ]
   }
 }
