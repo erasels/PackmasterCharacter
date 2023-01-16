@@ -1,5 +1,6 @@
 package thePackmaster.powers.psychicpack;
 
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -17,6 +18,11 @@ public class DeepDreamPower extends AbstractPackmasterPower {
 
     public DeepDreamPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
     @Override
