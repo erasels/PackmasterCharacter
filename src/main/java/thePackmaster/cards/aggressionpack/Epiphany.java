@@ -1,14 +1,17 @@
 package thePackmaster.cards.aggressionpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
+import com.megacrit.cardcrawl.actions.watcher.NotStanceCheckAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import com.megacrit.cardcrawl.vfx.combat.EmptyStanceEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.stances.aggressionpack.AggressionStance;
@@ -36,6 +39,7 @@ public class Epiphany extends AbstractAggressionCard {
             public void update() {
                 if (AbstractDungeon.player.stance != null && !AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
                     this.addToTop(new DrawCardAction(magicNumber));
+                    this.addToBot(new VFXAction(new EmptyStanceEffect(p.hb.cX, p.hb.cY), 0.1F));
                     this.addToTop(new ChangeStanceAction(new NeutralStance()));
                 }
                 else {
