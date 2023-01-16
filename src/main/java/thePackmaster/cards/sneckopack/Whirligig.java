@@ -16,7 +16,7 @@ public class Whirligig extends AbstractPackmasterCard {
 
     public Whirligig() {
         super(ID, 1, AbstractCard.CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 8;
+        baseDamage = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
