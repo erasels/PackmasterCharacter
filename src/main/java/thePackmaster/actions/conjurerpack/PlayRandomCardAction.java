@@ -31,18 +31,14 @@ public class PlayRandomCardAction extends AbstractGameAction
             return;
         }
 
-        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        tmp.group.addAll(group.group);
-
-        for (int i = 0; i < Math.min(tmp.size(), amount); i++)
+        int iteratorAmount = Math.min(group.size(), amount);
+        for (int i = 0; i < iteratorAmount; i++)
         {
-            AbstractCard c = tmp.getRandomCard(AbstractDungeon.cardRng);
+            AbstractCard c = group.getRandomCard(AbstractDungeon.cardRng);
             if (c != null)
             {
                 group.group.remove(c);
                 AbstractDungeon.getCurrRoom().souls.remove(c);
-                c.current_x = Settings.WIDTH / 2.0F;
-                c.current_y = Settings.HEIGHT / 2.0F;
                 c.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
                 c.target_y = Settings.HEIGHT / 2.0F;
                 this.addToBot(new NewQueueCardAction(c, target, false, true));
