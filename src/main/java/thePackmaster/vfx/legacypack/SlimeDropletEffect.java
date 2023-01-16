@@ -1,12 +1,8 @@
 package thePackmaster.vfx.legacypack;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
@@ -85,5 +81,7 @@ public class SlimeDropletEffect
         // sb.setBlendFunction(770, 771);
     }
 
-    public void dispose() {}
+    public void dispose() {
+        img.dispose();
+    }
 }

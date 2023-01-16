@@ -1,5 +1,6 @@
 package thePackmaster.orbs.summonspack;
 
+import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -19,7 +20,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.AbstractPackMasterOrb;
+import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.powers.boardgamepack.DicePower;
 import thePackmaster.powers.summonspack.JinxPower;
 import thePackmaster.util.Wiz;
@@ -29,7 +30,7 @@ import java.util.ArrayList;
 import static thePackmaster.SpireAnniversary5Mod.*;
 import static thePackmaster.util.Wiz.*;
 
-public class Leprechaun extends AbstractPackMasterOrb {
+public class Leprechaun extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(Leprechaun.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
