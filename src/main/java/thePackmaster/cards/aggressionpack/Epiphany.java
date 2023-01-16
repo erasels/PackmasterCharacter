@@ -34,7 +34,7 @@ public class Epiphany extends AbstractAggressionCard {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                if (AbstractDungeon.player.stance != null && AbstractDungeon.player.stance.ID.equals(AggressionStance.STANCE_ID)) {
+                if (AbstractDungeon.player.stance != null && !AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
                     this.addToTop(new DrawCardAction(magicNumber));
                     this.addToTop(new ChangeStanceAction(new NeutralStance()));
                 }

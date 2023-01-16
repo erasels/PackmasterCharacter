@@ -25,7 +25,7 @@
   },
   "${ModID}:Epiphany": {
     "NAME": "Epiphany",
-    "DESCRIPTION": "If you are in ${ModID}:Aggression, exit it and draw !M! cards. NL Otherwise, enter ${ModID}:Aggression."
+    "DESCRIPTION": "If you are in a Stance, exit it and draw !M! cards. NL Otherwise, enter ${ModID}:Aggression."
   },
   "${ModID}:InnerFury": {
     "NAME": "Inner Fury",
