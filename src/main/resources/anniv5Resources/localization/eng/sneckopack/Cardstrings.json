@@ -30,7 +30,7 @@
   },
   "${ModID}:SnazzySwagger": {
     "NAME": "Snazzy Swagger",
-    "DESCRIPTION" : "{@@}Draw !M! card{!M!|>1=s}. NL Discard !M! card{!M!|>1=s}. NL Randomize the cost of all cards in your hand."
+    "DESCRIPTION" : "{@@}Draw !M! card{!M!|>1=s}. NL Randomize the cost of all cards in your hand. NL Discard !M! card{!M!|>1=s}."
   },
   "${ModID}:SneckoEyes": {
     "NAME": "Snecko Eyes",
