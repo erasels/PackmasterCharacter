@@ -21,11 +21,11 @@
   },
   "${ModID}:ScarabShield": {
     "NAME": "Scarab Shield",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL If this has 2 or more infestation counters, gain !M! Artifact."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL Gain 1 Artifact for each infestation counter."
   },
   "${ModID}:Entomology": {
     "NAME": "Entomology",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL If this has any infestation counters, remove one and gain [E] ."
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL If this has an infestation counter, remove it to draw 1 card and gain [E] ."
   },
   "${ModID}:Compoundeyes": {
     "NAME": "Compoundeyes",
