@@ -12,7 +12,7 @@
 		"NAME": "Enervate"
 	},
 	"${ModID}:Excavation":	{
-		"DESCRIPTION": "Gain !B! Block. Fetch !M! cards from your discard pile and Retain them.",
+		"DESCRIPTION": "Gain !B! Block. NL Fetch !M! cards from your discard pile and Retain them.",
 		"NAME": "Excavation"
 	},
 	"${ModID}:Geomorphology":	{
