@@ -19,7 +19,7 @@ public class IcicleCrash extends AbstractPackmasterCard {
 
     public IcicleCrash() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 12;
+        baseDamage = 13;
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -41,6 +41,6 @@ public class IcicleCrash extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(4);
     }
 }
