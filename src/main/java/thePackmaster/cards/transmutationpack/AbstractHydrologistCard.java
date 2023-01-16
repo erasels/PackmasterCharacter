@@ -11,18 +11,8 @@ public abstract class AbstractHydrologistCard extends AbstractPackmasterCard {
     private final Subtype subtype;
 
     public AbstractHydrologistCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, Subtype subtype) {
-        super(cardID, cost, type, rarity, target);
+        super(cardID, cost, type, rarity, target, "hydrologist", "hydrologist/orb.png");
 
-        if (!SpireAnniversary5Mod.oneFrameMode) {
-            setBackgroundTexture(
-                    "anniv5Resources/images/512/hydrologist/" + type.name().toLowerCase() + ".png",
-                    "anniv5Resources/images/1024/hydrologist/" + type.name().toLowerCase() + ".png"
-            );
-            setOrbTexture(
-                    "anniv5Resources/images/512/hydrologist/orb.png",
-                    "anniv5Resources/images/1024/hydrologist/orb.png"
-            );
-        }
         this.subtype = subtype;
     }
 

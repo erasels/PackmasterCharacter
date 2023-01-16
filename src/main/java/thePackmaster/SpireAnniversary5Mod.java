@@ -382,9 +382,6 @@ public class SpireAnniversary5Mod implements
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
 
-        logger.info("Prepping dream hand");
-        DeepDreamPatch.dreamHand = new DeepDreamPatch.DreamHand();
-
         logger.info("Checking playability annotations");
         OccultPatch.testPlayability();
 
@@ -808,7 +805,6 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        DeepDreamPatch.wakeUp();
         ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
         combatExhausts = 0;

@@ -4,8 +4,6 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.curses.Necronomicurse;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.cthulhupack.NamelessMistPower;
 import thePackmaster.powers.cthulhupack.PageOfTheDeadPower;
 import thePackmaster.util.Wiz;
 

@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class Fright extends AbstractPackmasterCard {
+public class Fright extends AbstractRingOfPainCard {
     public final static String ID = makeID(Fright.class.getSimpleName());
 
     private static final int DAMAGE = 9;
@@ -25,11 +25,7 @@ public class Fright extends AbstractPackmasterCard {
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = DRAW;
 
-        if (!SpireAnniversary5Mod.oneFrameMode)
-        setBackgroundTexture(
-                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
-        );
+        
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

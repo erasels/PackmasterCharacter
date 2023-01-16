@@ -14,7 +14,7 @@ import java.util.Locale;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.doDmg;
 
-public class MasterSpark extends AbstractPackmasterCard implements AmplifyCard{
+public class MasterSpark extends AbstractMarisaCard implements AmplifyCard{
     public final static String ID = makeID(MasterSpark.class.getSimpleName());
     private static final int DMG = 9, UPG_DMG = 1;
     private static final int MAGIC = 16, UPG_MAGIC = 3;
@@ -24,9 +24,6 @@ public class MasterSpark extends AbstractPackmasterCard implements AmplifyCard{
         damage = baseDamage = DMG;
         baseSecondDamage = secondDamage = MAGIC;
 
-        if (!SpireAnniversary5Mod.oneFrameMode)
-        setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
