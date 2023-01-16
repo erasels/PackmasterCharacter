@@ -1,7 +1,7 @@
 {
   "${ModID}:Imp": {
     "NAME": "Imp",
-    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn. NL Deal !M! damage to a random enemy. Increase the damage of *Imp cards by 1 this combat. Draw a card. NL Exhaust."
+    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn. NL Deal !M! damage. Increase the damage of *Imps by 1 this combat. NL Draw a card. NL Exhaust."
   },
   "${ModID}:HighPriestessJeklik": {
     "NAME": "High Priestess Jeklik",
