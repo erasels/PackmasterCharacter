@@ -56,7 +56,6 @@ import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
-import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.patches.sneckopack.EnergyCountPatch;
@@ -381,9 +380,6 @@ public class SpireAnniversary5Mod implements
 
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
-
-        logger.info("Prepping dream hand");
-        DeepDreamPatch.dreamHand = new DeepDreamPatch.DreamHand();
 
         logger.info("Checking playability annotations");
         OccultPatch.testPlayability();
@@ -807,7 +803,6 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        DeepDreamPatch.wakeUp();
         ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
         combatExhausts = 0;
