@@ -24,7 +24,7 @@
 		"NAME": "Geothermal Heating"
 	},
 	"${ModID}:Lithosphere":	{
-		"DESCRIPTION": "Gain !B! damage. Apply !M! ${ModID}:Petra.",
+		"DESCRIPTION": "Gain !B! damage. NL Apply !M! ${ModID}:Petra.",
 		"NAME": "Lithosphere"
 	},
 	"${ModID}:MudFissure":	{
