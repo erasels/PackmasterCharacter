@@ -27,7 +27,7 @@ public class VoDo extends AbstractBellordCard implements OnObtainCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p, magicNumber));
-        atb(new AllEnemyApplyPowerAction(p, -magicNumber, (q) -> new StrengthPower(q, -magicNumber)));
+        atb(new AllEnemyApplyPowerAction(p, -2, (q) -> new StrengthPower(q, -2)));
     }
 
     @Override

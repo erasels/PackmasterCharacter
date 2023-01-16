@@ -17,7 +17,7 @@ public class BuggyBash extends AbstractInfestCard {
 
     public BuggyBash() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 14;
+        baseDamage = 16;
         baseMagicNumber = magicNumber = 4;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
@@ -44,7 +44,7 @@ public class BuggyBash extends AbstractInfestCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
         upgradeMagicNumber(1);
     }
 }

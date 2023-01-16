@@ -21,7 +21,7 @@
   },
   "${ModID}:ScarabShield": {
     "NAME": "Scarab Shield",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL If this has 2 or more infestation counters, gain !M! Artifact."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL Gain 1 Artifact for each infestation counter."
   },
   "${ModID}:Entomology": {
     "NAME": "Entomology",
