@@ -28,7 +28,7 @@
 		"NAME": "Lithosphere"
 	},
 	"${ModID}:MudFissure":	{
-		"DESCRIPTION": "Deal !D! damage. Double damage if the target has debuffs.",
+		"DESCRIPTION": "Deal !D! damage. NL Deals double damage if the target has debuffs.",
 		"NAME": "Mud Fissure"
 	},
 	"${ModID}:RagingInferno":	{
