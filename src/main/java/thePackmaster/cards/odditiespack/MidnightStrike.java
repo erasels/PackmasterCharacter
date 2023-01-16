@@ -28,6 +28,31 @@ public class MidnightStrike extends AbstractPackmasterCard {
     }
 
     @Override
+    public void applyPowers() {
+        super.applyPowers();
+
+        int count = AbstractDungeon.actionManager.cardsPlayedThisCombat.size();
+
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + count;
+        if (count == 1) {
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
+        } else {
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
+        }
+
+        this.initializeDescription();
+
+        loadCardImage("anniv5Resources/images/cards/MidnightStrike" + ((count) % 13 + 1) + ".png");
+    }
+
+    public void onMoveToDiscard() {
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
+    }
+
+
+    @Override
     public void triggerOnGlowCheck() {
         glowColor = AbstractDungeon.actionManager.cardsPlayedThisCombat.size() == 11 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }

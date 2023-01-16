@@ -1,7 +1,9 @@
 package thePackmaster.cards.odditiespack;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
@@ -12,14 +14,22 @@ public class EightBall extends AbstractPackmasterCard {
     // intellij stuff attack, enemy, special, 12, 3, 10, 2, , 
 
     public EightBall() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 12;
-        baseBlock = 10;
+        baseBlock = 112;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+    }
+
+    @Override
+    protected Texture getPortraitImage() {
+        if (upgraded) {
+            return ImageMaster.loadImage("anniv5Resources/images/cards/NineBall_p.png");
+        }
+        return super.getPortraitImage();
     }
 
     @Override
@@ -30,12 +40,12 @@ public class EightBall extends AbstractPackmasterCard {
             name = cardStrings.EXTENDED_DESCRIPTION[0];
             initializeTitle();
             upp();
-            //TODO: Load card image, etc overrides
+            loadCardImage("anniv5Resources/images/cards/NineBall.png");
         }
     }
 
     public void upp() {
         upgradeDamage(3);
-        upgradeBlock(2);
+        upgradeBlock(3);
     }
 }

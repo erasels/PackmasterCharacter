@@ -23,7 +23,7 @@
     "NAME": "Let's Draft!",
     "DESCRIPTION": "Deal !D! damage. NL Choose a card. Shuffle a copy of it into your draw pile.",
     "EXTENDED_DESCRIPTION": [
-      " create a copy of."
+      "create a copy of."
     ]
   },
   "${ModID}:Beacon": {
@@ -43,15 +43,20 @@
     "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Startup: Gain !${ModID}:m2! *Gold."
   },
   "${ModID}:FinalForm": {
-    "NAME": "Final Form",
+    "NAME": "This Isn't Even My...",
     "DESCRIPTION": "${ModID}:Unnate. Ethereal. NL Exhaust 1 card. NL At the start of your turn, play and Exhaust a copy of it.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL At the start of your turn, play and Exhaust a copy of it.",
     "EXTENDED_DESCRIPTION": [
-      " Exhaust for Final Form."
+      "Exhaust for Final Form."
     ]
   },
   "${ModID}:MidnightStrike": {
     "NAME": "Midnight Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If this is the 12th card played this combat, deal !${ModID}:sd! damage instead."
+    "DESCRIPTION": "Deal !D! damage. NL If this is the 12th card played this combat, deal !${ModID}:sd! damage instead.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Played ",
+      " card.)",
+      " cards.)"
+    ]
   }
 }

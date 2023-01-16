@@ -21,7 +21,7 @@ public class ShiningStyle extends AbstractPackmasterCard implements StartupCard 
     public ShiningStyle() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 10;
+        baseSecondMagic = secondMagic = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,7 +30,7 @@ public class ShiningStyle extends AbstractPackmasterCard implements StartupCard 
     }
 
     public void upp() {
-        upgradeSecondMagic(5);
+        upgradeSecondMagic(4);
     }
 
     @Override
