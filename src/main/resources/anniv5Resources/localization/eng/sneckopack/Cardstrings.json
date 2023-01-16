@@ -9,7 +9,7 @@
   },
   "${ModID}:TailFlail": {
     "NAME": "Tail Flail",
-    "DESCRIPTION": "{@@}Deal !D! damage to a random enemy. NL Randomize the cost of !M! random card{!M!|>1=s}."
+    "DESCRIPTION": "Deal !D! to !${ModID}:sd! damage to ALL enemies. NL Randomize the cost of !M! random cards."
   },
   "${ModID}:Sneckpot": {
     "NAME": "Sneckpot",
