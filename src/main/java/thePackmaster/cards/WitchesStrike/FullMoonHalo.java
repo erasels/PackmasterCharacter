@@ -1,11 +1,13 @@
 package thePackmaster.cards.WitchesStrike;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.purple.CutThroughFate;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
+import thePackmaster.cardmodifiers.witchesstrikepack.InscribedMod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 import thePackmaster.orbs.WitchesStrike.FullMoon;
@@ -17,14 +19,14 @@ public class FullMoonHalo extends AbstractPackmasterCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public FullMoonHalo() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 10;
         magicNumber = baseMagicNumber = 1;
+        CardModifierManager.addModifier(this,new InscribedMod(true,true));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        addToBot(new DrawCardAction(magicNumber));
         addToBot(new ManifestAction(new FullMoon()));
     }
 

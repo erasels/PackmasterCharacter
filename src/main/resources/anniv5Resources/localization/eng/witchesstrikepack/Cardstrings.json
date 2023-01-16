@@ -1,37 +1,38 @@
 {
   "${ModID}:CrescentSweep": {
     "NAME": "Crescent Sweep",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Crescent_Moon."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Crescent_Moon.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Crescent_Moon. NL ${ModID}:Inscribe a random card in your hand."
   },
   "${ModID}:MysticFlourish": {
     "NAME": "Mystic Flourish",
-    "DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next orb.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next orb twice."
+    "DESCRIPTION": "Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Inscribe a random card in your hand."
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
     "DESCRIPTION": "${ModID}:Manifest a random orb. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "${ModID}:Manifest !M! random orbs. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "${ModID}:Manifest !M! random orbs."
   },
   "${ModID}:FullMoonHalo": {
     "NAME": "Full Moon Halo",
-    "DESCRIPTION": "Gain !B! Block. NL Draw a card. NL Manifest ${ModID}:Full_Moon."
+    "DESCRIPTION": " Gain !B! Block. NL Manifest ${ModID}:Full_Moon."
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Moonlight Barrage",
-    "DESCRIPTION": "Activate the passive effect of all your orbs. NL Deal !D! damage to a random enemy for each."
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each."
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "Chittering Punt",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL ${ModID}:Manifest ${ModID}:Crescent_Moon for each infestation counter."
+    "DESCRIPTION": "${ModID}:Infest. ${ModID}:Inscribed. NL Deal !D! damage. NL ${ModID}:Manifest ${ModID}:Crescent_Moon for each infestation counter."
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this ${ModID}:infests, activate the passive effect of your next orb."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this ${ModID}:infests, ${ModID}:Inscribe a random card in your draw pile."
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "Activate the passive effect of your next orb !M! times. NL Gain !anniv5:m2! Focus."
+    "DESCRIPTION": "${ModID}:Inscribe !M! random card in your hand. NL Gain !anniv5:m2! Focus."
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",
@@ -40,5 +41,10 @@
   "${ModID}:ScarabPlague": {
     "NAME": "Scarab Plague",
     "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Gain !B! Block. NL When this ${ModID}:infests, ${ModID}:Manifest ${ModID}:Full_Moon."
+  },
+  "${ModID}:Inscribed": {
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Inscribed. NL "
+    ]
   }
 }
