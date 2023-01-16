@@ -24,8 +24,8 @@
   "${ModID}:EndOfDaysPower": {
     "NAME": "End of Days",
     "DESCRIPTIONS": [
-      "When you end your turn with energy, spend it all. #yChannel #b",
-      " Dark for each energy spent."
+      "At the end of your turn, #yChannel #b",
+      " #yDark for each [E] unspent."
     ]
   }
 }
