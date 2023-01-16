@@ -17,7 +17,7 @@ public class Cognition extends AbstractPackmasterCard implements AmplifyCard {
     public final static String ID = makeID("Cognition");
 
     public Cognition() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = 2;
     }
 

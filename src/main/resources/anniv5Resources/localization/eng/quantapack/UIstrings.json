@@ -5,5 +5,11 @@
       "Card pack based on a homebrew card game.",
       "AlexMdle"
     ]
+  },
+  "${ModID}:QuantaPackHat": {
+    "TEXT": [
+      "A part of any inquisitive technomancer.",
+      "The Oculators"
+    ]
   }
 }

@@ -8,12 +8,12 @@ import thePackmaster.powers.infestpack.LordOfTheFliesPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class LordOfTheFlies extends AbstractPackmasterCard {
+public class LordOfTheFlies extends AbstractInfestCard {
     public final static String ID = makeID("LordOfTheFlies");
     // intellij stuff power, self, rare, , , , , , 
 
     public LordOfTheFlies() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,6 +21,6 @@ public class LordOfTheFlies extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }

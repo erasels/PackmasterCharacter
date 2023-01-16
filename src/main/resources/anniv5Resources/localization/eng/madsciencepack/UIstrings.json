@@ -8,20 +8,26 @@
   },
   "${ModID}:MadScienceModifiers": {
     "TEXT": [
-      " NL Apply 2 Frostbite.",
-      " NL Apply 3 Frostbite.",
+      " NL Apply ",
+      " ${ModID}:Frostbite.",
       "Retain. NL ",
-      " NL Float this.",
+      " NL Play ",
       " NL Gain 6 Block.",
       " NL Gain 8 Block.",
       "Ethereal. NL ",
-      " NL Gain a Cannonball.",
+      " NL Gain a *Cannonball.",
       " NL Draw a card."
     ]
   },
   "${ModID}:AddModifierUI": {
     "TEXT": [
       "Choose a card to Modify."
+    ]
+  },
+  "${ModID}:MadSciencePackHat": {
+    "TEXT": [
+      "You'll show them. You'll show them all!!",
+      "Mad Mad Science"
     ]
   }
 }

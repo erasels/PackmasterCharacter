@@ -14,9 +14,9 @@ public class EternalStrike extends AbstractPackmasterCard {
     public final static String ID = makeID("EternalStrike");
 
     public EternalStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        damage = baseDamage = 8;
-        magicNumber = baseMagicNumber = 4;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        damage = baseDamage = 7;
+        magicNumber = baseMagicNumber = 5;
         this.tags.add(CardTags.STRIKE);
     }
 

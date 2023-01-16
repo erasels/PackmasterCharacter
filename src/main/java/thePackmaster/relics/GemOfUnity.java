@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import org.lwjgl.Sys;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
@@ -45,6 +44,9 @@ public class GemOfUnity extends AbstractPackmasterRelic {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
+        if (grayscale) {
+            return;
+        }
         AbstractCardPack pack = Wiz.getPackByCard(c);
         if (pack != null){
             if (!packsPlayed.contains(pack)){
@@ -55,7 +57,7 @@ public class GemOfUnity extends AbstractPackmasterRelic {
                     addToBot(new GainBlockAction(Wiz.p(), 20));
                     Wiz.applyToSelf(new StrengthPower(Wiz.p(), 1));
                     Wiz.applyToSelf(new DexterityPower(Wiz.p(), 1));
-                    resetCounter();
+                    grayscale = true;
                 }
             }
         }

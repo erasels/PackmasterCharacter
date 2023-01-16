@@ -2,9 +2,15 @@
   "${ModID}:SwarmOfBees": {
     "NAME": "Swarm Of Bees",
     "DESCRIPTION": [
-      "#yPassive: Whenever you lose HP, deal #b",
-      " damage to a random enemy. NL #yEvoke: Gain #b",
-      " #yThorns."
+      "#yPassive: Deal #b",
+      " damage to ALL enemies. NL #yEvoke: Deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "${ModID}:Louse": {
+    "NAME": "Rainbow Louse",
+    "DESCRIPTION": [
+      "#yPassive: Draw a card at the start of your turn. #yEvoke: Draw 2 cards."
     ]
   },
   "${ModID}:Panda": {
@@ -15,12 +21,34 @@
       " damage to a random enemy."
     ]
   },
-  "${ModID}:Bulldog": {
-    "NAME": "Bulldog",
+  "${ModID}:Porcupine": {
+    "NAME": "Porcupine",
+    "DESCRIPTION": [
+      "#yPassive: At the start of your turn add a #b",
+      " damage #yQuill into your hand. NL #yEvoke: Gain #b",
+      " #yThorns."
+    ]
+  },
+  "${ModID}:Wolf": {
+    "NAME": "Wolf",
     "DESCRIPTION": [
       "#yPassive: At the end of your turn, deal #b",
-      " damage to the enemy with the lowest HP. NL #yEvoke: Deal #b",
-      " damage to the enemy with the lowest HP."
+      " damage to the enemy with the least HP. NL Damage increases with more #yWolves. NL #yEvoke: Gain an orb slot."
+    ]
+  },
+  "${ModID}:Leprechaun": {
+    "NAME": "Leprechaun",
+    "DESCRIPTION": [
+      "#yPassive: At the end of your turn roll #b",
+      ". NL #yEvoke: Apply #b",
+      " #yJinx to ALL enemies."
+    ]
+  },
+  "${ModID}:FireSpirit": {
+    "NAME": "Fire Spirit",
+    "DESCRIPTION": [
+      "#yPassive: At the end of your turn apply #b",
+      " #yIgnite to ALL enemies. NL #yEvoke: Gain 1 #yFocus."
     ]
   }
 }

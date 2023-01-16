@@ -9,32 +9,26 @@ import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.util.Wiz.atb;
-import static thePackmaster.util.Wiz.removePower;
 
 public class SummonPandasPower extends AbstractPackmasterPower {
     public static String POWER_ID = SpireAnniversary5Mod.makeID(SummonPandasPower.class.getSimpleName());
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static int summonIdOffset;
-
     public SummonPandasPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
-        ID = POWER_ID + summonIdOffset;
-        summonIdOffset++;
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);;
     }
 
     @Override
     public void atStartOfTurn() {
-        atb(new ChannelAction(new Panda(amount)));
+        atb(new ChannelAction(new Panda()));
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-    }
-
-    static {
-        summonIdOffset = 0;
+        if (amount == 1)
+            description = DESCRIPTIONS[0];
+        else
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 }

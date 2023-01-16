@@ -39,19 +39,19 @@ public class ElephantSplatEffect extends AbstractGameEffect {
 
     public void update() {
         if (duration == startingDuration) {
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_HEAD_FILE, xCenter + 250, yCenter - 115));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_LEG_ONE_FILE, xCenter + 98, yCenter + 132));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_LEG_TWO_FILE, xCenter - 25, yCenter + 160));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_LEG_THREE_FILE, xCenter - 170, yCenter + 165));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_LEG_FOUR_FILE, xCenter - 270, yCenter + 156));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_TAIL_FILE, xCenter - 250, yCenter - 5));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_RUMP_FILE, xCenter - 195, yCenter - 163));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_TRUNK_FILE, xCenter + 265, yCenter + 97));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_EAR_TOP_FILE, xCenter + 87, yCenter + -187));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_EAR_BOTTOM_FILE, xCenter + 113, yCenter - 55));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_TOP_TORSO_FILE, xCenter - 62, yCenter - 162));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_LEFT_TORSO_FILE, xCenter - 140, yCenter - 58));
-            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_RIGHT_TORSO_FILE, xCenter - 15, yCenter - 5));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_HEAD_FILE, xCenter + 250*Settings.scale*Settings.scale, yCenter - 115*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_LEG_ONE_FILE, xCenter + 98*Settings.scale*Settings.scale, yCenter + 132*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_LEG_TWO_FILE, xCenter - 25*Settings.scale, yCenter + 160*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_LEG_THREE_FILE, xCenter - 170*Settings.scale, yCenter + 165*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_LEG_FOUR_FILE, xCenter - 270*Settings.scale, yCenter + 156*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_TAIL_FILE, xCenter - 250*Settings.scale, yCenter - 5*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_RUMP_FILE, xCenter - 195*Settings.scale, yCenter - 163*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_TRUNK_FILE, xCenter + 265*Settings.scale, yCenter + 97*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_EAR_TOP_FILE, xCenter + 87*Settings.scale, yCenter + -187*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_EAR_BOTTOM_FILE, xCenter + 113*Settings.scale, yCenter - 55*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_TOP_TORSO_FILE, xCenter - 62*Settings.scale, yCenter - 162*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_LEFT_TORSO_FILE, xCenter - 140*Settings.scale, yCenter - 58*Settings.scale));
+            AbstractDungeon.effectsQueue.add(new ElephantPieceEffect(ELEPHANT_RIGHT_TORSO_FILE, xCenter - 15*Settings.scale, yCenter - 5*Settings.scale));
         }
 
         duration -= Gdx.graphics.getDeltaTime();

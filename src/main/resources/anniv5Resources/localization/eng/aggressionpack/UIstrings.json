@@ -3,7 +3,14 @@
     "TEXT": [
       "Aggression",
       "Focused on attacks and the Aggression stance, which increases your attack damage by 25%.",
-      "modargo"
+      "modargo",
+      "Card art from MtG"
+    ]
+  },
+  "${ModID}:AggressionPackHat": {
+    "TEXT": [
+      "You are now truly ready to raid and pillage the spire.",
+      "Viking Helm"
     ]
   }
 }

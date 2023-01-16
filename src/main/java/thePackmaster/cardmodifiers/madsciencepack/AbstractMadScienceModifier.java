@@ -16,14 +16,14 @@ public abstract class AbstractMadScienceModifier extends AbstractCardModifier {
     }
 
     @Override
-    public void onInitialApplication(AbstractCard card) {
-        card.tags.add(SpireAnniversary5Mod.ISCARDMODIFIED);
-        alterName(card);
+    public String modifyName(String cardName, AbstractCard card) {
+        return cardName + "^";
     }
 
-    public void alterName(AbstractCard card){
-        modifyName(card.name + "*", card);
-
+    @Override
+    public void onInitialApplication(AbstractCard card) {
+        card.tags.add(SpireAnniversary5Mod.ISCARDMODIFIED);
+        modifyName(card.name, card);
     }
 
 }

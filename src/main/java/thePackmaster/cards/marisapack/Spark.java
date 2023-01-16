@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.ImpactSparkEffect;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
@@ -18,19 +19,17 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Spark extends AbstractPackmasterCard implements AmplifyCard{
+public class Spark extends AbstractMarisaCard implements AmplifyCard{
     public final static String ID = makeID(Spark.class.getSimpleName());
     private static final int DMG = 3, UPG_DMG = 4;
     private static final int MAGIC = 1, UPG_MAGIC = 1;
 
     public Spark() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         damage = baseDamage = DMG;
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
 
-        setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

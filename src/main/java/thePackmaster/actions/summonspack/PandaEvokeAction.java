@@ -46,7 +46,7 @@ public class PandaEvokeAction extends AbstractGameAction {
             sourceY = original.cY;
             if (!SpireAnniversary5Mod.pandaList.contains(panda))
                 SpireAnniversary5Mod.pandaList.add(panda);
-            thunkTiming = (targetX - sourceX)/3200.0f;
+            thunkTiming = (targetX - sourceX)/3200.0f/Settings.scale;
             if (thunkTiming > 0.25f)
                 thunkTiming = 0.25f;
             if (thunkTiming < 0.1f)
@@ -67,7 +67,7 @@ public class PandaEvokeAction extends AbstractGameAction {
             panda.cX = targetX;
             panda.cY = targetY;
             if (target != null && target.currentHealth > 0 && adp() != null) {
-                DamageInfo info = new DamageInfo(adp(), panda.passiveAmount, DamageInfo.DamageType.THORNS);
+                DamageInfo info = new DamageInfo(adp(), panda.evokeAmount, DamageInfo.DamageType.THORNS);
                 att(new DamageAction(target, info, AttackEffect.BLUNT_HEAVY, true));
             }
             AbstractDungeon.effectList.add(new PandaExitEffect(panda));

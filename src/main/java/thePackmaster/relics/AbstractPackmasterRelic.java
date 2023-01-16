@@ -7,21 +7,32 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.util.TexLoader;
 
-import static thePackmaster.SpireAnniversary5Mod.makeRelicPath;
-import static thePackmaster.SpireAnniversary5Mod.modID;
+import static thePackmaster.SpireAnniversary5Mod.*;
 
 public abstract class AbstractPackmasterRelic extends CustomRelic {
     public AbstractCard.CardColor color;
     public String parentPackID;
 
+    public AbstractPackmasterRelic(String setId, AbstractRelic.RelicTier tier, AbstractRelic.LandingSound sfx, String packID) {
+        this(setId, tier, sfx, packID, false);
+    }
     public AbstractPackmasterRelic(String setId, AbstractRelic.RelicTier tier, AbstractRelic.LandingSound sfx) {
-        this(setId, tier, sfx, null);
+        this(setId, tier, sfx, null, false);
     }
 
-    public AbstractPackmasterRelic(String setId, AbstractRelic.RelicTier tier, AbstractRelic.LandingSound sfx, String packID) {
+    public AbstractPackmasterRelic(String setId, AbstractRelic.RelicTier tier, AbstractRelic.LandingSound sfx, String packID, boolean isShared) {
         super(setId, TexLoader.getTexture(makeRelicPath(setId.replace(modID + ":", "") + ".png")), tier, sfx);
         outlineImg = TexLoader.getTexture(makeRelicPath(setId.replace(modID + ":", "") + "Outline.png"));
-        this.color = ThePackmaster.Enums.PACKMASTER_RAINBOW;
+        if (isShared) {
+            if (sharedContentMode) {
+                this.color = null;
+            } else {
+                this.color = ThePackmaster.Enums.PACKMASTER_RAINBOW;
+            }
+        } else {
+
+            this.color = ThePackmaster.Enums.PACKMASTER_RAINBOW;
+        }
         this.parentPackID = packID;
     }
 
@@ -31,7 +42,7 @@ public abstract class AbstractPackmasterRelic extends CustomRelic {
 
     @Override
     public boolean canSpawn() {
-        if(parentPackID != null) {
+        if (parentPackID != null) {
             return SpireAnniversary5Mod.currentPoolPacks.stream().anyMatch(cp -> cp.packID.equals(parentPackID));
         }
 

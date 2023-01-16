@@ -12,10 +12,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.ui.buttons.GridSelectConfirmButton;
@@ -173,9 +175,11 @@ public class PackSetupScreen extends CustomScreen {
                     genericScreenOverlayReset();
                     AbstractDungeon.closeCurrentScreen();
 
-                    currentPoolPacks.sort(Comparator.comparing((pack)->pack.packID));
+                    currentPoolPacks.sort(Comparator.comparing((pack)->pack.name));
                     SpireAnniversary5Mod.selectedCards = true;
+                    editPotionPool();
                     CardCrawlGame.dungeon.initializeCardPools();
+
                 }
                 break;
             case DRAFTING:
@@ -369,10 +373,21 @@ public class PackSetupScreen extends CustomScreen {
     private void randomPacks(int amount) {
         while (amount > 0 && !packPool.isEmpty()) {
             AbstractCardPack target = packPool.remove(rng.random(packPool.size() - 1));
-            BaseMod.logger.info("Randomly selected: " + target.packID);
+            SpireAnniversary5Mod.logger.info("Randomly selected: " + target.packID);
             currentPoolPacks.add(target);
             --amount;
         }
+    }
+
+    public static void editPotionPool() {
+        ArrayList<String> pool = PotionHelper.potions;
+        pool.removeIf(potionID -> SpireAnniversary5Mod.packExclusivePotions.contains(potionID));
+
+        Set<String> potionsToAdd = new HashSet<>();
+        for (AbstractCardPack pack : currentPoolPacks) {
+            potionsToAdd.addAll(pack.getPackPotions());
+        }
+        pool.addAll(potionsToAdd);
     }
 
     public static class Enum

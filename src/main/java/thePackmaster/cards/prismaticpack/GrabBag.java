@@ -12,14 +12,11 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.List;
 
-public class GrabBag extends AbstractPackmasterCard {
+public class GrabBag extends AbstractPrismaticCard {
     public static final String ID = SpireAnniversary5Mod.makeID("GrabBag");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
-    private static final int CARDS = 3;
+    private static final int CARDS = 4;
 
     public GrabBag() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

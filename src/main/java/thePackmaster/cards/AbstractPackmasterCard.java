@@ -21,10 +21,13 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.CardArtRoller;
 import thePackmaster.util.Wiz;
+
+import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.SpireAnniversary5Mod.modID;
@@ -47,19 +50,44 @@ public abstract class AbstractPackmasterCard extends CustomCard {
 
     private boolean needsArtRefresh = false;
     private String bottomText;
+    private String frameFolder;
+    private String orbString;
+
+    public boolean isUnnate = false;
 
     public static Color packNameDisplayColor = Settings.CREAM_COLOR.cpy();
 
+    public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, String frameID) {
+        this(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW, getCardTextureString(cardID.replace(modID + ":", ""), type), frameID, null);
+    }
+
+    public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, String frameID, String orbPath) {
+        this(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW, getCardTextureString(cardID.replace(modID + ":", ""), type), frameID, orbPath);
+    }
+
+    public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color, String frameID) {
+        this(cardID, cost, type, rarity, target, color, getCardTextureString(cardID.replace(modID + ":", ""), type), frameID, null);
+    }
+
+    public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color, String frameID, String orbPath) {
+        this(cardID, cost, type, rarity, target, color, getCardTextureString(cardID.replace(modID + ":", ""), type), frameID, orbPath);
+    }
+
     public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        this(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW);
+        this(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW, null, null);
     }
 
     public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
-        super(cardID, "", getCardTextureString(cardID.replace(modID + ":", ""), type),
-                cost, "", type, color, rarity, target);
+        this(cardID, cost, type, rarity, target, color, getCardTextureString(cardID.replace(modID + ":", ""), type), null, null);
+    }
+
+    public AbstractPackmasterCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color, final String textureString, String frameID, String orbPath) {
+        super(cardID, "", textureString, cost, "", type, color, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(this.cardID);
         rawDescription = cardStrings.DESCRIPTION;
         name = originalName = cardStrings.NAME;
+        frameFolder = frameID;
+        orbString = orbPath;
         initializeTitle();
         initializeDescription();
 
@@ -70,13 +98,24 @@ public abstract class AbstractPackmasterCard extends CustomCard {
                 needsArtRefresh = true;
         }
 
-        setBackgroundTexture(
-                "anniv5Resources/images/512/coreset/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/coreset/" + type.name().toLowerCase() + ".png"
-        );
+        if (frameFolder == null || SpireAnniversary5Mod.oneFrameMode){
+            setBackgroundTexture(
+                    "anniv5Resources/images/512/coreset/" + type.name().toLowerCase() + ".png",
+                    "anniv5Resources/images/1024/coreset/" + type.name().toLowerCase() + ".png");
+        } else {
+            setBackgroundTexture("anniv5Resources/images/512/" + frameFolder + "/" + type.name().toLowerCase(Locale.ROOT) + ".png",
+                    "anniv5Resources/images/1024/" + frameFolder + "/" + type.name().toLowerCase(Locale.ROOT) + ".png");
+
+        }
+
+        if (orbString != null && !SpireAnniversary5Mod.oneFrameMode){
+            setOrbTexture(
+                    "anniv5Resources/images/512/" + orbString,
+                    "anniv5Resources/images/1024/" + orbString
+            );
+        }
+
     }
-
-
 
     @Override
     protected Texture getPortraitImage() {

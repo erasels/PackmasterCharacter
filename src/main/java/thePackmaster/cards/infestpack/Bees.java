@@ -10,14 +10,14 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Bees extends AbstractPackmasterCard implements OnInfestCard {
+public class Bees extends AbstractInfestCard implements OnInfestCard {
     public final static String ID = makeID("Bees");
     // intellij stuff attack, enemy, rare, 1, , , , 8, 2
 
     public Bees() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 1;
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 6;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
 

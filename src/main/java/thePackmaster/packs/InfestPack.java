@@ -16,6 +16,7 @@ public class InfestPack extends AbstractCardPack {
 
     public InfestPack() {
         super(ID, NAME, DESC, AUTHOR);
+        hatHidesHair = true;
     }
 
     @Override

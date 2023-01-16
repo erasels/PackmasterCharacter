@@ -1,23 +1,27 @@
 package thePackmaster.orbs.summonspack;
 
+import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.patches.ColoredDamagePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -26,25 +30,27 @@ import static com.badlogic.gdx.math.MathUtils.*;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
-public class SwarmOfBees extends AbstractPackMasterOrb {
+public class SwarmOfBees extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(SwarmOfBees.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH_O = makePath("images/vfx/summonspack/Empty.png");
-    private static final String IMG_PATH = makePath("images/vfx/summonspack/Bee.png");
+    private static final String IMG_PATH_O = makePath("images/orbs/summonsPack/Empty.png");
+    private static final String IMG_PATH = makePath("images/orbs/summonsPack/Bee.png");
     private static final Texture BEE_IMG = ImageMaster.loadImage(IMG_PATH);
     private static final int BEE_COUNT = 120;
     public static final int BASE_PASSIVE = 2;
     public static final int BASE_EVOKE = 6;
+    private static final Color STING_COLOR = Color.YELLOW.cpy();
+
+    private static final float SPAWN_DISTANCE = 40f*Settings.scale;
+    private static final float TETHER_DISTANCE = SPAWN_DISTANCE;
+    private static final float SPAWN_VELOCITY_VAR = 40f*Settings.scale;
+    private static final float ACC_VAR = 40f*Settings.scale;
 
     private final ArrayList<Bee> bees = new ArrayList<>();
 
     private class Bee {
-        private static final float SPAWN_DISTANCE = 40f;
-        private static final float TETHER_DISTANCE = SPAWN_DISTANCE;
-        private static final float SPAWN_VELOCITY_VAR = 40f;
-        private static final float ACC_VAR = 40f;
 
         private float x, y;
         private float vMag, vAngle;
@@ -139,7 +145,6 @@ public class SwarmOfBees extends AbstractPackMasterOrb {
     public SwarmOfBees()
     {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH_O);
-        basePassiveAmount = BASE_PASSIVE;
         showEvokeValue = false;
 
         generateBees();
@@ -162,11 +167,15 @@ public class SwarmOfBees extends AbstractPackMasterOrb {
         if (power != null) {
             passiveAmount = Math.max(0, basePassiveAmount + power.amount);
             evokeAmount = Math.max(0, baseEvokeAmount + power.amount);
-        }
-        else {
+        } else {
             passiveAmount = basePassiveAmount;
             evokeAmount = baseEvokeAmount;
         }
+
+        if (passiveAmount < 0)
+            passiveAmount = 0;
+        if (evokeAmount < 0)
+            evokeAmount = 0;
     }
 
     @Override
@@ -176,12 +185,24 @@ public class SwarmOfBees extends AbstractPackMasterOrb {
 
     @Override
     public void onEndOfTurn() {
-        Wiz.thornDmgAll(passiveAmount, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        for (AbstractMonster m : Wiz.getEnemies()) {
+            DamageInfo info = new DamageInfo(adp(), passiveAmount, DamageInfo.DamageType.THORNS);
+            AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
+            atb(action);
+        }
     }
 
     @Override
     public void onEvoke() {
-        Wiz.thornDmgAll(evokeAmount, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        for (AbstractMonster m : Wiz.getEnemies()) {
+            DamageInfo info = new DamageInfo(adp(), evokeAmount, DamageInfo.DamageType.THORNS);
+            AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
+            ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
+            atb(action);
+        }
     }
 
     @Override

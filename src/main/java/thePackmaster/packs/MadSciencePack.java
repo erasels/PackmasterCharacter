@@ -26,7 +26,7 @@ public class MadSciencePack extends AbstractCardPack {
         cards.add(Expand.ID);
         cards.add(Fortify.ID);
         cards.add(Improve.ID);
-        cards.add(Lighten.ID);
+        cards.add(Attach.ID);
         cards.add(Piratify.ID);
         cards.add(Sharpen.ID);
         cards.add(Discombobulate.ID);

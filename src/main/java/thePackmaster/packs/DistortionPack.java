@@ -14,6 +14,7 @@ import thePackmaster.ThePackmaster;
 import thePackmaster.actions.distortionpack.ImproveAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.distortionpack.*;
+import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,13 +48,9 @@ public class DistortionPack extends AbstractCardPack {
         return cards;
     }
 
-    public void initializePack() {
-        for (String s : getCards()) {
-            AbstractCard c = CardLibrary.getCard(s);
-            SpireAnniversary5Mod.cardParentMap.put(c.cardID, packID);
-            cards.add(c.makeStatEquivalentCopy());
-        }
-        previewPackCard = new DistortionPackPreview(packID, this);
+    @Override
+    public AbstractCard makePreviewCard() {
+        return new DistortionPackPreview(packID, this);
     }
 
     private static class DistortionPackPreview extends CardPackPreview {
@@ -92,7 +89,7 @@ public class DistortionPack extends AbstractCardPack {
                     }
                 }
 
-                distortionPackTexture = ImproveAction._refactor(cardTexture, false);
+                distortionPackTexture = ImproveEffect._refactor(cardTexture, false);
             }
 
             int tw = distortionPackTexture.getWidth();

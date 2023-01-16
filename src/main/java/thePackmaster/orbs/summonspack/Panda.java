@@ -1,9 +1,12 @@
 package thePackmaster.orbs.summonspack;
 
+import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -11,28 +14,32 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FocusPower;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.summonspack.PandaEvokeAction;
 import thePackmaster.actions.summonspack.PandaSmackAction;
-import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.patches.summonpack.PandaPatch;
 
 import static java.lang.Math.pow;
+import static thePackmaster.SpireAnniversary5Mod.PANDA_KEY;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
-public class Panda extends AbstractPackMasterOrb {
+public class Panda extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(Panda.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH = makePath("/images/vfx/summonspack/Panda.png");
+    private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Panda.png");
     private static final float PANDA_WIDTH = 96.0f;
     private static final Color TEXT_COLOR = new Color(1.0f, 0.25f, 0.25f, 1.0f);
+    private static final int BASE_PASSIVE = 4;
+    private static final int BASE_EVOKE = 10;
 
     // DO NOT SET EITHER OF THESE TO ZERO
     public static final float BOUNCE_DURATION = 1.0f;
-    public static final float GRAVITY = 2700.0f;
+    public static final float GRAVITY = 2700.0f*Settings.scale;
 
     private float bounceTime = 0;
     private boolean shooting = false;
@@ -46,11 +53,9 @@ public class Panda extends AbstractPackMasterOrb {
 
     public boolean isCopy = false;
 
-    public Panda(int passive)
+    public Panda()
     {
-        super(ORB_ID, NAME, passive, 0, "", "", IMG_PATH);
-        basePassiveAmount = passive;
-        baseEvokeAmount = basePassiveAmount;
+        super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH);
         showEvokeValue = false;
         rotation = 0.0f;
         applyFocus();
@@ -58,18 +63,25 @@ public class Panda extends AbstractPackMasterOrb {
     }
 
     public void applyFocus() {
-        AbstractPower power = adp().getPower("Focus");
-        if (power != null)
+        AbstractPower power = adp().getPower(FocusPower.POWER_ID);
+        if (power != null) {
             passiveAmount = Math.max(0, basePassiveAmount + power.amount);
-        else
+            evokeAmount = Math.max(0, baseEvokeAmount + power.amount);
+        } else {
             passiveAmount = basePassiveAmount;
+            evokeAmount = baseEvokeAmount;
+        }
 
-        evokeAmount = passiveAmount;
+        if (passiveAmount < 0)
+            passiveAmount = 0;
+        if (evokeAmount < 0)
+            evokeAmount = 0;
     }
 
     @Override
     public void playChannelSFX() {
-        CardCrawlGame.sound.play("ORB_SLOT_GAIN", 0.1f);
+        if (MathUtils.random(0, 19) == 0)
+            CardCrawlGame.sound.playV(PANDA_KEY, 0.5f);
     }
 
     @Override
@@ -77,6 +89,22 @@ public class Panda extends AbstractPackMasterOrb {
         Panda copy = (Panda) makeCopy();
         copy.isCopy = true;
         att(new PandaEvokeAction(copy, this));
+        att(new VFXAction(new AbstractGameEffect() {
+            @Override
+            public void update() {
+                if (MathUtils.random(0, 19) == 0)
+                    CardCrawlGame.sound.playV(PANDA_KEY, 0.5f);
+                isDone = true;
+            }
+
+            @Override
+            public void render(SpriteBatch spriteBatch) {
+            }
+
+            @Override
+            public void dispose() {
+            }
+        }));
     }
 
     @Override
@@ -165,12 +193,12 @@ public class Panda extends AbstractPackMasterOrb {
     @Override
     public void updateDescription() {
         applyFocus();
-        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + passiveAmount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + evokeAmount + DESCRIPTIONS[2];
     }
 
     @Override
     public AbstractOrb makeCopy() {
-        Panda copy = new Panda(passiveAmount);
+        Panda copy = new Panda();
         copy.cX = cX;
         copy.cY = cY;
         copy.tX = tX;

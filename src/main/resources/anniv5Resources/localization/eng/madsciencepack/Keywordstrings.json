@@ -5,5 +5,12 @@
       "modify"
     ],
     "DESCRIPTION": "Alter a card for the rest of combat. Modified cards cannot be modified again until the combat ends."
+  },
+  {
+    "PROPER_NAME": "Absorb",
+    "NAMES": [
+      "absorb"
+    ],
+    "DESCRIPTION": "Exhaust a card. When this card is exhausted, add all cards it absorbed to your hand."
   }
 ]

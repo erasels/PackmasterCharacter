@@ -1,0 +1,46 @@
+{
+  "${ModID}:Reverberation": {
+    "NAME": "Reverberation",
+    "DESCRIPTION": "Gain !B! Block. NL At the start of your turn, if this is in your discard pile, it leaps into your hand."
+  },
+  "${ModID}:Midnight": {
+    "NAME": "Midnight",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+  },
+  "${ModID}:Clang": {
+    "NAME": "Clang",
+    "DESCRIPTION": "Can only be played if there is a Curse or Status in your hand. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have a Curse or Status card."
+    ]
+  },
+  "${ModID}:VoDo": {
+    "NAME": "Vo-Do",
+    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies lose 2 Strength. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+  },
+  "${ModID}:RingTheBell": {
+    "NAME": "Ring the Bell",
+    "DESCRIPTION": "ALL enemies lose !M! HP. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+  },
+  "${ModID}:TimeOut": {
+    "NAME": "Time Out",
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card. NL If it's a Curse or Status card, ALL enemies lose !M! Strength."
+  },
+  "${ModID}:Cuckoo": {
+    "NAME": "Cuckoo",
+    "DESCRIPTION": "Whenever you draw a Curse card, deal !M! damage to a random enemy.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Curse card, deal !M! damage to a random enemy."
+  },
+  "${ModID}:Dong": {
+    "NAME": "DONG!",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak and Vulnerable. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+  },
+  "${ModID}:LikeClockwork": {
+    "NAME": "Like Clockwork",
+    "DESCRIPTION": "At the end of your turn, gain !M! Block for each Curse or Status card in your hand."
+  },
+  "${ModID}:SavedByTheBell": {
+    "NAME": "Saved by the Bell",
+    "DESCRIPTION": "Gain 1 Intangible. NL ${ModID}:Pickup: Obtain 3 *Curses *of *the *Bell."
+  }
+}

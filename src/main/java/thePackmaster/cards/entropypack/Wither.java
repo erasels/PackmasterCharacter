@@ -9,7 +9,7 @@ import thePackmaster.powers.entropypack.RuinPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Wither extends AbstractPackmasterCard {
+public class Wither extends AbstractEntropyCard {
     public final static String ID = makeID("Wither");
     // intellij stuff skill, enemy, common, 3, , , , 8, 
 
@@ -32,6 +32,5 @@ public class Wither extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        uDesc();
     }
 }

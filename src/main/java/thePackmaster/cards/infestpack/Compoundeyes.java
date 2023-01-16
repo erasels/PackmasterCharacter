@@ -10,7 +10,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
-public class Compoundeyes extends AbstractPackmasterCard {
+public class Compoundeyes extends AbstractInfestCard {
     public final static String ID = makeID("Compoundeyes");
     // intellij stuff skill, self, uncommon, , , , , 4, 2
 

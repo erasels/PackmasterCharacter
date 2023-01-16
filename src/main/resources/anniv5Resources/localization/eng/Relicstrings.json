@@ -1,26 +1,28 @@
 {
   "${ModID}:BagOfHolding": {
     "NAME": "Bag of Holding",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "FLAVOR": "\"Incredible! It appears that this bag connects to an extradimensional space. What if I jump inside?\" - Ranwid",
     "DESCRIPTIONS": [
-      "At the start of each combat: NL Gain [E] if you have 10 or cards in your deck. This happens every turn if you have 30 or more. NL Draw 2 cards if you have 20 or more cards in your deck. This happens every turn if you have 40 or more."
+      "Replaces ",
+      ".[] NL Gain [E] at the start of each turn, lasting one turn for every #b5 cards in your deck."
     ]
   },
   "${ModID}:BanishingDecree": {
     "NAME": "Banishing Decree",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "FLAVOR": "Absorb what is useful, reject what is useless and add what is essentially your own.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose one of your Packs. Cards from it will no longer appear in card rewards. Then, choose a new Pack to replace it with, and gain up to 3 card rewards from that pack.",
+      "Upon pickup, choose one of your Packs. Cards from it will no longer appear in card rewards. Then, choose #b1 of #b5 new Packs to replace it with, and gain up to #b3 card rewards from that pack.",
       "Choose a Pack to banish with ",
       "Cards from the Pack '",
       "' will no longer appear in card rewards.",
       "' will appear in card rewards.",
-      "Choose a Pack to gain with "
+      "Choose a Pack to gain with ",
+      "Power!"
     ]
   },
   "${ModID}:CollectorBadge": {
     "NAME": "Collector Badge",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "FLAVOR": "Gotta collect 'em all.",
     "DESCRIPTIONS": [
       "At the start of each turn, if you played a card from 4 different Booster Packs the previous turn, gain [E] .",
       " NL NL Packs used this turn: ",
@@ -29,41 +31,41 @@
   },
   "${ModID}:GemOfUnity": {
     "NAME": "Gem of Unity",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "FLAVOR": "In union there is strength.",
     "DESCRIPTIONS": [
-      "Once per combat, after you have played a card from each different Pack available this run, gain 20 Block, 1 Strength, 1 Dexterity, and heal 5 HP.",
+      "Once per combat, after you have played a card from each different Pack available this run, gain #b20 Block, #b1 Strength, #b1 Dexterity, and heal #b5 HP.",
       "Packs played this combat: "
     ]
   },
   "${ModID}:HandyHaversack": {
     "NAME": "Handy Haversack",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "FLAVOR": "Helps heroic hoarders handle hindrances.",
     "DESCRIPTIONS": [
-      "At the start of each combat: NL Gain [E] if you have 10 or cards in your deck. NL Draw 1 card if you have 20 or more cards in your deck."
+      "At the start of each combat: NL Gain [E] if you have 10 or more cards in your deck. NL Draw 1 card if you have 20 or more cards in your deck."
     ]
   },
   "${ModID}:PMBoosterBox": {
     "NAME": "P.M. Booster Box",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "FLAVOR": "Better price for buying in bulk.",
     "DESCRIPTIONS": [
-      "When acquired, choose 1 of 3 Packmaster Boosters, three times. Earn one additional card reward from these boosters at the end of each combat.",
+      "Upon pickup, choose #b1 of #b3 Packmaster Boosters, three times. Earn one additional card reward from these boosters at the end of each combat.",
       " NL Chosen Boosters: ",
-      "Chooose a Booster Pack."
+      "Choose a Booster Pack."
     ]
   },
   "${ModID}:PMBoosterPack": {
     "NAME": "P.M. Booster Pack",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "FLAVOR": "A package of cards in a foil wrapper. How did it end up in the Spire?",
     "DESCRIPTIONS": [
-      "When acquired, from a randomly chosen Packmaster Booster, you may add any one of its cards to your deck.",
+      "Upon pickup, you may add any one card from a random Packmaster Booster to your deck.",
       "Choose a card to add to your deck."
     ]
   },
   "${ModID}:PMCollection": {
     "NAME": "P.M. Collection",
-    "FLAVOR": "TODO: make this a sweet relic.",
+    "FLAVOR": "Said to have been assembled by a consortium of wizards.",
     "DESCRIPTIONS": [
-      "When acquired, from a randomly chosen Packmaster Booster, you may add each card from it to your deck.",
+      "Upon pickup, you may add each card from a random Packmaster Booster to your deck.",
       "You may add this to your deck."
     ]
   }

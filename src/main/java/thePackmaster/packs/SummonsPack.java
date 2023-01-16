@@ -2,6 +2,8 @@ package thePackmaster.packs;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.potions.FocusPotion;
+import com.megacrit.cardcrawl.potions.PotionOfCapacity;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.summonspack.*;
 
@@ -21,16 +23,25 @@ public class SummonsPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(SummonBulldog.ID);
-        cards.add(SummonVegetables.ID);
-        cards.add(SummonTrees.ID);
-        cards.add(SummonElephant.ID);
-        cards.add(SummonBrambles.ID);
-        cards.add(SummonPython.ID);
-        cards.add(SummonBees.ID);
-        cards.add(DemonicRitual.ID);
-        cards.add(SummonPandas.ID);
-        cards.add(Control.ID);
+        cards.add(Leprechaun.ID);
+        cards.add(Wolves.ID);
+        cards.add(Porcupine.ID);
+        cards.add(Elephant.ID);
+        cards.add(FireSpirit.ID);
+        cards.add(RainbowLouse.ID);
+        cards.add(SwarmOfBees.ID);
+        cards.add(Ambush.ID);
+        cards.add(Pandas.ID);
+        cards.add(Training.ID);
+        cards.add(Quill.ID);
         return cards;
+    }
+
+    @Override
+    public ArrayList<String> getPackPotions() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add(FocusPotion.POTION_ID);
+        list.add(PotionOfCapacity.POTION_ID);
+        return list;
     }
 }

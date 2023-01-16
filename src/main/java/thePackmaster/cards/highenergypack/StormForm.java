@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class StormForm extends AbstractPackmasterCard {
+public class StormForm extends AbstractHighEnergyCard {
     public final static String ID = makeID("StormForm");
     // intellij stuff power, self, rare, , , , , 2, 1
 

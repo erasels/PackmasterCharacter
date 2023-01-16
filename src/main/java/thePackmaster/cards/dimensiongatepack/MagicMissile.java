@@ -20,6 +20,7 @@ public class MagicMissile extends AbstractDimensionalCard {
         baseMagicNumber = magicNumber = 5;
         setFrame("magicmissileframe.png");
         tags.add(MAGIC);
+        selfRetain = true;
     }
 
 

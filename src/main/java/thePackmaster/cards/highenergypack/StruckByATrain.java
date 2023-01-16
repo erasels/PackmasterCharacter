@@ -1,31 +1,30 @@
 package thePackmaster.cards.highenergypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.applyToEnemy;
+import static thePackmaster.util.Wiz.atb;
 
-public class StruckByATrain extends AbstractPackmasterCard {
+public class StruckByATrain extends AbstractHighEnergyCard {
     public final static String ID = makeID("StruckByATrain");
     // intellij stuff attack, enemy, uncommon, 25, 5, , , 2, 1
 
     public StruckByATrain() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 25;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 25;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractMonster q = getFrontmostEnemy();
         if (q != null) {
             dmg(q, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-            applyToEnemy(q, new VulnerablePower(q, magicNumber, false));
         }
+        atb(new ModifyDamageAction(this.uuid, this.magicNumber));
     }
 
     private static AbstractMonster getFrontmostEnemy() {
@@ -42,6 +41,6 @@ public class StruckByATrain extends AbstractPackmasterCard {
 
     public void upp() {
         upgradeDamage(5);
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(5);
     }
 }

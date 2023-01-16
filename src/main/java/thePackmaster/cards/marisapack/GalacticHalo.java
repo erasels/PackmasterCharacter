@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
@@ -13,18 +14,16 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class GalacticHalo extends AbstractPackmasterCard {
+public class GalacticHalo extends AbstractMarisaCard {
     public final static String ID = makeID(GalacticHalo.class.getSimpleName());
     private static final int BLK = 10, BLK_UPG = 3;
-    private static final int MAGIC = 3, UPG_MAGIC = 1;
+    private static final int MAGIC = 3;
 
     public GalacticHalo() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = BLK;
         baseMagicNumber = magicNumber = MAGIC;
 
-        setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -35,6 +34,5 @@ public class GalacticHalo extends AbstractPackmasterCard {
 
     public void upp() {
        upgradeBlock(BLK_UPG);
-        upgradeMagicNumber(UPG_MAGIC);
     }
 }

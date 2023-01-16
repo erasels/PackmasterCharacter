@@ -9,12 +9,15 @@
   },
   "${ModID}:Rummage": {
     "NAME": "Rummage",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random card in hand by 1 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of !M! random cards in hand by 1 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of the highest-cost card in hand by 1 this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of the !M! highest-cost cards in hand by 1 this turn."
+  },
+  "${ModID}:Rummage2": {
+    "NAME": "Rummage II",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw a card and reduce its cost by !M! this turn."
   },
   "${ModID}:Cardistry": {
     "NAME": "Cardistry",
-    "DESCRIPTION": "Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile."
   }
 }

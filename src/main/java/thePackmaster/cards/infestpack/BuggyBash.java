@@ -11,13 +11,13 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class BuggyBash extends AbstractPackmasterCard {
+public class BuggyBash extends AbstractInfestCard {
     public final static String ID = makeID("BuggyBash");
     // intellij stuff attac, enemy, common, 14, 1, , , 2, 1
 
     public BuggyBash() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 14;
+        baseDamage = 16;
         baseMagicNumber = magicNumber = 4;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
@@ -44,7 +44,7 @@ public class BuggyBash extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
         upgradeMagicNumber(1);
     }
 }

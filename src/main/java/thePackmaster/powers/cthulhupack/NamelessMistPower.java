@@ -31,6 +31,11 @@ public class NamelessMistPower extends AbstractPackmasterPower {
         this.flash();
     }
 
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        super.atEndOfTurn(isPlayer);
+        removeThis();
+    }
 
     @Override
     public void updateDescription() {

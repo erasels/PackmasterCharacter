@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.vfx.upgradespack.LightUpgradeShineEffect;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class SuperUpgradeAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        BaseMod.logger.info("====== Updating SuperUpgrade action, with list " + selectedCards);
+        SpireAnniversary5Mod.logger.info("====== Updating SuperUpgrade action, with list " + selectedCards);
         for (AbstractCard c : selectedCards) {
             for (int i = 0 ; i < amount ; i++) {
                 forceUpgrade(c);
@@ -43,7 +44,7 @@ public class SuperUpgradeAction extends AbstractGameAction {
         int oldCost = card.cost;
 
 
-        int originalCost = CardLibrary.getCard(card.cardID).cost;
+        int originalCost = card.makeCopy().cost;
         int diff = card.costForTurn - card.cost;
 
         card.upgraded = false;
@@ -81,6 +82,59 @@ public class SuperUpgradeAction extends AbstractGameAction {
         }
 
         AbstractDungeon.topLevelEffects.add(new LightUpgradeShineEffect(card.current_x, card.current_y));
+        if (card.timesUpgraded > 1) {
+            card.name = card.originalName + "+" + card.timesUpgraded;
+        }
+        if (card.timesUpgraded < 1) {
+            card.name = card.originalName + "*" + (-card.timesUpgraded);
+        }
+    }
+
+    public static void silentForceUpgrade(AbstractCard card) {
+        if (card.canUpgrade()) {
+            card.upgrade();
+            return;
+        }
+
+        int oldMagic = card.baseMagicNumber;
+        int oldCost = card.cost;
+
+        int originalCost = card.makeCopy().cost;
+        int diff = card.costForTurn - card.cost;
+
+        card.upgraded = false;
+        if (card instanceof BranchingUpgradesCard) {
+            BranchingUpgradesCard c = (BranchingUpgradesCard)card;
+            if (c.isBranchUpgrade()) {
+                c.doBranchUpgrade();
+            } else {
+                c.doNormalUpgrade();
+            }
+        } else {
+            card.upgrade();
+        }
+        if (card.baseMagicNumber < 1) {
+            card.baseMagicNumber = card.magicNumber = oldMagic;
+        }
+
+
+        int costReduction = originalCost - card.cost;
+        if (oldCost >= 0 && oldCost - costReduction >= 0) {
+            int newBaseCost = oldCost - costReduction;
+
+
+            card.cost = newBaseCost;
+            if (card.costForTurn > 0) {
+                card.costForTurn = newBaseCost + diff;
+            }
+
+            if (card.costForTurn < 0) {
+                card.costForTurn = 0;
+            }
+
+            card.upgradedCost = true;
+        }
+
         if (card.timesUpgraded > 1) {
             card.name = card.originalName + "+" + card.timesUpgraded;
         }

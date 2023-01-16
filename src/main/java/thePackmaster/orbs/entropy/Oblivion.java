@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.actions.entropypack.OblivionEvokeAction;
+import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.patches.DiscardHookPatch;
 import thePackmaster.util.TexLoader;
 import thePackmaster.vfx.distortionpack.PixelEffect;
@@ -20,7 +21,7 @@ import thePackmaster.vfx.distortionpack.PixelEffect;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 
-public class Oblivion extends AbstractOrb implements DiscardHookPatch.OnDiscardThing {
+public class Oblivion extends AbstractOrb implements DiscardHookPatch.OnDiscardThing, PackmasterOrb {
     public static final String ORB_ID = makeID("Oblivion");
     private static final OrbStrings orbStrings = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     private static final String[] DESC = orbStrings.DESCRIPTION;
@@ -35,8 +36,8 @@ public class Oblivion extends AbstractOrb implements DiscardHookPatch.OnDiscardT
         this.ID = ORB_ID;
         this.name = orbStrings.NAME;
 
-        this.basePassiveAmount = this.passiveAmount = 3;
-        this.baseEvokeAmount = this.evokeAmount = 5;
+        this.basePassiveAmount = this.passiveAmount = 4;
+        this.baseEvokeAmount = this.evokeAmount = 6;
 
         jumpTimer = MathUtils.random(0.2f, 1.0f);
 
@@ -61,6 +62,11 @@ public class Oblivion extends AbstractOrb implements DiscardHookPatch.OnDiscardT
 
     @Override
     public void onManualDiscardThing() {
+        passiveEffect();
+    }
+
+    @Override
+    public void passiveEffect() {
         this.evokeAmount += this.passiveAmount;
         this.updateDescription();
 
