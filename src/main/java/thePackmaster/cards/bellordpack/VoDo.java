@@ -1,6 +1,7 @@
 package thePackmaster.cards.bellordpack;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -26,6 +27,7 @@ public class VoDo extends AbstractBellordCard implements OnObtainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new SFXAction("BELL"));
         applyToSelf(new StrengthPower(p, magicNumber));
         atb(new AllEnemyApplyPowerAction(p, -2, (q) -> new StrengthPower(q, -2)));
     }
