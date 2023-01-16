@@ -6,5 +6,11 @@
       "(Gk) Erasels",
       "The original authors of the Marisa character mod for the ideas and art inspiration."
     ]
+  },
+  "${ModID}:MarisaPackHat": {
+    "TEXT": [
+      "The hat of an ordinary magician.",
+      "Marisa's Hat"
+    ]
   }
 }
