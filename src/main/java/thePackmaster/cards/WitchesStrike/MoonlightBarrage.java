@@ -14,7 +14,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MoonlightBarrage extends AbstractPackmasterCard {
+public class MoonlightBarrage extends AbstractWitchStrikeCard {
     public final static String ID = makeID("MoonlightBarrage");
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 

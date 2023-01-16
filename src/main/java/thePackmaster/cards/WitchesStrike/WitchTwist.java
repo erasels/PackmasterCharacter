@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WitchTwist extends AbstractPackmasterCard {
+public class WitchTwist extends AbstractWitchStrikeCard {
     public final static String ID = makeID("WitchTwist");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 

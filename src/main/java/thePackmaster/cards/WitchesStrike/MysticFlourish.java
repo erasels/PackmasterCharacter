@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MysticFlourish extends AbstractPackmasterCard {
+public class MysticFlourish extends AbstractWitchStrikeCard {
     public final static String ID = makeID("MysticFlourish");
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 

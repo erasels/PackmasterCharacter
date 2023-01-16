@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class HornetWithin extends AbstractPackmasterCard implements OnInfestCard {
+public class HornetWithin extends AbstractWitchStrikeCard implements OnInfestCard {
     public final static String ID = makeID("HornetWithin");
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
