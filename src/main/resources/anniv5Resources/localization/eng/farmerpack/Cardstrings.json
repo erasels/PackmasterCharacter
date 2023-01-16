@@ -1,0 +1,50 @@
+{
+  "${ModID}:Fertilizer": {
+    "NAME": "Fertilizer",
+    "DESCRIPTION": "Exhaust. NL Draw a card."
+  },
+  "${ModID}:HarvestBeans": {
+    "NAME": "Harvest Beans",
+    "DESCRIPTION": "Deal !D! damage. NL If the last card you played this combat wasn't an attack, deal !D! damage to ALL enemies."
+  },
+  "${ModID}:HarvestCarrots": {
+    "NAME": "Harvest Carrots",
+    "DESCRIPTION": "Gain !B! Block. Repeat for each card type you've played this turn.",
+    "EXTENDED_DESCRIPTION": [" NL (Repeat !M! times.)"]
+  },
+  "${ModID}:HarvestPotatoes": {
+    "NAME": "Harvest Potatoes",
+    "DESCRIPTION": "Gain !B! Block. NL If the last card you played this combat wasn't a skill, gain !B! Block again."
+  },
+  "${ModID}:HarvestRadishes": {
+    "NAME": "Harvest Radishes",
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Weak for each card type you've played this turn.",
+    "EXTENDED_DESCRIPTION": [" NL (Repeat !M! times.)"]
+  },
+  "${ModID}:OutToMarket": {
+    "NAME": "Out To Market",
+    "DESCRIPTION": "Deal !M! damage to ALL enemies the first time you play a card type each turn."
+  },
+  "${ModID}:PestControl": {
+    "NAME": "Pest Control",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each card type you've played this turn.",
+    "EXTENDED_DESCRIPTION": [" NL (Repeat !M! times.)"]
+  },
+  "${ModID}:SoilResiliency": {
+    "NAME": "Soil Resiliency",
+    "DESCRIPTION": "Exhaust. NL Gain !M! Strength and !${ModID}:m2! Dexterity. NL If you've played 3 or more card types this turn, add a copy to your discard pile."
+  },
+  "${ModID}:SupplyChain": {
+    "NAME": "Supply Chain",
+    "DESCRIPTION": "Add a *Fertilizer to your hand at the start of each turn.",
+    "UPGRADE_DESCRIPTION": "Innate. Add a *Fertilizer to your hand at the start of each turn."
+  },
+  "${ModID}:SowTheSeeds": {
+    "NAME": "Sow The Seeds",
+    "DESCRIPTION": "Add a *Fertilizer to your hand. NL Put !M! cards with different types from your deck into your hand."
+  },
+  "${ModID}:TillTheEarth": {
+    "NAME": "Till The Earth",
+    "DESCRIPTION": "Deal !D! damage. Add a *Fertilizer to your hand."
+  }
+}

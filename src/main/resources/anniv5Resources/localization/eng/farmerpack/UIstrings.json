@@ -1,0 +1,9 @@
+{
+  "${ModID}:FarmerPack": {
+    "TEXT": [
+      "Farmer",
+      "Use card types to create power effects!.",
+      "DJM"
+    ]
+  }
+}
