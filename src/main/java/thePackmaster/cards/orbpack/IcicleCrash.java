@@ -2,7 +2,6 @@ package thePackmaster.cards.orbpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
-import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -11,7 +10,8 @@ import com.megacrit.cardcrawl.orbs.Frost;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
 public class IcicleCrash extends AbstractPackmasterCard {
     public final static String ID = makeID("IcicleCrash");
@@ -19,7 +19,7 @@ public class IcicleCrash extends AbstractPackmasterCard {
 
     public IcicleCrash() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 12;
+        baseDamage = 13;
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -41,6 +41,6 @@ public class IcicleCrash extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(4);
     }
 }

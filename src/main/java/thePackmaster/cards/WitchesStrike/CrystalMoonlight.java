@@ -1,14 +1,11 @@
 package thePackmaster.cards.WitchesStrike;
 
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.orbs.AbstractPackMasterOrb;
-import thePackmaster.orbs.WitchesStrike.CrescentMoon;
+import thePackmaster.orbs.PackmasterOrb;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -24,7 +21,7 @@ public class CrystalMoonlight extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++){
-            addToBot(new ManifestAction(AbstractPackMasterOrb.getPackLimitedOrb(true)));
+            addToBot(new ManifestAction(PackmasterOrb.getPackLimitedOrb(true)));
         }
     }
 

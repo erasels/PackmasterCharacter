@@ -31,7 +31,8 @@
   },
   "${ModID}:MaterialBoost": {
     "NAME": "Material Boost",
-    "DESCRIPTION": "Discard any number of cards. NL Evoke your next Orb once for each card discarded."
+    "DESCRIPTION": "Discard any number of cards. NL Evoke your next Orb once for each card discarded.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Discard any number of cards. NL Evoke your next Orb once for each card discarded."
   },
   "${ModID}:Thunderstruck": {
     "NAME": "Thunderstruck",

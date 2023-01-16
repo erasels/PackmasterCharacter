@@ -9,7 +9,6 @@ import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.util.Wiz.atb;
-import static thePackmaster.util.Wiz.removePower;
 
 public class SummonPandasPower extends AbstractPackmasterPower {
     public static String POWER_ID = SpireAnniversary5Mod.makeID(SummonPandasPower.class.getSimpleName());

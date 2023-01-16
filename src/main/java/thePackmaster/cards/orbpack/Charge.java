@@ -1,14 +1,12 @@
 package thePackmaster.cards.orbpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.orbs.AbstractPackMasterOrb;
+import thePackmaster.orbs.PackmasterOrb;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
@@ -29,8 +27,8 @@ public class Charge extends AbstractPackmasterCard {
             public void update() {
                 this.isDone = true;
                 for (AbstractOrb orb : AbstractDungeon.player.orbs) {
-                    if (orb instanceof AbstractPackMasterOrb) {
-                        ((AbstractPackMasterOrb) orb).passiveEffect();
+                    if (orb instanceof PackmasterOrb) {
+                        ((PackmasterOrb) orb).passiveEffect();
                     } else {
                         orb.onStartOfTurn();
                         orb.onEndOfTurn();
