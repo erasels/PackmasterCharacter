@@ -11,7 +11,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SneckoEyes extends AbstractPackmasterCard implements StartupCard {
+public class SneckoEyes extends AbstractSneckoCard implements StartupCard {
 
 
     public final static String ID = makeID("SneckoEyes");

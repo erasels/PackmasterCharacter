@@ -17,7 +17,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WhipNSnapper extends AbstractPackmasterCard {
+public class WhipNSnapper extends AbstractSneckoCard {
 
 
     public final static String ID = makeID("WhipNSnapper");

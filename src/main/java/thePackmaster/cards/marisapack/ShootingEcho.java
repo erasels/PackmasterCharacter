@@ -16,7 +16,7 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ShootingEcho extends AbstractPackmasterCard {
+public class ShootingEcho extends AbstractMarisaCard {
     public final static String ID = makeID(ShootingEcho.class.getSimpleName());
     private static final String text = CardCrawlGame.languagePack.getUIString("ExhaustAction").TEXT[0];
     private static final int DMG = 9, UPG_DMG = 2;
