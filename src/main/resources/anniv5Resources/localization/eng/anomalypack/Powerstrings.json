@@ -1,0 +1,17 @@
+{
+  "${ModID}:MindOverMatterPower": {
+    "NAME": "Mind Over Matter",
+    "DESCRIPTIONS": [
+      "Whenever you draw a card, gain #b",
+      " Block"
+    ]
+  },
+  "${ModID}:ThoughtweavingPower": {
+    "NAME": "Thoughtweaving",
+    "DESCRIPTIONS": [
+      "Whenever you play a Skill or Attack, draw ",
+      "a card of the opposite type from a different pack.",
+      " cards of the opposite type from other packs."
+    ]
+  }
+}
