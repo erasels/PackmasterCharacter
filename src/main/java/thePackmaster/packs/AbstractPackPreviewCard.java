@@ -33,7 +33,11 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
     public static AbstractCardPack parentPack;
 
     public AbstractPackPreviewCard(final String cardID, AbstractCardPack owningParent) {
-        super(cardID, "", getCardTextureString(cardID.replace(modID + ":", ""), CardType.SKILL),
+        this(cardID, getCardTextureString(cardID.replace(modID + ":", ""), CardType.SKILL), owningParent);
+    }
+
+    public AbstractPackPreviewCard(final String cardID, final String img, AbstractCardPack owningParent) {
+        super(cardID, "", img,
                 -2, "", CardType.SKILL, ThePackmaster.Enums.PACKMASTER_RAINBOW, CardRarity.SPECIAL, CardTarget.SELF);
         parentPack = owningParent;
         rawDescription = parentPack.description;
@@ -46,7 +50,7 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
 
     @Override
     protected Texture getPortraitImage() {
-        if (textureImg.contains("ui/missing.png")) {
+        if (textureImg != null && textureImg.contains("ui/missing.png")) {
             return CardArtRoller.getPortraitTexture(this);
         } else {
             return super.getPortraitImage();

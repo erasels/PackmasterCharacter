@@ -16,15 +16,12 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
+import thePackmaster.hats.HatMenu;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.ui.PackFilterMenu;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -63,11 +60,18 @@ public class MainMenuUIPatch {
     private static final ModLabeledButton openFilterMenuButton;
     private static final HashMap<String, Integer> idToIndex = new HashMap<>();
 
+    //hat button fields
+    private static final float HATBUTTON_X = 560f;
+    private static final float HATBUTTON_Y = 1080f - 122f;
+
+    public static final HatMenu hatMenu = new HatMenu();
+    private static final ModLabeledButton openHatMenuButton;
+
     static {
         options.add(TEXT[2]);
         options.add(TEXT[3]);
         List<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
-        sortedPacks.sort(Comparator.comparing((pack)->pack.name));
+        sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
         for (AbstractCardPack c : sortedPacks) {
             options.add(c.name);
         }
@@ -131,14 +135,15 @@ public class MainMenuUIPatch {
         if (checkboxX - dropdownX >= 60) {
             DROPDOWN_X = dropdownX;
             CHECKBOX_X = checkboxX + CHECKBOX_X_OFF;
-        }
-        else {
+        } else {
             DROPDOWN_X = Math.min(dropdownX, checkboxX);
             CHECKBOX_X = DROPDOWN_X + CHECKBOX_X_OFF;
         }
 
-        openFilterMenuButton = new ModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X, FILTERBUTTON_Y,null,
+        openFilterMenuButton = new ModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X, FILTERBUTTON_Y, null,
                 (button) -> filterMenu.toggle());
+
+        openHatMenuButton = new ModLabeledButton(uiStrings.TEXT[5], HATBUTTON_X, HATBUTTON_Y, null, (button) -> hatMenu.toggle());
     }
 
 
@@ -148,7 +153,7 @@ public class MainMenuUIPatch {
 
             CharSelectInfo c = ReflectionHacks.getPrivate(obj, CharacterOption.class, "charInfo");
 
-            if (c.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && obj.selected) {
+            if (c != null && c.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && obj.selected) {
                 // Render toggle button
                 packDraftToggle.move(CHECKBOX_X, CHECKBOX_Y);
                 packDraftToggle.render(sb);
@@ -159,7 +164,7 @@ public class MainMenuUIPatch {
                 if (customDraft) {
                     sb.draw(ImageMaster.TICK, packDraftToggle.cX - 32f, packDraftToggle.cY - 32f, 32.0f, 32.0f, 64.0f, 64.0f, checkScale, checkScale, 0.0f, 0, 0, 64, 64, false, false);
                 }
-                FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], packDraftToggle.cX + 25f * Settings.scale, packDraftToggle.cY + FontHelper.getHeight(FontHelper.tipHeaderFont)*0.5f, Settings.BLUE_TEXT_COLOR);
+                FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], packDraftToggle.cX + 25f * Settings.scale, packDraftToggle.cY + FontHelper.getHeight(FontHelper.tipHeaderFont) * 0.5f, Settings.BLUE_TEXT_COLOR);
 
                 // If toggle button is checked, render the dropdowns, too
                 if (customDraft) {
@@ -172,6 +177,11 @@ public class MainMenuUIPatch {
                     filterMenu.render(sb);
                 }
                 openFilterMenuButton.render(sb);
+
+                if (hatMenu.isOpen) {
+                    hatMenu.render(sb);
+                }
+                openHatMenuButton.render(sb);
             }
         }
     }
@@ -222,13 +232,17 @@ public class MainMenuUIPatch {
                             packDraftToggle.clicked = false;
                         }
                     }
-                }
-                else {
+                } else {
                 }
 
                 openFilterMenuButton.update();
                 if (filterMenu.isOpen) {
                     filterMenu.update();
+                }
+
+                openHatMenuButton.update();
+                if (hatMenu.isOpen) {
+                    hatMenu.update();
                 }
             }
         }

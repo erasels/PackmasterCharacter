@@ -17,6 +17,7 @@ public class IntoTheBreachPack extends AbstractCardPack {
 
     public IntoTheBreachPack() {
         super(ID, NAME, DESC, AUTHOR, CREDITS);
+        hatHidesHair = true;
     }
 
     @Override
