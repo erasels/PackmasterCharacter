@@ -21,7 +21,8 @@
   },
   "${ModID}:Twitch": {
     "NAME": "Twitch",
-    "DESCRIPTION": "Randomize the cost of !M! cards."
+    "DESCRIPTION": "Randomize the cost of !M! cards. NL stslib:Persist !stslib:persist!",
+    "UPGRADE_DESCRIPTION": "Randomize the cost of up to !M! cards. NL stslib:Persist !stslib:persist!"
   },
   "${ModID}:Gulp": {
     "NAME": "Meal Prep",
