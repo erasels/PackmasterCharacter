@@ -18,7 +18,7 @@ public class ExplosiveVial extends AbstractWomanInBlueCard {
         baseDamage = 10;
         isMultiDamage = true;
         exhaust = true;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
     }
 
 
