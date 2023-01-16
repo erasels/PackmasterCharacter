@@ -34,7 +34,8 @@
   },
   "${ModID}:SneckoEyes": {
     "NAME": "Snecko Eyes",
-    "DESCRIPTION" : "Become Confused. At the start of your turn, draw 2 cards."
+    "DESCRIPTION" : "Become Confused. At the start of your turn, draw 2 cards.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, draw 2 cards. NL Startup: Become Confused."
   },
   "${ModID}:Shedding": {
     "NAME": "Shedding",
