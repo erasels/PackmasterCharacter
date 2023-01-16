@@ -9,7 +9,7 @@
   },
   "${ModID}:FuriousAssault": {
     "NAME": "Furious Assault",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Aggression. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Aggression."
   },
   "${ModID}:Slam": {
     "NAME": "Slam",
