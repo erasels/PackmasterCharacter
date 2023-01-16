@@ -25,7 +25,7 @@ public class PMBoosterPack extends AbstractPackmasterRelic {
     AbstractRoom.RoomPhase lastPhase = null;
 
     public PMBoosterPack() {
-        super(ID, RelicTier.COMMON, LandingSound.FLAT);
+        super(ID, RelicTier.COMMON, LandingSound.FLAT, null, true);
     }
 
     @Override

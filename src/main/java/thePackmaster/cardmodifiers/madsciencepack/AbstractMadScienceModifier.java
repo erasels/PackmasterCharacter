@@ -17,7 +17,7 @@ public abstract class AbstractMadScienceModifier extends AbstractCardModifier {
 
     @Override
     public String modifyName(String cardName, AbstractCard card) {
-        return cardName + "*";
+        return cardName + "^";
     }
 
     @Override
