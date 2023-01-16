@@ -10,7 +10,7 @@
     "NAME": "Petra",
     "DESCRIPTIONS": [
       "When you attack this creature, gain ",
-      "% of damage dealt as Block next turn."
+      "% of damage dealt as #yBlock next turn."
     ]
   }
 }
