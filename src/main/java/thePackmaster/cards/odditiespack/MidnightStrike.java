@@ -1,12 +1,14 @@
 package thePackmaster.cards.odditiespack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
 public class MidnightStrike extends AbstractPackmasterCard {
     public final static String ID = makeID("MidnightStrike");
@@ -21,7 +23,7 @@ public class MidnightStrike extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() == 12) {
-            //TODO: THE COOLEST VFX YOU HAVE EVER SEEN IN YOUR LIFE!!!
+            atb(new SFXAction("BELL"));
             altDmg(m, AbstractGameAction.AttackEffect.FIRE);
         } else {
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
