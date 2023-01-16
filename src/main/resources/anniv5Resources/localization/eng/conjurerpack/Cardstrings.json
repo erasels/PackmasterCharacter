@@ -34,7 +34,7 @@
 	"${ModID}:RagingInferno":	{
 		"DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Ignite. NL Exhaust.",
 		"NAME": "Raging Inferno",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Ignite."
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Ignite."
 	},
 	"${ModID}:TectonicQuake":	{
 		"DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Petra and Weak to all enemies. Exhaust.",
