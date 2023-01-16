@@ -2,7 +2,7 @@
   "${ModID}:GeomorphologyPower": {
     "NAME": "Geomorphology",
     "DESCRIPTIONS": [
-      "Whenever you Exhaust a card or Channel an Orb, apply ",
+      "Whenever you Exhaust a card or Channel an Orb, apply #b",
       " #yPetra to a random enemy."
     ]
   },
