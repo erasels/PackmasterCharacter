@@ -37,7 +37,6 @@ public class DynamicPatchTrigger {
 
         ClassPool pool = ctBehavior.getDeclaringClass().getClassPool();
         OccultPatch.patch(finder, pool);
-        DeepDreamPatch.patch(finder, pool);
 
         System.out.println("Dynamic patches complete.");
     }
