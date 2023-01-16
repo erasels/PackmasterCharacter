@@ -28,7 +28,7 @@ public class Elephant extends AbstractPackmasterCard {
 
     private static final int DAMAGE = 15;
     private static final int UPGRADE_DAMAGE = 5;
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 4;
 
     private static boolean seenThisSession;
 
