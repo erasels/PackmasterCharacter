@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -44,21 +45,7 @@ public class Leprechaun extends AbstractPackmasterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ChannelAction(new thePackmaster.orbs.summonspack.Leprechaun()));
-        atb(new VFXAction(new AbstractGameEffect() {
-            @Override
-            public void update() {
-                CardCrawlGame.sound.play(DICE_KEY, 0.1f);
-                isDone = true;
-            }
-
-            @Override
-            public void render(SpriteBatch spriteBatch) {
-            }
-
-            @Override
-            public void dispose() {
-            }
-        }));
+        atb(new SFXAction(DICE_KEY,0.1f));
         for (int i = 0; i < magicNumber; i++)
             applyToSelf(new DicePower(adp(), DICE_SIDES, false));
     }

@@ -2,6 +2,7 @@ package thePackmaster.powers.summonspack;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
 
@@ -18,7 +19,7 @@ public class TrainingPower extends AbstractPackmasterPower {
 
     @Override
     public void atStartOfTurn() {
-        if (!adp().orbs.isEmpty()) {
+        if (!adp().orbs.isEmpty() && !(adp().orbs.get(0) instanceof EmptyOrbSlot)) {
             flash();
 
             for(int i = 0; i < amount; ++i)
