@@ -8,14 +8,14 @@
   },
   "${ModID}:MadScienceModifiers": {
     "TEXT": [
-      " NL Apply 2 Frostbite.",
-      " NL Apply 3 Frostbite.",
+      " NL Apply ",
+      " ${ModID}:Frostbite.",
       "Retain. NL ",
       " NL Play ",
       " NL Gain 6 Block.",
       " NL Gain 8 Block.",
       "Ethereal. NL ",
-      " NL Gain a Cannonball.",
+      " NL Gain a *Cannonball.",
       " NL Draw a card."
     ]
   },

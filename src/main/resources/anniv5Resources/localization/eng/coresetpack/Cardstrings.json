@@ -16,7 +16,7 @@
     "DESCRIPTION": "Discard a card. NL Deal !D! damage a number of times equal to that card's energy cost."
   },
   "${ModID}:MayhemForm": {
-    "NAME": "Mayhem Form",
+    "NAME": "Unrelenting Form",
     "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] .",
     "UPGRADE_DESCRIPTION": "Retain. NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] ."
   },
