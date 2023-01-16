@@ -34,8 +34,6 @@ public class DeathScreenUnlockPatch {
                     if (!HatMenu.currentlyUnlockedHats.contains(p.packID)) {
                         HatMenu.currentlyUnlockedHats.add(p.packID);
                     }
-                    HatMenu.refreshHatDropdown();
-
                 }
                 try {
                     SpireAnniversary5Mod.logger.info("Saving unlocked hats!");
@@ -43,6 +41,8 @@ public class DeathScreenUnlockPatch {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
+
+                HatMenu.refreshHatDropdown();
             }
 
         }
