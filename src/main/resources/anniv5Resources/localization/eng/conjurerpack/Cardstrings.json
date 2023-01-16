@@ -1,6 +1,6 @@
 {
 	"${ModID}:AirCurrent":	{
-		"DESCRIPTION": "Deal !D! damage. If the target has ${ModID}:Petra, apply !M! Vulnerable.",
+		"DESCRIPTION": "Deal !D! damage. NL If the target has ${ModID}:Petra, apply !M! Vulnerable.",
 		"NAME": "Air Current"
 	},
 	"${ModID}:DustTornado":	{
