@@ -37,7 +37,7 @@
 		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Ignite."
 	},
 	"${ModID}:TectonicQuake":	{
-		"DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Petra and Weak to all enemies. Exhaust.",
+		"DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Petra and Weak to ALL enemies. NL Exhaust.",
 		"NAME": "Tectonic Quake",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Petra and Weak to all enemies."
 	}
