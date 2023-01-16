@@ -1,5 +1,6 @@
 package thePackmaster.cards.conjurerpack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -23,16 +24,22 @@ public class Enervate extends ConjurerCard
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m != null)
-        {
-            int decAmount = magicNumber;
-            AbstractPower strPower = m.getPower(StrengthPower.POWER_ID);
-            if (strPower != null && strPower.amount > 0)
-            {
-                decAmount += strPower.amount / 2;
+        this.addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (m != null)
+                {
+                    int decAmount = magicNumber;
+                    AbstractPower strPower = m.getPower(StrengthPower.POWER_ID);
+                    if (strPower != null && strPower.amount > 0)
+                    {
+                        decAmount += strPower.amount / 2;
+                    }
+                    this.addToTop(new ApplyPowerAction(m, p, new StrengthPower(m, -decAmount), -decAmount));
+                }
+                this.isDone = true;
             }
-            this.addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -decAmount), -decAmount));
-        }
+        });
     }
 
     public void upp() {

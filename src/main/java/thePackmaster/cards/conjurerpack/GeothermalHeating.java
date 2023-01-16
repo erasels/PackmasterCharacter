@@ -28,11 +28,10 @@ public class GeothermalHeating extends ConjurerCard
         blck();
         if (m != null)
         {
-            int count = 1;
-            if (m.powers.size() > 0)
-                for (AbstractPower power : m.powers)
-                    if (power.type == AbstractPower.PowerType.DEBUFF)
-                        count++;
+            int count = 0;
+            for (AbstractPower power : m.powers)
+                if (power.type == AbstractPower.PowerType.DEBUFF)
+                    count++;
             for (int i = 0; i < count; i++)
                 Wiz.doBlk(magicNumber);
         }

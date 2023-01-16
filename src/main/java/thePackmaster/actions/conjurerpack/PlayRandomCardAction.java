@@ -41,6 +41,10 @@ public class PlayRandomCardAction extends AbstractGameAction
             {
                 group.group.remove(c);
                 AbstractDungeon.getCurrRoom().souls.remove(c);
+                c.current_x = Settings.WIDTH / 2.0F;
+                c.current_y = Settings.HEIGHT / 2.0F;
+                c.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+                c.target_y = Settings.HEIGHT / 2.0F;
                 this.addToBot(new NewQueueCardAction(c, target, false, true));
             }
         }
