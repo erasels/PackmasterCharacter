@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.FruitJuice;
 import javassist.CtBehavior;
+import thePackmaster.potions.PackInAJar;
 import thePackmaster.potions.SmithingOil;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class PotionPatches {
 
         @SpireInsertPatch(locator = Locator.class, localvars = {"temp"})
         public static void Insert(AbstractPotion.PotionRarity rarity, boolean limited, @ByRef AbstractPotion[] temp) {
-            if (temp[0] instanceof SmithingOil) {
+            if (temp[0] instanceof SmithingOil || temp[0] instanceof PackInAJar) {
                 returnTo = temp[0];
                 temp[0] = new FruitJuice();
             }
