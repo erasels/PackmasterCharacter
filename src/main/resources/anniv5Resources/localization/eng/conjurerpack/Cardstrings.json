@@ -20,7 +20,7 @@
 		"NAME": "Geomorphology"
 	},
 	"${ModID}:GeothermalHeating":	{
-		"DESCRIPTION": "Gain !B! Block. Gain !M! more for each distinct debuff on the target.",
+		"DESCRIPTION": "Gain !B! Block. NL Gain !M! additional Block for each distinct debuff on the target.",
 		"NAME": "Geothermal Heating"
 	},
 	"${ModID}:Lithosphere":	{
