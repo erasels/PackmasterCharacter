@@ -42,7 +42,8 @@
   "${ModID}:Conjuration": {
     "NAME": "Conjuration",
     "DESCRIPTION": "Choose a card from your draw pile. NL Play and Exhaust it.",
-    "UPGRADE_DESCRIPTION": "Choose a card from your draw pile. NL Play it."
+    "UPGRADE_DESCRIPTION": "Choose a card from your draw pile. NL Play it.",
+    "EXTENDED_DESCRIPTION": ["There are no cards in my draw pile."]
   },
   "${ModID}:RareStrike": {
     "NAME": "Rare Strike",

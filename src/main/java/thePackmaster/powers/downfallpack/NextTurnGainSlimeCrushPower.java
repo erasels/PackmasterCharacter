@@ -22,7 +22,7 @@ public class NextTurnGainSlimeCrushPower extends AbstractPackmasterPower impleme
 
     public void atStartOfTurn() {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CardLibrary.getCard(SlimeCrush.ID).makeCopy(), this.amount));
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this));
+        removeThis();
     }
 
 

@@ -17,7 +17,7 @@ public class TwinClaw extends AbstractClawCard {
     public final static String ID = makeID("TwinClaw");
 
     public TwinClaw() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 3;
         baseMagicNumber = magicNumber = 2;
         tags.add(CLAW);

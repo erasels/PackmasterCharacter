@@ -1,13 +1,10 @@
 package thePackmaster.actions.witchesstrikepack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
-import thePackmaster.orbs.AbstractPackMasterOrb;
+import thePackmaster.orbs.PackmasterOrb;
 
 public class MysticFlourishAction extends AbstractGameAction
 {
@@ -23,9 +20,9 @@ public class MysticFlourishAction extends AbstractGameAction
     public void update()
     {
         if (!AbstractDungeon.player.orbs.isEmpty()) {
-            if (AbstractDungeon.player.orbs.get(0) instanceof AbstractPackMasterOrb) {
+            if (AbstractDungeon.player.orbs.get(0) instanceof PackmasterOrb) {
                 for (int i = 0; i < this.amount; i++) {
-                    ((AbstractPackMasterOrb) AbstractDungeon.player.orbs.get(0)).passiveEffect();
+                    ((PackmasterOrb) AbstractDungeon.player.orbs.get(0)).passiveEffect();
                 }
                 isDone = true;
             } else {

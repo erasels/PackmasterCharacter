@@ -1,5 +1,6 @@
 package thePackmaster.orbs.summonspack;
 
+import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -17,7 +18,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.summonspack.Quill;
-import thePackmaster.orbs.AbstractPackMasterOrb;
+import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.summonspack.QuillEffect;
 
@@ -25,7 +26,7 @@ import static thePackmaster.SpireAnniversary5Mod.PORCUPINE_KEY;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
-public class Porcupine extends AbstractPackMasterOrb {
+public class Porcupine extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(Porcupine.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
