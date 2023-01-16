@@ -11,7 +11,7 @@
     "NAME": "Modder's Delight",
     "DESCRIPTIONS": [
       "Shuffle your discard pile into your draw pile. Put #b",
-      "X random cards from different Packs from your draw pile into your hand."
+      " random cards from different Packs from your draw pile into your hand."
     ]
   },
   "${ModID}:PackInAJar": {
