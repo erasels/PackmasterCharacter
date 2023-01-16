@@ -1,0 +1,10 @@
+{
+  "${ModID}:Penance": {
+    "NAME": "Penance",
+    "DESCRIPTIONS": ["When this creature obtains #b",
+      " #yPenance, it loses #b",
+      " HP and increases HP loss from #yPenance by #b10 this combat",
+      "."
+    ]
+  }
+}

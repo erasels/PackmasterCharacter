@@ -1,0 +1,10 @@
+{
+  "${ModID}:PenanceShock": {
+    "NAME": "Penance Shock",
+    "DESCRIPTION": "Deal !D! damage and Apply !M! thedragonkin:Penance to a random enemy twice."
+  },
+  "${ModID}:Condemn": {
+    "NAME": "Condemn",
+    "DESCRIPTION": "Apply !M! thedragonkin:Penance."
+  }
+}
