@@ -17,7 +17,7 @@
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "Whip 'n Snapper",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 0 to !M! Weak and 0 to !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !${ModID}:m2! to !M! Weak and !${ModID}:m2! to !M! Vulnerable."
   },
   "${ModID}:Twitch": {
     "NAME": "Twitch",
