@@ -36,8 +36,8 @@
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "R'lyeh Fhtagn",
-    "DESCRIPTION": "Put EVERYONE to sleep. NL Next turn, add 3 *Madness into your hand and lose 3 HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. NL Next turn, add 3 *Madness+ into your hand and lose 3 HP. NL Exhaust."
+    "DESCRIPTION": "Put EVERYONE to sleep. Next turn, add 3 *Madness into your hand and lose 3 HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. Next turn, add 3 *Madness+ into your hand and lose 3 HP. NL Exhaust."
   },
   "${ModID}:StarSpawn": {
     "NAME": "Star Spawn",

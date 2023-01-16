@@ -22,7 +22,7 @@ public abstract class AbstractMadScienceModifierWithName extends AbstractMadScie
 
     @Override
     public String modifyName(String cardName, AbstractCard card) {
-        return cardName + nameSuffix(cardName) + "*";
+        return cardName + nameSuffix(cardName) + "^";
     }
 
     public abstract String nameSuffix(String cardName);
