@@ -2,7 +2,7 @@
   "${ModID}:OdditiesPack": {
     "TEXT": [
       "Oddities",
-      "Vex doing Vex things. Behold, strange and wonderful cards!",
+      "Vex doing Vex things. Manage your deck mid-fight!",
       "Vex"
     ]
   },
@@ -10,6 +10,11 @@
     "TEXT": [
       "Temp!.",
       "Temp Hat"
+    ]
+  },
+  "${ModID}:AutoBattlerPatches": {
+    "TEXT": [
+      "I must play cards from left to right!"
     ]
   }
 }

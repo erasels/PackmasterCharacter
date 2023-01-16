@@ -23,7 +23,7 @@ import java.nio.charset.StandardCharsets;
 public class FoilShiny {
     @SpirePatch(clz = AbstractCard.class, method = "render", paramtypez = SpriteBatch.class)
     public static class FoilCardsShine {
-        private static final ShaderProgram FOIL_SHINE = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/foil_shine.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
+        private static final ShaderProgram FOIL_SHINE = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("anniv5Resources/shaders/odditiespack/foil_shine.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
 
         private static final FrameBuffer fbo = ImageHelper.createBuffer();
 

@@ -1,6 +1,5 @@
 package thePackmaster.hats;
 
-import basemod.BaseMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -26,6 +25,7 @@ public class HatMenu {
 
     private static DropdownMenu dropdown;
     public static final ArrayList<String> hats = new ArrayList<>();
+    public static final ArrayList<String> currentlyUnlockedHats = new ArrayList<>();
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));
@@ -81,9 +81,13 @@ public class HatMenu {
         for (AbstractCardPack s : SpireAnniversary5Mod.unfilteredAllPacks) {
             if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists()) {
                 if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
-                if (UNLOCK_ALL_HATS) SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
+                if (UNLOCK_ALL_HATS)
+                    SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
                 if (UNLOCK_ALL_HATS || unlockedHats.contains(s.packID)) {
                     hats.add(s.packID);
+                    if (unlockedHats.contains(s.packID)) {
+                        currentlyUnlockedHats.add(s.packID);
+                    }
                     optionNames.add(s.getHatName());
                 } else {
                     hats.add(s.packID);

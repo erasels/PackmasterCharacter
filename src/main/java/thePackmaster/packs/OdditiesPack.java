@@ -3,7 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.odditiespack.StylePoints;
+import thePackmaster.cards.odditiespack.*;
 
 import java.util.ArrayList;
 
@@ -21,6 +21,16 @@ public class OdditiesPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
+        cards.add(AutoBattler.ID);
+        cards.add(Beacon.ID);
+        cards.add(EightBall.ID);
+        cards.add(FinalForm.ID);
+        cards.add(LetsDraft.ID);
+        cards.add(LetsPlay8Ball.ID);
+        cards.add(MidnightStrike.ID);
+        cards.add(ShiningStyle.ID);
+        cards.add(SleeveUp.ID);
+        cards.add(ZaHando.ID);
         cards.add(StylePoints.ID);
         return cards;
     }

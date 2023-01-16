@@ -10,7 +10,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.random.Random;
-import theFishing.TheFishing;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -50,7 +49,7 @@ public class PackmasterFoilPatches {
 
     // VISUAL STUFF
 
-    public static final ShaderProgram ART_SHADER = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("fishingResources/shaders/foil_card_art.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
+    public static final ShaderProgram ART_SHADER = new ShaderProgram(SpriteBatch.createDefaultShader().getVertexShaderSource(), Gdx.files.internal("anniv5Resources/shaders/odditiespack/foil_card_art.frag").readString(String.valueOf(StandardCharsets.UTF_8)));
 
     @SpirePatch(
             clz = AbstractCard.class,

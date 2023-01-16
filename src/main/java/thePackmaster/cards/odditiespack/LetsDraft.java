@@ -25,7 +25,7 @@ public class LetsDraft extends AbstractPackmasterCard {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             for (AbstractCard c : cards)
-                att(new MakeTempCardInDrawPileAction(c, 1, true, true));
+                att(new MakeTempCardInDrawPileAction(c.makeStatEquivalentCopy(), 1, true, true));
         }));
     }
 
