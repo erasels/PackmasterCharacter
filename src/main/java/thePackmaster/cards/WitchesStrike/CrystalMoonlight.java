@@ -9,7 +9,7 @@ import thePackmaster.orbs.PackmasterOrb;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class CrystalMoonlight extends AbstractPackmasterCard {
+public class CrystalMoonlight extends AbstractWitchStrikeCard {
     public final static String ID = makeID("CrystalMoonlight");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 

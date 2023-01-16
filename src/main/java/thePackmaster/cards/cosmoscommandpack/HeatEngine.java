@@ -8,7 +8,7 @@ import thePackmaster.powers.cosmoscommandpack.HeatEnginePower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class HeatEngine extends AbstractPackmasterCard {
+public class HeatEngine extends AbstractCosmosCard {
     public final static String ID = makeID("HeatEngine");
 
     public HeatEngine() {
