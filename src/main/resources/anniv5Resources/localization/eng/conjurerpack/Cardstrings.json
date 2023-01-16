@@ -8,7 +8,7 @@
 		"NAME": "Dust Tornado"
 	},
 	"${ModID}:Enervate":	{
-		"DESCRIPTION": "Target loses half of its Strength, then loses !M! more. NL Exhaust.",
+		"DESCRIPTION": "Enemy loses half of its Strength, then loses !M! more. NL Exhaust.",
 		"NAME": "Enervate"
 	},
 	"${ModID}:Excavation":	{
