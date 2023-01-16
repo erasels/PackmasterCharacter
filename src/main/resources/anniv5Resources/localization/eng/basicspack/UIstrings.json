@@ -5,5 +5,11 @@
       "Let's get Back to Basics using the starting cards from all characters.",
       "Jack Renoson"
     ]
+  },
+  "${ModID}:BasicsPackHat": {
+    "TEXT": [
+      "Most commonly worn hat in 2023",
+      "Basic Fedora"
+    ]
   }
 }

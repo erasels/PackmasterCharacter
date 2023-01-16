@@ -5,5 +5,11 @@
       "The beginning is the half of every action. Adds Innate Synergies and cards.",
       "Jack Renoson"
     ]
+  },
+  "${ModID}:StartUpPackHat": {
+    "TEXT": [
+      "All the world is a stage, especially with this mask",
+      "Theatre Mask"
+    ]
   }
 }
