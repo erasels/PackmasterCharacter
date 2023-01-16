@@ -35,7 +35,7 @@ public class RememberPower extends AbstractPackmasterPower {
                 for (AbstractCard c : cards) {
                     AbstractDungeon.player.hand.moveToDeck(c, true);
                 }
-            }, null, DESCRIPTIONS[3], false, false, false));
+            }, null, DESCRIPTIONS[3], false, true, true));
         }
     }
 
