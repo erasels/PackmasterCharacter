@@ -31,13 +31,6 @@ public class InscribedMod extends AbstractCardModifier {
     public boolean isInherent(AbstractCard card) {
         return inherent;
     }
-    public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        for (AbstractOrb o : AbstractDungeon.player.orbs){
-            if (o instanceof PackmasterOrb){
-                ((PackmasterOrb) o).passiveEffect();
-            }
-        }
-    }
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         if (Todesc) {

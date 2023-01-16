@@ -40,7 +40,7 @@ public class MysticFlourish extends AbstractPackmasterCard {
                             }
                         }
                         if (!Uninscribed.isEmpty()) {
-                            AbstractCard targetCard = Uninscribed.get(AbstractDungeon.miscRng.random(Uninscribed.size() - 1));
+                            AbstractCard targetCard = Uninscribed.get(AbstractDungeon.cardRandomRng.random(Uninscribed.size() - 1));
                             CardModifierManager.addModifier(targetCard, new InscribedMod(false,true));
                         }
                     }

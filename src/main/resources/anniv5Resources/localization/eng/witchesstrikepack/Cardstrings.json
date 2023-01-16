@@ -20,7 +20,7 @@
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Moonlight Barrage",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each."
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each channeled orb."
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "Chittering Punt",
@@ -32,7 +32,7 @@
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "${ModID}:Inscribe !M! random card in your hand. NL Gain !anniv5:m2! Focus."
+    "DESCRIPTION": "${ModID}:Inscribe !M! random cards in your hand. NL Gain !${ModID}:m2! Focus."
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",
