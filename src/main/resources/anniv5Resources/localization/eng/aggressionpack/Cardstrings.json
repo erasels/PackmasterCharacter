@@ -29,7 +29,7 @@
   },
   "${ModID}:InnerFury": {
     "NAME": "Inner Fury",
-    "DESCRIPTION": "When you enter ${ModID}:Aggression, gain !M! temporary Strength and !M! Block. NL Enter ${ModID}:Aggression."
+    "DESCRIPTION": "Whenever you enter or exit ${ModID}:Aggression, gain !M! temporary Strength and !M! Block. NL Enter ${ModID}:Aggression."
   },
   "${ModID}:LunaticRage": {
     "NAME": "Lunatic Rage",
