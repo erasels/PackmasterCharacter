@@ -25,7 +25,7 @@ public class EndOfDaysPower extends AbstractPackmasterPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
-            if (EnergyPanel.getCurrentEnergy() > 1) flash();
+            if (EnergyPanel.getCurrentEnergy() > 0) flash();
             for (int i = 0; i < EnergyPanel.getCurrentEnergy(); i++) {
                 addToBot(new ChannelAction(new Dark())
                 );
