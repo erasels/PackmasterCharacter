@@ -31,7 +31,7 @@ public class RememberPower extends AbstractPackmasterPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer && !AbstractDungeon.player.hand.isEmpty()) {
-            this.addToBot(new HandSelectAction(this.amount, (c)->true, (cards)->{
+            this.addToTop(new HandSelectAction(this.amount, (c)->true, (cards)->{
                 for (AbstractCard c : cards) {
                     AbstractDungeon.player.hand.moveToDeck(c, true);
                 }
