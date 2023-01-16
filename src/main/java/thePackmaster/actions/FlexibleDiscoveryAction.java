@@ -11,17 +11,25 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.function.Consumer;
 
 public class FlexibleDiscoveryAction extends AbstractGameAction {
     private boolean retrieveCard = false;
     private final ArrayList<AbstractCard> cards;
     private boolean costsZeroThisTurn;
+    private Consumer<AbstractCard> callback;
 
     public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, boolean costsZeroThisTurn) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
         this.cards = cards;
         this.costsZeroThisTurn = costsZeroThisTurn;
+        this.callback = null;
+    }
+
+    public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, Consumer<AbstractCard> callback,boolean costsZeroThisTurn) {
+        this(cards,costsZeroThisTurn);
+        this.callback = callback;
     }
 
     public void update() {
@@ -37,6 +45,10 @@ public class FlexibleDiscoveryAction extends AbstractGameAction {
             if (!this.retrieveCard) {
                 if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {
                     AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();
+                    if (callback != null)
+                    {
+                        callback.accept(disCard);
+                    }
                     if (costsZeroThisTurn) {
                         disCard.setCostForTurn(0);
                     }
