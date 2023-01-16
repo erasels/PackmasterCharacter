@@ -20,5 +20,12 @@
       " and take ",
       " damage."
     ]
+  },
+  "${ModID}:EndOfDaysPower": {
+    "NAME": "End of Days",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yChannel #b",
+      " #yDark for each [E] unspent."
+    ]
   }
 }
