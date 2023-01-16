@@ -20,7 +20,7 @@ public class ReleaseValvePower extends AbstractPackmasterPower implements FlowAf
     private final AbstractCreature source;
 
     public ReleaseValvePower(AbstractCreature owner, AbstractCreature source, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
+        super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, amount);
         this.source = source;
     }
 
