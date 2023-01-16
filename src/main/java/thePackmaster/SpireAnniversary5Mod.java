@@ -12,7 +12,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
@@ -55,6 +54,7 @@ import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
+import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
 import thePackmaster.patches.psychicpack.DeepDreamPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
@@ -760,6 +760,7 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostUpdate() {
+        time += Gdx.graphics.getDeltaTime();
         if (!openedStarterScreen) {
             if (CardCrawlGame.isInARun() && doPackSetup && !AbstractDungeon.isScreenUp) {
                 logger.info("Starting Packmaster setup.");
@@ -910,5 +911,29 @@ public class SpireAnniversary5Mod implements
                 }
             }
         });
+
+        BaseMod.addSaveField("PackmasterFoilCardsLetVexKnowIfThereIsABetterWayToDoThis", new CustomSavable<ArrayList<Boolean>>() {
+            @Override
+            public ArrayList<Boolean> onSave() {
+                ArrayList<Boolean> foilCards = new ArrayList<>();
+                for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+                    foilCards.add(PackmasterFoilPatches.isFoil(q));
+                }
+                return foilCards;
+            }
+
+            @Override
+            public void onLoad(ArrayList<Boolean> foilCards) {
+                if (foilCards != null)
+                    for (int i = 0; i < foilCards.size(); i++) {
+                        if (foilCards.get(i)) {
+                            if (AbstractDungeon.player.masterDeck.size() > i)
+                                PackmasterFoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
+                        }
+                    }
+            }
+        });
     }
+
+    public static float time = 0f;
 }

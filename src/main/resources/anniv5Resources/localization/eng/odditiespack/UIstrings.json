@@ -1,0 +1,15 @@
+{
+  "${ModID}:OdditiesPack": {
+    "TEXT": [
+      "Oddities",
+      "Vex doing Vex things. Behold, strange and wonderful cards!",
+      "Vex"
+    ]
+  },
+  "${ModID}:OdditiesPackHat": {
+    "TEXT": [
+      "Temp!.",
+      "Temp Hat"
+    ]
+  }
+}

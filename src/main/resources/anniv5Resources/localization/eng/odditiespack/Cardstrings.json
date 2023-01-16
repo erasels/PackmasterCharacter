@@ -1,0 +1,34 @@
+{
+  "${ModID}:StylePoints": {
+    "NAME": "Style Points",
+    "DESCRIPTION": "Gain !B! Block. NL Remove your Weak. NL Add a random card from your hat's Pack into your hand."
+  },
+  "${ModID}:LetsPlay8Ball": {
+    "NAME": "Let's Play 8 Ball!",
+    "DESCRIPTION": "Shuffle an *8 *Ball into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your draw pile."
+  },
+  "${ModID}:EightBall": {
+    "NAME": "8 Ball",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "9 Ball"
+    ]
+  },
+  "${ModID}:ZaHando": {
+    "NAME": "Za Hando",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust the middle card(s) of your hand."
+  },
+  "${ModID}:LetsDraft": {
+    "NAME": "Let's Draft!",
+    "DESCRIPTION": "Deal !D! damage. NL Choose a card. Shuffle a copy of it into your draw pile."
+  },
+  "${ModID}:Beacon": {
+    "NAME": "Beacon",
+    "DESCRIPTION": "Gain !B! Block. NL Startup: Add a *Safety into your hand."
+  },
+  "${ModID}:SleeveUp": {
+    "NAME": "Sleeve Up",
+    "DESCRIPTION": "Draw !M! cards. NL When this appears in a card reward, the cards are *Foil and gain Retain."
+  }
+}
