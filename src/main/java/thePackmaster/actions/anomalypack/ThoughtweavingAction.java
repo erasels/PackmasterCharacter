@@ -52,7 +52,7 @@ public class ThoughtweavingAction extends AbstractGameAction {
                 }
             }
 
-            if (tmp.size() == 0) {
+            if (tmp.isEmpty()) {
                 this.isDone = true;
                 return;
             }

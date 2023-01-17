@@ -1,19 +1,13 @@
 package thePackmaster.cards.anomalypack;
 
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.anomalypack.WonderAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
-
-import static thePackmaster.util.Wiz.atb;
 
 public class FreeSpace extends AbstractPackmasterCard {
     public static final String ID = SpireAnniversary5Mod.makeID("FreeSpace");
