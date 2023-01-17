@@ -22,12 +22,6 @@ import static thePackmaster.util.Wiz.att;
 
 public class SowTheSeeds extends AbstractFarmerCard {
     public final static String ID = makeID("SowTheSeeds");
-    private boolean attack = false;
-    private boolean skill = false;
-    private boolean status = false;
-    private boolean power = false;
-    private boolean curse = false;
-    private int count = 0;
     public SowTheSeeds() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
@@ -44,9 +38,8 @@ public class SowTheSeeds extends AbstractFarmerCard {
 
                 ArrayList<AbstractCard> targets = new ArrayList<>();
                 for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-                    if (SpireAnniversary5Mod.cardParentMap.get(c.cardID) != null) {
                         targets.add(c);
-                    }
+                   
                 }
 
                 //Add cards equals to magicNumber into your hand, if into discard
