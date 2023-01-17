@@ -13,11 +13,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class SouleaterStrike extends AbstractPackmasterCard {
+public class SouleaterStrike extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("SouleaterStrike");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int ATTACK_DMG = 13;
 
@@ -30,7 +27,7 @@ public class SouleaterStrike extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        this.upgradeBaseCost(1);
+        this.upgradeBaseCost(0);
     }
 
     @Override
@@ -38,15 +35,5 @@ public class SouleaterStrike extends AbstractPackmasterCard {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
         this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-    }
-
-    //Upgraded stats.
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            this.upgradeBaseCost(1);
-            initializeDescription();
-        }
     }
 }

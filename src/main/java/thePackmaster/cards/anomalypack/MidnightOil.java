@@ -10,12 +10,8 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
-public class MidnightOil extends AbstractPackmasterCard {
+public class MidnightOil extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("MidnightOil");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 0;
 
     public MidnightOil() {
@@ -23,7 +19,8 @@ public class MidnightOil extends AbstractPackmasterCard {
     }
 
     @Override
-    public void upp() {    }
+    public void upp() {
+    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,16 +30,5 @@ public class MidnightOil extends AbstractPackmasterCard {
             this.addToBot(new ExhaustAction(1, true, false, false));
         }
         Wiz.atb(new GainEnergyAction(1));
-    }
-
-
-    //Upgraded stats.
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
-        }
     }
 }
