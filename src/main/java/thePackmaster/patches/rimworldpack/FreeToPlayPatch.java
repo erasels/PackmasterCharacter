@@ -17,7 +17,7 @@ public class FreeToPlayPatch {
     public static class FreeCardPlz {
         @SpirePrefixPatch
         public static SpireReturn<?> free(AbstractCard __instance) {
-            if (Wiz.adp() != null && !AbstractDungeon.isScreenUp && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            if (Wiz.isInCombat() && !AbstractDungeon.isScreenUp) {
                 for (AbstractPower pow : Wiz.adp().powers) {
                     if (pow instanceof FreeToPlayPower && ((FreeToPlayPower) pow).isFreeToPlay(__instance)) {
                         return SpireReturn.Return(true);
