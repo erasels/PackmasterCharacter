@@ -11,7 +11,7 @@ import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.*;
 
-public class Ambush extends AbstractPackmasterCard {
+public class Ambush extends AbstractSummonsCard {
     public final static String ID = makeID(Ambush.class.getSimpleName());
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;

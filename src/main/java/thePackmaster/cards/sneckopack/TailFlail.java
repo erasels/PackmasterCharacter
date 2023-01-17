@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class TailFlail extends AbstractPackmasterCard {
+public class TailFlail extends AbstractSneckoCard {
 
 
     public final static String ID = makeID("TailFlail");

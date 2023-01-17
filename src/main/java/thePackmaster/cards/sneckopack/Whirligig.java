@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Whirligig extends AbstractPackmasterCard {
+public class Whirligig extends AbstractSneckoCard {
 
     //changed the numbers slightly (+1 dmg), else it's just a worse Bowling Bash
 

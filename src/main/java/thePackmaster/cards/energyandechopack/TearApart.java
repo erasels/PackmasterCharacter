@@ -14,7 +14,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class TearApart extends AbstractPackmasterCard {
+public class TearApart extends AbstractEchoCard {
 
     public final static String ID = makeID(TearApart.class.getSimpleName());
 

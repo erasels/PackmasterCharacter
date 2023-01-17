@@ -13,7 +13,7 @@ import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.atb;
 
-public class Wolves extends AbstractPackmasterCard {
+public class Wolves extends AbstractSummonsCard {
     public final static String ID = makeID(Wolves.class.getSimpleName());
     private static final int COST = 1;
     private static final CardType TYPE = CardType.SKILL;

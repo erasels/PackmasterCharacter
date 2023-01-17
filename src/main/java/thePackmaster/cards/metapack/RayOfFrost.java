@@ -12,7 +12,7 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class RayOfFrost extends AbstractPackmasterCard {
+public class RayOfFrost extends AbstractMetaCard {
     public final static String ID = makeID("RayOfFrost");
 
     private static final int DAMAGE = 7;

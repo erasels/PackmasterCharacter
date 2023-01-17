@@ -14,14 +14,14 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 )
 public class OccultDescription {
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Occult"));
-    public static String occult = uiStrings.TEXT[0];
+    public static String[] occult = uiStrings.TEXT;
 
     @SpirePrefixPatch
     public static void betterHaveTheKeyword(AbstractCard __instance)
     {
-        if (OccultFields.isOccult.get(__instance) && !__instance.rawDescription.contains(occult))
+        if (OccultFields.isOccult.get(__instance) && (!__instance.rawDescription.startsWith(occult[0]) || !__instance.rawDescription.contains(occult[1])))
         {
-            __instance.rawDescription = occult + __instance.rawDescription;
+            __instance.rawDescription = occult[0] + __instance.rawDescription;
         }
     }
 }

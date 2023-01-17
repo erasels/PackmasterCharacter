@@ -6,5 +6,13 @@
       "Whenever you draw a #yLocked or #yUnplayable card, draw #b",
       " cards."
     ]
+  },
+  "${ModID}:DeepDreamPower": {
+    "NAME": "Deep Dream",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn, make a random card in your hand #yOccult.",
+      "Whenever you play a card this turn, make #b",
+      " random cards in your hand #yOccult."
+    ]
   }
 }

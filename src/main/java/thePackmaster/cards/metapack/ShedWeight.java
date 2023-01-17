@@ -13,7 +13,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ShedWeight extends AbstractPackmasterCard {
+public class ShedWeight extends AbstractMetaCard {
     public final static String ID = makeID("ShedWeight");
     UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardAction");
 
