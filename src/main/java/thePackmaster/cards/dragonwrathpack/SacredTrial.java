@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+
+import com.megacrit.cardcrawl.cards.purple.Ragnarok;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -56,6 +58,10 @@ public class SacredTrial extends AbstractDragonwrathCard {
         }));
     }
 
+    @Override
+    public String cardArtCopy() {
+        return Ragnarok.ID;
+    }
 
     // Upgraded stats.
     @Override

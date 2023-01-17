@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.blue.BallLightning;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -63,6 +64,10 @@ public class PenanceShock extends AbstractDragonwrathCard {
         addToBot(new ChannelAction(new Lightning()));
     }
 
+    @Override
+    public String cardArtCopy() {
+        return BallLightning.ID;
+    }
 
     // Upgraded stats.
     @Override

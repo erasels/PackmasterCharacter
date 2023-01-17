@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+
+import com.megacrit.cardcrawl.cards.red.FlameBarrier;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -39,7 +41,7 @@ public class SearingLight extends AbstractDragonwrathCard {
 
 
     public SearingLight(){
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseBlock = 20;
         this.magicNumber = baseMagicNumber = 5;
     }
@@ -57,6 +59,10 @@ public class SearingLight extends AbstractDragonwrathCard {
         addToBot(new ChannelAction(new LightOrb()));
     }
 
+    @Override
+    public String cardArtCopy() {
+        return FlameBarrier.ID;
+    }
 
     // Upgraded stats.
     @Override

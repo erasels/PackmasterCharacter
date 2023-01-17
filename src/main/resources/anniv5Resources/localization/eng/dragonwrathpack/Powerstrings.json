@@ -8,9 +8,21 @@
     ]
   },
   "${ModID}:confession": {
-    "NAME": "confession",
+    "NAME": "Confession",
     "DESCRIPTIONS": ["Whenever you take damage deal #b",
       " damage to all enemies"
+    ]
+  },
+  "${ModID}:JudgementDay": {
+    "NAME": "Judgement Day",
+    "DESCRIPTIONS": ["Whenever you channel #yLightning apply #b",
+      " #yPenance to a random enemy."
+    ]
+  },
+  "${ModID}:Absolution": {
+    "NAME": "Absolution",
+    "DESCRIPTIONS": ["Whenever you take damage, increase #yPenance HP loss by #b",
+      " this combat."
     ]
   }
 }

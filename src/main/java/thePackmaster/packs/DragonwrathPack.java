@@ -30,6 +30,8 @@ public class DragonwrathPack extends AbstractCardPack {
         cards.add(WeightofContrition.ID);
         cards.add(SacredTrial.ID);
         cards.add(HolyWrath.ID);
+        cards.add(JudgementDay.ID);
+        cards.add(Absolution.ID);
         return cards;
     }
 }

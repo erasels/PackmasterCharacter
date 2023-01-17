@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.colorless.DarkShackles;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -53,6 +54,10 @@ public class ChainsofTruth extends AbstractDragonwrathCard {
         addToBot(new ChannelAction(new Lightning()));
     }
 
+    @Override
+    public String cardArtCopy() {
+        return DarkShackles.ID;
+    }
 
     // Upgraded stats.
     @Override

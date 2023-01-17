@@ -3,6 +3,7 @@ package thePackmaster.cards.dragonwrathpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.purple.Worship;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -33,7 +34,8 @@ public class WeightofContrition extends AbstractDragonwrathCard{
 
 
     public WeightofContrition() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+
         magicNumber = baseMagicNumber = 2;
         secondMagic = baseSecondMagic = 4;
     }
@@ -48,9 +50,11 @@ public class WeightofContrition extends AbstractDragonwrathCard{
                 PenancePower.Power += secondMagic;
                 isDone = true;
             }
-        });
-    }
 
+    @Override
+    public String cardArtCopy() {
+        return Worship.ID;
+    }
     // Upgraded stats.
 
     @Override
