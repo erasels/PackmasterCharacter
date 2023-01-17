@@ -25,11 +25,11 @@ public class Mimicry extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        uDesc();
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        AbstractCard origin = this;
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
@@ -41,7 +41,7 @@ public class Mimicry extends AbstractPackmasterCard {
                 list.removeIf(c -> c.rarity != CardRarity.COMMON);
                 CardGroup tmpGrp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
                 tmpGrp.group = list;
-                addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(tmpGrp), false));
+                addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(tmpGrp), c -> {if (origin.upgraded) c.upgrade();}, false));
                 isDone = true;
             }
         });

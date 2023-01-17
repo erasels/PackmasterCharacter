@@ -20,7 +20,6 @@ public class Firewall extends AbstractPackmasterCard {
     @Override
     public void upp() {
         isInnate = true;
-        uDesc();
     }
 
     @Override

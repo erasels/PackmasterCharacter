@@ -31,7 +31,14 @@ public class StrikingStrike extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(JediUtil.filterCardsForDiscovery(
-                c -> c.hasTag(CardTags.STRIKE) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL
-        )), selectedCard -> CardModifierManager.addModifier(selectedCard, new ExhaustMod()), true));
+                c -> c.hasTag(CardTags.STRIKE) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC
+        )), selectedCard -> {
+            if (this.upgraded)
+            {
+                selectedCard.upgrade();
+            }
+            CardModifierManager.addModifier(selectedCard, new ExhaustMod());
+            },
+                true));
     }
 }

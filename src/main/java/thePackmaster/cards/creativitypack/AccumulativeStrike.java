@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.FlexibleDiscoveryAction;
+import thePackmaster.cardmodifiers.creativitypack.AccumulativeDamageModifier;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.JediUtil;
 
@@ -19,12 +20,14 @@ public class AccumulativeStrike extends AbstractPackmasterCard {
 
     public AccumulativeStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        magicNumber = baseMagicNumber = 2;
+        CardModifierManager.addModifier(this, new AccumulativeDamageModifier(magicNumber));
         baseDamage = damage = 12;
+
     }
 
     @Override
     public void upp() {
-        uDesc();
     }
 
     @Override

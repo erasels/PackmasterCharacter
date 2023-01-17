@@ -20,7 +20,6 @@ public class BarrierBeacon extends AbstractPackmasterCard {
     @Override
     public void upp() {
         upgradeBlock(3);
-        uDesc();
     }
 
     @Override

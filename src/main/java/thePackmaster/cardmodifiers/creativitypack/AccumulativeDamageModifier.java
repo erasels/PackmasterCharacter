@@ -16,10 +16,14 @@ public class AccumulativeDamageModifier extends AbstractCardModifier {
     }
 
     @Override
+    public boolean isInherent(AbstractCard card) {
+        return true;
+    }
+
+    @Override
     public float modifyDamage(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
         float retVal = damage;
-        retVal += JediUtil.cardsCreatedThisCombat.stream().filter(c -> c.type != AbstractCard.CardType.STATUS).count() * damageRamp;
-        retVal += JediUtil.cardsCreatedThisCombat.stream().filter(c -> c.type == AbstractCard.CardType.STATUS).count() * card.timesUpgraded * damageRamp;
+        retVal += JediUtil.cardsCreatedThisCombat.stream().filter(c -> c.type != AbstractCard.CardType.STATUS || card.upgraded).count() * damageRamp;
         return retVal;
     }
 

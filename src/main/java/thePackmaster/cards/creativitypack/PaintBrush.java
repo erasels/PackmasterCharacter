@@ -16,13 +16,12 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Souvenirs extends AbstractPackmasterCard {
+public class PaintBrush extends AbstractPackmasterCard {
 
-    public final static String ID = makeID(Souvenirs.class.getSimpleName());
+    public final static String ID = makeID(PaintBrush.class.getSimpleName());
 
-    public Souvenirs() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-
+    public PaintBrush() {
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
     }
 
     @Override
@@ -31,15 +30,6 @@ public class Souvenirs extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        for (int i = 0; i <= timesUpgraded; i++)
-        {
-            ArrayList<AbstractCard> list = new ArrayList<>();
-            list.add(CardLibrary.getCard(Insight.ID).makeCopy());
-            list.add(CardLibrary.getCard(Smite.ID).makeCopy());
-            list.add(CardLibrary.getCard(Safety.ID).makeCopy());
-            addToBot(new FlexibleDiscoveryAction(list,
-                    selectedCard -> CardModifierManager.addModifier(selectedCard, new DrawCardModifier()),
-                    false));
-        }
+
     }
 }

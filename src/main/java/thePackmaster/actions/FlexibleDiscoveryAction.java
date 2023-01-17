@@ -27,7 +27,7 @@ public class FlexibleDiscoveryAction extends AbstractGameAction {
         this.callback = null;
     }
 
-    public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, Consumer<AbstractCard> callback,boolean costsZeroThisTurn) {
+    public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, Consumer<AbstractCard> callback, boolean costsZeroThisTurn) {
         this(cards,costsZeroThisTurn);
         this.callback = callback;
     }

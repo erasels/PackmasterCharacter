@@ -1,0 +1,14 @@
+{
+  "${ModID}:MakeshiftSwordPower": {
+    "NAME": "Makeshift Sword",
+    "DESCRIPTIONS": [
+        "Whenever a card is created during combat, deal #b%d damage to ALL enemies"
+      ]
+  },
+  "${ModID}:FirewallPower": {
+    "NAME": "Firewall",
+    "DESCRIPTIONS": [
+      "When a #yStatus card is created, #yExhaust it."
+    ]
+  }
+}
