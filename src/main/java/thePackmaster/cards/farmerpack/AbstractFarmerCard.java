@@ -16,40 +16,13 @@ public abstract class AbstractFarmerCard extends AbstractPackmasterCard {
                 "anniv5Resources/images/1024/farmer/" + type.name().toLowerCase() + ".png"
         );
     }
-    private boolean attack = false;
-    private boolean skill = false;
-    private boolean status = false;
-    private boolean power = false;
-    private boolean curse = false;
-    private int count = 0;
-    public int checkTypes(){
-        count = 0;
-        attack = false;
-        skill = false;
-        status = false;
-        power = false;
-        curse = false;
-        Iterator<AbstractCard> typeDetect = AbstractDungeon.actionManager.cardsPlayedThisTurn.iterator();
-        while (typeDetect.hasNext()) {
-            AbstractCard i = typeDetect.next();
-            if (i.type == CardType.ATTACK && !attack) {
-                count += 1;
-                attack = true;
-            } else if (i.type == CardType.SKILL && !skill) {
-                count += 1;
-                skill = true;
-            } else if (i.type == CardType.POWER && !power) {
-                count += 1;
-                power = true;
-            } else if (i.type == CardType.STATUS && !status) {
-                count += 1;
-                status = true;
-            } else if (i.type == CardType.CURSE && !curse) {
-                count += 1;
-                curse = true;
-            }
-        }
-        return count;
+
+    public int checkTypes(boolean cardIsBeingPlayed){
+        int numToCheck = Math.max(0, AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - (cardIsBeingPlayed ? 1 : 0));
+        return (int)AbstractDungeon.actionManager.cardsPlayedThisTurn.subList(0, numToCheck).stream()
+                .map(c -> c.type)
+                .distinct()
+                .count();
     }
 
     public AbstractFarmerCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {
