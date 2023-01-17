@@ -14,7 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
-public class ShiningStyle extends AbstractPackmasterCard implements StartupCard {
+public class ShiningStyle extends AbstractOdditiesCard implements StartupCard {
     public final static String ID = makeID("ShiningStyle");
     // intellij stuff power, self, uncommon, , , , , 1, 
 

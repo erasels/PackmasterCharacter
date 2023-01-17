@@ -10,7 +10,7 @@ import thePackmaster.orbs.entropy.Oblivion;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Emptiness extends AbstractPackmasterCard {
+public class Emptiness extends AbstractOrbCard {
     public final static String ID = makeID("Emptiness");
     // intellij stuff skill, none, common, , , , , 1, 1
 
