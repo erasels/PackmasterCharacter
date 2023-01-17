@@ -13,11 +13,11 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Tragedy extends AbstractPackmasterCard {
+public class Tragedy extends AbstractBatterCard {
     public final static String ID = makeID("Tragedy");
 
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int DAMAGE = 7;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     public Tragedy() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -69,7 +69,7 @@ public class Tragedy extends AbstractPackmasterCard {
 
     public boolean isCrit()
     {
-        if (Wiz.p().hand.size() >= 7)
+        if (Wiz.p().hand.size() >= 6)
         return true;
 
         return false;

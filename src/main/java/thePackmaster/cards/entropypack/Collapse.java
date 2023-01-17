@@ -21,7 +21,7 @@ import java.util.List;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Collapse extends AbstractPackmasterCard {
+public class Collapse extends AbstractEntropyCard {
     public final static String ID = makeID("Collapse");
     // intellij stuff skill, self, uncommon, , , , , 4, 3
 

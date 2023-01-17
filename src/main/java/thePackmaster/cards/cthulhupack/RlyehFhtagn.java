@@ -1,15 +1,10 @@
 package thePackmaster.cards.cthulhupack;
 
-import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.cthulhupack.NamelessMistPower;
 import thePackmaster.powers.cthulhupack.NextTurnGainMadnessPower;
 import thePackmaster.util.Wiz;
 
@@ -22,7 +17,6 @@ public class RlyehFhtagn extends AbstractCthulhuCard {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         cardsToPreview = new Madness();
         exhaust = true;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

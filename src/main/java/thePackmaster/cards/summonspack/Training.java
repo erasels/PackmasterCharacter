@@ -13,14 +13,14 @@ import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.*;
 
-public class Training extends AbstractPackmasterCard {
+public class Training extends AbstractSummonsCard {
     public final static String ID = makeID(Training.class.getSimpleName());
     private static final int COST = 2;
     private static final CardType TYPE = CardType.POWER;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 1;
 
     public Training() {
@@ -38,6 +38,5 @@ public class Training extends AbstractPackmasterCard {
     @Override
     public void upp() {
         upMagic(UPGRADE_MAGIC);
-        uDesc();
     }
 }

@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Ambition extends AbstractPackmasterCard {
+public class Ambition extends AbstractMetaCard {
     public final static String ID = makeID("Ambition");
 
     public Ambition() {

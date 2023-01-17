@@ -2,9 +2,9 @@
   "${ModID}:DividedFuryPower": {
     "NAME": "Divided Fury",
     "DESCRIPTIONS": [
-      "When you #yrip an Attack, deal #b",
-      " damage to ALL enemies. NL When you #yrip a Skill, gain #b",
-      " #yBlock."
+      "At the start of your turn, add #b",
+      " Fury card into your hand.",
+      " Fury cards into your hand."
     ]
   }
 }

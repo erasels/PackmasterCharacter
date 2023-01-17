@@ -8,7 +8,7 @@ import thePackmaster.powers.cosmoscommandpack.RecallPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class Recall extends AbstractPackmasterCard {
+public class Recall extends AbstractCosmosCard {
     public final static String ID = makeID("Recall");
 
     public Recall() {

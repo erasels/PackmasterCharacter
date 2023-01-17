@@ -6,13 +6,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.thieverypack.ThieveryMasteryPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WideAngle extends AbstractPackmasterCard {
+public class WideAngle extends AbstractBatterCard {
     public final static String ID = makeID("WideAngle");
 
     public WideAngle() {
@@ -37,7 +36,7 @@ public class WideAngle extends AbstractPackmasterCard {
             AbstractPower tmp = AbstractDungeon.player.getPower(ThieveryMasteryPower.POWER_ID);
             if (tmp != null) {
                 tmp.flash();
-                maxblock *= tmp.amount + 1;
+                maxblock *= 2;
             }
 
             Wiz.doBlk(maxblock);

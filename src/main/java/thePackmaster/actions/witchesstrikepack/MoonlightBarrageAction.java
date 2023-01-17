@@ -31,16 +31,6 @@ public class MoonlightBarrageAction extends AbstractGameAction
             for (AbstractOrb orb : AbstractDungeon.player.orbs){
                 if (!(orb instanceof EmptyOrbSlot)){
                     addToBot(new AttackDamageRandomEnemyAction(card,effect));
-                    if (orb instanceof PackmasterOrb) {
-                        for (int i = 0; i < this.amount; ++i) {
-                            ((PackmasterOrb)orb).passiveEffect();
-                        }
-                    } else {
-                        for (int i = 0; i < this.amount; ++i) {
-                            orb.onStartOfTurn();
-                            orb.onEndOfTurn();
-                        }
-                    }
                 }
             }
         }

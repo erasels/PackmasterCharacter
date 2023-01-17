@@ -22,7 +22,8 @@ public class StrikeOfGeniusUpgradedPower extends AbstractPackmasterPower {
     }
     public void atStartOfTurn() {
         for (int i = 0; i < this.amount; ++i) {
-            AbstractCard strike = Wiz.returnTrulyRandomPrediCardInCombat(card -> card.hasTag(AbstractCard.CardTags.STRIKE), true);
+            AbstractCard strike = Wiz.returnTrulyRandomPrediCardInCombat(card ->
+                    card.hasTag(AbstractCard.CardTags.STRIKE) && card.rarity != AbstractCard.CardRarity.SPECIAL, true);
             strike.freeToPlayOnce = true;
             strike.upgrade();
             if (!strike.exhaust) CardModifierManager.addModifier(strike, new ExhaustMod());

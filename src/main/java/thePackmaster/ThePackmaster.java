@@ -1,12 +1,11 @@
 package thePackmaster;
 
-import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -25,13 +24,9 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import thePackmaster.cards.*;
-import thePackmaster.cards.dimensiongatepack.DarkRitual;
-import thePackmaster.cards.dimensiongatepack.PackRat;
-import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
-import thePackmaster.packs.*;
+import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.relics.HandyHaversack;
 import thePackmaster.vfx.VictoryConfettiEffect;
 import thePackmaster.vfx.VictoryGlow;
@@ -39,9 +34,8 @@ import thePackmaster.vfx.VictoryGlow;
 import java.util.ArrayList;
 import java.util.List;
 
-import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 import static thePackmaster.SpireAnniversary5Mod.*;
-import static thePackmaster.hats.Hats.currentHat;
+import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 
 public class ThePackmaster extends CustomPlayer {
     private static final String[] orbTextures = {
@@ -113,7 +107,7 @@ public class ThePackmaster extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(Rummage.ID);
+        retVal.add(Rummage2.ID);
         retVal.add(Cardistry.ID);
         return retVal;
     }
@@ -213,7 +207,7 @@ public class ThePackmaster extends CustomPlayer {
 
         update_timer += Gdx.graphics.getDeltaTime();
 
-        for(float i = 0; i+(1.0/30.0) <= update_timer; update_timer -= (1.0/30.0)) {
+        for (float i = 0; i + (1.0 / 30.0) <= update_timer; update_timer -= (1.0 / 30.0)) {
             effects.add(new VictoryConfettiEffect());
         }
     }
@@ -249,6 +243,13 @@ public class ThePackmaster extends CustomPlayer {
         }
 
         return poolCards;
+    }
+
+    @Override
+    public void renderPlayerImage(SpriteBatch sb) {
+        Hats.preRenderPlayer(sb, this);
+        super.renderPlayerImage(sb);
+        Hats.postRenderPlayer(sb, this);
     }
 
     @Override

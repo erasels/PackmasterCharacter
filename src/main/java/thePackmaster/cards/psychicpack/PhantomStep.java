@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class PhantomStep extends AbstractPackmasterCard {
+public class PhantomStep extends AbstractPsychicCard {
     public final static String ID = makeID("PhantomStep");
     // intellij stuff skill, none, uncommon, , , 14, 4, , 
 

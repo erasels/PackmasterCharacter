@@ -17,20 +17,18 @@ public class ScarabShield extends AbstractInfestCard {
     public ScarabShield() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 15;
-        baseMagicNumber = magicNumber = 1;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int infestCount = InfestModifier.getInfestCount(this);
         blck();
-        if (infestCount >= 2) {
-            applyToSelf(new ArtifactPower(p, magicNumber));
+        if (infestCount >= 1) {
+            applyToSelf(new ArtifactPower(p, infestCount));
         }
     }
 
     public void upp() {
         upgradeBlock(5);
-        upgradeMagicNumber(1);
     }
 }

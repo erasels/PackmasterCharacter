@@ -14,7 +14,7 @@ import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.doDmg;
 
-public class SwarmOfBees extends AbstractPackmasterCard {
+public class SwarmOfBees extends AbstractSummonsCard {
     public final static String ID = makeID(SwarmOfBees.class.getSimpleName());
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;

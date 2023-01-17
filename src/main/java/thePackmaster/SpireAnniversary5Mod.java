@@ -6,14 +6,12 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
 import basemod.helpers.CardBorderGlowManager;
-import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
@@ -49,6 +47,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
 import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
@@ -56,13 +55,12 @@ import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
-import thePackmaster.patches.psychicpack.DeepDreamPatch;
+import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.patches.sneckopack.EnergyCountPatch;
 import thePackmaster.potions.BoosterBrew;
 import thePackmaster.potions.ModdersDelight;
-import thePackmaster.potions.PackInAJar;
 import thePackmaster.potions.SmithingOil;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
@@ -348,7 +346,7 @@ public class SpireAnniversary5Mod implements
                 .packageFilter(AbstractPackmasterRelic.class)
                 .any(AbstractPackmasterRelic.class, (info, relic) -> {
                     if (relic.color == null) {
-                        if (sharedContentMode){
+                        if (sharedContentMode) {
                             BaseMod.addRelic(relic, RelicType.SHARED);
                         } else {
                             BaseMod.addRelicToCustomPool(relic, relic.color);
@@ -382,9 +380,6 @@ public class SpireAnniversary5Mod implements
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
 
-        logger.info("Prepping dream hand");
-        DeepDreamPatch.dreamHand = new DeepDreamPatch.DreamHand();
-
         logger.info("Checking playability annotations");
         OccultPatch.testPlayability();
 
@@ -417,12 +412,12 @@ public class SpireAnniversary5Mod implements
 
     public static void addPotions() {
 
-        if (sharedContentMode){
+        if (sharedContentMode) {
             BaseMod.addPotion(BoosterBrew.class, Color.TAN, Color.WHITE, Color.BLACK, BoosterBrew.POTION_ID);
-            BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE,null, SmithingOil.POTION_ID);
+            BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE, null, SmithingOil.POTION_ID);
         } else {
             BaseMod.addPotion(BoosterBrew.class, Color.TAN, Color.WHITE, Color.BLACK, BoosterBrew.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
-            BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE,null, SmithingOil.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+            BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE, null, SmithingOil.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         }
 
         BaseMod.addPotion(ModdersDelight.class, Color.TAN, Color.WHITE, Color.BLACK, ModdersDelight.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
@@ -796,9 +791,11 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostUpdate() {
+        time += Gdx.graphics.getDeltaTime();
         if (!openedStarterScreen) {
             if (CardCrawlGame.isInARun() && doPackSetup && !AbstractDungeon.isScreenUp) {
                 logger.info("Starting Packmaster setup.");
+                if (HatMenu.randomHatMode) HatMenu.randomizeHat();
                 startOfGamePackSetup();
                 openedStarterScreen = true;
             }
@@ -807,7 +804,6 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        DeepDreamPatch.wakeUp();
         ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
         combatExhausts = 0;
@@ -956,5 +952,29 @@ public class SpireAnniversary5Mod implements
                 }
             }
         });
+
+        BaseMod.addSaveField("PackmasterFoilCardsLetVexKnowIfThereIsABetterWayToDoThis", new CustomSavable<ArrayList<Boolean>>() {
+            @Override
+            public ArrayList<Boolean> onSave() {
+                ArrayList<Boolean> foilCards = new ArrayList<>();
+                for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+                    foilCards.add(PackmasterFoilPatches.isFoil(q));
+                }
+                return foilCards;
+            }
+
+            @Override
+            public void onLoad(ArrayList<Boolean> foilCards) {
+                if (foilCards != null)
+                    for (int i = 0; i < foilCards.size(); i++) {
+                        if (foilCards.get(i)) {
+                            if (AbstractDungeon.player.masterDeck.size() > i)
+                                PackmasterFoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
+                        }
+                    }
+            }
+        });
     }
+
+    public static float time = 0f;
 }

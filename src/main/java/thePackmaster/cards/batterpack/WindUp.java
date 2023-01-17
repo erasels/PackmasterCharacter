@@ -9,7 +9,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WindUp extends AbstractPackmasterCard {
+public class WindUp extends AbstractBatterCard {
     public final static String ID = makeID("WindUp");
 
     public WindUp() {

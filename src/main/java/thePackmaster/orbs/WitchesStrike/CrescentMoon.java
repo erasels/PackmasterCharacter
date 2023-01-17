@@ -31,7 +31,7 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
 
     private static final int PASSIVE_AMOUNT = 5;
-    private static final int EVOKE_AMOUNT = 2;
+    private static final int EVOKE_AMOUNT = 4;
 
     // Animation Rendering Numbers - You can leave these at default, or play around with them and see what they change.
     private float vfxTimer = 1.0f;

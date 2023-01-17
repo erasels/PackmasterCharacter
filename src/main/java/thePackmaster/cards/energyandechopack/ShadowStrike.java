@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class ShadowStrike extends AbstractPackmasterCard {
+public class ShadowStrike extends AbstractEchoCard {
 
     public final static String ID = makeID(ShadowStrike.class.getSimpleName());
 
