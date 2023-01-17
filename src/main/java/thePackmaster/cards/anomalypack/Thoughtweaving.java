@@ -10,10 +10,11 @@ import thePackmaster.powers.anomalypack.ThoughtweavingPower;
 public class Thoughtweaving extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Thoughtweaving");
     private static final int COST = 2;
+    private static final int MAGIC = 1;
 
     public Thoughtweaving() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        magicNumber=1;
+        baseMagicNumber = magicNumber = MAGIC;
     }
 
     @Override

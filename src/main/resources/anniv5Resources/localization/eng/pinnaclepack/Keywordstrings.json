@@ -1,0 +1,53 @@
+[
+  {
+    "PROPER_NAME": "Capacitor",
+    "NAMES": [
+      "Capacitor",
+      "capacitor"
+    ],
+    "DESCRIPTION": "Your hand size is #bX higher this turn."
+  },
+  {
+    "PROPER_NAME": "Croquette",
+    "NAMES": [
+      "Croquette",
+      "croquette",
+      "Croquettes",
+      "croquettes"
+    ],
+    "DESCRIPTION": "A #yRetained #b0 cost #yExhausting token that provides a resource. NL Produced by #yCooking [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Juggernaut",
+    "NAMES": [
+      "Juggernaut",
+      "juggernaut"
+    ],
+    "DESCRIPTION": "Deal #bX damage to enemies when you gain block."
+  },
+  {
+    "PROPER_NAME": "Minigame",
+    "NAMES": [
+      "Minigame",
+      "minigame"
+    ],
+    "DESCRIPTION": "Randomly: NL Draw #b1 card next turn. NL Gain #b1 energy next turn. NL Gain #b3 #yBlock next turn. NL Gain #b5 #yVigor [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Cooking",
+    "NAMES": [
+      "Cooking",
+      "cooking"
+    ],
+    "DESCRIPTION": "At the end of your turn, add a #yCroquette to your hand. They provide #yBlock [REMOVE_SPACE], #yWeak [REMOVE_SPACE], #yStrength and #yVulnerable respectively."
+  },
+  {
+    "PROPER_NAME": "Gourmet Cooking",
+    "NAMES": [
+      "Gourmet Cooking",
+      "Gourmet_Cooking",
+      "gourmet_cooking"
+    ],
+    "DESCRIPTION": "At the end of your turn, add an upgraded #yCroquette to your hand. They provide #yBlock [REMOVE_SPACE], #yWeak [REMOVE_SPACE], #yStrength and #yVulnerable respectively."
+  }
+]

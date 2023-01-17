@@ -1,0 +1,21 @@
+{
+  "${ModID}:Capacitor": {
+    "NAME": "Capacitor",
+    "DESCRIPTIONS": [
+      "This turn, you can hold #b",
+      " more cards in your hand."
+    ]
+  },
+  "${ModID}:Cooking": {
+    "NAME": "Cooking",
+    "DESCRIPTIONS": [
+      "At the end of your turn, cook a #yCroquette."
+    ]
+  },
+  "${ModID}:Cooking_": {
+    "NAME": "Cooking+",
+    "DESCRIPTIONS": [
+      "At the end of your turn, cook an upgraded #yCroquette."
+    ]
+  }
+}
