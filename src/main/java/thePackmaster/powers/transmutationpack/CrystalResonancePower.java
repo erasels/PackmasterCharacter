@@ -1,11 +1,15 @@
 package thePackmaster.powers.transmutationpack;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.potions.StrengthPotion;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.transmutationpack.TransmuteCardAction;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 public class CrystalResonancePower extends AbstractPackmasterPower implements TransmutableAffectingPower {
@@ -20,11 +24,11 @@ public class CrystalResonancePower extends AbstractPackmasterPower implements Tr
 
     @Override
     public void updateDescription() {
-        this.description = amount == 1 ? DESCRIPTIONS[0] : DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     @Override
-    public void affectTransmutedCard(AbstractCard newCard) {
-        addToBot(new DrawCardAction(amount));
+    public void onTransmute(TransmuteCardAction action) {
+        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
     }
 }
