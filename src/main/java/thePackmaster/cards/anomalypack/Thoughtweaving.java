@@ -10,12 +10,8 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.anomalypack.ThoughtweavingPower;
 
-public class Thoughtweaving extends AbstractPackmasterCard {
+public class Thoughtweaving extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Thoughtweaving");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 2;
 
     public Thoughtweaving() {
@@ -30,19 +26,5 @@ public class Thoughtweaving extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new ThoughtweavingPower(p, magicNumber), magicNumber));
-    }
-
-
-
-
-    //Upgraded stats.
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            this.upgradeBaseCost(1);
-            initializeDescription();
-        }
     }
 }

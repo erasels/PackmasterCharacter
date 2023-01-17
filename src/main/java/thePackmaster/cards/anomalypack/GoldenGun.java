@@ -17,12 +17,8 @@ import thePackmaster.patches.hermitpack.EnumPatch;
 import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
 
-public class GoldenGun extends AbstractPackmasterCard implements StartupCard {
+public class GoldenGun extends AbstractAnomalyCard implements StartupCard {
     public static final String ID = SpireAnniversary5Mod.makeID("GoldenGun");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int ATTACK_DMG = 50;
     private static final int UPGRADE_PLUS_DMG = 14;
     private static final int COST = 1;
@@ -33,7 +29,7 @@ public class GoldenGun extends AbstractPackmasterCard implements StartupCard {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = ATTACK_DMG;
         loaded=false;
-        this.cardsToPreview = new SouleaterStrike();
+        this.cardsToPreview = new GoldenRound();
     }
 
     public void load() {

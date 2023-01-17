@@ -9,12 +9,8 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
-public class FreeSpace extends AbstractPackmasterCard {
+public class FreeSpace extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("FreeSpace");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
 
     public FreeSpace() {
@@ -40,18 +36,5 @@ public class FreeSpace extends AbstractPackmasterCard {
     @Override
     public void triggerOnManualDiscard() {
         Wiz.atb(new DrawCardAction(1));
-    }
-
-
-
-    //Upgraded stats.
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            this.isEthereal = false;
-            initializeDescription();
-        }
     }
 }

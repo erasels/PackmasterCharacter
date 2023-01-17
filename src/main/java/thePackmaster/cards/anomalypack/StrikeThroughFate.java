@@ -11,12 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class StrikeThroughFate extends AbstractPackmasterCard {
+public class StrikeThroughFate extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("StrikeThroughFate");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int ATTACK_DMG = 7;
     private static final int COST = 0;
 
@@ -53,17 +49,6 @@ public class StrikeThroughFate extends AbstractPackmasterCard {
         this.glowColor = AbstractPackmasterCard.BLUE_BORDER_GLOW_COLOR.cpy();
         if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 6)  {
             this.glowColor = AbstractPackmasterCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        }
-    }
-
-    //Upgraded stats.
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            this.selfRetain = true;
-            initializeDescription();
         }
     }
 }
