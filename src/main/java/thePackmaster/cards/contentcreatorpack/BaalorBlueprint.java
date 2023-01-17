@@ -1,5 +1,6 @@
 package thePackmaster.cards.contentcreatorpack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,7 +26,13 @@ public class BaalorBlueprint extends AbstractPackmasterCard {
             this.addToBot(new ShuffleAction(AbstractDungeon.player.drawPile, false));
         }
 
-
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                AbstractDungeon.player.drawPile.addToBottom(new TheCozyChair());
+            }
+        });
     }
 
     public void upp() {
