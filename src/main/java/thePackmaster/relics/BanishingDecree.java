@@ -91,11 +91,12 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
                 List<AbstractCard> allOtherPackPreviewCards = SpireAnniversary5Mod.getPreviewCardsNotFromCurrentSet();
+                allOtherPackPreviewCards.removeIf(c -> c.cardID.equals(cp.previewPackCard.cardID));
                 Collections.shuffle(allOtherPackPreviewCards, new Random(Settings.seed).random);
                 CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
                 for (int i = 0; i < 5; i++) {
                     AbstractCard c = allOtherPackPreviewCards.get(i);
-                    if (c != cp.previewPackCard) tmp.addToTop(c);
+                    tmp.addToTop(c);
                 }
                 AbstractDungeon.gridSelectScreen.open(tmp,
                         1, DESCRIPTIONS[5] + name + ".",
