@@ -13,7 +13,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Twitch extends AbstractPackmasterCard {
+public class Twitch extends AbstractSneckoCard {
 
 
     public final static String ID = makeID("Twitch");

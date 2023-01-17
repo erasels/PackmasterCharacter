@@ -1,0 +1,20 @@
+{
+  "${ModID}:OdditiesPack": {
+    "TEXT": [
+      "Oddities",
+      "Vex doing Vex things. Manage your deck mid-fight!",
+      "Vex"
+    ]
+  },
+  "${ModID}:OdditiesPackHat": {
+    "TEXT": [
+      "Temp!.",
+      "Temp Hat"
+    ]
+  },
+  "${ModID}:AutoBattlerPatches": {
+    "TEXT": [
+      "I must play cards from left to right!"
+    ]
+  }
+}

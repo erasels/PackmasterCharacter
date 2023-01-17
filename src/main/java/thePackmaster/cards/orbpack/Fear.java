@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Fear extends AbstractPackmasterCard {
+public class Fear extends AbstractOrbCard {
     public final static String ID = makeID("Fear");
     // intellij stuff skill, self, uncommon, , , 13, , 1, 1
 

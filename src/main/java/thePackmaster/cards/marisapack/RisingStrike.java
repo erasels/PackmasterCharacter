@@ -14,7 +14,7 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class RisingStrike extends AbstractPackmasterCard {
+public class RisingStrike extends AbstractMarisaCard {
     public final static String ID = makeID(RisingStrike.class.getSimpleName());
     private static final int DMG = 5, UPG_DMG = 3;
     private static final int MAGIC = 1;
@@ -26,9 +26,6 @@ public class RisingStrike extends AbstractPackmasterCard {
         tags.add(CardTags.STRIKE);
         //cardsToPreview = new Spark();
 
-        if (!SpireAnniversary5Mod.oneFrameMode)
-        setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

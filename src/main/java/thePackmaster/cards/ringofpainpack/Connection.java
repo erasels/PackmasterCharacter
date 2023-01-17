@@ -10,17 +10,13 @@ import thePackmaster.powers.ringofpainpack.ConnectionPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class Connection extends AbstractPackmasterCard {
+public class Connection extends AbstractRingOfPainCard {
     public final static String ID = makeID(Connection.class.getSimpleName());
 
     public Connection() {
         super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
 
-        if (!SpireAnniversary5Mod.oneFrameMode)
-        setBackgroundTexture(
-                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
-        );
+        
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

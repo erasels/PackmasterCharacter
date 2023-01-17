@@ -10,7 +10,7 @@ import thePackmaster.powers.distortionpack.DistortionPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Deconstruct extends AbstractPackmasterCard {
+public class Deconstruct extends AbstractDistortionCard {
     public final static String ID = makeID("Deconstruct");
     // intellij stuff skill, all_enemy, common, , , , , 4, 2
 

@@ -18,7 +18,7 @@ public class RuleCancel extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new MakeCardInHandOccultAction());
+        atb(new MakeCardInHandOccultAction(false));
     }
 
     public void upp() {

@@ -13,7 +13,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
-public class IcicleCrash extends AbstractPackmasterCard {
+public class IcicleCrash extends AbstractOrbCard {
     public final static String ID = makeID("IcicleCrash");
     // intellij stuff attack, enemy, uncommon, 12, 5, , , , 
 
