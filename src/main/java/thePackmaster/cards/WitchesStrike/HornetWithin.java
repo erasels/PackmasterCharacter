@@ -38,7 +38,7 @@ public class HornetWithin extends AbstractPackmasterCard implements OnInfestCard
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                if (AbstractDungeon.player.hand.size() > 0) {
+                if (AbstractDungeon.player.drawPile.size() > 0) {
                     ArrayList<AbstractCard> Uninscribed = new ArrayList<>();
                     for (AbstractCard c : AbstractDungeon.player.drawPile.group){
                         if (!CardModifierManager.hasModifier(c,"Inscribed")){
