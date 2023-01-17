@@ -45,7 +45,7 @@ public class EatWithoutTable extends AbstractPackmasterCard {
                 }
 
                 if(drinkable.size() > 0)
-                    potion = drinkable.get(AbstractDungeon.cardRandomRng.random(drinkable.size()-1));
+                    potion = drinkable.get(AbstractDungeon.cardRandomRng.random(drinkable.size()-1)).makeCopy();
 
                 if(potion == null)
                     potion = new SwiftPotion();
