@@ -10,7 +10,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.adp;
 import static thePackmaster.util.Wiz.atb;
 
-public class AranasiBroodmother extends AbstractPackmasterCard {
+public class AranasiBroodmother extends AbstractWarlockCard {
     public final static String ID = makeID(AranasiBroodmother.class.getSimpleName());
 
     private static final int COST = 1;

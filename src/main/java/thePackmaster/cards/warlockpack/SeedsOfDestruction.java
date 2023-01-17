@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SeedsOfDestruction extends AbstractPackmasterCard {
+public class SeedsOfDestruction extends AbstractWarlockCard {
     public final static String ID = makeID(SeedsOfDestruction.class.getSimpleName());
 
     private static final int COST = 1;

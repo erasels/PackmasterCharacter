@@ -8,7 +8,7 @@ import thePackmaster.powers.psychicpack.GravityPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Gravity extends AbstractPackmasterCard {
+public class Gravity extends AbstractPsychicCard {
     public final static String ID = makeID("Gravity");
     // intellij stuff power, none, uncommon, , , , , , 
 
