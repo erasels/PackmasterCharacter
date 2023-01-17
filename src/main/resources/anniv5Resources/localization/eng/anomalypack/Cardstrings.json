@@ -31,11 +31,11 @@
   },
   "${ModID}:GoldenGun": {
     "NAME": "Golden Gun",
-    "DESCRIPTION": "Startup: Add a *Golden *Round to your draw pile. NL Deal !D! damage. NL Must be *Loaded. "
+    "DESCRIPTION": "Deal !D! damage. NL Must be [#EFC851]Loaded. NL Startup: Add a [#EFC851]Golden [#EFC851]Round to your draw pile. "
   },
   "${ModID}:GoldenRound": {
     "NAME": "Golden Round",
-    "DESCRIPTION": "*Load a *Golden *Gun NL in your hand. NL If you don't have one, put this on top of your draw pile."
+    "DESCRIPTION": "[#EFC851]Load a [#EFC851]Golden [#EFC851]Gun NL in your hand. NL If you don't have one, put this on top of your draw pile."
   },
   "${ModID}:RitualSight": {
     "NAME": "Ritual Sight",
@@ -48,8 +48,8 @@
   },
   "${ModID}:SealedSword": {
   "NAME": "Sealed Sword",
-  "DESCRIPTION": "Exhaust. NL When this is Exhausted, shuffle a *Souleater *Strike into your draw pile.",
-  "UPGRADE_DESCRIPTION": "Exhaust. NL When this is Exhausted, shuffle a *Souleater *Strike+ into your draw pile."
+  "DESCRIPTION": "Exhaust. NL When this is Exhausted, shuffle a [#EFC851]Souleater [#EFC851]Strike into your draw pile.",
+  "UPGRADE_DESCRIPTION": "Exhaust. NL When this is Exhausted, shuffle a [#EFC851]Souleater [#EFC851]Strike+ into your draw pile."
 },
   "${ModID}:SouleaterStrike": {
     "NAME": "Souleater Strike",
