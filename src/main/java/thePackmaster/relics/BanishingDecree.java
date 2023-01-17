@@ -57,7 +57,6 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
             AbstractDungeon.overlayMenu.cancelButton.hide();
             AbstractDungeon.previousScreen = AbstractDungeon.screen;
         }
-        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : SpireAnniversary5Mod.getPreviewCardsFromCurrentSet()) {
             tmp.addToTop(c);
