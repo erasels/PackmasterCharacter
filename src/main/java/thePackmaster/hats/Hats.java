@@ -18,9 +18,6 @@ import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import static thePackmaster.hats.HatMenu.specialHats;
 
 public class Hats {

@@ -35,8 +35,8 @@
   },
   "${ModID}:MalchezaarsImp": {
     "NAME": "Malchezaar's Imp",
-    "DESCRIPTION": "Whenenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your discard pile.",
-    "UPGRADE_DESCRIPTION": "Whenenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your draw pile."
+    "DESCRIPTION": "Whenever a *non-Imp card is Exhausted, add 1 *Imp to your discard pile.",
+    "UPGRADE_DESCRIPTION": "Whenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your draw pile."
   },
   "${ModID}:TheSoularium": {
     "NAME": "The Soularium",

@@ -17,8 +17,8 @@ public class TotalWeakness extends AbstractRippableCard {
 
     public TotalWeakness(AbstractRippedArtCard artCard, AbstractRippedTextCard textCard) {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseBlock = block = 9;
-        baseMagicNumber = magicNumber = 1;
+        baseBlock = block = 6;
+        baseMagicNumber = magicNumber = 2;
         if (artCard == null && textCard == null) {
             setRippedCards(new TotalWeaknessArt(this), new TotalWeaknessText(this));
         } else if(artCard == null){
