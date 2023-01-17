@@ -2,7 +2,7 @@
   "${ModID}:RimworldPack": {
     "TEXT": [
       "Rimworld",
-      "Balance your Mood in this Rimworld themed pack!",
+      "Mental Breaks and eating without a table. For massive power of course.",
       "Laugic"
     ]
   },
@@ -19,6 +19,19 @@
       "On a Food Binge.",
       "On a Fire Starting Spree.",
       "Fighting Recklessly."
+    ]
+  },
+  "${ModID}:Potions": {
+    "TEXT": [
+      "Yummy ",
+      "!",
+      "On a Fire Starting Spree.",
+      "Fighting Recklessly."
+    ]
+  },
+  "${ModID}:OnFireModifier": {
+    "TEXT": [
+      "${ModID}:On_Fire. NL "
     ]
   }
 }

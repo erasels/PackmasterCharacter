@@ -108,7 +108,8 @@
     "TEXT": [
       "Chance",
       "Inspiration",
-      "Mental Break"
+      "Mental Break",
+      "Status"
     ]
   },
   "${ModID}:HatMenu": {

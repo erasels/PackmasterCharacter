@@ -1,24 +1,40 @@
 {
   "${ModID}:ThrowHorseshoe": {
     "NAME": "Throw Horseshoe",
-    "DESCRIPTION": "Deal !D! damage. NL Discard a random card. NL ${ModID}:Increase_Mood by !M!."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Increase_Mood by !M!."
   },
   "${ModID}:ChainShotgun": {
     "NAME": "Chain Shotgun",
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   },
+  "${ModID}:Despair": {
+    "NAME": "Despair",
+    "DESCRIPTION": "Counts as a Curse. NL Exhaust."
+  },
   "${ModID}:Relax": {
     "NAME": "Relax",
-    "DESCRIPTION": "{@@}Discard !${ModID}:m2! cards. NL ${ModID}:Increase_Mood by !M!."
+    "DESCRIPTION": "Discard any number of cards. ${ModID}:Increase_Mood by !M!."
   },
   "${ModID}:Overwork": {
     "NAME": "Overwork",
-    "DESCRIPTION": "{@@}Draw !M! cards. NL Gain [E] . NL ${ModID}:Decrease_Mood by !M!.",
-    "UPGRADE_DESCRIPTION": "{@@}Draw !M! cards. NL Gain [E] [E] . NL ${ModID}:Decrease_Mood by !M!."
+    "DESCRIPTION": "Reduce the cost of all cards in your hand to 0 this turn. NL Reduce Mood by !M!."
   },
-  "${ModID}:Betrayal": {
-    "NAME": "Betrayal",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Decrease_Mood by !M!."
+  "${ModID}:EatWithoutTable": {
+    "NAME": "Eat Without Table",
+    "DESCRIPTION": "Drink a random common Potion. Add a *Despair to your hand. NL Exhaust."
+  },
+  "${ModID}:Luciferium": {
+    "NAME": "Luciferium",
+    "DESCRIPTION": "{@@}Gain [E] [E] . NL Gain 5 Strength. NL Gain !M! ${ModID}:Addiction. NL Exhaust."
+  },
+  "${ModID}:Pyromaniac": {
+    "NAME": "Pyromaniac",
+    "DESCRIPTION": "At the start of your turn, set a random card in your hand ${ModID}:On_Fire.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, set a random card in your hand ${ModID}:On_Fire."
+  },
+  "${ModID}:KillThirst": {
+    "NAME": "Kill Thirst",
+    "DESCRIPTION": "Deal !D! damage. NL If this doesn't kill the enemy, add a *Despair to your hand."
   },
   "${ModID}:SpikeTrap": {
     "NAME": "Spike Trap",
@@ -26,7 +42,7 @@
   },
   "${ModID}:Catharsis": {
     "NAME": "Catharsis",
-    "DESCRIPTION": "Gain 1 random ${ModID}:Mental_Break and !M! random ${ModID}:Inspirations. NL Exhaust."
+    "DESCRIPTION": "{@@}Add a *Despair to your hand. The next {!M!|1=card|@=!M! cards} you play costs 0 and plays twice. NL Exhaust."
   },
   "${ModID}:TradeBeacon": {
     "NAME": "Trade Beacon",
@@ -38,7 +54,14 @@
   },
   "${ModID}:BurningPassion": {
     "NAME": "Burning Passion",
-    "DESCRIPTION": "Whenever you gain a Buff, double it."
+    "DESCRIPTION": "Double the first buff you gain during your turn."
+  },
+  "${ModID}:TaintedWeapon": {
+    "NAME": "Tainted Weapon",
+    "DESCRIPTION": "Deal !D! damage. NL Startup: Put this card in a random monster.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage."
+    ]
   },
   "${ModID}:RimworldKeywordManager": {
     "NAME": "KeywordManager",
