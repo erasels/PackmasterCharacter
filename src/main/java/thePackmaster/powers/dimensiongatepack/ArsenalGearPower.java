@@ -27,7 +27,6 @@ public class ArsenalGearPower extends AbstractPackmasterPower {
     public void atStartOfTurnPostDraw() {
         ArrayList<AbstractCard> validCards;
         AbstractCard c;
-        //TODO - Test this when the cardpool is properly initialized.  This is evidence there is no pool yet.
         validCards = Wiz.getCardsMatchingPredicate(c2 -> c2.rarity == AbstractCard.CardRarity.UNCOMMON || c2.rarity == AbstractCard.CardRarity.RARE);
         Collections.shuffle(validCards);
         if (validCards.size() > 0) {

@@ -22,7 +22,7 @@ public class Wanderbots extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ChannelAction(new Wanderbot())); // TODO: Review for consistency purposes
+        atb(new ChannelAction(new Wanderbot()));
         if (upgraded) atb(new AbstractGameAction() {
             @Override
             public void update() {
