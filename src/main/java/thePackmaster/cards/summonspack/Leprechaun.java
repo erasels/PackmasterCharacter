@@ -60,6 +60,5 @@ public class Leprechaun extends AbstractPackmasterCard {
     @Override
     public void upp() {
         upMagic(UPGRADE_MAGIC);
-        uDesc();
     }
 }
