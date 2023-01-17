@@ -29,7 +29,7 @@ public class BasicsPack extends AbstractCardPack {
         cards.add(BasicSupply.ID);
         cards.add(SimplifiedStrike.ID);
         cards.add(PerfectBasics.ID);
-        cards.add(Simplicity.ID);
+        cards.add(Simplify.ID);
         cards.add(BackToBasics.ID);
         return cards;
     }
