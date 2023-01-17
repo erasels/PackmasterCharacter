@@ -25,7 +25,7 @@
   },
   "${ModID}:SacredTrial": {
     "NAME": "Sacred Trial",
-    "DESCRIPTION": "Gain !${ModID}:m2! ${ModID}:Confession. NL Take !M! damage. NL Channel !${ModID}:m2! Lightning"
+    "DESCRIPTION": "Take !M! damage. NL Channel !${ModID}:m2! Lightning"
   },
   "${ModID}:HolyWrath": {
     "NAME": "Holy Wrath",

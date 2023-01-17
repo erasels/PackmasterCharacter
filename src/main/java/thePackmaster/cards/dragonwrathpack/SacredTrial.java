@@ -55,7 +55,6 @@ public class SacredTrial extends AbstractDragonwrathCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
-        Wiz.applyToSelf(new confessionpower(p,magicNumber));
         addToBot(new VFXAction(new LightningEffect(p.drawX,p.drawY)));
         addToBot(new DamageAction(p,new DamageInfo(p,magicNumber, DamageInfo.DamageType.THORNS)));
         for (int i = 0; i < secondMagic; i++){
