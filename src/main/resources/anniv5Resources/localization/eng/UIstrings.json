@@ -7,7 +7,9 @@
   "${ModID}:AbstractPackPreviewCard": {
     "TEXT": [
       "By: ",
-      "Pack"
+      "Pack",
+      "Hat Unlocked",
+      "Hat Locked"
     ]
   },
   "${ModID}:AtGameStart": {
