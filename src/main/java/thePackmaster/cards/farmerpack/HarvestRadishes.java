@@ -14,14 +14,14 @@ import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class HarvestRadishes extends AbstractFarmerCard {
     public final static String ID = makeID("HarvestRadishes");
- private int count = 0;
+
     public HarvestRadishes() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        count = checkTypes();
+        int count = checkTypes(true);
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         applyToEnemy(m, new WeakPower(m, count, false));
     }
@@ -32,7 +32,7 @@ public class HarvestRadishes extends AbstractFarmerCard {
         this.initializeDescription();
     }
     public void applyPowers() {
-        count = checkTypes();
+        int count = checkTypes(false);
         if (count > 0) {
             this.baseMagicNumber = count;
             super.applyPowers();
