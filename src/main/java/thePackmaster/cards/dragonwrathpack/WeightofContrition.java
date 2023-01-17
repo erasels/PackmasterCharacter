@@ -50,7 +50,8 @@ public class WeightofContrition extends AbstractDragonwrathCard{
                 PenancePower.Power += secondMagic;
                 isDone = true;
             }
-
+        });
+    }
     @Override
     public String cardArtCopy() {
         return Worship.ID;
