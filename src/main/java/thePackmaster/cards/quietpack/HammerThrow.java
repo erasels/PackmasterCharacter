@@ -16,7 +16,7 @@ public class HammerThrow extends AbstractPackmasterCard {
 
     public HammerThrow() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 4;
+        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

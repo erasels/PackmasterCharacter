@@ -1,0 +1,9 @@
+{
+  "${ModID}:WarriorPack": {
+    "TEXT": [
+      "Warrior",
+      "Master multiple damage types to dismantle your opponents.",
+      "Diamsword"
+    ]
+  }
+}

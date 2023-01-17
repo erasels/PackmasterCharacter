@@ -1,0 +1,23 @@
+[
+  {
+    "PROPER_NAME": "Fast damage",
+    "NAMES": [
+      "fast"
+    ],
+    "DESCRIPTION": "Doesn't activate enemies on #yAttack effects. NL Ignores #yBlock."
+  },
+  {
+    "PROPER_NAME": "Feral damage",
+    "NAMES": [
+      "feral"
+    ],
+    "DESCRIPTION": "Deals #b100% extra damage."
+  },
+  {
+    "PROPER_NAME": "Front damage",
+    "NAMES": [
+      "front"
+    ],
+    "DESCRIPTION": "Deals #b50% extra damage to enemies with #yBlock"
+  }
+]
