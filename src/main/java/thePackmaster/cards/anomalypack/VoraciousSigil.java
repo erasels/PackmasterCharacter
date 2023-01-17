@@ -45,13 +45,5 @@ public class VoraciousSigil extends AbstractPackmasterCard {
     }
 
 
-    //Upgraded stats.
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            this.isInnate=true;
-            initializeDescription();
-        }
-    }
+
 }

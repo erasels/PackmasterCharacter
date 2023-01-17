@@ -2,27 +2,27 @@
   "${ModID}:Wonder": {
     "NAME": "Wonder",
     "DESCRIPTION": "Discard your hand. NL Draw a card and set your Energy to its cost.",
-    "UPGRADE_DESCRIPTION": "Discard your hand. Draw a card and set your E to its cost. NL Retain."
+    "UPGRADE_DESCRIPTION": "Retain. NL Discard your hand. Draw a card and set your E to its cost."
   },
   "${ModID}:FreeSpace": {
     "NAME": "Free Space",
-    "DESCRIPTION": "When you draw, discard, exhaust or play this, draw a card. NL Ethereal.",
+    "DESCRIPTION": "Ethereal. NL When you draw, discard, exhaust or play this, draw a card.",
     "UPGRADE_DESCRIPTION": "When you draw, discard, exhaust or play this, draw a card."
   },
   "${ModID}:MidnightOil": {
     "NAME": "Midnight Oil",
-    "DESCRIPTION": "Exhaust a random card. Gain [E]. While this is Exhausted, you gain 1 [E] each turn.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. Gain [E]. While this is Exhausted, you gain 1 [E] each turn."
+    "DESCRIPTION": "Exhaust a random card. Gain [E]. While this is Exhausted, you gain [E] each turn.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. Gain [E]. While this is Exhausted, you gain [E] each turn."
   },
   "${ModID}:VoraciousSigil": {
     "NAME": "Voracious Sigil",
-    "DESCRIPTION": "anniv5:Absorb a random Skill from your hand. Play all the cards this has anniv5:Absorbed.",
-    "UPGRADE_DESCRIPTION": "Absorb a random Skill from your hand. Play all the cards this has Absorbed. Retain."
+    "DESCRIPTION": "${ModID}:Absorb a random Skill from your hand. Play all the cards this has ${ModID}:Absorbed.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Absorb a random Skill from your hand. Play all the cards this has ${ModID}:Absorbed."
   },
   "${ModID}:StrikeThroughFate": {
     "NAME": "Strike Through Fate",
     "DESCRIPTION": "Deal !D! damage. If this is your 7th card this turn, deal !D! damage three times instead.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this is your 7th card this turn, deal !D! damage three times instead. NL Retain."
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If this is your 7th card this turn, deal !D! damage three times instead."
   },
   "${ModID}:MindOverMatter": {
     "NAME": "Mind Over Matter",
@@ -32,7 +32,7 @@
   "${ModID}:GoldenGun": {
     "NAME": "Golden Gun",
     "DESCRIPTION": "Startup: Add a *Golden *Round to your draw pile. NL Deal !D! damage. NL Must be *Loaded. ",
-    "UPGRADE_DESCRIPTION": "Startup: Add a *Golden *Round to your draw pile. NL Deal !D! damage. NL Must be *Loaded. Retain."
+    "UPGRADE_DESCRIPTION": "Startup: Add a *Golden *Round to your draw pile. NL Deal !D! damage. NL Must be *Loaded."
   },
   "${ModID}:GoldenRound": {
     "NAME": "Golden Round",
@@ -40,7 +40,8 @@
   },
   "${ModID}:RitualSight": {
     "NAME": "Ritual Sight",
-    "DESCRIPTION": "Exhaust a card. Shuffle a copy of it into your draw pile. Gain !B! Block."
+    "DESCRIPTION": "Exhaust a card. Shuffle a copy of it into your draw pile. Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": ["exhaust and copy."]
   },
   "${ModID}:Thoughtweaving": {
     "NAME": "Thoughtweaving",
@@ -53,7 +54,6 @@
 },
   "${ModID}:SouleaterStrike": {
     "NAME": "Souleater Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 13 Vulnerable. NL Apply 13 Weak.",
-    "UPGRADE_DESCRIPTION": "ADeal !D! damage. NL If this is your 7th card this turn, deal !D! 3 times instead. NL Retain"
+    "DESCRIPTION": "Deal !D! damage. NL Apply 13 Vulnerable. NL Apply 13 Weak."
   }
 }

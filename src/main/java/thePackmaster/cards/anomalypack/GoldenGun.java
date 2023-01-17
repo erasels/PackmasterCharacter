@@ -31,9 +31,9 @@ public class GoldenGun extends AbstractPackmasterCard implements StartupCard {
 
     public GoldenGun() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.tags.add(CardTags.STRIKE);
         this.damage = this.baseDamage = ATTACK_DMG;
         loaded=false;
+        this.cardsToPreview = new SouleaterStrike();
     }
 
     public void load() {
@@ -46,7 +46,7 @@ public class GoldenGun extends AbstractPackmasterCard implements StartupCard {
 
     @Override
     public void upp() {
-        //this.selfRetain = true;
+        this.upgradeDamage(UPGRADE_PLUS_DMG);
     }
 
     @Override
@@ -69,6 +69,7 @@ public class GoldenGun extends AbstractPackmasterCard implements StartupCard {
 
     public boolean atBattleStartPreDraw() {
         Wiz.shuffleIn(new GoldenRound());
+        this.cardsToPreview = null;
         return false;
     }
 
@@ -76,14 +77,5 @@ public class GoldenGun extends AbstractPackmasterCard implements StartupCard {
         return this.loaded;
     }
 
-    //Upgraded stats.
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            this.upgradeDamage(UPGRADE_PLUS_DMG);
-            //rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
-        }
-    }
+
 }

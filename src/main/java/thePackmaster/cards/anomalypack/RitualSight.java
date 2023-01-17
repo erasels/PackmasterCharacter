@@ -1,16 +1,21 @@
 package thePackmaster.cards.anomalypack;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.anomalypack.RitualSightAction;
+
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.util.Wiz;
+
+
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
 public class RitualSight extends AbstractPackmasterCard {
     public static final String ID = SpireAnniversary5Mod.makeID("RitualSight");
@@ -33,7 +38,11 @@ public class RitualSight extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new RitualSightAction());
+        atb(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+            att(new ExhaustSpecificCardAction(cards.get(0), p.hand, true));
+            att(new MakeTempCardInDrawPileAction(cards.get(0),1,true,false));
+
+        }));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
 

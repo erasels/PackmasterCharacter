@@ -1,5 +1,6 @@
 package thePackmaster.actions.anomalypack;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,19 +10,23 @@ import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.packs.AbstractCardPack;
 
 import java.util.Iterator;
 
 public class ThoughtweavingAction extends AbstractGameAction {
     private AbstractPlayer p;
     private CardType typeToCheck;
+    private AbstractCardPack packToAvoid;
 
-    public ThoughtweavingAction(int amount) {
+    public ThoughtweavingAction(int amount, CardType type, AbstractCardPack packToAvoid) {
         this.p = AbstractDungeon.player;
         this.setValues(this.p, this.p, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
-        this.typeToCheck = CardType.CURSE;
+        this.typeToCheck = type;
+        this.packToAvoid = packToAvoid;
     }
 
     public void update() {
@@ -31,15 +36,19 @@ public class ThoughtweavingAction extends AbstractGameAction {
                 return;
             }
             int counter = 0;
+            AbstractPackmasterCard c;
             CardGroup tmp = new CardGroup(CardGroupType.UNSPECIFIED);
             Iterator var2 = this.p.drawPile.group.iterator();
 
             AbstractCard card;
             while(var2.hasNext() && counter < amount) {
-                card = (AbstractCard)var2.next();
-                if (card.type == this.typeToCheck) {
-                    tmp.addToRandomSpot(card);
-                    counter++;
+                AbstractCard check = (AbstractCard)var2.next();
+                if (check instanceof AbstractPackmasterCard) {
+                    c = (AbstractPackmasterCard) check;
+                    if (c.type == this.typeToCheck && c.getParent() != packToAvoid && c.getParent()!=null) {
+                        tmp.addToRandomSpot(c);
+                        counter++;
+                    }
                 }
             }
 
@@ -51,12 +60,11 @@ public class ThoughtweavingAction extends AbstractGameAction {
 
             for(int i = 0; i < counter; ++i) {
                 if (!tmp.isEmpty()) {
-                    tmp.shuffle();
-                    card = tmp.getBottomCard();
-                    tmp.removeCard(card);
-                    if (this.p.hand.size() == 10) {
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         this.p.createHandIsFullDialog();
                     } else {
+                        card = tmp.getBottomCard();
+                        tmp.removeCard(card);
                         p.drawPile.group.remove(card);
                         p.drawPile.addToTop(card);
                         this.addToBot(new DrawCardAction(1));

@@ -8,12 +8,16 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.NoDrawPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.anomalypack.ThoughtweavingAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
+
 import java.util.Iterator;
 
 import static thePackmaster.util.Wiz.att;
@@ -36,56 +40,20 @@ public class ThoughtweavingPower extends AbstractPackmasterPower {
             AbstractPackmasterCard card = (AbstractPackmasterCard) tmpCard;
             if (card.type == AbstractCard.CardType.ATTACK || card.type == AbstractCard.CardType.SKILL) {
                 this.flash();
-                //logger.info("Check 2");
-                if (AbstractDungeon.player.hasPower("No Draw")) {
-                    //logger.info("Check 11");
-                    AbstractDungeon.player.getPower("No Draw").flash();
+                if (AbstractDungeon.player.hasPower(NoDrawPower.POWER_ID)) {
+                    AbstractDungeon.player.getPower(NoDrawPower.POWER_ID).flash();
                 } else {
-                    //logger.info("Check 3");
                     AbstractCard.CardType typeToFind;
 
                     AbstractCardPack packToAvoid = card.getParent();
 
                     if (card.type == AbstractCard.CardType.ATTACK) {
-                        //logger.info("Look for Skill");
                         typeToFind = AbstractCard.CardType.SKILL;
                     } else {
-                        //logger.info("Look for Attack");
                         typeToFind = AbstractCard.CardType.ATTACK;
                     }
 
-                    int counter = 0;
-                    CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                    Iterator var2 = AbstractDungeon.player.drawPile.group.iterator();
-
-                    AbstractPackmasterCard c;
-                    while (var2.hasNext() && counter < amount) {
-                        //logger.info("Check 4");
-                        AbstractCard check = (AbstractCard)var2.next();
-                        if (check instanceof AbstractPackmasterCard) {
-                            c = (AbstractPackmasterCard) check;
-                            if (c.type == typeToFind && c.getParent() != packToAvoid) {
-                                tmp.addToRandomSpot(c);
-                                counter++;
-                            }
-                        }
-                    }
-
-                    for (int i = 0; i < counter; ++i) {
-                        if (!tmp.isEmpty()) {
-                            //logger.info("Check 5");
-                            tmp.shuffle();
-                            tmpCard = tmp.getBottomCard();
-                            tmp.removeCard(card);
-                            if (AbstractDungeon.player.hand.size() == 10) {
-                                AbstractDungeon.player.createHandIsFullDialog();
-                            } else {
-                                AbstractDungeon.player.drawPile.group.remove(tmpCard);
-                                AbstractDungeon.player.drawPile.addToTop(tmpCard);
-                                this.addToBot(new DrawCardAction(1));
-                            }
-                        }
-                    }
+                    Wiz.atb(new ThoughtweavingAction(this.amount, typeToFind, packToAvoid));
                 }
             }
         }
