@@ -12,7 +12,7 @@ public class CrystalResonance extends AbstractHydrologistCard {
     // intellij stuff POWER, NONE, UNCOMMON, , , , , , 
 
     public CrystalResonance() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.NONE, Subtype.ICE);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.NONE, Subtype.ICE);
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -21,6 +21,6 @@ public class CrystalResonance extends AbstractHydrologistCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBaseCost(1);
     }
 }
