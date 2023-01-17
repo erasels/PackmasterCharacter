@@ -8,7 +8,7 @@ import thePackmaster.powers.energyandechopack.PanacherPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class Panacher extends AbstractPackmasterCard {
+public class Panacher extends AbstractEchoCard {
 
     public final static String ID = makeID(Panacher.class.getSimpleName());
 

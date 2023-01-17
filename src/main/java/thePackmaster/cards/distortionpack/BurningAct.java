@@ -17,7 +17,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
-public class BurningAct extends AbstractPackmasterCard {
+public class BurningAct extends AbstractDistortionCard {
     public final static String ID = makeID("BurningAct");
     // intellij stuff skill, none, uncommon, , , , , 4,
 

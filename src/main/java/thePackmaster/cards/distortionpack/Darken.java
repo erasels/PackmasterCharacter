@@ -11,7 +11,7 @@ import thePackmaster.powers.distortionpack.DistortionPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Darken extends AbstractPackmasterCard {
+public class Darken extends AbstractDistortionCard {
     public final static String ID = makeID("Darken");
     // intellij stuff skill, enemy, uncommon, , , , , 7, 
 

@@ -12,7 +12,7 @@ import thePackmaster.powers.odditiespack.FinalFormPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class FinalForm extends AbstractPackmasterCard {
+public class FinalForm extends AbstractOdditiesCard {
     public final static String ID = makeID("FinalForm");
     // intellij stuff power, self, rare, , , , , , 
 

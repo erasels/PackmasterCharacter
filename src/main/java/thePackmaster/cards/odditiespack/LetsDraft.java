@@ -12,7 +12,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
-public class LetsDraft extends AbstractPackmasterCard {
+public class LetsDraft extends AbstractOdditiesCard {
     public final static String ID = makeID("LetsDraft");
     // intellij stuff attack, enemy, common, 9, 3, , , , 
 

@@ -19,7 +19,7 @@ import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.*;
 
-public class Elephant extends AbstractPackmasterCard {
+public class Elephant extends AbstractSummonsCard {
     public final static String ID = makeID(Elephant.class.getSimpleName());
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;
