@@ -1,0 +1,17 @@
+{
+  "${ModID}:HuttsGambleEnergyPower": {
+    "NAME": "Hutts' Energized",
+    "DESCRIPTIONS": [
+      "If you do not receive unblocked attack damage this turn, gain #b",
+      " Energy next turn."
+    ]
+  },
+  "${ModID}:HuttsGambleDrawPower": {
+    "NAME": "Hutts' Draw",
+    "DESCRIPTIONS": [
+      "If you do not receive unblocked attack damage this turn, draw #b",
+      " card next turn.",
+      " cards next turn."
+    ]
+  }
+}

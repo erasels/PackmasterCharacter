@@ -3,11 +3,8 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.dimensiongatepack.Inferno;
-import thePackmaster.cards.metapack.*;
 import thePackmaster.cards.monsterhunterpack.*;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 public class MonsterHunterPack extends AbstractCardPack {

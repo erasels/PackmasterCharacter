@@ -53,6 +53,7 @@ import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.patches.contentcreatorpack.PreDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
@@ -608,6 +609,7 @@ public class SpireAnniversary5Mod implements
         MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
         EnergyAndEchoPack.resetvalues();
         EnergyCountPatch.energySpentThisCombat = 0;
+        PreDrawPatch.DRAWN_DURING_TURN = false;
     }
 
     @Override

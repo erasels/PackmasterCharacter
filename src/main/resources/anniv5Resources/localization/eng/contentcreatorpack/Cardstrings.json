@@ -1,0 +1,11 @@
+{
+  "${ModID}:OlexasCloak": {
+    "NAME": "Olexa's Cloak",
+    "DESCRIPTION": "Retain. NL ${ModID}:Hoard !hoard!: Gain !B! Block. NL stslib:Persist !stslib:persist! ."
+  },
+  "${ModID}:HuttsGamble": {
+    "NAME": "Hutt's Gamble",
+    "DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] and draw 2 cards next turn.",
+    "UPGRADE_DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] [E] and draw 2 cards next turn."
+  }
+}
