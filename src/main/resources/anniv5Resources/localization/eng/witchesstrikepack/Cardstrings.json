@@ -1,11 +1,11 @@
 {
   "${ModID}:CrescentSweep": {
-    "NAME": "Crescent Sweep",
+    "NAME": "Heel Tornado",
     "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Crescent_Moon.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Crescent_Moon. NL ${ModID}:Inscribe a random card in your hand."
   },
   "${ModID}:MysticFlourish": {
-    "NAME": "Mystic Flourish",
+    "NAME": "Tetsuzanko",
     "DESCRIPTION": "Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Inscribe a random card in your hand."
   },
