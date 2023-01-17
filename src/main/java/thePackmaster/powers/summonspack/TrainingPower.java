@@ -1,15 +1,11 @@
 package thePackmaster.powers.summonspack;
 
-import com.megacrit.cardcrawl.actions.defect.AnimateOrbAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeWithoutRemovingOrbAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
 
@@ -23,6 +19,7 @@ public class TrainingPower extends AbstractPackmasterPower {
 
     public TrainingPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
+        priority = 4;
     }
 
     @Override

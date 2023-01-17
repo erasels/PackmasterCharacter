@@ -9,7 +9,8 @@
   {
     "PROPER_NAME": "Absorb",
     "NAMES": [
-      "absorb"
+      "absorb",
+      "absorbed"
     ],
     "DESCRIPTION": "Exhaust a card. When this card is exhausted, add all cards it absorbed to your hand."
   }

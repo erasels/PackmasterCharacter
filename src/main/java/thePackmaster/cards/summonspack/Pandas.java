@@ -12,7 +12,7 @@ import static thePackmaster.util.Wiz.adp;
 public class Pandas extends AbstractSummonsCard {
     public final static String ID = makeID(Pandas.class.getSimpleName());
     private static final CardType TYPE = CardType.POWER;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 1;

@@ -20,7 +20,7 @@ public class Wolves extends AbstractSummonsCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 7;
     private static final int UPGRADE_BLOCK = 3;
 
     public Wolves() {
