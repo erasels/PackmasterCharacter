@@ -5,8 +5,8 @@
     "EXTENDED_DESCRIPTION": ["${ModID}:Even: ", "Deal !D! damage.", " NL ","${ModID}:Odd: ", "Gain !B! Block"]
   },
   "${ModID}:QuickReflex": {
-    "NAME": "QuickReflex",
+    "NAME": "Quick Reflex",
     "DESCRIPTION": "Gain !B! Block",
-    "EXTENDED_DESCRIPTION": ["NL", "${ModID}:First: ", "Gain !B! Block"]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First: ", "Gain !B! Block"]
   }
 }

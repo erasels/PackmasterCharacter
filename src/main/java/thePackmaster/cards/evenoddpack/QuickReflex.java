@@ -10,7 +10,7 @@ import thePackmaster.actions.evenoddpack.SwordAndBoardAction;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class QuickReflex extends AbstractEvenOddCard{
-    public final static String ID = makeID(SwordAndBoard.class.getSimpleName());
+    public final static String ID = makeID(QuickReflex.class.getSimpleName());
     private static final int BLOCK = 6;
     private static final int UBLOCK = 2;
     private static final int COST = 1;
