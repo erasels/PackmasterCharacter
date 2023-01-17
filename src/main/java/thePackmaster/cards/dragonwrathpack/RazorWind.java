@@ -1,23 +1,20 @@
 package thePackmaster.cards.dragonwrathpack;
 
-
-import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.dragonwrathpack.SmiteAction;
-
 import thePackmaster.powers.dragonwrathpack.PenancePower;
-
 
 import static thePackmaster.SpireAnniversary5Mod.makeCardPath;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-public class PenanceShock extends AbstractDragonwrathCard {
 
-    public static final String ID = makeID(PenanceShock.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
+public class RazorWind extends AbstractDragonwrathCard {
+
+    public static final String ID = makeID(RazorWind.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
     public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("DivineJolt.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
@@ -33,28 +30,18 @@ public class PenanceShock extends AbstractDragonwrathCard {
     // /STAT DECLARATION/
 
 
-    public PenanceShock(){
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-    baseDamage =DAMAGE;
-    this.magicNumber = baseMagicNumber = 2;
-}
+    public RazorWind(){
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseDamage =DAMAGE;
+        this.magicNumber = baseMagicNumber = 2;
+        baseSecondMagic = secondMagic = 3;
+    }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < 2; ++i) {
-           m = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
-           if (m != null) {
-               addToBot(new SmiteAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
-               addToBot(new ApplyPowerAction(m,p,new PenancePower(m,p,magicNumber)));
-           } else {
-               m = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
-               addToBot(new SmiteAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
-               addToBot(new ApplyPowerAction(m,p,new PenancePower(m,p,magicNumber)));
-           }
-
-        }
+        addToBot(new DamageAction(p,new DamageInfo(p,magicNumber, DamageInfo.DamageType.THORNS)));
     }
 
 

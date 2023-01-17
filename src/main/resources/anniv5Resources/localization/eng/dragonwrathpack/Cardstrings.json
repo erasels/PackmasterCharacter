@@ -5,6 +5,26 @@
   },
   "${ModID}:Condemn": {
     "NAME": "Condemn",
-    "DESCRIPTION": "Apply !M! thedragonkin:Penance."
+    "DESCRIPTION": "Apply !M! ${ModID}:Penance."
+  },
+  "${ModID}:SearingLight": {
+    "NAME": "Searing Light",
+    "DESCRIPTION": "Take !M! damage. NL Gain !B! Block. NL Channel ${ModID}:Light"
+  },
+  "${ModID}:RazorWind": {
+    "NAME": "Razor Wind",
+    "DESCRIPTION": "Take !M! damage. NL Next turn, gain !${ModID}:m2! ${ModID}:Confession"
+  },
+  "${ModID}:WeightofContrition": {
+    "NAME": "Weight of Contrition",
+    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL Increase ${ModID}:Penance HP loss by !${ModID}:m2! this combat."
+  },
+  "${ModID}:ChainsofTruth": {
+    "NAME": "Chains of Truth",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Apply !M! ${ModID}:Penance to ALL enemies. NL Channel ${ModID}:Light."
+  },
+  "${ModID}:SacredTrial": {
+    "NAME": "Sacred Trial",
+    "DESCRIPTION": "Take !M! damage. NL Deal !D! damage to all enemies."
   }
 }
