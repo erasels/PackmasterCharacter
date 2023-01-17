@@ -26,7 +26,7 @@ public class GoldenGun extends AbstractAnomalyCard implements StartupCard {
 
 
     public GoldenGun() {
-        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = ATTACK_DMG;
         loaded=false;
         this.cardsToPreview = new GoldenRound();
