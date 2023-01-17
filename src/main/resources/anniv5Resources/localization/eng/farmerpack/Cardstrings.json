@@ -1,7 +1,7 @@
 {
   "${ModID}:Fertilizer": {
     "NAME": "Fertilizer",
-    "DESCRIPTION": "Exhaust. NL Draw a card."
+    "DESCRIPTION": "Draw a card. NL Exhaust."
   },
   "${ModID}:HarvestBeans": {
     "NAME": "Harvest Beans",
@@ -23,7 +23,7 @@
   },
   "${ModID}:OutToMarket": {
     "NAME": "Out To Market",
-    "DESCRIPTION": "Deal !M! damage to ALL enemies the first time you play a card type each turn."
+    "DESCRIPTION": "Deal !M! damage to ALL enemies the first time you play each card type each turn."
   },
   "${ModID}:PestControl": {
     "NAME": "Pest Control",
@@ -37,14 +37,14 @@
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",
     "DESCRIPTION": "Add a *Fertilizer to your hand at the start of each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. Add a *Fertilizer to your hand at the start of each turn."
+    "UPGRADE_DESCRIPTION": "Innate. NL Add a *Fertilizer to your hand at the start of each turn."
   },
   "${ModID}:SowTheSeeds": {
     "NAME": "Sow The Seeds",
-    "DESCRIPTION": "Add a *Fertilizer to your hand. NL Put !M! cards with different types from your deck into your hand."
+    "DESCRIPTION": "Add a *Fertilizer to your hand. NL Put !M! random cards with different types from your draw pile into your hand."
   },
   "${ModID}:TillTheEarth": {
     "NAME": "Till The Earth",
-    "DESCRIPTION": "Deal !D! damage. Add a *Fertilizer to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Fertilizer to your hand."
   }
 }
