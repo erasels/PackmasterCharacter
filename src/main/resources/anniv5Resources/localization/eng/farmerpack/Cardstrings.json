@@ -10,7 +10,7 @@
   "${ModID}:HarvestCarrots": {
     "NAME": "Harvest Carrots",
     "DESCRIPTION": "Gain !B! Block. NL Repeat for each card type you've played this turn.",
-    "EXTENDED_DESCRIPTION": [" NL (Repeat !M! times.)"]
+    "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
   },
   "${ModID}:HarvestPotatoes": {
     "NAME": "Harvest Potatoes",
