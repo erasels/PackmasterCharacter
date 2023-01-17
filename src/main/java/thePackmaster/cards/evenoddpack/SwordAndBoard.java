@@ -11,8 +11,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class SwordAndBoard extends AbstractEvenOddCard{
     public final static String ID = makeID(SwordAndBoard.class.getSimpleName());
-    private static final int DAMAGE = 8;
-    private static final int BLOCK = 7;
+    private static final int DAMAGE = 10;
+    private static final int BLOCK = 8;
     private static final int UDAMAGE = 3;
     private static final int UBLOCK = 3;
     private static final int COST = 1;
@@ -28,15 +28,26 @@ public class SwordAndBoard extends AbstractEvenOddCard{
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[4];
+        initializeDescription();
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
-        initializeDescription();
     }
     
     @Override
     public void upp() {
         upgradeDamage(UDAMAGE);
         upgradeBlock(UBLOCK);
+    }
+    
+    @Override
+    public void onMoveToDiscard() {
+        rawDescription = "";
+        rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
+        rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
+        rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
+        rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
+        rawDescription += cardStrings.EXTENDED_DESCRIPTION[4];
+        initializeDescription();
     }
     
     @Override
