@@ -5,7 +5,7 @@
   },
   "${ModID}:HarvestBeans": {
     "NAME": "Harvest Beans",
-    "DESCRIPTION": "Deal !D! damage. NL If the last card you played this combat wasn't an attack, deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL If the last card you played this combat wasn't an Attack, deal !D! damage to ALL enemies."
   },
   "${ModID}:HarvestCarrots": {
     "NAME": "Harvest Carrots",
