@@ -28,6 +28,9 @@ public class InscribedMod extends AbstractCardModifier {
         for (AbstractOrb o : AbstractDungeon.player.orbs){
             if (o instanceof PackmasterOrb){
                 ((PackmasterOrb) o).passiveEffect();
+            } else {
+                o.onStartOfTurn();
+                o.onEndOfTurn();
             }
         }
     }
