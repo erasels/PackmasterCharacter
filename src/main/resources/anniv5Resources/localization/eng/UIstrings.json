@@ -120,7 +120,9 @@
       "The hat for the ",
       " pack. Real flavor soon!",
       "(!)",
-      " has no corresponding hat image. Please fix."
+      " has no corresponding hat image. Please fix.",
+      "A random Hat will be chosen at the start of each run.",
+      "Random Hat"
     ]
   },
   "${ModID}:ConfigMenuText": {
