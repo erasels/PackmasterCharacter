@@ -12,7 +12,6 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class PestControl extends AbstractFarmerCard {
     public final static String ID = makeID("PestControl");
-    private int count = 0;
     public PestControl() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = damage = 6;
@@ -20,7 +19,7 @@ public class PestControl extends AbstractFarmerCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        count = checkTypes();
+        int count = checkTypes(true);
         for (int j = 0; j < count+1; j++) {
             dmg(m, AbstractGameAction.AttackEffect.POISON);
         }
@@ -32,7 +31,7 @@ public class PestControl extends AbstractFarmerCard {
         this.initializeDescription();
     }
     public void applyPowers() {
-        count = checkTypes();
+        int count = checkTypes(false);
         if (count > 0) {
             this.baseMagicNumber = count;
             super.applyPowers();
