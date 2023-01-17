@@ -4,11 +4,11 @@
     "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Deals !M! additional damage for each infestation counter."
   },
   "${ModID}:SwarmSword": {
-    "NAME": "Swarm Sword",
+    "NAME": "Swarm Strike",
     "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Draw 1 card for each infestation counter."
   },
   "${ModID}:GrassHop": {
-    "NAME": "Swarm Surge",
+    "NAME": "Locusts",
     "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL When this gains an infestation counter, ALL enemies lose !M! HP."
   },
   "${ModID}:Bzzzzz": {
