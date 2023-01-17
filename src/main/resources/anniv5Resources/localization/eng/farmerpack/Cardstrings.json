@@ -14,7 +14,7 @@
   },
   "${ModID}:HarvestPotatoes": {
     "NAME": "Harvest Potatoes",
-    "DESCRIPTION": "Gain !B! Block. NL If the last card you played this combat wasn't a skill, gain !B! Block again."
+    "DESCRIPTION": "Gain !B! Block. NL If the last card you played this combat wasn't a Skill, gain !B! Block again."
   },
   "${ModID}:HarvestRadishes": {
     "NAME": "Harvest Radishes",
