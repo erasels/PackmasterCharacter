@@ -17,6 +17,7 @@ import thePackmaster.hats.specialhats.SpecialHat;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.AlignmentPack;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -32,6 +33,7 @@ public class HatMenu {
     public static final ArrayList<String> hats = new ArrayList<>();
     public static final ArrayList<String> currentlyUnlockedHats = new ArrayList<>();
     public static final Map<String, SpecialHat> specialHats = new HashMap<>();
+
     static {
         specialHats.put(AlignmentPack.ID, new AlignmentHat());
     }
@@ -79,7 +81,11 @@ public class HatMenu {
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index, s)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
 
-        if (init) setCurrentHat(0, optionNames.get(0));
+
+        if (init) {
+            int lastPickedIdx = SpireAnniversary5Mod.getLastPickedHatIndex();
+            setCurrentHat(lastPickedIdx, optionNames.get(lastPickedIdx));
+        }
     }
 
     public static ArrayList<String> getHatDropdownStrings() {
@@ -153,6 +159,11 @@ public class HatMenu {
             currentHat = hats.get(index - 1);
             Hats.addHat(false, currentHat);
             flavorText = SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
+        }
+        try {
+            SpireAnniversary5Mod.saveLastPickedHatIndex(index);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 

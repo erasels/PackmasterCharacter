@@ -236,7 +236,6 @@ public class Hats {
             SpireAnniversary5Mod.logger.info("adding run start hat");
             if (HatMenu.invalidHatSelected) {
                 SpireAnniversary5Mod.logger.info("an invalid hat was used. returning to default.");
-                currentHat = null;
                 removeHat(true);
                 return;
             }
