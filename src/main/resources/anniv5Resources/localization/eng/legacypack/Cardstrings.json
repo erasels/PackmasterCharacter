@@ -14,8 +14,8 @@
   },
   "${ModID}:CaptainsCabin": {
     "NAME": "Captain's Cabin",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Cannonball into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Cannonballs into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! *Cannonball.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! *Cannonballs."
   },
   "${ModID}:TerrorOfTheSeas": {
     "NAME": "Terror of the Seas",

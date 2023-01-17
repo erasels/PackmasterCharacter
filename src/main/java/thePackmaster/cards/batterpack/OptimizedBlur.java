@@ -8,7 +8,7 @@ import thePackmaster.powers.batterpack.OptimizedBlurPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class OptimizedBlur extends AbstractPackmasterCard {
+public class OptimizedBlur extends AbstractBatterCard {
     public final static String ID = makeID("OptimizedBlur");
 
     public OptimizedBlur() {

@@ -17,7 +17,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WhipNSnapper extends AbstractPackmasterCard {
+public class WhipNSnapper extends AbstractSneckoCard {
 
 
     public final static String ID = makeID("WhipNSnapper");
@@ -26,6 +26,7 @@ public class WhipNSnapper extends AbstractPackmasterCard {
         super(ID, 2, AbstractCard.CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 3;
+        baseSecondMagic = secondMagic = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,11 +34,11 @@ public class WhipNSnapper extends AbstractPackmasterCard {
         addToBot(new WaitAction(0.2f));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
 
-        int r = AbstractDungeon.cardRandomRng.random(magicNumber);
+        int r = AbstractDungeon.cardRandomRng.random(secondMagic, magicNumber);
         if (r > 0) {
             addToBot(new ApplyPowerAction(m,p, new WeakPower(m, r, false)));
         }
-        r = AbstractDungeon.cardRandomRng.random(magicNumber);
+        r = AbstractDungeon.cardRandomRng.random(secondMagic, magicNumber);
         if (r > 0) {
             addToBot(new ApplyPowerAction(m,p, new VulnerablePower(m, r, false)));
         }
@@ -45,5 +46,6 @@ public class WhipNSnapper extends AbstractPackmasterCard {
 
     public void upp() {
         upgradeDamage(4);
+        upgradeSecondMagic(1);
     }
 }

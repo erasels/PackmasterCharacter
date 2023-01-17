@@ -14,7 +14,7 @@ import thePackmaster.orbs.WitchesStrike.FullMoon;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ScarabPlague extends AbstractPackmasterCard implements OnInfestCard {
+public class ScarabPlague extends AbstractWitchStrikeCard implements OnInfestCard {
     public final static String ID = makeID("ScarabPlague");
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 

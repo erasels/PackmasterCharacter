@@ -11,7 +11,7 @@ public class GrowingAffliction extends BitingColdCard {
 
     public GrowingAffliction() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        damage = baseDamage = 8;
+        damage = baseDamage = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -19,7 +19,7 @@ public class GrowingAffliction extends BitingColdCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 
     // Hey there! Welcome to my code!

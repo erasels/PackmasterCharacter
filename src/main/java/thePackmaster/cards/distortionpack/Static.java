@@ -15,7 +15,7 @@ public class Static extends AbstractPackmasterCard {
     public Static() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = 1;
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,6 +24,6 @@ public class Static extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

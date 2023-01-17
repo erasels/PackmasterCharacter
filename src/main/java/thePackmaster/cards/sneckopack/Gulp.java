@@ -8,7 +8,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Gulp extends AbstractPackmasterCard {
+public class Gulp extends AbstractSneckoCard {
 
     public final static String ID = makeID("Gulp");
     private static final int DMG = 17, UPG_DMG = 5;

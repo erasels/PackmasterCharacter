@@ -15,7 +15,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class OpenBracket extends AbstractPackmasterCard {
+public class OpenBracket extends AbstractBatterCard {
     public final static String ID = makeID("OpenBracket");
 
     public OpenBracket() {

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Homerun extends AbstractPackmasterCard {
+public class Homerun extends AbstractBatterCard {
     public final static String ID = makeID("Homerun");
 
     private static final int DAMAGE = 14;

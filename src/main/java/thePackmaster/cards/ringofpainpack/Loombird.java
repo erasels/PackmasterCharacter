@@ -10,7 +10,7 @@ import thePackmaster.powers.ringofpainpack.RendPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
-public class Loombird extends AbstractPackmasterCard {
+public class Loombird extends AbstractRingOfPainCard {
     public final static String ID = makeID(Loombird.class.getSimpleName());
 
     private static final int DAMAGE = 8;
@@ -23,11 +23,7 @@ public class Loombird extends AbstractPackmasterCard {
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = REND;
 
-        if (!SpireAnniversary5Mod.oneFrameMode)
-        setBackgroundTexture(
-                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
-        );
+        
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

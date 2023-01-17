@@ -19,7 +19,7 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Spark extends AbstractPackmasterCard implements AmplifyCard{
+public class Spark extends AbstractMarisaCard implements AmplifyCard{
     public final static String ID = makeID(Spark.class.getSimpleName());
     private static final int DMG = 3, UPG_DMG = 4;
     private static final int MAGIC = 1, UPG_MAGIC = 1;
@@ -30,9 +30,6 @@ public class Spark extends AbstractPackmasterCard implements AmplifyCard{
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
 
-        if (!SpireAnniversary5Mod.oneFrameMode)
-        setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -8,7 +8,7 @@ import thePackmaster.powers.distortionpack.DistortionPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.getEnemies;
 
-public class Subspace extends AbstractPackmasterCard {
+public class Subspace extends AbstractCosmosCard {
     public final static String ID = makeID("Subspace");
 
     public Subspace() {

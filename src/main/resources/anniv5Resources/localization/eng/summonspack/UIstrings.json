@@ -5,5 +5,11 @@
       "Pack with a variety of orbs. Also an elephant. No foxes.",
       "Bryan K"
     ]
+  },
+  "${ModID}:SummonsPackHat": {
+    "TEXT": [
+      "From Mia's point of view, you're the accessory.",
+      "Summoned Cat"
+    ]
   }
 }

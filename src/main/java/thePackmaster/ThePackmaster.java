@@ -1,9 +1,7 @@
 package thePackmaster;
 
-import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -25,22 +23,17 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import thePackmaster.cards.*;
-import thePackmaster.cards.dimensiongatepack.DarkRitual;
-import thePackmaster.cards.dimensiongatepack.PackRat;
-import thePackmaster.hats.HatMenu;
-import thePackmaster.hats.Hats;
-import thePackmaster.packs.*;
+import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.relics.HandyHaversack;
 import thePackmaster.vfx.VictoryConfettiEffect;
+import thePackmaster.vfx.VictoryGlow;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 import static thePackmaster.SpireAnniversary5Mod.*;
-import static thePackmaster.hats.Hats.currentHat;
+import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 
 public class ThePackmaster extends CustomPlayer {
     private static final String[] orbTextures = {
@@ -60,6 +53,7 @@ public class ThePackmaster extends CustomPlayer {
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
     public static float update_timer = 0;
+    public static boolean glow_fade = false;
 
 
     public ThePackmaster(String name, PlayerClass setClass) {
@@ -111,7 +105,7 @@ public class ThePackmaster extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(Rummage.ID);
+        retVal.add(Rummage2.ID);
         retVal.add(Cardistry.ID);
         return retVal;
     }
@@ -204,9 +198,14 @@ public class ThePackmaster extends CustomPlayer {
 
     @Override
     public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+        if (!glow_fade) {
+            effects.add(new VictoryGlow());
+            glow_fade = true;
+        }
+
         update_timer += Gdx.graphics.getDeltaTime();
 
-        for(float i = 0; i+(1.0/30.0) <= update_timer; update_timer -= (1.0/30.0)) {
+        for (float i = 0; i + (1.0 / 30.0) <= update_timer; update_timer -= (1.0 / 30.0)) {
             effects.add(new VictoryConfettiEffect());
         }
     }
@@ -247,7 +246,10 @@ public class ThePackmaster extends CustomPlayer {
     @Override
     public List<CutscenePanel> getCutscenePanels() {
         ArrayList<CutscenePanel> panels = new ArrayList<>();
-        panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_1.png")));
+
+        glow_fade = false;
+
+        panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_1.png"), "ATTACK_DAGGER_2"));
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_2.png")));
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_3.png")));
         return panels;
