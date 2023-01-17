@@ -28,6 +28,6 @@ public class Turtle extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
     }
 }
