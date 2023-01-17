@@ -32,7 +32,7 @@
   },
   "${ModID}:SoilResiliency": {
     "NAME": "Soil Resiliency",
-    "DESCRIPTION": "Exhaust. NL Gain !M! Strength and !${ModID}:m2! Dexterity. NL If you've played 3 or more card types this turn, add a copy to your discard pile."
+    "DESCRIPTION": "Gain !M! Strength and !${ModID}:m2! Dexterity. NL If you've played 3 or more card types this turn, add a copy to your discard pile. NL Exhaust."
   },
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",
