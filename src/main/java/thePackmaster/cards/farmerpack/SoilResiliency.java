@@ -18,7 +18,7 @@ public class SoilResiliency extends AbstractFarmerCard {
     public final static String ID = makeID("SoilResiliency");
     private int count = 0;
     public SoilResiliency() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         baseSecondMagic = secondMagic = 1;
         this.exhaust = true;
@@ -35,7 +35,7 @@ public class SoilResiliency extends AbstractFarmerCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
-        atb(new ApplyPowerAction(p, p, new DexterityPower(p, secondMagic)));
+        atb(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber)));
         count = checkTypes();
         if(count >= 3){
             atb(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
@@ -43,6 +43,6 @@ public class SoilResiliency extends AbstractFarmerCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeMagicNumber(1);
     }
 }
