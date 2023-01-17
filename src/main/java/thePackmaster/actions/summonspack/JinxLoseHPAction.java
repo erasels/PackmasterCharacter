@@ -31,7 +31,7 @@ public class JinxLoseHPAction extends AbstractGameAction {
             if (target.currentHealth > 0) {
                 DamageInfo info = new DamageInfo(source, amount, DamageType.HP_LOSS);
                 ColoredDamagePatch.DamageActionColorField.damageColor.set(this, JINX_COLOR);
-                ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.NONE);
+                ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(this, ColoredDamagePatch.FadeSpeed.SLOW);
                 target.damage(info);
             }
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead())

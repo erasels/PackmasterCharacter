@@ -186,11 +186,19 @@ public class SwarmOfBees extends CustomOrb {
     @Override
     public void onEndOfTurn() {
         for (AbstractMonster m : Wiz.getEnemies()) {
-            DamageInfo info = new DamageInfo(adp(), passiveAmount, DamageInfo.DamageType.THORNS);
-            AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
-            ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
-            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
-            atb(action);
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if (m == null || m.isDeadOrEscaped())
+                        return;
+                    DamageInfo info = new DamageInfo(adp(), passiveAmount, DamageInfo.DamageType.THORNS);
+                    AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
+                    ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
+                    ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.SLOW);
+                    att(action);
+                }
+            });
         }
     }
 
@@ -200,8 +208,8 @@ public class SwarmOfBees extends CustomOrb {
             DamageInfo info = new DamageInfo(adp(), evokeAmount, DamageInfo.DamageType.THORNS);
             AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
             ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
-            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
-            atb(action);
+            ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.SLOW);
+            att(action);
         }
     }
 
