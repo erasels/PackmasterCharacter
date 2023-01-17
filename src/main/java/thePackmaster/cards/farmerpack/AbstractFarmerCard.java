@@ -23,6 +23,12 @@ public abstract class AbstractFarmerCard extends AbstractPackmasterCard {
     private boolean curse = false;
     private int count = 0;
     public int checkTypes(){
+        count = 0;
+        attack = false;
+        skill = false;
+        status = false;
+        power = false;
+        curse = false;
         Iterator<AbstractCard> typeDetect = AbstractDungeon.actionManager.cardsPlayedThisTurn.iterator();
         while (typeDetect.hasNext()) {
             AbstractCard i = typeDetect.next();
