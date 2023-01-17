@@ -12,8 +12,7 @@ import static thePackmaster.util.Wiz.applyToSelf;
 public class MalchezaarsImp extends AbstractPackmasterCard {
     public final static String ID = makeID(MalchezaarsImp.class.getSimpleName());
 
-    private static final int COST = 2;
-//    private static final int UPGRADE_COST = 1;
+    private static final int COST = 3;
 
     public MalchezaarsImp() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
@@ -30,6 +29,5 @@ public class MalchezaarsImp extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-//        upgradeBaseCost(UPGRADE_COST);
     }
 }
