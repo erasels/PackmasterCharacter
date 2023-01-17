@@ -22,18 +22,15 @@ public abstract class AbstractRippedArtCard extends AbstractRipCard {
     public static ShaderProgram shader = null;
     private static ArrayList<TooltipInfo> consumableTooltip;
 
-
-
-    public AbstractRippedArtCard(String cardID, AbstractRippableCard sourceCard) {
-        super(cardID, sourceCard.cost, sourceCard.type, CardRarity.SPECIAL, CardTarget.NONE, ThePackmaster.Enums.PACKMASTER_RAINBOW, getCardTextureString(sourceCard.cardID.replace(modID + ":", ""), sourceCard.type));
+    public AbstractRippedArtCard(String cardID, AbstractRippableCard sourceCard, CardColor color) {
+        super(cardID, sourceCard.cost, sourceCard.type, CardRarity.SPECIAL, CardTarget.NONE, color, getCardTextureString(sourceCard.cardID.replace(modID + ":", ""), sourceCard.type));
         this.sourceCard = sourceCard;
         setDisplayRarity(sourceCard.rarity);
         exhaust = true;
     }
 
-    public AbstractRippedArtCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {
-        super(cardID, cost, type, rarity, target);
-        exhaust = true;
+    public AbstractRippedArtCard(String cardID, AbstractRippableCard sourceCard) {
+        this(cardID, sourceCard, ThePackmaster.Enums.PACKMASTER_RAINBOW);
     }
 
     @Override
