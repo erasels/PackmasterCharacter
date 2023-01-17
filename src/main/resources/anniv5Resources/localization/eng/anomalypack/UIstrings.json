@@ -5,5 +5,11 @@
       "Weird cards that want you to think outside the box.",
       "PureQuestion"
     ]
+  },
+  "${ModID}:AnomalyPackHat": {
+    "TEXT": [
+      "Mysterious and all-knowing.",
+      "Anomalous 8-Ball"
+    ]
   }
 }

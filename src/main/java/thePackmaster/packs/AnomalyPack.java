@@ -16,6 +16,7 @@ public class AnomalyPack extends AbstractCardPack {
 
     public AnomalyPack() {
         super(ID, NAME, DESC, AUTHOR);
+        hatHidesHair = true;
     }
 
     @Override

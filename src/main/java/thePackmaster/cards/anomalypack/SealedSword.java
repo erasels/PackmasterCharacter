@@ -1,15 +1,9 @@
 package thePackmaster.cards.anomalypack;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.util.Wiz;
 
 public class SealedSword extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("SealedSword");

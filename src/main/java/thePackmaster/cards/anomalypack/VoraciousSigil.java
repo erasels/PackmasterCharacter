@@ -2,12 +2,9 @@ package thePackmaster.cards.anomalypack;
 
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.anomalypack.VoraciousSigilAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 public class VoraciousSigil extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("VoraciousSigil");

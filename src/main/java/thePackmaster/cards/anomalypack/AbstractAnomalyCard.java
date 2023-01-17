@@ -1,6 +1,5 @@
 package thePackmaster.cards.anomalypack;
 
-import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractAnomalyCard extends AbstractPackmasterCard {

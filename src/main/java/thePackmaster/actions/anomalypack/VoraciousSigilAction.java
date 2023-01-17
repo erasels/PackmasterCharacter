@@ -11,8 +11,6 @@ import thePackmaster.actions.RepeatCardAction;
 import thePackmaster.cardmodifiers.anomalypack.SigilModifier;
 import thePackmaster.util.Wiz;
 
-import java.util.Iterator;
-
 public class VoraciousSigilAction extends AbstractGameAction {
     private AbstractPlayer p;
     private AbstractCard sigil;
