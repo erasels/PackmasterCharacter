@@ -28,7 +28,7 @@ public class Death extends AbstractAstrologerCard {
                 @Override
                 public void update() {
                     isDone = true;
-                    if (m.currentHealth <= (m.maxHealth / 10)) {
+                    if (!m.isDeadOrEscaped() && m.currentHealth <= (m.maxHealth / 10)) {
                         atb(new KillEnemyAction(m));
                     }
                 }
