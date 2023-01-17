@@ -3,8 +3,8 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.dragonwrathpack.Condemn;
-import thePackmaster.cards.dragonwrathpack.PenanceShock;
+import thePackmaster.cards.WitchesStrike.ChitteringPunt;
+import thePackmaster.cards.dragonwrathpack.*;
 
 import java.util.ArrayList;
 
@@ -24,6 +24,12 @@ public class DragonwrathPack extends AbstractCardPack {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(Condemn.ID);
         cards.add(PenanceShock.ID);
+        cards.add(SearingLight.ID);
+        cards.add(RazorWind.ID);
+        cards.add(ChainsofTruth.ID);
+        cards.add(WeightofContrition.ID);
+        cards.add(SacredTrial.ID);
+        cards.add(HolyWrath.ID);
         return cards;
     }
 }

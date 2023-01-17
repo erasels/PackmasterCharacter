@@ -6,5 +6,11 @@
       " HP and increases HP loss from #yPenance by #b10 this combat",
       "."
     ]
+  },
+  "${ModID}:confession": {
+    "NAME": "confession",
+    "DESCRIPTIONS": ["Whenever you take damage deal #b",
+      " damage to all enemies"
+    ]
   }
 }

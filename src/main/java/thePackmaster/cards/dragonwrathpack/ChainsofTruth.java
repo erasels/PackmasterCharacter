@@ -3,13 +3,17 @@ package thePackmaster.cards.dragonwrathpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.Lightning;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import thePackmaster.actions.dragonwrathpack.SmiteAction;
+import thePackmaster.orbs.dragonwrathpack.LightOrb;
 import thePackmaster.powers.dragonwrathpack.PenancePower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeCardPath;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -26,7 +30,7 @@ public class ChainsofTruth extends AbstractDragonwrathCard {
 
     // STAT DECLARATIO
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 13;
     private static final int UPGRADE_PLUS_DMG = 2;  // UPGRADE_PLUS_DMG = 2
 
     // /STAT DECLARATION/
@@ -35,7 +39,7 @@ public class ChainsofTruth extends AbstractDragonwrathCard {
     public ChainsofTruth(){
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage =DAMAGE;
-        this.magicNumber = baseMagicNumber = 9;
+        this.magicNumber = baseMagicNumber = 3;
     }
 
 
@@ -43,6 +47,10 @@ public class ChainsofTruth extends AbstractDragonwrathCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p,baseDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.LIGHTNING));
+        for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters){
+            Wiz.applyToEnemy(monster,new PenancePower(monster,p,magicNumber));
+        }
+        addToBot(new ChannelAction(new Lightning()));
     }
 
 

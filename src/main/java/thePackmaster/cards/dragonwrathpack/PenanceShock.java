@@ -1,13 +1,17 @@
 package thePackmaster.cards.dragonwrathpack;
 
 
+import basemod.devcommands.power.Power;
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.Lightning;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.actions.dragonwrathpack.SmiteAction;
 
 import thePackmaster.powers.dragonwrathpack.PenancePower;
@@ -37,13 +41,14 @@ public class PenanceShock extends AbstractDragonwrathCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
     baseDamage =DAMAGE;
     this.magicNumber = baseMagicNumber = 2;
+    secondMagic = baseSecondMagic = 1;
 }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < 2; ++i) {
+        for (int i = 0; i < secondMagic; ++i) {
            m = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
            if (m != null) {
                addToBot(new SmiteAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
@@ -55,12 +60,13 @@ public class PenanceShock extends AbstractDragonwrathCard {
            }
 
         }
+        addToBot(new ChannelAction(new Lightning()));
     }
 
 
     // Upgraded stats.
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeSecondMagic(1);
     }
 }

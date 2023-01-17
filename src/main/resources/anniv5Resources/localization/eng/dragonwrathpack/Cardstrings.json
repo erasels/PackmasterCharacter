@@ -1,7 +1,8 @@
 {
   "${ModID}:PenanceShock": {
     "NAME": "Penance Shock",
-    "DESCRIPTION": "Deal !D! damage and Apply !M! thedragonkin:Penance to a random enemy twice."
+    "DESCRIPTION": "Deal !D! damage and Apply !M! thedragonkin:Penance to a random enemy. NL Channel Lightning",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and Apply !M! thedragonkin:Penance to a random enemy twice. NL Channel Lightning"
   },
   "${ModID}:Condemn": {
     "NAME": "Condemn",
@@ -13,7 +14,7 @@
   },
   "${ModID}:RazorWind": {
     "NAME": "Razor Wind",
-    "DESCRIPTION": "Take !M! damage. NL Next turn, gain !${ModID}:m2! ${ModID}:Confession"
+    "DESCRIPTION": "Channel ${ModID}:Light. NL Gain !${ModID}:m2! ${ModID}:Confession. NL Take !M! damage."
   },
   "${ModID}:WeightofContrition": {
     "NAME": "Weight of Contrition",
@@ -21,10 +22,14 @@
   },
   "${ModID}:ChainsofTruth": {
     "NAME": "Chains of Truth",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Apply !M! ${ModID}:Penance to ALL enemies. NL Channel ${ModID}:Light."
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Apply !M! ${ModID}:Penance to ALL enemies. NL Channel Lightning."
   },
   "${ModID}:SacredTrial": {
     "NAME": "Sacred Trial",
     "DESCRIPTION": "Take !M! damage. NL Deal !D! damage to all enemies."
+  },
+  "${ModID}:HolyWrath": {
+    "NAME": "Holy Wrath",
+    "DESCRIPTION": "Evoke a ${ModID}:Light. NL ${ModID}:Manifest Lightning equal to your ${ModID}:Confession. NL Exhaust"
   }
 }

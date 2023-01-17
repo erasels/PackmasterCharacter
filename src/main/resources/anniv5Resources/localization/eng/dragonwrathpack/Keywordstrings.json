@@ -15,7 +15,7 @@
       "Confession",
       "confession"
     ],
-    "DESCRIPTION": "Whenever you take damage during your turn, deal damage equal to your #yConfession to all enemies"
+    "DESCRIPTION": "Whenever you take damage, deal damage equal to your #yConfession to all enemies"
   },
   {
     "PROPER_NAME": "Light",
@@ -23,6 +23,6 @@
       "Light",
       "light"
     ],
-    "DESCRIPTION": "#yOrb - Passive : At the end of your turn, gain #yConfession and Take damage. Evoke : Double your #yConfession"
+    "DESCRIPTION": "#yOrb - Passive : At the end of your turn, gain #yConfession and take damage. Evoke : Double your #yConfession and take damage."
   }
 ]

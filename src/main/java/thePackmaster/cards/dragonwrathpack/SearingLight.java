@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.DamageCallbackAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.GainCustomBlockAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Lightning;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import thePackmaster.actions.dragonwrathpack.SmiteAction;
+import thePackmaster.orbs.dragonwrathpack.LightOrb;
 
 import static thePackmaster.SpireAnniversary5Mod.makeCardPath;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -50,9 +52,9 @@ public class SearingLight extends AbstractDragonwrathCard {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
         addToBot(new VFXAction(new LightningEffect(p.drawX,p.drawY)));
         addToBot(new DamageCallbackAction(p,new DamageInfo(p,magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE, integer -> {
-            addToBot(new GainCustomBlockAction(this,AbstractDungeon.player,block));
+            addToBot(new GainBlockAction(AbstractDungeon.player,block));
         }));
-        addToBot(new ChannelAction(new Lightning()));
+        addToBot(new ChannelAction(new LightOrb()));
     }
 
 

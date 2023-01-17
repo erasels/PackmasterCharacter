@@ -74,6 +74,7 @@ public class PenancePower extends TwoAmountPower implements CloneablePowerInterf
     }
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
+        amount2 = Power;
         if (this.amount >= 8){
            amount -= 8;
             CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
