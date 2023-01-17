@@ -16,7 +16,7 @@
   },
   "${ModID}:VoDo": {
     "NAME": "Vo-Do",
-    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies lose !M! Strength. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies lose 2 Strength. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",
@@ -33,7 +33,7 @@
   },
   "${ModID}:Dong": {
     "NAME": "DONG!",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Weak. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak and Vulnerable. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
   },
   "${ModID}:LikeClockwork": {
     "NAME": "Like Clockwork",

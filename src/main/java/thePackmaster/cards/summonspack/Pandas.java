@@ -9,14 +9,14 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.adp;
 
-public class Pandas extends AbstractPackmasterCard {
+public class Pandas extends AbstractSummonsCard {
     public final static String ID = makeID(Pandas.class.getSimpleName());
     private static final CardType TYPE = CardType.POWER;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
 
     public Pandas() {
         super(ID, COST, TYPE, RARITY, TARGET);

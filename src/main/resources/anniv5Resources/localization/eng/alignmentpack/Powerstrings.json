@@ -1,0 +1,26 @@
+{
+  "${ModID}:GlimpsePower": {
+    "NAME": "Glimpse",
+    "DESCRIPTIONS": [
+      "Whenever you draw an #yEthereal card, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:RememberPower": {
+    "NAME": "Remember",
+    "DESCRIPTIONS": [
+      "At the end of your turn, you may shuffle #b",
+      " card into your draw pile.",
+      " cards into your draw pile.",
+      "shuffle into your draw pile"
+    ]
+  },
+  "${ModID}:TrinePower": {
+    "NAME": "Trine",
+    "DESCRIPTIONS": [
+      "The next card you play this turn will be played twice.",
+      "The next #b",
+      " cards you play this turn will be played twice."
+    ]
+  }
+}

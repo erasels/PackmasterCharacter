@@ -21,7 +21,8 @@ public class SeedsOfDestruction extends AbstractPackmasterCard {
 
     public SeedsOfDestruction() {
         super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 3;
+        secondMagic = baseSecondMagic = 4;
         cardsToPreview = new Imp();
     }
 
@@ -38,7 +39,7 @@ public class SeedsOfDestruction extends AbstractPackmasterCard {
 
         AbstractPackmasterCard c2 = (AbstractPackmasterCard)this.makeCopy();
         c2.cost = -2;
-        c2.magicNumber = c2.baseMagicNumber = this.magicNumber + 1;
+        c2.magicNumber = c2.baseMagicNumber = this.secondMagic;
         c2.secondMagic = DISCARD_OPTION;
         c2.rawDescription = cardStrings.EXTENDED_DESCRIPTION[1];
         c2.initializeDescription();
@@ -58,6 +59,7 @@ public class SeedsOfDestruction extends AbstractPackmasterCard {
     @Override
     public void upp() {
         upMagic(1);
+        upSecondMagic(1);
     }
 
     @Override

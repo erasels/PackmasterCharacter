@@ -1,16 +1,14 @@
 package thePackmaster.cards.legacypack;
 
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractLegacyCard extends AbstractPackmasterCard
 {
     public AbstractLegacyCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color) {
-        super(cardID, cost, type, rarity, target, color);
-        setBackgroundTexture(
-                "anniv5Resources/images/512/legacy/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/legacy/" + type.name().toLowerCase() + ".png"
-        );
+        super(cardID, cost, type, rarity, target, color, "legacy");
+
     }
 
     public AbstractLegacyCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {

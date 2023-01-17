@@ -10,7 +10,7 @@ import thePackmaster.util.TexLoader;
 import static thePackmaster.SpireAnniversary5Mod.makeCardPath;
 import static thePackmaster.util.Wiz.atb;
 
-public abstract class AbstractEvolveCard extends AbstractPackmasterCard {
+public abstract class AbstractEvolveCard extends AbstractRingOfPainCard {
 
     public static final int MAX_UPGRADES = 3;
 

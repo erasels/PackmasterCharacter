@@ -21,5 +21,12 @@
       "Whenever you #yChannel an orb, #yEvoke it #b",
       " times without removing it."
     ]
+  },
+  "${ModID}:TrainingPower": {
+    "NAME": "Trained",
+    "DESCRIPTIONS": [
+      "At the start of your turn, evoke your next orb #b",
+      " times."
+    ]
   }
 }

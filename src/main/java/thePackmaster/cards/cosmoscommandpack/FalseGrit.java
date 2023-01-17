@@ -9,7 +9,7 @@ import thePackmaster.cards.marisapack.AmplifyCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class FalseGrit extends AbstractPackmasterCard implements AmplifyCard {
+public class FalseGrit extends AbstractCosmosCard implements AmplifyCard {
     public final static String ID = makeID("FalseGrit");
 
     public FalseGrit() {

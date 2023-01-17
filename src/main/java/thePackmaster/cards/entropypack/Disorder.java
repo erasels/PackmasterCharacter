@@ -8,7 +8,7 @@ import thePackmaster.powers.entropypack.EntropyPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Disorder extends AbstractPackmasterCard {
+public class Disorder extends AbstractEntropyCard {
     public final static String ID = makeID("Disorder");
     // intellij stuff skill, self, common, , , 8, 3, 2, 1
 

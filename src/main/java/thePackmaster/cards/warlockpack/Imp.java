@@ -21,7 +21,7 @@ public class Imp extends AbstractPackmasterCard {
     public final static String ID = makeID(Imp.class.getSimpleName());
 
     private static final int COST = -2;
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 3;
     private static final int DAMAGE_INCREASE = 1;
     private static final int UPGRADE_DAMAGE_INCREASE = 1;
 

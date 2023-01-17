@@ -1,0 +1,9 @@
+{
+  "${ModID}:OrbPack": {
+    "TEXT": [
+      "Orbs",
+      "Channel and utilize Orbs.",
+      "Alchyr"
+    ]
+  }
+}

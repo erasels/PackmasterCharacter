@@ -4,6 +4,6 @@
     "NAMES": [
       "nightmare"
     ],
-    "DESCRIPTION": "Stance: Lose 1 HP and draw a card at the start of each turn. NL When you exit this stance, add #yMadness to your hand."
+    "DESCRIPTION": "#yStance: When you use #y'Madness', exit #yNightmare #yStance. NL When you exit #yNightmare #yStance, draw 2 cards, gain [E] , and lose 1 HP."
   }
 ]

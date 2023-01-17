@@ -6,6 +6,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -17,18 +18,11 @@ public abstract class AbstractDimensionalCard extends AbstractPackmasterCard {
     }
 
     public void setFrame(String img){
-        this.setBackgroundTexture("anniv5Resources/images/512/dimension/" + img, "anniv5Resources/images/1024/dimension/" + img);
-    }
 
-    @Override
-    protected Texture getPortraitImage() {
-        return null;
-    }
-
-    @SpireOverride
-    protected void renderPortrait(SpriteBatch sb) {
-
+        if (!SpireAnniversary5Mod.oneFrameMode) {
+            this.setBackgroundTexture("anniv5Resources/images/512/dimension/" + img, "anniv5Resources/images/1024/dimension/" + img);
         }
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
     }

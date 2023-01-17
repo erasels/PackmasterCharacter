@@ -40,6 +40,7 @@ public class RandomizeCostAction extends AbstractGameAction {
         for (AbstractCard card : cards) {
             if (card.cost >= 0) {// 24
                 int newCost = AbstractDungeon.cardRandomRng.random(3);
+                if(newCost == card.cost) newCost = AbstractDungeon.cardRandomRng.random(3); //make it less likely to roll the same value since that feels bad for a targeted randomization
                 if (card.cost != newCost) {
                     card.cost = newCost;
                     card.costForTurn = card.cost;

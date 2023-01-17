@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.CardFlashVfx;
 import com.megacrit.cardcrawl.vfx.cardManip.CardGlowBorder;
+import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
@@ -33,9 +34,8 @@ public abstract class AbstractRippedTextCard extends AbstractRipCard {
     public static ShaderProgram shader = null;
     private static ArrayList<TooltipInfo> consumableTooltip;
 
-
-    public AbstractRippedTextCard(String cardID, AbstractRippableCard sourceCard) {
-        super(cardID, 0, sourceCard.type, CardRarity.SPECIAL, sourceCard.target);
+    public AbstractRippedTextCard(String cardID, AbstractRippableCard sourceCard, CardColor color) {
+        super(cardID, 0, sourceCard.type, CardRarity.SPECIAL, sourceCard.target, color);
         this.sourceCard = sourceCard;
         baseMagicNumber = magicNumber = sourceCard.baseMagicNumber;
         baseDamage = damage = sourceCard.baseDamage;
@@ -44,9 +44,9 @@ public abstract class AbstractRippedTextCard extends AbstractRipCard {
         exhaust = true;
     }
 
-    public AbstractRippedTextCard(String cardID, CardType type, CardRarity rarity, CardTarget target) {
-        super(cardID, 0, type, rarity, target);
-        exhaust = true;
+
+    public AbstractRippedTextCard(String cardID, AbstractRippableCard sourceCard) {
+        this(cardID, sourceCard, ThePackmaster.Enums.PACKMASTER_RAINBOW);
     }
 
     @Override

@@ -9,12 +9,12 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Sliiiiither extends AbstractPackmasterCard {
+public class Sliiiiither extends AbstractSneckoCard {
 
     public final static String ID = makeID("Sliiiiither");
 
     public Sliiiiither() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
     }
 

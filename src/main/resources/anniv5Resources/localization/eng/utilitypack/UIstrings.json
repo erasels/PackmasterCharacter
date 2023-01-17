@@ -11,5 +11,11 @@
     "TEXT": [
       "Choose a Card to play."
     ]
+  },
+  "${ModID}:UtilityPackHat": {
+    "TEXT": [
+      "Safety first!",
+      "Hardhat"
+    ]
   }
 }

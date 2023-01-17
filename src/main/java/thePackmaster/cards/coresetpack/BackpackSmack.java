@@ -16,24 +16,23 @@ public class BackpackSmack extends AbstractPackmasterCard {
 
     public BackpackSmack() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 7;
+        magicNumber = baseMagicNumber = 2;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        if (p.drawPile.size() > 9) {
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        if (p.drawPile.size() >= 10) {
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+        }
+        else {
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
         }
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = AbstractDungeon.player.drawPile.size() > 9 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

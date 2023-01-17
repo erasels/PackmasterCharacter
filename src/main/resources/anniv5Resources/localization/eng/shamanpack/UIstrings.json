@@ -6,5 +6,11 @@
       "modargo",
       "Card art from MtG"
     ]
+  },
+  "${ModID}:ShamanPackHat": {
+    "TEXT": [
+      "Imbued with the power over elements.",
+      "Bead Chain"
+    ]
   }
 }

@@ -8,7 +8,7 @@ import thePackmaster.powers.distortionpack.DeteriorationPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Deterioration extends AbstractPackmasterCard {
+public class Deterioration extends AbstractDistortionCard {
     public final static String ID = makeID("Deterioration");
     // intellij stuff power, self, uncommon, , , , , 5, 2
 

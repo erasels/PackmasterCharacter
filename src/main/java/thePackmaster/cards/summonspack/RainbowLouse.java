@@ -14,7 +14,7 @@ import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.atb;
 
-public class RainbowLouse extends AbstractPackmasterCard {
+public class RainbowLouse extends AbstractSummonsCard {
     public final static String ID = makeID(RainbowLouse.class.getSimpleName());
     private static final int COST = 1;
     private static final CardType TYPE = CardType.SKILL;

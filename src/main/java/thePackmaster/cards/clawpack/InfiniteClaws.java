@@ -15,6 +15,7 @@ import thePackmaster.util.Wiz;
 
 import java.util.HashSet;
 
+import static thePackmaster.SpireAnniversary5Mod.CLAW;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class InfiniteClaws extends AbstractClawCard {
@@ -24,6 +25,7 @@ public class InfiniteClaws extends AbstractClawCard {
     public InfiniteClaws() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         cardsToPreview = new GhostClaw(true);
+        tags.add(CLAW);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

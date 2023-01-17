@@ -5,5 +5,11 @@
       "Bug out with the new Infest keyword, which makes cards burrow into your draw pile!",
       "Vex"
     ]
+  },
+  "${ModID}:InfestPackHat": {
+    "TEXT": [
+      "For the distinguished swarmologist.",
+      "The Beekeeper"
+    ]
   }
 }

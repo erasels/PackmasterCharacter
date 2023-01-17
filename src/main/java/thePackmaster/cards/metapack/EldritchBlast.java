@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class EldritchBlast extends AbstractPackmasterCard {
+public class EldritchBlast extends AbstractMetaCard {
     public final static String ID = makeID("EldritchBlast");
 
     private static final int DAMAGE = 5;

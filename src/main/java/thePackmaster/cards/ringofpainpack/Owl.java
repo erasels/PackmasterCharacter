@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.ringofpainpack.OwlAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -27,10 +28,8 @@ public class Owl extends AbstractEvolveCard {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, isPreviewCard);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = VULNERABLE;
-        setBackgroundTexture(
-                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
-        );
+
+        
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,7 +1,7 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "Backpack Smack",
-    "DESCRIPTION": "Deal !D! damage. NL If your draw pile contains 10 or more cards, gain [E] and draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL If your draw pile has 10 or more cards, draw !M! cards. NL Otherwise, gain [E] ."
   },
   "${ModID}:BoosterTutor": {
     "NAME": "Booster Tutor",
@@ -13,10 +13,10 @@
   },
   "${ModID}:Flick": {
     "NAME": "Flick",
-    "DESCRIPTION": "Discard a card. NL Deal !D! damage a number of times equal to that card's energy cost."
+    "DESCRIPTION": "Discard a card. NL Deal !D! damage a number of times equal to its cost."
   },
   "${ModID}:MayhemForm": {
-    "NAME": "Mayhem Form",
+    "NAME": "Unrelenting Form",
     "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] .",
     "UPGRADE_DESCRIPTION": "Retain. NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] ."
   },

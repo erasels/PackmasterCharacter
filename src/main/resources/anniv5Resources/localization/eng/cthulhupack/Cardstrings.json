@@ -14,12 +14,12 @@
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
-    "DESCRIPTION": "Add a *Necronomicurse into your hand. NL The next attack you play that costs 2 or more is played twice.",
+    "DESCRIPTION": "Gain a *Necronomicurse. NL The next attack you play that costs 2 or more is played twice.",
     "UPGRADE_DESCRIPTION": "The next attack you play that costs 2 or more is played twice."
   },
   "${ModID}:FamilialCurse": {
     "NAME": "Familial Curse",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ruin to ALL enemies. NL Discard your hand."
+    "DESCRIPTION": "Apply !M! ${ModID}:Ruin to ALL enemies. NL Next turn, gain a *Madness and lose 1 HP."
   },
   "${ModID}:GazeTheVoid": {
     "NAME": "Gaze the Void",
@@ -31,16 +31,16 @@
   },
   "${ModID}:EndOfDays": {
     "NAME": "End of Days",
-    "DESCRIPTION": "Gain an Orb Slot. NL Channel a Dark for each of your Orb slots.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Orb Slots. NL Channel a Dark for each of your Orb slots."
+    "DESCRIPTION": "At end of turn, Channel a Dark for each [E] unspent.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Focus. NL At end of turn, Channel a Dark for each [E] unspent."
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "R'lyeh Fhtagn",
-    "DESCRIPTION": "Put EVERYONE to sleep. NL Next turn, add 3 *Madness into your hand and lose 3 HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. NL Next turn, add 3 *Madness+ into your hand and lose 3 HP. NL Exhaust."
+    "DESCRIPTION": "Put EVERYONE to sleep. Next turn, gain 3 *Madness and lose 3 HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. Next turn, gain 3 *Madness+ and lose 3 HP. NL Exhaust."
   },
   "${ModID}:StarSpawn": {
     "NAME": "Star Spawn",
-    "DESCRIPTION": "Deal 13 damage twice. NL Gain an Orb Slot. NL Channel a Plasma. NL Exhaust."
+    "DESCRIPTION": "Deal 13 damage twice. NL Heal !M! HP. NL Channel a Plasma. NL Exhaust."
   }
 }

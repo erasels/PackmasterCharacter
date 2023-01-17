@@ -1,0 +1,9 @@
+{
+  "${ModID}:ThunderstruckPower": {
+    "NAME": "Thunderstruck",
+    "DESCRIPTIONS": [
+      "Whenever you play a card containing \"Strike\", #yChannel #b",
+      " #yLightning."
+    ]
+  }
+}

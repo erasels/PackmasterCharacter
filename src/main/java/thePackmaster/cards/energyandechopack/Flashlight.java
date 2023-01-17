@@ -11,7 +11,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
-public class Flashlight extends AbstractPackmasterCard {
+public class Flashlight extends AbstractEchoCard {
 
     public final static String ID = makeID(Flashlight.class.getSimpleName());
 

@@ -5,6 +5,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -13,6 +15,7 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.summonspack.PandaEvokeAction;
 import thePackmaster.actions.summonspack.PandaSmackAction;
@@ -31,8 +34,8 @@ public class Panda extends CustomOrb {
     private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Panda.png");
     private static final float PANDA_WIDTH = 96.0f;
     private static final Color TEXT_COLOR = new Color(1.0f, 0.25f, 0.25f, 1.0f);
-    private static final int BASE_PASSIVE = 8;
-    private static final int BASE_EVOKE = 12;
+    private static final int BASE_PASSIVE = 5;
+    private static final int BASE_EVOKE = 5;
 
     // DO NOT SET EITHER OF THESE TO ZERO
     public static final float BOUNCE_DURATION = 1.0f;
@@ -77,7 +80,8 @@ public class Panda extends CustomOrb {
 
     @Override
     public void playChannelSFX() {
-        CardCrawlGame.sound.playV(PANDA_KEY, 0.6f);
+        if (MathUtils.random(0, 19) == 0)
+            CardCrawlGame.sound.playV(PANDA_KEY, 0.5f);
     }
 
     @Override
@@ -85,6 +89,23 @@ public class Panda extends CustomOrb {
         Panda copy = (Panda) makeCopy();
         copy.isCopy = true;
         att(new PandaEvokeAction(copy, this));
+        // SFXAction doesn't seem to take a volume argument and you don't want this full volume
+        att(new VFXAction(new AbstractGameEffect() {
+            @Override
+            public void update() {
+                if (MathUtils.random(0, 19) == 0)
+                    CardCrawlGame.sound.playV(PANDA_KEY, 0.5f);
+                isDone = true;
+            }
+
+            @Override
+            public void render(SpriteBatch spriteBatch) {
+            }
+
+            @Override
+            public void dispose() {
+            }
+        }));
     }
 
     @Override

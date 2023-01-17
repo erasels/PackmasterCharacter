@@ -5,5 +5,11 @@
       "Weapons from the Blackbeard mod. NL Equip weapons with various additional effects to increase the damage of your attack cards.",
       "JohnnyBazooka89"
     ]
+  },
+  "${ModID}:WeaponsPackHat": {
+    "TEXT": [
+      "It once belonged to a famous pirate captain.",
+      "Pirate Hat"
+    ]
   }
 }

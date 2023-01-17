@@ -2,6 +2,6 @@
   {
     "PROPER_NAME": "Aggression",
     "NAMES": ["aggression"],
-    "DESCRIPTION": "In this stance, your Attacks deal #b25% more damage."
+    "DESCRIPTION": "In this stance, your Attacks deal #b25% more damage. Upon exiting this #yStance, gain #b2 #yStrength."
   }
 ]

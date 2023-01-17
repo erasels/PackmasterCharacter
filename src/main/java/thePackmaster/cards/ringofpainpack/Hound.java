@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import thePackmaster.SpireAnniversary5Mod;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
@@ -26,10 +27,8 @@ public class Hound extends AbstractEvolveCard {
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = WEAK;
         this.isMultiDamage = true;
-        setBackgroundTexture(
-                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
-        );
+
+        
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

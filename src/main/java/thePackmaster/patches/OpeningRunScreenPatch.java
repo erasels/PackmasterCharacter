@@ -2,6 +2,7 @@ package thePackmaster.patches;
 
 import basemod.BaseMod;
 import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.neow.NeowEvent;
 import javassist.CtBehavior;
@@ -18,9 +19,17 @@ public class OpeningRunScreenPatch {
     )
     public static void SetTheThing(NeowEvent __instance) {
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
-            BaseMod.logger.info("Packmaster is Ready To Do Thing");
-            SpireAnniversary5Mod.openedStarterScreen = false;
-            SpireAnniversary5Mod.doPackSetup = true;
+            if (SpireAnniversary5Mod.allPacksMode) {
+                SpireAnniversary5Mod.logger.info("Vex's All Packs Override Enabled. Skipping intro screen");
+                SpireAnniversary5Mod.currentPoolPacks.clear();
+                SpireAnniversary5Mod.currentPoolPacks.addAll(SpireAnniversary5Mod.allPacks);
+                CardCrawlGame.dungeon.initializeCardPools();
+            } else {
+                SpireAnniversary5Mod.logger.info("Packmaster is Ready To Do Thing");
+                SpireAnniversary5Mod.openedStarterScreen = false;
+                SpireAnniversary5Mod.doPackSetup = true;
+            }
+
         }
     }
 
