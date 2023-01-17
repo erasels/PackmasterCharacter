@@ -41,6 +41,7 @@ public class ChainsofTruth extends AbstractDragonwrathCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage =DAMAGE;
         this.magicNumber = baseMagicNumber = 3;
+        isMultiDamage = true;
     }
 
 
@@ -51,17 +52,13 @@ public class ChainsofTruth extends AbstractDragonwrathCard {
         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters){
             Wiz.applyToEnemy(monster,new PenancePower(monster,p,magicNumber));
         }
-        addToBot(new ChannelAction(new Lightning()));
     }
 
-    @Override
-    public String cardArtCopy() {
-        return DarkShackles.ID;
-    }
 
     // Upgraded stats.
     @Override
     public void upp() {
         upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

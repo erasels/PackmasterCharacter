@@ -19,6 +19,7 @@ import thePackmaster.actions.dragonwrathpack.SmiteAction;
 import thePackmaster.orbs.dragonwrathpack.LightOrb;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.powers.witchesstrikepack.LoseFocusPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.addPotions;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -50,8 +51,7 @@ public class JudgementDayPower extends AbstractPackmasterPower implements Clonea
 
     public void onChannel(AbstractOrb orb) {
         if (orb instanceof Lightning){
-            AbstractMonster target = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-            addToBot(new ApplyPowerAction(target,owner,new PenancePower(target,owner,amount)));
+            Wiz.applyToSelf(new confessionpower(owner,amount));
         }
     }
     @Override

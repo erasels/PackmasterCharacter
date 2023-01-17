@@ -15,8 +15,8 @@
   },
   "${ModID}:JudgementDay": {
     "NAME": "Judgement Day",
-    "DESCRIPTIONS": ["Whenever you channel #yLightning apply #b",
-      " #yPenance to a random enemy."
+    "DESCRIPTIONS": ["Whenever you channel #yLightning gain #b",
+      " #yConfession."
     ]
   },
   "${ModID}:Absolution": {

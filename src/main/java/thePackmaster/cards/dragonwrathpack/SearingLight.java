@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.DamageCallbackAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.GainCustomBlockAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -41,9 +42,9 @@ public class SearingLight extends AbstractDragonwrathCard {
 
 
     public SearingLight(){
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseBlock = 20;
-        this.magicNumber = baseMagicNumber = 5;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        baseBlock = 13;
+        this.magicNumber = baseMagicNumber = 3;
     }
 
 
@@ -53,9 +54,8 @@ public class SearingLight extends AbstractDragonwrathCard {
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
         addToBot(new VFXAction(new LightningEffect(p.drawX,p.drawY)));
-        addToBot(new DamageCallbackAction(p,new DamageInfo(p,magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE, integer -> {
-            addToBot(new GainBlockAction(AbstractDungeon.player,block));
-        }));
+        addToBot(new DamageAction(p,new DamageInfo(p,magicNumber, DamageInfo.DamageType.THORNS)));
+        addToBot(new GainBlockAction(AbstractDungeon.player,block));
         addToBot(new ChannelAction(new LightOrb()));
     }
 

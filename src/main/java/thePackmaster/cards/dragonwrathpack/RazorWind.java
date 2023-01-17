@@ -43,7 +43,7 @@ public class RazorWind extends AbstractDragonwrathCard {
     public RazorWind(){
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseDamage =DAMAGE;
-        this.magicNumber = baseMagicNumber = 2;
+        this.magicNumber = baseMagicNumber = 4;
         baseSecondMagic = secondMagic = 2;
     }
 
@@ -51,7 +51,6 @@ public class RazorWind extends AbstractDragonwrathCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ChannelAction(new LightOrb()));
         Wiz.applyToSelf(new confessionpower(p,secondMagic));
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));

@@ -72,6 +72,7 @@ public class PenanceShock extends AbstractDragonwrathCard {
     // Upgraded stats.
     @Override
     public void upp() {
-        upgradeSecondMagic(1);
+        upgradeDamage(2);
+        upgradeMagicNumber(2);
     }
 }

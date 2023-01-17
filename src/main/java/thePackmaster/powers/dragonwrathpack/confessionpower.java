@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.actions.dragonwrathpack.SmiteAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -46,7 +47,7 @@ public class confessionpower extends AbstractPackmasterPower implements Cloneabl
 
     public int onAttacked(DamageInfo info, int damageAmount) {
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters){
+        for (AbstractMonster m : Wiz.getEnemies()){
             addToBot(new SmiteAction(m,new DamageInfo(owner,amount,  DamageInfo.DamageType.THORNS)));
         }
         return damageAmount;

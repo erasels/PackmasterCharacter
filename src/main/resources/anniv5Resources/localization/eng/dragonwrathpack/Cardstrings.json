@@ -1,8 +1,7 @@
 {
   "${ModID}:PenanceShock": {
     "NAME": "Penance Shock",
-    "DESCRIPTION": "Deal !D! damage and Apply !M! thedragonkin:Penance to a random enemy. NL Channel Lightning",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and Apply !M! thedragonkin:Penance to a random enemy twice. NL Channel Lightning"
+    "DESCRIPTION": "Deal !D! damage and Apply !M! thedragonkin:Penance. NL Channel Lightning"
   },
   "${ModID}:Condemn": {
     "NAME": "Condemn",
@@ -14,7 +13,7 @@
   },
   "${ModID}:RazorWind": {
     "NAME": "Razor Wind",
-    "DESCRIPTION": "Channel ${ModID}:Light. NL Gain !${ModID}:m2! ${ModID}:Confession. NL Take !M! damage."
+    "DESCRIPTION": "Gain !${ModID}:m2! ${ModID}:Confession. NL Take !M! damage."
   },
   "${ModID}:WeightofContrition": {
     "NAME": "Weight of Contrition",
@@ -22,15 +21,15 @@
   },
   "${ModID}:ChainsofTruth": {
     "NAME": "Chains of Truth",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Apply !M! ${ModID}:Penance to ALL enemies. NL Channel Lightning."
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Apply !M! ${ModID}:Penance to ALL enemies."
   },
   "${ModID}:SacredTrial": {
     "NAME": "Sacred Trial",
-    "DESCRIPTION": "Take !M! damage. NL Deal !D! damage to all enemies."
+    "DESCRIPTION": "Gain !${ModID}:m2! ${ModID}:Confession. NL Take !M! damage. NL Channel !${ModID}:m2! Lightning"
   },
   "${ModID}:HolyWrath": {
     "NAME": "Holy Wrath",
-    "DESCRIPTION": "Evoke a ${ModID}:Light. NL ${ModID}:Manifest Lightning equal to your ${ModID}:Confession. NL Exhaust"
+    "DESCRIPTION": "Gain !M! ${ModID}:Confession. NL ${ModID}:Manifest Lightning equal to your ${ModID}:Confession. NL Exhaust"
   },
   "${ModID}:Absolution": {
     "NAME": "Absolution",
@@ -38,6 +37,6 @@
   },
   "${ModID}:JudgementDay": {
     "NAME": "Judgement Day",
-    "DESCRIPTION": "${ModID}:Manifest !M! Lightning. NL Whenever you channel Lightning Apply !${ModID}:m2! ${ModID}:Penance to a random enemy."
+    "DESCRIPTION": "${ModID}:Manifest !M! Lightning. NL Whenever you channel Lightning gain !${ModID}:m2! ${ModID}:Confession."
   }
 }

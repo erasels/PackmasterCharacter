@@ -46,6 +46,7 @@ public class LightOrb extends AbstractOrb {
         this.ID = ORB_ID;
         img = TexLoader.getTexture(makeOrbPath("Light.png"));
         this.name = orbString.NAME;
+        baseEvokeAmount = 3;
         this.basePassiveAmount = 1;
         this.passiveAmount = this.basePassiveAmount;
         this.updateDescription();
@@ -56,7 +57,7 @@ public class LightOrb extends AbstractOrb {
 
     public void updateDescription() {
         this.applyFocus();
-        this.description = orbString.DESCRIPTION[0] + this.passiveAmount + orbString.DESCRIPTION[1] + this.passiveAmount + orbString.DESCRIPTION[2];
+        this.description = orbString.DESCRIPTION[0] + this.passiveAmount + orbString.DESCRIPTION[1] + this.evokeAmount + orbString.DESCRIPTION[2];
     }
 
     public void onEvoke() {
@@ -64,11 +65,9 @@ public class LightOrb extends AbstractOrb {
         ReflectionHacks.setPrivate(flare, AbstractGameEffect.class, "color", color);
         ReflectionHacks.setPrivate(flare, OrbFlareEffect.class, "color2", color2);
         Wiz.vfx(new MiracleEffect(color,color2,"POWER_MANTRA"));
-        if (AbstractDungeon.player.hasPower(confessionpower.POWER_ID)) {
-            Wiz.applyToSelf(new confessionpower(AbstractDungeon.player,AbstractDungeon.player.getPower(confessionpower.POWER_ID).amount));
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, passiveAmount,
-                    DamageInfo.DamageType.THORNS)));
-        }
+        Wiz.applyToSelf(new confessionpower(AbstractDungeon.player,evokeAmount));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player,new DamageInfo(AbstractDungeon.player,evokeAmount,
+                DamageInfo.DamageType.THORNS)));
     }
 
     public void onEndOfTurn() {

@@ -3,8 +3,8 @@
     "NAME": "Light",
     "DESCRIPTION": [
       "#yPassive: At the end of your turn, take #b",
-      " damage and gain that much #yConfession NL #yEvoke: Double your Confession and take #b",
-      " damage."
+      " damage and gain that much #yConfession NL #yEvoke: take #b",
+      " damage and gain that much #yConfession."
     ]
   }
 }

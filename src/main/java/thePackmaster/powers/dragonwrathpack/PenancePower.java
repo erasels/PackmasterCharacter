@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -50,6 +51,9 @@ public class PenancePower extends TwoAmountPower implements CloneablePowerInterf
             CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
             addToBot(new SmiteAction(owner,new DamageInfo(owner,Power, DamageInfo.DamageType.HP_LOSS)));
             Power += 10;
+            if (amount > 1){
+                addToBot(new RemoveSpecificPowerAction(owner,owner,this));
+            }
             updateDescription();
         }
     }
