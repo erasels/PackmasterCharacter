@@ -1,0 +1,9 @@
+{
+  "${ModID}:AnomalyPack": {
+    "TEXT": [
+      "Anomaly",
+      "Weird cards that want you to think outside the box.",
+      "PureQuestion"
+    ]
+  }
+}
