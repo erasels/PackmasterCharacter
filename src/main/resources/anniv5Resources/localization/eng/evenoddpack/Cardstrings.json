@@ -1,0 +1,8 @@
+{
+  "${ModID}:GreyBargain": {
+    "NAME": "Grey Bargain",
+    "DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand.",
+    "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand. NL Draw a card.",
+    "EXTENDED_DESCRIPTION": ["I need a card to Exhaust."]
+  }
+}
