@@ -38,5 +38,22 @@
   "${ModID}:Rhapsody": {
     "NAME": "Rhapsody",
     "DESCRIPTION": "Gain !M! ${ModID}:Inspiration. NL Draw 2 cards."
+  },
+  "${ModID}:Frostprime": {
+    "NAME": "Frost Prime",
+    "DESCRIPTION": "At the start of your turn, Channel 1 Frost and apply !M! ${ModID}:Frostbite to ALL enemies."
+  },
+  "${ModID}:BaalorBash": {
+    "NAME": "Baalor's Bash",
+    "DESCRIPTION": "Deal !D! damage. NL Put a *Baalor's *Blueprint on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Put a *Baalor's *Blueprint on top of your draw pile. NL Exhaust."
+  },
+  "${ModID}:BaalorBlueprint": {
+    "NAME": "Baalor's Blueprint",
+    "DESCRIPTION": "Shuffle your discard pile into your draw pile. NL Put *The *Cozy *Chair on the bottom of it. NL Exhaust."
+  },
+  "${ModID}:TheCozyChair": {
+    "NAME": "The Cozy Chair",
+    "DESCRIPTION": "Your cards are played twice."
   }
 }

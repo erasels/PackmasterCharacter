@@ -24,5 +24,21 @@
       "It gains #yEthereal.",
       "They gain #yEthereal."
     ]
+  },
+  "${ModID}:FrostprimePower": {
+    "NAME": "Frost Prime",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yChannel #b",
+      " #yFrost and apply #b",
+      " #yFrostbite to ALL enemies."
+    ]
+  },
+  "${ModID}:CozyChairPower": {
+    "NAME": "Cozy Chair",
+    "DESCRIPTIONS": [
+      "Your cards are played twice.",
+      "Your cards are played #b",
+      " additional times."
+    ]
   }
 }
