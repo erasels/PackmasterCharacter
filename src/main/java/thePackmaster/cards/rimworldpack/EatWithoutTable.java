@@ -40,7 +40,7 @@ public class EatWithoutTable extends AbstractPackmasterCard {
                 ArrayList<AbstractPotion> drinkable = new ArrayList<>();
 
                 for (AbstractPotion pot: potions) {
-                    if(pot.rarity == AbstractPotion.PotionRarity.COMMON && pot.canUse() && !pot.isThrown)
+                    if(pot.canUse() && !pot.isThrown)
                         drinkable.add(pot);
                 }
 
