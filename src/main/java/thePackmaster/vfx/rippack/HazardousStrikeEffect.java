@@ -35,12 +35,6 @@ public class HazardousStrikeEffect {
                 .setAngle(-65.0f)
                 .setColor(color)
                 .setScale(scale)
-//                .emitEvery(
-//                        (x, y) -> new VfxBuilder(SWORD, x, y, 0.5f)
-//                                .fadeOutFromAlpha(0.5f, 0.4f)
-//                                .setScale(scale)
-//                                .setAngle(-65.0f)
-//                                .build(), 0.01f)
                 .moveX(p.hb.cX, c.hb.cX)
                 .andThen(0.3f)
                 .setScale(scale)
@@ -48,11 +42,6 @@ public class HazardousStrikeEffect {
                 .playSoundAt(0.01f, makeID("RipPack_Sword"))
                 .moveX(startRaiseX, startRaiseX - 200.0f)
                 .moveY(startRaiseY, startRaiseY + 200.0f)
-//                .emitEvery(
-//                        (x, y) -> new VfxBuilder(SWORD, x, y, 0.5f)
-//                                .setScale(scale)
-//                                .fadeOutFromAlpha(0.5f, 0.4f)
-//                                .build(), 0.01f)
                 .andThen(0.2f)
                 .setScale(scale)
                 .andThen(0.25f)
@@ -60,12 +49,6 @@ public class HazardousStrikeEffect {
                 .rotateTo(25.0f, -160.0f, VfxBuilder.Interpolations.SMOOTH)
                 .moveX(startRaiseX - 200.0f, startRaiseX + 150.0f)
                 .moveY(startRaiseY + 200.0f, startRaiseY - 300.0f)
-//                .emitEvery(
-//                        (x, y) -> new VfxBuilder(SWORD, x, y, 0.5f)
-//                                .fadeOutFromAlpha(0.5f, 0.4f)
-//                                .setScale(scale)
-//                                .build(), 0.01f)
-
                 .andThen(0.1f)
                 .build();
     }
