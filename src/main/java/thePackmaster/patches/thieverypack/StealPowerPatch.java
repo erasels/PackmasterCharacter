@@ -23,12 +23,13 @@ public class StealPowerPatch {
 		public static void Prefix(AbstractPower __instance, SpriteBatch sb, @ByRef float[] x, @ByRef float[] y, Color c) {
 			if (StealPowerAction.activatedInstance != null && StealPowerAction.activatedInstance.affectedPowers.contains(__instance)) {
 				origAlpha = c.a;
-				if (StealPowerAction.activatedInstance.amount > 0) {
-					if (__instance.amount > StealPowerAction.activatedInstance.amount) {
+				int mapAmount = StealPowerAction.activatedInstance.powIDAmountMap.get(__instance.ID);
+				if (mapAmount > 0) {
+					if (__instance.amount > mapAmount) {
 						renderIcons(__instance, sb, x[0], y[0], c);
 					}
 				}
-				StealPowerAction.activatedInstance.calcPosition(x, y, c, false);
+				StealPowerAction.activatedInstance.calcPosition(__instance.ID, x, y, c, false);
 			}
 		}
 
@@ -59,15 +60,16 @@ public class StealPowerPatch {
 		public static void Prefix(AbstractPower __instance, SpriteBatch sb, @ByRef float[] x, @ByRef float[] y, Color c, float ___fontScale) {
 			if (StealPowerAction.activatedInstance != null && StealPowerAction.activatedInstance.affectedPowers.contains(__instance)) {
 				origAlpha = c.a;
-				if (StealPowerAction.activatedInstance.amount > 0) {
-					int amountLeft = __instance.amount - StealPowerAction.activatedInstance.amount;
+				int mapAmount = StealPowerAction.activatedInstance.powIDAmountMap.get(__instance.ID);
+				if (mapAmount > 0) {
+					int amountLeft = __instance.amount - mapAmount;
 					if (amountLeft > 0) {
 						origAmount = __instance.amount;
 						FontHelper.renderFontRightTopAligned(sb, FontHelper.powerAmountFont, Integer.toString(amountLeft), x[0], y[0], ___fontScale, c);
 						__instance.amount = StealPowerAction.activatedInstance.amount;
 					}
 				}
-				StealPowerAction.activatedInstance.calcPosition(x, y, c, true);
+				StealPowerAction.activatedInstance.calcPosition(__instance.ID, x, y, c, true);
 			}
 		}
 

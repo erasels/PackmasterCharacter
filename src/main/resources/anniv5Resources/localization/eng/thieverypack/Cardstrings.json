@@ -13,19 +13,20 @@
   },
   "${ModID}:NullHammer": {
     "NAME": "Null Hammer",
-    "DESCRIPTION": "Deal !D! damage. NL Steal all Plated Armor, []Thorns, and Metallicize from the enemy."
+    "DESCRIPTION": "Deal !D! damage. NL Steal all buffs this enemy gains until your next turn."
   },
   "${ModID}:Magnet": {
     "NAME": "Magnet",
-    "DESCRIPTION": "Steal all Artifact from ALL enemies. NL If there's none, gain !M! Artifact. NL Exhaust."
+    "DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from enemy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from ALL enemies. NL Exhaust."
   },
   "${ModID}:StrengthSap": {
     "NAME": "Strength Sap",
     "DESCRIPTION": "Apply !M! Weak. NL If the enemy has positive Strength, steal !${ModID}:m2! Strength."
   },
-  "${ModID}:Cunning": {
-    "NAME": "Cunning",
-    "DESCRIPTION": "Whenever you gain a buff, draw !M! card."
+  "${ModID}:CunningPoison": {
+    "NAME": "Cunning Poison",
+    "DESCRIPTION": "Apply !M! Poison to the highest-HP enemy. NL If it dies while Poisoned, steal !${ModID}:m2! Gold. NL Exhaust."
   },
   "${ModID}:MindControl": {
     "NAME": "Mind Control",
@@ -40,7 +41,7 @@
   },
   "${ModID}:ThieveryMastery": {
     "NAME": "Thievery Mastery",
-    "DESCRIPTION": "Whenever you steal something, gain 100% more of it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you steal something, gain 100% more of it."
+    "DESCRIPTION": "Whenever you steal something, gain 100% more of it. NL (Does not stack)",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you steal something, gain 100% more of it. NL (Does not stack)"
   }
 }

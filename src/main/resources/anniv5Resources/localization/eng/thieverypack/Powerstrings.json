@@ -1,17 +1,21 @@
 {
-  "${ModID}:CunningPower": {
-    "NAME": "Cunning",
+  "${ModID}:DeceivedPower": {
+    "NAME": "Deceived",
     "DESCRIPTIONS": [
-      "Whenever you gain a buff, draw #b",
-      " card.",
-      " cards."
+      "If this creature dies while #yPoisoned, you gain #b",
+      " gold."
+    ]
+  },
+  "${ModID}:HammeredPower": {
+    "NAME": "Hammered",
+    "DESCRIPTIONS": [
+      "The creature will have its buffs stolen until next turn."
     ]
   },
   "${ModID}:ThieveryMasteryPower": {
     "NAME": "Thievery Mastery",
     "DESCRIPTIONS": [
-      "Whenever you steal something, gain #b",
-      "00% more of it."
+      "Whenever you steal something, gain #b100% more of it. Does NOT stack."
     ]
   },
   "${ModID}:MindControlledPower": {
