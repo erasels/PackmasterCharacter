@@ -68,18 +68,12 @@ public class Hats {
     private static int foundHeadSlot;
     private static int playerFoundHeadSlot;
     private static int attachmentSlotIndex;
-    private static boolean firstTime = true;
 
     private static RegionAttachment attachment;
     private static RegionAttachment attachmentDummy;
 
     private static void setupSkeleton(AbstractPlayer p, boolean isDummy) {
         int headslotIndex = 0;
-        //this is called before the HatMenu initialized for the first time
-        if(firstTime && p == null) {
-            firstTime = false;
-            return;
-        }
         skeleton = ReflectionHacks.getPrivate(p, AbstractCreature.class, "skeleton");
         if (skeleton == null) {
             SpireAnniversary5Mod.logger.info("Hats error! Skeleton is null when attempting setup!");
