@@ -13,7 +13,6 @@ import static thePackmaster.util.Wiz.*;
 
 public class HarvestCarrots extends AbstractFarmerCard {
     public final static String ID = makeID("HarvestCarrots");
-    private int count = 0;
     public HarvestCarrots() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = block = 4;
@@ -21,7 +20,7 @@ public class HarvestCarrots extends AbstractFarmerCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        count = checkTypes();
+        int count = checkTypes(true);
             for (int j = 0; j < count+1; j++) {
                 att(new GainBlockAction(p(), block));
             }
@@ -33,7 +32,7 @@ public class HarvestCarrots extends AbstractFarmerCard {
         this.initializeDescription();
     }
     public void applyPowers() {
-        count = checkTypes();
+        int count = checkTypes(false);
         if (count > 0) {
             this.baseMagicNumber = count;
             super.applyPowers();
