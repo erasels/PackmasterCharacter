@@ -28,7 +28,7 @@
   "${ModID}:PestControl": {
     "NAME": "Pest Control",
     "DESCRIPTION": "Deal !D! damage. NL Repeat for each card type you've played this turn.",
-    "EXTENDED_DESCRIPTION": [" NL (Repeat !M! times.)"]
+    "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
   },
   "${ModID}:SoilResiliency": {
     "NAME": "Soil Resiliency",
