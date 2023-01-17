@@ -42,7 +42,7 @@ public class PierceVeilAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             if (Wiz.p().drawPile.size() > 1) {
                 // Create a cool card rewards screen to pick the choice from.
-                ArrayList generatedCards = this.generateCardChoices();
+                ArrayList<AbstractCard> generatedCards = this.generateCardChoices();
 
                 AbstractDungeon.cardRewardScreen.customCombatOpen(generatedCards, CardRewardScreen.TEXT[1], this.cardType != null);
                 this.tickDuration();
@@ -91,13 +91,10 @@ public class PierceVeilAction extends AbstractGameAction {
         CardGroup tmpGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         if (this.amount != -1) {
             for(int i = 0; i < Math.min(this.amount, AbstractDungeon.player.drawPile.size()); ++i) {
-                tmpGroup.addToTop((AbstractCard)AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
+                tmpGroup.addToTop(AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
             }
         } else {
-            Iterator var5 = AbstractDungeon.player.drawPile.group.iterator();
-
-            while(var5.hasNext()) {
-                AbstractCard c = (AbstractCard)var5.next();
+            for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
                 tmpGroup.addToBottom(c);
             }
         }

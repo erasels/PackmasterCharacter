@@ -5,5 +5,11 @@
       "Power is Ethereal; receive it when it's meant to come, and let it go if you don't need it.",
       "Alchyr"
     ]
+  },
+  "${ModID}:AlignmentPackHat": {
+    "TEXT": [
+      "Where are these sparkles even coming from?",
+      "Shine Dust"
+    ]
   }
 }
