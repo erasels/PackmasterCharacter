@@ -14,7 +14,7 @@
   },
   "${ModID}:SneakyteakStrike": {
     "NAME": "Sneakyteak Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Put a *Darkside *Slap on top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Put a *Darkside *Slap on top of your draw pile.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a *Darkside *Slap+ on top of your draw pile."
   },
   "${ModID}:DarksideSlap": {
