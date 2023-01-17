@@ -42,23 +42,23 @@ public class OutToMarketPower extends AbstractPackmasterPower {
     public void onAfterCardPlayed(AbstractCard card) {
         if (card.type == AbstractCard.CardType.ATTACK && !attack)  {
             attack = true;
-            desc = desc + " Attack";
+            desc = desc + " " + CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[2];
         }
         else if (card.type == AbstractCard.CardType.SKILL && !skill){
             skill = true;
-            desc = desc + " Skill";
+            desc = desc + " " + CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[3];
         }
         else if (card.type == AbstractCard.CardType.POWER && !power){
             power = true;
-            desc = desc + " Power";
+            desc = desc + " " + CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[4];
         }
         else if (card.type == AbstractCard.CardType.STATUS && !status){
             status = true;
-            desc = desc + " Status";
+            desc = desc + " " + CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[5];
         }
         else if (card.type == AbstractCard.CardType.CURSE && !curse){
             curse = true;
-            desc = desc + " Curse";
+            desc = desc + " " + CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[6];
         }
         else{
             noResult = true;
