@@ -29,5 +29,14 @@
   "${ModID}:Retromation": {
     "NAME": "Retromation",
     "DESCRIPTION": "At the start of your turn, gain a card from a Pack not available to your draft. NL It gains Ethereal."
+  },
+  "${ModID}:OddOne": {
+    "NAME": "Odd One",
+    "DESCRIPTION": "Odd: Deal !D! damage to a random enemy. NL Even: Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Odd: Deal !D! damage to a random enemy. NL Even: Draw !M! cards."
+  },
+  "${ModID}:Rhapsody": {
+    "NAME": "Rhapsody",
+    "DESCRIPTION": "Gain !M! ${ModID}:Inspiration. NL Draw 2 cards."
   }
 }
