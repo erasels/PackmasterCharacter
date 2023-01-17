@@ -26,7 +26,7 @@ public class SoilResiliency extends AbstractFarmerCard {
 
 
     public void triggerOnGlowCheck() {
-        int count = checkTypes(true);
+        int count = checkTypes(false);
         if (count >= 3) {this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();}
         else{this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();}
         }
