@@ -28,7 +28,6 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
     public String newPack = null;
     private boolean cardSelected = true;
     private boolean cardSelected2 = true;
-    private AbstractRoom.RoomPhase lastPhase = null;
 
     public BanishingDecree() {
         super(ID, RelicTier.SHOP, LandingSound.FLAT);
@@ -58,7 +57,6 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
             AbstractDungeon.overlayMenu.cancelButton.hide();
             AbstractDungeon.previousScreen = AbstractDungeon.screen;
         }
-        lastPhase = AbstractDungeon.getCurrRoom().phase;
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : SpireAnniversary5Mod.getPreviewCardsFromCurrentSet()) {
@@ -128,7 +126,6 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 skipDefaultCardRewards = true;
                 AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[6]);
                 skipDefaultCardRewards = false;
-                AbstractDungeon.getCurrRoom().phase = lastPhase;
                 AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
 
             }
