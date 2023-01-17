@@ -7,5 +7,27 @@
     "NAME": "Hutt's Gamble",
     "DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] and draw 2 cards next turn.",
     "UPGRADE_DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] [E] and draw 2 cards next turn."
+  },
+  "${ModID}:Tricky": {
+    "NAME": "Tricky",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card drawn during this turn."
+  },
+  "${ModID}:SneakyteakStrike": {
+    "NAME": "Sneakyteak Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Put a *Darkside *Slap on top of your draw pile."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a *Darkside *Slap+ on top of your draw pile."
+  },
+  "${ModID}:DarksideSlap": {
+    "NAME": "Darkside Slap",
+    "DESCRIPTION": "Exhausts at the end of the turn. NL Deal !D! damage."
+  },
+  "${ModID}:Wanderbots": {
+    "NAME": "Wanderbots",
+    "DESCRIPTION": "Channel 1 ${ModID}:Wanderbot.",
+    "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Wanderbot. NL Triger the passive effect of all your Orbs."
+  },
+  "${ModID}:Retromation": {
+    "NAME": "Retromation",
+    "DESCRIPTION": "At the start of your turn, gain a card from a Pack not available to your draft. NL It gains Ethereal."
   }
 }

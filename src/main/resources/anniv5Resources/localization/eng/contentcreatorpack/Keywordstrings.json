@@ -1,3 +1,9 @@
 [
-
+  {
+    "PROPER_NAME": "Wanderbot",
+    "NAMES": [
+      "wanderbot"
+    ],
+    "DESCRIPTION": "Orb: Deals damage to the frontmost enemy. ALso draws cards when Evoked."
+  }
 ]

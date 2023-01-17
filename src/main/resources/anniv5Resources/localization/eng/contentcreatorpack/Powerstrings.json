@@ -13,5 +13,16 @@
       " card next turn.",
       " cards next turn."
     ]
+  },
+  "${ModID}:RetromationPower": {
+    "NAME": "Retromation",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " card",
+      " cards",
+      " from a Pack not available to your draft. NL ",
+      "It gains #yEthereal.",
+      "They gain #yEthereal."
+    ]
   }
 }
