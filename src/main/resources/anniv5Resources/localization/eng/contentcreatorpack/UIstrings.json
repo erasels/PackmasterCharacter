@@ -1,9 +1,9 @@
 {
-  "${ModID}:DistortionPack": {
+  "${ModID}:ContentCreatorPack": {
     "TEXT": [
-      "Distortion",
-      "Everything is as it should be.",
-      "Alchyr"
+      "For The Content",
+      "TODO: Text",
+      "MichaelMayhem & Vex"
     ]
   }
 }

@@ -25,7 +25,7 @@ public class DimensionGatePack extends AbstractCardPack {
         cards.add(ArsenalGear.ID);
         cards.add(ConjureBarrage.ID);
         cards.add(DarkRitual.ID);
-        cards.add(AbstractCard.ID);
+        cards.add(Inferno.ID);
         cards.add(Knighthood.ID);
         cards.add(LethalShot.ID);
         cards.add(Minniegun.ID);

@@ -268,7 +268,7 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, CHOICE, CHOICE, CHOICE));
             defaults.put("PackmasterUnlockedHats", "");
             defaults.put("PackmasterAllPacksMode", "FALSE");
-            defaults.put("PackmasterSelectedHatIndex", 0);
+            defaults.put("PackmasterSelectedHatIndex", "0");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
             modConfig.load();
 
@@ -338,12 +338,12 @@ public class SpireAnniversary5Mod implements
 
     public static int getLastPickedHatIndex() {
         if (modConfig == null) return 0;
-        return modConfig.getInt("PackmasterSelectedHatIndex");
+        return Integer.parseInt(modConfig.getString("PackmasterSelectedHatIndex"));
     }
 
     public static void saveLastPickedHatIndex(int index) throws IOException {
         if (modConfig == null) return;
-        modConfig.setInt("PackmasterSelectedHatIndex", index);
+        modConfig.setString("PackmasterSelectedHatIndex", String.valueOf(index));
         modConfig.save();
     }
 

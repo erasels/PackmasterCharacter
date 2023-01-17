@@ -62,12 +62,17 @@ public class HatMenu {
 
     public HatMenu() {
         refreshHatDropdown();
+    }
 
-        dummy = new ThePackmaster("", ThePackmaster.Enums.THE_PACKMASTER);
-        dummy.drawX = PREVIEW_X;
-        dummy.drawY = PREVIEW_Y;
+    public static AbstractPlayer getDummy() {
+        if (dummy == null) {
+            dummy = new ThePackmaster("", ThePackmaster.Enums.THE_PACKMASTER);
+            dummy.drawX = PREVIEW_X;
+            dummy.drawY = PREVIEW_Y;
 
-        dummy.animX = dummy.animY = 0;
+            dummy.animX = dummy.animY = 0;
+        }
+        return dummy;
     }
 
     public static void refreshHatDropdown() {
@@ -86,7 +91,8 @@ public class HatMenu {
 
         if (init) {
             int lastPickedIdx = SpireAnniversary5Mod.getLastPickedHatIndex();
-            setCurrentHat(lastPickedIdx, optionNames.get(lastPickedIdx));
+            dropdown.setSelectedIndex(lastPickedIdx);
+            //setCurrentHat(lastPickedIdx, optionNames.get(lastPickedIdx));
         }
     }
 
@@ -202,7 +208,7 @@ public class HatMenu {
 
         FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (175 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 300 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
 
-        dummy.renderPlayerImage(sb);
+        getDummy().renderPlayerImage(sb);
 
         dropdown.render(sb, DROPDOWN_X, DROPDOWN_Y);
 
