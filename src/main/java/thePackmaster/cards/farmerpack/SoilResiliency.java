@@ -36,7 +36,8 @@ public class SoilResiliency extends AbstractFarmerCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
         atb(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber)));
-        int count = checkTypes(false);
+        int count = checkTypes(true);
+
         if(count >= 3){
             atb(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
         }
