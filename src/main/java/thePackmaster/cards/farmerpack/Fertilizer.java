@@ -7,8 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-@NoPools
-@NoCompendium
+
 public class Fertilizer extends AbstractFarmerCard {
     public final static String ID = makeID("Fertilizer");
 
