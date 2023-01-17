@@ -21,15 +21,18 @@ public class InscribedMod extends AbstractCardModifier {
     public InscribedMod(boolean inherent,boolean todesc) {
         Todesc = todesc;
     }
-    public void onUpdate(AbstractCard card) {
-        if (CardCrawlGame.dungeon != null){
-            if (card.canUse(AbstractDungeon.player, null)) {
-                card.glowColor = CardHelper.getColor(75, 44, 112);
-            }
-        }
-    }
     public boolean isInherent(AbstractCard card) {
         return inherent;
+    }
+    public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
+        for (AbstractOrb o : AbstractDungeon.player.orbs){
+            if (o instanceof PackmasterOrb){
+                ((PackmasterOrb) o).passiveEffect();
+            } else {
+                o.onStartOfTurn();
+                o.onEndOfTurn();
+            }
+        }
     }
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {

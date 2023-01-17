@@ -10,7 +10,7 @@ public abstract class AbstractRipCard extends AbstractPackmasterCard {
     }
 
     public AbstractRipCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color, String textureString) {
-        super(cardID, cost, type, rarity, target, color, textureString, "rip");
+        super(cardID, cost, type, rarity, target, color, textureString, "rip", null);
 
     }
 }

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class HornetWithin extends AbstractPackmasterCard implements OnInfestCard {
+public class HornetWithin extends AbstractWitchStrikeCard implements OnInfestCard {
     public final static String ID = makeID("HornetWithin");
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
@@ -38,7 +38,7 @@ public class HornetWithin extends AbstractPackmasterCard implements OnInfestCard
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                if (AbstractDungeon.player.hand.size() > 0) {
+                if (AbstractDungeon.player.drawPile.size() > 0) {
                     ArrayList<AbstractCard> Uninscribed = new ArrayList<>();
                     for (AbstractCard c : AbstractDungeon.player.drawPile.group){
                         if (!CardModifierManager.hasModifier(c,"Inscribed")){

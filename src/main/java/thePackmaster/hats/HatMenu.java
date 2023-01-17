@@ -12,21 +12,29 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
+import thePackmaster.hats.specialhats.AlignmentHat;
+import thePackmaster.hats.specialhats.SpecialHat;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.AlignmentPack;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 import static thePackmaster.hats.Hats.currentHat;
 
 public class HatMenu {
-
     public boolean isOpen = false;
     public static boolean invalidHatSelected = false;
 
     private static DropdownMenu dropdown;
     public static final ArrayList<String> hats = new ArrayList<>();
     public static final ArrayList<String> currentlyUnlockedHats = new ArrayList<>();
+    public static final Map<String, SpecialHat> specialHats = new HashMap<>();
+    static {
+        specialHats.put(AlignmentPack.ID, new AlignmentHat());
+    }
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));
@@ -82,10 +90,11 @@ public class HatMenu {
         ArrayList<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
         sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
         for (AbstractCardPack s : sortedPacks) {
-            if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists()) {
-                if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
-                if (UNLOCK_ALL_HATS)
-                    SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
+            if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
+            if (UNLOCK_ALL_HATS)
+                SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
+
+            if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists() || specialHats.containsKey(s.packID)) {
                 if (UNLOCK_ALL_HATS || unlockedHats.contains(s.packID)) {
                     hats.add(s.packID);
                     if (unlockedHats.contains(s.packID)) {

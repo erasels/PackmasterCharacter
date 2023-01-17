@@ -12,7 +12,7 @@ import thePackmaster.powers.witchesstrikepack.MoonlightFlightPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MoonlightFlight extends AbstractPackmasterCard
+public class MoonlightFlight extends AbstractWitchStrikeCard
 
     {
     public final static String ID = makeID("MoonlightFlight");

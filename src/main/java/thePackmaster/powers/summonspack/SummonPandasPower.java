@@ -1,7 +1,6 @@
 package thePackmaster.powers.summonspack;
 
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import thePackmaster.SpireAnniversary5Mod;
@@ -16,12 +15,14 @@ public class SummonPandasPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public SummonPandasPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);;
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
+        priority = 6;
     }
 
     @Override
     public void atStartOfTurn() {
-        atb(new ChannelAction(new Panda()));
+        for (int i = 0; i < amount; i++)
+            atb(new ChannelAction(new Panda()));
     }
 
     @Override

@@ -11,7 +11,7 @@ import thePackmaster.powers.distortionpack.DistortionPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class S_r_ke extends AbstractPackmasterCard {
+public class S_r_ke extends AbstractDistortionCard {
     public final static String ID = makeID("S_r_ke");
     // intellij stuff ATTACK, ENEMY, COMMON, 7, 2, , , 2, 1
 

@@ -1,8 +1,8 @@
 package thePackmaster.hats;
 
-import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.utils.Array;
 import com.esotericsoftware.spine.*;
@@ -12,10 +12,16 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.hats.specialhats.SpecialHat;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static thePackmaster.hats.HatMenu.specialHats;
 
 public class Hats {
     public static String currentHat;
@@ -128,7 +134,10 @@ public class Hats {
         }
 
         String imgPath = getImagePathFromHatID(hatID);
-
+        if (!TexLoader.testTexture(imgPath)) {
+            removeHat(inRun);
+            return;
+        }
 
         if (skeleton.getAttachment(inRun ? playerFoundHeadSlot : foundHeadSlot, "hat") == null) {
             SpireAnniversary5Mod.logger.info("starting attachment process, in run = " + inRun);
@@ -234,6 +243,21 @@ public class Hats {
             addHat(true, currentHat);
         } else {
             removeHat(true);
+        }
+    }
+
+    public static void preRenderPlayer(SpriteBatch sb, AbstractPlayer p) {
+        SpecialHat shat = specialHats.get(currentHat);
+        if (shat != null && skeleton != null && headbone != null) {
+            float x = skeleton.getX() + headbone.getWorldX(), y = skeleton.getY() + headbone.getWorldY();
+            shat.preRenderPlayer(sb, p, x, y);
+        }
+    }
+    public static void postRenderPlayer(SpriteBatch sb, AbstractPlayer p) {
+        SpecialHat shat = specialHats.get(currentHat);
+        if (shat != null && skeleton != null && headbone != null) {
+            float x = skeleton.getX() + headbone.getWorldX(), y = skeleton.getY() + headbone.getWorldY();
+            shat.postRenderPlayer(sb, p, x, y);
         }
     }
 }

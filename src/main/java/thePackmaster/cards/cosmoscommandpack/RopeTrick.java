@@ -8,7 +8,7 @@ import thePackmaster.powers.distortionpack.DistortionPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
-public class RopeTrick extends AbstractPackmasterCard {
+public class RopeTrick extends AbstractCosmosCard {
     public final static String ID = makeID("RopeTrick");
 
     public RopeTrick() {

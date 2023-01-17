@@ -11,5 +11,11 @@
       "Rippable",
       "I need room for both halves of the card in my hand."
     ]
+  },
+  "${ModID}:RipPackHat": {
+    "TEXT": [
+      "Just the right touch of pizzazz.",
+      "Artisan Hat"
+    ]
   }
 }

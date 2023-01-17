@@ -40,10 +40,8 @@
   },
   "${ModID}:Curse": {
     "NAME": "Curse",
-    "DESCRIPTION": "Ethereal. NL ${ModID}:Locking. NL Enemy loses !M! Strength.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Locking. NL Enemy loses !M! Strength.",
+    "DESCRIPTION": "${ModID}:Locking. NL Enemy loses !M! Strength.",
     "EXTENDED_DESCRIPTION": [
-      "Ethereal. NL ${ModID}:Locked. NL Enemy loses !M! Strength.",
       "${ModID}:Locked. NL Enemy loses !M! Strength."
     ]
   },

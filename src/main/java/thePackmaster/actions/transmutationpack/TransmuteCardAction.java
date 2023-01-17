@@ -44,11 +44,6 @@ public class TransmuteCardAction extends AbstractGameAction {
     private final HashMap<AbstractCard, AbstractCard> transmutedPairs = new HashMap<>();
 
     public TransmuteCardAction(boolean anyNumber, BiConsumer<AbstractCard, AbstractCard> followup, Function<AbstractCard, Boolean> conditions) {
-        for (AbstractPower power : AbstractDungeon.player.powers) {
-            if (power instanceof TransmutableAffectingPower) {
-                ((TransmutableAffectingPower)power).onTransmute(this);
-            }
-        }
         this.followup = followup;
         this.anyNumber = anyNumber;
         this.conditions = conditions;
@@ -236,8 +231,17 @@ public class TransmuteCardAction extends AbstractGameAction {
             if (anyNumber && transmutedPairs.keySet().size() > 1) {
                 duration *= 2.0f;
             }
-            AbstractDungeon.topLevelEffects.add(new TransmuteCardEffect(transmutedPairs, CardGroup.CardGroupType.HAND, this, duration));
-            completed = true;
+            for (AbstractPower power : AbstractDungeon.player.powers) {
+                if (power instanceof TransmutableAffectingPower) {
+                    ((TransmutableAffectingPower)power).onTransmute(this, transmutedPairs);
+                }
+            }
+            if (transmutedPairs.isEmpty()) {
+                isDone = true;
+            } else {
+                AbstractDungeon.topLevelEffects.add(new TransmuteCardEffect(transmutedPairs, CardGroup.CardGroupType.HAND, this, duration));
+                completed = true;
+            }
         }
     }
 

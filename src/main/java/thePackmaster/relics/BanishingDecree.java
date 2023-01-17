@@ -57,7 +57,6 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
             AbstractDungeon.overlayMenu.cancelButton.hide();
             AbstractDungeon.previousScreen = AbstractDungeon.screen;
         }
-        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : SpireAnniversary5Mod.getPreviewCardsFromCurrentSet()) {
             tmp.addToTop(c);
@@ -92,11 +91,12 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
                 List<AbstractCard> allOtherPackPreviewCards = SpireAnniversary5Mod.getPreviewCardsNotFromCurrentSet();
+                allOtherPackPreviewCards.removeIf(c -> c.cardID.equals(cp.previewPackCard.cardID));
                 Collections.shuffle(allOtherPackPreviewCards, new Random(Settings.seed).random);
                 CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
                 for (int i = 0; i < 5; i++) {
                     AbstractCard c = allOtherPackPreviewCards.get(i);
-                    if (c != cp.previewPackCard) tmp.addToTop(c);
+                    tmp.addToTop(c);
                 }
                 AbstractDungeon.gridSelectScreen.open(tmp,
                         1, DESCRIPTIONS[5] + name + ".",

@@ -18,7 +18,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class MaterialBoost extends AbstractPackmasterCard {
+public class MaterialBoost extends AbstractOrbCard {
     public final static String ID = makeID("MaterialBoost");
     // intellij stuff skill, none, rare, , , , , , 
 

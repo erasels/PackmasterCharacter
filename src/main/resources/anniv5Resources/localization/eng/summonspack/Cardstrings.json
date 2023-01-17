@@ -2,6 +2,7 @@
   "${ModID}:Leprechaun": {
     "NAME": "Leprechaun",
     "DESCRIPTION": "Channel a ${ModID}:Leprechaun. NL Roll 2d6.",
+    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Leprechaun. NL Roll 3d6.",
     "EXTENDED_DESCRIPTION": [
       "Dice",
       "Dice increase the damage or #yBlock of the next card you play that deals damage or #yBlocks."
@@ -41,13 +42,13 @@
   },
   "${ModID}:Training": {
     "NAME": "Training",
-    "DESCRIPTION": "At the start of your turn Evoke your next orb 1 time without removing it.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn Evoke your next orb !M! times without removing it.",
+    "DESCRIPTION": "At the start of your turn Evoke your next orb !M! times.",
     "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
   },
   "${ModID}:Ambush": {
     "NAME": "Ambush",
     "DESCRIPTION": "Whenever you Channel an Orb, Evoke it without removing it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Channel an Orb, Evoke it without removing it.",
     "FLAVOR": "I couldn't find good ambush art so have a pun."
   },
   "${ModID}:Pandas": {

@@ -10,7 +10,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class MidnightStrike extends AbstractPackmasterCard {
+public class MidnightStrike extends AbstractOdditiesCard {
     public final static String ID = makeID("MidnightStrike");
     // intellij stuff attack, enemy, rare, 12, , , , , 
 

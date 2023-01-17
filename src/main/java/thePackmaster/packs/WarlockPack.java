@@ -38,6 +38,7 @@ public class WarlockPack extends AbstractCardPack {
         cards.add(MalchezaarsImp.ID);
         cards.add(TheSoularium.ID);
         cards.add(RunedMithrilRod.ID);
+        cards.add(Imp.ID);
         return cards;
     }
 

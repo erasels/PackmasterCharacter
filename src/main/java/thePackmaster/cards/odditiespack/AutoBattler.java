@@ -10,7 +10,7 @@ import thePackmaster.powers.odditiespack.AutoBattlerPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class AutoBattler extends AbstractPackmasterCard {
+public class AutoBattler extends AbstractOdditiesCard {
     public final static String ID = makeID("AutoBattler");
     // intellij stuff power, self, rare, , , , , 3, 1
 

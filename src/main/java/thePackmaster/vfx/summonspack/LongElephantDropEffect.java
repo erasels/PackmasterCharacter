@@ -17,7 +17,7 @@ import java.util.Set;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 
 public class LongElephantDropEffect extends AbstractGameEffect {
-    private static final float DURATION = 2.3F;
+    public static final float DURATION = 2.3F;
     private static final float DROP_DURATION = 0.4F;
     private static String IMG_PATH;
     private static Texture IMG;
