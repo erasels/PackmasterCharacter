@@ -20,7 +20,7 @@ public class SoulShear extends AbstractPackmasterCard {
 
     public SoulShear() {
         super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 8;
         cardsToPreview = new Imp();
     }
 

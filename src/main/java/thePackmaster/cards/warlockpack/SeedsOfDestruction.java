@@ -21,8 +21,8 @@ public class SeedsOfDestruction extends AbstractPackmasterCard {
 
     public SeedsOfDestruction() {
         super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-        magicNumber = baseMagicNumber = 2;
-        secondMagic = baseSecondMagic = 3;
+        magicNumber = baseMagicNumber = 3;
+        secondMagic = baseSecondMagic = 4;
         cardsToPreview = new Imp();
     }
 
