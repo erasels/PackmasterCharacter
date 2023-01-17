@@ -1,6 +1,5 @@
 package thePackmaster.powers.gowiththeflowpack;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnCardDrawPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,14 +8,12 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.gowiththeflowpack.FlowDrawAction;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import java.util.Arrays;
 
-public class AqueductsPower extends AbstractPackmasterPower implements OnCardDrawPower {
+public class AqueductsPower extends AbstractPackmasterPower {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID("AqueductsPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
