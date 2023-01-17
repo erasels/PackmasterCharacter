@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Potential extends AbstractPackmasterCard {
+public class Potential extends AbstractQuantaCard {
     public final static String ID = makeID("Potential");
 
     public Potential() {

@@ -8,7 +8,7 @@ import thePackmaster.powers.quantapack.IchorGobletPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class IchorGoblet extends AbstractPackmasterCard {
+public class IchorGoblet extends AbstractQuantaCard {
     public final static String ID = makeID("IchorGoblet");
 
     public IchorGoblet() {
