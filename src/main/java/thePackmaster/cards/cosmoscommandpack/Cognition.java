@@ -13,7 +13,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.vfx;
 
-public class Cognition extends AbstractPackmasterCard implements AmplifyCard {
+public class Cognition extends AbstractCosmosCard implements AmplifyCard {
     public final static String ID = makeID("Cognition");
 
     public Cognition() {

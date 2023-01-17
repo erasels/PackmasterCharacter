@@ -31,6 +31,9 @@ public class WeaponsPack extends AbstractCardPack {
         cards.add(ForgingHammer.ID);
         cards.add(Sword.ID);
         cards.add(WeaponMastery.ID);
+        cards.add(SwordOfChaos.ID);
+        cards.add(SwordOfFire.ID);
+        cards.add(SwordOfWisdom.ID);
         return cards;
     }
 }

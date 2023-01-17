@@ -8,7 +8,7 @@ import thePackmaster.powers.batterpack.AvatarBeatPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class AvatarBeat extends AbstractPackmasterCard {
+public class AvatarBeat extends AbstractBatterCard {
     public final static String ID = makeID("AvatarBeat");
 
     public AvatarBeat() {

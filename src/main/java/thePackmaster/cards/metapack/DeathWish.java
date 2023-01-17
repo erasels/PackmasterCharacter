@@ -11,7 +11,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class DeathWish extends AbstractPackmasterCard {
+public class DeathWish extends AbstractMetaCard {
     public final static String ID = makeID("DeathWish");
 
     public DeathWish() {

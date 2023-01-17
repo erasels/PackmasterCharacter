@@ -10,7 +10,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class Hollower extends AbstractPackmasterCard {
+public class Hollower extends AbstractRingOfPainCard {
     public final static String ID = makeID(Hollower.class.getSimpleName());
 
     private static final int EXHAUST = 2;
@@ -20,11 +20,7 @@ public class Hollower extends AbstractPackmasterCard {
         magicNumber = baseMagicNumber = EXHAUST;
         isEthereal = true;
 
-        if (!SpireAnniversary5Mod.oneFrameMode)
-        setBackgroundTexture(
-                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
-        );
+        
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -12,7 +12,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class KillerInstinct extends AbstractPackmasterCard implements StartupCard{
+public class KillerInstinct extends AbstractMetaCard implements StartupCard{
     public final static String ID = makeID("KillerInstinct");
 
     public KillerInstinct() {

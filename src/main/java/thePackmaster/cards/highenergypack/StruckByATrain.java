@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -17,7 +16,7 @@ public class StruckByATrain extends AbstractHighEnergyCard {
     public StruckByATrain() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 25;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 25;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

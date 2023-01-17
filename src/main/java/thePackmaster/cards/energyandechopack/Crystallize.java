@@ -16,7 +16,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
-public class Crystallize extends AbstractPackmasterCard {
+public class Crystallize extends AbstractEchoCard {
 
     public final static String ID = makeID(Crystallize.class.getSimpleName());
 

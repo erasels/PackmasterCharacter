@@ -12,7 +12,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WideAngle extends AbstractPackmasterCard {
+public class WideAngle extends AbstractBatterCard {
     public final static String ID = makeID("WideAngle");
 
     public WideAngle() {

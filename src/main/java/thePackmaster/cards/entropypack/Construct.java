@@ -11,7 +11,7 @@ import thePackmaster.powers.entropypack.ConstructPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Construct extends AbstractPackmasterCard {
+public class Construct extends AbstractEntropyCard {
     public final static String ID = makeID("Construct");
     // intellij stuff skill, self, uncommon, , , , , 4, 2
 

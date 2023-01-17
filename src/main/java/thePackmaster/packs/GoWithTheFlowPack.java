@@ -16,6 +16,7 @@ public class GoWithTheFlowPack extends AbstractCardPack {
 
     public GoWithTheFlowPack() {
         super(ID, NAME, DESC, AUTHOR);
+        hatHidesHair = true;
     }
 
     @Override

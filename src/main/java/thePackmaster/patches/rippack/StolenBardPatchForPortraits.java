@@ -7,14 +7,18 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import javassist.CtBehavior;
+import thePackmaster.cards.odditiespack.EightBall;
 import thePackmaster.cards.rippack.SurprisePack;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class StolenBardPatchForPortraits {
-    private static final List<String> cardIDs = Collections.singletonList(
-            SurprisePack.ID
+    private static final List<String> cardIDs = Arrays.asList(
+            SurprisePack.ID,
+            EightBall.ID
     );
 
     @SpirePatch(
