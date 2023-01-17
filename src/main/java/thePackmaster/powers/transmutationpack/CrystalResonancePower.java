@@ -12,6 +12,8 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.transmutationpack.TransmuteCardAction;
 import thePackmaster.powers.AbstractPackmasterPower;
 
+import java.util.HashMap;
+
 public class CrystalResonancePower extends AbstractPackmasterPower implements TransmutableAffectingPower {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID("CrystalResonancePower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -28,7 +30,9 @@ public class CrystalResonancePower extends AbstractPackmasterPower implements Tr
     }
 
     @Override
-    public void onTransmute(TransmuteCardAction action) {
-        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+    public void onTransmute(TransmuteCardAction action, HashMap<AbstractCard, AbstractCard> pairs) {
+        if (!pairs.isEmpty()) {
+            addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+        }
     }
 }
