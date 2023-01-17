@@ -19,7 +19,7 @@
   "${ModID}:HarvestRadishes": {
     "NAME": "Harvest Radishes",
     "DESCRIPTION": "Deal !D! damage. NL Apply 1 Weak for each card type you've played this turn.",
-    "EXTENDED_DESCRIPTION": [" NL (Repeat !M! times.)"]
+    "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
   },
   "${ModID}:OutToMarket": {
     "NAME": "Out To Market",
