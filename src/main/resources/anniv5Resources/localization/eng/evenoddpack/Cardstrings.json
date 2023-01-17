@@ -1,8 +1,8 @@
 {
-  "${ModID}:GreyBargain": {
-    "NAME": "Grey Bargain",
-    "DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand.",
-    "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand. NL Draw a card.",
-    "EXTENDED_DESCRIPTION": ["I need a card to Exhaust."]
+  "${ModID}:SwordAndBoard": {
+    "NAME": "Sword and Board",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["{ModID}:Even: ", "Deal !D! damage.", " NL ","{ModID}:Odd: ", "Gain !B! Block"]
   }
 }

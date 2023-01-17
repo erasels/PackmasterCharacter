@@ -12,7 +12,8 @@ public abstract class AbstractEvenOddCard extends AbstractPackmasterCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        this.createEvenOddText();
+        this.rawDescription = this.createEvenOddText();
+        initializeDescription();
     }
     
     protected abstract String createEvenOddText();
