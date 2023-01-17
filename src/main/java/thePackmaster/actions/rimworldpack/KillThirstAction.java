@@ -14,7 +14,7 @@ public class KillThirstAction extends AbstractGameAction {
     private DamageInfo info;
 
     //Copied from Sunder but changed to lose Mood if not fatal instead of gain E if fatal
-    public KillThirstAction(AbstractCreature target, DamageInfo info, int moodAmount) {
+    public KillThirstAction(AbstractCreature target, DamageInfo info) {
         this.info = info;
         setValues(target, info);
         this.actionType = AbstractGameAction.ActionType.DAMAGE;

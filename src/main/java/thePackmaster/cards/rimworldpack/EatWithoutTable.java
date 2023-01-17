@@ -16,6 +16,8 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.rimworldpack.SpikeTrapPower;
 import thePackmaster.util.Wiz;
 
+import java.util.ArrayList;
+
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.SpireAnniversary5Mod.modID;
 
@@ -34,14 +36,17 @@ public class EatWithoutTable extends AbstractPackmasterCard {
             @Override
             public void update() {
                 AbstractPotion potion = null;
-                int tries = 0;
-                while(tries < 100 && potion == null){
-                     AbstractPotion newTry = PotionHelper.getRandomPotion();
-                     if(newTry.rarity == AbstractPotion.PotionRarity.COMMON && newTry.canUse() && !newTry.isThrown)
-                         potion = newTry;
-                     else
-                         tries++;
+                ArrayList<AbstractPotion> potions = PotionHelper.getPotionsByRarity(AbstractPotion.PotionRarity.COMMON);
+                ArrayList<AbstractPotion> drinkable = new ArrayList<>();
+
+                for (AbstractPotion pot: potions) {
+                    if(pot.rarity == AbstractPotion.PotionRarity.COMMON && pot.canUse() && !pot.isThrown)
+                        drinkable.add(pot);
                 }
+
+                if(drinkable.size() > 0)
+                    potion = drinkable.get(AbstractDungeon.cardRandomRng.random(drinkable.size()-1));
+
                 if(potion == null)
                     potion = new SwiftPotion();
 

@@ -18,7 +18,7 @@ public class KillThirst extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new KillThirstAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), magicNumber));
+        addToBot(new KillThirstAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
     }
 
     public void upp() {

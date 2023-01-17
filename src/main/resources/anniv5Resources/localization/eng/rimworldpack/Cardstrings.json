@@ -1,8 +1,4 @@
 {
-  "${ModID}:ThrowHorseshoe": {
-    "NAME": "Throw Horseshoe",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Increase_Mood by !M!."
-  },
   "${ModID}:ChainShotgun": {
     "NAME": "Chain Shotgun",
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
@@ -10,14 +6,6 @@
   "${ModID}:Despair": {
     "NAME": "Despair",
     "DESCRIPTION": "Counts as a Curse. NL Exhaust."
-  },
-  "${ModID}:Relax": {
-    "NAME": "Relax",
-    "DESCRIPTION": "Discard any number of cards. ${ModID}:Increase_Mood by !M!."
-  },
-  "${ModID}:Overwork": {
-    "NAME": "Overwork",
-    "DESCRIPTION": "Reduce the cost of all cards in your hand to 0 this turn. NL Reduce Mood by !M!."
   },
   "${ModID}:EatWithoutTable": {
     "NAME": "Eat Without Table",
@@ -47,10 +35,6 @@
   "${ModID}:TradeBeacon": {
     "NAME": "Trade Beacon",
     "DESCRIPTION": "The first time you draw or discard during your turn, draw !M! cards."
-  },
-  "${ModID}:Sanguine": {
-    "NAME": "Sanguine",
-    "DESCRIPTION": "At the start of your turn, ${ModID}:Increase_Mood by !M!."
   },
   "${ModID}:BurningPassion": {
     "NAME": "Burning Passion",
