@@ -13,7 +13,7 @@ public class Turtle extends AbstractPackmasterCard {
 
     public final static String ID = makeID(Turtle.class.getSimpleName());
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public Turtle(){
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

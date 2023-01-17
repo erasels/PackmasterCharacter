@@ -1,5 +1,6 @@
 package thePackmaster.cards.warriorpack;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -25,7 +26,7 @@ public class WarSong extends AbstractPackmasterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
-        applyToSelf(new VigorPower(m, secondMagic));
+        this.addToBot(new ApplyPowerAction(p, p, new VigorPower(p, this.secondMagic), this.secondMagic));
     }
 
     @Override

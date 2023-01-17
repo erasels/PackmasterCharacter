@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
 
 public class FeralDamage extends AbstractDamageModifier {
@@ -26,7 +27,11 @@ public class FeralDamage extends AbstractDamageModifier {
     @Override
     public float atDamageFinalGive(float damage, DamageInfo.DamageType type, AbstractCreature target, AbstractCard card) {
         if (target != null)
-            return super.atDamageGive(damage, type, target, card) * 2.0F;
+            for (AbstractPower pow : target.powers) {
+                if (pow.type == AbstractPower.PowerType.DEBUFF)
+                    return super.atDamageGive(damage, type, target, card) * 1.5F;
+            }
+
         return super.atDamageGive(damage, type, target, card);
     }
 

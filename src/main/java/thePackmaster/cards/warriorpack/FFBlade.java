@@ -19,7 +19,7 @@ public class FFBlade extends AbstractPackmasterCard {
 
     public FFBlade(){
         super(ID, COST, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 8;
         DamageModifierManager.addModifier(this, new FastDamage());
         DamageModifierManager.addModifier(this, new FeralDamage());
         DamageModifierManager.addModifier(this, new FrontDamage());
@@ -32,6 +32,6 @@ public class FFBlade extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(4);
     }
 }

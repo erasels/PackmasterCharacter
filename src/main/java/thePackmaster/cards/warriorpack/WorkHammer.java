@@ -19,7 +19,7 @@ public class WorkHammer extends AbstractPackmasterCard {
     private static final int COST = 1;
 
     public WorkHammer(){
-        super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
         DamageModifierManager.addModifier(this, new FrontDamage());
         baseBlock = 4;

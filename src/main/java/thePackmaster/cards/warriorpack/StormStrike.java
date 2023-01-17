@@ -21,9 +21,9 @@ public class StormStrike extends AbstractPackmasterCard {
     private static final int COST = 1;
 
     public StormStrike(){
-        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         tags.add(CardTags.STRIKE);
-        baseDamage = 3;
+        baseDamage = 6;
         DamageModifierManager.addModifier(this, new FeralDamage());
         magicNumber = baseMagicNumber = 1;
     }
