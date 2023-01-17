@@ -50,7 +50,7 @@ public class HazardousStrike extends AbstractRippableCard {
                 }
             }
         });
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
     }
 
     @Override

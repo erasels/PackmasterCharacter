@@ -10,7 +10,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Cull extends AbstractPackmasterCard {
+public class Cull extends AbstractQuantaCard {
     public final static String ID = makeID("Cull");
 
     public Cull() {

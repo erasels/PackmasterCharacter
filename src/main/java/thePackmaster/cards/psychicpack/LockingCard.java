@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public abstract class LockingCard extends AbstractPackmasterCard implements LockingCardInterface {
+public abstract class LockingCard extends AbstractPsychicCard implements LockingCardInterface {
     private boolean locked;
 
     public LockingCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {

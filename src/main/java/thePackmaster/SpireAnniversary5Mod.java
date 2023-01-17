@@ -47,6 +47,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
 import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
@@ -808,6 +809,7 @@ public class SpireAnniversary5Mod implements
         if (!openedStarterScreen) {
             if (CardCrawlGame.isInARun() && doPackSetup && !AbstractDungeon.isScreenUp) {
                 logger.info("Starting Packmaster setup.");
+                if (HatMenu.randomHatMode) HatMenu.randomizeHat();
                 startOfGamePackSetup();
                 openedStarterScreen = true;
             }

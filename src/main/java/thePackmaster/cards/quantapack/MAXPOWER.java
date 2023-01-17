@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MAXPOWER extends AbstractPackmasterCard {
+public class MAXPOWER extends AbstractQuantaCard {
     public final static String ID = makeID("MAXPOWER");
 
     public MAXPOWER() {

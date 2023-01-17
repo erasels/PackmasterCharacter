@@ -14,7 +14,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class RunedMithrilRod extends AbstractPackmasterCard {
+public class RunedMithrilRod extends AbstractWarlockCard {
     public final static String ID = makeID(RunedMithrilRod.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
