@@ -16,7 +16,7 @@ import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ChitteringPunt extends AbstractPackmasterCard {
+public class ChitteringPunt extends AbstractWitchStrikeCard {
     public final static String ID = makeID("ChitteringPunt");
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 

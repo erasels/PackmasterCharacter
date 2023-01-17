@@ -10,7 +10,7 @@ import thePackmaster.packs.EnergyAndEchoPack;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class MagnetRise extends AbstractPackmasterCard {
+public class MagnetRise extends AbstractEchoCard {
 
     public final static String ID = makeID(MagnetRise.class.getSimpleName());
 

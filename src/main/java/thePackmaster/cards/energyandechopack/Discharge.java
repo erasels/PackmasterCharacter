@@ -9,7 +9,7 @@ import thePackmaster.packs.EnergyAndEchoPack;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Discharge extends AbstractPackmasterCard {
+public class Discharge extends AbstractEchoCard {
 
     public final static String ID = makeID(Discharge.class.getSimpleName());
 

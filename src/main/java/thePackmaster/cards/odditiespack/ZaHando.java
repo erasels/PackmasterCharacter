@@ -18,7 +18,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
-public class ZaHando extends AbstractPackmasterCard {
+public class ZaHando extends AbstractOdditiesCard {
     public final static String ID = makeID("ZaHando");
     // intellij stuff attack, enemy, uncommon, 13, 4, , , , 
 

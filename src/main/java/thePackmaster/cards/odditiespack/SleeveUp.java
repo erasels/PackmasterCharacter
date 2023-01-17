@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class SleeveUp extends AbstractPackmasterCard implements SpawnModificationCard {
+public class SleeveUp extends AbstractOdditiesCard implements SpawnModificationCard {
     public final static String ID = makeID("SleeveUp");
     // intellij stuff skill, self, uncommon, , , , , 3, 1
 
