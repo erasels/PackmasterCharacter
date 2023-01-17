@@ -9,7 +9,7 @@ import thePackmaster.powers.warlockpack.MalchezaarsImpUpgradedPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class MalchezaarsImp extends AbstractPackmasterCard {
+public class MalchezaarsImp extends AbstractWarlockCard {
     public final static String ID = makeID(MalchezaarsImp.class.getSimpleName());
 
     private static final int COST = 3;

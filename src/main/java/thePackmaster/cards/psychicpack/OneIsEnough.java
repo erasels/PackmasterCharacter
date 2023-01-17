@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class OneIsEnough extends AbstractPackmasterCard {
+public class OneIsEnough extends AbstractPsychicCard {
     public final static String ID = makeID("OneIsEnough");
     // intellij stuff skill, none, uncommon, , , , , 2, 1
 
