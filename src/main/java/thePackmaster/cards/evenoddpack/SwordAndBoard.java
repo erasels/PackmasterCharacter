@@ -22,8 +22,7 @@ public class SwordAndBoard extends AbstractEvenOddCard{
     
     public SwordAndBoard() {
         super(ID, COST, TYPE, RARITY, TARGET);
-        rawDescription = "";
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
+        rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
@@ -41,8 +40,7 @@ public class SwordAndBoard extends AbstractEvenOddCard{
     
     @Override
     public void onMoveToDiscard() {
-        rawDescription = "";
-        rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
+        rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
