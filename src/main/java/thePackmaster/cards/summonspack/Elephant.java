@@ -13,13 +13,14 @@ import thePackmaster.actions.summonspack.SetCardTargetCoordinatesAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.vfx.summonspack.ElephantDropEffect;
 import thePackmaster.vfx.summonspack.LongElephantDropEffect;
+import thePackmaster.vfx.summonspack.MediumElephantDropEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.*;
 
-public class Elephant extends AbstractPackmasterCard {
+public class Elephant extends AbstractSummonsCard {
     public final static String ID = makeID(Elephant.class.getSimpleName());
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;
@@ -46,8 +47,14 @@ public class Elephant extends AbstractPackmasterCard {
         atb(new SetCardTargetCoordinatesAction(this, Settings.WIDTH/2f -400f*Settings.scale,-1f));
         if (!seenThisSession) {
             seenThisSession = true;
-            AbstractGameEffect effect = new LongElephantDropEffect();
-            vfx(effect, 2.35f);
+            if (Settings.SOUND_VOLUME >=  0.1f && Settings.MASTER_VOLUME >= 0.1f) {
+                AbstractGameEffect effect = new LongElephantDropEffect();
+                vfx(effect, LongElephantDropEffect.DURATION);
+            }
+            else {
+                AbstractGameEffect effect = new MediumElephantDropEffect();
+                vfx(effect, MediumElephantDropEffect.DURATION);
+            }
         }  else if (MathUtils.random(0, 1f) < 0.05f)
             vfx(new LongElephantDropEffect(), 2.35f);
         else

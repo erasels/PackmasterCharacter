@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class EightBall extends AbstractPackmasterCard {
+public class EightBall extends AbstractOdditiesCard {
     public final static String ID = makeID("EightBall");
     // intellij stuff attack, enemy, special, 12, 3, 10, 2, , 
 

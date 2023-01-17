@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.shuffleIn;
 
-public class LetsPlay8Ball extends AbstractPackmasterCard {
+public class LetsPlay8Ball extends AbstractOdditiesCard {
     public final static String ID = makeID("LetsPlay8Ball");
     // intellij stuff power, self, uncommon, , , , , , 
 

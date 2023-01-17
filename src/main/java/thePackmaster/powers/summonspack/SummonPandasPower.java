@@ -21,7 +21,8 @@ public class SummonPandasPower extends AbstractPackmasterPower {
 
     @Override
     public void atStartOfTurn() {
-        atb(new ChannelAction(new Panda()));
+        for (int i = 0; i < amount; i++)
+            atb(new ChannelAction(new Panda()));
     }
 
     @Override

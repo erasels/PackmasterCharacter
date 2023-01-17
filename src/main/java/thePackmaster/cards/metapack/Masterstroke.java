@@ -14,7 +14,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Masterstroke extends AbstractPackmasterCard {
+public class Masterstroke extends AbstractMetaCard {
     public final static String ID = makeID("Masterstroke");
 
     private static final int DAMAGE = 4;

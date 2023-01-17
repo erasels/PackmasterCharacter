@@ -8,7 +8,7 @@ import thePackmaster.powers.orbpack.ThunderstruckPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Thunderstruck extends AbstractPackmasterCard {
+public class Thunderstruck extends AbstractOrbCard {
     public final static String ID = makeID("Thunderstruck");
     // intellij stuff power, none, rare, , , , , 1, 
 

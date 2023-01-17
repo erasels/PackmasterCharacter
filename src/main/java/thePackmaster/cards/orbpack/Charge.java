@@ -11,7 +11,7 @@ import thePackmaster.orbs.PackmasterOrb;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Charge extends AbstractPackmasterCard {
+public class Charge extends AbstractOrbCard {
     public final static String ID = makeID("Charge");
     // intellij stuff attack, enemy, rare, 6, 4, , , , 
 

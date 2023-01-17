@@ -11,7 +11,7 @@ import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.doDmg;
 
-public class Quill extends AbstractPackmasterCard {
+public class Quill extends AbstractSummonsCard {
     public final static String ID = makeID(Quill.class.getSimpleName());
     private static final int COST = 0;
     private static final CardType TYPE = CardType.ATTACK;

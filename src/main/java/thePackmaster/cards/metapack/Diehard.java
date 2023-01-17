@@ -9,7 +9,7 @@ import thePackmaster.powers.metapack.DiehardPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Diehard extends AbstractPackmasterCard {
+public class Diehard extends AbstractMetaCard {
     public final static String ID = makeID("Diehard");
 
     public Diehard() {

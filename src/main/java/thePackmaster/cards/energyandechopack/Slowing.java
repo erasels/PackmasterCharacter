@@ -10,7 +10,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.makeInHand;
 
-public class Slowing extends AbstractPackmasterCard {
+public class Slowing extends AbstractEchoCard {
 
     public final static String ID = makeID(Slowing.class.getSimpleName());
 
