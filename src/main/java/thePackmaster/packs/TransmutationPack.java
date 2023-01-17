@@ -16,6 +16,7 @@ public class TransmutationPack extends AbstractCardPack {
 
     public TransmutationPack() {
         super(ID, NAME, DESC, AUTHOR);
+        hatHidesHair = true;
     }
 
     @Override
