@@ -8,7 +8,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Dominate extends AbstractPackmasterCard {
+public class Dominate extends AbstractQuantaCard {
     public final static String ID = makeID("Dominate");
 
     public Dominate() {

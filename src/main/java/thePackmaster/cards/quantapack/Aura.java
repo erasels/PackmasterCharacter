@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Aura extends AbstractPackmasterCard {
+public class Aura extends AbstractQuantaCard {
     public final static String ID = makeID("Aura");
 
     public Aura() {
