@@ -2,8 +2,7 @@
   "${ModID}:CrystalResonancePower": {
     "NAME": "Crystal Resonance",
     "DESCRIPTIONS": [
-      "Whenever you #yTransmute a card, draw a card.",
-      "Whenever you #yTransmute a card, draw #b", " cards."
+      "Whenever you #yTransmute, gain #b", " #yStrength"
     ]
   }
 }

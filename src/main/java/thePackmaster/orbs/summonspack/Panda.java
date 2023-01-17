@@ -35,7 +35,7 @@ public class Panda extends CustomOrb {
     private static final float PANDA_WIDTH = 96.0f;
     private static final Color TEXT_COLOR = new Color(1.0f, 0.25f, 0.25f, 1.0f);
     private static final int BASE_PASSIVE = 5;
-    private static final int BASE_EVOKE = 10;
+    private static final int BASE_EVOKE = 5;
 
     // DO NOT SET EITHER OF THESE TO ZERO
     public static final float BOUNCE_DURATION = 1.0f;
