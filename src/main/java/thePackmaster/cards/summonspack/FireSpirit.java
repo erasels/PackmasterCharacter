@@ -37,8 +37,8 @@ public class FireSpirit extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         DamageInfo info = new DamageInfo(adp(), damage, DamageInfo.DamageType.NORMAL);
         DamageAction action = new DamageAction(m, info, AbstractGameAction.AttackEffect.FIRE);
-        ColoredDamagePatch.DamageActionColorField.damageColor.set(action, Color.ORANGE.cpy());
-        ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
+        ColoredDamagePatch.DamageActionColorField.damageColor.set(action, Color.FIREBRICK.cpy());
+        ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.SLOW);
         atb(action);
         atb(new ChannelAction(new thePackmaster.orbs.summonspack.FireSpirit()));
     }

@@ -20,7 +20,7 @@ public class Training extends AbstractPackmasterCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 1;
 
     public Training() {
@@ -38,6 +38,5 @@ public class Training extends AbstractPackmasterCard {
     @Override
     public void upp() {
         upMagic(UPGRADE_MAGIC);
-        uDesc();
     }
 }
