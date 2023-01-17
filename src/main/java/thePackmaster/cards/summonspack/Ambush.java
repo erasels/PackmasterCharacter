@@ -3,7 +3,6 @@ package thePackmaster.cards.summonspack;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.summonspack.AmbushPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -18,7 +17,6 @@ public class Ambush extends AbstractSummonsCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
 
     public Ambush() {
         super(ID, COST, TYPE, RARITY, TARGET);
@@ -33,6 +31,6 @@ public class Ambush extends AbstractSummonsCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(UPGRADED_COST);
+        isInnate = true;
     }
 }

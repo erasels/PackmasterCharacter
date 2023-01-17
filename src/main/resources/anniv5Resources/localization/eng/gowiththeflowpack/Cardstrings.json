@@ -22,7 +22,8 @@
   },
   "${ModID}:IcyFloe": {
     "NAME": "Icy Floe",
-    "DESCRIPTION": "${ModID}:Flow. NL Increase your maximum hand size by !M!."
+    "DESCRIPTION": "${ModID}:Flow. NL Next turn, NL gain [E] [E].",
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL Next turn, NL gain [E] [E] [E]."
   },
   "${ModID}:Pneumatics": {
     "NAME": "Pneumatics",
