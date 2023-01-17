@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Doomguard extends AbstractPackmasterCard {
+public class Doomguard extends AbstractWarlockCard {
     public final static String ID = makeID(Doomguard.class.getSimpleName());
 
     private static final int COST = 2;
