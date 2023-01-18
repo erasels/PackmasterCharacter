@@ -29,29 +29,25 @@ public class BrushModalCostChoice extends AbstractCreativityCard {
         switch (type) {
             case ATTACK:
                 name = uiStrings.TEXT[0];
-                rawDescription = uiStrings.TEXT[0];
                 break;
             case SKILL:
                 name = uiStrings.TEXT[1];
-                rawDescription = uiStrings.TEXT[1];
                 break;
             case POWER:
                 name = uiStrings.TEXT[2];
-                rawDescription = uiStrings.TEXT[2];
                 break;
             default:
                 name = uiStrings.TEXT[5];
-                rawDescription = uiStrings.TEXT[5];
                 break;
         }
         initializeTitle();
-        initializeDescription();
     }
 
     public void onChoseThisOption()
     {
         AbstractCard origin = this;
-        addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(JediUtil.filterCardsForDiscovery(c -> c.type == type && c.cost == cost)),
+        addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(JediUtil.filterCardsForDiscovery(
+                c -> c.type == type && c.cost == cost && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL)),
                 crd -> {if (origin.upgraded) crd.upgrade();},
                 false));
     }
@@ -62,7 +58,5 @@ public class BrushModalCostChoice extends AbstractCreativityCard {
 
     @Override
     public void upp() {
-        rawDescription = "";
-        uDesc();
     }
 }

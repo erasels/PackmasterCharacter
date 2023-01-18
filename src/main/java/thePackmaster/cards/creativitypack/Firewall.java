@@ -14,7 +14,7 @@ public class Firewall extends AbstractCreativityCard {
     public final static String ID = makeID(Firewall.class.getSimpleName());
 
     public Firewall() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     @Override

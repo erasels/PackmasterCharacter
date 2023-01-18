@@ -38,5 +38,13 @@
   "${ModID}:AccumulativeStrike": {
     "NAME": "Accumulative Strike",
     "DESCRIPTION": "{@@}Deal !D! damage. NL Deals !M! additional damage for ALL your {!Upgrades!|0= non-Status} created cards."
+  },
+  "${ModID}:BrushModalTypeChoice": {
+    "NAME": "You should never see this",
+    "DESCRIPTION": "{@@}Select this card type for Discovery."
+  },
+  "${ModID}:BrushModalCostChoice": {
+    "NAME": "You should never see this",
+    "DESCRIPTION": "{@@}Select this card cost for Discovery."
   }
 }

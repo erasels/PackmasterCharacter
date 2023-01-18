@@ -25,23 +25,18 @@ public class BrushModalTypeChoice extends AbstractCreativityCard {
         switch (type) {
             case ATTACK:
                 name = uiStrings.TEXT[0];
-                rawDescription = uiStrings.TEXT[0];
                 break;
             case SKILL:
                 name = uiStrings.TEXT[1];
-                rawDescription = uiStrings.TEXT[1];
                 break;
             case POWER:
                 name = uiStrings.TEXT[2];
-                rawDescription = uiStrings.TEXT[2];
                 break;
             default:
                 name = uiStrings.TEXT[5];
-                rawDescription = uiStrings.TEXT[5];
                 break;
         }
         initializeTitle();
-        initializeDescription();
     }
 
     public void onChoseThisOption()
@@ -55,7 +50,12 @@ public class BrushModalTypeChoice extends AbstractCreativityCard {
         Set<Integer> costList = new HashSet<>();
         for (AbstractCard c : CardLibrary.getAllCards())
         {
-            if (c.type == type) costList.add(c.cost);
+            if (    c.type == type &&
+                    !c.hasTag(CardTags.HEALING) &&
+                    c.rarity != CardRarity.SPECIAL)
+            {
+                costList.add(c.cost);
+            }
         }
         costList.stream().sorted().forEach(i ->
         {
@@ -73,7 +73,5 @@ public class BrushModalTypeChoice extends AbstractCreativityCard {
 
     @Override
     public void upp() {
-        rawDescription = "";
-        uDesc();
     }
 }
