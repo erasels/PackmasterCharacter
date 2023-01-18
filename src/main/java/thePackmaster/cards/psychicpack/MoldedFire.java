@@ -17,7 +17,7 @@ import thePackmaster.vfx.psychicpack.EradicationEffect;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class MoldedFire extends AbstractPackmasterCard {
+public class MoldedFire extends AbstractPsychicCard {
     public final static String ID = makeID("MoldedFire");
     // intellij stuff attack, enemy, special, 11, 4, , , , 
 

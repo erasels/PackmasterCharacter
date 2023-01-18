@@ -1,10 +1,8 @@
 package thePackmaster.cards.rimworldpack;
 
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.rimworldpack.MoodPower;
 import thePackmaster.powers.rimworldpack.SpikeTrapPower;
 import thePackmaster.util.Wiz;
 

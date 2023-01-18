@@ -17,11 +17,11 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.thornDmg;
 
-public class Imp extends AbstractPackmasterCard {
+public class Imp extends AbstractWarlockCard {
     public final static String ID = makeID(Imp.class.getSimpleName());
 
     private static final int COST = -2;
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 3;
     private static final int DAMAGE_INCREASE = 1;
     private static final int UPGRADE_DAMAGE_INCREASE = 1;
 

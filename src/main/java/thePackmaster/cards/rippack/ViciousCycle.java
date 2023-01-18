@@ -20,7 +20,7 @@ public class ViciousCycle extends AbstractRippableCard {
 
     public ViciousCycle(AbstractRippedArtCard artCard, AbstractRippedTextCard textCard) {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = damage = 5;
+        baseDamage = damage = 6;
         if (artCard == null && textCard == null) {
             setRippedCards(new ViciousCycleArt(this), new ViciousCycleText(this));
         } else if(artCard == null){

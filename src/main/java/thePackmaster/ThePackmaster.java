@@ -5,6 +5,7 @@ import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -24,6 +25,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.cards.*;
+import thePackmaster.hats.Hats;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.relics.HandyHaversack;
 import thePackmaster.vfx.VictoryConfettiEffect;
@@ -241,6 +243,13 @@ public class ThePackmaster extends CustomPlayer {
         }
 
         return poolCards;
+    }
+
+    @Override
+    public void renderPlayerImage(SpriteBatch sb) {
+        Hats.preRenderPlayer(sb, this);
+        super.renderPlayerImage(sb);
+        Hats.postRenderPlayer(sb, this);
     }
 
     @Override

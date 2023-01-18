@@ -100,11 +100,11 @@ public abstract class AbstractPackmasterCard extends CustomCard {
 
         if (frameFolder == null || SpireAnniversary5Mod.oneFrameMode){
             setBackgroundTexture(
-                    "anniv5Resources/images/512/coreset/" + type.name().toLowerCase() + ".png",
-                    "anniv5Resources/images/1024/coreset/" + type.name().toLowerCase() + ".png");
+                    "anniv5Resources/images/512/coreset/" + getTypeName() + ".png",
+                    "anniv5Resources/images/1024/coreset/" + getTypeName() + ".png");
         } else {
-            setBackgroundTexture("anniv5Resources/images/512/" + frameFolder + "/" + type.name().toLowerCase(Locale.ROOT) + ".png",
-                    "anniv5Resources/images/1024/" + frameFolder + "/" + type.name().toLowerCase(Locale.ROOT) + ".png");
+            setBackgroundTexture("anniv5Resources/images/512/" + frameFolder + "/" + getTypeName() + ".png",
+                    "anniv5Resources/images/1024/" + frameFolder + "/" + getTypeName() + ".png");
 
         }
 
@@ -115,6 +115,17 @@ public abstract class AbstractPackmasterCard extends CustomCard {
             );
         }
 
+    }
+
+    private String getTypeName() {
+        switch (type) {
+            case ATTACK:
+                return "attack";
+            case POWER:
+                return "power";
+            default:
+                return "skill";
+        }
     }
 
     @Override

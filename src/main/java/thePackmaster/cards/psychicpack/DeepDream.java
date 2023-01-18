@@ -8,7 +8,7 @@ import thePackmaster.powers.psychicpack.DeepDreamPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class DeepDream extends AbstractPackmasterCard {
+public class DeepDream extends AbstractPsychicCard {
     public final static String ID = makeID("DeepDream");
     // intellij stuff skill, none, rare, , , , , 5, 2
 

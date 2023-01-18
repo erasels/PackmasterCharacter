@@ -11,11 +11,13 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
+import thePackmaster.hats.HatMenu;
 import thePackmaster.util.CardArtRoller;
 
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
@@ -27,6 +29,7 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
     private Color typeColor = new Color(0.35F, 0.35F, 0.35F, 1f);
     protected String author;
+    protected String parentID;
 
     private boolean needsArtRefresh = false;
 
@@ -43,6 +46,7 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         rawDescription = parentPack.description;
         name = originalName = parentPack.name;
         author = parentPack.author;
+        parentID = parentPack.packID;
         initializeTitle();
         initializeDescription();
         setBackgroundTextures();
@@ -116,10 +120,46 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         fontData.setScale(originalScale);
     }
 
+    public void renderHatText(SpriteBatch sb) {
+        //Don't show with Banishing Decree and the like
+        if(CardCrawlGame.isInARun() && AbstractDungeon.floorNum > 1) return;
+
+        float xPos, yPos, offsetY;
+        BitmapFont font;
+        boolean hatUnlocked = HatMenu.currentlyUnlockedHats.contains(parentID);
+        String text;
+        if(hatUnlocked)
+            text = UI_STRINGS.TEXT[2];
+        else
+            text = UI_STRINGS.TEXT[3];
+
+        if (author.isEmpty() || this.isFlipped || this.isLocked || this.transparency <= 0.0F)
+            return;
+        font = FontHelper.cardTitleFont;
+        xPos = this.current_x;
+        yPos = this.current_y;
+        offsetY = 413.0F * Settings.scale * this.drawScale / 2.0F;
+        BitmapFont.BitmapFontData fontData = font.getData();
+        float originalScale = fontData.scaleX;
+        float scaleMulti = 1.1F;
+        int length = text.length();
+        if (length > 18) {
+            scaleMulti -= 0.02F * (length - 20);
+            if (scaleMulti < 0.5F)
+                scaleMulti = 0.5F;
+        }
+        fontData.setScale(scaleMulti * (this.drawScale * 0.85f));
+        Color color = hatUnlocked? Settings.GREEN_TEXT_COLOR.cpy() : Settings.RED_TEXT_COLOR.cpy();
+        color.a = this.transparency;
+        FontHelper.renderRotatedText(sb, font, text, xPos, yPos, 0.0F, offsetY, this.angle, true, color);
+        fontData.setScale(originalScale);
+    }
+
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
         renderAuthorText(sb);
+        renderHatText(sb);
     }
 
     @Override

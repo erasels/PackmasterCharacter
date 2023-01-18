@@ -47,6 +47,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
 import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
@@ -68,6 +69,7 @@ import thePackmaster.potions.clawpack.GenerateClawsPotion;
 import thePackmaster.potions.thieverypack.DivinePotion;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
+import thePackmaster.powers.dragonwrathpack.PenancePower;
 import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
@@ -605,6 +607,7 @@ public class SpireAnniversary5Mod implements
         UltimateHomerun.HIGH_SCORE = 0;
         CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
+        PenancePower.Power = 20;
         MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
         EnergyAndEchoPack.resetvalues();
         EnergyCountPatch.energySpentThisCombat = 0;
@@ -794,6 +797,7 @@ public class SpireAnniversary5Mod implements
         if (!openedStarterScreen) {
             if (CardCrawlGame.isInARun() && doPackSetup && !AbstractDungeon.isScreenUp) {
                 logger.info("Starting Packmaster setup.");
+                if (HatMenu.randomHatMode) HatMenu.randomizeHat();
                 startOfGamePackSetup();
                 openedStarterScreen = true;
             }
