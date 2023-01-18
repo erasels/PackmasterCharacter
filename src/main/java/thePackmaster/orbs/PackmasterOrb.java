@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.orbs.*;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 import thePackmaster.orbs.WitchesStrike.FullMoon;
+import thePackmaster.orbs.contentcreatorpack.Wanderbot;
 import thePackmaster.orbs.downfallpack.Ghostflame;
 import thePackmaster.orbs.entropy.Oblivion;
 import thePackmaster.orbs.summonspack.Louse;
@@ -48,6 +49,9 @@ public interface PackmasterOrb {
             }
             if (pack instanceof EntropyPack){
                 orbs.add(new Oblivion());
+            }
+            if (pack instanceof ContentCreatorPack){
+                orbs.add(new Wanderbot());
             }
         }
 
