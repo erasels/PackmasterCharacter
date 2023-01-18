@@ -13,9 +13,11 @@ import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.hats.specialhats.AlignmentHat;
+import thePackmaster.hats.specialhats.PsychicHat;
 import thePackmaster.hats.specialhats.SpecialHat;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.AlignmentPack;
+import thePackmaster.packs.PsychicPack;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -37,6 +39,7 @@ public class HatMenu {
 
     static {
         specialHats.put(AlignmentPack.ID, new AlignmentHat());
+        specialHats.put(PsychicPack.ID, new PsychicHat());
     }
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
@@ -190,7 +193,7 @@ public class HatMenu {
     public void render(SpriteBatch sb) {
         sb.draw(MENU_BG, BG_X, BG_Y, 0f, 0f, MENU_BG.getRegionWidth(), MENU_BG.getRegionHeight(), BG_X_SCALE, BG_Y_SCALE, 0f);
 
-        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (175 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 300 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
+        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (163 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 330 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
 
         dummy.renderPlayerImage(sb);
 

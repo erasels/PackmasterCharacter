@@ -8,7 +8,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.upgradespack.BlacksmithsShieldPower;
 
-public class BlacksmithsShield extends AbstractPackmasterCard {
+public class BlacksmithsShield extends AbstractBlacksmithCard {
 
     public final static String ID = SpireAnniversary5Mod.makeID("BlacksmithsShield");
 

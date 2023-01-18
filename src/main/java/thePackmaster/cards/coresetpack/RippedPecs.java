@@ -30,7 +30,8 @@ public class RippedPecs extends AbstractPackmasterCard {
             @Override
             public void update() {
                 int strength = getPacksPlayedThisCombat(false);
-                Wiz.applyToSelfTop(new StrengthPower(p, strength));
+                if (strength > 0)
+                    Wiz.applyToSelfTop(new StrengthPower(p, strength));
                 this.isDone = true;
             }
         });

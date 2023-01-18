@@ -57,11 +57,11 @@ public class Inspiration extends AbstractRippableCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int artCardsInExhaust = AbstractDungeon.player.exhaustPile.group.stream().filter(card -> card instanceof AbstractRippedArtCard).collect(Collectors.toList()).size();
+        int statusAndArtCardsInExhaust = AbstractDungeon.player.exhaustPile.group.stream().filter(card -> card instanceof AbstractRippedArtCard || card.type == CardType.STATUS).collect(Collectors.toList()).size();
 
         AbstractGameEffect off = InspirationEffect.Off();
         atb(new VFXAction(off));
-        if(artCardsInExhaust > 0) {
+        if(statusAndArtCardsInExhaust > 0) {
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {
@@ -71,7 +71,7 @@ public class Inspiration extends AbstractRippableCard {
                 }
             });
             atb(new VFXAction(InspirationEffect.On()));
-            atb(new DrawCardAction(artCardsInExhaust));
+            atb(new DrawCardAction(statusAndArtCardsInExhaust));
         }
     }
 }

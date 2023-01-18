@@ -33,8 +33,9 @@ public class WitchcraftAction extends AbstractGameAction {
 				AbstractPower tmp = AbstractDungeon.player.getPower(ThieveryMasteryPower.POWER_ID);
 				if (tmp != null) {
 					tmp.flash();
-					healAmount *= tmp.amount + 1;
+					healAmount *= 2;
 				}
+
 				addToTop(new HealAction(source, source, healAmount));
 				addToTop(new WaitAction(0.1F));
 			}

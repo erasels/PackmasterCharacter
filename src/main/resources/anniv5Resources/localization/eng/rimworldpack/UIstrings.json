@@ -1,24 +1,21 @@
 {
   "${ModID}:RimworldPack": {
     "TEXT": [
-      "Rimworld",
-      "Balance your Mood in this Rimworld themed pack!",
-      "Laugic"
+      "RimWorld",
+      "Mental Breaks and eating without a table. For massive power of course.",
+      "Laugic",
+      "#bRimWorld originally created by #bLudeon #bStudios"
     ]
   },
-  "${ModID}:Inspirations": {
+  "${ModID}:Potions": {
     "TEXT": [
-      "I feel Fast!",
-      "I feel Nimble!",
-      "I feel Clearheaded!"
+      "Yummy ",
+      "!"
     ]
   },
-  "${ModID}:MentalBreaks": {
+  "${ModID}:OnFireModifier": {
     "TEXT": [
-      "In a Daze.",
-      "On a Food Binge.",
-      "On a Fire Starting Spree.",
-      "Fighting Recklessly."
+      "${ModID}:On_Fire. NL "
     ]
   }
 }

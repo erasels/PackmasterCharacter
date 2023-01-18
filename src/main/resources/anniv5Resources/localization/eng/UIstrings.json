@@ -59,7 +59,7 @@
   "${ModID}:WatcherPack": {
     "TEXT": [
       "Will of the Watcher",
-      "A collection of reliable Watcher cards, including access to Stances.",
+      "A collection of reliable Watcher cards (no access to Stances).",
       "MegaCrit"
     ]
   },
@@ -110,7 +110,8 @@
     "TEXT": [
       "Chance",
       "Inspiration",
-      "Mental Break"
+      "Mental Break",
+      "Status"
     ]
   },
   "${ModID}:HatMenu": {
