@@ -6,7 +6,7 @@
   "${ModID}:TheSuckamidRareSkill": {
     "NAME": "The Suckamid",
     "DESCRIPTION": "Heal !M! HP. NL Retain your hand for !${ModID}:m2! turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Heal !M! HP. NL Retain your hand for !${ModID}:m2! turns. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Heal !M! HP. NL Retain your hand for !${ModID}:m2! turns. NL Exhaust."
   },
   "${ModID}:ElectromagneticBurstRarePower": {
     "NAME": "Electromagnetic Burst",
