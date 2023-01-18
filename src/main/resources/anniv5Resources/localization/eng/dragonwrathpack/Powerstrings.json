@@ -1,0 +1,28 @@
+{
+  "${ModID}:Penance": {
+    "NAME": "Penance",
+    "DESCRIPTIONS": ["When this creature obtains #b",
+      " #yPenance, it loses #b",
+      " HP and increases HP loss from #yPenance by #b10 this combat",
+      "."
+    ]
+  },
+  "${ModID}:confession": {
+    "NAME": "Confession",
+    "DESCRIPTIONS": ["Whenever you take damage deal #b",
+      " damage to all enemies"
+    ]
+  },
+  "${ModID}:JudgementDay": {
+    "NAME": "Judgement Day",
+    "DESCRIPTIONS": ["Whenever you channel #yLightning gain #b",
+      " #yConfession."
+    ]
+  },
+  "${ModID}:Absolution": {
+    "NAME": "Absolution",
+    "DESCRIPTIONS": ["Whenever you take damage, increase #yPenance HP loss by #b",
+      " this combat."
+    ]
+  }
+}

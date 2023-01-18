@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Crossroads extends AbstractPackmasterCard {
+public class Crossroads extends AbstractWardenCard {
     public final static String ID = makeID("Crossroads");
 
     public Crossroads() {

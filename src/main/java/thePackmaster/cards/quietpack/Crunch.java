@@ -15,7 +15,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class Crunch extends AbstractPackmasterCard {
+public class Crunch extends AbstractQuietCard {
     public final static String ID = makeID("Crunch");
 
     public Crunch() {

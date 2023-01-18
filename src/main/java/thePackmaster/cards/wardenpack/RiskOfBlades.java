@@ -11,7 +11,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class RiskOfBlades extends AbstractPackmasterCard {
+public class RiskOfBlades extends AbstractWardenCard {
     public final static String ID = makeID("RiskOfBlades");
 
     private static final int DAMAGE = 6;
