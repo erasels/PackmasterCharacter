@@ -11,9 +11,8 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class OddOne extends AbstractPackmasterCard {
+public class OddOne extends AbstractContentCard {
     public final static String ID = makeID("OddOne");
-    // intellij stuff attack, enemy, uncommon, 11, 4, , , 1, 1
 
     public OddOne() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -22,6 +21,9 @@ public class OddOne extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        //TODO - This should highlight the effect currently active in the text, like old Champ Combo.
+        //Otherwise you have no idea which one is going to happen.
+
         int x = AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1;
         if (x % 2 == 0) {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
@@ -32,6 +34,5 @@ public class OddOne extends AbstractPackmasterCard {
 
     public void upp() {
         upgradeDamage(4);
-        upgradeMagicNumber(1);
     }
 }

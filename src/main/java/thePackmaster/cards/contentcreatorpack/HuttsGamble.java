@@ -9,9 +9,8 @@ import thePackmaster.powers.contentcreatorpack.HuttsGambleEnergyPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class HuttsGamble extends AbstractPackmasterCard {
+public class HuttsGamble extends AbstractContentCard {
     public final static String ID = makeID("HuttsGamble");
-    // intellij stuff skill, self, common, , , , , 1, 1
 
     public HuttsGamble() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

@@ -10,12 +10,11 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class BaalorBlueprint extends AbstractPackmasterCard {
+public class BaalorBlueprint extends AbstractContentCard {
     public final static String ID = makeID("BaalorBlueprint");
-    // intellij stuff skill, self, special, , , , , , 
 
     public BaalorBlueprint() {
-        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
         cardsToPreview = new TheCozyChair();
     }

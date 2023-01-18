@@ -9,12 +9,11 @@ import thePackmaster.util.cardvars.HoardField;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class OlexasCloak extends AbstractPackmasterCard {
+public class OlexasCloak extends AbstractContentCard {
     public final static String ID = makeID("OlexasCloak");
-    // intellij stuff skil, self, common, , , 18, 6, , 
 
     public OlexasCloak() {
-        super(ID, -1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, -1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 18;
         PersistFields.setBaseValue(this, 2);
         HoardField.setBaseValue(this, 3);

@@ -29,9 +29,16 @@ public class RetromationPower extends AbstractPackmasterPower {
 
     public RetromationPower(int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
-        for (AbstractCardPack p : allPacks) {
-            if (!SpireAnniversary5Mod.currentPoolPacks.contains(p)) { // TODO: Check that this works
-                potentialPacks.add(p);
+        if (SpireAnniversary5Mod.allPacksMode){
+
+            //If in ALL PACKS mode, then this has to naturally just include everything.
+            potentialPacks = allPacks;
+
+        } else {
+            for (AbstractCardPack p : allPacks) {
+                if (!SpireAnniversary5Mod.currentPoolPacks.contains(p)) {
+                    potentialPacks.add(p);
+                }
             }
         }
     }
@@ -39,9 +46,12 @@ public class RetromationPower extends AbstractPackmasterPower {
     public void atStartOfTurnPostDraw() {
         if (!potentialPacks.isEmpty()) {
             this.flash();
-            AbstractCard q = CardLibrary.getCard(Wiz.getRandomItem(Wiz.getRandomItem(potentialPacks, AbstractDungeon.cardRandomRng).getCards(), AbstractDungeon.cardRandomRng));
-            CardModifierManager.addModifier(q, new EtherealMod());
-            makeInHand(q);
+            for (int i = 0; i < amount; i++) {
+                //TODO -> This probably returns HEALING and SPECIAL rarity cards currently?
+                AbstractCard q = CardLibrary.getCard(Wiz.getRandomItem(Wiz.getRandomItem(potentialPacks, AbstractDungeon.cardRandomRng).getCards(), AbstractDungeon.cardRandomRng));
+                CardModifierManager.addModifier(q, new EtherealMod());
+                makeInHand(q);
+            }
         }
     }
 

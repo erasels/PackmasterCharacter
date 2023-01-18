@@ -7,13 +7,12 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class BaalorBash extends AbstractPackmasterCard {
+public class BaalorBash extends AbstractContentCard {
     public final static String ID = makeID("BaalorBash");
-    // intellij stuff attack, enemy, rare, 8, , , , , 
 
     public BaalorBash() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 13;
         exhaust = true;
         cardsToPreview = new BaalorBlueprint();
     }

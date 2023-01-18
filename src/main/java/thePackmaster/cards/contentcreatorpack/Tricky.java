@@ -8,9 +8,8 @@ import thePackmaster.patches.contentcreatorpack.OnDrawCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Tricky extends AbstractPackmasterCard {
+public class Tricky extends AbstractContentCard {
     public final static String ID = makeID("Tricky");
-    // intellij stuff attack, all_enemy, common, 6, 2, , , 2, 1
 
     public Tricky() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);

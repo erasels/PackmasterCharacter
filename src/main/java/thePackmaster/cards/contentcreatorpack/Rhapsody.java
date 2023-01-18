@@ -10,10 +10,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
-public class Rhapsody extends AbstractPackmasterCard {
+public class Rhapsody extends AbstractContentCard {
     public final static String ID = makeID("Rhapsody");
-    // intellij stuff skill, self, rare, , , , , 150, 50
-
     public Rhapsody() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 150;

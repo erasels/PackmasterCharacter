@@ -4,6 +4,27 @@
     "NAMES": [
       "wanderbot"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the frontmost enemy. ALso draws cards when Evoked."
+    "DESCRIPTION": "Orb: Deals damage to the frontmost enemy. Draws a card when evoked."
+  },
+  {
+    "PROPER_NAME": "MEGAthereal",
+    "NAMES": [
+      "megathereal"
+    ],
+    "DESCRIPTION": "Exhausts at the end of the turn, no matter where it is."
+  },
+  {
+    "PROPER_NAME": "Odd",
+    "NAMES": [
+      "odd"
+    ],
+    "DESCRIPTION": "Effect triggers only if you've played an Even number of cards this turn before playing this."
+  },
+  {
+    "PROPER_NAME": "Even",
+    "NAMES": [
+      "even"
+    ],
+    "DESCRIPTION": "Effect triggers only if you've played an Odd number of cards this turn before playing this."
   }
 ]

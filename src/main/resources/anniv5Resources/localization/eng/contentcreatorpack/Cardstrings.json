@@ -4,13 +4,13 @@
     "DESCRIPTION": "Retain. NL ${ModID}:Hoard !hoard!: Gain !B! Block. NL stslib:Persist !stslib:persist! ."
   },
   "${ModID}:HuttsGamble": {
-    "NAME": "Hutt's Gamble",
+    "NAME": "Hutts' Gamble",
     "DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] and draw 2 cards next turn.",
     "UPGRADE_DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] [E] and draw 2 cards next turn."
   },
   "${ModID}:Tricky": {
     "NAME": "Tricky",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card drawn during this turn."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card drawn this turn."
   },
   "${ModID}:SneakyteakStrike": {
     "NAME": "Sneakyteak Strike",
@@ -19,12 +19,12 @@
   },
   "${ModID}:DarksideSlap": {
     "NAME": "Darkside Slap",
-    "DESCRIPTION": "Exhausts at the end of the turn. NL Deal !D! damage."
+    "DESCRIPTION": "${ModID}:MEGAthereal. NL Deal !D! damage."
   },
   "${ModID}:Wanderbots": {
     "NAME": "Wanderbots",
-    "DESCRIPTION": "Channel 1 ${ModID}:Wanderbot.",
-    "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Wanderbot. NL Triger the passive effect of all your Orbs."
+    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Wanderbot.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Wanderbot. NL Trigger the passive effect of all your Orbs."
   },
   "${ModID}:Retromation": {
     "NAME": "Retromation",
@@ -32,8 +32,7 @@
   },
   "${ModID}:OddOne": {
     "NAME": "Odd One",
-    "DESCRIPTION": "Odd: Deal !D! damage to a random enemy. NL Even: Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Odd: Deal !D! damage to a random enemy. NL Even: Draw !M! cards."
+    "DESCRIPTION": "Odd: Deal !D! damage to a random enemy. NL Even: Draw !M! card."
   },
   "${ModID}:Rhapsody": {
     "NAME": "Rhapsody",
@@ -44,7 +43,7 @@
     "DESCRIPTION": "At the start of your turn, Channel 1 Frost and apply !M! ${ModID}:Frostbite to ALL enemies."
   },
   "${ModID}:BaalorBash": {
-    "NAME": "Baalor's Bash",
+    "NAME": "Baalorlord's Bash",
     "DESCRIPTION": "Deal !D! damage. NL Put a *Baalor's *Blueprint on top of your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Put a *Baalor's *Blueprint on top of your draw pile. NL Exhaust."
   },

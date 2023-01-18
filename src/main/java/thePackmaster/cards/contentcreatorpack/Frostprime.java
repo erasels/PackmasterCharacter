@@ -8,9 +8,8 @@ import thePackmaster.powers.contentcreatorpack.FrostprimePower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class Frostprime extends AbstractPackmasterCard {
+public class Frostprime extends AbstractContentCard {
     public final static String ID = makeID("Frostprime");
-    // intellij stuff power, self, rare, , , , , 6, 3
 
     public Frostprime() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);

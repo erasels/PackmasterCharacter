@@ -23,14 +23,14 @@ public class HuttsGambleEnergyPower extends AbstractPackmasterPower {
     public void onEnergyRecharge() {
         this.flash();
         AbstractDungeon.player.gainEnergy(this.amount);
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        removeThis();
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner && damageAmount > 0) {
             this.flash();
 
-            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+            removeThis();
         }
 
         return damageAmount;
