@@ -19,7 +19,7 @@ public class OccultDescription {
     @SpirePrefixPatch
     public static void betterHaveTheKeyword(AbstractCard __instance)
     {
-        if (OccultFields.isOccult.get(__instance) && (!__instance.rawDescription.startsWith(occult[0]) || !__instance.rawDescription.contains(occult[1])))
+        if (OccultFields.isOccult.get(__instance) && (!__instance.rawDescription.startsWith(occult[0]) && !__instance.rawDescription.contains(occult[1])))
         {
             __instance.rawDescription = occult[0] + __instance.rawDescription;
         }
