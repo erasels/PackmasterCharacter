@@ -1,11 +1,16 @@
 package thePackmaster.cards.warriorpack;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.UpgradeHammerImprintEffect;
+import com.megacrit.cardcrawl.vfx.UpgradeShineParticleEffect;
 import thePackmaster.cardmodifiers.warriorpack.FrontDamage;
 import thePackmaster.cards.AbstractPackmasterCard;
 
@@ -28,6 +33,14 @@ public class WorkHammer extends AbstractPackmasterCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new GainBlockAction(p, block));
+        if (m!=null) {
+            AbstractDungeon.topLevelEffectsQueue.add(new UpgradeHammerImprintEffect(m.hb.cX, m.hb.cY));
+            if (!Settings.DISABLE_EFFECTS) {
+                for (int i = 0; i < 30; ++i) {
+                    AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineParticleEffect(m.hb.cX + MathUtils.random(-10.0F, 10.0F) * Settings.scale, m.hb.cY + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
+                }
+            }
+        }
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         atb(new GainBlockAction(m, p, block));
     }

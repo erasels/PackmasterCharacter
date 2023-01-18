@@ -2,9 +2,12 @@ package thePackmaster.cards.warriorpack;
 
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import thePackmaster.cardmodifiers.warriorpack.FeralDamage;
 import thePackmaster.cards.AbstractPackmasterCard;
 
@@ -28,6 +31,10 @@ public class StormStrike extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (m != null) {
+            this.addToTop(new VFXAction(new LightningEffect(m.drawX, m.drawY), 0.1F));
+            this.addToTop(new SFXAction("ORB_LIGHTNING_EVOKE"));
+        }
         dmg(m, AbstractGameAction.AttackEffect.NONE);
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
     }

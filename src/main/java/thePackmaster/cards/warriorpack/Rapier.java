@@ -2,9 +2,11 @@ package thePackmaster.cards.warriorpack;
 
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
+import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
 import thePackmaster.cardmodifiers.warriorpack.FastDamage;
 import thePackmaster.cardmodifiers.warriorpack.FrontDamage;
 import thePackmaster.cards.AbstractPackmasterCard;
@@ -27,6 +29,8 @@ public class Rapier extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (m != null)
+            this.addToTop(new VFXAction(new ThrowDaggerEffect(m.hb.cX, m.hb.cY)));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
     }
 
