@@ -34,8 +34,8 @@ public class Panda extends CustomOrb {
     private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Panda.png");
     private static final float PANDA_WIDTH = 96.0f;
     private static final Color TEXT_COLOR = new Color(1.0f, 0.25f, 0.25f, 1.0f);
-    private static final int BASE_PASSIVE = 4;
-    private static final int BASE_EVOKE = 10;
+    private static final int BASE_PASSIVE = 5;
+    private static final int BASE_EVOKE = 5;
 
     // DO NOT SET EITHER OF THESE TO ZERO
     public static final float BOUNCE_DURATION = 1.0f;
@@ -89,6 +89,7 @@ public class Panda extends CustomOrb {
         Panda copy = (Panda) makeCopy();
         copy.isCopy = true;
         att(new PandaEvokeAction(copy, this));
+        // SFXAction doesn't seem to take a volume argument and you don't want this full volume
         att(new VFXAction(new AbstractGameEffect() {
             @Override
             public void update() {

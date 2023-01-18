@@ -1,8 +1,8 @@
 package thePackmaster.hats;
 
-import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.utils.Array;
 import com.esotericsoftware.spine.*;
@@ -12,15 +12,22 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.hats.specialhats.SpecialHat;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
+import static thePackmaster.hats.HatMenu.specialHats;
+
 public class Hats {
     public static String currentHat;
 
     public static void removeHat(boolean inRun) {
+        if (!inRun && HatMenu.dummy == null) {
+            return;
+        }
+
         if (headbone == null && !inRun) {
             setupSkeleton(HatMenu.dummy, true);
         } else if (playerbone == null && inRun) {
@@ -128,7 +135,10 @@ public class Hats {
         }
 
         String imgPath = getImagePathFromHatID(hatID);
-
+        if (!TexLoader.testTexture(imgPath)) {
+            removeHat(inRun);
+            return;
+        }
 
         if (skeleton.getAttachment(inRun ? playerFoundHeadSlot : foundHeadSlot, "hat") == null) {
             SpireAnniversary5Mod.logger.info("starting attachment process, in run = " + inRun);
@@ -157,8 +167,8 @@ public class Hats {
                 attachment.setRegion(region);
                 attachment.setWidth(tex.getWidth());
                 attachment.setHeight(tex.getHeight());
-                attachment.setX(-3F * Settings.scale);
-                attachment.setY(35F * Settings.scale);
+                attachment.setX(1F);
+                attachment.setY(38F * Settings.scale);
                 attachment.setScaleX(Settings.scale);
                 attachment.setScaleY(Settings.scale);
                 attachment.updateOffset();
@@ -175,8 +185,8 @@ public class Hats {
                 attachmentDummy.setRegion(region);
                 attachmentDummy.setWidth(tex.getWidth());
                 attachmentDummy.setHeight(tex.getHeight());
-                attachmentDummy.setX(-3F * Settings.scale);
-                attachmentDummy.setY(35F * Settings.scale);
+                attachmentDummy.setX(1F);
+                attachmentDummy.setY(38F * Settings.scale);
                 attachmentDummy.setScaleX(Settings.scale);
                 attachmentDummy.setScaleY(Settings.scale);
                 attachmentDummy.updateOffset();
@@ -234,6 +244,22 @@ public class Hats {
             addHat(true, currentHat);
         } else {
             removeHat(true);
+        }
+    }
+
+    private static final float Y_OFF = 13f;
+    public static void preRenderPlayer(SpriteBatch sb, AbstractPlayer p) {
+        SpecialHat shat = specialHats.get(currentHat);
+        if (shat != null && skeleton != null && headbone != null) {
+            float x = skeleton.getX() + headbone.getWorldX(), y = skeleton.getY() + headbone.getWorldY() + Y_OFF * headbone.getScaleY();
+            shat.preRenderPlayer(sb, p, x, y);
+        }
+    }
+    public static void postRenderPlayer(SpriteBatch sb, AbstractPlayer p) {
+        SpecialHat shat = specialHats.get(currentHat);
+        if (shat != null && skeleton != null && headbone != null) {
+            float x = skeleton.getX() + headbone.getWorldX(), y = skeleton.getY() + headbone.getWorldY() + Y_OFF * headbone.getScaleY();
+            shat.postRenderPlayer(sb, p, x, y);
         }
     }
 }

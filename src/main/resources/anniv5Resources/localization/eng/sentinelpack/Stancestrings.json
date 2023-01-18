@@ -1,0 +1,10 @@
+{
+  "${ModID}:Angry": {
+    "NAME": "Angry",
+    "DESCRIPTION": ["Your Attacks deal #b50% more damage and you take #b50% more damage from attacks. Upon exiting this #yStance, gain #b3 #yVigor."]
+  },
+  "${ModID}:Serene": {
+    "NAME": "Serene",
+    "DESCRIPTION": ["At the end of your turn, gain #yBlock equal to #b50% of your #yBlock. Upon exiting this #yStance, gain #b1 #yDexterity."]
+  }
+}

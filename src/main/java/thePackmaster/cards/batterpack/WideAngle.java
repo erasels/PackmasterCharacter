@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.thieverypack.ThieveryMasteryPower;
 import thePackmaster.util.Wiz;
 
@@ -37,7 +36,7 @@ public class WideAngle extends AbstractBatterCard {
             AbstractPower tmp = AbstractDungeon.player.getPower(ThieveryMasteryPower.POWER_ID);
             if (tmp != null) {
                 tmp.flash();
-                maxblock *= tmp.amount + 1;
+                maxblock *= 2;
             }
 
             Wiz.doBlk(maxblock);

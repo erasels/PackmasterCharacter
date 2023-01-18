@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class MastersStrike extends AbstractPackmasterCard {
+public class MastersStrike extends AbstractBlacksmithCard {
 
     public final static String ID = SpireAnniversary5Mod.makeID("MastersStrike");
 

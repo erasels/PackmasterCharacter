@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 
-public class Lie extends AbstractPackmasterCard {
+public class Lie extends AbstractQuietCard {
     public final static String ID = makeID("Lie");
 
     public Lie() {

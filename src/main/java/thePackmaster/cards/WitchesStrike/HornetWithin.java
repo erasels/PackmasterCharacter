@@ -2,6 +2,8 @@ package thePackmaster.cards.WitchesStrike;
 
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.defect.DecreaseMaxOrbAction;
+import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.green.DeadlyPoison;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
@@ -27,6 +29,7 @@ public class HornetWithin extends AbstractWitchStrikeCard implements OnInfestCar
     public HornetWithin() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBlock = 3;
+        magicNumber = baseMagicNumber = 3;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
 
@@ -38,24 +41,14 @@ public class HornetWithin extends AbstractWitchStrikeCard implements OnInfestCar
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                if (AbstractDungeon.player.hand.size() > 0) {
-                    ArrayList<AbstractCard> Uninscribed = new ArrayList<>();
-                    for (AbstractCard c : AbstractDungeon.player.drawPile.group){
-                        if (!CardModifierManager.hasModifier(c,"Inscribed")){
-                            Uninscribed.add(c);
-                        }
-                    }
-                    if (!Uninscribed.isEmpty()) {
-                        AbstractCard targetCard = Uninscribed.get(AbstractDungeon.cardRandomRng.random(Uninscribed.size() - 1));
-                        CardModifierManager.addModifier(targetCard, new InscribedMod(false,true));
-                    }
-                }
+                addToTop(new EvokeOrbAction(magicNumber));
+                addToBot(new DecreaseMaxOrbAction(1));
                 isDone = true;
             }
         });
     }
     public void upp() {
-        upgradeDamage(2);
+        upgradeMagicNumber(1);
         upgradeBlock(2);
     }
     @Override

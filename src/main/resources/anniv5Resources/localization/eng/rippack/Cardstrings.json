@@ -1,7 +1,8 @@
 {
   "${ModID}:DividedFury": {
     "NAME": "Divided Fury",
-    "DESCRIPTION": "When you *rip an Attack, deal !M! damage to ALL enemies. NL When you *rip a Skill, gain !M! Block."
+    "DESCRIPTION": "At the start of your turn, add a *Fury into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a *Fury into your hand."
   },
   "${ModID}:ViciousCycle": {
     "NAME": "Vicious Cycle",
@@ -52,8 +53,8 @@
   },
   "${ModID}:Inspiration": {
     "NAME": "Inspiration",
-    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art Cards in your exhaust pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art Cards in your exhaust pile.",
+    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art and Status Cards in your exhaust pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art and Status Cards in your exhaust pile.",
     "EXTENDED_DESCRIPTION": [
       " NL (Draw ",
       " card.)",
@@ -123,7 +124,31 @@
   },
   "${ModID}:LeftBrain": {
     "NAME": "Left Brain",
-    "DESCRIPTION": "Exhaust all Art cards in your hand, draw pile, and discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL Exhaust all Art cards in your hand, draw pile, and discard pile. NL Exhaust."
+    "DESCRIPTION": "Exhaust ALL your ${ModID}:Art and Status cards. Gain !M! Strength for each card Exhausted.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL Exhaust ALL your ${ModID}:Art and Status cards. Gain !M! Strength for each card Exhausted."
+  },
+  "${ModID}:FuryAttack": {
+    "NAME": "Fury",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:FuryAttackArt": {
+    "NAME": "Fury",
+    "DESCRIPTION": ""
+  },
+  "${ModID}:FuryAttackText": {
+    "NAME": "",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:FurySkill": {
+    "NAME": "Fury",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:FurySkillArt": {
+    "NAME": "Fury",
+    "DESCRIPTION": ""
+  },
+  "${ModID}:FurySkillText": {
+    "NAME": "",
+    "DESCRIPTION": "Gain !B! Block."
   }
 }

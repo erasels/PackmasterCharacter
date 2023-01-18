@@ -140,10 +140,10 @@ public class MainMenuUIPatch {
             CHECKBOX_X = DROPDOWN_X + CHECKBOX_X_OFF;
         }
 
-        openFilterMenuButton = new ModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X * Settings.scale, FILTERBUTTON_Y * Settings.scale, null,
+        openFilterMenuButton = new ModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X, FILTERBUTTON_Y, null,
                 (button) -> filterMenu.toggle());
 
-        openHatMenuButton = new ModLabeledButton(uiStrings.TEXT[5], HATBUTTON_X * Settings.scale, HATBUTTON_Y * Settings.scale, null, (button) -> hatMenu.toggle());
+        openHatMenuButton = new ModLabeledButton(uiStrings.TEXT[5], HATBUTTON_X, HATBUTTON_Y, null, (button) -> hatMenu.toggle());
     }
 
 
@@ -191,7 +191,7 @@ public class MainMenuUIPatch {
         public static void Postfix(CharacterOption obj) {
             CharSelectInfo c = ReflectionHacks.getPrivate(obj, CharacterOption.class, "charInfo");
 
-            if (c.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && obj.selected) {
+            if (c != null && c.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && obj.selected) {
                 // If custom draft is enabled, update the dropdowns
 
                 boolean stopInput = false;

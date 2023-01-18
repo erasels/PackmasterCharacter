@@ -10,7 +10,7 @@ import thePackmaster.powers.distortionpack.RuePower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Rue extends AbstractPackmasterCard {
+public class Rue extends AbstractDistortionCard {
     public final static String ID = makeID("Rue");
     // intellij stuff skill, none, rare, , , , , 1, 1
 

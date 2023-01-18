@@ -14,7 +14,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Beacon extends AbstractPackmasterCard {
+public class Beacon extends AbstractOdditiesCard {
     public final static String ID = makeID("Beacon");
     // intellij stuff skill, self, common, , , 5, 3, , 
 

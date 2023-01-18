@@ -12,21 +12,35 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
+import thePackmaster.hats.specialhats.AlignmentHat;
+import thePackmaster.hats.specialhats.PsychicHat;
+import thePackmaster.hats.specialhats.SpecialHat;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.AlignmentPack;
+import thePackmaster.packs.PsychicPack;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 import static thePackmaster.hats.Hats.currentHat;
 
 public class HatMenu {
-
     public boolean isOpen = false;
     public static boolean invalidHatSelected = false;
+    public static boolean randomHatMode = false;
 
     private static DropdownMenu dropdown;
     public static final ArrayList<String> hats = new ArrayList<>();
     public static final ArrayList<String> currentlyUnlockedHats = new ArrayList<>();
+    public static final Map<String, SpecialHat> specialHats = new HashMap<>();
+
+    static {
+        specialHats.put(AlignmentPack.ID, new AlignmentHat());
+        specialHats.put(PsychicPack.ID, new PsychicHat());
+    }
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));
@@ -79,13 +93,15 @@ public class HatMenu {
 
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
+        optionNames.add(TEXT[9]);
         ArrayList<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
         sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
         for (AbstractCardPack s : sortedPacks) {
-            if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists()) {
-                if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
-                if (UNLOCK_ALL_HATS)
-                    SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
+            if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
+            if (UNLOCK_ALL_HATS)
+                SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
+
+            if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists() || specialHats.containsKey(s.packID)) {
                 if (UNLOCK_ALL_HATS || unlockedHats.contains(s.packID)) {
                     hats.add(s.packID);
                     if (unlockedHats.contains(s.packID)) {
@@ -121,27 +137,47 @@ public class HatMenu {
         isOpen = false;
     }
 
+    public static void randomizeHat() {
+        currentHat = Wiz.getRandomItem(currentlyUnlockedHats);
+        Hats.addHat(true, currentHat);
+        SpireAnniversary5Mod.logger.info("Randomizer chose hat: " + currentHat);
+    }
+
     public static void setCurrentHat(int index, String name) {
         currentHatIndex = index;
+        randomHatMode = false;
         if (index == 0) {
             invalidHatSelected = false;
             SpireAnniversary5Mod.logger.info("Removing hat.");
             Hats.removeHat(false);
             flavorText = "";
+        } else if (index == 1) {
+            if (currentlyUnlockedHats.isEmpty()) {
+                invalidHatSelected = true;
+                SpireAnniversary5Mod.logger.info("Selected Random but no hats are unlocked.");
+                Hats.removeHat(false);
+                flavorText = TEXT[8];
+            } else {
+                invalidHatSelected = false;
+                SpireAnniversary5Mod.logger.info("Selected Random.");
+                Hats.addHat(false, "Locked");
+                randomHatMode = true;
+                flavorText = TEXT[8];
+            }
         } else if (name.contains(TEXT[1])) {
             SpireAnniversary5Mod.logger.info("Selected a locked hat.");
             invalidHatSelected = true;
             Hats.addHat(false, "Locked");
-            flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index - 1)).name + TEXT[3];
+            flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index - 2)).name + TEXT[3];
         } else if (name.contains(TEXT[6])) {
             invalidHatSelected = true;
             SpireAnniversary5Mod.logger.info("Selected a missing hat.");
             Hats.removeHat(false);
-            flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index - 1)).name + TEXT[7];
+            flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index - 2)).name + TEXT[7];
         } else {
             invalidHatSelected = false;
             SpireAnniversary5Mod.logger.info("Add new hat at index " + index);
-            currentHat = hats.get(index - 1);
+            currentHat = hats.get(index - 2);
             Hats.addHat(false, currentHat);
             flavorText = SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
         }
@@ -157,7 +193,7 @@ public class HatMenu {
     public void render(SpriteBatch sb) {
         sb.draw(MENU_BG, BG_X, BG_Y, 0f, 0f, MENU_BG.getRegionWidth(), MENU_BG.getRegionHeight(), BG_X_SCALE, BG_Y_SCALE, 0f);
 
-        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (175 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 300 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
+        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (163 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 330 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
 
         dummy.renderPlayerImage(sb);
 

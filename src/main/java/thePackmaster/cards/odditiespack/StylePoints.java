@@ -18,7 +18,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.makeInHand;
 
-public class StylePoints extends AbstractPackmasterCard {
+public class StylePoints extends AbstractOdditiesCard {
     public final static String ID = makeID("StylePoints");
     // intellij stuff skill, self, uncommon, , , 8, 3, , 
 

@@ -15,6 +15,7 @@ import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 
 import java.util.ArrayList;
 
+import static thePackmaster.SpireAnniversary5Mod.ISCARDMODIFIED;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class CrescentSweep extends AbstractWitchStrikeCard {
@@ -29,26 +30,6 @@ public class CrescentSweep extends AbstractWitchStrikeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         addToBot(new ManifestAction(new CrescentMoon()));
-        if (upgraded){
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    if (AbstractDungeon.player.hand.size() > 0) {
-                        ArrayList<AbstractCard> Uninscribed = new ArrayList<>();
-                        for (AbstractCard c : AbstractDungeon.player.hand.group){
-                            if (!CardModifierManager.hasModifier(c,"Inscribed")){
-                                Uninscribed.add(c);
-                            }
-                        }
-                        if (!Uninscribed.isEmpty()) {
-                            AbstractCard targetCard = Uninscribed.get(AbstractDungeon.cardRandomRng.random(Uninscribed.size() - 1));
-                            CardModifierManager.addModifier(targetCard, new InscribedMod(false,true));
-                        }
-                    }
-                    isDone = true;
-                }
-            });
-        }
     }
     public void upp() {
         upgradeBlock(2);
