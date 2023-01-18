@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Manaburst extends AbstractPackmasterCard {
+public class Manaburst extends AbstractQuantaCard {
     public final static String ID = makeID("Manaburst");
 
     private static final int DAMAGE = 9;
