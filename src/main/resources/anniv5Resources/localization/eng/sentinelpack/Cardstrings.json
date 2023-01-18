@@ -29,6 +29,6 @@
   },
   "${ModID}:MoodSwing": {
     "NAME": "Mood Swing",
-    "DESCRIPTION": "Draw !M! cards. NL Discard 2 cards. NL If you are in *Angry, enter Calm. Otherwise, enter ${ModID}:Angry."
+    "DESCRIPTION": "Draw !M! cards. NL Discard 2 cards. NL If you are in ${ModID}:Angry, enter Calm. Otherwise, enter ${ModID}:Angry."
   }
 }
