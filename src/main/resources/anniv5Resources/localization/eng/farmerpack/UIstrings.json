@@ -5,5 +5,11 @@
       "Rotate between card types to optimize your power!",
       "DJM"
     ]
+  },
+  "${ModID}:FarmerPackHat": {
+    "TEXT": [
+      "Simple hat made of straw. Keeps out sun and rain.",
+      "Strawhat"
+    ]
   }
 }
