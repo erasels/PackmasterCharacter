@@ -14,6 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Rummage extends AbstractPackmasterCard {
     public final static String ID = makeID("Rummage");
+    // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public Rummage() {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
@@ -29,7 +30,6 @@ public class Rummage extends AbstractPackmasterCard {
 
     public void upp() {
         upgradeDamage(4);
-        upgradeMagicNumber(1);
     }
 
     public static class RummageDrawAction extends AbstractGameAction{
