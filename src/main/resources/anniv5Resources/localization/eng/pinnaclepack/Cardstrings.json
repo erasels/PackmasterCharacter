@@ -48,7 +48,7 @@
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "Pocket Tournament",
     "DESCRIPTION": "Next turn, randomly, 2X times: NL Draw 1 card, gain [E] , gain 1 Strength or gain 3 Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Next turn, Randomly, 2X+2 times: NL Draw 1 card, Gain [E], Gain 1 Strength or Gain 3 Block. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Next turn, randomly, 2X+2 times: NL Draw 1 card, gain [E] , gain 1 Strength or gain 3 Block. NL Exhaust."
   },
   "${ModID}:StoneSwordCommonAttack": {
     "NAME": "Stone Sword",
