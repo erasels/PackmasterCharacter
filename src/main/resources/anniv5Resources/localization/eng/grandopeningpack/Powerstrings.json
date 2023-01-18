@@ -2,8 +2,9 @@
   "${ModID}:CrossPower": {
     "NAME": "Cross",
     "DESCRIPTIONS": [
-      "Your #yCrosses deal #b",
-      " more damage."
+      "Your #yCrosses hit #b",
+      " additional time.",
+      " additional times."
     ]
   },
   "${ModID}:InstinctsPower": {
@@ -13,10 +14,10 @@
       " #yBlock."
     ]
   },
-  "${ModID}:KickoffPower": {
-    "NAME": "Kickoff",
+  "${ModID}:DebutPower": {
+    "NAME": "Debut",
     "DESCRIPTIONS": [
-      "Your #yInnate cards #yRefund #b",
+      "Once each turn, playing an #yInnate card #yRefunds #b",
       "."
     ]
   },

@@ -1,4 +1,4 @@
-package thePackmaster.cards.startuppack;
+package thePackmaster.cards.grandopeningpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -13,11 +13,11 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class PlannedDefense extends AbstractStartUpCard {
+public class PlannedDefense extends AbstractPackmasterCard {
     public final static String ID = makeID("PlannedDefense");
 
     public PlannedDefense() {
-        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, "grandopening");
         this.isInnate = true;
         this.baseBlock = this.block = 12;
     }

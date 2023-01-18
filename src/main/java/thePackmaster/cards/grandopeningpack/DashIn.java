@@ -1,4 +1,4 @@
-package thePackmaster.cards.startuppack;
+package thePackmaster.cards.grandopeningpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -11,11 +11,11 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class DashIn extends AbstractStartUpCard {
+public class DashIn extends AbstractPackmasterCard {
     public final static String ID = makeID("DashIn");
 
     public DashIn() {
-        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, "grandopening");
         this.isInnate = true;
         this.baseDamage = this.damage = 4;
         this.baseBlock = this.block = 4;

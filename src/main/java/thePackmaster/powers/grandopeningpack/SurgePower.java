@@ -1,4 +1,4 @@
-package thePackmaster.powers.startuppack;
+package thePackmaster.powers.grandopeningpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;

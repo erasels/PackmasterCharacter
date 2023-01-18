@@ -26,20 +26,21 @@
   },
   "${ModID}:Cross": {
     "NAME": "Cross",
-    "DESCRIPTION": "Deal !D! damage. Deal damage for all your created *Crosses. Shuffle a *Cross into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. Deal damage for all your created *Crosses. Shuffle a *Cross+ into your draw pile.",
+    "DESCRIPTION": "Deal !D! damage twice. Hits one more time for each of your created *Crosses. Shuffle a *Cross into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage twice. Hits one more time for each of your created *Crosses. Shuffle a *Cross+ into your draw pile.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! and !${ModID}:sd! damage.)"
+      " NL (Hits !M! times.)"
     ]
   },
   "${ModID}:Improvise": {
     "NAME": "Improvise",
-    "DESCRIPTION": "Innate. NL Gain !B! Block. Discard all Innate cards in your hand and draw 1 card for each card discarded."
+    "DESCRIPTION": "Gain !B! Block. Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage"
   },
   "${ModID}:Debut": {
     "NAME": "Debut",
-    "DESCRIPTION": "Your Innate cards Refund 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Your Innate cards Refund 1."
+    "DESCRIPTION": "Once each turn, playing an Innate card Refunds 1.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Once each turn, playing an Innate card Refunds 1."
   },
   "${ModID}:BattlePrep": {
     "NAME": "Battle Prep",
