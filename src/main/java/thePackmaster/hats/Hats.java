@@ -167,8 +167,8 @@ public class Hats {
                 attachment.setRegion(region);
                 attachment.setWidth(tex.getWidth());
                 attachment.setHeight(tex.getHeight());
-                attachment.setX(-3F * Settings.scale);
-                attachment.setY(35F * Settings.scale);
+                attachment.setX(1F);
+                attachment.setY(38F * Settings.scale);
                 attachment.setScaleX(Settings.scale);
                 attachment.setScaleY(Settings.scale);
                 attachment.updateOffset();
@@ -185,8 +185,8 @@ public class Hats {
                 attachmentDummy.setRegion(region);
                 attachmentDummy.setWidth(tex.getWidth());
                 attachmentDummy.setHeight(tex.getHeight());
-                attachmentDummy.setX(0F);
-                attachmentDummy.setY(35F * Settings.scale);
+                attachmentDummy.setX(1F);
+                attachmentDummy.setY(38F * Settings.scale);
                 attachmentDummy.setScaleX(Settings.scale);
                 attachmentDummy.setScaleY(Settings.scale);
                 attachmentDummy.updateOffset();
