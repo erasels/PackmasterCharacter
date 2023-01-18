@@ -8,7 +8,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class QuickFix extends AbstractPackmasterCard {
+public class QuickFix extends AbstractBlacksmithCard {
 
     public final static String ID = makeID("QuickFix");
 

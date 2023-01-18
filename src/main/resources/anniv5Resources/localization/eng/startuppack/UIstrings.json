@@ -5,5 +5,11 @@
       "The beginning is the half of every action. Adds Innate Synergies and cards.",
       "Jack Renoson"
     ]
+  },
+  "${ModID}:StartUpPackHat": {
+    "TEXT": [
+      "The helm of a marathon runner.",
+      "Ancient Helmet"
+    ]
   }
 }

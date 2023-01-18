@@ -9,7 +9,7 @@ import thePackmaster.powers.wardenpack.EnigmancyPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Enigmancy extends AbstractPackmasterCard {
+public class Enigmancy extends AbstractWardenCard {
     public final static String ID = makeID("Enigmancy");
 
     private static final int BASE_SCRY = 5;

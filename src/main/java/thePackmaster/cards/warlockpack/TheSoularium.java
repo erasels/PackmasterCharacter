@@ -21,7 +21,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class TheSoularium extends AbstractPackmasterCard {
+public class TheSoularium extends AbstractWarlockCard {
     public final static String ID = makeID(TheSoularium.class.getSimpleName());
 
     private static final int COST = 0;

@@ -10,7 +10,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Flow extends AbstractPackmasterCard {
+public class Flow extends AbstractQuantaCard {
     public final static String ID = makeID("Flow");
 
     public Flow() {

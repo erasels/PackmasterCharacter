@@ -18,15 +18,16 @@ import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import static thePackmaster.hats.HatMenu.specialHats;
 
 public class Hats {
     public static String currentHat;
 
     public static void removeHat(boolean inRun) {
+        if (!inRun && HatMenu.dummy == null) {
+            return;
+        }
+
         if (headbone == null && !inRun) {
             setupSkeleton(HatMenu.dummy, true);
         } else if (playerbone == null && inRun) {
