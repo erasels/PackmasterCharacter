@@ -53,6 +53,8 @@ public class HolyWrath extends AbstractDragonwrathCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
         Wiz.vfx(new MiracleEffect(LightOrb.color,LightOrb.color2,"HEAL_3"));
+        addToBot(new VFXAction(new LightningEffect(p.drawX,p.drawY)));
+        addToBot(new DamageAction(p,new DamageInfo(p,magicNumber, DamageInfo.DamageType.THORNS)));
     }
 
 
