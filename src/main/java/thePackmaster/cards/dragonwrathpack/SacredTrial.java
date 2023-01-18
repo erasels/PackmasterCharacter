@@ -66,7 +66,6 @@ public class SacredTrial extends AbstractDragonwrathCard {
     // Upgraded stats.
     @Override
     public void upp() {
-        upgradeMagicNumber(-1);
-        upgradeSecondMagic(1);
+        upgradeMagicNumber(-3);
     }
 }

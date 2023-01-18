@@ -9,10 +9,15 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.actions.dragonwrathpack.SmiteAction;
+import thePackmaster.cards.dragonwrathpack.Absolution;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -53,6 +58,9 @@ public class PenancePower extends TwoAmountPower implements CloneablePowerInterf
             Power += 10;
             if (amount > 1){
                 addToBot(new RemoveSpecificPowerAction(owner,owner,this));
+            }
+            if (AbstractDungeon.player.hasPower(AbsolutionPower.POWER_ID)){
+                Wiz.applyToEnemy((AbstractMonster) owner,new WeakPower(owner,AbstractDungeon.player.getPower(AbsolutionPower.POWER_ID).amount,false));
             }
             updateDescription();
         }

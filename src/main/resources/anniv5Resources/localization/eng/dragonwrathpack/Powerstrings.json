@@ -10,19 +10,19 @@
   "${ModID}:confession": {
     "NAME": "Confession",
     "DESCRIPTIONS": ["Whenever you take damage deal #b",
-      " damage to all enemies"
+      " damage to all enemies. Falls by half if it isn't your turn."
     ]
   },
   "${ModID}:JudgementDay": {
     "NAME": "Judgement Day",
-    "DESCRIPTIONS": ["Whenever you channel #yLightning gain #b",
+    "DESCRIPTIONS": ["Whenever a #yLightning orbs #ypassive activates gain #b",
       " #yConfession."
     ]
   },
   "${ModID}:Absolution": {
     "NAME": "Absolution",
-    "DESCRIPTIONS": ["Whenever you take damage, increase #yPenance HP loss by #b",
-      " this combat."
+    "DESCRIPTIONS": ["Whenever a creature loses HP from penance they gain #b",
+      " #yWeak."
     ]
   }
 }

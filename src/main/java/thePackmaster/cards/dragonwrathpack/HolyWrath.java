@@ -42,9 +42,9 @@ public class HolyWrath extends AbstractDragonwrathCard {
 
 
     public HolyWrath(){
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 1;
     }
 
 
@@ -52,26 +52,14 @@ public class HolyWrath extends AbstractDragonwrathCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
-        Wiz.applyToSelf(new confessionpower(p,magicNumber));
         Wiz.vfx(new MiracleEffect(LightOrb.color,LightOrb.color2,"HEAL_3"));
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                if (AbstractDungeon.player.hasPower(confessionpower.POWER_ID)) {
-                    for (int i = 0; i < AbstractDungeon.player.getPower(confessionpower.POWER_ID).amount; i++) {
-                        addToBot(new ManifestAction(new Lightning()));
-                    }
-                }
-                isDone = true;
-            }
-        });
     }
 
 
     // Upgraded stats.
     @Override
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
     @Override
     public String cardArtCopy() {

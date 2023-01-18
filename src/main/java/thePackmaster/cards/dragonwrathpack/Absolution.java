@@ -43,7 +43,7 @@ public class Absolution extends AbstractDragonwrathCard {
     public Absolution(){
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 4;
-        secondMagic = baseSecondMagic = 5;
+        secondMagic = baseSecondMagic = 2;
     }
 
 
@@ -63,7 +63,7 @@ public class Absolution extends AbstractDragonwrathCard {
     @Override
     public void upp() {
         upgradeMagicNumber(2);
-        upgradeSecondMagic(4);
+        upgradeSecondMagic(1);
     }
 }
 
