@@ -13,7 +13,7 @@ public class CharacterTwoAmountPowerStackPatch {
     public static void stackAmount2(ApplyPowerAction __instance, AbstractPower p) {
         AbstractPower powerToApply = ReflectionHacks.getPrivate(__instance, ApplyPowerAction.class, "powerToApply");
         if (p instanceof FrostprimePower && powerToApply instanceof FrostprimePower) {
-            ((FrostprimePower)p).stackAmount2(((FrostprimePower)p).amount2);
+            ((FrostprimePower)p).stackAmount2(((FrostprimePower)powerToApply).amount2);
         }
     }
 
