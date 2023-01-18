@@ -30,7 +30,7 @@ public class VoraciousSigil extends AbstractPackmasterCard {
     public CardGroup absorbedCards;
 
     public VoraciousSigil() {
-        super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         absorbedCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
     }
 
