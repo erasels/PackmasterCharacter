@@ -10,7 +10,7 @@ import thePackmaster.powers.rimworldpack.LuciferiumAddictionPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Luciferium extends AbstractRimworldCard {
+public class Luciferium extends AbstractRimCard {
     public final static String ID = makeID(Luciferium.class.getSimpleName());
 
     private static int STRENGTH = 5;

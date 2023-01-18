@@ -1,9 +1,10 @@
 {
   "${ModID}:RimworldPack": {
     "TEXT": [
-      "Rimworld",
+      "RimWorld",
       "Mental Breaks and eating without a table. For massive power of course.",
-      "Laugic"
+      "Laugic",
+      "#bRimWorld originally created by #bLudeon #bStudios"
     ]
   },
   "${ModID}:Potions": {

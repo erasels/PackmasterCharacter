@@ -8,7 +8,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Pyromaniac extends AbstractRimworldCard {
+public class Pyromaniac extends AbstractRimCard {
     public final static String ID = makeID(Pyromaniac.class.getSimpleName());
 
     public Pyromaniac() {
