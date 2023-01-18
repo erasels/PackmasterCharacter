@@ -282,7 +282,7 @@ public class StealPowerAction extends AbstractGameAction {
 					return new StasisPower(c, card) {
 						@Override
 						public void onInitialApplication() {
-							if (AbstractDungeon.player.hand.size() != BaseMod.MAX_HAND_SIZE) {
+							if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
 								addToBot(new MakeTempCardInHandAction(card, false, true));
 							} else {
 								addToBot(new MakeTempCardInDiscardAction(card, true));
