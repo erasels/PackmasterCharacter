@@ -1,0 +1,9 @@
+{
+  "${ModID}:PrimeDirectivePower": {
+    "NAME": "Prime Directive",
+    "DESCRIPTIONS": [
+      "Your Attacks have #yOdd: Deal #b",
+      " additional damage."
+    ]
+  }
+}

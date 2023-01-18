@@ -4,20 +4,20 @@
     "NAMES": [
       "even"
     ],
-    "DESCRIPTION": "Additional effect you played an even number of cards this turn (including this)."
+    "DESCRIPTION": "Additional effect if you played an even number of cards this turn (including this)."
   },
   {
     "PROPER_NAME": "Odd",
     "NAMES": [
       "odd"
     ],
-    "DESCRIPTION": "Additional effect you played an odd number of cards this turn (including this)."
+    "DESCRIPTION": "Additional effect if you played an odd number of cards this turn (including this)."
   },
   {
     "PROPER_NAME": "First",
     "NAMES": [
       "First"
     ],
-    "DESCRIPTION": "Additional effect this is the first card played this turn."
+    "DESCRIPTION": "Additional effect if this is the first card played this turn."
   }
 ]

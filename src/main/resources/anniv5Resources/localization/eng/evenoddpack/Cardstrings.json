@@ -8,5 +8,14 @@
     "NAME": "Quick Reflex",
     "DESCRIPTION": "Gain !B! Block",
     "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First: ", "Gain !B! Block"]
+  },
+  "${ModID}:PrimeDirective": {
+    "NAME": "Prime Directive",
+    "DESCRIPTION": "Your Attacks have NL ${ModID}:Odd: Deal !M! additional damage."
+  },
+  "${ModID}:EvenOddAppend": {
+    "NAME": "",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [" NL (+ ", " damage.)", "Gain ", " Block"]
   }
 }
