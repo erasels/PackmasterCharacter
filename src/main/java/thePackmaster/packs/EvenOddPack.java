@@ -4,10 +4,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.downfallpack.*;
-import thePackmaster.cards.evenoddpack.PrimeDirective;
-import thePackmaster.cards.evenoddpack.QuickReflex;
-import thePackmaster.cards.evenoddpack.SwordAndBoard;
-import thePackmaster.cards.evenoddpack.WitzBolt;
+import thePackmaster.cards.evenoddpack.*;
 
 import java.util.ArrayList;
 
@@ -29,6 +26,7 @@ public class EvenOddPack extends AbstractCardPack {
         cards.add(QuickReflex.ID);
         cards.add(PrimeDirective.ID);
         cards.add(WitzBolt.ID);
+        cards.add(ElementOfSurprise.ID);
         return cards;
     }
 }
