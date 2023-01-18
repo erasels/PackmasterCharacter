@@ -1,6 +1,7 @@
 package thePackmaster.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,53 +14,41 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Rummage extends AbstractPackmasterCard {
     public final static String ID = makeID("Rummage");
-    // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public Rummage() {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 10;
-        baseMagicNumber = magicNumber = 1;
+        damage = baseDamage = 10;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                ArrayList<AbstractCard> possCardsList = new ArrayList<>();
-                ArrayList<AbstractCard> chosenCards = new ArrayList<>();
-                int highestcost = 0;
-
-                for (int i = 0; i < magicNumber; i++) {
-                    for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                        if (!chosenCards.contains(q) && q.cost >= 0 && q.costForTurn > 0) {
-                            if (Wiz.getLogicalCardCost(q) == highestcost) {
-                                possCardsList.add(q);
-                            } else if (Wiz.getLogicalCardCost(q) > highestcost) {
-                                highestcost = Wiz.getLogicalCardCost(q);
-                                possCardsList.clear();
-                                possCardsList.add(q);
-                            }
-                        }
-                    }
-
-                    if (!possCardsList.isEmpty()) {
-                        AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
-                        possCardsList.clear();
-                        chosenCards.add(q);
-                        highestcost = 0;
-                        q.setCostForTurn(q.costForTurn - 1);
-                        q.isCostModifiedForTurn = true;
-                        q.superFlash();
-                    }
-                }
-            }
-        });
+        Wiz.atb(new DrawCardAction(1, new RummageDrawAction(magicNumber)));
     }
 
 
     public void upp() {
+        upgradeDamage(4);
         upgradeMagicNumber(1);
+    }
+
+    public static class RummageDrawAction extends AbstractGameAction{
+
+        RummageDrawAction(int reduction){
+            amount = reduction;
+        }
+
+        @Override
+        public void update() {
+            for (AbstractCard c : DrawCardAction.drawnCards) {
+                if(Wiz.getLogicalCardCost(c) > 0)
+                {
+                    c.setCostForTurn(Math.max(0, c.costForTurn - amount));
+                    c.isCostModifiedForTurn = true;
+                    c.superFlash();
+                }
+            }
+            isDone = true;
+        }
     }
 }
