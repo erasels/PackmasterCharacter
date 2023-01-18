@@ -190,17 +190,17 @@ public class HatMenu {
             invalidHatSelected = true;
             currentHat = null;
             Hats.addHat(false, "Locked");
-            flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index - 2)).name + TEXT[3];
+            flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[3];
         } else if (name.contains(TEXT[6])) {
             invalidHatSelected = true;
             currentHat = null;
             SpireAnniversary5Mod.logger.info("Selected a missing hat.");
             Hats.removeHat(false);
-            flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index - 2)).name + TEXT[7];
+            flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[7];
         } else {
             invalidHatSelected = false;
             SpireAnniversary5Mod.logger.info("Add new hat at index " + index);
-            currentHat = hats.get(index - 2);
+            currentHat = hats.get(index);
             Hats.addHat(false, currentHat);
             flavorText = SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
         }
