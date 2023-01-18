@@ -2,7 +2,7 @@
   {
     "PROPER_NAME": "Angry",
     "NAMES": ["angry"],
-    "DESCRIPTION": "Your Attacks deal 50% more damage and you take 50% more damage from attacks. Upon exiting this #yStance, gain #b3 #yVigor."
+    "DESCRIPTION": "Your Attacks deal #b50% more damage and you take #b50% more damage from attacks. Upon exiting this #yStance, gain #b3 #yVigor."
   },
   {
     "PROPER_NAME": "Serene",
