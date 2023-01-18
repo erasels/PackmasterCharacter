@@ -28,7 +28,7 @@
   },
   "${ModID}:Retromation": {
     "NAME": "Retromation",
-    "DESCRIPTION": "At the start of your turn, gain a card from a Pack not available to your draft. NL It gains Ethereal."
+    "DESCRIPTION": "At the start of your turn, gain a card from a Pack not available in your draft. NL It gains Ethereal."
   },
   "${ModID}:OddOne": {
     "NAME": "Odd One",
