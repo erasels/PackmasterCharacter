@@ -20,7 +20,6 @@ public class Improvise extends AbstractPackmasterCard {
     public Improvise() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, "grandopening");
         this.baseBlock = this.block = 5;
-        this.isInnate = true;
     }
 
     @Override
@@ -39,6 +38,6 @@ public class Improvise extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        this.upgradeBlock(3);
+        this.isInnate = true;
     }
 }

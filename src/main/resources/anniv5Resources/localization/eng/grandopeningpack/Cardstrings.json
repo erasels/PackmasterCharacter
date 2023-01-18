@@ -34,7 +34,8 @@
   },
   "${ModID}:Improvise": {
     "NAME": "Improvise",
-    "DESCRIPTION": "Innate. NL Gain !B! Block. Discard all Innate cards in your hand and that much Dexterity."
+    "DESCRIPTION": "Gain !B! Block. Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage"
   },
   "${ModID}:Debut": {
     "NAME": "Debut",
