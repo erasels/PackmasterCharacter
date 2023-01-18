@@ -108,10 +108,7 @@
   },
   "${ModID}:CardTypeStrings": {
     "TEXT": [
-      "Chance",
-      "Inspiration",
-      "Mental Break",
-      "Status"
+      "Chance"
     ]
   },
   "${ModID}:HatMenu": {
