@@ -56,7 +56,6 @@ import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 import thePackmaster.orbs.WitchesStrike.FullMoon;
-import thePackmaster.orbs.contentcreatorpack.Wanderbot;
 import thePackmaster.orbs.downfallpack.Ghostflame;
 import thePackmaster.orbs.entropy.Oblivion;
 import thePackmaster.orbs.summonspack.Leprechaun;
@@ -1004,23 +1003,21 @@ public class SpireAnniversary5Mod implements
         //Is there a cleaner way to do this without instantiating an arraylist of stances objects?
         //Case can't use .STANCE_ID
 
-        switch (stance) {
-            case ("anniv5:Angry"):
-                return new Angry();
-            case ("Calm"):
-                return new CalmStance();
-            case ("anniv5:Serene"):
-                return new Serene();
-            case ("anniv5:Ancient"):
-                return new AncientStance();
-            case ("anniv5:Aggression"):
-                return new AggressionStance();
-            case ("anniv5:Nightmare"):
-                return new NightmareStance();
+        if (Objects.equals(stance, Angry.STANCE_ID)) {
+            return new Angry();
+        } else if (Objects.equals(stance, CalmStance.STANCE_ID)) {
+            return new CalmStance();
+        } else if (Objects.equals(stance, Serene.STANCE_ID)) {
+            return new Serene();
+        } else if (Objects.equals(stance, AncientStance.STANCE_ID)) {
+            return new AncientStance();
+        } else if (Objects.equals(stance, AggressionStance.STANCE_ID)) {
+            return new AggressionStance();
+        } else {
 
+            return new NightmareStance();
         }
 
-        return new CalmStance();  //Should never be hit.
     }
 
     public static String getPackmasterStance(boolean useCardRng) {

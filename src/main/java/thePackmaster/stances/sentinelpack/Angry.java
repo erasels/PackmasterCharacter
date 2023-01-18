@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -49,6 +50,14 @@ public class Angry extends AbstractStance {
             AbstractDungeon.effectsQueue.add(new StanceAuraEffect("Wrath"));
         }
 
+    }
+
+    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+        return type == DamageInfo.DamageType.NORMAL ? damage * 1.5F : damage;
+    }
+
+    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
+        return type == DamageInfo.DamageType.NORMAL ? damage * 1.5F : damage;
     }
 
     public void onEnterStance() {

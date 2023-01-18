@@ -34,13 +34,6 @@ public class Serene extends AbstractStance {
         this.updateDescription();
     }
 
-    public float atDamageGive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage * 1.5F : damage;
-    }
-
-    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage * 1.5F : damage;
-    }
     @Override
     public void updateAnimation() {
             if (!Settings.DISABLE_EFFECTS) {

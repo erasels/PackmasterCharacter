@@ -27,7 +27,7 @@ public class RagnarokNRoll extends AbstractSentinelCard {
         for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.LIGHTNING));
         }
-        this.addToBot(new ChangeStanceAction("Neutral"));
+        this.addToBot(new ChangeStanceAction(NeutralStance.STANCE_ID));
 
     }
 
