@@ -17,5 +17,11 @@
     "TEXT": [
       "${ModID}:On_Fire. NL "
     ]
+  },
+  "${ModID}:RimworldPackHat": {
+    "TEXT": [
+      "For space cowboys. Definitely not made of human leather.",
+      "RimWorld Hat"
+    ]
   }
 }
