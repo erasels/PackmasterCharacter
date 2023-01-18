@@ -23,7 +23,7 @@ public class MindOverMatter extends AbstractPackmasterCard {
 
     public MindOverMatter() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        magicNumber=1;
+        this.magicNumber = this.baseMagicNumber= 1;
     }
 
     @Override
