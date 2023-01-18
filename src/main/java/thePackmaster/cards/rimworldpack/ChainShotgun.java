@@ -1,18 +1,11 @@
 package thePackmaster.cards.rimworldpack;
 
-import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.rimworldpack.MoodPower;
-import thePackmaster.util.Wiz;
-
-import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -21,7 +14,7 @@ public class ChainShotgun extends AbstractPackmasterCard {
 
     public ChainShotgun() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        damage = baseDamage = 6;
+        damage = baseDamage = 7;
         magicNumber = baseMagicNumber = 3;
     }
 

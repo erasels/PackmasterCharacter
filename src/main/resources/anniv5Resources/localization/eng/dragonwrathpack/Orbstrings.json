@@ -1,17 +1,10 @@
 {
-  "${ModID}:CrescentMoon": {
-    "NAME": "Crescent Moon",
+  "${ModID}:Light": {
+    "NAME": "Light",
     "DESCRIPTION": [
-      "#yPassive: When activated, deal #b",
-      " damage to a random enemy, #yEvoke this if this has activated #b"," times. NL #yEvoke: deal #b",
-      " damage to a random enemy for each remaining #ypassive use and lose an orb slot."
-    ]
-  },
-  "${ModID}:FullMoon": {
-    "NAME": "Full Moon",
-    "DESCRIPTION": [
-      "#yPassive: When activated, draw a card",
-      " #yEvoke this if this has activated #b"," times. NL #yEvoke: draw a card each remaining #ypassive use and lose an orb slot."
+      "#yPassive: At the end of your turn, take #b",
+      " damage and gain that much #yConfession NL #yEvoke: take #b",
+      " damage and gain that much #yConfession."
     ]
   }
 }

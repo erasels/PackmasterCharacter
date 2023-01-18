@@ -5,8 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.rimworldpack.BurningPassionPower;
-import thePackmaster.powers.rimworldpack.SanguinePower;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -14,7 +12,7 @@ public class BurningPassion extends AbstractPackmasterCard {
     public final static String ID = makeID(BurningPassion.class.getSimpleName());
 
     public BurningPassion() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 4, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -22,6 +20,6 @@ public class BurningPassion extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeBaseCost(3);
     }
 }
