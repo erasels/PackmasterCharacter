@@ -37,7 +37,7 @@ public class Leprechaun extends CustomOrb {
     private static final String IMG_PATH = makePath("/images/orbs/summonsPack/Leprechaun.png");
     private static final float SPIRIT_WIDTH = 96.0f;
 
-    private final static int BASE_PASSIVE = 2;
+    private final static int BASE_PASSIVE = 3;
     private final static int BASE_EVOKE = 3;
 
     private final BobEffect lepBobEffect = new BobEffect(2f, 2f);
