@@ -14,7 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class Oppressor extends AbstractPackmasterCard {
+public class Oppressor extends AbstractQuietCard {
     public final static String ID = makeID("Oppressor");
 
     public Oppressor() {

@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ChainShotgun extends AbstractPackmasterCard {
+public class ChainShotgun extends AbstractRimworldCard {
     public final static String ID = makeID(ChainShotgun.class.getSimpleName());
 
     public ChainShotgun() {

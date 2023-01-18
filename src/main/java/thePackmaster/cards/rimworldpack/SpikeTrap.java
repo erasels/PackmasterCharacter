@@ -8,7 +8,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SpikeTrap extends AbstractPackmasterCard {
+public class SpikeTrap extends AbstractRimworldCard {
     public final static String ID = makeID(SpikeTrap.class.getSimpleName());
 
     public SpikeTrap() {
