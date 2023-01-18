@@ -7,6 +7,7 @@ import thePackmaster.cards.downfallpack.*;
 import thePackmaster.cards.evenoddpack.PrimeDirective;
 import thePackmaster.cards.evenoddpack.QuickReflex;
 import thePackmaster.cards.evenoddpack.SwordAndBoard;
+import thePackmaster.cards.evenoddpack.WitzBolt;
 
 import java.util.ArrayList;
 
@@ -27,6 +28,7 @@ public class EvenOddPack extends AbstractCardPack {
         cards.add(SwordAndBoard.ID);
         cards.add(QuickReflex.ID);
         cards.add(PrimeDirective.ID);
+        cards.add(WitzBolt.ID);
         return cards;
     }
 }
