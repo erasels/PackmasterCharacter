@@ -959,13 +959,13 @@ public class SpireAnniversary5Mod implements
         BaseMod.addSaveField("PackmasterWornHat", new CustomSavable<String>() {
             @Override
             public String onSave() {
-                return Hats.currentHat;
+                return AbstractDungeon.player instanceof ThePackmaster ? Hats.currentHat : null;
             }
 
             @Override
             public void onLoad(String s) {
                 logger.info("Loading. Hat: " + s);
-                if (s != null) {
+                if (s != null && AbstractDungeon.player instanceof ThePackmaster) {
                     Hats.currentHat = s;
                     Hats.addHat(true, Hats.currentHat);
                 }
