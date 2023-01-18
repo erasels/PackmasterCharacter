@@ -12,6 +12,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
@@ -31,11 +32,15 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.orbs.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.stances.AbstractStance;
+import com.megacrit.cardcrawl.stances.CalmStance;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
@@ -49,9 +54,14 @@ import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
+import thePackmaster.orbs.WitchesStrike.CrescentMoon;
+import thePackmaster.orbs.WitchesStrike.FullMoon;
+import thePackmaster.orbs.downfallpack.Ghostflame;
+import thePackmaster.orbs.entropy.Oblivion;
 import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
+import thePackmaster.orbs.summonspack.SwarmOfBees;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
@@ -73,9 +83,15 @@ import thePackmaster.powers.dragonwrathpack.PenancePower;
 import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
+import thePackmaster.stances.aggressionpack.AggressionStance;
+import thePackmaster.stances.cthulhupack.NightmareStance;
+import thePackmaster.stances.downfallpack.AncientStance;
+import thePackmaster.stances.sentinelpack.Angry;
+import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.TexLoader;
+import thePackmaster.util.Wiz;
 import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
@@ -594,6 +610,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(makeID("RipPack_Ahh"), makePath("audio/rippack/ahh.ogg"));
         BaseMod.addAudio(makeID("RipPack_Ohh"), makePath("audio/rippack/ohh.mp3"));
         BaseMod.addAudio(makeID("RipPack_Sword"), makePath("audio/rippack/sword.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Harp"), makePath("audio/rippack/harp.ogg"));
         BaseMod.addAudio(modID + "dice1", modID + "Resources/audio/DiceRoll1.wav");
         BaseMod.addAudio(modID + "dice2", modID + "Resources/audio/DiceRoll2.wav");
         BaseMod.addAudio(modID + "dice3", modID + "Resources/audio/DiceRoll3.wav");
@@ -979,4 +996,45 @@ public class SpireAnniversary5Mod implements
     }
 
     public static float time = 0f;
+
+
+    public static AbstractStance getPackmasterStanceInstance(boolean useCardRng) {
+        String stance = getPackmasterStance(useCardRng);
+
+        //Is there a cleaner way to do this without instantiating an arraylist of stances objects?
+        //Case can't use .STANCE_ID
+
+        if (Objects.equals(stance, Angry.STANCE_ID)) {
+            return new Angry();
+        } else if (Objects.equals(stance, CalmStance.STANCE_ID)) {
+            return new CalmStance();
+        } else if (Objects.equals(stance, Serene.STANCE_ID)) {
+            return new Serene();
+        } else if (Objects.equals(stance, AncientStance.STANCE_ID)) {
+            return new AncientStance();
+        } else if (Objects.equals(stance, AggressionStance.STANCE_ID)) {
+            return new AggressionStance();
+        } else {
+
+            return new NightmareStance();
+        }
+
+    }
+
+    public static String getPackmasterStance(boolean useCardRng) {
+        ArrayList<String> stances = new ArrayList<>();
+        stances.add(Angry.STANCE_ID);
+        stances.add(Serene.STANCE_ID);
+        stances.add(CalmStance.STANCE_ID);
+        stances.add(AncientStance.STANCE_ID);
+        stances.add(AggressionStance.STANCE_ID);
+        stances.add(NightmareStance.STANCE_ID);
+
+        stances.remove(p().stance.ID);
+
+        return useCardRng ? stances.get(AbstractDungeon.cardRandomRng.random(stances.size() - 1)) : stances.get(MathUtils.random(stances.size() - 1));
+    }
 }
+
+
+

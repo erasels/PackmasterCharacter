@@ -20,11 +20,6 @@
     "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] .",
     "UPGRADE_DESCRIPTION": "Retain. NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] ."
   },
-  "${ModID}:PackRip": {
-    "NAME": "Pack Rip",
-    "DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand and Upgrade them. NL Exhaust."
-  },
   "${ModID}:RippedPecs": {
     "NAME": "Ripped Pecs",
     "DESCRIPTION": "Gain 1 Strength for each pack you've played a card from this combat. NL Exhaust.",

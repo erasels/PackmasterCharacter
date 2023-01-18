@@ -19,6 +19,7 @@ import thePackmaster.util.CardArtRoller;
 
 import java.util.ArrayList;
 
+import static thePackmaster.SpireAnniversary5Mod.ISCARDMODIFIED;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class WitchTwist extends AbstractWitchStrikeCard {
@@ -29,6 +30,7 @@ public class WitchTwist extends AbstractWitchStrikeCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 2;
         secondMagic = baseSecondMagic =1;
+        exhaust = true;
         CardModifierManager.addModifier(this,new InscribedMod(true,true));
 
     }
@@ -41,7 +43,7 @@ public class WitchTwist extends AbstractWitchStrikeCard {
                     if (AbstractDungeon.player.hand.size() > 0) {
                         ArrayList<AbstractCard> Uninscribed = new ArrayList<>();
                         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                            if (!CardModifierManager.hasModifier(c, "Inscribed")) {
+                            if (!c.hasTag(ISCARDMODIFIED)) {
                                 Uninscribed.add(c);
                             }
                         }
