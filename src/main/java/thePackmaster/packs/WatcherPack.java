@@ -21,7 +21,7 @@ public class WatcherPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(Crescendo.ID);
+        cards.add(EmptyBody.ID);
         cards.add(Tranquility.ID);
         cards.add(PressurePoints.ID);
         cards.add(CrushJoints.ID);
