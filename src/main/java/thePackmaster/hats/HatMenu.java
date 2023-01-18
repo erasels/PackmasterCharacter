@@ -152,6 +152,7 @@ public class HatMenu {
             Hats.removeHat(false);
             flavorText = "";
         } else if (index == 1) {
+            currentHat = null;
             if (currentlyUnlockedHats.isEmpty()) {
                 invalidHatSelected = true;
                 SpireAnniversary5Mod.logger.info("Selected Random but no hats are unlocked.");
@@ -167,10 +168,12 @@ public class HatMenu {
         } else if (name.contains(TEXT[1])) {
             SpireAnniversary5Mod.logger.info("Selected a locked hat.");
             invalidHatSelected = true;
+            currentHat = null;
             Hats.addHat(false, "Locked");
             flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index - 2)).name + TEXT[3];
         } else if (name.contains(TEXT[6])) {
             invalidHatSelected = true;
+            currentHat = null;
             SpireAnniversary5Mod.logger.info("Selected a missing hat.");
             Hats.removeHat(false);
             flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index - 2)).name + TEXT[7];
