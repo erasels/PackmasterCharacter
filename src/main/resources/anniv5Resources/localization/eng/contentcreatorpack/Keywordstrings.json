@@ -18,13 +18,13 @@
     "NAMES": [
       "odd"
     ],
-    "DESCRIPTION": "Effect triggers only if you've played an Even number of cards this turn before playing this."
+    "DESCRIPTION": "Additional effect if you played an odd number of cards this turn (including this)."
   },
   {
     "PROPER_NAME": "Even",
     "NAMES": [
       "even"
     ],
-    "DESCRIPTION": "Effect triggers only if you've played an Odd number of cards this turn before playing this."
+    "DESCRIPTION": "Additional effect if you played an even number of cards this turn (including this)."
   }
 ]

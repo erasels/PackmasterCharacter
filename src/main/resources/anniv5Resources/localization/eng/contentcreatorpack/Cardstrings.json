@@ -50,12 +50,12 @@
   },
   "${ModID}:BaalorBash": {
     "NAME": "Baalorlord's Bash",
-    "DESCRIPTION": "Deal !D! damage. NL Put a *Baalor's *Blueprint on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Put a *Baalor's *Blueprint on top of your draw pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Baalor's *Blueprint into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Shuffle a *Baalor's *Blueprint into your draw pile. NL Exhaust."
   },
   "${ModID}:BaalorBlueprint": {
     "NAME": "Baalor's Blueprint",
-    "DESCRIPTION": "Shuffle your discard pile into your draw pile. NL Put *The *Cozy *Chair on the bottom of it. NL Exhaust."
+    "DESCRIPTION": "Shuffle your discard pile into your draw pile. Put *The *Cozy *Chair on the bottom of it. Exhaust."
   },
   "${ModID}:TheCozyChair": {
     "NAME": "The Cozy Chair",

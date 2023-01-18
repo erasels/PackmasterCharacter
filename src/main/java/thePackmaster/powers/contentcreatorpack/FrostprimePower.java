@@ -21,7 +21,9 @@ public class FrostprimePower extends AbstractPackmasterPower {
 
     public FrostprimePower(int amount, int amount2) {
         super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
+        isTwoAmount = true;
         this.amount2 = amount2;
+        updateDescription();
     }
 
     public void stackAmount2(int amount2) {
@@ -44,7 +46,7 @@ public class FrostprimePower extends AbstractPackmasterPower {
         sb.append(DESCRIPTIONS[0]);
         sb.append(amount);
         sb.append(DESCRIPTIONS[1]);
-        sb.append(amount);
+        sb.append(amount2);
         sb.append(DESCRIPTIONS[2]);
         description = sb.toString();
     }

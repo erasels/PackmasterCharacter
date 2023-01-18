@@ -2,6 +2,7 @@ package thePackmaster.cards.contentcreatorpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,14 +25,7 @@ public class BaalorBlueprint extends AbstractContentCard {
             this.addToBot(new EmptyDeckShuffleAction());
             this.addToBot(new ShuffleAction(AbstractDungeon.player.drawPile, false));
         }
-
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                AbstractDungeon.player.drawPile.addToBottom(new TheCozyChair());
-            }
-        });
+        addToBot(new MakeTempCardInDrawPileAction(new TheCozyChair(), 1, false, true, true));
     }
 
     public void upp() {
