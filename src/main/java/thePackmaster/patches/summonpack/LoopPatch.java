@@ -1,16 +1,10 @@
 package thePackmaster.patches.summonpack;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.LoopPower;
 import javassist.CtBehavior;
-import thePackmaster.orbs.AbstractPackMasterOrb;
-import thePackmaster.orbs.summonspack.OnPlayCardOrb;
+import thePackmaster.orbs.PackmasterOrb;
 
 import static thePackmaster.util.Wiz.adp;
 
@@ -25,8 +19,8 @@ public class LoopPatch {
         )
         public static void Insert() {
             for (AbstractOrb orb : adp().orbs) {
-                if (orb instanceof AbstractPackMasterOrb)
-                    ((AbstractPackMasterOrb) orb).passiveEffect();
+                if (orb instanceof PackmasterOrb)
+                    ((PackmasterOrb) orb).passiveEffect();
             }
         }
 

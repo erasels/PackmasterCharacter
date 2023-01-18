@@ -16,6 +16,7 @@ public class GraveyardPack extends AbstractCardPack {
 
     public GraveyardPack() {
         super(ID, NAME, DESC, AUTHOR);
+        hatHidesHair = true;
     }
 
     @Override

@@ -23,16 +23,16 @@ public class SummonsPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(EvilSpirit.ID);
-        cards.add(SummonWolf.ID);
-        cards.add(SummonPorcupine.ID);
-        cards.add(SummonElephant.ID);
+        cards.add(Leprechaun.ID);
+        cards.add(Wolves.ID);
+        cards.add(Porcupine.ID);
+        cards.add(Elephant.ID);
         cards.add(FireSpirit.ID);
         cards.add(RainbowLouse.ID);
-        cards.add(SummonBees.ID);
+        cards.add(SwarmOfBees.ID);
         cards.add(Ambush.ID);
-        cards.add(SummonPandas.ID);
-        cards.add(Control.ID);
+        cards.add(Pandas.ID);
+        cards.add(Training.ID);
         cards.add(Quill.ID);
         return cards;
     }

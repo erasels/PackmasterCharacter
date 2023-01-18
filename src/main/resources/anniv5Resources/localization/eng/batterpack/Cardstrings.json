@@ -17,11 +17,11 @@
   },
   "${ModID}:OpenBracket": {
     "NAME": "Open Bracket",
-    "DESCRIPTION": "Draw !M! Attacks. NL You cannot draw additional cards this turn."
+    "DESCRIPTION": "Draw !M! cards. NL You can only play Attacks for the rest of the turn."
   },
   "${ModID}:Tragedy": {
     "NAME": "Tragedy",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Critical_Hit if you hold 7 or more cards."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Critical_Hit if you hold 6 or more cards."
   },
   "${ModID}:OptimizedBlur": {
     "NAME": "Optimized Blur",
@@ -29,8 +29,8 @@
   },
   "${ModID}:HardCaramel": {
     "NAME": "Hard Caramel",
-    "DESCRIPTION": "After attacking, apply 1 Vulnerable, if target doesn't have any.",
-    "UPGRADE_DESCRIPTION": "Innate. NL After attacking, apply 1 Vulnerable, if target doesn't have any."
+    "DESCRIPTION": "After attacking, apply 1 Vulnerable if target doesn't have any.",
+    "UPGRADE_DESCRIPTION": "Innate. NL After attacking, apply 1 Vulnerable if target doesn't have any."
   },
   "${ModID}:UltimateHomerun": {
     "NAME": "Ultimate Homerun",

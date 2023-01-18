@@ -8,7 +8,7 @@ import thePackmaster.powers.batterpack.HardCaramelPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class HardCaramel extends AbstractPackmasterCard {
+public class HardCaramel extends AbstractBatterCard {
     public final static String ID = makeID("HardCaramel");
 
     public HardCaramel() {

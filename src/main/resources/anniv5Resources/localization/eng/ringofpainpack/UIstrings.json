@@ -6,5 +6,11 @@
       "Darkglade",
       "#yRing #yof #yPain originally created by #ySimon #yBoxer and #yTwice #yDifferent"
     ]
+  },
+  "${ModID}:RingOfPainPackHat": {
+    "TEXT": [
+      "How comfy it is to rest/Within the confines of this makeshift nest.",
+      "Mini Owl"
+    ]
   }
 }

@@ -27,12 +27,13 @@ public class HardCaramelPower extends AbstractPackmasterPower{
         AbstractCreature realtarget = target;
 
         if (info.type == DamageInfo.DamageType.NORMAL) {
-            this.flash();
             Wiz.atb(new AbstractGameAction() {
                 @Override
                 public void update() {
-                    if (!realtarget.hasPower(VulnerablePower.POWER_ID))
-                        Wiz.att(new ApplyPowerAction(realtarget, realtarget, new VulnerablePower(realtarget,1,false),1));
+                    if (!realtarget.hasPower(VulnerablePower.POWER_ID)) {
+                        HardCaramelPower.this.flash();
+                        Wiz.att(new ApplyPowerAction(realtarget, realtarget, new VulnerablePower(realtarget, 1, false), 1));
+                    }
                     isDone = true;
                 }
             });

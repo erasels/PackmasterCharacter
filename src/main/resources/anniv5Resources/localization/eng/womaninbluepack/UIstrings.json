@@ -5,5 +5,11 @@
       "A collection of useful Exhaust cards themed around Potions. Contains several multi-choice cards.",
       "MichaelMayhem"
     ]
+  },
+  "${ModID}:WomanInBluePackHat": {
+    "TEXT": [
+      "Spotted worn wherever trouble is brewing.",
+      "The Hat in Blue"
+    ]
   }
 }

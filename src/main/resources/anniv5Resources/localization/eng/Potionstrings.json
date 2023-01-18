@@ -1,0 +1,33 @@
+{
+  "${ModID}:BoosterBrew": {
+    "NAME": "Booster Brew",
+    "DESCRIPTIONS": [
+      "Choose #b1 of #b3 Packs. Add #b",
+      " random cards from it into your draw pile. They cost 0 this combat."
+    ]
+  },
+  "${ModID}:ModdersDelight": {
+    "NAME": "Modder's Delight",
+    "DESCRIPTIONS": [
+      "Shuffle your discard pile into your draw pile. Put #b",
+      " random cards from different Packs from your draw pile into your hand."
+    ]
+  },
+  "${ModID}:PackInAJar": {
+    "NAME": "Pack in a Jar",
+    "DESCRIPTIONS": [
+      "Discard your hand, then choose #b1 of #b3 Packs. Add #b",
+      " copy of each card from it to your hand.",
+      " copies of each card from it to your hand."
+    ]
+  },
+  "${ModID}:SmithingOil": {
+    "NAME": "Smithing Oil",
+    "DESCRIPTIONS": [
+      "Choose #b",
+      " card in your hand to upgrade #bpermanently.",
+      " cards in your hand to upgrade #bpermanently.",
+      " to upgrade permanently."
+    ]
+  }
+}

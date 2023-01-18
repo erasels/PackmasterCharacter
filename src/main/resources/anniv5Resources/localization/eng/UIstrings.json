@@ -7,7 +7,9 @@
   "${ModID}:AbstractPackPreviewCard": {
     "TEXT": [
       "By: ",
-      "Pack"
+      "Pack",
+      "Hat Unlocked",
+      "Hat Locked"
     ]
   },
   "${ModID}:AtGameStart": {
@@ -22,11 +24,23 @@
       "MegaCrit"
     ]
   },
+  "${ModID}:IroncladPackHat": {
+    "TEXT": [
+      "A tough mask for a tough guy.",
+      "Ironclad Helm"
+    ]
+  },
   "${ModID}:SilentPack": {
     "TEXT": [
       "Silent Showdown",
       "A collection of reliable Silent cards, including access to Poison and Discard.",
       "MegaCrit"
+    ]
+  },
+  "${ModID}:SilentPackHat": {
+    "TEXT": [
+      "A macabre keepsake, now adorning your noggin.",
+      "Silent Trophy"
     ]
   },
   "${ModID}:DefectPack": {
@@ -36,11 +50,23 @@
       "MegaCrit"
     ]
   },
+  "${ModID}:DefectPackHat": {
+    "TEXT": [
+      "You feel a strange urge to enforce balance.",
+      "Defect Interface"
+    ]
+  },
   "${ModID}:WatcherPack": {
     "TEXT": [
       "Will of the Watcher",
-      "A collection of reliable Watcher cards, including access to Stances.",
+      "A collection of reliable Watcher cards (no access to Stances).",
       "MegaCrit"
+    ]
+  },
+  "${ModID}:WatcherPackHat": {
+    "TEXT": [
+      "Contemplative facewear & accessories.",
+      "Watcher Veil"
     ]
   },
   "${ModID}:PackMainMenuUI": {
@@ -49,7 +75,8 @@
       "Turn this on to choose how your Packs are determined.",
       "Random",
       "Choice of 3",
-      "Pack filtering menu"
+      "Pack Filtering Menu",
+      "Hat Menu"
     ]
   },
   "${ModID}:PackSetup": {
@@ -83,7 +110,32 @@
     "TEXT": [
       "Chance",
       "Inspiration",
-      "Mental Break"
+      "Mental Break",
+      "Status"
+    ]
+  },
+  "${ModID}:HatMenu": {
+    "TEXT": [
+      "Base Hat",
+      "(L)",
+      "Win a run with the ",
+      " pack to unlock this hat for future runs.",
+      "The hat for the ",
+      " pack. Real flavor soon!",
+      "(!)",
+      " has no corresponding hat image. Please fix.",
+      "A random Hat will be chosen at the start of each run.",
+      "Random Hat"
+    ]
+  },
+  "${ModID}:ConfigMenuText": {
+    "TEXT": [
+      "The Packmaster",
+      "StS Modding Community",
+      "Adds a new character: The Packmaster.",
+      "ALL PACKS MODE. Ignores Custom Draft",
+      "One Frame For All. All Pack cards have normal Packmaster frames (Requires Restart).",
+      "Share Content. Some Relics/ Potions can appear on other characters (Requires Restart)."
     ]
   }
 }

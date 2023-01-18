@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class MindMaze extends AbstractPackmasterCard {
+public class MindMaze extends AbstractDistortionCard {
     public final static String ID = makeID("MindMaze");
     // intellij stuff skill, self, uncommon, , , 11, 3, , 
 

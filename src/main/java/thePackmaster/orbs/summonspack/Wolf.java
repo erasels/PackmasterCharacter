@@ -1,5 +1,6 @@
 package thePackmaster.orbs.summonspack;
 
+import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -22,14 +23,13 @@ import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.*;
 
-public class Wolf extends AbstractPackMasterOrb {
+public class Wolf extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(Wolf.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
@@ -39,7 +39,8 @@ public class Wolf extends AbstractPackMasterOrb {
     private static final Texture IMG2 = TexLoader.getTexture(IMG_PATH2);
     private static final float WOLF_WIDTH = 96.0f;
 
-    private final static int BASE_PASSIVE = 2;
+    private final static int BASE_PASSIVE = 0;
+    private final static int WOLF_BOOST = 2;
     private final static int BASE_EVOKE = 1;
 
     private final BobEffect wolfBobEffect = new BobEffect(2f, 3f);
@@ -62,13 +63,13 @@ public class Wolf extends AbstractPackMasterOrb {
 
     @Override
     public void applyFocus() {
-        passiveAmount = 0;
+        passiveAmount = BASE_PASSIVE;
         AbstractPower pow = adp().getPower(FocusPower.POWER_ID);
         if (pow != null)
-            passiveAmount = pow.amount;
+            passiveAmount += pow.amount;
         for (AbstractOrb orb : adp().orbs) {
             if (orb instanceof Wolf)
-                passiveAmount += BASE_PASSIVE;
+                passiveAmount += WOLF_BOOST;
         }
         if (passiveAmount < 0)
             passiveAmount = 0;

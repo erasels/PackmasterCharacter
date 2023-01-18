@@ -13,7 +13,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Stall extends AbstractPackmasterCard {
+public class Stall extends AbstractWardenCard {
     public final static String ID = makeID("Stall");
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("PutOnDeckAction");
 

@@ -12,7 +12,7 @@ import thePackmaster.powers.entropypack.RuinPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Waning extends AbstractPackmasterCard {
+public class Waning extends AbstractEntropyCard {
     public final static String ID = makeID("Waning");
     // intellij stuff skill, enemy, rare, , , , , 30, 10
 

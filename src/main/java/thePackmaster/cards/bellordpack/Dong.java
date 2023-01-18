@@ -2,17 +2,20 @@ package thePackmaster.cards.bellordpack;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToEnemy;
+import static thePackmaster.util.Wiz.atb;
 
 public class Dong extends AbstractBellordCard implements OnObtainCard {
     public final static String ID = makeID("Dong");
@@ -26,8 +29,10 @@ public class Dong extends AbstractBellordCard implements OnObtainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new SFXAction("BELL"));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         applyToEnemy(m, new WeakPower(m, magicNumber, false));
+        applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
     }
 
     @Override

@@ -3,7 +3,9 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.hats.HatMenu;
 
 import java.util.ArrayList;
 
@@ -18,6 +20,7 @@ public abstract class AbstractCardPack {
     public String credits;
     public ArrayList<AbstractCard> cards;
     public AbstractCard previewPackCard;
+    public boolean hatHidesHair;
 
     public AbstractCardPack(String id, String name, String description, String author, String credits) {
         this.packID = id;
@@ -27,6 +30,7 @@ public abstract class AbstractCardPack {
         this.credits = credits;
         this.creditsHeader = CardCrawlGame.languagePack.getUIString(makeID("CreditsRenderStrings")).TEXT[0];
         this.cards = new ArrayList<>();
+        hatStrings = CardCrawlGame.languagePack.getUIString(this.packID + "Hat");
         initializePack();
     }
 
@@ -47,12 +51,29 @@ public abstract class AbstractCardPack {
             SpireAnniversary5Mod.cardClassParentMap.put(c.getClass(), packID);
             cards.add(c.makeStatEquivalentCopy());
         }
-        previewPackCard = new CardPackPreview(packID, this);
+        previewPackCard = makePreviewCard();
     }
 
+    public AbstractCard makePreviewCard() {
+        return new CardPackPreview(packID, this);
+    }
 
     public ArrayList<String> getPackPotions() {
         return new ArrayList<>();
+    }
+
+    private UIStrings hatStrings;
+
+    public String getHatName() {
+        //if (hatStrings == null)
+            return this.name;
+        //return hatStrings.TEXT[1];
+    }
+
+    public String getHatFlavor() {
+        if (hatStrings == null)
+            return HatMenu.TEXT[4] + this.name + HatMenu.TEXT[5];
+        return hatStrings.TEXT[0];
     }
 
 }

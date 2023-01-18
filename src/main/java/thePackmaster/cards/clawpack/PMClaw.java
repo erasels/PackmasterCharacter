@@ -1,6 +1,7 @@
 package thePackmaster.cards.clawpack;
 
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.cards.blue.Claw;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
+import thePackmaster.ThePackmaster;
 
 import static thePackmaster.SpireAnniversary5Mod.CLAW;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -17,7 +19,7 @@ public class PMClaw extends AbstractClawCard {
     public final static String ID = makeID("PMClaw");
 
     public PMClaw() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, CardColor.BLUE);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 3;
         baseMagicNumber = magicNumber = 2;
         tags.add(CLAW);
@@ -31,6 +33,7 @@ public class PMClaw extends AbstractClawCard {
 
         ClawUp(magicNumber);
     }
+
 
     public void upp() {
         upgradeDamage(2);

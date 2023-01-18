@@ -11,7 +11,7 @@ import thePackmaster.vfx.distortionpack.StaticEffect;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class Shatter extends AbstractPackmasterCard {
+public class Shatter extends AbstractDistortionCard {
     public final static String ID = makeID("Shatter");
     // intellij stuff attack, enemy, rare, 4, 2, , , ,
 

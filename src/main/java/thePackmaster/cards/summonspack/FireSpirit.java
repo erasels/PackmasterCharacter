@@ -16,7 +16,7 @@ import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.*;
 
-public class FireSpirit extends AbstractPackmasterCard {
+public class FireSpirit extends AbstractSummonsCard {
     public final static String ID = makeID(FireSpirit.class.getSimpleName());
     private static final int COST = 2;
     private static final CardType TYPE = CardType.ATTACK;
@@ -25,6 +25,7 @@ public class FireSpirit extends AbstractPackmasterCard {
 
     private static final int DAMAGE = 15;
     private static final int UPGRADE_DAMAGE = 5;
+    private static final Color color = new Color(1f, 0.5f, 0f, 1f);
 
     public FireSpirit() {
         super(ID, COST, TYPE, RARITY, TARGET);
@@ -37,8 +38,8 @@ public class FireSpirit extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         DamageInfo info = new DamageInfo(adp(), damage, DamageInfo.DamageType.NORMAL);
         DamageAction action = new DamageAction(m, info, AbstractGameAction.AttackEffect.FIRE);
-        ColoredDamagePatch.DamageActionColorField.damageColor.set(action, Color.FIREBRICK.cpy());
-        ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
+        ColoredDamagePatch.DamageActionColorField.damageColor.set(action, color.cpy());
+        ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.SLOW);
         atb(action);
         atb(new ChannelAction(new thePackmaster.orbs.summonspack.FireSpirit()));
     }

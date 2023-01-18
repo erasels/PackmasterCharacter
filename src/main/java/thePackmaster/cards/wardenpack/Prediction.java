@@ -10,7 +10,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Prediction extends AbstractPackmasterCard {
+public class Prediction extends AbstractWardenCard {
     public final static String ID = makeID("Prediction");
 
     public Prediction() {

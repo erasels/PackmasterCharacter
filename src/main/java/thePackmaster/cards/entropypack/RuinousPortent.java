@@ -10,7 +10,7 @@ import thePackmaster.orbs.entropy.Oblivion;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class RuinousPortent extends AbstractPackmasterCard {
+public class RuinousPortent extends AbstractEntropyCard {
     public final static String ID = makeID("RuinousPortent");
     // intellij stuff skill, none, uncommon, , , , , 0, 1
 

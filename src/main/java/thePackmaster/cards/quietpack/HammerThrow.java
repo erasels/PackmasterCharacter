@@ -11,12 +11,12 @@ import thePackmaster.powers.quietpack.HammerThrowPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 
-public class HammerThrow extends AbstractPackmasterCard {
+public class HammerThrow extends AbstractQuietCard {
     public final static String ID = makeID("HammerThrow");
 
     public HammerThrow() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 4;
+        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

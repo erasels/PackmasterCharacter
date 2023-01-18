@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class RuleCancel extends AbstractPackmasterCard {
+public class RuleCancel extends AbstractPsychicCard {
     public final static String ID = makeID("RuleCancel");
     // intellij stuff skill, none, common, , , , , , 
 
@@ -18,7 +18,7 @@ public class RuleCancel extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new MakeCardInHandOccultAction());
+        atb(new MakeCardInHandOccultAction(false));
     }
 
     public void upp() {

@@ -11,7 +11,7 @@ import thePackmaster.vfx.arcanapack.SunBeamEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class UltimateHomerun extends AbstractPackmasterCard {
+public class UltimateHomerun extends AbstractBatterCard {
     public final static String ID = makeID("UltimateHomerun");
 
     private static final int DAMAGE = 0;

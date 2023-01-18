@@ -1,11 +1,6 @@
 package thePackmaster.actions.graveyardpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
-import com.megacrit.cardcrawl.actions.utility.QueueCardAction;
-import com.megacrit.cardcrawl.actions.utility.ShowCardAndPoofAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -16,7 +11,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -27,15 +21,15 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class PlayFromExhaustAction extends AbstractGameAction
 {
-	private AbstractPlayer p;
-	private ArrayList<AbstractCard> classless;
+	private final AbstractPlayer p;
+	private final ArrayList<AbstractCard> classless;
 	private final boolean random;
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("PlayFromExhaustAction"));
 	public static final String[] TEXT = uiStrings.TEXT;
 	
 	public PlayFromExhaustAction(boolean random) {
 		this.random = random;
-		this.classless = new ArrayList();
+		this.classless = new ArrayList<>();
 		this.p = AbstractDungeon.player;
 		setValues(this.p, AbstractDungeon.player, this.amount);
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
@@ -45,7 +39,8 @@ public class PlayFromExhaustAction extends AbstractGameAction
 	public PlayFromExhaustAction(){
 		this(false);
 	}
-	  
+
+	@Override
 	public void update() {
     	if (this.duration == Settings.ACTION_DUR_FAST) {
   	      if (this.p.exhaustPile.isEmpty()) {
@@ -54,8 +49,8 @@ public class PlayFromExhaustAction extends AbstractGameAction
   	      }
   	      //set aside colorless cards, curses, and cards you can't play
   	    	for (Iterator<AbstractCard> ex = this.p.exhaustPile.group.iterator(); ex.hasNext(); ) {
-  		        AbstractCard derp = (AbstractCard)ex.next();
-  		        if (derp.color.equals(AbstractCard.CardColor.COLORLESS) || derp.color.equals(AbstractCard.CardColor.CURSE) || !derp.canUse(p, AbstractDungeon.getMonsters().getRandomMonster(true))) {
+  		        AbstractCard derp = ex.next();
+  		        if (derp.color.equals(AbstractCard.CardColor.COLORLESS) || derp.color.equals(AbstractCard.CardColor.CURSE) || !derp.canUse(p, null)) {
   		          this.classless.add(derp);
   		          ex.remove();
   		        } 

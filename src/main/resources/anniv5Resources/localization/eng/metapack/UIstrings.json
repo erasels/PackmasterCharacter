@@ -5,5 +5,11 @@
       "Support booster pack with adequate general synergies.",
       "AlexMdle"
     ]
+  },
+  "${ModID}:MetaPackHat": {
+    "TEXT": [
+      "Goes on head.",
+      "The Everyhat"
+    ]
   }
 }

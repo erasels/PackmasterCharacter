@@ -1,36 +1,30 @@
 package thePackmaster.orbs.summonspack;
 
+import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.mod.stslib.patches.ColoredDamagePatch;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.FlameBarrierPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.scene.TorchParticleXLEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.AbstractPackMasterOrb;
+import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
 
-import static com.megacrit.cardcrawl.cards.DamageInfo.DamageType.THORNS;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
-import static thePackmaster.util.Wiz.adp;
-import static thePackmaster.util.Wiz.att;
+import static thePackmaster.util.Wiz.*;
 
-public class FireSpirit extends AbstractPackMasterOrb implements OnAttackedOrb {
+public class FireSpirit extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(FireSpirit.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
@@ -58,22 +52,6 @@ public class FireSpirit extends AbstractPackMasterOrb implements OnAttackedOrb {
     }
 
     @Override
-    public void onAttacked(DamageInfo info) {
-        if (info == null || info.owner == null)
-            return;
-        DamageInfo info2 = new DamageInfo(adp(), passiveAmount, THORNS);
-        DamageAction action = new DamageAction(info.owner, info2, AbstractGameAction.AttackEffect.FIRE);
-        ColoredDamagePatch.DamageActionColorField.damageColor.set(action, Color.FIREBRICK.cpy());
-        ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.NONE);
-        att(action);
-    }
-
-    @Override
-    public void passiveEffect() {
-        return;
-    }
-
-    @Override
     public void applyFocus() {
         AbstractPower power = adp().getPower(FocusPower.POWER_ID);
         if (power != null)
@@ -85,6 +63,12 @@ public class FireSpirit extends AbstractPackMasterOrb implements OnAttackedOrb {
             passiveAmount = 0;
 
         evokeAmount = FOCUS_AMOUNT;
+    }
+
+    @Override
+    public void onEndOfTurn() {
+        for (AbstractMonster m : Wiz.getEnemies())
+            applyToEnemy(m, new IgnitePower(m, passiveAmount));
     }
 
     @Override

@@ -13,14 +13,15 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.HeartBuffEffect;
-import com.megacrit.cardcrawl.vfx.combat.SwirlyBloodEffect;
-import com.megacrit.cardcrawl.vfx.stance.DivinityStanceChangeParticle;
+
+import thePackmaster.cardmodifiers.warlockpack.GlowTheSoulariumMod;
+
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class TheSoularium extends AbstractPackmasterCard {
+public class TheSoularium extends AbstractWarlockCard {
     public final static String ID = makeID(TheSoularium.class.getSimpleName());
 
     private static final int COST = 0;
@@ -39,6 +40,7 @@ public class TheSoularium extends AbstractPackmasterCard {
             public void update() {
                 for (AbstractCard c : DrawCardAction.drawnCards) {
                     CardModifierManager.addModifier(c, new EtherealMod());
+                    CardModifierManager.addModifier(c, new GlowTheSoulariumMod());
                 }
                 this.isDone = true;
             }

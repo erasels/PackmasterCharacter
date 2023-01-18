@@ -10,12 +10,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
 import thePackmaster.actions.witchesstrikepack.MoonlightBarrageAction;
 import thePackmaster.cardmodifiers.infestpack.InfestModifier;
+import thePackmaster.cardmodifiers.witchesstrikepack.InscribedMod;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cards.infestpack.OnInfestCard;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ChitteringPunt extends AbstractPackmasterCard {
+public class ChitteringPunt extends AbstractWitchStrikeCard implements OnInfestCard {
     public final static String ID = makeID("ChitteringPunt");
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
@@ -27,9 +29,6 @@ public class ChitteringPunt extends AbstractPackmasterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        for (int i = 0; i < InfestModifier.getInfestCount(this); i++){
-            addToBot(new ManifestAction(new CrescentMoon()));
-        }
     }
 
     public void upp() {
@@ -38,5 +37,10 @@ public class ChitteringPunt extends AbstractPackmasterCard {
     @Override
     public String cardArtCopy() {
         return Backflip.ID;
+    }
+
+    @Override
+    public void onInfest(int infestCounter) {
+        addToBot(new ManifestAction(new CrescentMoon()));
     }
 }

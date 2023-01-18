@@ -1,26 +1,25 @@
 {
-  "${ModID}:EvilSpirit": {
-    "NAME": "Evil Spirit",
-    "DESCRIPTION": "Apply !M! Weak. NL Channel an ${ModID}:Evil\u00a0Spirit.",
+  "${ModID}:Leprechaun": {
+    "NAME": "Leprechaun",
+    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Leprechaun.",
     "EXTENDED_DESCRIPTION": [
-      "Sadistic Nature",
-      "Deals damage when you apply debuffs."
+      "Dice",
+      "Dice increase the damage or #yBlock of the next card you play that deals damage or #yBlocks."
     ],
-    "FLAVOR": "This is a good idea and can not in any way backfire."
+    "FLAVOR": "Praise RNGesus."
   },
-  "${ModID}:SummonPorcupine": {
-    "NAME": "Summon Porcupine",
-    "DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add a *Quill into your hand.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add !M! *Quills into your hand.",
+  "${ModID}:Porcupine": {
+    "NAME": "Porcupine",
+    "DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add !M! *Quills into your hand.",
     "FLAVOR": "The Silent in animal form."
   },
-  "${ModID}:SummonWolf": {
-    "NAME": "Summon Wolf",
-    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Wolf.",
+  "${ModID}:Wolves": {
+    "NAME": "Wolves",
+    "DESCRIPTION": "Deal !D! damage. NL Channel a ${ModID}:Wolf.",
     "FLAVOR": "Pack animals for the Packmaster."
   },
-  "${ModID}:SummonElephant": {
-    "NAME": "Summon Elephant",
+  "${ModID}:Elephant": {
+    "NAME": "Elephant",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Take !M! damage.",
     "FLAVOR": "This is my favorite card.  I hope you like it."
   },
@@ -32,17 +31,17 @@
   "${ModID}:RainbowLouse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Draw 1 card.",
     "FLAVOR": "The result of an unwise magic experiment."
   },
-  "${ModID}:SummonBees": {
-    "NAME": "Summon Bees",
+  "${ModID}:SwarmOfBees": {
+    "NAME": "Swarm of Bees",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel a ${ModID}:Swarm\u00a0of\u00a0Bees.",
     "FLAVOR": "Absolutely terrifying."
   },
-  "${ModID}:Control": {
-    "NAME": "Control",
-    "DESCRIPTION": "Gain !M! Orb slots and !M! Focus.",
+  "${ModID}:Training": {
+    "NAME": "Training",
+    "DESCRIPTION": "At the end of your turn Evoke your next orb !M! times.",
     "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
   },
   "${ModID}:Ambush": {
@@ -51,8 +50,8 @@
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Channel an Orb, Evoke it without removing it.",
     "FLAVOR": "I couldn't find good ambush art so have a pun."
   },
-  "${ModID}:SummonPandas": {
-    "NAME": "Summon Pandas",
+  "${ModID}:Pandas": {
+    "NAME": "Pandas",
     "DESCRIPTION": "At the start of your turn, Channel a ${ModID}:Panda.",
     "FLAVOR": "Pandamonium."
   },
