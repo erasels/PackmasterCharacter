@@ -66,8 +66,6 @@ public class LightOrb extends AbstractOrb {
         ReflectionHacks.setPrivate(flare, OrbFlareEffect.class, "color2", color2);
         Wiz.vfx(new MiracleEffect(color,color2,"POWER_MANTRA"));
         Wiz.applyToSelf(new confessionpower(AbstractDungeon.player,evokeAmount));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player,new DamageInfo(AbstractDungeon.player,evokeAmount,
-                DamageInfo.DamageType.THORNS)));
     }
 
     public void onEndOfTurn() {
@@ -80,8 +78,6 @@ public class LightOrb extends AbstractOrb {
         ReflectionHacks.setPrivate(flare, OrbFlareEffect.class, "color2", color2);
         Wiz.vfx(new MiracleEffect(color,color2,"HEAL_3"));
         Wiz.applyToSelf(new confessionpower(AbstractDungeon.player,passiveAmount));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player,new DamageInfo(AbstractDungeon.player,passiveAmount,
-                DamageInfo.DamageType.THORNS)));
     }
 
     public void triggerEvokeAnimation() {

@@ -43,7 +43,7 @@ public class SearingLight extends AbstractDragonwrathCard {
 
     public SearingLight(){
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseBlock = 13;
+        baseBlock = 8;
         this.magicNumber = baseMagicNumber = 3;
     }
 
@@ -52,9 +52,6 @@ public class SearingLight extends AbstractDragonwrathCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
-        addToBot(new VFXAction(new LightningEffect(p.drawX,p.drawY)));
-        addToBot(new DamageAction(p,new DamageInfo(p,magicNumber, DamageInfo.DamageType.THORNS)));
         addToBot(new GainBlockAction(AbstractDungeon.player,block));
         addToBot(new ChannelAction(new LightOrb()));
     }

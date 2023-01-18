@@ -34,7 +34,7 @@ public class JudgementDay extends AbstractDragonwrathCard {
     public JudgementDay(){
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 2;
-        secondMagic = baseSecondMagic = 4;
+        secondMagic = baseSecondMagic = 1;
     }
 
 
