@@ -25,7 +25,7 @@ public class Preparation extends AbstractReplicatorCard {
                     return c.type.equals(CardType.ATTACK) || c.type.equals(CardType.SKILL);
                 }, (cards) -> {
             for (int i = 1; i <= magicNumber; i++) {
-                atb(new MakeTempCardInHandAction(cards.get(0).makeStatEquivalentCopy()));
+                atb(new MakeTempCardInHandAction(cards.get(0)));
             }
         }));
     }

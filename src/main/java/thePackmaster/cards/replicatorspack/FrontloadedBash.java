@@ -39,7 +39,9 @@ public class FrontloadedBash extends AbstractReplicatorCard {
         int temp = baseDamage;
         AbstractPlayer p = adp();
         if(p!=null){
-            baseDamage += adp().drawPile.size()/magicNumber;
+            if(magicNumber>0) {
+                baseDamage += adp().drawPile.size() / magicNumber;
+            }
         }
         super.calculateCardDamage(mo);
         baseDamage=temp;

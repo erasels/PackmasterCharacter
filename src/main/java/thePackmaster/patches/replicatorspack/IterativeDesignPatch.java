@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
@@ -20,9 +21,9 @@ public class IterativeDesignPatch {
         @SpirePostfixPatch
         public static void afterCardCreated(AbstractGameEffect __instance) {
             if (__instance.isDone == true) {
-                if(Wiz.adp().hasPower((IterativeDesignPower.POWER_ID))){
-                    int amount = Wiz.adp().getPower(IterativeDesignPower.POWER_ID).amount;
-                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(Wiz.adp(), amount));
+                AbstractPower p = Wiz.adp().getPower(IterativeDesignPower.POWER_ID);
+                if(p!=null){
+                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(Wiz.adp(), p.amount));
                 }
             }
         }

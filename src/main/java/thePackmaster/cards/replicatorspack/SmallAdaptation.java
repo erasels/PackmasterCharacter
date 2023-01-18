@@ -24,10 +24,10 @@ public class SmallAdaptation extends AbstractReplicatorCard {
         atb(new GainBlockAction(p, block));
         atb(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0],
                 (c) -> {
-                    return c.cost <= 1;
+                    return (c.cost == 1 || c.cost == 0);
                 }, (cards) -> {
             for (int i = 1; i <= magicNumber; i++) {
-                atb(new MakeTempCardInHandAction(cards.get(0).makeStatEquivalentCopy()));
+                atb(new MakeTempCardInHandAction(cards.get(0)));
             }
         }));
     }

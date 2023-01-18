@@ -25,7 +25,7 @@ public class ExhaustiveWork extends AbstractReplicatorCard {
                     return true;
                 }, (cards) -> {
             for (int i = 1; i <= 1; i++) {
-                atb(new MakeTempCardInDrawPileAction(cards.get(0).makeStatEquivalentCopy(), 1, true, true));
+                atb(new MakeTempCardInDrawPileAction(cards.get(0), 1, true, true));
                 atb(new ExhaustSpecificCardAction(cards.get(0), p.hand, false));
             }
         }));

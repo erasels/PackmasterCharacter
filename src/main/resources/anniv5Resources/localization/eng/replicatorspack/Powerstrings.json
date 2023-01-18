@@ -3,7 +3,7 @@
     "NAME": "Iterative Design",
     "DESCRIPTIONS": [
       "Whenever you create a card this combat gain #b",
-      " Block."
+      " #yBlock."
     ]
   },
   "${ModID}:EnergyDrinkPower": {

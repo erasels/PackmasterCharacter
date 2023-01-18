@@ -1,15 +1,17 @@
 package thePackmaster.cards.replicatorspack;
 
+import basemod.cardmods.ExhaustMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.replicatorspack.MagicHandChooseAction;
+import thePackmaster.actions.FlexibleDiscoveryAction;
 
 import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
 public class MagicHand extends AbstractReplicatorCard {
 
@@ -34,7 +36,11 @@ public class MagicHand extends AbstractReplicatorCard {
         }
         if (uniqueCount <= magicNumber) {
             if (uniqueCount > 0) {
-                addToBot(new MagicHandChooseAction(uniqueCards, !upgraded));
+                if(upgraded){
+                    atb(new FlexibleDiscoveryAction(uniqueCards, true));
+                } else {
+                    atb(new FlexibleDiscoveryAction(uniqueCards, true, new ExhaustMod()));
+                }
             }
         } else {
             ArrayList<AbstractCard> selectedCards = new ArrayList<>();
@@ -44,7 +50,11 @@ public class MagicHand extends AbstractReplicatorCard {
                     selectedCards.add(randomCard);
                 }
             }
-            addToBot(new MagicHandChooseAction(selectedCards, !upgraded));
+            if(upgraded){
+                atb(new FlexibleDiscoveryAction(uniqueCards, true));
+            } else {
+                atb(new FlexibleDiscoveryAction(uniqueCards, true, new ExhaustMod()));
+            }
         }
     }
 

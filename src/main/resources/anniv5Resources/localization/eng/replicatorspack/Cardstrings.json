@@ -13,7 +13,7 @@
   },
   "${ModID}:SmallAdaptation": {
     "NAME": "Small Adaptation",
-    "DESCRIPTION": "Gain !B! Block. NL Choose a card that costs 1 or less. NL Add a copy of that card into your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL Choose a card that costs 1 or 0. NL Add a copy of that card into your hand.",
     "EXTENDED_DESCRIPTION": ["Choose a card to copy."]
   },
   "${ModID}:ExperimentalMerge": {
@@ -45,6 +45,6 @@
   },
   "${ModID}:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain !M! Temp HP. Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your draw pile."
+    "DESCRIPTION": "Gain !M! stslib:Temporary_HP. Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your draw pile."
   }
 }

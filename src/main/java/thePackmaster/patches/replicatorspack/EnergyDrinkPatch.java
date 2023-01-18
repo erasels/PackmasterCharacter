@@ -5,6 +5,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DuplicationPower;
 import thePackmaster.powers.replicatorspack.EnergyDrinkPower;
 import thePackmaster.powers.replicatorspack.IterativeDesignPower;
@@ -19,11 +20,13 @@ public class EnergyDrinkPatch {
         @SpirePrefixPatch
         public static void onShuffle(EmptyDeckShuffleAction __instance) {
             AbstractPlayer p = adp();
-            if (p.hasPower((EnergyDrinkPower.POWER_ID))) {
+            AbstractPower power = p.getPower(EnergyDrinkPower.POWER_ID);
+            if (power!=null) {
                 int shuffleAmount = p.discardPile.size();
-                int powerAmount = Wiz.adp().getPower(EnergyDrinkPower.POWER_ID).amount;
-                int amount = powerAmount * (shuffleAmount/10);
-                atb(new ApplyPowerAction(p, p, new DuplicationPower(p, amount)));
+                int amount = power.amount * (shuffleAmount/10);
+                if(amount>0){
+                    atb(new ApplyPowerAction(p, p, new DuplicationPower(p, amount)));
+                }
             }
         }
     }
