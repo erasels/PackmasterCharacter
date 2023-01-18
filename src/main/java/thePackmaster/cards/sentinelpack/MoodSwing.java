@@ -30,7 +30,7 @@ public class MoodSwing extends AbstractSentinelCard {
             public void update() {
                 this.isDone = true;
                 if (Wiz.p().stance instanceof Angry){
-                    addToBot(new ChangeStanceAction(new CalmStance()));
+                    addToTop(new ChangeStanceAction(new CalmStance()));
                 } else {
                     addToBot(new ChangeStanceAction(new Angry()));
                 }
