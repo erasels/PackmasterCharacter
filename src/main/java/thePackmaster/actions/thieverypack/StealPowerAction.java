@@ -1,5 +1,6 @@
 package thePackmaster.actions.thieverypack;
 
+import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -281,7 +282,7 @@ public class StealPowerAction extends AbstractGameAction {
 					return new StasisPower(c, card) {
 						@Override
 						public void onInitialApplication() {
-							if (AbstractDungeon.player.hand.size() != 10) {
+							if (AbstractDungeon.player.hand.size() != BaseMod.MAX_HAND_SIZE) {
 								addToBot(new MakeTempCardInHandAction(card, false, true));
 							} else {
 								addToBot(new MakeTempCardInDiscardAction(card, true));

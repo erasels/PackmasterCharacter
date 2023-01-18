@@ -17,7 +17,7 @@
   },
   "${ModID}:Magnet": {
     "NAME": "Magnet",
-    "DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from enemy. NL Exhaust.",
+    "DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from the enemy. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from ALL enemies. NL Exhaust."
   },
   "${ModID}:StrengthSap": {
@@ -26,7 +26,7 @@
   },
   "${ModID}:CunningPoison": {
     "NAME": "Cunning Poison",
-    "DESCRIPTION": "Apply !M! Poison to the highest-HP enemy. NL If it dies while Poisoned, steal !${ModID}:m2! Gold. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Poison to the highest HP enemy. NL If it dies while Poisoned, steal !${ModID}:m2! Gold. NL Exhaust."
   },
   "${ModID}:MindControl": {
     "NAME": "Mind Control",
