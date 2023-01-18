@@ -4,6 +4,6 @@
     "NAMES": [
       "hoard"
     ],
-    "DESCRIPTION": "When played, reduce Hoard by $bX (the card's cost). When Hoard reaches $b0, its effects trigger."
+    "DESCRIPTION": "When played, reduce Hoard by #bX (the card's cost). When Hoard reaches #b0, its effects trigger."
   }
 ]
