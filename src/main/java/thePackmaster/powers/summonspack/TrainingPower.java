@@ -23,7 +23,7 @@ public class TrainingPower extends AbstractPackmasterPower {
     }
 
     @Override
-    public void atStartOfTurn() {
+    public void atEndOfTurn(boolean isPlayer) {
         if (!adp().orbs.isEmpty() && !(adp().orbs.get(0) instanceof EmptyOrbSlot)) {
             for (int i = 0; i < amount - 1; ++i) {
                 atb(new EvokeWithoutRemovingOrbAction(1));

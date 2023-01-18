@@ -29,25 +29,22 @@ public class Leprechaun extends AbstractSummonsCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int MAGIC = 2;
-    private static final int UPGRADE_MAGIC = 1;
-    private static final int DICE_SIDES = 6;
+    private static final int BLOCK = 6;
+    private static final int UPGRADE_BLOCK = 3;
 
     private final TooltipInfo diceTip = new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1]);
 
     public Leprechaun() {
         super(ID, COST, TYPE, RARITY, TARGET);
-        baseMagicNumber = magicNumber = MAGIC;
+        baseBlock = BLOCK;
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         atb(new ChannelAction(new thePackmaster.orbs.summonspack.Leprechaun()));
-        atb(new SFXAction(DICE_KEY,0.1f));
-        for (int i = 0; i < magicNumber; i++)
-            applyToSelf(new DicePower(adp(), DICE_SIDES, false));
     }
 
     @Override
@@ -59,6 +56,6 @@ public class Leprechaun extends AbstractSummonsCard {
 
     @Override
     public void upp() {
-        upMagic(UPGRADE_MAGIC);
+        upgradeBlock(UPGRADE_BLOCK);
     }
 }

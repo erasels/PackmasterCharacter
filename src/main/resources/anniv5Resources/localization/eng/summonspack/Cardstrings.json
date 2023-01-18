@@ -1,8 +1,7 @@
 {
   "${ModID}:Leprechaun": {
     "NAME": "Leprechaun",
-    "DESCRIPTION": "Channel a ${ModID}:Leprechaun. NL Roll 2d6.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Leprechaun. NL Roll 3d6.",
+    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Leprechaun.",
     "EXTENDED_DESCRIPTION": [
       "Dice",
       "Dice increase the damage or #yBlock of the next card you play that deals damage or #yBlocks."
@@ -16,7 +15,7 @@
   },
   "${ModID}:Wolves": {
     "NAME": "Wolves",
-    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Wolf.",
+    "DESCRIPTION": "Deal !D! damage. NL Channel a ${ModID}:Wolf.",
     "FLAVOR": "Pack animals for the Packmaster."
   },
   "${ModID}:Elephant": {
@@ -42,7 +41,7 @@
   },
   "${ModID}:Training": {
     "NAME": "Training",
-    "DESCRIPTION": "At the start of your turn Evoke your next orb !M! times.",
+    "DESCRIPTION": "At the end of your turn Evoke your next orb !M! times.",
     "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
   },
   "${ModID}:Ambush": {
