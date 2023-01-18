@@ -24,7 +24,7 @@
   "${ModID}:Wanderbots": {
     "NAME": "Wanderbots",
     "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Wanderbot.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Wanderbot. NL Trigger the passive effect of all your Orbs."
+    "UPGRADE_DESCRIPTION": "${ModID}:Inscribed. NL Gain !B! Block. NL Channel a ${ModID}:Wanderbot."
   },
   "${ModID}:Retromation": {
     "NAME": "Retromation",
