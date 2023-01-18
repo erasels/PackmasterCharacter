@@ -52,7 +52,7 @@ public class RetromationPower extends AbstractPackmasterPower {
                 for (String s : potentialCardIDs) {
                     AbstractCard test = CardLibrary.getCard(s).makeCopy();
                     if (!test.hasTag(AbstractCard.CardTags.HEALING) && test.rarity != AbstractCard.CardRarity.SPECIAL)
-                        potentialCards.add(CardLibrary.getCard(s));
+                        potentialCards.add(test);
                 }
                 AbstractCard q = Wiz.getRandomItem(potentialCards, AbstractDungeon.cardRandomRng);
                 CardModifierManager.addModifier(q, new EtherealMod());
