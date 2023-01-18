@@ -25,7 +25,7 @@ public class WarriorPack extends AbstractCardPack {
         cards.add(Chained.ID);
         cards.add(Fall.ID);
         cards.add(FFBlade.ID);
-        cards.add(Sharpening.ID);
+        cards.add(Polishing.ID);
         cards.add(Rapier.ID);
         cards.add(StormStrike.ID);
         cards.add(Turtle.ID);

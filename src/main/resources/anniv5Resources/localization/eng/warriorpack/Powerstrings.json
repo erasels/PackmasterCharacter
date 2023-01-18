@@ -7,8 +7,8 @@
       " Attacks deals Feral damage."
     ]
   },
-  "${ModID}:SharpeningPower": {
-    "NAME": "Sharpening",
+  "${ModID}:PolishingPower": {
+    "NAME": "Polishing",
     "DESCRIPTIONS": [
      "Whenever you play an Attack, increase its damage by #b",
       ", this combat"

@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
 
-public class SharpeningPower extends AbstractPackmasterPower {
-    public static final String POWER_ID = SpireAnniversary5Mod.makeID(SharpeningPower.class.getSimpleName());
+public class PolishingPower extends AbstractPackmasterPower {
+    public static final String POWER_ID = SpireAnniversary5Mod.makeID(PolishingPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public SharpeningPower(AbstractCreature owner, int amount) {
+    public PolishingPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF,false, owner, amount);
     }
 

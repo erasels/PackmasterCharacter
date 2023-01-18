@@ -9,12 +9,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.vfx.UpgradeHammerImprintEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineParticleEffect;
 import thePackmaster.cardmodifiers.warriorpack.FrontDamage;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.atb;
 
 public class WorkHammer extends AbstractPackmasterCard {
@@ -25,14 +27,13 @@ public class WorkHammer extends AbstractPackmasterCard {
 
     public WorkHammer(){
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 9;
         DamageModifierManager.addModifier(this, new FrontDamage());
-        baseBlock = 4;
+        magicNumber = baseMagicNumber = 2;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new GainBlockAction(p, block));
         if (m!=null) {
             AbstractDungeon.topLevelEffectsQueue.add(new UpgradeHammerImprintEffect(m.hb.cX, m.hb.cY));
             if (!Settings.DISABLE_EFFECTS) {
@@ -42,7 +43,7 @@ public class WorkHammer extends AbstractPackmasterCard {
             }
         }
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        atb(new GainBlockAction(m, p, block));
+        applyToEnemy(m, new PlatedArmorPower(m, magicNumber));
     }
 
     @Override

@@ -4,13 +4,13 @@
     "NAMES": [
       "feral"
     ],
-    "DESCRIPTION": "Deals #b50% extra damage to enemies with a debuff."
+    "DESCRIPTION": "Deals #b50% additional damage to enemies with a debuff."
   },
   {
     "PROPER_NAME": "Front damage",
     "NAMES": [
       "front"
     ],
-    "DESCRIPTION": "Deals #b50% extra damage to enemies with #yBlock."
+    "DESCRIPTION": "Deals #b50% additional damage to enemies with #yBlock."
   }
 ]

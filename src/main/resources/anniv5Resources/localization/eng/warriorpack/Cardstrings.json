@@ -1,11 +1,11 @@
 {
-  "${ModID}:Sharpening": {
-    "NAME": "Sharpening",
+  "${ModID}:Polishing": {
+    "NAME": "Polishing",
     "DESCRIPTION": "Whenever you play an Attack, increase its damage by !M! this combat."
   },
   "${ModID}:WorkHammer": {
     "NAME": "Work Hammer",
-    "DESCRIPTION": "Deal !D! ${ModID}:Front damage. NL Both you and the enemy gain !B! Block."
+    "DESCRIPTION": "NL Deal !D! ${ModID}:Front damage. NL Give enemy !M! Plated Armor."
   },
   "${ModID}:Chained": {
     "NAME": "Chained",
@@ -17,7 +17,7 @@
   },
   "${ModID}:WarSong": {
     "NAME": "War Song",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Your next Attack deals !${ModID}:m2! additional damage."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Gain !${ModID}:m2! Vigor."
   },
   "${ModID}:Rapier": {
     "NAME": "Rapier",

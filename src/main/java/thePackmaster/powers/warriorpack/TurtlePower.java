@@ -50,6 +50,6 @@ public class TurtlePower extends AbstractPackmasterPower implements DamageModApp
 
     @Override
     public List<AbstractDamageModifier> modsToPush(DamageInfo damageInfo, Object o, List<AbstractDamageModifier> list) {
-        return Collections.singletonList(new FeralDamage());
+        return Collections.singletonList(new FeralDamage(false));
     }
 }
