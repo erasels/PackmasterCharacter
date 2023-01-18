@@ -1,7 +1,15 @@
 {
   "${ModID}:MakeshiftSword": {
     "NAME": "Makeshift Sword",
-    "DESCRIPTION": "Whenever a card is created during combat, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Whenever a card is created during combat, gain !M! Vigor."
+  },
+  "${ModID}:MakeshiftShield": {
+    "NAME": "Makeshift Shield",
+    "DESCRIPTION": "Whenever a card is created during combat, gain !M! Block."
+  },
+  "${ModID}:PaintBrush": {
+    "NAME": "Paint Brush",
+    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} card with selected type and cost."
   },
   "${ModID}:Firewall": {
     "NAME": "Firewall",

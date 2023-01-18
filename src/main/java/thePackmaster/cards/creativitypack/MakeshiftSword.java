@@ -8,12 +8,12 @@ import thePackmaster.powers.creativitypack.MakeshiftSwordPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MakeshiftSword extends AbstractPackmasterCard {
+public class MakeshiftSword extends AbstractCreativityCard {
 
     public final static String ID = makeID(MakeshiftSword.class.getSimpleName());
 
     public MakeshiftSword() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 3;
     }
 

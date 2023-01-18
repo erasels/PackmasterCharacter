@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Souvenirs extends AbstractPackmasterCard {
+public class Souvenirs extends AbstractCreativityCard {
 
     public final static String ID = makeID(Souvenirs.class.getSimpleName());
 

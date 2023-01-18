@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class BarrierBeacon extends AbstractPackmasterCard {
+public class BarrierBeacon extends AbstractCreativityCard {
 
     public final static String ID = makeID(BarrierBeacon.class.getSimpleName());
 

@@ -15,7 +15,7 @@ import thePackmaster.util.JediUtil;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class CraftyMove extends AbstractPackmasterCard {
+public class CraftyMove extends AbstractCreativityCard {
 
     public final static String ID = makeID(CraftyMove.class.getSimpleName());
 

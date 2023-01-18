@@ -14,7 +14,7 @@ import thePackmaster.util.JediUtil;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class AccumulativeStrike extends AbstractPackmasterCard {
+public class AccumulativeStrike extends AbstractCreativityCard {
 
     public final static String ID = makeID(AccumulativeStrike.class.getSimpleName());
 

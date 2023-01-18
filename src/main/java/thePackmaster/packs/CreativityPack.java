@@ -27,11 +27,11 @@ public class CreativityPack extends AbstractCardPack {
         cards.add(CraftyMove.ID);
         cards.add(Firewall.ID);
         cards.add(MakeshiftSword.ID);
+        cards.add(MakeshiftShield.ID);
         cards.add(Mimicry.ID);
         cards.add(Souvenirs.ID);
         cards.add(StrikingStrike.ID);
-        //cards.add(AccumulativeStrike.ID);
-        //cards.add(AccumulativeStrike.ID);
+        cards.add(PaintBrush.ID);
         return cards;
     }
 }

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Mimicry extends AbstractPackmasterCard {
+public class Mimicry extends AbstractCreativityCard {
 
     public final static String ID = makeID(Mimicry.class.getSimpleName());
 
