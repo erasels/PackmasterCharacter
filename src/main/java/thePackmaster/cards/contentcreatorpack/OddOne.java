@@ -16,7 +16,6 @@ public class OddOne extends AbstractContentCard {
     public OddOne() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 11;
-        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,7 +23,7 @@ public class OddOne extends AbstractContentCard {
         if (x % 2 != 0) {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         } else {
-            atb(new DrawCardAction(magicNumber));
+            atb(new DrawCardAction(1));
         }
     }
 

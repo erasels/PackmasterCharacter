@@ -32,9 +32,9 @@
   },
   "${ModID}:OddOne": {
     "NAME": "Odd One",
-    "DESCRIPTION": "Odd: Deal !D! damage to a random enemy. NL Even: Draw !M! card.",
+    "DESCRIPTION": "${ModID}:Odd: Deal !D! damage to a random enemy. NL ${ModID}:Even: Draw a card.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Played ",
+      " NL NL (Played ",
       ". ",
       "Even!)",
       "Odd!)"
