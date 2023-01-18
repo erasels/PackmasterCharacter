@@ -112,7 +112,7 @@ public class HatMenu {
         optionNames.add(TEXT[9]);
         hats.add("Random");
         ArrayList<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
-        sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
+        sortedPacks.sort(Comparator.comparing((pack) -> pack.getHatName()));
         for (AbstractCardPack s : sortedPacks) {
             if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
             if (UNLOCK_ALL_HATS)
