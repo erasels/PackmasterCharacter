@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 @NoCompendium
 @NoPools
-public class Despair extends AbstractPackmasterCard {
+public class Despair extends AbstractRimworldCard {
     public final static String ID = makeID(Despair.class.getSimpleName());
 
     public Despair() {

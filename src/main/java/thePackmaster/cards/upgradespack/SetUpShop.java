@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class SetUpShop extends AbstractPackmasterCard {
+public class SetUpShop extends AbstractBlacksmithCard {
 
     public final static String ID = SpireAnniversary5Mod.makeID("SetUpShop");
     private static final String SCREEN_MSG = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("SetUpShopScreen")).TEXT[0];

@@ -9,7 +9,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class TradeBeacon extends AbstractPackmasterCard {
+public class TradeBeacon extends AbstractRimworldCard {
     public final static String ID = makeID(TradeBeacon.class.getSimpleName());
 
     public TradeBeacon() {
