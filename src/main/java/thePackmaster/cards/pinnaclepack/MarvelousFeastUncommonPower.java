@@ -13,7 +13,6 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class MarvelousFeastUncommonPower extends AbstractPinnacleCard {
 
     public final static String ID = makeID("MarvelousFeastUncommonPower");
-    private boolean fixUpgradeCheck = false;
 
     public MarvelousFeastUncommonPower() {
         super(ID, 2, AbstractCard.CardType.POWER, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
@@ -22,7 +21,7 @@ public class MarvelousFeastUncommonPower extends AbstractPinnacleCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.fixUpgradeCheck){
+        if (this.upgraded){
             addToBot(new ApplyPowerAction(p, p, new Cooking_(p, 4)));
         }
         else {
@@ -32,8 +31,6 @@ public class MarvelousFeastUncommonPower extends AbstractPinnacleCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(3);
-        this.fixUpgradeCheck = true;
         MultiCardPreview.multiCardPreview.get(this).forEach(AbstractCard::upgrade);
     }
 

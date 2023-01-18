@@ -10,9 +10,9 @@ public class FriendshipCroquettesSpecialColourless extends AbstractPinnacleCard 
 
     public final static String ID = makeID("FriendshipCroquettesSpecialColourless");
     private static final int MAGIC = 2;
-    private static final int UPGRADE_MAGIC = 2;
+    private static final int UPGRADE_MAGIC = 1;
     private static final int BLOCK = 6;
-    private static final int UPGRADE_BLOCK = 6;
+    private static final int UPGRADE_BLOCK = 3;
 
 
     public FriendshipCroquettesSpecialColourless() {

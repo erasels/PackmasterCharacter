@@ -11,7 +11,7 @@ public class MeatyCroquettesSpecialColourless extends AbstractPinnacleCard {
 
     public final static String ID = makeID("MeatyCroquettesSpecialColourless");
     private static final int MAGIC = 3;
-    private static final int UPGRADE_MAGIC = 3;
+    private static final int UPGRADE_MAGIC = 2;
 
 
     public MeatyCroquettesSpecialColourless() {
