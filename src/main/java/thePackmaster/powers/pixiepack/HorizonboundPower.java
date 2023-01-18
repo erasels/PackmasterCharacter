@@ -38,6 +38,7 @@ public class HorizonboundPower extends AbstractPackmasterPower {
                 }
             }
         }
+        updateDescription();
     }
 
     @Override
@@ -51,8 +52,9 @@ public class HorizonboundPower extends AbstractPackmasterPower {
         if (PixiePack.isForeign(card))
         {
             amount++;
+            updateDescription();
             for (AbstractCard C:AbstractDungeon.player.hand.group) {
-                if (PixiePack.isForeign(C) && C.cost >= 0)
+                if (PixiePack.isForeign(C) && C.cost >= 0 && C != card)
                 {
                     if (C.costForTurn>0) C.setCostForTurn(C.costForTurn - 1);
                 }
