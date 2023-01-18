@@ -1,7 +1,7 @@
 {
   "${ModID}:Angry": {
     "NAME": "Angry",
-    "DESCRIPTION": ["Your Attacks deal 50% more damage and you take 50% more damage from attacks. Upon exiting this #yStance, gain #b3 #yVigor."]
+    "DESCRIPTION": ["Your Attacks deal #b50% more damage and you take #b50% more damage from attacks. Upon exiting this #yStance, gain #b3 #yVigor."]
   },
   "${ModID}:Serene": {
     "NAME": "Serene",
