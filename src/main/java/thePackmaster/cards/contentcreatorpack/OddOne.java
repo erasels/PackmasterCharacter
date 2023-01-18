@@ -15,7 +15,7 @@ public class OddOne extends AbstractContentCard {
 
     public OddOne() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 11;
+        baseDamage = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

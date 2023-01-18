@@ -11,7 +11,7 @@ public class DarksideSlap extends AbstractContentCard implements MegaEtherealCar
 
     public DarksideSlap() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        baseDamage = 25;
+        baseDamage = 22;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

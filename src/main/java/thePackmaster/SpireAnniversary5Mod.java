@@ -13,6 +13,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -75,6 +76,7 @@ import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
+import thePackmaster.ui.InfestTextIcon;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
@@ -376,6 +378,8 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditCards() {
+        CustomIconHelper.addCustomIcon(InfestTextIcon.get());
+
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
         BaseMod.addDynamicVariable(new HoardVar());

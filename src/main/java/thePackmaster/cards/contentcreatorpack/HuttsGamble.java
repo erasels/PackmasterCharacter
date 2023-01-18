@@ -19,7 +19,7 @@ public class HuttsGamble extends AbstractContentCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new HuttsGambleEnergyPower(magicNumber));
-        applyToSelf(new HuttsGambleDrawPower(2));
+        applyToSelf(new HuttsGambleDrawPower(1));
     }
 
     public void upp() {
