@@ -11,5 +11,11 @@
     "TEXT": [
       "Randomize their costs."
     ]
+  },
+  "${ModID}:SneckoPackHat": {
+    "TEXT": [
+      "What're YOU looking at?",
+      "Sneck Eyes"
+    ]
   }
 }
