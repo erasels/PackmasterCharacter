@@ -9,15 +9,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
         method = "<class>"
 )
 public class HoardField {
-    public static SpireField<Integer> hoard = new SpireField(() -> {
-        return -1;
-    });
-    public static SpireField<Integer> baseHoard = new SpireField(() -> {
-        return -1;
-    });
-    public static SpireField<Boolean> isHoardUpgraded = new SpireField(() -> {
-        return false;
-    });
+    public static SpireField<Integer> hoard = new SpireField<>(() -> -1);
+    public static SpireField<Integer> baseHoard = new SpireField<>(() -> -1);
+    public static SpireField<Boolean> isHoardUpgraded = new SpireField<>(() -> false);
 
     public HoardField() {
     }
