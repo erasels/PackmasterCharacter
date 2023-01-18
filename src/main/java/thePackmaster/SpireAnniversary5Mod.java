@@ -610,6 +610,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(makeID("RipPack_Ahh"), makePath("audio/rippack/ahh.ogg"));
         BaseMod.addAudio(makeID("RipPack_Ohh"), makePath("audio/rippack/ohh.mp3"));
         BaseMod.addAudio(makeID("RipPack_Sword"), makePath("audio/rippack/sword.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Harp"), makePath("audio/rippack/harp.ogg"));
         BaseMod.addAudio(modID + "dice1", modID + "Resources/audio/DiceRoll1.wav");
         BaseMod.addAudio(modID + "dice2", modID + "Resources/audio/DiceRoll2.wav");
         BaseMod.addAudio(modID + "dice3", modID + "Resources/audio/DiceRoll3.wav");
