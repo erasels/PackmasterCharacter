@@ -21,7 +21,7 @@ public class OddOne extends AbstractContentCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int x = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
-        if (x % 2 == 0) {
+        if (x % 2 != 0) {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         } else {
             atb(new DrawCardAction(magicNumber));
@@ -36,7 +36,7 @@ public class OddOne extends AbstractContentCard {
 
         this.rawDescription = cardStrings.DESCRIPTION;
         this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[1];
-        if (count % 2 == 0) {
+        if (count % 2 != 0) {
             this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
         } else {
             this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[3];
