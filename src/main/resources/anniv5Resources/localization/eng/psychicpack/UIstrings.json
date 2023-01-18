@@ -26,5 +26,11 @@
     "TEXT": [
       "Cannot be played this turn. NL "
     ]
+  },
+  "${ModID}:PsychicPackHat": {
+    "TEXT": [
+      "I foresaw you picking this hat.",
+      "The Zoltan"
+    ]
   }
 }

@@ -27,7 +27,7 @@ public class ThieveryPack extends AbstractCardPack {
 		cards.add(NullHammer.ID);
 		cards.add(Magnet.ID);
 		cards.add(StrengthSap.ID);
-		cards.add(Cunning.ID);
+		cards.add(CunningPoison.ID);
 		cards.add(MindControl.ID);
 		cards.add(Witchcraft.ID);
 		cards.add(ThieveryMastery.ID);

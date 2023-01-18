@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import thePackmaster.cards.boardgamepack.AbstractBoardCard;
+import thePackmaster.cards.rimworldpack.Despair;
 
 import java.util.ArrayList;
 
@@ -45,6 +46,8 @@ public class CardTypePatches {
                 isChance = true;
             if (isChance)
                 label[0] = TEXT[0];
+            if(reflectedCard instanceof Despair)
+                label[0] = TEXT[3];
         }
 
         public static class Locator extends SpireInsertLocator {
@@ -77,6 +80,8 @@ public class CardTypePatches {
                 isChance = true;
             if (isChance)
                 text[0] = TEXT[0];
+            if(__instance instanceof Despair)
+                text[0] = TEXT[3];
         }
 
         public static class Locator extends SpireInsertLocator {

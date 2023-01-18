@@ -20,7 +20,7 @@ public class RitualSight extends AbstractAnomalyCard {
 
     public RitualSight() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = BLOCK;
+        block = baseBlock = BLOCK;
     }
 
     @Override

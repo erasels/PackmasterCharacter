@@ -190,7 +190,7 @@ public class HatMenu {
     public void render(SpriteBatch sb) {
         sb.draw(MENU_BG, BG_X, BG_Y, 0f, 0f, MENU_BG.getRegionWidth(), MENU_BG.getRegionHeight(), BG_X_SCALE, BG_Y_SCALE, 0f);
 
-        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (175 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 300 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
+        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (163 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 330 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
 
         dummy.renderPlayerImage(sb);
 

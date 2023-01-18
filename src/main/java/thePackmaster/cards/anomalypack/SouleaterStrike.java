@@ -17,7 +17,7 @@ public class SouleaterStrike extends AbstractAnomalyCard {
 
     public SouleaterStrike() {
         super(ID, COST, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        this.magicNumber=13;
+        this.magicNumber = this.baseMagicNumber= 13;
         this.tags.add(CardTags.STRIKE);
         this.damage = this.baseDamage = ATTACK_DMG;
     }
