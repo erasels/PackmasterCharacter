@@ -5,6 +5,6 @@
   },
   "${ModID}:Serene": {
     "NAME": "Serene",
-    "DESCRIPTION": ["At the end of your turn, gain #yBlock equal to 50% of your #yBlock. Upon exiting this #yStance, gain #b1 #yDexterity."]
+    "DESCRIPTION": ["At the end of your turn, gain #yBlock equal to #b50% of your #yBlock. Upon exiting this #yStance, gain #b1 #yDexterity."]
   }
 }
