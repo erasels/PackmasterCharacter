@@ -54,8 +54,7 @@ public class FullMoon extends CustomOrb implements PackmasterOrb {
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
         updateDescription();
-        AbstractDungeon.actionManager.addToTop(new DrawCardAction(evokeAmount));
-        AbstractDungeon.actionManager.addToBottom(new DecreaseMaxOrbAction(1));
+        AbstractDungeon.actionManager.addToTop(new DrawCardAction(passiveAmount));
     }
 
     @Override
