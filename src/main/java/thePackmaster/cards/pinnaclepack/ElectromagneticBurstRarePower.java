@@ -13,7 +13,7 @@ public class ElectromagneticBurstRarePower extends AbstractPinnacleCard {
     public final static String ID = makeID("ElectromagneticBurstRarePower");
 
     private static final int MAGIC = 8;
-    private static final int UPGRADE_MAGIC = 4;
+    private static final int UPGRADE_MAGIC = 3;
     public ElectromagneticBurstRarePower() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
