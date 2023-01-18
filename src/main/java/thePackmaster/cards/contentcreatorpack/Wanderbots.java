@@ -1,5 +1,6 @@
 package thePackmaster.cards.contentcreatorpack;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cardmodifiers.witchesstrikepack.InscribedMod;
 import thePackmaster.orbs.contentcreatorpack.Wanderbot;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -38,5 +39,6 @@ public class Wanderbots extends AbstractContentCard {
     }
 
     public void upp() {
+        CardModifierManager.addModifier(this, new InscribedMod(true, false));
     }
 }

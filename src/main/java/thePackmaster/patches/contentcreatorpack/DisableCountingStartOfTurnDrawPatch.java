@@ -3,7 +3,7 @@ package thePackmaster.patches.contentcreatorpack;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 
-public class PreDrawPatch {
+public class DisableCountingStartOfTurnDrawPatch {
     public static boolean DRAWN_DURING_TURN = false;
 
     @SpirePatch(
@@ -13,7 +13,7 @@ public class PreDrawPatch {
     public static class AbstractPlayerApplyStartOfTurnRelicsPatch {
         public static void Prefix(AbstractPlayer __instance) {
             DRAWN_DURING_TURN = false;
-            OnDrawCard.DRAWN_THIS_TURN = 0;
+            TrackCardsDrawnDuringTurnPatch.DRAWN_THIS_TURN = 0;
         }
     }
 }

@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.actions.contentcreatorpack.EnableDrawnDuringTurnAction;
 
-public class VoyagedPatch {
+public class EnableCountingDrawnCardsPatch {
 
     @SpirePatch(
             clz = AbstractPlayer.class,

@@ -26,14 +26,16 @@ import thePackmaster.cards.highenergypack.StruckByATrain;
 import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 
+import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.util.Wiz.atb;
 
 public class Wanderbot extends AbstractOrb {
     private static final OrbStrings orbString;
-    private static final Texture myTex = TexLoader.getTexture("anniv5Resources/images/orbs/wanderbot_orb.png");
+    private static final Texture myTex = TexLoader.getTexture(makeImagePath("/orbs/wanderbot_orb.png"));
 
     public Wanderbot() {
-        this.ID = "Wanderbot";
+        this.ID = makeID("Wanderbot");
         this.img = myTex;
         this.name = orbString.NAME;
         this.basePassiveAmount = 4;

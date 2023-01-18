@@ -35,6 +35,7 @@ public class HatMenu {
     public static final ArrayList<String> hats = new ArrayList<>();
     public static final ArrayList<String> currentlyUnlockedHats = new ArrayList<>();
     public static final Map<String, SpecialHat> specialHats = new HashMap<>();
+    public static final Map<String, Integer> hatsToIndexes = new HashMap<>();
 
     static {
         specialHats.put(AlignmentPack.ID, new AlignmentHat());
@@ -88,11 +89,17 @@ public class HatMenu {
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index, s)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
 
+        for (int i = 0; i < hats.size(); i++) {
+            hatsToIndexes.put(hats.get(i), i);
+        }
 
         if (init) {
-            int lastPickedIdx = SpireAnniversary5Mod.getLastPickedHatIndex();
-            dropdown.setSelectedIndex(lastPickedIdx);
-            //setCurrentHat(lastPickedIdx, optionNames.get(lastPickedIdx));
+            String lastPickedId = SpireAnniversary5Mod.getLastPickedHatID();
+            if (lastPickedId == null || lastPickedId.equals("")) {
+                dropdown.setSelectedIndex(0);
+            } else {
+                dropdown.setSelectedIndex(hatsToIndexes.get(lastPickedId));
+            }
         }
     }
 
@@ -101,7 +108,9 @@ public class HatMenu {
 
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
+        hats.add("Base");
         optionNames.add(TEXT[9]);
+        hats.add("Random");
         ArrayList<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
         sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
         for (AbstractCardPack s : sortedPacks) {
@@ -190,7 +199,7 @@ public class HatMenu {
             flavorText = SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
         }
         try {
-            SpireAnniversary5Mod.saveLastPickedHatIndex(index);
+            SpireAnniversary5Mod.saveLastPickedHatID(hats.get(index));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

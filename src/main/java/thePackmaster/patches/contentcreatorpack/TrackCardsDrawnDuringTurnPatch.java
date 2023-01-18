@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import javassist.CtBehavior;
 
-public class OnDrawCard {
+public class TrackCardsDrawnDuringTurnPatch {
     public static int DRAWN_THIS_TURN = 0;
 
     @SpirePatch(
@@ -19,7 +19,7 @@ public class OnDrawCard {
                 localvars = {"c"}
         )
         public static void onDraw(AbstractPlayer __instance, AbstractCard c) {
-            if (PreDrawPatch.DRAWN_DURING_TURN) {
+            if (DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN) {
                 DRAWN_THIS_TURN++;
             }
         }

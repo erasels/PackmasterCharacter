@@ -55,7 +55,7 @@ import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
-import thePackmaster.patches.contentcreatorpack.PreDrawPatch;
+import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
@@ -339,14 +339,14 @@ public class SpireAnniversary5Mod implements
         modConfig.save();
     }
 
-    public static int getLastPickedHatIndex() {
-        if (modConfig == null) return 0;
-        return Integer.parseInt(modConfig.getString("PackmasterSelectedHatIndex"));
+    public static String getLastPickedHatID() {
+        if (modConfig == null) return "";
+        return modConfig.getString("PackmasterSelectedHatID");
     }
 
-    public static void saveLastPickedHatIndex(int index) throws IOException {
+    public static void saveLastPickedHatID(String ID) throws IOException {
         if (modConfig == null) return;
-        modConfig.setString("PackmasterSelectedHatIndex", String.valueOf(index));
+        modConfig.setString("PackmasterSelectedHatID", ID);
         modConfig.save();
     }
 
@@ -628,7 +628,7 @@ public class SpireAnniversary5Mod implements
         MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
         EnergyAndEchoPack.resetvalues();
         EnergyCountPatch.energySpentThisCombat = 0;
-        PreDrawPatch.DRAWN_DURING_TURN = false;
+        DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
     }
 
     @Override

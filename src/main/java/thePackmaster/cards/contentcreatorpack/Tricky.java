@@ -3,8 +3,7 @@ package thePackmaster.cards.contentcreatorpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.patches.contentcreatorpack.OnDrawCard;
+import thePackmaster.patches.contentcreatorpack.TrackCardsDrawnDuringTurnPatch;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -24,7 +23,7 @@ public class Tricky extends AbstractContentCard {
 
     public void calculateCardDamage(AbstractMonster mo) {
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * OnDrawCard.DRAWN_THIS_TURN;
+        this.baseDamage += this.magicNumber * TrackCardsDrawnDuringTurnPatch.DRAWN_THIS_TURN;
         super.calculateCardDamage(mo);
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
@@ -32,7 +31,7 @@ public class Tricky extends AbstractContentCard {
 
     public void applyPowers() {
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * OnDrawCard.DRAWN_THIS_TURN;
+        this.baseDamage += this.magicNumber * TrackCardsDrawnDuringTurnPatch.DRAWN_THIS_TURN;
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
