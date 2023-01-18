@@ -9,7 +9,7 @@ import thePackmaster.powers.rimworldpack.CatharsisPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Catharsis extends AbstractPackmasterCard {
+public class Catharsis extends AbstractRimCard {
     public final static String ID = makeID(Catharsis.class.getSimpleName());
 
     public Catharsis() {

@@ -5,5 +5,11 @@
       "Hunt Elites and Bosses, using your Carving Knife to gain their unique weapons and armor!",
       "Dayvig"
     ]
+  },
+  "${ModID}:MonsterHunterPackHat": {
+    "TEXT": [
+      "Spoils of the hunt.",
+      "Nemesis' Skull"
+    ]
   }
 }

@@ -46,7 +46,10 @@ public class InscribedMod extends AbstractCardModifier {
             return uiStrings.EXTENDED_DESCRIPTION[0] + rawDescription;
         } else return rawDescription;
     }
-
+    @Override
+    public void onInitialApplication(AbstractCard card) {
+        card.tags.add(SpireAnniversary5Mod.ISCARDMODIFIED);
+    }
     @Override
     public String identifier(AbstractCard card) {
         return "Inscribed";

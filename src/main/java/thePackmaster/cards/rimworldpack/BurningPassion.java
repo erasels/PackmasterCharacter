@@ -8,7 +8,7 @@ import thePackmaster.powers.rimworldpack.BurningPassionPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class BurningPassion extends AbstractPackmasterCard {
+public class BurningPassion extends AbstractRimCard {
     public final static String ID = makeID(BurningPassion.class.getSimpleName());
 
     public BurningPassion() {

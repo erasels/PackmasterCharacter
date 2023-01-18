@@ -13,7 +13,7 @@ public class Thoughtweaving extends AbstractAnomalyCard {
 
     public Thoughtweaving() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        magicNumber=1;
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     @Override

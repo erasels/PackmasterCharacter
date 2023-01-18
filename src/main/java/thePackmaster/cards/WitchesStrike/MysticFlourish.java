@@ -13,6 +13,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
 
+import static thePackmaster.SpireAnniversary5Mod.ISCARDMODIFIED;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MysticFlourish extends AbstractWitchStrikeCard {
@@ -23,35 +24,16 @@ public class MysticFlourish extends AbstractWitchStrikeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
         magicNumber = baseMagicNumber = 1;
-        CardModifierManager.addModifier(this,new InscribedMod(true,true));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
-        if (upgraded){
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    if (AbstractDungeon.player.hand.size() > 0) {
-                        ArrayList<AbstractCard> Uninscribed = new ArrayList<>();
-                        for (AbstractCard c : AbstractDungeon.player.hand.group){
-                            if (!CardModifierManager.hasModifier(c,"Inscribed")){
-                                Uninscribed.add(c);
-                            }
-                        }
-                        if (!Uninscribed.isEmpty()) {
-                            AbstractCard targetCard = Uninscribed.get(AbstractDungeon.cardRandomRng.random(Uninscribed.size() - 1));
-                            CardModifierManager.addModifier(targetCard, new InscribedMod(false,true));
-                        }
-                    }
-                    isDone = true;
-                }
-            });
-        }
+        addToBot(new MysticFlourishAction(magicNumber));
     }
 
     public void upp() {
         upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 
     @Override

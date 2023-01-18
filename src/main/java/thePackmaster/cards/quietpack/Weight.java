@@ -12,7 +12,7 @@ import static thePackmaster.util.Wiz.adp;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class Weight extends AbstractPackmasterCard {
+public class Weight extends AbstractQuietCard {
     public final static String ID = makeID("Weight");
 
     public Weight() {

@@ -40,7 +40,7 @@ public class ArtAttackArt extends AbstractRippedArtCard {
                 }
             }
         });
-        atb(new SFXAction("BLUNT_FAST"));
+        atb(new SFXAction(makeID("RipPack_Harp")));
         atb(new LoseHPAction(m, m, magicNumber));
         atb(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, NONE)));
     }

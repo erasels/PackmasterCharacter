@@ -1,22 +1,20 @@
 {
   "${ModID}:CrescentSweep": {
     "NAME": "Heel Tornado",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Crescent_Moon.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Crescent_Moon. NL ${ModID}:Inscribe a random card in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Crescent_Moon."
   },
   "${ModID}:MysticFlourish": {
     "NAME": "Tetsuzanko",
-    "DESCRIPTION": "Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${ModID}:Inscribe a random card in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next orb",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next orb twice"
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
-    "DESCRIPTION": "${ModID}:Manifest a random orb. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "${ModID}:Manifest !M! random orbs."
+    "DESCRIPTION": "${ModID}:Manifest a random orb. NL Exhaust"
   },
   "${ModID}:FullMoonHalo": {
     "NAME": "Full Moon Halo",
-    "DESCRIPTION": " Gain !B! Block. NL Manifest ${ModID}:Full_Moon."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Manifest ${ModID}:Full_Moon."
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Moonlight Barrage",
@@ -24,15 +22,15 @@
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "Chittering Punt",
-    "DESCRIPTION": "${ModID}:Infest. ${ModID}:Inscribed. NL Deal !D! damage. NL ${ModID}:Manifest ${ModID}:Crescent_Moon for each infestation counter."
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL When this ${ModID}:infests ${ModID}:Manifest ${ModID}:Crescent_Moon."
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this ${ModID}:infests, ${ModID}:Inscribe a random card in your draw pile."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this ${ModID}:infests, Evoke your next orb !M! times and lose and orb slot."
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "${ModID}:Inscribe !M! random cards in your hand. NL Gain !${ModID}:m2! Focus."
+    "DESCRIPTION": "${ModID}:Modify !M! random cards in your hand : ${ModID}:Inscribed. NL Gain !${ModID}:m2! Focus. NL Exhaust"
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",

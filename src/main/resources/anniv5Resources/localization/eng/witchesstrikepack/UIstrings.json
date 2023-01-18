@@ -6,5 +6,11 @@
       "Silver",
       "#yBayonetta series originally created by #yPlatinum #yGames for card names and thematic inspiration."
     ]
+  },
+  "${ModID}:WitchesStrikePackHat": {
+    "TEXT": [
+      "Witchcraft is equal parts magic and fashion.",
+      "Sunday Best"
+    ]
   }
 }
