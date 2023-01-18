@@ -53,7 +53,7 @@ public class StealAllBlockAction extends AbstractGameAction {
 			AbstractPower tmp = AbstractDungeon.player.getPower(ThieveryMasteryPower.POWER_ID);
 			if (tmp != null) {
 				tmp.flash();
-				amount *= tmp.amount + 1;
+				amount *= 2;
 			}
 			source.addBlock(amount);
 			target.loseBlock();

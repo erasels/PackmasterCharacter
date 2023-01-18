@@ -7,8 +7,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import com.megacrit.cardcrawl.powers.ThornsPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.thieverypack.StealPowerAction;
+
+import java.util.ArrayList;
 
 public class Magnet extends AbstractThieveryCard {
 	public static final String RAW_ID = "Magnet";
@@ -16,14 +21,17 @@ public class Magnet extends AbstractThieveryCard {
 	private static final int COST = 1;
 	private static final AbstractCard.CardType TYPE = CardType.SKILL;
 	private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
-	private static final AbstractCard.CardTarget TARGET = CardTarget.ALL_ENEMY;
+	private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
-	private static final int POWER = 1;
-	private static final int NEW_COST = 0;
+	public static final ArrayList<String> stealPowIDs = new ArrayList<String>() {{
+		add(ArtifactPower.POWER_ID);
+		add(PlatedArmorPower.POWER_ID);
+		add(ThornsPower.POWER_ID);
+		add(MetallicizePower.POWER_ID);
+	}};
 
 	public Magnet() {
 		super(ID, COST, TYPE, RARITY, TARGET);
-		baseMagicNumber = magicNumber = POWER;
 		exhaust = true;
 	}
 
@@ -31,30 +39,27 @@ public class Magnet extends AbstractThieveryCard {
 	public void triggerOnGlowCheck() {
 		glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
 		for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			if (!m.isDeadOrEscaped() && (m.hasPower(ArtifactPower.POWER_ID))) {
+			if (!m.isDeadOrEscaped() && (m.powers.stream().anyMatch(p -> stealPowIDs.contains(p.ID)))) {
 				glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
 			}
 		}
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new StealPowerAction(AbstractDungeon.getMonsters().monsters, ArtifactPower.POWER_ID, StealPowerAction.AnimationMode.TO_PLAYER));
-		addToBot(new AbstractGameAction() {
-			@Override
-			public void update() {
-				isDone = true;
-				if (StealPowerAction.didMiss) {
-					addToTop(new ApplyPowerAction(p, p, new ArtifactPower(p, magicNumber)));
-				}
-			}
-		});
+		if (upgraded) {
+			addToBot(new StealPowerAction(AbstractDungeon.getMonsters().monsters, stealPowIDs, StealPowerAction.AnimationMode.TO_PLAYER));
+		} else {
+			addToBot(new StealPowerAction(m, stealPowIDs, StealPowerAction.AnimationMode.TO_PLAYER));
+		}
 	}
 
 	@Override
 	public void upgrade() {
 		if (!upgraded) {
 			upgradeName();
-			upgradeBaseCost(NEW_COST);
+			target = CardTarget.ALL_ENEMY;
+			rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+			initializeDescription();
 		}
 	}
 }

@@ -12,7 +12,7 @@ import thePackmaster.vfx.arcanapack.SunBeamEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class DivineMight extends AbstractPackmasterCard {
+public class DivineMight extends AbstractWardenCard {
     public final static String ID = makeID("DivineMight");
 
     private static final int DAMAGE = 25;

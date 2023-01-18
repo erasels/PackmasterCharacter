@@ -13,7 +13,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SoulShear extends AbstractPackmasterCard {
+public class SoulShear extends AbstractWarlockCard {
     public final static String ID = makeID(SoulShear.class.getSimpleName());
 
     private static final int COST = 1;

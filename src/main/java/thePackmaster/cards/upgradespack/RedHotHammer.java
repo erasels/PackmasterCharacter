@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class RedHotHammer extends AbstractPackmasterCard {
+public class RedHotHammer extends AbstractBlacksmithCard {
 
     public final static String ID = SpireAnniversary5Mod.makeID("RedHotHammer");
     // intellij stuff ATTACK, ENEMY, COMMON, 10, 3, , , ,

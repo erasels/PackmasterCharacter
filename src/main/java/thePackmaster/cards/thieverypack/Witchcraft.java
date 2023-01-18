@@ -16,7 +16,7 @@ public class Witchcraft extends AbstractThieveryCard {
 	private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
 	private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
-	private static final int POWER = 4;
+	private static final int POWER = 5;
 	private static final int UPGRADE_BONUS = 2;
 
 	public Witchcraft() {

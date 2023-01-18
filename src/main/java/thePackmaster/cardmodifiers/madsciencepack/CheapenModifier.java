@@ -11,8 +11,7 @@ public class CheapenModifier extends AbstractMadScienceModifier {
     @Override
     public void onInitialApplication(AbstractCard card) {
         super.onInitialApplication(card);
-        card.cost = 0;
-        card.isCostModified = true;
+        card.modifyCostForCombat(-99);
     }
 
     @Override
