@@ -1,5 +1,6 @@
 package thePackmaster.powers.dragonwrathpack;
 
+import basemod.BaseMod;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -77,7 +78,7 @@ public class confessionpower extends AbstractPackmasterPower implements Cloneabl
     @Override
     public void onInitialApplication() {
         for (AbstractCard c : AbstractDungeon.player.discardPile.group){
-            if (c instanceof HolyWrath){
+            if (c instanceof HolyWrath && AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE){
                 AbstractDungeon.player.discardPile.removeCard(c);
                 AbstractDungeon.player.hand.addToTop(c);
             }
@@ -86,7 +87,7 @@ public class confessionpower extends AbstractPackmasterPower implements Cloneabl
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         for (AbstractCard c : AbstractDungeon.player.discardPile.group){
-            if (c instanceof HolyWrath){
+            if (c instanceof HolyWrath && AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE){
                 AbstractDungeon.player.discardPile.removeCard(c);
                 AbstractDungeon.player.hand.addToTop(c);
             }
