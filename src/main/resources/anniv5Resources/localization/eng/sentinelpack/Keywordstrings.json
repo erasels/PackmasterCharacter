@@ -1,0 +1,12 @@
+[
+  {
+    "PROPER_NAME": "Angry",
+    "NAMES": ["angry"],
+    "DESCRIPTION": "Your Attacks deal 50% more damage and you take 50% more damage from attacks. Upon exiting this #yStance, gain #b3 #yVigor."
+  },
+  {
+    "PROPER_NAME": "Serene",
+    "NAMES": ["serene"],
+    "DESCRIPTION": "At the end of your turn, gain #yBlock equal to 50% of your #yBlock. Upon exiting this #yStance, gain #b1 #yDexterity."
+  }
+]

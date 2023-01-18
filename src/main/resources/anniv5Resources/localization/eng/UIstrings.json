@@ -59,7 +59,7 @@
   "${ModID}:WatcherPack": {
     "TEXT": [
       "Will of the Watcher",
-      "A collection of reliable Watcher cards, including access to Stances.",
+      "A collection of reliable Watcher cards (no access to Stances).",
       "MegaCrit"
     ]
   },
