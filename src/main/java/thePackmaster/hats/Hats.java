@@ -247,17 +247,18 @@ public class Hats {
         }
     }
 
+    private static final float Y_OFF = 13f;
     public static void preRenderPlayer(SpriteBatch sb, AbstractPlayer p) {
         SpecialHat shat = specialHats.get(currentHat);
         if (shat != null && skeleton != null && headbone != null) {
-            float x = skeleton.getX() + headbone.getWorldX(), y = skeleton.getY() + headbone.getWorldY();
+            float x = skeleton.getX() + headbone.getWorldX(), y = skeleton.getY() + headbone.getWorldY() + Y_OFF * headbone.getScaleY();
             shat.preRenderPlayer(sb, p, x, y);
         }
     }
     public static void postRenderPlayer(SpriteBatch sb, AbstractPlayer p) {
         SpecialHat shat = specialHats.get(currentHat);
         if (shat != null && skeleton != null && headbone != null) {
-            float x = skeleton.getX() + headbone.getWorldX(), y = skeleton.getY() + headbone.getWorldY();
+            float x = skeleton.getX() + headbone.getWorldX(), y = skeleton.getY() + headbone.getWorldY() + Y_OFF * headbone.getScaleY();
             shat.postRenderPlayer(sb, p, x, y);
         }
     }
