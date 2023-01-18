@@ -63,8 +63,8 @@ public class PixiePack extends AbstractCardPack {
                     && (!C.hasTag(AbstractCard.CardTags.HEALING))
                     && (C.type != AbstractCard.CardType.STATUS && C.type != AbstractCard.CardType.CURSE)){
                 int amt = 4;
-                if (C.rarity== AbstractCard.CardRarity.UNCOMMON) amt = 2 ;
-                if (C.rarity== AbstractCard.CardRarity.RARE) amt = 1 ;
+                if (C.rarity == AbstractCard.CardRarity.UNCOMMON) amt = 2 ;
+                if (C.rarity == AbstractCard.CardRarity.RARE) amt = 1 ;
                 for(int i = 0; i < amt; i++) {
                     possibleToGenerate.add(C);
                 }
