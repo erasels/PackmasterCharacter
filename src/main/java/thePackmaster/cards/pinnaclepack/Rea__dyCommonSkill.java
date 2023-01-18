@@ -21,7 +21,7 @@ public class Rea__dyCommonSkill extends AbstractPinnacleCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         baseSecondMagic = secondMagic = MAGIC2;
-        ExhaustiveVariable.setBaseValue(this, 1);
+        ExhaustiveVariable.setBaseValue(this, 2);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,7 +34,5 @@ public class Rea__dyCommonSkill extends AbstractPinnacleCard {
     }
 
     @Override
-    public void upp() {
-        ExhaustiveVariable.upgrade(this, 1);
-    }
+    public void upp() {}
 }

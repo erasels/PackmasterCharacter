@@ -31,9 +31,7 @@ public class ArrowStormAction extends AbstractGameAction {
 
     public void update() {
         boolean hasExhausted = false;
-        Iterator<AbstractCard> Hand = pl().hand.group.iterator();
-        while (Hand.hasNext()) {
-            AbstractCard handcards = Hand.next();
+        for (AbstractCard handcards : pl().hand.group) {
             if (handcards.type == AbstractCard.CardType.ATTACK) {
                 addToTop(new ExhaustSpecificCardAction(handcards, pl().hand, true));
                 hasExhausted = true;

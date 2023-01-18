@@ -16,13 +16,14 @@ public class StoneSwordCommonAttack extends AbstractPinnacleCard {
 
     private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 1;
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_DAMAGE = 4;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_DAMAGE = 3;
 
     public StoneSwordCommonAttack() {
         super(ID, 3, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
         baseDamage = this.damage = DAMAGE;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

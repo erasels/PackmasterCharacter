@@ -7,13 +7,13 @@
     ]
   },
   "${ModID}:Cooking": {
-    "NAME": "Cooking",
+    "NAME": "Cooking Power",
     "DESCRIPTIONS": [
       "At the end of your turn, cook a #yCroquette."
     ]
   },
   "${ModID}:Cooking_": {
-    "NAME": "Cooking+",
+    "NAME": "Cooking Power+",
     "DESCRIPTIONS": [
       "At the end of your turn, cook an upgraded #yCroquette."
     ]

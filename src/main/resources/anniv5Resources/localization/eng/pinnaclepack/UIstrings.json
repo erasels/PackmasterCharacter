@@ -5,5 +5,11 @@
       "A pack made of cards from the best characters of 2022! Support Cards.",
       "SandTag"
     ]
+  },
+  "${ModID}:PinnaclePackHat": {
+    "TEXT": [
+      "A regal hat, for the finest cards.",
+      "Pinnacle"
+    ]
   }
 }

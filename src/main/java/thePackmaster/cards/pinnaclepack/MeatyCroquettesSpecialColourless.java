@@ -15,7 +15,7 @@ public class MeatyCroquettesSpecialColourless extends AbstractPinnacleCard {
 
 
     public MeatyCroquettesSpecialColourless() {
-        super(ID, 0, CardType.POWER, CardRarity.SPECIAL, AbstractCard.CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.SPECIAL, AbstractCard.CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = MAGIC;
         this.selfRetain = true;
     }

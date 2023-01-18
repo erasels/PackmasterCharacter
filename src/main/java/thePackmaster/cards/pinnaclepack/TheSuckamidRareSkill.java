@@ -18,7 +18,7 @@ public class TheSuckamidRareSkill extends AbstractPinnacleCard {
     private static final int MAGIC = 8;
     private static final int UPGRADE_MAGIC = 4;
     private static final int MAGIC2 = 2;
-    private static final int UPGRADE_MAGIC2 = 2;
+    private static final int UPGRADE_MAGIC2 = 1;
 
     public TheSuckamidRareSkill() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
@@ -29,16 +29,8 @@ public class TheSuckamidRareSkill extends AbstractPinnacleCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.upgraded) {
-            addToTop(new ApplyPowerAction(p, p, new Capacitor(p, secondMagic), secondMagic));
-            addToBot(new ApplyPowerAction(p, p, new EquilibriumPower(p, 2), 2));
+            addToBot(new ApplyPowerAction(p, p, new EquilibriumPower(p, secondMagic), secondMagic));
             addToBot(new HealAction(p, p, magicNumber));
-        }
-        else{
-            addToTop(new ApplyPowerAction(p, p, new Capacitor(p, secondMagic), secondMagic));
-            addToBot(new ApplyPowerAction(p, p, new EquilibriumPower(p, 1), 1));
-            addToBot(new HealAction(p, p, magicNumber));
-        }
     }
 
     @Override

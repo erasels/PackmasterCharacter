@@ -14,7 +14,7 @@ public class FishyCroquettesSpecialColourless extends AbstractPinnacleCard {
 
 
     public FishyCroquettesSpecialColourless() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = MAGIC;
         this.selfRetain = true;
         this.exhaust = true;

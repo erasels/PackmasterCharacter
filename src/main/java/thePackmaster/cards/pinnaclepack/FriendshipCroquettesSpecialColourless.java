@@ -16,7 +16,7 @@ public class FriendshipCroquettesSpecialColourless extends AbstractPinnacleCard 
 
 
     public FriendshipCroquettesSpecialColourless() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, AbstractCard.CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, AbstractCard.CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = MAGIC;
         this.selfRetain = true;
         this.baseBlock = BLOCK;

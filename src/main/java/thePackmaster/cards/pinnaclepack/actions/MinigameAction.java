@@ -48,7 +48,7 @@ public class MinigameAction extends AbstractGameAction {
             for (int i = 0; i < effect; i++) {
                 int rng;
                 rng = 0;
-                rng += AbstractDungeon.miscRng.random(0, 3);
+                rng += AbstractDungeon.cardRandomRng.random(0, 3);
                 switch (rng){
                     case 0:
                         addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, 1), 1));

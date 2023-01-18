@@ -1,5 +1,6 @@
 package thePackmaster.cards.pinnaclepack;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,6 +18,7 @@ public class MarvelousFeastUncommonPower extends AbstractPinnacleCard {
     public MarvelousFeastUncommonPower() {
         super(ID, 2, AbstractCard.CardType.POWER, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.isInnate = true;
+        MultiCardPreview.add(this, new FriendshipCroquettesSpecialColourless(), new FishyCroquettesSpecialColourless(), new MeatyCroquettesSpecialColourless(), new MysteryCroquettesSpecialColourless());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,6 +34,7 @@ public class MarvelousFeastUncommonPower extends AbstractPinnacleCard {
     public void upp() {
         upgradeBaseCost(3);
         this.fixUpgradeCheck = true;
+        MultiCardPreview.multiCardPreview.get(this).forEach(AbstractCard::upgrade);
     }
 
 }

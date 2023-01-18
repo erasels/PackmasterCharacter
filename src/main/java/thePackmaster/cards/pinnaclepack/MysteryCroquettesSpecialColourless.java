@@ -10,10 +10,10 @@ public class MysteryCroquettesSpecialColourless extends AbstractPinnacleCard {
 
     public final static String ID = makeID("MysteryCroquettesSpecialColourless");
     private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 99;
+    private static final int UPGRADE_MAGIC = 98;
 
     public MysteryCroquettesSpecialColourless() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = MAGIC;
         this.selfRetain = true;
         this.exhaust = true;

@@ -14,12 +14,9 @@ public class TopOfTheSkyUncommonAttack extends AbstractPinnacleCard {
 
     public final static String ID = makeID("TopOfTheSkyUncommonAttack");
     private static final int ATTACK = 2;
-    private static final int UPGRADE_ATTACK = 1;
-    private static final int BLOCK = 1;
-    private static final int UPGRADE_BLOCK = 1;
+    private static final int BLOCK = 2;
     private static final int EXHAUSTIVE = 2;
     private static final int UPGRADE_EXHAUSTIVE = 1;
-
 
     public TopOfTheSkyUncommonAttack() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -39,8 +36,6 @@ public class TopOfTheSkyUncommonAttack extends AbstractPinnacleCard {
 
     @Override
     public void upp() {
-        upgradeBlock(UPGRADE_BLOCK);
-        upgradeDamage(UPGRADE_ATTACK);
         ExhaustiveVariable.upgrade(this, UPGRADE_EXHAUSTIVE);
     }
 
