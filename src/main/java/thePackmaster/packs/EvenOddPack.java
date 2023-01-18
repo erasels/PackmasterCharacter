@@ -27,6 +27,7 @@ public class EvenOddPack extends AbstractCardPack {
         cards.add(PrimeDirective.ID);
         cards.add(WitzBolt.ID);
         cards.add(ElementOfSurprise.ID);
+        cards.add(GammaWard.ID);
         return cards;
     }
 }

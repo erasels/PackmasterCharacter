@@ -23,9 +23,14 @@
     "DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["${ModID}:First: ", "Your next card is played twice."]
   },
+  "${ModID}:GammaWard": {
+    "NAME": "Gamma Ward",
+    "DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Your next Skill this turn has NL ${ModID}:Even: Gain !M! Block."]
+  },
   "${ModID}:EvenOddAppend": {
     "NAME": "",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": [" NL (+ ", " damage.)", "Gain ", " Block"]
+    "EXTENDED_DESCRIPTION": [" NL (+ ", " damage.)", " NL Gain ", " Block"]
   }
 }
