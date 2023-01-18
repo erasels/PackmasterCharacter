@@ -11,7 +11,7 @@ public class StrikeABargain extends AbstractStrikePackCard {
     public final static String ID = makeID("StrikeABargain");
 
     public StrikeABargain() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
 
     }
 
@@ -20,6 +20,6 @@ public class StrikeABargain extends AbstractStrikePackCard {
     }
 
     public void upp() {
-        this.upgradeBaseCost(2);
+        this.upgradeBaseCost(1);
     }
 }

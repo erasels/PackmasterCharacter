@@ -5,5 +5,11 @@
       "Slaps roof, this deck can generate so many statuses.",
       "(Gk) Erasels"
     ]
+  },
+  "${ModID}:StatusPackHat": {
+    "TEXT": [
+      "Medic!",
+      "Bandages"
+    ]
   }
 }

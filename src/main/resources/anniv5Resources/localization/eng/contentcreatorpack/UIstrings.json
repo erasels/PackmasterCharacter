@@ -1,0 +1,16 @@
+{
+  "${ModID}:ContentCreatorPack": {
+    "TEXT": [
+      "For The Content",
+      "A thank you to some of the content creators who've supported the STS Modding Community over the years.",
+      "MichaelMayhem & Vex",
+      "Thanks to: NL Baalorlord NL FrostPrime NL Rhapsody NL TheOddOne NL Retromation NL Wanderbots NL Sneakyteak NL Tricky NL Hutts NL Olexa"
+    ]
+  },
+  "${ModID}:ContentCreatorPackHat": {
+    "TEXT": [
+      "A most wholesome face.",
+      "Rhapso-head"
+    ]
+  }
+}
