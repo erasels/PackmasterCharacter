@@ -5,7 +5,7 @@
   },
   "${ModID}:WorkHammer": {
     "NAME": "Work Hammer",
-    "DESCRIPTION": "NL Deal !D! ${ModID}:Front damage. NL Give enemy !M! Plated Armor."
+    "DESCRIPTION": "Deal !D! ${ModID}:Front damage. NL Give enemy !M! Plated Armor."
   },
   "${ModID}:Chained": {
     "NAME": "Chained",
