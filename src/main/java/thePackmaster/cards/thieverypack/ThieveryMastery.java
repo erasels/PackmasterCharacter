@@ -20,7 +20,9 @@ public class ThieveryMastery extends AbstractThieveryCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new ApplyPowerAction(p, p, new ThieveryMasteryPower(p, 1)));
+		if (!p.hasPower(ThieveryMasteryPower.POWER_ID)) {
+			addToBot(new ApplyPowerAction(p, p, new ThieveryMasteryPower(p), 0));
+		}
 	}
 
 	@Override

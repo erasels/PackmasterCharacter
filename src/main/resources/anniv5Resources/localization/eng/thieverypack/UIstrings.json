@@ -6,6 +6,12 @@
       "Celicath"
     ]
   },
+  "${ModID}:StealPowerAction": {
+    "TEXT": [
+      "%s is useless to me.",
+      "%s are useless to me."
+    ]
+  },
   "${ModID}:ThieveryPackHat": {
     "TEXT": [
       "The legacy of Lord Red Mask is only beginning.",

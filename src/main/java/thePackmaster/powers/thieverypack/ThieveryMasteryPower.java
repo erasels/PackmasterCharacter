@@ -13,12 +13,12 @@ public class ThieveryMasteryPower extends AbstractPackmasterPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-	public ThieveryMasteryPower(AbstractCreature owner, int amount) {
-		super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
+	public ThieveryMasteryPower(AbstractCreature owner) {
+		super(POWER_ID, NAME, PowerType.BUFF, false, owner, -1);
 	}
 
 	@Override
 	public void updateDescription() {
-		description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+		description = DESCRIPTIONS[0];
 	}
 }
