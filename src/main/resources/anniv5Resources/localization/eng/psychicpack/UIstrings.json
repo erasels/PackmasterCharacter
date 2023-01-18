@@ -29,8 +29,8 @@
   },
   "${ModID}:PsychicPackHat": {
     "TEXT": [
-      "I foresaw you picking this hat.",
-      "The Zoltan"
+      "Power emanates from you.",
+      "Runic"
     ]
   }
 }
