@@ -31,7 +31,7 @@
   "${ModID}:RainbowLouse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Draw 1 card.",
     "FLAVOR": "The result of an unwise magic experiment."
   },
   "${ModID}:SwarmOfBees": {
