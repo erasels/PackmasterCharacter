@@ -43,7 +43,7 @@
   },
   "${ModID}:BucketOfDregsUncommonSkill": {
     "NAME": "Bucket Of Dregs",
-    "DESCRIPTION": "Unplayable. Retain. NL When Retained, heal ALL enemies for !M! and gain !B! Block."
+    "DESCRIPTION": "Unplayable. Retain. NL When Retained, heal ALL enemies for !M! HP and gain !B! Block."
   },
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "Pocket Tournament",
