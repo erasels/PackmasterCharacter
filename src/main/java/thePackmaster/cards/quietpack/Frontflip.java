@@ -13,7 +13,7 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 
-public class Frontflip extends AbstractPackmasterCard {
+public class Frontflip extends AbstractQuietCard {
     public final static String ID = makeID("Frontflip");
 
     public Frontflip() {

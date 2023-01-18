@@ -3,6 +3,7 @@ package thePackmaster.powers.dragonwrathpack;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -42,13 +43,10 @@ public class AbsolutionPower extends AbstractPackmasterPower implements Cloneabl
 
         updateDescription();
     }
-
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
-        Wiz.vfx(new MiracleEffect(LightOrb.color,LightOrb.color2,"HEAL_3"));
-        PenancePower.Power += amount;
-        return damageAmount;
+    public void atEndOfTurn(boolean isPlayer) {
+        addToBot(new RemoveSpecificPowerAction(owner,owner,this));
     }
+
     @Override
     public void renderIcons(SpriteBatch sb, float x, float y, Color c) {
         super.renderIcons(sb, x, y, Color.GOLD.cpy());

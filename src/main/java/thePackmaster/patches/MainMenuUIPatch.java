@@ -140,10 +140,10 @@ public class MainMenuUIPatch {
             CHECKBOX_X = DROPDOWN_X + CHECKBOX_X_OFF;
         }
 
-        openFilterMenuButton = new ModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X * Settings.scale, FILTERBUTTON_Y * Settings.scale, null,
+        openFilterMenuButton = new ModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X, FILTERBUTTON_Y, null,
                 (button) -> filterMenu.toggle());
 
-        openHatMenuButton = new ModLabeledButton(uiStrings.TEXT[5], HATBUTTON_X * Settings.scale, HATBUTTON_Y * Settings.scale, null, (button) -> hatMenu.toggle());
+        openHatMenuButton = new ModLabeledButton(uiStrings.TEXT[5], HATBUTTON_X, HATBUTTON_Y, null, (button) -> hatMenu.toggle());
     }
 
 

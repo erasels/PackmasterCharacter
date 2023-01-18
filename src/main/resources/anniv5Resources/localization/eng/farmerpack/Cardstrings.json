@@ -36,15 +36,15 @@
   },
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",
-    "DESCRIPTION": "Add a *Fertilizer to your hand at the start of each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add a *Fertilizer to your hand at the start of each turn."
+    "DESCRIPTION": "Gain a *Fertilizer at the start of each turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain a *Fertilizer at the start of each turn."
   },
   "${ModID}:SowTheSeeds": {
     "NAME": "Sow The Seeds",
-    "DESCRIPTION": "Add a *Fertilizer to your hand. NL Put !M! random cards with different types from your draw pile into your hand."
+    "DESCRIPTION": "Gain a *Fertilizer. NL Fetch !M! random cards with different types from your draw pile."
   },
   "${ModID}:TillTheEarth": {
     "NAME": "Till The Earth",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Fertilizer to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a *Fertilizer."
   }
 }

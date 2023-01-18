@@ -42,7 +42,7 @@
   },
   "${ModID}:Wisdom": {
     "NAME": "Wisdom",
-    "DESCRIPTION": "Gain [E]. NL Discard any number of cards in your hand. Draw that many card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Discard any number of cards in your hand. Draw that many card. NL Exhaust."
+    "DESCRIPTION": "Gain [E]. NL Discard any number of cards in your hand. Draw that many cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Discard any number of cards in your hand. Draw that many cards. NL Exhaust."
   }
 }

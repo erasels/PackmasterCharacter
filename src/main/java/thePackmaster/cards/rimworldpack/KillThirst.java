@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class KillThirst extends AbstractPackmasterCard {
+public class KillThirst extends AbstractRimCard {
     public final static String ID = makeID(KillThirst.class.getSimpleName());
 
     public KillThirst() {

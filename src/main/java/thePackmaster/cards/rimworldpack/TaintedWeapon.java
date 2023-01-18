@@ -16,7 +16,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class TaintedWeapon extends AbstractPackmasterCard implements StartupCard {
+public class TaintedWeapon extends AbstractRimCard implements StartupCard {
     public final static String ID = makeID(TaintedWeapon.class.getSimpleName());
 
     public TaintedWeapon() {

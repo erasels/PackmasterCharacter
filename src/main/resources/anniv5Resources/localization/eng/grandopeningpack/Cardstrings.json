@@ -1,0 +1,58 @@
+{
+  "${ModID}:MessUp": {
+    "NAME": "Mess Up",
+    "DESCRIPTION": "Deal damage equal to the amount of cards in your draw pile. NL Shuffle your Discard pile into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Shuffle your Discard pile into your deck. NL Deal damage equal to the amount of cards in your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
+  },
+  "${ModID}:PlannedDefense": {
+    "NAME": "Planned Defense",
+    "DESCRIPTION": "Innate. NL Gain !B! Block. If you played another Innate card this turn, also gain !B! Block next turn."
+  },
+  "${ModID}:SecondStrike": {
+    "NAME": "Second Strike",
+    "DESCRIPTION": "Innate. Retain. NL Deal !D! damage. If it is not the first turn, play this again."
+  },
+  "${ModID}:DashIn": {
+    "NAME": "Dash In",
+    "DESCRIPTION": "Innate NL Gain !B! Block. NL Deal !D! damage to all enemies X times.",
+    "UPGRADE_DESCRIPTION": "Innate NL Gain !B! Block. NL Deal !D! damage to all enemies X+1 times."
+  },
+  "${ModID}:InstinctiveThinking": {
+    "NAME": "Instinctive Thinking",
+    "DESCRIPTION": "Each turn, if the first card you play is Innate, gain !M! Block."
+  },
+  "${ModID}:Cross": {
+    "NAME": "Cross",
+    "DESCRIPTION": "Deal !D! damage twice. Hits one more time for each of your created *Crosses. Shuffle a *Cross into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage twice. Hits one more time for each of your created *Crosses. Shuffle a *Cross+ into your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits !M! times.)"
+    ]
+  },
+  "${ModID}:Improvise": {
+    "NAME": "Improvise",
+    "DESCRIPTION": "Gain !B! Block. Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage"
+  },
+  "${ModID}:Debut": {
+    "NAME": "Debut",
+    "DESCRIPTION": "Once each turn, playing an Innate card Refunds 1.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Once each turn, playing an Innate card Refunds 1."
+  },
+  "${ModID}:BattlePrep": {
+    "NAME": "Battle Prep",
+    "DESCRIPTION": "Choose a card in your hand and permanently give it Innate. Remove this from your deck, permanently.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in your hand and permanently give it Innate. Remove this from your deck, permanently.",
+    "EXTENDED_DESCRIPTION": [
+      "Make Innate (Permanently)"
+    ]
+  },
+  "${ModID}:Surge": {
+    "NAME": "Surge",
+    "DESCRIPTION": "This turn, your next Innate card is played twice.",
+    "UPGRADE_DESCRIPTION": "This turn, your next !M! Innate cards are played twice."
+  }
+}

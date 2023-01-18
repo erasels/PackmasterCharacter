@@ -39,8 +39,8 @@ public class Wolf extends CustomOrb {
     private static final Texture IMG2 = TexLoader.getTexture(IMG_PATH2);
     private static final float WOLF_WIDTH = 96.0f;
 
-    private final static int BASE_PASSIVE = 1;
-    private final static int WOLF_BOOST = 1;
+    private final static int BASE_PASSIVE = 0;
+    private final static int WOLF_BOOST = 2;
     private final static int BASE_EVOKE = 1;
 
     private final BobEffect wolfBobEffect = new BobEffect(2f, 3f);

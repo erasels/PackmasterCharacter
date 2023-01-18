@@ -31,7 +31,7 @@ public class JailPower extends AbstractPackmasterPower {
     public boolean canPlayCard(AbstractCard card) {
         if(card.type == AbstractCard.CardType.ATTACK)
             return false;
-        return true;// 561
+        return true;
     }
 
     @Override

@@ -66,10 +66,6 @@ public class EnergyAndEchoPack extends AbstractCardPack {
         super.initializePack();
     }
 
-    public void receiveOnBattleStart (AbstractRoom room) {
-        resetvalues();
-    }
-
     public static void resetvalues() {
         generatedEnergy = 0;
         usedEnergy = 0;

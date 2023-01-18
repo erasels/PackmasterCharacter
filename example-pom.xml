@@ -16,7 +16,7 @@
 
         <ModID>anniv5</ModID>
 
-        <Steam.path>C:/Program Files (x86)/Steam/steamapps</Steam.path>
+        <Steam.path>D:/SteamLibrary/steamapps/</Steam.path>
 
     </properties>
 

@@ -43,8 +43,8 @@ public class RazorWind extends AbstractDragonwrathCard {
     public RazorWind(){
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseDamage =DAMAGE;
-        this.magicNumber = baseMagicNumber = 4;
-        baseSecondMagic = secondMagic = 2;
+        this.magicNumber = baseMagicNumber = 2;
+        baseSecondMagic = secondMagic = 4;
     }
 
 
@@ -66,6 +66,6 @@ public class RazorWind extends AbstractDragonwrathCard {
     // Upgraded stats.
     @Override
     public void upp() {
-        upgradeSecondDamage(2);
+        upgradeSecondMagic(2);
     }
 }

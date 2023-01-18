@@ -9,7 +9,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Recurrence extends AbstractPackmasterCard {
+public class Recurrence extends AbstractWardenCard {
     public final static String ID = makeID("Recurrence");
 
     public Recurrence() {

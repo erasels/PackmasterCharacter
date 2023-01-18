@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.SpireAnniversary5Mod.modID;
 
-public class EatWithoutTable extends AbstractPackmasterCard {
+public class EatWithoutTable extends AbstractRimCard {
     public final static String ID = makeID(EatWithoutTable.class.getSimpleName());
 
     public EatWithoutTable() {
