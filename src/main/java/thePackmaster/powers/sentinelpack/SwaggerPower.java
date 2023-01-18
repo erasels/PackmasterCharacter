@@ -33,7 +33,7 @@ public class SwaggerPower extends AbstractPackmasterPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer){
-            if (Wiz.p().stance.ID != NeutralStance.STANCE_ID) {
+            if (!Wiz.p().stance.ID.equals(NeutralStance.STANCE_ID)) {
                 Wiz.applyToSelf(new StrengthPower(Wiz.p(), amount));
                 Wiz.applyToSelf(new DexterityPower(Wiz.p(), amount));
             }
