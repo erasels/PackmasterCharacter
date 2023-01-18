@@ -960,7 +960,7 @@ public class SpireAnniversary5Mod implements
             @Override
             public void onLoad(String s) {
                 logger.info("Loading. Hat: " + s);
-                if (s != null) {
+                if (s != null && AbstractDungeon.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER)) {
                     Hats.currentHat = s;
                     Hats.addHat(true, Hats.currentHat);
                 }
