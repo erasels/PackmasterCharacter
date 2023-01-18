@@ -17,7 +17,7 @@
   },
   "${ModID}:OpenBracket": {
     "NAME": "Open Bracket",
-    "DESCRIPTION": "Draw !M! Attacks. NL You cannot draw additional cards this turn."
+    "DESCRIPTION": "Draw !M! cards. NL You can only play Attacks for the rest of the turn."
   },
   "${ModID}:Tragedy": {
     "NAME": "Tragedy",
