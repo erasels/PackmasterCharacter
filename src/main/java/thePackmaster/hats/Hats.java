@@ -185,7 +185,7 @@ public class Hats {
                 attachmentDummy.setRegion(region);
                 attachmentDummy.setWidth(tex.getWidth());
                 attachmentDummy.setHeight(tex.getHeight());
-                attachmentDummy.setX(-3F * Settings.scale);
+                attachmentDummy.setX(0F);
                 attachmentDummy.setY(35F * Settings.scale);
                 attachmentDummy.setScaleX(Settings.scale);
                 attachmentDummy.setScaleY(Settings.scale);
