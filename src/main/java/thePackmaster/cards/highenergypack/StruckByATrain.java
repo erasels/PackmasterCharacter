@@ -27,7 +27,7 @@ public class StruckByATrain extends AbstractHighEnergyCard {
         atb(new ModifyDamageAction(this.uuid, this.magicNumber));
     }
 
-    private static AbstractMonster getFrontmostEnemy() {
+    public static AbstractMonster getFrontmostEnemy() {
         AbstractMonster foe = null;
         float bestPos = 10000F;
         for (AbstractMonster m : Wiz.getEnemies()) {

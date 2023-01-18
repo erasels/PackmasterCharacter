@@ -14,6 +14,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -64,6 +65,7 @@ import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.orbs.summonspack.SwarmOfBees;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
@@ -89,6 +91,7 @@ import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
+import thePackmaster.ui.InfestTextIcon;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
@@ -284,6 +287,7 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, CHOICE, CHOICE, CHOICE));
             defaults.put("PackmasterUnlockedHats", "");
             defaults.put("PackmasterAllPacksMode", "FALSE");
+            defaults.put("PackmasterSelectedHatIndex", "0");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
             modConfig.load();
 
@@ -351,6 +355,17 @@ public class SpireAnniversary5Mod implements
         modConfig.save();
     }
 
+    public static String getLastPickedHatID() {
+        if (modConfig == null) return "";
+        return modConfig.getString("PackmasterSelectedHatID");
+    }
+
+    public static void saveLastPickedHatID(String ID) throws IOException {
+        if (modConfig == null) return;
+        modConfig.setString("PackmasterSelectedHatID", ID);
+        modConfig.save();
+    }
+
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new ThePackmaster(ThePackmaster.characterStrings.NAMES[1], ThePackmaster.Enums.THE_PACKMASTER),
@@ -379,6 +394,8 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditCards() {
+        CustomIconHelper.addCustomIcon(InfestTextIcon.get());
+
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
         BaseMod.addDynamicVariable(new HoardVar());
@@ -628,6 +645,7 @@ public class SpireAnniversary5Mod implements
         MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
         EnergyAndEchoPack.resetvalues();
         EnergyCountPatch.energySpentThisCombat = 0;
+        DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
     }
 
     @Override

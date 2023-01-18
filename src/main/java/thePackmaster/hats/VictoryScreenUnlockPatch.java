@@ -33,7 +33,6 @@ public class VictoryScreenUnlockPatch {
                 if (!HatMenu.currentlyUnlockedHats.contains(p.packID)) {
                     HatMenu.currentlyUnlockedHats.add(p.packID);
                 }
-                HatMenu.refreshHatDropdown();
 
             }
             try {
@@ -42,6 +41,8 @@ public class VictoryScreenUnlockPatch {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+
+            HatMenu.refreshHatDropdown();
         }
     }
 

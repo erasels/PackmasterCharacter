@@ -20,7 +20,6 @@ public class CoreSetPack extends AbstractCardPack {
 
     @Override
     public ArrayList<String> getCards() {
-        //TODO - Replace this with the real Core Set!
         ArrayList<String> cards = new ArrayList<>();
         cards.add(BackpackSmack.ID);
         cards.add(BoosterTutor.ID);

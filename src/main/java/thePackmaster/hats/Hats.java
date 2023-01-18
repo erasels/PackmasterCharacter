@@ -29,14 +29,14 @@ public class Hats {
         }
 
         if (headbone == null && !inRun) {
-            setupSkeleton(HatMenu.dummy, true);
+            setupSkeleton(HatMenu.getDummy(), true);
         } else if (playerbone == null && inRun) {
             setupSkeleton(AbstractDungeon.player, false);
         }
         if (inRun) {
             skeleton = ReflectionHacks.getPrivate(Wiz.p(), AbstractCreature.class, "skeleton");
         } else {
-            skeleton = ReflectionHacks.getPrivate(HatMenu.dummy, AbstractCreature.class, "skeleton");
+            skeleton = ReflectionHacks.getPrivate(HatMenu.getDummy(), AbstractCreature.class, "skeleton");
         }
 
         if (skeleton == null) {
@@ -124,14 +124,14 @@ public class Hats {
 
     public static void addHat(boolean inRun, String hatID) {
         if (headslot == null && !inRun) {
-            setupSkeleton(HatMenu.dummy, true);
+            setupSkeleton(HatMenu.getDummy(), true);
         } else if (playerHeadSlot == null && inRun) {
             setupSkeleton(AbstractDungeon.player, false);
         }
         if (inRun) {
             skeleton = ReflectionHacks.getPrivate(Wiz.p(), AbstractCreature.class, "skeleton");
         } else {
-            skeleton = ReflectionHacks.getPrivate(HatMenu.dummy, AbstractCreature.class, "skeleton");
+            skeleton = ReflectionHacks.getPrivate(HatMenu.getDummy(), AbstractCreature.class, "skeleton");
         }
 
         String imgPath = getImagePathFromHatID(hatID);
@@ -237,7 +237,6 @@ public class Hats {
             SpireAnniversary5Mod.logger.info("adding run start hat");
             if (HatMenu.invalidHatSelected) {
                 SpireAnniversary5Mod.logger.info("an invalid hat was used. returning to default.");
-                currentHat = null;
                 removeHat(true);
                 return;
             }
