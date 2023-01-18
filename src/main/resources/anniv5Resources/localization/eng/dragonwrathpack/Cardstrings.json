@@ -1,0 +1,42 @@
+{
+  "${ModID}:PenanceShock": {
+    "NAME": "Penance Shock",
+    "DESCRIPTION": "Deal !D! damage and Apply !M! thedragonkin:Penance. NL Channel Lightning"
+  },
+  "${ModID}:Condemn": {
+    "NAME": "Condemn",
+    "DESCRIPTION": "Apply !M! ${ModID}:Penance."
+  },
+  "${ModID}:SearingLight": {
+    "NAME": "Searing Light",
+    "DESCRIPTION": "Take !M! damage. NL Gain !B! Block. NL Channel ${ModID}:Light"
+  },
+  "${ModID}:RazorWind": {
+    "NAME": "Razor Wind",
+    "DESCRIPTION": "Gain !${ModID}:m2! ${ModID}:Confession. NL Take !M! damage."
+  },
+  "${ModID}:WeightofContrition": {
+    "NAME": "Weight of Contrition",
+    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL Increase ${ModID}:Penance HP loss by !${ModID}:m2! this combat."
+  },
+  "${ModID}:ChainsofTruth": {
+    "NAME": "Chains of Truth",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Apply !M! ${ModID}:Penance to ALL enemies."
+  },
+  "${ModID}:SacredTrial": {
+    "NAME": "Sacred Trial",
+    "DESCRIPTION": "Take !M! damage. NL Channel !${ModID}:m2! Lightning"
+  },
+  "${ModID}:HolyWrath": {
+    "NAME": "Holy Wrath",
+    "DESCRIPTION": "Gain !M! ${ModID}:Confession. NL ${ModID}:Manifest Lightning equal to your ${ModID}:Confession. NL Exhaust"
+  },
+  "${ModID}:Absolution": {
+    "NAME": "Absolution",
+    "DESCRIPTION": "Apply !M! ${ModID}:Penance. Whenever you take damage this combat, increase ${ModID}:Penance HP loss by !${ModID}:m2! this combat."
+  },
+  "${ModID}:JudgementDay": {
+    "NAME": "Judgement Day",
+    "DESCRIPTION": "${ModID}:Manifest !M! Lightning. NL Whenever you channel Lightning gain !${ModID}:m2! ${ModID}:Confession."
+  }
+}

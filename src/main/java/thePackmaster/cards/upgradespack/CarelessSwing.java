@@ -9,7 +9,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class CarelessSwing extends AbstractPackmasterCard {
+public class CarelessSwing extends AbstractBlacksmithCard {
 
     public final static String ID = makeID("CarelessSwing");
 

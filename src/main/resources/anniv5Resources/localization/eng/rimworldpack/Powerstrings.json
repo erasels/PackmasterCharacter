@@ -1,12 +1,4 @@
 {
-  "${ModID}:MoodPower": {
-    "NAME": "Mood",
-    "DESCRIPTIONS": [
-      "Your current #yMood is #b",
-      ". If you get #b4 or more, gain a random #yInspiration and lose #b4 #yMood.",
-      ". If you get #b-4 or less, gain a random #yMental #yBreak and gain #b4 #yMood."
-    ]
-  },
   "${ModID}:SpikeTrapPower": {
     "NAME": "Spike Trap",
     "DESCRIPTIONS": [
@@ -14,26 +6,42 @@
       " damage to the next enemy that hits you."
     ]
   },
-  "${ModID}:SanguinePower": {
-    "NAME": "Sanguine",
+  "${ModID}:CatharsisPower": {
+    "NAME": "Catharsis",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yIncrease #yMood by #b",
-      "."
+      "Your next card costs 0 and plays twice!",
+      "Play your next #b",
+      " cards cost 0 and play twice!"
     ]
   },
-  "${ModID}:DupePower": {
-    "NAME": "Double Play",
+  "${ModID}:PyromaniacPower": {
+    "NAME": "Pyromaniac",
     "DESCRIPTIONS": [
-      "Play your next card twice!",
-      "Play your next #b",
-      " cards twice."
+      "At the start of your turn, set a random card in your hand #yOn #yFire.",
+      "At the start of your turn, set #b",
+      " random cards in your hand #yOn #yFire"
     ]
   },
   "${ModID}:BurningPassionPower": {
     "NAME": "Burning Passion",
     "DESCRIPTIONS": [
-      "Whenever you gain a buff, multiply it by #b",
+      "The first time you gain a buff during your turn, multiply it by #b",
       "."
+    ]
+  },
+  "${ModID}:HoldCardPower": {
+    "NAME": "Hold Card",
+    "DESCRIPTIONS": [
+      "When this creature dies, add a ",
+      " to your hand."
+    ]
+  },
+  "${ModID}:LuciferiumAddictionPower": {
+    "NAME": "Luciferium Addiction",
+    "DESCRIPTIONS": [
+      "In #b1 turn, add #b2 #yDespairs to your hand and lose #b5 #yStrength.",
+      "In #b",
+      " turns, add #b2 #yDespairs to your hand and lose #b5 #yStrength."
     ]
   },
   "${ModID}:TradeBeaconPower": {

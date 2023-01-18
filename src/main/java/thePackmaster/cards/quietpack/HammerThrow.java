@@ -11,7 +11,7 @@ import thePackmaster.powers.quietpack.HammerThrowPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 
-public class HammerThrow extends AbstractPackmasterCard {
+public class HammerThrow extends AbstractQuietCard {
     public final static String ID = makeID("HammerThrow");
 
     public HammerThrow() {

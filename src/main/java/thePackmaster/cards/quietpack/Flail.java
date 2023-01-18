@@ -13,7 +13,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class Flail extends AbstractPackmasterCard {
+public class Flail extends AbstractQuietCard {
     public final static String ID = makeID("Flail");
 
     public Flail() {
