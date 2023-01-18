@@ -168,7 +168,7 @@ public class Hats {
                 attachment.setWidth(tex.getWidth());
                 attachment.setHeight(tex.getHeight());
                 attachment.setX(1F);
-                attachment.setY(31F * Settings.scale);
+                attachment.setY(38F * Settings.scale);
                 attachment.setScaleX(Settings.scale);
                 attachment.setScaleY(Settings.scale);
                 attachment.updateOffset();
