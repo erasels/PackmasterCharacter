@@ -27,7 +27,7 @@ public class WorkHammer extends AbstractPackmasterCard {
 
     public WorkHammer(){
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 11;
         DamageModifierManager.addModifier(this, new FrontDamage());
         magicNumber = baseMagicNumber = 2;
     }

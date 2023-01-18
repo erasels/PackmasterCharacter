@@ -1,4 +1,4 @@
-package thePackmaster.cards.startuppack;
+package thePackmaster.cards.grandopeningpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
@@ -10,11 +10,11 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SecondStrike extends AbstractStartUpCard {
+public class SecondStrike extends AbstractPackmasterCard {
     public final static String ID = makeID("SecondStrike");
 
     public SecondStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, "grandopening");
         tags.add(CardTags.STRIKE);
         this.baseDamage = this.damage = 6;
         this.isInnate = true;

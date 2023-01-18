@@ -1,18 +1,18 @@
-package thePackmaster.cards.startuppack;
+package thePackmaster.cards.grandopeningpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.startuppack.InstinctsPower;
+import thePackmaster.powers.grandopeningpack.InstinctsPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class InstinctiveThinking extends AbstractStartUpCard {
+public class InstinctiveThinking extends AbstractPackmasterCard {
     public final static String ID = makeID("InstinctiveThinking");
 
     public InstinctiveThinking() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF, "grandopening");
         this.baseMagicNumber = this.magicNumber = 6;
     }
 

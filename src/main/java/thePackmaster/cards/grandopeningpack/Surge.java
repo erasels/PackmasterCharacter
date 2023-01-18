@@ -1,4 +1,4 @@
-package thePackmaster.cards.startuppack;
+package thePackmaster.cards.grandopeningpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -7,15 +7,15 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.startuppack.SurgePower;
+import thePackmaster.powers.grandopeningpack.SurgePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Surge extends AbstractStartUpCard {
+public class Surge extends AbstractPackmasterCard {
     public final static String ID = makeID("Surge");
 
     public Surge() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, "grandopening");
         this.baseMagicNumber = this.magicNumber = 1;
     }
 
