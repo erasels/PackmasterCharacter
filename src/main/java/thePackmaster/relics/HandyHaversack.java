@@ -21,12 +21,9 @@ public class HandyHaversack extends AbstractPackmasterRelic {
     public void atTurnStart() {
         if (this.firstTurn) {
             flash();
-            int count = AbstractDungeon.player.masterDeck.size();
             addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             addToTop(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
-            if (count >= 20) {
-                addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(1));
-            }
+            addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(1));
             this.firstTurn = false;
         }
     }
