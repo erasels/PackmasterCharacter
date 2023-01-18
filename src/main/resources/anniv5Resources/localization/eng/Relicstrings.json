@@ -41,7 +41,7 @@
     "NAME": "Handy Haversack",
     "FLAVOR": "Helps heroic hoarders handle hindrances.",
     "DESCRIPTIONS": [
-      "At the start of each combat: Gain [E] [REMOVE_SPACE]. Draw 1 card if you have 20 or more cards in your deck."
+      "At the start of each combat, gain [E] and draw #b1 card."
     ]
   },
   "${ModID}:PMBoosterBox": {
