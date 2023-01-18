@@ -1,4 +1,4 @@
-package thePackmaster.powers.startuppack;
+package thePackmaster.powers.grandopeningpack;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;

@@ -15,6 +15,7 @@ public class SimplifiedStrike extends AbstractBasicsCard{
 
     public SimplifiedStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        this.tags.add(CardTags.STRIKE);
         this.baseMagicNumber = this.magicNumber = 2;
         this.baseDamage = this.damage = 6;
     }

@@ -9,13 +9,17 @@
   "${ModID}:BasicSupplyPower": {
     "NAME": "Basic Supply",
     "DESCRIPTIONS": [
-      "At the start of your turn, you may add a #yStrike or #yDefend to your hand."
+      "At the start of your turn, you may add a #yStrike or #yDefend to your hand #b",
+      " time.",
+      " times."
     ]
   },
   "${ModID}:BasicSupplyPlusPower": {
     "NAME": "Basic Supply+",
     "DESCRIPTIONS": [
-      "At the start of your turn, you may add a #yStrike and #yDefend to your hand."
+      "At the start of your turn, you may add a #yStrike and #yDefend to your hand #b",
+      " time.",
+      " times."
     ]
   }
 }

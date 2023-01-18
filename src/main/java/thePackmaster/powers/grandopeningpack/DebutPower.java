@@ -1,4 +1,4 @@
-package thePackmaster.powers.startuppack;
+package thePackmaster.powers.grandopeningpack;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -24,7 +24,7 @@ public class DebutPower extends AbstractPackmasterPower {
         this.triggered = false;
     }
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if(card.isInnate && card.costForTurn > 0 && !triggered) {
+        if(card.isInnate && card.costForTurn > 0 && !this.triggered) {
             addToBot(new GainEnergyAction(min(this.amount, card.costForTurn)));
             this.triggered = true;
         }

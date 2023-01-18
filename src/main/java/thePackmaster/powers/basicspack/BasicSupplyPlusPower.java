@@ -33,4 +33,11 @@ public class BasicSupplyPlusPower extends AbstractPackmasterPower {
                 addToBot(new KitSelectAction(true, strike, defend));
         }
     }
+
+    @Override
+    public void updateDescription() {
+        if(this.amount == 1)
+            description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        else description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+    }
 }

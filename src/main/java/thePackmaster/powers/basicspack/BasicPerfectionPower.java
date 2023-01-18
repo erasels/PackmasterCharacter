@@ -29,4 +29,9 @@ public class BasicPerfectionPower extends AbstractPackmasterPower {
             addToBot(new GainBlockAction(AbstractDungeon.player, amount));
         }
     }
+
+    @Override
+    public void updateDescription() {
+            description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+    }
 }

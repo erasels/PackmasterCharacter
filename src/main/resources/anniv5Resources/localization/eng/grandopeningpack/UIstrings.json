@@ -1,12 +1,12 @@
 {
-  "${ModID}:StartUpPack": {
+  "${ModID}:GrandOpeningPack": {
     "TEXT": [
-      "Opening Act",
+      "Grand Opening",
       "The beginning is the half of every action. Adds Innate Synergies and cards.",
       "Jack Renoson"
     ]
   },
-  "${ModID}:StartUpPackHat": {
+  "${ModID}:GrandOpeningPackHat": {
     "TEXT": [
       "All the world is a stage, especially with this mask",
       "Theatre Mask"

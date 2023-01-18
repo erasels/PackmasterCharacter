@@ -44,11 +44,12 @@
   },
   "${ModID}:BackToBasics": {
     "NAME": "Back to Basics",
-    "DESCRIPTION": "Discard your hand. Add a *Bash, *Strike, *Neutralize, *Survivor, *Zap, *Dualcast, *Eruption, *Vigilance, *Rummage and *Cardistry to your hand. Gain [E] [E] Exhaust.",
-    "UPGRADE_DESCRIPTION": "Discard your hand. Add a *Bash, *Strike, *Neutralize, *Survivor, *Zap, *Dualcast, *Eruption, *Vigilance, *Rummage and *Cardistry to your hand. Gain [E] [E] [E] Exhaust."
+    "DESCRIPTION": "Discard your hand. Add a *Bash, *Strike, *Neutralize, *Survivor, *Zap, *Dualcast, *Eruption, *Vigilance, *Rummage and *Cardistry to your hand. Gain [E] [E] . Exhaust.",
+    "UPGRADE_DESCRIPTION": "Discard your hand. Add a *Bash, *Strike, *Neutralize, *Survivor, *Zap, *Dualcast, *Eruption, *Vigilance, *Rummage and *Cardistry to your hand. Gain [E] [E] [E] . Exhaust."
   },
   "${ModID}:Simplify": {
-    "NAME": "Simplicity",
-    "DESCRIPTION": "Gain [E] [E]. Discard all non-Basic cards in your hand. Exhaust."
+    "NAME": "Simplify",
+    "DESCRIPTION": "Gain [E] [E]. Discard all non-Basic cards in your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] . Discard all non-Basic cards in your hand."
   }
 }
