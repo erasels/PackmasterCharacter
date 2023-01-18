@@ -32,7 +32,7 @@ public class StylePoints extends AbstractOdditiesCard {
         blck();
         atb(new RemoveSpecificPowerAction(p, p, WeakPower.POWER_ID));
         AbstractCardPack pack = SpireAnniversary5Mod.packsByID.get(CoreSetPack.ID);
-        if (Hats.currentHat != null) {
+        if (Hats.currentHat != null && Hats.currentHat != "Base" && Hats.currentHat != "Random") {
             pack = SpireAnniversary5Mod.packsByID.get(Hats.currentHat);
         }
         ArrayList<AbstractCard> possCards = new ArrayList<>();
