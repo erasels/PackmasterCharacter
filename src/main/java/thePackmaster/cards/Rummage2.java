@@ -27,7 +27,6 @@ public class Rummage2 extends AbstractPackmasterCard {
 
     public void upp() {
         upgradeDamage(4);
-        upgradeMagicNumber(1);
     }
 
     public static class RummageDrawAction extends AbstractGameAction{
