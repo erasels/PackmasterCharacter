@@ -5,5 +5,11 @@
       "A collection of Bard cards to give you some ${ModID}:Inspiration.",
       "kiooeht"
     ]
+  },
+  "${ModID}:BardInspirePackHat": {
+    "TEXT": [
+      "Doot Doot.",
+      "Bard's Hat"
+    ]
   }
 }
