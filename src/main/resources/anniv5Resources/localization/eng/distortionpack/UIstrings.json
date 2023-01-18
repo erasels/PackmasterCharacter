@@ -5,5 +5,11 @@
       "Everything is as it should be.",
       "Alchyr"
     ]
+  },
+  "${ModID}:DistortionPackHat": {
+    "TEXT": [
+      "Your most marketable hat.",
+      "Mascot Hat"
+    ]
   }
 }
