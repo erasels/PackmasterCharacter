@@ -23,7 +23,6 @@ public class PackRat extends AbstractDimensionalCard {
         super(ID, 2, CardRarity.UNCOMMON, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.SELF);
         baseBlock = 14;
         setFrame("packratframe.png");
-        FleetingField.fleeting.set(this, true);
         tags.add(CardTags.HEALING);
     }
 
@@ -43,15 +42,25 @@ public class PackRat extends AbstractDimensionalCard {
                 }
                 if (!foundPot){
                     att(new ObtainPotionAction(PotionHelper.getRandomPotion()));
+                    // Purge this from masterdeck if unupgraded, downgrade it from masterdeck otherwise.
+                    AbstractCard c = StSLib.getMasterDeckEquivalent(q);
                     if (upgraded) {
                         baseBlock = 14;
                         upgradedBlock = false;
-                        // Purge this from masterdeck if unupgraded, downgrade it from masterdeck otherwise. -> Fleeting + specialty code.
-                        AbstractCard tar = StSLib.getMasterDeckEquivalent(q); // Slightly iffy code here, downgrading is weird.
-                        int idx = AbstractDungeon.player.masterDeck.group.indexOf(tar);
-                        AbstractDungeon.player.masterDeck.group.set(idx, CardLibrary.getCard(cardID));
+                        // Slightly iffy code here, downgrading is weird.
+                        if (c != null) {
+                            int idx = AbstractDungeon.player.masterDeck.group.indexOf(c);
+                            AbstractDungeon.player.masterDeck.group.set(idx, CardLibrary.getCard(cardID));
+                        }
                         downgrade();
-
+                    }
+                    else {
+                        // We can't use Fleeting directly because that gets locked in when a card is played
+                        // Instead, we just do the same things Fleeting does ourselves
+                        purgeOnUse = true;
+                        if (c != null) {
+                            AbstractDungeon.player.masterDeck.removeCard(c);
+                        }
                     }
                 }
             }
@@ -59,7 +68,6 @@ public class PackRat extends AbstractDimensionalCard {
     }
 
     public void upp() {
-        FleetingField.fleeting.set(this, false);
         upgradeBlock(3);
     }
 }
