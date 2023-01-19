@@ -30,6 +30,7 @@ public class VoraciousSigilAction extends AbstractGameAction {
                 CardModifierManager.addModifier(sigil, new SigilModifier(card));
                 Wiz.atb(new RepeatCardAction(card));
             }
+            this.isDone = true;
         }
     }
 
