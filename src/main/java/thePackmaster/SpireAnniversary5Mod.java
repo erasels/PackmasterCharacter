@@ -677,8 +677,8 @@ public class SpireAnniversary5Mod implements
 
     }
 
-    public static AbstractCardPack getRandomPackFromAll() {
-        return allPacks.get(AbstractDungeon.cardRandomRng.random(0, allPacks.size() - 1));
+    public static AbstractCardPack getRandomPackFromAll(Random rng) {
+        return allPacks.get(rng.random(0, allPacks.size() - 1));
     }
 
     public static AbstractCardPack getRandomPackFromCurrentPool() {

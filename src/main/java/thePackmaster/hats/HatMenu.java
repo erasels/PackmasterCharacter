@@ -168,6 +168,7 @@ public class HatMenu {
         randomHatMode = false;
         if (index == 0) {
             invalidHatSelected = false;
+            currentHat = null;
             SpireAnniversary5Mod.logger.info("Removing hat.");
             Hats.removeHat(false);
             flavorText = "";
