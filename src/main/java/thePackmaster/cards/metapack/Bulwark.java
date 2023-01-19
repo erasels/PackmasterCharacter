@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Bulwark extends AbstractPackmasterCard {
+public class Bulwark extends AbstractMetaCard {
     public final static String ID = makeID("Bulwark");
 
     public Bulwark() {

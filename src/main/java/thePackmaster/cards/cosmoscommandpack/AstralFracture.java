@@ -13,7 +13,7 @@ import thePackmaster.powers.distortionpack.DistortionPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class AstralFracture extends AbstractPackmasterCard implements AmplifyCard {
+public class AstralFracture extends AbstractCosmosCard implements AmplifyCard {
     public final static String ID = makeID("AstralFracture");
 
     public AstralFracture() {

@@ -22,7 +22,7 @@ public class MayhemFormPower extends AbstractPackmasterPower implements OnRefres
         updateDescription();
     }
 
-    private boolean activatedThisTurn = false;
+    public boolean activatedThisTurn = false;
 
     @Override
     public void atStartOfTurnPostDraw() {

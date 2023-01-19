@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.SearingBlowEffect;
 import org.apache.commons.lang3.math.NumberUtils;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
@@ -15,7 +16,7 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class DragonMeteor extends AbstractPackmasterCard {
+public class DragonMeteor extends AbstractMarisaCard {
     public final static String ID = makeID(DragonMeteor.class.getSimpleName());
     private static final int DMG = 6;
     private static final int MAGIC = 2, UPG_MAGIC = 1;
@@ -25,8 +26,6 @@ public class DragonMeteor extends AbstractPackmasterCard {
         damage = baseDamage = DMG;
         baseMagicNumber = magicNumber = MAGIC;
 
-        setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

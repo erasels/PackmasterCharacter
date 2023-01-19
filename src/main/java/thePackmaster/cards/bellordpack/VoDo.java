@@ -1,6 +1,7 @@
 package thePackmaster.cards.bellordpack;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -15,7 +16,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
-public class VoDo extends AbstractPackmasterCard implements OnObtainCard {
+public class VoDo extends AbstractBellordCard implements OnObtainCard {
     public final static String ID = makeID("VoDo");
     // intellij stuff power, self, uncommon, , , , , 2, 1
 
@@ -26,8 +27,9 @@ public class VoDo extends AbstractPackmasterCard implements OnObtainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new SFXAction("BELL"));
         applyToSelf(new StrengthPower(p, magicNumber));
-        atb(new AllEnemyApplyPowerAction(p, -magicNumber, (q) -> new StrengthPower(q, -magicNumber)));
+        atb(new AllEnemyApplyPowerAction(p, -2, (q) -> new StrengthPower(q, -2)));
     }
 
     @Override

@@ -1,0 +1,58 @@
+{
+  "${ModID}:ChainShotgun": {
+    "NAME": "Chain Shotgun",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  },
+  "${ModID}:Despair": {
+    "NAME": "Despair",
+    "DESCRIPTION": "Counts as a Curse. NL Exhaust."
+  },
+  "${ModID}:EatWithoutTable": {
+    "NAME": "Eat Without Table",
+    "DESCRIPTION": "Drink a random common Potion. Add a *Despair to your hand. NL Exhaust."
+  },
+  "${ModID}:Luciferium": {
+    "NAME": "Luciferium",
+    "DESCRIPTION": "{@@}Gain [E] [E] . NL Gain 5 Strength. NL Gain !M! ${ModID}:Addiction. NL Exhaust."
+  },
+  "${ModID}:Pyromaniac": {
+    "NAME": "Pyromaniac",
+    "DESCRIPTION": "At the start of your turn, set a random card in your hand ${ModID}:On_Fire.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, set a random card in your hand ${ModID}:On_Fire."
+  },
+  "${ModID}:KillThirst": {
+    "NAME": "Kill Thirst",
+    "DESCRIPTION": "Deal !D! damage. NL If this doesn't kill the enemy, add a *Despair to your hand."
+  },
+  "${ModID}:SpikeTrap": {
+    "NAME": "Spike Trap",
+    "DESCRIPTION": "Gain !B! Block. NL Deal that much damage to the next enemy that attacks you."
+  },
+  "${ModID}:Catharsis": {
+    "NAME": "Catharsis",
+    "DESCRIPTION": "{@@}Add a *Despair to your hand. The next {!M!|1=card|@=!M! cards} you play costs 0 and plays twice. NL Exhaust."
+  },
+  "${ModID}:TradeBeacon": {
+    "NAME": "Trade Beacon",
+    "DESCRIPTION": "The first time you draw or discard during your turn, draw !M! cards."
+  },
+  "${ModID}:BurningPassion": {
+    "NAME": "Burning Passion",
+    "DESCRIPTION": "Double the first buff you gain during your turn."
+  },
+  "${ModID}:TaintedWeapon": {
+    "NAME": "Tainted Weapon",
+    "DESCRIPTION": "Deal !D! damage. NL Startup: Put this card in a random monster.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage."
+    ]
+  },
+  "${ModID}:RimworldKeywordManager": {
+    "NAME": "KeywordManager",
+    "DESCRIPTION": "Stuff for translations and easy access to keyword ids",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:inspiration",
+      "${ModID}:mental_break"
+    ]
+  }
+}

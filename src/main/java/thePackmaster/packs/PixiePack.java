@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.pixiepack.*;
 
@@ -62,8 +63,8 @@ public class PixiePack extends AbstractCardPack {
                     && (!C.hasTag(AbstractCard.CardTags.HEALING))
                     && (C.type != AbstractCard.CardType.STATUS && C.type != AbstractCard.CardType.CURSE)){
                 int amt = 4;
-                if (C.rarity== AbstractCard.CardRarity.UNCOMMON) amt = 2 ;
-                if (C.rarity== AbstractCard.CardRarity.RARE) amt = 1 ;
+                if (C.rarity == AbstractCard.CardRarity.UNCOMMON) amt = 2 ;
+                if (C.rarity == AbstractCard.CardRarity.RARE) amt = 1 ;
                 for(int i = 0; i < amt; i++) {
                     possibleToGenerate.add(C);
                 }
@@ -76,7 +77,10 @@ public class PixiePack extends AbstractCardPack {
         ArrayList<AbstractCard> AllCards = new ArrayList<>(possibleToGenerate);
         AllCards.removeIf(C -> (cost != null && C.cost != cost) || (type != null && C.type != type) || (color != null && C.color != color));
         AbstractCard output = null;
-        output = AllCards.get(AbstractDungeon.cardRandomRng.random(0, AllCards.size() - 1));
+        if (AllCards.size() > 0) {
+            output = AllCards.get(AbstractDungeon.cardRandomRng.random(0, AllCards.size() - 1));
+            UnlockTracker.markCardAsSeen(output.cardID);
+        }
         return output.makeStatEquivalentCopy();
     }
 }

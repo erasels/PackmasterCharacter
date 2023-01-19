@@ -2,7 +2,6 @@ package thePackmaster.actions.anomalypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,40 +12,31 @@ import thePackmaster.cards.anomalypack.GoldenGun;
 public class GoldenRoundAction extends AbstractGameAction {
     private AbstractPlayer p;
     private AbstractCard c;
-    private CardType typeToCheck;
 
     public GoldenRoundAction(AbstractCard c) {
         this.p = AbstractDungeon.player;
         this.c = c;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
-        this.typeToCheck = CardType.CURSE;
     }
 
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_MED) {
-            boolean done =false;
-            GoldenGun gg;
+        boolean done = false;
 
-            for (AbstractCard card : p.hand.group) {
-                if (card instanceof GoldenGun) {
-
-                    gg =(GoldenGun) card;
-                    if (!gg.loaded()) {
-                        done=true;
-                        gg.load();
-                        break;
-                    }
+        for (AbstractCard card : p.hand.group) {
+            if (card instanceof GoldenGun) {
+                if (!((GoldenGun) card).loaded()) {
+                    done = true;
+                    ((GoldenGun) card).load();
+                    break;
                 }
             }
-
-            if (!done) {
-                AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(c, c.current_x, c.current_y, false));
-            }
-
-            this.isDone = true;
         }
 
-        this.tickDuration();
+        if (!done) {
+            AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(c, c.current_x, c.current_y, false));
+        }
+
+        isDone = true;
     }
 }

@@ -11,5 +11,11 @@
       "transmute.",
       "Choose your new card."
     ]
+  },
+  "${ModID}:TransmutationPackHat": {
+    "TEXT": [
+      "The hair loops will get some used to.",
+      "Transmuted Hairstyle"
+    ]
   }
 }

@@ -1,0 +1,41 @@
+{
+  "${ModID}:Emptiness": {
+    "NAME": "Emptiness",
+    "DESCRIPTION": "Discard 1 card. NL Channel !M! ${ModID}:Oblivion."
+  },
+  "${ModID}:Augment": {
+    "NAME": "Augment",
+    "DESCRIPTION": "Gain !B! Block. NL If you have no empty Orb slots, gain 1 Orb slot.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !B! Block. NL If you have no empty Orb slots, gain 1 Orb slot."
+  },
+  "${ModID}:Allocate": {
+    "NAME": "Allocate",
+    "DESCRIPTION": "Gain 1 Orb slot for each enemy in combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Orb slot for each enemy in combat."
+  },
+  "${ModID}:Stockpile": {
+    "NAME": "Stockpile",
+    "DESCRIPTION": "Discard a card. NL If it was a Power card, Channel !M! Plasma. Otherwise, Channel !M! Lightning."
+  },
+  "${ModID}:IcicleCrash": {
+    "NAME": "Icicle Crash",
+    "DESCRIPTION": "Deal !D! damage. NL Channel !M! Frost for each empty Orb slot."
+  },
+  "${ModID}:Fear": {
+    "NAME": "Fear",
+    "DESCRIPTION": "Gain !B! Block. NL Channel !M! Dark."
+  },
+  "${ModID}:Charge": {
+    "NAME": "Charge",
+    "DESCRIPTION": "Deal !D! damage. NL Trigger the passive abilities of your Channeled Orbs."
+  },
+  "${ModID}:MaterialBoost": {
+    "NAME": "Material Boost",
+    "DESCRIPTION": "Discard any number of cards. NL Evoke your next Orb once for each card discarded.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Discard any number of cards. NL Evoke your next Orb once for each card discarded."
+  },
+  "${ModID}:Thunderstruck": {
+    "NAME": "Thunderstruck",
+    "DESCRIPTION": "Whenever you play a card containing \"Strike\", Channel !M! Lightning."
+  }
+}

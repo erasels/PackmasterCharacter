@@ -3,7 +3,14 @@
     "TEXT": [
       "Ring of Pain",
       "Denizens come, from the Ring of Pain. Evolve them and, your enemies will be slain.",
-      "Darkglade"
+      "Darkglade",
+      "#yRing #yof #yPain originally created by #ySimon #yBoxer and #yTwice #yDifferent"
+    ]
+  },
+  "${ModID}:RingOfPainPackHat": {
+    "TEXT": [
+      "How comfy it is to rest/Within the confines of this makeshift nest.",
+      "Mini Owl"
     ]
   }
 }

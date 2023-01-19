@@ -8,7 +8,7 @@ import thePackmaster.powers.entropypack.DiffusionPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Diffusion extends AbstractPackmasterCard {
+public class Diffusion extends AbstractEntropyCard {
     public final static String ID = makeID("Diffusion");
     // intellij stuff power, none, uncommon, , , , , 2, 1
 

@@ -31,7 +31,7 @@ public class InnerFuryPower extends AbstractPackmasterPower {
 
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        if (!oldStance.ID.equals(newStance.ID) && newStance.ID.equals(AggressionStance.STANCE_ID)) {
+        if (!oldStance.ID.equals(newStance.ID) && (newStance.ID.equals(AggressionStance.STANCE_ID) || oldStance.ID.equals(AggressionStance.STANCE_ID))) {
             this.flash();
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount)));
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new LoseStrengthPower(this.owner, this.amount)));

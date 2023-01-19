@@ -14,11 +14,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public class Decapitate extends AbstractPackmasterCard {
+public class Decapitate extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Decapitate");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int DAMAGE = 10;
     private static final int UPGRADE_DAMAGE = 3;

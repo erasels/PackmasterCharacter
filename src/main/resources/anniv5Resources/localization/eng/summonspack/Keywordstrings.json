@@ -15,7 +15,7 @@
       "rainbow\u00a0louse",
       "Rainbow\u00a0louse"
     ],
-    "DESCRIPTION": "Orb: Increases damage when you play a card. When evoked, deals damage to the enemy with the most HP."
+    "DESCRIPTION": "Orb: Draw a card at the start of your turn. When #yEvoked, draw 2 cards."
   },
   {
     "PROPER_NAME": "Panda",
@@ -25,10 +25,39 @@
     "DESCRIPTION": "Orb: Deals damage to a random enemy at the end of your turn."
   },
   {
-    "PROPER_NAME": "Bulldog",
+    "PROPER_NAME": "Wolf",
     "NAMES": [
-      "bulldog"
+      "wolf"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the enemy with the least HP at the end of your turn."
+    "DESCRIPTION": "Orb: Deals damage to the enemy with the least HP. Damage is boosted by other wolves. When #yEvoked, gain an orb slot."
+  },
+  {
+    "PROPER_NAME": "Porcupine",
+    "NAMES": [
+      "porcupine"
+    ],
+    "DESCRIPTION": "Orb: Generates #yQuills. When #yEvoked, gain #yThorns."
+  },
+  {
+    "PROPER_NAME": "Leprechaun",
+    "NAMES": [
+      "leprechaun"
+    ],
+    "DESCRIPTION": "Orb: Rolls #yDice."
+  },
+  {
+    "PROPER_NAME": "Jinx",
+    "NAMES": [
+      "jinx"
+    ],
+    "DESCRIPTION": "Jinxed enemies lose HP whenever they receive a debuff."
+  },
+  {
+    "PROPER_NAME": "Fire\u00a0Spirit",
+    "NAMES": [
+      "fire\u00a0spirit",
+      "Fire\u00a0spirit"
+    ],
+    "DESCRIPTION": "Orb: Apply #yIgnite to ALL enemies. Gain #yFocus when evoked."
   }
 ]

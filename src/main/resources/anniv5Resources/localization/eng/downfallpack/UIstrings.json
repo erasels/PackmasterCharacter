@@ -5,5 +5,11 @@
       "A potent pack featuring a card from each of the Spire’s Bosses.",
       "Downfall Team"
     ]
+  },
+  "${ModID}:DownfallPackHat": {
+    "TEXT": [
+      "You're the boss now.",
+      "Tiny Bowler Hat"
+    ]
   }
 }

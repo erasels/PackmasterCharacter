@@ -1,29 +1,24 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "Backpack Smack",
-    "DESCRIPTION": "Deal !D! damage. NL If your draw pile contains 10 or more cards, gain [E] and draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL If your draw pile has 10 or more cards, draw !M! cards. NL Otherwise, gain [E] ."
   },
   "${ModID}:BoosterTutor": {
     "NAME": "Booster Tutor",
-    "DESCRIPTION": "Put !M! cards from different Packs in your draw pile into your hand."
+    "DESCRIPTION": "Put !M! random cards from different Packs from your draw pile into your hand."
   },
   "${ModID}:DestinyDraw": {
     "NAME": "Destiny Draw",
-    "DESCRIPTION": "Choose 1 of 3 Packs. NL Gain a random card from the chosen Pack. It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 random cards from different Packs to add to your hand. NL It costs 0 this turn. NL Exhaust."
   },
   "${ModID}:Flick": {
     "NAME": "Flick",
-    "DESCRIPTION": "Discard a card. NL Deal !D! damage a number of times equal to that card's energy cost."
+    "DESCRIPTION": "Discard a card. NL Deal !D! damage a number of times equal to its cost."
   },
   "${ModID}:MayhemForm": {
-    "NAME": "Mayhem Form",
+    "NAME": "Unrelenting Form",
     "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] .",
     "UPGRADE_DESCRIPTION": "Retain. NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] ."
-  },
-  "${ModID}:PackRip": {
-    "NAME": "Pack Rip",
-    "DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand and Upgrade them. NL Exhaust."
   },
   "${ModID}:RippedPecs": {
     "NAME": "Ripped Pecs",
@@ -46,6 +41,6 @@
   },
   "${ModID}:Synergize": {
     "NAME": "Synergize",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If the last card played was from a different Pack, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have cards from at least two other Packs in your hand, gain !B! Block."
   }
 }

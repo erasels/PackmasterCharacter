@@ -10,7 +10,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Unbind extends AbstractPackmasterCard {
+public class Unbind extends AbstractEntropyCard {
     public final static String ID = makeID("Unbind");
     // intellij stuff attack, enemy, uncommon, 4, 2, , , , 
 

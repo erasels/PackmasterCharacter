@@ -6,12 +6,11 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cardmodifiers.infestpack.InfestModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class SwarmSword extends AbstractPackmasterCard {
+public class SwarmSword extends AbstractInfestCard {
     public final static String ID = makeID("SwarmSword");
     // intellij stuff attack, enemy, common, 9, 3, , , , 
 
@@ -19,6 +18,7 @@ public class SwarmSword extends AbstractPackmasterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 10;
         CardModifierManager.addModifier(this, new InfestModifier());
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

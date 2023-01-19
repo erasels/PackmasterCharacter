@@ -11,7 +11,7 @@ import thePackmaster.cards.marisapack.AmplifyCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.vfx;
 
-public class RefractEnergy extends AbstractPackmasterCard implements AmplifyCard {
+public class RefractEnergy extends AbstractCosmosCard implements AmplifyCard {
     public final static String ID = makeID("RefractEnergy");
 
     public RefractEnergy() {

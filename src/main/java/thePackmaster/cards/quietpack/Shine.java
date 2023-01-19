@@ -13,7 +13,7 @@ import static thePackmaster.util.Wiz.adp;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class Shine extends AbstractPackmasterCard {
+public class Shine extends AbstractQuietCard {
     public final static String ID = makeID("Shine");
 
     public Shine() {

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.cards.boardgamepack.AbstractBoardCard;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.powers.rimworldpack.BurningPassionPower;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,11 +27,18 @@ public class DicePower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public List<Integer> dice = new ArrayList<>();
+    public boolean sound;
 
-    public DicePower(AbstractCreature owner, int sides) {
+    public DicePower(AbstractCreature owner, int sides, boolean sound) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, sides);
+        this.sound = sound;
         dice.add(sides);
         amount =  roll(sides);
+        updateDescription();
+    }
+
+    public DicePower(AbstractCreature owner, int sides) {
+        this(owner, sides, true);
     }
 
     @Override
@@ -73,7 +81,11 @@ public class DicePower extends AbstractPackmasterPower {
     @Override
     public void stackPower(int amount) {
         dice.add(amount);
-        this.amount += roll(amount);
+        int multiplier = 1;
+        if(owner.hasPower(BurningPassionPower.POWER_ID) && owner.getPower(BurningPassionPower.POWER_ID).amount > 0)
+            multiplier = owner.getPower(BurningPassionPower.POWER_ID).amount;
+        this.amount += roll(amount) * multiplier;
+        updateDescription();
     }
 
     private int roll(int sides) {

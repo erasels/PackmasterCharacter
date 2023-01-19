@@ -10,8 +10,10 @@ import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.NoDrawPower;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.util.Wiz;
 
 import java.util.Iterator;
 
@@ -31,7 +33,7 @@ public class ThoughtweavingAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
-            if (this.p.drawPile.isEmpty()) {
+            if (this.p.drawPile.isEmpty() || p.hasPower(NoDrawPower.POWER_ID)) {
                 this.isDone = true;
                 return;
             }
@@ -52,7 +54,7 @@ public class ThoughtweavingAction extends AbstractGameAction {
                 }
             }
 
-            if (tmp.size() == 0) {
+            if (tmp.isEmpty()) {
                 this.isDone = true;
                 return;
             }
@@ -67,7 +69,7 @@ public class ThoughtweavingAction extends AbstractGameAction {
                         tmp.removeCard(card);
                         p.drawPile.group.remove(card);
                         p.drawPile.addToTop(card);
-                        this.addToBot(new DrawCardAction(1));
+                        Wiz.att(new DrawCardAction(1));
                     }
                 }
             }

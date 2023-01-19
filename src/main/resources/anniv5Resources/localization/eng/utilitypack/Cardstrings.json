@@ -19,8 +19,7 @@
   },
   "${ModID}:Enrage": {
     "NAME": "Enrage",
-    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! card. NL Enter ${ModID}:Aggression.",
-    "UPGRADE_DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! cards. NL Enter ${ModID}:Aggression."
+    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! cards. NL Enter ${ModID}:Aggression."
   },
   "${ModID}:Whispers": {
     "NAME": "Whispers",
@@ -43,7 +42,8 @@
   "${ModID}:Conjuration": {
     "NAME": "Conjuration",
     "DESCRIPTION": "Choose a card from your draw pile. NL Play and Exhaust it.",
-    "UPGRADE_DESCRIPTION": "Choose a card from your draw pile. NL Play it."
+    "UPGRADE_DESCRIPTION": "Choose a card from your draw pile. NL Play it.",
+    "EXTENDED_DESCRIPTION": ["There are no cards in my draw pile."]
   },
   "${ModID}:RareStrike": {
     "NAME": "Rare Strike",

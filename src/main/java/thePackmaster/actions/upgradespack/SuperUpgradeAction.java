@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.vfx.upgradespack.LightUpgradeShineEffect;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class SuperUpgradeAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        BaseMod.logger.info("====== Updating SuperUpgrade action, with list " + selectedCards);
+        SpireAnniversary5Mod.logger.info("====== Updating SuperUpgrade action, with list " + selectedCards);
         for (AbstractCard c : selectedCards) {
             for (int i = 0 ; i < amount ; i++) {
                 forceUpgrade(c);

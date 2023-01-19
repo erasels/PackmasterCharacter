@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.marisapack.BetterFireballEffect;
@@ -15,16 +16,17 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ShootingEcho extends AbstractPackmasterCard {
+public class ShootingEcho extends AbstractMarisaCard {
     public final static String ID = makeID(ShootingEcho.class.getSimpleName());
     private static final String text = CardCrawlGame.languagePack.getUIString("ExhaustAction").TEXT[0];
-    private static final int DMG = 10, UPG_DMG = 2;
+    private static final int DMG = 9, UPG_DMG = 2;
 
     public ShootingEcho() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         damage = baseDamage = DMG;
         exhaust = true;
 
+        if (!SpireAnniversary5Mod.oneFrameMode)
         setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT) + ".png",
                 "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT) + ".png");
     }

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import thePackmaster.cards.boardgamepack.AbstractBoardCard;
+import thePackmaster.cards.rimworldpack.Despair;
 
 import java.util.ArrayList;
 

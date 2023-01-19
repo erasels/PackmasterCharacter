@@ -8,7 +8,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.topDeck;
 
-public class MiracleWorker extends AbstractPackmasterCard {
+public class MiracleWorker extends AbstractHighEnergyCard {
     public final static String ID = makeID("MiracleWorker");
     // intellij stuff skill, self, common, , , 9, 3, , 
 

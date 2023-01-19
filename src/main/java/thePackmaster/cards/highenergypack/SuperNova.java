@@ -11,13 +11,13 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class SuperNova extends AbstractPackmasterCard {
+public class SuperNova extends AbstractHighEnergyCard {
     public final static String ID = makeID("SuperNova");
     // intellij stuff skill, all_enemy, rare, , , , , 67, 17
 
     public SuperNova() {
         super(ID, 6, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 71;
+        baseMagicNumber = magicNumber = 67;
         baseSecondMagic = secondMagic = 3;
     }
 
@@ -28,7 +28,7 @@ public class SuperNova extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(17);
+        upgradeMagicNumber(11);
         upgradeSecondMagic(2);
     }
 }

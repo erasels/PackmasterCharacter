@@ -12,10 +12,12 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.util.TexLoader;
 
+import java.util.Set;
+
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 
 public class LongElephantDropEffect extends AbstractGameEffect {
-    private static final float DURATION = 2.3F;
+    public static final float DURATION = 2.3F;
     private static final float DROP_DURATION = 0.4F;
     private static String IMG_PATH;
     private static Texture IMG;
@@ -39,7 +41,7 @@ public class LongElephantDropEffect extends AbstractGameEffect {
 
     public void update() {
         if (duration == startingDuration)
-            CardCrawlGame.sound.playA(SpireAnniversary5Mod.ELEPHANT_KEY, 0.1f);
+            CardCrawlGame.sound.playV(SpireAnniversary5Mod.ELEPHANT_KEY, 0.8f);
 
         if (duration <= DROP_DURATION)
             y = FLOOR_Y + (START_Y - FLOOR_Y) * duration / DROP_DURATION;
@@ -68,8 +70,8 @@ public class LongElephantDropEffect extends AbstractGameEffect {
         IMG = ImageMaster.loadImage(IMG_PATH);
         ELEPHANT_WIDTH = IMG.getWidth();
         ELEPHANT_HEIGHT = IMG.getHeight();
-        START_Y = 1080f + ELEPHANT_HEIGHT/2f;
-        FLOOR_Y = 400f;
-        HIT_X = 1250f;
+        START_Y = (1080f + ELEPHANT_HEIGHT/2f)* Settings.yScale;
+        FLOOR_Y = 400f * Settings.scale;
+        HIT_X = 1250f * Settings.scale;
     }
 }

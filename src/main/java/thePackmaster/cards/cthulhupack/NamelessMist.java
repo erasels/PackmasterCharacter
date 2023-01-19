@@ -1,11 +1,7 @@
 package thePackmaster.cards.cthulhupack;
 
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.Lightning;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.cthulhupack.NamelessMistPower;
 import thePackmaster.util.Wiz;
 

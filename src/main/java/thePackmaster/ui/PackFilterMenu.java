@@ -1,6 +1,5 @@
 package thePackmaster.ui;
 
-import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -11,12 +10,15 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class PackFilterMenu {
 
@@ -27,7 +29,6 @@ public class PackFilterMenu {
     private AbstractCard previewCard;
     private ModLabeledToggleButton checkbox;
     private final ArrayList<AbstractCardPack> packs = new ArrayList<>();
-
 
 
     private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("PackFilterMenu")).TEXT;
@@ -46,9 +47,11 @@ public class PackFilterMenu {
     private static final float PREVIEW_Y = 700f * Settings.yScale;
 
     public PackFilterMenu() {
-        BaseMod.logger.info("Settings.HEIGHT = " + Settings.HEIGHT);
+        SpireAnniversary5Mod.logger.info("Settings.HEIGHT = " + Settings.HEIGHT);
         ArrayList<String> optionNames = new ArrayList<>();
-        for (AbstractCardPack pack : SpireAnniversary5Mod.unfilteredAllPacks) {
+        List<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
+        sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
+        for (AbstractCardPack pack : sortedPacks) {
             packs.add(pack);
             optionNames.add(pack.name);
         }
@@ -56,7 +59,8 @@ public class PackFilterMenu {
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setViewedPack(index)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
 
-        checkbox = new ModLabeledToggleButton(TEXT[0],CHECKBOX_X,CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont,true, null,(label) ->{},
+        checkbox = new ModLabeledToggleButton(TEXT[0], CHECKBOX_X, CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont, true, null, (label) -> {
+        },
                 (button) -> clickCheckmark(button.enabled));
 
         setViewedPack(0);
@@ -106,11 +110,19 @@ public class PackFilterMenu {
         previewCard.update();
         previewCard.current_x = PREVIEW_X;
         previewCard.current_y = PREVIEW_Y;
+        previewCard.hb.move(previewCard.current_x, previewCard.current_y);
+        previewCard.hb.update();
+        if (viewedPack.credits != null) {
+            TipHelper.renderGenericTip(
+                    previewCard.current_x + previewCard.hb.width,
+                    previewCard.current_y + previewCard.hb.height,
+                    viewedPack.creditsHeader, viewedPack.credits);
+        }
         FontHelper.cardTitleFont.getData().setScale(1f);
     }
 
     public void render(SpriteBatch sb) {
-        sb.draw(MENU_BG, BG_X, BG_Y,0f,0f,MENU_BG.getRegionWidth(),MENU_BG.getRegionHeight(),BG_X_SCALE,BG_Y_SCALE,0f);
+        sb.draw(MENU_BG, BG_X, BG_Y, 0f, 0f, MENU_BG.getRegionWidth(), MENU_BG.getRegionHeight(), BG_X_SCALE, BG_Y_SCALE, 0f);
 
         checkbox.render(sb);
         previewCard.render(sb);
@@ -141,7 +153,7 @@ public class PackFilterMenu {
                 e.printStackTrace();
             }
         } else {
-            BaseMod.logger.info("Error in the Packmaster Pack filter menu : Config wasn't initialized.");
+            SpireAnniversary5Mod.logger.info("Error in the Packmaster Pack filter menu : Config wasn't initialized.");
         }
     }
 
@@ -153,7 +165,7 @@ public class PackFilterMenu {
                 return true;
             }
         }
-        BaseMod.logger.info("Error in the Packmaster Pack filter menu : Config wasn't initialized.");
+        SpireAnniversary5Mod.logger.info("Error in the Packmaster Pack filter menu : Config wasn't initialized.");
         return true;
     }
 

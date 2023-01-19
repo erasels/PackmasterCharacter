@@ -48,13 +48,9 @@ public class DistortionPack extends AbstractCardPack {
         return cards;
     }
 
-    public void initializePack() {
-        for (String s : getCards()) {
-            AbstractCard c = CardLibrary.getCard(s);
-            SpireAnniversary5Mod.cardParentMap.put(c.cardID, packID);
-            cards.add(c.makeStatEquivalentCopy());
-        }
-        previewPackCard = new DistortionPackPreview(packID, this);
+    @Override
+    public AbstractCard makePreviewCard() {
+        return new DistortionPackPreview(packID, this);
     }
 
     private static class DistortionPackPreview extends CardPackPreview {

@@ -5,23 +5,15 @@ import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-
-import thePackmaster.cards.AbstractPackmasterCard;
-
 
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
-public class RitualSight extends AbstractPackmasterCard {
+public class RitualSight extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("RitualSight");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int BLOCK = 11;
     private static final int UPGRADE_PLUS_BLOCK = 3;
@@ -44,16 +36,5 @@ public class RitualSight extends AbstractPackmasterCard {
 
         }));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-    }
-
-
-    //Upgraded stats.
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
-            initializeDescription();
-        }
     }
 }

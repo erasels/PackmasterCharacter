@@ -17,7 +17,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Cheapen extends AbstractMadScienceCard implements AmplifyCard {
     public final static String ID = makeID("Cheapen");
-    private static final int AMP_COST = 2;
+    private static final int AMP_COST = 1;
 
     public Cheapen() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
@@ -25,7 +25,7 @@ public class Cheapen extends AbstractMadScienceCard implements AmplifyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new FindCardForAddModifierAction(new CheapenModifier(0),1,!upgraded, AbstractDungeon.player.drawPile, card->card.cost!=0));
+        addToBot(new FindCardForAddModifierAction(new CheapenModifier(0),1,!upgraded, AbstractDungeon.player.drawPile, card->card.cost>0));
     }
 
     public void upp() {

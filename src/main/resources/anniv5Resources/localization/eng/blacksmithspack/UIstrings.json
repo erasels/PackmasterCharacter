@@ -15,5 +15,11 @@
     "TEXT": [
       "Upgrade."
     ]
+  },
+  "${ModID}:BlacksmithsPackHat": {
+    "TEXT": [
+      "You've come to practice metalwork.",
+      "Welding Mask"
+    ]
   }
 }

@@ -13,11 +13,8 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.shamanpack.IgnitePower;
 
-public class Flare extends AbstractPackmasterCard {
+public class Flare extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Flare");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 0;
     private static final int DAMAGE = 2;
     private static final int UPGRADE_DAMAGE = 1;

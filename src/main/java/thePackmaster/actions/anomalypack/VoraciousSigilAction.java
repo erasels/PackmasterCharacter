@@ -11,8 +11,6 @@ import thePackmaster.actions.RepeatCardAction;
 import thePackmaster.cardmodifiers.anomalypack.SigilModifier;
 import thePackmaster.util.Wiz;
 
-import java.util.Iterator;
-
 public class VoraciousSigilAction extends AbstractGameAction {
     private AbstractPlayer p;
     private AbstractCard sigil;
@@ -26,14 +24,12 @@ public class VoraciousSigilAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            AbstractCard card = this.p.hand.getRandomCard(AbstractCard.CardType.SKILL, true);
-            if (card!=null) {
+            if (this.p.hand.group.stream().anyMatch(c -> c.type == AbstractCard.CardType.SKILL)) {
+                AbstractCard card = this.p.hand.getRandomCard(AbstractCard.CardType.SKILL, true);
                 Wiz.atb(new ExhaustSpecificCardAction(card, p.hand));
                 CardModifierManager.addModifier(sigil, new SigilModifier(card));
                 Wiz.atb(new RepeatCardAction(card));
             }
-            this.isDone = true;
-
         }
     }
 

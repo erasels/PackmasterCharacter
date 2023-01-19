@@ -1,7 +1,7 @@
 {
   "${ModID}:Imp": {
     "NAME": "Imp",
-    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn. NL Deal !M! damage to a random enemy. Increase the damage of *Imp cards by 1 this combat. Draw a card. NL Exhaust."
+    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn. NL Deal !M! damage. Increase the damage of *Imps by 1 this combat. NL Draw a card. NL Exhaust."
   },
   "${ModID}:HighPriestessJeklik": {
     "NAME": "High Priestess Jeklik",
@@ -26,7 +26,7 @@
   },
   "${ModID}:SeedsOfDestruction": {
     "NAME": "Seeds of Destruction",
-    "DESCRIPTION": "Choose to shuffle !M! *Imps into your draw pile or one more into your discard pile.",
+    "DESCRIPTION": "Choose to shuffle !M! *Imps into your draw pile or !${ModID}:m2! *Imps into your discard pile.",
     "EXTENDED_DESCRIPTION": ["Shuffle !M! *Imps into your draw pile.", "Add !M! *Imps to your discard pile."]
   },
   "${ModID}:AranasiBroodmother": {
@@ -35,8 +35,8 @@
   },
   "${ModID}:MalchezaarsImp": {
     "NAME": "Malchezaar's Imp",
-    "DESCRIPTION": "Whenenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your discard pile.",
-    "UPGRADE_DESCRIPTION": "Whenenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your draw pile."
+    "DESCRIPTION": "Whenever a *non-Imp card is Exhausted, add 1 *Imp to your discard pile.",
+    "UPGRADE_DESCRIPTION": "Whenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your draw pile."
   },
   "${ModID}:TheSoularium": {
     "NAME": "The Soularium",
@@ -44,7 +44,7 @@
   },
   "${ModID}:RunedMithrilRod": {
     "NAME": "Runed Mithril Rod",
-    "DESCRIPTION": "Retain. NL After you draw !M! cards while this is in your hand, reduce the cost of cards in your hand by 1 this turn and discard this.",
+    "DESCRIPTION": "Unplayable. Retain. NL After you draw !M! cards while this is in your hand, reduce the cost of cards in your hand by 1 this turn and discard this.",
     "EXTENDED_DESCRIPTION": ["I can't play this card.", " ({0} drawn.)"]
   }
 }

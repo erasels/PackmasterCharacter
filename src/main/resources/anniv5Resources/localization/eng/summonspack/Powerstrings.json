@@ -1,16 +1,32 @@
 {
-  "${ModID}:TreeBlockadePower": {
-    "NAME": "Tree Blockade",
+  "${ModID}:JinxPower": {
+    "NAME": "Jinxed",
     "DESCRIPTIONS": [
-      "Take #b",
-      " less damage this turn."
+      "When debuffed with another debuff, this creature will lose #b",
+      " HP."
     ]
   },
   "${ModID}:SummonPandasPower": {
     "NAME": "Summoning Pandas",
     "DESCRIPTIONS": [
-      "At the start of your turn, Channel a #b",
-      " damage #yPanda."
+      "At the start of your turn, Channel #b1 Panda",
+      "At the start of your turn, Channel #b",
+      " #yPandas."
+    ]
+  },
+  "${ModID}:AmbushPower": {
+    "NAME": "Ambush",
+    "DESCRIPTIONS": [
+      "Whenever you #yChannel an orb, #yEvoke it #b1 time without removing it.",
+      "Whenever you #yChannel an orb, #yEvoke it #b",
+      " times without removing it."
+    ]
+  },
+  "${ModID}:TrainingPower": {
+    "NAME": "Trained",
+    "DESCRIPTIONS": [
+      "At the start of your turn, evoke your next orb #b",
+      " times."
     ]
   }
 }

@@ -175,7 +175,7 @@ public class PackSetupScreen extends CustomScreen {
                     genericScreenOverlayReset();
                     AbstractDungeon.closeCurrentScreen();
 
-                    currentPoolPacks.sort(Comparator.comparing((pack)->pack.packID));
+                    currentPoolPacks.sort(Comparator.comparing((pack)->pack.name));
                     SpireAnniversary5Mod.selectedCards = true;
                     editPotionPool();
                     CardCrawlGame.dungeon.initializeCardPools();
@@ -373,7 +373,7 @@ public class PackSetupScreen extends CustomScreen {
     private void randomPacks(int amount) {
         while (amount > 0 && !packPool.isEmpty()) {
             AbstractCardPack target = packPool.remove(rng.random(packPool.size() - 1));
-            BaseMod.logger.info("Randomly selected: " + target.packID);
+            SpireAnniversary5Mod.logger.info("Randomly selected: " + target.packID);
             currentPoolPacks.add(target);
             --amount;
         }
@@ -381,13 +381,13 @@ public class PackSetupScreen extends CustomScreen {
 
     public static void editPotionPool() {
         ArrayList<String> pool = PotionHelper.potions;
+        pool.removeIf(potionID -> SpireAnniversary5Mod.packExclusivePotions.contains(potionID));
+
+        Set<String> potionsToAdd = new HashSet<>();
         for (AbstractCardPack pack : currentPoolPacks) {
-            for (String potionID : pack.getPackPotions()) {
-                if (pool.stream().noneMatch((s) -> s.equals(potionID))) {
-                    pool.add(potionID);
-                }
-            }
+            potionsToAdd.addAll(pack.getPackPotions());
         }
+        pool.addAll(potionsToAdd);
     }
 
     public static class Enum

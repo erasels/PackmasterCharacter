@@ -1,45 +1,45 @@
 {
   "${ModID}:Sharpen": {
-    "NAME": "Sharpen",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a random Attack in hand: 'Add !M! Damage'"
+    "NAME": "Honing Strike",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a random Attack in hand: \"Add !M! Damage\""
   },
   "${ModID}:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a random Block card in hand: 'Add !M! Block'"
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify a random Block card in hand: \"Add !M! Block\""
   },
   "${ModID}:Winterize": {
     "NAME": "Winterize",
-    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your draw pile: 'Apply !M! Frostbite.'"
+    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your draw pile: \"Apply !M! ${ModID}:Frostbite\""
   },
 "${ModID}:Discombobulate": {
     "NAME": "Discombobulate",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have a Modified card in hand, deals damage twice."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have a *Modified card in hand, deals damage twice."
   },
   "${ModID}:Attach": {
     "NAME": "Attach",
-    "DESCRIPTION": "Choose a card in hand to ${ModID}:Absorb into a discarded card, then ${ModID}:Modify that card: 'Play the *Absorbed card.'. NL Exhaust.",
+    "DESCRIPTION": "Choose a card in hand to ${ModID}:Absorb into a discarded card, then ${ModID}:Modify that card: \"Play the *Absorbed card.\". NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Absorb. You will choose the discarded card to Modify after."]
   },
   "${ModID}:Improve": {
     "NAME": "Improve",
-    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a random card in hand: 'Draw a card.' NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a random card in hand: \"Draw a card.\" NL Exhaust."
   },
   "${ModID}:Enhance": {
     "NAME": "Enhance",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a card in hand: 'Gain !M! Block.'"
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a card in hand: \"Gain !M! Block.\""
   },
   "${ModID}:Cheapen": {
     "NAME": "Cheapen",
-    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: 'Costs 0.' NL ${ModID}:Amplify [E] [E] : Don't Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Modify a card in your draw pile: 'Costs 0.' NL ${ModID}:Amplify [E] [E] : Don't Exhaust."
+    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Modify a card in your draw pile: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't Exhaust."
   },
   "${ModID}:Expand": {
     "NAME": "Expand",
-    "DESCRIPTION": "${ModID}:Modify a card in your discard pile: 'Ethereal.' and 'Remove Exhaust.' NL Exhaust."
+    "DESCRIPTION": "${ModID}:Modify a card in your discard pile: \"Ethereal.\" and \"Remove Exhaust.\" NL Exhaust."
   },
   "${ModID}:Piratify": {
     "NAME": "Piratify",
-    "DESCRIPTION": "At the start of each turn, Modify a random card in hand: 'Gain a *Cannonball.'",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, Modify a random card in hand: 'Gain a *Cannonball+.'"
+    "DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"Gain a *Cannonball.\"",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"Gain a *Cannonball+.\""
   }
 }

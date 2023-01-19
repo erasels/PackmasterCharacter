@@ -3,12 +3,13 @@
     "TEXT": [
       "Psychic",
       "Do the impossible through powers beyond reason.",
-      "Alchyr"
+      "Alchyr, (Gk) Erasels"
     ]
   },
   "${ModID}:Occult": {
     "TEXT": [
-      "${ModID}:Occult. NL "
+      "${ModID}:Occult. NL ",
+      "NL ${ModID}:Occult. NL"
     ]
   },
   "${ModID}:RuleCancel": {
@@ -24,6 +25,12 @@
   "${ModID}:UnplayableTurnModifier": {
     "TEXT": [
       "Cannot be played this turn. NL "
+    ]
+  },
+  "${ModID}:PsychicPackHat": {
+    "TEXT": [
+      "Power emanates from you.",
+      "Runic"
     ]
   }
 }

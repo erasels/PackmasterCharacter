@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.StarBounceEffect;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.marisapack.CasualFlameParticleEffect;
@@ -14,10 +15,10 @@ import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCard{
+public class LuminousStrike extends AbstractMarisaCard implements AmplifyCard{
     public final static String ID = makeID(LuminousStrike.class.getSimpleName());
-    private static final int DMG = 6, UPG_DMG = 1;
-    private static final int MAGIC = 3, UPG_MAGIC = 1;
+    private static final int DMG = 5, UPG_DMG = 4;
+    private static final int MAGIC = 4;
 
     public LuminousStrike() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -25,8 +26,6 @@ public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCar
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(CardTags.STRIKE);
 
-        setBackgroundTexture("anniv5Resources/images/512/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png",
-                "anniv5Resources/images/1024/marisapack/" + type.name().toLowerCase(Locale.ROOT)+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -38,7 +37,6 @@ public class LuminousStrike extends AbstractPackmasterCard implements AmplifyCar
 
     public void upp() {
         upgradeDamage(UPG_DMG);
-        upgradeMagicNumber(UPG_MAGIC);
     }
 
     @Override

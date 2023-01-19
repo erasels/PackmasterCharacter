@@ -1,0 +1,27 @@
+{
+  "${ModID}:RimworldPack": {
+    "TEXT": [
+      "RimWorld",
+      "Mental Breaks and eating without a table. For massive power of course.",
+      "Laugic",
+      "#bRimWorld originally created by #bLudeon #bStudios"
+    ]
+  },
+  "${ModID}:Potions": {
+    "TEXT": [
+      "Yummy ",
+      "!"
+    ]
+  },
+  "${ModID}:OnFireModifier": {
+    "TEXT": [
+      "${ModID}:On_Fire. NL "
+    ]
+  },
+  "${ModID}:RimworldPackHat": {
+    "TEXT": [
+      "For space cowboys. Definitely not made of human leather.",
+      "RimWorld Hat"
+    ]
+  }
+}

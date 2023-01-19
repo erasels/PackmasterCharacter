@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class Trash extends AbstractPackmasterCard {
+public class Trash extends AbstractHighEnergyCard {
     public final static String ID = makeID("Trash");
     // intellij stuff skill, self, common, , , , , , 
 
