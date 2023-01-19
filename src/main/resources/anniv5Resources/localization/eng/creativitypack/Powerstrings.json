@@ -6,7 +6,7 @@
       ]
   },
   "${ModID}:MakeshiftShieldPower": {
-    "NAME": "Makeshift Sword",
+    "NAME": "Makeshift Shield",
     "DESCRIPTIONS": [
         "Whenever a card is created during combat, gain #b%d #yBlock."
       ]
