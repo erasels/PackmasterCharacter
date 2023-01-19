@@ -84,7 +84,7 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CenterGridCardSelectScreen.centerGridSelect = true;
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        ArrayList<AbstractCardPack> packs = SpireAnniversary5Mod.allPacks;
+        ArrayList<AbstractCardPack> packs = new ArrayList<>(SpireAnniversary5Mod.allPacks);
         if (myPackOne != null) {
             if (!myPackOne.isEmpty()) {
                 packs.remove(packsByID.get(myPackOne));
