@@ -24,6 +24,7 @@ public class OpeningRunScreenPatch {
                 SpireAnniversary5Mod.currentPoolPacks.clear();
                 SpireAnniversary5Mod.currentPoolPacks.addAll(SpireAnniversary5Mod.allPacks);
                 CardCrawlGame.dungeon.initializeCardPools();
+                InfiniteSpirePatch.generateQuestsIfInfiniteSpireIsLoaded();
             } else {
                 SpireAnniversary5Mod.logger.info("Packmaster is Ready To Do Thing");
                 SpireAnniversary5Mod.openedStarterScreen = false;
