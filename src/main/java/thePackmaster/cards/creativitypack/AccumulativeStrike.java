@@ -23,7 +23,7 @@ public class AccumulativeStrike extends AbstractCreativityCard {
         magicNumber = baseMagicNumber = 2;
         CardModifierManager.addModifier(this, new AccumulativeDamageModifier(magicNumber));
         baseDamage = damage = 12;
-
+        tags.add(CardTags.STRIKE);
     }
 
     @Override
