@@ -31,6 +31,6 @@ public class MissileStrike extends AbstractQuantaCard {
 
     public void upp() {
         upgradeDamage(UPGRADE_DAMAGE);
-        upgradeMagicNumber(UPGRADE_SPLASH);
+        upgradeSecondDamage(UPGRADE_SPLASH);
     }
 }
