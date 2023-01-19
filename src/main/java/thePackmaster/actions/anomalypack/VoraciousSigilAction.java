@@ -27,10 +27,13 @@ public class VoraciousSigilAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             AbstractCard card = this.p.hand.getRandomCard(AbstractCard.CardType.SKILL, true);
-            Wiz.atb(new ExhaustSpecificCardAction(card, p.hand));
-            CardModifierManager.addModifier(sigil, new SigilModifier(card));
+            if (card!=null) {
+                Wiz.atb(new ExhaustSpecificCardAction(card, p.hand));
+                CardModifierManager.addModifier(sigil, new SigilModifier(card));
+                Wiz.atb(new RepeatCardAction(card));
+            }
             this.isDone = true;
-            Wiz.atb(new RepeatCardAction(card));
+
         }
     }
 
