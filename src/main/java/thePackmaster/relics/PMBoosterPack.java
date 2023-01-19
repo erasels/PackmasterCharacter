@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
@@ -45,7 +46,7 @@ public class PMBoosterPack extends AbstractPackmasterRelic {
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CenterGridCardSelectScreen.centerGridSelect = true;
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        ArrayList<String> cards = SpireAnniversary5Mod.getRandomPackFromAll().getCards();
+        ArrayList<String> cards = SpireAnniversary5Mod.getRandomPackFromAll(new Random(Settings.seed + 41)).getCards();
         for (String s : cards) {
 
            if (CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.COMMON ||
