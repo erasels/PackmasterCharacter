@@ -1,6 +1,8 @@
 package thePackmaster.actions;
 
 import basemod.BaseMod;
+import basemod.abstracts.AbstractCardModifier;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -18,8 +20,13 @@ public class FlexibleDiscoveryAction extends AbstractGameAction {
     private final ArrayList<AbstractCard> cards;
     private boolean costsZeroThisTurn;
     private Consumer<AbstractCard> callback;
+    private AbstractCardModifier cardModifier;
 
     public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, boolean costsZeroThisTurn) {
+        this(cards,costsZeroThisTurn,null);
+    }
+
+    public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, boolean costsZeroThisTurn, AbstractCardModifier cardModifier) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
         this.cards = cards;
@@ -30,6 +37,7 @@ public class FlexibleDiscoveryAction extends AbstractGameAction {
     public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, Consumer<AbstractCard> callback, boolean costsZeroThisTurn) {
         this(cards,costsZeroThisTurn);
         this.callback = callback;
+        this.cardModifier = cardModifier;
     }
 
     public void update() {
@@ -51,6 +59,9 @@ public class FlexibleDiscoveryAction extends AbstractGameAction {
                     }
                     if (costsZeroThisTurn) {
                         disCard.setCostForTurn(0);
+                    }
+                    if (cardModifier!=null){
+                        CardModifierManager.addModifier(disCard, cardModifier);
                     }
                     disCard.current_x = -1000.0F * Settings.scale;
                     if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
