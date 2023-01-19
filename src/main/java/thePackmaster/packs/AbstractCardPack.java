@@ -65,9 +65,9 @@ public abstract class AbstractCardPack {
     private UIStrings hatStrings;
 
     public String getHatName() {
-        //if (hatStrings == null)
+        if (hatStrings == null)
             return this.name;
-        //return hatStrings.TEXT[1];
+        return hatStrings.TEXT[1];
     }
 
     public String getHatFlavor() {

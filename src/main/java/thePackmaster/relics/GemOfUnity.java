@@ -34,11 +34,11 @@ public class GemOfUnity extends AbstractPackmasterRelic {
         if (AbstractDungeon.isPlayerInDungeon()) {
             packsPlayed.clear();
             counter = SpireAnniversary5Mod.currentPoolPacks.size();
-            if (AbstractDungeon.player.hasRelic(BanishingDecree.ID)) counter--;
             this.description = getUpdatedDescription();
             tips.clear();
             tips.add(new PowerTip(name, description));
             initializeTips();
+            grayscale = false;
         }
     }
 
@@ -48,17 +48,15 @@ public class GemOfUnity extends AbstractPackmasterRelic {
             return;
         }
         AbstractCardPack pack = Wiz.getPackByCard(c);
-        if (pack != null){
-            if (!packsPlayed.contains(pack)){
-                counter--;
-                packsPlayed.add(pack);
-                if (counter == 0){
-                    AbstractDungeon.player.heal(5);
-                    addToBot(new GainBlockAction(Wiz.p(), 20));
-                    Wiz.applyToSelf(new StrengthPower(Wiz.p(), 1));
-                    Wiz.applyToSelf(new DexterityPower(Wiz.p(), 1));
-                    grayscale = true;
-                }
+        if (pack != null && SpireAnniversary5Mod.currentPoolPacks.contains(pack) && !packsPlayed.contains(pack)){
+            counter--;
+            packsPlayed.add(pack);
+            if (counter == 0){
+                AbstractDungeon.player.heal(5);
+                addToBot(new GainBlockAction(Wiz.p(), 20));
+                Wiz.applyToSelf(new StrengthPower(Wiz.p(), 1));
+                Wiz.applyToSelf(new DexterityPower(Wiz.p(), 1));
+                grayscale = true;
             }
         }
         this.description = getUpdatedDescription();

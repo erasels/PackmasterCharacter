@@ -61,7 +61,6 @@ public abstract class AbstractRippableCard extends AbstractRipCard {
     public void onRightClick() {
         if(action == null) {
             if (canRip()) {
-                att(new SFXAction("MAP_CLOSE"));
                 action = new RipCardAction(this, rippedParts.get(0), rippedParts.get(1));
                 att(action);
                 att(new WaitAction(0.1f));

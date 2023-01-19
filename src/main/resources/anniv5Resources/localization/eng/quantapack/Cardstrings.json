@@ -1,7 +1,7 @@
 {
   "${ModID}:MissileStrike": {
     "NAME": "Missile Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL Deal !${ModID}:sd! damage to ALL enemies."
   },
   "${ModID}:MagicDart": {
     "NAME": "Magic Dart",

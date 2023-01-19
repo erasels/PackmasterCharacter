@@ -3,8 +3,10 @@ package thePackmaster.relics;
 import basemod.abstracts.CustomSavable;
 import com.evacipated.cardcrawl.mod.stslib.patches.CenterGridCardSelectScreen;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import thePackmaster.SpireAnniversary5Mod;
@@ -82,7 +84,7 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CenterGridCardSelectScreen.centerGridSelect = true;
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        ArrayList<AbstractCardPack> packs = SpireAnniversary5Mod.allPacks;
+        ArrayList<AbstractCardPack> packs = new ArrayList<>(SpireAnniversary5Mod.allPacks);
         if (myPackOne != null) {
             if (!myPackOne.isEmpty()) {
                 packs.remove(packsByID.get(myPackOne));
@@ -93,7 +95,7 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
                 packs.remove(packsByID.get(myPackTwo));
             }
         }
-        Collections.shuffle(packs);
+        Collections.shuffle(packs, new Random(Settings.seed + 43).random);
         for (AbstractCardPack p : packs) {
             group.addToTop(p.previewPackCard);
             if (group.size() >= 3) {

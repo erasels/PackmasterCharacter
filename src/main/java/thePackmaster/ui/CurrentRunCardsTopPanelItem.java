@@ -98,8 +98,8 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
 
                 switch (AbstractDungeon.screen) {
                     case COMBAT_REWARD:
-                        AbstractDungeon.previousScreen = AbstractDungeon.screen;
                         AbstractDungeon.closeCurrentScreen();
+                        AbstractDungeon.previousScreen = COMBAT_REWARD;
                         open();
                         break;
                     case MASTER_DECK_VIEW: //viewing master deck
@@ -107,25 +107,25 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
                         open();
                         break;
                     case DEATH:
-                        AbstractDungeon.previousScreen = AbstractDungeon.screen;
                         AbstractDungeon.deathScreen.hide();
+                        AbstractDungeon.previousScreen = DEATH;
                         open();
                         break;
                     case BOSS_REWARD:
-                        AbstractDungeon.previousScreen = AbstractDungeon.screen;
                         AbstractDungeon.bossRelicScreen.hide();
+                        AbstractDungeon.previousScreen = BOSS_REWARD;
                         open();
                         break;
                     case SHOP:
                         AbstractDungeon.overlayMenu.cancelButton.hide();
-                        AbstractDungeon.previousScreen = AbstractDungeon.screen;
+                        AbstractDungeon.previousScreen = SHOP;
                         open();
                         break;
                     case MAP:
-                        AbstractDungeon.previousScreen = AbstractDungeon.screen;
                         if (AbstractDungeon.dungeonMapScreen.dismissable) {
                             AbstractDungeon.closeCurrentScreen();
                         }
+                        AbstractDungeon.previousScreen = MAP;
                         open();
                         break;
                 }

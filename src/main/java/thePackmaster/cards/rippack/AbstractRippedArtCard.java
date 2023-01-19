@@ -6,10 +6,15 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
+import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.ThePackmaster;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.patches.rippack.TypeOverridePatch;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,14 +23,21 @@ import static thePackmaster.SpireAnniversary5Mod.*;
 
 public abstract class AbstractRippedArtCard extends AbstractRipCard {
 
-    AbstractRippableCard sourceCard;
+    public AbstractRippableCard sourceCard;
     public static ShaderProgram shader = null;
     private static ArrayList<TooltipInfo> consumableTooltip;
 
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Rip"));
+
     public AbstractRippedArtCard(String cardID, AbstractRippableCard sourceCard, CardColor color) {
-        super(cardID, sourceCard.cost, sourceCard.type, CardRarity.SPECIAL, CardTarget.NONE, color, getCardTextureString(sourceCard.cardID.replace(modID + ":", ""), sourceCard.type));
+        super(cardID, sourceCard.cost, CardType.STATUS, CardRarity.SPECIAL, CardTarget.NONE, color, getCardTextureString(sourceCard.cardID.replace(modID + ":", ""), sourceCard.type));
         this.sourceCard = sourceCard;
         setDisplayRarity(sourceCard.rarity);
+        if(sourceCard.type == CardType.ATTACK) {
+            TypeOverridePatch.setOverride(this, uiStrings.TEXT[2]);
+        } else if(sourceCard.type == CardType.SKILL) {
+            TypeOverridePatch.setOverride(this, uiStrings.TEXT[3]);
+        }
         exhaust = true;
     }
 
@@ -69,6 +81,93 @@ public abstract class AbstractRippedArtCard extends AbstractRipCard {
 
     @Override
     public void renderHoverShadow(SpriteBatch sb) {
+
+    }
+
+    @Override
+    public void setDisplayRarity(CardRarity rarity) {
+        switch(rarity) {
+            case BASIC:
+            case CURSE:
+            case SPECIAL:
+            case COMMON:
+                this.bannerSmallRegion = ImageMaster.CARD_BANNER_COMMON;
+                this.bannerLargeRegion = ImageMaster.CARD_BANNER_COMMON_L;
+                switch(sourceCard.type) {
+                    case STATUS:
+                    case ATTACK:
+                        this.frameSmallRegion = ImageMaster.CARD_FRAME_ATTACK_COMMON;
+                        this.frameLargeRegion = ImageMaster.CARD_FRAME_ATTACK_COMMON_L;
+                        break;
+                    case POWER:
+                        this.frameSmallRegion = ImageMaster.CARD_FRAME_POWER_COMMON;
+                        this.frameLargeRegion = ImageMaster.CARD_FRAME_POWER_COMMON_L;
+                        break;
+                    default:
+                        this.frameSmallRegion = ImageMaster.CARD_FRAME_SKILL_COMMON;
+                        this.frameLargeRegion = ImageMaster.CARD_FRAME_SKILL_COMMON_L;
+                }
+
+                this.frameMiddleRegion = ImageMaster.CARD_COMMON_FRAME_MID;
+                this.frameLeftRegion = ImageMaster.CARD_COMMON_FRAME_LEFT;
+                this.frameRightRegion = ImageMaster.CARD_COMMON_FRAME_RIGHT;
+                this.frameMiddleLargeRegion = ImageMaster.CARD_COMMON_FRAME_MID_L;
+                this.frameLeftLargeRegion = ImageMaster.CARD_COMMON_FRAME_LEFT_L;
+                this.frameRightLargeRegion = ImageMaster.CARD_COMMON_FRAME_RIGHT_L;
+                break;
+            case UNCOMMON:
+                this.bannerSmallRegion = ImageMaster.CARD_BANNER_UNCOMMON;
+                this.bannerLargeRegion = ImageMaster.CARD_BANNER_UNCOMMON_L;
+                switch(sourceCard.type) {
+                    case STATUS:
+                    case ATTACK:
+                        this.frameSmallRegion = ImageMaster.CARD_FRAME_ATTACK_UNCOMMON;
+                        this.frameLargeRegion = ImageMaster.CARD_FRAME_ATTACK_UNCOMMON_L;
+                        break;
+                    case POWER:
+                        this.frameSmallRegion = ImageMaster.CARD_FRAME_POWER_UNCOMMON;
+                        this.frameLargeRegion = ImageMaster.CARD_FRAME_POWER_UNCOMMON_L;
+                        break;
+                    default:
+                        this.frameSmallRegion = ImageMaster.CARD_FRAME_SKILL_UNCOMMON;
+                        this.frameLargeRegion = ImageMaster.CARD_FRAME_SKILL_UNCOMMON_L;
+                }
+
+                this.frameMiddleRegion = ImageMaster.CARD_UNCOMMON_FRAME_MID;
+                this.frameLeftRegion = ImageMaster.CARD_UNCOMMON_FRAME_LEFT;
+                this.frameRightRegion = ImageMaster.CARD_UNCOMMON_FRAME_RIGHT;
+                this.frameMiddleLargeRegion = ImageMaster.CARD_UNCOMMON_FRAME_MID_L;
+                this.frameLeftLargeRegion = ImageMaster.CARD_UNCOMMON_FRAME_LEFT_L;
+                this.frameRightLargeRegion = ImageMaster.CARD_UNCOMMON_FRAME_RIGHT_L;
+                break;
+            case RARE:
+                this.bannerSmallRegion = ImageMaster.CARD_BANNER_RARE;
+                this.bannerLargeRegion = ImageMaster.CARD_BANNER_RARE_L;
+                switch(sourceCard.type) {
+                    case STATUS:
+                    case ATTACK:
+                        this.frameSmallRegion = ImageMaster.CARD_FRAME_ATTACK_RARE;
+                        this.frameLargeRegion = ImageMaster.CARD_FRAME_ATTACK_RARE_L;
+                        break;
+                    case POWER:
+                        this.frameSmallRegion = ImageMaster.CARD_FRAME_POWER_RARE;
+                        this.frameLargeRegion = ImageMaster.CARD_FRAME_POWER_RARE_L;
+                        break;
+                    default:
+                        this.frameSmallRegion = ImageMaster.CARD_FRAME_SKILL_RARE;
+                        this.frameLargeRegion = ImageMaster.CARD_FRAME_SKILL_RARE_L;
+                }
+
+                this.frameMiddleRegion = ImageMaster.CARD_RARE_FRAME_MID;
+                this.frameLeftRegion = ImageMaster.CARD_RARE_FRAME_LEFT;
+                this.frameRightRegion = ImageMaster.CARD_RARE_FRAME_RIGHT;
+                this.frameMiddleLargeRegion = ImageMaster.CARD_RARE_FRAME_MID_L;
+                this.frameLeftLargeRegion = ImageMaster.CARD_RARE_FRAME_LEFT_L;
+                this.frameRightLargeRegion = ImageMaster.CARD_RARE_FRAME_RIGHT_L;
+                break;
+            default:
+                System.out.println("Attempted to set display rarity to an unknown rarity: " + rarity.name());
+        }
 
     }
 

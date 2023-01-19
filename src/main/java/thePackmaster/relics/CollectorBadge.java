@@ -18,7 +18,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
     public ArrayList<String> usedPacks = new ArrayList<>();
 
     public CollectorBadge() {
-        super(ID, RelicTier.RARE, LandingSound.FLAT);
+        super(ID, RelicTier.BOSS, LandingSound.FLAT);
     }
 
     @Override
@@ -42,12 +42,6 @@ public class CollectorBadge extends AbstractPackmasterRelic {
 
     @Override
     public void atTurnStart() {
-        if (pulse) {
-            flash();
-            Wiz.atb(new RelicAboveCreatureAction(Wiz.p(), this));
-            addToBot(new GainEnergyAction(1));
-            stopPulse();
-        }
         counter = 0;
         usedPacks.clear();
         setDescriptionAfterLoading();
@@ -59,8 +53,10 @@ public class CollectorBadge extends AbstractPackmasterRelic {
             if (!usedPacks.contains(Wiz.getPackByCard(c).name)) {
                 usedPacks.add(Wiz.getPackByCard(c).name);
                 counter++;
-                if (!pulse && usedPacks.size() >= 4) {
-                    beginLongPulse();
+                if (usedPacks.size() == 4) {
+                    flash();
+                    Wiz.atb(new RelicAboveCreatureAction(Wiz.p(), this));
+                    addToBot(new GainEnergyAction(1));
                 }
                 setDescriptionAfterLoading();
             }
@@ -68,7 +64,6 @@ public class CollectorBadge extends AbstractPackmasterRelic {
     }
 
     private void setDescriptionAfterLoading() {
-
         if (usedPacks.size() > 3) {
             description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
         } else if (usedPacks.size() > 0) {

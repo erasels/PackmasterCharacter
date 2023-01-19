@@ -18,6 +18,7 @@ public class ConjurerPack extends AbstractCardPack {
 
     public ConjurerPack() {
         super(ID, NAME, DESC, AUTHOR);
+        hatHidesHair = true;
     }
 
     @Override

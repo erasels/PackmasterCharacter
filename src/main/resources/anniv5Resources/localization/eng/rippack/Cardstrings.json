@@ -53,8 +53,8 @@
   },
   "${ModID}:Inspiration": {
     "NAME": "Inspiration",
-    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art Cards in your exhaust pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art Cards in your exhaust pile.",
+    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art and Status Cards in your exhaust pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art and Status Cards in your exhaust pile.",
     "EXTENDED_DESCRIPTION": [
       " NL (Draw ",
       " card.)",
@@ -124,8 +124,8 @@
   },
   "${ModID}:LeftBrain": {
     "NAME": "Left Brain",
-    "DESCRIPTION": "Exhaust ALL your Art and Status cards. Gain !M! Strength for each card Exhausted.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL Exhaust ALL your Art and Status cards. Gain !M! Strength for each card Exhausted."
+    "DESCRIPTION": "Exhaust ALL your ${ModID}:Art and Status cards. Gain !M! Strength for each card Exhausted.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL Exhaust ALL your ${ModID}:Art and Status cards. Gain !M! Strength for each card Exhausted."
   },
   "${ModID}:FuryAttack": {
     "NAME": "Fury",

@@ -53,7 +53,7 @@ public class MainMenuUIPatch {
     private static final float DROPDOWNS_START_Y = CHECKBOX_Y + DROPDOWNS_SPACING * (PACK_COUNT + 0.5f);
 
     //filter button fields
-    private static final float FILTERBUTTON_X = 60f;
+    private static final float FILTERBUTTON_X = 55f;
     private static final float FILTERBUTTON_Y = 1080f - 122f;
 
     private static final PackFilterMenu filterMenu = new PackFilterMenu();
@@ -61,7 +61,7 @@ public class MainMenuUIPatch {
     private static final HashMap<String, Integer> idToIndex = new HashMap<>();
 
     //hat button fields
-    private static final float HATBUTTON_X = 560f;
+    private static final float HATBUTTON_X = 610f;
     private static final float HATBUTTON_Y = 1080f - 122f;
 
     public static final HatMenu hatMenu = new HatMenu();

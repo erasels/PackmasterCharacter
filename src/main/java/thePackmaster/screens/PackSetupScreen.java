@@ -1,6 +1,5 @@
 package thePackmaster.screens;
 
-import basemod.BaseMod;
 import basemod.abstracts.CustomScreen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -13,11 +12,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.ui.buttons.GridSelectConfirmButton;
@@ -25,8 +22,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.packs.AbstractPackPreviewCard;
-import thePackmaster.ui.PackFilterMenu;
+import thePackmaster.patches.InfiniteSpirePatch;
 
 import java.util.*;
 
@@ -124,7 +120,6 @@ public class PackSetupScreen extends CustomScreen {
 
     @Override
     public void close() {
-
     }
 
     @Override
@@ -179,7 +174,7 @@ public class PackSetupScreen extends CustomScreen {
                     SpireAnniversary5Mod.selectedCards = true;
                     editPotionPool();
                     CardCrawlGame.dungeon.initializeCardPools();
-
+                    InfiniteSpirePatch.generateQuestsIfInfiniteSpireIsLoaded();
                 }
                 break;
             case DRAFTING:

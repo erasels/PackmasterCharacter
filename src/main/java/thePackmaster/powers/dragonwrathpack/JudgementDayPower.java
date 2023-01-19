@@ -48,11 +48,8 @@ public class JudgementDayPower extends AbstractPackmasterPower implements Clonea
 
         updateDescription();
     }
-
-    public void onChannel(AbstractOrb orb) {
-        if (orb instanceof Lightning){
-            Wiz.applyToSelf(new confessionpower(owner,amount));
-        }
+    public void onSpecificTrigger() {
+        addToBot(new ApplyPowerAction(owner,owner,new confessionpower(owner,amount)));
     }
     @Override
     public void renderIcons(SpriteBatch sb, float x, float y, Color c) {
