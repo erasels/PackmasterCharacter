@@ -91,7 +91,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                             }
                         }
                     }
-                }.addOption(new TextPhase.OptionInfo(hasEnoughGoldForBuyCard() ? OPTIONS[4] + getGoldCostForBuy() + OPTIONS[5] : OPTIONS[9]).enabledCondition(this::hasEnoughGoldForBuyCard), (i) -> {   //Buy
+                }.addOption(new TextPhase.OptionInfo(hasEnoughGoldForBuyCard() ? OPTIONS[4] + getGoldCostForBuy() + OPTIONS[5] : OPTIONS[9] + getGoldCostForBuy() + OPTIONS[7]).enabledCondition(this::hasEnoughGoldForBuyCard), (i) -> {   //Buy
 
                             choice = 0;
                             forRemoval = false;
@@ -173,13 +173,13 @@ public class BlackMarketDealerEvent extends PhasedEvent {
         registerPhase("relicDealer", new TextPhase(DESCRIPTIONS[3])
 
 
-                .addOption(new TextPhase.OptionInfo(hasEnoughGoldForBuyCollection() ? OPTIONS[15] + getGoldCostForBuyCollection() + OPTIONS[16] : OPTIONS[9], new PMCollection()).enabledCondition(this::hasEnoughGoldForBuyCollection), (i) -> {   //PM Collection
+                .addOption(new TextPhase.OptionInfo(hasEnoughGoldForBuyCollection() ? OPTIONS[15] + getGoldCostForBuyCollection() + OPTIONS[16] : OPTIONS[9] + getGoldCostForBuyCollection() + OPTIONS[7], new PMCollection()).enabledCondition(this::hasEnoughGoldForBuyCollection), (i) -> {   //PM Collection
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new PMCollection());
 
                     transitionKey("relicCollectionEnd");
                 })
 
-                .addOption(new TextPhase.OptionInfo(hasEnoughGoldForBuyDecree() ? OPTIONS[17] + getGoldCostForBuyDecree() + OPTIONS[18] : OPTIONS[9], new BanishingDecree()).enabledCondition(this::hasEnoughGoldForBuyDecree), (i) -> {   //Banishing Decree
+                .addOption(new TextPhase.OptionInfo(hasEnoughGoldForBuyDecree() ? OPTIONS[17] + getGoldCostForBuyDecree() + OPTIONS[18] : OPTIONS[9] + getGoldCostForBuyDecree() + OPTIONS[7], new BanishingDecree()).enabledCondition(this::hasEnoughGoldForBuyDecree), (i) -> {   //Banishing Decree
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BanishingDecree());
                     transitionKey("relicBanishingEnd");
                 })
