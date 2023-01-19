@@ -19,7 +19,7 @@ public class StormFront extends AbstractHydrologistCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        hydrologistDamage(p, m, 30);
+        hydrologistDamage(p, m, damage);
     }
 
     @Override
