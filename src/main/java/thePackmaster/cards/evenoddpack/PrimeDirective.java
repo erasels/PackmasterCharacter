@@ -7,6 +7,7 @@ import thePackmaster.powers.evenoddpack.PrimeDirectivePower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 
 public class PrimeDirective extends AbstractPackmasterCard {
     public final static String ID = makeID(PrimeDirective.class.getSimpleName());
@@ -20,6 +21,10 @@ public class PrimeDirective extends AbstractPackmasterCard {
     public PrimeDirective() {
         super(ID, COST, TYPE, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
+        setBackgroundTexture(
+                makeImagePath("512/evenodd/" + type.name().toLowerCase() + ".png"),
+                makeImagePath("1024/evenodd/" + type.name().toLowerCase() + ".png")
+        );
     }
     
     @Override
