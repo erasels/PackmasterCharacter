@@ -10,6 +10,7 @@ import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 @SpirePatch(
@@ -29,15 +30,16 @@ public class DeathScreenUnlockPatch {
             if (SpireAnniversary5Mod.allPacksMode) SpireAnniversary5Mod.logger.info("All packs mode - no Hat unlocks!");
             if (AbstractDungeon.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && !SpireAnniversary5Mod.allPacksMode) {
                 SpireAnniversary5Mod.logger.info("Unlocking new hats!");
+                ArrayList<String> unlockedHats = SpireAnniversary5Mod.getUnlockedHats();
                 for (AbstractCardPack p : SpireAnniversary5Mod.currentPoolPacks) {
                     SpireAnniversary5Mod.logger.info("Adding " + p.packID + " to unlocked hats!");
-                    if (!HatMenu.currentlyUnlockedHats.contains(p.packID)) {
-                        HatMenu.currentlyUnlockedHats.add(p.packID);
+                    if (!unlockedHats.contains(p.packID)) {
+                        unlockedHats.add(p.packID);
                     }
                 }
                 try {
                     SpireAnniversary5Mod.logger.info("Saving unlocked hats!");
-                    SpireAnniversary5Mod.saveUnlockedHats(HatMenu.currentlyUnlockedHats);
+                    SpireAnniversary5Mod.saveUnlockedHats(unlockedHats);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
