@@ -5,6 +5,8 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
+import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
@@ -29,6 +31,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -53,6 +56,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.events.BlackMarketDealerEvent;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
@@ -442,6 +446,14 @@ public class SpireAnniversary5Mod implements
         initializeConfig();
 
         initializeSavedData();
+
+        BaseMod.addEvent(new AddEventParams.Builder(BlackMarketDealerEvent.ID, BlackMarketDealerEvent.class) //Event ID//
+                //Event Character//
+                .playerClass(ThePackmaster.Enums.THE_PACKMASTER)
+                //Event Type//
+                .eventType(EventUtils.EventType.NORMAL)
+                .create());
+
     }
 
     public static void addPotions() {
@@ -513,6 +525,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + getLangString() + "/Stancestrings.json");
         BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + getLangString() + "/Orbstrings.json");
         BaseMod.loadCustomStringsFile(PotionStrings.class, modID + "Resources/localization/" + getLangString() + "/Potionstrings.json");
+        BaseMod.loadCustomStringsFile(EventStrings.class, modID + "Resources/localization/" + getLangString() + "/Eventstrings.json");
 
         loadPackStrings();
     }

@@ -28,7 +28,7 @@ public class MagicHand extends AbstractReplicatorCard {
         CardGroup masterdeck = new CardGroup(AbstractDungeon.player.masterDeck, CardGroup.CardGroupType.UNSPECIFIED);
         int uniqueCount = 0;
         ArrayList<AbstractCard> uniqueCards = new ArrayList<>();
-        for (AbstractCard card: masterdeck.group) {
+        for (AbstractCard card : masterdeck.group) {
             if (!containsCard(uniqueCards, card)) {
                 uniqueCount++;
                 uniqueCards.add(card);

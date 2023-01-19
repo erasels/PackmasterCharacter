@@ -11,11 +11,11 @@ import thePackmaster.powers.grandopeningpack.SurgePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Surge extends AbstractPackmasterCard {
+public class Surge extends AbstractGrandOpeningCard {
     public final static String ID = makeID("Surge");
 
     public Surge() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, "grandopening");
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 1;
     }
 
