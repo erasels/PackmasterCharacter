@@ -20,6 +20,7 @@ public class StrikingStrike extends AbstractCreativityCard {
     public StrikingStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = 6;
+        tags.add(CardTags.STRIKE);
     }
 
     @Override
