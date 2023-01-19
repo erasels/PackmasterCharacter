@@ -1,0 +1,46 @@
+{
+  "${ModID}:BlackMarketDealerEvent": {
+    "NAME": "Black Market",
+    "DESCRIPTIONS": [
+      "\"YOU THERE! With a backpack of that size, you must be a Collector! NL NL Come in and browse - we have a lovely temporary pop-up market set up today, fully legitimate, of course. I'm sure you can find something you need... just don't tell anyone we were here.",
+      "You approach a dealer in front of a glass case, with a wide collection of cards available for sale. NL NL They would probably be interested in buying up some of your harder to find cards.",
+      "In a back corner of the market, you stride up to a stall shrouded in purple cloth. NL NL A silent, smoky, ethereal figure gestures to the only item they have on display - a book, clearly enchanted with some dark magics.",
+      "\"We meet again!\" NL A cheery disheveled fellow approaches you gleefully. NL NL \"It's me, #yRanwid! I stole some stuff from the #bMerchant to bring to the Market - take a look, take a look!\"",
+      "\"Thanks! Come back again soon! Especially if you find the ultra-rare first edition G.K. card, we'll make it worth your while! NL NL You tuck away your new card into your pack and continue on your way.",
+      "\"This is quite a fine condition for an adventurer in the Spire! How do you do it with all that stuff in your backpack?\" NL NL You enjoy a pleasant conversation with the shopkeeper about storage effectiveness before exiting the market.",
+      "\"A fair exchange that is. Not something you find often here in the Spire!\" he says, shooting a glance over to the Gremlin vendor and his wheel. NL NL The salesman concludes the deal and swaps your card into the glass case. It's nice to deal with a broker who doesn't sometimes shank you in the ribs for no reason.",
+      "You turn the page of the book on the counter, and somehow cut your finger on the paper's edge. The blood seeps onto the page and spreads, and soon your vision is clouded in a black mist. NL NL Your mind reels with new knowledge that defies the laws of card physics itself! But at what cost...",
+      "Nothing at this market of questionable legality appeals to you, but as you depart, the smoky magical creature shifts to block your path, and drops into your hand a potion. NL NL You hear a voice inside your head... NL NL \"You'll... be back...\"",
+      "The figure nods, though you haven't actually said anything - you merely thought to ask about the darkness you hold within. NL NL The vendor reaches out and draws a thick smoke from your body, which it absorbs into its own ethereal form. You feel immediately free of the hold of the Curse, and nod back.",
+      "\"Yes, yes, an excellent choice! A full collection!\" NL NL #yRanwid tucks away the #ygold and hands you a leather-bound card binder. The cover has a couple of darkened spots... water damage? Blood? Who can say.",
+      "\"Ah, looking to undo the mistakes of the past? Yes, yes... #yRanwid understands...\" NL NL #yRanwid looks down solemnly as it passes you the Decree. You ask what weighs so heavily on this creature's mind, but it says nothing, instantly refreshing to its usual chipper demeanor. NL NL \"We meet again!\", it says to the next customer.",
+      "#yRanwid's eyes turn wide, staring directly at your glorious hat. NL NL \"You... I can't... thank you!\" NL NL Ranwid dons the hat for itself, earning the gaze and applause of many of the Market's patrons.",
+      "That vendor didn't seem to have what you want. Maybe another will..."
+    ],
+    "OPTIONS": [
+      "#b[Sketchy #bSalesman] Browse Single Cards.",
+      "#r[Wispy #rWizard] Learn to Conjur Packs.",
+      "#y[Dubious #yDealer] Browse Relics.",
+      "[Leave]",
+      "[Buy] #rLose #r",
+      "g. #gAdd #g1 #gof #g20 #gcards #gfrom #gPacks #gnot #gin #gyour #gpool.",
+      "[Sell] #gRemove #ga #gnon-Basic, #gnon-Curse #gcard #gfrom #gyour #gdeck. #gGain #g",
+      "g.",
+      "[Trade-In] #gPerform [Sell], #gthen [Buy] #g2 #gcards #gat #gno #gcost.",
+      "[Locked] Can't Afford.",
+      "[Locked] No cards to remove.",
+      "[Learn Dark Arts] #rBecome #rCursed #r- #rNecronomicurse. #gObtain #gPack #gRip.",
+      "[Take Sample] #gObtain #gPack #gin #ga #gJar #g(Pack #gRip #gPotion).",
+      "[Cleansing Ritual] Remove a #rCurse from your deck.",
+      "[Locked] No Curses to remove.",
+      "[Buy Collection] #rLose #r",
+      "g. #gObtain #gPM #gBooster #gBox.",
+      "[Buy Decree] #rLose #r",
+      "g. #gObtain #gBanishing #gDecree.",
+      "[Sell Hat] #gGain #g",
+      "g. #rLose #ryour #rHat.",
+      "[Locked] No Hat to sell.",
+      "Go somewhere else."
+    ]
+  }
+}
