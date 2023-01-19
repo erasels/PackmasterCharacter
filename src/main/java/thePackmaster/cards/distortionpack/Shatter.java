@@ -36,6 +36,7 @@ public class Shatter extends AbstractDistortionCard {
         int hits = HPLostTrackingPatch.Field.hpLostTimes.get(mo);
         if (hits > 0 && !this.rawDescription.equals(cardStrings.EXTENDED_DESCRIPTION[0])) {
             this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
+            this.magicNumber = this.baseMagicNumber = hits;
             initializeDescription();
         }
     }
