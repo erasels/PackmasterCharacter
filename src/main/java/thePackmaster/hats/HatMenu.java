@@ -50,12 +50,12 @@ public class HatMenu {
     //positions
     private static final float BG_X_SCALE = Settings.scale * 0.275f;
     private static final float BG_Y_SCALE = Settings.scale * 0.8f;
-    private static final float BG_X = 525f * Settings.xScale;
-    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
-    private static final float DROPDOWN_X = 550f * Settings.xScale;
-    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
+    private static final float BG_X = 525f * Settings.scale;
+    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.scale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
+    private static final float DROPDOWN_X = 559f * Settings.scale;
+    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
     private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
-    private static final float PREVIEW_Y = BG_Y + (225 * Settings.scale);
+    private static final float PREVIEW_Y = BG_Y + (215 * Settings.scale);
 
     public static AbstractPlayer dummy;
 
