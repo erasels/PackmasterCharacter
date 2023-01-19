@@ -44,6 +44,11 @@ public class FreeSpace extends AbstractPackmasterCard {
     }
 
     @Override
+    public void triggerWhenDrawn() {
+        Wiz.atb(new DrawCardAction(1));
+    }
+
+    @Override
     public void triggerOnManualDiscard() {
         Wiz.atb(new DrawCardAction(1));
     }
