@@ -13,7 +13,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.forAllMonstersLiving;
 
-public class Chained extends AbstractPackmasterCard {
+public class Chained extends AbstractWarriorCard {
 
     public final static String ID = makeID(Chained.class.getSimpleName());
 

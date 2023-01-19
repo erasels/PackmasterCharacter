@@ -11,11 +11,11 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class DashIn extends AbstractPackmasterCard {
+public class DashIn extends AbstractGrandOpeningCard {
     public final static String ID = makeID("DashIn");
 
     public DashIn() {
-        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, "grandopening");
+        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.isInnate = true;
         this.baseDamage = this.damage = 4;
         this.baseBlock = this.block = 4;

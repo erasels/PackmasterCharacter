@@ -15,7 +15,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.atb;
 
-public class StormStrike extends AbstractPackmasterCard {
+public class StormStrike extends AbstractWarriorCard {
 
     public final static String ID = makeID(StormStrike.class.getSimpleName());
 

@@ -19,7 +19,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.atb;
 
-public class WorkHammer extends AbstractPackmasterCard {
+public class WorkHammer extends AbstractWarriorCard {
 
     public final static String ID = makeID(WorkHammer.class.getSimpleName());
 

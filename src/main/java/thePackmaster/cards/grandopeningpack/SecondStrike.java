@@ -10,11 +10,11 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SecondStrike extends AbstractPackmasterCard {
+public class SecondStrike extends AbstractGrandOpeningCard {
     public final static String ID = makeID("SecondStrike");
 
     public SecondStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, "grandopening");
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         tags.add(CardTags.STRIKE);
         this.baseDamage = this.damage = 6;
         this.isInnate = true;

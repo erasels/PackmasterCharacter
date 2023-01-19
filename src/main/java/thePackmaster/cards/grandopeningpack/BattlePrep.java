@@ -15,11 +15,11 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class BattlePrep extends AbstractPackmasterCard {
+public class BattlePrep extends AbstractGrandOpeningCard {
     public final static String ID = makeID("BattlePrep");
 
     public BattlePrep() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, "grandopening");
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         FleetingField.fleeting.set(this, true);
         tags.add(CardTags.HEALING);
     }
