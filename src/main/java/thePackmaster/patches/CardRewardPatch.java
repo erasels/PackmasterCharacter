@@ -17,9 +17,9 @@ import java.util.ArrayList;
 @SpirePatch(clz = CombatRewardScreen.class, method = "setupItemReward")
 public class CardRewardPatch {
     @SpirePrefixPatch
-    public static SpireReturn Prefix(CombatRewardScreen __instance) {
+    public static SpireReturn<?> Prefix(CombatRewardScreen __instance) {
         if (SpireAnniversary5Mod.skipDefaultCardRewards) {
-            __instance.rewards = new ArrayList(AbstractDungeon.getCurrRoom().rewards);
+            __instance.rewards = new ArrayList<>(AbstractDungeon.getCurrRoom().rewards);
             ReflectionHacks.setPrivate(__instance, CombatRewardScreen.class, "rewardAnimTimer", 0.2F);
             AbstractDungeon.overlayMenu.proceedButton.show();
             InputHelper.justClickedLeft = false;
