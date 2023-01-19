@@ -14,7 +14,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
-public class Rapier extends AbstractPackmasterCard {
+public class Rapier extends AbstractWarriorCard {
 
     public final static String ID = makeID(Rapier.class.getSimpleName());
 

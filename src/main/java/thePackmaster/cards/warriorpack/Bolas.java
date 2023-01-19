@@ -12,7 +12,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Bolas extends AbstractPackmasterCard {
+public class Bolas extends AbstractWarriorCard {
 
     public final static String ID = makeID(Bolas.class.getSimpleName());
 

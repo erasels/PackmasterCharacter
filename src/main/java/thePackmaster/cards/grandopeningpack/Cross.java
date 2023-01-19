@@ -15,10 +15,10 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Cross extends AbstractPackmasterCard {
+public class Cross extends AbstractGrandOpeningCard {
     public final static String ID = makeID("Cross");
     public Cross() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, "grandopening");
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = this.damage = 2;
         this.baseMagicNumber = this.magicNumber = 2;
     }
