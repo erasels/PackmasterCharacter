@@ -4,13 +4,12 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.evenoddpack.SwordAndBoardAction;
 import thePackmaster.actions.evenoddpack.WindupAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WindUp extends AbstractEvenOddCard{
-    public final static String ID = makeID(WindUp.class.getSimpleName());
+public class WindUpBomb extends AbstractEvenOddCard{
+    public final static String ID = makeID(WindUpBomb.class.getSimpleName());
     private static final int DAMAGE = 8;
     private static final int MAGIC = 15;
     private static final int UMAGIC = 5;
@@ -19,7 +18,7 @@ public class WindUp extends AbstractEvenOddCard{
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
     
-    public WindUp() {
+    public WindUpBomb() {
         super(ID, COST, TYPE, RARITY, TARGET);
         rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];

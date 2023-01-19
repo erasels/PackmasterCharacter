@@ -3,7 +3,6 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.downfallpack.*;
 import thePackmaster.cards.evenoddpack.*;
 
 import java.util.ArrayList;
@@ -28,7 +27,7 @@ public class EvenOddPack extends AbstractCardPack {
         cards.add(WitzBolt.ID);
         cards.add(ElementOfSurprise.ID);
         cards.add(GammaWard.ID);
-        cards.add(WindUp.ID);
+        cards.add(WindUpBomb.ID);
         cards.add(LeftHook.ID);
         cards.add(Battlecry.ID);
         return cards;

@@ -38,8 +38,8 @@
     "DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": [" NL (+ ", " damage.)", " NL Gain ", " Block"]
   },
-  "${ModID}:WindUp": {
-    "NAME": "WindUp",
+  "${ModID}:WindUpBomb": {
+    "NAME": "Windup Bomb",
     "DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["${ModID}:Even: ", "Increase this cards damage by !M!", " NL ", "${ModID}:Odd: ", "Deal !D! damage."]
   },
