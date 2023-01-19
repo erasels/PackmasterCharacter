@@ -4,14 +4,14 @@
     "DESCRIPTION": [
       "#yPassive: When activated, deal #b",
       " damage to a random enemy, #yEvoke this if this has activated #b"," times. NL #yEvoke: deal #b",
-      " damage to a random enemy for each remaining #ypassive use and lose an orb slot."
+      " damage to a random enemy."
     ]
   },
   "${ModID}:FullMoon": {
     "NAME": "Full Moon",
     "DESCRIPTION": [
       "#yPassive: When activated, draw a card",
-      " #yEvoke this if this has activated #b"," times. NL #yEvoke: draw a card each remaining #ypassive use and lose an orb slot."
+      " #yEvoke this if this has activated #b"," times. NL #yEvoke: draw a card."
     ]
   }
 }
