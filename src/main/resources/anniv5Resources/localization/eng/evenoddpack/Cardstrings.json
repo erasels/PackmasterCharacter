@@ -47,5 +47,10 @@
     "NAME": "Left Hook",
     "DESCRIPTION": "Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Odd: ", "Stays in your hand."]
+  },
+  "${ModID}:Battlecry": {
+    "NAME": "Battlecry",
+    "DESCRIPTION": "Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First: ", "Gain !M! Strength."]
   }
 }
