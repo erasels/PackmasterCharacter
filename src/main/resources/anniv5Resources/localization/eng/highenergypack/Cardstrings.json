@@ -32,7 +32,8 @@
       "Gain ",
       "Retain. NL Gain ",
       " . NL Exhaust.",
-      "You gain nothing! NL Good day, sir! NL Exhaust."
+      "You gain nothing! NL Good day, sir! NL Exhaust.",
+      "mm delocious"
     ]
   },
   "${ModID}:Investor": {

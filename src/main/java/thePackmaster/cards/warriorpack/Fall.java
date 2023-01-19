@@ -15,7 +15,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class Fall extends AbstractPackmasterCard {
+public class Fall extends AbstractWarriorCard {
 
     public final static String ID = makeID(Fall.class.getSimpleName());
 

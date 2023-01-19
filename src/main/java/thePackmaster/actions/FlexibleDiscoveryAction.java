@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.function.Consumer;
 
 public class FlexibleDiscoveryAction extends AbstractGameAction {

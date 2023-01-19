@@ -108,10 +108,7 @@
   },
   "${ModID}:CardTypeStrings": {
     "TEXT": [
-      "Chance",
-      "Inspiration",
-      "Mental Break",
-      "Status"
+      "Chance"
     ]
   },
   "${ModID}:HatMenu": {
@@ -133,7 +130,7 @@
       "The Packmaster",
       "StS Modding Community",
       "Adds a new character: The Packmaster.",
-      "ALL PACKS MODE. Ignores Custom Draft",
+      "ALL PACKS MODE. Ignores Custom Draft, Doesn't Unlock Hats",
       "One Frame For All. All Pack cards have normal Packmaster frames (Requires Restart).",
       "Share Content. Some Relics/ Potions can appear on other characters (Requires Restart)."
     ]

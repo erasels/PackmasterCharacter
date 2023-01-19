@@ -2,6 +2,7 @@ package thePackmaster.cards.odditiespack;
 
 import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -37,6 +38,7 @@ public class SleeveUp extends AbstractOdditiesCard implements SpawnModificationC
         for (AbstractCard c : rewardCards) {
             PackmasterFoilPatches.makeFoil(c);
             CardModifierManager.addModifier(c, new RetainMod());
+            c.superFlash(Color.SKY.cpy());
         }
     }
 }

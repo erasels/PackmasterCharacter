@@ -104,28 +104,9 @@ public class TransmuteCardAction extends AbstractGameAction {
                 } else if (choices == 1) {
                     AbstractCard newCard = getRandomCard(getTransmutationCandidates(playedCard)).makeCopy();
                     modifyNewCard(playedCard, newCard);
-                    //modify useCardAction for the current card using related patch
-                    UseCardAction useCardAction = null;
-                    for (AbstractGameAction action : AbstractDungeon.actionManager.actions) {
-                        if (action instanceof UseCardAction) {
-                            AbstractCard c = ReflectionHacks.getPrivate(action, UseCardAction.class, "targetCard");
-                            if (c != null && c == playedCard) {
-                                useCardAction = (UseCardAction) action;
-                                break;
-                            } else {
-                                System.out.println("ERROR: transmute when played, but UseCardAction not pointing at passed card");
-                                isDone = true;
-                                return;
-                            }
-                        }
-                    }
-                    TransmuteCardEffect.copyCardPosition(playedCard, newCard);
-                    AbstractDungeon.player.hand.removeCard(playedCard);
-                    AbstractDungeon.player.cardInUse = null;
-                    UseCardActionPatch.UseCardActionField.transmuteTargetCard.set(useCardAction, newCard);
+                    modifyUsedCard(newCard);
                     transmutedPairs.put(playedCard, newCard);
-                    AbstractDungeon.topLevelEffects.add(new TransmuteCardEffect(transmutedPairs, null, this, 0.75f));
-                    completed = true;
+                    finish();
                 } else {
                     CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
                     ArrayList<AbstractCard> targets = getTransmutationCandidates(playedCard);
@@ -198,50 +179,46 @@ public class TransmuteCardAction extends AbstractGameAction {
             } else {
                 modifyNewCard(playedCard, newCard);
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                //modify useCardAction for the current card using related patch
-                UseCardAction useCardAction = null;
-                for (AbstractGameAction action : AbstractDungeon.actionManager.actions) {
-                    if (action instanceof UseCardAction) {
-                        try {
-                            Field targetCardField = UseCardAction.class.getDeclaredField("targetCard");
-                            targetCardField.setAccessible(true);
-                            if (targetCardField.get(action) == playedCard) {
-                                useCardAction = (UseCardAction) action;
-                                break;
-                            }
-                        } catch (NoSuchFieldException | IllegalAccessException e) {
-                            e.printStackTrace();
-                            isDone = true;
-                            return;
-                        }
-                    }
-                }
-                TransmuteCardEffect.copyCardPosition(playedCard, newCard);
-                AbstractDungeon.player.hand.removeCard(playedCard);
-                AbstractDungeon.player.cardInUse = null;
-                UseCardActionPatch.UseCardActionField.transmuteTargetCard.set(useCardAction, newCard);
+                modifyUsedCard(newCard);
                 transmutedPairs.put(playedCard, newCard);
-                AbstractDungeon.topLevelEffects.add(new TransmuteCardEffect(transmutedPairs, null, this, 0.75f));
-                completed = true;
+                finish();
             }
             return;
         }
         if (AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && AbstractDungeon.handCardSelectScreen.selectedCards.group.isEmpty() && initialized) {
-            float duration = 0.75f;
-            if (anyNumber && transmutedPairs.keySet().size() > 1) {
-                duration *= 2.0f;
-            }
-            for (AbstractPower power : AbstractDungeon.player.powers) {
-                if (power instanceof TransmutableAffectingPower) {
-                    ((TransmutableAffectingPower)power).onTransmute(this, transmutedPairs);
+            finish();
+        }
+    }
+
+    private void modifyUsedCard(AbstractCard newCard) {
+        for (AbstractGameAction action : AbstractDungeon.actionManager.actions) {
+            if (action instanceof UseCardAction) {
+                AbstractCard targetCard = ReflectionHacks.getPrivate(action, UseCardAction.class, "targetCard");
+                if (targetCard == playedCard) {
+                    UseCardActionPatch.UseCardActionField.transmuteTargetCard.set(action, newCard);
+                    AbstractDungeon.player.hand.removeCard(playedCard);
+                    AbstractDungeon.player.cardInUse = null;
                 }
             }
-            if (transmutedPairs.isEmpty()) {
-                isDone = true;
-            } else {
-                AbstractDungeon.topLevelEffects.add(new TransmuteCardEffect(transmutedPairs, CardGroup.CardGroupType.HAND, this, duration));
-                completed = true;
+        }
+        TransmuteCardEffect.copyCardPosition(playedCard, newCard);
+    }
+
+    private void finish() {
+        for (AbstractPower power : AbstractDungeon.player.powers) {
+            if (power instanceof TransmutableAffectingPower) {
+                ((TransmutableAffectingPower)power).onTransmute(this, transmutedPairs);
             }
+        }
+        float duration = 0.75f;
+        if (transmutedPairs.keySet().size() > 1) {
+            duration *= 1.5f;
+        }
+        if (transmutedPairs.isEmpty()) {
+            isDone = true;
+        } else {
+            AbstractDungeon.topLevelEffects.add(new TransmuteCardEffect(transmutedPairs, CardGroup.CardGroupType.HAND, this, duration));
+            completed = true;
         }
     }
 

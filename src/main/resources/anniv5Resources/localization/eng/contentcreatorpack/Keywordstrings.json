@@ -1,0 +1,30 @@
+[
+  {
+    "PROPER_NAME": "Wanderbot",
+    "NAMES": [
+      "wanderbot"
+    ],
+    "DESCRIPTION": "Orb: Deals damage to the frontmost enemy. Draws a card when evoked."
+  },
+  {
+    "PROPER_NAME": "MEGAthereal",
+    "NAMES": [
+      "megathereal"
+    ],
+    "DESCRIPTION": "Exhausts at the end of the turn, no matter where it is."
+  },
+  {
+    "PROPER_NAME": "Odd",
+    "NAMES": [
+      "odd"
+    ],
+    "DESCRIPTION": "Additional effect if you played an odd number of cards this turn (including this)."
+  },
+  {
+    "PROPER_NAME": "Even",
+    "NAMES": [
+      "even"
+    ],
+    "DESCRIPTION": "Additional effect if you played an even number of cards this turn (including this)."
+  }
+]

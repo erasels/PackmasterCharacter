@@ -1,0 +1,62 @@
+{
+  "${ModID}:DroneSwarmRareSkill": {
+    "NAME": "Drone Swarm",
+    "DESCRIPTION": "Raise your hand size this turn by !${ModID}:m2!. NL Draw !M! cards."
+  },
+  "${ModID}:TheSuckamidRareSkill": {
+    "NAME": "The Suckamid",
+    "DESCRIPTION": "Heal !M! HP. NL Retain your hand for !${ModID}:m2! turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Heal !M! HP. NL Retain your hand for !${ModID}:m2! turns. NL Exhaust."
+  },
+  "${ModID}:ElectromagneticBurstRarePower": {
+    "NAME": "Electromagnetic Burst",
+    "DESCRIPTION": "Whenever you gain Block, deal !M! damage to a random enemy."
+  },
+  "${ModID}:ArrowStormRareAttack": {
+    "NAME": "Arrow Storm",
+    "DESCRIPTION": "Exhaust all Attack cards in your hand. NL If you exhausted a card, deal !D! damage to ALL enemies !M! times."
+  },
+  "${ModID}:MarvelousFeastUncommonPower": {
+    "NAME": "Marvelous Feast",
+    "DESCRIPTION": "Innate. Add in order: ${ModID}:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended.",
+    "UPGRADE_DESCRIPTION": "Innate. Add in order, upgraded: ${ModID}:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended."
+  },
+  "${ModID}:MeatyCroquettesSpecialColourless": {
+    "NAME": "Meaty Croquettes",
+    "DESCRIPTION": "${ModID}:Croquette. NL Gain !M! Strength. NL Exhaust."
+  },
+  "${ModID}:FishyCroquettesSpecialColourless": {
+    "NAME": "Fishy Croquettes",
+    "DESCRIPTION": "${ModID}:Croquette. NL Apply !M! Weak. NL Exhaust."
+  },
+  "${ModID}:FriendshipCroquettesSpecialColourless": {
+    "NAME": "Friendship Croquettes",
+    "DESCRIPTION": "${ModID}:Croquette. NL Gain !B! Block, Exhaust. NL When Retained, increase its Block by !M! this combat."
+  },
+  "${ModID}:MysteryCroquettesSpecialColourless": {
+    "NAME": "Mystery Croquettes",
+    "DESCRIPTION": "${ModID}:Croquette. NL Apply !M! Vulnerable. NL Exhaust."
+  },
+  "${ModID}:TopOfTheSkyUncommonAttack": {
+    "NAME": "Top of the Sky",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Gain !B! Block. NL Returns to your hand on play. Exhaustive !stslib:ex!."
+  },
+  "${ModID}:BucketOfDregsUncommonSkill": {
+    "NAME": "Bucket Of Dregs",
+    "DESCRIPTION": "Unplayable. Retain. NL When Retained, heal ALL enemies for !M! HP and gain !B! Block."
+  },
+  "${ModID}:PocketTournamentUncommonSkill": {
+    "NAME": "Pocket Tournament",
+    "DESCRIPTION": "Next turn, randomly, 2X times: NL Draw 1 card, gain [E] , gain 1 Strength or gain 3 Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, randomly, 2X+2 times: NL Draw 1 card, gain [E] , gain 1 Strength or gain 3 Block. NL Exhaust."
+  },
+  "${ModID}:StoneSwordCommonAttack": {
+    "NAME": "Stone Sword",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Dexterity. NL Exhaust."
+  },
+  "${ModID}:Rea__dyCommonSkill": {
+    "NAME": "Rea--dy!",
+    "DESCRIPTION": "Gain !M! Vigor. NL Gain !${ModID}:m2! Temporary Dexterity. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Vigor. NL Gain !${ModID}:m2! Temporary Dexterity. NL Draw 1 card. NL Exhaustive !stslib:ex!."
+  }
+}

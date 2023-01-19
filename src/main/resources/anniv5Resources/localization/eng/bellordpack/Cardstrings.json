@@ -4,7 +4,7 @@
     "DESCRIPTION": "Gain !B! Block. NL At the start of your turn, if this is in your discard pile, it leaps into your hand."
   },
   "${ModID}:Midnight": {
-    "NAME": "Midnight",
+    "NAME": "Toll",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
   },
   "${ModID}:Clang": {
@@ -41,6 +41,6 @@
   },
   "${ModID}:SavedByTheBell": {
     "NAME": "Saved by the Bell",
-    "DESCRIPTION": "Gain 1 Intangible. NL ${ModID}:Pickup: Obtain 3 *Curses *of *the *Bell."
+    "DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Exhaust. NL ${ModID}:Pickup: Obtain 3 *Curses *of *the *Bell."
   }
 }

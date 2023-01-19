@@ -19,7 +19,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.atb;
 
-public class WorkHammer extends AbstractPackmasterCard {
+public class WorkHammer extends AbstractWarriorCard {
 
     public final static String ID = makeID(WorkHammer.class.getSimpleName());
 
@@ -27,7 +27,7 @@ public class WorkHammer extends AbstractPackmasterCard {
 
     public WorkHammer(){
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 11;
         DamageModifierManager.addModifier(this, new FrontDamage());
         magicNumber = baseMagicNumber = 2;
     }

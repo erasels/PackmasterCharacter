@@ -1,6 +1,5 @@
 package thePackmaster.cards.wardenpack;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,7 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.actions.HandSelectAction;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -26,12 +25,12 @@ public class Stall extends AbstractWardenCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, block));
-        Wiz.atb(new SelectCardsInHandAction(this.magicNumber, uiStrings.TEXT[0], false, true, c -> true, list -> {
+        Wiz.atb(new HandSelectAction(this.magicNumber, (c) -> true, list -> {
             for (AbstractCard c : list)
                 p.hand.moveToDeck(c, false);
             AbstractDungeon.player.hand.refreshHandLayout();
             list.clear();
-        }));
+        }, null, uiStrings.TEXT[0],false,true,true));
     }
 
     public void upp() {

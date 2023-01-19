@@ -1,0 +1,15 @@
+{
+  "${ModID}:ReplicatorsPack": {
+    "TEXT": [
+      "Replicators",
+      "Multiply your cards and strive for a big deck full of value",
+      "Mindbomber"
+    ]
+  },
+  "${ModID}:ReplicatorsPackHat": {
+    "TEXT": [
+      "It just wants to play",
+      "Replicator Hat"
+    ]
+  }
+}

@@ -25,7 +25,7 @@ public class WatcherPack extends AbstractCardPack {
         cards.add(FollowUp.ID);
         cards.add(PressurePoints.ID);
         cards.add(CrushJoints.ID);
-        cards.add(FollowUp.ID);
+        cards.add(ThirdEye.ID);
         cards.add(Fasting.ID);
         cards.add(Wallop.ID);
         cards.add(DeceiveReality.ID);

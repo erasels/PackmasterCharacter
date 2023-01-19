@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.vfx.combat.*;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect.OrbFlareColor;
 import thePackmaster.actions.downfallpack.GhostflameOrbEvokeAction;
 
+import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
 public class Ghostflame extends AbstractOrb {
@@ -33,7 +34,7 @@ public class Ghostflame extends AbstractOrb {
     private float particleTimer = 0.0F;
 
     public Ghostflame() {
-        this.ID = "Ghostflame";
+        this.ID = makeID("Ghostflame");
         this.img = ImageMaster.ORB_LIGHTNING;
         this.name = orbString.NAME;
         this.baseEvokeAmount = 8;

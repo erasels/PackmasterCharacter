@@ -1,0 +1,10 @@
+{
+  "Wanderbot": {
+    "NAME": "Wanderbot",
+    "DESCRIPTION": [
+      "#yPassive: At the end of turn, deal #b",
+      " damage to the frontmost enemy. NL #yEvoke: Deal #b",
+      " damage to the frontmost enemy and draw #b1 card."
+    ]
+  }
+}

@@ -24,7 +24,7 @@ public class Entomology extends AbstractInfestCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int amt = InfestModifier.getInfestCount(this);
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         if (amt > 0) {
             AbstractCard myself = this;
             atb(new AbstractGameAction() {
