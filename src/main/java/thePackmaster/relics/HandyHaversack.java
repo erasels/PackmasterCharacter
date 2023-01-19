@@ -17,13 +17,16 @@ public class HandyHaversack extends AbstractPackmasterRelic {
     public void atPreBattle() {
         this.firstTurn = true;
     }
+    
+    public void atBattleStart() {
+        flash();
+        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(1));
+    }
 
     public void atTurnStart() {
         if (this.firstTurn) {
-            flash();
-            addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             addToTop(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
-            addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(1));
             this.firstTurn = false;
         }
     }
