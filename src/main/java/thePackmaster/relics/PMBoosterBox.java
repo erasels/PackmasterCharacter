@@ -26,18 +26,11 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
     private String myPackOne = "";
     private String myPackTwo = "";
     private String myPackThree = "";
-    private ArrayList<String> myPacks = new ArrayList<>();
+    public ArrayList<String> myPacks = new ArrayList<>();
 
 
     public PMBoosterBox() {
         super(ID, RelicTier.RARE, LandingSound.FLAT, null, true);
-    }
-
-    public void onVictory() {
-        //TODO - Known issue: if you exit the run during a reward screen, you lose this reward on load.
-        RewardItem r = new RewardItem();
-        r.cards = getCardsFromPacks(myPacks, 3);
-        AbstractDungeon.getCurrRoom().rewards.add(r);
     }
 
     @Override
