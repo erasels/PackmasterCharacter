@@ -3,7 +3,7 @@
     "NAME": "Booster Brew",
     "DESCRIPTIONS": [
       "Choose #b1 of #b3 Packs. Add #b",
-      " random cards from it into your draw pile. They cost 0 this combat."
+      " random cards from it into your draw pile. They cost #b0 this combat."
     ]
   },
   "${ModID}:ModdersDelight": {
