@@ -16,7 +16,6 @@ public class FireVial extends AbstractWomanInBlueCard {
     public FireVial() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 20;
-        isMultiDamage = true;
         exhaust = true;
         baseMagicNumber = magicNumber = 4;
     }
