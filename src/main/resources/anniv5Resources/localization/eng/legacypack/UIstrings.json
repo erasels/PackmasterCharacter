@@ -2,8 +2,9 @@
   "${ModID}:LegacyPack": {
     "TEXT": [
       "A Grand Legacy",
-      "A blast from the past, featuring cards from the oldest mods in the Workshop. Credits: celicath, moocowgoesmoo, JohnnyBazooka, chronometrics, fiiiiilth",
-      "Original Authors"
+      "A blast from the past, featuring cards inspired by legacy character mods, from before the days of Steam Workshop.",
+      "Original Authors",
+      "Original Mod Authors: celicath, moocowgoesmoo, JohnnyBazooka, chronometrics, fiiiiilth"
     ]
   },
   "${ModID}:LegacyPackHat": {

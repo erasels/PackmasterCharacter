@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.SlowPower;
 
 import thePackmaster.vfx.legacypack.SlimeSplashEffect;
@@ -17,14 +18,16 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class SlimeSpray extends AbstractLegacyCard {
     public final static String ID = makeID("SlimeSpray");
 
-    private static final int ATTACK_DMG = 7;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int ATTACK_DMG = 4;
+    private static final int POISON_VALUE = 4;
+    private static final int UPGRADE_PLUS_POISON_VALUE = 4;
 
 
     public SlimeSpray() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 
         this.baseDamage = ATTACK_DMG;
+        this.baseMagicNumber = this.magicNumber = POISON_VALUE;
         this.isMultiDamage = true;
         selfRetain = true;
 
@@ -42,6 +45,8 @@ public class SlimeSpray extends AbstractLegacyCard {
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!mo.isDead && !mo.escaped) {
                 AbstractDungeon.actionManager.addToBottom(
+                        new ApplyPowerAction(mo, p, new PoisonPower(mo, p, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                AbstractDungeon.actionManager.addToBottom(
                         new ApplyPowerAction(mo, p, new SlowPower(mo, 0), 0, true, AbstractGameAction.AttackEffect.NONE));
 
                 AbstractDungeon.actionManager.addToBottom(
@@ -51,6 +56,6 @@ public class SlimeSpray extends AbstractLegacyCard {
     }
 
     public void upp() {
-        upgradeDamage(UPGRADE_PLUS_DMG);
+        upgradeMagicNumber(UPGRADE_PLUS_POISON_VALUE);
     }
 }
