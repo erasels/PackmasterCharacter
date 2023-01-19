@@ -29,6 +29,7 @@ public class EvenOddPack extends AbstractCardPack {
         cards.add(ElementOfSurprise.ID);
         cards.add(GammaWard.ID);
         cards.add(WindUp.ID);
+        cards.add(LeftHook.ID);
         return cards;
     }
 }
