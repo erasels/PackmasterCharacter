@@ -24,7 +24,7 @@ public class LegacyPack extends AbstractCardPack {
         cards.add(AcidicSpray.ID);
         cards.add(BloodRitual.ID);
         cards.add(CaptainsCabin.ID);
-        cards.add(HuntressEssence.ID);
+        cards.add(StickStrike.ID);
         cards.add(MassProduction.ID);
         cards.add(OverTime.ID);
         cards.add(PoisonMastery.ID);
