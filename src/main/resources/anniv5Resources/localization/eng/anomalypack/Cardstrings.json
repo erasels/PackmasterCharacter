@@ -7,7 +7,7 @@
   "${ModID}:FreeSpace": {
     "NAME": "Free Space",
     "DESCRIPTION": "Ethereal. NL When you draw, discard, exhaust or play this, draw a card.",
-    "UPGRADE_DESCRIPTION": "When you draw, discard, exhaust or play this, draw a card."
+    "UPGRADE_DESCRIPTION": "When you draw, discard, Exhaust or play this, draw a card."
   },
   "${ModID}:MidnightOil": {
     "NAME": "Midnight Oil",
