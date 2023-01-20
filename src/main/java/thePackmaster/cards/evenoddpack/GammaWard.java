@@ -24,6 +24,10 @@ public class GammaWard extends AbstractEvenOddCard {
         super(ID, COST, TYPE, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
         baseBlock = BLOCK;
+        rawDescription += cardStrings.EXTENDED_DESCRIPTION[0]
+                + cardStrings.EXTENDED_DESCRIPTION[1]
+                + cardStrings.EXTENDED_DESCRIPTION[2];
+        initializeDescription();
     }
     
     @Override
