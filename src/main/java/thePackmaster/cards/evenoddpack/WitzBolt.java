@@ -72,8 +72,7 @@ public class WitzBolt extends AbstractEvenOddCard{
                 if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1) {
                     for(int i = 0; i <5; i++) {
                         addToTop(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY), 0.05F));
-                    }
-                    Wiz.applyToEnemyTop(m, new VulnerablePower(m, magicNumber, false));
+                    } Wiz.applyToEnemyTop(m, new VulnerablePower(m, magicNumber, false));
                     Wiz.applyToEnemyTop(m, new WeakPower(m, magicNumber, false));
                     AbstractDungeon.actionManager.addToTop(new SFXAction("VO_CHAMP_2A", 0.5f, true));
                 }
