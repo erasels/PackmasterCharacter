@@ -13,71 +13,84 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import thePackmaster.powers.AbstractPackmasterPower;
 
+import java.util.HashSet;
+
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class OutToMarketPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("OutToMarketPower");
     private static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     private static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
-   private static boolean attack = false;
-   private String desc;
-   private static boolean skill = false;
-   private static boolean power = false;
-   private static boolean status = false;
-   private static boolean curse = false;
-   private static boolean noResult = false;
+    private String desc;
+
+    private HashSet<AbstractCard.CardType> played = new HashSet<>();
+
     public OutToMarketPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         updateDescription();
     }
-    public void atStartOfTurn(){
-        attack = false;
-        skill = false;
-        power = false;
-        status = false;
-        curse = false;
-        desc = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        this.description = desc;
+
+    @Override
+    public void onInitialApplication() {
+        cleanUp();
     }
+
+    @Override
+    public void atStartOfTurn() {
+        cleanUp();
+    }
+
     public void onAfterCardPlayed(AbstractCard card) {
-        if (card.type == AbstractCard.CardType.ATTACK && !attack)  {
-            attack = true;
-            desc = desc + " " + CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[2];
-        }
-        else if (card.type == AbstractCard.CardType.SKILL && !skill){
-            skill = true;
-            desc = desc + " " + CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[3];
-        }
-        else if (card.type == AbstractCard.CardType.POWER && !power){
-            power = true;
-            desc = desc + " " + CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[4];
-        }
-        else if (card.type == AbstractCard.CardType.STATUS && !status){
-            status = true;
-            desc = desc + " " + CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[5];
-        }
-        else if (card.type == AbstractCard.CardType.CURSE && !curse){
-            curse = true;
-            desc = desc + " " + CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[6];
-        }
-        else{
-            noResult = true;
-        }
-        if (!noResult){
-            this.flash();
-            this.addToBot(new SFXAction("ATTACK_HEAVY"));
+        if(!played.contains(card.type)) {
+            played.add(card.type);
+            updateCardsPlayed(card.type);
+
+            flash();
+            addToBot(new SFXAction("ATTACK_HEAVY"));
             if (Settings.FAST_MODE) {
-                this.addToBot(new VFXAction(new CleaveEffect()));
+                addToBot(new VFXAction(new CleaveEffect()));
             } else {
-                this.addToBot(new VFXAction(this.owner, new CleaveEffect(), 0.2F));
+                addToBot(new VFXAction(this.owner, new CleaveEffect(), 0.2F));
             }
-            this.description = desc;
-            this.addToBot(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE, true));
+            description = desc;
+            addToBot(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE, true));
         }
     }
 
     public void updateDescription() {
         desc = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
         this.description = desc;
+    }
+
+    private void cleanUp() {
+        played.clear();
+        desc = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = desc;
+    }
+
+    private void updateCardsPlayed(AbstractCard.CardType type) {
+        String add;
+        switch (type) {
+            case SKILL:
+                add = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[3];
+                break;
+            case ATTACK:
+                add = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[2];
+                break;
+            case POWER:
+                add = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[4];
+                break;
+            case STATUS:
+                add = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[5];
+                break;
+            case CURSE:
+                add = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[6];
+                break;
+            default:
+                add = type.name();
+        }
+
+        desc = desc + " " + add;
+        description = desc;
     }
 }

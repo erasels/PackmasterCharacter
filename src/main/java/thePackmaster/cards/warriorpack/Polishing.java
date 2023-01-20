@@ -8,7 +8,7 @@ import thePackmaster.powers.warriorpack.PolishingPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class Polishing extends AbstractPackmasterCard {
+public class Polishing extends AbstractWarriorCard {
 
     public final static String ID = makeID(Polishing.class.getSimpleName());
 

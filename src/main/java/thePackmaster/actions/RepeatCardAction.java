@@ -23,13 +23,10 @@ public class RepeatCardAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_FAST) {
-            isDone = true;
-            if (target == null) {
-                target = AbstractDungeon.getRandomMonster();
-            }
-            GameActionManager.queueExtraCard(funCard, (AbstractMonster)target);
+        if (target == null) {
+            target = AbstractDungeon.getRandomMonster();
         }
+        GameActionManager.queueExtraCard(funCard, (AbstractMonster) target);
 
         this.isDone = true;
     }

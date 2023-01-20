@@ -12,7 +12,7 @@ public class Panacher extends AbstractEchoCard {
 
     public final static String ID = makeID(Panacher.class.getSimpleName());
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public Panacher(){
         super(ID, COST, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);

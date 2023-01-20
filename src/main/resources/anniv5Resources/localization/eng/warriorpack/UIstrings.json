@@ -5,5 +5,11 @@
       "Master multiple damage types to dismantle your opponents.",
       "Diamsword"
     ]
+  },
+  "${ModID}:WarriorPackHat": {
+    "TEXT": [
+      "The helm of a marathon runner.",
+      "Ancient Helmet"
+    ]
   }
 }

@@ -1,8 +1,10 @@
 package thePackmaster.relics;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import thePackmaster.ThePackmaster;
 
@@ -20,7 +22,7 @@ public class PMCollection extends AbstractPackmasterRelic {
         AbstractDungeon.getCurrRoom().rewards.clear();
 
         for (String s :
-                getRandomPackFromAll().getCards()) {
+                getRandomPackFromAll(new Random(Settings.seed + 37)).getCards()) {
             if (CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.COMMON ||
                     CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.UNCOMMON ||
                     CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.RARE) {

@@ -14,10 +14,11 @@ public class SouleaterStrike extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("SouleaterStrike");
     private static final int COST = 1;
     private static final int ATTACK_DMG = 13;
+    private static final int MAGIC = 13;
 
     public SouleaterStrike() {
         super(ID, COST, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
-        this.magicNumber = this.baseMagicNumber= 13;
+        baseMagicNumber = magicNumber = MAGIC;
         this.tags.add(CardTags.STRIKE);
         this.damage = this.baseDamage = ATTACK_DMG;
     }

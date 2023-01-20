@@ -23,11 +23,15 @@ public class NeutronStar extends AbstractPixieCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = baseMgk;
         this.tags.add(PixiePack.pixieTags.ENCHANTMENT);
+        this.isEthereal = true;
+        this.exhaust = true;
     }
 
     @Override
     public void upp() {
         this.upgradeMagicNumber(upgradeMgk-baseMgk);
+        this.isEthereal = false;
+        this.exhaust = false;
     }
 
     @Override

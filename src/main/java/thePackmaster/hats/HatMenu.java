@@ -20,6 +20,7 @@ import thePackmaster.packs.AlignmentPack;
 import thePackmaster.packs.PsychicPack;
 import thePackmaster.util.Wiz;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -36,6 +37,7 @@ public class HatMenu {
     public static final ArrayList<String> hats = new ArrayList<>();
     public static final ArrayList<String> currentlyUnlockedHats = new ArrayList<>();
     public static final Map<String, SpecialHat> specialHats = new HashMap<>();
+    public static final Map<String, Integer> hatsToIndexes = new HashMap<>();
 
     static {
         specialHats.put(AlignmentPack.ID, new AlignmentHat());
@@ -48,12 +50,12 @@ public class HatMenu {
     //positions
     private static final float BG_X_SCALE = Settings.scale * 0.275f;
     private static final float BG_Y_SCALE = Settings.scale * 0.8f;
-    private static final float BG_X = 525f * Settings.xScale;
-    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
-    private static final float DROPDOWN_X = 550f * Settings.xScale;
-    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
+    private static final float BG_X = 525f * Settings.scale;
+    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.scale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
+    private static final float DROPDOWN_X = 559f * Settings.scale;
+    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
     private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
-    private static final float PREVIEW_Y = BG_Y + (225 * Settings.scale);
+    private static final float PREVIEW_Y = BG_Y + (215 * Settings.scale);
 
     public static AbstractPlayer dummy;
 
@@ -64,12 +66,17 @@ public class HatMenu {
 
     public HatMenu() {
         refreshHatDropdown();
+    }
 
-        dummy = new ThePackmaster("", ThePackmaster.Enums.THE_PACKMASTER);
-        dummy.drawX = PREVIEW_X;
-        dummy.drawY = PREVIEW_Y;
+    public static AbstractPlayer getDummy() {
+        if (dummy == null) {
+            dummy = new ThePackmaster("", ThePackmaster.Enums.THE_PACKMASTER);
+            dummy.drawX = PREVIEW_X;
+            dummy.drawY = PREVIEW_Y;
 
-        dummy.animX = dummy.animY = 0;
+            dummy.animX = dummy.animY = 0;
+        }
+        return dummy;
     }
 
     public static void refreshHatDropdown() {
@@ -85,7 +92,18 @@ public class HatMenu {
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index, s)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
 
-        if (init) setCurrentHat(0, optionNames.get(0));
+        for (int i = 0; i < hats.size(); i++) {
+            hatsToIndexes.put(hats.get(i), i);
+        }
+
+        if (init) {
+            String lastPickedId = SpireAnniversary5Mod.getLastPickedHatID();
+            if (lastPickedId == null || lastPickedId.equals("")) {
+                dropdown.setSelectedIndex(0);
+            } else {
+                dropdown.setSelectedIndex(hatsToIndexes.get(lastPickedId));
+            }
+        }
     }
 
     public static ArrayList<String> getHatDropdownStrings() {
@@ -93,9 +111,12 @@ public class HatMenu {
 
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
+        hats.add("Base");
         optionNames.add(TEXT[9]);
+        hats.add("Random");
         ArrayList<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
-        sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
+        sortedPacks.sort(Comparator.comparing((pack) -> pack.getHatName()));
+        currentlyUnlockedHats.clear();
         for (AbstractCardPack s : sortedPacks) {
             if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
             if (UNLOCK_ALL_HATS)
@@ -148,10 +169,12 @@ public class HatMenu {
         randomHatMode = false;
         if (index == 0) {
             invalidHatSelected = false;
+            currentHat = null;
             SpireAnniversary5Mod.logger.info("Removing hat.");
             Hats.removeHat(false);
             flavorText = "";
         } else if (index == 1) {
+            currentHat = null;
             if (currentlyUnlockedHats.isEmpty()) {
                 invalidHatSelected = true;
                 SpireAnniversary5Mod.logger.info("Selected Random but no hats are unlocked.");
@@ -167,19 +190,26 @@ public class HatMenu {
         } else if (name.contains(TEXT[1])) {
             SpireAnniversary5Mod.logger.info("Selected a locked hat.");
             invalidHatSelected = true;
+            currentHat = null;
             Hats.addHat(false, "Locked");
-            flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index - 2)).name + TEXT[3];
+            flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[3];
         } else if (name.contains(TEXT[6])) {
             invalidHatSelected = true;
+            currentHat = null;
             SpireAnniversary5Mod.logger.info("Selected a missing hat.");
             Hats.removeHat(false);
-            flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index - 2)).name + TEXT[7];
+            flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[7];
         } else {
             invalidHatSelected = false;
             SpireAnniversary5Mod.logger.info("Add new hat at index " + index);
-            currentHat = hats.get(index - 2);
+            currentHat = hats.get(index);
             Hats.addHat(false, currentHat);
             flavorText = SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
+        }
+        try {
+            SpireAnniversary5Mod.saveLastPickedHatID(hats.get(index));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -195,7 +225,7 @@ public class HatMenu {
 
         FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (163 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 330 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
 
-        dummy.renderPlayerImage(sb);
+        getDummy().renderPlayerImage(sb);
 
         dropdown.render(sb, DROPDOWN_X, DROPDOWN_Y);
 

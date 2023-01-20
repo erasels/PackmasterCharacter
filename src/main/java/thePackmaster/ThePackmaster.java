@@ -107,7 +107,7 @@ public class ThePackmaster extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(Rummage2.ID);
+        retVal.add(Rummage.ID);
         retVal.add(Cardistry.ID);
         return retVal;
     }

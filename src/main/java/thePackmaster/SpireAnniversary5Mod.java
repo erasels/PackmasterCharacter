@@ -5,6 +5,8 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
+import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
@@ -14,6 +16,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -28,6 +31,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -52,6 +56,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.events.BlackMarketDealerEvent;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
@@ -64,6 +69,7 @@ import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.orbs.summonspack.SwarmOfBees;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
@@ -89,6 +95,7 @@ import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
+import thePackmaster.ui.InfestTextIcon;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
@@ -283,6 +290,7 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, CHOICE, CHOICE, CHOICE));
             defaults.put("PackmasterUnlockedHats", "");
             defaults.put("PackmasterAllPacksMode", "FALSE");
+            defaults.put("PackmasterSelectedHatIndex", "0");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
             modConfig.load();
 
@@ -350,6 +358,17 @@ public class SpireAnniversary5Mod implements
         modConfig.save();
     }
 
+    public static String getLastPickedHatID() {
+        if (modConfig == null) return "";
+        return modConfig.getString("PackmasterSelectedHatID");
+    }
+
+    public static void saveLastPickedHatID(String ID) throws IOException {
+        if (modConfig == null) return;
+        modConfig.setString("PackmasterSelectedHatID", ID);
+        modConfig.save();
+    }
+
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new ThePackmaster(ThePackmaster.characterStrings.NAMES[1], ThePackmaster.Enums.THE_PACKMASTER),
@@ -378,6 +397,8 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditCards() {
+        CustomIconHelper.addCustomIcon(InfestTextIcon.get());
+
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
         BaseMod.addDynamicVariable(new HoardVar());
@@ -424,6 +445,14 @@ public class SpireAnniversary5Mod implements
         initializeConfig();
 
         initializeSavedData();
+
+        BaseMod.addEvent(new AddEventParams.Builder(BlackMarketDealerEvent.ID, BlackMarketDealerEvent.class) //Event ID//
+                //Event Character//
+                .playerClass(ThePackmaster.Enums.THE_PACKMASTER)
+                //Event Type//
+                .eventType(EventUtils.EventType.NORMAL)
+                .create());
+
     }
 
     public static void addPotions() {
@@ -495,6 +524,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + getLangString() + "/Stancestrings.json");
         BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + getLangString() + "/Orbstrings.json");
         BaseMod.loadCustomStringsFile(PotionStrings.class, modID + "Resources/localization/" + getLangString() + "/Potionstrings.json");
+        BaseMod.loadCustomStringsFile(EventStrings.class, modID + "Resources/localization/" + getLangString() + "/Eventstrings.json");
 
         loadPackStrings();
     }
@@ -609,6 +639,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addAudio(makeID("RipPack_Ahh"), makePath("audio/rippack/ahh.ogg"));
         BaseMod.addAudio(makeID("RipPack_Ohh"), makePath("audio/rippack/ohh.mp3"));
         BaseMod.addAudio(makeID("RipPack_Sword"), makePath("audio/rippack/sword.ogg"));
+        BaseMod.addAudio(makeID("RipPack_Harp"), makePath("audio/rippack/harp.ogg"));
         BaseMod.addAudio(modID + "dice1", modID + "Resources/audio/DiceRoll1.wav");
         BaseMod.addAudio(modID + "dice2", modID + "Resources/audio/DiceRoll2.wav");
         BaseMod.addAudio(modID + "dice3", modID + "Resources/audio/DiceRoll3.wav");
@@ -626,6 +657,7 @@ public class SpireAnniversary5Mod implements
         MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
         EnergyAndEchoPack.resetvalues();
         EnergyCountPatch.energySpentThisCombat = 0;
+        DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
     }
 
     @Override
@@ -657,8 +689,8 @@ public class SpireAnniversary5Mod implements
 
     }
 
-    public static AbstractCardPack getRandomPackFromAll() {
-        return allPacks.get(AbstractDungeon.cardRandomRng.random(0, allPacks.size() - 1));
+    public static AbstractCardPack getRandomPackFromAll(Random rng) {
+        return allPacks.get(rng.random(0, allPacks.size() - 1));
     }
 
     public static AbstractCardPack getRandomPackFromCurrentPool() {
@@ -957,13 +989,13 @@ public class SpireAnniversary5Mod implements
         BaseMod.addSaveField("PackmasterWornHat", new CustomSavable<String>() {
             @Override
             public String onSave() {
-                return Hats.currentHat;
+                return AbstractDungeon.player instanceof ThePackmaster ? Hats.currentHat : null;
             }
 
             @Override
             public void onLoad(String s) {
                 logger.info("Loading. Hat: " + s);
-                if (s != null) {
+                if (s != null && AbstractDungeon.player instanceof ThePackmaster) {
                     Hats.currentHat = s;
                     Hats.addHat(true, Hats.currentHat);
                 }

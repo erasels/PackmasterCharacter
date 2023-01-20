@@ -9,7 +9,7 @@ import thePackmaster.powers.warriorpack.TurtlePower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Turtle extends AbstractPackmasterCard {
+public class Turtle extends AbstractWarriorCard {
 
     public final static String ID = makeID(Turtle.class.getSimpleName());
 
