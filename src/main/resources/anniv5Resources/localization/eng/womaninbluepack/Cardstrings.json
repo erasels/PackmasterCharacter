@@ -34,7 +34,7 @@
   "${ModID}:ToxicVial": {
     "NAME": "Toxic Vial",
     "DESCRIPTION": "Choose: Apply 3 Weak, or Apply 8 Poison. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose: Apply 3 Vulnerable, Apply 3 Weak, or Apply 8 Poison.",
+    "UPGRADE_DESCRIPTION": "Choose: Apply 3 Vulnerable, Apply 3 Weak, or Apply 8 Poison. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Apply 3 Vulnerable.", "Apply 3 Weak.","Apply 8 Poison."]
   },
   "${ModID}:AttackVial": {
