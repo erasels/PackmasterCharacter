@@ -19,8 +19,8 @@ public class Stall extends AbstractWardenCard {
     public Stall() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 7;
-        this.baseMagicNumber = 2;
-        this.magicNumber = this.baseMagicNumber;
+        baseMagicNumber = 2;
+        magicNumber = baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
