@@ -16,7 +16,7 @@ public class BloodRitual extends AbstractLegacyCard {
     public BloodRitual() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
 
-        this.magicNumber = this.baseMagicNumber = 12;
+        this.magicNumber = this.baseMagicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,6 +25,6 @@ public class BloodRitual extends AbstractLegacyCard {
     }
 
     public void upp() {
-        this.upgradeMagicNumber(-6);
+        this.upgradeMagicNumber(-3);
     }
 }

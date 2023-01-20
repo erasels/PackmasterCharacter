@@ -16,7 +16,7 @@ public class ContentCreatorPack extends AbstractCardPack{
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public ContentCreatorPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, CREDITS);
         hatHidesHair = true;
     }
 
