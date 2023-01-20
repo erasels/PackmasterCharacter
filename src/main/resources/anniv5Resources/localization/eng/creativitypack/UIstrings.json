@@ -5,5 +5,11 @@
       "Create cards and benefit from cards creation.",
       "Jedi"
     ]
+  },
+  "${ModID}:CreativityPackHat": {
+    "TEXT": [
+      "Anything can be a hat with a little bit of imagination.",
+      "Paper Boat"
+    ]
   }
 }
