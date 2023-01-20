@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.random.Random;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
@@ -118,9 +119,14 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 }
 
                 for (int i = 0; i < 3; i++) {
-                    RewardItem r = new RewardItem();
-                    r.cards = getCardsFromPacks(cp.packID, 3);
-                    AbstractDungeon.getCurrRoom().rewards.add(r);
+                    RewardItem reward = new RewardItem();
+                    reward.cards = getCardsFromPacks(cp.packID, reward.cards.size(), AbstractDungeon.cardRng);
+                    for (AbstractRelic relic : AbstractDungeon.player.relics) {
+                        for (AbstractCard c : reward.cards) {
+                            relic.onPreviewObtainCard(c);
+                        }
+                    }
+                    AbstractDungeon.getCurrRoom().rewards.add(reward);
                 }
 
                 skipDefaultCardRewards = true;

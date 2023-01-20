@@ -134,5 +134,11 @@
       "One Frame For All. All Pack cards have normal Packmaster frames (Requires Restart).",
       "Share Content. Some Relics/ Potions can appear on other characters (Requires Restart)."
     ]
+  },
+  "${ModID}:PMBoosterBoxCardReward": {
+    "TEXT": [
+      "Add a booster box card",
+      "Choose a booster box card"
+    ]
   }
 }

@@ -42,7 +42,7 @@ public class AmalgamateWaters extends AbstractHydrologistCard {
             return false;
         }));
         AbstractCard amalgam = this;
-        atb(new TransmuteCardAction(true, (oldCard, newCard) -> {
+        atb(new TransmuteCardAction(99, true, (oldCard, newCard) -> {
             for (AbstractCardModifier mod : CardModifierManager.modifiers(oldCard)) {
                 if (mod instanceof AbstractExtraEffectModifier) {
                     AbstractExtraEffectModifier effect = (AbstractExtraEffectModifier)mod;

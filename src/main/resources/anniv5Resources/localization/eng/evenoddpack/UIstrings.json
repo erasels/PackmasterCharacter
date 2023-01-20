@@ -1,0 +1,9 @@
+{
+  "${ModID}:EvenOddPack": {
+    "TEXT": [
+      "Even/Odd",
+      "Cards with different effects depending on number of cards played.",
+      "Lobbien"
+    ]
+  }
+}
