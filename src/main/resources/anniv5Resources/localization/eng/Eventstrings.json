@@ -40,7 +40,8 @@
       "[Sell Hat] #gGain #g",
       " #gGold. #rLose #ryour #rHat.",
       "[Locked] No Hat to sell.",
-      "Go somewhere else."
+      "Go somewhere else.",
+      "[Locked] Sold out"
     ]
   }
 }
