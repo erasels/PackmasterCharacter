@@ -92,6 +92,7 @@ import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.InfestTextIcon;
 import thePackmaster.ui.PackFilterMenu;
+import thePackmaster.util.JediUtil;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
@@ -441,6 +442,8 @@ public class SpireAnniversary5Mod implements
         initializeConfig();
 
         initializeSavedData();
+
+        new JediUtil();
 
         BaseMod.addEvent(new AddEventParams.Builder(BlackMarketDealerEvent.ID, BlackMarketDealerEvent.class) //Event ID//
                 //Event Character//
