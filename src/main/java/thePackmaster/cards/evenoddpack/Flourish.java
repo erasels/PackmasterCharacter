@@ -22,6 +22,7 @@ public class Flourish extends AbstractEvenOddCard{
     
     public Flourish() {
         super(ID, COST, TYPE, RARITY, TARGET);
+        tags.add(CardTags.HEALING);
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];

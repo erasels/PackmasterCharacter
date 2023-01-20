@@ -30,6 +30,7 @@ public class EvenOddPack extends AbstractCardPack {
         cards.add(WindUpBomb.ID);
         cards.add(LeftHook.ID);
         cards.add(Battlecry.ID);
+        cards.add(Flourish.ID);
         return cards;
     }
 }

@@ -2,12 +2,8 @@ package thePackmaster.cards.WitchesStrike;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.optionCards.LiveForever;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FocusPower;
-import thePackmaster.actions.witchesstrikepack.MysticFlourishAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.witchesstrikepack.MoonlightFlightPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
