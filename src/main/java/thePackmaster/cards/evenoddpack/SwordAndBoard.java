@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.SpireAnniversary5Mod.makePath;
 
 public class SwordAndBoard extends AbstractEvenOddCard{
     public final static String ID = makeID(SwordAndBoard.class.getSimpleName());
@@ -20,7 +21,7 @@ public class SwordAndBoard extends AbstractEvenOddCard{
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
-    
+
     public SwordAndBoard() {
         super(ID, COST, TYPE, RARITY, TARGET);
         rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
@@ -54,10 +55,14 @@ public class SwordAndBoard extends AbstractEvenOddCard{
         super.applyPowers();
         if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1)
         {
+            this.loadCardImage(makePath("images/cards/SwordAndBoard.png"));
+            this.type = CardType.ATTACK;
             this.target = CardTarget.ENEMY;
         }
         else
         {
+            this.loadCardImage(makePath("images/cards/SwordAndBoardSkill.png"));
+            this.type = CardType.SKILL;
             this.target = CardTarget.SELF;
         }
     }

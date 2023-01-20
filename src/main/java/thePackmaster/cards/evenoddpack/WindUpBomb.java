@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.SpireAnniversary5Mod.makePath;
 
 public class WindUpBomb extends AbstractEvenOddCard{
     public final static String ID = makeID(WindUpBomb.class.getSimpleName());
@@ -52,11 +53,16 @@ public class WindUpBomb extends AbstractEvenOddCard{
         super.applyPowers();
         if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0)
         {
+            this.loadCardImage(makePath("images/cards/WindUpBomb.png"));
             this.target = CardTarget.ENEMY;
+            this.type = CardType.ATTACK;
+
         }
         else
         {
+            this.loadCardImage(makePath("images/cards/WindUpBombSkill.png"));
             this.target = CardTarget.NONE;
+            this.type = CardType.SKILL;
         }
     }
     
