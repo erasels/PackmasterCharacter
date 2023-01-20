@@ -44,6 +44,13 @@ public class Food extends AbstractPackmasterCard {
         }
     }
 
+    @Override
+    public void upgrade() {
+        super.upgrade();
+        //Compatibility with in-combat upgrading, otherwise description says gain X [e]
+        setX(magicNumber);
+    }
+
     public void upp() {
         selfRetain = true;
     }
