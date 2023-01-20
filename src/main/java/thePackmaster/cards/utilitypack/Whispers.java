@@ -19,6 +19,7 @@ public class Whispers extends AbstractUtilityCard {
     public Whispers() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = DRAW;
+        cardsToPreview = new Dazed();
     }
 
     @Override
