@@ -1,0 +1,50 @@
+{
+  "${ModID}:MakeshiftSword": {
+    "NAME": "Makeshift Sword",
+    "DESCRIPTION": "Whenever a card is created during combat, gain !M! Vigor."
+  },
+  "${ModID}:MakeshiftShield": {
+    "NAME": "Makeshift Shield",
+    "DESCRIPTION": "Whenever a card is created during combat, gain !M! Block."
+  },
+  "${ModID}:PaintBrush": {
+    "NAME": "Paint Brush",
+    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} card with selected type and cost."
+  },
+  "${ModID}:Firewall": {
+    "NAME": "Firewall",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Innate. NL }When a Status card is created, NL Exhaust it."
+  },
+  "${ModID}:Souvenirs": {
+    "NAME": "Souvenirs",
+    "DESCRIPTION": "{@@}Create an *Insight, *Smite or *Safety in hand. It draws a card. {!Upgrades!|>0= NL Do it again.}"
+  },
+  "${ModID}:Mimicry": {
+    "NAME": "Mimicry",
+    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} common card from other packs you've selected."
+  },
+  "${ModID}:CraftyMove": {
+    "NAME": "Crafty Move",
+    "DESCRIPTION": "Deal !D! damage. If a card has been created this turn, gain [E] and draw a card."
+  },
+  "${ModID}:BarrierBeacon": {
+    "NAME": "Barrier Beacon",
+    "DESCRIPTION": "{@@}Gain !B! Block, create a{!Upgrades!|>0=n upgraded} copy of this in hand. Exhaust."
+  },
+  "${ModID}:StrikingStrike": {
+    "NAME": "Striking Strike",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Discover a{!Upgrades!|>0=n upgraded} strike. It Exhausts when played and costs 0 this turn."
+  },
+  "${ModID}:AccumulativeStrike": {
+    "NAME": "Accumulative Strike",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Deals !M! additional damage for ALL your {!Upgrades!|0= non-Status} created cards."
+  },
+  "${ModID}:BrushModalTypeChoice": {
+    "NAME": "You should never see this",
+    "DESCRIPTION": "{@@}Select this card type for Discovery."
+  },
+  "${ModID}:BrushModalCostChoice": {
+    "NAME": "You should never see this",
+    "DESCRIPTION": "{@@}Select this card cost for Discovery."
+  }
+}
