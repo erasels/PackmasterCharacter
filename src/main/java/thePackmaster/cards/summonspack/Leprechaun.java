@@ -26,7 +26,7 @@ public class Leprechaun extends AbstractSummonsCard {
     public final static String ID = makeID(Leprechaun.class.getSimpleName());
     private static final int COST = 1;
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int BLOCK = 6;
