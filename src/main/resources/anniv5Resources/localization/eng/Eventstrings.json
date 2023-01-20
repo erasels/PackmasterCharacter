@@ -2,7 +2,7 @@
   "${ModID}:BlackMarketDealerEvent": {
     "NAME": "Black Market",
     "DESCRIPTIONS": [
-      "\"YOU THERE! With a backpack of that size, you must be a Collector! NL NL Come in and browse - we have a lovely temporary pop-up market set up today, fully legitimate, of course. I'm sure you can find something you need... just don't tell anyone we were here.",
+      "\"YOU THERE! With a backpack of that size, you must be a Collector! NL NL Come in and browse - we have a lovely temporary pop-up market set up today, fully legitimate, of course. I'm sure you can find something you need... just don't tell anyone we were here.\"",
       "You approach a dealer in front of a glass case, with a wide collection of cards available for sale. NL NL They would probably be interested in buying up some of your harder to find cards.",
       "In a back corner of the market, you stride up to a stall shrouded in purple cloth. NL NL A silent, smoky, ethereal figure gestures to the only item they have on display - a book, clearly enchanted with some dark magics.",
       "\"We meet again!\" NL A cheery disheveled fellow approaches you gleefully. NL NL \"It's me, #yRanwid! I stole some stuff from the #bMerchant to bring to the Market - take a look, take a look!\"",
