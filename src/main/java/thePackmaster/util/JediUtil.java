@@ -1,7 +1,5 @@
 package thePackmaster.util;
 
-import basemod.interfaces.OnPlayerTurnStartSubscriber;
-import basemod.interfaces.OnStartBattleSubscriber;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,19 +10,15 @@ import thePackmaster.onGenerateCardMidcombatInterface;
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
-public class JediUtil implements
-        OnStartBattleSubscriber,
-        OnPlayerTurnStartSubscriber
-{
+public class JediUtil {
     public static ArrayList<AbstractCard> cardsCreatedThisTurn = new ArrayList<>();
     public static ArrayList<AbstractCard> cardsCreatedThisCombat = new ArrayList<>();
-    @Override
-    public void receiveOnPlayerTurnStart() {
+
+    public static void receiveOnPlayerTurnStart() {
         cardsCreatedThisTurn.clear();
     }
 
-    @Override
-    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+    public static void receiveOnBattleStart(AbstractRoom abstractRoom) {
         cardsCreatedThisTurn.clear();
         cardsCreatedThisCombat.clear();
     }

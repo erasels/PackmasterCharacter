@@ -96,6 +96,7 @@ import thePackmaster.util.JediUtil;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
+
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -443,8 +444,6 @@ public class SpireAnniversary5Mod implements
 
         initializeSavedData();
 
-        new JediUtil();
-
         BaseMod.addEvent(new AddEventParams.Builder(BlackMarketDealerEvent.ID, BlackMarketDealerEvent.class) //Event ID//
                 //Event Character//
                 .playerClass(ThePackmaster.Enums.THE_PACKMASTER)
@@ -657,6 +656,7 @@ public class SpireAnniversary5Mod implements
         EnergyAndEchoPack.resetvalues();
         EnergyCountPatch.energySpentThisCombat = 0;
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
+        JediUtil.receiveOnBattleStart(room);
     }
 
     @Override
@@ -667,6 +667,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnPlayerTurnStart() {
         Leprechaun.staticStartOfTurn();
+        JediUtil.receiveOnPlayerTurnStart();
     }
 
     public static void declarePacks() {
