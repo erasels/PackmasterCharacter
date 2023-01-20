@@ -1,6 +1,7 @@
 package thePackmaster.cards.coresetpack;
 
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
@@ -15,6 +16,7 @@ public class MayhemForm extends AbstractPackmasterCard {
 
     public MayhemForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        this.tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
