@@ -31,9 +31,10 @@ public class TransmuteCardAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ID);
     public static final String[] TEXT = uiStrings.TEXT;
     private boolean initialized = false;
+    private boolean hooksTriggered = false;
     private boolean completed = false;
     public int choices = 1;
-    public int cards = 1;
+    public int cards;
     public int purity = 1;
     private final boolean anyNumber;
     private final BiConsumer<AbstractCard, AbstractCard> followup;
@@ -43,45 +44,58 @@ public class TransmuteCardAction extends AbstractGameAction {
     private AbstractCard playedCard;
     private final HashMap<AbstractCard, AbstractCard> transmutedPairs = new HashMap<>();
 
-    public TransmuteCardAction(boolean anyNumber, BiConsumer<AbstractCard, AbstractCard> followup, Function<AbstractCard, Boolean> conditions) {
-        this.followup = followup;
-        this.anyNumber = anyNumber;
-        this.conditions = conditions;
-    }
-
     public TransmuteCardAction() {
-        this(false, null, null);
+        this(1);
     }
 
     public TransmuteCardAction(int amount) {
-        this(false, null, null);
+        this(amount, amount > 1);
+    }
+
+    public TransmuteCardAction(int amount, boolean anyNumber) {
+        this(amount, anyNumber, null);
+    }
+
+    public TransmuteCardAction(int amount, boolean anyNumber, BiConsumer<AbstractCard, AbstractCard> followup) {
+        this(amount, anyNumber, followup, null);
+    }
+
+    public TransmuteCardAction(int amount, boolean anyNumber, BiConsumer<AbstractCard, AbstractCard> followup, Function<AbstractCard, Boolean> conditions) {
         cards = amount;
+        this.anyNumber = anyNumber;
+        this.followup = followup;
+        this.conditions = conditions;
     }
 
     public TransmuteCardAction(boolean anyNumber) {
-        this(anyNumber, null, null);
+        this(anyNumber ? 99 : 1, anyNumber);
     }
 
     public TransmuteCardAction(BiConsumer<AbstractCard, AbstractCard> followup) {
-        this(false, followup, null);
+        this(1, false, followup);
     }
 
     public TransmuteCardAction(Function<AbstractCard, Boolean> conditions) {
-        this(false, null, conditions);
+        this(1, false, null, conditions);
     }
 
-    public TransmuteCardAction(AbstractCard playedCard, BiConsumer<AbstractCard, AbstractCard> followup) {
-        this(false, followup, null);
+    public TransmuteCardAction(AbstractCard playedCard) {
+        this();
         this.playedCard = playedCard;
         transformPlayed = true;
     }
 
-    public TransmuteCardAction(AbstractCard playedCard) {
-        this(playedCard, null);
-    }
-
     public void update() {
         if (completed) {
+            return;
+        }
+        if (!hooksTriggered) {
+            hooksTriggered = true;
+            for (AbstractPower power : AbstractDungeon.player.powers) {
+                if (power instanceof TransmutableAffectingPower) {
+                    ((TransmutableAffectingPower)power).modifyTransmuteAction(this);
+                }
+            }
             return;
         }
         if (!initialized) {
@@ -89,41 +103,15 @@ public class TransmuteCardAction extends AbstractGameAction {
             if (!transformPlayed) {
                 if (AbstractDungeon.player.hand.size() < 1) {
                     isDone = true;
+                } else if (AbstractDungeon.player.hand.size() <= cards && !anyNumber) {
+                    AbstractDungeon.handCardSelectScreen.selectedCards.group.addAll(AbstractDungeon.player.hand.group);
+                    AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = false;
+                    return;
                 } else {
-                    if (anyNumber) {
-                        AbstractDungeon.handCardSelectScreen.open(TEXT[0], 99, true, true);
-                    } else {
-                        AbstractDungeon.handCardSelectScreen.open(TEXT[0], Math.min(AbstractDungeon.player.hand.size(), cards), cards != 1, cards != 1);
-                    }
+                    AbstractDungeon.handCardSelectScreen.open(TEXT[0], Math.min(AbstractDungeon.player.hand.size(), cards), anyNumber, anyNumber);
                 }
             } else {
-                if (choices == 0) {
-                    isDone = true;
-                    System.out.println("TRANSMUTECARDACTION: Make 0 choices? How did this happen?");
-                    return;
-                } else if (choices == 1) {
-                    AbstractCard newCard = getRandomCard(getTransmutationCandidates(playedCard)).makeCopy();
-                    modifyNewCard(playedCard, newCard);
-                    modifyUsedCard(newCard);
-                    transmutedPairs.put(playedCard, newCard);
-                    finish();
-                } else {
-                    CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                    ArrayList<AbstractCard> targets = getTransmutationCandidates(playedCard);
-                    for (int i = 0; i < choices; ++i) {
-                        if (targets.isEmpty()) {
-                            targets = getTransmutationCandidates(playedCard);
-                        }
-                        AbstractCard choice = getRandomCard(targets);
-                        UnlockTracker.markCardAsSeen(choice.cardID);
-                        if (!tmp.contains(choice)) {
-                            tmp.addToBottom(choice);
-                            targets.remove(choice);
-                        }
-                    }
-                    AbstractDungeon.gridSelectScreen.open(tmp, 1, TEXT[1], false);
-                    return;
-                }
+                handleChoices(playedCard);
             }
             return;
         } else if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved && !transformPlayed) {
@@ -133,39 +121,8 @@ public class TransmuteCardAction extends AbstractGameAction {
             }
             AbstractCard oldCard = AbstractDungeon.handCardSelectScreen.selectedCards.group.get(0);
             AbstractDungeon.player.hand.group.remove(oldCard);
-            if (choices == 0) {
-                isDone = true;
-                System.out.println("TRANSMUTECARDACTION: Make 0 choices? How did this happen?");
-                return;
-            } else if (choices == 1) {
-                AbstractCard newCard = getRandomCard(getTransmutationCandidates(oldCard)).makeCopy();
-                UnlockTracker.markCardAsSeen(newCard.cardID);
-                modifyNewCard(oldCard, newCard);
-                transmutedPairs.put(oldCard, newCard);
-                AbstractDungeon.handCardSelectScreen.selectedCards.group.remove(oldCard);
-                if (AbstractDungeon.handCardSelectScreen.selectedCards.group.isEmpty()) {
-                    AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
-                }
-                return;
-            } else {
-                CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                ArrayList<AbstractCard> targets = getTransmutationCandidates(oldCard);
-                for (int i = 0; i < choices; ++i) {
-                    if (targets.isEmpty()) {
-                        targets = getTransmutationCandidates(oldCard);
-                    }
-                    AbstractCard choice = getRandomCard(targets);
-                    UnlockTracker.markCardAsSeen(choice.cardID);
-                    if (!tmp.contains(choice)) {
-                        tmp.addToBottom(choice);
-                        targets.remove(choice);
-                    }
-                }
-                AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
-                storedOldCard = oldCard;
-                AbstractDungeon.gridSelectScreen.open(tmp, 1, TEXT[1], false);
-                return;
-            }
+            handleChoices(oldCard);
+            return;
         } else if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
             AbstractCard newCard = AbstractDungeon.gridSelectScreen.selectedCards.get(0).makeCopy();
             if (!transformPlayed) {
@@ -190,6 +147,44 @@ public class TransmuteCardAction extends AbstractGameAction {
         }
     }
 
+    private void handleChoices(AbstractCard oldCard) {
+        if (choices == 0) {
+            isDone = true;
+            System.out.println("TRANSMUTECARDACTION: Make 0 choices? How did this happen?");
+        } else if (choices == 1) {
+            AbstractCard newCard = getRandomCard(getTransmutationCandidates(oldCard)).makeCopy();
+            UnlockTracker.markCardAsSeen(newCard.cardID);
+            modifyNewCard(oldCard, newCard);
+            if (transformPlayed) {
+                modifyUsedCard(newCard);
+            }
+            transmutedPairs.put(oldCard, newCard);
+            if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+                AbstractDungeon.handCardSelectScreen.selectedCards.group.remove(oldCard);
+                if (AbstractDungeon.handCardSelectScreen.selectedCards.group.isEmpty()) {
+                    AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+                }
+            }
+        } else {
+            CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            ArrayList<AbstractCard> targets = getTransmutationCandidates(oldCard);
+            for (int i = 0; i < choices; ++i) {
+                if (targets.isEmpty()) {
+                    targets = getTransmutationCandidates(oldCard);
+                }
+                AbstractCard choice = getRandomCard(targets);
+                UnlockTracker.markCardAsSeen(choice.cardID);
+                if (!tmp.contains(choice)) {
+                    tmp.addToBottom(choice);
+                    targets.remove(choice);
+                }
+            }
+            AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+            storedOldCard = oldCard;
+            AbstractDungeon.gridSelectScreen.open(tmp, 1, TEXT[1], false);
+        }
+    }
+
     private void modifyUsedCard(AbstractCard newCard) {
         for (AbstractGameAction action : AbstractDungeon.actionManager.actions) {
             if (action instanceof UseCardAction) {
@@ -207,7 +202,7 @@ public class TransmuteCardAction extends AbstractGameAction {
     private void finish() {
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof TransmutableAffectingPower) {
-                ((TransmutableAffectingPower)power).onTransmute(this, transmutedPairs);
+                ((TransmutableAffectingPower)power).onTransmute(transmutedPairs);
             }
         }
         float duration = 0.75f;
@@ -217,7 +212,7 @@ public class TransmuteCardAction extends AbstractGameAction {
         if (transmutedPairs.isEmpty()) {
             isDone = true;
         } else {
-            AbstractDungeon.topLevelEffects.add(new TransmuteCardEffect(transmutedPairs, CardGroup.CardGroupType.HAND, this, duration));
+            AbstractDungeon.topLevelEffects.add(new TransmuteCardEffect(transmutedPairs, transformPlayed ? null : CardGroup.CardGroupType.HAND, this, duration));
             completed = true;
         }
     }
