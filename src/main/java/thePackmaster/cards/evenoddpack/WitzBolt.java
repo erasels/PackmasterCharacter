@@ -64,22 +64,25 @@ public class WitzBolt extends AbstractEvenOddCard{
     }
     
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        dmg(abstractMonster, AbstractGameAction.AttackEffect.NONE);
+    public void use(AbstractPlayer abstractPlayer, AbstractMonster m) {
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1) {
-                    Wiz.applyToEnemyTop(abstractMonster, new VulnerablePower(abstractMonster, magicNumber, false));
-                    Wiz.applyToEnemyTop(abstractMonster, new WeakPower(abstractMonster, magicNumber, false));
+                    Wiz.applyToEnemyTop(m, new VulnerablePower(abstractMonster, magicNumber, false));
+                    Wiz.applyToEnemyTop(m, new WeakPower(abstractMonster, magicNumber, false));
                     AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CHAMP_2A", 0.5f, true));
                     for(int i = 0; i <5; i++) {
-                        addToBot(new VFXAction(new StarBounceEffect(abstractMonster.hb.cX, abstractMonster.hb.cY), 0.05F));
+                        addToTop(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY), 0.05F));
                     }
+                    Wiz.applyToEnemyTop(m, new VulnerablePower(m, magicNumber, false));
+                    Wiz.applyToEnemyTop(m, new WeakPower(m, magicNumber, false));
+                    AbstractDungeon.actionManager.addToTop(new SFXAction("VO_CHAMP_2A", 0.5f, true));
                 }
+                addToTop(new VFXAction(new LightningEffect(m.drawX, m.drawY), 0.05F));
                 this.isDone = true;
             }
         });
-        addToBot(new VFXAction(new LightningEffect(abstractMonster.drawX, abstractMonster.drawY), 0.05F));
     }
 }

@@ -19,17 +19,19 @@ public class BurningPassionPower extends AbstractPackmasterPower implements Clon
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    boolean doubled, postStartDraw;
+    boolean doubledOnReceivePower, doubledOnReceivePowerStacks, postStartDraw;
 
     public BurningPassionPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
-        doubled = false;
+        doubledOnReceivePower = false;
+        doubledOnReceivePowerStacks = false;
         postStartDraw = true;
     }
 
     @Override
     public void atStartOfTurn() {
-        doubled = false;
+        doubledOnReceivePower = false;
+        doubledOnReceivePowerStacks = false;
         postStartDraw = false;
     }
 
@@ -72,10 +74,10 @@ public class BurningPassionPower extends AbstractPackmasterPower implements Clon
     @Override
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if(power.amount != 0 && target == owner && power.type == PowerType.BUFF &&
-            !doubled && postStartDraw)
+            !doubledOnReceivePower && postStartDraw)
         {
             flash();
-            doubled = true;
+            doubledOnReceivePower = true;
             power.amount *= amount;
             power.updateDescription();
         }
@@ -87,9 +89,9 @@ public class BurningPassionPower extends AbstractPackmasterPower implements Clon
     @Override
     public int onReceivePowerStacks(AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
         if(power.amount != 0 && target == owner && power.type == PowerType.BUFF &&
-                !doubled && postStartDraw)
+                !doubledOnReceivePowerStacks && postStartDraw)
         {
-            doubled = true;
+            doubledOnReceivePowerStacks = true;
             flash();
             return stackAmount * amount;
         }
