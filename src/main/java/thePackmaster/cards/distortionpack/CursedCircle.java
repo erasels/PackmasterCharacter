@@ -19,7 +19,7 @@ import java.util.*;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class CursedCircle extends AbstractPackmasterCard {
+public class CursedCircle extends AbstractDistortionCard {
     public final static String ID = makeID("CursedCircle");
     // intellij stuff skill, all_enemy, uncommon, , , , , , 
 

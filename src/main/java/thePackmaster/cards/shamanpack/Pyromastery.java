@@ -12,7 +12,7 @@ import thePackmaster.powers.shamanpack.PyromasteryPower;
 public class Pyromastery extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Pyromastery");
     private static final int COST = 0;
-    private static final int IGNITE_BONUS = 2;
+    private static final int IGNITE_BONUS = 1;
     private static final int UPGRADE_IGNITE_BONUS = 1;
 
     public Pyromastery() {

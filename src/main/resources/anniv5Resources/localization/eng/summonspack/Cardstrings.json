@@ -1,7 +1,7 @@
 {
   "${ModID}:Leprechaun": {
     "NAME": "Leprechaun",
-    "DESCRIPTION": "Channel a ${ModID}:Leprechaun. NL Apply !M! ${ModID}:Jinx.",
+    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Leprechaun.",
     "EXTENDED_DESCRIPTION": [
       "Dice",
       "Dice increase the damage or #yBlock of the next card you play that deals damage or #yBlocks."
@@ -15,7 +15,7 @@
   },
   "${ModID}:Wolves": {
     "NAME": "Wolves",
-    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Wolf.",
+    "DESCRIPTION": "Deal !D! damage. NL Channel a ${ModID}:Wolf.",
     "FLAVOR": "Pack animals for the Packmaster."
   },
   "${ModID}:Elephant": {
@@ -31,7 +31,7 @@
   "${ModID}:RainbowLouse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Draw 1 card.",
     "FLAVOR": "The result of an unwise magic experiment."
   },
   "${ModID}:SwarmOfBees": {
@@ -39,14 +39,15 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel a ${ModID}:Swarm\u00a0of\u00a0Bees.",
     "FLAVOR": "Absolutely terrifying."
   },
-  "${ModID}:Control": {
-    "NAME": "Control",
-    "DESCRIPTION": "Gain !M! Orb slots and !M! Focus.",
+  "${ModID}:Training": {
+    "NAME": "Training",
+    "DESCRIPTION": "At the end of your turn Evoke your next orb !M! times.",
     "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
   },
   "${ModID}:Ambush": {
     "NAME": "Ambush",
     "DESCRIPTION": "Whenever you Channel an Orb, Evoke it without removing it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Channel an Orb, Evoke it without removing it.",
     "FLAVOR": "I couldn't find good ambush art so have a pun."
   },
   "${ModID}:Pandas": {

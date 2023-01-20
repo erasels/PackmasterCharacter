@@ -25,7 +25,6 @@ public class FuriousAssault extends AbstractAggressionCard {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = HITS;
-        this.exhaust = true;
     }
 
     @Override

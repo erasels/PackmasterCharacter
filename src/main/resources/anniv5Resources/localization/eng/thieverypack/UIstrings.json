@@ -1,0 +1,21 @@
+{
+  "${ModID}:ThieveryPack": {
+    "TEXT": [
+      "Thief, the Deceiver",
+      "No need to prepare everything yourself; stealing can get what you want.",
+      "Celicath"
+    ]
+  },
+  "${ModID}:StealPowerAction": {
+    "TEXT": [
+      "%s is useless to me.",
+      "%s are useless to me."
+    ]
+  },
+  "${ModID}:ThieveryPackHat": {
+    "TEXT": [
+      "The legacy of Lord Red Mask is only beginning.",
+      "Red Mask"
+    ]
+  }
+}

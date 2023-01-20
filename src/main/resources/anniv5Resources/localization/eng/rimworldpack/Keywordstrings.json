@@ -1,35 +1,17 @@
 [
   {
-    "PROPER_NAME": "Mood",
+    "PROPER_NAME": "On Fire",
     "NAMES": [
-      "increase mood",
-      "increase_mood"
+      "on fire",
+      "on_fire"
     ],
-    "DESCRIPTION": "If Mood gets to #b4 or more, gain a random #yInspiration, which is a powerful positive one-time effect, and then lose #b4 Mood."
+    "DESCRIPTION": "At the end of your turn, cards in your hand with #yFire #yCounters make you take damage equal to their #yFire #yCounter. They then increase the #yFire #yCounter. Cards with #yFire #yCounters play an additional copy of themselves for every #yFire #yCounter above #b1, and #yExhaust."
   },
   {
-    "PROPER_NAME": "Mood",
+    "PROPER_NAME": "Addiction",
     "NAMES": [
-      "decrease mood",
-      "decrease_mood"
+      "addiction"
     ],
-    "DESCRIPTION": "If Mood gets to #b-4 or below, gain a random #yMental #yBreak, which gives #b2 #yStatuses based on its type, then gain #b4 Mood."
-  },
-  {
-    "PROPER_NAME": "Inspiration",
-    "NAMES": [
-      "inspiration",
-      "inspirations"
-    ],
-    "DESCRIPTION": "Various positive one-time effects."
-  },
-  {
-    "PROPER_NAME": "Mental Break",
-    "NAMES": [
-      "mental break",
-      "mental_break",
-      "mental_breaks"
-    ],
-    "DESCRIPTION": "Gain #b2 random #yStatus cards based on the type of break."
+    "DESCRIPTION": "After a number of turns, add #b2 #yDespairs to your hand and lose #b5 #yStrength."
   }
 ]

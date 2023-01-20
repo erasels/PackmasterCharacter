@@ -9,20 +9,20 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SnazzySwagger extends AbstractPackmasterCard {
+public class SnazzySwagger extends AbstractSneckoCard {
 
 
     public final static String ID = makeID("SnazzySwagger");
 
     public SnazzySwagger() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DrawCardAction(p, magicNumber));
-        addToBot(new DiscardAction(p, p, magicNumber, false));
         addToBot(new RandomizeHandCostAction());
+        addToBot(new DiscardAction(p, p, magicNumber, false));
     }
 
     public void upp() {

@@ -12,7 +12,7 @@ public class ColdSeason extends BitingColdCard {
 
     public ColdSeason() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
     }
 
     @Override

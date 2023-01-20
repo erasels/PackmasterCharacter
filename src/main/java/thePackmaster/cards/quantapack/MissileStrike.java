@@ -6,11 +6,10 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MissileStrike extends AbstractPackmasterCard {
+public class MissileStrike extends AbstractQuantaCard {
     public final static String ID = makeID("MissileStrike");
 
     private static final int DAMAGE = 8;
@@ -21,17 +20,17 @@ public class MissileStrike extends AbstractPackmasterCard {
     public MissileStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        this.magicNumber = this.baseMagicNumber = SPLASH;
+        baseSecondDamage = SPLASH;
         tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        this.addToBot(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.magicNumber), this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        this.addToBot(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(baseSecondDamage), this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
     }
 
     public void upp() {
         upgradeDamage(UPGRADE_DAMAGE);
-        upgradeMagicNumber(UPGRADE_SPLASH);
+        upgradeSecondDamage(UPGRADE_SPLASH);
     }
 }

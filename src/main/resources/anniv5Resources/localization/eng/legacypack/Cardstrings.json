@@ -14,12 +14,12 @@
   },
   "${ModID}:CaptainsCabin": {
     "NAME": "Captain's Cabin",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Cannonball into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Cannonballs into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! *Cannonball.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! *Cannonballs."
   },
   "${ModID}:TerrorOfTheSeas": {
     "NAME": "Terror of the Seas",
-    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Vulnerable and !${ModID}:m2! ${ModID}:Ruin to ALL enemies. NL Exhaust."
   },
   "${ModID}:MassProduction": {
     "NAME": "Mass Production",
@@ -36,16 +36,21 @@
     "NAME": "Blood Ritual",
     "DESCRIPTION": "Lose !M! HP. NL Gain 1 Ritual."
   },
-  "${ModID}:HuntressEssence": {
-    "NAME": "Huntress Essence",
-    "DESCRIPTION": "Heal !M! HP and draw 1 card for each card in your Exhaust pile. NL Exhaust."
-  },
   "${ModID}:OverTime": {
     "NAME": "Over Time",
     "DESCRIPTION": "Deal !D! damage. NL For each card that you've *Exhausted this combat, increase damage by !M!."
   },
   "${ModID}:SlimeSpray": {
     "NAME": "Slime Spray",
-    "DESCRIPTION": "Retain. NL Deal !D! damage and apply Slow to ALL enemies."
+    "DESCRIPTION": "Retain. NL Deal !D! damage, apply !M! Poison, and apply Slow to ALL enemies."
+  },
+  "${ModID}:StickStrike": {
+    "NAME": "Stick Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Stick into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle a *Stick+ into your draw pile."
+  },
+  "${ModID}:Stick": {
+    "NAME": "Stick",
+    "DESCRIPTION": "*Stick *Strikes deal !M! more damage this combat. Return the last-played one to your hand. Exhaust."
   }
 }

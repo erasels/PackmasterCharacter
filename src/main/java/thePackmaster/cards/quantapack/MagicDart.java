@@ -10,7 +10,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MagicDart extends AbstractPackmasterCard {
+public class MagicDart extends AbstractQuantaCard {
     public final static String ID = makeID("MagicDart");
 
     private static final int DAMAGE = 0;

@@ -13,6 +13,7 @@ import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
+import static thePackmaster.SpireAnniversary5Mod.CLAW;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Alclawmize extends AbstractClawCard {
@@ -23,6 +24,7 @@ public class Alclawmize extends AbstractClawCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust=true;
         tags.add(CardTags.HEALING);
+        tags.add(CLAW);
 
         potions.add(AttackPotionButClaw.POTION_ID);
         potions.add(ClawPowerPotion.POTION_ID);

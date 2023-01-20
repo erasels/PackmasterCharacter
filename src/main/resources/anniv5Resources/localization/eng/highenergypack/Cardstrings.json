@@ -32,7 +32,8 @@
       "Gain ",
       "Retain. NL Gain ",
       " . NL Exhaust.",
-      "You gain nothing! NL Good day, sir! NL Exhaust."
+      "You gain nothing! NL Good day, sir! NL Exhaust.",
+      "mm delocious"
     ]
   },
   "${ModID}:Investor": {
@@ -41,7 +42,7 @@
   },
   "${ModID}:StruckByATrain": {
     "NAME": "Struck By A Train",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable to the frontmost enemy."
+    "DESCRIPTION": "Deal !D! damage to the frontmost enemy. NL Increase this card's damage by !M! this combat."
   },
   "${ModID}:StormForm": {
     "NAME": "Storm Form",

@@ -14,7 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
 
-public class GlaiveThrow extends AbstractPackmasterCard {
+public class GlaiveThrow extends AbstractQuietCard {
     public final static String ID = makeID("GlaiveThrow");
 
     public GlaiveThrow() {

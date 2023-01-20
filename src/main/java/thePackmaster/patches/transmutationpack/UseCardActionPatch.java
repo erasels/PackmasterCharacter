@@ -28,8 +28,8 @@ public class UseCardActionPatch {
         )
         public static SpireReturn Insert(UseCardAction __instance) {
             //if the played card was transmuted, handle separately from regular UseCardAction logic
-            if (UseCardActionField.transmuteTargetCard.get(__instance) != null) {
-                AbstractCard newCard = UseCardActionField.transmuteTargetCard.get(__instance);
+            AbstractCard newCard = UseCardActionField.transmuteTargetCard.get(__instance);
+            if (newCard != null) {
                 AbstractCard card = ReflectionHacks.getPrivate(__instance, UseCardAction.class, "targetCard");
                 card.freeToPlayOnce = false;
                 card.isInAutoplay = false;

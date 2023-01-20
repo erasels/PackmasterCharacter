@@ -3,10 +3,11 @@ package thePackmaster.cards.infestpack;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.infestpack.InfestModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -17,11 +18,12 @@ public class Bees extends AbstractInfestCard implements OnInfestCard {
     public Bees() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 1;
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 6;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new SFXAction(SpireAnniversary5Mod.BEES_KEY));
         for (int i = 0; i < magicNumber; i++) {
             dmg(m, getRandomAttackEffect());
         }

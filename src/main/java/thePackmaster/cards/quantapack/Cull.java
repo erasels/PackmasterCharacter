@@ -5,12 +5,11 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.OfferingEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.util.Wiz;
+import thePackmaster.actions.arcanapack.AllEnemyLoseHPAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Cull extends AbstractPackmasterCard {
+public class Cull extends AbstractQuantaCard {
     public final static String ID = makeID("Cull");
 
     public Cull() {
@@ -24,10 +23,7 @@ public class Cull extends AbstractPackmasterCard {
         this.addToBot(new VFXAction(new OfferingEffect(), 0.5F));
         this.addToBot(new GainBlockAction(p, p, block));
         this.addToBot(new LoseHPAction(p, p, this.magicNumber));
-
-        for(AbstractMonster monster: Wiz.getEnemies()) {
-            this.addToBot(new LoseHPAction(monster, p, this.magicNumber));
-        }
+        this.addToBot(new AllEnemyLoseHPAction(p,this.magicNumber));
     }
 
     public void upp() {

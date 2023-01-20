@@ -20,8 +20,8 @@ public class Repel extends LockingCard {
 
     public Repel() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 7;
-        baseBlock = 7;
+        baseDamage = 8;
+        baseBlock = 8;
         baseMagicNumber = magicNumber = 2;
     }
 

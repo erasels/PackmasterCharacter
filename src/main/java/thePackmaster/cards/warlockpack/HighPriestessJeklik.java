@@ -9,7 +9,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class HighPriestessJeklik extends AbstractPackmasterCard {
+public class HighPriestessJeklik extends AbstractWarlockCard {
     public final static String ID = makeID(HighPriestessJeklik.class.getSimpleName());
 
     private static final int COST = 0;

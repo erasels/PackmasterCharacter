@@ -3,6 +3,7 @@ package thePackmaster.cards.rippack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.actions.rippack.ExhaustRandomNonArtCardsAction;
@@ -21,8 +22,8 @@ public class HazardousStrike extends AbstractRippableCard {
 
     public HazardousStrike(AbstractRippedArtCard artCard, AbstractRippedTextCard textCard) {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = damage = 28;
-        baseMagicNumber = magicNumber = 3;
+        baseDamage = damage = 18;
+        baseMagicNumber = magicNumber = 2;
         tags.add(CardTags.STRIKE);
         if (artCard == null && textCard == null) {
             setRippedCards(new HazardousStrikeArt(this), new HazardousStrikeText(this));
@@ -35,7 +36,7 @@ public class HazardousStrike extends AbstractRippableCard {
 
     @Override
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(8);
     }
 
     @Override
@@ -50,13 +51,13 @@ public class HazardousStrike extends AbstractRippableCard {
                 }
             }
         });
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
     }
 
     @Override
     public void onRip() {
         super.onRip();
         att(new ExhaustRandomNonArtCardsAction(magicNumber)); //att to it runs before making the new text/art cards in hand
-        att(new VFXAction(HazardousStrikeEffect.CutCardsInHand()));
+        att(new VFXAction(AbstractDungeon.player, HazardousStrikeEffect.CutCardsInHand(), 0.25f,true));
     }
 }

@@ -11,7 +11,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Swipe extends AbstractPackmasterCard {
+public class Swipe extends AbstractMetaCard {
     public final static String ID = makeID("Swipe");
 
     private static final int DAMAGE = 6;

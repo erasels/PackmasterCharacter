@@ -10,5 +10,11 @@
     "TEXT": [
       "discard."
     ]
+  },
+  "${ModID}:GoWithTheFlowPackHat": {
+    "TEXT": [
+      "Appropriate attire for sub-zero temperatures.",
+      "Waterbending Hood"
+    ]
   }
 }

@@ -11,7 +11,7 @@ import thePackmaster.vfx.distortionpack.StaticEffect;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class Shatter extends AbstractPackmasterCard {
+public class Shatter extends AbstractDistortionCard {
     public final static String ID = makeID("Shatter");
     // intellij stuff attack, enemy, rare, 4, 2, , , ,
 
@@ -36,6 +36,7 @@ public class Shatter extends AbstractPackmasterCard {
         int hits = HPLostTrackingPatch.Field.hpLostTimes.get(mo);
         if (hits > 0 && !this.rawDescription.equals(cardStrings.EXTENDED_DESCRIPTION[0])) {
             this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
+            this.magicNumber = this.baseMagicNumber = hits;
             initializeDescription();
         }
     }

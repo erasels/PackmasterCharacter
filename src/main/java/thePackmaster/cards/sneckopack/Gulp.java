@@ -1,52 +1,36 @@
 package thePackmaster.cards.sneckopack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.patches.sneckopack.EnergyCountPatch;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Gulp extends AbstractPackmasterCard {
+public class Gulp extends AbstractSneckoCard {
 
     public final static String ID = makeID("Gulp");
+    private static final int DMG = 17, UPG_DMG = 5;
 
     public Gulp() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 0;
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        baseDamage = DMG;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) {
-            addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, magicNumber)));
-        } else {
-            addToBot(new DamageAction(m, new DamageInfo(p, magicNumber, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
-        }
-    }
-
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBaseMagicNumber = baseMagicNumber;
-        baseMagicNumber += EnergyCountPatch.energySpentThisCombat;
-        magicNumber = baseMagicNumber;
-        super.calculateCardDamage(mo);
-        baseMagicNumber = realBaseMagicNumber;
-        isMagicNumberModified = magicNumber != baseMagicNumber;
-    }
-
-    public void applyPowers() {
-        int realBaseMagicNumber = baseMagicNumber;
-        baseMagicNumber += EnergyCountPatch.energySpentThisCombat;
-        magicNumber = baseMagicNumber;
-        super.applyPowers();
-        baseMagicNumber = realBaseMagicNumber;
-        isMagicNumberModified = magicNumber != baseMagicNumber;
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                for (int i = 0; i < Wiz.getLogicalCardCost(Gulp.this); i++) {
+                    Wiz.doDmg(m, Gulp.this, AttackEffect.POISON, true);
+                }
+                isDone = true;
+            }
+        });
     }
 
     public void upp() {
+        upgradeDamage(UPG_DMG);
     }
 }

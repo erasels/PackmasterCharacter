@@ -4,16 +4,11 @@ import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.LoopPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
 import javassist.CtBehavior;
-import thePackmaster.orbs.AbstractPackMasterOrb;
 import thePackmaster.powers.boardgamepack.DicePower;
-
-import static thePackmaster.util.Wiz.adp;
 
 public class LeprechaunPatch {
     @SpirePatch(

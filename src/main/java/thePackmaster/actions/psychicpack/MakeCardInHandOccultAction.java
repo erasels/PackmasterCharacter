@@ -19,22 +19,26 @@ public class MakeCardInHandOccultAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("RuleCancel"));
     public static final String[] TEXT = uiStrings.TEXT;
 
-    private AbstractPlayer p;
-
+    private final AbstractPlayer p;
+    private final boolean random;
     private ArrayList<AbstractCard> invalidCards;
+    private boolean firstFrame = true;
 
-    public MakeCardInHandOccultAction()
+    public MakeCardInHandOccultAction(boolean random)
     {
         p = AbstractDungeon.player;
+        this.random = random;
         this.actionType = ActionType.CARD_MANIPULATION;
-        this.duration = this.startDuration = 0.2f;
+        this.duration = this.startDuration = 0.1f;
 
         invalidCards = new ArrayList<>();
     }
 
     @Override
     public void update() {
-        if (this.duration == this.startDuration) {
+        if (firstFrame) {
+            firstFrame = false;
+
             CardGroup validCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
             if (p.hand.isEmpty())
@@ -63,6 +67,15 @@ public class MakeCardInHandOccultAction extends AbstractGameAction {
                 return;
             }
 
+            if (random) {
+                AbstractCard nowOccult = validCards.getRandomCard(AbstractDungeon.cardRandomRng);
+                OccultFields.isOccult.set(nowOccult, true);
+                nowOccult.superFlash(Color.VIOLET.cpy());
+                addToTop(new HandCheckAction());
+                this.isDone = true;
+                return;
+            }
+
             invalidCards.addAll(p.hand.group);
             invalidCards.removeIf(validCards::contains);
             p.hand.group.removeAll(invalidCards);
@@ -75,7 +88,6 @@ public class MakeCardInHandOccultAction extends AbstractGameAction {
             }
 
             AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false);
-            this.tickDuration();
             return;
         }
 

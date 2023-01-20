@@ -17,7 +17,7 @@
   },
   "${ModID}:Backstrike": {
     "NAME": "Backstrike",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify all Attacks in hand: 'Name gains Strike.'"
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify all Attacks in hand: \"Name gains Strike.\""
   },
   "${ModID}:WorkersStrike": {
     "NAME": "Worker's Strike",

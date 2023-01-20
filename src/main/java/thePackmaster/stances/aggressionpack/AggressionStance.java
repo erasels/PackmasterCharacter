@@ -3,11 +3,13 @@ package thePackmaster.stances.aggressionpack;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.StanceStrings;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import thePackmaster.SpireAnniversary5Mod;
@@ -25,6 +27,7 @@ public class AggressionStance extends AbstractStance {
     private static final String[] DESCRIPTION = stanceStrings.DESCRIPTION;
 
     public static final int ADDITIONAL_DAMAGE_PERCENT = 25;
+    public static final int STRENGTH_ON_EXIT = 2;
 
     private List<WanderingFire> wanderingFires;
 
@@ -60,6 +63,7 @@ public class AggressionStance extends AbstractStance {
         if (this.wanderingFires != null) {
             this.wanderingFires.forEach(f -> f.hidden = true);
         }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, STRENGTH_ON_EXIT)));
     }
     @Override
     public final void updateAnimation() {

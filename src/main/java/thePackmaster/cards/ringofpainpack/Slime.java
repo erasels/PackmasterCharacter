@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import thePackmaster.SpireAnniversary5Mod;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
@@ -26,10 +27,8 @@ public class Slime extends AbstractEvolveCard {
     public Slime(boolean isPreviewCard) {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY, isPreviewCard);
         magicNumber = baseMagicNumber = POISON;
-        setBackgroundTexture(
-                "anniv5Resources/images/512/ringofpain/" + type.name().toLowerCase() + ".png",
-                "anniv5Resources/images/1024/ringofpain/" + type.name().toLowerCase() + ".png"
-        );
+
+        
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

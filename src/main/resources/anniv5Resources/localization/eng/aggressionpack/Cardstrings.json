@@ -9,7 +9,7 @@
   },
   "${ModID}:FuriousAssault": {
     "NAME": "Furious Assault",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Aggression. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Aggression."
   },
   "${ModID}:Slam": {
     "NAME": "Slam",
@@ -25,11 +25,11 @@
   },
   "${ModID}:Epiphany": {
     "NAME": "Epiphany",
-    "DESCRIPTION": "If you are in ${ModID}:Aggression, exit it and draw !M! cards. NL Otherwise, enter ${ModID}:Aggression."
+    "DESCRIPTION": "If you are in a Stance, exit it and draw !M! cards. NL Otherwise, enter ${ModID}:Aggression."
   },
   "${ModID}:InnerFury": {
     "NAME": "Inner Fury",
-    "DESCRIPTION": "When you enter ${ModID}:Aggression, gain !M! temporary Strength and !M! Block. NL Enter ${ModID}:Aggression."
+    "DESCRIPTION": "Whenever you enter or exit ${ModID}:Aggression, gain !M! temporary Strength and !M! Block. NL Enter ${ModID}:Aggression."
   },
   "${ModID}:LunaticRage": {
     "NAME": "Lunatic Rage",

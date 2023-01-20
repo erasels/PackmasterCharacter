@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.util.Wiz;
 
+import static thePackmaster.SpireAnniversary5Mod.CLAW;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class CloakAndClaw extends AbstractClawCard {
@@ -15,6 +16,7 @@ public class CloakAndClaw extends AbstractClawCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 6;
         baseMagicNumber = magicNumber = 1;
+        tags.add(CLAW);
         cardsToPreview = new GhostClaw(true);
     }
 

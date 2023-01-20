@@ -4,7 +4,7 @@
     "NAMES": [
       "manifest"
     ],
-    "DESCRIPTION": "Gain an orb slot then channel the listed orb lose an orb slot when a Manifested orb is evoked."
+    "DESCRIPTION": "Gain an orb slot then channel the listed orb."
   },
   {
     "PROPER_NAME": "Crescent Moon",
@@ -14,7 +14,7 @@
       "Crescent_Moon",
       "crescent_moon"
     ],
-    "DESCRIPTION": "Orb. Passive : Deals damage to a random enemy when activated by a cards effect. Evokes after activating twice. Evoke : Deal damage to a random enemy for each remaining activation and lose and orb slot"
+    "DESCRIPTION": "Orb. Passive : Deals damage to a random enemy when activated by a cards effect. Evokes after activating #b4 times. Evoke : Deal damage to a random enemy"
   },
   {
     "PROPER_NAME": "Full Moon",
@@ -24,6 +24,16 @@
       "Full_Moon",
       "full_moon"
     ],
-    "DESCRIPTION": "Orb. Passive : Draw a card when activated by a cards effect. Evokes after activating 4 times. Evoke : Draw a card for each remaining activation and lose and orb slot"
+    "DESCRIPTION": "Orb. Passive : Draw a card when activated by a cards effect. Evokes after activating #b4 times. Evoke : Draw a card"
+  },
+  {
+    "PROPER_NAME": "Inscribed",
+    "NAMES": [
+      "Inscribed",
+      "inscribed",
+      "Inscribe",
+      "inscribe"
+    ],
+    "DESCRIPTION": "When you play this card activate the passive effect of all your orbs."
   }
 ]

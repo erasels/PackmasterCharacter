@@ -16,6 +16,7 @@ public class BellordPack extends AbstractCardPack {
 
     public BellordPack() {
         super(ID, NAME, DESC, AUTHOR);
+        hatHidesHair = true;
     }
 
     @Override

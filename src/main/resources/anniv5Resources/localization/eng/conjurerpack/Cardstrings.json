@@ -1,0 +1,44 @@
+{
+	"${ModID}:AirCurrent":	{
+		"DESCRIPTION": "Deal !D! damage. NL If the target has ${ModID}:Petra, apply !M! Vulnerable.",
+		"NAME": "Air Current"
+	},
+	"${ModID}:DustTornado":	{
+		"DESCRIPTION": "Exhaust a card in hand to play !M! random cards from your discard pile. NL Exhaust.",
+		"NAME": "Dust Tornado"
+	},
+	"${ModID}:Enervate":	{
+		"DESCRIPTION": "Enemy loses half of its Strength, then loses !M! more. NL Exhaust.",
+		"NAME": "Enervate"
+	},
+	"${ModID}:Excavation":	{
+		"DESCRIPTION": "Gain !B! Block. NL Fetch !M! cards from your discard pile and Retain them.",
+		"NAME": "Excavation"
+	},
+	"${ModID}:Geomorphology":	{
+		"DESCRIPTION": "Whenever you Retain or Exhaust a card, apply !M! ${ModID}:Petra to a random enemy.",
+		"NAME": "Geomorphology"
+	},
+	"${ModID}:GeothermalHeating":	{
+		"DESCRIPTION": "Gain !B! Block. NL Gain !M! additional Block for each distinct debuff on the target.",
+		"NAME": "Geothermal Heating"
+	},
+	"${ModID}:Lithosphere":	{
+		"DESCRIPTION": "Gain !B! Block. NL Apply !M! ${ModID}:Petra.",
+		"NAME": "Lithosphere"
+	},
+	"${ModID}:MudFissure":	{
+		"DESCRIPTION": "Deal !D! damage. NL Deals double damage if the target has debuffs.",
+		"NAME": "Mud Fissure"
+	},
+	"${ModID}:RagingInferno":	{
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Ignite. NL Exhaust.",
+		"NAME": "Raging Inferno",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Ignite."
+	},
+	"${ModID}:TectonicQuake":	{
+		"DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Petra and Weak to ALL enemies. NL Exhaust.",
+		"NAME": "Tectonic Quake",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Petra and Weak to ALL enemies."
+	}
+}
