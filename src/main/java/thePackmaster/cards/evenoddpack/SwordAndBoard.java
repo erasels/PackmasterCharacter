@@ -1,11 +1,12 @@
 package thePackmaster.cards.evenoddpack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.evenoddpack.SwordAndBoardAction;
-import thePackmaster.cards.ringofpainpack.Fright;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -75,6 +76,18 @@ public class SwordAndBoard extends AbstractEvenOddCard{
     
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new SwordAndBoardAction(abstractMonster, new DamageInfo(abstractMonster, this.damage, this.damageTypeForTurn), block));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if ((AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1) % 2 == 1) {
+                    this.addToTop(new DamageAction(abstractMonster, new DamageInfo(abstractMonster, damage, damageTypeForTurn), AttackEffect.SLASH_HORIZONTAL));
+                }
+                else
+                {
+                    this.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
+                }
+                this.isDone = true;
+            }
+        });
     }
 }

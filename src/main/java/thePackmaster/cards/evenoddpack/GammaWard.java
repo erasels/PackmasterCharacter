@@ -1,11 +1,10 @@
 package thePackmaster.cards.evenoddpack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.evenoddpack.GammaWardAction;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.evenoddpack.PrimeDirectivePower;
+import thePackmaster.powers.evenoddpack.GammaWardPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -36,7 +35,15 @@ public class GammaWard extends AbstractEvenOddCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         blck();
-        addToBot(new GammaWardAction(magicNumber));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0) {
+                    Wiz.applyToSelf(new GammaWardPower(AbstractDungeon.player, magicNumber));
+                }
+                this.isDone = true;
+            }
+        });
     }
     
     @Override

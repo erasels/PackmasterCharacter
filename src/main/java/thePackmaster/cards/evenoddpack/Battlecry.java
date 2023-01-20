@@ -1,10 +1,12 @@
 package thePackmaster.cards.evenoddpack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.evenoddpack.BattleCryAction;
-import thePackmaster.actions.evenoddpack.QuickReflexAction;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -54,6 +56,15 @@ public class Battlecry  extends AbstractEvenOddCard{
     
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new BattleCryAction(magicNumber));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 1) {
+                    Wiz.applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
+                }
+                this.addToTop(new DrawCardAction(magicNumber));
+                this.isDone = true;
+            }
+        });
     }
 }

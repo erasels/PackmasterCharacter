@@ -1,11 +1,10 @@
 package thePackmaster.cards.evenoddpack;
 
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.evenoddpack.QuickReflexAction;
-import thePackmaster.actions.evenoddpack.SwordAndBoardAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -55,6 +54,15 @@ public class QuickReflex extends AbstractEvenOddCard{
     
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new QuickReflexAction(block));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 1) {
+                    this.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
+                }
+                this.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
+                this.isDone = true;
+            }
+        });
     }
 }

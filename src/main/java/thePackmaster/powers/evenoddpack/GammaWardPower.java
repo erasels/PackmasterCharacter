@@ -1,5 +1,6 @@
 package thePackmaster.powers.evenoddpack;
 
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import thePackmaster.cardmodifiers.evenoddpack.AuraTextModifier;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import java.util.Iterator;
@@ -37,6 +39,9 @@ public class GammaWardPower extends AbstractPackmasterPower {
     public void onInitialApplication() {
         super.onInitialApplication();
         counter = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
+        for (AbstractCard card:AbstractDungeon.player.hand.group) {
+            CardModifierManager.addModifier(card, new AuraTextModifier());
+        }
         justRemoved = false;
     }
     

@@ -18,6 +18,7 @@ public class ResetAttributesPatch {
             && ((AuraTextModifier) (CardModifierManager.getModifiers(__instance, AuraTextModifier.MODIFIER_ID).get(0)))
                 .hasAuraText)
         {
+            CardModifierManager.removeModifiersById(__instance, AuraTextModifier.MODIFIER_ID, true);
             __instance.initializeDescription();
         }
     }

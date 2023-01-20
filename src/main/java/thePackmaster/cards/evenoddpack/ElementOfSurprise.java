@@ -1,10 +1,11 @@
 package thePackmaster.cards.evenoddpack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.evenoddpack.ElementOfSurpriseAction;
-import thePackmaster.actions.evenoddpack.QuickReflexAction;
+import com.megacrit.cardcrawl.powers.DuplicationPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -51,6 +52,14 @@ public class ElementOfSurprise extends AbstractEvenOddCard{
     
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new ElementOfSurpriseAction(magicNumber));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 1) {
+                    Wiz.applyToSelfTop(new DuplicationPower(AbstractDungeon.player, magicNumber));
+                }
+                this.isDone = true;
+            }
+        });
     }
 }

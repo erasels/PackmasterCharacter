@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.cardmodifiers.evenoddpack.AuraTextModifier;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.powers.entropypack.EntropyPower;
 
@@ -31,6 +32,9 @@ public class PrimeDirectivePower extends AbstractPackmasterPower {
     @Override
     public void onInitialApplication() {
         super.onInitialApplication();
+        for (AbstractCard card:AbstractDungeon.player.hand.group) {
+            CardModifierManager.addModifier(card, new AuraTextModifier());
+        }
         counter = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
     }
     
