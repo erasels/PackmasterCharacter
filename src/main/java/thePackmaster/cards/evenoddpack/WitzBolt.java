@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
-import thePackmaster.actions.evenoddpack.WitzBoltAction;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -71,11 +70,11 @@ public class WitzBolt extends AbstractEvenOddCard{
             @Override
             public void update() {
                 if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1) {
-                    Wiz.applyToEnemyTop((AbstractMonster) target, new VulnerablePower(target, magicNumber, false));
-                    Wiz.applyToEnemyTop((AbstractMonster) target, new WeakPower(target, magicNumber, false));
+                    Wiz.applyToEnemyTop(abstractMonster, new VulnerablePower(abstractMonster, magicNumber, false));
+                    Wiz.applyToEnemyTop(abstractMonster, new WeakPower(abstractMonster, magicNumber, false));
                     AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CHAMP_2A", 0.5f, true));
                     for(int i = 0; i <5; i++) {
-                        addToBot(new VFXAction(new StarBounceEffect(target.hb.cX, target.hb.cY), 0.05F));
+                        addToBot(new VFXAction(new StarBounceEffect(abstractMonster.hb.cX, abstractMonster.hb.cY), 0.05F));
                     }
                 }
                 this.isDone = true;
