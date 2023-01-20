@@ -62,6 +62,7 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
         FleetingField.fleeting.set(this, true);
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
