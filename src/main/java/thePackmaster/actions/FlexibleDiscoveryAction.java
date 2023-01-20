@@ -27,15 +27,19 @@ public class FlexibleDiscoveryAction extends AbstractGameAction {
         this(cards, costsZeroThisTurn, false, null, null);
     }
 
+    public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, Consumer<AbstractCard> callback, AbstractCardModifier cardModifier) {
+        this(cards, false, false, callback, cardModifier);
+    }
+
     public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, Consumer<AbstractCard> callback, boolean costsZeroThisTurn) {
-        this(cards,costsZeroThisTurn, false, null, callback);
+        this(cards,costsZeroThisTurn, false, callback, null);
     }
     public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, boolean costsZeroThisTurn, boolean skippable, AbstractCardModifier cardModifier)
     {
-        this(cards, costsZeroThisTurn, skippable, cardModifier, null);
+        this(cards, costsZeroThisTurn, skippable,null,  cardModifier);
     }
 
-    public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, boolean costsZeroThisTurn, boolean skippable, AbstractCardModifier cardModifier,  Consumer<AbstractCard> callback) {
+    public FlexibleDiscoveryAction(ArrayList<AbstractCard> cards, boolean costsZeroThisTurn, boolean skippable,  Consumer<AbstractCard> callback, AbstractCardModifier cardModifier) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
         this.cards = cards;
