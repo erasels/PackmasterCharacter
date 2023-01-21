@@ -45,15 +45,15 @@ public class MagicHand extends AbstractReplicatorCard {
         } else {
             ArrayList<AbstractCard> selectedCards = new ArrayList<>();
             while (selectedCards.size() < magicNumber) {
-                AbstractCard randomCard = masterdeck.group.get(AbstractDungeon.cardRandomRng.random(masterdeck.size() - 1));
+                AbstractCard randomCard = uniqueCards.get(AbstractDungeon.cardRandomRng.random(uniqueCards.size() - 1));
                 if (!containsCard(selectedCards, randomCard)) {
                     selectedCards.add(randomCard);
                 }
             }
             if(upgraded){
-                atb(new FlexibleDiscoveryAction(uniqueCards, true));
+                atb(new FlexibleDiscoveryAction(selectedCards, true));
             } else {
-                atb(new FlexibleDiscoveryAction(uniqueCards, true, new ExhaustMod()));
+                atb(new FlexibleDiscoveryAction(selectedCards, true, new ExhaustMod()));
             }
         }
     }
