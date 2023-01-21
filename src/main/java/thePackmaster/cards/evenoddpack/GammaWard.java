@@ -11,8 +11,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class GammaWard extends AbstractEvenOddCard {
     public final static String ID = makeID(GammaWard.class.getSimpleName());
-    private static final int MAGIC = 15;
-    private static final int UMAGIC = 5;
+    private static final int MAGIC = 12;
+    private static final int UMAGIC = 4;
     private static final int BLOCK = 4;
     private static final int UBLOCK = 2;
     private static final int COST = 1;

@@ -60,7 +60,7 @@ public class Battlecry  extends AbstractEvenOddCard{
             @Override
             public void update() {
                 if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 1) {
-                    Wiz.applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
+                    Wiz.applyToSelf(new StrengthPower(AbstractDungeon.player, 2));
                 }
                 this.addToTop(new DrawCardAction(magicNumber));
                 this.isDone = true;
