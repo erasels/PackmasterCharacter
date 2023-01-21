@@ -32,17 +32,6 @@ public class QuirionDryadPower extends AbstractPackmasterPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (this.owner.isPlayer) {
-            long plasmaOrbs = AbstractDungeon.player.orbs.stream().filter(o -> o instanceof Plasma).count();
-            if (plasmaOrbs > 0) {
-                this.flashWithoutSound();
-                this.addToBot(new GainBlockAction(this.owner, this.amount));
-            }
-        }
-    }
-
-    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!this.colors.contains(card.color)) {
             this.colors.add(card.color);
