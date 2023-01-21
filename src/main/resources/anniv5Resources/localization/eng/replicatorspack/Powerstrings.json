@@ -2,7 +2,7 @@
   "${ModID}:IterativeDesignPower": {
     "NAME": "Iterative Design",
     "DESCRIPTIONS": [
-      "Whenever you create a card this combat gain #b",
+      "Whenever you create a card this combat, gain #b",
       " #yBlock."
     ]
   },
