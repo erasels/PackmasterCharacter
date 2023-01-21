@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ThirdEyeEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.marisapack.AmplifyCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -18,7 +17,8 @@ public class Cognition extends AbstractCosmosCard implements AmplifyCard {
 
     public Cognition() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 2;
+        secondMagic = baseSecondMagic = 2;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -35,7 +35,7 @@ public class Cognition extends AbstractCosmosCard implements AmplifyCard {
         vfx(new ThirdEyeEffect(p.hb.cX, p.hb.cY));
         atb(new WaitAction(0.1F));
         atb(new ScryAction(magicNumber));
-        atb(new DrawCardAction(magicNumber));
+        atb(new DrawCardAction(secondMagic));
     }
 
     @Override
@@ -44,6 +44,6 @@ public class Cognition extends AbstractCosmosCard implements AmplifyCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }
