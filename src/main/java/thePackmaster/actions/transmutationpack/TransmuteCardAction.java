@@ -100,6 +100,9 @@ public class TransmuteCardAction extends AbstractGameAction {
         }
         if (!initialized) {
             initialized = true;
+            //if another action does not clear this groups and I don't open the screen, the action will hang
+            AbstractDungeon.handCardSelectScreen.selectedCards.clear();
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
             if (!transformPlayed) {
                 if (AbstractDungeon.player.hand.size() < 1) {
                     isDone = true;
@@ -219,28 +222,22 @@ public class TransmuteCardAction extends AbstractGameAction {
 
     private ArrayList<AbstractCard> getTransmutationCandidates(AbstractCard oldCard) {
         ArrayList<AbstractCard> targets = new ArrayList<>();
+        ArrayList<AbstractCard> group;
         switch (oldCard.rarity) {
             case RARE:
-                for (AbstractCard candidate : AbstractDungeon.srcRareCardPool.group) {
-                    if (!candidate.hasTag(AbstractCard.CardTags.HEALING) && (conditions == null || conditions.apply(candidate)) && !candidate.cardID.equals(oldCard.cardID)) {
-                        targets.add(candidate.makeCopy());
-                    }
-                }
+                group = AbstractDungeon.srcRareCardPool.group;
                 break;
             case UNCOMMON:
-                for (AbstractCard candidate : AbstractDungeon.srcUncommonCardPool.group) {
-                    if (!candidate.hasTag(AbstractCard.CardTags.HEALING) && (conditions == null || conditions.apply(candidate)) && !candidate.cardID.equals(oldCard.cardID)) {
-                        targets.add(candidate.makeCopy());
-                    }
-                }
+                group = AbstractDungeon.srcUncommonCardPool.group;
                 break;
             default:
-                for (AbstractCard candidate : AbstractDungeon.srcCommonCardPool.group) {
-                    if (!candidate.hasTag(AbstractCard.CardTags.HEALING) && (conditions == null || conditions.apply(candidate)) && !candidate.cardID.equals(oldCard.cardID)) {
-                        targets.add(candidate.makeCopy());
-                    }
-                }
+                group = AbstractDungeon.srcCommonCardPool.group;
                 break;
+        }
+        for (AbstractCard candidate : group) {
+            if (!candidate.hasTag(AbstractCard.CardTags.HEALING) && (conditions == null || conditions.apply(candidate)) && !candidate.cardID.equals(oldCard.cardID)) {
+                targets.add(candidate.makeCopy());
+            }
         }
         return targets;
     }
