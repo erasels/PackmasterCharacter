@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.buttons.EndTurnButton;
 import javassist.CtBehavior;
 import thePackmaster.cards.highenergypack.StruckByATrain;
 import thePackmaster.powers.odditiespack.AutoBattlerPower;
@@ -21,26 +22,27 @@ public class AutoBattlerPatches {
 
     @SpirePatch(
             clz = AbstractCard.class,
-            method = "canUse"
+            method = "isHoveredInHand"
     )
-    public static class NoMoreManualPlay {
-        public static boolean cardsCanBePlayed = false;
-
-        public static boolean Postfix(boolean __result, AbstractCard c, AbstractPlayer p, AbstractMonster m) {
-            if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID) && !cardsCanBePlayed) {
-                return false;
+    public static class NoDoingThingsAutoBattlerPatch {
+        public static SpireReturn<Boolean> Prefix(AbstractCard __instance) {
+            if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID)) {
+                return SpireReturn.Return(false);
             }
-//            if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID) && AbstractDungeon.player.hand.contains(c)) {
-//                int idx = AbstractDungeon.player.hand.group.indexOf(c);
-//                for (int i = 0; i < idx; i++) {
-//                    AbstractCard other = AbstractDungeon.player.hand.group.get(i);
-//                    if (other.canUse(p, m)) {
-//                        c.cantUseMessage = uiStrings.TEXT[0];
-//                        return false;
-//                    }
-//                }
-//            }
-            return __result;
+            return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(
+            clz = EndTurnButton.class,
+            method="update"
+    )
+    public static class NoUpdateEndTurnButtonAutoBattlerPatch {
+        public static SpireReturn<Boolean> Prefix(EndTurnButton __instance) {
+            if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID)) {
+                return SpireReturn.Return(false);
+            }
+            return SpireReturn.Continue();
         }
     }
 
@@ -58,7 +60,6 @@ public class AutoBattlerPatches {
         public static void Insert(CardGroup __instance) {
             if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID)) {
                 if (!AbstractDungeon.isScreenUp && AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.actionManager.currentAction == null && !isEndingTurn) {
-                    NoMoreManualPlay.cardsCanBePlayed = true;
                     AbstractMonster target = StruckByATrain.getFrontmostEnemy();
                     boolean foundACard = false;
                     for (AbstractCard q : AbstractDungeon.player.hand.group) {

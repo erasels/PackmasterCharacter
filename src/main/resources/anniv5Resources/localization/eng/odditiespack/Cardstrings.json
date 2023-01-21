@@ -40,7 +40,7 @@
   },
   "${ModID}:AutoBattler": {
     "NAME": "Auto Battler",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL You play cards automatically from left to right at the frontmost foe."
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL You play cards automatically."
   },
   "${ModID}:ShiningStyle": {
     "NAME": "Shining Style",
