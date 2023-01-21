@@ -18,7 +18,7 @@ public class WindUpBomb extends AbstractEvenOddCard{
     private static final int UMAGIC = 5;
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
     
     public WindUpBomb() {

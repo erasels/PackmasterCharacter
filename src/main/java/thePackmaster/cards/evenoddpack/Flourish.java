@@ -13,7 +13,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Flourish extends AbstractEvenOddCard{
     public final static String ID = makeID(Flourish.class.getSimpleName());
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 3;
     private static final int UMAGIC = 2;
     private static final int COST = 1;
     private static final CardType TYPE = CardType.POWER;
