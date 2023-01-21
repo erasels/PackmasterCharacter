@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.Dark;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
@@ -26,9 +27,8 @@ public class EndOfDaysPower extends AbstractPackmasterPower {
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
             if (EnergyPanel.getCurrentEnergy() > 0) flash();
-            for (int i = 0; i < EnergyPanel.getCurrentEnergy(); i++) {
-                addToBot(new ChannelAction(new Dark())
-                );
+            for (int i = 0; i < EnergyPanel.getCurrentEnergy() * amount; i++) {
+                addToBot(new ChannelAction(new Dark()));
             }
 
         }
