@@ -18,13 +18,13 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.summonspack.Quill;
-import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.summonspack.QuillEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.PORCUPINE_KEY;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class Porcupine extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(Porcupine.class.getSimpleName());
@@ -41,8 +41,7 @@ public class Porcupine extends CustomOrb {
     private final BobEffect porcBobEffect = new BobEffect(2f, 3f);
     private float quillTimer;
 
-    public Porcupine()
-    {
+    public Porcupine() {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH);
         quillTimer = MathUtils.random(2f, 10f);
         applyFocus();
@@ -57,11 +56,11 @@ public class Porcupine extends CustomOrb {
     @Override
     public void applyFocus() {
         passiveAmount = BASE_PASSIVE;
-        evokeAmount = BASE_EVOKE;
+        evokeAmount = baseEvokeAmount;
         AbstractPower pow = adp().getPower(FocusPower.POWER_ID);
         if (pow != null) {
             passiveAmount = basePassiveAmount + pow.amount;
-            evokeAmount = baseEvokeAmount + pow.amount;
+            evokeAmount = evokeAmount + pow.amount;
         }
         if (passiveAmount < 0)
             passiveAmount = 0;
@@ -119,7 +118,7 @@ public class Porcupine extends CustomOrb {
     @Override
     public void updateDescription() {
         applyFocus();
-        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + passiveAmount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + evokeAmount + DESCRIPTIONS[2];
     }
 
     @Override

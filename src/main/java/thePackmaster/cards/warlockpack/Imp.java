@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +37,9 @@ public class Imp extends AbstractWarlockCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        thornDmg(AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng), magicNumber);
+        AbstractMonster mon = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
+        if(mon != null)
+            thornDmg(mon, magicNumber);
         atb(new DrawCardAction(1));
         atb(new AbstractGameAction() {
             @Override

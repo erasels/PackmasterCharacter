@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.patches.MainMenuUIPatch;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -112,7 +113,7 @@ public class PackFilterMenu {
         previewCard.current_y = PREVIEW_Y;
         previewCard.hb.move(previewCard.current_x, previewCard.current_y);
         previewCard.hb.update();
-        if (viewedPack.credits != null) {
+        if (viewedPack.credits != null && !MainMenuUIPatch.hatMenu.isOpen) {
             TipHelper.renderGenericTip(
                     previewCard.current_x + previewCard.hb.width,
                     previewCard.current_y + previewCard.hb.height,
