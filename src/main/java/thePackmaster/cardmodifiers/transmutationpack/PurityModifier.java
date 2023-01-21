@@ -33,7 +33,12 @@ public class PurityModifier extends AbstractCardModifier {
 
     @Override
     public void onRender(AbstractCard card, SpriteBatch sb) {
-        ExtraIcons.icon(purityIcon).offsetX(-2f).text(String.valueOf(amount)).render(card);
+        ExtraIcons.icon(purityIcon).text(String.valueOf(amount)).render(card);
+    }
+
+    @Override
+    public void onSingleCardViewRender(AbstractCard card, SpriteBatch sb) {
+        ExtraIcons.icon(purityIcon).text(String.valueOf(amount)).render(card);
     }
 
     public boolean shouldApply(AbstractCard card) {
