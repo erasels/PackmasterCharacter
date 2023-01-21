@@ -40,7 +40,7 @@
   },
   "${ModID}:AutoBattler": {
     "NAME": "Auto Battler",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL You must play cards from left to right."
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL You play cards automatically."
   },
   "${ModID}:ShiningStyle": {
     "NAME": "Shining Style",
@@ -48,7 +48,7 @@
   },
   "${ModID}:FinalForm": {
     "NAME": "This Isn't Even My...",
-    "DESCRIPTION": "${ModID}:Unnate. Ethereal. NL Exhaust 1 card. NL At the start of your turn, play and Exhaust a copy of it.",
+    "DESCRIPTION": "Ethereal. NL Exhaust 1 card at random. NL At the start of your turn, play and Exhaust a copy of it.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL At the start of your turn, play and Exhaust a copy of it.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for Final Form."

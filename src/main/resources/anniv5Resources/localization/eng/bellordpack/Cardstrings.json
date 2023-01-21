@@ -16,7 +16,7 @@
   },
   "${ModID}:VoDo": {
     "NAME": "Vo-Do",
-    "DESCRIPTION": "Gain !M! Strength. NL ALL enemies lose 2 Strength. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+    "DESCRIPTION": "Gain !M! Strength. NL Enemy loses 2 Strength. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",
