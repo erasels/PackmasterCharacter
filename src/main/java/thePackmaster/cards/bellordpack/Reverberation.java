@@ -36,6 +36,6 @@ public class Reverberation extends AbstractBellordCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
     }
 }
