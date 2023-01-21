@@ -2,6 +2,7 @@ package thePackmaster.cards.odditiespack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -30,9 +31,7 @@ public class MidnightStrike extends AbstractOdditiesCard {
     }
 
     @Override
-    public void applyPowers() {
-        super.applyPowers();
-
+    public void triggerOnCardPlayed(AbstractCard cardPlayed) {
         int count = AbstractDungeon.actionManager.cardsPlayedThisCombat.size();
 
         this.rawDescription = cardStrings.DESCRIPTION;
@@ -45,15 +44,9 @@ public class MidnightStrike extends AbstractOdditiesCard {
 
         this.initializeDescription();
 
-        int imageCount = count > 12 ? 0 : count + 1;
+        int imageCount = count >= 12 ? 0 : count + 1;
         loadCardImage("anniv5Resources/images/cards/MidnightStrike" + imageCount + ".png");
     }
-
-    public void onMoveToDiscard() {
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
-    }
-
 
     @Override
     public void triggerOnGlowCheck() {
