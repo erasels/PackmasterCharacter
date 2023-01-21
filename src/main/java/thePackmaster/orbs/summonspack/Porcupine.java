@@ -119,7 +119,7 @@ public class Porcupine extends CustomOrb {
     @Override
     public void updateDescription() {
         applyFocus();
-        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + passiveAmount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + passiveAmount + DESCRIPTIONS[1] + evokeAmount + DESCRIPTIONS[2];
     }
 
     @Override
