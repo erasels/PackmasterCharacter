@@ -41,8 +41,10 @@
   "${ModID}:Curse": {
     "NAME": "Curse",
     "DESCRIPTION": "${ModID}:Locking. NL Enemy loses !M! Strength.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Locking. NL Retain. NL Enemy loses !M! Strength.",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL Enemy loses !M! Strength."
+      "${ModID}:Locked. NL Enemy loses !M! Strength.",
+      "${ModID}:Locked. NL Retain. NL Enemy loses !M! Strength."
     ]
   },
   "${ModID}:MalleableFire": {
