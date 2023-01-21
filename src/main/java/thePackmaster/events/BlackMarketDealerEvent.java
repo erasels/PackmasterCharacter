@@ -149,8 +149,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                         })
                         .addOption(new TextPhase.OptionInfo(canRemoveCardsForCleanse() ? OPTIONS[13] : OPTIONS[14]).enabledCondition(this::canRemoveCardsForCleanse), (i) -> {   //Cleansing Ritual
                             ArrayList<AbstractCard> purgeables = new ArrayList<>();
-                            for (AbstractCard c : AbstractDungeon.player.masterDeck.group
-                            ) {
+                            for (AbstractCard c : AbstractDungeon.player.masterDeck.getPurgeableCards().group) {
                                 if (c.type == AbstractCard.CardType.CURSE) {
                                     purgeables.add(c);
                                 }
@@ -251,7 +250,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
 
 
     private boolean canRemoveCardsForCleanse() {
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.getPurgeableCards().group
         ) {
             if (c.type == AbstractCard.CardType.CURSE) {
                 return true;
