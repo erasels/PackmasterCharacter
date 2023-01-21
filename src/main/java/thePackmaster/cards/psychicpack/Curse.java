@@ -16,7 +16,7 @@ public class Curse extends LockingCard {
     public final static String ID = makeID("Curse");
 
     public Curse() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 3;
     }
 
@@ -30,6 +30,6 @@ public class Curse extends LockingCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        selfRetain = true;
     }
 }
