@@ -28,6 +28,7 @@ public class EatWithoutTable extends AbstractRimCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         exhaust = true;
         cardsToPreview = new Despair();
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -30,7 +30,7 @@ public class CrystalResonancePower extends AbstractPackmasterPower implements Tr
     }
 
     @Override
-    public void onTransmute(TransmuteCardAction action, HashMap<AbstractCard, AbstractCard> pairs) {
+    public void onTransmute(HashMap<AbstractCard, AbstractCard> pairs) {
         if (!pairs.isEmpty()) {
             addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
         }

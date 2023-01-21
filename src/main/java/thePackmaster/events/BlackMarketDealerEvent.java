@@ -149,8 +149,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                         })
                         .addOption(new TextPhase.OptionInfo(canRemoveCardsForCleanse() ? OPTIONS[13] : OPTIONS[14]).enabledCondition(this::canRemoveCardsForCleanse), (i) -> {   //Cleansing Ritual
                             ArrayList<AbstractCard> purgeables = new ArrayList<>();
-                            for (AbstractCard c : AbstractDungeon.player.masterDeck.group
-                            ) {
+                            for (AbstractCard c : AbstractDungeon.player.masterDeck.getPurgeableCards().group) {
                                 if (c.type == AbstractCard.CardType.CURSE) {
                                     purgeables.add(c);
                                 }
@@ -173,14 +172,15 @@ public class BlackMarketDealerEvent extends PhasedEvent {
         registerPhase("relicDealer", new TextPhase(DESCRIPTIONS[3])
 
 
-                .addOption(new TextPhase.OptionInfo(hasEnoughGoldForBuyCollection() ? OPTIONS[15] + getGoldCostForBuyCollection() + OPTIONS[16] : OPTIONS[9] + getGoldCostForBuyCollection() + OPTIONS[7], new PMCollection()).enabledCondition(this::hasEnoughGoldForBuyCollection), (i) -> {   //PM Collection
+                .addOption(new TextPhase.OptionInfo(hasCollection() ? OPTIONS[23] : hasEnoughGoldForBuyCollection() ? OPTIONS[15] + getGoldCostForBuyCollection() + OPTIONS[16] : OPTIONS[9] + getGoldCostForBuyCollection() + OPTIONS[7], new PMCollection()).enabledCondition(this::canBuyCollection), (i) -> {   //PM Collection
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new PMCollection());
-
+                    AbstractDungeon.shopRelicPool.remove(PMCollection.ID);
                     transitionKey("relicCollectionEnd");
                 })
 
-                .addOption(new TextPhase.OptionInfo(hasEnoughGoldForBuyDecree() ? OPTIONS[17] + getGoldCostForBuyDecree() + OPTIONS[18] : OPTIONS[9] + getGoldCostForBuyDecree() + OPTIONS[7], new BanishingDecree()).enabledCondition(this::hasEnoughGoldForBuyDecree), (i) -> {   //Banishing Decree
+                .addOption(new TextPhase.OptionInfo(hasDecree() ? OPTIONS[23] : hasEnoughGoldForBuyDecree() ? OPTIONS[17] + getGoldCostForBuyDecree() + OPTIONS[18] : OPTIONS[9] + getGoldCostForBuyDecree() + OPTIONS[7], new BanishingDecree()).enabledCondition(this::canBuyDecree), (i) -> {   //Banishing Decree
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BanishingDecree());
+                    AbstractDungeon.shopRelicPool.remove(BanishingDecree.ID);
                     transitionKey("relicBanishingEnd");
                 })
 
@@ -209,8 +209,24 @@ public class BlackMarketDealerEvent extends PhasedEvent {
         return AbstractDungeon.player.gold >= getGoldCostForBuy();
     }
 
+    private boolean canBuyCollection() {
+        return !hasCollection() && hasEnoughGoldForBuyCollection();
+    }
+
+    private boolean hasCollection() {
+        return AbstractDungeon.player.hasRelic(PMCollection.ID);
+    }
+
     private boolean hasEnoughGoldForBuyCollection() {
         return AbstractDungeon.player.gold >= getGoldCostForBuyCollection();
+    }
+
+    private boolean canBuyDecree() {
+        return !hasDecree() && hasEnoughGoldForBuyDecree();
+    }
+
+    private boolean hasDecree() {
+        return AbstractDungeon.player.hasRelic(BanishingDecree.ID);
     }
 
     private boolean hasEnoughGoldForBuyDecree() {
@@ -234,7 +250,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
 
 
     private boolean canRemoveCardsForCleanse() {
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.getPurgeableCards().group
         ) {
             if (c.type == AbstractCard.CardType.CURSE) {
                 return true;

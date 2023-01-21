@@ -1,0 +1,15 @@
+{
+  "${ModID}:EvenOddPack": {
+    "TEXT": [
+      "Even/Odd",
+      "Cards with different effects depending on number of cards played.",
+      "Lobbien"
+    ]
+  },
+  "${ModID}:EvenOddPackHat": {
+    "TEXT": [
+      "The superlative modulo enjoyer's choice of headwear.",
+      "The Top Percent"
+    ]
+  }
+}

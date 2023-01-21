@@ -22,7 +22,7 @@
   "${ModID}:MetallicVial": {
     "NAME": "Metallic Vial",
     "DESCRIPTION": "Choose: Gain 4 Plated Armor, Gain 3 Thorns, or Gain 2 Artifact. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose: Gain 4 Plated Armor, Gain 3 Thorns, or Gain 2 Artifact. NL stslib:Exhaustive 2.",
+    "UPGRADE_DESCRIPTION": "Choose: Gain 4 Plated Armor, Gain 3 Thorns, or Gain 2 Artifact. NL stslib:Exhaustive !stslib:ex!.",
     "EXTENDED_DESCRIPTION": ["Gain 4 Plated Armor.", "Gain 3 Thorns.","Gain 2 Artifact."]
   },
   "${ModID}:QuickBrew": {
@@ -40,7 +40,7 @@
   "${ModID}:AttackVial": {
     "NAME": "Attack Vial",
     "DESCRIPTION": "Choose 1 of 3 Attacks to gain. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Attacks to gain. It costs 0 until played. NL stslib:Exhaustive 2.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Attacks to gain. It costs 0 until played. NL stslib:Exhaustive !stslib:ex!.",
     "EXTENDED_DESCRIPTION": ["Choose 1 of 3 Attacks to gain. It costs 0 until played."]
   },
   "${ModID}:ChaosVial": {
@@ -50,6 +50,6 @@
   "${ModID}:VialOfMemory": {
     "NAME": "Vial of Memory",
     "DESCRIPTION": "Choose a card in your discard pile and return it to your hand. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in your discard pile and return it to your hand. It costs 0 until played. NL stslib:Exhaustive 2."
+    "UPGRADE_DESCRIPTION": "Choose a card in your discard pile and return it to your hand. It costs 0 until played. NL stslib:Exhaustive !stslib:ex!."
   }
 }

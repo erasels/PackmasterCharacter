@@ -54,17 +54,21 @@ public class Wanderbot extends AbstractOrb {
 
     public void onEvoke() {
         AbstractMonster target = StruckByATrain.getFrontmostEnemy();
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, this.hb.cX, this.hb.cY), 0.1F));
-        atb(new DamageAction(target, new DamageInfo(AbstractDungeon.player, evokeAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        if (target != null) {
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, this.hb.cX, this.hb.cY), 0.1F));
+            atb(new DamageAction(target, new DamageInfo(AbstractDungeon.player, evokeAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        }
         atb(new DrawCardAction(1));
     }
 
     public void onEndOfTurn() {
         AbstractMonster target = StruckByATrain.getFrontmostEnemy();
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, this.hb.cX, this.hb.cY), 0.1F));
-        atb(new DamageAction(target, new DamageInfo(AbstractDungeon.player, passiveAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        if (target != null) {
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, this.hb.cX, this.hb.cY), 0.1F));
+            atb(new DamageAction(target, new DamageInfo(AbstractDungeon.player, passiveAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        }
     }
 
     public void triggerEvokeAnimation() {

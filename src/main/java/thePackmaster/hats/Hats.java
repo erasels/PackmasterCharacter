@@ -68,7 +68,7 @@ public class Hats {
     private static Bone headbone;
     private static Bone playerbone;
     private static Slot headslot;
-    private static Slot playerHeadSlot;
+    public static Slot playerHeadSlot;
     private static int foundHeadSlot;
     private static int playerFoundHeadSlot;
     private static int attachmentSlotIndex;
@@ -232,8 +232,8 @@ public class Hats {
     }
 
     public static void atRunStart() {
-        playerHeadSlot = null;
         if (currentHat != null) {
+            playerHeadSlot = null;
             SpireAnniversary5Mod.logger.info("adding run start hat");
             if (HatMenu.invalidHatSelected) {
                 SpireAnniversary5Mod.logger.info("an invalid hat was used. returning to default.");
@@ -247,6 +247,7 @@ public class Hats {
     }
 
     private static final float Y_OFF = 13f;
+
     public static void preRenderPlayer(SpriteBatch sb, AbstractPlayer p) {
         SpecialHat shat = specialHats.get(currentHat);
         if (shat != null && skeleton != null && headbone != null) {
@@ -254,6 +255,7 @@ public class Hats {
             shat.preRenderPlayer(sb, p, x, y);
         }
     }
+
     public static void postRenderPlayer(SpriteBatch sb, AbstractPlayer p) {
         SpecialHat shat = specialHats.get(currentHat);
         if (shat != null && skeleton != null && headbone != null) {

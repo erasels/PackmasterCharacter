@@ -5,7 +5,7 @@
   },
   "${ModID}:Cognition": {
     "NAME": "Cognition",
-    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Amplify [E] : Scry !M! before drawing."
+    "DESCRIPTION": "Draw !${ModID}:m2! cards. NL ${ModID}:Amplify [E] : Scry !M! before drawing."
   },
   "${ModID}:EternalStrike": {
     "NAME": "Eternal Strike",
