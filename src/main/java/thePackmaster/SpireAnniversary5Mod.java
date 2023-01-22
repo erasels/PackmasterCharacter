@@ -5,6 +5,7 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
+import basemod.devcommands.ConsoleCommand;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardBorderGlowManager;
@@ -54,6 +55,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.commands.UnlockHatCommand;
 import thePackmaster.events.BlackMarketDealerEvent;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
@@ -451,6 +453,7 @@ public class SpireAnniversary5Mod implements
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());
 
+        ConsoleCommand.addCommand("addhat", UnlockHatCommand.class);
     }
 
     public static void addPotions() {
