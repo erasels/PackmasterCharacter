@@ -987,6 +987,10 @@ public class SpireAnniversary5Mod implements
             public void onLoad(ArrayList<String> strings) {
                 logger.info("Loading. Packs cleared.");
                 currentPoolPacks.clear();
+                if(strings == null) {
+                    logger.error("No currentPoolPacks on save, if you're not playing Packmaster this can be ignored.");
+                    return;
+                }
                 for (String packID : strings) {
                     logger.info("adding pack " + packID + " from load");
                     currentPoolPacks.add(packsByID.get(packID));
