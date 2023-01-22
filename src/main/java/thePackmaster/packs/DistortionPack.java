@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.ThePackmaster;
-import thePackmaster.actions.distortionpack.ImproveAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.distortionpack.*;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
@@ -49,7 +47,7 @@ public class DistortionPack extends AbstractCardPack {
     }
 
     @Override
-    public AbstractCard makePreviewCard() {
+    public AbstractPackPreviewCard makePreviewCard() {
         return new DistortionPackPreview(packID, this);
     }
 
