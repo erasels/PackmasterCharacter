@@ -15,6 +15,7 @@ public class GoldenRound extends AbstractAnomalyCard {
 
     @Override
     public void upp() {
+        upgradeBaseCost(0);
     }
 
     @Override
