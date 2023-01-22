@@ -19,7 +19,7 @@ public class PrimeDirective extends AbstractPackmasterCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     
     public PrimeDirective() {
-        super(ID, COST, TYPE, RARITY, TARGET);
+        super(ID, COST, TYPE, RARITY, TARGET, "evensandodds");
         magicNumber = baseMagicNumber = MAGIC;
     }
     
