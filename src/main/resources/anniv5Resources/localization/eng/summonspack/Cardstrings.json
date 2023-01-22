@@ -25,7 +25,7 @@
   },
   "${ModID}:FireSpirit": {
     "NAME": "Fire Spirit",
-    "DESCRIPTION": "Deal !D! damage. NL Channel a ${ModID}:Fire\u00a0Spirit.",
+    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Fire\u00a0Spirit.",
     "FLAVOR": "Burninating the Spire."
   },
   "${ModID}:RainbowLouse": {

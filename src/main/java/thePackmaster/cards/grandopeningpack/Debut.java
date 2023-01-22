@@ -8,11 +8,11 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Debut extends AbstractPackmasterCard {
+public class Debut extends AbstractGrandOpeningCard {
     public final static String ID = makeID("Debut");
 
     public Debut() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF, "grandopening");
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 1;
     }
 

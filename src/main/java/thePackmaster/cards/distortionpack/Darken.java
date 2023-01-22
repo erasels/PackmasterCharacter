@@ -5,11 +5,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.actions.distortionpack.ImproveAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.distortionpack.DistortionPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class Darken extends AbstractDistortionCard {
     public final static String ID = makeID("Darken");

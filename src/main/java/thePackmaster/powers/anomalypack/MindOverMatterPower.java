@@ -34,7 +34,7 @@ public class MindOverMatterPower extends AbstractPackmasterPower {
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        att(new GainBlockAction(this.owner, this.owner, 1));
+        att(new GainBlockAction(this.owner, this.owner, this.amount));
         this.flash();
     }
 

@@ -9,7 +9,9 @@
   "${ModID}:Rip": {
     "TEXT": [
       "Rippable",
-      "I need room for both halves of the card in my hand."
+      "I need room for both halves of the card in my hand.",
+      "Attack",
+      "Skill"
     ]
   },
   "${ModID}:RipPackHat": {

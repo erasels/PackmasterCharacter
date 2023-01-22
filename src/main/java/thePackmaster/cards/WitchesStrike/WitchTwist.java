@@ -5,17 +5,11 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Leap;
-import com.megacrit.cardcrawl.cards.optionCards.LiveForever;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FocusPower;
-import thePackmaster.actions.witchesstrikepack.ManifestAction;
-import thePackmaster.actions.witchesstrikepack.MysticFlourishAction;
 import thePackmaster.cardmodifiers.witchesstrikepack.InscribedMod;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.orbs.WitchesStrike.CrescentMoon;
-import thePackmaster.util.CardArtRoller;
 
 import java.util.ArrayList;
 

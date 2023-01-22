@@ -18,7 +18,7 @@ public class Slowing extends AbstractEchoCard {
 
     public Slowing(){
         super(ID, COST, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
         cardsToPreview = new Wound();
     }
 
@@ -31,6 +31,6 @@ public class Slowing extends AbstractEchoCard {
 
     @Override
     public void upp() {
-        upMagic(-2);
+        upMagic(-1);
     }
 }

@@ -16,6 +16,7 @@ public class WarriorPack extends AbstractCardPack {
 
     public WarriorPack() {
         super(ID, NAME, DESC, AUTHOR);
+        hatHidesHair = true;
     }
 
     @Override

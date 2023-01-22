@@ -1,15 +1,10 @@
 package thePackmaster.packs;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Consume;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.cards.arcanapack.*;
 import thePackmaster.cards.orbpack.*;
-import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 
 import java.util.ArrayList;
 
@@ -41,7 +36,7 @@ public class OrbPack extends AbstractCardPack {
     }
 
     @Override
-    public AbstractCard makePreviewCard() {
+    public AbstractPackPreviewCard makePreviewCard() {
         return new CardPackPreview(packID, "blue/skill/chaos", this);
     }
 }

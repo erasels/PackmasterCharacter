@@ -22,9 +22,11 @@ public class SpikeTrapPower extends AbstractPackmasterPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        addToTop(new DamageAction(info.owner, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        flash();
-        addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
+            addToTop(new DamageAction(info.owner, new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            flash();
+            addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+        }
         return damageAmount;
     }
 

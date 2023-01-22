@@ -27,7 +27,7 @@ public class NextTurnGainMadnessPower extends AbstractPackmasterPower implements
         AbstractCard c = new Madness();
         if (upgradeMadness) c.upgrade();
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c.makeCopy(), this.amount));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, this.amount));
         addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, amount));
         removeThis();
     }

@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.effects.monsterhunterpack.ScreenOnFireEffectButDoesntCrash;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -38,8 +38,14 @@ public class InfernoDaggers extends AbstractMonsterHunterCard {
                 addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
         }
         addToBot(new WaitAction(1.0f));
-        this.cost = 6;
-        this.costForTurn = 6;
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                InfernoDaggers.this.cost = 6;
+                InfernoDaggers.this.costForTurn = 6;
+                isDone = true;
+            }
+        });
     }
 
     public void onRetained() {

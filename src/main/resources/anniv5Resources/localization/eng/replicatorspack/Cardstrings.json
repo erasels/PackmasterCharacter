@@ -1,9 +1,8 @@
 {
   "${ModID}:FrontloadedBash": {
     "NAME": "Frontloaded Bash",
-    "DESCRIPTION": "Deal !D! damage. NL Deals 1 additional damage for every !M! cards in your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deals 1 additional damage for every !M! cards in your draw pile. NL Draw 1 card.",
-    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
+    "DESCRIPTION": "Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile. NL Draw 1 card."
   },
   "${ModID}:Preparation": {
     "NAME": "Preparation",
@@ -27,7 +26,7 @@
   },
   "${ModID}:IterativeDesign": {
     "NAME": "Iterative Design",
-    "DESCRIPTION": "Whenever your create a card this combat gain !M! Block."
+    "DESCRIPTION": "Whenever your create a card this combat, gain !M! Block."
   },
   "${ModID}:Xpansion": {
     "NAME": "Xpansion",

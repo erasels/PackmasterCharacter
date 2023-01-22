@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.patches.MainMenuUIPatch;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -37,14 +38,14 @@ public class PackFilterMenu {
     //positions
     private static final float BG_X_SCALE = Settings.scale * 0.31f;
     private static final float BG_Y_SCALE = Settings.scale * 0.8f;
-    private static final float BG_X = 25f * Settings.xScale;
-    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
-    private static final float DROPDOWN_X = 90f * Settings.xScale;
-    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
+    private static final float BG_X = 25f * Settings.scale;
+    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.scale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
+    private static final float DROPDOWN_X = 90f * Settings.scale;
+    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
     private static final float CHECKBOX_X = 150f;
     private static final float CHECKBOX_Y = 490f;
-    private static final float PREVIEW_X = 235f * Settings.xScale;
-    private static final float PREVIEW_Y = 700f * Settings.yScale;
+    private static final float PREVIEW_X = 235f * Settings.scale;
+    private static final float PREVIEW_Y = 700f * Settings.scale;
 
     public PackFilterMenu() {
         SpireAnniversary5Mod.logger.info("Settings.HEIGHT = " + Settings.HEIGHT);
@@ -112,7 +113,7 @@ public class PackFilterMenu {
         previewCard.current_y = PREVIEW_Y;
         previewCard.hb.move(previewCard.current_x, previewCard.current_y);
         previewCard.hb.update();
-        if (viewedPack.credits != null) {
+        if (viewedPack.credits != null && !MainMenuUIPatch.hatMenu.isOpen) {
             TipHelper.renderGenericTip(
                     previewCard.current_x + previewCard.hb.width,
                     previewCard.current_y + previewCard.hb.height,

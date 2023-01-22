@@ -16,11 +16,11 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MessUp extends AbstractPackmasterCard {
+public class MessUp extends AbstractGrandOpeningCard {
     public final static String ID = makeID("MessUp");
 
     public MessUp() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, "grandopening");
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = this.damage = 0;
     }
 

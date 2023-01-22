@@ -11,7 +11,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class FFBlade extends AbstractPackmasterCard {
+public class FFBlade extends AbstractWarriorCard {
 
     public final static String ID = makeID(FFBlade.class.getSimpleName());
 

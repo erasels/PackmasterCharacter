@@ -15,11 +15,11 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Improvise extends AbstractPackmasterCard {
+public class Improvise extends AbstractGrandOpeningCard {
     public final static String ID = makeID("Improvise");
 
     public Improvise() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, "grandopening");
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = this.block = 5;
     }
 

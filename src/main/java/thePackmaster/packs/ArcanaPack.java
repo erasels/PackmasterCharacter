@@ -38,8 +38,8 @@ public class ArcanaPack extends AbstractCardPack {
     }
 
     @Override
-    public AbstractCard makePreviewCard() {
-        AbstractCard c = super.makePreviewCard();
+    public AbstractPackPreviewCard makePreviewCard() {
+        AbstractPackPreviewCard c = super.makePreviewCard();
         AnimatedCardsPatch.loadFrames(c, AbstractPackmasterCard.getCardTextureString("Temperance", AbstractCard.CardType.SKILL), 37, 0.12f);
         return c;
     }

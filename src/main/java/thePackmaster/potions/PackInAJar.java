@@ -50,7 +50,7 @@ public class PackInAJar extends CustomPotion {
         ArrayList<AbstractCard> packCards = new ArrayList<>();
 
         for (AbstractCardPack pack : choices) {
-            packCards.add(new PackmasterModalChoiceCard(pack.previewPackCard.cardID, pack.previewPackCard.name, pack.previewPackCard.rawDescription, true, () -> action(pack)));
+            packCards.add(new PackmasterModalChoiceCard(pack.previewPackCard, true, () -> action(pack)));
         }
 
         addToBot(new EasyModalChoiceAction(packCards, 1, CardCrawlGame.languagePack.getUIString(makeID("ModalChoice")).TEXT[0]));

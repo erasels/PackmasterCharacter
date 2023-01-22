@@ -41,7 +41,7 @@ public class Rummage extends AbstractPackmasterCard {
         @Override
         public void update() {
             for (AbstractCard c : DrawCardAction.drawnCards) {
-                if(Wiz.getLogicalCardCost(c) > 0)
+                if(c.cost >= 0 && c.costForTurn > 0)
                 {
                     c.setCostForTurn(Math.max(0, c.costForTurn - amount));
                     c.isCostModifiedForTurn = true;

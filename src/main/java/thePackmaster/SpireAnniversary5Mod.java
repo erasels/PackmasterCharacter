@@ -5,6 +5,9 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
+import basemod.devcommands.ConsoleCommand;
+import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
@@ -33,15 +36,14 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.orbs.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.random.Random;
+import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.CalmStance;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
@@ -53,16 +55,13 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.commands.UnlockHatCommand;
+import thePackmaster.events.BlackMarketDealerEvent;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
-import thePackmaster.orbs.WitchesStrike.CrescentMoon;
-import thePackmaster.orbs.WitchesStrike.FullMoon;
-import thePackmaster.orbs.downfallpack.Ghostflame;
-import thePackmaster.orbs.entropy.Oblivion;
 import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
-import thePackmaster.orbs.summonspack.SwarmOfBees;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
@@ -84,6 +83,8 @@ import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.powers.dragonwrathpack.PenancePower;
 import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
+import thePackmaster.rewards.CustomRewardTypes;
+import thePackmaster.rewards.PMBoosterBoxCardReward;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 import thePackmaster.stances.cthulhupack.NightmareStance;
@@ -93,8 +94,8 @@ import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
 import thePackmaster.ui.InfestTextIcon;
 import thePackmaster.ui.PackFilterMenu;
+import thePackmaster.util.JediUtil;
 import thePackmaster.util.TexLoader;
-import thePackmaster.util.Wiz;
 import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
@@ -439,9 +440,20 @@ public class SpireAnniversary5Mod implements
 
         addPotions();
 
+        registerCustomRewards();
+
         initializeConfig();
 
         initializeSavedData();
+
+        BaseMod.addEvent(new AddEventParams.Builder(BlackMarketDealerEvent.ID, BlackMarketDealerEvent.class) //Event ID//
+                //Event Character//
+                .playerClass(ThePackmaster.Enums.THE_PACKMASTER)
+                //Event Type//
+                .eventType(EventUtils.EventType.NORMAL)
+                .create());
+
+        ConsoleCommand.addCommand("addhat", UnlockHatCommand.class);
     }
 
     public static void addPotions() {
@@ -513,6 +525,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + getLangString() + "/Stancestrings.json");
         BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + getLangString() + "/Orbstrings.json");
         BaseMod.loadCustomStringsFile(PotionStrings.class, modID + "Resources/localization/" + getLangString() + "/Potionstrings.json");
+        BaseMod.loadCustomStringsFile(EventStrings.class, modID + "Resources/localization/" + getLangString() + "/Eventstrings.json");
 
         loadPackStrings();
     }
@@ -646,6 +659,7 @@ public class SpireAnniversary5Mod implements
         EnergyAndEchoPack.resetvalues();
         EnergyCountPatch.energySpentThisCombat = 0;
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
+        JediUtil.receiveOnBattleStart(room);
     }
 
     @Override
@@ -656,6 +670,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnPlayerTurnStart() {
         Leprechaun.staticStartOfTurn();
+        JediUtil.receiveOnPlayerTurnStart();
     }
 
     public static void declarePacks() {
@@ -677,8 +692,8 @@ public class SpireAnniversary5Mod implements
 
     }
 
-    public static AbstractCardPack getRandomPackFromAll() {
-        return allPacks.get(AbstractDungeon.cardRandomRng.random(0, allPacks.size() - 1));
+    public static AbstractCardPack getRandomPackFromAll(Random rng) {
+        return allPacks.get(rng.random(0, allPacks.size() - 1));
     }
 
     public static AbstractCardPack getRandomPackFromCurrentPool() {
@@ -694,24 +709,22 @@ public class SpireAnniversary5Mod implements
         return validCards.get(AbstractDungeon.cardRandomRng.random(0, validCards.size() - 1)).makeCopy();
     }
 
-
-    public static ArrayList<AbstractCard> getCardsFromPacks(String pack, int count) {
+    public static ArrayList<AbstractCard> getCardsFromPacks(String pack, int count, Random rng) {
         ArrayList<String> quick = new ArrayList<>();
         quick.add(pack);
-        return getCardsFromPacks(quick, count);
+        return getCardsFromPacks(quick, count, rng);
     }
 
-    public static ArrayList<AbstractCard> getCardsFromPacks(ArrayList<String> packs, int count) {
+    public static ArrayList<AbstractCard> getCardsFromPacks(ArrayList<String> packs, int count, Random rng) {
         ArrayList<AbstractCard> cards = new ArrayList<>();
-        for (String s : packs
-        ) {
+        for (String s : packs) {
             AbstractCardPack p = packsByID.get(s);
-            for (String s2 : p.getCards()
-            ) {
+            for (String s2 : p.getCards()) {
                 if (CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.COMMON ||
                         CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.UNCOMMON ||
-                        CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.RARE)
+                        CardLibrary.getCard(s2).rarity == AbstractCard.CardRarity.RARE) {
                     cards.add(CardLibrary.getCard(s2).makeCopy());
+                }
             }
         }
 
@@ -721,7 +734,7 @@ public class SpireAnniversary5Mod implements
         }
 
         //Otherwise make a new list with random N cards from the original list and return that
-        Collections.shuffle(cards);
+        Collections.shuffle(cards, new java.util.Random(rng.randomLong()));
         ArrayList<AbstractCard> cards2 = new ArrayList<>();
         for (int i = 0; i < count; i++) {
             cards2.add(cards.get(i));
@@ -762,6 +775,13 @@ public class SpireAnniversary5Mod implements
             allChoices.remove(p);
         }
         return valid;
+    }
+
+    private void registerCustomRewards() {
+        BaseMod.registerCustomReward(
+                CustomRewardTypes.PACKMASTER_PMBOOSTERBOXCARD,
+                (rewardSave) -> new PMBoosterBoxCardReward(),
+                (customReward) -> new RewardSave(customReward.type.toString(), null, 0, 0));
     }
 
     public static void startOfGamePackSetup() {

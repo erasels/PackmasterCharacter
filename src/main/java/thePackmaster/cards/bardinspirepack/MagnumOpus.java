@@ -1,6 +1,7 @@
 package thePackmaster.cards.bardinspirepack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.bardinspirepack.MagnumOpusAction;
@@ -44,5 +45,12 @@ public class MagnumOpus extends AbstractBardCard
     public void upp()
     {
         upgradeBaseCost(UPGRADE_COST);
+    }
+
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        MagnumOpus c = (MagnumOpus)super.makeStatEquivalentCopy();
+        c.misc = c.secondMagic = c.baseSecondMagic = this.misc;
+        return c;
     }
 }

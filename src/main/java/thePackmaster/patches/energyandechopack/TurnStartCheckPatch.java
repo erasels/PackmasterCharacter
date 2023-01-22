@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import javassist.CtBehavior;
 import thePackmaster.packs.EnergyAndEchoPack;
+import thePackmaster.patches.odditiespack.AutoBattlerPatches;
 
 
 @SpirePatch(
@@ -17,7 +18,9 @@ public class TurnStartCheckPatch {
     )
     public static void Insert(GameActionManager __instance) {
         EnergyAndEchoPack.resetvalues();
+        AutoBattlerPatches.OnRefreshHandCheckToPlayCardPatch.isEndingTurn = false;
     }
+
     private static class Locator extends SpireInsertLocator {
         public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
             Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractPlayer.class, "applyStartOfTurnRelics");
