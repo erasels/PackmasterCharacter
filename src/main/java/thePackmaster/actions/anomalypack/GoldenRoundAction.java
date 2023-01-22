@@ -1,11 +1,12 @@
 package thePackmaster.actions.anomalypack;
 
+import basemod.ReflectionHacks;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
 import thePackmaster.cards.anomalypack.GoldenGun;
 
 
@@ -34,7 +35,16 @@ public class GoldenRoundAction extends AbstractGameAction {
         }
 
         if (!done) {
-            AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(c, c.current_x, c.current_y, false));
+            for (AbstractGameAction act : AbstractDungeon.actionManager.actions) {
+                if (act instanceof UseCardAction) {
+                    UseCardAction action = (UseCardAction) act;
+                    AbstractCard tempTargetCard = ReflectionHacks.getPrivate(action, UseCardAction.class, "targetCard");
+                    if (tempTargetCard == this.c) {
+                        action.reboundCard=true;
+                        break;
+                    }
+                }
+            }
         }
 
         isDone = true;
