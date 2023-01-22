@@ -3,25 +3,13 @@ package thePackmaster.powers.dragonwrathpack;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.Lightning;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.FocusPower;
-import thePackmaster.actions.dragonwrathpack.SmiteAction;
-import thePackmaster.orbs.dragonwrathpack.LightOrb;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.powers.witchesstrikepack.LoseFocusPower;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.addPotions;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class JudgementDayPower extends AbstractPackmasterPower implements CloneablePowerInterface {
@@ -48,13 +36,16 @@ public class JudgementDayPower extends AbstractPackmasterPower implements Clonea
 
         updateDescription();
     }
+
     public void onSpecificTrigger() {
-        addToBot(new ApplyPowerAction(owner,owner,new confessionpower(owner,amount)));
+        Wiz.applyToSelf(new confessionpower(owner,amount));
     }
+
     @Override
     public void renderIcons(SpriteBatch sb, float x, float y, Color c) {
         super.renderIcons(sb, x, y, Color.GOLD.cpy());
     }
+
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
