@@ -66,7 +66,7 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
 
     @Override
     public boolean isClickable() {
-        return !AbstractDungeon.isScreenUp || validScreens.contains(AbstractDungeon.screen) || open;
+        return !AbstractDungeon.isScreenUp || (validScreens.contains(AbstractDungeon.screen) && !(AbstractDungeon.previousScreen == GRID || AbstractDungeon.previousScreen == BOSS_REWARD)) || open;
     }
 
     @Override
