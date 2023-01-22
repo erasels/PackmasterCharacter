@@ -16,7 +16,7 @@
   "${ModID}:WitzBolt": {
     "NAME": "Witz Bolt",
     "DESCRIPTION": "Deal !D! damage.",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Odd: ", "Apply !M! weak and Vulnerable."]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Odd: ", "Apply !M! Weak and Vulnerable."]
   },
   "${ModID}:ElementOfSurprise": {
     "NAME": "Element of Surprise",
