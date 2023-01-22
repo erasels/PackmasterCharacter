@@ -14,5 +14,12 @@
   "${ModID}:Pyromastery": {
     "NAME": "Pyromastery",
     "DESCRIPTIONS": ["When you apply #yIgnite, apply an additional #b{0} #yIgnite."]
+  },
+  "${ModID}:FueledByEmbers": {
+    "NAME": "Fueled by Embers",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw #b{0} card and add #b{0} #yFading #yEmber to your hand and draw pile.",
+      "At the start of your turn, draw #b{0} cards and add #b{0} #yFading #yEmbers to your hand and draw pile."
+    ]
   }
 }

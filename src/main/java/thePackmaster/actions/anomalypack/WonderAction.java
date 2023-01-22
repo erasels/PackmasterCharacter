@@ -18,14 +18,10 @@ public class WonderAction extends AbstractGameAction {
     public void update() {
         this.tickDuration();
         if (this.isDone) {
-            Iterator var1 = DrawCardAction.drawnCards.iterator();
-
-            while(var1.hasNext()) {
-                AbstractCard c = (AbstractCard)var1.next();
+            for (AbstractCard c : DrawCardAction.drawnCards) {
                 Wiz.atb(new LoseEnergyAction(Wiz.adp().energy.energy));
-                Wiz.atb(new GainEnergyAction(c.cost));
+                Wiz.atb(new GainEnergyAction(Wiz.getLogicalCardCost(c)));
             }
-
         }
     }
 }
