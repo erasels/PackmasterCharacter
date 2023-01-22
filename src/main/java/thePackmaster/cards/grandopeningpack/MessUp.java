@@ -42,6 +42,9 @@ public class MessUp extends AbstractPackmasterCard {
             }
         }
         this.rawDescription = cardStrings.DESCRIPTION;
+        if(this.upgraded){
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        }
         initializeDescription();
     }
 
@@ -52,12 +55,18 @@ public class MessUp extends AbstractPackmasterCard {
             }
             super.applyPowers();
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            if(this.upgraded){
+                this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            }
             initializeDescription();
         }
 
         public void calculateCardDamage(AbstractMonster mo) {
             super.calculateCardDamage(mo);
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            if(this.upgraded){
+                this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            }
             initializeDescription();
         }
 
