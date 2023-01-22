@@ -1,6 +1,5 @@
 package thePackmaster.packs;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Consume;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -37,7 +36,7 @@ public class OrbPack extends AbstractCardPack {
     }
 
     @Override
-    public AbstractCard makePreviewCard() {
+    public AbstractPackPreviewCard makePreviewCard() {
         return new CardPackPreview(packID, "blue/skill/chaos", this);
     }
 }

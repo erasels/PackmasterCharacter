@@ -123,9 +123,15 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
                         break;
                     case MAP:
                         if (AbstractDungeon.dungeonMapScreen.dismissable) {
+                            if (AbstractDungeon.previousScreen != null) {
+                                AbstractDungeon.screenSwap = true;
+                            }
+
                             AbstractDungeon.closeCurrentScreen();
                         }
-                        AbstractDungeon.previousScreen = MAP;
+                        else { //non-dismissable map
+                            AbstractDungeon.previousScreen = MAP;
+                        }
                         open();
                         break;
                 }

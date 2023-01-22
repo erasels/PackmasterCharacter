@@ -10,7 +10,7 @@ public class AbstractWomanInBlueModalChoiceCard extends PackmasterModalChoiceCar
         super(ID, name, description, usePackFrame, onUseOrChosen);
 
         if (!SpireAnniversary5Mod.oneFrameMode)
-        setBackgroundTexture(
+            setBackgroundTexture(
                 "anniv5Resources/images/512/womaninblue/" + type.name().toLowerCase() + ".png",
                 "anniv5Resources/images/1024/womaninblue/" + type.name().toLowerCase() + ".png"
         );
