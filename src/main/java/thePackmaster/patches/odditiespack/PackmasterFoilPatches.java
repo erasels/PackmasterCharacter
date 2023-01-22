@@ -1,5 +1,6 @@
 package thePackmaster.patches.odditiespack;
 
+import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -10,6 +11,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.random.Random;
+import thePackmaster.SpireAnniversary5Mod;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -30,6 +32,15 @@ public class PackmasterFoilPatches {
 
     public static void makeFoil(AbstractCard card) {
         FoilField.foil.set(card, true);
+        if (card instanceof CustomCard) {
+            switch (card.type) {
+                case ATTACK:
+                case SKILL:
+                case POWER:
+                    ((CustomCard) card).setBackgroundTexture(SpireAnniversary5Mod.modID + "Resources/images/512/" + card.type.toString().toLowerCase() + "_foil.png", "fishingResources/images/1024/" + card.type.toString().toLowerCase() + "_foil.png");
+                    break;
+            }
+        }
     }
 
     @SpirePatch(

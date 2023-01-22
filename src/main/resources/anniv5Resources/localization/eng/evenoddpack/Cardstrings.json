@@ -51,6 +51,6 @@
   "${ModID}:Battlecry": {
     "NAME": "Battlecry",
     "DESCRIPTION": "Draw !M! cards.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First: ", "Gain !M! Strength."]
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First: ", "Gain 2 Strength."]
   }
 }

@@ -2,7 +2,7 @@
   "${ModID}:AutoBattlerPower": {
     "NAME": "Auto Battler",
     "DESCRIPTIONS": [
-      "You must play cards from left to right."
+      "You automatically play cards from left to right at the frontmost foe."
     ]
   },
   "${ModID}:FinalFormPower": {

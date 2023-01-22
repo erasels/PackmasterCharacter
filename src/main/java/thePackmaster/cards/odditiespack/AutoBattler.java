@@ -16,7 +16,7 @@ public class AutoBattler extends AbstractOdditiesCard {
 
     public AutoBattler() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

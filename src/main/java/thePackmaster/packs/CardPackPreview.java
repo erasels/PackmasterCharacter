@@ -19,6 +19,7 @@ public class CardPackPreview extends AbstractPackPreviewCard {
         super(cardID, null, parentPack);
 
         this.portrait = ((TextureAtlas) ReflectionHacks.getPrivateStatic(AbstractCard.class, "cardAtlas")).findRegion(basegameImg);
+        SpireAnniversary5Mod.cardParentMap.put(cardID, parentPack.packID);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
