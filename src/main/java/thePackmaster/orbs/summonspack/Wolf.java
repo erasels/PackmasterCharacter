@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
@@ -39,8 +40,8 @@ public class Wolf extends CustomOrb {
     private static final Texture IMG2 = TexLoader.getTexture(IMG_PATH2);
     private static final float WOLF_WIDTH = 96.0f;
 
-    private final static int BASE_PASSIVE = 0;
-    private final static int WOLF_BOOST = 2;
+    private final static int BASE_PASSIVE = 1;
+    private final static int ORB_BOOST = 1;
     private final static int BASE_EVOKE = 1;
 
     private final BobEffect wolfBobEffect = new BobEffect(2f, 3f);
@@ -67,10 +68,9 @@ public class Wolf extends CustomOrb {
         AbstractPower pow = adp().getPower(FocusPower.POWER_ID);
         if (pow != null)
             passiveAmount += pow.amount;
-        for (AbstractOrb orb : adp().orbs) {
-            if (orb instanceof Wolf)
-                passiveAmount += WOLF_BOOST;
-        }
+        for (AbstractOrb orb : adp().orbs)
+            if (!(orb instanceof EmptyOrbSlot))
+                passiveAmount += ORB_BOOST;
         if (passiveAmount < 0)
             passiveAmount = 0;
         evokeAmount = BASE_EVOKE;
