@@ -1,9 +1,13 @@
 package thePackmaster.cards.summonspack;
 
+import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
@@ -20,11 +24,20 @@ public class FireSpirit extends AbstractSummonsCard {
     private static final int BLOCK = 12;
     private static final int UPGRADE_BLOCK = 4;
 
+    private final TooltipInfo igniteTip = new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1]);
+
     public FireSpirit() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseBlock = BLOCK;
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        ArrayList<TooltipInfo> list = new ArrayList<>();
+        list.add(igniteTip);
+        return  list;
     }
 
     @Override
