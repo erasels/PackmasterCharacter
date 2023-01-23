@@ -48,6 +48,9 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import thePackmaster.cards.evenoddpack.PrimeDirective;
+import thePackmaster.powers.evenoddpack.GammaWardPower;
+import thePackmaster.powers.evenoddpack.PrimeDirectivePower;
 import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.batterpack.UltimateHomerun;
@@ -128,7 +131,8 @@ public class SpireAnniversary5Mod implements
         PostPowerApplySubscriber,
         StartGameSubscriber,
         PostExhaustSubscriber,
-        OnPlayerTurnStartSubscriber {
+        OnPlayerTurnStartSubscriber,
+        OnCreateDescriptionSubscriber {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -921,6 +925,21 @@ public class SpireAnniversary5Mod implements
             SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
+    }
+
+    @Override
+    public String receiveCreateCardDescription(String currentRaw, AbstractCard card) {
+        if (AbstractDungeon.player != null) {
+            AbstractPower power = AbstractDungeon.player.getPower(PrimeDirectivePower.POWER_ID);
+            if (power != null) {
+                currentRaw = ((PrimeDirectivePower)power).modifyDescription(currentRaw, card);
+            }
+            power = AbstractDungeon.player.getPower(GammaWardPower.POWER_ID);
+            if (power != null) {
+                currentRaw = ((GammaWardPower)power).modifyDescription(currentRaw, card);
+            }
+        }
+        return currentRaw;
     }
 
     public static class Enums {
