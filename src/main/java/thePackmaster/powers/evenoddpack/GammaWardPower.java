@@ -1,5 +1,6 @@
 package thePackmaster.powers.evenoddpack;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -24,6 +25,7 @@ public class GammaWardPower extends AbstractPackmasterPower implements DynamicPr
     private static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     private static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     private final HashMap<AbstractCard, String> keyMap;
+    private final HashMap<AbstractCard, Integer> calculationMap;
     private final AbstractCard dummy = new GammaWardDummy();
     private int counter = 0;
     private boolean preventLoop = false;
@@ -32,6 +34,7 @@ public class GammaWardPower extends AbstractPackmasterPower implements DynamicPr
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         updateDescription();
         keyMap = new HashMap<>();
+        calculationMap = new HashMap<>();
     }
     
     public void updateDescription() {
@@ -58,7 +61,9 @@ public class GammaWardPower extends AbstractPackmasterPower implements DynamicPr
         dummy.baseBlock = amount;
         if (!preventLoop) {
             preventLoop = true;
+            CardModifierManager.copyModifiers(card, dummy, true, true, false);
             dummy.applyPowers();
+            calculationMap.put(card, dummy.block);
             preventLoop = false;
         }
         if (counter % 2 == 1 && !keyMap.containsKey(card)) {
@@ -79,7 +84,10 @@ public class GammaWardPower extends AbstractPackmasterPower implements DynamicPr
             if(counter % 2 == 1)
             {
                 dummy.baseBlock = amount;
+                CardModifierManager.copyModifiers(card, dummy, true, true, false);
+                preventLoop = true;
                 dummy.applyPowers();
+                preventLoop = false;
                 addToBot(new GainBlockAction(owner, dummy.block));
             }
             addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
@@ -109,12 +117,12 @@ public class GammaWardPower extends AbstractPackmasterPower implements DynamicPr
 
     @Override
     public boolean isModified(AbstractCard card) {
-        return dummy.isBlockModified;
+        return calculationMap.get(card) != dummy.baseBlock;
     }
 
     @Override
     public int value(AbstractCard card) {
-        return dummy.block;
+        return calculationMap.get(card);
     }
 
     @Override
