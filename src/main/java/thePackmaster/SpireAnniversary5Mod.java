@@ -512,7 +512,7 @@ public class SpireAnniversary5Mod implements
     private String getLangString() {
         for (Settings.GameLanguage lang : SupportedLanguages) {
             if (lang.equals(Settings.language)) {
-                return Settings.language.name().toLowerCase();
+                return Settings.language.name().toLowerCase(Locale.ROOT);
             }
         }
         return "eng";
@@ -548,7 +548,7 @@ public class SpireAnniversary5Mod implements
         logger.info("Found pack classes with AutoAdd: " + packClasses.size());
 
         for (CtClass packClass : packClasses) {
-            String packName = packClass.getSimpleName().toLowerCase();
+            String packName = packClass.getSimpleName().toLowerCase(Locale.ROOT);
             String languageAndPack = getLangString() + "/" + packName;
             logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             //Do not need to be checked as these always need to exist
@@ -590,7 +590,7 @@ public class SpireAnniversary5Mod implements
                 .collect(Collectors.toList());
 
         for (CtClass packClass : packClasses) {
-            String packName = packClass.getSimpleName().toLowerCase();
+            String packName = packClass.getSimpleName().toLowerCase(Locale.ROOT);
             String languageAndPack = getLangString() + "/" + packName;
             logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             String packJson = modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json";

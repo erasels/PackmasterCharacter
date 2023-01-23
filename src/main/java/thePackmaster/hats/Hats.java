@@ -18,6 +18,8 @@ import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
+import java.util.Locale;
+
 import static thePackmaster.hats.HatMenu.specialHats;
 
 public class Hats {
@@ -90,7 +92,7 @@ public class Hats {
 
         Array<Bone> possiblebones = skeleton.getBones();
         for (Bone b : possiblebones) {
-            bonename = b.toString().toLowerCase();
+            bonename = b.toString().toLowerCase(Locale.ROOT);
             if (bonename.equals("head")) {
                 if (isDummy)
                     headbone = b;
@@ -104,7 +106,7 @@ public class Hats {
 
         Array<Slot> possibleslots = skeleton.getSlots();
         for (Slot s : possibleslots) {
-            slotname = s.getBone().toString().toLowerCase();
+            slotname = s.getBone().toString().toLowerCase(Locale.ROOT);
             if (slotname.equals("head")) {
                 if (isDummy) {
                     headslot = s;

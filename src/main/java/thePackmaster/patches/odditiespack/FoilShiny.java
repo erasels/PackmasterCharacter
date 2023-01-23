@@ -19,6 +19,7 @@ import thePackmaster.util.ImageHelper;
 
 import java.nio.IntBuffer;
 import java.nio.charset.StandardCharsets;
+import java.util.Locale;
 
 public class FoilShiny {
     @SpirePatch(clz = AbstractCard.class, method = "render", paramtypez = SpriteBatch.class)
@@ -29,7 +30,7 @@ public class FoilShiny {
 
         private static int RUNNING_ON_STEAM_DECK = -1;
 
-        private static final String OS = System.getProperty("os.name").toLowerCase();
+        private static final String OS = System.getProperty("os.name").toLowerCase(Locale.ROOT);
         public static boolean IS_WINDOWS = (OS.indexOf("win") >= 0);
 
         public static boolean isOnSteamDeck() {
