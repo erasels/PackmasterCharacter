@@ -19,6 +19,7 @@ import thePackmaster.vfx.rippack.ShowCardAndRipEffect;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.att;
@@ -35,8 +36,8 @@ public abstract class AbstractRippableCard extends AbstractRipCard {
 
         if (!SpireAnniversary5Mod.oneFrameMode)
             setBackgroundTexture(
-                    "anniv5Resources/images/512/rip/" + type.name().toLowerCase() + "-rippable.png",
-                    "anniv5Resources/images/1024/rip/" + type.name().toLowerCase() + "-rippable.png"
+                    "anniv5Resources/images/512/rip/" + type.name().toLowerCase(Locale.ROOT) + "-rippable.png",
+                    "anniv5Resources/images/1024/rip/" + type.name().toLowerCase(Locale.ROOT) + "-rippable.png"
             );
     }
 
