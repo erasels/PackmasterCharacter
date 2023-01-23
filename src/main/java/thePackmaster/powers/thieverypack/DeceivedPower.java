@@ -1,8 +1,6 @@
 package thePackmaster.powers.thieverypack;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.NeutralPowertypePatch;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,8 +11,6 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
-
-import java.util.Dictionary;
 
 public class DeceivedPower extends AbstractPackmasterPower {
 	public static final String RAW_ID = "DeceivedPower";

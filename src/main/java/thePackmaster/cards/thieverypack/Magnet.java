@@ -1,7 +1,5 @@
 package thePackmaster.cards.thieverypack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,7 +16,7 @@ import java.util.ArrayList;
 public class Magnet extends AbstractThieveryCard {
 	public static final String RAW_ID = "Magnet";
 	public static final String ID = SpireAnniversary5Mod.makeID(RAW_ID);
-	private static final int COST = 1;
+	private static final int COST = 0;
 	private static final AbstractCard.CardType TYPE = CardType.SKILL;
 	private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
 	private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;

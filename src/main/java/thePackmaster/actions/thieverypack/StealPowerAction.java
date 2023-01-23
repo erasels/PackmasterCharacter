@@ -50,7 +50,6 @@ public class StealPowerAction extends AbstractGameAction {
 	public static StealPowerAction activatedInstance = null;
 
 	public static boolean didMiss;
-	public static boolean canGoNegative;
 
 	/**
 	 * StealPowerAction can steal specified powers from enemies.
@@ -65,7 +64,6 @@ public class StealPowerAction extends AbstractGameAction {
 		this.monsters = monsters;
 		this.powIDAmountMap = powIDAmountMap;
 		this.animationMode = animationMode;
-		canGoNegative = false;
 	}
 
 	// for Null Hammer
@@ -75,7 +73,6 @@ public class StealPowerAction extends AbstractGameAction {
 				add(m);
 			}
 		}}, powIDAmountMap, animationMode);
-		canGoNegative = true;
 	}
 
 	// for Magnet (unupgraded)
@@ -163,7 +160,7 @@ public class StealPowerAction extends AbstractGameAction {
 			affectedPowers = new HashSet<>();
 			for (AbstractMonster m : monsters) {
 				for (AbstractPower pow : m.powers) {
-					if (powIDAmountMap.containsKey(pow.ID) && (canGoNegative || pow.amount > 0)) {
+					if (powIDAmountMap.containsKey(pow.ID) && (!pow.canGoNegative || pow.amount > 0)) {
 						affectedPowers.add(pow);
 					}
 				}
@@ -205,8 +202,6 @@ public class StealPowerAction extends AbstractGameAction {
 				int stealAmount;
 				if (mapAmount <= 0) {
 					stealAmount = pow.amount;
-				} else if (canGoNegative) {
-					stealAmount = mapAmount;
 				} else {
 					stealAmount = Math.min(pow.amount, mapAmount);
 				}
@@ -226,7 +221,7 @@ public class StealPowerAction extends AbstractGameAction {
 				}
 
 				// Enemy loses power
-				if (stealAmount == pow.amount || stealAmount > pow.amount && !canGoNegative) {
+				if (stealAmount >= pow.amount) {
 					addToTop(new RemoveSpecificPowerAction(pow.owner, p, pow) {
 						@Override
 						public void update() {
@@ -235,11 +230,10 @@ public class StealPowerAction extends AbstractGameAction {
 						}
 					});
 				} else {
-					int finalStealAmount = stealAmount;
 					addToTop(new AbstractGameAction() {
 						@Override
 						public void update() {
-							pow.amount -= finalStealAmount;
+							pow.amount -= stealAmount;
 							affectedPowers.remove(pow);
 							isDone = true;
 						}

@@ -108,9 +108,13 @@ public class MindControlPatch {
 	@SpirePatch2(clz = MonsterGroup.class, method = "applyPreTurnLogic")
 	@SpirePatch2(clz = MonsterGroup.class, method = "applyEndOfTurnPowers")
 	public static class SuicidePatch {
+		public static boolean enabled = true;
+
 		@SpirePostfixPatch
 		public static void Postfix() {
-			MindControlledPower.checkForCombatEnd();
+			if (enabled) {
+				MindControlledPower.checkForCombatEnd();
+			}
 		}
 	}
 }
