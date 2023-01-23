@@ -1,6 +1,6 @@
 {
   "${ModID}:PlasmaShield": {
     "NAME": "Plasma Shield",
-    "DESCRIPTIONS": ["At the end of your turn, gain #b{0} #yBlock for each #yPlasma."]
+    "DESCRIPTIONS": ["At the end of your turn, gain #b{0} #yBlock if you have #yPlasma."]
   }
 }
