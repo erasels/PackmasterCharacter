@@ -921,7 +921,7 @@ public class SpireAnniversary5Mod implements
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
 
             Hats.atRunStart();
-            SpireAnniversary5Mod.logger.info("completed start of game hats");
+            //SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
     }
