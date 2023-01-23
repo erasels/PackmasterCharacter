@@ -26,7 +26,7 @@ public class Twitch extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(magicNumber, strings.TEXT[0], false, upgraded, c->true,
+        addToBot(new SelectCardsInHandAction(magicNumber, strings.TEXT[0], upgraded, upgraded, c->true,
                 (list) -> addToBot(new RandomizeCostAction(list.toArray(new AbstractCard[0])))
         ));
     }

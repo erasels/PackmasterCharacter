@@ -1,6 +1,7 @@
 package thePackmaster.rewards;
 
 import basemod.abstracts.CustomReward;
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,6 +12,8 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.relics.PMBoosterBox;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class PMBoosterBoxCardReward extends CustomReward {
     private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("PMBoosterBoxCardReward")).TEXT;
@@ -46,6 +49,10 @@ public class PMBoosterBoxCardReward extends CustomReward {
                     for (AbstractCard c : this.cards) {
                         relic.onPreviewObtainCard(c);
                     }
+                }
+                List<SpawnModificationCard> spawnModificationCards = this.cards.stream().filter(c -> c instanceof SpawnModificationCard).map(c -> (SpawnModificationCard)c).collect(Collectors.toList());
+                for (SpawnModificationCard c : spawnModificationCards) {
+                    c.onRewardListCreated(this.cards);
                 }
             }
         }
