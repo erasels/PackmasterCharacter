@@ -52,7 +52,8 @@
   },
   "${ModID}:Pandas": {
     "NAME": "Pandas",
-    "DESCRIPTION": "At the start of your turn, Channel a ${ModID}:Panda.",
+    "DESCRIPTION": "Channel X ${ModID}:Pandas.",
+    "UPGRADE_DESCRIPTION": "Channel X+1 ${ModID}:Pandas.",
     "FLAVOR": "Pandamonium."
   },
   "${ModID}:Quill": {
