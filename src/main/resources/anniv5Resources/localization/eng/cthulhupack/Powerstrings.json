@@ -10,7 +10,7 @@
     "NAME": "Page of the Dead",
     "DESCRIPTIONS": [
       "The next #b",
-      " Attack(s) played each turn that costs 2 or more is played twice."
+      " Attack(s) played that cost #b2 or more are played twice."
     ]
   },
   "${ModID}:AllSeeingPower": {
