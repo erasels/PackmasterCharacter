@@ -9,11 +9,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.screens.select.HandCardSelectScreen;
 import com.megacrit.cardcrawl.ui.buttons.EndTurnButton;
 import javassist.CtBehavior;
-import thePackmaster.cards.highenergypack.StruckByATrain;
 import thePackmaster.powers.odditiespack.AutoBattlerPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -61,7 +60,7 @@ public class AutoBattlerPatches {
         public static void Insert(CardGroup __instance) {
             if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID)) {
                 if (!AbstractDungeon.isScreenUp && AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.actionManager.currentAction == null && !isEndingTurn) {
-                    AbstractMonster target = StruckByATrain.getFrontmostEnemy();
+                    AbstractMonster target = Wiz.getFrontmostEnemy();
                     boolean foundACard = false;
                     for (AbstractCard q : AbstractDungeon.player.hand.group) {
                         if (q.canUse(AbstractDungeon.player, target)) {
