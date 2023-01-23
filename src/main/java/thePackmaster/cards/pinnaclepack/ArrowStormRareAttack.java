@@ -19,10 +19,11 @@ public class ArrowStormRareAttack extends AbstractPinnacleCard {
         super(ID, 3, CardType.ATTACK, AbstractCard.CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
         baseDamage = this.damage = DAMAGE;
+        this.isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ArrowStormAction(this.magicNumber, this.damage));
+        addToBot(new ArrowStormAction(this.magicNumber, this.multiDamage));
     }
 
     @Override

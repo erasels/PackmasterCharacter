@@ -16,11 +16,12 @@ public class ArrowStormAction extends AbstractGameAction {
         return AbstractDungeon.player;
     }
 
+    public int[] multiDamage;
     private float startingDuration;
     private int MagicB;
 
-    public ArrowStormAction(int Magic, int damage) {
-        this.amount = damage;
+    public ArrowStormAction(int Magic, int[] multiDamage) {
+        this.multiDamage = multiDamage;
         this.actionType = AbstractGameAction.ActionType.WAIT;
         this.attackEffect = AbstractGameAction.AttackEffect.FIRE;
         this.damageType = DamageInfo.DamageType.NORMAL;
@@ -40,7 +41,7 @@ public class ArrowStormAction extends AbstractGameAction {
         if (hasExhausted) {
             int i;
             for (i = 0; i < MagicB; i++) {
-                addToBot(new DamageAllEnemiesAction(pl(), this.amount, this.damageType, this.attackEffect));
+                addToBot(new DamageAllEnemiesAction(pl(), this.multiDamage, this.damageType, this.attackEffect));
             }
         }
         this.isDone = true;
