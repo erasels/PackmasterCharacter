@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.cards.dimensiongatepack.MagicMissile;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.MAGIC;
@@ -24,7 +23,6 @@ public class MagicMissilePower extends AbstractPackmasterPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         addToBot(new RemoveSpecificPowerAction(owner,owner,this));
-        super.atEndOfTurn(isPlayer);
     }
 
     @Override
