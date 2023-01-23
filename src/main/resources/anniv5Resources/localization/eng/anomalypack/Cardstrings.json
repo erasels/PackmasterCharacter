@@ -40,7 +40,7 @@
   "${ModID}:RitualSight": {
     "NAME": "Ritual Sight",
     "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. Shuffle a copy of it into your draw pile.",
-    "EXTENDED_DESCRIPTION": ["exhaust and copy."]
+    "EXTENDED_DESCRIPTION": ["Exhaust and copy."]
   },
   "${ModID}:Thoughtweaving": {
     "NAME": "Thoughtweaving",
