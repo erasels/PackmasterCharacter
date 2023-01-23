@@ -309,8 +309,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
         ArrayList<AbstractCard> buyables = new ArrayList<>();
         ArrayList<AbstractCardPack> validPacks = new ArrayList<>(allPacks);
         if (!allPacksMode) {
-            for (AbstractCardPack p : currentPoolPacks
-            ) {
+            for (AbstractCardPack p : currentPoolPacks) {
                 validPacks.remove(p);
             }
         }
@@ -320,11 +319,14 @@ public class BlackMarketDealerEvent extends PhasedEvent {
             p = validPacks.get(AbstractDungeon.cardRandomRng.random(0, validPacks.size() - 1));
             c = p.cards.get(AbstractDungeon.cardRandomRng.random(0, p.cards.size() - 1));
             if (!buyables.contains(c) && c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON) {
-                buyables.add(c.makeCopy());
+                buyables.add(c);
             }
         }
+
         CardGroup buyablesGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        buyablesGroup.group = buyables;
+        for (AbstractCard original : buyables) {
+            buyablesGroup.addToTop(original.makeCopy());
+        }
         return buyablesGroup;
     }
 
