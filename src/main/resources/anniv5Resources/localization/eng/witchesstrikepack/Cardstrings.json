@@ -27,7 +27,7 @@
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this ${ModID}:infests, Evoke your next orb !M! times and lose and orb slot."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this ${ModID}:infests, Evoke your next orb !M! times and lose an orb slot."
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
