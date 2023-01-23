@@ -48,7 +48,6 @@ public class PackFilterMenu {
     private static final float PREVIEW_Y = 700f * Settings.scale;
 
     public PackFilterMenu() {
-        SpireAnniversary5Mod.logger.info("Settings.HEIGHT = " + Settings.HEIGHT);
         ArrayList<String> optionNames = new ArrayList<>();
         List<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
         sortedPacks.sort(Comparator.comparing((pack) -> pack.name));

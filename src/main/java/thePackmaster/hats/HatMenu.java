@@ -115,12 +115,11 @@ public class HatMenu {
         optionNames.add(TEXT[9]);
         hats.add("Random");
         ArrayList<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
-        sortedPacks.sort(Comparator.comparing((pack) -> pack.getHatName()));
+        sortedPacks.sort(Comparator.comparing(AbstractCardPack::getHatName));
         currentlyUnlockedHats.clear();
         for (AbstractCardPack s : sortedPacks) {
-            if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
-            if (UNLOCK_ALL_HATS)
-                SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
+            //if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
+            //if (UNLOCK_ALL_HATS) SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
 
             if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists() || specialHats.containsKey(s.packID)) {
                 if (UNLOCK_ALL_HATS || unlockedHats.contains(s.packID)) {
@@ -170,7 +169,7 @@ public class HatMenu {
         if (index == 0) {
             invalidHatSelected = false;
             currentHat = null;
-            SpireAnniversary5Mod.logger.info("Removing hat.");
+            //SpireAnniversary5Mod.logger.info("Removing hat.");
             Hats.removeHat(false);
             flavorText = "";
         } else if (index == 1) {
@@ -182,13 +181,13 @@ public class HatMenu {
                 flavorText = TEXT[8];
             } else {
                 invalidHatSelected = false;
-                SpireAnniversary5Mod.logger.info("Selected Random.");
+                //SpireAnniversary5Mod.logger.info("Selected Random.");
                 Hats.addHat(false, "Locked");
                 randomHatMode = true;
                 flavorText = TEXT[8];
             }
         } else if (name.contains(TEXT[1])) {
-            SpireAnniversary5Mod.logger.info("Selected a locked hat.");
+            //SpireAnniversary5Mod.logger.info("Selected a locked hat.");
             invalidHatSelected = true;
             currentHat = null;
             Hats.addHat(false, "Locked");
@@ -196,12 +195,12 @@ public class HatMenu {
         } else if (name.contains(TEXT[6])) {
             invalidHatSelected = true;
             currentHat = null;
-            SpireAnniversary5Mod.logger.info("Selected a missing hat.");
+            //SpireAnniversary5Mod.logger.info("Selected a missing hat.");
             Hats.removeHat(false);
             flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[7];
         } else {
             invalidHatSelected = false;
-            SpireAnniversary5Mod.logger.info("Add new hat at index " + index);
+            //SpireAnniversary5Mod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index);
             Hats.addHat(false, currentHat);
             flavorText = SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
