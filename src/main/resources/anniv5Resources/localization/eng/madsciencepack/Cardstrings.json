@@ -17,7 +17,7 @@
   },
   "${ModID}:Attach": {
     "NAME": "Attach",
-    "DESCRIPTION": "Choose a non-Power in hand to ${ModID}:Absorb into a discarded card, then ${ModID}:Modify it \"Play the *Absorbed card\". NL Exhaust.",
+    "DESCRIPTION": "Choose a non-Power in hand to ${ModID}:Absorb into a discarded card, then ${ModID}:Modify it: \"Play the *Absorbed card\". NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Absorb. You will choose the discarded card to Modify after."]
   },
   "${ModID}:Improve": {
