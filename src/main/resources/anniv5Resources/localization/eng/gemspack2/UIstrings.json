@@ -1,0 +1,15 @@
+{
+  "${ModID}:GemsPack2": {
+    "TEXT": [
+      "Gems: Shiny and New",
+      "Support Pack. Contains all Unplayable Gems that can be placed into cards at Rest site. Effects are from other Packmaster packs.",
+      "MichaelMayhem"
+    ]
+  },
+  "${ModID}:GemsPack2Hat": {
+    "TEXT": [
+      "It's even less gaudy than the original!",
+      "Crowned Jewel Alternate"
+    ]
+  }
+}
