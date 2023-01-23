@@ -37,12 +37,12 @@ public class GemsPack extends AbstractCardPack {
         cards.add(DrawGem.ID);
         cards.add(EnergyGem.ID);
         cards.add(RetainGem.ID);
-        cards.add(ShivGem.ID);
         cards.add(TempStrengthGem.ID);
         cards.add(TempDexterityGem.ID);
-        cards.add(VulnerableGem.ID);
         cards.add(WardGem.ID);
-        cards.add(WeakGem.ID);
+        cards.add(DiceGem.ID);
+        cards.add(OccultGem.ID);
+        cards.add(PersistGem.ID);
         return cards;
     }
 

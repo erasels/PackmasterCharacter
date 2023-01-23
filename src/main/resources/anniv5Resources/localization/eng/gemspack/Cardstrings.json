@@ -1,6 +1,6 @@
 {
   "${ModID}:TempStrengthGem": {
-      "NAME": "Ruby",
+    "NAME": "Ruby",
     "DESCRIPTION": "${ModID}:Gem. NL \"Gain 2 Temp. Strength\"",
     "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain 2 Temp. Strength\""
   },
@@ -9,25 +9,10 @@
     "DESCRIPTION": "${ModID}:Gem. NL \"Gain 2 Temp. Dexterity\"",
     "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain 2 Temp. Dexterity\""
   },
-  "${ModID}:ShivGem": {
-    "NAME": "Fragmented Gem",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a Shiv\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a Shiv\""
-  },
   "${ModID}:WardGem": {
     "NAME": "Aquamarine",
     "DESCRIPTION": "${ModID}:Gem. NL \"Gain a Ward\"",
     "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a Ward\""
-  },
-  "${ModID}:WeakGem": {
-    "NAME": "Amethyst",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Apply 1 Weak\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Apply 1 Weak\""
-  },
-  "${ModID}:VulnerableGem": {
-    "NAME": "Garnet",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Apply 1 Vulnerable\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Apply 1 Vulnerable\""
   },
   "${ModID}:RetainGem": {
     "NAME": "Amber",
@@ -52,5 +37,20 @@
   "${ModID}:Ward": {
     "NAME": "Ward",
     "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+  },
+  "${ModID}:DiceGem": {
+    "NAME": "Tourmaline",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Roll a ${ModID}:D6\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Roll a ${ModID}:D6\""
+  },
+  "${ModID}:OccultGem": {
+    "NAME": "Lapis Lazuli",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Card gains ${ModID}:Occult\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card gains ${ModID}:Occult\""
+  },
+  "${ModID}:PersistGem": {
+    "NAME": "Garnet",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Card has stslib:Persist 2\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card has stslib:Persist 2\""
   }
 }

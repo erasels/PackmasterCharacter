@@ -1,9 +1,7 @@
-package thePackmaster.cardmodifiers.gemspack2;
+package thePackmaster.cardmodifiers.gemspack;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 

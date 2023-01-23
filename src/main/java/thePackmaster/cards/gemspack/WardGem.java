@@ -11,7 +11,7 @@ public class WardGem extends AbstractGemsCard {
     public final static String ID = makeID("WardGem");
 
     public WardGem() {
-        super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     @Override

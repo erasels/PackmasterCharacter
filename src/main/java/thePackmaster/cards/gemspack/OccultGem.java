@@ -1,23 +1,22 @@
-package thePackmaster.cards.gemspack2;
+package thePackmaster.cards.gemspack;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cardmodifiers.gemspack2.RendGemMod;
-import thePackmaster.cards.gemspack.AbstractGemsCard;
+import thePackmaster.cardmodifiers.gemspack.OccultGemMod;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class RendGem extends AbstractGemsCard {
-    public final static String ID = makeID("RendGem");
+public class OccultGem extends AbstractGemsCard {
+    public final static String ID = makeID("OccultGem");
 
-    public RendGem() {
-        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+    public OccultGem() {
+        super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override
     public AbstractCardModifier myMod() {
-        return new RendGemMod();
+        return new OccultGemMod();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package thePackmaster.cardmodifiers.gemspack2;
+package thePackmaster.cardmodifiers.gemspack;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PersistFields;
