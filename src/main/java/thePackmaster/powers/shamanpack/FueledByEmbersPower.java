@@ -24,7 +24,7 @@ public class FueledByEmbersPower extends AbstractPackmasterPower {
 
     @Override
     public void updateDescription() {
-        this.description = MessageFormat.format(DESCRIPTIONS[0], this.amount);
+        this.description = (this.amount == 1 ? DESCRIPTIONS[0] : DESCRIPTIONS[1]).replace("{0}", this.amount + "");
     }
 
     @Override

@@ -16,7 +16,7 @@
 		"NAME": "Excavation"
 	},
 	"${ModID}:Geomorphology":	{
-		"DESCRIPTION": "Whenever you Retain or Exhaust a card, apply !M! ${ModID}:Petra to a random enemy.",
+		"DESCRIPTION": "Whenever you Exhaust a card or Channel an Orb, apply !M! ${ModID}:Petra to a random enemy.",
 		"NAME": "Geomorphology"
 	},
 	"${ModID}:GeothermalHeating":	{

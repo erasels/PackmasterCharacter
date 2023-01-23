@@ -16,7 +16,7 @@
     "EXTENDED_DESCRIPTION": ["Choose a card to copy."]
   },
   "${ModID}:ExperimentalMerge": {
-    "NAME": "ExperimentalMerge",
+    "NAME": "Experimental Merge",
     "DESCRIPTION": "Gain !B! Block. NL Shuffle your discard pile into your draw pile. Draw !M!."
   },
   "${ModID}:ExhaustiveWork": {

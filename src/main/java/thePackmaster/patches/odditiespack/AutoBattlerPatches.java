@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.screens.select.HandCardSelectScreen;
 import com.megacrit.cardcrawl.ui.buttons.EndTurnButton;
 import javassist.CtBehavior;
 import thePackmaster.cards.highenergypack.StruckByATrain;
@@ -26,7 +27,7 @@ public class AutoBattlerPatches {
     )
     public static class NoDoingThingsAutoBattlerPatch {
         public static SpireReturn<Boolean> Prefix(AbstractCard __instance) {
-            if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID)) {
+            if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID) && !AbstractDungeon.isScreenUp) {
                 return SpireReturn.Return(false);
             }
             return SpireReturn.Continue();
@@ -35,7 +36,7 @@ public class AutoBattlerPatches {
 
     @SpirePatch(
             clz = EndTurnButton.class,
-            method="update"
+            method = "update"
     )
     public static class NoUpdateEndTurnButtonAutoBattlerPatch {
         public static SpireReturn<Boolean> Prefix(EndTurnButton __instance) {

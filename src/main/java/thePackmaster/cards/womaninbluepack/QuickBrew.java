@@ -45,7 +45,7 @@ public class QuickBrew extends AbstractWomanInBlueCard {
     public void action3() {
         AbstractPlayer p = Wiz.p();
         addToBot(new VFXAction(new PotionThrowEffect(getPotionResourcePath("FocusPotion.png"), p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, 3F, 0.6F, false, true), 0.6F));
-        Wiz.applyToSelf(new FocusPower(p, 3));
+        Wiz.applyToSelf(new FocusPower(p, 2));
 
     }
 

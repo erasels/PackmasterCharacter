@@ -16,7 +16,7 @@ public class Refrigerate extends BitingColdCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new FrostbitePower(m, 4));
+        applyToEnemy(m, new FrostbitePower(m, magicNumber));
     }
 
     public void upp() {

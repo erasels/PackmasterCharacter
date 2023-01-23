@@ -61,6 +61,7 @@ public class MakeCardInHandOccultAction extends AbstractGameAction {
             if (validCards.size() == 1)
             {
                 OccultFields.isOccult.set(validCards.getTopCard(), true);
+                validCards.getTopCard().initializeDescription();
                 validCards.getTopCard().superFlash(Color.VIOLET.cpy());
                 addToTop(new HandCheckAction());
                 this.isDone = true;
@@ -70,6 +71,7 @@ public class MakeCardInHandOccultAction extends AbstractGameAction {
             if (random) {
                 AbstractCard nowOccult = validCards.getRandomCard(AbstractDungeon.cardRandomRng);
                 OccultFields.isOccult.set(nowOccult, true);
+                nowOccult.initializeDescription();
                 nowOccult.superFlash(Color.VIOLET.cpy());
                 addToTop(new HandCheckAction());
                 this.isDone = true;

@@ -4,16 +4,17 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.Lightning;
-import thePackmaster.cards.dragonwrathpack.JudgementDay;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.powers.dragonwrathpack.JudgementDayPower;
 
 public class JudgementDayPatch {
-    @SpirePatch2(clz = Lightning.class, method = "triggerPassiveEffect")
+    @SpirePatch2(clz = Lightning.class, method = "onEndOfTurn")
     public static class LightningAddedEffectPatch {
         @SpirePostfixPatch
-        public static void Postfix() {
-            if (AbstractDungeon.player.hasPower(JudgementDayPower.POWER_ID)) {
-                AbstractDungeon.player.getPower(JudgementDayPower.POWER_ID).onSpecificTrigger();
+        public static void patch(Lightning __instance) {
+            AbstractPower p = AbstractDungeon.player.getPower(JudgementDayPower.POWER_ID);
+            if (p != null) {
+                p.onSpecificTrigger();
             }
         }
     }

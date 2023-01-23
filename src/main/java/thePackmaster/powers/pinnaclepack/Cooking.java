@@ -20,12 +20,9 @@ public class Cooking extends AbstractPackmasterPower implements NonStackablePowe
     public static final String POWER_ID = makeID("Cooking");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
-//    private static int CookingOffset;
 
     public Cooking(AbstractCreature owner, int amount) {
         super(POWER_ID,NAME, AbstractPower.PowerType.BUFF,true,owner,amount);
-/*        this.ID = "Cooking" + CookingOffset;
-        CookingOffset++; */
         this.owner = owner;
         updateDescription();
     }
@@ -60,10 +57,10 @@ public class Cooking extends AbstractPackmasterPower implements NonStackablePowe
             default:
                 break;
         }
-/*        addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
+        addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
         if (this.amount <= 0){
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        }*/
+        }
     }
 
 }

@@ -23,10 +23,12 @@ public class MayhemFormPower extends AbstractPackmasterPower implements OnRefres
     }
 
     public boolean activatedThisTurn = false;
+    private boolean disabledUntilEndOfTurn = false;
 
     @Override
     public void atStartOfTurnPostDraw() {
         activatedThisTurn = false;
+        disabledUntilEndOfTurn = false;
         updateDescription();
     }
 
@@ -41,8 +43,12 @@ public class MayhemFormPower extends AbstractPackmasterPower implements OnRefres
         }
     }
 
+    public void disableUntilTurnEnds() {
+        this.disabledUntilEndOfTurn = true;
+    }
+
     private boolean canTrigger() {
-        return AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.player.hand.size() < 3 && !AbstractDungeon.actionManager.turnHasEnded && !activatedThisTurn && !AbstractDungeon.isScreenUp && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT;
+        return AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.player.hand.size() < 3 && !AbstractDungeon.actionManager.turnHasEnded && !activatedThisTurn && !AbstractDungeon.isScreenUp && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !this.disabledUntilEndOfTurn;
     }
 
     @Override

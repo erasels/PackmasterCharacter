@@ -66,7 +66,7 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
 
     @Override
     public boolean isClickable() {
-        return !AbstractDungeon.isScreenUp || validScreens.contains(AbstractDungeon.screen) || open;
+        return !AbstractDungeon.isScreenUp || (validScreens.contains(AbstractDungeon.screen) && !(AbstractDungeon.previousScreen == GRID || AbstractDungeon.previousScreen == BOSS_REWARD)) || open;
     }
 
     @Override
@@ -123,9 +123,15 @@ public class CurrentRunCardsTopPanelItem extends TopPanelItem {
                         break;
                     case MAP:
                         if (AbstractDungeon.dungeonMapScreen.dismissable) {
+                            if (AbstractDungeon.previousScreen != null) {
+                                AbstractDungeon.screenSwap = true;
+                            }
+
                             AbstractDungeon.closeCurrentScreen();
                         }
-                        AbstractDungeon.previousScreen = MAP;
+                        else { //non-dismissable map
+                            AbstractDungeon.previousScreen = MAP;
+                        }
                         open();
                         break;
                 }
