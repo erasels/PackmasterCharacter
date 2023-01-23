@@ -44,7 +44,7 @@
   },
   "${ModID}:Thoughtweaving": {
     "NAME": "Thoughtweaving",
-    "DESCRIPTION": "Whenever you play a Skill or Attack, draw a card of the opposite type from a different pack."
+    "DESCRIPTION": "Whenever you play a Skill or Attack, draw a card of the opposite type from a different Pack."
   },
   "${ModID}:SealedSword": {
   "NAME": "Sealed Sword",
