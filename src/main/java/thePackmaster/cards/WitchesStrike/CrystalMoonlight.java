@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.PackmasterOrb;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
