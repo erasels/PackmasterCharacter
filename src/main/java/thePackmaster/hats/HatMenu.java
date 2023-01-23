@@ -52,6 +52,7 @@ public class HatMenu {
     private static final float BG_Y_SCALE = Settings.scale * 0.8f;
     private static final float BG_X = 525f * Settings.scale;
     private static final float BG_Y = Settings.HEIGHT - 40f * Settings.scale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
+    private static final float FLAVOR_X = BG_X + MENU_BG.getRegionWidth() * BG_X_SCALE * 0.5f;
     private static final float DROPDOWN_X = 559f * Settings.scale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
     private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
@@ -203,7 +204,8 @@ public class HatMenu {
             //SpireAnniversary5Mod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index);
             Hats.addHat(false, currentHat);
-            flavorText = SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
+            flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[10] + '\n' +
+                    SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
         }
         try {
             SpireAnniversary5Mod.saveLastPickedHatID(hats.get(index));
@@ -222,7 +224,7 @@ public class HatMenu {
     public void render(SpriteBatch sb) {
         sb.draw(MENU_BG, BG_X, BG_Y, 0f, 0f, MENU_BG.getRegionWidth(), MENU_BG.getRegionHeight(), BG_X_SCALE, BG_Y_SCALE, 0f);
 
-        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, DROPDOWN_X + (163 * Settings.scale), DROPDOWN_Y - (333 * Settings.scale), 330 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
+        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, FLAVOR_X, DROPDOWN_Y - (343 * Settings.scale), 330 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
 
         getDummy().renderPlayerImage(sb);
 
