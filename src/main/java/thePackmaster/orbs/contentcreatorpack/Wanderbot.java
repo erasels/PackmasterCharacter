@@ -23,6 +23,7 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
 public class Wanderbot extends AbstractOrb {
     private static final OrbStrings orbString;
@@ -47,12 +48,18 @@ public class Wanderbot extends AbstractOrb {
     }
 
     public void onEvoke() {
-        AbstractMonster target = Wiz.getFrontmostEnemy();
-        if (target != null) {
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, this.hb.cX, this.hb.cY), 0.1F));
-            atb(new DamageAction(target, new DamageInfo(AbstractDungeon.player, evokeAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-        }
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractMonster target = Wiz.getFrontmostEnemy();
+                if (target != null) {
+                    att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, evokeAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                    att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
+                    att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                }
+                isDone = true;
+            }
+        });
         atb(new DrawCardAction(1));
     }
 
