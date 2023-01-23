@@ -14,8 +14,8 @@
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
-    "DESCRIPTION": "Gain a *Necronomicurse. NL The next attack you play that costs 2 or more is played twice.",
-    "UPGRADE_DESCRIPTION": "The next attack you play that costs 2 or more is played twice."
+    "DESCRIPTION": "Gain a *Necronomicurse. NL The next Attack you play that costs 2 or more is played twice.",
+    "UPGRADE_DESCRIPTION": "The next Attack you play that costs 2 or more is played twice."
   },
   "${ModID}:FamilialCurse": {
     "NAME": "Familial Curse",
