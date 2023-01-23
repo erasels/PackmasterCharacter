@@ -1,6 +1,7 @@
 package thePackmaster.cards.grandopeningpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.grandopeningpack.CrossPower;
 import thePackmaster.util.Wiz;
@@ -25,22 +27,10 @@ public class Cross extends AbstractGrandOpeningCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        AbstractGameAction.AttackEffect slash = AbstractGameAction.AttackEffect.SLASH_HORIZONTAL;
-        AbstractGameAction.AttackEffect other_slash = AbstractGameAction.AttackEffect.SLASH_VERTICAL;
-        AbstractGameAction.AttackEffect temp_slash;
-
-        addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, DamageInfo.DamageType.NORMAL), slash));
-        addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, DamageInfo.DamageType.NORMAL), other_slash));
-        for(AbstractPower p : AbstractDungeon.player.powers){
-            if(CrossPower.POWER_ID.equals(p.ID)) {
-                for (int i = 0; i < p.amount; i++) {
-                    addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, DamageInfo.DamageType.NORMAL), slash));
-                    temp_slash = slash;
-                    slash = other_slash;
-                    other_slash = temp_slash;
-                }
-            }
-        }
+        if (abstractMonster != null)
+            addToBot((AbstractGameAction)new VFXAction(new ClashEffect(abstractMonster.hb.cX, abstractMonster.hb.cY), 0.1F));
+        addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
+        addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
         Wiz.applyToSelf(new CrossPower(abstractPlayer, 1));
         AbstractCard cross = new Cross();
         if(this.upgraded){
@@ -50,16 +40,14 @@ public class Cross extends AbstractGrandOpeningCard {
     }
 
     public void applyPowers() {
-        this.baseMagicNumber = 2;
+        this.baseDamage = 2;
         for(AbstractPower p : AbstractDungeon.player.powers){
             if(CrossPower.POWER_ID.equals(p.ID)){
-                this.baseMagicNumber += p.amount;
+                this.baseDamage += p.amount;
+                this.isDamageModified = true;
             }
         }
         super.applyPowers();
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-        if(this.upgraded)
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         initializeDescription();
     }
 

@@ -28,6 +28,10 @@ public class DebutPower extends AbstractPackmasterPower {
             addToBot(new GainEnergyAction(min(this.amount, card.costForTurn)));
             this.triggered = true;
         }
+        if(card.isInnate && card.costForTurn == -1 && !this.triggered) {
+            addToBot(new GainEnergyAction(min(this.amount, card.energyOnUse)));
+            this.triggered = true;
+        }
     }
 
     public void updateDescription() {
