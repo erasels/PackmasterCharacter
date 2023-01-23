@@ -76,6 +76,8 @@ public class PackFilterMenu {
 
     private void open() {
         isOpen = true;
+        if (previewCard != null)
+            previewCard.stopGlowing();
     }
 
     private void close() {
@@ -85,6 +87,7 @@ public class PackFilterMenu {
     public void setViewedPack(int index) {
         viewedPack = packs.get(index);
         previewCard = viewedPack.previewPackCard;
+        previewCard.stopGlowing();
         checkbox.toggle.enabled = getFilterConfig(viewedPack.packID);
     }
 
@@ -107,6 +110,7 @@ public class PackFilterMenu {
         if (!dropdown.isOpen) {
             checkbox.update();
         }
+        previewCard.stopGlowing();
         previewCard.update();
         previewCard.current_x = PREVIEW_X;
         previewCard.current_y = PREVIEW_Y;
