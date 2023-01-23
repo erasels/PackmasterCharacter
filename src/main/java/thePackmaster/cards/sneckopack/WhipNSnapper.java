@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -34,6 +33,7 @@ public class WhipNSnapper extends AbstractSneckoCard {
         addToBot(new WaitAction(0.2f));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
 
+
         int r = AbstractDungeon.cardRandomRng.random(secondMagic, magicNumber);
         if (r > 0) {
             addToBot(new ApplyPowerAction(m,p, new WeakPower(m, r, false)));
@@ -47,5 +47,8 @@ public class WhipNSnapper extends AbstractSneckoCard {
     public void upp() {
         upgradeDamage(4);
         upgradeSecondMagic(1);
+        if(secondMagic >= magicNumber) {
+            upgradeMagicNumber(1);
+        }
     }
 }
