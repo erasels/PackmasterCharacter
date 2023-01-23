@@ -37,11 +37,6 @@ public class FreeToPlayEffect extends AbstractExtraEffectModifier {
     }
 
     @Override
-    public boolean shouldRenderValue() {
-        return false;
-    }
-
-    @Override
     public boolean shouldApply(AbstractCard card) {
         return !CardModifierManager.hasModifier(card, ID);
     }

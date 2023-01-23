@@ -3,7 +3,6 @@ package thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cardmodifiers.transmutationpack.AbstractExtraEffectModifier;
 
 import java.util.HashMap;
 
@@ -17,7 +16,7 @@ public class DynamicDynamicVariableManager {
         variableDatabase.clear();
     }
 
-    public static void registerVariable(AbstractCard card, AbstractExtraEffectModifier mod) {
+    public static void registerVariable(AbstractCard card, DynamicProvider mod) {
         String id = generateKey(card, mod);
         if (!variableDatabase.containsKey(id)) {
             DynamicDynamicVariable variable = new DynamicDynamicVariable(id, mod);
@@ -26,7 +25,7 @@ public class DynamicDynamicVariableManager {
         }
     }
 
-    public static String generateKey(AbstractCard card, AbstractExtraEffectModifier mod) {
-        return SpireAnniversary5Mod.makeID(card.uuid + ":" + mod.attachedCard.uuid);
+    public static String generateKey(AbstractCard card, DynamicProvider mod) {
+        return SpireAnniversary5Mod.makeID(card.uuid + ":" + mod.getDynamicUUID());
     }
 }

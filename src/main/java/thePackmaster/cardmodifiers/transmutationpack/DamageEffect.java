@@ -47,11 +47,6 @@ public class DamageEffect extends AbstractExtraEffectModifier {
     }
 
     @Override
-    public boolean shouldRenderValue() {
-        return true;
-    }
-
-    @Override
     public void onInitialApplication(AbstractCard card) {
         super.onInitialApplication(card);
         if (card.target != AbstractCard.CardTarget.ENEMY && card.target != AbstractCard.CardTarget.SELF_AND_ENEMY) {
