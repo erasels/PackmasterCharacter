@@ -47,7 +47,7 @@ public class Attach extends AbstractMadScienceCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
 
-        atb(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+        atb(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0], card -> (!card.hasTag(ISCARDMODIFIED) && card.cost>-2 && card.type != CardType.POWER), (cards) -> {
             att(new ExhaustSpecificCardAction(cards.get(0), p.hand, true));
             att(new FindCardForAddModifierAction(new PlayCardModifier(magicNumber, cards.get(0)),1,false, AbstractDungeon.player.discardPile, card->card.cost!=-2));
 
