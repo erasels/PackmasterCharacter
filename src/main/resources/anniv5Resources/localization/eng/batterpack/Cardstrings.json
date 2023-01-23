@@ -35,7 +35,7 @@
   "${ModID}:UltimateHomerun": {
     "NAME": "Ultimate Homerun",
     "DESCRIPTION": "Deal the highest unblocked attack damage you've dealt this combat.",
-    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)", " (Deals !D! damage. Wow!)"]
+    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)", " NL (Deals !D! damage. Wow!)"]
   },
   "${ModID}:AvatarBeat": {
     "NAME": "Avatar Beat",
