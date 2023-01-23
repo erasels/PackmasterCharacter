@@ -3,14 +3,18 @@
     "NAME": "Prime Directive",
     "DESCRIPTIONS": [
       "Your Attacks have #yOdd: Deal #b",
-      " additional damage."
+      " additional damage.",
+      " NL ${ModID}:Odd: (+ ",
+      " damage)."
     ]
   },
   "${ModID}:GammaWardPower": {
     "NAME": "Gamma Ward",
     "DESCRIPTIONS": [
       "Your next Skill this turn has #yEven: Gain #b",
-      " #yBlock."
+      " #yBlock.",
+      " NL ${ModID}:Even: Gain ",
+      " Block."
     ]
   }
 }
