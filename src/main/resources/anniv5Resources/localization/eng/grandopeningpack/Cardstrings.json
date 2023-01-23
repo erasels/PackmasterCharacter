@@ -4,16 +4,16 @@
     "DESCRIPTION": "Deal damage equal to the amount of cards in your draw pile. NL Shuffle your Discard pile into your draw pile.",
     "UPGRADE_DESCRIPTION": "Shuffle your Discard pile into your deck. NL Deal damage equal to the amount of cards in your draw pile.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.)"
+      "(Deals !D! damage.) NL "
     ]
   },
   "${ModID}:PlannedDefense": {
     "NAME": "Planned Defense",
-    "DESCRIPTION": "Innate. NL Gain !B! Block. If you played another Innate card this turn, also gain !B! Block next turn."
+    "DESCRIPTION": "Innate. NL Gain !B! Block. If you played another Innate card this turn, also gain half that much Block next turn."
   },
   "${ModID}:SecondStrike": {
     "NAME": "Second Strike",
-    "DESCRIPTION": "Innate. Retain. NL Deal !D! damage. If it is not the first turn, play this again."
+    "DESCRIPTION": "Innate. Retain. NL Deal !D! damage. If it is not the first turn, deal !D! damage again."
   },
   "${ModID}:DashIn": {
     "NAME": "Dash In",
@@ -26,11 +26,8 @@
   },
   "${ModID}:Cross": {
     "NAME": "Cross",
-    "DESCRIPTION": "Deal !D! damage twice. Hits one more time for each of your created *Crosses. Shuffle a *Cross into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage twice. Hits one more time for each of your created *Crosses. Shuffle a *Cross+ into your draw pile.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Hits !M! times.)"
-    ]
+    "DESCRIPTION": "Deal !D! damage twice. Your *Crosses deal 1 more damage this combat. Shuffle a *Cross into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage twice. Your *Crosses deal 1 more damage this combat. Shuffle a *Cross+ into your draw pile."
   },
   "${ModID}:Improvise": {
     "NAME": "Improvise",
@@ -53,6 +50,6 @@
   "${ModID}:Surge": {
     "NAME": "Surge",
     "DESCRIPTION": "This turn, your next Innate card is played twice.",
-    "UPGRADE_DESCRIPTION": "This turn, your next !M! Innate cards are played twice."
+    "UPGRADE_DESCRIPTION": "Innate. NL This turn, your next Innate card is played twice."
   }
 }

@@ -41,9 +41,9 @@ public class MessUp extends AbstractGrandOpeningCard {
                 addToBot((AbstractGameAction) new ShuffleAction(AbstractDungeon.player.drawPile, false));
             }
         }
-        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.DESCRIPTION;
         if(this.upgraded){
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.UPGRADE_DESCRIPTION;
         }
         initializeDescription();
     }
@@ -54,18 +54,18 @@ public class MessUp extends AbstractGrandOpeningCard {
                 this.baseDamage += AbstractDungeon.player.discardPile.size();
             }
             super.applyPowers();
-            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.DESCRIPTION;
             if(this.upgraded){
-                this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+                this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.UPGRADE_DESCRIPTION;
             }
             initializeDescription();
         }
 
         public void calculateCardDamage(AbstractMonster mo) {
             super.calculateCardDamage(mo);
-            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.DESCRIPTION;
             if(this.upgraded){
-                this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+                this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.UPGRADE_DESCRIPTION;
             }
             initializeDescription();
         }

@@ -27,6 +27,6 @@ public class Surge extends AbstractGrandOpeningCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        this.isInnate = true;
     }
 }
