@@ -48,7 +48,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
+import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;

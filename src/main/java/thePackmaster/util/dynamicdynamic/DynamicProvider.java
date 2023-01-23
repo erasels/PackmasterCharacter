@@ -1,4 +1,4 @@
-package thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic;
+package thePackmaster.util.dynamicdynamic;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;

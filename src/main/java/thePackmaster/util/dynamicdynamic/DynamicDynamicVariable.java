@@ -1,4 +1,4 @@
-package thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic;
+package thePackmaster.util.dynamicdynamic;
 
 import basemod.abstracts.DynamicVariable;
 import com.badlogic.gdx.graphics.Color;

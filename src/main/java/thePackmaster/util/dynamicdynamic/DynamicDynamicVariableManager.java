@@ -1,4 +1,4 @@
-package thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic;
+package thePackmaster.util.dynamicdynamic;
 
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;

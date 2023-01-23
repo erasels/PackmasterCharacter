@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
-import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicProvider;
+import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
+import thePackmaster.util.dynamicdynamic.DynamicProvider;
 
 import java.util.UUID;
 
