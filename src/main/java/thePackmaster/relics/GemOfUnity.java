@@ -52,6 +52,7 @@ public class GemOfUnity extends AbstractPackmasterRelic {
             counter--;
             packsPlayed.add(pack);
             if (counter == 0){
+                flash();
                 AbstractDungeon.player.heal(5);
                 addToBot(new GainBlockAction(Wiz.p(), 20));
                 Wiz.applyToSelf(new StrengthPower(Wiz.p(), 1));
