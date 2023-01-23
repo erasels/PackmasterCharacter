@@ -81,7 +81,8 @@
   },
   "${ModID}:PackSetup": {
     "TEXT": [
-      "Draft a Pack!"
+      "Draft a Pack!",
+      "Current Packs"
     ]
   },
   "${ModID}:CurrentRunCardsTopPanelItem": {
