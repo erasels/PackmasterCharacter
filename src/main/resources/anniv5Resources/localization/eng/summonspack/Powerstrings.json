@@ -25,7 +25,7 @@
   "${ModID}:TrainingPower": {
     "NAME": "Trained",
     "DESCRIPTIONS": [
-      "At the start of your turn, evoke your next orb #b",
+      "At the end of your turn, evoke your next orb #b",
       " times."
     ]
   }
