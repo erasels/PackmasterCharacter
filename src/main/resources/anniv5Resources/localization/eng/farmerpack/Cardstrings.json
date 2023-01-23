@@ -1,7 +1,8 @@
 {
   "${ModID}:Fertilizer": {
     "NAME": "Fertilizer",
-    "DESCRIPTION": "Draw a card. NL Exhaust."
+    "DESCRIPTION": "Draw a card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust."
   },
   "${ModID}:HarvestBeans": {
     "NAME": "Harvest Beans",
@@ -32,7 +33,7 @@
   },
   "${ModID}:SoilResiliency": {
     "NAME": "Soil Resiliency",
-    "DESCRIPTION": "Gain !M! Strength and !${ModID}:m2! Dexterity. NL If you've played 3 or more card types this turn, add a copy to your discard pile. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Strength and !${ModID}:m2! Dexterity. NL If you've played less than 3 types of card this turn, Exhaust."
   },
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",
