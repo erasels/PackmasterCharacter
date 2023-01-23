@@ -38,15 +38,11 @@ public class TransmuteCardEffect extends AbstractGameEffect {
     private static final ArrayList<BufferWrapper> bufferCache = new ArrayList<>();
     private final HashMap<AbstractCard, TextureRegion> textureMap = new HashMap<>();
     private final HashMap<AbstractCard, AbstractCard> transmutedPairs;
-    private final TransmuteCardAction action;
-    private final CardGroup.CardGroupType targetGroup;
     private float offsetPercent;
     private float particleTimer;
 
-    public TransmuteCardEffect(HashMap<AbstractCard, AbstractCard> transmutedPairs, CardGroup.CardGroupType targetGroup, TransmuteCardAction action, float duration) {
+    public TransmuteCardEffect(HashMap<AbstractCard, AbstractCard> transmutedPairs, float duration) {
         this.transmutedPairs = transmutedPairs;
-        this.action = action;
-        this.targetGroup = targetGroup;
         this.duration = duration;
         this.startingDuration = duration;
     }
@@ -195,71 +191,8 @@ public class TransmuteCardEffect extends AbstractGameEffect {
                 }
             }
         } else {
-            //then, when the effect completes, distribute the cards and signal the action to complete.
-            if (targetGroup != null) {
-                switch (targetGroup) {
-                    case HAND:
-                        for (AbstractCard card : transmutedPairs.keySet()) {
-                            AbstractCard newCard = transmutedPairs.get(card);
-                            copyCardPosition(card, newCard);
-                            AbstractDungeon.player.limbo.removeCard(card);
-                            AbstractDungeon.player.hand.addToHand(newCard);
-                        }
-                        AbstractDungeon.player.hand.refreshHandLayout();
-                        break;
-                    case DRAW_PILE:
-                        for (AbstractCard card : transmutedPairs.keySet()) {
-                            AbstractCard newCard = transmutedPairs.get(card);
-                            copyCardPosition(card, newCard);
-                            AbstractDungeon.player.limbo.removeCard(card);
-                            AbstractDungeon.player.drawPile.moveToDeck(newCard, true);
-                        }
-                        break;
-                    case DISCARD_PILE:
-                        for (AbstractCard card : transmutedPairs.keySet()) {
-                            AbstractCard newCard = transmutedPairs.get(card);
-                            copyCardPosition(card, newCard);
-                            AbstractDungeon.player.limbo.removeCard(card);
-                            AbstractDungeon.player.discardPile.moveToDiscardPile(newCard);
-                        }
-                        break;
-                    case EXHAUST_PILE:
-                        for (AbstractCard card : transmutedPairs.keySet()) {
-                            AbstractCard newCard = transmutedPairs.get(card);
-                            copyCardPosition(card, newCard);
-                            AbstractDungeon.player.limbo.removeCard(card);
-                            AbstractDungeon.player.exhaustPile.moveToExhaustPile(newCard);
-                        }
-                        break;
-                    default:
-                        System.out.println("TransmuteCardEffect: How was this reached?");
-                        break;
-                }
-            } else {
-                for (AbstractCard card : transmutedPairs.keySet()) {
-                    AbstractDungeon.player.limbo.removeCard(card);
-                    copyCardPosition(card, transmutedPairs.get(card));
-                    AbstractDungeon.player.limbo.addToTop(transmutedPairs.get(card));
-                }
-            }
-            AbstractDungeon.player.hand.applyPowers();
-            AbstractDungeon.player.hand.glowCheck();
-            action.isDone = true;
             isDone = true;
         }
-    }
-
-    public static void copyCardPosition(AbstractCard original, AbstractCard target) {
-        target.current_x = original.current_x;
-        target.current_y = original.current_y;
-        target.target_x = original.target_x;
-        target.target_y = original.target_y;
-        target.drawScale = original.drawScale;
-        target.targetDrawScale = original.targetDrawScale;
-        target.angle = original.angle;
-        target.targetAngle = original.targetAngle;
-        target.transparency = original.transparency;
-        target.targetTransparency = original.targetTransparency;
     }
 
     @Override
