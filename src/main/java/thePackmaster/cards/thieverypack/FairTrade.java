@@ -18,7 +18,7 @@ public class FairTrade extends AbstractThieveryCard {
 	private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
 	private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
-	private static final int POWER = 5;
+	private static final int POWER = 6;
 	private static final int UPGRADE_BONUS = 2;
 	private static final int STRENGTH = 1;
 

@@ -3,13 +3,13 @@ package thePackmaster.powers.thieverypack;
 import com.evacipated.cardcrawl.mod.stslib.patches.NeutralPowertypePatch;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BackAttackPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.thieverypack.StealPowerAction;
 import thePackmaster.powers.AbstractPackmasterPower;
@@ -44,7 +44,7 @@ public class HammeredPower extends AbstractPackmasterPower implements OnReceiveP
 
 	@Override
 	public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-		if (power.type == AbstractPower.PowerType.BUFF) {
+		if (power.type == AbstractPower.PowerType.BUFF && !power.ID.equals(BackAttackPower.POWER_ID)) {
 			flashWithoutSound();
 			if (powerIDAmountMap.containsKey(power.ID)) {
 				powerIDAmountMap.put(power.ID, power.amount + powerIDAmountMap.get(power.ID));

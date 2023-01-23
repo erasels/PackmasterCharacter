@@ -1,5 +1,6 @@
 package thePackmaster.cards.thieverypack;
 
+import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,15 +20,18 @@ public class StrengthSap extends AbstractThieveryCard {
 	private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
 	private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
-	private static final int POWER = 1;
-	private static final int UPGRADE_BONUS = 1;
-	private static final int SECOND_POWER = 1;
-	private static final int UPGRADE_SECOND = 1;
+	private static final int WEAK = 1;
+	private static final int UPGRADE_WEAK = 1;
+	private static final int STEAL_STRENGTH = 1;
+	private static final int EXHAUSTIVE = 2;
+	private static final int UPGRADE_EXHAUSTIVE = 1;
 
 	public StrengthSap() {
 		super(ID, COST, TYPE, RARITY, TARGET);
-		baseMagicNumber = magicNumber = POWER;
-		baseSecondMagic = secondMagic = SECOND_POWER;
+		baseMagicNumber = magicNumber = WEAK;
+		baseSecondMagic = secondMagic = STEAL_STRENGTH;
+
+		ExhaustiveVariable.setBaseValue(this, EXHAUSTIVE);
 	}
 
 	@Override
@@ -54,8 +58,8 @@ public class StrengthSap extends AbstractThieveryCard {
 	public void upgrade() {
 		if (!upgraded) {
 			upgradeName();
-			upgradeMagicNumber(UPGRADE_BONUS);
-			upgradeSecondMagic(UPGRADE_SECOND);
+			upgradeMagicNumber(UPGRADE_WEAK);
+			ExhaustiveVariable.upgrade(this, UPGRADE_EXHAUSTIVE);
 		}
 	}
 }
