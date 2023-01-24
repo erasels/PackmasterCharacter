@@ -15,7 +15,7 @@ public class VenomDip extends AbstractPackmasterCard {
     public final static String ID = makeID("VenomDip");
 
     public VenomDip() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
     }
 
