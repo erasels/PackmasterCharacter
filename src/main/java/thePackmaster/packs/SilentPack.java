@@ -3,7 +3,6 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.cards.green.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.sun.corba.se.spi.activation.BadServerDefinitionHelper;
 import thePackmaster.SpireAnniversary5Mod;
 
 import java.util.ArrayList;
