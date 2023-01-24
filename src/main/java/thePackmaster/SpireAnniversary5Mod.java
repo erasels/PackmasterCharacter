@@ -536,7 +536,11 @@ public class SpireAnniversary5Mod implements
     // These packs are excluded from loading of pack-specific string files because they consistent entirely of base game cards.
     // If you're making a pack that also consists of only base game cards, add it to this list.
     // The name and description of the pack can go in the main UIstrings.json file.
-    private static final List<String> baseGamePacks = Arrays.asList(IroncladPack.class.getName(), SilentPack.class.getName(), DefectPack.class.getName(), WatcherPack.class.getName());
+    private static final List<String> baseGamePacks = Arrays.asList(IroncladPack.class.getName(),
+            SilentPack.class.getName(),
+            DefectPack.class.getName(),
+            AllForOnePack.class.getName(),
+            WatcherPack.class.getName());
 
     public void loadPackStrings() {
         Collection<CtClass> packClasses = new AutoAdd(modID)
