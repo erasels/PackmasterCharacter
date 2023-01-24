@@ -131,7 +131,8 @@ public class SpireAnniversary5Mod implements
         StartGameSubscriber,
         PostExhaustSubscriber,
         OnPlayerTurnStartSubscriber,
-        OnCreateDescriptionSubscriber {
+        OnCreateDescriptionSubscriber,
+        OnPlayerLoseBlockSubscriber {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -942,6 +943,12 @@ public class SpireAnniversary5Mod implements
             }
         }
         return currentRaw;
+    }
+
+    @Override
+    public int receiveOnPlayerLoseBlock(int i) {
+        i = Serene.receiveOnPlayerLoseBlock(i);
+        return i;
     }
 
     public static class Enums {
