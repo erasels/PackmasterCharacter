@@ -2,7 +2,6 @@ package thePackmaster.cardmodifiers.madsciencepack;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -38,11 +37,9 @@ public class ExpandModifier extends AbstractMadScienceModifier {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
         AbstractCard c = card.makeStatEquivalentCopy();
         CardModifierManager.removeModifiersById(c, "MadScienceExpandMod", true);
         Wiz.atb(new RepeatCardAction(c));
-
     }
 
     @Override
