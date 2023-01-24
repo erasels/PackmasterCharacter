@@ -22,7 +22,7 @@
   "${ModID}:ExhaustiveWork": {
     "NAME": "Exhaustive Work",
     "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Choose a card. NL Exhaust that card and add a copy of it to your draw pile.",
-    "EXTENDED_DESCRIPTION": ["Choose a card to exhaust and copy."]
+    "EXTENDED_DESCRIPTION": ["Choose a card to Exhaust and copy."]
   },
   "${ModID}:IterativeDesign": {
     "NAME": "Iterative Design",
@@ -35,7 +35,7 @@
   },
   "${ModID}:ReduceOverhead": {
     "NAME": "Reduce Overhead",
-    "DESCRIPTION": "Exhaust ALL cards that have duplicates. NL Deal !D! damage for each card exhausted. NL Exhaust."
+    "DESCRIPTION": "Exhaust ALL cards that have duplicates. NL Deal !D! damage for each card Exhausted. NL Exhaust."
   },
   "${ModID}:MagicHand": {
     "NAME": "Magic Hand",

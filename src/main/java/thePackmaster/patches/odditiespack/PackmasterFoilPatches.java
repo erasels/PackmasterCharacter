@@ -15,6 +15,7 @@ import thePackmaster.SpireAnniversary5Mod;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.Locale;
 
 public class PackmasterFoilPatches {
 
@@ -37,7 +38,7 @@ public class PackmasterFoilPatches {
                 case ATTACK:
                 case SKILL:
                 case POWER:
-                    ((CustomCard) card).setBackgroundTexture(SpireAnniversary5Mod.modID + "Resources/images/512/" + card.type.toString().toLowerCase() + "_foil.png", "fishingResources/images/1024/" + card.type.toString().toLowerCase() + "_foil.png");
+                    ((CustomCard) card).setBackgroundTexture(SpireAnniversary5Mod.modID + "Resources/images/512/" + card.type.toString().toLowerCase(Locale.ROOT) + "_foil.png", "fishingResources/images/1024/" + card.type.toString().toLowerCase() + "_foil.png");
                     break;
             }
         }

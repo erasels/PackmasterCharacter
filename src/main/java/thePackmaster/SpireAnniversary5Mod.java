@@ -48,10 +48,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import thePackmaster.cards.evenoddpack.PrimeDirective;
-import thePackmaster.powers.evenoddpack.GammaWardPower;
-import thePackmaster.powers.evenoddpack.PrimeDirectivePower;
-import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
@@ -84,6 +80,8 @@ import thePackmaster.potions.thieverypack.DivinePotion;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.powers.dragonwrathpack.PenancePower;
+import thePackmaster.powers.evenoddpack.GammaWardPower;
+import thePackmaster.powers.evenoddpack.PrimeDirectivePower;
 import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.rewards.CustomRewardTypes;
@@ -100,6 +98,7 @@ import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.JediUtil;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
+import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
@@ -513,7 +512,7 @@ public class SpireAnniversary5Mod implements
     private String getLangString() {
         for (Settings.GameLanguage lang : SupportedLanguages) {
             if (lang.equals(Settings.language)) {
-                return Settings.language.name().toLowerCase();
+                return Settings.language.name().toLowerCase(Locale.ROOT);
             }
         }
         return "eng";
@@ -549,7 +548,7 @@ public class SpireAnniversary5Mod implements
         logger.info("Found pack classes with AutoAdd: " + packClasses.size());
 
         for (CtClass packClass : packClasses) {
-            String packName = packClass.getSimpleName().toLowerCase();
+            String packName = packClass.getSimpleName().toLowerCase(Locale.ROOT);
             String languageAndPack = getLangString() + "/" + packName;
             logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             //Do not need to be checked as these always need to exist
@@ -591,7 +590,7 @@ public class SpireAnniversary5Mod implements
                 .collect(Collectors.toList());
 
         for (CtClass packClass : packClasses) {
-            String packName = packClass.getSimpleName().toLowerCase();
+            String packName = packClass.getSimpleName().toLowerCase(Locale.ROOT);
             String languageAndPack = getLangString() + "/" + packName;
             logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             String packJson = modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json";
@@ -924,7 +923,7 @@ public class SpireAnniversary5Mod implements
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
 
             Hats.atRunStart();
-            SpireAnniversary5Mod.logger.info("completed start of game hats");
+            //SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
     }
@@ -932,13 +931,12 @@ public class SpireAnniversary5Mod implements
     @Override
     public String receiveCreateCardDescription(String currentRaw, AbstractCard card) {
         if (AbstractDungeon.player != null) {
-            AbstractPower power = AbstractDungeon.player.getPower(PrimeDirectivePower.POWER_ID);
-            if (power != null) {
-                currentRaw = ((PrimeDirectivePower)power).modifyDescription(currentRaw, card);
-            }
-            power = AbstractDungeon.player.getPower(GammaWardPower.POWER_ID);
-            if (power != null) {
-                currentRaw = ((GammaWardPower)power).modifyDescription(currentRaw, card);
+            for(AbstractPower pow : p().powers) {
+                if(PrimeDirectivePower.POWER_ID.equals(pow.ID)) {
+                    currentRaw = ((PrimeDirectivePower)pow).modifyDescription(currentRaw, card);
+                } else if(GammaWardPower.POWER_ID.equals(pow.ID)) {
+                    currentRaw = ((GammaWardPower)pow).modifyDescription(currentRaw, card);
+                }
             }
         }
         return currentRaw;

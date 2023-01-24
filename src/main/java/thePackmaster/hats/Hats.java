@@ -18,6 +18,8 @@ import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
+import java.util.Locale;
+
 import static thePackmaster.hats.HatMenu.specialHats;
 
 public class Hats {
@@ -90,7 +92,7 @@ public class Hats {
 
         Array<Bone> possiblebones = skeleton.getBones();
         for (Bone b : possiblebones) {
-            bonename = b.toString().toLowerCase();
+            bonename = b.toString().toLowerCase(Locale.ROOT);
             if (bonename.equals("head")) {
                 if (isDummy)
                     headbone = b;
@@ -104,7 +106,7 @@ public class Hats {
 
         Array<Slot> possibleslots = skeleton.getSlots();
         for (Slot s : possibleslots) {
-            slotname = s.getBone().toString().toLowerCase();
+            slotname = s.getBone().toString().toLowerCase(Locale.ROOT);
             if (slotname.equals("head")) {
                 if (isDummy) {
                     headslot = s;
@@ -141,11 +143,11 @@ public class Hats {
         }
 
         if (skeleton.getAttachment(inRun ? playerFoundHeadSlot : foundHeadSlot, "hat") == null) {
-            SpireAnniversary5Mod.logger.info("starting attachment process, in run = " + inRun);
+            //SpireAnniversary5Mod.logger.info("starting attachment process, in run = " + inRun);
             String attachName = inRun ? playerbone.toString() : headbone.toString();
             int slotIndex = inRun ? playerFoundHeadSlot : foundHeadSlot;
 
-            SpireAnniversary5Mod.logger.info("creating slot on " + slotIndex);
+            //SpireAnniversary5Mod.logger.info("creating slot on " + slotIndex);
             // Create a new slot for the attachment
             Slot origSlot = inRun ? playerHeadSlot : headslot;
             Slot slotClone = new Slot(new SlotData(origSlot.getData().getIndex(), attachName, origSlot.getBone().getData()), origSlot.getBone());
@@ -158,11 +160,11 @@ public class Hats {
 
             TextureRegion region = ImageHelper.asAtlasRegion(TexLoader.getTexture(imgPath));
             Texture tex = TexLoader.getTexture(imgPath);
-            SpireAnniversary5Mod.logger.info("texture loading as " + imgPath);
+            //SpireAnniversary5Mod.logger.info("texture loading as " + imgPath);
             tex.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
 
             if (inRun) {
-                SpireAnniversary5Mod.logger.info("creating attachment in run");
+                //SpireAnniversary5Mod.logger.info("creating attachment in run");
                 attachment = new RegionAttachment("hat");
                 attachment.setRegion(region);
                 attachment.setWidth(tex.getWidth());
@@ -176,11 +178,11 @@ public class Hats {
                 Skin skin = skeleton.getData().getDefaultSkin();
                 skin.addAttachment(slotIndex, attachment.getName(), attachment);
                 attachmentSlotIndex = slotIndex;
-                SpireAnniversary5Mod.logger.info("attachment slot completed at index " + attachmentSlotIndex);
+                //SpireAnniversary5Mod.logger.info("attachment slot completed at index " + attachmentSlotIndex);
 
                 skeleton.setAttachment(attachName, attachment.getName());
             } else {
-                SpireAnniversary5Mod.logger.info("creating attachment in hat menu");
+                //SpireAnniversary5Mod.logger.info("creating attachment in hat menu");
                 attachmentDummy = new RegionAttachment("hat");
                 attachmentDummy.setRegion(region);
                 attachmentDummy.setWidth(tex.getWidth());
@@ -194,7 +196,7 @@ public class Hats {
                 Skin skin = skeleton.getData().getDefaultSkin();
                 skin.addAttachment(slotIndex, attachmentDummy.getName(), attachmentDummy);
                 attachmentSlotIndex = slotIndex;
-                SpireAnniversary5Mod.logger.info("attachment slot completed at index " + attachmentSlotIndex);
+                //SpireAnniversary5Mod.logger.info("attachment slot completed at index " + attachmentSlotIndex);
 
                 skeleton.setAttachment(attachName, attachmentDummy.getName());
             }
@@ -226,7 +228,7 @@ public class Hats {
 
 
     public static String getImagePathFromHatID(String hatID) {
-        SpireAnniversary5Mod.logger.info(SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png");
+        //SpireAnniversary5Mod.logger.info(SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png");
         return SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
 
     }
@@ -234,7 +236,7 @@ public class Hats {
     public static void atRunStart() {
         if (currentHat != null) {
             playerHeadSlot = null;
-            SpireAnniversary5Mod.logger.info("adding run start hat");
+            //SpireAnniversary5Mod.logger.info("adding run start hat");
             if (HatMenu.invalidHatSelected) {
                 SpireAnniversary5Mod.logger.info("an invalid hat was used. returning to default.");
                 removeHat(true);

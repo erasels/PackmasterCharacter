@@ -10,7 +10,8 @@
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
-    "DESCRIPTION": "${ModID}:Manifest a random orb. NL Exhaust"
+    "DESCRIPTION": "${ModID}:Manifest !M! random orb. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Manifest !M! random orbs. NL Exhaust."
   },
   "${ModID}:FullMoonHalo": {
     "NAME": "Full Moon Halo",
@@ -26,7 +27,7 @@
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this ${ModID}:infests, Evoke your next orb !M! times and lose and orb slot."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this ${ModID}:infests, Evoke your next orb !M! times and lose an orb slot."
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
