@@ -16,7 +16,7 @@ public class VenomDip extends AbstractPackmasterCard {
 
     public VenomDip() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -26,7 +26,7 @@ public class VenomDip extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 
 }

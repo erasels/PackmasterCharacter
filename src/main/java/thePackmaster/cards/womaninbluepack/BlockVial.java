@@ -25,7 +25,7 @@ public class BlockVial extends AbstractWomanInBlueCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new PotionThrowEffect(getPotionResourcePath("BlockPotion.png"), p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, 3F, 0.6F, false, true), 0.6F));
         blck();
-        if (upgraded) Wiz.applyToSelf(new NextTurnBlockPower(p, secondMagic));
+        if (upgraded && secondMagic > 0) Wiz.applyToSelf(new NextTurnBlockPower(p, secondMagic));
     }
 
     @Override
