@@ -36,8 +36,7 @@
   },
   "${ModID}:Expand": {
     "NAME": "Expand",
-    "DESCRIPTION": "${ModID}:Modify a card in hand: \"Costs 1 more [E] .\" and \"Play again, unmodified.\" NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Modify a card in hand: \"Costs 1 more [E] .\" and \"Play again, unmodified.\" NL stslib:Exhaustive !stslib:ex!."
+    "DESCRIPTION": "${ModID}:Modify a card in hand: \"Costs 1 more [E] .\" and \"Play again, unmodified.\" NL Exhaust."
   },
   "${ModID}:Piratify": {
     "NAME": "Piratify",
