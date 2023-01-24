@@ -1,21 +1,15 @@
 package thePackmaster.cards.pinnaclepack;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.SanctityEffect;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class BucketOfDregsUncommonSkill extends AbstractPinnacleCard {
-
-    protected static AbstractPlayer pl(){
-        return AbstractDungeon.player;
-    }
-
     public final static String ID = makeID("BucketOfDregsUncommonSkill");
     private static final int MAGIC = 6;
     private static final int UPGRADE_MAGIC = 4;
@@ -31,16 +25,20 @@ public class BucketOfDregsUncommonSkill extends AbstractPinnacleCard {
     }
 
     public void onRetained() {
-        addToBot(new GainBlockAction(pl(), this.block));
-        for (AbstractMonster XD : (AbstractDungeon.getMonsters()).monsters) {
-            if (!XD.isDeadOrEscaped() && !XD.halfDead && !XD.isDying && !XD.isEscaping && (XD.maxHealth != XD.currentHealth)){
-                addToBot(new VFXAction(new SanctityEffect(XD.hb.cX, XD.hb.cY), 0.1F));
-                addToBot(new HealAction(XD, pl(), this.magicNumber));
-            }
+        applyPowers();
+        blck();
+        for (AbstractMonster XD : Wiz.getEnemies()) {
+            addToBot(new VFXAction(new SanctityEffect(XD.hb.cX, XD.hb.cY), 0.1F));
+            addToBot(new HealAction(XD, Wiz.p(), this.magicNumber));
         }
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {}
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+    }
 
     @Override
     public void upp() {
