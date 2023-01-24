@@ -1,22 +1,37 @@
 package thePackmaster.cards.entropypack;
 
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.EasyXCostAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.entropy.Oblivion;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
 public class RuinousPortent extends AbstractEntropyCard {
     public final static String ID = makeID("RuinousPortent");
-    // intellij stuff skill, none, uncommon, , , , , 0, 1
+    private static TooltipInfo ruinTip;
 
     public RuinousPortent() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 0;
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        ArrayList<TooltipInfo> list = new ArrayList<>();
+        if(ruinTip == null) {
+            ruinTip = new TooltipInfo(BaseMod.getKeywordProper(makeID("ruin")), BaseMod.getKeywordDescription(makeID("ruin")));
+        }
+        list.add(ruinTip);
+        return  list;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
