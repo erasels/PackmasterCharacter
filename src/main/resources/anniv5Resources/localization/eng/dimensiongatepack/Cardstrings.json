@@ -22,7 +22,7 @@
     "DESCRIPTION": "Ethereal. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      " to upgrade permanently."
+      " to Upgrade permanently."
     ]
   },
   "${ModID}:Inferno": {

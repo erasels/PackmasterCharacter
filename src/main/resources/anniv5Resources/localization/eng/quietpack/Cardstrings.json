@@ -13,8 +13,8 @@
   },
   "${ModID}:Shine": {
     "NAME": "Shine",
-    "DESCRIPTION": "Unplayable. Retain. NL When you draw this card, upgrade another random card in your hand for the rest of the combat.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When you draw this card, upgrade ALL cards in your hand for the rest of the combat."
+    "DESCRIPTION": "Unplayable. Retain. NL When you draw this card, Upgrade another random card in your hand for the rest of the combat.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When you draw this card, Upgrade ALL cards in your hand for the rest of the combat."
   },
   "${ModID}:GlaiveThrow": {
     "NAME": "Glaive Throw",

@@ -25,9 +25,9 @@
     "NAME": "Smithing Oil",
     "DESCRIPTIONS": [
       "Choose #b",
-      " card in your hand to upgrade #bpermanently.",
-      " cards in your hand to upgrade #bpermanently.",
-      " to upgrade permanently."
+      " card in your hand to #yUpgrade #bpermanently.",
+      " cards in your hand to #yUpgrade #bpermanently.",
+      " to Upgrade permanently."
     ]
   }
 }
