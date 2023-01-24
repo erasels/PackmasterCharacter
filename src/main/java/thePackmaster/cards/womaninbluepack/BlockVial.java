@@ -34,6 +34,7 @@ public class BlockVial extends AbstractWomanInBlueCard {
         if (upgraded) {
 
             secondMagic = block - 6;
+            if (secondMagic < 0) secondMagic = 0;
             if (isBlockModified) {
                 isSecondMagicModified = true;
             }
