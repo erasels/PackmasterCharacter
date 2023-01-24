@@ -80,7 +80,7 @@ public class SocketGemEffect extends AbstractGameEffect {
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
             GemsPack.gridScreenForSockets = false;
-            AbstractDungeon.player.loseGold(10);
+            AbstractDungeon.player.loseGold(GemsPack.goldCostToSocket);
 
 
         }

@@ -12,6 +12,7 @@ public class PersistGem extends AbstractGemsCard {
 
     public PersistGem() {
         super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING);
     }
 
     @Override
@@ -19,6 +20,10 @@ public class PersistGem extends AbstractGemsCard {
         return new PersistGemMod();
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
+    }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
     }

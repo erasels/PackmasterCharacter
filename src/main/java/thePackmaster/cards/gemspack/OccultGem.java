@@ -12,11 +12,17 @@ public class OccultGem extends AbstractGemsCard {
 
     public OccultGem() {
         super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING);
     }
 
     @Override
     public AbstractCardModifier myMod() {
         return new OccultGemMod();
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
     }
 
     @Override

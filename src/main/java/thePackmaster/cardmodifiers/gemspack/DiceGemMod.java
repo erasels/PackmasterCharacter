@@ -18,12 +18,12 @@ public class DiceGemMod extends AbstractMadScienceModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("GemModifiers")).TEXT[11];
+        return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("GemModifiers")).TEXT[1];
     }
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
-        Wiz.atb(new DelayedDiceRollAction(4, 1));
+        Wiz.atb(new DelayedDiceRollAction(6, 1));
     }
 
     @Override

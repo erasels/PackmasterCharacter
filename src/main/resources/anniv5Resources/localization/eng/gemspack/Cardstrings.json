@@ -4,19 +4,19 @@
     "DESCRIPTION": "${ModID}:Gem. NL \"Gain 2 Temp. Strength\"",
     "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain 2 Temp. Strength\""
   },
-  "${ModID}:TempDexterityGem": {
-    "NAME": "Emerald",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain 2 Temp. Dexterity\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain 2 Temp. Dexterity\""
-  },
   "${ModID}:WardGem": {
     "NAME": "Aquamarine",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a Ward\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a Ward\""
+    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Ward\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Ward\""
+  },
+  "${ModID}:ShivGem": {
+    "NAME": "Fragmented Gem",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Shiv\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Shiv\""
   },
   "${ModID}:RetainGem": {
     "NAME": "Amber",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Card gains Retain\"",
+    "DESCRIPTION": "Unplayable ${ModID}:Gem. NL \"Card gains Retain\"",
     "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card gains Retain\""
   },
   "${ModID}:DrawGem": {
@@ -45,12 +45,12 @@
   },
   "${ModID}:OccultGem": {
     "NAME": "Lapis Lazuli",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Card gains ${ModID}:Occult\"",
+    "DESCRIPTION": "Unplayable ${ModID}:Gem. NL \"Card gains ${ModID}:Occult\"",
     "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card gains ${ModID}:Occult\""
   },
   "${ModID}:PersistGem": {
     "NAME": "Garnet",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Card has stslib:Persist 2\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card has stslib:Persist 2\""
+    "DESCRIPTION": "Unplayable ${ModID}:Gem. NL \"Card has stslib:Persist 2\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card gains stslib:Persist 2\""
   }
 }

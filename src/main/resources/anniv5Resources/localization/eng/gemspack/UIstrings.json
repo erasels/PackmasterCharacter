@@ -2,7 +2,7 @@
   "${ModID}:GemsPack": {
     "TEXT": [
       "Jeweler's Pack",
-      "Pure Support Pack. Contains all Unplayable Gems that can be placed into cards at Rest site.",
+      "Pure Support Pack. Contains a selection of 0-cost Gems that can be placed into cards at Rest site.",
       "MichaelMayhem"
     ]
   },
@@ -15,35 +15,24 @@
   "${ModID}:EnhanceBonfireOptions": {
     "TEXT": [
       "Enhance",
-      "(Free Action) Spend 10 Gold. Place a Gem into a card.",
-      "Requires a Gem, 10 Gold, and an unmodified card.",
+      "(Free Action) Spend 20 Gold. Place a Gem into a card.",
+      "Requires a Gem, 20 Gold, and an unmodified card.",
       "Select a Gem.",
       "Select a Card to receive the Gem.",
-      "Requires 10 Gold."
+      "Requires 20 Gold."
     ]
   },
   "${ModID}:GemModifiers": {
     "TEXT": [
       " NL Reduce debuffs by 1.",
+      " NL Roll a ${ModID}:D6.",
       " NL Draw a card.",
       " NL Gain [E] .",
+      " NL stslib:Persist !stslib:persist!.",
       "Retain. NL ",
       " NL Gain a *Shiv.",
-      " NL Gain 2 Temp. Dexterity.",
       " NL Gain 2 Temp. Strength.",
-      " NL Apply 1 Vulnerable.",
-      " NL Gain a *Ward.",
-      " NL Apply 1 Weak.",
-      " NL Gain 2 ${ModID}:Charge Up.",
-      " NL Roll a ${ModID}:D6.",
-      " NL Gain 2 ${ModID}:Entropy.",
-      " NL Apply 1 ${ModID}:Frostbite.",
-      " NL Gain ${ModID}:Inspiration 50.",
-      "{ModID}:Occult. NL ",
-      " NL stslib:Persist !stslib:persist!.",
-      " NL Apply 1 ${ModID}:Petra.",
-      " NL Apply 3 ${ModID}:Rend.",
-      " NL Apply 6 ${ModID}:Ruin."
+      " NL Gain a *Ward."
 
     ]
   }

@@ -15,7 +15,7 @@ public class PersistGemMod extends AbstractMadScienceModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("GemModifiers")).TEXT[16];
+        return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("GemModifiers")).TEXT[4];
     }
     @Override
     public void onInitialApplication(AbstractCard card) {

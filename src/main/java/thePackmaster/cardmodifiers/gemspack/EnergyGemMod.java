@@ -18,7 +18,7 @@ public class EnergyGemMod extends AbstractMadScienceModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("GemModifiers")).TEXT[2];
+        return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("GemModifiers")).TEXT[3];
     }
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {

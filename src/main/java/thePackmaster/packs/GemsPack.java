@@ -1,13 +1,9 @@
 package thePackmaster.packs;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.cards.arcanapack.*;
 import thePackmaster.cards.gemspack.*;
-import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 import thePackmaster.ui.EnhanceBonfireOption;
 import thePackmaster.vfx.gemspack.SocketGemEffect;
 
@@ -25,6 +21,8 @@ public class GemsPack extends AbstractCardPack {
     public static boolean gridScreenForGems = false;
     public static boolean gridScreenForSockets = false;
 
+    public static final int goldCostToSocket = 20;
+
 
     public GemsPack() {
         super(ID, NAME, DESC, AUTHOR);
@@ -38,7 +36,7 @@ public class GemsPack extends AbstractCardPack {
         cards.add(EnergyGem.ID);
         cards.add(RetainGem.ID);
         cards.add(TempStrengthGem.ID);
-        cards.add(TempDexterityGem.ID);
+        cards.add(ShivGem.ID);
         cards.add(WardGem.ID);
         cards.add(DiceGem.ID);
         cards.add(OccultGem.ID);

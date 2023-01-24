@@ -21,7 +21,7 @@ public class TempStrengthGemMod extends AbstractMadScienceModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("GemModifiers")).TEXT[6];
+        return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("GemModifiers")).TEXT[7];
     }
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {

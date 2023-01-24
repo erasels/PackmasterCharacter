@@ -25,7 +25,7 @@ public class AddEnhanceButtonPatch {
             if (SocketGemEffect.getGems().size() == 0) {
                 active = false;
             }
-            if (AbstractDungeon.player.gold < 10) {
+            if (AbstractDungeon.player.gold < GemsPack.goldCostToSocket) {
                 active = false;
             }
             if (AbstractDungeon.player instanceof ThePackmaster || active) {

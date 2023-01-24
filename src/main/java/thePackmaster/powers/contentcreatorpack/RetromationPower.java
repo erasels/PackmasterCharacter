@@ -34,7 +34,6 @@ public class RetromationPower extends AbstractPackmasterPower {
 
             //If in ALL PACKS mode, then this has to naturally just include everything.
             potentialPacks = allPacks;
-            potentialPacks.remove(SpireAnniversary5Mod.packsByID.get("GemsPack"));
 
         } else {
             for (AbstractCardPack p : allPacks) {

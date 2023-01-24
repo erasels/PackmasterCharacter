@@ -5,27 +5,27 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cardmodifiers.gemspack.WardGemMod;
+import thePackmaster.cardmodifiers.gemspack.ShivGemMod;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WardGem extends AbstractGemsCard {
-    public final static String ID = makeID("WardGem");
+public class ShivGem extends AbstractGemsCard {
+    public final static String ID = makeID("ShivGem");
 
-    public WardGem() {
+    public ShivGem() {
         super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        cardsToPreview = new Ward();
+        cardsToPreview = new Shiv();
     }
 
     @Override
     public AbstractCardModifier myMod() {
-        return new WardGemMod();
+        return new ShivGemMod();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new MakeTempCardInHandAction(new Ward()));
+        Wiz.atb(new MakeTempCardInHandAction(new Shiv()));
     }
 
     public void upp() {

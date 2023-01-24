@@ -15,18 +15,11 @@ public abstract class AbstractGemsCard extends AbstractPackmasterCard {
 
     public AbstractGemsCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color) {
         super(cardID, cost, type, rarity, target, color, "gems");
-        this.tags.add(CardTags.HEALING);
 
     }
 
     public AbstractGemsCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {
         this(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW);
-        this.tags.add(CardTags.HEALING);
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return false;
     }
 
     public AbstractCardModifier myMod() {
