@@ -19,7 +19,7 @@
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "Marvelous Feast",
     "DESCRIPTION": "Innate. Add in order: ${ModID}:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended.",
-    "UPGRADE_DESCRIPTION": "Innate. Add in order, upgraded: ${ModID}:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended."
+    "UPGRADE_DESCRIPTION": "Innate. Add in order, Upgraded: ${ModID}:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended."
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "Meaty Croquettes",
