@@ -39,7 +39,7 @@
   "${ModID}:Leprechaun": {
     "NAME": "Leprechaun",
     "DESCRIPTION": [
-      "#yPassive: At the end of your turn roll #b",
+      "#yPassive: At the start of your turn roll #b",
       ". NL #yEvoke: Apply #b",
       " #yJinx to ALL enemies."
     ]
