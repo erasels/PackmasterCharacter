@@ -27,9 +27,11 @@ public class FinalForm extends AbstractOdditiesCard {
                 @Override
                 public void update() {
                     isDone = true;
-                    AbstractCard target = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-                    applyToSelfTop(new FinalFormPower(target.makeStatEquivalentCopy()));
-                    att(new ExhaustSpecificCardAction(target, AbstractDungeon.player.hand));
+                    if(!p.hand.isEmpty()) {
+                        AbstractCard target = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                        applyToSelfTop(new FinalFormPower(target.makeStatEquivalentCopy()));
+                        att(new ExhaustSpecificCardAction(target, AbstractDungeon.player.hand));
+                    }
                 }
             });
         } else {
