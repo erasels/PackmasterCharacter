@@ -48,7 +48,7 @@
   },
   "${ModID}:Connection": {
     "NAME": "Connection",
-    "DESCRIPTION": "Whenever you play a card, upgrade it and ALL copies of it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, upgrade it and ALL copies of it."
+    "DESCRIPTION": "Whenever you play a card, Upgrade it and ALL copies of it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, Upgrade it and ALL copies of it."
   }
 }
