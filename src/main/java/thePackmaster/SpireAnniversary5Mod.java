@@ -769,8 +769,10 @@ public class SpireAnniversary5Mod implements
 
         if (onlyCurrent) {
             allChoices.addAll(SpireAnniversary5Mod.currentPoolPacks);
+            allChoices.remove(SpireAnniversary5Mod.packsByID.get("GemsPack"));
         } else {
             allChoices.addAll(SpireAnniversary5Mod.allPacks);
+            allChoices.remove(SpireAnniversary5Mod.packsByID.get("GemsPack"));
         }
 
         for (int i = 0; i < count; i++) {

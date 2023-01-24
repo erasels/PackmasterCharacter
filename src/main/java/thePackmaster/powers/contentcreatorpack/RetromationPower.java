@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.GemsPack;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
@@ -33,10 +34,11 @@ public class RetromationPower extends AbstractPackmasterPower {
 
             //If in ALL PACKS mode, then this has to naturally just include everything.
             potentialPacks = allPacks;
+            potentialPacks.remove(SpireAnniversary5Mod.packsByID.get("GemsPack"));
 
         } else {
             for (AbstractCardPack p : allPacks) {
-                if (!SpireAnniversary5Mod.currentPoolPacks.contains(p)) {
+                if (!SpireAnniversary5Mod.currentPoolPacks.contains(p) && !(p instanceof GemsPack)) {
                     potentialPacks.add(p);
                 }
             }
