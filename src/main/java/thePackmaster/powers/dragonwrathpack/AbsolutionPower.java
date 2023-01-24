@@ -4,18 +4,11 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
-import thePackmaster.actions.dragonwrathpack.SmiteAction;
-import thePackmaster.orbs.dragonwrathpack.LightOrb;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -58,6 +51,6 @@ public class AbsolutionPower extends AbstractPackmasterPower implements Cloneabl
 
     @Override
     public AbstractPower makeCopy() {
-        return new confessionpower(owner, amount);
+        return new ConfessionPower(owner, amount);
     }
 }

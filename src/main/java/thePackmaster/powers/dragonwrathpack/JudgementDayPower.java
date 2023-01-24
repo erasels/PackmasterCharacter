@@ -38,7 +38,7 @@ public class JudgementDayPower extends AbstractPackmasterPower implements Clonea
     }
 
     public void onSpecificTrigger() {
-        Wiz.applyToSelf(new confessionpower(owner,amount));
+        Wiz.applyToSelf(new ConfessionPower(owner,amount));
     }
 
     @Override
@@ -53,7 +53,7 @@ public class JudgementDayPower extends AbstractPackmasterPower implements Clonea
 
     @Override
     public AbstractPower makeCopy() {
-        return new confessionpower(owner, amount);
+        return new ConfessionPower(owner, amount);
     }
 }
 
