@@ -2,9 +2,8 @@
   "${ModID}:CrossPower": {
     "NAME": "Cross",
     "DESCRIPTIONS": [
-      "Your #yCrosses hit #b",
-      " additional time.",
-      " additional times."
+      "Your #yCrosses deal #b",
+      " additional damage."
     ]
   },
   "${ModID}:InstinctsPower": {

@@ -152,4 +152,8 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
         return DESCRIPTIONS[0] + packs;
     }
 
+    @Override
+    public boolean canSpawn() {
+        return Settings.isEndless || AbstractDungeon.floorNum <= 48;
+    }
 }

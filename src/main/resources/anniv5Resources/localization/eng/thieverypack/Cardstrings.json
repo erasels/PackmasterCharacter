@@ -9,7 +9,7 @@
   },
   "${ModID}:Smokescreen": {
     "NAME": "Smokescreen",
-    "DESCRIPTION": "ALL creatures gain !B! Block. NL ALL enemies lose !M! HP."
+    "DESCRIPTION": "EVERYONE gains !B! Block. NL ALL enemies lose !M! HP."
   },
   "${ModID}:NullHammer": {
     "NAME": "Null Hammer",
@@ -22,7 +22,7 @@
   },
   "${ModID}:StrengthSap": {
     "NAME": "Strength Sap",
-    "DESCRIPTION": "Apply !M! Weak. NL If the enemy has positive Strength, steal !${ModID}:m2! Strength."
+    "DESCRIPTION": "Apply !M! Weak. NL If the enemy has positive Strength, steal !${ModID}:m2! Strength. NL Exhaustive !stslib:ex!."
   },
   "${ModID}:CunningPoison": {
     "NAME": "Cunning Poison",
@@ -41,7 +41,7 @@
   },
   "${ModID}:ThieveryMastery": {
     "NAME": "Thievery Mastery",
-    "DESCRIPTION": "Whenever you steal something, gain 100% more of it. NL (Does not stack)",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you steal something, gain 100% more of it. NL (Does not stack)"
+    "DESCRIPTION": "You become a Master Thief. NL (Whenever you steal something, gain twice as much of it)",
+    "UPGRADE_DESCRIPTION": "Innate. NL You become a Master Thief. NL (Whenever you steal something, gain twice as much of it)"
   }
 }

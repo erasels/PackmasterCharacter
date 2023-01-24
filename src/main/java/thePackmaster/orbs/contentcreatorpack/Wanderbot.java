@@ -1,8 +1,5 @@
 package thePackmaster.orbs.contentcreatorpack;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.assets.loaders.TextureLoader;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -15,20 +12,18 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
-import com.megacrit.cardcrawl.vfx.combat.LightningOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
-import thePackmaster.cards.highenergypack.StruckByATrain;
-import thePackmaster.util.ImageHelper;
 import thePackmaster.util.TexLoader;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
 public class Wanderbot extends AbstractOrb {
     private static final OrbStrings orbString;
@@ -53,22 +48,34 @@ public class Wanderbot extends AbstractOrb {
     }
 
     public void onEvoke() {
-        AbstractMonster target = StruckByATrain.getFrontmostEnemy();
-        if (target != null) {
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, this.hb.cX, this.hb.cY), 0.1F));
-            atb(new DamageAction(target, new DamageInfo(AbstractDungeon.player, evokeAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-        }
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractMonster target = Wiz.getFrontmostEnemy();
+                if (target != null) {
+                    att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, evokeAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                    att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
+                    att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                }
+                isDone = true;
+            }
+        });
         atb(new DrawCardAction(1));
     }
 
     public void onEndOfTurn() {
-        AbstractMonster target = StruckByATrain.getFrontmostEnemy();
-        if (target != null) {
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, this.hb.cX, this.hb.cY), 0.1F));
-            atb(new DamageAction(target, new DamageInfo(AbstractDungeon.player, passiveAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-        }
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractMonster target = Wiz.getFrontmostEnemy();
+                if (target != null) {
+                    att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, evokeAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                    att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
+                    att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                }
+                isDone = true;
+            }
+        });
     }
 
     public void triggerEvokeAnimation() {
@@ -77,11 +84,7 @@ public class Wanderbot extends AbstractOrb {
     }
 
     public void playChannelSFX() {
-        if (MathUtils.randomBoolean()) {
-            CardCrawlGame.sound.play("AUTOMATON_ORB_SPAWN", 0.3F);
-        } else {
-            CardCrawlGame.sound.play("AUTOMATON_ORB_SPAWN", 0.3F);
-        }
+        CardCrawlGame.sound.play("AUTOMATON_ORB_SPAWN", 0.3F);
     }
 
     public AbstractOrb makeCopy() {
@@ -104,12 +107,7 @@ public class Wanderbot extends AbstractOrb {
         hb.render(sb);
     }
 
-
-
-
     static {
         orbString = CardCrawlGame.languagePack.getOrbString("Wanderbot");
     }
-
-
 }

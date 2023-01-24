@@ -2,8 +2,10 @@ package thePackmaster.actions.quietpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.util.Wiz;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 import static thePackmaster.util.Wiz.adp;
 
@@ -17,8 +19,10 @@ public class ShineAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (adp().hand.group.size() < 2)
+        if (adp().hand.group.size() < 2) {
+            isDone = true;
             return;
+        }
 
         if (upgraded) {
             for (AbstractCard c : adp().hand.group) {
@@ -29,7 +33,10 @@ public class ShineAction extends AbstractGameAction {
                 }
             }
         } else {
-            AbstractCard c = randomOtherCard();
+            AbstractCard c = Wiz.getRandomItem(adp().hand.group.stream()
+                    .filter(card -> card != originalCard)
+                    .collect(Collectors.toCollection(ArrayList::new)
+                    ));
 
             if (c.canUpgrade()) {
                 c.upgrade();
@@ -40,13 +47,4 @@ public class ShineAction extends AbstractGameAction {
 
         isDone = true;
     }
-
-    private AbstractCard randomOtherCard() {
-        AbstractCard c = adp().hand.getRandomCard(AbstractDungeon.cardRandomRng);
-        if (c == originalCard) {
-            return randomOtherCard();
-        }
-        return c;
-    }
-
 }

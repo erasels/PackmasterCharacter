@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.patches.thieverypack.MindControlPatch;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 public class MindControlledPower extends AbstractPackmasterPower {
@@ -64,7 +65,14 @@ public class MindControlledPower extends AbstractPackmasterPower {
 						isDone = true;
 					}
 				});
-				AbstractDungeon.actionManager.addToTop(new InstantKillAction(m));
+				AbstractDungeon.actionManager.addToTop(new InstantKillAction(m) {
+					@Override
+					public void update() {
+						MindControlPatch.SuicidePatch.enabled = false;
+						super.update();
+						MindControlPatch.SuicidePatch.enabled = true;
+					}
+				});
 			}
 		}
 	}

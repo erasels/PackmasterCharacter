@@ -19,7 +19,7 @@ public class PlannedDefense extends AbstractGrandOpeningCard {
     public PlannedDefense() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.isInnate = true;
-        this.baseBlock = this.block = 12;
+        this.baseBlock = this.block = 15;
     }
 
     @Override
@@ -33,12 +33,12 @@ public class PlannedDefense extends AbstractGrandOpeningCard {
             }
         }
         if (innatePlayed) {
-            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) p, (AbstractCreature) p, (AbstractPower) new NextTurnBlockPower((AbstractCreature) p, this.block), this.block));
+            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) p, (AbstractCreature) p, (AbstractPower) new NextTurnBlockPower((AbstractCreature) p, this.block/2), this.block/2));
         }
     }
 
     @Override
     public void upp() {
-        this.upgradeBlock(3);
+        this.upgradeBlock(4);
     }
 }

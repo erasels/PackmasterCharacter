@@ -58,7 +58,7 @@ public class UltimateHomerun extends AbstractBatterCard {
         baseDamage = tmp;
 
         if (HIGH_SCORE >= 100)
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1];
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1];
         else
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
 

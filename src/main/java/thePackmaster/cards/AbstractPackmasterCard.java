@@ -307,22 +307,28 @@ public abstract class AbstractPackmasterCard extends CustomCard {
         return "No Parent Pack!";
     }
 
-    public void renderBorderText(SpriteBatch sb, boolean renderBottom) {
+    public void renderBorderText(SpriteBatch sb) {
+        renderBorderText(sb, this.current_x, this.current_y, 400, this.drawScale);
+    }
+
+    public void renderBorderText(SpriteBatch sb, float xPos, float yPos, float yOffsetBase, float scale) {
+        renderBorderText(sb, xPos, yPos, yOffsetBase, scale, false);
+        renderBorderText(sb, xPos, yPos, yOffsetBase, scale, true);
+    }
+
+    public void renderBorderText(SpriteBatch sb, float xPos, float yPos, float yOffsetBase, float scale, boolean renderBottom) {
         String text = renderBottom? getBottomText() : getTopText();
         if (text != null) {
-            float xPos, yPos, offsetY;
+            float offsetY;
             BitmapFont font;
             if (this.isFlipped || this.isLocked || this.transparency <= 0.0F)
                 return;
             font = FontHelper.cardTitleFont;
-            xPos = this.current_x;
-            yPos = this.current_y;
-            float yOffsetBase = 400;
             if(renderBottom) {
                 yOffsetBase *= -1;
                 yOffsetBase += 15f;
             }
-            offsetY = yOffsetBase * Settings.scale * this.drawScale / 2.0F;
+            offsetY = yOffsetBase * Settings.scale * scale / 2.0F;
             BitmapFont.BitmapFontData fontData = font.getData();
             float originalScale = fontData.scaleX;
             float scaleMulti = 0.8F;
@@ -332,7 +338,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
                 if (scaleMulti < 0.5F)
                     scaleMulti = 0.5F;
             }
-            fontData.setScale(scaleMulti * (this.drawScale * 0.85f));
+            fontData.setScale(scaleMulti * (scale * 0.85f));
             Color color = renderBottom? getBottomTextColor().cpy() : getTopTextColor().cpy();
             color.a = this.transparency;
             FontHelper.renderRotatedText(sb, font, text, xPos, yPos, 0.0F, offsetY, this.angle, true, color);
@@ -362,16 +368,14 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        renderBorderText(sb, false);
-        renderBorderText(sb, true);
+        renderBorderText(sb);
     }
 
     @Override
     public void renderInLibrary(SpriteBatch sb) {
         super.renderInLibrary(sb);
         if (!(SingleCardViewPopup.isViewingUpgrade && this.isSeen && !this.isLocked)) {
-            renderBorderText(sb, false);
-            renderBorderText(sb, true);
+            renderBorderText(sb);
         }
     }
 }

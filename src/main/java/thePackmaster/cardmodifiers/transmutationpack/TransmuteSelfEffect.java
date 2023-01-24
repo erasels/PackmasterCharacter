@@ -35,11 +35,6 @@ public class TransmuteSelfEffect extends AbstractExtraEffectModifier {
     }
 
     @Override
-    public boolean shouldRenderValue() {
-        return false;
-    }
-
-    @Override
     public boolean shouldApply(AbstractCard card) {
         if (card instanceof GhostlyMist) {
             return false;

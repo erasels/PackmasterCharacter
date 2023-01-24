@@ -24,7 +24,7 @@ public class SuperUpgradeAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        SpireAnniversary5Mod.logger.info("====== Updating SuperUpgrade action, with list " + selectedCards);
+        //SpireAnniversary5Mod.logger.info("====== Updating SuperUpgrade action, with list " + selectedCards);
         for (AbstractCard c : selectedCards) {
             for (int i = 0 ; i < amount ; i++) {
                 forceUpgrade(c);

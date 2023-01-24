@@ -2,13 +2,14 @@ package thePackmaster.actions.thieverypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.MinionPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.Sozu;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import thePackmaster.potions.thieverypack.DivinePotion;
 import thePackmaster.powers.thieverypack.ThieveryMasteryPower;
@@ -40,7 +41,12 @@ public class WitchcraftAction extends AbstractGameAction {
 				addToTop(new WaitAction(0.1F));
 			}
 			if ((target.isDying || target.currentHealth <= 0) && !target.halfDead && !target.hasPower(MinionPower.POWER_ID)) {
-				addToBot(new ObtainPotionAction(new DivinePotion()));
+				AbstractRelic s = AbstractDungeon.player.getRelic(Sozu.ID);
+				if (s != null) {
+					s.flash();
+				} else {
+					AbstractDungeon.player.obtainPotion(new DivinePotion());
+				}
 			}
 
 			if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
