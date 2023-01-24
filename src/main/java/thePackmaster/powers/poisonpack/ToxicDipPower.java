@@ -30,7 +30,6 @@ public class ToxicDipPower extends AbstractPackmasterPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        super.atEndOfTurn(isPlayer);
         removeThis();
     }
 
