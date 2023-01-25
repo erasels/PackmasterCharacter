@@ -31,5 +31,6 @@ public class TectonicQuake extends ConjurerCard {
 
     public void upp() {
         upgradeDamage(3);
+        exhaust = false;
     }
 }
