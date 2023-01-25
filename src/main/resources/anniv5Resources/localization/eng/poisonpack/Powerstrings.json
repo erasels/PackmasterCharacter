@@ -1,0 +1,9 @@
+{
+  "${ModID}:ToxicDipPower": {
+    "NAME": "Toxic Dip",
+    "DESCRIPTIONS": [
+      "This turn, whenever you deal unblocked attack damage, apply #b",
+      " #yPoison."
+    ]
+  }
+}

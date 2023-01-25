@@ -35,7 +35,7 @@ public class TalkToTheClaw extends AbstractClawCard {
     }
 
     public void upp() {
-        this.upgradeDamage(1);
-        this.upgradeMagicNumber(2);
+        this.upgradeDamage(2);
+        this.upgradeMagicNumber(1);
     }
 }

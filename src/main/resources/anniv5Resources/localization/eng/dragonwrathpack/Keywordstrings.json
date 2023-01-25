@@ -7,7 +7,7 @@
       "Repentant",
       "repentant"
     ],
-    "DESCRIPTION": "When a creature obtains #b8 Penance, it loses #b20 HP and HP loss from this effect is increased by #b10 this combat. NL Creatures damaged by Penance lose #b8 Penance"
+    "DESCRIPTION": "When a creature obtains #b8 Penance, it loses #b20 HP and loses #b8 #yPenance. NL HP loss from #yPenance is increased by #b10 this combat."
   },
   {
     "PROPER_NAME": "Confession",
