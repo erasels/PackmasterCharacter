@@ -1,0 +1,31 @@
+{
+  "${ModID}:NamelessMistPower": {
+    "NAME": "Nameless Mist",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:PageOfTheDeadPower": {
+    "NAME": "Page of the Dead",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " Attack(s) played that cost #b2 or more are played twice."
+    ]
+  },
+  "${ModID}:AllSeeingPower": {
+    "NAME": "All Seeing",
+    "DESCRIPTIONS": [
+      "At the end of each turn, Scry #b",
+      " and take ",
+      " damage."
+    ]
+  },
+  "${ModID}:EndOfDaysPower": {
+    "NAME": "End of Days",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yChannel #b",
+      " #yDark for each [E] unspent."
+    ]
+  }
+}

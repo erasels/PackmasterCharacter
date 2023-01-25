@@ -1,0 +1,44 @@
+{
+  "${ModID}:PierceVeil": {
+    "NAME": "Pierce Veil",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 of !M! top cards of your draw pile to your hand."
+  },
+  "${ModID}:Stall": {
+    "NAME": "Stall",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put up to !M! cards from your hand on top of your draw pile."
+  },
+  "${ModID}:RiskOfBlades": {
+    "NAME": "Risk Of Blades",
+    "DESCRIPTION": "Deal !D! damage for each Attack among the top 4 cards of your draw pile.",
+    "EXTENDED_DESCRIPTION": [" NL (Hits !M! times.)"]
+  },
+  "${ModID}:Crossroads": {
+    "NAME": "Crossroads",
+    "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile. NL 消耗 。"
+  },
+  "${ModID}:Anticipation": {
+    "NAME": "Anticipation",
+    "DESCRIPTION": "抽一张牌. NL Gain Strength equal to its cost.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain Strength equal to their cost."
+  },
+  "${ModID}:Prediction": {
+    "NAME": "Prediction",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If no enemy intends to attack, gain it next turn instead."
+  },
+  "${ModID}:ForceBolt": {
+    "NAME": "Force Bolt",
+    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 NL Increase the damage dealt by *Magic cards by !M! this turn."
+  },
+  "${ModID}:Enigmancy": {
+    "NAME": "Enigmancy",
+    "DESCRIPTION": "Scry !M!. NL Each turn, gain !${ModID}:m2! Energy and reduce this gain by 1."
+  },
+  "${ModID}:Recurrence": {
+    "NAME": "Recurrence",
+    "DESCRIPTION": "Shuffle a copy of your hand into your draw pile. NL 消耗 。"
+  },
+  "${ModID}:DivineMight": {
+    "NAME": "Divine Might",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL When [#EFC851]Divine [#EFC851]Might is played twice, ${ModID}:Ascend."
+  }
+}

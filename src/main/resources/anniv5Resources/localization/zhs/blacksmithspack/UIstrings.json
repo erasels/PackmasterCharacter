@@ -1,0 +1,25 @@
+{
+  "${ModID}:BlacksmithsPack": {
+    "TEXT": [
+      "Blacksmith's Pack",
+      "Become as the legendary Blacksmith who lost their tongs.",
+      "Pandemonium"
+    ]
+  },
+  "${ModID}:SetUpShopScreen": {
+    "TEXT": [
+      "Upgrade and put on top of your draw pile."
+    ]
+  },
+  "${ModID}:MasterworkScreen": {
+    "TEXT": [
+      "Upgrade."
+    ]
+  },
+  "${ModID}:BlacksmithsPackHat": {
+    "TEXT": [
+      "You've come to practice metalwork.",
+      "Welding Mask"
+    ]
+  }
+}

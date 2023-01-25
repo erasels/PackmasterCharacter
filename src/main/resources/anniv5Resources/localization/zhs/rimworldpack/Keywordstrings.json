@@ -1,0 +1,17 @@
+[
+  {
+    "PROPER_NAME": "On Fire",
+    "NAMES": [
+      "on fire",
+      "on_fire"
+    ],
+    "DESCRIPTION": "At the end of your turn, cards in your hand with #yFire #yCounters make you take damage equal to their #yFire #yCounter. They then increase the #yFire #yCounter. Cards with #yFire #yCounters play an additional copy of themselves for every #yFire #yCounter above #b1, and #y消耗 。"
+  },
+  {
+    "PROPER_NAME": "Addiction",
+    "NAMES": [
+      "addiction"
+    ],
+    "DESCRIPTION": "After a number of turns, add #b2 #yDespairs to your hand and lose #b5 #yStrength."
+  }
+]

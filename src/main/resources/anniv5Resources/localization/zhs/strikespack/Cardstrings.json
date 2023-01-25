@@ -1,0 +1,43 @@
+{
+  "${ModID}:StrikeOfMidnight": {
+    "NAME": "Strike of Midnight",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Channel 1 Dark."
+  },
+  "${ModID}:StrikeOfLuck": {
+    "NAME": "Strike of Luck",
+    "DESCRIPTION": "Deal !D! damage to a random enemy 1 to 3 times."
+  },
+  "${ModID}:LightningStrike": {
+    "NAME": "Lightning Strike",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Channel 1 Lightning."
+  },
+  "${ModID}:PenaltyStrike": {
+    "NAME": "Penalty Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Enemy loses !M! Strength. NL 消耗 。"
+  },
+  "${ModID}:Backstrike": {
+    "NAME": "Backstrike",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Modify all Attacks in hand: \"Name gains Strike.\""
+  },
+  "${ModID}:WorkersStrike": {
+    "NAME": "Worker's Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Draw an Attack. If it is a Strike, gain [E]."
+  },
+  "${ModID}:StrikeDummyJr": {
+    "NAME": "Strike Dummy Jr.",
+    "DESCRIPTION": "Gain !M! Strength. NL Strikes deal 2 more damage this combat."
+  },
+  "${ModID}:DifferentStrikes": {
+    "NAME": "Different Strikes",
+    "DESCRIPTION": "Exhaust all cards in hand. Replace them with random Strikes that cost 1 less. NL 消耗 。"
+  },
+  "${ModID}:StrikeOfGenius": {
+    "NAME": "Strike of Genius",
+    "DESCRIPTION": "At the start of your turn, gain a random \"Strike\". NL It costs 0 until played and gains 消耗 。",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain a random Upgraded \"Strike\". NL It costs 0 until played and gains 消耗 。"
+  },
+  "${ModID}:StrikeABargain": {
+    "NAME": "Strike a Bargain",
+    "DESCRIPTION": "Your Attacks costs 0 this turn. You cannot play non-Attacks this turn."
+  }
+}

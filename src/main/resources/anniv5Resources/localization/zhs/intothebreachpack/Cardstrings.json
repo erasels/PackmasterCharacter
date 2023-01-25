@@ -1,0 +1,43 @@
+{
+  "${ModID}:AcidProjector": {
+    "NAME": "A.C.I.D Projector",
+    "DESCRIPTION": "The enemy takes double damage from Attacks this turn. NL 消耗 。"
+  },
+  "${ModID}:ElectricWhip": {
+    "NAME": "Electric Whip",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel 1 Lightning."
+  },
+  "${ModID}:EnrageShot": {
+    "NAME": "Enrage Shot",
+    "DESCRIPTION": "Stun the enemy and apply 2 Strength. NL 消耗 。"
+  },
+  "${ModID}:MercuryFist": {
+    "NAME": "Mercury Fist",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL 消耗 。"
+  },
+  "${ModID}:ReboundVolley": {
+    "NAME": "Rebound Volley",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to a random enemy.",
+    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to a random enemy !M! times."]
+  },
+  "${ModID}:SmokePellets": {
+    "NAME": "Smoke Pellets",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! Weak to ALL enemies."
+  },
+  "${ModID}:SmolderingShell": {
+    "NAME": "Smoldering Shell",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL Apply !${ModID}:m2! Weak to ALL other enemies."
+  },
+  "${ModID}:SpartanShield": {
+    "NAME": "Spartan Shield",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! Temporary Strength."
+  },
+  "${ModID}:StormGenerator": {
+    "NAME": "Storm Generator",
+    "DESCRIPTION": "At the end of your turn, Channel !M! Lightning for each enemy that has a debuff."
+  },
+  "${ModID}:VoidShocker": {
+    "NAME": "Void Shocker",
+    "DESCRIPTION": "Whenever an enemy deals only blocked damage, deal !M! damage to it."
+  }
+}

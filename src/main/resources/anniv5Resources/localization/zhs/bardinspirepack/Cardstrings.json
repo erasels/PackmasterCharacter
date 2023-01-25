@@ -1,0 +1,51 @@
+{
+  "${ModID}:InspiringSong": {
+    "NAME": "Inspiring Song",
+    "DESCRIPTION": "Channel !M! Frost. NL Gain ${ModID}:Inspiration !${ModID}:m2! NL for each Channeled Orb."
+  },
+  "${ModID}:Sift": {
+    "NAME": "Sift",
+    "DESCRIPTION": "Draw !M! card. NL Gain [E] equal NL to its cost.",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL Gain [E] equal NL to its cost. NL Draw !M! card."
+  },
+  "${ModID}:EchoEcho": {
+    "NAME": "Echo Echo",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage."
+  },
+  "${ModID}:ThickOfTheFight": {
+    "NAME": "Thick of the Fight",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each living enemy. NL Costs 1 less [E] NL for each living enemy."
+  },
+  "${ModID}:EnGarde": {
+    "NAME": "En Garde",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Inspiration affects this card !M! times."
+  },
+  "${ModID}:Heroism": {
+    "NAME": "Heroism",
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL Gain ${ModID}:Inspiration !${ModID}:m2!."
+  },
+  "${ModID}:LifeDrain": {
+    "NAME": "Life Drain",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Gain Temporary_HP for half the unblocked damage dealt."
+  },
+  "${ModID}:Shifting": {
+    "NAME": "Shifting",
+    "DESCRIPTION": "Deal !D! damage or NL 获得 !B! 点 格挡 。 NL Deal !D! damage or NL 获得 !B! 点 格挡 。"
+  },
+  "${ModID}:ShiftingAttack": {
+    "NAME": "Attack",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:ShiftingBlock": {
+    "NAME": "Block",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "${ModID}:MagnumOpus": {
+    "NAME": "Magnum Opus",
+    "DESCRIPTION": "Gain ${ModID}:Inspiration !${ModID}:m2!. NL Permanently increase this card's ${ModID}:Inspiration by !M!. NL 消耗 。"
+  },
+  "${ModID}:SplendidForm": {
+    "NAME": "Splendid Form",
+    "DESCRIPTION": "At the start of NL your turn, gain NL ${ModID}:Inspiration !${ModID}:m2!."
+  }
+}

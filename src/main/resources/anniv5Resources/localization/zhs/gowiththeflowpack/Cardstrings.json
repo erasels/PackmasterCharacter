@@ -1,0 +1,46 @@
+{
+  "${ModID}:Aqueducts": {
+    "NAME": "Aqueducts",
+    "DESCRIPTION": "Whenever you draw an extra card, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:Cascade": {
+    "NAME": "Cascade",
+    "DESCRIPTION": "${ModID}:Flow. Gain !B! Block for each card discarded this way."
+  },
+  "${ModID}:Hail": {
+    "NAME": "Hail",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each time this was discarded this combat.",
+    "EXTENDED_DESCRIPTION": [" NL (Hits !M! times)"]
+  },
+  "${ModID}:HighTide": {
+    "NAME": "High Tide",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you ${ModID}:Flow, return this from the discard pile to your hand."
+  },
+  "${ModID}:Hydraulics": {
+    "NAME": "Hydraulics",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Flow."
+  },
+  "${ModID}:IcyFloe": {
+    "NAME": "Icy Floe",
+    "DESCRIPTION": "${ModID}:Flow. NL Next turn, NL gain [E] [E].",
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL Next turn, NL gain [E] [E] [E]."
+  },
+  "${ModID}:Pneumatics": {
+    "NAME": "Pneumatics",
+    "DESCRIPTION": "${ModID}:Flow. NL At the start of your next turn, ${ModID}:Flow. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL At the start of your next turn, ${ModID}:Flow."
+  },
+  "${ModID}:ReleaseValve": {
+    "NAME": "Release Valve",
+    "DESCRIPTION": "Whenever you ${ModID}:Flow, enemy takes !M! damage for each card discarded. NL 消耗 。"
+  },
+  "${ModID}:Reservoir": {
+    "NAME": "Reservoir",
+    "DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards discarded this way. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards discarded this way."
+  },
+  "${ModID}:StormFront": {
+    "NAME": "Storm Front",
+    "DESCRIPTION": "Retain. 造成 !D! 点伤害。 NL When discarded, add this back to your hand with !M! more damage."
+  }
+}

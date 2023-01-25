@@ -1,0 +1,46 @@
+{
+  "${ModID}:Sharpen": {
+    "NAME": "Honing Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Modify a random Attack in hand: \"Add !M! Damage\""
+  },
+  "${ModID}:Fortify": {
+    "NAME": "Fortify",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Modify a random Block card in hand: \"Add !M! Block\""
+  },
+  "${ModID}:Winterize": {
+    "NAME": "Winterize",
+    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your draw pile: \"Apply !M! ${ModID}:Frostbite\""
+  },
+"${ModID}:Discombobulate": {
+    "NAME": "Discombobulate",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have a *Modified card in hand, deals damage twice."
+  },
+  "${ModID}:Attach": {
+    "NAME": "Attach",
+    "DESCRIPTION": "Choose a non-Power in hand to ${ModID}:Absorb into a discarded card, then ${ModID}:Modify it: \"Play the *Absorbed card\". NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["Absorb. You will choose the discarded card to Modify after."]
+  },
+  "${ModID}:Improve": {
+    "NAME": "Improve",
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a random card in hand: \"抽一张牌.\" NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a card in hand: \"抽一张牌.\" NL 消耗 。"
+  },
+  "${ModID}:Enhance": {
+    "NAME": "Enhance",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Modify a card in hand: \"Gain !M! Block.\""
+  },
+  "${ModID}:Cheapen": {
+    "NAME": "Cheapen",
+    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Modify a card in your draw pile: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。"
+  },
+  "${ModID}:Expand": {
+    "NAME": "Expand",
+    "DESCRIPTION": "${ModID}:Modify a card in hand: \"Costs 1 more [E] .\" and \"Play again, unmodified.\" NL 消耗 。"
+  },
+  "${ModID}:Piratify": {
+    "NAME": "Piratify",
+    "DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"Gain a *Cannonball.\"",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"Gain a *Cannonball+.\""
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "${ModID}:Quickdraw": {
+    "NAME": "Quickdraw",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Draw !M! cards. NL Next turn, draw 1 less card."
+  },
+  "${ModID}:Glare": {
+    "NAME": "Glare",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! Weak and Vulnerable."
+  },
+  "${ModID}:HoleUp": {
+    "NAME": "Hole Up",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! Weak."
+  },
+  "${ModID}:Headshot": {
+    "NAME": "Headshot",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage if played from the middle of your hand."
+  },
+  "${ModID}:Determination": {
+    "NAME": "Determination",
+    "DESCRIPTION": "Whenever a debuff is applied to you, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a debuff is applied to you, gain !M! Strength."
+  },
+  "${ModID}:Virtue": {
+    "NAME": "Virtue",
+    "DESCRIPTION": "Retain. NL Reduce each of your debuffs by !M!."
+  },
+  "${ModID}:FlashPowder": {
+    "NAME": "Flash Powder",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ALL enemies lose !M! Strength. NL 消耗 。"
+  },
+  "${ModID}:Purgatory": {
+    "NAME": "Purgatory",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies."
+  },
+  "${ModID}:OverwhelmingPower": {
+    "NAME": "Overwhelming Power",
+    "DESCRIPTION": "Gain [E] [E] [E]. NL Draw 3 cards. NL Whenever you end your turn with 0 Energy, lose !M! HP."
+  },
+  "${ModID}:DeadOrAlive": {
+    "NAME": "Dead or Alive",
+    "DESCRIPTION": "Deal !D! damage X times. NL If Fatal, get a ${ModID}:Bounty. NL 消耗 。"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "${ModID}:Anemia": {
+    "NAME": "Anemia",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! Weak to any Poisoned enemies."
+  },
+  "${ModID}:ArsenalGear": {
+    "NAME": "Arsenal Gear",
+    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare card to your hand. It costs 0."
+  },
+  "${ModID}:ConjureBarrage": {
+    "NAME": "Conjure Barrage",
+    "DESCRIPTION": "Add !M! *Magic *Missiles to your hand. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Add !M! *Magic *Missiles+ to your hand. NL 消耗 。"
+  },
+  "${ModID}:DarkRitual": {
+    "NAME": "Dark Ritual",
+    "DESCRIPTION": "Lose 10 HP. NL Gain !M! Gold. NL Remove this from your deck permanently.",
+    "UPGRADE_DESCRIPTION": "Lose 10 HP. NL Gain !M! Gold. NL *Downgrade this permanently."
+  },
+  "${ModID}:Knighthood": {
+    "NAME": "Knighthood",
+    "DESCRIPTION": "Ethereal. NL Choose a card in hand to Upgrade permanently. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Choose a card in hand to Upgrade permanently. NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " to upgrade permanently."
+    ]
+  },
+  "${ModID}:Inferno": {
+    "NAME": "Inferno",
+    "DESCRIPTION": "Retain. NL ${ModID}:Hoard !hoard!: Deal !D! damage to ALL enemies. NL stslib:Persist !stslib:persist! ."
+  },
+  "${ModID}:LethalShot": {
+    "NAME": "Lethal Shot",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Poison and !${ModID}:m2! Vulnerable."
+  },
+  "${ModID}:MagicMissile": {
+    "NAME": "Magic Missile",
+    "DESCRIPTION": "*Magic. Retain. NL 造成 !D! 点伤害。 NL Increase the damage dealt by *Magic cards by !M! this turn."
+  },
+  "${ModID}:Minniegun": {
+    "NAME": "Minniegun",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  },
+  "${ModID}:PackRat": {
+    "NAME": "Pack Rat",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, gain one and remove this from your deck permanently.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, gain one and *Downgrade this permanently."
+  },
+  "${ModID}:ScorchedEarth": {
+    "NAME": "Scorched Earth",
+    "DESCRIPTION": "Exhaust all non-Attacks in your discard pile. Deal !D! damage for each. NL 消耗 。"
+  }
+}

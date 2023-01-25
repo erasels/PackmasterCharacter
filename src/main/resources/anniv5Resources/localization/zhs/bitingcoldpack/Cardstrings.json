@@ -1,0 +1,42 @@
+{
+  "${ModID}:ColdSeason": {
+    "NAME": "Cold Season",
+    "DESCRIPTION": "Whenever an enemy loses HP from ${ModID}:Frostbite, apply !M! ${ModID}:Frostbite."
+  },
+  "${ModID}:FrigidBody": {
+    "NAME": "Frigid Body",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Whenever you are attacked this turn, apply ${ModID}:Frostbite equal to blocked damage."
+  },
+  "${ModID}:Frostburn": {
+    "NAME": "Frostburn",
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add a *Burn into your discard pile."
+  },
+  "${ModID}:Glaciate": {
+    "NAME": "Glaciate",
+    "DESCRIPTION": "Whenever you apply ${ModID}:Frostbite, gain !M! Vigor."
+  },
+  "${ModID}:GrowingAffliction": {
+    "NAME": "Growing Affliction",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you apply a debuff, return this from the discard pile to your hand."
+  },
+  "${ModID}:IcicleSpear": {
+    "NAME": "Icicle Spear",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Frostbite."
+  },
+  "${ModID}:InsultToInjury": {
+    "NAME": "Insult to Injury",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Repeat for each unique debuff the enemy has."
+  },
+  "${ModID}:Refrigerate": {
+    "NAME": "Refrigerate",
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite."
+  },
+  "${ModID}:RelentlessHail": {
+    "NAME": "Relentless Hail",
+    "DESCRIPTION": "Deal !D! damage !M! times."
+  },
+  "${ModID}:Subdue": {
+    "NAME": "Subdue",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card played in this combat was an Attack, gain !B! additional Block."
+  }
+}

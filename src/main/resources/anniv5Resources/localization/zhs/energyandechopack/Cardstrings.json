@@ -1,0 +1,46 @@
+{
+  "${ModID}:ShadowStrike": {
+    "NAME": "Shadow Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Echo."
+  },
+  "${ModID}:MagnetRise": {
+    "NAME": "Magnet Rise",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you generated extra [E] this turn, this card costs 0."
+  },
+  "${ModID}:TearApart": {
+    "NAME": "Tear Apart",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, gain [E]. NL ${ModID}:Echo."
+  },
+  "${ModID}:Voices": {
+    "NAME": "Voices",
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Echo. NL 消耗 。"
+  },
+  "${ModID}:Flashlight": {
+    "NAME": "Flashlight",
+    "DESCRIPTION": "Innate. NL Gain [E] . NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain [E] . NL Next turn, gain [E]. NL 消耗 。"
+  },
+  "${ModID}:Discharge": {
+    "NAME": "Discharge",
+    "DESCRIPTION": "Deal damage equal to 5 times [E] spent this turn.",
+    "EXTENDED_DESCRIPTION": ["Deal damage equal to 5 times [E] spent this turn. NL (Deals !D! damage.)"]
+  },
+  "${ModID}:Overload": {
+    "NAME": "Overload",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Increase this card's damage by !M! and cost by 1 this combat."
+  },
+  "${ModID}:Panacher": {
+    "NAME": "Panacher",
+    "DESCRIPTION": "Every time 5 cards are created, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:Slowing": {
+    "NAME": "Slowing",
+    "DESCRIPTION": "At the start of your turn, gain [E] . NL Add !M! *Wounds into your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E] . NL Add a *Wound into your hand."
+  },
+  "${ModID}:Crystallize": {
+    "NAME": "Crystallize",
+    "DESCRIPTION": "Gain !M! Block for each [E] available.",
+    "EXTENDED_DESCRIPTION": ["Gain !M! Block for each [E] available. NL (Gains !B! Block.)"]
+  }
+}

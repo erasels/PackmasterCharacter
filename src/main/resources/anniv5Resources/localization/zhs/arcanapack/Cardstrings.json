@@ -1,0 +1,44 @@
+{
+  "${ModID}:TheFool": {
+    "NAME": "The Fool",
+    "DESCRIPTION": "Innate. NL 造成 !D! 点伤害。 NL Apply !M! Weak. NL 消耗 。"
+  },
+  "${ModID}:Justice": {
+    "NAME": "Justice",
+    "DESCRIPTION": "Gain !B! Block for each enemy in combat."
+  },
+  "${ModID}:TheHermit": {
+    "NAME": "The Hermit",
+    "DESCRIPTION": "Discard a card. Draw cards equal to its cost. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Discard a card. Draw cards equal to its cost."
+  },
+  "${ModID}:TheHangedMan": {
+    "NAME": "The Hanged Man",
+    "DESCRIPTION": "Whenever you 抽一张牌 this turn, ALL enemies lose !M! HP."
+  },
+  "${ModID}:TheTower": {
+    "NAME": "The Tower",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, play a copy of this card."
+  },
+  "${ModID}:Death": {
+    "NAME": "Death",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Kill the enemy if they have 10% or less of their max HP afterwards."
+  },
+  "${ModID}:Temperance": {
+    "NAME": "Temperance",
+    "DESCRIPTION": "抽一张牌 for each card in your exhaust pile. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽一张牌 for each card in your exhaust pile."
+  },
+  "${ModID}:TheHierophant": {
+    "NAME": "The Hierophant",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Remove all your debuffs. NL 消耗 。"
+  },
+  "${ModID}:TheSun": {
+    "NAME": "The Sun",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable to the highest HP enemy. NL 消耗 。"
+  },
+  "${ModID}:TheChariot": {
+    "NAME": "The Chariot",
+    "DESCRIPTION": "Whenever you discard a card during your turn, gain !M! Vigor."
+  }
+}

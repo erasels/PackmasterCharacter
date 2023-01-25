@@ -65,7 +65,7 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
             tmp.addToTop(c);
         }
         AbstractDungeon.gridSelectScreen.open(tmp,
-                1, DESCRIPTIONS[1] + name + ".",
+                1, DESCRIPTIONS[1] + name + DESCRIPTIONS[7],
                 false, false, false, false);
     }
 
@@ -102,7 +102,7 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                     tmp.addToTop(c);
                 }
                 AbstractDungeon.gridSelectScreen.open(tmp,
-                        1, DESCRIPTIONS[5] + name + ".",
+                        1, DESCRIPTIONS[5] + name + DESCRIPTIONS[7],
                         false, false, false, false);
             } else {
                 cardSelected2 = true;

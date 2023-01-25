@@ -1,0 +1,48 @@
+{
+  "${ModID}:Flare": {
+    "NAME": "Flare",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ignite."
+  },
+  "${ModID}:FlameBlast": {
+    "NAME": "Flame Blast",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If the enemy has Vulnerable, apply !M! ${ModID}:Ignite again. NL Apply !${ModID}:m2! Vulnerable."
+  },
+  "${ModID}:IceWall": {
+    "NAME": "Ice Wall",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !B! Block next turn. NL Add a Void to the top of your draw pile."
+  },
+  "${ModID}:FreezeAndBurn": {
+    "NAME": "Freeze and Burn",
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Next turn, deal !D! damage to ALL enemies. NL 消耗 。"
+  },
+  "${ModID}:Frostfire": {
+    "NAME": "Frostfire",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite and !${ModID}:m2! Weak to ALL enemies. NL 消耗 。"
+  },
+  "${ModID}:FieryMantle": {
+    "NAME": "Fiery Mantle",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Whenever you are attacked this turn, apply !M! ${ModID}:Ignite."
+  },
+  "${ModID}:SnowMelt": {
+    "NAME": "Snow Melt",
+    "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL Next turn, draw !M! additional cards.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Next turn, draw !M! additional cards."
+  },
+  "${ModID}:Pyromastery": {
+    "NAME": "Pyromastery",
+    "DESCRIPTION": "When you apply ${ModID}:Ignite, apply an additional !M! ${ModID}:Ignite."
+  },
+  "${ModID}:ReadTheFlames": {
+    "NAME": "Read the Flames",
+    "DESCRIPTION": "Draw !M! cards. NL Scry !${ModID}:m2!. NL Shuffle a *Fading *Ember into your draw pile."
+  },
+  "${ModID}:FueledByEmbers": {
+    "NAME": "Fueled by Embers",
+    "DESCRIPTION": "At the start of your turn, draw !M! card and add !M! *Fading *Ember to your hand and draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! card and add !M! *Fading *Ember to your hand and draw pile."
+  },
+  "${ModID}:FadingEmber": {
+    "NAME": "Fading Ember",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL 消耗 。"
+  }
+}

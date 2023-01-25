@@ -1,0 +1,18 @@
+{
+  "${ModID}:OptimizedBlurPower": {
+    "NAME": "Optimized Blur",
+    "DESCRIPTIONS": ["Whenever you deal unblocked attack damage, gain #b", " #yBlock."]
+  },
+  "${ModID}:HardCaramelPower": {
+    "NAME": "Hard Caramel",
+    "DESCRIPTIONS": ["After attacking, apply #b", " #yVulnerable if the target doesn't have any."]
+  },
+  "${ModID}:AvatarBeatPower": {
+    "NAME": "Avatar Beat",
+    "DESCRIPTIONS": ["Whenever you deal #b", " unblocked attack damage, gain #b", " #yStrength, draw #b", " card and raise this bar by #b5.", " cards and raise this bar by #b5."]
+  },
+  "${ModID}:OpenBracketPower": {
+    "NAME": "Open Bracket",
+    "DESCRIPTIONS": ["You can only play #yAttacks for the rest of the turn."]
+  }
+}

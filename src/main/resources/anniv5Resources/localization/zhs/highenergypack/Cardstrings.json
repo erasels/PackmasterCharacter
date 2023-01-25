@@ -1,0 +1,56 @@
+{
+  "${ModID}:MiracleWorker": {
+    "NAME": "Miracle Worker",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put a *Miracle on top of your draw pile."
+  },
+  "${ModID}:Trash": {
+    "NAME": "Trash",
+    "DESCRIPTION": "Exhaust 1 card. NL Gain [E] .",
+    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust 1 card. NL Gain [E] ."
+  },
+  "${ModID}:MultiTool": {
+    "NAME": "Multi-Tool",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If you end your turn with unused Energy, ALL enemies lose !M! HP."
+  },
+  "${ModID}:LastResort": {
+    "NAME": "Last Resort",
+    "DESCRIPTION": "Gain !B! Block X times. NL If X is 0, NL gain [E] and 消耗 。"
+  },
+  "${ModID}:LotsOfIronWaves": {
+    "NAME": "Lots of Iron Waves",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。"
+  },
+  "${ModID}:ManifestMeal": {
+    "NAME": "Manifest Meal",
+    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your draw pile."
+  },
+  "${ModID}:Food": {
+    "NAME": "Food",
+    "DESCRIPTION": "Gain X [E] . NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain X [E] . NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "Gain ",
+      "Retain. NL Gain ",
+      " . NL 消耗 。",
+      "You gain nothing! NL Good day, sir! NL 消耗 。",
+      "mm delocious"
+    ]
+  },
+  "${ModID}:Investor": {
+    "NAME": "Investor",
+    "DESCRIPTION": "Whenever you spend 2 or more Energy on a card, gain !M! Block."
+  },
+  "${ModID}:StruckByATrain": {
+    "NAME": "Struck By A Train",
+    "DESCRIPTION": "Deal !D! damage to the frontmost enemy. NL Increase this card's damage by !M! this combat."
+  },
+  "${ModID}:StormForm": {
+    "NAME": "Storm Form",
+    "DESCRIPTION": "At the start of your turn, gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E] [E] [E] ."
+  },
+  "${ModID}:SuperNova": {
+    "NAME": "Super Nova",
+    "DESCRIPTION": "ALL enemies lose !M! HP. NL Apply !${ModID}:m2! Weak and Vulnerable to ALL enemies."
+  }
+}

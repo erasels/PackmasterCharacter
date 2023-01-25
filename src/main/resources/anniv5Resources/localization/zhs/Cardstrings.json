@@ -1,0 +1,23 @@
+{
+  "${ModID}:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "${ModID}:Rummage": {
+    "NAME": "翻捣",
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL 抽一张牌， NL 本回合其耗能减 !M! 。"
+  },
+  "${ModID}:Cardistry": {
+    "NAME": "牌技",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下张打出牌返回抽牌堆顶部。"
+  },
+  "${ModID}:PackRip": {
+    "NAME": "拆包",
+    "DESCRIPTION": "丢弃所有手牌。 NL 从三种卡包选择一种，将其所含牌全部加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "丢弃所有手牌。 NL 从三种卡包选择一种，将其所含牌全部加入手牌，并将其升级。 NL 消耗 。"
+  }
+}

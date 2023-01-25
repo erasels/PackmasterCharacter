@@ -1,0 +1,6 @@
+{
+  "${ModID}:Aggression": {
+    "NAME": "Aggression",
+    "DESCRIPTION": ["Your Attacks deal #b{0}% more damage. Upon exiting this #yStance, gain #b2 #yStrength."]
+  }
+}

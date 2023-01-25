@@ -1,0 +1,54 @@
+{
+  "${ModID}:AbstractWeaponOrb": {
+    "NAME": "Weapon",
+    "DESCRIPTION": [
+      " NL ",
+      "Attack: ",
+      " NL ",
+      "Durability: #b"
+    ]
+  },
+  "${ModID}:CutlassOrb": {
+    "NAME": "Cutlass",
+    "DESCRIPTION": [
+      ""
+    ]
+  },
+  "${ModID}:PowderKegOrb": {
+    "NAME": "Powder Keg",
+    "DESCRIPTION": [
+      "When destroyed, deal #b",
+      " damage to all enemies."
+    ]
+  },
+  "${ModID}:SwordOfWisdomOrb": {
+    "NAME": "Sword of Wisdom",
+    "DESCRIPTION": [
+      "Whenever you attack with this Weapon, 抽一张牌."
+    ]
+  },
+  "${ModID}:SwordOfChaosOrb": {
+    "NAME": "Sword of Chaos",
+    "DESCRIPTION": [
+      "Whenever you attack with this Weapon, add a random card into your hand."
+    ]
+  },
+  "${ModID}:CatONineTailsOrb": {
+    "NAME": "Cat O' Nine Tails",
+    "DESCRIPTION": [
+      "After you attack with this Weapon, give it #b+2 Attack."
+    ]
+  },
+  "${ModID}:ForgingHammerOrb": {
+    "NAME": "Forging Hammer",
+    "DESCRIPTION": [
+      "After you attack with this Weapon, Upgrade a random card in your hand for the rest of combat."
+    ]
+  },
+  "${ModID}:SwordOfFireOrb": {
+    "NAME": "Sword of Fire",
+    "DESCRIPTION": [
+      "Whenever you attack with this Weapon, deal #b3 damage to all enemies."
+    ]
+  }
+}

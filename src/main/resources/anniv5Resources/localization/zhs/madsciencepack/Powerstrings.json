@@ -1,0 +1,16 @@
+{
+  "${ModID}:PiratifyPower": {
+    "NAME": "Piratify",
+    "DESCRIPTIONS": [
+      "At the start of each turn, Modify #b",
+      " random cards in hand: 'Gain a Cannonball.'"
+    ]
+  },
+  "${ModID}:PiratifyPowerUpp": {
+    "NAME": "Piratify+",
+    "DESCRIPTIONS": [
+      "At the start of each turn, Modify #b",
+      " random cards in hand: 'Gain a Cannonball+.'"
+    ]
+  }
+}

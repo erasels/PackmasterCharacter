@@ -1,0 +1,43 @@
+[
+  {
+    "PROPER_NAME": "Dice",
+    "NAMES": [
+      "dice",
+      "d4",
+      "d6",
+      "d8",
+      "d10",
+      "d12",
+      "d20"
+    ],
+    "DESCRIPTION": "Dice increase the damage or #yBlock of the next card you play that deals damage or #yBlocks."
+  },
+  {
+    "PROPER_NAME": "Reroll",
+    "NAMES": [
+      "reroll"
+    ],
+    "DESCRIPTION": "Any #yDice this card uses are rerolled instead of removed."
+  },
+  {
+    "PROPER_NAME": "Jail",
+    "NAMES": [
+      "jail"
+    ],
+    "DESCRIPTION": "You cannot play Attacks or take damage this turn."
+  },
+  {
+    "PROPER_NAME": "Chance",
+    "NAMES": [
+      "chance"
+    ],
+    "DESCRIPTION": "Chance cards are played when drawn, and #yExhaust when played."
+  },
+  {
+    "PROPER_NAME": "Advantage",
+    "NAMES": [
+      "advantage"
+    ],
+    "DESCRIPTION": "Roll #yDice an additional number of times and take the highest value of the rolls."
+  }
+]

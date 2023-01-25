@@ -1,0 +1,49 @@
+{
+  "${ModID}:Alclawmize": {
+    "NAME": "Alclawmize",
+    "DESCRIPTION": "Obtain a random unique *Claw-themed potion. NL 消耗 。"
+  },
+  "${ModID}:ClawForOne": {
+    "NAME": "Claw For One",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Put all *Claw cards from your discard pile into your hand."
+  },
+  "${ModID}:CloakAndClaw": {
+    "NAME": "Cloak and Claw",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain a *Ghost *Claw.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! *Ghost *Claws."
+  },
+  "${ModID}:Conclawd": {
+    "NAME": "Conclawd",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Sharpen !M!. NL End your turn."
+  },
+  "${ModID}:InfiniteClaws": {
+    "NAME": "Infinite Claws",
+    "DESCRIPTION": "At the start of your turn, gain a *Ghost *Claw.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain a *Ghost *Claw."
+  },
+  "${ModID}:MutateClaw": {
+    "NAME": "Mutate Claw",
+    "DESCRIPTION": "Choose an Attack in hand to ${ModID}:Modify: 'Name gains Claw' and 'Gain a *Ghost *Claw'. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Choose an Attack in hand to ${ModID}:Modify: 'Name gains Claw' and 'Gain a *Ghost *Claw'."
+  },
+  "${ModID}:SearingClaw": {
+    "NAME": "Searing Claw",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Sharpen !M!. NL Can be Upgraded any number of times."
+  },
+  "${ModID}:TalkToTheClaw": {
+    "NAME": "Talk to the Claw",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you attack this enemy with a *Claw, gain !M! Block. NL 消耗 。"
+  },
+  "${ModID}:TwinClaw": {
+    "NAME": "Twin Claw",
+    "DESCRIPTION": "Deal !D! damage twice. NL ${ModID}:Sharpen !M!."
+  },
+  "${ModID}:GhostClaw": {
+    "NAME": "Ghost Claw",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Sharpen !M!. NL 消耗 。"
+  },
+  "${ModID}:PMClaw": {
+    "NAME": "Claw",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Sharpen !M!."
+  }
+}

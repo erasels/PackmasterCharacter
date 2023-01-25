@@ -1,0 +1,15 @@
+{
+  "${ModID}:ArcanaPack": {
+    "TEXT": [
+      "Arcana",
+      "Use the unique and varied meanings of the major arcana.",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:ArcanaPackHat": {
+    "TEXT": [
+      "Big, bright and candy-red.",
+      "The Star"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "${ModID}:PixiePack": {
+    "TEXT": [
+      "Pixie",
+      "A pack featuring cards from the dimension hopping Pixie.",
+      "FieryChocobo"
+    ]
+  },
+  "${ModID}:PixiePackHat": {
+    "TEXT": [
+      "Ohhh. Shiny!",
+      "Elven Crown"
+    ]
+  }
+}

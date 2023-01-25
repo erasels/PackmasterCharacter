@@ -1,0 +1,13 @@
+{
+  "${ModID}:MayhemFormPower": {
+    "NAME": "Unrelenting Form",
+    "DESCRIPTIONS": [
+      "Once per turn, when you reach #b2 or fewer cards in hand, draw #b",
+      " cards and gain ",
+      " [E] ",
+      " . ",
+      " Hasn't triggered this turn.",
+      " Has triggered this turn."
+    ]
+  }
+}

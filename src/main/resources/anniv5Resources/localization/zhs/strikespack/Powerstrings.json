@@ -1,0 +1,31 @@
+{
+  "${ModID}:StrikeDummyJrPower": {
+    "NAME": "Strike Dummy Jr.",
+    "DESCRIPTIONS": [
+      "Your Strikes deal #b",
+      " more damage."
+    ]
+  },
+  "${ModID}:StrikeOfGeniusPower": {
+    "NAME": "Strike of Genius",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain a random \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain #b",
+      " random \"Strike\"s. They cost #b0 until played and 消耗 。"
+    ]
+  },
+  "${ModID}:StrikeOfGeniusUpgradedPower": {
+    "NAME": "Strike of Genius+",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain a random #yupgraded \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain #b",
+      " random #yupgraded \"Strike\"s. They cost #b0 until played and 消耗 。"
+    ]
+  },
+  "${ModID}:StrikeABargainPower": {
+    "NAME": "Strike a Bargain",
+    "DESCRIPTIONS": [
+      "Your Attacks cost #b0 this turn, but you cannot play non-Attacks."
+    ]
+  }
+}

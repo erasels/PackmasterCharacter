@@ -1,0 +1,48 @@
+{
+  "${ModID}:MasterSpark": {
+    "NAME": "Master Spark",
+    "DESCRIPTION": "造成 !D! 点伤害。 ${ModID}:Amplify [E] : NL Deal !${ModID}:sd! damage instead."
+  },
+  "${ModID}:RisingStrike": {
+    "NAME": "Rising Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Flurry: Gain !M! ${ModID}:Charge Up."
+  },
+  "${ModID}:GalacticHalo": {
+    "NAME": "Galactic Halo",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! ${ModID}:Charge Up."
+  },
+  "${ModID}:LuminousStrike": {
+    "NAME": "Luminous Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Amplify [E] [E] : Increase damage equal to current energy times !M!.",
+    "EXTENDED_DESCRIPTION": ["Amplified damage: "]
+  },
+  "${ModID}:ShootingEcho": {
+    "NAME": "Shooting Echo",
+    "DESCRIPTION": "造成 !D! 点伤害。 Exhaust a card to add a copy of this into your hand. NL 消耗 。"
+  },
+  "${ModID}:StardustReverie": {
+    "NAME": "Stardust Reverie",
+    "DESCRIPTION": "Exhaust !M! card. Gain ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. Gain ${ModID}:Charge Up equal to two times their costs including ${ModID}:Amplify. NL Draw !M! cards."
+  },
+  "${ModID}:Inertia": {
+    "NAME": "Inertia",
+    "DESCRIPTION": "Whenever a card is Exhausted or ${ModID}:Amplified, gain !M! ${ModID}:Charge Up."
+  },
+  "${ModID}:UltimateShortwave": {
+    "NAME": "Ultimate Shortwave",
+    "DESCRIPTION": "Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat."
+  },
+  "${ModID}:DragonMeteor": {
+    "NAME": "Dragon Meteor",
+    "DESCRIPTION": "造成 !D! 点伤害。 Deals !M! additional damage for each card in your exhaust pile."
+  },
+  "${ModID}:EarthlightRay": {
+    "NAME": "Earthlight Ray",
+    "DESCRIPTION": "After you gain ${ModID}:Charge Up, deal damage equal to !M! times its total to ALL enemies."
+  },
+  "${ModID}:Spark": {
+    "NAME": "Spark",
+    "DESCRIPTION": "造成 !D! 点伤害。 ${ModID}:Amplify [E] : NL Gain !M! ${ModID}:Charge Up. NL 消耗 。"
+  }
+}

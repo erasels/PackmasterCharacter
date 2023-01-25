@@ -1,0 +1,52 @@
+{
+  "${ModID}:HuntersMark": {
+    "NAME": "Hunter's Mark",
+    "DESCRIPTIONS": [
+      "Takes #b",
+      "% more damage from attacks."
+    ]
+  },
+  "${ModID}:NotHunted": {
+    "NAME": "Not Hunted",
+    "DESCRIPTIONS": [
+      "Takes #b",
+      "% less damage from attacks. When the #yhunted enemy dies, remove this."
+    ]
+  },
+  "${ModID}:PerfectGuardPower": {
+    "NAME": "Perfect Guard",
+    "DESCRIPTIONS": [
+      "If your #yBlock is broken exactly this turn, gain #b",
+      " Strength."
+    ]
+  },
+  "${ModID}:EnragePowerPlayer": {
+    "NAME": "Enraged",
+    "DESCRIPTIONS": [
+      "If no enemy intends to attack you, gain #b",
+      " #yStrength at the end of the turn."
+    ]
+  },
+  "${ModID}:GlassArmorPower": {
+    "NAME": "Glass Armor",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yBlock at the end of the turn. If you take attack damage, lose this power."
+    ]
+  },
+  "${ModID}:DelayedDamagePower": {
+    "NAME": "Delayed Damage",
+    "DESCRIPTIONS": [
+      "Deals #b",
+      " damage in #b",
+      " turns."
+    ]
+  },
+  "${ModID}:TimePiecePower": {
+    "NAME": "Time Piece Power",
+    "DESCRIPTIONS": [
+      "Gain #b3 #yStrength every 12 cards you play. Cards played: #b",
+      ""
+    ]
+  }
+}

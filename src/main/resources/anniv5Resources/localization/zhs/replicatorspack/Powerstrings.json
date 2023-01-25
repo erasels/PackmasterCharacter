@@ -1,0 +1,16 @@
+{
+  "${ModID}:IterativeDesignPower": {
+    "NAME": "Iterative Design",
+    "DESCRIPTIONS": [
+      "Whenever you create a card this combat, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:EnergyDrinkPower": {
+    "NAME": "Energy Drink",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yDuplication for every #b10 cards you shuffle into your draw pile."
+    ]
+  }
+}

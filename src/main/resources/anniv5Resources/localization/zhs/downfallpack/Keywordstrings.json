@@ -1,0 +1,23 @@
+[
+  {
+    "PROPER_NAME": "Invincible",
+    "NAMES": [
+      "invincible"
+    ],
+    "DESCRIPTION": "You cannot lose more than a given amount of HP in a single turn. NL At the end of any round in which Invincible prevented HP loss, remove it."
+  },
+  {
+    "PROPER_NAME": "Ghostflame",
+    "NAMES": [
+      "ghostflame"
+    ],
+    "DESCRIPTION": "Orb: Deals damage to ALL enemies."
+  },
+  {
+    "PROPER_NAME": "Ancient",
+    "NAMES": [
+      "ancient"
+    ],
+    "DESCRIPTION": "Stance: If you have less than #b6 Plated Armor at the start of your turn, gain #b2 Plated Armor. NL When you leave this Stance, gain #b1 Artifact."
+  }
+]

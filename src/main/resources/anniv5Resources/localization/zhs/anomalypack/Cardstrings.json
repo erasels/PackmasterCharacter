@@ -1,0 +1,58 @@
+{
+  "${ModID}:Wonder": {
+    "NAME": "Wonder",
+    "DESCRIPTION": "Discard your hand. NL 抽一张牌 and set your Energy to its cost.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Discard your hand. 抽一张牌 and set your Energy to its cost."
+  },
+  "${ModID}:FreeSpace": {
+    "NAME": "Free Space",
+    "DESCRIPTION": "Ethereal. NL When you draw, discard, Exhaust or play this, 抽一张牌.",
+    "UPGRADE_DESCRIPTION": "When you draw, discard, Exhaust or play this, 抽一张牌."
+  },
+  "${ModID}:MidnightOil": {
+    "NAME": "Midnight Oil",
+    "DESCRIPTION": "Exhaust a random card. Gain [E]. NL While this is Exhausted, gain [E] each turn.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. NL Gain [E]. NL While this is Exhausted, gain [E] each turn."
+  },
+  "${ModID}:VoraciousSigil": {
+    "NAME": "Voracious Sigil",
+    "DESCRIPTION": "${ModID}:Absorb a random Skill in your hand. Play all the cards this has ${ModID}:Absorbed.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Absorb a random Skill in your hand. Play all the cards this has ${ModID}:Absorbed."
+  },
+  "${ModID}:StrikeThroughFate": {
+    "NAME": "Strike Through Fate",
+    "DESCRIPTION": "造成 !D! 点伤害。 If this is your 7th card this turn, deal !D! damage three times instead.",
+    "UPGRADE_DESCRIPTION": "Retain. NL 造成 !D! 点伤害。 If this is your 7th card this turn, deal !D! damage three times instead."
+  },
+  "${ModID}:MindOverMatter": {
+    "NAME": "Mind Over Matter",
+    "DESCRIPTION": "Whenever you 抽一张牌, gain 1 Block.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you 抽一张牌, gain 1 Block."
+  },
+  "${ModID}:GoldenGun": {
+    "NAME": "Golden Gun",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Must be [#EFC851]Loaded. NL Startup: Add a [#EFC851]Golden [#EFC851]Round to your draw pile. "
+  },
+  "${ModID}:GoldenRound": {
+    "NAME": "Golden Round",
+    "DESCRIPTION": "[#EFC851]Load a [#EFC851]Golden [#EFC851]Gun NL in your hand. NL If you don't have one, put this on top of your draw pile."
+  },
+  "${ModID}:RitualSight": {
+    "NAME": "Ritual Sight",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Exhaust a card. Shuffle a copy of it into your draw pile.",
+    "EXTENDED_DESCRIPTION": ["Exhaust and copy."]
+  },
+  "${ModID}:Thoughtweaving": {
+    "NAME": "Thoughtweaving",
+    "DESCRIPTION": "Whenever you play a Skill or Attack, 抽一张牌 of the opposite type from a different Pack."
+  },
+  "${ModID}:SealedSword": {
+  "NAME": "Sealed Sword",
+  "DESCRIPTION": "消耗 。 NL When this is Exhausted, shuffle a [#EFC851]Souleater [#EFC851]Strike into your draw pile.",
+  "UPGRADE_DESCRIPTION": "消耗 。 NL When this is Exhausted, shuffle a [#EFC851]Souleater [#EFC851]Strike+ into your draw pile."
+},
+  "${ModID}:SouleaterStrike": {
+    "NAME": "Souleater Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply 13 Vulnerable. NL Apply 13 Weak."
+  }
+}

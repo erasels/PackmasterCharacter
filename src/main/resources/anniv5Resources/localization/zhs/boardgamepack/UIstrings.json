@@ -1,0 +1,20 @@
+{
+  "${ModID}:BoardGamePack": {
+    "TEXT": [
+      "Board Games",
+      "Defeat enemies with the power of ${ModID}:Dice!",
+      "Laugic"
+    ]
+  },
+  "${ModID}:BoardGameChance": {
+    "TEXT": [
+      "Chance"
+    ]
+  },
+  "${ModID}:BoardGamePackHat": {
+    "TEXT": [
+      "Your most marketable hat.",
+      "Board Game Hat"
+    ]
+  }
+}

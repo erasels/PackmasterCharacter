@@ -1,0 +1,89 @@
+{
+  "${ModID}:AmalgamateWaters": {
+    "NAME": "Amalgamate Waters",
+    "DESCRIPTION": "Draw a ${ModID}:Mutable card. NL Gain ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them.",
+    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Mutable cards. NL Gain ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them."
+  },
+  "${ModID}:CrystalLattice": {
+    "NAME": "Crystal Lattice",
+    "DESCRIPTION": "${ModID}:Transmute a card. Add !M! additional copies of the new card to your hand. NL 消耗 。"
+  },
+  "${ModID}:CrystalResonance": {
+    "NAME": "Crystal Resonance",
+    "DESCRIPTION": "Whenever you ${ModID}:Transmute, gain !M! Strength."
+  },
+  "${ModID}:Drench": {
+    "NAME": "Drench",
+    "DESCRIPTION": "${ModID}:Mutable: 获得 !B! 点 格挡 。 NL ${ModID}:Mutable: 造成 !D! 点伤害。"
+  },
+  "${ModID}:FrozenCapsule": {
+    "NAME": "Frozen Capsule",
+    "DESCRIPTION": "${ModID}:Mutable: 造成 !D! 点伤害。 NL ${ModID}:Mutable: When ${ModID}:Transmuted, 抽一张牌.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Mutable: 造成 !D! 点伤害。 NL ${ModID}:Mutable: When ${ModID}:Transmuted, draw !M! cards."
+  },
+  "${ModID}:GhostlyMist": {
+    "NAME": "Ghostly Mist",
+    "DESCRIPTION": "${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your draw pile."
+  },
+  "${ModID}:GlacialSynthesis": {
+    "NAME": "Glacial Synthesis",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute a card.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute up to !M! cards."
+  },
+  "${ModID}:SearingSynthesis": {
+    "NAME": "Searing Synthesis",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute a card.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute up to !M! cards."
+  },
+  "${ModID}:ViscousShell": {
+    "NAME": "Viscous Shell",
+    "DESCRIPTION": "${ModID}:Mutable: 获得 !B! 点 格挡 。 NL ${ModID}:Transmute this card."
+  },
+  "${ModID}:DimensionalIcicles": {
+    "NAME": "Dimensional Icicles",
+    "DESCRIPTION": "Deal !D! damage !B! times. The number of hits is affected by Block modifiers."
+  },
+  "${ModID}:AbstractExtraEffectModifier": {
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Mutable: ",
+      " ",
+      " times.",
+      "."
+    ]
+  },
+  "${ModID}:DamageEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Deal ",
+      " damage"
+    ]
+  },
+  "${ModID}:DrawWhenTransmutedEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "When ${ModID}:Transmuted, 抽一张牌.",
+      "When ${ModID}:Transmuted, draw ",
+      " cards."
+    ]
+  },
+  "${ModID}:FreeToPlayEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Free to play."
+    ]
+  },
+  "${ModID}:GainBlockEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Gain ",
+      " Block"
+    ]
+  },
+  "${ModID}:ReboundSelfEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "Shuffle this card into your draw pile."
+    ]
+  },
+  "${ModID}:TransmuteSelfEffect": {
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Transmute this card."
+    ]
+  }
+}

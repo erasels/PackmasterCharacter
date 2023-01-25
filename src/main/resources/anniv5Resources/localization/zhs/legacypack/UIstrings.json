@@ -1,0 +1,16 @@
+{
+  "${ModID}:LegacyPack": {
+    "TEXT": [
+      "A Grand Legacy",
+      "A blast from the past, featuring cards inspired by legacy character mods, from before the days of Steam Workshop.",
+      "Original Authors",
+      "Original Mod Authors: celicath, moocowgoesmoo, JohnnyBazooka, chronometrics, fiiiiilth"
+    ]
+  },
+  "${ModID}:LegacyPackHat": {
+    "TEXT": [
+      "Happy birthday, STS modding!",
+      "Birthday Boy"
+    ]
+  }
+}

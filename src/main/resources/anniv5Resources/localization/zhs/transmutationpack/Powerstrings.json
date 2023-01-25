@@ -1,0 +1,8 @@
+{
+  "${ModID}:CrystalResonancePower": {
+    "NAME": "Crystal Resonance",
+    "DESCRIPTIONS": [
+      "Whenever you #yTransmute, gain #b", " #yStrength"
+    ]
+  }
+}

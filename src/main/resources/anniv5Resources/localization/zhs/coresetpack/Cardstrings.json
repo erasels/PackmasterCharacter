@@ -1,0 +1,46 @@
+{
+  "${ModID}:BackpackSmack": {
+    "NAME": "Backpack Smack",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If your draw pile has 10 or more cards, draw !M! cards. NL Otherwise, gain [E] ."
+  },
+  "${ModID}:BoosterTutor": {
+    "NAME": "Booster Tutor",
+    "DESCRIPTION": "Put !M! random cards from different Packs from your draw pile into your hand."
+  },
+  "${ModID}:DestinyDraw": {
+    "NAME": "Destiny Draw",
+    "DESCRIPTION": "Choose 1 of 3 random cards from different Packs to add to your hand. NL It costs 0 this turn. NL 消耗 。"
+  },
+  "${ModID}:Flick": {
+    "NAME": "Flick",
+    "DESCRIPTION": "Discard a card. NL Deal !D! damage a number of times equal to its cost."
+  },
+  "${ModID}:MayhemForm": {
+    "NAME": "Unrelenting Form",
+    "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Retain. NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] ."
+  },
+  "${ModID}:RippedPecs": {
+    "NAME": "Ripped Pecs",
+    "DESCRIPTION": "Gain 1 Strength for each Pack you've played a card from this combat. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Gain 1 Strength for each Pack you've played a card from this combat.",
+    "EXTENDED_DESCRIPTION": [" NL (Gains {0} Strength.)"]
+  },
+  "${ModID}:Showoff": {
+    "NAME": "Showoff",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Next turn, draw 2 additional cards."
+  },
+  "${ModID}:Sideboard": {
+    "NAME": "Sideboard",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put a card from your discard pile on top of your draw pile."
+  },
+  "${ModID}:SmithingHammer": {
+    "NAME": "Smithing Hammer",
+    "DESCRIPTION": "Deal !D! damage 3 times. NL Upgrade a random card in your hand for the rest of combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL Upgrade !M! random cards in your hand for the rest of combat."
+  },
+  "${ModID}:Synergize": {
+    "NAME": "Synergize",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have cards from at least two other Packs in your hand, 获得 !B! 点 格挡 。"
+  }
+}

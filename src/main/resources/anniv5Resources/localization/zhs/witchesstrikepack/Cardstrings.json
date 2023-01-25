@@ -1,0 +1,49 @@
+{
+  "${ModID}:CrescentSweep": {
+    "NAME": "Heel Tornado",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Manifest ${ModID}:Crescent_Moon."
+  },
+  "${ModID}:MysticFlourish": {
+    "NAME": "Tetsuzanko",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Activate the passive effect of your next orb",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Activate the passive effect of your next orb twice"
+  },
+  "${ModID}:CrystalMoonlight": {
+    "NAME": "Crystal Moonlight",
+    "DESCRIPTION": "${ModID}:Manifest !M! random orb. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Manifest !M! random orbs. NL 消耗 。"
+  },
+  "${ModID}:FullMoonHalo": {
+    "NAME": "Full Moon Halo",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Manifest ${ModID}:Full_Moon."
+  },
+  "${ModID}:MoonlightBarrage": {
+    "NAME": "Moonlight Barrage",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each channeled orb."
+  },
+  "${ModID}:ChitteringPunt": {
+    "NAME": "Chittering Punt",
+    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL When this ${ModID}:infests ${ModID}:Manifest ${ModID}:Crescent_Moon."
+  },
+  "${ModID}:HornetWithin": {
+    "NAME": "Hornet Within",
+    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL When this ${ModID}:Infests, Evoke your next orb !M! times and lose an Orb slot."
+  },
+  "${ModID}:WitchTwist": {
+    "NAME": "Witch Twist",
+    "DESCRIPTION": "${ModID}:Modify !M! random cards in your hand : ${ModID}:Inscribed. NL Gain !${ModID}:m2! Focus. NL Exhaust"
+  },
+  "${ModID}:MoonlightFlight": {
+    "NAME": "Moonlight Flight",
+    "DESCRIPTION": "Whenever you channel an orb gain !M! Focus until your next turn."
+  },
+  "${ModID}:ScarabPlague": {
+    "NAME": "Scarab Plague",
+    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL When this ${ModID}:infests, ${ModID}:Manifest ${ModID}:Full_Moon."
+  },
+  "${ModID}:Inscribed": {
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Inscribed. NL "
+    ]
+  }
+}

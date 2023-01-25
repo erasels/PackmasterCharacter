@@ -1,0 +1,15 @@
+{
+  "${ModID}:DimensionGatePack": {
+    "TEXT": [
+      "Dimension Gate",
+      "A variety pack of oddball cards from other games. Can you name them all?",
+      "MichaelMayhem"
+    ]
+  },
+  "${ModID}:DimensionGatePackHat": {
+    "TEXT": [
+      "A most holy adornment.",
+      "Ottis' Hat"
+    ]
+  }
+}

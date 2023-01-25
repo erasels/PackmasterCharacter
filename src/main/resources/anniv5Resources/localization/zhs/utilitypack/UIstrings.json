@@ -1,0 +1,21 @@
+{
+  "${ModID}:UtilityPack": {
+    "TEXT": [
+      "Utility",
+      "Cards that synergize well with a wide range of mechanics and packs.",
+      "modargo",
+      "Card art from MtG"
+    ]
+  },
+  "${ModID}:ConjurationAction": {
+    "TEXT": [
+      "Choose a Card to play."
+    ]
+  },
+  "${ModID}:UtilityPackHat": {
+    "TEXT": [
+      "Safety first!",
+      "Hardhat"
+    ]
+  }
+}

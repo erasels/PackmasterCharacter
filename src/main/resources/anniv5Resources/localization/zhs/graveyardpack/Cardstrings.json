@@ -1,0 +1,49 @@
+{
+  "${ModID}:GreyBargain": {
+    "NAME": "Grey Bargain",
+    "DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand.",
+    "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand. NL 抽一张牌.",
+    "EXTENDED_DESCRIPTION": ["I need a card to 消耗 。"]
+  },
+    "${ModID}:ExtraLimbs": {
+    "NAME": "Extra Limbs",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL When Exhausted, increase the number of hits by 1 this combat. NL 消耗 。"
+  },
+    "${ModID}:AncientSpear": {
+    "NAME": "Ancient Spear",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
+  },
+    "${ModID}:FleshLikeOak": {
+    "NAME": "Flesh Like Oak",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! Strength. NL 消耗 。"
+  },
+    "${ModID}:CallOfTheGrave": {
+    "NAME": "Call of the Grave",
+    "DESCRIPTION": "At the start of your turn, play a random ${ModID}:Buried card and stslib:Purge it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, play a random ${ModID}:Buried card and stslib:Purge it."
+  },
+    "${ModID}:SpontaneousRitual": {
+    "NAME": "Spontaneous Ritual",
+    "DESCRIPTION": "Exhaust your hand. NL Deal damage equal to the number of cards Exhausted this combat.",
+    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your hand then Exhaust it. NL Deal damage equal to the number of cards Exhausted this combat.",
+  	"EXTENDED_DESCRIPTION": [" NL ( !D! damage )"]
+  },
+    "${ModID}:FuneraryJewels": {
+    "NAME": "Funerary Jewels",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 Draw !M! card. Gain [E]. NL 消耗 。"
+  },
+    "${ModID}:Tombstone": {
+    "NAME": "Tombstone",
+    "DESCRIPTION": "造成 !D! 点伤害。 获得 !B! 点 格挡 。 NL 消耗 。"
+  },
+    "${ModID}:DarkOfNight": {
+    "NAME": "Dark of Night",
+    "DESCRIPTION": "Your next card that Exhausts this turn is played twice.",
+    "UPGRADE_DESCRIPTION": "Your next two cards that Exhaust this turn are played twice."
+  },
+    "${ModID}:LastGasp": {
+    "NAME": "Last Gasp",
+    "DESCRIPTION": "Ethereal. NL Choose a ${ModID}:Buried card, play it, and stslib:Purge it.",
+    "UPGRADE_DESCRIPTION": "Choose a ${ModID}:Buried card, play it, and stslib:Purge it."
+  }
+}

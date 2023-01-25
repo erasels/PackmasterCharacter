@@ -1,0 +1,52 @@
+{
+  "${ModID}:Excitement": {
+    "NAME": "Excitement",
+    "DESCRIPTION": "Gain [E] [E] . NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] . NL Exhaustive !stslib:ex!."
+  },
+  "${ModID}:LayeredDefenses": {
+    "NAME": "Layered Defenses",
+    "DESCRIPTION": "Gain !B! Block for each card type in your hand.",
+    "EXTENDED_DESCRIPTION": [" NL ({0} card types.)"]
+  },
+  "${ModID}:PreemptiveStrike": {
+    "NAME": "Preemptive Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If the enemy intends to attack, deal !D! damage again."
+  },
+  "${ModID}:PlasmaShield": {
+    "NAME": "Plasma Shield",
+    "DESCRIPTION": "At the end of your turn, gain !M! Block if you have Plasma. NL Channel !${ModID}:m2! Plasma."
+  },
+  "${ModID}:Enrage": {
+    "NAME": "Enrage",
+    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! cards. NL Enter ${ModID}:Aggression."
+  },
+  "${ModID}:Whispers": {
+    "NAME": "Whispers",
+    "DESCRIPTION": "Draw !M! cards. NL Add a *Dazed to your hand."
+  },
+  "${ModID}:Replenish": {
+    "NAME": "Replenish",
+    "DESCRIPTION": "Put two cards from your discard pile into your hand. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Put two cards from your discard pile into your hand."
+  },
+  "${ModID}:LesserHex": {
+    "NAME": "Lesser Hex",
+    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex to your discard pile. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex+ to your discard pile. NL 消耗 。"
+  },
+  "${ModID}:GreaterHex": {
+    "NAME": "Greater Hex",
+    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL 消耗 。"
+  },
+  "${ModID}:Conjuration": {
+    "NAME": "Conjuration",
+    "DESCRIPTION": "Choose a card from your draw pile. NL Play and Exhaust it.",
+    "UPGRADE_DESCRIPTION": "Choose a card from your draw pile. NL Play it.",
+    "EXTENDED_DESCRIPTION": ["There are no cards in my draw pile."]
+  },
+  "${ModID}:RareStrike": {
+    "NAME": "Rare Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals !M! additional damage for ALL your *Rares."
+  }
+}

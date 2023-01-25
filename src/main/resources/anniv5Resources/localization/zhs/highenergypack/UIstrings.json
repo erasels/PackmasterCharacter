@@ -1,0 +1,15 @@
+{
+  "${ModID}:HighEnergyPack": {
+    "TEXT": [
+      "Energized",
+      "Focus your power on gaining tons of Energy and spending it on costly cards!",
+      "Vex"
+    ]
+  },
+  "${ModID}:HighEnergyPackHat": {
+    "TEXT": [
+      "The back reads 'solar-powered'.",
+      "Energetic Shades"
+    ]
+  }
+}

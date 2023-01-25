@@ -1,0 +1,16 @@
+{
+  "${ModID}:BatterPack": {
+    "TEXT": [
+      "Batter",
+      "Highly aggressive booster pack. Deliver righteous fury towards your enemies with singular, powerful hits.",
+      "AlexMdle",
+      "#yOFF created by #yMortis #yGhost"
+    ]
+  },
+  "${ModID}:BatterPackHat": {
+    "TEXT": [
+      "Purification in progress.",
+      "Baseball Cap"
+    ]
+  }
+}

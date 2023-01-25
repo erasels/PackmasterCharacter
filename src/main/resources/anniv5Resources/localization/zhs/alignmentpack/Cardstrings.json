@@ -1,0 +1,52 @@
+{
+  "${ModID}:Conjunction": {
+    "NAME": "Conjunction",
+    "DESCRIPTION": "Ethereal. NL When this card is drawn, 获得 !B! 点 格挡 。"
+  },
+  "${ModID}:Opposition": {
+    "NAME": "Opposition",
+    "DESCRIPTION": "Ethereal. NL When this card is drawn, a random enemy loses !M! HP."
+  },
+  "${ModID}:Quincunx": {
+    "NAME": "Quincunx",
+    "DESCRIPTION": "Ethereal. NL When this card is drawn, ALL enemies lose !M! Strength this turn."
+  },
+  "${ModID}:Novile": {
+    "NAME": "Novile",
+    "DESCRIPTION": "Ethereal. NL When this card is drawn, gain [E].",
+    "EXTENDED_DESCRIPTION": [
+      "Ethereal. NL When this card is drawn, gain",
+      " [E]",
+      "."
+    ]
+  },
+  "${ModID}:Square": {
+    "NAME": "Square",
+    "DESCRIPTION": "{@@}Ethereal. NL When this card is drawn, draw !M! card{!M!|1=|@=s}."
+  },
+  "${ModID}:Trine": {
+    "NAME": "Trine",
+    "DESCRIPTION": "Ethereal. NL When this card is drawn, the next card you play this turn is played twice."
+  },
+  "${ModID}:Divination": {
+    "NAME": "Divination",
+    "DESCRIPTION": "Put a card from your hand onto the bottom of your draw pile. NL Draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Put any number of cards from your hand onto the bottom of your draw pile. NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "put on the bottom of your draw pile"
+    ]
+  },
+  "${ModID}:Glimpse": {
+    "NAME": "Glimpse",
+    "DESCRIPTION": "Whenever you draw an Ethereal card, gain !M! Block."
+  },
+  "${ModID}:Remember": {
+    "NAME": "Remember",
+    "DESCRIPTION": "{@@}At the end of your turn, shuffle up to !M! card{!M!|1=|@=s} from your hand into your draw pile."
+  },
+  "${ModID}:Alignment": {
+    "NAME": "Alignment",
+    "DESCRIPTION": "Draw X cards. NL They cost X less this turn. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Draw X cards. NL They cost X less this turn."
+  }
+}

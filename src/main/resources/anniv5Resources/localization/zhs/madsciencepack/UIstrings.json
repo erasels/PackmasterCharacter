@@ -1,0 +1,33 @@
+{
+  "${ModID}:MadSciencePack": {
+    "TEXT": [
+      "Mad Science!",
+      "Modify your cards with bonus effects, break the game!",
+      "MichaelMayhem"
+    ]
+  },
+  "${ModID}:MadScienceModifiers": {
+    "TEXT": [
+      " NL Apply ",
+      " ${ModID}:Frostbite.",
+      "Retain. NL ",
+      " NL Play ",
+      " NL Gain 6 Block.",
+      " NL Gain 8 Block.",
+      " NL Play again, unmodified.",
+      " NL Gain a *Cannonball.",
+      " NL 抽一张牌."
+    ]
+  },
+  "${ModID}:AddModifierUI": {
+    "TEXT": [
+      "Choose a card to Modify."
+    ]
+  },
+  "${ModID}:MadSciencePackHat": {
+    "TEXT": [
+      "You'll show them. You'll show them all!!",
+      "Mad Mad Science"
+    ]
+  }
+}

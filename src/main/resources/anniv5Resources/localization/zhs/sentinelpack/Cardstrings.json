@@ -1,0 +1,34 @@
+{
+  "${ModID}:Fume": {
+    "NAME": "Fume",
+    "DESCRIPTION": "Enter ${ModID}:Angry.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enter ${ModID}:Angry."
+  },
+  "${ModID}:Relax": {
+    "NAME": "Relax",
+    "DESCRIPTION": "Enter Calm.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enter Calm."
+  },
+  "${ModID}:StanceDance": {
+    "NAME": "Stance Dance",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Enter a random Stance. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Enter a random Stance."
+  },
+  "${ModID}:RagnarokNRoll": {
+    "NAME": "Ragnarok 'n Roll",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exit your Stance."
+  },
+  "${ModID}:Serenity": {
+    "NAME": "Serenity",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Enter ${ModID}:Serene."
+  },
+  "${ModID}:Swagger": {
+    "NAME": "Swagger",
+    "DESCRIPTION": "If you end your turn in a Stance, gain !M! Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL If you end your turn in a Stance, gain !M! Strength and Dexterity."
+  },
+  "${ModID}:MoodSwing": {
+    "NAME": "Mood Swing",
+    "DESCRIPTION": "Draw !M! cards. NL Discard 2 cards. NL If you are in ${ModID}:Angry, enter Calm. Otherwise, enter ${ModID}:Angry."
+  }
+}

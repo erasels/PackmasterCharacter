@@ -1,0 +1,54 @@
+{
+  "${ModID}:Hound": {
+    "NAME": "Rot Hound",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Evolves when you play an *Attack.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies.",
+    "EXTENDED_DESCRIPTION": ["Huge Rot Hound"]
+  },
+  "${ModID}:Slime": {
+    "NAME": "Viscid One",
+    "DESCRIPTION": "Apply !M! Poison. NL ${ModID}:Evolves when you apply a debuff.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Enemy loses HP equal to its Poison.",
+    "EXTENDED_DESCRIPTION": ["Viscid Twins"]
+  },
+  "${ModID}:Fright": {
+    "NAME": "Skittering Fright",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If the enemy intends to attack, draw !M! cards."
+  },
+  "${ModID}:Shackles": {
+    "NAME": "Shackles",
+    "DESCRIPTION": "Retain. NL 获得 !B! 点 格挡 。 NL ${ModID}:Evolves when you play a card that costs at least !M! .",
+    "UPGRADE_DESCRIPTION": "Retain. NL 获得 !B! 点 格挡 。 NL Block is not removed at the start of your next turn.",
+    "EXTENDED_DESCRIPTION": ["Huge Shackles"]
+  },
+  "${ModID}:IceBeast": {
+    "NAME": "Ice Beast",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Evolves when you gain Block.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL Channel !M! Frost.",
+    "EXTENDED_DESCRIPTION": ["Ancient Ice Beast"]
+  },
+  "${ModID}:Loombird": {
+    "NAME": "Crooked Loombird",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Rend."
+  },
+  "${ModID}:Hollower": {
+    "NAME": "Hollower",
+    "DESCRIPTION": "Ethereal. NL Exhaust !M! cards in your draw pile. NL Put a card from your discard pile into your hand and give it 消耗 。",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your draw pile. NL Put a card from your discard pile into your hand and give it 消耗 。"
+  },
+  "${ModID}:Owl": {
+    "NAME": "Owl",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL ${ModID}:Evolves when you Exhaust a card.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply ${ModID}:Rend equal to half of the unblocked damage dealt. NL Apply !M! Vulnerable.",
+    "EXTENDED_DESCRIPTION": ["Nightmare Owl"]
+  },
+  "${ModID}:Vision": {
+    "NAME": "Vision",
+    "DESCRIPTION": "Put !M! cards from your draw pile into your hand. NL Retain your hand this turn. NL 消耗 。"
+  },
+  "${ModID}:Connection": {
+    "NAME": "Connection",
+    "DESCRIPTION": "Whenever you play a card, upgrade it and ALL copies of it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, upgrade it and ALL copies of it."
+  }
+}

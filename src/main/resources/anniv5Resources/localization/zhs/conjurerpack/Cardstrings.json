@@ -1,0 +1,44 @@
+{
+	"${ModID}:AirCurrent":	{
+		"DESCRIPTION": "造成 !D! 点伤害。 NL If the target has ${ModID}:Petra, apply !M! Vulnerable.",
+		"NAME": "Air Current"
+	},
+	"${ModID}:DustTornado":	{
+		"DESCRIPTION": "Exhaust a card in hand to play !M! random cards from your discard pile. NL 消耗 。",
+		"NAME": "Dust Tornado"
+	},
+	"${ModID}:Enervate":	{
+		"DESCRIPTION": "Enemy loses half of its Strength, then loses !M! more. NL 消耗 。",
+		"NAME": "Enervate"
+	},
+	"${ModID}:Excavation":	{
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Fetch !M! cards from your discard pile and Retain them.",
+		"NAME": "Excavation"
+	},
+	"${ModID}:Geomorphology":	{
+		"DESCRIPTION": "Whenever you Exhaust a card or Channel an Orb, apply !M! ${ModID}:Petra to a random enemy.",
+		"NAME": "Geomorphology"
+	},
+	"${ModID}:GeothermalHeating":	{
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! additional Block for each distinct debuff on the target.",
+		"NAME": "Geothermal Heating"
+	},
+	"${ModID}:Lithosphere":	{
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! ${ModID}:Petra.",
+		"NAME": "Lithosphere"
+	},
+	"${ModID}:MudFissure":	{
+		"DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage if the target has debuffs.",
+		"NAME": "Mud Fissure"
+	},
+	"${ModID}:RagingInferno":	{
+		"DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ignite. NL 消耗 。",
+		"NAME": "Raging Inferno",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ignite."
+	},
+	"${ModID}:TectonicQuake":	{
+		"DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Petra and Weak to ALL enemies. NL 消耗 。",
+		"NAME": "Tectonic Quake",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Petra and Weak to ALL enemies."
+	}
+}

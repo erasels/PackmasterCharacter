@@ -1,0 +1,20 @@
+{
+  "${ModID}:MakeshiftSwordPower": {
+    "NAME": "Makeshift Sword",
+    "DESCRIPTIONS": [
+        "Whenever a card is created during combat, gain #b%d #yVigor."
+      ]
+  },
+  "${ModID}:MakeshiftShieldPower": {
+    "NAME": "Makeshift Shield",
+    "DESCRIPTIONS": [
+        "Whenever a card is created during combat, gain #b%d #yBlock."
+      ]
+  },
+  "${ModID}:FirewallPower": {
+    "NAME": "Firewall",
+    "DESCRIPTIONS": [
+      "When a #yStatus card is created, #yExhaust it."
+    ]
+  }
+}

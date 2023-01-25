@@ -1,0 +1,10 @@
+{
+  "${ModID}:InnerFury": {
+    "NAME": "Inner Fury",
+    "DESCRIPTIONS": ["When you enter or exit #yAggression, gain #b{0} temporary #yStrength and #b{0} #yBlock."]
+  },
+  "${ModID}:Animosity": {
+    "NAME": "Animosity",
+    "DESCRIPTIONS": ["When you enter, exit, or start your turn in #yAggression, gain #b{0} #yStrength."]
+  }
+}

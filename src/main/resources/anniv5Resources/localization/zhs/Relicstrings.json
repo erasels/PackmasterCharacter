@@ -1,0 +1,75 @@
+{
+  "${ModID}:BagOfHolding": {
+    "NAME": "Bag of Holding",
+    "FLAVOR": "\"Incredible! It appears that this bag connects to an extradimensional space. What if I jump inside?\" - Ranwid",
+    "DESCRIPTIONS": [
+      "Replaces ",
+      ".[] NL Gain [E] at the start of each turn, lasting one turn for every #b5 cards in your deck."
+    ]
+  },
+  "${ModID}:BanishingDecree": {
+    "NAME": "放逐判令",
+    "FLAVOR": "Absorb what is useful, reject what is useless and add what is essentially your own.",
+    "DESCRIPTIONS": [
+      "拾起时，选择一组本局已选卡包，包内卡牌本局不再出现。 NL 从 #b5 种随机卡包中选择 #b1 种，获得其专属卡牌奖励 #b3 次。",
+      "选择一组卡包，它将被",
+      "卡包'",
+      "'内的牌不再出现在本局游戏。",
+      "'内的牌将出现在本局游戏。",
+      "选择一组卡包，它将被",
+      "力量！",
+      "放逐。",
+      "获得。",
+      "Translator note: The 2 dots up here follows the structure 'Choose a Pack to banish with '+'Banishing Decree'+'.'   and 'Choose a Pack to gain with '+'Banishing Decree'+'.' respectively. "
+    ]
+  },
+  "${ModID}:CollectorBadge": {
+    "NAME": "Collector Badge",
+    "FLAVOR": "Gotta collect 'em all.",
+    "DESCRIPTIONS": [
+      "Each turn, after you play a card from #b4 different Packs, gain [E] [REMOVE_SPACE].",
+      " NL NL Packs used this turn: ",
+      " NL NL This has triggered this turn. "
+    ]
+  },
+  "${ModID}:GemOfUnity": {
+    "NAME": "Gem of Unity",
+    "FLAVOR": "In union there is strength.",
+    "DESCRIPTIONS": [
+      "Once per combat, after you have played a card from each different Pack available this run, gain #b20 Block, #b1 Strength, #b1 Dexterity, and heal #b5 HP.",
+      "Packs played this combat: "
+    ]
+  },
+  "${ModID}:HandyHaversack": {
+    "NAME": "Handy Haversack",
+    "FLAVOR": "Helps heroic hoarders handle hindrances.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain [E] and draw #b1 card."
+    ]
+  },
+  "${ModID}:PMBoosterBox": {
+    "NAME": "P.M. Booster Box",
+    "FLAVOR": "Better price for buying in bulk.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose #b1 of #b3 Packmaster Boosters, three times. Earn an additional card from these boosters at the end of each combat.",
+      " NL Chosen Boosters: ",
+      "Choose a Booster Pack."
+    ]
+  },
+  "${ModID}:PMBoosterPack": {
+    "NAME": "P.M. Booster Pack",
+    "FLAVOR": "A package of cards in a foil wrapper. How did it end up in the Spire?",
+    "DESCRIPTIONS": [
+      "Upon pickup, add any one card from a random Packmaster Booster to your deck.",
+      "Choose a card to add to your deck."
+    ]
+  },
+  "${ModID}:PMCollection": {
+    "NAME": "大师卡集",
+    "FLAVOR": "Said to have been assembled by a consortium of wizards.",
+    "DESCRIPTIONS": [
+      "拾起时，将一组随机卡包的所有牌加入牌组。",
+      "可将它加入牌组。"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "${ModID}:RollToMove": {
+    "NAME": "Roll to Move",
+    "DESCRIPTION": "Roll !M! ${ModID}:D6."
+  },
+  "${ModID}:FlickDice": {
+  "NAME": "Flick Dice",
+  "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Roll a ${ModID}:D6.",
+  "UPGRADE_DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Roll a ${ModID}:D8."
+  },
+  "${ModID}:ThrowChips": {
+    "NAME": "Throw Chips",
+    "DESCRIPTION": "{@@}Deal !D! damage to a random enemy NL X times. NL ${ModID}:Reroll."
+  },
+  "${ModID}:PocketAce": {
+    "NAME": "PocketAce",
+    "DESCRIPTION": "{@@}Draw !M! cards. NL Discard !${ModID}:m2! cards. NL 消耗 。"
+  },
+  "${ModID}:Reroller": {
+    "NAME": "Reroller",
+    "DESCRIPTION": "{@@}获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Reroll."
+  },
+  "${ModID}:PerceptionCheck": {
+    "NAME": "Perception Check",
+    "DESCRIPTION": "At the start of your turn, roll a ${ModID}:D8."
+  },
+  "${ModID}:AllIn": {
+    "NAME": "All In",
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Draw !M! cards. NL Gain !M! [E] . NL Skip your next turn. NL 消耗 。"
+  },
+  "${ModID}:D20": {
+    "NAME": "D20!",
+    "DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage."
+  },
+  "${ModID}:GoToJail": {
+    "NAME": "Go to Jail",
+    "DESCRIPTION": "Go directly to ${ModID}:Jail. NL Do not pass Go. NL Do not collect $200.",
+    "UPGRADE_DESCRIPTION": "Go directly to ${ModID}:Jail. NL Do not pass Go. NL Collect $20."
+  },
+  "${ModID}:LevelUp": {
+    "NAME": "Level Up!",
+    "DESCRIPTION": "Gain !M! ${ModID}:Advantage. NL Roll 2 ${ModID}:D6."
+  },
+  "${ModID}:BoardGameKeywordManager": {
+    "NAME": "KeywordManager",
+    "DESCRIPTION": "Stuff for translations and easy access to keyword ids",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:dice",
+      "${ModID}:chance"
+    ]
+  }
+}

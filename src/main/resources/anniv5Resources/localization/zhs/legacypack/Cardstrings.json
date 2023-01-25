@@ -1,0 +1,56 @@
+{
+  "${ModID}:AcidicSpray": {
+    "NAME": "Acidic Spray",
+    "DESCRIPTION": "Deal !D! damage for each debuff on the target. NL Apply !M! Weak."
+  },
+  "${ModID}:PoisonMastery": {
+    "NAME": "Poison Mastery",
+    "DESCRIPTION": "Increase HP loss from Poison by 100%. NL Gain a *Poison *Potion.",
+    "UPGRADE_DESCRIPTION": "Increase HP loss from Poison by 100%. NL Gain !M! *Poison *Potions."
+  },
+  "${ModID}:Cannonball": {
+    "NAME": "Cannonball",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
+  },
+  "${ModID}:CaptainsCabin": {
+    "NAME": "Captain's Cabin",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! *Cannonball.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! *Cannonballs."
+  },
+  "${ModID}:TerrorOfTheSeas": {
+    "NAME": "Terror of the Seas",
+    "DESCRIPTION": "Apply !M! Vulnerable and !${ModID}:m2! ${ModID}:Ruin to ALL enemies. NL 消耗 。"
+  },
+  "${ModID}:MassProduction": {
+    "NAME": "Mass Production",
+    "DESCRIPTION": "Choose a card in your draw pile. Exhaust your hand and replace it with copies of that card. 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to Mass Produce."
+    ]
+  },
+  "${ModID}:ScrapCannon": {
+    "NAME": "Scrap Cannon",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust a card."
+  },
+  "${ModID}:BloodRitual": {
+    "NAME": "Blood Ritual",
+    "DESCRIPTION": "Lose !M! HP. NL Gain 1 Ritual."
+  },
+  "${ModID}:OverTime": {
+    "NAME": "Over Time",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL For each card that you've *Exhausted this combat, increase damage by !M!."
+  },
+  "${ModID}:SlimeSpray": {
+    "NAME": "Slime Spray",
+    "DESCRIPTION": "Retain. NL Deal !D! damage, apply !M! Poison, and apply Slow to ALL enemies."
+  },
+  "${ModID}:StickStrike": {
+    "NAME": "Stick Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Stick into your draw pile.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Stick+ into your draw pile."
+  },
+  "${ModID}:Stick": {
+    "NAME": "Stick",
+    "DESCRIPTION": "*Stick *Strikes deal !M! more damage this combat. Return the last-played one to your hand. 消耗 。"
+  }
+}

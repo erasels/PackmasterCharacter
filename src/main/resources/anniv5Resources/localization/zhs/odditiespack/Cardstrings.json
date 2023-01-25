@@ -1,0 +1,66 @@
+{
+  "${ModID}:StylePoints": {
+    "NAME": "Style Points",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Remove your Weak. NL Add a random card from your hat's Pack into your hand."
+  },
+  "${ModID}:LetsPlay8Ball": {
+    "NAME": "Let's Play 8 Ball!",
+    "DESCRIPTION": "Shuffle an *8 *Ball into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your draw pile."
+  },
+  "${ModID}:EightBall": {
+    "NAME": "8 Ball",
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "9 Ball"
+    ]
+  },
+  "${ModID}:ZaHando": {
+    "NAME": "Za Hando",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust the middle card(s) of your hand."
+  },
+  "${ModID}:LetsDraft": {
+    "NAME": "Let's Draft!",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Choose a card. Shuffle a copy of it into your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "create a copy of."
+    ]
+  },
+  "${ModID}:Beacon": {
+    "NAME": "Beacon",
+    "DESCRIPTION": "Choose !M! card in your hand. NL Upgrade it and give it Retain.",
+    "UPGRADE_DESCRIPTION": "Choose !M! cards in your hand. NL Upgrade them and give them Retain.",
+    "EXTENDED_DESCRIPTION": [
+      "Upgrade and give Retain."
+    ]
+  },
+  "${ModID}:SleeveUp": {
+    "NAME": "Sleeve Up",
+    "DESCRIPTION": "Draw !M! cards. NL When this appears in a card reward, the cards are *Foil and gain Retain."
+  },
+  "${ModID}:AutoBattler": {
+    "NAME": "Auto Battler",
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL You play cards automatically."
+  },
+  "${ModID}:ShiningStyle": {
+    "NAME": "Shining Style",
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Startup: Gain !${ModID}:m2! *Gold."
+  },
+  "${ModID}:FinalForm": {
+    "NAME": "This Isn't Even My...",
+    "DESCRIPTION": "Ethereal. NL Exhaust 1 random card. NL At the start of your turn, play and Exhaust a copy of it.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL At the start of your turn, play and Exhaust a copy of it.",
+    "EXTENDED_DESCRIPTION": [
+      "Exhaust for Final Form."
+    ]
+  },
+  "${ModID}:MidnightStrike": {
+    "NAME": "Midnight Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this is the 12th card played this combat, deal !${ModID}:sd! damage instead.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Played ",
+      " card.)",
+      " cards.)"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "${ModID}:BellordPack": {
+    "TEXT": [
+      "Bellord",
+      "Clobber foes with cursed cards! Drain to dust with Strength reduction!",
+      "Vex"
+    ]
+  },
+  "${ModID}:BellordPackHat": {
+    "TEXT": [
+      "Just hope nobody rings it.",
+      "Calling Bell"
+    ]
+  }
+}

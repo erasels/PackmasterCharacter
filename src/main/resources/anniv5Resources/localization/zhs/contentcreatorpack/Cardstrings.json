@@ -1,0 +1,64 @@
+{
+  "${ModID}:OlexasCloak": {
+    "NAME": "Olexa's Cloak",
+    "DESCRIPTION": "Retain. NL ${ModID}:Hoard !hoard!: 获得 !B! 点 格挡 。 NL stslib:Persist !stslib:persist! ."
+  },
+  "${ModID}:HuttsGamble": {
+    "NAME": "Hutts' Gamble",
+    "DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] and draw 1 card next turn.",
+    "UPGRADE_DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] [E] and draw 1 card next turn."
+  },
+  "${ModID}:Tricky": {
+    "NAME": "Tricky",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card drawn this turn."
+  },
+  "${ModID}:SneakyteakStrike": {
+    "NAME": "Sneakyteak Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Put a *Darkside *Slap on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Put a *Darkside *Slap+ on top of your draw pile."
+  },
+  "${ModID}:DarksideSlap": {
+    "NAME": "Darkside Slap",
+    "DESCRIPTION": "${ModID}:MEGAthereal. NL 造成 !D! 点伤害。"
+  },
+  "${ModID}:Wanderbots": {
+    "NAME": "Wanderbots",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Channel a ${ModID}:Wanderbot.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Inscribed. NL 获得 !B! 点 格挡 。 NL Channel a ${ModID}:Wanderbot."
+  },
+  "${ModID}:Retromation": {
+    "NAME": "Retromation",
+    "DESCRIPTION": "At the start of your turn, gain a card from a Pack not available in your draft. NL It gains Ethereal."
+  },
+  "${ModID}:OddOne": {
+    "NAME": "Odd One",
+    "DESCRIPTION": "${ModID}:Odd: Deal !D! damage to a random enemy. NL ${ModID}:Even: 抽一张牌.",
+    "EXTENDED_DESCRIPTION": [
+      " NL NL (Played ",
+      ". ",
+      "Even!)",
+      "Odd!)"
+    ]
+  },
+  "${ModID}:Rhapsody": {
+    "NAME": "Rhapsody",
+    "DESCRIPTION": "Gain !M! ${ModID}:Inspiration. NL Draw 2 cards."
+  },
+  "${ModID}:Frostprime": {
+    "NAME": "Frost Prime",
+    "DESCRIPTION": "At the start of your turn, Channel 1 Frost and apply !M! ${ModID}:Frostbite to ALL enemies."
+  },
+  "${ModID}:BaalorBash": {
+    "NAME": "Baalorlord's Bash",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Baalor's *Blueprint into your draw pile. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Innate. NL 造成 !D! 点伤害。 NL Shuffle a *Baalor's *Blueprint into your draw pile. NL 消耗 。"
+  },
+  "${ModID}:BaalorBlueprint": {
+    "NAME": "Baalor's Blueprint",
+    "DESCRIPTION": "Shuffle your discard pile into your draw pile. Put *The *Cozy *Chair on the bottom of it. 消耗 。"
+  },
+  "${ModID}:TheCozyChair": {
+    "NAME": "The Cozy Chair",
+    "DESCRIPTION": "Your cards are played twice."
+  }
+}

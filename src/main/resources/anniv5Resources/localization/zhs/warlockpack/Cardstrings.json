@@ -1,0 +1,50 @@
+{
+  "${ModID}:Imp": {
+    "NAME": "Imp",
+    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn. NL Deal !M! damage. Increase the damage of *Imps by 1 this combat. NL 抽一张牌. NL 消耗 。"
+  },
+  "${ModID}:HighPriestessJeklik": {
+    "NAME": "High Priestess Jeklik",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If this card is Exhausted, add 2 copies of it to your hand."
+  },
+  "${ModID}:SoulShear": {
+    "NAME": "Soul Shear",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle 1 *Imp into your draw pile."
+  },
+  "${ModID}:Soulfire": {
+    "NAME": "Soulfire",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust a random card in your hand.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust a card in your hand."
+  },
+  "${ModID}:Doomguard": {
+    "NAME": "Doomguard",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust 2 random cards in your hand."
+  },
+  "${ModID}:HandOfGulDan": {
+    "NAME": "Hand of Gul'dan",
+    "DESCRIPTION": "Draw !M! cards. NL If this card is Exhausted, draw !M! cards."
+  },
+  "${ModID}:SeedsOfDestruction": {
+    "NAME": "Seeds of Destruction",
+    "DESCRIPTION": "Choose to shuffle !M! *Imps into your draw pile or !${ModID}:m2! *Imps into your discard pile.",
+    "EXTENDED_DESCRIPTION": ["Shuffle !M! *Imps into your draw pile.", "Add !M! *Imps to your discard pile."]
+  },
+  "${ModID}:AranasiBroodmother": {
+    "NAME": "Aranasi Broodmother",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle this card into your draw pile. NL When you draw this card, gain !M! Block."
+  },
+  "${ModID}:MalchezaarsImp": {
+    "NAME": "Malchezaar's Imp",
+    "DESCRIPTION": "Whenever a *non-Imp card is Exhausted, add 1 *Imp to your discard pile.",
+    "UPGRADE_DESCRIPTION": "Whenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your draw pile."
+  },
+  "${ModID}:TheSoularium": {
+    "NAME": "The Soularium",
+    "DESCRIPTION": "Draw !M! cards. NL Give them Ethereal. NL 消耗 。"
+  },
+  "${ModID}:RunedMithrilRod": {
+    "NAME": "Runed Mithril Rod",
+    "DESCRIPTION": "Unplayable. Retain. NL After you draw !M! cards while this is in your hand, reduce the cost of cards in your hand by 1 this turn and discard this.",
+    "EXTENDED_DESCRIPTION": ["I can't play this card.", " ({0} drawn.)"]
+  }
+}

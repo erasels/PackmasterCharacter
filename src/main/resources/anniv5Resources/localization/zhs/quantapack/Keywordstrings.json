@@ -1,0 +1,12 @@
+[
+  {
+    "PROPER_NAME": "Stun",
+    "NAMES": [
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned"
+    ],
+    "DESCRIPTION": "Stunned enemies skip their turn."
+  }
+]

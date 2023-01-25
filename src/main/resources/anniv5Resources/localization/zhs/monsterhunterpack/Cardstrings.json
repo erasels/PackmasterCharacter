@@ -1,0 +1,134 @@
+{
+  "${ModID}:HuntingStrike": {
+    "NAME": "Hunting Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage to elites and bosses."
+  },
+  "${ModID}:Focus": {
+    "NAME": "Track",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! ${ModID}:Hunted"
+  },
+  "${ModID}:PerfectDodge": {
+    "NAME": "Perfect Dodge",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If your Block is broken exactly this turn, gain !M! Strength."
+  },
+  "${ModID}:Greatsword": {
+    "NAME": "Greatsword",
+    "DESCRIPTION": "Retain. NL 造成 !D! 点伤害。 NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each until played."
+  },
+  "${ModID}:HuntingInstincts": {
+    "NAME": "Hunter's Instincts",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gains double Block if facing an elite or boss."
+  },
+  "${ModID}:SkullClub": {
+    "NAME": "Skull Club",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If the target survives, become ${ModID}:Enraged! NL 消耗 。"
+  },
+  "${ModID}:ShellPauldrons": {
+    "NAME": "Shell Platemail",
+    "DESCRIPTION": "Gain !M! ${ModID}:Glass_Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! ${ModID}:Glass_Armor."
+  },
+  "${ModID}:CoreBlaster": {
+    "NAME": "Core Blaster",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder to your draw pile. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder+ to your draw pile. NL 消耗 。"
+  },
+  "${ModID}:CoreBlinder": {
+    "NAME": "Core Blinder",
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your draw pile. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster+ to your draw pile. NL 消耗 。"
+  },
+  "${ModID}:GuardianShield": {
+    "NAME": "Guardian Shield",
+    "DESCRIPTION": "Gain !M! Block at the end of your turn. NL Whenever you are attacked, deal !M! damage back."
+  },
+  "${ModID}:InfernoDaggers": {
+    "NAME": "Inferno Daggers",
+    "DESCRIPTION": "Retain. NL Deal !D! damage !M! times and set this card's cost to 6. NL When Retained, reduce this card's cost by 1.",
+    "UPGRADE_DESCRIPTION": "Innate. Retain. NL Deal !D! damage !M! times and set this card's cost to 6. NL When Retained, reduce this card's cost by 1."
+  },
+  "${ModID}:StabManual": {
+    "NAME": "Stabbing Manual",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Add !M! *Shivs to your hand. Increase the number of *Shivs this adds by 1 for the rest of combat."
+  },
+  "${ModID}:SlimeHammer": {
+    "NAME": "Slime Hammer",
+    "DESCRIPTION": "Deal !D! damage at the end of the next turn.",
+    "UPGRADE_DESCRIPTION": "Apply 1 Weak. NL Deal !D! damage at the end of the next turn."
+  },
+  "${ModID}:SlaverWhip": {
+    "NAME": "Slaver's Whip",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Weak and Vulnerable. NL If this kills an enemy, add it back to your hand and it costs 0 this turn."
+  },
+  "${ModID}:GremlinLance": {
+    "NAME": "Gremlin Lance",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, gain [E] and 抽一张牌."
+  },
+  "${ModID}:ChampMail": {
+    "NAME": "Champion's Platemail",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs and gain !M! Strength. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs and gain !M! Strength."
+  },
+  "${ModID}:CursedBow": {
+    "NAME": "Cursed Bow",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Weak and Vulnerable. NL 消耗 。"
+  },
+  "${ModID}:HyperBlaster": {
+    "NAME": "Hyper Blaster",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle !M! Voids into your draw pile."
+  },
+  "${ModID}:EphemeralShroud": {
+    "NAME": "Ephemeral Shroud",
+    "DESCRIPTION": "Gain !M! Intangible. NL 消耗 。"
+  },
+  "${ModID}:StoneHelm": {
+    "NAME": "Stone Helm",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 Reduced by 2 for every card you've played this turn. NL End your turn."
+  },
+  "${ModID}:TimepieceTiara": {
+    "NAME": "Timepiece Tiara",
+    "DESCRIPTION": "Gain 3 Strength every 12 cards you play.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain 3 Strength every 12 cards you play."
+  },
+  "${ModID}:DonuAmulet": {
+    "NAME": "Donu Amulet",
+    "DESCRIPTION": "Gain !M! Strength."
+  },
+  "${ModID}:DecaAmulet": {
+    "NAME": "Deca Amulet",
+    "DESCRIPTION": "Gain !M! *Plated *Armor."
+  },
+  "${ModID}:SpireSpear": {
+    "NAME": "Spire Spear",
+    "DESCRIPTION": "造成 !D! 点伤害。 !M! times."
+  },
+  "${ModID}:SpireShield": {
+    "NAME": "Spire Shield",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "${ModID}:CarvingKnife": {
+    "NAME": "Carving Knife",
+    "DESCRIPTION": "造成 !D! 点伤害。 If this kills an Elite or Boss enemy, gain its weapon or armor card. NL Fleeting."
+  },
+  "${ModID}:AwakenedRitualDagger": {
+    "NAME": "Awakened Dagger",
+    "DESCRIPTION": "造成 !D! 点伤害。 If Fatal, Heal to full HP. NL 消耗 。"
+  },
+  "${ModID}:HuntingContract": {
+    "NAME": "Hunting Contract",
+    "DESCRIPTION": "Innate. NL Apply !M! ${ModID}:Hunted. NL 消耗 。"
+  },
+  "${ModID}:HunterRank": {
+    "NAME": "Hunter Rank",
+    "DESCRIPTION": "Gain !M! Strength. Increases by 1 for each Elite and Boss enemy you've defeated. NL Gain !${ModID}:m2! Dexterity."
+  },
+  "${ModID}:TranqBomb": {
+    "NAME": "Tranquilizer Bomb",
+    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target enemy loses !M! Strength. NL 消耗 。"
+  },
+  "${ModID}:Paintball": {
+    "NAME": "Paintball",
+    "DESCRIPTION": "Apply !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! card this turn.",
+    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! cards this turn."
+  }
+}

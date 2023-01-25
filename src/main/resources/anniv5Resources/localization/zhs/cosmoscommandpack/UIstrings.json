@@ -1,0 +1,15 @@
+{
+  "${ModID}:CosmosCommandPack": {
+    "TEXT": [
+      "Cosmos Command",
+      "Exhaust cards to gain power, keep control of ${ModID}:Distortion, and use varying costs to your advantage.",
+      "Enbeon"
+    ]
+  },
+  "${ModID}:CosmosCommandPackHat": {
+    "TEXT": [
+      "See in up to seven dimensions!",
+      "Open Eye"
+    ]
+  }
+}
