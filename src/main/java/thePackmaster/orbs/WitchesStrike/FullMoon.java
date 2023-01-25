@@ -74,6 +74,7 @@ public class FullMoon extends CustomOrb implements PackmasterOrb {
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
         evokeAmount -= 1;
+        baseEvokeAmount = evokeAmount;
         if (evokeAmount < 1 && !evoking) {
             evoking = true;
             AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
