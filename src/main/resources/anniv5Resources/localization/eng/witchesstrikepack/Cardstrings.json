@@ -31,7 +31,7 @@
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "${ModID}:Modify !M! random cards in your hand : ${ModID}:Inscribed. NL Gain !${ModID}:m2! Focus. NL Exhaust"
+    "DESCRIPTION": "${ModID}:Modify !M! random cards in your hand : ${ModID}:Inscribed. NL Exhaust"
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",
