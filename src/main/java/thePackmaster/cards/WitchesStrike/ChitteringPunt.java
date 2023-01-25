@@ -2,16 +2,11 @@ package thePackmaster.cards.WitchesStrike;
 
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.green.Backflip;
-import com.megacrit.cardcrawl.cards.optionCards.LiveForever;
+import com.megacrit.cardcrawl.cards.green.SuckerPunch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
-import thePackmaster.actions.witchesstrikepack.MoonlightBarrageAction;
 import thePackmaster.cardmodifiers.infestpack.InfestModifier;
-import thePackmaster.cardmodifiers.witchesstrikepack.InscribedMod;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.infestpack.OnInfestCard;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 
@@ -34,9 +29,10 @@ public class ChitteringPunt extends AbstractWitchStrikeCard implements OnInfestC
     public void upp() {
         upgradeDamage(2);
     }
+
     @Override
     public String cardArtCopy() {
-        return Backflip.ID;
+        return SuckerPunch.ID;
     }
 
     @Override
