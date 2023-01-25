@@ -23,7 +23,7 @@
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "Chittering Punt",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL When this ${ModID}:infests ${ModID}:Manifest ${ModID}:Crescent_Moon."
+    "DESCRIPTION": "Deal !D! damage. NL Channel !M! ${ModID}:Crescent_Moon."
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
