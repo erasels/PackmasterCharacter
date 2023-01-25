@@ -21,16 +21,16 @@ public class SilentPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(PoisonedStab.ID);
+        cards.add(BladeDance.ID);
         cards.add(Prepared.ID);
         cards.add(SneakyStrike.ID);
         cards.add(CloakAndDagger.ID);
         cards.add(CalculatedGamble.ID);
-        cards.add(BouncingFlask.ID);
-        cards.add(Dash.ID);
+        cards.add(Finisher.ID);
+        cards.add(Choke.ID);
         cards.add(Footwork.ID);
         cards.add(BulletTime.ID);
-        cards.add(Alchemize.ID);
+        cards.add(StormOfSteel.ID);
         return cards;
     }
 }

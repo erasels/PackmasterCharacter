@@ -1,5 +1,6 @@
 package thePackmaster.cards.rippack;
 
+import basemod.AutoAdd;
 import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -18,6 +19,7 @@ import static thePackmaster.util.Wiz.atb;
 
 @NoCompendium
 @NoPools
+@AutoAdd.Ignore
 public class ArtAttackArt extends AbstractRippedArtCard {
     public final static String ID = makeID("ArtAttackArt");
 

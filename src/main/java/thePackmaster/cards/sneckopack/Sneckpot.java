@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashPowerEffect;
 import thePackmaster.actions.EasyXCostAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.boardgamepack.AdvantagePower;
 import thePackmaster.util.Wiz;
 
@@ -34,15 +33,17 @@ public class Sneckpot extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new EasyXCostAction(this,
                 (energy, params) -> {
-                    int maxDamage = 0;
+                    int maxDamage = 1;
                     AbstractPower pow = Wiz.p().getPower(AdvantagePower.POWER_ID);
                     if (pow != null) {
                         energy += pow.amount;
                         AbstractDungeon.effectList.add(new FlashPowerEffect(pow));
                     }
-                    for (int i = 0; i < energy; i++) {
-                        int r = AbstractDungeon.cardRandomRng.random(1, params[0]);
-                        if (r > maxDamage) maxDamage = r;
+                    if(damage > 1) {
+                        for (int i = 0; i < energy; i++) {
+                            int r = AbstractDungeon.cardRandomRng.random(1, params[0]);
+                            if (r > maxDamage) maxDamage = r;
+                        }
                     }
                     addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.3F));
                     addToBot(new DamageAction(m, new DamageInfo(p, maxDamage), AbstractGameAction.AttackEffect.NONE));

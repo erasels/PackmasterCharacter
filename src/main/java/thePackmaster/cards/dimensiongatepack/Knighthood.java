@@ -16,7 +16,7 @@ public class Knighthood extends AbstractDimensionalCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public Knighthood() {
-        super(ID, 2, CardRarity.RARE, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.SELF);
+        super(ID, 3, CardRarity.RARE, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.SELF);
 
         setFrame("knighthoodframe.png");
         exhaust = true;
@@ -40,5 +40,6 @@ public class Knighthood extends AbstractDimensionalCard {
 
     public void upp() {
         isEthereal = false;
+        selfRetain = true;
     }
 }

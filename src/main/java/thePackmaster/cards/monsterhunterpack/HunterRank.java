@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -17,12 +16,10 @@ public class HunterRank extends AbstractMonsterHunterCard {
     public HunterRank() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
-        secondMagic = baseSecondMagic = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, secondMagic), secondMagic));
     }
 
     public void update(){
@@ -34,6 +31,5 @@ public class HunterRank extends AbstractMonsterHunterCard {
 
     public void upp() {
         upgradeBaseCost(UPGRADED_COST);
-        upgradeSecondMagic(1);
     }
 }

@@ -17,7 +17,7 @@ public class LethalShot extends AbstractDimensionalCard {
     public LethalShot() {
         super(ID, 2, CardRarity.COMMON, AbstractCard.CardType.ATTACK, AbstractCard.CardTarget.ENEMY);
         baseDamage = 12;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 5;
         baseSecondMagic = secondMagic = 1;
 
 

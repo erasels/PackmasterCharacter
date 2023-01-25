@@ -1,23 +1,38 @@
 package thePackmaster.cards.orbpack;
 
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.entropy.Oblivion;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class Emptiness extends AbstractOrbCard {
     public final static String ID = makeID("Emptiness");
-    // intellij stuff skill, none, common, , , , , 1, 1
+    private static TooltipInfo ruinTip;
 
     public Emptiness() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
     }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        ArrayList<TooltipInfo> list = new ArrayList<>();
+        if(ruinTip == null) {
+            ruinTip = new TooltipInfo(BaseMod.getKeywordProper(makeID("ruin")), BaseMod.getKeywordDescription(makeID("ruin")));
+        }
+        list.add(ruinTip);
+        return  list;
+    }
+
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DiscardAction(p, p, 1, false));

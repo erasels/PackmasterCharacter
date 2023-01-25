@@ -5,29 +5,19 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.GhostlyFireEffect;
-import com.megacrit.cardcrawl.vfx.GhostlyWeakFireEffect;
 import com.megacrit.cardcrawl.vfx.combat.*;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.downfallpack.GhostflameOrbEvokeAction;
-import thePackmaster.powers.dragonwrathpack.confessionpower;
+import thePackmaster.powers.dragonwrathpack.ConfessionPower;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeOrbPath;
-import static thePackmaster.util.Wiz.atb;
-import static thePackmaster.util.Wiz.p;
 
 public class LightOrb extends AbstractOrb {
     private float vfxTimer = 1.0f;
@@ -65,7 +55,7 @@ public class LightOrb extends AbstractOrb {
         ReflectionHacks.setPrivate(flare, AbstractGameEffect.class, "color", color);
         ReflectionHacks.setPrivate(flare, OrbFlareEffect.class, "color2", color2);
         Wiz.vfx(new MiracleEffect(color,color2,"POWER_MANTRA"));
-        Wiz.applyToSelf(new confessionpower(AbstractDungeon.player,evokeAmount));
+        Wiz.applyToSelf(new ConfessionPower(AbstractDungeon.player,evokeAmount));
     }
 
     public void onEndOfTurn() {
@@ -77,7 +67,7 @@ public class LightOrb extends AbstractOrb {
         ReflectionHacks.setPrivate(flare, AbstractGameEffect.class, "color", color);
         ReflectionHacks.setPrivate(flare, OrbFlareEffect.class, "color2", color2);
         Wiz.vfx(new MiracleEffect(color,color2,"HEAL_3"));
-        Wiz.applyToSelf(new confessionpower(AbstractDungeon.player,passiveAmount));
+        Wiz.applyToSelf(new ConfessionPower(AbstractDungeon.player,passiveAmount));
     }
 
     public void triggerEvokeAnimation() {

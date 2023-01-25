@@ -19,7 +19,7 @@ public class Attach extends AbstractMadScienceCard {
     public final static String ID = makeID("Attach");
 
     public Attach() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
     }
 
@@ -28,7 +28,7 @@ public class Attach extends AbstractMadScienceCard {
         boolean handGood = false;
         if (p.hand.size() > 0 && p.discardPile.size() > 0){
             for (AbstractCard c:p.hand.group){
-                if (!c.hasTag(ISCARDMODIFIED) && c.cost>-2){
+                if (!c.hasTag(ISCARDMODIFIED) && c.cost>-2 && c.type != CardType.POWER){
                     handGood = true;
                     break;
                 }
@@ -47,7 +47,7 @@ public class Attach extends AbstractMadScienceCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
 
-        atb(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+        atb(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0], card -> (!card.hasTag(ISCARDMODIFIED) && card.cost>-2 && card.type != CardType.POWER), (cards) -> {
             att(new ExhaustSpecificCardAction(cards.get(0), p.hand, true));
             att(new FindCardForAddModifierAction(new PlayCardModifier(magicNumber, cards.get(0)),1,false, AbstractDungeon.player.discardPile, card->card.cost!=-2));
 

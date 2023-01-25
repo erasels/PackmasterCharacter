@@ -28,7 +28,8 @@ public class InscribedMod extends AbstractCardModifier {
     }
 
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+        if(!AbstractDungeon.player.orbs.isEmpty()) {
+            AbstractOrb o = AbstractDungeon.player.orbs.get(0);
             if (!(o instanceof EmptyOrbSlot)) {
                 if (o instanceof PackmasterOrb) {
                     ((PackmasterOrb) o).passiveEffect();

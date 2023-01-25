@@ -26,8 +26,8 @@ public class BarrierBeacon extends AbstractCreativityCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
         addToBot(new GainBlockAction(p, p, block));
-        AbstractCard dupe = makeStatEquivalentCopy();
-        dupe.resetAttributes();
+        AbstractCard dupe = makeCopy();
+        if (upgraded) dupe.upgrade();
         addToBot(new MakeTempCardInHandAction(dupe));
     }
 }

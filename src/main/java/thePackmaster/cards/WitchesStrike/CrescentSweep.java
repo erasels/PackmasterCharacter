@@ -1,21 +1,11 @@
 package thePackmaster.cards.WitchesStrike;
 
-import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.green.LegSweep;
-import com.megacrit.cardcrawl.cards.optionCards.LiveForever;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.witchesstrikepack.ManifestAction;
-import thePackmaster.cardmodifiers.witchesstrikepack.InscribedMod;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 
-import java.util.ArrayList;
-
-import static thePackmaster.SpireAnniversary5Mod.ISCARDMODIFIED;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class CrescentSweep extends AbstractWitchStrikeCard {

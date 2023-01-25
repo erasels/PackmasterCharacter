@@ -17,9 +17,9 @@
   "${ModID}:StrikeOfGeniusUpgradedPower": {
     "NAME": "Strike of Genius+",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random #yupgraded \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, gain a random #yUpgraded \"Strike\". It costs #b0 until played and Exhausts.",
       "At the start of your turn, gain #b",
-      " random #yupgraded \"Strike\"s. They cost #b0 until played and Exhaust."
+      " random #yUpgraded \"Strike\"s. They cost #b0 until played and Exhaust."
     ]
   },
   "${ModID}:StrikeABargainPower": {

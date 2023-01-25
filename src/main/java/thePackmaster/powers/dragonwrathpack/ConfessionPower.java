@@ -5,6 +5,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -12,16 +13,15 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import thePackmaster.actions.dragonwrathpack.SmiteAction;
 import thePackmaster.cards.dragonwrathpack.HolyWrath;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
+import thePackmaster.vfx.dragonwrathpack.DivineEyeParticle;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class confessionpower extends AbstractPackmasterPower implements CloneablePowerInterface {
+public class ConfessionPower extends AbstractPackmasterPower implements CloneablePowerInterface {
     public AbstractCreature source;
     public static final String POWER_ID = makeID("confession");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -29,7 +29,7 @@ public class confessionpower extends AbstractPackmasterPower implements Cloneabl
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
 
-    public confessionpower(AbstractCreature owner, int amount) {
+    public ConfessionPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         name = NAME;
         ID = POWER_ID;
@@ -48,9 +48,17 @@ public class confessionpower extends AbstractPackmasterPower implements Cloneabl
 
     public int onAttacked(DamageInfo info, int damageAmount) {
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
-        for (AbstractMonster m : Wiz.getEnemies()){
-            addToBot(new SmiteAction(m,new DamageInfo(owner,amount,  DamageInfo.DamageType.THORNS)));
-        }
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
+                for (int i = 0; i < AbstractDungeon.miscRng.random(20, 30); ++i) {
+                    AbstractDungeon.effectsQueue.add(new DivineEyeParticle());
+                }
+                isDone = true;
+            }
+        });
+        Wiz.atb(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
         if (AbstractDungeon.actionManager.turnHasEnded){
             addToBot(new ReducePowerAction(owner,owner,this,amount/2));
         }
@@ -67,7 +75,7 @@ public class confessionpower extends AbstractPackmasterPower implements Cloneabl
 
     @Override
     public AbstractPower makeCopy() {
-        return new confessionpower(owner, amount);
+        return new ConfessionPower(owner, amount);
     }
     @Override
     public void onInitialApplication() {

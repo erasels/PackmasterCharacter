@@ -1,9 +1,7 @@
 package thePackmaster.cards.dragonwrathpack;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 
@@ -13,10 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
-import thePackmaster.actions.dragonwrathpack.SmiteAction;
-import thePackmaster.orbs.dragonwrathpack.LightOrb;
-import thePackmaster.powers.dragonwrathpack.PenancePower;
-import thePackmaster.powers.dragonwrathpack.confessionpower;
+import thePackmaster.powers.dragonwrathpack.ConfessionPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeCardPath;
@@ -51,7 +46,7 @@ public class RazorWind extends AbstractDragonwrathCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.applyToSelf(new confessionpower(p,secondMagic));
+        Wiz.applyToSelf(new ConfessionPower(p,secondMagic));
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
         addToBot(new VFXAction(new LightningEffect(p.drawX,p.drawY)));

@@ -21,7 +21,7 @@ public class EndTurnButtonChanges {
 
     public static void Postfix(EndTurnButton __instance, SpriteBatch sb) {
         boolean isHidden = ReflectionHacks.getPrivate(__instance, EndTurnButton.class, "isHidden");
-        if (!isHidden) {
+        if (!isHidden && AbstractDungeon.overlayMenu.endTurnButton.enabled) {
             AbstractPower form = AbstractDungeon.player.getPower(MayhemFormPower.POWER_ID);
             if (form != null) {
                 if (!((MayhemFormPower) form).activatedThisTurn) {

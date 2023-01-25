@@ -23,15 +23,15 @@
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "Chittering Punt",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL When this ${ModID}:infests ${ModID}:Manifest ${ModID}:Crescent_Moon."
+    "DESCRIPTION": "Deal !D! damage. NL Channel !M! ${ModID}:Crescent_Moon."
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! block. NL When this ${ModID}:infests, Evoke your next orb !M! times and lose and orb slot."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL When this ${ModID}:Infests, Evoke your next !M! orbs and lose an Orb slot."
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "${ModID}:Modify !M! random cards in your hand : ${ModID}:Inscribed. NL Gain !${ModID}:m2! Focus. NL Exhaust"
+    "DESCRIPTION": "${ModID}:Modify !M! random cards in your hand : ${ModID}:Inscribed. NL Exhaust"
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",
