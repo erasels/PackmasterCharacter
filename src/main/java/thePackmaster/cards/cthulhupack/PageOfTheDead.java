@@ -25,5 +25,6 @@ public class PageOfTheDead extends AbstractCthulhuCard {
     }
 
     public void upp() {
+        cardsToPreview = null;
     }
 }
