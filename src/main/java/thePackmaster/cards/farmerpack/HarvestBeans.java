@@ -29,27 +29,13 @@ public class HarvestBeans extends AbstractFarmerCard {
         } else {
             this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
-    }
 
-    @Override
-    public void applyPowers() {
-        int origBase = this.baseDamage;
-
-        this.baseDamage = baseSecondDamage;
-        this.isMultiDamage = true;
-        super.applyPowers();
-        this.secondDamage = this.damage;
-        this.isSecondDamageModified = this.isDamageModified;
-
-        this.baseDamage = origBase;
-        this.isMultiDamage = false;
-        super.applyPowers();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         if (ptc().size() >= 2 && ptc().get(ptc().size() - 2).type != CardType.ATTACK) {
-            atb(new DamageAllEnemiesAction(p(), multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            atb(new DamageAllEnemiesAction(p(),secondDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
     }
 
