@@ -69,7 +69,8 @@ public class Serene extends AbstractStance {
         if(Wiz.p().currentBlock > 0)
             Wiz.atb(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, false), 0.05F, true));
         Wiz.atb(new DoubleYourBlockAction(Wiz.p()));
-        Wiz.vfx(new BorderFlashEffect(Color.CYAN, true));
+        if(Wiz.p().currentBlock > 0)
+            Wiz.vfx(new BorderFlashEffect(Color.CYAN, true));
     }
 
     @Override
