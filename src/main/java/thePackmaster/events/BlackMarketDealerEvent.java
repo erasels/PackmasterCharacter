@@ -46,9 +46,9 @@ public class BlackMarketDealerEvent extends PhasedEvent {
         if (AbstractDungeon.player.gold < getGoldCostForBuy() && getCardsForDraftedPurge().isEmpty())
         {
             //If the top option cannot do any of its three options (EXTREMELY rare edge case), only pick from the other two vendors
-            chosenDailyMarket = AbstractDungeon.cardRandomRng.random(1, 2);
+            chosenDailyMarket = AbstractDungeon.eventRng.random(1, 2);
         } else {
-            chosenDailyMarket = AbstractDungeon.cardRandomRng.random(0, 2);
+            chosenDailyMarket = AbstractDungeon.eventRng.random(0, 2);
         }
 
 
