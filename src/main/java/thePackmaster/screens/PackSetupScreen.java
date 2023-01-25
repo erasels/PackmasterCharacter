@@ -121,6 +121,10 @@ public class PackSetupScreen extends CustomScreen {
 
     @Override
     public void close() {
+        for (AbstractCardPack pack : currentPoolPacks)
+            pack.previewPackCard.stopGlowing();
+        for (AbstractCardPack pack : choiceSet)
+            pack.previewPackCard.stopGlowing();
     }
 
     @Override

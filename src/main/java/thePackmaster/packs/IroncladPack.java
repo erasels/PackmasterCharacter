@@ -23,14 +23,14 @@ public class IroncladPack extends AbstractCardPack {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(Headbutt.ID);
         cards.add(ShrugItOff.ID);
-        cards.add(PerfectedStrike.ID);
-        cards.add(Flex.ID);
+        cards.add(ThunderClap.ID);
+        cards.add(Whirlwind.ID);
         cards.add(BattleTrance.ID);
         cards.add(Rampage.ID);
         cards.add(Uppercut.ID);
         cards.add(Inflame.ID);
         cards.add(Barricade.ID);
-        cards.add(LimitBreak.ID);
+        cards.add(DoubleTap.ID);
         return cards;
     }
 }

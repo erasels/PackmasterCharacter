@@ -16,8 +16,8 @@ public class Vindicate extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Vindicate");
     private static final int COST = 1;
     private static final int DAMAGE = 7;
-    private static final int UPGRADE_DAMAGE = 2;
-    private static final int RAGE = 4;
+    private static final int UPGRADE_DAMAGE = 1;
+    private static final int RAGE = 3;
     private static final int UPGRADE_RAGE = 2;
 
     public Vindicate() {

@@ -1,10 +1,12 @@
 package thePackmaster.powers.odditiespack;
 
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -17,6 +19,17 @@ public class AutoBattlerPower extends AbstractPackmasterPower {
     public AutoBattlerPower() {
         super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, -1);
         canGoNegative = false;
+    }
+
+    @Override
+    public void onInitialApplication() {
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                Wiz.p().hand.refreshHandLayout();
+                isDone = true;
+            }
+        });
     }
 
     @Override
