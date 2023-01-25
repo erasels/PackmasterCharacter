@@ -20,7 +20,7 @@ public class WitchTwist extends AbstractWitchStrikeCard {
 
     public WitchTwist() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
         exhaust = true;
         CardModifierManager.addModifier(this,new InscribedMod(true,true));
 
