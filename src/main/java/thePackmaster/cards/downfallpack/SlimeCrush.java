@@ -51,7 +51,6 @@ public class SlimeCrush extends AbstractDownfallCard {
     public void upp() {
         upgradeDamage(UPGRADE_DAMAGE);
         isMultiDamage = true;
-        this.target = CardTarget.ALL_ENEMY;
     }
 
 
