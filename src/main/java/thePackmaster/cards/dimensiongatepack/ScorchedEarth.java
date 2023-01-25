@@ -17,7 +17,7 @@ public class ScorchedEarth extends AbstractDimensionalCard {
 
     public ScorchedEarth() {
         super(ID, 2, CardRarity.RARE, AbstractCard.CardType.ATTACK, AbstractCard.CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 7;
 
         setFrame("scorchedearthframe.png");
         exhaust = true;

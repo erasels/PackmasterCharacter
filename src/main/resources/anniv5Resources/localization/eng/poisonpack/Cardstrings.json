@@ -1,0 +1,6 @@
+{
+  "${ModID}:VenomDip": {
+    "NAME": "Venom Dip",
+    "DESCRIPTION": "This turn, whenever an Attack deals unblocked damage, apply !M! Poison."
+  }
+}

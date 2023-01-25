@@ -7,6 +7,6 @@
   {
     "PROPER_NAME": "Serene",
     "NAMES": ["serene"],
-    "DESCRIPTION": "At the end of your turn, gain #yBlock equal to #b50% of your #yBlock. Upon exiting this #yStance, gain #b1 #yDexterity."
+    "DESCRIPTION": "In this #yStance, #yBlock is not removed at the start of your turn. Upon exiting this #yStance [REMOVE_SPACE], double your #yBlock [REMOVE_SPACE]. Exit this #yStance at the start of your next turn."
   }
 ]

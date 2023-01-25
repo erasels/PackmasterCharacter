@@ -120,7 +120,7 @@
   },
   "${ModID}:HunterRank": {
     "NAME": "Hunter Rank",
-    "DESCRIPTION": "Gain !M! Strength. Increases by 1 for each Elite and Boss enemy you've defeated. NL Gain !${ModID}:m2! Dexterity."
+    "DESCRIPTION": "Gain !M! Strength. Increases by 1 for each Elite and Boss enemy you've defeated."
   },
   "${ModID}:TranqBomb": {
     "NAME": "Tranquilizer Bomb",
