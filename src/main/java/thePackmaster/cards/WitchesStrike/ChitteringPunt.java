@@ -17,8 +17,8 @@ public class ChitteringPunt extends AbstractWitchStrikeCard implements OnInfestC
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public ChitteringPunt() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 7;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
 
