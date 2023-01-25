@@ -31,15 +31,15 @@
   },
   "${ModID}:GoldenGun": {
     "NAME": "Golden Gun",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Must be [#EFC851]Loaded. NL Startup: Add a [#EFC851]Golden [#EFC851]Round to your draw pile. "
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Must be [#EFC851]Loaded. NL Startup: Add a [#EFC851]Golden [#EFC851]Round to your 抽牌堆. "
   },
   "${ModID}:GoldenRound": {
     "NAME": "Golden Round",
-    "DESCRIPTION": "[#EFC851]Load a [#EFC851]Golden [#EFC851]Gun NL in your hand. NL If you don't have one, put this on top of your draw pile."
+    "DESCRIPTION": "[#EFC851]Load a [#EFC851]Golden [#EFC851]Gun NL in your hand. NL If you don't have one, put this on top of your 抽牌堆."
   },
   "${ModID}:RitualSight": {
     "NAME": "Ritual Sight",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Exhaust a card. Shuffle a copy of it into your draw pile.",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Exhaust a card. Shuffle a copy of it into your 抽牌堆.",
     "EXTENDED_DESCRIPTION": ["Exhaust and copy."]
   },
   "${ModID}:Thoughtweaving": {
@@ -48,8 +48,8 @@
   },
   "${ModID}:SealedSword": {
   "NAME": "Sealed Sword",
-  "DESCRIPTION": "消耗 。 NL When this is Exhausted, shuffle a [#EFC851]Souleater [#EFC851]Strike into your draw pile.",
-  "UPGRADE_DESCRIPTION": "消耗 。 NL When this is Exhausted, shuffle a [#EFC851]Souleater [#EFC851]Strike+ into your draw pile."
+  "DESCRIPTION": "消耗 。 NL When this is Exhausted, shuffle a [#EFC851]Souleater [#EFC851]Strike into your 抽牌堆.",
+  "UPGRADE_DESCRIPTION": "消耗 。 NL When this is Exhausted, shuffle a [#EFC851]Souleater [#EFC851]Strike+ into your 抽牌堆."
 },
   "${ModID}:SouleaterStrike": {
     "NAME": "Souleater Strike",

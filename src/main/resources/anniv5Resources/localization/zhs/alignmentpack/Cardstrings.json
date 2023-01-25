@@ -30,10 +30,10 @@
   },
   "${ModID}:Divination": {
     "NAME": "Divination",
-    "DESCRIPTION": "Put a card from your hand onto the bottom of your draw pile. NL Draw !M! cards.",
-    "UPGRADE_DESCRIPTION": "Put any number of cards from your hand onto the bottom of your draw pile. NL Draw !M! cards.",
+    "DESCRIPTION": "Put a card from your hand onto the bottom of your 抽牌堆. NL Draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Put any number of cards from your hand onto the bottom of your 抽牌堆. NL Draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
-      "put on the bottom of your draw pile"
+      "put on the bottom of your 抽牌堆"
     ]
   },
   "${ModID}:Glimpse": {
@@ -42,7 +42,7 @@
   },
   "${ModID}:Remember": {
     "NAME": "Remember",
-    "DESCRIPTION": "{@@}At the end of your turn, shuffle up to !M! card{!M!|1=|@=s} from your hand into your draw pile."
+    "DESCRIPTION": "{@@}At the end of your turn, shuffle up to !M! card{!M!|1=|@=s} from your hand into your 抽牌堆."
   },
   "${ModID}:Alignment": {
     "NAME": "Alignment",

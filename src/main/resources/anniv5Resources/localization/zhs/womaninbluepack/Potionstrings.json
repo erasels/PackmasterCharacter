@@ -2,8 +2,8 @@
   "${ModID}:AttackPotionButClaw": {
     "NAME": "Clawtack Potion",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random #yAttack cards to add to your hand, it costs #b0 this turn and is Modified: 'Name gains Claw' and 'Gain a #yGhost #yClaw'.",
-      "Choose #b1 of #b3 random #yAttack cards and add #b",
+      "从 #b3 种 选择 #b1 种 random #yAttack cards to add to your hand, it costs #b0 this turn and is Modified: 'Name gains Claw' and 'Gain a #yGhost #yClaw'.",
+      "从 #b3 种 选择 #b1 种 random #yAttack cards and add #b",
       " copies to your hand, they cost #b0 this turn and are Modified: 'Name gains Claw' and 'Gain a #yGhost #yClaw'.",
       "Choose an Attack to add to your hand."
     ]

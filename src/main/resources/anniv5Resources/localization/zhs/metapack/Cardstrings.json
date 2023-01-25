@@ -14,8 +14,8 @@
   },
   "${ModID}:Ambition": {
     "NAME": "Ambition",
-    "DESCRIPTION": "Put a random Power from your draw pile into your hand and copy it. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Innate. NL Put a random Power from your draw pile into your hand and copy it. NL 消耗 。"
+    "DESCRIPTION": "Put a random Power from your 抽牌堆 into your hand and copy it. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Innate. NL Put a random Power from your 抽牌堆 into your hand and copy it. NL 消耗 。"
   },
   "${ModID}:Diehard": {
     "NAME": "Diehard",
@@ -31,12 +31,12 @@
   },
   "${ModID}:KillerInstinct": {
     "NAME": "Killer Instinct",
-    "DESCRIPTION": "Gain 2 Strength and 1 Dexterity. NL Startup: Shuffle a copy of this card into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Strength and 1 Dexterity. NL Startup: Shuffle !M! copies of this card into your draw pile."
+    "DESCRIPTION": "Gain 2 Strength and 1 Dexterity. NL Startup: Shuffle a copy of this card into your 抽牌堆.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Strength and 1 Dexterity. NL Startup: Shuffle !M! copies of this card into your 抽牌堆."
   },
   "${ModID}:Bulwark": {
     "NAME": "Bulwark",
-    "DESCRIPTION": "Innate. NL Gain Temporary HP equal to your draw pile size. NL 消耗 。",
+    "DESCRIPTION": "Innate. NL Gain Temporary HP equal to your 抽牌堆 size. NL 消耗 。",
     "EXTENDED_DESCRIPTION": [" NL (Gain !M! Temporary HP.)"]
   },
   "${ModID}:Masterstroke": {

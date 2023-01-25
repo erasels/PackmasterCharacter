@@ -9,7 +9,7 @@
   },
   "${ModID}:IceWall": {
     "NAME": "Ice Wall",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !B! Block next turn. NL Add a Void to the top of your draw pile."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !B! Block next turn. NL Add a Void to the top of your 抽牌堆."
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "Freeze and Burn",
@@ -34,12 +34,12 @@
   },
   "${ModID}:ReadTheFlames": {
     "NAME": "Read the Flames",
-    "DESCRIPTION": "Draw !M! cards. NL Scry !${ModID}:m2!. NL Shuffle a *Fading *Ember into your draw pile."
+    "DESCRIPTION": "Draw !M! cards. NL Scry !${ModID}:m2!. NL Shuffle a *Fading *Ember into your 抽牌堆."
   },
   "${ModID}:FueledByEmbers": {
     "NAME": "Fueled by Embers",
-    "DESCRIPTION": "At the start of your turn, draw !M! card and add !M! *Fading *Ember to your hand and draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! card and add !M! *Fading *Ember to your hand and draw pile."
+    "DESCRIPTION": "At the start of your turn, draw !M! card and add !M! *Fading *Ember to your hand and 抽牌堆.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! card and add !M! *Fading *Ember to your hand and 抽牌堆."
   },
   "${ModID}:FadingEmber": {
     "NAME": "Fading Ember",

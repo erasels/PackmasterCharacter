@@ -48,6 +48,6 @@
   },
   "${ModID}:ScorchedEarth": {
     "NAME": "Scorched Earth",
-    "DESCRIPTION": "Exhaust all non-Attacks in your discard pile. Deal !D! damage for each. NL 消耗 。"
+    "DESCRIPTION": "Exhaust all non-Attacks in your 弃牌堆. Deal !D! damage for each. NL 消耗 。"
   }
 }

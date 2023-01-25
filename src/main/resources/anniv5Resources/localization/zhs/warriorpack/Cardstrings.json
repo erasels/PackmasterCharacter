@@ -1,7 +1,7 @@
 {
   "${ModID}:Polishing": {
     "NAME": "Polishing",
-    "DESCRIPTION": "Whenever you play an Attack, increase its damage by !M! this combat."
+    "DESCRIPTION": "Whenever you play an Attack, increase its damage by !M! 本场战斗."
   },
   "${ModID}:WorkHammer": {
     "NAME": "Work Hammer",
@@ -25,8 +25,8 @@
   },
   "${ModID}:Fall": {
     "NAME": "Fall",
-    "DESCRIPTION": "Deal ${ModID}:Front damage equal to the number of cards in your NL draw pile + 6.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal ${ModID}:Front damage equal to the number of cards in your NL draw pile + 6.",
+    "DESCRIPTION": "Deal ${ModID}:Front damage equal to the number of cards in your NL 抽牌堆 + 6.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal ${ModID}:Front damage equal to the number of cards in your NL 抽牌堆 + 6.",
     "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
   },
   "${ModID}:Turtle": {

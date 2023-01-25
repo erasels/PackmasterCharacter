@@ -14,8 +14,8 @@
   },
   "${ModID}:SneakyteakStrike": {
     "NAME": "Sneakyteak Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Put a *Darkside *Slap on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Put a *Darkside *Slap+ on top of your draw pile."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Put a *Darkside *Slap on top of your 抽牌堆.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Put a *Darkside *Slap+ on top of your 抽牌堆."
   },
   "${ModID}:DarksideSlap": {
     "NAME": "Darkside Slap",
@@ -50,12 +50,12 @@
   },
   "${ModID}:BaalorBash": {
     "NAME": "Baalorlord's Bash",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Baalor's *Blueprint into your draw pile. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Innate. NL 造成 !D! 点伤害。 NL Shuffle a *Baalor's *Blueprint into your draw pile. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Baalor's *Blueprint into your 抽牌堆. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Innate. NL 造成 !D! 点伤害。 NL Shuffle a *Baalor's *Blueprint into your 抽牌堆. NL 消耗 。"
   },
   "${ModID}:BaalorBlueprint": {
     "NAME": "Baalor's Blueprint",
-    "DESCRIPTION": "Shuffle your discard pile into your draw pile. Put *The *Cozy *Chair on the bottom of it. 消耗 。"
+    "DESCRIPTION": "Shuffle your 弃牌堆 into your 抽牌堆. Put *The *Cozy *Chair on the bottom of it. 消耗 。"
   },
   "${ModID}:TheCozyChair": {
     "NAME": "The Cozy Chair",

@@ -23,7 +23,7 @@
   },
   "${ModID}:MassProduction": {
     "NAME": "Mass Production",
-    "DESCRIPTION": "Choose a card in your draw pile. Exhaust your hand and replace it with copies of that card. 消耗 。",
+    "DESCRIPTION": "Choose a card in your 抽牌堆. Exhaust your hand and replace it with copies of that card. 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to Mass Produce."
     ]
@@ -38,7 +38,7 @@
   },
   "${ModID}:OverTime": {
     "NAME": "Over Time",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL For each card that you've *Exhausted this combat, increase damage by !M!."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL For each card that you've *Exhausted 本场战斗, increase damage by !M!."
   },
   "${ModID}:SlimeSpray": {
     "NAME": "Slime Spray",
@@ -46,11 +46,11 @@
   },
   "${ModID}:StickStrike": {
     "NAME": "Stick Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Stick into your draw pile.",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Stick+ into your draw pile."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Stick into your 抽牌堆.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Stick+ into your 抽牌堆."
   },
   "${ModID}:Stick": {
     "NAME": "Stick",
-    "DESCRIPTION": "*Stick *Strikes deal !M! more damage this combat. Return the last-played one to your hand. 消耗 。"
+    "DESCRIPTION": "*Stick *Strikes deal !M! more damage 本场战斗. Return the last-played one to your hand. 消耗 。"
   }
 }

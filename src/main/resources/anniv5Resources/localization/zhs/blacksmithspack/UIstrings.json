@@ -8,7 +8,7 @@
   },
   "${ModID}:SetUpShopScreen": {
     "TEXT": [
-      "Upgrade and put on top of your draw pile."
+      "Upgrade and put on top of your 抽牌堆."
     ]
   },
   "${ModID}:MasterworkScreen": {

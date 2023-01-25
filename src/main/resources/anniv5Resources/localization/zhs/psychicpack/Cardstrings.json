@@ -22,7 +22,7 @@
   },
   "${ModID}:PhantomStep": {
     "NAME": "Phantom Step",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Make a card in your draw pile ${ModID}:Occult."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Make a card in your 抽牌堆 ${ModID}:Occult."
   },
   "${ModID}:Repel": {
     "NAME": "Repel",
@@ -49,7 +49,7 @@
   },
   "${ModID}:MalleableFire": {
     "NAME": "Malleable Fire",
-    "DESCRIPTION": "Deal !D! damage X times. NL Add a *Molded *Fire that costs X to your draw pile. NL 消耗 。"
+    "DESCRIPTION": "Deal !D! damage X times. NL Add a *Molded *Fire that costs X to your 抽牌堆. NL 消耗 。"
   },
   "${ModID}:MoldedFire": {
     "NAME": "Molded Fire",

@@ -6,7 +6,7 @@
   },
   "${ModID}:HarvestBeans": {
     "NAME": "Harvest Beans",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !D! damage to ALL enemies if the last card played this combat wasn't an Attack."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !D! damage to ALL enemies if the last card played 本场战斗 wasn't an Attack."
   },
   "${ModID}:HarvestCarrots": {
     "NAME": "Harvest Carrots",
@@ -15,7 +15,7 @@
   },
   "${ModID}:HarvestPotatoes": {
     "NAME": "Harvest Potatoes",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card you played this combat wasn't a Skill, gain !B! Block again."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card you played 本场战斗 wasn't a Skill, gain !B! Block again."
   },
   "${ModID}:HarvestRadishes": {
     "NAME": "Harvest Radishes",
@@ -42,7 +42,7 @@
   },
   "${ModID}:SowTheSeeds": {
     "NAME": "Sow The Seeds",
-    "DESCRIPTION": "Gain a *Fertilizer. NL Fetch !M! random cards with different types from your draw pile."
+    "DESCRIPTION": "Gain a *Fertilizer. NL Fetch !M! random cards with different types from your 抽牌堆."
   },
   "${ModID}:TillTheEarth": {
     "NAME": "Till The Earth",

@@ -1,15 +1,15 @@
 {
   "${ModID}:BagOfHolding": {
-    "NAME": "Bag of Holding",
-    "FLAVOR": "\"Incredible! It appears that this bag connects to an extradimensional space. What if I jump inside?\" - Ranwid",
+    "NAME": "异容背包",
+    "FLAVOR": "\"难以置信！这个背包像是与异次元空间相连。我要是跳进去会怎样？\" - 兰伟德。",
     "DESCRIPTIONS": [
-      "Replaces ",
-      ".[] NL Gain [E] at the start of each turn, lasting one turn for every #b5 cards in your deck."
+      "替换 ",
+      " 。 NL 回合开始时获得 [E] 。 NL 牌组每有 #b5 张牌，持续 #b1 回合。"
     ]
   },
   "${ModID}:BanishingDecree": {
     "NAME": "放逐判令",
-    "FLAVOR": "Absorb what is useful, reject what is useless and add what is essentially your own.",
+    "FLAVOR": "吸收有用的，抛弃无用的，将本属于你的力量赋予自己。",
     "DESCRIPTIONS": [
       "拾起时，选择一组本局已选卡包，包内卡牌本局不再出现。 NL 从 #b5 种随机卡包中选择 #b1 种，获得其专属卡牌奖励 #b3 次。",
       "选择一组卡包，它将被",
@@ -24,44 +24,44 @@
     ]
   },
   "${ModID}:CollectorBadge": {
-    "NAME": "Collector Badge",
-    "FLAVOR": "Gotta collect 'em all.",
+    "NAME": "收藏家徽章",
+    "FLAVOR": "全！部！收！藏！",
     "DESCRIPTIONS": [
-      "Each turn, after you play a card from #b4 different Packs, gain [E] [REMOVE_SPACE].",
-      " NL NL Packs used this turn: ",
-      " NL NL This has triggered this turn. "
+      "每回合打出 #b4 张属于不同卡包的牌后，获得 [E] 。",
+      " NL NL 本回合已打出过的卡包： ",
+      " NL NL 本回合已触发过效果。"
     ]
   },
   "${ModID}:GemOfUnity": {
-    "NAME": "Gem of Unity",
-    "FLAVOR": "In union there is strength.",
+    "NAME": "团结宝石",
+    "FLAVOR": "团结就是力量。",
     "DESCRIPTIONS": [
-      "Once per combat, after you have played a card from each different Pack available this run, gain #b20 Block, #b1 Strength, #b1 Dexterity, and heal #b5 HP.",
-      "Packs played this combat: "
+      "每场战斗，打出本局每种所选卡包内的任意一张牌后，获得 #b20 点 格挡 、 #b1  点 力量 、 #b1 点 敏捷 ，并回复 #b5 点生命。",
+      "本场战斗已打出过的卡包： "
     ]
   },
   "${ModID}:HandyHaversack": {
-    "NAME": "Handy Haversack",
-    "FLAVOR": "Helps heroic hoarders handle hindrances.",
+    "NAME": "便利背包",
+    "FLAVOR": "帮助神级囤积家扫清囤积道路上的障碍。",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain [E] and draw #b1 card."
+      "战斗开始时，获得 [E] 并抽 #b1 张牌。"
     ]
   },
   "${ModID}:PMBoosterBox": {
-    "NAME": "P.M. Booster Box",
-    "FLAVOR": "Better price for buying in bulk.",
+    "NAME": "大师增强盒",
+    "FLAVOR": "批发购买价更赢。",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b3 Packmaster Boosters, three times. Earn an additional card from these boosters at the end of each combat.",
-      " NL Chosen Boosters: ",
-      "Choose a Booster Pack."
+      "拾起时， 从 #b3 种卡包中选择 #b1 种，重复该过程 #b3 次。战斗结束时，额外获得 #b1 次其所含牌的卡牌奖励。",
+      " NL 已选的卡包： ",
+      "选择一种卡包。"
     ]
   },
   "${ModID}:PMBoosterPack": {
-    "NAME": "P.M. Booster Pack",
-    "FLAVOR": "A package of cards in a foil wrapper. How did it end up in the Spire?",
+    "NAME": "大师增强包",
+    "FLAVOR": "一套锡纸包装的卡包。它怎么出现在尖塔里的？",
     "DESCRIPTIONS": [
-      "Upon pickup, add any one card from a random Packmaster Booster to your deck.",
-      "Choose a card to add to your deck."
+      "拾起时，可选择随机一种卡包内的任意一张牌加入牌组。",
+      "选择一张牌加入牌组。"
     ]
   },
   "${ModID}:PMCollection": {

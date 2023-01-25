@@ -1,8 +1,8 @@
 {
   "${ModID}:MessUp": {
     "NAME": "Mess Up",
-    "DESCRIPTION": "Deal damage equal to the amount of cards in your draw pile. NL Shuffle your Discard pile into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Shuffle your Discard pile into your deck. NL Deal damage equal to the amount of cards in your draw pile.",
+    "DESCRIPTION": "Deal damage equal to the amount of cards in your 抽牌堆. NL Shuffle your 弃牌堆 into your 抽牌堆.",
+    "UPGRADE_DESCRIPTION": "Shuffle your 弃牌堆 into your deck. NL Deal damage equal to the amount of cards in your 抽牌堆.",
     "EXTENDED_DESCRIPTION": [
       "(Deals !D! damage.) NL "
     ]
@@ -26,8 +26,8 @@
   },
   "${ModID}:Cross": {
     "NAME": "Cross",
-    "DESCRIPTION": "Deal !D! damage twice. Your *Crosses deal 1 more damage this combat. Shuffle a *Cross into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage twice. Your *Crosses deal 1 more damage this combat. Shuffle a *Cross+ into your draw pile."
+    "DESCRIPTION": "Deal !D! damage twice. Your *Crosses deal 1 more damage 本场战斗. Shuffle a *Cross into your 抽牌堆.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage twice. Your *Crosses deal 1 more damage 本场战斗. Shuffle a *Cross+ into your 抽牌堆."
   },
   "${ModID}:Improvise": {
     "NAME": "Improvise",

@@ -17,7 +17,7 @@
   },
   "${ModID}:WeightofContrition": {
     "NAME": "Weight of Contrition",
-    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL Increase ${ModID}:Penance HP loss by !${ModID}:m2! this combat."
+    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL Increase ${ModID}:Penance HP loss by !${ModID}:m2! 本场战斗."
   },
   "${ModID}:ChainsofTruth": {
     "NAME": "Chains of Truth",
@@ -29,7 +29,7 @@
   },
   "${ModID}:HolyWrath": {
     "NAME": "Holy Wrath",
-    "DESCRIPTION": "Take !M! damage. NL Return this from the discard pile to your hand whenever you gain ${ModID}:Confession"
+    "DESCRIPTION": "Take !M! damage. NL Return this from the 弃牌堆 to your hand whenever you gain ${ModID}:Confession"
   },
   "${ModID}:Absolution": {
     "NAME": "Absolution",

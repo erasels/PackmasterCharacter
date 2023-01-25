@@ -14,7 +14,7 @@
   },
   "${ModID}:ShimmeringStrike": {
     "NAME": "Shimmering Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals !M! additional damage for each ${ModID}:different\u00a0color card played this combat."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals !M! additional damage for each ${ModID}:different\u00a0color card played 本场战斗."
   },
   "${ModID}:ExoticKnowledge": {
     "NAME": "Exotic Knowledge",
@@ -27,12 +27,12 @@
   },
   "${ModID}:QuirionDryad": {
     "NAME": "Quirion Dryad",
-    "DESCRIPTION": "The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "The first time you play each color of card 本场战斗, gain !M! Strength and !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you play each color of card 本场战斗, gain !M! Strength and !M! Dexterity."
   },
   "${ModID}:ManyAsOne": {
     "NAME": "Many as One",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Put all ${ModID}:different\u00a0color cards from your discard pile into your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Put all ${ModID}:different\u00a0color cards from your 弃牌堆 into your hand."
   },
   "${ModID}:PremiumSelection": {
     "NAME": "Premium Selection",

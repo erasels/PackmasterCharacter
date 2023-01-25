@@ -8,7 +8,7 @@
   },
   "${ModID}:ReturnExhaustedToDeckAction": {
     "TEXT": [
-      "Select a Card to Return to Your Draw Pile"
+      "Select a Card to Return to Your 抽牌堆"
     ]
   },
   "${ModID}:PlayFromExhaustAction": {

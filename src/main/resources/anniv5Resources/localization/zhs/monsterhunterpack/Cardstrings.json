@@ -30,13 +30,13 @@
   },
   "${ModID}:CoreBlaster": {
     "NAME": "Core Blaster",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder to your draw pile. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder+ to your draw pile. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder to your 抽牌堆. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder+ to your 抽牌堆. NL 消耗 。"
   },
   "${ModID}:CoreBlinder": {
     "NAME": "Core Blinder",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your draw pile. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster+ to your draw pile. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your 抽牌堆. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster+ to your 抽牌堆. NL 消耗 。"
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",
@@ -75,7 +75,7 @@
   },
   "${ModID}:HyperBlaster": {
     "NAME": "Hyper Blaster",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle !M! Voids into your draw pile."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle !M! Voids into your 抽牌堆."
   },
   "${ModID}:EphemeralShroud": {
     "NAME": "Ephemeral Shroud",

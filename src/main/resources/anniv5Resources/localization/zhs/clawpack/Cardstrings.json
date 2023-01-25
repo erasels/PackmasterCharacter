@@ -5,7 +5,7 @@
   },
   "${ModID}:ClawForOne": {
     "NAME": "Claw For One",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Put all *Claw cards from your discard pile into your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Put all *Claw cards from your 弃牌堆 into your hand."
   },
   "${ModID}:CloakAndClaw": {
     "NAME": "Cloak and Claw",

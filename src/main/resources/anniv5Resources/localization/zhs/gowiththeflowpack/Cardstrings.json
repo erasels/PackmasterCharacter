@@ -9,12 +9,12 @@
   },
   "${ModID}:Hail": {
     "NAME": "Hail",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each time this was discarded this combat.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each time this was discarded 本场战斗.",
     "EXTENDED_DESCRIPTION": [" NL (Hits !M! times)"]
   },
   "${ModID}:HighTide": {
     "NAME": "High Tide",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you ${ModID}:Flow, return this from the discard pile to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you ${ModID}:Flow, return this from the 弃牌堆 to your hand."
   },
   "${ModID}:Hydraulics": {
     "NAME": "Hydraulics",

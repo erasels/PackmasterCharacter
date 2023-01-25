@@ -33,8 +33,8 @@
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
-    "DESCRIPTION": "Ethereal. NL Exhaust !M! cards in your draw pile. NL Put a card from your discard pile into your hand and give it 消耗 。",
-    "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your draw pile. NL Put a card from your discard pile into your hand and give it 消耗 。"
+    "DESCRIPTION": "Ethereal. NL Exhaust !M! cards in your 抽牌堆. NL Put a card from your 弃牌堆 into your hand and give it 消耗 。",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your 抽牌堆. NL Put a card from your 弃牌堆 into your hand and give it 消耗 。"
   },
   "${ModID}:Owl": {
     "NAME": "Owl",
@@ -44,7 +44,7 @@
   },
   "${ModID}:Vision": {
     "NAME": "Vision",
-    "DESCRIPTION": "Put !M! cards from your draw pile into your hand. NL Retain your hand this turn. NL 消耗 。"
+    "DESCRIPTION": "Put !M! cards from your 抽牌堆 into your hand. NL Retain your hand this turn. NL 消耗 。"
   },
   "${ModID}:Connection": {
     "NAME": "Connection",

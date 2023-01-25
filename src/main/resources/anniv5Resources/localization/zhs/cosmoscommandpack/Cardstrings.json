@@ -25,7 +25,7 @@
   },
   "${ModID}:RefractEnergy": {
     "NAME": "Refract Energy",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Amplify [E] : Reduce this card's cost by 1 this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Amplify [E] : Reduce this card's cost by 1 本场战斗."
   },
   "${ModID}:RopeTrick": {
     "NAME": "Rope Trick",
@@ -38,6 +38,6 @@
   },
   "${ModID}:SubtleKnife": {
     "NAME": "Subtle Knife",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Distortion. NL ${ModID}:Amplify [E] : Exhaust, then add a copy of this to your discard pile."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Distortion. NL ${ModID}:Amplify [E] : Exhaust, then add a copy of this to your 弃牌堆."
   }
 }

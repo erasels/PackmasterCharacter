@@ -23,8 +23,8 @@
   },
   "${ModID}:GhostlyMist": {
     "NAME": "Ghostly Mist",
-    "DESCRIPTION": "${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your draw pile."
+    "DESCRIPTION": "${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your 抽牌堆.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your 抽牌堆."
   },
   "${ModID}:GlacialSynthesis": {
     "NAME": "Glacial Synthesis",
@@ -78,7 +78,7 @@
   },
   "${ModID}:ReboundSelfEffect": {
     "EXTENDED_DESCRIPTION": [
-      "Shuffle this card into your draw pile."
+      "Shuffle this card into your 抽牌堆."
     ]
   },
   "${ModID}:TransmuteSelfEffect": {

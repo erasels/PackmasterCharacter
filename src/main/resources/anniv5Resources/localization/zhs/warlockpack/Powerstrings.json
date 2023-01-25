@@ -2,15 +2,15 @@
   "${ModID}:MalchezaarsImpPower": {
     "NAME": "Malchezaar's Imp",
     "DESCRIPTIONS": [
-      "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImp into your discard pile.",
-      "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImps into your discard pile."
+      "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImp into your 弃牌堆.",
+      "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImps into your 弃牌堆."
     ]
   },
   "${ModID}:MalchezaarsImpUpgradedPower": {
     "NAME": "Malchezaar's Imp+",
     "DESCRIPTIONS": [
-      "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImp into your draw pile.",
-      "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImps into your draw pile."
+      "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImp into your 抽牌堆.",
+      "Whenever a #ynon-Imp card is #yExhausted, shuffle #b{0} #yImps into your 抽牌堆."
     ]
   }
 }

@@ -5,8 +5,8 @@
   },
   "${ModID}:LetsPlay8Ball": {
     "NAME": "Let's Play 8 Ball!",
-    "DESCRIPTION": "Shuffle an *8 *Ball into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your draw pile."
+    "DESCRIPTION": "Shuffle an *8 *Ball into your 抽牌堆.",
+    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your 抽牌堆."
   },
   "${ModID}:EightBall": {
     "NAME": "8 Ball",
@@ -21,7 +21,7 @@
   },
   "${ModID}:LetsDraft": {
     "NAME": "Let's Draft!",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Choose a card. Shuffle a copy of it into your draw pile.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Choose a card. Shuffle a copy of it into your 抽牌堆.",
     "EXTENDED_DESCRIPTION": [
       "create a copy of."
     ]
@@ -56,7 +56,7 @@
   },
   "${ModID}:MidnightStrike": {
     "NAME": "Midnight Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this is the 12th card played this combat, deal !${ModID}:sd! damage instead.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this is the 12th card played 本场战斗, deal !${ModID}:sd! damage instead.",
     "EXTENDED_DESCRIPTION": [
       " NL (Played ",
       " card.)",

@@ -1,13 +1,13 @@
 {
   "${ModID}:GreyBargain": {
     "NAME": "Grey Bargain",
-    "DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand.",
-    "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your draw pile by Exhausting a card in your hand. NL 抽一张牌.",
+    "DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by Exhausting a card in your hand.",
+    "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by Exhausting a card in your hand. NL 抽一张牌.",
     "EXTENDED_DESCRIPTION": ["I need a card to 消耗 。"]
   },
     "${ModID}:ExtraLimbs": {
     "NAME": "Extra Limbs",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL When Exhausted, increase the number of hits by 1 this combat. NL 消耗 。"
+    "DESCRIPTION": "Deal !D! damage !M! times. NL When Exhausted, increase the number of hits by 1 本场战斗. NL 消耗 。"
   },
     "${ModID}:AncientSpear": {
     "NAME": "Ancient Spear",
@@ -24,8 +24,8 @@
   },
     "${ModID}:SpontaneousRitual": {
     "NAME": "Spontaneous Ritual",
-    "DESCRIPTION": "Exhaust your hand. NL Deal damage equal to the number of cards Exhausted this combat.",
-    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your hand then Exhaust it. NL Deal damage equal to the number of cards Exhausted this combat.",
+    "DESCRIPTION": "Exhaust your hand. NL Deal damage equal to the number of cards Exhausted 本场战斗.",
+    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your hand then Exhaust it. NL Deal damage equal to the number of cards Exhausted 本场战斗.",
   	"EXTENDED_DESCRIPTION": [" NL ( !D! damage )"]
   },
     "${ModID}:FuneraryJewels": {

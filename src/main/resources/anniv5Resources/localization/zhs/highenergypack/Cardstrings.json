@@ -1,7 +1,7 @@
 {
   "${ModID}:MiracleWorker": {
     "NAME": "Miracle Worker",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put a *Miracle on top of your draw pile."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put a *Miracle on top of your 抽牌堆."
   },
   "${ModID}:Trash": {
     "NAME": "Trash",
@@ -22,7 +22,7 @@
   },
   "${ModID}:ManifestMeal": {
     "NAME": "Manifest Meal",
-    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your draw pile."
+    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your 抽牌堆."
   },
   "${ModID}:Food": {
     "NAME": "Food",
@@ -42,7 +42,7 @@
   },
   "${ModID}:StruckByATrain": {
     "NAME": "Struck By A Train",
-    "DESCRIPTION": "Deal !D! damage to the frontmost enemy. NL Increase this card's damage by !M! this combat."
+    "DESCRIPTION": "Deal !D! damage to the frontmost enemy. NL Increase this card's damage by !M! 本场战斗."
   },
   "${ModID}:StormForm": {
     "NAME": "Storm Form",

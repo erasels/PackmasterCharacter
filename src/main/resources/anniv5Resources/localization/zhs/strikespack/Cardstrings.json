@@ -25,7 +25,7 @@
   },
   "${ModID}:StrikeDummyJr": {
     "NAME": "Strike Dummy Jr.",
-    "DESCRIPTION": "Gain !M! Strength. NL Strikes deal 2 more damage this combat."
+    "DESCRIPTION": "Gain !M! Strength. NL Strikes deal 2 more damage 本场战斗."
   },
   "${ModID}:DifferentStrikes": {
     "NAME": "Different Strikes",

@@ -4,7 +4,7 @@
     "NAMES": [
       "evolves"
     ],
-    "DESCRIPTION": "Evolving cards can be upgraded up to #b3 times. They are upgraded this combat whenever the listed condition is met while the card is in your hand and gain bonus effects when fully upgraded."
+    "DESCRIPTION": "Evolving cards can be upgraded up to #b3 times. They are upgraded 本场战斗 whenever the listed condition is met while the card is in your hand and gain bonus effects when fully upgraded."
   },
   {
     "PROPER_NAME": "Rend",

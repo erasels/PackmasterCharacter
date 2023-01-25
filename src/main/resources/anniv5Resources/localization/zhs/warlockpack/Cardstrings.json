@@ -1,7 +1,7 @@
 {
   "${ModID}:Imp": {
     "NAME": "Imp",
-    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn. NL Deal !M! damage. Increase the damage of *Imps by 1 this combat. NL 抽一张牌. NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn. NL Deal !M! damage. Increase the damage of *Imps by 1 本场战斗. NL 抽一张牌. NL 消耗 。"
   },
   "${ModID}:HighPriestessJeklik": {
     "NAME": "High Priestess Jeklik",
@@ -9,7 +9,7 @@
   },
   "${ModID}:SoulShear": {
     "NAME": "Soul Shear",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle 1 *Imp into your draw pile."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle 1 *Imp into your 抽牌堆."
   },
   "${ModID}:Soulfire": {
     "NAME": "Soulfire",
@@ -26,17 +26,17 @@
   },
   "${ModID}:SeedsOfDestruction": {
     "NAME": "Seeds of Destruction",
-    "DESCRIPTION": "Choose to shuffle !M! *Imps into your draw pile or !${ModID}:m2! *Imps into your discard pile.",
-    "EXTENDED_DESCRIPTION": ["Shuffle !M! *Imps into your draw pile.", "Add !M! *Imps to your discard pile."]
+    "DESCRIPTION": "Choose to shuffle !M! *Imps into your 抽牌堆 or !${ModID}:m2! *Imps into your 弃牌堆.",
+    "EXTENDED_DESCRIPTION": ["Shuffle !M! *Imps into your 抽牌堆.", "Add !M! *Imps to your 弃牌堆."]
   },
   "${ModID}:AranasiBroodmother": {
     "NAME": "Aranasi Broodmother",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle this card into your draw pile. NL When you draw this card, gain !M! Block."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle this card into your 抽牌堆. NL When you draw this card, gain !M! Block."
   },
   "${ModID}:MalchezaarsImp": {
     "NAME": "Malchezaar's Imp",
-    "DESCRIPTION": "Whenever a *non-Imp card is Exhausted, add 1 *Imp to your discard pile.",
-    "UPGRADE_DESCRIPTION": "Whenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your draw pile."
+    "DESCRIPTION": "Whenever a *non-Imp card is Exhausted, add 1 *Imp to your 弃牌堆.",
+    "UPGRADE_DESCRIPTION": "Whenever a *non-Imp card is Exhausted, shuffle 1 *Imp into your 抽牌堆."
   },
   "${ModID}:TheSoularium": {
     "NAME": "The Soularium",

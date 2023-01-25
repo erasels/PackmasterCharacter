@@ -4,7 +4,7 @@
 		"NAME": "Air Current"
 	},
 	"${ModID}:DustTornado":	{
-		"DESCRIPTION": "Exhaust a card in hand to play !M! random cards from your discard pile. NL 消耗 。",
+		"DESCRIPTION": "Exhaust a card in hand to play !M! random cards from your 弃牌堆. NL 消耗 。",
 		"NAME": "Dust Tornado"
 	},
 	"${ModID}:Enervate":	{
@@ -12,7 +12,7 @@
 		"NAME": "Enervate"
 	},
 	"${ModID}:Excavation":	{
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Fetch !M! cards from your discard pile and Retain them.",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Fetch !M! cards from your 弃牌堆 and Retain them.",
 		"NAME": "Excavation"
 	},
 	"${ModID}:Geomorphology":	{

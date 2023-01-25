@@ -18,11 +18,11 @@
   },
   "${ModID}:MindMaze": {
     "NAME": "Mind Maze",
-    "DESCRIPTION": "Gain !B! Block X times. NL Put X *Dazed on top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block X times. NL Put X *Dazed on top of your 抽牌堆."
   },
   "${ModID}:Deterioration": {
     "NAME": "Deterioration",
-    "DESCRIPTION": "At the end of your turn, Exhaust a random card in your discard pile and gain !M! Block."
+    "DESCRIPTION": "At the end of your turn, Exhaust a random card in your 弃牌堆 and gain !M! Block."
   },
   "${ModID}:Shatter": {
     "NAME": "Shatter",

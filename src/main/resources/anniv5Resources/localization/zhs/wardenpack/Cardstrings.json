@@ -1,20 +1,20 @@
 {
   "${ModID}:PierceVeil": {
     "NAME": "Pierce Veil",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 of !M! top cards of your draw pile to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 of !M! top cards of your 抽牌堆 to your hand."
   },
   "${ModID}:Stall": {
     "NAME": "Stall",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put up to !M! cards from your hand on top of your draw pile."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put up to !M! cards from your hand on top of your 抽牌堆."
   },
   "${ModID}:RiskOfBlades": {
     "NAME": "Risk Of Blades",
-    "DESCRIPTION": "Deal !D! damage for each Attack among the top 4 cards of your draw pile.",
+    "DESCRIPTION": "Deal !D! damage for each Attack among the top 4 cards of your 抽牌堆.",
     "EXTENDED_DESCRIPTION": [" NL (Hits !M! times.)"]
   },
   "${ModID}:Crossroads": {
     "NAME": "Crossroads",
-    "DESCRIPTION": "Scry !M!. NL Play the top card of your draw pile. NL 消耗 。"
+    "DESCRIPTION": "Scry !M!. NL Play the top card of your 抽牌堆. NL 消耗 。"
   },
   "${ModID}:Anticipation": {
     "NAME": "Anticipation",
@@ -35,7 +35,7 @@
   },
   "${ModID}:Recurrence": {
     "NAME": "Recurrence",
-    "DESCRIPTION": "Shuffle a copy of your hand into your draw pile. NL 消耗 。"
+    "DESCRIPTION": "Shuffle a copy of your hand into your 抽牌堆. NL 消耗 。"
   },
   "${ModID}:DivineMight": {
     "NAME": "Divine Might",

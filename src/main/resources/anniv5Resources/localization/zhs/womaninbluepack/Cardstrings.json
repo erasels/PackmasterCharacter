@@ -45,11 +45,11 @@
   },
   "${ModID}:ChaosVial": {
     "NAME": "Chaos Vial",
-    "DESCRIPTION": "Play the top 3 cards of your draw pile. NL 消耗 。"
+    "DESCRIPTION": "Play the top 3 cards of your 抽牌堆. NL 消耗 。"
   },
   "${ModID}:VialOfMemory": {
     "NAME": "Vial of Memory",
-    "DESCRIPTION": "Choose a card in your discard pile and return it to your hand. It costs 0 until played. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose a card in your discard pile and return it to your hand. It costs 0 until played. NL stslib:Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Choose a card in your 弃牌堆 and return it to your hand. It costs 0 until played. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Choose a card in your 弃牌堆 and return it to your hand. It costs 0 until played. NL stslib:Exhaustive !stslib:ex!."
   }
 }

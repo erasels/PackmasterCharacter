@@ -1,8 +1,8 @@
 {
   "${ModID}:FrontloadedBash": {
     "NAME": "Frontloaded Bash",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals 1 more damage for every !M! cards in your draw pile.",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Deals 1 more damage for every !M! cards in your draw pile. NL Draw 1 card."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals 1 more damage for every !M! cards in your 抽牌堆.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Deals 1 more damage for every !M! cards in your 抽牌堆. NL Draw 1 card."
   },
   "${ModID}:Preparation": {
     "NAME": "Preparation",
@@ -17,16 +17,16 @@
   },
   "${ModID}:ExperimentalMerge": {
     "NAME": "Experimental Merge",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle your discard pile into your draw pile. Draw !M!."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle your 弃牌堆 into your 抽牌堆. Draw !M!."
   },
   "${ModID}:ExhaustiveWork": {
     "NAME": "Exhaustive Work",
-    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Choose a card. NL Exhaust that card and add a copy of it to your draw pile.",
+    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Choose a card. NL Exhaust that card and add a copy of it to your 抽牌堆.",
     "EXTENDED_DESCRIPTION": ["Choose a card to Exhaust and copy."]
   },
   "${ModID}:IterativeDesign": {
     "NAME": "Iterative Design",
-    "DESCRIPTION": "Whenever your create a card this combat, gain !M! Block."
+    "DESCRIPTION": "Whenever your create a card 本场战斗, gain !M! Block."
   },
   "${ModID}:Xpansion": {
     "NAME": "Xpansion",
@@ -44,6 +44,6 @@
   },
   "${ModID}:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain !M! stslib:Temporary_HP. Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your draw pile."
+    "DESCRIPTION": "Gain !M! stslib:Temporary_HP. Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your 抽牌堆."
   }
 }

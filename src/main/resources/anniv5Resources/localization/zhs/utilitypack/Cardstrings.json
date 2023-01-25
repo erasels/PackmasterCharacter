@@ -27,13 +27,13 @@
   },
   "${ModID}:Replenish": {
     "NAME": "Replenish",
-    "DESCRIPTION": "Put two cards from your discard pile into your hand. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Put two cards from your discard pile into your hand."
+    "DESCRIPTION": "Put two cards from your 弃牌堆 into your hand. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Put two cards from your 弃牌堆 into your hand."
   },
   "${ModID}:LesserHex": {
     "NAME": "Lesser Hex",
-    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex to your discard pile. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex+ to your discard pile. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex to your 弃牌堆. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex+ to your 弃牌堆. NL 消耗 。"
   },
   "${ModID}:GreaterHex": {
     "NAME": "Greater Hex",
@@ -41,9 +41,9 @@
   },
   "${ModID}:Conjuration": {
     "NAME": "Conjuration",
-    "DESCRIPTION": "Choose a card from your draw pile. NL Play and Exhaust it.",
-    "UPGRADE_DESCRIPTION": "Choose a card from your draw pile. NL Play it.",
-    "EXTENDED_DESCRIPTION": ["There are no cards in my draw pile."]
+    "DESCRIPTION": "Choose a card from your 抽牌堆. NL Play and Exhaust it.",
+    "UPGRADE_DESCRIPTION": "Choose a card from your 抽牌堆. NL Play it.",
+    "EXTENDED_DESCRIPTION": ["There are no cards in my 抽牌堆."]
   },
   "${ModID}:RareStrike": {
     "NAME": "Rare Strike",

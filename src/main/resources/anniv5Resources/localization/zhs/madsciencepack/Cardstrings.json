@@ -9,7 +9,7 @@
   },
   "${ModID}:Winterize": {
     "NAME": "Winterize",
-    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your draw pile: \"Apply !M! ${ModID}:Frostbite\""
+    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your 抽牌堆: \"Apply !M! ${ModID}:Frostbite\""
   },
 "${ModID}:Discombobulate": {
     "NAME": "Discombobulate",
@@ -31,8 +31,8 @@
   },
   "${ModID}:Cheapen": {
     "NAME": "Cheapen",
-    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Modify a card in your draw pile: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。"
+    "DESCRIPTION": "${ModID}:Modify a random card in your 抽牌堆: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Modify a card in your 抽牌堆: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。"
   },
   "${ModID}:Expand": {
     "NAME": "Expand",

@@ -21,7 +21,7 @@
   },
   "${ModID}:SetUpShop": {
     "NAME": "Set Up Shop",
-    "DESCRIPTION": "Upgrade !M! cards from your draw or discard pile and put them on top of your draw pile."
+    "DESCRIPTION": "Upgrade !M! cards from your draw or 弃牌堆 and put them on top of your 抽牌堆."
   },
   "${ModID}:MastersStrike": {
     "NAME": "Master's Strike",

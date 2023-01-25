@@ -9,7 +9,7 @@
   },
   "${ModID}:Frostburn": {
     "NAME": "Frostburn",
-    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add a *Burn into your discard pile."
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add a *Burn into your 弃牌堆."
   },
   "${ModID}:Glaciate": {
     "NAME": "Glaciate",
@@ -17,7 +17,7 @@
   },
   "${ModID}:GrowingAffliction": {
     "NAME": "Growing Affliction",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you apply a debuff, return this from the discard pile to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you apply a debuff, return this from the 弃牌堆 to your hand."
   },
   "${ModID}:IcicleSpear": {
     "NAME": "Icicle Spear",
@@ -37,6 +37,6 @@
   },
   "${ModID}:Subdue": {
     "NAME": "Subdue",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card played in this combat was an Attack, gain !B! additional Block."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card played in 本场战斗 was an Attack, gain !B! additional Block."
   }
 }

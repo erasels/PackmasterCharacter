@@ -10,9 +10,9 @@
     "NAME": "Remember",
     "DESCRIPTIONS": [
       "At the end of your turn, you may shuffle #b",
-      " card into your draw pile.",
-      " cards into your draw pile.",
-      "shuffle into your draw pile"
+      " card into your 抽牌堆.",
+      " cards into your 抽牌堆.",
+      "shuffle into your 抽牌堆"
     ]
   },
   "${ModID}:TrinePower": {

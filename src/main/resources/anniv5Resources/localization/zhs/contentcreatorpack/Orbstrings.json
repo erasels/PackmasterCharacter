@@ -4,7 +4,7 @@
     "DESCRIPTION": [
       "#yPassive: At the end of turn, deal #b",
       " damage to the frontmost enemy. NL #yEvoke: Deal #b",
-      " damage to the frontmost enemy and draw #b1 card."
+      " damage to the frontmost enemy and 抽 #b1 张牌."
     ]
   }
 }

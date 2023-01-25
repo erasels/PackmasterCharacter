@@ -1,33 +1,33 @@
 {
   "${ModID}:BoosterBrew": {
-    "NAME": "Booster Brew",
+    "NAME": "增强酿",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 Packs. Add #b",
-      " random cards from it into your draw pile. They cost #b0 this combat."
+      "从 #b3 种卡包选择 #b1 种。将其包内随机 #b",
+      " 张牌加入抽牌堆。本场战斗其耗能为 #b0 。"
     ]
   },
   "${ModID}:ModdersDelight": {
-    "NAME": "Modder's Delight",
+    "NAME": "模组作者之悦饮",
     "DESCRIPTIONS": [
-      "Shuffle your discard pile into your draw pile. Put #b",
-      " random cards from different Packs from your draw pile into your hand."
+      "将弃牌堆洗入抽牌堆。随机将抽牌堆 #b",
+      " 张不同卡包的牌加入手牌。"
     ]
   },
   "${ModID}:PackInAJar": {
     "NAME": "瓶中卡包",
     "DESCRIPTIONS": [
-      "Discard your hand, then choose #b1 of #b3 Packs. Add #b",
-      " copy of each card from it to your hand.",
-      " copies of each card from it to your hand."
+      "丢弃所有手牌，从 #b3 种卡包中选择 #b1 中，将其所含所有牌的 #b",
+      " 张复制品加入手牌。",
+      " 张复制品加入手牌。"
     ]
   },
   "${ModID}:SmithingOil": {
-    "NAME": "Smithing Oil",
+    "NAME": "锻造油",
     "DESCRIPTIONS": [
-      "Choose #b",
-      " card in your hand to upgrade #bpermanently.",
-      " cards in your hand to upgrade #bpermanently.",
-      " to upgrade permanently."
+      "选择手中 #b",
+      " 张牌，本局游戏将其升级。",
+      " 张牌，本局游戏将其升级。",
+      "将其本局游戏升级。"
     ]
   }
 }

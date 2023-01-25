@@ -1,11 +1,11 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "Backpack Smack",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If your draw pile has 10 or more cards, draw !M! cards. NL Otherwise, gain [E] ."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If your 抽牌堆 has 10 or more cards, draw !M! cards. NL Otherwise, gain [E] ."
   },
   "${ModID}:BoosterTutor": {
     "NAME": "Booster Tutor",
-    "DESCRIPTION": "Put !M! random cards from different Packs from your draw pile into your hand."
+    "DESCRIPTION": "Put !M! random cards from different Packs from your 抽牌堆 into your hand."
   },
   "${ModID}:DestinyDraw": {
     "NAME": "Destiny Draw",
@@ -22,8 +22,8 @@
   },
   "${ModID}:RippedPecs": {
     "NAME": "Ripped Pecs",
-    "DESCRIPTION": "Gain 1 Strength for each Pack you've played a card from this combat. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength for each Pack you've played a card from this combat.",
+    "DESCRIPTION": "Gain 1 Strength for each Pack you've played a card from 本场战斗. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Gain 1 Strength for each Pack you've played a card from 本场战斗.",
     "EXTENDED_DESCRIPTION": [" NL (Gains {0} Strength.)"]
   },
   "${ModID}:Showoff": {
@@ -32,7 +32,7 @@
   },
   "${ModID}:Sideboard": {
     "NAME": "Sideboard",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put a card from your discard pile on top of your draw pile."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put a card from your 弃牌堆 on top of your 抽牌堆."
   },
   "${ModID}:SmithingHammer": {
     "NAME": "Smithing Hammer",
