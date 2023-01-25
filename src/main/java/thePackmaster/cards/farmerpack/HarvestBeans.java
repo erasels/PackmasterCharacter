@@ -38,12 +38,36 @@ public class HarvestBeans extends AbstractFarmerCard {
         this.baseDamage = baseSecondDamage;
         this.isMultiDamage = true;
         super.applyPowers();
-        this.secondDamage = this.damage;
-        this.isSecondDamageModified = this.isDamageModified;
+
+        int aoeDmg = this.damage;
+        boolean aoeModified = this.isDamageModified;
 
         this.baseDamage = origBase;
         this.isMultiDamage = false;
         super.applyPowers();
+
+        //recalcing also resets variables and auto recalculates these...
+        this.secondDamage = aoeDmg;
+        this.isSecondDamageModified = aoeModified;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        int origBase = this.baseDamage;
+
+        this.baseDamage = baseSecondDamage;
+        this.isMultiDamage = true;
+        super.calculateCardDamage(null);
+
+        int aoeDmg = this.damage;
+        boolean aoeModified = this.isDamageModified;
+
+        this.baseDamage = origBase;
+        this.isMultiDamage = false;
+        super.calculateCardDamage(mo);
+
+        this.secondDamage = aoeDmg;
+        this.isSecondDamageModified = aoeModified;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
