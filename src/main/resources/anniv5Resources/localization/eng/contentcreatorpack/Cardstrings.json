@@ -42,7 +42,8 @@
   },
   "${ModID}:Rhapsody": {
     "NAME": "Rhapsody",
-    "DESCRIPTION": "Gain !M! ${ModID}:Inspiration. NL Draw 2 cards."
+    "DESCRIPTION": "Gain !M! ${ModID}:Inspiration. NL Draw !${ModID}:m2! card.",
+    "UPGRADE_DESCRIPTION": "Gain !M! ${ModID}:Inspiration. NL Draw !${ModID}:m2! cards."
   },
   "${ModID}:Frostprime": {
     "NAME": "Frost Prime",
