@@ -1,7 +1,7 @@
 {
   "${ModID}:ModalChoice": {
     "TEXT": [
-      "Choose a Pack."
+      "选择一种卡包。"
     ]
   },
   "${ModID}:AbstractPackPreviewCard": {
@@ -14,69 +14,69 @@
   },
   "${ModID}:AtGameStart": {
     "TEXT": [
-      "These are the Packs available to you this run. Click Confirm to Proceed."
+      "这些卡包中的牌将会出现在本局游戏中，点击确认继续。"
     ]
   },
   "${ModID}:IroncladPack": {
     "TEXT": [
-      "Ironclad Ideals",
-      "A collection of reliable Ironclad cards, including access to Strength.",
+      "铁甲战士的信念",
+      "一套可靠的战士牌，包括力量源。",
       "MegaCrit"
     ]
   },
   "${ModID}:IroncladPackHat": {
     "TEXT": [
-      "A tough mask for a tough guy.",
-      "Ironclad Helm"
+      "铁甲哥当戴铁甲盔。",
+      "战士头盔"
     ]
   },
   "${ModID}:SilentPack": {
     "TEXT": [
-      "Silent Showdown",
-      "A collection of reliable Silent cards, including access to Poison and Discard.",
+      "静默猎手的收场",
+      "一套可靠的猎人牌，包括毒与弃牌。",
       "MegaCrit"
     ]
   },
   "${ModID}:SilentPackHat": {
     "TEXT": [
-      "A macabre keepsake, now adorning your noggin.",
-      "Silent Trophy"
+      "散发死亡气息的小物件，现在唯你命是从。",
+      "猎人战利品"
     ]
   },
   "${ModID}:DefectPack": {
     "TEXT": [
-      "Defective Dreams",
-      "A collection of reliable Defect cards, including access to Orbs.",
+      "故障性梦境",
+      "一套可靠的机器人牌，包括主要为充能球相关牌。",
       "MegaCrit"
     ]
   },
   "${ModID}:DefectPackHat": {
     "TEXT": [
-      "You feel a strange urge to enforce balance.",
-      "Defect Interface"
+      "你感到一股奇怪的，想要确立平衡的欲望。",
+      "故障接口"
     ]
   },
   "${ModID}:WatcherPack": {
     "TEXT": [
-      "Will of the Watcher",
-      "A collection of reliable Watcher cards (no access to Stances).",
+      "观者之愿景",
+      "一套可靠的观者牌(无红蓝)。",
       "MegaCrit"
     ]
   },
   "${ModID}:WatcherPackHat": {
     "TEXT": [
-      "Contemplative facewear & accessories.",
-      "Watcher Veil"
+      "默祷者面饰。",
+      "观者面纱"
     ]
   },
   "${ModID}:PackMainMenuUI": {
     "TEXT": [
-      "Custom Draft Mode",
+      "自定义构筑模式",
       "Turn this on to choose how your Packs are determined.",
-      "Random",
+      "随机",
       "Choice of 3",
-      "Pack Filtering Menu",
-      "Hat Menu"
+      "卡包剔除列表",
+      "帽子列表"
     ]
   },
   "${ModID}:PackSetup": {
@@ -87,14 +87,14 @@
   },
   "${ModID}:CurrentRunCardsTopPanelItem": {
     "TEXT": [
-      "Packs",
-      "{0} NL NL Click to view card pool for this run.",
-      "Cards available in this run"
+      "卡包",
+      "{0} NL NL 点击查看本局牌池。",
+      "本局游戏作为卡牌奖励出现的牌"
     ]
   },
   "${ModID}:CreditsRenderStrings": {
     "TEXT": [
-      "Additional Credits"
+      "特别鸣谢"
     ]
   },
   "${ModID}:PackFilterMenu": {

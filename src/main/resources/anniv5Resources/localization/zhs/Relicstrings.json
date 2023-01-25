@@ -66,7 +66,7 @@
   },
   "${ModID}:PMCollection": {
     "NAME": "大师卡集",
-    "FLAVOR": "Said to have been assembled by a consortium of wizards.",
+    "FLAVOR": "据说由一群魔法师收集结合。",
     "DESCRIPTIONS": [
       "拾起时，将一组随机卡包的所有牌加入牌组。",
       "可将它加入牌组。"
