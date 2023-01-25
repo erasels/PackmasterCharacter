@@ -9,7 +9,6 @@ import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.defect.DecreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -71,11 +70,7 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
     }
 
     public void passiveEffect(){
-        System.out.println("Crescent Moon orb activated");
         applyFocus();
-        if (!evoking){
-            evoking = false;
-        }
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
         AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player,passiveAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
