@@ -36,7 +36,7 @@ public class SheddingAction extends AbstractGameAction {
             if (maxCost < 0) break;
 
             //choose which are randomized, remove them from tempHand
-            while (maxCostCards.size() > 0) {
+            while (maxCostCards.size() > 0 && toRandomize.size() < amount) {
                 int r = AbstractDungeon.cardRandomRng.random(maxCostCards.size() -1);
                 AbstractCard card = maxCostCards.get(r);
                 toRandomize.add(card);
