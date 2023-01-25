@@ -33,6 +33,6 @@ public class Opposition extends AbstractAstrologerCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(4);
     }
 }
