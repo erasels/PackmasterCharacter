@@ -1,6 +1,7 @@
 package thePackmaster.cards.WitchesStrike;
 
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Leap;
@@ -41,6 +42,7 @@ public class WitchTwist extends AbstractWitchStrikeCard {
                         if (!Uninscribed.isEmpty()) {
                             AbstractCard targetCard = Uninscribed.get(AbstractDungeon.cardRandomRng.random(Uninscribed.size() - 1));
                             CardModifierManager.addModifier(targetCard, new InscribedMod(false,true));
+                            targetCard.superFlash(Color.VIOLET.cpy());
                         }
                     }
                     isDone = true;
