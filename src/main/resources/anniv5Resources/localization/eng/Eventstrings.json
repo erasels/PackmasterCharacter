@@ -29,7 +29,7 @@
       "[Trade-In] #gDo #gboth #g- #gSell #gonce, #gthen #gBuy #gtwice.",
       "[Locked] Requires ",
       "[Locked] No Cards to remove.",
-      "[Learn Dark Arts] #rBecome #rCursed #r- #rNecronomicurse. #gObtain #gPack #gRip.",
+      "[Learn Dark Arts] #rBecome #rCursed #r- #r2x #rNecronomicurse. #gObtain #gPack #gRip.",
       "[Take Sample] #gObtain #gPack #gin #ga #gJar #g(Pack #gRip #gPotion).",
       "[Cleansing Ritual] Remove a #rCurse from your Deck.",
       "[Locked] No Curses to remove.",
@@ -40,7 +40,7 @@
       "[Sell Hat] #gGain #g",
       " #gGold. #rLose #ryour #rHat.",
       "[Locked] No Hat to sell.",
-      "Go somewhere else.",
+      "[Locked] Vendor not here today.",
       "[Locked] Sold out"
     ]
   }
