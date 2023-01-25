@@ -19,6 +19,8 @@ public class S_r_ke extends AbstractDistortionCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
         baseMagicNumber = magicNumber = 2;
+
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
