@@ -30,7 +30,6 @@ public class Imp extends AbstractWarlockCard {
         super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ALL_ENEMY, CardColor.COLORLESS);
         magicNumber = baseMagicNumber = DAMAGE;
         secondDamage = baseSecondMagic = DAMAGE_INCREASE;
-        AutoplayField.autoplay.set(this, true);
         exhaust = true;
         this.applyPowers();
     }
