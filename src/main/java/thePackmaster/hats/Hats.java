@@ -252,29 +252,17 @@ public class Hats {
 
     public static void preRenderPlayer(SpriteBatch sb, AbstractPlayer p) {
         SpecialHat shat = specialHats.get(currentHat);
-        if (shat != null) {
-            if (playerHeadSlot != null && playerHeadSlot.getSkeleton().equals(skeleton)) {
-                float x = skeleton.getX() + playerHeadSlot.getBone().getWorldX(), y = skeleton.getY() + playerHeadSlot.getBone().getWorldY() - Y_OFF * playerHeadSlot.getBone().getScaleY();
-                shat.preRenderPlayer(sb, p, x, y);
-            }
-            else if (headslot != null && headslot.getSkeleton().equals(skeleton)) {
-                float x = skeleton.getX() + headslot.getBone().getWorldX(), y = skeleton.getY() + headslot.getBone().getWorldY() - Y_OFF * headslot.getBone().getScaleY();
-                shat.preRenderPlayer(sb, p, x, y);
-            }
+        if (shat != null && skeleton != null && headbone != null) {
+            float x = skeleton.getX() + headbone.getWorldX(), y = skeleton.getY() + headbone.getWorldY() + Y_OFF * headbone.getScaleY();
+            shat.preRenderPlayer(sb, p, x, y);
         }
     }
 
     public static void postRenderPlayer(SpriteBatch sb, AbstractPlayer p) {
         SpecialHat shat = specialHats.get(currentHat);
-        if (shat != null) {
-            if (playerHeadSlot != null && playerHeadSlot.getSkeleton().equals(skeleton)) {
-                float x = skeleton.getX() + playerHeadSlot.getBone().getWorldX(), y = skeleton.getY() + playerHeadSlot.getBone().getWorldY() - Y_OFF * playerHeadSlot.getBone().getScaleY();
-                shat.postRenderPlayer(sb, p, x, y);
-            }
-            else if (headslot != null && headslot.getSkeleton().equals(skeleton)) {
-                float x = skeleton.getX() + headslot.getBone().getWorldX(), y = skeleton.getY() + headslot.getBone().getWorldY() - Y_OFF * headslot.getBone().getScaleY();
-                shat.postRenderPlayer(sb, p, x, y);
-            }
+        if (shat != null && skeleton != null && headbone != null) {
+            float x = skeleton.getX() + headbone.getWorldX(), y = skeleton.getY() + headbone.getWorldY() + Y_OFF * headbone.getScaleY();
+            shat.postRenderPlayer(sb, p, x, y);
         }
     }
 }
