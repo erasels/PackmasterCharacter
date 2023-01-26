@@ -27,7 +27,7 @@
   },
   "${ModID}:Inferno": {
     "NAME": "Inferno",
-    "DESCRIPTION": "${ModID}:Hoard !hoard!. NL Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "{@@}Retain. NL After !hoard! more {!hoard!|1= play|>1= plays}, Deal !D! damage to ALL enemies. NL stslib:Persist !stslib:persist!."
   },
   "${ModID}:LethalShot": {
     "NAME": "Lethal Shot",

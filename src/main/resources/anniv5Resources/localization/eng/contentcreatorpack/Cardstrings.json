@@ -1,7 +1,7 @@
 {
   "${ModID}:OlexasCloak": {
     "NAME": "Olexa's Cloak",
-    "DESCRIPTION": "${ModID}:Hoard !hoard!. NL Gain !B! Block."
+    "DESCRIPTION": "{@@}Retain. NL After !hoard! more {!hoard!|1= play|>1= plays}, gain !B! Block. NL stslib:Persist !stslib:persist!."
   },
   "${ModID}:HuttsGamble": {
     "NAME": "Hutts' Gamble",

@@ -23,6 +23,8 @@ public class Inferno extends AbstractDimensionalCard {
         setFrame("infernoframe.png");
         isMultiDamage = true;
         HoardField.setBaseValue(this, 8);
+        selfRetain = true;
+        PersistFields.setBaseValue(this, 3);
     }
 
 

@@ -2,6 +2,7 @@ package thePackmaster.util.cardvars;
 
 import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import thePackmaster.cards.AbstractPackmasterCard;
 
 public class HoardVar extends DynamicVariable {
     @Override
@@ -11,12 +12,11 @@ public class HoardVar extends DynamicVariable {
 
     @Override
     public boolean isModified(AbstractCard card) {
-        return HoardField.isHoardUpgraded.get(card);
+        return HoardField.isHoardModified.get(card);
     }
 
-    @Override
     public void setIsModified(AbstractCard card, boolean v) {
-        HoardField.isHoardUpgraded.set(card, v);
+        HoardField.isHoardModified.set(card, v);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class HoardVar extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
-        return HoardField.hoard.get(card);
+        return HoardField.baseHoard.get(card);
     }
 
     @Override
