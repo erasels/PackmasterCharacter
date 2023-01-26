@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Inspiration",
+    "PROPER_NAME": "灵感",
     "NAMES": [
-      "inspiration"
+      "inspiration",
+      "灵感"
     ],
-    "DESCRIPTION": "Inspiration increases the damage and #yBlock of the next card played by a percentage. #bStacks #badditively."
+    "DESCRIPTION": "每层灵感提高下张牌的伤害或 #y格挡 量，每级提高 #b1% 。"
   }
 ]

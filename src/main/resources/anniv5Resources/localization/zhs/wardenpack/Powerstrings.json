@@ -3,13 +3,13 @@
     "NAME": "Enigmancy",
     "DESCRIPTIONS": [
       "Each turn, 获得 #b",
-      " Energy and decrease this 获得 by #b1."
+      " Energy and decrease this 获得 by #b1。"
     ]
   },
   "${ModID}:DivineMightPower": {
     "NAME": "Divine Might",
     "DESCRIPTIONS": [
-      "When #yDivine #yMight is played a获得, 获得 [E] [E] , draw #b2 cards and 获得 #b10 力量 本回合."
+      "When #yDivine #yMight is played a获得, 获得 [E] [E] , draw #b2 cards and 获得 #b10 力量 本回合。"
     ]
   }
 }

@@ -2,14 +2,14 @@
   "${ModID}:AutoBattlerPower": {
     "NAME": "Auto Battler",
     "DESCRIPTIONS": [
-      "You automatically play cards from left to right at the frontmost foe."
+      "You automatically play cards from left to right at the frontmost foe。"
     ]
   },
   "${ModID}:FinalFormPower": {
     "NAME": "Final Form",
     "DESCRIPTIONS": [
-      "At the start of your turn, play and #y消耗 a copy of ",
-      "."
+      "你的回合开始时， play and #y消耗 a copy of ",
+      "。"
     ]
   }
 }

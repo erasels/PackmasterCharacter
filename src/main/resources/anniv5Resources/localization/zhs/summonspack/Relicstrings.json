@@ -1,10 +1,10 @@
 {
   "${ModID}:BlueSkull": {
     "NAME": "Blue Skull",
-    "FLAVOR": "A small skull, oddly blue with no signs of dye or paint.",
+    "FLAVOR": "A small skull, oddly blue with no signs of dye or paint。",
     "DESCRIPTIONS": [
       "While your 生命 is at or below 50%, you have #b",
-      " additional #yFocus."
+      " additional #yFocus。"
     ]
   }
 }

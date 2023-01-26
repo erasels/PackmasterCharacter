@@ -2,26 +2,26 @@
   "${ModID}:SwordAndBoard": {
     "NAME": "Sword and Board",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["${ModID}:Even: ", "造成 !D! 点伤害。", " NL ","${ModID}:Odd: ", "获得 !B! Block"]
+    "EXTENDED_DESCRIPTION": ["${ModID}:Even: ", "造成 !D! 点伤害。", " NL ","${ModID}:Odd: ", "获得 !B! 格挡"]
   },
   "${ModID}:QuickReflex": {
     "NAME": "Quick Reflex",
-    "DESCRIPTION": "获得 !B! Block",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First: ", "获得 !B! Block"]
+    "DESCRIPTION": "获得 !B! 格挡",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First: ", "获得 !B! 格挡"]
   },
   "${ModID}:PrimeDirective": {
     "NAME": "Prime Directive",
-    "DESCRIPTION": "Your Attacks have NL ${ModID}:Odd: (+ !M! damage)."
+    "DESCRIPTION": "Your Attacks have NL ${ModID}:Odd: (+ !M! damage)。"
   },
   "${ModID}:WitzBolt": {
     "NAME": "Witz Bolt",
     "DESCRIPTION": "造成 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Odd: ", "Apply !M! Weak and Vulnerable."]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Odd: ", "Apply !M! Weak and Vulnerable。"]
   },
   "${ModID}:ElementOfSurprise": {
     "NAME": "Element of Surprise",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["${ModID}:First: ", "Your next card is played twice."]
+    "EXTENDED_DESCRIPTION": ["${ModID}:First: ", "Your next card is played twice。"]
   },
   "${ModID}:GammaWard": {
     "NAME": "Gamma Ward",
@@ -30,13 +30,13 @@
   },
   "${ModID}:Flourish": {
     "NAME": "Flourish",
-    "DESCRIPTION": "获得 !M! Plated Armor.",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Heal !M! 生命.", "${ModID}:Odd: ", "获得 [E]"]
+    "DESCRIPTION": "获得 !M! Plated Armor。",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Heal !M! 生命。", "${ModID}:Odd: ", "获得 [E]"]
   },
   "${ModID}:EvenOddAppend": {
     "NAME": "",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": [" NL (+ ", " damage.)", " NL 获得 ", " Block"]
+    "EXTENDED_DESCRIPTION": [" NL (+ ", " damage.)", " NL 获得 ", " 格挡"]
   },
   "${ModID}:WindUpBomb": {
     "NAME": "Windup Bomb",
@@ -46,7 +46,7 @@
   "${ModID}:LeftHook": {
     "NAME": "Left Hook",
     "DESCRIPTION": "造成 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Odd: ", "Stays in your hand."]
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Odd: ", "Stays in your hand。"]
   },
   "${ModID}:Battlecry": {
     "NAME": "Battlecry",

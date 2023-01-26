@@ -2,17 +2,17 @@
 	"${ModID}:DarkOfNightPower": {
 		"NAME": "Dark Night",
 		"DESCRIPTIONS": [
-			"The next card that #y消耗s is played twice.",
+			"The next card that #y消耗s is played twice。",
 			"The next #b",
-			" cards that #y消耗 are played twice."
+			" cards that #y消耗 are played twice。"
 		]
 	},
 	"${ModID}:CallOfTheGravePower": {
 		"NAME": "Call of the Grave",
 			"DESCRIPTIONS": [
-				"At the start of your turn, play a random #yBuried card, then #yPurge it.",
-				"At the start of your turn, play #b",
-				" random #yBuried cards, then #yPurge them."
+				"你的回合开始时， play a random #yBuried card, then #yPurge it。",
+				"你的回合开始时， play #b",
+				" random #yBuried cards, then #yPurge them。"
 			]
 	}
 }

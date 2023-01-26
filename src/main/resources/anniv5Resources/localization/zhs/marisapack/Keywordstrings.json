@@ -5,20 +5,20 @@
       "amplify",
       "amplified"
     ],
-    "DESCRIPTION": "If you have enough [E] pay the additional cost to activate the effect."
+    "DESCRIPTION": "If you have enough [E] pay the additional cost to activate the effect。"
   },
   {
     "PROPER_NAME": "Charge Up",
     "NAMES": [
       "charge up"
     ],
-    "DESCRIPTION": "At #b6 or more stacks, double the damage of the next Attack and lose #b6 stacks."
+    "DESCRIPTION": "At #b6 or more stacks, double the damage of the next Attack and 失去 #b6 stacks。"
   },
   {
     "PROPER_NAME": "Flurry",
     "NAMES": [
       "flurry"
     ],
-    "DESCRIPTION": "Specified effect triggers every time you play 一张牌 本回合."
+    "DESCRIPTION": "Specified effect triggers every time you play 一张牌 本回合。"
   }
 ]

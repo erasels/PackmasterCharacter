@@ -1,20 +1,20 @@
 {
   "${ModID}:Quickdraw": {
     "NAME": "Quickdraw",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL Next turn, draw 1 less card."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL Next turn, draw 1 less card。"
   },
   "${ModID}:Glare": {
     "NAME": "Glare",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable.",
-    "UPGRADE_DESCRIPTION": "保留 。 NL Apply !M! Weak and Vulnerable."
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL Apply !M! Weak and Vulnerable。"
   },
   "${ModID}:HoleUp": {
     "NAME": "Hole Up",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Weak."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Weak。"
   },
   "${ModID}:Headshot": {
     "NAME": "Headshot",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage if played from the middle of your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage if played from the middle of your hand。"
   },
   "${ModID}:Determination": {
     "NAME": "Determination",
@@ -23,22 +23,22 @@
   },
   "${ModID}:Virtue": {
     "NAME": "Virtue",
-    "DESCRIPTION": "保留 。 NL Reduce each of your debuffs by !M!."
+    "DESCRIPTION": "保留 。 NL Reduce each of your debuffs by !M!。"
   },
   "${ModID}:Flas生命owder": {
     "NAME": "Flash Powder",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ALL enemies lose !M! 点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ALL enemies 失去 !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Purgatory": {
     "NAME": "Purgatory",
-    "DESCRIPTION": "虚无 。 NL Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "虚无 。 NL 对所有敌人造成 !D! 点伤害。"
   },
   "${ModID}:OverwhelmingPower": {
     "NAME": "Overwhelming Power",
-    "DESCRIPTION": "获得 [E] [E] [E]. NL Draw 3 cards. NL 每当 you end your turn with 0 Energy, lose !M! 生命."
+    "DESCRIPTION": "获得 [E] [E] [E]. NL Draw 3 cards. NL 每当 you end your turn with 0 Energy, 失去 !M! 生命。"
   },
   "${ModID}:DeadOrAlive": {
     "NAME": "Dead or Alive",
-    "DESCRIPTION": "Deal !D! damage X times. NL If Fatal, get a ${ModID}:Bounty. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害 X times. NL If Fatal, get a ${ModID}:Bounty. NL 消耗 。"
   }
 }

@@ -2,7 +2,7 @@
   "${ModID}:BlacksmithsPack": {
     "TEXT": [
       "Blacksmith's Pack",
-      "Become as the legendary Blacksmith who lost their tongs.",
+      "Become as the legendary Blacksmith who lost their tongs。",
       "Pandemonium"
     ]
   },
@@ -13,12 +13,12 @@
   },
   "${ModID}:MasterworkScreen": {
     "TEXT": [
-      "Upgrade."
+      "Upgrade。"
     ]
   },
   "${ModID}:BlacksmithsPackHat": {
     "TEXT": [
-      "You've come to practice metalwork.",
+      "You've come to practice metalwork。",
       "Welding Mask"
     ]
   }

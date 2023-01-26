@@ -7,7 +7,7 @@
       "swarms\u00a0of\u00a0bees",
       "Swarms\u00a0of\u00a0bees"
     ],
-    "DESCRIPTION": "Orb: Deals damage to ALL enemies."
+    "DESCRIPTION": "Orb: Deals damage to ALL enemies。"
   },
   {
     "PROPER_NAME": "Rainbow\u00a0Louse",
@@ -15,7 +15,7 @@
       "rainbow\u00a0louse",
       "Rainbow\u00a0louse"
     ],
-    "DESCRIPTION": "Orb: 抽一张牌 at the start of your turn. When #yEvoked, draw 2 cards."
+    "DESCRIPTION": "Orb: 抽一张牌 at the start of your turn. When #yEvoked, draw 2 cards。"
   },
   {
     "PROPER_NAME": "Panda",
@@ -24,35 +24,35 @@
       "Pandas",
       "pandas"
     ],
-    "DESCRIPTION": "Orb: Deals damage to a random enemy 回合结束时."
+    "DESCRIPTION": "Orb: Deals damage to a random enemy 回合结束时。"
   },
   {
     "PROPER_NAME": "Wolf",
     "NAMES": [
       "wolf"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the enemy with the least 生命. Damage is increased by the number of orbs that are #yChanneled. When #yEvoked, 获得 an orb slot."
+    "DESCRIPTION": "Orb: Deals damage to the enemy with the least 生命。 Damage is increased by the number of orbs that are #yChanneled. When #yEvoked, 获得 an orb slot。"
   },
   {
     "PROPER_NAME": "Porcupine",
     "NAMES": [
       "porcupine"
     ],
-    "DESCRIPTION": "Orb: Generates #yQuills. When #yEvoked, 获得 #yThorns."
+    "DESCRIPTION": "Orb: Generates #yQuills. When #yEvoked, 获得 #yThorns。"
   },
   {
     "PROPER_NAME": "Leprechaun",
     "NAMES": [
       "leprechaun"
     ],
-    "DESCRIPTION": "Orb: Rolls #yDice. When #yEvoked, applies #yJinx to ALL enemies."
+    "DESCRIPTION": "Orb: Rolls #yDice. When #yEvoked, applies #yJinx to ALL enemies。"
   },
   {
     "PROPER_NAME": "Jinx",
     "NAMES": [
       "jinx"
     ],
-    "DESCRIPTION": "Jinxed enemies lose 生命 每当 they receive a debuff."
+    "DESCRIPTION": "Jinxed enemies 失去 生命 每当 they receive a debuff。"
   },
   {
     "PROPER_NAME": "Fire\u00a0Spirit",
@@ -60,6 +60,6 @@
       "fire\u00a0spirit",
       "Fire\u00a0spirit"
     ],
-    "DESCRIPTION": "Orb: Apply #yIgnite to ALL enemies. 获得 #yFocus when evoked."
+    "DESCRIPTION": "Orb: Apply #yIgnite to ALL enemies. 获得 #yFocus when evoked。"
   }
 ]

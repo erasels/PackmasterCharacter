@@ -1,18 +1,18 @@
 {
   "${ModID}:AqueductsPower": {
     "NAME": "Aqueducts",
-    "DESCRIPTIONS": ["每当 you draw an extr一张牌, deal #b", " damage to ALL enemies."]
+    "DESCRIPTIONS": ["每当 you draw an extr一张牌, deal #b", " damage to ALL enemies。"]
   },
   "${ModID}:FlowPower": {
     "NAME": "Flowing",
-    "DESCRIPTIONS": ["At the start of your next turn, ", "draw #b", " cards.", "抽一张牌。"]
+    "DESCRIPTIONS": ["At the start of your next turn, ", "draw #b", " cards。", "抽一张牌。"]
   },
   "${ModID}:PneumaticsPower": {
     "NAME": "Pneumatics",
-    "DESCRIPTIONS": ["At the start of next turn, #yFlow.", "At the start of the next #b", " turns, #yFlow."]
+    "DESCRIPTIONS": ["At the start of next turn, #yFlow。", "At the start of the next #b", " turns, #yFlow。"]
   },
   "${ModID}:ReleaseValvePower": {
     "NAME": "Release Valve",
-    "DESCRIPTIONS": ["When you play #yFlow, this enemy takes #b", " damage for each card discarded."]
+    "DESCRIPTIONS": ["When you play #yFlow, this enemy takes #b", " damage for each card 丢弃ed。"]
   }
 }

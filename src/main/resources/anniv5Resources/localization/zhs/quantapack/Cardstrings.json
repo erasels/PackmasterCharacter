@@ -1,30 +1,30 @@
 {
   "${ModID}:MissileStrike": {
     "NAME": "Missile Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to ALL enemies."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to ALL enemies。"
   },
   "${ModID}:MagicDart": {
     "NAME": "Magic Dart",
-    "DESCRIPTION": "Deal damage equal to your hand size.",
-    "UPGRADE_DESCRIPTION": "保留 。 NL Deal damage equal to your hand size.",
+    "DESCRIPTION": "Deal damage equal to your hand size。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL Deal damage equal to your hand size。",
     "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
   },
   "${ModID}:Cull": {
     "NAME": "Cull",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL EVERYONE loses !M! 生命."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL EVERYONE 失去s !M! 生命。"
   },
   "${ModID}:Potential": {
     "NAME": "Potential",
-    "DESCRIPTION": "获得 !M! Temporary_生命. NL Draw !${ModID}:m2! card. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! Temporary_生命. NL Draw !${ModID}:m2! cards. NL 消耗 。"
+    "DESCRIPTION": "获得 !M! Temporary_生命。 NL Draw !${ModID}:m2! card. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! Temporary_生命。 NL Draw !${ModID}:m2! cards. NL 消耗 。"
   },
   "${ModID}:Aura": {
     "NAME": "Aura",
-    "DESCRIPTION": "Prevent the next time you would lose 生命."
+    "DESCRIPTION": "Prevent the next time you would 失去 生命。"
   },
   "${ModID}:MAXPOWER": {
     "NAME": "MAX POWER",
-    "DESCRIPTION": "Raise your 力量 NL to 11."
+    "DESCRIPTION": "Raise your 力量 NL to 11。"
   },
   "${ModID}:Flow": {
     "NAME": "Flow",
@@ -32,8 +32,8 @@
   },
   "${ModID}:Manaburst": {
     "NAME": "Manaburst",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a random 0-cost Attack from your 弃牌堆 to your hand.",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add !M! random 0-cost Attacks from your 弃牌堆 to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a random 0-cost Attack from your 弃牌堆 to your hand。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add !M! random 0-cost Attacks from your 弃牌堆 to your hand。"
   },
   "${ModID}:Dominate": {
     "NAME": "Dominate",
@@ -42,6 +42,6 @@
   },
   "${ModID}:IchorGoblet": {
     "NAME": "Ichor Goblet",
-    "DESCRIPTION": "获得 [E] at the start of next !M! turns. If you lose 生命, 获得 it all immediately."
+    "DESCRIPTION": "获得 [E] at the start of next !M! turns. If you 失去 生命, 获得 it all immediately。"
   }
 }

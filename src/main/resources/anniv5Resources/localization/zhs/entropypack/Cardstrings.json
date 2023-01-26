@@ -1,20 +1,20 @@
 {
   "${ModID}:Disorder": {
     "NAME": "Disorder",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! ${ModID}:Entropy."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! ${ModID}:Entropy。"
   },
   "${ModID}:Wither": {
     "NAME": "Wither",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ruin.",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ruin to ALL enemies."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ruin。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ruin to ALL enemies。"
   },
   "${ModID}:Collapse": {
     "NAME": "Collapse",
-    "DESCRIPTION": "${ModID}:Unstable. NL 抽一张牌。 NL 获得 !M! temporary 力量 。 NL 获得 1 Vulnerable."
+    "DESCRIPTION": "${ModID}:Unstable. NL 抽一张牌。 NL 获得 !M! temporary 力量 。 NL 获得 1 Vulnerable。"
   },
   "${ModID}:Construct": {
     "NAME": "Construct",
-    "DESCRIPTION": "${ModID}:Unstable. NL Take !M! less damage from attacks 本回合. NL 获得 2 Weak."
+    "DESCRIPTION": "${ModID}:Unstable. NL Take !M! less damage from attacks 本回合. NL 获得 2 Weak。"
   },
   "${ModID}:Freedom": {
     "NAME": "Freedom",
@@ -22,23 +22,23 @@
   },
   "${ModID}:RuinousPortent": {
     "NAME": "Ruinous Portent",
-    "DESCRIPTION": "Channel X ${ModID}:Oblivion.",
-    "UPGRADE_DESCRIPTION": "{@@}Channel X{!M!|1=+1|@= + !M!} anniv5:Oblivion."
+    "DESCRIPTION": "Channel X ${ModID}:Oblivion。",
+    "UPGRADE_DESCRIPTION": "{@@}Channel X{!M!|1=+1|@= + !M!} anniv5:Oblivion。"
   },
   "${ModID}:Unbind": {
     "NAME": "Unbind",
-    "DESCRIPTION": "Discard all non-Attack cards in your hand. NL Deal !D! damage for each card discarded."
+    "DESCRIPTION": "丢弃 all non-Attack cards in your hand. NL 造成 !D! 点伤害 for each card 丢弃ed。"
   },
   "${ModID}:Diffusion": {
     "NAME": "Diffusion",
-    "DESCRIPTION": "At the start of your turn, 获得 !M! ${ModID}:Entropy and 抽一张牌。"
+    "DESCRIPTION": "你的回合开始时， 获得 !M! ${ModID}:Entropy and 抽一张牌。"
   },
   "${ModID}:Waning": {
     "NAME": "Waning",
-    "DESCRIPTION": "${ModID}:Unstable. NL Apply !M! ${ModID}:Ruin."
+    "DESCRIPTION": "${ModID}:Unstable. NL Apply !M! ${ModID}:Ruin。"
   },
   "${ModID}:Entanglement": {
     "NAME": "Entanglement",
-    "DESCRIPTION": "每当 you receive a debuff, apply !M! ${ModID}:Ruin to a random enemy."
+    "DESCRIPTION": "每当 you receive a debuff, apply !M! ${ModID}:Ruin to a random enemy。"
   }
 }

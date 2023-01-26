@@ -1,7 +1,7 @@
 {
   "${ModID}:StylePoints": {
     "NAME": "Style Points",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Remove your Weak. NL Add a random card from your hat's Pack into your hand."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Remove your Weak. NL Add a random card from your hat's Pack into your hand。"
   },
   "${ModID}:LetsPlay8Ball": {
     "NAME": "Let's Play 8 Ball!",
@@ -17,13 +17,13 @@
   },
   "${ModID}:ZaHando": {
     "NAME": "Za Hando",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 the middle card(s) of your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 the middle card(s) of your hand。"
   },
   "${ModID}:LetsDraft": {
     "NAME": "Let's Draft!",
     "DESCRIPTION": "造成 !D! 点伤害。 NL Choose 一张牌。 Shuffle a copy of it into your 抽牌堆。",
     "EXTENDED_DESCRIPTION": [
-      "create a copy of."
+      "create a copy of。"
     ]
   },
   "${ModID}:Beacon": {
@@ -40,23 +40,23 @@
   },
   "${ModID}:AutoBattler": {
     "NAME": "Auto Battler",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! Dexterity. NL You play cards automatically."
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! Dexterity. NL You play cards automatically。"
   },
   "${ModID}:ShiningStyle": {
     "NAME": "Shining Style",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! Dexterity. NL 战斗开始： 获得 !${ModID}:m2! *Gold."
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! Dexterity. NL 战斗开始： 获得 !${ModID}:m2! *Gold。"
   },
   "${ModID}:FinalForm": {
-    "NAME": "This Isn't Even My...",
-    "DESCRIPTION": "虚无 。 NL 消耗 1 random card. NL At the start of your turn, play and 消耗 a copy of it.",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 消耗 1 card. NL At the start of your turn, play and 消耗 a copy of it.",
+    "NAME": "This Isn't Even My..。",
+    "DESCRIPTION": "虚无 。 NL 消耗 1 random card. NL 你的回合开始时， play and 消耗 a copy of it。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 消耗 1 card. NL 你的回合开始时， play and 消耗 a copy of it。",
     "EXTENDED_DESCRIPTION": [
-      "消耗 for Final Form."
+      "消耗 for Final Form。"
     ]
   },
   "${ModID}:MidnightStrike": {
     "NAME": "Midnight Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this is the 12th card played 本场战斗, deal !${ModID}:sd! damage instead.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this is the 12th card played 本场战斗, deal !${ModID}:sd! damage instead。",
     "EXTENDED_DESCRIPTION": [
       " NL (Played ",
       " card.)",

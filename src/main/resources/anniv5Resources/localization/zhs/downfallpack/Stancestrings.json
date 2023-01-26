@@ -2,7 +2,7 @@
   "${ModID}:Ancient": {
     "NAME": "Ancient",
     "DESCRIPTION": [
-      "If you have less than #b6 Plated Armor at the start of your turn, 获得 #b2 Plated Armor. NL When you leave this stance, 获得 #b1 Artifact."
+      "If you have less than #b6 Plated Armor 你的回合开始时， 获得 #b2 Plated Armor. NL When you leave this stance, 获得 #b1 Artifact。"
     ]
   }
 }

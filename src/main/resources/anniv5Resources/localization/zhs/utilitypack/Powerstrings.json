@@ -1,6 +1,6 @@
 {
   "${ModID}:PlasmaShield": {
     "NAME": "Plasma Shield",
-    "DESCRIPTIONS": ["回合结束时， 获得 #b{0} #yBlock if you have #yPlasma."]
+    "DESCRIPTIONS": ["回合结束时， 获得 #b{0} #y格挡 if you have #yPlasma。"]
   }
 }

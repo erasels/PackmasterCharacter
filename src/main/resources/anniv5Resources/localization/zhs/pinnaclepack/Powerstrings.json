@@ -3,19 +3,19 @@
     "NAME": "Capacitor",
     "DESCRIPTIONS": [
       "本回合, you can hold #b",
-      " more cards in your hand."
+      " more cards in your hand。"
     ]
   },
   "${ModID}:Cooking": {
     "NAME": "Cooking Power",
     "DESCRIPTIONS": [
-      "回合结束时， cook a #yCroquette."
+      "回合结束时， cook a #yCroquette。"
     ]
   },
   "${ModID}:Cooking_": {
     "NAME": "Cooking Power+",
     "DESCRIPTIONS": [
-      "回合结束时， cook an upgraded #yCroquette."
+      "回合结束时， cook an upgraded #yCroquette。"
     ]
   }
 }

@@ -1,12 +1,12 @@
 {
   "${ModID}:AcidicSpray": {
     "NAME": "Acidic Spray",
-    "DESCRIPTION": "Deal !D! damage for each debuff on the target. NL 给予 !M! 层 虚弱 。"
+    "DESCRIPTION": "造成 !D! 点伤害 for each debuff on the target. NL 给予 !M! 层 虚弱 。"
   },
   "${ModID}:PoisonMastery": {
     "NAME": "Poison Mastery",
-    "DESCRIPTION": "Increase 生命 loss from Poison by 100%. NL 获得 a *Poison *Potion.",
-    "UPGRADE_DESCRIPTION": "Increase 生命 loss from Poison by 100%. NL 获得 !M! *Poison *Potions."
+    "DESCRIPTION": "Increase 生命 loss from Poison by 100%. NL 获得 a *Poison *Potion。",
+    "UPGRADE_DESCRIPTION": "Increase 生命 loss from Poison by 100%. NL 获得 !M! *Poison *Potions。"
   },
   "${ModID}:Cannonball": {
     "NAME": "Cannonball",
@@ -14,8 +14,8 @@
   },
   "${ModID}:CaptainsCabin": {
     "NAME": "Captain's Cabin",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! *Cannonball.",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! *Cannonballs."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! *Cannonball。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! *Cannonballs。"
   },
   "${ModID}:TerrorOfTheSeas": {
     "NAME": "Terror of the Seas",
@@ -25,7 +25,7 @@
     "NAME": "Mass Production",
     "DESCRIPTION": "Choose 一张牌 in your 抽牌堆。 消耗 your hand and replace it with copies of that card. 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "Choose 一张牌 to Mass Produce."
+      "Choose 一张牌 to Mass Produce。"
     ]
   },
   "${ModID}:ScrapCannon": {
@@ -34,15 +34,15 @@
   },
   "${ModID}:BloodRitual": {
     "NAME": "Blood Ritual",
-    "DESCRIPTION": "Lose !M! 生命. NL 获得 1 Ritual."
+    "DESCRIPTION": "失去 !M! 生命。 NL 获得 1 Ritual。"
   },
   "${ModID}:OverTime": {
     "NAME": "Over Time",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL For each card that you've *消耗ed 本场战斗, increase damage by !M!."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL For each card that you've *消耗ed 本场战斗, increase damage by !M!。"
   },
   "${ModID}:SlimeSpray": {
     "NAME": "Slime Spray",
-    "DESCRIPTION": "保留 。 NL Deal !D! damage, apply !M! Poison, and apply Slow to ALL enemies."
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害, apply !M! Poison, and apply Slow to ALL enemies。"
   },
   "${ModID}:StickStrike": {
     "NAME": "Stick Strike",

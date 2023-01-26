@@ -1,11 +1,11 @@
 {
   "${ModID}:Polishing": {
     "NAME": "Polishing",
-    "DESCRIPTION": "每当 you play an Attack, increase its damage by !M! 本场战斗."
+    "DESCRIPTION": "每当 you play an Attack, increase its damage by !M! 本场战斗。"
   },
   "${ModID}:WorkHammer": {
     "NAME": "Work Hammer",
-    "DESCRIPTION": "Deal !D! ${ModID}:Front damage. NL Give enemy !M! Plated Armor."
+    "DESCRIPTION": "Deal !D! ${ModID}:Front damage. NL Give enemy !M! Plated Armor。"
   },
   "${ModID}:Chained": {
     "NAME": "Chained",
@@ -13,11 +13,11 @@
   },
   "${ModID}:StormStrike": {
     "NAME": "Storm Strike",
-    "DESCRIPTION": "Deal !D! ${ModID}:Feral damage. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! ${ModID}:Feral damage. NL Apply !M! Vulnerable。"
   },
   "${ModID}:WarSong": {
     "NAME": "War Song",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL 获得 !${ModID}:m2! Vigor."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL 获得 !${ModID}:m2! 活力。"
   },
   "${ModID}:Rapier": {
     "NAME": "Rapier",
@@ -25,13 +25,13 @@
   },
   "${ModID}:Fall": {
     "NAME": "Fall",
-    "DESCRIPTION": "Deal ${ModID}:Front damage equal to the number of cards in your NL 抽牌堆 + 6.",
-    "UPGRADE_DESCRIPTION": "固有 。 NL Deal ${ModID}:Front damage equal to the number of cards in your NL 抽牌堆 + 6.",
+    "DESCRIPTION": "Deal ${ModID}:Front damage equal to the number of cards in your NL 抽牌堆 + 6。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL Deal ${ModID}:Front damage equal to the number of cards in your NL 抽牌堆 + 6。",
     "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
   },
   "${ModID}:Turtle": {
     "NAME": "Turtle",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Your next Attack deals ${ModID}:Feral damage."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Your next Attack deals ${ModID}:Feral damage。"
   },
   "${ModID}:Bolas": {
     "NAME": "Bolas",
@@ -39,6 +39,6 @@
   },
   "${ModID}:FFBlade": {
     "NAME": "FF Blade",
-    "DESCRIPTION": "Deal !D! ${ModID}:Feral and ${ModID}:Front damage."
+    "DESCRIPTION": "Deal !D! ${ModID}:Feral and ${ModID}:Front damage。"
   }
 }

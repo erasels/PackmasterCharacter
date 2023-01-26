@@ -3,20 +3,20 @@
     "NAME": "Hunter's Mark",
     "DESCRIPTIONS": [
       "Takes #b",
-      "% more damage from attacks."
+      "% more damage from attacks。"
     ]
   },
   "${ModID}:NotHunted": {
     "NAME": "Not Hunted",
     "DESCRIPTIONS": [
       "Takes #b",
-      "% less damage from attacks. When the #yhunted enemy dies, remove this."
+      "% less damage from attacks. When the #yhunted enemy dies, remove this。"
     ]
   },
   "${ModID}:PerfectGuardPower": {
     "NAME": "Perfect Guard",
     "DESCRIPTIONS": [
-      "If your #yBlock is broken exactly 本回合, 获得 #b",
+      "If your #y格挡 is broken exactly 本回合, 获得 #b",
       " 力量 。"
     ]
   },
@@ -24,14 +24,14 @@
     "NAME": "Enraged",
     "DESCRIPTIONS": [
       "If no enemy intends to attack you, 获得 #b",
-      " #y力量 at the end of the turn."
+      " #y力量 at the end of the turn。"
     ]
   },
   "${ModID}:GlassArmorPower": {
     "NAME": "Glass Armor",
     "DESCRIPTIONS": [
       "获得 #b",
-      " #yBlock at the end of the turn. If you take attack damage, lose this power."
+      " #y格挡 at the end of the turn. If you take attack damage, 失去 this power。"
     ]
   },
   "${ModID}:DelayedDamagePower": {
@@ -39,7 +39,7 @@
     "DESCRIPTIONS": [
       "Deals #b",
       " damage in #b",
-      " turns."
+      " turns。"
     ]
   },
   "${ModID}:TimePiecePower": {

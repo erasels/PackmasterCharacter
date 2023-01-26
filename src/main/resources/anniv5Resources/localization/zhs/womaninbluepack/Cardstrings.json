@@ -2,46 +2,46 @@
   "${ModID}:FireVial": {
     "NAME": "Fire Vial",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Ignite. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Ignite. NL 消耗 。"
   },
   "${ModID}:ExplosiveVial": {
     "NAME": "Explosive Vial",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Ignite to ALL enemies. NL 消耗 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Ignite to ALL enemies. NL 消耗 。"
   },
-  "${ModID}:BlockVial": {
-    "NAME": "Block Vial",
+  "${ModID}:格挡Vial": {
+    "NAME": "格挡 Vial",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL Your Block is not removed at the start of your next turn. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL Your 格挡 is not removed at the start of your next turn. NL 消耗 。"
   },
   "${ModID}:DynamicVial": {
     "NAME": "Dynamic Vial",
     "DESCRIPTION": "Choose: 获得 [E] [E] or Draw 3 cards. NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["获得 [E] [E] .", "Draw 3 cards."]
+    "EXTENDED_DESCRIPTION": ["获得 [E] [E] 。", "Draw 3 cards。"]
   },
   "${ModID}:MetallicVial": {
     "NAME": "Metallic Vial",
     "DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact. NL stslib:消耗ive !stslib:ex!.",
-    "EXTENDED_DESCRIPTION": ["获得 4 Plated Armor.", "获得 3 Thorns.","获得 2 Artifact."]
+    "UPGRADE_DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact. NL stslib:消耗ive !stslib:ex!。",
+    "EXTENDED_DESCRIPTION": ["获得 4 Plated Armor。", "获得 3 Thorns。","获得 2 Artifact。"]
   },
   "${ModID}:QuickBrew": {
     "NAME": "Quick Brew",
-    "DESCRIPTION": "Choose: 获得 2 力量, or 获得 3 Focus.",
-    "UPGRADE_DESCRIPTION": "Choose: 获得 2 力量, 获得 2 Dexterity, or 获得 2 Focus.",
-    "EXTENDED_DESCRIPTION": ["获得 2 力量 。", "获得 2 Dexterity.","获得 2 Focus."]
+    "DESCRIPTION": "Choose: 获得 2 力量, or 获得 3 Focus。",
+    "UPGRADE_DESCRIPTION": "Choose: 获得 2 力量, 获得 2 Dexterity, or 获得 2 Focus。",
+    "EXTENDED_DESCRIPTION": ["获得 2 力量 。", "获得 2 Dexterity。","获得 2 Focus。"]
   },
   "${ModID}:ToxicVial": {
     "NAME": "Toxic Vial",
     "DESCRIPTION": "Choose: Apply 3 Weak, or Apply 8 Poison. NL 消耗 。",
     "UPGRADE_DESCRIPTION": "Choose: Apply 3 Vulnerable, Apply 3 Weak, or Apply 8 Poison. NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["Apply 3 Vulnerable.", "Apply 3 Weak.","Apply 8 Poison."]
+    "EXTENDED_DESCRIPTION": ["Apply 3 Vulnerable。", "Apply 3 Weak。","Apply 8 Poison。"]
   },
   "${ModID}:AttackVial": {
     "NAME": "Attack Vial",
     "DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played. NL stslib:消耗ive !stslib:ex!.",
-    "EXTENDED_DESCRIPTION": ["Choose 1 of 3 Attacks to 获得. It costs 0 until played."]
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played. NL stslib:消耗ive !stslib:ex!。",
+    "EXTENDED_DESCRIPTION": ["Choose 1 of 3 Attacks to 获得. It costs 0 until played。"]
   },
   "${ModID}:ChaosVial": {
     "NAME": "Chaos Vial",
@@ -50,6 +50,6 @@
   "${ModID}:VialOfMemory": {
     "NAME": "Vial of Memory",
     "DESCRIPTION": "Choose 一张牌 in your 弃牌堆 and return it to your hand. It costs 0 until played. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose 一张牌 in your 弃牌堆 and return it to your hand. It costs 0 until played. NL stslib:消耗ive !stslib:ex!."
+    "UPGRADE_DESCRIPTION": "Choose 一张牌 in your 弃牌堆 and return it to your hand. It costs 0 until played. NL stslib:消耗ive !stslib:ex!。"
   }
 }

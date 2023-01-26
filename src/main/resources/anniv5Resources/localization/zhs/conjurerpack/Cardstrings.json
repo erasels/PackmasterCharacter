@@ -1,6 +1,6 @@
 {
 	"${ModID}:AirCurrent":	{
-		"DESCRIPTION": "造成 !D! 点伤害。 NL If the target has ${ModID}:Petra, apply !M! Vulnerable.",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL If the target has ${ModID}:Petra, apply !M! Vulnerable。",
 		"NAME": "Air Current"
 	},
 	"${ModID}:DustTornado":	{
@@ -8,37 +8,37 @@
 		"NAME": "Dust Tornado"
 	},
 	"${ModID}:Enervate":	{
-		"DESCRIPTION": "Enemy loses half of its 力量, then loses !M! more. NL 消耗 。",
+		"DESCRIPTION": "Enemy 失去s half of its 力量, then 失去s !M! more. NL 消耗 。",
 		"NAME": "Enervate"
 	},
 	"${ModID}:Excavation":	{
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Fetch !M! cards from your 弃牌堆 and Retain them.",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Fetch !M! cards from your 弃牌堆 and Retain them。",
 		"NAME": "Excavation"
 	},
 	"${ModID}:Geomorphology":	{
-		"DESCRIPTION": "每当 you 消耗 一张牌 or Channel an Orb, apply !M! ${ModID}:Petra to a random enemy.",
+		"DESCRIPTION": "每当 you 消耗 一张牌 or Channel an Orb, apply !M! ${ModID}:Petra to a random enemy。",
 		"NAME": "Geomorphology"
 	},
 	"${ModID}:GeothermalHeating":	{
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! additional Block for each distinct debuff on the target.",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! additional 格挡 for each distinct debuff on the target。",
 		"NAME": "Geothermal Heating"
 	},
 	"${ModID}:Lithosphere":	{
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! ${ModID}:Petra.",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! ${ModID}:Petra。",
 		"NAME": "Lithosphere"
 	},
 	"${ModID}:MudFissure":	{
-		"DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage if the target has debuffs.",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage if the target has debuffs。",
 		"NAME": "Mud Fissure"
 	},
 	"${ModID}:RagingInferno":	{
 		"DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ignite. NL 消耗 。",
 		"NAME": "Raging Inferno",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ignite."
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ignite。"
 	},
 	"${ModID}:TectonicQuake":	{
-		"DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Petra and Weak to ALL enemies. NL 消耗 。",
+		"DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Petra and Weak to ALL enemies. NL 消耗 。",
 		"NAME": "Tectonic Quake",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Petra and Weak to ALL enemies."
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Petra and Weak to ALL enemies。"
 	}
 }

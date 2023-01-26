@@ -1,15 +1,15 @@
 {
   "${ModID}:ArcanaPack": {
     "TEXT": [
-      "Arcana",
-      "Use the unique and varied meanings of the major arcana.",
+      "奥术",
+      "使用独特且意义丰富的主要塔罗牌。",
       "Alchyr"
     ]
   },
   "${ModID}:ArcanaPackHat": {
     "TEXT": [
-      "Big, bright and candy-red.",
-      "The Star"
+      "大、亮、顽红。",
+      "赤星"
     ]
   }
 }

@@ -2,13 +2,13 @@
   "${ModID}:BitingColdPack": {
     "TEXT": [
       "Biting Cold",
-      "Inflict enemies with ${ModID}:Frostbite and let them succumb to the cold.",
+      "Inflict enemies with ${ModID}:Frostbite and let them succumb to the cold。",
       "Enbeon"
     ]
   },
   "${ModID}:BitingColdPackHat": {
     "TEXT": [
-      "This festive hat is sure to keep away the cold.",
+      "This festive hat is sure to keep away the cold。",
       "Santa Hat"
     ]
   }

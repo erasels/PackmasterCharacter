@@ -2,9 +2,9 @@
   "${ModID}:ExampleTwoAmountPower": {
     "NAME": "Example 2",
     "DESCRIPTIONS": [
-      "At the start of your turn, 获得 #b",
+      "你的回合开始时， 获得 #b",
       " #y力量 and #b",
-      " #yDexterity."
+      " #yDexterity。"
     ]
   }
 }

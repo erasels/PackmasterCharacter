@@ -4,6 +4,6 @@
     "NAMES": [
       "distortion"
     ],
-    "DESCRIPTION": "Creatures with #yDistortion lose 生命 每当 一张牌 is #y消耗ed."
+    "DESCRIPTION": "Creatures with #yDistortion 失去 生命 每当 一张牌 is #y消耗ed。"
   }
 ]

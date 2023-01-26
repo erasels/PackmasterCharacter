@@ -1,34 +1,34 @@
 {
   "${ModID}:Fume": {
     "NAME": "Fume",
-    "DESCRIPTION": "Enter ${ModID}:Angry.",
-    "UPGRADE_DESCRIPTION": "保留 。 NL Enter ${ModID}:Angry."
+    "DESCRIPTION": "Enter ${ModID}:Angry。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL Enter ${ModID}:Angry。"
   },
   "${ModID}:Relax": {
     "NAME": "Relax",
-    "DESCRIPTION": "Enter Calm.",
-    "UPGRADE_DESCRIPTION": "保留 。 NL Enter Calm."
+    "DESCRIPTION": "Enter Calm。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL Enter Calm。"
   },
   "${ModID}:StanceDance": {
     "NAME": "Stance Dance",
     "DESCRIPTION": "造成 !D! 点伤害。 NL Enter a random Stance. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Enter a random Stance."
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Enter a random Stance。"
   },
   "${ModID}:RagnarokNRoll": {
     "NAME": "Ragnarok 'n Roll",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exit your Stance."
+    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! times. NL Exit your Stance。"
   },
   "${ModID}:Serenity": {
     "NAME": "Serenity",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Enter ${ModID}:Serene."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Enter ${ModID}:Serene。"
   },
   "${ModID}:Swagger": {
     "NAME": "Swagger",
-    "DESCRIPTION": "If you end your turn in a Stance, 获得 !M! 点 力量 and Dexterity.",
-    "UPGRADE_DESCRIPTION": "固有 。 NL If you end your turn in a Stance, 获得 !M! 点 力量 and Dexterity."
+    "DESCRIPTION": "If you end your turn in a Stance, 获得 !M! 点 力量 and Dexterity。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL If you end your turn in a Stance, 获得 !M! 点 力量 and Dexterity。"
   },
   "${ModID}:MoodSwing": {
     "NAME": "Mood Swing",
-    "DESCRIPTION": "抽 !M! 张牌。 NL Discard 2 cards. NL If you are in ${ModID}:Angry, enter Calm. Otherwise, enter ${ModID}:Angry."
+    "DESCRIPTION": "抽 !M! 张牌。 NL 丢弃 2 cards. NL If you are in ${ModID}:Angry, enter Calm. Otherwise, enter ${ModID}:Angry。"
   }
 }

@@ -2,13 +2,13 @@
   "${ModID}:ConjurerPack": {
     "TEXT": [
       "Conjurer Petra",
-      "Strike the Petra.",
+      "Strike the Petra。",
       "pinacolada"
     ]
   },
   "${ModID}:ConjurerPackHat": {
     "TEXT": [
-      "I foresaw you picking this hat.",
+      "I foresaw you picking this hat。",
       "The Zoltan"
     ]
   }

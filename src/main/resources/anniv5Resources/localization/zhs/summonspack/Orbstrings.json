@@ -4,13 +4,13 @@
     "DESCRIPTION": [
       "#yPassive: Deal #b",
       " damage to ALL enemies. NL #yEvoke: Deal #b",
-      " damage to ALL enemies."
+      " damage to ALL enemies。"
     ]
   },
   "${ModID}:Louse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": [
-      "#yPassive: 抽一张牌 at the start of your turn. #yEvoke: Draw 2 cards."
+      "#yPassive: 抽一张牌 at the start of your turn. #yEvoke: Draw 2 cards。"
     ]
   },
   "${ModID}:Panda": {
@@ -18,7 +18,7 @@
     "DESCRIPTION": [
       "#yPassive: 回合结束时， deal #b",
       " damage to a random enemy. NL #yEvoke: Deal #b",
-      " damage to a random enemy."
+      " damage to a random enemy。"
     ]
   },
   "${ModID}:Porcupine": {
@@ -26,14 +26,14 @@
     "DESCRIPTION": [
       "#yPassive: At the start of your turn add a #b",
       " damage #yQuill into your hand. NL #yEvoke: 获得 #b",
-      " #yThorns."
+      " #yThorns。"
     ]
   },
   "${ModID}:Wolf": {
     "NAME": "Wolf",
     "DESCRIPTION": [
       "#yPassive: 回合结束时， deal #b",
-      " damage to the enemy with the least 生命. NL Damage increases with number of channeled orbs. NL #yEvoke: 获得 an orb slot."
+      " damage to the enemy with the least 生命。 NL Damage increases with number of channeled orbs. NL #yEvoke: 获得 an orb slot。"
     ]
   },
   "${ModID}:Leprechaun": {
@@ -41,14 +41,14 @@
     "DESCRIPTION": [
       "#yPassive: At the start of your turn roll #b",
       ". NL #yEvoke: Apply #b",
-      " #yJinx to ALL enemies."
+      " #yJinx to ALL enemies。"
     ]
   },
   "${ModID}:FireSpirit": {
     "NAME": "Fire Spirit",
     "DESCRIPTION": [
       "#yPassive: 回合结束时 apply #b",
-      " #yIgnite to ALL enemies. NL #yEvoke: 获得 1 #yFocus."
+      " #yIgnite to ALL enemies. NL #yEvoke: 获得 1 #yFocus。"
     ]
   }
 }

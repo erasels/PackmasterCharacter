@@ -1,7 +1,7 @@
 {
   "${ModID}:MakeshiftSword": {
     "NAME": "Makeshift Sword",
-    "DESCRIPTION": "每当 一张牌 is created during combat, 获得 !M! Vigor."
+    "DESCRIPTION": "每当 一张牌 is created during combat, 获得 !M! 活力。"
   },
   "${ModID}:MakeshiftShield": {
     "NAME": "Makeshift Shield",
@@ -9,11 +9,11 @@
   },
   "${ModID}:PaintBrush": {
     "NAME": "Paint Brush",
-    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} card with selected type and cost."
+    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} card with selected type and cost。"
   },
   "${ModID}:Firewall": {
     "NAME": "Firewall",
-    "DESCRIPTION": "{@@}{!Upgrades!|>0=固有 。 NL }When a Status card is created, NL 消耗 it."
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=固有 。 NL }When a Status card is created, NL 消耗 it。"
   },
   "${ModID}:Souvenirs": {
     "NAME": "Souvenirs",
@@ -21,7 +21,7 @@
   },
   "${ModID}:Mimicry": {
     "NAME": "Mimicry",
-    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} common card from other Packs you've selected."
+    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} common card from other Packs you've selected。"
   },
   "${ModID}:CraftyMove": {
     "NAME": "Crafty Move",
@@ -29,22 +29,22 @@
   },
   "${ModID}:BarrierBeacon": {
     "NAME": "Barrier Beacon",
-    "DESCRIPTION": "{@@}获得 !B! Block, create a{!Upgrades!|>0=n upgraded} copy of this in hand. 消耗 。"
+    "DESCRIPTION": "{@@}获得 !B! 格挡, create a{!Upgrades!|>0=n upgraded} copy of this in hand. 消耗 。"
   },
   "${ModID}:StrikingStrike": {
     "NAME": "Striking Strike",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Discover a{!Upgrades!|>0=n upgraded} strike. It 消耗s when played and costs 0 本回合."
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Discover a{!Upgrades!|>0=n upgraded} strike. It 消耗s when played and costs 0 本回合。"
   },
   "${ModID}:AccumulativeStrike": {
     "NAME": "Accumulative Strike",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Deals !M! additional damage for ALL your {!Upgrades!|0= non-Status} created cards."
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Deals !M! additional damage for ALL your {!Upgrades!|0= non-Status} created cards。"
   },
   "${ModID}:BrushModalTypeChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}Select this card type for Discovery."
+    "DESCRIPTION": "{@@}Select this card type for Discovery。"
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}Select this card cost for Discovery."
+    "DESCRIPTION": "{@@}Select this card cost for Discovery。"
   }
 }

@@ -10,7 +10,7 @@
     "NAME": "Page of the Dead",
     "DESCRIPTIONS": [
       "The next #b",
-      " Attack(s) played that cost #b2 or more are played twice."
+      " Attack(s) played that cost #b2 or more are played twice。"
     ]
   },
   "${ModID}:AllSeeingPower": {
@@ -18,14 +18,14 @@
     "DESCRIPTIONS": [
       "At the end of each turn, Scry #b",
       " and take ",
-      " damage."
+      " damage。"
     ]
   },
   "${ModID}:EndOfDaysPower": {
     "NAME": "End of Days",
     "DESCRIPTIONS": [
       "回合结束时， #yChannel #b",
-      " #yDark for each [E] unspent."
+      " #yDark for each [E] unspent。"
     ]
   }
 }

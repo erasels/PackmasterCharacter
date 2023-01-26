@@ -5,16 +5,16 @@
   },
   "${ModID}:Trash": {
     "NAME": "Trash",
-    "DESCRIPTION": "消耗 1 card. NL 获得 [E] .",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 消耗 1 card. NL 获得 [E] ."
+    "DESCRIPTION": "消耗 1 card. NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 消耗 1 card. NL 获得 [E] 。"
   },
   "${ModID}:MultiTool": {
     "NAME": "Multi-Tool",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If you end your turn with unused Energy, ALL enemies lose !M! 生命."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If you end your turn with unused Energy, ALL enemies 失去 !M! 生命。"
   },
   "${ModID}:LastResort": {
     "NAME": "Last Resort",
-    "DESCRIPTION": "获得 !B! Block X times. NL If X is 0, NL 获得 [E] and 消耗 。"
+    "DESCRIPTION": "获得 !B! 格挡 X times. NL If X is 0, NL 获得 [E] and 消耗 。"
   },
   "${ModID}:LotsOfIronWaves": {
     "NAME": "Lots of Iron Waves",
@@ -22,7 +22,7 @@
   },
   "${ModID}:ManifestMeal": {
     "NAME": "Manifest Meal",
-    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your 抽牌堆。"
+    "DESCRIPTION": "造成 !D! 点伤害 X times. NL Shuffle a *Food into your 抽牌堆。"
   },
   "${ModID}:Food": {
     "NAME": "Food",
@@ -42,15 +42,15 @@
   },
   "${ModID}:StruckByATrain": {
     "NAME": "Struck By A Train",
-    "DESCRIPTION": "Deal !D! damage to the frontmost enemy. NL Increase this card's damage by !M! 本场战斗."
+    "DESCRIPTION": "造成 !D! 点伤害 to the frontmost enemy. NL Increase this card's damage by !M! 本场战斗。"
   },
   "${ModID}:StormForm": {
     "NAME": "Storm Form",
-    "DESCRIPTION": "At the start of your turn, 获得 [E] [E] .",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, 获得 [E] [E] [E] ."
+    "DESCRIPTION": "你的回合开始时， 获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "你的回合开始时， 获得 [E] [E] [E] 。"
   },
   "${ModID}:SuperNova": {
     "NAME": "Super Nova",
-    "DESCRIPTION": "ALL enemies lose !M! 生命. NL Apply !${ModID}:m2! Weak and Vulnerable to ALL enemies."
+    "DESCRIPTION": "ALL enemies 失去 !M! 生命。 NL Apply !${ModID}:m2! Weak and Vulnerable to ALL enemies。"
   }
 }

@@ -1,24 +1,24 @@
 {
   "${ModID}:Weight": {
     "NAME": "Weight",
-    "DESCRIPTION": "Unplayable. 保留 。 NL If this card is discarded from your hand, 消耗 it."
+    "DESCRIPTION": "Unplayable. 保留 。 NL If this card is 丢弃ed from your hand, 消耗 it。"
   },
   "${ModID}:Oppressor": {
     "NAME": "Oppressor",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Discard 1 card."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃 1 card。"
   },
   "${ModID}:IronShield": {
     "NAME": "Iron Shield",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Add a *Weight to your hand."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Add a *Weight to your hand。"
   },
   "${ModID}:Shine": {
     "NAME": "Shine",
-    "DESCRIPTION": "Unplayable. 保留 。 NL When you draw this card, upgrade another random card in your hand for the rest of the combat.",
-    "UPGRADE_DESCRIPTION": "Unplayable. 保留 。 NL When you draw this card, upgrade ALL cards in your hand for the rest of the combat."
+    "DESCRIPTION": "Unplayable. 保留 。 NL When you draw this card, upgrade another random card in your hand for the rest of the combat。",
+    "UPGRADE_DESCRIPTION": "Unplayable. 保留 。 NL When you draw this card, upgrade ALL cards in your hand for the rest of the combat。"
   },
   "${ModID}:GlaiveThrow": {
     "NAME": "Glaive Throw",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL Discard !M! cards."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 丢弃 !M! cards。"
   },
   "${ModID}:Crunch": {
     "NAME": "Crunch",
@@ -26,23 +26,23 @@
   },
   "${ModID}:Lie": {
     "NAME": "Lie",
-    "DESCRIPTION": "Enemy loses !M! 点 力量 本回合. NL Add a *Weight to your hand."
+    "DESCRIPTION": "Enemy 失去s !M! 点 力量 本回合. NL Add a *Weight to your hand。"
   },
   "${ModID}:Frontflip": {
     "NAME": "Frontflip",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌s, discard Unplayable cards drawn."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌s, 丢弃 Unplayable cards drawn。"
   },
   "${ModID}:HammerThrow": {
     "NAME": "Hammer Throw",
-    "DESCRIPTION": "每当 一张牌 is Retained, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "每当 一张牌 is Retained, deal !M! damage to ALL enemies。"
   },
   "${ModID}:Flail": {
     "NAME": "Flail",
-    "DESCRIPTION": "Deal !D! damage twice. NL Add 2 *Weights to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害 twice. NL Add 2 *Weights to your hand。"
   },
   "${ModID}:Wisdom": {
     "NAME": "Wisdom",
-    "DESCRIPTION": "获得 [E]. NL Discard any number of cards in your hand. Draw that many cards. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 [E] [E]. NL Discard any number of cards in your hand. Draw that many cards. NL 消耗 。"
+    "DESCRIPTION": "获得 [E]. NL 丢弃 any number of cards in your hand. Draw that many cards. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E]. NL 丢弃 any number of cards in your hand. Draw that many cards. NL 消耗 。"
   }
 }

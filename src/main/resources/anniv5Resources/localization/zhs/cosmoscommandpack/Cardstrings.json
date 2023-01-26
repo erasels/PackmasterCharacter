@@ -5,15 +5,15 @@
   },
   "${ModID}:Cognition": {
     "NAME": "Cognition",
-    "DESCRIPTION": "Draw !${ModID}:m2! cards. NL ${ModID}:Amplify [E] : Scry !M! before drawing."
+    "DESCRIPTION": "Draw !${ModID}:m2! cards. NL ${ModID}:Amplify [E] : Scry !M! before drawing。"
   },
   "${ModID}:EternalStrike": {
     "NAME": "Eternal Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this card is 消耗ed, add a copy of it to your hand with !M! more damage."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this card is 消耗ed, add a copy of it to your hand with !M! more damage。"
   },
   "${ModID}:FalseGrit": {
     "NAME": "False Grit",
-    "DESCRIPTION": "消耗 !M! cards. NL 获得 !B! Block for each card 消耗ed. NL ${ModID}:Amplify [E] : 消耗 !M! more cards."
+    "DESCRIPTION": "消耗 !M! cards. NL 获得 !B! 格挡 for each card 消耗ed. NL ${ModID}:Amplify [E] : 消耗 !M! more cards。"
   },
   "${ModID}:HeatEngine": {
     "NAME": "Heat Engine",
@@ -21,11 +21,11 @@
   },
   "${ModID}:Recall": {
     "NAME": "Recall",
-    "DESCRIPTION": "每当 一张牌 is ${ModID}:Amplified, put 一张牌 from your 消耗 pile into your hand."
+    "DESCRIPTION": "每当 一张牌 is ${ModID}:Amplified, put 一张牌 from your 消耗 pile into your hand。"
   },
   "${ModID}:RefractEnergy": {
     "NAME": "Refract Energy",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Amplify [E] : Reduce this card's cost by 1 本场战斗."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:Amplify [E] : Reduce this card's cost by 1 本场战斗。"
   },
   "${ModID}:RopeTrick": {
     "NAME": "Rope Trick",
@@ -33,11 +33,11 @@
   },
   "${ModID}:Subspace": {
     "NAME": "Subspace",
-    "DESCRIPTION": "ALL enemies lose 生命 equal to their ${ModID}:Distortion. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "ALL enemies lose 生命 equal to !M! times their ${ModID}:Distortion. NL 消耗 。"
+    "DESCRIPTION": "ALL enemies 失去 生命 equal to their ${ModID}:Distortion. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "ALL enemies 失去 生命 equal to !M! times their ${ModID}:Distortion. NL 消耗 。"
   },
   "${ModID}:SubtleKnife": {
     "NAME": "Subtle Knife",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Distortion. NL ${ModID}:Amplify [E] : 消耗, then add a copy of this to your 弃牌堆."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Distortion. NL ${ModID}:Amplify [E] : 消耗, then add a copy of this to your 弃牌堆。"
   }
 }

@@ -2,13 +2,13 @@
   "${ModID}:EntropyPack": {
     "TEXT": [
       "Entropy",
-      "Discard what you don't need, and what you do.",
+      "丢弃 what you don't need, and what you do。",
       "Alchyr"
     ]
   },
   "${ModID}:EntropyPackHat": {
     "TEXT": [
-      "All the power and all the responsibility.",
+      "All the power and all the responsibility。",
       "Wonder Mask"
     ]
   }

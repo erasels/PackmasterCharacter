@@ -2,13 +2,13 @@
   "${ModID}:EnergyAndEchoPack": {
     "TEXT": [
       "Energy & Echo",
-      "Generate [E] and do your best at spending it through self multiplying cards.",
+      "Generate [E] and do your best at spending it through self multiplying cards。",
       "Diamsword"
     ]
   },
   "${ModID}:EnergyAndEchoPackHat": {
     "TEXT": [
-      "Part helmet, part high-power flashlight.",
+      "Part helmet, part high-power flashlight。",
       "Spelunking Hat"
     ]
   }

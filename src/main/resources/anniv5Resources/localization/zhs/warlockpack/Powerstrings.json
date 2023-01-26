@@ -2,8 +2,8 @@
   "${ModID}:MalchezaarsImpPower": {
     "NAME": "Malchezaar's Imp",
     "DESCRIPTIONS": [
-      "每当 a #ynon-Imp card is #y消耗ed, shuffle #b{0} #yImp into your 弃牌堆.",
-      "每当 a #ynon-Imp card is #y消耗ed, shuffle #b{0} #yImps into your 弃牌堆."
+      "每当 a #ynon-Imp card is #y消耗ed, shuffle #b{0} #yImp into your 弃牌堆。",
+      "每当 a #ynon-Imp card is #y消耗ed, shuffle #b{0} #yImps into your 弃牌堆。"
     ]
   },
   "${ModID}:MalchezaarsImpUpgradedPower": {

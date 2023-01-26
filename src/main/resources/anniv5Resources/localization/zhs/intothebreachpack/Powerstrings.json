@@ -1,24 +1,24 @@
 {
   "${ModID}:AcidPower": {
-    "NAME": "A.C.I.D.",
+    "NAME": "A.C.I.D。",
     "DESCRIPTIONS": [
-      "Takes double damage from Attacks 本回合.",
+      "Takes double damage from Attacks 本回合。",
       "Takes double damage from Attacks for #b",
-      " turns."
+      " turns。"
     ]
   },
   "${ModID}:StormGenPower": {
     "NAME": "Storm Generator",
     "DESCRIPTIONS": [
       "回合结束时， #yChannel #b",
-      " #yLightning for each enemy that has a debuff."
+      " #yLightning for each enemy that has a debuff。"
       ]
   },
   "${ModID}:VoidShockPower": {
     "NAME": "Void Shocker",
     "DESCRIPTIONS": [
-      "每当 an enemy deals only blocked damage, deal #b",
-      " damage to it."
+      "每当 an enemy deals only 格挡ed damage, deal #b",
+      " damage to it。"
     ]
   }
 }

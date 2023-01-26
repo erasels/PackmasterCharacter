@@ -1,14 +1,14 @@
 {
   "${ModID}:Hound": {
     "NAME": "Rot Hound",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Evolves when you play an *Attack.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies.",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:Evolves when you play an *Attack。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and apply !M! Weak to ALL enemies。",
     "EXTENDED_DESCRIPTION": ["Huge Rot Hound"]
   },
   "${ModID}:Slime": {
     "NAME": "Viscid One",
-    "DESCRIPTION": "Apply !M! Poison. NL ${ModID}:Evolves when you apply a debuff.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Enemy loses 生命 equal to its Poison.",
+    "DESCRIPTION": "Apply !M! Poison. NL ${ModID}:Evolves when you apply a debuff。",
+    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Enemy 失去s 生命 equal to its Poison。",
     "EXTENDED_DESCRIPTION": ["Viscid Twins"]
   },
   "${ModID}:Fright": {
@@ -17,19 +17,19 @@
   },
   "${ModID}:Shackles": {
     "NAME": "Shackles",
-    "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL ${ModID}:Evolves when you play 一张牌 that costs at least !M! .",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL Block is not removed at the start of your next turn.",
+    "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL ${ModID}:Evolves when you play 一张牌 that costs at least !M! 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL 格挡 is not removed at the start of your next turn。",
     "EXTENDED_DESCRIPTION": ["Huge Shackles"]
   },
   "${ModID}:IceBeast": {
     "NAME": "Ice Beast",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Evolves when you 获得 格挡 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL Channel !M! Frost.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL Channel !M! Frost。",
     "EXTENDED_DESCRIPTION": ["Ancient Ice Beast"]
   },
   "${ModID}:Loombird": {
     "NAME": "Crooked Loombird",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Rend."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Rend。"
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
@@ -39,7 +39,7 @@
   "${ModID}:Owl": {
     "NAME": "Owl",
     "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL ${ModID}:Evolves when you 消耗 一张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply ${ModID}:Rend equal to half of the unblocked damage dealt. NL Apply !M! Vulnerable.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply ${ModID}:Rend equal to half of the un格挡ed damage dealt. NL Apply !M! Vulnerable。",
     "EXTENDED_DESCRIPTION": ["Nightmare Owl"]
   },
   "${ModID}:Vision": {
@@ -48,7 +48,7 @@
   },
   "${ModID}:Connection": {
     "NAME": "Connection",
-    "DESCRIPTION": "每当 you play 一张牌, upgrade it and ALL copies of it.",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you play 一张牌, upgrade it and ALL copies of it."
+    "DESCRIPTION": "每当 you play 一张牌, upgrade it and ALL copies of it。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you play 一张牌, upgrade it and ALL copies of it。"
   }
 }

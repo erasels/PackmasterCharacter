@@ -5,7 +5,7 @@
   },
   "${ModID}:ElectricWhip": {
     "NAME": "Electric Whip",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel 1 Lightning."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Channel 1 Lightning。"
   },
   "${ModID}:EnrageShot": {
     "NAME": "Enrage Shot",
@@ -17,16 +17,16 @@
   },
   "${ModID}:ReboundVolley": {
     "NAME": "Rebound Volley",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to a random enemy.",
-    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to a random enemy !M! times."]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to a random enemy。",
+    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to a random enemy !M! times。"]
   },
   "${ModID}:SmokePellets": {
     "NAME": "Smoke Pellets",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! Weak to ALL enemies。"
   },
   "${ModID}:SmolderingShell": {
     "NAME": "Smoldering Shell",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL Apply !${ModID}:m2! Weak to ALL other enemies."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL Apply !${ModID}:m2! Weak to ALL other enemies。"
   },
   "${ModID}:SpartanShield": {
     "NAME": "Spartan Shield",
@@ -34,10 +34,10 @@
   },
   "${ModID}:StormGenerator": {
     "NAME": "Storm Generator",
-    "DESCRIPTION": "回合结束时， Channel !M! Lightning for each enemy that has a debuff."
+    "DESCRIPTION": "回合结束时， Channel !M! Lightning for each enemy that has a debuff。"
   },
   "${ModID}:VoidShocker": {
     "NAME": "Void Shocker",
-    "DESCRIPTION": "每当 an enemy deals only blocked damage, deal !M! damage to it."
+    "DESCRIPTION": "每当 an enemy deals only 格挡ed damage, deal !M! damage to it。"
   }
 }

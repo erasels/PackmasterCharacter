@@ -5,7 +5,7 @@
       "hunted",
       "hunted"
     ],
-    "DESCRIPTION": "Takes #b10% more damage for each stack of Hunted on them. When applied, all other hunted enemies are no longer hunted, and other enemies take #b10% less damage for each stack. Reduces by #b1 each turn."
+    "DESCRIPTION": "Takes #b10% more damage for each stack of Hunted on them. When applied, all other hunted enemies are no longer hunted, and other enemies take #b10% less damage for each stack. Reduces by #b1 each turn。"
   },
   {
     "PROPER_NAME": "Not Hunted",
@@ -13,7 +13,7 @@
       "nothunted",
       "nothunted"
     ],
-    "DESCRIPTION": "Takes #b10% less damage from attacks for each stack. Reduces by #b1 each turn. When the hunted enemy dies, remove this."
+    "DESCRIPTION": "Takes #b10% less damage from attacks for each stack. Reduces by #b1 each turn. When the hunted enemy dies, remove this。"
   },
   {
     "PROPER_NAME": "Enraged",
@@ -30,7 +30,7 @@
       "Glass_Armor",
       "glass_armor"
     ],
-    "DESCRIPTION": "At the end of the turn, 获得 格挡 。 When taking unblocked attack damage, remove this."
+    "DESCRIPTION": "At the end of the turn, 获得 格挡 。 When taking un格挡ed attack damage, remove this。"
   },
   {
     "PROPER_NAME": "Nonlethal",
@@ -39,6 +39,6 @@
       "non-lethal",
       "non_lethal"
     ],
-    "DESCRIPTION": "Non-lethal damage will leave targets at 1 生命."
+    "DESCRIPTION": "Non-lethal damage will leave targets at 1 生命。"
   }
 ]

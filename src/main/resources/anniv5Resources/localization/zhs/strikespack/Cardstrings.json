@@ -1,19 +1,19 @@
 {
   "${ModID}:StrikeOfMidnight": {
     "NAME": "Strike of Midnight",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Channel 1 Dark."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Channel 1 Dark。"
   },
   "${ModID}:StrikeOfLuck": {
     "NAME": "Strike of Luck",
-    "DESCRIPTION": "Deal !D! damage to a random enemy 1 to 3 times."
+    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy 1 to 3 times。"
   },
   "${ModID}:LightningStrike": {
     "NAME": "Lightning Strike",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Channel 1 Lightning."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Channel 1 Lightning。"
   },
   "${ModID}:PenaltyStrike": {
     "NAME": "Penalty Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Enemy loses !M! 点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Enemy 失去s !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Backstrike": {
     "NAME": "Backstrike",
@@ -21,11 +21,11 @@
   },
   "${ModID}:WorkersStrike": {
     "NAME": "Worker's Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Draw an Attack. If it is a Strike, 获得 [E]."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Draw an Attack. If it is a Strike, 获得 [E]。"
   },
   "${ModID}:StrikeDummyJr": {
-    "NAME": "Strike Dummy Jr.",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL Strikes deal 2 more damage 本场战斗."
+    "NAME": "Strike Dummy Jr。",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL Strikes deal 2 more damage 本场战斗。"
   },
   "${ModID}:DifferentStrikes": {
     "NAME": "Different Strikes",
@@ -33,11 +33,11 @@
   },
   "${ModID}:StrikeOfGenius": {
     "NAME": "Strike of Genius",
-    "DESCRIPTION": "At the start of your turn, 获得 a random \"Strike\". NL It costs 0 until played and 获得s 消耗 。",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, 获得 a random Upgraded \"Strike\". NL It costs 0 until played and 获得s 消耗 。"
+    "DESCRIPTION": "你的回合开始时， 获得 a random \"Strike\". NL It costs 0 until played and 获得s 消耗 。",
+    "UPGRADE_DESCRIPTION": "你的回合开始时， 获得 a random Upgraded \"Strike\". NL It costs 0 until played and 获得s 消耗 。"
   },
   "${ModID}:StrikeABar获得": {
     "NAME": "Strike a Bar获得",
-    "DESCRIPTION": "Your Attacks costs 0 本回合. You cannot play non-Attacks 本回合."
+    "DESCRIPTION": "Your Attacks costs 0 本回合. You cannot play non-Attacks 本回合。"
   }
 }

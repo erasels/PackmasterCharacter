@@ -2,14 +2,14 @@
   "${ModID}:IntoTheBreac生命ack": {
     "TEXT": [
       "Into the Breach",
-      "Use powerful mech-based weaponry from the future to dispatch the Spire's threats.",
+      "Use powerful mech-based weaponry from the future to dispatch the Spire's threats。",
       "Enbeon",
       "#bInto #bthe #bBreach originally created by #bSubset #bGames"
     ]
   },
   "${ModID}:IntoTheBreac生命ackHat": {
     "TEXT": [
-      "The perfect helmet for fighting giant bugs.",
+      "The perfect helmet for fighting giant bugs。",
       "Archive Helmet"
     ]
   }

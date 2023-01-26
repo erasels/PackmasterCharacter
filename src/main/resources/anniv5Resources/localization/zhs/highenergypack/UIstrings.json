@@ -8,7 +8,7 @@
   },
   "${ModID}:HighEnergyPackHat": {
     "TEXT": [
-      "The back reads 'solar-powered'.",
+      "The back reads 'solar-powered'。",
       "Energetic Shades"
     ]
   }

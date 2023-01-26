@@ -2,14 +2,14 @@
   "${ModID}:UtilityPack": {
     "TEXT": [
       "Utility",
-      "Cards that synergize well with a wide range of mechanics and packs.",
+      "Cards that synergize well with a wide range of mechanics and packs。",
       "modargo",
       "Card art from MtG"
     ]
   },
   "${ModID}:ConjurationAction": {
     "TEXT": [
-      "Choose 一张牌 to play."
+      "Choose 一张牌 to play。"
     ]
   },
   "${ModID}:UtilityPackHat": {

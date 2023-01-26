@@ -1,44 +1,44 @@
 {
   "${ModID}:TheFool": {
-    "NAME": "The Fool",
+    "NAME": "愚者",
     "DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。 NL 消耗 。"
   },
   "${ModID}:Justice": {
-    "NAME": "Justice",
-    "DESCRIPTION": "获得 !B! Block for each enemy in combat."
+    "NAME": "正义",
+    "DESCRIPTION": "每有一名敌人， NL 获得 !B! 点 格挡 。"
   },
   "${ModID}:TheHermit": {
-    "NAME": "The Hermit",
-    "DESCRIPTION": "Discard 一张牌。 Draw cards equal to its cost. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Discard 一张牌。 Draw cards equal to its cost."
+    "NAME": "隐者",
+    "DESCRIPTION": "丢弃一张牌， NL 抽其耗能张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "丢弃一张牌， NL 抽其耗能张牌。"
   },
   "${ModID}:TheHangedMan": {
-    "NAME": "The Hanged Man",
-    "DESCRIPTION": "每当 you 抽一张牌 本回合, ALL enemies lose !M! 生命."
+    "NAME": "倒吊者",
+    "DESCRIPTION": "本回合每当你抽一张牌，所有敌人失去 !M! 点生命。"
   },
   "${ModID}:TheTower": {
-    "NAME": "The Tower",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, play a copy of this card."
+    "NAME": "塔",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若杀死目标， NL 再打出一次。"
   },
   "${ModID}:Death": {
-    "NAME": "Death",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Kill the enemy if they have 10% or less of their max 生命 afterwards."
+    "NAME": "死神",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若之后目标生命降至10%以下，将其处决。"
   },
   "${ModID}:Temperance": {
-    "NAME": "Temperance",
-    "DESCRIPTION": "抽一张牌 for each card in your 消耗 pile. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽一张牌 for each card in your 消耗 pile."
+    "NAME": "节制",
+    "DESCRIPTION": "消耗堆每有一张牌， NL 抽一张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "消耗堆每有一张牌， NL 抽一张牌。"
   },
   "${ModID}:TheHierophant": {
-    "NAME": "The Hierophant",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Remove all your debuffs. NL 消耗 。"
+    "NAME": "教皇",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 移除所有负面效果。 NL 消耗 。"
   },
   "${ModID}:TheSun": {
-    "NAME": "The Sun",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable to the highest 生命 enemy. NL 消耗 。"
+    "NAME": "太阳",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予当前生命最高的敌人 !M! 层 易伤 。 NL 消耗 。"
   },
   "${ModID}:TheChariot": {
-    "NAME": "The Chariot",
-    "DESCRIPTION": "每当 you discard 一张牌 during your turn, 获得 !M! Vigor."
+    "NAME": "战车",
+    "DESCRIPTION": "你的回合中每丢弃一张牌，获得 !M! 层 活力 。"
   }
 }

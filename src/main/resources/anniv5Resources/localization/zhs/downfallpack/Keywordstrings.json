@@ -4,20 +4,20 @@
     "NAMES": [
       "invincible"
     ],
-    "DESCRIPTION": "You cannot lose more than a given amount of 生命 in a single turn. NL At the end of any round in which Invincible prevented 生命 loss, remove it."
+    "DESCRIPTION": "You cannot 失去 more than a given amount of 生命 in a single turn. NL At the end of any round in which Invincible prevented 生命 loss, remove it。"
   },
   {
     "PROPER_NAME": "Ghostflame",
     "NAMES": [
       "ghostflame"
     ],
-    "DESCRIPTION": "Orb: Deals damage to ALL enemies."
+    "DESCRIPTION": "Orb: Deals damage to ALL enemies。"
   },
   {
     "PROPER_NAME": "Ancient",
     "NAMES": [
       "ancient"
     ],
-    "DESCRIPTION": "Stance: If you have less than #b6 Plated Armor at the start of your turn, 获得 #b2 Plated Armor. NL When you leave this Stance, 获得 #b1 Artifact."
+    "DESCRIPTION": "Stance: If you have less than #b6 Plated Armor 你的回合开始时， 获得 #b2 Plated Armor. NL When you leave this Stance, 获得 #b1 Artifact。"
   }
 ]

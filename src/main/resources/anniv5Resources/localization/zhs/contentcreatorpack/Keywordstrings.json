@@ -4,27 +4,27 @@
     "NAMES": [
       "wanderbot"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the frontmost enemy. Draws 一张牌 when evoked."
+    "DESCRIPTION": "Orb: Deals damage to the frontmost enemy. Draws 一张牌 when evoked。"
   },
   {
     "PROPER_NAME": "MEGAthereal",
     "NAMES": [
       "megathereal"
     ],
-    "DESCRIPTION": "消耗s at the end of the turn, no matter where it is."
+    "DESCRIPTION": "消耗s at the end of the turn, no matter where it is。"
   },
   {
     "PROPER_NAME": "Odd",
     "NAMES": [
       "odd"
     ],
-    "DESCRIPTION": "Additional effect if you played an odd number of cards 本回合 (including this)."
+    "DESCRIPTION": "Additional effect if you played an odd number of cards 本回合 (including this)。"
   },
   {
     "PROPER_NAME": "Even",
     "NAMES": [
       "even"
     ],
-    "DESCRIPTION": "Additional effect if you played an even number of cards 本回合 (including this)."
+    "DESCRIPTION": "Additional effect if you played an even number of cards 本回合 (including this)。"
   }
 ]

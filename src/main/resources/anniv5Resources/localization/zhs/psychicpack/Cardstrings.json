@@ -2,17 +2,17 @@
   "${ModID}:RuleCancel": {
     "NAME": "Rule Cancel",
     "DESCRIPTION": "Make 一张牌 in your hand ${ModID}:Occult. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Make 一张牌 in your hand ${ModID}:Occult."
+    "UPGRADE_DESCRIPTION": "Make 一张牌 in your hand ${ModID}:Occult。"
   },
   "${ModID}:Brainwave": {
     "NAME": "Brainwave",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Make a random Attack in your hand ${ModID}:Occult."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Make a random Attack in your hand ${ModID}:Occult。"
   },
   "${ModID}:TelephonePole": {
     "NAME": "Telephone Pole",
-    "DESCRIPTION": "${ModID}:Locking. NL 造成 !D! 点伤害。 NL Apply !M! Vulnerable.",
+    "DESCRIPTION": "${ModID}:Locking. NL 造成 !D! 点伤害。 NL Apply !M! Vulnerable。",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL 造成 !D! 点伤害。 NL Apply !M! Vulnerable."
+      "${ModID}:Locked. NL 造成 !D! 点伤害。 NL Apply !M! Vulnerable。"
     ]
   },
   "${ModID}:Gravity": {
@@ -22,7 +22,7 @@
   },
   "${ModID}:PhantomStep": {
     "NAME": "Phantom Step",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Make 一张牌 in your 抽牌堆 ${ModID}:Occult."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Make 一张牌 in your 抽牌堆 ${ModID}:Occult。"
   },
   "${ModID}:Repel": {
     "NAME": "Repel",
@@ -40,20 +40,20 @@
   },
   "${ModID}:Curse": {
     "NAME": "Curse",
-    "DESCRIPTION": "${ModID}:Locking. NL Enemy loses !M! 点 力量 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Locking. NL 保留 。 NL Enemy loses !M! 点 力量 。",
+    "DESCRIPTION": "${ModID}:Locking. NL Enemy 失去s !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Locking. NL 保留 。 NL Enemy 失去s !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL Enemy loses !M! 点 力量 。",
-      "${ModID}:Locked. NL 保留 。 NL Enemy loses !M! 点 力量 。"
+      "${ModID}:Locked. NL Enemy 失去s !M! 点 力量 。",
+      "${ModID}:Locked. NL 保留 。 NL Enemy 失去s !M! 点 力量 。"
     ]
   },
   "${ModID}:MalleableFire": {
     "NAME": "Malleable Fire",
-    "DESCRIPTION": "Deal !D! damage X times. NL Add a *Molded *Fire that costs X to your 抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害 X times. NL Add a *Molded *Fire that costs X to your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:MoldedFire": {
     "NAME": "Molded Fire",
-    "DESCRIPTION": "${ModID}:Occult. NL Deal !D! damage for each [E] more this costs than your current energy."
+    "DESCRIPTION": "${ModID}:Occult. NL 造成 !D! 点伤害 for each [E] more this costs than your current energy。"
   },
   "${ModID}:DeepDream": {
     "NAME": "Deep Dream",

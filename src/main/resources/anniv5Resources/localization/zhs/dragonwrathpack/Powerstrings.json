@@ -2,27 +2,27 @@
   "${ModID}:Penance": {
     "NAME": "Penance",
     "DESCRIPTIONS": ["When this creature obtains #b",
-      " #yPenance, it loses #b",
+      " #yPenance, it 失去s #b",
       " 生命 and increases 生命 loss from #yPenance by #b10 本场战斗",
-      "."
+      "。"
     ]
   },
   "${ModID}:confession": {
     "NAME": "Confession",
     "DESCRIPTIONS": ["每当 you take damage deal #b",
-      " damage to all enemies. Halved if it activates outside of your turn."
+      " damage to all enemies. Halved if it activates outside of your turn。"
     ]
   },
   "${ModID}:JudgementDay": {
     "NAME": "Judgement Day",
     "DESCRIPTIONS": ["每当 a #yLightning orbs #ypassive activates 获得 #b",
-      " #yConfession."
+      " #yConfession。"
     ]
   },
   "${ModID}:Absolution": {
     "NAME": "Absolution",
-    "DESCRIPTIONS": ["每当 a creature loses 生命 from #yPenance they 获得 #b",
-      " #yWeak."
+    "DESCRIPTIONS": ["每当 a creature 失去s 生命 from #yPenance they 获得 #b",
+      " #yWeak。"
     ]
   }
 }

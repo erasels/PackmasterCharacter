@@ -1,9 +1,9 @@
 {
   "${ModID}:DimensionCore": {
     "NAME": "Dimension Core",
-    "FLAVOR": "A crystal sphere containing infinite possibilities. It's cracked.",
+    "FLAVOR": "A crystal sphere containing infinite possibilities. It's cracked。",
     "DESCRIPTIONS": [
-      "At the start of combat, for every #b10 cards in your deck, shuffle #b3 #ydifferent #ycolor cards into your 抽牌堆。 Draw an extr一张牌 each turn."
+      "At the start of combat, for every #b10 cards in your deck, shuffle #b3 #ydifferent #ycolor cards into your 抽牌堆。 Draw an extr一张牌 each turn。"
     ]
   }
 }

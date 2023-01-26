@@ -2,6 +2,6 @@
   {
     "PROPER_NAME": "Frostbite",
     "NAMES": ["frostbite"],
-    "DESCRIPTION": "At the start of its turn, a creature with #yFrostbite loses 生命 and its #yFrostbite is halved. NL 每当 a creature with #yFrostbite receives attack damage, apply #b1 #yFrostbite."
+    "DESCRIPTION": "At the start of its turn, a creature with #yFrostbite 失去s 生命 and its #yFrostbite is halved. NL 每当 a creature with #yFrostbite receives attack damage, apply #b1 #yFrostbite。"
   }
 ]

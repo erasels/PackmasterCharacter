@@ -1,7 +1,7 @@
 {
   "${ModID}:ChainShotgun": {
     "NAME": "Chain Shotgun",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! times。"
   },
   "${ModID}:Despair": {
     "NAME": "Despair",
@@ -17,16 +17,16 @@
   },
   "${ModID}:Pyromaniac": {
     "NAME": "Pyromaniac",
-    "DESCRIPTION": "At the start of your turn, set a random card in your hand ${ModID}:On_Fire.",
-    "UPGRADE_DESCRIPTION": "固有 。 NL At the start of your turn, set a random card in your hand ${ModID}:On_Fire."
+    "DESCRIPTION": "你的回合开始时， set a random card in your hand ${ModID}:On_Fire。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时， set a random card in your hand ${ModID}:On_Fire。"
   },
   "${ModID}:KillThirst": {
     "NAME": "Kill Thirst",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this doesn't kill the enemy, add a *Despair to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this doesn't kill the enemy, add a *Despair to your hand。"
   },
   "${ModID}:SpikeTrap": {
     "NAME": "Spike Trap",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Deal that much damage to the next enemy that attacks you."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Deal that much damage to the next enemy that attacks you。"
   },
   "${ModID}:Catharsis": {
     "NAME": "Catharsis",
@@ -34,15 +34,15 @@
   },
   "${ModID}:TradeBeacon": {
     "NAME": "Trade Beacon",
-    "DESCRIPTION": "The first time you draw or discard during your turn, 抽 !M! 张牌。"
+    "DESCRIPTION": "The first time you draw or 丢弃 during your turn, 抽 !M! 张牌。"
   },
   "${ModID}:BurningPassion": {
     "NAME": "Burning Passion",
-    "DESCRIPTION": "Double the first buff you 获得 during your turn."
+    "DESCRIPTION": "Double the first buff you 获得 during your turn。"
   },
   "${ModID}:TaintedWeapon": {
     "NAME": "Tainted Weapon",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 战斗开始： Put this card in a random monster.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 战斗开始： Put this card in a random monster。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害。"
     ]
@@ -51,7 +51,7 @@
     "NAME": "KeywordManager",
     "DESCRIPTION": "Stuff for translations and easy access to keyword ids",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:inspiration",
+      "${ModID}:灵感",
       "${ModID}:mental_break"
     ]
   }

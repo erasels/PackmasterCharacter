@@ -2,7 +2,7 @@
   "${ModID}:MakeshiftSwordPower": {
     "NAME": "Makeshift Sword",
     "DESCRIPTIONS": [
-        "每当 一张牌 is created during combat, 获得 #b%d #yVigor."
+        "每当 一张牌 is created during combat, 获得 #b%d #y活力。"
       ]
   },
   "${ModID}:MakeshiftShieldPower": {
@@ -14,7 +14,7 @@
   "${ModID}:FirewallPower": {
     "NAME": "Firewall",
     "DESCRIPTIONS": [
-      "When a #yStatus card is created, #y消耗 it."
+      "When a #yStatus card is created, #y消耗 it。"
     ]
   }
 }

@@ -3,32 +3,32 @@
     "NAME": "Entropy",
     "DESCRIPTIONS": [
       "The next #b",
-      " times you play 一张牌, discard a random card and 抽一张牌。",
-      "The next time you play 一张牌, discard a random card and 抽一张牌。"
+      " times you play 一张牌, 丢弃 a random card and 抽一张牌。",
+      "The next time you play 一张牌, 丢弃 a random card and 抽一张牌。"
     ]
   },
   "${ModID}:DiffusionPower": {
     "NAME": "Diffusion",
     "DESCRIPTIONS": [
-      "At the start of your turn, 获得 #b",
+      "你的回合开始时， 获得 #b",
       " #yEntropy and draw #b",
-      " card.",
-      " cards."
+      " card。",
+      " cards。"
     ]
   },
   "${ModID}:EntanglementPower": {
     "NAME": "Entanglement",
     "DESCRIPTIONS": [
       "每当 you receive a debuff, apply #b",
-      " #yRuin to a random enemy."
+      " #yRuin to a random enemy。"
     ]
   },
   "${ModID}:RuinPower": {
     "NAME": "Ruin",
     "DESCRIPTIONS": [
-      "The next time this enemy takes unblocked attack damage, it loses #b",
-      "The next time you take unblocked attack damage, lose #b",
-      " 生命."
+      "The next time this enemy takes un格挡ed attack damage, it 失去s #b",
+      "The next time you take un格挡ed attack damage, 失去 #b",
+      " 生命。"
     ]
   },
   "${ModID}:ConstructPower": {
@@ -36,7 +36,7 @@
     "DESCRIPTIONS": [
       "Takes #b",
       "Take #b",
-      " less damage from attacks 本回合."
+      " less damage from attacks 本回合。"
     ]
   }
 }

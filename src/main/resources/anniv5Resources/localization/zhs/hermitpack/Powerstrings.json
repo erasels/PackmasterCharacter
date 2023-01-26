@@ -5,6 +5,6 @@
   },
   "${ModID}:OverwhelmingPowerPower": {
     "NAME": "Overwhelming Power",
-    "DESCRIPTIONS": ["Lose #b"," 生命 if you end your turn with 0 Energy."]
+    "DESCRIPTIONS": ["失去 #b"," 生命 if you end your turn with 0 Energy。"]
   }
 }

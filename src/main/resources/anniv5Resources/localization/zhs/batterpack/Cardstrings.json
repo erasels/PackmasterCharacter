@@ -1,15 +1,15 @@
 {
   "${ModID}:BatterUp": {
     "NAME": "Batter Up",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Critical_Hit if the target intends to attack."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Critical_Hit if the target intends to attack。"
   },
   "${ModID}:Homerun": {
     "NAME": "Homerun",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Critical_Hit if you've played at least 2 cards 本回合."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Critical_Hit if you've played at least 2 cards 本回合。"
   },
   "${ModID}:WideAngle": {
     "NAME": "Wide Angle",
-    "DESCRIPTION": "Steal !M! 点 格挡 。 NL Apply 1 Weak."
+    "DESCRIPTION": "Steal !M! 点 格挡 。 NL Apply 1 Weak。"
   },
   "${ModID}:WindUp": {
     "NAME": "Wind Up",
@@ -17,28 +17,28 @@
   },
   "${ModID}:OpenBracket": {
     "NAME": "Open Bracket",
-    "DESCRIPTION": "抽 !M! 张牌。 NL You can only play Attacks for the rest of the turn."
+    "DESCRIPTION": "抽 !M! 张牌。 NL You can only play Attacks for the rest of the turn。"
   },
   "${ModID}:Tragedy": {
     "NAME": "Tragedy",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Critical_Hit if you hold 6 or more cards."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:Critical_Hit if you hold 6 or more cards。"
   },
   "${ModID}:OptimizedBlur": {
     "NAME": "Optimized Blur",
-    "DESCRIPTION": "每当 you deal unblocked attack damage, 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "每当 you deal un格挡ed attack damage, 获得 !M! 点 格挡 。"
   },
   "${ModID}:HardCaramel": {
     "NAME": "Hard Caramel",
-    "DESCRIPTION": "After attacking, apply 1 Vulnerable if target doesn't have any.",
-    "UPGRADE_DESCRIPTION": "固有 。 NL After attacking, apply 1 Vulnerable if target doesn't have any."
+    "DESCRIPTION": "After attacking, apply 1 Vulnerable if target doesn't have any。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL After attacking, apply 1 Vulnerable if target doesn't have any。"
   },
   "${ModID}:UltimateHomerun": {
     "NAME": "Ultimate Homerun",
-    "DESCRIPTION": "Deal the highest unblocked attack damage you've dealt 本场战斗.",
+    "DESCRIPTION": "Deal the highest un格挡ed attack damage you've dealt 本场战斗。",
     "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)", " NL (Deals !D! damage. Wow!)"]
   },
   "${ModID}:AvatarBeat": {
     "NAME": "Avatar Beat",
-    "DESCRIPTION": "每当 you deal 10 unblocked attack damage, 获得 !M! 点 力量, draw 1 card and raise this bar by 5."
+    "DESCRIPTION": "每当 you deal 10 un格挡ed attack damage, 获得 !M! 点 力量, draw 1 card and raise this bar by 5。"
   }
 }

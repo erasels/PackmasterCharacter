@@ -29,7 +29,7 @@
   },
   "${ModID}:InnerFury": {
     "NAME": "怒气",
-    "DESCRIPTION": "每当你进入或退出 ${ModID}:侵袭 ，获得 !M! 点 临时力量 与 !M! 点 格挡 。 NL 进入 ${ModID}:侵袭 。"
+    "DESCRIPTION": "每当你进入或退出 ${ModID}:侵袭 ，获得 !M! 层临时 力量 与 !M! 点 格挡 。 NL 进入 ${ModID}:侵袭 。"
   },
   "${ModID}:LunaticRage": {
     "NAME": "癫狂",

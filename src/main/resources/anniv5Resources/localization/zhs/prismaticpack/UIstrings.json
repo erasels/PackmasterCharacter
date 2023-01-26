@@ -2,14 +2,14 @@
   "${ModID}:PrismaticPack": {
     "TEXT": [
       "Prismatic",
-      "Focused on making and benefiting from cards of different colors.",
+      "Focused on making and benefiting from cards of different colors。",
       "modargo",
       "Card art from MtG"
     ]
   },
   "${ModID}:PrismaticPackHat": {
     "TEXT": [
-      "The crown jewel of you.",
+      "The crown jewel of you。",
       "Rainbow Gem"
     ]
   }

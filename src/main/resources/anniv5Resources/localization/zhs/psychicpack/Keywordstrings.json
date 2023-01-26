@@ -4,20 +4,20 @@
     "NAMES": [
       "occult"
     ],
-    "DESCRIPTION": "#yOccult cards can be played disregarding any conditions for playability. Cards played this way are #y消耗ed."
+    "DESCRIPTION": "#yOccult cards can be played disregarding any conditions for playability. Cards played this way are #y消耗ed。"
   },
   {
     "PROPER_NAME": "Locking",
     "NAMES": [
       "locking"
     ],
-    "DESCRIPTION": "#yLocking cards become #yUnplayable once played."
+    "DESCRIPTION": "#yLocking cards become #yUnplayable once played。"
   },
   {
     "PROPER_NAME": "Locked",
     "NAMES": [
       "locked"
     ],
-    "DESCRIPTION": "Locked cards are unplayable."
+    "DESCRIPTION": "Locked cards are unplayable。"
   }
 ]

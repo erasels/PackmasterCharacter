@@ -1,46 +1,46 @@
 {
   "${ModID}:BeyondTheStars": {
       "NAME": "Beyond the Stars",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL 获得 a *Madness.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL 获得 a *Madness+."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 a *Madness。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 a *Madness+。"
   },
   "${ModID}:NamelessMist": {
     "NAME": "Nameless Mist",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 another !M! 每当 you play 一张牌 本回合."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 another !M! 每当 you play 一张牌 本回合。"
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
-    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Distortion to a random enemy."
+    "DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Distortion to a random enemy。"
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
-    "DESCRIPTION": "获得 a *Necronomicurse. NL The next Attack you play that costs 2 or more is played twice.",
-    "UPGRADE_DESCRIPTION": "The next Attack you play that costs 2 or more is played twice."
+    "DESCRIPTION": "获得 a *Necronomicurse. NL The next Attack you play that costs 2 or more is played twice。",
+    "UPGRADE_DESCRIPTION": "The next Attack you play that costs 2 or more is played twice。"
   },
   "${ModID}:FamilialCurse": {
     "NAME": "Familial Curse",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ruin to ALL enemies. NL Next turn, 获得 a *Madness and lose 1 生命."
+    "DESCRIPTION": "Apply !M! ${ModID}:Ruin to ALL enemies. NL Next turn, 获得 a *Madness and 失去 1 生命。"
   },
   "${ModID}:GazeTheVoid": {
     "NAME": "Gaze the Void",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL Enter ${ModID}:Nightmare."
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL Enter ${ModID}:Nightmare。"
   },
   "${ModID}:AllSeeing": {
     "NAME": "All Seeing",
-    "DESCRIPTION": "At the end of each turn, Scry !M! and take 3 damage."
+    "DESCRIPTION": "At the end of each turn, Scry !M! and take 3 damage。"
   },
   "${ModID}:EndOfDays": {
     "NAME": "End of Days",
-    "DESCRIPTION": "At end of turn, Channel a Dark for each [E] unspent.",
-    "UPGRADE_DESCRIPTION": "获得 !M! Focus. NL At end of turn, Channel a Dark for each [E] unspent."
+    "DESCRIPTION": "At end of turn, Channel a Dark for each [E] unspent。",
+    "UPGRADE_DESCRIPTION": "获得 !M! Focus. NL At end of turn, Channel a Dark for each [E] unspent。"
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "R'lyeh Fhtagn",
-    "DESCRIPTION": "Put EVERYONE to sleep. Next turn, 获得 3 *Madness and lose 3 生命. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. Next turn, 获得 3 *Madness+ and lose 3 生命. NL 消耗 。"
+    "DESCRIPTION": "Put EVERYONE to sleep. Next turn, 获得 3 *Madness and 失去 3 生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. Next turn, 获得 3 *Madness+ and 失去 3 生命。 NL 消耗 。"
   },
   "${ModID}:StarSpawn": {
     "NAME": "Star Spawn",
-    "DESCRIPTION": "Deal 13 damage twice. NL Heal !M! 生命. NL Channel a Plasma. NL 消耗 。"
+    "DESCRIPTION": "Deal 13 damage twice. NL Heal !M! 生命。 NL Channel a Plasma. NL 消耗 。"
   }
 }

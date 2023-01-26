@@ -2,13 +2,13 @@
   "${ModID}:HermitPack": {
     "TEXT": [
       "Hermit",
-      "A collection of Hermit cards, focusing on great power at a great cost.",
+      "A collection of Hermit cards, focusing on great power at a great cost。",
       "AlexMdle"
     ]
   },
   "${ModID}:HermitPackHat": {
     "TEXT": [
-      "Rugged and bruised, but can still be worn.",
+      "Rugged and bruised, but can still be worn。",
       "Hermit Hat"
     ]
   }

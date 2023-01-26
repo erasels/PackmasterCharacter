@@ -2,12 +2,12 @@
   "${ModID}:InfiniteClawsPower": {
     "NAME": "Infinite Claws",
     "DESCRIPTIONS": [
-      "At the start of your turn, 获得 #b",
-      " #yGhost #yClaws.",
-      " #yGhost #yClaw."
+      "你的回合开始时， 获得 #b",
+      " #yGhost #yClaws。",
+      " #yGhost #yClaw。"
     ]
   },
-  "${ModID}:ReturnBlockOnClawPower": {
+  "${ModID}:Return格挡OnClawPower": {
     "NAME": "Talk to the Claw",
     "DESCRIPTIONS": [
       "When attacked with a Claw, you 获得 #b",

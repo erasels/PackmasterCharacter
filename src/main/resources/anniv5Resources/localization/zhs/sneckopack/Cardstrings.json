@@ -1,23 +1,23 @@
 {
   "${ModID}:Whirligig": {
   "NAME": "Whirligig",
-  "DESCRIPTION": "Deal !D! damage to a random enemy for each enemy in combat."
+  "DESCRIPTION": "造成 !D! 点伤害 to a random enemy for each enemy in combat。"
   },
   "${ModID}:Sliiiiither": {
     "NAME": "Sliiiiither",
-    "DESCRIPTION": "Next turn, draw !M! to 3 additional cards."
+    "DESCRIPTION": "Next turn, draw !M! to 3 additional cards。"
   },
   "${ModID}:TailFlail": {
     "NAME": "Tail Flail",
-    "DESCRIPTION": "Deal !D! to !${ModID}:sd! damage to ALL enemies. NL Randomize the cost of !M! random cards."
+    "DESCRIPTION": "Deal !D! to !${ModID}:sd! damage to ALL enemies. NL Randomize the cost of !M! random cards。"
   },
   "${ModID}:Sneckpot": {
     "NAME": "Sneckpot",
-    "DESCRIPTION": "Deal 1 to !D! damage. Roll the damage X times and take the highest result."
+    "DESCRIPTION": "Deal 1 to !D! damage. Roll the damage X times and take the highest result。"
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "Whip 'n Snapper",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !${ModID}:m2! to !M! Weak and !${ModID}:m2! to !M! Vulnerable."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !${ModID}:m2! to !M! Weak and !${ModID}:m2! to !M! Vulnerable。"
   },
   "${ModID}:Twitch": {
     "NAME": "Twitch",
@@ -26,19 +26,19 @@
   },
   "${ModID}:Gulp": {
     "NAME": "Meal Prep",
-    "DESCRIPTION" : "Deal !D! damage for each energy this card costs."
+    "DESCRIPTION" : "造成 !D! 点伤害 for each energy this card costs。"
   },
   "${ModID}:SnazzySwagger": {
     "NAME": "Snazzy Swagger",
-    "DESCRIPTION" : "{@@}抽 !M! 张牌{!M!|>1=s}. NL Randomize the cost of all cards in your hand. NL Discard !M! card{!M!|>1=s}."
+    "DESCRIPTION" : "{@@}抽 !M! 张牌{!M!|>1=s}. NL Randomize the cost of all cards in your hand. NL 丢弃 !M! card{!M!|>1=s}。"
   },
   "${ModID}:SneckoEyes": {
     "NAME": "Snecko Eyes",
-    "DESCRIPTION" : "Become Confused. At the start of your turn, draw 2 cards.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, draw 2 cards. NL 战斗开始： Become Confused."
+    "DESCRIPTION" : "Become Confused. 你的回合开始时， draw 2 cards。",
+    "UPGRADE_DESCRIPTION": "你的回合开始时， draw 2 cards. NL 战斗开始： Become Confused。"
   },
   "${ModID}:Shedding": {
     "NAME": "Shedding",
-    "DESCRIPTION" : "{@@}At the start of your turn, randomize the cost of the {!M!|>1=!M! highest cost cards|@=highest cost card} in your hand."
+    "DESCRIPTION" : "{@@}你的回合开始时， randomize the cost of the {!M!|>1=!M! highest cost cards|@=highest cost card} in your hand。"
   }
 }

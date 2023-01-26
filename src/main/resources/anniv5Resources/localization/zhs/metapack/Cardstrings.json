@@ -1,15 +1,15 @@
 {
   "${ModID}:ShedWeight": {
     "NAME": "Shed Weight",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Discard 一张牌。 NL If that card was [#EFC851]Unplayable, 抽一张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃 一张牌。 NL If that card was [#EFC851]Unplayable, 抽一张牌。"
   },
   "${ModID}:RayOfFrost": {
     "NAME": "Ray Of Frost",
-    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 NL 每当 you play a *Magic card 本回合, Channel !M! Frost."
+    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 NL 每当 you play a *Magic card 本回合, Channel !M! Frost。"
   },
   "${ModID}:Swipe": {
     "NAME": "Swipe",
-    "DESCRIPTION": "Deal !D! damage for each point of Energy missing.",
+    "DESCRIPTION": "造成 !D! 点伤害 for each point of Energy missing。",
     "EXTENDED_DESCRIPTION": [" NL (Hits !M! times.)"]
   },
   "${ModID}:Ambition": {
@@ -19,15 +19,15 @@
   },
   "${ModID}:Diehard": {
     "NAME": "Diehard",
-    "DESCRIPTION": "获得 !M! Artifact. NL Next turn, 获得 1 Weak and Frail."
+    "DESCRIPTION": "获得 !M! Artifact. NL Next turn, 获得 1 Weak and Frail。"
   },
   "${ModID}:EldritchBlast": {
     "NAME": "Eldritch Blast",
-    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 Reduce the cost of a random *Magic card in hand by 1 本回合."
+    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 Reduce the cost of a random *Magic card in hand by 1 本回合。"
   },
   "${ModID}:DeathWish": {
     "NAME": "Death Wish",
-    "DESCRIPTION": "If your 生命 is above 50%, lose !M! 生命. NL 获得 !M! 点 力量 and [#EFC851]Vigor."
+    "DESCRIPTION": "If your 生命 is above 50%, 失去 !M! 生命。 NL 获得 !M! 点 力量 and [#EFC851]活力。"
   },
   "${ModID}:KillerInstinct": {
     "NAME": "Killer Instinct",
@@ -37,10 +37,10 @@
   "${ModID}:Bulwark": {
     "NAME": "Bulwark",
     "DESCRIPTION": "固有 。 NL 获得 Temporary 生命 equal to your 抽牌堆 size. NL 消耗 。",
-    "EXTENDED_DESCRIPTION": [" NL (获得 !M! Temporary 生命.)"]
+    "EXTENDED_DESCRIPTION": [" NL (获得 !M! Temporary 生命。)"]
   },
   "${ModID}:Masterstroke": {
     "NAME": "Masterstroke",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 力量 and Dexterity affect this card !M! times."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 力量 and Dexterity affect this card !M! times。"
   }
 }

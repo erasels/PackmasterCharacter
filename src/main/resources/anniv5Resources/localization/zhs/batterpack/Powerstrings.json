@@ -1,18 +1,18 @@
 {
   "${ModID}:OptimizedBlurPower": {
     "NAME": "Optimized Blur",
-    "DESCRIPTIONS": ["每当 you deal unblocked attack damage, 获得 #b", " #y格挡 。"]
+    "DESCRIPTIONS": ["每当 you deal un格挡ed attack damage, 获得 #b", " #y格挡 。"]
   },
   "${ModID}:HardCaramelPower": {
     "NAME": "Hard Caramel",
-    "DESCRIPTIONS": ["After attacking, apply #b", " #yVulnerable if the target doesn't have any."]
+    "DESCRIPTIONS": ["After attacking, apply #b", " #yVulnerable if the target doesn't have any。"]
   },
   "${ModID}:AvatarBeatPower": {
     "NAME": "Avatar Beat",
-    "DESCRIPTIONS": ["每当 you deal #b", " unblocked attack damage, 获得 #b", " #y力量, draw #b", " card and raise this bar by #b5.", " cards and raise this bar by #b5."]
+    "DESCRIPTIONS": ["每当 you deal #b", " un格挡ed attack damage, 获得 #b", " #y力量, draw #b", " card and raise this bar by #b5。", " cards and raise this bar by #b5。"]
   },
   "${ModID}:OpenBracketPower": {
     "NAME": "Open Bracket",
-    "DESCRIPTIONS": ["You can only play #yAttacks for the rest of the turn."]
+    "DESCRIPTIONS": ["You can only play #y攻击s for the rest of the turn。"]
   }
 }

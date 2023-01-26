@@ -4,15 +4,15 @@
     "DESCRIPTIONS": [
       "每当 you draw a #yLocked or #yUnplayable card, 抽一张牌。",
       "每当 you draw a #yLocked or #yUnplayable card, draw #b",
-      " cards."
+      " cards。"
     ]
   },
   "${ModID}:DeepDreamPower": {
     "NAME": "Deep Dream",
     "DESCRIPTIONS": [
-      "每当 you play 一张牌 本回合, make a random card in your hand #yOccult.",
+      "每当 you play 一张牌 本回合, make a random card in your hand #yOccult。",
       "每当 you play 一张牌 本回合, make #b",
-      " random cards in your hand #yOccult."
+      " random cards in your hand #yOccult。"
     ]
   }
 }

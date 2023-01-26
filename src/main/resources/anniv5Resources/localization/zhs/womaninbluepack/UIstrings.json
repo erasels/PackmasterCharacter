@@ -2,13 +2,13 @@
   "${ModID}:WomanInBluePack": {
     "TEXT": [
       "Blue's Brews",
-      "A collection of useful 消耗 cards themed around Potions. Contains several multi-choice cards.",
+      "A collection of useful 消耗 cards themed around Potions. Contains several multi-choice cards。",
       "MichaelMayhem"
     ]
   },
   "${ModID}:WomanInBluePackHat": {
     "TEXT": [
-      "Spotted worn wherever trouble is brewing.",
+      "Spotted worn wherever trouble is brewing。",
       "The Hat in Blue"
     ]
   }

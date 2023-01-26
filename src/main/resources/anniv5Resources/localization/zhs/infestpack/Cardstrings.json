@@ -1,15 +1,15 @@
 {
   "${ModID}:BuggyBash": {
     "NAME": "Buggy Bash",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL Deals !M! additional damage for each [bugIcon] ."
+    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL Deals !M! additional damage for each [bugIcon] 。"
   },
   "${ModID}:SwarmSword": {
     "NAME": "Swarm Strike",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL Draw 1 card for each [bugIcon] ."
+    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL Draw 1 card for each [bugIcon] 。"
   },
   "${ModID}:GrassHop": {
     "NAME": "Locusts",
-    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL When this 获得s [bugIcon] , ALL enemies lose !M! 生命."
+    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL When this 获得s [bugIcon] , ALL enemies 失去 !M! 生命。"
   },
   "${ModID}:Bzzzzz": {
     "NAME": "Bzzzzzz",
@@ -17,23 +17,23 @@
   },
   "${ModID}:BugOut": {
     "NAME": "Bug Out",
-    "DESCRIPTION": "${ModID}:Infest. NL 获得 1 力量 and Dexterity for each [bugIcon] ."
+    "DESCRIPTION": "${ModID}:Infest. NL 获得 1 力量 and Dexterity for each [bugIcon] 。"
   },
   "${ModID}:ScarabShield": {
     "NAME": "Scarab Shield",
-    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL 获得 1 Artifact for each [bugIcon] ."
+    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL 获得 1 Artifact for each [bugIcon] 。"
   },
   "${ModID}:Entomology": {
     "NAME": "Entomology",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL If this has any [bugIcon] , remove it to draw 1 card and 获得 [E] ."
+    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL If this has any [bugIcon] , remove it to draw 1 card and 获得 [E] 。"
   },
   "${ModID}:Compoundeyes": {
     "NAME": "Compoundeyes",
-    "DESCRIPTION": "抽 !M! 张牌。 NL When you next play 一张牌, end your turn."
+    "DESCRIPTION": "抽 !M! 张牌。 NL When you next play 一张牌, end your turn。"
   },
   "${ModID}:Bees": {
     "NAME": "BEES!!!",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害 !M! 次。 NL Deals 1 additional damage for each [bugIcon] .",
+    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害 !M! 次。 NL Deals 1 additional damage for each [bugIcon] 。",
     "EXTENDED_DESCRIPTION": [
       "B",
       "E",
@@ -42,6 +42,6 @@
   },
   "${ModID}:LordOfTheFlies": {
     "NAME": "Lord of the Flies",
-    "DESCRIPTION": "Draw 1 additional card each turn. NL When your cards ${ModID}:Infest, put an additional [bugIcon] on them."
+    "DESCRIPTION": "Draw 1 additional card each turn. NL When your cards ${ModID}:Infest, put an additional [bugIcon] on them。"
   }
 }

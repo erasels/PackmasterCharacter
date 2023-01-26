@@ -1,8 +1,8 @@
 {
   "${ModID}:SwordAndDagger": {
     "NAME": "Sword and Dagger",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add !M! *Shiv to your hand.",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add !M! *Shivs to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add !M! *Shiv to your hand。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add !M! *Shivs to your hand。"
   },
   "${ModID}:PrismaticBarrier": {
     "NAME": "Prismatic Barrier",
@@ -14,11 +14,11 @@
   },
   "${ModID}:ShimmeringStrike": {
     "NAME": "Shimmering Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals !M! additional damage for each ${ModID}:different\u00a0color card played 本场战斗."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals !M! additional damage for each ${ModID}:different\u00a0color card played 本场战斗。"
   },
   "${ModID}:ExoticKnowledge": {
     "NAME": "Exotic Knowledge",
-    "DESCRIPTION": "抽 !M! 张牌。 NL If you've played a ${ModID}:different\u00a0color card 本回合, draw !${ModID}:m2! more cards."
+    "DESCRIPTION": "抽 !M! 张牌。 NL If you've played a ${ModID}:different\u00a0color card 本回合, draw !${ModID}:m2! more cards。"
   },
   "${ModID}:ChoiceCut": {
     "NAME": "Choice Cut",
@@ -27,12 +27,12 @@
   },
   "${ModID}:QuirionDryad": {
     "NAME": "Quirion Dryad",
-    "DESCRIPTION": "The first time you play each color of card 本场战斗, 获得 !M! 点 力量 and !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "固有 。 NL The first time you play each color of card 本场战斗, 获得 !M! 点 力量 and !M! Dexterity."
+    "DESCRIPTION": "The first time you play each color of card 本场战斗, 获得 !M! 点 力量 and !M! Dexterity。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL The first time you play each color of card 本场战斗, 获得 !M! 点 力量 and !M! Dexterity。"
   },
   "${ModID}:ManyAsOne": {
     "NAME": "Many as One",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Put all ${ModID}:different\u00a0color cards from your 弃牌堆 into your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Put all ${ModID}:different\u00a0color cards from your 弃牌堆 into your hand。"
   },
   "${ModID}:PremiumSelection": {
     "NAME": "Premium Selection",
@@ -40,7 +40,7 @@
   },
   "${ModID}:FlawlessPrism": {
     "NAME": "Flawless Prism",
-    "DESCRIPTION": "At the start of your turn, add !M! ${ModID}:different\u00a0color Power card to your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add !M! ${ModID}:different\u00a0color Power cards to your hand."
+    "DESCRIPTION": "你的回合开始时， add !M! ${ModID}:different\u00a0color Power card to your hand。",
+    "UPGRADE_DESCRIPTION": "你的回合开始时， add !M! ${ModID}:different\u00a0color Power cards to your hand。"
   }
 }

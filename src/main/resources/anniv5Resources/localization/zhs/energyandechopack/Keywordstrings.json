@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Echo",
+    "PROPER_NAME": "回响",
     "NAMES": [
-      "echo"
+      "echo",
+      "回响"
     ],
-    "DESCRIPTION": "Add a copy of this card with #y消耗 and #y虚无 to your hand."
+    "DESCRIPTION": "将一张带有 #y消耗 与 #y虚无 的本牌复制品加入手牌。"
   }
 ]

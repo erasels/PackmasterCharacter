@@ -2,13 +2,13 @@
   "${ModID}:QuietPack": {
     "TEXT": [
       "Quiet",
-      "Silent's friend from the foglands. NL Carries heavy equipment.",
+      "Silent's friend from the foglands. NL Carries heavy equipment。",
       "Diamsword"
     ]
   },
   "${ModID}:QuietPackHat": {
     "TEXT": [
-      "A lot heavier than it looks.",
+      "A lot heavier than it looks。",
       "Quiet Mask"
     ]
   }

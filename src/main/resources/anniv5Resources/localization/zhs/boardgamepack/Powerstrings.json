@@ -2,48 +2,48 @@
   "${ModID}:DicePower": {
     "NAME": "Dice",
     "DESCRIPTIONS": [
-      "The next time you play 一张牌 that deals damage or 获得s #yBlock, it deals or 获得s #b",
+      "The next time you play 一张牌 that deals damage or 获得s #y格挡, it deals or 获得s #b",
       " more damage or #y格挡 。"
     ]
   },
   "${ModID}:SkipNextTurnPower": {
     "NAME": "Skip Next Turn",
     "DESCRIPTIONS": [
-      "Skip your next turn.",
+      "Skip your next turn。",
       "Skip your next #b",
-      " turns."
+      " turns。"
     ]
   },
   "${ModID}:OneTimeAdvantagePower": {
     "NAME": "Advantage",
     "DESCRIPTIONS": [
-      "Roll the next #yDice an additional time and take the highest value.",
+      "Roll the next #yDice an additional time and take the highest value。",
       "Roll the next #yDice an additional #b",
-      " times and take the highest value."
+      " times and take the highest value。"
     ]
   },
   "${ModID}:AdvantagePower": {
     "NAME": "Advantage",
     "DESCRIPTIONS": [
-      "Roll #yDice an additional time and take the highest value.",
+      "Roll #yDice an additional time and take the highest value。",
       "Roll #yDice an additional #b",
-      " times and take the highest value."
+      " times and take the highest value。"
     ]
   },
   "${ModID}:PerceptionCheckPower": {
     "NAME": "Perception Check",
     "DESCRIPTIONS": [
-      "At the start of your turn, roll a D8.",
-      "At the start of your turn, roll #b",
-      " D8."
+      "你的回合开始时， roll a D8。",
+      "你的回合开始时， roll #b",
+      " D8。"
     ]
   },
   "${ModID}:JailPower": {
     "NAME": "Jail",
     "DESCRIPTIONS": [
-      "You cannot play attacks or take damage 本回合.",
+      "You cannot play attacks or take damage 本回合。",
       "You cannot play attacks or take damage for the next #b",
-      " turns."
+      " turns。"
     ]
   }
 }

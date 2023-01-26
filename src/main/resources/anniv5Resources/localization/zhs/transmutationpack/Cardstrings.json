@@ -1,8 +1,8 @@
 {
   "${ModID}:AmalgamateWaters": {
     "NAME": "Amalgamate Waters",
-    "DESCRIPTION": "Draw a ${ModID}:Mutable card. NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them.",
-    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Mutable cards. NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them."
+    "DESCRIPTION": "Draw a ${ModID}:Mutable card. NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them。",
+    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Mutable cards. NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them。"
   },
   "${ModID}:CrystalLattice": {
     "NAME": "Crystal Lattice",
@@ -29,27 +29,27 @@
   "${ModID}:GlacialSynthesis": {
     "NAME": "Glacial Synthesis",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute 一张牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute up to !M! cards."
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute up to !M! cards。"
   },
   "${ModID}:SearingSynthesis": {
     "NAME": "Searing Synthesis",
     "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute 一张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute up to !M! cards."
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute up to !M! cards。"
   },
   "${ModID}:ViscousShell": {
     "NAME": "Viscous Shell",
-    "DESCRIPTION": "${ModID}:Mutable: 获得 !B! 点 格挡 。 NL ${ModID}:Transmute this card."
+    "DESCRIPTION": "${ModID}:Mutable: 获得 !B! 点 格挡 。 NL ${ModID}:Transmute this card。"
   },
   "${ModID}:DimensionalIcicles": {
     "NAME": "Dimensional Icicles",
-    "DESCRIPTION": "Deal !D! damage !B! times. The number of hits is affected by Block modifiers."
+    "DESCRIPTION": "造成 !D! 点伤害 !B! times. The number of hits is affected by 格挡 modifiers。"
   },
   "${ModID}:AbstractExtraEffectModifier": {
     "EXTENDED_DESCRIPTION": [
       "${ModID}:Mutable: ",
       " ",
-      " times.",
-      "."
+      " times。",
+      "。"
     ]
   },
   "${ModID}:DamageEffect": {
@@ -62,18 +62,18 @@
     "EXTENDED_DESCRIPTION": [
       "When ${ModID}:Transmuted, 抽一张牌。",
       "When ${ModID}:Transmuted, draw ",
-      " cards."
+      " cards。"
     ]
   },
   "${ModID}:FreeToPlayEffect": {
     "EXTENDED_DESCRIPTION": [
-      "Free to play."
+      "Free to play。"
     ]
   },
-  "${ModID}:获得BlockEffect": {
+  "${ModID}:获得格挡Effect": {
     "EXTENDED_DESCRIPTION": [
       "获得 ",
-      " Block"
+      " 格挡"
     ]
   },
   "${ModID}:ReboundSelfEffect": {
@@ -83,7 +83,7 @@
   },
   "${ModID}:TransmuteSelfEffect": {
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Transmute this card."
+      "${ModID}:Transmute this card。"
     ]
   }
 }

@@ -1,7 +1,7 @@
 {
   "${ModID}:S_r_ke": {
     "NAME": "S r ke",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Distortion."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Distortion。"
   },
   "${ModID}:Deconstruct": {
     "NAME": "Deconstruct",
@@ -9,16 +9,16 @@
   },
   "${ModID}:Darken": {
     "NAME": "Darken",
-    "DESCRIPTION": "Apply !M! ${ModID}:Distortion. If the enemy has another debuff, apply !${ModID}:m2! more."
+    "DESCRIPTION": "Apply !M! ${ModID}:Distortion. If the enemy has another debuff, apply !${ModID}:m2! more。"
   },
   "${ModID}:BurningAct": {
     "NAME": "Burning Act",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗 2 of them randomly.",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 2 of them."
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗 2 of them randomly。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 2 of them。"
   },
   "${ModID}:MindMaze": {
     "NAME": "Mind Maze",
-    "DESCRIPTION": "获得 !B! Block X times. NL Put X *Dazed on top of your 抽牌堆。"
+    "DESCRIPTION": "获得 !B! 格挡 X times. NL Put X *Dazed on top of your 抽牌堆。"
   },
   "${ModID}:Deterioration": {
     "NAME": "Deterioration",
@@ -26,22 +26,22 @@
   },
   "${ModID}:Shatter": {
     "NAME": "Shatter",
-    "DESCRIPTION": "{@@}Deal !D! damage for each time the enemy has lost 生命 本回合.",
+    "DESCRIPTION": "{@@}造成 !D! 点伤害 for each time the enemy has lost 生命 本回合。",
     "EXTENDED_DESCRIPTION": [
-      "{@@}Deal !D! damage for each time the enemy has lost 生命 本回合. NL (Hits !M! time{!M!|1=|@=s}.)"
+      "{@@}造成 !D! 点伤害 for each time the enemy has lost 生命 本回合. NL (Hits !M! time{!M!|1=|@=s}.)"
     ]
   },
   "${ModID}:Rue": {
     "NAME": "Rue",
-    "DESCRIPTION": "{@@}获得 [E] [E] and 抽 !M! 张牌{!M!|>1=s}. NL 消耗 the next 3 cards you play."
+    "DESCRIPTION": "{@@}获得 [E] [E] and 抽 !M! 张牌{!M!|>1=s}. NL 消耗 the next 3 cards you play。"
   },
   "${ModID}:Static": {
     "NAME": "Static",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Apply ${ModID}:Distortion equal to the unblocked damage dealt."
+    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! times. Apply ${ModID}:Distortion equal to the un格挡ed damage dealt。"
   },
   "${ModID}:CursedCircle": {
     "NAME": "Cursed Circle",
-    "DESCRIPTION": "You and ALL enemies lose 力量 本回合 equal to the number of cards in your hand. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "You and ALL enemies lose 力量 本回合 equal to the number of cards in your hand."
+    "DESCRIPTION": "You and ALL enemies 失去 力量 本回合 equal to the number of cards in your hand. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "You and ALL enemies 失去 力量 本回合 equal to the number of cards in your hand。"
   }
 }

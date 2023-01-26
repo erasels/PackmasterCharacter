@@ -1,16 +1,16 @@
 {
   "${ModID}:HangedPower": {
-    "NAME": "Hanged",
+    "NAME": "倒吊者",
     "DESCRIPTIONS": [
-      "每当 you 抽一张牌 本回合, ALL enemies lose #b",
-      " 生命."
+      "本回合每当你抽一张牌，所有敌人失去 #b",
+      " 点生命。"
     ]
   },
   "${ModID}:TheChariotPower": {
-    "NAME": "The Chariot",
+    "NAME": "战车",
     "DESCRIPTIONS": [
-      "每当 you discard 一张牌 during your turn, 获得 #b",
-      " #yVigor."
+      "你的回合中每当你丢弃一张牌，获得 #b",
+      " 层 #y活力。"
     ]
   }
 }

@@ -2,11 +2,11 @@
   {
     "PROPER_NAME": "Angry",
     "NAMES": ["angry"],
-    "DESCRIPTION": "Your Attacks deal #b50% more damage and you take #b50% more damage from attacks. Upon exiting this #yStance, 获得 #b3 #yVigor."
+    "DESCRIPTION": "Your Attacks deal #b50% more damage and you take #b50% more damage from attacks. Upon exiting this #yStance, 获得 #b3 #y活力。"
   },
   {
     "PROPER_NAME": "Serene",
     "NAMES": ["serene"],
-    "DESCRIPTION": "回合结束时， 获得 #yBlock equal to #b50% of your #y格挡 。 Upon exiting this #yStance, 获得 #b1 #yDexterity."
+    "DESCRIPTION": "回合结束时， 获得 #y格挡 equal to #b50% of your #y格挡 。 Upon exiting this #yStance, 获得 #b1 #yDexterity。"
   }
 ]

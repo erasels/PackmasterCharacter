@@ -1,7 +1,7 @@
 {
   "${ModID}:GreyBar获得": {
     "NAME": "Grey Bar获得",
-    "DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by 消耗ing 一张牌 in your hand.",
+    "DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by 消耗ing 一张牌 in your hand。",
     "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by 消耗ing 一张牌 in your hand. NL 抽一张牌。",
     "EXTENDED_DESCRIPTION": ["I need 一张牌 to 消耗 。"]
   },
@@ -19,18 +19,18 @@
   },
     "${ModID}:CallOfTheGrave": {
     "NAME": "Call of the Grave",
-    "DESCRIPTION": "At the start of your turn, play a random ${ModID}:Buried card and stslib:Purge it.",
-    "UPGRADE_DESCRIPTION": "固有 。 NL At the start of your turn, play a random ${ModID}:Buried card and stslib:Purge it."
+    "DESCRIPTION": "你的回合开始时， play a random ${ModID}:Buried card and stslib:Purge it。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时， play a random ${ModID}:Buried card and stslib:Purge it。"
   },
     "${ModID}:SpontaneousRitual": {
     "NAME": "Spontaneous Ritual",
-    "DESCRIPTION": "消耗 your hand. NL Deal damage equal to the number of cards 消耗ed 本场战斗.",
-    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your hand then 消耗 it. NL Deal damage equal to the number of cards 消耗ed 本场战斗.",
+    "DESCRIPTION": "消耗 your hand. NL Deal damage equal to the number of cards 消耗ed 本场战斗。",
+    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your hand then 消耗 it. NL Deal damage equal to the number of cards 消耗ed 本场战斗。",
   	"EXTENDED_DESCRIPTION": [" NL ( !D! damage )"]
   },
     "${ModID}:FuneraryJewels": {
     "NAME": "Funerary Jewels",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 抽 !M! 张牌. 获得 [E]. NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 抽 !M! 张牌。 获得 [E]. NL 消耗 。"
   },
     "${ModID}:Tombstone": {
     "NAME": "Tombstone",
@@ -38,12 +38,12 @@
   },
     "${ModID}:DarkOfNight": {
     "NAME": "Dark of Night",
-    "DESCRIPTION": "Your next card that 消耗s 本回合 is played twice.",
-    "UPGRADE_DESCRIPTION": "Your next two cards that 消耗 本回合 are played twice."
+    "DESCRIPTION": "Your next card that 消耗s 本回合 is played twice。",
+    "UPGRADE_DESCRIPTION": "Your next two cards that 消耗 本回合 are played twice。"
   },
     "${ModID}:LastGasp": {
     "NAME": "Last Gasp",
-    "DESCRIPTION": "虚无 。 NL Choose a ${ModID}:Buried card, play it, and stslib:Purge it.",
-    "UPGRADE_DESCRIPTION": "Choose a ${ModID}:Buried card, play it, and stslib:Purge it."
+    "DESCRIPTION": "虚无 。 NL Choose a ${ModID}:Buried card, play it, and stslib:Purge it。",
+    "UPGRADE_DESCRIPTION": "Choose a ${ModID}:Buried card, play it, and stslib:Purge it。"
   }
 }

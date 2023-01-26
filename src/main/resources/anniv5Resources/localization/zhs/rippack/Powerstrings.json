@@ -2,9 +2,9 @@
   "${ModID}:DividedFuryPower": {
     "NAME": "Divided Fury",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b",
-      " Fury card into your hand.",
-      " Fury cards into your hand."
+      "你的回合开始时， add #b",
+      " Fury card into your hand。",
+      " Fury cards into your hand。"
     ]
   }
 }

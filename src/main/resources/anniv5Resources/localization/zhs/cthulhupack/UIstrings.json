@@ -2,13 +2,13 @@
   "${ModID}:CthulhuPack": {
     "TEXT": [
       "Eldritch Horror",
-      "The obligatory C'thulhu expansion. Features orbs, Nightmare stance, Distortion, and Entropy mechanics.",
+      "The obligatory C'thulhu expansion. Features orbs, Nightmare stance, Distortion, and Entropy mechanics。",
       "MichaelMayhem"
     ]
   },
   "${ModID}:CthulhuPackHat": {
     "TEXT": [
-      "This horror from beyond the stars now nests snugly upon your head.",
+      "This horror from beyond the stars now nests snugly upon your head。",
       "Eldritch Symbiote"
     ]
   }

@@ -3,14 +3,14 @@
     "NAME": "Moonlight Flight",
     "DESCRIPTIONS": [
       "每当 you #ychannel an orb, 获得 #b",
-      " #yFocus until your next turn."
+      " #yFocus until your next turn。"
     ]
   },
-  "${ModID}:LoseFocusPower": {
+  "${ModID}:失去FocusPower": {
     "NAME": "Discharge",
     "DESCRIPTIONS": [
-      "At the start of your turn lose #b",
-      " #yFocus."
+      "At the start of your turn 失去 #b",
+      " #yFocus。"
     ]
   }
 }

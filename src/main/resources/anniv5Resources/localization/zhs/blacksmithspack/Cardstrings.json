@@ -1,11 +1,11 @@
 {
   "${ModID}:QuickFix": {
   "NAME": "Quick Fix",
-  "DESCRIPTION": "获得 !B! 点 格挡 。 NL Upgrade a random card in your hand."
+  "DESCRIPTION": "获得 !B! 点 格挡 。 NL Upgrade a random card in your hand。"
   },
   "${ModID}:RedHotHammer": {
     "NAME": "Red-Hot Hammer",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Can be Upgraded any number of times."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Can be Upgraded any number of times。"
   },
   "${ModID}:HeartOfTheForge": {
     "NAME": "Heart of the Forge",
@@ -13,11 +13,11 @@
   },
   "${ModID}:SharpeningSheath": {
     "NAME": "Sharpening Sheath",
-    "DESCRIPTION": "抽 !M! 张牌s and Upgrade them."
+    "DESCRIPTION": "抽 !M! 张牌s and Upgrade them。"
   },
   "${ModID}:CarelessSwing": {
     "NAME": "Careless Swing",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 a random *Unupgraded card in your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 a random *Unupgraded card in your hand。"
   },
   "${ModID}:SetUpShop": {
     "NAME": "Set Up Shop",
@@ -25,18 +25,18 @@
   },
   "${ModID}:MastersStrike": {
     "NAME": "Master's Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals !M! additional damage for each Upgrade on ALL your cards."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals !M! additional damage for each Upgrade on ALL your cards。"
   },
   "${ModID}:ScrapMetal": {
     "NAME": "Scrap Metal",
-    "DESCRIPTION": "Upgrade a random card from any pile for every !M! Block you have. NL 消耗 。"
+    "DESCRIPTION": "Upgrade a random card from any pile for every !M! 格挡 you have. NL 消耗 。"
   },
   "${ModID}:BlacksmithsShield": {
     "NAME": "Blacksmith's Shield",
-    "DESCRIPTION": "After you play 一张牌, 获得 1 Block for each Upgrade on it."
+    "DESCRIPTION": "After you play 一张牌, 获得 1 格挡 for each Upgrade on it。"
   },
   "${ModID}:Masterwork": {
     "NAME": "Masterwork",
-    "DESCRIPTION": "{@@}Upgrade 一张牌{!M!|2= twice|>2= !M! times}. NL Can upgrade cards any number of times."
+    "DESCRIPTION": "{@@}Upgrade 一张牌{!M!|2= twice|>2= !M! times}. NL Can upgrade cards any number of times。"
   }
 }

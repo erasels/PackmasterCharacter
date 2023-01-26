@@ -1,28 +1,28 @@
 {
   "${ModID}:RollToMove": {
     "NAME": "Roll to Move",
-    "DESCRIPTION": "Roll !M! ${ModID}:D6."
+    "DESCRIPTION": "Roll !M! ${ModID}:D6。"
   },
   "${ModID}:FlickDice": {
   "NAME": "Flick Dice",
-  "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Roll a ${ModID}:D6.",
-  "UPGRADE_DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Roll a ${ModID}:D8."
+  "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Roll a ${ModID}:D6。",
+  "UPGRADE_DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Roll a ${ModID}:D8。"
   },
   "${ModID}:ThrowChips": {
     "NAME": "Throw Chips",
-    "DESCRIPTION": "{@@}Deal !D! damage to a random enemy NL X times. NL ${ModID}:Reroll."
+    "DESCRIPTION": "{@@}造成 !D! 点伤害 to a random enemy NL X times. NL ${ModID}:Reroll。"
   },
   "${ModID}:PocketAce": {
     "NAME": "PocketAce",
-    "DESCRIPTION": "{@@}抽 !M! 张牌。 NL Discard !${ModID}:m2! cards. NL 消耗 。"
+    "DESCRIPTION": "{@@}抽 !M! 张牌。 NL 丢弃 !${ModID}:m2! cards. NL 消耗 。"
   },
   "${ModID}:Reroller": {
     "NAME": "Reroller",
-    "DESCRIPTION": "{@@}获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Reroll."
+    "DESCRIPTION": "{@@}获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Reroll。"
   },
   "${ModID}:PerceptionCheck": {
     "NAME": "Perception Check",
-    "DESCRIPTION": "At the start of your turn, roll a ${ModID}:D8."
+    "DESCRIPTION": "你的回合开始时， roll a ${ModID}:D8。"
   },
   "${ModID}:AllIn": {
     "NAME": "All In",
@@ -31,16 +31,16 @@
   "${ModID}:D20": {
     "NAME": "D20!",
     "DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage."
+    "UPGRADE_DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage。"
   },
   "${ModID}:GoToJail": {
     "NAME": "Go to Jail",
-    "DESCRIPTION": "Go directly to ${ModID}:Jail. NL Do not pass Go. NL Do not collect $200.",
-    "UPGRADE_DESCRIPTION": "Go directly to ${ModID}:Jail. NL Do not pass Go. NL Collect $20."
+    "DESCRIPTION": "Go directly to ${ModID}:Jail. NL Do not pass Go. NL Do not collect $200。",
+    "UPGRADE_DESCRIPTION": "Go directly to ${ModID}:Jail. NL Do not pass Go. NL Collect $20。"
   },
   "${ModID}:LevelUp": {
     "NAME": "Level Up!",
-    "DESCRIPTION": "获得 !M! ${ModID}:Advantage. NL Roll 2 ${ModID}:D6."
+    "DESCRIPTION": "获得 !M! ${ModID}:Advantage. NL Roll 2 ${ModID}:D6。"
   },
   "${ModID}:BoardGameKeywordManager": {
     "NAME": "KeywordManager",

@@ -3,7 +3,7 @@
     "NAME": "Awakening",
     "DESCRIPTIONS": [
       "When you would die, heal #b",
-      " 生命 and remove this effect. Heals half this value at end of combat if untriggered."
+      " 生命 and remove this effect. Heals half this value at end of combat if untriggered。"
     ]
   },
   "${ModID}:ChronoBoostPower": {
@@ -17,18 +17,18 @@
   "${ModID}:DeEnergizedPower": {
     "NAME": "De-Energized",
     "DESCRIPTIONS": [
-      "At the start of your next turn, lose #b",
-      " [E] ."
+      "At the start of your next turn, 失去 #b",
+      " [E] 。"
     ]
   },
   "${ModID}:VexVinciblePower": {
     "NAME": "Invincible",
     "DESCRIPTIONS": [
       "Caps all damage and 生命 loss taken to #b",
-      " in a turn. Removed after activation.",
+      " in a turn. Removed after activation。",
       "Caps all damage and 生命 loss taken to #b",
       " in a turn. Removed after #b",
-      " activations."
+      " activations。"
     ]
   },
   "${ModID}:NextTurn获得SlimeCrus生命ower": {

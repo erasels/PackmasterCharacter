@@ -2,13 +2,13 @@
   "${ModID}:DistortionPack": {
     "TEXT": [
       "Distortion",
-      "Everything is as it should be.",
+      "Everything is as it should be。",
       "Alchyr"
     ]
   },
   "${ModID}:DistortionPackHat": {
     "TEXT": [
-      "Your most marketable hat.",
+      "Your most marketable hat。",
       "Mascot Hat"
     ]
   }

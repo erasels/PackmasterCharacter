@@ -2,26 +2,26 @@
   "${ModID}:ChargeUp": {
     "NAME": "Charge Up",
     "DESCRIPTIONS": [
-      "At #b%s or more stacks, double the damage of the next Attack and lose #b%s stacks."
+      "At #b%s or more stacks, double the damage of the next Attack and 失去 #b%s stacks。"
     ]
   },
   "${ModID}:Inertia": {
     "NAME": "Inertia",
     "DESCRIPTIONS": [
-      "每当 一张牌 is #y消耗ed or #yAmplified, 获得 #b%s #yCharge #yUp."
+      "每当 一张牌 is #y消耗ed or #yAmplified, 获得 #b%s #yCharge #yUp。"
     ]
   },
   "${ModID}:EarthlightRay": {
     "NAME": "Earthlight Ray",
     "DESCRIPTIONS": [
-      "After you 获得 #yCharge #yUp, deal damage equal to its total to ALL enemies.",
-      "After you 获得 #yCharge #yUp, deal damage equal to its total times #b%s to ALL enemies."
+      "After you 获得 #yCharge #yUp, deal damage equal to its total to ALL enemies。",
+      "After you 获得 #yCharge #yUp, deal damage equal to its total times #b%s to ALL enemies。"
     ]
   },
   "${ModID}:BuildingCharge": {
     "NAME": "Building Charge",
     "DESCRIPTIONS": [
-      "每当 you play 一张牌 本回合, 获得 #b%s #yCharge #yUp."
+      "每当 you play 一张牌 本回合, 获得 #b%s #yCharge #yUp。"
     ]
   }
 }

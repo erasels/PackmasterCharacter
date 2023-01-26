@@ -3,7 +3,7 @@
     "NAME": "Ichor Goblet",
     "DESCRIPTIONS": [
       "获得 #b1 Energy at the start of next #b",
-      " turns. If you lose 生命, 获得 it all immediately."
+      " turns. If you 失去 生命, 获得 it all immediately。"
     ]
   }
 }

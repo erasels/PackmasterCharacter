@@ -9,19 +9,19 @@
   "${ModID}:MadScienceModifiers": {
     "TEXT": [
       " NL Apply ",
-      " ${ModID}:Frostbite.",
+      " ${ModID}:Frostbite。",
       "保留 。 NL ",
       " NL Play ",
       " NL 获得 6 格挡 。",
       " NL 获得 8 格挡 。",
-      " NL Play a获得, unmodified.",
-      " NL 获得 a *Cannonball.",
+      " NL Play a获得, unmodified。",
+      " NL 获得 a *Cannonball。",
       " NL 抽一张牌。"
     ]
   },
   "${ModID}:AddModifierUI": {
     "TEXT": [
-      "Choose 一张牌 to Modify."
+      "Choose 一张牌 to Modify。"
     ]
   },
   "${ModID}:MadSciencePackHat": {

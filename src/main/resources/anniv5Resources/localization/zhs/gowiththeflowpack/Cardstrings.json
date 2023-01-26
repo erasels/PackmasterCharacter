@@ -1,46 +1,46 @@
 {
   "${ModID}:Aqueducts": {
     "NAME": "Aqueducts",
-    "DESCRIPTION": "每当 you draw an extr一张牌, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "每当 you draw an extr一张牌, deal !M! damage to ALL enemies。"
   },
   "${ModID}:Cascade": {
     "NAME": "Cascade",
-    "DESCRIPTION": "${ModID}:Flow. 获得 !B! Block for each card discarded this way."
+    "DESCRIPTION": "${ModID}:Flow. 获得 !B! 格挡 for each card 丢弃ed this way。"
   },
   "${ModID}:Hail": {
     "NAME": "Hail",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each time this was discarded 本场战斗.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each time this was 丢弃ed 本场战斗。",
     "EXTENDED_DESCRIPTION": [" NL (Hits !M! times)"]
   },
   "${ModID}:HighTide": {
     "NAME": "High Tide",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you ${ModID}:Flow, return this from the 弃牌堆 to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you ${ModID}:Flow, return this from the 弃牌堆 to your hand。"
   },
   "${ModID}:Hydraulics": {
     "NAME": "Hydraulics",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Flow."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Flow。"
   },
   "${ModID}:IcyFloe": {
     "NAME": "Icy Floe",
-    "DESCRIPTION": "${ModID}:Flow. NL Next turn, NL 获得 [E] [E].",
-    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL Next turn, NL 获得 [E] [E] [E]."
+    "DESCRIPTION": "${ModID}:Flow. NL Next turn, NL 获得 [E] [E]。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL Next turn, NL 获得 [E] [E] [E]。"
   },
   "${ModID}:Pneumatics": {
     "NAME": "Pneumatics",
     "DESCRIPTION": "${ModID}:Flow. NL At the start of your next turn, ${ModID}:Flow. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL At the start of your next turn, ${ModID}:Flow."
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL At the start of your next turn, ${ModID}:Flow。"
   },
   "${ModID}:ReleaseValve": {
     "NAME": "Release Valve",
-    "DESCRIPTION": "每当 you ${ModID}:Flow, enemy takes !M! damage for each card discarded. NL 消耗 。"
+    "DESCRIPTION": "每当 you ${ModID}:Flow, enemy takes !M! damage for each card 丢弃ed. NL 消耗 。"
   },
   "${ModID}:Reservoir": {
     "NAME": "Reservoir",
-    "DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards discarded this way. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards discarded this way."
+    "DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards 丢弃ed this way. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards 丢弃ed this way。"
   },
   "${ModID}:StormFront": {
     "NAME": "Storm Front",
-    "DESCRIPTION": "保留 。 造成 !D! 点伤害。 NL When discarded, add this back to your hand with !M! more damage."
+    "DESCRIPTION": "保留 。 造成 !D! 点伤害。 NL When 丢弃ed, add this back to your hand with !M! more damage。"
   }
 }

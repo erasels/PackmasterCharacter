@@ -1,31 +1,31 @@
 {
   "${ModID}:StrikeDummyJrPower": {
-    "NAME": "Strike Dummy Jr.",
+    "NAME": "Strike Dummy Jr。",
     "DESCRIPTIONS": [
       "Your Strikes deal #b",
-      " more damage."
+      " more damage。"
     ]
   },
   "${ModID}:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, 获得 a random \"Strike\". It costs #b0 until played and 消耗s.",
-      "At the start of your turn, 获得 #b",
+      "你的回合开始时， 获得 a random \"Strike\". It costs #b0 until played and 消耗s。",
+      "你的回合开始时， 获得 #b",
       " random \"Strike\"s. They cost #b0 until played and 消耗 。"
     ]
   },
   "${ModID}:StrikeOfGeniusUpgradedPower": {
     "NAME": "Strike of Genius+",
     "DESCRIPTIONS": [
-      "At the start of your turn, 获得 a random #yupgraded \"Strike\". It costs #b0 until played and 消耗s.",
-      "At the start of your turn, 获得 #b",
+      "你的回合开始时， 获得 a random #yupgraded \"Strike\". It costs #b0 until played and 消耗s。",
+      "你的回合开始时， 获得 #b",
       " random #yupgraded \"Strike\"s. They cost #b0 until played and 消耗 。"
     ]
   },
   "${ModID}:StrikeABar获得Power": {
     "NAME": "Strike a Bar获得",
     "DESCRIPTIONS": [
-      "Your Attacks cost #b0 本回合, but you cannot play non-Attacks."
+      "Your Attacks cost #b0 本回合, but you cannot play non-Attacks。"
     ]
   }
 }

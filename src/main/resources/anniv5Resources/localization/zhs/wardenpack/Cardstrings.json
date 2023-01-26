@@ -1,7 +1,7 @@
 {
   "${ModID}:PierceVeil": {
     "NAME": "Pierce Veil",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 of !M! top cards of your 抽牌堆 to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 of !M! top cards of your 抽牌堆 to your hand。"
   },
   "${ModID}:Stall": {
     "NAME": "Stall",
@@ -9,7 +9,7 @@
   },
   "${ModID}:RiskOfBlades": {
     "NAME": "Risk Of Blades",
-    "DESCRIPTION": "Deal !D! damage for each Attack among the top 4 cards of your 抽牌堆。",
+    "DESCRIPTION": "造成 !D! 点伤害 for each Attack among the top 4 cards of your 抽牌堆。",
     "EXTENDED_DESCRIPTION": [" NL (Hits !M! times.)"]
   },
   "${ModID}:Crossroads": {
@@ -18,20 +18,20 @@
   },
   "${ModID}:Anticipation": {
     "NAME": "Anticipation",
-    "DESCRIPTION": "抽一张牌。 NL 获得 力量 equal to its cost.",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 获得 力量 equal to their cost."
+    "DESCRIPTION": "抽一张牌。 NL 获得 力量 equal to its cost。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 获得 力量 equal to their cost。"
   },
   "${ModID}:Prediction": {
     "NAME": "Prediction",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If no enemy intends to attack, 获得 it next turn instead."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If no enemy intends to attack, 获得 it next turn instead。"
   },
   "${ModID}:ForceBolt": {
     "NAME": "Force Bolt",
-    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 NL Increase the damage dealt by *Magic cards by !M! 本回合."
+    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 NL Increase the damage dealt by *Magic cards by !M! 本回合。"
   },
   "${ModID}:Enigmancy": {
     "NAME": "Enigmancy",
-    "DESCRIPTION": "Scry !M!. NL Each turn, 获得 !${ModID}:m2! Energy and reduce this 获得 by 1."
+    "DESCRIPTION": "Scry !M!. NL Each turn, 获得 !${ModID}:m2! Energy and reduce this 获得 by 1。"
   },
   "${ModID}:Recurrence": {
     "NAME": "Recurrence",
@@ -39,6 +39,6 @@
   },
   "${ModID}:DivineMight": {
     "NAME": "Divine Might",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL When [#EFC851]Divine [#EFC851]Might is played twice, ${ModID}:Ascend."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL When [#EFC851]Divine [#EFC851]Might is played twice, ${ModID}:Ascend。"
   }
 }

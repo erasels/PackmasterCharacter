@@ -5,7 +5,7 @@
   },
   "${ModID}:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Modify a random Block card in hand: \"Add !M! Block\""
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Modify a random 格挡 card in hand: \"Add !M! 格挡\""
   },
   "${ModID}:Winterize": {
     "NAME": "Winterize",
@@ -13,12 +13,12 @@
   },
 "${ModID}:Discombobulate": {
     "NAME": "Discombobulate",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have a *Modified card in hand, deals damage twice."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL If you have a *Modified card in hand, deals damage twice。"
   },
   "${ModID}:Attach": {
     "NAME": "Attach",
-    "DESCRIPTION": "Choose a non-Power in hand to ${ModID}:Absorb into a discarded card, then ${ModID}:Modify it: \"Play the *Absorbed card\". NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["Absorb. You will choose the discarded card to Modify after."]
+    "DESCRIPTION": "Choose a non-Power in hand to ${ModID}:Absorb into a 丢弃ed card, then ${ModID}:Modify it: \"Play the *Absorbed card\". NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["Absorb. You will choose the 丢弃ed card to Modify after。"]
   },
   "${ModID}:Improve": {
     "NAME": "Improve",

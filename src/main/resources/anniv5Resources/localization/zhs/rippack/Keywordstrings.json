@@ -6,7 +6,7 @@
       "ripped",
       "rip"
     ],
-    "DESCRIPTION": "Right click to rip in half."
+    "DESCRIPTION": "Right click to rip in half。"
   },
   {
     "PROPER_NAME": "Art Card",
@@ -17,7 +17,7 @@
       "art_cards",
       "art"
     ],
-    "DESCRIPTION": "The art half of a #yripped card. It does nothing and always #y消耗s."
+    "DESCRIPTION": "The art half of a #yripped card. It does nothing and always #y消耗s。"
   },
   {
     "PROPER_NAME": "Text Card",
@@ -27,7 +27,7 @@
       "text cards",
       "text_cards"
     ],
-    "DESCRIPTION": "The text half of a #yripped card. It always #y消耗s."
+    "DESCRIPTION": "The text half of a #yripped card. It always #y消耗s。"
   },
   {
     "PROPER_NAME": "Unnate",

@@ -1,11 +1,11 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "Backpack Smack",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If your 抽牌堆 has 10 or more cards, 抽 !M! 张牌。 NL Otherwise, 获得 [E] ."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If your 抽牌堆 has 10 or more cards, 抽 !M! 张牌。 NL Otherwise, 获得 [E] 。"
   },
   "${ModID}:BoosterTutor": {
     "NAME": "Booster Tutor",
-    "DESCRIPTION": "Put !M! random cards from different Packs from your 抽牌堆 into your hand."
+    "DESCRIPTION": "Put !M! random cards from different Packs from your 抽牌堆 into your hand。"
   },
   "${ModID}:DestinyDraw": {
     "NAME": "Destiny Draw",
@@ -13,22 +13,22 @@
   },
   "${ModID}:Flick": {
     "NAME": "Flick",
-    "DESCRIPTION": "Discard 一张牌。 NL Deal !D! damage a number of times equal to its cost."
+    "DESCRIPTION": "丢弃 一张牌。 NL 造成 !D! 点伤害 a number of times equal to its cost。"
   },
   "${ModID}:MayhemForm": {
     "NAME": "Unrelenting Form",
-    "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and 获得 [E] [E] .",
-    "UPGRADE_DESCRIPTION": "保留 。 NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and 获得 [E] [E] ."
+    "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and 获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and 获得 [E] [E] 。"
   },
   "${ModID}:RippedPecs": {
     "NAME": "Ripped Pecs",
     "DESCRIPTION": "获得 1 力量 for each Pack you've played 一张牌 from 本场战斗. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 1 力量 for each Pack you've played 一张牌 from 本场战斗.",
+    "UPGRADE_DESCRIPTION": "获得 1 力量 for each Pack you've played 一张牌 from 本场战斗。",
     "EXTENDED_DESCRIPTION": [" NL (获得s {0} 力量 。)"]
   },
   "${ModID}:Showoff": {
     "NAME": "Showoff",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Next turn, draw 2 additional cards."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Next turn, draw 2 additional cards。"
   },
   "${ModID}:Sideboard": {
     "NAME": "Sideboard",
@@ -36,11 +36,11 @@
   },
   "${ModID}:SmithingHammer": {
     "NAME": "Smithing Hammer",
-    "DESCRIPTION": "Deal !D! damage 3 times. NL Upgrade a random card in your hand for the rest of combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL Upgrade !M! random cards in your hand for the rest of combat."
+    "DESCRIPTION": "造成 !D! 点伤害 3 times. NL Upgrade a random card in your hand for the rest of combat。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 3 times. NL Upgrade !M! random cards in your hand for the rest of combat。"
   },
   "${ModID}:Synergize": {
     "NAME": "Synergize",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have cards from at least two other Packs in your hand, 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL If you have cards from at least two other Packs in your hand, 获得 !B! 点 格挡 。"
   }
 }

@@ -3,25 +3,25 @@
     "NAME": "Deceived",
     "DESCRIPTIONS": [
       "If this creature dies while #yPoisoned, you 获得 #b",
-      " gold."
+      " gold。"
     ]
   },
   "${ModID}:HammeredPower": {
     "NAME": "Hammered",
     "DESCRIPTIONS": [
-      "The creature will have its buffs stolen until next turn."
+      "The creature will have its buffs stolen until next turn。"
     ]
   },
   "${ModID}:ThieveryMasteryPower": {
     "NAME": "Master Thief",
     "DESCRIPTIONS": [
-      "每当 you steal something, 获得 twice as much of it."
+      "每当 you steal something, 获得 twice as much of it。"
     ]
   },
   "${ModID}:MindControlledPower": {
     "NAME": "Mind Controlled",
     "DESCRIPTIONS": [
-      "This enemy became your ally and will start attacking other enemies."
+      "This enemy became your ally and will start attacking other enemies。"
     ]
   }
 }

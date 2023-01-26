@@ -2,6 +2,6 @@
   {
     "PROPER_NAME": "Ignite",
     "NAMES": ["ignite"],
-    "DESCRIPTION": "Ignited creatures lose #b1 生命 per stack at the start of their turn."
+    "DESCRIPTION": "Ignited creatures 失去 #b1 生命 per stack at the start of their turn。"
   }
 ]

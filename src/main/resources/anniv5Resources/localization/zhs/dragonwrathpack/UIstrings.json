@@ -2,13 +2,13 @@
   "${ModID}:Dragonwrat生命ack": {
     "TEXT": [
       "Dragonwrath",
-      "Wield the divine power of a pariah of an order of draconic paladins.",
+      "Wield the divine power of a pariah of an order of draconic paladins。",
       "Silver"
     ]
   },
   "${ModID}:Dragonwrat生命ackHat": {
     "TEXT": [
-      "Narrow doorways may be a problem...",
+      "Narrow doorways may be a problem..。",
       "Dragon Horns"
     ]
   }

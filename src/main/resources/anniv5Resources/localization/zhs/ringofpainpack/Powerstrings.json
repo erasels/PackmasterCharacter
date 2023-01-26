@@ -3,13 +3,13 @@
     "NAME": "Rend",
     "DESCRIPTIONS": [
       "Receives #b",
-      " more damage from attacks. Reduced by half at end of round."
+      " more damage from attacks. Reduced by half at end of round。"
     ]
   },
   "${ModID}:ConnectionPower": {
     "NAME": "Connection",
     "DESCRIPTIONS": [
-      "每当 you play 一张牌, #yupgrade it and ALL copies of it."
+      "每当 you play 一张牌, #yupgrade it and ALL copies of it。"
     ]
   }
 }

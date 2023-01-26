@@ -3,14 +3,14 @@
     "NAME": "Cuckoo",
     "DESCRIPTIONS": [
       "每当 you draw a #rCurse card, deal #b",
-      " damage to a random enemy."
+      " damage to a random enemy。"
     ]
   },
   "${ModID}:LikeClockworkPower": {
     "NAME": "Like Clockwork",
     "DESCRIPTIONS": [
       "回合结束时， 获得 #b",
-      " #yBlock for each #rCurse or #yStatus card in your hand."
+      " #y格挡 for each #rCurse or #yStatus card in your hand。"
     ]
   }
 }

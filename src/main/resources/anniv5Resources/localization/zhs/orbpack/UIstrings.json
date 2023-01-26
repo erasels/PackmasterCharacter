@@ -2,13 +2,13 @@
   "${ModID}:OrbPack": {
     "TEXT": [
       "Orbs",
-      "Channel and utilize Orbs.",
+      "Channel and utilize Orbs。",
       "Alchyr"
     ]
   },
   "${ModID}:OrbPackHat": {
     "TEXT": [
-      "At the start of your run, channel 2 swanky orbs.",
+      "At the start of your run, channel 2 swanky orbs。",
       "Orbs"
     ]
   }

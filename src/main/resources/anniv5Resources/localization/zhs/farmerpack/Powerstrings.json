@@ -9,8 +9,8 @@
   "${ModID}:SupplyChainPower": {
     "NAME": "Supply Chain",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b",
-      " Fertilizer(s) to your hand."
+      "你的回合开始时， add #b",
+      " Fertilizer(s) to your hand。"
     ]
   }
 }

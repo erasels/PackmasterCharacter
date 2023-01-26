@@ -3,14 +3,14 @@
     "NAME": "Geomorphology",
     "DESCRIPTIONS": [
       "每当 you 消耗 一张牌 or Channel an Orb, apply #b",
-      " #yPetra to a random enemy."
+      " #yPetra to a random enemy。"
     ]
   },
   "${ModID}:PetraPower": {
     "NAME": "Petra",
     "DESCRIPTIONS": [
       "When you attack this creature, 获得 ",
-      "% of damage dealt as #yBlock next turn."
+      "% of damage dealt as #y格挡 next turn。"
     ]
   }
 }

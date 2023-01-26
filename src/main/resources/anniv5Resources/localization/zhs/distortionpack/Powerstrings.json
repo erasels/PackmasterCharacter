@@ -2,17 +2,17 @@
   "${ModID}:DistortionPower": {
     "NAME": "Distortion",
     "DESCRIPTIONS": [
-      "每当 一张牌 is #y消耗ed, lose #b",
-      "每当 一张牌 is #y消耗ed, loses #b",
-      " 生命."
+      "每当 一张牌 is #y消耗ed, 失去 #b",
+      "每当 一张牌 is #y消耗ed, 失去s #b",
+      " 生命。"
     ]
   },
   "${ModID}:RuePower": {
     "NAME": "Rue",
     "DESCRIPTIONS": [
       "#y消耗 the next #b",
-      " cards you play.",
-      "#y消耗 the next card you play."
+      " cards you play。",
+      "#y消耗 the next card you play。"
     ]
   },
   "${ModID}:DeteriorationPower": {

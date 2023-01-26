@@ -3,7 +3,7 @@
     "NAME": "Cross",
     "DESCRIPTIONS": [
       "Your #yCrosses deal #b",
-      " additional damage."
+      " additional damage。"
     ]
   },
   "${ModID}:InstinctsPower": {
@@ -17,15 +17,15 @@
     "NAME": "Debut",
     "DESCRIPTIONS": [
       "Once each turn, playing an #yInnate card #yRefunds #b",
-      "."
+      "。"
     ]
   },
   "${ModID}:SurgePower": {
     "NAME": "Surge",
     "DESCRIPTIONS": [
-      "Your next #yInnate card is played twice 本回合.",
+      "Your next #yInnate card is played twice 本回合。",
       "Your next #b",
-      " #yInnate cards are played twice 本回合."
+      " #yInnate cards are played twice 本回合。"
     ]
   }
 }

@@ -7,15 +7,15 @@
     "NAME": "Salvager",
     "DESCRIPTIONS": [
       "每当 a #yWeapon is destroyed, 获得 #b",
-      " [E] ."
+      " [E] 。"
     ]
   },
   "${ModID}:WeaponMasteryPower": {
     "NAME": "Weapon Mastery",
     "DESCRIPTIONS": [
       "每当 you equip a #yWeapon, draw #b",
-      " card.",
-      " cards."
+      " card。",
+      " cards。"
     ]
   }
 }

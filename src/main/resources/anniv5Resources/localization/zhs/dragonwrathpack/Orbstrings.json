@@ -4,7 +4,7 @@
     "DESCRIPTION": [
       "#yPassive: 回合结束时， take #b",
       " damage and 获得 that much #yConfession NL #yEvoke: take #b",
-      " damage and 获得 that much #yConfession."
+      " damage and 获得 that much #yConfession。"
     ]
   }
 }

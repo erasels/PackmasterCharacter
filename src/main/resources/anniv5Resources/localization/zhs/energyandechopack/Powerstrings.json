@@ -2,9 +2,9 @@
   "${ModID}:SlowingPower": {
     "NAME": "Slowing",
     "DESCRIPTIONS": [
-      "At the start of your turn, 获得",
+      "你的回合开始时， 获得",
       " #b",
-      " [E] ."
+      " [E] 。"
     ]
   },
   "${ModID}:PanacherPower": {
@@ -13,7 +13,7 @@
       "If #b",
       " more card is created, deal #b",
       " more cards are created, deal #b",
-      " damage to ALL enemies."
+      " damage to ALL enemies。"
     ]
   }
 }

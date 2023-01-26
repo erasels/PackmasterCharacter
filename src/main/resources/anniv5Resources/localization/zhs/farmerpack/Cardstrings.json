@@ -6,29 +6,29 @@
   },
   "${ModID}:HarvestBeans": {
     "NAME": "Harvest Beans",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !D! damage to ALL enemies if the last card played 本场战斗 wasn't an Attack."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 造成 !D! 点伤害 to ALL enemies if the last card played 本场战斗 wasn't an Attack。"
   },
   "${ModID}:HarvestCarrots": {
     "NAME": "Harvest Carrots",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Repeat for each card type you've played 本回合.",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Repeat for each card type you've played 本回合。",
     "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
   },
   "${ModID}:HarvestPotatoes": {
     "NAME": "Harvest Potatoes",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card you played 本场战斗 wasn't a Skill, 获得 !B! Block a获得."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card you played 本场战斗 wasn't a Skill, 获得 !B! 格挡 a获得。"
   },
   "${ModID}:HarvestRadishes": {
     "NAME": "Harvest Radishes",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply 1 Weak for each card type you've played 本回合.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply 1 Weak for each card type you've played 本回合。",
     "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
   },
   "${ModID}:OutToMarket": {
     "NAME": "Out To Market",
-    "DESCRIPTION": "Deal !M! damage to ALL enemies the first time you play each card type each turn."
+    "DESCRIPTION": "Deal !M! damage to ALL enemies the first time you play each card type each turn。"
   },
   "${ModID}:PestControl": {
     "NAME": "Pest Control",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Repeat for each card type you've played 本回合.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Repeat for each card type you've played 本回合。",
     "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
   },
   "${ModID}:SoilResiliency": {
@@ -37,8 +37,8 @@
   },
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",
-    "DESCRIPTION": "获得 a *Fertilizer at the start of each turn.",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 a *Fertilizer at the start of each turn."
+    "DESCRIPTION": "获得 a *Fertilizer at the start of each turn。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 a *Fertilizer at the start of each turn。"
   },
   "${ModID}:SowTheSeeds": {
     "NAME": "Sow The Seeds",
@@ -46,6 +46,6 @@
   },
   "${ModID}:TillTheEarth": {
     "NAME": "Till The Earth",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 a *Fertilizer."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 a *Fertilizer。"
   }
 }

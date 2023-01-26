@@ -1,41 +1,41 @@
 {
   "${ModID}:AwakenDeath": {
     "NAME": "Awaken",
-    "DESCRIPTION": "When you would die, heal !M! 生命 instead and remove this buff. NL After combat, heals for half as much."
+    "DESCRIPTION": "When you would die, heal !M! 生命 instead and remove this buff. NL After combat, heals for half as much。"
   },
   "${ModID}:Chronoboost": {
     "NAME": "Chrono-Boost",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 1 力量 for every 12th card you play."
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 1 力量 for every 12th card you play。"
   },
   "${ModID}:DefensiveMode": {
     "NAME": "Defensive Mode",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Weak."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Weak。"
   },
   "${ModID}:Execute": {
     "NAME": "Execute",
-    "DESCRIPTION": "Deal !D! damage twice. NL If you are in a Stance, deal !D! damage a third time."
+    "DESCRIPTION": "造成 !D! 点伤害 twice. NL If you are in a Stance, 造成 !D! 点伤害 a third time。"
   },
   "${ModID}:GhostflameStrike": {
     "NAME": "Ghostflame Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Channel !M! ${ModID}:Ghostflame."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Channel !M! ${ModID}:Ghostflame。"
   },
   "${ModID}:HyperBeam": {
     "NAME": "HYPER BEAM",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E] [E].",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL At the start of your next turn, 失去 [E] [E]。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL At the start of your next turn, 失去 [E]。"
   },
   "${ModID}:Invincible力量": {
     "NAME": "Invincible",
-    "DESCRIPTION": "获得 !M! ${ModID}:Invincible. NL If you already had *Invincible, it lasts another turn instead."
+    "DESCRIPTION": "获得 !M! ${ModID}:Invincible. NL If you already had *Invincible, it lasts another turn instead。"
   },
   "${ModID}:PrepareCrush": {
     "NAME": "Prepare Crush",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL On your next turn, 获得 [E] and add *SLIME *CRUSH! to your hand."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL On your next turn, 获得 [E] and add *SLIME *CRUSH! to your hand。"
   },
   "${ModID}:ShapersBlessing": {
     "NAME": "Shaper's Blessing",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL Enter ${ModID}:Ancient.",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! Block and !M! Plated Armor. NL Enter ${ModID}:Ancient."
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL Enter ${ModID}:Ancient。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 格挡 and !M! Plated Armor. NL Enter ${ModID}:Ancient。"
   },
   "${ModID}:SlimeCrush": {
     "NAME": "SLIME CRUSH!",

@@ -1,35 +1,35 @@
 {
   "${ModID}:ColdSeason": {
     "NAME": "Cold Season",
-    "DESCRIPTION": "每当 an enemy loses 生命 from ${ModID}:Frostbite, apply !M! ${ModID}:Frostbite."
+    "DESCRIPTION": "每当 an enemy 失去s 生命 from ${ModID}:Frostbite, apply !M! ${ModID}:Frostbite。"
   },
   "${ModID}:FrigidBody": {
     "NAME": "Frigid Body",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当 you are attacked 本回合, apply ${ModID}:Frostbite equal to blocked damage."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当 you are attacked 本回合, apply ${ModID}:Frostbite equal to 格挡ed damage。"
   },
   "${ModID}:Frostburn": {
     "NAME": "Frostburn",
-    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add a *Burn into your 弃牌堆."
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add a *Burn into your 弃牌堆。"
   },
   "${ModID}:Glaciate": {
     "NAME": "Glaciate",
-    "DESCRIPTION": "每当 you apply ${ModID}:Frostbite, 获得 !M! Vigor."
+    "DESCRIPTION": "每当 you apply ${ModID}:Frostbite, 获得 !M! 活力。"
   },
   "${ModID}:GrowingAffliction": {
     "NAME": "Growing Affliction",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you apply a debuff, return this from the 弃牌堆 to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you apply a debuff, return this from the 弃牌堆 to your hand。"
   },
   "${ModID}:IcicleSpear": {
     "NAME": "Icicle Spear",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Frostbite."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Frostbite。"
   },
   "${ModID}:InsultToInjury": {
     "NAME": "Insult to Injury",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Repeat for each unique debuff the enemy has."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Repeat for each unique debuff the enemy has。"
   },
   "${ModID}:Refrigerate": {
     "NAME": "Refrigerate",
-    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite."
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite。"
   },
   "${ModID}:RelentlessHail": {
     "NAME": "Relentless Hail",

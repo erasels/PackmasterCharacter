@@ -2,13 +2,13 @@
   "${ModID}:MetaPack": {
     "TEXT": [
       "Meta",
-      "Support booster pack with adequate general synergies.",
+      "Support booster pack with adequate general synergies。",
       "AlexMdle"
     ]
   },
   "${ModID}:MetaPackHat": {
     "TEXT": [
-      "Goes on head.",
+      "Goes on head。",
       "The Everyhat"
     ]
   }

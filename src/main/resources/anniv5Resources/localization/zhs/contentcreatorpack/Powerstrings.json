@@ -2,22 +2,22 @@
   "${ModID}:HuttsGambleEnergyPower": {
     "NAME": "Hutts' Energized",
     "DESCRIPTIONS": [
-      "If you do not receive unblocked attack damage 本回合, 获得 #b",
-      " Energy next turn."
+      "If you do not receive un格挡ed attack damage 本回合, 获得 #b",
+      " Energy next turn。"
     ]
   },
   "${ModID}:HuttsGambleDrawPower": {
     "NAME": "Hutts' Draw",
     "DESCRIPTIONS": [
-      "If you do not receive unblocked attack damage 本回合, draw #b",
-      " card next turn.",
-      " cards next turn."
+      "If you do not receive un格挡ed attack damage 本回合, draw #b",
+      " card next turn。",
+      " cards next turn。"
     ]
   },
   "${ModID}:RetromationPower": {
     "NAME": "Retromation",
     "DESCRIPTIONS": [
-      "At the start of your turn, 获得 #b",
+      "你的回合开始时， 获得 #b",
       " card",
       " cards",
       " from a Pack not available in your draft. NL ",
@@ -28,17 +28,17 @@
   "${ModID}:FrostprimePower": {
     "NAME": "Frost Prime",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yChannel #b",
+      "你的回合开始时， #yChannel #b",
       " #yFrost and apply #b",
-      " #yFrostbite to ALL enemies."
+      " #yFrostbite to ALL enemies。"
     ]
   },
   "${ModID}:CozyChairPower": {
     "NAME": "Cozy Chair",
     "DESCRIPTIONS": [
-      "Your cards are played twice.",
+      "Your cards are played twice。",
       "Your cards are played #b",
-      " additional times."
+      " additional times。"
     ]
   }
 }

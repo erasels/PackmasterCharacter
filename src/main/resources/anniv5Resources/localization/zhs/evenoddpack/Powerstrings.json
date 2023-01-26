@@ -3,9 +3,9 @@
     "NAME": "Prime Directive",
     "DESCRIPTIONS": [
       "Your Attacks have #yOdd: Deal #b",
-      " additional damage.",
+      " additional damage。",
       " NL ${ModID}:Odd: (+ ",
-      " damage)."
+      " damage)。"
     ]
   },
   "${ModID}:GammaWardPower": {

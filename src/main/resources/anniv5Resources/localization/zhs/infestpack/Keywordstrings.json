@@ -5,6 +5,6 @@
       "infest",
       "infests"
     ],
-    "DESCRIPTION": "回合结束时， if this is in your hand, shuffle it into your 抽牌堆 and put an infestation counter on it."
+    "DESCRIPTION": "回合结束时， if this is in your hand, shuffle it into your 抽牌堆 and put an infestation counter on it。"
   }
 ]

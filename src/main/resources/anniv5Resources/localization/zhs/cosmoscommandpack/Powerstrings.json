@@ -10,7 +10,7 @@
   "${ModID}:RecallPower": {
     "NAME": "Recall",
     "DESCRIPTIONS": [
-      "每当 一张牌 is #yAmplified, put 一张牌 from your #y消耗 pile into your hand."
+      "每当 一张牌 is #yAmplified, put 一张牌 from your #y消耗 pile into your hand。"
     ]
   }
 }

@@ -4,7 +4,7 @@
     "DESCRIPTION": [
       "#yPassive: When activated, deal #b",
       " damage to a random enemy, #yEvoke this if this has activated #b"," times. NL #yEvoke: deal #b",
-      " damage to a random enemy."
+      " damage to a random enemy。"
     ]
   },
   "${ModID}:FullMoon": {

@@ -4,6 +4,6 @@
     "NAMES": [
       "petra"
     ],
-    "DESCRIPTION": "When you attack a target with #yPetra, 获得 #yBlock equal to #b35% of damage dealt on your next turn. Reduced by #b1 at the end of turn."
+    "DESCRIPTION": "When you attack a target with #yPetra, 获得 #y格挡 equal to #b35% of damage dealt on your next turn. Reduced by #b1 at the end of turn。"
   }
 ]

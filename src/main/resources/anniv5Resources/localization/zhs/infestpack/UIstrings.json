@@ -8,7 +8,7 @@
   },
   "${ModID}:InfestPackHat": {
     "TEXT": [
-      "For the distinguished swarmologist.",
+      "For the distinguished swarmologist。",
       "The Beekeeper"
     ]
   }

@@ -13,7 +13,7 @@
   },
   "${ModID}:BoardGamePackHat": {
     "TEXT": [
-      "Your most marketable hat.",
+      "Your most marketable hat。",
       "Board Game Hat"
     ]
   }
