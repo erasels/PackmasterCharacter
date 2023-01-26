@@ -1,7 +1,9 @@
 package thePackmaster.util.cardvars;
 
 import basemod.abstracts.DynamicVariable;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public class HoardVar extends DynamicVariable {
@@ -32,5 +34,15 @@ public class HoardVar extends DynamicVariable {
     @Override
     public boolean upgraded(AbstractCard card) {
         return HoardField.isHoardUpgraded.get(card);
+    }
+
+    @Override
+    public Color getIncreasedValueColor() {
+        return Settings.RED_TEXT_COLOR;
+    }
+
+    @Override
+    public Color getDecreasedValueColor() {
+        return Settings.GREEN_TEXT_COLOR;
     }
 }
