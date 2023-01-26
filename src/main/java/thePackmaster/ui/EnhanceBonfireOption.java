@@ -36,7 +36,7 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
             this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfire.png"));
         } else {
             this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfiredisabled.png"));
-            if (AbstractDungeon.player.gold < GemsPack.goldCostToSocket){
+            if (AbstractDungeon.player.gold < GemsPack.goldCostToSocket) {
                 this.description = DESCRIPTIONS[2];
             } else {
                 this.description = DESCRIPTIONS[2];
@@ -73,7 +73,9 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
     @Override
     public void update() {
         float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
-
+        //This allows the button to be mouse over even when you don't meet the requirements, so you can see the tooltip.
+        // The scale change mimics what normally happens when the button is active.
+        // Normally greyed out options lose their hitbox, and we wanted to have this one be able to tell the player why its greyed out.
         if (this.hb.hovered) {
 
             if (!this.hb.clickStarted) {
