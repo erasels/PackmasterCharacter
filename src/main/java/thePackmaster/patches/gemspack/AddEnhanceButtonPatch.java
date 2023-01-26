@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import javassist.CtBehavior;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.GemsPack;
@@ -18,20 +19,21 @@ public class AddEnhanceButtonPatch {
     public static class AddKeys {
         @SpireInsertPatch(locator = Locator.class)
         public static void patch(CampfireUI __instance, ArrayList<AbstractCampfireOption> ___buttons) {
-            Boolean active = true;
-            if (SocketGemEffect.getModifiableCards().isEmpty()) {
-                active = false;
-            }
+            boolean active = true;
+
+            //If there are no gems, don't show the button.
             if (SocketGemEffect.getGems().isEmpty()) {
+                return;
+            }
+
+            //if any of the reasons you can't socket are true, the button should be disabled.
+            if (SocketGemEffect.getGems().isEmpty() ||
+                    SocketGemEffect.getModifiableCards().isEmpty() ||
+                    AbstractDungeon.player.gold < GemsPack.goldCostToSocket) {
                 active = false;
             }
-            if (AbstractDungeon.player.gold < GemsPack.goldCostToSocket) {
-                active = false;
-            }
-            if (active) {
                 GemsPack.socketBonfireOption = new EnhanceBonfireOption(active);
                 ___buttons.add(GemsPack.socketBonfireOption);
-            }
 
         }
     }

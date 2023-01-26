@@ -15,11 +15,12 @@
   "${ModID}:EnhanceBonfireOptions": {
     "TEXT": [
       "Enhance",
-      "(Free Action) Spend 20 Gold. Place a Gem into a card.",
-      "Requires a Gem, 20 Gold, and an unmodified card.",
+      "(Free Action) Spend ",
+      " Gold. Place a Gem into a card.",
+      "Requires a Gem, ",
+      " Gold, and an unmodified card.",
       "Select a Gem.",
-      "Select a Card to receive the Gem.",
-      "Requires 20 Gold."
+      "Select a Card to receive the Gem."
     ]
   },
   "${ModID}:GemModifiers": {

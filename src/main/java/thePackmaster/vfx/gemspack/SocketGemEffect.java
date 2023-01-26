@@ -58,7 +58,7 @@ public class SocketGemEffect extends AbstractGameEffect {
             GemsPack.gridScreenForGems = false;
             GemsPack.gridScreenForSockets = true;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            AbstractDungeon.gridSelectScreen.open(getModifiableCards(), 1, TEXT[4], false, false, true, false);
+            AbstractDungeon.gridSelectScreen.open(getModifiableCards(), 1, TEXT[6], false, false, true, false);
 
         }
 
@@ -89,7 +89,7 @@ public class SocketGemEffect extends AbstractGameEffect {
             this.openedScreen = true;
             this.gemSelect = true;
             GemsPack.gridScreenForGems = true;
-            AbstractDungeon.gridSelectScreen.open(getGems(), 1, TEXT[3], false, false, true, false);
+            AbstractDungeon.gridSelectScreen.open(getGems(), 1, TEXT[5], false, false, true, false);
         }
 
         if (this.duration < 0.0F) {

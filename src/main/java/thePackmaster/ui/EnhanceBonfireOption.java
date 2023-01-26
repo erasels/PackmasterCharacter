@@ -32,14 +32,14 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
 
         this.usable = active;
         if (active) {
-            this.description = DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[1] + GemsPack.goldCostToSocket + DESCRIPTIONS[2];
             this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfire.png"));
         } else {
             this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfiredisabled.png"));
             if (AbstractDungeon.player.gold < GemsPack.goldCostToSocket) {
-                this.description = DESCRIPTIONS[2];
+                this.description = DESCRIPTIONS[3] + GemsPack.goldCostToSocket + DESCRIPTIONS[4];
             } else {
-                this.description = DESCRIPTIONS[2];
+                this.description = DESCRIPTIONS[3] + GemsPack.goldCostToSocket + DESCRIPTIONS[4];
             }
         }
     }
@@ -54,17 +54,17 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
     }
 
     public void reCheck() {
-        if (SocketGemEffect.getModifiableCards().size() == 0) {
+        if (SocketGemEffect.getModifiableCards().isEmpty()) {
             this.usable = false;
         }
-        if (SocketGemEffect.getGems().size() == 0) {
+        if (SocketGemEffect.getGems().isEmpty()) {
             this.usable = false;
         }
         if (this.usable) {
-            this.description = DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[1] + GemsPack.goldCostToSocket + DESCRIPTIONS[2];
             this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfire.png"));
         } else {
-            this.description = DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[3] + GemsPack.goldCostToSocket + DESCRIPTIONS[4];
             this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfiredisabled.png"));
         }
 
