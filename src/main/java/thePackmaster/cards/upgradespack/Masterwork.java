@@ -1,6 +1,8 @@
 package thePackmaster.cards.upgradespack;
 
+import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,6 +18,8 @@ public class Masterwork extends AbstractBlacksmithCard {
     public Masterwork() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 3);
+        ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 3);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
