@@ -13,11 +13,9 @@ public class OlexasCloak extends AbstractContentCard {
     public final static String ID = makeID("OlexasCloak");
 
     public OlexasCloak() {
-        super(ID, -1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 18;
-        PersistFields.setBaseValue(this, 2);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 20;
         HoardField.setBaseValue(this, 3);
-        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

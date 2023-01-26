@@ -18,13 +18,11 @@ public class Inferno extends AbstractDimensionalCard {
     public final static String ID = makeID("Inferno");
 
     public Inferno() {
-        super(ID, -1, CardRarity.RARE, com.megacrit.cardcrawl.cards.AbstractCard.CardType.ATTACK, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardRarity.RARE, com.megacrit.cardcrawl.cards.AbstractCard.CardType.ATTACK, CardTarget.ALL_ENEMY);
         baseDamage = 100;
         setFrame("infernoframe.png");
         isMultiDamage = true;
-        PersistFields.setBaseValue(this, 2);
         HoardField.setBaseValue(this, 8);
-        selfRetain = true;
     }
 
 

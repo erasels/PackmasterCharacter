@@ -6,17 +6,11 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.defect.DiscardPileToHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 import thePackmaster.util.Wiz;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.function.Predicate;
 
 import static thePackmaster.SpireAnniversary5Mod.CLAW;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -40,7 +34,9 @@ public class ClawForOne extends AbstractClawCard {
             @Override
             public void update() {
                 this.isDone = true;
-                addToBot(new MoveCardsAction(p.hand, p.discardPile, (c) -> { return (c.hasTag(CLAW) && c != ClawForOne.this); }, BaseMod.MAX_HAND_SIZE));
+                addToBot(new MoveCardsAction(p.hand, p.discardPile, (c) -> {
+                    return (c.hasTag(CLAW) && c != ClawForOne.this);
+                }, BaseMod.MAX_HAND_SIZE));
             }
         });
     }
