@@ -30,10 +30,11 @@
     "DESCRIPTION": "The text half of a #yripped card. It always #y消耗s。"
   },
   {
-    "PROPER_NAME": "Unnate",
+    "PROPER_NAME": "固无",
     "NAMES": [
-      "unnate"
+      "unnate",
+      "固无"
     ],
-    "DESCRIPTION": "Starts each combat at the bottom of your 抽牌堆。"
+    "DESCRIPTION": "每场战斗开始时，本牌被置于抽牌堆底部。"
   }
 ]

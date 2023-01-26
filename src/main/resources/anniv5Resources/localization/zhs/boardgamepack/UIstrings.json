@@ -1,20 +1,20 @@
 {
   "${ModID}:BoardGamePack": {
     "TEXT": [
-      "Board Games",
-      "Defeat enemies with the power of ${ModID}:Dice!",
+      "桌游",
+      "用 ${ModID}:骰子 的力量击败敌人！",
       "Laugic"
     ]
   },
   "${ModID}:BoardGameChance": {
     "TEXT": [
-      "Chance"
+      "机会"
     ]
   },
   "${ModID}:BoardGamePackHat": {
     "TEXT": [
-      "Your most marketable hat。",
-      "Board Game Hat"
+      "你最具商业价值的帽子。",
+      "桌游帽"
     ]
   }
 }

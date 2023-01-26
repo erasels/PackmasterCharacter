@@ -1,53 +1,54 @@
 {
   "${ModID}:RollToMove": {
-    "NAME": "Roll to Move",
-    "DESCRIPTION": "Roll !M! ${ModID}:D6。"
+    "NAME": "骰子行动",
+    "DESCRIPTION": "投掷 !M! 枚 ${ModID}:6面骰 。"
   },
   "${ModID}:FlickDice": {
-  "NAME": "Flick Dice",
-  "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Roll a ${ModID}:D6。",
-  "UPGRADE_DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Roll a ${ModID}:D8。"
+  "NAME": "掠骰",
+  "DESCRIPTION": "造成 !D! 点伤害。 NL 投掷一枚 ${ModID}:6面骰 。",
+  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 投掷一枚 ${ModID}:8面骰 。"
   },
   "${ModID}:ThrowChips": {
-    "NAME": "Throw Chips",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害 to a random enemy NL X times. NL ${ModID}:Reroll。"
+    "NAME": "投掷筹码",
+    "DESCRIPTION": "随机造成 !D! 点伤害 X 次。 NL ${ModID}:重掷。"
   },
   "${ModID}:PocketAce": {
-    "NAME": "PocketAce",
-    "DESCRIPTION": "{@@}抽 !M! 张牌。 NL 丢弃 !${ModID}:m2! cards. NL 消耗 。"
+    "NAME": "口袋王牌",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 丢弃 !${ModID}:m2! 张牌。 NL 消耗 。"
   },
   "${ModID}:Reroller": {
-    "NAME": "Reroller",
-    "DESCRIPTION": "{@@}获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Reroll。"
+    "NAME": "重掷机",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:重掷。"
   },
   "${ModID}:PerceptionCheck": {
-    "NAME": "Perception Check",
-    "DESCRIPTION": "你的回合开始时， roll a ${ModID}:D8。"
+    "NAME": "观察",
+    "DESCRIPTION": "${ModID}:固无 。 NL 回合开始时，投掷一枚 ${ModID}:8面骰 。",
+    "UPGRADE_DESCRIPTION": "回合开始时，投掷一枚 ${ModID}:8面骰 。"
   },
   "${ModID}:AllIn": {
-    "NAME": "All In",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 获得 !M! [E] . NL Skip your next turn. NL 消耗 。"
+    "NAME": "摊牌",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 获得 !M! [E] 。 NL 跳过你的下回合。 NL 消耗 。"
   },
   "${ModID}:D20": {
-    "NAME": "D20!",
-    "DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage。"
+    "NAME": "D20！",
+    "DESCRIPTION": "投掷一枚 [#efc851]20面骰[] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "投掷一枚 [#efc851]20面骰[] 。"
   },
   "${ModID}:GoToJail": {
-    "NAME": "Go to Jail",
-    "DESCRIPTION": "Go directly to ${ModID}:Jail. NL Do not pass Go. NL Do not collect $200。",
-    "UPGRADE_DESCRIPTION": "Go directly to ${ModID}:Jail. NL Do not pass Go. NL Collect $20。"
+    "NAME": "即时入狱",
+    "DESCRIPTION": "直接进入 ${ModID}:监狱 。 NL 无法越过由此去。 NL 不获得$200。",
+    "UPGRADE_DESCRIPTION": "直接进入 ${ModID}:监狱 。 NL 无法越过由此去。 NL 获得$20。"
   },
   "${ModID}:LevelUp": {
-    "NAME": "Level Up!",
-    "DESCRIPTION": "获得 !M! ${ModID}:Advantage. NL Roll 2 ${ModID}:D6。"
+    "NAME": "升级！",
+    "DESCRIPTION": "获得 !M! 次 ${ModID}:优势 。 NL 投掷2枚 ${ModID}:6面骰。"
   },
   "${ModID}:BoardGameKeywordManager": {
     "NAME": "KeywordManager",
     "DESCRIPTION": "Stuff for translations and easy access to keyword ids",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:dice",
-      "${ModID}:chance"
+      "${ModID}:骰子",
+      "${ModID}:机会"
     ]
   }
 }

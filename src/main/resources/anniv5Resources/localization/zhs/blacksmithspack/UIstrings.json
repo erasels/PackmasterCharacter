@@ -1,25 +1,25 @@
 {
   "${ModID}:BlacksmithsPack": {
     "TEXT": [
-      "Blacksmith's Pack",
-      "Become as the legendary Blacksmith who lost their tongs。",
+      "铁匠卡包",
+      "成为那个失去钳子的传奇铁匠。",
       "Pandemonium"
     ]
   },
   "${ModID}:SetUpShopScreen": {
     "TEXT": [
-      "Upgrade and put on top of your 抽牌堆。"
+      "选择牌升级并放入抽牌堆顶部。"
     ]
   },
   "${ModID}:MasterworkScreen": {
     "TEXT": [
-      "Upgrade。"
+      "升级。"
     ]
   },
   "${ModID}:BlacksmithsPackHat": {
     "TEXT": [
-      "You've come to practice metalwork。",
-      "Welding Mask"
+      "玩弄两下金属制造。",
+      "焊接面具"
     ]
   }
 }

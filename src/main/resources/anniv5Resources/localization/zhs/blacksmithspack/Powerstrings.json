@@ -1,9 +1,9 @@
 {
   "${ModID}:BlacksmithsShieldPower": {
-    "NAME": "Blacksmith's Shield",
+    "NAME": "铁匠之盾",
     "DESCRIPTIONS": [
-      "After you play 一张牌, 获得 #b",
-      " #y格挡 for each #yUpgrade on it。"
+      "每当你打出一张牌时，获得其 #y升级 次数点 #y格挡 #b",
+      " 次。"
     ]
   }
 }

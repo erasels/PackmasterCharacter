@@ -1,6 +1,6 @@
 [
   {
-    "PROPER_NAME": "Dice",
+    "PROPER_NAME": "骰子",
     "NAMES": [
       "dice",
       "d4",
@@ -8,36 +8,47 @@
       "d8",
       "d10",
       "d12",
-      "d20"
+      "d20",
+      "骰子",
+      "4面骰",
+      "6面骰",
+      "8面骰",
+      "10面骰",
+      "12面骰",
+      "20面骰"
     ],
-    "DESCRIPTION": "Dice increase the damage or #y格挡 of the next card you play that deals damage or #y格挡s。"
+    "DESCRIPTION": "骰子的点数等量提高下张打出牌的伤害 与 #y格挡 ，2项都没有的牌不消耗使用次数。"
   },
   {
-    "PROPER_NAME": "Reroll",
+    "PROPER_NAME": "重掷",
     "NAMES": [
-      "reroll"
+      "reroll",
+      "重掷"
     ],
-    "DESCRIPTION": "Any #yDice this card uses are rerolled instead of removed。"
+    "DESCRIPTION": "本牌使用 #y骰子 效果后，重掷其点数，而非损耗一次 #y骰子 效果。"
   },
   {
-    "PROPER_NAME": "Jail",
+    "PROPER_NAME": "监狱",
     "NAMES": [
-      "jail"
+      "jail",
+      "监狱"
     ],
-    "DESCRIPTION": "You cannot play Attacks or take damage 本回合。"
+    "DESCRIPTION": "本回合不受伤害但无法打出攻击牌。"
   },
   {
-    "PROPER_NAME": "Chance",
+    "PROPER_NAME": "机会",
     "NAMES": [
-      "chance"
+      "chance",
+      "机会"
     ],
-    "DESCRIPTION": "Chance cards are played when drawn, and #y消耗 when played。"
+    "DESCRIPTION": "机会牌抽到时自动打出，且打出时 #y消耗 。"
   },
   {
-    "PROPER_NAME": "Advantage",
+    "PROPER_NAME": "优势",
     "NAMES": [
-      "advantage"
+      "advantage",
+      "优势"
     ],
-    "DESCRIPTION": "Roll #yDice an additional number of times and take the highest value of the rolls。"
+    "DESCRIPTION": "掷 #y骰子 时，额外多掷几次，结果取最大值。"
   }
 ]

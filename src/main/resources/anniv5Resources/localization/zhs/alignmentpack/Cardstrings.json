@@ -30,10 +30,10 @@
   },
   "${ModID}:Divination": {
     "NAME": "神启",
-    "DESCRIPTION": "选择一张手牌加入抽牌堆底部。 NL 抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "选择任意张手牌加入抽牌堆底部。 NL 抽 !M! 张牌。",
+    "DESCRIPTION": "选择一张手牌放入抽牌堆底部。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "选择任意张手牌放入抽牌堆底部。 NL 抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [
-      "选择一张牌加入抽牌堆底部"
+      "选择一张牌放入抽牌堆底部"
     ]
   },
   "${ModID}:Glimpse": {

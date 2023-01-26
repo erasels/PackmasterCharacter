@@ -1,49 +1,49 @@
 {
   "${ModID}:DicePower": {
-    "NAME": "Dice",
+    "NAME": "骰子",
     "DESCRIPTIONS": [
-      "The next time you play 一张牌 that deals damage or 获得s #y格挡, it deals or 获得s #b",
-      " more damage or #y格挡 。"
+      "下张打出的带有伤害或 #y格挡 的牌数值提高 #b",
+      " 点。"
     ]
   },
   "${ModID}:SkipNextTurnPower": {
-    "NAME": "Skip Next Turn",
+    "NAME": "跳过下回合",
     "DESCRIPTIONS": [
-      "Skip your next turn。",
-      "Skip your next #b",
-      " turns。"
+      "跳过你的下回合。",
+      "跳过你的下 #b",
+      " 个回合。"
     ]
   },
   "${ModID}:OneTimeAdvantagePower": {
-    "NAME": "Advantage",
+    "NAME": "优势",
     "DESCRIPTIONS": [
-      "Roll the next #yDice an additional time and take the highest value。",
-      "Roll the next #yDice an additional #b",
-      " times and take the highest value。"
+      "下个 #y骰子 额外投掷 #b1",
+      "下个 #y骰子 额外投掷 #b",
+      " 次，结果取最大值。"
     ]
   },
   "${ModID}:AdvantagePower": {
     "NAME": "Advantage",
     "DESCRIPTIONS": [
-      "Roll #yDice an additional time and take the highest value。",
-      "Roll #yDice an additional #b",
-      " times and take the highest value。"
+      "投掷 #y骰子 时，额外投掷 #b1 次，结果取最大值。",
+      "投掷 #y骰子 时，额外投掷 #b",
+      " 次，结果取最大值。"
     ]
   },
   "${ModID}:PerceptionCheckPower": {
-    "NAME": "Perception Check",
+    "NAME": "观察",
     "DESCRIPTIONS": [
-      "你的回合开始时， roll a D8。",
-      "你的回合开始时， roll #b",
-      " D8。"
+      "你的回合开始时，投掷 #b1 枚 #y8面骰 。",
+      "你的回合开始时，投掷 #b",
+      " 枚 #y8面骰 。"
     ]
   },
   "${ModID}:JailPower": {
-    "NAME": "Jail",
+    "NAME": "监狱",
     "DESCRIPTIONS": [
-      "You cannot play attacks or take damage 本回合。",
-      "You cannot play attacks or take damage for the next #b",
-      " turns。"
+      "本回合你不受到伤害，且无法打出攻击牌。",
+      "下 #b",
+      " 个回合，你不受到伤害，且无法打出攻击牌。"
     ]
   }
 }

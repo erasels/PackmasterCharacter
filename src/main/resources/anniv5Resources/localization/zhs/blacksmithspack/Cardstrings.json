@@ -1,42 +1,42 @@
 {
   "${ModID}:QuickFix": {
-  "NAME": "Quick Fix",
-  "DESCRIPTION": "获得 !B! 点 格挡 。 NL Upgrade a random card in your hand。"
+  "NAME": "快速修补",
+  "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机 升级 一张手牌。"
   },
   "${ModID}:RedHotHammer": {
-    "NAME": "Red-Hot Hammer",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Can be Upgraded any number of times。"
+    "NAME": "炽热铁锤",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 能被多次 升级 。"
   },
   "${ModID}:HeartOfTheForge": {
-    "NAME": "Heart of the Forge",
-    "DESCRIPTION": "{@@}保留 。 NL 获得{!M!|>1= !M!} [E] 。 When Retained, Upgrade this. NL Can be Upgraded any number of times. NL 消耗 。"
+    "NAME": "锻造之心",
+    "DESCRIPTION": "{@@}保留 。 NL 获得{!M!|>1= !M!} [E] 。 NL 被 保留 时，将本牌升级。 NL 能被多次 升级 。 NL 消耗 。"
   },
   "${ModID}:SharpeningSheath": {
-    "NAME": "Sharpening Sheath",
-    "DESCRIPTION": "抽 !M! 张牌s and Upgrade them。"
+    "NAME": "磨剑之鞘",
+    "DESCRIPTION": "抽 !M! 张牌， NL 并将其 升级 。"
   },
   "${ModID}:CarelessSwing": {
-    "NAME": "Careless Swing",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 a random *Unupgraded card in your hand。"
+    "NAME": "粗心敲打",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 消耗 一张 *未升级 的手牌。"
   },
   "${ModID}:SetUpShop": {
-    "NAME": "Set Up Shop",
-    "DESCRIPTION": "Upgrade !M! cards from your draw or 弃牌堆 and put them on top of your 抽牌堆。"
+    "NAME": "铺张店面",
+    "DESCRIPTION": "选择升级 !M! 张抽或弃牌堆的牌，并将其放入抽牌堆顶部。"
   },
   "${ModID}:MastersStrike": {
-    "NAME": "Master's Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals !M! additional damage for each Upgrade on ALL your cards。"
+    "NAME": "宗师打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽弃牌堆与手牌每有一张 升级 的牌，本牌伤害加 !M! 。"
   },
   "${ModID}:ScrapMetal": {
-    "NAME": "Scrap Metal",
+    "NAME": "回收金属",
     "DESCRIPTION": "Upgrade a random card from any pile for every !M! 格挡 you have. NL 消耗 。"
   },
   "${ModID}:BlacksmithsShield": {
-    "NAME": "Blacksmith's Shield",
-    "DESCRIPTION": "After you play 一张牌, 获得 1 格挡 for each Upgrade on it。"
+    "NAME": "铁匠之盾",
+    "DESCRIPTION": "打出牌时，获得其 升级 次数点 格挡 。"
   },
   "${ModID}:Masterwork": {
-    "NAME": "Masterwork",
-    "DESCRIPTION": "{@@}Upgrade 一张牌{!M!|2= twice|>2= !M! times}. NL Can upgrade cards any number of times。"
+    "NAME": "大师杰作",
+    "DESCRIPTION": "选择 升级 一张牌 !M! 次。 NL 可升级所有牌任意次。 NL stslib:消耗性 !stslib:ex! 。"
   }
 }
