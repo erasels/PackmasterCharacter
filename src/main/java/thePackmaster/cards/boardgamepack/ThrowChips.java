@@ -13,7 +13,7 @@ public class ThrowChips extends AbstractBoardCard {
 
     public ThrowChips() {
         super(ID, -1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        damage = baseDamage = 6;
+        damage = baseDamage = 7;
         reroll = true;
     }
 
@@ -22,6 +22,6 @@ public class ThrowChips extends AbstractBoardCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }
