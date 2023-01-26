@@ -1,7 +1,7 @@
 {
   "${ModID}:OlexasCloak": {
     "NAME": "Olexa's Cloak",
-    "DESCRIPTION": "Retain. NL ${ModID}:Hoard !hoard!: Gain !B! Block. NL stslib:Persist !stslib:persist! ."
+    "DESCRIPTION": "{@@}Retain. NL After !hoard! more {!hoard!|1= play|>1= plays}, gain !B! Block. NL stslib:Persist !stslib:persist!."
   },
   "${ModID}:HuttsGamble": {
     "NAME": "Hutts' Gamble",
@@ -42,7 +42,8 @@
   },
   "${ModID}:Rhapsody": {
     "NAME": "Rhapsody",
-    "DESCRIPTION": "Gain !M! ${ModID}:Inspiration. NL Draw 2 cards."
+    "DESCRIPTION": "Gain !M! ${ModID}:Inspiration. NL Draw !${ModID}:m2! card.",
+    "UPGRADE_DESCRIPTION": "Gain !M! ${ModID}:Inspiration. NL Draw !${ModID}:m2! cards."
   },
   "${ModID}:Frostprime": {
     "NAME": "Frost Prime",

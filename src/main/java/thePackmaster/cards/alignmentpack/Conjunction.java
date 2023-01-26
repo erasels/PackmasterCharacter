@@ -16,7 +16,7 @@ public class Conjunction extends AbstractAstrologerCard {
 
     public Conjunction() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        baseBlock = 9;
+        baseBlock = 8;
         isEthereal = true;
     }
 

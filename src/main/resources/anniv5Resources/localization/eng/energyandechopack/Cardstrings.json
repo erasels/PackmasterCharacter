@@ -1,6 +1,6 @@
 {
   "${ModID}:ShadowStrike": {
-    "NAME": "Shadow Strike",
+    "NAME": "Shadow Attack",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Echo."
   },
   "${ModID}:MagnetRise": {
