@@ -8,7 +8,7 @@
     "DESCRIPTION": "Draw !${ModID}:m2! cards. NL ${ModID}:Amplify [E] : Scry !M! before drawing."
   },
   "${ModID}:EternalStrike": {
-    "NAME": "Eternal Strike",
+    "NAME": "Eternal Attack",
     "DESCRIPTION": "Deal !D! damage. NL If this card is Exhausted, add a copy of it to your hand with !M! more damage."
   },
   "${ModID}:FalseGrit": {
