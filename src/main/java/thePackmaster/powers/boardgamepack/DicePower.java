@@ -47,13 +47,13 @@ public class DicePower extends AbstractPackmasterPower {
         if (card.baseBlock >= 0 || card.type == AbstractCard.CardType.ATTACK)
         {
             flash();
-            addToBot(new ReducePowerAction(owner, owner, ID, amount));
-            if(card instanceof AbstractBoardCard && ((AbstractBoardCard) card).reroll)
+            if(card instanceof AbstractBoardCard)
             {
-                for (int diceSize: dice) {
-                    addToBot(new ApplyPowerAction(owner, owner, new DicePower(owner, diceSize), diceSize));
-                }
+                if(!((AbstractBoardCard) card).reroll)
+                    addToTop(new ReducePowerAction(owner, owner, ID, amount));
             }
+            else
+                addToTop(new ReducePowerAction(owner, owner, ID, amount));
         }
     }
 
