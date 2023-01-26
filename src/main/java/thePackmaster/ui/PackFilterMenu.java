@@ -42,10 +42,10 @@ public class PackFilterMenu {
     private static final float BG_Y = Settings.HEIGHT - 40f * Settings.scale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
     private static final float DROPDOWN_X = 90f * Settings.scale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
-    private static final float CHECKBOX_X = 150f * Settings.scale;
-    private static final float CHECKBOX_Y = 490f * Settings.yScale;
+    private static final float CHECKBOX_X = 150f;
+    private static final float CHECKBOX_Y = 490f;
     private static final float PREVIEW_X = 235f * Settings.scale;
-    private static final float PREVIEW_Y = 700f * Settings.yScale;
+    private static final float PREVIEW_Y = 700f * Settings.scale;
 
     public PackFilterMenu() {
         ArrayList<String> optionNames = new ArrayList<>();

@@ -1,6 +1,5 @@
 package thePackmaster.powers;
 
-import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -30,7 +29,7 @@ public abstract class AbstractPackmasterPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.type = powerType;
-        BaseMod.logger.info("finding images for power:"+ID +" | " + SpireAnniversary5Mod.modID + "Resources/images/powers/" + ID.replaceAll(SpireAnniversary5Mod.modID + ":", "") + "32.png" );
+
         Texture normalTexture = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/powers/" + ID.replaceAll(SpireAnniversary5Mod.modID + ":", "") + "32.png");
         Texture hiDefImage = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/powers/" + ID.replaceAll(SpireAnniversary5Mod.modID + ":", "") + "84.png");
         if (hiDefImage != null) {
