@@ -25,7 +25,7 @@ public class AddClawTagAndMakeClawModifier extends AbstractMadScienceModifierWit
             card.applyPowers();
         }
         if (card.cardsToPreview == null){
-            card.cardsToPreview = new GhostClaw(true);
+            card.cardsToPreview = new GhostClaw();
         }
     }
 
