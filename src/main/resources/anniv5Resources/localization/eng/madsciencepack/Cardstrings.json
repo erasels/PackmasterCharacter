@@ -22,17 +22,17 @@
   },
   "${ModID}:Improve": {
     "NAME": "Improve",
-    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a random card in hand: \"Draw a card.\" NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a card in hand: \"Draw a card.\" NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a random card in hand: \"Draw a card\" NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a card in hand: \"Draw a card\" NL Exhaust."
   },
   "${ModID}:Enhance": {
     "NAME": "Enhance",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a card in hand: \"Gain !M! Block.\""
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify a card in hand: \"Gain !M! Block\""
   },
   "${ModID}:Cheapen": {
     "NAME": "Cheapen",
-    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Modify a card in your draw pile: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't Exhaust."
+    "DESCRIPTION": "${ModID}:Modify a random card in your draw pile: \"Costs 0\" NL ${ModID}:Amplify [E] : Don't Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Modify a card in your draw pile: \"Costs 0\" NL ${ModID}:Amplify [E] : Don't Exhaust."
   },
   "${ModID}:Expand": {
     "NAME": "Expand",
@@ -40,7 +40,7 @@
   },
   "${ModID}:Piratify": {
     "NAME": "Piratify",
-    "DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"Gain a *Cannonball.\"",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"Gain a *Cannonball+.\""
+    "DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"Gain a *Cannonball\"",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"Gain a *Cannonball+\""
   }
 }
