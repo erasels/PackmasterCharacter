@@ -1,7 +1,7 @@
 {
   "${ModID}:ColdSeason": {
     "NAME": "Cold Season",
-    "DESCRIPTION": "每当敌人失去s 生命 from ${ModID}:Frostbite, apply !M! ${ModID}:Frostbite。"
+    "DESCRIPTION": "每当敌人失去生命 from ${ModID}:Frostbite, apply !M! ${ModID}:Frostbite。"
   },
   "${ModID}:FrigidBody": {
     "NAME": "Frigid Body",
