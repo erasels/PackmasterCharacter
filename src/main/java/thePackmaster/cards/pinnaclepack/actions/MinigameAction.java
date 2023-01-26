@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class MinigameAction extends AbstractGameAction {
@@ -30,20 +31,15 @@ public class MinigameAction extends AbstractGameAction {
 
     public void update() {
         int effect = EnergyPanel.totalCount;
-        if (this.energyOnUse != -1 && !this.thisUpgraded) {
+        if (this.energyOnUse != -1) {
             effect = (this.energyOnUse*2);
-            if (this.p.hasRelic("Chemical X")) {
+            if (this.p.hasRelic(ChemicalX.ID)) {
                 effect += 2;
-                this.p.getRelic("Chemical X").flash();
+                this.p.getRelic(ChemicalX.ID).flash();
             }
         }
-        else if (this.thisUpgraded) {
-            effect = (this.energyOnUse*2)+2;
-            if (this.p.hasRelic("Chemical X")) {
-                effect += 2;
-                this.p.getRelic("Chemical X").flash();
-            }
-        }
+        if(thisUpgraded) effect += 2;
+
         if (effect > 0) {
             for (int i = 0; i < effect; i++) {
                 int rng;

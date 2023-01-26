@@ -4,6 +4,6 @@
     "NAMES": [
       "hoard"
     ],
-    "DESCRIPTION": "When played, reduce Hoard by #bX (the card's cost). When Hoard reaches #b0, its effects trigger."
+    "DESCRIPTION": "When played, if this card's cost is greater than 0 and lower than it's Hoard: NL Reduce Hoard by the card's cost and ignore all other card effects. NL Return the card to your hand. NL The card #yRetains this turn."
   }
 ]

@@ -23,7 +23,7 @@ public class ApplyFrosbiteModifier extends AbstractMadScienceModifier {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
+     
         Wiz.applyToEnemy((AbstractMonster)target, new FrostbitePower(target, value));
     }
 

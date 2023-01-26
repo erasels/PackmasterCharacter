@@ -35,7 +35,7 @@
   },
   "${ModID}:Bolas": {
     "NAME": "Bolas",
-    "DESCRIPTION": "Apply *Slow. NL Give enemy !M! Block. NL Draw !${ModID}:m2! card. NL Exhaust."
+    "DESCRIPTION": "{@@}Apply *Slow. NL Give enemy !M! Block. NL Draw !anniv5:m2! card{!anniv5:m2!|1=|@=s}. NL Exhaust."
   },
   "${ModID}:FFBlade": {
     "NAME": "FF Blade",
