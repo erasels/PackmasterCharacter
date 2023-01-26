@@ -16,5 +16,4 @@ public class SocketGemGridPatchCancelButton {
             AbstractDungeon.overlayMenu.cancelButton.show(GridCardSelectScreen.TEXT[1]);
         }
     }
-
 }
