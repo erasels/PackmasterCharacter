@@ -1,15 +1,15 @@
 {
   "${ModID}:BellordPack": {
     "TEXT": [
-      "Bellord",
-      "Clobber foes with cursed cards! Drain to dust with 力量 reduction!",
+      "恶铃",
+      "用诅咒牌痛击敌人！把它们的 力量 吸干！",
       "Vex"
     ]
   },
   "${ModID}:BellordPackHat": {
     "TEXT": [
-      "Just hope nobody rings it。",
-      "Calling Bell"
+      "希望没谁敲响它。",
+      "召唤铃铛"
     ]
   }
 }

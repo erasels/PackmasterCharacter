@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Pickup",
+    "PROPER_NAME": "拾起",
     "NAMES": [
-      "pickup"
+      "pickup",
+      "拾起"
     ],
-    "DESCRIPTION": "Effect triggers when you obtain this card。"
+    "DESCRIPTION": "将牌加入牌组时触发效果。"
   }
 ]

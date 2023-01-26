@@ -1,26 +1,26 @@
 {
   "${ModID}:Reverberation": {
-    "NAME": "Reverberation",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你的回合开始时， if this is in your 弃牌堆, it leaps into your hand。"
+    "NAME": "混响",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 回合开始时，若本牌在弃牌堆，返回手牌。"
   },
   "${ModID}:Midnight": {
-    "NAME": "Toll",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell。"
+    "NAME": "拨铃",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
   },
   "${ModID}:Clang": {
-    "NAME": "Clang",
-    "DESCRIPTION": "Can only be played if there is a Curse or Status in your hand. NL 造成 !D! 点伤害。",
+    "NAME": "铛",
+    "DESCRIPTION": "手中有状态或诅咒才能打出。 NL 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "I don't have a Curse or Status card。"
+      "我没有诅咒或状态牌。"
     ]
   },
   "${ModID}:VoDo": {
     "NAME": "Vo-Do",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL Enemy 失去s 2 力量 。 NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell。"
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 目标失去2点 力量 。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
   },
   "${ModID}:RingTheBell": {
-    "NAME": "Ring the Bell",
-    "DESCRIPTION": "ALL enemies 失去 !M! 生命。 NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell。"
+    "NAME": "铃响",
+    "DESCRIPTION": "ALL enemies 失去 !M! 生命。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
   },
   "${ModID}:TimeOut": {
     "NAME": "Time Out",
@@ -33,7 +33,7 @@
   },
   "${ModID}:Dong": {
     "NAME": "DONG!",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Weak and Vulnerable. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Weak and Vulnerable. NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
   },
   "${ModID}:LikeClockwork": {
     "NAME": "Like Clockwork",
