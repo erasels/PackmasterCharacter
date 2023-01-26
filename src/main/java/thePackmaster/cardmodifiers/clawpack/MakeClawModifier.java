@@ -35,7 +35,7 @@ public class MakeClawModifier extends AbstractMadScienceModifier {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
+     
         AbstractCard c = new GhostClaw();
         Wiz.atb(new MakeTempCardInHandAction(c));
     }
