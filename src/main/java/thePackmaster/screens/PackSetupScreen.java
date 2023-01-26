@@ -27,8 +27,7 @@ import thePackmaster.patches.InfiniteSpirePatch;
 
 import java.util.*;
 
-import static thePackmaster.SpireAnniversary5Mod.currentPoolPacks;
-import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.SpireAnniversary5Mod.*;
 
 public class PackSetupScreen extends CustomScreen {
     private static final Logger logger = LogManager.getLogger("PackSetup");
@@ -122,17 +121,17 @@ public class PackSetupScreen extends CustomScreen {
 
     @Override
     public void close() {
-        for (AbstractCardPack pack : currentPoolPacks)
+        for (AbstractCardPack pack : unfilteredAllPacks) {
             pack.previewPackCard.stopGlowing();
-        for (AbstractCardPack pack : choiceSet)
-            pack.previewPackCard.stopGlowing();
+            pack.previewPackCard.noShadow();
+        }
     }
 
     @Override
     public void update() {
         updateTransition();
         updateControllerInput();
-        
+
         for (AbstractCardPack pack : currentPoolPacks) {
             pack.previewPackCard.stopGlowing();
             pack.previewPackCard.update();
