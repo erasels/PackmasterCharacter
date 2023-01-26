@@ -1,14 +1,14 @@
 {
   "${ModID}:DownfallPack": {
     "TEXT": [
-      "Downfall",
+      "崩坠",
       "A potent pack featuring 一张牌 from each of the Spire’s Bosses。",
-      "Downfall Team"
+      "崩坠制作组"
     ]
   },
   "${ModID}:DownfallPackHat": {
     "TEXT": [
-      "You're the boss now。",
+      "你现在是恶棍了。",
       "Tiny Bowler Hat"
     ]
   }

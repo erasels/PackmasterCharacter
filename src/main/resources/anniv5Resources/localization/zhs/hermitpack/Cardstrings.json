@@ -1,6 +1,6 @@
 {
   "${ModID}:Quickdraw": {
-    "NAME": "Quickdraw",
+    "NAME": "快拔",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL Next turn, draw 1 less card。"
   },
   "${ModID}:Glare": {
@@ -13,24 +13,24 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Weak。"
   },
   "${ModID}:Headshot": {
-    "NAME": "Headshot",
+    "NAME": "爆头",
     "DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage if played from the middle of your hand。"
   },
   "${ModID}:Determination": {
-    "NAME": "Determination",
+    "NAME": "决心",
     "DESCRIPTION": "每当 a debuff is applied to you, 获得 !M! 点 力量 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 每当 a debuff is applied to you, 获得 !M! 点 力量 。"
   },
   "${ModID}:Virtue": {
-    "NAME": "Virtue",
+    "NAME": "高尚",
     "DESCRIPTION": "保留 。 NL Reduce each of your debuffs by !M!。"
   },
-  "${ModID}:Flas生命owder": {
-    "NAME": "Flash Powder",
+  "${ModID}:FlashPowder": {
+    "NAME": "闪光粉末",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 所有敌人 失去 !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Purgatory": {
-    "NAME": "Purgatory",
+    "NAME": "炼狱",
     "DESCRIPTION": "虚无 。 NL 对所有敌人造成 !D! 点伤害。"
   },
   "${ModID}:OverwhelmingPower": {
@@ -38,7 +38,7 @@
     "DESCRIPTION": "获得 [E] [E] [E] 。 NL Draw 3 cards. NL 每当 you end your turn with 0 Energy, 失去 !M! 生命。"
   },
   "${ModID}:DeadOrAlive": {
-    "NAME": "Dead or Alive",
+    "NAME": "死或生",
     "DESCRIPTION": "造成 !D! 点伤害 X times. NL If Fatal, get a ${ModID}:Bounty. NL 消耗 。"
   }
 }

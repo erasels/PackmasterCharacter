@@ -1,13 +1,13 @@
 {
   "${ModID}:AddClawTagAndMakeClawModifier": {
     "TEXT": [
-      " NL 获得 a *Ghost *Claw。",
-      " Claw"
+      " NL 获得一张 *Ghost *Claw。",
+      "爪击"
     ]
   },
   "${ModID}:ClawPack": {
     "TEXT": [
-      "Claw Pack",
+      "爪击",
       "The ultimate KS Stretch Goal - a pack of Claws。",
       "MichaelMayhem"
     ]

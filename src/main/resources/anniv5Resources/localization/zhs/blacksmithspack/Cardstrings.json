@@ -29,7 +29,7 @@
   },
   "${ModID}:ScrapMetal": {
     "NAME": "回收金属",
-    "DESCRIPTION": "Upgrade a random card from any pile for every !M! 格挡 you have. NL 消耗 。"
+    "DESCRIPTION": "每有 !M! 点 格挡 ，随机 升级 抽弃牌堆或手牌中的一张牌。 NL 消耗 。"
   },
   "${ModID}:BlacksmithsShield": {
     "NAME": "铁匠之盾",
