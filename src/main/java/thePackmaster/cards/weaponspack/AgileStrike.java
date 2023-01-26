@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.orbs.weaponspack.AbstractWeaponOrb;
 import thePackmaster.util.Wiz;
 
-import java.util.Iterator;
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class AgileStrike extends AbstractWeaponsPackCard {
@@ -51,12 +49,11 @@ public class AgileStrike extends AbstractWeaponsPackCard {
             return;
         }
         boolean shouldCostBeReduced = false;
-        Iterator<AbstractOrb> orbsChanneledThisTurn = AbstractDungeon.actionManager.orbsChanneledThisTurn.iterator();
 
-        while (orbsChanneledThisTurn.hasNext()) {
-            AbstractOrb orb = orbsChanneledThisTurn.next();
+        for (AbstractOrb orb : AbstractDungeon.actionManager.orbsChanneledThisTurn) {
             if (orb instanceof AbstractWeaponOrb) {
                 shouldCostBeReduced = true;
+                break;
             }
         }
 
