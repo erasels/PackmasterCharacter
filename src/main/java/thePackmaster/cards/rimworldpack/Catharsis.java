@@ -25,6 +25,6 @@ public class Catharsis extends AbstractRimCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(1);
     }
 }
