@@ -6,7 +6,7 @@
   "${ModID}:Wither": {
     "NAME": "Wither",
     "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ruin。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ruin to ALL enemies。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ruin to 所有敌人。"
   },
   "${ModID}:Collapse": {
     "NAME": "Collapse",

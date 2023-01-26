@@ -7,7 +7,7 @@
   "${ModID}:ExplosiveVial": {
     "NAME": "Explosive Vial",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Ignite to ALL enemies. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Ignite to 所有敌人. NL 消耗 。"
   },
   "${ModID}:格挡Vial": {
     "NAME": "格挡 Vial",

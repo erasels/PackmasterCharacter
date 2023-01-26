@@ -17,8 +17,8 @@
   },
   "${ModID}:DashIn": {
     "NAME": "Dash In",
-    "DESCRIPTION": "Innate NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害 to all enemies X times。",
-    "UPGRADE_DESCRIPTION": "Innate NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害 to all enemies X+1 times。"
+    "DESCRIPTION": "Innate NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害 to 所有敌人 X times。",
+    "UPGRADE_DESCRIPTION": "Innate NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害 to 所有敌人 X+1 times。"
   },
   "${ModID}:InstinctiveThinking": {
     "NAME": "Instinctive Thinking",

@@ -46,7 +46,7 @@
   },
   "${ModID}:Frostprime": {
     "NAME": "Frost Prime",
-    "DESCRIPTION": "你的回合开始时， Channel 1 Frost and apply !M! ${ModID}:Frostbite to ALL enemies。"
+    "DESCRIPTION": "你的回合开始时， Channel 1 Frost and apply !M! ${ModID}:Frostbite to 所有敌人。"
   },
   "${ModID}:BaalorBash": {
     "NAME": "Baalorlord's Bash",

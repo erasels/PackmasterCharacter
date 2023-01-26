@@ -5,7 +5,7 @@
   },
   "${ModID}:Deconstruct": {
     "NAME": "Deconstruct",
-    "DESCRIPTION": "Apply !M! ${ModID}:Distortion to ALL enemies. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! ${ModID}:Distortion to 所有敌人. NL 消耗 。"
   },
   "${ModID}:Darken": {
     "NAME": "Darken",
@@ -41,7 +41,7 @@
   },
   "${ModID}:CursedCircle": {
     "NAME": "Cursed Circle",
-    "DESCRIPTION": "You and ALL enemies 失去 力量 本回合 equal to the number of cards in your hand. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "You and ALL enemies 失去 力量 本回合 equal to the number of cards in your hand。"
+    "DESCRIPTION": "You and 所有敌人 失去 力量 本回合 equal to the number of cards in your hand. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "You and 所有敌人 失去 力量 本回合 equal to the number of cards in your hand。"
   }
 }

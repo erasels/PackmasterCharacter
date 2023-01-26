@@ -5,7 +5,7 @@
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "Freeze and Burn",
-    "DESCRIPTIONS": ["At the start of your next turn, deal #b{0} damage to ALL enemies。"]
+    "DESCRIPTIONS": ["At the start of your next turn, deal #b{0} damage to 所有敌人。"]
   },
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",

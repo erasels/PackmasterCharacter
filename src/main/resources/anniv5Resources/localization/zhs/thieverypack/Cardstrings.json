@@ -9,7 +9,7 @@
   },
   "${ModID}:Smokescreen": {
     "NAME": "Smokescreen",
-    "DESCRIPTION": "EVERYONE 获得s !B! 点 格挡 。 NL ALL enemies 失去 !M! 生命。"
+    "DESCRIPTION": "EVERYONE 获得s !B! 点 格挡 。 NL 所有敌人 失去 !M! 生命。"
   },
   "${ModID}:NullHammer": {
     "NAME": "Null Hammer",
@@ -18,7 +18,7 @@
   "${ModID}:Magnet": {
     "NAME": "Magnet",
     "DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from the enemy. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from ALL enemies. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from 所有敌人. NL 消耗 。"
   },
   "${ModID}:力量Sap": {
     "NAME": "力量 Sap",

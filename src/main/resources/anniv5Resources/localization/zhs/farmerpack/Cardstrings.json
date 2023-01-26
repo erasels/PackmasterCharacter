@@ -6,7 +6,7 @@
   },
   "${ModID}:HarvestBeans": {
     "NAME": "Harvest Beans",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 造成 !D! 点伤害 to ALL enemies if the last card played 本场战斗 wasn't an Attack。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 造成 !D! 点伤害 to 所有敌人 if the last card played 本场战斗 wasn't an Attack。"
   },
   "${ModID}:HarvestCarrots": {
     "NAME": "Harvest Carrots",
@@ -24,7 +24,7 @@
   },
   "${ModID}:OutToMarket": {
     "NAME": "Out To Market",
-    "DESCRIPTION": "Deal !M! damage to ALL enemies the first time you play each card type each turn。"
+    "DESCRIPTION": "Deal !M! damage to 所有敌人 the first time you play each card type each turn。"
   },
   "${ModID}:PestControl": {
     "NAME": "Pest Control",

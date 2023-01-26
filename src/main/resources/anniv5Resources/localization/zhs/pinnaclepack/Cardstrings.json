@@ -14,7 +14,7 @@
   },
   "${ModID}:ArrowStormRareAttack": {
     "NAME": "Arrow Storm",
-    "DESCRIPTION": "消耗 all Attack cards in your hand. NL If you 消耗ed 一张牌, 造成 !D! 点伤害 to ALL enemies !M! times。"
+    "DESCRIPTION": "消耗 all Attack cards in your hand. NL If you 消耗ed 一张牌, 造成 !D! 点伤害 to 所有敌人 !M! times。"
   },
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "Marvelous Feast",
@@ -43,7 +43,7 @@
   },
   "${ModID}:BucketOfDregsUncommonSkill": {
     "NAME": "Bucket Of Dregs",
-    "DESCRIPTION": "Unplayable. 保留 。 NL When Retained, heal ALL enemies for !M! 生命 and 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "Unplayable. 保留 。 NL When Retained, heal 所有敌人 for !M! 生命 and 获得 !B! 点 格挡 。"
   },
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "Pocket Tournament",

@@ -2,7 +2,7 @@
   "${ModID}:MultiToolPower": {
     "NAME": "Multi-Tool",
     "DESCRIPTIONS": [
-      "If you end your turn with unused Energy, ALL enemies 失去 #b",
+      "If you end your turn with unused Energy, 所有敌人 失去 #b",
       " 生命。"
     ]
   },

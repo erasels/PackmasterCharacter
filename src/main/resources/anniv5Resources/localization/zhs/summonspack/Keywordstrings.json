@@ -7,7 +7,7 @@
       "swarms\u00a0of\u00a0bees",
       "Swarms\u00a0of\u00a0bees"
     ],
-    "DESCRIPTION": "Orb: Deals damage to ALL enemies。"
+    "DESCRIPTION": "Orb: Deals damage to 所有敌人。"
   },
   {
     "PROPER_NAME": "Rainbow\u00a0Louse",
@@ -45,7 +45,7 @@
     "NAMES": [
       "leprechaun"
     ],
-    "DESCRIPTION": "Orb: Rolls #yDice. When #yEvoked, applies #yJinx to ALL enemies。"
+    "DESCRIPTION": "Orb: Rolls #yDice. When #yEvoked, applies #yJinx to 所有敌人。"
   },
   {
     "PROPER_NAME": "Jinx",
@@ -60,6 +60,6 @@
       "fire\u00a0spirit",
       "Fire\u00a0spirit"
     ],
-    "DESCRIPTION": "Orb: Apply #yIgnite to ALL enemies. 获得 #yFocus when evoked。"
+    "DESCRIPTION": "Orb: Apply #yIgnite to 所有敌人. 获得 #yFocus when evoked。"
   }
 ]

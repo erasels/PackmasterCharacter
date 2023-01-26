@@ -3,7 +3,7 @@
     "NAME": "Out To Market",
     "DESCRIPTIONS": [
       "Deal #b",
-      " damage to ALL enemies the first time you play 一张牌 type each turn. You have played:", "Attack", "Skill", "Power", "Status", "Curse"
+      " damage to 所有敌人 the first time you play 一张牌 type each turn. You have played:", "Attack", "Skill", "Power", "Status", "Curse"
     ]
   },
   "${ModID}:SupplyChainPower": {

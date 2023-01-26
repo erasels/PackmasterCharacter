@@ -3,7 +3,7 @@
     "NAME": "Hammer Throw",
     "DESCRIPTIONS": [
       "每当 一张牌 is Retained, deal #b",
-      " damage to ALL enemies。"
+      " damage to 所有敌人。"
     ]
   }
 }

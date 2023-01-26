@@ -30,7 +30,7 @@
     "DESCRIPTIONS": [
       "你的回合开始时， #yChannel #b",
       " #yFrost and apply #b",
-      " #yFrostbite to ALL enemies。"
+      " #yFrostbite to 所有敌人。"
     ]
   },
   "${ModID}:CozyChairPower": {

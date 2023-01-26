@@ -13,11 +13,11 @@
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "Freeze and Burn",
-    "DESCRIPTION": "ALL enemies 失去 !M! 点 力量 本回合. NL Next turn, 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "所有敌人 失去 !M! 点 力量 本回合. NL Next turn, 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "${ModID}:Frostfire": {
     "NAME": "Frostfire",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ignite and !${ModID}:m2! Weak to ALL enemies. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite and !${ModID}:m2! Weak to 所有敌人. NL 消耗 。"
   },
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",

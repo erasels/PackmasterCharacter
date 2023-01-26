@@ -15,16 +15,16 @@
     ]
   },
   "${ModID}:VoDo": {
-    "NAME": "Vo-Do",
+    "NAME": "巫毒娃娃",
     "DESCRIPTION": "获得 !M! 点 力量 。 NL 目标失去2点 力量 。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
   },
   "${ModID}:RingTheBell": {
     "NAME": "铃响",
-    "DESCRIPTION": "ALL enemies 失去 !M! 生命。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
+    "DESCRIPTION": "所有敌人失去 !M! 点生命。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
   },
   "${ModID}:TimeOut": {
     "NAME": "Time Out",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽一张牌. NL If it's a Curse or Status card, ALL enemies 失去 !M! 点 力量 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽一张牌. NL If it's a Curse or Status card, 所有敌人 失去 !M! 点 力量 。"
   },
   "${ModID}:Cuckoo": {
     "NAME": "Cuckoo",

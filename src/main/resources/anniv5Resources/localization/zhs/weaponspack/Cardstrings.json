@@ -17,7 +17,7 @@
   },
   "${ModID}:PowderKeg": {
     "NAME": "Powder Keg",
-    "DESCRIPTION": "Equip a 0 / 1 ${ModID}:Weapon. NL When it is destroyed, deal !M! damage to ALL enemies。"
+    "DESCRIPTION": "Equip a 0 / 1 ${ModID}:Weapon. NL When it is destroyed, deal !M! damage to 所有敌人。"
   },
   "${ModID}:RearmingStrike": {
     "NAME": "Rearming Strike",
@@ -37,12 +37,12 @@
     "DESCRIPTION": "Choose 1 of 3 Swords. NL Equip a 3 / !M! ${ModID}:Weapon with an additional effect。",
     "EXTENDED_DESCRIPTION": [
       "Additional Effects",
-      "#rFire: 每当 you attack with this Weapon, deal #b3 damage to ALL enemies. NL #yWisdom: 每当 you attack with this Weapon, 抽一张牌。 NL #pChaos: 每当 you attack with this Weapon, add a random card into your hand。"
+      "#rFire: 每当 you attack with this Weapon, deal #b3 damage to 所有敌人. NL #yWisdom: 每当 you attack with this Weapon, 抽一张牌。 NL #pChaos: 每当 you attack with this Weapon, add a random card into your hand。"
     ]
   },
   "${ModID}:SwordOfFire": {
     "NAME": "Sword of Fire",
-    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL 每当 you attack with this ${ModID}:Weapon, deal 3 damage to ALL enemies。"
+    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL 每当 you attack with this ${ModID}:Weapon, deal 3 damage to 所有敌人。"
   },
   "${ModID}:SwordOfWisdom": {
     "NAME": "Sword of Wisdom",

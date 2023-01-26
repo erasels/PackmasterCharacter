@@ -9,7 +9,7 @@
   },
   "${ModID}:Frostburn": {
     "NAME": "Frostburn",
-    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add a *Burn into your 弃牌堆。"
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to 所有敌人. NL Add a *Burn into your 弃牌堆。"
   },
   "${ModID}:Glaciate": {
     "NAME": "Glaciate",

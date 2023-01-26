@@ -1,7 +1,7 @@
 {
   "${ModID}:AqueductsPower": {
     "NAME": "Aqueducts",
-    "DESCRIPTIONS": ["每当 you draw an extr一张牌, deal #b", " damage to ALL enemies。"]
+    "DESCRIPTIONS": ["每当 you draw an extr一张牌, deal #b", " damage to 所有敌人。"]
   },
   "${ModID}:FlowPower": {
     "NAME": "Flowing",

@@ -22,7 +22,7 @@
   },
   "${ModID}:SmokePellets": {
     "NAME": "Smoke Pellets",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! Weak to ALL enemies。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! Weak to 所有敌人。"
   },
   "${ModID}:SmolderingShell": {
     "NAME": "Smoldering Shell",

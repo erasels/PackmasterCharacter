@@ -9,7 +9,7 @@
   },
   "${ModID}:Chained": {
     "NAME": "Chained",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Give ALL enemies !M! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Give 所有敌人 !M! 点 格挡 。"
   },
   "${ModID}:StormStrike": {
     "NAME": "Storm Strike",

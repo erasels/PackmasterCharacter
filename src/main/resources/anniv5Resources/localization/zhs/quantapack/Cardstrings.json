@@ -1,7 +1,7 @@
 {
   "${ModID}:MissileStrike": {
     "NAME": "Missile Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to ALL enemies。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to 所有敌人。"
   },
   "${ModID}:MagicDart": {
     "NAME": "Magic Dart",
@@ -38,7 +38,7 @@
   "${ModID}:Dominate": {
     "NAME": "Dominate",
     "DESCRIPTION": "${ModID}:Stun an enemy. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Stun ALL enemies. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "${ModID}:Stun 所有敌人. NL 消耗 。"
   },
   "${ModID}:IchorGoblet": {
     "NAME": "Ichor Goblet",

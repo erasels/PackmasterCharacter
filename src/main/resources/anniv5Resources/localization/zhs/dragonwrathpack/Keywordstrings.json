@@ -15,7 +15,7 @@
       "Confession",
       "confession"
     ],
-    "DESCRIPTION": "每当 you take damage or 失去 生命, deal damage equal to your #yConfession to all enemies. NL If it isn't your turn reduce Confession by half。"
+    "DESCRIPTION": "每当 you take damage or 失去 生命, deal damage equal to your #yConfession to 所有敌人. NL If it isn't your turn reduce Confession by half。"
   },
   {
     "PROPER_NAME": "Light",

@@ -39,7 +39,7 @@
   },
   "${ModID}:EarthlightRay": {
     "NAME": "Earthlight Ray",
-    "DESCRIPTION": "After you 获得 ${ModID}:Charge Up, deal damage equal to !M! times its total to ALL enemies。"
+    "DESCRIPTION": "After you 获得 ${ModID}:Charge Up, deal damage equal to !M! times its total to 所有敌人。"
   },
   "${ModID}:Spark": {
     "NAME": "Spark",

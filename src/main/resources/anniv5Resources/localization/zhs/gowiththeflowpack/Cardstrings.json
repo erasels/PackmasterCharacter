@@ -1,7 +1,7 @@
 {
   "${ModID}:Aqueducts": {
     "NAME": "Aqueducts",
-    "DESCRIPTION": "每当 you draw an extr一张牌, deal !M! damage to ALL enemies。"
+    "DESCRIPTION": "每当 you draw an extr一张牌, deal !M! damage to 所有敌人。"
   },
   "${ModID}:Cascade": {
     "NAME": "Cascade",

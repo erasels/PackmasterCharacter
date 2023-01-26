@@ -19,7 +19,7 @@
   },
   "${ModID}:TerrorOfTheSeas": {
     "NAME": "Terror of the Seas",
-    "DESCRIPTION": "给予 !M! 层 易伤 and !${ModID}:m2! ${ModID}:Ruin to ALL enemies. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 易伤 and !${ModID}:m2! ${ModID}:Ruin to 所有敌人. NL 消耗 。"
   },
   "${ModID}:MassProduction": {
     "NAME": "Mass Production",
@@ -42,7 +42,7 @@
   },
   "${ModID}:SlimeSpray": {
     "NAME": "Slime Spray",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害, apply !M! Poison, and apply Slow to ALL enemies。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害, apply !M! Poison, and apply Slow to 所有敌人。"
   },
   "${ModID}:StickStrike": {
     "NAME": "Stick Strike",

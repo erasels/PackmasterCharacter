@@ -36,7 +36,7 @@
   "${ModID}:CoreBlinder": {
     "NAME": "Core Blinder",
     "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your 抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster+ to your 抽牌堆。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to 所有敌人. NL Add a *Core *Blaster+ to your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",

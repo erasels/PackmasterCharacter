@@ -9,7 +9,7 @@
   },
   "${ModID}:GrassHop": {
     "NAME": "Locusts",
-    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL When this 获得s [bugIcon] , ALL enemies 失去 !M! 生命。"
+    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL When this 获得s [bugIcon] , 所有敌人 失去 !M! 生命。"
   },
   "${ModID}:Bzzzzz": {
     "NAME": "Bzzzzzz",

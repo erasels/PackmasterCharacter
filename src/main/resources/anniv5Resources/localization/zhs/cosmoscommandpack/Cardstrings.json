@@ -1,7 +1,7 @@
 {
   "${ModID}:AstralFracture": {
     "NAME": "Astral Fracture",
-    "DESCRIPTION": "Apply !M! ${ModID}:Distortion to ALL enemies. NL ${ModID}:Amplify [E] : 消耗 一张牌。"
+    "DESCRIPTION": "Apply !M! ${ModID}:Distortion to 所有敌人. NL ${ModID}:Amplify [E] : 消耗 一张牌。"
   },
   "${ModID}:Cognition": {
     "NAME": "Cognition",
@@ -33,8 +33,8 @@
   },
   "${ModID}:Subspace": {
     "NAME": "Subspace",
-    "DESCRIPTION": "ALL enemies 失去 生命 equal to their ${ModID}:Distortion. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "ALL enemies 失去 生命 equal to !M! times their ${ModID}:Distortion. NL 消耗 。"
+    "DESCRIPTION": "所有敌人 失去 生命 equal to their ${ModID}:Distortion. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "所有敌人 失去 生命 equal to !M! times their ${ModID}:Distortion. NL 消耗 。"
   },
   "${ModID}:SubtleKnife": {
     "NAME": "Subtle Knife",

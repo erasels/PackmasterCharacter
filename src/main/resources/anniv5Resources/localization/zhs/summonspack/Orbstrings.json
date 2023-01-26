@@ -3,8 +3,8 @@
     "NAME": "Swarm Of Bees",
     "DESCRIPTION": [
       "#yPassive: Deal #b",
-      " damage to ALL enemies. NL #yEvoke: Deal #b",
-      " damage to ALL enemies。"
+      " damage to 所有敌人. NL #yEvoke: Deal #b",
+      " damage to 所有敌人。"
     ]
   },
   "${ModID}:Louse": {
@@ -41,14 +41,14 @@
     "DESCRIPTION": [
       "#yPassive: At the start of your turn roll #b",
       ". NL #yEvoke: Apply #b",
-      " #yJinx to ALL enemies。"
+      " #yJinx to 所有敌人。"
     ]
   },
   "${ModID}:FireSpirit": {
     "NAME": "Fire Spirit",
     "DESCRIPTION": [
       "#yPassive: 回合结束时 apply #b",
-      " #yIgnite to ALL enemies. NL #yEvoke: 获得 1 #yFocus。"
+      " #yIgnite to 所有敌人. NL #yEvoke: 获得 1 #yFocus。"
     ]
   }
 }

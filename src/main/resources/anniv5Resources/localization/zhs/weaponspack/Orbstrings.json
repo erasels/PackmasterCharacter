@@ -18,7 +18,7 @@
     "NAME": "Powder Keg",
     "DESCRIPTION": [
       "When destroyed, deal #b",
-      " damage to all enemies。"
+      " damage to 所有敌人。"
     ]
   },
   "${ModID}:SwordOfWisdomOrb": {
@@ -48,7 +48,7 @@
   "${ModID}:SwordOfFireOrb": {
     "NAME": "Sword of Fire",
     "DESCRIPTION": [
-      "每当 you attack with this Weapon, deal #b3 damage to all enemies。"
+      "每当 you attack with this Weapon, deal #b3 damage to 所有敌人。"
     ]
   }
 }

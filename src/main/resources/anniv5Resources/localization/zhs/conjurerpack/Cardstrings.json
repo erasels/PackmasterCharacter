@@ -37,8 +37,8 @@
 		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ignite。"
 	},
 	"${ModID}:TectonicQuake":	{
-		"DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Petra and Weak to ALL enemies. NL 消耗 。",
+		"DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Petra and Weak to 所有敌人. NL 消耗 。",
 		"NAME": "Tectonic Quake",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Petra and Weak to ALL enemies。"
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Petra and Weak to 所有敌人。"
 	}
 }

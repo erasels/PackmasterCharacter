@@ -10,7 +10,7 @@
   },
   "${ModID}:MultiTool": {
     "NAME": "Multi-Tool",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If you end your turn with unused Energy, ALL enemies 失去 !M! 生命。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If you end your turn with unused Energy, 所有敌人 失去 !M! 生命。"
   },
   "${ModID}:LastResort": {
     "NAME": "Last Resort",
@@ -51,6 +51,6 @@
   },
   "${ModID}:SuperNova": {
     "NAME": "Super Nova",
-    "DESCRIPTION": "ALL enemies 失去 !M! 生命。 NL Apply !${ModID}:m2! Weak and Vulnerable to ALL enemies。"
+    "DESCRIPTION": "所有敌人 失去 !M! 生命。 NL Apply !${ModID}:m2! Weak and Vulnerable to 所有敌人。"
   }
 }

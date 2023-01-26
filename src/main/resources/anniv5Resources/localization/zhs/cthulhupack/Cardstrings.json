@@ -19,7 +19,7 @@
   },
   "${ModID}:FamilialCurse": {
     "NAME": "Familial Curse",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ruin to ALL enemies. NL Next turn, 获得 a *Madness and 失去 1 生命。"
+    "DESCRIPTION": "Apply !M! ${ModID}:Ruin to 所有敌人. NL Next turn, 获得 a *Madness and 失去 1 生命。"
   },
   "${ModID}:GazeTheVoid": {
     "NAME": "Gaze the Void",

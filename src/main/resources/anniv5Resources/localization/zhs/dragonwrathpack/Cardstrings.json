@@ -21,7 +21,7 @@
   },
   "${ModID}:ChainsofTruth": {
     "NAME": "Chains of Truth",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Apply !M! ${ModID}:Penance to ALL enemies。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Apply !M! ${ModID}:Penance to 所有敌人。"
   },
   "${ModID}:SacredTrial": {
     "NAME": "Sacred Trial",

@@ -34,7 +34,7 @@
   },
   "${ModID}:HammerThrow": {
     "NAME": "Hammer Throw",
-    "DESCRIPTION": "每当 一张牌 is Retained, deal !M! damage to ALL enemies。"
+    "DESCRIPTION": "每当 一张牌 is Retained, deal !M! damage to 所有敌人。"
   },
   "${ModID}:Flail": {
     "NAME": "Flail",
