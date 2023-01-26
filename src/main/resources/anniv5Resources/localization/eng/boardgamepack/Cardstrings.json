@@ -22,7 +22,8 @@
   },
   "${ModID}:PerceptionCheck": {
     "NAME": "Perception Check",
-    "DESCRIPTION": "At the start of your turn, roll a ${ModID}:D8."
+    "DESCRIPTION": "${ModID}:Unnate. NL At the start of your turn, roll a ${ModID}:D8.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, roll a ${ModID}:D8."
   },
   "${ModID}:AllIn": {
     "NAME": "All In",
@@ -30,8 +31,8 @@
   },
   "${ModID}:D20": {
     "NAME": "D20!",
-    "DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage."
+    "DESCRIPTION": "Roll a [#efc851]D20[]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Roll a [#efc851]D20[]."
   },
   "${ModID}:GoToJail": {
     "NAME": "Go to Jail",

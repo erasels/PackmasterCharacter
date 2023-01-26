@@ -14,6 +14,7 @@ public class PerceptionCheck extends AbstractBoardCard {
 
     public PerceptionCheck() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        isUnnate = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,6 +22,6 @@ public class PerceptionCheck extends AbstractBoardCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        isUnnate = false;
     }
 }
