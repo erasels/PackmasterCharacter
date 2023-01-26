@@ -22,7 +22,7 @@
   },
   "${ModID}:力量Sap": {
     "NAME": "力量 Sap",
-    "DESCRIPTION": "Apply !M! Weak. NL If the enemy has positive 力量, steal !${ModID}:m2! 力量. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Apply !M! Weak. NL If the enemy has positive 力量, steal !${ModID}:m2! 力量 。 NL Exhaustive !stslib:ex!."
   },
   "${ModID}:CunningPoison": {
     "NAME": "Cunning Poison",

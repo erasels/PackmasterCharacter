@@ -34,13 +34,13 @@
   },
   "${ModID}:NeutronStar": {
     "NAME": "Neutron Star",
-    "DESCRIPTION": "虚无 。 NL Attack ${ModID}:Enchantment. NL 获得 !M! 点 力量 NL this turn. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Attack ${ModID}:Enchantment. NL 获得 !M! 点 力量 NL this turn."
+    "DESCRIPTION": "虚无 。 NL Attack ${ModID}:Enchantment. NL 获得 !M! 点 力量 NL 本回合. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Attack ${ModID}:Enchantment. NL 获得 !M! 点 力量 NL 本回合."
   },
   "${ModID}:FastHands": {
     "NAME": "Fast Hands",
     "DESCRIPTION": "After playing a ${ModID}:different color card, 抽一张牌.",
-    "UPGRADE_DESCRIPTION": "After playing a ${ModID}:different color card, 抽一张牌 and reduce its cost by 1 this turn."
+    "UPGRADE_DESCRIPTION": "After playing a ${ModID}:different color card, 抽一张牌 and reduce its cost by 1 本回合."
   },
   "${ModID}:DimensionBreach": {
     "NAME": "Dimension Breach",
@@ -52,7 +52,7 @@
   },
   "${ModID}:Horizonbound": {
     "NAME": "Horizonbound",
-    "DESCRIPTION": "虚无 。 NL ${ModID}:Different color cards cost 1 less for each other ${ModID}:different color card played this turn.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Different color cards cost 1 less for each other ${ModID}:different color card played this turn."
+    "DESCRIPTION": "虚无 。 NL ${ModID}:Different color cards cost 1 less for each other ${ModID}:different color card played 本回合.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Different color cards cost 1 less for each other ${ModID}:different color card played 本回合."
   }
 }

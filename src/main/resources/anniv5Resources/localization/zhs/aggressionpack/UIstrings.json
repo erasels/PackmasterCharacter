@@ -1,16 +1,16 @@
 {
-  "${ModID}:AggressionPack": {
+  "${ModID}:侵袭Pack": {
     "TEXT": [
-      "Aggression",
-      "Focused on attacks and the Aggression stance, which increases your attack damage by 25%.",
+      "侵袭",
+      "专注于攻击与侵袭姿态(25%伤害加成)。",
       "modargo",
-      "Card art from MtG"
+      "卡牌贴图源自游戏：Magic: The Gathering"
     ]
   },
-  "${ModID}:AggressionPackHat": {
+  "${ModID}:侵袭PackHat": {
     "TEXT": [
-      "You are now truly ready to raid and pillage the spire.",
-      "Viking Helm"
+      "现在你可以肆意捣鼓整个尖塔了。",
+      "维京头盔"
     ]
   }
 }

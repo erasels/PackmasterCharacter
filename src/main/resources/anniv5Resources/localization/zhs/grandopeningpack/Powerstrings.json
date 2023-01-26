@@ -23,9 +23,9 @@
   "${ModID}:SurgePower": {
     "NAME": "Surge",
     "DESCRIPTIONS": [
-      "Your next #yInnate card is played twice this turn.",
+      "Your next #yInnate card is played twice 本回合.",
       "Your next #b",
-      " #yInnate cards are played twice this turn."
+      " #yInnate cards are played twice 本回合."
     ]
   }
 }

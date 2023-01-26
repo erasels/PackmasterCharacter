@@ -38,7 +38,7 @@
   },
   "${ModID}:Investor": {
     "NAME": "Investor",
-    "DESCRIPTION": "每当 you spend 2 or more Energy on a card, 获得 !M! 格挡 。"
+    "DESCRIPTION": "每当 you spend 2 or more Energy on a card, 获得 !M! 点 格挡 。"
   },
   "${ModID}:StruckByATrain": {
     "NAME": "Struck By A Train",

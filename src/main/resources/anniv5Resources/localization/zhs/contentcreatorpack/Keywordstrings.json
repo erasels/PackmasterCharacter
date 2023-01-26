@@ -18,13 +18,13 @@
     "NAMES": [
       "odd"
     ],
-    "DESCRIPTION": "Additional effect if you played an odd number of cards this turn (including this)."
+    "DESCRIPTION": "Additional effect if you played an odd number of cards 本回合 (including this)."
   },
   {
     "PROPER_NAME": "Even",
     "NAMES": [
       "even"
     ],
-    "DESCRIPTION": "Additional effect if you played an even number of cards this turn (including this)."
+    "DESCRIPTION": "Additional effect if you played an even number of cards 本回合 (including this)."
   }
 ]

@@ -3,7 +3,7 @@
     "NAME": "Magical Power",
     "DESCRIPTIONS": [
       "Magic cards deal #b",
-      " more damage this turn."
+      " more damage 本回合."
     ]
   },
   "${ModID}:ArsenalGearPower": {

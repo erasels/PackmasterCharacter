@@ -5,6 +5,6 @@
   },
   "${ModID}:Animosity": {
     "NAME": "Animosity",
-    "DESCRIPTIONS": ["When you enter, exit, or start your turn in #yAggression, 获得 #b{0} #y力量."]
+    "DESCRIPTIONS": ["When you enter, exit, or start your turn in #yAggression, 获得 #b{0} #y力量 。"]
   }
 }

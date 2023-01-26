@@ -5,11 +5,11 @@
   },
   "${ModID}:Homerun": {
     "NAME": "Homerun",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Critical_Hit if you've played at least 2 cards this turn."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Critical_Hit if you've played at least 2 cards 本回合."
   },
   "${ModID}:WideAngle": {
     "NAME": "Wide Angle",
-    "DESCRIPTION": "Steal !M! 格挡 。 NL Apply 1 Weak."
+    "DESCRIPTION": "Steal !M! 点 格挡 。 NL Apply 1 Weak."
   },
   "${ModID}:WindUp": {
     "NAME": "Wind Up",
@@ -25,7 +25,7 @@
   },
   "${ModID}:OptimizedBlur": {
     "NAME": "Optimized Blur",
-    "DESCRIPTION": "每当 you deal unblocked attack damage, 获得 !M! 格挡 。"
+    "DESCRIPTION": "每当 you deal unblocked attack damage, 获得 !M! 点 格挡 。"
   },
   "${ModID}:HardCaramel": {
     "NAME": "Hard Caramel",

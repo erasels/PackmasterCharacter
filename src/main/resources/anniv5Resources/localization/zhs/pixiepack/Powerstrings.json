@@ -10,7 +10,7 @@
     "NAME": "Fast Hands",
     "DESCRIPTIONS": [
       "After playing a #ydifferent #ycolor card, draw #b",
-      " cards and reduce their cost by 1 this turn."
+      " cards and reduce their cost by 1 本回合."
     ]
   },
   "${ModID}:HorizonboundPower": {

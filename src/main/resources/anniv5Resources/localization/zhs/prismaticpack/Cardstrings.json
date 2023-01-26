@@ -6,7 +6,7 @@
   },
   "${ModID}:PrismaticBarrier": {
     "NAME": "Prismatic Barrier",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you've played a ${ModID}:different\u00a0color card this turn, 获得 !M! *Plated *Armor and 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you've played a ${ModID}:different\u00a0color card 本回合, 获得 !M! *Plated *Armor and 消耗 。"
   },
   "${ModID}:GrabBag": {
     "NAME": "Grab Bag",
@@ -18,12 +18,12 @@
   },
   "${ModID}:ExoticKnowledge": {
     "NAME": "Exotic Knowledge",
-    "DESCRIPTION": "抽 !M! 张牌。 NL If you've played a ${ModID}:different\u00a0color card this turn, draw !${ModID}:m2! more cards."
+    "DESCRIPTION": "抽 !M! 张牌。 NL If you've played a ${ModID}:different\u00a0color card 本回合, draw !${ModID}:m2! more cards."
   },
   "${ModID}:ChoiceCut": {
     "NAME": "Choice Cut",
-    "DESCRIPTION": "Choose one of *Uppercut, *Doom *and *Gloom, *Predator, or *Reach *Heaven to add to your hand. It costs 0 this turn. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose one of *Uppercut+, *Doom *and *Gloom+, *Predator+, or *Reach *Heaven+ to add to your hand. It costs 0 this turn. NL 消耗 。"
+    "DESCRIPTION": "Choose one of *Uppercut, *Doom *and *Gloom, *Predator, or *Reach *Heaven to add to your hand. It costs 0 本回合. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Choose one of *Uppercut+, *Doom *and *Gloom+, *Predator+, or *Reach *Heaven+ to add to your hand. It costs 0 本回合. NL 消耗 。"
   },
   "${ModID}:QuirionDryad": {
     "NAME": "Quirion Dryad",
@@ -36,7 +36,7 @@
   },
   "${ModID}:PremiumSelection": {
     "NAME": "Premium Selection",
-    "DESCRIPTION": "Choose 1 of !M! random ${ModID}:different\u00a0color Rare cards to add to your hand. It costs 0 this turn. NL 消耗 。"
+    "DESCRIPTION": "Choose 1 of !M! random ${ModID}:different\u00a0color Rare cards to add to your hand. It costs 0 本回合. NL 消耗 。"
   },
   "${ModID}:FlawlessPrism": {
     "NAME": "Flawless Prism",

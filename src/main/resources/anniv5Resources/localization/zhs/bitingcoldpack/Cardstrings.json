@@ -5,7 +5,7 @@
   },
   "${ModID}:FrigidBody": {
     "NAME": "Frigid Body",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当 you are attacked this turn, apply ${ModID}:Frostbite equal to blocked damage."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当 you are attacked 本回合, apply ${ModID}:Frostbite equal to blocked damage."
   },
   "${ModID}:Frostburn": {
     "NAME": "Frostburn",
@@ -33,7 +33,7 @@
   },
   "${ModID}:RelentlessHail": {
     "NAME": "Relentless Hail",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
   },
   "${ModID}:Subdue": {
     "NAME": "Subdue",

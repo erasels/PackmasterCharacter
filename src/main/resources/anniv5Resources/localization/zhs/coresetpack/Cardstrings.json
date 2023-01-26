@@ -9,7 +9,7 @@
   },
   "${ModID}:DestinyDraw": {
     "NAME": "Destiny Draw",
-    "DESCRIPTION": "Choose 1 of 3 random cards from different Packs to add to your hand. NL It costs 0 this turn. NL 消耗 。"
+    "DESCRIPTION": "Choose 1 of 3 random cards from different Packs to add to your hand. NL It costs 0 本回合. NL 消耗 。"
   },
   "${ModID}:Flick": {
     "NAME": "Flick",
@@ -24,7 +24,7 @@
     "NAME": "Ripped Pecs",
     "DESCRIPTION": "获得 1 力量 for each Pack you've played a card from 本场战斗. NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 1 力量 for each Pack you've played a card from 本场战斗.",
-    "EXTENDED_DESCRIPTION": [" NL (获得s {0} 力量.)"]
+    "EXTENDED_DESCRIPTION": [" NL (获得s {0} 力量 。)"]
   },
   "${ModID}:Showoff": {
     "NAME": "Showoff",

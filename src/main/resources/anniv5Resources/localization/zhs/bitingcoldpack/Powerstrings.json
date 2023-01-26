@@ -12,7 +12,7 @@
   },
   "${ModID}:FrigidBodyPower": {
     "NAME": "Frigid Body",
-    "DESCRIPTIONS": ["每当 you are attacked this turn, apply #yFrostbite equal to blocked damage received."]
+    "DESCRIPTIONS": ["每当 you are attacked 本回合, apply #yFrostbite equal to blocked damage received."]
   },
   "${ModID}:GlaciatePower": {
     "NAME": "Glaciate",

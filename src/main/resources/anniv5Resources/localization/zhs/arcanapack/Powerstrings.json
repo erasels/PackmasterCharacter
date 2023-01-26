@@ -2,7 +2,7 @@
   "${ModID}:HangedPower": {
     "NAME": "Hanged",
     "DESCRIPTIONS": [
-      "每当 you 抽一张牌 this turn, ALL enemies lose #b",
+      "每当 you 抽一张牌 本回合, ALL enemies lose #b",
       " 生命."
     ]
   },

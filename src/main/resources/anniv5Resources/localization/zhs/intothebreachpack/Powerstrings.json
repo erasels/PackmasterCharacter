@@ -2,7 +2,7 @@
   "${ModID}:AcidPower": {
     "NAME": "A.C.I.D.",
     "DESCRIPTIONS": [
-      "Takes double damage from Attacks this turn.",
+      "Takes double damage from Attacks 本回合.",
       "Takes double damage from Attacks for #b",
       " turns."
     ]

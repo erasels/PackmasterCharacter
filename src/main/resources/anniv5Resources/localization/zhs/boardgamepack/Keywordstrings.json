@@ -24,7 +24,7 @@
     "NAMES": [
       "jail"
     ],
-    "DESCRIPTION": "You cannot play Attacks or take damage this turn."
+    "DESCRIPTION": "You cannot play Attacks or take damage 本回合."
   },
   {
     "PROPER_NAME": "Chance",

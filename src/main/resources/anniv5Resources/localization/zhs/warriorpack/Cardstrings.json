@@ -9,7 +9,7 @@
   },
   "${ModID}:Chained": {
     "NAME": "Chained",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Give ALL enemies !M! 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Give ALL enemies !M! 点 格挡 。"
   },
   "${ModID}:StormStrike": {
     "NAME": "Storm Strike",
@@ -35,7 +35,7 @@
   },
   "${ModID}:Bolas": {
     "NAME": "Bolas",
-    "DESCRIPTION": "Apply *Slow. NL Give enemy !M! 格挡 。 NL Draw !${ModID}:m2! card. NL 消耗 。"
+    "DESCRIPTION": "Apply *Slow. NL Give enemy !M! 点 格挡 。 NL Draw !${ModID}:m2! card. NL 消耗 。"
   },
   "${ModID}:FFBlade": {
     "NAME": "FF Blade",

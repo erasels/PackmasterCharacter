@@ -4,7 +4,7 @@
     "DESCRIPTIONS": [
       "每当 a card with a cost of #b",
       " or greater, including #yAmplify, is #yExhausted, 获得 #b",
-      " #y力量."
+      " #y力量 。"
       ]
   },
   "${ModID}:RecallPower": {

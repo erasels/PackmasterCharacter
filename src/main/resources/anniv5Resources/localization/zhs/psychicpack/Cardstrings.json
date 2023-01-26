@@ -33,18 +33,18 @@
   },
   "${ModID}:OneIsEnough": {
     "NAME": "One Is Enough",
-    "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|0=s.|1=.|2=s and choose one. NL You cannot play the other this turn.|@=s and choose one. NL You cannot play the others this turn.}",
+    "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|0=s.|1=.|2=s and choose one. NL You cannot play the other 本回合.|@=s and choose one. NL You cannot play the others 本回合.}",
     "EXTENDED_DESCRIPTION": [
       "be Playable"
     ]
   },
   "${ModID}:Curse": {
     "NAME": "Curse",
-    "DESCRIPTION": "${ModID}:Locking. NL Enemy loses !M! 点 力量.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Locking. NL Retain. NL Enemy loses !M! 点 力量.",
+    "DESCRIPTION": "${ModID}:Locking. NL Enemy loses !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Locking. NL Retain. NL Enemy loses !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL Enemy loses !M! 点 力量.",
-      "${ModID}:Locked. NL Retain. NL Enemy loses !M! 点 力量."
+      "${ModID}:Locked. NL Enemy loses !M! 点 力量 。",
+      "${ModID}:Locked. NL Retain. NL Enemy loses !M! 点 力量 。"
     ]
   },
   "${ModID}:MalleableFire": {
@@ -57,6 +57,6 @@
   },
   "${ModID}:DeepDream": {
     "NAME": "Deep Dream",
-    "DESCRIPTION": "每当 you play a card this turn, make a random card in your hand ${ModID}:Occult. NL 消耗 。"
+    "DESCRIPTION": "每当 you play a card 本回合, make a random card in your hand ${ModID}:Occult. NL 消耗 。"
   }
 }

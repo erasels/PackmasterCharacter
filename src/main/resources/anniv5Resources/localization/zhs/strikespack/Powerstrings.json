@@ -25,7 +25,7 @@
   "${ModID}:StrikeABar获得Power": {
     "NAME": "Strike a Bar获得",
     "DESCRIPTIONS": [
-      "Your Attacks cost #b0 this turn, but you cannot play non-Attacks."
+      "Your Attacks cost #b0 本回合, but you cannot play non-Attacks."
     ]
   }
 }

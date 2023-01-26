@@ -11,7 +11,7 @@
     "DESCRIPTIONS": [
       "After playing #b",
       " more cards, 获得 #b",
-      " #y力量."
+      " #y力量 。"
     ]
   },
   "${ModID}:DeEnergizedPower": {

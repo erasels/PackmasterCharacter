@@ -6,7 +6,7 @@
   },
   "${ModID}:ViciousCycle": {
     "NAME": "Vicious Cycle",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each card *ripped this turn.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each card *ripped 本回合.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card ripped.)",
@@ -19,7 +19,7 @@
   },
   "${ModID}:ViciousCycleText": {
     "NAME": "",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each card *ripped this turn.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each card *ripped 本回合.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card ripped.)",

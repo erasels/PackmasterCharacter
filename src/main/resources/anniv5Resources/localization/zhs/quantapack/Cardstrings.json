@@ -28,7 +28,7 @@
   },
   "${ModID}:Flow": {
     "NAME": "Flow",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card played this turn was an Attack, 抽 !M! 张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card played 本回合 was an Attack, 抽 !M! 张牌。"
   },
   "${ModID}:Manaburst": {
     "NAME": "Manaburst",

@@ -5,7 +5,7 @@
   },
   "${ModID}:Chronoboost": {
     "NAME": "Chrono-Boost",
-    "DESCRIPTION": "获得 !M! 点 力量. NL 获得 1 力量 for every 12th card you play."
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 1 力量 for every 12th card you play."
   },
   "${ModID}:DefensiveMode": {
     "NAME": "Defensive Mode",

@@ -2,7 +2,7 @@
   "${ModID}:Capacitor": {
     "NAME": "Capacitor",
     "DESCRIPTIONS": [
-      "This turn, you can hold #b",
+      "本回合, you can hold #b",
       " more cards in your hand."
     ]
   },

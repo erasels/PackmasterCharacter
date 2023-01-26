@@ -17,7 +17,7 @@
   },
   "${ModID}:HeatEngine": {
     "NAME": "Heat Engine",
-    "DESCRIPTION": "每当 a card with a cost of 2 or greater, including ${ModID}:Amplify, is Exhausted, 获得 !M! 点 力量."
+    "DESCRIPTION": "每当 a card with a cost of 2 or greater, including ${ModID}:Amplify, is Exhausted, 获得 !M! 点 力量 。"
   },
   "${ModID}:Recall": {
     "NAME": "Recall",

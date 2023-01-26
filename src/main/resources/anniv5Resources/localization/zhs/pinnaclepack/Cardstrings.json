@@ -1,7 +1,7 @@
 {
   "${ModID}:DroneSwarmRareSkill": {
     "NAME": "Drone Swarm",
-    "DESCRIPTION": "Raise your hand size this turn by !${ModID}:m2!. NL 抽 !M! 张牌。"
+    "DESCRIPTION": "Raise your hand size 本回合 by !${ModID}:m2!. NL 抽 !M! 张牌。"
   },
   "${ModID}:TheSuckamidRareSkill": {
     "NAME": "The Suckamid",
@@ -23,7 +23,7 @@
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "Meaty Croquettes",
-    "DESCRIPTION": "${ModID}:Croquette. NL 获得 !M! 点 力量. NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Croquette. NL 获得 !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:FishyCroquettesSpecialColourless": {
     "NAME": "Fishy Croquettes",

@@ -35,7 +35,7 @@
   },
   "${ModID}:MagicMissile": {
     "NAME": "Magic Missile",
-    "DESCRIPTION": "*Magic. Retain. NL 造成 !D! 点伤害。 NL Increase the damage dealt by *Magic cards by !M! this turn."
+    "DESCRIPTION": "*Magic. Retain. NL 造成 !D! 点伤害。 NL Increase the damage dealt by *Magic cards by !M! 本回合."
   },
   "${ModID}:Minniegun": {
     "NAME": "Minniegun",

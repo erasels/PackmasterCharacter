@@ -6,7 +6,7 @@
   },
   "${ModID}:NamelessMist": {
     "NAME": "Nameless Mist",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 another !M! 每当 you play a card this turn."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 another !M! 每当 you play a card 本回合."
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
@@ -23,7 +23,7 @@
   },
   "${ModID}:GazeTheVoid": {
     "NAME": "Gaze the Void",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Nightmare."
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL Enter ${ModID}:Nightmare."
   },
   "${ModID}:AllSeeing": {
     "NAME": "All Seeing",

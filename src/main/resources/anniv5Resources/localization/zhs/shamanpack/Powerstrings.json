@@ -9,7 +9,7 @@
   },
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",
-    "DESCRIPTIONS": ["每当 you are attacked this turn, apply #b{0} #yIgnite."]
+    "DESCRIPTIONS": ["每当 you are attacked 本回合, apply #b{0} #yIgnite."]
   },
   "${ModID}:Pyromastery": {
     "NAME": "Pyromastery",

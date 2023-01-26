@@ -19,7 +19,7 @@
   },
   "${ModID}:Enrage": {
     "NAME": "Enrage",
-    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL 抽 !M! 张牌。 NL Enter ${ModID}:Aggression."
+    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL 抽 !M! 张牌。 NL Enter ${ModID}:侵袭."
   },
   "${ModID}:Whispers": {
     "NAME": "Whispers",
@@ -32,12 +32,12 @@
   },
   "${ModID}:LesserHex": {
     "NAME": "Lesser Hex",
-    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! 点 力量. NL Add a *Greater\u00a0Hex to your 弃牌堆. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! 点 力量. NL Add a *Greater\u00a0Hex+ to your 弃牌堆. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! 点 力量 。 NL Add a *Greater\u00a0Hex to your 弃牌堆. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! 点 力量 。 NL Add a *Greater\u00a0Hex+ to your 弃牌堆. NL 消耗 。"
   },
   "${ModID}:GreaterHex": {
     "NAME": "Greater Hex",
-    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! 点 力量. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Conjuration": {
     "NAME": "Conjuration",

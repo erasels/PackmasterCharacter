@@ -16,8 +16,8 @@
   "${ModID}:PerfectGuardPower": {
     "NAME": "Perfect Guard",
     "DESCRIPTIONS": [
-      "If your #yBlock is broken exactly this turn, 获得 #b",
-      " 力量."
+      "If your #yBlock is broken exactly 本回合, 获得 #b",
+      " 力量 。"
     ]
   },
   "${ModID}:EnragePowerPlayer": {

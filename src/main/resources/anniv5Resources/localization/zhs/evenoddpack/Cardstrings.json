@@ -26,7 +26,7 @@
   "${ModID}:GammaWard": {
     "NAME": "Gamma Ward",
     "DESCRIPTION": "获得 !B! 点 格挡 。",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Your next Skill this turn has NL ${ModID}:Even: 获得 !M! 格挡 。"]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Your next Skill 本回合 has NL ${ModID}:Even: 获得 !M! 点 格挡 。"]
   },
   "${ModID}:Flourish": {
     "NAME": "Flourish",
@@ -51,6 +51,6 @@
   "${ModID}:Battlecry": {
     "NAME": "Battlecry",
     "DESCRIPTION": "抽 !M! 张牌。",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First: ", "获得 2 力量."]
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First: ", "获得 2 力量 。"]
   }
 }

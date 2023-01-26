@@ -6,8 +6,8 @@
       " cards and 获得 ",
       " [E] ",
       " . ",
-      " Hasn't triggered this turn.",
-      " Has triggered this turn."
+      " Hasn't triggered 本回合.",
+      " Has triggered 本回合."
     ]
   }
 }

@@ -14,7 +14,7 @@
   },
   "${ModID}:TheHangedMan": {
     "NAME": "The Hanged Man",
-    "DESCRIPTION": "每当 you 抽一张牌 this turn, ALL enemies lose !M! 生命."
+    "DESCRIPTION": "每当 you 抽一张牌 本回合, ALL enemies lose !M! 生命."
   },
   "${ModID}:TheTower": {
     "NAME": "The Tower",

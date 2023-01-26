@@ -21,8 +21,8 @@
   },
   "${ModID}:StrikeThroughFate": {
     "NAME": "Strike Through Fate",
-    "DESCRIPTION": "造成 !D! 点伤害。 If this is your 7th card this turn, deal !D! damage three times instead.",
-    "UPGRADE_DESCRIPTION": "Retain. NL 造成 !D! 点伤害。 If this is your 7th card this turn, deal !D! damage three times instead."
+    "DESCRIPTION": "造成 !D! 点伤害。 If this is your 7th card 本回合, deal !D! damage three times instead.",
+    "UPGRADE_DESCRIPTION": "Retain. NL 造成 !D! 点伤害。 If this is your 7th card 本回合, deal !D! damage three times instead."
   },
   "${ModID}:MindOverMatter": {
     "NAME": "Mind Over Matter",

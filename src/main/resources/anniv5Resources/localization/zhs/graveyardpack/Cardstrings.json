@@ -7,7 +7,7 @@
   },
     "${ModID}:ExtraLimbs": {
     "NAME": "Extra Limbs",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL When Exhausted, increase the number of hits by 1 本场战斗. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL When Exhausted, increase the number of hits by 1 本场战斗. NL 消耗 。"
   },
     "${ModID}:AncientSpear": {
     "NAME": "Ancient Spear",
@@ -15,7 +15,7 @@
   },
     "${ModID}:FleshLikeOak": {
     "NAME": "Flesh Like Oak",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量. NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。 NL 消耗 。"
   },
     "${ModID}:CallOfTheGrave": {
     "NAME": "Call of the Grave",
@@ -38,8 +38,8 @@
   },
     "${ModID}:DarkOfNight": {
     "NAME": "Dark of Night",
-    "DESCRIPTION": "Your next card that Exhausts this turn is played twice.",
-    "UPGRADE_DESCRIPTION": "Your next two cards that Exhaust this turn are played twice."
+    "DESCRIPTION": "Your next card that Exhausts 本回合 is played twice.",
+    "UPGRADE_DESCRIPTION": "Your next two cards that Exhaust 本回合 are played twice."
   },
     "${ModID}:LastGasp": {
     "NAME": "Last Gasp",

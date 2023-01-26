@@ -5,12 +5,12 @@
   },
   "${ModID}:HuttsGamble": {
     "NAME": "Hutts' Gamble",
-    "DESCRIPTION": "If you don't receive unblocked attack damage this turn, 获得 [E] and draw 1 card next turn.",
-    "UPGRADE_DESCRIPTION": "If you don't receive unblocked attack damage this turn, 获得 [E] [E] and draw 1 card next turn."
+    "DESCRIPTION": "If you don't receive unblocked attack damage 本回合, 获得 [E] and draw 1 card next turn.",
+    "UPGRADE_DESCRIPTION": "If you don't receive unblocked attack damage 本回合, 获得 [E] [E] and draw 1 card next turn."
   },
   "${ModID}:Tricky": {
     "NAME": "Tricky",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card drawn this turn."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card drawn 本回合."
   },
   "${ModID}:SneakyteakStrike": {
     "NAME": "Sneakyteak Strike",

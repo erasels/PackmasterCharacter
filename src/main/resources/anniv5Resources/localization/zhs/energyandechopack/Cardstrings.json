@@ -5,7 +5,7 @@
   },
   "${ModID}:MagnetRise": {
     "NAME": "Magnet Rise",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you generated extra [E] this turn, this card costs 0."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you generated extra [E] 本回合, this card costs 0."
   },
   "${ModID}:TearApart": {
     "NAME": "Tear Apart",
@@ -22,8 +22,8 @@
   },
   "${ModID}:Discharge": {
     "NAME": "Discharge",
-    "DESCRIPTION": "Deal damage equal to 5 times [E] spent this turn.",
-    "EXTENDED_DESCRIPTION": ["Deal damage equal to 5 times [E] spent this turn. NL (Deals !D! damage.)"]
+    "DESCRIPTION": "Deal damage equal to 5 times [E] spent 本回合.",
+    "EXTENDED_DESCRIPTION": ["Deal damage equal to 5 times [E] spent 本回合. NL (Deals !D! damage.)"]
   },
   "${ModID}:Overload": {
     "NAME": "Overload",

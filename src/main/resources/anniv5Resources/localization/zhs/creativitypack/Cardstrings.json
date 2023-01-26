@@ -5,7 +5,7 @@
   },
   "${ModID}:MakeshiftShield": {
     "NAME": "Makeshift Shield",
-    "DESCRIPTION": "每当 a card is created during combat, 获得 !M! 格挡 。"
+    "DESCRIPTION": "每当 a card is created during combat, 获得 !M! 点 格挡 。"
   },
   "${ModID}:PaintBrush": {
     "NAME": "Paint Brush",
@@ -25,7 +25,7 @@
   },
   "${ModID}:CraftyMove": {
     "NAME": "Crafty Move",
-    "DESCRIPTION": "造成 !D! 点伤害。 If a card has been created this turn, 获得 [E] and 抽一张牌."
+    "DESCRIPTION": "造成 !D! 点伤害。 If a card has been created 本回合, 获得 [E] and 抽一张牌."
   },
   "${ModID}:BarrierBeacon": {
     "NAME": "Barrier Beacon",
@@ -33,7 +33,7 @@
   },
   "${ModID}:StrikingStrike": {
     "NAME": "Striking Strike",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Discover a{!Upgrades!|>0=n upgraded} strike. It Exhausts when played and costs 0 this turn."
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Discover a{!Upgrades!|>0=n upgraded} strike. It Exhausts when played and costs 0 本回合."
   },
   "${ModID}:AccumulativeStrike": {
     "NAME": "Accumulative Strike",

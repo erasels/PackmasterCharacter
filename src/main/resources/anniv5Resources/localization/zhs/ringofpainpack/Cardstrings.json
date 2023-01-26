@@ -44,7 +44,7 @@
   },
   "${ModID}:Vision": {
     "NAME": "Vision",
-    "DESCRIPTION": "Put !M! cards from your 抽牌堆 into your hand. NL Retain your hand this turn. NL 消耗 。"
+    "DESCRIPTION": "Put !M! cards from your 抽牌堆 into your hand. NL Retain your hand 本回合. NL 消耗 。"
   },
   "${ModID}:Connection": {
     "NAME": "Connection",

@@ -27,7 +27,7 @@
   },
   "${ModID}:Enhance": {
     "NAME": "Enhance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Modify a card in hand: \"获得 !M! 格挡 。\""
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Modify a card in hand: \"获得 !M! 点 格挡 。\""
   },
   "${ModID}:Cheapen": {
     "NAME": "Cheapen",

@@ -13,7 +13,7 @@
   },
   "${ModID}:Luciferium": {
     "NAME": "Luciferium",
-    "DESCRIPTION": "{@@}获得 [E] [E] . NL 获得 5 力量. NL 获得 !M! ${ModID}:Addiction. NL 消耗 。"
+    "DESCRIPTION": "{@@}获得 [E] [E] . NL 获得 5 力量 。 NL 获得 !M! ${ModID}:Addiction. NL 消耗 。"
   },
   "${ModID}:Pyromaniac": {
     "NAME": "Pyromaniac",

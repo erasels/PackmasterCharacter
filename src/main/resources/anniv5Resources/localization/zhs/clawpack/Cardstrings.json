@@ -32,7 +32,7 @@
   },
   "${ModID}:TalkToTheClaw": {
     "NAME": "Talk to the Claw",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you attack this enemy with a *Claw, 获得 !M! 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you attack this enemy with a *Claw, 获得 !M! 点 格挡 。 NL 消耗 。"
   },
   "${ModID}:TwinClaw": {
     "NAME": "Twin Claw",

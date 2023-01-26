@@ -21,7 +21,7 @@
   "${ModID}:BuildingCharge": {
     "NAME": "Building Charge",
     "DESCRIPTIONS": [
-      "每当 you play a card this turn, 获得 #b%s #yCharge #yUp."
+      "每当 you play a card 本回合, 获得 #b%s #yCharge #yUp."
     ]
   }
 }

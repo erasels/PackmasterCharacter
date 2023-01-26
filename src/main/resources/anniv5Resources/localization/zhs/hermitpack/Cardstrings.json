@@ -18,8 +18,8 @@
   },
   "${ModID}:Determination": {
     "NAME": "Determination",
-    "DESCRIPTION": "每当 a debuff is applied to you, 获得 !M! 点 力量.",
-    "UPGRADE_DESCRIPTION": "Innate. NL 每当 a debuff is applied to you, 获得 !M! 点 力量."
+    "DESCRIPTION": "每当 a debuff is applied to you, 获得 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "Innate. NL 每当 a debuff is applied to you, 获得 !M! 点 力量 。"
   },
   "${ModID}:Virtue": {
     "NAME": "Virtue",
@@ -27,7 +27,7 @@
   },
   "${ModID}:Flas生命owder": {
     "NAME": "Flash Powder",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ALL enemies lose !M! 点 力量. NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ALL enemies lose !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Purgatory": {
     "NAME": "Purgatory",

@@ -26,7 +26,7 @@
   },
   "${ModID}:IterativeDesign": {
     "NAME": "Iterative Design",
-    "DESCRIPTION": "每当 your create a card 本场战斗, 获得 !M! 格挡 。"
+    "DESCRIPTION": "每当 your create a card 本场战斗, 获得 !M! 点 格挡 。"
   },
   "${ModID}:Xpansion": {
     "NAME": "Xpansion",
@@ -39,8 +39,8 @@
   },
   "${ModID}:MagicHand": {
     "NAME": "Magic Hand",
-    "DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 this turn and exhausts.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 this turn."
+    "DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 本回合 and exhausts.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 本回合."
   },
   "${ModID}:EnergyDrink": {
     "NAME": "Energy Drink",

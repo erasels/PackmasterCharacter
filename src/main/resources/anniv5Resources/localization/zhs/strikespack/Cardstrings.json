@@ -13,7 +13,7 @@
   },
   "${ModID}:PenaltyStrike": {
     "NAME": "Penalty Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Enemy loses !M! 点 力量. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Enemy loses !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Backstrike": {
     "NAME": "Backstrike",
@@ -25,7 +25,7 @@
   },
   "${ModID}:StrikeDummyJr": {
     "NAME": "Strike Dummy Jr.",
-    "DESCRIPTION": "获得 !M! 点 力量. NL Strikes deal 2 more damage 本场战斗."
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL Strikes deal 2 more damage 本场战斗."
   },
   "${ModID}:DifferentStrikes": {
     "NAME": "Different Strikes",
@@ -38,6 +38,6 @@
   },
   "${ModID}:StrikeABar获得": {
     "NAME": "Strike a Bar获得",
-    "DESCRIPTION": "Your Attacks costs 0 this turn. You cannot play non-Attacks this turn."
+    "DESCRIPTION": "Your Attacks costs 0 本回合. You cannot play non-Attacks 本回合."
   }
 }

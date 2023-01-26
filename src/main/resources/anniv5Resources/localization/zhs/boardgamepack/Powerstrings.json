@@ -41,7 +41,7 @@
   "${ModID}:JailPower": {
     "NAME": "Jail",
     "DESCRIPTIONS": [
-      "You cannot play attacks or take damage this turn.",
+      "You cannot play attacks or take damage 本回合.",
       "You cannot play attacks or take damage for the next #b",
       " turns."
     ]

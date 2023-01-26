@@ -10,11 +10,11 @@
   },
   "${ModID}:Collapse": {
     "NAME": "Collapse",
-    "DESCRIPTION": "${ModID}:Unstable. NL 抽一张牌. NL 获得 !M! temporary 力量. NL 获得 1 Vulnerable."
+    "DESCRIPTION": "${ModID}:Unstable. NL 抽一张牌. NL 获得 !M! temporary 力量 。 NL 获得 1 Vulnerable."
   },
   "${ModID}:Construct": {
     "NAME": "Construct",
-    "DESCRIPTION": "${ModID}:Unstable. NL Take !M! less damage from attacks this turn. NL 获得 2 Weak."
+    "DESCRIPTION": "${ModID}:Unstable. NL Take !M! less damage from attacks 本回合. NL 获得 2 Weak."
   },
   "${ModID}:Freedom": {
     "NAME": "Freedom",

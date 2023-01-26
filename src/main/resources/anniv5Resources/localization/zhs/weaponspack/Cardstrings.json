@@ -1,7 +1,7 @@
 {
   "${ModID}:AgileStrike": {
     "NAME": "Agile Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If you have equipped a ${ModID}:Weapon this turn, reduce cost of this NL card to 0."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If you have equipped a ${ModID}:Weapon 本回合, reduce cost of this NL card to 0."
   },
   "${ModID}:CatONineTails": {
     "NAME": "Cat O' Nine Tails",

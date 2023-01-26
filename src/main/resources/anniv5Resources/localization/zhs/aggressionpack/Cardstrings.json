@@ -1,42 +1,42 @@
 {
   "${ModID}:Vindicate": {
-    "NAME": "Vindicate",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you play an Attack this turn, 获得 !M! 格挡 。"
+    "NAME": "正义之击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每当你打出攻击牌，获得 !M! 点 格挡 。"
   },
   "${ModID}:DarkLance": {
-    "NAME": "Dark Lance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If you've changed Stances this turn, 抽 !M! 张牌。"
+    "NAME": "黑暗刺击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合改变过姿态， NL 抽 !M! 张牌。"
   },
   "${ModID}:FuriousAssault": {
-    "NAME": "Furious Assault",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Aggression."
+    "NAME": "狂怒袭击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 进入 ${ModID}:侵袭 。"
   },
   "${ModID}:Slam": {
-    "NAME": "Slam",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 Block equal to unblocked damage dealt."
+    "NAME": "猛击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得未被格挡伤害点 格挡 。"
   },
   "${ModID}:Decapitate": {
-    "NAME": "Decapitate",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Enemy loses !M! 点 力量 this turn. NL 消耗 。"
+    "NAME": "斩首",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标本回合失去 !M! 点 力量 。 NL 消耗 。"
   },
-  "${ModID}:Titans力量": {
-    "NAME": "Titan's 力量",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量."
+  "${ModID}:TitansStrength": {
+    "NAME": "泰坦之力",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。"
   },
   "${ModID}:Epiphany": {
-    "NAME": "Epiphany",
-    "DESCRIPTION": "If you are in a Stance, exit it and 抽 !M! 张牌。 NL Otherwise, enter ${ModID}:Aggression."
+    "NAME": "神力展现",
+    "DESCRIPTION": "若处于一种 姿态 ，退出并抽 !M! 张牌。 NL 否则进入 ${ModID}:侵袭 。"
   },
   "${ModID}:InnerFury": {
-    "NAME": "Inner Fury",
-    "DESCRIPTION": "每当 you enter or exit ${ModID}:Aggression, 获得 !M! temporary 力量 and !M! 格挡 。 NL Enter ${ModID}:Aggression."
+    "NAME": "怒气",
+    "DESCRIPTION": "每当你进入或退出 ${ModID}:侵袭 ，获得 !M! 点 临时力量 与 !M! 点 格挡 。 NL 进入 ${ModID}:侵袭 。"
   },
   "${ModID}:LunaticRage": {
-    "NAME": "Lunatic Rage",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 [E] [E] . NL Discard all non-Attack non-Status cards. NL 消耗 。"
+    "NAME": "癫狂",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 [E] [E] 。 NL 丢弃所有非攻击非状态手牌。 NL 消耗 。"
   },
   "${ModID}:Animosity": {
-    "NAME": "Animosity",
-    "DESCRIPTION": "When you enter, exit, or start your turn in ${ModID}:Aggression, 获得 !M! 点 力量."
+    "NAME": "恨极",
+    "DESCRIPTION": "每当你进入、退出或以 ${ModID}:侵袭 开始回合，获得 !M! 点 力量 。"
   }
 }

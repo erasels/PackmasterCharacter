@@ -2,7 +2,7 @@
   "${ModID}:GoWithTheFlowPack": {
     "TEXT": [
       "Go With The Flow",
-      "Get rid of cards you don't need this turn for a bigger hand next turn.",
+      "Get rid of cards you don't need 本回合 for a bigger hand next turn.",
       "NellyDevo"
     ]
   },

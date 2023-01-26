@@ -1,7 +1,7 @@
 {
   "${ModID}:DeterminationPower": {
     "NAME": "Determination",
-    "DESCRIPTIONS": ["每当 a debuff is applied to you, 获得 #b", " #y力量."]
+    "DESCRIPTIONS": ["每当 a debuff is applied to you, 获得 #b", " #y力量 。"]
   },
   "${ModID}:OverwhelmingPowerPower": {
     "NAME": "Overwhelming Power",

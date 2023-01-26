@@ -10,8 +10,8 @@
   "${ModID}:DeepDreamPower": {
     "NAME": "Deep Dream",
     "DESCRIPTIONS": [
-      "每当 you play a card this turn, make a random card in your hand #yOccult.",
-      "每当 you play a card this turn, make #b",
+      "每当 you play a card 本回合, make a random card in your hand #yOccult.",
+      "每当 you play a card 本回合, make #b",
       " random cards in your hand #yOccult."
     ]
   }

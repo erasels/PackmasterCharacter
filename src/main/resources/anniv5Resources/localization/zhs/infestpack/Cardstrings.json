@@ -33,7 +33,7 @@
   },
   "${ModID}:Bees": {
     "NAME": "BEES!!!",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage !M! times. NL Deals 1 additional damage for each [bugIcon] .",
+    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害 !M! 次。 NL Deals 1 additional damage for each [bugIcon] .",
     "EXTENDED_DESCRIPTION": [
       "B",
       "E",

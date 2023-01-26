@@ -33,7 +33,7 @@
   },
   "${ModID}:Absolution": {
     "NAME": "Absolution",
-    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL 每当 a creature is damaged by ${ModID}:Penance this turn apply !${ModID}:m2! Weak."
+    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL 每当 a creature is damaged by ${ModID}:Penance 本回合 apply !${ModID}:m2! Weak."
   },
   "${ModID}:JudgementDay": {
     "NAME": "Judgement Day",

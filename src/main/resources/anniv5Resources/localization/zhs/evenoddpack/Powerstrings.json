@@ -11,7 +11,7 @@
   "${ModID}:GammaWardPower": {
     "NAME": "Gamma Ward",
     "DESCRIPTIONS": [
-      "Your next Skill this turn has #yEven: 获得 #b",
+      "Your next Skill 本回合 has #yEven: 获得 #b",
       " #y格挡 。",
       " NL ${ModID}:Even: 获得 ",
       " 格挡 。"

@@ -16,7 +16,7 @@
   },
   "${ModID}:VoDo": {
     "NAME": "Vo-Do",
-    "DESCRIPTION": "获得 !M! 点 力量. NL Enemy loses 2 力量. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL Enemy loses 2 力量 。 NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",
@@ -24,7 +24,7 @@
   },
   "${ModID}:TimeOut": {
     "NAME": "Time Out",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Draw 1 card. NL If it's a Curse or Status card, ALL enemies lose !M! 点 力量."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Draw 1 card. NL If it's a Curse or Status card, ALL enemies lose !M! 点 力量 。"
   },
   "${ModID}:Cuckoo": {
     "NAME": "Cuckoo",

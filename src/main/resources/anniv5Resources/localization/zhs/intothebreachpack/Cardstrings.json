@@ -1,7 +1,7 @@
 {
   "${ModID}:AcidProjector": {
     "NAME": "A.C.I.D Projector",
-    "DESCRIPTION": "The enemy takes double damage from Attacks this turn. NL 消耗 。"
+    "DESCRIPTION": "The enemy takes double damage from Attacks 本回合. NL 消耗 。"
   },
   "${ModID}:ElectricWhip": {
     "NAME": "Electric Whip",
@@ -9,7 +9,7 @@
   },
   "${ModID}:EnrageShot": {
     "NAME": "Enrage Shot",
-    "DESCRIPTION": "Stun the enemy and apply 2 力量. NL 消耗 。"
+    "DESCRIPTION": "Stun the enemy and apply 2 力量 。 NL 消耗 。"
   },
   "${ModID}:MercuryFist": {
     "NAME": "Mercury Fist",
@@ -30,7 +30,7 @@
   },
   "${ModID}:SpartanShield": {
     "NAME": "Spartan Shield",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Temporary 力量."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Temporary 力量 。"
   },
   "${ModID}:StormGenerator": {
     "NAME": "Storm Generator",

@@ -10,7 +10,7 @@
   },
   "${ModID}:CrystalResonance": {
     "NAME": "Crystal Resonance",
-    "DESCRIPTION": "每当 you ${ModID}:Transmute, 获得 !M! 点 力量."
+    "DESCRIPTION": "每当 you ${ModID}:Transmute, 获得 !M! 点 力量 。"
   },
   "${ModID}:Drench": {
     "NAME": "Drench",

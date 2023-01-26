@@ -10,7 +10,7 @@
   },
   "${ModID}:HarvestCarrots": {
     "NAME": "Harvest Carrots",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Repeat for each card type you've played this turn.",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Repeat for each card type you've played 本回合.",
     "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
   },
   "${ModID}:HarvestPotatoes": {
@@ -19,7 +19,7 @@
   },
   "${ModID}:HarvestRadishes": {
     "NAME": "Harvest Radishes",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply 1 Weak for each card type you've played this turn.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply 1 Weak for each card type you've played 本回合.",
     "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
   },
   "${ModID}:OutToMarket": {
@@ -28,12 +28,12 @@
   },
   "${ModID}:PestControl": {
     "NAME": "Pest Control",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Repeat for each card type you've played this turn.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Repeat for each card type you've played 本回合.",
     "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
   },
   "${ModID}:SoilResiliency": {
     "NAME": "Soil Resiliency",
-    "DESCRIPTION": "获得 !M! 点 力量 and !${ModID}:m2! Dexterity. NL If you've played less than 3 types of card this turn, 消耗 。"
+    "DESCRIPTION": "获得 !M! 点 力量 and !${ModID}:m2! Dexterity. NL If you've played less than 3 types of card 本回合, 消耗 。"
   },
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",
