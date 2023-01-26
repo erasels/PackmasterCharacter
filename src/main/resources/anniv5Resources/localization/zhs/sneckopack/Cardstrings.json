@@ -17,7 +17,7 @@
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "Whip 'n Snapper",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !${ModID}:m2! to !M! Weak and !${ModID}:m2! to !M! Vulnerable。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !${ModID}:m2! to !M! Weak and !${ModID}:m2! to !M! Vulnerable。"
   },
   "${ModID}:Twitch": {
     "NAME": "Twitch",

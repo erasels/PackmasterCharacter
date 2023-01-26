@@ -5,7 +5,7 @@
   },
   "${ModID}:Focus": {
     "NAME": "Track",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! ${ModID}:Hunted"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! ${ModID}:Hunted"
   },
   "${ModID}:PerfectDodge": {
     "NAME": "Perfect Dodge",
@@ -35,12 +35,12 @@
   },
   "${ModID}:CoreBlinder": {
     "NAME": "Core Blinder",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your 抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to 所有敌人. NL Add a *Core *Blaster+ to your 抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! Weak and Vulnerable. NL Add a *Core *Blaster to your 抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! Weak and Vulnerable to 所有敌人. NL Add a *Core *Blaster+ to your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",
-    "DESCRIPTION": "获得 !M! 格挡 回合结束时. NL 每当 you are attacked, deal !M! damage back。"
+    "DESCRIPTION": "获得 !M! 点 格挡 回合结束时. NL 每当 you are attacked, deal !M! damage back。"
   },
   "${ModID}:InfernoDaggers": {
     "NAME": "Inferno Daggers",
@@ -58,7 +58,7 @@
   },
   "${ModID}:SlaverWhip": {
     "NAME": "Slaver's Whip",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Weak and Vulnerable. NL If this kills an enemy, add it back to your hand and it costs 0 本回合。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Weak and Vulnerable. NL If this kills an enemy, add it back to your hand and it costs 0 本回合。"
   },
   "${ModID}:GremlinLance": {
     "NAME": "Gremlin Lance",
@@ -71,7 +71,7 @@
   },
   "${ModID}:CursedBow": {
     "NAME": "Cursed Bow",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Weak and Vulnerable. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Weak and Vulnerable. NL 消耗 。"
   },
   "${ModID}:HyperBlaster": {
     "NAME": "Hyper Blaster",
@@ -116,7 +116,7 @@
   },
   "${ModID}:HuntingContract": {
     "NAME": "Hunting Contract",
-    "DESCRIPTION": "固有 。 NL Apply !M! ${ModID}:Hunted. NL 消耗 。"
+    "DESCRIPTION": "固有 。 NL 给予 !M! ${ModID}:Hunted. NL 消耗 。"
   },
   "${ModID}:HunterRank": {
     "NAME": "Hunter Rank",
@@ -128,7 +128,7 @@
   },
   "${ModID}:Paintball": {
     "NAME": "Paintball",
-    "DESCRIPTION": "Apply !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! card 本回合。",
-    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! cards 本回合。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! card 本回合。",
+    "UPGRADE_DESCRIPTION": "给予 !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! cards 本回合。"
   }
 }

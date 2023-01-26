@@ -2,7 +2,7 @@
   "${ModID}:MakeshiftSwordPower": {
     "NAME": "Makeshift Sword",
     "DESCRIPTIONS": [
-        "每当 一张牌 is created during combat, 获得 #b%d #y活力。"
+        "每当 一张牌 is created during combat, 获得 #b%d #y活力 。"
       ]
   },
   "${ModID}:MakeshiftShieldPower": {

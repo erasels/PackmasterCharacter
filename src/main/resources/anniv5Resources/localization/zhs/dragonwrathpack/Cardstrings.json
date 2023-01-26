@@ -1,11 +1,11 @@
 {
   "${ModID}:PenanceShock": {
     "NAME": "Penance Shock",
-    "DESCRIPTION": "造成 !D! 点伤害 and Apply !M! ${ModID}:Penance. NL Channel Lightning"
+    "DESCRIPTION": "造成 !D! 点伤害 and 给予 !M! ${ModID}:Penance. NL Channel Lightning"
   },
   "${ModID}:Condemn": {
     "NAME": "Condemn",
-    "DESCRIPTION": "Apply !M! ${ModID}:Penance。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Penance。"
   },
   "${ModID}:SearingLight": {
     "NAME": "Searing Light",
@@ -17,11 +17,11 @@
   },
   "${ModID}:WeightofContrition": {
     "NAME": "Weight of Contrition",
-    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL Increase ${ModID}:Penance 生命 loss by !${ModID}:m2! 本场战斗。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Penance. NL Increase ${ModID}:Penance 生命 loss by !${ModID}:m2! 本场战斗。"
   },
   "${ModID}:ChainsofTruth": {
     "NAME": "Chains of Truth",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Apply !M! ${ModID}:Penance to 所有敌人。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Penance to 所有敌人。"
   },
   "${ModID}:SacredTrial": {
     "NAME": "Sacred Trial",
@@ -33,7 +33,7 @@
   },
   "${ModID}:Absolution": {
     "NAME": "Absolution",
-    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL 每当 a creature is damaged by ${ModID}:Penance 本回合 apply !${ModID}:m2! Weak。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Penance. NL 每当 a creature is damaged by ${ModID}:Penance 本回合 给予 !${ModID}:m2! Weak。"
   },
   "${ModID}:JudgementDay": {
     "NAME": "Judgement Day",

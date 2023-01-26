@@ -17,7 +17,7 @@
   },
   "${ModID}:WarSong": {
     "NAME": "War Song",
-    "DESCRIPTION": "给予 !M! 层 易伤. NL 获得 !${ModID}:m2! 活力。"
+    "DESCRIPTION": "给予 !M! 层 易伤. NL 获得 !${ModID}:m2! 活力 。"
   },
   "${ModID}:Rapier": {
     "NAME": "Rapier",
@@ -35,7 +35,7 @@
   },
   "${ModID}:Bolas": {
     "NAME": "Bolas",
-    "DESCRIPTION": "Apply *Slow. NL Give enemy !M! 点 格挡 。 NL Draw !${ModID}:m2! card. NL 消耗 。"
+    "DESCRIPTION": "给予 *Slow. NL Give enemy !M! 点 格挡 。 NL Draw !${ModID}:m2! card. NL 消耗 。"
   },
   "${ModID}:FFBlade": {
     "NAME": "FF Blade",

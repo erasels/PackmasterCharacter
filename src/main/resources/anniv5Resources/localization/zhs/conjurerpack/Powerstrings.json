@@ -2,7 +2,7 @@
   "${ModID}:GeomorphologyPower": {
     "NAME": "Geomorphology",
     "DESCRIPTIONS": [
-      "每当 you 消耗 一张牌 or Channel an Orb, apply #b",
+      "每当 you 消耗 一张牌 or Channel an Orb, 给予 #b",
       " #yPetra to a random enemy。"
     ]
   },

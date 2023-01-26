@@ -1,7 +1,7 @@
 {
   "${ModID}:Anemia": {
     "NAME": "Anemia",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! Weak to any Poisoned enemies。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! Weak to any Poisoned enemies。"
   },
   "${ModID}:ArsenalGear": {
     "NAME": "Arsenal Gear",
@@ -31,7 +31,7 @@
   },
   "${ModID}:LethalShot": {
     "NAME": "Lethal Shot",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Poison and !${ModID}:m2! Vulnerable。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Poison and !${ModID}:m2! Vulnerable。"
   },
   "${ModID}:MagicMissile": {
     "NAME": "Magic Missile",

@@ -1,7 +1,7 @@
 {
   "${ModID}:AstralFracture": {
     "NAME": "Astral Fracture",
-    "DESCRIPTION": "Apply !M! ${ModID}:Distortion to 所有敌人. NL ${ModID}:Amplify [E] : 消耗 一张牌。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Distortion to 所有敌人. NL ${ModID}:Amplify [E] : 消耗 一张牌。"
   },
   "${ModID}:Cognition": {
     "NAME": "Cognition",
@@ -29,7 +29,7 @@
   },
   "${ModID}:RopeTrick": {
     "NAME": "Rope Trick",
-    "DESCRIPTION": "Apply !M! ${ModID}:Distortion. NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Distortion. NL 获得 !B! 点 格挡 。"
   },
   "${ModID}:Subspace": {
     "NAME": "Subspace",
@@ -38,6 +38,6 @@
   },
   "${ModID}:SubtleKnife": {
     "NAME": "Subtle Knife",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Distortion. NL ${ModID}:Amplify [E] : 消耗, then add a copy of this to your 弃牌堆。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Distortion. NL ${ModID}:Amplify [E] : 消耗, then add a copy of this to your 弃牌堆。"
   }
 }

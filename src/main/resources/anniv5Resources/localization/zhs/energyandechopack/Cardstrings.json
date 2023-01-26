@@ -40,7 +40,7 @@
   },
   "${ModID}:Crystallize": {
     "NAME": "Crystallize",
-    "DESCRIPTION": "获得 !M! 格挡 for each [E] available。",
-    "EXTENDED_DESCRIPTION": ["获得 !M! 格挡 for each [E] available. NL (获得s !B! 点 格挡 。)"]
+    "DESCRIPTION": "获得 !M! 点 格挡 for each [E] available。",
+    "EXTENDED_DESCRIPTION": ["获得 !M! 点 格挡 for each [E] available. NL (获得s !B! 点 格挡 。)"]
   }
 }

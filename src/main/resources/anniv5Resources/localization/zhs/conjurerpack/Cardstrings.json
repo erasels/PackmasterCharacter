@@ -16,7 +16,7 @@
 		"NAME": "Excavation"
 	},
 	"${ModID}:Geomorphology":	{
-		"DESCRIPTION": "每当 you 消耗 一张牌 or Channel an Orb, apply !M! ${ModID}:Petra to a random enemy。",
+		"DESCRIPTION": "每当 you 消耗 一张牌 or Channel an Orb, 给予 !M! ${ModID}:Petra to a random enemy。",
 		"NAME": "Geomorphology"
 	},
 	"${ModID}:GeothermalHeating":	{
@@ -24,7 +24,7 @@
 		"NAME": "Geothermal Heating"
 	},
 	"${ModID}:Lithosphere":	{
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! ${ModID}:Petra。",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! ${ModID}:Petra。",
 		"NAME": "Lithosphere"
 	},
 	"${ModID}:MudFissure":	{
@@ -32,13 +32,13 @@
 		"NAME": "Mud Fissure"
 	},
 	"${ModID}:RagingInferno":	{
-		"DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ignite. NL 消耗 。",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Ignite. NL 消耗 。",
 		"NAME": "Raging Inferno",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ignite。"
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Ignite。"
 	},
 	"${ModID}:TectonicQuake":	{
-		"DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Petra and Weak to 所有敌人. NL 消耗 。",
+		"DESCRIPTION": "造成 !D! 点伤害 and 给予 !M! ${ModID}:Petra and Weak to 所有敌人. NL 消耗 。",
 		"NAME": "Tectonic Quake",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Petra and Weak to 所有敌人。"
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and 给予 !M! ${ModID}:Petra and Weak to 所有敌人。"
 	}
 }

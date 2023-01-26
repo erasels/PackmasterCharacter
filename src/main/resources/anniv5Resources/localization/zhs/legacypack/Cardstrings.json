@@ -42,7 +42,7 @@
   },
   "${ModID}:SlimeSpray": {
     "NAME": "Slime Spray",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害, apply !M! Poison, and apply Slow to 所有敌人。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害, 给予 !M! Poison, and 给予 Slow to 所有敌人。"
   },
   "${ModID}:StickStrike": {
     "NAME": "Stick Strike",

@@ -5,8 +5,8 @@
   },
   "${ModID}:Wither": {
     "NAME": "Wither",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ruin。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ruin to 所有敌人。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Ruin。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Ruin to 所有敌人。"
   },
   "${ModID}:Collapse": {
     "NAME": "Collapse",
@@ -35,10 +35,10 @@
   },
   "${ModID}:Waning": {
     "NAME": "Waning",
-    "DESCRIPTION": "${ModID}:Unstable. NL Apply !M! ${ModID}:Ruin。"
+    "DESCRIPTION": "${ModID}:Unstable. NL 给予 !M! ${ModID}:Ruin。"
   },
   "${ModID}:Entanglement": {
     "NAME": "Entanglement",
-    "DESCRIPTION": "每当 you receive a debuff, apply !M! ${ModID}:Ruin to a random enemy。"
+    "DESCRIPTION": "每当 you receive a debuff, 给予 !M! ${ModID}:Ruin to a random enemy。"
   }
 }

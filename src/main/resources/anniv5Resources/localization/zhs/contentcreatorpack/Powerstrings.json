@@ -29,7 +29,7 @@
     "NAME": "Frost Prime",
     "DESCRIPTIONS": [
       "你的回合开始时， #yChannel #b",
-      " #yFrost and apply #b",
+      " #yFrost and 给予 #b",
       " #yFrostbite to 所有敌人。"
     ]
   },

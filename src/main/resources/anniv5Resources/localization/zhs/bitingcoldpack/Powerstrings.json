@@ -1,21 +1,21 @@
 {
   "${ModID}:FrostbitePower": {
-    "NAME": "Frostbite",
+    "NAME": "霜噬",
     "DESCRIPTIONS": [
-      "At the start of its turn, 失去s #b",
-      " 生命 and this is halved. 每当 this creature receives attack damage, apply 1 #yFrostbite。"
+      "该单位的回合开始时，其失去 #b",
+      " 点生命且 #y霜噬 层数减半。该单位受到攻击伤害时， #y霜噬 层数加 #b1 。"
     ]
   },
   "${ModID}:ColdSeasonPower": {
-    "NAME": "Cold Season",
-    "DESCRIPTIONS": ["每当 an enemy 失去s 生命 from #yFrostbite, apply #b", " #yFrostbite。"]
+    "NAME": "寒季",
+    "DESCRIPTIONS": ["每当敌人因 #y霜噬 失去生命，给予 #b", " 层 #y霜噬 。"]
   },
   "${ModID}:FrigidBodyPower": {
-    "NAME": "Frigid Body",
-    "DESCRIPTIONS": ["每当 you are attacked 本回合, apply #yFrostbite equal to 格挡ed damage received。"]
+    "NAME": "僵冻",
+    "DESCRIPTIONS": ["本回合每当你被攻击时，给予攻击者你在该次被击过程中格挡住的伤害层 #y霜噬。"]
   },
   "${ModID}:GlaciatePower": {
-    "NAME": "Glaciate",
-    "DESCRIPTIONS": ["每当 you apply #yFrostbite, 获得 #b", " #y活力。"]
+    "NAME": "霜覆",
+    "DESCRIPTIONS": ["每当你给予 #y霜噬 时，获得 #b", " 层 #y活力 。"]
   }
 }

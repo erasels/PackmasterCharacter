@@ -1,7 +1,10 @@
 [
   {
-    "PROPER_NAME": "Frostbite",
-    "NAMES": ["frostbite"],
-    "DESCRIPTION": "At the start of its turn, a creature with #yFrostbite 失去s 生命 and its #yFrostbite is halved. NL 每当 a creature with #yFrostbite receives attack damage, apply #b1 #yFrostbite。"
+    "PROPER_NAME": "霜噬",
+    "NAMES": [
+      "frostbite",
+      "霜噬"
+    ],
+    "DESCRIPTION": "受到 #y霜噬 的单位在其回合开始时失去层数点生命，然后层数减半。且受到攻击伤害时 #霜噬层数 加 #b1 。"
   }
 ]

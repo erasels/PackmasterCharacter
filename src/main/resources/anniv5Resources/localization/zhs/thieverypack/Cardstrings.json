@@ -26,7 +26,7 @@
   },
   "${ModID}:CunningPoison": {
     "NAME": "Cunning Poison",
-    "DESCRIPTION": "Apply !M! Poison to the highest 生命 enemy. NL If it dies while Poisoned, steal !${ModID}:m2! Gold. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! Poison to the highest 生命 enemy. NL If it dies while Poisoned, steal !${ModID}:m2! Gold. NL 消耗 。"
   },
   "${ModID}:MindControl": {
     "NAME": "Mind Control",

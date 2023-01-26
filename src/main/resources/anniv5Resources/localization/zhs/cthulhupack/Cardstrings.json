@@ -10,7 +10,7 @@
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
-    "DESCRIPTION": "造成 !D! 点伤害 and apply !M! ${ModID}:Distortion to a random enemy。"
+    "DESCRIPTION": "造成 !D! 点伤害 and 给予 !M! ${ModID}:Distortion to a random enemy。"
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
@@ -19,7 +19,7 @@
   },
   "${ModID}:FamilialCurse": {
     "NAME": "Familial Curse",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ruin to 所有敌人. NL Next turn, 获得 a *Madness and 失去 1 生命。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Ruin to 所有敌人. NL Next turn, 获得 a *Madness and 失去 1 生命。"
   },
   "${ModID}:GazeTheVoid": {
     "NAME": "Gaze the Void",

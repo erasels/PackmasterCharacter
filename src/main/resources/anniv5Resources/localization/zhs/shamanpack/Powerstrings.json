@@ -9,11 +9,11 @@
   },
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",
-    "DESCRIPTIONS": ["每当 you are attacked 本回合, apply #b{0} #yIgnite。"]
+    "DESCRIPTIONS": ["每当 you are attacked 本回合, 给予 #b{0} #yIgnite。"]
   },
   "${ModID}:Pyromastery": {
     "NAME": "Pyromastery",
-    "DESCRIPTIONS": ["When you apply #yIgnite, apply an additional #b{0} #yIgnite。"]
+    "DESCRIPTIONS": ["When you 给予 #yIgnite, 给予 an additional #b{0} #yIgnite。"]
   },
   "${ModID}:FueledByEmbers": {
     "NAME": "Fueled by Embers",

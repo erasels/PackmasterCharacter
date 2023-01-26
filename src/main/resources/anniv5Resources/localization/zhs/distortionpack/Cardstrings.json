@@ -1,15 +1,15 @@
 {
   "${ModID}:S_r_ke": {
     "NAME": "S r ke",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Distortion。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Distortion。"
   },
   "${ModID}:Deconstruct": {
     "NAME": "Deconstruct",
-    "DESCRIPTION": "Apply !M! ${ModID}:Distortion to 所有敌人. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Distortion to 所有敌人. NL 消耗 。"
   },
   "${ModID}:Darken": {
     "NAME": "Darken",
-    "DESCRIPTION": "Apply !M! ${ModID}:Distortion. If the enemy has another debuff, apply !${ModID}:m2! more。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Distortion. If the enemy has another debuff, 给予 !${ModID}:m2! more。"
   },
   "${ModID}:BurningAct": {
     "NAME": "Burning Act",
@@ -37,7 +37,7 @@
   },
   "${ModID}:Static": {
     "NAME": "Static",
-    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! times. Apply ${ModID}:Distortion equal to the un格挡ed damage dealt。"
+    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! times. 给予 ${ModID}:Distortion equal to the un格挡ed damage dealt。"
   },
   "${ModID}:CursedCircle": {
     "NAME": "Cursed Circle",

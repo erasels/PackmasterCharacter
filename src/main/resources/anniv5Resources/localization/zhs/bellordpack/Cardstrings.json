@@ -23,24 +23,24 @@
     "DESCRIPTION": "所有敌人失去 !M! 点生命。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
   },
   "${ModID}:TimeOut": {
-    "NAME": "Time Out",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽一张牌. NL If it's a Curse or Status card, 所有敌人 失去 !M! 点 力量 。"
+    "NAME": "恶时",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽一张牌，若为 *诅咒 或 *状态 ，所有敌人失去 !M! 点 力量 。"
   },
   "${ModID}:Cuckoo": {
-    "NAME": "Cuckoo",
-    "DESCRIPTION": "每当 you draw a Curse card, deal !M! damage to a random enemy。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you draw a Curse card, deal !M! damage to a random enemy。"
+    "NAME": "咕咕",
+    "DESCRIPTION": "抽到 诅咒 时，随机造成 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 抽到 诅咒 时，随机造成 !M! 点伤害。"
   },
   "${ModID}:Dong": {
-    "NAME": "DONG!",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Weak and Vulnerable. NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
+    "NAME": "咚！",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 与 易伤 。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
   },
   "${ModID}:LikeClockwork": {
-    "NAME": "Like Clockwork",
-    "DESCRIPTION": "回合结束时， 获得 !M! 格挡 for each Curse or Status card in your hand。"
+    "NAME": "钟表机械",
+    "DESCRIPTION": "回合结束时，手中每有一张 诅咒 或 状态，获得 !M! 点 格挡 。"
   },
   "${ModID}:SavedByTheBell": {
-    "NAME": "Saved by the Bell",
-    "DESCRIPTION": "保留 。 NL 获得 1 Intangible. NL 消耗 。 NL ${ModID}:Pickup: Obtain 3 *Curses *of *the *Bell。"
+    "NAME": "铃铛援救",
+    "DESCRIPTION": "保留 。 NL 获得1层 无实体 。 NL 消耗 。 NL ${ModID}:拾起 ：将3张 *铃铛的诅咒 加入牌组。"
   }
 }

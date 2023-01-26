@@ -1,7 +1,7 @@
 {
   "${ModID}:MakeshiftSword": {
     "NAME": "Makeshift Sword",
-    "DESCRIPTION": "每当 一张牌 is created during combat, 获得 !M! 活力。"
+    "DESCRIPTION": "每当 一张牌 is created during combat, 获得 !M! 活力 。"
   },
   "${ModID}:MakeshiftShield": {
     "NAME": "Makeshift Shield",

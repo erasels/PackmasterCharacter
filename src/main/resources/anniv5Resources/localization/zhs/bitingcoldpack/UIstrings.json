@@ -1,15 +1,15 @@
 {
   "${ModID}:BitingColdPack": {
     "TEXT": [
-      "Biting Cold",
-      "Inflict enemies with ${ModID}:Frostbite and let them succumb to the cold。",
+      "寒冰嗜咬",
+      "给予敌人 ${ModID}:霜噬 ，使其屈服于冰寒之力。",
       "Enbeon"
     ]
   },
   "${ModID}:BitingColdPackHat": {
     "TEXT": [
-      "This festive hat is sure to keep away the cold。",
-      "Santa Hat"
+      "这顶节日之帽定能助你抵御寒冷。",
+      "圣诞帽"
     ]
   }
 }

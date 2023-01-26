@@ -19,7 +19,7 @@
   "${ModID}:EntanglementPower": {
     "NAME": "Entanglement",
     "DESCRIPTIONS": [
-      "每当 you receive a debuff, apply #b",
+      "每当 you receive a debuff, 给予 #b",
       " #yRuin to a random enemy。"
     ]
   },

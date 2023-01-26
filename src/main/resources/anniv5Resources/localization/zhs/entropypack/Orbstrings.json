@@ -3,7 +3,7 @@
     "NAME": "Oblivion",
     "DESCRIPTION": [
       "#yPassive: 每当 you 丢弃 一张牌, increase this Orb's #yRuin by #b",
-      ". NL #yEvoke: Apply #b",
+      ". NL #yEvoke: 给予 #b",
       " #yRuin to the enemy with the most 生命。"
     ]
   }

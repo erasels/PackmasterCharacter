@@ -40,14 +40,14 @@
     "NAME": "Leprechaun",
     "DESCRIPTION": [
       "#yPassive: At the start of your turn roll #b",
-      ". NL #yEvoke: Apply #b",
+      ". NL #yEvoke: 给予 #b",
       " #yJinx to 所有敌人。"
     ]
   },
   "${ModID}:FireSpirit": {
     "NAME": "Fire Spirit",
     "DESCRIPTION": [
-      "#yPassive: 回合结束时 apply #b",
+      "#yPassive: 回合结束时 给予 #b",
       " #yIgnite to 所有敌人. NL #yEvoke: 获得 1 #yFocus。"
     ]
   }

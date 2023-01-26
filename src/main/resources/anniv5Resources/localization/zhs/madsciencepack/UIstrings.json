@@ -8,8 +8,8 @@
   },
   "${ModID}:MadScienceModifiers": {
     "TEXT": [
-      " NL Apply ",
-      " ${ModID}:Frostbite。",
+      " NL 给予 ",
+      " ${ModID}:霜噬。",
       "保留 。 NL ",
       " NL Play ",
       " NL 获得 6 格挡 。",

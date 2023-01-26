@@ -1,11 +1,11 @@
 {
   "${ModID}:Flare": {
     "NAME": "Flare",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! ${ModID}:Ignite。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Ignite。"
   },
   "${ModID}:FlameBlast": {
     "NAME": "Flame Blast",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If the enemy has Vulnerable, apply !M! ${ModID}:Ignite a获得. NL Apply !${ModID}:m2! Vulnerable。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Ignite. NL If the enemy has Vulnerable, 给予 !M! ${ModID}:Ignite a获得. NL 给予 !${ModID}:m2! Vulnerable。"
   },
   "${ModID}:IceWall": {
     "NAME": "Ice Wall",
@@ -17,11 +17,11 @@
   },
   "${ModID}:Frostfire": {
     "NAME": "Frostfire",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ignite and !${ModID}:m2! Weak to 所有敌人. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Ignite and !${ModID}:m2! Weak to 所有敌人. NL 消耗 。"
   },
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当 you are attacked 本回合, apply !M! ${ModID}:Ignite。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当 you are attacked 本回合, 给予 !M! ${ModID}:Ignite。"
   },
   "${ModID}:SnowMelt": {
     "NAME": "Snow Melt",
@@ -30,7 +30,7 @@
   },
   "${ModID}:Pyromastery": {
     "NAME": "Pyromastery",
-    "DESCRIPTION": "When you apply ${ModID}:Ignite, apply an additional !M! ${ModID}:Ignite。"
+    "DESCRIPTION": "When you 给予 ${ModID}:Ignite, 给予 an additional !M! ${ModID}:Ignite。"
   },
   "${ModID}:ReadTheFlames": {
     "NAME": "Read the Flames",
@@ -43,6 +43,6 @@
   },
   "${ModID}:FadingEmber": {
     "NAME": "Fading Ember",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Ignite. NL 消耗 。"
   }
 }

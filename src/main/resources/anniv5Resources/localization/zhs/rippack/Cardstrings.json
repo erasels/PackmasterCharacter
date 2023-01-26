@@ -112,7 +112,7 @@
   },
   "${ModID}:TotalWeakness": {
     "NAME": "Total Weakness",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! Weak to 所有敌人。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! Weak to 所有敌人。"
   },
   "${ModID}:TotalWeaknessArt": {
     "NAME": "Total Weakness",
@@ -120,7 +120,7 @@
   },
   "${ModID}:TotalWeaknessText": {
     "NAME": "",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! Weak to 所有敌人。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! Weak to 所有敌人。"
   },
   "${ModID}:LeftBrain": {
     "NAME": "Left Brain",

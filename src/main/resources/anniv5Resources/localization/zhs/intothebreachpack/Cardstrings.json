@@ -9,7 +9,7 @@
   },
   "${ModID}:EnrageShot": {
     "NAME": "Enrage Shot",
-    "DESCRIPTION": "Stun the enemy and apply 2 力量 。 NL 消耗 。"
+    "DESCRIPTION": "Stun the enemy and 给予 2 力量 。 NL 消耗 。"
   },
   "${ModID}:MercuryFist": {
     "NAME": "Mercury Fist",
@@ -22,11 +22,11 @@
   },
   "${ModID}:SmokePellets": {
     "NAME": "Smoke Pellets",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Apply !M! Weak to 所有敌人。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! Weak to 所有敌人。"
   },
   "${ModID}:SmolderingShell": {
     "NAME": "Smoldering Shell",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤. NL Apply !${ModID}:m2! Weak to ALL other enemies。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤. NL 给予 !${ModID}:m2! Weak to ALL other enemies。"
   },
   "${ModID}:SpartanShield": {
     "NAME": "Spartan Shield",

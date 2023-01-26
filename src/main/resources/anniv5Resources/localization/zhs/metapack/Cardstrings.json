@@ -27,7 +27,7 @@
   },
   "${ModID}:DeathWish": {
     "NAME": "Death Wish",
-    "DESCRIPTION": "If your 生命 is above 50%, 失去 !M! 生命。 NL 获得 !M! 点 力量 and [#EFC851]活力。"
+    "DESCRIPTION": "If your 生命 is above 50%, 失去 !M! 生命。 NL 获得 !M! 点 力量 and [#EFC851]活力 。"
   },
   "${ModID}:KillerInstinct": {
     "NAME": "Killer Instinct",
