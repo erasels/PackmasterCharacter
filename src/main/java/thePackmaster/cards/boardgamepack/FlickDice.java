@@ -13,12 +13,12 @@ public class FlickDice extends AbstractBoardCard {
 
     public FlickDice() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        damage = baseDamage = 9;
+        damage = baseDamage = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.doDmg(m, damage);
-        int dice = upgraded?8:6;
+        int dice = 6;
         addToBot(new ApplyPowerAction(p, p, new DicePower(p, dice), dice));
     }
 

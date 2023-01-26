@@ -13,17 +13,17 @@ public class RollToMove extends AbstractBoardCard {
     static int DICE = 6;
 
     public RollToMove() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 2;
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        block = baseBlock = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        blck();
         addToBot(new ApplyPowerAction(p, p, new DicePower(p, DICE), DICE));
         addToBot(new ApplyPowerAction(p, p, new DicePower(p, DICE), DICE));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBlock(4);
     }
 }

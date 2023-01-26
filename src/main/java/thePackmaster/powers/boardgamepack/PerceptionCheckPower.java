@@ -23,8 +23,11 @@ public class PerceptionCheckPower extends AbstractPackmasterPower {
     @Override
     public void atStartOfTurn()
     {
-        for(int i = 0; i < amount; i++)
-            addToBot(new ApplyPowerAction(owner, owner, new DicePower(owner, 8), 8));
+        if(!owner.hasPower(DicePower.POWER_ID))
+        {
+            for(int i = 0; i < amount; i++)
+                addToBot(new ApplyPowerAction(owner, owner, new DicePower(owner, 8), 8));
+        }
     }
 
     @Override
