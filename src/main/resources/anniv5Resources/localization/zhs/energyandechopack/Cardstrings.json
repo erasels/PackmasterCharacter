@@ -9,7 +9,7 @@
   },
   "${ModID}:TearApart": {
     "NAME": "Tear Apart",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, 获得 [E]. NL ${ModID}:Echo。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, 获得 [E] 。 NL ${ModID}:Echo。"
   },
   "${ModID}:Voices": {
     "NAME": "Voices",
@@ -18,7 +18,7 @@
   "${ModID}:Flashlight": {
     "NAME": "Flashlight",
     "DESCRIPTION": "固有 。 NL 获得 [E] . NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 [E] . NL Next turn, 获得 [E]. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 [E] . NL Next turn, 获得 [E] 。 NL 消耗 。"
   },
   "${ModID}:Discharge": {
     "NAME": "Discharge",

@@ -38,8 +38,8 @@
   },
   "${ModID}:Owl": {
     "NAME": "Owl",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL ${ModID}:Evolves when you 消耗 一张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply ${ModID}:Rend equal to half of the un格挡ed damage dealt. NL Apply !M! Vulnerable。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤. NL ${ModID}:Evolves when you 消耗 一张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply ${ModID}:Rend equal to half of the un格挡ed damage dealt. NL 给予 !M! 层 易伤。",
     "EXTENDED_DESCRIPTION": ["Nightmare Owl"]
   },
   "${ModID}:Vision": {

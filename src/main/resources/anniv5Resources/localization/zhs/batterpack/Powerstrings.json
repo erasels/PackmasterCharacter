@@ -1,18 +1,23 @@
 {
   "${ModID}:OptimizedBlurPower": {
-    "NAME": "Optimized Blur",
-    "DESCRIPTIONS": ["每当 you deal un格挡ed attack damage, 获得 #b", " #y格挡 。"]
+    "NAME": "视晕校正",
+    "DESCRIPTIONS": ["每当你造成未被格挡的伤害时，获得 #b", " 点 #y格挡 。"]
   },
   "${ModID}:HardCaramelPower": {
-    "NAME": "Hard Caramel",
-    "DESCRIPTIONS": ["After attacking, apply #b", " #yVulnerable if the target doesn't have any。"]
+    "NAME": "硬焦糖",
+    "DESCRIPTIONS": ["攻击后，若目标无 #y易伤 ，给予 #b", " 层。"]
   },
   "${ModID}:AvatarBeatPower": {
-    "NAME": "Avatar Beat",
-    "DESCRIPTIONS": ["每当 you deal #b", " un格挡ed attack damage, 获得 #b", " #y力量, draw #b", " card and raise this bar by #b5。", " cards and raise this bar by #b5。"]
+    "NAME": "漂亮一击",
+    "DESCRIPTIONS": [
+      "每当你造成 #b",
+      " 点以上的未被格挡伤害时，获得 #b",
+      " 点 #y力量 ，抽 #b",
+      " 张牌，并将触发条件的伤害阈值提高 #b5 点。",
+      " 张牌，并将触发条件的伤害阈值提高 #b5 点。"]
   },
   "${ModID}:OpenBracketPower": {
-    "NAME": "Open Bracket",
-    "DESCRIPTIONS": ["You can only play #y攻击s for the rest of the turn。"]
+    "NAME": "盛大开场",
+    "DESCRIPTIONS": ["本回合只能打出 #y攻击 牌。"]
   }
 }

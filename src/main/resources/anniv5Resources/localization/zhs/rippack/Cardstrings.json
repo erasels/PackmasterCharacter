@@ -76,7 +76,7 @@
   },
   "${ModID}:FlimsyBash": {
     "NAME": "Flimsy Bash",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤。"
   },
   "${ModID}:FlimsyBashArt": {
     "NAME": "Flimsy Bash",
@@ -84,7 +84,7 @@
   },
   "${ModID}:FlimsyBashText": {
     "NAME": "",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤。"
   },
   "${ModID}:FragileShrug": {
     "NAME": "Fragile Shrug",

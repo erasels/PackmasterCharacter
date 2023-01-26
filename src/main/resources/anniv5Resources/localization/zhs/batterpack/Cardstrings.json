@@ -1,44 +1,44 @@
 {
   "${ModID}:BatterUp": {
-    "NAME": "Batter Up",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Critical_Hit if the target intends to attack。"
+    "NAME": "入区",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标意图攻击， NL ${ModID}:暴击 。"
   },
   "${ModID}:Homerun": {
-    "NAME": "Homerun",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Critical_Hit if you've played at least 2 cards 本回合。"
+    "NAME": "全垒打",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合至少已打出2张牌， ${ModID}:暴击 。"
   },
   "${ModID}:WideAngle": {
-    "NAME": "Wide Angle",
-    "DESCRIPTION": "Steal !M! 点 格挡 。 NL Apply 1 Weak。"
+    "NAME": "广角",
+    "DESCRIPTION": "窃取 !M! 点 格挡 。 NL 给予1层 虚弱 。"
   },
   "${ModID}:WindUp": {
-    "NAME": "Wind Up",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL 获得 [E]. NL 消耗 。"
+    "NAME": "正面出击",
+    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 获得 [E] 。 NL 消耗 。"
   },
   "${ModID}:OpenBracket": {
-    "NAME": "Open Bracket",
-    "DESCRIPTION": "抽 !M! 张牌。 NL You can only play Attacks for the rest of the turn。"
+    "NAME": "盛大开场",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 本回合接下来只能打出攻击牌。"
   },
   "${ModID}:Tragedy": {
-    "NAME": "Tragedy",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:Critical_Hit if you hold 6 or more cards。"
+    "NAME": "悲剧",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若有6+张手牌， NL ${ModID}:暴击 。"
   },
   "${ModID}:OptimizedBlur": {
-    "NAME": "Optimized Blur",
-    "DESCRIPTION": "每当 you deal un格挡ed attack damage, 获得 !M! 点 格挡 。"
+    "NAME": "视晕校正",
+    "DESCRIPTION": "造成未被格挡伤害时， NL 获得 !M! 点 格挡 。"
   },
   "${ModID}:HardCaramel": {
-    "NAME": "Hard Caramel",
-    "DESCRIPTION": "After attacking, apply 1 Vulnerable if target doesn't have any。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL After attacking, apply 1 Vulnerable if target doesn't have any。"
+    "NAME": "硬焦糖",
+    "DESCRIPTION": "攻击后若目标无 易伤 ，给予1层。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 攻击后若目标无 易伤 ，给予1层。"
   },
   "${ModID}:UltimateHomerun": {
-    "NAME": "Ultimate Homerun",
-    "DESCRIPTION": "Deal the highest un格挡ed attack damage you've dealt 本场战斗。",
-    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)", " NL (Deals !D! damage. Wow!)"]
+    "NAME": "终极全垒打",
+    "DESCRIPTION": "造成本场战斗造成过的最高未被格挡点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害。)", " NL (造成 !D! 点伤害。 哇哦！)"]
   },
   "${ModID}:AvatarBeat": {
-    "NAME": "Avatar Beat",
-    "DESCRIPTION": "每当 you deal 10 un格挡ed attack damage, 获得 !M! 点 力量, draw 1 card and raise this bar by 5。"
+    "NAME": "漂亮一击",
+    "DESCRIPTION": "造成10点以上未被格挡伤害时， 获得 !M! 点 力量 ，抽一张牌，并将触发条件的伤害阈值提高5点。"
   }
 }

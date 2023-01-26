@@ -19,7 +19,7 @@
   },
   "${ModID}:TerrorOfTheSeas": {
     "NAME": "Terror of the Seas",
-    "DESCRIPTION": "Apply !M! Vulnerable and !${ModID}:m2! ${ModID}:Ruin to ALL enemies. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 易伤 and !${ModID}:m2! ${ModID}:Ruin to ALL enemies. NL 消耗 。"
   },
   "${ModID}:MassProduction": {
     "NAME": "Mass Production",

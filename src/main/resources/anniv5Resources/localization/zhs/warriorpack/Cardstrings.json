@@ -13,11 +13,11 @@
   },
   "${ModID}:StormStrike": {
     "NAME": "Storm Strike",
-    "DESCRIPTION": "Deal !D! ${ModID}:Feral damage. NL Apply !M! Vulnerable。"
+    "DESCRIPTION": "Deal !D! ${ModID}:Feral damage. NL 给予 !M! 层 易伤。"
   },
   "${ModID}:WarSong": {
     "NAME": "War Song",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL 获得 !${ModID}:m2! 活力。"
+    "DESCRIPTION": "给予 !M! 层 易伤. NL 获得 !${ModID}:m2! 活力。"
   },
   "${ModID}:Rapier": {
     "NAME": "Rapier",

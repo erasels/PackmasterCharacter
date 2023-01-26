@@ -9,7 +9,7 @@
   },
   "${ModID}:HeartOfTheForge": {
     "NAME": "Heart of the Forge",
-    "DESCRIPTION": "{@@}保留 。 NL 获得{!M!|>1= !M!} [E]. When Retained, Upgrade this. NL Can be Upgraded any number of times. NL 消耗 。"
+    "DESCRIPTION": "{@@}保留 。 NL 获得{!M!|>1= !M!} [E] 。 When Retained, Upgrade this. NL Can be Upgraded any number of times. NL 消耗 。"
   },
   "${ModID}:SharpeningSheath": {
     "NAME": "Sharpening Sheath",

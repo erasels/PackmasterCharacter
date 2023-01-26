@@ -43,7 +43,7 @@
   },
   "${ModID}:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Apply !M! Vulnerable and remove the target's 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !M! Weak, and remove the target's 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 易伤 and remove the target's 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 易伤 and !M! Weak, and remove the target's 格挡 。 NL 消耗 。"
   }
 }

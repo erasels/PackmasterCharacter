@@ -1,6 +1,6 @@
 {
 	"${ModID}:AirCurrent":	{
-		"DESCRIPTION": "造成 !D! 点伤害。 NL If the target has ${ModID}:Petra, apply !M! Vulnerable。",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL If the target has ${ModID}:Petra, 给予 !M! 层 易伤。",
 		"NAME": "Air Current"
 	},
 	"${ModID}:DustTornado":	{

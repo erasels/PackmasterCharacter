@@ -35,7 +35,7 @@
   },
   "${ModID}:MysteryCroquettesSpecialColourless": {
     "NAME": "Mystery Croquettes",
-    "DESCRIPTION": "${ModID}:Croquette. NL Apply !M! Vulnerable. NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Croquette. NL 给予 !M! 层 易伤. NL 消耗 。"
   },
   "${ModID}:TopOfTheSkyUncommonAttack": {
     "NAME": "Top of the Sky",
@@ -47,8 +47,8 @@
   },
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "Pocket Tournament",
-    "DESCRIPTION": "Next turn, randomly, 2X times: NL Draw 1 card, 获得 [E] , 获得 1 力量 or 获得 3 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Next turn, randomly, 2X+2 times: NL Draw 1 card, 获得 [E] , 获得 1 力量 or 获得 3 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "Next turn, randomly, 2X times: NL 抽一张牌, 获得 [E] , 获得 1 力量 or 获得 3 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Next turn, randomly, 2X+2 times: NL 抽一张牌, 获得 [E] , 获得 1 力量 or 获得 3 格挡 。 NL 消耗 。"
   },
   "${ModID}:StoneSwordCommonAttack": {
     "NAME": "Stone Sword",
@@ -57,6 +57,6 @@
   "${ModID}:Rea__dyCommonSkill": {
     "NAME": "Rea--dy!",
     "DESCRIPTION": "获得 !M! 活力. NL 获得 !${ModID}:m2! Temporary Dexterity. NL 消耗ive !stslib:ex!。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 活力. NL 获得 !${ModID}:m2! Temporary Dexterity. NL Draw 1 card. NL 消耗ive !stslib:ex!。"
+    "UPGRADE_DESCRIPTION": "获得 !M! 活力. NL 获得 !${ModID}:m2! Temporary Dexterity. NL 抽一张牌. NL 消耗ive !stslib:ex!。"
   }
 }

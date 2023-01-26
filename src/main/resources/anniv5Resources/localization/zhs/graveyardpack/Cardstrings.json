@@ -30,7 +30,7 @@
   },
     "${ModID}:FuneraryJewels": {
     "NAME": "Funerary Jewels",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 抽 !M! 张牌。 获得 [E]. NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 抽 !M! 张牌。 获得 [E] 。 NL 消耗 。"
   },
     "${ModID}:Tombstone": {
     "NAME": "Tombstone",

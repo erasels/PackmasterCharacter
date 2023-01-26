@@ -19,7 +19,7 @@
   },
   "${ModID}:HarvestRadishes": {
     "NAME": "Harvest Radishes",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply 1 Weak for each card type you've played 本回合。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予1层 虚弱 for each card type you've played 本回合。",
     "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
   },
   "${ModID}:OutToMarket": {

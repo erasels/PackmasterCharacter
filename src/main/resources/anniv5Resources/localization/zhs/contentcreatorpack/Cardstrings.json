@@ -5,8 +5,8 @@
   },
   "${ModID}:HuttsGamble": {
     "NAME": "Hutts' Gamble",
-    "DESCRIPTION": "If you don't receive un格挡ed attack damage 本回合, 获得 [E] and draw 1 card next turn。",
-    "UPGRADE_DESCRIPTION": "If you don't receive un格挡ed attack damage 本回合, 获得 [E] [E] and draw 1 card next turn。"
+    "DESCRIPTION": "If you don't receive un格挡ed attack damage 本回合, 获得 [E] and 抽一张牌 next turn。",
+    "UPGRADE_DESCRIPTION": "If you don't receive un格挡ed attack damage 本回合, 获得 [E] [E] and 抽一张牌 next turn。"
   },
   "${ModID}:Tricky": {
     "NAME": "Tricky",

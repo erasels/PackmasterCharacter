@@ -10,9 +10,9 @@
   },
   "${ModID}:TelephonePole": {
     "NAME": "Telephone Pole",
-    "DESCRIPTION": "${ModID}:Locking. NL 造成 !D! 点伤害。 NL Apply !M! Vulnerable。",
+    "DESCRIPTION": "${ModID}:Locking. NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤。",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL 造成 !D! 点伤害。 NL Apply !M! Vulnerable。"
+      "${ModID}:Locked. NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤。"
     ]
   },
   "${ModID}:Gravity": {

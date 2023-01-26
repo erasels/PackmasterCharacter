@@ -35,7 +35,7 @@
   },
   "${ModID}:OverwhelmingPower": {
     "NAME": "Overwhelming Power",
-    "DESCRIPTION": "获得 [E] [E] [E]. NL Draw 3 cards. NL 每当 you end your turn with 0 Energy, 失去 !M! 生命。"
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL Draw 3 cards. NL 每当 you end your turn with 0 Energy, 失去 !M! 生命。"
   },
   "${ModID}:DeadOrAlive": {
     "NAME": "Dead or Alive",

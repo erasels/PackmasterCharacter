@@ -13,7 +13,7 @@
   },
   "${ModID}:MercuryFist": {
     "NAME": "Mercury Fist",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤. NL 消耗 。"
   },
   "${ModID}:ReboundVolley": {
     "NAME": "Rebound Volley",
@@ -26,7 +26,7 @@
   },
   "${ModID}:SmolderingShell": {
     "NAME": "Smoldering Shell",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL Apply !${ModID}:m2! Weak to ALL other enemies。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤. NL Apply !${ModID}:m2! Weak to ALL other enemies。"
   },
   "${ModID}:SpartanShield": {
     "NAME": "Spartan Shield",

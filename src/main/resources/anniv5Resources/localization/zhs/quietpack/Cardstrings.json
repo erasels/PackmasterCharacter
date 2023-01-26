@@ -42,7 +42,7 @@
   },
   "${ModID}:Wisdom": {
     "NAME": "Wisdom",
-    "DESCRIPTION": "获得 [E]. NL 丢弃 any number of cards in your hand. Draw that many cards. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 [E] [E]. NL 丢弃 any number of cards in your hand. Draw that many cards. NL 消耗 。"
+    "DESCRIPTION": "获得 [E] 。 NL 丢弃 any number of cards in your hand. Draw that many cards. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 丢弃 any number of cards in your hand. Draw that many cards. NL 消耗 。"
   }
 }

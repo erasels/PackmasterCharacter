@@ -2,7 +2,7 @@
   "${ModID}:FrontloadedBash": {
     "NAME": "Frontloaded Bash",
     "DESCRIPTION": "造成 !D! 点伤害。 NL Deals 1 more damage for every !M! cards in your 抽牌堆。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Deals 1 more damage for every !M! cards in your 抽牌堆。 NL Draw 1 card。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Deals 1 more damage for every !M! cards in your 抽牌堆。 NL 抽一张牌。"
   },
   "${ModID}:Preparation": {
     "NAME": "Preparation",
