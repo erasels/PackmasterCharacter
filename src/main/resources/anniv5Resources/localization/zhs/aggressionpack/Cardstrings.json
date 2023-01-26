@@ -1,11 +1,11 @@
 {
   "${ModID}:Vindicate": {
     "NAME": "Vindicate",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you play an Attack this turn, gain !M! Block."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you play an Attack this turn, 获得 !M! 格挡 。"
   },
   "${ModID}:DarkLance": {
     "NAME": "Dark Lance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If you've changed Stances this turn, draw !M! cards."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If you've changed Stances this turn, 抽 !M! 张牌。"
   },
   "${ModID}:FuriousAssault": {
     "NAME": "Furious Assault",
@@ -13,30 +13,30 @@
   },
   "${ModID}:Slam": {
     "NAME": "Slam",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Gain Block equal to unblocked damage dealt."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 Block equal to unblocked damage dealt."
   },
   "${ModID}:Decapitate": {
     "NAME": "Decapitate",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Enemy loses !M! Strength this turn. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Enemy loses !M! 点 力量 this turn. NL 消耗 。"
   },
-  "${ModID}:TitansStrength": {
-    "NAME": "Titan's Strength",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! Strength."
+  "${ModID}:Titans力量": {
+    "NAME": "Titan's 力量",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量."
   },
   "${ModID}:Epiphany": {
     "NAME": "Epiphany",
-    "DESCRIPTION": "If you are in a Stance, exit it and draw !M! cards. NL Otherwise, enter ${ModID}:Aggression."
+    "DESCRIPTION": "If you are in a Stance, exit it and 抽 !M! 张牌。 NL Otherwise, enter ${ModID}:Aggression."
   },
   "${ModID}:InnerFury": {
     "NAME": "Inner Fury",
-    "DESCRIPTION": "Whenever you enter or exit ${ModID}:Aggression, gain !M! temporary Strength and !M! Block. NL Enter ${ModID}:Aggression."
+    "DESCRIPTION": "每当 you enter or exit ${ModID}:Aggression, 获得 !M! temporary 力量 and !M! 格挡 。 NL Enter ${ModID}:Aggression."
   },
   "${ModID}:LunaticRage": {
     "NAME": "Lunatic Rage",
-    "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E] . NL Discard all non-Attack non-Status cards. NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 [E] [E] . NL Discard all non-Attack non-Status cards. NL 消耗 。"
   },
   "${ModID}:Animosity": {
     "NAME": "Animosity",
-    "DESCRIPTION": "When you enter, exit, or start your turn in ${ModID}:Aggression, gain !M! Strength."
+    "DESCRIPTION": "When you enter, exit, or start your turn in ${ModID}:Aggression, 获得 !M! 点 力量."
   }
 }

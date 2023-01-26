@@ -2,7 +2,7 @@
   "${ModID}:SlowingPower": {
     "NAME": "Slowing",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain",
+      "At the start of your turn, 获得",
       " #b",
       " [E] ."
     ]

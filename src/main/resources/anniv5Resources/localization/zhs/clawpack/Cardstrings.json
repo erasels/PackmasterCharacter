@@ -9,8 +9,8 @@
   },
   "${ModID}:CloakAndClaw": {
     "NAME": "Cloak and Claw",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain a *Ghost *Claw.",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! *Ghost *Claws."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 a *Ghost *Claw.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! *Ghost *Claws."
   },
   "${ModID}:Conclawd": {
     "NAME": "Conclawd",
@@ -18,13 +18,13 @@
   },
   "${ModID}:InfiniteClaws": {
     "NAME": "Infinite Claws",
-    "DESCRIPTION": "At the start of your turn, gain a *Ghost *Claw.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain a *Ghost *Claw."
+    "DESCRIPTION": "At the start of your turn, 获得 a *Ghost *Claw.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, 获得 a *Ghost *Claw."
   },
   "${ModID}:MutateClaw": {
     "NAME": "Mutate Claw",
-    "DESCRIPTION": "Choose an Attack in hand to ${ModID}:Modify: 'Name gains Claw' and 'Gain a *Ghost *Claw'. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose an Attack in hand to ${ModID}:Modify: 'Name gains Claw' and 'Gain a *Ghost *Claw'."
+    "DESCRIPTION": "Choose an Attack in hand to ${ModID}:Modify: 'Name 获得s Claw' and '获得 a *Ghost *Claw'. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Choose an Attack in hand to ${ModID}:Modify: 'Name 获得s Claw' and '获得 a *Ghost *Claw'."
   },
   "${ModID}:SearingClaw": {
     "NAME": "Searing Claw",
@@ -32,7 +32,7 @@
   },
   "${ModID}:TalkToTheClaw": {
     "NAME": "Talk to the Claw",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you attack this enemy with a *Claw, gain !M! Block. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you attack this enemy with a *Claw, 获得 !M! 格挡 。 NL 消耗 。"
   },
   "${ModID}:TwinClaw": {
     "NAME": "Twin Claw",

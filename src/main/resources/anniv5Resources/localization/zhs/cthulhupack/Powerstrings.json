@@ -2,8 +2,8 @@
   "${ModID}:NamelessMistPower": {
     "NAME": "Nameless Mist",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, gain #b",
-      " #yBlock."
+      "每当 you play a card this turn, 获得 #b",
+      " #y格挡 。"
     ]
   },
   "${ModID}:PageOfTheDeadPower": {
@@ -24,7 +24,7 @@
   "${ModID}:EndOfDaysPower": {
     "NAME": "End of Days",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yChannel #b",
+      "回合结束时， #yChannel #b",
       " #yDark for each [E] unspent."
     ]
   }

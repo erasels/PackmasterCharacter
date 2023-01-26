@@ -22,12 +22,12 @@
   },
   "${ModID}:Improve": {
     "NAME": "Improve",
-    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a random card in hand: \"抽一张牌.\" NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a card in hand: \"抽一张牌.\" NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:Modify a random card in hand: \"抽一张牌.\" NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:Modify a card in hand: \"抽一张牌.\" NL 消耗 。"
   },
   "${ModID}:Enhance": {
     "NAME": "Enhance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Modify a card in hand: \"Gain !M! Block.\""
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Modify a card in hand: \"获得 !M! 格挡 。\""
   },
   "${ModID}:Cheapen": {
     "NAME": "Cheapen",
@@ -36,11 +36,11 @@
   },
   "${ModID}:Expand": {
     "NAME": "Expand",
-    "DESCRIPTION": "${ModID}:Modify a card in hand: \"Costs 1 more [E] .\" and \"Play again, unmodified.\" NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Modify a card in hand: \"Costs 1 more [E] .\" and \"Play a获得, unmodified.\" NL 消耗 。"
   },
   "${ModID}:Piratify": {
     "NAME": "Piratify",
-    "DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"Gain a *Cannonball.\"",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"Gain a *Cannonball+.\""
+    "DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"获得 a *Cannonball.\"",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"获得 a *Cannonball+.\""
   }
 }

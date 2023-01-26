@@ -10,7 +10,7 @@
   "${ModID}:DiffusionPower": {
     "NAME": "Diffusion",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
+      "At the start of your turn, 获得 #b",
       " #yEntropy and draw #b",
       " card.",
       " cards."
@@ -19,7 +19,7 @@
   "${ModID}:EntanglementPower": {
     "NAME": "Entanglement",
     "DESCRIPTIONS": [
-      "Whenever you receive a debuff, apply #b",
+      "每当 you receive a debuff, apply #b",
       " #yRuin to a random enemy."
     ]
   },
@@ -28,7 +28,7 @@
     "DESCRIPTIONS": [
       "The next time this enemy takes unblocked attack damage, it loses #b",
       "The next time you take unblocked attack damage, lose #b",
-      " HP."
+      " 生命."
     ]
   },
   "${ModID}:ConstructPower": {

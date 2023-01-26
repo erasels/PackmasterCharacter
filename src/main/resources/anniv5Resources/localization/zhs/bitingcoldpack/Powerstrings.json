@@ -3,19 +3,19 @@
     "NAME": "Frostbite",
     "DESCRIPTIONS": [
       "At the start of its turn, loses #b",
-      " HP and this is halved. Whenever this creature receives attack damage, apply 1 #yFrostbite."
+      " 生命 and this is halved. 每当 this creature receives attack damage, apply 1 #yFrostbite."
     ]
   },
   "${ModID}:ColdSeasonPower": {
     "NAME": "Cold Season",
-    "DESCRIPTIONS": ["Whenever an enemy loses HP from #yFrostbite, apply #b", " #yFrostbite."]
+    "DESCRIPTIONS": ["每当 an enemy loses 生命 from #yFrostbite, apply #b", " #yFrostbite."]
   },
   "${ModID}:FrigidBodyPower": {
     "NAME": "Frigid Body",
-    "DESCRIPTIONS": ["Whenever you are attacked this turn, apply #yFrostbite equal to blocked damage received."]
+    "DESCRIPTIONS": ["每当 you are attacked this turn, apply #yFrostbite equal to blocked damage received."]
   },
   "${ModID}:GlaciatePower": {
     "NAME": "Glaciate",
-    "DESCRIPTIONS": ["Whenever you apply #yFrostbite, gain #b", " #yVigor."]
+    "DESCRIPTIONS": ["每当 you apply #yFrostbite, 获得 #b", " #yVigor."]
   }
 }

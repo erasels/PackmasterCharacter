@@ -9,11 +9,11 @@
   },
   "${ModID}:PlannedDefense": {
     "NAME": "Planned Defense",
-    "DESCRIPTION": "Innate. NL 获得 !B! 点 格挡 。 If you played another Innate card this turn, also gain half that much Block next turn."
+    "DESCRIPTION": "Innate. NL 获得 !B! 点 格挡 。 If you played another Innate card this turn, also 获得 half that much Block next turn."
   },
   "${ModID}:SecondStrike": {
     "NAME": "Second Strike",
-    "DESCRIPTION": "Innate. Retain. NL 造成 !D! 点伤害。 If it is not the first turn, deal !D! damage again."
+    "DESCRIPTION": "Innate. Retain. NL 造成 !D! 点伤害。 If it is not the first turn, deal !D! damage a获得."
   },
   "${ModID}:DashIn": {
     "NAME": "Dash In",
@@ -22,7 +22,7 @@
   },
   "${ModID}:InstinctiveThinking": {
     "NAME": "Instinctive Thinking",
-    "DESCRIPTION": "Each turn, if the first card you play is Innate, gain !M! Block."
+    "DESCRIPTION": "Each turn, if the first card you play is Innate, 获得 !M! 格挡 。"
   },
   "${ModID}:Cross": {
     "NAME": "Cross",

@@ -1,7 +1,7 @@
 {
   "${ModID}:Polishing": {
     "NAME": "Polishing",
-    "DESCRIPTION": "Whenever you play an Attack, increase its damage by !M! 本场战斗."
+    "DESCRIPTION": "每当 you play an Attack, increase its damage by !M! 本场战斗."
   },
   "${ModID}:WorkHammer": {
     "NAME": "Work Hammer",
@@ -9,7 +9,7 @@
   },
   "${ModID}:Chained": {
     "NAME": "Chained",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Give ALL enemies !M! Block."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Give ALL enemies !M! 格挡 。"
   },
   "${ModID}:StormStrike": {
     "NAME": "Storm Strike",
@@ -17,11 +17,11 @@
   },
   "${ModID}:WarSong": {
     "NAME": "War Song",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Gain !${ModID}:m2! Vigor."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL 获得 !${ModID}:m2! Vigor."
   },
   "${ModID}:Rapier": {
     "NAME": "Rapier",
-    "DESCRIPTION": "Deal !D! ${ModID}:Front damage. NL Goes through Block."
+    "DESCRIPTION": "Deal !D! ${ModID}:Front damage. NL Goes through 格挡 。"
   },
   "${ModID}:Fall": {
     "NAME": "Fall",
@@ -35,7 +35,7 @@
   },
   "${ModID}:Bolas": {
     "NAME": "Bolas",
-    "DESCRIPTION": "Apply *Slow. NL Give enemy !M! Block. NL Draw !${ModID}:m2! card. NL 消耗 。"
+    "DESCRIPTION": "Apply *Slow. NL Give enemy !M! 格挡 。 NL Draw !${ModID}:m2! card. NL 消耗 。"
   },
   "${ModID}:FFBlade": {
     "NAME": "FF Blade",

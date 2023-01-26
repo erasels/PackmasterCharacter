@@ -8,20 +8,20 @@
   "${ModID}:Inertia": {
     "NAME": "Inertia",
     "DESCRIPTIONS": [
-      "Whenever a card is #yExhausted or #yAmplified, gain #b%s #yCharge #yUp."
+      "每当 a card is #yExhausted or #yAmplified, 获得 #b%s #yCharge #yUp."
     ]
   },
   "${ModID}:EarthlightRay": {
     "NAME": "Earthlight Ray",
     "DESCRIPTIONS": [
-      "After you gain #yCharge #yUp, deal damage equal to its total to ALL enemies.",
-      "After you gain #yCharge #yUp, deal damage equal to its total times #b%s to ALL enemies."
+      "After you 获得 #yCharge #yUp, deal damage equal to its total to ALL enemies.",
+      "After you 获得 #yCharge #yUp, deal damage equal to its total times #b%s to ALL enemies."
     ]
   },
   "${ModID}:BuildingCharge": {
     "NAME": "Building Charge",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, gain #b%s #yCharge #yUp."
+      "每当 you play a card this turn, 获得 #b%s #yCharge #yUp."
     ]
   }
 }

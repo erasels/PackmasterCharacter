@@ -9,15 +9,15 @@
   },
   "${ModID}:WideAngle": {
     "NAME": "Wide Angle",
-    "DESCRIPTION": "Steal !M! Block. NL Apply 1 Weak."
+    "DESCRIPTION": "Steal !M! 格挡 。 NL Apply 1 Weak."
   },
   "${ModID}:WindUp": {
     "NAME": "Wind Up",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Gain [E]. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! Vulnerable. NL 获得 [E]. NL 消耗 。"
   },
   "${ModID}:OpenBracket": {
     "NAME": "Open Bracket",
-    "DESCRIPTION": "Draw !M! cards. NL You can only play Attacks for the rest of the turn."
+    "DESCRIPTION": "抽 !M! 张牌。 NL You can only play Attacks for the rest of the turn."
   },
   "${ModID}:Tragedy": {
     "NAME": "Tragedy",
@@ -25,7 +25,7 @@
   },
   "${ModID}:OptimizedBlur": {
     "NAME": "Optimized Blur",
-    "DESCRIPTION": "Whenever you deal unblocked attack damage, gain !M! Block."
+    "DESCRIPTION": "每当 you deal unblocked attack damage, 获得 !M! 格挡 。"
   },
   "${ModID}:HardCaramel": {
     "NAME": "Hard Caramel",
@@ -39,6 +39,6 @@
   },
   "${ModID}:AvatarBeat": {
     "NAME": "Avatar Beat",
-    "DESCRIPTION": "Whenever you deal 10 unblocked attack damage, gain !M! Strength, draw 1 card and raise this bar by 5."
+    "DESCRIPTION": "每当 you deal 10 unblocked attack damage, 获得 !M! 点 力量, draw 1 card and raise this bar by 5."
   }
 }

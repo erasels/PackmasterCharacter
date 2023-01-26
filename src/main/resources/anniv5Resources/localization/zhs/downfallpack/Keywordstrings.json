@@ -4,7 +4,7 @@
     "NAMES": [
       "invincible"
     ],
-    "DESCRIPTION": "You cannot lose more than a given amount of HP in a single turn. NL At the end of any round in which Invincible prevented HP loss, remove it."
+    "DESCRIPTION": "You cannot lose more than a given amount of 生命 in a single turn. NL At the end of any round in which Invincible prevented 生命 loss, remove it."
   },
   {
     "PROPER_NAME": "Ghostflame",
@@ -18,6 +18,6 @@
     "NAMES": [
       "ancient"
     ],
-    "DESCRIPTION": "Stance: If you have less than #b6 Plated Armor at the start of your turn, gain #b2 Plated Armor. NL When you leave this Stance, gain #b1 Artifact."
+    "DESCRIPTION": "Stance: If you have less than #b6 Plated Armor at the start of your turn, 获得 #b2 Plated Armor. NL When you leave this Stance, 获得 #b1 Artifact."
   }
 ]

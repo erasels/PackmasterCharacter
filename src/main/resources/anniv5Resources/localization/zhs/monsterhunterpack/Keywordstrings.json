@@ -21,7 +21,7 @@
       "enraged",
       "enraged!"
     ],
-    "DESCRIPTION": "At the end of the turn that no enemy intends to attack you, gain #b2 Strength."
+    "DESCRIPTION": "At the end of the turn that no enemy intends to attack you, 获得 #b2 力量."
   },
   {
     "PROPER_NAME": "Glass Armor",
@@ -30,7 +30,7 @@
       "Glass_Armor",
       "glass_armor"
     ],
-    "DESCRIPTION": "At the end of the turn, gain Block. When taking unblocked attack damage, remove this."
+    "DESCRIPTION": "At the end of the turn, 获得 格挡 。 When taking unblocked attack damage, remove this."
   },
   {
     "PROPER_NAME": "Nonlethal",
@@ -39,6 +39,6 @@
       "non-lethal",
       "non_lethal"
     ],
-    "DESCRIPTION": "Non-lethal damage will leave targets at 1 hp."
+    "DESCRIPTION": "Non-lethal damage will leave targets at 1 生命."
   }
 ]

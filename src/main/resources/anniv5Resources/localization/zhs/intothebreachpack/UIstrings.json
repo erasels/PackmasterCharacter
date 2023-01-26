@@ -1,5 +1,5 @@
 {
-  "${ModID}:IntoTheBreachPack": {
+  "${ModID}:IntoTheBreac生命ack": {
     "TEXT": [
       "Into the Breach",
       "Use powerful mech-based weaponry from the future to dispatch the Spire's threats.",
@@ -7,7 +7,7 @@
       "#bInto #bthe #bBreach originally created by #bSubset #bGames"
     ]
   },
-  "${ModID}:IntoTheBreachPackHat": {
+  "${ModID}:IntoTheBreac生命ackHat": {
     "TEXT": [
       "The perfect helmet for fighting giant bugs.",
       "Archive Helmet"

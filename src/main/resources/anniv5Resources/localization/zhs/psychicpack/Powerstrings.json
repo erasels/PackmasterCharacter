@@ -2,16 +2,16 @@
   "${ModID}:GravityPower": {
     "NAME": "Gravity",
     "DESCRIPTIONS": [
-      "Whenever you draw a #yLocked or #yUnplayable card, 抽一张牌.",
-      "Whenever you draw a #yLocked or #yUnplayable card, draw #b",
+      "每当 you draw a #yLocked or #yUnplayable card, 抽一张牌.",
+      "每当 you draw a #yLocked or #yUnplayable card, draw #b",
       " cards."
     ]
   },
   "${ModID}:DeepDreamPower": {
     "NAME": "Deep Dream",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, make a random card in your hand #yOccult.",
-      "Whenever you play a card this turn, make #b",
+      "每当 you play a card this turn, make a random card in your hand #yOccult.",
+      "每当 you play a card this turn, make #b",
       " random cards in your hand #yOccult."
     ]
   }

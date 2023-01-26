@@ -2,8 +2,8 @@
   "${ModID}:IchorGobletPower": {
     "NAME": "Ichor Goblet",
     "DESCRIPTIONS": [
-      "Gain #b1 Energy at the start of next #b",
-      " turns. If you lose HP, gain it all immediately."
+      "获得 #b1 Energy at the start of next #b",
+      " turns. If you lose 生命, 获得 it all immediately."
     ]
   }
 }

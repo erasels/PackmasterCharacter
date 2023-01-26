@@ -7,7 +7,7 @@
       "Repentant",
       "repentant"
     ],
-    "DESCRIPTION": "When a creature obtains #b8 Penance, it loses #b20 HP and HP loss from this effect is increased by #b10 本场战斗. NL Creatures damaged by Penance lose #b8 Penance"
+    "DESCRIPTION": "When a creature obtains #b8 Penance, it loses #b20 生命 and 生命 loss from this effect is increased by #b10 本场战斗. NL Creatures damaged by Penance lose #b8 Penance"
   },
   {
     "PROPER_NAME": "Confession",
@@ -15,7 +15,7 @@
       "Confession",
       "confession"
     ],
-    "DESCRIPTION": "Whenever you take damage or lose hp, deal damage equal to your #yConfession to all enemies. NL If it isn't your turn reduce Confession by half."
+    "DESCRIPTION": "每当 you take damage or lose 生命, deal damage equal to your #yConfession to all enemies. NL If it isn't your turn reduce Confession by half."
   },
   {
     "PROPER_NAME": "Light",
@@ -23,6 +23,6 @@
       "Light",
       "light"
     ],
-    "DESCRIPTION": "#yOrb - #yPassive : At the end of your turn gain #b1 #yConfession. NL #yEvoke : Gain #b3 #yConfession."
+    "DESCRIPTION": "#yOrb - #yPassive : 回合结束时 获得 #b1 #yConfession. NL #yEvoke : 获得 #b3 #yConfession."
   }
 ]

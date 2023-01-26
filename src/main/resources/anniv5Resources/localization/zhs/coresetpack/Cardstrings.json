@@ -1,7 +1,7 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "Backpack Smack",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If your 抽牌堆 has 10 or more cards, draw !M! cards. NL Otherwise, gain [E] ."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If your 抽牌堆 has 10 or more cards, 抽 !M! 张牌。 NL Otherwise, 获得 [E] ."
   },
   "${ModID}:BoosterTutor": {
     "NAME": "Booster Tutor",
@@ -17,14 +17,14 @@
   },
   "${ModID}:MayhemForm": {
     "NAME": "Unrelenting Form",
-    "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] .",
-    "UPGRADE_DESCRIPTION": "Retain. NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] ."
+    "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and 获得 [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Retain. NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and 获得 [E] [E] ."
   },
   "${ModID}:RippedPecs": {
     "NAME": "Ripped Pecs",
-    "DESCRIPTION": "Gain 1 Strength for each Pack you've played a card from 本场战斗. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength for each Pack you've played a card from 本场战斗.",
-    "EXTENDED_DESCRIPTION": [" NL (Gains {0} Strength.)"]
+    "DESCRIPTION": "获得 1 力量 for each Pack you've played a card from 本场战斗. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 1 力量 for each Pack you've played a card from 本场战斗.",
+    "EXTENDED_DESCRIPTION": [" NL (获得s {0} 力量.)"]
   },
   "${ModID}:Showoff": {
     "NAME": "Showoff",

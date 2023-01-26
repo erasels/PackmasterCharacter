@@ -28,7 +28,7 @@
   },
   "${ModID}:ArtAttack": {
     "NAME": "Art Attack",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL The ${ModID}:Art Card causes the target to lose !M! HP."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL The ${ModID}:Art Card causes the target to lose !M! 生命."
   },
   "${ModID}:ArtAttackArt": {
     "NAME": "Art Attack",
@@ -40,8 +40,8 @@
   },
   "${ModID}:SurprisePack": {
     "NAME": "Surprise Pack",
-    "DESCRIPTION": "Draw !M! cards. NL When *ripped, gain [E].",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL When *ripped, NL gain [E] [E]."
+    "DESCRIPTION": "抽 !M! 张牌。 NL When *ripped, 获得 [E].",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL When *ripped, NL 获得 [E] [E]."
   },
   "${ModID}:SurprisePackArt": {
     "NAME": "Surprise Pack",
@@ -49,7 +49,7 @@
   },
   "${ModID}:SurprisePackText": {
     "NAME": "",
-    "DESCRIPTION": "Draw !M! cards."
+    "DESCRIPTION": "抽 !M! 张牌。"
   },
   "${ModID}:Inspiration": {
     "NAME": "Inspiration",
@@ -88,7 +88,7 @@
   },
   "${ModID}:FragileShrug": {
     "NAME": "Fragile Shrug",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Draw !M! card. NL When *ripped, draw !M! card."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌. NL When *ripped, 抽 !M! 张牌."
   },
   "${ModID}:FragileShrugArt": {
     "NAME": "Fragile Shrug",
@@ -96,7 +96,7 @@
   },
   "${ModID}:FragileShrugText": {
     "NAME": "",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Draw !M! card."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌."
   },
   "${ModID}:HazardousStrike": {
     "NAME": "Hazardous Strike",
@@ -124,8 +124,8 @@
   },
   "${ModID}:LeftBrain": {
     "NAME": "Left Brain",
-    "DESCRIPTION": "Exhaust ALL your ${ModID}:Art and Status cards. Gain !M! Strength for each card Exhausted.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL Exhaust ALL your ${ModID}:Art and Status cards. Gain !M! Strength for each card Exhausted."
+    "DESCRIPTION": "Exhaust ALL your ${ModID}:Art and Status cards. 获得 !M! 点 力量 for each card Exhausted.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL Exhaust ALL your ${ModID}:Art and Status cards. 获得 !M! 点 力量 for each card Exhausted."
   },
   "${ModID}:FuryAttack": {
     "NAME": "Fury",

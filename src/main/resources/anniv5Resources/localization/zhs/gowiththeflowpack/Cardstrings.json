@@ -1,11 +1,11 @@
 {
   "${ModID}:Aqueducts": {
     "NAME": "Aqueducts",
-    "DESCRIPTION": "Whenever you draw an extra card, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "每当 you draw an extra card, deal !M! damage to ALL enemies."
   },
   "${ModID}:Cascade": {
     "NAME": "Cascade",
-    "DESCRIPTION": "${ModID}:Flow. Gain !B! Block for each card discarded this way."
+    "DESCRIPTION": "${ModID}:Flow. 获得 !B! Block for each card discarded this way."
   },
   "${ModID}:Hail": {
     "NAME": "Hail",
@@ -14,7 +14,7 @@
   },
   "${ModID}:HighTide": {
     "NAME": "High Tide",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you ${ModID}:Flow, return this from the 弃牌堆 to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you ${ModID}:Flow, return this from the 弃牌堆 to your hand."
   },
   "${ModID}:Hydraulics": {
     "NAME": "Hydraulics",
@@ -22,8 +22,8 @@
   },
   "${ModID}:IcyFloe": {
     "NAME": "Icy Floe",
-    "DESCRIPTION": "${ModID}:Flow. NL Next turn, NL gain [E] [E].",
-    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL Next turn, NL gain [E] [E] [E]."
+    "DESCRIPTION": "${ModID}:Flow. NL Next turn, NL 获得 [E] [E].",
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL Next turn, NL 获得 [E] [E] [E]."
   },
   "${ModID}:Pneumatics": {
     "NAME": "Pneumatics",
@@ -32,7 +32,7 @@
   },
   "${ModID}:ReleaseValve": {
     "NAME": "Release Valve",
-    "DESCRIPTION": "Whenever you ${ModID}:Flow, enemy takes !M! damage for each card discarded. NL 消耗 。"
+    "DESCRIPTION": "每当 you ${ModID}:Flow, enemy takes !M! damage for each card discarded. NL 消耗 。"
   },
   "${ModID}:Reservoir": {
     "NAME": "Reservoir",

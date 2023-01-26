@@ -9,7 +9,7 @@
   },
   "${ModID}:PerfectDodge": {
     "NAME": "Perfect Dodge",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If your Block is broken exactly this turn, gain !M! Strength."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If your Block is broken exactly this turn, 获得 !M! 点 力量."
   },
   "${ModID}:Greatsword": {
     "NAME": "Greatsword",
@@ -17,7 +17,7 @@
   },
   "${ModID}:HuntingInstincts": {
     "NAME": "Hunter's Instincts",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gains double Block if facing an elite or boss."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得s double Block if facing an elite or boss."
   },
   "${ModID}:SkullClub": {
     "NAME": "Skull Club",
@@ -25,8 +25,8 @@
   },
   "${ModID}:ShellPauldrons": {
     "NAME": "Shell Platemail",
-    "DESCRIPTION": "Gain !M! ${ModID}:Glass_Armor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! ${ModID}:Glass_Armor."
+    "DESCRIPTION": "获得 !M! ${ModID}:Glass_Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL 获得 !M! ${ModID}:Glass_Armor."
   },
   "${ModID}:CoreBlaster": {
     "NAME": "Core Blaster",
@@ -40,7 +40,7 @@
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",
-    "DESCRIPTION": "Gain !M! Block at the end of your turn. NL Whenever you are attacked, deal !M! damage back."
+    "DESCRIPTION": "获得 !M! Block 回合结束时. NL 每当 you are attacked, deal !M! damage back."
   },
   "${ModID}:InfernoDaggers": {
     "NAME": "Inferno Daggers",
@@ -62,12 +62,12 @@
   },
   "${ModID}:GremlinLance": {
     "NAME": "Gremlin Lance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, gain [E] and 抽一张牌."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, 获得 [E] and 抽一张牌."
   },
   "${ModID}:ChampMail": {
     "NAME": "Champion's Platemail",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs and gain !M! Strength. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs and gain !M! Strength."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs and 获得 !M! 点 力量. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs and 获得 !M! 点 力量."
   },
   "${ModID}:CursedBow": {
     "NAME": "Cursed Bow",
@@ -79,7 +79,7 @@
   },
   "${ModID}:EphemeralShroud": {
     "NAME": "Ephemeral Shroud",
-    "DESCRIPTION": "Gain !M! Intangible. NL 消耗 。"
+    "DESCRIPTION": "获得 !M! Intangible. NL 消耗 。"
   },
   "${ModID}:StoneHelm": {
     "NAME": "Stone Helm",
@@ -87,16 +87,16 @@
   },
   "${ModID}:TimepieceTiara": {
     "NAME": "Timepiece Tiara",
-    "DESCRIPTION": "Gain 3 Strength every 12 cards you play.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain 3 Strength every 12 cards you play."
+    "DESCRIPTION": "获得 3 力量 every 12 cards you play.",
+    "UPGRADE_DESCRIPTION": "Innate. NL 获得 3 力量 every 12 cards you play."
   },
   "${ModID}:DonuAmulet": {
     "NAME": "Donu Amulet",
-    "DESCRIPTION": "Gain !M! Strength."
+    "DESCRIPTION": "获得 !M! 点 力量."
   },
   "${ModID}:DecaAmulet": {
     "NAME": "Deca Amulet",
-    "DESCRIPTION": "Gain !M! *Plated *Armor."
+    "DESCRIPTION": "获得 !M! *Plated *Armor."
   },
   "${ModID}:SpireSpear": {
     "NAME": "Spire Spear",
@@ -108,11 +108,11 @@
   },
   "${ModID}:CarvingKnife": {
     "NAME": "Carving Knife",
-    "DESCRIPTION": "造成 !D! 点伤害。 If this kills an Elite or Boss enemy, gain its weapon or armor card. NL Fleeting."
+    "DESCRIPTION": "造成 !D! 点伤害。 If this kills an Elite or Boss enemy, 获得 its weapon or armor card. NL Fleeting."
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "Awakened Dagger",
-    "DESCRIPTION": "造成 !D! 点伤害。 If Fatal, Heal to full HP. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 If Fatal, Heal to full 生命. NL 消耗 。"
   },
   "${ModID}:HuntingContract": {
     "NAME": "Hunting Contract",
@@ -120,11 +120,11 @@
   },
   "${ModID}:HunterRank": {
     "NAME": "Hunter Rank",
-    "DESCRIPTION": "Gain !M! Strength. Increases by 1 for each Elite and Boss enemy you've defeated. NL Gain !${ModID}:m2! Dexterity."
+    "DESCRIPTION": "获得 !M! 点 力量. Increases by 1 for each Elite and Boss enemy you've defeated. NL 获得 !${ModID}:m2! Dexterity."
   },
   "${ModID}:TranqBomb": {
     "NAME": "Tranquilizer Bomb",
-    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target enemy loses !M! Strength. NL 消耗 。"
+    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target enemy loses !M! 点 力量. NL 消耗 。"
   },
   "${ModID}:Paintball": {
     "NAME": "Paintball",

@@ -13,11 +13,11 @@
   },
   "${ModID}:RazorWind": {
     "NAME": "Razor Wind",
-    "DESCRIPTION": "Gain !${ModID}:m2! ${ModID}:Confession. NL Take !M! damage."
+    "DESCRIPTION": "获得 !${ModID}:m2! ${ModID}:Confession. NL Take !M! damage."
   },
   "${ModID}:WeightofContrition": {
     "NAME": "Weight of Contrition",
-    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL Increase ${ModID}:Penance HP loss by !${ModID}:m2! 本场战斗."
+    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL Increase ${ModID}:Penance 生命 loss by !${ModID}:m2! 本场战斗."
   },
   "${ModID}:ChainsofTruth": {
     "NAME": "Chains of Truth",
@@ -29,14 +29,14 @@
   },
   "${ModID}:HolyWrath": {
     "NAME": "Holy Wrath",
-    "DESCRIPTION": "Take !M! damage. NL Return this from the 弃牌堆 to your hand whenever you gain ${ModID}:Confession"
+    "DESCRIPTION": "Take !M! damage. NL Return this from the 弃牌堆 to your hand 每当 you 获得 ${ModID}:Confession"
   },
   "${ModID}:Absolution": {
     "NAME": "Absolution",
-    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL Whenever a creature is damaged by ${ModID}:Penance this turn apply !${ModID}:m2! Weak."
+    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL 每当 a creature is damaged by ${ModID}:Penance this turn apply !${ModID}:m2! Weak."
   },
   "${ModID}:JudgementDay": {
     "NAME": "Judgement Day",
-    "DESCRIPTION": "${ModID}:Manifest !M! Lightning. NL Whenever a Lightning orbs passive effect activates gain !${ModID}:m2! ${ModID}:Confession."
+    "DESCRIPTION": "${ModID}:Manifest !M! Lightning. NL 每当 a Lightning orbs passive effect activates 获得 !${ModID}:m2! ${ModID}:Confession."
   }
 }

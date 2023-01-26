@@ -2,14 +2,14 @@
   "${ModID}:GeomorphologyPower": {
     "NAME": "Geomorphology",
     "DESCRIPTIONS": [
-      "Whenever you Exhaust a card or Channel an Orb, apply #b",
+      "每当 you Exhaust a card or Channel an Orb, apply #b",
       " #yPetra to a random enemy."
     ]
   },
   "${ModID}:PetraPower": {
     "NAME": "Petra",
     "DESCRIPTIONS": [
-      "When you attack this creature, gain ",
+      "When you attack this creature, 获得 ",
       "% of damage dealt as #yBlock next turn."
     ]
   }

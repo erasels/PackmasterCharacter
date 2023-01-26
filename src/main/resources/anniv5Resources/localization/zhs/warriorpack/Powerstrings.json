@@ -10,7 +10,7 @@
   "${ModID}:PolishingPower": {
     "NAME": "Polishing",
     "DESCRIPTIONS": [
-     "Whenever you play an Attack, increase its damage by #b",
+     "每当 you play an Attack, increase its damage by #b",
       ", 本场战斗"
     ]
   }

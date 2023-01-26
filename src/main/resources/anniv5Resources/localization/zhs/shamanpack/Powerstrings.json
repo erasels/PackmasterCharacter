@@ -1,7 +1,7 @@
 {
   "${ModID}:Ignite": {
     "NAME": "Ignite",
-    "DESCRIPTIONS": ["At the end of your turn, lose #b{0} HP.", "At the start of its turn, loses #b{0} HP."]
+    "DESCRIPTIONS": ["回合结束时， lose #b{0} 生命.", "At the start of its turn, loses #b{0} 生命."]
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "Freeze and Burn",
@@ -9,7 +9,7 @@
   },
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",
-    "DESCRIPTIONS": ["Whenever you are attacked this turn, apply #b{0} #yIgnite."]
+    "DESCRIPTIONS": ["每当 you are attacked this turn, apply #b{0} #yIgnite."]
   },
   "${ModID}:Pyromastery": {
     "NAME": "Pyromastery",

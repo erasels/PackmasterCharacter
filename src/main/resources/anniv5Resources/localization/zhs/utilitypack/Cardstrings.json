@@ -1,29 +1,29 @@
 {
   "${ModID}:Excitement": {
     "NAME": "Excitement",
-    "DESCRIPTION": "Gain [E] [E] . NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E] . NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "获得 [E] [E] . NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] . NL Exhaustive !stslib:ex!."
   },
   "${ModID}:LayeredDefenses": {
     "NAME": "Layered Defenses",
-    "DESCRIPTION": "Gain !B! Block for each card type in your hand.",
+    "DESCRIPTION": "获得 !B! Block for each card type in your hand.",
     "EXTENDED_DESCRIPTION": [" NL ({0} card types.)"]
   },
   "${ModID}:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If the enemy intends to attack, deal !D! damage again."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If the enemy intends to attack, deal !D! damage a获得."
   },
   "${ModID}:PlasmaShield": {
     "NAME": "Plasma Shield",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block if you have Plasma. NL Channel !${ModID}:m2! Plasma."
+    "DESCRIPTION": "回合结束时， 获得 !M! Block if you have Plasma. NL Channel !${ModID}:m2! Plasma."
   },
   "${ModID}:Enrage": {
     "NAME": "Enrage",
-    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL Draw !M! cards. NL Enter ${ModID}:Aggression."
+    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL 抽 !M! 张牌。 NL Enter ${ModID}:Aggression."
   },
   "${ModID}:Whispers": {
     "NAME": "Whispers",
-    "DESCRIPTION": "Draw !M! cards. NL Add a *Dazed to your hand."
+    "DESCRIPTION": "抽 !M! 张牌。 NL Add a *Dazed to your hand."
   },
   "${ModID}:Replenish": {
     "NAME": "Replenish",
@@ -32,12 +32,12 @@
   },
   "${ModID}:LesserHex": {
     "NAME": "Lesser Hex",
-    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex to your 弃牌堆. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex+ to your 弃牌堆. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! 点 力量. NL Add a *Greater\u00a0Hex to your 弃牌堆. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! 点 力量. NL Add a *Greater\u00a0Hex+ to your 弃牌堆. NL 消耗 。"
   },
   "${ModID}:GreaterHex": {
     "NAME": "Greater Hex",
-    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! 点 力量. NL 消耗 。"
   },
   "${ModID}:Conjuration": {
     "NAME": "Conjuration",

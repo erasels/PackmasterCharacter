@@ -36,20 +36,20 @@
   },
   "${ModID}:SleeveUp": {
     "NAME": "Sleeve Up",
-    "DESCRIPTION": "Draw !M! cards. NL When this appears in a card reward, the cards are *Foil and gain Retain."
+    "DESCRIPTION": "抽 !M! 张牌。 NL When this appears in a card reward, the cards are *Foil and 获得 Retain."
   },
   "${ModID}:AutoBattler": {
     "NAME": "Auto Battler",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL You play cards automatically."
+    "DESCRIPTION": "获得 !M! 点 力量. NL 获得 !M! Dexterity. NL You play cards automatically."
   },
   "${ModID}:ShiningStyle": {
     "NAME": "Shining Style",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Startup: Gain !${ModID}:m2! *Gold."
+    "DESCRIPTION": "获得 !M! 点 力量. NL 获得 !M! Dexterity. NL Startup: 获得 !${ModID}:m2! *Gold."
   },
   "${ModID}:FinalForm": {
     "NAME": "This Isn't Even My...",
-    "DESCRIPTION": "Ethereal. NL Exhaust 1 random card. NL At the start of your turn, play and Exhaust a copy of it.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL At the start of your turn, play and Exhaust a copy of it.",
+    "DESCRIPTION": "虚无 。 NL Exhaust 1 random card. NL At the start of your turn, play and Exhaust a copy of it.",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL Exhaust 1 card. NL At the start of your turn, play and Exhaust a copy of it.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for Final Form."
     ]

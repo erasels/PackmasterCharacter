@@ -25,7 +25,7 @@
   "${ModID}:BurningPassionPower": {
     "NAME": "Burning Passion",
     "DESCRIPTIONS": [
-      "The first time you gain a buff during your turn, multiply it by #b",
+      "The first time you 获得 a buff during your turn, multiply it by #b",
       "."
     ]
   },
@@ -39,9 +39,9 @@
   "${ModID}:LuciferiumAddictionPower": {
     "NAME": "Luciferium Addiction",
     "DESCRIPTIONS": [
-      "In #b1 turn, add #b2 #yDespairs to your hand and lose #b5 #yStrength.",
+      "In #b1 turn, add #b2 #yDespairs to your hand and lose #b5 #y力量.",
       "In #b",
-      " turns, add #b2 #yDespairs to your hand and lose #b5 #yStrength."
+      " turns, add #b2 #yDespairs to your hand and lose #b5 #y力量."
     ]
   },
   "${ModID}:TradeBeaconPower": {

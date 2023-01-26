@@ -5,15 +5,15 @@
   },
   "${ModID}:FlameBlast": {
     "NAME": "Flame Blast",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If the enemy has Vulnerable, apply !M! ${ModID}:Ignite again. NL Apply !${ModID}:m2! Vulnerable."
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL If the enemy has Vulnerable, apply !M! ${ModID}:Ignite a获得. NL Apply !${ModID}:m2! Vulnerable."
   },
   "${ModID}:IceWall": {
     "NAME": "Ice Wall",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !B! Block next turn. NL Add a Void to the top of your 抽牌堆."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !B! Block next turn. NL Add a Void to the top of your 抽牌堆."
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "Freeze and Burn",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Next turn, deal !D! damage to ALL enemies. NL 消耗 。"
+    "DESCRIPTION": "ALL enemies lose !M! 点 力量 this turn. NL Next turn, deal !D! damage to ALL enemies. NL 消耗 。"
   },
   "${ModID}:Frostfire": {
     "NAME": "Frostfire",
@@ -21,12 +21,12 @@
   },
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Whenever you are attacked this turn, apply !M! ${ModID}:Ignite."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当 you are attacked this turn, apply !M! ${ModID}:Ignite."
   },
   "${ModID}:SnowMelt": {
     "NAME": "Snow Melt",
-    "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL Next turn, draw !M! additional cards.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Next turn, draw !M! additional cards."
+    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL Next turn, draw !M! additional cards.",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL Next turn, draw !M! additional cards."
   },
   "${ModID}:Pyromastery": {
     "NAME": "Pyromastery",
@@ -34,12 +34,12 @@
   },
   "${ModID}:ReadTheFlames": {
     "NAME": "Read the Flames",
-    "DESCRIPTION": "Draw !M! cards. NL Scry !${ModID}:m2!. NL Shuffle a *Fading *Ember into your 抽牌堆."
+    "DESCRIPTION": "抽 !M! 张牌。 NL Scry !${ModID}:m2!. NL Shuffle a *Fading *Ember into your 抽牌堆."
   },
   "${ModID}:FueledByEmbers": {
     "NAME": "Fueled by Embers",
-    "DESCRIPTION": "At the start of your turn, draw !M! card and add !M! *Fading *Ember to your hand and 抽牌堆.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! card and add !M! *Fading *Ember to your hand and 抽牌堆."
+    "DESCRIPTION": "At the start of your turn, 抽 !M! 张牌 and add !M! *Fading *Ember to your hand and 抽牌堆.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, 抽 !M! 张牌 and add !M! *Fading *Ember to your hand and 抽牌堆."
   },
   "${ModID}:FadingEmber": {
     "NAME": "Fading Ember",

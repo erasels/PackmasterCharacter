@@ -5,8 +5,8 @@
   },
   "${ModID}:HuttsGamble": {
     "NAME": "Hutts' Gamble",
-    "DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] and draw 1 card next turn.",
-    "UPGRADE_DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] [E] and draw 1 card next turn."
+    "DESCRIPTION": "If you don't receive unblocked attack damage this turn, 获得 [E] and draw 1 card next turn.",
+    "UPGRADE_DESCRIPTION": "If you don't receive unblocked attack damage this turn, 获得 [E] [E] and draw 1 card next turn."
   },
   "${ModID}:Tricky": {
     "NAME": "Tricky",
@@ -28,7 +28,7 @@
   },
   "${ModID}:Retromation": {
     "NAME": "Retromation",
-    "DESCRIPTION": "At the start of your turn, gain a card from a Pack not available in your draft. NL It gains Ethereal."
+    "DESCRIPTION": "At the start of your turn, 获得 a card from a Pack not available in your draft. NL It 获得s 虚无 。"
   },
   "${ModID}:OddOne": {
     "NAME": "Odd One",
@@ -42,7 +42,7 @@
   },
   "${ModID}:Rhapsody": {
     "NAME": "Rhapsody",
-    "DESCRIPTION": "Gain !M! ${ModID}:Inspiration. NL Draw 2 cards."
+    "DESCRIPTION": "获得 !M! ${ModID}:Inspiration. NL Draw 2 cards."
   },
   "${ModID}:Frostprime": {
     "NAME": "Frost Prime",

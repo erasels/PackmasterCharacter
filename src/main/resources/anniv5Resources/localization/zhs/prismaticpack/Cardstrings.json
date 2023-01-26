@@ -6,7 +6,7 @@
   },
   "${ModID}:PrismaticBarrier": {
     "NAME": "Prismatic Barrier",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you've played a ${ModID}:different\u00a0color card this turn, gain !M! *Plated *Armor and 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you've played a ${ModID}:different\u00a0color card this turn, 获得 !M! *Plated *Armor and 消耗 。"
   },
   "${ModID}:GrabBag": {
     "NAME": "Grab Bag",
@@ -18,7 +18,7 @@
   },
   "${ModID}:ExoticKnowledge": {
     "NAME": "Exotic Knowledge",
-    "DESCRIPTION": "Draw !M! cards. NL If you've played a ${ModID}:different\u00a0color card this turn, draw !${ModID}:m2! more cards."
+    "DESCRIPTION": "抽 !M! 张牌。 NL If you've played a ${ModID}:different\u00a0color card this turn, draw !${ModID}:m2! more cards."
   },
   "${ModID}:ChoiceCut": {
     "NAME": "Choice Cut",
@@ -27,8 +27,8 @@
   },
   "${ModID}:QuirionDryad": {
     "NAME": "Quirion Dryad",
-    "DESCRIPTION": "The first time you play each color of card 本场战斗, gain !M! Strength and !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you play each color of card 本场战斗, gain !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "The first time you play each color of card 本场战斗, 获得 !M! 点 力量 and !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you play each color of card 本场战斗, 获得 !M! 点 力量 and !M! Dexterity."
   },
   "${ModID}:ManyAsOne": {
     "NAME": "Many as One",

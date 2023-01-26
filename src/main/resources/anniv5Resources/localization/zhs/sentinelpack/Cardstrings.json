@@ -24,11 +24,11 @@
   },
   "${ModID}:Swagger": {
     "NAME": "Swagger",
-    "DESCRIPTION": "If you end your turn in a Stance, gain !M! Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL If you end your turn in a Stance, gain !M! Strength and Dexterity."
+    "DESCRIPTION": "If you end your turn in a Stance, 获得 !M! 点 力量 and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL If you end your turn in a Stance, 获得 !M! 点 力量 and Dexterity."
   },
   "${ModID}:MoodSwing": {
     "NAME": "Mood Swing",
-    "DESCRIPTION": "Draw !M! cards. NL Discard 2 cards. NL If you are in ${ModID}:Angry, enter Calm. Otherwise, enter ${ModID}:Angry."
+    "DESCRIPTION": "抽 !M! 张牌。 NL Discard 2 cards. NL If you are in ${ModID}:Angry, enter Calm. Otherwise, enter ${ModID}:Angry."
   }
 }

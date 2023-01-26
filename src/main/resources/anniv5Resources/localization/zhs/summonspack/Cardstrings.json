@@ -6,7 +6,7 @@
       "Dice",
       "Dice increase the damage or #yBlock of the next card you play that deals damage or #yBlocks.",
       "Jinx",
-      "Jinxed enemies lose HP whenever they are debuffed."
+      "Jinxed enemies lose 生命 每当 they are debuffed."
     ],
     "FLAVOR": "Praise RNGesus."
   },
@@ -30,7 +30,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL Channel a ${ModID}:Fire\u00a0Spirit.",
     "EXTENDED_DESCRIPTION": [
       "Ignite",
-      "Ignited creatures lose #b1 HP per stack at the start of their turn."
+      "Ignited creatures lose #b1 生命 per stack at the start of their turn."
       ],
     "FLAVOR": "Burninating the Spire."
   },
@@ -47,13 +47,13 @@
   },
   "${ModID}:Training": {
     "NAME": "Training",
-    "DESCRIPTION": "At the end of your turn Evoke your next orb !M! times.",
+    "DESCRIPTION": "回合结束时 Evoke your next orb !M! times.",
     "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
   },
   "${ModID}:Ambush": {
     "NAME": "Ambush",
-    "DESCRIPTION": "Whenever you Channel an Orb, Evoke it without removing it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Channel an Orb, Evoke it without removing it.",
+    "DESCRIPTION": "每当 you Channel an Orb, Evoke it without removing it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL 每当 you Channel an Orb, Evoke it without removing it.",
     "FLAVOR": "I couldn't find good ambush art so have a pun."
   },
   "${ModID}:Pandas": {

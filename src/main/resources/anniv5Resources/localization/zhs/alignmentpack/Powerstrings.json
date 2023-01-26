@@ -1,26 +1,26 @@
 {
   "${ModID}:GlimpsePower": {
-    "NAME": "Glimpse",
+    "NAME": "轻瞥",
     "DESCRIPTIONS": [
-      "Whenever you draw an #yEthereal card, gain #b",
-      " #yBlock."
+      "每当你抽到一张 #y虚无 牌时， 获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "${ModID}:RememberPower": {
-    "NAME": "Remember",
+    "NAME": "记忆",
     "DESCRIPTIONS": [
-      "At the end of your turn, you may shuffle #b",
-      " card into your 抽牌堆.",
-      " cards into your 抽牌堆.",
-      "shuffle into your 抽牌堆"
+      "回合结束时，可将 #b",
+      " 张牌洗入抽牌堆。",
+      " 张牌洗入抽牌堆。",
+      "选择牌洗入抽牌堆"
     ]
   },
   "${ModID}:TrinePower": {
-    "NAME": "Trine",
+    "NAME": "三位",
     "DESCRIPTIONS": [
-      "The next card you play this turn will be played twice.",
-      "The next #b",
-      " cards you play this turn will be played twice."
+      "本回合下张牌打出 #b2 次。",
+      "本回合下 #b",
+      " 张牌打出 #b2 次。"
     ]
   }
 }

@@ -5,8 +5,8 @@
   },
   "${ModID}:PoisonMastery": {
     "NAME": "Poison Mastery",
-    "DESCRIPTION": "Increase HP loss from Poison by 100%. NL Gain a *Poison *Potion.",
-    "UPGRADE_DESCRIPTION": "Increase HP loss from Poison by 100%. NL Gain !M! *Poison *Potions."
+    "DESCRIPTION": "Increase 生命 loss from Poison by 100%. NL 获得 a *Poison *Potion.",
+    "UPGRADE_DESCRIPTION": "Increase 生命 loss from Poison by 100%. NL 获得 !M! *Poison *Potions."
   },
   "${ModID}:Cannonball": {
     "NAME": "Cannonball",
@@ -14,8 +14,8 @@
   },
   "${ModID}:CaptainsCabin": {
     "NAME": "Captain's Cabin",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! *Cannonball.",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! *Cannonballs."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! *Cannonball.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! *Cannonballs."
   },
   "${ModID}:TerrorOfTheSeas": {
     "NAME": "Terror of the Seas",
@@ -34,7 +34,7 @@
   },
   "${ModID}:BloodRitual": {
     "NAME": "Blood Ritual",
-    "DESCRIPTION": "Lose !M! HP. NL Gain 1 Ritual."
+    "DESCRIPTION": "Lose !M! 生命. NL 获得 1 Ritual."
   },
   "${ModID}:OverTime": {
     "NAME": "Over Time",

@@ -11,24 +11,24 @@
   },
   "${ModID}:Cull": {
     "NAME": "Cull",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL EVERYONE loses !M! HP."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL EVERYONE loses !M! 生命."
   },
   "${ModID}:Potential": {
     "NAME": "Potential",
-    "DESCRIPTION": "Gain !M! Temporary_HP. NL Draw !${ModID}:m2! card. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Gain !M! Temporary_HP. NL Draw !${ModID}:m2! cards. NL 消耗 。"
+    "DESCRIPTION": "获得 !M! Temporary_生命. NL Draw !${ModID}:m2! card. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! Temporary_生命. NL Draw !${ModID}:m2! cards. NL 消耗 。"
   },
   "${ModID}:Aura": {
     "NAME": "Aura",
-    "DESCRIPTION": "Prevent the next time you would lose HP."
+    "DESCRIPTION": "Prevent the next time you would lose 生命."
   },
   "${ModID}:MAXPOWER": {
     "NAME": "MAX POWER",
-    "DESCRIPTION": "Raise your Strength NL to 11."
+    "DESCRIPTION": "Raise your 力量 NL to 11."
   },
   "${ModID}:Flow": {
     "NAME": "Flow",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card played this turn was an Attack, draw !M! cards."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card played this turn was an Attack, 抽 !M! 张牌。"
   },
   "${ModID}:Manaburst": {
     "NAME": "Manaburst",
@@ -42,6 +42,6 @@
   },
   "${ModID}:IchorGoblet": {
     "NAME": "Ichor Goblet",
-    "DESCRIPTION": "Gain [E] at the start of next !M! turns. If you lose HP, gain it all immediately."
+    "DESCRIPTION": "获得 [E] at the start of next !M! turns. If you lose 生命, 获得 it all immediately."
   }
 }

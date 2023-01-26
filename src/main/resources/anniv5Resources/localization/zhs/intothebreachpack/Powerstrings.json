@@ -10,14 +10,14 @@
   "${ModID}:StormGenPower": {
     "NAME": "Storm Generator",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yChannel #b",
+      "回合结束时， #yChannel #b",
       " #yLightning for each enemy that has a debuff."
       ]
   },
   "${ModID}:VoidShockPower": {
     "NAME": "Void Shocker",
     "DESCRIPTIONS": [
-      "Whenever an enemy deals only blocked damage, deal #b",
+      "每当 an enemy deals only blocked damage, deal #b",
       " damage to it."
     ]
   }

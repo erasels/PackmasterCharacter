@@ -9,16 +9,16 @@
   },
   "${ModID}:TearApart": {
     "NAME": "Tear Apart",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, gain [E]. NL ${ModID}:Echo."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, 获得 [E]. NL ${ModID}:Echo."
   },
   "${ModID}:Voices": {
     "NAME": "Voices",
-    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Echo. NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:Echo. NL 消耗 。"
   },
   "${ModID}:Flashlight": {
     "NAME": "Flashlight",
-    "DESCRIPTION": "Innate. NL Gain [E] . NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain [E] . NL Next turn, gain [E]. NL 消耗 。"
+    "DESCRIPTION": "Innate. NL 获得 [E] . NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Innate. NL 获得 [E] . NL Next turn, 获得 [E]. NL 消耗 。"
   },
   "${ModID}:Discharge": {
     "NAME": "Discharge",
@@ -35,12 +35,12 @@
   },
   "${ModID}:Slowing": {
     "NAME": "Slowing",
-    "DESCRIPTION": "At the start of your turn, gain [E] . NL Add !M! *Wounds into your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E] . NL Add a *Wound into your hand."
+    "DESCRIPTION": "At the start of your turn, 获得 [E] . NL Add !M! *Wounds into your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, 获得 [E] . NL Add a *Wound into your hand."
   },
   "${ModID}:Crystallize": {
     "NAME": "Crystallize",
-    "DESCRIPTION": "Gain !M! Block for each [E] available.",
-    "EXTENDED_DESCRIPTION": ["Gain !M! Block for each [E] available. NL (Gains !B! Block.)"]
+    "DESCRIPTION": "获得 !M! Block for each [E] available.",
+    "EXTENDED_DESCRIPTION": ["获得 !M! Block for each [E] available. NL (获得s !B! 点 格挡 。)"]
   }
 }

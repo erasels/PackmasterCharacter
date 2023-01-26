@@ -1,7 +1,7 @@
 {
   "${ModID}:AddClawTagAndMakeClawModifier": {
     "TEXT": [
-      " NL Gain a *Ghost *Claw.",
+      " NL 获得 a *Ghost *Claw.",
       " Claw"
     ]
   },

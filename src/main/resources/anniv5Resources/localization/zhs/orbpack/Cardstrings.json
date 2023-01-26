@@ -5,13 +5,13 @@
   },
   "${ModID}:Augment": {
     "NAME": "Augment",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no empty Orb slots, gain 1 Orb slot.",
-    "UPGRADE_DESCRIPTION": "Retain. NL 获得 !B! 点 格挡 。 NL If you have no empty Orb slots, gain 1 Orb slot."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no empty Orb slots, 获得 1 Orb slot.",
+    "UPGRADE_DESCRIPTION": "Retain. NL 获得 !B! 点 格挡 。 NL If you have no empty Orb slots, 获得 1 Orb slot."
   },
   "${ModID}:Allocate": {
     "NAME": "Allocate",
-    "DESCRIPTION": "Gain 1 Orb slot for each enemy in combat.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Orb slot for each enemy in combat."
+    "DESCRIPTION": "获得 1 Orb slot for each enemy in combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL 获得 1 Orb slot for each enemy in combat."
   },
   "${ModID}:Stockpile": {
     "NAME": "Stockpile",
@@ -36,6 +36,6 @@
   },
   "${ModID}:Thunderstruck": {
     "NAME": "Thunderstruck",
-    "DESCRIPTION": "Whenever you play a card containing \"Strike\", Channel !M! Lightning."
+    "DESCRIPTION": "每当 you play a card containing \"Strike\", Channel !M! Lightning."
   }
 }

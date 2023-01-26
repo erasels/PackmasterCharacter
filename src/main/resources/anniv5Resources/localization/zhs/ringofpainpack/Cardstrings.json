@@ -8,12 +8,12 @@
   "${ModID}:Slime": {
     "NAME": "Viscid One",
     "DESCRIPTION": "Apply !M! Poison. NL ${ModID}:Evolves when you apply a debuff.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Enemy loses HP equal to its Poison.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Enemy loses 生命 equal to its Poison.",
     "EXTENDED_DESCRIPTION": ["Viscid Twins"]
   },
   "${ModID}:Fright": {
     "NAME": "Skittering Fright",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If the enemy intends to attack, draw !M! cards."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If the enemy intends to attack, 抽 !M! 张牌。"
   },
   "${ModID}:Shackles": {
     "NAME": "Shackles",
@@ -23,7 +23,7 @@
   },
   "${ModID}:IceBeast": {
     "NAME": "Ice Beast",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Evolves when you gain Block.",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Evolves when you 获得 格挡 。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL Channel !M! Frost.",
     "EXTENDED_DESCRIPTION": ["Ancient Ice Beast"]
   },
@@ -33,7 +33,7 @@
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
-    "DESCRIPTION": "Ethereal. NL Exhaust !M! cards in your 抽牌堆. NL Put a card from your 弃牌堆 into your hand and give it 消耗 。",
+    "DESCRIPTION": "虚无 。 NL Exhaust !M! cards in your 抽牌堆. NL Put a card from your 弃牌堆 into your hand and give it 消耗 。",
     "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your 抽牌堆. NL Put a card from your 弃牌堆 into your hand and give it 消耗 。"
   },
   "${ModID}:Owl": {
@@ -48,7 +48,7 @@
   },
   "${ModID}:Connection": {
     "NAME": "Connection",
-    "DESCRIPTION": "Whenever you play a card, upgrade it and ALL copies of it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, upgrade it and ALL copies of it."
+    "DESCRIPTION": "每当 you play a card, upgrade it and ALL copies of it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL 每当 you play a card, upgrade it and ALL copies of it."
   }
 }

@@ -31,11 +31,11 @@
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "${ModID}:Modify !M! random cards in your hand : ${ModID}:Inscribed. NL Gain !${ModID}:m2! Focus. NL Exhaust"
+    "DESCRIPTION": "${ModID}:Modify !M! random cards in your hand : ${ModID}:Inscribed. NL 获得 !${ModID}:m2! Focus. NL Exhaust"
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",
-    "DESCRIPTION": "Whenever you channel an orb gain !M! Focus until your next turn."
+    "DESCRIPTION": "每当 you channel an orb 获得 !M! Focus until your next turn."
   },
   "${ModID}:ScarabPlague": {
     "NAME": "Scarab Plague",

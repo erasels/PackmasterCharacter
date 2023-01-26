@@ -16,20 +16,20 @@
   },
   "${ModID}:DynamicVial": {
     "NAME": "Dynamic Vial",
-    "DESCRIPTION": "Choose: Gain [E] [E] or Draw 3 cards. NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["Gain [E] [E] .", "Draw 3 cards."]
+    "DESCRIPTION": "Choose: 获得 [E] [E] or Draw 3 cards. NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["获得 [E] [E] .", "Draw 3 cards."]
   },
   "${ModID}:MetallicVial": {
     "NAME": "Metallic Vial",
-    "DESCRIPTION": "Choose: Gain 4 Plated Armor, Gain 3 Thorns, or Gain 2 Artifact. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose: Gain 4 Plated Armor, Gain 3 Thorns, or Gain 2 Artifact. NL stslib:Exhaustive !stslib:ex!.",
-    "EXTENDED_DESCRIPTION": ["Gain 4 Plated Armor.", "Gain 3 Thorns.","Gain 2 Artifact."]
+    "DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact. NL stslib:Exhaustive !stslib:ex!.",
+    "EXTENDED_DESCRIPTION": ["获得 4 Plated Armor.", "获得 3 Thorns.","获得 2 Artifact."]
   },
   "${ModID}:QuickBrew": {
     "NAME": "Quick Brew",
-    "DESCRIPTION": "Choose: Gain 2 Strength, or Gain 3 Focus.",
-    "UPGRADE_DESCRIPTION": "Choose: Gain 2 Strength, Gain 2 Dexterity, or Gain 2 Focus.",
-    "EXTENDED_DESCRIPTION": ["Gain 2 Strength.", "Gain 2 Dexterity.","Gain 2 Focus."]
+    "DESCRIPTION": "Choose: 获得 2 力量, or 获得 3 Focus.",
+    "UPGRADE_DESCRIPTION": "Choose: 获得 2 力量, 获得 2 Dexterity, or 获得 2 Focus.",
+    "EXTENDED_DESCRIPTION": ["获得 2 力量.", "获得 2 Dexterity.","获得 2 Focus."]
   },
   "${ModID}:ToxicVial": {
     "NAME": "Toxic Vial",
@@ -39,9 +39,9 @@
   },
   "${ModID}:AttackVial": {
     "NAME": "Attack Vial",
-    "DESCRIPTION": "Choose 1 of 3 Attacks to gain. It costs 0 until played. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Attacks to gain. It costs 0 until played. NL stslib:Exhaustive !stslib:ex!.",
-    "EXTENDED_DESCRIPTION": ["Choose 1 of 3 Attacks to gain. It costs 0 until played."]
+    "DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played. NL stslib:Exhaustive !stslib:ex!.",
+    "EXTENDED_DESCRIPTION": ["Choose 1 of 3 Attacks to 获得. It costs 0 until played."]
   },
   "${ModID}:ChaosVial": {
     "NAME": "Chaos Vial",

@@ -3,7 +3,7 @@
     "NAME": "Mini Hakkero",
     "FLAVOR": "A small elemental furnace, generates enough heat and energy to destroy a mountain.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b%s #y${ModID}:Charge Up."
+      "At the start of your turn, 获得 #b%s #y${ModID}:Charge Up."
     ]
   }
 }

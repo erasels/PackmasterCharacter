@@ -8,7 +8,7 @@
 		"NAME": "Dust Tornado"
 	},
 	"${ModID}:Enervate":	{
-		"DESCRIPTION": "Enemy loses half of its Strength, then loses !M! more. NL 消耗 。",
+		"DESCRIPTION": "Enemy loses half of its 力量, then loses !M! more. NL 消耗 。",
 		"NAME": "Enervate"
 	},
 	"${ModID}:Excavation":	{
@@ -16,11 +16,11 @@
 		"NAME": "Excavation"
 	},
 	"${ModID}:Geomorphology":	{
-		"DESCRIPTION": "Whenever you Exhaust a card or Channel an Orb, apply !M! ${ModID}:Petra to a random enemy.",
+		"DESCRIPTION": "每当 you Exhaust a card or Channel an Orb, apply !M! ${ModID}:Petra to a random enemy.",
 		"NAME": "Geomorphology"
 	},
 	"${ModID}:GeothermalHeating":	{
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! additional Block for each distinct debuff on the target.",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! additional Block for each distinct debuff on the target.",
 		"NAME": "Geothermal Heating"
 	},
 	"${ModID}:Lithosphere":	{

@@ -5,43 +5,43 @@
   },
   "${ModID}:FairTrade": {
     "NAME": "Fair Trade",
-    "DESCRIPTION": "Deal !D! damage twice. NL You and the enemy gain !M! Strength each."
+    "DESCRIPTION": "Deal !D! damage twice. NL You and the enemy 获得 !M! 点 力量 each."
   },
   "${ModID}:Smokescreen": {
     "NAME": "Smokescreen",
-    "DESCRIPTION": "EVERYONE gains !B! Block. NL ALL enemies lose !M! HP."
+    "DESCRIPTION": "EVERYONE 获得s !B! 点 格挡 。 NL ALL enemies lose !M! 生命."
   },
   "${ModID}:NullHammer": {
     "NAME": "Null Hammer",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Steal all buffs this enemy gains until your next turn."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Steal all buffs this enemy 获得s until your next turn."
   },
   "${ModID}:Magnet": {
     "NAME": "Magnet",
     "DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from the enemy. NL 消耗 。",
     "UPGRADE_DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from ALL enemies. NL 消耗 。"
   },
-  "${ModID}:StrengthSap": {
-    "NAME": "Strength Sap",
-    "DESCRIPTION": "Apply !M! Weak. NL If the enemy has positive Strength, steal !${ModID}:m2! Strength. NL Exhaustive !stslib:ex!."
+  "${ModID}:力量Sap": {
+    "NAME": "力量 Sap",
+    "DESCRIPTION": "Apply !M! Weak. NL If the enemy has positive 力量, steal !${ModID}:m2! 力量. NL Exhaustive !stslib:ex!."
   },
   "${ModID}:CunningPoison": {
     "NAME": "Cunning Poison",
-    "DESCRIPTION": "Apply !M! Poison to the highest HP enemy. NL If it dies while Poisoned, steal !${ModID}:m2! Gold. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! Poison to the highest 生命 enemy. NL If it dies while Poisoned, steal !${ModID}:m2! Gold. NL 消耗 。"
   },
   "${ModID}:MindControl": {
     "NAME": "Mind Control",
-    "DESCRIPTION": "Choose an enemy with !M! times X or less HP. NL It will attack other enemies for the rest of combat. NL 消耗 。",
+    "DESCRIPTION": "Choose an enemy with !M! times X or less 生命. NL It will attack other enemies for the rest of combat. NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "This enemy has too much HP."
+      "This enemy has too much 生命."
     ]
   },
   "${ModID}:Witchcraft": {
     "NAME": "Witchcraft",
-    "DESCRIPTION": "Steal !M! HP from the enemy. If Fatal, obtain a Potion that gives 8 Temporary_HP. NL 消耗 。"
+    "DESCRIPTION": "Steal !M! 生命 from the enemy. If Fatal, obtain a Potion that gives 8 Temporary_生命. NL 消耗 。"
   },
   "${ModID}:ThieveryMastery": {
     "NAME": "Thievery Mastery",
-    "DESCRIPTION": "You become a Master Thief. NL (Whenever you steal something, gain twice as much of it)",
-    "UPGRADE_DESCRIPTION": "Innate. NL You become a Master Thief. NL (Whenever you steal something, gain twice as much of it)"
+    "DESCRIPTION": "You become a Master Thief. NL (每当 you steal something, 获得 twice as much of it)",
+    "UPGRADE_DESCRIPTION": "Innate. NL You become a Master Thief. NL (每当 you steal something, 获得 twice as much of it)"
   }
 }

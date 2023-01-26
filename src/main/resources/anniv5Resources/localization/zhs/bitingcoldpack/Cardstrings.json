@@ -1,11 +1,11 @@
 {
   "${ModID}:ColdSeason": {
     "NAME": "Cold Season",
-    "DESCRIPTION": "Whenever an enemy loses HP from ${ModID}:Frostbite, apply !M! ${ModID}:Frostbite."
+    "DESCRIPTION": "每当 an enemy loses 生命 from ${ModID}:Frostbite, apply !M! ${ModID}:Frostbite."
   },
   "${ModID}:FrigidBody": {
     "NAME": "Frigid Body",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Whenever you are attacked this turn, apply ${ModID}:Frostbite equal to blocked damage."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当 you are attacked this turn, apply ${ModID}:Frostbite equal to blocked damage."
   },
   "${ModID}:Frostburn": {
     "NAME": "Frostburn",
@@ -13,11 +13,11 @@
   },
   "${ModID}:Glaciate": {
     "NAME": "Glaciate",
-    "DESCRIPTION": "Whenever you apply ${ModID}:Frostbite, gain !M! Vigor."
+    "DESCRIPTION": "每当 you apply ${ModID}:Frostbite, 获得 !M! Vigor."
   },
   "${ModID}:GrowingAffliction": {
     "NAME": "Growing Affliction",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Whenever you apply a debuff, return this from the 弃牌堆 to your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当 you apply a debuff, return this from the 弃牌堆 to your hand."
   },
   "${ModID}:IcicleSpear": {
     "NAME": "Icicle Spear",
@@ -37,6 +37,6 @@
   },
   "${ModID}:Subdue": {
     "NAME": "Subdue",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card played in 本场战斗 was an Attack, gain !B! additional Block."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card played in 本场战斗 was an Attack, 获得 !B! additional 格挡 。"
   }
 }

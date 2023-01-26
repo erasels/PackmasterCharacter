@@ -2,13 +2,13 @@
   "${ModID}:MakeshiftSwordPower": {
     "NAME": "Makeshift Sword",
     "DESCRIPTIONS": [
-        "Whenever a card is created during combat, gain #b%d #yVigor."
+        "每当 a card is created during combat, 获得 #b%d #yVigor."
       ]
   },
   "${ModID}:MakeshiftShieldPower": {
     "NAME": "Makeshift Shield",
     "DESCRIPTIONS": [
-        "Whenever a card is created during combat, gain #b%d #yBlock."
+        "每当 a card is created during combat, 获得 #b%d #y格挡 。"
       ]
   },
   "${ModID}:FirewallPower": {

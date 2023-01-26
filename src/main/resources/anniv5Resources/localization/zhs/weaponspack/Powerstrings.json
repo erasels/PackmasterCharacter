@@ -6,14 +6,14 @@
   "${ModID}:SalvagerPower": {
     "NAME": "Salvager",
     "DESCRIPTIONS": [
-      "Whenever a #yWeapon is destroyed, gain #b",
+      "每当 a #yWeapon is destroyed, 获得 #b",
       " [E] ."
     ]
   },
   "${ModID}:WeaponMasteryPower": {
     "NAME": "Weapon Mastery",
     "DESCRIPTIONS": [
-      "Whenever you equip a #yWeapon, draw #b",
+      "每当 you equip a #yWeapon, draw #b",
       " card.",
       " cards."
     ]

@@ -20,7 +20,7 @@
       "力量！",
       "放逐。",
       "获得。",
-      "Translator note: The 2 dots up here follows the structure 'Choose a Pack to banish with '+'Banishing Decree'+'.'   and 'Choose a Pack to gain with '+'Banishing Decree'+'.' respectively. "
+      "Translator note: The 2 dots up here follows the structure 'Choose a Pack to banish with '+'Banishing Decree'+'.'   and 'Choose a Pack to 获得 with '+'Banishing Decree'+'.' respectively. "
     ]
   },
   "${ModID}:CollectorBadge": {
@@ -51,7 +51,7 @@
     "NAME": "大师增强盒",
     "FLAVOR": "批发购买价更赢。",
     "DESCRIPTIONS": [
-      "拾起时， 从 #b3 种卡包中选择 #b1 种，重复该过程 #b3 次。战斗结束时，额外获得 #b1 次其所含牌的卡牌奖励。",
+      "拾起时， 从 #b3 种卡包中选择 #b1 种，重复该过程 #b3 次。战斗结束时，额外获得该卡包内 #b1 张牌。",
       " NL 已选的卡包： ",
       "选择一种卡包。"
     ]

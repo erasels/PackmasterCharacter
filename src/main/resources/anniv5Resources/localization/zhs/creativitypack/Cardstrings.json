@@ -1,11 +1,11 @@
 {
   "${ModID}:MakeshiftSword": {
     "NAME": "Makeshift Sword",
-    "DESCRIPTION": "Whenever a card is created during combat, gain !M! Vigor."
+    "DESCRIPTION": "每当 a card is created during combat, 获得 !M! Vigor."
   },
   "${ModID}:MakeshiftShield": {
     "NAME": "Makeshift Shield",
-    "DESCRIPTION": "Whenever a card is created during combat, gain !M! Block."
+    "DESCRIPTION": "每当 a card is created during combat, 获得 !M! 格挡 。"
   },
   "${ModID}:PaintBrush": {
     "NAME": "Paint Brush",
@@ -17,7 +17,7 @@
   },
   "${ModID}:Souvenirs": {
     "NAME": "Souvenirs",
-    "DESCRIPTION": "{@@}Create an *Insight, *Smite or *Safety in hand. It draws a card. {!Upgrades!|>0= NL Do it again.}"
+    "DESCRIPTION": "{@@}Create an *Insight, *Smite or *Safety in hand. It draws a card. {!Upgrades!|>0= NL Do it a获得.}"
   },
   "${ModID}:Mimicry": {
     "NAME": "Mimicry",
@@ -25,11 +25,11 @@
   },
   "${ModID}:CraftyMove": {
     "NAME": "Crafty Move",
-    "DESCRIPTION": "造成 !D! 点伤害。 If a card has been created this turn, gain [E] and 抽一张牌."
+    "DESCRIPTION": "造成 !D! 点伤害。 If a card has been created this turn, 获得 [E] and 抽一张牌."
   },
   "${ModID}:BarrierBeacon": {
     "NAME": "Barrier Beacon",
-    "DESCRIPTION": "{@@}Gain !B! Block, create a{!Upgrades!|>0=n upgraded} copy of this in hand. 消耗 。"
+    "DESCRIPTION": "{@@}获得 !B! Block, create a{!Upgrades!|>0=n upgraded} copy of this in hand. 消耗 。"
   },
   "${ModID}:StrikingStrike": {
     "NAME": "Striking Strike",

@@ -24,21 +24,21 @@
       "Pandas",
       "pandas"
     ],
-    "DESCRIPTION": "Orb: Deals damage to a random enemy at the end of your turn."
+    "DESCRIPTION": "Orb: Deals damage to a random enemy 回合结束时."
   },
   {
     "PROPER_NAME": "Wolf",
     "NAMES": [
       "wolf"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the enemy with the least HP. Damage is increased by the number of orbs that are #yChanneled. When #yEvoked, gain an orb slot."
+    "DESCRIPTION": "Orb: Deals damage to the enemy with the least 生命. Damage is increased by the number of orbs that are #yChanneled. When #yEvoked, 获得 an orb slot."
   },
   {
     "PROPER_NAME": "Porcupine",
     "NAMES": [
       "porcupine"
     ],
-    "DESCRIPTION": "Orb: Generates #yQuills. When #yEvoked, gain #yThorns."
+    "DESCRIPTION": "Orb: Generates #yQuills. When #yEvoked, 获得 #yThorns."
   },
   {
     "PROPER_NAME": "Leprechaun",
@@ -52,7 +52,7 @@
     "NAMES": [
       "jinx"
     ],
-    "DESCRIPTION": "Jinxed enemies lose HP whenever they receive a debuff."
+    "DESCRIPTION": "Jinxed enemies lose 生命 每当 they receive a debuff."
   },
   {
     "PROPER_NAME": "Fire\u00a0Spirit",
@@ -60,6 +60,6 @@
       "fire\u00a0spirit",
       "Fire\u00a0spirit"
     ],
-    "DESCRIPTION": "Orb: Apply #yIgnite to ALL enemies. Gain #yFocus when evoked."
+    "DESCRIPTION": "Orb: Apply #yIgnite to ALL enemies. 获得 #yFocus when evoked."
   }
 ]

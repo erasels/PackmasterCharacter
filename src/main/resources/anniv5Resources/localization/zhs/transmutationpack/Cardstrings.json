@@ -1,8 +1,8 @@
 {
   "${ModID}:AmalgamateWaters": {
     "NAME": "Amalgamate Waters",
-    "DESCRIPTION": "Draw a ${ModID}:Mutable card. NL Gain ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them.",
-    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Mutable cards. NL Gain ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them."
+    "DESCRIPTION": "Draw a ${ModID}:Mutable card. NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them.",
+    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Mutable cards. NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them."
   },
   "${ModID}:CrystalLattice": {
     "NAME": "Crystal Lattice",
@@ -10,7 +10,7 @@
   },
   "${ModID}:CrystalResonance": {
     "NAME": "Crystal Resonance",
-    "DESCRIPTION": "Whenever you ${ModID}:Transmute, gain !M! Strength."
+    "DESCRIPTION": "每当 you ${ModID}:Transmute, 获得 !M! 点 力量."
   },
   "${ModID}:Drench": {
     "NAME": "Drench",
@@ -19,7 +19,7 @@
   "${ModID}:FrozenCapsule": {
     "NAME": "Frozen Capsule",
     "DESCRIPTION": "${ModID}:Mutable: 造成 !D! 点伤害。 NL ${ModID}:Mutable: When ${ModID}:Transmuted, 抽一张牌.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Mutable: 造成 !D! 点伤害。 NL ${ModID}:Mutable: When ${ModID}:Transmuted, draw !M! cards."
+    "UPGRADE_DESCRIPTION": "${ModID}:Mutable: 造成 !D! 点伤害。 NL ${ModID}:Mutable: When ${ModID}:Transmuted, 抽 !M! 张牌。"
   },
   "${ModID}:GhostlyMist": {
     "NAME": "Ghostly Mist",
@@ -70,9 +70,9 @@
       "Free to play."
     ]
   },
-  "${ModID}:GainBlockEffect": {
+  "${ModID}:获得BlockEffect": {
     "EXTENDED_DESCRIPTION": [
-      "Gain ",
+      "获得 ",
       " Block"
     ]
   },

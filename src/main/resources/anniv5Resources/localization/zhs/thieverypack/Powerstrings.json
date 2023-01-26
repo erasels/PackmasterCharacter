@@ -2,7 +2,7 @@
   "${ModID}:DeceivedPower": {
     "NAME": "Deceived",
     "DESCRIPTIONS": [
-      "If this creature dies while #yPoisoned, you gain #b",
+      "If this creature dies while #yPoisoned, you 获得 #b",
       " gold."
     ]
   },
@@ -15,7 +15,7 @@
   "${ModID}:ThieveryMasteryPower": {
     "NAME": "Master Thief",
     "DESCRIPTIONS": [
-      "Whenever you steal something, gain twice as much of it."
+      "每当 you steal something, 获得 twice as much of it."
     ]
   },
   "${ModID}:MindControlledPower": {

@@ -1,17 +1,17 @@
 {
-  "${ModID}:AwakenDeathPower": {
+  "${ModID}:AwakenDeat生命ower": {
     "NAME": "Awakening",
     "DESCRIPTIONS": [
       "When you would die, heal #b",
-      " HP and remove this effect. Heals half this value at end of combat if untriggered."
+      " 生命 and remove this effect. Heals half this value at end of combat if untriggered."
     ]
   },
   "${ModID}:ChronoBoostPower": {
     "NAME": "Chrono Boost",
     "DESCRIPTIONS": [
       "After playing #b",
-      " more cards, gain #b",
-      " #yStrength."
+      " more cards, 获得 #b",
+      " #y力量."
     ]
   },
   "${ModID}:DeEnergizedPower": {
@@ -24,14 +24,14 @@
   "${ModID}:VexVinciblePower": {
     "NAME": "Invincible",
     "DESCRIPTIONS": [
-      "Caps all damage and HP loss taken to #b",
+      "Caps all damage and 生命 loss taken to #b",
       " in a turn. Removed after activation.",
-      "Caps all damage and HP loss taken to #b",
+      "Caps all damage and 生命 loss taken to #b",
       " in a turn. Removed after #b",
       " activations."
     ]
   },
-  "${ModID}:NextTurnGainSlimeCrushPower": {
+  "${ModID}:NextTurn获得SlimeCrus生命ower": {
     "NAME": "Preparing Crush",
     "DESCRIPTIONS": [
       "This shouldn't ever actually appear, right?"

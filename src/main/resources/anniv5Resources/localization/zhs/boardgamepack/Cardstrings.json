@@ -14,7 +14,7 @@
   },
   "${ModID}:PocketAce": {
     "NAME": "PocketAce",
-    "DESCRIPTION": "{@@}Draw !M! cards. NL Discard !${ModID}:m2! cards. NL 消耗 。"
+    "DESCRIPTION": "{@@}抽 !M! 张牌。 NL Discard !${ModID}:m2! cards. NL 消耗 。"
   },
   "${ModID}:Reroller": {
     "NAME": "Reroller",
@@ -26,7 +26,7 @@
   },
   "${ModID}:AllIn": {
     "NAME": "All In",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Draw !M! cards. NL Gain !M! [E] . NL Skip your next turn. NL 消耗 。"
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 获得 !M! [E] . NL Skip your next turn. NL 消耗 。"
   },
   "${ModID}:D20": {
     "NAME": "D20!",
@@ -40,7 +40,7 @@
   },
   "${ModID}:LevelUp": {
     "NAME": "Level Up!",
-    "DESCRIPTION": "Gain !M! ${ModID}:Advantage. NL Roll 2 ${ModID}:D6."
+    "DESCRIPTION": "获得 !M! ${ModID}:Advantage. NL Roll 2 ${ModID}:D6."
   },
   "${ModID}:BoardGameKeywordManager": {
     "NAME": "KeywordManager",

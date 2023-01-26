@@ -18,23 +18,23 @@
   },
   "${ModID}:GlaiveThrow": {
     "NAME": "Glaive Throw",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Draw !M! cards. NL Discard !M! cards."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL Discard !M! cards."
   },
   "${ModID}:Crunch": {
     "NAME": "Crunch",
-    "DESCRIPTION": "Unplayable. Retain. NL When you draw this card, draw !M! cards."
+    "DESCRIPTION": "Unplayable. Retain. NL When you draw this card, 抽 !M! 张牌。"
   },
   "${ModID}:Lie": {
     "NAME": "Lie",
-    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL Add a *Weight to your hand."
+    "DESCRIPTION": "Enemy loses !M! 点 力量 this turn. NL Add a *Weight to your hand."
   },
   "${ModID}:Frontflip": {
     "NAME": "Frontflip",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Draw !M! cards, discard Unplayable cards drawn."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌s, discard Unplayable cards drawn."
   },
   "${ModID}:HammerThrow": {
     "NAME": "Hammer Throw",
-    "DESCRIPTION": "Whenever a card is Retained, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "每当 a card is Retained, deal !M! damage to ALL enemies."
   },
   "${ModID}:Flail": {
     "NAME": "Flail",
@@ -42,7 +42,7 @@
   },
   "${ModID}:Wisdom": {
     "NAME": "Wisdom",
-    "DESCRIPTION": "Gain [E]. NL Discard any number of cards in your hand. Draw that many cards. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Discard any number of cards in your hand. Draw that many cards. NL 消耗 。"
+    "DESCRIPTION": "获得 [E]. NL Discard any number of cards in your hand. Draw that many cards. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E]. NL Discard any number of cards in your hand. Draw that many cards. NL 消耗 。"
   }
 }

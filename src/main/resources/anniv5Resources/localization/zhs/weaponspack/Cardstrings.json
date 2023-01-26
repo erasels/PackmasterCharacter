@@ -25,8 +25,8 @@
   },
   "${ModID}:Salvager": {
     "NAME": "Salvager",
-    "DESCRIPTION": "Whenever a ${ModID}:Weapon is destroyed, gain [E].",
-    "UPGRADE_DESCRIPTION": "Whenever a ${ModID}:Weapon is destroyed, gain [E] [E]."
+    "DESCRIPTION": "每当 a ${ModID}:Weapon is destroyed, 获得 [E].",
+    "UPGRADE_DESCRIPTION": "每当 a ${ModID}:Weapon is destroyed, 获得 [E] [E]."
   },
   "${ModID}:ForgingHammer": {
     "NAME": "Forging Hammer",
@@ -37,24 +37,24 @@
     "DESCRIPTION": "Choose 1 of 3 Swords. NL Equip a 3 / !M! ${ModID}:Weapon with an additional effect.",
     "EXTENDED_DESCRIPTION": [
       "Additional Effects",
-      "#rFire: Whenever you attack with this Weapon, deal #b3 damage to ALL enemies. NL #yWisdom: Whenever you attack with this Weapon, 抽一张牌. NL #pChaos: Whenever you attack with this Weapon, add a random card into your hand."
+      "#rFire: 每当 you attack with this Weapon, deal #b3 damage to ALL enemies. NL #yWisdom: 每当 you attack with this Weapon, 抽一张牌. NL #pChaos: 每当 you attack with this Weapon, add a random card into your hand."
     ]
   },
   "${ModID}:SwordOfFire": {
     "NAME": "Sword of Fire",
-    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, deal 3 damage to ALL enemies."
+    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL 每当 you attack with this ${ModID}:Weapon, deal 3 damage to ALL enemies."
   },
   "${ModID}:SwordOfWisdom": {
     "NAME": "Sword of Wisdom",
-    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, 抽一张牌."
+    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL 每当 you attack with this ${ModID}:Weapon, 抽一张牌."
   },
   "${ModID}:SwordOfChaos": {
     "NAME": "Sword of Chaos",
-    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, add a random card into your hand."
+    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL 每当 you attack with this ${ModID}:Weapon, add a random card into your hand."
   },
   "${ModID}:WeaponMastery": {
     "NAME": "Weapon Mastery",
-    "DESCRIPTION": "Whenever you equip a ${ModID}:Weapon, draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Whenever you equip a ${ModID}:Weapon, draw !M! cards."
+    "DESCRIPTION": "每当 you equip a ${ModID}:Weapon, 抽 !M! 张牌.",
+    "UPGRADE_DESCRIPTION": "每当 you equip a ${ModID}:Weapon, 抽 !M! 张牌。"
   }
 }

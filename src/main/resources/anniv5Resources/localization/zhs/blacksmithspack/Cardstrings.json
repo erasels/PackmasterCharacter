@@ -9,11 +9,11 @@
   },
   "${ModID}:HeartOfTheForge": {
     "NAME": "Heart of the Forge",
-    "DESCRIPTION": "{@@}Retain. NL Gain{!M!|>1= !M!} [E]. When Retained, Upgrade this. NL Can be Upgraded any number of times. NL 消耗 。"
+    "DESCRIPTION": "{@@}Retain. NL 获得{!M!|>1= !M!} [E]. When Retained, Upgrade this. NL Can be Upgraded any number of times. NL 消耗 。"
   },
   "${ModID}:SharpeningSheath": {
     "NAME": "Sharpening Sheath",
-    "DESCRIPTION": "Draw !M! cards and Upgrade them."
+    "DESCRIPTION": "抽 !M! 张牌s and Upgrade them."
   },
   "${ModID}:CarelessSwing": {
     "NAME": "Careless Swing",
@@ -33,7 +33,7 @@
   },
   "${ModID}:BlacksmithsShield": {
     "NAME": "Blacksmith's Shield",
-    "DESCRIPTION": "After you play a card, gain 1 Block for each Upgrade on it."
+    "DESCRIPTION": "After you play a card, 获得 1 Block for each Upgrade on it."
   },
   "${ModID}:Masterwork": {
     "NAME": "Masterwork",

@@ -3,13 +3,13 @@
     "NAME": "Magic Protection",
     "DESCRIPTIONS": [
       "Channel #b",
-      " #yFrost whenever you play a #yMagic card this turn."
+      " #yFrost 每当 you play a #yMagic card this turn."
     ]
   },
   "${ModID}:DiehardPower": {
     "NAME": "Diehard",
     "DESCRIPTIONS": [
-      "Next turn, gain #b",
+      "Next turn, 获得 #b",
       " #yWeak and #yFrail."
     ]
   }

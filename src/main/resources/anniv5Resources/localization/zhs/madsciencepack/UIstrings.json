@@ -12,10 +12,10 @@
       " ${ModID}:Frostbite.",
       "Retain. NL ",
       " NL Play ",
-      " NL Gain 6 Block.",
-      " NL Gain 8 Block.",
-      " NL Play again, unmodified.",
-      " NL Gain a *Cannonball.",
+      " NL 获得 6 格挡 。",
+      " NL 获得 8 格挡 。",
+      " NL Play a获得, unmodified.",
+      " NL 获得 a *Cannonball.",
       " NL 抽一张牌."
     ]
   },

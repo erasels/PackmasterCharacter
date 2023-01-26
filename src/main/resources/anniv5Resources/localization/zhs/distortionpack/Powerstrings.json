@@ -2,9 +2,9 @@
   "${ModID}:DistortionPower": {
     "NAME": "Distortion",
     "DESCRIPTIONS": [
-      "Whenever a card is #yExhausted, lose #b",
-      "Whenever a card is #yExhausted, loses #b",
-      " HP."
+      "每当 a card is #yExhausted, lose #b",
+      "每当 a card is #yExhausted, loses #b",
+      " 生命."
     ]
   },
   "${ModID}:RuePower": {
@@ -18,8 +18,8 @@
   "${ModID}:DeteriorationPower": {
     "NAME": "Deterioration",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yExhaust a random card in your 弃牌堆 and gain #b",
-      " #yBlock."
+      "回合结束时， #yExhaust a random card in your 弃牌堆 and 获得 #b",
+      " #y格挡 。"
     ]
   }
 }

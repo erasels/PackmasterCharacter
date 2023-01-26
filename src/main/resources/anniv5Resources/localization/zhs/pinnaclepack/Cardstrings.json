@@ -1,16 +1,16 @@
 {
   "${ModID}:DroneSwarmRareSkill": {
     "NAME": "Drone Swarm",
-    "DESCRIPTION": "Raise your hand size this turn by !${ModID}:m2!. NL Draw !M! cards."
+    "DESCRIPTION": "Raise your hand size this turn by !${ModID}:m2!. NL 抽 !M! 张牌。"
   },
   "${ModID}:TheSuckamidRareSkill": {
     "NAME": "The Suckamid",
-    "DESCRIPTION": "Heal !M! HP. NL Retain your hand for !${ModID}:m2! turns. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Heal !M! HP. NL Retain your hand for !${ModID}:m2! turns. NL 消耗 。"
+    "DESCRIPTION": "Heal !M! 生命. NL Retain your hand for !${ModID}:m2! turns. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Heal !M! 生命. NL Retain your hand for !${ModID}:m2! turns. NL 消耗 。"
   },
   "${ModID}:ElectromagneticBurstRarePower": {
     "NAME": "Electromagnetic Burst",
-    "DESCRIPTION": "Whenever you gain Block, deal !M! damage to a random enemy."
+    "DESCRIPTION": "每当 you 获得 Block, deal !M! damage to a random enemy."
   },
   "${ModID}:ArrowStormRareAttack": {
     "NAME": "Arrow Storm",
@@ -18,12 +18,12 @@
   },
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "Marvelous Feast",
-    "DESCRIPTION": "Innate. Add in order: ${ModID}:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended.",
-    "UPGRADE_DESCRIPTION": "Innate. Add in order, upgraded: ${ModID}:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended."
+    "DESCRIPTION": "Innate. Add in order: ${ModID}:Croquettes that provide Block, Weak, 力量 and Vulnerable to your hand. Once per turn ended.",
+    "UPGRADE_DESCRIPTION": "Innate. Add in order, upgraded: ${ModID}:Croquettes that provide Block, Weak, 力量 and Vulnerable to your hand. Once per turn ended."
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "Meaty Croquettes",
-    "DESCRIPTION": "${ModID}:Croquette. NL Gain !M! Strength. NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Croquette. NL 获得 !M! 点 力量. NL 消耗 。"
   },
   "${ModID}:FishyCroquettesSpecialColourless": {
     "NAME": "Fishy Croquettes",
@@ -31,7 +31,7 @@
   },
   "${ModID}:FriendshipCroquettesSpecialColourless": {
     "NAME": "Friendship Croquettes",
-    "DESCRIPTION": "${ModID}:Croquette. NL Gain !B! Block, 消耗 。 NL When Retained, increase its Block by !M! 本场战斗."
+    "DESCRIPTION": "${ModID}:Croquette. NL 获得 !B! Block, 消耗 。 NL When Retained, increase its Block by !M! 本场战斗."
   },
   "${ModID}:MysteryCroquettesSpecialColourless": {
     "NAME": "Mystery Croquettes",
@@ -43,20 +43,20 @@
   },
   "${ModID}:BucketOfDregsUncommonSkill": {
     "NAME": "Bucket Of Dregs",
-    "DESCRIPTION": "Unplayable. Retain. NL When Retained, heal ALL enemies for !M! HP and 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "Unplayable. Retain. NL When Retained, heal ALL enemies for !M! 生命 and 获得 !B! 点 格挡 。"
   },
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "Pocket Tournament",
-    "DESCRIPTION": "Next turn, randomly, 2X times: NL Draw 1 card, gain [E] , gain 1 Strength or gain 3 Block. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Next turn, randomly, 2X+2 times: NL Draw 1 card, gain [E] , gain 1 Strength or gain 3 Block. NL 消耗 。"
+    "DESCRIPTION": "Next turn, randomly, 2X times: NL Draw 1 card, 获得 [E] , 获得 1 力量 or 获得 3 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Next turn, randomly, 2X+2 times: NL Draw 1 card, 获得 [E] , 获得 1 力量 or 获得 3 格挡 。 NL 消耗 。"
   },
   "${ModID}:StoneSwordCommonAttack": {
     "NAME": "Stone Sword",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Gain !M! Dexterity. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! Dexterity. NL 消耗 。"
   },
   "${ModID}:Rea__dyCommonSkill": {
     "NAME": "Rea--dy!",
-    "DESCRIPTION": "Gain !M! Vigor. NL Gain !${ModID}:m2! Temporary Dexterity. NL Exhaustive !stslib:ex!.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Vigor. NL Gain !${ModID}:m2! Temporary Dexterity. NL Draw 1 card. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "获得 !M! Vigor. NL 获得 !${ModID}:m2! Temporary Dexterity. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "获得 !M! Vigor. NL 获得 !${ModID}:m2! Temporary Dexterity. NL Draw 1 card. NL Exhaustive !stslib:ex!."
   }
 }

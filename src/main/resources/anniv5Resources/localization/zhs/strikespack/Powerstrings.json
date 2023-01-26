@@ -9,21 +9,21 @@
   "${ModID}:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random \"Strike\". It costs #b0 until played and Exhausts.",
-      "At the start of your turn, gain #b",
+      "At the start of your turn, 获得 a random \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, 获得 #b",
       " random \"Strike\"s. They cost #b0 until played and 消耗 。"
     ]
   },
   "${ModID}:StrikeOfGeniusUpgradedPower": {
     "NAME": "Strike of Genius+",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random #yupgraded \"Strike\". It costs #b0 until played and Exhausts.",
-      "At the start of your turn, gain #b",
+      "At the start of your turn, 获得 a random #yupgraded \"Strike\". It costs #b0 until played and Exhausts.",
+      "At the start of your turn, 获得 #b",
       " random #yupgraded \"Strike\"s. They cost #b0 until played and 消耗 。"
     ]
   },
-  "${ModID}:StrikeABargainPower": {
-    "NAME": "Strike a Bargain",
+  "${ModID}:StrikeABar获得Power": {
+    "NAME": "Strike a Bar获得",
     "DESCRIPTIONS": [
       "Your Attacks cost #b0 this turn, but you cannot play non-Attacks."
     ]

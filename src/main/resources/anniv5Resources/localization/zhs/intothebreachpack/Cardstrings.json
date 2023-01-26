@@ -9,7 +9,7 @@
   },
   "${ModID}:EnrageShot": {
     "NAME": "Enrage Shot",
-    "DESCRIPTION": "Stun the enemy and apply 2 Strength. NL 消耗 。"
+    "DESCRIPTION": "Stun the enemy and apply 2 力量. NL 消耗 。"
   },
   "${ModID}:MercuryFist": {
     "NAME": "Mercury Fist",
@@ -30,14 +30,14 @@
   },
   "${ModID}:SpartanShield": {
     "NAME": "Spartan Shield",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! Temporary Strength."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Temporary 力量."
   },
   "${ModID}:StormGenerator": {
     "NAME": "Storm Generator",
-    "DESCRIPTION": "At the end of your turn, Channel !M! Lightning for each enemy that has a debuff."
+    "DESCRIPTION": "回合结束时， Channel !M! Lightning for each enemy that has a debuff."
   },
   "${ModID}:VoidShocker": {
     "NAME": "Void Shocker",
-    "DESCRIPTION": "Whenever an enemy deals only blocked damage, deal !M! damage to it."
+    "DESCRIPTION": "每当 an enemy deals only blocked damage, deal !M! damage to it."
   }
 }

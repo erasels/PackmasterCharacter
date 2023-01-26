@@ -2,8 +2,8 @@
   "${ModID}:DicePower": {
     "NAME": "Dice",
     "DESCRIPTIONS": [
-      "The next time you play a card that deals damage or gains #yBlock, it deals or gains #b",
-      " more damage or #yBlock."
+      "The next time you play a card that deals damage or 获得s #yBlock, it deals or 获得s #b",
+      " more damage or #y格挡 。"
     ]
   },
   "${ModID}:SkipNextTurnPower": {

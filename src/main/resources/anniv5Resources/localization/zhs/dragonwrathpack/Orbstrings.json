@@ -2,9 +2,9 @@
   "${ModID}:Light": {
     "NAME": "Light",
     "DESCRIPTION": [
-      "#yPassive: At the end of your turn, take #b",
-      " damage and gain that much #yConfession NL #yEvoke: take #b",
-      " damage and gain that much #yConfession."
+      "#yPassive: 回合结束时， take #b",
+      " damage and 获得 that much #yConfession NL #yEvoke: take #b",
+      " damage and 获得 that much #yConfession."
     ]
   }
 }

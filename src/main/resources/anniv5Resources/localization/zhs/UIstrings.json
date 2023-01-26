@@ -56,6 +56,19 @@
       "故障接口"
     ]
   },
+  "${ModID}:AllForOnePack": {
+    "TEXT": [
+      "万众一心",
+      "一套专注于0耗能与抽牌的原版牌。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:AllForOnePackHat": {
+    "TEXT": [
+      "合则挺，分则衰。",
+      "火枪手之帽"
+    ]
+  },
   "${ModID}:WatcherPack": {
     "TEXT": [
       "观者之愿景",
@@ -72,34 +85,34 @@
   "${ModID}:PackMainMenuUI": {
     "TEXT": [
       "自定义构筑模式",
-      "Turn this on to choose how your Packs are determined.",
+      "启用此模式来自定义本局卡包的选择方式。",
       "随机",
-      "Choice of 3",
+      "随机三选一",
       "卡包剔除列表",
       "帽子列表"
     ]
   },
   "${ModID}:PackSetup": {
     "TEXT": [
-      "Draft a Pack!",
-      "Current Packs"
+      "将一组卡包加入牌池！",
+      "已加入卡包。"
     ]
   },
   "${ModID}:CurrentRunCardsTopPanelItem": {
     "TEXT": [
-      "卡包",
+      "本局卡包：",
       "{0} NL NL 点击查看本局牌池。",
       "本局游戏作为卡牌奖励出现的牌"
     ]
   },
   "${ModID}:CreditsRenderStrings": {
     "TEXT": [
-      "特别鸣谢"
+      "额外标注"
     ]
   },
   "${ModID}:PackFilterMenu": {
     "TEXT": [
-      "Enable Pack"
+      "启用该卡包"
     ]
   },
   "${ModID}:Compendium": {
@@ -114,17 +127,17 @@
   },
   "${ModID}:HatMenu": {
     "TEXT": [
-      "Base Hat",
-      "(L)",
-      "Win a run with the ",
-      " pack to unlock this hat for future runs.",
-      "The hat for the ",
-      " pack. Real flavor soon!",
+      "基础帽子",
+      "(未解锁)",
+      "使用 ",
+      " 卡包赢得游戏来解锁这顶帽子。",
+      "",
+      " 卡包的专属帽子，满满的沉浸感！",
       "(!)",
       " has no corresponding hat image. Please fix.",
-      "A random Hat will be chosen at the start of each run.",
-      "Random Hat",
-      " Pack"
+      "开局时使用随机一顶帽子。",
+      "随机帽子",
+      "卡包"
     ]
   },
   "${ModID}:ConfigMenuText": {
@@ -132,15 +145,15 @@
       "The Packmaster",
       "StS Modding Community",
       "Adds a new character: The Packmaster.",
-      "ALL PACKS MODE. Ignores Custom Draft, Doesn't Unlock Hats",
-      "One Frame For All. All Pack cards have normal Packmaster frames (Requires Restart).",
-      "Share Content. Some Relics/ Potions can appear on other characters (Requires Restart)."
+      "全卡包模式：每局卡池都为所有卡包之和，该模式无法解锁帽子。",
+      "卡框大师：所有卡包的卡框都使用卡包大师基础牌的牌框。(需要重启游戏)",
+      "分享内容：一些卡包大师的遗物与药水可出现在其他角色的游戏中。(需要重启游戏)"
     ]
   },
   "${ModID}:PMBoosterBoxCardReward": {
     "TEXT": [
-      "Add a booster box card",
-      "Choose a booster box card"
+      "增强盒卡牌",
+      "选择是否将其加入牌组"
     ]
   }
 }

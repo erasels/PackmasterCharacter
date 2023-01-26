@@ -3,14 +3,14 @@
     "NAME": "Multi-Tool",
     "DESCRIPTIONS": [
       "If you end your turn with unused Energy, ALL enemies lose #b",
-      " HP."
+      " 生命."
     ]
   },
   "${ModID}:InvestorPower": {
     "NAME": "Investor",
     "DESCRIPTIONS": [
-      "Whenever you spend #b2 or more Energy on a card, gain #b",
-      " #yBlock."
+      "每当 you spend #b2 or more Energy on a card, 获得 #b",
+      " #y格挡 。"
     ]
   }
 }

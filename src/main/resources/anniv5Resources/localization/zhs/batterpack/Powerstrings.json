@@ -1,7 +1,7 @@
 {
   "${ModID}:OptimizedBlurPower": {
     "NAME": "Optimized Blur",
-    "DESCRIPTIONS": ["Whenever you deal unblocked attack damage, gain #b", " #yBlock."]
+    "DESCRIPTIONS": ["每当 you deal unblocked attack damage, 获得 #b", " #y格挡 。"]
   },
   "${ModID}:HardCaramelPower": {
     "NAME": "Hard Caramel",
@@ -9,7 +9,7 @@
   },
   "${ModID}:AvatarBeatPower": {
     "NAME": "Avatar Beat",
-    "DESCRIPTIONS": ["Whenever you deal #b", " unblocked attack damage, gain #b", " #yStrength, draw #b", " card and raise this bar by #b5.", " cards and raise this bar by #b5."]
+    "DESCRIPTIONS": ["每当 you deal #b", " unblocked attack damage, 获得 #b", " #y力量, draw #b", " card and raise this bar by #b5.", " cards and raise this bar by #b5."]
   },
   "${ModID}:OpenBracketPower": {
     "NAME": "Open Bracket",

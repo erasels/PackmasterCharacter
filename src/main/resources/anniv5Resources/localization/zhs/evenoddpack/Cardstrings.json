@@ -2,12 +2,12 @@
   "${ModID}:SwordAndBoard": {
     "NAME": "Sword and Board",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["${ModID}:Even: ", "造成 !D! 点伤害。", " NL ","${ModID}:Odd: ", "Gain !B! Block"]
+    "EXTENDED_DESCRIPTION": ["${ModID}:Even: ", "造成 !D! 点伤害。", " NL ","${ModID}:Odd: ", "获得 !B! Block"]
   },
   "${ModID}:QuickReflex": {
     "NAME": "Quick Reflex",
-    "DESCRIPTION": "Gain !B! Block",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First: ", "Gain !B! Block"]
+    "DESCRIPTION": "获得 !B! Block",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First: ", "获得 !B! Block"]
   },
   "${ModID}:PrimeDirective": {
     "NAME": "Prime Directive",
@@ -26,17 +26,17 @@
   "${ModID}:GammaWard": {
     "NAME": "Gamma Ward",
     "DESCRIPTION": "获得 !B! 点 格挡 。",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Your next Skill this turn has NL ${ModID}:Even: Gain !M! Block."]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Your next Skill this turn has NL ${ModID}:Even: 获得 !M! 格挡 。"]
   },
   "${ModID}:Flourish": {
     "NAME": "Flourish",
-    "DESCRIPTION": "Gain !M! Plated Armor.",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Heal !M! HP.", "${ModID}:Odd: ", "Gain [E]"]
+    "DESCRIPTION": "获得 !M! Plated Armor.",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Heal !M! 生命.", "${ModID}:Odd: ", "获得 [E]"]
   },
   "${ModID}:EvenOddAppend": {
     "NAME": "",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": [" NL (+ ", " damage.)", " NL Gain ", " Block"]
+    "EXTENDED_DESCRIPTION": [" NL (+ ", " damage.)", " NL 获得 ", " Block"]
   },
   "${ModID}:WindUpBomb": {
     "NAME": "Windup Bomb",
@@ -50,7 +50,7 @@
   },
   "${ModID}:Battlecry": {
     "NAME": "Battlecry",
-    "DESCRIPTION": "Draw !M! cards.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First: ", "Gain 2 Strength."]
+    "DESCRIPTION": "抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First: ", "获得 2 力量."]
   }
 }

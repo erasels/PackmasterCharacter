@@ -1,6 +1,6 @@
 {
-  "${ModID}:GreyBargain": {
-    "NAME": "Grey Bargain",
+  "${ModID}:GreyBar获得": {
+    "NAME": "Grey Bar获得",
     "DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by Exhausting a card in your hand.",
     "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by Exhausting a card in your hand. NL 抽一张牌.",
     "EXTENDED_DESCRIPTION": ["I need a card to 消耗 。"]
@@ -15,7 +15,7 @@
   },
     "${ModID}:FleshLikeOak": {
     "NAME": "Flesh Like Oak",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! Strength. NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量. NL 消耗 。"
   },
     "${ModID}:CallOfTheGrave": {
     "NAME": "Call of the Grave",
@@ -30,7 +30,7 @@
   },
     "${ModID}:FuneraryJewels": {
     "NAME": "Funerary Jewels",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 Draw !M! card. Gain [E]. NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 抽 !M! 张牌. 获得 [E]. NL 消耗 。"
   },
     "${ModID}:Tombstone": {
     "NAME": "Tombstone",
@@ -43,7 +43,7 @@
   },
     "${ModID}:LastGasp": {
     "NAME": "Last Gasp",
-    "DESCRIPTION": "Ethereal. NL Choose a ${ModID}:Buried card, play it, and stslib:Purge it.",
+    "DESCRIPTION": "虚无 。 NL Choose a ${ModID}:Buried card, play it, and stslib:Purge it.",
     "UPGRADE_DESCRIPTION": "Choose a ${ModID}:Buried card, play it, and stslib:Purge it."
   }
 }

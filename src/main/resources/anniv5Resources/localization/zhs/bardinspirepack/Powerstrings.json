@@ -13,8 +13,8 @@
   "${ModID}:SplendidForm": {
     "NAME": "Splendid Form",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #yInspiration #b",
-      "At the start of your turn, gain #b",
+      "At the start of your turn, 获得 #yInspiration #b",
+      "At the start of your turn, 获得 #b",
       " #yInspiration #b",
       "."
     ]

@@ -1,15 +1,15 @@
 {
   "${ModID}:AlignmentPack": {
     "TEXT": [
-      "Alignment",
-      "Power is Ethereal; receive it when it's meant to come, and let it go if you don't need it.",
+      "置线",
+      "诸力皆虚，适时用之，逆时弃之。",
       "Alchyr"
     ]
   },
   "${ModID}:AlignmentPackHat": {
     "TEXT": [
-      "Where are these sparkles even coming from?",
-      "Shine Dust"
+      "这玩意怎么发光的？",
+      "闪亮之尘"
     ]
   }
 }

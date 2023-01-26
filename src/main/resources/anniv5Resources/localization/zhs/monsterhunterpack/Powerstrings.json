@@ -16,21 +16,21 @@
   "${ModID}:PerfectGuardPower": {
     "NAME": "Perfect Guard",
     "DESCRIPTIONS": [
-      "If your #yBlock is broken exactly this turn, gain #b",
-      " Strength."
+      "If your #yBlock is broken exactly this turn, 获得 #b",
+      " 力量."
     ]
   },
   "${ModID}:EnragePowerPlayer": {
     "NAME": "Enraged",
     "DESCRIPTIONS": [
-      "If no enemy intends to attack you, gain #b",
-      " #yStrength at the end of the turn."
+      "If no enemy intends to attack you, 获得 #b",
+      " #y力量 at the end of the turn."
     ]
   },
   "${ModID}:GlassArmorPower": {
     "NAME": "Glass Armor",
     "DESCRIPTIONS": [
-      "Gain #b",
+      "获得 #b",
       " #yBlock at the end of the turn. If you take attack damage, lose this power."
     ]
   },
@@ -45,7 +45,7 @@
   "${ModID}:TimePiecePower": {
     "NAME": "Time Piece Power",
     "DESCRIPTIONS": [
-      "Gain #b3 #yStrength every 12 cards you play. Cards played: #b",
+      "获得 #b3 #y力量 every 12 cards you play. Cards played: #b",
       ""
     ]
   }

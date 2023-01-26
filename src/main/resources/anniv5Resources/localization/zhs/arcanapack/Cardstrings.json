@@ -5,7 +5,7 @@
   },
   "${ModID}:Justice": {
     "NAME": "Justice",
-    "DESCRIPTION": "Gain !B! Block for each enemy in combat."
+    "DESCRIPTION": "获得 !B! Block for each enemy in combat."
   },
   "${ModID}:TheHermit": {
     "NAME": "The Hermit",
@@ -14,7 +14,7 @@
   },
   "${ModID}:TheHangedMan": {
     "NAME": "The Hanged Man",
-    "DESCRIPTION": "Whenever you 抽一张牌 this turn, ALL enemies lose !M! HP."
+    "DESCRIPTION": "每当 you 抽一张牌 this turn, ALL enemies lose !M! 生命."
   },
   "${ModID}:TheTower": {
     "NAME": "The Tower",
@@ -22,7 +22,7 @@
   },
   "${ModID}:Death": {
     "NAME": "Death",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Kill the enemy if they have 10% or less of their max HP afterwards."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Kill the enemy if they have 10% or less of their max 生命 afterwards."
   },
   "${ModID}:Temperance": {
     "NAME": "Temperance",
@@ -35,10 +35,10 @@
   },
   "${ModID}:TheSun": {
     "NAME": "The Sun",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable to the highest HP enemy. NL 消耗 。"
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable to the highest 生命 enemy. NL 消耗 。"
   },
   "${ModID}:TheChariot": {
     "NAME": "The Chariot",
-    "DESCRIPTION": "Whenever you discard a card during your turn, gain !M! Vigor."
+    "DESCRIPTION": "每当 you discard a card during your turn, 获得 !M! Vigor."
   }
 }

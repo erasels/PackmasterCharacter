@@ -1,52 +1,52 @@
 {
   "${ModID}:Conjunction": {
-    "NAME": "Conjunction",
-    "DESCRIPTION": "Ethereal. NL When this card is drawn, 获得 !B! 点 格挡 。"
+    "NAME": "联立",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时， NL 获得 !B! 点 格挡 。"
   },
   "${ModID}:Opposition": {
-    "NAME": "Opposition",
-    "DESCRIPTION": "Ethereal. NL When this card is drawn, a random enemy loses !M! HP."
+    "NAME": "对立",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时，随机一名敌人失去 !M! 点生命。"
   },
   "${ModID}:Quincunx": {
-    "NAME": "Quincunx",
-    "DESCRIPTION": "Ethereal. NL When this card is drawn, ALL enemies lose !M! Strength this turn."
+    "NAME": "五点",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时，所有敌人本回合失去 !M! 点 力量 。"
   },
   "${ModID}:Novile": {
-    "NAME": "Novile",
-    "DESCRIPTION": "Ethereal. NL When this card is drawn, gain [E].",
+    "NAME": "九分相",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时， NL 获得 [E] 。",
     "EXTENDED_DESCRIPTION": [
-      "Ethereal. NL When this card is drawn, gain",
+      "虚无 。 NL 抽到本牌时， NL 获得",
       " [E]",
-      "."
+      " 。"
     ]
   },
   "${ModID}:Square": {
-    "NAME": "Square",
-    "DESCRIPTION": "{@@}Ethereal. NL When this card is drawn, draw !M! card{!M!|1=|@=s}."
+    "NAME": "方矩",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时， 抽 !M! 张牌。"
   },
   "${ModID}:Trine": {
-    "NAME": "Trine",
-    "DESCRIPTION": "Ethereal. NL When this card is drawn, the next card you play this turn is played twice."
+    "NAME": "三位",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时，本回合下张牌打出两次。"
   },
   "${ModID}:Divination": {
-    "NAME": "Divination",
-    "DESCRIPTION": "Put a card from your hand onto the bottom of your 抽牌堆. NL Draw !M! cards.",
-    "UPGRADE_DESCRIPTION": "Put any number of cards from your hand onto the bottom of your 抽牌堆. NL Draw !M! cards.",
+    "NAME": "神启",
+    "DESCRIPTION": "选择一张手牌加入抽牌堆底部。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "选择任意张手牌加入抽牌堆底部。 NL 抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [
-      "put on the bottom of your 抽牌堆"
+      "选择一张牌加入抽牌堆底部"
     ]
   },
   "${ModID}:Glimpse": {
-    "NAME": "Glimpse",
-    "DESCRIPTION": "Whenever you draw an Ethereal card, gain !M! Block."
+    "NAME": "轻瞥",
+    "DESCRIPTION": "抽到 虚无 牌时， NL 获得 !M! 点 格挡 。"
   },
   "${ModID}:Remember": {
-    "NAME": "Remember",
-    "DESCRIPTION": "{@@}At the end of your turn, shuffle up to !M! card{!M!|1=|@=s} from your hand into your 抽牌堆."
+    "NAME": "记忆",
+    "DESCRIPTION": "回合结束时，可将手中 !M! 张牌洗入抽牌堆."
   },
   "${ModID}:Alignment": {
-    "NAME": "Alignment",
-    "DESCRIPTION": "Draw X cards. NL They cost X less this turn. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Draw X cards. NL They cost X less this turn."
+    "NAME": "置线",
+    "DESCRIPTION": "抽X张牌， NL 本回合其耗能减X。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽X张牌， NL 本回合其耗能减X。"
   }
 }

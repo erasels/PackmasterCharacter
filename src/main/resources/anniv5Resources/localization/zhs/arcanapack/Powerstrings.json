@@ -2,14 +2,14 @@
   "${ModID}:HangedPower": {
     "NAME": "Hanged",
     "DESCRIPTIONS": [
-      "Whenever you 抽一张牌 this turn, ALL enemies lose #b",
-      " HP."
+      "每当 you 抽一张牌 this turn, ALL enemies lose #b",
+      " 生命."
     ]
   },
   "${ModID}:TheChariotPower": {
     "NAME": "The Chariot",
     "DESCRIPTIONS": [
-      "Whenever you discard a card during your turn, gain #b",
+      "每当 you discard a card during your turn, 获得 #b",
       " #yVigor."
     ]
   }

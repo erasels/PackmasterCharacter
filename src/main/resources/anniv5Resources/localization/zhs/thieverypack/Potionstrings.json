@@ -2,8 +2,8 @@
   "${ModID}:DivinePotion": {
     "NAME": "Divine Potion",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yTemporary #yHP [REMOVE_SPACE]."
+      "获得 #b",
+      " #yTemporary #y生命 [REMOVE_SPACE]."
     ]
   }
 }

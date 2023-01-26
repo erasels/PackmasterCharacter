@@ -13,7 +13,7 @@
   },
   "${ModID}:Luciferium": {
     "NAME": "Luciferium",
-    "DESCRIPTION": "{@@}Gain [E] [E] . NL Gain 5 Strength. NL Gain !M! ${ModID}:Addiction. NL 消耗 。"
+    "DESCRIPTION": "{@@}获得 [E] [E] . NL 获得 5 力量. NL 获得 !M! ${ModID}:Addiction. NL 消耗 。"
   },
   "${ModID}:Pyromaniac": {
     "NAME": "Pyromaniac",
@@ -34,11 +34,11 @@
   },
   "${ModID}:TradeBeacon": {
     "NAME": "Trade Beacon",
-    "DESCRIPTION": "The first time you draw or discard during your turn, draw !M! cards."
+    "DESCRIPTION": "The first time you draw or discard during your turn, 抽 !M! 张牌。"
   },
   "${ModID}:BurningPassion": {
     "NAME": "Burning Passion",
-    "DESCRIPTION": "Double the first buff you gain during your turn."
+    "DESCRIPTION": "Double the first buff you 获得 during your turn."
   },
   "${ModID}:TaintedWeapon": {
     "NAME": "Tainted Weapon",

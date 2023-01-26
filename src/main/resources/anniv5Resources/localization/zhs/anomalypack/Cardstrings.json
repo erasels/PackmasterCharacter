@@ -6,13 +6,13 @@
   },
   "${ModID}:FreeSpace": {
     "NAME": "Free Space",
-    "DESCRIPTION": "Ethereal. NL When you draw, discard, Exhaust or play this, 抽一张牌.",
+    "DESCRIPTION": "虚无 。 NL When you draw, discard, Exhaust or play this, 抽一张牌.",
     "UPGRADE_DESCRIPTION": "When you draw, discard, Exhaust or play this, 抽一张牌."
   },
   "${ModID}:MidnightOil": {
     "NAME": "Midnight Oil",
-    "DESCRIPTION": "Exhaust a random card. Gain [E]. NL While this is Exhausted, gain [E] each turn.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. NL Gain [E]. NL While this is Exhausted, gain [E] each turn."
+    "DESCRIPTION": "Exhaust a random card. 获得 [E]. NL While this is Exhausted, 获得 [E] each turn.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. NL 获得 [E]. NL While this is Exhausted, 获得 [E] each turn."
   },
   "${ModID}:VoraciousSigil": {
     "NAME": "Voracious Sigil",
@@ -26,8 +26,8 @@
   },
   "${ModID}:MindOverMatter": {
     "NAME": "Mind Over Matter",
-    "DESCRIPTION": "Whenever you 抽一张牌, gain 1 Block.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you 抽一张牌, gain 1 Block."
+    "DESCRIPTION": "每当 you 抽一张牌, 获得 1 格挡 。",
+    "UPGRADE_DESCRIPTION": "Innate. NL 每当 you 抽一张牌, 获得 1 格挡 。"
   },
   "${ModID}:GoldenGun": {
     "NAME": "Golden Gun",
@@ -44,7 +44,7 @@
   },
   "${ModID}:Thoughtweaving": {
     "NAME": "Thoughtweaving",
-    "DESCRIPTION": "Whenever you play a Skill or Attack, 抽一张牌 of the opposite type from a different Pack."
+    "DESCRIPTION": "每当 you play a Skill or Attack, 抽一张牌 of the opposite type from a different Pack."
   },
   "${ModID}:SealedSword": {
   "NAME": "Sealed Sword",

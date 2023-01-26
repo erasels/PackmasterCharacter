@@ -1,15 +1,15 @@
 {
   "${ModID}:AwakenDeath": {
     "NAME": "Awaken",
-    "DESCRIPTION": "When you would die, heal !M! HP instead and remove this buff. NL After combat, heals for half as much."
+    "DESCRIPTION": "When you would die, heal !M! 生命 instead and remove this buff. NL After combat, heals for half as much."
   },
   "${ModID}:Chronoboost": {
     "NAME": "Chrono-Boost",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain 1 Strength for every 12th card you play."
+    "DESCRIPTION": "获得 !M! 点 力量. NL 获得 1 力量 for every 12th card you play."
   },
   "${ModID}:DefensiveMode": {
     "NAME": "Defensive Mode",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Gain !M! Weak."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Weak."
   },
   "${ModID}:Execute": {
     "NAME": "Execute",
@@ -24,26 +24,26 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E] [E].",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]."
   },
-  "${ModID}:InvincibleStrength": {
+  "${ModID}:Invincible力量": {
     "NAME": "Invincible",
-    "DESCRIPTION": "Gain !M! ${ModID}:Invincible. NL If you already had *Invincible, it lasts another turn instead."
+    "DESCRIPTION": "获得 !M! ${ModID}:Invincible. NL If you already had *Invincible, it lasts another turn instead."
   },
   "${ModID}:PrepareCrush": {
     "NAME": "Prepare Crush",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL On your next turn, gain [E] and add *SLIME *CRUSH! to your hand."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL On your next turn, 获得 [E] and add *SLIME *CRUSH! to your hand."
   },
   "${ModID}:ShapersBlessing": {
     "NAME": "Shaper's Blessing",
-    "DESCRIPTION": "Ethereal. NL 获得 !B! 点 格挡 。 NL Enter ${ModID}:Ancient.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block and !M! Plated Armor. NL Enter ${ModID}:Ancient."
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL Enter ${ModID}:Ancient.",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! Block and !M! Plated Armor. NL Enter ${ModID}:Ancient."
   },
   "${ModID}:SlimeCrush": {
     "NAME": "SLIME CRUSH!",
-    "DESCRIPTION": "Ethereal. NL 造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
   },
   "${ModID}:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Apply !M! Vulnerable and remove the target's Block. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !M! Weak, and remove the target's Block. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! Vulnerable and remove the target's 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !M! Weak, and remove the target's 格挡 。 NL 消耗 。"
   }
 }

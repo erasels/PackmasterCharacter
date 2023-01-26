@@ -9,8 +9,8 @@
   "${ModID}:InstinctsPower": {
     "NAME": "Instincts",
     "DESCRIPTIONS": [
-      "Each turn, if the first card you play is #yInnate, gain #b",
-      " #yBlock."
+      "Each turn, if the first card you play is #yInnate, 获得 #b",
+      " #y格挡 。"
     ]
   },
   "${ModID}:DebutPower": {

@@ -13,27 +13,27 @@
   },
   "${ModID}:BurningAct": {
     "NAME": "Burning Act",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust 2 of them randomly.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust 2 of them."
+    "DESCRIPTION": "抽 !M! 张牌。 NL Exhaust 2 of them randomly.",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL Exhaust 2 of them."
   },
   "${ModID}:MindMaze": {
     "NAME": "Mind Maze",
-    "DESCRIPTION": "Gain !B! Block X times. NL Put X *Dazed on top of your 抽牌堆."
+    "DESCRIPTION": "获得 !B! Block X times. NL Put X *Dazed on top of your 抽牌堆."
   },
   "${ModID}:Deterioration": {
     "NAME": "Deterioration",
-    "DESCRIPTION": "At the end of your turn, Exhaust a random card in your 弃牌堆 and gain !M! Block."
+    "DESCRIPTION": "回合结束时， Exhaust a random card in your 弃牌堆 and 获得 !M! 格挡 。"
   },
   "${ModID}:Shatter": {
     "NAME": "Shatter",
-    "DESCRIPTION": "{@@}Deal !D! damage for each time the enemy has lost HP this turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage for each time the enemy has lost 生命 this turn.",
     "EXTENDED_DESCRIPTION": [
-      "{@@}Deal !D! damage for each time the enemy has lost HP this turn. NL (Hits !M! time{!M!|1=|@=s}.)"
+      "{@@}Deal !D! damage for each time the enemy has lost 生命 this turn. NL (Hits !M! time{!M!|1=|@=s}.)"
     ]
   },
   "${ModID}:Rue": {
     "NAME": "Rue",
-    "DESCRIPTION": "{@@}Gain [E] [E] and draw !M! card{!M!|>1=s}. NL Exhaust the next 3 cards you play."
+    "DESCRIPTION": "{@@}获得 [E] [E] and 抽 !M! 张牌{!M!|>1=s}. NL Exhaust the next 3 cards you play."
   },
   "${ModID}:Static": {
     "NAME": "Static",
@@ -41,7 +41,7 @@
   },
   "${ModID}:CursedCircle": {
     "NAME": "Cursed Circle",
-    "DESCRIPTION": "You and ALL enemies lose Strength this turn equal to the number of cards in your hand. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "You and ALL enemies lose Strength this turn equal to the number of cards in your hand."
+    "DESCRIPTION": "You and ALL enemies lose 力量 this turn equal to the number of cards in your hand. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "You and ALL enemies lose 力量 this turn equal to the number of cards in your hand."
   }
 }

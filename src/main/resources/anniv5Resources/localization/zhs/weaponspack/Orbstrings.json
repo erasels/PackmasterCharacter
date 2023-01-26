@@ -24,13 +24,13 @@
   "${ModID}:SwordOfWisdomOrb": {
     "NAME": "Sword of Wisdom",
     "DESCRIPTION": [
-      "Whenever you attack with this Weapon, 抽一张牌."
+      "每当 you attack with this Weapon, 抽一张牌."
     ]
   },
   "${ModID}:SwordOfChaosOrb": {
     "NAME": "Sword of Chaos",
     "DESCRIPTION": [
-      "Whenever you attack with this Weapon, add a random card into your hand."
+      "每当 you attack with this Weapon, add a random card into your hand."
     ]
   },
   "${ModID}:CatONineTailsOrb": {
@@ -48,7 +48,7 @@
   "${ModID}:SwordOfFireOrb": {
     "NAME": "Sword of Fire",
     "DESCRIPTION": [
-      "Whenever you attack with this Weapon, deal #b3 damage to all enemies."
+      "每当 you attack with this Weapon, deal #b3 damage to all enemies."
     ]
   }
 }

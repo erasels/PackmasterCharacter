@@ -2,7 +2,7 @@
   "${ModID}:Fertilizer": {
     "NAME": "Fertilizer",
     "DESCRIPTION": "抽一张牌. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。"
   },
   "${ModID}:HarvestBeans": {
     "NAME": "Harvest Beans",
@@ -15,7 +15,7 @@
   },
   "${ModID}:HarvestPotatoes": {
     "NAME": "Harvest Potatoes",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card you played 本场战斗 wasn't a Skill, gain !B! Block again."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card you played 本场战斗 wasn't a Skill, 获得 !B! Block a获得."
   },
   "${ModID}:HarvestRadishes": {
     "NAME": "Harvest Radishes",
@@ -33,19 +33,19 @@
   },
   "${ModID}:SoilResiliency": {
     "NAME": "Soil Resiliency",
-    "DESCRIPTION": "Gain !M! Strength and !${ModID}:m2! Dexterity. NL If you've played less than 3 types of card this turn, 消耗 。"
+    "DESCRIPTION": "获得 !M! 点 力量 and !${ModID}:m2! Dexterity. NL If you've played less than 3 types of card this turn, 消耗 。"
   },
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",
-    "DESCRIPTION": "Gain a *Fertilizer at the start of each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain a *Fertilizer at the start of each turn."
+    "DESCRIPTION": "获得 a *Fertilizer at the start of each turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL 获得 a *Fertilizer at the start of each turn."
   },
   "${ModID}:SowTheSeeds": {
     "NAME": "Sow The Seeds",
-    "DESCRIPTION": "Gain a *Fertilizer. NL Fetch !M! random cards with different types from your 抽牌堆."
+    "DESCRIPTION": "获得 a *Fertilizer. NL Fetch !M! random cards with different types from your 抽牌堆."
   },
   "${ModID}:TillTheEarth": {
     "NAME": "Till The Earth",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Gain a *Fertilizer."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 a *Fertilizer."
   }
 }

@@ -14,12 +14,12 @@
   },
   "${ModID}:DarkRitual": {
     "NAME": "Dark Ritual",
-    "DESCRIPTION": "Lose 10 HP. NL Gain !M! Gold. NL Remove this from your deck permanently.",
-    "UPGRADE_DESCRIPTION": "Lose 10 HP. NL Gain !M! Gold. NL *Downgrade this permanently."
+    "DESCRIPTION": "Lose 10 生命. NL 获得 !M! Gold. NL Remove this from your deck permanently.",
+    "UPGRADE_DESCRIPTION": "Lose 10 生命. NL 获得 !M! Gold. NL *Downgrade this permanently."
   },
   "${ModID}:Knighthood": {
     "NAME": "Knighthood",
-    "DESCRIPTION": "Ethereal. NL Choose a card in hand to Upgrade permanently. NL 消耗 。",
+    "DESCRIPTION": "虚无 。 NL Choose a card in hand to Upgrade permanently. NL 消耗 。",
     "UPGRADE_DESCRIPTION": "Choose a card in hand to Upgrade permanently. NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " to upgrade permanently."
@@ -43,8 +43,8 @@
   },
   "${ModID}:PackRat": {
     "NAME": "Pack Rat",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, gain one and remove this from your deck permanently.",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, gain one and *Downgrade this permanently."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, 获得 one and remove this from your deck permanently.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, 获得 one and *Downgrade this permanently."
   },
   "${ModID}:ScorchedEarth": {
     "NAME": "Scorched Earth",

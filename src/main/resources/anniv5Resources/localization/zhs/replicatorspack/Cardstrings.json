@@ -21,17 +21,17 @@
   },
   "${ModID}:ExhaustiveWork": {
     "NAME": "Exhaustive Work",
-    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Choose a card. NL Exhaust that card and add a copy of it to your 抽牌堆.",
+    "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|>1=s}. NL Choose a card. NL Exhaust that card and add a copy of it to your 抽牌堆.",
     "EXTENDED_DESCRIPTION": ["Choose a card to Exhaust and copy."]
   },
   "${ModID}:IterativeDesign": {
     "NAME": "Iterative Design",
-    "DESCRIPTION": "Whenever your create a card 本场战斗, gain !M! Block."
+    "DESCRIPTION": "每当 your create a card 本场战斗, 获得 !M! 格挡 。"
   },
   "${ModID}:Xpansion": {
     "NAME": "Xpansion",
-    "DESCRIPTION": "Gain X ${ModID}:Duplication. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Gain X ${ModID}:Duplication."
+    "DESCRIPTION": "获得 X ${ModID}:Duplication. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 X ${ModID}:Duplication."
   },
   "${ModID}:ReduceOverhead": {
     "NAME": "Reduce Overhead",
@@ -44,6 +44,6 @@
   },
   "${ModID}:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain !M! stslib:Temporary_HP. Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your 抽牌堆."
+    "DESCRIPTION": "获得 !M! stslib:Temporary_生命. 获得 1 ${ModID}:Duplication for every 10 cards you shuffle into your 抽牌堆."
   }
 }

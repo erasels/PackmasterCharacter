@@ -18,12 +18,12 @@
   },
   "${ModID}:Anticipation": {
     "NAME": "Anticipation",
-    "DESCRIPTION": "抽一张牌. NL Gain Strength equal to its cost.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain Strength equal to their cost."
+    "DESCRIPTION": "抽一张牌. NL 获得 力量 equal to its cost.",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 获得 力量 equal to their cost."
   },
   "${ModID}:Prediction": {
     "NAME": "Prediction",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If no enemy intends to attack, gain it next turn instead."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If no enemy intends to attack, 获得 it next turn instead."
   },
   "${ModID}:ForceBolt": {
     "NAME": "Force Bolt",
@@ -31,7 +31,7 @@
   },
   "${ModID}:Enigmancy": {
     "NAME": "Enigmancy",
-    "DESCRIPTION": "Scry !M!. NL Each turn, gain !${ModID}:m2! Energy and reduce this gain by 1."
+    "DESCRIPTION": "Scry !M!. NL Each turn, 获得 !${ModID}:m2! Energy and reduce this 获得 by 1."
   },
   "${ModID}:Recurrence": {
     "NAME": "Recurrence",
