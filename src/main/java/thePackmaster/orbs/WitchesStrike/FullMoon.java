@@ -9,7 +9,6 @@ import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.defect.DecreaseMaxOrbAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -69,7 +68,6 @@ public class FullMoon extends CustomOrb implements PackmasterOrb {
     }
 
     public void passiveEffect(){
-        System.out.println("Full Moon orb activated");
         applyFocus();
         showEvokeValue();
         if (!evoking){

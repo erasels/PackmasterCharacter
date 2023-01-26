@@ -39,7 +39,8 @@
   },
   "${ModID}:SlimeCrush": {
     "NAME": "SLIME CRUSH!",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies. NL Exhaust."
   },
   "${ModID}:YouAreMine": {
     "NAME": "YOU ARE MINE!",

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardItem;
-import thePackmaster.ThePackmaster;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 
@@ -30,6 +30,7 @@ public class PMCollection extends AbstractPackmasterRelic {
                 RewardItem r = new RewardItem();
                 r.cards.clear();
                 r.cards.add(CardLibrary.getCard(s).makeCopy());
+                r.cards.forEach(c -> Wiz.p().relics.forEach(rel -> rel.onPreviewObtainCard(c)));
                 AbstractDungeon.getCurrRoom().addCardReward(r);
             }
 

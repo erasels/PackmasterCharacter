@@ -2,13 +2,11 @@ package thePackmaster.cards.WitchesStrike;
 
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Leap;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.cardmodifiers.witchesstrikepack.InscribedMod;
 
 import java.util.ArrayList;
@@ -22,8 +20,7 @@ public class WitchTwist extends AbstractWitchStrikeCard {
 
     public WitchTwist() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 2;
-        secondMagic = baseSecondMagic =1;
+        magicNumber = baseMagicNumber = 1;
         exhaust = true;
         CardModifierManager.addModifier(this,new InscribedMod(true,true));
 
@@ -34,7 +31,7 @@ public class WitchTwist extends AbstractWitchStrikeCard {
             addToBot(new AbstractGameAction() {
                 @Override
                 public void update() {
-                    if (AbstractDungeon.player.hand.size() > 0) {
+                    if (!AbstractDungeon.player.hand.isEmpty()) {
                         ArrayList<AbstractCard> Uninscribed = new ArrayList<>();
                         for (AbstractCard c : AbstractDungeon.player.hand.group) {
                             if (!c.hasTag(ISCARDMODIFIED)) {
@@ -50,12 +47,10 @@ public class WitchTwist extends AbstractWitchStrikeCard {
                 }
             });
         }
-        addToBot(new ApplyPowerAction(p,p,new FocusPower(p,secondMagic)));
     }
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
     }
     @Override
     public String cardArtCopy() {
