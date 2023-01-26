@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.helpers.TipHelper;
+import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.random.Random;
@@ -26,8 +27,7 @@ import thePackmaster.patches.InfiniteSpirePatch;
 
 import java.util.*;
 
-import static thePackmaster.SpireAnniversary5Mod.currentPoolPacks;
-import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.SpireAnniversary5Mod.*;
 
 public class PackSetupScreen extends CustomScreen {
     private static final Logger logger = LogManager.getLogger("PackSetup");
@@ -121,15 +121,17 @@ public class PackSetupScreen extends CustomScreen {
 
     @Override
     public void close() {
-        for (AbstractCardPack pack : currentPoolPacks)
+        for (AbstractCardPack pack : unfilteredAllPacks) {
             pack.previewPackCard.stopGlowing();
-        for (AbstractCardPack pack : choiceSet)
-            pack.previewPackCard.stopGlowing();
+            pack.previewPackCard.noShadow();
+        }
     }
 
     @Override
     public void update() {
         updateTransition();
+        updateControllerInput();
+
         for (AbstractCardPack pack : currentPoolPacks) {
             pack.previewPackCard.stopGlowing();
             pack.previewPackCard.update();
@@ -194,7 +196,7 @@ public class PackSetupScreen extends CustomScreen {
             case DRAFTING:
                 AbstractCardPack clicked = null;
                 for (AbstractCardPack pack : choiceSet) {
-                    if (pack.previewPackCard.hb.hovered && InputHelper.justClickedLeft) {
+                    if (pack.previewPackCard.hb.hovered && InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed()) {
                         clicked = pack;
                         break;
                     }
@@ -267,6 +269,45 @@ public class PackSetupScreen extends CustomScreen {
         else if (transitionStartTime > 0) {
             transitionStartTime = -1;
             savePackPositions();
+        }
+    }
+
+    private void updateControllerInput() {
+        if (Settings.isControllerMode && !AbstractDungeon.topPanel.selectPotionMode && AbstractDungeon.topPanel.potionUi.isHidden && !AbstractDungeon.player.viewingRelics) {// 165
+            if (mode != PackSetupMode.DRAFTING || choiceSet.isEmpty())
+                return;
+
+            int index = -1;
+            boolean anyHovered = false;
+
+            for (AbstractCardPack pack : this.choiceSet) {
+                ++index;
+                if (pack.previewPackCard.hb.hovered) {
+                    anyHovered = true;
+                    break;
+                }
+            }
+
+            if (!anyHovered) {
+                index = 0;
+                Gdx.input.setCursorPosition((int) this.choiceSet.get(index).previewPackCard.hb.cX, Settings.HEIGHT - (int) this.choiceSet.get(index).previewPackCard.hb.cY);
+            } else if (!CInputActionSet.left.isJustPressed() && !CInputActionSet.altLeft.isJustPressed()) {
+                if (CInputActionSet.right.isJustPressed() || CInputActionSet.altRight.isJustPressed()) {
+                    ++index;
+                    if (index >= this.choiceSet.size()) {
+                        index = 0;
+                    }
+
+                    Gdx.input.setCursorPosition((int) this.choiceSet.get(index).previewPackCard.hb.cX, Settings.HEIGHT - (int) this.choiceSet.get(index).previewPackCard.hb.cY);
+                }
+            } else {
+                --index;
+                if (index < 0) {
+                    index = this.choiceSet.size() - 1;
+                }
+
+                Gdx.input.setCursorPosition((int) this.choiceSet.get(index).previewPackCard.hb.cX, Settings.HEIGHT - (int) this.choiceSet.get(index).previewPackCard.hb.cY);
+            }
         }
     }
 
