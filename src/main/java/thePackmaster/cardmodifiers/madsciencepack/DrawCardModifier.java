@@ -22,7 +22,7 @@ public class DrawCardModifier extends AbstractMadScienceModifier {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
+     
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
     }
 
