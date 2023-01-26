@@ -1,7 +1,8 @@
 package thePackmaster.ui;
 
 import basemod.ReflectionHacks;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.badlogic.gdx.assets.loaders.TextureLoader;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.GemsPack;
+import thePackmaster.util.TexLoader;
 import thePackmaster.vfx.gemspack.SocketGemEffect;
 
 
@@ -28,17 +30,13 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
     public EnhanceBonfireOption(boolean active) {
         this.label = DESCRIPTIONS[0];
 
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            c.update();
-        }
-
         this.usable = active;
         if (active) {
             this.description = DESCRIPTIONS[1];
-            this.img = ImageMaster.loadImage(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfire.png"));
+            this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfire.png"));
         } else {
-            this.img = ImageMaster.loadImage(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfiredisabled.png"));
-            if (AbstractDungeon.player.gold < 10){
+            this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfiredisabled.png"));
+            if (AbstractDungeon.player.gold < GemsPack.goldCostToSocket){
                 this.description = DESCRIPTIONS[2];
             } else {
                 this.description = DESCRIPTIONS[2];
@@ -64,10 +62,10 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
         }
         if (this.usable) {
             this.description = DESCRIPTIONS[1];
-            this.img = ImageMaster.loadImage(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfire.png"));
+            this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfire.png"));
         } else {
             this.description = DESCRIPTIONS[2];
-            this.img = ImageMaster.loadImage(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfiredisabled.png"));
+            this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfiredisabled.png"));
         }
 
     }

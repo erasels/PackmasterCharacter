@@ -22,7 +22,7 @@ public class DrawGemMod extends AbstractMadScienceModifier {
     }
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
+
         Wiz.atb(new DrawCardAction(1));
     }
 

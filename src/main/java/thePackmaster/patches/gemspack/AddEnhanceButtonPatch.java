@@ -19,16 +19,16 @@ public class AddEnhanceButtonPatch {
         @SpireInsertPatch(locator = Locator.class)
         public static void patch(CampfireUI __instance, ArrayList<AbstractCampfireOption> ___buttons) {
             Boolean active = true;
-            if (SocketGemEffect.getModifiableCards().size() == 0) {
+            if (SocketGemEffect.getModifiableCards().isEmpty()) {
                 active = false;
             }
-            if (SocketGemEffect.getGems().size() == 0) {
+            if (SocketGemEffect.getGems().isEmpty()) {
                 active = false;
             }
             if (AbstractDungeon.player.gold < GemsPack.goldCostToSocket) {
                 active = false;
             }
-            if (AbstractDungeon.player instanceof ThePackmaster || active) {
+            if (active) {
                 GemsPack.socketBonfireOption = new EnhanceBonfireOption(active);
                 ___buttons.add(GemsPack.socketBonfireOption);
             }

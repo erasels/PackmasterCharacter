@@ -28,6 +28,5 @@ public class PersistGem extends AbstractGemsCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
     }
 
-    public void upp() {
-    }
+ 
 }

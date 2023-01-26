@@ -20,8 +20,7 @@ public class PersistGemMod extends AbstractMadScienceModifier {
     @Override
     public void onInitialApplication(AbstractCard card) {
         super.onInitialApplication(card);
-        PersistFields.basePersist.set(card, 2);
-        PersistFields.persist.set(card, 2);
+        PersistFields.setBaseValue(card, 2);
     }
 
 

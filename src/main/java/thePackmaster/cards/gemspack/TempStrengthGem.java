@@ -16,7 +16,7 @@ public class TempStrengthGem extends AbstractGemsCard {
     public final static String ID = makeID("TempStrengthGem");
 
     public TempStrengthGem() {
-        super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
     }
 
     @Override
@@ -31,6 +31,5 @@ public class TempStrengthGem extends AbstractGemsCard {
 
     }
 
-    public void upp() {
-    }
+ 
 }

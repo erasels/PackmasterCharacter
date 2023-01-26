@@ -17,7 +17,7 @@
   },
   "${ModID}:Attach": {
     "NAME": "Attach",
-    "DESCRIPTION": "Choose a card in hand to ${ModID}:Absorb into a discarded card, then ${ModID}:Modify that card: \"Play the *Absorbed card\". NL Exhaust.",
+    "DESCRIPTION": "Choose a non-Power in hand to ${ModID}:Absorb into a discarded card, then ${ModID}:Modify it: \"Play the *Absorbed card\". NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Absorb. You will choose the discarded card to Modify after."]
   },
   "${ModID}:Improve": {
@@ -36,7 +36,7 @@
   },
   "${ModID}:Expand": {
     "NAME": "Expand",
-    "DESCRIPTION": "${ModID}:Modify a card in your discard pile: \"Ethereal.\" and \"Remove Exhaust\" NL Exhaust."
+    "DESCRIPTION": "${ModID}:Modify a card in hand: \"Costs 1 more [E] .\" and \"Play again, unmodified.\" NL Exhaust."
   },
   "${ModID}:Piratify": {
     "NAME": "Piratify",

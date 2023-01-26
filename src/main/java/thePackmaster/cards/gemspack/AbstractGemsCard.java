@@ -22,9 +22,7 @@ public abstract class AbstractGemsCard extends AbstractPackmasterCard {
         this(cardID, cost, type, rarity, target, ThePackmaster.Enums.PACKMASTER_RAINBOW);
     }
 
-    public AbstractCardModifier myMod() {
-        return null;
-    }
+    public abstract AbstractCardModifier myMod();
 
 
     @Override
@@ -32,5 +30,9 @@ public abstract class AbstractGemsCard extends AbstractPackmasterCard {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordProper("anniv5:modify"), BaseMod.getKeywordDescription("anniv5:modify")));
         return tooltips;
+    }
+
+    @Override
+    public void upp() {
     }
 }

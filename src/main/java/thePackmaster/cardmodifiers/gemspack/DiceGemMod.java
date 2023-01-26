@@ -22,7 +22,7 @@ public class DiceGemMod extends AbstractMadScienceModifier {
     }
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
+
         Wiz.atb(new DelayedDiceRollAction(6, 1));
     }
 

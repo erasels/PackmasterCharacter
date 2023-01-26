@@ -13,7 +13,7 @@ public class DiceGem extends AbstractGemsCard {
     public final static String ID = makeID("DiceGem");
 
     public DiceGem() {
-        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     @Override
@@ -26,6 +26,5 @@ public class DiceGem extends AbstractGemsCard {
         Wiz.atb(new DelayedDiceRollAction(6, 1));
     }
 
-    public void upp() {
-    }
+ 
 }

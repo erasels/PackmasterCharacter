@@ -22,7 +22,7 @@ public class EnergyGemMod extends AbstractMadScienceModifier {
     }
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
+
         Wiz.atb(new GainEnergyAction(1));
     }
 

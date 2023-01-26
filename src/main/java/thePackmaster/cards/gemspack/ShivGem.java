@@ -14,7 +14,7 @@ public class ShivGem extends AbstractGemsCard {
     public final static String ID = makeID("ShivGem");
 
     public ShivGem() {
-        super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         cardsToPreview = new Shiv();
     }
 
@@ -28,6 +28,5 @@ public class ShivGem extends AbstractGemsCard {
         Wiz.atb(new MakeTempCardInHandAction(new Shiv()));
     }
 
-    public void upp() {
-    }
+ 
 }

@@ -25,7 +25,7 @@ public class TempStrengthGemMod extends AbstractMadScienceModifier {
     }
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(Wiz.p(), Wiz.p(), new StrengthPower(Wiz.p(), 2), 2));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(Wiz.p(), Wiz.p(), new LoseStrengthPower(Wiz.p(), 2), 2));
     }

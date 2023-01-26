@@ -13,7 +13,7 @@ public class CleanseGem extends AbstractGemsCard {
     public final static String ID = makeID("CleanseGem");
 
     public CleanseGem() {
-        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     @Override
@@ -26,6 +26,5 @@ public class CleanseGem extends AbstractGemsCard {
         AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, 1));
     }
 
-    public void upp() {
-    }
+ 
 }
