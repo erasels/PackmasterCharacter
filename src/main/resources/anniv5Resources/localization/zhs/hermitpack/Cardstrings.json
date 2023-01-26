@@ -6,7 +6,7 @@
   "${ModID}:Glare": {
     "NAME": "Glare",
     "DESCRIPTION": "Apply !M! Weak and Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! Weak and Vulnerable."
+    "UPGRADE_DESCRIPTION": "保留 。 NL Apply !M! Weak and Vulnerable."
   },
   "${ModID}:HoleUp": {
     "NAME": "Hole Up",
@@ -19,11 +19,11 @@
   "${ModID}:Determination": {
     "NAME": "Determination",
     "DESCRIPTION": "每当 a debuff is applied to you, 获得 !M! 点 力量 。",
-    "UPGRADE_DESCRIPTION": "Innate. NL 每当 a debuff is applied to you, 获得 !M! 点 力量 。"
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 a debuff is applied to you, 获得 !M! 点 力量 。"
   },
   "${ModID}:Virtue": {
     "NAME": "Virtue",
-    "DESCRIPTION": "Retain. NL Reduce each of your debuffs by !M!."
+    "DESCRIPTION": "保留 。 NL Reduce each of your debuffs by !M!."
   },
   "${ModID}:Flas生命owder": {
     "NAME": "Flash Powder",

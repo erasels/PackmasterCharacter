@@ -10,7 +10,7 @@
   },
   "${ModID}:Collapse": {
     "NAME": "Collapse",
-    "DESCRIPTION": "${ModID}:Unstable. NL 抽一张牌. NL 获得 !M! temporary 力量 。 NL 获得 1 Vulnerable."
+    "DESCRIPTION": "${ModID}:Unstable. NL 抽一张牌。 NL 获得 !M! temporary 力量 。 NL 获得 1 Vulnerable."
   },
   "${ModID}:Construct": {
     "NAME": "Construct",
@@ -31,7 +31,7 @@
   },
   "${ModID}:Diffusion": {
     "NAME": "Diffusion",
-    "DESCRIPTION": "At the start of your turn, 获得 !M! ${ModID}:Entropy and 抽一张牌."
+    "DESCRIPTION": "At the start of your turn, 获得 !M! ${ModID}:Entropy and 抽一张牌。"
   },
   "${ModID}:Waning": {
     "NAME": "Waning",

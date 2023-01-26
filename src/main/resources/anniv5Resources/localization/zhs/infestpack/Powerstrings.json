@@ -2,7 +2,7 @@
   "${ModID}:CompoundeyesPower": {
     "NAME": "Compound Eyes",
     "DESCRIPTIONS": [
-      "When you next play a card, #rend #ryour #rturn."
+      "When you next play 一张牌, #rend #ryour #rturn."
     ]
   },
   "${ModID}:LordOfTheFliesPower": {

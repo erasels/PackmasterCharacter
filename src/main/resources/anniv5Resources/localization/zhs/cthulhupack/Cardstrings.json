@@ -6,7 +6,7 @@
   },
   "${ModID}:NamelessMist": {
     "NAME": "Nameless Mist",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 another !M! 每当 you play a card 本回合."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 another !M! 每当 you play 一张牌 本回合."
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",

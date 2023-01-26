@@ -26,7 +26,7 @@
   "${ModID}:Fall": {
     "NAME": "Fall",
     "DESCRIPTION": "Deal ${ModID}:Front damage equal to the number of cards in your NL 抽牌堆 + 6.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal ${ModID}:Front damage equal to the number of cards in your NL 抽牌堆 + 6.",
+    "UPGRADE_DESCRIPTION": "固有 。 NL Deal ${ModID}:Front damage equal to the number of cards in your NL 抽牌堆 + 6.",
     "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
   },
   "${ModID}:Turtle": {

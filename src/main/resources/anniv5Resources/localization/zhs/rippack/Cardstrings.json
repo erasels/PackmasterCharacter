@@ -2,7 +2,7 @@
   "${ModID}:DividedFury": {
     "NAME": "Divided Fury",
     "DESCRIPTION": "At the start of your turn, add a *Fury into your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a *Fury into your hand."
+    "UPGRADE_DESCRIPTION": "固有 。 NL At the start of your turn, add a *Fury into your hand."
   },
   "${ModID}:ViciousCycle": {
     "NAME": "Vicious Cycle",
@@ -53,8 +53,8 @@
   },
   "${ModID}:Inspiration": {
     "NAME": "Inspiration",
-    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art and Status Cards in your exhaust pile. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art and Status Cards in your exhaust pile.",
+    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art and Status Cards in your 消耗 pile. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art and Status Cards in your 消耗 pile.",
     "EXTENDED_DESCRIPTION": [
       " NL (Draw ",
       " card.)",
@@ -67,7 +67,7 @@
   },
   "${ModID}:InspirationText": {
     "NAME": "",
-    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art Cards in your exhaust pile.",
+    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art Cards in your 消耗 pile.",
     "EXTENDED_DESCRIPTION": [
       " NL (Draw ",
       " card.)",
@@ -100,7 +100,7 @@
   },
   "${ModID}:HazardousStrike": {
     "NAME": "Hazardous Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL When *ripped, Exhaust !M! cards at random."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL When *ripped, 消耗 !M! cards at random."
   },
   "${ModID}:HazardousStrikeArt": {
     "NAME": "Hazardous Strike",
@@ -124,8 +124,8 @@
   },
   "${ModID}:LeftBrain": {
     "NAME": "Left Brain",
-    "DESCRIPTION": "Exhaust ALL your ${ModID}:Art and Status cards. 获得 !M! 点 力量 for each card Exhausted.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL Exhaust ALL your ${ModID}:Art and Status cards. 获得 !M! 点 力量 for each card Exhausted."
+    "DESCRIPTION": "消耗 ALL your ${ModID}:Art and Status cards. 获得 !M! 点 力量 for each card 消耗ed.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL 消耗 ALL your ${ModID}:Art and Status cards. 获得 !M! 点 力量 for each card 消耗ed."
   },
   "${ModID}:FuryAttack": {
     "NAME": "Fury",

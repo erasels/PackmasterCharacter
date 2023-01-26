@@ -24,7 +24,7 @@
   "${ModID}:SwordOfWisdomOrb": {
     "NAME": "Sword of Wisdom",
     "DESCRIPTION": [
-      "每当 you attack with this Weapon, 抽一张牌."
+      "每当 you attack with this Weapon, 抽一张牌。"
     ]
   },
   "${ModID}:SwordOfChaosOrb": {

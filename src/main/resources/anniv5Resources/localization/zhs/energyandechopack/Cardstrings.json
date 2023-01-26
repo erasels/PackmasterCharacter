@@ -17,8 +17,8 @@
   },
   "${ModID}:Flashlight": {
     "NAME": "Flashlight",
-    "DESCRIPTION": "Innate. NL 获得 [E] . NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Innate. NL 获得 [E] . NL Next turn, 获得 [E]. NL 消耗 。"
+    "DESCRIPTION": "固有 。 NL 获得 [E] . NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 [E] . NL Next turn, 获得 [E]. NL 消耗 。"
   },
   "${ModID}:Discharge": {
     "NAME": "Discharge",

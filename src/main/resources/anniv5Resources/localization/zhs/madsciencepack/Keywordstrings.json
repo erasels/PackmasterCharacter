@@ -4,14 +4,15 @@
     "NAMES": [
       "modify"
     ],
-    "DESCRIPTION": "Alter a card for the rest of combat. Modified cards cannot be modified a获得 until the combat ends."
+    "DESCRIPTION": "Alter 一张牌 for the rest of combat. Modified cards cannot be modified a获得 until the combat ends."
   },
   {
-    "PROPER_NAME": "Absorb",
+    "PROPER_NAME": "吞并",
     "NAMES": [
       "absorb",
-      "absorbed"
+      "absorbed",
+      "吞并"
     ],
-    "DESCRIPTION": "Exhaust a card. When this card is exhausted, add all cards it absorbed to your hand."
+    "DESCRIPTION": "消耗 一张牌。 本牌被 消耗 时，将所有之前 #y吞并 的牌的复制品加入手牌。"
   }
 ]

@@ -18,7 +18,7 @@
   "${ModID}:Pyromaniac": {
     "NAME": "Pyromaniac",
     "DESCRIPTION": "At the start of your turn, set a random card in your hand ${ModID}:On_Fire.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, set a random card in your hand ${ModID}:On_Fire."
+    "UPGRADE_DESCRIPTION": "固有 。 NL At the start of your turn, set a random card in your hand ${ModID}:On_Fire."
   },
   "${ModID}:KillThirst": {
     "NAME": "Kill Thirst",
@@ -42,7 +42,7 @@
   },
   "${ModID}:TaintedWeapon": {
     "NAME": "Tainted Weapon",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Startup: Put this card in a random monster.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 战斗开始： Put this card in a random monster.",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害。"
     ]

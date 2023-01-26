@@ -1,7 +1,7 @@
 {
   "${ModID}:Aqueducts": {
     "NAME": "Aqueducts",
-    "DESCRIPTION": "每当 you draw an extra card, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "每当 you draw an extr一张牌, deal !M! damage to ALL enemies."
   },
   "${ModID}:Cascade": {
     "NAME": "Cascade",
@@ -41,6 +41,6 @@
   },
   "${ModID}:StormFront": {
     "NAME": "Storm Front",
-    "DESCRIPTION": "Retain. 造成 !D! 点伤害。 NL When discarded, add this back to your hand with !M! more damage."
+    "DESCRIPTION": "保留 。 造成 !D! 点伤害。 NL When discarded, add this back to your hand with !M! more damage."
   }
 }

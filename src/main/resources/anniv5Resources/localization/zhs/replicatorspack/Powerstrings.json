@@ -2,7 +2,7 @@
   "${ModID}:IterativeDesignPower": {
     "NAME": "Iterative Design",
     "DESCRIPTIONS": [
-      "每当 you create a card 本场战斗, 获得 #b",
+      "每当 you create 一张牌 本场战斗, 获得 #b",
       " #y格挡 。"
     ]
   },
@@ -10,7 +10,7 @@
     "NAME": "Energy Drink",
     "DESCRIPTIONS": [
       "获得 #b",
-      " #yDuplication for every #b10 cards you shuffle into your 抽牌堆."
+      " #yDuplication for every #b10 cards you shuffle into your 抽牌堆。"
     ]
   }
 }

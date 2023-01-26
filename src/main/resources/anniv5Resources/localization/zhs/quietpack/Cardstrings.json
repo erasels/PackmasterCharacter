@@ -1,7 +1,7 @@
 {
   "${ModID}:Weight": {
     "NAME": "Weight",
-    "DESCRIPTION": "Unplayable. Retain. NL If this card is discarded from your hand, Exhaust it."
+    "DESCRIPTION": "Unplayable. 保留 。 NL If this card is discarded from your hand, 消耗 it."
   },
   "${ModID}:Oppressor": {
     "NAME": "Oppressor",
@@ -13,8 +13,8 @@
   },
   "${ModID}:Shine": {
     "NAME": "Shine",
-    "DESCRIPTION": "Unplayable. Retain. NL When you draw this card, upgrade another random card in your hand for the rest of the combat.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Retain. NL When you draw this card, upgrade ALL cards in your hand for the rest of the combat."
+    "DESCRIPTION": "Unplayable. 保留 。 NL When you draw this card, upgrade another random card in your hand for the rest of the combat.",
+    "UPGRADE_DESCRIPTION": "Unplayable. 保留 。 NL When you draw this card, upgrade ALL cards in your hand for the rest of the combat."
   },
   "${ModID}:GlaiveThrow": {
     "NAME": "Glaive Throw",
@@ -22,7 +22,7 @@
   },
   "${ModID}:Crunch": {
     "NAME": "Crunch",
-    "DESCRIPTION": "Unplayable. Retain. NL When you draw this card, 抽 !M! 张牌。"
+    "DESCRIPTION": "Unplayable. 保留 。 NL When you draw this card, 抽 !M! 张牌。"
   },
   "${ModID}:Lie": {
     "NAME": "Lie",
@@ -34,7 +34,7 @@
   },
   "${ModID}:HammerThrow": {
     "NAME": "Hammer Throw",
-    "DESCRIPTION": "每当 a card is Retained, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "每当 一张牌 is Retained, deal !M! damage to ALL enemies."
   },
   "${ModID}:Flail": {
     "NAME": "Flail",

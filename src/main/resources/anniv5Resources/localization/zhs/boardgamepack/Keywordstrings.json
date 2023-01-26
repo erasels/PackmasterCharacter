@@ -31,7 +31,7 @@
     "NAMES": [
       "chance"
     ],
-    "DESCRIPTION": "Chance cards are played when drawn, and #yExhaust when played."
+    "DESCRIPTION": "Chance cards are played when drawn, and #y消耗 when played."
   },
   {
     "PROPER_NAME": "Advantage",

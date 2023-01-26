@@ -19,7 +19,7 @@
   },
   "${ModID}:OccultInDrawPile": {
     "TEXT": [
-      "Choose a Card to Make Occult"
+      "Choose 一张牌 to Make Occult"
     ]
   },
   "${ModID}:UnplayableTurnModifier": {

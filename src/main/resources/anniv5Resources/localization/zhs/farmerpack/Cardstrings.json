@@ -1,7 +1,7 @@
 {
   "${ModID}:Fertilizer": {
     "NAME": "Fertilizer",
-    "DESCRIPTION": "抽一张牌. NL 消耗 。",
+    "DESCRIPTION": "抽一张牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。"
   },
   "${ModID}:HarvestBeans": {
@@ -38,11 +38,11 @@
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",
     "DESCRIPTION": "获得 a *Fertilizer at the start of each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL 获得 a *Fertilizer at the start of each turn."
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 a *Fertilizer at the start of each turn."
   },
   "${ModID}:SowTheSeeds": {
     "NAME": "Sow The Seeds",
-    "DESCRIPTION": "获得 a *Fertilizer. NL Fetch !M! random cards with different types from your 抽牌堆."
+    "DESCRIPTION": "获得 a *Fertilizer. NL Fetch !M! random cards with different types from your 抽牌堆。"
   },
   "${ModID}:TillTheEarth": {
     "NAME": "Till The Earth",

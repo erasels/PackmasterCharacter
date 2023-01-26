@@ -4,7 +4,7 @@
     "NAMES": [
       "entropy"
     ],
-    "DESCRIPTION": "每当 you play a card, discard a random card, 抽一张牌, and lose #b1 #yEntropy."
+    "DESCRIPTION": "每当 you play 一张牌, discard a random card, 抽一张牌, and lose #b1 #yEntropy."
   },
   {
     "PROPER_NAME": "Unstable",
@@ -25,6 +25,6 @@
     "NAMES": [
       "oblivion"
     ],
-    "DESCRIPTION": "Orb: When evoked, applies #yRuin to the enemy with the most 生命. Increases #yRuin applied 每当 you discard a card."
+    "DESCRIPTION": "Orb: When evoked, applies #yRuin to the enemy with the most 生命. Increases #yRuin applied 每当 you discard 一张牌。"
   }
 ]

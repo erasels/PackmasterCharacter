@@ -53,7 +53,7 @@
   "${ModID}:Ambush": {
     "NAME": "Ambush",
     "DESCRIPTION": "每当 you Channel an Orb, Evoke it without removing it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL 每当 you Channel an Orb, Evoke it without removing it.",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you Channel an Orb, Evoke it without removing it.",
     "FLAVOR": "I couldn't find good ambush art so have a pun."
   },
   "${ModID}:Pandas": {

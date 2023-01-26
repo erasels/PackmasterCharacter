@@ -2,7 +2,7 @@
   "${ModID}:Excitement": {
     "NAME": "Excitement",
     "DESCRIPTION": "获得 [E] [E] . NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 [E] [E] . NL Exhaustive !stslib:ex!."
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] . NL 消耗ive !stslib:ex!."
   },
   "${ModID}:LayeredDefenses": {
     "NAME": "Layered Defenses",
@@ -19,7 +19,7 @@
   },
   "${ModID}:Enrage": {
     "NAME": "Enrage",
-    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL 抽 !M! 张牌。 NL Enter ${ModID}:侵袭."
+    "DESCRIPTION": "Discard !${ModID}:m2! cards. NL 抽 !M! 张牌。 NL Enter ${ModID}:侵袭 。"
   },
   "${ModID}:Whispers": {
     "NAME": "Whispers",
@@ -41,9 +41,9 @@
   },
   "${ModID}:Conjuration": {
     "NAME": "Conjuration",
-    "DESCRIPTION": "Choose a card from your 抽牌堆. NL Play and Exhaust it.",
-    "UPGRADE_DESCRIPTION": "Choose a card from your 抽牌堆. NL Play it.",
-    "EXTENDED_DESCRIPTION": ["There are no cards in my 抽牌堆."]
+    "DESCRIPTION": "Choose 一张牌 from your 抽牌堆。 NL Play and 消耗 it.",
+    "UPGRADE_DESCRIPTION": "Choose 一张牌 from your 抽牌堆。 NL Play it.",
+    "EXTENDED_DESCRIPTION": ["There are no cards in my 抽牌堆。"]
   },
   "${ModID}:RareStrike": {
     "NAME": "Rare Strike",

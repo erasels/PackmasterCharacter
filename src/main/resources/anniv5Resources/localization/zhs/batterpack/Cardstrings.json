@@ -30,7 +30,7 @@
   "${ModID}:HardCaramel": {
     "NAME": "Hard Caramel",
     "DESCRIPTION": "After attacking, apply 1 Vulnerable if target doesn't have any.",
-    "UPGRADE_DESCRIPTION": "Innate. NL After attacking, apply 1 Vulnerable if target doesn't have any."
+    "UPGRADE_DESCRIPTION": "固有 。 NL After attacking, apply 1 Vulnerable if target doesn't have any."
   },
   "${ModID}:UltimateHomerun": {
     "NAME": "Ultimate Homerun",

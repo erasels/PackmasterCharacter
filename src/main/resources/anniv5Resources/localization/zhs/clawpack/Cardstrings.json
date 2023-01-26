@@ -19,7 +19,7 @@
   "${ModID}:InfiniteClaws": {
     "NAME": "Infinite Claws",
     "DESCRIPTION": "At the start of your turn, 获得 a *Ghost *Claw.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, 获得 a *Ghost *Claw."
+    "UPGRADE_DESCRIPTION": "固有 。 NL At the start of your turn, 获得 a *Ghost *Claw."
   },
   "${ModID}:MutateClaw": {
     "NAME": "Mutate Claw",

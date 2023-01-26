@@ -13,7 +13,7 @@
   },
   "${ModID}:Greatsword": {
     "NAME": "Greatsword",
-    "DESCRIPTION": "Retain. NL 造成 !D! 点伤害。 NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each until played."
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each until played."
   },
   "${ModID}:HuntingInstincts": {
     "NAME": "Hunter's Instincts",
@@ -26,17 +26,17 @@
   "${ModID}:ShellPauldrons": {
     "NAME": "Shell Platemail",
     "DESCRIPTION": "获得 !M! ${ModID}:Glass_Armor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL 获得 !M! ${ModID}:Glass_Armor."
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !M! ${ModID}:Glass_Armor."
   },
   "${ModID}:CoreBlaster": {
     "NAME": "Core Blaster",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder to your 抽牌堆. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder+ to your 抽牌堆. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder to your 抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder+ to your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:CoreBlinder": {
     "NAME": "Core Blinder",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your 抽牌堆. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster+ to your 抽牌堆. NL 消耗 。"
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your 抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster+ to your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",
@@ -44,8 +44,8 @@
   },
   "${ModID}:InfernoDaggers": {
     "NAME": "Inferno Daggers",
-    "DESCRIPTION": "Retain. NL Deal !D! damage !M! times and set this card's cost to 6. NL When Retained, reduce this card's cost by 1.",
-    "UPGRADE_DESCRIPTION": "Innate. Retain. NL Deal !D! damage !M! times and set this card's cost to 6. NL When Retained, reduce this card's cost by 1."
+    "DESCRIPTION": "保留 。 NL Deal !D! damage !M! times and set this card's cost to 6. NL When Retained, reduce this card's cost by 1.",
+    "UPGRADE_DESCRIPTION": "固有 。 保留 。 NL Deal !D! damage !M! times and set this card's cost to 6. NL When Retained, reduce this card's cost by 1."
   },
   "${ModID}:StabManual": {
     "NAME": "Stabbing Manual",
@@ -62,7 +62,7 @@
   },
   "${ModID}:GremlinLance": {
     "NAME": "Gremlin Lance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, 获得 [E] and 抽一张牌."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, 获得 [E] and 抽一张牌。"
   },
   "${ModID}:ChampMail": {
     "NAME": "Champion's Platemail",
@@ -75,7 +75,7 @@
   },
   "${ModID}:HyperBlaster": {
     "NAME": "Hyper Blaster",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle !M! Voids into your 抽牌堆."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle !M! Voids into your 抽牌堆。"
   },
   "${ModID}:EphemeralShroud": {
     "NAME": "Ephemeral Shroud",
@@ -88,7 +88,7 @@
   "${ModID}:TimepieceTiara": {
     "NAME": "Timepiece Tiara",
     "DESCRIPTION": "获得 3 力量 every 12 cards you play.",
-    "UPGRADE_DESCRIPTION": "Innate. NL 获得 3 力量 every 12 cards you play."
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 3 力量 every 12 cards you play."
   },
   "${ModID}:DonuAmulet": {
     "NAME": "Donu Amulet",
@@ -116,7 +116,7 @@
   },
   "${ModID}:HuntingContract": {
     "NAME": "Hunting Contract",
-    "DESCRIPTION": "Innate. NL Apply !M! ${ModID}:Hunted. NL 消耗 。"
+    "DESCRIPTION": "固有 。 NL Apply !M! ${ModID}:Hunted. NL 消耗 。"
   },
   "${ModID}:HunterRank": {
     "NAME": "Hunter Rank",

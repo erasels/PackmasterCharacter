@@ -2,12 +2,12 @@
   "${ModID}:Fume": {
     "NAME": "Fume",
     "DESCRIPTION": "Enter ${ModID}:Angry.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Enter ${ModID}:Angry."
+    "UPGRADE_DESCRIPTION": "保留 。 NL Enter ${ModID}:Angry."
   },
   "${ModID}:Relax": {
     "NAME": "Relax",
     "DESCRIPTION": "Enter Calm.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Enter Calm."
+    "UPGRADE_DESCRIPTION": "保留 。 NL Enter Calm."
   },
   "${ModID}:StanceDance": {
     "NAME": "Stance Dance",
@@ -25,7 +25,7 @@
   "${ModID}:Swagger": {
     "NAME": "Swagger",
     "DESCRIPTION": "If you end your turn in a Stance, 获得 !M! 点 力量 and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL If you end your turn in a Stance, 获得 !M! 点 力量 and Dexterity."
+    "UPGRADE_DESCRIPTION": "固有 。 NL If you end your turn in a Stance, 获得 !M! 点 力量 and Dexterity."
   },
   "${ModID}:MoodSwing": {
     "NAME": "Mood Swing",

@@ -9,7 +9,7 @@
   "${ModID}:InvestorPower": {
     "NAME": "Investor",
     "DESCRIPTIONS": [
-      "每当 you spend #b2 or more Energy on a card, 获得 #b",
+      "每当 you spend #b2 or more Energy on 一张牌, 获得 #b",
       " #y格挡 。"
     ]
   }

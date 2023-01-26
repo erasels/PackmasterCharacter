@@ -5,8 +5,8 @@
   },
   "${ModID}:LetsPlay8Ball": {
     "NAME": "Let's Play 8 Ball!",
-    "DESCRIPTION": "Shuffle an *8 *Ball into your 抽牌堆.",
-    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your 抽牌堆."
+    "DESCRIPTION": "Shuffle an *8 *Ball into your 抽牌堆。",
+    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your 抽牌堆。"
   },
   "${ModID}:EightBall": {
     "NAME": "8 Ball",
@@ -17,26 +17,26 @@
   },
   "${ModID}:ZaHando": {
     "NAME": "Za Hando",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust the middle card(s) of your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 the middle card(s) of your hand."
   },
   "${ModID}:LetsDraft": {
     "NAME": "Let's Draft!",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Choose a card. Shuffle a copy of it into your 抽牌堆.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Choose 一张牌。 Shuffle a copy of it into your 抽牌堆。",
     "EXTENDED_DESCRIPTION": [
       "create a copy of."
     ]
   },
   "${ModID}:Beacon": {
     "NAME": "Beacon",
-    "DESCRIPTION": "Choose !M! card in your hand. NL Upgrade it and give it Retain.",
-    "UPGRADE_DESCRIPTION": "Choose !M! cards in your hand. NL Upgrade them and give them Retain.",
+    "DESCRIPTION": "Choose !M! card in your hand. NL Upgrade it and give it 保留 。",
+    "UPGRADE_DESCRIPTION": "Choose !M! cards in your hand. NL Upgrade them and give them 保留 。",
     "EXTENDED_DESCRIPTION": [
-      "Upgrade and give Retain."
+      "Upgrade and give 保留 。"
     ]
   },
   "${ModID}:SleeveUp": {
     "NAME": "Sleeve Up",
-    "DESCRIPTION": "抽 !M! 张牌。 NL When this appears in a card reward, the cards are *Foil and 获得 Retain."
+    "DESCRIPTION": "抽 !M! 张牌。 NL When this appears in 一张牌 reward, the cards are *Foil and 获得 保留 。"
   },
   "${ModID}:AutoBattler": {
     "NAME": "Auto Battler",
@@ -44,14 +44,14 @@
   },
   "${ModID}:ShiningStyle": {
     "NAME": "Shining Style",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! Dexterity. NL Startup: 获得 !${ModID}:m2! *Gold."
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! Dexterity. NL 战斗开始： 获得 !${ModID}:m2! *Gold."
   },
   "${ModID}:FinalForm": {
     "NAME": "This Isn't Even My...",
-    "DESCRIPTION": "虚无 。 NL Exhaust 1 random card. NL At the start of your turn, play and Exhaust a copy of it.",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL Exhaust 1 card. NL At the start of your turn, play and Exhaust a copy of it.",
+    "DESCRIPTION": "虚无 。 NL 消耗 1 random card. NL At the start of your turn, play and 消耗 a copy of it.",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 消耗 1 card. NL At the start of your turn, play and 消耗 a copy of it.",
     "EXTENDED_DESCRIPTION": [
-      "Exhaust for Final Form."
+      "消耗 for Final Form."
     ]
   },
   "${ModID}:MidnightStrike": {

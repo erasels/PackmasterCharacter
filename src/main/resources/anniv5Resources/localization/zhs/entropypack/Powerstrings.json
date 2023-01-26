@@ -3,8 +3,8 @@
     "NAME": "Entropy",
     "DESCRIPTIONS": [
       "The next #b",
-      " times you play a card, discard a random card and 抽一张牌.",
-      "The next time you play a card, discard a random card and 抽一张牌."
+      " times you play 一张牌, discard a random card and 抽一张牌。",
+      "The next time you play 一张牌, discard a random card and 抽一张牌。"
     ]
   },
   "${ModID}:DiffusionPower": {

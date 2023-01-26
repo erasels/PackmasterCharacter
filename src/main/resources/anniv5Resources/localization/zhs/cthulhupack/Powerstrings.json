@@ -2,7 +2,7 @@
   "${ModID}:NamelessMistPower": {
     "NAME": "Nameless Mist",
     "DESCRIPTIONS": [
-      "每当 you play a card 本回合, 获得 #b",
+      "每当 you play 一张牌 本回合, 获得 #b",
       " #y格挡 。"
     ]
   },

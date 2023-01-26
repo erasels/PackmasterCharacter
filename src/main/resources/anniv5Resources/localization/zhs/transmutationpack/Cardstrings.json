@@ -6,7 +6,7 @@
   },
   "${ModID}:CrystalLattice": {
     "NAME": "Crystal Lattice",
-    "DESCRIPTION": "${ModID}:Transmute a card. Add !M! additional copies of the new card to your hand. NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Transmute 一张牌。 Add !M! additional copies of the new card to your hand. NL 消耗 。"
   },
   "${ModID}:CrystalResonance": {
     "NAME": "Crystal Resonance",
@@ -18,22 +18,22 @@
   },
   "${ModID}:FrozenCapsule": {
     "NAME": "Frozen Capsule",
-    "DESCRIPTION": "${ModID}:Mutable: 造成 !D! 点伤害。 NL ${ModID}:Mutable: When ${ModID}:Transmuted, 抽一张牌.",
+    "DESCRIPTION": "${ModID}:Mutable: 造成 !D! 点伤害。 NL ${ModID}:Mutable: When ${ModID}:Transmuted, 抽一张牌。",
     "UPGRADE_DESCRIPTION": "${ModID}:Mutable: 造成 !D! 点伤害。 NL ${ModID}:Mutable: When ${ModID}:Transmuted, 抽 !M! 张牌。"
   },
   "${ModID}:GhostlyMist": {
     "NAME": "Ghostly Mist",
-    "DESCRIPTION": "${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your 抽牌堆.",
-    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your 抽牌堆."
+    "DESCRIPTION": "${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your 抽牌堆。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL ${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your 抽牌堆。"
   },
   "${ModID}:GlacialSynthesis": {
     "NAME": "Glacial Synthesis",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute a card.",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute 一张牌。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute up to !M! cards."
   },
   "${ModID}:SearingSynthesis": {
     "NAME": "Searing Synthesis",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute a card.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute 一张牌。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute up to !M! cards."
   },
   "${ModID}:ViscousShell": {
@@ -60,7 +60,7 @@
   },
   "${ModID}:DrawWhenTransmutedEffect": {
     "EXTENDED_DESCRIPTION": [
-      "When ${ModID}:Transmuted, 抽一张牌.",
+      "When ${ModID}:Transmuted, 抽一张牌。",
       "When ${ModID}:Transmuted, draw ",
       " cards."
     ]
@@ -78,7 +78,7 @@
   },
   "${ModID}:ReboundSelfEffect": {
     "EXTENDED_DESCRIPTION": [
-      "Shuffle this card into your 抽牌堆."
+      "Shuffle this card into your 抽牌堆。"
     ]
   },
   "${ModID}:TransmuteSelfEffect": {

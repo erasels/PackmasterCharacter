@@ -18,16 +18,16 @@
   },
   "${ModID}:ShootingEcho": {
     "NAME": "Shooting Echo",
-    "DESCRIPTION": "造成 !D! 点伤害。 Exhaust a card to add a copy of this into your hand. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 消耗 一张牌 to add a copy of this into your hand. NL 消耗 。"
   },
   "${ModID}:StardustReverie": {
     "NAME": "Stardust Reverie",
-    "DESCRIPTION": "Exhaust !M! card. 获得 ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify. NL 抽 !M! 张牌.",
-    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. 获得 ${ModID}:Charge Up equal to two times their costs including ${ModID}:Amplify. NL 抽 !M! 张牌。"
+    "DESCRIPTION": "消耗 !M! card. 获得 ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify. NL 抽 !M! 张牌.",
+    "UPGRADE_DESCRIPTION": "消耗 !M! cards. 获得 ${ModID}:Charge Up equal to two times their costs including ${ModID}:Amplify. NL 抽 !M! 张牌。"
   },
   "${ModID}:Inertia": {
     "NAME": "Inertia",
-    "DESCRIPTION": "每当 a card is Exhausted or ${ModID}:Amplified, 获得 !M! ${ModID}:Charge Up."
+    "DESCRIPTION": "每当 一张牌 is 消耗ed or ${ModID}:Amplified, 获得 !M! ${ModID}:Charge Up."
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "Ultimate Shortwave",
@@ -35,7 +35,7 @@
   },
   "${ModID}:DragonMeteor": {
     "NAME": "Dragon Meteor",
-    "DESCRIPTION": "造成 !D! 点伤害。 Deals !M! additional damage for each card in your exhaust pile."
+    "DESCRIPTION": "造成 !D! 点伤害。 Deals !M! additional damage for each card in your 消耗 pile."
   },
   "${ModID}:EarthlightRay": {
     "NAME": "Earthlight Ray",

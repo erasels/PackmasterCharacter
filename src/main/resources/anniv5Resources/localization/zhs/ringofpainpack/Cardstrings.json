@@ -17,8 +17,8 @@
   },
   "${ModID}:Shackles": {
     "NAME": "Shackles",
-    "DESCRIPTION": "Retain. NL 获得 !B! 点 格挡 。 NL ${ModID}:Evolves when you play a card that costs at least !M! .",
-    "UPGRADE_DESCRIPTION": "Retain. NL 获得 !B! 点 格挡 。 NL Block is not removed at the start of your next turn.",
+    "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL ${ModID}:Evolves when you play 一张牌 that costs at least !M! .",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL Block is not removed at the start of your next turn.",
     "EXTENDED_DESCRIPTION": ["Huge Shackles"]
   },
   "${ModID}:IceBeast": {
@@ -33,12 +33,12 @@
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
-    "DESCRIPTION": "虚无 。 NL Exhaust !M! cards in your 抽牌堆. NL Put a card from your 弃牌堆 into your hand and give it 消耗 。",
-    "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your 抽牌堆. NL Put a card from your 弃牌堆 into your hand and give it 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 消耗 !M! cards in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your hand and give it 消耗 。",
+    "UPGRADE_DESCRIPTION": "消耗 !M! cards in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your hand and give it 消耗 。"
   },
   "${ModID}:Owl": {
     "NAME": "Owl",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL ${ModID}:Evolves when you Exhaust a card.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply !M! Vulnerable. NL ${ModID}:Evolves when you 消耗 一张牌。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Apply ${ModID}:Rend equal to half of the unblocked damage dealt. NL Apply !M! Vulnerable.",
     "EXTENDED_DESCRIPTION": ["Nightmare Owl"]
   },
@@ -48,7 +48,7 @@
   },
   "${ModID}:Connection": {
     "NAME": "Connection",
-    "DESCRIPTION": "每当 you play a card, upgrade it and ALL copies of it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL 每当 you play a card, upgrade it and ALL copies of it."
+    "DESCRIPTION": "每当 you play 一张牌, upgrade it and ALL copies of it.",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you play 一张牌, upgrade it and ALL copies of it."
   }
 }

@@ -9,7 +9,7 @@
   },
   "${ModID}:ConjurationAction": {
     "TEXT": [
-      "Choose a Card to play."
+      "Choose 一张牌 to play."
     ]
   },
   "${ModID}:UtilityPackHat": {

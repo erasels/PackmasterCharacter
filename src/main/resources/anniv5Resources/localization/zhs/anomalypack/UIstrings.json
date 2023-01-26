@@ -1,15 +1,15 @@
 {
   "${ModID}:AnomalyPack": {
     "TEXT": [
-      "Anomaly",
-      "Weird cards that want you to think outside the box.",
+      "异常",
+      "奇奇怪怪的牌，让你跳出思维定式。",
       "PureQuestion"
     ]
   },
   "${ModID}:AnomalyPackHat": {
     "TEXT": [
-      "Mysterious and all-knowing.",
-      "Anomalous 8-Ball"
+      "神秘且全知。",
+      "异常8号球"
     ]
   }
 }

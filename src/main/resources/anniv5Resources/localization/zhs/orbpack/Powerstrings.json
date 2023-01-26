@@ -2,7 +2,7 @@
   "${ModID}:ThunderstruckPower": {
     "NAME": "Thunderstruck",
     "DESCRIPTIONS": [
-      "每当 you play a card containing \"Strike\", #yChannel #b",
+      "每当 you play 一张牌 containing \"Strike\", #yChannel #b",
       " #yLightning."
     ]
   }

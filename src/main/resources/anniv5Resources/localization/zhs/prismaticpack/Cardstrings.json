@@ -28,7 +28,7 @@
   "${ModID}:QuirionDryad": {
     "NAME": "Quirion Dryad",
     "DESCRIPTION": "The first time you play each color of card 本场战斗, 获得 !M! 点 力量 and !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you play each color of card 本场战斗, 获得 !M! 点 力量 and !M! Dexterity."
+    "UPGRADE_DESCRIPTION": "固有 。 NL The first time you play each color of card 本场战斗, 获得 !M! 点 力量 and !M! Dexterity."
   },
   "${ModID}:ManyAsOne": {
     "NAME": "Many as One",

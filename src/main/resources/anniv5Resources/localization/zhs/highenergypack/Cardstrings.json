@@ -1,12 +1,12 @@
 {
   "${ModID}:MiracleWorker": {
     "NAME": "Miracle Worker",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put a *Miracle on top of your 抽牌堆."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put a *Miracle on top of your 抽牌堆。"
   },
   "${ModID}:Trash": {
     "NAME": "Trash",
-    "DESCRIPTION": "Exhaust 1 card. NL 获得 [E] .",
-    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust 1 card. NL 获得 [E] ."
+    "DESCRIPTION": "消耗 1 card. NL 获得 [E] .",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 消耗 1 card. NL 获得 [E] ."
   },
   "${ModID}:MultiTool": {
     "NAME": "Multi-Tool",
@@ -22,15 +22,15 @@
   },
   "${ModID}:ManifestMeal": {
     "NAME": "Manifest Meal",
-    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your 抽牌堆."
+    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your 抽牌堆。"
   },
   "${ModID}:Food": {
     "NAME": "Food",
     "DESCRIPTION": "获得 X [E] . NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Retain. NL 获得 X [E] . NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 X [E] . NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 ",
-      "Retain. NL 获得 ",
+      "保留 。 NL 获得 ",
       " . NL 消耗 。",
       "You 获得 nothing! NL Good day, sir! NL 消耗 。",
       "mm delocious"
@@ -38,7 +38,7 @@
   },
   "${ModID}:Investor": {
     "NAME": "Investor",
-    "DESCRIPTION": "每当 you spend 2 or more Energy on a card, 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "每当 you spend 2 or more Energy on 一张牌, 获得 !M! 点 格挡 。"
   },
   "${ModID}:StruckByATrain": {
     "NAME": "Struck By A Train",

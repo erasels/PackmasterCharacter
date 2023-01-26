@@ -13,7 +13,7 @@
   },
   "${ModID}:Bzzzzz": {
     "NAME": "Bzzzzzz",
-    "DESCRIPTION": "Apply !M! Weak. NL 抽 !M! 张牌。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 抽 !M! 张牌。"
   },
   "${ModID}:BugOut": {
     "NAME": "Bug Out",
@@ -29,7 +29,7 @@
   },
   "${ModID}:Compoundeyes": {
     "NAME": "Compoundeyes",
-    "DESCRIPTION": "抽 !M! 张牌。 NL When you next play a card, end your turn."
+    "DESCRIPTION": "抽 !M! 张牌。 NL When you next play 一张牌, end your turn."
   },
   "${ModID}:Bees": {
     "NAME": "BEES!!!",

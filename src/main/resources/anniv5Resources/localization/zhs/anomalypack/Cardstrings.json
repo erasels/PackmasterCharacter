@@ -1,58 +1,58 @@
 {
   "${ModID}:Wonder": {
-    "NAME": "Wonder",
-    "DESCRIPTION": "Discard your hand. NL 抽一张牌 and set your Energy to its cost.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Discard your hand. 抽一张牌 and set your Energy to its cost."
+    "NAME": "精妙",
+    "DESCRIPTION": "丢弃所有手牌。 NL 抽一张牌， NL 将能量设为其耗能点。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃所有手牌。 抽一张牌， NL 将能量设为其耗能点。"
   },
   "${ModID}:FreeSpace": {
-    "NAME": "Free Space",
-    "DESCRIPTION": "虚无 。 NL When you draw, discard, Exhaust or play this, 抽一张牌.",
-    "UPGRADE_DESCRIPTION": "When you draw, discard, Exhaust or play this, 抽一张牌."
+    "NAME": "发挥空间",
+    "DESCRIPTION": "虚无 。 NL 本牌被抽到、丢弃、 消耗 ，或打出时，抽一张牌。",
+    "UPGRADE_DESCRIPTION": "本牌被抽到、丢弃、 消耗 ，或打出时，抽一张牌。"
   },
   "${ModID}:MidnightOil": {
-    "NAME": "Midnight Oil",
-    "DESCRIPTION": "Exhaust a random card. 获得 [E]. NL While this is Exhausted, 获得 [E] each turn.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. NL 获得 [E]. NL While this is Exhausted, 获得 [E] each turn."
+    "NAME": "夜灯油",
+    "DESCRIPTION": "随机 消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时，每回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时，每回合获得 [E] 。"
   },
   "${ModID}:VoraciousSigil": {
-    "NAME": "Voracious Sigil",
-    "DESCRIPTION": "${ModID}:Absorb a random Skill in your hand. Play all the cards this has ${ModID}:Absorbed.",
-    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Absorb a random Skill in your hand. Play all the cards this has ${ModID}:Absorbed."
+    "NAME": "暴吞铭印",
+    "DESCRIPTION": "随机 ${ModID}:吞并 手中一张技能牌。 NL 打出所有本场战斗本牌已 *吞并 的牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 随机 ${ModID}:吞并 手中一张技能牌。 NL 打出所有本场战斗本牌已 *吞并 的牌。"
   },
   "${ModID}:StrikeThroughFate": {
-    "NAME": "Strike Through Fate",
-    "DESCRIPTION": "造成 !D! 点伤害。 If this is your 7th card 本回合, deal !D! damage three times instead.",
-    "UPGRADE_DESCRIPTION": "Retain. NL 造成 !D! 点伤害。 If this is your 7th card 本回合, deal !D! damage three times instead."
+    "NAME": "破命打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若为本回合第7张打出牌， 再造成两次。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 若为本回合第7张打出牌， 再造成两次。"
   },
   "${ModID}:MindOverMatter": {
-    "NAME": "Mind Over Matter",
-    "DESCRIPTION": "每当 you 抽一张牌, 获得 1 格挡 。",
-    "UPGRADE_DESCRIPTION": "Innate. NL 每当 you 抽一张牌, 获得 1 格挡 。"
+    "NAME": "心胜于物",
+    "DESCRIPTION": "抽牌时， NL 获得1点 格挡 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 抽牌时， NL 获得1点 格挡 。"
   },
   "${ModID}:GoldenGun": {
-    "NAME": "Golden Gun",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Must be [#EFC851]Loaded. NL Startup: Add a [#EFC851]Golden [#EFC851]Round to your 抽牌堆. "
+    "NAME": "黄金大炮",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 被 [#EFC851]装炮 后才能打出。 NL 起动 ：将一张 [#EFC851]黄金炮弹 洗入抽牌堆。 "
   },
   "${ModID}:GoldenRound": {
-    "NAME": "Golden Round",
-    "DESCRIPTION": "[#EFC851]Load a [#EFC851]Golden [#EFC851]Gun NL in your hand. NL If you don't have one, put this on top of your 抽牌堆."
+    "NAME": "黄金炮弹",
+    "DESCRIPTION": "[#EFC851]装炮 手中一张 [#EFC851]黄金大炮 。 NL 若手中无该牌，将本牌放入抽牌堆顶部。"
   },
   "${ModID}:RitualSight": {
-    "NAME": "Ritual Sight",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Exhaust a card. Shuffle a copy of it into your 抽牌堆.",
-    "EXTENDED_DESCRIPTION": ["Exhaust and copy."]
+    "NAME": "仪式视界",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 一张牌，将其一张复制品洗入抽牌堆。",
+    "EXTENDED_DESCRIPTION": ["消耗并复制。"]
   },
   "${ModID}:Thoughtweaving": {
-    "NAME": "Thoughtweaving",
-    "DESCRIPTION": "每当 you play a Skill or Attack, 抽一张牌 of the opposite type from a different Pack."
+    "NAME": "思绪编织",
+    "DESCRIPTION": "打出技能或攻击时，抽一张与其不同卡包中相反类型的牌。"
   },
   "${ModID}:SealedSword": {
-  "NAME": "Sealed Sword",
-  "DESCRIPTION": "消耗 。 NL When this is Exhausted, shuffle a [#EFC851]Souleater [#EFC851]Strike into your 抽牌堆.",
-  "UPGRADE_DESCRIPTION": "消耗 。 NL When this is Exhausted, shuffle a [#EFC851]Souleater [#EFC851]Strike+ into your 抽牌堆."
+  "NAME": "封印之剑",
+  "DESCRIPTION": "消耗 。 NL 本牌被 消耗 时，将一张 [#EFC851]汲魂打击 洗入抽牌堆。",
+  "UPGRADE_DESCRIPTION": "消耗 。 NL 本牌被 消耗 时，将一张 [#EFC851]汲魂打击+ 洗入抽牌堆。"
 },
   "${ModID}:SouleaterStrike": {
-    "NAME": "Souleater Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Apply 13 Vulnerable. NL Apply 13 Weak."
+    "NAME": "汲魂打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 13 层 易伤 。 NL 给予 13 层 虚弱 。"
   }
 }

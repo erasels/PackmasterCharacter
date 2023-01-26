@@ -6,7 +6,7 @@
       "transmuted",
       "transmutes"
     ],
-    "DESCRIPTION": "Transforms a card in combat into any card of the same rarity available to your current run. The new card deals #b1 more damage and 获得s #b1 more #yBlock for the rest of combat. This effect stacks."
+    "DESCRIPTION": "Transforms 一张牌 in combat into any card of the same rarity available to your current run. The new card deals #b1 more damage and 获得s #b1 more #yBlock for the rest of combat. This effect stacks."
   },
   {
     "PROPER_NAME": "Mutable",
@@ -14,6 +14,6 @@
       "mutable",
       "mutable:"
     ],
-    "DESCRIPTION": "When a card is #yTransmuted, any #yMutable effect is passed on to the next card for the rest of combat."
+    "DESCRIPTION": "When 一张牌 is #yTransmuted, any #yMutable effect is passed on to the next card for the rest of combat."
   }
 ]

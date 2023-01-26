@@ -1,7 +1,7 @@
 {
   "${ModID}:AcidicSpray": {
     "NAME": "Acidic Spray",
-    "DESCRIPTION": "Deal !D! damage for each debuff on the target. NL Apply !M! Weak."
+    "DESCRIPTION": "Deal !D! damage for each debuff on the target. NL 给予 !M! 层 虚弱 。"
   },
   "${ModID}:PoisonMastery": {
     "NAME": "Poison Mastery",
@@ -23,14 +23,14 @@
   },
   "${ModID}:MassProduction": {
     "NAME": "Mass Production",
-    "DESCRIPTION": "Choose a card in your 抽牌堆. Exhaust your hand and replace it with copies of that card. 消耗 。",
+    "DESCRIPTION": "Choose 一张牌 in your 抽牌堆。 消耗 your hand and replace it with copies of that card. 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "Choose a card to Mass Produce."
+      "Choose 一张牌 to Mass Produce."
     ]
   },
   "${ModID}:ScrapCannon": {
     "NAME": "Scrap Cannon",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust a card."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张牌。"
   },
   "${ModID}:BloodRitual": {
     "NAME": "Blood Ritual",
@@ -38,16 +38,16 @@
   },
   "${ModID}:OverTime": {
     "NAME": "Over Time",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL For each card that you've *Exhausted 本场战斗, increase damage by !M!."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL For each card that you've *消耗ed 本场战斗, increase damage by !M!."
   },
   "${ModID}:SlimeSpray": {
     "NAME": "Slime Spray",
-    "DESCRIPTION": "Retain. NL Deal !D! damage, apply !M! Poison, and apply Slow to ALL enemies."
+    "DESCRIPTION": "保留 。 NL Deal !D! damage, apply !M! Poison, and apply Slow to ALL enemies."
   },
   "${ModID}:StickStrike": {
     "NAME": "Stick Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Stick into your 抽牌堆.",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Stick+ into your 抽牌堆."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Stick into your 抽牌堆。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle a *Stick+ into your 抽牌堆。"
   },
   "${ModID}:Stick": {
     "NAME": "Stick",

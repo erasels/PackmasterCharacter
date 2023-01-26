@@ -2,7 +2,7 @@
   "${ModID}:BlacksmithsShieldPower": {
     "NAME": "Blacksmith's Shield",
     "DESCRIPTIONS": [
-      "After you play a card, 获得 #b",
+      "After you play 一张牌, 获得 #b",
       " #yBlock for each #yUpgrade on it."
     ]
   }

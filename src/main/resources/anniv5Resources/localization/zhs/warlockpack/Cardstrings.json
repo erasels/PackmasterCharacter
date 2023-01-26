@@ -1,42 +1,42 @@
 {
   "${ModID}:Imp": {
     "NAME": "Imp",
-    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn. NL Deal !M! damage. Increase the damage of *Imps by 1 本场战斗. NL 抽一张牌. NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn. NL Deal !M! damage. Increase the damage of *Imps by 1 本场战斗. NL 抽一张牌。 NL 消耗 。"
   },
   "${ModID}:Hig生命riestessJeklik": {
     "NAME": "High Priestess Jeklik",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If this card is Exhausted, add 2 copies of it to your hand."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If this card is 消耗ed, add 2 copies of it to your hand."
   },
   "${ModID}:SoulShear": {
     "NAME": "Soul Shear",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle 1 *Imp into your 抽牌堆."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle 1 *Imp into your 抽牌堆。"
   },
   "${ModID}:Soulfire": {
     "NAME": "Soulfire",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust a random card in your hand.",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust a card in your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 a random card in your hand.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张牌 in your hand."
   },
   "${ModID}:Doomguard": {
     "NAME": "Doomguard",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust 2 random cards in your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 2 random cards in your hand."
   },
   "${ModID}:HandOfGulDan": {
     "NAME": "Hand of Gul'dan",
-    "DESCRIPTION": "抽 !M! 张牌。 NL If this card is Exhausted, 抽 !M! 张牌。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL If this card is 消耗ed, 抽 !M! 张牌。"
   },
   "${ModID}:SeedsOfDestruction": {
     "NAME": "Seeds of Destruction",
     "DESCRIPTION": "Choose to shuffle !M! *Imps into your 抽牌堆 or !${ModID}:m2! *Imps into your 弃牌堆.",
-    "EXTENDED_DESCRIPTION": ["Shuffle !M! *Imps into your 抽牌堆.", "Add !M! *Imps to your 弃牌堆."]
+    "EXTENDED_DESCRIPTION": ["Shuffle !M! *Imps into your 抽牌堆。", "Add !M! *Imps to your 弃牌堆."]
   },
   "${ModID}:AranasiBroodmother": {
     "NAME": "Aranasi Broodmother",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle this card into your 抽牌堆. NL When you draw this card, 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle this card into your 抽牌堆。 NL When you draw this card, 获得 !M! 点 格挡 。"
   },
   "${ModID}:MalchezaarsImp": {
     "NAME": "Malchezaar's Imp",
-    "DESCRIPTION": "每当 a *non-Imp card is Exhausted, add 1 *Imp to your 弃牌堆.",
-    "UPGRADE_DESCRIPTION": "每当 a *non-Imp card is Exhausted, shuffle 1 *Imp into your 抽牌堆."
+    "DESCRIPTION": "每当 a *non-Imp card is 消耗ed, add 1 *Imp to your 弃牌堆.",
+    "UPGRADE_DESCRIPTION": "每当 a *non-Imp card is 消耗ed, shuffle 1 *Imp into your 抽牌堆。"
   },
   "${ModID}:TheSoularium": {
     "NAME": "The Soularium",
@@ -44,7 +44,7 @@
   },
   "${ModID}:RunedMithrilRod": {
     "NAME": "Runed Mithril Rod",
-    "DESCRIPTION": "Unplayable. Retain. NL After you 抽 !M! 张牌s while this is in your hand, reduce the cost of cards in your hand by 1 本回合 and discard this.",
+    "DESCRIPTION": "Unplayable. 保留 。 NL After you 抽 !M! 张牌s while this is in your hand, reduce the cost of cards in your hand by 1 本回合 and discard this.",
     "EXTENDED_DESCRIPTION": ["I can't play this card.", " ({0} drawn.)"]
   }
 }

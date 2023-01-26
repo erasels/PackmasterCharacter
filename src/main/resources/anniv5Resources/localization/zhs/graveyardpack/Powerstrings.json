@@ -2,9 +2,9 @@
 	"${ModID}:DarkOfNightPower": {
 		"NAME": "Dark Night",
 		"DESCRIPTIONS": [
-			"The next card that #yExhausts is played twice.",
+			"The next card that #y消耗s is played twice.",
 			"The next #b",
-			" cards that #yExhaust are played twice."
+			" cards that #y消耗 are played twice."
 		]
 	},
 	"${ModID}:CallOfTheGravePower": {

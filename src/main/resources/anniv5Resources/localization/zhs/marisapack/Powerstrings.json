@@ -8,7 +8,7 @@
   "${ModID}:Inertia": {
     "NAME": "Inertia",
     "DESCRIPTIONS": [
-      "每当 a card is #yExhausted or #yAmplified, 获得 #b%s #yCharge #yUp."
+      "每当 一张牌 is #y消耗ed or #yAmplified, 获得 #b%s #yCharge #yUp."
     ]
   },
   "${ModID}:EarthlightRay": {
@@ -21,7 +21,7 @@
   "${ModID}:BuildingCharge": {
     "NAME": "Building Charge",
     "DESCRIPTIONS": [
-      "每当 you play a card 本回合, 获得 #b%s #yCharge #yUp."
+      "每当 you play 一张牌 本回合, 获得 #b%s #yCharge #yUp."
     ]
   }
 }

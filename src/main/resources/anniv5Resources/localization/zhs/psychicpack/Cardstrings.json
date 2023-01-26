@@ -1,8 +1,8 @@
 {
   "${ModID}:RuleCancel": {
     "NAME": "Rule Cancel",
-    "DESCRIPTION": "Make a card in your hand ${ModID}:Occult. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Make a card in your hand ${ModID}:Occult."
+    "DESCRIPTION": "Make 一张牌 in your hand ${ModID}:Occult. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Make 一张牌 in your hand ${ModID}:Occult."
   },
   "${ModID}:Brainwave": {
     "NAME": "Brainwave",
@@ -17,18 +17,18 @@
   },
   "${ModID}:Gravity": {
     "NAME": "Gravity",
-    "DESCRIPTION": "虚无 。 NL 每当 you draw a ${ModID}:Locked or Unplayable card, 抽一张牌.",
-    "UPGRADE_DESCRIPTION": "每当 you draw a ${ModID}:Locked or Unplayable card, 抽一张牌."
+    "DESCRIPTION": "虚无 。 NL 每当 you draw a ${ModID}:Locked or Unplayable card, 抽一张牌。",
+    "UPGRADE_DESCRIPTION": "每当 you draw a ${ModID}:Locked or Unplayable card, 抽一张牌。"
   },
   "${ModID}:PhantomStep": {
     "NAME": "Phantom Step",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Make a card in your 抽牌堆 ${ModID}:Occult."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Make 一张牌 in your 抽牌堆 ${ModID}:Occult."
   },
   "${ModID}:Repel": {
     "NAME": "Repel",
-    "DESCRIPTION": "${ModID}:Locking. NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL Apply !M! Weak.",
+    "DESCRIPTION": "${ModID}:Locking. NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL Apply !M! Weak."
+      "${ModID}:Locked. NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
     ]
   },
   "${ModID}:OneIsEnough": {
@@ -41,15 +41,15 @@
   "${ModID}:Curse": {
     "NAME": "Curse",
     "DESCRIPTION": "${ModID}:Locking. NL Enemy loses !M! 点 力量 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Locking. NL Retain. NL Enemy loses !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Locking. NL 保留 。 NL Enemy loses !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
       "${ModID}:Locked. NL Enemy loses !M! 点 力量 。",
-      "${ModID}:Locked. NL Retain. NL Enemy loses !M! 点 力量 。"
+      "${ModID}:Locked. NL 保留 。 NL Enemy loses !M! 点 力量 。"
     ]
   },
   "${ModID}:MalleableFire": {
     "NAME": "Malleable Fire",
-    "DESCRIPTION": "Deal !D! damage X times. NL Add a *Molded *Fire that costs X to your 抽牌堆. NL 消耗 。"
+    "DESCRIPTION": "Deal !D! damage X times. NL Add a *Molded *Fire that costs X to your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:MoldedFire": {
     "NAME": "Molded Fire",
@@ -57,6 +57,6 @@
   },
   "${ModID}:DeepDream": {
     "NAME": "Deep Dream",
-    "DESCRIPTION": "每当 you play a card 本回合, make a random card in your hand ${ModID}:Occult. NL 消耗 。"
+    "DESCRIPTION": "每当 you play 一张牌 本回合, make a random card in your hand ${ModID}:Occult. NL 消耗 。"
   }
 }

@@ -2,7 +2,7 @@
   "${ModID}:CosmosCommandPack": {
     "TEXT": [
       "Cosmos Command",
-      "Exhaust cards to 获得 power, keep control of ${ModID}:Distortion, and use varying costs to your advantage.",
+      "消耗 cards to 获得 power, keep control of ${ModID}:Distortion, and use varying costs to your advantage.",
       "Enbeon"
     ]
   },

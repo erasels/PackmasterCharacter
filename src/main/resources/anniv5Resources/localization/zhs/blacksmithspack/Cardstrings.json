@@ -9,7 +9,7 @@
   },
   "${ModID}:HeartOfTheForge": {
     "NAME": "Heart of the Forge",
-    "DESCRIPTION": "{@@}Retain. NL 获得{!M!|>1= !M!} [E]. When Retained, Upgrade this. NL Can be Upgraded any number of times. NL 消耗 。"
+    "DESCRIPTION": "{@@}保留 。 NL 获得{!M!|>1= !M!} [E]. When Retained, Upgrade this. NL Can be Upgraded any number of times. NL 消耗 。"
   },
   "${ModID}:SharpeningSheath": {
     "NAME": "Sharpening Sheath",
@@ -17,11 +17,11 @@
   },
   "${ModID}:CarelessSwing": {
     "NAME": "Careless Swing",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Exhaust a random *Unupgraded card in your hand."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 a random *Unupgraded card in your hand."
   },
   "${ModID}:SetUpShop": {
     "NAME": "Set Up Shop",
-    "DESCRIPTION": "Upgrade !M! cards from your draw or 弃牌堆 and put them on top of your 抽牌堆."
+    "DESCRIPTION": "Upgrade !M! cards from your draw or 弃牌堆 and put them on top of your 抽牌堆。"
   },
   "${ModID}:MastersStrike": {
     "NAME": "Master's Strike",
@@ -33,10 +33,10 @@
   },
   "${ModID}:BlacksmithsShield": {
     "NAME": "Blacksmith's Shield",
-    "DESCRIPTION": "After you play a card, 获得 1 Block for each Upgrade on it."
+    "DESCRIPTION": "After you play 一张牌, 获得 1 Block for each Upgrade on it."
   },
   "${ModID}:Masterwork": {
     "NAME": "Masterwork",
-    "DESCRIPTION": "{@@}Upgrade a card{!M!|2= twice|>2= !M! times}. NL Can upgrade cards any number of times."
+    "DESCRIPTION": "{@@}Upgrade 一张牌{!M!|2= twice|>2= !M! times}. NL Can upgrade cards any number of times."
   }
 }

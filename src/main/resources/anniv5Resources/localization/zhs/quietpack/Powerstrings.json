@@ -2,7 +2,7 @@
   "${ModID}:HammerThrowPower": {
     "NAME": "Hammer Throw",
     "DESCRIPTIONS": [
-      "每当 a card is Retained, deal #b",
+      "每当 一张牌 is Retained, deal #b",
       " damage to ALL enemies."
     ]
   }

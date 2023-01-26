@@ -13,16 +13,16 @@
   },
   "${ModID}:BurningAct": {
     "NAME": "Burning Act",
-    "DESCRIPTION": "抽 !M! 张牌。 NL Exhaust 2 of them randomly.",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL Exhaust 2 of them."
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗 2 of them randomly.",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 2 of them."
   },
   "${ModID}:MindMaze": {
     "NAME": "Mind Maze",
-    "DESCRIPTION": "获得 !B! Block X times. NL Put X *Dazed on top of your 抽牌堆."
+    "DESCRIPTION": "获得 !B! Block X times. NL Put X *Dazed on top of your 抽牌堆。"
   },
   "${ModID}:Deterioration": {
     "NAME": "Deterioration",
-    "DESCRIPTION": "回合结束时， Exhaust a random card in your 弃牌堆 and 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "回合结束时， 消耗 a random card in your 弃牌堆 and 获得 !M! 点 格挡 。"
   },
   "${ModID}:Shatter": {
     "NAME": "Shatter",
@@ -33,7 +33,7 @@
   },
   "${ModID}:Rue": {
     "NAME": "Rue",
-    "DESCRIPTION": "{@@}获得 [E] [E] and 抽 !M! 张牌{!M!|>1=s}. NL Exhaust the next 3 cards you play."
+    "DESCRIPTION": "{@@}获得 [E] [E] and 抽 !M! 张牌{!M!|>1=s}. NL 消耗 the next 3 cards you play."
   },
   "${ModID}:Static": {
     "NAME": "Static",

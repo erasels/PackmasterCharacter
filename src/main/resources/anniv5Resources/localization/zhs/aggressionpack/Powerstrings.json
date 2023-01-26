@@ -1,10 +1,10 @@
 {
   "${ModID}:InnerFury": {
-    "NAME": "Inner Fury",
-    "DESCRIPTIONS": ["When you enter or exit #yAggression, 获得 #b{0} temporary #y力量 and #b{0} #y格挡 。"]
+    "NAME": "怒气",
+    "DESCRIPTIONS": ["每当你进入或退出 #y侵袭 ，获得 #b{0} 点临时 #y力量 与 #b{0} 点 #y格挡 。"]
   },
   "${ModID}:Animosity": {
-    "NAME": "Animosity",
-    "DESCRIPTIONS": ["When you enter, exit, or start your turn in #yAggression, 获得 #b{0} #y力量 。"]
+    "NAME": "恨极",
+    "DESCRIPTIONS": ["每当你进入、退出或以 #y侵袭 开始回合，获得 #b{0} 点 #y力量 。"]
   }
 }

@@ -2,15 +2,15 @@
   "${ModID}:HeatEnginePower": {
     "NAME": "Heat Engine",
     "DESCRIPTIONS": [
-      "每当 a card with a cost of #b",
-      " or greater, including #yAmplify, is #yExhausted, 获得 #b",
+      "每当 一张牌 with a cost of #b",
+      " or greater, including #yAmplify, is #y消耗ed, 获得 #b",
       " #y力量 。"
       ]
   },
   "${ModID}:RecallPower": {
     "NAME": "Recall",
     "DESCRIPTIONS": [
-      "每当 a card is #yAmplified, put a card from your #yExhaust pile into your hand."
+      "每当 一张牌 is #yAmplified, put 一张牌 from your #y消耗 pile into your hand."
     ]
   }
 }

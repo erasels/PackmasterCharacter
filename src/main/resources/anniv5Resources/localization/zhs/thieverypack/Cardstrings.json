@@ -22,7 +22,7 @@
   },
   "${ModID}:力量Sap": {
     "NAME": "力量 Sap",
-    "DESCRIPTION": "Apply !M! Weak. NL If the enemy has positive 力量, steal !${ModID}:m2! 力量 。 NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL If the enemy has positive 力量, steal !${ModID}:m2! 力量 。 NL 消耗ive !stslib:ex!."
   },
   "${ModID}:CunningPoison": {
     "NAME": "Cunning Poison",
@@ -42,6 +42,6 @@
   "${ModID}:ThieveryMastery": {
     "NAME": "Thievery Mastery",
     "DESCRIPTION": "You become a Master Thief. NL (每当 you steal something, 获得 twice as much of it)",
-    "UPGRADE_DESCRIPTION": "Innate. NL You become a Master Thief. NL (每当 you steal something, 获得 twice as much of it)"
+    "UPGRADE_DESCRIPTION": "固有 。 NL You become a Master Thief. NL (每当 you steal something, 获得 twice as much of it)"
   }
 }

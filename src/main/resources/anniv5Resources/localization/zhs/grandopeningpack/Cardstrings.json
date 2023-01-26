@@ -1,19 +1,19 @@
 {
   "${ModID}:MessUp": {
     "NAME": "Mess Up",
-    "DESCRIPTION": "Deal damage equal to the amount of cards in your 抽牌堆. NL Shuffle your 弃牌堆 into your 抽牌堆.",
-    "UPGRADE_DESCRIPTION": "Shuffle your 弃牌堆 into your deck. NL Deal damage equal to the amount of cards in your 抽牌堆.",
+    "DESCRIPTION": "Deal damage equal to the amount of cards in your 抽牌堆。 NL Shuffle your 弃牌堆 into your 抽牌堆。",
+    "UPGRADE_DESCRIPTION": "Shuffle your 弃牌堆 into your deck. NL Deal damage equal to the amount of cards in your 抽牌堆。",
     "EXTENDED_DESCRIPTION": [
       "(Deals !D! damage.) NL "
     ]
   },
   "${ModID}:PlannedDefense": {
     "NAME": "Planned Defense",
-    "DESCRIPTION": "Innate. NL 获得 !B! 点 格挡 。 If you played another Innate card 本回合, also 获得 half that much Block next turn."
+    "DESCRIPTION": "固有 。 NL 获得 !B! 点 格挡 。 If you played another Innate card 本回合, also 获得 half that much Block next turn."
   },
   "${ModID}:SecondStrike": {
     "NAME": "Second Strike",
-    "DESCRIPTION": "Innate. Retain. NL 造成 !D! 点伤害。 If it is not the first turn, deal !D! damage a获得."
+    "DESCRIPTION": "固有 。 保留 。 NL 造成 !D! 点伤害。 If it is not the first turn, deal !D! damage a获得."
   },
   "${ModID}:DashIn": {
     "NAME": "Dash In",
@@ -26,23 +26,23 @@
   },
   "${ModID}:Cross": {
     "NAME": "Cross",
-    "DESCRIPTION": "Deal !D! damage twice. Your *Crosses deal 1 more damage 本场战斗. Shuffle a *Cross into your 抽牌堆.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage twice. Your *Crosses deal 1 more damage 本场战斗. Shuffle a *Cross+ into your 抽牌堆."
+    "DESCRIPTION": "Deal !D! damage twice. Your *Crosses deal 1 more damage 本场战斗. Shuffle a *Cross into your 抽牌堆。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL Deal !D! damage twice. Your *Crosses deal 1 more damage 本场战斗. Shuffle a *Cross+ into your 抽牌堆。"
   },
   "${ModID}:Improvise": {
     "NAME": "Improvise",
     "DESCRIPTION": "获得 !B! 点 格挡 。 Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage",
-    "UPGRADE_DESCRIPTION": "Innate. NL 获得 !B! 点 格挡 。 Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage"
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !B! 点 格挡 。 Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage"
   },
   "${ModID}:Debut": {
     "NAME": "Debut",
     "DESCRIPTION": "Once each turn, playing an Innate card Refunds 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Once each turn, playing an Innate card Refunds 1."
+    "UPGRADE_DESCRIPTION": "固有 。 NL Once each turn, playing an Innate card Refunds 1."
   },
   "${ModID}:BattlePrep": {
     "NAME": "Battle Prep",
-    "DESCRIPTION": "Choose a card in your hand and permanently give it Innate. Remove this from your deck, permanently.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in your hand and permanently give it Innate. Remove this from your deck, permanently.",
+    "DESCRIPTION": "Choose 一张牌 in your hand and permanently give it 固有 。 Remove this from your deck, permanently.",
+    "UPGRADE_DESCRIPTION": "保留 。 NL Choose 一张牌 in your hand and permanently give it 固有 。 Remove this from your deck, permanently.",
     "EXTENDED_DESCRIPTION": [
       "Make Innate (Permanently)"
     ]
@@ -50,6 +50,6 @@
   "${ModID}:Surge": {
     "NAME": "Surge",
     "DESCRIPTION": "本回合, your next Innate card is played twice.",
-    "UPGRADE_DESCRIPTION": "Innate. NL 本回合, your next Innate card is played twice."
+    "UPGRADE_DESCRIPTION": "固有 。 NL 本回合, your next Innate card is played twice."
   }
 }

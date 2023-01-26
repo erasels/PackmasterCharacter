@@ -6,16 +6,16 @@
   "${ModID}:Augment": {
     "NAME": "Augment",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no empty Orb slots, 获得 1 Orb slot.",
-    "UPGRADE_DESCRIPTION": "Retain. NL 获得 !B! 点 格挡 。 NL If you have no empty Orb slots, 获得 1 Orb slot."
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL If you have no empty Orb slots, 获得 1 Orb slot."
   },
   "${ModID}:Allocate": {
     "NAME": "Allocate",
     "DESCRIPTION": "获得 1 Orb slot for each enemy in combat.",
-    "UPGRADE_DESCRIPTION": "Innate. NL 获得 1 Orb slot for each enemy in combat."
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 1 Orb slot for each enemy in combat."
   },
   "${ModID}:Stockpile": {
     "NAME": "Stockpile",
-    "DESCRIPTION": "Discard a card. NL If it was a Power card, Channel !M! Plasma. Otherwise, Channel !M! Lightning."
+    "DESCRIPTION": "Discard 一张牌。 NL If it was a Power card, Channel !M! Plasma. Otherwise, Channel !M! Lightning."
   },
   "${ModID}:IcicleCrash": {
     "NAME": "Icicle Crash",
@@ -32,10 +32,10 @@
   "${ModID}:MaterialBoost": {
     "NAME": "Material Boost",
     "DESCRIPTION": "Discard any number of cards. NL Evoke your next Orb once for each card discarded.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Discard any number of cards. NL Evoke your next Orb once for each card discarded."
+    "UPGRADE_DESCRIPTION": "保留 。 NL Discard any number of cards. NL Evoke your next Orb once for each card discarded."
   },
   "${ModID}:Thunderstruck": {
     "NAME": "Thunderstruck",
-    "DESCRIPTION": "每当 you play a card containing \"Strike\", Channel !M! Lightning."
+    "DESCRIPTION": "每当 you play 一张牌 containing \"Strike\", Channel !M! Lightning."
   }
 }

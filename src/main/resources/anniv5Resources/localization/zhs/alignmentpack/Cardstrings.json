@@ -42,7 +42,7 @@
   },
   "${ModID}:Remember": {
     "NAME": "记忆",
-    "DESCRIPTION": "回合结束时，可将手中 !M! 张牌洗入抽牌堆."
+    "DESCRIPTION": "回合结束时，可将手中 !M! 张牌洗入抽牌堆。"
   },
   "${ModID}:Alignment": {
     "NAME": "置线",

@@ -29,7 +29,7 @@
   "${ModID}:Cuckoo": {
     "NAME": "Cuckoo",
     "DESCRIPTION": "每当 you draw a Curse card, deal !M! damage to a random enemy.",
-    "UPGRADE_DESCRIPTION": "Innate. NL 每当 you draw a Curse card, deal !M! damage to a random enemy."
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you draw a Curse card, deal !M! damage to a random enemy."
   },
   "${ModID}:Dong": {
     "NAME": "DONG!",
@@ -41,6 +41,6 @@
   },
   "${ModID}:SavedByTheBell": {
     "NAME": "Saved by the Bell",
-    "DESCRIPTION": "Retain. NL 获得 1 Intangible. NL 消耗 。 NL ${ModID}:Pickup: Obtain 3 *Curses *of *the *Bell."
+    "DESCRIPTION": "保留 。 NL 获得 1 Intangible. NL 消耗 。 NL ${ModID}:Pickup: Obtain 3 *Curses *of *the *Bell."
   }
 }

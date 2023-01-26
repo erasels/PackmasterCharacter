@@ -6,14 +6,14 @@
       "Charlie"
     ]
   },
-  "${ModID}:ReturnExhaustedToDeckAction": {
+  "${ModID}:Return消耗edToDeckAction": {
     "TEXT": [
-      "Select a Card to Return to Your 抽牌堆"
+      "Select 一张牌 to Return to Your 抽牌堆"
     ]
   },
-  "${ModID}:PlayFromExhaustAction": {
+  "${ModID}:PlayFrom消耗Action": {
     "TEXT": [
-      "Select a Card to Play"
+      "Select 一张牌 to Play"
     ]
   },
   "${ModID}:GraveyardPackHat": {

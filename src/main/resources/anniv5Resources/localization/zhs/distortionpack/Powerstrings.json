@@ -2,23 +2,23 @@
   "${ModID}:DistortionPower": {
     "NAME": "Distortion",
     "DESCRIPTIONS": [
-      "每当 a card is #yExhausted, lose #b",
-      "每当 a card is #yExhausted, loses #b",
+      "每当 一张牌 is #y消耗ed, lose #b",
+      "每当 一张牌 is #y消耗ed, loses #b",
       " 生命."
     ]
   },
   "${ModID}:RuePower": {
     "NAME": "Rue",
     "DESCRIPTIONS": [
-      "#yExhaust the next #b",
+      "#y消耗 the next #b",
       " cards you play.",
-      "#yExhaust the next card you play."
+      "#y消耗 the next card you play."
     ]
   },
   "${ModID}:DeteriorationPower": {
     "NAME": "Deterioration",
     "DESCRIPTIONS": [
-      "回合结束时， #yExhaust a random card in your 弃牌堆 and 获得 #b",
+      "回合结束时， #y消耗 a random card in your 弃牌堆 and 获得 #b",
       " #y格挡 。"
     ]
   }

@@ -4,7 +4,7 @@
 		"NAME": "Air Current"
 	},
 	"${ModID}:DustTornado":	{
-		"DESCRIPTION": "Exhaust a card in hand to play !M! random cards from your 弃牌堆. NL 消耗 。",
+		"DESCRIPTION": "消耗 一张牌 in hand to play !M! random cards from your 弃牌堆. NL 消耗 。",
 		"NAME": "Dust Tornado"
 	},
 	"${ModID}:Enervate":	{
@@ -16,7 +16,7 @@
 		"NAME": "Excavation"
 	},
 	"${ModID}:Geomorphology":	{
-		"DESCRIPTION": "每当 you Exhaust a card or Channel an Orb, apply !M! ${ModID}:Petra to a random enemy.",
+		"DESCRIPTION": "每当 you 消耗 一张牌 or Channel an Orb, apply !M! ${ModID}:Petra to a random enemy.",
 		"NAME": "Geomorphology"
 	},
 	"${ModID}:GeothermalHeating":	{

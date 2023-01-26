@@ -5,20 +5,20 @@
   },
   "${ModID}:Stall": {
     "NAME": "Stall",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put up to !M! cards from your hand on top of your 抽牌堆."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put up to !M! cards from your hand on top of your 抽牌堆。"
   },
   "${ModID}:RiskOfBlades": {
     "NAME": "Risk Of Blades",
-    "DESCRIPTION": "Deal !D! damage for each Attack among the top 4 cards of your 抽牌堆.",
+    "DESCRIPTION": "Deal !D! damage for each Attack among the top 4 cards of your 抽牌堆。",
     "EXTENDED_DESCRIPTION": [" NL (Hits !M! times.)"]
   },
   "${ModID}:Crossroads": {
     "NAME": "Crossroads",
-    "DESCRIPTION": "Scry !M!. NL Play the top card of your 抽牌堆. NL 消耗 。"
+    "DESCRIPTION": "Scry !M!. NL Play the top card of your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:Anticipation": {
     "NAME": "Anticipation",
-    "DESCRIPTION": "抽一张牌. NL 获得 力量 equal to its cost.",
+    "DESCRIPTION": "抽一张牌。 NL 获得 力量 equal to its cost.",
     "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 获得 力量 equal to their cost."
   },
   "${ModID}:Prediction": {
@@ -35,7 +35,7 @@
   },
   "${ModID}:Recurrence": {
     "NAME": "Recurrence",
-    "DESCRIPTION": "Shuffle a copy of your hand into your 抽牌堆. NL 消耗 。"
+    "DESCRIPTION": "Shuffle a copy of your hand into your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:DivineMight": {
     "NAME": "Divine Might",

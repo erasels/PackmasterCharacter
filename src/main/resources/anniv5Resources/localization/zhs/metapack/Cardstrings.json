@@ -1,7 +1,7 @@
 {
   "${ModID}:ShedWeight": {
     "NAME": "Shed Weight",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Discard a card. NL If that card was [#EFC851]Unplayable, 抽一张牌."
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Discard 一张牌。 NL If that card was [#EFC851]Unplayable, 抽一张牌。"
   },
   "${ModID}:RayOfFrost": {
     "NAME": "Ray Of Frost",
@@ -15,7 +15,7 @@
   "${ModID}:Ambition": {
     "NAME": "Ambition",
     "DESCRIPTION": "Put a random Power from your 抽牌堆 into your hand and copy it. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Innate. NL Put a random Power from your 抽牌堆 into your hand and copy it. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "固有 。 NL Put a random Power from your 抽牌堆 into your hand and copy it. NL 消耗 。"
   },
   "${ModID}:Diehard": {
     "NAME": "Diehard",
@@ -31,12 +31,12 @@
   },
   "${ModID}:KillerInstinct": {
     "NAME": "Killer Instinct",
-    "DESCRIPTION": "获得 2 力量 and 1 Dexterity. NL Startup: Shuffle a copy of this card into your 抽牌堆.",
-    "UPGRADE_DESCRIPTION": "获得 2 力量 and 1 Dexterity. NL Startup: Shuffle !M! copies of this card into your 抽牌堆."
+    "DESCRIPTION": "获得 2 力量 and 1 Dexterity. NL 战斗开始： Shuffle a copy of this card into your 抽牌堆。",
+    "UPGRADE_DESCRIPTION": "获得 2 力量 and 1 Dexterity. NL 战斗开始： Shuffle !M! copies of this card into your 抽牌堆。"
   },
   "${ModID}:Bulwark": {
     "NAME": "Bulwark",
-    "DESCRIPTION": "Innate. NL 获得 Temporary 生命 equal to your 抽牌堆 size. NL 消耗 。",
+    "DESCRIPTION": "固有 。 NL 获得 Temporary 生命 equal to your 抽牌堆 size. NL 消耗 。",
     "EXTENDED_DESCRIPTION": [" NL (获得 !M! Temporary 生命.)"]
   },
   "${ModID}:Masterstroke": {

@@ -22,21 +22,21 @@
   },
   "${ModID}:Improve": {
     "NAME": "Improve",
-    "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:Modify a random card in hand: \"抽一张牌.\" NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:Modify a card in hand: \"抽一张牌.\" NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:Modify a random card in hand: \"抽一张牌。\" NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:Modify 一张牌 in hand: \"抽一张牌。\" NL 消耗 。"
   },
   "${ModID}:Enhance": {
     "NAME": "Enhance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Modify a card in hand: \"获得 !M! 点 格挡 。\""
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Modify 一张牌 in hand: \"获得 !M! 点 格挡 。\""
   },
   "${ModID}:Cheapen": {
     "NAME": "Cheapen",
     "DESCRIPTION": "${ModID}:Modify a random card in your 抽牌堆: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Modify a card in your 抽牌堆: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。"
+    "UPGRADE_DESCRIPTION": "${ModID}:Modify 一张牌 in your 抽牌堆: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。"
   },
   "${ModID}:Expand": {
     "NAME": "Expand",
-    "DESCRIPTION": "${ModID}:Modify a card in hand: \"Costs 1 more [E] .\" and \"Play a获得, unmodified.\" NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Modify 一张牌 in hand: \"Costs 1 more [E] .\" and \"Play a获得, unmodified.\" NL 消耗 。"
   },
   "${ModID}:Piratify": {
     "NAME": "Piratify",

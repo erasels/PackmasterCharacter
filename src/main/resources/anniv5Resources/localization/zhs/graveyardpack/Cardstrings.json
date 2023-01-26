@@ -1,13 +1,13 @@
 {
   "${ModID}:GreyBar获得": {
     "NAME": "Grey Bar获得",
-    "DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by Exhausting a card in your hand.",
-    "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by Exhausting a card in your hand. NL 抽一张牌.",
-    "EXTENDED_DESCRIPTION": ["I need a card to 消耗 。"]
+    "DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by 消耗ing 一张牌 in your hand.",
+    "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by 消耗ing 一张牌 in your hand. NL 抽一张牌。",
+    "EXTENDED_DESCRIPTION": ["I need 一张牌 to 消耗 。"]
   },
     "${ModID}:ExtraLimbs": {
     "NAME": "Extra Limbs",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL When Exhausted, increase the number of hits by 1 本场战斗. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL When 消耗ed, increase the number of hits by 1 本场战斗. NL 消耗 。"
   },
     "${ModID}:AncientSpear": {
     "NAME": "Ancient Spear",
@@ -20,12 +20,12 @@
     "${ModID}:CallOfTheGrave": {
     "NAME": "Call of the Grave",
     "DESCRIPTION": "At the start of your turn, play a random ${ModID}:Buried card and stslib:Purge it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, play a random ${ModID}:Buried card and stslib:Purge it."
+    "UPGRADE_DESCRIPTION": "固有 。 NL At the start of your turn, play a random ${ModID}:Buried card and stslib:Purge it."
   },
     "${ModID}:SpontaneousRitual": {
     "NAME": "Spontaneous Ritual",
-    "DESCRIPTION": "Exhaust your hand. NL Deal damage equal to the number of cards Exhausted 本场战斗.",
-    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your hand then Exhaust it. NL Deal damage equal to the number of cards Exhausted 本场战斗.",
+    "DESCRIPTION": "消耗 your hand. NL Deal damage equal to the number of cards 消耗ed 本场战斗.",
+    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your hand then 消耗 it. NL Deal damage equal to the number of cards 消耗ed 本场战斗.",
   	"EXTENDED_DESCRIPTION": [" NL ( !D! damage )"]
   },
     "${ModID}:FuneraryJewels": {
@@ -38,8 +38,8 @@
   },
     "${ModID}:DarkOfNight": {
     "NAME": "Dark of Night",
-    "DESCRIPTION": "Your next card that Exhausts 本回合 is played twice.",
-    "UPGRADE_DESCRIPTION": "Your next two cards that Exhaust 本回合 are played twice."
+    "DESCRIPTION": "Your next card that 消耗s 本回合 is played twice.",
+    "UPGRADE_DESCRIPTION": "Your next two cards that 消耗 本回合 are played twice."
   },
     "${ModID}:LastGasp": {
     "NAME": "Last Gasp",
