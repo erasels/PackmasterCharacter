@@ -1,6 +1,5 @@
 package thePackmaster.cards.upgradespack;
 
-import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,7 +7,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.upgradespack.SuperUpgradeAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 public class Masterwork extends AbstractBlacksmithCard {
 
