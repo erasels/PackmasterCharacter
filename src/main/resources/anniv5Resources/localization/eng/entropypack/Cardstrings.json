@@ -14,7 +14,7 @@
   },
   "${ModID}:Construct": {
     "NAME": "Construct",
-    "DESCRIPTION": "${ModID}:Unstable. NL Take !M! less damage from attacks this turn. NL Gain 2 Weak."
+    "DESCRIPTION": "${ModID}:Unstable. NL Draw a card. NL Take !M! less damage from attacks this turn. NL Gain 2 Weak."
   },
   "${ModID}:Freedom": {
     "NAME": "Freedom",

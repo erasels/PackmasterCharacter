@@ -37,21 +37,25 @@ public class BlackMarketDealerEvent extends PhasedEvent {
     private boolean forRemoval = false;
     private int choice = 0;
 
+    private int chosenDailyMarket;
+
     public BlackMarketDealerEvent() {
         super(NAME, eventStrings.NAME, SpireAnniversary5Mod.makeImagePath("events/blackMarket.png"));
 
-        registerPhase("base", new TextPhase(DESCRIPTIONS[0])
-                .addOption(OPTIONS[0], ((t) -> this.transitionKey("cardDealer")))
-                .addOption(OPTIONS[1], (t) -> this.transitionKey("magicDealer"))
-                .addOption(OPTIONS[2], (t) -> this.transitionKey("relicDealer"))
-                .addOption(OPTIONS[3], (t) -> this.openMap())
-        );
 
-        registerPhase("base2", new TextPhase(DESCRIPTIONS[13])
-                .addOption(OPTIONS[0], ((t) -> this.transitionKey("cardDealer")))
-                .addOption(OPTIONS[1], (t) -> this.transitionKey("magicDealer"))
-                .addOption(OPTIONS[2], (t) -> this.transitionKey("relicDealer"))
-                .addOption(OPTIONS[3], (t) -> this.openMap())
+        if (AbstractDungeon.player.gold < getGoldCostForBuy() && getCardsForDraftedPurge().isEmpty())
+        {
+            //If the top option cannot do any of its three options (EXTREMELY rare edge case), only pick from the other two vendors
+            chosenDailyMarket = AbstractDungeon.eventRng.random(1, 2);
+        } else {
+            chosenDailyMarket = AbstractDungeon.eventRng.random(0, 2);
+        }
+
+
+        registerPhase("base", new TextPhase(DESCRIPTIONS[0])
+                .addOption(new TextPhase.OptionInfo(chosenDailyMarket == 0 ? OPTIONS[0] : OPTIONS[22]).enabledCondition(this::isDailyMarket0), ((t) -> this.transitionKey("cardDealer")))
+                .addOption(new TextPhase.OptionInfo(chosenDailyMarket == 1 ? OPTIONS[1] : OPTIONS[22]).enabledCondition(this::isDailyMarket1), ((t) -> this.transitionKey("magicDealer")))
+                .addOption(new TextPhase.OptionInfo(chosenDailyMarket == 2 ? OPTIONS[2] : OPTIONS[22]).enabledCondition(this::isDailyMarket2), ((t) -> this.transitionKey("relicDealer")))
         );
 
         registerPhase("cardDealer", new TextPhase(DESCRIPTIONS[1]) {
@@ -111,7 +115,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                             AbstractDungeon.gridSelectScreen.open(getCardsForDraftedPurge(), 1, Beggar.OPTIONS[6], false, false, false, true);
 
                         })
-                        .addOption(OPTIONS[22], ((t) -> this.transitionKey("base2")))
+                        .addOption(OPTIONS[3], (t) -> this.openMap())
         );
 
         registerPhase("cardBuyEnd", new TextPhase(DESCRIPTIONS[4]).addOption(OPTIONS[3], (t) -> this.openMap()));
@@ -136,8 +140,9 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                 }
 
                         .addOption(new TextPhase.OptionInfo(OPTIONS[11], new PackRip()), (i) -> {   //Curse & Pack Rip
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Necronomicurse(), (Settings.WIDTH * .33F), (float) (Settings.HEIGHT / 2)));
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new PackRip(), (Settings.WIDTH * .66F), (float) (Settings.HEIGHT / 2)));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Necronomicurse(), (Settings.WIDTH * .25F), (float) (Settings.HEIGHT / 2)));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Necronomicurse(), (Settings.WIDTH * .75F), (float) (Settings.HEIGHT / 2)));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new PackRip(), (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));
                             transitionKey("magicLearnEnd");
                         }).addOption(OPTIONS[12], (i) -> {   //Pack in a Jar Potion
                             AbstractDungeon.getCurrRoom().rewards.clear();
@@ -160,7 +165,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                             AbstractDungeon.gridSelectScreen.open(purgablesGroup, 1, Beggar.OPTIONS[6], false, false, false, true);
 
                         })
-                        .addOption(OPTIONS[22], ((t) -> this.transitionKey("base2")))
+                        .addOption(OPTIONS[3], (t) -> this.openMap())
         );
 
 
@@ -192,7 +197,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                     transitionKey("relicSellHatEnd");
                 })
 
-                .addOption(OPTIONS[22], ((t) -> this.transitionKey("base2")))
+                .addOption(OPTIONS[3], (t) -> this.openMap())
         );
 
 
@@ -342,6 +347,18 @@ public class BlackMarketDealerEvent extends PhasedEvent {
         CardGroup purgablesGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         purgablesGroup.group = purgeables;
         return purgablesGroup;
+    }
+
+    private boolean isDailyMarket0() {
+        return (chosenDailyMarket == 0);
+    }
+
+    private boolean isDailyMarket1() {
+        return (chosenDailyMarket == 1);
+    }
+
+    private boolean isDailyMarket2() {
+        return (chosenDailyMarket == 2);
     }
 
 }

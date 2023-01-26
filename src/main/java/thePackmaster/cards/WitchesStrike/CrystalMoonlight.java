@@ -13,7 +13,7 @@ public class CrystalMoonlight extends AbstractWitchStrikeCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public CrystalMoonlight() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
         exhaust = true;
     }

@@ -27,9 +27,9 @@
   },
   "${ModID}:QuickBrew": {
     "NAME": "Quick Brew",
-    "DESCRIPTION": "Choose: Gain 2 Strength, or Gain 3 Focus.",
-    "UPGRADE_DESCRIPTION": "Choose: Gain 2 Strength, Gain 2 Dexterity, or Gain 2 Focus.",
-    "EXTENDED_DESCRIPTION": ["Gain 2 Strength.", "Gain 2 Dexterity.","Gain 2 Focus."]
+    "DESCRIPTION": "Choose: Gain !M! Strength, or Gain !M! Focus.",
+    "UPGRADE_DESCRIPTION": "Choose: Gain !M! Strength, Gain !M! Dexterity, or Gain !M! Focus.",
+    "EXTENDED_DESCRIPTION": ["Gain !M! Strength.", "Gain !M! Dexterity.","Gain !M! Focus."]
   },
   "${ModID}:ToxicVial": {
     "NAME": "Toxic Vial",

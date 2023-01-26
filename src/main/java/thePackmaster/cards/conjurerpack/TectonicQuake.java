@@ -18,6 +18,7 @@ public class TectonicQuake extends ConjurerCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,5 +31,6 @@ public class TectonicQuake extends ConjurerCard {
 
     public void upp() {
         upgradeDamage(3);
+        exhaust = false;
     }
 }

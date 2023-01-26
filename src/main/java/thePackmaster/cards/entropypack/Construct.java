@@ -1,6 +1,7 @@
 package thePackmaster.cards.entropypack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -21,6 +22,8 @@ public class Construct extends AbstractEntropyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new DrawCardAction(1));
+
         applyToSelf(new ConstructPower(p, this.magicNumber));
         applyToSelf(new WeakPower(p, 2, false));
     }
@@ -38,6 +41,13 @@ public class Construct extends AbstractEntropyCard {
                 (m)->att(new ApplyPowerAction(m, p, new ConstructPower(m, this.magicNumber)))
         );
         att(new ApplyPowerAction(p, p, new ConstructPower(p, this.magicNumber)));
+
+        int amt = 1;
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if (!m.isDeadOrEscaped())
+                    ++amt;
+        }
+        att(new DrawCardAction(amt));
     }
 
     public void upp() {

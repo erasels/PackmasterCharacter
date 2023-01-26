@@ -24,28 +24,28 @@ public class QuickBrew extends AbstractWomanInBlueCard {
 
     public QuickBrew() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-
+        magicNumber = baseMagicNumber = 2;
     }
 
 
     public void action1() {
         AbstractPlayer p = Wiz.p();
         addToBot(new VFXAction(new PotionThrowEffect(getPotionResourcePath("StrengthPotion.png"), p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, 3F, 0.6F, false, true), 0.6F));
-        Wiz.applyToSelf(new StrengthPower(p, 2));
+        Wiz.applyToSelf(new StrengthPower(p, magicNumber));
 
     }
 
     public void action2() {
         AbstractPlayer p = Wiz.p();
         addToBot(new VFXAction(new PotionThrowEffect(getPotionResourcePath("DexterityPotion.png"), p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, 3F, 0.6F, false, true), 0.6F));
-        Wiz.applyToSelf(new DexterityPower(p, 2));
+        Wiz.applyToSelf(new DexterityPower(p, magicNumber));
 
     }
 
     public void action3() {
         AbstractPlayer p = Wiz.p();
         addToBot(new VFXAction(new PotionThrowEffect(getPotionResourcePath("FocusPotion.png"), p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, 3F, 0.6F, false, true), 0.6F));
-        Wiz.applyToSelf(new FocusPower(p, 2));
+        Wiz.applyToSelf(new FocusPower(p, magicNumber));
 
     }
 
@@ -56,7 +56,7 @@ public class QuickBrew extends AbstractWomanInBlueCard {
                 name,
                 EXTENDED_DESCRIPTION[0], false, this::action1));
 
-        if (this.upgraded){
+        if (this.upgraded) {
             choiceCards.add(new AbstractWomanInBlueModalChoiceCard(SpireAnniversary5Mod.makeID("WIBChoiceDexterity"),
                     name,
                     EXTENDED_DESCRIPTION[1], false, this::action2));
@@ -69,11 +69,10 @@ public class QuickBrew extends AbstractWomanInBlueCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-            initializeChoiceCards();
+        initializeChoiceCards();
 
-        for (AbstractCard c : choiceCards
-        ) {
-            c.baseMagicNumber = c.magicNumber = this.magicNumber;
+        for (AbstractCard c : choiceCards) {
+            c.baseMagicNumber = c.magicNumber = magicNumber;
         }
 
         addToBot(new EasyModalChoiceAction(choiceCards, 1, CardCrawlGame.languagePack.getUIString(makeID("ModalChoice")).TEXT[0]));

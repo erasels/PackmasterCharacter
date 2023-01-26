@@ -1,14 +1,12 @@
 package thePackmaster.cards.bardinspirepack;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.defect.DoubleEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -28,26 +26,19 @@ public class Sift extends AbstractBardCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        if (p.drawPile.isEmpty()) {
-            atb(new EmptyDeckShuffleAction());
-        }
-        atb(
-                new FetchAction(
-                        AbstractDungeon.player.drawPile,
-                        c -> AbstractDungeon.player.drawPile.group.indexOf(c) > AbstractDungeon.player.drawPile.size() - magicNumber - 1,
-                        cards -> {
-                            for (AbstractCard c : cards) {
-                                if (c.costForTurn > 0) {
-                                    addToTop(new GainEnergyAction(c.costForTurn));
-                                } else if (c.costForTurn == -1) {
-                                    // X-cost
-                                    addToTop(new DoubleEnergyAction());
-                                }
-                            }
-                            AbstractDungeon.player.hand.refreshHandLayout();
-                        }
-                )
-        );
+        Wiz.atb(new DrawCardAction(magicNumber, new AbstractGameAction() {
+            @Override
+            public void update() {
+                for (AbstractCard c : DrawCardAction.drawnCards) {
+                    int cost = Wiz.getLogicalCardCost(c);
+                    if (cost > 0) {
+                        addToTop(new GainEnergyAction(c.costForTurn));
+                    }
+                }
+                isDone = true;
+            }
+        }));
+
         if (upgraded) {
             atb(new DrawCardAction(p, magicNumber));
         }

@@ -24,41 +24,35 @@ public interface PackmasterOrb {
 
     static AbstractOrb getPackLimitedOrb(boolean useCardRng) {
         orbs.clear();
-        for (AbstractCardPack pack : SpireAnniversary5Mod.currentPoolPacks){
-            if (pack instanceof DefectPack) {
-                orbs.add(new Dark());
-                orbs.add(new Frost());
-                orbs.add(new Lightning());
-                orbs.add(new Plasma());
-            }
-            if (pack instanceof DownfallPack){
+        orbs.add(new Dark());
+        orbs.add(new Frost());
+        orbs.add(new Lightning());
+        orbs.add(new Plasma());
+        for (AbstractCardPack pack : SpireAnniversary5Mod.currentPoolPacks) {
+            if (pack instanceof DownfallPack) {
                 orbs.add(new Ghostflame());
             }
-            if (pack instanceof WitchesStrikePack){
+            if (pack instanceof WitchesStrikePack) {
                 orbs.add(new CrescentMoon());
                 orbs.add(new FullMoon());
             }
-            if (pack instanceof StrikesPack){
+            if (pack instanceof StrikesPack) {
                 orbs.add(new Dark());
                 orbs.add(new Lightning());
             }
-            if (pack instanceof SummonsPack){
+            if (pack instanceof SummonsPack) {
                 orbs.add(new Louse());
                 orbs.add(new Panda());
                 orbs.add(new SwarmOfBees());
             }
-            if (pack instanceof EntropyPack){
+            if (pack instanceof EntropyPack) {
                 orbs.add(new Oblivion());
             }
-            if (pack instanceof ContentCreatorPack){
+            if (pack instanceof ContentCreatorPack) {
                 orbs.add(new Wanderbot());
             }
         }
 
-        if (orbs.isEmpty()){
-            return AbstractOrb.getRandomOrb(useCardRng);
-        } else {
-            return useCardRng ? orbs.get(AbstractDungeon.cardRandomRng.random(orbs.size() - 1)) : orbs.get(MathUtils.random(orbs.size() - 1));
-        }
+        return useCardRng ? orbs.get(AbstractDungeon.cardRandomRng.random(orbs.size() - 1)) : orbs.get(MathUtils.random(orbs.size() - 1));
     }
 }
