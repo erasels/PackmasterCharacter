@@ -37,6 +37,6 @@
   },
   "${ModID}:Masterwork": {
     "NAME": "Masterwork",
-    "DESCRIPTION": "{@@}Upgrade a card{!M!|2= twice|>2= !M! times}. NL Can Upgrade cards any number of times."
+    "DESCRIPTION": "{@@}Upgrade a card{!M!|2= twice|>2= !M! times}. NL Can Upgrade cards any number of times. NL stslib:Exhaustive !stslib:ex!."
   }
 }
