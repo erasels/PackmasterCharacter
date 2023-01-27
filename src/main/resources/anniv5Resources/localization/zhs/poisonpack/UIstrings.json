@@ -1,0 +1,15 @@
+{
+  "${ModID}:PoisonPack": {
+    "TEXT": [
+      "Toxicity",
+      "A collection of Silent cards focused solely on Poison.",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:PoisonPackHat": {
+    "TEXT": [
+      "A Snecko hater's dream come true.",
+      "Snecko Skull"
+    ]
+  }
+}

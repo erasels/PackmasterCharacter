@@ -1,25 +1,25 @@
 {
   "${ModID}:DistortionPower": {
-    "NAME": "Distortion",
+    "NAME": "扭曲",
     "DESCRIPTIONS": [
-      "每当 一张牌 is #y消耗ed, 失去 #b",
-      "每当 一张牌 is #y消耗ed, 失去s #b",
-      " 生命。"
+      "每当一张牌被 #y消耗 时，你失去 #b",
+      "每当一张牌被 #y消耗 时，该单位失去 #b",
+      " 点生命。"
     ]
   },
   "${ModID}:RuePower": {
-    "NAME": "Rue",
+    "NAME": "懊悔",
     "DESCRIPTIONS": [
-      "#y消耗 the next #b",
-      " cards you play。",
-      "#y消耗 the next card you play。"
+      "#y消耗 打出的下 #b",
+      " 张牌。",
+      "#y消耗 打出的下张牌。"
     ]
   },
   "${ModID}:DeteriorationPower": {
     "NAME": "Deterioration",
     "DESCRIPTIONS": [
-      "回合结束时， #y消耗 a random card in your 弃牌堆 并获得 #b",
-      " #y格挡 。"
+      "回合结束时，随机 #y消耗 弃牌堆一张牌并获得 #b",
+      " 点 #y格挡 。"
     ]
   }
 }

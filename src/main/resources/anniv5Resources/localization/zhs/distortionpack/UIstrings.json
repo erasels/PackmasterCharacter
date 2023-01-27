@@ -1,15 +1,15 @@
 {
   "${ModID}:DistortionPack": {
     "TEXT": [
-      "Distortion",
-      "Everything is as it should be。",
+      "扭曲",
+      "每个事物都变回原本该有的样子。",
       "Alchyr"
     ]
   },
   "${ModID}:DistortionPackHat": {
     "TEXT": [
-      "Your most marketable hat。",
-      "Mascot Hat"
+      "你第二有商业价值的帽子。",
+      "公仔帽"
     ]
   }
 }

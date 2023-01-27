@@ -1,53 +1,53 @@
 {
   "${ModID}:Anemia": {
-    "NAME": "Anemia",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! Weak to any Poisoned enemies。"
+    "NAME": "贫血",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有 中毒 的敌人 !M! 层 虚弱 。"
   },
   "${ModID}:ArsenalGear": {
-    "NAME": "Arsenal Gear",
-    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare card to your hand. It costs 0。"
+    "NAME": "武库零件",
+    "DESCRIPTION": "下 !M! 个回合开始时，随机将一张 *罕见 或 *稀有 牌加入手牌，该回合其耗能首次为0。"
   },
   "${ModID}:ConjureBarrage": {
-    "NAME": "Conjure Barrage",
-    "DESCRIPTION": "Add !M! *Magic *Missiles to your hand. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Add !M! *Magic *Missiles+ to your hand. NL 消耗 。"
+    "NAME": "咒唤箭幕",
+    "DESCRIPTION": "将 !M! 张 *魔法导弹 加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将 !M! 张 *魔法导弹 加入手牌。 NL 消耗 。"
   },
   "${ModID}:DarkRitual": {
-    "NAME": "Dark Ritual",
-    "DESCRIPTION": "失去 10 生命。 NL 获得 !M! Gold. NL Remove this from your deck permanently。",
-    "UPGRADE_DESCRIPTION": "失去 10 生命。 NL 获得 !M! Gold. NL *Downgrade this permanently。"
+    "NAME": "黑暗仪式",
+    "DESCRIPTION": "失去10点生命。 NL 获得 !M! 金币。 NL 从牌组移除本牌。",
+    "UPGRADE_DESCRIPTION": "失去10点生命。 NL 获得 !M! 金币。 NL 本局将本牌降级。"
   },
   "${ModID}:Knighthood": {
-    "NAME": "Knighthood",
-    "DESCRIPTION": "虚无 。 NL Choose 一张牌 in h并to Upgrade permanently. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose 一张牌 in h并to Upgrade permanently. NL 消耗 。",
+    "NAME": "骑士之授",
+    "DESCRIPTION": "虚无 。 NL 选择一张牌， NL 本局游戏将其 升级 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张牌， NL 本局游戏将其 升级 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      " to upgrade permanently。"
+      "将其升级。"
     ]
   },
   "${ModID}:Inferno": {
-    "NAME": "Inferno",
-    "DESCRIPTION": "保留 。 NL ${ModID}:囤积 !hoard!: 对所有敌人造成 !D! 点伤害。 NL stslib:Persist !stslib:persist! 。"
+    "NAME": "狱焱",
+    "DESCRIPTION": "保留 。 NL 再打出 !hoard! 次后，对所有敌人造成 !D! 点伤害。 NL stslib:长驻 !stslib:persist! 。"
   },
   "${ModID}:LethalShot": {
-    "NAME": "Lethal Shot",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Poison 并!${ModID}:m2! Vulnerable。"
+    "NAME": "致死箭击。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 中毒 与 !${ModID}:m2! 层 易伤 。"
   },
   "${ModID}:MagicMissile": {
-    "NAME": "Magic Missile",
-    "DESCRIPTION": "*Magic. 保留 。 NL 造成 !D! 点伤害。 NL Increase the damage dealt by *Magic cards by !M! 本回合。"
+    "NAME": "魔法导弹",
+    "DESCRIPTION": "*魔法 。 保留 。 NL 造成 !D! 点伤害。 NL 本回合提高所有 *魔法 牌的伤害 !M! 点。"
   },
   "${ModID}:Minniegun": {
-    "NAME": "Minniegun",
-    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! times。"
+    "NAME": "迷你枪",
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
   },
   "${ModID}:PackRat": {
-    "NAME": "Pack Rat",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, 获得 one 并remove this from your deck permanently。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, 获得 one 并*Downgrade this permanently。"
+    "NAME": "驮鼠",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若无药水，获得一瓶并从牌组移除本牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 若无药水，获得一瓶并在本局将本牌降级"
   },
   "${ModID}:ScorchedEarth": {
-    "NAME": "Scorched Earth",
-    "DESCRIPTION": "消耗 all non-Attacks in your 弃牌堆. 造成 !D! 点伤害 for each. NL 消耗 。"
+    "NAME": "焦土",
+    "DESCRIPTION": "消耗 弃牌堆所有非攻击牌，每张随机造成 !D! 点伤害。 NL 消耗 。"
   }
 }

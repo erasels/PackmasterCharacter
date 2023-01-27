@@ -1,15 +1,15 @@
 {
   "${ModID}:DimensionGatePack": {
     "TEXT": [
-      "Dimension Gate",
-      "A variety pack of oddball cards from other games. Can you name them all?",
+      "次元之门",
+      "一套来自其他奇奇怪怪游戏的牌。你能找出所有来源吗？",
       "MichaelMayhem"
     ]
   },
   "${ModID}:DimensionGatePackHat": {
     "TEXT": [
-      "A most holy adornment。",
-      "Ottis' Hat"
+      "至洁之物。",
+      "奥提斯之帽。"
     ]
   }
 }
