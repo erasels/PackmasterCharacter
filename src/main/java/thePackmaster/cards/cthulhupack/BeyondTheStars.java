@@ -20,7 +20,6 @@ public class BeyondTheStars extends AbstractCthulhuCard {
         cardsToPreview = new Madness();
     }
 
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.FIRE);
         AbstractCard c = new Madness();
