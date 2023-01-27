@@ -1,0 +1,10 @@
+{
+  "${ModID}:Anemia": {
+    "NAME": "Anemia",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to any Poisoned enemies."
+  },
+  "${ModID}:LethalShot": {
+    "NAME": "Lethal Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison and !${ModID}:m2! Vulnerable."
+  }
+}

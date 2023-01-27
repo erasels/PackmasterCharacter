@@ -1,5 +1,7 @@
 package thePackmaster.powers.dimensiongatepack;
 
+import basemod.cardmods.ExhaustMod;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -33,6 +35,9 @@ public class ArsenalGearPower extends AbstractPackmasterPower {
                 c.cost = 0;
                 c.costForTurn = 0;
                 c.isCostModified = true;
+            }
+            if(!c.exhaust && c.type != AbstractCard.CardType.POWER){
+                CardModifierManager.addModifier(c, new ExhaustMod());
             }
             addToBot(new MakeTempCardInHandAction(c));
         }

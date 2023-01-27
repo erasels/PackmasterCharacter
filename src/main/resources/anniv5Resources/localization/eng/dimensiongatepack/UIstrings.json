@@ -1,9 +1,10 @@
 {
   "${ModID}:DimensionGatePack": {
     "TEXT": [
-      "Dimension Gate",
-      "A variety pack of oddball cards from other games. Can you name them all?",
-      "MichaelMayhem"
+      "Gate 1: Conjuration",
+      "Cards portalled in from other games! Use self-synergizing Magic cards and conjur cards & tokens rapidly.",
+      "MichaelMayhem",
+      "Cards featured from the games: NL Gordian Quest NL Tower Tactics Liberation NL Griftlands NL Roguebook NL Monster Train NL NL Check them all out on Steam!"
     ]
   },
   "${ModID}:DimensionGatePackHat": {

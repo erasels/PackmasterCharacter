@@ -1,0 +1,23 @@
+{
+  "${ModID}:Knighthood": {
+    "NAME": "Knighthood",
+    "DESCRIPTION": "Ethereal. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " to Upgrade permanently."
+    ]
+  },
+  "${ModID}:Inferno": {
+    "NAME": "Inferno",
+    "DESCRIPTION": "Retain. NL ${ModID}:Hoard !hoard!: Deal !D! damage to ALL enemies. NL stslib:Persist !stslib:persist! ."
+  },
+  "${ModID}:Minniegun": {
+    "NAME": "Minniegun",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  },
+  "${ModID}:PackRat": {
+    "NAME": "Pack Rat",
+    "DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and remove this from your deck permanently.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and *Downgrade this permanently."
+  }
+}
