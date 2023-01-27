@@ -51,6 +51,6 @@
   },
   "${ModID}:SuperNova": {
     "NAME": "Super Nova",
-    "DESCRIPTION": "所有敌人 失去 !M! 生命。 NL 给予 !${ModID}:m2! Weak 并Vulnerable to 所有敌人。"
+    "DESCRIPTION": "所有敌人 失去 !M! 生命。 NL 给予 !${ModID}:m2! Weak 与易伤 to 所有敌人。"
   }
 }

@@ -5,7 +5,7 @@
   },
   "${ModID}:FlameBlast": {
     "NAME": "Flame Blast",
-    "DESCRIPTION": "给予 !M! ${ModID}:燃烧. NL If the enemy has Vulnerable, 给予 !M! ${ModID}:燃烧 a获得. NL 给予 !${ModID}:m2! Vulnerable。"
+    "DESCRIPTION": "给予 !M! ${ModID}:燃烧. NL If the enemy has 易伤, 给予 !M! ${ModID}:燃烧 a获得. NL 给予 !${ModID}:m2! 易伤。"
   },
   "${ModID}:IceWall": {
     "NAME": "Ice Wall",

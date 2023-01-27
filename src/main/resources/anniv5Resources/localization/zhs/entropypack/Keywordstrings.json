@@ -1,31 +1,34 @@
 [
   {
-    "PROPER_NAME": "Entropy",
+    "PROPER_NAME": "熵",
     "NAMES": [
-      "entropy"
+      "entropy",
+      "熵"
     ],
-    "DESCRIPTION": "每当 you play 一张牌, 丢弃 a random card, 抽一张牌, 并失去 #b1 #yEntropy。"
+    "DESCRIPTION": "拥有 #y熵 时，打出一张牌后随机丢弃一张手牌并抽一张牌，然后失去 #b1 层 #y熵 。"
   },
   {
-    "PROPER_NAME": "Unstable",
+    "PROPER_NAME": "不稳定",
     "NAMES": [
-      "unstable"
+      "unstable",
+      "不稳定"
     ],
-    "DESCRIPTION": "When this card is 丢弃ed from your hand, 给予 its effects to you 并所有敌人。"
+    "DESCRIPTION": "本牌被丢弃时，对所有单位触发其效果。"
   },
   {
     "PROPER_NAME": "Ruin",
     "NAMES": [
       "ruin",
-      "荒芜"
+      "毁灭"
     ],
-    "DESCRIPTION": "该单位下次受到未被格挡的攻击伤害时，其失去 #y荒芜 层数点生命。"
+    "DESCRIPTION": "该单位下次受到未被格挡的攻击伤害时，其失去 #y毁灭 层数点生命。"
   },
   {
     "PROPER_NAME": "Oblivion",
     "NAMES": [
-      "oblivion"
+      "oblivion",
+      "湮没"
     ],
-    "DESCRIPTION": "Orb: When evoked, applies #yRuin to the enemy with the most 生命。 Increases #yRuin applied 每当 you 丢弃 一张牌。"
+    "DESCRIPTION": "#y充能球 : #y激发 时给予生命值最高的敌人 #y毁灭 。每当你丢弃一张牌时，给予层数加 #b1 。"
   }
 ]

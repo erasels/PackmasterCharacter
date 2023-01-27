@@ -2,13 +2,13 @@
   "${ModID}:DragonwrathPack": {
     "TEXT": [
       "龙怒",
-      "Wield the divine power of a pariah of an order of draconic paladins。",
+      "使用龙骑秩序下一名贱民的神圣之力。",
       "Silver"
     ]
   },
   "${ModID}:DragonwrathPackHat": {
     "TEXT": [
-      "Narrow doorways may be a problem..。",
+      "缩小的门径可能会有问题...",
       "龙角"
     ]
   }

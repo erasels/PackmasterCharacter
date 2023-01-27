@@ -1,28 +1,28 @@
 {
   "${ModID}:Penance": {
-    "NAME": "Penance",
-    "DESCRIPTIONS": ["When this creature obtains #b",
-      " #yPenance, it 失去s #b",
-      " 生命 并increases 生命 loss from #yPenance by #b10 本场战斗",
+    "NAME": "忏悔",
+    "DESCRIPTIONS": ["该单位累积获得 #b",
+      " 层 #y忏悔 后，其失去 #b",
+      " 点生命并提高本场战斗 #y忏悔 的生命流失量 #b10 点。",
       "。"
     ]
   },
   "${ModID}:confession": {
-    "NAME": "Confession",
-    "DESCRIPTIONS": ["每当 you take damage deal #b",
-      " damage to 所有敌人. Halved if it activates outside of your turn。"
+    "NAME": "告罪",
+    "DESCRIPTIONS": ["每当受到伤害(包括格挡住的伤害)或失去生命时，对所有敌人造成 #b",
+      " 点伤害。若非你的回合触发， #y告罪 层数减半。"
     ]
   },
   "${ModID}:JudgementDay": {
-    "NAME": "Judgement Day",
-    "DESCRIPTIONS": ["每当 a #yLightning orbs #ypassive activates 获得 #b",
-      " #yConfession。"
+    "NAME": "审判之日",
+    "DESCRIPTIONS": ["每当你的 #y闪电 充能球触发被动效果是，获得 #b",
+      " 层 #y告罪。"
     ]
   },
   "${ModID}:Absolution": {
-    "NAME": "Absolution",
-    "DESCRIPTIONS": ["每当 a creature 失去s 生命 from #yPenance they 获得 #b",
-      " #yWeak。"
+    "NAME": "坚决",
+    "DESCRIPTIONS": ["每当一个单位因 #y忏悔 失去生命时，给予其 #b",
+      " 层 #y虚弱 。"
     ]
   }
 }

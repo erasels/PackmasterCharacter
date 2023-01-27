@@ -1,15 +1,15 @@
 {
   "${ModID}:EnergyAndEchoPack": {
     "TEXT": [
-      "Energy & Echo",
-      "Generate [E] 并do your best at spending it through self multiplying 张牌。",
+      "能量与回响",
+      "生成 [E] 并尽你所能，向自我复制的牌发挥其效能。",
       "Diamsword"
     ]
   },
   "${ModID}:EnergyAndEchoPackHat": {
     "TEXT": [
-      "Part helmet, part high-power flashlight。",
-      "Spelunking Hat"
+      "又能当头盔，又能当高能电筒。",
+      "工帽"
     ]
   }
 }

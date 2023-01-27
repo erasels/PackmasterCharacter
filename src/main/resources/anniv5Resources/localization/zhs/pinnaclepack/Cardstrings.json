@@ -18,8 +18,8 @@
   },
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "Marvelous Feast",
-    "DESCRIPTION": "固有 。 Add in order: ${ModID}:Croquettes that provide 格挡 ， Weak, 力量 并Vulnerable to your hand. Once per turn ended。",
-    "UPGRADE_DESCRIPTION": "固有 。 Add in order, upgraded: ${ModID}:Croquettes that provide 格挡 ， Weak, 力量 并Vulnerable to your hand. Once per turn ended。"
+    "DESCRIPTION": "固有 。 Add in order: ${ModID}:Croquettes that provide 格挡 ， Weak, 力量 与易伤 to your hand. Once per turn ended。",
+    "UPGRADE_DESCRIPTION": "固有 。 Add in order, upgraded: ${ModID}:Croquettes that provide 格挡 ， Weak, 力量 与易伤 to your hand. Once per turn ended。"
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "Meaty Croquettes",

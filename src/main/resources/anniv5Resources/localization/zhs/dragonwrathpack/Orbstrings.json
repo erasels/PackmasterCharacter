@@ -1,10 +1,10 @@
 {
   "${ModID}:Light": {
-    "NAME": "Light",
+    "NAME": "辉光",
     "DESCRIPTION": [
-      "#yPassive: 回合结束时， take #b",
-      " damage 并获得 that much #yConfession NL #yEvoke: take #b",
-      " damage 并获得 that much #yConfession。"
+      "#y被动 ：回合结束时，",
+      "获得 #b1 层 #y告罪 NL #y激发 ：获得 #b",
+      " 层 #y告罪 。"
     ]
   }
 }

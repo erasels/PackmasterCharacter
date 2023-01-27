@@ -17,7 +17,7 @@
       "confession",
       "告罪"
     ],
-    "DESCRIPTION": "每当 you take damage or 失去 生命, deal damage equal to your #yConfession to 所有敌人. NL If it isn't your turn reduce Confession by half。"
+    "DESCRIPTION": "每当你受到伤害或失去生命时，对所有敌人造成 #y告罪 层数点伤害。 NL 若不在你的回合触发， #y告罪 层数减半。"
   },
   {
     "PROPER_NAME": "辉光",
@@ -26,6 +26,6 @@
       "light",
       "辉光"
     ],
-    "DESCRIPTION": "#yOrb - #yPassive : 回合结束时 获得 #b1 #yConfession. NL #yEvoke : 获得 #b3 #yConfession。"
+    "DESCRIPTION": "#y充能球 - #y被动 ：回合结束时，获得 #b1 层 #y告罪 。 NL #y激发 ：获得 #b3 层 #y告罪 。"
   }
 ]

@@ -37,6 +37,6 @@
   },
   "${ModID}:JudgementDay": {
     "NAME": "审判之日",
-    "DESCRIPTION": "${ModID}:展现 !M! Lightning. NL 每当 a Lightning orbs passive effect activates 获得 !${ModID}:m2! ${ModID}:告罪。"
+    "DESCRIPTION": "${ModID}:展现 !M! 个 闪电 充能球。 NL 闪电 充能球被动效果触发时，获得 !${ModID}:m2! 层 ${ModID}:告罪 。"
   }
 }

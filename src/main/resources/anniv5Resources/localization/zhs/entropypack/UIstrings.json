@@ -1,15 +1,15 @@
 {
   "${ModID}:EntropyPack": {
     "TEXT": [
-      "Entropy",
-      "丢弃 what you don't need, 并what you do。",
+      "熵",
+      "丢弃没用的，也丢弃有用的。",
       "Alchyr"
     ]
   },
   "${ModID}:EntropyPackHat": {
     "TEXT": [
-      "All the power 并all the responsibility。",
-      "Wonder Mask"
+      "能力越大，责任越大。",
+      "舞会面具"
     ]
   }
 }

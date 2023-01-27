@@ -34,8 +34,8 @@
   "${ModID}:ToxicVial": {
     "NAME": "Toxic Vial",
     "DESCRIPTION": "Choose: 给予 3 Weak, or 给予 8 Poison. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose: 给予 3 Vulnerable, 给予 3 Weak, or 给予 8 Poison. NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["给予 3 Vulnerable。", "给予 3 Weak。","给予 8 Poison。"]
+    "UPGRADE_DESCRIPTION": "Choose: 给予 3 易伤, 给予 3 Weak, or 给予 8 Poison. NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["给予 3 易伤。", "给予 3 Weak。","给予 8 Poison。"]
   },
   "${ModID}:AttackVial": {
     "NAME": "Attack Vial",

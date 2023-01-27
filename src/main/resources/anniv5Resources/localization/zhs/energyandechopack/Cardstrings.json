@@ -1,46 +1,46 @@
 {
   "${ModID}:ShadowStrike": {
-    "NAME": "Shadow Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Echo。"
+    "NAME": "暗影打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:回响 。"
   },
   "${ModID}:MagnetRise": {
-    "NAME": "Magnet Rise",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you generated extra [E] 本回合, this card costs 0。"
+    "NAME": "电磁浮游",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合生成过额外的 [E] ，本牌耗能变为0。"
   },
   "${ModID}:TearApart": {
-    "NAME": "Tear Apart",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, 获得 [E] 。 NL ${ModID}:Echo。"
+    "NAME": "裂击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若击杀目标， NL 获得 [E] 。 NL ${ModID}:回响 。"
   },
   "${ModID}:Voices": {
-    "NAME": "Voices",
-    "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:Echo. NL 消耗 。"
+    "NAME": "狂音",
+    "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:回响 。 NL 消耗 。"
   },
   "${ModID}:Flashlight": {
-    "NAME": "Flashlight",
-    "DESCRIPTION": "固有 。 NL 获得 [E] . NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 [E] . NL 下回合, 获得 [E] 。 NL 消耗 。"
+    "NAME": "手电筒",
+    "DESCRIPTION": "固有 。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 [E] 。 NL 下回合获得 [E] 。 NL 消耗 。"
   },
   "${ModID}:Discharge": {
-    "NAME": "Discharge",
-    "DESCRIPTION": "Deal damage equal to 5 times [E] spent 本回合。",
-    "EXTENDED_DESCRIPTION": ["Deal damage equal to 5 times [E] spent 本回合. NL (Deals !D! damage.)"]
+    "NAME": "释能",
+    "DESCRIPTION": "造成本回合已使用的能量的5倍伤害。",
+    "EXTENDED_DESCRIPTION": ["造成本回合已使用的能量的5倍伤害。 NL (造成 !D! 点伤害。"]
   },
   "${ModID}:Overload": {
-    "NAME": "Overload",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Increase this card's damage by !M! 并cost by 1 本场战斗。"
+    "NAME": "过负荷",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗提高本牌 !M! 点 伤害与1点耗能。"
   },
   "${ModID}:Panacher": {
-    "NAME": "Panacher",
-    "DESCRIPTION": "Every time 5 cards are created, deal !M! damage to 所有敌人。"
+    "NAME": "混杂",
+    "DESCRIPTION": "每创造5张牌，对所有敌人造成 !M! 点伤害。"
   },
   "${ModID}:Slowing": {
-    "NAME": "Slowing",
-    "DESCRIPTION": "你的回合开始时， 获得 [E] . NL Add !M! *Wounds into your hand。",
-    "UPGRADE_DESCRIPTION": "你的回合开始时， 获得 [E] . NL Add a *Wound into your hand。"
+    "NAME": "迟缓",
+    "DESCRIPTION": "回合开始时获得 [E] 。 NL 将 !M! 张 *伤口 加入手牌。",
+    "UPGRADE_DESCRIPTION": "回合开始时获得 [E] 。 NL 将1张 *伤口 加入手牌。"
   },
   "${ModID}:Crystallize": {
-    "NAME": "Crystallize",
-    "DESCRIPTION": "获得 !M! 点 格挡 for each [E] available。",
-    "EXTENDED_DESCRIPTION": ["获得 !M! 点 格挡 for each [E] available. NL (获得s !B! 点 格挡 。)"]
+    "NAME": "晶体化",
+    "DESCRIPTION": "每有1点能量，获得 !M! 点 格挡 。",
+    "EXTENDED_DESCRIPTION": ["每有1点能量，获得 !M! 点 格挡 。 NL (获得 !B! 点 格挡 。)"]
   }
 }

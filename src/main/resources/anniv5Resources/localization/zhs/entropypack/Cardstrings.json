@@ -1,7 +1,7 @@
 {
   "${ModID}:Disorder": {
-    "NAME": "Disorder",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! ${ModID}:Entropy。"
+    "NAME": "紊乱",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 ${ModID}:熵 。"
   },
   "${ModID}:Wither": {
     "NAME": "Wither",
@@ -10,7 +10,7 @@
   },
   "${ModID}:Collapse": {
     "NAME": "Collapse",
-    "DESCRIPTION": "${ModID}:Unstable. NL 抽一张牌。 NL 获得 !M! temporary 力量 。 NL 获得 1 Vulnerable。"
+    "DESCRIPTION": "${ModID}:Unstable. NL 抽一张牌。 NL 获得 !M! temporary 力量 。 NL 获得1层 易伤。"
   },
   "${ModID}:Construct": {
     "NAME": "Construct",
@@ -31,7 +31,7 @@
   },
   "${ModID}:Diffusion": {
     "NAME": "Diffusion",
-    "DESCRIPTION": "你的回合开始时， 获得 !M! ${ModID}:Entropy 并抽一张牌。"
+    "DESCRIPTION": "你的回合开始时， 获得 !M! ${ModID}:熵 并抽一张牌。"
   },
   "${ModID}:Waning": {
     "NAME": "Waning",
