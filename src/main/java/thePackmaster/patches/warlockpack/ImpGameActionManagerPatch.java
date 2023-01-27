@@ -24,8 +24,8 @@ public class ImpGameActionManagerPatch {
                         if (c instanceof Imp) {
                             ((Imp)c).triggerWhenAddedToHand();
                         }
-                        this.isDone = true;
                     }
+                    this.isDone = true;
                 }
             });
         }
