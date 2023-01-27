@@ -10,7 +10,10 @@
   "${ModID}:RecallPower": {
     "NAME": "Recall",
     "DESCRIPTIONS": [
-      "Whenever a card is #yAmplified, put a card from your #yExhaust pile into your hand."
+      "The first time a card is #yAmplified each turn, put ",
+      "a card from your #yExhaust pile into your hand.",
+      " cards from your #yExhaust pile into your hand.",
+      " NL (Used this turn.)"
     ]
   }
 }
