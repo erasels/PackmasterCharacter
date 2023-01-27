@@ -26,7 +26,7 @@ public class DeathScreenUnlockPatch {
     public static void Insert(DeathScreen __instance) {
         // HAT UNLOCKS
 
-        if (__instance.isVictory) {
+        if (__instance.isVictory || AbstractDungeon.actNum > 3) {
             if (SpireAnniversary5Mod.allPacksMode) SpireAnniversary5Mod.logger.info("All packs mode - no Hat unlocks!");
             if (AbstractDungeon.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && !SpireAnniversary5Mod.allPacksMode) {
                 SpireAnniversary5Mod.logger.info("Unlocking new hats!");
