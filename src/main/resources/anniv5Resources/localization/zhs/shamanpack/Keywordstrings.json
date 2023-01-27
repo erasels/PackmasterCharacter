@@ -1,7 +1,7 @@
 [
   {
-    "PROPER_NAME": "Ignite",
-    "NAMES": ["ignite"],
-    "DESCRIPTION": "Ignited creatures 失去 #b1 生命 per stack at the start of their turn。"
+    "PROPER_NAME": "燃烧",
+    "NAMES": ["燃烧"],
+    "DESCRIPTION": "#y燃烧 中的单位在其回合开始时失去层数点生命。"
   }
 ]

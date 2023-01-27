@@ -13,9 +13,9 @@
   "${ModID}:WeaponMasteryPower": {
     "NAME": "Weapon Mastery",
     "DESCRIPTIONS": [
-      "每当 you equip a #yWeapon, draw #b",
+      "每当 you equip a #yWeapon, 抽 #b",
       " card。",
-      " cards。"
+      " 张牌。"
     ]
   }
 }

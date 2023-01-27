@@ -1,46 +1,46 @@
 {
   "${ModID}:BackpackSmack": {
-    "NAME": "Backpack Smack",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If your 抽牌堆 has 10 or more cards, 抽 !M! 张牌。 NL Otherwise, 获得 [E] 。"
+    "NAME": "背包甩掴",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若抽牌堆有10+张牌， NL 抽 !M! 张牌， NL 否则获得 [E] 。"
   },
   "${ModID}:BoosterTutor": {
-    "NAME": "Booster Tutor",
-    "DESCRIPTION": "Put !M! random cards from different Packs from your 抽牌堆 into your hand。"
+    "NAME": "奇寻卡包",
+    "DESCRIPTION": "将抽牌堆中 !M! 张属于不同卡包的牌加入手牌。"
   },
-  "${ModID}:DestinyDraw": {
-    "NAME": "Destiny Draw",
-    "DESCRIPTION": "Choose 1 of 3 random cards from different Packs to add to your hand. NL It costs 0 本回合. NL 消耗 。"
+  "${ModID}:Destiny抽": {
+    "NAME": "命运之抽",
+    "DESCRIPTION": "随机从三张属于不同卡包的牌中选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
   },
   "${ModID}:Flick": {
-    "NAME": "Flick",
-    "DESCRIPTION": "丢弃 一张牌。 NL 造成 !D! 点伤害 a number of times equal to its cost。"
+    "NAME": "弹指",
+    "DESCRIPTION": "丢弃一张牌。 NL 造成 !D! 点伤害其耗能次。"
   },
   "${ModID}:MayhemForm": {
-    "NAME": "Unrelenting Form",
-    "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and 获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and 获得 [E] [E] 。"
+    "NAME": "不懈形态",
+    "DESCRIPTION": "每回合手中只剩不超过2张牌时触发一次。 NL 抽2张牌。NL 获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 每回合手中只剩不超过2张牌时触发一次。 NL 抽2张牌。NL 获得 [E] [E] 。"
   },
   "${ModID}:RippedPecs": {
-    "NAME": "Ripped Pecs",
-    "DESCRIPTION": "获得 1 力量 for each Pack you've played 一张牌 from 本场战斗. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 1 力量 for each Pack you've played 一张牌 from 本场战斗。",
-    "EXTENDED_DESCRIPTION": [" NL (获得s {0} 力量 。)"]
+    "NAME": "腹肌",
+    "DESCRIPTION": "本场战斗每打出过一种卡包中的牌，获得1点 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "本场战斗每打出过一种卡包中的牌，获得1点 力量 。",
+    "EXTENDED_DESCRIPTION": [" NL (获得 {0} 点 力量 。)"]
   },
   "${ModID}:Showoff": {
-    "NAME": "Showoff",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Next turn, draw 2 additional cards。"
+    "NAME": "狂炫",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合抽2张牌。"
   },
   "${ModID}:Sideboard": {
-    "NAME": "Sideboard",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put 一张牌 from your 弃牌堆 on top of your 抽牌堆。"
+    "NAME": "侧柜",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择一张弃牌堆的牌放入抽牌堆顶部。"
   },
   "${ModID}:SmithingHammer": {
-    "NAME": "Smithing Hammer",
-    "DESCRIPTION": "造成 !D! 点伤害 3 times. NL Upgrade a random card in your hand for the rest of combat。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 3 times. NL Upgrade !M! random cards in your hand for the rest of combat。"
+    "NAME": "锻造锤击",
+    "DESCRIPTION": "造成 !D! 点伤害3次。 NL 随机 升级 1张手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害3次。. NL 随机 升级 !M! 张手牌。"
   },
   "${ModID}:Synergize": {
-    "NAME": "Synergize",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL If you have cards from at least two other Packs in your hand, 获得 !B! 点 格挡 。"
+    "NAME": "套路配合",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若手中至少有2张其他卡包的牌，获得 !B! 点 格挡 。"
   }
 }

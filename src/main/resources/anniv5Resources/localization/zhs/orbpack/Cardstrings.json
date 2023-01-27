@@ -31,8 +31,8 @@
   },
   "${ModID}:MaterialBoost": {
     "NAME": "Material Boost",
-    "DESCRIPTION": "丢弃 any number of cards. NL Evoke your next Orb once for each card 丢弃ed。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃 any number of cards. NL Evoke your next Orb once for each card 丢弃ed。"
+    "DESCRIPTION": "丢弃 any number of 张牌。 NL Evoke your next Orb once for each card 丢弃ed。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃 any number of 张牌。 NL Evoke your next Orb once for each card 丢弃ed。"
   },
   "${ModID}:Thunderstruck": {
     "NAME": "Thunderstruck",

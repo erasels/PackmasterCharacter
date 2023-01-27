@@ -27,11 +27,11 @@
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL When this ${ModID}:Infests, Evoke your next orb !M! times and 失去 an Orb slot。"
+    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL When this ${ModID}:Infests, Evoke your next orb !M! times 并失去 an Orb slot。"
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "${ModID}:Modify !M! random cards in your hand : ${ModID}:Inscribed. NL 获得 !${ModID}:m2! Focus. NL 消耗"
+    "DESCRIPTION": "${ModID}:修改 !M! random cards in your h并: ${ModID}:铭印. NL 获得 !${ModID}:m2! Focus. NL 消耗"
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",
@@ -41,9 +41,9 @@
     "NAME": "Scarab Plague",
     "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL When this ${ModID}:infests, ${ModID}:Manifest ${ModID}:Full_Moon。"
   },
-  "${ModID}:Inscribed": {
+  "${ModID}:铭印": {
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Inscribed. NL "
+      "${ModID}:铭印. NL "
     ]
   }
 }

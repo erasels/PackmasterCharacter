@@ -25,7 +25,7 @@
   },
   "${ModID}:BackupRift": {
     "NAME": "Enchanted Rift",
-    "DESCRIPTION": "{@@}获得 !B! 点 格挡 。 NL Draw {!M!|@=an|>1=!M!} ${ModID}:Enchantment {!M!|@=card|>1=cards}。"
+    "DESCRIPTION": "{@@}获得 !B! 点 格挡 。 NL 抽 {!M!|@=an|>1=!M!} ${ModID}:Enchantment {!M!|@=card|>1=cards}。"
   },
   "${ModID}:StarLane": {
     "NAME": "Fetch!",
@@ -40,7 +40,7 @@
   "${ModID}:FastHands": {
     "NAME": "Fast Hands",
     "DESCRIPTION": "After playing a ${ModID}:different color card, 抽一张牌。",
-    "UPGRADE_DESCRIPTION": "After playing a ${ModID}:different color card, 抽一张牌 and reduce its cost by 1 本回合。"
+    "UPGRADE_DESCRIPTION": "After playing a ${ModID}:different color card, 抽一张牌 并reduce its cost by 1 本回合。"
   },
   "${ModID}:DimensionBreach": {
     "NAME": "Dimension Breach",

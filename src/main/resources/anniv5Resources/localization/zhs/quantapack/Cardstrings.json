@@ -5,8 +5,8 @@
   },
   "${ModID}:MagicDart": {
     "NAME": "Magic Dart",
-    "DESCRIPTION": "Deal damage equal to your hand size。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL Deal damage equal to your hand size。",
+    "DESCRIPTION": "Deal damage equal to your h并size。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL Deal damage equal to your h并size。",
     "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
   },
   "${ModID}:Cull": {
@@ -15,8 +15,8 @@
   },
   "${ModID}:Potential": {
     "NAME": "Potential",
-    "DESCRIPTION": "获得 !M! Temporary_生命。 NL Draw !${ModID}:m2! card. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! Temporary_生命。 NL Draw !${ModID}:m2! cards. NL 消耗 。"
+    "DESCRIPTION": "获得 !M! Temporary_生命。 NL 抽 !${ModID}:m2! card. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! Temporary_生命。 NL 抽 !${ModID}:m2! 张牌。 NL 消耗 。"
   },
   "${ModID}:Aura": {
     "NAME": "Aura",

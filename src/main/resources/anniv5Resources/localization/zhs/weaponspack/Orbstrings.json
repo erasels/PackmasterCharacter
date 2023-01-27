@@ -42,7 +42,7 @@
   "${ModID}:ForgingHammerOrb": {
     "NAME": "Forging Hammer",
     "DESCRIPTION": [
-      "After you attack with this Weapon, Upgrade a random card in your hand for the rest of combat。"
+      "After you attack with this Weapon, Upgrade a random card in your h并for the rest of combat。"
     ]
   },
   "${ModID}:SwordOfFireOrb": {

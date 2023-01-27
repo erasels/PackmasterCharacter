@@ -1,16 +1,16 @@
 {
   "${ModID}:HeatEnginePower": {
-    "NAME": "Heat Engine",
+    "NAME": "热力机",
     "DESCRIPTIONS": [
       "每当 一张牌 with a cost of #b",
-      " or greater, including #yAmplify, is #y消耗ed, 获得 #b",
+      " or greater, 包括 #y增幅 时， is #y消耗ed, 获得 #b",
       " #y力量 。"
       ]
   },
   "${ModID}:RecallPower": {
-    "NAME": "Recall",
+    "NAME": "召回",
     "DESCRIPTIONS": [
-      "每当 一张牌 is #yAmplified, put 一张牌 from your #y消耗 pile into your hand。"
+      "每当你 #y增幅 时，将一张牌从消耗堆返回手牌。"
     ]
   }
 }

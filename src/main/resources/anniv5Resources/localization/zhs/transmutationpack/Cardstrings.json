@@ -1,8 +1,8 @@
 {
   "${ModID}:AmalgamateWaters": {
     "NAME": "Amalgamate Waters",
-    "DESCRIPTION": "Draw a ${ModID}:Mutable card. NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them。",
-    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Mutable cards. NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them。"
+    "DESCRIPTION": "抽 a ${ModID}:Mutable card. NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them。",
+    "UPGRADE_DESCRIPTION": "抽 !M! ${ModID}:Mutable 张牌。 NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them。"
   },
   "${ModID}:CrystalLattice": {
     "NAME": "Crystal Lattice",
@@ -29,12 +29,12 @@
   "${ModID}:GlacialSynthesis": {
     "NAME": "Glacial Synthesis",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute 一张牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute up to !M! cards。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute up to !M! 张牌。"
   },
   "${ModID}:SearingSynthesis": {
     "NAME": "Searing Synthesis",
     "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute 一张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute up to !M! cards。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute up to !M! 张牌。"
   },
   "${ModID}:ViscousShell": {
     "NAME": "Viscous Shell",
@@ -58,11 +58,11 @@
       " damage"
     ]
   },
-  "${ModID}:DrawWhenTransmutedEffect": {
+  "${ModID}:抽WhenTransmutedEffect": {
     "EXTENDED_DESCRIPTION": [
       "When ${ModID}:Transmuted, 抽一张牌。",
-      "When ${ModID}:Transmuted, draw ",
-      " cards。"
+      "When ${ModID}:Transmuted, 抽 ",
+      " 张牌。"
     ]
   },
   "${ModID}:FreeToPlayEffect": {

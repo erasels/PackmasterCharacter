@@ -1,50 +1,50 @@
 {
   "${ModID}:MakeshiftSword": {
-    "NAME": "Makeshift Sword",
-    "DESCRIPTION": "每当 一张牌 is created during combat, 获得 !M! 活力 。"
+    "NAME": "临时剑刃",
+    "DESCRIPTION": "创造一张牌时， NL 获得 !M! 层 活力 。"
   },
   "${ModID}:MakeshiftShield": {
-    "NAME": "Makeshift Shield",
-    "DESCRIPTION": "每当 一张牌 is created during combat, 获得 !M! 点 格挡 。"
+    "NAME": "临时护盾",
+    "DESCRIPTION": "创造一张牌时， NL 获得 !B! 点 格挡 。"
   },
   "${ModID}:PaintBrush": {
-    "NAME": "Paint Brush",
-    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} card with selected type and cost。"
+    "NAME": "画刷",
+    "DESCRIPTION": "{@@}指定类型与耗能，发现一张{!Upgrades!|>0=已 升级 的}牌 。"
   },
   "${ModID}:Firewall": {
-    "NAME": "Firewall",
-    "DESCRIPTION": "{@@}{!Upgrades!|>0=固有 。 NL }When a Status card is created, NL 消耗 it。"
+    "NAME": "防火墙",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=固有 。 NL } 创造一张状态牌时， NL 将其 消耗 。"
   },
   "${ModID}:Souvenirs": {
-    "NAME": "Souvenirs",
-    "DESCRIPTION": "{@@}Create an *Insight, *Smite or *Safety in hand. It draws 一张牌。 {!Upgrades!|>0= NL Do it a获得.}"
+    "NAME": "纪念物",
+    "DESCRIPTION": "{@@}在手中创造{!Upgrades!|>0=两张|@=一张} *洞见 、 *惩恶 或 *平安 ，其附带抽牌效果。"
   },
   "${ModID}:Mimicry": {
-    "NAME": "Mimicry",
-    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} common card from other Packs you've selected。"
+    "NAME": "模仿",
+    "DESCRIPTION": "{@@}发现一张本局已选其他卡包的普通牌{!Upgrades!|>0=+}。"
   },
   "${ModID}:CraftyMove": {
-    "NAME": "Crafty Move",
-    "DESCRIPTION": "造成 !D! 点伤害。 If 一张牌 has been created 本回合, 获得 [E] and 抽一张牌。"
+    "NAME": "创造性行动",
+    "DESCRIPTION": "造成 !D! 点伤害。 若本回合创造过牌， NL 获得 [E] 并抽一张牌。"
   },
   "${ModID}:BarrierBeacon": {
     "NAME": "Barrier Beacon",
-    "DESCRIPTION": "{@@}获得 !B! 格挡, create a{!Upgrades!|>0=n upgraded} copy of this in hand. 消耗 。"
+    "DESCRIPTION": "{@@}获得 !B! 点 格挡 ，在手牌创造一张本牌 {!Upgrades!|>0=+} 的复制品。 NL 消耗 。"
   },
   "${ModID}:StrikingStrike": {
-    "NAME": "Striking Strike",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Discover a{!Upgrades!|>0=n upgraded} strike. It 消耗s when played and costs 0 本回合。"
+    "NAME": "打击性打击",
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL 发现一张打击{!Upgrades!|>0=+}，其耗能为0且附带 消耗 。"
   },
   "${ModID}:AccumulativeStrike": {
-    "NAME": "Accumulative Strike",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Deals !M! additional damage for ALL your {!Upgrades!|0= non-Status} created cards。"
+    "NAME": "累积性打击",
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL Deals !M! additional damage for ALL your {!Upgrades!|0= non-Status} created 张牌。"
   },
   "${ModID}:BrushModalTypeChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}Select this card type for Discovery。"
+    "DESCRIPTION": "{@@}选择发现的类型。"
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}Select this card cost for Discovery。"
+    "DESCRIPTION": "{@@}选择发现的耗能。"
   }
 }

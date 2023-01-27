@@ -1,17 +1,17 @@
 {
   "${ModID}:InfiniteClawsPower": {
-    "NAME": "Infinite Claws",
+    "NAME": "无限爪击",
     "DESCRIPTIONS": [
-      "你的回合开始时， 获得 #b",
-      " #yGhost #yClaws。",
-      " #yGhost #yClaw。"
+      "你的回合开始时，获得 #b",
+      " 张 #y幽灵爪击 。",
+      " 张 #y幽灵爪击 。"
     ]
   },
-  "${ModID}:Return格挡OnClawPower": {
-    "NAME": "Talk to the Claw",
+  "${ModID}:ReturnBlockOnClawPower": {
+    "NAME": "被爪拒之",
     "DESCRIPTIONS": [
-      "When attacked with a #yClaw, you 获得 #b",
-      " #y格挡 。"
+      "#y爪击 该单位时，你获得 #b",
+      " 点 #y格挡 。"
     ]
   }
 }

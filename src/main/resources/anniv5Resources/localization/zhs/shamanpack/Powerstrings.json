@@ -1,10 +1,10 @@
 {
-  "${ModID}:Ignite": {
+  "${ModID}:燃烧": {
     "NAME": "Ignite",
     "DESCRIPTIONS": ["回合结束时， 失去 #b{0} 生命。", "At the start of its turn, 失去s #b{0} 生命。"]
   },
   "${ModID}:FreezeAndBurn": {
-    "NAME": "Freeze and Burn",
+    "NAME": "Freeze 并Burn",
     "DESCRIPTIONS": ["At the start of your next turn, deal #b{0} damage to 所有敌人。"]
   },
   "${ModID}:FieryMantle": {
@@ -18,8 +18,8 @@
   "${ModID}:FueledByEmbers": {
     "NAME": "Fueled by Embers",
     "DESCRIPTIONS": [
-      "你的回合开始时， draw #b{0} card and add #b{0} #yFading #yEmber to your hand and 抽牌堆。",
-      "你的回合开始时， draw #b{0} cards and add #b{0} #yFading #yEmbers to your hand and 抽牌堆。"
+      "你的回合开始时， 抽 #b{0} card 并add #b{0} #yFading #yEmber to your h并并抽牌堆。",
+      "你的回合开始时， 抽 #b{0} cards 并add #b{0} #yFading #yEmbers to your h并并抽牌堆。"
     ]
   }
 }

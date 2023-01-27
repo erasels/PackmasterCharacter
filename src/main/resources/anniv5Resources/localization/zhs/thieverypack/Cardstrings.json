@@ -5,7 +5,7 @@
   },
   "${ModID}:FairTrade": {
     "NAME": "Fair Trade",
-    "DESCRIPTION": "造成 !D! 点伤害 twice. NL You and the enemy 获得 !M! 点 力量 each。"
+    "DESCRIPTION": "造成 !D! 点伤害 twice. NL You 并the enemy 获得 !M! 点 力量 each。"
   },
   "${ModID}:Smokescreen": {
     "NAME": "Smokescreen",
@@ -17,8 +17,8 @@
   },
   "${ModID}:Magnet": {
     "NAME": "Magnet",
-    "DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from the enemy. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, and Metallicize from 所有敌人. NL 消耗 。"
+    "DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, 并Metallicize from the enemy. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, 并Metallicize from 所有敌人. NL 消耗 。"
   },
   "${ModID}:力量Sap": {
     "NAME": "力量 Sap",

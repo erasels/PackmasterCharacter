@@ -9,7 +9,7 @@
   },
   "${ModID}:EnrageShot": {
     "NAME": "Enrage Shot",
-    "DESCRIPTION": "Stun the enemy and 给予 2 力量 。 NL 消耗 。"
+    "DESCRIPTION": "Stun the enemy 并给予 2 力量 。 NL 消耗 。"
   },
   "${ModID}:MercuryFist": {
     "NAME": "Mercury Fist",

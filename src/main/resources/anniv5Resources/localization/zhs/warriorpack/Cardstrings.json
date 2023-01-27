@@ -13,7 +13,7 @@
   },
   "${ModID}:StormStrike": {
     "NAME": "Storm Strike",
-    "DESCRIPTION": "Deal !D! ${ModID}:Feral damage. NL 给予 !M! 层 易伤。"
+    "DESCRIPTION": "Deal !D! ${ModID}:Feral damage. NL 给予 !M! 层 易伤 。"
   },
   "${ModID}:WarSong": {
     "NAME": "War Song",
@@ -35,10 +35,10 @@
   },
   "${ModID}:Bolas": {
     "NAME": "Bolas",
-    "DESCRIPTION": "给予 *Slow. NL Give enemy !M! 点 格挡 。 NL Draw !${ModID}:m2! card. NL 消耗 。"
+    "DESCRIPTION": "给予 *Slow. NL Give enemy !M! 点 格挡 。 NL 抽 !${ModID}:m2! card. NL 消耗 。"
   },
   "${ModID}:FFBlade": {
     "NAME": "FF Blade",
-    "DESCRIPTION": "Deal !D! ${ModID}:Feral and ${ModID}:Front damage。"
+    "DESCRIPTION": "Deal !D! ${ModID}:Feral 并${ModID}:Front damage。"
   }
 }

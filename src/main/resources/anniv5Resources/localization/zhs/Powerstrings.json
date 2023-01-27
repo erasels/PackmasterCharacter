@@ -3,7 +3,7 @@
     "NAME": "Example 2",
     "DESCRIPTIONS": [
       "你的回合开始时， 获得 #b",
-      " #y力量 and #b",
+      " #y力量 并#b",
       " #yDexterity。"
     ]
   }

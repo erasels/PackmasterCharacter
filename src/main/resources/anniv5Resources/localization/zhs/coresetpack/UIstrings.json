@@ -1,15 +1,15 @@
 {
   "${ModID}:CoreSetPack": {
     "TEXT": [
-      "Core Set",
-      "A reliable suite of simple, useful cards。",
-      "Packmaster Team"
+      "核心集",
+      "一套简单有用的牌。",
+      "卡包大师制作组"
     ]
   },
   "${ModID}:CoreSetPackHat": {
     "TEXT": [
-      "Sometimes less is more。",
-      "Hatless"
+      "有的时候无胜于有。",
+      "国王的帽子"
     ]
   }
 }

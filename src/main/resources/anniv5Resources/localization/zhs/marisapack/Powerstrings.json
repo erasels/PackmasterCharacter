@@ -2,7 +2,7 @@
   "${ModID}:ChargeUp": {
     "NAME": "Charge Up",
     "DESCRIPTIONS": [
-      "At #b%s or more stacks, double the damage of the next Attack and 失去 #b%s stacks。"
+      "At #b%s or more stacks, double the damage of the next Attack 并失去 #b%s stacks。"
     ]
   },
   "${ModID}:Inertia": {

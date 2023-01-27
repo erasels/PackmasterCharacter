@@ -10,7 +10,7 @@
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
-    "DESCRIPTION": "造成 !D! 点伤害 and 给予 !M! ${ModID}:Distortion to a random enemy。"
+    "DESCRIPTION": "造成 !D! 点伤害 并给予 !M! ${ModID}:扭曲 to a random enemy。"
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
@@ -19,7 +19,7 @@
   },
   "${ModID}:FamilialCurse": {
     "NAME": "Familial Curse",
-    "DESCRIPTION": "给予 !M! ${ModID}:Ruin to 所有敌人. NL Next turn, 获得 a *Madness and 失去 1 生命。"
+    "DESCRIPTION": "给予 !M! ${ModID}:Ruin to 所有敌人. NL Next turn, 获得 a *Madness 并失去 1 生命。"
   },
   "${ModID}:GazeTheVoid": {
     "NAME": "Gaze the Void",
@@ -27,7 +27,7 @@
   },
   "${ModID}:AllSeeing": {
     "NAME": "All Seeing",
-    "DESCRIPTION": "At the end of each turn, Scry !M! and take 3 damage。"
+    "DESCRIPTION": "At the end of each turn, Scry !M! 并take 3 damage。"
   },
   "${ModID}:EndOfDays": {
     "NAME": "End of Days",
@@ -36,8 +36,8 @@
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "R'lyeh Fhtagn",
-    "DESCRIPTION": "Put EVERYONE to sleep. Next turn, 获得 3 *Madness and 失去 3 生命。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. Next turn, 获得 3 *Madness+ and 失去 3 生命。 NL 消耗 。"
+    "DESCRIPTION": "Put EVERYONE to sleep. Next turn, 获得 3 *Madness 并失去 3 生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. Next turn, 获得 3 *Madness+ 并失去 3 生命。 NL 消耗 。"
   },
   "${ModID}:StarSpawn": {
     "NAME": "Star Spawn",

@@ -14,25 +14,25 @@
   },
   "${ModID}:Ambition": {
     "NAME": "Ambition",
-    "DESCRIPTION": "Put a random Power from your 抽牌堆 into your hand and copy it. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL Put a random Power from your 抽牌堆 into your hand and copy it. NL 消耗 。"
+    "DESCRIPTION": "Put a random Power from your 抽牌堆 into your h并并copy it. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL Put a random Power from your 抽牌堆 into your h并并copy it. NL 消耗 。"
   },
   "${ModID}:Diehard": {
     "NAME": "Diehard",
-    "DESCRIPTION": "获得 !M! Artifact. NL Next turn, 获得 1 Weak and Frail。"
+    "DESCRIPTION": "获得 !M! Artifact. NL Next turn, 获得 1 Weak 并Frail。"
   },
   "${ModID}:EldritchBlast": {
     "NAME": "Eldritch Blast",
-    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 Reduce the cost of a random *Magic card in hand by 1 本回合。"
+    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 Reduce the cost of a random *Magic card in h并by 1 本回合。"
   },
   "${ModID}:DeathWish": {
     "NAME": "Death Wish",
-    "DESCRIPTION": "If your 生命 is above 50%, 失去 !M! 生命。 NL 获得 !M! 点 力量 and [#EFC851]活力 。"
+    "DESCRIPTION": "If your 生命 is above 50%, 失去 !M! 生命。 NL 获得 !M! 点 力量 并[#EFC851]活力 。"
   },
   "${ModID}:KillerInstinct": {
     "NAME": "Killer Instinct",
-    "DESCRIPTION": "获得 2 力量 and 1 Dexterity. NL 战斗开始： Shuffle a copy of this card into your 抽牌堆。",
-    "UPGRADE_DESCRIPTION": "获得 2 力量 and 1 Dexterity. NL 战斗开始： Shuffle !M! copies of this card into your 抽牌堆。"
+    "DESCRIPTION": "获得 2 力量 并1 Dexterity. NL 战斗开始： Shuffle a copy of this card into your 抽牌堆。",
+    "UPGRADE_DESCRIPTION": "获得 2 力量 并1 Dexterity. NL 战斗开始： Shuffle !M! copies of this card into your 抽牌堆。"
   },
   "${ModID}:Bulwark": {
     "NAME": "Bulwark",
@@ -41,6 +41,6 @@
   },
   "${ModID}:Masterstroke": {
     "NAME": "Masterstroke",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 力量 and Dexterity affect this card !M! times。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 力量 并Dexterity affect this card !M! times。"
   }
 }

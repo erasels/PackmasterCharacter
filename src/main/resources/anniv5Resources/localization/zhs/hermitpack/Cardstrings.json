@@ -1,12 +1,12 @@
 {
-  "${ModID}:Quickdraw": {
+  "${ModID}:Quick抽": {
     "NAME": "快拔",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL Next turn, draw 1 less card。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL Next turn, 抽 1 less card。"
   },
   "${ModID}:Glare": {
     "NAME": "Glare",
-    "DESCRIPTION": "给予 !M! Weak and Vulnerable。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 给予 !M! Weak and Vulnerable。"
+    "DESCRIPTION": "给予 !M! Weak 并Vulnerable。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 给予 !M! Weak 并Vulnerable。"
   },
   "${ModID}:HoleUp": {
     "NAME": "Hole Up",
@@ -23,7 +23,7 @@
   },
   "${ModID}:Virtue": {
     "NAME": "高尚",
-    "DESCRIPTION": "保留 。 NL Reduce each of your debuffs by !M!。"
+    "DESCRIPTION": "保留 。 NL Reduce each of your debuffs by !M! 。"
   },
   "${ModID}:FlashPowder": {
     "NAME": "闪光粉末",
@@ -35,7 +35,7 @@
   },
   "${ModID}:OverwhelmingPower": {
     "NAME": "Overwhelming Power",
-    "DESCRIPTION": "获得 [E] [E] [E] 。 NL Draw 3 cards. NL 每当 you end your turn with 0 Energy, 失去 !M! 生命。"
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽 3 张牌。 NL 每当 you end your turn with 0 Energy, 失去 !M! 生命。"
   },
   "${ModID}:DeadOrAlive": {
     "NAME": "死或生",

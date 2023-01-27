@@ -15,7 +15,7 @@
   },
   "${ModID}:HarvestPotatoes": {
     "NAME": "Harvest Potatoes",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card you played 本场战斗 wasn't a Skill, 获得 !B! 格挡 a获得。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card you played 本场战斗 wasn't a Skill, 获得 !B! 点 格挡 a获得。"
   },
   "${ModID}:HarvestRadishes": {
     "NAME": "Harvest Radishes",
@@ -33,7 +33,7 @@
   },
   "${ModID}:SoilResiliency": {
     "NAME": "Soil Resiliency",
-    "DESCRIPTION": "获得 !M! 点 力量 and !${ModID}:m2! Dexterity. NL If you've played less than 3 types of card 本回合, 消耗 。"
+    "DESCRIPTION": "获得 !M! 点 力量 并!${ModID}:m2! Dexterity. NL If you've played less than 3 types of card 本回合, 消耗 。"
   },
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",

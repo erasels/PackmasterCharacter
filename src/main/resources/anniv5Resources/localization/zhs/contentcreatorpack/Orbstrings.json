@@ -2,9 +2,9 @@
   "Wanderbot": {
     "NAME": "Wanderbot",
     "DESCRIPTION": [
-      "#yPassive: At the end of turn, deal #b",
-      " damage to the frontmost enemy. NL #yEvoke: Deal #b",
-      " damage to the frontmost enemy and 抽 #b1 张牌。"
+      "#y被动：在你的回合结束时，对你面前最近的敌人造成 deal #b",
+      " 点伤害。 NL #y激发 ：对你面前最近的敌人造成 #b",
+      " 点伤害并抽 #b1 张牌。"
     ]
   }
 }

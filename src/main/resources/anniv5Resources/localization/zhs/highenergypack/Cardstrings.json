@@ -14,7 +14,7 @@
   },
   "${ModID}:LastResort": {
     "NAME": "Last Resort",
-    "DESCRIPTION": "获得 !B! 格挡 X times. NL If X is 0, NL 获得 [E] and 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 X times. NL If X is 0, NL 获得 [E] 并消耗 。"
   },
   "${ModID}:LotsOfIronWaves": {
     "NAME": "Lots of Iron Waves",
@@ -51,6 +51,6 @@
   },
   "${ModID}:SuperNova": {
     "NAME": "Super Nova",
-    "DESCRIPTION": "所有敌人 失去 !M! 生命。 NL 给予 !${ModID}:m2! Weak and Vulnerable to 所有敌人。"
+    "DESCRIPTION": "所有敌人 失去 !M! 生命。 NL 给予 !${ModID}:m2! Weak 并Vulnerable to 所有敌人。"
   }
 }

@@ -21,7 +21,7 @@
   "${ModID}:MindControlledPower": {
     "NAME": "Mind Controlled",
     "DESCRIPTIONS": [
-      "This enemy became your ally and will start attacking other enemies。"
+      "This enemy became your ally 并will start attacking other enemies。"
     ]
   }
 }

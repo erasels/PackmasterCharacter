@@ -146,6 +146,7 @@ public class SpireAnniversary5Mod implements
     public static CardGroup packsToDisplay;
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
+            Settings.GameLanguage.ZHS
     };
 
     public static Color characterColor = new Color(0.76f, 0.65f, 0.52f, 1);

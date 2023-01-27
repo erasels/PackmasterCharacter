@@ -1,7 +1,7 @@
 [
   {
-    "PROPER_NAME": "Casts\u00a0When\u00a0Drawn",
-    "NAMES": ["casts\u00a0when\u00a0drawn"],
-    "DESCRIPTION": "When drawn or put into your hand, activate this card's effects on a random target. (This does not trigger on play effects such as Beat of Death.)"
+    "PROPER_NAME": "Casts\u00a0When\u00a0抽n",
+    "NAMES": ["casts\u00a0when\u00a0抽n"],
+    "DESCRIPTION": "When 抽n or put into your hand, activate this card's effects on a random target. (This does not trigger on play effects such as Beat of Death.)"
   }
 ]

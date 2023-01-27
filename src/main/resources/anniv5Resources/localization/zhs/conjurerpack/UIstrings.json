@@ -1,15 +1,15 @@
 {
   "${ModID}:ConjurerPack": {
     "TEXT": [
-      "Conjurer Petra",
-      "Strike the Petra。",
+      "土元素咒术师",
+      "一点小小的土元素震撼。",
       "pinacolada"
     ]
   },
   "${ModID}:ConjurerPackHat": {
     "TEXT": [
-      "I foresaw you picking this hat。",
-      "The Zoltan"
+      "我预见了你会戴上此帽。",
+      "佐尔坦之帽"
     ]
   }
 }

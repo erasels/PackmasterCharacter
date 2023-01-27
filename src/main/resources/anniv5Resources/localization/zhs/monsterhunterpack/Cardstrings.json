@@ -1,7 +1,7 @@
 {
   "${ModID}:HuntingStrike": {
     "NAME": "Hunting Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage to elites and bosses。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage to elites 并bosses。"
   },
   "${ModID}:Focus": {
     "NAME": "Track",
@@ -35,8 +35,8 @@
   },
   "${ModID}:CoreBlinder": {
     "NAME": "Core Blinder",
-    "DESCRIPTION": "给予 !M! Weak and Vulnerable. NL Add a *Core *Blaster to your 抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! Weak and Vulnerable to 所有敌人. NL Add a *Core *Blaster+ to your 抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! Weak 并Vulnerable. NL Add a *Core *Blaster to your 抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! Weak 并Vulnerable to 所有敌人. NL Add a *Core *Blaster+ to your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",
@@ -44,8 +44,8 @@
   },
   "${ModID}:InfernoDaggers": {
     "NAME": "Inferno Daggers",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害 !M! times and set this card's cost to 6. NL When Retained, reduce this card's cost by 1。",
-    "UPGRADE_DESCRIPTION": "固有 。 保留 。 NL 造成 !D! 点伤害 !M! times and set this card's cost to 6. NL When Retained, reduce this card's cost by 1。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害 !M! times 并set this card's cost to 6. NL When Retained, reduce this card's cost by 1。",
+    "UPGRADE_DESCRIPTION": "固有 。 保留 。 NL 造成 !D! 点伤害 !M! times 并set this card's cost to 6. NL When Retained, reduce this card's cost by 1。"
   },
   "${ModID}:StabManual": {
     "NAME": "Stabbing Manual",
@@ -58,20 +58,20 @@
   },
   "${ModID}:SlaverWhip": {
     "NAME": "Slaver's Whip",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Weak and Vulnerable. NL If this kills an enemy, add it back to your hand and it costs 0 本回合。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Weak 并Vulnerable. NL If this kills an enemy, add it back to your h并并it costs 0 本回合。"
   },
   "${ModID}:GremlinLance": {
     "NAME": "Gremlin Lance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, 获得 [E] and 抽一张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, 获得 [E] 并抽一张牌。"
   },
   "${ModID}:ChampMail": {
     "NAME": "Champion's Platemail",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs and 获得 !M! 点 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs and 获得 !M! 点 力量 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs 并获得 !M! 点 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs 并获得 !M! 点 力量 。"
   },
   "${ModID}:CursedBow": {
     "NAME": "Cursed Bow",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Weak and Vulnerable. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Weak 并Vulnerable. NL 消耗 。"
   },
   "${ModID}:HyperBlaster": {
     "NAME": "Hyper Blaster",
@@ -120,7 +120,7 @@
   },
   "${ModID}:HunterRank": {
     "NAME": "Hunter Rank",
-    "DESCRIPTION": "获得 !M! 点 力量 。 Increases by 1 for each Elite and Boss enemy you've defeated. NL 获得 !${ModID}:m2! Dexterity。"
+    "DESCRIPTION": "获得 !M! 点 力量 。 Increases by 1 for each Elite 并Boss enemy you've defeated. NL 获得 !${ModID}:m2! Dexterity。"
   },
   "${ModID}:TranqBomb": {
     "NAME": "Tranquilizer Bomb",

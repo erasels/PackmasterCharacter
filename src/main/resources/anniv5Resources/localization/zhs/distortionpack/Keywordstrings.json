@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Distortion",
+    "PROPER_NAME": "扭曲",
     "NAMES": [
-      "distortion"
+      "distortion",
+      "扭曲"
     ],
-    "DESCRIPTION": "Creatures with #yDistortion 失去 生命 每当 一张牌 is #y消耗ed。"
+    "DESCRIPTION": "每当牌被 #y消耗 时，被 #y扭曲 的单位失去层数点生命。"
   }
 ]

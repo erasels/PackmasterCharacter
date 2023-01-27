@@ -8,7 +8,7 @@
   },
   "${ModID}:HermitPackHat": {
     "TEXT": [
-      "Rugged and bruised, but can still be worn。",
+      "Rugged 并bruised, but can still be worn。",
       "Hermit Hat"
     ]
   }

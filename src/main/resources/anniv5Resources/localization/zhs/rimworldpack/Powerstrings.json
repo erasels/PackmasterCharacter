@@ -9,17 +9,17 @@
   "${ModID}:CatharsisPower": {
     "NAME": "Catharsis",
     "DESCRIPTIONS": [
-      "Your next card costs 0 and plays twice!",
+      "Your next card costs 0 并plays twice!",
       "Play your next #b",
-      " cards cost 0 and play twice!"
+      " cards cost 0 并play twice!"
     ]
   },
   "${ModID}:PyromaniacPower": {
     "NAME": "Pyromaniac",
     "DESCRIPTIONS": [
-      "你的回合开始时， set a random card in your hand #yOn #yFire。",
+      "你的回合开始时， set a random card in your h并#yOn #yFire。",
       "你的回合开始时， set #b",
-      " random cards in your hand #yOn #yFire"
+      " random cards in your h并#yOn #yFire"
     ]
   },
   "${ModID}:BurningPassionPower": {
@@ -39,16 +39,16 @@
   "${ModID}:LuciferiumAddictionPower": {
     "NAME": "Luciferium Addiction",
     "DESCRIPTIONS": [
-      "In #b1 turn, add #b2 #yDespairs to your hand and 失去 #b5 #y力量 。",
+      "In #b1 turn, add #b2 #yDespairs to your h并并失去 #b5 #y力量 。",
       "In #b",
-      " turns, add #b2 #yDespairs to your hand and 失去 #b5 #y力量 。"
+      " turns, add #b2 #yDespairs to your h并并失去 #b5 #y力量 。"
     ]
   },
   "${ModID}:TradeBeaconPower": {
     "NAME": "Trade Beacon",
     "DESCRIPTIONS": [
-      "The first time you draw or 丢弃 during your turn, draw #b",
-      " cards。"
+      "The first time you 抽 or 丢弃 during your turn, 抽 #b",
+      " 张牌。"
     ]
   }
 }

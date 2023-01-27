@@ -28,15 +28,15 @@
   },
   "${ModID}:Beacon": {
     "NAME": "Beacon",
-    "DESCRIPTION": "Choose !M! card in your hand. NL Upgrade it and give it 保留 。",
-    "UPGRADE_DESCRIPTION": "Choose !M! cards in your hand. NL Upgrade them and give them 保留 。",
+    "DESCRIPTION": "Choose !M! card in your hand. NL Upgrade it 并give it 保留 。",
+    "UPGRADE_DESCRIPTION": "Choose !M! cards in your hand. NL Upgrade them 并give them 保留 。",
     "EXTENDED_DESCRIPTION": [
-      "Upgrade and give 保留 。"
+      "Upgrade 并give 保留 。"
     ]
   },
   "${ModID}:SleeveUp": {
     "NAME": "Sleeve Up",
-    "DESCRIPTION": "抽 !M! 张牌。 NL When this appears in 一张牌 reward, the cards are *Foil and 获得 保留 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL When this appears in 一张牌 reward, the cards are *Foil 并获得 保留 。"
   },
   "${ModID}:AutoBattler": {
     "NAME": "Auto Battler",
@@ -48,8 +48,8 @@
   },
   "${ModID}:FinalForm": {
     "NAME": "This Isn't Even My..。",
-    "DESCRIPTION": "虚无 。 NL 消耗 1 random card. NL 你的回合开始时， play and 消耗 a copy of it。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 消耗 1 card. NL 你的回合开始时， play and 消耗 a copy of it。",
+    "DESCRIPTION": "虚无 。 NL 消耗 1 random card. NL 你的回合开始时， play 并消耗 a copy of it。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 消耗 1 card. NL 你的回合开始时， play 并消耗 a copy of it。",
     "EXTENDED_DESCRIPTION": [
       "消耗 for Final Form。"
     ]
@@ -60,7 +60,7 @@
     "EXTENDED_DESCRIPTION": [
       " NL (Played ",
       " card.)",
-      " cards.)"
+      " 张牌。)"
     ]
   }
 }

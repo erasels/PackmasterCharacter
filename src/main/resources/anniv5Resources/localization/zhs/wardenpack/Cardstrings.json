@@ -5,7 +5,7 @@
   },
   "${ModID}:Stall": {
     "NAME": "Stall",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put up to !M! cards from your hand on top of your 抽牌堆。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put up to !M! cards from your h并on top of your 抽牌堆。"
   },
   "${ModID}:RiskOfBlades": {
     "NAME": "Risk Of Blades",
@@ -14,7 +14,7 @@
   },
   "${ModID}:Crossroads": {
     "NAME": "Crossroads",
-    "DESCRIPTION": "Scry !M!. NL Play the top card of your 抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "Scry !M! 。 NL Play the top card of your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:Anticipation": {
     "NAME": "Anticipation",
@@ -31,11 +31,11 @@
   },
   "${ModID}:Enigmancy": {
     "NAME": "Enigmancy",
-    "DESCRIPTION": "Scry !M!. NL Each turn, 获得 !${ModID}:m2! Energy and reduce this 获得 by 1。"
+    "DESCRIPTION": "Scry !M! 。 NL Each turn, 获得 !${ModID}:m2! Energy 并reduce this 获得 by 1。"
   },
   "${ModID}:Recurrence": {
     "NAME": "Recurrence",
-    "DESCRIPTION": "Shuffle a copy of your hand into your 抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "Shuffle a copy of your h并into your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:DivineMight": {
     "NAME": "Divine Might",

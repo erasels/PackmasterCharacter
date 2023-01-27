@@ -1,30 +1,34 @@
 [
   {
-    "PROPER_NAME": "Wanderbot",
+    "PROPER_NAME": "漫游机",
     "NAMES": [
-      "wanderbot"
+      "wanderbot",
+      "漫游机"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the frontmost enemy. Draws 一张牌 when evoked。"
+    "DESCRIPTION": "充能球：对面对你最前面的敌人造成伤害。 #y激发 时还抽一张牌。"
   },
   {
-    "PROPER_NAME": "MEGAthereal",
+    "PROPER_NAME": "超虚无",
     "NAMES": [
-      "megathereal"
+      "megathereal",
+      "超虚无"
     ],
-    "DESCRIPTION": "消耗s at the end of the turn, no matter where it is。"
+    "DESCRIPTION": "回合结束时 消耗 。"
   },
   {
-    "PROPER_NAME": "Odd",
+    "PROPER_NAME": "累奇",
     "NAMES": [
-      "odd"
+      "odd",
+      "累奇"
     ],
-    "DESCRIPTION": "Additional effect if you played an odd number of cards 本回合 (including this)。"
+    "DESCRIPTION": "本回合打出过的牌累计为奇数张时触发效果(打出本牌后判定)。"
   },
   {
-    "PROPER_NAME": "Even",
+    "PROPER_NAME": "累偶",
     "NAMES": [
-      "even"
+      "even",
+      "累偶"
     ],
-    "DESCRIPTION": "Additional effect if you played an even number of cards 本回合 (including this)。"
+    "DESCRIPTION": "本回合打出过的牌累计为偶数张时触发效果(打出本牌后判定)。"
   }
 ]

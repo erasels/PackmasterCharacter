@@ -2,7 +2,7 @@
   "${ModID}:Nightmare": {
     "NAME": "Nightmare",
     "DESCRIPTION": [
-      "When you play #yMadness, exit #yNightmare #yStance. NL When you exit #yNightmare #yStance, draw #b2 cards 获得 [E] , and 失去 #b1 生命。"
+      "When you play #yMadness, exit #yNightmare #yStance. NL When you exit #yNightmare #yStance, 抽 #b2 cards 获得 [E] , 并失去 #b1 生命。"
     ]
   }
 }

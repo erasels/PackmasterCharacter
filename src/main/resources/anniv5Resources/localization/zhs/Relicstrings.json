@@ -20,7 +20,7 @@
       "力量！",
       "放逐。",
       "获得。",
-      "Translator note: The 2 dots up here follows the structure 'Choose a Pack to banish with '+'Banishing Decree'+'.'   and 'Choose a Pack to 获得 with '+'Banishing Decree'+'.' respectively. "
+      "Translator note: The 2 dots up here follows the structure 'Choose a Pack to banish with '+'Banishing Decree'+'.'   并'Choose a Pack to 获得 with '+'Banishing Decree'+'.' respectively. "
     ]
   },
   "${ModID}:CollectorBadge": {

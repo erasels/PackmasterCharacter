@@ -1,13 +1,13 @@
 {
   "${ModID}:SwordAndBoard": {
-    "NAME": "Sword and Board",
+    "NAME": "Sword 并Board",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["${ModID}:Even: ", "造成 !D! 点伤害。", " NL ","${ModID}:Odd: ", "获得 !B! 格挡"]
+    "EXTENDED_DESCRIPTION": ["${ModID}:Even: ", "造成 !D! 点伤害。", " NL ","${ModID}:Odd: ", "获得 !B! 点 格挡"]
   },
   "${ModID}:QuickReflex": {
     "NAME": "Quick Reflex",
-    "DESCRIPTION": "获得 !B! 格挡",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First: ", "获得 !B! 格挡"]
+    "DESCRIPTION": "获得 !B! 点 格挡",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First: ", "获得 !B! 点 格挡"]
   },
   "${ModID}:PrimeDirective": {
     "NAME": "Prime Directive",
@@ -16,7 +16,7 @@
   "${ModID}:WitzBolt": {
     "NAME": "Witz Bolt",
     "DESCRIPTION": "造成 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Odd: ", "给予 !M! Weak and Vulnerable。"]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Odd: ", "给予 !M! Weak 并Vulnerable。"]
   },
   "${ModID}:ElementOfSurprise": {
     "NAME": "Element of Surprise",

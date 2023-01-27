@@ -1,15 +1,15 @@
 {
   "${ModID}:CreativityPack": {
     "TEXT": [
-      "Creativity",
-      "Create cards and benefit from cards creation。",
+      "创造力",
+      "创造牌并从中获得收益。",
       "Jedi"
     ]
   },
   "${ModID}:CreativityPackHat": {
     "TEXT": [
-      "Anything can be a hat with a little bit of imagination。",
-      "Paper Boat"
+      "只要想象力丰富，任何东西都可以是帽子。",
+      "纸船"
     ]
   }
 }

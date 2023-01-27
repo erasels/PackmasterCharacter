@@ -1,11 +1,11 @@
 {
   "${ModID}:AqueductsPower": {
     "NAME": "Aqueducts",
-    "DESCRIPTIONS": ["每当 you draw an extr一张牌, deal #b", " damage to 所有敌人。"]
+    "DESCRIPTIONS": ["每当 you 抽 an extr一张牌, deal #b", " damage to 所有敌人。"]
   },
   "${ModID}:FlowPower": {
     "NAME": "Flowing",
-    "DESCRIPTIONS": ["At the start of your next turn, ", "draw #b", " cards。", "抽一张牌。"]
+    "DESCRIPTIONS": ["At the start of your next turn, ", "抽 #b", " 张牌。", "抽一张牌。"]
   },
   "${ModID}:PneumaticsPower": {
     "NAME": "Pneumatics",

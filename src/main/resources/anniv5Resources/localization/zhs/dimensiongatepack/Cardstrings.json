@@ -19,19 +19,19 @@
   },
   "${ModID}:Knighthood": {
     "NAME": "Knighthood",
-    "DESCRIPTION": "虚无 。 NL Choose 一张牌 in hand to Upgrade permanently. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose 一张牌 in hand to Upgrade permanently. NL 消耗 。",
+    "DESCRIPTION": "虚无 。 NL Choose 一张牌 in h并to Upgrade permanently. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Choose 一张牌 in h并to Upgrade permanently. NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " to upgrade permanently。"
     ]
   },
   "${ModID}:Inferno": {
     "NAME": "Inferno",
-    "DESCRIPTION": "保留 。 NL ${ModID}:Hoard !hoard!: 对所有敌人造成 !D! 点伤害。 NL stslib:Persist !stslib:persist! 。"
+    "DESCRIPTION": "保留 。 NL ${ModID}:囤积 !hoard!: 对所有敌人造成 !D! 点伤害。 NL stslib:Persist !stslib:persist! 。"
   },
   "${ModID}:LethalShot": {
     "NAME": "Lethal Shot",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Poison and !${ModID}:m2! Vulnerable。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! Poison 并!${ModID}:m2! Vulnerable。"
   },
   "${ModID}:MagicMissile": {
     "NAME": "Magic Missile",
@@ -43,8 +43,8 @@
   },
   "${ModID}:PackRat": {
     "NAME": "Pack Rat",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, 获得 one and remove this from your deck permanently。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, 获得 one and *Downgrade this permanently。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, 获得 one 并remove this from your deck permanently。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no Potions, 获得 one 并*Downgrade this permanently。"
   },
   "${ModID}:ScorchedEarth": {
     "NAME": "Scorched Earth",

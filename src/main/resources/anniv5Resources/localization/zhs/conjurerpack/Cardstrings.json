@@ -1,44 +1,44 @@
 {
 	"${ModID}:AirCurrent":	{
-		"DESCRIPTION": "造成 !D! 点伤害。 NL If the target has ${ModID}:Petra, 给予 !M! 层 易伤。",
-		"NAME": "Air Current"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 ${ModID}:土元素 ，给予 !M! 层 易伤 。",
+		"NAME": "气流"
 	},
 	"${ModID}:DustTornado":	{
-		"DESCRIPTION": "消耗 一张牌 in hand to play !M! random cards from your 弃牌堆. NL 消耗 。",
-		"NAME": "Dust Tornado"
+		"DESCRIPTION": "消耗 一张手牌来随机打出 !M! 张弃牌堆的牌。 NL 消耗 。",
+		"NAME": "沙尘暴"
 	},
 	"${ModID}:Enervate":	{
-		"DESCRIPTION": "Enemy 失去s half of its 力量, then 失去s !M! more. NL 消耗 。",
-		"NAME": "Enervate"
+		"DESCRIPTION": "目标失去一半 力量 ， NL 然后再失去 !M! 点。 NL 消耗 。",
+		"NAME": "尘封"
 	},
 	"${ModID}:Excavation":	{
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL Fetch !M! cards from your 弃牌堆 and Retain them。",
-		"NAME": "Excavation"
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 从弃牌堆 取出 !M! 张牌并将其 保留 。",
+		"NAME": "挖掘"
 	},
 	"${ModID}:Geomorphology":	{
-		"DESCRIPTION": "每当 you 消耗 一张牌 or Channel an Orb, 给予 !M! ${ModID}:Petra to a random enemy。",
-		"NAME": "Geomorphology"
+		"DESCRIPTION": "消耗 牌或 生成 充能球时，随机给予 !M! 层 ${ModID}:土元素 。",
+		"NAME": "地貌学"
 	},
 	"${ModID}:GeothermalHeating":	{
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! additional 格挡 for each distinct debuff on the target。",
-		"NAME": "Geothermal Heating"
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 目标每有负面效果， NL 再获得 !M! 点。",
+		"NAME": "地热"
 	},
 	"${ModID}:Lithosphere":	{
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! ${ModID}:Petra。",
-		"NAME": "Lithosphere"
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 ${ModID}:土元素。",
+		"NAME": "岩石层"
 	},
 	"${ModID}:MudFissure":	{
-		"DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage if the target has debuffs。",
-		"NAME": "Mud Fissure"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有负面效果， NL 造成双倍伤害。",
+		"NAME": "泥裂"
 	},
 	"${ModID}:RagingInferno":	{
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Ignite. NL 消耗 。",
-		"NAME": "Raging Inferno",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Ignite。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:燃烧 。 NL 消耗 。",
+		"NAME": "业火",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:燃烧 。"
 	},
 	"${ModID}:TectonicQuake":	{
-		"DESCRIPTION": "造成 !D! 点伤害 and 给予 !M! ${ModID}:Petra and Weak to 所有敌人. NL 消耗 。",
-		"NAME": "Tectonic Quake",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and 给予 !M! ${ModID}:Petra and Weak to 所有敌人。"
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 ${ModID}:土元素 与 虚弱 。 NL 消耗 。",
+		"NAME": "地壳震荡",
+		"UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 ${ModID}:土元素 与 虚弱 。"
 	}
 }

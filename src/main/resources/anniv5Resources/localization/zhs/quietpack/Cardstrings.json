@@ -13,16 +13,16 @@
   },
   "${ModID}:Shine": {
     "NAME": "Shine",
-    "DESCRIPTION": "Unplayable. 保留 。 NL When you draw this card, upgrade another random card in your hand for the rest of the combat。",
-    "UPGRADE_DESCRIPTION": "Unplayable. 保留 。 NL When you draw this card, upgrade ALL cards in your hand for the rest of the combat。"
+    "DESCRIPTION": "Unplayable. 保留 。 NL When you 抽 this card, upgrade another random card in your h并for the rest of the combat。",
+    "UPGRADE_DESCRIPTION": "Unplayable. 保留 。 NL When you 抽 this card, upgrade ALL cards in your h并for the rest of the combat。"
   },
   "${ModID}:GlaiveThrow": {
     "NAME": "Glaive Throw",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 丢弃 !M! cards。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 丢弃 !M! 张牌。"
   },
   "${ModID}:Crunch": {
     "NAME": "Crunch",
-    "DESCRIPTION": "Unplayable. 保留 。 NL When you draw this card, 抽 !M! 张牌。"
+    "DESCRIPTION": "Unplayable. 保留 。 NL When you 抽 this card, 抽 !M! 张牌。"
   },
   "${ModID}:Lie": {
     "NAME": "Lie",
@@ -30,7 +30,7 @@
   },
   "${ModID}:Frontflip": {
     "NAME": "Frontflip",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌s, 丢弃 Unplayable cards drawn。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌s, 丢弃 Unplayable cards 抽n。"
   },
   "${ModID}:HammerThrow": {
     "NAME": "Hammer Throw",
@@ -42,7 +42,7 @@
   },
   "${ModID}:Wisdom": {
     "NAME": "Wisdom",
-    "DESCRIPTION": "获得 [E] 。 NL 丢弃 any number of cards in your hand. Draw that many cards. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 丢弃 any number of cards in your hand. Draw that many cards. NL 消耗 。"
+    "DESCRIPTION": "获得 [E] 。 NL 丢弃 any number of cards in your hand. 抽 that many 张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 丢弃 any number of cards in your hand. 抽 that many 张牌。 NL 消耗 。"
   }
 }

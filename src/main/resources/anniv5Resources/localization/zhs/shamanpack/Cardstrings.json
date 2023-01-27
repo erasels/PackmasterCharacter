@@ -1,36 +1,36 @@
 {
   "${ModID}:Flare": {
     "NAME": "Flare",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Ignite。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:燃烧。"
   },
   "${ModID}:FlameBlast": {
     "NAME": "Flame Blast",
-    "DESCRIPTION": "给予 !M! ${ModID}:Ignite. NL If the enemy has Vulnerable, 给予 !M! ${ModID}:Ignite a获得. NL 给予 !${ModID}:m2! Vulnerable。"
+    "DESCRIPTION": "给予 !M! ${ModID}:燃烧. NL If the enemy has Vulnerable, 给予 !M! ${ModID}:燃烧 a获得. NL 给予 !${ModID}:m2! Vulnerable。"
   },
   "${ModID}:IceWall": {
     "NAME": "Ice Wall",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !B! 格挡 next turn. NL Add a Void to the top of your 抽牌堆。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !B! 点 格挡 next turn. NL Add a Void to the top of your 抽牌堆。"
   },
   "${ModID}:FreezeAndBurn": {
-    "NAME": "Freeze and Burn",
+    "NAME": "Freeze 并Burn",
     "DESCRIPTION": "所有敌人 失去 !M! 点 力量 本回合. NL Next turn, 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "${ModID}:Frostfire": {
     "NAME": "Frostfire",
-    "DESCRIPTION": "给予 !M! ${ModID}:Ignite and !${ModID}:m2! Weak to 所有敌人. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! ${ModID}:燃烧 并!${ModID}:m2! Weak to 所有敌人. NL 消耗 。"
   },
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当 you are attacked 本回合, 给予 !M! ${ModID}:Ignite。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当 you are attacked 本回合, 给予 !M! ${ModID}:燃烧。"
   },
   "${ModID}:SnowMelt": {
     "NAME": "Snow Melt",
-    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL Next turn, draw !M! additional cards。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL Next turn, draw !M! additional cards。"
+    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL Next turn, 抽 !M! additional 张牌。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL Next turn, 抽 !M! additional 张牌。"
   },
   "${ModID}:Pyromastery": {
     "NAME": "Pyromastery",
-    "DESCRIPTION": "When you 给予 ${ModID}:Ignite, 给予 an additional !M! ${ModID}:Ignite。"
+    "DESCRIPTION": "When you 给予 ${ModID}:燃烧, 给予 an additional !M! ${ModID}:燃烧。"
   },
   "${ModID}:ReadTheFlames": {
     "NAME": "Read the Flames",
@@ -38,11 +38,11 @@
   },
   "${ModID}:FueledByEmbers": {
     "NAME": "Fueled by Embers",
-    "DESCRIPTION": "你的回合开始时， 抽 !M! 张牌 and add !M! *Fading *Ember to your hand and 抽牌堆。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时， 抽 !M! 张牌 and add !M! *Fading *Ember to your hand and 抽牌堆。"
+    "DESCRIPTION": "你的回合开始时， 抽 !M! 张牌 并add !M! *Fading *Ember to your h并并抽牌堆。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时， 抽 !M! 张牌 并add !M! *Fading *Ember to your h并并抽牌堆。"
   },
   "${ModID}:FadingEmber": {
     "NAME": "Fading Ember",
-    "DESCRIPTION": "给予 !M! ${ModID}:Ignite. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! ${ModID}:燃烧. NL 消耗 。"
   }
 }

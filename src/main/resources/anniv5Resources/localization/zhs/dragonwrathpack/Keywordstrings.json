@@ -7,7 +7,7 @@
       "Repentant",
       "repentant"
     ],
-    "DESCRIPTION": "When a creature obtains #b8 Penance, it 失去s #b20 生命 and 生命 loss from this effect is increased by #b10 本场战斗. NL Creatures damaged by Penance 失去 #b8 Penance"
+    "DESCRIPTION": "When a creature obtains #b8 Penance, it 失去s #b20 生命 并生命 loss from this effect is increased by #b10 本场战斗. NL Creatures damaged by Penance 失去 #b8 Penance"
   },
   {
     "PROPER_NAME": "Confession",

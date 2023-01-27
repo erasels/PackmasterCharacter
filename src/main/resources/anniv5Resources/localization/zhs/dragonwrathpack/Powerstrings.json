@@ -3,7 +3,7 @@
     "NAME": "Penance",
     "DESCRIPTIONS": ["When this creature obtains #b",
       " #yPenance, it 失去s #b",
-      " 生命 and increases 生命 loss from #yPenance by #b10 本场战斗",
+      " 生命 并increases 生命 loss from #yPenance by #b10 本场战斗",
       "。"
     ]
   },

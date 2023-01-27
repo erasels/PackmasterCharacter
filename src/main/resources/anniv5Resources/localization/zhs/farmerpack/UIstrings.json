@@ -8,7 +8,7 @@
   },
   "${ModID}:FarmerPackHat": {
     "TEXT": [
-      "Simple hat made of straw. Keeps out sun and rain。",
+      "Simple hat made of straw. Keeps out sun 并rain。",
       "Strawhat"
     ]
   }

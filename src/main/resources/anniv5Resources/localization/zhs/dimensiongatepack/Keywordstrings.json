@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Hoard",
+    "PROPER_NAME": "囤积",
     "NAMES": [
-      "hoard"
+      "hoard",
+      "囤积"
     ],
-    "DESCRIPTION": "When played, reduce Hoard by #bX (the card's cost). When Hoard reaches #b0, its effects trigger。"
+    "DESCRIPTION": "打出本牌的累计耗能超过 #y囤积 层数时才触发 #y囤积 的效果。"
   }
 ]

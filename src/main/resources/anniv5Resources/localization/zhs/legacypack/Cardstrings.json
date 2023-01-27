@@ -19,11 +19,11 @@
   },
   "${ModID}:TerrorOfTheSeas": {
     "NAME": "Terror of the Seas",
-    "DESCRIPTION": "给予 !M! 层 易伤 and !${ModID}:m2! ${ModID}:Ruin to 所有敌人. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 易伤 并!${ModID}:m2! ${ModID}:Ruin to 所有敌人. NL 消耗 。"
   },
   "${ModID}:MassProduction": {
     "NAME": "Mass Production",
-    "DESCRIPTION": "Choose 一张牌 in your 抽牌堆。 消耗 your hand and replace it with copies of that card. 消耗 。",
+    "DESCRIPTION": "Choose 一张牌 in your 抽牌堆。 消耗 your h并并replace it with copies of that card. 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "Choose 一张牌 to Mass Produce。"
     ]
@@ -38,11 +38,11 @@
   },
   "${ModID}:OverTime": {
     "NAME": "Over Time",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL For each card that you've *消耗ed 本场战斗, increase damage by !M!。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL For each card that you've *消耗ed 本场战斗, increase damage by !M! 。"
   },
   "${ModID}:SlimeSpray": {
     "NAME": "Slime Spray",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害, 给予 !M! Poison, and 给予 Slow to 所有敌人。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害, 给予 !M! Poison, 并给予 Slow to 所有敌人。"
   },
   "${ModID}:StickStrike": {
     "NAME": "Stick Strike",

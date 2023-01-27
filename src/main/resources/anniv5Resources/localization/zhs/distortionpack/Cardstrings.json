@@ -1,15 +1,15 @@
 {
   "${ModID}:S_r_ke": {
     "NAME": "S r ke",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Distortion。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:扭曲。"
   },
   "${ModID}:Deconstruct": {
     "NAME": "Deconstruct",
-    "DESCRIPTION": "给予 !M! ${ModID}:Distortion to 所有敌人. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! ${ModID}:扭曲 to 所有敌人. NL 消耗 。"
   },
   "${ModID}:Darken": {
     "NAME": "Darken",
-    "DESCRIPTION": "给予 !M! ${ModID}:Distortion. If the enemy has another debuff, 给予 !${ModID}:m2! more。"
+    "DESCRIPTION": "给予 !M! ${ModID}:扭曲. If the enemy has another debuff, 给予 !${ModID}:m2! more。"
   },
   "${ModID}:BurningAct": {
     "NAME": "Burning Act",
@@ -18,11 +18,11 @@
   },
   "${ModID}:MindMaze": {
     "NAME": "Mind Maze",
-    "DESCRIPTION": "获得 !B! 格挡 X times. NL Put X *Dazed on top of your 抽牌堆。"
+    "DESCRIPTION": "获得 !B! 点 格挡 X times. NL Put X *Dazed on top of your 抽牌堆。"
   },
   "${ModID}:Deterioration": {
     "NAME": "Deterioration",
-    "DESCRIPTION": "回合结束时， 消耗 a random card in your 弃牌堆 and 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "回合结束时， 消耗 a random card in your 弃牌堆 并获得 !M! 点 格挡 。"
   },
   "${ModID}:Shatter": {
     "NAME": "Shatter",
@@ -33,15 +33,15 @@
   },
   "${ModID}:Rue": {
     "NAME": "Rue",
-    "DESCRIPTION": "{@@}获得 [E] [E] and 抽 !M! 张牌{!M!|>1=s}. NL 消耗 the next 3 cards you play。"
+    "DESCRIPTION": "{@@}获得 [E] [E] 并抽 !M! 张牌{!M!|>1=s}. NL 消耗 the next 3 cards you play。"
   },
   "${ModID}:Static": {
     "NAME": "Static",
-    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! times. 给予 ${ModID}:Distortion equal to the un格挡ed damage dealt。"
+    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! times. 给予 ${ModID}:扭曲 equal to the un格挡ed damage dealt。"
   },
   "${ModID}:CursedCircle": {
     "NAME": "Cursed Circle",
-    "DESCRIPTION": "You and 所有敌人 失去 力量 本回合 equal to the number of cards in your hand. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "You and 所有敌人 失去 力量 本回合 equal to the number of cards in your hand。"
+    "DESCRIPTION": "You 并所有敌人 失去 力量 本回合 equal to the number of cards in your hand. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "You 并所有敌人 失去 力量 本回合 equal to the number of cards in your hand。"
   }
 }

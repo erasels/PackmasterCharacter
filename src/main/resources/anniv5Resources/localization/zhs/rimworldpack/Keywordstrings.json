@@ -5,13 +5,13 @@
       "on fire",
       "on_fire"
     ],
-    "DESCRIPTION": "回合结束时， cards in your hand with #yFire #yCounters make you take damage equal to their #yFire #yCounter. They then increase the #yFire #yCounter. Cards with #yFire #yCounters play an additional copy of themselves for every #yFire #yCounter above #b1, and #y消耗 。"
+    "DESCRIPTION": "回合结束时， cards in your h并with #yFire #yCounters make you take damage equal to their #yFire #yCounter. They then increase the #yFire #yCounter. Cards with #yFire #yCounters play an additional copy of themselves for every #yFire #yCounter above #b1, 并#y消耗 。"
   },
   {
     "PROPER_NAME": "Addiction",
     "NAMES": [
       "addiction"
     ],
-    "DESCRIPTION": "After a number of turns, add #b2 #yDespairs to your hand and 失去 #b5 #y力量 。"
+    "DESCRIPTION": "After a number of turns, add #b2 #yDespairs to your h并并失去 #b5 #y力量 。"
   }
 ]

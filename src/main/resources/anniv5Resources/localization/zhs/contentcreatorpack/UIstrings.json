@@ -1,15 +1,15 @@
 {
   "${ModID}:ContentCreatorPack": {
     "TEXT": [
-      "For The Content",
-      "A thank you to some of the content creators who've supported the STS Modding Community over the years。",
+      "视频创作者",
+      "为一些历年来通过创作视频来支持杀戮尖塔Mod社区的主播而作的感谢卡包。",
       "MichaelMayhem & Vex",
-      "Thanks to: NL Baalorlord NL FrostPrime NL Rhapsody NL TheOddOne NL Retromation NL Wanderbots NL Sneakyteak NL Tricky NL Hutts NL Olexa"
+      "感谢主播： NL Baalorlord NL FrostPrime NL Rhapsody NL TheOddOne NL Retromation NL Wanderbots NL Sneakyteak NL Tricky NL Hutts NL Olexa"
     ]
   },
   "${ModID}:ContentCreatorPackHat": {
     "TEXT": [
-      "A most wholesome face。",
+      "A most wholesome face.",
       "Rhapso-head"
     ]
   }

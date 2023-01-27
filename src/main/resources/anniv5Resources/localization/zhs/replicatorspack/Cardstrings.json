@@ -17,12 +17,12 @@
   },
   "${ModID}:ExperimentalMerge": {
     "NAME": "Experimental Merge",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle your 弃牌堆 into your 抽牌堆。 Draw !M!。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle your 弃牌堆 into your 抽牌堆。 抽 !M! 。"
   },
   "${ModID}:消耗iveWork": {
     "NAME": "消耗ive Work",
-    "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|>1=s}. NL Choose 一张牌。 NL 消耗 that card and add a copy of it to your 抽牌堆。",
-    "EXTENDED_DESCRIPTION": ["Choose 一张牌 to 消耗 and copy。"]
+    "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|>1=s}. NL Choose 一张牌。 NL 消耗 that card 并add a copy of it to your 抽牌堆。",
+    "EXTENDED_DESCRIPTION": ["Choose 一张牌 to 消耗 并copy。"]
   },
   "${ModID}:IterativeDesign": {
     "NAME": "Iterative Design",
@@ -39,7 +39,7 @@
   },
   "${ModID}:MagicHand": {
     "NAME": "Magic Hand",
-    "DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 本回合 and 消耗s。",
+    "DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 本回合 并消耗s。",
     "UPGRADE_DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 本回合。"
   },
   "${ModID}:EnergyDrink": {

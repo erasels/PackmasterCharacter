@@ -27,13 +27,14 @@
     "DESCRIPTION": "Orb. Passive : 抽一张牌 when activated by 一张牌s effect. Evokes after activating #b4 times. Evoke : 抽一张牌"
   },
   {
-    "PROPER_NAME": "Inscribed",
+    "PROPER_NAME": "铭印",
     "NAMES": [
       "Inscribed",
       "inscribed",
       "Inscribe",
-      "inscribe"
+      "inscribe",
+      "铭印"
     ],
-    "DESCRIPTION": "When you play this card activate the passive effect of all your orbs。"
+    "DESCRIPTION": "打出时触发所有充能球的被动效果。"
   }
 ]

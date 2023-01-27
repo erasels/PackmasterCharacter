@@ -2,9 +2,10 @@
   {
     "PROPER_NAME": "Modify",
     "NAMES": [
-      "modify"
+      "modify",
+      "修改"
     ],
-    "DESCRIPTION": "Alter 一张牌 for the rest of combat. Modified cards cannot be modified a获得 until the combat ends。"
+    "DESCRIPTION": "改变一张牌，持续整场战斗。所有牌每场战斗只能被 #y修改 一次。"
   },
   {
     "PROPER_NAME": "吞并",

@@ -1,11 +1,11 @@
 {
   "${ModID}:Aqueducts": {
     "NAME": "Aqueducts",
-    "DESCRIPTION": "每当 you draw an extr一张牌, deal !M! damage to 所有敌人。"
+    "DESCRIPTION": "每当 you 抽 an extr一张牌, deal !M! damage to 所有敌人。"
   },
   "${ModID}:Cascade": {
     "NAME": "Cascade",
-    "DESCRIPTION": "${ModID}:Flow. 获得 !B! 格挡 for each card 丢弃ed this way。"
+    "DESCRIPTION": "${ModID}:Flow. 获得 !B! 点 格挡 for each card 丢弃ed this way。"
   },
   "${ModID}:Hail": {
     "NAME": "Hail",
@@ -36,11 +36,11 @@
   },
   "${ModID}:Reservoir": {
     "NAME": "Reservoir",
-    "DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards 丢弃ed this way. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards 丢弃ed this way。"
+    "DESCRIPTION": "${ModID}:Flow. 抽 cards equal to the number of cards 丢弃ed this way. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. 抽 cards equal to the number of cards 丢弃ed this way。"
   },
   "${ModID}:StormFront": {
     "NAME": "Storm Front",
-    "DESCRIPTION": "保留 。 造成 !D! 点伤害。 NL When 丢弃ed, add this back to your hand with !M! more damage。"
+    "DESCRIPTION": "保留 。 造成 !D! 点伤害。 NL When 丢弃ed, add this back to your h并with !M! more damage。"
   }
 }

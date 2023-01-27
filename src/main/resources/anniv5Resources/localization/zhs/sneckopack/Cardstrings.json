@@ -5,24 +5,24 @@
   },
   "${ModID}:Sliiiiither": {
     "NAME": "Sliiiiither",
-    "DESCRIPTION": "Next turn, draw !M! to 3 additional cards。"
+    "DESCRIPTION": "Next turn, 抽 !M! to 3 additional 张牌。"
   },
   "${ModID}:TailFlail": {
     "NAME": "Tail Flail",
-    "DESCRIPTION": "Deal !D! to !${ModID}:sd! damage to 所有敌人. NL Randomize the cost of !M! random cards。"
+    "DESCRIPTION": "Deal !D! to !${ModID}:sd! damage to 所有敌人. NL Randomize the cost of !M! random 张牌。"
   },
   "${ModID}:Sneckpot": {
     "NAME": "Sneckpot",
-    "DESCRIPTION": "Deal 1 to !D! damage. Roll the damage X times and take the highest result。"
+    "DESCRIPTION": "Deal 1 to !D! damage. Roll the damage X times 并take the highest result。"
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "Whip 'n Snapper",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !${ModID}:m2! to !M! Weak and !${ModID}:m2! to !M! Vulnerable。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !${ModID}:m2! to !M! Weak 并!${ModID}:m2! to !M! Vulnerable。"
   },
   "${ModID}:Twitch": {
     "NAME": "Twitch",
-    "DESCRIPTION": "Randomize the cost of !M! cards. NL stslib:Persist !stslib:persist!",
-    "UPGRADE_DESCRIPTION": "Randomize the cost of up to !M! cards. NL stslib:Persist !stslib:persist!"
+    "DESCRIPTION": "Randomize the cost of !M! 张牌。 NL stslib:Persist !stslib:persist!",
+    "UPGRADE_DESCRIPTION": "Randomize the cost of up to !M! 张牌。 NL stslib:Persist !stslib:persist!"
   },
   "${ModID}:Gulp": {
     "NAME": "Meal Prep",
@@ -34,8 +34,8 @@
   },
   "${ModID}:SneckoEyes": {
     "NAME": "Snecko Eyes",
-    "DESCRIPTION" : "Become Confused. 你的回合开始时， draw 2 cards。",
-    "UPGRADE_DESCRIPTION": "你的回合开始时， draw 2 cards. NL 战斗开始： Become Confused。"
+    "DESCRIPTION" : "Become Confused. 你的回合开始时， 抽2张牌。。",
+    "UPGRADE_DESCRIPTION": "你的回合开始时， 抽2张牌。. NL 战斗开始： Become Confused。"
   },
   "${ModID}:Shedding": {
     "NAME": "Shedding",

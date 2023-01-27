@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Petra",
+    "PROPER_NAME": "土元素",
     "NAMES": [
-      "petra"
+      "petra",
+      "土元素"
     ],
-    "DESCRIPTION": "When you attack a target with #yPetra, 获得 #y格挡 equal to #b35% of damage dealt on your next turn. Reduced by #b1 at the end of turn。"
+    "DESCRIPTION": "攻击带有 #y土元素 的单位时，下回合获得造成伤害量 #35% 的 #y格挡 。你的回合结束时层数减 #b1 。"
   }
 ]

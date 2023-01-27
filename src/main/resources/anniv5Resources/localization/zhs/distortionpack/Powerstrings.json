@@ -18,7 +18,7 @@
   "${ModID}:DeteriorationPower": {
     "NAME": "Deterioration",
     "DESCRIPTIONS": [
-      "回合结束时， #y消耗 a random card in your 弃牌堆 and 获得 #b",
+      "回合结束时， #y消耗 a random card in your 弃牌堆 并获得 #b",
       " #y格挡 。"
     ]
   }

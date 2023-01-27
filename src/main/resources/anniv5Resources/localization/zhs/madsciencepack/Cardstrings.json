@@ -1,15 +1,15 @@
 {
-  "${ModID}:Sharpen": {
+  "${ModID}:磨爪": {
     "NAME": "Honing Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Modify a random Attack in hand: \"Add !M! Damage\""
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:修改 a random Attack in hand: \"Add !M! Damage\""
   },
   "${ModID}:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Modify a random 格挡 card in hand: \"Add !M! 格挡\""
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:修改 a random 格挡 card in hand: \"Add !M! 格挡\""
   },
   "${ModID}:Winterize": {
     "NAME": "Winterize",
-    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your 抽牌堆: \"给予 !M! ${ModID}:霜噬\""
+    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:修改 !M! random enemy-targeted cards in your 抽牌堆: \"给予 !M! ${ModID}:霜噬\""
   },
 "${ModID}:Discombobulate": {
     "NAME": "Discombobulate",
@@ -17,30 +17,30 @@
   },
   "${ModID}:Attach": {
     "NAME": "Attach",
-    "DESCRIPTION": "Choose a non-Power in hand to ${ModID}:Absorb into a 丢弃ed card, then ${ModID}:Modify it: \"Play the *Absorbed card\". NL 消耗 。",
+    "DESCRIPTION": "Choose a non-Power in h并to ${ModID}:Absorb into a 丢弃ed card, then ${ModID}:修改 it: \"Play the *Absorbed card\". NL 消耗 。",
     "EXTENDED_DESCRIPTION": ["Absorb. You will choose the 丢弃ed card to Modify after。"]
   },
   "${ModID}:Improve": {
     "NAME": "Improve",
-    "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:Modify a random card in hand: \"抽一张牌。\" NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:Modify 一张牌 in hand: \"抽一张牌。\" NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:修改 a random card in hand: \"抽一张牌。\" NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:修改 一张牌 in hand: \"抽一张牌。\" NL 消耗 。"
   },
   "${ModID}:Enhance": {
     "NAME": "Enhance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Modify 一张牌 in hand: \"获得 !M! 点 格挡 。\""
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:修改 一张牌 in hand: \"获得 !M! 点 格挡 。\""
   },
   "${ModID}:Cheapen": {
     "NAME": "Cheapen",
-    "DESCRIPTION": "${ModID}:Modify a random card in your 抽牌堆: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Modify 一张牌 in your 抽牌堆: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。"
+    "DESCRIPTION": "${ModID}:修改 a random card in your 抽牌堆: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:修改 一张牌 in your 抽牌堆: \"Costs 0.\" NL ${ModID}:Amplify [E] : Don't 消耗 。"
   },
   "${ModID}:Expand": {
     "NAME": "Expand",
-    "DESCRIPTION": "${ModID}:Modify 一张牌 in hand: \"Costs 1 more [E] .\" and \"Play a获得, unmodified.\" NL 消耗 。"
+    "DESCRIPTION": "${ModID}:修改 一张牌 in hand: \"Costs 1 more [E] .\" 并\"Play a获得, unmodified.\" NL 消耗 。"
   },
   "${ModID}:Piratify": {
     "NAME": "Piratify",
-    "DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"获得 a *Cannonball.\"",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, ${ModID}:Modify a random card in hand: \"获得 a *Cannonball+.\""
+    "DESCRIPTION": "At the start of each turn, ${ModID}:修改 a random card in hand: \"获得 a *Cannonball.\"",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, ${ModID}:修改 a random card in hand: \"获得 a *Cannonball+.\""
   }
 }

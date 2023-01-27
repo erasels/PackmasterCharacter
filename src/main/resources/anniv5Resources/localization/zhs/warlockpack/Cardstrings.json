@@ -1,7 +1,7 @@
 {
   "${ModID}:Imp": {
     "NAME": "Imp",
-    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn. NL Deal !M! damage. Increase the damage of *Imps by 1 本场战斗. NL 抽一张牌。 NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0抽n. NL Deal !M! damage. Increase the damage of *Imps by 1 本场战斗. NL 抽一张牌。 NL 消耗 。"
   },
   "${ModID}:Hig生命riestessJeklik": {
     "NAME": "High Priestess Jeklik",
@@ -21,7 +21,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 2 random cards in your hand。"
   },
   "${ModID}:HandOfGulDan": {
-    "NAME": "Hand of Gul'dan",
+    "NAME": "H并of Gul'dan",
     "DESCRIPTION": "抽 !M! 张牌。 NL If this card is 消耗ed, 抽 !M! 张牌。"
   },
   "${ModID}:SeedsOfDestruction": {
@@ -31,7 +31,7 @@
   },
   "${ModID}:AranasiBroodmother": {
     "NAME": "Aranasi Broodmother",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle this card into your 抽牌堆。 NL When you draw this card, 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle this card into your 抽牌堆。 NL When you 抽 this card, 获得 !M! 点 格挡 。"
   },
   "${ModID}:MalchezaarsImp": {
     "NAME": "Malchezaar's Imp",
@@ -44,7 +44,7 @@
   },
   "${ModID}:RunedMithrilRod": {
     "NAME": "Runed Mithril Rod",
-    "DESCRIPTION": "Unplayable. 保留 。 NL After you 抽 !M! 张牌s while this is in your hand, reduce the cost of cards in your hand by 1 本回合 and 丢弃 this。",
-    "EXTENDED_DESCRIPTION": ["I can't play this card。", " ({0} drawn.)"]
+    "DESCRIPTION": "Unplayable. 保留 。 NL After you 抽 !M! 张牌s while this is in your hand, reduce the cost of cards in your h并by 1 本回合 并丢弃 this。",
+    "EXTENDED_DESCRIPTION": ["I can't play this card。", " ({0} 抽n.)"]
   }
 }

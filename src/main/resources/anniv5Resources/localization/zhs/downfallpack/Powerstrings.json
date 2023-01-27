@@ -3,7 +3,7 @@
     "NAME": "Awakening",
     "DESCRIPTIONS": [
       "When you would die, heal #b",
-      " 生命 and remove this effect. Heals half this value at end of combat if untriggered。"
+      " 生命 并remove this effect. Heals half this value at end of combat if untriggered。"
     ]
   },
   "${ModID}:ChronoBoostPower": {
@@ -24,9 +24,9 @@
   "${ModID}:VexVinciblePower": {
     "NAME": "Invincible",
     "DESCRIPTIONS": [
-      "Caps all damage and 生命 loss taken to #b",
+      "Caps all damage 并生命 loss taken to #b",
       " in a turn. Removed after activation。",
-      "Caps all damage and 生命 loss taken to #b",
+      "Caps all damage 并生命 loss taken to #b",
       " in a turn. Removed after #b",
       " activations。"
     ]

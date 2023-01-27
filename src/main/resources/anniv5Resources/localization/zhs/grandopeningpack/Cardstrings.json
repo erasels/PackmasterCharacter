@@ -41,8 +41,8 @@
   },
   "${ModID}:BattlePrep": {
     "NAME": "Battle Prep",
-    "DESCRIPTION": "Choose 一张牌 in your hand and permanently give it 固有 。 Remove this from your deck, permanently。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL Choose 一张牌 in your hand and permanently give it 固有 。 Remove this from your deck, permanently。",
+    "DESCRIPTION": "Choose 一张牌 in your h并并permanently give it 固有 。 Remove this from your deck, permanently。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL Choose 一张牌 in your h并并permanently give it 固有 。 Remove this from your deck, permanently。",
     "EXTENDED_DESCRIPTION": [
       "Make Innate (Permanently)"
     ]

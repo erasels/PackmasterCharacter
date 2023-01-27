@@ -1,7 +1,7 @@
 {
   "${ModID}:MiniHakkero": {
     "NAME": "Mini Hakkero",
-    "FLAVOR": "A small elemental furnace, generates enough heat and energy to destroy a mountain。",
+    "FLAVOR": "A small elemental furnace, generates enough heat 并energy to destroy a mountain。",
     "DESCRIPTIONS": [
       "你的回合开始时， 获得 #b%s #y${ModID}:Charge Up。"
     ]

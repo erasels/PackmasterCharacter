@@ -8,7 +8,7 @@
   "${ModID}:LordOfTheFliesPower": {
     "NAME": "Lord of the Flies",
     "DESCRIPTIONS": [
-      "Draw #b",
+      "抽 #b",
       " additional card each turn. ",
       " additional cards each turn. ",
       "When your cards #yInfest, put #b",

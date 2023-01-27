@@ -10,7 +10,7 @@
   "${ModID}:Louse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": [
-      "#yPassive: 抽一张牌 at the start of your turn. #yEvoke: Draw 2 cards。"
+      "#yPassive: 抽一张牌 at the start of your turn. #yEvoke: 抽2张牌。。"
     ]
   },
   "${ModID}:Panda": {

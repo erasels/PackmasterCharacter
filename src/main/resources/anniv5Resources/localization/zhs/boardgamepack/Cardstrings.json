@@ -1,12 +1,11 @@
 {
   "${ModID}:RollToMove": {
     "NAME": "骰子行动",
-    "DESCRIPTION": "投掷 !M! 枚 ${ModID}:6面骰 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 投掷2枚 ${ModID}:6面骰 。"
   },
   "${ModID}:FlickDice": {
   "NAME": "掠骰",
-  "DESCRIPTION": "造成 !D! 点伤害。 NL 投掷一枚 ${ModID}:6面骰 。",
-  "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 投掷一枚 ${ModID}:8面骰 。"
+  "DESCRIPTION": "造成 !D! 点伤害。 NL 投掷一枚 ${ModID}:6面骰 。"
   },
   "${ModID}:ThrowChips": {
     "NAME": "投掷筹码",
@@ -22,8 +21,7 @@
   },
   "${ModID}:PerceptionCheck": {
     "NAME": "观察",
-    "DESCRIPTION": "${ModID}:固无 。 NL 回合开始时，投掷一枚 ${ModID}:8面骰 。",
-    "UPGRADE_DESCRIPTION": "回合开始时，投掷一枚 ${ModID}:8面骰 。"
+    "DESCRIPTION": "回合开始时若无 *骰子 ， NL 投掷一枚 ${ModID}:8面骰 。"
   },
   "${ModID}:AllIn": {
     "NAME": "摊牌",
@@ -45,7 +43,7 @@
   },
   "${ModID}:BoardGameKeywordManager": {
     "NAME": "KeywordManager",
-    "DESCRIPTION": "Stuff for translations and easy access to keyword ids",
+    "DESCRIPTION": "Stuff for translations 并easy access to keyword ids",
     "EXTENDED_DESCRIPTION": [
       "${ModID}:骰子",
       "${ModID}:机会"

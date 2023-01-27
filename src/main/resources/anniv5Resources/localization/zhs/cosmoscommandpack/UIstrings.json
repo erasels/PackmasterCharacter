@@ -1,15 +1,15 @@
 {
   "${ModID}:CosmosCommandPack": {
     "TEXT": [
-      "Cosmos Command",
-      "消耗 cards to 获得 power, keep control of ${ModID}:Distortion, and use varying costs to your advantage。",
+      "秩宙操控",
+      "消耗牌来获得力量，掌握 ${ModID}:扭曲 之力，并将变化的能量为你所用。",
       "Enbeon"
     ]
   },
   "${ModID}:CosmosCommandPackHat": {
     "TEXT": [
-      "See in up to seven dimensions!",
-      "Open Eye"
+      "最高可看见7维空间！",
+      "异次元之眼"
     ]
   }
 }

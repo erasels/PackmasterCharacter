@@ -31,7 +31,7 @@
   },
   "${ModID}:Diffusion": {
     "NAME": "Diffusion",
-    "DESCRIPTION": "你的回合开始时， 获得 !M! ${ModID}:Entropy and 抽一张牌。"
+    "DESCRIPTION": "你的回合开始时， 获得 !M! ${ModID}:Entropy 并抽一张牌。"
   },
   "${ModID}:Waning": {
     "NAME": "Waning",

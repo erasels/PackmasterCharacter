@@ -6,7 +6,7 @@
       " #yPetra to a random enemy。"
     ]
   },
-  "${ModID}:PetraPower": {
+  "${ModID}:土元素Power": {
     "NAME": "Petra",
     "DESCRIPTIONS": [
       "When you attack this creature, 获得 ",

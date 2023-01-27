@@ -1,7 +1,7 @@
 {
   "${ModID}:AwakenDeath": {
     "NAME": "觉醒",
-    "DESCRIPTION": "When you would die, heal !M! 生命 instead and remove this buff. NL After combat, heals for half as much。"
+    "DESCRIPTION": "When you would die, heal !M! 生命 instead 并remove this buff. NL After combat, heals for half as much。"
   },
   "${ModID}:Chronoboost": {
     "NAME": "时空加速",
@@ -30,12 +30,12 @@
   },
   "${ModID}:PrepareCrush": {
     "NAME": "Prepare Crush",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL On your next turn, 获得 [E] and add *SLIME *CRUSH! to your hand。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL On your next turn, 获得 [E] 并add *SLIME *CRUSH! to your hand。"
   },
   "${ModID}:ShapersBlessing": {
     "NAME": "Shaper's Blessing",
     "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL Enter ${ModID}:Ancient。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 格挡 and !M! Plated Armor. NL Enter ${ModID}:Ancient。"
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 并!M! Plated Armor. NL Enter ${ModID}:Ancient。"
   },
   "${ModID}:SlimeCrush": {
     "NAME": "SLIME CRUSH!",
@@ -43,7 +43,7 @@
   },
   "${ModID}:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "给予 !M! 层 易伤 and remove the target's 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 易伤 and !M! Weak, and remove the target's 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 易伤 并remove the target's 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 易伤 并!M! Weak, 并remove the target's 格挡 。 NL 消耗 。"
   }
 }

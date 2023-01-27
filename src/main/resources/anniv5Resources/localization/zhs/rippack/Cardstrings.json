@@ -53,12 +53,12 @@
   },
   "${ModID}:灵感": {
     "NAME": "Inspiration",
-    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art and Status Cards in your 消耗 pile. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art and Status Cards in your 消耗 pile。",
+    "DESCRIPTION": "抽 cards equal to the number of ${ModID}:Art 并Status Cards in your 消耗 pile. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 cards equal to the number of ${ModID}:Art 并Status Cards in your 消耗 pile。",
     "EXTENDED_DESCRIPTION": [
-      " NL (Draw ",
+      " NL (抽 ",
       " card.)",
-      " cards.)"
+      " 张牌。)"
     ]
   },
   "${ModID}:灵感Art": {
@@ -67,16 +67,16 @@
   },
   "${ModID}:灵感Text": {
     "NAME": "",
-    "DESCRIPTION": "Draw cards equal to the number of ${ModID}:Art Cards in your 消耗 pile。",
+    "DESCRIPTION": "抽 cards equal to the number of ${ModID}:Art Cards in your 消耗 pile。",
     "EXTENDED_DESCRIPTION": [
-      " NL (Draw ",
+      " NL (抽 ",
       " card.)",
-      " cards.)"
+      " 张牌。)"
     ]
   },
   "${ModID}:FlimsyBash": {
     "NAME": "Flimsy Bash",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
   },
   "${ModID}:FlimsyBashArt": {
     "NAME": "Flimsy Bash",
@@ -84,7 +84,7 @@
   },
   "${ModID}:FlimsyBashText": {
     "NAME": "",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
   },
   "${ModID}:FragileShrug": {
     "NAME": "Fragile Shrug",
@@ -124,8 +124,8 @@
   },
   "${ModID}:LeftBrain": {
     "NAME": "Left Brain",
-    "DESCRIPTION": "消耗 ALL your ${ModID}:Art and Status cards. 获得 !M! 点 力量 for each card 消耗ed。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL 消耗 ALL your ${ModID}:Art and Status cards. 获得 !M! 点 力量 for each card 消耗ed。"
+    "DESCRIPTION": "消耗 ALL your ${ModID}:Art 并Status 张牌。 获得 !M! 点 力量 for each card 消耗ed。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL 消耗 ALL your ${ModID}:Art 并Status 张牌。 获得 !M! 点 力量 for each card 消耗ed。"
   },
   "${ModID}:FuryAttack": {
     "NAME": "Fury",

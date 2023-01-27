@@ -17,11 +17,11 @@
   },
   "${ModID}:Backstrike": {
     "NAME": "Backstrike",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Modify all Attacks in hand: \"Name 获得s Strike.\""
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:修改 all Attacks in hand: \"Name 获得s Strike.\""
   },
   "${ModID}:WorkersStrike": {
     "NAME": "Worker's Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Draw an Attack. If it is a Strike, 获得 [E]。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 an Attack. If it is a Strike, 获得 [E]。"
   },
   "${ModID}:StrikeDummyJr": {
     "NAME": "Strike Dummy Jr。",
@@ -33,8 +33,8 @@
   },
   "${ModID}:StrikeOfGenius": {
     "NAME": "Strike of Genius",
-    "DESCRIPTION": "你的回合开始时， 获得 a random \"Strike\". NL It costs 0 until played and 获得s 消耗 。",
-    "UPGRADE_DESCRIPTION": "你的回合开始时， 获得 a random Upgraded \"Strike\". NL It costs 0 until played and 获得s 消耗 。"
+    "DESCRIPTION": "你的回合开始时， 获得 a random \"Strike\". NL It costs 0 until played 并获得s 消耗 。",
+    "UPGRADE_DESCRIPTION": "你的回合开始时， 获得 a random Upgraded \"Strike\". NL It costs 0 until played 并获得s 消耗 。"
   },
   "${ModID}:StrikeABar获得": {
     "NAME": "Strike a Bar获得",

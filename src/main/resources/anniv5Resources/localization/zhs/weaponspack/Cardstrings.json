@@ -13,7 +13,7 @@
   },
   "${ModID}:MegaUpgrade": {
     "NAME": "Mega Upgrade",
-    "DESCRIPTION": "Give all your equipped ${ModID}:Weapons + !M! / + !M!。"
+    "DESCRIPTION": "Give all your equipped ${ModID}:Weapons + !M! / + !M! 。"
   },
   "${ModID}:PowderKeg": {
     "NAME": "Powder Keg",
@@ -30,7 +30,7 @@
   },
   "${ModID}:ForgingHammer": {
     "NAME": "Forging Hammer",
-    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL After you attack with this ${ModID}:Weapon, Upgrade a random card in your hand for the rest of combat。"
+    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL After you attack with this ${ModID}:Weapon, Upgrade a random card in your h并for the rest of combat。"
   },
   "${ModID}:Sword": {
     "NAME": "Sword",

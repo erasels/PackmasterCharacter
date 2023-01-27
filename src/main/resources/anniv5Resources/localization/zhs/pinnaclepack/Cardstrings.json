@@ -1,16 +1,16 @@
 {
   "${ModID}:DroneSwarmRareSkill": {
     "NAME": "Drone Swarm",
-    "DESCRIPTION": "Raise your hand size 本回合 by !${ModID}:m2!. NL 抽 !M! 张牌。"
+    "DESCRIPTION": "Raise your h并size 本回合 by !${ModID}:m2!. NL 抽 !M! 张牌。"
   },
   "${ModID}:TheSuckamidRareSkill": {
     "NAME": "The Suckamid",
-    "DESCRIPTION": "Heal !M! 生命。 NL Retain your hand for !${ModID}:m2! turns. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Heal !M! 生命。 NL Retain your hand for !${ModID}:m2! turns. NL 消耗 。"
+    "DESCRIPTION": "Heal !M! 生命。 NL Retain your h并for !${ModID}:m2! turns. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Heal !M! 生命。 NL Retain your h并for !${ModID}:m2! turns. NL 消耗 。"
   },
   "${ModID}:ElectromagneticBurstRarePower": {
     "NAME": "Electromagnetic Burst",
-    "DESCRIPTION": "每当 you 获得 格挡, deal !M! damage to a random enemy。"
+    "DESCRIPTION": "每当 you 获得 格挡 ， deal !M! damage to a random enemy。"
   },
   "${ModID}:ArrowStormRareAttack": {
     "NAME": "Arrow Storm",
@@ -18,8 +18,8 @@
   },
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "Marvelous Feast",
-    "DESCRIPTION": "固有 。 Add in order: ${ModID}:Croquettes that provide 格挡, Weak, 力量 and Vulnerable to your hand. Once per turn ended。",
-    "UPGRADE_DESCRIPTION": "固有 。 Add in order, upgraded: ${ModID}:Croquettes that provide 格挡, Weak, 力量 and Vulnerable to your hand. Once per turn ended。"
+    "DESCRIPTION": "固有 。 Add in order: ${ModID}:Croquettes that provide 格挡 ， Weak, 力量 并Vulnerable to your hand. Once per turn ended。",
+    "UPGRADE_DESCRIPTION": "固有 。 Add in order, upgraded: ${ModID}:Croquettes that provide 格挡 ， Weak, 力量 并Vulnerable to your hand. Once per turn ended。"
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "Meaty Croquettes",
@@ -31,7 +31,7 @@
   },
   "${ModID}:FriendshipCroquettesSpecialColourless": {
     "NAME": "Friendship Croquettes",
-    "DESCRIPTION": "${ModID}:Croquette. NL 获得 !B! 格挡, 消耗 。 NL When Retained, increase its 格挡 by !M! 本场战斗。"
+    "DESCRIPTION": "${ModID}:Croquette. NL 获得 !B! 点 格挡 ， 消耗 。 NL When Retained, increase its 格挡 by !M! 本场战斗。"
   },
   "${ModID}:MysteryCroquettesSpecialColourless": {
     "NAME": "Mystery Croquettes",
@@ -39,11 +39,11 @@
   },
   "${ModID}:TopOfTheSkyUncommonAttack": {
     "NAME": "Top of the Sky",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL Returns to your hand on play. 消耗ive !stslib:ex!。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL Returns to your h并on play. 消耗ive !stslib:ex!。"
   },
   "${ModID}:BucketOfDregsUncommonSkill": {
     "NAME": "Bucket Of Dregs",
-    "DESCRIPTION": "Unplayable. 保留 。 NL When Retained, heal 所有敌人 for !M! 生命 and 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "Unplayable. 保留 。 NL When Retained, heal 所有敌人 for !M! 生命 并获得 !B! 点 格挡 。"
   },
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "Pocket Tournament",

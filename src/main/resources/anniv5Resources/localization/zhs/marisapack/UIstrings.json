@@ -2,9 +2,9 @@
   "${ModID}:MarisaPack": {
     "TEXT": [
       "Marisa",
-      "Marisa's staples, variable energy costs, damage doubling and a dash of 消耗 。",
+      "Marisa's staples, variable energy costs, damage doubling 并a dash of 消耗 。",
       "(Gk) Erasels",
-      "The original authors of the Marisa character mod for the ideas and art inspiration。"
+      "The original authors of the Marisa character mod for the ideas 并art inspiration。"
     ]
   },
   "${ModID}:MarisaPackHat": {

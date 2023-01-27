@@ -27,7 +27,7 @@
   },
   "${ModID}:Overload": {
     "NAME": "Overload",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Increase this card's damage by !M! and cost by 1 本场战斗。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Increase this card's damage by !M! 并cost by 1 本场战斗。"
   },
   "${ModID}:Panacher": {
     "NAME": "Panacher",

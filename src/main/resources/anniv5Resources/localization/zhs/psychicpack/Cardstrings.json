@@ -1,24 +1,24 @@
 {
   "${ModID}:RuleCancel": {
     "NAME": "Rule Cancel",
-    "DESCRIPTION": "Make 一张牌 in your hand ${ModID}:Occult. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Make 一张牌 in your hand ${ModID}:Occult。"
+    "DESCRIPTION": "Make 一张牌 in your h并${ModID}:Occult. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Make 一张牌 in your h并${ModID}:Occult。"
   },
   "${ModID}:Brainwave": {
     "NAME": "Brainwave",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Make a random Attack in your hand ${ModID}:Occult。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Make a random Attack in your h并${ModID}:Occult。"
   },
   "${ModID}:TelephonePole": {
     "NAME": "Telephone Pole",
-    "DESCRIPTION": "${ModID}:Locking. NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤。",
+    "DESCRIPTION": "${ModID}:Locking. NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤。"
+      "${ModID}:Locked. NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
     ]
   },
   "${ModID}:Gravity": {
     "NAME": "Gravity",
-    "DESCRIPTION": "虚无 。 NL 每当 you draw a ${ModID}:Locked or Unplayable card, 抽一张牌。",
-    "UPGRADE_DESCRIPTION": "每当 you draw a ${ModID}:Locked or Unplayable card, 抽一张牌。"
+    "DESCRIPTION": "虚无 。 NL 每当 you 抽 a ${ModID}:Locked or Unplayable card, 抽一张牌。",
+    "UPGRADE_DESCRIPTION": "每当 you 抽 a ${ModID}:Locked or Unplayable card, 抽一张牌。"
   },
   "${ModID}:PhantomStep": {
     "NAME": "Phantom Step",
@@ -33,7 +33,7 @@
   },
   "${ModID}:OneIsEnough": {
     "NAME": "One Is Enough",
-    "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|0=s.|1=.|2=s and choose one. NL You cannot play the other 本回合.|@=s and choose one. NL You cannot play the others 本回合.}",
+    "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|0=s.|1=.|2=s 并choose one. NL You cannot play the other 本回合.|@=s 并choose one. NL You cannot play the others 本回合.}",
     "EXTENDED_DESCRIPTION": [
       "be Playable"
     ]
@@ -57,6 +57,6 @@
   },
   "${ModID}:DeepDream": {
     "NAME": "Deep Dream",
-    "DESCRIPTION": "每当 you play 一张牌 本回合, make a random card in your hand ${ModID}:Occult. NL 消耗 。"
+    "DESCRIPTION": "每当 you play 一张牌 本回合, make a random card in your h并${ModID}:Occult. NL 消耗 。"
   }
 }

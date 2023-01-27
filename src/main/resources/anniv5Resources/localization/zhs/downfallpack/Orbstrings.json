@@ -3,7 +3,7 @@
     "NAME": "Ghostflame",
     "DESCRIPTION": [
       "#yPassive: At the end of turn, deal #b",
-      " damage to 所有敌人 and Ignite this. NL #yEvoke: If Ignited, deal #b",
+      " damage to 所有敌人 并Ignite this. NL #yEvoke: If Ignited, deal #b",
       " damage to 所有敌人。"
     ]
   }

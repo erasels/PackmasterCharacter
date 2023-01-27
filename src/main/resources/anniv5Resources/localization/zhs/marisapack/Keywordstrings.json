@@ -12,7 +12,7 @@
     "NAMES": [
       "charge up"
     ],
-    "DESCRIPTION": "At #b6 or more stacks, double the damage of the next Attack and 失去 #b6 stacks。"
+    "DESCRIPTION": "At #b6 or more stacks, double the damage of the next Attack 并失去 #b6 stacks。"
   },
   {
     "PROPER_NAME": "Flurry",

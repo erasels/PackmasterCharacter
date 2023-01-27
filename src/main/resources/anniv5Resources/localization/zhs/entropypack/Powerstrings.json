@@ -3,17 +3,17 @@
     "NAME": "Entropy",
     "DESCRIPTIONS": [
       "The next #b",
-      " times you play 一张牌, 丢弃 a random card and 抽一张牌。",
-      "The next time you play 一张牌, 丢弃 a random card and 抽一张牌。"
+      " times you play 一张牌, 丢弃 a random card 并抽一张牌。",
+      "The next time you play 一张牌, 丢弃 a random card 并抽一张牌。"
     ]
   },
   "${ModID}:DiffusionPower": {
     "NAME": "Diffusion",
     "DESCRIPTIONS": [
       "你的回合开始时， 获得 #b",
-      " #yEntropy and draw #b",
+      " #yEntropy 并抽 #b",
       " card。",
-      " cards。"
+      " 张牌。"
     ]
   },
   "${ModID}:EntanglementPower": {

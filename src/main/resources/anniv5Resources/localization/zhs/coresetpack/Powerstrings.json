@@ -1,13 +1,13 @@
 {
   "${ModID}:MayhemFormPower": {
-    "NAME": "Unrelenting Form",
+    "NAME": "不懈形态",
     "DESCRIPTIONS": [
-      "Once per turn, when you reach #b2 or fewer cards in hand, draw #b",
-      " cards and 获得 ",
+      "每回合限一次，当手牌数降至 #b2 及以下后，抽 #b",
+      " 张牌并获得",
       " [E] ",
-      " . ",
-      " Hasn't triggered 本回合。",
-      " Has triggered 本回合。"
+      " 。",
+      "本回合未触发。",
+      "本回合已触发。"
     ]
   }
 }

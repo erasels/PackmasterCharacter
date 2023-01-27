@@ -4,14 +4,14 @@
     "NAMES": [
       "entropy"
     ],
-    "DESCRIPTION": "每当 you play 一张牌, 丢弃 a random card, 抽一张牌, and 失去 #b1 #yEntropy。"
+    "DESCRIPTION": "每当 you play 一张牌, 丢弃 a random card, 抽一张牌, 并失去 #b1 #yEntropy。"
   },
   {
     "PROPER_NAME": "Unstable",
     "NAMES": [
       "unstable"
     ],
-    "DESCRIPTION": "When this card is 丢弃ed from your hand, 给予 its effects to you and 所有敌人。"
+    "DESCRIPTION": "When this card is 丢弃ed from your hand, 给予 its effects to you 并所有敌人。"
   },
   {
     "PROPER_NAME": "Ruin",

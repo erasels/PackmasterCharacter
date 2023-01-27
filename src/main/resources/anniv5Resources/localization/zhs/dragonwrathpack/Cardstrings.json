@@ -1,7 +1,7 @@
 {
   "${ModID}:PenanceShock": {
     "NAME": "Penance Shock",
-    "DESCRIPTION": "造成 !D! 点伤害 and 给予 !M! ${ModID}:Penance. NL Channel Lightning"
+    "DESCRIPTION": "造成 !D! 点伤害 并给予 !M! ${ModID}:Penance. NL Channel Lightning"
   },
   "${ModID}:Condemn": {
     "NAME": "Condemn",
@@ -29,7 +29,7 @@
   },
   "${ModID}:HolyWrath": {
     "NAME": "Holy Wrath",
-    "DESCRIPTION": "Take !M! damage. NL Return this from the 弃牌堆 to your hand 每当 you 获得 ${ModID}:Confession"
+    "DESCRIPTION": "Take !M! damage. NL Return this from the 弃牌堆 to your h并每当 you 获得 ${ModID}:Confession"
   },
   "${ModID}:Absolution": {
     "NAME": "Absolution",

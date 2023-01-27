@@ -19,13 +19,13 @@
   },
     "${ModID}:CallOfTheGrave": {
     "NAME": "Call of the Grave",
-    "DESCRIPTION": "你的回合开始时， play a random ${ModID}:Buried card and stslib:Purge it。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时， play a random ${ModID}:Buried card and stslib:Purge it。"
+    "DESCRIPTION": "你的回合开始时， play a random ${ModID}:Buried card 并stslib:Purge it。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时， play a random ${ModID}:Buried card 并stslib:Purge it。"
   },
     "${ModID}:SpontaneousRitual": {
     "NAME": "Spontaneous Ritual",
     "DESCRIPTION": "消耗 your hand. NL Deal damage equal to the number of cards 消耗ed 本场战斗。",
-    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your hand then 消耗 it. NL Deal damage equal to the number of cards 消耗ed 本场战斗。",
+    "UPGRADE_DESCRIPTION": "Add 3 *Dazed to your h并then 消耗 it. NL Deal damage equal to the number of cards 消耗ed 本场战斗。",
   	"EXTENDED_DESCRIPTION": [" NL ( !D! damage )"]
   },
     "${ModID}:FuneraryJewels": {
@@ -43,7 +43,7 @@
   },
     "${ModID}:LastGasp": {
     "NAME": "Last Gasp",
-    "DESCRIPTION": "虚无 。 NL Choose a ${ModID}:Buried card, play it, and stslib:Purge it。",
-    "UPGRADE_DESCRIPTION": "Choose a ${ModID}:Buried card, play it, and stslib:Purge it。"
+    "DESCRIPTION": "虚无 。 NL Choose a ${ModID}:Buried card, play it, 并stslib:Purge it。",
+    "UPGRADE_DESCRIPTION": "Choose a ${ModID}:Buried card, play it, 并stslib:Purge it。"
   }
 }

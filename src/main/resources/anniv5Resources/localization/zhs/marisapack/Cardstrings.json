@@ -13,7 +13,7 @@
   },
   "${ModID}:LuminousStrike": {
     "NAME": "Luminous Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Amplify [E] [E] : Increase damage equal to current energy times !M!。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Amplify [E] [E] : Increase damage equal to current energy times !M! 。",
     "EXTENDED_DESCRIPTION": ["Amplified damage: "]
   },
   "${ModID}:ShootingEcho": {
@@ -23,15 +23,15 @@
   "${ModID}:StardustReverie": {
     "NAME": "Stardust Reverie",
     "DESCRIPTION": "消耗 !M! card. 获得 ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify. NL 抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "消耗 !M! cards. 获得 ${ModID}:Charge Up equal to two times their costs including ${ModID}:Amplify. NL 抽 !M! 张牌。"
+    "UPGRADE_DESCRIPTION": "消耗 !M! 张牌。 获得 ${ModID}:Charge Up equal to two times their costs including ${ModID}:Amplify. NL 抽 !M! 张牌。"
   },
   "${ModID}:Inertia": {
     "NAME": "Inertia",
-    "DESCRIPTION": "每当 一张牌 is 消耗ed or ${ModID}:Amplified, 获得 !M! ${ModID}:Charge Up。"
+    "DESCRIPTION": "每当 一张牌 is 消耗ed or ${ModID}:增幅, 获得 !M! ${ModID}:Charge Up。"
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "Ultimate Shortwave",
-    "DESCRIPTION": "获得 !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 本场战斗。"
+    "DESCRIPTION": "获得 !M! [E] 并!${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 本场战斗。"
   },
   "${ModID}:DragonMeteor": {
     "NAME": "Dragon Meteor",

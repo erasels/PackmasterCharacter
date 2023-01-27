@@ -2,15 +2,15 @@
   "${ModID}:FastHandsPower": {
     "NAME": "Fast Hands",
     "DESCRIPTIONS": [
-      "After playing a #ydifferent #ycolor card, draw #b",
-      " cards。"
+      "After playing a #ydifferent #ycolor card, 抽 #b",
+      " 张牌。"
     ]
   },
   "${ModID}:UpgradedFastHandsPower": {
     "NAME": "Fast Hands",
     "DESCRIPTIONS": [
-      "After playing a #ydifferent #ycolor card, draw #b",
-      " cards and reduce their cost by 1 本回合。"
+      "After playing a #ydifferent #ycolor card, 抽 #b",
+      " cards 并reduce their cost by 1 本回合。"
     ]
   },
   "${ModID}:HorizonboundPower": {

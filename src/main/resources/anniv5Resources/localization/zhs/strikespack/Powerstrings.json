@@ -9,17 +9,17 @@
   "${ModID}:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "你的回合开始时， 获得 a random \"Strike\". It costs #b0 until played and 消耗s。",
+      "你的回合开始时， 获得 a random \"Strike\". It costs #b0 until played 并消耗s。",
       "你的回合开始时， 获得 #b",
-      " random \"Strike\"s. They cost #b0 until played and 消耗 。"
+      " random \"Strike\"s. They cost #b0 until played 并消耗 。"
     ]
   },
   "${ModID}:StrikeOfGeniusUpgradedPower": {
     "NAME": "Strike of Genius+",
     "DESCRIPTIONS": [
-      "你的回合开始时， 获得 a random #yupgraded \"Strike\". It costs #b0 until played and 消耗s。",
+      "你的回合开始时， 获得 a random #yupgraded \"Strike\". It costs #b0 until played 并消耗s。",
       "你的回合开始时， 获得 #b",
-      " random #yupgraded \"Strike\"s. They cost #b0 until played and 消耗 。"
+      " random #yupgraded \"Strike\"s. They cost #b0 until played 并消耗 。"
     ]
   },
   "${ModID}:StrikeABar获得Power": {

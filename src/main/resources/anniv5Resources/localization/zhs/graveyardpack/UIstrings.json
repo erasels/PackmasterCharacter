@@ -2,7 +2,7 @@
   "${ModID}:GraveyardPack": {
     "TEXT": [
       "Graveyard",
-      "A pack for burying your cards... or un-burying them。",
+      "A pack for burying your 张牌。.. or un-burying them。",
       "Charlie"
     ]
   },

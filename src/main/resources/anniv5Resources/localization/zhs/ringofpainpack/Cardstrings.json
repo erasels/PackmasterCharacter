@@ -2,7 +2,7 @@
   "${ModID}:Hound": {
     "NAME": "Rot Hound",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:Evolves when you play an *Attack。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 and 给予 !M! Weak to 所有敌人。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! Weak to 所有敌人。",
     "EXTENDED_DESCRIPTION": ["Huge Rot Hound"]
   },
   "${ModID}:Slime": {
@@ -33,22 +33,22 @@
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
-    "DESCRIPTION": "虚无 。 NL 消耗 !M! cards in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your hand and give it 消耗 。",
-    "UPGRADE_DESCRIPTION": "消耗 !M! cards in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your hand and give it 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 消耗 !M! cards in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your h并并give it 消耗 。",
+    "UPGRADE_DESCRIPTION": "消耗 !M! cards in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your h并并give it 消耗 。"
   },
   "${ModID}:Owl": {
     "NAME": "Owl",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤. NL ${ModID}:Evolves when you 消耗 一张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 ${ModID}:Rend equal to half of the un格挡ed damage dealt. NL 给予 !M! 层 易伤。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 ${ModID}:Rend equal to half of the un格挡ed damage dealt. NL 给予 !M! 层 易伤 。",
     "EXTENDED_DESCRIPTION": ["Nightmare Owl"]
   },
   "${ModID}:Vision": {
     "NAME": "Vision",
-    "DESCRIPTION": "Put !M! cards from your 抽牌堆 into your hand. NL Retain your hand 本回合. NL 消耗 。"
+    "DESCRIPTION": "Put !M! cards from your 抽牌堆 into your hand. NL Retain your h并本回合. NL 消耗 。"
   },
   "${ModID}:Connection": {
     "NAME": "Connection",
-    "DESCRIPTION": "每当 you play 一张牌, upgrade it and ALL copies of it。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you play 一张牌, upgrade it and ALL copies of it。"
+    "DESCRIPTION": "每当 you play 一张牌, upgrade it 并ALL copies of it。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you play 一张牌, upgrade it 并ALL copies of it。"
   }
 }

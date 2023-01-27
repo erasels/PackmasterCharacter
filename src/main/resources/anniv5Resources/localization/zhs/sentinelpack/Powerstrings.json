@@ -2,6 +2,6 @@
   "${ModID}:SwaggerPower": {
     "NAME": "Swagger",
     "DESCRIPTIONS": ["If you end your turn in a #yStance, 获得 #b",
-      " #y力量 and #yDexterity。"]
+      " #y力量 并#yDexterity。"]
   }
 }
