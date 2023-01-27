@@ -1,0 +1,98 @@
+package thePackmaster.actions.dimensiongate2pack;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
+import thePackmaster.cards.dimensiongatepack2.TheEncyclopedia;
+import thePackmaster.util.Wiz;
+
+import java.util.ArrayList;
+
+public class EncyclopediaAction extends AbstractGameAction {
+    private static final UIStrings uiStrings;
+    public static final String[] TEXT;
+    private AbstractPlayer p;
+    private String text;
+
+    public EncyclopediaAction(int amount, String text) {
+        this.p = AbstractDungeon.player;
+        this.setValues(this.p, AbstractDungeon.player, amount);
+        this.actionType = ActionType.CARD_MANIPULATION;
+        this.duration = Settings.ACTION_DUR_MED;
+        this.text = text;
+    }
+
+    public void update() {
+        AbstractCard card;
+        if (this.duration == Settings.ACTION_DUR_MED) {
+            CardGroup tmp = new CardGroup(CardGroupType.UNSPECIFIED);
+
+
+            for (AbstractCard c:generateCardChoices()
+                 ) {
+                tmp.addToBottom(c);
+            }
+
+            tmp.sortAlphabetically(true);
+            tmp.sortByRarityPlusStatusCardType(false);
+
+            if (tmp.size() == 0) {
+                this.isDone = true;
+            } else if (tmp.size() <= amount) {
+                for (AbstractCard abstractCard : tmp.group) {
+                    Wiz.atb(new MakeTempCardInDrawPileAction(abstractCard.makeStatEquivalentCopy(),1,true,true));
+                }
+                this.isDone = true;
+            } else {
+                AbstractDungeon.gridSelectScreen.open(tmp, this.amount, text, false);
+                this.tickDuration();
+            }
+        } else {
+            if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
+                for (AbstractCard abstractCard : AbstractDungeon.gridSelectScreen.selectedCards) {
+                    Wiz.atb(new MakeTempCardInDrawPileAction(abstractCard.makeStatEquivalentCopy(),1,true,true));
+                }
+                AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            }
+            this.tickDuration();
+        }
+    }
+
+    static {
+        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
+        TEXT = uiStrings.TEXT;
+    }
+
+
+
+    private ArrayList<AbstractCard> generateCardChoices() {
+        ArrayList<AbstractCard> derp = new ArrayList<>();
+
+        while(derp.size() != 3) {
+            boolean dupe = false;
+            AbstractCard tmp = null;
+            tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
+            tmp.modifyCostForCombat(-2);
+
+            for (AbstractCard c : derp) {
+                if (c.cardID.equals(tmp.cardID)) {
+                    dupe = true;
+                    break;
+                }
+            }
+
+            if (!dupe) {
+                derp.add(tmp.makeCopy());
+            }
+        }
+
+        return derp;
+    }
+}

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardStorybook;
 
+import static thePackmaster.SpireAnniversary5Mod.ISCARDMODIFIED;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
@@ -26,7 +27,7 @@ public class Knighthood extends AbstractDimensionalCardStorybook {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+        atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], AbstractCard::canUpgrade, (cards) -> {
             AbstractCard q = cards.get(0);
             q.upgrade();
 

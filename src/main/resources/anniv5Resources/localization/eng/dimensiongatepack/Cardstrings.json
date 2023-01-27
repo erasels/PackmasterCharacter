@@ -14,7 +14,7 @@
   },
   "${ModID}:Channel": {
     "NAME": "Channel",
-    "DESCRIPTION": "Magic. Retain. NL Reduce the cost of a random *Magic card in hand by 1 this turn. NL Exhaust."
+    "DESCRIPTION": "*Magic. Retain. NL Reduce the cost of a random *Magic card in hand by !M! this turn. NL Exhaust."
   },
   "${ModID}:Daggerstorm": {
     "NAME": "Daggerstorm",

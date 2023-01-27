@@ -13,9 +13,9 @@ public class Anemia extends AbstractDimensionalCardVault {
     public final static String ID = makeID("Anemia");
 
     public Anemia() {
-        super(ID, 1, CardRarity.COMMON, CardType.SKILL, CardTarget.SELF);
-        baseBlock = 8;
-        baseMagicNumber = magicNumber = 2;
+        super(ID, 1, CardRarity.UNCOMMON, CardType.SKILL, CardTarget.SELF);
+        baseBlock = 9;
+        baseMagicNumber = magicNumber = 1;
 
     }
 
@@ -32,7 +32,8 @@ public class Anemia extends AbstractDimensionalCardVault {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
+        upgradeMagicNumber(1);
 
     }
 }

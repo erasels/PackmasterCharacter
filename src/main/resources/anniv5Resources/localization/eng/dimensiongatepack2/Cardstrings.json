@@ -6,5 +6,42 @@
   "${ModID}:LethalShot": {
     "NAME": "Lethal Shot",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison and !${ModID}:m2! Vulnerable."
+  },
+  "${ModID}:BleedItOut": {
+    "NAME": "Bleed It Out",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Poison, trigger it. Otherwise apply !M! Poison."
+  },
+  "${ModID}:Trace": {
+    "NAME": "Trace",
+    "DESCRIPTION": "Scry !M!."
+  },
+  "${ModID}:BoosterShot": {
+    "NAME": "Booster Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Enemy heals !${ModID}:m2! HP."
+  },
+  "${ModID}:RangersSetup": {
+    "NAME": "Ranger's Setup",
+    "DESCRIPTION": "Draw !M! cards. NL Put 2 cards from your hand onto the top of your draw pile."
+  },
+  "${ModID}:Scheme": {
+    "NAME": "Scheme",
+    "DESCRIPTION": "Next turn, the first card you play that costs 1 or less is played twice."
+  },
+  "${ModID}:ScrollOfIntellect": {
+    "NAME": "Scroll of Intellect",
+    "DESCRIPTION": "Draw a card. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain [E]. NL Exhaust."
+  },
+  "${ModID}:Sustenance": {
+    "NAME": "Sustenance",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Poison to a random enemy. NL stslib:Persist !stslib:persist!"
+  },
+  "${ModID}:TheEncyclopedia": {
+    "NAME": "The Encyclopedia",
+    "DESCRIPTION": "Choose 2 of !M! cards to shuffle into your draw pile. They cost 2 less. NL Exhaust."
+  },
+  "${ModID}:TomeOfIntellect": {
+    "NAME": "Tome of Intellect",
+    "DESCRIPTION": "Shuffle !M! *Scrolls *of *Intellect into your draw pile. At the start of your turn, shuffle 1 more."
   }
 }
