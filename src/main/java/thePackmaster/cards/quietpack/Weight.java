@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.adp;
-import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.*;
 
 
 public class Weight extends AbstractQuietCard {
@@ -23,7 +22,7 @@ public class Weight extends AbstractQuietCard {
     @Override
     public void triggerOnManualDiscard() {
         AbstractCard c = this;
-        atb(new AbstractGameAction() {
+        att(new AbstractGameAction() {
             @Override
             public void update() {
                 adp().discardPile.moveToExhaustPile(Weight.this);

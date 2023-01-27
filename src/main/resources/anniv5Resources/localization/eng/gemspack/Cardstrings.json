@@ -26,8 +26,8 @@
   },
   "${ModID}:EnergyGem": {
     "NAME": "Citrine",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain [E] \"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain [E] \""
+    "DESCRIPTION": "${ModID}:Gem. NL \"Gain [E] next turn\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain [E] next turn\""
   },
   "${ModID}:CleanseGem": {
     "NAME": "Onyx",

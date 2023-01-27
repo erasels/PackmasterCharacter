@@ -36,12 +36,12 @@ public class Food extends AbstractPackmasterCard {
             StringBuilder sb = new StringBuilder();
             sb.append(upgraded ? cardStrings.EXTENDED_DESCRIPTION[1] : cardStrings.EXTENDED_DESCRIPTION[0]);
             for (int i = 0; i < magicNumber; i++) {
-                sb.append(" [E] ");
+                sb.append("[E] ");
             }
             sb.append(cardStrings.EXTENDED_DESCRIPTION[2]);
             rawDescription = sb.toString();
-            this.initializeDescription();
         }
+        this.initializeDescription();
     }
 
     @Override

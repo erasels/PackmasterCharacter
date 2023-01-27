@@ -28,7 +28,7 @@
       " NL Reduce debuffs by 1.",
       " NL Roll a ${ModID}:D6.",
       " NL Draw a card.",
-      " NL Gain [E] .",
+      " NL Gain [E] next turn.",
       " NL stslib:Persist !stslib:persist!.",
       "Retain. NL ",
       " NL Gain a *Shiv.",
