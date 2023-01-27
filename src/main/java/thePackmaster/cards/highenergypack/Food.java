@@ -59,7 +59,8 @@ public class Food extends AbstractPackmasterCard {
         AbstractCard card = super.makeStatEquivalentCopy();
         card.baseMagicNumber = this.baseMagicNumber;
         card.magicNumber = this.magicNumber;
-        card.description = (ArrayList) this.description.clone();
+        card.rawDescription = this.rawDescription;
+        card.initializeDescription();
         return card;
     }
 }
