@@ -2,7 +2,7 @@
   "${ModID}:Hound": {
     "NAME": "Rot Hound",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:Evolves when you play an *Attack。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! Weak to 所有敌人。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! 层 虚弱 to 所有敌人。",
     "EXTENDED_DESCRIPTION": ["Huge Rot Hound"]
   },
   "${ModID}:Slime": {

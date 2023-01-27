@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Gem",
+    "PROPER_NAME": "宝石",
     "NAMES": [
-      "gem"
+      "gem",
+      "宝石"
     ],
-    "DESCRIPTION": "At #yRest #ySites, you may spend 20 Gold to socket a #yGem as a free action, permanently #yModifying a card in deck with 'this #yGem's effects'."
+    "DESCRIPTION": "在 #y休息处 ，可花费 #b20 金币来将一枚 #y宝石 的效果附加至另一张非宝石牌，被镶嵌的牌视为被 #y修改 ，该行动不影响其他行动。"
   }
 ]

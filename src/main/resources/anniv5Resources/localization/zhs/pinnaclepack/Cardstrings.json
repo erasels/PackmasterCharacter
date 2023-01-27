@@ -18,8 +18,8 @@
   },
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "Marvelous Feast",
-    "DESCRIPTION": "固有 。 Add in order: ${ModID}:Croquettes that provide 格挡 ， Weak, 力量 与易伤 to your hand. Once per turn ended。",
-    "UPGRADE_DESCRIPTION": "固有 。 Add in order, upgraded: ${ModID}:Croquettes that provide 格挡 ， Weak, 力量 与易伤 to your hand. Once per turn ended。"
+    "DESCRIPTION": "固有 。 Add in order: ${ModID}:Croquettes that provide 格挡 ， Weak, 力量 与 易伤 to your hand. Once per turn ended。",
+    "UPGRADE_DESCRIPTION": "固有 。 Add in order, upgraded: ${ModID}:Croquettes that provide 格挡 ， Weak, 力量 与 易伤 to your hand. Once per turn ended。"
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "Meaty Croquettes",
@@ -52,11 +52,11 @@
   },
   "${ModID}:StoneSwordCommonAttack": {
     "NAME": "Stone Sword",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! Dexterity. NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 敏捷. NL 消耗 。"
   },
   "${ModID}:Rea__dyCommonSkill": {
     "NAME": "Rea--dy!",
-    "DESCRIPTION": "获得 !M! 活力. NL 获得 !${ModID}:m2! Temporary Dexterity. NL 消耗ive !stslib:ex!。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 活力. NL 获得 !${ModID}:m2! Temporary Dexterity. NL 抽一张牌. NL 消耗ive !stslib:ex!。"
+    "DESCRIPTION": "获得 !M! 活力. NL 获得 !${ModID}:m2! Temporary 敏捷. NL 消耗ive !stslib:ex!。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 活力. NL 获得 !${ModID}:m2! Temporary 敏捷. NL 抽一张牌. NL 消耗ive !stslib:ex!。"
   }
 }

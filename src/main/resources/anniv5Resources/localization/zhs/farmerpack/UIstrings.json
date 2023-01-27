@@ -1,15 +1,15 @@
 {
   "${ModID}:FarmerPack": {
     "TEXT": [
-      "Farmer",
-      "Rotate between card types to optimize your power!",
+      "农民",
+      "轮换打出的卡牌类型来最大化你的力量！",
       "DJM"
     ]
   },
   "${ModID}:FarmerPackHat": {
     "TEXT": [
-      "Simple hat made of straw. Keeps out sun 并rain。",
-      "Strawhat"
+      "简易稻草帽，能遮阳挡雨。",
+      "草帽"
     ]
   }
 }

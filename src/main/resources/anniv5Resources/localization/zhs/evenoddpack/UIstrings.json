@@ -1,15 +1,15 @@
 {
   "${ModID}:EvenOddPack": {
     "TEXT": [
-      "Even/Odd",
-      "Cards with different effects depending on number of cards played。",
+      "奇/偶",
+      "一套效果由奇偶牌序决定的牌。",
       "Lobbien"
     ]
   },
   "${ModID}:EvenOddPackHat": {
     "TEXT": [
-      "The superlative modulo enjoyer's choice of headwear。",
-      "The Top Percent"
+      "终极模运算享受者的甄选头饰。",
+      "上位百分比"
     ]
   }
 }

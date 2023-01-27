@@ -1,16 +1,16 @@
 {
   "${ModID}:OutToMarketPower": {
-    "NAME": "Out To Market",
+    "NAME": "赶集",
     "DESCRIPTIONS": [
-      "Deal #b",
-      " damage to 所有敌人 the first time you play 一张牌 type each turn. You have played:", "Attack", "Skill", "Power", "Status", "Curse"
+      "每回合首次打出各类牌时，对所有敌人造成 #b",
+      " 点伤害。本回合已打出：", "攻击", "技能", "能力", "状态", "诅咒"
     ]
   },
   "${ModID}:SupplyChainPower": {
-    "NAME": "Supply Chain",
+    "NAME": "供应链",
     "DESCRIPTIONS": [
-      "你的回合开始时， add #b",
-      " Fertilizer(s) to your hand。"
+      "你的回合开始时，将 #b",
+      " 张 #y肥料 加入手牌。"
     ]
   }
 }

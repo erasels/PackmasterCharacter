@@ -7,6 +7,6 @@
   {
     "PROPER_NAME": "Serene",
     "NAMES": ["serene"],
-    "DESCRIPTION": "回合结束时， 获得 #y格挡 equal to #b50% of your #y格挡 。 Upon exiting this #yStance, 获得 #b1 #yDexterity。"
+    "DESCRIPTION": "回合结束时， 获得 #y格挡 equal to #b50% of your #y格挡 。 Upon exiting this #yStance, 获得 #b1 #y敏捷。"
   }
 ]

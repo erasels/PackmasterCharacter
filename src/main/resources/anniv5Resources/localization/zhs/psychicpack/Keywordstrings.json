@@ -1,10 +1,11 @@
 [
   {
-    "PROPER_NAME": "Occult",
+    "PROPER_NAME": "神秘",
     "NAMES": [
-      "occult"
+      "occult",
+      "神秘"
     ],
-    "DESCRIPTION": "#yOccult cards can be played disregarding any conditions for playability. Cards played this way are #y消耗ed。"
+    "DESCRIPTION": "#神秘 牌在手时可在任何情况下打出，非正常打出会将其 #y消耗 。"
   },
   {
     "PROPER_NAME": "Locking",

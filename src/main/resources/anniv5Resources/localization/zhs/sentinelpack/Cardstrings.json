@@ -24,8 +24,8 @@
   },
   "${ModID}:Swagger": {
     "NAME": "Swagger",
-    "DESCRIPTION": "If you end your turn in a Stance, 获得 !M! 点 力量 并Dexterity。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL If you end your turn in a Stance, 获得 !M! 点 力量 并Dexterity。"
+    "DESCRIPTION": "If you end your turn in a Stance, 获得 !M! 点 力量 并敏捷。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL If you end your turn in a Stance, 获得 !M! 点 力量 并敏捷。"
   },
   "${ModID}:MoodSwing": {
     "NAME": "Mood Swing",

@@ -17,7 +17,7 @@
   },
   "${ModID}:BugOut": {
     "NAME": "Bug Out",
-    "DESCRIPTION": "${ModID}:Infest. NL 获得 1 力量 并Dexterity for each [bugIcon] 。"
+    "DESCRIPTION": "${ModID}:Infest. NL 获得 1 力量 并敏捷 for each [bugIcon] 。"
   },
   "${ModID}:ScarabShield": {
     "NAME": "Scarab Shield",

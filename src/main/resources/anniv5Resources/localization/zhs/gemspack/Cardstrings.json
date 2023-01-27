@@ -1,56 +1,56 @@
 {
   "${ModID}:TempStrengthGem": {
-    "NAME": "Ruby",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain 2 Temp. Strength\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain 2 Temp. Strength\""
+    "NAME": "红宝石",
+    "DESCRIPTION": "${ModID}:宝石. NL \"获得2层临时 力量 \"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得2层临时 力量 \""
   },
   "${ModID}:WardGem": {
-    "NAME": "Aquamarine",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Ward\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Ward\""
+    "NAME": "蓝晶",
+    "DESCRIPTION": "${ModID}:宝石. NL \"获得一张 *守卫 。\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得一张 *守卫 。\""
   },
   "${ModID}:ShivGem": {
-    "NAME": "Fragmented Gem",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Shiv\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Shiv\""
+    "NAME": "宝石碎片",
+    "DESCRIPTION": "${ModID}:宝石. NL \"获得一张 *小刀 。\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得一张 *小刀 。\""
   },
   "${ModID}:RetainGem": {
-    "NAME": "Amber",
-    "DESCRIPTION": "Unplayable ${ModID}:Gem. NL \"Card gains Retain\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card gains Retain\""
+    "NAME": "琥珀",
+    "DESCRIPTION": "无法打出的 ${ModID}:宝石. NL \"牌附加保留\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加保留\""
   },
   "${ModID}:DrawGem": {
-    "NAME": "Opal",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Draw a card\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Draw a card\""
+    "NAME": "欧泊",
+    "DESCRIPTION": "${ModID}:宝石. NL \"抽一张牌\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"抽一张牌\""
   },
   "${ModID}:EnergyGem": {
-    "NAME": "Citrine",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain [E] \"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain [E] \""
+    "NAME": "茶晶",
+    "DESCRIPTION": "${ModID}:宝石. NL \"获得 [E] 。\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得 [E] 。\""
   },
   "${ModID}:CleanseGem": {
-    "NAME": "Onyx",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Reduce debuffs by 1\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Reduce debuffs by 1\""
+    "NAME": "玛瑙",
+    "DESCRIPTION": "${ModID}:宝石. NL \"失去所有负面效果1层。\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"失去所有负面效果1层。\""
   },
   "${ModID}:Ward": {
-    "NAME": "Ward",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+    "NAME": "守卫",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。"
   },
   "${ModID}:DiceGem": {
-    "NAME": "Tourmaline",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Roll a ${ModID}:D6\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Roll a ${ModID}:D6\""
+    "NAME": "碧玺",
+    "DESCRIPTION": "${ModID}:宝石. NL \"投掷一枚 ${ModID}:6面骰 \"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"投掷一枚 ${ModID}:6面骰 \""
   },
   "${ModID}:OccultGem": {
-    "NAME": "Lapis Lazuli",
-    "DESCRIPTION": "Unplayable ${ModID}:Gem. NL \"Card gains ${ModID}:Occult\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card gains ${ModID}:Occult\""
+    "NAME": "天青石",
+    "DESCRIPTION": "无法打出的 ${ModID}:宝石. NL \"牌附加 ${ModID}:神秘 \"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 ${ModID}:神秘 \""
   },
   "${ModID}:PersistGem": {
-    "NAME": "Garnet",
-    "DESCRIPTION": "Unplayable ${ModID}:Gem. NL \"Card has stslib:Persist 2\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card gains stslib:Persist 2\""
+    "NAME": "石榴石",
+    "DESCRIPTION": "无法打出的 ${ModID}:宝石. NL \"牌附加 stslib:长驻 2\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 stslib:长驻 2\""
   }
 }

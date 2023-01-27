@@ -22,7 +22,7 @@
   },
   "${ModID}:SmokePellets": {
     "NAME": "Smoke Pellets",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! Weak to 所有敌人。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 虚弱 to 所有敌人。"
   },
   "${ModID}:SmolderingShell": {
     "NAME": "Smoldering Shell",

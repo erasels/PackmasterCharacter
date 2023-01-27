@@ -28,8 +28,8 @@
   "${ModID}:QuickBrew": {
     "NAME": "Quick Brew",
     "DESCRIPTION": "Choose: 获得 2 力量, or 获得 3 Focus。",
-    "UPGRADE_DESCRIPTION": "Choose: 获得 2 力量, 获得 2 Dexterity, or 获得 2 Focus。",
-    "EXTENDED_DESCRIPTION": ["获得 2 力量 。", "获得 2 Dexterity。","获得 2 Focus。"]
+    "UPGRADE_DESCRIPTION": "Choose: 获得 2 力量, 获得 2 敏捷, or 获得 2 Focus。",
+    "EXTENDED_DESCRIPTION": ["获得 2 力量 。", "获得 2 敏捷。","获得 2 Focus。"]
   },
   "${ModID}:ToxicVial": {
     "NAME": "Toxic Vial",

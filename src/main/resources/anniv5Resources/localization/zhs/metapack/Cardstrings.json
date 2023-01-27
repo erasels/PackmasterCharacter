@@ -31,8 +31,8 @@
   },
   "${ModID}:KillerInstinct": {
     "NAME": "Killer Instinct",
-    "DESCRIPTION": "获得 2 力量 并1 Dexterity. NL 战斗开始： Shuffle a copy of this card into your 抽牌堆。",
-    "UPGRADE_DESCRIPTION": "获得 2 力量 并1 Dexterity. NL 战斗开始： Shuffle !M! copies of this card into your 抽牌堆。"
+    "DESCRIPTION": "获得 2 力量 并1 敏捷. NL 战斗开始： Shuffle a copy of this card into your 抽牌堆。",
+    "UPGRADE_DESCRIPTION": "获得 2 力量 并1 敏捷. NL 战斗开始： Shuffle !M! copies of this card into your 抽牌堆。"
   },
   "${ModID}:Bulwark": {
     "NAME": "Bulwark",
@@ -41,6 +41,6 @@
   },
   "${ModID}:Masterstroke": {
     "NAME": "Masterstroke",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 力量 并Dexterity affect this card !M! times。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 力量 并敏捷 affect this card !M! times。"
   }
 }

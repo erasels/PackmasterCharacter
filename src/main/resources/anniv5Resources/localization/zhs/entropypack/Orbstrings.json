@@ -1,10 +1,10 @@
 {
   "${ModID}:Oblivion": {
-    "NAME": "Oblivion",
+    "NAME": "湮灭",
     "DESCRIPTION": [
-      "#yPassive: 每当 you 丢弃 一张牌, increase this Orb's #yRuin by #b",
-      ". NL #yEvoke: 给予 #b",
-      " #yRuin to the enemy with the most 生命。"
+      "#y被动 ： 每当你丢弃一张牌时，提高该充能球的 #y毁灭 给予量 #b",
+      " 层。 NL #y激发 ：给予生命值最高的敌人 #b",
+      " 层 #y毁灭 。"
     ]
   }
 }

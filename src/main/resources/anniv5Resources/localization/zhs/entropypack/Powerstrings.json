@@ -1,42 +1,42 @@
 {
   "${ModID}:Entropy": {
-    "NAME": "Entropy",
+    "NAME": "熵",
     "DESCRIPTIONS": [
-      "The next #b",
-      " times you play 一张牌, 丢弃 a random card 并抽一张牌。",
-      "The next time you play 一张牌, 丢弃 a random card 并抽一张牌。"
+      "下 #b",
+      " 次打出牌时，随机丢弃一张手牌并抽一张牌。",
+      "下次打出牌时，随机丢弃一张手牌并抽一张牌。"
     ]
   },
   "${ModID}:DiffusionPower": {
-    "NAME": "Diffusion",
+    "NAME": "漫散",
     "DESCRIPTIONS": [
-      "你的回合开始时， 获得 #b",
-      " #yEntropy 并抽 #b",
-      " card。",
+      "你的回合开始时，获得 #b",
+      " 层 #y熵 并抽 #b",
+      " 张牌。",
       " 张牌。"
     ]
   },
   "${ModID}:EntanglementPower": {
-    "NAME": "Entanglement",
+    "NAME": "纠缠",
     "DESCRIPTIONS": [
-      "每当 you receive a debuff, 给予 #b",
-      " #yRuin to a random enemy。"
+      "每当你获得 #r负面效果 ，随机给予一名敌人 #b",
+      " 层 #y毁灭。"
     ]
   },
   "${ModID}:RuinPower": {
-    "NAME": "Ruin",
+    "NAME": "毁灭",
     "DESCRIPTIONS": [
-      "The next time this enemy takes un格挡ed attack damage, it 失去s #b",
-      "The next time you take un格挡ed attack damage, 失去 #b",
-      " 生命。"
+      "下次该单位受到未被格挡的伤害时，其失去 #b",
+      "下次你受到未被格挡的伤害时，失去 #b",
+      " 点生命。"
     ]
   },
   "${ModID}:ConstructPower": {
-    "NAME": "Construct",
+    "NAME": "建造",
     "DESCRIPTIONS": [
-      "Takes #b",
-      "Take #b",
-      " less damage from attacks 本回合。"
+      "该单位本回合少受到 #b",
+      "你本回合少受到 #b",
+      " 点攻击伤害。"
     ]
   }
 }

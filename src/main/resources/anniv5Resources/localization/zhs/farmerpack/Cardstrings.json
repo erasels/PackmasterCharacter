@@ -1,51 +1,51 @@
 {
   "${ModID}:Fertilizer": {
-    "NAME": "Fertilizer",
+    "NAME": "肥料",
     "DESCRIPTION": "抽一张牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。"
   },
   "${ModID}:HarvestBeans": {
-    "NAME": "Harvest Beans",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 造成 !D! 点伤害 to 所有敌人 if the last card played 本场战斗 wasn't an Attack。"
+    "NAME": "收获豌豆",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本场战斗上张打出牌非攻击牌，造成群体伤害。"
   },
   "${ModID}:HarvestCarrots": {
-    "NAME": "Harvest Carrots",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Repeat for each card type you've played 本回合。",
-    "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
+    "NAME": "收获胡萝卜",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合每打出过一类牌，再获得一次。",
+    "EXTENDED_DESCRIPTION": [" NL (再获得 !M! 次。"]
   },
   "${ModID}:HarvestPotatoes": {
-    "NAME": "Harvest Potatoes",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card you played 本场战斗 wasn't a Skill, 获得 !B! 点 格挡 a获得。"
+    "NAME": "收获土豆",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本场战斗上张打出牌非技能牌，再获得一次。"
   },
   "${ModID}:HarvestRadishes": {
-    "NAME": "Harvest Radishes",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予1层 虚弱 for each card type you've played 本回合。",
-    "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
+    "NAME": "收获甜菜",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出过一类牌，给予1层 虚弱 。",
+    "EXTENDED_DESCRIPTION": [" NL (给予 !M! 层。)"]
   },
   "${ModID}:OutToMarket": {
-    "NAME": "Out To Market",
-    "DESCRIPTION": "Deal !M! damage to 所有敌人 the first time you play each card type each turn。"
+    "NAME": "赶集",
+    "DESCRIPTION": "每回合首次打出一类牌时，对所有敌人造成 !M! 点伤害。"
   },
   "${ModID}:PestControl": {
-    "NAME": "Pest Control",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Repeat for each card type you've played 本回合。",
-    "EXTENDED_DESCRIPTION": [" NL (Repeats !M! times.)"]
+    "NAME": "害虫防治",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出过一类牌，再造成一次。",
+    "EXTENDED_DESCRIPTION": [" NL (再造成 !M! 次。"]
   },
   "${ModID}:SoilResiliency": {
-    "NAME": "Soil Resiliency",
-    "DESCRIPTION": "获得 !M! 点 力量 并!${ModID}:m2! Dexterity. NL If you've played less than 3 types of card 本回合, 消耗 。"
+    "NAME": "土壤复原力",
+    "DESCRIPTION": "获得 !M! 点 力量 与 !${ModID}:m2! 点 敏捷 。 NL 若本回合未打出过三类牌， 消耗 。"
   },
   "${ModID}:SupplyChain": {
-    "NAME": "Supply Chain",
-    "DESCRIPTION": "获得 a *Fertilizer at the start of each turn。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 a *Fertilizer at the start of each turn。"
+    "NAME": "供应链",
+    "DESCRIPTION": "回合开始时， NL 获得一张 *肥料 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得一张 *肥料 。"
   },
   "${ModID}:SowTheSeeds": {
-    "NAME": "Sow The Seeds",
-    "DESCRIPTION": "获得 a *Fertilizer. NL Fetch !M! random cards with different types from your 抽牌堆。"
+    "NAME": "播种",
+    "DESCRIPTION": "获得一张 *肥料 。 NL 从抽牌堆中 取出 !M! 张不同类型的牌。"
   },
   "${ModID}:TillTheEarth": {
-    "NAME": "Till The Earth",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 a *Fertilizer。"
+    "NAME": "耕田",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *肥料 。"
   }
 }

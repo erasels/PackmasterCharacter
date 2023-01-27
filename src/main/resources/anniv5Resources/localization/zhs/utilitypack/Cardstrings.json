@@ -32,12 +32,12 @@
   },
   "${ModID}:LesserHex": {
     "NAME": "Lesser Hex",
-    "DESCRIPTION": "给予 !M! Weak 并!M! 易伤. NL Enemy 失去s !M! 点 力量 。 NL Add a *Greater\u00a0Hex to your 弃牌堆. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! Weak 并!M! 易伤. NL Enemy 失去s !M! 点 力量 。 NL Add a *Greater\u00a0Hex+ to your 弃牌堆. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 并!M! 易伤. NL Enemy 失去s !M! 点 力量 。 NL Add a *Greater\u00a0Hex to your 弃牌堆. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 并!M! 易伤. NL Enemy 失去s !M! 点 力量 。 NL Add a *Greater\u00a0Hex+ to your 弃牌堆. NL 消耗 。"
   },
   "${ModID}:GreaterHex": {
     "NAME": "Greater Hex",
-    "DESCRIPTION": "给予 !M! Weak 并!M! 易伤. NL Enemy 失去s !M! 点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 并!M! 易伤. NL Enemy 失去s !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Conjuration": {
     "NAME": "Conjuration",

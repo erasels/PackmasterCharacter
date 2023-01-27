@@ -4,41 +4,41 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 ${ModID}:熵 。"
   },
   "${ModID}:Wither": {
-    "NAME": "Wither",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Ruin。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Ruin to 所有敌人。"
+    "NAME": "凋零",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:毁灭 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予所有敌人 !M! 层 ${ModID}:毁灭 。"
   },
   "${ModID}:Collapse": {
-    "NAME": "Collapse",
-    "DESCRIPTION": "${ModID}:Unstable. NL 抽一张牌。 NL 获得 !M! temporary 力量 。 NL 获得1层 易伤。"
+    "NAME": "崩溃",
+    "DESCRIPTION": "${ModID}:不稳定 。 NL 抽一张牌。 NL 获得 !M! 层临时 力量 。 NL 获得1层 易伤 。"
   },
   "${ModID}:Construct": {
-    "NAME": "Construct",
-    "DESCRIPTION": "${ModID}:Unstable. NL Take !M! less damage from attacks 本回合. NL 获得 2 Weak。"
+    "NAME": "建造",
+    "DESCRIPTION": "${ModID}:不稳定 。 NL 本回合受到的攻击伤害减少 !M! 点。 NL 获得2层 虚弱 。"
   },
   "${ModID}:Freedom": {
-    "NAME": "Freedom",
-    "DESCRIPTION": "${ModID}:Unstable. NL 获得 !B! 点 格挡 。"
+    "NAME": "自由",
+    "DESCRIPTION": "${ModID}:不稳定 。 NL 获得 !B! 点 格挡 。"
   },
   "${ModID}:RuinousPortent": {
-    "NAME": "Ruinous Portent",
-    "DESCRIPTION": "Channel X ${ModID}:Oblivion。",
-    "UPGRADE_DESCRIPTION": "{@@}Channel X{!M!|1=+1|@= + !M!} anniv5:Oblivion。"
+    "NAME": "毁灭凶兆",
+    "DESCRIPTION": "生成 X个 ${ModID}:湮灭 充能球。",
+    "UPGRADE_DESCRIPTION": "{@@}生成 X{!M!|1=+1|@=+ !M!} 个 ${ModID}:湮灭 充能球。"
   },
   "${ModID}:Unbind": {
-    "NAME": "Unbind",
-    "DESCRIPTION": "丢弃 all non-Attack cards in your hand. NL 造成 !D! 点伤害 for each card 丢弃ed。"
+    "NAME": "解耦",
+    "DESCRIPTION": "丢弃所有非攻击手牌。 NL 每张随机造成 !D! 点伤害。"
   },
   "${ModID}:Diffusion": {
-    "NAME": "Diffusion",
-    "DESCRIPTION": "你的回合开始时， 获得 !M! ${ModID}:熵 并抽一张牌。"
+    "NAME": "漫散",
+    "DESCRIPTION": "回合开始时，获得 !M! 层 ${ModID}:熵 并抽一张牌。"
   },
   "${ModID}:Waning": {
-    "NAME": "Waning",
-    "DESCRIPTION": "${ModID}:Unstable. NL 给予 !M! ${ModID}:Ruin。"
+    "NAME": "衰败",
+    "DESCRIPTION": "${ModID}:不稳定 。 NL 给予 !M! 层 ${ModID}:毁灭 。"
   },
   "${ModID}:Entanglement": {
-    "NAME": "Entanglement",
-    "DESCRIPTION": "每当 you receive a debuff, 给予 !M! ${ModID}:Ruin to a random enemy。"
+    "NAME": "纠缠",
+    "DESCRIPTION": "每当你获得负面效果， NL 随机给予 !M! 层 ${ModID}:毁灭 。"
   }
 }
