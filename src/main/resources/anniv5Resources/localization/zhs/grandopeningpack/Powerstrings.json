@@ -1,31 +1,31 @@
 {
   "${ModID}:CrossPower": {
-    "NAME": "Cross",
+    "NAME": "叉击",
     "DESCRIPTIONS": [
-      "Your #yCrosses deal #b",
-      " additional damage。"
+      "你的 #y叉击 额外造成 #b",
+      " 点伤害。"
     ]
   },
   "${ModID}:InstinctsPower": {
-    "NAME": "Instincts",
+    "NAME": "思考直觉",
     "DESCRIPTIONS": [
-      "Each turn, if the first card you play is #yInnate, 获得 #b",
-      " #y格挡 。"
+      "本回合，若打出的首张牌为 #y固有 ，获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "${ModID}:DebutPower": {
-    "NAME": "Debut",
+    "NAME": "出道",
     "DESCRIPTIONS": [
-      "Once each turn, playing an #yInnate card #yRefunds #b",
-      "。"
+      "每回合首次打出 #y固有 牌后获得 #b",
+      " [E] 。"
     ]
   },
   "${ModID}:SurgePower": {
-    "NAME": "Surge",
+    "NAME": "涌动",
     "DESCRIPTIONS": [
-      "Your next #yInnate card is played twice 本回合。",
-      "Your next #b",
-      " #yInnate cards are played twice 本回合。"
+      "本回合下张 #y固有 牌打出两次。",
+      "本回合下 #b",
+      " 张 #y固有 牌打出两次。"
     ]
   }
 }

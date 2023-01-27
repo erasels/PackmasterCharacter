@@ -1,5 +1,5 @@
 {
-  "${ModID}:GreyBar获得": {
+  "${ModID}:GreyBargain": {
     "NAME": "Grey Bar获得",
     "DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by 消耗ing 一张牌 in your hand。",
     "UPGRADE_DESCRIPTION": "Return a ${ModID}:Buried card to your 抽牌堆 by 消耗ing 一张牌 in your hand. NL 抽一张牌。",

@@ -1,18 +1,18 @@
 {
   "${ModID}:AqueductsPower": {
-    "NAME": "Aqueducts",
-    "DESCRIPTIONS": ["每当 you 抽 an extr一张牌, deal #b", " damage to 所有敌人。"]
+    "NAME": "引水渠",
+    "DESCRIPTIONS": ["每当你在每回合固定抽牌之外的情况抽牌，对所有敌人造成 #b", " 点伤害。"]
   },
   "${ModID}:FlowPower": {
-    "NAME": "Flowing",
-    "DESCRIPTIONS": ["At the start of your 下回合, ", "抽 #b", " 张牌。", "抽一张牌。"]
+    "NAME": "自流",
+    "DESCRIPTIONS": ["你的下回合开始时，", "抽 #b", " 张牌。", "抽一张牌。"]
   },
   "${ModID}:PneumaticsPower": {
-    "NAME": "Pneumatics",
-    "DESCRIPTIONS": ["At the start of 下回合, #yFlow。", "At the start of the next #b", " turns, #yFlow。"]
+    "NAME": "气力学",
+    "DESCRIPTIONS": ["你的下回合开始时， #y自流 。", "你的下 #b", " 个回合开始时， #y自流 。"]
   },
   "${ModID}:ReleaseValvePower": {
-    "NAME": "Release Valve",
-    "DESCRIPTIONS": ["When you play #yFlow, this enemy takes #b", " damage for each card 丢弃ed。"]
+    "NAME": "开阀",
+    "DESCRIPTIONS": ["#y自流 时，每丢弃一张牌，该单位受到 #b", " 点伤害。"]
   }
 }

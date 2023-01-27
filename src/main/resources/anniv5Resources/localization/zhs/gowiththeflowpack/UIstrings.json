@@ -1,8 +1,8 @@
 {
   "${ModID}:GoWithTheFlowPack": {
     "TEXT": [
-      "Go With The Flow",
-      "Get rid of cards you don't need 本回合 for a bigger h并下回合。",
+      "随流而行",
+      "搞掉本回合不要的牌，下回合搞个大的。",
       "NellyDevo"
     ]
   },
@@ -13,8 +13,8 @@
   },
   "${ModID}:GoWithTheFlowPackHat": {
     "TEXT": [
-      "Appropriate attire for sub-zero temperatures。",
-      "Waterbending Hood"
+      "与零下温度契合的装扮。",
+      "羽绒帽"
     ]
   }
 }

@@ -8,7 +8,7 @@
     "DESCRIPTION": "抽 !${ModID}:m2! 张牌。 NL ${ModID}:增幅 [E] :抽之前先 预见 !M! 。"
   },
   "${ModID}:EternalStrike": {
-    "NAME": "永恒烈焰",
+    "NAME": "永恒烛焰",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 若本牌被消耗，将一张 !M! 点更高伤害的复制品加入手牌。"
   },
   "${ModID}:FalseGrit": {

@@ -16,7 +16,7 @@
     "DESCRIPTION": "给予 !M! 层 易伤 。 NL 获得 [E] 。 NL 消耗 。"
   },
   "${ModID}:OpenBracket": {
-    "NAME": "盛大开场",
+    "NAME": "开场一击",
     "DESCRIPTION": "抽 !M! 张牌。 NL 本回合接下来只能打出攻击牌。"
   },
   "${ModID}:Tragedy": {

@@ -1,25 +1,25 @@
 {
   "${ModID}:GraveyardPack": {
     "TEXT": [
-      "Graveyard",
-      "A pack for burying your 张牌。.. or un-burying them。",
+      "墓地",
+      "一套埋葬你的牌的牌，或者挖出你的牌的牌。",
       "Charlie"
     ]
   },
-  "${ModID}:Return消耗edToDeckAction": {
+  "${ModID}:ReturnExhaustedToDeckAction": {
     "TEXT": [
-      "Select 一张牌 to Return to Your 抽牌堆"
+      "选择一张牌返回抽牌堆。"
     ]
   },
-  "${ModID}:PlayFrom消耗Action": {
+  "${ModID}:PlayFromExhaustAction": {
     "TEXT": [
-      "Select 一张牌 to Play"
+      "选择打出一张牌。"
     ]
   },
   "${ModID}:GraveyardPackHat": {
     "TEXT": [
-      "Your head feels much lighter。",
-      "Lichdom"
+      "你感觉头轻了很多。",
+      "巫妖头骨"
     ]
   }
 }

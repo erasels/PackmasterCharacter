@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Flow",
+    "PROPER_NAME": "自流",
     "NAMES": [
-      "flow"
+      "flow",
+      "自流"
     ],
-    "DESCRIPTION": "When you Flow, you may 丢弃 any number of 张牌。 抽 that many at the start of your 下回合。"
+    "DESCRIPTION": "丢弃任意张牌，下回合额外抽等量的牌。"
   }
 ]

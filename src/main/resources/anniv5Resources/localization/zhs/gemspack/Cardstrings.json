@@ -17,7 +17,7 @@
   "${ModID}:RetainGem": {
     "NAME": "琥珀",
     "DESCRIPTION": "无法打出的 ${ModID}:宝石. NL \"牌附加保留\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加保留\""
+    "UPGRADE_DESCRIPTION": "无法打出的 ${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加保留\""
   },
   "${ModID}:DrawGem": {
     "NAME": "欧泊",
@@ -26,8 +26,8 @@
   },
   "${ModID}:EnergyGem": {
     "NAME": "茶晶",
-    "DESCRIPTION": "${ModID}:宝石. NL \"获得 [E] 。\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得 [E] 。\""
+    "DESCRIPTION": "${ModID}:宝石. NL \"下回合获得 [E] 。\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"下回合获得 [E] 。\""
   },
   "${ModID}:CleanseGem": {
     "NAME": "玛瑙",
@@ -46,11 +46,11 @@
   "${ModID}:OccultGem": {
     "NAME": "天青石",
     "DESCRIPTION": "无法打出的 ${ModID}:宝石. NL \"牌附加 ${ModID}:神秘 \"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 ${ModID}:神秘 \""
+    "UPGRADE_DESCRIPTION": "无法打出的 ${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 ${ModID}:神秘 \""
   },
   "${ModID}:PersistGem": {
     "NAME": "石榴石",
     "DESCRIPTION": "无法打出的 ${ModID}:宝石. NL \"牌附加 stslib:长驻 2\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 stslib:长驻 2\""
+    "UPGRADE_DESCRIPTION": "无法打出的 ${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 stslib:长驻 2\""
   }
 }

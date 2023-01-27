@@ -17,7 +17,7 @@
       " 张牌，并将触发条件的伤害阈值提高 #b5 点。"]
   },
   "${ModID}:OpenBracketPower": {
-    "NAME": "盛大开场",
+    "NAME": "开场一击",
     "DESCRIPTIONS": ["本回合只能打出 #y攻击 牌。"]
   }
 }

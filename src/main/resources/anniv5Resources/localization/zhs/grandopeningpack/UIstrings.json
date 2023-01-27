@@ -1,15 +1,15 @@
 {
   "${ModID}:GrandOpeningPack": {
     "TEXT": [
-      "Gr并Opening",
-      "The beginning is the half of every action. Adds Innate Synergies 并张牌。",
+      "盛大开场",
+      "好的开始是成功的一半。包含与 #y固有 联动的牌。",
       "Jack Renoson"
     ]
   },
   "${ModID}:GrandOpeningPackHat": {
     "TEXT": [
-      "All the world is a stage, especially with this mask",
-      "Theatre Mask"
+      "人生一场戏，戴上此帽更入戏。",
+      "戏剧脸"
     ]
   }
 }
