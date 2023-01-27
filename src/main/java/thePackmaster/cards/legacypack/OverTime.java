@@ -1,10 +1,7 @@
 package thePackmaster.cards.legacypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.util.Wiz;
 
@@ -24,9 +21,8 @@ public class OverTime extends AbstractLegacyCard {
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!(this.baseDamage == 0)){
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        if (damage > 0){
+            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         }
     }
 

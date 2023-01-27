@@ -102,9 +102,16 @@ public class GammaWardPower extends AbstractPackmasterPower implements DynamicPr
             });
         }
     }
+    
+    @Override
+    public void onCardDraw(AbstractCard card) {
+        card.initializeDescription();
+    }
 
     public String modifyDescription(String currentRaw, AbstractCard card) {
-        if (card.type == AbstractCard.CardType.SKILL && AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1) {
+        if (card.type == AbstractCard.CardType.SKILL
+                && AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1
+                && AbstractDungeon.player.hand.contains(card)) {
             return currentRaw + DESCRIPTIONS[2] + "!" + keyMap.get(card) + "!" + DESCRIPTIONS[3];
         }
         return currentRaw;
