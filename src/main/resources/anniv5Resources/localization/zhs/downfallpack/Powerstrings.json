@@ -1,38 +1,38 @@
 {
   "${ModID}:AwakenDeat生命ower": {
-    "NAME": "Awakening",
+    "NAME": "觉醒",
     "DESCRIPTIONS": [
-      "When you would die, heal #b",
-      " 生命 并remove this effect. Heals half this value at end of combat if untriggered。"
+      "死亡时，复活并回复至 #b",
+      " 点生命，然后移除本效果。若未触发，战斗结束时回复半量。"
     ]
   },
   "${ModID}:ChronoBoostPower": {
-    "NAME": "Chrono Boost",
+    "NAME": "时空加速",
     "DESCRIPTIONS": [
-      "After playing #b",
-      " more cards, 获得 #b",
-      " #y力量 。"
+      "再打出 #b",
+      " 张牌后获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "${ModID}:DeEnergizedPower": {
-    "NAME": "De-Energized",
+    "NAME": "失能",
     "DESCRIPTIONS": [
-      "At the start of your 下回合, 失去 #b",
+      "你的下回合开始时，失去 #b",
       " [E] 。"
     ]
   },
   "${ModID}:VexVinciblePower": {
-    "NAME": "Invincible",
+    "NAME": "坚不可摧",
     "DESCRIPTIONS": [
-      "Caps all damage 并生命 loss taken to #b",
-      " in a turn. Removed after activation。",
-      "Caps all damage 并生命 loss taken to #b",
-      " in a turn. Removed after #b",
-      " activations。"
+      "本回合最多失去 #b",
+      " 点生命，承伤未达最大前，效果一直持续。",
+      "本回合最多失去 #b",
+      " 点生命，承伤未达最大前，效果一直持续，还能生效 #b",
+      " 次。"
     ]
   },
-  "${ModID}:NextTurn获得SlimeCrus生命ower": {
-    "NAME": "Preparing Crush",
+  "${ModID}:NextTurnGainSlimeCrushPower": {
+    "NAME": "准备：猛击",
     "DESCRIPTIONS": [
       "This shouldn't ever actually appear, right?"
     ]

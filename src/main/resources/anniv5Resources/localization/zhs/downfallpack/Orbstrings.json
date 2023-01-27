@@ -1,10 +1,10 @@
 {
   "Ghostflame": {
-    "NAME": "Ghostflame",
+    "NAME": "鬼火",
     "DESCRIPTION": [
-      "#yPassive: At the end of turn, deal #b",
-      " damage to 所有敌人 并Ignite this. NL #yEvoke: If Ignited, deal #b",
-      " damage to 所有敌人。"
+      "#y被动 ：回合结束时，对所有敌人造成 #b",
+      " 点伤害并将自身点燃。 NL #y激发 ：若已点燃，对所有敌人造成 #b",
+      " 点伤害。"
     ]
   }
 }

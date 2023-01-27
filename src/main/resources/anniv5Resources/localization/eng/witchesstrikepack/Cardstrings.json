@@ -39,7 +39,7 @@
   },
   "${ModID}:ScarabPlague": {
     "NAME": "Scarab Plague",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Gain !B! Block. NL When this ${ModID}:infests, ${ModID}:Manifest ${ModID}:Full_Moon."
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Gain !B! Block. NL When this ${ModID}:infests, ${ModID}:展现 ${ModID}:Full_Moon."
   },
   "${ModID}:Inscribed": {
     "EXTENDED_DESCRIPTION": [

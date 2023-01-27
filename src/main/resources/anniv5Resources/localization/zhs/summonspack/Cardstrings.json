@@ -22,7 +22,7 @@
   },
   "${ModID}:Elephant": {
     "NAME": "Elephant",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Take !M! damage。",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 受到 !M!  点伤害。",
     "FLAVOR": "This is my favorite card.  I hope you like it。"
   },
   "${ModID}:FireSpirit": {

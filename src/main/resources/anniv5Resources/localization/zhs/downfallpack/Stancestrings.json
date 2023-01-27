@@ -1,8 +1,8 @@
 {
   "${ModID}:Ancient": {
-    "NAME": "Ancient",
+    "NAME": "先古",
     "DESCRIPTION": [
-      "If you have less than #b6 Plated Armor 你的回合开始时， 获得 #b2 Plated Armor. NL When you leave this stance, 获得 #b1 Artifact。"
+      "你的回合开始时，若 #y多层护甲 低于 #b6 层，获得 #b2 层。 NL 退出时获得 #b1 层 人工制品 。"
     ]
   }
 }

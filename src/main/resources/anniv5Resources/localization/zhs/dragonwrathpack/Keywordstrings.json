@@ -1,27 +1,30 @@
 [
   {
-    "PROPER_NAME": "Penance",
+    "PROPER_NAME": "忏悔",
     "NAMES": [
       "Penance",
       "penance",
       "Repentant",
-      "repentant"
+      "repentant",
+      "忏悔"
     ],
-    "DESCRIPTION": "When a creature obtains #b8 Penance, it 失去s #b20 生命 并生命 loss from this effect is increased by #b10 本场战斗. NL Creatures damaged by Penance 失去 #b8 Penance"
+    "DESCRIPTION": "单位获得 #b8 层 #y忏悔 ，失去 #b20 点生命 并移除所有 #y忏悔，且该场战斗下次因 #y忏悔 而失去的生命提高 #b10 点。"
   },
   {
-    "PROPER_NAME": "Confession",
+    "PROPER_NAME": "告罪",
     "NAMES": [
       "Confession",
-      "confession"
+      "confession",
+      "告罪"
     ],
     "DESCRIPTION": "每当 you take damage or 失去 生命, deal damage equal to your #yConfession to 所有敌人. NL If it isn't your turn reduce Confession by half。"
   },
   {
-    "PROPER_NAME": "Light",
+    "PROPER_NAME": "辉光",
     "NAMES": [
       "Light",
-      "light"
+      "light",
+      "辉光"
     ],
     "DESCRIPTION": "#yOrb - #yPassive : 回合结束时 获得 #b1 #yConfession. NL #yEvoke : 获得 #b3 #yConfession。"
   }

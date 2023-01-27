@@ -1,15 +1,15 @@
 {
-  "${ModID}:Dragonwrat生命ack": {
+  "${ModID}:DragonwrathPack": {
     "TEXT": [
-      "Dragonwrath",
+      "龙怒",
       "Wield the divine power of a pariah of an order of draconic paladins。",
       "Silver"
     ]
   },
-  "${ModID}:Dragonwrat生命ackHat": {
+  "${ModID}:DragonwrathPackHat": {
     "TEXT": [
       "Narrow doorways may be a problem..。",
-      "Dragon Horns"
+      "龙角"
     ]
   }
 }

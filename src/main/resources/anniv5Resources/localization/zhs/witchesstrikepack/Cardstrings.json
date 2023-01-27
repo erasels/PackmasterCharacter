@@ -1,7 +1,7 @@
 {
   "${ModID}:CrescentSweep": {
     "NAME": "Heel Tornado",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Manifest ${ModID}:Crescent_Moon。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:展现 ${ModID}:Crescent_Moon。"
   },
   "${ModID}:MysticFlourish": {
     "NAME": "Tetsuzanko",
@@ -10,12 +10,12 @@
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
-    "DESCRIPTION": "${ModID}:Manifest !M! random orb. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Manifest !M! random orbs. NL 消耗 。"
+    "DESCRIPTION": "${ModID}:展现 !M! random orb. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:展现 !M! random orbs. NL 消耗 。"
   },
   "${ModID}:FullMoonHalo": {
     "NAME": "Full Moon Halo",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Manifest ${ModID}:Full_Moon。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:展现 ${ModID}:Full_Moon。"
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Moonlight Barrage",
@@ -23,7 +23,7 @@
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "Chittering Punt",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL When this ${ModID}:infests ${ModID}:Manifest ${ModID}:Crescent_Moon。"
+    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL When this ${ModID}:infests ${ModID}:展现 ${ModID}:Crescent_Moon。"
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
@@ -39,7 +39,7 @@
   },
   "${ModID}:ScarabPlague": {
     "NAME": "Scarab Plague",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL When this ${ModID}:infests, ${ModID}:Manifest ${ModID}:Full_Moon。"
+    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL When this ${ModID}:infests, ${ModID}:展现 ${ModID}:Full_Moon。"
   },
   "${ModID}:铭印": {
     "EXTENDED_DESCRIPTION": [

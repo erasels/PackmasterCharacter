@@ -1,23 +1,26 @@
 [
   {
-    "PROPER_NAME": "Invincible",
+    "PROPER_NAME": "坚不可摧",
     "NAMES": [
-      "invincible"
+      "invincible",
+      "坚不可摧"
     ],
-    "DESCRIPTION": "You cannot 失去 more than a given amount of 生命 in a single turn. NL At the end of any round in which Invincible prevented 生命 loss, remove it。"
+    "DESCRIPTION": "单回合内不会失去超过 #坚不可摧 层数的生命。 NL 承伤达上限后移除本效果，叠加时额外生效 #b1 次。"
   },
   {
-    "PROPER_NAME": "Ghostflame",
+    "PROPER_NAME": "鬼火",
     "NAMES": [
-      "ghostflame"
+      "ghostflame",
+      "鬼火"
     ],
-    "DESCRIPTION": "Orb: Deals damage to 所有敌人。"
+    "DESCRIPTION": "充能球：对所有敌人造成伤害。"
   },
   {
-    "PROPER_NAME": "Ancient",
+    "PROPER_NAME": "先古",
     "NAMES": [
-      "ancient"
+      "ancient",
+      "先古"
     ],
-    "DESCRIPTION": "Stance: If you have less than #b6 Plated Armor 你的回合开始时， 获得 #b2 Plated Armor. NL When you leave this Stance, 获得 #b1 Artifact。"
+    "DESCRIPTION": "#y姿态 。 NL 你的回合开始时，若无 #b6 层及以上 #y多层护甲 ，获得 #b2 层。 NL 退出时获得 #b1 层 人工制品 。"
   }
 ]

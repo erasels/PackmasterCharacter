@@ -1,42 +1,42 @@
 {
-  "${ModID}:PenanceShock": {
-    "NAME": "Penance Shock",
-    "DESCRIPTION": "造成 !D! 点伤害 并给予 !M! ${ModID}:Penance. NL Channel Lightning"
+  "${ModID}:忏悔Shock": {
+    "NAME": "忏悔冲击",
+    "DESCRIPTION": "造成 !D! 点伤害 并给予 !M! 层 ${ModID}:忏悔 。 NL 生成 一个 闪电 充能球。"
   },
   "${ModID}:Condemn": {
-    "NAME": "Condemn",
-    "DESCRIPTION": "给予 !M! ${ModID}:Penance。"
+    "NAME": "谴责",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:忏悔 。"
   },
   "${ModID}:SearingLight": {
-    "NAME": "Searing Light",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Channel ${ModID}:Light"
+    "NAME": "灼热之光",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 一个 ${ModID}:辉光 充能球。"
   },
   "${ModID}:RazorWind": {
-    "NAME": "Razor Wind",
-    "DESCRIPTION": "获得 !${ModID}:m2! ${ModID}:Confession. NL Take !M! damage。"
+    "NAME": "切肤之风",
+    "DESCRIPTION": "获得 !${ModID}:m2! 层 ${ModID}:告罪 。 NL 受到 !M! 点伤害。"
   },
   "${ModID}:WeightofContrition": {
-    "NAME": "Weight of Contrition",
-    "DESCRIPTION": "给予 !M! ${ModID}:Penance. NL Increase ${ModID}:Penance 生命 loss by !${ModID}:m2! 本场战斗。"
+    "NAME": "赎罪厚责",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:忏悔 。 NL 本场战斗提高因 ${ModID}:忏悔 造成的生命流失量 !${ModID}:m2! 点。"
   },
   "${ModID}:ChainsofTruth": {
-    "NAME": "Chains of Truth",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Penance to 所有敌人。"
+    "NAME": "真理之链",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 !M! 层 ${ModID}:忏悔 。"
   },
   "${ModID}:SacredTrial": {
-    "NAME": "Sacred Trial",
-    "DESCRIPTION": "Take !M! damage. NL Channel !${ModID}:m2! Lightning"
+    "NAME": "神圣试炼",
+    "DESCRIPTION": "受到 !M! 点伤害。 NL 生成 !${ModID}:m2! 个 闪电 充能球。"
   },
   "${ModID}:HolyWrath": {
-    "NAME": "Holy Wrath",
-    "DESCRIPTION": "Take !M! damage. NL Return this from the 弃牌堆 to your h并每当 you 获得 ${ModID}:Confession"
+    "NAME": "圣洁怒火",
+    "DESCRIPTION": "受到 !M! 点伤害。 NL 获得 ${ModID}:告罪 时，从弃牌堆返回手牌。 "
   },
   "${ModID}:Absolution": {
-    "NAME": "Absolution",
-    "DESCRIPTION": "给予 !M! ${ModID}:Penance. NL 每当 a creature is damaged by ${ModID}:Penance 本回合 给予 !${ModID}:m2! Weak。"
+    "NAME": "坚决",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:忏悔 。 NL 本回合单位因 *忏悔 失去生命时，给予其 !${ModID}:m2! 层 虚弱 。"
   },
   "${ModID}:JudgementDay": {
-    "NAME": "Judgement Day",
-    "DESCRIPTION": "${ModID}:Manifest !M! Lightning. NL 每当 a Lightning orbs passive effect activates 获得 !${ModID}:m2! ${ModID}:Confession。"
+    "NAME": "审判之日",
+    "DESCRIPTION": "${ModID}:展现 !M! Lightning. NL 每当 a Lightning orbs passive effect activates 获得 !${ModID}:m2! ${ModID}:告罪。"
   }
 }
