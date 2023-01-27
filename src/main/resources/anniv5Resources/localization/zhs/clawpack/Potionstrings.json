@@ -15,7 +15,7 @@
       " 。"
     ]
   },
-  "${ModID}:抽ClawsPotion": {
+  "${ModID}:DrawClawsPotion": {
     "NAME": "迅捷药水",
     "DESCRIPTIONS": [
       "抽 #b",

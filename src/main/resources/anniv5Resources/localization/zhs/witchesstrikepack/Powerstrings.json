@@ -3,7 +3,7 @@
     "NAME": "Moonlight Flight",
     "DESCRIPTIONS": [
       "每当 you #ychannel an orb, 获得 #b",
-      " #yFocus until your next turn。"
+      " #yFocus until your 下回合。"
     ]
   },
   "${ModID}:失去FocusPower": {

@@ -17,7 +17,7 @@
       "Make Occult"
     ]
   },
-  "${ModID}:OccultIn抽Pile": {
+  "${ModID}:OccultInDrawPile": {
     "TEXT": [
       "Choose 一张牌 to Make Occult"
     ]

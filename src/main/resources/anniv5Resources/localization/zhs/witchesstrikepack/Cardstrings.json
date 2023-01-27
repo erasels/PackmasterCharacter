@@ -35,7 +35,7 @@
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",
-    "DESCRIPTION": "每当 you channel an orb 获得 !M! Focus until your next turn。"
+    "DESCRIPTION": "每当 you channel an orb 获得 !M! Focus until your 下回合。"
   },
   "${ModID}:ScarabPlague": {
     "NAME": "Scarab Plague",

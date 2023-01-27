@@ -19,7 +19,7 @@
   },
   "${ModID}:Diehard": {
     "NAME": "Diehard",
-    "DESCRIPTION": "获得 !M! Artifact. NL Next turn, 获得 1 Weak 并Frail。"
+    "DESCRIPTION": "获得 !M! Artifact. NL 下回合, 获得 1 Weak 并Frail。"
   },
   "${ModID}:EldritchBlast": {
     "NAME": "Eldritch Blast",

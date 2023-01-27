@@ -9,7 +9,7 @@
   "${ModID}:HammeredPower": {
     "NAME": "Hammered",
     "DESCRIPTIONS": [
-      "The creature will have its buffs stolen until next turn。"
+      "The creature will have its buffs stolen until 下回合。"
     ]
   },
   "${ModID}:ThieveryMasteryPower": {

@@ -9,11 +9,11 @@
   },
   "${ModID}:IceWall": {
     "NAME": "Ice Wall",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !B! 点 格挡 next turn. NL Add a Void to the top of your 抽牌堆。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !B! 点 格挡 下回合. NL Add a Void to the top of your 抽牌堆。"
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "Freeze 并Burn",
-    "DESCRIPTION": "所有敌人 失去 !M! 点 力量 本回合. NL Next turn, 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "所有敌人 失去 !M! 点 力量 本回合. NL 下回合, 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "${ModID}:Frostfire": {
     "NAME": "Frostfire",
@@ -25,8 +25,8 @@
   },
   "${ModID}:SnowMelt": {
     "NAME": "Snow Melt",
-    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL Next turn, 抽 !M! additional 张牌。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL Next turn, 抽 !M! additional 张牌。"
+    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL 下回合, 抽 !M! additional 张牌。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 下回合, 抽 !M! additional 张牌。"
   },
   "${ModID}:Pyromastery": {
     "NAME": "Pyromastery",

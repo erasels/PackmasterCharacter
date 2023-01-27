@@ -21,8 +21,8 @@
   },
   "${ModID}:HyperBeam": {
     "NAME": "HYPER BEAM",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL At the start of your next turn, 失去 [E] [E]。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL At the start of your next turn, 失去 [E]。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL At the start of your 下回合, 失去 [E] [E]。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL At the start of your 下回合, 失去 [E]。"
   },
   "${ModID}:InvincibleStrength": {
     "NAME": "Invincible",
@@ -30,7 +30,7 @@
   },
   "${ModID}:PrepareCrush": {
     "NAME": "Prepare Crush",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL On your next turn, 获得 [E] 并add *SLIME *CRUSH! to your hand。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL On your 下回合, 获得 [E] 并add *SLIME *CRUSH! to your hand。"
   },
   "${ModID}:ShapersBlessing": {
     "NAME": "Shaper's Blessing",

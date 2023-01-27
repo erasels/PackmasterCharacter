@@ -1,7 +1,7 @@
 {
-  "${ModID}:Quick抽": {
+  "${ModID}:Quickdraw": {
     "NAME": "快拔",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL Next turn, 抽 1 less card。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 下回合, 抽 1 less card。"
   },
   "${ModID}:Glare": {
     "NAME": "Glare",

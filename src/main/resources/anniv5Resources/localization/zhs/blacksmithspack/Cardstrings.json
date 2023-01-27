@@ -11,7 +11,7 @@
     "NAME": "锻造之心",
     "DESCRIPTION": "{@@}保留 。 NL 获得{!M!|>1= !M!} [E] 。 NL 被 保留 时，将本牌升级。 NL 能被多次 升级 。 NL 消耗 。"
   },
-  "${ModID}:磨爪ingSheath": {
+  "${ModID}:SharpeningSheath": {
     "NAME": "磨剑之鞘",
     "DESCRIPTION": "抽 !M! 张牌， NL 并将其 升级 。"
   },

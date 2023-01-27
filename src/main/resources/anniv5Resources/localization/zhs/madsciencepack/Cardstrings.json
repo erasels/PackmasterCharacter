@@ -1,5 +1,5 @@
 {
-  "${ModID}:磨爪": {
+  "${ModID}:Sharpen": {
     "NAME": "Honing Strike",
     "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:修改 a random Attack in hand: \"Add !M! Damage\""
   },

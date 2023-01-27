@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Nightmare",
+    "PROPER_NAME": "梦魇",
     "NAMES": [
-      "nightmare"
+      "nightmare",
+      "梦魇"
     ],
-    "DESCRIPTION": "#yStance: When you use #y'Madness', exit #yNightmare #yStance. NL When you exit #yNightmare #yStance, 抽2张牌。, 获得 [E] , 并失去 1 生命。"
+    "DESCRIPTION": "#y姿态 。 NL 打出 #y疯狂 后，退出该 #y姿态 。退出时，抽 #b2张牌并获得 [E] ，再失去1点生命。"
   }
 ]

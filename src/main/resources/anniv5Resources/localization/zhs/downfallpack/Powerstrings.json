@@ -17,7 +17,7 @@
   "${ModID}:DeEnergizedPower": {
     "NAME": "De-Energized",
     "DESCRIPTIONS": [
-      "At the start of your next turn, 失去 #b",
+      "At the start of your 下回合, 失去 #b",
       " [E] 。"
     ]
   },

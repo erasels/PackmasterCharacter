@@ -23,7 +23,7 @@
   },
   "${ModID}:Prediction": {
     "NAME": "Prediction",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If no enemy intends to attack, 获得 it next turn instead。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If no enemy intends to attack, 获得 it 下回合 instead。"
   },
   "${ModID}:ForceBolt": {
     "NAME": "Force Bolt",

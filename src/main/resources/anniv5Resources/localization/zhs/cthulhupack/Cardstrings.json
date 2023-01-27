@@ -1,46 +1,46 @@
 {
   "${ModID}:BeyondTheStars": {
-      "NAME": "Beyond the Stars",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 a *Madness。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 a *Madness+。"
+    "NAME": "跨越星辰",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得一张 *疯狂 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得一张 *疯狂+ 。"
   },
   "${ModID}:NamelessMist": {
-    "NAME": "Nameless Mist",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 another !M! 每当 you play 一张牌 本回合。"
+    "NAME": "无名之雾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合之后每打出一张牌，再获得 !M! 点。"
   },
   "${ModID}:FlailingTendril": {
-    "NAME": "Flailing Tendril",
-    "DESCRIPTION": "造成 !D! 点伤害 并给予 !M! ${ModID}:扭曲 to a random enemy。"
+    "NAME": "触手鞭击",
+    "DESCRIPTION": "造成 !D! 点伤害并随机给予 !M! 层 ${ModID}:扭曲 。"
   },
   "${ModID}:PageOfTheDead": {
-    "NAME": "Page of the Dead",
-    "DESCRIPTION": "获得 a *Necronomicurse. NL The next Attack you play that costs 2 or more is played twice。",
-    "UPGRADE_DESCRIPTION": "The next Attack you play that costs 2 or more is played twice。"
+    "NAME": "死灵之页",
+    "DESCRIPTION": "获得一张 *死灵诅咒。 NL 下张2+耗能的攻击牌打出两次。",
+    "UPGRADE_DESCRIPTION": "下张2+耗能的攻击牌打出两次。"
   },
   "${ModID}:FamilialCurse": {
-    "NAME": "Familial Curse",
-    "DESCRIPTION": "给予 !M! ${ModID}:Ruin to 所有敌人. NL Next turn, 获得 a *Madness 并失去 1 生命。"
+    "NAME": "家族诅咒",
+    "DESCRIPTION": "对所有敌人给予 !M! 层 ${ModID}:荒芜 。 NL 下回合获得一张 *疯狂 并失去1点生命。"
   },
   "${ModID}:GazeTheVoid": {
-    "NAME": "Gaze the Void",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL Enter ${ModID}:Nightmare。"
+    "NAME": "凝视虚无",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 进入 ${ModID}:梦魇 。"
   },
   "${ModID}:AllSeeing": {
-    "NAME": "All Seeing",
-    "DESCRIPTION": "At the end of each turn, Scry !M! 并take 3 damage。"
+    "NAME": "全知",
+    "DESCRIPTION": "回合结束时， NL 预见 !M! 并受到3点伤害。"
   },
   "${ModID}:EndOfDays": {
-    "NAME": "End of Days",
-    "DESCRIPTION": "At end of turn, Channel a Dark for each [E] unspent。",
-    "UPGRADE_DESCRIPTION": "获得 !M! Focus. NL At end of turn, Channel a Dark for each [E] unspent。"
+    "NAME": "余日",
+    "DESCRIPTION": "回合结束时，每有1点未使用的 [E] ， 生成 一个 黑暗 充能球。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 集中。 NL 回合结束时，每有1点未使用的 [E] ， 生成 一个 黑暗 充能球。"
   },
   "${ModID}:RlyehFhtagn": {
-    "NAME": "R'lyeh Fhtagn",
-    "DESCRIPTION": "Put EVERYONE to sleep. Next turn, 获得 3 *Madness 并失去 3 生命。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. Next turn, 获得 3 *Madness+ 并失去 3 生命。 NL 消耗 。"
+    "NAME": "弢莜燊暠",
+    "DESCRIPTION": "所有单位陷入沉睡。 NL 下回合，获得3张 *疯狂 并失去3点生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "所有单位陷入沉睡。 NL 下回合，获得3张 *疯狂+ 并失去3点生命。 NL 消耗 。"
   },
   "${ModID}:StarSpawn": {
-    "NAME": "Star Spawn",
-    "DESCRIPTION": "Deal 13 damage twice. NL Heal !M! 生命。 NL Channel a Plasma. NL 消耗 。"
+    "NAME": "斗星召唤",
+    "DESCRIPTION": "造成13点伤害两次。 NL 回复 !M! 点生命。 NL 生成 一个 等离子 充能球。 NL 消耗 。"
   }
 }

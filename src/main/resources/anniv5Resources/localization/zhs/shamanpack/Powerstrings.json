@@ -1,11 +1,11 @@
 {
-  "${ModID}:燃烧": {
+  "${ModID}:Ignite": {
     "NAME": "Ignite",
     "DESCRIPTIONS": ["回合结束时， 失去 #b{0} 生命。", "At the start of its turn, 失去s #b{0} 生命。"]
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "Freeze 并Burn",
-    "DESCRIPTIONS": ["At the start of your next turn, deal #b{0} damage to 所有敌人。"]
+    "DESCRIPTIONS": ["At the start of your 下回合, deal #b{0} damage to 所有敌人。"]
   },
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",

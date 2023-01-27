@@ -16,9 +16,10 @@
   {
     "PROPER_NAME": "Ruin",
     "NAMES": [
-      "ruin"
+      "ruin",
+      "荒芜"
     ],
-    "DESCRIPTION": "The next time a creature with #yRuin takes un格挡ed attack damage, they 失去 生命 equal to their #yRuin。"
+    "DESCRIPTION": "该单位下次受到未被格挡的攻击伤害时，其失去 #y荒芜 层数点生命。"
   },
   {
     "PROPER_NAME": "Oblivion",

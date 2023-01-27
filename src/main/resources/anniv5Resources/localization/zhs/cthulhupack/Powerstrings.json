@@ -2,30 +2,30 @@
   "${ModID}:NamelessMistPower": {
     "NAME": "Nameless Mist",
     "DESCRIPTIONS": [
-      "每当 you play 一张牌 本回合, 获得 #b",
-      " #y格挡 。"
+      "本回合每打出一张牌， 获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "${ModID}:PageOfTheDeadPower": {
-    "NAME": "Page of the Dead",
+    "NAME": "死灵之页",
     "DESCRIPTIONS": [
-      "The next #b",
-      " Attack(s) played that cost #b2 or more are played twice。"
+      "下 #b",
+      " 张 #b2 耗能以上的 #y攻击 牌打出两次。"
     ]
   },
   "${ModID}:AllSeeingPower": {
-    "NAME": "All Seeing",
+    "NAME": "全知",
     "DESCRIPTIONS": [
-      "At the end of each turn, Scry #b",
-      " 并take ",
-      " damage。"
+      "你的回合结束时，预见 #b",
+      " 并受到 #b",
+      " 点伤害。"
     ]
   },
   "${ModID}:EndOfDaysPower": {
     "NAME": "End of Days",
     "DESCRIPTIONS": [
-      "回合结束时， #yChannel #b",
-      " #yDark for each [E] unspent。"
+      "回合结束时，每有 #b1 点未使用的 [E] ， #y生成 #b",
+      " 个 #y黑暗 充能球。"
     ]
   }
 }

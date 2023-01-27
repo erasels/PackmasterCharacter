@@ -47,8 +47,8 @@
   },
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "Pocket Tournament",
-    "DESCRIPTION": "Next turn, randomly, 2X times: NL 抽一张牌, 获得 [E] , 获得 1 力量 or 获得 3 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Next turn, randomly, 2X+2 times: NL 抽一张牌, 获得 [E] , 获得 1 力量 or 获得 3 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "下回合, randomly, 2X times: NL 抽一张牌, 获得 [E] , 获得 1 力量 or 获得 3 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下回合, randomly, 2X+2 times: NL 抽一张牌, 获得 [E] , 获得 1 力量 or 获得 3 格挡 。 NL 消耗 。"
   },
   "${ModID}:StoneSwordCommonAttack": {
     "NAME": "Stone Sword",

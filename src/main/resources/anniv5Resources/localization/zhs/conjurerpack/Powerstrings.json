@@ -1,16 +1,16 @@
 {
   "${ModID}:GeomorphologyPower": {
-    "NAME": "Geomorphology",
+    "NAME": "地貌学",
     "DESCRIPTIONS": [
-      "每当 you 消耗 一张牌 or Channel an Orb, 给予 #b",
-      " #yPetra to a random enemy。"
+      "每当你 消耗 一张牌或 生成 一个充能球时，随机给予一名敌人 #b",
+      " 层 #y土元素 。"
     ]
   },
-  "${ModID}:土元素Power": {
-    "NAME": "Petra",
+  "${ModID}:PetraPower": {
+    "NAME": "土元素",
     "DESCRIPTIONS": [
-      "When you attack this creature, 获得 ",
-      "% of damage dealt as #y格挡 next turn。"
+      "攻击该单位时，下回合获得造成未被格挡伤害 #b",
+      "% 的 #y格挡 。"
     ]
   }
 }

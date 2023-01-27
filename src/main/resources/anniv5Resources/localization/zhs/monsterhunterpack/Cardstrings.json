@@ -53,8 +53,8 @@
   },
   "${ModID}:SlimeHammer": {
     "NAME": "Slime Hammer",
-    "DESCRIPTION": "造成 !D! 点伤害 at the end of the next turn。",
-    "UPGRADE_DESCRIPTION": "给予1层 虚弱. NL 造成 !D! 点伤害 at the end of the next turn。"
+    "DESCRIPTION": "造成 !D! 点伤害 at the end of the 下回合。",
+    "UPGRADE_DESCRIPTION": "给予1层 虚弱. NL 造成 !D! 点伤害 at the end of the 下回合。"
   },
   "${ModID}:SlaverWhip": {
     "NAME": "Slaver's Whip",

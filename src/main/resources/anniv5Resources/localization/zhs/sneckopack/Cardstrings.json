@@ -5,7 +5,7 @@
   },
   "${ModID}:Sliiiiither": {
     "NAME": "Sliiiiither",
-    "DESCRIPTION": "Next turn, 抽 !M! to 3 additional 张牌。"
+    "DESCRIPTION": "下回合, 抽 !M! to 3 additional 张牌。"
   },
   "${ModID}:TailFlail": {
     "NAME": "Tail Flail",

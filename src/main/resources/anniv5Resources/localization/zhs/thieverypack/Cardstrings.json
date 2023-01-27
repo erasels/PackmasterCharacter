@@ -13,7 +13,7 @@
   },
   "${ModID}:NullHammer": {
     "NAME": "Null Hammer",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Steal all buffs this enemy 获得s until your next turn。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Steal all buffs this enemy 获得s until your 下回合。"
   },
   "${ModID}:Magnet": {
     "NAME": "Magnet",

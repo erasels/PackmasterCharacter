@@ -1,15 +1,15 @@
 {
   "${ModID}:CthulhuPack": {
     "TEXT": [
-      "Eldritch Horror",
-      "The obligatory C'thulhu expansion. Features orbs, Nightmare stance, Distortion, 并Entropy mechanics。",
+      "怪异恐怖",
+      "当然会有的克苏鲁扩展包。机制包括充能球、梦魇形态、扭曲，以及熵。",
       "MichaelMayhem"
     ]
   },
   "${ModID}:CthulhuPackHat": {
     "TEXT": [
-      "This horror from beyond the stars now nests snugly upon your head。",
-      "Eldritch Symbiote"
+      "来自比星辰还要遥远的恐怖物体现在舒适地住在你头上。",
+      "怪异共生体"
     ]
   }
 }

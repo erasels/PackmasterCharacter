@@ -22,13 +22,13 @@
   },
   "${ModID}:IcyFloe": {
     "NAME": "Icy Floe",
-    "DESCRIPTION": "${ModID}:Flow. NL Next turn, NL 获得 [E] [E]。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL Next turn, NL 获得 [E] [E] [E]。"
+    "DESCRIPTION": "${ModID}:Flow. NL 下回合, NL 获得 [E] [E]。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL 下回合, NL 获得 [E] [E] [E]。"
   },
   "${ModID}:Pneumatics": {
     "NAME": "Pneumatics",
-    "DESCRIPTION": "${ModID}:Flow. NL At the start of your next turn, ${ModID}:Flow. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL At the start of your next turn, ${ModID}:Flow。"
+    "DESCRIPTION": "${ModID}:Flow. NL At the start of your 下回合, ${ModID}:Flow. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:Flow. NL At the start of your 下回合, ${ModID}:Flow。"
   },
   "${ModID}:ReleaseValve": {
     "NAME": "Release Valve",

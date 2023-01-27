@@ -9,7 +9,7 @@
   "${ModID}:DiehardPower": {
     "NAME": "Diehard",
     "DESCRIPTIONS": [
-      "Next turn, 获得 #b",
+      "下回合, 获得 #b",
       " #yWeak 并#yFrail。"
     ]
   }

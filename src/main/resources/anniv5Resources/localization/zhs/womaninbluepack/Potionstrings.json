@@ -14,7 +14,7 @@
       "Modify all #y攻击s in hand: 'Name 获得s Claw'. #ySharpen #b"
     ]
   },
-  "${ModID}:抽ClawsPotion": {
+  "${ModID}:DrawClawsPotion": {
     "NAME": "Swifter Potion",
     "DESCRIPTIONS": [
       "抽 #b",

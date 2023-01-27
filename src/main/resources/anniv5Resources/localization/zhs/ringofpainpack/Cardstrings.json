@@ -18,7 +18,7 @@
   "${ModID}:Shackles": {
     "NAME": "Shackles",
     "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL ${ModID}:Evolves when you play 一张牌 that costs at least !M! 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL 格挡 is not removed at the start of your next turn。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL 格挡 is not removed at the start of your 下回合。",
     "EXTENDED_DESCRIPTION": ["Huge Shackles"]
   },
   "${ModID}:IceBeast": {

@@ -1,8 +1,8 @@
 {
   "${ModID}:Nightmare": {
-    "NAME": "Nightmare",
+    "NAME": "梦魇",
     "DESCRIPTION": [
-      "When you play #yMadness, exit #yNightmare #yStance. NL When you exit #yNightmare #yStance, 抽 #b2 cards 获得 [E] , 并失去 #b1 生命。"
+      "打出 #y疯狂 后，退出该 #y姿态 。 NL 退出时，抽 #b2 张牌并获得 [E] ，再失去 #b1 点生命。"
     ]
   }
 }
