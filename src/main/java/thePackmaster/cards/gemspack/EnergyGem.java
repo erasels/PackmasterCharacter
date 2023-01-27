@@ -4,6 +4,7 @@ import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import thePackmaster.cardmodifiers.gemspack.EnergyGemMod;
 import thePackmaster.util.Wiz;
 
@@ -23,7 +24,7 @@ public class EnergyGem extends AbstractGemsCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new GainEnergyAction(1));
+        Wiz.applyToSelf(new EnergizedPower(p, 1));
     }
 
  
