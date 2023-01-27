@@ -18,7 +18,7 @@ public class OverwhelmingPowerPower extends AbstractPackmasterPower {
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public OverwhelmingPowerPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
-        super(POWER_ID, NAME, AbstractPower.PowerType.BUFF, false, owner, amount);
+        super(POWER_ID, NAME, AbstractPower.PowerType.DEBUFF, false, owner, amount);
     }
 
     public void atEndOfTurn(boolean isPlayer)
