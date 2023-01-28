@@ -21,7 +21,7 @@
   },
   "${ModID}:Recall": {
     "NAME": "Recall",
-    "DESCRIPTION": "The first time a card is ${ModID}:Amplified each turn, put a card from your Exhaust pile into your hand."
+    "DESCRIPTION": "The first time a card is ${ModID}:Amplified each turn, put a card from your Exhaust pile into your hand. It gains stslib:Purge."
   },
   "${ModID}:RefractEnergy": {
     "NAME": "Refract Energy",

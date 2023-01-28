@@ -12,11 +12,7 @@
       "Open Eye"
     ]
   },
-  "${ModID}:ExhumeArbitraryNumberOfCardsAction": {
-    "TEXT": [
-      "Choose a card to return to your hand",
-      "Choose ",
-      " cards to return to your hand"
-    ]
+  "${ModID}:PurgeModifier": {
+    "TEXT": [" NL stslib:Purge."]
   }
 }
