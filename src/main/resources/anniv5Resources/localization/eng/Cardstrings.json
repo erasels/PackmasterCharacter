@@ -17,7 +17,6 @@
   },
   "${ModID}:PackRip": {
     "NAME": "Pack Rip",
-    "DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand and Upgrade them. NL Exhaust."
+    "DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand. NL Exhaust."
   }
 }
