@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Bounty",
+    "PROPER_NAME": "赏金",
     "NAMES": [
-      "bounty"
+      "bounty",
+      "赏金"
     ],
-    "DESCRIPTION": "Normal Enemy: #b15 gold.      Elite Enemy: #b40 gold.            Boss: #b100 gold。"
+    "DESCRIPTION": "普通怪物： #b15 金币。 NL 精英怪物： #b40 金币。 NL 首领怪物： #b100 金币。"
   }
 ]

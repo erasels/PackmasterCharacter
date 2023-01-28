@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Buried",
+    "PROPER_NAME": "被葬",
     "NAMES": [
-      "buried"
+      "buried",
+      "被葬"
     ],
-    "DESCRIPTION": "A class card (not Colorless, Status, or Curse) from your 消耗 pile。"
+    "DESCRIPTION": "消耗堆中非无色、非诅咒的可打出牌。"
   }
 ]

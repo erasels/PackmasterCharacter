@@ -1,10 +1,10 @@
 {
   "${ModID}:DeterminationPower": {
     "NAME": "Determination",
-    "DESCRIPTIONS": ["每当 a debuff is applied to you, 获得 #b", " #y力量 。"]
+    "DESCRIPTIONS": ["每当你获得负面状态时，获得 #b", " 点 #y力量 。"]
   },
   "${ModID}:OverwhelmingPowerPower": {
-    "NAME": "Overwhelming Power",
-    "DESCRIPTIONS": ["失去 #b"," 生命 if you end your turn with 0 Energy。"]
+    "NAME": " Power",
+    "DESCRIPTIONS": ["若回合结束时你的 #y能量 为 #b0 ，失去 #b"," 点生命。"]
   }
 }

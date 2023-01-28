@@ -1,15 +1,15 @@
 {
   "${ModID}:HermitPack": {
     "TEXT": [
-      "Hermit",
-      "A collection of Hermit cards, focusing on great power at a great cost。",
+      "亡命之徒",
+      "一套亡命之徒牌，高代价高收益。",
       "AlexMdle"
     ]
   },
   "${ModID}:HermitPackHat": {
     "TEXT": [
-      "Rugged 并bruised, but can still be worn。",
-      "Hermit Hat"
+      "凹凸不平又满是伤痕，但仍能戴起来。",
+      "亡命者之帽"
     ]
   }
 }
