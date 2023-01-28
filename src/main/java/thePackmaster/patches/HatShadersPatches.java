@@ -19,6 +19,9 @@ import javassist.CtBehavior;
 
 import java.util.Set;
 
+import static com.badlogic.gdx.graphics.GL20.GL_ONE_MINUS_DST_ALPHA;
+import static com.badlogic.gdx.graphics.GL20.GL_SRC_ALPHA;
+
 
 public class HatShadersPatches {
 
@@ -45,7 +48,7 @@ public class HatShadersPatches {
 
         @SpireInsertPatch(locator = BeginBufferLocator.class, localvars = {"slot"})
         public static void beginBuffer(PolygonSpriteBatch batch, Slot slot) {
-            if (slot.getAttachment().getName().equals("hat")) {
+            if (slot.getAttachment().getName().equals("hat") || slot.getAttachment().getName().equals("packmaster_hat")) {
                 isBufferOn = true;
                 batch.flush();
                 if (buffer == null) {
@@ -57,6 +60,7 @@ public class HatShadersPatches {
                 Gdx.gl.glColorMask(true, true, true, true);
                 batch.setShader(GoldShader);
                 updateShader();
+                batch.setBlendFunction(770, 771);
             }
         }
     }
@@ -70,17 +74,16 @@ public class HatShadersPatches {
                 __instance.flush();
                 buffer.end();
                 isBufferOn = false;
+                __instance.setShader(null);
                 if (playerTexture == null) {
                     playerTexture = new TextureRegion(buffer.getColorBufferTexture());
                     playerTexture.flip(false, true);
                 } else {
                     playerTexture.setTexture(buffer.getColorBufferTexture());
                 }
-                __instance.setShader(GoldShader);
-                updateShader();
                 __instance.draw(playerTexture,-Settings.VERT_LETTERBOX_AMT, -Settings.HORIZ_LETTERBOX_AMT);
                 __instance.flush();
-                __instance.setShader(null);
+
             }
         }
     }
@@ -121,22 +124,12 @@ public class HatShadersPatches {
     public static void updateShader(boolean isShoulder) {
         initShader();
         if (GoldShader != null) {
-            if (isShoulder) {
-                GoldShader.setUniformf("u_time", shaderTimer);
-                GoldShader.setUniformf("u_strength", SHADER_STRENGTH);
-                GoldShader.setUniformf("u_speed", SHADER_SPEED_SHOULDER);
-                GoldShader.setUniformf("u_angle", SHADER_ANGLE + shaderTimer*3f);
-                GoldShader.setUniformf("u_width", SHADER_WIDTH_SHOULDER);
-                shaderTimer += Gdx.graphics.getDeltaTime();
-            } else {
-                GoldShader.setUniformf("u_width", SHADER_WIDTH);
-                GoldShader.setUniformf("u_strength", SHADER_STRENGTH);
-                GoldShader.setUniformf("u_speed", SHADER_SPEED);
-                GoldShader.setUniformf("u_angle", SHADER_ANGLE + shaderTimer*4f);
-                shaderTimer += Gdx.graphics.getDeltaTime();
-            }
+            GoldShader.setUniformf("u_width", SHADER_WIDTH);
+            GoldShader.setUniformf("u_strength", SHADER_STRENGTH);
+            GoldShader.setUniformf("u_speed", SHADER_SPEED);
+            GoldShader.setUniformf("u_angle", SHADER_ANGLE + shaderTimer*4f);
+            shaderTimer += Gdx.graphics.getDeltaTime();
         }
-
     }
 
 }
