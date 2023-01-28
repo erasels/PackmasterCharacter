@@ -40,7 +40,7 @@
   },
   "${ModID}:FlawlessPrism": {
     "NAME": "Flawless Prism",
-    "DESCRIPTION": "At the start of your turn, add !M! ${ModID}:different\u00a0color Power card to your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add !M! ${ModID}:different\u00a0color Power cards to your hand."
+    "DESCRIPTION": "At the start of your turn, add !M! random ${ModID}:different\u00a0color Power card to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add !M! random ${ModID}:different\u00a0color Power cards to your hand."
   }
 }

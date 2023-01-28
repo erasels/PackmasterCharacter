@@ -22,7 +22,7 @@ public class Cognition extends AbstractCosmosCard implements AmplifyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DrawCardAction(magicNumber));
+        atb(new DrawCardAction(secondMagic));
     }
 
     @Override
