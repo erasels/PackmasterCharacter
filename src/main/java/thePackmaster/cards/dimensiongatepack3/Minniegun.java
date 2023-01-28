@@ -2,10 +2,12 @@ package thePackmaster.cards.dimensiongatepack3;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardEden;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -17,6 +19,7 @@ public class Minniegun extends AbstractDimensionalCardEden {
         super(ID, 1, CardRarity.COMMON, AbstractCard.CardType.ATTACK, CardTarget.ALL_ENEMY);
         baseDamage = 2;
         baseMagicNumber = magicNumber = 4;
+        cardsToPreview = new Jam();
 
     }
 
@@ -26,6 +29,7 @@ public class Minniegun extends AbstractDimensionalCardEden {
         for (int i = 0; i < magicNumber; i++) {
             addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
+        Wiz.atb(new MakeTempCardInDiscardAction(new Jam(), 1));
     }
 
     public void upp() {

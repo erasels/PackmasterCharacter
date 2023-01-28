@@ -83,7 +83,7 @@ public class WeaponPower extends AbstractPackmasterPower implements InvisiblePow
         }
 
         if (!hasAtLeastOneWeaponLeft) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+            removeThisInvisibly();
         }
     }
 

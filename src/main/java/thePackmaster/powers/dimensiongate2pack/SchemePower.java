@@ -24,7 +24,7 @@ public class SchemePower extends AbstractPackmasterPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && this.amount > 0 && (Wiz.getLogicalCardCost(card) == 0 || Wiz.getLogicalCardCost(card) == 0)) {
+        if (!card.purgeOnUse && this.amount > 0 && (Wiz.getLogicalCardCost(card) == 0 || Wiz.getLogicalCardCost(card) == 1)) {
 
             this.flash();
             AbstractMonster m = null;

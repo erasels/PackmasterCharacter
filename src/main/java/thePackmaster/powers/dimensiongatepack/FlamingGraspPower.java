@@ -2,13 +2,11 @@ package thePackmaster.powers.dimensiongatepack;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.InvisiblePower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.cards.dimensiongatepack.Channel;
+import thePackmaster.cards.dimensiongatepack2.Channel;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.MAGIC;
@@ -30,6 +28,7 @@ public class FlamingGraspPower extends AbstractPackmasterPower implements Invisi
             for (int i = 0; i < amount; i++) {
                 addToBot(new MakeTempCardInHandAction(new Channel()));
             }
+            removeThisInvisibly();
         }
     }
 }

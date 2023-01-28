@@ -1,16 +1,16 @@
 {
   "${ModID}:DimensionGate2Pack": {
     "TEXT": [
-      "Gate 2: Snake's Cries",
-      "Cards portalled in from other games! Coat your enemies in Poison while sifting through your deck for the right play.",
+      "Gate 2: Conjuration",
+      "Cards portalled in from other games! Use self-synergizing Magic cards and conjur cards & tokens rapidly.",
       "MichaelMayhem",
-      "Cards featured from the games: NL Vault of the Void NL Across the Obelisk NL One Step from Eden NL Griftlands NL NL Check them all out on Steam!"
+      "Cards featured from the games: NL Gordian Quest NL Tower Tactics Liberation NL Griftlands NL Roguebook NL Monster Train NL NL Check them all out on Steam!"
     ]
   },
   "${ModID}:DimensionGatePack2Hat": {
     "TEXT": [
-      "A most holy adornment.",
-      "Ottis' Hat"
+      "A bloody addition to your wardrobe.",
+      "Kudo's Hat"
     ]
   }
 }

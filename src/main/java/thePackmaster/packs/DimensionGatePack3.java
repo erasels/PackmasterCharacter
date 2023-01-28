@@ -3,9 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.dimensiongatepack3.Inferno;
-import thePackmaster.cards.dimensiongatepack3.Knighthood;
-import thePackmaster.cards.dimensiongatepack3.Minniegun;
+import thePackmaster.cards.dimensiongatepack3.*;
 
 import java.util.ArrayList;
 
@@ -24,9 +22,17 @@ public class DimensionGatePack3 extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(Minniegun.ID);
+        cards.add(Corset.ID);
         cards.add(Inferno.ID);
+        cards.add(Jam.ID);
         cards.add(Knighthood.ID);
+        cards.add(MantisStrike.ID);
+        cards.add(Minniegun.ID);
+        cards.add(Ouroboros.ID);
+        cards.add(RestorationDetonation.ID);
+        cards.add(SelfWound.ID);
+        cards.add(SignInBlood.ID);
+        cards.add(SpreadingSpores.ID);
         return cards;
     }
 }

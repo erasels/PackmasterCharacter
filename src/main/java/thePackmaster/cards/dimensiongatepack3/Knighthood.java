@@ -2,12 +2,14 @@ package thePackmaster.cards.dimensiongatepack3;
 
 import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardStorybook;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.ISCARDMODIFIED;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -21,12 +23,13 @@ public class Knighthood extends AbstractDimensionalCardStorybook {
         super(ID, 3, CardRarity.RARE, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.SELF);
 
         exhaust = true;
+        baseMagicNumber = magicNumber = 5;
         tags.add(CardTags.HEALING);
-        isEthereal = true;
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        Wiz.atb(new LoseHPAction(p,p,magicNumber));
         atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], AbstractCard::canUpgrade, (cards) -> {
             AbstractCard q = cards.get(0);
             q.upgrade();
@@ -40,7 +43,6 @@ public class Knighthood extends AbstractDimensionalCardStorybook {
     }
 
     public void upp() {
-        isEthereal = false;
-        selfRetain = true;
+        upgradeMagicNumber(-3);
     }
 }

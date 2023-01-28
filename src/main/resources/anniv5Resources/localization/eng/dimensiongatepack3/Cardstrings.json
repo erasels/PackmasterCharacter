@@ -1,23 +1,51 @@
 {
   "${ModID}:Knighthood": {
     "NAME": "Knighthood",
-    "DESCRIPTION": "Ethereal. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
+    "DESCRIPTION": "Lose !M! HP. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " to Upgrade permanently."
     ]
   },
   "${ModID}:Inferno": {
     "NAME": "Inferno",
-    "DESCRIPTION": "Retain. NL ${ModID}:Hoard !hoard!: Deal !D! damage to ALL enemies. NL stslib:Persist !stslib:persist! ."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If this did not end combat, take 3 damage."
   },
   "${ModID}:Minniegun": {
     "NAME": "Minniegun",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Put a *Jam in your discard pile."
   },
-  "${ModID}:PackRat": {
-    "NAME": "Pack Rat",
-    "DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and remove this from your deck permanently.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and *Downgrade this permanently."
+  "${ModID}:Ouroboros": {
+    "NAME": "Ouroboros",
+    "DESCRIPTION": "At the end of any turn in which you fully blocked a source of damage, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of any turn in which you fully blocked a source of damage, gain 1 Strength."
+  },
+  "${ModID}:Corset": {
+    "NAME": "Corset",
+    "DESCRIPTION": "Take 3 damage. NL Gain !B! Block."
+  },
+  "${ModID}:Jam": {
+    "NAME": "Jam",
+    "DESCRIPTION": "Take 3 damage. NL Draw a card. NL Exhaust."
+  },
+  "${ModID}:MantisStrike": {
+    "NAME": "Mantis Strike",
+    "DESCRIPTION": "Take 3 damage. NL Deal !D! damage. NL Deal !D! damage to ALL enemies."
+  },
+  "${ModID}:RestorationDetonation": {
+    "NAME": "Restoration Detonation",
+    "DESCRIPTION": "Heal !M! HP. NL Enemy loses twice the amount of HP gained. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Heal !M! HP. NL Enemy loses three times the amount of HP gained. NL Exhaust."
+  },
+  "${ModID}:SelfWound": {
+    "NAME": "Self Wound",
+    "DESCRIPTION": "Take 3 damage. NL Heal !M! HP. NL Exhaust."
+  },
+  "${ModID}:SignInBlood": {
+    "NAME": "Sign in Blood",
+    "DESCRIPTION": "Take 3 damage. NL Draw 3 cards. NL Gain !M! temporary Strength."
+  },
+  "${ModID}:SpreadingSpores": {
+    "NAME": "Spreading Spores",
+    "DESCRIPTION": "Gain 5 Thorns. NL Gain !M! Regen."
   }
 }

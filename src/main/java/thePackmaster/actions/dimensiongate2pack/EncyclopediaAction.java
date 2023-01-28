@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import thePackmaster.cards.dimensiongatepack2.TheEncyclopedia;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -21,12 +20,15 @@ public class EncyclopediaAction extends AbstractGameAction {
     private AbstractPlayer p;
     private String text;
 
+    private int amount;
+
     public EncyclopediaAction(int amount, String text) {
         this.p = AbstractDungeon.player;
         this.setValues(this.p, AbstractDungeon.player, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
         this.text = text;
+        this.amount = amount;
     }
 
     public void update() {
@@ -75,11 +77,10 @@ public class EncyclopediaAction extends AbstractGameAction {
     private ArrayList<AbstractCard> generateCardChoices() {
         ArrayList<AbstractCard> derp = new ArrayList<>();
 
-        while(derp.size() != 3) {
+        while(derp.size() != amount) {
             boolean dupe = false;
             AbstractCard tmp = null;
             tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
-            tmp.modifyCostForCombat(-2);
 
             for (AbstractCard c : derp) {
                 if (c.cardID.equals(tmp.cardID)) {
@@ -89,7 +90,8 @@ public class EncyclopediaAction extends AbstractGameAction {
             }
 
             if (!dupe) {
-                derp.add(tmp.makeCopy());
+                tmp.modifyCostForCombat(-2);
+                derp.add(tmp);
             }
         }
 

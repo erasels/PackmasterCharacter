@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.dimensiongatepack.*;
+import thePackmaster.cards.dimensiongatepack2.*;
 
 import java.util.ArrayList;
 
@@ -22,20 +23,17 @@ public class DimensionGatePack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(ArsenalGear.ID);
-        cards.add(Channel.ID);
-        cards.add(ConjureBarrage.ID);
-        cards.add(Crusher.ID);
-        cards.add(Daggerstorm.ID);
-        cards.add(FlamePillar.ID);
-        cards.add(FlamingGrasp.ID);
-        cards.add(Haymaker.ID);
-        cards.add(MagicMissile.ID);
-        cards.add(ManaShield.ID);
-        cards.add(MuscleMemory.ID);
-        cards.add(PreservedThorns.ID);
-        cards.add(Sting.ID);
-        cards.add(WallOfFire.ID);
+        cards.add(Anemia.ID);
+        cards.add(LethalShot.ID);
+        cards.add(BleedItOut.ID);
+        cards.add(BoosterShot.ID);
+        cards.add(RangersSetup.ID);
+        cards.add(Scheme.ID);
+        cards.add(ScrollOfIntellect.ID);
+        cards.add(Sustenance.ID);
+        cards.add(TheEncyclopedia.ID);
+        cards.add(TomeOfIntellect.ID);
+        cards.add(Trace.ID);
         return cards;
     }
 }

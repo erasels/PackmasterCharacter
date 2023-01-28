@@ -10,7 +10,15 @@
     "NAME": "Arsenal Gear",
     "DESCRIPTIONS": [
       "At the start of your next #b",
-      " turn(s), add a random Uncommon or Rare card to your hand. It costs 0."
+      " turn(s), add a random Uncommon or Rare card to your hand. It costs 0 and gains Exhaust."
+    ]
+  },
+  "${ModID}:DaggerstormPower": {
+    "NAME": "Daggerstorm",
+    "DESCRIPTIONS": [
+      "When you play a 0-Cost Exhaust card, play ",
+      " copy of it.",
+      " copies of it."
     ]
   }
 }

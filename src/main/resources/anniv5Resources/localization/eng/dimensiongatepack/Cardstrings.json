@@ -1,62 +1,50 @@
 {
-  "${ModID}:ArsenalGear": {
-    "NAME": "Arsenal Gear",
-    "DESCRIPTION": "At the start of the next !M! turns, gain a random *Uncommon or *Rare card. It costs 0 and gains Exhaust."
+  "${ModID}:Anemia": {
+    "NAME": "Anemia",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to any Poisoned enemies."
   },
-  "${ModID}:ConjureBarrage": {
-    "NAME": "Conjure Barrage",
-    "DESCRIPTION": "*Magic. NL Add !M! *Magic *Missiles to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add !M! *Magic *Missiles+ to your hand. NL Exhaust."
+  "${ModID}:LethalShot": {
+    "NAME": "Lethal Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison and !${ModID}:m2! Vulnerable."
   },
-  "${ModID}:MagicMissile": {
-    "NAME": "Magic Missile",
-    "DESCRIPTION": "*Magic. Retain. NL Deal !D! damage. NL Increase the damage dealt by *Magic cards by !M! this turn."
+  "${ModID}:BleedItOut": {
+    "NAME": "Bleed It Out",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Poison, trigger it. Otherwise apply !M! Poison."
   },
-  "${ModID}:Channel": {
-    "NAME": "Channel",
-    "DESCRIPTION": "*Magic. Retain. NL Reduce the cost of a random *Magic card in hand by !M! this turn. NL Exhaust."
+  "${ModID}:Trace": {
+    "NAME": "Trace",
+    "DESCRIPTION": "Scry !M!."
   },
-  "${ModID}:Daggerstorm": {
-    "NAME": "Daggerstorm",
-    "DESCRIPTION": "Whenever you play a 0-cost Exhaust card, play a copy of it."
+  "${ModID}:BoosterShot": {
+    "NAME": "Booster Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Enemy heals !${ModID}:m2! HP."
   },
-  "${ModID}:FlamingGrasp": {
-    "NAME": "Flaming Grasp",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL The next time you use a *Magic card, gain a *Flame *Pillar."
+  "${ModID}:RangersSetup": {
+    "NAME": "Ranger's Setup",
+    "DESCRIPTION": "Draw !M! cards. NL Put 2 cards from your hand onto the top of your draw pile."
   },
-  "${ModID}:FlamePillar": {
-    "NAME": "Flame Pillar",
-    "DESCRIPTION": "*Magic. NL Apply !M! ${ModID}:Ignite. NL Gain a *Channel."
+  "${ModID}:Scheme": {
+    "NAME": "Scheme",
+    "DESCRIPTION": "Next turn, the first card you play that costs 1 or less is played twice."
   },
-  "${ModID}:Haymaker": {
-    "NAME": "Haymaker",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card played this turn."
+  "${ModID}:ScrollOfIntellect": {
+    "NAME": "Scroll of Intellect",
+    "DESCRIPTION": "Draw a card. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain [E]. NL Exhaust."
   },
-  "${ModID}:ManaShield": {
-    "NAME": "Mana Shield",
-    "DESCRIPTION": "*Magic. NL Gain !B! Block. NL Gain a *Channel.",
-    "UPGRADE_DESCRIPTION": "*Magic. NL Gain !B! Block. NL Gain !M! *Channels."
+  "${ModID}:Sustenance": {
+    "NAME": "Sustenance",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Poison to a random enemy. NL stslib:Persist !stslib:persist!"
   },
-  "${ModID}:MuscleMemory": {
-    "NAME": "Muscle Memory",
-    "DESCRIPTION": "Choose a card in your draw pile. Add a copy to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in your draw pile. Add a copy to your hand. NL Exhaustive !stslib:ex!."
+  "${ModID}:TheEncyclopedia": {
+    "NAME": "The Encyclopedia",
+    "DESCRIPTION": "Choose 2 of !M! cards to shuffle into your draw pile. They cost 2 less. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose cards to add to your draw pile."
+    ]
   },
-  "${ModID}:Crusher": {
-    "NAME": "Crusher",
-    "DESCRIPTION": "Retain. NL Deal 20 damage. NL When you create a card, reduce *Crusher's cost by 1 until played."
-  },
-  "${ModID}:PreservedThorns": {
-    "NAME": "Preserved Thorns",
-    "DESCRIPTION": "Gain !B! Block. NL Add a *Sting to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Stings to your hand."
-  },
-  "${ModID}:Sting": {
-    "NAME": "Sting",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, draw an additional card. NL Exhaust."
-  },
-  "${ModID}:WallOfFire": {
-    "NAME": "Wall of Fire",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage to a random enemy !M! times. NL Gain 3 *Flame *Pillars."
+  "${ModID}:TomeOfIntellect": {
+    "NAME": "Tome of Intellect",
+    "DESCRIPTION": "Shuffle !M! *Scrolls *of *Intellect into your draw pile. At the start of your turn, shuffle 1 more."
   }
 }
