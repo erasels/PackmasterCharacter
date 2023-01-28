@@ -19,7 +19,7 @@ public class Absolution extends AbstractDragonwrathCard {
 
     public Absolution(){
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF_AND_ENEMY);
-        magicNumber = baseMagicNumber = 4;
+        magicNumber = baseMagicNumber = 5;
         secondMagic = baseSecondMagic = 2;
     }
 
@@ -27,8 +27,8 @@ public class Absolution extends AbstractDragonwrathCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(m,p,new PenancePower(m,p,magicNumber)));
-        Wiz.applyToSelf(new AbsolutionPower(p,secondMagic));
+        addToBot(new ApplyPowerAction(m, p, new PenancePower(m, p, magicNumber)));
+        Wiz.applyToSelf(new AbsolutionPower(p, secondMagic));
     }
 
     @Override
@@ -39,8 +39,8 @@ public class Absolution extends AbstractDragonwrathCard {
     // Upgraded stats.
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
-        upgradeSecondMagic(1);
+        upgradeMagicNumber(3);
+        //upgradeSecondMagic(1);
     }
 }
 
