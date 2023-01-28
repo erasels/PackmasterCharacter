@@ -25,7 +25,7 @@ public class ConjureBarrage extends AbstractDimensionalCardGordian {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard c;
         c = new MagicMissile();
-        if (upgraded){
+        if (upgraded) {
             c.upgrade();
         }
         for (int i = 0; i < magicNumber; i++) {

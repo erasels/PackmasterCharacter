@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.cards.dimensiongatepack2.Channel;
 import thePackmaster.cards.dimensiongatepack2.FlamePillar;
 import thePackmaster.powers.AbstractPackmasterPower;
 
@@ -19,13 +18,13 @@ public class FlamingGraspPower extends AbstractPackmasterPower implements Invisi
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public FlamingGraspPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
 
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.hasTag(MAGIC)){
+        if (card.hasTag(MAGIC)) {
             for (int i = 0; i < amount; i++) {
                 addToBot(new MakeTempCardInHandAction(new FlamePillar()));
             }

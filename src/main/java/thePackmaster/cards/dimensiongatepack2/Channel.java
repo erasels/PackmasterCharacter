@@ -26,13 +26,13 @@ public class Channel extends AbstractDimensionalCardGordian {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> targets = new ArrayList<>();
-        for (AbstractCard c:p.hand.group
-             ) {
-            if (c.hasTag(MAGIC) && Wiz.getLogicalCardCost(c) > 0){
+        for (AbstractCard c : p.hand.group
+        ) {
+            if (c.hasTag(MAGIC) && Wiz.getLogicalCardCost(c) > 0) {
                 targets.add(c);
             }
         }
-        if (!targets.isEmpty()){
+        if (!targets.isEmpty()) {
             addToBot(new ReduceCostForTurnAction(Wiz.getRandomItem(targets), magicNumber));
         }
 

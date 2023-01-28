@@ -24,7 +24,6 @@ public class LethalShot extends AbstractDimensionalCardObelisk {
     }
 
 
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         Wiz.applyToEnemy(m, new PoisonPower(m, p, magicNumber));

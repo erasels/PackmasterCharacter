@@ -1,11 +1,9 @@
 package thePackmaster.powers.dimensiongate3pack;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import thePackmaster.cards.dimensiongatepack.ScrollOfIntellect;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
@@ -19,13 +17,13 @@ public class OuroborosPower extends AbstractPackmasterPower {
     private boolean triggeredThisTurn = false;
 
     public OuroborosPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
 
     }
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount < Wiz.p().currentBlock){
+        if (damageAmount < Wiz.p().currentBlock) {
             triggeredThisTurn = true;
             this.flash();
             updateDescription();
@@ -36,7 +34,7 @@ public class OuroborosPower extends AbstractPackmasterPower {
     @Override
     public void atEndOfRound() {
 
-        if (triggeredThisTurn){
+        if (triggeredThisTurn) {
             Wiz.applyToSelf(new StrengthPower(Wiz.p(), amount));
         }
         triggeredThisTurn = false;
@@ -46,7 +44,7 @@ public class OuroborosPower extends AbstractPackmasterPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
 
-        if (triggeredThisTurn){
+        if (triggeredThisTurn) {
             Wiz.applyToSelf(new StrengthPower(Wiz.p(), amount));
         }
         triggeredThisTurn = false;

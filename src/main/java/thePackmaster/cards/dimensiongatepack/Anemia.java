@@ -7,7 +7,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardVault;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToEnemy;
+import static thePackmaster.util.Wiz.forAllMonstersLiving;
 
 public class Anemia extends AbstractDimensionalCardVault {
     public final static String ID = makeID("Anemia");
@@ -25,8 +26,8 @@ public class Anemia extends AbstractDimensionalCardVault {
         forAllMonstersLiving(this::applyEffect);
     }
 
-    public void applyEffect(AbstractMonster q){
-        if (q.hasPower(PoisonPower.POWER_ID)){
+    public void applyEffect(AbstractMonster q) {
+        if (q.hasPower(PoisonPower.POWER_ID)) {
             applyToEnemy(q, new WeakPower(q, magicNumber, false));
         }
     }

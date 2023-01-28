@@ -15,7 +15,7 @@ public class TomeOfIntellectPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public TomeOfIntellectPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
 
     }
 
@@ -27,7 +27,7 @@ public class TomeOfIntellectPower extends AbstractPackmasterPower {
 
     @Override
     public void updateDescription() {
-        if (amount > 1){
+        if (amount > 1) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         } else {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];

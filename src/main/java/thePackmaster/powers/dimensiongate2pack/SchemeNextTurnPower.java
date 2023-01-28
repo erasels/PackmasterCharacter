@@ -14,13 +14,13 @@ public class SchemeNextTurnPower extends AbstractPackmasterPower implements Invi
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public SchemeNextTurnPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
 
     }
 
     @Override
     public void atStartOfTurn() {
-        Wiz.applyToSelf(new SchemePower(owner,amount));
+        Wiz.applyToSelf(new SchemePower(owner, amount));
         removeThisInvisibly();
     }
 }

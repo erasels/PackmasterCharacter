@@ -7,7 +7,7 @@ import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardTowerTa
 import thePackmaster.powers.dimensiongatepack.ArsenalGearPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 
 public class ArsenalGear extends AbstractDimensionalCardTowerTactics {
@@ -23,7 +23,7 @@ public class ArsenalGear extends AbstractDimensionalCardTowerTactics {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       applyToSelf(new ArsenalGearPower(p, magicNumber));
+        applyToSelf(new ArsenalGearPower(p, magicNumber));
     }
 
     public void upp() {

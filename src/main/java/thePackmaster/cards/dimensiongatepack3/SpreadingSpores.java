@@ -1,14 +1,9 @@
 package thePackmaster.cards.dimensiongatepack3;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RegenPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
-import thePackmaster.actions.dimensiongatepack.SelfDamageAction;
-import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardTowerTactics;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardTrain;
 import thePackmaster.util.Wiz;
 

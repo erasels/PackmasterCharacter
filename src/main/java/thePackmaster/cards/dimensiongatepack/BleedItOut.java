@@ -1,6 +1,5 @@
 package thePackmaster.cards.dimensiongatepack;
 
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PersistFields;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,7 +21,7 @@ public class BleedItOut extends AbstractDimensionalCardVault {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.doDmg(m, damage, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        if (m.hasPower(PoisonPower.POWER_ID)){
+        if (m.hasPower(PoisonPower.POWER_ID)) {
             m.getPower(PoisonPower.POWER_ID).atStartOfTurn();
         } else {
             Wiz.applyToEnemy(m, new PoisonPower(m, p, magicNumber));

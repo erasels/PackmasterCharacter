@@ -1,13 +1,10 @@
 package thePackmaster.cards.dimensiongatepack3;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardInscryp;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardTrain;
 import thePackmaster.util.Wiz;
 
@@ -25,8 +22,7 @@ public class RestorationDetonation extends AbstractDimensionalCardTrain {
     }
 
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         int healthgained = Math.min(Wiz.p().maxHealth - Wiz.p().currentHealth, magicNumber);
 
         healthgained = healthgained * secondMagic;

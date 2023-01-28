@@ -2,13 +2,11 @@ package thePackmaster.cards.dimensiongatepack3;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import thePackmaster.actions.dimensiongatepack.SelfDamageAction;
-import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardEden;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardInscryp;
 import thePackmaster.util.Wiz;
 
@@ -25,8 +23,7 @@ public class MantisStrike extends AbstractDimensionalCardInscryp {
     }
 
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SelfDamageAction(new DamageInfo(p, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         Wiz.doDmg(m, damage, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));

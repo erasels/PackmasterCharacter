@@ -24,7 +24,7 @@ public class WallOfFire extends AbstractDimensionalCardGordian {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < this.magicNumber; ++i) {
+        for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         }
         addToBot(new MakeTempCardInHandAction(new FlamePillar(), 3));

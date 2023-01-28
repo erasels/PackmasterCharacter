@@ -19,7 +19,7 @@ public class SchemePower extends AbstractPackmasterPower {
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public SchemePower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
 
     }
 
@@ -27,23 +27,24 @@ public class SchemePower extends AbstractPackmasterPower {
         if (!card.purgeOnUse && this.amount > 0 && (Wiz.getLogicalCardCost(card) == 0 || Wiz.getLogicalCardCost(card) == 1)) {
 
             this.flash();
-            AbstractMonster m = null;
-            if (action.target != null) {
-                m = (AbstractMonster)action.target;
-            }
 
-            AbstractCard tmp = card.makeSameInstanceOf();
-            AbstractDungeon.player.limbo.addToBottom(tmp);
-            tmp.current_x = card.current_x;
-            tmp.current_y = card.current_y;
-            tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-            tmp.target_y = (float)Settings.HEIGHT / 2.0F;
-            if (m != null) {
-                tmp.calculateCardDamage(m);
-            }
-
-            tmp.purgeOnUse = true;
             for (int i = 0; i < amount; i++) {
+                AbstractMonster m = null;
+                if (action.target != null) {
+                    m = (AbstractMonster) action.target;
+                }
+
+                AbstractCard tmp = card.makeSameInstanceOf();
+                AbstractDungeon.player.limbo.addToBottom(tmp);
+                tmp.current_x = card.current_x;
+                tmp.current_y = card.current_y;
+                tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+                tmp.target_y = (float) Settings.HEIGHT / 2.0F;
+                if (m != null) {
+                    tmp.calculateCardDamage(m);
+                }
+
+                tmp.purgeOnUse = true;
                 AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
             }
 
@@ -59,7 +60,7 @@ public class SchemePower extends AbstractPackmasterPower {
 
     @Override
     public void updateDescription() {
-        if (amount > 1){
+        if (amount > 1) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         } else {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];

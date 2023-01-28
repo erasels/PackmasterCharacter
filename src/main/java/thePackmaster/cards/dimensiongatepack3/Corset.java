@@ -1,14 +1,11 @@
 package thePackmaster.cards.dimensiongatepack3;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.dimensiongatepack.SelfDamageAction;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardEden;
-import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardTowerTactics;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

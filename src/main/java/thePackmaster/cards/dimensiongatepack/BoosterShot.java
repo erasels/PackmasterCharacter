@@ -23,7 +23,6 @@ public class BoosterShot extends AbstractDimensionalCardEden {
     }
 
 
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToTop(new VFXAction(new ThrowDaggerEffect(m.hb.cX, m.hb.cY)));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
