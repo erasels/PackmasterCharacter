@@ -1,24 +1,24 @@
 {
   "${ModID}:AcidPower": {
-    "NAME": "A.C.I.D。",
+    "NAME": "毒液",
     "DESCRIPTIONS": [
-      "Takes double damage from Attacks 本回合。",
-      "Takes double damage from Attacks for #b",
-      " turns。"
+      "该单位本回合受到 #b2 倍攻击伤害。",
+      "该单位下 #b",
+      " 个回合内受到 #b2 倍攻击伤害。"
     ]
   },
   "${ModID}:StormGenPower": {
-    "NAME": "Storm Generator",
+    "NAME": "风暴制造器",
     "DESCRIPTIONS": [
-      "回合结束时， #yChannel #b",
-      " #yLightning for each enemy that has a debuff。"
+      "回合结束时，每有一名有 #r负面效果 的敌人 #y生成 #b",
+      " 个 #y闪电 充能球 。"
       ]
   },
   "${ModID}:VoidShockPower": {
     "NAME": "Void Shocker",
     "DESCRIPTIONS": [
-      "每当 an enemy deals only 格挡ed damage, deal #b",
-      " damage to it。"
+      "每当一名敌人攻击时未能突破你的格挡，其受到 #b",
+      " 点伤害。"
     ]
   }
 }

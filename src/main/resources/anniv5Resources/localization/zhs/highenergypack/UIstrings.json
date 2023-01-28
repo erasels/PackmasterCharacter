@@ -8,8 +8,8 @@
   },
   "${ModID}:HighEnergyPackHat": {
     "TEXT": [
-      "The back reads 'solar-powered'。",
-      "Energetic Shades"
+      "背面写着'太阳能供能'。",
+      "高能墨镜"
     ]
   }
 }

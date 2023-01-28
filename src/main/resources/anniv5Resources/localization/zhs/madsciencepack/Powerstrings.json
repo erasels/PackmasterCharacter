@@ -1,16 +1,16 @@
 {
   "${ModID}:PiratifyPower": {
-    "NAME": "Piratify",
+    "NAME": "海盗化",
     "DESCRIPTIONS": [
-      "At the start of each turn, Modify #b",
-      " random cards in hand: '获得 a Cannonball.'"
+      "你的回合开始时，随机 #修改 #b",
+      " 张手牌：'获得一张 #y加农炮弹 。'"
     ]
   },
   "${ModID}:PiratifyPowerUpp": {
-    "NAME": "Piratify+",
+    "NAME": "海盗化+",
     "DESCRIPTIONS": [
-      "At the start of each turn, Modify #b",
-      " random cards in hand: '获得 a Cannonball+.'"
+      "你的回合开始时，随机 #修改 #b",
+      " 张手牌：'获得一张 #y加农炮弹+ 。'"
     ]
   }
 }

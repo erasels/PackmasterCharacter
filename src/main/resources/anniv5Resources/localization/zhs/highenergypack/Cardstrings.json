@@ -1,56 +1,56 @@
 {
   "${ModID}:MiracleWorker": {
-    "NAME": "Miracle Worker",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put a *Miracle on top of your 抽牌堆。"
+    "NAME": "奇迹贡献者",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *奇迹 加入抽牌堆顶部。"
   },
   "${ModID}:Trash": {
-    "NAME": "Trash",
-    "DESCRIPTION": "消耗 1 card. NL 获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 消耗 1 card. NL 获得 [E] 。"
+    "NAME": "垃圾",
+    "DESCRIPTION": "消耗 1 张牌。 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 消耗 1 张牌。 NL 获得 [E] 。"
   },
   "${ModID}:MultiTool": {
-    "NAME": "Multi-Tool",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If you end your turn with unused Energy, 所有敌人 失去 !M! 生命。"
+    "NAME": "多用途工具",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若回合结束时有 [E] ，所有敌人失去 !M! 点生命。"
   },
   "${ModID}:LastResort": {
-    "NAME": "Last Resort",
-    "DESCRIPTION": "获得 !B! 点 格挡 X times. NL If X is 0, NL 获得 [E] 并消耗 。"
+    "NAME": "终极手段",
+    "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 若X为0， NL 获得 [E] 并消耗 。"
   },
   "${ModID}:LotsOfIronWaves": {
-    "NAME": "Lots of Iron Waves",
+    "NAME": "铁斩四波",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。"
   },
   "${ModID}:ManifestMeal": {
-    "NAME": "Manifest Meal",
-    "DESCRIPTION": "造成 !D! 点伤害 X times. NL Shuffle a *Food into your 抽牌堆。"
+    "NAME": "进餐展示",
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 将一张 *食物 加入抽牌堆。"
   },
   "${ModID}:Food": {
-    "NAME": "Food",
-    "DESCRIPTION": "获得 X [E] . NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 X [E] . NL 消耗 。",
+    "NAME": "食物",
+    "DESCRIPTION": "获得X [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得X [E] 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 ",
       "保留 。 NL 获得 ",
-      " . NL 消耗 。",
-      "You 获得 nothing! NL Good day, sir! NL 消耗 。",
-      "mm delocious"
+      " 。 NL 消耗 。",
+      "啥都吃不到！ NL 消耗 。",
+      "木啊么 美味"
     ]
   },
   "${ModID}:Investor": {
-    "NAME": "Investor",
-    "DESCRIPTION": "每当 you spend 2 or more Energy on 一张牌, 获得 !M! 点 格挡 。"
+    "NAME": "投资者",
+    "DESCRIPTION": "为一张牌消耗2点以上的能量时，获得 !M! 点 格挡 。"
   },
   "${ModID}:StruckByATrain": {
-    "NAME": "Struck By A Train",
-    "DESCRIPTION": "造成 !D! 点伤害 to the frontmost enemy. NL Increase this card's damage by !M! 本场战斗。"
+    "NAME": "出门被车撞",
+    "DESCRIPTION": "对面前的敌人造成 !D! 点伤害。 NL 本场战斗伤害加 !M! 。"
   },
   "${ModID}:StormForm": {
-    "NAME": "Storm Form",
-    "DESCRIPTION": "你的回合开始时， 获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "你的回合开始时， 获得 [E] [E] [E] 。"
+    "NAME": "风暴形态",
+    "DESCRIPTION": "回合开始时， NL 获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "回合开始时， NL 获得 [E] [E] [E] 。"
   },
   "${ModID}:SuperNova": {
-    "NAME": "Super Nova",
-    "DESCRIPTION": "所有敌人 失去 !M! 生命。 NL 给予 !${ModID}:m2! Weak 与 易伤 to 所有敌人。"
+    "NAME": "超新星",
+    "DESCRIPTION": "所有敌人失去 !M! 点生命。 NL 给予所有敌人 !${ModID}:m2! 层 虚弱 与 易伤 。"
   }
 }

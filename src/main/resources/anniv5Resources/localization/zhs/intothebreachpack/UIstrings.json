@@ -1,16 +1,16 @@
 {
-  "${ModID}:IntoTheBreac生命ack": {
+  "${ModID}:IntoTheBreachPack": {
     "TEXT": [
-      "Into the Breach",
-      "Use powerful mech-based weaponry from the future to dispatch the Spire's threats。",
+      "陷阵之志",
+      "使用来自未来的机械武器来摆平尖塔的威胁。",
       "Enbeon",
-      "#bInto #bthe #bBreach originally created by #bSubset #bGames"
+      "#b创意来自子集游戏《陷阵之志》。"
     ]
   },
-  "${ModID}:IntoTheBreac生命ackHat": {
+  "${ModID}:IntoTheBreachPackHat": {
     "TEXT": [
-      "The perfect helmet for fighting giant bugs。",
-      "Archive Helmet"
+      "与大型虫族作战的最佳头部护具。",
+      "阿凯夫头盔"
     ]
   }
 }

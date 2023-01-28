@@ -13,7 +13,7 @@
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "Freeze 并Burn",
-    "DESCRIPTION": "所有敌人 失去 !M! 点 力量 本回合. NL 下回合, 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "所有敌人失去 !M! 点 力量 本回合. NL 下回合, 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "${ModID}:Frostfire": {
     "NAME": "Frostfire",

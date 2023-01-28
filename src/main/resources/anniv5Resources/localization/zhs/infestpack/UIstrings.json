@@ -1,15 +1,15 @@
 {
   "${ModID}:InfestPack": {
     "TEXT": [
-      "The Swarm",
-      "Bug out with the new Infest keyword, which makes cards burrow into your 抽牌堆!",
+      "虫群",
+      "用你的虫子滋生你的抽牌堆！",
       "Vex"
     ]
   },
   "${ModID}:InfestPackHat": {
     "TEXT": [
-      "For the distinguished swarmologist。",
-      "The Beekeeper"
+      "养虫人必备。",
+      "养蜂帽"
     ]
   }
 }

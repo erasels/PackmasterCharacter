@@ -1,10 +1,11 @@
 [
   {
-    "PROPER_NAME": "Infest",
+    "PROPER_NAME": "滋生",
     "NAMES": [
       "infest",
-      "infests"
+      "infests",
+      "滋生"
     ],
-    "DESCRIPTION": "回合结束时， if this is in your hand, shuffle it into your 抽牌堆 并put an infestation counter on it。"
+    "DESCRIPTION": "回合结束时，若本牌在手中，将其洗入抽牌堆并附加 #b1 点 #y滋生 点数。"
   }
 ]

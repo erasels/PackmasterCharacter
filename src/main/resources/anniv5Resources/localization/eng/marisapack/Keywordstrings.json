@@ -3,10 +3,9 @@
     "PROPER_NAME": "Amplify",
     "NAMES": [
       "amplify",
-      "amplified",
-      "增幅"
+      "amplified"
     ],
-    "DESCRIPTION": "若有足够能量，强制额外消耗 [E] 来触发该效果，否则不触发。"
+    "DESCRIPTION": "If you have enough [E] pay the additional cost to activate the effect."
   },
   {
     "PROPER_NAME": "Charge Up",

@@ -1,39 +1,39 @@
 {
   "${ModID}:BuggyBash": {
-    "NAME": "Buggy Bash",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL Deals !M! additional damage for each [bugIcon] 。"
+    "NAME": "昆虫滋扰",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 每有一枚 [bugIcon] ， NL 本牌伤害加 !M! 。"
   },
   "${ModID}:SwarmSword": {
-    "NAME": "Swarm Strike",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL 抽一张牌 for each [bugIcon] 。"
+    "NAME": "虫群打击",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 每有一枚 [bugIcon] ， NL 抽一张牌。"
   },
   "${ModID}:GrassHop": {
-    "NAME": "Locusts",
-    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL When this 获得s [bugIcon] , 所有敌人 失去 !M! 生命。"
+    "NAME": "蝗虫",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 获得 !B! 点 格挡 。 NL 本牌获得 [bugIcon] 时，所有敌人失去 !M! 点生命。"
   },
   "${ModID}:Bzzzzz": {
-    "NAME": "Bzzzzzz",
+    "NAME": "嗡嗡嗡嗡嗡嗡嗡",
     "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 抽 !M! 张牌。"
   },
   "${ModID}:BugOut": {
-    "NAME": "Bug Out",
-    "DESCRIPTION": "${ModID}:Infest. NL 获得 1 力量 并敏捷 for each [bugIcon] 。"
+    "NAME": "生虫",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 每有一枚 [bugIcon] ，获得1点 力量 与 敏捷 。"
   },
   "${ModID}:ScarabShield": {
-    "NAME": "Scarab Shield",
-    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL 获得 1 Artifact for each [bugIcon] 。"
+    "NAME": "金龟子壳",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 获得 !B! 点 格挡 。 NL 每有一枚 [bugIcon] ， NL 获得1层 人工制品 。"
   },
   "${ModID}:Entomology": {
-    "NAME": "Entomology",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL If this has any [bugIcon] , remove it to 抽一张牌 并获得 [E] 。"
+    "NAME": "昆虫学",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 若本牌有 [bugIcon] ， NL 全部移除来抽一张牌并获得 [E] 。"
   },
   "${ModID}:Compoundeyes": {
-    "NAME": "Compoundeyes",
-    "DESCRIPTION": "抽 !M! 张牌。 NL When you next play 一张牌, end your turn。"
+    "NAME": "复眼",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 打出下张牌后结束回合。"
   },
   "${ModID}:Bees": {
-    "NAME": "BEES!!!",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害 !M! 次。 NL Deals 1 additional damage for each [bugIcon] 。",
+    "NAME": "蜜蜂！",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害 !M! 次。 NL 每有一枚 [bugIcon] ，本牌伤害增加1点。",
     "EXTENDED_DESCRIPTION": [
       "B",
       "E",
@@ -41,7 +41,7 @@
     ]
   },
   "${ModID}:LordOfTheFlies": {
-    "NAME": "Lord of the Flies",
-    "DESCRIPTION": "抽 1 additional card each turn. NL When your cards ${ModID}:Infest, put an additional [bugIcon] on them。"
+    "NAME": "蝇王",
+    "DESCRIPTION": "每回合额外抽1张牌。 NL ${ModID}:滋生 时， NL 额外 *滋生 一次。"
   }
 }

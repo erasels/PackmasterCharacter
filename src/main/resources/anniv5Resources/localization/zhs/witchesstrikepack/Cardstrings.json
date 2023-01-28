@@ -23,11 +23,11 @@
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "Chittering Punt",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL When this ${ModID}:infests ${ModID}:展现 ${ModID}:Crescent_Moon。"
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL When this ${ModID}:滋生s ${ModID}:展现 ${ModID}:Crescent_Moon。"
   },
   "${ModID}:HornetWithin": {
     "NAME": "Hornet Within",
-    "DESCRIPTION": "${ModID}:Infest. NL 获得 !B! 点 格挡 。 NL When this ${ModID}:Infests, Evoke your next orb !M! times 并失去 an Orb slot。"
+    "DESCRIPTION": "${ModID}:滋生 。 NL 获得 !B! 点 格挡 。 NL When this ${ModID}:滋生s, Evoke your next orb !M! times 并失去 an Orb slot。"
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
@@ -39,7 +39,7 @@
   },
   "${ModID}:ScarabPlague": {
     "NAME": "Scarab Plague",
-    "DESCRIPTION": "${ModID}:Infest. NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL When this ${ModID}:infests, ${ModID}:展现 ${ModID}:Full_Moon。"
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL When this ${ModID}:滋生s, ${ModID}:展现 ${ModID}:Full_Moon。"
   },
   "${ModID}:铭印": {
     "EXTENDED_DESCRIPTION": [

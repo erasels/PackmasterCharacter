@@ -1,43 +1,43 @@
 {
   "${ModID}:AcidProjector": {
-    "NAME": "A.C.I.D Projector",
-    "DESCRIPTION": "The enemy takes double damage from Attacks 本回合. NL 消耗 。"
+    "NAME": "毒液喷射器",
+    "DESCRIPTION": "目标本回合受到2倍攻击伤害。 NL 消耗 。"
   },
   "${ModID}:ElectricWhip": {
-    "NAME": "Electric Whip",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Channel 1 Lightning。"
+    "NAME": "电鞭",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 生成 一个 闪电 充能球。"
   },
   "${ModID}:EnrageShot": {
-    "NAME": "Enrage Shot",
-    "DESCRIPTION": "Stun the enemy 并给予 2 力量 。 NL 消耗 。"
+    "NAME": "激怒射击",
+    "DESCRIPTION": "击晕目标并并给予2点 力量 。 NL 消耗 。"
   },
   "${ModID}:MercuryFist": {
-    "NAME": "Mercury Fist",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤. NL 消耗 。"
+    "NAME": "铅制拳套",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 消耗 。"
   },
   "${ModID}:ReboundVolley": {
-    "NAME": "Rebound Volley",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to a random enemy。",
-    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to a random enemy !M! times。"]
+    "NAME": "弹跳弹体",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机造成 !${ModID}:sd! 点伤害。",
+    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。 NL 随机造成 !${ModID}:sd! 点伤害 !M! 次。"]
   },
   "${ModID}:SmokePellets": {
-    "NAME": "Smoke Pellets",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 虚弱 to 所有敌人。"
+    "NAME": "烟喷雾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 虚弱 。"
   },
   "${ModID}:SmolderingShell": {
-    "NAME": "Smoldering Shell",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤. NL 给予 !${ModID}:m2! Weak to ALL other enemies。"
+    "NAME": "烟雾爆弹",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 给予其他敌人 !${ModID}:m2! 层 虚弱 。"
   },
   "${ModID}:SpartanShield": {
-    "NAME": "Spartan Shield",
+    "NAME": "斯巴达护盾",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Temporary 力量 。"
   },
   "${ModID}:StormGenerator": {
-    "NAME": "Storm Generator",
-    "DESCRIPTION": "回合结束时， Channel !M! Lightning for each enemy that has a debuff。"
+    "NAME": "风暴制造器",
+    "DESCRIPTION": "回合结束时，每有带负面效果的敌人， 生成 !M! 个 闪电 充能球。"
   },
   "${ModID}:VoidShocker": {
-    "NAME": "Void Shocker",
-    "DESCRIPTION": "每当 an enemy deals only 格挡ed damage, deal !M! damage to it。"
+    "NAME": "自发电击器",
+    "DESCRIPTION": "敌人未击破你的格挡时，其受到 !M! 点伤害。"
   }
 }

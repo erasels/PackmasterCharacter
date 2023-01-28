@@ -1,24 +1,26 @@
 [
   {
-    "PROPER_NAME": "Amplify",
+    "PROPER_NAME": "增幅",
     "NAMES": [
       "amplify",
-      "amplified"
+      "amplified",
+      "增幅"
     ],
-    "DESCRIPTION": "If you have enough [E] pay the additional cost to activate the effect。"
+    "DESCRIPTION": "若有足够能量，强制额外消耗所记 [E] 来触发该效果，否则不触发。"
   },
   {
-    "PROPER_NAME": "Charge Up",
+    "PROPER_NAME": "蓄力",
     "NAMES": [
-      "charge up"
+      "charge up",
+      "蓄力"
     ],
-    "DESCRIPTION": "At #b6 or more stacks, double the damage of the next Attack 并失去 #b6 stacks。"
+    "DESCRIPTION": "#y蓄力 #b6 层及以上时，下次攻击造成双倍伤害，并失去 #b6 层 #y蓄力 。"
   },
   {
     "PROPER_NAME": "Flurry",
     "NAMES": [
       "flurry"
     ],
-    "DESCRIPTION": "Specified effect triggers every time you play 一张牌 本回合。"
+    "DESCRIPTION": "本回合Specified effect triggers every time you play 一张牌 本回合。"
   }
 ]

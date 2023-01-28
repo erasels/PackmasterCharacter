@@ -9,7 +9,7 @@
   },
   "${ModID}:Smokescreen": {
     "NAME": "Smokescreen",
-    "DESCRIPTION": "EVERYONE 获得s !B! 点 格挡 。 NL 所有敌人 失去 !M! 生命。"
+    "DESCRIPTION": "EVERYONE 获得s !B! 点 格挡 。 NL 所有敌人失去 !M! 生命。"
   },
   "${ModID}:NullHammer": {
     "NAME": "Null Hammer",

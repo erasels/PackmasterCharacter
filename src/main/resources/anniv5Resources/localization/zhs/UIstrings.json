@@ -117,7 +117,7 @@
   },
   "${ModID}:Compendium": {
     "TEXT": [
-      "By Packs"
+      "卡包"
     ]
   },
   "${ModID}:CardTypeStrings": {

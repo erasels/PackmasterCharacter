@@ -1,48 +1,48 @@
 {
   "${ModID}:MasterSpark": {
-    "NAME": "Master Spark",
-    "DESCRIPTION": "造成 !D! 点伤害。 ${ModID}:Amplify [E] : NL Deal !${ModID}:sd! damage instead。"
+    "NAME": "极限火花",
+    "DESCRIPTION": "造成 !D! 点伤害。 ${ModID}:增幅 [E] ：伤害提高至 !${ModID}:sd! 点。"
   },
   "${ModID}:RisingStrike": {
-    "NAME": "Rising Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Flurry: 获得 !M! ${ModID}:Charge Up。"
+    "NAME": "升龙打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 之后本回合每打出一张牌，获得 !M! 层 ${ModID}:蓄力 。"
   },
   "${ModID}:GalacticHalo": {
-    "NAME": "Galactic Halo",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! ${ModID}:Charge Up。"
+    "NAME": "星晕",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 ${ModID}:蓄力 。"
   },
   "${ModID}:LuminousStrike": {
-    "NAME": "Luminous Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Amplify [E] [E] : Increase damage equal to current energy times !M! 。",
-    "EXTENDED_DESCRIPTION": ["Amplified damage: "]
+    "NAME": "声光冲击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] [E] ：伤害提高当前能量x !M! 点。",
+    "EXTENDED_DESCRIPTION": [" *增幅 伤害："]
   },
   "${ModID}:ShootingEcho": {
-    "NAME": "Shooting Echo",
-    "DESCRIPTION": "造成 !D! 点伤害。 消耗 一张牌 to add a copy of this into your hand. NL 消耗 。"
+    "NAME": "流星共鸣",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张牌。 NL 将一张本牌复制品加入手牌。 NL 消耗 。"
   },
   "${ModID}:StardustReverie": {
-    "NAME": "Stardust Reverie",
-    "DESCRIPTION": "消耗 !M! card. 获得 ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify. NL 抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "消耗 !M! 张牌。 获得 ${ModID}:Charge Up equal to two times their costs including ${ModID}:Amplify. NL 抽 !M! 张牌。"
+    "NAME": "星屑幻想",
+    "DESCRIPTION": "消耗 !M! 张牌。 获得其合计耗能2倍层 ${ModID}:蓄力 ，包括 ${ModID}:增幅 所需 能量 。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "消耗 !M! 张牌。 获得其合计耗能2倍层 ${ModID}:蓄力 ，包括 ${ModID}:增幅 所需 能量 。 NL 抽 !M! 张牌。"
   },
   "${ModID}:Inertia": {
-    "NAME": "Inertia",
-    "DESCRIPTION": "每当 一张牌 is 消耗ed or ${ModID}:增幅, 获得 !M! ${ModID}:Charge Up。"
+    "NAME": "惯性",
+    "DESCRIPTION": "牌被 消耗 或 ${ModID}:增幅 时， NL 获得 !M! 层 ${ModID}:蓄力 。"
   },
   "${ModID}:UltimateShortwave": {
-    "NAME": "Ultimate Shortwave",
-    "DESCRIPTION": "获得 !M! [E] 并!${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 本场战斗。"
+    "NAME": "极超短波",
+    "DESCRIPTION": "获得 !M! [E] 与 !${ModID}:m2! 层 ${ModID}:蓄力 。 NL ${ModID}:增幅 [E] ：本场战斗数值各加1。"
   },
   "${ModID}:DragonMeteor": {
-    "NAME": "Dragon Meteor",
-    "DESCRIPTION": "造成 !D! 点伤害。 Deals !M! additional damage for each card in your 消耗 pile。"
+    "NAME": "龙陨星",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗堆每有一张牌，本牌伤害加 !M! 。"
   },
   "${ModID}:EarthlightRay": {
-    "NAME": "Earthlight Ray",
-    "DESCRIPTION": "After you 获得 ${ModID}:Charge Up, deal damage equal to !M! times its total to 所有敌人。"
+    "NAME": "地球光",
+    "DESCRIPTION": "获得 ${ModID}:蓄力 时，对所有敌人造成 *蓄力 层数点伤害 !M! 次。"
   },
   "${ModID}:Spark": {
-    "NAME": "Spark",
-    "DESCRIPTION": "造成 !D! 点伤害。 ${ModID}:Amplify [E] : NL 获得 !M! ${ModID}:Charge Up. NL 消耗 。"
+    "NAME": "火花",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] ： NL 获得 !M! 层 ${ModID}:蓄力 。 NL 消耗 。"
   }
 }

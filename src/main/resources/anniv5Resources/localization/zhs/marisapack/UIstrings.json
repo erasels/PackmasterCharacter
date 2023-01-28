@@ -1,16 +1,16 @@
 {
   "${ModID}:MarisaPack": {
     "TEXT": [
-      "Marisa",
-      "Marisa's staples, variable energy costs, damage doubling 并a dash of 消耗 。",
+      "魔理沙",
+      "魔理沙的惯用伎俩、可选耗能效果、伤害翻倍增长，还有一堆消耗源。",
       "(Gk) Erasels",
-      "The original authors of the Marisa character mod for the ideas 并art inspiration。"
+      "所有创意灵感与内容来自原版魔理沙Mod作者。"
     ]
   },
   "${ModID}:MarisaPackHat": {
     "TEXT": [
-      "The hat of an ordinary magician。",
-      "Marisa's Hat"
+      "普通魔法师的帽子。",
+      "黑色魔女帽"
     ]
   }
 }

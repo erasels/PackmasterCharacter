@@ -1,16 +1,16 @@
 {
   "${ModID}:MultiToolPower": {
-    "NAME": "Multi-Tool",
+    "NAME": "多用途工具-Tool",
     "DESCRIPTIONS": [
-      "If you end your turn with unused Energy, 所有敌人 失去 #b",
-      " 生命。"
+      "回合结束时若有 [E] ，所有敌人失去 #b",
+      " 点生命。"
     ]
   },
   "${ModID}:InvestorPower": {
-    "NAME": "Investor",
+    "NAME": "投资者",
     "DESCRIPTIONS": [
-      "每当 you spend #b2 or more Energy on 一张牌, 获得 #b",
-      " #y格挡 。"
+      "每当你为一张牌使用 #b2 点以上的能量时，获得 #b",
+      " 点 #y格挡 。"
     ]
   }
 }

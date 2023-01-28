@@ -1,9 +1,9 @@
 {
   "${ModID}:PoisonMasteryPower": {
-    "NAME": "Poison Mastery",
+    "NAME": "精湛毒艺",
     "DESCRIPTIONS": [
-      "Poison causes #b",
-      "% more 生命 loss。"
+      "中毒 造成的生命流失增加 #b",
+      "% 。"
     ]
   }
 }

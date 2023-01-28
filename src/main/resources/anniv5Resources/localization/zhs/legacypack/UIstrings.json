@@ -1,16 +1,16 @@
 {
   "${ModID}:LegacyPack": {
     "TEXT": [
-      "A Gr并Legacy",
-      "A blast from the past, featuring cards inspired by legacy character mods, from before the days of Steam Workshop。",
-      "Original Authors",
-      "Original Mod Authors: celicath, moocowgoesmoo, JohnnyBazooka, chronometrics, fiiiiilth"
+      "宏大遗产",
+      "死去的回忆突然攻击。一份来自过去的卡包，包括尖塔Steam创意工坊开放前的Mod角色的牌。",
+      "作者",
+      "作者：celicath, moocowgoesmoo, JohnnyBazooka, chronometrics, fiiiiilth"
     ]
   },
   "${ModID}:LegacyPackHat": {
     "TEXT": [
-      "Happy birthday, STS modding!",
-      "Birthday Boy"
+      "生日快乐！尖塔Mod社区！",
+      "生日帽"
     ]
   }
 }

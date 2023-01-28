@@ -1,27 +1,27 @@
 {
   "${ModID}:ChargeUp": {
-    "NAME": "Charge Up",
+    "NAME": "蓄力",
     "DESCRIPTIONS": [
-      "At #b%s or more stacks, double the damage of the next Attack 并失去 #b%s stacks。"
+      "再获得 #b%s 层以上的 #y蓄力后，下次攻击造成双倍伤害并失去 #b%s 层 #y蓄力 。"
     ]
   },
   "${ModID}:Inertia": {
-    "NAME": "Inertia",
+    "NAME": "惯性",
     "DESCRIPTIONS": [
-      "每当 一张牌 is #y消耗ed or #yAmplified, 获得 #b%s #yCharge #yUp。"
+      "每当一张牌被 #y消耗 或 #y增幅 时，获得 #b%s 层 #y蓄力 。"
     ]
   },
   "${ModID}:EarthlightRay": {
-    "NAME": "Earthlight Ray",
+    "NAME": "地球光",
     "DESCRIPTIONS": [
-      "After you 获得 #yCharge #yUp, deal damage equal to its total to 所有敌人。",
-      "After you 获得 #yCharge #yUp, deal damage equal to its total times #b%s to 所有敌人。"
+      "获得 #y蓄力 时，对所有敌人造成 #y蓄力 层数点的伤害。",
+      "获得 #y蓄力 时，对所有敌人造成 #y蓄力 层数 #b%s 倍点伤害。"
     ]
   },
   "${ModID}:BuildingCharge": {
-    "NAME": "Building Charge",
+    "NAME": "聚力",
     "DESCRIPTIONS": [
-      "每当 you play 一张牌 本回合, 获得 #b%s #yCharge #yUp。"
+      "本回合每打出一张牌，获得 #b%s 层 #y蓄力 。"
     ]
   }
 }
