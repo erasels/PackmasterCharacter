@@ -74,9 +74,7 @@ public class ExhumeAndAddPurgeAction extends AbstractGameAction {
         p.hand.addToHand(c);
         if (p.hasPower("Corruption") && c.type == AbstractCard.CardType.SKILL)
             c.setCostForTurn(-9);
-        System.out.println("Should be removing card "+c.name);
         p.exhaustPile.removeCard(c);
-        System.out.println("Should have removed card "+c.name);
         CardModifierManager.addModifier(c, new PurgeModifier());
         c.applyPowers();
         c.unhover();
