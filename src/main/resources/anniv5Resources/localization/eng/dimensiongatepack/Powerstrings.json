@@ -3,7 +3,8 @@
     "NAME": "Scheme",
     "DESCRIPTIONS": [
       "The next card that costs 1 or less will be played #b",
-      " additional times."
+      " additional times.",
+      " additional time."
     ]
   },
   "${ModID}:TomeOfIntellectPower": {

@@ -21,6 +21,7 @@ public class SelfWound extends AbstractDimensionalCardTowerTactics {
         super(ID, 0, CardRarity.COMMON, CardType.SKILL, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
+        tags.add(CardTags.HEALING);
     }
 
 

@@ -60,9 +60,9 @@ public class SchemePower extends AbstractPackmasterPower {
     @Override
     public void updateDescription() {
         if (amount > 1){
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
-        } else {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        } else {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
         }
     }
 }

@@ -18,7 +18,7 @@ public class Daggerstorm extends AbstractDimensionalCardRoguebook {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       applyToSelf(new DaggerstormPower(p, magicNumber));
+       applyToSelf(new DaggerstormPower(p, 1));
     }
 
     public void upp() {

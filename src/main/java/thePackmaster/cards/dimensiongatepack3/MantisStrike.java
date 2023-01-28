@@ -30,7 +30,7 @@ public class MantisStrike extends AbstractDimensionalCardInscryp {
         addToBot(new SelfDamageAction(new DamageInfo(p, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         Wiz.doDmg(m, damage, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-        Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.NONE, false);
+        Wiz.doAllDmg(damage, AbstractGameAction.AttackEffect.NONE, DamageInfo.DamageType.NORMAL, false);
 
     }
 

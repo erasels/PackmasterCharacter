@@ -21,6 +21,7 @@ public class RestorationDetonation extends AbstractDimensionalCardTrain {
         baseMagicNumber = magicNumber = 7;
         baseSecondMagic = secondMagic = 2;
         exhaust = true;
+        tags.add(CardTags.HEALING);
     }
 
 

@@ -15,10 +15,11 @@ public class Haymaker extends AbstractDimensionalCardGrift implements onGenerate
     public final static String ID = makeID("Haymaker");
 
     public Haymaker() {
-        super(ID, 2, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, 2, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ALL_ENEMY);
         baseDamage = 10;
         baseMagicNumber = magicNumber = 2;
         tags.add(MAGIC);
+        isMultiDamage = true;
 
     }
 

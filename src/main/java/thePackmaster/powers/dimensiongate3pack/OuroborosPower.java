@@ -28,8 +28,19 @@ public class OuroborosPower extends AbstractPackmasterPower {
         if (damageAmount < Wiz.p().currentBlock){
             triggeredThisTurn = true;
             this.flash();
+            updateDescription();
         }
         return damageAmount;
+    }
+
+    @Override
+    public void atEndOfRound() {
+
+        if (triggeredThisTurn){
+            Wiz.applyToSelf(new StrengthPower(Wiz.p(), amount));
+        }
+        triggeredThisTurn = false;
+        updateDescription();
     }
 
     @Override
@@ -39,11 +50,16 @@ public class OuroborosPower extends AbstractPackmasterPower {
             Wiz.applyToSelf(new StrengthPower(Wiz.p(), amount));
         }
         triggeredThisTurn = false;
+        updateDescription();
     }
 
     @Override
     public void updateDescription() {
 
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (triggeredThisTurn) {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[2];
+        } else {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        }
     }
 }

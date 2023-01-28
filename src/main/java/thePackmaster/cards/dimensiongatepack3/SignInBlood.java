@@ -23,7 +23,7 @@ public class SignInBlood extends AbstractDimensionalCardTowerTactics {
     public final static String ID = makeID("SignInBlood");
 
     public SignInBlood() {
-        super(ID, 1, CardRarity.UNCOMMON, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, 1, CardRarity.UNCOMMON, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
         exhaust = true;
     }

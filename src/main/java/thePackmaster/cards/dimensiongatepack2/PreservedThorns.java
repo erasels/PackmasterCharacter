@@ -21,9 +21,8 @@ public class PreservedThorns extends AbstractDimensionalCardTrain {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         for (int i = 0; i < magicNumber; i++) {
-
+            Wiz.atb(new MakeTempCardInHandAction(new Sting()));
         }
-        Wiz.atb(new MakeTempCardInHandAction(new Sting()));
     }
 
     public void upp() {

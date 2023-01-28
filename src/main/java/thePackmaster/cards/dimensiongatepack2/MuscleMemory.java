@@ -20,7 +20,7 @@ public class MuscleMemory extends AbstractDimensionalCardGrift {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new SelectCardsAction(p.hand.group, 1, cardStrings.EXTENDED_DESCRIPTION[0],
+        Wiz.atb(new SelectCardsAction(p.drawPile.group, 1, cardStrings.EXTENDED_DESCRIPTION[0],
                 (cards) -> {
                     for (AbstractCard c2 : cards) {
                         Wiz.atb(new MakeTempCardInHandAction(c2.makeStatEquivalentCopy()));

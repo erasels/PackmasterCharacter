@@ -2,12 +2,15 @@ package thePackmaster.cards.dimensiongatepack3;
 
 import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
+import thePackmaster.actions.dimensiongatepack.SelfDamageAction;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardStorybook;
 import thePackmaster.util.Wiz;
 
@@ -23,13 +26,13 @@ public class Knighthood extends AbstractDimensionalCardStorybook {
         super(ID, 3, CardRarity.RARE, AbstractCard.CardType.SKILL, AbstractCard.CardTarget.SELF);
 
         exhaust = true;
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 8;
         tags.add(CardTags.HEALING);
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new LoseHPAction(p,p,magicNumber));
+        addToBot(new SelfDamageAction(new DamageInfo(p, magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], AbstractCard::canUpgrade, (cards) -> {
             AbstractCard q = cards.get(0);
             q.upgrade();
@@ -43,6 +46,6 @@ public class Knighthood extends AbstractDimensionalCardStorybook {
     }
 
     public void upp() {
-        upgradeMagicNumber(-3);
+        upgradeMagicNumber(-5);
     }
 }

@@ -20,6 +20,7 @@ public class Channel extends AbstractDimensionalCardGordian {
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
         tags.add(MAGIC);
+        selfRetain = true;
     }
 
 

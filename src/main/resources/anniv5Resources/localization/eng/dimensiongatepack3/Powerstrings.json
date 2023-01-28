@@ -3,7 +3,8 @@
     "NAME": "Ouroboros",
     "DESCRIPTIONS": [
       "At the end of any turn in which you fully blocked a source of damage, gain #b",
-      " Strength."
+      " Strength.",
+      " NL Has triggered this turn."
     ]
   }
 }

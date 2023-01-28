@@ -1,7 +1,7 @@
 {
   "${ModID}:Knighthood": {
     "NAME": "Knighthood",
-    "DESCRIPTION": "Lose !M! HP. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
+    "DESCRIPTION": "Take !M! damage. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " to Upgrade permanently."
     ]
@@ -32,7 +32,7 @@
     "DESCRIPTION": "Take 3 damage. NL Deal !D! damage. NL Deal !D! damage to ALL enemies."
   },
   "${ModID}:RestorationDetonation": {
-    "NAME": "Restoration Detonation",
+    "NAME": "R. Detonation",
     "DESCRIPTION": "Heal !M! HP. NL Enemy loses twice the amount of HP gained. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Heal !M! HP. NL Enemy loses three times the amount of HP gained. NL Exhaust."
   },

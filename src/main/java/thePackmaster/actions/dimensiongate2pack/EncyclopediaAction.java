@@ -47,13 +47,13 @@ public class EncyclopediaAction extends AbstractGameAction {
 
             if (tmp.size() == 0) {
                 this.isDone = true;
-            } else if (tmp.size() <= amount) {
+            } else if (tmp.size() <= 2) {
                 for (AbstractCard abstractCard : tmp.group) {
                     Wiz.atb(new MakeTempCardInDrawPileAction(abstractCard.makeStatEquivalentCopy(),1,true,true));
                 }
                 this.isDone = true;
             } else {
-                AbstractDungeon.gridSelectScreen.open(tmp, this.amount, text, false);
+                AbstractDungeon.gridSelectScreen.open(tmp, 2, text, false);
                 this.tickDuration();
             }
         } else {

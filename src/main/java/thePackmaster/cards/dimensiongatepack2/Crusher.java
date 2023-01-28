@@ -19,13 +19,16 @@ public class Crusher extends AbstractDimensionalCardGrift implements onGenerateC
     public Crusher() {
         super(ID, 5, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 20;
+        selfRetain = true;
 
     }
 
     @Override
     public void onCreateCard(AbstractCard card) {
-        addToTop(new ReduceCostForTurnAction(this, 1));
-        this.flash(Color.GREEN.cpy());
+        if (card != this) {
+            addToTop(new ReduceCostForTurnAction(this, 1));
+            this.flash(Color.GREEN.cpy());
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -20,6 +20,7 @@ public class SpreadingSpores extends AbstractDimensionalCardTrain {
     public SpreadingSpores() {
         super(ID, 1, CardRarity.RARE, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
+        tags.add(CardTags.HEALING);
     }
 
 
