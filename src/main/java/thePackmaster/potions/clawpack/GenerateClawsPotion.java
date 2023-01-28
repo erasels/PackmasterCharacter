@@ -4,6 +4,7 @@ package thePackmaster.potions.clawpack;
 import basemod.abstracts.CustomPotion;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.blue.Claw;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.PowerTip;
@@ -36,7 +37,7 @@ public class GenerateClawsPotion extends CustomPotion {
 
     public void use(AbstractCreature target) {
         for (int i = 0; i < potency; i++) {
-            Wiz.atb(new MakeTempCardInHandAction(new GhostClaw()));
+            Wiz.atb(new MakeTempCardInHandAction(new Claw()));
         }
     }
 

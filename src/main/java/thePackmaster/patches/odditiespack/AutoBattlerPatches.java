@@ -61,21 +61,26 @@ public class AutoBattlerPatches {
             if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID)) {
                 if (!AbstractDungeon.isScreenUp && AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.actionManager.currentAction == null && !isEndingTurn) {
                     AbstractMonster target = Wiz.getFrontmostEnemy();
-                    boolean foundACard = false;
-                    for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                        if (q.canUse(AbstractDungeon.player, target)) {
-                            foundACard = true;
-                            AbstractDungeon.player.hoveredCard = q;
-                            ReflectionHacks.setPrivate(AbstractDungeon.player, AbstractPlayer.class, "hoveredMonster", target);
-                            if (playCard == null)
-                                playCard = ReflectionHacks.privateMethod(AbstractPlayer.class, "playCard");
-                            playCard.invoke(AbstractDungeon.player);
-                            break;
-                        }
-                    }
-                    if (!foundACard) {
+                    if (target == null) {
                         isEndingTurn = true;
                         AbstractDungeon.actionManager.callEndTurnEarlySequence();
+                    } else {
+                        boolean foundACard = false;
+                        for (AbstractCard q : AbstractDungeon.player.hand.group) {
+                            if (q.canUse(AbstractDungeon.player, target)) {
+                                foundACard = true;
+                                AbstractDungeon.player.hoveredCard = q;
+                                ReflectionHacks.setPrivate(AbstractDungeon.player, AbstractPlayer.class, "hoveredMonster", target);
+                                if (playCard == null)
+                                    playCard = ReflectionHacks.privateMethod(AbstractPlayer.class, "playCard");
+                                playCard.invoke(AbstractDungeon.player);
+                                break;
+                            }
+                        }
+                        if (!foundACard) {
+                            isEndingTurn = true;
+                            AbstractDungeon.actionManager.callEndTurnEarlySequence();
+                        }
                     }
                 }
             }

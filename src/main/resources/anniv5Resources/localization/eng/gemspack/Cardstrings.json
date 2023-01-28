@@ -1,0 +1,56 @@
+{
+  "${ModID}:TempStrengthGem": {
+    "NAME": "Ruby",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Gain 2 Temp. Strength\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain 2 Temp. Strength\""
+  },
+  "${ModID}:WardGem": {
+    "NAME": "Aquamarine",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Ward\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Ward\""
+  },
+  "${ModID}:ShivGem": {
+    "NAME": "Fragmented Gem",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Shiv\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Shiv\""
+  },
+  "${ModID}:RetainGem": {
+    "NAME": "Amber",
+    "DESCRIPTION": "Unplayable ${ModID}:Gem. NL \"Card gains Retain\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card gains Retain\""
+  },
+  "${ModID}:DrawGem": {
+    "NAME": "Opal",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Draw a card\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Draw a card\""
+  },
+  "${ModID}:EnergyGem": {
+    "NAME": "Citrine",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Gain [E] next turn\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain [E] next turn\""
+  },
+  "${ModID}:CleanseGem": {
+    "NAME": "Onyx",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Reduce debuffs by 1\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Reduce debuffs by 1\""
+  },
+  "${ModID}:Ward": {
+    "NAME": "Ward",
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+  },
+  "${ModID}:DiceGem": {
+    "NAME": "Tourmaline",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Roll a ${ModID}:D6\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Roll a ${ModID}:D6\""
+  },
+  "${ModID}:OccultGem": {
+    "NAME": "Lapis Lazuli",
+    "DESCRIPTION": "Unplayable ${ModID}:Gem. NL \"Card gains ${ModID}:Occult\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card gains ${ModID}:Occult\""
+  },
+  "${ModID}:PersistGem": {
+    "NAME": "Garnet",
+    "DESCRIPTION": "Unplayable ${ModID}:Gem. NL \"Card has stslib:Persist 2\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Card gains stslib:Persist 2\""
+  }
+}

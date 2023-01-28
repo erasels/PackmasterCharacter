@@ -81,9 +81,16 @@ public class PrimeDirectivePower extends AbstractPackmasterPower implements Dyna
         }
         return damage;
     }
-
+    
+    @Override
+    public void onCardDraw(AbstractCard card) {
+        card.initializeDescription();
+    }
+    
     public String modifyDescription(String currentRaw, AbstractCard card) {
-        if(card.type == AbstractCard.CardType.ATTACK && AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0) {
+        if(card.type == AbstractCard.CardType.ATTACK
+                && AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0
+                && AbstractDungeon.player.hand.contains(card)) {
             return currentRaw + DESCRIPTIONS[2] + "!" + keyMap.get(card) + "!" + DESCRIPTIONS[3];
         }
         return currentRaw;

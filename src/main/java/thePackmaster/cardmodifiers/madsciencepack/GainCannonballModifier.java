@@ -27,7 +27,7 @@ public class GainCannonballModifier extends AbstractMadScienceModifier {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
+     
         AbstractCard c = new Cannonball();
         if (value>0) c.upgrade();
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));

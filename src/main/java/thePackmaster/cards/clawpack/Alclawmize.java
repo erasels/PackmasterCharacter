@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.potions.*;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
 import thePackmaster.potions.clawpack.DrawClawsPotion;
@@ -20,9 +20,10 @@ public class Alclawmize extends AbstractClawCard {
     public final static String ID = makeID("Alclawmize");
 
     ArrayList<String> potions = new ArrayList<>();
+
     public Alclawmize() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        exhaust=true;
+        exhaust = true;
         tags.add(CardTags.HEALING);
         tags.add(CLAW);
 

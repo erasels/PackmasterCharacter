@@ -22,20 +22,19 @@ public abstract class AbstractClawCard extends AbstractPackmasterCard {
 
 
     public static void ClawUp(int value) {
-    ClawUp(value, false);
+        ClawUp(value, false);
     }
 
     public static void ClawUp(int value, boolean excludeClaws) {
 
-        SpireAnniversary5Mod.CLAW_SHARP_TRACKER += value;
 
         ArrayList<AbstractCard> cards = new ArrayList<>();
         cards.addAll(AbstractDungeon.player.hand.group);
         cards.addAll(AbstractDungeon.player.drawPile.group);
         cards.addAll(AbstractDungeon.player.discardPile.group);
-        
+
         for (AbstractCard c : cards) {
-            if (!(excludeClaws && (c instanceof Claw)) && c.hasTag(SpireAnniversary5Mod.CLAW)) {
+            if (!(excludeClaws && (c instanceof Claw)) && c.hasTag(SpireAnniversary5Mod.CLAW) && c.baseDamage > 0) {
                 c.baseDamage += value;
                 c.applyPowers();
                 if (AbstractDungeon.player.hand.group.contains(c)) {
