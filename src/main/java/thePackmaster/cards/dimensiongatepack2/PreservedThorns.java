@@ -14,7 +14,7 @@ public class PreservedThorns extends AbstractDimensionalCardTrain {
     public PreservedThorns() {
         super(ID, 1, CardRarity.COMMON, CardType.SKILL, CardTarget.SELF);
         baseBlock = 6;
-        baseMagicNumber = 1;
+        baseMagicNumber = magicNumber = 1;
         cardsToPreview = new Sting();
     }
 
