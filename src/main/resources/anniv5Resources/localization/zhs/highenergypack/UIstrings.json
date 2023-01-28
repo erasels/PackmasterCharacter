@@ -1,8 +1,8 @@
 {
   "${ModID}:HighEnergyPack": {
     "TEXT": [
-      "Energized",
-      "Focus your power on 获得ing tons of Energy 并spending it on costly cards!",
+      "能量化",
+      "获得一大堆能量，然后消耗在高耗能牌上！",
       "Vex"
     ]
   },
