@@ -5,6 +5,6 @@
   },
   "${ModID}:FlawlessPrism": {
     "NAME": "Flawless Prism",
-    "DESCRIPTIONS": ["At the start of your turn, add #b{0} #ydifferent #ycolor Power card to your hand.", "At the start of your turn, add #b{0} #ydifferent #ycolor Power cards to your hand."]
+    "DESCRIPTIONS": ["At the start of your turn, add #b{0} random #ydifferent #ycolor Power card to your hand.", "At the start of your turn, add #b{0} random #ydifferent #ycolor Power cards to your hand."]
   }
 }

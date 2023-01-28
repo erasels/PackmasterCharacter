@@ -323,7 +323,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
         while (buyables.size() < 20) {
             p = validPacks.get(AbstractDungeon.cardRandomRng.random(0, validPacks.size() - 1));
             c = p.cards.get(AbstractDungeon.cardRandomRng.random(0, p.cards.size() - 1));
-            if (!buyables.contains(c) && c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON) {
+            if (!buyables.contains(c) && (c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON)) {
                 buyables.add(c);
             }
         }
