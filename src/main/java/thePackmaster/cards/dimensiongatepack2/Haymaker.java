@@ -37,7 +37,7 @@ public class Haymaker extends AbstractDimensionalCardGrift implements onGenerate
 
     public void applyPowers() {
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += AbstractDungeon.actionManager.cardsPlayedThisTurn.size() * magicNumber;
+        this.baseDamage += AbstractDungeon.actionManager.cardsPlayedThisTurn.size()-1 * magicNumber;
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGrift;
 import thePackmaster.onGenerateCardMidcombatInterface;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -25,7 +26,7 @@ public class Crusher extends AbstractDimensionalCardGrift implements onGenerateC
 
     @Override
     public void onCreateCard(AbstractCard card) {
-        if (card != this) {
+        if (card != this && Wiz.p().hand.group.contains(this)) {
             addToTop(new ReduceCostForTurnAction(this, 1));
             this.flash(Color.GREEN.cpy());
         }
