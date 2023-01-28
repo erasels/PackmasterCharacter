@@ -69,16 +69,6 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                 false, false, false, false);
     }
 
-
-    /*@Override
-    public void onUnequip() {
-        if (bannedPack != null) {
-            SpireAnniversary5Mod.currentPoolPacks.add(packsByID.get(bannedPack));
-            CardCrawlGame.dungeon.initializeCardPools();
-        }
-    }*/
-
-
     @Override
     public void update() {
         super.update();
