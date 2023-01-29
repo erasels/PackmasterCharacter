@@ -52,6 +52,7 @@ import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.commands.PackAddCommand;
 import thePackmaster.commands.UnlockHatCommand;
 import thePackmaster.events.BlackMarketDealerEvent;
 import thePackmaster.hats.HatMenu;
@@ -453,6 +454,7 @@ public class SpireAnniversary5Mod implements
                 .create());
 
         ConsoleCommand.addCommand("addhat", UnlockHatCommand.class);
+        ConsoleCommand.addCommand("pack", PackAddCommand.class);
     }
 
     public static void addPotions() {
