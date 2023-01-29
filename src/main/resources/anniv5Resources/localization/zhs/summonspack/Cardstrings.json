@@ -1,70 +1,70 @@
 {
   "${ModID}:Leprechaun": {
-    "NAME": "Leprechaun",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 a ${ModID}:Leprechaun。",
+    "NAME": "矮精灵",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 一个 ${ModID}:矮精灵 充能球。",
     "EXTENDED_DESCRIPTION": [
-      "Dice",
-      "Dice increase the damage or #y格挡 of the next card you play that deals damage or #y格挡s。",
-      "Jinx",
-      "Jinxed enemies 失去 生命 每当 they are debuffed。"
+      "骰子",
+      "#y骰子 的点数等量提高下张打出牌的伤害 与 #y格挡 ，两项都没有的牌不消耗使用次数。",
+      "厄运",
+      "陷入 #y厄运 的敌人获得负面效果时失去层数点生命。"
     ],
-    "FLAVOR": "Praise RNGesus。"
+    "FLAVOR": "赞美运气之神。"
   },
   "${ModID}:Porcupine": {
-    "NAME": "Porcupine",
-    "DESCRIPTION": "生成 a ${ModID}:Porcupine. NL Add !M! *Quills 加入手牌。",
-    "FLAVOR": "The Silent in animal form。"
+    "NAME": "豪猪",
+    "DESCRIPTION": "生成 一个 ${ModID}:豪猪 充能球。 NL 将 !M! 张 *荆刺 加入手牌。",
+    "FLAVOR": "动物形态的静默猎手。"
   },
   "${ModID}:Wolves": {
-    "NAME": "Wolves",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 生成 a ${ModID}:Wolf。",
-    "FLAVOR": "Pack animals for the Packmaster。"
+    "NAME": "狼群",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 生成 一个 ${ModID}:狼 充能球。",
+    "FLAVOR": "卡包大师里有一包动物，很合理。"
   },
   "${ModID}:Elephant": {
-    "NAME": "Elephant",
+    "NAME": "大象",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 受到 !M!  点伤害。",
-    "FLAVOR": "This is my favorite card.  I hope you like it。"
+    "FLAVOR": "我最喜欢的牌，希望你也喜欢。"
   },
   "${ModID}:FireSpirit": {
-    "NAME": "Fire Spirit",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 a ${ModID}:Fire\u00a0Spirit。",
+    "NAME": "火精灵",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 一个 ${ModID}:火精灵 。",
     "EXTENDED_DESCRIPTION": [
-      "Ignite",
-      "Ignited creatures 失去 #b1 生命 per stack at the start of their turn。"
+      "燃烧",
+      "#y燃烧 中的单位在其回合开始时失去层数点生命。"
       ],
-    "FLAVOR": "Burninating the Spire。"
+    "FLAVOR": "烧透尖塔。"
   },
   "${ModID}:RainbowLouse": {
-    "NAME": "Rainbow Louse",
-    "DESCRIPTION": "生成 a ${ModID}:Rainbow\u00a0Louse。",
-    "UPGRADE_DESCRIPTION": "生成 a ${ModID}:Rainbow\u00a0Louse. NL 抽一张牌。",
-    "FLAVOR": "The result of an unwise magic experiment。"
+    "NAME": "彩虱虫",
+    "DESCRIPTION": "生成 一个 ${ModID}:彩虱虫 充能球。",
+    "UPGRADE_DESCRIPTION": "生成 一个 ${ModID}:彩虱虫 。 NL 抽一张牌。",
+    "FLAVOR": "不明智魔法实验的产物。"
   },
   "${ModID}:SwarmOfBees": {
-    "NAME": "Swarm of Bees",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 生成 a ${ModID}:Swarm\u00a0of\u00a0Bees。",
-    "FLAVOR": "Absolutely terrifying。"
+    "NAME": "蜂群",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 生成 一个 ${ModID}:蜂群 充能球。",
+    "FLAVOR": "很吓人。"
   },
   "${ModID}:Training": {
-    "NAME": "Training",
-    "DESCRIPTION": "回合结束时 Evoke your next orb !M! 次。",
-    "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them。"
+    "NAME": "驯化",
+    "DESCRIPTION": "回合结束时 激发 最右侧的充能球 !M! 次。",
+    "FLAVOR": "不仅仅你能召唤什么很重要，更重要的是如何驾驭它们。"
   },
   "${ModID}:Ambush": {
-    "NAME": "Ambush",
-    "DESCRIPTION": "每当 you 生成 an Orb, Evoke it without removing it。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you 生成 an Orb, Evoke it without removing it。",
-    "FLAVOR": "I couldn't find good ambush art so have a pun。"
+    "NAME": "埋伏",
+    "DESCRIPTION": "生成 充能球时，触发一次其 激发 效果。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 生成 充能球时，触发一次其 激发 效果。",
+    "FLAVOR": "我实在找不到契合埋伏的卡图了，所以只能整个谐音梗 (Ham + Bush)。"
   },
   "${ModID}:Pandas": {
-    "NAME": "Pandas",
-    "DESCRIPTION": "生成 X ${ModID}:Pandas。",
-    "UPGRADE_DESCRIPTION": "生成 X+1 ${ModID}:Pandas。",
-    "FLAVOR": "Pandamonium。"
+    "NAME": "熊猫",
+    "DESCRIPTION": "生成X个 ${ModID}:熊猫 充能球。",
+    "UPGRADE_DESCRIPTION": "生成X+1个 ${ModID}:熊猫 充能球。",
+    "FLAVOR": "Pandamonium."
   },
   "${ModID}:Quill": {
-    "NAME": "Quill",
+    "NAME": "荆刺",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。",
-    "FLAVOR": "Poke。"
+    "FLAVOR": "刺刺。"
   }
 }

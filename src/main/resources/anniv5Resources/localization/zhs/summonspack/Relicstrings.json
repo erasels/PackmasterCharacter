@@ -1,10 +1,10 @@
 {
   "${ModID}:BlueSkull": {
-    "NAME": "Blue Skull",
-    "FLAVOR": "A small skull, oddly blue with no signs of dye or paint。",
+    "NAME": "蓝头骨",
+    "FLAVOR": "一个奇异的蓝色小型头骨，无任何染色与颜料的迹象。",
     "DESCRIPTIONS": [
-      "While your 生命 is at or below 50%, you have #b",
-      " additional #yFocus。"
+      "生命值低于 #b50% 时获得 #b",
+      " 点 #y集中 。"
     ]
   }
 }

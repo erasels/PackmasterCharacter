@@ -2,16 +2,16 @@
   "${ModID}:CrescentMoon": {
     "NAME": "Crescent Moon",
     "DESCRIPTION": [
-      "#yPassive: When activated, deal #b",
-      " damage to a random enemy, #yEvoke this if this has activated #b"," 次。 NL #yEvoke: deal #b",
+      "#y被动 ： When activated, deal #b",
+      " damage to a random enemy, #yEvoke this if this has activated #b"," 次。 NL #y激发 ： deal #b",
       " damage to a random enemy。"
     ]
   },
   "${ModID}:FullMoon": {
     "NAME": "Full Moon",
     "DESCRIPTION": [
-      "#yPassive: When activated, 抽一张牌",
-      " #yEvoke this if this has activated #b"," 次。 NL #yEvoke: 抽一张牌。"
+      "#y被动 ： When activated, 抽一张牌",
+      " #yEvoke this if this has activated #b"," 次。 NL #y激发 ： 抽一张牌。"
     ]
   }
 }

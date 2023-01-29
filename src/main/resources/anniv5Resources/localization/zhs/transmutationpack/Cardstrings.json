@@ -6,7 +6,7 @@
   },
   "${ModID}:CrystalLattice": {
     "NAME": "Crystal Lattice",
-    "DESCRIPTION": "${ModID}:Transmute 一张牌。 Add !M! additional copies of the new card 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Transmute 一张牌。 将 !M! 张 additional copies of the new card 加入手牌。 NL 消耗 。"
   },
   "${ModID}:CrystalResonance": {
     "NAME": "Crystal Resonance",

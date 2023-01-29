@@ -27,7 +27,7 @@
   "${ModID}:SeedsOfDestruction": {
     "NAME": "Seeds of Destruction",
     "DESCRIPTION": "Choose to shuffle !M! *Imps into your 抽牌堆 or !${ModID}:m2! *Imps into your 弃牌堆。",
-    "EXTENDED_DESCRIPTION": ["Shuffle !M! *Imps into your 抽牌堆。", "Add !M! *Imps to your 弃牌堆。"]
+    "EXTENDED_DESCRIPTION": ["Shuffle !M! *Imps into your 抽牌堆。", "将 !M! 张 *Imps to your 弃牌堆。"]
   },
   "${ModID}:AranasiBroodmother": {
     "NAME": "Aranasi Broodmother",

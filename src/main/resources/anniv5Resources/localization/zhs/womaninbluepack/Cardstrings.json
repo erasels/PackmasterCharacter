@@ -9,7 +9,7 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! 层 ${ModID}:燃烧 to 所有敌人。 NL 消耗 。"
   },
-  "${ModID}:格挡Vial": {
+  "${ModID}:BlockVial": {
     "NAME": "格挡 Vial",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL Your 格挡 is not removed at the start of your 下回合。 NL 消耗 。"

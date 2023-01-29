@@ -1,15 +1,15 @@
 {
   "${ModID}:SummonsPack": {
     "TEXT": [
-      "Summoner's Menagerie",
-      "Pack with a variety of orbs. Also an elephant. No foxes。",
+      "动物召唤师",
+      "一堆充能球，还有一只大象，没狐狸。",
       "Bryan K"
     ]
   },
   "${ModID}:SummonsPackHat": {
     "TEXT": [
-      "From Mia's point of view, you're the accessory。",
-      "Summoned Cat"
+      "From　Mia's　point　of　view,　you're　the　accessory.",
+      "召唤只猫"
     ]
   }
 }
