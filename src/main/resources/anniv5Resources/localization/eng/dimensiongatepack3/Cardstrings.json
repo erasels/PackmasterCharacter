@@ -3,7 +3,7 @@
     "NAME": "Knighthood",
     "DESCRIPTION": "Take !M! damage. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      " to Upgrade permanently."
+      "Upgrade permanently."
     ]
   },
   "${ModID}:Inferno": {
