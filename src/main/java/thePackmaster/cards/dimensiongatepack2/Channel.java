@@ -28,7 +28,7 @@ public class Channel extends AbstractDimensionalCardGordian {
         ArrayList<AbstractCard> targets = new ArrayList<>();
         for (AbstractCard c : p.hand.group
         ) {
-            if (c.hasTag(MAGIC) && Wiz.getLogicalCardCost(c) > 0) {
+            if (c.hasTag(MAGIC) && c.cost >= 0 && c.costForTurn > 0) {
                 targets.add(c);
             }
         }
