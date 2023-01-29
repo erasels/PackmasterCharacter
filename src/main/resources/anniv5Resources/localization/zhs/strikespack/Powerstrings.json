@@ -1,31 +1,31 @@
 {
   "${ModID}:StrikeDummyJrPower": {
-    "NAME": "Strike Dummy Jr。",
+    "NAME": "打击小木偶。",
     "DESCRIPTIONS": [
-      "Your Strikes deal #b",
-      " more damage。"
+      "你的打击牌额外造成 #b",
+      " 点伤害。"
     ]
   },
   "${ModID}:StrikeOfGeniusPower": {
-    "NAME": "Strike of Genius",
+    "NAME": "打击天才",
     "DESCRIPTIONS": [
-      "你的回合开始时， 获得 a random \"Strike\". It costs #b0 until played 并消耗s。",
-      "你的回合开始时， 获得 #b",
-      " random \"Strike\"s. They cost #b0 until played 并消耗 。"
+      "你的回合开始时，随机获得一张打击牌。其耗能为 #b0 且附带 #y消耗 。",
+      "你的回合开始时，随机获得 #b",
+      "张打击牌。其耗能为 #b0 且附带 #y消耗 。"
     ]
   },
   "${ModID}:StrikeOfGeniusUpgradedPower": {
-    "NAME": "Strike of Genius+",
+    "NAME": "打击天才+",
     "DESCRIPTIONS": [
-      "你的回合开始时， 获得 a random #yupgraded \"Strike\". It costs #b0 until played 并消耗s。",
-      "你的回合开始时， 获得 #b",
-      " random #yupgraded \"Strike\"s. They cost #b0 until played 并消耗 。"
+      "你的回合开始时，随机获得一张已 #y升级 的打击牌。其耗能为 #b0 且附带 #y消耗 。",
+      "你的回合开始时，随机获得 #b",
+      "张已 #y升级 的打击牌。其耗能为 #b0 且附带 #y消耗 。"
     ]
   },
   "${ModID}:StrikeABar获得Power": {
-    "NAME": "Strike a Bar获得",
+    "NAME": "协商打击",
     "DESCRIPTIONS": [
-      "Your Attacks cost #b0 本回合, but you cannot play non-Attacks。"
+      "本回合所有攻击牌耗能变为 #b0 ，但你无法打出非攻击牌。"
     ]
   }
 }

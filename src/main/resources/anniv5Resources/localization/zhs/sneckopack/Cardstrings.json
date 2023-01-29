@@ -1,44 +1,44 @@
 {
   "${ModID}:Whirligig": {
-  "NAME": "Whirligig",
-  "DESCRIPTION": "造成 !D! 点伤害 to a random enemy for each enemy in combat。"
+  "NAME": "旋转木蛇",
+  "DESCRIPTION": "每有一名敌人，随机造成 !D! 点伤害。"
   },
   "${ModID}:Sliiiiither": {
-    "NAME": "Sliiiiither",
-    "DESCRIPTION": "下回合, 抽 !M! to 3 additional 张牌。"
+    "NAME": "滑啊啊啊动",
+    "DESCRIPTION": "下回合额外抽 !M! ~ 3张牌。"
   },
   "${ModID}:TailFlail": {
-    "NAME": "Tail Flail",
-    "DESCRIPTION": "Deal !D! to !${ModID}:sd! damage to 所有敌人. NL Randomize the cost of !M! random 张牌。"
+    "NAME": "尾威",
+    "DESCRIPTION": "对所有敌人造成 !D! ~ !${ModID}:sd! 点伤害。 NL 随机变化 !M! 张手牌的耗能。"
   },
   "${ModID}:Sneckpot": {
-    "NAME": "Sneckpot",
-    "DESCRIPTION": "Deal 1 to !D! damage. Roll the damage X times 并take the highest result。"
+    "NAME": "蛇壶",
+    "DESCRIPTION": "造成 1 ~ !D! 点伤害。 NL 随机X次，取最高值。"
   },
   "${ModID}:WhipNSnapper": {
-    "NAME": "Whip 'n Snapper",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !${ModID}:m2! to !M! 层 虚弱 并!${ModID}:m2! to !M! 易伤。"
+    "NAME": "扫尾嗜咬",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !${ModID}:m2! ~ !M! 层 虚弱 与 !${ModID}:m2! ~ !M! 易伤 。"
   },
   "${ModID}:Twitch": {
-    "NAME": "Twitch",
-    "DESCRIPTION": "Randomize the cost of !M! 张牌。 NL stslib:Persist !stslib:persist!",
-    "UPGRADE_DESCRIPTION": "Randomize the cost of up to !M! 张牌。 NL stslib:Persist !stslib:persist!"
+    "NAME": "痉挛",
+    "DESCRIPTION": "随机变化 !M! 张牌的耗能。 NL stslib:长驻 !stslib:persist! 。",
+    "UPGRADE_DESCRIPTION": "随机变化 !M! 张牌的耗能。 NL stslib:长驻 !stslib:persist! 。"
   },
   "${ModID}:Gulp": {
-    "NAME": "Meal Prep",
-    "DESCRIPTION" : "造成 !D! 点伤害 for each energy this card costs。"
+    "NAME": "用餐准备",
+    "DESCRIPTION" : "本牌每点耗能造成 !D! 点伤害。"
   },
   "${ModID}:SnazzySwagger": {
-    "NAME": "Snazzy Swagger",
-    "DESCRIPTION" : "{@@}抽 !M! 张牌{!M!|>1=s}. NL Randomize the cost of all 牌 in your hand. NL 丢弃 !M! card{!M!|>1=s}。"
+    "NAME": "捣乱套路",
+    "DESCRIPTION" : "抽 !M! 张牌。 NL 随机变化所有手牌的耗能。 NL 丢弃 !M! 张牌。"
   },
   "${ModID}:SneckoEyes": {
-    "NAME": "Snecko Eyes",
-    "DESCRIPTION" : "Become Confused. 你的回合开始时， 抽2张牌。。",
-    "UPGRADE_DESCRIPTION": "你的回合开始时， 抽2张牌。. NL 起动 ： Become Confused。"
+    "NAME": "异蛇之眼",
+    "DESCRIPTION" : "获得混乱。 NL 回合开始时，额外抽2张牌。",
+    "UPGRADE_DESCRIPTION": "回合开始时，额外抽2张牌。 NL 起动 ：获得混乱。"
   },
   "${ModID}:Shedding": {
-    "NAME": "Shedding",
-    "DESCRIPTION" : "{@@}你的回合开始时， randomize the cost of the {!M!|>1=!M! highest cost 牌|@=highest cost card} in your hand。"
+    "NAME": "摆脱",
+    "DESCRIPTION" : "回合开始时，随机变化2张耗能最高的手牌的耗能。"
   }
 }

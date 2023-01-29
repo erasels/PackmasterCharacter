@@ -1,7 +1,9 @@
 {
   "${ModID}:SheddingPower": {
-  "NAME": "Shedding",
-  "DESCRIPTIONS": ["你的回合开始时， randomize the cost of the card in your h并with the highest cost。",
-  "你的回合开始时， randomize the cost of the #b", " 牌 in your h并with the highest cost。" ]
+  "NAME": "摆脱",
+  "DESCRIPTIONS": [
+    "你的回合开始时，随机变化耗能最高的手牌的耗能。",
+    "你的回合开始时，随机变化耗能前 #b", "高的手牌的耗能。"
+  ]
   }
 }

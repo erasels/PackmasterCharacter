@@ -1,21 +1,21 @@
 {
   "${ModID}:SneckoPack": {
     "TEXT": [
-      "Snecko Pack",
-      "Unrelieable but powerful effects as befitting of our lord。",
+      "异蛇",
+      "不稳定却仍然强大的效果，向尖塔吾王致敬。",
       "Gk (Erasels), Pandemonium",
-      "Art sourced from the Downfall mod。"
+      "卡图来自崩坠Mod。"
     ]
   },
   "${ModID}:TwitchScreen": {
     "TEXT": [
-      "Randomize their costs。"
+      "随机化其耗能。"
     ]
   },
   "${ModID}:SneckoPackHat": {
     "TEXT": [
-      "What're YOU looking at?",
-      "Sneck Eyes"
+      "你在看什么？",
+      "异蛇之眼"
     ]
   }
 }

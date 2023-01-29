@@ -1,20 +1,20 @@
 {
   "${ModID}:StrikesPack": {
     "TEXT": [
-      "Strikes? STRIKES!",
-      "Deal 6 damage。",
+      "打击？打击！",
+      "造成6点伤害。",
       "MichaelMayhem"
     ]
   },
   "${ModID}:StrikesPackHat": {
     "TEXT": [
-      "A tiny sword, about large enough to be used as a hairpin。",
-      "Strike Pin"
+      "小型剑， 刚好够发夹这么大。",
+      "打击剑"
     ]
   },
   "${ModID}:AddStrikeTagModifier": {
     "TEXT": [
-      " Strike"
+      "打击"
     ]
   }
 }

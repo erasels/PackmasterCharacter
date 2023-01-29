@@ -25,8 +25,8 @@
   },
   "${ModID}:Salvager": {
     "NAME": "Salvager",
-    "DESCRIPTION": "每当 a ${ModID}:Weapon is destroyed, 获得 [E]。",
-    "UPGRADE_DESCRIPTION": "每当 a ${ModID}:Weapon is destroyed, 获得 [E] [E]。"
+    "DESCRIPTION": "每当 a ${ModID}:Weapon is destroyed, 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "每当 a ${ModID}:Weapon is destroyed, 获得 [E] [E] 。"
   },
   "${ModID}:ForgingHammer": {
     "NAME": "Forging Hammer",

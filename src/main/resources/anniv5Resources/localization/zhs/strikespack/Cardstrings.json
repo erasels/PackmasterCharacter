@@ -1,15 +1,15 @@
 {
   "${ModID}:StrikeOfMidnight": {
     "NAME": "午夜打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 生成 1 Dark。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 生成1个 黑暗 充能球。"
   },
   "${ModID}:StrikeOfLuck": {
     "NAME": "幸运打击",
-    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy 1 to 3 次。"
+    "DESCRIPTION": "随机造成 !D! 点伤害1~3 次。"
   },
   "${ModID}:LightningStrike": {
     "NAME": "闪电打击",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 1 Lightning。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成1个 闪电 充能球。"
   },
   "${ModID}:PenaltyStrike": {
     "NAME": "惩罚打击",
@@ -17,27 +17,27 @@
   },
   "${ModID}:Backstrike": {
     "NAME": "回身打击",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:修改 all Attacks in hand: \"Name 获得s Strike.\""
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:修改所有攻击手牌：牌名加上打击。"
   },
   "${ModID}:WorkersStrike": {
-    "NAME": "Worker's Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 an Attack. If it is a Strike, 获得 [E]。"
+    "NAME": "罢工打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 从抽牌堆取出一张攻击，若为一张打击牌，获得 [E] 。"
   },
   "${ModID}:StrikeDummyJr": {
-    "NAME": "Strike Dummy Jr。",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL Strikes deal 2 more damage 本场战斗。"
+    "NAME": "打击小木偶",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 本场战斗打击牌伤害增加2点。"
   },
   "${ModID}:DifferentStrikes": {
-    "NAME": "Different Strikes",
-    "DESCRIPTION": "消耗 all 牌 in hand. Replace them with random Strikes that cost 1 less。 NL 消耗 。"
+    "NAME": "各色打击",
+    "DESCRIPTION": "消耗 所有手牌，将其变化为耗能低1点的打击牌。 NL 消耗 。"
   },
   "${ModID}:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "你的回合开始时， 获得 a random \"Strike\". NL It costs 0 until played 并获得s 消耗 。",
-    "UPGRADE_DESCRIPTION": "你的回合开始时， 获得 a random Upgraded \"Strike\". NL It costs 0 until played 并获得s 消耗 。"
+    "DESCRIPTION": "回合开始时，随机获得一张打击牌。 NL 其下次耗能为0且附带 消耗 。",
+    "UPGRADE_DESCRIPTION": "回合开始时，随机获得一张打击+牌。 NL 其下次耗能为0且附带 消耗 。"
   },
   "${ModID}:StrikeABar获得": {
-    "NAME": "Strike a Bar获得",
-    "DESCRIPTION": "Your Attacks costs 0 本回合. You cannot play non-Attacks 本回合。"
+    "NAME": "协商打击",
+    "DESCRIPTION": "本回合攻击牌耗能变为0，且本回合无法打出非攻击牌。"
   }
 }
