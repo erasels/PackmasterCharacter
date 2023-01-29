@@ -30,7 +30,7 @@ public class DifferentStrikes extends AbstractStrikePackCard {
 
         }
         for (int i = 0; i < count; i++) {
-            AbstractCard strike = Wiz.returnTrulyRandomPrediCardInCombat(card -> card.hasTag(CardTags.STRIKE), true);
+            AbstractCard strike = Wiz.returnTrulyRandomPrediCardInCombat(card -> card.hasTag(CardTags.STRIKE) && !card.hasTag(CardTags.HEALING), true);
             if (strike != null) {
                 strike.modifyCostForCombat(-1);
                 addToBot(new MakeTempCardInHandAction(strike));
