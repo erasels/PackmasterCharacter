@@ -11,5 +11,8 @@
       "See in up to seven dimensions!",
       "Open Eye"
     ]
+  },
+  "${ModID}:PurgeModifier": {
+    "TEXT": [" NL stslib:Purge."]
   }
 }

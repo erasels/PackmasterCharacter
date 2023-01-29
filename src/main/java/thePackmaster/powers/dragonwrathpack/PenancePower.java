@@ -54,13 +54,10 @@ public class PenancePower extends TwoAmountPower implements CloneablePowerInterf
         if (this.amount >= 8){
             amount -= 8;
             CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
-            addToBot(new SmiteAction(owner,new DamageInfo(owner,Power, DamageInfo.DamageType.HP_LOSS)));
+            addToBot(new SmiteAction(owner,new DamageInfo(owner,Power, DamageInfo.DamageType.HP_LOSS)).fromPenance());
             Power += 10;
             if (amount < 1){
                 addToBot(new RemoveSpecificPowerAction(owner,owner,this));
-            }
-            if (AbstractDungeon.player.hasPower(AbsolutionPower.POWER_ID)){
-                Wiz.applyToEnemy((AbstractMonster) owner,new WeakPower(owner,AbstractDungeon.player.getPower(AbsolutionPower.POWER_ID).amount,false));
             }
             updateDescription();
         }
@@ -93,7 +90,7 @@ public class PenancePower extends TwoAmountPower implements CloneablePowerInterf
         if (this.amount >= 8){
            amount -= 8;
             CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
-           addToBot(new SmiteAction(owner,new DamageInfo(owner,Power, DamageInfo.DamageType.HP_LOSS)));
+           addToBot(new SmiteAction(owner,new DamageInfo(owner,Power, DamageInfo.DamageType.HP_LOSS)).fromPenance());
            Power += 10;
            updateDescription();
         }
