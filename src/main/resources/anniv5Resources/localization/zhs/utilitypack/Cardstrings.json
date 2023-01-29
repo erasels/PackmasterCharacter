@@ -1,8 +1,8 @@
 {
   "${ModID}:Excitement": {
     "NAME": "Excitement",
-    "DESCRIPTION": "获得 [E] [E] . NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 [E] [E] . NL 消耗性 !stslib:ex! 。"
+    "DESCRIPTION": "获得 [E] [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 消耗性 !stslib:ex! 。"
   },
   "${ModID}:LayeredDefenses": {
     "NAME": "Layered Defenses",
@@ -32,8 +32,8 @@
   },
   "${ModID}:LesserHex": {
     "NAME": "Lesser Hex",
-    "DESCRIPTION": "给予 !M! 层 虚弱 与 !M! 易伤 。 NL 目标失去 !M! 点 力量 。 NL Add a *Greater\u00a0Hex to your 弃牌堆. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 与 !M! 易伤 。 NL 目标失去 !M! 点 力量 。 NL Add a *Greater\u00a0Hex+ to your 弃牌堆. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 与 !M! 易伤 。 NL 目标失去 !M! 点 力量 。 NL Add a *Greater\u00a0Hex to your 弃牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 与 !M! 易伤 。 NL 目标失去 !M! 点 力量 。 NL Add a *Greater\u00a0Hex+ to your 弃牌堆。 NL 消耗 。"
   },
   "${ModID}:GreaterHex": {
     "NAME": "Greater Hex",

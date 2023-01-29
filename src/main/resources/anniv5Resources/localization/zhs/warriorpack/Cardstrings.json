@@ -35,7 +35,7 @@
   },
   "${ModID}:Bolas": {
     "NAME": "Bolas",
-    "DESCRIPTION": "给予 *Slow. NL Give enemy !M! 点 格挡 。 NL 抽 !${ModID}:m2! card. NL 消耗 。"
+    "DESCRIPTION": "给予 *Slow. NL Give enemy !M! 点 格挡 。 NL 抽 !${ModID}:m2! card。 NL 消耗 。"
   },
   "${ModID}:FFBlade": {
     "NAME": "FF Blade",

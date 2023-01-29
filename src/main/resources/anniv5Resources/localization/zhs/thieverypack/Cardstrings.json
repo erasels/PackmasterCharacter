@@ -17,8 +17,8 @@
   },
   "${ModID}:Magnet": {
     "NAME": "Magnet",
-    "DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, 并Metallicize from the enemy. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, 并Metallicize from 所有敌人. NL 消耗 。"
+    "DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, 并Metallicize from the enemy。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Steal all []Artifact, Plated Armor, []Thorns, 并Metallicize from 所有敌人。 NL 消耗 。"
   },
   "${ModID}:力量Sap": {
     "NAME": "力量 Sap",
@@ -26,11 +26,11 @@
   },
   "${ModID}:CunningPoison": {
     "NAME": "Cunning Poison",
-    "DESCRIPTION": "给予 !M! Poison to the highest 生命 enemy. NL If it dies while Poisoned, steal !${ModID}:m2! Gold. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 中毒 to the highest 生命 enemy. NL If it dies while 中毒ed, steal !${ModID}:m2! Gold。 NL 消耗 。"
   },
   "${ModID}:MindControl": {
     "NAME": "Mind Control",
-    "DESCRIPTION": "Choose an enemy with !M! times X or less 生命。 NL It will attack other enemies for the rest of combat. NL 消耗 。",
+    "DESCRIPTION": "Choose an enemy with !M! times X or less 生命。 NL It will attack other enemies for the rest of combat。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "This enemy has too much 生命。"
     ]

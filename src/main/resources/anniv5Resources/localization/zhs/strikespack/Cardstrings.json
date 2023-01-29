@@ -5,7 +5,7 @@
   },
   "${ModID}:StrikeOfLuck": {
     "NAME": "Strike of Luck",
-    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy 1 to 3 times。"
+    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy 1 to 3 次。"
   },
   "${ModID}:LightningStrike": {
     "NAME": "Lightning Strike",
@@ -29,7 +29,7 @@
   },
   "${ModID}:DifferentStrikes": {
     "NAME": "Different Strikes",
-    "DESCRIPTION": "消耗 all 牌 in hand. Replace them with random Strikes that cost 1 less. NL 消耗 。"
+    "DESCRIPTION": "消耗 all 牌 in hand. Replace them with random Strikes that cost 1 less。 NL 消耗 。"
   },
   "${ModID}:StrikeOfGenius": {
     "NAME": "Strike of Genius",

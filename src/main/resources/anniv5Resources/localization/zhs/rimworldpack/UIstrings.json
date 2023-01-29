@@ -1,27 +1,27 @@
 {
   "${ModID}:RimworldPack": {
     "TEXT": [
-      "RimWorld",
-      "Mental Breaks 并eating without a table. For massive power of course。",
+      "边缘世界",
+      "精神崩溃与无桌进食，当然这都是为了力量。",
       "Laugic",
-      "#bRimWorld originally created by #bLudeon #bStudios"
+      "创意来自 #bLudeon工作室 的游戏 #bn边缘世界(RimWorld)"
     ]
   },
   "${ModID}:Potions": {
     "TEXT": [
-      "Yummy ",
-      "!"
+      "美味 ",
+      "！"
     ]
   },
   "${ModID}:OnFireModifier": {
     "TEXT": [
-      "${ModID}:On_Fire. NL "
+      "${ModID}:着火. NL "
     ]
   },
   "${ModID}:RimworldPackHat": {
     "TEXT": [
-      "For space cowboys. Definitely not made of human leather。",
-      "RimWorld Hat"
+      "给太空探索者准备的，绝对不是人皮做的。",
+      "边缘世界之帽"
     ]
   }
 }

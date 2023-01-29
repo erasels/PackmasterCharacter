@@ -1,54 +1,54 @@
 {
   "${ModID}:Hound": {
-    "NAME": "Rot Hound",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:Evolves when you play an *Attack。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! 层 虚弱 to 所有敌人。",
-    "EXTENDED_DESCRIPTION": ["Huge Rot Hound"]
+    "NAME": "腐败狂犬",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 打出攻击时 ${ModID}:进化 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予所有敌人 !M! 层 虚弱 。",
+    "EXTENDED_DESCRIPTION": ["巨型腐败狂犬"]
   },
   "${ModID}:Slime": {
-    "NAME": "Viscid One",
-    "DESCRIPTION": "给予 !M! Poison. NL ${ModID}:Evolves when you 给予 a debuff。",
-    "UPGRADE_DESCRIPTION": "给予 !M! Poison. NL Enemy 失去s 生命 equal to its Poison。",
-    "EXTENDED_DESCRIPTION": ["Viscid Twins"]
+    "NAME": "黏糊者",
+    "DESCRIPTION": "给予 !M! 层 中毒 。 NL 给予负面效果时 ${ModID}:进化 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 中毒 。 NL 目标失去其 中毒 层数点生命。",
+    "EXTENDED_DESCRIPTION": ["黏糊双子"]
   },
   "${ModID}:Fright": {
-    "NAME": "Skittering Fright",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If the enemy intends to attack, 抽 !M! 张牌。"
+    "NAME": "急剧恐怖",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标意图攻击， NL 抽 !M! 张牌。"
   },
   "${ModID}:Shackles": {
-    "NAME": "Shackles",
-    "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL ${ModID}:Evolves when you play 一张牌 that costs at least !M! 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL 格挡 is not removed at the start of your 下回合。",
-    "EXTENDED_DESCRIPTION": ["Huge Shackles"]
+    "NAME": "枷锁魔",
+    "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL 打出2及以上耗能牌时 ${ModID}:进化 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL 获得一层 残影 。",
+    "EXTENDED_DESCRIPTION": ["巨型枷锁魔"]
   },
   "${ModID}:IceBeast": {
-    "NAME": "Ice Beast",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:Evolves when you 获得 格挡 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 生成 !M! Frost。",
-    "EXTENDED_DESCRIPTION": ["Ancient Ice Beast"]
+    "NAME": "冰兽",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 获得 格挡 时 ${ModID}:进化 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 生成 !M! 个 冰霜 充能球。",
+    "EXTENDED_DESCRIPTION": ["远古冰兽"]
   },
   "${ModID}:Loombird": {
-    "NAME": "Crooked Loombird",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:Rend。"
+    "NAME": "扭曲长肢鸟",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:狂扯 。"
   },
   "${ModID}:Hollower": {
-    "NAME": "Hollower",
-    "DESCRIPTION": "虚无 。 NL 消耗 !M! 牌 in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your h并并give it 消耗 。",
-    "UPGRADE_DESCRIPTION": "消耗 !M! 牌 in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your h并并give it 消耗 。"
+    "NAME": "虚噬怪",
+    "DESCRIPTION": "虚无 。 NL 选择 消耗 抽牌堆 !M! 张牌。 NL 将弃牌堆一张牌返回手牌并附加 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择 消耗 抽牌堆 !M! 张牌。 NL 将弃牌堆一张牌返回手牌并附加 消耗 。"
   },
   "${ModID}:Owl": {
-    "NAME": "Owl",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL ${ModID}:Evolves when you 消耗 一张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 ${ModID}:Rend equal to half of the un格挡ed damage dealt. NL 给予 !M! 层 易伤 。",
-    "EXTENDED_DESCRIPTION": ["Nightmare Owl"]
+    "NAME": "鸮兽",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 消耗 牌时 ${ModID}:进化 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予未被格挡伤害一半层 ${ModID}:狂扯 。 NL 给予 !M! 层 易伤 。",
+    "EXTENDED_DESCRIPTION": ["魇鸮兽"]
   },
   "${ModID}:Vision": {
-    "NAME": "Vision",
-    "DESCRIPTION": "Put !M! 牌 from your 抽牌堆 加入手牌。 NL Retain your h并本回合. NL 消耗 。"
+    "NAME": "异象",
+    "DESCRIPTION": "从抽牌堆 取出 !M! 张牌。 NL 本回合 保留 手牌。 NL 消耗 。"
   },
   "${ModID}:Connection": {
-    "NAME": "Connection",
-    "DESCRIPTION": "每当 you play 一张牌, upgrade it 并ALL copies of it。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you play 一张牌, upgrade it 并ALL copies of it。"
+    "NAME": "联结",
+    "DESCRIPTION": "打出牌时， NL 升级 其所有同名牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 打出牌时， NL 升级 其所有同名牌。"
   }
 }

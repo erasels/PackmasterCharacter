@@ -1,49 +1,49 @@
 {
   "${ModID}:FrontloadedBash": {
     "NAME": "Frontloaded Bash",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals 1 more damage for every !M! 牌 in your 抽牌堆。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Deals 1 more damage for every !M! 牌 in your 抽牌堆。 NL 抽一张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆每有 !M! 张牌，本牌伤害增加1点。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆每有 !M! 张牌，本牌伤害增加1点。 NL 抽一张牌。"
   },
   "${ModID}:Preparation": {
-    "NAME": "Preparation",
-    "DESCRIPTION": "Choose an Attack or Skill card. NL Add copy of that card 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill card. NL Add copy of that card 加入手牌。",
-    "EXTENDED_DESCRIPTION": ["Choose 一张牌 to copy。"]
+    "NAME": "做准备",
+    "DESCRIPTION": "选择一张攻击或技能手牌，将其一张复制品加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张攻击或技能手牌，将其一张复制品加入手牌。",
+    "EXTENDED_DESCRIPTION": ["选择复制一张手牌。"]
   },
   "${ModID}:SmallAdaptation": {
-    "NAME": "Small Adaptation",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Choose 一张牌 that costs 1 or 0. NL Add a copy of that card 加入手牌。",
-    "EXTENDED_DESCRIPTION": ["Choose 一张牌 to copy。"]
+    "NAME": "略微适应",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择一张0~1耗能手牌，将其一张复制品加入手牌。",
+    "EXTENDED_DESCRIPTION": ["选择复制一张手牌。"]
   },
   "${ModID}:ExperimentalMerge": {
-    "NAME": "Experimental Merge",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle your 弃牌堆 into your 抽牌堆。 抽 !M! 。"
+    "NAME": "试验性整合",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆洗入抽牌堆。 NL 抽 !M! 张牌。"
   },
-  "${ModID}:消耗性Work": {
-    "NAME": "消耗性 Work",
-    "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|>1=s}. NL Choose 一张牌。 NL 消耗 that card 并add a copy of it to your 抽牌堆。",
-    "EXTENDED_DESCRIPTION": ["Choose 一张牌 to 消耗 并copy。"]
+  "${ModID}:ExhaustiveWork": {
+    "NAME": "大费周章",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 选择一张手牌，将其 消耗 并将一张复制品加入抽牌堆。",
+    "EXTENDED_DESCRIPTION": ["选择一张牌进行消耗与复制。"]
   },
   "${ModID}:IterativeDesign": {
-    "NAME": "Iterative Design",
-    "DESCRIPTION": "每当 your create 一张牌 本场战斗, 获得 !M! 点 格挡 。"
+    "NAME": "I重复性设计",
+    "DESCRIPTION": "创造牌时， NL 获得 !M! 点 格挡 。"
   },
   "${ModID}:Xpansion": {
-    "NAME": "Xpansion",
-    "DESCRIPTION": "获得 X ${ModID}:Duplication. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 X ${ModID}:Duplication。"
+    "NAME": "扩章",
+    "DESCRIPTION": "获得X层 ${ModID}:重复 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得X层 ${ModID}:重复 。"
   },
   "${ModID}:ReduceOverhead": {
-    "NAME": "Reduce Overhead",
-    "DESCRIPTION": "消耗 ALL 牌 that have duplicates. NL 造成 !D! 点伤害 for each card 消耗ed. NL 消耗 。"
+    "NAME": "精简头脑",
+    "DESCRIPTION": "消耗 所有复制牌的牌。每张造成 !D! 点伤害 。 NL 消耗 。"
   },
   "${ModID}:MagicHand": {
-    "NAME": "Magic Hand",
-    "DESCRIPTION": "Choose 1 of !M! 牌 from your master deck to add 加入手牌。 NL 本回合其下次耗能为0 并消耗s。",
-    "UPGRADE_DESCRIPTION": "Choose 1 of !M! 牌 from your master deck to add 加入手牌。 NL 本回合其下次耗能为0。"
+    "NAME": "魔法之手",
+    "DESCRIPTION": "选择牌组中 !M! 张牌加入手牌。 NL 本回合其下次耗能为0且 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择牌组中 !M! 张牌加入手牌。 NL 本回合其下次耗能为0。"
   },
   "${ModID}:EnergyDrink": {
-    "NAME": "Energy Drink",
-    "DESCRIPTION": "获得 !M! stslib:Temporary_生命。 获得 1 ${ModID}:Duplication for every 10 牌 you shuffle into your 抽牌堆。"
+    "NAME": "能量饮料",
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 每往抽牌堆洗入10张牌，获得1层 ${ModID}:重复 。"
   }
 }

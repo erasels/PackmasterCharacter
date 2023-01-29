@@ -1,48 +1,48 @@
 {
   "${ModID}:ChainShotgun": {
-    "NAME": "Chain Shotgun",
-    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! times。"
+    "NAME": "链式猎枪",
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
   },
   "${ModID}:Despair": {
-    "NAME": "Despair",
-    "DESCRIPTION": "Counts as a Curse. NL 消耗 。"
+    "NAME": "绝望",
+    "DESCRIPTION": "本牌被视为诅咒。 NL 消耗 。"
   },
   "${ModID}:EatWithoutTable": {
-    "NAME": "Eat Without Table",
-    "DESCRIPTION": "Drink a random common Potion. Add a *Despair 加入手牌。 NL 消耗 。"
+    "NAME": "无桌进食",
+    "DESCRIPTION": "随机制造一瓶药水并立即喝下。 NL 将一张 *绝望 加入手牌。 NL 消耗 。"
   },
   "${ModID}:Luciferium": {
-    "NAME": "Luciferium",
-    "DESCRIPTION": "{@@}获得 [E] [E] . NL 获得 5 力量 。 NL 获得 !M! ${ModID}:Addiction. NL 消耗 。"
+    "NAME": "魔鬼素",
+    "DESCRIPTION": "获得 [E] [E] 。 NL 获得5点 力量 。 NL 获得 !M! 层 ${ModID}:上瘾 。 NL 消耗 。"
   },
   "${ModID}:Pyromaniac": {
-    "NAME": "Pyromaniac",
-    "DESCRIPTION": "你的回合开始时， set a random card in your h并${ModID}:On_Fire。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时， set a random card in your h并${ModID}:On_Fire。"
+    "NAME": "火术师",
+    "DESCRIPTION": "回合开始时，随机使一张手牌 ${ModID}:着火 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，随机使一张手牌 ${ModID}:着火 。"
   },
   "${ModID}:KillThirst": {
-    "NAME": "Kill Thirst",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this doesn't kill the enemy, add a *Despair 加入手牌。"
+    "NAME": "杀戮饥渴",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若未击杀目标， NL 将一张 *绝望 加入手牌。"
   },
   "${ModID}:SpikeTrap": {
-    "NAME": "Spike Trap",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Deal that much damage to the next enemy that attacks you。"
+    "NAME": "钉刺陷阱",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下次受到攻击时，反弹 !B! 点伤害。"
   },
   "${ModID}:Catharsis": {
-    "NAME": "Catharsis",
-    "DESCRIPTION": "{@@}Add a *Despair 加入手牌。 The next {!M!|1=card|@=!M! 牌} you play {!M!|1=costs|@=cost} 0 并{!M!|1=plays|@=play} twice. NL 消耗 。"
+    "NAME": "宣泄",
+    "DESCRIPTION": "将一张 *绝望 加入手牌。 下 !M! 张牌耗能为0且打出两次。 NL 消耗 。"
   },
   "${ModID}:TradeBeacon": {
-    "NAME": "Trade Beacon",
-    "DESCRIPTION": "The first time you 抽 or 丢弃 during your turn, 抽 !M! 张牌。"
+    "NAME": "交易信号",
+    "DESCRIPTION": "每回合抽牌阶段结束后首次抽或弃牌时， 抽 !M! 张牌。"
   },
   "${ModID}:BurningPassion": {
-    "NAME": "Burning Passion",
-    "DESCRIPTION": "Double the first buff you 获得 during your turn。"
+    "NAME": "燃烧激情",
+    "DESCRIPTION": "每回合首次获得正面效果时，额外获得一次。"
   },
   "${ModID}:TaintedWeapon": {
-    "NAME": "Tainted Weapon",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 起动 ： Put this card in a random monster。",
+    "NAME": "腐化武器",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 起动 ：本牌被随机一名敌人偷走。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害。"
     ]

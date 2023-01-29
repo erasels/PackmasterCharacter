@@ -1,16 +1,18 @@
 [
   {
-    "PROPER_NAME": "Evolve",
+    "PROPER_NAME": "进化",
     "NAMES": [
-      "evolves"
+      "evolves",
+      "进化"
     ],
-    "DESCRIPTION": "Evolving 牌 can be upgraded up to #b3 次。 They are upgraded 本场战斗 每当 the listed condition is met while the card is in your h并并获得 bonus effects when fully upgraded。"
+    "DESCRIPTION": "#y进化 牌可被升级 #b3 次。其在手牌时，满足其 #y进化 即可使其 #y进化 ，持续整场战斗，升至最高级时，获得特殊效果。"
   },
   {
-    "PROPER_NAME": "Rend",
+    "PROPER_NAME": "",
     "NAMES": [
-      "rend"
+      "rend",
+      "狂扯"
     ],
-    "DESCRIPTION": "Receives more damage from attacks equal to Rend. Reduced by half at end of round。"
+    "DESCRIPTION": "被攻击时受到层数点额外伤害，该单位回合结束时失去一半层数。"
   }
 ]

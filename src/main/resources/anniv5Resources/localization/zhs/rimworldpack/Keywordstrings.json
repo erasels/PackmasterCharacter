@@ -1,17 +1,19 @@
 [
   {
-    "PROPER_NAME": "On Fire",
+    "PROPER_NAME": "着火",
     "NAMES": [
       "on fire",
-      "on_fire"
+      "on_fire",
+      "着火"
     ],
-    "DESCRIPTION": "回合结束时， 牌 in your h并with #yFire #yCounters make you take damage equal to their #yFire #yCounter. They then increase the #yFire #yCounter. 牌 with #yFire #yCounters play an additional copy of themselves for every #yFire #yCounter above #b1, 并#y消耗 。"
+    "DESCRIPTION": "回合结束时，受到手牌的着火点数点伤害，且着火点数各加 #b1 。 #y着火 点数高于 #b1 的牌打出时，每有一点 #y着火 点数，额外打出一次并 #y消耗 。"
   },
   {
-    "PROPER_NAME": "Addiction",
+    "PROPER_NAME": "上瘾",
     "NAMES": [
-      "addiction"
+      "addiction",
+      "上瘾"
     ],
-    "DESCRIPTION": "After a number of turns, add #b2 #yDespairs to your h并并失去 #b5 #y力量 。"
+    "DESCRIPTION": "层数回合之后，将 #b2 张 #y绝望 加入手牌并失去 #b5 点 #y力量 。"
   }
 ]

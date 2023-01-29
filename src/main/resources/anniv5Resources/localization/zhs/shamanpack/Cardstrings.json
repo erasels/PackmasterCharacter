@@ -17,7 +17,7 @@
   },
   "${ModID}:Frostfire": {
     "NAME": "Frostfire",
-    "DESCRIPTION": "给予 !M! ${ModID}:燃烧 并!${ModID}:m2! Weak to 所有敌人. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! ${ModID}:燃烧 并!${ModID}:m2! Weak to 所有敌人。 NL 消耗 。"
   },
   "${ModID}:FieryMantle": {
     "NAME": "Fiery Mantle",
@@ -43,6 +43,6 @@
   },
   "${ModID}:FadingEmber": {
     "NAME": "Fading Ember",
-    "DESCRIPTION": "给予 !M! ${ModID}:燃烧. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! ${ModID}:燃烧。 NL 消耗 。"
   }
 }

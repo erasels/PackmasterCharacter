@@ -1,15 +1,15 @@
 {
   "${ModID}:ReplicatorsPack": {
     "TEXT": [
-      "Replicators",
-      "Multiply your 牌 并strive for a big deck full of value",
+      "增殖",
+      "增殖你的牌，构筑一套有价值的大卡组。",
       "Mindbomber"
     ]
   },
   "${ModID}:ReplicatorsPackHat": {
     "TEXT": [
-      "It just wants to play",
-      "Replicator Hat"
+      "它只是想和你玩玩。",
+      "增殖之帽"
     ]
   }
 }

@@ -2,7 +2,7 @@
   "${ModID}:DeceivedPower": {
     "NAME": "Deceived",
     "DESCRIPTIONS": [
-      "If this creature dies while #yPoisoned, you 获得 #b",
+      "If this creature dies while #y中毒ed, you 获得 #b",
       " gold。"
     ]
   },

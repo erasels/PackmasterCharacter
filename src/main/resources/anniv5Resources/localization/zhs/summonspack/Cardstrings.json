@@ -47,7 +47,7 @@
   },
   "${ModID}:Training": {
     "NAME": "Training",
-    "DESCRIPTION": "回合结束时 Evoke your next orb !M! times。",
+    "DESCRIPTION": "回合结束时 Evoke your next orb !M! 次。",
     "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them。"
   },
   "${ModID}:Ambush": {

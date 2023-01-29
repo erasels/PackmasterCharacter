@@ -1,53 +1,53 @@
 {
   "${ModID}:SpikeTrapPower": {
-    "NAME": "Spike Trap",
+    "NAME": "钉刺陷阱",
     "DESCRIPTIONS": [
-      "Deal #b",
-      " damage to the next enemy that hits you。"
+      "下次受到攻击时，反弹 #b",
+      " 点伤害。"
     ]
   },
   "${ModID}:CatharsisPower": {
-    "NAME": "Catharsis",
+    "NAME": "宣泄",
     "DESCRIPTIONS": [
-      "Your next card costs 0 并plays twice!",
-      "Play your next #b",
-      " 牌 cost 0 并play twice!"
+      "下张牌耗能为 #b0 且打出两次！",
+      "下 #b",
+      " 张牌耗能为 #b0 且打出两次！"
     ]
   },
   "${ModID}:PyromaniacPower": {
-    "NAME": "Pyromaniac",
+    "NAME": "火术师",
     "DESCRIPTIONS": [
-      "你的回合开始时， set a random card in your h并#yOn #yFire。",
-      "你的回合开始时， set #b",
-      " random 牌 in your h并#yOn #yFire"
+      "你的回合开始时，随机使一张手牌 #y着火 。",
+      "你的回合开始时，随机使 #b",
+      " 张手牌 #y着火 。"
     ]
   },
   "${ModID}:BurningPassionPower": {
-    "NAME": "Burning Passion",
+    "NAME": "燃烧激情",
     "DESCRIPTIONS": [
-      "The first time you 获得 a buff during your turn, multiply it by #b",
-      "。"
+      "每回合首次获得 #g正面效果 时，获得 #b",
+      " 次。"
     ]
   },
   "${ModID}:HoldCardPower": {
-    "NAME": "Hold Card",
+    "NAME": "圣牌",
     "DESCRIPTIONS": [
-      "When this creature dies, add a ",
+      "该单位死亡时，将 ",
       " 加入手牌。"
     ]
   },
   "${ModID}:LuciferiumAddictionPower": {
-    "NAME": "Luciferium Addiction",
+    "NAME": "魔鬼素上瘾",
     "DESCRIPTIONS": [
-      "In #b1 turn, add #b2 #yDespairs to your h并并失去 #b5 #y力量 。",
-      "In #b",
-      " turns, add #b2 #yDespairs to your h并并失去 #b5 #y力量 。"
+      "本回合结束时，将 #b2 张 #y绝望 加入手牌并失去 #b5 点 #y力量 。",
+      "#b",
+      " 回合内，将 #b2 张 #y绝望 加入手牌并失去 #b5 点 #y力量 。"
     ]
   },
   "${ModID}:TradeBeaconPower": {
-    "NAME": "Trade Beacon",
+    "NAME": "交易信号",
     "DESCRIPTIONS": [
-      "The first time you 抽 or 丢弃 during your turn, 抽 #b",
+      "每回合抽牌阶段外首次抽或丢弃一张牌时，抽 #b",
       " 张牌。"
     ]
   }

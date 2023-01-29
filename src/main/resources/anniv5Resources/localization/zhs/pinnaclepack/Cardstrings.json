@@ -57,6 +57,6 @@
   "${ModID}:Rea__dyCommonSkill": {
     "NAME": "准—备！",
     "DESCRIPTION": "获得 !M! 层 活力 。 NL 获得 !${ModID}:m2! 层临时 敏捷 。 NL 消耗性 !stslib:ex! 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 活力 。 NL 获得 !${ModID}:m2! 层临时 敏捷 。 NL 抽一张牌. NL 消耗性 !stslib:ex! 。"
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 活力 。 NL 获得 !${ModID}:m2! 层临时 敏捷 。 NL 抽一张牌。 NL 消耗性 !stslib:ex! 。"
   }
 }

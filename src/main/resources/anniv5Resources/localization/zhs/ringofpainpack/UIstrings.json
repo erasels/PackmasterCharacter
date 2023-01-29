@@ -1,16 +1,16 @@
 {
   "${ModID}:RingOfPainPack": {
     "TEXT": [
-      "Ring of Pain",
-      "Denizens come, from the Ring of Pain. Evolve them and, your enemies will be slain。",
+      "苦痛之环",
+      "有来客，来自苦痛之环的客人。将其进化，然后高枕无忧地看着敌人被杀。",
       "Darkglade",
-      "#yRing #yof #yPain originally created by #ySimon #yBoxer 并#yTwice #yDifferent"
+      "创意来自 #ySimon #yBoxer 与 #yTwice #yDifferent 的游戏作品 #y苦痛之环(Ring #yof #yPain) 。"
     ]
   },
   "${ModID}:RingOfPainPackHat": {
     "TEXT": [
-      "How comfy it is to rest/Within the confines of this makeshift nest。",
-      "Mini Owl"
+      "这个临时的巢穴住起来真舒适呀。",
+      "迷你鹄兽"
     ]
   }
 }

@@ -2,17 +2,17 @@
   "${ModID}:FireVial": {
     "NAME": "Fire Vial",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! ${ModID}:燃烧. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! ${ModID}:燃烧。 NL 消耗 。"
   },
   "${ModID}:ExplosiveVial": {
     "NAME": "Explosive Vial",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! ${ModID}:燃烧 to 所有敌人. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! ${ModID}:燃烧 to 所有敌人。 NL 消耗 。"
   },
   "${ModID}:格挡Vial": {
     "NAME": "格挡 Vial",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL Your 格挡 is not removed at the start of your 下回合. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL Your 格挡 is not removed at the start of your 下回合。 NL 消耗 。"
   },
   "${ModID}:DynamicVial": {
     "NAME": "Dynamic Vial",
@@ -21,7 +21,7 @@
   },
   "${ModID}:MetallicVial": {
     "NAME": "Metallic Vial",
-    "DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact. NL 消耗 。",
+    "DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact. NL stslib:消耗性 !stslib:ex! 。",
     "EXTENDED_DESCRIPTION": ["获得 4 Plated Armor。", "获得 3 Thorns。","获得 2 Artifact。"]
   },
@@ -33,13 +33,13 @@
   },
   "${ModID}:ToxicVial": {
     "NAME": "Toxic Vial",
-    "DESCRIPTION": "Choose: 给予 3 Weak, or 给予 8 Poison. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose: 给予 3 易伤, 给予 3 Weak, or 给予 8 Poison. NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["给予 3 易伤。", "给予 3 Weak。","给予 8 Poison。"]
+    "DESCRIPTION": "Choose: 给予 3 Weak, or 给予 8 中毒。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Choose: 给予 3 易伤, 给予 3 Weak, or 给予 8 中毒。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["给予 3 易伤。", "给予 3 Weak。","给予 8 中毒。"]
   },
   "${ModID}:AttackVial": {
     "NAME": "Attack Vial",
-    "DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played. NL 消耗 。",
+    "DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played. NL stslib:消耗性 !stslib:ex! 。",
     "EXTENDED_DESCRIPTION": ["Choose 1 of 3 Attacks to 获得. It costs 0 until played。"]
   },
@@ -49,7 +49,7 @@
   },
   "${ModID}:VialOfMemory": {
     "NAME": "Vial of Memory",
-    "DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it 加入手牌。 It costs 0 until played. NL 消耗 。",
+    "DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it 加入手牌。 It costs 0 until played。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it 加入手牌。 It costs 0 until played. NL stslib:消耗性 !stslib:ex! 。"
   }
 }

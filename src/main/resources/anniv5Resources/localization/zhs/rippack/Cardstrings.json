@@ -51,9 +51,9 @@
     "NAME": "",
     "DESCRIPTION": "抽 !M! 张牌。"
   },
-  "${ModID}:灵感": {
+  "${ModID}:Inspiration": {
     "NAME": "Inspiration",
-    "DESCRIPTION": "抽 牌 equal to the number of ${ModID}:Art 并Status 牌 in your 消耗 pile. NL 消耗 。",
+    "DESCRIPTION": "抽 牌 equal to the number of ${ModID}:Art 并Status 牌 in your 消耗 pile。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "抽 牌 equal to the number of ${ModID}:Art 并Status 牌 in your 消耗 pile。",
     "EXTENDED_DESCRIPTION": [
       " NL (抽 ",
@@ -61,11 +61,11 @@
       " 张牌。)"
     ]
   },
-  "${ModID}:灵感Art": {
+  "${ModID}:InspirationArt": {
     "NAME": "Inspiration",
     "DESCRIPTION": ""
   },
-  "${ModID}:灵感Text": {
+  "${ModID}:InspirationText": {
     "NAME": "",
     "DESCRIPTION": "抽 牌 equal to the number of ${ModID}:Art 牌 in your 消耗 pile。",
     "EXTENDED_DESCRIPTION": [
@@ -125,7 +125,7 @@
   "${ModID}:LeftBrain": {
     "NAME": "Left Brain",
     "DESCRIPTION": "消耗 ALL your ${ModID}:Art 并Status 张牌。 获得 !M! 点 力量 for each card 消耗ed。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL 消耗 ALL your ${ModID}:Art 并Status 张牌。 获得 !M! 点 力量 for each card 消耗ed。"
+    "UPGRADE_DESCRIPTION": "${ModID}:Unnate。 NL 消耗 ALL your ${ModID}:Art 并Status 张牌。 获得 !M! 点 力量 for each card 消耗ed。"
   },
   "${ModID}:FuryAttack": {
     "NAME": "Fury",

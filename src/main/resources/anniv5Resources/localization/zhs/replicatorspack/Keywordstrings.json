@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Duplication",
+    "PROPER_NAME": "重复",
     "NAMES": [
-      "duplication"
+      "duplication",
+      "重复"
     ],
-    "DESCRIPTION": "Your next X 牌 are played twice。"
+    "DESCRIPTION": "每层使下张牌打出两次。"
   }
 ]

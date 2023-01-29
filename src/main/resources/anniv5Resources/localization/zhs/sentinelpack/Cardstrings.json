@@ -11,7 +11,7 @@
   },
   "${ModID}:StanceDance": {
     "NAME": "Stance Dance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Enter a random Stance. NL 消耗 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Enter a random Stance。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Enter a random Stance。"
   },
   "${ModID}:RagnarokNRoll": {
