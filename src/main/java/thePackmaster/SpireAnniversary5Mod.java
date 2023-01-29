@@ -25,7 +25,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -38,7 +37,6 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -77,8 +75,6 @@ import thePackmaster.potions.clawpack.ClawPowerPotion;
 import thePackmaster.potions.clawpack.DrawClawsPotion;
 import thePackmaster.potions.clawpack.GenerateClawsPotion;
 import thePackmaster.potions.thieverypack.DivinePotion;
-import thePackmaster.powers.bitingcoldpack.FrostbitePower;
-import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.powers.dragonwrathpack.PenancePower;
 import thePackmaster.powers.evenoddpack.GammaWardPower;
 import thePackmaster.powers.evenoddpack.PrimeDirectivePower;
@@ -874,30 +870,12 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.type == AbstractPower.PowerType.DEBUFF && source == AbstractDungeon.player && target != AbstractDungeon.player) {
+        if (power.type == AbstractPower.PowerType.DEBUFF) {
             // Biting Cold Pack
             // Growing Affliction (Return to hand)
             for (AbstractCard c : AbstractDungeon.player.discardPile.group)
                 if (c.cardID.equals(GrowingAffliction.ID))
                     AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(c));
-
-            // Glaciate (Gain Vigor)
-            if (power.ID.equals(FrostbitePower.POWER_ID) && source.hasPower(GlaciatePower.POWER_ID)) {
-                AbstractPower glaciate = source.getPower(GlaciatePower.POWER_ID);
-
-                atb(new AbstractGameAction() {
-                    @Override
-                    public void update() {
-                        glaciate.flash();
-                        if (Settings.FAST_MODE)
-                            addToBot(new WaitAction(0.1F));
-                        else
-                            addToBot(new WaitAction(0.2F));
-                        applyToSelf(new VigorPower(AbstractDungeon.player, glaciate.amount));
-                        this.isDone = true;
-                    }
-                });
-            }
 
             //Ring of Pain pack
             if (!target.hasPower(ArtifactPower.POWER_ID)) {
