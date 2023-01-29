@@ -38,7 +38,7 @@
   },
   "${ModID}:TheEncyclopedia": {
     "NAME": "The Encyclopedia",
-    "DESCRIPTION": "Choose 2 of !M! cards to shuffle into your draw pile. They cost 2 less. NL Exhaust.",
+    "DESCRIPTION": "Choose 2 of !M! random cards to shuffle into your draw pile. They cost 2 less. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose 2 cards to add to your draw pile."
     ]
