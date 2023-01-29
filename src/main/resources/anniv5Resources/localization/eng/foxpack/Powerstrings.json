@@ -1,0 +1,9 @@
+{
+  "${ModID}:HuntersMark": {
+    "NAME": "Hunter's Mark",
+    "DESCRIPTIONS": [
+      "Takes #b",
+      "% more damage from attacks."
+    ]
+  }
+}

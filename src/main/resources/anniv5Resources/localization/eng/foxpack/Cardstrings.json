@@ -1,0 +1,10 @@
+{
+  "${ModID}:MischievousFox": {
+    "NAME": "Mischievous Fox",
+    "DESCRIPTION": "Deal !D! damage. NL 50% chance to deal !M! damage to you."
+  },
+  "${ModID}:ErraticFox": {
+    "NAME": "Mischievous Fox",
+    "DESCRIPTION": "Either deal !D! damage to a random enemy or gain !B! Block. (50% Chance)"
+  }
+}
