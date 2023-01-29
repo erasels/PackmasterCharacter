@@ -1,6 +1,9 @@
 package thePackmaster.cards.strikepack;
 
+import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.strikepack.StrikeABargainPower;
 import thePackmaster.util.Wiz;
@@ -17,6 +20,12 @@ public class StrikeABargain extends AbstractStrikePackCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.applyToSelf(new StrikeABargainPower(p));
+        for (AbstractCard c:p.hand.group
+             ) {
+            if (c.type == CardType.ATTACK){
+                Wiz.atb(new ReduceCostForTurnAction(c, 99));
+            }
+        }
     }
 
     public void upp() {

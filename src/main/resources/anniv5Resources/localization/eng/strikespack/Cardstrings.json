@@ -38,6 +38,6 @@
   },
   "${ModID}:StrikeABargain": {
     "NAME": "Strike a Bargain",
-    "DESCRIPTION": "Your Attacks costs 0 this turn. You cannot play non-Attacks this turn."
+    "DESCRIPTION": "Reduce the cost of Attacks in hand to 0 this turn. You can only play Attacks this turn."
   }
 }

@@ -46,7 +46,7 @@
   "${ModID}:LeftHook": {
     "NAME": "Left Hook",
     "DESCRIPTION": "Deal !D! damage.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Odd: ", "Stays in your hand."]
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Odd: ", "Stays in your hand.", " NL Exhaustive !stslib:ex!."]
   },
   "${ModID}:Battlecry": {
     "NAME": "Battlecry",
