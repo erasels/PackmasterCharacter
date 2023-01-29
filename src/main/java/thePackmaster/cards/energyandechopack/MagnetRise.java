@@ -2,13 +2,9 @@ package thePackmaster.cards.energyandechopack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import com.megacrit.cardcrawl.powers.EnergizedBluePower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.EnergyAndEchoPack;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.applyToSelf;
 
 public class MagnetRise extends AbstractEchoCard {
 

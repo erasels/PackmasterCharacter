@@ -3,17 +3,15 @@ package thePackmaster.powers.rimworldpack;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.cardmodifiers.rimworldpack.OnFireModifier;
-import thePackmaster.patches.DiscardHookPatch;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.adp;
 
 public class PyromaniacPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID(PyromaniacPower.class.getSimpleName());
@@ -34,19 +32,21 @@ public class PyromaniacPower extends AbstractPackmasterPower {
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                if(AbstractDungeon.player.hand.size() == 0)
-                {
+                if(Wiz.hand().isEmpty()) {
                     isDone = true;
                     return;
                 }
-                AbstractCard kindle = AbstractDungeon.player.hand.getRandomCard(true);
-                if(kindle == null)
-                {
-                    isDone = true;
-                    return;
+                if(amount > Wiz.hand().size()) amount = Wiz.hand().size();
+                for (int i = 0; i < amount; i++) {
+                    AbstractCard kindle = AbstractDungeon.player.hand.getRandomCard(true);
+                    if(kindle == null) {
+                        isDone = true;
+                        return;
+                    }
+                    CardModifierManager.addModifier(kindle, new OnFireModifier());
+                    kindle.superFlash(Color.ORANGE.cpy());
                 }
-                CardModifierManager.addModifier(kindle, new OnFireModifier());
-                kindle.superFlash(Color.ORANGE.cpy());
+
                 isDone = true;
             }
         });
