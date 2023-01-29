@@ -32,9 +32,9 @@
 		"NAME": "泥裂"
 	},
 	"${ModID}:RagingInferno":	{
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:燃烧 。 NL 消耗 。",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:燃烧 。 NL 消耗 。",
 		"NAME": "业火",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! ${ModID}:燃烧 。"
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:燃烧 。"
 	},
 	"${ModID}:TectonicQuake":	{
 		"DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 ${ModID}:土元素 与 虚弱 。 NL 消耗 。",

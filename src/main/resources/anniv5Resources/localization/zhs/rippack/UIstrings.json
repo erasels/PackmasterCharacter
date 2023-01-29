@@ -9,7 +9,7 @@
   "${ModID}:Rip": {
     "TEXT": [
       "可撕裂",
-      "I need room for both halves of the card in my hand。",
+      "我需要2张牌位才能撕开。",
       "攻击",
       "技能"
     ]

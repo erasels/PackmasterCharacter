@@ -2,12 +2,12 @@
   "${ModID}:FireVial": {
     "NAME": "Fire Vial",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! ${ModID}:燃烧。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! 层 ${ModID}:燃烧 。 NL 消耗 。"
   },
   "${ModID}:ExplosiveVial": {
     "NAME": "Explosive Vial",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! ${ModID}:燃烧 to 所有敌人。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! 层 ${ModID}:燃烧 to 所有敌人。 NL 消耗 。"
   },
   "${ModID}:格挡Vial": {
     "NAME": "格挡 Vial",

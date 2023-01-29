@@ -1,16 +1,16 @@
 {
   "${ModID}:SentinelPack": {
     "TEXT": [
-      "Sentinel",
-      "A distant offshoot of the Watcher tribe, who prefer to use Stances 并are much less wrathful。",
+      "感知者",
+      "遥远处观者族落中的另一人，擅长使用姿态，但远没观者那么爱发脾气。",
       "MichaelMayhem",
-      "Pack Art - @SaltCenter. Serenity Art - u/Aeverelle. Swagger Art - u/fenr1sulfr"
+      "卡牌贴图： @SaltCenter 、宁静姿态： u/Aeverelle 、 Swagger Art - u/fenr1sulfr"
     ]
   },
   "${ModID}:SentinelPackHat": {
     "TEXT": [
-      "Like the Watcher's, but with noticeably less red。",
-      "Sentinel Sash"
+      "有一丢丢像观者的，但没那么红。",
+      "感知者面巾"
     ]
   }
 }

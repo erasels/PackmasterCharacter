@@ -1,7 +1,7 @@
 {
   "${ModID}:SwaggerPower": {
-    "NAME": "Swagger",
-    "DESCRIPTIONS": ["If you end your turn in a #yStance, 获得 #b",
-      " #y力量 并#y敏捷 。"]
+    "NAME": "酷傲者",
+    "DESCRIPTIONS": ["若回合结束时处于 #y姿态 ， 获得 #b",
+      " 点 #y力量 有 #y敏捷 。"]
   }
 }

@@ -1,33 +1,36 @@
 [
   {
-    "PROPER_NAME": "Rippable",
+    "PROPER_NAME": "可撕裂",
     "NAMES": [
       "rippable",
       "ripped",
-      "rip"
+      "rip",
+      "可撕裂"
     ],
-    "DESCRIPTION": "Right click to rip in half。"
+    "DESCRIPTION": "右键点击将其撕裂成两半。"
   },
   {
-    "PROPER_NAME": "Art Card",
+    "PROPER_NAME": "卡图牌",
     "NAMES": [
       "art card",
       "art_card",
       "art cards",
       "art_cards",
-      "art"
+      "art",
+      "卡图牌"
     ],
-    "DESCRIPTION": "The art half of a #yripped card. It does nothing 并always #y消耗s。"
+    "DESCRIPTION": "被 #y撕裂 牌的卡图部分，不造成任何效果且附带 #y消耗 。"
   },
   {
-    "PROPER_NAME": "Text Card",
+    "PROPER_NAME": "文本牌",
     "NAMES": [
       "text card",
       "text_card",
       "text cards",
-      "text_cards"
+      "text_cards",
+      "文本牌"
     ],
-    "DESCRIPTION": "The text half of a #yripped card. It always #y消耗s。"
+    "DESCRIPTION": "被 #y撕裂 牌的文本部分，附带 #y消耗 。"
   },
   {
     "PROPER_NAME": "固无",

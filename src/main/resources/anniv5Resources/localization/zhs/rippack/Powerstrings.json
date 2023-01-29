@@ -1,10 +1,10 @@
 {
   "${ModID}:DividedFuryPower": {
-    "NAME": "Divided Fury",
+    "NAME": "多重愤怒",
     "DESCRIPTIONS": [
-      "你的回合开始时， add #b",
-      " Fury card 加入手牌。",
-      " Fury 牌 加入手牌。"
+      "你的回合开始时，将 #b",
+      " 张 #y愤怒 加入手牌。",
+      " 张 #y愤怒 加入手牌。"
     ]
   }
 }

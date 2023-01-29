@@ -1,22 +1,22 @@
 {
   "${ModID}:StrikeOfMidnight": {
-    "NAME": "Strike of Midnight",
+    "NAME": "午夜打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 生成 1 Dark。"
   },
   "${ModID}:StrikeOfLuck": {
-    "NAME": "Strike of Luck",
+    "NAME": "幸运打击",
     "DESCRIPTION": "造成 !D! 点伤害 to a random enemy 1 to 3 次。"
   },
   "${ModID}:LightningStrike": {
-    "NAME": "Lightning Strike",
+    "NAME": "闪电打击",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 1 Lightning。"
   },
   "${ModID}:PenaltyStrike": {
-    "NAME": "Penalty Strike",
+    "NAME": "惩罚打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 目标失去 !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Backstrike": {
-    "NAME": "Backstrike",
+    "NAME": "回身打击",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:修改 all Attacks in hand: \"Name 获得s Strike.\""
   },
   "${ModID}:WorkersStrike": {
@@ -32,7 +32,7 @@
     "DESCRIPTION": "消耗 all 牌 in hand. Replace them with random Strikes that cost 1 less。 NL 消耗 。"
   },
   "${ModID}:StrikeOfGenius": {
-    "NAME": "Strike of Genius",
+    "NAME": "打击天才",
     "DESCRIPTION": "你的回合开始时， 获得 a random \"Strike\". NL It costs 0 until played 并获得s 消耗 。",
     "UPGRADE_DESCRIPTION": "你的回合开始时， 获得 a random Upgraded \"Strike\". NL It costs 0 until played 并获得s 消耗 。"
   },

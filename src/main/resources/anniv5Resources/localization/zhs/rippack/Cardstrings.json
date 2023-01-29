@@ -1,16 +1,16 @@
 {
   "${ModID}:DividedFury": {
-    "NAME": "Divided Fury",
-    "DESCRIPTION": "你的回合开始时， add a *Fury 加入手牌。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时， add a *Fury 加入手牌。"
+    "NAME": "多重愤怒",
+    "DESCRIPTION": "回合开始时，将一张 *怒火 加入手牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，将一张 *怒火 加入手牌。"
   },
   "${ModID}:ViciousCycle": {
-    "NAME": "Vicious Cycle",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each card *ripped 本回合。",
+    "NAME": "邪恶循环",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每 *撕裂 过一张牌，本牌伤害增加 !D! 点。",
     "EXTENDED_DESCRIPTION": [
-      " NL (",
-      " card ripped.)",
-      " 牌 ripped.)"
+      " NL (已撕裂",
+      "张牌。)",
+      "张牌。)"
     ]
   },
   "${ModID}:ViciousCycleArt": {
@@ -19,19 +19,19 @@
   },
   "${ModID}:ViciousCycleText": {
     "NAME": "",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal an additional !D! damage for each card *ripped 本回合。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每 *撕裂 过一张牌，本牌伤害增加 !D! 点。",
     "EXTENDED_DESCRIPTION": [
-      " NL (",
-      " card ripped.)",
-      " 牌 ripped.)"
+      " NL (已撕裂",
+      "张牌。)",
+      "张牌。)"
     ]
   },
   "${ModID}:ArtAttack": {
-    "NAME": "Art Attack",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL The ${ModID}:Art Card causes the target to 失去 !M! 生命。"
+    "NAME": "卡图攻击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本牌的 ${ModID}:卡图牌 可使目标失去 !M! 点生命。"
   },
   "${ModID}:ArtAttackArt": {
-    "NAME": "Art Attack",
+    "NAME": "卡图攻击",
     "DESCRIPTION": ""
   },
   "${ModID}:ArtAttackText": {
@@ -39,12 +39,12 @@
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "${ModID}:SurprisePack": {
-    "NAME": "Surprise Pack",
-    "DESCRIPTION": "抽 !M! 张牌。 NL When *ripped, 获得 [E]。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL When *ripped, NL 获得 [E] [E]。"
+    "NAME": "惊喜包",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 被 #y撕裂 时， NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 被 #y撕裂 时， NL 获得 [E] [E] 。"
   },
   "${ModID}:SurprisePackArt": {
-    "NAME": "Surprise Pack",
+    "NAME": "惊喜包",
     "DESCRIPTION": ""
   },
   "${ModID}:SurprisePackText": {
@@ -52,34 +52,34 @@
     "DESCRIPTION": "抽 !M! 张牌。"
   },
   "${ModID}:Inspiration": {
-    "NAME": "Inspiration",
-    "DESCRIPTION": "抽 牌 equal to the number of ${ModID}:Art 并Status 牌 in your 消耗 pile。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 牌 equal to the number of ${ModID}:Art 并Status 牌 in your 消耗 pile。",
+    "NAME": "启发",
+    "DESCRIPTION": "抽消耗堆中 ${ModID}:卡图牌 与 状态牌 合计牌数张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽消耗堆中 ${ModID}:卡图牌 与 状态牌 合计牌数张牌。",
     "EXTENDED_DESCRIPTION": [
       " NL (抽 ",
-      " card.)",
+      " 张牌。)",
       " 张牌。)"
     ]
   },
   "${ModID}:InspirationArt": {
-    "NAME": "Inspiration",
+    "NAME": "启发",
     "DESCRIPTION": ""
   },
   "${ModID}:InspirationText": {
     "NAME": "",
-    "DESCRIPTION": "抽 牌 equal to the number of ${ModID}:Art 牌 in your 消耗 pile。",
+    "DESCRIPTION": "抽消耗堆中 ${ModID}:卡图牌 与 状态牌 合计牌数张牌。",
     "EXTENDED_DESCRIPTION": [
       " NL (抽 ",
-      " card.)",
+      " 张牌。)",
       " 张牌。)"
     ]
   },
   "${ModID}:FlimsyBash": {
-    "NAME": "Flimsy Bash",
+    "NAME": "轻击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
   },
   "${ModID}:FlimsyBashArt": {
-    "NAME": "Flimsy Bash",
+    "NAME": "轻击",
     "DESCRIPTION": ""
   },
   "${ModID}:FlimsyBashText": {
@@ -87,11 +87,11 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
   },
   "${ModID}:FragileShrug": {
-    "NAME": "Fragile Shrug",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌。 NL When *ripped, 抽 !M! 张牌。"
+    "NAME": "易裂耸肩",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌。 NL 被 *撕裂 时， NL 抽 !M! 张牌。"
   },
   "${ModID}:FragileShrugArt": {
-    "NAME": "Fragile Shrug",
+    "NAME": "易裂耸肩",
     "DESCRIPTION": ""
   },
   "${ModID}:FragileShrugText": {
@@ -99,11 +99,11 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌。"
   },
   "${ModID}:HazardousStrike": {
-    "NAME": "Hazardous Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL When *ripped, 消耗 !M! 牌 at random。"
+    "NAME": "冒险打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 被 *撕裂 时， NL 随机 消耗 !M! 张牌。"
   },
   "${ModID}:HazardousStrikeArt": {
-    "NAME": "Hazardous Strike",
+    "NAME": "冒险打击",
     "DESCRIPTION": ""
   },
   "${ModID}:HazardousStrikeText": {
@@ -111,28 +111,28 @@
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "${ModID}:TotalWeakness": {
-    "NAME": "Total Weakness",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 虚弱 to 所有敌人。"
+    "NAME": "完全无效",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 虚弱 。"
   },
   "${ModID}:TotalWeaknessArt": {
-    "NAME": "Total Weakness",
+    "NAME": "完全无效",
     "DESCRIPTION": ""
   },
   "${ModID}:TotalWeaknessText": {
     "NAME": "",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 虚弱 to 所有敌人。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 虚弱 。"
   },
   "${ModID}:LeftBrain": {
-    "NAME": "Left Brain",
-    "DESCRIPTION": "消耗 ALL your ${ModID}:Art 并Status 张牌。 获得 !M! 点 力量 for each card 消耗ed。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Unnate。 NL 消耗 ALL your ${ModID}:Art 并Status 张牌。 获得 !M! 点 力量 for each card 消耗ed。"
+    "NAME": "左脑",
+    "DESCRIPTION": "消耗 所有 ${ModID}:卡图牌 与 状态牌 ，每张使你获得 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:固无 。 NL 消耗 所有 ${ModID}:卡图牌 与 状态牌 ，每张使你获得 !M! 点 力量 。"
   },
   "${ModID}:FuryAttack": {
-    "NAME": "Fury",
+    "NAME": "怒火",
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "${ModID}:FuryAttackArt": {
-    "NAME": "Fury",
+    "NAME": "怒火",
     "DESCRIPTION": ""
   },
   "${ModID}:FuryAttackText": {
@@ -140,11 +140,11 @@
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "${ModID}:FurySkill": {
-    "NAME": "Fury",
+    "NAME": "怒火",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "${ModID}:FurySkillArt": {
-    "NAME": "Fury",
+    "NAME": "怒火",
     "DESCRIPTION": ""
   },
   "${ModID}:FurySkillText": {
