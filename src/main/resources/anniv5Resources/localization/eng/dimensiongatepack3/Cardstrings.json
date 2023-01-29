@@ -1,18 +1,18 @@
 {
   "${ModID}:Knighthood": {
     "NAME": "Knighthood",
-    "DESCRIPTION": "Take !M! damage. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
+    "DESCRIPTION": "Lose !M! HP. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Upgrade permanently."
     ]
   },
   "${ModID}:Inferno": {
     "NAME": "Inferno",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If this did not end combat, take 3 damage."
+    "DESCRIPTION": "Deal !D! damage and apply 10 ${ModID}:Ignite to ALL enemies. NL Gain !M! ${ModID}:Ignite."
   },
   "${ModID}:Minniegun": {
     "NAME": "Minniegun",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Put a *Jam in your discard pile."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Put a *Jam in your discard pile."
   },
   "${ModID}:Ouroboros": {
     "NAME": "Ouroboros",
@@ -29,7 +29,7 @@
   },
   "${ModID}:MantisStrike": {
     "NAME": "Mantis Strike",
-    "DESCRIPTION": "Take 3 damage. NL Deal !D! damage. NL Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Take 3 damage. NL Deal !${ModID}:sd! damage. NL Deal !D! damage to a random enemy, twice."
   },
   "${ModID}:RestorationDetonation": {
     "NAME": "R. Detonation",

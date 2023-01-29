@@ -16,7 +16,7 @@ public class Minniegun extends AbstractDimensionalCardEden {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public Minniegun() {
-        super(ID, 1, CardRarity.COMMON, AbstractCard.CardType.ATTACK, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardRarity.COMMON, AbstractCard.CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 2;
         baseMagicNumber = magicNumber = 4;
         cardsToPreview = new Jam();
@@ -26,7 +26,7 @@ public class Minniegun extends AbstractDimensionalCardEden {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         }
         Wiz.atb(new MakeTempCardInDiscardAction(new Jam(), 1));
     }

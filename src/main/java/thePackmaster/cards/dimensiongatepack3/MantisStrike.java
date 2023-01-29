@@ -2,6 +2,7 @@ package thePackmaster.cards.dimensiongatepack3;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,24 +18,26 @@ public class MantisStrike extends AbstractDimensionalCardInscryp {
 
     public MantisStrike() {
         super(ID, 1, CardRarity.COMMON, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 3;
+        baseSecondDamage = secondDamage = 7;
         tags.add(CardTags.STRIKE);
+        baseMagicNumber = magicNumber = 2;
 
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SelfDamageAction(new DamageInfo(p, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-        Wiz.doDmg(m, damage, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-        this.isMultiDamage = true;
-        this.calculateCardDamage(m);
-        Wiz.doAllDmg(this, AbstractGameAction.AttackEffect.NONE, false);
-        this.isMultiDamage = false;
+        Wiz.doDmg(m, secondDamage, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+
+        for (int i = 0; i < magicNumber; i++) {
+            addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        }
 
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
+        upgradeSecondDamage(2);
     }
 }

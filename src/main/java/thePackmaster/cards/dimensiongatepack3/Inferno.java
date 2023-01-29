@@ -7,6 +7,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.dimensiongatepack.SelfDamageAction;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardTrain;
+import thePackmaster.powers.entropypack.RuinPower;
+import thePackmaster.powers.shamanpack.IgnitePower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -15,25 +18,20 @@ public class Inferno extends AbstractDimensionalCardTrain {
 
     public Inferno() {
         super(ID, 1, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ALL_ENEMY);
-        baseDamage = 16;
+        baseDamage = 10;
+        baseMagicNumber = magicNumber = 2;
         isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.FIRE);
+        Wiz.forAllMonstersLiving((mo)->
+                Wiz.applyToEnemy(mo, new IgnitePower(mo,10)));
 
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
-                    addToBot(new SelfDamageAction(new DamageInfo(p, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-                }
-                this.isDone = true;
-            }
-        });
+        Wiz.applyToSelf(new IgnitePower(p, magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeMagicNumber(-1);
     }
 }
