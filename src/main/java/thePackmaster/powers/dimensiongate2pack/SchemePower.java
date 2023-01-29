@@ -1,5 +1,6 @@
 package thePackmaster.powers.dimensiongate2pack;
 
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -28,7 +29,6 @@ public class SchemePower extends AbstractPackmasterPower {
 
             this.flash();
 
-            for (int i = 0; i < amount; i++) {
                 AbstractMonster m = null;
                 if (action.target != null) {
                     m = (AbstractMonster) action.target;
@@ -46,9 +46,9 @@ public class SchemePower extends AbstractPackmasterPower {
 
                 tmp.purgeOnUse = true;
                 AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
-            }
 
-            removeThis();
+                addToTop(new ReducePowerAction(owner,owner, this, 1));
+
         }
 
     }
@@ -60,10 +60,10 @@ public class SchemePower extends AbstractPackmasterPower {
 
     @Override
     public void updateDescription() {
-        if (amount > 1) {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount == 1) {
+            description = DESCRIPTIONS[2];
         } else {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         }
     }
 }

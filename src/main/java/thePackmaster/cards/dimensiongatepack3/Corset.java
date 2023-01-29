@@ -14,7 +14,7 @@ public class Corset extends AbstractDimensionalCardEden {
 
     public Corset() {
         super(ID, 1, CardRarity.COMMON, CardType.SKILL, CardTarget.SELF);
-        baseBlock = 16;
+        baseBlock = 14;
     }
 
 
@@ -24,7 +24,7 @@ public class Corset extends AbstractDimensionalCardEden {
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
 
     }
 }

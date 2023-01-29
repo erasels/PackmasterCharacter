@@ -9,7 +9,7 @@
   },
   "${ModID}:BleedItOut": {
     "NAME": "Bleed It Out",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Poison, trigger it. Otherwise apply !M! Poison."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Trigger the enemy's Poison."
   },
   "${ModID}:Trace": {
     "NAME": "Trace",

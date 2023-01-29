@@ -1,7 +1,7 @@
 {
   "${ModID}:ArsenalGear": {
     "NAME": "Arsenal Gear",
-    "DESCRIPTION": "At the start of the next !M! turns, gain a random *Uncommon or *Rare card. It costs 0 and gains Exhaust."
+    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare to your hand. It costs 0 and *Exhausts."
   },
   "${ModID}:ConjureBarrage": {
     "NAME": "Conjure Barrage",
@@ -18,15 +18,15 @@
   },
   "${ModID}:Daggerstorm": {
     "NAME": "Daggerstorm",
-    "DESCRIPTION": "Whenever you play a 0-cost Exhaust card, play a copy of it."
+    "DESCRIPTION": "0-cost Exhaust cards are played an additional time."
   },
   "${ModID}:FlamingGrasp": {
     "NAME": "Flaming Grasp",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL The next time you use a *Magic card, gain a *Flame *Pillar."
+    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL The next *Magic card adds a *Flame *Pillar to your hand."
   },
   "${ModID}:FlamePillar": {
     "NAME": "Flame Pillar",
-    "DESCRIPTION": "*Magic. NL Apply !M! ${ModID}:Ignite. NL Gain a *Channel."
+    "DESCRIPTION": "*Magic. NL Apply !M! ${ModID}:Ignite. NL Add a *Channel to your hand."
   },
   "${ModID}:Haymaker": {
     "NAME": "Haymaker",
@@ -34,8 +34,8 @@
   },
   "${ModID}:ManaShield": {
     "NAME": "Mana Shield",
-    "DESCRIPTION": "*Magic. NL Gain !B! Block. NL Gain a *Channel.",
-    "UPGRADE_DESCRIPTION": "*Magic. NL Gain !B! Block. NL Gain !M! *Channels."
+    "DESCRIPTION": "*Magic. NL Gain !B! Block. NL Add a *Channel to your hand.",
+    "UPGRADE_DESCRIPTION": "*Magic. NL Gain !B! Block. NL Add !M! *Channels to your hand."
   },
   "${ModID}:MuscleMemory": {
     "NAME": "Muscle Memory",
@@ -47,7 +47,7 @@
   },
   "${ModID}:Crusher": {
     "NAME": "Crusher",
-    "DESCRIPTION": "Retain. NL Deal 20 damage. NL When you create a card, reduce *Crusher's cost by 1 until played."
+    "DESCRIPTION": "Retain. NL Deal 20 damage. NL When a card is created, reduce *Crusher's cost by 1 until played."
   },
   "${ModID}:PreservedThorns": {
     "NAME": "Preserved Thorns",
@@ -60,6 +60,6 @@
   },
   "${ModID}:WallOfFire": {
     "NAME": "Wall of Fire",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage to a random enemy !M! times. NL Gain 3 *Flame *Pillars."
+    "DESCRIPTION": "*Magic. NL Deal !D! damage to a random enemy !M! times. NL Add 3 *Flame *Pillars to your hand."
   }
 }

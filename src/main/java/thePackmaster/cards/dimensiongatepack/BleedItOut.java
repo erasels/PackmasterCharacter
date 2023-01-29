@@ -13,23 +13,28 @@ public class BleedItOut extends AbstractDimensionalCardVault {
     public final static String ID = makeID("BleedItOut");
 
     public BleedItOut() {
-        super(ID, 1, CardRarity.COMMON, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 6;
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 1, CardRarity.RARE, CardType.ATTACK, CardTarget.ENEMY);
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 4;
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.doDmg(m, damage, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        if (m.hasPower(PoisonPower.POWER_ID)) {
-            m.getPower(PoisonPower.POWER_ID).atStartOfTurn();
-        } else {
-            Wiz.applyToEnemy(m, new PoisonPower(m, p, magicNumber));
-        }
+        Wiz.applyToEnemy(m, new PoisonPower(m, p, magicNumber));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                this.isDone = true;
+                if (m.hasPower(PoisonPower.POWER_ID)) {
+                    m.getPower(PoisonPower.POWER_ID).atStartOfTurn();
+                }
+            }
+        });
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
         upgradeMagicNumber(1);
     }
 }

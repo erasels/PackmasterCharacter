@@ -16,9 +16,9 @@
   "${ModID}:DaggerstormPower": {
     "NAME": "Daggerstorm",
     "DESCRIPTIONS": [
-      "When you play a 0-Cost Exhaust card, play ",
-      " copy of it.",
-      " copies of it."
+      "#b0-Cost #yExhaust cards are played ",
+      " additional times.",
+      " additional time."
     ]
   }
 }

@@ -1,6 +1,7 @@
 package thePackmaster.cards.dimensiongatepack;
 
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
+import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGrift;
@@ -14,9 +15,7 @@ public class Scheme extends AbstractDimensionalCardGrift {
 
     public Scheme() {
         super(ID, 1, CardRarity.UNCOMMON, CardType.SKILL, CardTarget.SELF);
-
-        ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 3);
-        ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 3);
+         ExhaustiveVariable.setBaseValue(this, 2);
     }
 
 
@@ -25,7 +24,7 @@ public class Scheme extends AbstractDimensionalCardGrift {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        ExhaustiveVariable.upgrade(this, 1);
 
     }
 }

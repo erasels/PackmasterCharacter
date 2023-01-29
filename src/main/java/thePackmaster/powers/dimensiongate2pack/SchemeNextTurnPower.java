@@ -8,7 +8,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SchemeNextTurnPower extends AbstractPackmasterPower implements InvisiblePower {
+public class SchemeNextTurnPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("SchemeNextTurnPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
@@ -22,5 +22,14 @@ public class SchemeNextTurnPower extends AbstractPackmasterPower implements Invi
     public void atStartOfTurn() {
         Wiz.applyToSelf(new SchemePower(owner, amount));
         removeThisInvisibly();
+    }
+
+    @Override
+    public void updateDescription() {
+        if (amount == 1) {
+            description = DESCRIPTIONS[2];
+        } else {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        }
     }
 }

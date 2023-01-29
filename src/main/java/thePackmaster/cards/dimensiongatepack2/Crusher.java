@@ -18,7 +18,7 @@ public class Crusher extends AbstractDimensionalCardGrift implements onGenerateC
     public final static String ID = makeID("Crusher");
 
     public Crusher() {
-        super(ID, 5, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, 6, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 20;
         selfRetain = true;
 
@@ -27,14 +27,19 @@ public class Crusher extends AbstractDimensionalCardGrift implements onGenerateC
     @Override
     public void onCreateCard(AbstractCard card) {
         if (card != this && Wiz.p().hand.group.contains(this)) {
-            addToTop(new ReduceCostForTurnAction(this, 1));
-            this.flash(Color.GREEN.cpy());
+            if (Wiz.getLogicalCardCost(this) > 0) {
+                modifyCostForCombat(-1);
+                this.flash(Color.GREEN.cpy());
+            }
         }
     }
+
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY), 0.4F));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        modifyCostForCombat(5-Wiz.getLogicalCardCost(this));
+        isCostModified=false;
     }
 
     public void upp() {

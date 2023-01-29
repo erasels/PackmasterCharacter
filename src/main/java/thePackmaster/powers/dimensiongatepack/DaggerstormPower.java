@@ -27,31 +27,35 @@ public class DaggerstormPower extends AbstractPackmasterPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!card.purgeOnUse && this.amount > 0 && Wiz.getLogicalCardCost(card) == 0 && card.exhaust) {
 
-            this.flash();
-            AbstractMonster m = null;
-            if (action.target != null) {
-                m = (AbstractMonster) action.target;
-            }
+            for (int i = 0; i < amount; i++) {
 
-            AbstractCard tmp = card.makeSameInstanceOf();
-            AbstractDungeon.player.limbo.addToBottom(tmp);
-            tmp.current_x = card.current_x;
-            tmp.current_y = card.current_y;
-            tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-            tmp.target_y = (float) Settings.HEIGHT / 2.0F;
-            if (m != null) {
-                tmp.calculateCardDamage(m);
-            }
 
-            tmp.purgeOnUse = true;
-            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
-        }
+                this.flash();
+                AbstractMonster m = null;
+                if (action.target != null) {
+                    m = (AbstractMonster) action.target;
+                }
+
+                AbstractCard tmp = card.makeSameInstanceOf();
+                AbstractDungeon.player.limbo.addToBottom(tmp);
+                tmp.current_x = card.current_x;
+                tmp.current_y = card.current_y;
+                tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+                tmp.target_y = (float) Settings.HEIGHT / 2.0F;
+                if (m != null) {
+                    tmp.calculateCardDamage(m);
+                }
+
+                tmp.purgeOnUse = true;
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
+            }
+            }
 
     }
 
     @Override
     public void updateDescription() {
-        if (amount > 1) {
+        if (amount == 1) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
         } else {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

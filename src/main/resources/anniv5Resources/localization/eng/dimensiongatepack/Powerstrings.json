@@ -2,9 +2,17 @@
   "${ModID}:SchemePower": {
     "NAME": "Scheme",
     "DESCRIPTIONS": [
-      "The next card that costs #b1 or less will be played #b",
-      " additional times.",
-      " additional time."
+      "The next #b",
+      " cards that costs #b1 or less will be played twice.",
+      "The next card played this turn that costs #b1 or less will be played twice."
+    ]
+  },
+  "${ModID}:SchemeNextTurnPower": {
+    "NAME": "Plotting Scheme",
+    "DESCRIPTIONS": [
+      "Next turn, the first #b",
+      " cards that cost #b1 or less will be played twice.",
+      "Next turn, the first card that costs #b1 or less will be played twice."
     ]
   },
   "${ModID}:TomeOfIntellectPower": {

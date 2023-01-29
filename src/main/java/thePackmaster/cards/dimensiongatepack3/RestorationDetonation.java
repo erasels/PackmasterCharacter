@@ -23,11 +23,23 @@ public class RestorationDetonation extends AbstractDimensionalCardTrain {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int healthgained = Math.min(Wiz.p().maxHealth - Wiz.p().currentHealth, magicNumber);
 
-        healthgained = healthgained * secondMagic;
-        Wiz.atb(new HealAction(p, p, magicNumber));
-        if (healthgained > 0) Wiz.atb(new LoseHPAction(m, p, healthgained, AbstractGameAction.AttackEffect.FIRE));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                this.isDone = true;
+
+                int healthgained = p.currentHealth;
+                p.heal(magicNumber);
+                healthgained = p.currentHealth - healthgained;
+
+                if (healthgained > 0){
+                    healthgained = healthgained * secondMagic;
+                    Wiz.atb(new LoseHPAction(m, p, healthgained, AbstractGameAction.AttackEffect.FIRE));
+                }
+
+            }
+        });
 
     }
 

@@ -13,7 +13,7 @@ public class RangersSetup extends AbstractDimensionalCardObelisk {
     public final static String ID = makeID("RangersSetup");
 
     public RangersSetup() {
-        super(ID, 1, CardRarity.COMMON, CardType.SKILL, CardTarget.SELF);
+        super(ID, 1, CardRarity.UNCOMMON, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 4;
     }
 
