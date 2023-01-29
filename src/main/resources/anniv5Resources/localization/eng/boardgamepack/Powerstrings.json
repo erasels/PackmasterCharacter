@@ -33,8 +33,8 @@
   "${ModID}:PerceptionCheckPower": {
     "NAME": "Perception Check",
     "DESCRIPTIONS": [
-      "At the start of your turn, roll a D8.",
-      "At the start of your turn, roll #b",
+      "At the start of your turn, if you have no #yDice roll a D8.",
+      "At the start of your turn, if you have no #yDice roll #b",
       " D8."
     ]
   },
