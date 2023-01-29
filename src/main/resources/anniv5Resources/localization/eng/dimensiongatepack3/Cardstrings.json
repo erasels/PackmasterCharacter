@@ -16,7 +16,7 @@
   },
   "${ModID}:Ouroboros": {
     "NAME": "Ouroboros",
-    "DESCRIPTION": "At the end of any turn in which you fully blocked a source of damage, gain 1 Strength.",
+    "DESCRIPTION": "At the end of any turn in which you fully blocked any source of damage, gain 1 Strength.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the end of any turn in which you fully blocked a source of damage, gain 1 Strength."
   },
   "${ModID}:Corset": {
