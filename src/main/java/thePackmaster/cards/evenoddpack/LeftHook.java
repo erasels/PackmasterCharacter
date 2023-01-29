@@ -53,12 +53,16 @@ public class LeftHook extends AbstractEvenOddCard{
         {
             return   cardStrings.DESCRIPTION
                     + cardStrings.EXTENDED_DESCRIPTION[0]
+                    + cardStrings.EXTENDED_DESCRIPTION[1]
                     + cardStrings.EXTENDED_DESCRIPTION[2]
                     + cardStrings.EXTENDED_DESCRIPTION[3];
         }
         else
         {
             return cardStrings.DESCRIPTION
+                    + cardStrings.EXTENDED_DESCRIPTION[0]
+                    + cardStrings.EXTENDED_DESCRIPTION[1]
+                    + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2])
                     + cardStrings.EXTENDED_DESCRIPTION[3];
         }
     }

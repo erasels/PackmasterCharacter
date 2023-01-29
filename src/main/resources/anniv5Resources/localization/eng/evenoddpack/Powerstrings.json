@@ -4,7 +4,8 @@
     "DESCRIPTIONS": [
       "Your Attacks have #yOdd: Deal #b",
       " additional damage.",
-      " NL ${ModID}:Odd: (+ ",
+      " NL ${ModID}:Odd:",
+      " (+",
       " damage)."
     ]
   },
@@ -13,7 +14,8 @@
     "DESCRIPTIONS": [
       "Your next Skill this turn has #yEven: Gain #b",
       " #yBlock.",
-      " NL ${ModID}:Even: Gain ",
+      " NL ${ModID}:Even:",
+      " Gain",
       " Block."
     ]
   }
