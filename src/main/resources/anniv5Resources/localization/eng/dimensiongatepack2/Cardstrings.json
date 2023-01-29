@@ -39,7 +39,7 @@
   },
   "${ModID}:MuscleMemory": {
     "NAME": "Muscle Memory",
-    "DESCRIPTION": "Choose a card in your draw pile. Add a copy to your hand. NL Exhaust.",
+    "DESCRIPTION": "Choose a card in your draw pile. Add a copy of it to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose a card in your draw pile. Add a copy to your hand. NL Exhaustive !stslib:ex!.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to copy to your hand."
