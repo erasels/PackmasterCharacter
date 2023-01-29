@@ -1,6 +1,6 @@
 package thePackmaster.cards.evenoddpack;
 
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
+import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,8 +26,7 @@ public class LeftHook extends AbstractEvenOddCard{
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
 
-        ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, EXH);
-        ExhaustiveField.ExhaustiveFields.exhaustive.set(this, EXH);
+        ExhaustiveVariable.setBaseValue(this, EXH);
         initializeDescription();
         baseDamage = DAMAGE;
     }
