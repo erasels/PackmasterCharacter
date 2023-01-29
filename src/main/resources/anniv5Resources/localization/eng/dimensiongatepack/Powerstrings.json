@@ -2,7 +2,7 @@
   "${ModID}:SchemePower": {
     "NAME": "Scheme",
     "DESCRIPTIONS": [
-      "The next card that costs 1 or less will be played #b",
+      "The next card that costs #b1 or less will be played #b",
       " additional times.",
       " additional time."
     ]
