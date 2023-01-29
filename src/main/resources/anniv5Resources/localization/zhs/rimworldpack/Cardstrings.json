@@ -42,7 +42,7 @@
   },
   "${ModID}:TaintedWeapon": {
     "NAME": "Tainted Weapon",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 战斗开始： Put this card in a random monster。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 起动 ： Put this card in a random monster。",
     "EXTENDED_DESCRIPTION": [
       "造成 !D! 点伤害。"
     ]

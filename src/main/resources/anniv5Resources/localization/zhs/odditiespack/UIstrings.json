@@ -1,20 +1,20 @@
 {
   "${ModID}:OdditiesPack": {
     "TEXT": [
-      "Oddities",
-      "Vex doing Vex things. Manage your deck mid-fight!",
+      "奇葩",
+      "Vex大仙作法搞了些Vex玩意。在战斗中操控牌组！",
       "Vex"
     ]
   },
   "${ModID}:OdditiesPackHat": {
     "TEXT": [
-      "Good for Adventuring。",
-      "The Sunhat"
+      "冒险时非常好用。",
+      "遮阳帽"
     ]
   },
   "${ModID}:AutoBattlerPatches": {
     "TEXT": [
-      "I must play cards from left to right!"
+      "我必须从左向右打出牌！"
     ]
   }
 }

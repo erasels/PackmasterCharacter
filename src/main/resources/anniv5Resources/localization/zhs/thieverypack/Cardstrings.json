@@ -22,7 +22,7 @@
   },
   "${ModID}:力量Sap": {
     "NAME": "力量 Sap",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL If the enemy has positive 力量, steal !${ModID}:m2! 力量 。 NL 消耗ive !stslib:ex!。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL If the enemy has positive 力量, steal !${ModID}:m2! 力量 。 NL 消耗性 !stslib:ex! 。"
   },
   "${ModID}:CunningPoison": {
     "NAME": "Cunning Poison",

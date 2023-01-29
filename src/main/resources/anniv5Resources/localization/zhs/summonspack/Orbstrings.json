@@ -33,7 +33,7 @@
     "NAME": "Wolf",
     "DESCRIPTION": [
       "#yPassive: 回合结束时， deal #b",
-      " damage to the enemy with the least 生命。 NL Damage increases with number of channeled orbs. NL #yEvoke: 获得 an orb slot。"
+      " damage to the enemy with the least 生命。 NL Damage increases with number of 生成ed orbs. NL #yEvoke: 获得 an orb slot。"
     ]
   },
   "${ModID}:Leprechaun": {

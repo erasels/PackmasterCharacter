@@ -19,8 +19,8 @@
     "NAME": "Experimental Merge",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle your 弃牌堆 into your 抽牌堆。 抽 !M! 。"
   },
-  "${ModID}:消耗iveWork": {
-    "NAME": "消耗ive Work",
+  "${ModID}:消耗性Work": {
+    "NAME": "消耗性 Work",
     "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|>1=s}. NL Choose 一张牌。 NL 消耗 that card 并add a copy of it to your 抽牌堆。",
     "EXTENDED_DESCRIPTION": ["Choose 一张牌 to 消耗 并copy。"]
   },

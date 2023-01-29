@@ -1,9 +1,9 @@
 {
   "${ModID}:ThunderstruckPower": {
-    "NAME": "Thunderstruck",
+    "NAME": "闪电打击",
     "DESCRIPTIONS": [
-      "每当 you play 一张牌 containing \"Strike\", #yChannel #b",
-      " #yLightning。"
+      "每当你打出一张名称包含打击的牌， #y生成 #b",
+      " 个 #y闪电 充能球。"
     ]
   }
 }

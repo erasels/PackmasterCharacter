@@ -1,15 +1,15 @@
 {
   "${ModID}:PinnaclePack": {
     "TEXT": [
-      "Pinnacle",
-      "A pack made of cards from the best characters of 2022! Support 张牌。",
+      "顶点",
+      "从2022年最佳Mod角色中抽选的一套辅助性牌。",
       "SandTag"
     ]
   },
   "${ModID}:PinnaclePackHat": {
     "TEXT": [
-      "A regal hat, for the finest 张牌。",
-      "Pinnacle"
+      "皇家头饰，只配最优秀的牌。",
+      "王冠"
     ]
   }
 }

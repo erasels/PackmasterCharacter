@@ -9,16 +9,16 @@
   "${ModID}:SummonPandasPower": {
     "NAME": "Summoning Pandas",
     "DESCRIPTIONS": [
-      "你的回合开始时， Channel #b1 Panda",
-      "你的回合开始时， Channel #b",
+      "你的回合开始时， 生成 #b1 Panda",
+      "你的回合开始时， 生成 #b",
       " #yPandas。"
     ]
   },
   "${ModID}:Ambus生命ower": {
     "NAME": "Ambush",
     "DESCRIPTIONS": [
-      "每当 you #yChannel an orb, #yEvoke it #b1 time without removing it。",
-      "每当 you #yChannel an orb, #yEvoke it #b",
+      "每当 you #y生成 an orb, #yEvoke it #b1 time without removing it。",
+      "每当 you #y生成 an orb, #yEvoke it #b",
       " times without removing it。"
     ]
   },

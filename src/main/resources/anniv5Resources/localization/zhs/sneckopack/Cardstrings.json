@@ -35,7 +35,7 @@
   "${ModID}:SneckoEyes": {
     "NAME": "Snecko Eyes",
     "DESCRIPTION" : "Become Confused. 你的回合开始时， 抽2张牌。。",
-    "UPGRADE_DESCRIPTION": "你的回合开始时， 抽2张牌。. NL 战斗开始： Become Confused。"
+    "UPGRADE_DESCRIPTION": "你的回合开始时， 抽2张牌。. NL 起动 ： Become Confused。"
   },
   "${ModID}:Shedding": {
     "NAME": "Shedding",

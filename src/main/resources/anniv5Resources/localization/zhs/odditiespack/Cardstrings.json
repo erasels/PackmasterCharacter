@@ -1,65 +1,65 @@
 {
   "${ModID}:StylePoints": {
-    "NAME": "Style Points",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Remove your Weak. NL Add a random card from your hat's Pack into your hand。"
+    "NAME": "风度值",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 失去所有 虚弱 。 NL 随机将你帽子所属的卡包内的一张牌加入手牌。"
   },
   "${ModID}:LetsPlay8Ball": {
-    "NAME": "Let's Play 8 Ball!",
-    "DESCRIPTION": "Shuffle an *8 *Ball into your 抽牌堆。",
-    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your 抽牌堆。"
+    "NAME": "8球开桌！",
+    "DESCRIPTION": "将一张 *8号球 加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "将一张 *9号球 加入抽牌堆。"
   },
   "${ModID}:EightBall": {
-    "NAME": "8 Ball",
+    "NAME": "8号球",
     "DESCRIPTION": "造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "9 Ball"
+      "9号球"
     ]
   },
   "${ModID}:ZaHando": {
-    "NAME": "Za Hando",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 the middle card(s) of your hand。"
+    "NAME": "咋杭都",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 手牌中央的一两张牌。"
   },
   "${ModID}:LetsDraft": {
-    "NAME": "Let's Draft!",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Choose 一张牌。 Shuffle a copy of it into your 抽牌堆。",
+    "NAME": "构筑卡牌！",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择一张手牌，将其一张复制品加入抽牌堆。",
     "EXTENDED_DESCRIPTION": [
-      "create a copy of。"
+      "复制一张牌。"
     ]
   },
   "${ModID}:Beacon": {
-    "NAME": "Beacon",
-    "DESCRIPTION": "Choose !M! card in your hand. NL Upgrade it 并give it 保留 。",
-    "UPGRADE_DESCRIPTION": "Choose !M! cards in your hand. NL Upgrade them 并give them 保留 。",
+    "NAME": "灯标",
+    "DESCRIPTION": "选择 !M! 张手牌， NL 将其 升级 并附加 保留 。",
+    "UPGRADE_DESCRIPTION": "选择 !M! 张手牌， NL 将其 升级 并附加 保留 。",
     "EXTENDED_DESCRIPTION": [
-      "Upgrade 并give 保留 。"
+      "升级并附加保留。"
     ]
   },
   "${ModID}:SleeveUp": {
-    "NAME": "Sleeve Up",
-    "DESCRIPTION": "抽 !M! 张牌。 NL When this appears in 一张牌 reward, the cards are *Foil 并获得 保留 。"
+    "NAME": "撸起袖子",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若本牌出现在卡牌奖励中，变为附带 保留 的闪卡。"
   },
   "${ModID}:AutoBattler": {
-    "NAME": "Auto Battler",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 敏捷. NL You play cards automatically。"
+    "NAME": "尖塔自动机",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。 NL 你的牌被自动打出。"
   },
   "${ModID}:ShiningStyle": {
-    "NAME": "Shining Style",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 敏捷. NL 战斗开始： 获得 !${ModID}:m2! *Gold。"
+    "NAME": "闪光样式",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。 NL 起动 ：获得 !${ModID}:m2! *金币 。"
   },
   "${ModID}:FinalForm": {
-    "NAME": "This Isn't Even My..。",
-    "DESCRIPTION": "虚无 。 NL 消耗 1 random card. NL 你的回合开始时， play 并消耗 a copy of it。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 消耗 1 card. NL 你的回合开始时， play 并消耗 a copy of it。",
+    "NAME": "最终形态",
+    "DESCRIPTION": "虚无 。 NL 随机 消耗 一张手牌。 NL 回合开始时，打出并 消耗 其一张复制品。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 选择 消耗 一张手牌。 NL 回合开始时，打出并 消耗 其一张复制品。",
     "EXTENDED_DESCRIPTION": [
-      "消耗 for Final Form。"
+      "为最终形态消耗一张牌。"
     ]
   },
   "${ModID}:MidnightStrike": {
-    "NAME": "Midnight Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this is the 12th card played 本场战斗, deal !${ModID}:sd! damage instead。",
+    "NAME": "午夜打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若为本次战斗打出的第12张牌，伤害提高至 !${ModID}:sd! 点。",
     "EXTENDED_DESCRIPTION": [
-      " NL (Played ",
-      " card.)",
+      " NL (已打出 ",
+      " 张牌。)",
       " 张牌。)"
     ]
   }

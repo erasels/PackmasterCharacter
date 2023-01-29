@@ -1,15 +1,15 @@
 {
   "${ModID}:OrbPack": {
     "TEXT": [
-      "Orbs",
-      "Channel 并utilize Orbs。",
+      "充能球",
+      "生成并运用充能球。",
       "Alchyr"
     ]
   },
   "${ModID}:OrbPackHat": {
     "TEXT": [
-      "At the start of your run, channel 2 swanky orbs。",
-      "Orbs"
+      "本局游戏开始时，生成2个奢华充能球。",
+      "充能球"
     ]
   }
 }

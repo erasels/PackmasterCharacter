@@ -1,15 +1,15 @@
 {
   "${ModID}:MetaPack": {
     "TEXT": [
-      "Meta",
-      "Support booster pack with adequate general synergies。",
+      "元",
+      "可与各类牌联动的基础卡包。",
       "AlexMdle"
     ]
   },
   "${ModID}:MetaPackHat": {
     "TEXT": [
-      "Goes on head。",
-      "The Everyhat"
+      "放头上的。",
+      "帽"
     ]
   }
 }

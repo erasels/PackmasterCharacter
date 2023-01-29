@@ -1,15 +1,15 @@
 {
   "${ModID}:MonsterHunterPack": {
     "TEXT": [
-      "Monster Hunter",
-      "Hunt Elites 并Bosses, using your Carving Knife to 获得 their unique weapons 并armor!",
+      "怪物猎人",
+      "猎杀精英与首领敌人，用你的猎刀获取其独特武器与护甲！",
       "Dayvig"
     ]
   },
   "${ModID}:MonsterHunterPackHat": {
     "TEXT": [
-      "Spoils of the hunt。",
-      "Nemesis' Skull"
+      "狩猎成果。",
+      "天罚头骨"
     ]
   }
 }

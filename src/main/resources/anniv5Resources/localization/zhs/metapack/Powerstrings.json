@@ -1,16 +1,16 @@
 {
   "${ModID}:RayOfFrostPower": {
-    "NAME": "Magic Protection",
+    "NAME": "魔法防护",
     "DESCRIPTIONS": [
-      "Channel #b",
-      " #yFrost 每当 you play a #yMagic card 本回合。"
+      "本回合每打出一张 #y魔法 牌， #y生成 #b",
+      " 个 #y冰霜 充能球。"
     ]
   },
   "${ModID}:DiehardPower": {
-    "NAME": "Diehard",
+    "NAME": "宁死不屈",
     "DESCRIPTIONS": [
-      "下回合, 获得 #b",
-      " #yWeak 并#yFrail。"
+      "下回合获得 #b",
+      " 层 #y虚弱 与 #y脆弱 。"
     ]
   }
 }

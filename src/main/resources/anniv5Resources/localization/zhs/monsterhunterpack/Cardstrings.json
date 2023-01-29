@@ -1,134 +1,134 @@
 {
   "${ModID}:HuntingStrike": {
-    "NAME": "Hunting Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deals double damage to elites 并bosses。"
+    "NAME": "猎杀打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对精英与首领造成双倍伤害。"
   },
   "${ModID}:Focus": {
-    "NAME": "Track",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! ${ModID}:Hunted"
+    "NAME": "猎迹追踪",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 ${ModID}:追猎 。"
   },
   "${ModID}:PerfectDodge": {
-    "NAME": "Perfect Dodge",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If your 格挡 is broken exactly 本回合, 获得 !M! 点 力量 。"
+    "NAME": "完美规避",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合 格挡 刚好被打破，获得 !M! 点 力量 。"
   },
   "${ModID}:Greatsword": {
-    "NAME": "Greatsword",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each until played。"
+    "NAME": "巨剑",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 保留 时若有未使用的能量，下次打出前本牌伤害加8。"
   },
   "${ModID}:HuntingInstincts": {
-    "NAME": "Hunter's Instincts",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得s double 格挡 if facing an elite or boss。"
+    "NAME": "猎人本能",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若面对精英或首领， NL 获得两倍。"
   },
   "${ModID}:SkullClub": {
-    "NAME": "Skull Club",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If the target survives, become ${ModID}:Enraged! NL 消耗 。"
+    "NAME": "头骨重击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标存活， NL 你被 ${ModID}:激怒 ! NL 消耗 。"
   },
   "${ModID}:ShellPauldrons": {
-    "NAME": "Shell Platemail",
-    "DESCRIPTION": "获得 !M! ${ModID}:Glass_Armor。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !M! ${ModID}:Glass_Armor。"
+    "NAME": "骨铠甲",
+    "DESCRIPTION": "获得 !M! 层 ${ModID}:玻璃护甲 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !M! 层 ${ModID}:玻璃护甲 。"
   },
   "${ModID}:CoreBlaster": {
-    "NAME": "Core Blaster",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder to your 抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add a *Core *Blinder+ to your 抽牌堆。 NL 消耗 。"
+    "NAME": "核心射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *核心冲击 加入抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *核心冲击+ 加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:CoreBlinder": {
-    "NAME": "Core Blinder",
-    "DESCRIPTION": "给予 !M! 层 虚弱 与 易伤. NL Add a *Core *Blaster to your 抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 与 易伤 to 所有敌人. NL Add a *Core *Blaster+ to your 抽牌堆。 NL 消耗 。"
+    "NAME": "核心冲击",
+    "DESCRIPTION": "给予 !M! 层 虚弱 与 易伤 。 NL 将一张 *核心射线 加入抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 与 易伤 。 NL 将一张 *核心射线 加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:GuardianShield": {
-    "NAME": "Guardian Shield",
-    "DESCRIPTION": "获得 !M! 点 格挡 回合结束时. NL 每当 you are attacked, deal !M! damage back。"
+    "NAME": "守护者护盾",
+    "DESCRIPTION": "获得 !M! 层 *金属化 与 荆棘 。"
   },
   "${ModID}:InfernoDaggers": {
-    "NAME": "Inferno Daggers",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害 !M! times 并set this card's cost to 6. NL When Retained, reduce this card's cost by 1。",
-    "UPGRADE_DESCRIPTION": "固有 。 保留 。 NL 造成 !D! 点伤害 !M! times 并set this card's cost to 6. NL When Retained, reduce this card's cost by 1。"
+    "NAME": "狱焱匕首",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害 !M! 次。 NL 将本牌耗能变为6点。 NL 保留 时本牌耗能减1。",
+    "UPGRADE_DESCRIPTION": "固有 。 保留 。 NL 造成 !D! 点伤害 !M! 次。 NL 将本牌耗能变为6点。 NL 保留 时本牌耗能减1。"
   },
   "${ModID}:StabManual": {
-    "NAME": "Stabbing Manual",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Add !M! *Shivs to your hand. Increase the number of *Shivs this adds by 1 for the rest of combat。"
+    "NAME": "刺击手册",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张 *小刀 加入手牌。 NL 本场战斗加入量+1。"
   },
   "${ModID}:SlimeHammer": {
-    "NAME": "Slime Hammer",
-    "DESCRIPTION": "造成 !D! 点伤害 at the end of the 下回合。",
-    "UPGRADE_DESCRIPTION": "给予1层 虚弱. NL 造成 !D! 点伤害 at the end of the 下回合。"
+    "NAME": "黏液之锤",
+    "DESCRIPTION": "下回合回合结束时对目标造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "给予1层 虚弱 。 NL 下回合回合结束时对目标造成 !D! 点伤害。"
   },
   "${ModID}:SlaverWhip": {
-    "NAME": "Slaver's Whip",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 与 易伤. NL If this kills an enemy, add it back to your h并并it costs 0 本回合。"
+    "NAME": "奴贩之鞭",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 与 易伤 。 NL 若击杀一名敌人，将本牌返回手牌且本回合耗能变为0。"
   },
   "${ModID}:GremlinLance": {
-    "NAME": "Gremlin Lance",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this kills an enemy, 获得 [E] 并抽一张牌。"
+    "NAME": "地精角矛",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若击杀一名敌人， NL 获得 [E] 并抽一张牌。"
   },
   "${ModID}:ChampMail": {
-    "NAME": "Champion's Platemail",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs 并获得 !M! 点 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL If you are at 50% Health or below, remove all your debuffs 并获得 !M! 点 力量 。"
+    "NAME": "勇士胸甲",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若生命值低于50%，失去所有负面效果并获得 !M! 点 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 若生命值低于50%，失去所有负面效果并获得 !M! 点 力量 。"
   },
   "${ModID}:CursedBow": {
-    "NAME": "Cursed Bow",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 与 易伤. NL 消耗 。"
+    "NAME": "诅咒之弓",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 与 易伤 。 NL 消耗 。"
   },
   "${ModID}:HyperBlaster": {
-    "NAME": "Hyper Blaster",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle !M! Voids into your 抽牌堆。"
+    "NAME": "超能射线枪",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 虚空 加入抽牌堆。"
   },
   "${ModID}:EphemeralShroud": {
-    "NAME": "Ephemeral Shroud",
-    "DESCRIPTION": "获得 !M! Intangible. NL 消耗 。"
+    "NAME": "瞬息裹布",
+    "DESCRIPTION": "获得 !M! 层 无实体 。 NL 消耗 。"
   },
   "${ModID}:StoneHelm": {
-    "NAME": "Stone Helm",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 Reduced by 2 for every card you've played 本回合. NL End your turn。"
+    "NAME": "顽石头盔",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合每打出过一张牌， 格挡 减2。 NL 结束你的回合。"
   },
   "${ModID}:TimepieceTiara": {
-    "NAME": "Timepiece Tiara",
-    "DESCRIPTION": "获得 3 力量 every 12 cards you play。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 3 力量 every 12 cards you play。"
+    "NAME": "钟表珠冠",
+    "DESCRIPTION": "每打出12张牌， NL 获得3点 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每打出12张牌， NL 获得3点 力量 。"
   },
   "${ModID}:DonuAmulet": {
-    "NAME": "Donu Amulet",
+    "NAME": "甜圈坠饰",
     "DESCRIPTION": "获得 !M! 点 力量 。"
   },
   "${ModID}:DecaAmulet": {
-    "NAME": "Deca Amulet",
-    "DESCRIPTION": "获得 !M! *Plated *Armor。"
+    "NAME": "八体坠饰",
+    "DESCRIPTION": "获得 !M! 层 *多层护甲 。"
   },
   "${ModID}:SpireSpear": {
-    "NAME": "Spire Spear",
-    "DESCRIPTION": "造成 !D! 点伤害。 !M! times。"
+    "NAME": "尖塔之矛",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
   },
   "${ModID}:SpireShield": {
-    "NAME": "Spire Shield",
+    "NAME": "尖塔之盾",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "${ModID}:CarvingKnife": {
-    "NAME": "Carving Knife",
-    "DESCRIPTION": "造成 !D! 点伤害。 If this kills an Elite or Boss enemy, 获得 its weapon or armor card. NL Fleeting。"
+    "NAME": "猎刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 若击杀一名精英或首领，获得其专属战利品。 NL 即逝。"
   },
   "${ModID}:AwakenedRitualDagger": {
-    "NAME": "Awakened Dagger",
-    "DESCRIPTION": "造成 !D! 点伤害。 If Fatal, Heal to full 生命。 NL 消耗 。"
+    "NAME": "觉醒者匕首",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若 斩杀 ， NL 完全回复生命。 NL 消耗 。"
   },
   "${ModID}:HuntingContract": {
-    "NAME": "Hunting Contract",
-    "DESCRIPTION": "固有 。 NL 给予 !M! ${ModID}:Hunted. NL 消耗 。"
+    "NAME": "捕猎协议",
+    "DESCRIPTION": "固有 。 NL 给予 !M! 层 ${ModID}:追猎 。 NL 消耗 。"
   },
   "${ModID}:HunterRank": {
-    "NAME": "Hunter Rank",
-    "DESCRIPTION": "获得 !M! 点 力量 。 Increases by 1 for each Elite 并Boss enemy you've defeated. NL 获得 !${ModID}:m2! 敏捷。"
+    "NAME": "猎人排名",
+    "DESCRIPTION": "获得 !M! 点 力量 。 每击杀过一名精英或首领， 力量 获得量增加1点。 获得 !${ModID}:m2! 点 敏捷。"
   },
   "${ModID}:TranqBomb": {
-    "NAME": "Tranquilizer Bomb",
-    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target enemy 失去s !M! 点 力量 。 NL 消耗 。"
+    "NAME": "镇静炸弹",
+    "DESCRIPTION": "造成 !D! 点伤害， NL 本牌无法击杀敌人。 NL 目标失去 !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Paintball": {
-    "NAME": "Paintball",
-    "DESCRIPTION": "给予 !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! card 本回合。",
-    "UPGRADE_DESCRIPTION": "给予 !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! cards 本回合。"
+    "NAME": "颜料弹",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:追猎 。 NL 本回合可 保留 !${ModID}:m2! 张牌。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 ${ModID}:追猎 。 NL 本回合可 保留 !${ModID}:m2! 张牌。"
   }
 }

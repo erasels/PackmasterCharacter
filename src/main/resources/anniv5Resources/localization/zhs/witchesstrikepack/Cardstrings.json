@@ -19,7 +19,7 @@
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Moonlight Barrage",
-    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy for each channeled orb。"
+    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy for each 生成ed orb。"
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "Chittering Punt",
@@ -35,7 +35,7 @@
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",
-    "DESCRIPTION": "每当 you channel an orb 获得 !M! Focus until your 下回合。"
+    "DESCRIPTION": "每当 you 生成 an orb 获得 !M! Focus until your 下回合。"
   },
   "${ModID}:ScarabPlague": {
     "NAME": "Scarab Plague",

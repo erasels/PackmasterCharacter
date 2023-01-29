@@ -1,7 +1,7 @@
 {
   "${ModID}:StrikeOfMidnight": {
     "NAME": "Strike of Midnight",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Channel 1 Dark。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 生成 1 Dark。"
   },
   "${ModID}:StrikeOfLuck": {
     "NAME": "Strike of Luck",
@@ -9,7 +9,7 @@
   },
   "${ModID}:LightningStrike": {
     "NAME": "Lightning Strike",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Channel 1 Lightning。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 1 Lightning。"
   },
   "${ModID}:PenaltyStrike": {
     "NAME": "Penalty Strike",

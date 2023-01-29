@@ -31,7 +31,7 @@
     "NAMES": [
       "wolf"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the enemy with the least 生命。 Damage is increased by the number of orbs that are #yChanneled. When #yEvoked, 获得 an orb slot。"
+    "DESCRIPTION": "Orb: Deals damage to the enemy with the least 生命。 Damage is increased by the number of orbs that are #y生成ed. When #yEvoked, 获得 an orb slot。"
   },
   {
     "PROPER_NAME": "Porcupine",

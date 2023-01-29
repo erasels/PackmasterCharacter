@@ -1,46 +1,46 @@
 {
   "${ModID}:ShedWeight": {
-    "NAME": "Shed Weight",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃 一张牌。 NL If that card was [#EFC851]Unplayable, 抽一张牌。"
+    "NAME": "卸荷",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃一张牌， NL 若为不可打出牌， NL 抽一张牌。"
   },
   "${ModID}:RayOfFrost": {
-    "NAME": "Ray Of Frost",
-    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 NL 每当 you play a *Magic card 本回合, Channel !M! Frost。"
+    "NAME": "冰霜光束",
+    "DESCRIPTION": "*魔法 。 NL 造成 !D! 点伤害。 NL 之后本回合每打出一张 *魔法 牌，生成 !M! 个 冰霜 充能球。"
   },
   "${ModID}:Swipe": {
-    "NAME": "Swipe",
-    "DESCRIPTION": "造成 !D! 点伤害 for each point of Energy missing。",
-    "EXTENDED_DESCRIPTION": [" NL (Hits !M! times.)"]
+    "NAME": "挥击",
+    "DESCRIPTION": "每有一点缺失的 [E] ， NL 造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !M! 次。"]
   },
   "${ModID}:Ambition": {
-    "NAME": "Ambition",
-    "DESCRIPTION": "Put a random Power from your 抽牌堆 into your h并并copy it. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL Put a random Power from your 抽牌堆 into your h并并copy it. NL 消耗 。"
+    "NAME": "野心",
+    "DESCRIPTION": "随机 取出 抽牌堆一张能力牌并将其复制。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 随机 取出 抽牌堆一张能力牌并将其复制。 NL 消耗 。"
   },
   "${ModID}:Diehard": {
-    "NAME": "Diehard",
-    "DESCRIPTION": "获得 !M! Artifact. NL 下回合, 获得 1 Weak 并Frail。"
+    "NAME": "宁死不屈",
+    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL 下回合，获得1层 虚弱 与 脆弱 。"
   },
   "${ModID}:EldritchBlast": {
-    "NAME": "Eldritch Blast",
-    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 Reduce the cost of a random *Magic card in h并by 1 本回合。"
+    "NAME": "怪异冲击",
+    "DESCRIPTION": "*魔法 。 NL 造成 !D! 点伤害。 随机降低手中一直 *魔法 牌的本回合耗能1点。"
   },
   "${ModID}:DeathWish": {
-    "NAME": "Death Wish",
-    "DESCRIPTION": "If your 生命 is above 50%, 失去 !M! 生命。 NL 获得 !M! 点 力量 并[#EFC851]活力 。"
+    "NAME": "死亡愿望",
+    "DESCRIPTION": "获得 !M! 点 力量 与 活力 。 NL 若生命值高于 50% ， NL 失去 !M! 点生命。"
   },
   "${ModID}:KillerInstinct": {
-    "NAME": "Killer Instinct",
-    "DESCRIPTION": "获得 2 力量 并1 敏捷. NL 战斗开始： Shuffle a copy of this card into your 抽牌堆。",
-    "UPGRADE_DESCRIPTION": "获得 2 力量 并1 敏捷. NL 战斗开始： Shuffle !M! copies of this card into your 抽牌堆。"
+    "NAME": "杀手本能",
+    "DESCRIPTION": "获得2点 力量 与1点 敏捷 。 NL 起动 ：将1张本牌复制品加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "获得2点 力量 与1点 敏捷 。 NL 起动 ：将2张本牌复制品加入抽牌堆。"
   },
   "${ModID}:Bulwark": {
-    "NAME": "Bulwark",
-    "DESCRIPTION": "固有 。 NL 获得 Temporary 生命 equal to your 抽牌堆 size. NL 消耗 。",
-    "EXTENDED_DESCRIPTION": [" NL (获得 !M! Temporary 生命。)"]
+    "NAME": "筑垒",
+    "DESCRIPTION": "固有 。 NL 获得抽牌堆牌数层 临时生命 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [" NL (获得 !M! 层 临时生命 "]
   },
   "${ModID}:Masterstroke": {
-    "NAME": "Masterstroke",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 力量 并敏捷 affect this card !M! times。"
+    "NAME": "宗师击舞",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 本牌发挥 !M! 倍 力量 与 敏捷 效果。"
   }
 }

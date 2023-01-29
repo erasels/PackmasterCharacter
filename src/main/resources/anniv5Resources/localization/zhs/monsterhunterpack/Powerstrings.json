@@ -1,52 +1,52 @@
 {
   "${ModID}:HuntersMark": {
-    "NAME": "Hunter's Mark",
+    "NAME": "猎人印记",
     "DESCRIPTIONS": [
-      "Takes #b",
-      "% more damage from attacks。"
+      "该单位受到 #b",
+      "% 额外攻击伤害。"
     ]
   },
   "${ModID}:NotHunted": {
-    "NAME": "Not Hunted",
+    "NAME": "不被追猎",
     "DESCRIPTIONS": [
-      "Takes #b",
-      "% less damage from attacks. When the #yhunted enemy dies, remove this。"
+      "该单位少受到 #b",
+      "% 攻击伤害。被 #y追猎 的敌人死亡时，移除本效果。"
     ]
   },
   "${ModID}:PerfectGuardPower": {
-    "NAME": "Perfect Guard",
+    "NAME": "完美防御",
     "DESCRIPTIONS": [
-      "If your #y格挡 is broken exactly 本回合, 获得 #b",
-      " 力量 。"
+      "若本回合 #y格挡 刚好被打破，获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "${ModID}:EnragePowerPlayer": {
-    "NAME": "Enraged",
+    "NAME": "激怒",
     "DESCRIPTIONS": [
-      "If no enemy intends to attack you, 获得 #b",
-      " #y力量 at the end of the turn。"
+      "回合结束时若无敌人意图攻击，获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "${ModID}:GlassArmorPower": {
-    "NAME": "Glass Armor",
+    "NAME": "玻璃护甲",
     "DESCRIPTIONS": [
-      "获得 #b",
-      " #y格挡 at the end of the turn. If you take attack damage, 失去 this power。"
+      "你的回合结束时，获得 #b",
+      " 点 #y格挡 。若你受到未被格挡的攻击伤害，失去所有 #y玻璃护甲 。"
     ]
   },
   "${ModID}:DelayedDamagePower": {
-    "NAME": "Delayed Damage",
+    "NAME": "延迟伤害",
     "DESCRIPTIONS": [
-      "Deals #b",
-      " damage in #b",
-      " turns。"
+      "对该单位造成 #b",
+      " 点延迟伤害， #b",
+      " 回合后造成。"
     ]
   },
   "${ModID}:TimePiecePower": {
-    "NAME": "Time Piece Power",
+    "NAME": "时间加速",
     "DESCRIPTIONS": [
-      "获得 #b3 #y力量 every 12 cards you play. Cards played: #b",
-      ""
+      "每打出 #b12 张牌，获得 #b3 点 #y力量 。已打出 #b",
+      " 张。"
     ]
   }
 }

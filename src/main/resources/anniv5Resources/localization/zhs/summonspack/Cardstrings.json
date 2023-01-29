@@ -1,7 +1,7 @@
 {
   "${ModID}:Leprechaun": {
     "NAME": "Leprechaun",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Channel a ${ModID}:Leprechaun。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 a ${ModID}:Leprechaun。",
     "EXTENDED_DESCRIPTION": [
       "Dice",
       "Dice increase the damage or #y格挡 of the next card you play that deals damage or #y格挡s。",
@@ -12,12 +12,12 @@
   },
   "${ModID}:Porcupine": {
     "NAME": "Porcupine",
-    "DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add !M! *Quills into your hand。",
+    "DESCRIPTION": "生成 a ${ModID}:Porcupine. NL Add !M! *Quills into your hand。",
     "FLAVOR": "The Silent in animal form。"
   },
   "${ModID}:Wolves": {
     "NAME": "Wolves",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Channel a ${ModID}:Wolf。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 生成 a ${ModID}:Wolf。",
     "FLAVOR": "Pack animals for the Packmaster。"
   },
   "${ModID}:Elephant": {
@@ -27,7 +27,7 @@
   },
   "${ModID}:FireSpirit": {
     "NAME": "Fire Spirit",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Channel a ${ModID}:Fire\u00a0Spirit。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 a ${ModID}:Fire\u00a0Spirit。",
     "EXTENDED_DESCRIPTION": [
       "Ignite",
       "Ignited creatures 失去 #b1 生命 per stack at the start of their turn。"
@@ -36,13 +36,13 @@
   },
   "${ModID}:RainbowLouse": {
     "NAME": "Rainbow Louse",
-    "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse。",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL 抽一张牌。",
+    "DESCRIPTION": "生成 a ${ModID}:Rainbow\u00a0Louse。",
+    "UPGRADE_DESCRIPTION": "生成 a ${ModID}:Rainbow\u00a0Louse. NL 抽一张牌。",
     "FLAVOR": "The result of an unwise magic experiment。"
   },
   "${ModID}:SwarmOfBees": {
     "NAME": "Swarm of Bees",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Channel a ${ModID}:Swarm\u00a0of\u00a0Bees。",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 生成 a ${ModID}:Swarm\u00a0of\u00a0Bees。",
     "FLAVOR": "Absolutely terrifying。"
   },
   "${ModID}:Training": {
@@ -52,14 +52,14 @@
   },
   "${ModID}:Ambush": {
     "NAME": "Ambush",
-    "DESCRIPTION": "每当 you Channel an Orb, Evoke it without removing it。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you Channel an Orb, Evoke it without removing it。",
+    "DESCRIPTION": "每当 you 生成 an Orb, Evoke it without removing it。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当 you 生成 an Orb, Evoke it without removing it。",
     "FLAVOR": "I couldn't find good ambush art so have a pun。"
   },
   "${ModID}:Pandas": {
     "NAME": "Pandas",
-    "DESCRIPTION": "Channel X ${ModID}:Pandas。",
-    "UPGRADE_DESCRIPTION": "Channel X+1 ${ModID}:Pandas。",
+    "DESCRIPTION": "生成 X ${ModID}:Pandas。",
+    "UPGRADE_DESCRIPTION": "生成 X+1 ${ModID}:Pandas。",
     "FLAVOR": "Pandamonium。"
   },
   "${ModID}:Quill": {

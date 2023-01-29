@@ -1,41 +1,41 @@
 {
   "${ModID}:Emptiness": {
-    "NAME": "Emptiness",
-    "DESCRIPTION": "丢弃 1 card. NL Channel !M! ${ModID}:Oblivion。"
+    "NAME": "空荡",
+    "DESCRIPTION": "丢弃1张牌。 NL 生成 !M! 个 ${ModID}:湮灭 充能球。"
   },
   "${ModID}:Augment": {
-    "NAME": "Augment",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If you have no empty Orb slots, 获得 1 Orb slot。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL If you have no empty Orb slots, 获得 1 Orb slot。"
+    "NAME": "强化",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若无空的充能球栏位， NL 获得1个。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL 若无空的充能球栏位， NL 获得1个。"
   },
   "${ModID}:Allocate": {
-    "NAME": "Allocate",
-    "DESCRIPTION": "获得 1 Orb slot for each enemy in combat。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 1 Orb slot for each enemy in combat。"
+    "NAME": "装配",
+    "DESCRIPTION": "每有一名敌人， NL 获得1个充能球栏位。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每有一名敌人， NL 获得1个充能球栏位。"
   },
   "${ModID}:Stockpile": {
-    "NAME": "Stockpile",
-    "DESCRIPTION": "丢弃 一张牌。 NL If it was a Power card, Channel !M! Plasma. Otherwise, Channel !M! Lightning。"
+    "NAME": "储备",
+    "DESCRIPTION": "丢弃一张牌。 NL 若为能力牌， 生成 !M! 个 等离子 充能球，否则 生成 !M! 个 闪电 充能球。"
   },
   "${ModID}:IcicleCrash": {
-    "NAME": "Icicle Crash",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Channel !M! Frost for each empty Orb slot。"
+    "NAME": "冰锥撞击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 所有空充能球栏位 生成 !M! 个 冰霜 充能球。"
   },
   "${ModID}:Fear": {
-    "NAME": "Fear",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Channel !M! Dark。"
+    "NAME": "惧怕",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 !M! 个 黑暗 充能球。"
   },
   "${ModID}:Charge": {
-    "NAME": "Charge",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Trigger the passive abilities of your Channeled Orbs。"
+    "NAME": "电荷",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 触发所有充能球的被动效果。"
   },
   "${ModID}:MaterialBoost": {
-    "NAME": "Material Boost",
-    "DESCRIPTION": "丢弃 any number of 张牌。 NL Evoke your next Orb once for each card 丢弃ed。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃 any number of 张牌。 NL Evoke your next Orb once for each card 丢弃ed。"
+    "NAME": "实质化",
+    "DESCRIPTION": "丢弃任意张牌， NL 每张 激发 当前最右端充能球一次。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃任意张牌， NL 每张 激发 当前最右端充能球一次。"
   },
   "${ModID}:Thunderstruck": {
-    "NAME": "Thunderstruck",
-    "DESCRIPTION": "每当 you play 一张牌 containing \"Strike\", Channel !M! Lightning。"
+    "NAME": "闪电打击",
+    "DESCRIPTION": "打出 *打击 牌时，生成 !M! 个 闪电 充能球。"
   }
 }

@@ -1,11 +1,12 @@
 [
   {
-    "PROPER_NAME": "Hunted",
+    "PROPER_NAME": "追猎",
     "NAMES": [
       "hunted",
-      "hunted"
+      "hunted",
+      "追猎"
     ],
-    "DESCRIPTION": "Takes #b10% more damage for each stack of Hunted on them. When applied, all other hunted enemies are no longer hunted, 并other enemies take #b10% less damage for each stack. Reduces by #b1 each turn。"
+    "DESCRIPTION": "被 #y追猎 的敌人每有 #b1 层 #y追猎 ，额外受到 #b10% 的攻击伤害，但其他敌人也额外少受到 #b10% 的攻击伤害。 #y追猎 任意目标时，其他目标不再被追猎。 #y追猎 层数每回合减 #b1 。"
   },
   {
     "PROPER_NAME": "Not Hunted",
@@ -16,21 +17,23 @@
     "DESCRIPTION": "Takes #b10% less damage from attacks for each stack. Reduces by #b1 each turn. When the hunted enemy dies, remove this。"
   },
   {
-    "PROPER_NAME": "Enraged",
+    "PROPER_NAME": "激怒",
     "NAMES": [
       "enraged",
-      "enraged!"
+      "enraged!",
+      "激怒"
     ],
-    "DESCRIPTION": "At the end of the turn that no enemy intends to attack you, 获得 #b2 力量 。"
+    "DESCRIPTION": "回合结束时若无敌人意图攻击，获得 #b2 点 力量 。"
   },
   {
-    "PROPER_NAME": "Glass Armor",
+    "PROPER_NAME": "玻璃护甲",
     "NAMES": [
       "Glass Armor",
       "Glass_Armor",
-      "glass_armor"
+      "glass_armor",
+      "玻璃护甲"
     ],
-    "DESCRIPTION": "At the end of the turn, 获得 格挡 。 When taking un格挡ed attack damage, remove this。"
+    "DESCRIPTION": "回合结束时获得层数点 #y格挡 ，受到未被格挡伤害后失去所有层数。"
   },
   {
     "PROPER_NAME": "Nonlethal",

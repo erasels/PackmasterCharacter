@@ -6,10 +6,10 @@
     ]
   },
   "${ModID}:FinalFormPower": {
-    "NAME": "Final Form",
+    "NAME": "最终形态",
     "DESCRIPTIONS": [
-      "你的回合开始时， play 并#y消耗 a copy of ",
-      "。"
+      "你的回合开始时，打出并 #y消耗 一张 ",
+      " 的复制品。"
     ]
   }
 }

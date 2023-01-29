@@ -1,7 +1,7 @@
 {
   "${ModID}:QuirionDryad": {
     "NAME": "Quirion Dryad",
-    "DESCRIPTIONS": ["The first time you play each color of card 本场战斗, 获得 #b{0} 力量 并#b{0} 敏捷. NL (Colors played: {1}.)", "None", "Red", "Green", "Blue", "Purple", "Colorless", "Curse", "Packmaster"]
+    "DESCRIPTIONS": ["The first time you play each color of card 本场战斗, 获得 #b{0} 力量 并#b{0} 敏捷 。 NL (Colors played: {1}.)", "None", "Red", "Green", "Blue", "Purple", "Colorless", "Curse", "Packmaster"]
   },
   "${ModID}:FlawlessPrism": {
     "NAME": "Flawless Prism",
