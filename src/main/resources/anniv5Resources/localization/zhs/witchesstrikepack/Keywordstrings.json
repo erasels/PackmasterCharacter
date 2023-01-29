@@ -15,7 +15,7 @@
       "Crescent_Moon",
       "crescent_moon"
     ],
-    "DESCRIPTION": "Orb. Passive : Deals damage to a random enemy when activated by 一张牌s effect. Evokes after activating #b4 times. Evoke : Deal damage to a random enemy"
+    "DESCRIPTION": "Orb. Passive : Deals damage to a random enemy when activated by 一张牌s effect. Evokes after activating #b4 次。 Evoke : Deal damage to a random enemy"
   },
   {
     "PROPER_NAME": "Full Moon",
@@ -25,7 +25,7 @@
       "Full_Moon",
       "full_moon"
     ],
-    "DESCRIPTION": "Orb. Passive : 抽一张牌 when activated by 一张牌s effect. Evokes after activating #b4 times. Evoke : 抽一张牌"
+    "DESCRIPTION": "Orb. Passive : 抽一张牌 when activated by 一张牌s effect. Evokes after activating #b4 次。 Evoke : 抽一张牌"
   },
   {
     "PROPER_NAME": "铭印",

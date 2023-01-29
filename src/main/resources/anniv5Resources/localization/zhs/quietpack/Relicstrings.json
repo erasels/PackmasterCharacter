@@ -1,9 +1,9 @@
 {
   "${ModID}:TarredFeather": {
-    "NAME": "Tarred Feather",
-    "FLAVOR": "You wouldn't want to meet its previous wearer。",
+    "NAME": "触焦羽毛",
+    "FLAVOR": "你可能不会想见到这东西的前主人。",
     "DESCRIPTIONS": [
-      "Raise your max h并size by #b2. NL 战斗开始时, add #b2 #yWeights 加入手牌。"
+      "手牌牌数上限加 #b2 。 NL 战斗开始时, 将 #b2 张 #y重物 加入手牌。"
     ]
   }
 }

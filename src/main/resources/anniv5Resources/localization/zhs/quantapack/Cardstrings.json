@@ -1,47 +1,47 @@
 {
   "${ModID}:MissileStrike": {
-    "NAME": "Missile Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Deal !${ModID}:sd! damage to 所有敌人。"
+    "NAME": "导弹打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对所有敌人造成 !${ModID}:sd! 点伤害。"
   },
   "${ModID}:MagicDart": {
-    "NAME": "Magic Dart",
-    "DESCRIPTION": "Deal damage equal to your h并size。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL Deal damage equal to your h并size。",
-    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
+    "NAME": "魔法飞镖",
+    "DESCRIPTION": "造成手牌牌数点伤害。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成手牌牌数点伤害",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害。"]
   },
   "${ModID}:Cull": {
-    "NAME": "Cull",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL EVERYONE 失去s !M! 生命。"
+    "NAME": "宰杀",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 所有单位失去 !M! 点生命。"
   },
   "${ModID}:Potential": {
-    "NAME": "Potential",
-    "DESCRIPTION": "获得 !M! Temporary_生命。 NL 抽 !${ModID}:m2! card. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! Temporary_生命。 NL 抽 !${ModID}:m2! 张牌。 NL 消耗 。"
+    "NAME": "潜能",
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 抽 !${ModID}:m2! 张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 临时生命 。 NL 抽 !${ModID}:m2! 张牌。 NL 消耗 。"
   },
   "${ModID}:Aura": {
-    "NAME": "Aura",
-    "DESCRIPTION": "Prevent the next time you would 失去 生命。"
+    "NAME": "气弥",
+    "DESCRIPTION": "阻止下次失去生命。"
   },
   "${ModID}:MAXPOWER": {
-    "NAME": "MAX POWER",
-    "DESCRIPTION": "Raise your 力量 NL to 11。"
+    "NAME": "极限之力",
+    "DESCRIPTION": "力量 变为11点。"
   },
   "${ModID}:Flow": {
-    "NAME": "Flow",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If the last card played 本回合 was an Attack, 抽 !M! 张牌。"
+    "NAME": "心流",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合上张打出牌为攻击，抽 !M! 张牌。"
   },
   "${ModID}:Manaburst": {
-    "NAME": "Manaburst",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a random 0-cost Attack from your 弃牌堆 加入手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机将 !M! 张 0-cost Attacks from your 弃牌堆 加入手牌。"
+    "NAME": "魔力爆发",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将弃牌堆1张0耗能攻击牌返回手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将弃牌堆 !M! 张0耗能攻击牌返回手牌。"
   },
   "${ModID}:Dominate": {
-    "NAME": "Dominate",
-    "DESCRIPTION": "${ModID}:Stun an enemy. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Stun 所有敌人. NL 消耗 。"
+    "NAME": "支配",
+    "DESCRIPTION": "${ModID}:击晕 一名敌人。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:击晕 所有敌人。 NL 消耗 。"
   },
   "${ModID}:IchorGoblet": {
-    "NAME": "Ichor Goblet",
-    "DESCRIPTION": "获得 [E] at the start of next !M! turns. If you 失去 生命, 获得 it all immediately。"
+    "NAME": "灵液之杯",
+    "DESCRIPTION": "下 !M! 个回合开始时获得 [E] 。 NL 若失去生命，立即获得全部。"
   }
 }

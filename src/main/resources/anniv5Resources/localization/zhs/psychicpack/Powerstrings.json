@@ -1,18 +1,18 @@
 {
   "${ModID}:GravityPower": {
-    "NAME": "Gravity",
+    "NAME": "重力",
     "DESCRIPTIONS": [
-      "每当 you 抽 a #yLocked or #yUnplayable card, 抽一张牌。",
-      "每当 you 抽 a #yLocked or #yUnplayable card, 抽 #b",
+      "每当你抽到一张 #y被锁 或无法被打出的牌，抽一张牌。",
+      "每当你抽到一张 #y被锁 或无法被打出的牌，抽 #b",
       " 张牌。"
     ]
   },
   "${ModID}:DeepDreamPower": {
-    "NAME": "Deep Dream",
+    "NAME": "深梦",
     "DESCRIPTIONS": [
-      "每当 you play 一张牌 本回合, make a random card in your h并#yOccult。",
-      "每当 you play 一张牌 本回合, make #b",
-      " random 牌 in your h并#yOccult。"
+      "本回合每当你打出一张牌，随机将一张手牌附加 #y灵秘 。",
+      "本回合每当你打出一张牌，随机将 #b",
+      " 张手牌附加 #y灵秘 。"
     ]
   }
 }

@@ -8,17 +8,19 @@
     "DESCRIPTION": "#神秘 牌在手时可在任何情况下打出，非正常打出会将其 #y消耗 。"
   },
   {
-    "PROPER_NAME": "Locking",
+    "PROPER_NAME": "自锁",
     "NAMES": [
-      "locking"
+      "locking",
+      "自锁"
     ],
-    "DESCRIPTION": "#yLocking 牌 become #yUnplayable once played。"
+    "DESCRIPTION": "#y自锁 牌打出一次后无法再被打出。"
   },
   {
-    "PROPER_NAME": "Locked",
+    "PROPER_NAME": "被锁",
     "NAMES": [
-      "locked"
+      "locked",
+      "被锁"
     ],
-    "DESCRIPTION": "Locked 牌 are unplayable。"
+    "DESCRIPTION": "#y被锁 牌无法被打出。"
   }
 ]

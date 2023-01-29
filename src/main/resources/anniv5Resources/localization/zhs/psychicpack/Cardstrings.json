@@ -1,62 +1,62 @@
 {
   "${ModID}:RuleCancel": {
-    "NAME": "Rule Cancel",
-    "DESCRIPTION": "Make 一张牌 in your h并${ModID}:Occult. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Make 一张牌 in your h并${ModID}:Occult。"
+    "NAME": "规则无视",
+    "DESCRIPTION": "选择一张手牌附加 {ModID}:灵秘 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张手牌附加 {ModID}:灵秘 。"
   },
   "${ModID}:Brainwave": {
-    "NAME": "Brainwave",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL Make a random Attack in your h并${ModID}:Occult。"
+    "NAME": "脑力波",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 随机将一张攻击手牌附加 {ModID}:灵秘 。"
   },
   "${ModID}:TelephonePole": {
-    "NAME": "Telephone Pole",
-    "DESCRIPTION": "${ModID}:Locking. NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。",
+    "NAME": "电线杆",
+    "DESCRIPTION": "${ModID}:自锁 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+      "${ModID}:被锁 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
     ]
   },
   "${ModID}:Gravity": {
-    "NAME": "Gravity",
-    "DESCRIPTION": "虚无 。 NL 每当 you 抽 a ${ModID}:Locked or Unplayable card, 抽一张牌。",
-    "UPGRADE_DESCRIPTION": "每当 you 抽 a ${ModID}:Locked or Unplayable card, 抽一张牌。"
+    "NAME": "重力",
+    "DESCRIPTION": "虚无 。 NL 抽到 ${ModID}:被锁 或 无法打出 牌时，抽一张牌。",
+    "UPGRADE_DESCRIPTION": "抽到 ${ModID}:被锁 或 无法打出 牌时，抽一张牌。"
   },
   "${ModID}:PhantomStep": {
-    "NAME": "Phantom Step",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Make 一张牌 in your 抽牌堆 ${ModID}:Occult。"
+    "NAME": "幽灵步伐",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择抽牌堆一张牌附加 ${ModID}:灵秘 。"
   },
   "${ModID}:Repel": {
-    "NAME": "Repel",
-    "DESCRIPTION": "${ModID}:Locking. NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。",
+    "NAME": "驱退",
+    "DESCRIPTION": "${ModID}:自锁 。 NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
+      "${ModID}:被锁 。 NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
     ]
   },
   "${ModID}:OneIsEnough": {
-    "NAME": "One Is Enough",
-    "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|0=s.|1=.|2=s 并choose one. NL You cannot play the other 本回合.|@=s 并choose one. NL You cannot play the others 本回合.}",
+    "NAME": "一张足够",
+    "DESCRIPTION": "抽 !M! 张牌并选择其中一张。 NL 本回合无法打出其他手牌。",
     "EXTENDED_DESCRIPTION": [
-      "be Playable"
+      "选择可打出的牌。"
     ]
   },
   "${ModID}:Curse": {
-    "NAME": "Curse",
-    "DESCRIPTION": "${ModID}:Locking. NL Enemy 失去s !M! 点 力量 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Locking. NL 保留 。 NL Enemy 失去s !M! 点 力量 。",
+    "NAME": "怨咒",
+    "DESCRIPTION": "${ModID}:自锁 。 NL 目标失去 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:自锁 。 NL 保留 。 NL 目标失去 !M! 点 力量 。",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Locked. NL Enemy 失去s !M! 点 力量 。",
-      "${ModID}:Locked. NL 保留 。 NL Enemy 失去s !M! 点 力量 。"
+      "${ModID}:被锁 。 NL 目标失去 !M! 点 力量 。",
+      "${ModID}:被锁 。 NL 保留 。 NL 目标失去 !M! 点 力量 。"
     ]
   },
   "${ModID}:MalleableFire": {
-    "NAME": "Malleable Fire",
-    "DESCRIPTION": "造成 !D! 点伤害 X times. NL Add a *Molded *Fire that costs X to your 抽牌堆。 NL 消耗 。"
+    "NAME": "可塑之火",
+    "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL 将一张耗能为X的 *被塑之火 加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:MoldedFire": {
-    "NAME": "Molded Fire",
-    "DESCRIPTION": "${ModID}:Occult. NL 造成 !D! 点伤害 for each [E] more this costs than your current energy。"
+    "NAME": "被塑之火",
+    "DESCRIPTION": "${ModID}:灵秘 。 NL 离能量上限每缺1点 [E] ，造成 !D! 点伤害。"
   },
   "${ModID}:DeepDream": {
-    "NAME": "Deep Dream",
-    "DESCRIPTION": "每当 you play 一张牌 本回合, make a random card in your h并${ModID}:Occult. NL 消耗 。"
+    "NAME": "深梦",
+    "DESCRIPTION": "本回合每打出一张牌，随机将一张手牌附加 {ModID}:灵秘 。 NL 消耗 。"
   }
 }

@@ -3,7 +3,7 @@
     "NAME": "Crescent Moon",
     "DESCRIPTION": [
       "#yPassive: When activated, deal #b",
-      " damage to a random enemy, #yEvoke this if this has activated #b"," times. NL #yEvoke: deal #b",
+      " damage to a random enemy, #yEvoke this if this has activated #b"," 次。 NL #yEvoke: deal #b",
       " damage to a random enemy。"
     ]
   },
@@ -11,7 +11,7 @@
     "NAME": "Full Moon",
     "DESCRIPTION": [
       "#yPassive: When activated, 抽一张牌",
-      " #yEvoke this if this has activated #b"," times. NL #yEvoke: 抽一张牌。"
+      " #yEvoke this if this has activated #b"," 次。 NL #yEvoke: 抽一张牌。"
     ]
   }
 }

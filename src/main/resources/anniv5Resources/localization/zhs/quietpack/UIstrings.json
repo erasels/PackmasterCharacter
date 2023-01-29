@@ -1,15 +1,15 @@
 {
   "${ModID}:QuietPack": {
     "TEXT": [
-      "Quiet",
-      "Silent's friend from the foglands. NL Carries heavy equipment。",
+      "寡言力士",
+      "静默猎手的朋友。 NL 持有重型装备。",
       "Diamsword"
     ]
   },
   "${ModID}:QuietPackHat": {
     "TEXT": [
       "A lot heavier than it looks。",
-      "Quiet Mask"
+      "寡言力士面具"
     ]
   }
 }

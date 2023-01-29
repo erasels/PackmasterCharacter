@@ -42,7 +42,7 @@
   },
   "${ModID}:DimensionalIcicles": {
     "NAME": "Dimensional Icicles",
-    "DESCRIPTION": "造成 !D! 点伤害 !B! times. The number of hits is affected by 格挡 modifiers。"
+    "DESCRIPTION": "造成 !D! 点伤害 !B! 次。 The number of hits is affected by 格挡 modifiers。"
   },
   "${ModID}:AbstractExtraEffectModifier": {
     "EXTENDED_DESCRIPTION": [

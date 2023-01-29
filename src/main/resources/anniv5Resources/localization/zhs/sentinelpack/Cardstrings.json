@@ -16,7 +16,7 @@
   },
   "${ModID}:RagnarokNRoll": {
     "NAME": "Ragnarok 'n Roll",
-    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! times. NL Exit your Stance。"
+    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy !M! 次。 NL Exit your Stance。"
   },
   "${ModID}:Serenity": {
     "NAME": "Serenity",

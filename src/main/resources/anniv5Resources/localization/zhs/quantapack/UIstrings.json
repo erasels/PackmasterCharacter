@@ -1,15 +1,15 @@
 {
   "${ModID}:QuantaPack": {
     "TEXT": [
-      "Quanta",
-      "Card pack based on a homebrew card game。",
+      "哐嗒",
+      "”基于一款我自己的做的卡牌游戏。“",
       "AlexMdle"
     ]
   },
   "${ModID}:QuantaPackHat": {
     "TEXT": [
-      "A part of any inquisitive technomancer。",
-      "The Oculators"
+      "任何热爱钻研的科技怪人的一部分。",
+      "实验护目镜"
     ]
   }
 }

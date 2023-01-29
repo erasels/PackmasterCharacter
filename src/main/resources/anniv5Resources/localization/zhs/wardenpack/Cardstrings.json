@@ -10,7 +10,7 @@
   "${ModID}:RiskOfBlades": {
     "NAME": "Risk Of Blades",
     "DESCRIPTION": "造成 !D! 点伤害 for each Attack among the top 4 牌 of your 抽牌堆。",
-    "EXTENDED_DESCRIPTION": [" NL (Hits !M! times.)"]
+    "EXTENDED_DESCRIPTION": [" NL (Hits !M! 次。)"]
   },
   "${ModID}:Crossroads": {
     "NAME": "Crossroads",

@@ -31,8 +31,8 @@
   },
   "${ModID}:MaterialBoost": {
     "NAME": "实质化",
-    "DESCRIPTION": "丢弃任意张牌， NL 每张 激发 当前最右端充能球一次。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃任意张牌， NL 每张 激发 当前最右端充能球一次。"
+    "DESCRIPTION": "丢弃任意张牌， NL 每张 激发 最右侧充能球一次。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃任意张牌， NL 每张 激发 最右侧充能球一次。"
   },
   "${ModID}:Thunderstruck": {
     "NAME": "闪电打击",

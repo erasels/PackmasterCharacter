@@ -1,9 +1,9 @@
 {
   "${ModID}:IchorGobletPower": {
-    "NAME": "Ichor Goblet",
+    "NAME": "灵液之杯",
     "DESCRIPTIONS": [
-      "获得 #b1 Energy at the start of next #b",
-      " turns. If you 失去 生命, 获得 it all immediately。"
+      "下 #b",
+      " 个回合开始时获得 [E] 。若失去生命，立即获得全部。"
     ]
   }
 }
