@@ -22,7 +22,7 @@
   },
   "${ModID}:FlamingGrasp": {
     "NAME": "Flaming Grasp",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL The next *Magic card adds a *Flame *Pillar to your hand."
+    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL The next *Magic card played adds a *Flame *Pillar to your hand."
   },
   "${ModID}:FlamePillar": {
     "NAME": "Flame Pillar",
