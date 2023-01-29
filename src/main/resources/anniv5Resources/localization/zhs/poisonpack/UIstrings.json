@@ -1,15 +1,15 @@
 {
   "${ModID}:PoisonPack": {
     "TEXT": [
-      "Toxicity",
-      "A collection of Silent cards focused solely on Poison.",
+      "毒性之力",
+      "一套专攻中毒的静默猎手牌。",
       "MegaCrit"
     ]
   },
   "${ModID}:PoisonPackHat": {
     "TEXT": [
-      "A Snecko hater's dream come true.",
-      "Snecko Skull"
+      "异蛇讨厌者的福音。",
+      "异蛇头骨"
     ]
   }
 }

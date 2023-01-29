@@ -12,13 +12,13 @@
     "NAMES": [
       "locking"
     ],
-    "DESCRIPTION": "#yLocking cards become #yUnplayable once played。"
+    "DESCRIPTION": "#yLocking 牌 become #yUnplayable once played。"
   },
   {
     "PROPER_NAME": "Locked",
     "NAMES": [
       "locked"
     ],
-    "DESCRIPTION": "Locked cards are unplayable。"
+    "DESCRIPTION": "Locked 牌 are unplayable。"
   }
 ]

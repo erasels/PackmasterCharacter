@@ -12,7 +12,7 @@
   },
   "${ModID}:Porcupine": {
     "NAME": "Porcupine",
-    "DESCRIPTION": "生成 a ${ModID}:Porcupine. NL Add !M! *Quills into your hand。",
+    "DESCRIPTION": "生成 a ${ModID}:Porcupine. NL Add !M! *Quills 加入手牌。",
     "FLAVOR": "The Silent in animal form。"
   },
   "${ModID}:Wolves": {

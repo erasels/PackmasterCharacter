@@ -30,7 +30,7 @@
   },
   "${ModID}:SnazzySwagger": {
     "NAME": "Snazzy Swagger",
-    "DESCRIPTION" : "{@@}抽 !M! 张牌{!M!|>1=s}. NL Randomize the cost of all cards in your hand. NL 丢弃 !M! card{!M!|>1=s}。"
+    "DESCRIPTION" : "{@@}抽 !M! 张牌{!M!|>1=s}. NL Randomize the cost of all 牌 in your hand. NL 丢弃 !M! card{!M!|>1=s}。"
   },
   "${ModID}:SneckoEyes": {
     "NAME": "Snecko Eyes",
@@ -39,6 +39,6 @@
   },
   "${ModID}:Shedding": {
     "NAME": "Shedding",
-    "DESCRIPTION" : "{@@}你的回合开始时， randomize the cost of the {!M!|>1=!M! highest cost cards|@=highest cost card} in your hand。"
+    "DESCRIPTION" : "{@@}你的回合开始时， randomize the cost of the {!M!|>1=!M! highest cost 牌|@=highest cost card} in your hand。"
   }
 }

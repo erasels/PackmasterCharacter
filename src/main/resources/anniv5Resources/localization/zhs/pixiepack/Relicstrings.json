@@ -1,9 +1,9 @@
 {
   "${ModID}:DimensionCore": {
-    "NAME": "Dimension Core",
-    "FLAVOR": "A crystal sphere containing infinite possibilities. It's cracked。",
+    "NAME": "次元之核",
+    "FLAVOR": "一个包含所有可能性的水晶球，可惜它破了。",
     "DESCRIPTIONS": [
-      "At the start of combat, for every #b10 cards in your deck, shuffle #b3 #ydifferent #ycolor cards into your 抽牌堆。 抽 an extr一张牌 each turn。"
+      "回合开始时，额外抽一张牌。 NL 战斗开始时，牌组每有 #b10 张牌，随机将 #b3 #y异色 牌加入抽牌堆。"
     ]
   }
 }

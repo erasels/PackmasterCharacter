@@ -2,10 +2,10 @@
   "${ModID}:AttackPotionButClaw": {
     "NAME": "Clawtack Potion",
     "DESCRIPTIONS": [
-      "从 #b3 种 选择 #b1 种 random #y攻击 cards to add to your hand, it costs #b0 本回合 并is Modified: 'Name 获得s Claw' 并'获得 a #yGhost #yClaw'。",
-      "从 #b3 种 选择 #b1 种 random #y攻击 cards 并add #b",
-      " copies to your hand, they cost #b0 本回合 并are Modified: 'Name 获得s Claw' 并'获得 a #yGhost #yClaw'。",
-      "Choose an Attack to add to your hand。"
+      "从 #b3 种 选择 #b1 种 random #y攻击 牌 to add 加入手牌, it costs #b0 本回合 并is Modified: 'Name 获得s Claw' 并'获得 a #yGhost #yClaw'。",
+      "从 #b3 种 选择 #b1 种 random #y攻击 牌 并add #b",
+      " copies 加入手牌, they cost #b0 本回合 并are Modified: 'Name 获得s Claw' 并'获得 a #yGhost #yClaw'。",
+      "Choose an Attack to add 加入手牌。"
     ]
   },
   "${ModID}:ClawPowerPotion": {
@@ -25,7 +25,7 @@
     "NAME": "Bottled Claws",
     "DESCRIPTIONS": [
       "Add #b",
-      " #yGhost #yClaws to your hand。"
+      " #yGhost #yClaws 加入手牌。"
     ]
   }
 }

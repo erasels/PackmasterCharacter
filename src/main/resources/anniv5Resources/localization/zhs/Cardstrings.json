@@ -17,7 +17,6 @@
   },
   "${ModID}:PackRip": {
     "NAME": "拆包",
-    "DESCRIPTION": "丢弃所有手牌。 NL 从三种卡包选择一种，将其所含牌全部加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "丢弃所有手牌。 NL 从三种卡包选择一种，将其所含牌全部加入手牌，并将其升级。 NL 消耗 。"
+    "DESCRIPTION": "丢弃所有手牌。 NL 从三种卡包选择一种，将其所含牌全部加入手牌。 NL 消耗 。"
   }
 }

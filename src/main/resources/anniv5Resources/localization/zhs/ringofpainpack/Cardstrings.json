@@ -33,8 +33,8 @@
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
-    "DESCRIPTION": "虚无 。 NL 消耗 !M! cards in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your h并并give it 消耗 。",
-    "UPGRADE_DESCRIPTION": "消耗 !M! cards in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your h并并give it 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 消耗 !M! 牌 in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your h并并give it 消耗 。",
+    "UPGRADE_DESCRIPTION": "消耗 !M! 牌 in your 抽牌堆。 NL Put 一张牌 from your 弃牌堆 into your h并并give it 消耗 。"
   },
   "${ModID}:Owl": {
     "NAME": "Owl",
@@ -44,7 +44,7 @@
   },
   "${ModID}:Vision": {
     "NAME": "Vision",
-    "DESCRIPTION": "Put !M! cards from your 抽牌堆 into your hand. NL Retain your h并本回合. NL 消耗 。"
+    "DESCRIPTION": "Put !M! 牌 from your 抽牌堆 加入手牌。 NL Retain your h并本回合. NL 消耗 。"
   },
   "${ModID}:Connection": {
     "NAME": "Connection",

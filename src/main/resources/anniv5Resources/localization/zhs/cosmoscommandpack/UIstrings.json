@@ -11,5 +11,8 @@
       "最高可看见7维空间！",
       "异次元之眼"
     ]
+  },
+  "${ModID}:PurgeModifier": {
+    "TEXT": [" NL stslib:抹除 。"]
   }
 }

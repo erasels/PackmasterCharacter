@@ -2,7 +2,7 @@
   "${ModID}:TransmutationPack": {
     "TEXT": [
       "Transmutation",
-      "Temporarily change your cards into other cards, making them stronger。",
+      "Temporarily change your 牌 into other 牌, making them stronger。",
       "NellyDevo"
     ]
   },

@@ -29,7 +29,7 @@
     "NAME": "Quick Brew",
     "DESCRIPTION": "Choose: 获得 2 力量, or 获得 3 Focus。",
     "UPGRADE_DESCRIPTION": "Choose: 获得 2 力量, 获得 2 敏捷, or 获得 2 Focus。",
-    "EXTENDED_DESCRIPTION": ["获得 2 力量 。", "获得 2 敏捷。","获得 2 Focus。"]
+    "EXTENDED_DESCRIPTION": ["获得 2 力量 。", "获得 2 敏捷 。","获得 2 Focus。"]
   },
   "${ModID}:ToxicVial": {
     "NAME": "Toxic Vial",
@@ -45,11 +45,11 @@
   },
   "${ModID}:ChaosVial": {
     "NAME": "Chaos Vial",
-    "DESCRIPTION": "Play the top 3 cards of your 抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "Play the top 3 牌 of your 抽牌堆。 NL 消耗 。"
   },
   "${ModID}:VialOfMemory": {
     "NAME": "Vial of Memory",
-    "DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it to your hand. It costs 0 until played. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it to your hand. It costs 0 until played. NL stslib:消耗性 !stslib:ex! 。"
+    "DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it 加入手牌。 It costs 0 until played. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it 加入手牌。 It costs 0 until played. NL stslib:消耗性 !stslib:ex! 。"
   }
 }

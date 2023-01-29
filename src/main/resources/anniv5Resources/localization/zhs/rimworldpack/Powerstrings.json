@@ -11,7 +11,7 @@
     "DESCRIPTIONS": [
       "Your next card costs 0 并plays twice!",
       "Play your next #b",
-      " cards cost 0 并play twice!"
+      " 牌 cost 0 并play twice!"
     ]
   },
   "${ModID}:PyromaniacPower": {
@@ -19,7 +19,7 @@
     "DESCRIPTIONS": [
       "你的回合开始时， set a random card in your h并#yOn #yFire。",
       "你的回合开始时， set #b",
-      " random cards in your h并#yOn #yFire"
+      " random 牌 in your h并#yOn #yFire"
     ]
   },
   "${ModID}:BurningPassionPower": {
@@ -33,7 +33,7 @@
     "NAME": "Hold Card",
     "DESCRIPTIONS": [
       "When this creature dies, add a ",
-      " to your hand。"
+      " 加入手牌。"
     ]
   },
   "${ModID}:LuciferiumAddictionPower": {

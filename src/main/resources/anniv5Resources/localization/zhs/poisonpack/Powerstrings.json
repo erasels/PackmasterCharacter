@@ -1,9 +1,9 @@
 {
   "${ModID}:ToxicDipPower": {
-    "NAME": "Toxic Dip",
+    "NAME": "毒液渗透",
     "DESCRIPTIONS": [
-      "This turn, whenever you deal unblocked attack damage, apply #b",
-      " #yPoison."
+      "本回合造成未被格挡的伤害时，给予 #b",
+      " 层 #y中毒 。"
     ]
   }
 }

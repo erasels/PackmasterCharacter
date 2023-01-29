@@ -1,15 +1,15 @@
 {
   "${ModID}:PixiePack": {
     "TEXT": [
-      "Pixie",
-      "A pack featuring cards from the dimension hopping Pixie。",
+      "咒术精灵",
+      "一套跨次元的咒语牌。",
       "FieryChocobo"
     ]
   },
   "${ModID}:PixiePackHat": {
     "TEXT": [
-      "Ohhh. Shiny!",
-      "Elven Crown"
+      "真闪亮！",
+      "精灵王冠"
     ]
   }
 }

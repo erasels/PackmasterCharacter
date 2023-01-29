@@ -37,7 +37,7 @@
     "DESCRIPTION": "Choose 1 of 3 Swords. NL Equip a 3 / !M! ${ModID}:Weapon with an additional effect。",
     "EXTENDED_DESCRIPTION": [
       "Additional Effects",
-      "#rFire: 每当 you attack with this Weapon, deal #b3 damage to 所有敌人. NL #yWisdom: 每当 you attack with this Weapon, 抽一张牌。 NL #pChaos: 每当 you attack with this Weapon, add a random card into your hand。"
+      "#rFire: 每当 you attack with this Weapon, deal #b3 damage to 所有敌人. NL #yWisdom: 每当 you attack with this Weapon, 抽一张牌。 NL #pChaos: 每当 you attack with this Weapon, add a random card 加入手牌。"
     ]
   },
   "${ModID}:SwordOfFire": {
@@ -50,7 +50,7 @@
   },
   "${ModID}:SwordOfChaos": {
     "NAME": "Sword of Chaos",
-    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL 每当 you attack with this ${ModID}:Weapon, add a random card into your hand。"
+    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL 每当 you attack with this ${ModID}:Weapon, add a random card 加入手牌。"
   },
   "${ModID}:WeaponMastery": {
     "NAME": "Weapon Mastery",

@@ -1,12 +1,12 @@
 {
   "${ModID}:AmalgamateWaters": {
     "NAME": "Amalgamate Waters",
-    "DESCRIPTION": "抽 a ${ModID}:Mutable card. NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them。",
-    "UPGRADE_DESCRIPTION": "抽 !M! ${ModID}:Mutable 张牌。 NL 获得 ${ModID}:Mutable effects from any number of cards in your hand, then ${ModID}:Transmute them。"
+    "DESCRIPTION": "抽 a ${ModID}:Mutable card. NL 获得 ${ModID}:Mutable effects from any number of 牌 in your hand, then ${ModID}:Transmute them。",
+    "UPGRADE_DESCRIPTION": "抽 !M! ${ModID}:Mutable 张牌。 NL 获得 ${ModID}:Mutable effects from any number of 牌 in your hand, then ${ModID}:Transmute them。"
   },
   "${ModID}:CrystalLattice": {
     "NAME": "Crystal Lattice",
-    "DESCRIPTION": "${ModID}:Transmute 一张牌。 Add !M! additional copies of the new card to your hand. NL 消耗 。"
+    "DESCRIPTION": "${ModID}:Transmute 一张牌。 Add !M! additional copies of the new card 加入手牌。 NL 消耗 。"
   },
   "${ModID}:CrystalResonance": {
     "NAME": "Crystal Resonance",

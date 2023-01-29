@@ -9,7 +9,7 @@
   },
   "${ModID}:EatWithoutTable": {
     "NAME": "Eat Without Table",
-    "DESCRIPTION": "Drink a random common Potion. Add a *Despair to your hand. NL 消耗 。"
+    "DESCRIPTION": "Drink a random common Potion. Add a *Despair 加入手牌。 NL 消耗 。"
   },
   "${ModID}:Luciferium": {
     "NAME": "Luciferium",
@@ -22,7 +22,7 @@
   },
   "${ModID}:KillThirst": {
     "NAME": "Kill Thirst",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL If this doesn't kill the enemy, add a *Despair to your hand。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If this doesn't kill the enemy, add a *Despair 加入手牌。"
   },
   "${ModID}:SpikeTrap": {
     "NAME": "Spike Trap",
@@ -30,7 +30,7 @@
   },
   "${ModID}:Catharsis": {
     "NAME": "Catharsis",
-    "DESCRIPTION": "{@@}Add a *Despair to your hand. The next {!M!|1=card|@=!M! cards} you play {!M!|1=costs|@=cost} 0 并{!M!|1=plays|@=play} twice. NL 消耗 。"
+    "DESCRIPTION": "{@@}Add a *Despair 加入手牌。 The next {!M!|1=card|@=!M! 牌} you play {!M!|1=costs|@=cost} 0 并{!M!|1=plays|@=play} twice. NL 消耗 。"
   },
   "${ModID}:TradeBeacon": {
     "NAME": "Trade Beacon",

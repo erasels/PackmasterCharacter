@@ -5,7 +5,7 @@
       "on fire",
       "on_fire"
     ],
-    "DESCRIPTION": "回合结束时， cards in your h并with #yFire #yCounters make you take damage equal to their #yFire #yCounter. They then increase the #yFire #yCounter. Cards with #yFire #yCounters play an additional copy of themselves for every #yFire #yCounter above #b1, 并#y消耗 。"
+    "DESCRIPTION": "回合结束时， 牌 in your h并with #yFire #yCounters make you take damage equal to their #yFire #yCounter. They then increase the #yFire #yCounter. 牌 with #yFire #yCounters play an additional copy of themselves for every #yFire #yCounter above #b1, 并#y消耗 。"
   },
   {
     "PROPER_NAME": "Addiction",

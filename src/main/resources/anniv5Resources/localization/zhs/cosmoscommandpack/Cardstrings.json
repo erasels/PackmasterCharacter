@@ -21,7 +21,7 @@
   },
   "${ModID}:Recall": {
     "NAME": "召回",
-    "DESCRIPTION": "${ModID}:增幅 时，随机将消耗堆一张牌返回手牌。"
+    "DESCRIPTION": "每回合首次 ${ModID}:增幅 时，选择将消耗堆一张牌返回手牌，并将其附加 stslib:抹除 。"
   },
   "${ModID}:RefractEnergy": {
     "NAME": "能量折配",

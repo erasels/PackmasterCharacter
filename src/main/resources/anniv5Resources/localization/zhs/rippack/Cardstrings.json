@@ -1,8 +1,8 @@
 {
   "${ModID}:DividedFury": {
     "NAME": "Divided Fury",
-    "DESCRIPTION": "你的回合开始时， add a *Fury into your hand。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时， add a *Fury into your hand。"
+    "DESCRIPTION": "你的回合开始时， add a *Fury 加入手牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时， add a *Fury 加入手牌。"
   },
   "${ModID}:ViciousCycle": {
     "NAME": "Vicious Cycle",
@@ -10,7 +10,7 @@
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card ripped.)",
-      " cards ripped.)"
+      " 牌 ripped.)"
     ]
   },
   "${ModID}:ViciousCycleArt": {
@@ -23,7 +23,7 @@
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card ripped.)",
-      " cards ripped.)"
+      " 牌 ripped.)"
     ]
   },
   "${ModID}:ArtAttack": {
@@ -53,8 +53,8 @@
   },
   "${ModID}:灵感": {
     "NAME": "Inspiration",
-    "DESCRIPTION": "抽 cards equal to the number of ${ModID}:Art 并Status Cards in your 消耗 pile. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 cards equal to the number of ${ModID}:Art 并Status Cards in your 消耗 pile。",
+    "DESCRIPTION": "抽 牌 equal to the number of ${ModID}:Art 并Status 牌 in your 消耗 pile. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 牌 equal to the number of ${ModID}:Art 并Status 牌 in your 消耗 pile。",
     "EXTENDED_DESCRIPTION": [
       " NL (抽 ",
       " card.)",
@@ -67,7 +67,7 @@
   },
   "${ModID}:灵感Text": {
     "NAME": "",
-    "DESCRIPTION": "抽 cards equal to the number of ${ModID}:Art Cards in your 消耗 pile。",
+    "DESCRIPTION": "抽 牌 equal to the number of ${ModID}:Art 牌 in your 消耗 pile。",
     "EXTENDED_DESCRIPTION": [
       " NL (抽 ",
       " card.)",
@@ -100,7 +100,7 @@
   },
   "${ModID}:HazardousStrike": {
     "NAME": "Hazardous Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL When *ripped, 消耗 !M! cards at random。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL When *ripped, 消耗 !M! 牌 at random。"
   },
   "${ModID}:HazardousStrikeArt": {
     "NAME": "Hazardous Strike",

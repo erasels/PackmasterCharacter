@@ -31,7 +31,7 @@
   },
   "${ModID}:WitchTwist": {
     "NAME": "Witch Twist",
-    "DESCRIPTION": "${ModID}:修改 !M! random cards in your h并: ${ModID}:铭印. NL 获得 !${ModID}:m2! Focus. NL 消耗"
+    "DESCRIPTION": "${ModID}:修改 !M! random 牌 in your h并: ${ModID}:铭印. NL 获得 !${ModID}:m2! Focus. NL 消耗"
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",

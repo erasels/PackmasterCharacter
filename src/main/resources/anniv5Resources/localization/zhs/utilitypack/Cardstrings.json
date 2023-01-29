@@ -23,27 +23,27 @@
   },
   "${ModID}:Whispers": {
     "NAME": "Whispers",
-    "DESCRIPTION": "抽 !M! 张牌。 NL Add a *Dazed to your hand。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL Add a *Dazed 加入手牌。"
   },
   "${ModID}:Replenish": {
     "NAME": "Replenish",
-    "DESCRIPTION": "Put two cards from your 弃牌堆 into your hand. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Put two cards from your 弃牌堆 into your hand。"
+    "DESCRIPTION": "Put two 牌 from your 弃牌堆 加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "Put two 牌 from your 弃牌堆 加入手牌。"
   },
   "${ModID}:LesserHex": {
     "NAME": "Lesser Hex",
-    "DESCRIPTION": "给予 !M! 层 虚弱 并!M! 易伤 。 NL Enemy 失去s !M! 点 力量 。 NL Add a *Greater\u00a0Hex to your 弃牌堆. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 并!M! 易伤 。 NL Enemy 失去s !M! 点 力量 。 NL Add a *Greater\u00a0Hex+ to your 弃牌堆. NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 与 !M! 易伤 。 NL Enemy 失去s !M! 点 力量 。 NL Add a *Greater\u00a0Hex to your 弃牌堆. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 与 !M! 易伤 。 NL Enemy 失去s !M! 点 力量 。 NL Add a *Greater\u00a0Hex+ to your 弃牌堆. NL 消耗 。"
   },
   "${ModID}:GreaterHex": {
     "NAME": "Greater Hex",
-    "DESCRIPTION": "给予 !M! 层 虚弱 并!M! 易伤 。 NL Enemy 失去s !M! 点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 与 !M! 易伤 。 NL Enemy 失去s !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Conjuration": {
     "NAME": "Conjuration",
     "DESCRIPTION": "Choose 一张牌 from your 抽牌堆。 NL Play 并消耗 it。",
     "UPGRADE_DESCRIPTION": "Choose 一张牌 from your 抽牌堆。 NL Play it。",
-    "EXTENDED_DESCRIPTION": ["There are no cards in my 抽牌堆。"]
+    "EXTENDED_DESCRIPTION": ["There are no 牌 in my 抽牌堆。"]
   },
   "${ModID}:RareStrike": {
     "NAME": "Rare Strike",

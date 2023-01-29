@@ -19,7 +19,7 @@
     "NAME": "Fueled by Embers",
     "DESCRIPTIONS": [
       "你的回合开始时， 抽 #b{0} card 并add #b{0} #yFading #yEmber to your h并并抽牌堆。",
-      "你的回合开始时， 抽 #b{0} cards 并add #b{0} #yFading #yEmbers to your h并并抽牌堆。"
+      "你的回合开始时， 抽 #b{0} 牌 并add #b{0} #yFading #yEmbers to your h并并抽牌堆。"
     ]
   }
 }

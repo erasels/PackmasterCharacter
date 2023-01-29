@@ -1,15 +1,15 @@
 {
   "${ModID}:PierceVeil": {
     "NAME": "Pierce Veil",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 of !M! top cards of your 抽牌堆 to your hand。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 of !M! top 牌 of your 抽牌堆 加入手牌。"
   },
   "${ModID}:Stall": {
     "NAME": "Stall",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put up to !M! cards from your h并on top of your 抽牌堆。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put up to !M! 牌 from your h并on top of your 抽牌堆。"
   },
   "${ModID}:RiskOfBlades": {
     "NAME": "Risk Of Blades",
-    "DESCRIPTION": "造成 !D! 点伤害 for each Attack among the top 4 cards of your 抽牌堆。",
+    "DESCRIPTION": "造成 !D! 点伤害 for each Attack among the top 4 牌 of your 抽牌堆。",
     "EXTENDED_DESCRIPTION": [" NL (Hits !M! times.)"]
   },
   "${ModID}:Crossroads": {
@@ -27,7 +27,7 @@
   },
   "${ModID}:ForceBolt": {
     "NAME": "Force Bolt",
-    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 NL Increase the damage dealt by *Magic cards by !M! 本回合。"
+    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 NL Increase the damage dealt by *Magic 牌 by !M! 本回合。"
   },
   "${ModID}:Enigmancy": {
     "NAME": "Enigmancy",

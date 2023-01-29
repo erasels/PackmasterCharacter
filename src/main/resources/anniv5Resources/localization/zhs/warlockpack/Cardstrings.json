@@ -5,7 +5,7 @@
   },
   "${ModID}:Hig生命riestessJeklik": {
     "NAME": "High Priestess Jeklik",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If this card is 消耗ed, add 2 copies of it to your hand。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If this card is 消耗ed, add 2 copies of it 加入手牌。"
   },
   "${ModID}:SoulShear": {
     "NAME": "Soul Shear",
@@ -18,7 +18,7 @@
   },
   "${ModID}:Doomguard": {
     "NAME": "Doomguard",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 2 random cards in your hand。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 2 random 牌 in your hand。"
   },
   "${ModID}:HandOfGulDan": {
     "NAME": "H并of Gul'dan",
@@ -44,7 +44,7 @@
   },
   "${ModID}:RunedMithrilRod": {
     "NAME": "Runed Mithril Rod",
-    "DESCRIPTION": "Unplayable. 保留 。 NL After you 抽 !M! 张牌s while this is in your hand, reduce the cost of cards in your h并by 1 本回合 并丢弃 this。",
+    "DESCRIPTION": "Unplayable. 保留 。 NL After you 抽 !M! 张牌s while this is in your hand, reduce the cost of 牌 in your h并by 1 本回合 并丢弃 this。",
     "EXTENDED_DESCRIPTION": ["I can't play this card。", " ({0} 抽n.)"]
   }
 }

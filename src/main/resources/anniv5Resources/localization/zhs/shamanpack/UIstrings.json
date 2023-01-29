@@ -2,9 +2,9 @@
   "${ModID}:ShamanPack": {
     "TEXT": [
       "Shaman",
-      "Cards from 并inspired by the Shaman character mod。",
+      "牌 from 并inspired by the Shaman character mod。",
       "modargo",
-      "Card art from MtG"
+      "卡牌贴图源自游戏：万智牌(Magic: The Gathering)"
     ]
   },
   "${ModID}:ShamanPackHat": {

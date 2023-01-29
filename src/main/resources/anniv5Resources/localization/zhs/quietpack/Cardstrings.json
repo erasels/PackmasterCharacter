@@ -9,12 +9,12 @@
   },
   "${ModID}:IronShield": {
     "NAME": "Iron Shield",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Add a *Weight to your hand。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Add a *Weight 加入手牌。"
   },
   "${ModID}:Shine": {
     "NAME": "Shine",
     "DESCRIPTION": "Unplayable. 保留 。 NL When you 抽 this card, upgrade another random card in your h并for the rest of the combat。",
-    "UPGRADE_DESCRIPTION": "Unplayable. 保留 。 NL When you 抽 this card, upgrade ALL cards in your h并for the rest of the combat。"
+    "UPGRADE_DESCRIPTION": "Unplayable. 保留 。 NL When you 抽 this card, upgrade ALL 牌 in your h并for the rest of the combat。"
   },
   "${ModID}:GlaiveThrow": {
     "NAME": "Glaive Throw",
@@ -26,11 +26,11 @@
   },
   "${ModID}:Lie": {
     "NAME": "Lie",
-    "DESCRIPTION": "Enemy 失去s !M! 点 力量 本回合. NL Add a *Weight to your hand。"
+    "DESCRIPTION": "Enemy 失去s !M! 点 力量 本回合. NL Add a *Weight 加入手牌。"
   },
   "${ModID}:Frontflip": {
     "NAME": "Frontflip",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌s, 丢弃 Unplayable cards 抽n。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌s, 丢弃 Unplayable 牌 抽n。"
   },
   "${ModID}:HammerThrow": {
     "NAME": "Hammer Throw",
@@ -38,11 +38,11 @@
   },
   "${ModID}:Flail": {
     "NAME": "Flail",
-    "DESCRIPTION": "造成 !D! 点伤害 twice. NL Add 2 *Weights to your hand。"
+    "DESCRIPTION": "造成 !D! 点伤害 twice. NL Add 2 *Weights 加入手牌。"
   },
   "${ModID}:Wisdom": {
     "NAME": "Wisdom",
-    "DESCRIPTION": "获得 [E] 。 NL 丢弃 any number of cards in your hand. 抽 that many 张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 丢弃 any number of cards in your hand. 抽 that many 张牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 [E] 。 NL 丢弃 any number of 牌 in your hand. 抽 that many 张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 丢弃 any number of 牌 in your hand. 抽 that many 张牌。 NL 消耗 。"
   }
 }

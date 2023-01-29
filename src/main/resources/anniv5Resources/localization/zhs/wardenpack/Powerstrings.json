@@ -9,7 +9,7 @@
   "${ModID}:DivineMightPower": {
     "NAME": "Divine Might",
     "DESCRIPTIONS": [
-      "When #yDivine #yMight is played a获得, 获得 [E] [E] , 抽 #b2 cards 并获得 #b10 力量 本回合。"
+      "When #yDivine #yMight is played a获得, 获得 [E] [E] , 抽 #b2 牌 并获得 #b10 力量 本回合。"
     ]
   }
 }

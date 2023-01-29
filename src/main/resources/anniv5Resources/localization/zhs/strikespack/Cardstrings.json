@@ -29,7 +29,7 @@
   },
   "${ModID}:DifferentStrikes": {
     "NAME": "Different Strikes",
-    "DESCRIPTION": "消耗 all cards in hand. Replace them with random Strikes that cost 1 less. NL 消耗 。"
+    "DESCRIPTION": "消耗 all 牌 in hand. Replace them with random Strikes that cost 1 less. NL 消耗 。"
   },
   "${ModID}:StrikeOfGenius": {
     "NAME": "Strike of Genius",

@@ -30,7 +30,7 @@
   "${ModID}:SwordOfChaosOrb": {
     "NAME": "Sword of Chaos",
     "DESCRIPTION": [
-      "每当 you attack with this Weapon, add a random card into your hand。"
+      "每当 you attack with this Weapon, add a random card 加入手牌。"
     ]
   },
   "${ModID}:CatONineTailsOrb": {

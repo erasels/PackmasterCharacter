@@ -32,8 +32,8 @@
   },
   "${ModID}:Manaburst": {
     "NAME": "Manaburst",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a random 0-cost Attack from your 弃牌堆 to your hand。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Add !M! random 0-cost Attacks from your 弃牌堆 to your hand。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL Add a random 0-cost Attack from your 弃牌堆 加入手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 随机将 !M! 张 0-cost Attacks from your 弃牌堆 加入手牌。"
   },
   "${ModID}:Dominate": {
     "NAME": "Dominate",
