@@ -6,7 +6,7 @@
   "${ModID}:ConjureBarrage": {
     "NAME": "Conjure Barrage",
     "DESCRIPTION": "*Magic. NL Add !M! *Magic *Missiles to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add !M! *Magic *Missiles+ to your hand. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "*Magic. NL Add !M! *Magic *Missiles+ to your hand. NL Exhaust."
   },
   "${ModID}:MagicMissile": {
     "NAME": "Magic Missile",
