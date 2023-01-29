@@ -45,6 +45,6 @@
   },
   "${ModID}:TomeOfIntellect": {
     "NAME": "Tome of Intellect",
-    "DESCRIPTION": "Shuffle !M! *Scrolls *of *Intellect into your draw pile. At the start of your turn, shuffle 1 more."
+    "DESCRIPTION": "Shuffle !M! *Scrolls *of *Intellect into your draw pile. At the start of your turn, shuffle 1 more in."
   }
 }
