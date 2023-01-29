@@ -28,5 +28,5 @@ public class WardGem extends AbstractGemsCard {
         Wiz.atb(new MakeTempCardInHandAction(new Ward()));
     }
 
- 
+
 }
