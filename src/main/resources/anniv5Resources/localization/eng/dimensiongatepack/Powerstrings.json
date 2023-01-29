@@ -3,7 +3,7 @@
     "NAME": "Scheme",
     "DESCRIPTIONS": [
       "The next #b",
-      " cards that costs #b1 or less will be played twice.",
+      " cards played this turn that cost #b1 or less will be played twice.",
       "The next card played this turn that costs #b1 or less will be played twice."
     ]
   },
