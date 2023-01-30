@@ -41,7 +41,7 @@
     "NAME": "甲虫瘟疫",
     "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 本牌 ${ModID}:滋生 时， ${ModID}:展现 一个 ${ModID}:满月 充能球。"
   },
-  "${ModID}:铭印": {
+  "${ModID}:Inscribed": {
     "EXTENDED_DESCRIPTION": [
       "${ModID}:铭印 。 NL "
     ]

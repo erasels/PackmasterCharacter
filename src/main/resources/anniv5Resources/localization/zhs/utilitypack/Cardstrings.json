@@ -23,7 +23,7 @@
   },
   "${ModID}:Whispers": {
     "NAME": "纷扰耳语",
-    "DESCRIPTION": "抽 !M! 张牌。 NL Add a *Dazed 加入手牌。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL将一张 *晕眩 加入手牌。"
   },
   "${ModID}:Replenish": {
     "NAME": "Replenish",

@@ -17,7 +17,7 @@
   },
   "${ModID}:Backstrike": {
     "NAME": "回身打击",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:修改所有攻击手牌：牌名加上打击。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:修改 所有攻击手牌：牌名加上打击。"
   },
   "${ModID}:WorkersStrike": {
     "NAME": "罢工打击",
@@ -36,7 +36,7 @@
     "DESCRIPTION": "回合开始时，随机获得一张打击牌。 NL 其下次耗能为0且附带 消耗 。",
     "UPGRADE_DESCRIPTION": "回合开始时，随机获得一张打击+牌。 NL 其下次耗能为0且附带 消耗 。"
   },
-  "${ModID}:StrikeABar获得": {
+  "${ModID}:StrikeABargain": {
     "NAME": "协商打击",
     "DESCRIPTION": "本回合攻击牌耗能变为0，且本回合只能打出攻击牌。"
   }
