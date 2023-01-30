@@ -25,7 +25,9 @@ public class ShivGemMod extends AbstractMadScienceModifier {
     @Override
     public void onInitialApplication(AbstractCard card) {
         super.onInitialApplication(card);
-        card.cardsToPreview = new Shiv();
+        if (card.cardsToPreview == null) {
+            card.cardsToPreview = new Shiv();
+        }
     }
 
     @Override

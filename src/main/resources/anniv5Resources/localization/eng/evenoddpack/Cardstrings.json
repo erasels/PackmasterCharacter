@@ -2,12 +2,12 @@
   "${ModID}:SwordAndBoard": {
     "NAME": "Sword and Board",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["${ModID}:Even: ", "Deal !D! damage.", " NL ","${ModID}:Odd: ", "Gain !B! Block"]
+    "EXTENDED_DESCRIPTION": ["${ModID}:Even:", " Deal !D! damage.", " NL ","${ModID}:Odd ", " Gain !B! Block"]
   },
   "${ModID}:QuickReflex": {
     "NAME": "Quick Reflex",
     "DESCRIPTION": "Gain !B! Block",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First: ", "Gain !B! Block"]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First:", " Gain !B! Block"]
   },
   "${ModID}:PrimeDirective": {
     "NAME": "Prime Directive",
@@ -16,22 +16,22 @@
   "${ModID}:WitzBolt": {
     "NAME": "Witz Bolt",
     "DESCRIPTION": "Deal !D! damage.",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Odd: ", "Apply !M! Weak and Vulnerable."]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Odd:", " Apply !M! Weak and Vulnerable."]
   },
   "${ModID}:ElementOfSurprise": {
     "NAME": "Element of Surprise",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["${ModID}:First: ", "Your next card is played twice."]
+    "EXTENDED_DESCRIPTION": ["${ModID}:First:", " Your next card is played twice."]
   },
   "${ModID}:GammaWard": {
     "NAME": "Gamma Ward",
     "DESCRIPTION": "Gain !B! Block.",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Your next Skill this turn has NL ${ModID}:Even: Gain !M! Block."]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even:", " Your next Skill this turn has NL ${ModID}:Even: Gain !M! Block."]
   },
   "${ModID}:Flourish": {
     "NAME": "Flourish",
     "DESCRIPTION": "Gain !M! Plated Armor.",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even: ", "Heal !M! HP.", "${ModID}:Odd: ", "Gain [E]"]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even:", " Heal !M! HP.", "${ModID}:Odd:", " Gain [E]"]
   },
   "${ModID}:EvenOddAppend": {
     "NAME": "",
@@ -41,16 +41,16 @@
   "${ModID}:WindUpBomb": {
     "NAME": "Windup Bomb",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["${ModID}:Even: ", "Increase this cards damage by !M!", " NL ", "${ModID}:Odd: ", "Deal !D! damage."]
+    "EXTENDED_DESCRIPTION": ["${ModID}:Even:", " Increase this cards damage by !M!", " NL ", "${ModID}:Odd:", " Deal !D! damage."]
   },
   "${ModID}:LeftHook": {
     "NAME": "Left Hook",
     "DESCRIPTION": "Deal !D! damage.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Odd: ", "Stays in your hand."]
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Odd:", " Stays in your hand.", " NL Exhaustive !stslib:ex!."]
   },
   "${ModID}:Battlecry": {
     "NAME": "Battlecry",
     "DESCRIPTION": "Draw !M! cards.",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First: ", "Gain 2 Strength."]
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:First:", " Gain 2 Strength."]
   }
 }

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.cards.evenoddpack.AbstractEvenOddCard;
 import thePackmaster.cards.evenoddpack.GammaWardDummy;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
@@ -71,7 +72,6 @@ public class GammaWardPower extends AbstractPackmasterPower implements DynamicPr
             keyMap.put(card, DynamicDynamicVariableManager.generateKey(card, this));
             card.initializeDescription();
         } else if (counter % 2 == 0 && keyMap.containsKey(card)) {
-            keyMap.remove(card);
             card.initializeDescription();
         }
         return super.modifyBlock(blockAmount);
@@ -110,9 +110,14 @@ public class GammaWardPower extends AbstractPackmasterPower implements DynamicPr
 
     public String modifyDescription(String currentRaw, AbstractCard card) {
         if (card.type == AbstractCard.CardType.SKILL
-                && AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1
                 && AbstractDungeon.player.hand.contains(card)) {
-            return currentRaw + DESCRIPTIONS[2] + "!" + keyMap.get(card) + "!" + DESCRIPTIONS[3];
+            if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1) {
+                return currentRaw +  DESCRIPTIONS[2] + DESCRIPTIONS[3] + " !" + keyMap.get(card) + "!" + DESCRIPTIONS[4];
+            }
+            else
+            {
+                return currentRaw + DESCRIPTIONS[2] + AbstractEvenOddCard.makeCardTextGray( DESCRIPTIONS[3]) + " !" + keyMap.get(card) + "!" + AbstractEvenOddCard.makeCardTextGray( DESCRIPTIONS[4]);
+            }
         }
         return currentRaw;
     }

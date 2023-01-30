@@ -1,16 +1,26 @@
 {
-  "${ModID}:MagicMissilePower": {
-    "NAME": "Magical Power",
+  "${ModID}:SchemePower": {
+    "NAME": "Scheme",
     "DESCRIPTIONS": [
-      "Magic cards deal #b",
-      " more damage this turn."
+      "The next #b",
+      " cards played this turn that cost #b1 or less will be played twice.",
+      "The next card played this turn that costs #b1 or less will be played twice."
     ]
   },
-  "${ModID}:ArsenalGearPower": {
-    "NAME": "Arsenal Gear",
+  "${ModID}:SchemeNextTurnPower": {
+    "NAME": "Plotting Scheme",
     "DESCRIPTIONS": [
-      "At the start of your next #b",
-      " turn(s), add a random Uncommon or Rare card to your hand. It costs 0."
+      "Next turn, the first #b",
+      " cards that cost #b1 or less will be played twice.",
+      "Next turn, the first card that costs #b1 or less will be played twice."
+    ]
+  },
+  "${ModID}:TomeOfIntellectPower": {
+    "NAME": "Tome of Intellect",
+    "DESCRIPTIONS": [
+      "At the start of each turn, shuffle #b",
+      " #yScrolls #yof #yIntellect into your draw pile.",
+      " #yScroll #yof #yIntellect into your draw pile."
     ]
   }
 }

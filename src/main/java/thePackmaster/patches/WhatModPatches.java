@@ -27,7 +27,7 @@ public class WhatModPatches
                 String packID = SpireAnniversary5Mod.cardClassParentMap.get(c);
                 AbstractCardPack pack = SpireAnniversary5Mod.packsByID.get(packID);
                 if (pack != null) {
-                    name[0] = name[0] + " : " + pack.name;
+                    name[0] = name[0] + ": " + pack.name;
                 }
             }
         }

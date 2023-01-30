@@ -47,11 +47,11 @@ public class PlayFromExhaustAction extends AbstractGameAction
   	        this.isDone = true;
   	        return;
   	      }
-  	      //set aside colorless cards, curses, and cards you can't play
+  	      //set aside colorless cards, curses, and statuses
   	    	for (Iterator<AbstractCard> ex = this.p.exhaustPile.group.iterator(); ex.hasNext(); ) {
-  		        AbstractCard derp = ex.next();
-  		        if (derp.color.equals(AbstractCard.CardColor.COLORLESS) || derp.color.equals(AbstractCard.CardColor.CURSE) || !derp.canUse(p, null)) {
-  		          this.classless.add(derp);
+  		        AbstractCard card = ex.next();
+  		        if (card.color.equals(AbstractCard.CardColor.COLORLESS) || card.color.equals(AbstractCard.CardColor.CURSE) || card.type.equals(AbstractCard.CardType.CURSE) || card.type.equals(AbstractCard.CardType.STATUS)) {
+  		          this.classless.add(card);
   		          ex.remove();
   		        } 
   		    }

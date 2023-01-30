@@ -1,53 +1,50 @@
 {
   "${ModID}:Anemia": {
     "NAME": "Anemia",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to any Poisoned enemies."
-  },
-  "${ModID}:ArsenalGear": {
-    "NAME": "Arsenal Gear",
-    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare card to your hand. It costs 0."
-  },
-  "${ModID}:ConjureBarrage": {
-    "NAME": "Conjure Barrage",
-    "DESCRIPTION": "Add !M! *Magic *Missiles to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add !M! *Magic *Missiles+ to your hand. NL Exhaust."
-  },
-  "${ModID}:DarkRitual": {
-    "NAME": "Dark Ritual",
-    "DESCRIPTION": "Lose 10 HP. NL Gain !M! Gold. NL Remove this from your deck permanently.",
-    "UPGRADE_DESCRIPTION": "Lose 10 HP. NL Gain !M! Gold. NL *Downgrade this permanently."
-  },
-  "${ModID}:Knighthood": {
-    "NAME": "Knighthood",
-    "DESCRIPTION": "Ethereal. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in hand to Upgrade permanently. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      " to Upgrade permanently."
-    ]
-  },
-  "${ModID}:Inferno": {
-    "NAME": "Inferno",
-    "DESCRIPTION": "{@@}Retain. NL After !hoard! more {!hoard!|1= play|>1= plays}, Deal !D! damage to ALL enemies. NL stslib:Persist !stslib:persist!."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL Poisoned enemies."
   },
   "${ModID}:LethalShot": {
     "NAME": "Lethal Shot",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison and !${ModID}:m2! Vulnerable."
   },
-  "${ModID}:MagicMissile": {
-    "NAME": "Magic Missile",
-    "DESCRIPTION": "*Magic. Retain. NL Deal !D! damage. NL Increase the damage dealt by *Magic cards by !M! this turn."
+  "${ModID}:BleedItOut": {
+    "NAME": "Bleed It Out",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Trigger the enemy's Poison."
   },
-  "${ModID}:Minniegun": {
-    "NAME": "Minniegun",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  "${ModID}:Trace": {
+    "NAME": "Trace",
+    "DESCRIPTION": "Scry !M!."
   },
-  "${ModID}:PackRat": {
-    "NAME": "Pack Rat",
-    "DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and remove this from your deck permanently.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have no Potions, gain one and *Downgrade this permanently."
+  "${ModID}:BoosterShot": {
+    "NAME": "Booster Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Enemy heals !${ModID}:m2! HP."
   },
-  "${ModID}:ScorchedEarth": {
-    "NAME": "Scorched Earth",
-    "DESCRIPTION": "Exhaust all non-Attacks in your discard pile. Deal !D! damage for each. NL Exhaust."
+  "${ModID}:RangersSetup": {
+    "NAME": "Ranger's Setup",
+    "DESCRIPTION": "Draw !M! cards. NL Put 2 cards from your hand onto the top of your draw pile."
+  },
+  "${ModID}:Scheme": {
+    "NAME": "Scheme",
+    "DESCRIPTION": "Next turn, the first card you play that costs 1 or less is played twice. NL Exhaustive !stslib:ex!."
+  },
+  "${ModID}:ScrollOfIntellect": {
+    "NAME": "Scroll of Intellect",
+    "DESCRIPTION": "Draw a card. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain [E]. NL Exhaust."
+  },
+  "${ModID}:Sustenance": {
+    "NAME": "Sustenance",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Poison to a random enemy. NL stslib:Persist !stslib:persist!"
+  },
+  "${ModID}:TheEncyclopedia": {
+    "NAME": "The Encyclopedia",
+    "DESCRIPTION": "Choose 2 of !M! random cards to shuffle into your draw pile. They cost 2 less. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose 2 cards to add to your draw pile."
+    ]
+  },
+  "${ModID}:TomeOfIntellect": {
+    "NAME": "Tome of Intellect",
+    "DESCRIPTION": "Shuffle !M! *Scrolls *of *Intellect into your draw pile. At the start of your turn, shuffle 1 more in."
   }
 }

@@ -55,11 +55,15 @@ public class WitzBolt extends AbstractEvenOddCard{
         {
             return   cardStrings.DESCRIPTION
                 + cardStrings.EXTENDED_DESCRIPTION[0]
+                    + cardStrings.EXTENDED_DESCRIPTION[1]
                 + cardStrings.EXTENDED_DESCRIPTION[2];
         }
         else
         {
-            return cardStrings.DESCRIPTION;
+            return cardStrings.DESCRIPTION
+                    + cardStrings.EXTENDED_DESCRIPTION[0]
+                    + AbstractEvenOddCard.makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[1])
+                    + AbstractEvenOddCard.makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2]);
         }
     }
     

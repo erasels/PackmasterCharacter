@@ -54,11 +54,23 @@ public class Flourish extends AbstractEvenOddCard{
     protected String createEvenOddText() {
         if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0)
         {
-            return cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[4];
+            return cardStrings.DESCRIPTION +
+                    cardStrings.EXTENDED_DESCRIPTION[0]+
+                    cardStrings.EXTENDED_DESCRIPTION[1]+
+                    AbstractEvenOddCard.makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2])+
+                    cardStrings.EXTENDED_DESCRIPTION[0]+
+                    cardStrings.EXTENDED_DESCRIPTION[3]+
+                    cardStrings.EXTENDED_DESCRIPTION[4];
         }
         else
         {
-            return cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[2];
+            return cardStrings.DESCRIPTION +
+                    cardStrings.EXTENDED_DESCRIPTION[0]+
+                    cardStrings.EXTENDED_DESCRIPTION[1]+
+                    cardStrings.EXTENDED_DESCRIPTION[2]+
+                    cardStrings.EXTENDED_DESCRIPTION[0]+
+                    cardStrings.EXTENDED_DESCRIPTION[3]+
+                    AbstractEvenOddCard.makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[4]);
         }
     }
     

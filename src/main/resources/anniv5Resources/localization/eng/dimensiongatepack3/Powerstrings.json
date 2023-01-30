@@ -1,0 +1,16 @@
+{
+  "${ModID}:OuroborosPower": {
+    "NAME": "Ouroboros",
+    "DESCRIPTIONS": [
+      "At the end of each turn, if you fully blocked any source of damage, gain #b",
+      " #yStrength.",
+      " NL Has triggered this turn."
+    ]
+  },
+  "${ModID}:TempHPRegenPower": {
+    "NAME": "Ablation",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b%s #yTemporary #yHP, then reduce this by #b1."
+    ]
+  }
+}

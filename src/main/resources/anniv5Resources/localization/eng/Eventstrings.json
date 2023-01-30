@@ -26,7 +26,7 @@
       "g. #gAdd #g1 #gof #g20 #gcards #gfrom #gPacks #gnot #gin #gyour #gpool.",
       "[Sell] #gRemove #ga #gnon-Basic, #gnon-Curse #gCard #gfrom #gyour #gDeck. #gGain #g",
       " #gGold.",
-      "[Trade-In] #gDo #gboth #g- #gSell #gonce, #gthen #gBuy #gtwice.",
+      "[Trade-In] #gDo #gboth #g- #gSell #gonce, #gthen #gBuy #g2 #gof #g20 #gcards.",
       "[Locked] Requires ",
       "[Locked] No Cards to remove.",
       "[Learn Dark Arts] #rBecome #rCursed #r- #rBell. #gObtain #gConjure #gPack.",
