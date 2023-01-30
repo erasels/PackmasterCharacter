@@ -23,7 +23,7 @@
     ]
   },
   "${ModID}:AdvantagePower": {
-    "NAME": "Advantage",
+    "NAME": "优势",
     "DESCRIPTIONS": [
       "投掷 #y骰子 时，额外投掷 #b1 次，结果取最大值。",
       "投掷 #y骰子 时，额外投掷 #b",
@@ -33,8 +33,8 @@
   "${ModID}:PerceptionCheckPower": {
     "NAME": "观察",
     "DESCRIPTIONS": [
-      "你的回合开始时，投掷 #b1 枚 #y8面骰 。",
-      "你的回合开始时，投掷 #b",
+      "你的回合开始时，若你无 #y骰子 ，投掷 #b1 枚 #y8面骰 。",
+      "你的回合开始时，若你无 #y骰子 ，投掷 #b",
       " 枚 #y8面骰 。"
     ]
   },

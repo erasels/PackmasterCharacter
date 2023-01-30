@@ -1,50 +1,50 @@
 {
   "${ModID}:Imp": {
-    "NAME": "Imp",
-    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0抽n. NL Deal !M! damage. Increase the damage of *Imps by 1 本场战斗. NL 抽一张牌。 NL 消耗 。"
+    "NAME": "小鬼",
+    "DESCRIPTION": "${ModID}:自动打出 。 NL 造成 !M! 点伤害。 NL 本场战斗 *小鬼 牌伤害增加1点。 NL 抽一张牌。 NL 消耗 。"
   },
-  "${ModID}:Hig生命riestessJeklik": {
-    "NAME": "High Priestess Jeklik",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If this card is 消耗ed, add 2 copies of it 加入手牌。"
+  "${ModID}:HighPriestessJeklik": {
+    "NAME": "高阶祭司耶克里克",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本牌被 消耗 时， NL 将2张复制品加入手牌。"
   },
   "${ModID}:SoulShear": {
-    "NAME": "Soul Shear",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Shuffle 1 *Imp into your 抽牌堆。"
+    "NAME": "灵魂剥离",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *小鬼 加入抽牌堆。"
   },
   "${ModID}:Soulfire": {
-    "NAME": "Soulfire",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 a random card in your hand。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张牌 in your hand。"
+    "NAME": "灵魂之火",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 消耗 一张手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 选择 消耗 一张手牌。"
   },
   "${ModID}:Doomguard": {
-    "NAME": "Doomguard",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 2 random 牌 in your hand。"
+    "NAME": "末日守卫",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 消耗 2张手牌。"
   },
   "${ModID}:HandOfGulDan": {
-    "NAME": "H并of Gul'dan",
-    "DESCRIPTION": "抽 !M! 张牌。 NL If this card is 消耗ed, 抽 !M! 张牌。"
+    "NAME": "古尔丹之手",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若本牌被 消耗 NL ，抽 !M! 张牌。"
   },
   "${ModID}:SeedsOfDestruction": {
-    "NAME": "Seeds of Destruction",
-    "DESCRIPTION": "Choose to shuffle !M! *Imps into your 抽牌堆 or !${ModID}:m2! *Imps into your 弃牌堆。",
-    "EXTENDED_DESCRIPTION": ["Shuffle !M! *Imps into your 抽牌堆。", "将 !M! 张 *Imps to your 弃牌堆。"]
+    "NAME": "毁灭之种",
+    "DESCRIPTION": "选择将 !M! 张 *小鬼 加入抽牌堆，或 !${ModID}:m2! 张 *小鬼 加入弃牌堆。",
+    "EXTENDED_DESCRIPTION": ["将 !M! 张 *小鬼 加入抽牌堆。", "将 !M! 张 *小鬼 加入弃牌堆。"]
   },
   "${ModID}:AranasiBroodmother": {
-    "NAME": "Aranasi Broodmother",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Shuffle this card into your 抽牌堆。 NL When you 抽 this card, 获得 !M! 点 格挡 。"
+    "NAME": "阿兰纳丝蛛后",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将本牌洗入抽牌堆。 NL 抽到时，获得 !M! 点 格挡 。"
   },
   "${ModID}:MalchezaarsImp": {
-    "NAME": "Malchezaar's Imp",
-    "DESCRIPTION": "每当 a *non-Imp card is 消耗ed, add 1 *Imp to your 弃牌堆。",
-    "UPGRADE_DESCRIPTION": "每当 a *non-Imp card is 消耗ed, shuffle 1 *Imp into your 抽牌堆。"
+    "NAME": "玛克扎尔的小鬼",
+    "DESCRIPTION": "非 *小鬼 牌被 消耗 时，将一张 *小鬼 加入弃牌堆。",
+    "UPGRADE_DESCRIPTION": "非 *小鬼 牌被 消耗 时，将一张 *小鬼 加入抽牌堆。"
   },
   "${ModID}:TheSoularium": {
-    "NAME": "The Soularium",
-    "DESCRIPTION": "抽 !M! 张牌。 NL Give them 虚无 。 NL 消耗 。"
+    "NAME": "莫瑞甘的灵界",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 将其附加 虚无 。 NL 消耗 。"
   },
   "${ModID}:RunedMithrilRod": {
-    "NAME": "Runed Mithril Rod",
-    "DESCRIPTION": "Unplayable. 保留 。 NL After you 抽 !M! 张牌s while this is in your hand, reduce the cost of 牌 in your h并by 1 本回合 并丢弃 this。",
-    "EXTENDED_DESCRIPTION": ["I can't play this card。", " ({0} 抽n.)"]
+    "NAME": "符文秘银杖",
+    "DESCRIPTION": "无法打出。 保留 。 NL 本牌在手时累计抽 !M! 张牌后，该回合所有手牌耗能减1，并丢弃本牌。",
+    "EXTENDED_DESCRIPTION": ["我不能打出这张牌。", " NL (已抽 {0} 张。)"]
   }
 }

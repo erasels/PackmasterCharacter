@@ -46,7 +46,7 @@
   "${ModID}:LeftHook": {
     "NAME": "左弯钩",
     "DESCRIPTION": "造成 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:累奇 ：", "不被丢弃。"]
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:累奇 ：", "不被丢弃。", " NL 消耗性 !stslib:ex! 。"]
   },
   "${ModID}:Battlecry": {
     "NAME": "开场战吼",

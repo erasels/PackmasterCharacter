@@ -1,8 +1,8 @@
 {
   "${ModID}:CrystalResonancePower": {
-    "NAME": "Crystal Resonance",
+    "NAME": "水晶回响",
     "DESCRIPTIONS": [
-      "每当 you #yTransmute, 获得 #b", " #y力量"
+      "每当你 #y增变化 一张牌时，获得 #b", " 点 #y力量 。"
     ]
   }
 }

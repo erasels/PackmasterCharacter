@@ -1,27 +1,27 @@
 {
   "${ModID}:DeceivedPower": {
-    "NAME": "Deceived",
+    "NAME": "被骗",
     "DESCRIPTIONS": [
-      "If this creature dies while #y中毒ed, you 获得 #b",
-      " gold。"
+      "若该单位死亡时仍处于 #y中毒 之中，你获得 #b",
+      " 金币。"
     ]
   },
   "${ModID}:HammeredPower": {
-    "NAME": "Hammered",
+    "NAME": "零值抑制",
     "DESCRIPTIONS": [
-      "The creature will have its buffs stolen until 下回合。"
+      "该单位本回合获得的所有正面效果都被你窃取。"
     ]
   },
   "${ModID}:ThieveryMasteryPower": {
-    "NAME": "Master Thief",
+    "NAME": "神偷",
     "DESCRIPTIONS": [
-      "每当 you steal something, 获得 twice as much of it。"
+      "每当你窃取时，获得双倍量(敌人失去量不变)。"
     ]
   },
   "${ModID}:MindControlledPower": {
-    "NAME": "Mind Controlled",
+    "NAME": "精神被操控",
     "DESCRIPTIONS": [
-      "This enemy became your ally 并will start attacking other enemies。"
+      "该敌人已成为你的伙伴，会攻击其他敌人。"
     ]
   }
 }

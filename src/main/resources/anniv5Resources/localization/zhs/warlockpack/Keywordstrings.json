@@ -1,7 +1,7 @@
 [
   {
-    "PROPER_NAME": "Casts\u00a0When\u00a0抽n",
-    "NAMES": ["casts\u00a0when\u00a0抽n"],
-    "DESCRIPTION": "When 抽n or put 加入手牌, activate this card's effects on a random target. (This does not trigger on play effects such as Beat of Death.)"
+    "PROPER_NAME": "自动打出",
+    "NAMES": ["casts\u00a0when\u00a0抽n","自动打出"],
+    "DESCRIPTION": "本牌进入手牌时，对随机(原本的)目标触发效果。(该效果不被视为打出，因此不触发例如 #y律动 的效果。)"
   }
 ]

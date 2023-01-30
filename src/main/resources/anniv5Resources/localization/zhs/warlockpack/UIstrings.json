@@ -1,16 +1,16 @@
 {
   "${ModID}:WarlockPack": {
     "TEXT": [
-      "Warlock",
-      "Be a Warlock 并生成\u00a0Fel energy, 消耗ing 牌 并creating imps to destroy your enemies。",
+      "巫妖王",
+      "成为巫妖王并操纵邪能，消耗牌来创造小鬼击垮敌军。",
       "Diamsword & modargo",
-      "#yHearthstone originally created by #yBlizzard #yEntertainment"
+      "创意来自 #y暴雪娱乐 游戏 #y炉石传说(Hearthstone) 。"
     ]
   },
   "${ModID}:WarlockPackHat": {
     "TEXT": [
-      "Nothing nefarious to see here. Nope。",
-      "Shadow Hood"
+      "你在期待什么邪恶的东西吗？不好意思没有。",
+      "暗影头戴"
     ]
   }
 }

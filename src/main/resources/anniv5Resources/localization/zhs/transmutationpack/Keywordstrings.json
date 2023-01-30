@@ -1,19 +1,21 @@
 [
   {
-    "PROPER_NAME": "Transmute",
+    "PROPER_NAME": "增变化",
     "NAMES": [
       "transmute",
       "transmuted",
-      "transmutes"
+      "transmutes",
+      "增变化"
     ],
-    "DESCRIPTION": "Transforms a card in combat into any card of the same rarity available through current card rewards. The new card deals #b1 more damage and gains #b1 more #yBlock for the rest of combat. This effect stacks."
+    "DESCRIPTION": "#y变化 一张牌至本局已选卡包中的同稀有度牌， #y变化 后的牌具有 #b1 点 伤害与 #y格挡 加成，多次 #y增变化 时该加成叠加。"
   },
   {
-    "PROPER_NAME": "Mutable",
+    "PROPER_NAME": "固在",
     "NAMES": [
       "mutable",
-      "mutable:"
+      "mutable:",
+      "固在"
     ],
-    "DESCRIPTION": "When 一张牌 is #yTransmuted, any #yMutable effect is passed on to the next card for the rest of combat。"
+    "DESCRIPTION": "牌被 #y增变化 时，新创造的牌仍带有其 #y固在 效果。"
   }
 ]

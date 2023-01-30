@@ -37,6 +37,6 @@
   },
   "${ModID}:Masterwork": {
     "NAME": "大师杰作",
-    "DESCRIPTION": "选择 升级 一张牌 !M! 次。 NL 可升级所有牌任意次。 NL stslib:消耗性 !stslib:ex! 。"
+    "DESCRIPTION": "选择 升级 一张牌 !M! 次。 NL 可升级所有牌任意次。 NL 消耗性 !stslib:ex! 。"
   }
 }

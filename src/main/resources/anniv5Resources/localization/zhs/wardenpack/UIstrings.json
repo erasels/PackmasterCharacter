@@ -1,16 +1,16 @@
 {
   "${ModID}:WardenPack": {
     "TEXT": [
-      "Warden",
-      "Manipulate the power of foresight, think ahead, bend the unknown into your favor。",
+      "洞见者",
+      "操纵预知的力量，提前思考，化未知为已知。",
       "AlexMdle",
-      "Pack art by #yStardustSwirl"
+      "卡图作者： #yStardustSwirl 。"
     ]
   },
   "${ModID}:WardenPackHat": {
     "TEXT": [
-      "What secrets lie in the shadowed vaults of this spacious headwear?",
-      "Godhood"
+      "这款大容量头饰后面会藏有什么秘密呢？",
+      "神之头罩"
     ]
   }
 }

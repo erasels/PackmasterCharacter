@@ -22,7 +22,7 @@
   "${ModID}:MetallicVial": {
     "NAME": "Metallic Vial",
     "DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact. NL stslib:消耗性 !stslib:ex! 。",
+    "UPGRADE_DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact. NL 消耗性 !stslib:ex! 。",
     "EXTENDED_DESCRIPTION": ["获得 4 Plated Armor。", "获得 3 Thorns。","获得 2 Artifact。"]
   },
   "${ModID}:QuickBrew": {
@@ -40,7 +40,7 @@
   "${ModID}:AttackVial": {
     "NAME": "Attack Vial",
     "DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played. NL stslib:消耗性 !stslib:ex! 。",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played. NL 消耗性 !stslib:ex! 。",
     "EXTENDED_DESCRIPTION": ["Choose 1 of 3 Attacks to 获得. It costs 0 until played。"]
   },
   "${ModID}:ChaosVial": {
@@ -50,6 +50,6 @@
   "${ModID}:VialOfMemory": {
     "NAME": "Vial of Memory",
     "DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it 加入手牌。 It costs 0 until played。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it 加入手牌。 It costs 0 until played. NL stslib:消耗性 !stslib:ex! 。"
+    "UPGRADE_DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it 加入手牌。 It costs 0 until played. NL 消耗性 !stslib:ex! 。"
   }
 }

@@ -1,21 +1,21 @@
 {
   "${ModID}:ThieveryPack": {
     "TEXT": [
-      "Thief, the Deceiver",
-      "No need to prepare everything yourself; stealing can get what you want。",
+      "盗贼欺骗者",
+      "没必要什么都自己准备，有人会为你提供想要的。",
       "Celicath"
     ]
   },
   "${ModID}:StealPowerAction": {
     "TEXT": [
-      "%s is useless to me。",
-      "%s are useless to me。"
+      "%s 对我没用。",
+      "%s 对我没用。"
     ]
   },
   "${ModID}:ThieveryPackHat": {
     "TEXT": [
-      "The legacy of Lord Red Mask is only beginning。",
-      "Red Mask"
+      "红面具之王的传奇即将被谱写。",
+      "红面具"
     ]
   }
 }

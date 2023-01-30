@@ -1,52 +1,52 @@
 {
   "${ModID}:AmalgamateWaters": {
-    "NAME": "Amalgamate Waters",
-    "DESCRIPTION": "抽 a ${ModID}:Mutable card. NL 获得 ${ModID}:Mutable effects from any number of 牌 in your hand, then ${ModID}:Transmute them。",
-    "UPGRADE_DESCRIPTION": "抽 !M! ${ModID}:Mutable 张牌。 NL 获得 ${ModID}:Mutable effects from any number of 牌 in your hand, then ${ModID}:Transmute them。"
+    "NAME": "众水汇集",
+    "DESCRIPTION": "抽1张 ${ModID}:固在 牌。 NL 触发任意张手牌的 ${ModID}:固在 效果，然后将其 ${ModID}:增变化 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张 ${ModID}:固在 牌。 NL 触发任意张手牌的 ${ModID}:固在 效果，然后将其 ${ModID}:增变化 。"
   },
   "${ModID}:CrystalLattice": {
-    "NAME": "Crystal Lattice",
-    "DESCRIPTION": "${ModID}:Transmute 一张牌。 将 !M! 张 additional copies of the new card 加入手牌。 NL 消耗 。"
+    "NAME": "水晶树架",
+    "DESCRIPTION": "${ModID}:增变化 一张牌。 NL 额外获得其新牌 !M! 张。 NL 消耗 。"
   },
   "${ModID}:CrystalResonance": {
-    "NAME": "Crystal Resonance",
-    "DESCRIPTION": "每当 you ${ModID}:Transmute, 获得 !M! 点 力量 。"
+    "NAME": "水晶共鸣",
+    "DESCRIPTION": "${ModID}:增变化 时， NL 获得 !M! 点 力量 。"
   },
   "${ModID}:Drench": {
-    "NAME": "Drench",
-    "DESCRIPTION": "${ModID}:Mutable: 获得 !B! 点 格挡 。 NL ${ModID}:Mutable: 造成 !D! 点伤害。"
+    "NAME": "湿透",
+    "DESCRIPTION": "${ModID}:固在 ： 获得 !B! 点 格挡 。 NL ${ModID}:固在 ： 造成 !D! 点伤害。"
   },
   "${ModID}:FrozenCapsule": {
-    "NAME": "Frozen Capsule",
-    "DESCRIPTION": "${ModID}:Mutable: 造成 !D! 点伤害。 NL ${ModID}:Mutable: When ${ModID}:Transmuted, 抽一张牌。",
-    "UPGRADE_DESCRIPTION": "${ModID}:Mutable: 造成 !D! 点伤害。 NL ${ModID}:Mutable: When ${ModID}:Transmuted, 抽 !M! 张牌。"
+    "NAME": "冻结胶囊",
+    "DESCRIPTION": "${ModID}:固在 ： 造成 !D! 点伤害。 NL ${ModID}:固在 ： NL ${ModID}:增变化 时抽1张牌。",
+    "UPGRADE_DESCRIPTION": "${ModID}:固在 ： 造成 !D! 点伤害。 NL ${ModID}:固在 ： NL ${ModID}:增变化 时抽 !M! 张牌。"
   },
   "${ModID}:GhostlyMist": {
-    "NAME": "Ghostly Mist",
-    "DESCRIPTION": "${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your 抽牌堆。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL ${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your 抽牌堆。"
+    "NAME": "鬼雾",
+    "DESCRIPTION": "${ModID}:固在 ： 免费打出。 NL ${ModID}:固在 ： ${ModID}:增变化 本牌。 NL ${ModID}:固在 ：将本牌洗入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL ${ModID}:固在 ： 免费打出。 NL ${ModID}:固在 ： ${ModID}:增变化 本牌。 NL ${ModID}:固在 ：将本牌洗入抽牌堆。"
   },
   "${ModID}:GlacialSynthesis": {
-    "NAME": "Glacial Synthesis",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute 一张牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:Transmute up to !M! 张牌。"
+    "NAME": "人工冰川",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择 ${ModID}:增变化 1张手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择 ${ModID}:增变化 !M! 张手牌。"
   },
   "${ModID}:SearingSynthesis": {
-    "NAME": "Searing Synthesis",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute 一张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:Transmute up to !M! 张牌。"
+    "NAME": "人工火焰",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择 ${ModID}:增变化 1张手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 选择 ${ModID}:增变化 !M! 张手牌。"
   },
   "${ModID}:ViscousShell": {
-    "NAME": "Viscous Shell",
-    "DESCRIPTION": "${ModID}:Mutable: 获得 !B! 点 格挡 。 NL ${ModID}:Transmute this card。"
+    "NAME": "厚粘之壳",
+    "DESCRIPTION": "${ModID}:固在 ：获得 !B! 点 格挡 。 NL ${ModID}:增变化 本牌。"
   },
   "${ModID}:DimensionalIcicles": {
-    "NAME": "Dimensional Icicles",
-    "DESCRIPTION": "造成 !D! 点伤害 !B! 次。 The number of hits is affected by 格挡 modifiers。"
+    "NAME": "次元冰锥",
+    "DESCRIPTION": "造成 !D! 点伤害 !B! 次。 NL 次数受到 格挡 的修正效果影响。"
   },
   "${ModID}:AbstractExtraEffectModifier": {
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Mutable: ",
+      "${ModID}:固在 ：",
       " ",
       " 次。",
       "。"
@@ -54,36 +54,36 @@
   },
   "${ModID}:DamageEffect": {
     "EXTENDED_DESCRIPTION": [
-      "Deal ",
-      " damage"
+      "造成 ",
+      " 点伤害"
     ]
   },
-  "${ModID}:抽WhenTransmutedEffect": {
+  "${ModID}:DrawWhenTransmutedEffect": {
     "EXTENDED_DESCRIPTION": [
-      "When ${ModID}:Transmuted, 抽一张牌。",
-      "When ${ModID}:Transmuted, 抽 ",
+      " ${ModID}:增变化 时抽1张牌。",
+      " ${ModID}:增变化 时抽 ",
       " 张牌。"
     ]
   },
   "${ModID}:FreeToPlayEffect": {
     "EXTENDED_DESCRIPTION": [
-      "Free to play。"
+      "免费打出。"
     ]
   },
-  "${ModID}:获得格挡Effect": {
+  "${ModID}:GainBlockEffect": {
     "EXTENDED_DESCRIPTION": [
       "获得 ",
-      " 格挡"
+      " 点 格挡 。"
     ]
   },
   "${ModID}:ReboundSelfEffect": {
     "EXTENDED_DESCRIPTION": [
-      "Shuffle this card into your 抽牌堆。"
+      "将本牌洗入抽牌堆。"
     ]
   },
   "${ModID}:TransmuteSelfEffect": {
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:Transmute this card。"
+      "${ModID}:增变化 本牌。"
     ]
   }
 }

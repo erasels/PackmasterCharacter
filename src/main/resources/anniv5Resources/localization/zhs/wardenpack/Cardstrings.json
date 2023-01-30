@@ -1,44 +1,44 @@
 {
   "${ModID}:PierceVeil": {
-    "NAME": "Pierce Veil",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Add 1 of !M! top 牌 of your 抽牌堆 加入手牌。"
+    "NAME": "破掩",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择抽牌堆顶部 !M! 张中的一张牌加入手牌。"
   },
   "${ModID}:Stall": {
-    "NAME": "Stall",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Put up to !M! 牌 from your h并on top of your 抽牌堆。"
+    "NAME": "停滞",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择 !M! 张手牌移入抽牌堆顶部。"
   },
   "${ModID}:RiskOfBlades": {
-    "NAME": "Risk Of Blades",
-    "DESCRIPTION": "造成 !D! 点伤害 for each Attack among the top 4 牌 of your 抽牌堆。",
-    "EXTENDED_DESCRIPTION": [" NL (Hits !M! 次。)"]
+    "NAME": "刀刃之险",
+    "DESCRIPTION": "抽牌堆顶部4张牌每有一张攻击，造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !M! 次。)"]
   },
   "${ModID}:Crossroads": {
-    "NAME": "Crossroads",
-    "DESCRIPTION": "Scry !M! 。 NL Play the top card of your 抽牌堆。 NL 消耗 。"
+    "NAME": "交岔口",
+    "DESCRIPTION": "预见 !M! 。 NL 打出抽牌堆顶部的牌。 NL 消耗 。"
   },
   "${ModID}:Anticipation": {
-    "NAME": "Anticipation",
-    "DESCRIPTION": "抽一张牌。 NL 获得 力量 equal to its cost。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 获得 力量 equal to their cost。"
+    "NAME": "预计",
+    "DESCRIPTION": "抽1张牌。 NL 获得其耗能点 力量 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 获得其耗能点 力量 。"
   },
   "${ModID}:Prediction": {
-    "NAME": "Prediction",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL If no enemy intends to attack, 获得 it 下回合 instead。"
+    "NAME": "预言",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若无敌人意图攻击， NL 改为下回合获得。"
   },
   "${ModID}:ForceBolt": {
-    "NAME": "Force Bolt",
-    "DESCRIPTION": "*Magic. NL 造成 !D! 点伤害。 NL Increase the damage dealt by *Magic 牌 by !M! 本回合。"
+    "NAME": "力之矢",
+    "DESCRIPTION": "*魔法 。 NL 造成 !D! 点伤害。 NL 本回合魔法牌伤害增加 !M! 点。"
   },
   "${ModID}:Enigmancy": {
-    "NAME": "Enigmancy",
-    "DESCRIPTION": "Scry !M! 。 NL Each turn, 获得 !${ModID}:m2! Energy 并reduce this 获得 by 1。"
+    "NAME": "高深",
+    "DESCRIPTION": "预见 !M! 。 NL 回合开始时，获得 !${ModID}:m2! [E] ，每回合获得量减1。"
   },
   "${ModID}:Recurrence": {
-    "NAME": "Recurrence",
-    "DESCRIPTION": "Shuffle a copy of your h并into your 抽牌堆。 NL 消耗 。"
+    "NAME": "重现",
+    "DESCRIPTION": "选择将一张手牌的复制品加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:DivineMight": {
-    "NAME": "Divine Might",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL When [#EFC851]Divine [#EFC851]Might is played twice, ${ModID}:Ascend。"
+    "NAME": "神圣之力",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出两次 [#EFC851]神圣之力 后， ${ModID}:飞升 。"
   }
 }

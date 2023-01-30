@@ -1,21 +1,21 @@
 {
   "${ModID}:UtilityPack": {
     "TEXT": [
-      "Utility",
-      "牌 that synergize well with a wide range of mechanics 并packs。",
+      "实用",
+      "与一大堆卡包都契合度较佳的卡包。",
       "modargo",
       "卡牌贴图源自游戏：万智牌(Magic: The Gathering)"
     ]
   },
   "${ModID}:ConjurationAction": {
     "TEXT": [
-      "Choose 一张牌 to play。"
+      "选择一张牌打出。"
     ]
   },
   "${ModID}:UtilityPackHat": {
     "TEXT": [
-      "Safety first!",
-      "Hardhat"
+      "安全第一！",
+      "安全帽"
     ]
   }
 }

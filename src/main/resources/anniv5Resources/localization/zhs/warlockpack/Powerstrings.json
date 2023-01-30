@@ -1,16 +1,16 @@
 {
   "${ModID}:MalchezaarsImpPower": {
-    "NAME": "Malchezaar's Imp",
+    "NAME": "玛克扎尔的小鬼",
     "DESCRIPTIONS": [
-      "每当 a #ynon-Imp card is #y消耗ed, shuffle #b{0} #yImp into your 弃牌堆。",
-      "每当 a #ynon-Imp card is #y消耗ed, shuffle #b{0} #yImps into your 弃牌堆。"
+      "每当一张非 #y小鬼 牌被 #y消耗 时，将 #b{0} 张 #y小鬼 加入弃牌堆。",
+      "每当一张非 #y小鬼 牌被 #y消耗 时，将 #b{0} 张 #y小鬼 加入弃牌堆。"
     ]
   },
   "${ModID}:MalchezaarsImpUpgradedPower": {
-    "NAME": "Malchezaar's Imp+",
+    "NAME": "玛克扎尔的小鬼+",
     "DESCRIPTIONS": [
-      "每当 a #ynon-Imp card is #y消耗ed, shuffle #b{0} #yImp into your 抽牌堆。",
-      "每当 a #ynon-Imp card is #y消耗ed, shuffle #b{0} #yImps into your 抽牌堆。"
+      "每当一张非 #y小鬼 牌被 #y消耗 时，将 #b{0} 张 #y小鬼 加入抽牌堆。",
+      "每当一张非 #y小鬼 牌被 #y消耗 时，将 #b{0} 张 #y小鬼 加入抽牌堆。"
     ]
   }
 }

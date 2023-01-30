@@ -1,10 +1,11 @@
 [
   {
-    "PROPER_NAME": "Ascend",
+    "PROPER_NAME": "飞升",
     "NAMES": [
       "ascend",
-      "ascended"
+      "ascended",
+      "飞升"
     ],
-    "DESCRIPTION": "On Ascending, 获得 [E] [E] , 抽 #b2 牌 并获得 #b10 力量 that turn。"
+    "DESCRIPTION": "#y飞升 时，获得 [E] [E] ，抽 #b2 张牌 并获得 #b10 层 临时 力量 。"
   }
 ]

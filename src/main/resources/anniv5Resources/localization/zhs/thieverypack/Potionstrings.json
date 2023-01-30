@@ -1,9 +1,9 @@
 {
   "${ModID}:DivinePotion": {
-    "NAME": "Divine Potion",
+    "NAME": "神圣药水",
     "DESCRIPTIONS": [
       "获得 #b",
-      " #yTemporary #y生命 [REMOVE_SPACE]。"
+      " 层 #y临时生命 。"
     ]
   }
 }

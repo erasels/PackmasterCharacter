@@ -20,12 +20,5 @@
       "抽 #b",
       " 张牌。 For each #yClaw you 抽, 抽 another card。"
     ]
-  },
-  "${ModID}:GenerateClawsPotion": {
-    "NAME": "Bottled Claws",
-    "DESCRIPTIONS": [
-      "Add #b",
-      " #yGhost #yClaws 加入手牌。"
-    ]
   }
 }
