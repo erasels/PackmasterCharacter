@@ -99,11 +99,7 @@ public class HatMenu {
 
         if (init) {
             String lastPickedId = SpireAnniversary5Mod.getLastPickedHatID();
-            if (lastPickedId == null || lastPickedId.equals("")) {
-                dropdown.setSelectedIndex(0);
-            } else {
-                dropdown.setSelectedIndex(hatsToIndexes.get(lastPickedId));
-            }
+            dropdown.setSelectedIndex(hatsToIndexes.getOrDefault(lastPickedId, 0));
         }
     }
 

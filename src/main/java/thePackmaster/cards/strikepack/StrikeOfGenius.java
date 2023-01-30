@@ -16,6 +16,8 @@ public class StrikeOfGenius extends AbstractStrikePackCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+
         if (upgraded) Wiz.applyToSelf(new StrikeOfGeniusUpgradedPower(p, 1));
         else
             Wiz.applyToSelf(new StrikeOfGeniusPower(p, 1));

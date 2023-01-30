@@ -50,6 +50,8 @@ public class LordOfTheFliesPower extends AbstractPackmasterPower implements OnIn
     @Override
     public void receiveInfest(AbstractCard infestingCard) {
         flash();
-        InfestModifier.incrementInfestCount(infestingCard, false);
+        for (int i = 0; i < amount; i++) {
+            InfestModifier.incrementInfestCount(infestingCard, false);
+        }
     }
 }
