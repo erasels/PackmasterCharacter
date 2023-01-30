@@ -25,7 +25,9 @@ public class WardGemMod extends AbstractMadScienceModifier {
     @Override
     public void onInitialApplication(AbstractCard card) {
         super.onInitialApplication(card);
-        card.cardsToPreview = new Ward();
+        if (card.cardsToPreview == null) {
+            card.cardsToPreview = new Ward();
+        }
     }
 
     @Override
