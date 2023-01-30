@@ -45,12 +45,12 @@
   },
   "${ModID}:OccultGem": {
     "NAME": "天青石",
-    "DESCRIPTION": "无法打出的 ${ModID}:宝石 。 NL \"牌附加 ${ModID}:灵秘 \"",
-    "UPGRADE_DESCRIPTION": "无法打出的 ${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 ${ModID}:灵秘 \""
+    "DESCRIPTION": "无法打出的 ${ModID}:宝石 。 NL \" 牌附加 ${ModID}:灵秘 \"",
+    "UPGRADE_DESCRIPTION": "无法打出的 ${ModID}:宝石 (可镶嵌2次)。 NL \" 牌附加 ${ModID}:灵秘 \""
   },
   "${ModID}:PersistGem": {
     "NAME": "石榴石",
-    "DESCRIPTION": "无法打出的 ${ModID}:宝石 。 NL \"牌附加 stslib:长驻 2\"",
-    "UPGRADE_DESCRIPTION": "无法打出的 ${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 stslib:长驻 2\""
+    "DESCRIPTION": "无法打出的 ${ModID}:宝石 。 NL \"牌附加 长驻 2\"",
+    "UPGRADE_DESCRIPTION": "无法打出的 ${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 长驻 2\""
   }
 }

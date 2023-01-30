@@ -21,8 +21,8 @@
   },
   "${ModID}:Twitch": {
     "NAME": "痉挛",
-    "DESCRIPTION": "随机变化 !M! 张牌的耗能。 NL stslib:长驻 !stslib:persist! 。",
-    "UPGRADE_DESCRIPTION": "随机变化 !M! 张牌的耗能。 NL stslib:长驻 !stslib:persist! 。"
+    "DESCRIPTION": "随机变化 !M! 张牌的耗能。 NL 长驻 !stslib:persist! 。",
+    "UPGRADE_DESCRIPTION": "随机变化 !M! 张牌的耗能。 NL 长驻 !stslib:persist! 。"
   },
   "${ModID}:Gulp": {
     "NAME": "用餐准备",

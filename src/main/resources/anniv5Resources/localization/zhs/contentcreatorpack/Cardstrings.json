@@ -1,7 +1,7 @@
 {
   "${ModID}:OlexasCloak": {
     "NAME": "Olexa's　Cloak",
-    "DESCRIPTION": "保留 。 NL 再打出 !hoard! 次后： NL 获得 !B! 点 格挡 。 NL stslib:长驻 !stslib:persist! 。"
+    "DESCRIPTION": "保留 。 NL 再打出 !hoard! 次后： NL 获得 !B! 点 格挡 。 NL 长驻 !stslib:persist! 。"
   },
   "${ModID}:HuttsGamble": {
     "NAME": "Hutts'　Gamble",
@@ -14,8 +14,8 @@
   },
   "${ModID}:SneakyteakStrike": {
     "NAME": "Sneakyteak　Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Darkside　Slap 加入抽牌堆顶部。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Darkside　Slap+ 加入抽牌堆顶部。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 Darkside　Slap 加入抽牌堆顶部。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 Darkside　Slap+ 加入抽牌堆顶部。"
   },
   "${ModID}:DarksideSlap": {
     "NAME": "Darkside　Slap",
@@ -50,12 +50,12 @@
   },
   "${ModID}:BaalorBash": {
     "NAME": "Baalorlord's　Bash",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Baalor's　Blueprint 加入抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL 将一张 *Baalor's　Blueprint 加入抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 Baalor's　Blueprint 加入抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL 将一张 Baalor's　Blueprint 加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:BaalorBlueprint": {
     "NAME": "Baalor's　Blueprint",
-    "DESCRIPTION": "将弃牌堆洗入抽牌堆， NL 并将一张 *The　Cozy　Chair 加入抽牌堆底部。 消耗 。"
+    "DESCRIPTION": "将弃牌堆洗入抽牌堆， NL 并将一张 The　Cozy　Chair 加入抽牌堆底部。 消耗 。"
   },
   "${ModID}:TheCozyChair": {
     "NAME": "The　Cozy　Chair",

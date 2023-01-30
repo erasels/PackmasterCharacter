@@ -39,7 +39,7 @@
   },
   "${ModID}:LevelUp": {
     "NAME": "升级！",
-    "DESCRIPTION": "获得 !M! 次 ${ModID}:优势 。 NL 投掷2枚 ${ModID}:6面骰　。"
+    "DESCRIPTION": "获得 !M! 次 ${ModID}:优势 。 NL 投掷2枚 ${ModID}:6面骰 。"
   },
   "${ModID}:BoardGameKeywordManager": {
     "NAME": "KeywordManager",

@@ -29,7 +29,7 @@
       " NL 投掷一枚 ${ModID}:6面骰 。",
       " NL 抽一张牌。",
       " NL 下回合获得 [E] 。",
-      " NL stslib:长驻 !stslib:persist! 。",
+      " NL 长驻 !stslib:persist! 。",
       "保留 。 NL ",
       " NL 获得一张 *小刀 。",
       " NL 获得2层临时 力量 。",

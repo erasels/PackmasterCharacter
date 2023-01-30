@@ -27,7 +27,7 @@
   },
   "${ModID}:Inferno": {
     "NAME": "狱焱",
-    "DESCRIPTION": "保留 。 NL 再打出 !hoard! 次后，对所有敌人造成 !D! 点伤害。 NL stslib:长驻 !stslib:persist! 。"
+    "DESCRIPTION": "保留 。 NL 再打出 !hoard! 次后，对所有敌人造成 !D! 点伤害。 NL 长驻 !stslib:persist! 。"
   },
   "${ModID}:LethalShot": {
     "NAME": "致死箭击。",
