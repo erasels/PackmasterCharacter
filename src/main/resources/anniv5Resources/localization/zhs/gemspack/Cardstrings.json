@@ -43,7 +43,7 @@
     "DESCRIPTION": "${ModID}:宝石. NL \"投掷一枚 ${ModID}:6面骰 \"",
     "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"投掷一枚 ${ModID}:6面骰 \""
   },
-  "${ModID}:灵秘Gem": {
+  "${ModID}:OccultGem": {
     "NAME": "天青石",
     "DESCRIPTION": "无法打出的 ${ModID}:宝石. NL \"牌附加 ${ModID}:灵秘 \"",
     "UPGRADE_DESCRIPTION": "无法打出的 ${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 ${ModID}:灵秘 \""
