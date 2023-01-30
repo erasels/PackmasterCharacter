@@ -120,6 +120,8 @@ public class CarveAction extends AbstractGameAction {
                 return new SpireShield();
             case "SpireSpear":
                 return new SpireSpear();
+            case "Reptomancer":
+                return new SerpentineDagger();
             default:
                 return new Hyperbeam();
         }

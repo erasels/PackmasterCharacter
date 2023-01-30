@@ -1,4 +1,3 @@
-/*
 package thePackmaster.cards;
 
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
@@ -8,27 +7,30 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.EasyModalChoiceAction;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.cards.PackmasterModalChoiceCard;
+import thePackmaster.cards.strikepack.AbstractStrikePackCard;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.powers.ConjurePackPower;
+import thePackmaster.powers.strikepack.StrikeDummyJrPower;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class PackRip extends AbstractPackmasterCard {
-    public final static String ID = makeID("PackRip");
+public class ConjurePack extends AbstractPackmasterCard {
+    public final static String ID = makeID("ConjurePack");
 
-    public PackRip() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
-        exhaust = true;
+    public ConjurePack() {
+        super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCardPack> choices = SpireAnniversary5Mod.getRandomPacks(false, 3);
+        ArrayList<AbstractCardPack> choices = SpireAnniversary5Mod.getRandomPacks(true, magicNumber);
 
         ArrayList<AbstractCard> packCards = new ArrayList<>();
 
@@ -40,17 +42,10 @@ public class PackRip extends AbstractPackmasterCard {
     }
 
     public void action(AbstractCardPack pack) {
-        addToBot(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, Wiz.hand().size(), true, false));
-        for (AbstractCard c : pack.cards) {
-            if(c.rarity == CardRarity.COMMON || c.rarity == CardRarity.UNCOMMON || c.rarity == CardRarity.RARE) {
-                addToBot(new MakeTempCardInHandAction(c));
-            }
-        }
+        Wiz.applyToSelf(new ConjurePackPower(Wiz.p(), 5, pack));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        isInnate = true;
     }
 }
-
- */

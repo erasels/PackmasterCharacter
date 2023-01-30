@@ -70,6 +70,7 @@ import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.patches.sneckopack.EnergyCountPatch;
 import thePackmaster.potions.BoosterBrew;
 import thePackmaster.potions.ModdersDelight;
+import thePackmaster.potions.PackInAJar;
 import thePackmaster.potions.SmithingOil;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
@@ -476,6 +477,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(DivinePotion.class, Color.ORANGE, Color.YELLOW, Color.ORANGE, DivinePotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(PackInAJar.class, Color.ORANGE, Color.YELLOW, Color.ORANGE, PackInAJar.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
 
         if (Loader.isModLoaded("widepotions")) {
             Consumer<String> whitelist = getWidePotionsWhitelistMethod();
