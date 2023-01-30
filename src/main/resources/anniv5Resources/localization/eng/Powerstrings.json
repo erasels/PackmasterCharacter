@@ -6,5 +6,13 @@
       " #yStrength and #b",
       " #yDexterity."
     ]
+  },
+  "${ModID}:ConjurePackPower": {
+    "NAME": "Conjuring Pack",
+    "DESCRIPTIONS": [
+      "At the start of the next #b",
+      " turns, add #b2 cards from the ",
+      " Pack to your hand."
+    ]
   }
 }

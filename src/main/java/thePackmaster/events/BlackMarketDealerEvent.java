@@ -4,6 +4,7 @@ import basemod.abstracts.events.PhasedEvent;
 import basemod.abstracts.events.phases.TextPhase;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.cards.curses.Necronomicurse;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -16,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.PackRip;
+import thePackmaster.cards.ConjurePack;
 import thePackmaster.hats.Hats;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.CoreSetPack;
@@ -139,10 +140,10 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                     }
                 }
 
-                        .addOption(new TextPhase.OptionInfo(OPTIONS[11], new PackRip()), (i) -> {   //Curse & Pack Rip
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Necronomicurse(), (Settings.WIDTH * .25F), (float) (Settings.HEIGHT / 2)));
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Necronomicurse(), (Settings.WIDTH * .75F), (float) (Settings.HEIGHT / 2)));
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new PackRip(), (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));
+                        .addOption(new TextPhase.OptionInfo(OPTIONS[11], new ConjurePack()), (i) -> {   //Curse & Pack Rip
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), (Settings.WIDTH * .33F), (float) (Settings.HEIGHT / 2)));
+                            //AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), (Settings.WIDTH * .75F), (float) (Settings.HEIGHT / 2)));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new ConjurePack(), (Settings.WIDTH * .66F), (float) (Settings.HEIGHT / 2)));
                             transitionKey("magicLearnEnd");
                         }).addOption(OPTIONS[12], (i) -> {   //Pack in a Jar Potion
                             AbstractDungeon.getCurrRoom().rewards.clear();
@@ -151,18 +152,10 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                             AbstractDungeon.combatRewardScreen.open();
                             skipDefaultCardRewards = false;
                             transitionKey("magicSampleEnd");
-                        })
+                        })  //Remove a card.
                         .addOption(new TextPhase.OptionInfo(canRemoveCardsForCleanse() ? OPTIONS[13] : OPTIONS[14]).enabledCondition(this::canRemoveCardsForCleanse), (i) -> {   //Cleansing Ritual
-                            ArrayList<AbstractCard> purgeables = new ArrayList<>();
-                            for (AbstractCard c : AbstractDungeon.player.masterDeck.getPurgeableCards().group) {
-                                if (c.type == AbstractCard.CardType.CURSE) {
-                                    purgeables.add(c);
-                                }
-                            }
 
-                            CardGroup purgablesGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                            purgablesGroup.group = purgeables;
-                            AbstractDungeon.gridSelectScreen.open(purgablesGroup, 1, Beggar.OPTIONS[6], false, false, false, true);
+                            AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getPurgeableCards(), 1, Beggar.OPTIONS[6], false, false, false, true);
 
                         })
                         .addOption(OPTIONS[3], (t) -> this.openMap())
@@ -255,13 +248,12 @@ public class BlackMarketDealerEvent extends PhasedEvent {
 
 
     private boolean canRemoveCardsForCleanse() {
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.getPurgeableCards().group
-        ) {
-            if (c.type == AbstractCard.CardType.CURSE) {
-                return true;
+
+            if (AbstractDungeon.player.masterDeck.getPurgeableCards().group.isEmpty()) {
+                return false;
             }
-        }
-        return false;
+
+        return true;
     }
 
 
