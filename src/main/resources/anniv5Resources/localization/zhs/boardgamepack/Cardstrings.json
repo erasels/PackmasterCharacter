@@ -45,8 +45,8 @@
     "NAME": "KeywordManager",
     "DESCRIPTION": "Stuff for translations 并easy access to keyword ids",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:骰子",
-      "${ModID}:机会"
+      "${ModID}:dice",
+      "${ModID}:chance"
     ]
   }
 }

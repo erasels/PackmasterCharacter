@@ -51,7 +51,7 @@
     "NAME": "KeywordManager",
     "DESCRIPTION": "Stuff for translations 并easy access to keyword ids",
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:灵感",
+      "${ModID}:inspiration",
       "${ModID}:mental_break"
     ]
   }
