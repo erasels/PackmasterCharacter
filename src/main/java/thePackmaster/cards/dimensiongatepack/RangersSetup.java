@@ -14,7 +14,7 @@ public class RangersSetup extends AbstractDimensionalCardObelisk {
 
     public RangersSetup() {
         super(ID, 1, CardRarity.UNCOMMON, CardType.SKILL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
     }
 
 

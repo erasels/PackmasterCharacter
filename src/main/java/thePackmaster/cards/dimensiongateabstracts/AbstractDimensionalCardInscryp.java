@@ -13,10 +13,4 @@ public abstract class AbstractDimensionalCardInscryp extends AbstractDimensional
         super(cardID, cost, rarity, type, target, "dimension/inscryp", color);
     }
 
-
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    public void upp() {
-    }
 }

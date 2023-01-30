@@ -17,8 +17,9 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Crusher extends AbstractDimensionalCardGrift implements onGenerateCardMidcombatInterface {
     public final static String ID = makeID("Crusher");
 
+    private static final int COST = 6;
     public Crusher() {
-        super(ID, 6, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, COST, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 20;
         selfRetain = true;
 
@@ -43,6 +44,6 @@ public class Crusher extends AbstractDimensionalCardGrift implements onGenerateC
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(COST);
     }
 }

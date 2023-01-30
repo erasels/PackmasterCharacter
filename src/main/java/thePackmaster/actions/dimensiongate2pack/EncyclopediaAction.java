@@ -49,7 +49,7 @@ public class EncyclopediaAction extends AbstractGameAction {
                 this.isDone = true;
             } else if (tmp.size() <= 2) {
                 for (AbstractCard abstractCard : tmp.group) {
-                    Wiz.atb(new MakeTempCardInDrawPileAction(abstractCard.makeStatEquivalentCopy(),1,true,true));
+                    Wiz.atb(new MakeTempCardInDrawPileAction(abstractCard,1,true,true));
                 }
                 this.isDone = true;
             } else {
@@ -59,7 +59,7 @@ public class EncyclopediaAction extends AbstractGameAction {
         } else {
             if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
                 for (AbstractCard abstractCard : AbstractDungeon.gridSelectScreen.selectedCards) {
-                    Wiz.atb(new MakeTempCardInDrawPileAction(abstractCard.makeStatEquivalentCopy(),1,true,true));
+                    Wiz.atb(new MakeTempCardInDrawPileAction(abstractCard,1,true,true));
                 }
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
             }

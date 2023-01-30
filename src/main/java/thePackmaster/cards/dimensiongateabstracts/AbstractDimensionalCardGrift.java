@@ -13,10 +13,4 @@ public abstract class AbstractDimensionalCardGrift extends AbstractDimensionalCa
         super(cardID, cost, rarity, type, target, "dimension/grift", color);
     }
 
-
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    public void upp() {
-    }
 }

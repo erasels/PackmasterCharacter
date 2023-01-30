@@ -13,9 +13,4 @@ public abstract class AbstractDimensionalCardGordian extends AbstractDimensional
         super(cardID, cost, rarity, type, target, "dimension/gordian", color);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    public void upp() {
-    }
 }

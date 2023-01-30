@@ -13,10 +13,4 @@ public abstract class AbstractDimensionalCardStorybook extends AbstractDimension
         super(cardID, cost, rarity, type, target, "dimension/storybook", color);
     }
 
-
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    public void upp() {
-    }
 }

@@ -14,9 +14,4 @@ public abstract class AbstractDimensionalCardObelisk extends AbstractDimensional
     }
 
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    public void upp() {
-    }
 }

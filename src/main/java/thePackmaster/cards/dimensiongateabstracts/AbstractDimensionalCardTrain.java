@@ -13,10 +13,4 @@ public abstract class AbstractDimensionalCardTrain extends AbstractDimensionalCa
         super(cardID, cost, rarity, type, target, "dimension/train", color);
     }
 
-
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    public void upp() {
-    }
 }

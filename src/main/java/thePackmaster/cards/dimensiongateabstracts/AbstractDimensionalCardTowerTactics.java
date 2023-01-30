@@ -13,10 +13,4 @@ public abstract class AbstractDimensionalCardTowerTactics extends AbstractDimens
         super(cardID, cost, rarity, type, target, "dimension/towertactics", color);
     }
 
-
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    public void upp() {
-    }
 }

@@ -16,9 +16,4 @@ public abstract class AbstractDimensionalCard extends AbstractPackmasterCard {
         super(cardID, cost, type, rarity, target, color, frameID);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    public void upp() {
-    }
 }

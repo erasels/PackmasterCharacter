@@ -13,9 +13,4 @@ public abstract class AbstractDimensionalCardEden extends AbstractDimensionalCar
         super(cardID, cost, rarity, type, target, "dimension/eden", color);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    public void upp() {
-    }
 }

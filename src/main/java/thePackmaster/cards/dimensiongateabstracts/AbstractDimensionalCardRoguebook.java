@@ -13,10 +13,4 @@ public abstract class AbstractDimensionalCardRoguebook extends AbstractDimension
         super(cardID, cost, rarity, type, target, "dimension/roguebook", color);
     }
 
-
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    public void upp() {
-    }
 }
