@@ -23,7 +23,7 @@
   },
   "${ModID}:EldritchBlast": {
     "NAME": "怪异冲击",
-    "DESCRIPTION": "*魔法 。 NL 造成 !D! 点伤害。 随机降低手中一直 *魔法 牌的本回合耗能1点。"
+    "DESCRIPTION": "*魔法 。 NL 造成 !D! 点伤害。 随机降低手中一张 *魔法 牌的本回合耗能1点。"
   },
   "${ModID}:DeathWish": {
     "NAME": "死亡愿望",

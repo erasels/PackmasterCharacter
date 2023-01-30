@@ -1,6 +1,6 @@
 {
   "${ModID}:DarkerEmbrace": {
     "NAME": "黑暗之拥",
-    "DESCRIPTION": "一张牌被 消耗 时，抽 !M! 张牌}。"
+    "DESCRIPTION": "一张牌被 消耗 时， NL 抽 !M! 张牌。"
   }
 }
