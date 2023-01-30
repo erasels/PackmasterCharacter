@@ -30,7 +30,8 @@
     "Mindbomber",
     "Jack Renoson",
     "lobbien",
-    "Jedi"
+    "Jedi",
+    "Mwalls"
   ],
   "description": "${project.description}",
   "version": "${project.version}",
