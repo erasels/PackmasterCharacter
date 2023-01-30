@@ -1,5 +1,7 @@
 package thePackmaster.powers.dimensiongatepack;
 
+import basemod.cardmods.ExhaustMod;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -29,10 +31,13 @@ public class ArsenalGearPower extends AbstractPackmasterPower {
         validCards = Wiz.getCardsMatchingPredicate(c2 -> (c2.rarity == AbstractCard.CardRarity.UNCOMMON || c2.rarity == AbstractCard.CardRarity.RARE) && !c2.hasTag(AbstractCard.CardTags.HEALING));
         if (!validCards.isEmpty()) {
             c = Wiz.getRandomItem(validCards).makeCopy();
-            if(c.cost > 0) {
+            if (c.cost > 0) {
                 c.cost = 0;
                 c.costForTurn = 0;
                 c.isCostModified = true;
+            }
+            if (!c.exhaust && c.type != AbstractCard.CardType.POWER) {
+                CardModifierManager.addModifier(c, new ExhaustMod());
             }
             addToBot(new MakeTempCardInHandAction(c));
         }

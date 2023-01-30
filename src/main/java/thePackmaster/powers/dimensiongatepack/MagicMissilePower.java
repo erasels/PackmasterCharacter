@@ -16,13 +16,13 @@ public class MagicMissilePower extends AbstractPackmasterPower {
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public MagicMissilePower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
 
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        addToBot(new RemoveSpecificPowerAction(owner,owner,this));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override

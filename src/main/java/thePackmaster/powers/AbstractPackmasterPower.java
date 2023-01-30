@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.RemoveSpecificPowerActionNoIconOrText;
 import thePackmaster.util.TexLoader;
 
 public abstract class AbstractPackmasterPower extends AbstractPower {
@@ -64,5 +65,8 @@ public abstract class AbstractPackmasterPower extends AbstractPower {
 
     public void removeThis(){
         addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
+    }
+    public void removeThisInvisibly(){
+        addToBot(new RemoveSpecificPowerActionNoIconOrText(AbstractDungeon.player, AbstractDungeon.player, this));
     }
 }
