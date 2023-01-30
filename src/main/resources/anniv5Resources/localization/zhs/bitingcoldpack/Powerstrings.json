@@ -12,7 +12,7 @@
   },
   "${ModID}:FrigidBodyPower": {
     "NAME": "僵冻",
-    "DESCRIPTIONS": ["本回合每当你被攻击时，给予攻击者你在该次被击过程中格挡住的伤害层 #y霜噬。"]
+    "DESCRIPTIONS": ["本回合每当你被攻击时，给予攻击者你在该次被击过程中格挡住的伤害层 #y霜噬 。"]
   },
   "${ModID}:GlaciatePower": {
     "NAME": "霜覆",

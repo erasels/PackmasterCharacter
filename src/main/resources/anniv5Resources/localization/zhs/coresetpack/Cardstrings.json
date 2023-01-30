@@ -7,7 +7,7 @@
     "NAME": "奇寻卡包",
     "DESCRIPTION": "将抽牌堆中 !M! 张属于不同卡包的牌加入手牌。"
   },
-  "${ModID}:Destiny抽": {
+  "${ModID}:DestinyDraw": {
     "NAME": "命运之抽",
     "DESCRIPTION": "随机从三张属于不同卡包的牌中选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
   },

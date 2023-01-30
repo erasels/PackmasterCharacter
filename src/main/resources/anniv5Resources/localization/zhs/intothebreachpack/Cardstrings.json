@@ -30,7 +30,7 @@
   },
   "${ModID}:SpartanShield": {
     "NAME": "斯巴达护盾",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! Temporary 力量 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层临时 力量 。"
   },
   "${ModID}:StormGenerator": {
     "NAME": "风暴制造器",

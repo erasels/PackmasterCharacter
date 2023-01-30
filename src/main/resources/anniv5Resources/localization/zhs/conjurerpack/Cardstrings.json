@@ -24,7 +24,7 @@
 		"NAME": "地热"
 	},
 	"${ModID}:Lithosphere":	{
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 ${ModID}:土元素。",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 ${ModID}:土元素 。",
 		"NAME": "岩石层"
 	},
 	"${ModID}:MudFissure":	{

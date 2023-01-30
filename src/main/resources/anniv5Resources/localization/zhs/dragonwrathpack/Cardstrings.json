@@ -1,5 +1,5 @@
 {
-  "${ModID}:忏悔Shock": {
+  "${ModID}:PenanceShock": {
     "NAME": "忏悔冲击",
     "DESCRIPTION": "造成 !D! 点伤害 并给予 !M! 层 ${ModID}:忏悔 。 NL 生成 一个 闪电 充能球。"
   },

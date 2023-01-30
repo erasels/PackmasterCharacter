@@ -21,7 +21,7 @@
   },
   "${ModID}:IcicleSpear": {
     "NAME": "冰锥之矛",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:霜噬。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:霜噬 。"
   },
   "${ModID}:InsultToInjury": {
     "NAME": "讥讽伤口",
@@ -29,7 +29,7 @@
   },
   "${ModID}:Refrigerate": {
     "NAME": "冷却",
-    "DESCRIPTION": "给予 !M! 层 ${ModID}:霜噬。"
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:霜噬 。"
   },
   "${ModID}:RelentlessHail": {
     "NAME": "狂烈冰雹",

@@ -9,7 +9,7 @@
   },
   "${ModID}:ThrowChips": {
     "NAME": "投掷筹码",
-    "DESCRIPTION": "随机造成 !D! 点伤害 X 次。 NL ${ModID}:重掷。"
+    "DESCRIPTION": "随机造成 !D! 点伤害 X 次。 NL ${ModID}:重掷 。"
   },
   "${ModID}:PocketAce": {
     "NAME": "口袋王牌",
@@ -17,7 +17,7 @@
   },
   "${ModID}:Reroller": {
     "NAME": "重掷机",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:重掷。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:重掷 。"
   },
   "${ModID}:PerceptionCheck": {
     "NAME": "观察",
