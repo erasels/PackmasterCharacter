@@ -44,7 +44,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     public boolean isSecondMagicModified;
 
     public int secondDamage;
-    public int baseSecondDamage;
+    public int baseSecondDamage = -1;
     public boolean upgradedSecondDamage;
     public boolean isSecondDamageModified;
 
@@ -149,40 +149,50 @@ public abstract class AbstractPackmasterCard extends CustomCard {
 
     @Override
     public void applyPowers() {
+        // We call the superclass's method first to maintain compatibility with mods that patch AbstractCard's method
+        // Specifically, the Runesmith postfix patches methods in AbstractCard in a way that resets after the method
+        // is called, so having the calculation for the base damage happen first ensures that Runesmith's enhance works
+        // for Packmaster cards (though not for secondDamage -- that could be fixed too but is more complicated)
+        // See https://github.com/PureStream/Runesmith/blob/d60bece6746270649e6fe2025ed133581881587f/the_runesmith/src/main/java/runesmith/patches/EnhancedCardValueModified.java
+        super.applyPowers();
         if (baseSecondDamage > -1) {
-            secondDamage = baseSecondDamage;
+            int originalBaseDamage = baseDamage;
+            int originalDamage = damage;
+            boolean originalIsDamageModified = isDamageModified;
 
-            int tmp = baseDamage;
             baseDamage = baseSecondDamage;
-
             super.applyPowers();
-
-            secondDamage = damage;
-            baseDamage = tmp;
-
-            super.applyPowers();
-
             isSecondDamageModified = (secondDamage != baseSecondDamage);
-        } else super.applyPowers();
+            secondDamage = damage;
+
+            baseDamage = originalBaseDamage;
+            damage = originalDamage;
+            isDamageModified = originalIsDamageModified;
+        }
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
+        // We call the superclass's method first to maintain compatibility with mods that patch AbstractCard's method
+        // Specifically, the Runesmith postfix patches methods in AbstractCard in a way that resets after the method
+        // is called, so having the calculation for the base damage happen first ensures that Runesmith's enhance works
+        // for Packmaster cards (though not for secondDamage -- that could be fixed too but is more complicated)
+        // See https://github.com/PureStream/Runesmith/blob/d60bece6746270649e6fe2025ed133581881587f/the_runesmith/src/main/java/runesmith/patches/EnhancedCardValueModified.java
+        super.calculateCardDamage(mo);
         if (baseSecondDamage > -1) {
-            secondDamage = baseSecondDamage;
+            int originalBaseDamage = baseDamage;
+            int originalDamage = damage;
+            boolean originalIsDamageModified = isDamageModified;
 
-            int tmp = baseDamage;
             baseDamage = baseSecondDamage;
-
             super.calculateCardDamage(mo);
-
-            secondDamage = damage;
-            baseDamage = tmp;
-
-            super.calculateCardDamage(mo);
-
             isSecondDamageModified = (secondDamage != baseSecondDamage);
-        } else super.calculateCardDamage(mo);
+            secondDamage = damage;
+
+            baseDamage = originalBaseDamage;
+            damage = originalDamage;
+            isDamageModified = originalIsDamageModified;
+        }
     }
 
     public void resetAttributes() {
