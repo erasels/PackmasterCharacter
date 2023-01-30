@@ -6,7 +6,7 @@
       "Alchyr, (Gk) Erasels"
     ]
   },
-  "${ModID}:灵秘": {
+  "${ModID}:Occult": {
     "TEXT": [
       "${ModID}:灵秘 。 NL ",
       "NL ${ModID}:灵秘 。 NL"
@@ -17,7 +17,7 @@
       "附加灵秘"
     ]
   },
-  "${ModID}:灵秘InDrawPile": {
+  "${ModID}:OccultInDrawPile": {
     "TEXT": [
       "选择一张手牌附加灵秘。"
     ]
