@@ -25,7 +25,7 @@ public class DaggerstormPower extends AbstractPackmasterPower {
 
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && this.amount > 0 && Wiz.getLogicalCardCost(card) == 0 && card.exhaust) {
+        if (!card.purgeOnUse && Wiz.getLogicalCardCost(card) == 0 && card.exhaust) {
 
             for (int i = 0; i < amount; i++) {
 

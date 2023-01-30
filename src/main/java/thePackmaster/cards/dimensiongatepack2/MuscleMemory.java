@@ -2,6 +2,7 @@ package thePackmaster.cards.dimensiongatepack2;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
+import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,15 +24,14 @@ public class MuscleMemory extends AbstractDimensionalCardGrift {
         Wiz.atb(new SelectCardsAction(p.drawPile.group, 1, cardStrings.EXTENDED_DESCRIPTION[0],
                 (cards) -> {
                     for (AbstractCard c2 : cards) {
-                        Wiz.atb(new MakeTempCardInHandAction(c2.makeStatEquivalentCopy()));
+                        Wiz.atb(new MakeTempCardInHandAction(c2));
                     }
                 }
         ));
     }
 
     public void upp() {
-        ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 2);
-        ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 2);
+        ExhaustiveVariable.setBaseValue(this, 2);
         exhaust = false;
     }
 }
