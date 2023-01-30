@@ -1,0 +1,47 @@
+{
+  "${ModID}:BasicWave": {
+    "NAME": "Basic Wave",
+    "DESCRIPTION": "Play a *Defend and a *Strike.",
+    "UPGRADE_DESCRIPTION": "Play a *Defend+ and a *Strike+."
+  },
+  "${ModID}:Look": {
+    "NAME": "Look",
+    "DESCRIPTION": "Draw !M! ${ModID}:Basic card and Upgrade it. This can Upgrade it any number of times.",
+    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Basic cards and Upgrade them. This can Upgrade them any number of times."
+  },
+  "${ModID}:LoseIt": {
+    "NAME": "Lose It",
+    "DESCRIPTION": "Innate. NL Add a *Rummage to your hand. Set the cost of your *Rummages to !M!. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add a *Rummage+ to your hand. Set the cost of your *Rummages to !M!. Exhaust."
+  },
+  "${ModID}:SimplifiedStrike": {
+    "NAME": "Simplified Strike",
+    "DESCRIPTION": "Deal !D! damage. Deals !M! more damage for each of your ${ModID}:Basic cards."
+  },
+  "${ModID}:PerfectBasics": {
+    "NAME": "Perfect Basics",
+    "DESCRIPTION": "Whenever you draw a ${ModID}:Basic card, Upgrade it this combat. This can Upgrade them any number of times."
+  },
+  "${ModID}:BasicSupply": {
+    "NAME": "Basic Supply",
+    "DESCRIPTION": "The first !M! times you play a ${ModID}:Basic card each turn, draw a card."
+  },
+  "${ModID}:BasicPoison": {
+    "NAME": "Basic Poison",
+    "DESCRIPTION": "Deal !D! damage. Whenever you play a ${ModID}:Basic card this turn, apply !M! Poison to all enemies."
+  },
+  "${ModID}:FamiliarKit": {
+    "NAME": "Familiar Kit",
+    "DESCRIPTION": "Gain !M! Strength, !M! Dexterity and !${ModID}:m2! Focus. ${ModID}:Pickup: Obtain a *Bash, *Survivor and *Zap.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Strength, !M! Dexterity and !${ModID}:m2! Focus. ${ModID}:Pickup: Obtain a *Bash, *Survivor and *Zap."
+  },
+  "${ModID}:OckhamsRazor": {
+    "NAME": "Ockhams Razor",
+    "DESCRIPTION": "Your ${ModID}:Basic cards are played twice."
+  },
+  "${ModID}:BackToBasic": {
+    "NAME": "Back To Basic",
+    "DESCRIPTION": "Discard your hand and draw !M! ${ModID}:Basic cards. Gain [E] .",
+    "UPGRADE_DESCRIPTION": "Discard your hand and draw !M! ${ModID}:Basic cards. Gain [E] [E] ."
+  }
+}

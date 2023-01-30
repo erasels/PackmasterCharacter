@@ -1,0 +1,15 @@
+{
+  "${ModID}:BasicsPack": {
+    "TEXT": [
+      "Basics",
+      "A pack centered around very Basic cards.",
+      "Jack Renoson"
+    ]
+  },
+  "${ModID}:BasicsPackHat": {
+    "TEXT": [
+      "A Basic hat for a Basic adventurer.",
+      "Basic Fedora"
+    ]
+  }
+}
