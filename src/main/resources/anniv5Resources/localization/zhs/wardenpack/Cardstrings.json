@@ -39,6 +39,6 @@
   },
   "${ModID}:DivineMight": {
     "NAME": "神圣之力",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出两次 [#EFC851]神圣之力 后， ${ModID}:飞升 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出两次 *神 *圣 *之 *力 后， ${ModID}:飞升 。"
   }
 }
