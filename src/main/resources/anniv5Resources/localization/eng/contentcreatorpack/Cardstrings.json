@@ -5,8 +5,8 @@
   },
   "${ModID}:HuttsGamble": {
     "NAME": "Hutts' Gamble",
-    "DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] and draw 1 card next turn.",
-    "UPGRADE_DESCRIPTION": "If you don't receive unblocked attack damage this turn, gain [E] [E] and draw 1 card next turn."
+    "DESCRIPTION": "If you receive no unblocked attack damage this turn, gain [E] and draw 1 card next turn.",
+    "UPGRADE_DESCRIPTION": "If you receive no unblocked attack damage this turn, gain [E] [E] and draw 1 card next turn."
   },
   "${ModID}:Tricky": {
     "NAME": "Tricky",
