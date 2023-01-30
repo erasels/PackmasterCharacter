@@ -26,8 +26,8 @@ public class Focus extends AbstractMonsterHunterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, block));
-        addToBot(new ApplyPowerAction(m, p, new HuntersMark(m, magicNumber), magicNumber));
         addToBot(new MarkEnemyAction(p, m, magicNumber));
+        addToBot(new ApplyPowerAction(m, p, new HuntersMark(m, magicNumber), magicNumber));
     }
 
     public void upp() {
