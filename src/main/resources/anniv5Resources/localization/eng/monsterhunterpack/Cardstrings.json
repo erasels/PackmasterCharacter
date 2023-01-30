@@ -130,5 +130,9 @@
     "NAME": "Paintball",
     "DESCRIPTION": "Apply !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! card this turn.",
     "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! cards this turn."
+  },
+  "${ModID}:SerpentineDagger": {
+    "NAME": "Serpentine Dagger",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage !M! times. NL Add two copies of this into your draw pile. NL Exhaust."
   }
 }

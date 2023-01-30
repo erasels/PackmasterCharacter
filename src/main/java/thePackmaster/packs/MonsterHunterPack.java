@@ -55,6 +55,7 @@ public class MonsterHunterPack extends AbstractCardPack {
         cards.add(StabManual.ID);
         cards.add(StoneHelm.ID);
         cards.add(TimepieceTiara.ID);
+        cards.add(SerpentineDagger.ID);
 
         return cards;
     }

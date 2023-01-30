@@ -1,10 +1,12 @@
 package thePackmaster.cards.monsterhunterpack;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.monsterhunterpack.MarkEnemyAction;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.powers.monsterhunterpack.HuntersMark;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -24,6 +26,7 @@ public class Focus extends AbstractMonsterHunterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, block));
+        addToBot(new ApplyPowerAction(m, p, new HuntersMark(m, magicNumber), magicNumber));
         addToBot(new MarkEnemyAction(p, m, magicNumber));
     }
 

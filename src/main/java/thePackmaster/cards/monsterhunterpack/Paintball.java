@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlickCoinEffect;
 import thePackmaster.actions.monsterhunterpack.MarkEnemyAction;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.powers.monsterhunterpack.HuntersMark;
 import thePackmaster.powers.monsterhunterpack.TempRetainCardsPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -28,6 +29,7 @@ public class Paintball extends AbstractMonsterHunterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new FlickCoinEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.2F));
         addToBot(new WaitAction(0.2f));
+        addToBot(new ApplyPowerAction(m, p, new HuntersMark(m, magicNumber), magicNumber));
         addToBot(new MarkEnemyAction(p, m, magicNumber));
         addToBot(new ApplyPowerAction(p, p, new TempRetainCardsPower(p, secondMagic)));
     }
