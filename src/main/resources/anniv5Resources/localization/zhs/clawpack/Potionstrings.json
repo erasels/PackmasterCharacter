@@ -1,6 +1,6 @@
 {
   "${ModID}:AttackPotionButClaw": {
-    "NAME": "Clawtack Potion",
+    "NAME": "爪击药水",
     "DESCRIPTIONS": [
       "从 #b3 种随机 #y攻击 牌选择 #b1 种加入手牌。本回合其耗能为 #b0 且被 #y修改 ： 牌名加上'爪击'，且效果加上'获得一张 #y幽灵爪击 '。",
       "从 #b3 种随机 #y攻击 牌选择 #b1 种，并将其 #b",
