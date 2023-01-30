@@ -47,7 +47,7 @@
   },
   "${ModID}:Crusher": {
     "NAME": "Crusher",
-    "DESCRIPTION": "Retain. NL Deal 20 damage. NL When a card is created, reduce *Crusher's cost by 1 until played."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When a card is created, reduce *Crusher's cost by 1 until played."
   },
   "${ModID}:PreservedThorns": {
     "NAME": "Preserved Thorns",
