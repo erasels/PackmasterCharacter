@@ -2,7 +2,7 @@
   "${ModID}:MagicMissilePower": {
     "NAME": "Magical Power",
     "DESCRIPTIONS": [
-      "Magic cards deal #b",
+      "#yMagic cards deal #b",
       " more damage this turn."
     ]
   },
