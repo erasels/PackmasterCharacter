@@ -6,11 +6,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardObelisk;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class LethalShot extends AbstractDimensionalCard {
+public class LethalShot extends AbstractDimensionalCardObelisk {
     public final static String ID = makeID("LethalShot");
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
@@ -20,10 +21,7 @@ public class LethalShot extends AbstractDimensionalCard {
         baseMagicNumber = magicNumber = 5;
         baseSecondMagic = secondMagic = 1;
 
-
-        setFrame("lethalshotframe.png");
     }
-
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,0 +1,24 @@
+{
+  "${ModID}:MagicMissilePower": {
+    "NAME": "Magical Power",
+    "DESCRIPTIONS": [
+      "#yMagic cards deal #b",
+      " more damage this turn."
+    ]
+  },
+  "${ModID}:ArsenalGearPower": {
+    "NAME": "Arsenal Gear",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turn(s), add a random #yUncommon or #yRare card to your hand. It costs #b0 and gains #yExhaust."
+    ]
+  },
+  "${ModID}:DaggerstormPower": {
+    "NAME": "Daggerstorm",
+    "DESCRIPTIONS": [
+      "#b0-Cost #yExhaust cards are played ",
+      " additional times.",
+      " additional time."
+    ]
+  }
+}

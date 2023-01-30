@@ -1,0 +1,10 @@
+{
+  "${ModID}:OuroborosPower": {
+    "NAME": "Ouroboros",
+    "DESCRIPTIONS": [
+      "At the end of each turn, if you fully blocked any source of damage, gain #b",
+      " #yStrength.",
+      " NL Has triggered this turn."
+    ]
+  }
+}
