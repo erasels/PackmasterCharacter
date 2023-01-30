@@ -2,14 +2,14 @@
   "${ModID}:WeaponsPack": {
     "TEXT": [
       "武器",
-      "Weapons from the Blackbeard mod. NL Equip weapons with various additional effects to increase the damage of your attack 张牌。",
+      "来自黑胡子船长Mod的武器。装备附有各种效果的武器来提升你的攻击伤害。",
       "JohnnyBazooka89"
     ]
   },
   "${ModID}:WeaponsPackHat": {
     "TEXT": [
-      "It once belonged to a famous pirate captain。",
-      "Pirate Hat"
+      "曾属于一名著名的海盗船长。",
+      "海盗帽"
     ]
   }
 }

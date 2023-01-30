@@ -1,20 +1,20 @@
 {
   "${ModID}:WeaponPower": {
-    "NAME": "Weapons",
+    "NAME": "武器",
     "DESCRIPTIONS": []
   },
   "${ModID}:SalvagerPower": {
-    "NAME": "Salvager",
+    "NAME": "营救者",
     "DESCRIPTIONS": [
-      "每当 a #yWeapon is destroyed, 获得 #b",
+      "每当一件 #y武器 耐久耗尽时，获得 #b",
       " [E] 。"
     ]
   },
   "${ModID}:WeaponMasteryPower": {
-    "NAME": "Weapon Mastery",
+    "NAME": "武器专精",
     "DESCRIPTIONS": [
-      "每当 you equip a #yWeapon, 抽 #b",
-      " card。",
+      "每当你装备一件 #y武器 时，抽 #b",
+      " 张牌。",
       " 张牌。"
     ]
   }

@@ -1,49 +1,49 @@
 {
   "${ModID}:CrescentSweep": {
-    "NAME": "Heel Tornado",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:展现 ${ModID}:Crescent_Moon。"
+    "NAME": "足跟龙卷",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:展现 一个 ${ModID}:新月 充能球。"
   },
   "${ModID}:MysticFlourish": {
     "NAME": "铁山靠",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL Activate the passive effect of your next orb",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL Activate the passive effect of your next orb twice"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 触发最右侧充能球的被动效果1次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 触发最右侧充能球的被动效果2次。"
   },
   "${ModID}:CrystalMoonlight": {
-    "NAME": "Crystal Moonlight",
-    "DESCRIPTION": "${ModID}:展现 !M! random orb。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:展现 !M! random orbs。 NL 消耗 。"
+    "NAME": "水晶月光",
+    "DESCRIPTION": "随机 ${ModID}:展现 !M! 个 充能球。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "随机 ${ModID}:展现 !M! 个 充能球。 NL 消耗 。"
   },
   "${ModID}:FullMoonHalo": {
-    "NAME": "Full Moon Halo",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:展现 ${ModID}:Full_Moon。"
+    "NAME": "满月光晕",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:展现 一个 ${ModID}:满月 充能球。"
   },
   "${ModID}:MoonlightBarrage": {
-    "NAME": "Moonlight Barrage",
-    "DESCRIPTION": "造成 !D! 点伤害 to a random enemy for each 生成ed orb。"
+    "NAME": "月暮降临",
+    "DESCRIPTION": "每有一个充能球， NL 随机造成 !D! 点伤害。"
   },
   "${ModID}:ChitteringPunt": {
-    "NAME": "Chittering Punt",
-    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL When this ${ModID}:滋生s ${ModID}:展现 ${ModID}:Crescent_Moon。"
+    "NAME": "横扫一拳",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 本牌 ${ModID}:滋生 时， ${ModID}:展现 一个 ${ModID}:新月 充能球。"
   },
   "${ModID}:HornetWithin": {
-    "NAME": "Hornet Within",
-    "DESCRIPTION": "${ModID}:滋生 。 NL 获得 !B! 点 格挡 。 NL When this ${ModID}:滋生s, Evoke your next orb !M! times 并失去 an Orb slot。"
+    "NAME": "黄蜂附体",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 获得 !B! 点 格挡 。 NL 本牌 ${ModID}:滋生 时，激发最右侧的充能球 !M! 次并失去一个充能球栏位。"
   },
   "${ModID}:WitchTwist": {
-    "NAME": "Witch Twist",
-    "DESCRIPTION": "${ModID}:修改 !M! random 牌 in your h并: ${ModID}:铭印. NL 获得 !${ModID}:m2! Focus。 NL 消耗"
+    "NAME": "乱射升龙击",
+    "DESCRIPTION": "随机 ${ModID}:修改 !M! 张手牌： ${ModID}:铭印 。 NL 获得 !${ModID}:m2! 点 集中 。 NL 消耗 。"
   },
   "${ModID}:MoonlightFlight": {
-    "NAME": "Moonlight Flight",
-    "DESCRIPTION": "每当 you 生成 an orb 获得 !M! Focus until your 下回合。"
+    "NAME": "月色飞行",
+    "DESCRIPTION": "生成 充能球时， NL 获得 !M! 层临时 集中。"
   },
   "${ModID}:ScarabPlague": {
-    "NAME": "Scarab Plague",
-    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL When this ${ModID}:滋生s, ${ModID}:展现 ${ModID}:Full_Moon。"
+    "NAME": "甲虫瘟疫",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 本牌 ${ModID}:滋生 时， ${ModID}:展现 一个 ${ModID}:满月 充能球。"
   },
   "${ModID}:铭印": {
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:铭印. NL "
+      "${ModID}:铭印 。 NL "
     ]
   }
 }

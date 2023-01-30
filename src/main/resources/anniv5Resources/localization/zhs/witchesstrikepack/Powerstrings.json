@@ -1,16 +1,16 @@
 {
   "${ModID}:MoonlightFlightPower": {
-    "NAME": "Moonlight Flight",
+    "NAME": "月色飞行",
     "DESCRIPTIONS": [
-      "每当 you #y生成 an orb, 获得 #b",
-      " #yFocus until your 下回合。"
+      "每当你 #y生成 一个 充能球，获得 #b",
+      " 层 临时 #y集中 。"
     ]
   },
-  "${ModID}:失去FocusPower": {
+  "${ModID}:LoseFocusPower": {
     "NAME": "Discharge",
     "DESCRIPTIONS": [
-      "At the start of your turn 失去 #b",
-      " #yFocus。"
+      "你的下回合开始时，失去 #b",
+      " 点 #y集中 。"
     ]
   }
 }

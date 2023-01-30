@@ -1,16 +1,18 @@
 [
   {
-    "PROPER_NAME": "Feral damage",
+    "PROPER_NAME": "狂野",
     "NAMES": [
-      "feral"
+      "feral",
+      "狂野"
     ],
-    "DESCRIPTION": "Deals #b50% additional damage to enemies with a debuff。"
+    "DESCRIPTION": "对带有 #r负面效果 的目标额外造成 #b50% 伤害。"
   },
   {
-    "PROPER_NAME": "Front damage",
+    "PROPER_NAME": "正面",
     "NAMES": [
-      "front"
+      "front",
+      "正面"
     ],
-    "DESCRIPTION": "Deals #b50% additional damage to enemies with #y格挡 。"
+    "DESCRIPTION": "对有 #y格挡 的目标额外造成 #b50% 伤害。"
   }
 ]

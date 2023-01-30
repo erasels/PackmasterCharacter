@@ -1,10 +1,11 @@
 [
   {
-    "PROPER_NAME": "Weapon",
+    "PROPER_NAME": "武器",
     "NAMES": [
       "weapon",
-      "weapons"
+      "weapons",
+      "武器"
     ],
-    "DESCRIPTION": "每当 you play an attack card, one Durability of your rightmost Weapon is used 并card's damage is increased by Weapon's Attack. NL Orb slots are created 并destroyed automatically。"
+    "DESCRIPTION": "每当你打出一张攻击牌时，最右侧武器损耗 #b1 点耐久，将其伤害值附加于该次攻击中。伤害与耐久以(伤害 / 耐久)的形式表示。武器充能球自动生成与消失，不受栏位影响。"
   }
 ]

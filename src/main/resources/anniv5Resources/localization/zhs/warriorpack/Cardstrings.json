@@ -1,44 +1,44 @@
 {
   "${ModID}:Polishing": {
-    "NAME": "Polishing",
-    "DESCRIPTION": "每当 you play an Attack, increase its damage by !M! 本场战斗。"
+    "NAME": "打磨",
+    "DESCRIPTION": "打出攻击时， NL 本场战斗提高其 !M! 点。"
   },
   "${ModID}:WorkHammer": {
-    "NAME": "Work Hammer",
-    "DESCRIPTION": "Deal !D! ${ModID}:Front damage. NL Give enemy !M! Plated Armor。"
+    "NAME": "工作锤",
+    "DESCRIPTION": "造成 !D! 点 ${ModID}:正面 伤害。 NL 给予 !M! 层 *多层护甲 。"
   },
   "${ModID}:Chained": {
-    "NAME": "Chained",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Give 所有敌人 !M! 点 格挡 。"
+    "NAME": "被链",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 点 格挡 。"
   },
   "${ModID}:StormStrike": {
-    "NAME": "Storm Strike",
-    "DESCRIPTION": "Deal !D! ${ModID}:Feral damage. NL 给予 !M! 层 易伤 。"
+    "NAME": "风暴打击",
+    "DESCRIPTION": "造成 !D! 点 ${ModID}:狂野 伤害。 NL 给予 !M! 层 易伤 。"
   },
   "${ModID}:WarSong": {
-    "NAME": "War Song",
-    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 获得 !${ModID}:m2! 活力 。"
+    "NAME": "战律",
+    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 获得 !${ModID}:m2! 层 活力 。"
   },
   "${ModID}:Rapier": {
-    "NAME": "Rapier",
-    "DESCRIPTION": "Deal !D! ${ModID}:Front damage. NL Goes through 格挡 。"
+    "NAME": "双刃剑",
+    "DESCRIPTION": "造成 !D! 点 ${ModID}:正面 伤害， NL 伤害穿透 格挡 。"
   },
   "${ModID}:Fall": {
-    "NAME": "Fall",
-    "DESCRIPTION": "Deal ${ModID}:Front damage equal to the number of 牌 in your NL 抽牌堆 + 6。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL Deal ${ModID}:Front damage equal to the number of 牌 in your NL 抽牌堆 + 6。",
-    "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
+    "NAME": "落击",
+    "DESCRIPTION": "造成你抽牌堆牌数+6点 ${ModID}:正面 伤害 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 造成你抽牌堆牌数+6点 ${ModID}:正面 伤害 。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害。"]
   },
   "${ModID}:Turtle": {
-    "NAME": "Turtle",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL Your next Attack deals ${ModID}:Feral damage。"
+    "NAME": "战龟",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下张攻击牌造成 ${ModID}:狂野 伤害。"
   },
   "${ModID}:Bolas": {
-    "NAME": "Bolas",
-    "DESCRIPTION": "给予 *Slow. NL Give enemy !M! 点 格挡 。 NL 抽 !${ModID}:m2! card。 NL 消耗 。"
+    "NAME": "流星锤",
+    "DESCRIPTION": "给予 *缓慢 。 NL 给予 !M! 点 格挡 。 NL 抽 !${ModID}:m2! 张牌。 NL 消耗 。"
   },
   "${ModID}:FFBlade": {
-    "NAME": "FF Blade",
-    "DESCRIPTION": "Deal !D! ${ModID}:Feral 并${ModID}:Front damage。"
+    "NAME": "最终幻刃",
+    "DESCRIPTION": "造成 !D! 点 ${ModID}:正面 ${ModID}:狂野 伤害。"
   }
 }

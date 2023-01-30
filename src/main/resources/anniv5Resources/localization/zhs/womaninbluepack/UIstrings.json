@@ -1,15 +1,15 @@
 {
   "${ModID}:WomanInBluePack": {
     "TEXT": [
-      "Blue's Brews",
-      "A collection of useful 消耗 牌 themed around Potions. Contains several multi-choice 张牌。",
+      "蓝衣女子熬制品",
+      "一套仿药水的实用消耗牌，一些包含选择。",
       "MichaelMayhem"
     ]
   },
   "${ModID}:WomanInBluePackHat": {
     "TEXT": [
-      "Spotted worn wherever trouble is brewing。",
-      "The Hat in Blue"
+      "麻烦滋生时的钦定之选。",
+      "蓝衣女子帽"
     ]
   }
 }

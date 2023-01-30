@@ -1,55 +1,55 @@
 {
   "${ModID}:FireVial": {
-    "NAME": "Fire Vial",
+    "NAME": "火焰药剂",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! 层 ${ModID}:燃烧 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并给予 !M! 层 ${ModID}:燃烧 。 NL 消耗 。"
   },
   "${ModID}:ExplosiveVial": {
-    "NAME": "Explosive Vial",
+    "NAME": "爆炸药剂",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予 !M! 层 ${ModID}:燃烧 to 所有敌人。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予所有敌人 !M! 层 ${ModID}:燃烧 。 NL 消耗 。"
   },
   "${ModID}:BlockVial": {
-    "NAME": "格挡 Vial",
+    "NAME": "格挡药剂",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL Your 格挡 is not removed at the start of your 下回合。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得一层 *残影 。 NL 消耗 。"
   },
   "${ModID}:DynamicVial": {
-    "NAME": "Dynamic Vial",
-    "DESCRIPTION": "Choose: 获得 [E] [E] or 抽 3 张牌。 NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["获得 [E] [E] 。", "抽 3 张牌。"]
+    "NAME": "多变药剂",
+    "DESCRIPTION": "选择： 获得 [E] [E] ，或抽3张牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["获得 [E] [E] 。", "抽3张牌。"]
   },
   "${ModID}:MetallicVial": {
-    "NAME": "Metallic Vial",
-    "DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose: 获得 4 Plated Armor, 获得 3 Thorns, or 获得 2 Artifact. NL 消耗性 !stslib:ex! 。",
-    "EXTENDED_DESCRIPTION": ["获得 4 Plated Armor。", "获得 3 Thorns。","获得 2 Artifact。"]
+    "NAME": "钢铁药剂",
+    "DESCRIPTION": "选择：获得4层 *多层护甲 、或获得3点 荆棘 ，或获得2层 人工制品 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择：获得4层 *多层护甲 、或获得3点 荆棘 ，或获得2层 人工制品 。 NL 消耗性 !stslib:ex! 。",
+    "EXTENDED_DESCRIPTION": ["获得4层 *多层护甲 。", "获得3点 荆棘 。","获得2层 人工制品。"]
   },
   "${ModID}:QuickBrew": {
-    "NAME": "Quick Brew",
-    "DESCRIPTION": "Choose: 获得 2 力量, or 获得 3 Focus。",
-    "UPGRADE_DESCRIPTION": "Choose: 获得 2 力量, 获得 2 敏捷, or 获得 2 Focus。",
-    "EXTENDED_DESCRIPTION": ["获得 2 力量 。", "获得 2 敏捷 。","获得 2 Focus。"]
+    "NAME": "快速熬制",
+    "DESCRIPTION": "选择： 获得2点 力量 ，或获得2点 集中 。",
+    "UPGRADE_DESCRIPTION": "选择： 获得2点 力量 ，或获得2点 敏捷 ，或获得2点 集中 。",
+    "EXTENDED_DESCRIPTION": ["获得2点 力量 。", "获得2点 敏捷 。","获得2点 集中 。"]
   },
   "${ModID}:ToxicVial": {
-    "NAME": "Toxic Vial",
-    "DESCRIPTION": "Choose: 给予 3 Weak, or 给予 8 中毒。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose: 给予 3 易伤, 给予 3 Weak, or 给予 8 中毒。 NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["给予 3 易伤。", "给予 3 Weak。","给予 8 中毒。"]
+    "NAME": "毒性药剂",
+    "DESCRIPTION": "选择： 给予3层 虚弱，或给予8层 中毒。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择： 给予3层 易伤 ，或给予3层 虚弱 ，或给予8层 中毒 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["给予3层 易伤 。", "给予3层 虚弱 。","给予8层 中毒 。"]
   },
   "${ModID}:AttackVial": {
-    "NAME": "Attack Vial",
-    "DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Attacks to 获得. It costs 0 until played. NL 消耗性 !stslib:ex! 。",
-    "EXTENDED_DESCRIPTION": ["Choose 1 of 3 Attacks to 获得. It costs 0 until played。"]
+    "NAME": "攻击药剂",
+    "DESCRIPTION": "随机从三张攻击牌中选择一张加入手牌，本回合其首次耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "随机从三张攻击牌中选择一张加入手牌，本回合其首次耗能为0。 NL 消耗性 !stslib:ex! 。",
+    "EXTENDED_DESCRIPTION": ["从以下三张牌选择获得一张，其首次耗能为0。"]
   },
   "${ModID}:ChaosVial": {
-    "NAME": "Chaos Vial",
-    "DESCRIPTION": "Play the top 3 牌 of your 抽牌堆。 NL 消耗 。"
+    "NAME": "混沌药剂",
+    "DESCRIPTION": "打出抽牌堆顶部3张牌。 NL 消耗 。"
   },
   "${ModID}:VialOfMemory": {
-    "NAME": "Vial of Memory",
-    "DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it 加入手牌。 It costs 0 until played。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "Choose 一张牌 in your 弃牌堆 并return it 加入手牌。 It costs 0 until played. NL 消耗性 !stslib:ex! 。"
+    "NAME": "记忆药剂",
+    "DESCRIPTION": "选择一张弃牌堆的牌返回手牌，其下次耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张弃牌堆的牌返回手牌，其下次耗能为0。 NL 消耗性 !stslib:ex! 。"
   }
 }

@@ -1,15 +1,15 @@
 {
   "${ModID}:WarriorPack": {
     "TEXT": [
-      "Warrior",
-      "Master multiple damage types to dismantle your opponents。",
+      "战士",
+      "掌握多种伤害来扯烂你的敌人。",
       "Diamsword"
     ]
   },
   "${ModID}:WarriorPackHat": {
     "TEXT": [
-      "The helm of a marathon runner。",
-      "Ancient Helmet"
+      "马拉松跑者的头盔。",
+      "远古头盔"
     ]
   }
 }

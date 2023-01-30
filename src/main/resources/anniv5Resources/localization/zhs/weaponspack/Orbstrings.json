@@ -1,54 +1,54 @@
 {
   "${ModID}:AbstractWeaponOrb": {
-    "NAME": "Weapon",
+    "NAME": "武器",
     "DESCRIPTION": [
       " NL ",
-      "Attack: ",
+      "伤害值: #b",
       " NL ",
-      "Durability: #b"
+      "耐久值： #b"
     ]
   },
   "${ModID}:CutlassOrb": {
-    "NAME": "Cutlass",
+    "NAME": "弯刀",
     "DESCRIPTION": [
       ""
     ]
   },
   "${ModID}:PowderKegOrb": {
-    "NAME": "Powder Keg",
+    "NAME": "火药桶",
     "DESCRIPTION": [
-      "When destroyed, deal #b",
-      " damage to 所有敌人。"
+      "耐久耗尽时对所有敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "${ModID}:SwordOfWisdomOrb": {
-    "NAME": "Sword of Wisdom",
+    "NAME": "智慧之剑",
     "DESCRIPTION": [
-      "每当 you attack with this Weapon, 抽一张牌。"
+      "每当你使用本武器时，抽 #b1 张牌。"
     ]
   },
   "${ModID}:SwordOfChaosOrb": {
-    "NAME": "Sword of Chaos",
+    "NAME": "混乱之剑",
     "DESCRIPTION": [
-      "每当 you attack with this Weapon, add a random card 加入手牌。"
+      "每当你使用本武器时，随机将一张牌加入手牌。"
     ]
   },
   "${ModID}:CatONineTailsOrb": {
-    "NAME": "Cat O' Nine Tails",
+    "NAME": "九尾鞭",
     "DESCRIPTION": [
-      "After you attack with this Weapon, give it #b+2 Attack。"
+      "每当你使用本武器时，其伤害值增加 #b2 点。"
     ]
   },
   "${ModID}:ForgingHammerOrb": {
-    "NAME": "Forging Hammer",
+    "NAME": "锻锤",
     "DESCRIPTION": [
-      "After you attack with this Weapon, Upgrade a random card in your h并for the rest of combat。"
+      "每当你使用本武器时，随机 #y升级 一张手牌。"
     ]
   },
   "${ModID}:SwordOfFireOrb": {
-    "NAME": "Sword of Fire",
+    "NAME": "火焰之剑",
     "DESCRIPTION": [
-      "每当 you attack with this Weapon, deal #b3 damage to 所有敌人。"
+      "每当你使用本武器时，对所有敌人造成 #b3 点伤害。"
     ]
   }
 }
