@@ -31,7 +31,7 @@ public class GenerateEnergyPatch {
 
     @SpirePatch2(clz = GainEnergyAndEnableControlsAction.class, method = "update")
     public static class EndWorkaround {
-        //Happens right after the duration check of the update
+        //Happens right after the duration check of the update so right before the energy is filled. turnHasEnded is set to false at the end of this action
         @SpireInsertPatch(rloc = 1)
         public static void patch() {
             workaround = false;
