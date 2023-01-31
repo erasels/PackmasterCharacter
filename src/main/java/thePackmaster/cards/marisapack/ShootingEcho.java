@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.marisapack.BetterFireballEffect;
 import thePackmaster.vfx.marisapack.MissileStrikeEffect;
@@ -35,8 +34,7 @@ public class ShootingEcho extends AbstractMarisaCard {
         Wiz.vfx(new MissileStrikeEffect(m.hb.cX, m.hb.cY, BetterFireballEffect.randomFlareColor()), Settings.ACTION_DUR_FASTER);
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         Wiz.atb(new SelectCardsInHandAction(1, text, false, false, c -> true, list -> {
-            ShootingEcho.this.resetAttributes();
-            Wiz.makeInHand(ShootingEcho.this, list.size());
+            Wiz.makeInHand(ShootingEcho.this.makeCopy(), list.size());
 
             list.forEach(c -> Wiz.hand().moveToExhaustPile(c));
             list.clear();
