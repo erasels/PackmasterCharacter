@@ -228,6 +228,8 @@ public class SpireAnniversary5Mod implements
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
     public static final ArrayList<Louse> louseList = new ArrayList<>();
 
+    public static boolean isHatRainbow = false;
+
     public static boolean selectedCards = false;
     public static int combatExhausts = 0;
 
@@ -292,6 +294,8 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterUnlockedHats", "");
             defaults.put("PackmasterAllPacksMode", "FALSE");
             defaults.put("PackmasterSelectedHatIndex", "0");
+            defaults.put("PackmasterUnlockedRainbows","");
+            defaults.put("PackmasterRainbowEnabled","FALSE");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
             modConfig.load();
 
@@ -359,6 +363,17 @@ public class SpireAnniversary5Mod implements
         modConfig.save();
     }
 
+    public static ArrayList<String> getUnlockedRainbows() {
+        if (modConfig == null) return new ArrayList<>();
+        return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterUnlockedRainbows").split(",")));
+    }
+
+    public static void saveUnlockedRainbows(ArrayList<String> input) throws IOException {
+        if (modConfig == null) return;
+        modConfig.setString("PackmasterUnlockedRainbows", String.join(",", input));
+        modConfig.save();
+    }
+
     public static String getLastPickedHatID() {
         if (modConfig == null) return "";
         return modConfig.getString("PackmasterSelectedHatID");
@@ -367,6 +382,17 @@ public class SpireAnniversary5Mod implements
     public static void saveLastPickedHatID(String ID) throws IOException {
         if (modConfig == null) return;
         modConfig.setString("PackmasterSelectedHatID", ID);
+        modConfig.save();
+    }
+
+    public static boolean wasRainbowLastEnabled() {
+        if (modConfig == null) return false;
+        return modConfig.getBool("PackmasterRainbowEnabled");
+    }
+
+    public static void saveRainbowLastEnabled(boolean enabled) throws IOException {
+        if (modConfig == null) return;
+        modConfig.setBool("PackmasterRainbowEnabled", enabled);
         modConfig.save();
     }
 

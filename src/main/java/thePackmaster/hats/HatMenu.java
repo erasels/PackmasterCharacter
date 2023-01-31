@@ -1,5 +1,6 @@
 package thePackmaster.hats;
 
+import basemod.ModLabeledToggleButton;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -17,6 +18,7 @@ import thePackmaster.hats.specialhats.PsychicHat;
 import thePackmaster.hats.specialhats.SpecialHat;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.AlignmentPack;
+import thePackmaster.packs.CoreSetPack;
 import thePackmaster.packs.PsychicPack;
 import thePackmaster.util.Wiz;
 
@@ -36,6 +38,7 @@ public class HatMenu {
     private static DropdownMenu dropdown;
     public static final ArrayList<String> hats = new ArrayList<>();
     public static final ArrayList<String> currentlyUnlockedHats = new ArrayList<>();
+    public static final ArrayList<String> currentlyUnlockedRainbows = new ArrayList<>();
     public static final Map<String, SpecialHat> specialHats = new HashMap<>();
     public static final Map<String, Integer> hatsToIndexes = new HashMap<>();
 
@@ -57,6 +60,8 @@ public class HatMenu {
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
     private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
     private static final float PREVIEW_Y = BG_Y + (215 * Settings.scale);
+    private static final float CHECKBOX_X = BG_X + (100 * Settings.scale);
+    private static final float CHECKBOX_Y = BG_Y + (45 * Settings.scale);
 
     public static AbstractPlayer dummy;
 
@@ -64,9 +69,30 @@ public class HatMenu {
 
     public static int currentHatIndex;
 
+    private static final ModLabeledToggleButton rainbowButton = makeRainbowButton();
+    private static boolean showRainbowButton = false;
+
 
     public HatMenu() {
         refreshHatDropdown();
+    }
+
+    private static ModLabeledToggleButton makeRainbowButton() {
+        SpireAnniversary5Mod.isHatRainbow = SpireAnniversary5Mod.wasRainbowLastEnabled();
+        return new ModLabeledToggleButton(TEXT[11], CHECKBOX_X, CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont, SpireAnniversary5Mod.isHatRainbow , null, (label) -> {
+        },
+                (button) -> {
+                    try {
+                        clickCheckmark(button.enabled);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+    }
+
+    private static void clickCheckmark(boolean newState) throws IOException {
+        SpireAnniversary5Mod.isHatRainbow = newState;
+        SpireAnniversary5Mod.saveRainbowLastEnabled(newState);
     }
 
     public static AbstractPlayer getDummy() {
@@ -100,11 +126,20 @@ public class HatMenu {
         if (init) {
             String lastPickedId = SpireAnniversary5Mod.getLastPickedHatID();
             dropdown.setSelectedIndex(hatsToIndexes.getOrDefault(lastPickedId, 0));
+            if (currentlyUnlockedRainbows.contains(lastPickedId)) {
+                showRainbowButton = true;
+            } else if (lastPickedId.equals("Base") && currentlyUnlockedRainbows.contains(CoreSetPack.ID)) {
+                showRainbowButton = true;
+            } else {
+                showRainbowButton = false;
+                if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
+            }
         }
     }
 
     public static ArrayList<String> getHatDropdownStrings() {
         ArrayList<String> unlockedHats = SpireAnniversary5Mod.getUnlockedHats();
+        ArrayList<String> unlockedRainbows = SpireAnniversary5Mod.getUnlockedRainbows();
 
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
@@ -114,6 +149,7 @@ public class HatMenu {
         ArrayList<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
         sortedPacks.sort(Comparator.comparing(AbstractCardPack::getHatName));
         currentlyUnlockedHats.clear();
+        currentlyUnlockedRainbows.clear();
         for (AbstractCardPack s : sortedPacks) {
             //if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
             //if (UNLOCK_ALL_HATS) SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
@@ -123,6 +159,9 @@ public class HatMenu {
                     hats.add(s.packID);
                     if (unlockedHats.contains(s.packID)) {
                         currentlyUnlockedHats.add(s.packID);
+                    }
+                    if (unlockedRainbows.contains(s.packID)) {
+                        currentlyUnlockedRainbows.add(s.packID);
                     }
                     optionNames.add(s.getHatName());
                 } else {
@@ -156,6 +195,9 @@ public class HatMenu {
 
     public static void randomizeHat() {
         currentHat = Wiz.getRandomItem(currentlyUnlockedHats);
+        if (!currentlyUnlockedRainbows.contains(currentHat)) {
+            SpireAnniversary5Mod.isHatRainbow = false;
+        }
         Hats.addHat(true, currentHat);
         SpireAnniversary5Mod.logger.info("Randomizer chose hat: " + currentHat);
     }
@@ -169,6 +211,9 @@ public class HatMenu {
             //SpireAnniversary5Mod.logger.info("Removing hat.");
             Hats.removeHat(false);
             flavorText = "";
+            if (currentlyUnlockedRainbows.contains(CoreSetPack.ID)) {
+                showRainbowButton = true;
+            }
         } else if (index == 1) {
             currentHat = null;
             if (currentlyUnlockedHats.isEmpty()) {
@@ -176,12 +221,20 @@ public class HatMenu {
                 SpireAnniversary5Mod.logger.info("Selected Random but no hats are unlocked.");
                 Hats.removeHat(false);
                 flavorText = TEXT[8];
+                showRainbowButton = false;
+                if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
             } else {
                 invalidHatSelected = false;
                 //SpireAnniversary5Mod.logger.info("Selected Random.");
                 Hats.addHat(false, "Locked");
                 randomHatMode = true;
                 flavorText = TEXT[8];
+                if (!currentlyUnlockedRainbows.isEmpty()) {
+                    showRainbowButton = true;
+                } else {
+                    showRainbowButton = false;
+                    if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
+                }
             }
         } else if (name.contains(TEXT[1])) {
             //SpireAnniversary5Mod.logger.info("Selected a locked hat.");
@@ -202,6 +255,7 @@ public class HatMenu {
             Hats.addHat(false, currentHat);
             flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[10] + '\n' +
                     SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
+            doRainbowButtonLogic(currentHat);
         }
         try {
             SpireAnniversary5Mod.saveLastPickedHatID(hats.get(index));
@@ -210,10 +264,23 @@ public class HatMenu {
         }
     }
 
+    private static void doRainbowButtonLogic(String hat) {
+        if (currentlyUnlockedRainbows.contains(hat)) {
+            showRainbowButton = true;
+            if (rainbowButton.toggle.enabled) SpireAnniversary5Mod.isHatRainbow = true;
+        } else {
+            showRainbowButton = false;
+            if (rainbowButton.toggle.enabled) {
+                rainbowButton.toggle.toggle();
+            }
+        }
+    }
+
     private static String flavorText = "";
 
     public void update() {
         dropdown.update();
+        if (showRainbowButton && !dropdown.isOpen) rainbowButton.update();
         FontHelper.cardTitleFont.getData().setScale(1f);
     }
 
@@ -223,6 +290,8 @@ public class HatMenu {
         FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, FLAVOR_X, DROPDOWN_Y - (343 * Settings.scale), 330 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
 
         getDummy().renderPlayerImage(sb);
+
+        if (showRainbowButton) rainbowButton.render(sb);
 
         dropdown.render(sb, DROPDOWN_X, DROPDOWN_Y);
 
