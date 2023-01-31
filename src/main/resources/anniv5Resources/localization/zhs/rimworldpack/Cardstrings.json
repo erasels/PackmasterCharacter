@@ -17,8 +17,8 @@
   },
   "${ModID}:Pyromaniac": {
     "NAME": "火术师",
-    "DESCRIPTION": "回合开始时，随机使一张手牌 ${ModID}:着火 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，随机使一张手牌 ${ModID}:着火 。"
+    "DESCRIPTION": "回合开始时， NL 随机使一张手牌 ${ModID}:着火 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 随机使一张手牌 ${ModID}:着火 。"
   },
   "${ModID}:KillThirst": {
     "NAME": "杀戮饥渴",

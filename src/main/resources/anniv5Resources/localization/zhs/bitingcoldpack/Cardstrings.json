@@ -1,7 +1,7 @@
 {
   "${ModID}:ColdSeason": {
     "NAME": "寒季",
-    "DESCRIPTION": "敌人因 ${ModID}:霜噬 失去生命时，给予其 !M! 层 ${ModID}:霜噬 。"
+    "DESCRIPTION": "敌人因 ${ModID}:霜噬 掉血时， NL 给予其 !M! 层 ${ModID}:霜噬 。"
   },
   "${ModID}:FrigidBody": {
     "NAME": "僵冻",

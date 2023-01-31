@@ -5,7 +5,7 @@
   },
   "${ModID}:PoisonMastery": {
     "NAME": "精湛毒艺",
-    "DESCRIPTION": "中毒 造成的伤害翻倍。 NL 获得一瓶 *毒药水 。",
+    "DESCRIPTION": "中毒 造成的伤害翻倍。 NL 获得1瓶 *毒药水 。",
     "UPGRADE_DESCRIPTION": "中毒 造成的伤害翻倍。 NL 获得 !M! 瓶 *毒药水 。"
   },
   "${ModID}:Cannonball": {
