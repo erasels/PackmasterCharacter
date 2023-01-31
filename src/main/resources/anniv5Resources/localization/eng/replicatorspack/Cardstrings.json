@@ -26,7 +26,7 @@
   },
   "${ModID}:IterativeDesign": {
     "NAME": "Iterative Design",
-    "DESCRIPTION": "Whenever your create a card this combat, gain !M! Block."
+    "DESCRIPTION": "Whenever you play a card created this combat or play a card twice, gain  !M! Block."
   },
   "${ModID}:Xpansion": {
     "NAME": "Xpansion",
@@ -44,6 +44,6 @@
   },
   "${ModID}:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain !M! stslib:Temporary_HP. Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your draw pile."
+    "DESCRIPTION": "Gain !M! stslib:Temporary_HP. NL Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your draw pile."
   }
 }

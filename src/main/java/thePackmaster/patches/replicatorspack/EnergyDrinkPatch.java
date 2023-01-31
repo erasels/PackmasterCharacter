@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DuplicationPower;
+import thePackmaster.powers.replicatorspack.DuplicationPackmasterPower;
 import thePackmaster.powers.replicatorspack.EnergyDrinkPower;
 import thePackmaster.powers.replicatorspack.IterativeDesignPower;
 import thePackmaster.util.Wiz;
@@ -25,7 +26,7 @@ public class EnergyDrinkPatch {
                 int shuffleAmount = p.discardPile.size();
                 int amount = power.amount * (shuffleAmount/10);
                 if(amount>0){
-                    atb(new ApplyPowerAction(p, p, new DuplicationPower(p, amount)));
+                    atb(new ApplyPowerAction(p, p, new DuplicationPackmasterPower(p, amount)));
                 }
             }
         }
