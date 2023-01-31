@@ -1,5 +1,6 @@
 package thePackmaster.hats;
 
+import basemod.ModLabeledToggleButton;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -57,6 +58,8 @@ public class HatMenu {
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
     private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
     private static final float PREVIEW_Y = BG_Y + (215 * Settings.scale);
+    private static final float CHECKBOX_X = BG_X + (170 * Settings.scale);
+    private static final float CHECKBOX_Y = BG_Y + (160 * Settings.scale);
 
     public static AbstractPlayer dummy;
 
@@ -64,9 +67,26 @@ public class HatMenu {
 
     public static int currentHatIndex;
 
+    private static ModLabeledToggleButton rainbowButton;
+    private static boolean showRainbowButton = false;
+
 
     public HatMenu() {
         refreshHatDropdown();
+        rainbowButton = new ModLabeledToggleButton(TEXT[11], CHECKBOX_X, CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont, true, null, (label) -> {
+        },
+                (button) -> {
+                    try {
+                        clickCheckmark(button.enabled);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+    }
+
+    private static void clickCheckmark(boolean wasEnabled) throws IOException {
+        SpireAnniversary5Mod.isHatRainbow = !wasEnabled;
+        SpireAnniversary5Mod.saveRainbowLastEnabled(!wasEnabled);
     }
 
     public static AbstractPlayer getDummy() {
@@ -212,12 +232,24 @@ public class HatMenu {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        if (SpireAnniversary5Mod.getUnlockedRainbows().stream().anyMatch(ID -> ID.equals(currentHat))) {
+            showRainbowButton = true;
+        } else {
+            showRainbowButton = false;
+            try {
+                SpireAnniversary5Mod.saveRainbowLastEnabled(false);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            rainbowButton.toggle.enabled = false;
+        }
     }
 
     private static String flavorText = "";
 
     public void update() {
         dropdown.update();
+        if (showRainbowButton && !dropdown.isOpen) rainbowButton.update();
         FontHelper.cardTitleFont.getData().setScale(1f);
     }
 
@@ -227,6 +259,8 @@ public class HatMenu {
         FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, FLAVOR_X, DROPDOWN_Y - (343 * Settings.scale), 330 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
 
         getDummy().renderPlayerImage(sb);
+
+        if (showRainbowButton) rainbowButton.render(sb);
 
         dropdown.render(sb, DROPDOWN_X, DROPDOWN_Y);
 

@@ -17,19 +17,15 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.Settings;
 import javassist.CtBehavior;
 
-import java.util.Set;
-
-import static com.badlogic.gdx.graphics.GL20.GL_ONE_MINUS_DST_ALPHA;
-import static com.badlogic.gdx.graphics.GL20.GL_SRC_ALPHA;
-
 
 public class HatShadersPatches {
+
 
     public static boolean isBufferOn = false;
 
     private static TextureRegion playerTexture;
 
-    private static ShaderProgram GoldShader;
+    private static ShaderProgram rainbowShader;
 
     private static FrameBuffer buffer;
 
@@ -58,7 +54,7 @@ public class HatShadersPatches {
                 Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
                 Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
                 Gdx.gl.glColorMask(true, true, true, true);
-                batch.setShader(GoldShader);
+                batch.setShader(rainbowShader);
                 updateShader();
                 batch.setBlendFunction(770, 771);
             }
@@ -92,25 +88,22 @@ public class HatShadersPatches {
 
 
     private static float shaderTimer = 0f;
-    private static final float SHADER_STRENGTH = 0.5f;
-    private static final float SHADER_SPEED = 0.25f;
+    private static final float SHADER_STRENGTH = 0.6f;
+    private static final float SHADER_SPEED = 0.2f;
     private static final float SHADER_ANGLE = 0f;
-    private static final float SHADER_WIDTH = 4f;
-    private static final float SHADER_WIDTH_SHOULDER = 0.7f;
-    private static final float SHADER_SPEED_SHOULDER = 0.02f;
+    private static final float SHADER_WIDTH = 5f;
 
     private static void initShader() {
-        if (GoldShader == null) {
+        if (rainbowShader == null) {
             try {
-                GoldShader = new ShaderProgram(Gdx.files.internal("anniv5Resources/shaders/hatshaders/vertex.vs"),
-                        Gdx.files.internal("anniv5Resources/shaders/hatshaders/fragment.fs"));
-                if (!GoldShader.isCompiled()) {
-                    System.err.println(GoldShader.getLog());
+                rainbowShader = new ShaderProgram(Gdx.files.internal("anniv5Resources/shaders/hatshaders/rainbowVertex.vs"),
+                        Gdx.files.internal("anniv5Resources/shaders/hatshaders/rainbowFragment.fs"));
+                if (!rainbowShader.isCompiled()) {
+                    System.err.println(rainbowShader.getLog());
                 }
-                if (GoldShader.getLog().length() > 0) {
-                    System.out.println(GoldShader.getLog());
+                if (rainbowShader.getLog().length() > 0) {
+                    System.out.println(rainbowShader.getLog());
                 }
-                BaseMod.logger.info("============ Just initialized rainbow Shader");
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -123,11 +116,12 @@ public class HatShadersPatches {
 
     public static void updateShader(boolean isShoulder) {
         initShader();
-        if (GoldShader != null) {
-            GoldShader.setUniformf("u_width", SHADER_WIDTH);
-            GoldShader.setUniformf("u_strength", SHADER_STRENGTH);
-            GoldShader.setUniformf("u_speed", SHADER_SPEED);
-            GoldShader.setUniformf("u_angle", SHADER_ANGLE + shaderTimer*4f);
+        if (rainbowShader != null) {
+            rainbowShader.setUniformf("u_width", SHADER_WIDTH);
+            rainbowShader.setUniformf("u_strength", SHADER_STRENGTH);
+            rainbowShader.setUniformf("u_speed", SHADER_SPEED);
+            rainbowShader.setUniformf("u_angle", SHADER_ANGLE + shaderTimer);
+            rainbowShader.setUniformf("u_time", shaderTimer);
             shaderTimer += Gdx.graphics.getDeltaTime();
         }
     }
