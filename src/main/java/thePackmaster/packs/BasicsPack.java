@@ -26,7 +26,7 @@ public class BasicsPack extends AbstractCardPack {
         cards.add(BasicSupply.ID);
         cards.add(BasicWave.ID);
         cards.add(FamiliarKit.ID);
-        cards.add(Look.ID);
+        cards.add(Simplify.ID);
         cards.add(LoseIt.ID);
         cards.add(OckhamsRazor.ID);
         cards.add(PerfectBasics.ID);

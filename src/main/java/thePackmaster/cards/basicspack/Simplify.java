@@ -1,21 +1,17 @@
 package thePackmaster.cards.basicspack;
 
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.basics.DrawFilteredCardsAndUpgradeAction;
-import thePackmaster.actions.transmutationpack.DrawFilteredCardsAction;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Look extends AbstractPackmasterCard {
-    public final static String ID = makeID("Look");
+public class Simplify extends AbstractPackmasterCard {
+    public final static String ID = makeID("Simplify");
 
-    public Look() {
+    public Simplify() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, "basics");
         this.baseMagicNumber = this.magicNumber = 1;
     }
