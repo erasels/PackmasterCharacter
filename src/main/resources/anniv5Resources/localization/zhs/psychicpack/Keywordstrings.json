@@ -2,10 +2,10 @@
   {
     "PROPER_NAME": "灵秘",
     "NAMES": [
-      "occult",
-      "灵秘"
+      "灵秘",
+      "occult"
     ],
-    "DESCRIPTION": "#灵秘 牌在手时可在任何情况下打出，非正常打出会将其 #y消耗 。"
+    "DESCRIPTION": "#y灵秘 牌在手时可在任何情况下打出，非正常打出会将其 #y消耗 。"
   },
   {
     "PROPER_NAME": "自锁",

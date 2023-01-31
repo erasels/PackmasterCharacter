@@ -26,7 +26,7 @@
     "DESCRIPTION": "抽 !M! 张牌。 NL将一张 *晕眩 加入手牌。"
   },
   "${ModID}:Replenish": {
-    "NAME": "Replenish",
+    "NAME": "补满",
     "DESCRIPTION": "选择将弃牌堆2张牌加入手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "选择将弃牌堆2张牌加入手牌。"
   },

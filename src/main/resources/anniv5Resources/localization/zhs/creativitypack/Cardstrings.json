@@ -41,10 +41,10 @@
   },
   "${ModID}:BrushModalTypeChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}选择发现的类型。"
+    "DESCRIPTION": "选择发现的类型。"
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}选择发现的耗能。"
+    "DESCRIPTION": "选择发现的耗能。"
   }
 }

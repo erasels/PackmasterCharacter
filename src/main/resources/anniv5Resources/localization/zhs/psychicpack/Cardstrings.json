@@ -1,12 +1,12 @@
 {
   "${ModID}:RuleCancel": {
     "NAME": "规则无视",
-    "DESCRIPTION": "选择一张手牌附加 {ModID}:灵秘 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一张手牌附加 {ModID}:灵秘 。"
+    "DESCRIPTION": "选择一张手牌附加 ${ModID}:灵秘 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张手牌附加 ${ModID}:灵秘 。"
   },
   "${ModID}:Brainwave": {
     "NAME": "脑力波",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 随机将一张攻击手牌附加 {ModID}:灵秘 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 随机将一张攻击手牌附加 ${ModID}:灵秘 。"
   },
   "${ModID}:TelephonePole": {
     "NAME": "电线杆",
@@ -57,6 +57,6 @@
   },
   "${ModID}:DeepDream": {
     "NAME": "深梦",
-    "DESCRIPTION": "本回合每打出一张牌，随机将一张手牌附加 {ModID}:灵秘 。 NL 消耗 。"
+    "DESCRIPTION": "本回合每打出一张牌，随机将一张手牌附加 ${ModID}:灵秘 。 NL 消耗 。"
   }
 }
