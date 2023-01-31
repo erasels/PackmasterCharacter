@@ -1,0 +1,15 @@
+{
+  "${ModID}:EnigmancyPower": {
+    "NAME": "高深",
+    "DESCRIPTIONS": [
+      "你的回合开始时，获得 #b",
+      " [E] 并降低 #b1 点获得量。"
+    ]
+  },
+  "${ModID}:DivineMightPower": {
+    "NAME": "神圣之力",
+    "DESCRIPTIONS": [
+      "下次打出 #y神圣之力 时，获得 [E] [E] ，抽 #b2 牌 并获得 #b10 层 临时 力量 。"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "${ModID}:Imp": {
+    "NAME": "小鬼",
+    "DESCRIPTION": "${ModID}:自动打出 。 NL 造成 !M! 点伤害。 NL 本场战斗 *小鬼 牌伤害增加1点。 NL 抽一张牌。 NL 消耗 。"
+  },
+  "${ModID}:HighPriestessJeklik": {
+    "NAME": "高阶祭司耶克里克",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本牌被 消耗 时， NL 将2张复制品加入手牌。"
+  },
+  "${ModID}:SoulShear": {
+    "NAME": "灵魂剥离",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *小鬼 加入抽牌堆。"
+  },
+  "${ModID}:Soulfire": {
+    "NAME": "灵魂之火",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 消耗 一张手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 选择 消耗 一张手牌。"
+  },
+  "${ModID}:Doomguard": {
+    "NAME": "末日守卫",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 消耗 2张手牌。"
+  },
+  "${ModID}:HandOfGulDan": {
+    "NAME": "古尔丹之手",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若本牌被 消耗 NL ，抽 !M! 张牌。"
+  },
+  "${ModID}:SeedsOfDestruction": {
+    "NAME": "毁灭之种",
+    "DESCRIPTION": "选择将 !M! 张 *小鬼 加入抽牌堆，或 !${ModID}:m2! 张 *小鬼 加入弃牌堆。",
+    "EXTENDED_DESCRIPTION": ["将 !M! 张 *小鬼 加入抽牌堆。", "将 !M! 张 *小鬼 加入弃牌堆。"]
+  },
+  "${ModID}:AranasiBroodmother": {
+    "NAME": "阿兰纳丝蛛后",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将本牌洗入抽牌堆。 NL 抽到时，获得 !M! 点 格挡 。"
+  },
+  "${ModID}:MalchezaarsImp": {
+    "NAME": "玛克扎尔的小鬼",
+    "DESCRIPTION": "非 *小鬼 牌被 消耗 时，将一张 *小鬼 加入弃牌堆。",
+    "UPGRADE_DESCRIPTION": "非 *小鬼 牌被 消耗 时，将一张 *小鬼 加入抽牌堆。"
+  },
+  "${ModID}:TheSoularium": {
+    "NAME": "莫瑞甘的灵界",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 将其附加 虚无 。 NL 消耗 。"
+  },
+  "${ModID}:RunedMithrilRod": {
+    "NAME": "符文秘银杖",
+    "DESCRIPTION": "无法打出。 保留 。 NL 本牌在手时累计抽 !M! 张牌后，该回合所有手牌耗能减1，并丢弃本牌。",
+    "EXTENDED_DESCRIPTION": ["我不能打出这张牌。", " NL (已抽 {0} 张。)"]
+  }
+}

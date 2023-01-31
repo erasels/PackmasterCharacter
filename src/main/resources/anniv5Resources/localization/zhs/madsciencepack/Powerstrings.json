@@ -1,0 +1,16 @@
+{
+  "${ModID}:PiratifyPower": {
+    "NAME": "海盗化",
+    "DESCRIPTIONS": [
+      "你的回合开始时，随机 #修改 #b",
+      " 张手牌：'获得一张 #y加农炮弹 。'"
+    ]
+  },
+  "${ModID}:PiratifyPowerUpp": {
+    "NAME": "海盗化+",
+    "DESCRIPTIONS": [
+      "你的回合开始时，随机 #修改 #b",
+      " 张手牌：'获得一张 #y加农炮弹+ 。'"
+    ]
+  }
+}

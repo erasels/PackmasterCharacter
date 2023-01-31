@@ -1,0 +1,17 @@
+{
+  "${ModID}:TurtlePower": {
+    "NAME": "战龟",
+    "DESCRIPTIONS": [
+      "你的下张攻击牌可造成 #y狂野 伤害。",
+      "你的下 #b",
+      " 张攻击牌可造成 #y狂野 伤害。"
+    ]
+  },
+  "${ModID}:PolishingPower": {
+    "NAME": "打磨",
+    "DESCRIPTIONS": [
+     "每当你打出攻击牌时，本场战斗提高其伤害 #b",
+      " 点。"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "${ModID}:PsychicPack": {
+    "TEXT": [
+      "通灵",
+      "突破常理的力量。",
+      "Alchyr, (Gk) Erasels"
+    ]
+  },
+  "${ModID}:Occult": {
+    "TEXT": [
+      "${ModID}:灵秘 。 NL ",
+      "NL ${ModID}:灵秘 。 NL"
+    ]
+  },
+  "${ModID}:RuleCancel": {
+    "TEXT": [
+      "附加灵秘"
+    ]
+  },
+  "${ModID}:OccultInDrawPile": {
+    "TEXT": [
+      "选择一张手牌附加灵秘。"
+    ]
+  },
+  "${ModID}:UnplayableTurnModifier": {
+    "TEXT": [
+      "本回合无法被打出。 NL "
+    ]
+  },
+  "${ModID}:PsychicPackHat": {
+    "TEXT": [
+      "你能感受到从身上释放出的能量。",
+      "灵帽"
+    ]
+  }
+}

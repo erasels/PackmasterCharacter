@@ -1,0 +1,18 @@
+[
+  {
+    "PROPER_NAME": "狂野",
+    "NAMES": [
+      "feral",
+      "狂野"
+    ],
+    "DESCRIPTION": "对带有 #r负面效果 的目标额外造成 #b50% 伤害。"
+  },
+  {
+    "PROPER_NAME": "正面",
+    "NAMES": [
+      "front",
+      "正面"
+    ],
+    "DESCRIPTION": "对有 #y格挡 的目标额外造成 #b50% 伤害。"
+  }
+]

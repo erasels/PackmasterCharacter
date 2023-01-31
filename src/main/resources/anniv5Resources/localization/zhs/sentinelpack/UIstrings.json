@@ -1,0 +1,16 @@
+{
+  "${ModID}:SentinelPack": {
+    "TEXT": [
+      "感知者",
+      "遥远处观者族落中的另一人，擅长使用姿态，但远没观者那么爱发脾气。",
+      "MichaelMayhem",
+      "卡牌贴图： @SaltCenter 、宁静姿态： u/Aeverelle 、 Swagger Art - u/fenr1sulfr"
+    ]
+  },
+  "${ModID}:SentinelPackHat": {
+    "TEXT": [
+      "有一丢丢像观者的，但没那么红。",
+      "感知者面巾"
+    ]
+  }
+}

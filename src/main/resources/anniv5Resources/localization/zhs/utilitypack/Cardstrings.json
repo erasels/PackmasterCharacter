@@ -1,0 +1,52 @@
+{
+  "${ModID}:Excitement": {
+    "NAME": "兴奋",
+    "DESCRIPTION": "获得 [E] [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 消耗性 !stslib:ex! 。"
+  },
+  "${ModID}:LayeredDefenses": {
+    "NAME": "多层防护",
+    "DESCRIPTION": "手牌每有一种类型， NL 获得 !B! 点 格挡 。",
+    "EXTENDED_DESCRIPTION": [" NL (共计 {0} 种牌。"]
+  },
+  "${ModID}:PreemptiveStrike": {
+    "NAME": "先发打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL If 若目标意图攻击， NL 再造成一次。"
+  },
+  "${ModID}:PlasmaShield": {
+    "NAME": "等离子护盾",
+    "DESCRIPTION": "回合结束时若你有 等离子 充能球， 获得 !M! 点 格挡 。 NL 生成 !${ModID}:m2! 个 等离子 充能球。"
+  },
+  "${ModID}:Enrage": {
+    "NAME": "触怒",
+    "DESCRIPTION": "丢弃 !${ModID}:m2! 张牌。 NL 抽 !M! 张牌。 NL 进入 ${ModID}:侵袭 。"
+  },
+  "${ModID}:Whispers": {
+    "NAME": "纷扰耳语",
+    "DESCRIPTION": "抽 !M! 张牌。 NL将一张 *晕眩 加入手牌。"
+  },
+  "${ModID}:Replenish": {
+    "NAME": "Replenish",
+    "DESCRIPTION": "选择将弃牌堆2张牌加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择将弃牌堆2张牌加入手牌。"
+  },
+  "${ModID}:LesserHex": {
+    "NAME": "低阶巫婆",
+    "DESCRIPTION": "给予 !M! 层 虚弱 与 !M! 易伤 。 NL 目标失去 !M! 点 力量 。 NL 将一张 *高阶巫婆 加入弃牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 与 !M! 易伤 。 NL 目标失去 !M! 点 力量 。 NL 将一张 *高阶巫婆+ 加入弃牌堆。 NL 消耗 。"
+  },
+  "${ModID}:GreaterHex": {
+    "NAME": "高阶巫婆",
+    "DESCRIPTION": "给予 !M! 层 虚弱 与 !M! 易伤 。 NL 目标失去 !M! 点 力量 。 NL 消耗 。"
+  },
+  "${ModID}:Conjuration": {
+    "NAME": "巫咒",
+    "DESCRIPTION": "选择抽牌堆一张牌，将其打出并 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择抽牌堆一张牌，将其打出。",
+    "EXTENDED_DESCRIPTION": ["抽牌堆没有牌。"]
+  },
+  "${ModID}:RareStrike": {
+    "NAME": "稀有打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一张 *稀有 牌， NL 本牌伤害增加 !M! 点。"
+  }
+}

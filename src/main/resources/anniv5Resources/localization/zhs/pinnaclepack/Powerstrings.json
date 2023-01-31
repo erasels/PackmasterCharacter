@@ -1,0 +1,21 @@
+{
+  "${ModID}:Capacitor": {
+    "NAME": "牌容器",
+    "DESCRIPTIONS": [
+      "本回合手牌牌数上限增加 #b",
+      " 张。"
+    ]
+  },
+  "${ModID}:Cooking": {
+    "NAME": "烹饪力量",
+    "DESCRIPTIONS": [
+      "回合结束时，获得一张 #y可乐饼 。"
+    ]
+  },
+  "${ModID}:Cooking_": {
+    "NAME": "烹饪力量+",
+    "DESCRIPTIONS": [
+      "回合结束时，获得一张 #y可乐饼+ 。"
+    ]
+  }
+}

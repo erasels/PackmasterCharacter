@@ -1,0 +1,15 @@
+{
+  "${ModID}:StatusPack": {
+    "TEXT": [
+      "状态",
+      "Slaps roof, this deck can generate so many statuses.",
+      "(Gk) Erasels"
+    ]
+  },
+  "${ModID}:StatusPackHat": {
+    "TEXT": [
+      "医疗兵！",
+      "绷带"
+    ]
+  }
+}

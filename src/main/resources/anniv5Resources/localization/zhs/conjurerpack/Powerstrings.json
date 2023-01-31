@@ -1,0 +1,16 @@
+{
+  "${ModID}:GeomorphologyPower": {
+    "NAME": "地貌学",
+    "DESCRIPTIONS": [
+      "每当你 消耗 一张牌或 生成 一个充能球时，随机给予一名敌人 #b",
+      " 层 #y土元素 。"
+    ]
+  },
+  "${ModID}:PetraPower": {
+    "NAME": "土元素",
+    "DESCRIPTIONS": [
+      "攻击该单位时，下回合获得造成未被格挡伤害 #b",
+      "% 的 #y格挡 。"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "${ModID}:PrimeDirectivePower": {
+    "NAME": "最高指令",
+    "DESCRIPTIONS": [
+      "你的 #y攻击 牌附带效果：' #y累积 ：额外造成 #b",
+      " 点伤害。'",
+      " NL ${ModID}:累奇 ：",
+      "(+ ",
+      " 点伤害。)。"
+    ]
+  },
+  "${ModID}:GammaWardPower": {
+    "NAME": "伽玛护纹",
+    "DESCRIPTIONS": [
+      "本回合打出的下张技能牌附带效果：' #y累偶 ：获得 #b",
+      " 点 #y格挡 。",
+      " NL ${ModID}:累偶 ：",
+      "获得 ",
+      " 点 格挡 。"
+    ]
+  }
+}

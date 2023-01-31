@@ -1,0 +1,31 @@
+{
+  "${ModID}:NamelessMistPower": {
+    "NAME": "Nameless Mist",
+    "DESCRIPTIONS": [
+      "本回合每打出一张牌， 获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "${ModID}:PageOfTheDeadPower": {
+    "NAME": "死灵之页",
+    "DESCRIPTIONS": [
+      "下 #b",
+      " 张 #b2 耗能以上的 #y攻击 牌打出两次。"
+    ]
+  },
+  "${ModID}:AllSeeingPower": {
+    "NAME": "全知",
+    "DESCRIPTIONS": [
+      "你的回合结束时，预见 #b",
+      " 并受到 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:EndOfDaysPower": {
+    "NAME": "End of Days",
+    "DESCRIPTIONS": [
+      "回合结束时，每有 #b1 点未使用的 [E] ， #y生成 #b",
+      " 个 #y黑暗 充能球。"
+    ]
+  }
+}

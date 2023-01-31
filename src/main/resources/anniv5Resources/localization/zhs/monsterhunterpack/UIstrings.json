@@ -1,0 +1,15 @@
+{
+  "${ModID}:MonsterHunterPack": {
+    "TEXT": [
+      "怪物猎人",
+      "猎杀精英与首领敌人，用你的猎刀获取其独特武器与护甲！",
+      "Dayvig"
+    ]
+  },
+  "${ModID}:MonsterHunterPackHat": {
+    "TEXT": [
+      "狩猎成果。",
+      "天罚头骨"
+    ]
+  }
+}

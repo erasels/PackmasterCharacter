@@ -3,7 +3,7 @@
     "NAME": "Mind Over Matter",
     "DESCRIPTIONS": [
       "Whenever you draw a card, gain #b",
-      " #yBlock"
+      " #yBlock."
     ]
   },
   "${ModID}:ThoughtweavingPower": {

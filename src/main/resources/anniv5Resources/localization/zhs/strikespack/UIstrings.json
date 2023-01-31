@@ -1,0 +1,20 @@
+{
+  "${ModID}:StrikesPack": {
+    "TEXT": [
+      "打击？打击！",
+      "造成6点伤害。",
+      "MichaelMayhem"
+    ]
+  },
+  "${ModID}:StrikesPackHat": {
+    "TEXT": [
+      "小型剑， 刚好够发夹这么大。",
+      "打击剑"
+    ]
+  },
+  "${ModID}:AddStrikeTagModifier": {
+    "TEXT": [
+      "打击"
+    ]
+  }
+}

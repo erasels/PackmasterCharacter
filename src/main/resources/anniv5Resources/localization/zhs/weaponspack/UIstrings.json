@@ -1,0 +1,15 @@
+{
+  "${ModID}:WeaponsPack": {
+    "TEXT": [
+      "武器",
+      "来自黑胡子船长Mod的武器。装备附有各种效果的武器来提升你的攻击伤害。",
+      "JohnnyBazooka89"
+    ]
+  },
+  "${ModID}:WeaponsPackHat": {
+    "TEXT": [
+      "曾属于一名著名的海盗船长。",
+      "海盗帽"
+    ]
+  }
+}

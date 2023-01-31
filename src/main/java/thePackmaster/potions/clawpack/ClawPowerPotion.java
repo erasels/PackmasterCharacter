@@ -37,7 +37,7 @@ public class ClawPowerPotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        this.description = potionStrings.DESCRIPTIONS[0] + potency + ".";
+        this.description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
     }
 
     public void use(AbstractCreature target) {

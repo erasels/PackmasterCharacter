@@ -1,0 +1,48 @@
+{
+  "${ModID}:Weight": {
+    "NAME": "重物",
+    "DESCRIPTION": "无法打出。 保留 。 NL 若本牌被丢弃，被 消耗 "
+  },
+  "${ModID}:Oppressor": {
+    "NAME": "压迫",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃1张牌。"
+  },
+  "${ModID}:IronShield": {
+    "NAME": "铁盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *重物 加入手牌。"
+  },
+  "${ModID}:Shine": {
+    "NAME": "光泽",
+    "DESCRIPTION": "无法打出。 保留 。 NL 抽到本牌时， NL 随机升级一张手牌。",
+    "UPGRADE_DESCRIPTION": "无法打出。 保留 。 NL 抽到本牌时， NL 升级所有手牌。"
+  },
+  "${ModID}:GlaiveThrow": {
+    "NAME": "投掷长刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 丢弃 !M! 张牌。"
+  },
+  "${ModID}:Crunch": {
+    "NAME": "碾咬",
+    "DESCRIPTION": "无法打出。 保留 。 NL 抽到本牌时， NL 抽 !M! 张牌。"
+  },
+  "${ModID}:Lie": {
+    "NAME": "说谎",
+    "DESCRIPTION": "目标本回合失去 !M! 点 力量 。 NL 将一张 *重物 加入手牌。"
+  },
+  "${ModID}:Frontflip": {
+    "NAME": "前空翻",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌，丢弃其中的无法打出牌。"
+  },
+  "${ModID}:HammerThrow": {
+    "NAME": "投掷铅锤",
+    "DESCRIPTION": "一张牌被 保留 时， NL 对所有敌人造成 !M! 点伤害。"
+  },
+  "${ModID}:Flail": {
+    "NAME": "乱锤",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将量张 *重物 加入手牌。"
+  },
+  "${ModID}:Wisdom": {
+    "NAME": "智慧",
+    "DESCRIPTION": "获得 [E] 。 NL 丢弃任意张手牌， NL 抽等量的牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 丢弃任意张手牌， NL 抽等量的牌。 NL 消耗 。"
+  }
+}

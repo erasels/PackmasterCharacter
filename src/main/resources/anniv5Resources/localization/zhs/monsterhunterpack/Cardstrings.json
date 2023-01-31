@@ -1,0 +1,138 @@
+{
+  "${ModID}:HuntingStrike": {
+    "NAME": "猎杀打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对精英与首领造成双倍伤害。"
+  },
+  "${ModID}:Focus": {
+    "NAME": "猎迹追踪",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 ${ModID}:追猎 。"
+  },
+  "${ModID}:PerfectDodge": {
+    "NAME": "完美规避",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合 格挡 刚好被打破，获得 !M! 点 力量 。"
+  },
+  "${ModID}:Greatsword": {
+    "NAME": "巨剑",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 保留 时若有未使用的能量，下次打出前本牌伤害加8。"
+  },
+  "${ModID}:HuntingInstincts": {
+    "NAME": "猎人本能",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若面对精英或首领， NL 获得两倍。"
+  },
+  "${ModID}:SkullClub": {
+    "NAME": "头骨重击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标存活， NL 你被 ${ModID}:激怒 ! NL 消耗 。"
+  },
+  "${ModID}:ShellPauldrons": {
+    "NAME": "骨铠甲",
+    "DESCRIPTION": "获得 !M! 层 ${ModID}:玻璃护甲 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !M! 层 ${ModID}:玻璃护甲 。"
+  },
+  "${ModID}:CoreBlaster": {
+    "NAME": "核心射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *核心冲击 加入抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *核心冲击+ 加入抽牌堆。 NL 消耗 。"
+  },
+  "${ModID}:CoreBlinder": {
+    "NAME": "核心冲击",
+    "DESCRIPTION": "给予 !M! 层 虚弱 与 易伤 。 NL 将一张 *核心射线 加入抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 与 易伤 。 NL 将一张 *核心射线 加入抽牌堆。 NL 消耗 。"
+  },
+  "${ModID}:GuardianShield": {
+    "NAME": "守护者护盾",
+    "DESCRIPTION": "获得 !M! 层 *金属化 与 荆棘 。"
+  },
+  "${ModID}:InfernoDaggers": {
+    "NAME": "狱焱匕首",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害 !M! 次。 NL 将本牌耗能变为6点。 NL 保留 时本牌耗能减1。",
+    "UPGRADE_DESCRIPTION": "固有 。 保留 。 NL 造成 !D! 点伤害 !M! 次。 NL 将本牌耗能变为6点。 NL 保留 时本牌耗能减1。"
+  },
+  "${ModID}:StabManual": {
+    "NAME": "刺击手册",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张 *小刀 加入手牌。 NL 本场战斗加入量+1。"
+  },
+  "${ModID}:SlimeHammer": {
+    "NAME": "黏液之锤",
+    "DESCRIPTION": "下回合回合结束时对目标造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "给予1层 虚弱 。 NL 下回合回合结束时对目标造成 !D! 点伤害。"
+  },
+  "${ModID}:SlaverWhip": {
+    "NAME": "奴贩之鞭",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 与 易伤 。 NL 若击杀一名敌人，将本牌返回手牌且本回合耗能变为0。"
+  },
+  "${ModID}:GremlinLance": {
+    "NAME": "地精角矛",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若击杀一名敌人， NL 获得 [E] 并抽一张牌。"
+  },
+  "${ModID}:ChampMail": {
+    "NAME": "勇士胸甲",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若生命值低于50%，失去所有负面效果并获得 !M! 点 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 若生命值低于50%，失去所有负面效果并获得 !M! 点 力量 。"
+  },
+  "${ModID}:CursedBow": {
+    "NAME": "诅咒之弓",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 与 易伤 。 NL 消耗 。"
+  },
+  "${ModID}:HyperBlaster": {
+    "NAME": "超能射线枪",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 虚空 加入抽牌堆。"
+  },
+  "${ModID}:EphemeralShroud": {
+    "NAME": "瞬息裹布",
+    "DESCRIPTION": "获得 !M! 层 无实体 。 NL 消耗 。"
+  },
+  "${ModID}:StoneHelm": {
+    "NAME": "顽石头盔",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合每打出过一张牌， 格挡 减2。 NL 结束你的回合。"
+  },
+  "${ModID}:TimepieceTiara": {
+    "NAME": "钟表珠冠",
+    "DESCRIPTION": "每打出12张牌， NL 获得3点 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每打出12张牌， NL 获得3点 力量 。"
+  },
+  "${ModID}:DonuAmulet": {
+    "NAME": "甜圈坠饰",
+    "DESCRIPTION": "获得 !M! 点 力量 。"
+  },
+  "${ModID}:DecaAmulet": {
+    "NAME": "八体坠饰",
+    "DESCRIPTION": "获得 !M! 层 *多层护甲 。"
+  },
+  "${ModID}:SpireSpear": {
+    "NAME": "尖塔之矛",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:SpireShield": {
+    "NAME": "尖塔之盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "${ModID}:CarvingKnife": {
+    "NAME": "猎刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 若击杀一名精英或首领，获得其专属战利品。 NL 即逝。"
+  },
+  "${ModID}:AwakenedRitualDagger": {
+    "NAME": "觉醒者匕首",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若 斩杀 ， NL 完全回复生命。 NL 消耗 。"
+  },
+  "${ModID}:HuntingContract": {
+    "NAME": "捕猎协议",
+    "DESCRIPTION": "固有 。 NL 给予 !M! 层 ${ModID}:追猎 。 NL 消耗 。"
+  },
+  "${ModID}:HunterRank": {
+    "NAME": "猎人排名",
+    "DESCRIPTION": "获得 !M! 点 力量 。 每击杀过一名精英或首领， 力量 获得量增加1点。 获得 !${ModID}:m2! 点 敏捷 。"
+  },
+  "${ModID}:TranqBomb": {
+    "NAME": "镇静炸弹",
+    "DESCRIPTION": "造成 !D! 点伤害， NL 本牌无法击杀敌人。 NL 目标失去 !M! 点 力量 。 NL 消耗 。"
+  },
+  "${ModID}:Paintball": {
+    "NAME": "颜料弹",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:追猎 。 NL 本回合可 保留 !${ModID}:m2! 张牌。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 ${ModID}:追猎 。 NL 本回合可 保留 !${ModID}:m2! 张牌。"
+  },
+  "${ModID}:SerpentineDagger": {
+    "NAME": "蛇女匕首",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害 !M! 次。 NL 将本牌2张复制品加入抽牌堆。 NL 消耗 。"
+  }
+}

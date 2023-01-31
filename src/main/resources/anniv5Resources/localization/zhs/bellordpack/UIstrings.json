@@ -1,0 +1,15 @@
+{
+  "${ModID}:BellordPack": {
+    "TEXT": [
+      "恶铃",
+      "用诅咒牌痛击敌人！把它们的 力量 吸干！",
+      "Vex"
+    ]
+  },
+  "${ModID}:BellordPackHat": {
+    "TEXT": [
+      "希望没谁敲响它。",
+      "召唤铃铛"
+    ]
+  }
+}

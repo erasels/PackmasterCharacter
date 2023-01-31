@@ -1,0 +1,15 @@
+{
+  "${ModID}:QuietPack": {
+    "TEXT": [
+      "寡言力士",
+      "静默猎手的朋友。 NL 持有重型装备。",
+      "Diamsword"
+    ]
+  },
+  "${ModID}:QuietPackHat": {
+    "TEXT": [
+      "A lot heavier than it looks。",
+      "寡言力士面具"
+    ]
+  }
+}

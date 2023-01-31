@@ -1,0 +1,44 @@
+{
+  "${ModID}:HuttsGambleEnergyPower": {
+    "NAME": "Hutts'　Energized",
+    "DESCRIPTIONS": [
+      "本回合若不因攻击伤害失去生命，下回合获得 #b",
+      " 点能量。"
+    ]
+  },
+  "${ModID}:HuttsGamble抽Power": {
+    "NAME": "Hutts'　抽",
+    "DESCRIPTIONS": [
+      "本回合若不因攻击伤害失去生命，下回合额外抽 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "${ModID}:RetromationPower": {
+    "NAME": "Retromation",
+    "DESCRIPTIONS": [
+      "你的回合开始时，随机获得 #b",
+      " 张",
+      " 张",
+      "本局已选择卡包以外的卡包中的牌。",
+      "其附带 #y虚无 。",
+      "其附带 #y虚无 。"
+    ]
+  },
+  "${ModID}:FrostprimePower": {
+    "NAME": "Frost　Prime",
+    "DESCRIPTIONS": [
+      "你的回合开始时， #y生成 #b",
+      " 个 #y冰霜 充能球并给予所有敌人 #b",
+      " 层 #y霜噬 。"
+    ]
+  },
+  "${ModID}:CozyChairPower": {
+    "NAME": "Cozy　Chair",
+    "DESCRIPTIONS": [
+      "你打出的所有牌额外打出 #b1 次。",
+      "你打出的所有牌额外打出 #b",
+      " 次。"
+    ]
+  }
+}

@@ -2,6 +2,7 @@ package thePackmaster.relics;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 
@@ -66,11 +67,16 @@ public class BagOfHolding extends AbstractPackmasterRelic {
         // Colorize the starter relic's name. Thanks Bard!!! Thanks Nelly!!!!! HAPPY BIRTHDAY, STS MODDING!!!
         String name = new HandyHaversack().name;
         StringBuilder sb = new StringBuilder();
-        for (String word : name.split(" ")) {
-            sb.append("[#").append(SpireAnniversary5Mod.characterColor.toString()).append("]").append(word).append("[] ");
+        if(Settings.language==Settings.language.ZHS||Settings.language==Settings.language.ZHT){
+            sb.append("[#").append(SpireAnniversary5Mod.characterColor.toString()).append("]").append(name).append("[]");
+            sb.setLength(sb.length() - 1);
+        }else {
+            for (String word : name.split(" ")) {
+                sb.append("[#").append(SpireAnniversary5Mod.characterColor.toString()).append("]").append(word).append("[] ");
+                sb.setLength(sb.length() - 1);
+                sb.append("[#").append(SpireAnniversary5Mod.characterColor.toString()).append("]");
+            }
         }
-        sb.setLength(sb.length() - 1);
-        sb.append("[#").append(SpireAnniversary5Mod.characterColor.toString()).append("]");
 
         return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
     }
