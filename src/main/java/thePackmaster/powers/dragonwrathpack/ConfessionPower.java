@@ -48,7 +48,11 @@ public class ConfessionPower extends AbstractPackmasterPower implements Cloneabl
 
     public int onAttacked(DamageInfo info, int damageAmount) {
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
-        Wiz.atb(new AbstractGameAction() {
+        if (AbstractDungeon.actionManager.turnHasEnded){
+            addToTop(new ReducePowerAction(owner,owner,this,amount/2));
+        }
+        Wiz.att(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
+        Wiz.att(new AbstractGameAction() {
             @Override
             public void update() {
                 CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
@@ -58,10 +62,6 @@ public class ConfessionPower extends AbstractPackmasterPower implements Cloneabl
                 isDone = true;
             }
         });
-        Wiz.atb(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
-        if (AbstractDungeon.actionManager.turnHasEnded){
-            addToBot(new ReducePowerAction(owner,owner,this,amount/2));
-        }
         return damageAmount;
     }
     @Override
