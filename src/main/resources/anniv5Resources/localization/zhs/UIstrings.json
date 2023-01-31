@@ -137,7 +137,8 @@
       " has no corresponding hat image. Please fix。",
       "开局时使用随机一顶帽子。",
       "随机帽子",
-      "卡包"
+      "卡包",
+      "Rainbow Hat"
     ]
   },
   "${ModID}:ConfigMenuText": {

@@ -128,7 +128,7 @@ public class HatMenu {
             dropdown.setSelectedIndex(hatsToIndexes.getOrDefault(lastPickedId, 0));
             if (currentlyUnlockedRainbows.contains(lastPickedId)) {
                 showRainbowButton = true;
-            } else if (lastPickedId.equals("Base") && currentlyUnlockedRainbows.contains(CoreSetPack.ID)) {
+            } else if ("Base".equals(lastPickedId) && currentlyUnlockedRainbows.contains(CoreSetPack.ID)) {
                 showRainbowButton = true;
             } else {
                 showRainbowButton = false;
