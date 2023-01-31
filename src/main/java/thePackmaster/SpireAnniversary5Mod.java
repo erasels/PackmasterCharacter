@@ -233,7 +233,6 @@ public class SpireAnniversary5Mod implements
     public static boolean selectedCards = false;
     public static int combatExhausts = 0;
 
-    public static int CLAW_SHARP_TRACKER = 0;
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
@@ -686,7 +685,6 @@ public class SpireAnniversary5Mod implements
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
         UltimateHomerun.HIGH_SCORE = 0;
-        CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
         PenancePower.Power = 20;
         MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);

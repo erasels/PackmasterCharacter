@@ -13,7 +13,7 @@ public class Frostprime extends AbstractContentCard {
 
     public Frostprime() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,6 +21,6 @@ public class Frostprime extends AbstractContentCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(2);
     }
 }
