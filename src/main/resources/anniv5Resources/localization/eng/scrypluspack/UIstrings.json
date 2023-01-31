@@ -1,15 +1,15 @@
 {
-  "${ModID}:CreativityPack": {
+  "${ModID}:ScryPlusPack": {
     "TEXT": [
-      "Creativity",
-      "Create cards and benefit from cards creation.",
+      "Scry Plus",
+      "Look into your draw pile. Some of those cards benefit from being seen, others - from being discarded.",
       "Jedi"
     ]
   },
-  "${ModID}:CreativityPackHat": {
+  "${ModID}:ScryPlusPackHat": {
     "TEXT": [
-      "Anything can be a hat with a little bit of imagination.",
-      "Paper Boat"
+      "",
+      ""
     ]
   }
 }

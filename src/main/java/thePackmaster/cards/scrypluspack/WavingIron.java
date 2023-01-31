@@ -16,6 +16,7 @@ public class WavingIron extends AbstractScryPlusCard{
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         setDmg(7);
         setBlock(7);
+        setMN(2);
     }
 
     @Override

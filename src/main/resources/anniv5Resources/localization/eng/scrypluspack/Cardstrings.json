@@ -1,7 +1,7 @@
 {
   "${ModID}:Anticipate": {
     "NAME": "Anticipate",
-    "DESCRIPTION": "Whenever a card is created during combat, gain !M! Vigor."
+    "DESCRIPTION": "At the start of each turn, Scry !M!. NL and gain 3 Vigor for each card discarded."
   },
   "${ModID}:ApocalypseNow": {
     "NAME": "Apocalypse Now",

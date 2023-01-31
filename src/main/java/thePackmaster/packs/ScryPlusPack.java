@@ -8,7 +8,7 @@ import thePackmaster.cards.scrypluspack.*;
 import java.util.ArrayList;
 
 public class ScryPlusPack extends AbstractCardPack {
-    public static final String ID = SpireAnniversary5Mod.makeID("CreativityPack");
+    public static final String ID = SpireAnniversary5Mod.makeID("ScryPlusPack");
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
     public static final String NAME = UI_STRINGS.TEXT[0];
     public static final String DESC = UI_STRINGS.TEXT[1];
