@@ -2,7 +2,7 @@
   "${ModID}:IterativeDesignPower": {
     "NAME": "Iterative Design",
     "DESCRIPTIONS": [
-      "Whenever you play a card created this combat or play a card twice, gain #b",
+      "Whenever you play a card created this combat or #yDuplicate a card, gain #b",
       " #yBlock."
     ]
   },
@@ -14,7 +14,7 @@
     ]
   },
   "${ModID}:DuplicationPackmasterPower": {
-    "NAME": "Duplication(Packmaster)",
+    "NAME": "Duplication",
     "DESCRIPTIONS": [
       "Your next card is played twice.",
       "Your next #b",

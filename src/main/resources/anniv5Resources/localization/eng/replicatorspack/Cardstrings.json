@@ -26,7 +26,7 @@
   },
   "${ModID}:IterativeDesign": {
     "NAME": "Iterative Design",
-    "DESCRIPTION": "Whenever you play a card created this combat or play a card twice, gain  !M! Block."
+    "DESCRIPTION": "Whenever you play a card created this combat or *Duplicate a card, gain  !M! Block."
   },
   "${ModID}:Xpansion": {
     "NAME": "Xpansion",
