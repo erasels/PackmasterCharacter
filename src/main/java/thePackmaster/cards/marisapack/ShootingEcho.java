@@ -34,7 +34,8 @@ public class ShootingEcho extends AbstractMarisaCard {
         Wiz.vfx(new MissileStrikeEffect(m.hb.cX, m.hb.cY, BetterFireballEffect.randomFlareColor()), Settings.ACTION_DUR_FASTER);
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         Wiz.atb(new SelectCardsInHandAction(1, text, false, false, c -> true, list -> {
-            Wiz.makeInHand(ShootingEcho.this.makeCopy(), list.size());
+            ShootingEcho.this.resetAttributes();
+            Wiz.makeInHand(ShootingEcho.this, list.size());
 
             list.forEach(c -> Wiz.hand().moveToExhaustPile(c));
             list.clear();
