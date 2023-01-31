@@ -125,18 +125,7 @@ public class HatMenu {
 
         if (init) {
             String lastPickedId = SpireAnniversary5Mod.getLastPickedHatID();
-            if (lastPickedId == null || lastPickedId.equals("")) {
-                dropdown.setSelectedIndex(0);
-                if (currentlyUnlockedRainbows.contains(CoreSetPack.ID)) {
-                    showRainbowButton = true;
-                }
-            } else {
-                dropdown.setSelectedIndex(hatsToIndexes.get(lastPickedId));
-                doRainbowButtonLogic(lastPickedId);
-                if (lastPickedId.equals("Base") && currentlyUnlockedRainbows.contains(CoreSetPack.ID)) {
-                    showRainbowButton = true;
-                }
-            }
+            dropdown.setSelectedIndex(hatsToIndexes.getOrDefault(lastPickedId, 0));
         }
     }
 

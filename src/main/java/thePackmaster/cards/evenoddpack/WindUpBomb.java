@@ -70,11 +70,19 @@ public class WindUpBomb extends AbstractEvenOddCard{
     protected String createEvenOddText() {
         if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1)
         {
-            return cardStrings.EXTENDED_DESCRIPTION[1];
+            return cardStrings.EXTENDED_DESCRIPTION[0]
+                    + cardStrings.EXTENDED_DESCRIPTION[1]
+                    + cardStrings.EXTENDED_DESCRIPTION[2]
+                    + cardStrings.EXTENDED_DESCRIPTION[3]
+                    + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[4]);
         }
         else
         {
-            return cardStrings.EXTENDED_DESCRIPTION[4];
+            return cardStrings.EXTENDED_DESCRIPTION[0]
+                    + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[1])
+                    + cardStrings.EXTENDED_DESCRIPTION[2]
+                    + cardStrings.EXTENDED_DESCRIPTION[3]
+                    + cardStrings.EXTENDED_DESCRIPTION[4];
         }
     }
     

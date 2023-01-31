@@ -1,0 +1,24 @@
+{
+  "${ModID}:HeatEnginePower": {
+    "NAME": "热力机",
+    "DESCRIPTIONS": [
+      "每当 一张牌 with a cost of #b",
+      " or greater, 包括 #y增幅 时， is #y消耗ed, 获得 #b",
+      " #y力量 。"
+      ]
+  },
+  "${ModID}:RecallPower": {
+    "NAME": "召回",
+    "DESCRIPTIONS": [
+      "每回合前 ",
+      "#b1 次",
+      "#b",
+      " 次",
+      " #y增幅 时，选择将一张消耗堆的牌返回手牌，将其附加 #y抹除 。",
+      " NL (本回合已触发 #b",
+      " 次。)",
+      " 次。)",
+      " NL (每回合已触发完。)"
+    ]
+  }
+}

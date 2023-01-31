@@ -1,0 +1,16 @@
+{
+  "${ModID}:LegacyPack": {
+    "TEXT": [
+      "宏大遗产",
+      "死去的回忆突然攻击。一份来自过去的卡包，包括尖塔Steam创意工坊开放前的Mod角色的牌。",
+      "作者",
+      "作者：celicath, moocowgoesmoo, JohnnyBazooka, chronometrics, fiiiiilth"
+    ]
+  },
+  "${ModID}:LegacyPackHat": {
+    "TEXT": [
+      "生日快乐！尖塔Mod社区！",
+      "生日帽"
+    ]
+  }
+}

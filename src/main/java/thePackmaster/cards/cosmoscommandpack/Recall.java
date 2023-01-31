@@ -2,7 +2,6 @@ package thePackmaster.cards.cosmoscommandpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.cosmoscommandpack.RecallPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -17,7 +16,7 @@ public class Recall extends AbstractCosmosCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new RecallPower(p));
+        applyToSelf(new RecallPower(p, 1));
     }
 
     public void upp() {

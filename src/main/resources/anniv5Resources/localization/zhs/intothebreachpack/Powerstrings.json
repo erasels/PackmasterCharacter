@@ -1,0 +1,24 @@
+{
+  "${ModID}:AcidPower": {
+    "NAME": "毒液",
+    "DESCRIPTIONS": [
+      "该单位本回合受到 #b2 倍攻击伤害。",
+      "该单位下 #b",
+      " 个回合内受到 #b2 倍攻击伤害。"
+    ]
+  },
+  "${ModID}:StormGenPower": {
+    "NAME": "风暴制造器",
+    "DESCRIPTIONS": [
+      "回合结束时，每有一名有 #r负面效果 的敌人 #y生成 #b",
+      " 个 #y闪电 充能球 。"
+      ]
+  },
+  "${ModID}:VoidShockPower": {
+    "NAME": "Void Shocker",
+    "DESCRIPTIONS": [
+      "每当一名敌人攻击时未能突破你的格挡，其受到 #b",
+      " 点伤害。"
+    ]
+  }
+}

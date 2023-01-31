@@ -1,0 +1,47 @@
+{
+  "${ModID}:S_r_ke": {
+    "NAME": "扌击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:扭曲 。"
+  },
+  "${ModID}:Deconstruct": {
+    "NAME": "解构",
+    "DESCRIPTION": "给予所有敌人 !M! 层 ${ModID}:扭曲 。 NL 消耗 。"
+  },
+  "${ModID}:Darken": {
+    "NAME": "变暗",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:扭曲 。 NL 若目标有其他负面效果，再给予 !${ModID}:m2! 层。"
+  },
+  "${ModID}:BurningAct": {
+    "NAME": "燃烧举止",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 随机 消耗 其中2张。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 其中2张。"
+  },
+  "${ModID}:MindMaze": {
+    "NAME": "思维迷宫",
+    "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 将X张 *晕眩 加入抽牌堆顶部。"
+  },
+  "${ModID}:Deterioration": {
+    "NAME": "恶化",
+    "DESCRIPTION": "回合结束时，随机 消耗 弃牌堆一张牌并获得 !M! 点 格挡 。"
+  },
+  "${ModID}:Shatter": {
+    "NAME": "碎裂",
+    "DESCRIPTION": "目标本回合每失去过生命，造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "目标本回合每失去过生命，造成 !D! 点伤害。 NL (造成 !M! 次)"
+    ]
+  },
+  "${ModID}:Rue": {
+    "NAME": "懊悔",
+    "DESCRIPTION": "获得 [E] [E] 并抽 !M! 张牌。 NL 消耗 下3张打出牌。"
+  },
+  "${ModID}:Static": {
+    "NAME": "频噪声",
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 给予未被格挡伤害 层 ${ModID}:扭曲 。"
+  },
+  "${ModID}:CursedCircle": {
+    "NAME": "诅咒之圈",
+    "DESCRIPTION": "所有单位本回合失去你当前手牌数量点 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "所有单位本回合失去你当前手牌数量点 力量 。"
+  }
+}

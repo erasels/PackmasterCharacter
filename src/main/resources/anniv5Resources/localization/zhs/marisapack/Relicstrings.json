@@ -1,0 +1,9 @@
+{
+  "${ModID}:MiniHakkero": {
+    "NAME": "迷你八卦炉",
+    "FLAVOR": "一个小型元素炉，能够释放足以摧毁一座山的热量与威力。",
+    "DESCRIPTIONS": [
+      "回合开始时，获得 #b%s 层 #y${ModID}:蓄力 。"
+    ]
+  }
+}

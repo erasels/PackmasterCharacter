@@ -5,6 +5,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
@@ -22,7 +23,7 @@ public class InfiniteSpirePatch {
         // card pool hasn't been defined yet (and Infinite Spire uses the card pool to make "pick up card X" quests)
         // Instead, we invoke Infinite Spire's quest generation ourselves by calling generateQuestsIfInfiniteSpireIsLoaded
         // after the Packmaster's card pool has been defined
-        if(p != null && p.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
+        if(p != null && p.chosenClass == ThePackmaster.Enums.THE_PACKMASTER && AbstractDungeon.floorNum == 0 && !CardCrawlGame.loadingSave) {
             clearQuests();
             return SpireReturn.Return(null);
         }

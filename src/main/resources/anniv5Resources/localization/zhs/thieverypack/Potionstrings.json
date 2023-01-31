@@ -1,0 +1,9 @@
+{
+  "${ModID}:DivinePotion": {
+    "NAME": "神圣药水",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 层 #y临时生命 。"
+    ]
+  }
+}

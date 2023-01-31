@@ -1,0 +1,43 @@
+[
+  {
+    "PROPER_NAME": "展现",
+    "NAMES": [
+      "manifest",
+      "展现"
+    ],
+    "DESCRIPTION": "获得一个充能球栏位后，再 生成 充能球。"
+  },
+  {
+    "PROPER_NAME": "新月",
+    "NAMES": [
+      "Crescent Moon",
+      "crescent moon",
+      "Crescent_Moon",
+      "crescent_moon",
+      "新月"
+    ],
+    "DESCRIPTION": "充能球。被动：随机对一名敌人造成伤害，只能被牌触发效果。触发 #b4 次后将其 #y激发 。 #y激发 ：随机对一名敌人造成伤害。"
+  },
+  {
+    "PROPER_NAME": "满月",
+    "NAMES": [
+      "Full Moon",
+      "full moon",
+      "Full_Moon",
+      "full_moon",
+      "满月"
+    ],
+    "DESCRIPTION": "充能球。被动：抽一张牌，只能被牌触发效果。触发 #b4 次后将其 #y激发 。 #y激发 :抽一张牌。"
+  },
+  {
+    "PROPER_NAME": "铭印",
+    "NAMES": [
+      "Inscribed",
+      "inscribed",
+      "Inscribe",
+      "inscribe",
+      "铭印"
+    ],
+    "DESCRIPTION": "打出时触发所有充能球的被动效果。"
+  }
+]

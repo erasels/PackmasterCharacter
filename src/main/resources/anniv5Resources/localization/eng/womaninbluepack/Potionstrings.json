@@ -20,12 +20,5 @@
       "Draw #b",
       " cards. For each #yClaw you draw, draw another card."
     ]
-  },
-  "${ModID}:GenerateClawsPotion": {
-    "NAME": "Bottled Claws",
-    "DESCRIPTIONS": [
-      "Add #b",
-      " #yGhost #yClaws to your hand."
-    ]
   }
 }

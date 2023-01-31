@@ -1,0 +1,43 @@
+{
+  "${ModID}:AstralFracture": {
+    "NAME": "星屑",
+    "DESCRIPTION": "给予所有敌人 !M! 层 ${ModID}:扭曲 。 NL ${ModID}:增幅 [E] : 消耗 一张牌。"
+  },
+  "${ModID}:Cognition": {
+    "NAME": "认知",
+    "DESCRIPTION": "抽 !${ModID}:m2! 张牌。 NL ${ModID}:增幅 [E] :抽之前先 预见 !M! 。"
+  },
+  "${ModID}:EternalStrike": {
+    "NAME": "永恒烛焰",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本牌被消耗，将一张 !M! 点更高伤害的复制品加入手牌。"
+  },
+  "${ModID}:FalseGrit": {
+    "NAME": "奸异",
+    "DESCRIPTION": "消耗 !M! 张牌，每张使你获得 !B! 点 格挡 。 NL ${ModID}:增幅 [E] : 多 消耗 !M! 张。"
+  },
+  "${ModID}:HeatEngine": {
+    "NAME": "热力机",
+    "DESCRIPTION": "2及以上耗能的牌，包括 ${ModID}:增幅 所需的能量，被消耗时， 获得 !M! 点 力量 。"
+  },
+  "${ModID}:Recall": {
+    "NAME": "召回",
+    "DESCRIPTION": "每回合首次 ${ModID}:增幅 时，选择将消耗堆一张牌返回手牌，并将其附加 stslib:抹除 。"
+  },
+  "${ModID}:RefractEnergy": {
+    "NAME": "能量折配",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:增幅 [E] : 本场战斗本牌耗能减1。"
+  },
+  "${ModID}:RopeTrick": {
+    "NAME": "绳技",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:扭曲 。 NL 获得 !B! 点 格挡 。"
+  },
+  "${ModID}:Subspace": {
+    "NAME": "子空间",
+    "DESCRIPTION": "所有敌人失去 ${ModID}:扭曲 层数点生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "所有敌人失去 ${ModID}:扭曲 层数点生命 !M! 次。 NL 消耗 。"
+  },
+  "${ModID}:SubtleKnife": {
+    "NAME": "奥秘匕首",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:扭曲 。 NL ${ModID}:增幅 [E] : 消耗 ，并将本牌一张复制品加入弃牌堆。"
+  }
+}

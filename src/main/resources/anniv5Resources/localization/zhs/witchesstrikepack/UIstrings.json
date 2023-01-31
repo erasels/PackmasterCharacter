@@ -1,0 +1,16 @@
+{
+  "${ModID}:WitchesStrikePack": {
+    "TEXT": [
+      "猎天使魔女",
+      "直接释放你的充能球能量，不用担心球位限制，'展现'这种能力自可帮你实现。",
+      "Silver",
+      "卡牌创意来自任天堂 #yPlatinum #yGames 的游戏 #y猎天使魔女(ベヨネッタ) 系列。"
+    ]
+  },
+  "${ModID}:WitchesStrikePackHat": {
+    "TEXT": [
+      "巫术既魔幻又时尚。",
+      "礼拜帽"
+    ]
+  }
+}

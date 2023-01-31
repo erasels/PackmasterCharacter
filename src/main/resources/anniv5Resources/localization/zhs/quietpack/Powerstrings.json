@@ -1,0 +1,9 @@
+{
+  "${ModID}:HammerThrowPower": {
+    "NAME": "投掷铅锤",
+    "DESCRIPTIONS": [
+      "每当一张牌被 保留 时，对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  }
+}

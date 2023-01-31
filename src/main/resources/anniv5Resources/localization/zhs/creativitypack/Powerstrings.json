@@ -1,0 +1,20 @@
+{
+  "${ModID}:MakeshiftSwordPower": {
+    "NAME": "临时剑刃",
+    "DESCRIPTIONS": [
+        "创造一张牌时，获得 #b%d 层 #y活力 。"
+      ]
+  },
+  "${ModID}:MakeshiftShieldPower": {
+    "NAME": "临时护盾",
+    "DESCRIPTIONS": [
+        "创造一张牌时，获得 #b%d 点 #y格挡 。"
+      ]
+  },
+  "${ModID}:FirewallPower": {
+    "NAME": "防火墙",
+    "DESCRIPTIONS": [
+      "创造 #y状态牌 时，将其 消耗 。"
+    ]
+  }
+}

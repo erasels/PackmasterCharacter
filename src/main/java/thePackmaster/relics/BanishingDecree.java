@@ -65,20 +65,9 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
             tmp.addToTop(c);
         }
         AbstractDungeon.gridSelectScreen.open(tmp,
-                1, DESCRIPTIONS[1] + name + ".",
+                1, DESCRIPTIONS[1] + name + DESCRIPTIONS[7],
                 false, false, false, false);
     }
-
-
-    @Override
-    public void onUnequip() {
-        if (bannedPack != null) {
-            SpireAnniversary5Mod.currentPoolPacks.add(packsByID.get(bannedPack));
-            CardCrawlGame.dungeon.initializeCardPools();
-        }
-
-    }
-
 
     @Override
     public void update() {
@@ -102,7 +91,7 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
                     tmp.addToTop(c);
                 }
                 AbstractDungeon.gridSelectScreen.open(tmp,
-                        1, DESCRIPTIONS[5] + name + ".",
+                        1, DESCRIPTIONS[5] + name + DESCRIPTIONS[7],
                         false, false, false, false);
             } else {
                 cardSelected2 = true;

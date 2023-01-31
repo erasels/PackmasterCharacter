@@ -1,0 +1,23 @@
+{
+  "${ModID}:OptimizedBlurPower": {
+    "NAME": "视晕校正",
+    "DESCRIPTIONS": ["每当你造成未被格挡的伤害时，获得 #b", " 点 #y格挡 。"]
+  },
+  "${ModID}:HardCaramelPower": {
+    "NAME": "硬焦糖",
+    "DESCRIPTIONS": ["攻击后，若目标无 #y易伤 ，给予 #b", " 层。"]
+  },
+  "${ModID}:AvatarBeatPower": {
+    "NAME": "漂亮一击",
+    "DESCRIPTIONS": [
+      "每当你造成 #b",
+      " 点以上的未被格挡伤害时，获得 #b",
+      " 点 #y力量 ，抽 #b",
+      " 张牌，并将触发条件的伤害阈值提高 #b5 点。",
+      " 张牌，并将触发条件的伤害阈值提高 #b5 点。"]
+  },
+  "${ModID}:OpenBracketPower": {
+    "NAME": "开场一击",
+    "DESCRIPTIONS": ["本回合只能打出 #y攻击 牌。"]
+  }
+}

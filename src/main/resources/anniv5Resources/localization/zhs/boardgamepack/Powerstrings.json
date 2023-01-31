@@ -1,0 +1,49 @@
+{
+  "${ModID}:DicePower": {
+    "NAME": "骰子",
+    "DESCRIPTIONS": [
+      "下张打出的带有伤害或 #y格挡 的牌数值提高 #b",
+      " 点。"
+    ]
+  },
+  "${ModID}:SkipNextTurnPower": {
+    "NAME": "跳过下回合",
+    "DESCRIPTIONS": [
+      "跳过你的下回合。",
+      "跳过你的下 #b",
+      " 个回合。"
+    ]
+  },
+  "${ModID}:OneTimeAdvantagePower": {
+    "NAME": "优势",
+    "DESCRIPTIONS": [
+      "下个 #y骰子 额外投掷 #b1",
+      "下个 #y骰子 额外投掷 #b",
+      " 次，结果取最大值。"
+    ]
+  },
+  "${ModID}:AdvantagePower": {
+    "NAME": "优势",
+    "DESCRIPTIONS": [
+      "投掷 #y骰子 时，额外投掷 #b1 次，结果取最大值。",
+      "投掷 #y骰子 时，额外投掷 #b",
+      " 次，结果取最大值。"
+    ]
+  },
+  "${ModID}:PerceptionCheckPower": {
+    "NAME": "观察",
+    "DESCRIPTIONS": [
+      "你的回合开始时，若你无 #y骰子 ，投掷 #b1 枚 #y8面骰 。",
+      "你的回合开始时，若你无 #y骰子 ，投掷 #b",
+      " 枚 #y8面骰 。"
+    ]
+  },
+  "${ModID}:JailPower": {
+    "NAME": "监狱",
+    "DESCRIPTIONS": [
+      "本回合你不受到伤害，且无法打出攻击牌。",
+      "下 #b",
+      " 个回合，你不受到伤害，且无法打出攻击牌。"
+    ]
+  }
+}

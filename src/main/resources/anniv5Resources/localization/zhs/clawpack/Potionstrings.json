@@ -1,0 +1,32 @@
+{
+  "${ModID}:AttackPotionButClaw": {
+    "NAME": "爪击药水",
+    "DESCRIPTIONS": [
+      "从 #b3 种随机 #y攻击 牌选择 #b1 种加入手牌。本回合其耗能为 #b0 且被 #y修改 ： 牌名加上'爪击'，且效果加上'获得一张 #y幽灵爪击 '。",
+      "从 #b3 种随机 #y攻击 牌选择 #b1 种，并将其 #b",
+      " 张复制品加入手牌。本回合其耗能为 #b0 且被 #y修改 ： 牌名加上'爪击'，且效果加上'获得一张 #y幽灵爪击 '。",
+      "选择一张攻击牌加入手牌。"
+    ]
+  },
+  "${ModID}:ClawPowerPotion": {
+    "NAME": "磨爪油",
+    "DESCRIPTIONS": [
+      "#y修改 手中所有攻击： 牌名加上'爪击'。 #y磨爪 #b",
+      " 。"
+    ]
+  },
+  "${ModID}:DrawClawsPotion": {
+    "NAME": "迅捷药水",
+    "DESCRIPTIONS": [
+      "抽 #b",
+      " 张牌。每抽到一张 #y爪击 ，再抽一张牌。"
+    ]
+  },
+  "${ModID}:GenerateClawsPotion": {
+    "NAME": "瓶装爪击",
+    "DESCRIPTIONS": [
+      "将 #b",
+      " 张 #y幽灵爪击 加入手牌。"
+    ]
+  }
+}

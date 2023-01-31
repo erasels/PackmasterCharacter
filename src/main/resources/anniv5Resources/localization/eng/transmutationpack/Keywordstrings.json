@@ -6,7 +6,7 @@
       "transmuted",
       "transmutes"
     ],
-    "DESCRIPTION": "Transforms a card in combat into any card of the same rarity available to your current run. The new card deals #b1 more damage and gains #b1 more #yBlock for the rest of combat. This effect stacks."
+    "DESCRIPTION": "Transforms a card in combat into any card of the same rarity available through current card rewards. The new card deals #b1 more damage and gains #b1 more #yBlock for the rest of combat. This effect stacks."
   },
   {
     "PROPER_NAME": "Mutable",

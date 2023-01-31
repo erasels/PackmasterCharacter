@@ -1,0 +1,7 @@
+{
+  "${ModID}:SwaggerPower": {
+    "NAME": "酷傲者",
+    "DESCRIPTIONS": ["若回合结束时处于 #y姿态 ， 获得 #b",
+      " 点 #y力量 有 #y敏捷 。"]
+  }
+}

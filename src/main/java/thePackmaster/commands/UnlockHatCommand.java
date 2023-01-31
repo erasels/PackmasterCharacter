@@ -17,7 +17,7 @@ public class UnlockHatCommand extends ConsoleCommand {
     @Override
     public void execute(String[] tokens, int depth) {
         if (tokens.length != 2) {
-            DevConsole.log("You need to add the ID of the hat you want.");
+            DevConsole.log("You need to add the name of the pack of the hat you want.");
             return;
         }
         boolean found = false;
@@ -63,6 +63,6 @@ public class UnlockHatCommand extends ConsoleCommand {
     @Override
     public void errorMsg() {
         DevConsole.couldNotParse();
-        DevConsole.log("Please put in a valid hat ID.");
+        DevConsole.log("Please put in a valid pack name the hat is from.");
     }
 }

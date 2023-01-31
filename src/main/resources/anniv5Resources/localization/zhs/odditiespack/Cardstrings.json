@@ -1,0 +1,66 @@
+{
+  "${ModID}:StylePoints": {
+    "NAME": "风度值",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 失去所有 虚弱 。 NL 随机将你帽子所属的卡包内的一张牌加入手牌。"
+  },
+  "${ModID}:LetsPlay8Ball": {
+    "NAME": "8球开桌！",
+    "DESCRIPTION": "将一张 *8号球 加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "将一张 *9号球 加入抽牌堆。"
+  },
+  "${ModID}:EightBall": {
+    "NAME": "8号球",
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "9号球"
+    ]
+  },
+  "${ModID}:ZaHando": {
+    "NAME": "咋杭都",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 手牌中央的一两张牌。"
+  },
+  "${ModID}:LetsDraft": {
+    "NAME": "构筑卡牌！",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择一张手牌，将其一张复制品加入抽牌堆。",
+    "EXTENDED_DESCRIPTION": [
+      "复制一张牌。"
+    ]
+  },
+  "${ModID}:Beacon": {
+    "NAME": "灯标",
+    "DESCRIPTION": "选择 !M! 张手牌， NL 将其 升级 并附加 保留 。",
+    "UPGRADE_DESCRIPTION": "选择 !M! 张手牌， NL 将其 升级 并附加 保留 。",
+    "EXTENDED_DESCRIPTION": [
+      "升级并附加保留。"
+    ]
+  },
+  "${ModID}:SleeveUp": {
+    "NAME": "撸起袖子",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若本牌出现在卡牌奖励中，变为附带 保留 的闪卡。"
+  },
+  "${ModID}:AutoBattler": {
+    "NAME": "尖塔自动机",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。 NL 你的牌被自动打出。"
+  },
+  "${ModID}:ShiningStyle": {
+    "NAME": "闪光样式",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。 NL 起动 ：获得 !${ModID}:m2! *金币 。"
+  },
+  "${ModID}:FinalForm": {
+    "NAME": "最终形态",
+    "DESCRIPTION": "虚无 。 NL 随机 消耗 一张手牌。 NL 回合开始时，打出并 消耗 其一张复制品。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 选择 消耗 一张手牌。 NL 回合开始时，打出并 消耗 其一张复制品。",
+    "EXTENDED_DESCRIPTION": [
+      "为最终形态消耗一张牌。"
+    ]
+  },
+  "${ModID}:MidnightStrike": {
+    "NAME": "午夜打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若为本次战斗打出的第12张牌，伤害提高至 !${ModID}:sd! 点。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (已打出 ",
+      " 张牌。)",
+      " 张牌。)"
+    ]
+  }
+}

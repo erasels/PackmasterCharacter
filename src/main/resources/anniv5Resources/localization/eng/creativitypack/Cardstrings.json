@@ -17,7 +17,7 @@
   },
   "${ModID}:Souvenirs": {
     "NAME": "Souvenirs",
-    "DESCRIPTION": "{@@}Create an *Insight, *Smite or *Safety in hand. It draws a card. {!Upgrades!|>0= NL Do it again.}"
+    "DESCRIPTION": "{@@}Create a *Smite or *Safety in hand. It draws a card. {!Upgrades!|>0= NL Do it again.}"
   },
   "${ModID}:Mimicry": {
     "NAME": "Mimicry",
@@ -29,7 +29,7 @@
   },
   "${ModID}:BarrierBeacon": {
     "NAME": "Barrier Beacon",
-    "DESCRIPTION": "{@@}Gain !B! Block, create a{!Upgrades!|>0=n Upgraded} copy of this in hand. Exhaust."
+    "DESCRIPTION": "{@@}Gain !B! Block, create a{!Upgrades!|>0=n Upgraded} copy of this in hand. NL Exhaust."
   },
   "${ModID}:StrikingStrike": {
     "NAME": "Striking Strike",

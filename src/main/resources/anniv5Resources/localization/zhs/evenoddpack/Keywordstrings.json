@@ -1,0 +1,26 @@
+[
+  {
+    "PROPER_NAME": "累偶",
+    "NAMES": [
+      "even",
+      "累偶"
+    ],
+    "DESCRIPTION": "本回合打出过的牌累计为偶数张时触发效果(打出本牌后判定)。"
+  },
+  {
+    "PROPER_NAME": "累奇",
+    "NAMES": [
+      "odd",
+      "累奇"
+    ],
+    "DESCRIPTION": "本回合打出过的牌累计为奇数张时触发效果(打出本牌后判定)。"
+  },
+  {
+    "PROPER_NAME": "首牌",
+    "NAMES": [
+      "first",
+      "首牌"
+    ],
+    "DESCRIPTION": "作为一回合的首张打出牌时触发效果。"
+  }
+]

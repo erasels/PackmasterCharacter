@@ -1,0 +1,15 @@
+{
+  "${ModID}:PinnaclePack": {
+    "TEXT": [
+      "顶点",
+      "从2022年最佳Mod角色中抽选的一套辅助性牌。",
+      "SandTag"
+    ]
+  },
+  "${ModID}:PinnaclePackHat": {
+    "TEXT": [
+      "皇家头饰，只配最优秀的牌。",
+      "王冠"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "${ModID}:QuickFix": {
+  "NAME": "快速修补",
+  "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机 升级 一张手牌。"
+  },
+  "${ModID}:RedHotHammer": {
+    "NAME": "炽热铁锤",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 能被多次 升级 。"
+  },
+  "${ModID}:HeartOfTheForge": {
+    "NAME": "锻造之心",
+    "DESCRIPTION": "{@@}保留 。 NL 获得{!M!|>1= !M!} [E] 。 NL 被 保留 时，将本牌升级。 NL 能被多次 升级 。 NL 消耗 。"
+  },
+  "${ModID}:SharpeningSheath": {
+    "NAME": "磨剑之鞘",
+    "DESCRIPTION": "抽 !M! 张牌， NL 并将其 升级 。"
+  },
+  "${ModID}:CarelessSwing": {
+    "NAME": "粗心敲打",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 消耗 一张 *未升级 的手牌。"
+  },
+  "${ModID}:SetUpShop": {
+    "NAME": "铺张店面",
+    "DESCRIPTION": "选择升级 !M! 张抽或弃牌堆的牌，并将其放入抽牌堆顶部。"
+  },
+  "${ModID}:MastersStrike": {
+    "NAME": "宗师打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽弃牌堆与手牌每有一张 升级 的牌，本牌伤害加 !M! 。"
+  },
+  "${ModID}:ScrapMetal": {
+    "NAME": "回收金属",
+    "DESCRIPTION": "每有 !M! 点 格挡 ，随机 升级 抽弃牌堆或手牌中的一张牌。 NL 消耗 。"
+  },
+  "${ModID}:BlacksmithsShield": {
+    "NAME": "铁匠之盾",
+    "DESCRIPTION": "打出牌时，获得其 升级 次数点 格挡 。"
+  },
+  "${ModID}:Masterwork": {
+    "NAME": "大师杰作",
+    "DESCRIPTION": "选择 升级 一张牌 !M! 次。 NL 可升级所有牌任意次。 NL 消耗性 !stslib:ex! 。"
+  }
+}

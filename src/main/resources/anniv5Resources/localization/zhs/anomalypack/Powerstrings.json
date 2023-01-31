@@ -1,0 +1,17 @@
+{
+  "${ModID}:MindOverMatterPower": {
+    "NAME": "心胜于物",
+    "DESCRIPTIONS": [
+      "每当你抽一张牌, 获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "${ModID}:ThoughtweavingPower": {
+    "NAME": "思绪编织",
+    "DESCRIPTIONS": [
+      "每当你打出一张 #y技能 或 #y攻击 牌时，抽 #b",
+      "1 张属于它另一个卡包的，相反类型的牌。",
+      " 张属于它另一个卡包的，相反类型的牌。"
+    ]
+  }
+}

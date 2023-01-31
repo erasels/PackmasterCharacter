@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.cards.evenoddpack.AbstractEvenOddCard;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.util.dynamicdynamic.DynamicProvider;
@@ -76,15 +77,26 @@ public class PrimeDirectivePower extends AbstractPackmasterPower implements Dyna
             return damage + amount;
         }
         if (keyMap.containsKey(card)) {
-            keyMap.remove(card);
             card.initializeDescription();
         }
         return damage;
     }
-
+    
+    @Override
+    public void onCardDraw(AbstractCard card) {
+        card.initializeDescription();
+    }
+    
     public String modifyDescription(String currentRaw, AbstractCard card) {
-        if(card.type == AbstractCard.CardType.ATTACK && AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0) {
-            return currentRaw + DESCRIPTIONS[2] + "!" + keyMap.get(card) + "!" + DESCRIPTIONS[3];
+        if(card.type == AbstractCard.CardType.ATTACK
+                && AbstractDungeon.player.hand.contains(card)) {
+            if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0) {
+                return currentRaw + DESCRIPTIONS[2] + DESCRIPTIONS[3] + " !" + keyMap.get(card) + "!" + DESCRIPTIONS[4];
+            }
+            else
+            {
+                return currentRaw + DESCRIPTIONS[2] + AbstractEvenOddCard.makeCardTextGray(DESCRIPTIONS[3]) + " !" + keyMap.get(card) + "!" +  AbstractEvenOddCard.makeCardTextGray(DESCRIPTIONS[4]);
+            }
         }
         return currentRaw;
     }

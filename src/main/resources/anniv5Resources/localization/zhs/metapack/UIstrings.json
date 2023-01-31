@@ -1,0 +1,15 @@
+{
+  "${ModID}:MetaPack": {
+    "TEXT": [
+      "元",
+      "可与各类牌联动的基础卡包。",
+      "AlexMdle"
+    ]
+  },
+  "${ModID}:MetaPackHat": {
+    "TEXT": [
+      "放头上的。",
+      "帽"
+    ]
+  }
+}
