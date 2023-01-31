@@ -37,7 +37,7 @@
   "${ModID}:SmithingHammer": {
     "NAME": "锻造锤击",
     "DESCRIPTION": "造成 !D! 点伤害3次。 NL 随机 升级 1张手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害3次。. NL 随机 升级 !M! 张手牌。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害3次。 NL 随机 升级 !M! 张手牌。"
   },
   "${ModID}:Synergize": {
     "NAME": "套路配合",

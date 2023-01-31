@@ -1,9 +1,10 @@
 {
   "${ModID}:DimensionGatePack": {
     "TEXT": [
-      "次元之门",
-      "一套来自其他奇奇怪怪游戏的牌。你能找出所有来源吗？",
-      "MichaelMayhem"
+      "次元之门一：蛇鸣",
+      "一套来自其他游戏的牌！用最合适的牌组操控法将你的敌人笼罩在 中毒 之中。",
+      "MichaelMayhem",
+      "卡牌创意来自游戏： NL 虚空之库(Vault of the Void) NL 超越方尖碑(Across the Obelisk) NL 伊甸之路(One Step from Eden) NL 欺诈之地(Griftlands) NL NL 感兴趣的话可以在Steam查看！"
     ]
   },
   "${ModID}:DimensionGatePackHat": {

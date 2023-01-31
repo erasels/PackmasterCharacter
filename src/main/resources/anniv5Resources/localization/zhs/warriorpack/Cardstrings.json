@@ -25,8 +25,8 @@
   },
   "${ModID}:Fall": {
     "NAME": "落击",
-    "DESCRIPTION": "造成你抽牌堆牌数+6点 ${ModID}:正面 伤害 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 造成你抽牌堆牌数+6点 ${ModID}:正面 伤害 。",
+    "DESCRIPTION": "造成你抽牌堆牌数+6点 ${ModID}:正面 伤害。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 造成你抽牌堆牌数+6点 ${ModID}:正面 伤害。",
     "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害。"]
   },
   "${ModID}:Turtle": {

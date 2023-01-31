@@ -1,16 +1,27 @@
 {
-  "${ModID}:MagicMissilePower": {
-    "NAME": "魔法之力",
+  "${ModID}:SchemePower": {
+    "NAME": "密谋",
     "DESCRIPTIONS": [
-      "#y魔法 牌本回合额外造成 #b",
-      " 点伤害。"
+      "本回合接下来 #b",
+      " 张打出的 #b1 及以下耗能的牌额外打出一次。",
+      "本回合接下来打出的 #b1 及以下耗能的牌额外打出一次。"
     ]
   },
-  "${ModID}:ArsenalGearPower": {
-    "NAME": "武库零件",
+  "${ModID}:SchemeNextTurnPower": {
+    "NAME": "密谋",
     "DESCRIPTIONS": [
-      "下 #b",
-      " 个回合开始时，随机将一张 #b罕见 或 #y稀有 牌加入手牌，其耗能该回合首次为 #b0 。"
+      "下回合，你打出的前 #b",
+      " 张 #b1 及以下耗能的牌额外打出一次。",
+      "下回合，你打出的首张 #b1 及以下耗能的牌额外打出一次。"
+    ]
+  },
+  "${ModID}:TomeOfIntellectPower": {
+    "NAME": "智慧巨著",
+    "DESCRIPTIONS": [
+      "你的回合开始时，将 #b",
+      " 张 #y智慧卷轴 加入抽牌堆。",
+      " 张 #y智慧卷轴 加入抽牌堆。"
     ]
   }
 }
+

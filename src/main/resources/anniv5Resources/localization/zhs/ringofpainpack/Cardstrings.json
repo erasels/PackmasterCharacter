@@ -33,8 +33,8 @@
   },
   "${ModID}:Hollower": {
     "NAME": "虚噬怪",
-    "DESCRIPTION": "虚无 。 NL 选择 消耗 抽牌堆 !M! 张牌。 NL 将弃牌堆一张牌返回手牌并附加 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择 消耗 抽牌堆 !M! 张牌。 NL 将弃牌堆一张牌返回手牌并附加 消耗 。"
+    "DESCRIPTION": "选择 消耗 抽牌堆一张牌。 NL 若成功 消耗 ，将弃牌堆一张牌返回手牌并附加 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 选择 消耗 抽牌堆一张牌。 NL 若成功 消耗 ，将弃牌堆一张牌返回手牌并附加 消耗 。"
   },
   "${ModID}:Owl": {
     "NAME": "鸮兽",

@@ -18,5 +18,10 @@
   "${ModID}:PackRip": {
     "NAME": "拆包",
     "DESCRIPTION": "丢弃所有手牌。 NL 从三种卡包选择一种，将其所含牌全部加入手牌。 NL 消耗 。"
+  },
+  "${ModID}:ConjurePack": {
+    "NAME": "卡包召唤",
+    "DESCRIPTION": "从本局已选的 !M! 种卡包中选择一种。 NL 下5个回合开始时，随机将其内2张牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 从本局已选的 !M! 种卡包中选择一种。 NL 下5个回合开始时，随机将其内2张牌加入手牌。"
   }
 }

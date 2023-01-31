@@ -35,7 +35,7 @@
   },
   "${ModID}:ReduceOverhead": {
     "NAME": "精简头脑",
-    "DESCRIPTION": "消耗 所有复制牌的牌。每张造成 !D! 点伤害 。 NL 消耗 。"
+    "DESCRIPTION": "消耗 所有复制牌的牌。每张造成 !D! 点伤害。 NL 消耗 。"
   },
   "${ModID}:MagicHand": {
     "NAME": "魔法之手",

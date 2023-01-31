@@ -41,6 +41,6 @@
   },
   "${ModID}:StarSpawn": {
     "NAME": "斗星召唤",
-    "DESCRIPTION": "造成13点伤害两次。 NL 回复 !M! 点生命。 NL 生成 一个 等离子 充能球。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 回复 !M! 点生命。 NL 生成 一个 等离子 充能球。 NL 消耗 。"
   }
 }

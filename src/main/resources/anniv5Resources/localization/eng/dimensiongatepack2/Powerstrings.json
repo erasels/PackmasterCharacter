@@ -16,7 +16,7 @@
   "${ModID}:DaggerstormPower": {
     "NAME": "Daggerstorm",
     "DESCRIPTIONS": [
-      "#b0-Cost #yExhaust cards are played ",
+      "#b0-Cost #yExhaust cards are played #b",
       " additional times.",
       " additional time."
     ]
