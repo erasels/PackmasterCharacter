@@ -5,7 +5,7 @@
   },
   "${ModID}:Despair": {
     "NAME": "绝望",
-    "DESCRIPTION": "本牌被视为诅咒。 NL 消耗 。"
+    "DESCRIPTION": "本牌同时被视为 诅咒 。 NL 消耗 。"
   },
   "${ModID}:EatWithoutTable": {
     "NAME": "无桌进食",
