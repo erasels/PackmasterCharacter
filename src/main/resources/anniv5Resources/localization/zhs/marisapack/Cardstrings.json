@@ -35,7 +35,7 @@
   },
   "${ModID}:DragonMeteor": {
     "NAME": "龙陨星",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗堆每有一张牌，本牌伤害加 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗堆每有一张牌， NL 本牌伤害加 !M! 。"
   },
   "${ModID}:EarthlightRay": {
     "NAME": "地球光",

@@ -34,7 +34,7 @@
   },
   "${ModID}:StormGenerator": {
     "NAME": "风暴制造器",
-    "DESCRIPTION": "回合结束时，每有带负面效果的敌人， 生成 !M! 个 闪电 充能球。"
+    "DESCRIPTION": "回合结束时，每有一名带有负面效果的敌人， 生成 !M! 个 闪电 充能球。"
   },
   "${ModID}:VoidShocker": {
     "NAME": "自发电击器",

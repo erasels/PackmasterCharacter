@@ -17,8 +17,8 @@
   },
   "${ModID}:MayhemForm": {
     "NAME": "不懈形态",
-    "DESCRIPTION": "每回合手中只剩不超过2张牌时触发一次。 NL 抽2张牌。NL 获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 每回合手中只剩不超过2张牌时触发一次。 NL 抽2张牌。NL 获得 [E] [E] 。"
+    "DESCRIPTION": "每回合手中只剩不超过2张牌时触发一次。 NL 抽2张牌。 NL 获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 每回合手中只剩不超过2张牌时触发一次。 NL 抽2张牌。 NL 获得 [E] [E] 。"
   },
   "${ModID}:RippedPecs": {
     "NAME": "腹肌",

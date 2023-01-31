@@ -33,7 +33,7 @@
   },
   "${ModID}:Bees": {
     "NAME": "蜜蜂！",
-    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害 !M! 次。 NL 每有一枚 [bugIcon] ，本牌伤害增加1点。",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害 !M! 次。 NL 每有一枚 [bugIcon] ， NL 本牌伤害增加1点。",
     "EXTENDED_DESCRIPTION": [
       "B",
       "E",

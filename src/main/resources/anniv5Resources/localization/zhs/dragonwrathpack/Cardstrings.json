@@ -29,7 +29,7 @@
   },
   "${ModID}:HolyWrath": {
     "NAME": "圣洁怒火",
-    "DESCRIPTION": "受到 !M! 点伤害。 NL 获得 ${ModID}:告罪 时，从弃牌堆返回手牌。 "
+    "DESCRIPTION": "受到 !M! 点伤害。 NL 获得 ${ModID}:告罪 时，本牌从弃牌堆返回手牌。 "
   },
   "${ModID}:Absolution": {
     "NAME": "坚决",

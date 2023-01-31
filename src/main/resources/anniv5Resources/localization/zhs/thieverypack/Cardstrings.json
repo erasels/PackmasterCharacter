@@ -41,7 +41,7 @@
   },
   "${ModID}:ThieveryMastery": {
     "NAME": "高超窃技",
-    "DESCRIPTION": "成为神偷。 NL (窃取时获得双倍量。)",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 成为神偷。 NL (窃取时获得双倍量。)"
+    "DESCRIPTION": "成为神偷。 NL (窃取时获得双倍量)",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 成为神偷。 NL (窃取时获得双倍量)"
   }
 }
