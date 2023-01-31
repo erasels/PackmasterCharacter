@@ -1,4 +1,4 @@
-package thePackmaster.patches;
+package thePackmaster.hats;
 
 
 import basemod.BaseMod;
@@ -16,6 +16,7 @@ import com.esotericsoftware.spine.Slot;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.Settings;
 import javassist.CtBehavior;
+import thePackmaster.SpireAnniversary5Mod;
 
 
 public class HatShadersPatches {
@@ -44,7 +45,7 @@ public class HatShadersPatches {
 
         @SpireInsertPatch(locator = BeginBufferLocator.class, localvars = {"slot"})
         public static void beginBuffer(PolygonSpriteBatch batch, Slot slot) {
-            if (slot.getAttachment().getName().equals("hat") || slot.getAttachment().getName().equals("packmaster_hat")) {
+            if (SpireAnniversary5Mod.isHatRainbow && (slot.getAttachment().getName().equals("hat") || slot.getAttachment().getName().equals("packmaster_hat"))) {
                 isBufferOn = true;
                 batch.flush();
                 if (buffer == null) {
@@ -91,7 +92,7 @@ public class HatShadersPatches {
     private static final float SHADER_STRENGTH = 0.6f;
     private static final float SHADER_SPEED = 0.2f;
     private static final float SHADER_ANGLE = 0f;
-    private static final float SHADER_WIDTH = 5f;
+    private static final float SHADER_WIDTH = 10f;
 
     private static void initShader() {
         if (rainbowShader == null) {

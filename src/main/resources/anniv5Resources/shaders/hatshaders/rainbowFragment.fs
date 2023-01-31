@@ -15,8 +15,8 @@ uniform vec2 u_screenSize;
 
 void main() {
 	float hue = v_texCoord.x * cos(radians(u_angle)) * u_width - v_texCoord.y * sin(radians(u_angle)) * u_width;
-	float hueR = hue + u_time;
-	float hueG = hue + 2 * u_time;
+	float hueR = hue + (5./7.)*u_time;
+	float hueG = hue + (17./9.) * u_time;
 	float hueB = hue;
 	vec4 color = texture(u_texture, v_texCoord);
 	vec3 red = vec3(color.r, 0, 0);
