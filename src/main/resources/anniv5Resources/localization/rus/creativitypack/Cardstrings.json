@@ -1,0 +1,50 @@
+{
+  "${ModID}:MakeshiftSword": {
+    "NAME": "Кустарный меч",
+    "DESCRIPTION": "Даёт !M! Бодрости при создании карты в бою."
+  },
+  "${ModID}:MakeshiftShield": {
+    "NAME": "Кустарный щит",
+    "DESCRIPTION": "Даёт !M! Защиты при создании карты в бою."
+  },
+  "${ModID}:PaintBrush": {
+    "NAME": "Кисть художника",
+    "DESCRIPTION": "{@@}${ModID}:Найдите {!Upgrades!|>0=n улучшенную }карту с выбранными типом и стоимостью."
+  },
+  "${ModID}:Firewall": {
+    "NAME": "Антивирус",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Начальная. NL }Сжигает создаваемые в бою Статусы."
+  },
+  "${ModID}:Souvenirs": {
+    "NAME": "Сувениры",
+    "DESCRIPTION": "{@@}Добавляет в руку *Кару или *Пристанище. NL Она берёт карту при разыгрывании. {!Upgrades!|>0= NL Выберите ещё один раз.}"
+  },
+  "${ModID}:Mimicry": {
+    "NAME": "Мимикрия",
+    "DESCRIPTION": "{@@} ${ModID}:Найдите {!Upgrades!|>0= улучшенную}обычную карту из других выбранных Наборов."
+  },
+  "${ModID}:CraftyMove": {
+    "NAME": "Хитрый ход",
+    "DESCRIPTION": "Наносит !D! урона. Если в этом ходу была создана карта, то вы получаете [E] и берёте одну карту."
+  },
+  "${ModID}:BarrierBeacon": {
+    "NAME": "Барьер света",
+    "DESCRIPTION": "{@@}Даёт !B! Защиты. NL Добавляет в руку свою{!Upgrades!|>0=n улучшенную} копию. NL Сжигается."
+  },
+  "${ModID}:StrikingStrike": {
+    "NAME": "Ударный удар",
+    "DESCRIPTION": "{@@}Наносит !D! урона. NL ${ModID}:Найдите {!Upgrades!|>0=улучшенную }карту, содержащую «Удар» в названии. Она Сжигается при разыгрывании и стоит 0 в этом ходу."
+  },
+  "${ModID}:AccumulativeStrike": {
+    "NAME": "Аккумулятивный удар",
+    "DESCRIPTION": "{@@}Наносит !D! урона. NL Наносит !M! доп. урона за КАЖДУЮ созданную в бою карту{!Upgrades!|0= (кроме Статусов)}."
+  },
+  "${ModID}:BrushModalTypeChoice": {
+    "NAME": "You should never see this",
+    "DESCRIPTION": "{@@}Выберите этот тип карт для Находки."
+  },
+  "${ModID}:BrushModalCostChoice": {
+    "NAME": "You should never see this",
+    "DESCRIPTION": "{@@}Выберите эту стоимость карт для Находки."
+  }
+}

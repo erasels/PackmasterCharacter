@@ -510,6 +510,7 @@ public class SpireAnniversary5Mod implements
         }
     }
 
+    @Deprecated
     private String getLangString() {
         for (Settings.GameLanguage lang : SupportedLanguages) {
             if (lang.equals(Settings.language)) {
@@ -521,17 +522,63 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditStrings() {
-        BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + getLangString() + "/Cardstrings.json");
-        BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + getLangString() + "/Relicstrings.json");
-        BaseMod.loadCustomStringsFile(CharacterStrings.class, modID + "Resources/localization/" + getLangString() + "/Charstrings.json");
-        BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + getLangString() + "/Powerstrings.json");
-        BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + getLangString() + "/UIstrings.json");
-        BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + getLangString() + "/Stancestrings.json");
-        BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + getLangString() + "/Orbstrings.json");
-        BaseMod.loadCustomStringsFile(PotionStrings.class, modID + "Resources/localization/" + getLangString() + "/Potionstrings.json");
-        BaseMod.loadCustomStringsFile(EventStrings.class, modID + "Resources/localization/" + getLangString() + "/Eventstrings.json");
+        loadStrings("eng");
 
-        loadPackStrings();
+        Collection<CtClass> packClasses = new AutoAdd(modID)
+                .packageFilter(AbstractCardPack.class)
+                .findClasses(AbstractCardPack.class)
+                .stream()
+                .filter(c -> !baseGamePacks.contains(c.getName()))
+                .collect(Collectors.toList());
+        logger.info("Found pack classes with AutoAdd: " + packClasses.size());
+
+        loadPackStrings(packClasses, "eng");
+        if (Settings.language != Settings.GameLanguage.ENG)
+        {
+            loadStrings(Settings.language.toString().toLowerCase());
+            loadPackStrings(packClasses, Settings.language.toString().toLowerCase());
+        }
+    }
+
+
+    private void loadStrings(String langKey) {
+        if (!Gdx.files.internal(modID + "Resources/localization/" + langKey + "/").exists()) return;
+        String filepath = modID + "Resources/localization/" + langKey + "/Cardstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(CardStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Relicstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(RelicStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Charstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(CharacterStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Powerstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(PowerStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/UIstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(UIStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Stancestrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(StanceStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Orbstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(OrbStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Potionstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(PotionStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Eventstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(EventStrings.class, filepath);
+        }
     }
 
     // These packs are excluded from loading of pack-specific string files because they consistent entirely of base game cards.
@@ -543,23 +590,23 @@ public class SpireAnniversary5Mod implements
             AllForOnePack.class.getName(),
             WatcherPack.class.getName());
 
-    public void loadPackStrings() {
-        Collection<CtClass> packClasses = new AutoAdd(modID)
-                .packageFilter(AbstractCardPack.class)
-                .findClasses(AbstractCardPack.class)
-                .stream()
-                .filter(c -> !baseGamePacks.contains(c.getName()))
-                .collect(Collectors.toList());
-        logger.info("Found pack classes with AutoAdd: " + packClasses.size());
+    public void loadPackStrings(Collection<CtClass> packClasses, String langKey) {
 
         for (CtClass packClass : packClasses) {
             String packName = packClass.getSimpleName().toLowerCase(Locale.ROOT);
-            String languageAndPack = getLangString() + "/" + packName;
+            String languageAndPack = langKey + "/" + packName;
+            String filepath = modID + "Resources/localization/" + languageAndPack + "/";
+            if (!Gdx.files.internal(filepath).exists()) {
+                continue;
+            }
             logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             //Do not need to be checked as these always need to exist
-            BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + languageAndPack + "/Cardstrings.json");
+            //He was wrong.
 
-            String filepath = modID + "Resources/localization/" + languageAndPack + "/";
+            if (Gdx.files.internal(filepath + "Cardstrings.json").exists()) {
+                BaseMod.loadCustomStringsFile(CardStrings.class, filepath + "Cardstrings.json");
+            }
+
             if (Gdx.files.internal(filepath + "Relicstrings.json").exists()) {
                 BaseMod.loadCustomStringsFile(RelicStrings.class, filepath + "Relicstrings.json");
             }
@@ -583,24 +630,33 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditKeywords() {
-        Gson gson = new Gson();
-        String json = Gdx.files.internal(modID + "Resources/localization/" + getLangString() + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        List<Keyword> keywords = new ArrayList<>(Arrays.asList(gson.fromJson(json, Keyword[].class)));
-
         Collection<CtClass> packClasses = new AutoAdd(modID)
                 .packageFilter(AbstractCardPack.class)
                 .findClasses(AbstractCardPack.class)
                 .stream()
                 .filter(c -> !baseGamePacks.contains(c.getName()))
                 .collect(Collectors.toList());
+        loadKeywords(packClasses, "eng");
+        if (Settings.language != Settings.GameLanguage.ENG) {
+            loadKeywords(packClasses, Settings.language.toString().toLowerCase());
+        }
+    }
 
+    private void loadKeywords(Collection<CtClass> packClasses, String langKey) {
+        String filepath = modID + "Resources/localization/" + langKey + "/Keywordstrings.json";
+        Gson gson = new Gson();
+        List<Keyword> keywords = new ArrayList<>();
+        if (Gdx.files.internal(filepath).exists()) {
+            String json = Gdx.files.internal(filepath).readString(String.valueOf(StandardCharsets.UTF_8));
+            keywords.addAll(Arrays.asList(gson.fromJson(json, Keyword[].class)));
+        }
         for (CtClass packClass : packClasses) {
             String packName = packClass.getSimpleName().toLowerCase(Locale.ROOT);
-            String languageAndPack = getLangString() + "/" + packName;
-            logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
+            String languageAndPack = langKey + "/" + packName;
             String packJson = modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json";
             FileHandle handle = Gdx.files.internal(packJson);
             if (handle.exists()) {
+                logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
                 packJson = handle.readString(String.valueOf(StandardCharsets.UTF_8));
                 List<Keyword> packKeywords = new ArrayList<>(Arrays.asList(gson.fromJson(packJson, Keyword[].class)));
                 keywords.addAll(packKeywords);
