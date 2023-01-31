@@ -1,7 +1,7 @@
 {
   "${ModID}:Polishing": {
     "NAME": "打磨",
-    "DESCRIPTION": "打出攻击时， NL 本场战斗提高其 !M! 点。"
+    "DESCRIPTION": "打出攻击时， NL 提高其伤害 !M! 点。"
   },
   "${ModID}:WorkHammer": {
     "NAME": "工作锤",

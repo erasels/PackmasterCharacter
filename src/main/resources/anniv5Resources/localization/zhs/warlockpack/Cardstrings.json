@@ -22,7 +22,7 @@
   },
   "${ModID}:HandOfGulDan": {
     "NAME": "古尔丹之手",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 若本牌被 消耗 NL ，抽 !M! 张牌。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若本牌被 消耗 ， NL  抽 !M! 张牌。"
   },
   "${ModID}:SeedsOfDestruction": {
     "NAME": "毁灭之种",

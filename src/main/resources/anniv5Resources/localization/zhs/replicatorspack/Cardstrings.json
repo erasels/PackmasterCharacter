@@ -1,6 +1,6 @@
 {
   "${ModID}:FrontloadedBash": {
-    "NAME": "Frontloaded Bash",
+    "NAME": "即时重击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆每有 !M! 张牌，本牌伤害增加1点。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆每有 !M! 张牌，本牌伤害增加1点。 NL 抽一张牌。"
   },

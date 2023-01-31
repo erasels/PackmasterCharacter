@@ -11,8 +11,8 @@
   },
   "${ModID}:MidnightOil": {
     "NAME": "夜灯油",
-    "DESCRIPTION": "随机 消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时，每回合获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时，每回合获得 [E] 。"
+    "DESCRIPTION": "随机 消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。"
   },
   "${ModID}:VoraciousSigil": {
     "NAME": "暴吞铭印",

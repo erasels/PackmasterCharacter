@@ -10,7 +10,7 @@
   },
   "${ModID}:ElectromagneticBurstRarePower": {
     "NAME": "电磁迸发",
-    "DESCRIPTION": "获得 格挡 时，随机造成 !M! 点伤害。"
+    "DESCRIPTION": "获得 格挡 时， NL 随机造成 !M! 点伤害。"
   },
   "${ModID}:ArrowStormRareAttack": {
     "NAME": "箭矢风暴",
@@ -47,8 +47,8 @@
   },
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "口袋大赛",
-    "DESCRIPTION": "下回合，随机2X次触发以下其中一种效果： NL 抽一张牌并获得 [E] ， NL 获得1点 力量 ， NL 获得3点 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下回合，随机2X+2次触发以下其中一种效果： NL 抽一张牌并获得 [E] ， NL 获得1点 力量 ， NL 获得3点 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "下回合，随机触发以下其中一种效果2X次： NL 抽一张牌并获得 [E] ， NL 获得1点 力量 ， NL 获得3点 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下回合，随机触发以下其中一种效果2X+2次： NL 抽一张牌并获得 [E] ， NL 获得1点 力量 ， NL 获得3点 格挡 。 NL 消耗 。"
   },
   "${ModID}:StoneSwordCommonAttack": {
     "NAME": "石剑",
