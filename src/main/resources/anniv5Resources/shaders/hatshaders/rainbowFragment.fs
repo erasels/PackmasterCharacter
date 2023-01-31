@@ -14,11 +14,12 @@ uniform sampler2D u_texture;
 uniform vec2 u_screenSize;
 
 void main() {
+	vec4 color = texture(u_texture, v_texCoord);
+	if (color.a > 0.) {
 	float hue = v_texCoord.x * cos(radians(u_angle)) * u_width - v_texCoord.y * sin(radians(u_angle)) * u_width;
 	float hueR = hue + (5./7.)*u_time;
 	float hueG = hue + (17./9.) * u_time;
 	float hueB = hue;
-	vec4 color = texture(u_texture, v_texCoord);
 	vec3 red = vec3(color.r, 0, 0);
 	vec3 green = vec3(0, color.g, 0);
 	vec3 blue = vec3(0, 0, color.b);
@@ -36,5 +37,7 @@ void main() {
         newColor *= originalBrightness/newBrightness;
     }
 	gl_FragColor = vec4(newColor, color.a);
-
+    } else {
+    gl_FragColor = color;
+    }
 }
