@@ -1,0 +1,8 @@
+{
+  "${ModID}:AnticipatePower": {
+    "NAME": "Anticipate",
+    "DESCRIPTIONS": [
+        "At the start of each turn, #yScry #b%d and gain #b%d #yVigor for each card discarded this way."
+      ]
+  }
+}

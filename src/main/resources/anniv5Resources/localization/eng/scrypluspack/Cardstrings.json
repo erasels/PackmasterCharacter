@@ -1,0 +1,42 @@
+{
+  "${ModID}:Anticipate": {
+    "NAME": "Anticipate",
+    "DESCRIPTION": "Whenever a card is created during combat, gain !M! Vigor."
+  },
+  "${ModID}:ApocalypseNow": {
+    "NAME": "Apocalypse Now",
+    "DESCRIPTION": "Scry !M!. NL If you discard at least 8 cards, NL deal !D! damage to ALL enemies."
+  },
+  "${ModID}:FortuneCookie": {
+    "NAME": "Fortune Cookie",
+    "DESCRIPTION": "Scry !M!. NL Draw a card if you discarded a card."
+  },
+  "${ModID}:FutureShield": {
+    "NAME": "Future Shield",
+    "DESCRIPTION": "Gain !B! Block when played or *Scried."
+  },
+  "${ModID}:Khahiri": {
+    "NAME": "Khahiri",
+    "DESCRIPTION": "Deal !D! damage. NL When shown while *Scrying, increase this card damage by !M!."
+  },
+  "${ModID}:ScryingRed": {
+    "NAME": "Scrying Red",
+    "DESCRIPTION": "Scry !M!. NL For each card discarded, if it's an Attack, add a *Smite to your hand, or *Safety if it isn't."
+  },
+  "${ModID}:PredictedStrike": {
+    "NAME": "Predicted Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL Deal !D! damage for each card discarded."
+  },
+  "${ModID}:Prosperity": {
+    "NAME": "Prosperity",
+    "DESCRIPTION": "Draw !M! cards. NL When shown while *Scrying, draw 1 additional card next turn."
+  },
+  "${ModID}:RedIncense": {
+    "NAME": "Red Incense",
+    "DESCRIPTION": "Unplayable. NL Whenever you discard, Exhaust or Scry this card, gain !M! Strength."
+  },
+  "${ModID}:WavingIron": {
+    "NAME": "Waving Iron",
+    "DESCRIPTION": "Gain !B! Block. NL Scry !M!. NL Deal !D! damage if you discarded a card."
+  }
+}
