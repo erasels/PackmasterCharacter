@@ -1,0 +1,19 @@
+{
+  "${ModID}:SlowingPower": {
+    "NAME": "迟缓",
+    "DESCRIPTIONS": [
+      "你的回合开始时，获得",
+      " #b",
+      " [E] 。"
+    ]
+  },
+  "${ModID}:PanacherPower": {
+    "NAME": "混杂",
+    "DESCRIPTIONS": [
+      "若再创造 #b",
+      " 张牌，对所有敌人造成 #b",
+      " 张牌，对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  }
+}

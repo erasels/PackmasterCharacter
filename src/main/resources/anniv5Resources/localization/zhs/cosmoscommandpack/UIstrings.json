@@ -1,0 +1,18 @@
+{
+  "${ModID}:CosmosCommandPack": {
+    "TEXT": [
+      "秩宙操控",
+      "消耗牌来获得力量，掌握 ${ModID}:扭曲 之力，并将变化的能量为你所用。",
+      "Enbeon"
+    ]
+  },
+  "${ModID}:CosmosCommandPackHat": {
+    "TEXT": [
+      "最高可看见7维空间！",
+      "异次元之眼"
+    ]
+  },
+  "${ModID}:PurgeModifier": {
+    "TEXT": [" NL stslib:抹除 。"]
+  }
+}

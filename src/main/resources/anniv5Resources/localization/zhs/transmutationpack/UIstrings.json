@@ -1,0 +1,21 @@
+{
+  "${ModID}:TransmutationPack": {
+    "TEXT": [
+      "变化化",
+      "暂时性将牌变化，且变强。",
+      "NellyDevo"
+    ]
+  },
+  "${ModID}:TransmuteCardAction": {
+    "TEXT": [
+      "增变化。",
+      "选择新牌。"
+    ]
+  },
+  "${ModID}:TransmutationPackHat": {
+    "TEXT": [
+      "这种发圈可能你更习惯一些。",
+      "变化化发型"
+    ]
+  }
+}

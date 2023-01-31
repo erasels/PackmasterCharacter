@@ -1,0 +1,25 @@
+{
+  "${ModID}:Ignite": {
+    "NAME": "燃烧",
+    "DESCRIPTIONS": ["你的回合结束时，失去 #b{0} 点生命。", "该单位回合开始时，其失去 #b{0} 点生命。"]
+  },
+  "${ModID}:FreezeAndBurn": {
+    "NAME": "冻燃",
+    "DESCRIPTIONS": ["下回合开始时，对所有敌人造成 #b{0} 点伤害。"]
+  },
+  "${ModID}:FieryMantle": {
+    "NAME": "火焰覆罩",
+    "DESCRIPTIONS": ["本回合被攻击时，给予攻击者 #b{0} 层 #y燃烧 。"]
+  },
+  "${ModID}:Pyromastery": {
+    "NAME": "火焰驾驭",
+    "DESCRIPTIONS": ["每当你给予 #y燃烧 时，额外给予 #b{0} 层。"]
+  },
+  "${ModID}:FueledByEmbers": {
+    "NAME": "内驱焰烬",
+    "DESCRIPTIONS": [
+      "你的回合开始时， 抽 #b{0} 张牌并将 #b{0} 张 #y凋烬 加入手牌与抽牌堆。",
+      "你的回合开始时， 抽 #b{0} 张牌并将 #b{0} 张 #y凋烬 加入手牌与抽牌堆。"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "${ModID}:EntropyPack": {
+    "TEXT": [
+      "熵",
+      "丢弃没用的，也丢弃有用的。",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:EntropyPackHat": {
+    "TEXT": [
+      "能力越大，责任越大。",
+      "舞会面具"
+    ]
+  }
+}

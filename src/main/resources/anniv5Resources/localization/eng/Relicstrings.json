@@ -17,7 +17,10 @@
       "' will no longer appear in card rewards.",
       "' will appear in card rewards.",
       "Choose a Pack to gain with ",
-      "Power!"
+      "Power!",
+      ".",
+      ".",
+      "Translator note: The 2 dots up here follows the structure 'Choose a Pack to banish with '+'Banishing Decree'+'.' and 'Choose a Pack to gain with '+'Banishing Decree'+'.' respectively. "
     ]
   },
   "${ModID}:CollectorBadge": {

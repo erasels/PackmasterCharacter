@@ -1,0 +1,16 @@
+{
+  "${ModID}:MalchezaarsImpPower": {
+    "NAME": "玛克扎尔的小鬼",
+    "DESCRIPTIONS": [
+      "每当一张非 #y小鬼 牌被 #y消耗 时，将 #b{0} 张 #y小鬼 加入弃牌堆。",
+      "每当一张非 #y小鬼 牌被 #y消耗 时，将 #b{0} 张 #y小鬼 加入弃牌堆。"
+    ]
+  },
+  "${ModID}:MalchezaarsImpUpgradedPower": {
+    "NAME": "玛克扎尔的小鬼+",
+    "DESCRIPTIONS": [
+      "每当一张非 #y小鬼 牌被 #y消耗 时，将 #b{0} 张 #y小鬼 加入抽牌堆。",
+      "每当一张非 #y小鬼 牌被 #y消耗 时，将 #b{0} 张 #y小鬼 加入抽牌堆。"
+    ]
+  }
+}

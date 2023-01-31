@@ -1,0 +1,21 @@
+{
+  "${ModID}:AddClawTagAndMakeClawModifier": {
+    "TEXT": [
+      " NL 获得一张 *幽灵爪击 。",
+      "爪击"
+    ]
+  },
+  "${ModID}:ClawPack": {
+    "TEXT": [
+      "爪击",
+      "Kickstarter的终极赞助目标——一套爪击。",
+      "MichaelMayhem"
+    ]
+  },
+  "${ModID}:ClawPackHat": {
+    "TEXT": [
+      "皇尚！锋利!戴着不舒服！",
+      "爪髻"
+    ]
+  }
+}

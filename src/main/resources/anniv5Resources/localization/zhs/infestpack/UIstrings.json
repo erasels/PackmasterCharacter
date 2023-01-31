@@ -1,0 +1,15 @@
+{
+  "${ModID}:InfestPack": {
+    "TEXT": [
+      "虫群",
+      "用你的虫子滋生你的抽牌堆！",
+      "Vex"
+    ]
+  },
+  "${ModID}:InfestPackHat": {
+    "TEXT": [
+      "养虫人必备。",
+      "养蜂帽"
+    ]
+  }
+}

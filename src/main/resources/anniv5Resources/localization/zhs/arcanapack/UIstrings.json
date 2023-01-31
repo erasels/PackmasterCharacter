@@ -1,0 +1,15 @@
+{
+  "${ModID}:ArcanaPack": {
+    "TEXT": [
+      "奥术",
+      "使用独特且意义丰富的主要塔罗牌。",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:ArcanaPackHat": {
+    "TEXT": [
+      "大、亮、顽红。",
+      "赤星"
+    ]
+  }
+}

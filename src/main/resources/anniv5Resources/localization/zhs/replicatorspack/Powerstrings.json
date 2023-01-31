@@ -1,0 +1,16 @@
+{
+  "${ModID}:IterativeDesignPower": {
+    "NAME": "重复性设计",
+    "DESCRIPTIONS": [
+      "每当你创造一张牌，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "${ModID}:EnergyDrinkPower": {
+    "NAME": "能量饮料",
+    "DESCRIPTIONS": [
+      "每当你往抽牌堆洗入 #b10 张牌，获得 #b",
+      " 层 #y重复 。"
+    ]
+  }
+}

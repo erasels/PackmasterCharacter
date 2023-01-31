@@ -1,0 +1,15 @@
+{
+  "${ModID}:EvenOddPack": {
+    "TEXT": [
+      "奇/偶",
+      "一套效果由奇偶牌序决定的牌。",
+      "Lobbien"
+    ]
+  },
+  "${ModID}:EvenOddPackHat": {
+    "TEXT": [
+      "终极模运算享受者的甄选头饰。",
+      "上位百分比"
+    ]
+  }
+}

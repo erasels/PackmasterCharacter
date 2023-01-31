@@ -1,0 +1,23 @@
+{
+  "${ModID}:FastHandsPower": {
+    "NAME": "手快",
+    "DESCRIPTIONS": [
+      "每当你打出 #y异色 牌时，抽 #b",
+      " 张牌。"
+    ]
+  },
+  "${ModID}:UpgradedFastHandsPower": {
+    "NAME": "手快+",
+    "DESCRIPTIONS": [
+      "每当你打出 #y异色 牌时，抽 #b",
+      " 张牌，并将所抽的牌本回合耗能降低 #b1 点。"
+    ]
+  },
+  "${ModID}:HorizonboundPower": {
+    "NAME": "宇宙界限",
+    "DESCRIPTIONS": [
+      "本回合已在手的 #y异色 耗能减 #b",
+      " 。每打出一张 #y异色 牌，降低量加 #b1 。每回合开始时降低量重置。"
+    ]
+  }
+}

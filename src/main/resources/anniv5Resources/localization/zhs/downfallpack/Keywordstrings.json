@@ -1,0 +1,26 @@
+[
+  {
+    "PROPER_NAME": "坚不可摧",
+    "NAMES": [
+      "invincible",
+      "坚不可摧"
+    ],
+    "DESCRIPTION": "单回合内不会失去超过 #坚不可摧 层数的生命。 NL 承伤达上限后移除本效果，叠加时额外生效 #b1 次。"
+  },
+  {
+    "PROPER_NAME": "鬼火",
+    "NAMES": [
+      "ghostflame",
+      "鬼火"
+    ],
+    "DESCRIPTION": "充能球：对所有敌人造成伤害。"
+  },
+  {
+    "PROPER_NAME": "先古",
+    "NAMES": [
+      "ancient",
+      "先古"
+    ],
+    "DESCRIPTION": "#y姿态 。 NL 你的回合开始时，若无 #b6 层及以上 #y多层护甲 ，获得 #b2 层。 NL 退出时获得 #b1 层 人工制品 。"
+  }
+]

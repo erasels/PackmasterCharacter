@@ -1,0 +1,18 @@
+{
+  "${ModID}:AqueductsPower": {
+    "NAME": "引水渠",
+    "DESCRIPTIONS": ["每当你在每回合固定抽牌之外的情况抽牌，对所有敌人造成 #b", " 点伤害。"]
+  },
+  "${ModID}:FlowPower": {
+    "NAME": "自流",
+    "DESCRIPTIONS": ["你的下回合开始时，", "抽 #b", " 张牌。", "抽一张牌。"]
+  },
+  "${ModID}:PneumaticsPower": {
+    "NAME": "气力学",
+    "DESCRIPTIONS": ["你的下回合开始时， #y自流 。", "你的下 #b", " 个回合开始时， #y自流 。"]
+  },
+  "${ModID}:ReleaseValvePower": {
+    "NAME": "开阀",
+    "DESCRIPTIONS": ["#y自流 时，每丢弃一张牌，该单位受到 #b", " 点伤害。"]
+  }
+}

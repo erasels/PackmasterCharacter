@@ -1,0 +1,15 @@
+{
+  "${ModID}:CreativityPack": {
+    "TEXT": [
+      "创造力",
+      "创造牌并从中获得收益。",
+      "Jedi"
+    ]
+  },
+  "${ModID}:CreativityPackHat": {
+    "TEXT": [
+      "只要想象力丰富，任何东西都可以是帽子。",
+      "纸船"
+    ]
+  }
+}

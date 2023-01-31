@@ -1,0 +1,16 @@
+{
+  "${ModID}:MultiToolPower": {
+    "NAME": "多用途工具-Tool",
+    "DESCRIPTIONS": [
+      "回合结束时若有 [E] ，所有敌人失去 #b",
+      " 点生命。"
+    ]
+  },
+  "${ModID}:InvestorPower": {
+    "NAME": "投资者",
+    "DESCRIPTIONS": [
+      "每当你为一张牌使用 #b2 点以上的能量时，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  }
+}

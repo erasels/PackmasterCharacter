@@ -1,0 +1,16 @@
+{
+  "${ModID}:IntoTheBreachPack": {
+    "TEXT": [
+      "陷阵之志",
+      "使用来自未来的机械武器来摆平尖塔的威胁。",
+      "Enbeon",
+      "#b创意来自子集游戏《陷阵之志》。"
+    ]
+  },
+  "${ModID}:IntoTheBreachPackHat": {
+    "TEXT": [
+      "与大型虫族作战的最佳头部护具。",
+      "阿凯夫头盔"
+    ]
+  }
+}

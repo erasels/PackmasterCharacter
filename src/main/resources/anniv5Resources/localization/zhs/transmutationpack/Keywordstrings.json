@@ -1,0 +1,21 @@
+[
+  {
+    "PROPER_NAME": "增变化",
+    "NAMES": [
+      "transmute",
+      "transmuted",
+      "transmutes",
+      "增变化"
+    ],
+    "DESCRIPTION": "#y变化 一张牌至本局已选卡包中的同稀有度牌， #y变化 后的牌具有 #b1 点 伤害与 #y格挡 加成，多次 #y增变化 时该加成叠加。"
+  },
+  {
+    "PROPER_NAME": "固在",
+    "NAMES": [
+      "mutable",
+      "mutable:",
+      "固在"
+    ],
+    "DESCRIPTION": "牌被 #y增变化 时，新创造的牌仍带有其 #y固在 效果。"
+  }
+]

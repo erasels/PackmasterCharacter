@@ -1,0 +1,15 @@
+{
+  "${ModID}:HighEnergyPack": {
+    "TEXT": [
+      "能量化",
+      "获得一大堆能量，然后消耗在高耗能牌上！",
+      "Vex"
+    ]
+  },
+  "${ModID}:HighEnergyPackHat": {
+    "TEXT": [
+      "背面写着'太阳能供能'。",
+      "高能墨镜"
+    ]
+  }
+}

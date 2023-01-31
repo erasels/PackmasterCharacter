@@ -1,0 +1,15 @@
+{
+  "${ModID}:AutoBattlerPower": {
+    "NAME": "Auto Battler",
+    "DESCRIPTIONS": [
+      "You automatically play 牌 from left to right at the frontmost foe。"
+    ]
+  },
+  "${ModID}:FinalFormPower": {
+    "NAME": "最终形态",
+    "DESCRIPTIONS": [
+      "你的回合开始时，打出并 #y消耗 一张 ",
+      " 的复制品。"
+    ]
+  }
+}

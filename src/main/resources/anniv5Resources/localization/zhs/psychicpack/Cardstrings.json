@@ -1,0 +1,62 @@
+{
+  "${ModID}:RuleCancel": {
+    "NAME": "规则无视",
+    "DESCRIPTION": "选择一张手牌附加 {ModID}:灵秘 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张手牌附加 {ModID}:灵秘 。"
+  },
+  "${ModID}:Brainwave": {
+    "NAME": "脑力波",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 随机将一张攻击手牌附加 {ModID}:灵秘 。"
+  },
+  "${ModID}:TelephonePole": {
+    "NAME": "电线杆",
+    "DESCRIPTION": "${ModID}:自锁 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:被锁 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+    ]
+  },
+  "${ModID}:Gravity": {
+    "NAME": "重力",
+    "DESCRIPTION": "虚无 。 NL 抽到 ${ModID}:被锁 或 无法打出 牌时，抽一张牌。",
+    "UPGRADE_DESCRIPTION": "抽到 ${ModID}:被锁 或 无法打出 牌时，抽一张牌。"
+  },
+  "${ModID}:PhantomStep": {
+    "NAME": "幽灵步伐",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择抽牌堆一张牌附加 ${ModID}:灵秘 。"
+  },
+  "${ModID}:Repel": {
+    "NAME": "驱退",
+    "DESCRIPTION": "${ModID}:自锁 。 NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:被锁 。 NL 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
+    ]
+  },
+  "${ModID}:OneIsEnough": {
+    "NAME": "一张足够",
+    "DESCRIPTION": "抽 !M! 张牌并选择其中一张。 NL 本回合无法打出其他手牌。",
+    "EXTENDED_DESCRIPTION": [
+      "选择可打出的牌。"
+    ]
+  },
+  "${ModID}:Curse": {
+    "NAME": "怨咒",
+    "DESCRIPTION": "${ModID}:自锁 。 NL 目标失去 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:自锁 。 NL 保留 。 NL 目标失去 !M! 点 力量 。",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:被锁 。 NL 目标失去 !M! 点 力量 。",
+      "${ModID}:被锁 。 NL 保留 。 NL 目标失去 !M! 点 力量 。"
+    ]
+  },
+  "${ModID}:MalleableFire": {
+    "NAME": "可塑之火",
+    "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL 将一张耗能为X的 *被塑之火 加入抽牌堆。 NL 消耗 。"
+  },
+  "${ModID}:MoldedFire": {
+    "NAME": "被塑之火",
+    "DESCRIPTION": "${ModID}:灵秘 。 NL 离能量上限每缺1点 [E] ，造成 !D! 点伤害。"
+  },
+  "${ModID}:DeepDream": {
+    "NAME": "深梦",
+    "DESCRIPTION": "本回合每打出一张牌，随机将一张手牌附加 {ModID}:灵秘 。 NL 消耗 。"
+  }
+}

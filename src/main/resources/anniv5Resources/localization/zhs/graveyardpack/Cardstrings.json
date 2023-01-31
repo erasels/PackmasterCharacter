@@ -1,0 +1,49 @@
+{
+  "${ModID}:GreyBargain": {
+    "NAME": "灰色交易",
+    "DESCRIPTION": "选择 消耗 一张手牌来将一张 ${ModID}:被葬 牌洗回抽牌堆。",
+    "UPGRADE_DESCRIPTION": "选择 消耗 一张手牌来将一张 ${ModID}:被葬 牌洗回抽牌堆。 NL 抽一张牌。",
+    "EXTENDED_DESCRIPTION": ["我需要一张牌来消耗。"]
+  },
+    "${ModID}:ExtraLimbs": {
+    "NAME": "多肢体",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 被消耗时， NL 本场战斗攻击次数+1。 NL 消耗 。"
+  },
+    "${ModID}:AncientSpear": {
+    "NAME": "远古射矛",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
+  },
+    "${ModID}:FleshLikeOak": {
+    "NAME": "橡木之躯",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。 NL 消耗 。"
+  },
+    "${ModID}:CallOfTheGrave": {
+    "NAME": "墓中呼唤",
+    "DESCRIPTION": "回合开始时，随机打出一张 ${ModID}:被葬 牌并将其 stslib:抹除 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，随机打出一张 ${ModID}:被葬 牌并将其 stslib:抹除 。"
+  },
+    "${ModID}:SpontaneousRitual": {
+    "NAME": "自发性仪式",
+    "DESCRIPTION": "消耗 所有手牌。 NL 造成本场战斗消耗过牌的次数点伤害。",
+    "UPGRADE_DESCRIPTION": "将3张 *晕眩 加入手牌。 NL 消耗 所有手牌。 NL 造成本场战斗消耗过牌的次数点伤害。",
+  	"EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害。)"]
+  },
+    "${ModID}:FuneraryJewels": {
+    "NAME": "殉葬珠宝",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌。 NL 获得 [E] 。 NL 消耗 。"
+  },
+    "${ModID}:Tombstone": {
+    "NAME": "墓碑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
+  },
+    "${ModID}:DarkOfNight": {
+    "NAME": "夜暗",
+    "DESCRIPTION": "本回合下1张自 消耗 牌打出两次。",
+    "UPGRADE_DESCRIPTION": "本回合下2张自 消耗 牌打出两次。"
+  },
+    "${ModID}:LastGasp": {
+    "NAME": "奄息",
+    "DESCRIPTION": "虚无 。 NL 选择一张 ${ModID}:被葬 牌，将其打出并 stslib:抹除 。",
+    "UPGRADE_DESCRIPTION": "选择一张 ${ModID}:被葬 牌，将其打出并 stslib:抹除 。"
+  }
+}
