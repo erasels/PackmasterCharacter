@@ -14,7 +14,7 @@
     ]
   },
   "${ModID}:PackInAJar": {
-    "NAME": "Pack in a Jar",
+    "NAME": "Pack Rip Potion",
     "DESCRIPTIONS": [
       "Discard your hand, then choose #b1 of #b3 Packs. Add #b",
       " copy of each card from it to your hand.",

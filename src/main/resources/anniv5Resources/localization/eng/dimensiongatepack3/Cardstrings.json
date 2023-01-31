@@ -46,6 +46,6 @@
   },
   "${ModID}:SpreadingSpores": {
     "NAME": "Spreading Spores",
-    "DESCRIPTION": "Gain 5 Thorns. NL Gain !M! Regen."
+    "DESCRIPTION": "Gain !${ModID}:m2! Thorns. NL Gain !M! *Ablation."
   }
 }
