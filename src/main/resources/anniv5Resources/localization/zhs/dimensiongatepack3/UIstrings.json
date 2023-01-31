@@ -1,0 +1,16 @@
+{
+  "${ModID}:DimensionGate3Pack": {
+    "TEXT": [
+      "次元之门三：生与死",
+      "一套来自其他游戏的牌！以自我伤害为代价的强力牌，以及回复已失去的生命。",
+      "MichaelMayhem",
+      "卡牌创意来自游戏： NL 伊甸之路(One Step From Eden) NL 塔台战术：解放(Tower Tactics Liberation) NL 怪物火车(Monster Train) NL 邪恶冥刻(Inscryption) NL Storybook Brawl NL NL 感兴趣的话可以在Steam查看！"
+    ]
+  },
+  "${ModID}:DimensionGate3PackHat": {
+    "TEXT": [
+      "狂野树林中的某个东西触碰了我的心灵，给予我其根源的感知能力。",
+      "次元面具"
+    ]
+  }
+}

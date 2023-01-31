@@ -1,0 +1,24 @@
+{
+  "${ModID}:MagicMissilePower": {
+    "NAME": "魔法强化",
+    "DESCRIPTIONS": [
+      "本回合 #y魔法 牌额外造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:ArsenalGearPower": {
+    "NAME": "武库零件",
+    "DESCRIPTIONS": [
+      "你的接下来 #b",
+      " 个回合开始时，随机将一张 #b罕见 或 #y稀有 牌加入手牌。其首次耗能为 #b0 且附带 #y消耗 。"
+    ]
+  },
+  "${ModID}:DaggerstormPower": {
+    "NAME": "匕首风暴",
+    "DESCRIPTIONS": [
+      "#b0 耗能 #y消耗 牌额外打出 #b",
+      " 次。",
+      " 次。"
+    ]
+  }
+}
