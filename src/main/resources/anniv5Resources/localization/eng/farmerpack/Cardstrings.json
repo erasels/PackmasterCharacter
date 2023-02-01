@@ -38,7 +38,7 @@
   },
   "${ModID}:SoilResiliency": {
     "NAME": "Soil Resiliency",
-    "DESCRIPTION": "Gain !M! Strength. NL Double this after play if you've played 3 or more card types this turn. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Gain !M! Strength. NL Double this to a max of 10 after play if you've played 3 or more card types this turn. NL Exhaustive !stslib:ex!."
   },
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",
