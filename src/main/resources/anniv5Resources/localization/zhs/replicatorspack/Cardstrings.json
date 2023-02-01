@@ -25,8 +25,8 @@
     "EXTENDED_DESCRIPTION": ["选择一张牌进行消耗与复制。"]
   },
   "${ModID}:IterativeDesign": {
-    "NAME": "I重复性设计",
-    "DESCRIPTION": "创造牌时， NL 获得 !M! 点 格挡 。"
+    "NAME": "重复性设计",
+    "DESCRIPTION": "打出本场战斗创造的牌，或触发 ${ModID}:重复 时，获得 !M! 点 格挡 。"
   },
   "${ModID}:Xpansion": {
     "NAME": "扩章",
