@@ -31,7 +31,7 @@
   },
   "${ModID}:WitchTwist": {
     "NAME": "乱射升龙击",
-    "DESCRIPTION": "随机 ${ModID}:修改 !M! 张手牌： ${ModID}:铭印 。 NL 获得 !${ModID}:m2! 点 集中 。 NL 消耗 。"
+    "DESCRIPTION": "随机 ${ModID}:修改 !M! 张手牌： NL \" ${ModID}:铭印 \" 。 NL 消耗 。"
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "月色飞行",
