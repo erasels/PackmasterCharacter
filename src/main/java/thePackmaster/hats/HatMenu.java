@@ -20,6 +20,7 @@ import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.AlignmentPack;
 import thePackmaster.packs.CoreSetPack;
 import thePackmaster.packs.PsychicPack;
+import thePackmaster.patches.DropdownColorsPatch;
 import thePackmaster.util.Wiz;
 
 import java.io.IOException;
@@ -56,7 +57,7 @@ public class HatMenu {
     private static final float BG_X = 525f * Settings.scale;
     private static final float BG_Y = Settings.HEIGHT - 40f * Settings.scale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
     private static final float FLAVOR_X = BG_X + MENU_BG.getRegionWidth() * BG_X_SCALE * 0.5f;
-    private static final float DROPDOWN_X = 559f * Settings.scale;
+    private static final float DROPDOWN_X = 586f * Settings.scale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
     private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
     private static final float PREVIEW_Y = BG_Y + (215 * Settings.scale);
@@ -71,6 +72,9 @@ public class HatMenu {
 
     private static final ModLabeledToggleButton rainbowButton = makeRainbowButton();
     private static boolean showRainbowButton = false;
+
+    private static final Color LOCKED_COLOR = Color.GRAY.cpy();//new Color(0.2f, 0.243f, 0.247f, 1f);
+    private static final Color RAINBOW_UNLOCKED_COLOR = new Color(0f,0.9f,1f,1f);
 
 
     public HatMenu() {
@@ -118,6 +122,7 @@ public class HatMenu {
 
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index, s)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
+        DropdownColorsPatch.DropdownRowToColor.function.set(dropdown, HatMenu::getColorFromIndex);
 
         for (int i = 0; i < hats.size(); i++) {
             hatsToIndexes.put(hats.get(i), i);
@@ -166,7 +171,7 @@ public class HatMenu {
                     optionNames.add(s.getHatName());
                 } else {
                     hats.add(s.packID);
-                    optionNames.add(TEXT[1] + " " + s.getHatName());
+                    optionNames.add(s.getHatName());
                 }
             } else {
                 hats.add(s.packID);
@@ -236,7 +241,7 @@ public class HatMenu {
                     if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
                 }
             }
-        } else if (name.contains(TEXT[1])) {
+        } else if (!currentlyUnlockedHats.contains(hats.get(index))) {
             //SpireAnniversary5Mod.logger.info("Selected a locked hat.");
             invalidHatSelected = true;
             currentHat = null;
@@ -273,6 +278,24 @@ public class HatMenu {
             if (rainbowButton.toggle.enabled) {
                 rainbowButton.toggle.toggle();
             }
+        }
+    }
+
+    private static Color getColorFromIndex(int index) {
+        if (index == 0) {
+            if (currentlyUnlockedRainbows.contains(CoreSetPack.ID)) {
+                return RAINBOW_UNLOCKED_COLOR;
+            } else {
+                return null;
+            }
+        } else if (index == 1) {
+            return currentlyUnlockedRainbows.size() == hats.size() ? RAINBOW_UNLOCKED_COLOR : null;
+        } else if (currentlyUnlockedRainbows.contains(hats.get(index))) {
+            return RAINBOW_UNLOCKED_COLOR;
+        } else if (currentlyUnlockedHats.contains(hats.get(index))) {
+            return null;
+        } else {
+            return LOCKED_COLOR;
         }
     }
 
