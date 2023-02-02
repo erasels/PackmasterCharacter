@@ -16,6 +16,7 @@ public class DifferentStrikes extends AbstractStrikePackCard {
     public DifferentStrikes() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

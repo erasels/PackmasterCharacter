@@ -16,6 +16,7 @@ public class StrikeABargain extends AbstractStrikePackCard {
     public StrikeABargain() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
 
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
