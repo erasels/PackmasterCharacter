@@ -1,7 +1,7 @@
 {
   "${ModID}:AcidicSpray": {
     "NAME": "酸液喷射",
-    "DESCRIPTION": "目标每有负面效果， NL 造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
+    "DESCRIPTION": "目标每有一种负面效果，造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
   },
   "${ModID}:PoisonMastery": {
     "NAME": "精湛毒艺",

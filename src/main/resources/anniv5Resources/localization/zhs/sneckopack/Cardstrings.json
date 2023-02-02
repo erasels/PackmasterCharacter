@@ -17,7 +17,7 @@
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "扫尾嗜咬",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !${ModID}:m2! ~ !M! 层 虚弱 与 !${ModID}:m2! ~ !M! 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !${ModID}:m2! ~ !M! 层 虚弱 与 易伤 。"
   },
   "${ModID}:Twitch": {
     "NAME": "痉挛",

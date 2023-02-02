@@ -14,7 +14,7 @@
   },
   "${ModID}:TheHangedMan": {
     "NAME": "倒吊者",
-    "DESCRIPTION": "本回合每当你抽一张牌，所有敌人失去 !M! 点生命。"
+    "DESCRIPTION": "本回合每再抽一张牌，所有敌人失去 !M! 点生命。"
   },
   "${ModID}:TheTower": {
     "NAME": "塔",
