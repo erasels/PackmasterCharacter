@@ -16,7 +16,7 @@
     "DESCRIPTION": "攻击 ${ModID}:咒语 。 NL 造成 !D! 点伤害。"
   },
   "${ModID}:PortalPunch": {
-    "NAME": "Portal Punch",
+    "NAME": "异次元重击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 随机将 !M! 张 ${ModID}:异色 牌加入手牌。 NL 其附带 虚无 。",
     "EXTENDED_DESCRIPTION": [
       "随机",

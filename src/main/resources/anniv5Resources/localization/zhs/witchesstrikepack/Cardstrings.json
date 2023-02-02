@@ -23,7 +23,7 @@
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "横扫一拳",
-    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 本牌 ${ModID}:滋生 时， ${ModID}:展现 一个 ${ModID}:新月 充能球。"
+    "DESCRIPTION": "NL 造成 !D! 点伤害。 ${ModID}:展现 一个 ${ModID}:新月 充能球。"
   },
   "${ModID}:HornetWithin": {
     "NAME": "黄蜂附体",
