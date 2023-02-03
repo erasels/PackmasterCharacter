@@ -7,7 +7,7 @@
   "${ModID}:LayeredDefenses": {
     "NAME": "多层防护",
     "DESCRIPTION": "手牌每有一种类型， NL 获得 !B! 点 格挡 。",
-    "EXTENDED_DESCRIPTION": [" NL (共计 {0} 种牌。"]
+    "EXTENDED_DESCRIPTION": [" NL (获得 {0} 次。)"]
   },
   "${ModID}:PreemptiveStrike": {
     "NAME": "先发打击",
@@ -31,17 +31,17 @@
     "UPGRADE_DESCRIPTION": "选择将弃牌堆2张牌加入手牌。"
   },
   "${ModID}:LesserHex": {
-    "NAME": "低阶巫婆",
+    "NAME": "低阶巫鬼",
     "DESCRIPTION": "给予 !M! 层 虚弱 与 易伤 。 NL 目标失去 !M! 点 力量 。 NL 将一张 *高阶巫婆 加入弃牌堆。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 与 易伤 。 NL 目标失去 !M! 点 力量 。 NL 将一张 *高阶巫婆+ 加入弃牌堆。 NL 消耗 。"
   },
   "${ModID}:GreaterHex": {
-    "NAME": "高阶巫婆",
+    "NAME": "高阶巫鬼",
     "DESCRIPTION": "给予 !M! 层 虚弱 与 易伤 。 NL 目标失去 !M! 点 力量 。 NL 消耗 。"
   },
   "${ModID}:Conjuration": {
     "NAME": "巫咒",
-    "DESCRIPTION": "选择抽牌堆一张牌， NL 将其打出并 消耗 。",
+    "DESCRIPTION": "选择抽牌堆一张牌， NL 将其 消耗 并打出。",
     "UPGRADE_DESCRIPTION": "选择抽牌堆一张牌， NL 将其打出。",
     "EXTENDED_DESCRIPTION": ["抽牌堆没有牌。"]
   },

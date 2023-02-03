@@ -9,7 +9,7 @@
   },
   "${ModID}:PaintBrush": {
     "NAME": "画刷",
-    "DESCRIPTION": "{@@}指定类型与耗能， NL 发现一张牌 {!Upgrades!|>0=+}。"
+    "DESCRIPTION": "{@@}指定类型与耗能， NL 创造一张牌 {!Upgrades!|>0=+}。"
   },
   "${ModID}:Firewall": {
     "NAME": "防火墙",
