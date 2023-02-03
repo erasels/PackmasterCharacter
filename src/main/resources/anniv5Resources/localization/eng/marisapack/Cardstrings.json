@@ -18,7 +18,7 @@
   },
   "${ModID}:ShootingEcho": {
     "NAME": "Shooting Echo",
-    "DESCRIPTION": "Deal !D! damage. Exhaust a card to add a copy of this into your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Exhaust a random card to gain a copy of this. NL Exhaust."
   },
   "${ModID}:StardustReverie": {
     "NAME": "Stardust Reverie",
