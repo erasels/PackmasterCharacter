@@ -43,11 +43,12 @@ public class PMBoosterPack extends AbstractPackmasterRelic {
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         ArrayList<String> cards = SpireAnniversary5Mod.getRandomPackFromAll(new Random(Settings.seed + 41)).getCards();
         for (String s : cards) {
-
            if (CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.COMMON ||
                    CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.UNCOMMON ||
-                   CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.RARE) group.addToTop(CardLibrary.getCard(s).makeCopy());
+                   CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.RARE)
+               group.addToTop(CardLibrary.getCard(s).makeCopy());
         }
+        group.sortByRarity(false);
 
         AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[1], false, false, false, false);
     }
