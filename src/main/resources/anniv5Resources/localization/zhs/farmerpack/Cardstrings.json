@@ -1,8 +1,8 @@
 {
   "${ModID}:Fertilizer": {
     "NAME": "肥料",
-    "DESCRIPTION": "抽一张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。"
+    "DESCRIPTION": "抽一张牌。 NL 消耗 。NL This is a Status.",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。NL This is a Status."
   },
   "${ModID}:HarvestBeans": {
     "NAME": "收获豌豆",
@@ -24,7 +24,7 @@
   },
   "${ModID}:OutToMarket": {
     "NAME": "赶集",
-    "DESCRIPTION": "每回合首次打出一类牌时，对所有敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "Whenever you play a card with a different type than the last, deal !M! damage to ALL enemies."
   },
   "${ModID}:PestControl": {
     "NAME": "害虫防治",
@@ -33,7 +33,7 @@
   },
   "${ModID}:SoilResiliency": {
     "NAME": "土壤复原力",
-    "DESCRIPTION": "获得 !M! 点 力量 与 !${ModID}:m2! 点 敏捷 。 NL 若本回合未打出过三类牌， 消耗 。"
+    "DESCRIPTION": "Gain !M! Strength. NL Double this to a max of 10 after play if you've played 3 or more card types this turn. NL Exhaustive !stslib:ex!."
   },
   "${ModID}:SupplyChain": {
     "NAME": "供应链",
