@@ -32,11 +32,14 @@ public class UnlockHatCommand extends ConsoleCommand {
 
         if(found) {
             ArrayList<String> unlockedHats = SpireAnniversary5Mod.getUnlockedHats();
+            ArrayList<String> unseenHats = SpireAnniversary5Mod.getUnseenHats();
             if (!unlockedHats.contains(id)) {
                 try {
                     unlockedHats.add(id);
+                    unseenHats.add(id);
                     SpireAnniversary5Mod.logger.info("Saving hat " + id + "|" + tokens[1] + ", acquired via console.");
                     SpireAnniversary5Mod.saveUnlockedHats(unlockedHats);
+                    SpireAnniversary5Mod.saveUnseenHats(unseenHats);
                     HatMenu.refreshHatDropdown();
                 } catch (Exception e) {
                     SpireAnniversary5Mod.logger.error(e);

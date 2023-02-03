@@ -20,6 +20,7 @@ import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.AlignmentPack;
 import thePackmaster.packs.CoreSetPack;
 import thePackmaster.packs.PsychicPack;
+import thePackmaster.patches.DropdownColorsPatch;
 import thePackmaster.util.Wiz;
 
 import java.io.IOException;
@@ -39,6 +40,7 @@ public class HatMenu {
     public static final ArrayList<String> hats = new ArrayList<>();
     public static final ArrayList<String> currentlyUnlockedHats = new ArrayList<>();
     public static final ArrayList<String> currentlyUnlockedRainbows = new ArrayList<>();
+    public static final ArrayList<String> currentlyUnseenHats = new ArrayList<>();
     public static final Map<String, SpecialHat> specialHats = new HashMap<>();
     public static final Map<String, Integer> hatsToIndexes = new HashMap<>();
 
@@ -56,7 +58,7 @@ public class HatMenu {
     private static final float BG_X = 525f * Settings.scale;
     private static final float BG_Y = Settings.HEIGHT - 40f * Settings.scale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
     private static final float FLAVOR_X = BG_X + MENU_BG.getRegionWidth() * BG_X_SCALE * 0.5f;
-    private static final float DROPDOWN_X = 559f * Settings.scale;
+    private static final float DROPDOWN_X = 586f * Settings.scale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
     private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
     private static final float PREVIEW_Y = BG_Y + (215 * Settings.scale);
@@ -71,6 +73,10 @@ public class HatMenu {
 
     private static final ModLabeledToggleButton rainbowButton = makeRainbowButton();
     private static boolean showRainbowButton = false;
+
+    private static final Color LOCKED_COLOR = Color.GRAY.cpy().mul(1f,1f,1f,0.95f);
+    private static final Color RAINBOW_UNLOCKED_COLOR = new Color(0f,0.9f,1f,1f);
+    private static final Color UNSEEN_COLOR = new Color(1f,1f,0.1f,1f);
 
 
     public HatMenu() {
@@ -118,6 +124,7 @@ public class HatMenu {
 
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index, s)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
+        DropdownColorsPatch.DropdownRowToColor.function.set(dropdown, HatMenu::getColorFromIndex);
 
         for (int i = 0; i < hats.size(); i++) {
             hatsToIndexes.put(hats.get(i), i);
@@ -140,6 +147,7 @@ public class HatMenu {
     public static ArrayList<String> getHatDropdownStrings() {
         ArrayList<String> unlockedHats = SpireAnniversary5Mod.getUnlockedHats();
         ArrayList<String> unlockedRainbows = SpireAnniversary5Mod.getUnlockedRainbows();
+        ArrayList<String> unseenHats = SpireAnniversary5Mod.getUnseenHats();
 
         ArrayList<String> optionNames = new ArrayList<>();
         optionNames.add(TEXT[0]);
@@ -150,6 +158,7 @@ public class HatMenu {
         sortedPacks.sort(Comparator.comparing(AbstractCardPack::getHatName));
         currentlyUnlockedHats.clear();
         currentlyUnlockedRainbows.clear();
+        currentlyUnseenHats.clear();
         for (AbstractCardPack s : sortedPacks) {
             //if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
             //if (UNLOCK_ALL_HATS) SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
@@ -166,7 +175,10 @@ public class HatMenu {
                     optionNames.add(s.getHatName());
                 } else {
                     hats.add(s.packID);
-                    optionNames.add(TEXT[1] + " " + s.getHatName());
+                    optionNames.add(s.getHatName());
+                }
+                if (unseenHats.contains(s.packID)) {
+                    currentlyUnseenHats.add(s.packID);
                 }
             } else {
                 hats.add(s.packID);
@@ -205,6 +217,13 @@ public class HatMenu {
     public static void setCurrentHat(int index, String name) {
         currentHatIndex = index;
         randomHatMode = false;
+        if (currentlyUnseenHats.remove(hats.get(index))) {
+            try {
+                SpireAnniversary5Mod.saveUnseenHats(currentlyUnseenHats);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         if (index == 0) {
             invalidHatSelected = false;
             currentHat = null;
@@ -236,7 +255,7 @@ public class HatMenu {
                     if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
                 }
             }
-        } else if (name.contains(TEXT[1])) {
+        } else if (!currentlyUnlockedHats.contains(hats.get(index))) {
             //SpireAnniversary5Mod.logger.info("Selected a locked hat.");
             invalidHatSelected = true;
             currentHat = null;
@@ -273,6 +292,26 @@ public class HatMenu {
             if (rainbowButton.toggle.enabled) {
                 rainbowButton.toggle.toggle();
             }
+        }
+    }
+
+    private static Color getColorFromIndex(int index) {
+        if (currentlyUnseenHats.contains(hats.get(index))) {
+            return UNSEEN_COLOR;
+        } else if (index == 0) {
+            if (currentlyUnlockedRainbows.contains(CoreSetPack.ID)) {
+                return RAINBOW_UNLOCKED_COLOR;
+            } else {
+                return null;
+            }
+        } else if (index == 1) {
+            return currentlyUnlockedRainbows.size() == hats.size() ? RAINBOW_UNLOCKED_COLOR : null;
+        } else if (currentlyUnlockedRainbows.contains(hats.get(index))) {
+            return RAINBOW_UNLOCKED_COLOR;
+        } else if (currentlyUnlockedHats.contains(hats.get(index))) {
+            return null;
+        } else {
+            return LOCKED_COLOR;
         }
     }
 
