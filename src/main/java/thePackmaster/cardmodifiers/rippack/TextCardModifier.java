@@ -2,8 +2,10 @@ package thePackmaster.cardmodifiers.rippack;
 
 import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
+import basemod.helpers.CardModifierManager;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import thePackmaster.cardmodifiers.infestpack.InfestModifier;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,11 @@ public class TextCardModifier extends AbstractCardModifier {
     public static String ID = makeID("TextCardModifier");
 
     public TextCardModifier() { }
+
+    @Override
+    public boolean shouldApply(AbstractCard card) {
+        return !CardModifierManager.hasModifier(card, TextCardModifier.ID);
+    }
 
     @Override
     public String identifier(AbstractCard card) {

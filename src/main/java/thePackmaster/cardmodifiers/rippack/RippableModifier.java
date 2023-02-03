@@ -29,6 +29,11 @@ public class RippableModifier extends AbstractCardModifier {
     }
 
     @Override
+    public boolean shouldApply(AbstractCard card) {
+        return !CardModifierManager.hasModifier(card, RippableModifier.ID);
+    }
+
+    @Override
     public String identifier(AbstractCard card) {
         return ID;
     }
