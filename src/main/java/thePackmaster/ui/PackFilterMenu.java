@@ -48,7 +48,7 @@ public class PackFilterMenu {
     private static final float PREVIEW_X = 235f * Settings.scale;
     private static final float PREVIEW_Y = 700f * Settings.scale;
 
-    private static final Color DISABLED_COLOR = Color.SALMON.cpy();
+    private static final Color DISABLED_COLOR = Settings.RED_TEXT_COLOR.cpy();
 
     public PackFilterMenu() {
         ArrayList<String> optionNames = new ArrayList<>();
