@@ -1,8 +1,8 @@
 {
   "${ModID}:Fertilizer": {
     "NAME": "Fertilizer",
-    "DESCRIPTION": "Draw a card. NL Exhaust. NL This is a Status",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust. NL This is a Status"
+    "DESCRIPTION": "Draw a card. NL Exhaust. NL This is a Status.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust. NL This is a Status."
   },
   "${ModID}:FertilizerPlaceholder": {
     "NAME": "Fertilizer",
