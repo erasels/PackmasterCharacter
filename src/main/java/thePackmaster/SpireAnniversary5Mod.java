@@ -43,6 +43,10 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.CalmStance;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import imgui.ImGui;
+import imgui.ImVec2;
+import imgui.flag.ImGuiCond;
+import imgui.type.ImFloat;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -130,8 +134,7 @@ public class SpireAnniversary5Mod implements
         PostExhaustSubscriber,
         OnPlayerTurnStartSubscriber,
         OnCreateDescriptionSubscriber,
-        OnPlayerLoseBlockSubscriber
-{
+        OnPlayerLoseBlockSubscriber {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -232,6 +235,7 @@ public class SpireAnniversary5Mod implements
 
     public static boolean selectedCards = false;
     public static int combatExhausts = 0;
+    public static int cardsRippedThisTurn;
 
 
     public static String makeID(String idText) {
@@ -761,6 +765,7 @@ public class SpireAnniversary5Mod implements
     public void receiveOnPlayerTurnStart() {
         Leprechaun.staticStartOfTurn();
         JediUtil.receiveOnPlayerTurnStart();
+        cardsRippedThisTurn = 0;
     }
 
     public static void declarePacks() {
