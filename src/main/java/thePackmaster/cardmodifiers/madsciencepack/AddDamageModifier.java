@@ -2,6 +2,8 @@ package thePackmaster.cardmodifiers.madsciencepack;
 
 import basemod.abstracts.AbstractCardModifier;
         import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class AddDamageModifier extends AbstractMadScienceModifier {
 
@@ -10,10 +12,8 @@ public class AddDamageModifier extends AbstractMadScienceModifier {
     }
 
     @Override
-    public void onInitialApplication(AbstractCard card) {
-        super.onInitialApplication(card);
-        card.baseDamage += value;
-        card.update();
+    public float modifyBaseDamage(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
+        return damage + value;
     }
 
     @Override
