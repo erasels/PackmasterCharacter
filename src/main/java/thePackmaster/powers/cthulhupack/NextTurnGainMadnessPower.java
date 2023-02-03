@@ -1,6 +1,7 @@
 package thePackmaster.powers.cthulhupack;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.InvisiblePower;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,7 +12,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class NextTurnGainMadnessPower extends AbstractPackmasterPower implements InvisiblePower {
+public class NextTurnGainMadnessPower extends AbstractPackmasterPower implements InvisiblePower, NonStackablePower {
     public static final String POWER_ID = makeID("NextTurnGainMadnessPower");
     public static final String NAME = "";
 
