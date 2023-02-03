@@ -22,6 +22,7 @@ public class Backstrike extends AbstractStrikePackCard {
         baseDamage = 6;
         this.tags.add(CardTags.STRIKE);
         isInnate = true;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
