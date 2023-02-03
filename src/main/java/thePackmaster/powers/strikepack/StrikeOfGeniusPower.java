@@ -2,10 +2,22 @@ package thePackmaster.powers.strikepack;
 
 import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
+import com.megacrit.cardcrawl.vfx.WallopEffect;
+import thePackmaster.actions.strikepack.StrikeOfGeniusAction;
+import thePackmaster.cards.Strike;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
@@ -16,18 +28,24 @@ public class StrikeOfGeniusPower extends AbstractPackmasterPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public StrikeOfGeniusPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+    private AbstractCard source;
+    public StrikeOfGeniusPower(AbstractCreature owner, int amount, AbstractCard source) {
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        this.source = source;
 
     }
 
-    public void atStartOfTurn() {
-        for (int i = 0; i < this.amount; ++i) {
-            AbstractCard strike = Wiz.returnTrulyRandomPrediCardInCombat(card ->
-                    card.hasTag(AbstractCard.CardTags.STRIKE) && card.rarity != AbstractCard.CardRarity.SPECIAL, true);
-            strike.freeToPlayOnce = true;
-            if (!strike.exhaust) CardModifierManager.addModifier(strike, new ExhaustMod());
-            this.addToBot(new MakeTempCardInHandAction(strike));
+    @Override
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+
+        Wiz.atb(new StrikeOfGeniusAction(target));
+
+    }
+
+    @Override
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if (card.type == AbstractCard.CardType.ATTACK && card != source) {
+            Wiz.atb(new ReducePowerAction(Wiz.p(), Wiz.p(), this, 1));
         }
     }
 
