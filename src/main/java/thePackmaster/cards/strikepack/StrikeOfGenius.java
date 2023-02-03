@@ -14,6 +14,7 @@ public class StrikeOfGenius extends AbstractStrikePackCard {
     public StrikeOfGenius() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 6;
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

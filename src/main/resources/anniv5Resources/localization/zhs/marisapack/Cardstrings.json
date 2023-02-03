@@ -18,7 +18,7 @@
   },
   "${ModID}:ShootingEcho": {
     "NAME": "流星共鸣",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张牌。 NL 将一张本牌复制品加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "Deal !D! damage. Exhaust a random card to gain a copy of this. NL Exhaust."
   },
   "${ModID}:StardustReverie": {
     "NAME": "星屑幻想",

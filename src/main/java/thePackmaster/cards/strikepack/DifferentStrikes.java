@@ -20,6 +20,7 @@ public class DifferentStrikes extends AbstractStrikePackCard {
     public DifferentStrikes() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 6;
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -130,8 +130,7 @@ public class SpireAnniversary5Mod implements
         PostExhaustSubscriber,
         OnPlayerTurnStartSubscriber,
         OnCreateDescriptionSubscriber,
-        OnPlayerLoseBlockSubscriber
-{
+        OnPlayerLoseBlockSubscriber {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -232,6 +231,7 @@ public class SpireAnniversary5Mod implements
 
     public static boolean selectedCards = false;
     public static int combatExhausts = 0;
+    public static int cardsRippedThisTurn;
 
 
     public static String makeID(String idText) {
@@ -296,6 +296,7 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterSelectedHatIndex", "0");
             defaults.put("PackmasterUnlockedRainbows","");
             defaults.put("PackmasterRainbowEnabled","FALSE");
+            defaults.put("PackmasterUnseenHats","");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
             modConfig.load();
 
@@ -394,6 +395,17 @@ public class SpireAnniversary5Mod implements
         if (modConfig == null) return;
         modConfig.setBool("PackmasterRainbowEnabled", enabled);
         modConfig.save();
+    }
+
+    public static void saveUnseenHats(ArrayList<String> input) throws IOException {
+        if (modConfig == null) return;
+        modConfig.setString("PackmasterUnseenHats", String.join(",", input));
+        modConfig.save();
+    }
+
+    public static ArrayList<String> getUnseenHats() {
+        if (modConfig == null) return new ArrayList<>();
+        return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterUnseenHats").split(",")));
     }
 
     @Override
@@ -761,6 +773,7 @@ public class SpireAnniversary5Mod implements
     public void receiveOnPlayerTurnStart() {
         Leprechaun.staticStartOfTurn();
         JediUtil.receiveOnPlayerTurnStart();
+        cardsRippedThisTurn = 0;
     }
 
     public static void declarePacks() {

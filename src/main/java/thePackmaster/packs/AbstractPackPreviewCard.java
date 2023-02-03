@@ -130,6 +130,7 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         float xPos, yPos, offsetY;
         BitmapFont font;
         boolean hatUnlocked = HatMenu.currentlyUnlockedHats.contains(parentID);
+        boolean rainbowUnlocked = HatMenu.currentlyUnlockedRainbows.contains(parentID);
         String text;
         if(hatUnlocked)
             text = UI_STRINGS.TEXT[2];
@@ -152,7 +153,14 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
                 scaleMulti = 0.5F;
         }
         fontData.setScale(scaleMulti * (this.drawScale * 0.85f));
-        Color color = hatUnlocked? Settings.GREEN_TEXT_COLOR.cpy() : Settings.RED_TEXT_COLOR.cpy();
+        Color color;
+        if (rainbowUnlocked) {
+            color = new Color(0f,0.9f,1f,1f);
+        } else if (hatUnlocked) {
+            color = Settings.GREEN_TEXT_COLOR;
+        } else {
+            color = Settings.RED_TEXT_COLOR;
+        }
         color.a = this.transparency;
         FontHelper.renderRotatedText(sb, font, text, xPos, yPos, 0.0F, offsetY, this.angle, true, color);
         fontData.setScale(originalScale);

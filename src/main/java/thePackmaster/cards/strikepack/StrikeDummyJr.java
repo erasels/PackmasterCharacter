@@ -17,6 +17,8 @@ public class StrikeDummyJr extends AbstractStrikePackCard {
         baseDamage = 6;
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
+
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

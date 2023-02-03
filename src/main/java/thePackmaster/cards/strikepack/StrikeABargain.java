@@ -19,6 +19,7 @@ public class StrikeABargain extends AbstractStrikePackCard {
         baseDamage = 6;
         exhaust = true;
 
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
