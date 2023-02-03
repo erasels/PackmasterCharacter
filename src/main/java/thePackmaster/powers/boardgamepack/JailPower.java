@@ -22,9 +22,12 @@ public class JailPower extends AbstractPackmasterPower {
 
     @Override
     public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {
-        if (damage > 0F)
-            damage = 0F;
-        return damage;
+        return 0;
+    }
+
+    @Override
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        return 0;
     }
 
     @Override
