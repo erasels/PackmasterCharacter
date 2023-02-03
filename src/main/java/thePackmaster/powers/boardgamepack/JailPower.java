@@ -27,7 +27,9 @@ public class JailPower extends AbstractPackmasterPower {
 
     @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        return 0;
+        if(info.type == DamageInfo.DamageType.NORMAL || info.type == DamageInfo.DamageType.THORNS)
+            return 0;
+        return damageAmount;
     }
 
     @Override
