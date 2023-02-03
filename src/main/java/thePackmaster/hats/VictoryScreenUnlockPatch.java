@@ -31,10 +31,14 @@ public class VictoryScreenUnlockPatch {
             SpireAnniversary5Mod.logger.info("Unlocking new hats!");
             ArrayList<String> unlockedHats = SpireAnniversary5Mod.getUnlockedHats();
             ArrayList<String> unlockedRainbows = SpireAnniversary5Mod.getUnlockedRainbows();
+            ArrayList<String> unseenHats = SpireAnniversary5Mod.getUnseenHats();
             for (AbstractCardPack p : SpireAnniversary5Mod.currentPoolPacks) {
                 SpireAnniversary5Mod.logger.info("Adding " + p.packID + " to unlocked hats!");
                 if (!unlockedHats.contains(p.packID)) {
                     unlockedHats.add(p.packID);
+                    if (!unseenHats.contains(p.packID)) {
+                        unseenHats.add(p.packID);
+                    }
                 }
                 if (AbstractDungeon.ascensionLevel >= 20 && AbstractDungeon.actNum>=4) {
                     SpireAnniversary5Mod.logger.info("Adding " + p.packID + "to unlocked rainbows!");
@@ -47,6 +51,7 @@ public class VictoryScreenUnlockPatch {
                 SpireAnniversary5Mod.logger.info("Saving unlocked hats!");
                 SpireAnniversary5Mod.saveUnlockedHats(unlockedHats);
                 SpireAnniversary5Mod.saveUnlockedRainbows(unlockedRainbows);
+                SpireAnniversary5Mod.saveUnseenHats(unseenHats);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
