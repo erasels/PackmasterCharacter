@@ -16,6 +16,7 @@ public class LightningStrike extends AbstractStrikePackCard {
     public LightningStrike() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
 
+        this.tags.add(CardTags.STRIKE);
         baseBlock = BLOCK_VALUE;
     }
 

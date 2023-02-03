@@ -13,6 +13,8 @@ public class StrikeOfGenius extends AbstractStrikePackCard {
 
     public StrikeOfGenius() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,6 +27,5 @@ public class StrikeOfGenius extends AbstractStrikePackCard {
 
 
     public void upp() {
-        upgradeMagicNumber(1);
     }
 }

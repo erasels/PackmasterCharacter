@@ -14,6 +14,8 @@ public class StrikeDummyJr extends AbstractStrikePackCard {
     public StrikeDummyJr() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
+
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

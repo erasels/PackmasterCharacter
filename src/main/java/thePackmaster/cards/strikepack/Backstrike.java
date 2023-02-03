@@ -16,6 +16,7 @@ public class Backstrike extends AbstractStrikePackCard {
     public Backstrike() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
 
+        this.tags.add(CardTags.STRIKE);
         baseBlock = BLOCK_VALUE;
     }
 
