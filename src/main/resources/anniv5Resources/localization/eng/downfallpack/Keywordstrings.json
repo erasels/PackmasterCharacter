@@ -11,7 +11,7 @@
     "NAMES": [
       "ghostflame"
     ],
-    "DESCRIPTION": "Orb: Deals damage to ALL enemies."
+    "DESCRIPTION": "Orb: Deals damage to ALL enemies. Has no #yEvoke effect if its passive has not been triggered yet."
   },
   {
     "PROPER_NAME": "Ancient",
