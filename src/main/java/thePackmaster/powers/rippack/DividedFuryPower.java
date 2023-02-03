@@ -1,15 +1,16 @@
 package thePackmaster.powers.rippack;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import thePackmaster.cards.rippack.FuryAttack;
-import thePackmaster.cards.rippack.FurySkill;
+import thePackmaster.cardmodifiers.rippack.RippableModifier;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.*;
 
 public class DividedFuryPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("DividedFuryPower");
@@ -26,13 +27,27 @@ public class DividedFuryPower extends AbstractPackmasterPower {
         description = amount > 1 ? description + DESCRIPTIONS[2] : description + DESCRIPTIONS[1];
     }
 
-    public void atStartOfTurn() {
+    @Override
+    public void atStartOfTurnPostDraw() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            flash();
-            for (int i = 0; i < amount; i++) {
-                AbstractCard card = AbstractDungeon.cardRandomRng.randomBoolean() ? new FuryAttack() : new FurySkill();
-                addToBot(new MakeTempCardInHandAction(card));
-            }
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    int validCards = countValidCardsInHandToMakeRippable(); //Get count of valid cards
+                    //Set the amount of cards to make rippable to be either the power amount or the number of valid cards, whichever is less
+                    int cardsToMakeRippable = validCards < DividedFuryPower.this.amount ? validCards : DividedFuryPower.this.amount;
+                    for (int i = 0; i < cardsToMakeRippable; i++) {
+                        flash();
+                        AbstractCard card = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                        while(!cardValidToMakeRippable(card)) { //Get random cards until you get one you can make rippable
+                            card = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                        }
+                        CardModifierManager.addModifier(card, new RippableModifier(false));
+                        card.flash();
+                    }
+                    isDone = true;
+                }
+            });
         }
     }
 

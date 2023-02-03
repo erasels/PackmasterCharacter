@@ -1,6 +1,5 @@
 package thePackmaster.cards.rippack;
 
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 

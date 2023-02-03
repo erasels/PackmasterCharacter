@@ -1,5 +1,6 @@
 package thePackmaster.util;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -21,11 +22,14 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.TimedVFXAction;
+import thePackmaster.cardmodifiers.rippack.RippableModifier;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.patches.rippack.AllCardsRippablePatches;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Wiz {
     //The wonderful Wizard of Oz allows access to most easy compilations of data, or functions.
@@ -398,5 +402,23 @@ public class Wiz {
     // Packmaster specific utilities
     public static AbstractCardPack getPackByCard(AbstractCard c) {
         return SpireAnniversary5Mod.packsByID.get(SpireAnniversary5Mod.cardParentMap.get(c.cardID));
+    }
+
+    public static boolean isArtCard(AbstractCard c) {
+        return AllCardsRippablePatches.AbstractCardFields.ripStatus.get(c) == AllCardsRippablePatches.RipStatus.ART;
+    }
+    public static boolean isTextCard(AbstractCard c) {
+        return AllCardsRippablePatches.AbstractCardFields.ripStatus.get(c) == AllCardsRippablePatches.RipStatus.TEXT;
+    }
+    public static boolean isWholeCard(AbstractCard c) {
+        return AllCardsRippablePatches.AbstractCardFields.ripStatus.get(c) == AllCardsRippablePatches.RipStatus.WHOLE;
+    }
+
+    //If a card is whole and isn't already rippable
+    public static boolean cardValidToMakeRippable(AbstractCard c) {
+        return isWholeCard(c) && !CardModifierManager.hasModifier(c, RippableModifier.ID);
+    }
+    public static int countValidCardsInHandToMakeRippable() {
+        return AbstractDungeon.player.hand.group.stream().filter(card -> cardValidToMakeRippable(card)).collect(Collectors.toList()).size();
     }
 }

@@ -14,22 +14,26 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.cardManip.CardFlashVfx;
 import com.megacrit.cardcrawl.vfx.cardManip.CardGlowBorder;
-import thePackmaster.cards.rippack.AbstractRippedTextCard;
 
 import static thePackmaster.SpireAnniversary5Mod.modID;
+import static thePackmaster.patches.rippack.AllCardsRippablePatches.textShader;
+import static thePackmaster.util.Wiz.isTextCard;
 
-public class TextCardPatch {
+//Houses patches specifically for rendering text half of cards
+//Minus the initial shader application done in AllCardsRippablePatches
+public class TextCardRenderingPatches {
 
-    private static ShaderProgram shader = AbstractRippedTextCard.shader;
     private static final Texture TEXT_GLOW = ImageMaster.loadImage(modID + "Resources/images/512/rip/card_text.png");
+    public static ShaderProgram oldShader = null;
 
-    //Completely skip rendering the portrait on text cards
+    //Completely skip rendering the portrait and title on text cards
     @SpirePatch(clz = AbstractCard.class, method = "renderPortrait")
+    @SpirePatch(clz = AbstractCard.class, method = "renderTitle")
     public static class SkipPortrait {
 
         @SpirePrefixPatch()
         public static SpireReturn Prefix(AbstractCard __instance, SpriteBatch sb) {
-            if (__instance instanceof AbstractRippedTextCard) {
+            if (isTextCard(__instance)) {
                 return SpireReturn.Return();
             } else {
                 return SpireReturn.Continue();
@@ -37,30 +41,52 @@ public class TextCardPatch {
         }
     }
 
-    //This pair of patches removes the shader from rendering the description
-    //A side effect of the shader causes some characters of the description to be removed
-    @SpirePatch(clz = AbstractCard.class, method = "renderDescription")
-    @SpirePatch(clz = AbstractCard.class, method = "renderDescriptionCN")
-    @SpirePatch(clz = AbstractCard.class, method = "renderType")
-    public static class ISeeTreesOfGreen {
+    @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
+    public static class PleaseMakeEnergyTransparent {
 
         @SpirePrefixPatch()
         public static void Prefix(AbstractCard __instance, SpriteBatch sb) {
-            if (__instance instanceof AbstractRippedTextCard) {
-                sb.setShader(null);
+            oldShader = sb.getShader();
+            if (isTextCard(__instance)) {
+                sb.setShader(textShader);
+                textShader.setUniformf("u_y", 1.0f); //Just set the shader to be completely transparent
             }
         }
     }
 
-    @SpirePatch(clz = AbstractCard.class, method = "renderDescription")
-    @SpirePatch(clz = AbstractCard.class, method = "renderDescriptionCN")
-    @SpirePatch(clz = AbstractCard.class, method = "renderType")
-    public static class RedRosesToo {
+    @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
+    public static class PleaseMakeEnergyTransparentPost {
 
         @SpirePostfixPatch()
         public static void Postfix(AbstractCard __instance, SpriteBatch sb) {
-            if (__instance instanceof AbstractRippedTextCard) {
-                sb.setShader(shader);
+            if (isTextCard(__instance)) {
+                sb.setShader(oldShader);
+            }
+        }
+    }
+
+    @SpirePatch(clz = AbstractCard.class, method = "renderPortraitFrame")
+    @SpirePatch(clz = AbstractCard.class, method = "renderBannerImage")
+    public static class MakeFrameTransparent {
+
+        @SpirePrefixPatch()
+        public static void Prefix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
+            oldShader = sb.getShader();
+            if (isTextCard(__instance)) {
+                sb.setShader(textShader);
+                textShader.setUniformf("u_y", 1.0f);//Just set the shader to be completely transparent
+            }
+        }
+    }
+
+    @SpirePatch(clz = AbstractCard.class, method = "renderPortraitFrame")
+    @SpirePatch(clz = AbstractCard.class, method = "renderBannerImage")
+    public static class MakeFrameTransparentPost {
+
+        @SpirePostfixPatch()
+        public static void Postfix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
+            if (isTextCard(__instance)) {
+                sb.setShader(oldShader);
             }
         }
     }
@@ -71,7 +97,7 @@ public class TextCardPatch {
 
         @SpirePrefixPatch()
         public static void Prefix(CardFlashVfx __instance, SpriteBatch sb, AbstractCard ___card, Color ___color, boolean ___isSuper) {
-            if (___card instanceof AbstractRippedTextCard) {
+            if (isTextCard(___card)) {
                 ReflectionHacks.setPrivate(__instance, CardFlashVfx.class, "img", new TextureAtlas.AtlasRegion(TEXT_GLOW, 0, 0, TEXT_GLOW.getWidth(), TEXT_GLOW.getHeight()));
             }
         }
@@ -83,7 +109,7 @@ public class TextCardPatch {
 
         @SpirePostfixPatch()
         public static void Postfix(CardGlowBorder __instance, AbstractCard ___card) {
-            if (___card instanceof AbstractRippedTextCard) {
+            if (isTextCard(___card)) {
                 ReflectionHacks.setPrivate(__instance, CardGlowBorder.class, "img", new TextureAtlas.AtlasRegion(TEXT_GLOW, 0, 0, TEXT_GLOW.getWidth(), TEXT_GLOW.getHeight()));
             }
         }
@@ -95,7 +121,7 @@ public class TextCardPatch {
 
         @SpirePrefixPatch()
         public static SpireReturn<TextureAtlas.AtlasRegion> Postfix(AbstractCard __instance) {
-            if (__instance instanceof AbstractRippedTextCard) {
+            if (isTextCard(__instance)) {
                 return SpireReturn.Return(new TextureAtlas.AtlasRegion(TEXT_GLOW, 0, 0, TEXT_GLOW.getWidth(), TEXT_GLOW.getHeight()));
             }
             return SpireReturn.Continue();
