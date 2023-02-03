@@ -38,6 +38,6 @@
       "inscribe",
       "铭印"
     ],
-    "DESCRIPTION": "打出时触发所有充能球的被动效果。"
+    "DESCRIPTION": "When you play this card, activate the passive effect of your next orb, then of all your #yFull and #yCrescent #yMoon orbs."
   }
 ]
