@@ -10,7 +10,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import java.util.HashSet;
@@ -33,18 +35,13 @@ public class OutToMarketPower extends AbstractPackmasterPower {
     @Override
     public void onInitialApplication() {
         cleanUp();
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        cleanUp();
+        updateCardsPlayed(AbstractCard.CardType.POWER);
     }
 
     public void onAfterCardPlayed(AbstractCard card) {
-        if(!played.contains(card.type)) {
-            played.add(card.type);
+        int count = SeasonalMethod(card);
+        for(int j = 0; j < count; j++){
             updateCardsPlayed(card.type);
-
             flash();
             addToBot(new SFXAction("ATTACK_HEAVY"));
             if (Settings.FAST_MODE) {
@@ -61,6 +58,12 @@ public class OutToMarketPower extends AbstractPackmasterPower {
         desc = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
         this.description = desc;
     }
+        public int SeasonalMethod(AbstractCard c){
+        int returnValue = 0;
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).type != c.type){
+                returnValue = 1;}
+        //SpireAnniversary5Mod.logger.info("Completing seasonal method at value  " + returnValue);
+        return returnValue;}
 
     private void cleanUp() {
         played.clear();
@@ -70,6 +73,7 @@ public class OutToMarketPower extends AbstractPackmasterPower {
 
     private void updateCardsPlayed(AbstractCard.CardType type) {
         String add;
+        cleanUp();
         switch (type) {
             case SKILL:
                 add = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS[3];
