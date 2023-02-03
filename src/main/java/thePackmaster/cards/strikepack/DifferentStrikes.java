@@ -26,21 +26,29 @@ public class DifferentStrikes extends AbstractStrikePackCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.doDmg(m, damage, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
 
-        this.addToBot(new ExhaustAction(1, false));
+        Wiz.atb(new ExhaustAction(1, false));
 
-        AbstractCard strike = Wiz.returnTrulyRandomPrediCardInCombat(card -> card.hasTag(CardTags.STRIKE) && !card.hasTag(CardTags.HEALING) && (card.rarity == CardRarity.COMMON || card.rarity == CardRarity.UNCOMMON || card.rarity == CardRarity.RARE), true);
-        if (strike != null) {
-            strike.modifyCostForCombat(-1);
-            if (!strike.exhaust) CardModifierManager.addModifier(strike, new ExhaustMod());
-            if (upgraded) strike.upgrade();
-            addToBot(new MakeTempCardInHandAction(strike));
-        } else { //Give a basic Strike if there were no Strikes in the pool somehow
-            AbstractCard dumbStrike = new Strike();
-            dumbStrike.modifyCostForCombat(-1);
-            if (upgraded) dumbStrike.upgrade();
-            CardModifierManager.addModifier(dumbStrike, new ExhaustMod());
-            addToBot(new MakeTempCardInHandAction(dumbStrike));
-        }
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                this.isDone = true;
+
+                AbstractCard strike = Wiz.returnTrulyRandomPrediCardInCombat(card -> card.hasTag(CardTags.STRIKE) && !card.hasTag(CardTags.HEALING) && (card.rarity == CardRarity.COMMON || card.rarity == CardRarity.UNCOMMON || card.rarity == CardRarity.RARE), true);
+                if (strike != null) {
+                    strike.modifyCostForCombat(-1);
+                    if (!strike.exhaust) CardModifierManager.addModifier(strike, new ExhaustMod());
+                    if (upgraded) strike.upgrade();
+                    addToBot(new MakeTempCardInHandAction(strike));
+                } else { //Give a basic Strike if there were no Strikes in the pool somehow
+                    AbstractCard dumbStrike = new Strike();
+                    dumbStrike.modifyCostForCombat(-1);
+                    if (upgraded) dumbStrike.upgrade();
+                    CardModifierManager.addModifier(dumbStrike, new ExhaustMod());
+                    addToBot(new MakeTempCardInHandAction(dumbStrike));
+                }
+            }
+        });
+
     }
 
     public void upp() {

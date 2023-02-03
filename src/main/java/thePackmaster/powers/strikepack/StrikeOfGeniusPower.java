@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -26,25 +28,25 @@ public class StrikeOfGeniusPower extends AbstractPackmasterPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public StrikeOfGeniusPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+    private AbstractCard source;
+    public StrikeOfGeniusPower(AbstractCreature owner, int amount, AbstractCard source) {
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        this.source = source;
 
     }
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
 
-        //A little odd of a setup, but mirrors how Wallop operates.
-        if (amount > 0) {
-            Wiz.atb(new StrikeOfGeniusAction(target));
-            amount--;
-        }
+        Wiz.atb(new StrikeOfGeniusAction(target));
 
-        //amount change is happening instantly in the event of many attacks on the stack simultaneously.
-        if (amount <= 0) {
-            removeThis();
+    }
+
+    @Override
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if (card.type == AbstractCard.CardType.ATTACK && card != source) {
+            Wiz.atb(new ReducePowerAction(Wiz.p(), Wiz.p(), this, 1));
         }
-        super.onAttack(info, damageAmount, target);
     }
 
     @Override

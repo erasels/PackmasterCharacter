@@ -38,7 +38,7 @@
   },
   "${ModID}:StrikeABargain": {
     "NAME": "Strike a Bargain",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of Attacks in hand to 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of Attacks in hand to 0 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of Attacks in hand to 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of Attacks in hand to 0 until played."
   }
 }
