@@ -13,11 +13,5 @@
       "The next #b",
       " attacks gain Block equal to unblocked damage dealt."
     ]
-  },
-  "${ModID}:StrikeABargainPower": {
-    "NAME": "Strike a Bargain",
-    "DESCRIPTIONS": [
-      "Your Attacks cost #b0 this turn, but you cannot play non-Attacks."
-    ]
   }
 }

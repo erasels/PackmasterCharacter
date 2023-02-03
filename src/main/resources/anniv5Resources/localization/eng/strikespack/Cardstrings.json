@@ -7,18 +7,6 @@
     "NAME": "Strike of Luck",
     "DESCRIPTION": "Deal !D! damage to a random enemy 1 to 3 times."
   },
-  "${ModID}:LightningStrike": {
-    "NAME": "Lightning Strike",
-    "DESCRIPTION": "Deal !D! damage twice. NL Channel 2 Lightning."
-  },
-  "${ModID}:PenaltyStrike": {
-    "NAME": "Penalty Strike",
-    "DESCRIPTION": "Deal !D! damage twice. NL Enemy loses !M! Strength this turn."
-  },
-  "${ModID}:Backstrike": {
-    "NAME": "Backstrike",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Attacks in hand count as *Strikes this combat. NL Exhaust."
-  },
   "${ModID}:WorkersStrike": {
     "NAME": "Worker's Strike",
     "DESCRIPTION": "Deal !D! damage. NL Draw an Attack. If it is a Strike, gain [E]."
@@ -40,5 +28,17 @@
     "NAME": "Strike a Bargain",
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of Attacks in hand to 0 until played. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of Attacks in hand to 0 until played."
+  },
+  "${ModID}:Backstrike": {
+    "NAME": "Backstrike",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Attacks in hand count as *Strikes this combat. NL Exhaust."
+  },
+  "${ModID}:LightningStrike": {
+    "NAME": "Lightning Strike",
+    "DESCRIPTION": "Deal !D! damage twice. NL Channel 2 Lightning."
+  },
+  "${ModID}:PenaltyStrike": {
+    "NAME": "Penalty Strike",
+    "DESCRIPTION": "Deal !D! damage twice. NL Enemy loses !M! Strength this turn."
   }
 }
