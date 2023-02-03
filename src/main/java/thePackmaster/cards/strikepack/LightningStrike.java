@@ -1,30 +1,32 @@
 package thePackmaster.cards.strikepack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Lightning;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class LightningStrike extends AbstractStrikePackCard {
     public final static String ID = makeID("LightningStrike");
 
-    private static final int BLOCK_VALUE = 7;
-    private static final int UPGRADE_PLUS_BLOCK_VALUE = 3;
     public LightningStrike() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
 
-        baseBlock = BLOCK_VALUE;
+        baseDamage = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        Wiz.doDmg(m, damage, AbstractGameAction.AttackEffect.LIGHTNING);
+        Wiz.doDmg(m, damage, AbstractGameAction.AttackEffect.LIGHTNING);
+        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new Lightning()));
         AbstractDungeon.actionManager.addToBottom(new ChannelAction(new Lightning()));
     }
 
     public void upp() {
-        this.upgradeBlock(UPGRADE_PLUS_BLOCK_VALUE);
+        upgradeDamage(3);
     }
 }

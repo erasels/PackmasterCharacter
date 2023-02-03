@@ -29,6 +29,6 @@ public class GhostflameStrike extends AbstractDownfallCard {
       }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
     }
 }

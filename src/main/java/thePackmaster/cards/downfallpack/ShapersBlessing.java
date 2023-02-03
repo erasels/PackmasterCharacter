@@ -14,7 +14,7 @@ public class ShapersBlessing extends AbstractDownfallCard {
     public final static String ID = makeID("ShapersBlessing");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 7;
 
     public ShapersBlessing() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
