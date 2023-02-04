@@ -14,7 +14,7 @@
   },
   "${ModID}:Construct": {
     "NAME": "建造",
-    "DESCRIPTION": "${ModID}:不稳定 。 NL 本回合受到的攻击伤害减少 !M! 点。 NL 获得2层 虚弱 。"
+    "DESCRIPTION": "${ModID}:不稳定 。 NL 抽一张牌。 NL 本回合受到的攻击伤害减少 !M! 点。 NL 获得2层 虚弱 。"
   },
   "${ModID}:Freedom": {
     "NAME": "自由",
