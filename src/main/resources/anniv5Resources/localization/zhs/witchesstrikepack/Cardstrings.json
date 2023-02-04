@@ -23,7 +23,7 @@
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "横扫一拳",
-    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 本牌 ${ModID}:滋生 时， ${ModID}:展现 一个 ${ModID}:新月 充能球。"
+    "DESCRIPTION": "NL 造成 !D! 点伤害。 ${ModID}:展现 一个 ${ModID}:新月 充能球。"
   },
   "${ModID}:HornetWithin": {
     "NAME": "黄蜂附体",
@@ -31,7 +31,7 @@
   },
   "${ModID}:WitchTwist": {
     "NAME": "乱射升龙击",
-    "DESCRIPTION": "随机 ${ModID}:修改 !M! 张手牌： ${ModID}:铭印 。 NL 获得 !${ModID}:m2! 点 集中 。 NL 消耗 。"
+    "DESCRIPTION": "随机 ${ModID}:修改 !M! 张手牌： NL \" ${ModID}:铭印 \" 。 NL 消耗 。"
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "月色飞行",
