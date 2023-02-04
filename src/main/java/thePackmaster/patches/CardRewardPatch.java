@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CombatRewardScreen;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.powers.strikepack.StrikeABargainPower;
 
 import java.util.ArrayList;
 

@@ -7,11 +7,11 @@
     ]
   },
   "${ModID}:StrikeOfGeniusPower": {
-    "NAME": "Strike of Genius",
+    "NAME": "打击天才",
     "DESCRIPTIONS": [
-      "The next attack gains Block equal to unblocked damage dealt.",
-      "The next #b",
-      " attacks gain Block equal to unblocked damage dealt."
+      "下次攻击时你获得造成的未被格挡伤害点 #y格挡 。",
+      "接下来 #b",
+      " 次攻击时你获得造成的未被格挡伤害点 #y格挡 。"
     ]
   }
 }

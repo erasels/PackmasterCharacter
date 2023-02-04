@@ -35,7 +35,7 @@
     "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃任意张牌， NL 每张 激发 最右侧充能球一次。"
   },
   "${ModID}:Thunderstruck": {
-    "NAME": "闪电打击",
-    "DESCRIPTION": "打出 *打击 牌时，生成 !M! 个 闪电 充能球。"
+    "NAME": "雷电打击",
+    "DESCRIPTION": "打出 *打击 牌时， NL 生成 !M! 个 闪电 充能球。"
   }
 }

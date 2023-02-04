@@ -2,14 +2,14 @@
   "${ModID}:OutToMarketPower": {
     "NAME": "赶集",
     "DESCRIPTIONS": [
-      "Deal #b",
-      " damage to ALL enemies whenever you play a card with a different type than the last. Last Played:", "攻击", "技能", "能力", "状态", "诅咒"
+      "每当你打出与上张打出牌类型不同的牌时，对所有敌人造成 #b",
+      " 点伤害。 NL 上张打出牌类型为：", "攻击", "技能", "能力", "状态", "诅咒"
     ]
   },
   "${ModID}:SupplyChainPower": {
     "NAME": "供应链",
     "DESCRIPTIONS": [      
-      "At the start of your turn, add #b", " Fertilizer", "s", " to your hand."
+      "你的回合开始时，将 #b", " 张 #y肥料 ", "", "加入手牌。"
     ]
   }
 }

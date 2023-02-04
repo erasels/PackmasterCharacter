@@ -12,7 +12,7 @@
     "DESCRIPTION": "给予 !M! 层 ${ModID}:扭曲 。 NL 若目标有其他负面效果，再给予 !${ModID}:m2! 层。"
   },
   "${ModID}:BurningAct": {
-    "NAME": "燃烧举止",
+    "NAME": "燃烧表演",
     "DESCRIPTION": "抽 !M! 张牌。 NL 随机 消耗 其中2张。",
     "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 其中2张。"
   },

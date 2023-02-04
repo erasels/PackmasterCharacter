@@ -1,8 +1,8 @@
 {
   "${ModID}:DividedFury": {
     "NAME": "多重愤怒",
-    "DESCRIPTION": "At the start of your turn, make !M! card in your hand ${ModID}:rippable.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, make !M! card in your hand ${ModID}:rippable."
+    "DESCRIPTION": "回合开始时，随机使 !M! 张手牌变得 ${ModID}:可撕裂 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，随机使 !M! 张手牌变得 ${ModID}:可撕裂 。"
   },
   "${ModID}:ViciousCycle": {
     "NAME": "邪恶循环",
