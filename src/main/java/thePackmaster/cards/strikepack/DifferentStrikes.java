@@ -1,5 +1,9 @@
 package thePackmaster.cards.strikepack;
 
+import basemod.cardmods.ExhaustMod;
+import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,36 +18,41 @@ public class DifferentStrikes extends AbstractStrikePackCard {
     public final static String ID = makeID("DifferentStrikes");
 
     public DifferentStrikes() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        exhaust = true;
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        baseDamage = 6;
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        Wiz.doDmg(m, damage, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
 
-        int count=0;
-        for (AbstractCard c: p.hand.group
-             ) {
-            if (c!=this) {
-                addToBot(new ExhaustSpecificCardAction(c, p.hand));
-                count++;
+        Wiz.atb(new ExhaustAction(1, false));
+
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                this.isDone = true;
+
+                AbstractCard strike = Wiz.returnTrulyRandomPrediCardInCombat(card -> card.hasTag(CardTags.STRIKE) && !card.hasTag(CardTags.HEALING) && (card.rarity == CardRarity.COMMON || card.rarity == CardRarity.UNCOMMON || card.rarity == CardRarity.RARE), true);
+                if (strike != null) {
+                    strike.modifyCostForCombat(-1);
+                    if (!strike.exhaust) CardModifierManager.addModifier(strike, new ExhaustMod());
+                    if (upgraded) strike.upgrade();
+                    addToBot(new MakeTempCardInHandAction(strike));
+                } else { //Give a basic Strike if there were no Strikes in the pool somehow
+                    AbstractCard dumbStrike = new Strike();
+                    dumbStrike.modifyCostForCombat(-1);
+                    if (upgraded) dumbStrike.upgrade();
+                    CardModifierManager.addModifier(dumbStrike, new ExhaustMod());
+                    addToBot(new MakeTempCardInHandAction(dumbStrike));
+                }
             }
+        });
 
-        }
-        for (int i = 0; i < count; i++) {
-            AbstractCard strike = Wiz.returnTrulyRandomPrediCardInCombat(card -> card.hasTag(CardTags.STRIKE) && !card.hasTag(CardTags.HEALING) && (card.rarity == CardRarity.COMMON || card.rarity == CardRarity.UNCOMMON || card.rarity == CardRarity.RARE), true);
-            if (strike != null) {
-                strike.modifyCostForCombat(-1);
-                addToBot(new MakeTempCardInHandAction(strike));
-            } else { //Give a basic Strike if there were no Strikes in the pool somehow
-                AbstractCard dumbStrike = new Strike();
-                dumbStrike.modifyCostForCombat(-1);
-                addToBot(new MakeTempCardInHandAction(dumbStrike));
-            }
-
-        }
     }
 
     public void upp() {
-        this.upgradeBaseCost(1);
+        upgradeDamage(3);
+        //Also makes the generated strike upgraded.
     }
 }

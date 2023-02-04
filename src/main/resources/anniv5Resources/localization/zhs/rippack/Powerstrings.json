@@ -2,9 +2,9 @@
   "${ModID}:DividedFuryPower": {
     "NAME": "多重愤怒",
     "DESCRIPTIONS": [
-      "你的回合开始时，将 #b",
-      " 张 #y愤怒 加入手牌。",
-      " 张 #y愤怒 加入手牌。"
+      "At the start of your turn, make #b",
+      " card in your hand #yrippable.",
+      " cards in your hand #yrippable."
     ]
   }
 }

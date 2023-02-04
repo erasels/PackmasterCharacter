@@ -1,33 +1,26 @@
 package thePackmaster.cards.rippack;
 
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.cardmodifiers.rippack.RippableModifier;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 import static thePackmaster.util.Wiz.atb;
 
-public class SurprisePack extends AbstractRippableCard {
+public class SurprisePack extends AbstractRipCard implements OnRipInterface {
     public final static String ID = makeID("SurprisePack");
 
-    public SurprisePack() {
-        this(null, null);
-    }
 
-    public SurprisePack(AbstractRippedArtCard artCard, AbstractRippedTextCard textCard) {
+    public SurprisePack() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 1;
-        if (artCard == null && textCard == null) {
-            setRippedCards(new SurprisePackArt(this), new SurprisePackText(this));
-        } else if(artCard == null){
-            setRippedCards(new SurprisePackArt(this), textCard);
-        } else {
-            setRippedCards(artCard, new SurprisePackText(this));
-        }
+        CardModifierManager.addModifier(this, new RippableModifier());
     }
 
     @Override
@@ -51,7 +44,6 @@ public class SurprisePack extends AbstractRippableCard {
 
     @Override
     public void onRip() {
-        super.onRip();
         atb(new GainEnergyAction(secondMagic));
     }
 }

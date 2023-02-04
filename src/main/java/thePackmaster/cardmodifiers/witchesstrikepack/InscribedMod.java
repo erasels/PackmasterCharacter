@@ -2,6 +2,7 @@ package thePackmaster.cardmodifiers.witchesstrikepack;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -12,6 +13,9 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.PackmasterOrb;
+import thePackmaster.orbs.WitchesStrike.CrescentMoon;
+import thePackmaster.orbs.WitchesStrike.FullMoon;
+import thePackmaster.util.Wiz;
 
 public class InscribedMod extends AbstractCardModifier {
     private CardStrings uiStrings = CardCrawlGame.languagePack.getCardStrings(SpireAnniversary5Mod.makeID("Inscribed"));
@@ -28,17 +32,29 @@ public class InscribedMod extends AbstractCardModifier {
     }
 
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        if(!AbstractDungeon.player.orbs.isEmpty()) {
-            AbstractOrb o = AbstractDungeon.player.orbs.get(0);
-            if (!(o instanceof EmptyOrbSlot)) {
-                if (o instanceof PackmasterOrb) {
-                    ((PackmasterOrb) o).passiveEffect();
-                } else {
-                    o.onStartOfTurn();
-                    o.onEndOfTurn();
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if(!AbstractDungeon.player.orbs.isEmpty()) {
+                    AbstractOrb o = AbstractDungeon.player.orbs.get(0);
+                    if (!(o instanceof EmptyOrbSlot)) {
+                        if (o instanceof PackmasterOrb) {
+                            ((PackmasterOrb) o).passiveEffect();
+                        } else {
+                            o.onStartOfTurn();
+                            o.onEndOfTurn();
+                        }
+                    }
+
+                    for(AbstractOrb orb : Wiz.p().orbs) {
+                        if(orb instanceof FullMoon || orb instanceof CrescentMoon) {
+                            ((PackmasterOrb)o).passiveEffect();
+                        }
+                    }
                 }
+                isDone = true;
             }
-        }
+        });
     }
 
     @Override

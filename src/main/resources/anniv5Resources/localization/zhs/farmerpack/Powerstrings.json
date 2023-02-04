@@ -2,15 +2,14 @@
   "${ModID}:OutToMarketPower": {
     "NAME": "赶集",
     "DESCRIPTIONS": [
-      "每回合首次打出各类牌时，对所有敌人造成 #b",
-      " 点伤害。本回合已打出：", "攻击", "技能", "能力", "状态", "诅咒"
+      "Deal #b",
+      " damage to ALL enemies whenever you play a card with a different type than the last. Last Played:", "攻击", "技能", "能力", "状态", "诅咒"
     ]
   },
   "${ModID}:SupplyChainPower": {
     "NAME": "供应链",
-    "DESCRIPTIONS": [
-      "你的回合开始时，将 #b",
-      " 张 #y肥料 加入手牌。"
+    "DESCRIPTIONS": [      
+      "At the start of your turn, add #b", " Fertilizer", "s", " to your hand."
     ]
   }
 }
