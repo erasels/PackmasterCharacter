@@ -15,7 +15,7 @@ public class StrikeOfLuck extends AbstractStrikePackCard {
     private static final int UPGRADE_PLUS_ATTACK_DMG = 3;
 
     public StrikeOfLuck() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.damage = this.baseDamage = ATTACK_DMG;
         this.tags.add(CardTags.STRIKE);
     }

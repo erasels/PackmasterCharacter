@@ -7,37 +7,38 @@
     "NAME": "Strike of Luck",
     "DESCRIPTION": "Deal !D! damage to a random enemy 1 to 3 times."
   },
-  "${ModID}:LightningStrike": {
-    "NAME": "Lightning Strike",
-    "DESCRIPTION": "Gain !B! Block. NL Channel 1 Lightning."
-  },
-  "${ModID}:PenaltyStrike": {
-    "NAME": "Penalty Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength. NL Exhaust."
-  },
-  "${ModID}:Backstrike": {
-    "NAME": "Backstrike",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Modify all Attacks in hand: \"Name gains Strike.\""
-  },
   "${ModID}:WorkersStrike": {
     "NAME": "Worker's Strike",
     "DESCRIPTION": "Deal !D! damage. NL Draw an Attack. If it is a Strike, gain [E]."
   },
   "${ModID}:StrikeDummyJr": {
-    "NAME": "Strike Dummy Jr.",
-    "DESCRIPTION": "Gain !M! Strength. NL Strikes deal 2 more damage this combat."
+    "NAME": "Dummy's Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Strikes deal 2 more damage this combat. NL Exhaust."
   },
   "${ModID}:DifferentStrikes": {
     "NAME": "Different Strikes",
-    "DESCRIPTION": "Exhaust all cards in hand. Replace them with random Strikes that cost 1 less. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. Gain a random Strike that costs 1 less and Exhausts.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card. Gain a random Upgraded Strike that costs 1 less and Exhausts."
   },
   "${ModID}:StrikeOfGenius": {
     "NAME": "Strike of Genius",
-    "DESCRIPTION": "At the start of your turn, gain a random \"Strike\". NL It costs 0 until played and gains Exhaust.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, gain a random Upgraded \"Strike\". NL It costs 0 until played and gains Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL The next attack you play gains 'Gain Block equal to unblocked damage dealt'."
   },
   "${ModID}:StrikeABargain": {
     "NAME": "Strike a Bargain",
-    "DESCRIPTION": "Reduce the cost of Attacks in hand to 0 this turn. You can only play Attacks this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of Attacks in hand to 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of Attacks in hand to 0 until played."
+  },
+  "${ModID}:Backstrike": {
+    "NAME": "Backstrike",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Attacks in hand count as *Strikes this combat. NL Exhaust."
+  },
+  "${ModID}:LightningStrike": {
+    "NAME": "Lightning Strike",
+    "DESCRIPTION": "Deal !D! damage twice. NL Channel 2 Lightning."
+  },
+  "${ModID}:PenaltyStrike": {
+    "NAME": "Penalty Strike",
+    "DESCRIPTION": "Deal !D! damage twice. NL Enemy loses !M! Strength this turn."
   }
 }

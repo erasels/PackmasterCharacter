@@ -2,7 +2,6 @@ package thePackmaster.cards.marisapack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.upgradespack.ExhaustRandomPredicateCardAction;
@@ -14,7 +13,6 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class ShootingEcho extends AbstractMarisaCard {
     public final static String ID = makeID(ShootingEcho.class.getSimpleName());
-    private static final String text = CardCrawlGame.languagePack.getUIString("ExhaustAction").TEXT[0];
     private static final int DMG = 9, UPG_DMG = 2;
 
     public ShootingEcho() {

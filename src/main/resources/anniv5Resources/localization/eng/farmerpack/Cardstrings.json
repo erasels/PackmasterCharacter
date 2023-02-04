@@ -1,8 +1,13 @@
 {
   "${ModID}:Fertilizer": {
     "NAME": "Fertilizer",
-    "DESCRIPTION": "Draw a card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Draw a card. NL Exhaust. NL This is a Status.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust. NL This is a Status."
+  },
+  "${ModID}:FertilizerPlaceholder": {
+    "NAME": "Fertilizer",
+    "DESCRIPTION": "Draw a card. NL Exhaust. NL When created, this is either a Status or Curse.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust. NL When created, this is either a Status or Curse."
   },
   "${ModID}:HarvestBeans": {
     "NAME": "Harvest Beans",
@@ -24,7 +29,7 @@
   },
   "${ModID}:OutToMarket": {
     "NAME": "Out To Market",
-    "DESCRIPTION": "Deal !M! damage to ALL enemies the first time you play each card type each turn."
+    "DESCRIPTION": "Whenever you play a card with a different type than the last, deal !M! damage to ALL enemies."
   },
   "${ModID}:PestControl": {
     "NAME": "Pest Control",
@@ -33,7 +38,7 @@
   },
   "${ModID}:SoilResiliency": {
     "NAME": "Soil Resiliency",
-    "DESCRIPTION": "Gain !M! Strength and !${ModID}:m2! Dexterity. NL If you've played less than 3 types of card this turn, Exhaust."
+    "DESCRIPTION": "Gain !M! Strength. NL Double this to a max of 10 after play if you've played 3 or more card types this turn. NL Exhaustive !stslib:ex!."
   },
   "${ModID}:SupplyChain": {
     "NAME": "Supply Chain",
