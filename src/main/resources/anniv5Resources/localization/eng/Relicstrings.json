@@ -4,7 +4,9 @@
     "FLAVOR": "\"Incredible! It appears that this bag connects to an extradimensional space. What if I jump inside?\" - Ranwid",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL Gain [E] at the start of each turn, lasting one turn for every #b5 cards in your deck."
+      ".[] NL Gain [E] at the start of each turn, lasting one turn for every #b5 cards in your deck.",
+      "Energy gained: {0}",
+      " NL Per turn: {0} NL Per combat: {1}"
     ]
   },
   "${ModID}:BanishingDecree": {
@@ -20,7 +22,8 @@
       "Power!",
       ".",
       ".",
-      "Translator note: The 2 dots up here follows the structure 'Choose a Pack to banish with '+'Banishing Decree'+'.' and 'Choose a Pack to gain with '+'Banishing Decree'+'.' respectively. "
+      "Translator note: The 2 dots up here follows the structure 'Choose a Pack to banish with '+'Banishing Decree'+'.' and 'Choose a Pack to gain with '+'Banishing Decree'+'.' respectively. ",
+      "Banished pack: {0} NL Added pack: {1}"
     ]
   },
   "${ModID}:CollectorBadge": {
@@ -29,7 +32,9 @@
     "DESCRIPTIONS": [
       "Each turn, after you play a card from #b4 different Packs, gain [E] [REMOVE_SPACE].",
       " NL NL Packs used this turn: ",
-      " NL NL This has triggered this turn. "
+      " NL NL This has triggered this turn. ",
+      "Energy gained: {0}",
+      " NL Per turn: {0} NL Per combat: {1}"
     ]
   },
   "${ModID}:GemOfUnity": {
@@ -37,7 +42,9 @@
     "FLAVOR": "In union there is strength.",
     "DESCRIPTIONS": [
       "Once per combat, after you have played a card from each different Pack available this run, gain #b20 Block, #b1 Strength, #b1 Dexterity, and heal #b5 HP.",
-      "Packs played this combat: "
+      "Packs played this combat: ",
+      "Times triggered: {0}",
+      " NL Per combat: {0}"
     ]
   },
   "${ModID}:HandyHaversack": {
