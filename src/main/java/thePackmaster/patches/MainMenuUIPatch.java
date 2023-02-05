@@ -1,6 +1,5 @@
 package thePackmaster.patches;
 
-import basemod.ModLabeledButton;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -18,6 +17,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledButton;
 import thePackmaster.ui.PackFilterMenu;
 
 import java.io.IOException;
@@ -42,9 +42,9 @@ public class MainMenuUIPatch {
     public static final String RANDOM = "Random";
     public static final String CHOICE = "Choice";
 
-    private static final float CHECKBOX_X_OFF = 32.0f * Settings.scale;
+    private static final float CHECKBOX_X_OFF = 32.0f * Settings.xScale;
     private static final float CHECKBOX_X;
-    private static final float CHECKBOX_Y = Settings.HEIGHT / 2.0f - 175.0f * Settings.scale;
+    private static final float CHECKBOX_Y = Settings.HEIGHT / 2.0f - 175.0f * Settings.yScale;
 
     private static final int PACK_COUNT = SpireAnniversary5Mod.PACKS_PER_RUN;
     private static final int DROPDOWN_ROWCOUNT = 10;
@@ -53,19 +53,21 @@ public class MainMenuUIPatch {
     private static final float DROPDOWNS_START_Y = CHECKBOX_Y + DROPDOWNS_SPACING * (PACK_COUNT + 0.5f);
 
     //filter button fields
+    // We pass these values to the button class, which does its own multiplication by xScale/yScale
     private static final float FILTERBUTTON_X = 55f;
     private static final float FILTERBUTTON_Y = 1080f - 122f;
 
     private static final PackFilterMenu filterMenu = new PackFilterMenu();
-    private static final ModLabeledButton openFilterMenuButton;
+    private static final FixedModLabeledButton openFilterMenuButton;
     private static final HashMap<String, Integer> idToIndex = new HashMap<>();
 
     //hat button fields
+    // We pass these values to the button class, which does its own multiplication by xScale/yScale
     private static final float HATBUTTON_X = 610f;
     private static final float HATBUTTON_Y = 1080f - 122f;
 
     public static final HatMenu hatMenu = new HatMenu();
-    private static final ModLabeledButton openHatMenuButton;
+    private static final FixedModLabeledButton openHatMenuButton;
 
     static {
         options.add(TEXT[2]);
@@ -140,10 +142,10 @@ public class MainMenuUIPatch {
             CHECKBOX_X = DROPDOWN_X + CHECKBOX_X_OFF;
         }
 
-        openFilterMenuButton = new ModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X, FILTERBUTTON_Y, null,
+        openFilterMenuButton = new FixedModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X, FILTERBUTTON_Y, null,
                 (button) -> filterMenu.toggle());
 
-        openHatMenuButton = new ModLabeledButton(uiStrings.TEXT[5], HATBUTTON_X, HATBUTTON_Y, null, (button) -> hatMenu.toggle());
+        openHatMenuButton = new FixedModLabeledButton(uiStrings.TEXT[5], HATBUTTON_X, HATBUTTON_Y, null, (button) -> hatMenu.toggle());
     }
 
 
