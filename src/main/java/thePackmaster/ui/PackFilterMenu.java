@@ -1,6 +1,5 @@
 package thePackmaster.ui;
 
-import basemod.ModLabeledToggleButton;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -16,6 +15,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.patches.DropdownColorsPatch;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class PackFilterMenu {
     private final DropdownMenu dropdown;
     private AbstractCardPack viewedPack;
     private AbstractCard previewCard;
-    private ModLabeledToggleButton checkbox;
+    private FixedModLabeledToggleButton checkbox;
     private final ArrayList<AbstractCardPack> packs = new ArrayList<>();
 
 
@@ -43,10 +43,8 @@ public class PackFilterMenu {
     private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
     private static final float DROPDOWN_X = 90f * Settings.xScale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
-    // ModLabeledToggleButton multiplies by Settings.scale itself... which isn't really correct, since it should be
-    // multiplying by xScale/yScale. We do our own manipulation ahead of time to cancel it out.
-    private static final float CHECKBOX_X = 150f * (Settings.xScale / Settings.scale);
-    private static final float CHECKBOX_Y = 490f * (Settings.yScale / Settings.scale);
+    private static final float CHECKBOX_X = 150f;
+    private static final float CHECKBOX_Y = 490f;
     private static final float PREVIEW_X = 235f * Settings.xScale;
     private static final float PREVIEW_Y = 700f * Settings.yScale;
 
@@ -65,7 +63,7 @@ public class PackFilterMenu {
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
         DropdownColorsPatch.DropdownRowToColor.function.set(dropdown, (index) -> getFilterConfig(packs.get(index).packID) ? null : DISABLED_COLOR);
 
-        checkbox = new ModLabeledToggleButton(TEXT[0], CHECKBOX_X, CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont, true, null, (label) -> {
+        checkbox = new FixedModLabeledToggleButton(TEXT[0], CHECKBOX_X, CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont, true, null, (label) -> {
         },
                 (button) -> clickCheckmark(button.enabled));
 
