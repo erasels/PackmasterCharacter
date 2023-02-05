@@ -37,16 +37,18 @@ public class PackFilterMenu {
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));
 
     //positions
-    private static final float BG_X_SCALE = Settings.scale * 0.31f;
-    private static final float BG_Y_SCALE = Settings.scale * 0.8f;
-    private static final float BG_X = 25f * Settings.scale;
-    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.scale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
-    private static final float DROPDOWN_X = 90f * Settings.scale;
-    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
-    private static final float CHECKBOX_X = 150f;
-    private static final float CHECKBOX_Y = 490f;
-    private static final float PREVIEW_X = 235f * Settings.scale;
-    private static final float PREVIEW_Y = 700f * Settings.scale;
+    private static final float BG_X_SCALE = Settings.xScale * 0.31f;
+    private static final float BG_Y_SCALE = Settings.yScale * 0.8f;
+    private static final float BG_X = 25f * Settings.xScale;
+    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
+    private static final float DROPDOWN_X = 90f * Settings.xScale;
+    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
+    // ModLabeledToggleButton multiplies by Settings.scale itself... which isn't really correct, since it should be
+    // multiplying by xScale/yScale. We do our own manipulation ahead of time to cancel it out.
+    private static final float CHECKBOX_X = 150f * (Settings.xScale / Settings.scale);
+    private static final float CHECKBOX_Y = 490f * (Settings.yScale / Settings.scale);
+    private static final float PREVIEW_X = 235f * Settings.xScale;
+    private static final float PREVIEW_Y = 700f * Settings.yScale;
 
     private static final Color DISABLED_COLOR = Settings.RED_TEXT_COLOR.cpy();
 
