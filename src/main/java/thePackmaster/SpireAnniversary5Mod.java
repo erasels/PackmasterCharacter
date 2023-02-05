@@ -2,7 +2,6 @@ package thePackmaster;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
-import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
 import basemod.devcommands.ConsoleCommand;
@@ -91,6 +90,7 @@ import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
+import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.ui.InfestTextIcon;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.JediUtil;
@@ -1047,7 +1047,7 @@ public class SpireAnniversary5Mod implements
         settingsPanel = new ModPanel();
         //int configStep = 40;
 
-        ModLabeledToggleButton allPacksModeBtn = new ModLabeledToggleButton(configStrings.TEXT[3], 350.0f, 600F, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
+        FixedModLabeledToggleButton allPacksModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[3], 350.0f, 600F, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             allPacksMode = button.enabled;
@@ -1056,7 +1056,7 @@ public class SpireAnniversary5Mod implements
 
         settingsPanel.addUIElement(allPacksModeBtn);
 
-        ModLabeledToggleButton oneFrameModeBtn = new ModLabeledToggleButton(configStrings.TEXT[4], 350.0f, 400F, Settings.CREAM_COLOR, FontHelper.charDescFont, oneFrameMode, settingsPanel, (label) -> {
+        FixedModLabeledToggleButton oneFrameModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[4], 350.0f, 400F, Settings.CREAM_COLOR, FontHelper.charDescFont, oneFrameMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             oneFrameMode = button.enabled;
@@ -1065,7 +1065,7 @@ public class SpireAnniversary5Mod implements
 
         settingsPanel.addUIElement(oneFrameModeBtn);
 
-        ModLabeledToggleButton sharedContentBtn = new ModLabeledToggleButton(configStrings.TEXT[5], 350.0f, 500F, Settings.CREAM_COLOR, FontHelper.charDescFont, sharedContentMode, settingsPanel, (label) -> {
+        FixedModLabeledToggleButton sharedContentBtn = new FixedModLabeledToggleButton(configStrings.TEXT[5], 350.0f, 500F, Settings.CREAM_COLOR, FontHelper.charDescFont, sharedContentMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             sharedContentMode = button.enabled;
