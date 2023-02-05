@@ -73,7 +73,7 @@
   "${ModID}:GainBlockEffect": {
     "EXTENDED_DESCRIPTION": [
       "获得 ",
-      " 点 格挡 。"
+      " 点 格挡 "
     ]
   },
   "${ModID}:ReboundSelfEffect": {
@@ -83,7 +83,7 @@
   },
   "${ModID}:TransmuteSelfEffect": {
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:增变化 本牌。"
+      " ${ModID}:增变化 本牌。"
     ]
   }
 }

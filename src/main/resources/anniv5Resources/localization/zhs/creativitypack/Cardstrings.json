@@ -17,7 +17,7 @@
   },
   "${ModID}:Souvenirs": {
     "NAME": "纪念物",
-    "DESCRIPTION": "{@@}在手中创造{!Upgrades!|>0=两张|@=一张} *惩恶 或 *平安 ，其附带抽牌效果。"
+    "DESCRIPTION": "{@@}创造{!Upgrades!|>0=两张|@=一张} *惩恶 或 *平安 ，其附带抽牌效果。"
   },
   "${ModID}:Mimicry": {
     "NAME": "模仿",

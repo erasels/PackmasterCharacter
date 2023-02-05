@@ -1,7 +1,8 @@
 {
   "${ModID}:ModalChoice": {
     "TEXT": [
-      "选择一种卡包。"
+      "选择一种卡包。",
+      "选择。"
     ]
   },
   "${ModID}:AbstractPackPreviewCard": {
