@@ -1,6 +1,5 @@
 package thePackmaster.hats;
 
-import basemod.ModLabeledToggleButton;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -21,6 +20,7 @@ import thePackmaster.packs.AlignmentPack;
 import thePackmaster.packs.CoreSetPack;
 import thePackmaster.packs.PsychicPack;
 import thePackmaster.patches.DropdownColorsPatch;
+import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.util.Wiz;
 
 import java.io.IOException;
@@ -53,17 +53,18 @@ public class HatMenu {
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));
 
     //positions
-    private static final float BG_X_SCALE = Settings.scale * 0.275f;
-    private static final float BG_Y_SCALE = Settings.scale * 0.8f;
-    private static final float BG_X = 525f * Settings.scale;
-    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.scale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
+    private static final float BG_X_SCALE = Settings.xScale * 0.275f;
+    private static final float BG_Y_SCALE = Settings.yScale * 0.8f;
+    private static final float BG_X = 525f * Settings.xScale;
+    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
     private static final float FLAVOR_X = BG_X + MENU_BG.getRegionWidth() * BG_X_SCALE * 0.5f;
-    private static final float DROPDOWN_X = 586f * Settings.scale;
-    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
-    private static final float PREVIEW_X = BG_X + (210 * Settings.scale);
-    private static final float PREVIEW_Y = BG_Y + (215 * Settings.scale);
-    private static final float CHECKBOX_X = BG_X + (100 * Settings.scale);
-    private static final float CHECKBOX_Y = BG_Y + (45 * Settings.scale);
+    private static final float DROPDOWN_X = 586f * Settings.xScale;
+    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
+    private static final float PREVIEW_X = BG_X + (210 * Settings.xScale);
+    private static final float PREVIEW_Y = BG_Y + (215 * Settings.yScale);
+    // We pass these values to the button class, which does its own multiplication by xScale/yScale
+    private static final float CHECKBOX_X = BG_X / Settings.xScale + 100;
+    private static final float CHECKBOX_Y = BG_Y / Settings.yScale + 45;
 
     public static AbstractPlayer dummy;
 
@@ -71,7 +72,7 @@ public class HatMenu {
 
     public static int currentHatIndex;
 
-    private static final ModLabeledToggleButton rainbowButton = makeRainbowButton();
+    private static final FixedModLabeledToggleButton rainbowButton = makeRainbowButton();
     private static boolean showRainbowButton = false;
 
     private static final Color LOCKED_COLOR = Color.GRAY.cpy().mul(1f,1f,1f,0.95f);
@@ -83,9 +84,9 @@ public class HatMenu {
         refreshHatDropdown();
     }
 
-    private static ModLabeledToggleButton makeRainbowButton() {
+    private static FixedModLabeledToggleButton makeRainbowButton() {
         SpireAnniversary5Mod.isHatRainbow = SpireAnniversary5Mod.wasRainbowLastEnabled();
-        return new ModLabeledToggleButton(TEXT[11], CHECKBOX_X, CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont, SpireAnniversary5Mod.isHatRainbow , null, (label) -> {
+        return new FixedModLabeledToggleButton(TEXT[11], CHECKBOX_X, CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont, SpireAnniversary5Mod.isHatRainbow , null, (label) -> {
         },
                 (button) -> {
                     try {
@@ -326,7 +327,7 @@ public class HatMenu {
     public void render(SpriteBatch sb) {
         sb.draw(MENU_BG, BG_X, BG_Y, 0f, 0f, MENU_BG.getRegionWidth(), MENU_BG.getRegionHeight(), BG_X_SCALE, BG_Y_SCALE, 0f);
 
-        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, FLAVOR_X, DROPDOWN_Y - (343 * Settings.scale), 330 * Settings.scale, Color.YELLOW.cpy(), 0.8F);
+        FontHelper.renderWrappedText(sb, FontHelper.panelNameFont, flavorText, FLAVOR_X, DROPDOWN_Y - (343 * Settings.yScale), 330 * Settings.xScale, Color.YELLOW.cpy(), 0.8F);
 
         getDummy().renderPlayerImage(sb);
 
