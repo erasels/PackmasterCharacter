@@ -17,7 +17,7 @@
   },
   "${ModID}:BoosterShot": {
     "NAME": "强化注射",
-    "DESCRIPTION": "造成 !D! 点 伤害. NL 给予 !M! 层 中毒. NL 目标回复 !${ModID}:m2! 点生命。"
+    "DESCRIPTION": "造成 !D! 点 伤害。 NL 给予 !M! 层 中毒 。 NL 目标回复 !${ModID}:m2! 点生命。"
   },
   "${ModID}:RangersSetup": {
     "NAME": "猎手陷阱",
