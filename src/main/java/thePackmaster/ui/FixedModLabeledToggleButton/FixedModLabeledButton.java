@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 
 import java.util.function.Consumer;
 
+// This class is a near-copy of the BaseMod class, changed to use Settings.xScale and Settings.yScale
 public class FixedModLabeledButton implements IUIElement {
     private Consumer<FixedModLabeledButton> click;
     private Hitbox hb;
