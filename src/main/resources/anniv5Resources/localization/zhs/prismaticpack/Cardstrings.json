@@ -6,7 +6,7 @@
   },
   "${ModID}:PrismaticBarrier": {
     "NAME": "棱镜屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合打出过 ${ModID}:异色 牌，获得 !M! 层 *多层护甲 并 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合用过 ${ModID}:异色 牌，获得 !M! 层 *多层护甲 并 消耗 。"
   },
   "${ModID}:GrabBag": {
     "NAME": "手提包",
@@ -18,7 +18,7 @@
   },
   "${ModID}:ExoticKnowledge": {
     "NAME": "异色知识",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 若本回合打出过 ${ModID}:异色 牌，再抽 !${ModID}:m2! 张。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若本回合用过 ${ModID}:异色 牌，再抽 !${ModID}:m2! 张。"
   },
   "${ModID}:ChoiceCut": {
     "NAME": "精准落刀",
@@ -36,7 +36,7 @@
   },
   "${ModID}:PremiumSelection": {
     "NAME": "优质之选",
-    "DESCRIPTION": "从 !M! 张随机 ${ModID}:异色 稀有牌红选择一张加入加入手牌。 本回合其下次耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "从 !M! 张随机 ${ModID}:异色 稀有牌红选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
   },
   "${ModID}:FlawlessPrism": {
     "NAME": "无暇棱镜",
