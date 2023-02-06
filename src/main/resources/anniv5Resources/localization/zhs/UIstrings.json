@@ -123,7 +123,7 @@
   },
   "${ModID}:CardTypeStrings": {
     "TEXT": [
-      "Chance"
+      "机会"
     ]
   },
   "${ModID}:HatMenu": {
