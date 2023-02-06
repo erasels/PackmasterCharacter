@@ -40,7 +40,7 @@
   },
   "${ModID}:FlawlessPrism": {
     "NAME": "无暇棱镜",
-    "DESCRIPTION": "回合开始时，随机将 !M! 张 ${ModID}:异色 能力牌加入手牌。",
-    "UPGRADE_DESCRIPTION": "回合开始时，随机将 !M! 张 ${ModID}:异色 能力牌加入手牌。"
+    "DESCRIPTION": "回合开始时，随机获得 !M! 张 ${ModID}:异色 能力牌。",
+    "UPGRADE_DESCRIPTION": "回合开始时，随机获得 !M! 张 ${ModID}:异色 能力牌。"
   }
 }
