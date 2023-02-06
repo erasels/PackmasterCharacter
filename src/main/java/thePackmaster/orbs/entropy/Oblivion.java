@@ -37,7 +37,7 @@ public class Oblivion extends AbstractOrb implements DiscardHookPatch.OnDiscardT
         this.name = orbStrings.NAME;
 
         this.basePassiveAmount = this.passiveAmount = 2;
-        this.baseEvokeAmount = this.evokeAmount = 4;
+        this.baseEvokeAmount = this.evokeAmount = 5;
 
         jumpTimer = MathUtils.random(0.2f, 1.0f);
 
