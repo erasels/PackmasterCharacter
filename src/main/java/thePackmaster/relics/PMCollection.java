@@ -1,5 +1,6 @@
 package thePackmaster.relics;
 
+import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,13 +9,15 @@ import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import thePackmaster.util.Wiz;
 
+import java.util.ArrayList;
+
 import static thePackmaster.SpireAnniversary5Mod.*;
 
 public class PMCollection extends AbstractPackmasterRelic {
     public static final String ID = makeID("PMCollection");
 
     public PMCollection() {
-        super(ID, RelicTier.SHOP, LandingSound.FLAT, null, true);
+        super(ID, RelicTier.SHOP, LandingSound.FLAT, true);
     }
 
     @Override
@@ -27,9 +30,9 @@ public class PMCollection extends AbstractPackmasterRelic {
                     CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.UNCOMMON ||
                     CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.RARE) {
 
-                RewardItem r = new RewardItem();
-                r.cards.clear();
-                r.cards.add(CardLibrary.getCard(s).makeCopy());
+                ArrayList<AbstractCard> cardReward = new ArrayList<>();
+                cardReward.add(CardLibrary.getCard(s).makeCopy());
+                RewardItem r = StSLib.generateCardReward(cardReward, false);
                 r.cards.forEach(c -> Wiz.p().relics.forEach(rel -> rel.onPreviewObtainCard(c)));
                 AbstractDungeon.getCurrRoom().addCardReward(r);
             }

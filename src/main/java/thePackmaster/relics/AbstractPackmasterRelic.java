@@ -31,7 +31,6 @@ public abstract class AbstractPackmasterRelic extends CustomRelic {
                 this.color = ThePackmaster.Enums.PACKMASTER_RAINBOW;
             }
         } else {
-
             this.color = ThePackmaster.Enums.PACKMASTER_RAINBOW;
         }
         this.parentPacks = new HashSet<>();
