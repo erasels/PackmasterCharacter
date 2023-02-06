@@ -1,8 +1,8 @@
 {
   "${ModID}:SwordAndDagger": {
     "NAME": "剑与匕首",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 !M! *小刀 加入手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 !M! *小刀 加入手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *小刀 加入手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *小刀 加入手牌。"
   },
   "${ModID}:PrismaticBarrier": {
     "NAME": "棱镜屏障",
