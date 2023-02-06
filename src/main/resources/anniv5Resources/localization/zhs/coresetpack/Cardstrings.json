@@ -12,7 +12,7 @@
     "DESCRIPTION": "随机从三张属于不同卡包的牌中选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
   },
   "${ModID}:Flick": {
-    "NAME": "弹指",
+    "NAME": "弹牌",
     "DESCRIPTION": "丢弃一张牌。 NL 造成 !D! 点伤害其耗能次。"
   },
   "${ModID}:MayhemForm": {

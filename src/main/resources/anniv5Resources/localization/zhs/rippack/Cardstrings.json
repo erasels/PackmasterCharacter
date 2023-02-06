@@ -19,8 +19,8 @@
   },
   "${ModID}:SurprisePack": {
     "NAME": "惊喜包",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 被 #y撕裂 时， NL 获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 被 #y撕裂 时， NL 获得 [E] [E] 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 被 *撕裂 时， NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 被 *撕裂 时， NL 获得 [E] [E] 。"
   },
   "${ModID}:Inspiration": {
     "NAME": "启发",
