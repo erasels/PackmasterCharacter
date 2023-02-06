@@ -1,12 +1,12 @@
 {
   "${ModID}:DividedFury": {
-    "NAME": "多重愤怒",
+    "NAME": "被撕愤怒",
     "DESCRIPTION": "回合开始时，随机使 !M! 张手牌变得 ${ModID}:可撕裂 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，随机使 !M! 张手牌变得 ${ModID}:可撕裂 。"
   },
   "${ModID}:ViciousCycle": {
     "NAME": "邪恶循环",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每 *撕裂 过一张牌，本牌伤害增加 !D! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每撕过一张牌，本牌伤害增加 !D! 点。",
     "EXTENDED_DESCRIPTION": [
       " NL (已撕裂",
       "张牌。)",
@@ -19,8 +19,8 @@
   },
   "${ModID}:SurprisePack": {
     "NAME": "惊喜包",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 被 #y撕裂 时， NL 获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 被 #y撕裂 时， NL 获得 [E] [E] 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 被 *撕裂 时， NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 被 *撕裂 时， NL 获得 [E] [E] 。"
   },
   "${ModID}:Inspiration": {
     "NAME": "启发",
@@ -42,7 +42,7 @@
   },
   "${ModID}:HazardousStrike": {
     "NAME": "冒险打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 被 *撕裂 时， NL 随机 消耗 !M! 张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 被 *撕裂 时， NL 随机 消耗 !M! 张手牌。"
   },
   "${ModID}:TotalWeakness": {
     "NAME": "完全无效",

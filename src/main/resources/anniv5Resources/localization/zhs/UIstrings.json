@@ -59,7 +59,7 @@
   },
   "${ModID}:AllForOnePack": {
     "TEXT": [
-      "万众一心",
+      "万物一心",
       "一套专注于0耗能与抽牌的原版牌。",
       "MegaCrit"
     ]
@@ -123,7 +123,7 @@
   },
   "${ModID}:CardTypeStrings": {
     "TEXT": [
-      "Chance"
+      "机会"
     ]
   },
   "${ModID}:HatMenu": {

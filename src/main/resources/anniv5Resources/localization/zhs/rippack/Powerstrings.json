@@ -1,6 +1,6 @@
 {
   "${ModID}:DividedFuryPower": {
-    "NAME": "多重愤怒",
+    "NAME": "被撕愤怒",
     "DESCRIPTIONS": [
       "你的回合开始时，随机使 #b",
       " 张手牌变得 #y可撕裂 。",
