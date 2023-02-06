@@ -180,7 +180,7 @@ public class SwarmOfBees extends CustomOrb {
 
     @Override
     public void playChannelSFX() {
-        CardCrawlGame.sound.play(SpireAnniversary5Mod.BEES_KEY, 0.1f);
+        CardCrawlGame.sound.playV(SpireAnniversary5Mod.BEES_KEY, 0.75f);
     }
 
     @Override
