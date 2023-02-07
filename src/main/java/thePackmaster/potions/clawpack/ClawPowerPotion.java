@@ -41,8 +41,7 @@ public class ClawPowerPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        for (AbstractCard c : Wiz.p().hand.group
-        ) {
+        for (AbstractCard c : Wiz.p().hand.group) {
             if (!c.hasTag(SpireAnniversary5Mod.CLAW) && c.type == AbstractCard.CardType.ATTACK) {
                 Wiz.atb(new SimpleAddModifierAction(new AddClawTagModifier(1), c));
             }

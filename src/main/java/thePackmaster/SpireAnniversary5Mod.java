@@ -499,7 +499,6 @@ public class SpireAnniversary5Mod implements
     }
 
     public static void addPotions() {
-
         if (sharedContentMode) {
             BaseMod.addPotion(BoosterBrew.class, Color.TAN, Color.WHITE, Color.BLACK, BoosterBrew.POTION_ID);
             BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE, null, SmithingOil.POTION_ID);
