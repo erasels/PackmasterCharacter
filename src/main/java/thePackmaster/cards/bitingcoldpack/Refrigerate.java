@@ -12,7 +12,7 @@ public class Refrigerate extends BitingColdCard {
 
     public Refrigerate() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        magicNumber = baseMagicNumber = 4;
+        magicNumber = baseMagicNumber = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
