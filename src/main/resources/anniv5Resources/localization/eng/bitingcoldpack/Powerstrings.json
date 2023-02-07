@@ -3,7 +3,7 @@
     "NAME": "Frostbite",
     "DESCRIPTIONS": [
       "At the start of its turn, loses #b",
-      " HP and this is halved. Whenever this creature receives attack damage, apply 1 #yFrostbite."
+      " HP and this is halved. Whenever this creature receives attack damage, apply #b1 #yFrostbite."
     ]
   },
   "${ModID}:ColdSeasonPower": {

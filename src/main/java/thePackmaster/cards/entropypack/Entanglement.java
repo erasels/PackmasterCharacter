@@ -13,8 +13,8 @@ public class Entanglement extends AbstractEntropyCard {
     // intellij stuff power, none, rare, , , , , 5, 
 
     public Entanglement() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 5;
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.NONE);
+        baseMagicNumber = magicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -22,6 +22,6 @@ public class Entanglement extends AbstractEntropyCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }
