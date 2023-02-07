@@ -22,8 +22,8 @@
   },
   "${ModID}:RippedPecs": {
     "NAME": "腹肌",
-    "DESCRIPTION": "本场战斗每打出过一种卡包中的牌，获得1点 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "本场战斗每打出过一种卡包中的牌，获得1点 力量 。",
+    "DESCRIPTION": "本场战斗每用过一种卡包的牌，获得1点 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "本场战斗每用过一种卡包的牌，获得1点 力量 。",
     "EXTENDED_DESCRIPTION": [" NL (获得 {0} 点 力量 。)"]
   },
   "${ModID}:Showoff": {

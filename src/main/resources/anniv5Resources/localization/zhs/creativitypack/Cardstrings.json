@@ -28,8 +28,8 @@
     "DESCRIPTION": "造成 !D! 点伤害。 若本回合创造过牌， NL 获得 [E] 并抽一张牌。"
   },
   "${ModID}:BarrierBeacon": {
-    "NAME": "Barrier Beacon",
-    "DESCRIPTION": "{@@}获得 !B! 点 格挡 ，在手牌创造一张本牌 {!Upgrades!|>0=+}的复制品。 NL 消耗 。"
+    "NAME": "信标屏障",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得一张本牌复制品。 NL 消耗 。"
   },
   "${ModID}:StrikingStrike": {
     "NAME": "打击性打击",
