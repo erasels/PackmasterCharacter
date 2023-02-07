@@ -41,7 +41,7 @@ public class Crusher extends AbstractDimensionalCardGrift implements onGenerateC
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
-                Crusher.this.modifyCostForCombat(COST-Wiz.getLogicalCardCost(Crusher.this));
+                Crusher.this.modifyCostForCombat(COST-Crusher.this.cost);
                 Crusher.this.isCostModified=false;
                 isDone = true;
             }
