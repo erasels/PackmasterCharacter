@@ -418,6 +418,7 @@ public class PackSetupScreen extends CustomScreen {
         choiceSet.clear();
         while (choiceSet.size() < 3 && !packPool.isEmpty()) {
             AbstractCardPack target = packPool.remove(rng.random(packPool.size() - 1));
+            target.previewPackCard.noShadow();
             choiceSet.add(target);
         }
 
