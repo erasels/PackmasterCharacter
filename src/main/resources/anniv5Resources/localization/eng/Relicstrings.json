@@ -60,7 +60,8 @@
     "DESCRIPTIONS": [
       "Upon pickup, choose #b1 of #b3 Packmaster Boosters, three times. Earn an additional card from these boosters at the end of each combat.",
       " NL Chosen Boosters: ",
-      "Choose a Booster Pack."
+      "Choose a Booster Pack.",
+      "Packs: {0}, {1}, {2} NL Extra card rewards: {3}"
     ]
   },
   "${ModID}:PMBoosterPack": {
@@ -68,7 +69,8 @@
     "FLAVOR": "A package of cards in a foil wrapper. How did it end up in the Spire?",
     "DESCRIPTIONS": [
       "Upon pickup, add any one card from a random Packmaster Booster to your deck.",
-      "Choose a card to add to your deck."
+      "Choose a card to add to your deck.",
+      "Pack: {0}"
     ]
   },
   "${ModID}:PMCollection": {
@@ -76,7 +78,8 @@
     "FLAVOR": "Said to have been assembled by a consortium of wizards.",
     "DESCRIPTIONS": [
       "Upon pickup, you may add each card from a random Packmaster Booster to your deck.",
-      "You may add this to your deck."
+      "You may add this to your deck.",
+      "Pack: {0}"
     ]
   }
 }
