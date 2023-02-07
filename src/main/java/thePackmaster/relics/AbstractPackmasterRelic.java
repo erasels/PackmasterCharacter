@@ -44,6 +44,8 @@ public abstract class AbstractPackmasterRelic extends CustomRelic {
 
     @Override
     public boolean canSpawn() {
+        if (parentPacks.isEmpty())
+            return true;
         return SpireAnniversary5Mod.currentPoolPacks.stream().anyMatch(p -> parentPacks.contains(p.packID));
     }
 }
