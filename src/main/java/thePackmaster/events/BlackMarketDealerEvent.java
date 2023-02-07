@@ -171,12 +171,14 @@ public class BlackMarketDealerEvent extends PhasedEvent {
 
 
                 .addOption(new TextPhase.OptionInfo(hasCollection() ? OPTIONS[23] : hasEnoughGoldForBuyCollection() ? OPTIONS[15] + getGoldCostForBuyCollection() + OPTIONS[16] : OPTIONS[9] + getGoldCostForBuyCollection() + OPTIONS[7], new PMCollection()).enabledCondition(this::canBuyCollection), (i) -> {   //PM Collection
+                    AbstractDungeon.player.loseGold(getGoldCostForBuyCollection());
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new PMCollection());
                     AbstractDungeon.shopRelicPool.remove(PMCollection.ID);
                     transitionKey("relicCollectionEnd");
                 })
 
                 .addOption(new TextPhase.OptionInfo(hasDecree() ? OPTIONS[23] : hasEnoughGoldForBuyDecree() ? OPTIONS[17] + getGoldCostForBuyDecree() + OPTIONS[18] : OPTIONS[9] + getGoldCostForBuyDecree() + OPTIONS[7], new BanishingDecree()).enabledCondition(this::canBuyDecree), (i) -> {   //Banishing Decree
+                    AbstractDungeon.player.loseGold(getGoldCostForBuyDecree());
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BanishingDecree());
                     AbstractDungeon.shopRelicPool.remove(BanishingDecree.ID);
                     transitionKey("relicBanishingEnd");
