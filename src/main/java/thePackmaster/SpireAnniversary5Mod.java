@@ -94,6 +94,7 @@ import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.ui.InfestTextIcon;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.JediUtil;
+import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
@@ -499,7 +500,6 @@ public class SpireAnniversary5Mod implements
     }
 
     public static void addPotions() {
-
         if (sharedContentMode) {
             BaseMod.addPotion(BoosterBrew.class, Color.TAN, Color.WHITE, Color.BLACK, BoosterBrew.POTION_ID);
             BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE, null, SmithingOil.POTION_ID);
@@ -703,6 +703,11 @@ public class SpireAnniversary5Mod implements
         }
 
         for (Keyword keyword : keywords) {
+            switch (keyword.ID) {
+                case "sharpen":
+                    Keywords.SHARPEN = keyword;
+                    break;
+            }
             BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
         }
     }

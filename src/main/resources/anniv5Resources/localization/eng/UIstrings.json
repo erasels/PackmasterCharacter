@@ -121,6 +121,11 @@
       "By Packs"
     ]
   },
+  "${ModID}:RunHistory": {
+    "TEXT": [
+      "Packs:"
+    ]
+  },
   "${ModID}:CardTypeStrings": {
     "TEXT": [
       "Chance"
