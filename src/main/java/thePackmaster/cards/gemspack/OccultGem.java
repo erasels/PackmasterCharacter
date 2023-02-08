@@ -27,6 +27,7 @@ public class OccultGem extends AbstractGemsCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
     }
 
  
