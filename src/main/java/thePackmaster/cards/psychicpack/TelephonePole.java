@@ -17,7 +17,7 @@ public class TelephonePole extends LockingCard {
 
     public TelephonePole() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 14;
+        baseDamage = 15;
         baseMagicNumber = magicNumber = 2;
     }
 
