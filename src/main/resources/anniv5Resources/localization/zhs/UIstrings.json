@@ -121,6 +121,11 @@
       "卡包"
     ]
   },
+  "${ModID}:RunHistory": {
+    "TEXT": [
+      "卡包："
+    ]
+  },
   "${ModID}:CardTypeStrings": {
     "TEXT": [
       "机会"
