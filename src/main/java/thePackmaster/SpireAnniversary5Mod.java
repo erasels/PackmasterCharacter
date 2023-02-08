@@ -94,6 +94,7 @@ import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.ui.InfestTextIcon;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.JediUtil;
+import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
@@ -702,6 +703,11 @@ public class SpireAnniversary5Mod implements
         }
 
         for (Keyword keyword : keywords) {
+            switch (keyword.ID) {
+                case "sharpen":
+                    Keywords.SHARPEN = keyword;
+                    break;
+            }
             BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
         }
     }
