@@ -979,7 +979,7 @@ public class SpireAnniversary5Mod implements
         if (power.type == AbstractPower.PowerType.DEBUFF) {
             // Biting Cold Pack
             // Growing Affliction (Return to hand)
-            if (source == adp())
+            if (source == adp() && !target.hasPower(ArtifactPower.POWER_ID))
                 for (AbstractCard c : AbstractDungeon.player.discardPile.group)
                     if (c.cardID.equals(GrowingAffliction.ID))
                         AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(c));
