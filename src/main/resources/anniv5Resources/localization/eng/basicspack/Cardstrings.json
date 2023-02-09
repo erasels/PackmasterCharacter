@@ -1,8 +1,12 @@
 {
   "${ModID}:BasicWave": {
     "NAME": "Basic Wave",
-    "DESCRIPTION": "Play a *Defend and a *Strike.",
-    "UPGRADE_DESCRIPTION": "Play a *Defend+ and a *Strike+."
+    "DESCRIPTION": "Play a *Defend and a *Strike. NL This is a ${ModID}:Basic card.",
+    "EXTENDED_DESCRIPTION": [
+      "Play a *Defend+",
+      " and a *Strike+",
+      ". NL Counts as a ${ModID}:Basic card."
+      ]
   },
   "${ModID}:Simplify": {
     "NAME": "Simplify",
