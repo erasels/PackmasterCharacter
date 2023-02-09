@@ -5,7 +5,7 @@
   },
   "${ModID}:Fortify": {
     "NAME": "稳固",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机 ${ModID}:修改 一张手牌：\"增加 !M! 点 格挡 \""
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机 ${ModID}:修改 一张手牌： NL \" 格挡 增加 !M! 点\""
   },
   "${ModID}:Winterize": {
     "NAME": "冬日化",

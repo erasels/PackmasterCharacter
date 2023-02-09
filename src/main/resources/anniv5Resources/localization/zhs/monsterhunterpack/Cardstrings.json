@@ -120,7 +120,7 @@
   },
   "${ModID}:HunterRank": {
     "NAME": "猎人排名",
-    "DESCRIPTION": "获得 !M! 点 力量 。 每击杀过一名精英或首领， 力量 获得量增加1点。 获得 !${ModID}:m2! 点 敏捷 。"
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 每击杀过一名精英或首领， 力量 获得量加1。 "
   },
   "${ModID}:TranqBomb": {
     "NAME": "镇静炸弹",

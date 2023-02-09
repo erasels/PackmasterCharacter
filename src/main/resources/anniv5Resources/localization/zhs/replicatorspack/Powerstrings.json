@@ -2,7 +2,7 @@
   "${ModID}:IterativeDesignPower": {
     "NAME": "重复性设计",
     "DESCRIPTIONS": [
-      "每当你创造一张牌，获得 #b",
+      "每当你打出一张本场战斗创造出的一张牌，或触发 #y重复 时，获得 #b",
       " 点 #y格挡 。"
     ]
   },
@@ -11,6 +11,14 @@
     "DESCRIPTIONS": [
       "每当你往抽牌堆洗入 #b10 张牌，获得 #b",
       " 层 #y重复 。"
+    ]
+  },
+  "${ModID}:DuplicationPackmasterPower": {
+    "NAME": "重复",
+    "DESCRIPTIONS": [
+      "下张牌额外打出一次。",
+      "下 #b",
+      " 张牌额外打出一次。"
     ]
   }
 }

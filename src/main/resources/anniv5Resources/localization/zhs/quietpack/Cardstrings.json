@@ -1,7 +1,7 @@
 {
   "${ModID}:Weight": {
     "NAME": "重物",
-    "DESCRIPTION": "无法打出。 保留 。 NL 若本牌被丢弃，被 消耗 "
+    "DESCRIPTION": "无法打出。 保留 。 NL 本牌被丢弃时， NL 被 消耗 。"
   },
   "${ModID}:Oppressor": {
     "NAME": "压迫",
@@ -13,8 +13,8 @@
   },
   "${ModID}:Shine": {
     "NAME": "光泽",
-    "DESCRIPTION": "无法打出。 保留 。 NL 抽到本牌时， NL 随机升级一张手牌。",
-    "UPGRADE_DESCRIPTION": "无法打出。 保留 。 NL 抽到本牌时， NL 升级所有手牌。"
+    "DESCRIPTION": "无法打出。 保留 。 NL 抽到本牌时， NL 随机 升级 一张手牌。",
+    "UPGRADE_DESCRIPTION": "无法打出。 保留 。 NL 抽到本牌时， NL 升级 所有手牌。"
   },
   "${ModID}:GlaiveThrow": {
     "NAME": "投掷长刀",
@@ -38,7 +38,7 @@
   },
   "${ModID}:Flail": {
     "NAME": "乱锤",
-    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将量张 *重物 加入手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将两张 *重物 加入手牌。"
   },
   "${ModID}:Wisdom": {
     "NAME": "智慧",

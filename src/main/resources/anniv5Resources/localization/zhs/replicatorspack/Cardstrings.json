@@ -25,8 +25,8 @@
     "EXTENDED_DESCRIPTION": ["选择一张牌进行消耗与复制。"]
   },
   "${ModID}:IterativeDesign": {
-    "NAME": "I重复性设计",
-    "DESCRIPTION": "创造牌时， NL 获得 !M! 点 格挡 。"
+    "NAME": "重复性设计",
+    "DESCRIPTION": "打出本场战斗创造的牌，或触发 ${ModID}:重复 时，获得 !M! 点 格挡 。"
   },
   "${ModID}:Xpansion": {
     "NAME": "扩章",
@@ -39,8 +39,8 @@
   },
   "${ModID}:MagicHand": {
     "NAME": "魔法之手",
-    "DESCRIPTION": "选择牌组中 !M! 张牌加入手牌。 NL 本回合其下次耗能为0且 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择牌组中 !M! 张牌加入手牌。 NL 本回合其下次耗能为0。"
+    "DESCRIPTION": "从牌组中随机 !M! 张牌中选择一张加入手牌，本回合其耗能为0且 消耗 。",
+    "UPGRADE_DESCRIPTION": "从牌组中随机 !M! 张牌中选择一张加入手牌，本回合其耗能为0。"
   },
   "${ModID}:EnergyDrink": {
     "NAME": "能量饮料",

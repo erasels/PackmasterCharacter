@@ -1,6 +1,6 @@
 {
   "${ModID}:NamelessMistPower": {
-    "NAME": "Nameless Mist",
+    "NAME": "无名之雾",
     "DESCRIPTIONS": [
       "本回合每打出一张牌， 获得 #b",
       " 点 #y格挡 。"

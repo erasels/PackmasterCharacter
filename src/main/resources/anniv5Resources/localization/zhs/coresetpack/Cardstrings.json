@@ -12,18 +12,18 @@
     "DESCRIPTION": "随机从三张属于不同卡包的牌中选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
   },
   "${ModID}:Flick": {
-    "NAME": "弹指",
+    "NAME": "弹牌",
     "DESCRIPTION": "丢弃一张牌。 NL 造成 !D! 点伤害其耗能次。"
   },
   "${ModID}:MayhemForm": {
     "NAME": "不懈形态",
-    "DESCRIPTION": "每回合手中只剩不超过2张牌时触发一次。 NL 抽2张牌。 NL 获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 每回合手中只剩不超过2张牌时触发一次。 NL 抽2张牌。 NL 获得 [E] [E] 。"
+    "DESCRIPTION": "每回合手中只剩不超过2张牌时触发一次： NL 抽2张牌。 NL 获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 每回合手中只剩不超过2张牌时触发一次： NL 抽2张牌。 NL 获得 [E] [E] 。"
   },
   "${ModID}:RippedPecs": {
     "NAME": "腹肌",
-    "DESCRIPTION": "本场战斗每打出过一种卡包中的牌，获得1点 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "本场战斗每打出过一种卡包中的牌，获得1点 力量 。",
+    "DESCRIPTION": "本场战斗每用过一种卡包的牌，获得1点 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "本场战斗每用过一种卡包的牌，获得1点 力量 。",
     "EXTENDED_DESCRIPTION": [" NL (获得 {0} 点 力量 。)"]
   },
   "${ModID}:Showoff": {
@@ -36,11 +36,11 @@
   },
   "${ModID}:SmithingHammer": {
     "NAME": "锻造锤击",
-    "DESCRIPTION": "造成 !D! 点伤害3次。 NL 随机 升级 1张手牌。",
+    "DESCRIPTION": "造成 !D! 点伤害3次。 NL 随机 升级 !M! 张手牌。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害3次。 NL 随机 升级 !M! 张手牌。"
   },
   "${ModID}:Synergize": {
     "NAME": "套路配合",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若手中至少有2张其他卡包的牌，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若手中至少有2种其他卡包的牌，获得 !B! 点 格挡 。"
   }
 }

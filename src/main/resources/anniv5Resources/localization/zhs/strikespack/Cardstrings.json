@@ -9,36 +9,36 @@
   },
   "${ModID}:WorkersStrike": {
     "NAME": "罢工打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 从抽牌堆取出一张攻击，若为一张打击牌，获得 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:取 一张攻击牌，若为一张打击牌，获得 [E] 。"
   },
   "${ModID}:StrikeDummyJr": {
-    "NAME": "Dummy's Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Strikes deal 2 more damage this combat. NL Exhaust."
+    "NAME": "木偶打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 力量 。 NL 本场战斗打击牌伤害增加2点。 NL 消耗 。"
   },
   "${ModID}:DifferentStrikes": {
-    "NAME": "Different Strikes",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. Gain a random Strike that costs 1 less and Exhausts.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card. Gain a random Upgraded Strike that costs 1 less and Exhausts."
+    "NAME": "各色打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  消耗 一张手牌，将其随机变为一张耗能低1点且带 消耗 的打击牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL  消耗 一张手牌，将其随机变为一张耗能低1点且带 消耗 的打击牌+。"
   },
   "${ModID}:StrikeOfGenius": {
-    "NAME": "Strike of Genius",
-    "DESCRIPTION": "Deal !D! damage. NL The next attack you play gains 'Gain Block equal to unblocked damage dealt'."
+    "NAME": "打击天才",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下张攻击牌使你获得未被格挡伤害点 格挡 。"
   },
   "${ModID}:StrikeABargain": {
-    "NAME": "Strike a Bargain",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of Attacks in hand to 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of Attacks in hand to 0 until played."
+    "NAME": "协商打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 降低所有攻击手牌的下次耗能至0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 降低所有攻击手牌的下次耗能至0。"
   },
   "${ModID}:Backstrike": {
-    "NAME": "Backstrike",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Attacks in hand count as *Strikes this combat. NL Exhaust."
+    "NAME": "回身打击",
+    "DESCRIPTION": "固有。 NL 造成 !D! 点伤害。 NL ${ModID}:修改 所有攻击手牌： NL 牌名加上打击。 NL 消耗 。"
   },
   "${ModID}:LightningStrike": {
-    "NAME": "Lightning Strike",
-    "DESCRIPTION": "Deal !D! damage twice. NL Channel 2 Lightning."
+    "NAME": "闪电打击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 生成 2个 闪电 充能球。"
   },
   "${ModID}:PenaltyStrike": {
-    "NAME": "Penalty Strike",
-    "DESCRIPTION": "Deal !D! damage twice. NL Enemy loses !M! Strength this turn."
+    "NAME": "惩罚打击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 目标临时失去 !M! 点 力量 。"
   }
 }

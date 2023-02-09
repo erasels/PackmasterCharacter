@@ -53,7 +53,7 @@
   },
   "${ModID}:MoldedFire": {
     "NAME": "被塑之火",
-    "DESCRIPTION": "${ModID}:灵秘 。 NL 离能量上限每缺1点 [E] ，造成 !D! 点伤害。"
+    "DESCRIPTION": "${ModID}:灵秘 。 NL 离本牌耗能每缺1点 [E] ，造成 !D! 点伤害。"
   },
   "${ModID}:DeepDream": {
     "NAME": "深梦",

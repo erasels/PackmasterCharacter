@@ -71,4 +71,16 @@ public class ArtCardRenderingPatches {
             return SpireReturn.Continue();
         }
     }
+
+    @SpirePatch(clz = AbstractCard.class, method = "renderDescriptionCN")
+    public static class SkipDescriptionCN {
+
+        @SpirePrefixPatch()
+        public static SpireReturn Postfix(AbstractCard __instance) {
+            if (isArtCard(__instance)) {
+                return SpireReturn.Return();
+            }
+            return SpireReturn.Continue();
+        }
+    }
 }

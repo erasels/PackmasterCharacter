@@ -2,7 +2,7 @@
   "${ModID}:CrystalResonancePower": {
     "NAME": "水晶回响",
     "DESCRIPTIONS": [
-      "每当你 #y增变化 一张牌时，获得 #b", " 点 #y力量 。"
+      "每当你 #y增变化 时(多张也只触发一次)，获得 #b", " 点 #y力量 。"
     ]
   }
 }

@@ -78,7 +78,6 @@ public class BagOfHolding extends AbstractPackmasterRelic {
         StringBuilder sb = new StringBuilder();
         if(Settings.language==Settings.language.ZHS||Settings.language==Settings.language.ZHT){
             sb.append("[#").append(SpireAnniversary5Mod.characterColor.toString()).append("]").append(name).append("[]");
-            sb.setLength(sb.length() - 1);
         }else {
             for (String word : name.split(" ")) {
                 sb.append("[#").append(SpireAnniversary5Mod.characterColor.toString()).append("]").append(word).append("[] ");

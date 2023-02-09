@@ -4,7 +4,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有 中毒 的敌人 !M! 层 虚弱 。"
   },
   "${ModID}:LethalShot": {
-    "NAME": "致死箭击。",
+    "NAME": "致死箭击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 中毒 与 !${ModID}:m2! 层 易伤 。"
   },
   "${ModID}:BleedItOut": {
@@ -17,7 +17,7 @@
   },
   "${ModID}:BoosterShot": {
     "NAME": "强化注射",
-    "DESCRIPTION": "造成 !D! 点 伤害. NL 给予 !M! 层 中毒. NL 目标回复 !${ModID}:m2! 点生命。"
+    "DESCRIPTION": "造成 !D! 点 伤害。 NL 给予 !M! 层 中毒 。 NL 目标回复 !${ModID}:m2! 点生命。"
   },
   "${ModID}:RangersSetup": {
     "NAME": "猎手陷阱",
@@ -29,8 +29,8 @@
   },
   "${ModID}:ScrollOfIntellect": {
     "NAME": "智慧卷轴",
-    "DESCRIPTION": "抽一张牌。 NL 获得 [E]. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌. NL Gain [E]. NL 消耗 。"
+    "DESCRIPTION": "抽一张牌。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌. NL 获得 [E] 。 NL 消耗 。"
   },
   "${ModID}:Sustenance": {
     "NAME": "养料",
