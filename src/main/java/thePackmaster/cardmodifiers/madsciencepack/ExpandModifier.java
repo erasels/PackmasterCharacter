@@ -27,7 +27,12 @@ public class ExpandModifier extends AbstractMadScienceModifier {
     @Override
     public void onInitialApplication(AbstractCard card) {
         super.onInitialApplication(card);
+        boolean wtfBasegame = card.costForTurn == 0;
         card.modifyCostForCombat(1);
+        if(wtfBasegame) {
+            card.costForTurn++;
+            card.isCostModified = true;
+        }
     }
 
     @Override

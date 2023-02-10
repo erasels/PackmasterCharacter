@@ -26,7 +26,7 @@ public class MissileStrike extends AbstractQuantaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        this.addToBot(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(baseSecondDamage), this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        this.addToBot(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(secondDamage), this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
     }
 
     public void upp() {
