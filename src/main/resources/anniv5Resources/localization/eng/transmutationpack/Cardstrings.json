@@ -23,8 +23,8 @@
   },
   "${ModID}:GhostlyMist": {
     "NAME": "Ghostly Mist",
-    "DESCRIPTION": "${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card. NL ${ModID}:Mutable: Shuffle this card into your draw pile."
+    "DESCRIPTION": "${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Mutable: Free to play. NL ${ModID}:Mutable: ${ModID}:Transmute this card."
   },
   "${ModID}:GlacialSynthesis": {
     "NAME": "Glacial Synthesis",

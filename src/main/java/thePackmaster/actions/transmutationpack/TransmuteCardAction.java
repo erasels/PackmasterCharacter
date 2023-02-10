@@ -177,11 +177,14 @@ public class TransmuteCardAction extends AbstractGameAction {
             isDone = true;
             System.out.println("TRANSMUTECARDACTION: Make 0 choices? How did this happen?");
         } else if (choices == 1) {
-            AbstractCard newCard = getRandomCard(getTransmutationCandidates(oldCard)).makeCopy();
-            UnlockTracker.markCardAsSeen(newCard.cardID);
-            modifyNewCard(oldCard, newCard);
-            if (transformPlayed) {
-                modifyUsedCard(newCard);
+            AbstractCard newCard = getRandomCard(getTransmutationCandidates(oldCard));
+            if (newCard != null) {
+                newCard = newCard.makeCopy();
+                UnlockTracker.markCardAsSeen(newCard.cardID);
+                modifyNewCard(oldCard, newCard);
+                if (transformPlayed) {
+                    modifyUsedCard(newCard);
+                }
             }
             transmutedPairs.put(oldCard, newCard);
         } else {
@@ -192,14 +195,20 @@ public class TransmuteCardAction extends AbstractGameAction {
                     targets = getTransmutationCandidates(oldCard);
                 }
                 AbstractCard choice = getRandomCard(targets);
-                UnlockTracker.markCardAsSeen(choice.cardID);
-                if (!tmp.contains(choice)) {
-                    tmp.addToBottom(choice);
-                    targets.remove(choice);
+                if (choice != null) {
+                    UnlockTracker.markCardAsSeen(choice.cardID);
+                    if (!tmp.contains(choice)) {
+                        tmp.addToBottom(choice);
+                        targets.remove(choice);
+                    }
                 }
             }
             storedOldCard = oldCard;
-            AbstractDungeon.gridSelectScreen.open(tmp, 1, TEXT[1], false);
+            if (tmp.size() > 1) {
+                AbstractDungeon.gridSelectScreen.open(tmp, 1, TEXT[1], false);
+            } else {
+                transmutedPairs.put(oldCard, getRandomCard(tmp.group));
+            }
         }
     }
     
@@ -209,8 +218,6 @@ public class TransmuteCardAction extends AbstractGameAction {
                 AbstractCard targetCard = ReflectionHacks.getPrivate(action, UseCardAction.class, "targetCard");
                 if (targetCard == playedCard) {
                     UseCardActionPatch.UseCardActionField.transmuteTargetCard.set(action, newCard);
-                    AbstractDungeon.player.hand.removeCard(playedCard);
-                    AbstractDungeon.player.cardInUse = null;
                 }
             }
         }
@@ -238,13 +245,19 @@ public class TransmuteCardAction extends AbstractGameAction {
     
     private ArrayList<AbstractCard> getTransmutationCandidates(AbstractCard oldCard) {
         ArrayList<AbstractCard> targets = new ArrayList<>();
-        ArrayList<AbstractCard> group = getPool(oldCard);
-        for (AbstractCard candidate : group) {
-            if (!candidate.hasTag(AbstractCard.CardTags.HEALING) && (conditions == null || conditions.apply(candidate)) && !candidate.cardID.equals(oldCard.cardID)) {
-                targets.add(candidate.makeCopy());
+        if (shouldCardTransmute(oldCard)) {
+            ArrayList<AbstractCard> group = getPool(oldCard);
+            for (AbstractCard candidate : group) {
+                if (!candidate.hasTag(AbstractCard.CardTags.HEALING) && (conditions == null || conditions.apply(candidate)) && !candidate.cardID.equals(oldCard.cardID)) {
+                    targets.add(candidate.makeCopy());
+                }
             }
         }
         return targets;
+    }
+
+    private boolean shouldCardTransmute(AbstractCard card) {
+        return !transformPlayed || (!card.exhaust && card.type != AbstractCard.CardType.POWER);
     }
     
     private ArrayList<AbstractCard> getPool(AbstractCard oldCard) {
@@ -266,6 +279,9 @@ public class TransmuteCardAction extends AbstractGameAction {
     }
     
     private AbstractCard getRandomCard(ArrayList<AbstractCard> targets) {
+        if (targets.isEmpty()) {
+            return null;
+        }
         return targets.get(AbstractDungeon.cardRandomRng.random(targets.size() - 1));
     }
     
@@ -306,16 +322,18 @@ public class TransmuteCardAction extends AbstractGameAction {
         if (!transformPlayed) {
             for (AbstractCard card : transmutedPairs.keySet()) {
                 AbstractCard newCard = transmutedPairs.get(card);
-                copyCardPosition(card, newCard);
-                AbstractDungeon.player.limbo.removeCard(card);
-                AbstractDungeon.player.hand.addToHand(newCard);
+                if (newCard != null) {
+                    copyCardPosition(card, newCard);
+                    AbstractDungeon.player.hand.addToHand(newCard);
+                }
             }
             AbstractDungeon.player.hand.refreshHandLayout();
         } else {
             for (AbstractCard card : transmutedPairs.keySet()) {
-                AbstractDungeon.player.limbo.removeCard(card);
-                copyCardPosition(card, transmutedPairs.get(card));
-                AbstractDungeon.player.limbo.addToTop(transmutedPairs.get(card));
+                AbstractCard newCard = transmutedPairs.get(card);
+                if (newCard != null) {
+                    copyCardPosition(card, newCard);
+                }
             }
         }
         AbstractDungeon.player.hand.applyPowers();
@@ -331,7 +349,5 @@ public class TransmuteCardAction extends AbstractGameAction {
         target.targetDrawScale = original.targetDrawScale;
         target.angle = original.angle;
         target.targetAngle = original.targetAngle;
-        target.transparency = original.transparency;
-        target.targetTransparency = original.targetTransparency;
     }
 }
