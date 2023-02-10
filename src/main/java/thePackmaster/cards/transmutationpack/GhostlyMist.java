@@ -1,12 +1,9 @@
 package thePackmaster.cards.transmutationpack;
 
-import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.transmutationpack.TransmuteCardAction;
 import thePackmaster.cardmodifiers.transmutationpack.*;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
 
@@ -40,7 +37,6 @@ public class GhostlyMist extends AbstractHydrologistCard implements Transmutable
         ArrayList<AbstractExtraEffectModifier> list = new ArrayList<>();
         list.add(new FreeToPlayEffect(true));
         list.add(new TransmuteSelfEffect(this, true));
-        list.add(new ReboundSelfEffect(true));
         return list;
     }
 }

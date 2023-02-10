@@ -2,6 +2,7 @@ package thePackmaster.cardmodifiers.transmutationpack;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
@@ -33,12 +34,12 @@ public class PurityModifier extends AbstractCardModifier {
 
     @Override
     public void onRender(AbstractCard card, SpriteBatch sb) {
-        ExtraIcons.icon(purityIcon).text(String.valueOf(amount)).render(card);
+        ExtraIcons.icon(purityIcon).text(String.valueOf(amount)).drawColor(new Color(1, 1, 1, card.transparency)).render(card);
     }
 
     @Override
     public void onSingleCardViewRender(AbstractCard card, SpriteBatch sb) {
-        ExtraIcons.icon(purityIcon).text(String.valueOf(amount)).render(card);
+        ExtraIcons.icon(purityIcon).text(String.valueOf(amount)).drawColor(new Color(1, 1, 1, card.transparency)).render(card);
     }
 
     public boolean shouldApply(AbstractCard card) {
