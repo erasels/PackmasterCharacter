@@ -17,7 +17,7 @@
   },
   "${ModID}:ExperimentalMerge": {
     "NAME": "Experimental Merge",
-    "DESCRIPTION": "Gain !B! Block. NL Shuffle your discard pile into your draw pile. Draw !M!."
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Shuffle your discard pile into your draw pile. NL Draw !M! card{!M!|>1=s}."
   },
   "${ModID}:ExhaustiveWork": {
     "NAME": "Exhaustive Work",
