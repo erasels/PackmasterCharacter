@@ -53,6 +53,6 @@
 },
   "${ModID}:SouleaterStrike": {
     "NAME": "汲魂打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 13 层 易伤 。 NL 给予 13 层 虚弱 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。"
   }
 }
