@@ -146,7 +146,7 @@ public class SocketGemEffect extends AbstractGameEffect {
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group
         ) {
             if (!(c instanceof AbstractGemsCard)) {
-                if (!c.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED) && c.type != AbstractCard.CardType.CURSE) {
+                if (!c.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED) && c.type != AbstractCard.CardType.CURSE && c.cost >= 1) {
                     cg.addToBottom(c);
                 }
             }
