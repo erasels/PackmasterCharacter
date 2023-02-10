@@ -1,12 +1,17 @@
 package thePackmaster.cards.wardenpack;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.wardenpack.PierceVeilAction;
-import thePackmaster.cards.AbstractPackmasterCard;
+import org.apache.commons.lang3.math.NumberUtils;
+import thePackmaster.util.Wiz;
+
+import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -24,7 +29,23 @@ public class PierceVeil extends AbstractWardenCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        this.addToBot(new PierceVeilAction(magicNumber));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                ArrayList<AbstractCard> grp;
+                if(!Wiz.p().drawPile.isEmpty()) {
+                    int last = Wiz.p().drawPile.size()-1;
+                    grp = new ArrayList<>(Wiz.p().drawPile.group.subList(NumberUtils.max(0, last - magicNumber), last));
+                    Wiz.att(new SelectCardsAction(grp, CardCrawlGame.languagePack.getUIString("AnyCardFromDeckToHandAction").TEXT[0], cards -> {
+                        for (AbstractCard c : cards) {
+                            Wiz.p().drawPile.removeCard(c);
+                            Wiz.hand().addToHand(c);
+                        }
+                    }));
+                }
+                isDone = true;
+            }
+        });
     }
 
     public void upp() {
