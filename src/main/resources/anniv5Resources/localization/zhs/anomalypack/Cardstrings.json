@@ -11,8 +11,8 @@
   },
   "${ModID}:MidnightOil": {
     "NAME": "夜灯油",
-    "DESCRIPTION": "随机 消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。"
+    "DESCRIPTION": "随机 消耗 一张手牌， NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "消耗 一张手牌， NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。"
   },
   "${ModID}:VoraciousSigil": {
     "NAME": "暴吞铭印",
@@ -31,11 +31,11 @@
   },
   "${ModID}:GoldenGun": {
     "NAME": "黄金大炮",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 被 [#EFC851]装炮 后才能打出。 NL 起动 ：将一张 [#EFC851]黄金炮弹 洗入抽牌堆。 "
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 被 *装炮 后才能打出。 NL 起动 ：将一张 *黄 *金 *炮 *弹 洗入抽牌堆。 "
   },
   "${ModID}:GoldenRound": {
     "NAME": "黄金炮弹",
-    "DESCRIPTION": "[#EFC851]装炮 手中一张 [#EFC851]黄金大炮 。 NL 若手中无该牌，将本牌放入抽牌堆顶部。"
+    "DESCRIPTION": "*装炮 手中一张 *黄 *金 *大 *炮 。 NL 若手中无该牌，将本牌放入抽牌堆顶部。"
   },
   "${ModID}:RitualSight": {
     "NAME": "仪式视界",
@@ -48,8 +48,8 @@
   },
   "${ModID}:SealedSword": {
   "NAME": "封印之剑",
-  "DESCRIPTION": "消耗 。 NL 本牌被 消耗 时，将一张 [#EFC851]汲魂打击 洗入抽牌堆。",
-  "UPGRADE_DESCRIPTION": "消耗 。 NL 本牌被 消耗 时，将一张 [#EFC851]汲魂打击+ 洗入抽牌堆。"
+  "DESCRIPTION": "消耗 。 NL 本牌被 消耗 时，将一张 *汲魂打击 加入抽牌堆。",
+  "UPGRADE_DESCRIPTION": "消耗 。 NL 本牌被 消耗 时，将一张 *汲魂打击+ 加入抽牌堆。"
 },
   "${ModID}:SouleaterStrike": {
     "NAME": "汲魂打击",

@@ -23,7 +23,7 @@
   "${ModID}:RuinousPortent": {
     "NAME": "毁灭凶兆",
     "DESCRIPTION": "生成 X个 ${ModID}:湮没 充能球。",
-    "UPGRADE_DESCRIPTION": "{@@}生成 X{!M!|1=+1|@=+ !M!} 个 ${ModID}:湮没 充能球。"
+    "UPGRADE_DESCRIPTION": "生成 X+1个 ${ModID}:湮没 充能球。"
   },
   "${ModID}:Unbind": {
     "NAME": "解耦",

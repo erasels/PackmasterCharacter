@@ -1,7 +1,7 @@
 {
   "${ModID}:MasterSpark": {
     "NAME": "极限火花",
-    "DESCRIPTION": "造成 !D! 点伤害。 ${ModID}:增幅 [E] ：伤害提高至 !${ModID}:sd! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] ： NL 伤害提高至 !${ModID}:sd! 点。"
   },
   "${ModID}:RisingStrike": {
     "NAME": "升龙打击",
@@ -13,12 +13,12 @@
   },
   "${ModID}:LuminousStrike": {
     "NAME": "声光冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] [E] ：伤害提高当前能量x !M! 点。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] [E] ： NL 伤害加当前能量乘 !M! 。",
     "EXTENDED_DESCRIPTION": [" *增幅 伤害："]
   },
   "${ModID}:ShootingEcho": {
     "NAME": "流星共鸣",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张牌。 NL 将一张本牌复制品加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张牌。 NL 获得一张本牌复制品。 NL 消耗 。"
   },
   "${ModID}:StardustReverie": {
     "NAME": "星屑幻想",
