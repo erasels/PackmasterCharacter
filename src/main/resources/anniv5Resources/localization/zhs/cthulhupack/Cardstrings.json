@@ -10,7 +10,7 @@
   },
   "${ModID}:FlailingTendril": {
     "NAME": "触手鞭击",
-    "DESCRIPTION": "造成 !D! 点伤害并随机给予 !M! 层 ${ModID}:扭曲 。"
+    "DESCRIPTION": "随机造成 !D! 点伤害， NL 并给予 !M! 层 ${ModID}:扭曲 。"
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "死灵之页",

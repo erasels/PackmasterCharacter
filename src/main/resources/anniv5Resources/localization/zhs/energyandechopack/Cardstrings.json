@@ -23,7 +23,7 @@
   "${ModID}:Discharge": {
     "NAME": "释能",
     "DESCRIPTION": "造成本回合已使用的能量的5倍伤害。",
-    "EXTENDED_DESCRIPTION": ["造成本回合已使用的能量的5倍伤害。 NL (造成 !D! 点伤害。"]
+    "EXTENDED_DESCRIPTION": ["造成本回合已使用的能量的5倍伤害。 NL (造成 !D! 点伤害。)"]
   },
   "${ModID}:Overload": {
     "NAME": "过负荷",

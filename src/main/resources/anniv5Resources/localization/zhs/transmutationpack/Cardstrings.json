@@ -1,8 +1,8 @@
 {
   "${ModID}:AmalgamateWaters": {
     "NAME": "众水汇集",
-    "DESCRIPTION": "抽1张 ${ModID}:固在 牌。 NL 触发任意张手牌的 ${ModID}:固在 效果，然后将其 ${ModID}:增变化 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张 ${ModID}:固在 牌。 NL 触发任意张手牌的 ${ModID}:固在 效果，然后将其 ${ModID}:增变化 。"
+    "DESCRIPTION": "抽1张 ${ModID}:固在 牌。 NL 选择令本牌获得任意手牌的 ${ModID}:固在 效果，然后将其 ${ModID}:增变化 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张 ${ModID}:固在 牌。 NL 选择令本牌获得任意手牌的 ${ModID}:固在 效果，然后将其 ${ModID}:增变化 。"
   },
   "${ModID}:CrystalLattice": {
     "NAME": "水晶树架",
