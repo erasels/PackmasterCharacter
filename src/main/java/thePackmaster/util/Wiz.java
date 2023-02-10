@@ -46,6 +46,14 @@ public class Wiz {
         return AbstractDungeon.player.hand;
     }
 
+    public static CardGroup drawPile() {
+        return AbstractDungeon.player.drawPile;
+    }
+
+    public static CardGroup discardPile() {
+        return AbstractDungeon.player.discardPile;
+    }
+
     public static CardGroup deck() {
         return AbstractDungeon.player.masterDeck;
     }
