@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import org.apache.commons.lang3.math.NumberUtils;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -32,10 +31,13 @@ public class PierceVeil extends AbstractWardenCard {
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
-                ArrayList<AbstractCard> grp;
-                if(!Wiz.p().drawPile.isEmpty()) {
-                    int last = Wiz.p().drawPile.size();
-                    grp = new ArrayList<>(Wiz.p().drawPile.group.subList(NumberUtils.max(0, (last-1) - magicNumber), last));
+                ArrayList<AbstractCard> grp = new ArrayList<>();
+                if(!Wiz.drawPile().isEmpty()) {
+                    int last = Wiz.drawPile().size()-1;
+                    for (int i = last; i > last-magicNumber; i--) {
+                        if(i<0) break;
+                        grp.add(Wiz.drawPile().group.get(i));
+                    }
                     Wiz.att(new SelectCardsAction(grp, CardCrawlGame.languagePack.getUIString("AnyCardFromDeckToHandAction").TEXT[0], cards -> {
                         for (AbstractCard c : cards) {
                             Wiz.p().drawPile.removeCard(c);
