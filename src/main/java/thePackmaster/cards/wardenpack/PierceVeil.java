@@ -34,8 +34,8 @@ public class PierceVeil extends AbstractWardenCard {
             public void update() {
                 ArrayList<AbstractCard> grp;
                 if(!Wiz.p().drawPile.isEmpty()) {
-                    int last = Wiz.p().drawPile.size()-1;
-                    grp = new ArrayList<>(Wiz.p().drawPile.group.subList(NumberUtils.max(0, last - magicNumber), last));
+                    int last = Wiz.p().drawPile.size();
+                    grp = new ArrayList<>(Wiz.p().drawPile.group.subList(NumberUtils.max(0, (last-1) - magicNumber), last));
                     Wiz.att(new SelectCardsAction(grp, CardCrawlGame.languagePack.getUIString("AnyCardFromDeckToHandAction").TEXT[0], cards -> {
                         for (AbstractCard c : cards) {
                             Wiz.p().drawPile.removeCard(c);
