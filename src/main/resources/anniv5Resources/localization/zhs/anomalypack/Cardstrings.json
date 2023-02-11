@@ -11,8 +11,8 @@
   },
   "${ModID}:MidnightOil": {
     "NAME": "夜灯油",
-    "DESCRIPTION": "随机 消耗 一张手牌， NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "消耗 一张手牌， NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。"
+    "DESCRIPTION": "随机 消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。"
   },
   "${ModID}:VoraciousSigil": {
     "NAME": "暴吞铭印",
@@ -43,7 +43,7 @@
     "EXTENDED_DESCRIPTION": ["消耗并复制。"]
   },
   "${ModID}:Thoughtweaving": {
-    "NAME": "思绪编织",
+    "NAME": "思绪交织",
     "DESCRIPTION": "打出技能或攻击时，抽一张与其不同卡包中相反类型的牌。"
   },
   "${ModID}:SealedSword": {

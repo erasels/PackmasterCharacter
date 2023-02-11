@@ -23,8 +23,8 @@
   },
   "${ModID}:GhostlyMist": {
     "NAME": "鬼雾",
-    "DESCRIPTION": "${ModID}:固在 ： 免费打出。 NL ${ModID}:固在 ： ${ModID}:增变化 本牌。 NL ${ModID}:固在 ：将本牌洗入抽牌堆。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL ${ModID}:固在 ： 免费打出。 NL ${ModID}:固在 ： ${ModID}:增变化 本牌。 NL ${ModID}:固在 ：将本牌洗入抽牌堆。"
+    "DESCRIPTION": "${ModID}:固在 ： 免费打出。 NL ${ModID}:固在 ： ${ModID}:增变化 本牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL ${ModID}:固在 ： 免费打出。 NL ${ModID}:固在 ： ${ModID}:增变化 本牌。 "
   },
   "${ModID}:GlacialSynthesis": {
     "NAME": "人工冰川",
@@ -46,7 +46,7 @@
   },
   "${ModID}:AbstractExtraEffectModifier": {
     "EXTENDED_DESCRIPTION": [
-      "${ModID}:固在 ：",
+      "${ModID}:固在 ： NL ",
       " ",
       " 次。",
       "。"
