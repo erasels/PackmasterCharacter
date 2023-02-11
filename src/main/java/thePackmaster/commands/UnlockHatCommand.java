@@ -17,7 +17,7 @@ public class UnlockHatCommand extends ConsoleCommand {
     @Override
     public void execute(String[] tokens, int depth) {
         if (tokens.length != 2) {
-            DevConsole.log("You need to add the ID of the hat you want.");
+            DevConsole.log("You need to add the name of the pack of the hat you want.");
             return;
         }
         boolean found = false;
@@ -32,11 +32,14 @@ public class UnlockHatCommand extends ConsoleCommand {
 
         if(found) {
             ArrayList<String> unlockedHats = SpireAnniversary5Mod.getUnlockedHats();
+            ArrayList<String> unseenHats = SpireAnniversary5Mod.getUnseenHats();
             if (!unlockedHats.contains(id)) {
                 try {
                     unlockedHats.add(id);
+                    unseenHats.add(id);
                     SpireAnniversary5Mod.logger.info("Saving hat " + id + "|" + tokens[1] + ", acquired via console.");
                     SpireAnniversary5Mod.saveUnlockedHats(unlockedHats);
+                    SpireAnniversary5Mod.saveUnseenHats(unseenHats);
                     HatMenu.refreshHatDropdown();
                 } catch (Exception e) {
                     SpireAnniversary5Mod.logger.error(e);
@@ -63,6 +66,6 @@ public class UnlockHatCommand extends ConsoleCommand {
     @Override
     public void errorMsg() {
         DevConsole.couldNotParse();
-        DevConsole.log("Please put in a valid hat ID.");
+        DevConsole.log("Please put in a valid pack name the hat is from.");
     }
 }

@@ -37,7 +37,7 @@ public class IgnitePower extends AbstractPackmasterPower implements HealthBarRen
     public void atEndOfTurn(boolean isPlayer) {
         if (this.owner.isPlayer) {
             this.flashWithoutSound();
-            this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS)));
+            this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.HP_LOSS)));
         }
     }
 

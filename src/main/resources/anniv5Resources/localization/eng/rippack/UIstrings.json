@@ -19,5 +19,10 @@
       "Just the right touch of pizzazz.",
       "Artisan Hat"
     ]
+  },
+  "${ModID}:RippableModifier": {
+    "TEXT": [
+      "Rippable "
+    ]
   }
 }

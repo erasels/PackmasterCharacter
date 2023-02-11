@@ -2,7 +2,6 @@ package thePackmaster;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
-import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavable;
 import basemod.devcommands.ConsoleCommand;
@@ -25,7 +24,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -38,7 +36,6 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -48,13 +45,13 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.commands.PackAddCommand;
 import thePackmaster.commands.UnlockHatCommand;
 import thePackmaster.events.BlackMarketDealerEvent;
 import thePackmaster.hats.HatMenu;
@@ -72,15 +69,16 @@ import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.patches.sneckopack.EnergyCountPatch;
 import thePackmaster.potions.BoosterBrew;
 import thePackmaster.potions.ModdersDelight;
+import thePackmaster.potions.PackInAJar;
 import thePackmaster.potions.SmithingOil;
 import thePackmaster.potions.clawpack.AttackPotionButClaw;
 import thePackmaster.potions.clawpack.ClawPowerPotion;
 import thePackmaster.potions.clawpack.DrawClawsPotion;
 import thePackmaster.potions.clawpack.GenerateClawsPotion;
 import thePackmaster.potions.thieverypack.DivinePotion;
-import thePackmaster.powers.bitingcoldpack.FrostbitePower;
-import thePackmaster.powers.bitingcoldpack.GlaciatePower;
 import thePackmaster.powers.dragonwrathpack.PenancePower;
+import thePackmaster.powers.evenoddpack.GammaWardPower;
+import thePackmaster.powers.evenoddpack.PrimeDirectivePower;
 import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.rewards.CustomRewardTypes;
@@ -92,11 +90,14 @@ import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.ui.CurrentRunCardsTopPanelItem;
+import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.ui.InfestTextIcon;
 import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.JediUtil;
+import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
+import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
 import java.io.IOException;
@@ -128,7 +129,9 @@ public class SpireAnniversary5Mod implements
         PostPowerApplySubscriber,
         StartGameSubscriber,
         PostExhaustSubscriber,
-        OnPlayerTurnStartSubscriber {
+        OnPlayerTurnStartSubscriber,
+        OnCreateDescriptionSubscriber,
+        OnPlayerLoseBlockSubscriber {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -142,6 +145,7 @@ public class SpireAnniversary5Mod implements
     public static CardGroup packsToDisplay;
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
+            Settings.GameLanguage.ZHS
     };
 
     public static Color characterColor = new Color(0.76f, 0.65f, 0.52f, 1);
@@ -224,10 +228,12 @@ public class SpireAnniversary5Mod implements
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
     public static final ArrayList<Louse> louseList = new ArrayList<>();
 
+    public static boolean isHatRainbow = false;
+
     public static boolean selectedCards = false;
     public static int combatExhausts = 0;
+    public static int cardsRippedThisTurn;
 
-    public static int CLAW_SHARP_TRACKER = 0;
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
@@ -289,6 +295,9 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterUnlockedHats", "");
             defaults.put("PackmasterAllPacksMode", "FALSE");
             defaults.put("PackmasterSelectedHatIndex", "0");
+            defaults.put("PackmasterUnlockedRainbows","");
+            defaults.put("PackmasterRainbowEnabled","FALSE");
+            defaults.put("PackmasterUnseenHats","");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
             modConfig.load();
 
@@ -356,6 +365,17 @@ public class SpireAnniversary5Mod implements
         modConfig.save();
     }
 
+    public static ArrayList<String> getUnlockedRainbows() {
+        if (modConfig == null) return new ArrayList<>();
+        return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterUnlockedRainbows").split(",")));
+    }
+
+    public static void saveUnlockedRainbows(ArrayList<String> input) throws IOException {
+        if (modConfig == null) return;
+        modConfig.setString("PackmasterUnlockedRainbows", String.join(",", input));
+        modConfig.save();
+    }
+
     public static String getLastPickedHatID() {
         if (modConfig == null) return "";
         return modConfig.getString("PackmasterSelectedHatID");
@@ -365,6 +385,28 @@ public class SpireAnniversary5Mod implements
         if (modConfig == null) return;
         modConfig.setString("PackmasterSelectedHatID", ID);
         modConfig.save();
+    }
+
+    public static boolean wasRainbowLastEnabled() {
+        if (modConfig == null) return false;
+        return modConfig.getBool("PackmasterRainbowEnabled");
+    }
+
+    public static void saveRainbowLastEnabled(boolean enabled) throws IOException {
+        if (modConfig == null) return;
+        modConfig.setBool("PackmasterRainbowEnabled", enabled);
+        modConfig.save();
+    }
+
+    public static void saveUnseenHats(ArrayList<String> input) throws IOException {
+        if (modConfig == null) return;
+        modConfig.setString("PackmasterUnseenHats", String.join(",", input));
+        modConfig.save();
+    }
+
+    public static ArrayList<String> getUnseenHats() {
+        if (modConfig == null) return new ArrayList<>();
+        return new ArrayList<>(Arrays.asList(modConfig.getString("PackmasterUnseenHats").split(",")));
     }
 
     @Override
@@ -454,10 +496,10 @@ public class SpireAnniversary5Mod implements
                 .create());
 
         ConsoleCommand.addCommand("addhat", UnlockHatCommand.class);
+        ConsoleCommand.addCommand("pack", PackAddCommand.class);
     }
 
     public static void addPotions() {
-
         if (sharedContentMode) {
             BaseMod.addPotion(BoosterBrew.class, Color.TAN, Color.WHITE, Color.BLACK, BoosterBrew.POTION_ID);
             BaseMod.addPotion(SmithingOil.class, Color.TAN, Color.WHITE, null, SmithingOil.POTION_ID);
@@ -474,6 +516,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addPotion(DrawClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, DrawClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(GenerateClawsPotion.class, Color.RED, Color.WHITE, Color.FIREBRICK, GenerateClawsPotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
         BaseMod.addPotion(DivinePotion.class, Color.ORANGE, Color.YELLOW, Color.ORANGE, DivinePotion.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
+        BaseMod.addPotion(PackInAJar.class, Color.ORANGE, Color.YELLOW, Color.ORANGE, PackInAJar.POTION_ID, ThePackmaster.Enums.THE_PACKMASTER);
 
         if (Loader.isModLoaded("widepotions")) {
             Consumer<String> whitelist = getWidePotionsWhitelistMethod();
@@ -506,10 +549,11 @@ public class SpireAnniversary5Mod implements
         }
     }
 
+    @Deprecated
     private String getLangString() {
         for (Settings.GameLanguage lang : SupportedLanguages) {
             if (lang.equals(Settings.language)) {
-                return Settings.language.name().toLowerCase();
+                return Settings.language.name().toLowerCase(Locale.ROOT);
             }
         }
         return "eng";
@@ -517,25 +561,8 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditStrings() {
-        BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + getLangString() + "/Cardstrings.json");
-        BaseMod.loadCustomStringsFile(RelicStrings.class, modID + "Resources/localization/" + getLangString() + "/Relicstrings.json");
-        BaseMod.loadCustomStringsFile(CharacterStrings.class, modID + "Resources/localization/" + getLangString() + "/Charstrings.json");
-        BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + getLangString() + "/Powerstrings.json");
-        BaseMod.loadCustomStringsFile(UIStrings.class, modID + "Resources/localization/" + getLangString() + "/UIstrings.json");
-        BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + getLangString() + "/Stancestrings.json");
-        BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + getLangString() + "/Orbstrings.json");
-        BaseMod.loadCustomStringsFile(PotionStrings.class, modID + "Resources/localization/" + getLangString() + "/Potionstrings.json");
-        BaseMod.loadCustomStringsFile(EventStrings.class, modID + "Resources/localization/" + getLangString() + "/Eventstrings.json");
+        loadStrings("eng");
 
-        loadPackStrings();
-    }
-
-    // These packs are excluded from loading of pack-specific string files because they consistent entirely of base game cards.
-    // If you're making a pack that also consists of only base game cards, add it to this list.
-    // The name and description of the pack can go in the main UIstrings.json file.
-    private static final List<String> baseGamePacks = Arrays.asList(IroncladPack.class.getName(), SilentPack.class.getName(), DefectPack.class.getName(), WatcherPack.class.getName());
-
-    public void loadPackStrings() {
         Collection<CtClass> packClasses = new AutoAdd(modID)
                 .packageFilter(AbstractCardPack.class)
                 .findClasses(AbstractCardPack.class)
@@ -544,14 +571,81 @@ public class SpireAnniversary5Mod implements
                 .collect(Collectors.toList());
         logger.info("Found pack classes with AutoAdd: " + packClasses.size());
 
+        loadPackStrings(packClasses, "eng");
+        if (Settings.language != Settings.GameLanguage.ENG)
+        {
+            loadStrings(Settings.language.toString().toLowerCase());
+            loadPackStrings(packClasses, Settings.language.toString().toLowerCase());
+        }
+    }
+
+
+    private void loadStrings(String langKey) {
+        if (!Gdx.files.internal(modID + "Resources/localization/" + langKey + "/").exists()) return;
+        String filepath = modID + "Resources/localization/" + langKey + "/Cardstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(CardStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Relicstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(RelicStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Charstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(CharacterStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Powerstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(PowerStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/UIstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(UIStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Stancestrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(StanceStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Orbstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(OrbStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Potionstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(PotionStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Eventstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(EventStrings.class, filepath);
+        }
+    }
+
+    // These packs are excluded from loading of pack-specific string files because they consistent entirely of base game cards.
+    // If you're making a pack that also consists of only base game cards, add it to this list.
+    // The name and description of the pack can go in the main UIstrings.json file.
+    private static final List<String> baseGamePacks = Arrays.asList(IroncladPack.class.getName(),
+            SilentPack.class.getName(),
+            DefectPack.class.getName(),
+            AllForOnePack.class.getName(),
+            WatcherPack.class.getName());
+
+    public void loadPackStrings(Collection<CtClass> packClasses, String langKey) {
+
         for (CtClass packClass : packClasses) {
-            String packName = packClass.getSimpleName().toLowerCase();
-            String languageAndPack = getLangString() + "/" + packName;
+            String packName = packClass.getSimpleName().toLowerCase(Locale.ROOT);
+            String languageAndPack = langKey + "/" + packName;
+            String filepath = modID + "Resources/localization/" + languageAndPack + "/";
+            if (!Gdx.files.internal(filepath).exists()) {
+                continue;
+            }
             logger.info("Loading strings for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
             //Do not need to be checked as these always need to exist
-            BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + languageAndPack + "/Cardstrings.json");
+            //He was wrong.
 
-            String filepath = modID + "Resources/localization/" + languageAndPack + "/";
+            if (Gdx.files.internal(filepath + "Cardstrings.json").exists()) {
+                BaseMod.loadCustomStringsFile(CardStrings.class, filepath + "Cardstrings.json");
+            }
+
             if (Gdx.files.internal(filepath + "Relicstrings.json").exists()) {
                 BaseMod.loadCustomStringsFile(RelicStrings.class, filepath + "Relicstrings.json");
             }
@@ -575,24 +669,33 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditKeywords() {
-        Gson gson = new Gson();
-        String json = Gdx.files.internal(modID + "Resources/localization/" + getLangString() + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        List<Keyword> keywords = new ArrayList<>(Arrays.asList(gson.fromJson(json, Keyword[].class)));
-
         Collection<CtClass> packClasses = new AutoAdd(modID)
                 .packageFilter(AbstractCardPack.class)
                 .findClasses(AbstractCardPack.class)
                 .stream()
                 .filter(c -> !baseGamePacks.contains(c.getName()))
                 .collect(Collectors.toList());
+        loadKeywords(packClasses, "eng");
+        if (Settings.language != Settings.GameLanguage.ENG) {
+            loadKeywords(packClasses, Settings.language.toString().toLowerCase());
+        }
+    }
 
+    private void loadKeywords(Collection<CtClass> packClasses, String langKey) {
+        String filepath = modID + "Resources/localization/" + langKey + "/Keywordstrings.json";
+        Gson gson = new Gson();
+        List<Keyword> keywords = new ArrayList<>();
+        if (Gdx.files.internal(filepath).exists()) {
+            String json = Gdx.files.internal(filepath).readString(String.valueOf(StandardCharsets.UTF_8));
+            keywords.addAll(Arrays.asList(gson.fromJson(json, Keyword[].class)));
+        }
         for (CtClass packClass : packClasses) {
-            String packName = packClass.getSimpleName().toLowerCase();
-            String languageAndPack = getLangString() + "/" + packName;
-            logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
+            String packName = packClass.getSimpleName().toLowerCase(Locale.ROOT);
+            String languageAndPack = langKey + "/" + packName;
             String packJson = modID + "Resources/localization/" + languageAndPack + "/Keywordstrings.json";
             FileHandle handle = Gdx.files.internal(packJson);
             if (handle.exists()) {
+                logger.info("Loading keywords for pack " + packClass.getName() + "from \"resources/localization/" + languageAndPack + "\"");
                 packJson = handle.readString(String.valueOf(StandardCharsets.UTF_8));
                 List<Keyword> packKeywords = new ArrayList<>(Arrays.asList(gson.fromJson(packJson, Keyword[].class)));
                 keywords.addAll(packKeywords);
@@ -600,6 +703,11 @@ public class SpireAnniversary5Mod implements
         }
 
         for (Keyword keyword : keywords) {
+            switch (keyword.ID) {
+                case "sharpen":
+                    Keywords.SHARPEN = keyword;
+                    break;
+            }
             BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
         }
     }
@@ -652,7 +760,6 @@ public class SpireAnniversary5Mod implements
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
         UltimateHomerun.HIGH_SCORE = 0;
-        CLAW_SHARP_TRACKER = 0;
         combatExhausts = 0;
         PenancePower.Power = 20;
         MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
@@ -671,6 +778,7 @@ public class SpireAnniversary5Mod implements
     public void receiveOnPlayerTurnStart() {
         Leprechaun.staticStartOfTurn();
         JediUtil.receiveOnPlayerTurnStart();
+        cardsRippedThisTurn = 0;
     }
 
     public static void declarePacks() {
@@ -868,30 +976,13 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.type == AbstractPower.PowerType.DEBUFF && source == AbstractDungeon.player && target != AbstractDungeon.player) {
+        if (power.type == AbstractPower.PowerType.DEBUFF) {
             // Biting Cold Pack
             // Growing Affliction (Return to hand)
-            for (AbstractCard c : AbstractDungeon.player.discardPile.group)
-                if (c.cardID.equals(GrowingAffliction.ID))
-                    AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(c));
-
-            // Glaciate (Gain Vigor)
-            if (power.ID.equals(FrostbitePower.POWER_ID) && source.hasPower(GlaciatePower.POWER_ID)) {
-                AbstractPower glaciate = source.getPower(GlaciatePower.POWER_ID);
-
-                atb(new AbstractGameAction() {
-                    @Override
-                    public void update() {
-                        glaciate.flash();
-                        if (Settings.FAST_MODE)
-                            addToBot(new WaitAction(0.1F));
-                        else
-                            addToBot(new WaitAction(0.2F));
-                        applyToSelf(new VigorPower(AbstractDungeon.player, glaciate.amount));
-                        this.isDone = true;
-                    }
-                });
-            }
+            if (source == adp() && !target.hasPower(ArtifactPower.POWER_ID))
+                for (AbstractCard c : AbstractDungeon.player.discardPile.group)
+                    if (c.cardID.equals(GrowingAffliction.ID))
+                        AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(c));
 
             //Ring of Pain pack
             if (!target.hasPower(ArtifactPower.POWER_ID)) {
@@ -918,9 +1009,29 @@ public class SpireAnniversary5Mod implements
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
 
             Hats.atRunStart();
-            SpireAnniversary5Mod.logger.info("completed start of game hats");
+            //SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
+    }
+
+    @Override
+    public String receiveCreateCardDescription(String currentRaw, AbstractCard card) {
+        if (AbstractDungeon.player != null) {
+            for(AbstractPower pow : p().powers) {
+                if(PrimeDirectivePower.POWER_ID.equals(pow.ID)) {
+                    currentRaw = ((PrimeDirectivePower)pow).modifyDescription(currentRaw, card);
+                } else if(GammaWardPower.POWER_ID.equals(pow.ID)) {
+                    currentRaw = ((GammaWardPower)pow).modifyDescription(currentRaw, card);
+                }
+            }
+        }
+        return currentRaw;
+    }
+
+    @Override
+    public int receiveOnPlayerLoseBlock(int i) {
+        i = Serene.receiveOnPlayerLoseBlock(i);
+        return i;
     }
 
     public static class Enums {
@@ -942,7 +1053,7 @@ public class SpireAnniversary5Mod implements
         settingsPanel = new ModPanel();
         //int configStep = 40;
 
-        ModLabeledToggleButton allPacksModeBtn = new ModLabeledToggleButton(configStrings.TEXT[3], 350.0f, 600F, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
+        FixedModLabeledToggleButton allPacksModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[3], 350.0f, 600F, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             allPacksMode = button.enabled;
@@ -951,7 +1062,7 @@ public class SpireAnniversary5Mod implements
 
         settingsPanel.addUIElement(allPacksModeBtn);
 
-        ModLabeledToggleButton oneFrameModeBtn = new ModLabeledToggleButton(configStrings.TEXT[4], 350.0f, 400F, Settings.CREAM_COLOR, FontHelper.charDescFont, oneFrameMode, settingsPanel, (label) -> {
+        FixedModLabeledToggleButton oneFrameModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[4], 350.0f, 400F, Settings.CREAM_COLOR, FontHelper.charDescFont, oneFrameMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             oneFrameMode = button.enabled;
@@ -960,7 +1071,7 @@ public class SpireAnniversary5Mod implements
 
         settingsPanel.addUIElement(oneFrameModeBtn);
 
-        ModLabeledToggleButton sharedContentBtn = new ModLabeledToggleButton(configStrings.TEXT[5], 350.0f, 500F, Settings.CREAM_COLOR, FontHelper.charDescFont, sharedContentMode, settingsPanel, (label) -> {
+        FixedModLabeledToggleButton sharedContentBtn = new FixedModLabeledToggleButton(configStrings.TEXT[5], 350.0f, 500F, Settings.CREAM_COLOR, FontHelper.charDescFont, sharedContentMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             sharedContentMode = button.enabled;
@@ -987,6 +1098,10 @@ public class SpireAnniversary5Mod implements
             public void onLoad(ArrayList<String> strings) {
                 logger.info("Loading. Packs cleared.");
                 currentPoolPacks.clear();
+                if(strings == null) {
+                    logger.error("No currentPoolPacks on save, if you're not playing Packmaster this can be ignored.");
+                    return;
+                }
                 for (String packID : strings) {
                     logger.info("adding pack " + packID + " from load");
                     currentPoolPacks.add(packsByID.get(packID));

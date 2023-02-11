@@ -27,8 +27,7 @@ public class D20 extends AbstractBoardCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new OneTimeAdvantagePower(p, 1), 1));
-        addToBot(new DelayedDiceRollAction(DICE, 1));
+        addToBot(new ApplyPowerAction(p, p, new DicePower(p, DICE), DICE));
     }
 
     @Override

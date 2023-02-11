@@ -15,9 +15,9 @@
     "NAME": "Cardistry",
     "DESCRIPTION": "Gain !B! Block. NL The next card you play this turn is returned to the top of your draw pile."
   },
-  "${ModID}:PackRip": {
-    "NAME": "Pack Rip",
-    "DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand and Upgrade them. NL Exhaust."
+  "${ModID}:ConjurePack": {
+    "NAME": "Conjure Pack",
+    "DESCRIPTION": "Choose 1 of !M! Packs available to your run. NL At the start of the next 5 turns, add 2 of its cards to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose 1 of !M! Packs available to your run. NL At the start of the next 5 turns, add 2 of its cards to your hand."
   }
 }

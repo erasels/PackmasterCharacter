@@ -1,0 +1,16 @@
+{
+  "${ModID}:AggressionPack": {
+    "TEXT": [
+      "侵袭",
+      "专注于攻击与侵袭姿态(25%伤害加成)。",
+      "modargo",
+      "卡牌贴图源自游戏：万智牌(Magic: The　Gathering)"
+    ]
+  },
+  "${ModID}:AggressionPackHat": {
+    "TEXT": [
+      "现在你可以肆意捣鼓整个尖塔了。",
+      "维京头盔"
+    ]
+  }
+}

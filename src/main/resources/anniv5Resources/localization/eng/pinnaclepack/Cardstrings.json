@@ -19,7 +19,7 @@
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "Marvelous Feast",
     "DESCRIPTION": "Innate. Add in order: ${ModID}:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended.",
-    "UPGRADE_DESCRIPTION": "Innate. Add in order, upgraded: ${ModID}:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended."
+    "UPGRADE_DESCRIPTION": "Innate. Add in order, Upgraded: ${ModID}:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended."
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "Meaty Croquettes",
@@ -47,8 +47,8 @@
   },
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "Pocket Tournament",
-    "DESCRIPTION": "Next turn, randomly, 2X times: NL Draw 1 card, gain [E] , gain 1 Strength or gain 3 Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Next turn, randomly, 2X+2 times: NL Draw 1 card, gain [E] , gain 1 Strength or gain 3 Block. NL Exhaust."
+    "DESCRIPTION": "Next turn, randomly, 2X times: NL Draw 1 card, gain [E] , gain 5 Vigor or gain 3 Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, randomly, 2X+2 times: NL Draw 1 card, gain [E] , gain 5 Vigor or gain 3 Block. NL Exhaust."
   },
   "${ModID}:StoneSwordCommonAttack": {
     "NAME": "Stone Sword",

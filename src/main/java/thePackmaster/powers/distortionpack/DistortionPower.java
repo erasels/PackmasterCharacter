@@ -4,8 +4,9 @@ import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -40,14 +41,15 @@ public class DistortionPower extends AbstractPackmasterPower implements EnemyOnE
     @Override
     public void enemyOnExhaust(AbstractCard c) {
         powerEffects.add(new GainPowerEffect(this));
-        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(this.owner, this.source, this.amount, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() {
-                AbstractDungeon.effectList.add(new FlashPowerEffect(DistortionPower.this));
+                if (!DistortionPower.this.owner.isDeadOrEscaped())
+                    AbstractDungeon.effectList.add(new FlashPowerEffect(DistortionPower.this));
                 this.isDone = true;
             }
         });
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.NONE, true));
     }
 
     @Override

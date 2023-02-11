@@ -10,14 +10,14 @@
       "d12",
       "d20"
     ],
-    "DESCRIPTION": "Dice increase the damage or #yBlock of the next card you play that deals damage or #yBlocks."
+    "DESCRIPTION": "Dice increase the damage and #yBlock of the next card you play that deals damage or #yBlocks."
   },
   {
     "PROPER_NAME": "Reroll",
     "NAMES": [
       "reroll"
     ],
-    "DESCRIPTION": "Any #yDice this card uses are rerolled instead of removed."
+    "DESCRIPTION": "#yDice are not used up when you play this card."
   },
   {
     "PROPER_NAME": "Jail",

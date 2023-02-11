@@ -1,9 +1,10 @@
 [
   {
     "PROPER_NAME": "Sharpen",
+    "ID": "sharpen",
     "NAMES": [
       "sharpen"
     ],
-    "DESCRIPTION": "Raises the damage dealt by all existing #yClaws and any #yGhost #yClaws created this combat."
+    "DESCRIPTION": "Raises the damage dealt by all existing #yClaws."
   }
 ]

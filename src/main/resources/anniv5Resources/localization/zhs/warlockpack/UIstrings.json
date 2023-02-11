@@ -1,0 +1,16 @@
+{
+  "${ModID}:WarlockPack": {
+    "TEXT": [
+      "巫妖王",
+      "成为巫妖王并操纵邪能，消耗牌来创造小鬼击垮敌军。",
+      "Diamsword & modargo",
+      "创意来自 #y暴雪娱乐 游戏 #y炉石传说(Hearthstone) 。"
+    ]
+  },
+  "${ModID}:WarlockPackHat": {
+    "TEXT": [
+      "你在期待什么邪恶的东西吗？不好意思没有。",
+      "暗影头戴"
+    ]
+  }
+}

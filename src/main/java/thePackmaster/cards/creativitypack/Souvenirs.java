@@ -1,16 +1,14 @@
 package thePackmaster.cards.creativitypack;
 
 import basemod.helpers.CardModifierManager;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Insight;
 import com.megacrit.cardcrawl.cards.tempCards.Safety;
 import com.megacrit.cardcrawl.cards.tempCards.Smite;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.FlexibleDiscoveryAction;
 import thePackmaster.cardmodifiers.creativitypack.DrawCardModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
 
@@ -22,7 +20,11 @@ public class Souvenirs extends AbstractCreativityCard {
 
     public Souvenirs() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-
+        Smite smite = new Smite();
+        Safety safety = new Safety();
+        CardModifierManager.addModifier(smite, new DrawCardModifier());
+        CardModifierManager.addModifier(safety, new DrawCardModifier());
+        MultiCardPreview.add(this, smite, safety);
     }
 
     @Override
@@ -34,12 +36,13 @@ public class Souvenirs extends AbstractCreativityCard {
         for (int i = 0; i <= timesUpgraded; i++)
         {
             ArrayList<AbstractCard> list = new ArrayList<>();
-            list.add(CardLibrary.getCard(Insight.ID).makeCopy());
-            list.add(CardLibrary.getCard(Smite.ID).makeCopy());
-            list.add(CardLibrary.getCard(Safety.ID).makeCopy());
-            addToBot(new FlexibleDiscoveryAction(list,
-                    selectedCard -> CardModifierManager.addModifier(selectedCard, new DrawCardModifier()),
-                    false));
+            Smite smite = new Smite();
+            Safety safety = new Safety();
+            CardModifierManager.addModifier(smite, new DrawCardModifier());
+            CardModifierManager.addModifier(safety, new DrawCardModifier());
+            list.add(smite);
+            list.add(safety);
+            addToBot(new FlexibleDiscoveryAction(list, false));
         }
     }
 }

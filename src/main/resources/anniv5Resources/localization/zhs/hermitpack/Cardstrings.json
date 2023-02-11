@@ -1,0 +1,44 @@
+{
+  "${ModID}:Quickdraw": {
+    "NAME": "快拔",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 下1回合少抽一张牌。"
+  },
+  "${ModID}:Glare": {
+    "NAME": "凝视",
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。"
+  },
+  "${ModID}:HoleUp": {
+    "NAME": "'洞'起来",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 虚弱 。"
+  },
+  "${ModID}:Headshot": {
+    "NAME": "爆头",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若打出时处于手牌中央，造成2倍伤害。"
+  },
+  "${ModID}:Determination": {
+    "NAME": "决心",
+    "DESCRIPTION": "每当你获得负面效果， NL 获得 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你获得负面效果， NL 获得 !M! 点 力量 。"
+  },
+  "${ModID}:Virtue": {
+    "NAME": "高尚",
+    "DESCRIPTION": "保留 。 NL 失去所有负面效果 !M! 层。"
+  },
+  "${ModID}:FlashPowder": {
+    "NAME": "闪光粉末",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 所有敌人失去 !M! 点 力量 。 NL 消耗 。"
+  },
+  "${ModID}:Purgatory": {
+    "NAME": "炼狱",
+    "DESCRIPTION": "虚无 。 NL 对所有敌人造成 !D! 点伤害。"
+  },
+  "${ModID}:OverwhelmingPower": {
+    "NAME": "压倒性力量",
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽三张牌。 NL 回合结束时若无 [E] ， NL 失去 !M! 点生命。"
+  },
+  "${ModID}:DeadOrAlive": {
+    "NAME": "死或生",
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 斩杀 时获得 ${ModID}:赏金 。 NL 消耗 。"
+  }
+}

@@ -17,9 +17,9 @@ public class HornetWithin extends AbstractWitchStrikeCard implements OnInfestCar
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public HornetWithin() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 3;
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
 

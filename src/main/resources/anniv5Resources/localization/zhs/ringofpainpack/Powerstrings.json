@@ -1,0 +1,15 @@
+{
+  "${ModID}:RendPower": {
+    "NAME": "狂扯",
+    "DESCRIPTIONS": [
+      "该单位额外受到 #b",
+      " 点攻击伤害。其回合结束时层数减半。"
+    ]
+  },
+  "${ModID}:ConnectionPower": {
+    "NAME": "联结",
+    "DESCRIPTIONS": [
+      "每当你打出一张牌时， #y升级 其所有同名牌。"
+    ]
+  }
+}

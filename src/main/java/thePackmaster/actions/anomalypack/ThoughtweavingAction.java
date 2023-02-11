@@ -11,8 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.NoDrawPower;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.util.Wiz;
 
 import java.util.Iterator;
@@ -20,15 +19,15 @@ import java.util.Iterator;
 public class ThoughtweavingAction extends AbstractGameAction {
     private AbstractPlayer p;
     private CardType typeToCheck;
-    private AbstractCardPack packToAvoid;
+    private String packIDToAvoid;
 
-    public ThoughtweavingAction(int amount, CardType type, AbstractCardPack packToAvoid) {
+    public ThoughtweavingAction(int amount, CardType type, String packIDToAvoid) {
         this.p = AbstractDungeon.player;
         this.setValues(this.p, this.p, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
         this.typeToCheck = type;
-        this.packToAvoid = packToAvoid;
+        this.packIDToAvoid = packIDToAvoid;
     }
 
     public void update() {
@@ -38,19 +37,16 @@ public class ThoughtweavingAction extends AbstractGameAction {
                 return;
             }
             int counter = 0;
-            AbstractPackmasterCard c;
             CardGroup tmp = new CardGroup(CardGroupType.UNSPECIFIED);
             Iterator var2 = this.p.drawPile.group.iterator();
 
             AbstractCard card;
             while(var2.hasNext() && counter < amount) {
-                AbstractCard check = (AbstractCard)var2.next();
-                if (check instanceof AbstractPackmasterCard) {
-                    c = (AbstractPackmasterCard) check;
-                    if (c.type == this.typeToCheck && c.getParent() != packToAvoid && c.getParent()!=null) {
-                        tmp.addToRandomSpot(c);
-                        counter++;
-                    }
+                AbstractCard c = (AbstractCard)var2.next();
+                String parentID = SpireAnniversary5Mod.cardParentMap.getOrDefault(c.cardID, null);
+                if (c.type == this.typeToCheck && parentID != null && !parentID.equals(packIDToAvoid)) {
+                    tmp.addToRandomSpot(c);
+                    counter++;
                 }
             }
 

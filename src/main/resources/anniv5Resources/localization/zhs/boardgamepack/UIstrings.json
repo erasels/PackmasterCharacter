@@ -1,0 +1,20 @@
+{
+  "${ModID}:BoardGamePack": {
+    "TEXT": [
+      "桌游",
+      "用 ${ModID}:骰子 的力量击败敌人！",
+      "Laugic"
+    ]
+  },
+  "${ModID}:BoardGameChance": {
+    "TEXT": [
+      "机会"
+    ]
+  },
+  "${ModID}:BoardGamePackHat": {
+    "TEXT": [
+      "你最具商业价值的帽子。",
+      "桌游帽"
+    ]
+  }
+}

@@ -12,7 +12,7 @@
   "${ModID}:BlockVial": {
     "NAME": "Block Vial",
     "DESCRIPTION": "Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Your Block is not removed at the start of your next turn. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !${ModID}:m2! Block next turn. NL Exhaust."
   },
   "${ModID}:DynamicVial": {
     "NAME": "Dynamic Vial",
@@ -27,9 +27,9 @@
   },
   "${ModID}:QuickBrew": {
     "NAME": "Quick Brew",
-    "DESCRIPTION": "Choose: Gain 2 Strength, or Gain 3 Focus.",
-    "UPGRADE_DESCRIPTION": "Choose: Gain 2 Strength, Gain 2 Dexterity, or Gain 3 Focus.",
-    "EXTENDED_DESCRIPTION": ["Gain 2 Strength.", "Gain 2 Dexterity.","Gain 3 Focus."]
+    "DESCRIPTION": "Choose: Gain !M! Strength, or Gain !M! Focus.",
+    "UPGRADE_DESCRIPTION": "Choose: Gain !M! Strength, Gain !M! Dexterity, or Gain !M! Focus.",
+    "EXTENDED_DESCRIPTION": ["Gain !M! Strength.", "Gain !M! Dexterity.","Gain !M! Focus."]
   },
   "${ModID}:ToxicVial": {
     "NAME": "Toxic Vial",

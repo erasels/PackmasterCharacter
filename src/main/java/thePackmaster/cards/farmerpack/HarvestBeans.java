@@ -29,13 +29,51 @@ public class HarvestBeans extends AbstractFarmerCard {
         } else {
             this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
+    }
 
+    @Override
+    public void applyPowers() {
+        int origBase = this.baseDamage;
+
+        this.baseDamage = baseSecondDamage;
+        this.isMultiDamage = true;
+        super.applyPowers();
+
+        int aoeDmg = this.damage;
+        boolean aoeModified = this.isDamageModified;
+
+        this.baseDamage = origBase;
+        this.isMultiDamage = false;
+        super.applyPowers();
+
+        //recalcing also resets variables and auto recalculates these...
+        this.secondDamage = aoeDmg;
+        this.isSecondDamageModified = aoeModified;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        int origBase = this.baseDamage;
+
+        this.baseDamage = baseSecondDamage;
+        this.isMultiDamage = true;
+        super.calculateCardDamage(null);
+
+        int aoeDmg = this.damage;
+        boolean aoeModified = this.isDamageModified;
+
+        this.baseDamage = origBase;
+        this.isMultiDamage = false;
+        super.calculateCardDamage(mo);
+
+        this.secondDamage = aoeDmg;
+        this.isSecondDamageModified = aoeModified;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         if (ptc().size() >= 2 && ptc().get(ptc().size() - 2).type != CardType.ATTACK) {
-            atb(new DamageAllEnemiesAction(p(),secondDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            atb(new DamageAllEnemiesAction(p(), multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
     }
 

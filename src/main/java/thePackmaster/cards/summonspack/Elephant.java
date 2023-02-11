@@ -45,24 +45,28 @@ public class Elephant extends AbstractSummonsCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SetCardTargetCoordinatesAction(this, Settings.WIDTH/2f -400f*Settings.scale,-1f));
-        if (!seenThisSession) {
+        if (!seenThisSession || MathUtils.random(0, 1f) < 0.05f) {
             seenThisSession = true;
-            if (Settings.SOUND_VOLUME >=  0.1f && Settings.MASTER_VOLUME >= 0.1f) {
+            if (triggerSound()) {
                 AbstractGameEffect effect = new LongElephantDropEffect();
                 vfx(effect, LongElephantDropEffect.DURATION);
-            }
-            else {
+            } else {
                 AbstractGameEffect effect = new MediumElephantDropEffect();
                 vfx(effect, MediumElephantDropEffect.DURATION);
             }
-        }  else if (MathUtils.random(0, 1f) < 0.05f)
-            vfx(new LongElephantDropEffect(), 2.35f);
+        }
         else
             vfx(new ElephantDropEffect(), 0.45f);
 
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         DamageInfo info = new DamageInfo(adp(), magicNumber, DamageInfo.DamageType.THORNS);
         atb(new DamageAction(adp(), info, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+    }
+
+    private boolean triggerSound() {
+        if (Settings.MASTER_VOLUME >= 0.1f && Settings.SOUND_VOLUME >= 0.1f)
+            return true;
+        return false;
     }
 
     @Override

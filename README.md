@@ -22,7 +22,7 @@ https://desktop.github.com/
 
 ## Technical
 ### How to make a Pack
-First, navigate to the project on your system and copy the example-pom.xml and rename the copy to pom.xml. Adjust it to the correct steam path if necessary. Do this before you load the project in intellij to ward off some issues.  
+First, navigate to the project on your system and copy the example-pom.txt and rename the copy to pom.xml. Adjust it to the correct steam path if necessary. Do this before you load the project in intellij to ward off some issues.  
 **DO NOT DELETE THE EXAMPLE POM!**
 
 Once you've got the project up and running, navigate to the **packs** package.  
@@ -93,3 +93,15 @@ This does not add any mandatory work for packs. There are three ways to get a ha
 Hats also come with a display name and flavor text, which are plucked from the UIStrings.json of your respective pack, with the ID "<yourID>Hat".  See the DownfallPack UIStrings for examples.
 
 Optionally, hats can hide the character's hair, for cases like Helmets.  This is done by adding "hatHidesHair = true" to your pack initialization. See the Bellord pack initialization file for an example.
+
+### Rippable Cards
+
+To make a card rippable by default, add the Rippable Cardmodifier to your card's constructor:
+`CardModifierManager.addModifier(this, new RippableModifier());`
+
+If you want to make a card rippable via an effect, use `new RippableModifier(false)`.
+
+To give your card an `onRip` effect, implement `OnRipInterface` and fill in the required method.
+
+Cards can be automatically ripped, skipping the the modifier requirement by using `RipCardsInHandAction` and passing in
+a list of the cards you want ripped.

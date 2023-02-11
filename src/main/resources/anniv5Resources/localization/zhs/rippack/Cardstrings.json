@@ -1,0 +1,56 @@
+{
+  "${ModID}:DividedFury": {
+    "NAME": "被撕愤怒",
+    "DESCRIPTION": "回合开始时，随机使 !M! 张手牌变得 ${ModID}:可撕裂 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，随机使 !M! 张手牌变得 ${ModID}:可撕裂 。"
+  },
+  "${ModID}:ViciousCycle": {
+    "NAME": "邪恶循环",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每撕过一张牌，本牌伤害增加 !D! 点。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (已撕裂",
+      "张牌。)",
+      "张牌。)"
+    ]
+  },
+  "${ModID}:ArtAttack": {
+    "NAME": "卡图攻击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本牌的 ${ModID}:卡图牌 可使目标失去 !M! 点生命。"
+  },
+  "${ModID}:SurprisePack": {
+    "NAME": "惊喜包",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 被 *撕裂 时， NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 被 *撕裂 时， NL 获得 [E] [E] 。"
+  },
+  "${ModID}:Inspiration": {
+    "NAME": "启发",
+    "DESCRIPTION": "抽消耗堆中 ${ModID}:卡图牌 与 状态牌 合计牌数张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽消耗堆中 ${ModID}:卡图牌 与 状态牌 合计牌数张牌。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (抽 ",
+      " 张牌。)",
+      " 张牌。)"
+    ]
+  },
+  "${ModID}:FlimsyBash": {
+    "NAME": "轻击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+  },
+  "${ModID}:FragileShrug": {
+    "NAME": "易裂耸肩",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌。 NL 被 *撕裂 时， NL 抽 !M! 张牌。"
+  },
+  "${ModID}:HazardousStrike": {
+    "NAME": "冒险打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 被 *撕裂 时， NL 随机 消耗 !M! 张手牌。"
+  },
+  "${ModID}:TotalWeakness": {
+    "NAME": "完全无效",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 虚弱 。"
+  },
+  "${ModID}:LeftBrain": {
+    "NAME": "左脑",
+    "DESCRIPTION": "消耗 所有 ${ModID}:卡图牌 与 状态牌 ，每张使你获得 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:固无 。 NL 消耗 所有 ${ModID}:卡图牌 与 状态牌 ，每张使你获得 !M! 点 力量 。"
+  }
+}

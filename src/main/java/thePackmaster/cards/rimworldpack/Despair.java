@@ -17,7 +17,7 @@ public class Despair extends AbstractRimworldCard {
     public final static String ID = makeID(Despair.class.getSimpleName());
 
     public Despair() {
-        super(ID, 2, CardType.STATUS, CardRarity.CURSE, CardTarget.SELF, CardColor.CURSE);
+        super(ID, 2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, CardColor.CURSE);
         exhaust = true;
     }
 

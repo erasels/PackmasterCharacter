@@ -29,7 +29,7 @@ public class Quincunx extends AbstractAstrologerCard {
 
     public Quincunx() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 4;
         isEthereal = true;
     }
 

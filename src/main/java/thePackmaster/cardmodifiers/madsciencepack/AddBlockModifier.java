@@ -10,10 +10,8 @@ public class AddBlockModifier extends AbstractMadScienceModifier {
     }
 
     @Override
-    public void onInitialApplication(AbstractCard card) {
-        super.onInitialApplication(card);
-        card.baseBlock += value;
-        card.update();
+    public float modifyBaseBlock(float block, AbstractCard card) {
+        return block + value;
     }
 
     @Override

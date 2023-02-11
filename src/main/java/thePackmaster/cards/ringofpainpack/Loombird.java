@@ -3,8 +3,6 @@ package thePackmaster.cards.ringofpainpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.ringofpainpack.RendPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -14,8 +12,8 @@ public class Loombird extends AbstractRingOfPainCard {
     public final static String ID = makeID(Loombird.class.getSimpleName());
 
     private static final int DAMAGE = 8;
-    private static final int UPGRADE_DAMAGE = 2;
-    private static final int REND = 4;
+    private static final int UPGRADE_DAMAGE = 1;
+    private static final int REND = 3;
     private static final int UPGRADE_REND = 1;
 
     public Loombird() {

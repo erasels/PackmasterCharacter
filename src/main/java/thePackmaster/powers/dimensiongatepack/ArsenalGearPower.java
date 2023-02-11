@@ -1,5 +1,7 @@
 package thePackmaster.powers.dimensiongatepack;
 
+import basemod.cardmods.ExhaustMod;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,7 +11,6 @@ import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -27,13 +28,18 @@ public class ArsenalGearPower extends AbstractPackmasterPower {
     public void atStartOfTurnPostDraw() {
         ArrayList<AbstractCard> validCards;
         AbstractCard c;
-        validCards = Wiz.getCardsMatchingPredicate(c2 -> c2.rarity == AbstractCard.CardRarity.UNCOMMON || c2.rarity == AbstractCard.CardRarity.RARE);
-        Collections.shuffle(validCards);
-        if (validCards.size() > 0) {
-            c = validCards.get(0).makeCopy();
-            c.modifyCostForCombat(-9);
+        validCards = Wiz.getCardsMatchingPredicate(c2 -> (c2.rarity == AbstractCard.CardRarity.UNCOMMON || c2.rarity == AbstractCard.CardRarity.RARE) && !c2.hasTag(AbstractCard.CardTags.HEALING));
+        if (!validCards.isEmpty()) {
+            c = Wiz.getRandomItem(validCards).makeCopy();
+            if (c.cost > 0) {
+                c.cost = 0;
+                c.costForTurn = 0;
+                c.isCostModified = true;
+            }
+            if (!c.exhaust && c.type != AbstractCard.CardType.POWER) {
+                CardModifierManager.addModifier(c, new ExhaustMod());
+            }
             addToBot(new MakeTempCardInHandAction(c));
-            validCards.remove(0);
         }
         addToBot(new ReducePowerAction(owner, owner, this, 1));
     }

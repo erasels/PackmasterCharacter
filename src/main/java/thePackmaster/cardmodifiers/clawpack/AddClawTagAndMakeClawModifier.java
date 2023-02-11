@@ -25,7 +25,7 @@ public class AddClawTagAndMakeClawModifier extends AbstractMadScienceModifierWit
             card.applyPowers();
         }
         if (card.cardsToPreview == null){
-            card.cardsToPreview = new GhostClaw(true);
+            card.cardsToPreview = new GhostClaw();
         }
     }
 
@@ -36,7 +36,7 @@ public class AddClawTagAndMakeClawModifier extends AbstractMadScienceModifierWit
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
+     
         AbstractCard c = new GhostClaw();
         Wiz.atb(new MakeTempCardInHandAction(c));
     }

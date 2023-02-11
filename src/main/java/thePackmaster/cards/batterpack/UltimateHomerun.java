@@ -29,11 +29,10 @@ public class UltimateHomerun extends AbstractBatterCard {
 
         // Adjust visual intensity based on power.
         if (this.damage < 15)
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         else if (this.damage < 100)
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        else
         {
             dmg(m, AbstractGameAction.AttackEffect.FIRE);
             AbstractDungeon.effectsQueue.add(new SunBeamEffect(m));
@@ -58,7 +57,7 @@ public class UltimateHomerun extends AbstractBatterCard {
         baseDamage = tmp;
 
         if (HIGH_SCORE >= 100)
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1];
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[1];
         else
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
 

@@ -33,8 +33,8 @@
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
-    "DESCRIPTION": "Ethereal. NL Exhaust !M! cards in your draw pile. NL Put a card from your discard pile into your hand and give it Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your draw pile. NL Put a card from your discard pile into your hand and give it Exhaust."
+    "DESCRIPTION": "Exhaust a card in your draw pile. NL If you do, put a card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust a card in your draw pile. NL If you do, put a card from your discard pile into your hand."
   },
   "${ModID}:Owl": {
     "NAME": "Owl",
@@ -48,7 +48,7 @@
   },
   "${ModID}:Connection": {
     "NAME": "Connection",
-    "DESCRIPTION": "Whenever you play a card, upgrade it and ALL copies of it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, upgrade it and ALL copies of it."
+    "DESCRIPTION": "Whenever you play a card, Upgrade it and ALL copies of it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, Upgrade it and ALL copies of it."
   }
 }

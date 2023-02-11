@@ -1,0 +1,46 @@
+{
+  "${ModID}:Reverberation": {
+    "NAME": "混响",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 回合开始时，若本牌在弃牌堆，返回手牌。"
+  },
+  "${ModID}:Midnight": {
+    "NAME": "拨铃",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
+  },
+  "${ModID}:Clang": {
+    "NAME": "铛",
+    "DESCRIPTION": "手中有状态或诅咒才能打出。 NL 造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "我没有诅咒或状态牌。"
+    ]
+  },
+  "${ModID}:VoDo": {
+    "NAME": "巫毒娃娃",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 目标失去2点 力量 。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
+  },
+  "${ModID}:RingTheBell": {
+    "NAME": "铃响",
+    "DESCRIPTION": "所有敌人失去 !M! 点生命。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
+  },
+  "${ModID}:TimeOut": {
+    "NAME": "恶时",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽一张牌，若为 *诅咒 或 *状态 ，所有敌人失去 !M! 点 力量 。"
+  },
+  "${ModID}:Cuckoo": {
+    "NAME": "咕咕",
+    "DESCRIPTION": "抽到 诅咒 时，随机造成 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 抽到 诅咒 时，随机造成 !M! 点伤害。"
+  },
+  "${ModID}:Dong": {
+    "NAME": "咚！",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 与 易伤 。 NL ${ModID}:拾起 ：将 *铃铛的诅咒 加入牌组。"
+  },
+  "${ModID}:LikeClockwork": {
+    "NAME": "钟表机械",
+    "DESCRIPTION": "回合结束时，手中每有一张 诅咒 或 状态，获得 !M! 点 格挡 。"
+  },
+  "${ModID}:SavedByTheBell": {
+    "NAME": "铃铛援救",
+    "DESCRIPTION": "保留 。 NL 获得1层 无实体 。 NL 消耗 。 NL ${ModID}:拾起 ：将3张 *铃铛的诅咒 加入牌组。"
+  }
+}

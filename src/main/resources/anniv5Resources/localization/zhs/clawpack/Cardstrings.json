@@ -1,0 +1,49 @@
+{
+  "${ModID}:Alclawmize": {
+    "NAME": "炼制爪药",
+    "DESCRIPTION": "随机获得一瓶 *爪击 药水。 NL 消耗 。"
+  },
+  "${ModID}:ClawForOne": {
+    "NAME": "万爪一击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 弃牌堆所有 *爪击 牌返回手牌。"
+  },
+  "${ModID}:CloakAndClaw": {
+    "NAME": "斗篷与爪击",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得一张 *幽灵爪击 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! *幽灵爪击 。"
+  },
+  "${ModID}:Conclawd": {
+    "NAME": "爪末",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:磨爪 !M! 。 NL 结束你的回合。"
+  },
+  "${ModID}:InfiniteClaws": {
+    "NAME": "无限爪击",
+    "DESCRIPTION": "回合开始时， NL 获得一张 *幽灵爪击 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得一张 *幽灵爪击 。"
+  },
+  "${ModID}:MutateClaw": {
+    "NAME": "变异爪击",
+    "DESCRIPTION": "选择 ${ModID}:修改 一张攻击手牌： NL 牌名加上'爪击'，效果加上'获得一张 *幽灵爪击 '。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择 ${ModID}:修改 一张攻击手牌： NL 牌名加上'爪击'，效果加上'获得一张 *幽灵爪击 '。"
+  },
+  "${ModID}:SearingClaw": {
+    "NAME": "灼热爪击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:磨爪 !M! 。 NL 可被多次 升级 。"
+  },
+  "${ModID}:TalkToTheClaw": {
+    "NAME": "以爪拒之",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 之后对目标爪击时， NL 获得 !M! 点 格挡 。 NL 消耗 。"
+  },
+  "${ModID}:TwinClaw": {
+    "NAME": "双重爪击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL ${ModID}:磨爪 !M! 。"
+  },
+  "${ModID}:GhostClaw": {
+    "NAME": "幽灵爪击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:磨爪 !M! 。 NL 消耗 。"
+  },
+  "${ModID}:PMClaw": {
+    "NAME": "爪击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:磨爪 !M! 。"
+  }
+}

@@ -1,6 +1,7 @@
 package thePackmaster.packs;
 
 import basemod.AutoAdd;
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -8,7 +9,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Interpolation;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -127,6 +130,7 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         float xPos, yPos, offsetY;
         BitmapFont font;
         boolean hatUnlocked = HatMenu.currentlyUnlockedHats.contains(parentID);
+        boolean rainbowUnlocked = HatMenu.currentlyUnlockedRainbows.contains(parentID);
         String text;
         if(hatUnlocked)
             text = UI_STRINGS.TEXT[2];
@@ -149,10 +153,56 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
                 scaleMulti = 0.5F;
         }
         fontData.setScale(scaleMulti * (this.drawScale * 0.85f));
-        Color color = hatUnlocked? Settings.GREEN_TEXT_COLOR.cpy() : Settings.RED_TEXT_COLOR.cpy();
+        Color color;
+        if (rainbowUnlocked) {
+            color = new Color(0f,0.9f,1f,1f);
+        } else if (hatUnlocked) {
+            color = Settings.GREEN_TEXT_COLOR;
+        } else {
+            color = Settings.RED_TEXT_COLOR;
+        }
         color.a = this.transparency;
         FontHelper.renderRotatedText(sb, font, text, xPos, yPos, 0.0F, offsetY, this.angle, true, color);
         fontData.setScale(originalScale);
+    }
+
+    private static final float SHADOW_TRANSITION_TIME = 0.3f;
+    private static final float SHADOWED_SHADE = 0.5f;
+    private float shadowTime = 0f;
+    private boolean shadow = false;
+
+    public void shadow() {
+        if (!shadow) {
+            shadow = true;
+            shadowTime = SHADOW_TRANSITION_TIME;
+        }
+    }
+    public void noShadow() {
+        if (shadow) {
+            shadow = false;
+            shadowTime = SHADOW_TRANSITION_TIME;
+        }
+    }
+
+    @Override
+    public void update() {
+        super.update();
+
+        if (shadowTime > 0) {
+            shadowTime = Math.max(0, shadowTime - Gdx.graphics.getDeltaTime());
+            float prog = 1 - (shadowTime / SHADOW_TRANSITION_TIME);
+            Color renderColor = ReflectionHacks.getPrivate(this, AbstractCard.class, "renderColor");
+            if (shadow) {
+                renderColor.r = Interpolation.smooth.apply(1f, SHADOWED_SHADE, prog);
+                renderColor.g = Interpolation.smooth.apply(1f, SHADOWED_SHADE, prog);
+                renderColor.b = Interpolation.smooth.apply(1f, SHADOWED_SHADE, prog);
+            }
+            else {
+                renderColor.r = Interpolation.smooth.apply(SHADOWED_SHADE, 1f, prog);
+                renderColor.g = Interpolation.smooth.apply(SHADOWED_SHADE, 1f, prog);
+                renderColor.b = Interpolation.smooth.apply(SHADOWED_SHADE, 1f, prog);
+            }
+        }
     }
 
     @Override

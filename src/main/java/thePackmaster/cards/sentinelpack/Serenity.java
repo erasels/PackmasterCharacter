@@ -14,7 +14,7 @@ public class Serenity extends AbstractSentinelCard {
 
     public Serenity() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 12;
+        baseBlock = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,7 +24,7 @@ public class Serenity extends AbstractSentinelCard {
 
     @Override
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
     }
 
 }

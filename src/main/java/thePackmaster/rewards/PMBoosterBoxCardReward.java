@@ -1,16 +1,18 @@
 package thePackmaster.rewards;
 
 import basemod.abstracts.CustomReward;
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.relics.PMBoosterBox;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class PMBoosterBoxCardReward extends CustomReward {
     private static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("PMBoosterBoxCardReward")).TEXT;
@@ -38,14 +40,17 @@ public class PMBoosterBoxCardReward extends CustomReward {
         if (this.cards == null) {
             AbstractRelic boosterBox = AbstractDungeon.player.getRelic(PMBoosterBox.ID);
             if (boosterBox != null) {
-                RewardItem reward = new RewardItem();
                 ArrayList<String> packs = ((PMBoosterBox)boosterBox).myPacks;
-                int numCards = reward.cards.size();
-                this.cards = SpireAnniversary5Mod.getCardsFromPacks(packs, numCards, AbstractDungeon.cardRng);
+                // This provides rewards with only 1 card and we ignore all modifiers to the number of cards in rewards
+                this.cards = SpireAnniversary5Mod.getCardsFromPacks(packs, 1, AbstractDungeon.cardRng);
                 for (AbstractRelic relic : AbstractDungeon.player.relics) {
                     for (AbstractCard c : this.cards) {
                         relic.onPreviewObtainCard(c);
                     }
+                }
+                List<SpawnModificationCard> spawnModificationCards = this.cards.stream().filter(c -> c instanceof SpawnModificationCard).map(c -> (SpawnModificationCard)c).collect(Collectors.toList());
+                for (SpawnModificationCard c : spawnModificationCards) {
+                    c.onRewardListCreated(this.cards);
                 }
             }
         }

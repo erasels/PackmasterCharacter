@@ -1,6 +1,7 @@
 package thePackmaster.actions.ringofpainpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
@@ -41,6 +42,7 @@ public class HollowerAction extends AbstractGameAction {
                 for (AbstractCard abstractCard : tmp.group) {
                     this.p.drawPile.moveToExhaustPile(abstractCard);
                 }
+                onExhaustedCard();
                 this.isDone = true;
             } else {
                 AbstractDungeon.gridSelectScreen.open(tmp, this.amount, TEXT[0], false);
@@ -54,9 +56,14 @@ public class HollowerAction extends AbstractGameAction {
                     this.p.drawPile.moveToExhaustPile(card);
                 }
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                onExhaustedCard();
             }
             this.tickDuration();
         }
+    }
+
+    private void onExhaustedCard() {
+        addToTop(new BetterDiscardPileToHandAction(1));
     }
 
     static {

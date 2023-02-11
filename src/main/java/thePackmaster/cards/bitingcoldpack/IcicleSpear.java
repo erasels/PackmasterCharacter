@@ -14,7 +14,7 @@ public class IcicleSpear extends BitingColdCard {
     public IcicleSpear() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         damage = baseDamage = 5;
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,7 +23,7 @@ public class IcicleSpear extends BitingColdCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
         upgradeMagicNumber(2);
     }
 }

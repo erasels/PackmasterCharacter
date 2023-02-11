@@ -17,14 +17,15 @@ public class FlailingTendril extends AbstractCthulhuCard {
     private static final int DISTORTION_AMT = 2;
 
     public FlailingTendril() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = ATTACK_DMG;
         magicNumber = baseMagicNumber = DISTORTION_AMT;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        Wiz.applyToEnemy(m, new DistortionPower(m, p, magicNumber));
+        AbstractMonster m2 = Wiz.getRandomEnemy();
+        dmg(m2, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        Wiz.applyToEnemy(m2, new DistortionPower(m2, p, magicNumber));
     }
 
     public void upp() {

@@ -24,10 +24,9 @@ import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.patches.rippack.AllCardsRippablePatches;
 import thePackmaster.util.CardArtRoller;
 import thePackmaster.util.Wiz;
-
-import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.SpireAnniversary5Mod.modID;
@@ -44,7 +43,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     public boolean isSecondMagicModified;
 
     public int secondDamage;
-    public int baseSecondDamage;
+    public int baseSecondDamage = -1;
     public boolean upgradedSecondDamage;
     public boolean isSecondDamageModified;
 
@@ -149,40 +148,50 @@ public abstract class AbstractPackmasterCard extends CustomCard {
 
     @Override
     public void applyPowers() {
+        // We call the superclass's method first to maintain compatibility with mods that patch AbstractCard's method
+        // Specifically, the Runesmith postfix patches methods in AbstractCard in a way that resets after the method
+        // is called, so having the calculation for the base damage happen first ensures that Runesmith's enhance works
+        // for Packmaster cards (though not for secondDamage -- that could be fixed too but is more complicated)
+        // See https://github.com/PureStream/Runesmith/blob/d60bece6746270649e6fe2025ed133581881587f/the_runesmith/src/main/java/runesmith/patches/EnhancedCardValueModified.java
+        super.applyPowers();
         if (baseSecondDamage > -1) {
-            secondDamage = baseSecondDamage;
+            int originalBaseDamage = baseDamage;
+            int originalDamage = damage;
+            boolean originalIsDamageModified = isDamageModified;
 
-            int tmp = baseDamage;
             baseDamage = baseSecondDamage;
-
             super.applyPowers();
-
-            secondDamage = damage;
-            baseDamage = tmp;
-
-            super.applyPowers();
-
             isSecondDamageModified = (secondDamage != baseSecondDamage);
-        } else super.applyPowers();
+            secondDamage = damage;
+
+            baseDamage = originalBaseDamage;
+            damage = originalDamage;
+            isDamageModified = originalIsDamageModified;
+        }
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
+        // We call the superclass's method first to maintain compatibility with mods that patch AbstractCard's method
+        // Specifically, the Runesmith postfix patches methods in AbstractCard in a way that resets after the method
+        // is called, so having the calculation for the base damage happen first ensures that Runesmith's enhance works
+        // for Packmaster cards (though not for secondDamage -- that could be fixed too but is more complicated)
+        // See https://github.com/PureStream/Runesmith/blob/d60bece6746270649e6fe2025ed133581881587f/the_runesmith/src/main/java/runesmith/patches/EnhancedCardValueModified.java
+        super.calculateCardDamage(mo);
         if (baseSecondDamage > -1) {
-            secondDamage = baseSecondDamage;
+            int originalBaseDamage = baseDamage;
+            int originalDamage = damage;
+            boolean originalIsDamageModified = isDamageModified;
 
-            int tmp = baseDamage;
             baseDamage = baseSecondDamage;
-
             super.calculateCardDamage(mo);
-
-            secondDamage = damage;
-            baseDamage = tmp;
-
-            super.calculateCardDamage(mo);
-
             isSecondDamageModified = (secondDamage != baseSecondDamage);
-        } else super.calculateCardDamage(mo);
+            secondDamage = damage;
+
+            baseDamage = originalBaseDamage;
+            damage = originalDamage;
+            isDamageModified = originalIsDamageModified;
+        }
     }
 
     public void resetAttributes() {
@@ -307,22 +316,28 @@ public abstract class AbstractPackmasterCard extends CustomCard {
         return "No Parent Pack!";
     }
 
-    public void renderBorderText(SpriteBatch sb, boolean renderBottom) {
+    public void renderBorderText(SpriteBatch sb) {
+        renderBorderText(sb, this.current_x, this.current_y, 400, this.drawScale);
+    }
+
+    public void renderBorderText(SpriteBatch sb, float xPos, float yPos, float yOffsetBase, float scale) {
+        renderBorderText(sb, xPos, yPos, yOffsetBase, scale, false);
+        renderBorderText(sb, xPos, yPos, yOffsetBase, scale, true);
+    }
+
+    public void renderBorderText(SpriteBatch sb, float xPos, float yPos, float yOffsetBase, float scale, boolean renderBottom) {
         String text = renderBottom? getBottomText() : getTopText();
         if (text != null) {
-            float xPos, yPos, offsetY;
+            float offsetY;
             BitmapFont font;
             if (this.isFlipped || this.isLocked || this.transparency <= 0.0F)
                 return;
             font = FontHelper.cardTitleFont;
-            xPos = this.current_x;
-            yPos = this.current_y;
-            float yOffsetBase = 400;
             if(renderBottom) {
                 yOffsetBase *= -1;
                 yOffsetBase += 15f;
             }
-            offsetY = yOffsetBase * Settings.scale * this.drawScale / 2.0F;
+            offsetY = yOffsetBase * Settings.scale * scale / 2.0F;
             BitmapFont.BitmapFontData fontData = font.getData();
             float originalScale = fontData.scaleX;
             float scaleMulti = 0.8F;
@@ -332,7 +347,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
                 if (scaleMulti < 0.5F)
                     scaleMulti = 0.5F;
             }
-            fontData.setScale(scaleMulti * (this.drawScale * 0.85f));
+            fontData.setScale(scaleMulti * (scale * 0.85f));
             Color color = renderBottom? getBottomTextColor().cpy() : getTopTextColor().cpy();
             color.a = this.transparency;
             FontHelper.renderRotatedText(sb, font, text, xPos, yPos, 0.0F, offsetY, this.angle, true, color);
@@ -343,8 +358,8 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     public String getBottomText() {return null;}
 
     public String getTopText() {
-        AbstractCardPack parent = getParent();
-        if(parent != null) {
+        AbstractCardPack parent = getParent(); //Hide top text on ripped text cards
+        if(parent != null && AllCardsRippablePatches.AbstractCardFields.ripStatus.get(this) != AllCardsRippablePatches.RipStatus.TEXT) {
             return parent.name;
         }
 
@@ -362,16 +377,14 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        renderBorderText(sb, false);
-        renderBorderText(sb, true);
+        renderBorderText(sb);
     }
 
     @Override
     public void renderInLibrary(SpriteBatch sb) {
         super.renderInLibrary(sb);
         if (!(SingleCardViewPopup.isViewingUpgrade && this.isSeen && !this.isLocked)) {
-            renderBorderText(sb, false);
-            renderBorderText(sb, true);
+            renderBorderText(sb);
         }
     }
 }

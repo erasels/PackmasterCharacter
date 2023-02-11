@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.actions.upgradespack.SuperUpgradeAction;
+
+import java.util.*;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -17,7 +19,6 @@ public class EternalStrike extends AbstractCosmosCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         damage = baseDamage = 7;
         magicNumber = baseMagicNumber = 5;
-        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,8 +26,23 @@ public class EternalStrike extends AbstractCosmosCard {
     }
 
     public void triggerOnExhaust() {
-        AbstractCard copyOfThis = this.makeStatEquivalentCopy();
-        copyOfThis.damage = copyOfThis.baseDamage += magicNumber;
+        AbstractCard copyOfThis = this.makeCopy();
+
+        ArrayList<AbstractCard> cardList = new ArrayList<>();
+        cardList.add(copyOfThis);
+        if (timesUpgraded > 1)
+            atb(new SuperUpgradeAction(cardList, timesUpgraded));
+        else if (upgraded)
+            copyOfThis.upgrade();
+
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                copyOfThis.damage = copyOfThis.baseDamage = baseDamage + magicNumber;
+                this.isDone = true;
+            }
+        });
+
         atb(new MakeTempCardInHandAction(copyOfThis));
     }
 

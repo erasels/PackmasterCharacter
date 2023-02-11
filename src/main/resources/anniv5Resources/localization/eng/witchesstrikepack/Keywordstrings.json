@@ -34,6 +34,6 @@
       "Inscribe",
       "inscribe"
     ],
-    "DESCRIPTION": "When you play this card activate the passive effect of all your orbs."
+    "DESCRIPTION": "When played, activate the passive of your next orb, then of all #yFull and #yCrescent #yMoon orbs."
   }
 ]

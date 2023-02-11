@@ -1,0 +1,13 @@
+[
+  {
+    "PROPER_NAME": "Stun",
+    "NAMES": [
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned",
+      "击晕"
+    ],
+    "DESCRIPTION": "被 #y击晕 的目标跳过其回合， #y击晕 结束后行动维持 #y击晕 前的。"
+  }
+]

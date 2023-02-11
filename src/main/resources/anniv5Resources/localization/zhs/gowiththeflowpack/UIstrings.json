@@ -1,0 +1,20 @@
+{
+  "${ModID}:GoWithTheFlowPack": {
+    "TEXT": [
+      "随流而行",
+      "搞掉本回合不要的牌，下回合搞个大的。",
+      "NellyDevo"
+    ]
+  },
+  "${ModID}:FlowAction": {
+    "TEXT": [
+      "丢弃。"
+    ]
+  },
+  "${ModID}:GoWithTheFlowPackHat": {
+    "TEXT": [
+      "与零下温度契合的装扮。",
+      "羽绒帽"
+    ]
+  }
+}

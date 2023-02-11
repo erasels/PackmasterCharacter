@@ -16,17 +16,17 @@
     "EXTENDED_DESCRIPTION": ["Choose a card to copy."]
   },
   "${ModID}:ExperimentalMerge": {
-    "NAME": "ExperimentalMerge",
-    "DESCRIPTION": "Gain !B! Block. NL Shuffle your discard pile into your draw pile. Draw !M!."
+    "NAME": "Experimental Merge",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Shuffle your discard pile into your draw pile. NL Draw !M! card{!M!|>1=s}."
   },
   "${ModID}:ExhaustiveWork": {
     "NAME": "Exhaustive Work",
     "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Choose a card. NL Exhaust that card and add a copy of it to your draw pile.",
-    "EXTENDED_DESCRIPTION": ["Choose a card to exhaust and copy."]
+    "EXTENDED_DESCRIPTION": ["Choose a card to Exhaust and copy."]
   },
   "${ModID}:IterativeDesign": {
     "NAME": "Iterative Design",
-    "DESCRIPTION": "Whenever your create a card this combat, gain !M! Block."
+    "DESCRIPTION": "Whenever you play a card created this combat or *Duplicate a card, gain  !M! Block."
   },
   "${ModID}:Xpansion": {
     "NAME": "Xpansion",
@@ -35,7 +35,7 @@
   },
   "${ModID}:ReduceOverhead": {
     "NAME": "Reduce Overhead",
-    "DESCRIPTION": "Exhaust ALL cards that have duplicates. NL Deal !D! damage for each card exhausted. NL Exhaust."
+    "DESCRIPTION": "Exhaust ALL cards that have duplicates. NL Deal !D! damage for each card Exhausted. NL Exhaust."
   },
   "${ModID}:MagicHand": {
     "NAME": "Magic Hand",
@@ -44,6 +44,6 @@
   },
   "${ModID}:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain !M! stslib:Temporary_HP. Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your draw pile."
+    "DESCRIPTION": "Gain !M! stslib:Temporary_HP. NL Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your draw pile."
   }
 }

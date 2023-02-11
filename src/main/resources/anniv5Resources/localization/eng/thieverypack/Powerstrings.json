@@ -13,9 +13,9 @@
     ]
   },
   "${ModID}:ThieveryMasteryPower": {
-    "NAME": "Thievery Mastery",
+    "NAME": "Master Thief",
     "DESCRIPTIONS": [
-      "Whenever you steal something, gain #b100% more of it. Does NOT stack."
+      "Whenever you steal something, gain twice as much of it."
     ]
   },
   "${ModID}:MindControlledPower": {

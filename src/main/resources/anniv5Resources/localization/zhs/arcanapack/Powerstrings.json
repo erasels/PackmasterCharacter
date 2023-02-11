@@ -1,0 +1,16 @@
+{
+  "${ModID}:HangedPower": {
+    "NAME": "倒吊者",
+    "DESCRIPTIONS": [
+      "本回合每当你抽一张牌，所有敌人失去 #b",
+      " 点生命。"
+    ]
+  },
+  "${ModID}:TheChariotPower": {
+    "NAME": "战车",
+    "DESCRIPTIONS": [
+      "你的回合中每当你丢弃一张牌，获得 #b",
+      " 层 #y活力 。"
+    ]
+  }
+}

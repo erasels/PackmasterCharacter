@@ -1,0 +1,49 @@
+{
+  "${ModID}:FrontloadedBash": {
+    "NAME": "即时重击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆每有 !M! 张牌，本牌伤害增加1点。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆每有 !M! 张牌，本牌伤害增加1点。 NL 抽一张牌。"
+  },
+  "${ModID}:Preparation": {
+    "NAME": "做准备",
+    "DESCRIPTION": "选择一张攻击或技能手牌，将其一张复制品加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张攻击或技能手牌，将其一张复制品加入手牌。",
+    "EXTENDED_DESCRIPTION": ["选择复制一张手牌。"]
+  },
+  "${ModID}:SmallAdaptation": {
+    "NAME": "略微适应",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择一张0~1耗能手牌，将其一张复制品加入手牌。",
+    "EXTENDED_DESCRIPTION": ["选择复制一张手牌。"]
+  },
+  "${ModID}:ExperimentalMerge": {
+    "NAME": "试验性整合",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆洗入抽牌堆。 NL 抽 !M! 张牌。"
+  },
+  "${ModID}:ExhaustiveWork": {
+    "NAME": "大费周章",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 选择一张手牌，将其 消耗 并将一张复制品加入抽牌堆。",
+    "EXTENDED_DESCRIPTION": ["选择一张牌进行消耗与复制。"]
+  },
+  "${ModID}:IterativeDesign": {
+    "NAME": "重复性设计",
+    "DESCRIPTION": "打出本场战斗创造的牌，或触发 ${ModID}:重复 时，获得 !M! 点 格挡 。"
+  },
+  "${ModID}:Xpansion": {
+    "NAME": "扩章",
+    "DESCRIPTION": "获得X层 ${ModID}:重复 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得X层 ${ModID}:重复 。"
+  },
+  "${ModID}:ReduceOverhead": {
+    "NAME": "精简头脑",
+    "DESCRIPTION": "消耗 所有复制牌的牌。每张造成 !D! 点伤害。 NL 消耗 。"
+  },
+  "${ModID}:MagicHand": {
+    "NAME": "魔法之手",
+    "DESCRIPTION": "从牌组中随机 !M! 张牌中选择一张加入手牌，本回合其耗能为0且 消耗 。",
+    "UPGRADE_DESCRIPTION": "从牌组中随机 !M! 张牌中选择一张加入手牌，本回合其耗能为0。"
+  },
+  "${ModID}:EnergyDrink": {
+    "NAME": "能量饮料",
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 每往抽牌堆洗入10张牌，获得1层 ${ModID}:重复 。"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "${ModID}:RimworldPack": {
+    "TEXT": [
+      "边缘世界",
+      "精神崩溃与无桌进食，当然这都是为了力量。",
+      "Laugic",
+      "创意来自 #bLudeon工作室 的游戏 #bn边缘世界(RimWorld)"
+    ]
+  },
+  "${ModID}:Potions": {
+    "TEXT": [
+      "美味 ",
+      "！"
+    ]
+  },
+  "${ModID}:OnFireModifier": {
+    "TEXT": [
+      "${ModID}:着火. NL "
+    ]
+  },
+  "${ModID}:RimworldPackHat": {
+    "TEXT": [
+      "给太空探索者准备的，绝对不是人皮做的。",
+      "边缘世界之帽"
+    ]
+  }
+}

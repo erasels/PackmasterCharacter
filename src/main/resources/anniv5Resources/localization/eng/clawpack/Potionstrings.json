@@ -11,7 +11,8 @@
   "${ModID}:ClawPowerPotion": {
     "NAME": "Sharpening Oil",
     "DESCRIPTIONS": [
-      "Modify all #yAttacks in hand: 'Name gains Claw'. #ySharpen #b"
+      "Modify all #yAttacks in hand: 'Name gains Claw'. #ySharpen #b",
+      "."
     ]
   },
   "${ModID}:DrawClawsPotion": {
@@ -25,7 +26,7 @@
     "NAME": "Bottled Claws",
     "DESCRIPTIONS": [
       "Add #b",
-      " #yGhost #yClaws to your hand."
+      " #yClaws to your hand."
     ]
   }
 }

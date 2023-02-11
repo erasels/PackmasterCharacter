@@ -20,14 +20,14 @@ public class Repel extends LockingCard {
 
     public Repel() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        baseBlock = 8;
+        baseDamage = 9;
+        baseBlock = 9;
         baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-
+        blck();
         if (m != null)
         {
             atb(new VFXAction(new PushEffect(p.hb.cX, m.hb.cX, m.hb.cY), 0.25f));
@@ -44,7 +44,7 @@ public class Repel extends LockingCard {
             });
         }
 
-        blck();
+
         applyToEnemy(m, new WeakPower(m, this.magicNumber, false));
     }
 

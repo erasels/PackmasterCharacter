@@ -1,7 +1,8 @@
 {
   "${ModID}:ModalChoice": {
     "TEXT": [
-      "Choose a Pack."
+      "Choose a Pack.",
+      "Choose."
     ]
   },
   "${ModID}:AbstractPackPreviewCard": {
@@ -33,7 +34,7 @@
   "${ModID}:SilentPack": {
     "TEXT": [
       "Silent Showdown",
-      "A collection of reliable Silent cards, including access to Poison and Discard.",
+      "A collection of reliable Silent cards, including access to Shivs and Discard.",
       "MegaCrit"
     ]
   },
@@ -46,7 +47,7 @@
   "${ModID}:DefectPack": {
     "TEXT": [
       "Defective Dreams",
-      "A collection of reliable Defect cards, including access to Orbs.",
+      "A collection of Defect cards focused on access to Orbs.",
       "MegaCrit"
     ]
   },
@@ -54,6 +55,19 @@
     "TEXT": [
       "You feel a strange urge to enforce balance.",
       "Defect Interface"
+    ]
+  },
+  "${ModID}:AllForOnePack": {
+    "TEXT": [
+      "All For One",
+      "A collection of base game cards focused on 0-costs and draw.",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:AllForOnePackHat": {
+    "TEXT": [
+      "United we stand, and divided we fall.",
+      "Musketeer's Cap"
     ]
   },
   "${ModID}:WatcherPack": {
@@ -81,7 +95,8 @@
   },
   "${ModID}:PackSetup": {
     "TEXT": [
-      "Draft a Pack!"
+      "Draft a Pack!",
+      "Current Packs"
     ]
   },
   "${ModID}:CurrentRunCardsTopPanelItem": {
@@ -106,6 +121,11 @@
       "By Packs"
     ]
   },
+  "${ModID}:RunHistory": {
+    "TEXT": [
+      "Packs:"
+    ]
+  },
   "${ModID}:CardTypeStrings": {
     "TEXT": [
       "Chance"
@@ -115,14 +135,16 @@
     "TEXT": [
       "Base Hat",
       "(L)",
-      "Win a run with the ",
+      "Beat Act 3 with the ",
       " pack to unlock this hat for future runs.",
       "The hat for the ",
       " pack. Real flavor soon!",
       "(!)",
       " has no corresponding hat image. Please fix.",
       "A random Hat will be chosen at the start of each run.",
-      "Random Hat"
+      "Random Hat",
+      " Pack",
+      "Rainbow Hat"
     ]
   },
   "${ModID}:ConfigMenuText": {

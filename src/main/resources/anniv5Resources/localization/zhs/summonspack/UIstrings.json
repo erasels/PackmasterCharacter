@@ -1,0 +1,15 @@
+{
+  "${ModID}:SummonsPack": {
+    "TEXT": [
+      "动物召唤师",
+      "一堆充能球，还有一只大象，没狐狸。",
+      "Bryan K"
+    ]
+  },
+  "${ModID}:SummonsPackHat": {
+    "TEXT": [
+      "From　Mia's　point　of　view,　you're　the　accessory.",
+      "召唤只猫"
+    ]
+  }
+}

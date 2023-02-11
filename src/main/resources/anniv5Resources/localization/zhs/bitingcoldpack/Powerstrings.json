@@ -1,0 +1,21 @@
+{
+  "${ModID}:FrostbitePower": {
+    "NAME": "霜噬",
+    "DESCRIPTIONS": [
+      "该单位的回合开始时，其失去 #b",
+      " 点生命且 #y霜噬 层数减半。该单位受到攻击伤害时， #y霜噬 层数加 #b1 。"
+    ]
+  },
+  "${ModID}:ColdSeasonPower": {
+    "NAME": "寒季",
+    "DESCRIPTIONS": ["每当敌人因 #y霜噬 失去生命，给予 #b", " 层 #y霜噬 。"]
+  },
+  "${ModID}:FrigidBodyPower": {
+    "NAME": "僵冻",
+    "DESCRIPTIONS": ["本回合每当你被攻击时，给予攻击者你在该次被击过程中格挡住的伤害层 #y霜噬 。"]
+  },
+  "${ModID}:GlaciatePower": {
+    "NAME": "霜覆",
+    "DESCRIPTIONS": ["每当你给予 #y霜噬 时，获得 #b", " 层 #y活力 。"]
+  }
+}

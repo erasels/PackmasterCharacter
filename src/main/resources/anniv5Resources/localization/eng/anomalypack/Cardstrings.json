@@ -6,7 +6,7 @@
   },
   "${ModID}:FreeSpace": {
     "NAME": "Free Space",
-    "DESCRIPTION": "Ethereal. NL When you draw, discard, exhaust or play this, draw a card.",
+    "DESCRIPTION": "Ethereal. NL When you draw, discard, Exhaust or play this, draw a card.",
     "UPGRADE_DESCRIPTION": "When you draw, discard, Exhaust or play this, draw a card."
   },
   "${ModID}:MidnightOil": {
@@ -40,11 +40,11 @@
   "${ModID}:RitualSight": {
     "NAME": "Ritual Sight",
     "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. Shuffle a copy of it into your draw pile.",
-    "EXTENDED_DESCRIPTION": ["exhaust and copy."]
+    "EXTENDED_DESCRIPTION": ["Exhaust and copy."]
   },
   "${ModID}:Thoughtweaving": {
     "NAME": "Thoughtweaving",
-    "DESCRIPTION": "Whenever you play a Skill or Attack, draw a card of the opposite type from a different pack."
+    "DESCRIPTION": "Whenever you play a Skill or Attack, draw a card of the opposite type from a different Pack."
   },
   "${ModID}:SealedSword": {
   "NAME": "Sealed Sword",
@@ -53,6 +53,6 @@
 },
   "${ModID}:SouleaterStrike": {
     "NAME": "Souleater Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 13 Vulnerable. NL Apply 13 Weak."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply !M! Weak."
   }
 }

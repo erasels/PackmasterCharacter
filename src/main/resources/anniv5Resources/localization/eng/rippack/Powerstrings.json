@@ -2,9 +2,9 @@
   "${ModID}:DividedFuryPower": {
     "NAME": "Divided Fury",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b",
-      " Fury card into your hand.",
-      " Fury cards into your hand."
+      "At the start of your turn, make #b",
+      " card in your hand #yrippable.",
+      " cards in your hand #yrippable."
     ]
   }
 }

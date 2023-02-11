@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.cards.dimensiongatepack.MagicMissile;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.MAGIC;
@@ -17,14 +16,13 @@ public class MagicMissilePower extends AbstractPackmasterPower {
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public MagicMissilePower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
 
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        addToBot(new RemoveSpecificPowerAction(owner,owner,this));
-        super.atEndOfTurn(isPlayer);
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override

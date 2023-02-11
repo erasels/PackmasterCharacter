@@ -1,0 +1,15 @@
+{
+  "${ModID}:WarriorPack": {
+    "TEXT": [
+      "战士",
+      "掌握多种伤害来扯烂你的敌人。",
+      "Diamsword"
+    ]
+  },
+  "${ModID}:WarriorPackHat": {
+    "TEXT": [
+      "马拉松跑者的头盔。",
+      "远古头盔"
+    ]
+  }
+}

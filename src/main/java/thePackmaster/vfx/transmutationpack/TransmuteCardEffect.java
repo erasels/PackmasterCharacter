@@ -36,19 +36,18 @@ public class TransmuteCardEffect extends AbstractGameEffect {
     private static final TextureRegion MASK = new TextureRegion(new Texture(SpireAnniversary5Mod.makePath("images/vfx/transmutationpack/TransmuteMask.png")), 512, 1024);
     private static final TextureRegion LINE = new TextureRegion(new Texture(SpireAnniversary5Mod.makePath("images/vfx/transmutationpack/TransmuteLine.png")), 512, 1024);
     private static final ArrayList<BufferWrapper> bufferCache = new ArrayList<>();
-    private final HashMap<AbstractCard, TextureRegion> textureMap = new HashMap<>();
     private final HashMap<AbstractCard, AbstractCard> transmutedPairs;
-    private final TransmuteCardAction action;
-    private final CardGroup.CardGroupType targetGroup;
-    private float offsetPercent;
+    private float offsetPercent = 1.0f;
     private float particleTimer;
 
-    public TransmuteCardEffect(HashMap<AbstractCard, AbstractCard> transmutedPairs, CardGroup.CardGroupType targetGroup, TransmuteCardAction action, float duration) {
+    public TransmuteCardEffect(HashMap<AbstractCard, AbstractCard> transmutedPairs, float duration) {
         this.transmutedPairs = transmutedPairs;
-        this.action = action;
-        this.targetGroup = targetGroup;
         this.duration = duration;
         this.startingDuration = duration;
+        for (AbstractCard card : transmutedPairs.keySet()) {
+            card.stopGlowing();
+            card.transparency = card.targetTransparency = 0.0f;
+        }
     }
 
     @Override
@@ -56,12 +55,12 @@ public class TransmuteCardEffect extends AbstractGameEffect {
         //generate partial card images for each hash pair, using the mask, and overlay them over the cards positions along with transmute line effect
         //first, for each card, establish a new texture by creating a 512x512 framebuffer, and render the card, followed by the mask, at 256x256
         for (AbstractCard keyCard : transmutedPairs.keySet()) {
-            AbstractCard card = transmutedPairs.get(keyCard);
-            AbstractCard copyCard = keyCard.makeStatEquivalentCopy();
+            AbstractCard newCard = transmutedPairs.get(keyCard);
+            AbstractCard keyCopy = keyCard.makeStatEquivalentCopy();
             sb.end();
 
-            FrameBuffer fb1 = getUnusedBuffer();
-            fb1.begin();
+            FrameBuffer fb = getUnusedBuffer();
+            fb.begin();
             Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
             Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
             Gdx.gl.glColorMask(true,true,true,true);
@@ -70,19 +69,21 @@ public class TransmuteCardEffect extends AbstractGameEffect {
             //render both cards at 256 x 256 on the frame buffer, then capture the texture to be used as a mask
             sb.setColor(Color.WHITE);
             sb.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
-            setCardAttributes(card);
-            card.render(sb);
-            setCardAttributes(copyCard);
-            copyCard.render(sb);
+            if (newCard != null) {
+                setCardAttributes(newCard);
+                newCard.render(sb);
+            }
+            setCardAttributes(keyCopy);
+            keyCopy.render(sb);
 
             sb.end();
-            fb1.end();
+            fb.end();
 
-            TextureRegion tmpMask = new TextureRegion(fb1.getColorBufferTexture());
+            TextureRegion tmpMask = new TextureRegion(fb.getColorBufferTexture());
             tmpMask.flip(false, true);
 
-            FrameBuffer fb2 = getUnusedBuffer();
-            fb2.begin();
+            fb = getUnusedBuffer();
+            fb.begin();
             Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
             Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
             Gdx.gl.glColorMask(true,true,true,true);
@@ -93,32 +94,30 @@ public class TransmuteCardEffect extends AbstractGameEffect {
             sb.setColor(Color.WHITE);
             sb.draw(LINE, 0f, 0f - (512f * offsetPercent));
 
-            //render the tmp mask (not at offset) to mask the line, then capture the texture to be rendered over the final product
+            //render the mask made of both cards to mask the line, then capture the texture to be rendered over the final product
             sb.setBlendFunction(0, GL20.GL_SRC_ALPHA);
             sb.setColor(new Color(1,1,1,1));
             sb.draw(tmpMask, 0f, 0f);
 
             sb.end();
-            fb2.end();
+            fb.end();
 
-            TextureRegion tmpLine = new TextureRegion(fb2.getColorBufferTexture());
+            TextureRegion tmpLine = new TextureRegion(fb.getColorBufferTexture());
             tmpLine.flip(false, true);
 
-            FrameBuffer fb3 = getUnusedBuffer();
-            fb3.begin();
+            //render the original card to be masked
+            fb = getUnusedBuffer();
+            fb.begin();
             Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
             Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
             Gdx.gl.glColorMask(true,true,true,true);
             sb.begin();
-
-            //render the card again, this time to be masked.
             sb.setColor(Color.WHITE);
             sb.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
-            setCardAttributes(card);
-            card.render(sb);
+            keyCopy.render(sb);
 
             //render the mask at offset
-            sb.setBlendFunction(0, GL20.GL_SRC_ALPHA);
+            sb.setBlendFunction(0, GL20.GL_ONE_MINUS_SRC_ALPHA);
             sb.setColor(new Color(1,1,1,1));
             sb.draw(MASK, 0f, 0f - (512f * offsetPercent));
 
@@ -128,21 +127,44 @@ public class TransmuteCardEffect extends AbstractGameEffect {
             sb.draw(tmpLine, 0f, 0f);
 
             sb.end();
-            fb3.end();
+            fb.end();
 
-            TextureRegion img = new TextureRegion(fb3.getColorBufferTexture());
+            TextureRegion img = new TextureRegion(fb.getColorBufferTexture());
             img.flip(false, true);
-            textureMap.put(card, img);
-            sb.begin();
-        }
-        //second, render the new textures to the key cards coordinates, angle, and scale. Iterate through limbo to make sure the masking cards have the same render order as the original cards.
-        for (AbstractCard card : AbstractDungeon.player.limbo.group) {
-            if (transmutedPairs.containsKey(card)) {
-                TextureRegion img = textureMap.get(transmutedPairs.get(card));
-                sb.draw(img,card.current_x - 256f,card.current_y - 256f,256f,256f, img.getRegionWidth(), img.getRegionHeight(),card.drawScale * Settings.scale,card.drawScale * Settings.scale, card.angle);
+
+            //render the new card to be masked
+            if (newCard != null) {
+                fb = getUnusedBuffer();
+                fb.begin();
+                Gdx.gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
+                Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+                Gdx.gl.glColorMask(true, true, true, true);
+                sb.begin();
+                sb.setColor(Color.WHITE);
+                sb.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
+                newCard.render(sb);
+
+                //render the mask at offset
+                sb.setBlendFunction(0, GL20.GL_SRC_ALPHA);
+                sb.setColor(new Color(1, 1, 1, 1));
+                sb.draw(MASK, 0f, 0f - (512f * offsetPercent));
+
+                sb.end();
+                fb.end();
+
+                TextureRegion newImg = new TextureRegion(fb.getColorBufferTexture());
+                newImg.flip(false, true);
+                sb.begin();
+
+                sb.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
+                sb.setColor(Color.WHITE);
+                sb.draw(newImg,keyCard.current_x - 256f,keyCard.current_y - 256f,256f,256f, newImg.getRegionWidth(), newImg.getRegionHeight(),keyCard.drawScale * Settings.scale,keyCard.drawScale * Settings.scale, keyCard.angle);
+                sb.end();
             }
+            sb.begin();
+            sb.draw(img,keyCard.current_x - 256f,keyCard.current_y - 256f,256f,256f, img.getRegionWidth(), img.getRegionHeight(),keyCard.drawScale * Settings.scale,keyCard.drawScale * Settings.scale, keyCard.angle);
+            resetBuffers();
         }
-        resetBuffers();
     }
 
     private void setCardAttributes(AbstractCard card) {
@@ -158,7 +180,6 @@ public class TransmuteCardEffect extends AbstractGameEffect {
     public void update() {
         if (duration == startingDuration) {
             //Initialize: place the cards along the screen. Centered if only one card, but otherwise scattered similar to other game effects.
-            AbstractDungeon.player.limbo.group.addAll(transmutedPairs.keySet());
             float cardCount = transmutedPairs.keySet().size();
             float alpha = Math.min(1.0f, (cardCount - 1) / ((float)MAX_CARD_COUNT - 1));
             float leftBound = Interpolation.circleOut.apply(0.5f, MAX_LEFT_BOUND, alpha);
@@ -195,71 +216,9 @@ public class TransmuteCardEffect extends AbstractGameEffect {
                 }
             }
         } else {
-            //then, when the effect completes, distribute the cards and signal the action to complete.
-            if (targetGroup != null) {
-                switch (targetGroup) {
-                    case HAND:
-                        for (AbstractCard card : transmutedPairs.keySet()) {
-                            AbstractCard newCard = transmutedPairs.get(card);
-                            copyCardPosition(card, newCard);
-                            AbstractDungeon.player.limbo.removeCard(card);
-                            AbstractDungeon.player.hand.addToHand(newCard);
-                        }
-                        AbstractDungeon.player.hand.refreshHandLayout();
-                        break;
-                    case DRAW_PILE:
-                        for (AbstractCard card : transmutedPairs.keySet()) {
-                            AbstractCard newCard = transmutedPairs.get(card);
-                            copyCardPosition(card, newCard);
-                            AbstractDungeon.player.limbo.removeCard(card);
-                            AbstractDungeon.player.drawPile.moveToDeck(newCard, true);
-                        }
-                        break;
-                    case DISCARD_PILE:
-                        for (AbstractCard card : transmutedPairs.keySet()) {
-                            AbstractCard newCard = transmutedPairs.get(card);
-                            copyCardPosition(card, newCard);
-                            AbstractDungeon.player.limbo.removeCard(card);
-                            AbstractDungeon.player.discardPile.moveToDiscardPile(newCard);
-                        }
-                        break;
-                    case EXHAUST_PILE:
-                        for (AbstractCard card : transmutedPairs.keySet()) {
-                            AbstractCard newCard = transmutedPairs.get(card);
-                            copyCardPosition(card, newCard);
-                            AbstractDungeon.player.limbo.removeCard(card);
-                            AbstractDungeon.player.exhaustPile.moveToExhaustPile(newCard);
-                        }
-                        break;
-                    default:
-                        System.out.println("TransmuteCardEffect: How was this reached?");
-                        break;
-                }
-            } else {
-                for (AbstractCard card : transmutedPairs.keySet()) {
-                    AbstractDungeon.player.limbo.removeCard(card);
-                    copyCardPosition(card, transmutedPairs.get(card));
-                    AbstractDungeon.player.limbo.addToTop(transmutedPairs.get(card));
-                }
-            }
-            AbstractDungeon.player.hand.applyPowers();
-            AbstractDungeon.player.hand.glowCheck();
-            action.isDone = true;
             isDone = true;
         }
-    }
-
-    public static void copyCardPosition(AbstractCard original, AbstractCard target) {
-        target.current_x = original.current_x;
-        target.current_y = original.current_y;
-        target.target_x = original.target_x;
-        target.target_y = original.target_y;
-        target.drawScale = original.drawScale;
-        target.targetDrawScale = original.targetDrawScale;
-        target.angle = original.angle;
-        target.targetAngle = original.targetAngle;
-        target.transparency = original.transparency;
-        target.targetTransparency = original.targetTransparency;
+        transmutedPairs.keySet().forEach(AbstractCard::update);
     }
 
     @Override

@@ -1,0 +1,49 @@
+{
+  "${ModID}:CrescentSweep": {
+    "NAME": "足跟龙卷",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:展现 一个 ${ModID}:新月 充能球。"
+  },
+  "${ModID}:MysticFlourish": {
+    "NAME": "铁山靠",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 触发最右侧充能球的被动效果1次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 触发最右侧充能球的被动效果2次。"
+  },
+  "${ModID}:CrystalMoonlight": {
+    "NAME": "水晶月光",
+    "DESCRIPTION": "随机 ${ModID}:展现 !M! 个 充能球。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "随机 ${ModID}:展现 !M! 个 充能球。 NL 消耗 。"
+  },
+  "${ModID}:FullMoonHalo": {
+    "NAME": "满月光晕",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:展现 一个 ${ModID}:满月 充能球。"
+  },
+  "${ModID}:MoonlightBarrage": {
+    "NAME": "月暮降临",
+    "DESCRIPTION": "每有一个充能球， NL 随机造成 !D! 点伤害。"
+  },
+  "${ModID}:ChitteringPunt": {
+    "NAME": "横扫一拳",
+    "DESCRIPTION": "NL 造成 !D! 点伤害。 ${ModID}:展现 一个 ${ModID}:新月 充能球。"
+  },
+  "${ModID}:HornetWithin": {
+    "NAME": "黄蜂附体",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 获得 !B! 点 格挡 。 NL 本牌 ${ModID}:滋生 时，激发最右侧的充能球 !M! 次并失去一个充能球栏位。"
+  },
+  "${ModID}:WitchTwist": {
+    "NAME": "乱射升龙击",
+    "DESCRIPTION": "随机 ${ModID}:修改 !M! 张手牌： NL \" ${ModID}:铭印 \" 。 NL 消耗 。"
+  },
+  "${ModID}:MoonlightFlight": {
+    "NAME": "月色飞行",
+    "DESCRIPTION": "生成 充能球时， NL 获得 !M! 层临时 集中。"
+  },
+  "${ModID}:ScarabPlague": {
+    "NAME": "甲虫瘟疫",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 本牌 ${ModID}:滋生 时， ${ModID}:展现 一个 ${ModID}:满月 充能球。"
+  },
+  "${ModID}:Inscribed": {
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:铭印 。 NL "
+    ]
+  }
+}

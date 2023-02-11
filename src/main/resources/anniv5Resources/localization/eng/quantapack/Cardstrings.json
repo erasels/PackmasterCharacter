@@ -32,8 +32,8 @@
   },
   "${ModID}:Manaburst": {
     "NAME": "Manaburst",
-    "DESCRIPTION": "Deal !D! damage. NL Add a random 0-cost Attack from your discard pile to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add !M! random 0-cost Attacks from your discard pile to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Put a random 0-cost Attack from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put !M! random 0-cost Attacks from your discard pile into your hand."
   },
   "${ModID}:Dominate": {
     "NAME": "Dominate",

@@ -17,6 +17,7 @@ public class PMBoosterBoxPatch {
         public static void addRewards(AbstractRoom __instance) {
             if (AbstractDungeon.player.hasRelic(PMBoosterBox.ID)) {
                 AbstractDungeon.getCurrRoom().rewards.add(new PMBoosterBoxCardReward());
+                PMBoosterBox.incrementRewards();
             }
         }
 

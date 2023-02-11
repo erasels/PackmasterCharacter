@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.buttons.EndTurnButton;
 import javassist.CtBehavior;
-import thePackmaster.cards.highenergypack.StruckByATrain;
 import thePackmaster.powers.odditiespack.AutoBattlerPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -26,7 +26,7 @@ public class AutoBattlerPatches {
     )
     public static class NoDoingThingsAutoBattlerPatch {
         public static SpireReturn<Boolean> Prefix(AbstractCard __instance) {
-            if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID)) {
+            if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID) && !AbstractDungeon.isScreenUp) {
                 return SpireReturn.Return(false);
             }
             return SpireReturn.Continue();
@@ -35,7 +35,7 @@ public class AutoBattlerPatches {
 
     @SpirePatch(
             clz = EndTurnButton.class,
-            method="update"
+            method = "update"
     )
     public static class NoUpdateEndTurnButtonAutoBattlerPatch {
         public static SpireReturn<Boolean> Prefix(EndTurnButton __instance) {
@@ -60,22 +60,27 @@ public class AutoBattlerPatches {
         public static void Insert(CardGroup __instance) {
             if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID)) {
                 if (!AbstractDungeon.isScreenUp && AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.actionManager.currentAction == null && !isEndingTurn) {
-                    AbstractMonster target = StruckByATrain.getFrontmostEnemy();
-                    boolean foundACard = false;
-                    for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                        if (q.canUse(AbstractDungeon.player, target)) {
-                            foundACard = true;
-                            AbstractDungeon.player.hoveredCard = q;
-                            ReflectionHacks.setPrivate(AbstractDungeon.player, AbstractPlayer.class, "hoveredMonster", target);
-                            if (playCard == null)
-                                playCard = ReflectionHacks.privateMethod(AbstractPlayer.class, "playCard");
-                            playCard.invoke(AbstractDungeon.player);
-                            break;
-                        }
-                    }
-                    if (!foundACard) {
+                    AbstractMonster target = Wiz.getFrontmostEnemy();
+                    if (target == null) {
                         isEndingTurn = true;
                         AbstractDungeon.actionManager.callEndTurnEarlySequence();
+                    } else {
+                        boolean foundACard = false;
+                        for (AbstractCard q : AbstractDungeon.player.hand.group) {
+                            if (q.canUse(AbstractDungeon.player, target)) {
+                                foundACard = true;
+                                AbstractDungeon.player.hoveredCard = q;
+                                ReflectionHacks.setPrivate(AbstractDungeon.player, AbstractPlayer.class, "hoveredMonster", target);
+                                if (playCard == null)
+                                    playCard = ReflectionHacks.privateMethod(AbstractPlayer.class, "playCard");
+                                playCard.invoke(AbstractDungeon.player);
+                                break;
+                            }
+                        }
+                        if (!foundACard) {
+                            isEndingTurn = true;
+                            AbstractDungeon.actionManager.callEndTurnEarlySequence();
+                        }
                     }
                 }
             }

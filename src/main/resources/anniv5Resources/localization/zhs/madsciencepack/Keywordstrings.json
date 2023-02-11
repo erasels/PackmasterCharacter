@@ -1,0 +1,19 @@
+[
+  {
+    "PROPER_NAME": "修改",
+    "NAMES": [
+      "modify",
+      "修改"
+    ],
+    "DESCRIPTION": "为一张牌附加效果，持续整场战斗。所有牌每场战斗只能被 #y修改 一次。"
+  },
+  {
+    "PROPER_NAME": "吞并",
+    "NAMES": [
+      "absorb",
+      "absorbed",
+      "吞并"
+    ],
+    "DESCRIPTION": "#y消耗 一张牌。本牌被 #y消耗 时，将所有之前 #y吞并 的牌的复制品加入手牌。"
+  }
+]

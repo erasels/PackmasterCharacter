@@ -46,11 +46,11 @@ public class Battlecry  extends AbstractEvenOddCard{
     protected String createEvenOddText() {
         if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 0)
         {
-            return cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[2];
+            return cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[1] + cardStrings.EXTENDED_DESCRIPTION[2];
         }
         else
         {
-            return cardStrings.DESCRIPTION;
+            return cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[1] + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2]);
         }
     }
     

@@ -1,0 +1,16 @@
+{
+  "${ModID}:BatterPack": {
+    "TEXT": [
+      "击球手",
+      "高侵略性套牌。将你的正义之怒用精准有力的重击倾泻在敌人身上。",
+      "AlexMdle",
+      "卡图源自 #yMortis #yGhost 制作的RPG游戏 #yOFF 。"
+    ]
+  },
+  "${ModID}:BatterPackHat": {
+    "TEXT": [
+      "净化中。",
+      "棒球帽"
+    ]
+  }
+}

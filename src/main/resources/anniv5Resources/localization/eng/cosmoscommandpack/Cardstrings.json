@@ -8,7 +8,7 @@
     "DESCRIPTION": "Draw !${ModID}:m2! cards. NL ${ModID}:Amplify [E] : Scry !M! before drawing."
   },
   "${ModID}:EternalStrike": {
-    "NAME": "Eternal Strike",
+    "NAME": "Eternal Flame",
     "DESCRIPTION": "Deal !D! damage. NL If this card is Exhausted, add a copy of it to your hand with !M! more damage."
   },
   "${ModID}:FalseGrit": {
@@ -21,7 +21,7 @@
   },
   "${ModID}:Recall": {
     "NAME": "Recall",
-    "DESCRIPTION": "Whenever a card is ${ModID}:Amplified, put a card from your Exhaust pile into your hand."
+    "DESCRIPTION": "The first time a card is ${ModID}:Amplified each turn, put a card from your Exhaust pile into your hand. It gains stslib:Purge."
   },
   "${ModID}:RefractEnergy": {
     "NAME": "Refract Energy",

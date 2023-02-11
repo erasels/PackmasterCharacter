@@ -9,7 +9,6 @@ import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.defect.DecreaseMaxOrbAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -69,16 +68,13 @@ public class FullMoon extends CustomOrb implements PackmasterOrb {
     }
 
     public void passiveEffect(){
-        System.out.println("Full Moon orb activated");
         applyFocus();
         showEvokeValue();
-        if (!evoking){
-            evoking = false;
-        }
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
         evokeAmount -= 1;
+        baseEvokeAmount = evokeAmount;
         if (evokeAmount < 1 && !evoking) {
             evoking = true;
             AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {

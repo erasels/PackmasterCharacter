@@ -1,0 +1,166 @@
+{
+  "${ModID}:ModalChoice": {
+    "TEXT": [
+      "选择一种卡包。",
+      "选择。"
+    ]
+  },
+  "${ModID}:AbstractPackPreviewCard": {
+    "TEXT": [
+      "作者：",
+      "卡包",
+      "帽子已解锁",
+      "帽子未解锁"
+    ]
+  },
+  "${ModID}:AtGameStart": {
+    "TEXT": [
+      "这些卡包中的牌将会出现在本局游戏中，点击确认继续。"
+    ]
+  },
+  "${ModID}:IroncladPack": {
+    "TEXT": [
+      "铁甲战士的信念",
+      "一套可靠的战士牌，包括力量源。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:IroncladPackHat": {
+    "TEXT": [
+      "铁甲哥当戴铁甲盔。",
+      "战士头盔"
+    ]
+  },
+  "${ModID}:SilentPack": {
+    "TEXT": [
+      "静默猎手的收场",
+      "一套可靠的猎人牌，包括毒与弃牌。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:SilentPackHat": {
+    "TEXT": [
+      "散发死亡气息的小物件，现在唯你命是从。",
+      "猎人战利品"
+    ]
+  },
+  "${ModID}:DefectPack": {
+    "TEXT": [
+      "故障性梦境",
+      "一套可靠的机器人牌，包括主要为充能球相关牌。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:DefectPackHat": {
+    "TEXT": [
+      "你感到一股奇怪的，想要确立平衡的欲望。",
+      "故障接口"
+    ]
+  },
+  "${ModID}:AllForOnePack": {
+    "TEXT": [
+      "万物一心",
+      "一套专注于0耗能与抽牌的原版牌。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:AllForOnePackHat": {
+    "TEXT": [
+      "合则挺，分则衰。",
+      "火枪手之帽"
+    ]
+  },
+  "${ModID}:WatcherPack": {
+    "TEXT": [
+      "观者之愿景",
+      "一套可靠的观者牌(无红蓝)。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:WatcherPackHat": {
+    "TEXT": [
+      "默祷者面饰。",
+      "观者面纱"
+    ]
+  },
+  "${ModID}:PackMainMenuUI": {
+    "TEXT": [
+      "自定义构筑模式",
+      "启用此模式来自定义本局卡包的选择方式。",
+      "随机",
+      "随机三选一",
+      "卡包剔除列表",
+      "帽子列表"
+    ]
+  },
+  "${ModID}:PackSetup": {
+    "TEXT": [
+      "将一组卡包加入牌池！",
+      "已加入卡包。"
+    ]
+  },
+  "${ModID}:CurrentRunCardsTopPanelItem": {
+    "TEXT": [
+      "本局卡包：",
+      "{0} NL NL 点击查看本局牌池。",
+      "本局游戏作为卡牌奖励出现的牌"
+    ]
+  },
+  "${ModID}:CreditsRenderStrings": {
+    "TEXT": [
+      "额外标注"
+    ]
+  },
+  "${ModID}:PackFilterMenu": {
+    "TEXT": [
+      "启用该卡包"
+    ]
+  },
+  "${ModID}:Compendium": {
+    "TEXT": [
+      "卡包"
+    ]
+  },
+  "${ModID}:RunHistory": {
+    "TEXT": [
+      "卡包："
+    ]
+  },
+  "${ModID}:CardTypeStrings": {
+    "TEXT": [
+      "机会"
+    ]
+  },
+  "${ModID}:HatMenu": {
+    "TEXT": [
+      "基础帽子",
+      "(未解锁)",
+      "使用 ",
+      " 卡包通过第3幕来解锁这顶帽子。",
+      "",
+      " 卡包的专属帽子，满满的沉浸感！",
+      "(!)",
+      " has no corresponding hat image. Please fix。",
+      "开局时使用随机一顶帽子。",
+      "随机帽子",
+      "卡包",
+      "彩虹帽子特效"
+    ]
+  },
+  "${ModID}:ConfigMenuText": {
+    "TEXT": [
+      "The Packmaster",
+      "StS Modding Community",
+      "Adds a new character: The Packmaster.",
+      "全卡包模式：每局卡池都为所有卡包之和，该模式无法解锁帽子。",
+      "卡框大师：所有卡包的卡框都使用卡包大师基础牌的牌框。(需要重启游戏)",
+      "分享内容：一些卡包大师的遗物与药水可出现在其他角色的游戏中。(需要重启游戏)"
+    ]
+  },
+  "${ModID}:PMBoosterBoxCardReward": {
+    "TEXT": [
+      "增强盒卡牌",
+      "选择是否将其加入牌组"
+    ]
+  }
+}

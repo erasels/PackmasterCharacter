@@ -17,6 +17,7 @@ public class GhostflameStrike extends AbstractDownfallCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
         baseMagicNumber = magicNumber = 1;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,6 +29,6 @@ public class GhostflameStrike extends AbstractDownfallCard {
       }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
     }
 }

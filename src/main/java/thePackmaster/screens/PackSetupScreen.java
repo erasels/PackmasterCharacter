@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.helpers.TipHelper;
+import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.random.Random;
@@ -26,8 +27,7 @@ import thePackmaster.patches.InfiniteSpirePatch;
 
 import java.util.*;
 
-import static thePackmaster.SpireAnniversary5Mod.currentPoolPacks;
-import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.SpireAnniversary5Mod.*;
 
 public class PackSetupScreen extends CustomScreen {
     private static final Logger logger = LogManager.getLogger("PackSetup");
@@ -35,7 +35,8 @@ public class PackSetupScreen extends CustomScreen {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("PackSetup"));
     private static final String[] TEXT = uiStrings.TEXT;
 
-    private static final float CHOSEN_PACK_Y = Settings.HEIGHT - (128.0F * Settings.scale) - (AbstractCard.IMG_HEIGHT * 0.3F);
+    private static final float CHOSEN_LABEL_Y = Settings.HEIGHT - (112.0F * Settings.scale);
+    private static final float CHOSEN_PACK_Y = CHOSEN_LABEL_Y - (64.0F * Settings.scale) - (AbstractCard.IMG_HEIGHT * 0.3F);
     private static final float PACK_SELECT_Y = CHOSEN_PACK_Y - (AbstractCard.IMG_HEIGHT * 0.45F) - 200F * Settings.scale;
     private static final float PACK_SELECT_TEXT_Y = PACK_SELECT_Y - AbstractCard.IMG_HEIGHT * 0.45F - 60f * Settings.scale;
 
@@ -120,12 +121,19 @@ public class PackSetupScreen extends CustomScreen {
 
     @Override
     public void close() {
+        for (AbstractCardPack pack : unfilteredAllPacks) {
+            pack.previewPackCard.stopGlowing();
+            pack.previewPackCard.noShadow();
+        }
     }
 
     @Override
     public void update() {
         updateTransition();
+        updateControllerInput();
+
         for (AbstractCardPack pack : currentPoolPacks) {
+            pack.previewPackCard.stopGlowing();
             pack.previewPackCard.update();
             float curDrawScale = pack.previewPackCard.drawScale;
             pack.previewPackCard.updateHoverLogic();
@@ -138,15 +146,23 @@ public class PackSetupScreen extends CustomScreen {
             if (pack.previewPackCard.hb.justHovered)
                 CardCrawlGame.sound.playV("CARD_OBTAIN", 0.4F);
 
-            if (mode == PackSetupMode.CONFIRMING) {
-                pack.previewPackCard.targetDrawScale = pack.previewPackCard.hb.hovered ? HOVER_SELECTED_SCALE * 1.1f : HOVER_SELECTED_SCALE;
+            if (mode == PackSetupMode.CONFIRMING || pack.previewPackCard.hb.hovered) {
+                pack.previewPackCard.noShadow();
             }
             else {
-                pack.previewPackCard.targetDrawScale = pack.previewPackCard.hb.hovered ? HOVER_SELECTED_SCALE : SELECTED_SCALE;
+                pack.previewPackCard.shadow();
+            }
+
+            if (pack.previewPackCard.hb.hovered) {
+                pack.previewPackCard.targetDrawScale = (mode == PackSetupMode.CONFIRMING) ? HOVER_SELECTED_SCALE * 1.1f : HOVER_SELECTED_SCALE;
+            }
+            else {
+                pack.previewPackCard.targetDrawScale = (mode == PackSetupMode.CONFIRMING) ? HOVER_SELECTED_SCALE : SELECTED_SCALE;
             }
         }
         if (mode != PackSetupMode.CONFIRMING) {
             for (AbstractCardPack pack : choiceSet) {
+                pack.previewPackCard.beginGlowing();
                 pack.previewPackCard.update();
                 pack.previewPackCard.updateHoverLogic();
                 if (!pack.previewPackCard.hb.hovered)
@@ -172,7 +188,7 @@ public class PackSetupScreen extends CustomScreen {
 
                     currentPoolPacks.sort(Comparator.comparing((pack)->pack.name));
                     SpireAnniversary5Mod.selectedCards = true;
-                    editPotionPool();
+                    editPotionPool(PotionHelper.potions);
                     CardCrawlGame.dungeon.initializeCardPools();
                     InfiniteSpirePatch.generateQuestsIfInfiniteSpireIsLoaded();
                 }
@@ -180,7 +196,7 @@ public class PackSetupScreen extends CustomScreen {
             case DRAFTING:
                 AbstractCardPack clicked = null;
                 for (AbstractCardPack pack : choiceSet) {
-                    if (pack.previewPackCard.hb.hovered && InputHelper.justClickedLeft) {
+                    if (pack.previewPackCard.hb.hovered && InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed()) {
                         clicked = pack;
                         break;
                     }
@@ -256,6 +272,45 @@ public class PackSetupScreen extends CustomScreen {
         }
     }
 
+    private void updateControllerInput() {
+        if (Settings.isControllerMode && !AbstractDungeon.topPanel.selectPotionMode && AbstractDungeon.topPanel.potionUi.isHidden && !AbstractDungeon.player.viewingRelics) {// 165
+            if (mode != PackSetupMode.DRAFTING || choiceSet.isEmpty())
+                return;
+
+            int index = -1;
+            boolean anyHovered = false;
+
+            for (AbstractCardPack pack : this.choiceSet) {
+                ++index;
+                if (pack.previewPackCard.hb.hovered) {
+                    anyHovered = true;
+                    break;
+                }
+            }
+
+            if (!anyHovered) {
+                index = 0;
+                Gdx.input.setCursorPosition((int) this.choiceSet.get(index).previewPackCard.hb.cX, Settings.HEIGHT - (int) this.choiceSet.get(index).previewPackCard.hb.cY);
+            } else if (!CInputActionSet.left.isJustPressed() && !CInputActionSet.altLeft.isJustPressed()) {
+                if (CInputActionSet.right.isJustPressed() || CInputActionSet.altRight.isJustPressed()) {
+                    ++index;
+                    if (index >= this.choiceSet.size()) {
+                        index = 0;
+                    }
+
+                    Gdx.input.setCursorPosition((int) this.choiceSet.get(index).previewPackCard.hb.cX, Settings.HEIGHT - (int) this.choiceSet.get(index).previewPackCard.hb.cY);
+                }
+            } else {
+                --index;
+                if (index < 0) {
+                    index = this.choiceSet.size() - 1;
+                }
+
+                Gdx.input.setCursorPosition((int) this.choiceSet.get(index).previewPackCard.hb.cX, Settings.HEIGHT - (int) this.choiceSet.get(index).previewPackCard.hb.cY);
+            }
+        }
+    }
+
     @Override
     public void render(SpriteBatch sb) {
         for (AbstractCardPack pack : currentPoolPacks)
@@ -265,6 +320,7 @@ public class PackSetupScreen extends CustomScreen {
             for (AbstractCardPack pack : choiceSet)
                 pack.previewPackCard.render(sb);
 
+            FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, TEXT[1], Settings.WIDTH / 2f, CHOSEN_LABEL_Y, Settings.CREAM_COLOR);
             FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, TEXT[0], Settings.WIDTH / 2f, PACK_SELECT_TEXT_Y, Settings.CREAM_COLOR);
         }
 
@@ -275,6 +331,10 @@ public class PackSetupScreen extends CustomScreen {
         mode = PackSetupMode.CONFIRMING;
         transitionTime = transitionStartTime = 0.5f;
 
+        for (AbstractCardPack pack : currentPoolPacks) {
+            pack.previewPackCard.noShadow();
+        }
+
         confirmButton.show();
     }
 
@@ -284,6 +344,8 @@ public class PackSetupScreen extends CustomScreen {
     }
 
     private void insertPack(AbstractCardPack pack) {
+        pack.previewPackCard.shadow();
+
         int i = 0;
         for (; i < currentPoolPacks.size(); ++i) {
             if (pack.previewPackCard.target_x < currentPoolPacks.get(i).previewPackCard.target_x) {
@@ -297,6 +359,7 @@ public class PackSetupScreen extends CustomScreen {
     private void initialPositionPacks() {
         for (AbstractCardPack pack : currentPoolPacks) {
             pack.previewPackCard.drawScale = pack.previewPackCard.targetDrawScale = SELECTED_SCALE;
+            pack.previewPackCard.shadow();
             setY(pack, Settings.HEIGHT + 400 * Settings.scale);
         }
         updateSelectedPacksX();
@@ -355,6 +418,7 @@ public class PackSetupScreen extends CustomScreen {
         choiceSet.clear();
         while (choiceSet.size() < 3 && !packPool.isEmpty()) {
             AbstractCardPack target = packPool.remove(rng.random(packPool.size() - 1));
+            target.previewPackCard.noShadow();
             choiceSet.add(target);
         }
 
@@ -374,16 +438,17 @@ public class PackSetupScreen extends CustomScreen {
         }
     }
 
-    public static void editPotionPool() {
-        ArrayList<String> pool = PotionHelper.potions;
-        pool.removeIf(potionID -> SpireAnniversary5Mod.packExclusivePotions.contains(potionID));
+    public static void editPotionPool(ArrayList<String> potionList) {
+        potionList.removeIf(potionID -> SpireAnniversary5Mod.packExclusivePotions.contains(potionID));
 
         Set<String> potionsToAdd = new HashSet<>();
         for (AbstractCardPack pack : currentPoolPacks) {
             potionsToAdd.addAll(pack.getPackPotions());
         }
-        pool.addAll(potionsToAdd);
+        potionList.forEach(potionsToAdd::remove);
+        potionList.addAll(potionsToAdd);
     }
+
 
     public static class Enum
     {

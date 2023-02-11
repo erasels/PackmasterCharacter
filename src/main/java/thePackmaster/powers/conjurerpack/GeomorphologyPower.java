@@ -1,17 +1,12 @@
 package thePackmaster.powers.conjurerpack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
@@ -39,7 +34,7 @@ public class GeomorphologyPower extends AbstractPackmasterPower {
         AbstractMonster m = AbstractDungeon.getRandomMonster();
         if (m != null)
         {
-            applyToEnemy(m, new PetraPower(m,1));
+            applyToEnemy(m, new PetraPower(m,this.amount));
             flash();
         }
     }

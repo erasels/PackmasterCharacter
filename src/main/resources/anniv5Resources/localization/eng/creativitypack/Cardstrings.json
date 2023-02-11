@@ -9,7 +9,7 @@
   },
   "${ModID}:PaintBrush": {
     "NAME": "Paint Brush",
-    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} card with selected type and cost."
+    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n Upgraded} card with selected type and cost."
   },
   "${ModID}:Firewall": {
     "NAME": "Firewall",
@@ -17,11 +17,11 @@
   },
   "${ModID}:Souvenirs": {
     "NAME": "Souvenirs",
-    "DESCRIPTION": "{@@}Create an *Insight, *Smite or *Safety in hand. It draws a card. {!Upgrades!|>0= NL Do it again.}"
+    "DESCRIPTION": "{@@}Create a *Smite or *Safety in hand. It draws a card. {!Upgrades!|>0= NL Do it again.}"
   },
   "${ModID}:Mimicry": {
     "NAME": "Mimicry",
-    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n upgraded} common card from other packs you've selected."
+    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n Upgraded} common card from other Packs you've selected."
   },
   "${ModID}:CraftyMove": {
     "NAME": "Crafty Move",
@@ -29,11 +29,11 @@
   },
   "${ModID}:BarrierBeacon": {
     "NAME": "Barrier Beacon",
-    "DESCRIPTION": "{@@}Gain !B! Block, create a{!Upgrades!|>0=n upgraded} copy of this in hand. Exhaust."
+    "DESCRIPTION": "{@@}Gain !B! Block, create a{!Upgrades!|>0=n Upgraded} copy of this in hand. NL Exhaust."
   },
   "${ModID}:StrikingStrike": {
     "NAME": "Striking Strike",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Discover a{!Upgrades!|>0=n upgraded} strike. It Exhausts when played and costs 0 this turn."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Discover a{!Upgrades!|>0=n Upgraded} strike. It Exhausts when played and costs 0 this turn."
   },
   "${ModID}:AccumulativeStrike": {
     "NAME": "Accumulative Strike",

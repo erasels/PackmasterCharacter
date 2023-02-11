@@ -1,0 +1,51 @@
+{
+  "${ModID}:Fertilizer": {
+    "NAME": "肥料",
+    "DESCRIPTION": "抽一张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。"
+  },
+  "${ModID}:HarvestBeans": {
+    "NAME": "收获豌豆",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本场战斗上张打出牌非攻击牌，造成群体伤害。"
+  },
+  "${ModID}:HarvestCarrots": {
+    "NAME": "收获胡萝卜",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合每用过一类牌， NL 再获得一次。",
+    "EXTENDED_DESCRIPTION": [" NL (再获得 !M! 次。"]
+  },
+  "${ModID}:HarvestPotatoes": {
+    "NAME": "收获土豆",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本场战斗上张打出牌非技能牌，再获得一次。"
+  },
+  "${ModID}:HarvestRadishes": {
+    "NAME": "收获甜菜",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过一类牌， NL 给予1层 虚弱 。",
+    "EXTENDED_DESCRIPTION": [" NL (给予 !M! 层。)"]
+  },
+  "${ModID}:OutToMarket": {
+    "NAME": "赶集",
+    "DESCRIPTION": "打出牌时，若其与其上张打出牌异类，对所有敌人造成 !M! 点伤害。"
+  },
+  "${ModID}:PestControl": {
+    "NAME": "害虫防治",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过一类牌， NL 再造成一次。",
+    "EXTENDED_DESCRIPTION": [" NL (再造成 !M! 次。"]
+  },
+  "${ModID}:SoilResiliency": {
+    "NAME": "土壤复原力",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 若本回合打出过三类及以上的牌，本次打出后本场战斗获得量翻倍，上限为10点。 NL 消耗性 !stslib:ex! 。"
+  },
+  "${ModID}:SupplyChain": {
+    "NAME": "供应链",
+    "DESCRIPTION": "回合开始时， NL 获得一张 *肥料 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 获得一张 *肥料 。"
+  },
+  "${ModID}:SowTheSeeds": {
+    "NAME": "播种",
+    "DESCRIPTION": "获得一张 *肥料 。 NL 从抽牌堆中 取出 !M! 张不同类型的牌。"
+  },
+  "${ModID}:TillTheEarth": {
+    "NAME": "耕田",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得一张 *肥料 。"
+  }
+}

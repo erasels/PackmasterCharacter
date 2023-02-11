@@ -2,7 +2,7 @@
   "${ModID}:IterativeDesignPower": {
     "NAME": "Iterative Design",
     "DESCRIPTIONS": [
-      "Whenever you create a card this combat, gain #b",
+      "Whenever you play a card created this combat or #yDuplicate a card, gain #b",
       " #yBlock."
     ]
   },
@@ -10,7 +10,15 @@
     "NAME": "Energy Drink",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yDuplication for every #b10 cards you shuffle into your drawpile."
+      " #yDuplication for every #b10 cards you shuffle into your draw pile."
+    ]
+  },
+  "${ModID}:DuplicationPackmasterPower": {
+    "NAME": "Duplication",
+    "DESCRIPTIONS": [
+      "Your next card is played twice.",
+      "Your next #b",
+      " cards are played twice."
     ]
   }
 }

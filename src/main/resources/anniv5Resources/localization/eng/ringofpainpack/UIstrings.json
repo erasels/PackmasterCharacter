@@ -9,8 +9,8 @@
   },
   "${ModID}:RingOfPainPackHat": {
     "TEXT": [
-      "How comfy it is to rest/Within the confines of this makeshift nest.",
-      "Mini Owl"
+      "How comfy it is to rest \n Within the confines of this makeshift nest.",
+      "Owl Friend"
     ]
   }
 }

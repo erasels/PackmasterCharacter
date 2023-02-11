@@ -1,5 +1,6 @@
 package thePackmaster.cards.evenoddpack;
 
+import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,6 +13,7 @@ public class LeftHook extends AbstractEvenOddCard{
     private static final int DAMAGE = 3;
     private static final int UDAMAGE = 2;
     private static final int COST = 0;
+    private static final int EXH = 7;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -22,6 +24,9 @@ public class LeftHook extends AbstractEvenOddCard{
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
+        rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
+
+        ExhaustiveVariable.setBaseValue(this, EXH);
         initializeDescription();
         baseDamage = DAMAGE;
     }
@@ -37,6 +42,7 @@ public class LeftHook extends AbstractEvenOddCard{
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
+        rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
         initializeDescription();
     }
     
@@ -46,11 +52,17 @@ public class LeftHook extends AbstractEvenOddCard{
         {
             return   cardStrings.DESCRIPTION
                     + cardStrings.EXTENDED_DESCRIPTION[0]
-                    + cardStrings.EXTENDED_DESCRIPTION[2];
+                    + cardStrings.EXTENDED_DESCRIPTION[1]
+                    + cardStrings.EXTENDED_DESCRIPTION[2]
+                    + cardStrings.EXTENDED_DESCRIPTION[3];
         }
         else
         {
-            return cardStrings.DESCRIPTION;
+            return cardStrings.DESCRIPTION
+                    + cardStrings.EXTENDED_DESCRIPTION[0]
+                    + cardStrings.EXTENDED_DESCRIPTION[1]
+                    + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2])
+                    + cardStrings.EXTENDED_DESCRIPTION[3];
         }
     }
     

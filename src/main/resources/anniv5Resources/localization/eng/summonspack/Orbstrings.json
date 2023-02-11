@@ -33,13 +33,13 @@
     "NAME": "Wolf",
     "DESCRIPTION": [
       "#yPassive: At the end of your turn, deal #b",
-      " damage to the enemy with the least HP. NL Damage increases with more #yWolves. NL #yEvoke: Gain an orb slot."
+      " damage to the enemy with the least HP. NL Damage increases with number of channeled orbs. NL #yEvoke: Gain an orb slot."
     ]
   },
   "${ModID}:Leprechaun": {
     "NAME": "Leprechaun",
     "DESCRIPTION": [
-      "#yPassive: At the end of your turn roll #b",
+      "#yPassive: At the start of your turn roll #b",
       ". NL #yEvoke: Apply #b",
       " #yJinx to ALL enemies."
     ]

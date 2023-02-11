@@ -10,12 +10,12 @@
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Distortion."
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Distortion to a random enemy."
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
-    "DESCRIPTION": "Gain a *Necronomicurse. NL The next attack you play that costs 2 or more is played twice.",
-    "UPGRADE_DESCRIPTION": "The next attack you play that costs 2 or more is played twice."
+    "DESCRIPTION": "Gain a *Necronomicurse. NL The next Attack you play that costs 2 or more is played twice.",
+    "UPGRADE_DESCRIPTION": "The next Attack you play that costs 2 or more is played twice."
   },
   "${ModID}:FamilialCurse": {
     "NAME": "Familial Curse",
@@ -41,6 +41,6 @@
   },
   "${ModID}:StarSpawn": {
     "NAME": "Star Spawn",
-    "DESCRIPTION": "Deal 13 damage twice. NL Heal !M! HP. NL Channel a Plasma. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage twice. NL Heal !M! HP. NL Channel a Plasma. NL Exhaust."
   }
 }

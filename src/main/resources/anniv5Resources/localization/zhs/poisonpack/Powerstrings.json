@@ -1,0 +1,9 @@
+{
+  "${ModID}:ToxicDipPower": {
+    "NAME": "毒液渗透",
+    "DESCRIPTIONS": [
+      "本回合造成未被格挡的伤害时，给予 #b",
+      " 层 #y中毒 。"
+    ]
+  }
+}

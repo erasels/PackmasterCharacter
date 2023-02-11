@@ -5,7 +5,7 @@
   },
   "${ModID}:RayOfFrost": {
     "NAME": "Ray Of Frost",
-    "DESCRIPTION": "[#EFC851]Magic. NL Deal !D! damage. NL Whenever you play a [#EFC851]Magic card this turn, Channel !M! Frost."
+    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL Whenever you play a *Magic card this turn, Channel !M! Frost."
   },
   "${ModID}:Swipe": {
     "NAME": "Swipe",
@@ -23,7 +23,7 @@
   },
   "${ModID}:EldritchBlast": {
     "NAME": "Eldritch Blast",
-    "DESCRIPTION": "[#EFC851]Magic. NL Deal !D! damage. Reduce the cost of a random [#EFC851]Magic card in hand by 1 this turn."
+    "DESCRIPTION": "*Magic. NL Deal !D! damage. Reduce the cost of a random *Magic card in hand by 1 this turn."
   },
   "${ModID}:DeathWish": {
     "NAME": "Death Wish",

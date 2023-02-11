@@ -1,12 +1,11 @@
 {
   "${ModID}:RollToMove": {
     "NAME": "Roll to Move",
-    "DESCRIPTION": "Roll !M! ${ModID}:D6."
+    "DESCRIPTION": "Gain !B! Block. NL Roll 2 ${ModID}:D6."
   },
   "${ModID}:FlickDice": {
   "NAME": "Flick Dice",
-  "DESCRIPTION": "{@@}Deal !D! damage. NL Roll a ${ModID}:D6.",
-  "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Roll a ${ModID}:D8."
+  "DESCRIPTION": "{@@}Deal !D! damage. NL Roll a ${ModID}:D6."
   },
   "${ModID}:ThrowChips": {
     "NAME": "Throw Chips",
@@ -22,7 +21,7 @@
   },
   "${ModID}:PerceptionCheck": {
     "NAME": "Perception Check",
-    "DESCRIPTION": "At the start of your turn, roll a ${ModID}:D8."
+    "DESCRIPTION": "At the start of your turn, if you have no ${ModID}:Dice, roll a ${ModID}:D8."
   },
   "${ModID}:AllIn": {
     "NAME": "All In",
@@ -30,8 +29,8 @@
   },
   "${ModID}:D20": {
     "NAME": "D20!",
-    "DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Roll a [#efc851]D20[] with ${ModID}:Advantage."
+    "DESCRIPTION": "Roll a [#efc851]D20[]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Roll a [#efc851]D20[]."
   },
   "${ModID}:GoToJail": {
     "NAME": "Go to Jail",

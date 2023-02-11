@@ -25,12 +25,12 @@ public class DefectPack extends AbstractCardPack {
         cards.add(Coolheaded.ID);
         cards.add(Hologram.ID);
         cards.add(Defragment.ID);
-        cards.add(Sunder.ID);
-        cards.add(GoForTheEyes.ID);
-        cards.add(Fusion.ID);
-        cards.add(BeamCell.ID);
-        cards.add(Seek.ID);
-        cards.add(AllForOne.ID);
+        cards.add(Capacitor.ID);
+        cards.add(Recursion.ID);
+        cards.add(DoomAndGloom.ID);
+        cards.add(Glacier.ID);
+        cards.add(MultiCast.ID);
+        cards.add(BiasedCognition.ID);
         return cards;
     }
 }

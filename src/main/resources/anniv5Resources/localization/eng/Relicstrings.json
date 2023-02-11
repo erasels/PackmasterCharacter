@@ -4,20 +4,26 @@
     "FLAVOR": "\"Incredible! It appears that this bag connects to an extradimensional space. What if I jump inside?\" - Ranwid",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL Gain [E] at the start of each turn, lasting one turn for every #b5 cards in your deck."
+      ".[] NL Gain [E] at the start of each turn, lasting one turn for every #b5 cards in your deck.",
+      "Energy gained: {0}",
+      " NL Per turn: {0} NL Per combat: {1}"
     ]
   },
   "${ModID}:BanishingDecree": {
     "NAME": "Banishing Decree",
     "FLAVOR": "Absorb what is useful, reject what is useless and add what is essentially your own.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose one of your Packs. Cards from it will no longer appear in card rewards. Then, choose #b1 of #b5 new Packs to replace it with, and gain up to #b3 card rewards from that pack.",
+      "Upon pickup, choose one of your Packs. Cards from it will no longer appear in card rewards. Then, choose #b1 of #b5 new Packs to replace it with, and obtain #b3 card rewards from that Pack.",
       "Choose a Pack to banish with ",
       "Cards from the Pack '",
       "' will no longer appear in card rewards.",
       "' will appear in card rewards.",
       "Choose a Pack to gain with ",
-      "Power!"
+      "Power!",
+      ".",
+      ".",
+      "Translator note: The 2 dots up here follows the structure 'Choose a Pack to banish with '+'Banishing Decree'+'.' and 'Choose a Pack to gain with '+'Banishing Decree'+'.' respectively. ",
+      "Banished pack: {0} NL Added pack: {1}"
     ]
   },
   "${ModID}:CollectorBadge": {
@@ -26,7 +32,9 @@
     "DESCRIPTIONS": [
       "Each turn, after you play a card from #b4 different Packs, gain [E] [REMOVE_SPACE].",
       " NL NL Packs used this turn: ",
-      " NL NL This has triggered this turn. "
+      " NL NL This has triggered this turn. ",
+      "Energy gained: {0}",
+      " NL Per turn: {0} NL Per combat: {1}"
     ]
   },
   "${ModID}:GemOfUnity": {
@@ -34,7 +42,9 @@
     "FLAVOR": "In union there is strength.",
     "DESCRIPTIONS": [
       "Once per combat, after you have played a card from each different Pack available this run, gain #b20 Block, #b1 Strength, #b1 Dexterity, and heal #b5 HP.",
-      "Packs played this combat: "
+      "Packs played this combat: ",
+      "Times triggered: {0}",
+      " NL Per combat: {0}"
     ]
   },
   "${ModID}:HandyHaversack": {
@@ -48,9 +58,10 @@
     "NAME": "P.M. Booster Box",
     "FLAVOR": "Better price for buying in bulk.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b1 of #b3 Packmaster Boosters, three times. Earn one additional card reward from these boosters at the end of each combat.",
+      "Upon pickup, choose #b1 of #b3 Packmaster Boosters, three times. Earn an additional card from these boosters at the end of each combat.",
       " NL Chosen Boosters: ",
-      "Choose a Booster Pack."
+      "Choose a Booster Pack.",
+      "Packs: {0}, {1}, {2} NL Extra card rewards: {3}"
     ]
   },
   "${ModID}:PMBoosterPack": {
@@ -58,7 +69,8 @@
     "FLAVOR": "A package of cards in a foil wrapper. How did it end up in the Spire?",
     "DESCRIPTIONS": [
       "Upon pickup, add any one card from a random Packmaster Booster to your deck.",
-      "Choose a card to add to your deck."
+      "Choose a card to add to your deck.",
+      "Pack: {0}"
     ]
   },
   "${ModID}:PMCollection": {
@@ -66,7 +78,8 @@
     "FLAVOR": "Said to have been assembled by a consortium of wizards.",
     "DESCRIPTIONS": [
       "Upon pickup, you may add each card from a random Packmaster Booster to your deck.",
-      "You may add this to your deck."
+      "You may add this to your deck.",
+      "Pack: {0}"
     ]
   }
 }

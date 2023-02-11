@@ -20,7 +20,9 @@
   {
     "PROPER_NAME": "Panda",
     "NAMES": [
-      "panda"
+      "panda",
+      "Pandas",
+      "pandas"
     ],
     "DESCRIPTION": "Orb: Deals damage to a random enemy at the end of your turn."
   },
@@ -29,7 +31,7 @@
     "NAMES": [
       "wolf"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the enemy with the least HP. Damage is boosted by other wolves. When #yEvoked, gain an orb slot."
+    "DESCRIPTION": "Orb: Deals damage to the enemy with the least HP. Damage is increased by the number of orbs that are #yChanneled. When #yEvoked, gain an orb slot."
   },
   {
     "PROPER_NAME": "Porcupine",
@@ -43,7 +45,7 @@
     "NAMES": [
       "leprechaun"
     ],
-    "DESCRIPTION": "Orb: Rolls #yDice."
+    "DESCRIPTION": "Orb: Rolls #yDice. When #yEvoked, applies #yJinx to ALL enemies."
   },
   {
     "PROPER_NAME": "Jinx",

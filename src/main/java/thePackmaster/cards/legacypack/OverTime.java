@@ -1,13 +1,9 @@
 package thePackmaster.cards.legacypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -25,27 +21,27 @@ public class OverTime extends AbstractLegacyCard {
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!(this.baseDamage == 0)){
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        if (damage > 0){
+            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         }
     }
 
     @Override
-    public void atTurnStart() {
-        this.baseDamage = AbstractDungeon.player.exhaustPile.size() * this.magicNumber;
-    }
-
-
-    public void triggerOnOtherCardPlayed(AbstractCard c) {
-        this.baseDamage = AbstractDungeon.player.exhaustPile.size() * this.magicNumber;
+    public void applyPowers() {
+        int tmp = baseDamage;
+        baseDamage += Wiz.p().exhaustPile.size() * magicNumber;
+        super.applyPowers();
+        if(tmp != baseDamage) isDamageModified = true;
+        baseDamage = tmp;
     }
 
     @Override
-    public void applyPowers() {
-        this.baseDamage = AbstractDungeon.player.exhaustPile.size() * this.magicNumber;
-        super.applyPowers();
-        initializeDescription();
+    public void calculateCardDamage(AbstractMonster mo) {
+        int tmp = baseDamage;
+        baseDamage += Wiz.p().exhaustPile.size() * magicNumber;
+        super.calculateCardDamage(mo);
+        if(tmp != baseDamage) isDamageModified = true;
+        baseDamage = tmp;
     }
 
     public void upp() {

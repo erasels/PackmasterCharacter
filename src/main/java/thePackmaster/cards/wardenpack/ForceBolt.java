@@ -3,10 +3,10 @@ package thePackmaster.cards.wardenpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.dimensiongatepack.MagicMissilePower;
 import thePackmaster.util.Wiz;
 
+import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class ForceBolt extends AbstractWardenCard {
@@ -21,6 +21,7 @@ public class ForceBolt extends AbstractWardenCard {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = MAGIC_BASE;
+        tags.add(MAGIC);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

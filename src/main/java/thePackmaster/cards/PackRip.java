@@ -1,3 +1,4 @@
+/*
 package thePackmaster.cards;
 
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
@@ -18,9 +19,6 @@ import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-// This card used to be in the Core Set pack but no longer is
-// However, we've kept it around since we may want to give it to the player from a Packmaster-specific event
-// (with an appropriate cost, like an unremovable curse)
 public class PackRip extends AbstractPackmasterCard {
     public final static String ID = makeID("PackRip");
 
@@ -45,7 +43,6 @@ public class PackRip extends AbstractPackmasterCard {
         addToBot(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, Wiz.hand().size(), true, false));
         for (AbstractCard c : pack.cards) {
             if(c.rarity == CardRarity.COMMON || c.rarity == CardRarity.UNCOMMON || c.rarity == CardRarity.RARE) {
-               // if (upgraded) c.upgrade();
                 addToBot(new MakeTempCardInHandAction(c));
             }
         }
@@ -55,3 +52,5 @@ public class PackRip extends AbstractPackmasterCard {
         upgradeBaseCost(0);
     }
 }
+
+ */

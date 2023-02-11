@@ -1,0 +1,64 @@
+{
+  "${ModID}:Anemia": {
+    "NAME": "贫血",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有 中毒 的敌人 !M! 层 虚弱 。"
+  },
+  "${ModID}:LethalShot": {
+    "NAME": "致死箭击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 中毒 与 !${ModID}:m2! 层 易伤 。"
+  },
+  "${ModID}:BleedItOut": {
+    "NAME": "大出血",
+    "DESCRIPTION": "造成 !D! 点 伤害。 NL 给予 !M! 层 中毒 。 NL 触发目标的 中毒 效果。"
+  },
+  "${ModID}:Trace": {
+    "NAME": "追迹",
+    "DESCRIPTION": "预见 !M! 。"
+  },
+  "${ModID}:BoosterShot": {
+    "NAME": "强化注射",
+    "DESCRIPTION": "造成 !D! 点 伤害。 NL 给予 !M! 层 中毒 。 NL 目标回复 !${ModID}:m2! 点生命。"
+  },
+  "${ModID}:RangersSetup": {
+    "NAME": "猎手陷阱",
+    "DESCRIPTION": "抽 !M! 张牌 。 NL 选择将2张手牌放入抽牌堆顶部。"
+  },
+  "${ModID}:Scheme": {
+    "NAME": "密谋",
+    "DESCRIPTION": "下回合打出的首张1及以下耗能牌打出两次。 NL 消耗性 !stslib:ex! 。"
+  },
+  "${ModID}:ScrollOfIntellect": {
+    "NAME": "智慧卷轴",
+    "DESCRIPTION": "抽一张牌。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌. NL 获得 [E] 。 NL 消耗 。"
+  },
+  "${ModID}:Sustenance": {
+    "NAME": "养料",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机给予 !M! 层 中毒 。 NL 长驻 !stslib:persist! 。"
+  },
+  "${ModID}:TheEncyclopedia": {
+    "NAME": "百科全书",
+    "DESCRIPTION": "从 !M! 张随机牌中选择两张加入抽牌堆，其耗能本场战斗减2。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择2张牌加入抽牌堆。"
+    ]
+  },
+  "${ModID}:TomeOfIntellect": {
+    "NAME": "智慧巨著",
+    "DESCRIPTION": "回合开始时，将一张 *智慧卷轴 加入抽牌堆。 NL 将 !M! 张 *智慧卷轴 加入抽牌堆。"
+  },
+  "${ModID}:DarkRitual": {
+    "NAME": "黑暗仪式",
+    "DESCRIPTION": "失去10点生命。 NL 获得 !M! 金币。 NL 从牌组移除本牌。",
+    "UPGRADE_DESCRIPTION": "失去10点生命。 NL 获得 !M! 金币。 NL 本局将本牌降级。"
+  },
+  "${ModID}:PackRat": {
+    "NAME": "驮鼠",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若无药水，获得一瓶并从牌组移除本牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 若无药水，获得一瓶并在本局将本牌降级"
+  },
+  "${ModID}:ScorchedEarth": {
+    "NAME": "焦土",
+    "DESCRIPTION": "消耗 弃牌堆所有非攻击牌，每张随机造成 !D! 点伤害。 NL 消耗 。"
+  }
+}

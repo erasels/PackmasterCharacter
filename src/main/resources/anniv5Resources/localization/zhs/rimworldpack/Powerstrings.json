@@ -1,0 +1,54 @@
+{
+  "${ModID}:SpikeTrapPower": {
+    "NAME": "钉刺陷阱",
+    "DESCRIPTIONS": [
+      "下次受到攻击时，反弹 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:CatharsisPower": {
+    "NAME": "宣泄",
+    "DESCRIPTIONS": [
+      "下张牌耗能为 #b0 且打出两次！",
+      "下 #b",
+      " 张牌耗能为 #b0 且打出两次！"
+    ]
+  },
+  "${ModID}:PyromaniacPower": {
+    "NAME": "火术师",
+    "DESCRIPTIONS": [
+      "你的回合开始时，随机使一张手牌 #y着火 。",
+      "你的回合开始时，随机使 #b",
+      " 张手牌 #y着火 。"
+    ]
+  },
+  "${ModID}:BurningPassionPower": {
+    "NAME": "燃烧激情",
+    "DESCRIPTIONS": [
+      "每回合首次获得 #g正面效果 时，获得 #b",
+      " 次。"
+    ]
+  },
+  "${ModID}:HoldCardPower": {
+    "NAME": "圣牌",
+    "DESCRIPTIONS": [
+      "该单位死亡时，将 ",
+      " 加入手牌。"
+    ]
+  },
+  "${ModID}:LuciferiumAddictionPower": {
+    "NAME": "魔鬼素上瘾",
+    "DESCRIPTIONS": [
+      "本回合结束时，将 #b2 张 #y绝望 加入手牌并失去 #b5 点 #y力量 。",
+      "#b",
+      " 回合内，将 #b2 张 #y绝望 加入手牌并失去 #b5 点 #y力量 。"
+    ]
+  },
+  "${ModID}:TradeBeaconPower": {
+    "NAME": "交易信号",
+    "DESCRIPTIONS": [
+      "每回合抽牌阶段外首次抽或丢弃一张牌时，抽 #b",
+      " 张牌。"
+    ]
+  }
+}

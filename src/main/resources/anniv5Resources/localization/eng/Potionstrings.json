@@ -14,7 +14,7 @@
     ]
   },
   "${ModID}:PackInAJar": {
-    "NAME": "Pack in a Jar",
+    "NAME": "Pack Rip Potion",
     "DESCRIPTIONS": [
       "Discard your hand, then choose #b1 of #b3 Packs. Add #b",
       " copy of each card from it to your hand.",
@@ -25,9 +25,9 @@
     "NAME": "Smithing Oil",
     "DESCRIPTIONS": [
       "Choose #b",
-      " card in your hand to upgrade #bpermanently.",
-      " cards in your hand to upgrade #bpermanently.",
-      " to upgrade permanently."
+      " card in your hand to #yUpgrade #bpermanently.",
+      " cards in your hand to #yUpgrade #bpermanently.",
+      "Upgrade permanently."
     ]
   }
 }

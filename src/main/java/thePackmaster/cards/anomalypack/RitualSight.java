@@ -15,7 +15,7 @@ import static thePackmaster.util.Wiz.att;
 public class RitualSight extends AbstractAnomalyCard {
     public static final String ID = SpireAnniversary5Mod.makeID("RitualSight");
     private static final int COST = 1;
-    private static final int BLOCK = 11;
+    private static final int BLOCK = 7;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public RitualSight() {

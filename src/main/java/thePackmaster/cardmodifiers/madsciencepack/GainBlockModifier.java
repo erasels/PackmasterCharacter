@@ -17,12 +17,13 @@ public class GainBlockModifier extends AbstractMadScienceModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("MadScienceModifiers")).TEXT[4];
+        int blockTextIndex = 4;
+        if(value == 8) blockTextIndex++;
+        return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("MadScienceModifiers")).TEXT[blockTextIndex];
     }
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        super.onUse(card, target, action);
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, value));
     }
 

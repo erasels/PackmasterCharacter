@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.powers.thieverypack.DeceivedPower;
 import thePackmaster.powers.thieverypack.HammeredPower;
 
 public class NullHammer extends AbstractThieveryCard {

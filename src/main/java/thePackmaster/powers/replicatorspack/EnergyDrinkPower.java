@@ -17,7 +17,7 @@ public class EnergyDrinkPower extends AbstractPackmasterPower implements Cloneab
 
 
     public EnergyDrinkPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME, AbstractPower.PowerType.BUFF,true,owner,amount);
+        super(POWER_ID,NAME, AbstractPower.PowerType.BUFF,false,owner,amount);
 
     }
 

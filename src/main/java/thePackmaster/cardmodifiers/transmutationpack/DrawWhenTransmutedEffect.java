@@ -30,11 +30,6 @@ public class DrawWhenTransmutedEffect extends AbstractExtraEffectModifier {
     }
 
     @Override
-    public boolean shouldRenderValue() {
-        return value != 1;
-    }
-
-    @Override
     public String addExtraText(String rawDescription, AbstractCard card) {
         String s;
         if (value == 1) {

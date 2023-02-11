@@ -2,6 +2,7 @@ package thePackmaster.cardmodifiers.transmutationpack;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,10 +13,16 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cardmodifiers.transmutationpack.dynamicdynamic.DynamicDynamicVariableManager;
+import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
+import thePackmaster.util.dynamicdynamic.DynamicProvider;
+
+import java.util.UUID;
 
 @AbstractCardModifier.SaveIgnore
-public abstract class AbstractExtraEffectModifier extends AbstractCardModifier {
+public abstract class AbstractExtraEffectModifier extends AbstractCardModifier implements DynamicProvider {
+    private static final Color normalColor = Color.valueOf("65ada1");
+    private static final Color increasedValueColor = Color.valueOf("9ad6b6");
+    private static final Color decreasedValueColor = Color.valueOf("b799bd");
     protected static final String ID = SpireAnniversary5Mod.makeID("AbstractExtraEffectModifier");
     protected static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     protected static final String[] TEXT = cardStrings.EXTENDED_DESCRIPTION;
@@ -106,7 +113,26 @@ public abstract class AbstractExtraEffectModifier extends AbstractCardModifier {
 
     public abstract String addExtraText(String rawDescription, AbstractCard card);
 
-    public abstract boolean shouldRenderValue();
+
+    @Override
+    public Color getNormalColor() {
+        return normalColor;
+    }
+
+    @Override
+    public Color getIncreasedValueColor() {
+        return increasedValueColor;
+    }
+
+    @Override
+    public Color getDecreasedValueColor() {
+        return decreasedValueColor;
+    }
+
+    @Override
+    public UUID getDynamicUUID() {
+        return attachedCard.uuid;
+    }
 
     @Override
     public void onInitialApplication(AbstractCard card) {

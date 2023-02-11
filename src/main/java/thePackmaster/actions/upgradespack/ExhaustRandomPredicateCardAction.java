@@ -4,19 +4,26 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class ExhaustRandomPredicateCardAction extends AbstractGameAction {
 
     private final Predicate<AbstractCard> predicate;
+    private final Consumer<AbstractCard> callback;
     private final CardGroup group;
 
     public ExhaustRandomPredicateCardAction(Predicate<AbstractCard> predicate, CardGroup group) {
+        this(predicate, group, null);
+    }
+
+    public ExhaustRandomPredicateCardAction(Predicate<AbstractCard> predicate, CardGroup group, Consumer<AbstractCard> callback) {
         this.predicate = predicate;
         this.group = group;
+        this.callback = callback;
     }
 
     @Override
@@ -28,8 +35,16 @@ public class ExhaustRandomPredicateCardAction extends AbstractGameAction {
         }
 
         if (targets.size()>0) {
-            int r = AbstractDungeon.cardRandomRng.random(targets.size()-1);
-            addToBot(new ExhaustSpecificCardAction(targets.get(r), group));
+            AbstractCard targetCard = Wiz.getRandomItem(targets);
+            if(callback != null)
+                addToTop(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        ExhaustRandomPredicateCardAction.this.callback.accept(targetCard);
+                        isDone = true;
+                    }
+                });
+            addToTop(new ExhaustSpecificCardAction(targetCard, group));
         }
         isDone = true;
     }

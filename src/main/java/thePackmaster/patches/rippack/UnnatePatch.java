@@ -20,11 +20,9 @@ public class UnnatePatch {
         )
         public static void initializeDeckPatch(CardGroup combatDeck, @ByRef CardGroup[] copy)
         {
-            ArrayList<AbstractCard> placeOnBot = new ArrayList();
-            Iterator vacantIterator = copy[0].group.iterator();
+            ArrayList<AbstractCard> placeOnBot = new ArrayList<>();
 
-            while (vacantIterator.hasNext()) {
-                AbstractCard newCard = (AbstractCard) vacantIterator.next();
+            for (AbstractCard newCard : copy[0].group) {
                 if (newCard instanceof AbstractPackmasterCard) {
                     if (((AbstractPackmasterCard) newCard).isUnnate)
                         placeOnBot.add(newCard);
