@@ -44,7 +44,7 @@
   },
   "${ModID}:Thoughtweaving": {
     "NAME": "思绪交织",
-    "DESCRIPTION": "打出技能或攻击时，抽一张与其不同卡包中相反类型的牌。"
+    "DESCRIPTION": "打出技能或攻击时， ${ModID}:取 一张与其不同卡包中相反类型的牌。"
   },
   "${ModID}:SealedSword": {
   "NAME": "封印之剑",
