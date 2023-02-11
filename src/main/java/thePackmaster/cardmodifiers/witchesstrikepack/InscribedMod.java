@@ -48,7 +48,7 @@ public class InscribedMod extends AbstractCardModifier {
 
                     for(AbstractOrb orb : Wiz.p().orbs) {
                         if(orb instanceof FullMoon || orb instanceof CrescentMoon) {
-                            ((PackmasterOrb)o).passiveEffect();
+                            ((PackmasterOrb)orb).passiveEffect();
                         }
                     }
                 }
