@@ -25,7 +25,7 @@
   },
   "${ModID}:OptimizedBlur": {
     "NAME": "视晕校正",
-    "DESCRIPTION": "造成未被格挡伤害时， NL 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "你的攻击突破格挡时， NL 获得 !M! 点 格挡 。"
   },
   "${ModID}:HardCaramel": {
     "NAME": "硬焦糖",
