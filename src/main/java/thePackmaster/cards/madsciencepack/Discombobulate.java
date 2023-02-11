@@ -35,7 +35,7 @@ public class Discombobulate extends AbstractMadScienceCard {
     {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED)){
+            if (c.hasTag(ISCARDMODIFIED)){
                 allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
                 return;
             }
