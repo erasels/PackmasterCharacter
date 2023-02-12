@@ -2,11 +2,13 @@ package thePackmaster.cardmodifiers.gemspack;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.orbs.Lightning;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
 import thePackmaster.cards.gemspack.Ward;
@@ -22,18 +24,11 @@ public class ShivGemMod extends AbstractMadScienceModifier {
     public String modifyDescription(String rawDescription, AbstractCard card) {
         return rawDescription + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("GemModifiers")).TEXT[6];
     }
-    @Override
-    public void onInitialApplication(AbstractCard card) {
-        super.onInitialApplication(card);
-        if (card.cardsToPreview == null) {
-            card.cardsToPreview = new Shiv();
-        }
-    }
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
 
-        Wiz.atb(new MakeTempCardInHandAction(new Shiv()));
+        Wiz.atb(new ChannelAction(new Lightning()));
     }
 
     @Override

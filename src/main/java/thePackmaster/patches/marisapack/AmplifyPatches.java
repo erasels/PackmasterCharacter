@@ -1,6 +1,5 @@
 package thePackmaster.patches.marisapack;
 
-import basemod.BaseMod;
 import basemod.helpers.CardBorderGlowManager;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -24,7 +23,7 @@ public class AmplifyPatches {
 
     @SpirePatch2(clz= AbstractPlayer.class, method="useCard")
     public static class CatchUse {
-        public static boolean didCost = true;
+        public static boolean didCost = false;
         @SpireInsertPatch(locator = Locator3.class)
         public static void beforeUse(AbstractPlayer __instance, AbstractCard c) {
             if(c instanceof AmplifyCard && ((AmplifyCard) c).shouldAmplify(c)) {
