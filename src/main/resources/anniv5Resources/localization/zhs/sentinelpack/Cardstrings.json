@@ -23,7 +23,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 进入 ${ModID}:宁静 。"
   },
   "${ModID}:Swagger": {
-    "NAME": "酷傲者",
+    "NAME": "酷傲",
     "DESCRIPTION": "若回合结束时处于 姿态 ， NL 获得 !M! 点 力量 与 敏捷 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 若回合结束时处于 姿态 ， NL 获得 !M! 点 力量 与 敏捷 。"
   },
