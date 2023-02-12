@@ -1,6 +1,7 @@
 package thePackmaster.cards.contentcreatorpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,15 +16,16 @@ public class BaalorBash extends AbstractContentCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 13;
         exhaust = true;
+        isUnnate = true;
         cardsToPreview = new BaalorBlueprint();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        addToBot(new MakeTempCardInDrawPileAction(new BaalorBlueprint(), 1, true, true));
+        addToBot(new MakeTempCardInDiscardAction(new BaalorBlueprint(), 1));
     }
 
     public void upp() {
-        isInnate = true;
+        isUnnate = false;
     }
 }
