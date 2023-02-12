@@ -3,6 +3,7 @@ package thePackmaster.patches.rippack;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
@@ -18,9 +19,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.CorruptionPower;
+import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.actions.rippack.RipCardAction;
 import thePackmaster.cardmodifiers.rippack.ArtCardModifier;
 import thePackmaster.cardmodifiers.rippack.RippableModifier;
@@ -28,8 +31,7 @@ import thePackmaster.cardmodifiers.rippack.TextCardModifier;
 import thePackmaster.cards.rippack.ArtAttack;
 import thePackmaster.vfx.rippack.ShowCardAndRipEffect;
 
-import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.SpireAnniversary5Mod.makeShaderPath;
+import static thePackmaster.SpireAnniversary5Mod.*;
 import static thePackmaster.cardmodifiers.rippack.RippableModifier.isRippable;
 import static thePackmaster.patches.rippack.AllCardsRippablePatches.RipStatus.ART;
 import static thePackmaster.util.Wiz.*;
@@ -45,6 +47,9 @@ public class AllCardsRippablePatches {
     public static ShaderProgram oldShader = null;
     public static ShaderProgram artShader = null;
     public static ShaderProgram textShader = null;
+
+    public static final Texture PERFORATION = ImageMaster.loadImage(modID + "Resources/images/512/rip/perforation.png");
+    public static final Texture PERFORATION_SCV = ImageMaster.loadImage(modID + "Resources/images/1024/rip/perforation.png");
 
     public enum RipStatus {
         WHOLE,
@@ -181,6 +186,36 @@ public class AllCardsRippablePatches {
             if (!isWholeCard(__instance)) {
                 setShader = false;
                 sb.setShader(oldShader);
+            }
+        }
+    }
+
+    @SpirePatch(clz = AbstractCard.class, method = "renderDescription")
+    @SpirePatch(clz = AbstractCard.class, method = "renderDescriptionCN")
+    public static class RenderPerforationBeforeDescription {
+        @SpirePrefixPatch
+        public static void Prefix(AbstractCard __instance, SpriteBatch sb) {
+            if(isRippable(__instance)) {
+                sb.draw(PERFORATION, __instance.current_x - 256.0f, __instance.current_y - 256.0f,
+                        256.0f, 256.0f, 512.0f, 512.0f,
+                        __instance.drawScale * Settings.scale, __instance.drawScale * Settings.scale,
+                        __instance.angle, 0, 0, 512, 512, false, false);
+                sb.flush();
+            }
+        }
+    }
+
+    @SpirePatch(clz = SingleCardViewPopup.class, method = "renderDescription")
+    @SpirePatch(clz = SingleCardViewPopup.class, method = "renderDescriptionCN")
+    public static class RenderPerforationBeforeDescriptionSCV {
+        @SpirePrefixPatch
+        public static void Prefix(SingleCardViewPopup __instance, SpriteBatch sb, AbstractCard ___card) {
+            if(isRippable(___card)) {
+                sb.draw(PERFORATION_SCV, (Settings.WIDTH / 2) - 512.0f, (Settings.HEIGHT / 2) - 512.0f,
+                        512.0f, 512.0f, 1024.0f, 1024.0f,
+                        Settings.scale,  Settings.scale,
+                        ___card.angle, 0, 0, 1024, 1024, false, false);
+                sb.flush();
             }
         }
     }
