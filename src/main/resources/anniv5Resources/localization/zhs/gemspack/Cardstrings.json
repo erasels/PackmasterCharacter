@@ -14,6 +14,16 @@
     "DESCRIPTION": "${ModID}:宝石 。 NL \"获得一张 *小刀 。\"",
     "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得一张 *小刀 。\""
   },
+  "${ModID}:FrostGem": {
+    "NAME": "Aquamarine",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Channel a Frost\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Channel a Frost\""
+  },
+  "${ModID}:LightningGem": {
+    "NAME": "Fragmented Gem",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Channel a Lightning\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Channel a Lightning\""
+  },
   "${ModID}:RetainGem": {
     "NAME": "琥珀",
     "DESCRIPTION": "无法打出的 ${ModID}:宝石 。 NL \"牌附加保留\"",
