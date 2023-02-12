@@ -1,0 +1,6 @@
+{
+  "${ModID}:VenemousExitPower": {
+    "NAME": "Exit Venemous",
+    "DESCRIPTIONS": ["At the start of your turn, exit #yVenemous."]
+  }
+}

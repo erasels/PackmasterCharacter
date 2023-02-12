@@ -1,0 +1,9 @@
+{
+  "${ModID}:ApplyPoison": {
+    "NAME": "Apply Poison",
+    "DESCRIPTION": "Enter ${ModID}:Venemous. If you are in ${ModID}:Venemous at the start of your next turn, exit ${ModID}:Venemous."
+  },"${ModID}:Guile": {
+  "NAME": "Guile",
+  "DESCRIPTION": "Draw !M! cards. NL Discard 2 cards. NL Enter ${ModID}:Cunning."
+}
+}

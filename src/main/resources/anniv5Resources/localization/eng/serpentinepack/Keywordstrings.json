@@ -1,0 +1,12 @@
+[
+  {
+    "PROPER_NAME": "Venemous",
+    "NAMES": ["venemous"],
+    "DESCRIPTION": "Your attacks deal #b50% less damage, but apply #b1 Weak and #b2 #yPoison on hit."
+  },
+  {
+    "PROPER_NAME": "Cunning",
+    "NAMES": ["cunning"],
+    "DESCRIPTION": "When you enter this Stance, gain #b2 Vigor for each #yunique debuff among all enemies."
+  }
+]
