@@ -2,31 +2,16 @@
   "${ModID}:OckhamsPower": {
     "NAME": "Ockhams Razor",
     "DESCRIPTIONS": [
-      "Your #yBasic cards are played twice",
-      "Your #yBasic cards are played #b",
-      " additional times."
+      "Whenever you play a #yBasic card, deal ",
+      " damage to all enemies"
     ]
   },
-  "${ModID}:PerfectBasicsPower": {
-    "NAME": "Basic Perfection",
+  "${ModID}:SimpleTrickPower": {
+    "NAME": "Simple Trick",
     "DESCRIPTIONS": [
-      "Whenever you draw a #yBasic card, #yUpgrade it.",
-      "Whenever you draw a #yBasic card, #yUpgrade it #b",
-      " times."
-    ]
-  },
-  "${ModID}:BasicPoisonPower": {
-    "NAME": "Basic Poison",
-    "DESCRIPTIONS": [
-      "Whenever you play a #yBasic card this turn, apply #b",
-      " #yPoison to all enemies."
-    ]
-  },
-  "${ModID}:BasicSupplyPower": {
-    "NAME": "Basic Supply",
-    "DESCRIPTIONS": [
-      "The first #b",
-      " times you play a #yBasic card each turn, draw a card."
+      "The next time you play a #yCardistry, gain [E] .",
+      "The next ",
+      " times you play a #yCardistry, gain [E] ."
     ]
   }
 }

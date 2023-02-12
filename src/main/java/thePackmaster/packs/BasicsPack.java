@@ -22,14 +22,14 @@ public class BasicsPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(BackToBasic.ID);
-        cards.add(BasicPoison.ID);
-        cards.add(BasicSupply.ID);
+        cards.add(OckhamsRazor.ID);
+        cards.add(SimpleTrick.ID);
         cards.add(BasicWave.ID);
         cards.add(FamiliarKit.ID);
         cards.add(Simplify.ID);
         cards.add(LoseIt.ID);
-        cards.add(OckhamsRazor.ID);
-        cards.add(PerfectBasics.ID);
+        cards.add(StrikePlus.ID);
+        cards.add(ConjureDefends.ID);
         cards.add(SimplifiedStrike.ID);
         return cards;
     }

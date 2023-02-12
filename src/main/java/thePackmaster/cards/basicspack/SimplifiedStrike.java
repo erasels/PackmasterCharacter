@@ -15,48 +15,43 @@ public class SimplifiedStrike extends AbstractPackmasterCard {
     public final static String ID = makeID("SimplifiedStrike");
 
     public SimplifiedStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, "basics");
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, "basics");
         this.tags.add(CardTags.STRIKE);
-        this.baseMagicNumber = this.magicNumber = 2;
-        this.baseDamage = this.damage = 6;
+        this.baseMagicNumber = this.magicNumber = 3;
+        this.baseDamage = this.damage = 0;
+        this.isUnnate = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int basicCount = 0;
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
+            if (c.rarity == CardRarity.BASIC)
+                basicCount++;
+        }
+        this.baseDamage = this.magicNumber * basicCount;
+        calculateCardDamage(m);
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
-    public static int countCards() {
-        int count = 0;
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.rarity == CardRarity.BASIC)
-                count++;
-        }
-        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-            if (c.rarity == CardRarity.BASIC)
-                count++;
-        }
-        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c.rarity == CardRarity.BASIC)
-                count++;
-        }
-        return count;
-    }
-
     public void calculateCardDamage(AbstractMonster mo) {
-        int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * countCards();
         super.calculateCardDamage(mo);
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = (this.damage != this.baseDamage);
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        initializeDescription();
     }
 
     public void applyPowers() {
-        int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * countCards();
-        super.applyPowers();
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = (this.damage != this.baseDamage);
+        int basicCount = 0;
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
+            if (c.rarity == CardRarity.BASIC)
+                basicCount++;
+        }
+        if (basicCount > 0) {
+            this.baseDamage = this.magicNumber * basicCount;
+            super.applyPowers();
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            initializeDescription();
+        }
     }
 
     public void upp(){

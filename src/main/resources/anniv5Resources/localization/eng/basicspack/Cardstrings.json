@@ -1,7 +1,7 @@
 {
   "${ModID}:BasicWave": {
     "NAME": "Basic Wave",
-    "DESCRIPTION": "Play a *Defend and a *Strike. NL This is a ${ModID}:Basic card.",
+    "DESCRIPTION": "Play a *Defend and a *Strike. NL Counts as a ${ModID}:Basic card.",
     "EXTENDED_DESCRIPTION": [
       "Play a *Defend+",
       " and a *Strike+",
@@ -20,19 +20,10 @@
   },
   "${ModID}:SimplifiedStrike": {
     "NAME": "Simplified Strike",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! more damage for each of your ${ModID}:Basic cards."
-  },
-  "${ModID}:PerfectBasics": {
-    "NAME": "Perfect Basics",
-    "DESCRIPTION": "Whenever you draw a ${ModID}:Basic card, Upgrade it this combat. This can Upgrade them any number of times."
-  },
-  "${ModID}:BasicSupply": {
-    "NAME": "Basic Supply",
-    "DESCRIPTION": "The first !M! times you play a ${ModID}:Basic card each turn, draw a card."
-  },
-  "${ModID}:BasicPoison": {
-    "NAME": "Basic Poison",
-    "DESCRIPTION": "Deal !D! damage. Whenever you play a ${ModID}:Basic card this turn, apply !M! Poison to all enemies."
+    "DESCRIPTION": "${ModID}:Unnate. NL Deal !M! damage for each ${ModID}:Basic card you played this combat.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage)"
+    ]
   },
   "${ModID}:FamiliarKit": {
     "NAME": "Familiar Kit",
@@ -41,11 +32,27 @@
   },
   "${ModID}:OckhamsRazor": {
     "NAME": "Ockhams Razor",
-    "DESCRIPTION": "Your ${ModID}:Basic cards are played twice."
+    "DESCRIPTION": "Whenever you play a ${ModID}:Basic card, deal !M! damage to all enemies."
   },
   "${ModID}:BackToBasic": {
     "NAME": "Back To Basic",
     "DESCRIPTION": "Discard your hand and draw !M! ${ModID}:Basic cards. Gain [E] .",
     "UPGRADE_DESCRIPTION": "Discard your hand and draw !M! ${ModID}:Basic cards. Gain [E] [E] ."
+  },
+  "${ModID}:StrikePlus": {
+    "NAME": "Strike Plus",
+    "DESCRIPTION": "Add a *Strike to your hand and Upgrade it !M! times. Exhaust. NL ${ModID}:Pickup: Obtain a *Strike."
+  },
+  "${ModID}:ConjureDefends": {
+    "NAME": "Conjure Defends",
+    "DESCRIPTION": "Add a *Defend to your draw pile and ${ModID}:Modify it: \"Played X additional times\". Exhaust. NL ${ModID}:Pickup: Obtain a *Defend.",
+    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X additional times\". Exhaust. NL ${ModID}:Pickup: Obtain a *Defend."
+
+  },
+  "${ModID}:SimpleTrick": {
+    "NAME": "Simple Trick",
+    "DESCRIPTION": "Add a *Cardistry to your hand. The next !M! times you play one, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Add a *Cardistry+ to your hand. The next !M! times you play one, gain [E] ."
+
   }
 }

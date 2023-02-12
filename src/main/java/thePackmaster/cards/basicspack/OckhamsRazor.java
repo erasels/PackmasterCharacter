@@ -12,15 +12,16 @@ public class OckhamsRazor extends AbstractPackmasterCard {
     public final static String ID = makeID("OckhamsRazor");
 
     public OckhamsRazor() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF, "basics");
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF, "basics");
+        this.baseMagicNumber = this.magicNumber = 1;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new OckhamsPower(1)));
+        addToBot(new ApplyPowerAction(p, p, new OckhamsPower(this.magicNumber)));
     }
 
     public void upp(){
-        upgradeBaseCost(this.cost-1);
+        upgradeMagicNumber(1);
     }
 }
