@@ -7,7 +7,7 @@
     ]
   },
   "${ModID}:LikeClockworkPower": {
-    "NAME": "Like Clockwork",
+    "NAME": "钟表机械",
     "DESCRIPTIONS": [
       "回合结束时，手中每有一张 #y状态 或 #y诅咒 ，获得 #b",
       " 点 #y格挡 。"

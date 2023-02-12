@@ -4,7 +4,7 @@
     "DESCRIPTION": "随机将 !M! 张 ${ModID}:异色 牌加入手牌。 NL 其附带 虚无 。",
     "EXTENDED_DESCRIPTION": [
       "随机",
-      "本牌创造牌时低稀有度的牌比重更高。"
+      "本牌 #y创造 牌时低稀有度的牌比重更高。"
     ]
   },
   "${ModID}:StardustShield": {
@@ -20,7 +20,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 随机将 !M! 张 ${ModID}:异色 牌加入手牌。 NL 其附带 虚无 。",
     "EXTENDED_DESCRIPTION": [
       "随机",
-      "本牌创造牌时低稀有度的牌比重更高。"
+      "本牌 #y创造 牌时低稀有度的牌比重更高。"
     ]
   },
   "${ModID}:BackupRift": {
@@ -47,7 +47,7 @@
     "DESCRIPTION": "对目标随机打出 !M! 张 ${ModID}:异色 攻击牌。",
     "EXTENDED_DESCRIPTION": [
       "随机",
-      "本牌创造牌时低稀有度的牌比重更高。"
+      "本牌 #y创造 牌时低稀有度的牌比重更高。"
     ]
   },
   "${ModID}:Horizonbound": {

@@ -37,7 +37,7 @@
     ]
   },
   "${ModID}:Leprechaun": {
-    "NAME": "矮精灵",
+    "NAME": "魔法精灵",
     "DESCRIPTION": [
       "#y被动 ：你的回合开始时，获得一枚 #b",
       " 点的 #y骰子 。 NL #y激发 ：给予所有敌人 #b",

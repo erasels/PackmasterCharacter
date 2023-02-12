@@ -47,7 +47,7 @@
   },
   "${ModID}:Crusher": {
     "NAME": "破坏者",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点 伤害。 NL 本牌在手时，每当一张牌被创造，本牌下次耗能减1。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点 伤害。 NL 本牌在手时，每当一张牌被 ${ModID}:创造 ，本牌下次耗能减1。"
   },
   "${ModID}:PreservedThorns": {
     "NAME": "荆棘标本",

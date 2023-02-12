@@ -95,8 +95,8 @@
   },
   "${ModID}:PackSetup": {
     "TEXT": [
-      "将一组卡包加入牌池！",
-      "已加入卡包。"
+      "选择一组卡包来将其加入本局游戏的牌池！",
+      "已选定卡包："
     ]
   },
   "${ModID}:CurrentRunCardsTopPanelItem": {
