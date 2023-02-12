@@ -8,5 +8,10 @@
     "PROPER_NAME": "Cunning",
     "NAMES": ["cunning"],
     "DESCRIPTION": "When you enter this Stance, gain #b2 Vigor for each #yunique debuff among all enemies."
+  },
+  {
+    "PROPER_NAME": "Tainted",
+    "NAMES": ["tainted"],
+    "DESCRIPTION": "Doubles any debuffs you apply to this enemy."
   }
 ]

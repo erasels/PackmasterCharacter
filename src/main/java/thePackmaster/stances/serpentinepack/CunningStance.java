@@ -60,8 +60,7 @@ public class CunningStance extends AbstractStance {
             }
         }
         if (!uniquePowers.isEmpty()) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new VigorPower(AbstractDungeon.player, uniquePowers.size() * 2), uniquePowers.size() * 2));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, uniquePowers.size() * 2), uniquePowers.size() * 2));
         }
         uniquePowers.clear();
     }

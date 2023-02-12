@@ -2,6 +2,7 @@ package thePackmaster.cards.serpentinepack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.serpentinepack.VenemousExitPower;
@@ -16,8 +17,8 @@ public class PoisonedBlades extends AbstractSerpentineCard {
     public final static String ID = makeID("ApplyPoison");
 
 
-    public PoisonedBlades(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {
-        super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+    public PoisonedBlades() {
+        super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
     }
 
     @Override

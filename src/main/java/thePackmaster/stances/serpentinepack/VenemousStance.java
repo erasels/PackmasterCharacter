@@ -13,12 +13,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-import thePackmaster.util.AbstractUseCardStance;
+import com.megacrit.cardcrawl.vfx.combat.PotionBounceEffect;
+import thePackmaster.util.AbstractOnAttackStance;
 import thePackmaster.vfx.downfallpack.AncientStanceParticleEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class VenemousStance extends AbstractUseCardStance {
+public class VenemousStance extends AbstractOnAttackStance {
     public static final String STANCE_ID = makeID("Venemous");
     private static long sfxId = -1L;
 
@@ -50,7 +51,9 @@ public class VenemousStance extends AbstractUseCardStance {
         if (sfxId != -1L) {
             stopIdleSfx();
         }
+        AbstractDungeon.effectsQueue.add(new PotionBounceEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY));
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GREEN, true));
+        CardCrawlGame.sound.playA("STANCE_ENTER_CALM", 0.5f);
     }
 
     @Override
@@ -64,8 +67,8 @@ public class VenemousStance extends AbstractUseCardStance {
     }
 
     @Override
-    public void onAfterUseCard(UseCardAction action, AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new WeakPower(target, 1, false),1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new PoisonPower(target, AbstractDungeon.player, 2),2));
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new WeakPower(target, 1, false),1));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new PoisonPower(target, AbstractDungeon.player, 2),2));
     }
 }
