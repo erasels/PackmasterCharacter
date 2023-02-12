@@ -16,8 +16,14 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class ShivGem extends AbstractGemsCard {
     public final static String ID = makeID("ShivGem");
 
+    //This is a deprecated card replaced by LightningGem.  The card class remains for runs
+    //in-progress so they don't get drastically altered (potentially broken, not sure how
+    //cardmods work when IDs dont exist).
+    //Should delete this and its mod and strings in a month or so.
+
     public ShivGem() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        cardsToPreview = new Shiv();
     }
 
     @Override
@@ -27,7 +33,7 @@ public class ShivGem extends AbstractGemsCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new ChannelAction(new Lightning()));
+        Wiz.atb(new MakeTempCardInHandAction(new Shiv()));
     }
 
  
