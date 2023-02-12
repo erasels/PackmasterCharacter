@@ -25,12 +25,15 @@ public class ConjureDefends extends AbstractPackmasterCard implements OnObtainCa
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, "basics");
         this.exhaust = true;
         this.cardsToPreview = new Defend();
+        this.cardsToPreview.upgrade();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard card = this.cardsToPreview.makeStatEquivalentCopy();
-        addToBot(new ConjureCardsAction(p, this.freeToPlayOnce, this.energyOnUse, card));
+        if(this.upgraded){
+            addToBot(new ConjureCardsAction(p, this.freeToPlayOnce, this.energyOnUse+1, card));
+        } else addToBot(new ConjureCardsAction(p, this.freeToPlayOnce, this.energyOnUse, card));
     }
 
     @Override
@@ -39,6 +42,5 @@ public class ConjureDefends extends AbstractPackmasterCard implements OnObtainCa
     }
 
     public void upp(){
-        this.cardsToPreview.upgrade();
     }
 }
