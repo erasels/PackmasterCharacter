@@ -30,9 +30,17 @@ public class WardGemMod extends AbstractMadScienceModifier {
     }
 
     @Override
-    public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        Wiz.atb(new ChannelAction(new Frost()));
+    public void onInitialApplication(AbstractCard card) {
+        super.onInitialApplication(card);
+        if (card.cardsToPreview == null) {
+            card.cardsToPreview = new Ward();
+        }
     }
+    @Override
+    public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
+        Wiz.atb(new MakeTempCardInHandAction(new Ward()));
+    }
+
 
     @Override
     public AbstractCardModifier makeCopy() {
