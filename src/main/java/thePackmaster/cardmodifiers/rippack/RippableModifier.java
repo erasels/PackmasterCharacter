@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -44,15 +45,15 @@ public class RippableModifier extends AbstractCardModifier {
     }
 
     @Override
-    public String modifyName(String cardName, AbstractCard card) {
-        return TEXT[0] + cardName;
-    }
-
-    @Override
     public List<TooltipInfo> additionalTooltips(AbstractCard card) {
         ArrayList<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("rippable")), BaseMod.getKeywordDescription(makeID("rippable"))));
         return tooltips;
+    }
+
+    @Override
+    public List<String> extraDescriptors(AbstractCard card) {
+        return new ArrayList<>(Arrays.asList(TEXT[0]));
     }
 
     @Override

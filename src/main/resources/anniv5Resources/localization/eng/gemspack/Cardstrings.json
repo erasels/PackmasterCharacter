@@ -6,13 +6,13 @@
   },
   "${ModID}:WardGem": {
     "NAME": "Aquamarine",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Ward\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Ward\""
+    "DESCRIPTION": "${ModID}:Gem. NL \"Channel a Frost\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Channel a Frost\""
   },
   "${ModID}:ShivGem": {
     "NAME": "Fragmented Gem",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Shiv\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Shiv\""
+    "DESCRIPTION": "${ModID}:Gem. NL \"Channel a Lightning\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Channel a Lightning\""
   },
   "${ModID}:RetainGem": {
     "NAME": "Amber",
