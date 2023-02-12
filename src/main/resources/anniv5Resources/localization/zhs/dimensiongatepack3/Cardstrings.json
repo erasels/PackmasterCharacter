@@ -33,8 +33,8 @@
   },
   "${ModID}:RestorationDetonation": {
     "NAME": "回复爆弹",
-    "DESCRIPTION": "敌人回复 !M! 点生命，然后失去该值两倍的生命。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "敌人回复 !M! 点生命，然后失去该值两倍的生命。 NL 消耗 。"
+    "DESCRIPTION": "敌人回复 !M! 点生命，然后失去该值2倍的生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "敌人回复 !M! 点生命，然后失去该值3倍的生命。 NL 消耗 。"
   },
   "${ModID}:SelfWound": {
     "NAME": "自我伤害",

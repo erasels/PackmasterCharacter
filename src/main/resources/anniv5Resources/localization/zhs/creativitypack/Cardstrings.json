@@ -25,7 +25,7 @@
   },
   "${ModID}:CraftyMove": {
     "NAME": "创造性行动",
-    "DESCRIPTION": "造成 !D! 点伤害。 若本回合 ${ModID}:创造 过牌， NL 获得 [E] 并抽一张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合 ${ModID}:创造 过牌， NL 获得 [E] 并抽一张牌。"
   },
   "${ModID}:BarrierBeacon": {
     "NAME": "信标屏障",
