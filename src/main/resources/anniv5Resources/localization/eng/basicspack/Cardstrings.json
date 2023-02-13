@@ -15,8 +15,8 @@
   },
   "${ModID}:LoseIt": {
     "NAME": "Lose It",
-    "DESCRIPTION": "Add a *Rummage to your hand. Set the cost of your *Rummages to !M!. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Rummage+ to your hand. Set the cost of your *Rummages to !M!. Exhaust."
+    "DESCRIPTION": "Add a *Rummage to your hand. Set the cost of your *Rummages to !M! this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Rummage+ to your hand. Set the cost of your *Rummages to !M! this combat. NL Exhaust."
   },
   "${ModID}:SimplifiedStrike": {
     "NAME": "Simplified Strike",
@@ -42,8 +42,8 @@
   },
   "${ModID}:StrikePlus": {
     "NAME": "Strike Plus",
-    "DESCRIPTION": "Add a *Strike+5 to your hand. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Strike+7 to your hand. Exhaust."
+    "DESCRIPTION": "Add a *Strike+5 to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Strike+7 to your hand. NL Exhaust."
   },
   "${ModID}:ConjureDefends": {
     "NAME": "Conjure Defends",
@@ -53,8 +53,8 @@
   },
   "${ModID}:SimpleTrick": {
     "NAME": "Simple Trick",
-    "DESCRIPTION": "Add a *Cardistry to your hand. The next !M! times you play one, gain [E] . Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Cardistry+ to your hand. The next !M! times you play one, gain [E] . Exhaust."
+    "DESCRIPTION": "Add a *Cardistry to your hand. The next !M! times you play one, gain [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Cardistry+ to your hand. The next !M! times you play one, gain [E] . NL Exhaust."
 
   }
 }
