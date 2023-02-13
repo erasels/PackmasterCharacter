@@ -51,10 +51,10 @@
   "${ModID}:BaalorBash": {
     "NAME": "Baalorlord's　Bash",
     "DESCRIPTION": "${ModID}:固无 。 NL 造成 !D! 点伤害。 NL 将一张 *Ｂ *ａ *ａ *ｌ *ｏ *ｒ *＇ *ｓ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｂ *ａ *ａ *ｌ *ｏ *ｒ *＇ *ｓ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｃ *ｏ *ｍ *ｆ *ｙ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:BaalorBlueprint": {
-    "NAME": "Baalor's　Blueprint",
+    "NAME": "Comfy　Blueprint",
     "DESCRIPTION": "消耗 。 NL 将弃牌堆洗入抽牌堆，并将一张 *Ｔｈ *ｅ　 *Ｃ *ｏ *ｚｙ *　Ｃｈ *ａｉ *ｒ 加入弃牌堆。"
   },
   "${ModID}:TheCozyChair": {

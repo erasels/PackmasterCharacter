@@ -11,7 +11,7 @@
   },
   "${ModID}:PrimeDirective": {
     "NAME": "最高指令",
-    "DESCRIPTION": "所有攻击牌附加效果： NL ' ${ModID}:累奇 ：增加 !M! 点伤害。'"
+    "DESCRIPTION": "所有攻击牌附加效果： NL \" ${ModID}:累奇 ：伤害加 !M! 。\""
   },
   "${ModID}:WitzBolt": {
     "NAME": "智慧箭弹",

@@ -1,8 +1,8 @@
 {
   "${ModID}:TempStrengthGem": {
     "NAME": "红宝石",
-    "DESCRIPTION": "${ModID}:宝石 。 NL \"获得2层临时 力量 \"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得2层临时 力量 \""
+    "DESCRIPTION": "${ModID}:宝石 。 NL \"获得2层临时 力量 。\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得2层临时 力量 。\""
   },
   "${ModID}:WardGem": {
     "NAME": "蓝晶",
@@ -15,14 +15,14 @@
     "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得一张 *小刀 。\""
   },
   "${ModID}:FrostGem": {
-    "NAME": "Aquamarine",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Channel a Frost\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Channel a Frost\""
+    "NAME": "蓝晶",
+    "DESCRIPTION": "${ModID}:宝石 。 NL \" 生成 一个 冰霜 球。\"",
+    "UPGRADE_DESCRIPTION": "$${ModID}:宝石 (可镶嵌2次)。 NL \" 生成 一个 冰霜 球。\""
   },
   "${ModID}:LightningGem": {
-    "NAME": "Fragmented Gem",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Channel a Lightning\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Channel a Lightning\""
+    "NAME": "宝石碎片",
+    "DESCRIPTION": "${ModID}:宝石 。 NL \" 生成 一个 闪电 球。\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \" 生成 一个 闪电 球。\""
   },
   "${ModID}:RetainGem": {
     "NAME": "琥珀",

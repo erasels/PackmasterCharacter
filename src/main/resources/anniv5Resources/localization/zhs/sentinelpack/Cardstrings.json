@@ -24,8 +24,8 @@
   },
   "${ModID}:Swagger": {
     "NAME": "酷傲",
-    "DESCRIPTION": "若回合结束时处于 姿态 ， NL 获得 !M! 点 力量 与 敏捷 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 若回合结束时处于 姿态 ， NL 获得 !M! 点 力量 与 敏捷 。"
+    "DESCRIPTION": "若回合结束处于 姿态 ， NL 获得 !M! 点 力量 与 敏捷 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 若回合结束处于 姿态 ， NL 获得 !M! 点 力量 与 敏捷 。"
   },
   "${ModID}:MoodSwing": {
     "NAME": "心情转换",
