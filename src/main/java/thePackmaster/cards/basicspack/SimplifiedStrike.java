@@ -15,11 +15,10 @@ public class SimplifiedStrike extends AbstractPackmasterCard {
     public final static String ID = makeID("SimplifiedStrike");
 
     public SimplifiedStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, "basics");
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, "basics");
         this.tags.add(CardTags.STRIKE);
         this.baseMagicNumber = this.magicNumber = 3;
         this.baseDamage = this.damage = 0;
-        this.isUnnate = true;
     }
 
     @Override
@@ -55,6 +54,6 @@ public class SimplifiedStrike extends AbstractPackmasterCard {
     }
 
     public void upp(){
-        upgradeMagicNumber(1);
+        this.isUnnate = true;
     }
 }

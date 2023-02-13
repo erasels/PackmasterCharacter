@@ -20,7 +20,8 @@
   },
   "${ModID}:SimplifiedStrike": {
     "NAME": "Simplified Strike",
-    "DESCRIPTION": "${ModID}:Unnate. NL Deal !M! damage for each ${ModID}:Basic card you played this combat.",
+    "DESCRIPTION": "Deal damage equal to !M! times the number of ${ModID}:Basic cards played this combat.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL Deal damage equal to !M! times the number of ${ModID}:Basic cards played this combat.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage)"
     ]
