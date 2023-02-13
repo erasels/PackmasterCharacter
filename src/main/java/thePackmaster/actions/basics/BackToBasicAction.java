@@ -1,8 +1,10 @@
 package thePackmaster.actions.basics;
 
+import basemod.ReflectionHacks;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,6 +13,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.cardmodifiers.basicspack.DuplicateModifier;
+import thePackmaster.cards.Strike;
 
 import java.util.ArrayList;
 
@@ -18,13 +21,22 @@ public class BackToBasicAction extends AbstractGameAction {
     public static final String[] TEXT = (CardCrawlGame.languagePack.getUIString("BetterToHandAction")).TEXT;
 
     private AbstractPlayer player;
-    private AbstractCard sourceCard;
 
-    public BackToBasicAction(AbstractCard sourceCard) {
+    public BackToBasicAction() {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.player = AbstractDungeon.player;
-        this.sourceCard = sourceCard;
+    }
+
+    private void basicCheck(AbstractCard c){
+        if(c.rarity == AbstractCard.CardRarity.BASIC){
+            AbstractCard targetCard = new Strike();
+            for(AbstractGameAction a : AbstractDungeon.actionManager.actions)
+                if(a instanceof UseCardAction) {
+                    targetCard = ReflectionHacks.getPrivate(a, AbstractGameAction.class, "targetCard");
+                }
+            targetCard.exhaust = true;
+        }
     }
 
     public void update() {
@@ -42,6 +54,7 @@ public class BackToBasicAction extends AbstractGameAction {
                         this.player.hand.addToHand(c);
                         this.player.discardPile.removeCard(c);
                     }
+                    basicCheck(c);
                     c.lighten(false);
                     c.applyPowers();
                 }
@@ -58,12 +71,10 @@ public class BackToBasicAction extends AbstractGameAction {
                     this.player.hand.addToHand(c);
                     this.player.discardPile.removeCard(c);
                 }
+                basicCheck(c);
                 c.lighten(false);
                 c.unhover();
                 c.applyPowers();
-                if(c.rarity == AbstractCard.CardRarity.BASIC){
-                    this.player.hand.removeCard(this.sourceCard);
-                }
             }
             for (AbstractCard c : this.player.discardPile.group) {
                 c.unhover();

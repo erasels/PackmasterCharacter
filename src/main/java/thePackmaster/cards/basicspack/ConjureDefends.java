@@ -30,6 +30,7 @@ public class ConjureDefends extends AbstractPackmasterCard {
         this.cardsToPreview = new Defend();
         this.cardsToPreview.upgrade();
         this.cardsToPreview.rawDescription += CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("DuplicateModifier")).TEXT[1] + "X" + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("DuplicateModifier")).TEXT[2];
+        this.cardsToPreview.initializeDescription();
     }
 
     @Override
