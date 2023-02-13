@@ -52,8 +52,8 @@
   },
   "${ModID}:SimpleTrick": {
     "NAME": "Simple Trick",
-    "DESCRIPTION": "Add a *Cardistry to your hand. The next !M! times you play one, gain [E] .",
-    "UPGRADE_DESCRIPTION": "Add a *Cardistry+ to your hand. The next !M! times you play one, gain [E] ."
+    "DESCRIPTION": "Add a *Cardistry to your hand. The next !M! times you play one, gain [E] . Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Cardistry+ to your hand. The next !M! times you play one, gain [E] . Exhaust."
 
   }
 }

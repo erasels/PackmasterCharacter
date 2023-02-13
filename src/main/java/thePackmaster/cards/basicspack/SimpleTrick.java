@@ -17,6 +17,7 @@ public class SimpleTrick extends AbstractPackmasterCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, "basics");
         this.baseMagicNumber = this.magicNumber = 2;
         this.cardsToPreview = new Cardistry();
+        this.exhaust = true;
     }
 
     @Override
