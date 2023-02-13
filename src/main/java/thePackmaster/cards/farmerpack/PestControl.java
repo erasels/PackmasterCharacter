@@ -25,17 +25,30 @@ public class PestControl extends AbstractFarmerCard {
         }
     }
     public void calculateCardDamage(AbstractMonster mo) {
+        this.baseMagicNumber = this.magicNumber = checkTypes(false);
+        this.isMagicNumberModified = false;
         super.calculateCardDamage(mo);
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
-        this.initializeDescription();
+
+        if (this.baseMagicNumber > 0) {
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            this.initializeDescription();
+        }
+        else {
+            this.rawDescription = cardStrings.DESCRIPTION;
+            this.initializeDescription();
+        }
     }
     public void applyPowers() {
-        int count = checkTypes(false);
-        if (count > 0) {
-            this.baseMagicNumber = count;
-            super.applyPowers();
+        this.baseMagicNumber = this.magicNumber = checkTypes(false);
+        this.isMagicNumberModified = false;
+        super.applyPowers();
+
+        if (this.baseMagicNumber > 0) {
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            this.initializeDescription();
+        }
+        else {
+            this.rawDescription = cardStrings.DESCRIPTION;
             this.initializeDescription();
         }
     }

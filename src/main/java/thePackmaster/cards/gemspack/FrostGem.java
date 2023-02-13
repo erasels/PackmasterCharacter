@@ -1,30 +1,32 @@
 package thePackmaster.cards.gemspack;
 
 import basemod.abstracts.AbstractCardModifier;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.EnergizedPower;
-import thePackmaster.cardmodifiers.gemspack.EnergyGemMod;
+import com.megacrit.cardcrawl.orbs.Frost;
+import com.megacrit.cardcrawl.orbs.Lightning;
+import thePackmaster.cardmodifiers.gemspack.FrostGemMod;
+import thePackmaster.cardmodifiers.gemspack.ShivGemMod;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class EnergyGem extends AbstractGemsCard {
-    public final static String ID = makeID("EnergyGem");
+public class FrostGem extends AbstractGemsCard {
+    public final static String ID = makeID("FrostGem");
 
-    public EnergyGem() {
+    public FrostGem() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     @Override
     public AbstractCardModifier myMod() {
-        return new EnergyGemMod();
+        return new FrostGemMod();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.applyToSelf(new EnergizedPower(p, 1));
+        Wiz.atb(new ChannelAction(new Frost()));
     }
 
  

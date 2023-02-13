@@ -21,25 +21,38 @@ public class HarvestCarrots extends AbstractFarmerCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int count = checkTypes(true);
-            for (int j = 0; j < count+1; j++) {
-                att(new GainBlockAction(p(), block));
-            }
+        for (int j = 0; j < count+1; j++) {
+            att(new GainBlockAction(p(), block));
+        }
     }
     public void calculateCardDamage(AbstractMonster mo) {
+        this.baseMagicNumber = this.magicNumber = checkTypes(false);
+        this.isMagicNumberModified = false;
         super.calculateCardDamage(mo);
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
-        this.initializeDescription();
-    }
-    public void applyPowers() {
-        int count = checkTypes(false);
-        if (count > 0) {
-            this.baseMagicNumber = count;
-            super.applyPowers();
+        if (this.baseMagicNumber > 0) {
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
             this.initializeDescription();
         }
+        else {
+            this.rawDescription = cardStrings.DESCRIPTION;
+            this.initializeDescription();
+        }
     }
+    public void applyPowers() {
+        this.baseMagicNumber = this.magicNumber = checkTypes(false);
+        this.isMagicNumberModified = false;
+        super.applyPowers();
+
+        if (this.baseMagicNumber > 0) {
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            this.initializeDescription();
+        }
+        else {
+            this.rawDescription = cardStrings.DESCRIPTION;
+            this.initializeDescription();
+        }
+    }
+
     public void onMoveToDiscard() {
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
