@@ -14,7 +14,7 @@ import thePackmaster.cards.Strike;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class StrikePlus extends AbstractPackmasterCard implements OnObtainCard {
+public class StrikePlus extends AbstractPackmasterCard {
     public final static String ID = makeID("StrikePlus");
 
     public StrikePlus() {
@@ -22,11 +22,6 @@ public class StrikePlus extends AbstractPackmasterCard implements OnObtainCard {
         this.cardsToPreview = new Strike();
         this.baseMagicNumber = this.magicNumber = 5;
         this.exhaust = true;
-    }
-
-    @Override
-    public void onObtainCard() {
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new Strike(), Settings.HEIGHT / 2, Settings.HEIGHT / 2));
     }
 
     @Override

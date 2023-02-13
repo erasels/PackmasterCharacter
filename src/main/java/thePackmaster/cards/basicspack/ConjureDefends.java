@@ -18,7 +18,7 @@ import thePackmaster.cards.Defend;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ConjureDefends extends AbstractPackmasterCard implements OnObtainCard {
+public class ConjureDefends extends AbstractPackmasterCard {
     public final static String ID = makeID("ConjureDefends");
 
     public ConjureDefends() {
@@ -34,11 +34,6 @@ public class ConjureDefends extends AbstractPackmasterCard implements OnObtainCa
         if(this.upgraded){
             addToBot(new ConjureCardsAction(p, this.freeToPlayOnce, this.energyOnUse+1, card));
         } else addToBot(new ConjureCardsAction(p, this.freeToPlayOnce, this.energyOnUse, card));
-    }
-
-    @Override
-    public void onObtainCard() {
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new Defend(), Settings.HEIGHT / 2, Settings.HEIGHT / 2));
     }
 
     public void upp(){

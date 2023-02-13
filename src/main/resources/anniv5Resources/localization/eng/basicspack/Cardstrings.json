@@ -41,12 +41,12 @@
   },
   "${ModID}:StrikePlus": {
     "NAME": "Strike Plus",
-    "DESCRIPTION": "Add a *Strike to your hand and Upgrade it !M! times. Exhaust. NL ${ModID}:Pickup: Obtain a *Strike."
+    "DESCRIPTION": "Add a *Strike to your hand and Upgrade it !M! times. Exhaust."
   },
   "${ModID}:ConjureDefends": {
     "NAME": "Conjure Defends",
-    "DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X additional times\". Exhaust. NL ${ModID}:Pickup: Obtain a *Defend.",
-    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X+1 additional times\". Exhaust. NL ${ModID}:Pickup: Obtain a *Defend."
+    "DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X additional times\". Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X+1 additional times\". Exhaust."
 
   },
   "${ModID}:SimpleTrick": {
