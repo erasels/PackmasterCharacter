@@ -13,7 +13,7 @@ public class OckhamsRazor extends AbstractPackmasterCard {
 
     public OckhamsRazor() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF, "basics");
-        this.baseMagicNumber = this.magicNumber = 1;
+        this.baseMagicNumber = this.magicNumber = 2;
     }
 
     @Override
