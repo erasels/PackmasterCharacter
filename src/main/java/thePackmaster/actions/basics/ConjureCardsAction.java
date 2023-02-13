@@ -3,6 +3,7 @@ package thePackmaster.actions.basics;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -40,7 +41,7 @@ public class ConjureCardsAction extends AbstractGameAction {
         if(effect>0) {
             CardModifierManager.addModifier(card, new DuplicateModifier(effect));
         }
-        addToBot(new MakeTempCardInDrawPileAction(card, 1, true, true));
+        addToBot(new MakeTempCardInHandAction(card));
         if (!this.freeToPlayOnce)
             this.p.energy.use(EnergyPanel.totalCount);
         this.isDone = true;

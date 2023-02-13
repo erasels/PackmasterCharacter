@@ -45,8 +45,8 @@
   },
   "${ModID}:ConjureDefends": {
     "NAME": "Conjure Defends",
-    "DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X additional times\". Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X+1 additional times\". Exhaust."
+    "DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X additional times\". Refund 1. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X+1 additional times\". Refund 1. Exhaust."
 
   },
   "${ModID}:SimpleTrick": {
