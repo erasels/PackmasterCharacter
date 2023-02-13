@@ -50,12 +50,12 @@
   },
   "${ModID}:BaalorBash": {
     "NAME": "Baalorlord's　Bash",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｂ *ａ *ａ *ｌ *ｏ *ｒ *＇ *ｓ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL 将一张 *Ｂ *ａ *ａ *ｌ *ｏ *ｒ *＇ *ｓ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "${ModID}:固无 。 NL 造成 !D! 点伤害。 NL 将一张 *Ｂ *ａ *ａ *ｌ *ｏ *ｒ *＇ *ｓ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｂ *ａ *ａ *ｌ *ｏ *ｒ *＇ *ｓ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:BaalorBlueprint": {
     "NAME": "Baalor's　Blueprint",
-    "DESCRIPTION": "将弃牌堆洗入抽牌堆， NL 并将一张 *Ｔｈ *ｅ　 *Ｃ *ｏ *ｚｙ *　Ｃｈ *ａｉ *ｒ 加入抽牌堆底部。 消耗 。"
+    "DESCRIPTION": "消耗 。 NL 将弃牌堆洗入抽牌堆，并将一张 *Ｔｈ *ｅ　 *Ｃ *ｏ *ｚｙ *　Ｃｈ *ａｉ *ｒ 加入弃牌堆。"
   },
   "${ModID}:TheCozyChair": {
     "NAME": "The　Cozy　Chair",
