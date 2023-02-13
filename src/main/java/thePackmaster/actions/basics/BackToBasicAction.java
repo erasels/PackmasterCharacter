@@ -15,7 +15,7 @@ import thePackmaster.cardmodifiers.basicspack.DuplicateModifier;
 import java.util.ArrayList;
 
 public class BackToBasicAction extends AbstractGameAction {
-    public static final String[] TEXT = (CardCrawlGame.languagePack.getUIString("BackToBasicAction")).TEXT;
+    public static final String[] TEXT = (CardCrawlGame.languagePack.getUIString("BetterToHandAction")).TEXT;
 
     private AbstractPlayer player;
     private AbstractCard sourceCard;
