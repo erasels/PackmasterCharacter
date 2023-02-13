@@ -9,7 +9,7 @@
   },
   "${ModID}:Clang": {
     "NAME": "铛",
-    "DESCRIPTION": "手中有状态或诅咒才能打出。 NL 造成 !D! 点伤害。",
+    "DESCRIPTION": "手中有 *诅咒 或 *状态 才能打出。 NL 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "我没有诅咒或状态牌。"
     ]
@@ -37,7 +37,7 @@
   },
   "${ModID}:LikeClockwork": {
     "NAME": "钟表机械",
-    "DESCRIPTION": "回合结束时，手中每有一张 诅咒 或 状态，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "回合结束时，手中每有一张 诅咒 或 *状态 ，获得 !M! 点 格挡 。"
   },
   "${ModID}:SavedByTheBell": {
     "NAME": "铃铛援救",

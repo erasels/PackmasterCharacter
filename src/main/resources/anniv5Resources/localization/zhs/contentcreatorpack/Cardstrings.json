@@ -14,8 +14,8 @@
   },
   "${ModID}:SneakyteakStrike": {
     "NAME": "Sneakyteak　Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｄａｒｋｓｉｄｅ　Ｓｌａｐ 加入抽牌堆顶部。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｄａｒｋｓｉｄｅ　Ｓｌａｐ+ 加入抽牌堆顶部。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｄ *ａ *ｒ *ｋ *ｓ *ｉ *ｄ *ｅ *　Ｓ *ｌ *ａ *ｐ 加入抽牌堆顶部。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 将一张 *Ｄ *ａ *ｒ *ｋ *ｓ *ｉ *ｄ *ｅ *　Ｓ *ｌ *ａ *ｐ 加入抽牌堆顶部。"
   },
   "${ModID}:DarksideSlap": {
     "NAME": "Darkside　Slap",
@@ -50,12 +50,12 @@
   },
   "${ModID}:BaalorBash": {
     "NAME": "Baalorlord's　Bash",
-    "DESCRIPTION": "${ModID}:固无 。 造成 !D! 点伤害。 NL 将一张 *Ｂａａｌｏｒ＇ｓ　Ｂｌｕｅｐｒｉｎｔ 加入抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｂａａｌｏｒ＇ｓ　Ｂｌｕｅｐｒｉｎｔ 加入抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "${ModID}:固无 。 NL 造成 !D! 点伤害。 NL 将一张 *Ｂ *ａ *ａ *ｌ *ｏ *ｒ *＇ *ｓ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｂ *ａ *ａ *ｌ *ｏ *ｒ *＇ *ｓ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:BaalorBlueprint": {
     "NAME": "Baalor's　Blueprint",
-    "DESCRIPTION": "将弃牌堆洗入抽牌堆， NL 并将一张 Ｔｈｅ　Ｃｏｚｙ　Ｃｈａｉｒ 加入在弃牌堆放入。 消耗 。"
+    "DESCRIPTION": "消耗 。 NL 将弃牌堆洗入抽牌堆，并将一张 *Ｔｈ *ｅ　 *Ｃ *ｏ *ｚｙ *　Ｃｈ *ａｉ *ｒ 加入弃牌堆。"
   },
   "${ModID}:TheCozyChair": {
     "NAME": "The　Cozy　Chair",

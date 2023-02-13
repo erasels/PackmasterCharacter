@@ -26,7 +26,7 @@
   "${ModID}:GammaWard": {
     "NAME": "伽玛护纹",
     "DESCRIPTION": "获得 !B! 点 格挡 。",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:累偶 ：", "你打出的下张技能牌附带效果' ${ModID}:累偶 ：获得 !M! 点 格挡 。'"]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:累偶 ：", "你本回合打出的下张技能牌临时附带效果' ${ModID}:累偶 ：获得 !M! 点 格挡 。'"]
   },
   "${ModID}:Flourish": {
     "NAME": "繁盛",
