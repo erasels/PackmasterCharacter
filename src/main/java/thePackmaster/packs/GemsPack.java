@@ -41,6 +41,8 @@ public class GemsPack extends AbstractCardPack {
         cards.add(DiceGem.ID);
         cards.add(OccultGem.ID);
         cards.add(PersistGem.ID);
+        cards.add(FrostGem.ID);
+        cards.add(LightningGem.ID);
         return cards;
     }
 

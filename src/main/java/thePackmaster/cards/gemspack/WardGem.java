@@ -21,8 +21,14 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class WardGem extends AbstractGemsCard {
     public final static String ID = makeID("WardGem");
 
+    //This is a deprecated card replaced by FrostGem.  The card class remains for runs
+    //in-progress so they don't get drastically altered (potentially broken, not sure how
+    //cardmods work when IDs dont exist).
+    //Should delete this and its mod and strings in a month or so.
+
     public WardGem() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        cardsToPreview = new Ward();
     }
 
     @Override
@@ -32,7 +38,7 @@ public class WardGem extends AbstractGemsCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new ChannelAction(new Frost()));
+        Wiz.atb(new MakeTempCardInHandAction(new Ward()));
     }
 
 
