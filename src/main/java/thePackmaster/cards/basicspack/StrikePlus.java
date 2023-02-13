@@ -18,24 +18,26 @@ public class StrikePlus extends AbstractPackmasterCard {
     public final static String ID = makeID("StrikePlus");
 
     public StrikePlus() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, "basics");
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, "basics");
         this.cardsToPreview = new Strike();
-        this.baseMagicNumber = this.magicNumber = 5;
+        for(int i = 0; i<5;i++){
+            this.cardsToPreview.upgraded = false;
+            this.cardsToPreview.upgrade();
+        }
+        this.cardsToPreview.name = this.cardsToPreview.originalName + "+" + this.cardsToPreview.timesUpgraded;
         this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard card = this.cardsToPreview;
-        for(int i = 0; i<this.magicNumber;i++){
-            card.upgraded = false;
-            card.upgrade();
-        }
-        card.name = card.originalName + "+" + card.timesUpgraded;
-        addToBot(new MakeTempCardInHandAction(card));
+        addToBot(new MakeTempCardInHandAction(this.cardsToPreview));
     }
 
     public void upp(){
-        upgradeMagicNumber(2);
+        for(int i = 0; i<2;i++){
+            this.cardsToPreview.upgraded = false;
+            this.cardsToPreview.upgrade();
+        }
+        this.cardsToPreview.name = this.cardsToPreview.originalName + "+" + this.cardsToPreview.timesUpgraded;
     }
 }

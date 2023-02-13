@@ -41,12 +41,13 @@
   },
   "${ModID}:StrikePlus": {
     "NAME": "Strike Plus",
-    "DESCRIPTION": "Add a *Strike to your hand and Upgrade it !M! times. Exhaust."
+    "DESCRIPTION": "Add a *Strike+5 to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Strike+7 to your hand. Exhaust."
   },
   "${ModID}:ConjureDefends": {
     "NAME": "Conjure Defends",
-    "DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X additional times\". Refund 1. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your draw pile and ${ModID}:Modify it: \"Played X+1 additional times\". Refund 1. Exhaust."
+    "DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Played X additional times\". Refund 1. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Played X+1 additional times\". Refund 1. Exhaust."
 
   },
   "${ModID}:SimpleTrick": {
