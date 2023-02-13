@@ -37,8 +37,8 @@
   },
   "${ModID}:BackToBasic": {
     "NAME": "Back To Basic",
-    "DESCRIPTION": "Discard your hand and draw !M! ${ModID}:Basic cards. Gain [E] .",
-    "UPGRADE_DESCRIPTION": "Discard your hand and draw !M! ${ModID}:Basic cards. Gain [E] [E] ."
+    "DESCRIPTION": "Put a card from your discard pile into your hand. If it was not a ${ModID}:Basic card, Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your discard pile into your hand. If it was not a ${ModID}:Basic card, Exhaust."
   },
   "${ModID}:StrikePlus": {
     "NAME": "Strike Plus",
