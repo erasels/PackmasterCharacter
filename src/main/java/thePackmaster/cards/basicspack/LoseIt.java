@@ -22,7 +22,6 @@ public class LoseIt extends AbstractPackmasterCard {
         this.cardsToPreview = new Rummage();
         this.cardsToPreview.costForTurn = this.cardsToPreview.cost = 1;
         this.cardsToPreview.isCostModified = true;
-        this.isInnate = true;
         this.baseMagicNumber = this.magicNumber = 1;
     }
 

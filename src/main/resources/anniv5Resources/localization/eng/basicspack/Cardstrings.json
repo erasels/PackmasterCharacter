@@ -15,8 +15,8 @@
   },
   "${ModID}:LoseIt": {
     "NAME": "Lose It",
-    "DESCRIPTION": "Innate. NL Add a *Rummage to your hand. Set the cost of your *Rummages to !M!. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add a *Rummage+ to your hand. Set the cost of your *Rummages to !M!. Exhaust."
+    "DESCRIPTION": "Add a *Rummage to your hand. Set the cost of your *Rummages to !M!. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Rummage+ to your hand. Set the cost of your *Rummages to !M!. Exhaust."
   },
   "${ModID}:SimplifiedStrike": {
     "NAME": "Simplified Strike",
