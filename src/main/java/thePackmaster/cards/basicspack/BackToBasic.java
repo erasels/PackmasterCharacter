@@ -2,31 +2,12 @@ package thePackmaster.cards.basicspack;
 
 import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
-import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Zap;
-import com.megacrit.cardcrawl.cards.green.Survivor;
-import com.megacrit.cardcrawl.cards.red.Bash;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.FocusPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import thePackmaster.actions.basics.BackToBasicAction;
-import thePackmaster.actions.transmutationpack.DrawFilteredCardsAction;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.cards.Strike;
-import thePackmaster.util.Wiz;
-
-import java.util.List;
-import java.util.function.Consumer;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
