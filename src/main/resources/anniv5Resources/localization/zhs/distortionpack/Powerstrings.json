@@ -16,9 +16,9 @@
     ]
   },
   "${ModID}:DeteriorationPower": {
-    "NAME": "Deterioration",
+    "NAME": "恶化",
     "DESCRIPTIONS": [
-      "回合结束时，随机 #y消耗 弃牌堆一张牌并获得 #b",
+      "你的回合结束时，随机 #y消耗 弃牌堆一张牌并获得 #b",
       " 点 #y格挡 。"
     ]
   }
