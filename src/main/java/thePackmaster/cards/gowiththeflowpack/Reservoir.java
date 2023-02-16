@@ -12,7 +12,7 @@ public class Reservoir extends AbstractHydrologistCard {
     public final static String ID = makeID("Reservoir");
 
     public Reservoir() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.NONE, Subtype.WATER);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE, Subtype.WATER);
         exhaust = true;
     }
 
@@ -25,6 +25,6 @@ public class Reservoir extends AbstractHydrologistCard {
     }
 
     public void upp() {
-        exhaust = false;
+        upgradeBaseCost(0);
     }
 }
