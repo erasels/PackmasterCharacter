@@ -18,8 +18,8 @@
   },
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "盛大宴会",
-    "DESCRIPTION": "固有 。 NL 回合结束时，依次将下列一张 ${ModID}:可乐饼 加入手牌： 格挡 、 虚弱 、 力量 、 易伤 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合结束时，依次将下列一张 ${ModID}:可乐饼 +加入手牌： 格挡 、 虚弱 、 力量 、 易伤 。"
+    "DESCRIPTION": "固有 。 NL 回合结束时，依次将下列一张 *可乐饼 加入手牌： 格挡 、 虚弱 、 力量 、 易伤 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合结束时，依次将下列一张 *可乐饼 +加入手牌： 格挡 、 虚弱 、 力量 、 易伤 。"
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "肉馅饼",
