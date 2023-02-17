@@ -25,7 +25,7 @@ public class SimpleTrickPower extends AbstractPackmasterPower {
         if (card.cardID.equals(Cardistry.ID) ) {
             flash();
             addToBot(new GainEnergyAction(1));
-            this.amount--;
+            this.reducePower(1);
             this.updateDescription();
             if(this.amount == 0){
                 addToTop(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));

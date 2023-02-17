@@ -20,29 +20,22 @@ public class LoseIt extends AbstractPackmasterCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, "basics");
         this.exhaust = true;
         this.cardsToPreview = new Rummage();
-        this.cardsToPreview.costForTurn = this.cardsToPreview.cost = 1;
-        this.cardsToPreview.isCostModified = true;
         this.baseMagicNumber = this.magicNumber = 1;
+        this.cardsToPreview.modifyCostForCombat(-this.magicNumber);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToTop(new MakeTempCardInHandAction(cardsToPreview));
+        addToTop(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy()));
         for(AbstractCard c : p.hand.group)
-            if (c.cardID.equals(Rummage.ID) && c.cost > this.magicNumber) {
-                c.costForTurn = c.cost = this.magicNumber;
-                c.isCostModified = true;
-            }
+            if (c.cardID.equals(Rummage.ID) && c.cost > this.magicNumber)
+                c.modifyCostForCombat(-this.magicNumber);
         for(AbstractCard c : p.drawPile.group)
-            if (c.cardID.equals(Rummage.ID) && c.cost > this.magicNumber) {
-                c.costForTurn = c.cost = this.magicNumber;
-                c.isCostModified = true;
-            }
+            if (c.cardID.equals(Rummage.ID) && c.cost > this.magicNumber)
+                c.modifyCostForCombat(-this.magicNumber);
         for(AbstractCard c : p.discardPile.group)
-            if (c.cardID.equals(Rummage.ID) && c.cost > this.magicNumber) {
-                c.costForTurn = c.cost = this.magicNumber;
-                c.isCostModified = true;
-            }
+            if (c.cardID.equals(Rummage.ID) && c.cost > this.magicNumber)
+                c.modifyCostForCombat(-this.magicNumber);
     }
 
     public void upp(){

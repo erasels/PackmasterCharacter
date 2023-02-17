@@ -33,22 +33,21 @@
   },
   "${ModID}:OckhamsRazor": {
     "NAME": "Ockhams Razor",
-    "DESCRIPTION": "Whenever you play a ${ModID}:Basic card, deal !M! damage to all enemies."
+    "DESCRIPTION": "Whenever you play a ${ModID}:Basic card, deal !M! damage to ALL enemies."
   },
   "${ModID}:BackToBasic": {
     "NAME": "Back To Basic",
     "DESCRIPTION": "Put a card from your discard pile into your hand. If it was not a ${ModID}:Basic card, Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your discard pile into your hand. If it was not a ${ModID}:Basic card, Exhaust."
   },
-  "${ModID}:StrikePlus": {
-    "NAME": "Strike Plus",
-    "DESCRIPTION": "Add a *Strike+5 to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Strike+7 to your hand. NL Exhaust."
+  "${ModID}:BasicHit": {
+    "NAME": "Basic Hit",
+    "DESCRIPTION": "Gain a *Strike and Upgrade it !M! times. NL Exhaust."
   },
   "${ModID}:ConjureDefends": {
     "NAME": "Conjure Defends",
-    "DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Played X additional times\". Refund 1. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Played X+1 additional times\". Refund 1. Exhaust."
+    "DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Play this X additional times\". Refund 1. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Play this X+1 additional times\". Refund 1. Exhaust."
 
   },
   "${ModID}:SimpleTrick": {

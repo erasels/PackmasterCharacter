@@ -3,19 +3,20 @@
     "TEXT": [
       " NL Play this an additional time.",
       " NL Play this ",
-      " additional times."
+      " additional times.",
+      " NL Play this X additional times."
     ]
   },
   "${ModID}:BasicsPack": {
     "TEXT": [
       "Basics",
-      "A pack centered around very Basic cards.",
+      "A pack centered around very ${ModID}:Basic cards.",
       "Jack Renoson"
     ]
   },
   "${ModID}:BasicsPackHat": {
     "TEXT": [
-      "A Basic hat for a Simple adventurer.",
+      "A Basic hat for a simple adventurer.",
       "Basic Fedora"
     ]
   }

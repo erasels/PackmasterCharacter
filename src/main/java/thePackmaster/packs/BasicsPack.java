@@ -28,7 +28,7 @@ public class BasicsPack extends AbstractCardPack {
         cards.add(FamiliarKit.ID);
         cards.add(Simplify.ID);
         cards.add(LoseIt.ID);
-        cards.add(StrikePlus.ID);
+        cards.add(BasicHit.ID);
         cards.add(ConjureDefends.ID);
         cards.add(SimplifiedStrike.ID);
         return cards;

@@ -1,4 +1,4 @@
-package thePackmaster.actions.basics;
+package thePackmaster.actions.basicpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;

@@ -2,15 +2,15 @@
   "${ModID}:OckhamsPower": {
     "NAME": "Ockhams Razor",
     "DESCRIPTIONS": [
-      "Whenever you play a #yBasic card, deal ",
-      " damage to all enemies"
+      "Whenever you play a #yBasic card, deal #b",
+      " damage to ALL enemies"
     ]
   },
   "${ModID}:SimpleTrickPower": {
     "NAME": "Simple Trick",
     "DESCRIPTIONS": [
       "The next time you play a #yCardistry, gain [E] .",
-      "The next ",
+      "The next #b",
       " times you play a #yCardistry, gain [E] ."
     ]
   }

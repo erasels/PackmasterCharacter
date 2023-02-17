@@ -3,7 +3,7 @@ package thePackmaster.cards.basicspack;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.basics.DrawFilteredCardsAndUpgradeAction;
+import thePackmaster.actions.basicpack.DrawFilteredCardsAndUpgradeAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

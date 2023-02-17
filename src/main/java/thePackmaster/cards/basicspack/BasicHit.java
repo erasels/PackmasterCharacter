@@ -1,40 +1,43 @@
 package thePackmaster.cards.basicspack;
 
-import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.cards.Defend;
 import thePackmaster.cards.Strike;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class StrikePlus extends AbstractPackmasterCard {
-    public final static String ID = makeID("StrikePlus");
+public class BasicHit extends AbstractPackmasterCard {
+    public final static String ID = makeID("BasicHit");
 
-    public StrikePlus() {
+    public BasicHit() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, "basics");
         this.cardsToPreview = new Strike();
-        for(int i = 0; i<5;i++){
+        this.baseMagicNumber = this.magicNumber = 5;
+        for(int i = 0; i<this.magicNumber;i++){
             this.cardsToPreview.upgraded = false;
             this.cardsToPreview.upgrade();
         }
-        this.cardsToPreview.name = this.cardsToPreview.originalName + "+" + this.cardsToPreview.timesUpgraded;
+        this.cardsToPreview.name = this.cardsToPreview.originalName + "+" + this.magicNumber;
         this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        while(this.cardsToPreview.timesUpgraded>this.magicNumber)
+            this.cardsToPreview = new Strike();
+        while(this.cardsToPreview.timesUpgraded<this.magicNumber) {
+            this.cardsToPreview.upgraded = false;
+            this.cardsToPreview.upgrade();
+        }
         addToBot(new MakeTempCardInHandAction(this.cardsToPreview));
     }
 
     public void upp(){
-        for(int i = 0; i<2;i++){
+        int oldMagic = this.magicNumber;
+        upgradeMagicNumber(2);
+        for(int i = oldMagic; i<this.magicNumber;i++){
             this.cardsToPreview.upgraded = false;
             this.cardsToPreview.upgrade();
         }

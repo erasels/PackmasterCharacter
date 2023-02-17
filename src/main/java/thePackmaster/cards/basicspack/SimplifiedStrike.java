@@ -23,17 +23,16 @@ public class SimplifiedStrike extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+    }
+
+    public void calculateCardDamage(AbstractMonster mo) {
         int basicCount = 0;
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
             if (c.rarity == CardRarity.BASIC)
                 basicCount++;
         }
         this.baseDamage = this.magicNumber * basicCount;
-        calculateCardDamage(m);
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-    }
-
-    public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
         this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         initializeDescription();
@@ -51,6 +50,8 @@ public class SimplifiedStrike extends AbstractPackmasterCard {
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
             initializeDescription();
         }
+        super.applyPowers();
+        initializeDescription();
     }
 
     public void upp(){

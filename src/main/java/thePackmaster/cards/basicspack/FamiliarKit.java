@@ -35,7 +35,7 @@ public class FamiliarKit extends AbstractMultipleCardPreviewCard implements OnOb
     @Override
     public void onObtainCard() {
         for(int i = 0; i<this.cardToPreview.size(); i++){
-            float width = Settings.WIDTH / 2.0F - 150 * this.cardToPreview.size() + 300 * i;
+            float width = (i+1) * Settings.WIDTH / 4.0F;
             AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(cardToPreview.get(i), width, Settings.HEIGHT / 2));
         }
     }
