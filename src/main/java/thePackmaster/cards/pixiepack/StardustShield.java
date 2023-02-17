@@ -15,7 +15,7 @@ public class StardustShield extends AbstractPixieCard {
     public final static String ID = makeID("StardustShield");
 
     private static final int baseDef = 3;
-    private static final int upgradeDef = 5;
+    private static final int upgradeDef = 4;
 
     public StardustShield() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
