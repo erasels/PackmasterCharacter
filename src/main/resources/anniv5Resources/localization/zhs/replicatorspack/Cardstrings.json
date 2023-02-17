@@ -12,7 +12,7 @@
   },
   "${ModID}:SmallAdaptation": {
     "NAME": "略微适应",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择一张0~1耗能手牌，将其一张复制品加入手牌。",
+    "DESCRIPTION": "Gain !B! Block. NL Choose a non-Power card that costs 1 or 0. NL Add a copy of that card into your hand.",
     "EXTENDED_DESCRIPTION": ["选择复制一张手牌。"]
   },
   "${ModID}:ExperimentalMerge": {
