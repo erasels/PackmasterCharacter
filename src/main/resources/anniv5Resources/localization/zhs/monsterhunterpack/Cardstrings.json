@@ -13,7 +13,7 @@
   },
   "${ModID}:Greatsword": {
     "NAME": "巨剑",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 保留 时若有未使用的能量，下次打出前本牌伤害加8。"
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each."
   },
   "${ModID}:HuntingInstincts": {
     "NAME": "猎人本能",
