@@ -22,7 +22,7 @@ public class EndOfTurnPatch {
         public static void Prefix(AbstractRoom __instance) {
             if (Wiz.isInCombat()) {
                 AbstractPlayer p = AbstractDungeon.player;
-                for (CardGroup cardGroup : Arrays.asList(new CardGroup[]{p.hand, p.drawPile, p.discardPile})) {
+                for (CardGroup cardGroup : Arrays.asList(p.hand, p.drawPile, p.discardPile)) {
                     for (AbstractCard q : cardGroup.group) {
                         if (q instanceof MegaEtherealCard) {
                             AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {

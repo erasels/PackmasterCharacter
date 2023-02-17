@@ -42,7 +42,7 @@ public class JudgementDay extends AbstractDragonwrathCard {
     // Upgraded stats.
     @Override
     public void upp() {
-        upgradeSecondMagic(1);
+        upgradeMagicNumber(1);
     }
     @Override
     public String cardArtCopy() {
