@@ -19,7 +19,7 @@ public class CompoundeyesPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public CompoundeyesPower(AbstractCreature owner) {
-        super(POWER_ID, NAME, PowerType.BUFF, false, owner, -1);
+        super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, -1);
         canGoNegative = false;
     }
 
