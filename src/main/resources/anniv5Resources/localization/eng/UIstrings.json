@@ -162,5 +162,11 @@
       "Add a booster box card",
       "Choose a booster box card"
     ]
+  },
+  "${ModID}:SingleCardReward": {
+    "TEXT": [
+      "[Card] ",
+      "Tip: Right-click for detailed card view!"
+    ]
   }
 }

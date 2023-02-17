@@ -10,14 +10,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.random.Random;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 
 import java.util.*;
 
-import static thePackmaster.SpireAnniversary5Mod.*;
+import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.SpireAnniversary5Mod.packsByID;
 
 public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavable<ArrayList<String>> {
 
@@ -143,13 +143,13 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
     @Override
     public String getUpdatedDescription() {
         String packs = "";
-        if (myPackOne != "" && myPackOne != null) {
+        if (!Objects.equals(myPackOne, "") && myPackOne != null) {
             packs = packs + DESCRIPTIONS[1] + SpireAnniversary5Mod.packsByID.get(myPackOne).name;
         }
-        if (myPackTwo != "" && myPackTwo != null) {
+        if (!Objects.equals(myPackTwo, "") && myPackTwo != null) {
             packs = packs + ", " + SpireAnniversary5Mod.packsByID.get(myPackTwo).name;
         }
-        if (myPackThree != "" && myPackThree != null) {
+        if (!Objects.equals(myPackThree, "") && myPackThree != null) {
             packs = packs + ", " + SpireAnniversary5Mod.packsByID.get(myPackThree).name;
         }
         return DESCRIPTIONS[0] + packs;
