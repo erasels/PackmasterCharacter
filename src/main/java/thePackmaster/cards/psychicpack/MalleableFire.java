@@ -30,7 +30,7 @@ public class MalleableFire extends AbstractPsychicCard {
                 (x, params)->{
                     MoldedFire fire = new MoldedFire(x);
                     for (int i = 0; i < params[0]; ++i) {
-                        SuperUpgradeAction.silentForceUpgrade(fire);
+                        SuperUpgradeAction.forceUpgrade(fire, false);
                     }
 
                     addToTop(new MakeTempCardInDrawPileAction(fire, 1, true, true));
@@ -46,7 +46,7 @@ public class MalleableFire extends AbstractPsychicCard {
     public void upp() {
         upgradeDamage(3);
         if (cardsToPreview.timesUpgraded < this.timesUpgraded)
-            SuperUpgradeAction.silentForceUpgrade(cardsToPreview);
+            SuperUpgradeAction.forceUpgrade(cardsToPreview, false);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class MalleableFire extends AbstractPsychicCard {
         AbstractCard c = super.makeStatEquivalentCopy();
         if (c.cardsToPreview != null) {
             while (c.cardsToPreview.timesUpgraded < this.timesUpgraded) {
-                SuperUpgradeAction.silentForceUpgrade(c.cardsToPreview);
+                SuperUpgradeAction.forceUpgrade(c.cardsToPreview, false);
             }
         }
         return c;
