@@ -14,7 +14,7 @@
   },
   "${ModID}:ArrowStormRareAttack": {
     "NAME": "箭矢风暴",
-    "DESCRIPTION": "消耗 所有攻击手牌。 NL 若成功 消耗 ，对所有敌人造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "消耗 其他攻击手牌。 NL 若成功 消耗 ，对所有敌人造成 !D! 点伤害 !M! 次。"
   },
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "盛大宴会",
@@ -23,7 +23,7 @@
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "肉馅饼",
-    "DESCRIPTION": "${ModID}:可乐饼 。 NL 获得 !M! 点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "${ModID}:可乐饼 。 NL 获得 !M! 点 力量 。"
   },
   "${ModID}:FishyCroquettesSpecialColourless": {
     "NAME": "鱼肉饼",

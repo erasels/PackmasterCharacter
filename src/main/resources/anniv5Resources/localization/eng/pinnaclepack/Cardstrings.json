@@ -23,7 +23,7 @@
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "Meaty Croquettes",
-    "DESCRIPTION": "${ModID}:Croquette. NL Gain !M! Strength. NL Exhaust."
+    "DESCRIPTION": "${ModID}:Croquette. NL Gain !M! Strength."
   },
   "${ModID}:FishyCroquettesSpecialColourless": {
     "NAME": "Fishy Croquettes",
