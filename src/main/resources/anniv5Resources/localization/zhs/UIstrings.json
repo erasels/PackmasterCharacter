@@ -162,5 +162,11 @@
       "增强盒卡牌",
       "选择是否将其加入牌组"
     ]
+  },
+  "${ModID}:SingleCardReward": {
+    "TEXT": [
+      "[Card] ",
+      "Tip: Right-click for detailed card view!"
+    ]
   }
 }

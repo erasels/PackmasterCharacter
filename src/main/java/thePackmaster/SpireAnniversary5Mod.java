@@ -14,6 +14,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
@@ -83,6 +84,7 @@ import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.rewards.CustomRewardTypes;
 import thePackmaster.rewards.PMBoosterBoxCardReward;
+import thePackmaster.rewards.SingleCardReward;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 import thePackmaster.stances.cthulhupack.NightmareStance;
@@ -131,7 +133,8 @@ public class SpireAnniversary5Mod implements
         PostExhaustSubscriber,
         OnPlayerTurnStartSubscriber,
         OnCreateDescriptionSubscriber,
-        OnPlayerLoseBlockSubscriber {
+        OnPlayerLoseBlockSubscriber,
+        PostRenderSubscriber {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -890,6 +893,18 @@ public class SpireAnniversary5Mod implements
                 CustomRewardTypes.PACKMASTER_PMBOOSTERBOXCARD,
                 (rewardSave) -> new PMBoosterBoxCardReward(),
                 (customReward) -> new RewardSave(customReward.type.toString(), null, 0, 0));
+
+        BaseMod.registerCustomReward(CustomRewardTypes.PACKMASTER_SINGLECARDREWARD,
+                rewardSave -> new SingleCardReward(rewardSave.id),
+                reward -> {
+                    String s = ((SingleCardReward) reward).card.cardID +
+                            "|" +
+                            ((SingleCardReward) reward).card.timesUpgraded +
+                            "|" +
+                            ((SingleCardReward) reward).card.misc;
+                    return new RewardSave(CustomRewardTypes.PACKMASTER_SINGLECARDREWARD.toString(), s);
+                }
+        );
     }
 
     public static void startOfGamePackSetup() {
@@ -1012,6 +1027,16 @@ public class SpireAnniversary5Mod implements
             //SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
+    }
+
+    //Due to reward scrolling's orthographic camera and render order of rewards, the card needs to be rendered outside of the render method
+    public static SingleCardReward hoverRewardWorkaround;
+    @Override
+    public void receivePostRender(SpriteBatch sb) {
+        if(hoverRewardWorkaround != null) {
+            hoverRewardWorkaround.renderCardOnHover(sb);
+            hoverRewardWorkaround = null;
+        }
     }
 
     @Override
