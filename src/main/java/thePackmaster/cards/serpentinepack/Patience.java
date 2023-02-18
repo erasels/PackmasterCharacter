@@ -14,7 +14,7 @@ public class Patience extends AbstractSerpentineCard {
 
     private static final int COST = 0;
     public final static String ID = makeID("Patience");
-    private static final int BLOCK = 2;
+    private static final int BLOCK = 4;
 
     public Patience() {
         super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);

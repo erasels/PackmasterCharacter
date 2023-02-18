@@ -29,6 +29,6 @@ public class PoisonedBlades extends AbstractSerpentineCard {
 
     @Override
     public void upp() {
-        updateCost(UPGRADED_COST);
+        upgradeBaseCost(UPGRADED_COST);
     }
 }
