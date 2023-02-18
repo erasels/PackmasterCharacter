@@ -6,4 +6,6 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 public class CustomRewardTypes {
     @SpireEnum
     public static RewardItem.RewardType PACKMASTER_PMBOOSTERBOXCARD;
+    @SpireEnum
+    public static RewardItem.RewardType PACKMASTER_SINGLECARDREWARD;
 }

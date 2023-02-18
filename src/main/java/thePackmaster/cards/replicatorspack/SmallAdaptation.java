@@ -23,7 +23,7 @@ public class SmallAdaptation extends AbstractReplicatorCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new GainBlockAction(p, block));
         atb(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0],
-                (c) -> (c.costForTurn == 1 || c.costForTurn == 0), (cards) -> {
+                (c) -> (c.type != CardType.POWER) && (c.costForTurn == 1 || c.costForTurn == 0), (cards) -> {
             for (int i = 1; i <= magicNumber; i++) {
                 atb(new MakeTempCardInHandAction(cards.get(0)));
             }

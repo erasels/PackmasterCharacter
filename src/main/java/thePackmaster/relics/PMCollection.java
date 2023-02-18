@@ -1,6 +1,5 @@
 package thePackmaster.relics;
 
-import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -9,10 +8,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.random.Random;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.util.Wiz;
+import thePackmaster.rewards.SingleCardReward;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,15 +32,12 @@ public class PMCollection extends AbstractPackmasterRelic {
 
         AbstractCardPack pack = getRandomPackFromAll(new Random(Settings.seed + 37));
         for (String s : pack.getCards()) {
-            if (CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.COMMON ||
-                    CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.UNCOMMON ||
-                    CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.RARE) {
+            AbstractCard c = CardLibrary.getCard(s);
+            if (c.rarity == AbstractCard.CardRarity.COMMON ||
+                    c.rarity == AbstractCard.CardRarity.UNCOMMON ||
+                    c.rarity == AbstractCard.CardRarity.RARE) {
 
-                ArrayList<AbstractCard> cardReward = new ArrayList<>();
-                cardReward.add(CardLibrary.getCard(s).makeCopy());
-                RewardItem r = StSLib.generateCardReward(cardReward, false);
-                r.cards.forEach(c -> Wiz.p().relics.forEach(rel -> rel.onPreviewObtainCard(c)));
-                AbstractDungeon.getCurrRoom().addCardReward(r);
+                AbstractDungeon.getCurrRoom().rewards.add(new SingleCardReward(c));
             }
         }
 

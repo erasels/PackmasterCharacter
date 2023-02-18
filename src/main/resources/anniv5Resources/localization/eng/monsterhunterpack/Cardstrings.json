@@ -13,7 +13,7 @@
   },
   "${ModID}:Greatsword": {
     "NAME": "Greatsword",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each until played."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each."
   },
   "${ModID}:HuntingInstincts": {
     "NAME": "Hunter's Instincts",

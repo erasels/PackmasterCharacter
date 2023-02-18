@@ -55,4 +55,8 @@ public class PMBoosterBoxCardReward extends CustomReward {
             }
         }
     }
+
+    public ArrayList<AbstractCard> getCards() {
+        return cards;
+    }
 }
