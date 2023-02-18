@@ -4,8 +4,8 @@
     "DESCRIPTION": "打出 *防御 与 *打击 各一张。 NL 本牌被视为 ${ModID}:基础 牌。",
     "EXTENDED_DESCRIPTION": [
       "打出 *防御+ ",
-      " 与 *打击+ ",
-      " 各一张。 NL 本牌被视为 ${ModID}:基础 牌。"
+      "与 *打击+ ",
+      "各一张。 NL 本牌被视为 ${ModID}:基础 牌。"
       ]
   },
   "${ModID}:Simplify": {
@@ -46,8 +46,8 @@
   },
   "${ModID}:ConjureDefends": {
     "NAME": "聚能成盾",
-    "DESCRIPTION": "获得一张 *防御+ 并将其 ${ModID}:修改 ： \"本牌额外打出X次\"。 NL 回馈 1。 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得一张 *防御+ 并将其 ${ModID}:修改 ： \"本牌额外打出X+1次\"。 NL 回馈 1。 消耗 。"
+    "DESCRIPTION": "获得一张 *防御+ 并将其 ${ModID}:修改 ： NL \"本牌额外打出X次\"。 NL 回馈 1。 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得一张 *防御+ 并将其 ${ModID}:修改 ： NL \"本牌额外打出X+1次\"。 NL 回馈 1。 消耗 。"
 
   },
   "${ModID}:SimpleTrick": {
