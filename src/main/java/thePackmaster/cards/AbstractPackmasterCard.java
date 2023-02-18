@@ -395,16 +395,13 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     public int otherPacksInHandCheck() {
         long otherPacksInHand = AbstractDungeon.player.hand.group.stream()
                 .map(c -> SpireAnniversary5Mod.cardParentMap.getOrDefault(c.cardID, null))
-                .filter(Objects::nonNull)
+                .filter(s -> s != null && !s.equals(SpireAnniversary5Mod.cardParentMap.get(this.cardID)))
                 .distinct()
                 .count();
         return ((int) otherPacksInHand);
     }
 
     public boolean hasSynergy() {
-        return otherPacksInHandCheck() >= 3;
-    }
-    public boolean hasSynergyWhenPlayed() {
         return otherPacksInHandCheck() >= 2;
     }
 }
