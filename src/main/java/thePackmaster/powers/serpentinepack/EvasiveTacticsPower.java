@@ -37,8 +37,12 @@ public class EvasiveTacticsPower extends AbstractPackmasterPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        this.addToBot(new NotStanceCheckAction("Neutral", new VFXAction(new GenericSmokeEffect(this.owner.hb.cX, this.owner.hb.cY), 0.1F)));
         this.addToBot(new NotStanceCheckAction("Neutral", new GainBlockAction(this.owner, amount)));
+    }
+
+    @Override
+    public void atStartOfTurn(){
+        this.addToBot(new NotStanceCheckAction("Neutral", new VFXAction(new GenericSmokeEffect(this.owner.hb.cX, this.owner.hb.cY), 0.1F)));
         this.addToBot(new ChangeStanceAction("Neutral"));
     }
 }
