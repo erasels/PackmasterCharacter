@@ -1,2 +1,9 @@
 [
+  {
+    "PROPER_NAME": "Synergy",
+    "NAMES": [
+      "synergy"
+    ],
+    "DESCRIPTION": "Additional effect if you have cards from 3 different packs in your hand."
+  }
 ]

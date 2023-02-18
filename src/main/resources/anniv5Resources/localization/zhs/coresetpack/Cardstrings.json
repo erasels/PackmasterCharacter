@@ -1,7 +1,7 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "背包甩掴",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若抽牌堆有10+张牌， NL 抽 !M! 张牌， NL 否则获得 [E] 。"
+    "DESCRIPTION": "Deal !D! damage X times. NL ${ModID}:Synergy: Gain [E] ."
   },
   "${ModID}:BoosterTutor": {
     "NAME": "奇寻卡包",
@@ -22,9 +22,7 @@
   },
   "${ModID}:RippedPecs": {
     "NAME": "腹肌",
-    "DESCRIPTION": "本场战斗每用过一种卡包的牌，获得1点 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "本场战斗每用过一种卡包的牌，获得1点 力量 。",
-    "EXTENDED_DESCRIPTION": [" NL (获得 {0} 点 力量 。)"]
+    "DESCRIPTION": "Gain 1 Strength. NL ${ModID}:Synergy: Gain !M! Strength."
   },
   "${ModID}:Showoff": {
     "NAME": "狂炫",
@@ -36,11 +34,10 @@
   },
   "${ModID}:SmithingHammer": {
     "NAME": "锻造锤击",
-    "DESCRIPTION": "造成 !D! 点伤害3次。 NL 随机 升级 !M! 张手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害3次。 NL 随机 升级 !M! 张手牌。"
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Upgrade 2 random cards in your hand."
   },
   "${ModID}:Synergize": {
     "NAME": "套路配合",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若手中至少有2种其他卡包的牌，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Synergy: Gain !B! Block."
   }
 }

@@ -24,9 +24,12 @@ import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.CoreSetPack;
 import thePackmaster.patches.rippack.AllCardsRippablePatches;
 import thePackmaster.util.CardArtRoller;
 import thePackmaster.util.Wiz;
+
+import java.util.Objects;
 
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.SpireAnniversary5Mod.modID;
@@ -386,5 +389,22 @@ public abstract class AbstractPackmasterCard extends CustomCard {
         if (!(SingleCardViewPopup.isViewingUpgrade && this.isSeen && !this.isLocked)) {
             renderBorderText(sb);
         }
+    }
+
+
+    public int otherPacksInHandCheck() {
+        long otherPacksInHand = AbstractDungeon.player.hand.group.stream()
+                .map(c -> SpireAnniversary5Mod.cardParentMap.getOrDefault(c.cardID, null))
+                .filter(Objects::nonNull)
+                .distinct()
+                .count();
+        return ((int) otherPacksInHand);
+    }
+
+    public boolean hasSynergy() {
+        return otherPacksInHandCheck() >= 3;
+    }
+    public boolean hasSynergyWhenPlayed() {
+        return otherPacksInHandCheck() >= 2;
     }
 }
