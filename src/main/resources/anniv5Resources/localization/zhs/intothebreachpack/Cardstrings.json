@@ -9,7 +9,7 @@
   },
   "${ModID}:EnrageShot": {
     "NAME": "暴怒射击",
-    "DESCRIPTION": "击晕目标并并给予2点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "击晕目标并给予2点 力量 。 NL 消耗 。"
   },
   "${ModID}:MercuryFist": {
     "NAME": "水银拳套",

@@ -22,7 +22,7 @@
   },
   "${ModID}:Death": {
     "NAME": "死神",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若之后目标生命降至10%以下，将其处决。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 造成后若目标生命降至10%以下，将其处决。"
   },
   "${ModID}:Temperance": {
     "NAME": "节制",

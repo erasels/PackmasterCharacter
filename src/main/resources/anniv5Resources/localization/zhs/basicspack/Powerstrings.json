@@ -1,0 +1,17 @@
+{
+  "${ModID}:OckhamsPower": {
+    "NAME": "奥卡姆剃刀",
+    "DESCRIPTIONS": [
+      "每当你打出一张 #y基础 牌，对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:SimpleTrickPower": {
+    "NAME": "简单伎俩",
+    "DESCRIPTIONS": [
+      "下次打出 #y牌技 时，获得 [E] 。",
+      "接下来 #b",
+      " 次打出 #y牌技 时，获得 [E] 。"
+    ]
+  }
+}

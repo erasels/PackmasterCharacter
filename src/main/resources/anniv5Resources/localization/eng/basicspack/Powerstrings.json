@@ -3,7 +3,7 @@
     "NAME": "Ockhams Razor",
     "DESCRIPTIONS": [
       "Whenever you play a #yBasic card, deal #b",
-      " damage to ALL enemies"
+      " damage to ALL enemies."
     ]
   },
   "${ModID}:SimpleTrickPower": {

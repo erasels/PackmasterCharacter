@@ -1,7 +1,7 @@
 {
   "${ModID}:OptimizedBlurPower": {
     "NAME": "视晕校正",
-    "DESCRIPTIONS": ["每当你造成未被格挡的伤害时，获得 #b", " 点 #y格挡 。"]
+    "DESCRIPTIONS": ["每当你造成未被格挡的攻击伤害时，获得 #b", " 点 #y格挡 。"]
   },
   "${ModID}:HardCaramelPower": {
     "NAME": "硬焦糖",

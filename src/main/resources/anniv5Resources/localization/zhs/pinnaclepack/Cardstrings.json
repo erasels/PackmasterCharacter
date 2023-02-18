@@ -1,7 +1,7 @@
 {
   "${ModID}:DroneSwarmRareSkill": {
     "NAME": "无人机群",
-    "DESCRIPTION": "本回合手牌数上限加 !${ModID}:m2! 。 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "本回合手牌上限加 !${ModID}:m2! 。 NL 抽 !M! 张牌。"
   },
   "${ModID}:TheSuckamidRareSkill": {
     "NAME": "吸字塔",
@@ -14,12 +14,12 @@
   },
   "${ModID}:ArrowStormRareAttack": {
     "NAME": "箭矢风暴",
-    "DESCRIPTION": "消耗 所有攻击手牌。 NL 若成功 消耗 ，对所有敌人造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "消耗 其他攻击手牌。 NL 若成功 消耗 ，对所有敌人造成 !D! 点伤害 !M! 次。"
   },
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "盛大宴会",
-    "DESCRIPTION": "固有 。 NL 回合结束时，轮流将一张具有下列其中一种效果的 ${ModID}:可乐饼 加入手牌： 格挡 、 虚弱 、 力量 、 易伤 。",
-    "UPGRADE_DESCRIPTION": "固有 。 回合结束时，轮流将一张具有下列其中一种效果的 ${ModID}:可乐饼 +加入手牌： 格挡 、 虚弱 、 力量 、 易伤 。"
+    "DESCRIPTION": "固有 。 NL 回合结束时，依次将下列一张 *可乐饼 加入手牌： 格挡 、 虚弱 、 力量 、 易伤 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合结束时，依次将下列一张 *可乐饼 +加入手牌： 格挡 、 虚弱 、 力量 、 易伤 。"
   },
   "${ModID}:MeatyCroquettesSpecialColourless": {
     "NAME": "肉馅饼",

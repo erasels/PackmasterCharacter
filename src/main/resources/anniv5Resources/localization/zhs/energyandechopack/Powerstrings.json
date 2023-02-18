@@ -10,7 +10,7 @@
   "${ModID}:PanacherPower": {
     "NAME": "混杂",
     "DESCRIPTIONS": [
-      "若再创造 #b",
+      "若再 #y创造 #b",
       " 张牌，对所有敌人造成 #b",
       " 张牌，对所有敌人造成 #b",
       " 点伤害。"

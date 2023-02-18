@@ -1,7 +1,7 @@
 {
   "${ModID}:Leprechaun": {
-    "NAME": "矮精灵",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 一个 ${ModID}:矮精灵 充能球。",
+    "NAME": "魔法精灵",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 一个 ${ModID}:魔法精灵 充能球。",
     "EXTENDED_DESCRIPTION": [
       "骰子",
       "#y骰子 的点数等量提高下张打出牌的伤害 与 #y格挡 ，两项都没有的牌不消耗使用次数。",

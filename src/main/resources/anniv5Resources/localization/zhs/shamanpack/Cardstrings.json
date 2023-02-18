@@ -30,7 +30,7 @@
   },
   "${ModID}:Pyromastery": {
     "NAME": "火焰驾驭",
-    "DESCRIPTION": "给予 ${ModID}:燃烧 时，额外给予 !M! 层 。 。"
+    "DESCRIPTION": "给予 ${ModID}:燃烧 时，额外给予 !M! 层 。"
   },
   "${ModID}:ReadTheFlames": {
     "NAME": "火焰讯息",

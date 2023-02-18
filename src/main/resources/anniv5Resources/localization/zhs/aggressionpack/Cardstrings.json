@@ -25,11 +25,11 @@
   },
   "${ModID}:Epiphany": {
     "NAME": "神力展现",
-    "DESCRIPTION": "若处于一种 姿态 ，退出并抽 !M! 张牌。 NL 否则进入 ${ModID}:侵袭 。"
+    "DESCRIPTION": "若处于一种 姿态 ， NL 退出并抽 !M! 张牌， NL 否则进入 ${ModID}:侵袭 。"
   },
   "${ModID}:InnerFury": {
     "NAME": "怒气",
-    "DESCRIPTION": "每当你进入或退出 ${ModID}:侵袭 ，获得 !M! 层临时 力量 与 !M! 点 格挡 。 NL 进入 ${ModID}:侵袭 。"
+    "DESCRIPTION": "进入或退出 ${ModID}:侵袭 时，获得 !M! 层临时 力量 与 !M! 点 格挡 。 NL 进入 ${ModID}:侵袭 。"
   },
   "${ModID}:LunaticRage": {
     "NAME": "癫狂",
