@@ -13,7 +13,7 @@
   },
   "${ModID}:Greatsword": {
     "NAME": "巨剑",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each."
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 保留 时每有未使用的 [E] ，本场战斗伤害加8。"
   },
   "${ModID}:HuntingInstincts": {
     "NAME": "猎人本能",
@@ -108,7 +108,7 @@
   },
   "${ModID}:CarvingKnife": {
     "NAME": "猎刀",
-    "DESCRIPTION": "造成 !D! 点伤害。 若击杀一名精英或首领，获得其专属战利品。 NL 即逝。"
+    "DESCRIPTION": "造成 !D! 点伤害。 若击杀一名精英或首领，获得其专属战利品。 NL 即逝 。"
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "觉醒者匕首",
@@ -120,7 +120,7 @@
   },
   "${ModID}:HunterRank": {
     "NAME": "猎人排名",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 每击杀过一名精英或首领， 力量 获得量加1。 "
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 每击杀过一名精英或首领， 力量 获得量加1。"
   },
   "${ModID}:TranqBomb": {
     "NAME": "镇静炸弹",
