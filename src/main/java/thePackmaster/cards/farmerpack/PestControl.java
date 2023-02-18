@@ -15,7 +15,7 @@ public class PestControl extends AbstractFarmerCard {
     public PestControl() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = damage = 6;
-        baseMagicNumber = magicNumber;
+        baseMagicNumber = magicNumber = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
