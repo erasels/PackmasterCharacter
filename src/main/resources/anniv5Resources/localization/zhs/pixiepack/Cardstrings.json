@@ -44,7 +44,7 @@
   },
   "${ModID}:DimensionBreach": {
     "NAME": "次元突破",
-    "DESCRIPTION": "对目标随机打出 !M! 张 ${ModID}:异色 攻击牌。",
+    "DESCRIPTION": "对目标随机打出 !M! 张 ${ModID}:异色 攻击牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "随机",
       "本牌 #y创造 牌时低稀有度的牌比重更高。"
