@@ -16,7 +16,7 @@ public class HarvestCarrots extends AbstractFarmerCard {
     public HarvestCarrots() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = block = 4;
-        baseMagicNumber = magicNumber;
+        baseMagicNumber = magicNumber = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
