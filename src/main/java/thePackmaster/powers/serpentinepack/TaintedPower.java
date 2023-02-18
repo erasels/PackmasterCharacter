@@ -34,10 +34,6 @@ public class TaintedPower extends AbstractPackmasterPower implements InvisiblePo
 
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        System.out.println("Amount to apply: "+power.amount);
-        if (target.hasPower(power.ID)){
-            System.out.println("Amount already applied: "+target.getPower(power.ID).amount);
-        }
         if (power.type == PowerType.DEBUFF && !power.ID.equals("Shackled") && source == this.owner && target.hasPower(TaintedEnemy.POWER_ID) && !target.hasPower("Artifact")) {
             if (target.hasPower(power.ID)){
                 target.getPower(power.ID).stackPower(power.amount);
