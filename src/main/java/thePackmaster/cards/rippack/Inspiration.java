@@ -32,7 +32,7 @@ public class Inspiration extends AbstractRipCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        int artCardsInExhaust = AbstractDungeon.player.exhaustPile.group.stream().filter(card -> isArtCard(card)).collect(Collectors.toList()).size();
+        int artCardsInExhaust = AbstractDungeon.player.exhaustPile.group.stream().filter(card -> isArtCard(card) || card.type == CardType.STATUS).collect(Collectors.toList()).size();
         rawDescription = upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION;
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + artCardsInExhaust;
         if (artCardsInExhaust == 1) {
