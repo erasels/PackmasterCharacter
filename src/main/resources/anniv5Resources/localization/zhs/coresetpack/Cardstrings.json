@@ -22,7 +22,7 @@
   },
   "${ModID}:RippedPecs": {
     "NAME": "腹肌",
-    "DESCRIPTION": "Gain 1 Strength. NL ${ModID}:Synergy: Gain !M! Strength."
+    "DESCRIPTION": "Gain 1 Strength. NL ${ModID}:Synergy: Gain !M! Strength instead."
   },
   "${ModID}:Showoff": {
     "NAME": "狂炫",

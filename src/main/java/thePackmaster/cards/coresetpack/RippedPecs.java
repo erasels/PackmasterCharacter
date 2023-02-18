@@ -24,19 +24,20 @@ public class RippedPecs extends AbstractPackmasterCard {
     private boolean synergyOn;
     public RippedPecs() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         synergyOn = (hasSynergy());
 
-        Wiz.applyToSelfTop(new StrengthPower(p, 1));
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
                 if (synergyOn) {
                     Wiz.applyToSelfTop(new StrengthPower(p, magicNumber));
+                } else {
+                    Wiz.applyToSelfTop(new StrengthPower(p, 1));
                 }
             }
         });
