@@ -1,6 +1,6 @@
 {
 "${ModID}:ApplyPoison": {
-    "NAME": "Apply Poison",
+    "NAME": "Venomous Sheath",
     "DESCRIPTION": "Enter ${ModID}:Venemous. NL At the start of your next turn, exit ${ModID}:Venemous."
 },"${ModID}:Guile": {
     "NAME": "Guile",

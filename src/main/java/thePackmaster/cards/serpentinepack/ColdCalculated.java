@@ -18,8 +18,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class ColdCalculated extends AbstractSerpentineCard {
 
     private static final int COST = 1;
-    private static final int MAGIC = 4;
-    private static final int DAMAGE = 7;
+    private static final int MAGIC = 5;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 2;
     private static final int UPG_MAGIC = 2;
     public final static String ID = makeID("ColdCalculated");
@@ -29,7 +29,6 @@ public class ColdCalculated extends AbstractSerpentineCard {
         super(ID, COST, AbstractCard.CardType.ATTACK, CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        this.exhaust = true;
     }
 
     @Override

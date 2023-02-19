@@ -25,7 +25,7 @@ public class Guile extends AbstractSerpentineCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DrawCardAction(magicNumber));
-        addToBot(new DiscardAction(abstractPlayer, abstractPlayer, magicNumber-1, false));
+        addToBot(new DiscardAction(abstractPlayer, abstractPlayer, 2, false));
         addToBot(new ChangeStanceAction(new CunningStance()));
     }
 

@@ -4,7 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.util.AbstractOnAttackStance;
+import thePackmaster.stances.OnAttackStance;
 
 @SpirePatch(
         clz = AbstractMonster.class,
@@ -16,8 +16,8 @@ import thePackmaster.util.AbstractOnAttackStance;
 public class StanceOnAttackPatch {
         @SpirePrefixPatch
         public static void Prefix(AbstractMonster __instance, DamageInfo __info) {
-            if (AbstractDungeon.player.stance instanceof AbstractOnAttackStance && __info.type.equals(DamageInfo.DamageType.NORMAL)) {
-                AbstractOnAttackStance tmp = (AbstractOnAttackStance) AbstractDungeon.player.stance;
+            if (AbstractDungeon.player.stance instanceof OnAttackStance && __info.type.equals(DamageInfo.DamageType.NORMAL)) {
+                OnAttackStance tmp = (OnAttackStance) AbstractDungeon.player.stance;
                 tmp.onAttack(__info, __info.output, __instance);
             }
         }

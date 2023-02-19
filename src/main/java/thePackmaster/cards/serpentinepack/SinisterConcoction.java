@@ -38,7 +38,7 @@ public class SinisterConcoction extends AbstractSerpentineCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new ChangeStanceAction(new VenemousStance()));
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new TaintedPower(abstractPlayer, 1)));
+        //addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new TaintedPower(abstractPlayer, 1)));
         addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer, new TaintedEnemy(abstractMonster, magicNumber)));
         addToBot(new VFXAction(new PotionBounceEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, abstractMonster.hb.cX, abstractMonster.hb.cY), 0.4f));
     }

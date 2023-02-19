@@ -17,7 +17,7 @@ public class EvasiveTactics extends AbstractSerpentineCard {
     private static final int COST = 2;
     public final static String ID = makeID("EvasiveTactics");
     private static final int MAGIC = 10;
-    private static final int UPG_MAGIC = 2;
+    private static final int UPG_MAGIC = 3;
 
     public EvasiveTactics() {
         super(ID, COST, AbstractCard.CardType.POWER, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);

@@ -31,7 +31,6 @@ public class EvasiveTacticsPower extends AbstractPackmasterPower {
 
     @Override
     public void updateDescription(){
-        super.updateDescription();
         this.description = DESCRIPTIONS[0]+amount+DESCRIPTIONS[1];
     }
 
