@@ -3,6 +3,7 @@ package thePackmaster.cards.warlockpack;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
@@ -40,6 +41,10 @@ public class AranasiBroodmother extends AbstractWarlockCard {
 
     @Override
     public float getTitleFontSize() {
-        return 20.0f;
+        if(Settings.language== Settings.GameLanguage.ZHS){
+            return -1.0F;
+        }else {
+            return 20.0f;
+        }
     }
 }
