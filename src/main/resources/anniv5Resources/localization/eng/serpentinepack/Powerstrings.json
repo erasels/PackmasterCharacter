@@ -7,7 +7,7 @@
     "NAME": "Evasive Tactics",
     "DESCRIPTIONS": [
       "At the end of your turn, if you are in a Stance gain #b",
-      " Block and exit your #yStance at the start of the next turn."
+      " #yBlock and exit your #yStance at the start of the next turn."
     ]
   },
   "${ModID}:TaintedEnemy": {

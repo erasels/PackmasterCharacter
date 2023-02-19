@@ -1,10 +1,10 @@
 {
   "${ModID}:Venemous": {
     "NAME": "Venemous",
-    "DESCRIPTION": ["Your attacks deal #b50% less damage, but apply #b1 Weak and #b2 #yPoison on hit."]
+    "DESCRIPTION": ["Your attacks deal #b50% less damage, but apply #b1 #yWeak and #b2 #yPoison on hit."]
   },
   "${ModID}:Cunning": {
     "NAME": "Cunning",
-    "DESCRIPTION": ["When you enter this Stance, gain #b2 Vigor for each #yunique debuff among all enemies."]
+    "DESCRIPTION": ["When you enter this #yStance, gain #b2 #yVigor for each #yunique debuff among all enemies."]
   }
 }

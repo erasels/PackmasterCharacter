@@ -15,7 +15,7 @@
     "UPGRADE_DESCRIPTION": "Retain. NL Enter ${ModID}:Cunning. NL When Retained, gain !B! Block."
 },"${ModID}:DaggerRush": {
     "NAME": "Dagger Rush",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Hits once more if you are in a Stance."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Hits an additional time if you are in a Stance."
 },"${ModID}:CheapShot": {
     "NAME": "Cheap Shot",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust.",
