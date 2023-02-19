@@ -9,7 +9,7 @@
   },
   "${ModID}:DestinyDraw": {
     "NAME": "Destiny Draw",
-    "DESCRIPTION": "Choose 1 of 3 cards from different Packs to add to your hand. It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 random cards from different Packs to add to your hand. It costs 0 this turn. Exhaust."
   },
   "${ModID}:Flick": {
     "NAME": "Flick",
