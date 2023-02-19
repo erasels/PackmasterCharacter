@@ -25,7 +25,7 @@
   },
   "${ModID}:BackupRift": {
     "NAME": "咒术裂隙",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 从抽牌堆取出 !M! 张 ${ModID}:咒语 牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:取 !M! 张 ${ModID}:咒语 牌。"
   },
   "${ModID}:StarLane": {
     "NAME": "获取",
