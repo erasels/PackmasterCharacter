@@ -1,7 +1,7 @@
 {
   "${ModID}:Whirligig": {
   "NAME": "旋转木蛇",
-  "DESCRIPTION": "每有一名敌人，随机造成 !D! 点伤害。"
+  "DESCRIPTION": "每有一名敌人， NL 随机造成 !D! 点伤害。"
   },
   "${ModID}:Sliiiiither": {
     "NAME": "滑啊啊啊动",

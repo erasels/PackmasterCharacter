@@ -28,7 +28,7 @@
   },
   "${ModID}:Retromation": {
     "NAME": "Retromation",
-    "DESCRIPTION": "回合开始时，随机获得本局已选卡包外的一张牌， NL 其附带 虚无 。"
+    "DESCRIPTION": "回合开始时，随机获得本局已选卡包外的一张牌，其附带 虚无 。"
   },
   "${ModID}:OddOne": {
     "NAME": "Odd　One",
@@ -50,7 +50,7 @@
   },
   "${ModID}:BaalorBash": {
     "NAME": "Baalorlord's　Bash",
-    "DESCRIPTION": "${ModID}:固无 。 NL 造成 !D! 点伤害。 NL 将一张 *Ｂ *ａ *ａ *ｌ *ｏ *ｒ *＇ *ｓ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。",
+    "DESCRIPTION": "${ModID}:固无 。 NL 造成 !D! 点伤害。 NL 将一张 *Ｃ *ｏ *ｍ *ｆ *ｙ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｃ *ｏ *ｍ *ｆ *ｙ　 *Ｂｌ *ｕｅ *ｐｒ *ｉｎ *ｔ 加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:BaalorBlueprint": {

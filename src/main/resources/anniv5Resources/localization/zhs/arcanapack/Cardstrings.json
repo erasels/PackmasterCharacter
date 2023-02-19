@@ -18,7 +18,7 @@
   },
   "${ModID}:TheTower": {
     "NAME": "塔",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若杀死目标， NL 再打出一次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若击杀目标， NL 再打出一次。"
   },
   "${ModID}:Death": {
     "NAME": "死神",

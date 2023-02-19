@@ -14,7 +14,7 @@
   },
   "${ModID}:Headshot": {
     "NAME": "爆头",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若打出时处于手牌中央，造成2倍伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若打出时在手牌中央，造成2倍伤害。"
   },
   "${ModID}:Determination": {
     "NAME": "决心",
