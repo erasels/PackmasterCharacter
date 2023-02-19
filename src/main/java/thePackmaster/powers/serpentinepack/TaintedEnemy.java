@@ -45,17 +45,17 @@ public class TaintedEnemy extends AbstractPackmasterPower implements OnReceivePo
 
     @Override
     public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
-        if (abstractPower.type.equals(PowerType.DEBUFF) && !abstractPower.ID.equals(GainStrengthPower.POWER_ID) && abstractCreature1.equals(AbstractDungeon.player) && !abstractCreature.hasPower(ArtifactPower.POWER_ID)) {
+        if (abstractPower.type.equals(PowerType.DEBUFF) && abstractCreature1.equals(AbstractDungeon.player) && !abstractCreature.hasPower(ArtifactPower.POWER_ID)) {
             abstractPower.amount *= (2 * this.amount);
         }
-            return true;
+        return true;
     }
 
     @Override
     public int onReceivePowerStacks(AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
-        if (power.type.equals(PowerType.DEBUFF) && !power.ID.equals(GainStrengthPower.POWER_ID) && source.equals(AbstractDungeon.player) && !target.hasPower(ArtifactPower.POWER_ID)) {
+        if (power.type.equals(PowerType.DEBUFF) && source.equals(AbstractDungeon.player) && !target.hasPower(ArtifactPower.POWER_ID)) {
             this.flashWithoutSound();
-            return stackAmount * (2 * this.amount);
+            return power.amount * (2 * this.amount);
         }
         return stackAmount;
     }

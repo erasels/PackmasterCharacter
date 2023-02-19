@@ -1,7 +1,10 @@
 {
   "${ModID}:VenemousExitPower": {
     "NAME": "Exit Venemous",
-    "DESCRIPTIONS": ["At the start of your turn, exit #yVenemous."]
+    "DESCRIPTIONS": [
+      "At the start of your turn, exit #yVenomous.",
+      ""
+    ]
   },
   "${ModID}:EvasiveTacticsPower": {
     "NAME": "Evasive Tactics",
