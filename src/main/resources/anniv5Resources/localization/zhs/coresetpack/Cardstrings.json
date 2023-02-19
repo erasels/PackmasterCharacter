@@ -1,7 +1,7 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "背包甩掴",
-    "DESCRIPTION": "Deal !D! damage X times. NL ${ModID}:Synergy: Gain [E] ."
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL ${ModID}:配合 ： 获得 [E] 。"
   },
   "${ModID}:BoosterTutor": {
     "NAME": "奇寻卡包",
@@ -22,7 +22,7 @@
   },
   "${ModID}:RippedPecs": {
     "NAME": "腹肌",
-    "DESCRIPTION": "Gain 1 Strength. NL ${ModID}:Synergy: Gain !M! Strength instead."
+    "DESCRIPTION": "获得1点 力量 。 NL ${ModID}:配合 ： NL 获得量提高至 !M! 点。"
   },
   "${ModID}:Showoff": {
     "NAME": "狂炫",
@@ -34,10 +34,10 @@
   },
   "${ModID}:SmithingHammer": {
     "NAME": "锻造锤击",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Upgrade 2 random cards in your hand."
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 随机 升级 2张手牌。"
   },
   "${ModID}:Synergize": {
     "NAME": "套路配合",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Synergy: Gain !B! Block."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:配合 ： NL 获得 !B! 点 格挡 。"
   }
 }
