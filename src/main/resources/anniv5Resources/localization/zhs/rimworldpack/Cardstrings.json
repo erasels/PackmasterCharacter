@@ -26,7 +26,7 @@
   },
   "${ModID}:SpikeTrap": {
     "NAME": "钉刺陷阱",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下次受到攻击时，反弹 !B! 点伤害。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下次受到攻击时， NL 反弹 !B! 点伤害。"
   },
   "${ModID}:Catharsis": {
     "NAME": "宣泄",

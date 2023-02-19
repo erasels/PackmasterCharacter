@@ -1,9 +1,10 @@
 [
   {
-    "PROPER_NAME": "Synergy",
+    "PROPER_NAME": "配合",
     "NAMES": [
-      "synergy"
+      "synergy",
+      "配合"
     ],
-    "DESCRIPTION": "Additional effect if you have cards from 3 unique packs in your hand."
+    "DESCRIPTION": "若手中有其他 #b2 种及以上卡包的牌，触发该效果。"
   }
 ]

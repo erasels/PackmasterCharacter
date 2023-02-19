@@ -16,25 +16,25 @@
   },
   "${ModID}:DynamicVial": {
     "NAME": "多变药剂",
-    "DESCRIPTION": "选择： 获得 [E] [E] ，或抽3张牌。 NL 消耗 。",
+    "DESCRIPTION": "选择： NL 获得 [E] [E] ， NL 或抽3张牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": ["获得 [E] [E] 。", "抽3张牌。"]
   },
   "${ModID}:MetallicVial": {
     "NAME": "钢铁药剂",
-    "DESCRIPTION": "选择：获得4层 *多层护甲 、或获得3层 荆棘 ，或获得2层 人工制品 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择：获得4层 *多层护甲 、或获得3层 荆棘 ，或获得2层 人工制品 。 NL 消耗性 !stslib:ex! 。",
-    "EXTENDED_DESCRIPTION": ["获得4层 *多层护甲 。", "获得3层 荆棘 。","获得2层 人工制品。"]
+    "DESCRIPTION": "选择获得： NL 4层 *多层护甲 ， NL 或3层 荆棘 ， NL 或2层 人工制品 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择获得： NL 4层 *多层护甲 ， NL 或3层 荆棘 ， NL 或2层 人工制品 。 NL 消耗性 !stslib:ex! 。",
+    "EXTENDED_DESCRIPTION": ["获得4层 *多层护甲 。", "获得3层 荆棘 。","获得2层 人工制品 。"]
   },
   "${ModID}:QuickBrew": {
     "NAME": "快速熬制",
-    "DESCRIPTION": "选择： 获得2点 力量 ，或获得2点 集中 。",
-    "UPGRADE_DESCRIPTION": "选择： 获得2点 力量 ，或获得2点 敏捷 ，或获得2点 集中 。",
+    "DESCRIPTION": "选择获得 ： NL 2点 力量 ， NL 或2点 集中 。",
+    "UPGRADE_DESCRIPTION": "选择获得： NL 2点 力量 ， NL 或2点 敏捷 ， NL 或2点 集中 。",
     "EXTENDED_DESCRIPTION": ["获得2点 力量 。", "获得2点 敏捷 。","获得2点 集中 。"]
   },
   "${ModID}:ToxicVial": {
     "NAME": "毒性药剂",
-    "DESCRIPTION": "选择： 给予3层 虚弱，或给予8层 中毒。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择： 给予3层 易伤 ，或给予3层 虚弱 ，或给予8层 中毒 。 NL 消耗 。",
+    "DESCRIPTION": "选择给予： NL 3层 虚弱 ， NL 或8层 中毒 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择给予： NL 3层 易伤 ， NL 或3层 虚弱 ， NL 或8层 中毒 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": ["给予3层 易伤 。", "给予3层 虚弱 。","给予8层 中毒 。"]
   },
   "${ModID}:AttackVial": {

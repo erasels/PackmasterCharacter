@@ -32,7 +32,7 @@
   "${ModID}:Cheapen": {
     "NAME": "平易化",
     "DESCRIPTION": "随机 ${ModID}:修改 抽牌堆一张牌：\"耗能变为0。\" NL ${ModID}:增幅 [E] : 不 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:修改 一张牌 in your 抽牌堆: \"Costs 0.\" NL ${ModID}:增幅 [E] : Don't 消耗 。"
+    "UPGRADE_DESCRIPTION": "随机 ${ModID}:修改 抽牌堆一张牌：\"耗能变为0。\" NL ${ModID}:增幅 [E] : 不 消耗 。"
   },
   "${ModID}:Expand": {
     "NAME": "扩大化",

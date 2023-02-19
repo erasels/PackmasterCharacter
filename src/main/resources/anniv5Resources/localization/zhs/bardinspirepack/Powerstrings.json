@@ -1,6 +1,6 @@
 {
-  "${ModID}:灵感": {
-    "NAME": "Inspiration",
+  "${ModID}:Inspiration": {
+    "NAME": "灵感",
     "DESCRIPTIONS": [
       "下张",
       "下 #b",
