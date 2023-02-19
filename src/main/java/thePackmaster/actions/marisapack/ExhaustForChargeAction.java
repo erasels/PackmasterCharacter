@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.cards.marisapack.AmplifyCard;
-import thePackmaster.cards.marisapack.StardustReverie;
 import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
 
@@ -53,7 +52,7 @@ public class ExhaustForChargeAction extends AbstractGameAction {
             if (c instanceof AmplifyCard) {
                 cost += ((AmplifyCard) c).getAmplifyCost();
             }
-            totalCost += cost * StardustReverie.COST_MULT;
+            totalCost += cost * 2;
             Wiz.hand().moveToExhaustPile(c);
         }
         if(totalCost > 0)

@@ -21,11 +21,10 @@
   },
   "${ModID}:StardustReverie": {
     "NAME": "星屑幻想",
-    "DESCRIPTION": "消耗 !M! 张牌。 获得其合计耗能2倍层 ${ModID}:蓄力 ，包括 ${ModID}:增幅 所需 能量 。 NL 抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "消耗 !M! 张牌。 获得其合计耗能2倍层 ${ModID}:蓄力 ，包括 ${ModID}:增幅 所需 能量 。 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "Exhaust the next card you play to gain !M! ${ModID}:Charge Up and draw 1 card."
   },
   "${ModID}:Inertia": {
-    "NAME": "惯性",
+    "NAME": "Oort Cloud",
     "DESCRIPTION": "Gain !M! *Ablation. NL ${ModID}:Amplify [E] : Gain !${ModID}:m2! additional *Ablation."
   },
   "${ModID}:UltimateShortwave": {
