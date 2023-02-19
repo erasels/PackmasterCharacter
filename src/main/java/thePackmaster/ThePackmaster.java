@@ -39,17 +39,17 @@ import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 
 public class ThePackmaster extends CustomPlayer {
     private static final String[] orbTextures = {
-            modID + "Resources/images/char/mainChar/orb/layer1.png",
-            modID + "Resources/images/char/mainChar/orb/layer2.png",
+            modID + "Resources/images/char/mainChar/orb/layer1-bag.png",
+            modID + "Resources/images/char/mainChar/orb/layer2-bag.png",
             modID + "Resources/images/char/mainChar/orb/layer3.png",
-            modID + "Resources/images/char/mainChar/orb/layer4.png",
-            modID + "Resources/images/char/mainChar/orb/layer5.png",
-            modID + "Resources/images/char/mainChar/orb/layer6.png",
-            modID + "Resources/images/char/mainChar/orb/layer1d.png",
-            modID + "Resources/images/char/mainChar/orb/layer2d.png",
+            modID + "Resources/images/char/mainChar/orb/layer4-bag.png",
+            modID + "Resources/images/char/mainChar/orb/layer5-bag.png",
+            modID + "Resources/images/char/mainChar/orb/layer6-bag.png",
+            modID + "Resources/images/char/mainChar/orb/layer1-bag.png",
+            modID + "Resources/images/char/mainChar/orb/layer2-bagd.png",
             modID + "Resources/images/char/mainChar/orb/layer3d.png",
-            modID + "Resources/images/char/mainChar/orb/layer4d.png",
-            modID + "Resources/images/char/mainChar/orb/layer5d.png",};
+            modID + "Resources/images/char/mainChar/orb/layer4-bagd.png",
+            modID + "Resources/images/char/mainChar/orb/layer5-bagd.png",};
     static final String ID = makeID("ThePackmaster");
     static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     static final String[] NAMES = characterStrings.NAMES;
