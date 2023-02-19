@@ -36,7 +36,7 @@
     "NAME": "攻击",
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
-  "${ModID}:ShiftingBLock": {
+  "${ModID}:ShiftingBlock": {
     "NAME": "格挡",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
