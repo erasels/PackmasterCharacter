@@ -21,8 +21,8 @@
   },
   "${ModID}:MetallicVial": {
     "NAME": "钢铁药剂",
-    "DESCRIPTION": "选择获得： NL 4层 *多层护甲 ， NL 或3层 荆棘 ， NL 2层 人工制品 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择获得： NL 4层 *多层护甲 ， NL 或3层 荆棘 ， NL 2层 人工制品 。 NL 消耗性 !stslib:ex! 。",
+    "DESCRIPTION": "选择获得： NL 4层 *多层护甲 ， NL 或3层 荆棘 ， NL 或2层 人工制品 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择获得： NL 4层 *多层护甲 ， NL 或3层 荆棘 ， NL 或2层 人工制品 。 NL 消耗性 !stslib:ex! 。",
     "EXTENDED_DESCRIPTION": ["获得4层 *多层护甲 。", "获得3层 荆棘 。","获得2层 人工制品 。"]
   },
   "${ModID}:QuickBrew": {
