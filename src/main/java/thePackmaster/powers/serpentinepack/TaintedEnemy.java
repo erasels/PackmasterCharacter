@@ -1,28 +1,14 @@
 package thePackmaster.powers.serpentinepack;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.InvisiblePower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.actions.watcher.NotStanceCheckAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.vfx.combat.EmptyStanceEffect;
-import com.megacrit.cardcrawl.vfx.combat.SmokeBlurEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.stances.serpentinepack.VenemousStance;
 
 public class TaintedEnemy extends AbstractPackmasterPower implements OnReceivePowerPower {
 
@@ -45,7 +31,8 @@ public class TaintedEnemy extends AbstractPackmasterPower implements OnReceivePo
 
     @Override
     public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
-        if (abstractPower.type.equals(PowerType.DEBUFF) && !abstractPower.ID.equals(GainStrengthPower.POWER_ID) && abstractCreature1.equals(AbstractDungeon.player) && !abstractCreature.hasPower(ArtifactPower.POWER_ID)) {
+        if (abstractPower.type == PowerType.DEBUFF && abstractCreature1 == AbstractDungeon.player && !abstractCreature.hasPower(ArtifactPower.POWER_ID)) {
+            flashWithoutSound();
             abstractPower.amount *= (2 * this.amount);
         }
             return true;
@@ -53,7 +40,7 @@ public class TaintedEnemy extends AbstractPackmasterPower implements OnReceivePo
 
     @Override
     public int onReceivePowerStacks(AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
-        if (power.type.equals(PowerType.DEBUFF) && !power.ID.equals(GainStrengthPower.POWER_ID) && source.equals(AbstractDungeon.player) && !target.hasPower(ArtifactPower.POWER_ID)) {
+        if (power.type == PowerType.DEBUFF && source == AbstractDungeon.player && !target.hasPower(ArtifactPower.POWER_ID)) {
             this.flashWithoutSound();
             return stackAmount * (2 * this.amount);
         }
