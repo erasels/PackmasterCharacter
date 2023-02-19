@@ -13,8 +13,7 @@
   },
   "${ModID}:LuminousStrike": {
     "NAME": "声光冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] [E] ： NL 伤害加当前能量乘 !M! 。",
-    "EXTENDED_DESCRIPTION": [" *增幅 伤害："]
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Gain !M! ${ModID}:Charge Up."
   },
   "${ModID}:ShootingEcho": {
     "NAME": "流星共鸣",
