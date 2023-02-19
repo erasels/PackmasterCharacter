@@ -1,7 +1,7 @@
 {
   "${ModID}:Venemous": {
     "NAME": "Venemous",
-    "DESCRIPTION": ["Your attacks deal #b50% less damage, but apply #b1 Weak and #b2 #yPoison on hit."]
+    "DESCRIPTION": ["Your attacks deal #b50% less damage, but apply #b1 #yWeak and #b2 #yPoison on hit."]
   },
   "${ModID}:Cunning": {
     "NAME": "Cunning",
