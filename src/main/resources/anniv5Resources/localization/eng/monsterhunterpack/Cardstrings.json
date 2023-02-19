@@ -36,7 +36,7 @@
   "${ModID}:CoreBlinder": {
     "NAME": "Core Blinder",
     "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster+ to your draw pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL Add a *Core *Blaster+ to your draw pile. NL Exhaust."
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",

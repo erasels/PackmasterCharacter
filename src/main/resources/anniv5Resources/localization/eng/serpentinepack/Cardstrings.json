@@ -1,14 +1,14 @@
 {
 "${ModID}:ApplyPoison": {
     "NAME": "Venomous Sheath",
-    "DESCRIPTION": "Enter ${ModID}:Venemous. NL At the start of your next turn, exit ${ModID}:Venemous."
+    "DESCRIPTION": "Enter ${ModID}:Venomous. NL At the start of your next turn, exit ${ModID}:Venomous."
 },"${ModID}:Guile": {
     "NAME": "Guile",
     "DESCRIPTION": "Draw !M! cards. NL Discard 2 cards. NL Enter ${ModID}:Cunning."
 },"${ModID}:Toxicology": {
     "NAME": "Toxicology",
-    "DESCRIPTION": "Enter ${ModID}:Venemous and draw !M! cards. NL If you are in ${ModID}:Venemous, exit it and gain [E] instead.",
-    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Venemous and draw !M! cards. NL If you are in ${ModID}:Venemous, exit it and gain [E] [E] instead."
+    "DESCRIPTION": "Enter ${ModID}:Venomous and draw !M! cards. NL If you are in ${ModID}:Venomous, exit it and gain [E] instead.",
+    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Venomous and draw !M! cards. NL If you are in ${ModID}:Venomous, exit it and gain [E] [E] instead."
 },"${ModID}:Patience": {
     "NAME": "Patience",
     "DESCRIPTION": "Retain. Enter ${ModID}:Cunning.",
@@ -28,7 +28,7 @@
     "DESCRIPTION": "At the end of your turn if you are in a Stance, gain !M! Block. NL Exit your Stance at the start of the turn."
 },"${ModID}:SinisterConcoction": {
     "NAME": "Sinister Concoction",
-    "DESCRIPTION": "Apply !M! ${ModID}:Tainted. NL Enter ${ModID}:Venemous. NL Exhaust."
+    "DESCRIPTION": "Apply !M! ${ModID}:Tainted. NL Enter ${ModID}:Venomous. NL Exhaust."
 },"${ModID}:BrutalStrikes": {
     "NAME": "Brutal Strikes",
     "DESCRIPTION": "Deal !D! damage twice. NL Vigor and ${ModID}:Dice affect this card !M! times."

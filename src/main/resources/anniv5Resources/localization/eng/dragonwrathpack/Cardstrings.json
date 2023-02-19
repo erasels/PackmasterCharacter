@@ -21,7 +21,7 @@
   },
   "${ModID}:ChainsofTruth": {
     "NAME": "Chains of Truth",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Apply !M! ${ModID}:Penance to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! ${ModID}:Penance to ALL enemies."
   },
   "${ModID}:SacredTrial": {
     "NAME": "Sacred Trial",

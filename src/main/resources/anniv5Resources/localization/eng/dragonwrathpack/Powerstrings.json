@@ -10,7 +10,7 @@
   "${ModID}:confession": {
     "NAME": "Confession",
     "DESCRIPTIONS": ["Whenever you take damage deal #b",
-      " damage to all enemies. Halved if it activates outside of your turn."
+      " damage to ALL enemies. Halved if it activates outside of your turn."
     ]
   },
   "${ModID}:JudgementDay": {

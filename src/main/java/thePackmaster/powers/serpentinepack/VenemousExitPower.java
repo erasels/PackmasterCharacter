@@ -4,12 +4,10 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.actions.watcher.NotStanceCheckAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.EmptyStanceEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
@@ -38,5 +36,9 @@ public class VenemousExitPower extends AbstractPackmasterPower {
             this.addToBot(new ChangeStanceAction("Neutral"));
         }
         addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+    }
+
+    public void updateDescription() {
+        description = DESCRIPTIONS[0];
     }
 }
