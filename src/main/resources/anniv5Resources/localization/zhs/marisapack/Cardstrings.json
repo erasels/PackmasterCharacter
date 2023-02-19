@@ -26,7 +26,7 @@
   },
   "${ModID}:Inertia": {
     "NAME": "惯性",
-    "DESCRIPTION": "牌被 消耗 或 ${ModID}:增幅 时， NL 获得 !M! 层 ${ModID}:蓄力 。"
+    "DESCRIPTION": "Gain !M! *Ablation. NL ${ModID}:Amplify [E] : Gain !${ModID}:m2! additional *Ablation."
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "极超短波",

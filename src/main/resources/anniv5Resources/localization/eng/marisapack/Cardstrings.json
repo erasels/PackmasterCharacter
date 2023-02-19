@@ -25,8 +25,8 @@
     "UPGRADE_DESCRIPTION": "Exhaust !M! cards. Gain ${ModID}:Charge Up equal to two times their costs including ${ModID}:Amplify. NL Draw !M! cards."
   },
   "${ModID}:Inertia": {
-    "NAME": "Inertia",
-    "DESCRIPTION": "Whenever a card is Exhausted or ${ModID}:Amplified, gain !M! ${ModID}:Charge Up."
+    "NAME": "Oort Cloud",
+    "DESCRIPTION": "Gain !M! *Ablation. NL ${ModID}:Amplify [E] : Gain !${ModID}:m2! additional *Ablation."
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "Ultimate Shortwave",
