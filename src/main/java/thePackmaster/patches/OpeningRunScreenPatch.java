@@ -3,6 +3,7 @@ package thePackmaster.patches;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.Expectation;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.neow.NeowEvent;
@@ -26,19 +27,20 @@ public class OpeningRunScreenPatch {
             locator = Locator.class
     )
     public static void SetTheThing(AbstractEvent __instance) {
-        if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
-            if (SpireAnniversary5Mod.allPacksMode) {
-                SpireAnniversary5Mod.logger.info("Vex's All Packs Override Enabled. Skipping intro screen");
-                SpireAnniversary5Mod.currentPoolPacks.clear();
-                SpireAnniversary5Mod.currentPoolPacks.addAll(SpireAnniversary5Mod.allPacks);
-                CardCrawlGame.dungeon.initializeCardPools();
-                InfiniteSpirePatch.generateQuestsIfInfiniteSpireIsLoaded();
-            } else {
-                SpireAnniversary5Mod.logger.info("Packmaster is Ready To Do Thing");
-                SpireAnniversary5Mod.openedStarterScreen = false;
-                SpireAnniversary5Mod.doPackSetup = true;
+        if(!Settings.isEndless || AbstractDungeon.floorNum <= 1) {
+            if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
+                if (SpireAnniversary5Mod.allPacksMode) {
+                    SpireAnniversary5Mod.logger.info("Vex's All Packs Override Enabled. Skipping intro screen");
+                    SpireAnniversary5Mod.currentPoolPacks.clear();
+                    SpireAnniversary5Mod.currentPoolPacks.addAll(SpireAnniversary5Mod.allPacks);
+                    CardCrawlGame.dungeon.initializeCardPools();
+                    InfiniteSpirePatch.generateQuestsIfInfiniteSpireIsLoaded();
+                } else {
+                    SpireAnniversary5Mod.logger.info("Packmaster is Ready To Do Thing");
+                    SpireAnniversary5Mod.openedStarterScreen = false;
+                    SpireAnniversary5Mod.doPackSetup = true;
+                }
             }
-
         }
     }
 
