@@ -16,7 +16,7 @@
 		"NAME": "挖掘"
 	},
 	"${ModID}:Geomorphology":	{
-		"DESCRIPTION": "消耗 牌或 生成 充能球时，随机给予 !M! 层 ${ModID}:土元素 。",
+		"DESCRIPTION": "消耗 牌或 生成 球时，随机给予 !M! 层 ${ModID}:土元素 。",
 		"NAME": "地貌学"
 	},
 	"${ModID}:GeothermalHeating":	{

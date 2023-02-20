@@ -5,7 +5,7 @@
   },
   "${ModID}:Cascade": {
     "NAME": "连瀑",
-    "DESCRIPTION": "${ModID}:自流 。 NL 本次每丢弃一张牌， NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "${ModID}:自流 ， NL 本次每丢弃一张牌， NL 获得 !B! 点 格挡 。"
   },
   "${ModID}:Hail": {
     "NAME": "冰雹",
@@ -14,7 +14,7 @@
   },
   "${ModID}:HighTide": {
     "NAME": "潮起",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:自流 时，讲本牌从弃牌堆返回手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:自流 时，将本牌从弃牌堆返回手牌。"
   },
   "${ModID}:Hydraulics": {
     "NAME": "水力学",
@@ -36,8 +36,8 @@
   },
   "${ModID}:Reservoir": {
     "NAME": "水库",
-    "DESCRIPTION": "${ModID}:自流 。 NL 抽本次丢弃牌的量的牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:自流 。 NL 抽本次丢弃牌的量的牌。"
+    "DESCRIPTION": "${ModID}:自流 ， NL 抽本次丢弃量张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:自流 ， NL 抽本次丢弃量张牌。"
   },
   "${ModID}:StormFront": {
     "NAME": "风临雨骤",
