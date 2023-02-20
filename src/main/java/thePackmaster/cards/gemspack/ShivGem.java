@@ -1,18 +1,17 @@
 package thePackmaster.cards.gemspack;
 
 import basemod.abstracts.AbstractCardModifier;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.Frost;
-import com.megacrit.cardcrawl.orbs.Lightning;
 import thePackmaster.cardmodifiers.gemspack.ShivGemMod;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
+@NoCompendium
 public class ShivGem extends AbstractGemsCard {
     public final static String ID = makeID("ShivGem");
 
