@@ -25,8 +25,7 @@ public class Conclawd extends AbstractClawCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster m2 : Wiz.getEnemies()
-        ) {
+        for (AbstractMonster m2 : Wiz.getEnemies()) {
             this.addToBot(new VFXAction(new ClawEffect(m2.hb.cX, m2.hb.cY, Color.PURPLE, Color.WHITE), 0.1F));
         }
 
