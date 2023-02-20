@@ -21,6 +21,7 @@ public class MagicHand extends AbstractReplicatorCard {
     public MagicHand() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
+        exhaust = true;
     }
 
     @Override
@@ -37,9 +38,9 @@ public class MagicHand extends AbstractReplicatorCard {
         if (uniqueCount <= magicNumber) {
             if (uniqueCount > 0) {
                 if(upgraded){
-                    atb(new FlexibleDiscoveryAction(uniqueCards, true));
+                    atb(new FlexibleDiscoveryAction(uniqueCards, false));
                 } else {
-                    atb(new FlexibleDiscoveryAction(uniqueCards, true, new ExhaustMod()));
+                    atb(new FlexibleDiscoveryAction(uniqueCards, false, new ExhaustMod()));
                 }
             }
         } else {
@@ -51,9 +52,9 @@ public class MagicHand extends AbstractReplicatorCard {
                 }
             }
             if(upgraded){
-                atb(new FlexibleDiscoveryAction(selectedCards, true));
+                atb(new FlexibleDiscoveryAction(selectedCards, false));
             } else {
-                atb(new FlexibleDiscoveryAction(selectedCards, true, new ExhaustMod()));
+                atb(new FlexibleDiscoveryAction(selectedCards, false, new ExhaustMod()));
             }
         }
     }
