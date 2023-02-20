@@ -9,9 +9,9 @@
   "${ModID}:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "The next attack gains Block equal to unblocked damage dealt.",
+      "The next attack gains #yBlock equal to unblocked damage dealt.",
       "The next #b",
-      " attacks gain Block equal to unblocked damage dealt."
+      " attacks gain #yBlock equal to unblocked damage dealt."
     ]
   }
 }
