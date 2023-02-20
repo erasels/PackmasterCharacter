@@ -22,5 +22,13 @@
       "flurry"
     ],
     "DESCRIPTION": "本回合Specified effect triggers every time you play 一张牌 本回合。"
+  },
+  {
+    "PROPER_NAME": "消融",
+    "NAMES": [
+      "ablation",
+      "消融"
+    ],
+    "DESCRIPTION": "回合结束时，获得等量 #y临时生命 ，并失去 #b1 层 #y消融 。"
   }
 ]

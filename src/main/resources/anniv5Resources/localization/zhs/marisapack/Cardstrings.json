@@ -13,7 +13,7 @@
   },
   "${ModID}:LuminousStrike": {
     "NAME": "声光冲击",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Gain !M! ${ModID}:Charge Up."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] ： NL 获得 !M! 层 ${ModID}:蓄力 。"
   },
   "${ModID}:ShootingEcho": {
     "NAME": "流星共鸣",
@@ -21,11 +21,11 @@
   },
   "${ModID}:StardustReverie": {
     "NAME": "星屑幻想",
-    "DESCRIPTION": "Exhaust the next card you play to gain !M! ${ModID}:Charge Up and draw 1 card."
+    "DESCRIPTION": "消耗 打出的下张牌来获得 !M! 层 ${ModID}:蓄力 并抽一张牌。"
   },
   "${ModID}:Inertia": {
-    "NAME": "Oort Cloud",
-    "DESCRIPTION": "Gain !M! *Ablation. NL ${ModID}:Amplify [E] : Gain !${ModID}:m2! additional *Ablation."
+    "NAME": "奥尔特云",
+    "DESCRIPTION": "获得 !M! 层 ${ModID}:消融 。 NL ${ModID}:增幅 [E] ： NL 额外获得 !${ModID}:m2! 层。"
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "极超短波",
