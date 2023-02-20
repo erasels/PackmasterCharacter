@@ -36,8 +36,7 @@
   },
   "${ModID}:Reservoir": {
     "NAME": "Reservoir",
-    "DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards discarded this way. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards discarded this way."
+    "DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards discarded this way. NL Exhaust."
   },
   "${ModID}:StormFront": {
     "NAME": "Storm Front",
