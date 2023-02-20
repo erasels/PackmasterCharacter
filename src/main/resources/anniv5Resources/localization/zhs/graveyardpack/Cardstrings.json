@@ -26,7 +26,7 @@
     "NAME": "自发性仪式",
     "DESCRIPTION": "消耗 所有手牌。 NL 造成本场战斗消耗过牌的次数点伤害。",
     "UPGRADE_DESCRIPTION": "将3张 *晕眩 加入手牌。 NL 消耗 所有手牌。 NL 造成本场战斗消耗过牌的次数点伤害。",
-  	"EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害。)"]
+  	"EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害)"]
   },
     "${ModID}:FuneraryJewels": {
     "NAME": "殉葬珠宝",
@@ -43,7 +43,7 @@
   },
     "${ModID}:LastGasp": {
     "NAME": "奄息",
-    "DESCRIPTION": "虚无 。 NL 选择一张 ${ModID}:被葬 牌，将其打出并 stslib:抹除 。",
-    "UPGRADE_DESCRIPTION": "选择一张 ${ModID}:被葬 牌，将其打出并 stslib:抹除 。"
+    "DESCRIPTION": "虚无 。 NL 选择一张 ${ModID}:被葬 牌， NL 将其打出并 stslib:抹除 。",
+    "UPGRADE_DESCRIPTION": "选择一张 ${ModID}:被葬 牌， NL 将其打出并 stslib:抹除 。"
   }
 }

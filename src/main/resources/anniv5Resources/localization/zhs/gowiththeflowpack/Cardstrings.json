@@ -36,8 +36,8 @@
   },
   "${ModID}:Reservoir": {
     "NAME": "水库",
-    "DESCRIPTION": "${ModID}:自流 。 NL 抽本次丢弃牌的量的牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:自流 。 NL 抽本次丢弃牌的量的牌。"
+    "DESCRIPTION": "${ModID}:自流 。 NL 抽本次丢弃量张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:自流 。 NL 抽本次丢弃量张牌。"
   },
   "${ModID}:StormFront": {
     "NAME": "风临雨骤",

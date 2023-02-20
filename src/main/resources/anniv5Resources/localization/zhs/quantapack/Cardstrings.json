@@ -6,8 +6,8 @@
   "${ModID}:MagicDart": {
     "NAME": "魔法飞镖",
     "DESCRIPTION": "造成手牌牌数点伤害。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 造成手牌牌数点伤害",
-    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害。"]
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成手牌牌数点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害)"]
   },
   "${ModID}:Cull": {
     "NAME": "宰杀",
@@ -28,7 +28,7 @@
   },
   "${ModID}:Flow": {
     "NAME": "心流",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合上张打出牌为攻击，抽 !M! 张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合打出的上张牌为攻击，抽 !M! 张牌。"
   },
   "${ModID}:Manaburst": {
     "NAME": "魔力爆发",

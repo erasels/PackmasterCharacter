@@ -132,7 +132,7 @@
     "UPGRADE_DESCRIPTION": "给予 !M! 层 ${ModID}:追猎 。 NL 本回合可 保留 !${ModID}:m2! 张牌。"
   },
   "${ModID}:SerpentineDagger": {
-    "NAME": "蛇女匕首",
+    "NAME": "蛇术士匕首",
     "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害 !M! 次。 NL 将本牌2张复制品加入抽牌堆。 NL 消耗 。"
   }
 }

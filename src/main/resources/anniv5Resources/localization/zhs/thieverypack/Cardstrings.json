@@ -22,7 +22,7 @@
   },
   "${ModID}:StrengthSap": {
     "NAME": "力量耗竭",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标 力量 大于0，窃取 !${ModID}:m2! 点。 NL 消耗性 !stslib:ex! 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标 力量 大于0， NL 窃取 !${ModID}:m2! 点。 NL 消耗性 !stslib:ex! 。"
   },
   "${ModID}:CunningPoison": {
     "NAME": "狡猾毒药",

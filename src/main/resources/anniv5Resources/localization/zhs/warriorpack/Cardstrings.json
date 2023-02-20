@@ -31,7 +31,7 @@
   },
   "${ModID}:Turtle": {
     "NAME": "战龟",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下张攻击牌造成 ${ModID}:狂野 伤害。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下张攻击造成 ${ModID}:狂野 伤害。"
   },
   "${ModID}:Bolas": {
     "NAME": "流星锤",
