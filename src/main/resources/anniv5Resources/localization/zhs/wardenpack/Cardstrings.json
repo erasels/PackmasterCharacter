@@ -35,7 +35,7 @@
   },
   "${ModID}:Recurrence": {
     "NAME": "重现",
-    "DESCRIPTION": "选择将一张手牌的复制品加入抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "将所有手牌的复制品加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:DivineMight": {
     "NAME": "神圣之力",
