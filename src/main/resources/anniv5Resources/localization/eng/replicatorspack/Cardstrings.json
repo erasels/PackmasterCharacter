@@ -2,7 +2,7 @@
   "${ModID}:FrontloadedBash": {
     "NAME": "Frontloaded Bash",
     "DESCRIPTION": "Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile. NL Draw 1 card."
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile."
   },
   "${ModID}:Preparation": {
     "NAME": "Preparation",
