@@ -13,7 +13,7 @@
   },
   "${ModID}:Sneckpot": {
     "NAME": "蛇壶",
-    "DESCRIPTION": "造成 1 ~ !D! 点伤害。 NL 随机X次，取最高值。"
+    "DESCRIPTION": "造成 1 ~ !D! 点伤害， NL 随机X次，取最高值。"
   },
   "${ModID}:WhipNSnapper": {
     "NAME": "扫尾嗜咬",

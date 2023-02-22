@@ -42,7 +42,7 @@
   },
   "${ModID}:Rhapsody": {
     "NAME": "Rhapsody",
-    "DESCRIPTION": "获得一层 !M! 级 ${ModID}:灵感 。 NL 抽2张牌。"
+    "DESCRIPTION": "获得1层 !M! 级 ${ModID}:灵感 。 NL 抽2张牌。"
   },
   "${ModID}:Frostprime": {
     "NAME": "Frost Prime",

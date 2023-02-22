@@ -27,8 +27,8 @@
   },
   "${ModID}:Replenish": {
     "NAME": "补满",
-    "DESCRIPTION": "选择将弃牌堆2张牌加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择将弃牌堆2张牌加入手牌。"
+    "DESCRIPTION": "选择将弃牌堆2张牌返回手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择将弃牌堆2张牌返回手牌。"
   },
   "${ModID}:LesserHex": {
     "NAME": "低阶巫鬼",

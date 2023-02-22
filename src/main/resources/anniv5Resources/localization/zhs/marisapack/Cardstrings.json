@@ -25,7 +25,7 @@
   },
   "${ModID}:Inertia": {
     "NAME": "奥尔特云",
-    "DESCRIPTION": "获得 !M! 层 ${ModID}:消融 。 NL ${ModID}:增幅 [E] ： NL 额外获得 !${ModID}:m2! 层。"
+    "DESCRIPTION": "获得 !M! 层 *消融 。 NL ${ModID}:增幅 [E] ： NL 额外获得 !${ModID}:m2! 层。"
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "极超短波",

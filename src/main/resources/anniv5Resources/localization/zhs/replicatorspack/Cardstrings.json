@@ -6,8 +6,8 @@
   },
   "${ModID}:Preparation": {
     "NAME": "做准备",
-    "DESCRIPTION": "选择一张攻击或技能手牌，获得其一张复制品。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一张攻击或技能手牌，获得其一张复制品。",
+    "DESCRIPTION": "选择一张攻击或技能手牌，获得其复制品。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张攻击或技能手牌，获得其复制品。",
     "EXTENDED_DESCRIPTION": ["选择复制一张手牌。"]
   },
   "${ModID}:SmallAdaptation": {
