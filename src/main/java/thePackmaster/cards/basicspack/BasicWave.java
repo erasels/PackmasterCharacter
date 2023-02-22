@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.MonsterRoom;
+import com.megacrit.cardcrawl.rooms.VictoryRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.cardmodifiers.basicspack.BasicMod;
@@ -23,12 +25,12 @@ import thePackmaster.cards.Strike;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class BasicWave extends AbstractMultipleCardPreviewCard {
+public class BasicWave extends AbstractMultipleCardPreviewCard implements OnObtainCard{
     public final static String ID = makeID("BasicWave");
 
     public BasicWave() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, "basics");
-        if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null)
+        if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode.room instanceof MonsterRoom)
             CardModifierManager.addModifier(this, new BasicMod());
         this.cardToPreview.add(new Strike());
         this.cardToPreview.add(new Defend());
@@ -61,5 +63,10 @@ public class BasicWave extends AbstractMultipleCardPreviewCard {
             } else this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[1] + cardStrings.EXTENDED_DESCRIPTION[2];
             initializeDescription();
         }
+    }
+
+    @Override
+    public void onObtainCard() {
+        CardModifierManager.addModifier(this, new BasicMod());
     }
 }
