@@ -7,12 +7,12 @@
     "DESCRIPTION": "抽 !M! 张牌。 NL 丢弃2张牌。 NL 进入 ${ModID}:狡诈 。"
 },"${ModID}:Toxicology": {
     "NAME": "毒药学",
-    "DESCRIPTION": "进入 ${ModID}:恶毒 。 NL 抽 !M! 张牌。 NL 若已处于 ${ModID}:恶毒 ， NL 退出并获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "进入 ${ModID}:恶毒 。 NL 抽 !M! 张牌。 NL 若已处于 ${ModID}:恶毒 ， NL 退出并获得 [E] [E] 。"
+    "DESCRIPTION": "若已处于 ${ModID}:恶毒 ， NL 退出并获得 [E] ， NL 否则进入 ${ModID}:恶毒 ， NL 并抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "若已处于 ${ModID}:恶毒 ， NL 退出并获得 [E] [E] ， NL 否则进入 ${ModID}:恶毒 ， NL 并抽 !M! 张牌。"
 },"${ModID}:Patience": {
     "NAME": "耐心",
     "DESCRIPTION": "保留 。 NL 进入 ${ModID}:狡诈 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL Enter ${ModID}:狡诈 。 NL 保留时获得 !B! 点 格挡 。"
+    "UPGRADE_DESCRIPTION": "保留 。 NL 进入 ${ModID}:狡诈 。 NL 保留时获得 !B! 点 格挡 。"
 },"${ModID}:DaggerRush": {
     "NAME": "匕首蛇击",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 若处于 姿态 ， NL 额外造成一次。"
