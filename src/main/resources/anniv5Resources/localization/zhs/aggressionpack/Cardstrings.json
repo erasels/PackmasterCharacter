@@ -1,0 +1,42 @@
+{
+  "${ModID}:Vindicate": {
+    "NAME": "正义之击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每当你打出攻击牌，获得 !M! 点 格挡 。"
+  },
+  "${ModID}:DarkLance": {
+    "NAME": "黑暗刺击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合改变过姿态， NL 抽 !M! 张牌。"
+  },
+  "${ModID}:FuriousAssault": {
+    "NAME": "狂怒袭击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 进入 ${ModID}:侵袭 。"
+  },
+  "${ModID}:Slam": {
+    "NAME": "猛击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得未被格挡伤害点 格挡 。"
+  },
+  "${ModID}:Decapitate": {
+    "NAME": "斩首",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标本回合失去 !M! 点 力量 。 NL 消耗 。"
+  },
+  "${ModID}:TitansStrength": {
+    "NAME": "泰坦之力",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。"
+  },
+  "${ModID}:Epiphany": {
+    "NAME": "神力展现",
+    "DESCRIPTION": "若处于一种 姿态 ， NL 退出并抽 !M! 张牌， NL 否则进入 ${ModID}:侵袭 。"
+  },
+  "${ModID}:InnerFury": {
+    "NAME": "怒气",
+    "DESCRIPTION": "进入或退出 ${ModID}:侵袭 时，获得 !M! 层临时 力量 与 !M! 点 格挡 。 NL 进入 ${ModID}:侵袭 。"
+  },
+  "${ModID}:LunaticRage": {
+    "NAME": "癫狂",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 [E] [E] 。 NL 丢弃所有非攻击非状态手牌。 NL 消耗 。"
+  },
+  "${ModID}:Animosity": {
+    "NAME": "恨极",
+    "DESCRIPTION": "每当你进入、退出或以 ${ModID}:侵袭 开始回合，获得 !M! 点 力量 。"
+  }
+}

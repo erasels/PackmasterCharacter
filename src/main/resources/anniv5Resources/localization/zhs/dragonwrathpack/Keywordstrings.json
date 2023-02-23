@@ -1,0 +1,31 @@
+[
+  {
+    "PROPER_NAME": "忏悔",
+    "NAMES": [
+      "Penance",
+      "penance",
+      "Repentant",
+      "repentant",
+      "忏悔"
+    ],
+    "DESCRIPTION": "单位获得 #b8 层 #y忏悔 时，失去 #b20 点生命 并移除其 #y忏悔 层数，且该场战斗所有单位下次因 #y忏悔 而失去的生命提高 #b10 点。"
+  },
+  {
+    "PROPER_NAME": "告罪",
+    "NAMES": [
+      "Confession",
+      "confession",
+      "告罪"
+    ],
+    "DESCRIPTION": "每当你受到伤害或失去生命时，对所有敌人造成 #y告罪 层数点伤害。 NL 若不在你的回合触发， #y告罪 层数减半。"
+  },
+  {
+    "PROPER_NAME": "辉光",
+    "NAMES": [
+      "Light",
+      "light",
+      "辉光"
+    ],
+    "DESCRIPTION": "#y充能球 - #y被动 ：回合结束时，获得 #b1 层 #y告罪 。 NL #y激发 ：获得 #b3 层 #y告罪 。"
+  }
+]

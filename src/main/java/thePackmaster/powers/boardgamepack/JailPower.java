@@ -22,16 +22,19 @@ public class JailPower extends AbstractPackmasterPower {
 
     @Override
     public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {
-        if (damage > 0F)
-            damage = 0F;
-        return damage;
+        return 0;
+    }
+
+    @Override
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        if(info.type == DamageInfo.DamageType.NORMAL || info.type == DamageInfo.DamageType.THORNS)
+            return 0;
+        return damageAmount;
     }
 
     @Override
     public boolean canPlayCard(AbstractCard card) {
-        if(card.type == AbstractCard.CardType.ATTACK)
-            return false;
-        return true;
+        return card.type != AbstractCard.CardType.ATTACK;
     }
 
     @Override

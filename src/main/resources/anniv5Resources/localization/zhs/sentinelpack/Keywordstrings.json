@@ -1,0 +1,12 @@
+[
+  {
+    "PROPER_NAME": "愤懑",
+    "NAMES": ["angry","愤懑"],
+    "DESCRIPTION": "你造成与受到的攻击伤害增加 #b50% ，退出时获得 #b3 层 #y活力 。"
+  },
+  {
+    "PROPER_NAME": "宁静",
+    "NAMES": ["serene","宁静"],
+    "DESCRIPTION": "回合结束时，获得此时 #y格挡 一半的 #y格挡 。退出时获得 #b1 点 #y敏捷 。"
+  }
+]

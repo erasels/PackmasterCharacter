@@ -1,0 +1,52 @@
+{
+  "${ModID}:HuntersMark": {
+    "NAME": "猎人印记",
+    "DESCRIPTIONS": [
+      "该单位受到 #b",
+      "% 额外攻击伤害。每回合层数减 #b1 。"
+    ]
+  },
+  "${ModID}:NotHunted": {
+    "NAME": "不被追猎",
+    "DESCRIPTIONS": [
+      "该单位少受到 #b",
+      "% 攻击伤害。被 #y追猎 的敌人死亡时，移除本效果。"
+    ]
+  },
+  "${ModID}:PerfectGuardPower": {
+    "NAME": "完美防御",
+    "DESCRIPTIONS": [
+      "若本回合 #y格挡 刚好被打破，获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
+  "${ModID}:EnragePowerPlayer": {
+    "NAME": "激怒",
+    "DESCRIPTIONS": [
+      "回合结束时若无敌人意图攻击，获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
+  "${ModID}:GlassArmorPower": {
+    "NAME": "玻璃护甲",
+    "DESCRIPTIONS": [
+      "你的回合结束时，获得 #b",
+      " 点 #y格挡 。若你受到未被格挡的攻击伤害，失去所有 #y玻璃护甲 。"
+    ]
+  },
+  "${ModID}:DelayedDamagePower": {
+    "NAME": "延迟伤害",
+    "DESCRIPTIONS": [
+      "对该单位造成 #b",
+      " 点延迟伤害， #b",
+      " 回合后造成。"
+    ]
+  },
+  "${ModID}:TimePiecePower": {
+    "NAME": "时间加速",
+    "DESCRIPTIONS": [
+      "每打出 #b12 张牌，获得 #b3 点 #y力量 。已打出 #b",
+      " 张。"
+    ]
+  }
+}

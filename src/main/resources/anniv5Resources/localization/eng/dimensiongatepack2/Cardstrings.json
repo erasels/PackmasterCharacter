@@ -26,7 +26,7 @@
   },
   "${ModID}:FlamePillar": {
     "NAME": "Flame Pillar",
-    "DESCRIPTION": "*Magic. NL Apply !M! ${ModID}:Ignite. NL Add a *Channel to your hand."
+    "DESCRIPTION": "*Magic. NL Apply !M! ${ModID}:Ignite. NL Add a *Channel to your hand. NL Exhaust."
   },
   "${ModID}:Haymaker": {
     "NAME": "Haymaker",

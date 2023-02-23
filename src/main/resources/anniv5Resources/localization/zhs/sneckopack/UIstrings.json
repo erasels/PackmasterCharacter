@@ -1,0 +1,21 @@
+{
+  "${ModID}:SneckoPack": {
+    "TEXT": [
+      "异蛇",
+      "不稳定却仍然强大的效果，向尖塔吾王致敬。",
+      "Gk (Erasels), Pandemonium",
+      "卡图来自崩坠Mod。"
+    ]
+  },
+  "${ModID}:TwitchScreen": {
+    "TEXT": [
+      "随机化其耗能。"
+    ]
+  },
+  "${ModID}:SneckoPackHat": {
+    "TEXT": [
+      "你在看什么？",
+      "异蛇之眼"
+    ]
+  }
+}

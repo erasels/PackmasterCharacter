@@ -16,8 +16,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class NeutronStar extends AbstractPixieCard {
     public final static String ID = makeID("NeutronStar");
 
-    private static final int baseMgk = 1;
-    private static final int upgradeMgk = 2;
+    private static final int baseMgk = 2;
+    private static final int upgradeMgk = 3;
 
     public NeutronStar() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

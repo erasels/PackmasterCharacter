@@ -1,0 +1,21 @@
+{
+  "${ModID}:VenemousExitPower": {
+    "NAME": "Exit Venomous",
+    "DESCRIPTIONS": ["At the start of your turn, exit #yVenomous."]
+  },
+  "${ModID}:EvasiveTacticsPower": {
+    "NAME": "Evasive Tactics",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you are in a Stance gain #b",
+      " #yBlock and exit your #yStance at the start of the next turn."
+    ]
+  },
+  "${ModID}:TaintedEnemy": {
+    "NAME": "Tainted",
+    "DESCRIPTIONS": [
+      "Doubles any debuffs you apply to this enemy.",
+      "Doubles any debuffs you apply to this enemy #b",
+      " times."
+    ]
+  }
+}

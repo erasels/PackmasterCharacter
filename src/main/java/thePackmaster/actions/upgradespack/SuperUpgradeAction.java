@@ -27,25 +27,35 @@ public class SuperUpgradeAction extends AbstractGameAction {
         //SpireAnniversary5Mod.logger.info("====== Updating SuperUpgrade action, with list " + selectedCards);
         for (AbstractCard c : selectedCards) {
             for (int i = 0 ; i < amount ; i++) {
-                forceUpgrade(c);
+                forceUpgrade(c, true);
             }
         }
         isDone = true;
     }
 
-    private void forceUpgrade(AbstractCard card) {
+    public static void forceUpgrade(AbstractCard card, boolean vfx) {
         if (card.canUpgrade()) {
             card.upgrade();
-            AbstractDungeon.topLevelEffects.add(new LightUpgradeShineEffect(card.current_x, card.current_y));
+            if (vfx)
+                AbstractDungeon.topLevelEffects.add(new LightUpgradeShineEffect(card.current_x, card.current_y));
             return;
         }
 
+        AbstractCard exampleCard = card.makeCopy();
+
         int oldMagic = card.baseMagicNumber;
-        int oldCost = card.cost;
 
+        int baseCost = exampleCard.cost;
+        exampleCard.upgrade();
+        int upgCostDiff = exampleCard.cost - baseCost;
+        int turnCostDiff = card.costForTurn - card.cost;
+        int targetCost = card.cost;
+        if (targetCost >= 0 && upgCostDiff != 0) {
+            targetCost += upgCostDiff;
 
-        int originalCost = card.makeCopy().cost;
-        int diff = card.costForTurn - card.cost;
+            if (targetCost < 0)
+                targetCost = 0;
+        }
 
         card.upgraded = false;
         if (card instanceof BranchingUpgradesCard) {
@@ -58,82 +68,21 @@ public class SuperUpgradeAction extends AbstractGameAction {
         } else {
             card.upgrade();
         }
+
         if (card.baseMagicNumber < 1) {
             card.baseMagicNumber = card.magicNumber = oldMagic;
         }
 
-
-
-        int costReduction = originalCost - card.cost;
-        if (oldCost >= 0 && oldCost - costReduction >= 0) {
-            int newBaseCost = oldCost - costReduction;
-
-
-            card.cost = newBaseCost;// 873
-            if (card.costForTurn > 0) {// 875
-                card.costForTurn = newBaseCost + diff;// 876
-            }
-
-            if (card.costForTurn < 0) {// 878
-                card.costForTurn = 0;// 879
-            }
-
-            card.upgradedCost = true;
-        }
-
-        AbstractDungeon.topLevelEffects.add(new LightUpgradeShineEffect(card.current_x, card.current_y));
-        if (card.timesUpgraded > 1) {
-            card.name = card.originalName + "+" + card.timesUpgraded;
-        }
-        if (card.timesUpgraded < 1) {
-            card.name = card.originalName + "*" + (-card.timesUpgraded);
-        }
-    }
-
-    public static void silentForceUpgrade(AbstractCard card) {
-        if (card.canUpgrade()) {
-            card.upgrade();
-            return;
-        }
-
-        int oldMagic = card.baseMagicNumber;
-        int oldCost = card.cost;
-
-        int originalCost = card.makeCopy().cost;
-        int diff = card.costForTurn - card.cost;
-
-        card.upgraded = false;
-        if (card instanceof BranchingUpgradesCard) {
-            BranchingUpgradesCard c = (BranchingUpgradesCard)card;
-            if (c.isBranchUpgrade()) {
-                c.doBranchUpgrade();
-            } else {
-                c.doNormalUpgrade();
-            }
-        } else {
-            card.upgrade();
-        }
-        if (card.baseMagicNumber < 1) {
-            card.baseMagicNumber = card.magicNumber = oldMagic;
-        }
-
-
-        int costReduction = originalCost - card.cost;
-        if (oldCost >= 0 && oldCost - costReduction >= 0) {
-            int newBaseCost = oldCost - costReduction;
-
-
-            card.cost = newBaseCost;
-            if (card.costForTurn > 0) {
-                card.costForTurn = newBaseCost + diff;
-            }
-
-            if (card.costForTurn < 0) {
+        if (card.cost > targetCost && card.cost >= 0) {
+            card.cost = targetCost;
+            card.costForTurn = targetCost + turnCostDiff;
+            if (card.costForTurn < 0)
                 card.costForTurn = 0;
-            }
-
-            card.upgradedCost = true;
+            card.isCostModifiedForTurn = card.costForTurn != card.cost;
         }
+
+        if (vfx)
+            AbstractDungeon.topLevelEffects.add(new LightUpgradeShineEffect(card.current_x, card.current_y));
 
         if (card.timesUpgraded > 1) {
             card.name = card.originalName + "+" + card.timesUpgraded;

@@ -1,0 +1,16 @@
+{
+  "${ModID}:WardenPack": {
+    "TEXT": [
+      "洞见者",
+      "操纵预知的力量，提前思考，化未知为已知。",
+      "AlexMdle",
+      "卡图作者： #yStardustSwirl 。"
+    ]
+  },
+  "${ModID}:WardenPackHat": {
+    "TEXT": [
+      "这款大容量头饰后面会藏有什么秘密呢？",
+      "神之头罩"
+    ]
+  }
+}

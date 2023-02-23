@@ -1,0 +1,15 @@
+{
+  "${ModID}:ConjurerPack": {
+    "TEXT": [
+      "土元素",
+      "一点小小的土元素震撼。",
+      "pinacolada"
+    ]
+  },
+  "${ModID}:ConjurerPackHat": {
+    "TEXT": [
+      "我预见了你会戴上此帽。",
+      "佐尔坦之帽"
+    ]
+  }
+}

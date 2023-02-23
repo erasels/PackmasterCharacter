@@ -14,7 +14,7 @@ public class FamilialCurse extends AbstractCthulhuCard {
 
     public FamilialCurse() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 17;
+        baseMagicNumber = magicNumber = 13;
         cardsToPreview = new Madness();
 
     }
@@ -27,6 +27,6 @@ public class FamilialCurse extends AbstractCthulhuCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(6);
+        upgradeMagicNumber(4);
     }
 }

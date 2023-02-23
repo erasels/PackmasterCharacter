@@ -1,0 +1,16 @@
+{
+  "${ModID}:SerpentinePack": {
+    "TEXT": [
+      "Serpentine Disciple",
+      "A disciple of the Reptomancer. Uses Venemous and Cunning stances which focus on applying debuffs.",
+      "Dayvig",
+      "Pack Art - Dayvig"
+    ]
+  },
+  "${ModID}:SerpentinePackHat": {
+    "TEXT": [
+      "The honorary hood symbolizing entry into the Reptomancer order.",
+      "Reptomancer Hood"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "${ModID}:MakeshiftSwordPower": {
+    "NAME": "Кустарный меч",
+    "DESCRIPTIONS": [
+        "Даёт #b%d #yБодрости при создании карты в бою."
+      ]
+  },
+  "${ModID}:MakeshiftShieldPower": {
+    "NAME": "Кустарный щит",
+    "DESCRIPTIONS": [
+        "Даёт #b%d #yЗащиты при создании карты в бою."
+      ]
+  },
+  "${ModID}:FirewallPower": {
+    "NAME": "Антивирус",
+    "DESCRIPTIONS": [
+      "#yСжигает создаваемые в бою #yСтатусы."
+    ]
+  }
+}

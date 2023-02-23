@@ -1,5 +1,6 @@
 package thePackmaster.cards.marisapack;
 
+import basemod.AutoAdd;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -10,15 +11,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.ImpactSparkEffect;
-import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
 
-import java.util.Locale;
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
+@AutoAdd.Ignore
 public class Spark extends AbstractMarisaCard implements AmplifyCard{
     public final static String ID = makeID(Spark.class.getSimpleName());
     private static final int DMG = 3, UPG_DMG = 4;

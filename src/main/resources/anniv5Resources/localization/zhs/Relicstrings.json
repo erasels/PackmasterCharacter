@@ -1,0 +1,85 @@
+{
+  "${ModID}:BagOfHolding": {
+    "NAME": "异容背包",
+    "FLAVOR": "\"难以置信！这个背包像是与异次元空间相连。我要是跳进去会怎样？\" - 兰伟德。",
+    "DESCRIPTIONS": [
+      "替换 ",
+      " 。 NL 回合开始时获得 [E] 。 NL 牌组每有 #b5 张牌，持续 #b1 回合。",
+      "已获得 #y能量 ： #b{0} 点，",
+      "平均  #b{0} 点/回合， #b{1} 点/战斗。"
+    ]
+  },
+  "${ModID}:BanishingDecree": {
+    "NAME": "放逐判令",
+    "FLAVOR": "吸收有用的，抛弃无用的，将本属于你的力量赋予自己。",
+    "DESCRIPTIONS": [
+      "拾起时，选择一组本局已选卡包，包内卡牌本局不再出现。 NL 从 #b5 种随机卡包中选择 #b1 种，获得其专属卡牌奖励 #b3 次。",
+      "选择一组卡包，它将被",
+      "卡包'",
+      "'内的牌不再出现在本局游戏。",
+      "'内的牌将出现在本局游戏。",
+      "选择一组卡包，它将被",
+      "力量！",
+      "放逐。",
+      "获得。",
+      "Translator note: The 2 dots up here follows the structure 'Choose a Pack to banish with '+'Banishing Decree'+'.'   并'Choose a Pack to 获得 with '+'Banishing Decree'+'.' respectively. ",
+      "放逐的卡包： #y{0} ，已选补偿卡包： #y{1} 。"
+    ]
+  },
+  "${ModID}:CollectorBadge": {
+    "NAME": "收藏家徽章",
+    "FLAVOR": "全！部！收！藏！",
+    "DESCRIPTIONS": [
+      "每回合打出 #b4 张属于不同卡包的牌后，获得 [E] 。",
+      " NL NL 本回合已打出过的卡包： ",
+      " NL NL 本回合已触发过效果。",
+      "已获得 #y能量 ： #b{0} 点，",
+      "平均  #b{0} 点/回合， #b{1} 点/战斗。"
+    ]
+  },
+  "${ModID}:GemOfUnity": {
+    "NAME": "团结宝石",
+    "FLAVOR": "团结就是力量。",
+    "DESCRIPTIONS": [
+      "每场战斗，打出本局每种所选卡包内的任意一张牌后，获得 #b20 点 格挡 、 #b1  点 力量 、 #b1 点 敏捷 ，并回复 #b5 点生命。",
+      "本场战斗已打出过的卡包： ",
+      "已触发次数： #b{0} 次，",
+      "平均 #b{0} 次/战斗 。 "
+    ]
+  },
+  "${ModID}:HandyHaversack": {
+    "NAME": "便利背包",
+    "FLAVOR": "帮助神级囤积家扫清囤积道路上的障碍。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 [E] 并抽 #b1 张牌。"
+    ]
+  },
+  "${ModID}:PMBoosterBox": {
+    "NAME": "大师增强盒",
+    "FLAVOR": "批发购买价更赢。",
+    "DESCRIPTIONS": [
+      "拾起时， 从 #b3 种卡包中选择 #b1 种，重复该过程 #b3 次。战斗结束时，额外获得这些卡包内的 #b1 张牌。",
+      " NL 已选的卡包： ",
+      "选择一种卡包。",
+      "卡包： #y{0} 、 #y{1} 、 #y{2} NL 额外卡牌： #y{3} 。"
+    ]
+  },
+  "${ModID}:PMBoosterPack": {
+    "NAME": "大师增强包",
+    "FLAVOR": "一套锡纸包装的卡包。它怎么出现在尖塔里的？",
+    "DESCRIPTIONS": [
+      "拾起时，可选择随机一种卡包内的任意一张牌加入牌组。",
+      "选择一张牌加入牌组。",
+      "卡包： #y{0} 。"
+    ]
+  },
+  "${ModID}:PMCollection": {
+    "NAME": "大师卡集",
+    "FLAVOR": "据说由一群魔法师收集结合。",
+    "DESCRIPTIONS": [
+      "拾起时，可对一组随机卡包的每张牌都选择是否加入牌组。",
+      "可将它加入牌组。",
+      "卡包： #y{0} 。"
+    ]
+  }
+}

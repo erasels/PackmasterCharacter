@@ -1,0 +1,36 @@
+{
+"${ModID}:ApplyPoison": {
+    "NAME": "Venomous Sheath",
+    "DESCRIPTION": "Enter ${ModID}:Venomous. NL At the start of your next turn, exit ${ModID}:Venomous."
+},"${ModID}:Guile": {
+    "NAME": "Guile",
+    "DESCRIPTION": "Draw !M! cards. NL Discard 2 cards. NL Enter ${ModID}:Cunning."
+},"${ModID}:Toxicology": {
+    "NAME": "Toxicology",
+    "DESCRIPTION": "Enter ${ModID}:Venomous and draw !M! cards. NL If you are in ${ModID}:Venomous, exit it and gain [E] instead.",
+    "UPGRADE_DESCRIPTION": "Enter ${ModID}:Venomous and draw !M! cards. NL If you are in ${ModID}:Venomous, exit it and gain [E] [E] instead."
+},"${ModID}:Patience": {
+    "NAME": "Patience",
+    "DESCRIPTION": "Retain. Enter ${ModID}:Cunning.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enter ${ModID}:Cunning. NL When Retained, gain !B! Block."
+},"${ModID}:DaggerRush": {
+    "NAME": "Dagger Rush",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Hits an additional time if you are in a Stance."
+},"${ModID}:CheapShot": {
+    "NAME": "Cheap Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
+},"${ModID}:ColdCalculated": {
+    "NAME": "Cold and Calculated",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Frostbite. NL Enter ${ModID}:Cunning."
+},"${ModID}:EvasiveTactics": {
+    "NAME": "Evasive Tactics",
+    "DESCRIPTION": "At the end of your turn if you are in a Stance, gain !M! Block. NL Exit your Stance at the start of the turn."
+},"${ModID}:SinisterConcoction": {
+    "NAME": "Sinister Concoction",
+    "DESCRIPTION": "Apply !M! ${ModID}:Tainted. NL Enter ${ModID}:Venomous. NL Exhaust."
+},"${ModID}:BrutalStrikes": {
+    "NAME": "Brutal Strikes",
+    "DESCRIPTION": "Deal !D! damage twice. NL Vigor and ${ModID}:Dice affect this card !M! times."
+}
+}

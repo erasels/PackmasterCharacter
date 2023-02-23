@@ -5,11 +5,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
-import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
-
-import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.doDmg;
@@ -17,7 +13,7 @@ import static thePackmaster.util.Wiz.doDmg;
 public class MasterSpark extends AbstractMarisaCard implements AmplifyCard{
     public final static String ID = makeID(MasterSpark.class.getSimpleName());
     private static final int DMG = 9, UPG_DMG = 1;
-    private static final int MAGIC = 16, UPG_MAGIC = 3;
+    private static final int MAGIC = 17, UPG_MAGIC = 3;
 
     public MasterSpark() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);

@@ -37,7 +37,7 @@ public class MayhemFormPower extends AbstractPackmasterPower implements OnRefres
         if (canTrigger()) {
             activatedThisTurn = true;
             this.flash();
-            addToBot(new DrawCardAction(amount));
+            addToBot(new DrawCardAction(2));
             addToBot(new GainEnergyAction(amount));
             updateDescription();
         }
@@ -55,7 +55,6 @@ public class MayhemFormPower extends AbstractPackmasterPower implements OnRefres
     public void updateDescription() {
         StringBuilder sb = new StringBuilder();
         sb.append(DESCRIPTIONS[0]);
-        sb.append(amount);
         sb.append(DESCRIPTIONS[1]);
         for (int i = 0; i < amount; i++) {
             sb.append(DESCRIPTIONS[2]);

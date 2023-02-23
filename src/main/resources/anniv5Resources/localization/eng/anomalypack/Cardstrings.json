@@ -53,6 +53,6 @@
 },
   "${ModID}:SouleaterStrike": {
     "NAME": "Souleater Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 13 Vulnerable. NL Apply 13 Weak."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply !M! Weak."
   }
 }

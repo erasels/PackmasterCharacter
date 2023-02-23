@@ -33,7 +33,7 @@
     "DESCRIPTION": "Put a card from your hand onto the bottom of your draw pile. NL Draw !M! cards.",
     "UPGRADE_DESCRIPTION": "Put any number of cards from your hand onto the bottom of your draw pile. NL Draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
-      "put on the bottom of your draw pile"
+      "Put on the bottom of your draw pile"
     ]
   },
   "${ModID}:Glimpse": {

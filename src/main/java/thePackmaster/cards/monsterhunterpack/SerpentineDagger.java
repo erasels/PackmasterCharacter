@@ -1,12 +1,11 @@
 package thePackmaster.cards.monsterhunterpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -26,7 +25,7 @@ public class SerpentineDagger extends AbstractMonsterHunterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++){
-            addToBot(new DamageAction(m, new DamageInfo(p, baseDamage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         }
         addToBot(new MakeTempCardInDrawPileAction(this.makeStatEquivalentCopy(), 2, true, false));
     }

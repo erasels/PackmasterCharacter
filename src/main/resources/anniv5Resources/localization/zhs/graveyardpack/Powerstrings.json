@@ -1,0 +1,18 @@
+{
+	"${ModID}:DarkOfNightPower": {
+		"NAME": "夜暗",
+		"DESCRIPTIONS": [
+			"你的下张自 #y消耗 牌打出两次。",
+			"你的下 #b",
+			" 张自 #y消耗 牌打出两次。"
+		]
+	},
+	"${ModID}:CallOfTheGravePower": {
+		"NAME": "墓中呼唤",
+			"DESCRIPTIONS": [
+				"你的回合开始时，随机打出 #b1 张 #y被葬 牌，并将其 #y抹除 。",
+				"你的回合开始时，随机打出 #b",
+				" 张 #y被葬 牌，并将其 #y抹除 。"
+			]
+	}
+}

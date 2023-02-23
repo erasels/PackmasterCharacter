@@ -1,0 +1,58 @@
+{
+  "${ModID}:BoosterPack": {
+    "NAME": "增强包",
+    "DESCRIPTION": "随机获得 !M! 张 ${ModID}:异色 牌， NL 其附带 虚无 。",
+    "EXTENDED_DESCRIPTION": [
+      "随机",
+      "本牌 #y创造 牌时低稀有度的牌比重更高。"
+    ]
+  },
+  "${ModID}:StardustShield": {
+    "NAME": "星尘之盾",
+    "DESCRIPTION": "技能 ${ModID}:咒语 。 NL 获得 !B! 点 格挡 。"
+  },
+  "${ModID}:StarShower": {
+    "NAME": "流星雨",
+    "DESCRIPTION": "攻击 ${ModID}:咒语 。 NL 造成 !D! 点伤害。"
+  },
+  "${ModID}:PortalPunch": {
+    "NAME": "异次元重击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机获得 !M! 张 ${ModID}:异色 牌， NL 其附带 虚无 。",
+    "EXTENDED_DESCRIPTION": [
+      "随机",
+      "本牌 #y创造 牌时低稀有度的牌比重更高。"
+    ]
+  },
+  "${ModID}:BackupRift": {
+    "NAME": "咒术裂隙",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:取 !M! 张 ${ModID}:咒语 牌。"
+  },
+  "${ModID}:StarLane": {
+    "NAME": "获取",
+    "DESCRIPTION": "虚无 。 NL 技能 ${ModID}:咒语 。 NL 抽一张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "技能 ${ModID}:咒语 。 NL 抽一张牌。"
+  },
+  "${ModID}:NeutronStar": {
+    "NAME": "中子星",
+    "DESCRIPTION": "虚无 。 NL 攻击 ${ModID}:咒语 。 NL 获得 !M! 层临时 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "攻击 ${ModID}:咒语 。 NL 获得 !M! 层临时 力量 。"
+  },
+  "${ModID}:FastHands": {
+    "NAME": "迅疾之手",
+    "DESCRIPTION": "打出 ${ModID}:异色 牌时， NL 抽一张牌。",
+    "UPGRADE_DESCRIPTION": "打出 ${ModID}:异色 牌时，抽一张牌且所抽牌该回合耗能减1。"
+  },
+  "${ModID}:DimensionBreach": {
+    "NAME": "次元突破",
+    "DESCRIPTION": "对目标随机打出 !M! 张 ${ModID}:异色 攻击牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "随机",
+      "本牌 #y创造 牌时低稀有度的牌比重更高。"
+    ]
+  },
+  "${ModID}:Horizonbound": {
+    "NAME": "宇宙界限",
+    "DESCRIPTION": "虚无 。 NL 打出 ${ModID}:异色 牌时，所有其他 *异色 手牌该回合耗能减1。",
+    "UPGRADE_DESCRIPTION": "打出 ${ModID}:异色 牌时，所有其他 *异色 手牌该回合耗能减1。"
+  }
+}

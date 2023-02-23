@@ -1,0 +1,16 @@
+{
+  "${ModID}:RayOfFrostPower": {
+    "NAME": "魔法防护",
+    "DESCRIPTIONS": [
+      "本回合每打出一张 #y魔法 牌， #y生成 #b",
+      " 个 #y冰霜 充能球。"
+    ]
+  },
+  "${ModID}:DiehardPower": {
+    "NAME": "宁死不屈",
+    "DESCRIPTIONS": [
+      "下回合获得 #b",
+      " 层 #y虚弱 与 #y脆弱 。"
+    ]
+  }
+}

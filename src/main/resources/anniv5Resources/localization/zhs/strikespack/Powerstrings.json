@@ -1,0 +1,17 @@
+{
+  "${ModID}:StrikeDummyJrPower": {
+    "NAME": "打击小木偶。",
+    "DESCRIPTIONS": [
+      "你的打击牌额外造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:StrikeOfGeniusPower": {
+    "NAME": "打击天才",
+    "DESCRIPTIONS": [
+      "下次攻击时你获得造成的未被格挡伤害点 #y格挡 。",
+      "接下来 #b",
+      " 次攻击时你获得造成的未被格挡伤害点 #y格挡 。"
+    ]
+  }
+}

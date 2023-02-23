@@ -32,9 +32,13 @@ public class DamageEffect extends AbstractExtraEffectModifier {
     public void doExtraEffects(AbstractCard card, AbstractPlayer p, AbstractCreature m) {
         if (attachedCard instanceof AbstractHydrologistCard) {
             AbstractHydrologistCard elementalCard = (AbstractHydrologistCard)attachedCard;
-            addToBot(new HydrologistDamageAction(elementalCard.getSubtype(), m, new DamageInfo(p, value, DamageInfo.DamageType.NORMAL)));
+            for (int i = 0; i < amount; ++i) {
+                addToBot(new HydrologistDamageAction(elementalCard.getSubtype(), m, new DamageInfo(p, value, DamageInfo.DamageType.NORMAL)));
+            }
         } else {
-            addToBot(new DamageAction(m, new DamageInfo(p, value, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
+            for (int i = 0; i < amount; ++i) {
+                addToBot(new DamageAction(m, new DamageInfo(p, value, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
+            }
         }
     }
 

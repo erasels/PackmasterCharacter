@@ -1,0 +1,34 @@
+[
+  {
+    "PROPER_NAME": "增幅",
+    "NAMES": [
+      "amplify",
+      "amplified",
+      "增幅"
+    ],
+    "DESCRIPTION": "若有足够能量，强制额外消耗所记 [E] 来触发该效果，否则不触发。"
+  },
+  {
+    "PROPER_NAME": "蓄力",
+    "NAMES": [
+      "charge up",
+      "蓄力"
+    ],
+    "DESCRIPTION": "#y蓄力 #b6 层及以上时，下次攻击造成双倍伤害，并失去 #b6 层 #y蓄力 。"
+  },
+  {
+    "PROPER_NAME": "Flurry",
+    "NAMES": [
+      "flurry"
+    ],
+    "DESCRIPTION": "本回合Specified effect triggers every time you play 一张牌 本回合。"
+  },
+  {
+    "PROPER_NAME": "消融",
+    "NAMES": [
+      "ablation",
+      "消融"
+    ],
+    "DESCRIPTION": "回合结束时，获得等量 #y临时生命 ，并失去 #b1 层 #y消融 。"
+  }
+]

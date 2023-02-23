@@ -1,0 +1,16 @@
+{
+  "${ModID}:OuroborosPower": {
+    "NAME": "含尾蛇",
+    "DESCRIPTIONS": [
+      "敌方回合结束时，若你本回合防住过任何伤害，获得 #b",
+      " 点 #y力量 。",
+      " NL 本回合已触发。"
+    ]
+  },
+  "${ModID}:TempHPRegenPower": {
+    "NAME": "消融",
+    "DESCRIPTIONS": [
+      "你的回合结束时，获得 #b%s 层 #y临时生命 ，并失去 #b1 层 #y消融 。"
+    ]
+  }
+}

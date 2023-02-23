@@ -1,0 +1,43 @@
+{
+  "${ModID}:Entropy": {
+    "NAME": "熵",
+    "DESCRIPTIONS": [
+      "下 #b",
+      " 次打出牌时，随机丢弃一张手牌并抽一张牌。",
+      "下次打出牌时，随机丢弃一张手牌并抽一张牌。"
+    ]
+  },
+  "${ModID}:DiffusionPower": {
+    "NAME": "漫散",
+    "DESCRIPTIONS": [
+      "你的回合开始时，获得 #b",
+      " 层 #y熵 并抽 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "${ModID}:EntanglementPower": {
+    "NAME": "纠缠",
+    "DESCRIPTIONS": [
+      "每当你获得 #r负面效果 ，随机给予一名敌人 #b",
+      " 层 #y毁灭。"
+    ]
+  },
+  "${ModID}:RuinPower": {
+    "NAME": "毁灭",
+    "DESCRIPTIONS": [
+      "下次该单位受到未被格挡的伤害时，其每有一种持续效果，失去 #b",
+      "下次你受到未被格挡的伤害时，你每有一种持续效果，失去 #b",
+      " 点生命。",
+      " 点生命。"
+    ]
+  },
+  "${ModID}:ConstructPower": {
+    "NAME": "建造",
+    "DESCRIPTIONS": [
+      "该单位本回合少受到 #b",
+      "你本回合少受到 #b",
+      " 点攻击伤害。"
+    ]
+  }
+}

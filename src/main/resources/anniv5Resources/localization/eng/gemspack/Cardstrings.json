@@ -14,6 +14,16 @@
     "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Shiv\"",
     "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Shiv\""
   },
+  "${ModID}:FrostGem": {
+    "NAME": "Aquamarine",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Channel a Frost\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Channel a Frost\""
+  },
+  "${ModID}:LightningGem": {
+    "NAME": "Fragmented Gem",
+    "DESCRIPTION": "${ModID}:Gem. NL \"Channel a Lightning\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Channel a Lightning\""
+  },
   "${ModID}:RetainGem": {
     "NAME": "Amber",
     "DESCRIPTION": "Unplayable ${ModID}:Gem. NL \"Card gains Retain\"",

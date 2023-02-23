@@ -6,11 +6,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.bardinspirepack.ThickOfTheFightAction;
+import thePackmaster.onGenerateCardMidcombatInterface;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class ThickOfTheFight extends AbstractBardCard
+public class ThickOfTheFight extends AbstractBardCard implements onGenerateCardMidcombatInterface
 {
     public final static String ID = makeID("ThickOfTheFight");
     private static final int COST = 3;
@@ -61,5 +63,10 @@ public class ThickOfTheFight extends AbstractBardCard
         ThickOfTheFight ret = (ThickOfTheFight) super.makeStatEquivalentCopy();
         ret.currentMonsterCount = currentMonsterCount;
         return ret;
+    }
+
+    @Override
+    public void onCreateThisCard() {
+        monstersChanged(Wiz.getEnemies().size());
     }
 }

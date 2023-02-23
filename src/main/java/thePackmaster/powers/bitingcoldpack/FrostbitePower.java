@@ -42,7 +42,7 @@ public class FrostbitePower extends AbstractPackmasterPower implements HealthBar
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
-            addToBot(new ApplyPowerAction(this.owner, info.owner, this, 1));
+            addToBot(new ApplyPowerAction(this.owner, info.owner, new FrostbitePower(owner, 1)));
         }
         return damageAmount;
     }

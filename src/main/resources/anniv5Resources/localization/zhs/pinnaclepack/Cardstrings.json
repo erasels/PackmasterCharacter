@@ -1,0 +1,62 @@
+{
+  "${ModID}:DroneSwarmRareSkill": {
+    "NAME": "无人机群",
+    "DESCRIPTION": "本回合手牌上限加 !${ModID}:m2! 。 NL 抽 !M! 张牌。"
+  },
+  "${ModID}:TheSuckamidRareSkill": {
+    "NAME": "吸字塔",
+    "DESCRIPTION": "回复 !M! 点生命。 NL 保留 所有手牌 !${ModID}:m2! 回合。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "回复 !M! 点生命。 NL 保留 所有手牌 !${ModID}:m2! 回合。 NL 消耗 。"
+  },
+  "${ModID}:ElectromagneticBurstRarePower": {
+    "NAME": "电磁迸发",
+    "DESCRIPTION": "获得 格挡 时， NL 随机造成 !M! 点伤害。"
+  },
+  "${ModID}:ArrowStormRareAttack": {
+    "NAME": "箭矢风暴",
+    "DESCRIPTION": "消耗 其他攻击手牌。 NL 若成功 消耗 ，对所有敌人造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:MarvelousFeastUncommonPower": {
+    "NAME": "盛大宴会",
+    "DESCRIPTION": "固有 。 NL 回合结束时，依次将下列一张 *可乐饼 加入手牌： 格挡 、 虚弱 、 力量 、 易伤 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合结束时，依次将下列一张 *可乐饼 +加入手牌： 格挡 、 虚弱 、 力量 、 易伤 。"
+  },
+  "${ModID}:MeatyCroquettesSpecialColourless": {
+    "NAME": "肉馅饼",
+    "DESCRIPTION": "${ModID}:可乐饼 。 NL 获得 !M! 点 力量 。"
+  },
+  "${ModID}:FishyCroquettesSpecialColourless": {
+    "NAME": "鱼肉饼",
+    "DESCRIPTION": "${ModID}:可乐饼 。 NL 给予 !M! 层 虚弱 。 NL 消耗 。"
+  },
+  "${ModID}:FriendshipCroquettesSpecialColourless": {
+    "NAME": "友情饼",
+    "DESCRIPTION": "${ModID}:可乐饼 。 NL 获得 !B! 点 格挡 ， 消耗 。 NL 保留 时，本场战斗 格挡 加 !M! 。"
+  },
+  "${ModID}:MysteryCroquettesSpecialColourless": {
+    "NAME": "神秘饼",
+    "DESCRIPTION": "${ModID}:可乐饼 。 NL 给予 !M! 层 易伤 。 NL 消耗 。"
+  },
+  "${ModID}:TopOfTheSkyUncommonAttack": {
+    "NAME": "天穹",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 打出后返回手牌。 NL 消耗性 !stslib:ex! 。"
+  },
+  "${ModID}:BucketOfDregsUncommonSkill": {
+    "NAME": "渣滓桶",
+    "DESCRIPTION": "不能被打出 。 保留 。 NL 被 保留 时，所有敌人回复 !M! 点生命并获得 !B! 点 格挡 。"
+  },
+  "${ModID}:PocketTournamentUncommonSkill": {
+    "NAME": "口袋大赛",
+    "DESCRIPTION": "下回合，随机触发以下其中一种效果2X次： NL 抽一张牌并获得 [E] ， NL 获得1点 力量 ， NL 获得3点 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "下回合，随机触发以下其中一种效果2X+2次： NL 抽一张牌并获得 [E] ， NL 获得1点 力量 ， NL 获得3点 格挡 。 NL 消耗 。"
+  },
+  "${ModID}:StoneSwordCommonAttack": {
+    "NAME": "石剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 敏捷 。 NL 消耗 。"
+  },
+  "${ModID}:Rea__dyCommonSkill": {
+    "NAME": "准—备！",
+    "DESCRIPTION": "获得 !M! 层 活力 。 NL 获得 !${ModID}:m2! 层临时 敏捷 。 NL 消耗性 !stslib:ex! 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 活力 。 NL 获得 !${ModID}:m2! 层临时 敏捷 。 NL 抽一张牌。 NL 消耗性 !stslib:ex! 。"
+  }
+}

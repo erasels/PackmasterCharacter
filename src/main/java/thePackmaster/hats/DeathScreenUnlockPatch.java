@@ -31,15 +31,20 @@ public class DeathScreenUnlockPatch {
             if (AbstractDungeon.player.chosenClass.equals(ThePackmaster.Enums.THE_PACKMASTER) && !SpireAnniversary5Mod.allPacksMode) {
                 SpireAnniversary5Mod.logger.info("Unlocking new hats!");
                 ArrayList<String> unlockedHats = SpireAnniversary5Mod.getUnlockedHats();
+                ArrayList<String> unseenHats = SpireAnniversary5Mod.getUnseenHats();
                 for (AbstractCardPack p : SpireAnniversary5Mod.currentPoolPacks) {
                     SpireAnniversary5Mod.logger.info("Adding " + p.packID + " to unlocked hats!");
                     if (!unlockedHats.contains(p.packID)) {
                         unlockedHats.add(p.packID);
+                        if (!unseenHats.contains(p.packID)) { //this check shouldn't be necessary but I put it in anyway
+                            unseenHats.add(p.packID);
+                        }
                     }
                 }
                 try {
                     SpireAnniversary5Mod.logger.info("Saving unlocked hats!");
                     SpireAnniversary5Mod.saveUnlockedHats(unlockedHats);
+                    SpireAnniversary5Mod.saveUnseenHats(unseenHats);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

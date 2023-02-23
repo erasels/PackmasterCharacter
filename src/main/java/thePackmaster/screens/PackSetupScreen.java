@@ -188,7 +188,7 @@ public class PackSetupScreen extends CustomScreen {
 
                     currentPoolPacks.sort(Comparator.comparing((pack)->pack.name));
                     SpireAnniversary5Mod.selectedCards = true;
-                    editPotionPool();
+                    editPotionPool(PotionHelper.potions);
                     CardCrawlGame.dungeon.initializeCardPools();
                     InfiniteSpirePatch.generateQuestsIfInfiniteSpireIsLoaded();
                 }
@@ -418,6 +418,7 @@ public class PackSetupScreen extends CustomScreen {
         choiceSet.clear();
         while (choiceSet.size() < 3 && !packPool.isEmpty()) {
             AbstractCardPack target = packPool.remove(rng.random(packPool.size() - 1));
+            target.previewPackCard.noShadow();
             choiceSet.add(target);
         }
 
@@ -437,15 +438,15 @@ public class PackSetupScreen extends CustomScreen {
         }
     }
 
-    public static void editPotionPool() {
-        ArrayList<String> pool = PotionHelper.potions;
-        pool.removeIf(potionID -> SpireAnniversary5Mod.packExclusivePotions.contains(potionID));
+    public static void editPotionPool(ArrayList<String> potionList) {
+        potionList.removeIf(potionID -> SpireAnniversary5Mod.packExclusivePotions.contains(potionID));
 
         Set<String> potionsToAdd = new HashSet<>();
         for (AbstractCardPack pack : currentPoolPacks) {
             potionsToAdd.addAll(pack.getPackPotions());
         }
-        pool.addAll(potionsToAdd);
+        potionList.forEach(potionsToAdd::remove);
+        potionList.addAll(potionsToAdd);
     }
 
 

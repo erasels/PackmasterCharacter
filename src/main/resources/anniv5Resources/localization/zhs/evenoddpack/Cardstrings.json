@@ -1,0 +1,56 @@
+{
+  "${ModID}:SwordAndBoard": {
+    "NAME": "剑与盾",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["${ModID}:累偶 ：", "造成 !D! 点伤害。", " NL ","${ModID}:累奇 ：", "获得 !B! 点 格挡 。"]
+  },
+  "${ModID}:QuickReflex": {
+    "NAME": "快速反射",
+    "DESCRIPTION": "获得 !B! 点 格挡 。",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:首牌 ：", "获得 !B! 点 格挡 。"]
+  },
+  "${ModID}:PrimeDirective": {
+    "NAME": "最高指令",
+    "DESCRIPTION": "所有攻击牌附加效果： NL \" ${ModID}:累奇 ：伤害加 !M! 。\""
+  },
+  "${ModID}:WitzBolt": {
+    "NAME": "智慧箭弹",
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:累奇 ：", "给予 !M! 层 虚弱 与 易伤 。"]
+  },
+  "${ModID}:ElementOfSurprise": {
+    "NAME": "惊讶元素",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["${ModID}:首牌 ：", "下张牌打出两次。"]
+  },
+  "${ModID}:GammaWard": {
+    "NAME": "伽玛护纹",
+    "DESCRIPTION": "获得 !B! 点 格挡 。",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:累偶 ：", "你本回合打出的下张技能牌临时附带效果' ${ModID}:累偶 ：获得 !M! 点 格挡 。'"]
+  },
+  "${ModID}:Flourish": {
+    "NAME": "繁盛",
+    "DESCRIPTION": "获得 !M! 层 *多层护甲 。",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:累偶 ：", "回复 !M! 点生命。", "${ModID}:累奇 ：", "获得 [E] 。"]
+  },
+  "${ModID}:EvenOddAppend": {
+    "NAME": "",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [" NL (+", "点伤害。)", " NL 获得", "点 格挡 。"]
+  },
+  "${ModID}:WindUpBomb": {
+    "NAME": "发条炸弹",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["${ModID}:累偶 ：", "提高本牌伤害 !M! 点。", " NL ", "${ModID}:累奇 ：", "造成 !D! 点伤害。"]
+  },
+  "${ModID}:LeftHook": {
+    "NAME": "左弯钩",
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:累奇 ：", "不被丢弃。", " NL 消耗性 !stslib:ex! 。"]
+  },
+  "${ModID}:Battlecry": {
+    "NAME": "开场战吼",
+    "DESCRIPTION": "抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:首牌 ：", "获得2点 力量 。"]
+  }
+}

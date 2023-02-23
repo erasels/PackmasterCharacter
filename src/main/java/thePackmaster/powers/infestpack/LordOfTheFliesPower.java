@@ -44,7 +44,10 @@ public class LordOfTheFliesPower extends AbstractPackmasterPower implements OnIn
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + (amount == 1 ? DESCRIPTIONS[1] : DESCRIPTIONS[2]) + DESCRIPTIONS[3] + (amount == 1 ? DESCRIPTIONS[4] : DESCRIPTIONS[5]);
+        description = DESCRIPTIONS[0] +
+                ( amount == 1 ? DESCRIPTIONS[1] : ( this.amount + DESCRIPTIONS[2] ) ) +
+                DESCRIPTIONS[3] +
+                (amount == 1 ? DESCRIPTIONS[4] : ( this.amount + DESCRIPTIONS[5] ) );
     }
 
     @Override

@@ -1,0 +1,59 @@
+{
+  "${ModID}:BasicWave": {
+    "NAME": "Basic Wave",
+    "DESCRIPTION": "Play a *Defend and a *Strike. NL Counts as a ${ModID}:Basic card.",
+    "EXTENDED_DESCRIPTION": [
+      "Play a *Defend+",
+      " and a *Strike+",
+      ". NL Counts as a ${ModID}:Basic card."
+      ]
+  },
+  "${ModID}:Simplify": {
+    "NAME": "Simplify",
+    "DESCRIPTION": "Draw !M! ${ModID}:Basic card and Upgrade it. This can Upgrade it any number of times.",
+    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Basic cards and Upgrade them. This can Upgrade them any number of times."
+  },
+  "${ModID}:LoseIt": {
+    "NAME": "Lose It",
+    "DESCRIPTION": "Add a *Rummage to your hand. Set the cost of your *Rummages to !M! this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Rummage+ to your hand. Set the cost of your *Rummages to !M! this combat. NL Exhaust."
+  },
+  "${ModID}:SimplifiedStrike": {
+    "NAME": "Simplified Strike",
+    "DESCRIPTION": "Deal damage equal to !M! times the number of ${ModID}:Basic cards played this combat.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Unnate. NL Deal damage equal to !M! times the number of ${ModID}:Basic cards played this combat.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage)"
+    ]
+  },
+  "${ModID}:FamiliarKit": {
+    "NAME": "Familiar Kit",
+    "DESCRIPTION": "Gain !M! Strength, !M! Dexterity and !${ModID}:m2! Focus. ${ModID}:Pickup: Obtain a *Bash, *Survivor and *Zap.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Strength, !M! Dexterity and !${ModID}:m2! Focus. ${ModID}:Pickup: Obtain a *Bash, *Survivor and *Zap."
+  },
+  "${ModID}:OckhamsRazor": {
+    "NAME": "Ockhams Razor",
+    "DESCRIPTION": "Whenever you play a ${ModID}:Basic card, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:BackToBasic": {
+    "NAME": "Back To Basic",
+    "DESCRIPTION": "Put a card from your discard pile into your hand. If it was not a ${ModID}:Basic card, Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your discard pile into your hand. If it was not a ${ModID}:Basic card, Exhaust."
+  },
+  "${ModID}:BasicHit": {
+    "NAME": "Basic Hit",
+    "DESCRIPTION": "Gain a *Strike and Upgrade it !M! times. NL Exhaust."
+  },
+  "${ModID}:ConjureDefends": {
+    "NAME": "Conjure Defends",
+    "DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Play this X additional times\". Refund 1. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Play this X+1 additional times\". Refund 1. Exhaust."
+
+  },
+  "${ModID}:SimpleTrick": {
+    "NAME": "Simple Trick",
+    "DESCRIPTION": "Add a *Cardistry to your hand. The next !M! times you play one, gain [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Cardistry+ to your hand. The next !M! times you play one, gain [E] . NL Exhaust."
+
+  }
+}

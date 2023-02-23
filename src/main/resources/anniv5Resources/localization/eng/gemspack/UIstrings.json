@@ -2,7 +2,7 @@
   "${ModID}:GemsPack": {
     "TEXT": [
       "Jeweler's Kit",
-      "Pure Support Pack. Contains a selection of 0-cost Gems that can be placed into cards at Rest site.",
+      "Pure Support Pack. Contains 0-cost Gems that can be placed into cards that cost 1 or more at Rest sites.",
       "MichaelMayhem"
     ]
   },
@@ -18,7 +18,7 @@
       "(Free Action) Spend ",
       " Gold. Place a Gem into a card.",
       "Requires a Gem, ",
-      " Gold, and an unmodified card.",
+      " Gold, and an unmodified card that costs 1 or more.",
       "Select a Gem.",
       "Select a Card to receive the Gem."
     ]
@@ -33,8 +33,9 @@
       "Retain. NL ",
       " NL Gain a *Shiv.",
       " NL Gain 2 Temp. Strength.",
-      " NL Gain a *Ward."
-
+      " NL Gain a *Ward.",
+      " NL Channel a Lightning.",
+      " NL Channel a Frost."
     ]
   }
 }

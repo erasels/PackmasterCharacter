@@ -1,0 +1,23 @@
+{
+  "${ModID}:DuplicateModifier": {
+    "TEXT": [
+      " NL 再获得一次。",
+      " NL 再获得 ",
+      " 次。",
+      " NL 再获得X次。"
+    ]
+  },
+  "${ModID}:BasicsPack": {
+    "TEXT": [
+      "基础",
+      "一套围绕 ${ModID}:基础 牌的牌。",
+      "Jack Renoson"
+    ]
+  },
+  "${ModID}:BasicsPackHat": {
+    "TEXT": [
+      "基础帽子配简单冒险者。",
+      "基础款软呢帽"
+    ]
+  }
+}

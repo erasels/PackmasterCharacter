@@ -1,0 +1,16 @@
+{
+  "${ModID}:ShamanPack": {
+    "TEXT": [
+      "神互者",
+      "卡牌创意源自Ｓｈａｍａｎ角色Ｍｏｄ。",
+      "modargo",
+      "卡牌贴图源自游戏：万智牌(Magic: The　Gathering)"
+    ]
+  },
+  "${ModID}:ShamanPackHat": {
+    "TEXT": [
+      "渗透着元素的力量。",
+      "念珠"
+    ]
+  }
+}

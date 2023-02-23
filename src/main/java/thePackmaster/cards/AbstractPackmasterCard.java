@@ -24,10 +24,12 @@ import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.CoreSetPack;
+import thePackmaster.patches.rippack.AllCardsRippablePatches;
 import thePackmaster.util.CardArtRoller;
 import thePackmaster.util.Wiz;
 
-import java.util.Locale;
+import java.util.Objects;
 
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.SpireAnniversary5Mod.modID;
@@ -359,8 +361,8 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     public String getBottomText() {return null;}
 
     public String getTopText() {
-        AbstractCardPack parent = getParent();
-        if(parent != null) {
+        AbstractCardPack parent = getParent(); //Hide top text on ripped text cards
+        if(parent != null && AllCardsRippablePatches.AbstractCardFields.ripStatus.get(this) != AllCardsRippablePatches.RipStatus.TEXT) {
             return parent.name;
         }
 
@@ -387,5 +389,19 @@ public abstract class AbstractPackmasterCard extends CustomCard {
         if (!(SingleCardViewPopup.isViewingUpgrade && this.isSeen && !this.isLocked)) {
             renderBorderText(sb);
         }
+    }
+
+
+    public int otherPacksInHandCheck() {
+        long otherPacksInHand = AbstractDungeon.player.hand.group.stream()
+                .map(c -> SpireAnniversary5Mod.cardParentMap.getOrDefault(c.cardID, null))
+                .filter(s -> s != null && !s.equals(SpireAnniversary5Mod.cardParentMap.get(this.cardID)))
+                .distinct()
+                .count();
+        return ((int) otherPacksInHand);
+    }
+
+    public boolean hasSynergy() {
+        return otherPacksInHandCheck() >= 2;
     }
 }

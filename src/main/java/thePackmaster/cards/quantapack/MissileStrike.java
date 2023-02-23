@@ -24,9 +24,48 @@ public class MissileStrike extends AbstractQuantaCard {
         tags.add(CardTags.STRIKE);
     }
 
+    @Override
+    public void applyPowers() {
+        int origBase = this.baseDamage;
+
+        this.baseDamage = baseSecondDamage;
+        this.isMultiDamage = true;
+        super.applyPowers();
+
+        int aoeDmg = this.damage;
+        boolean aoeModified = this.isDamageModified;
+
+        this.baseDamage = origBase;
+        this.isMultiDamage = false;
+        super.applyPowers();
+
+        //recalcing also resets variables and auto recalculates these...
+        this.secondDamage = aoeDmg;
+        this.isSecondDamageModified = aoeModified;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        int origBase = this.baseDamage;
+
+        this.baseDamage = baseSecondDamage;
+        this.isMultiDamage = true;
+        super.calculateCardDamage(null);
+
+        int aoeDmg = this.damage;
+        boolean aoeModified = this.isDamageModified;
+
+        this.baseDamage = origBase;
+        this.isMultiDamage = false;
+        super.calculateCardDamage(mo);
+
+        this.secondDamage = aoeDmg;
+        this.isSecondDamageModified = aoeModified;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        this.addToBot(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(baseSecondDamage), this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        this.addToBot(new DamageAllEnemiesAction(p, multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
     }
 
     public void upp() {

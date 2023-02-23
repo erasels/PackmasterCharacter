@@ -1,0 +1,47 @@
+{
+  "${ModID}:BuggyBash": {
+    "NAME": "昆虫滋扰",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 每有一枚 [bugIcon] ， NL 本牌伤害加 !M! 。"
+  },
+  "${ModID}:SwarmSword": {
+    "NAME": "虫群打击",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 每有一枚 [bugIcon] ， NL 抽一张牌。"
+  },
+  "${ModID}:GrassHop": {
+    "NAME": "蝗虫",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 获得 !B! 点 格挡 。 NL 本牌获得 [bugIcon] 时，所有敌人失去 !M! 点生命。"
+  },
+  "${ModID}:Bzzzzz": {
+    "NAME": "嗡嗡嗡嗡嗡嗡嗡",
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 抽 !M! 张牌。"
+  },
+  "${ModID}:BugOut": {
+    "NAME": "生虫",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 每有一枚 [bugIcon] ，获得1点 力量 与 敏捷 。"
+  },
+  "${ModID}:ScarabShield": {
+    "NAME": "金龟子壳",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 获得 !B! 点 格挡 。 NL 每有一枚 [bugIcon] ， NL 获得1层 人工制品 。"
+  },
+  "${ModID}:Entomology": {
+    "NAME": "昆虫学",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 若本牌有 [bugIcon] ， NL 全部移除来抽一张牌并获得 [E] 。"
+  },
+  "${ModID}:Compoundeyes": {
+    "NAME": "复眼",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 打出下张牌后结束回合。"
+  },
+  "${ModID}:Bees": {
+    "NAME": "蜜蜂！",
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害 !M! 次。 NL 每有一枚 [bugIcon] ， NL 本牌伤害增加1点。",
+    "EXTENDED_DESCRIPTION": [
+      "B",
+      "E",
+      "S!!!"
+    ]
+  },
+  "${ModID}:LordOfTheFlies": {
+    "NAME": "蝇王",
+    "DESCRIPTION": "每回合额外抽1张牌。 NL ${ModID}:滋生 时， NL 额外 *滋生 一次。"
+  }
+}

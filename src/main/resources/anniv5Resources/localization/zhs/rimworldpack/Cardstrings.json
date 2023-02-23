@@ -1,0 +1,58 @@
+{
+  "${ModID}:ChainShotgun": {
+    "NAME": "链式猎枪",
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
+  },
+  "${ModID}:Despair": {
+    "NAME": "绝望",
+    "DESCRIPTION": "本牌同时被视为 诅咒 。 NL 消耗 。"
+  },
+  "${ModID}:EatWithoutTable": {
+    "NAME": "无桌进食",
+    "DESCRIPTION": "随机制造一瓶药水并立即喝下。 NL 将一张 *绝望 加入手牌。 NL 消耗 。"
+  },
+  "${ModID}:Luciferium": {
+    "NAME": "魔鬼素",
+    "DESCRIPTION": "获得 [E] [E] 。 NL 获得5点 力量 。 NL 获得 !M! 层 ${ModID}:上瘾 。 NL 消耗 。"
+  },
+  "${ModID}:Pyromaniac": {
+    "NAME": "火术师",
+    "DESCRIPTION": "回合开始时， NL 随机使一张手牌 ${ModID}:着火 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时， NL 随机使一张手牌 ${ModID}:着火 。"
+  },
+  "${ModID}:KillThirst": {
+    "NAME": "杀戮饥渴",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若未击杀目标， NL 将一张 *绝望 加入手牌。"
+  },
+  "${ModID}:SpikeTrap": {
+    "NAME": "钉刺陷阱",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下次受到攻击时， NL 反弹 !B! 点伤害。"
+  },
+  "${ModID}:Catharsis": {
+    "NAME": "宣泄",
+    "DESCRIPTION": "将一张 *绝望 加入手牌。 下 !M! 张牌耗能为0且打出两次。 NL 消耗 。"
+  },
+  "${ModID}:TradeBeacon": {
+    "NAME": "交易信号",
+    "DESCRIPTION": "每回合抽牌阶段结束后首次抽或弃牌时， 抽 !M! 张牌。"
+  },
+  "${ModID}:BurningPassion": {
+    "NAME": "燃烧激情",
+    "DESCRIPTION": "每回合首次获得正面效果时，额外获得一次。"
+  },
+  "${ModID}:TaintedWeapon": {
+    "NAME": "腐化武器",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 起动 ：本牌被随机一名敌人偷走。",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害。"
+    ]
+  },
+  "${ModID}:RimworldKeywordManager": {
+    "NAME": "KeywordManager",
+    "DESCRIPTION": "Stuff for translations 并easy access to keyword ids",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:inspiration",
+      "${ModID}:mental_break"
+    ]
+  }
+}

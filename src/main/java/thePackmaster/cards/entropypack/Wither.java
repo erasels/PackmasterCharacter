@@ -11,12 +11,11 @@ import static thePackmaster.util.Wiz.*;
 
 public class Wither extends AbstractEntropyCard {
     public final static String ID = makeID("Wither");
-    // intellij stuff skill, enemy, common, 3, , , , 8, 
 
     public Wither() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 3;
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

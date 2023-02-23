@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 import thePackmaster.vfx.arcanapack.SunEffect;
 
@@ -20,7 +19,7 @@ public class TheSun extends AbstractAstrologerCard {
     public TheSun() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = 22;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 99;
         exhaust = true;
 
         this.isMultiDamage = true;
@@ -60,6 +59,6 @@ public class TheSun extends AbstractAstrologerCard {
     }
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(8);
     }
 }

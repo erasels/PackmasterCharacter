@@ -13,21 +13,19 @@
   },
   "${ModID}:LuminousStrike": {
     "NAME": "Luminous Strike",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] [E] : Increase damage equal to current energy times !M!.",
-    "EXTENDED_DESCRIPTION": ["Amplified damage: "]
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Gain !M! ${ModID}:Charge Up."
   },
   "${ModID}:ShootingEcho": {
     "NAME": "Shooting Echo",
-    "DESCRIPTION": "Deal !D! damage. Exhaust a card to add a copy of this into your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Exhaust a random card to gain a copy of this. NL Exhaust."
   },
   "${ModID}:StardustReverie": {
     "NAME": "Stardust Reverie",
-    "DESCRIPTION": "Exhaust !M! card. Gain ${ModID}:Charge Up equal to two times its cost including ${ModID}:Amplify. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. Gain ${ModID}:Charge Up equal to two times their costs including ${ModID}:Amplify. NL Draw !M! cards."
+    "DESCRIPTION": "Exhaust the next card you play to gain !M! ${ModID}:Charge Up and draw 1 card."
   },
   "${ModID}:Inertia": {
-    "NAME": "Inertia",
-    "DESCRIPTION": "Whenever a card is Exhausted or ${ModID}:Amplified, gain !M! ${ModID}:Charge Up."
+    "NAME": "Oort Cloud",
+    "DESCRIPTION": "Gain !M! *Ablation. NL ${ModID}:Amplify [E] : Gain !${ModID}:m2! additional *Ablation."
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "Ultimate Shortwave",

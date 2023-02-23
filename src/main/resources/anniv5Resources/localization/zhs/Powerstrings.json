@@ -1,0 +1,18 @@
+{
+  "${ModID}:ExampleTwoAmountPower": {
+    "NAME": "Example 2",
+    "DESCRIPTIONS": [
+      "你的回合开始时， 获得 #b",
+      " #y力量 并#b",
+      " #y敏捷 。"
+    ]
+  },
+  "${ModID}:ConjurePackPower": {
+    "NAME": "卡包召唤",
+    "DESCRIPTIONS": [
+      "在你的接下来 #b",
+      " 个回合开始时，随机将 #b2 张",
+      " 卡包的牌加入手牌。"
+    ]
+  }
+}

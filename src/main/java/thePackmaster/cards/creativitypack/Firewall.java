@@ -3,9 +3,7 @@ package thePackmaster.cards.creativitypack;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.creativitypack.FirewallPower;
-import thePackmaster.powers.creativitypack.MakeshiftSwordPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

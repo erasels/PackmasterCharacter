@@ -8,17 +8,12 @@ import com.megacrit.cardcrawl.cards.blue.Hyperbeam;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import thePackmaster.actions.monsterhunterpack.CarveAction;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
-import static com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField.fleeting;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class CarvingKnife extends AbstractMonsterHunterCard {

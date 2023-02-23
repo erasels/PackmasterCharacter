@@ -3,14 +3,14 @@
     "NAME": "Out To Market",
     "DESCRIPTIONS": [
       "Deal #b",
-      " damage to ALL enemies the first time you play a card type each turn. You have played:", "Attack", "Skill", "Power", "Status", "Curse"
+      " damage to ALL enemies whenever you play a card with a different type than the last. Last Played:", "Attack", "Skill", "Power", "Status", "Curse"
     ]
   },
   "${ModID}:SupplyChainPower": {
     "NAME": "Supply Chain",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
-      " Fertilizer(s) to your hand."
+      " Fertilizer", "s", " to your hand."
     ]
   }
 }

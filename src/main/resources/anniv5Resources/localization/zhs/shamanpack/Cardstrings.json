@@ -1,0 +1,48 @@
+{
+  "${ModID}:Flare": {
+    "NAME": "火光闪耀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:燃烧 。"
+  },
+  "${ModID}:FlameBlast": {
+    "NAME": "火焰冲击",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:燃烧 。 NL 若目标已被 易伤 ，再给予一次。 NL 给予 !${ModID}:m2! 层 易伤。"
+  },
+  "${ModID}:IceWall": {
+    "NAME": "冰墙",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 !B! 点 格挡 。 NL 将一张 虚空 加入抽牌堆顶部。"
+  },
+  "${ModID}:FreezeAndBurn": {
+    "NAME": "冻燃",
+    "DESCRIPTION": "所有敌人本回合失去 !M! 点 力量。 NL 下回合,对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+  },
+  "${ModID}:Frostfire": {
+    "NAME": "霜火",
+    "DESCRIPTION": "给予所有敌人 !M! 层 ${ModID}:燃烧 与 !${ModID}:m2! 层 虚弱 。 NL 消耗 。"
+  },
+  "${ModID}:FieryMantle": {
+    "NAME": "火焰覆罩",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时， 给予对方 !M! 层 ${ModID}:燃烧 。"
+  },
+  "${ModID}:SnowMelt": {
+    "NAME": "雪融",
+    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL 下回合额外抽 !M 张牌。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 下回合额外抽 !M 张牌。"
+  },
+  "${ModID}:Pyromastery": {
+    "NAME": "火焰驾驭",
+    "DESCRIPTION": "给予 ${ModID}:燃烧 时， NL 额外给予 !M! 层 。"
+  },
+  "${ModID}:ReadTheFlames": {
+    "NAME": "火焰讯息",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 预见 !${ModID}:m2! 。 NL 将一张 *凋烬 加入抽牌堆。"
+  },
+  "${ModID}:FueledByEmbers": {
+    "NAME": "内驱焰烬",
+    "DESCRIPTION": "回合开始时，额外抽 !M! 张牌并各将 !M! 张 *凋烬 加入手牌与抽牌堆。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，额外抽 !M! 张牌并各将 !M! 张 *凋烬 加入手牌与抽牌堆。"
+  },
+  "${ModID}:FadingEmber": {
+    "NAME": "凋烬",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:燃烧 。 NL 消耗 。"
+  }
+}

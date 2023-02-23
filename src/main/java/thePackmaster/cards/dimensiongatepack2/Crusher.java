@@ -38,8 +38,14 @@ public class Crusher extends AbstractDimensionalCardGrift implements onGenerateC
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY), 0.4F));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        modifyCostForCombat(COST-Wiz.getLogicalCardCost(this));
-        isCostModified=false;
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                Crusher.this.modifyCostForCombat(COST-Crusher.this.cost);
+                Crusher.this.isCostModified=false;
+                isDone = true;
+            }
+        });
     }
 
     public void upp() {

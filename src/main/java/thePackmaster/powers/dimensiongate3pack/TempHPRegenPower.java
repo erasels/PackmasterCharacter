@@ -1,8 +1,6 @@
 package thePackmaster.powers.dimensiongate3pack;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -20,7 +18,6 @@ public class TempHPRegenPower extends AbstractPackmasterPower implements Cloneab
 
     public TempHPRegenPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
-        loadRegion("regen");
     }
 
     @Override
@@ -41,11 +38,6 @@ public class TempHPRegenPower extends AbstractPackmasterPower implements Cloneab
     @Override
     public void updateDescription() {
         description = String.format(DESCRIPTIONS[0], amount);
-    }
-
-    @Override
-    public void renderIcons(SpriteBatch sb, float x, float y, Color c) {
-        super.renderIcons(sb, x, y, Color.GOLD.cpy());
     }
 }
 

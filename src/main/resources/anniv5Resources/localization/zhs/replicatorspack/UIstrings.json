@@ -1,0 +1,15 @@
+{
+  "${ModID}:ReplicatorsPack": {
+    "TEXT": [
+      "增殖",
+      "增殖你的牌，构筑一套有价值的大卡组。",
+      "Mindbomber"
+    ]
+  },
+  "${ModID}:ReplicatorsPackHat": {
+    "TEXT": [
+      "它只是想和你玩玩。",
+      "增殖之帽"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "${ModID}:MissileStrike": {
+    "NAME": "导弹打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对所有敌人造成 !${ModID}:sd! 点伤害。"
+  },
+  "${ModID}:MagicDart": {
+    "NAME": "魔法飞镖",
+    "DESCRIPTION": "造成手牌牌数点伤害。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成手牌牌数点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害)"]
+  },
+  "${ModID}:Cull": {
+    "NAME": "宰杀",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 所有单位失去 !M! 点生命。"
+  },
+  "${ModID}:Potential": {
+    "NAME": "潜能",
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 抽 !${ModID}:m2! 张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 临时生命 。 NL 抽 !${ModID}:m2! 张牌。 NL 消耗 。"
+  },
+  "${ModID}:Aura": {
+    "NAME": "气弥",
+    "DESCRIPTION": "阻止下次失去生命。"
+  },
+  "${ModID}:MAXPOWER": {
+    "NAME": "极限之力",
+    "DESCRIPTION": "力量 变为11点。"
+  },
+  "${ModID}:Flow": {
+    "NAME": "心流",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合打出的上张牌为攻击，抽 !M! 张牌。"
+  },
+  "${ModID}:Manaburst": {
+    "NAME": "魔力爆发",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将弃牌堆1张0耗能攻击牌返回手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将弃牌堆 !M! 张0耗能攻击牌返回手牌。"
+  },
+  "${ModID}:Dominate": {
+    "NAME": "支配",
+    "DESCRIPTION": "${ModID}:击晕 一名敌人。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:击晕 所有敌人。 NL 消耗 。"
+  },
+  "${ModID}:IchorGoblet": {
+    "NAME": "灵液之杯",
+    "DESCRIPTION": "下 !M! 个回合获得 [E] 。 NL 若失去生命， NL 立即获得全部。"
+  }
+}
