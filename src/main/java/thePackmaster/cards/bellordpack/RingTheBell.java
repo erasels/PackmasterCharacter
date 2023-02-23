@@ -40,10 +40,11 @@ public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
     @Override //zhs card text thing
     public void initializeDescriptionCN() {
         super.initializeDescriptionCN();
-        if (Settings.language == Settings.GameLanguage.ZHS) {
+        if (Settings.language == Settings.GameLanguage.ZHS ) {
             StringBuilder first_line = new StringBuilder();
-            this.description.get(0).text = first_line.append(this.description.get(0).text).append("。").toString();
-            this.description.remove(1);
+            if(this.description.size()!=0){
+                this.description.remove(1);
+            }
         }
     }
 }

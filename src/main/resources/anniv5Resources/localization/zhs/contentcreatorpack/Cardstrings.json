@@ -1,7 +1,7 @@
 {
   "${ModID}:OlexasCloak": {
     "NAME": "Olexa's Cloak",
-    "DESCRIPTION": "保留 。 NL 再打出 !hoard! 次后： NL 获得 !B! 点 格挡 。 NL 长驻 !stslib:persist! 。"
+    "DESCRIPTION": "保留 。 NL 打出 !hoard! 次后： NL 获得 !B! 点 格挡 。 NL stslib:长驻 !stslib:persist! 。"
   },
   "${ModID}:HuttsGamble": {
     "NAME": "Hutts' Gamble",
