@@ -45,6 +45,13 @@
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "选择发现的耗能。"
+    "DESCRIPTION": "选择发现的耗能。",
+    "EXTENDED_DESCRIPTION" : [
+      "Select this or higher card cost for Discovery."
+    ],
+    "COMMENTS": [
+      "This array is not used in the game",
+      "EX_DESC is used for cost 3+."
+    ]
   }
 }

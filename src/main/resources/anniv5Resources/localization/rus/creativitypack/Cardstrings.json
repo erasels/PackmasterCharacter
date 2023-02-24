@@ -45,6 +45,13 @@
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}Выберите эту стоимость карт для Находки."
+    "DESCRIPTION": "{@@}Выберите эту стоимость карт для Находки.",
+    "EXTENDED_DESCRIPTION" : [
+      "Выберите эту (или выше) стоимость карт для Находки."
+    ],
+    "COMMENTS": [
+      "This array is not used in the game",
+      "EX_DESC is used for cost 3+."
+    ]
   }
 }

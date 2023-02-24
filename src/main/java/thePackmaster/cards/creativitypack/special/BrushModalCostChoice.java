@@ -24,6 +24,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class BrushModalCostChoice extends AbstractCreativityCard {
     public final static String ID = makeID(BrushModalCostChoice.class.getSimpleName());
     public final static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("SingleCardViewPopup");
+    public final static String[] EXTENDED_DESCRIPTION = CardCrawlGame.languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION;
     public BrushModalCostChoice(int cost, CardType type) {
         super(ID, cost, type, CardRarity.SPECIAL, CardTarget.NONE);
         switch (type) {
@@ -41,14 +42,19 @@ public class BrushModalCostChoice extends AbstractCreativityCard {
                 break;
         }
         initializeTitle();
+        if (cost == 3) rawDescription = EXTENDED_DESCRIPTION[0];
+        initializeDescription();
     }
 
     public void onChoseThisOption()
     {
-        AbstractCard origin = this;
         addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(JediUtil.filterCardsForDiscovery(
-                c -> c.type == type && c.cost == cost && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL)),
-                crd -> {if (origin.upgraded) crd.upgrade();},
+                c -> c.type == type &&
+                        ((cost == 3 && c.cost >= cost) || c.cost == cost) &&
+                        !c.hasTag(CardTags.HEALING) &&
+                        c.rarity != CardRarity.SPECIAL)
+        ),
+                crd -> {},
                 false));
     }
     @Override
