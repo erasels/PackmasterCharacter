@@ -15,7 +15,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class StrikeOfGeniusPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("StrikeOfGeniusPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private AbstractCard source;
     public StrikeOfGeniusPower(AbstractCreature owner, int amount, AbstractCard source) {
@@ -26,8 +26,8 @@ public class StrikeOfGeniusPower extends AbstractPackmasterPower {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if(info.type == DamageInfo.DamageType.NORMAL) {
-            Wiz.atb(new StrikeOfGeniusAction(target));
+        if (info.type == DamageInfo.DamageType.NORMAL) {
+            Wiz.att(new StrikeOfGeniusAction(target));
         }
     }
 
