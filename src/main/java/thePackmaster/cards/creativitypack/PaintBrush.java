@@ -10,6 +10,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class PaintBrush extends AbstractCreativityCard {
 
     public final static String ID = makeID(PaintBrush.class.getSimpleName());
+    public final static int EXHAUSTIVE_USES = 2;
 
     public PaintBrush() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
@@ -19,7 +20,9 @@ public class PaintBrush extends AbstractCreativityCard {
     @Override
     public void upp() {
         exhaust = false;
-        ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 2);
+        ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, EXHAUSTIVE_USES);
+        ExhaustiveField.ExhaustiveFields.exhaustive.set(this, EXHAUSTIVE_USES);
+        ExhaustiveField.ExhaustiveFields.isExhaustiveUpgraded.set(this, true);
     }
 
     @Override
