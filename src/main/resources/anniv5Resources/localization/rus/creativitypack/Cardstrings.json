@@ -9,7 +9,7 @@
   },
   "${ModID}:PaintBrush": {
     "NAME": "Кисть художника",
-    "DESCRIPTION": "{@@}${ModID}:Найдите {!Upgrades!|>0=n улучшенную }карту с выбранными типом и стоимостью."
+    "DESCRIPTION": "{@@}${ModID}:Найдите карту с выбранными типом и стоимостью. NL {!Upgrades!|0=Сжигается|>0=Сгорающая !stslib:ex!}."
   },
   "${ModID}:Firewall": {
     "NAME": "Антивирус",
@@ -45,6 +45,13 @@
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}Выберите эту стоимость карт для Находки."
+    "DESCRIPTION": "{@@}Выберите эту стоимость карт для Находки.",
+    "EXTENDED_DESCRIPTION" : [
+      "Выберите эту (или выше) стоимость карт для Находки."
+    ],
+    "COMMENTS": [
+      "This array is not used in the game",
+      "EX_DESC is used for cost 3+."
+    ]
   }
 }

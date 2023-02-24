@@ -9,7 +9,7 @@
   },
   "${ModID}:PaintBrush": {
     "NAME": "Paint Brush",
-    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n Upgraded} card with selected type and cost."
+    "DESCRIPTION": "{@@}Discover a card with selected type and cost. Exhaust{!Upgrades!|>0=ive !stslib:ex!}."
   },
   "${ModID}:Firewall": {
     "NAME": "Firewall",
@@ -45,6 +45,13 @@
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}Select this card cost for Discovery."
+    "DESCRIPTION": "Select this card cost for Discovery.",
+    "EXTENDED_DESCRIPTION" : [
+      "Select this or higher card cost for Discovery."
+    ],
+    "COMMENTS": [
+      "This array is not used in the game",
+      "EX_DESC is used for cost 3+."
+    ]
   }
 }

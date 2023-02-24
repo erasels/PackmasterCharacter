@@ -23,7 +23,6 @@ public class PaintBrushAction extends AbstractGameAction
         list.add(new BrushModalTypeChoice(AbstractCard.CardType.ATTACK));
         list.add(new BrushModalTypeChoice(AbstractCard.CardType.SKILL));
         list.add(new BrushModalTypeChoice(AbstractCard.CardType.POWER));
-        if (upgradeCards) list.forEach(AbstractCard::upgrade);
         addToBot(new EasyModalChoiceAction(list));
         isDone = true;
     }
