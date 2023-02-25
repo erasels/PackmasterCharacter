@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
@@ -24,6 +25,9 @@ import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.patches.InfiniteSpirePatch;
+import thePackmaster.summaries.PackSummary;
+import thePackmaster.summaries.PackSummaryDisplay;
+import thePackmaster.summaries.PackSummaryReader;
 
 import java.util.*;
 
@@ -138,13 +142,22 @@ public class PackSetupScreen extends CustomScreen {
             float curDrawScale = pack.previewPackCard.drawScale;
             pack.previewPackCard.updateHoverLogic();
             pack.previewPackCard.drawScale = curDrawScale;
-            if (pack.previewPackCard.hb.hovered && pack.credits != null)
-                TipHelper.renderGenericTip(
-                        pack.previewPackCard.hb.x + pack.previewPackCard.hb.width,
-                        pack.previewPackCard.hb.y + pack.previewPackCard.hb.height,
-                        pack.creditsHeader, pack.credits);
-            if (pack.previewPackCard.hb.justHovered)
+            if (pack.previewPackCard.hb.hovered) {
+                ArrayList<PowerTip> tooltips = new ArrayList<>();
+                PackSummary packSummary = PackSummaryReader.getPackSummary(pack.packID);
+                if (packSummary != null) {
+                    tooltips.add(new PowerTip(PackSummaryDisplay.getTitle(), PackSummaryDisplay.getTooltip(packSummary)));
+                }
+                if (pack.credits != null) {
+                    tooltips.add(new PowerTip(pack.creditsHeader, pack.credits));
+                }
+                if (!tooltips.isEmpty()) {
+                    TipHelper.queuePowerTips(pack.previewPackCard.hb.x + pack.previewPackCard.hb.width, pack.previewPackCard.hb.y + pack.previewPackCard.hb.height, tooltips);
+                }
+            }
+            if (pack.previewPackCard.hb.justHovered) {
                 CardCrawlGame.sound.playV("CARD_OBTAIN", 0.4F);
+            }
 
             if (mode == PackSetupMode.CONFIRMING || pack.previewPackCard.hb.hovered) {
                 pack.previewPackCard.noShadow();

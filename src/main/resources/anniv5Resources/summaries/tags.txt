@@ -1,0 +1,76 @@
+Pack	Tags
+AggressionPack	Strength,Stances
+AlignmentPack	Exhaust,Discard
+AllForOnePack
+AnomalyPack	Exhaust,Discard
+ArcanaPack	None
+BardInspirePack
+BasicsPack
+BatterPack
+BellordPack
+BitingColdPack	Debuffs
+BlacksmithsPack
+BoardGamePack
+ClawPack
+ConjurerPack
+ContentCreatorPack
+CoreSetPack
+CosmosCommandPack
+CreativityPack
+CthulhuPack
+DefectPack	Orbs
+DimensionGatePack	Debuffs
+DimensionGate2Pack
+DimensionGate3Pack
+DistortionPack	Exhaust
+DownfallPack
+DragonwrathPack
+EnergyAndEchoPack	Exhaust
+EntropyPack
+EvenOddPack
+FarmerPack
+GemsPack
+GoWithTheFlowPack	Discard
+GrandOpeningPack
+GraveyardPack	Exhaust
+HermitPack
+HighEnergyPack
+InfestPack
+IntoTheBreachPack
+IroncladPack	Strength
+LegacyPack
+MadSciencePack
+MarisaPack	Exhaust
+MetaPack
+MonsterHunterPack
+OdditiesPack
+OrbPack	Orbs
+PinnaclePack
+PixiePack
+PoisonPack	Debuff
+PrismaticPack
+PsychicPack
+QuantaPack
+QuietPack
+ReplicatorsPack
+RimworldPack
+RingOfPainPack
+RipPack	Exhaust
+SentinelPack	Stances
+SerpentinePack	Stances,Debuffs
+ShamanPack	Debuffs
+SilentPack	Discard
+SneckoPack
+StatusPack
+StrikesPack
+SummonsPack	Orbs
+ThieveryPack
+TransmutationPack
+UtilityPack
+WardenPack
+WarlockPack	Exhaust
+WarriorPack
+WatcherPack
+WeaponsPack
+WitchesStrikePack	Orbs
+WomanInBluePack

@@ -168,5 +168,24 @@
       "[Card] ",
       "Tip: Right-click for detailed card view!"
     ]
+  },
+  "${ModID}:PackSummaryDisplay": {
+    "TEXT": [
+      "Pack Summary",
+      "Offense: #b{0}/5",
+      "Defense: #b{0}/5",
+      "Support: #b{0}/5",
+      "Frontload: #b{0}/5",
+      "Scaling: #b{0}/5",
+      "Tags: {0}"
+    ],
+    "TEXT_DICT": {
+      "Strength": "Strength",
+      "Exhaust": "Exhaust",
+      "Orbs": "Orbs",
+      "Stances": "Stances",
+      "Discard": "Discard",
+      "Debuffs": "Debuffs"
+    }
   }
 }

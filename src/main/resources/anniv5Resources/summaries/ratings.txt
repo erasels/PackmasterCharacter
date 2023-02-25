@@ -1,0 +1,76 @@
+Pack	Offense	Defense	Support	Frontload	Scaling
+AggressionPack	5	2	2	4	3
+AlignmentPack	2	3	5	2	2
+AllForOnePack
+AnomalyPack
+ArcanaPack
+BardInspirePack	3	3	4	2	3
+BasicsPack
+BatterPack
+BellordPack
+BitingColdPack
+BlacksmithsPack	3	3	4	4	4
+BoardGamePack
+ClawPack	5	2	1	2	5
+ConjurerPack
+ContentCreatorPack	2	2	4	2	4
+CoreSetPack	3	3	3	3	3
+CosmosCommandPack
+CreativityPack
+CthulhuPack
+DefectPack
+DimensionGatePack
+DimensionGate2Pack
+DimensionGate3Pack
+DistortionPack
+DownfallPack
+DragonwrathPack	4	2	1	2	5
+EnergyAndEchoPack
+EntropyPack
+EvenOddPack
+FarmerPack
+GemsPack	1	1	5	1	4
+GoWithTheFlowPack
+GrandOpeningPack
+GraveyardPack
+HermitPack
+HighEnergyPack
+InfestPack	3	3	3	2	2
+IntoTheBreachPack	3	3	3	2	1
+IroncladPack
+LegacyPack
+MadSciencePack
+MarisaPack
+MetaPack
+MonsterHunterPack	4	2	2	4	3
+OdditiesPack	2	1	5	2	3
+OrbPack
+PinnaclePack
+PixiePack
+PoisonPack
+PrismaticPack	3	2	4	2	3
+PsychicPack
+QuantaPack
+QuietPack
+ReplicatorsPack
+RimworldPack
+RingOfPainPack
+RipPack	3	3	2	5	2
+SentinelPack
+SerpentinePack
+ShamanPack	4	3	2	1	4
+SilentPack
+SneckoPack
+StatusPack	4	2	5	4	3
+StrikesPack	4	1	2	4	1
+SummonsPack	3	3	4	2	4
+ThieveryPack
+TransmutationPack	3	3	4	3	2
+UtilityPack	2	2	5	2	3
+WardenPack
+WarlockPack	3	2	2	3	4
+WarriorPack
+WatcherPack
+WeaponsPack
+WitchesStrikePack	3	2	4	3	3
+WomanInBluePack	2	2	4	4	2
