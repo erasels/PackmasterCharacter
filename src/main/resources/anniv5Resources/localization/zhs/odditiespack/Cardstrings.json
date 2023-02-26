@@ -36,7 +36,7 @@
   },
   "${ModID}:SleeveUp": {
     "NAME": "撸起袖子",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 若本牌出现在卡牌奖励中，变为附带 保留 的闪卡。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若本牌出现在卡牌奖励中，该次奖励全变为附带 保留 的闪卡。"
   },
   "${ModID}:AutoBattler": {
     "NAME": "尖塔自走棋",
