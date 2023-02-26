@@ -1,76 +1,76 @@
 Pack	Tags
 AggressionPack	Strength,Stances
 AlignmentPack	Exhaust,Discard
-AllForOnePack
+AllForOnePack	None
 AnomalyPack	Exhaust,Discard
 ArcanaPack	None
-BardInspirePack
-BasicsPack
-BatterPack
-BellordPack
+BardInspirePack	None
+BasicsPack	None
+BatterPack	None
+BellordPack	None
 BitingColdPack	Debuffs
-BlacksmithsPack
-BoardGamePack
-ClawPack
-ConjurerPack
-ContentCreatorPack
-CoreSetPack
-CosmosCommandPack
-CreativityPack
-CthulhuPack
+BlacksmithsPack	None
+BoardGamePack	None
+ClawPack	None
+ConjurerPack	Debuff
+ContentCreatorPack	Orbs
+CoreSetPack	None
+CosmosCommandPack	Exhaust,Debuff
+CreativityPack	None
+CthulhuPack	None
 DefectPack	Orbs
 DimensionGatePack	Debuffs
-DimensionGate2Pack
-DimensionGate3Pack
+DimensionGate2Pack	None
+DimensionGate3Pack	None
 DistortionPack	Exhaust
-DownfallPack
-DragonwrathPack
+DownfallPack	Stances,Orbs
+DragonwrathPack	Debuffs
 EnergyAndEchoPack	Exhaust
-EntropyPack
-EvenOddPack
-FarmerPack
-GemsPack
+EntropyPack	Debuffs,Orbs
+EvenOddPack	None
+FarmerPack	None
+GemsPack	Orbs
 GoWithTheFlowPack	Discard
-GrandOpeningPack
+GrandOpeningPack	None
 GraveyardPack	Exhaust
-HermitPack
-HighEnergyPack
-InfestPack
-IntoTheBreachPack
+HermitPack	None
+HighEnergyPack	None
+InfestPack	None
+IntoTheBreachPack	None
 IroncladPack	Strength
-LegacyPack
-MadSciencePack
+LegacyPack	None
+MadSciencePack	None
 MarisaPack	Exhaust
-MetaPack
-MonsterHunterPack
-OdditiesPack
+MetaPack	None
+MonsterHunterPack	None
+OdditiesPack	None
 OrbPack	Orbs
-PinnaclePack
-PixiePack
+PinnaclePack	None
+PixiePack	None
 PoisonPack	Debuff
-PrismaticPack
-PsychicPack
-QuantaPack
-QuietPack
-ReplicatorsPack
-RimworldPack
-RingOfPainPack
+PrismaticPack	None
+PsychicPack	Exhaust
+QuantaPack	None
+QuietPack	Discard
+ReplicatorsPack	None
+RimworldPack	None
+RingOfPainPack	None
 RipPack	Exhaust
 SentinelPack	Stances
 SerpentinePack	Stances,Debuffs
 ShamanPack	Debuffs
 SilentPack	Discard
-SneckoPack
-StatusPack
-StrikesPack
+SneckoPack	None
+StatusPack	Exhaust
+StrikesPack	Orbs
 SummonsPack	Orbs
-ThieveryPack
-TransmutationPack
-UtilityPack
-WardenPack
+ThieveryPack	Strength
+TransmutationPack	None
+UtilityPack	Orbs
+WardenPack	None
 WarlockPack	Exhaust
-WarriorPack
-WatcherPack
-WeaponsPack
+WarriorPack	Debuffs
+WatcherPack	None
+WeaponsPack	None
 WitchesStrikePack	Orbs
-WomanInBluePack
+WomanInBluePack	Exhaust
