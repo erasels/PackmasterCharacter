@@ -143,17 +143,7 @@ public class PackSetupScreen extends CustomScreen {
             pack.previewPackCard.updateHoverLogic();
             pack.previewPackCard.drawScale = curDrawScale;
             if (pack.previewPackCard.hb.hovered) {
-                ArrayList<PowerTip> tooltips = new ArrayList<>();
-                PackSummary packSummary = PackSummaryReader.getPackSummary(pack.packID);
-                if (packSummary != null) {
-                    tooltips.add(new PowerTip(PackSummaryDisplay.getTitle(), PackSummaryDisplay.getTooltip(packSummary)));
-                }
-                if (pack.credits != null) {
-                    tooltips.add(new PowerTip(pack.creditsHeader, pack.credits));
-                }
-                if (!tooltips.isEmpty()) {
-                    TipHelper.queuePowerTips(pack.previewPackCard.hb.x + pack.previewPackCard.hb.width, pack.previewPackCard.hb.y + pack.previewPackCard.hb.height, tooltips);
-                }
+                displayTooltips(pack);
             }
             if (pack.previewPackCard.hb.justHovered) {
                 CardCrawlGame.sound.playV("CARD_OBTAIN", 0.4F);
@@ -178,16 +168,16 @@ public class PackSetupScreen extends CustomScreen {
                 pack.previewPackCard.beginGlowing();
                 pack.previewPackCard.update();
                 pack.previewPackCard.updateHoverLogic();
-                if (!pack.previewPackCard.hb.hovered)
+                if (!pack.previewPackCard.hb.hovered) {
                     pack.previewPackCard.targetDrawScale = SELECTING_SCALE;
-                else if (pack.credits != null)
-                    TipHelper.renderGenericTip(
-                            pack.previewPackCard.hb.x + pack.previewPackCard.hb.width,
-                            pack.previewPackCard.hb.y + pack.previewPackCard.hb.height,
-                            pack.creditsHeader, pack.credits);
+                }
+                else {
+                    displayTooltips(pack);
+                }
 
-                if (pack.previewPackCard.hb.justHovered)
+                if (pack.previewPackCard.hb.justHovered) {
                     CardCrawlGame.sound.playV("CARD_OBTAIN", 0.4F);
+                }
             }
         }
 
@@ -462,6 +452,19 @@ public class PackSetupScreen extends CustomScreen {
         potionList.addAll(potionsToAdd);
     }
 
+    private static void displayTooltips(AbstractCardPack pack) {
+        ArrayList<PowerTip> tooltips = new ArrayList<>();
+        PackSummary packSummary = PackSummaryReader.getPackSummary(pack.packID);
+        if (packSummary != null) {
+            tooltips.add(new PowerTip(PackSummaryDisplay.getTitle(), PackSummaryDisplay.getTooltip(packSummary)));
+        }
+        if (pack.credits != null) {
+            tooltips.add(new PowerTip(pack.creditsHeader, pack.credits));
+        }
+        if (!tooltips.isEmpty()) {
+            TipHelper.queuePowerTips(pack.previewPackCard.hb.x + pack.previewPackCard.hb.width, pack.previewPackCard.hb.y + pack.previewPackCard.hb.height, tooltips);
+        }
+    }
 
     public static class Enum
     {
