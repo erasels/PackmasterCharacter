@@ -96,7 +96,9 @@ public class PackSummaryReader {
                 }
                 String[] tags = entries[1].split(",");
                 if (tags[0].equals("None")) {
-                    continue;
+                    if (tags.length > 1) {
+                        throw new RuntimeException("Pack is tagged as None but has other tags too: " + packID);
+                    }
                 }
                 for (String mechanic : tags) {
                     packSummary.tags.add(mechanic.trim());

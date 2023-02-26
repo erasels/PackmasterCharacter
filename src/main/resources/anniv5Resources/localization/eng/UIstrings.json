@@ -180,6 +180,7 @@
       "Tags: {0}"
     ],
     "TEXT_DICT": {
+      "None": "None",
       "Strength": "Strength",
       "Exhaust": "Exhaust",
       "Orbs": "Orbs",
