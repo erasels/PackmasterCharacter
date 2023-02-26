@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import org.apache.commons.lang3.StringUtils;
 import thePackmaster.SpireAnniversary5Mod;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.stream.Collectors;
 
 public class PackSummaryDisplay {
@@ -28,7 +30,7 @@ public class PackSummaryDisplay {
         sb.append(TEXT[5].replace("{0}", getStatString(summary.scaling)));
         if (!summary.tags.isEmpty()) {
             sb.append(" NL ");
-            String tags = summary.tags.stream().map(m -> "#y" + uiStrings.TEXT_DICT.get(m)).collect(Collectors.joining(", "));
+            String tags = summary.tags.stream().map(PackSummaryDisplay::getTagString).collect(Collectors.joining(", "));
             sb.append(TEXT[6].replace("{0}", tags));
         }
         return sb.toString();
@@ -75,5 +77,12 @@ public class PackSummaryDisplay {
             default:
                 throw new RuntimeException("Unrecognized rating value for pack summary: " + value);
         }
+    }
+
+    public static String getTagString(String tag) {
+        if (!uiStrings.TEXT_DICT.containsKey(tag)) {
+            throw new RuntimeException("Unrecognized tag: " + tag);
+        }
+        return "#y" + uiStrings.TEXT_DICT.get(tag);
     }
 }

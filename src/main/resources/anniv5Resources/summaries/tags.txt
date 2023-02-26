@@ -15,7 +15,7 @@ ClawPack	None
 ConjurerPack	Debuff
 ContentCreatorPack	Orbs
 CoreSetPack	None
-CosmosCommandPack	Exhaust,Debuff
+CosmosCommandPack	Exhaust,Debuffs
 CreativityPack	None
 CthulhuPack	None
 DefectPack	Orbs
