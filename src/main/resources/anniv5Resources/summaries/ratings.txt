@@ -1,23 +1,23 @@
 Pack	Offense	Defense	Support	Frontload	Scaling
 AggressionPack	5	2	2	4	3
 AlignmentPack	2	3	5	2	2
-AllForOnePack
-AnomalyPack
-ArcanaPack
+AllForOnePack	4	2	3	4	3
+AnomalyPack	2	3	4	1	4
+ArcanaPack	3	2	3	3	2
 BardInspirePack	3	3	4	2	3
-BasicsPack
-BatterPack
-BellordPack
-BitingColdPack
+BasicsPack	3	3	2	4	2
+BatterPack	4	2	2	5	2
+BellordPack	2	2	2	4	1
+BitingColdPack	3	2	2	3	2
 BlacksmithsPack	3	3	4	4	4
-BoardGamePack
+BoardGamePack	4	3	2	4	2
 ClawPack	5	2	1	2	5
-ConjurerPack
+ConjurerPack	3	4	2	2	3
 ContentCreatorPack	2	2	4	2	4
 CoreSetPack	3	3	3	3	3
-CosmosCommandPack
-CreativityPack
-CthulhuPack
+CosmosCommandPack	3	2	4	1	4
+CreativityPack	3	3	4	3	1
+CthulhuPack	2	4	3	1	3
 DefectPack	4	4	3	4	3
 DimensionGatePack
 DimensionGate2Pack
