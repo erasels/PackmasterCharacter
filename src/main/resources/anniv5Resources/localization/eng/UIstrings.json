@@ -171,12 +171,12 @@
   },
   "${ModID}:PackSummaryDisplay": {
     "TEXT": [
-      "Pack Summary",
-      "Offense: #b{0}/5",
-      "Defense: #b{0}/5",
-      "Support: #b{0}/5",
-      "Frontload: #b{0}/5",
-      "Scaling: #b{0}/5",
+      "Pack Summary ",
+      "Offense: {0}",
+      "Defense: {0}",
+      "Support: {0}",
+      "Frontload: {0}",
+      "Scaling: {0}",
       "Tags: {0}"
     ],
     "TEXT_DICT": {

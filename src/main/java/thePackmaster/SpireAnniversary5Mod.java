@@ -91,10 +91,8 @@ import thePackmaster.stances.cthulhupack.NightmareStance;
 import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
-import thePackmaster.ui.CurrentRunCardsTopPanelItem;
+import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
-import thePackmaster.ui.InfestTextIcon;
-import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.JediUtil;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
@@ -441,6 +439,14 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveEditCards() {
         CustomIconHelper.addCustomIcon(InfestTextIcon.get());
+        CustomIconHelper.addCustomIcon(new RatingCircles.RatingCircle1());
+        CustomIconHelper.addCustomIcon(new RatingCircles.RatingCircle2());
+        CustomIconHelper.addCustomIcon(new RatingCircles.RatingCircle3());
+        CustomIconHelper.addCustomIcon(new RatingCircles.RatingCircle4());
+        CustomIconHelper.addCustomIcon(new RatingCircles.RatingCircle5());
+        CustomIconHelper.addCustomIcon(new RatingStar());
+        CustomIconHelper.addCustomIcon(new RatingEmptyStar());
+        CustomIconHelper.addCustomIcon(new RatingDarkStar());
 
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());

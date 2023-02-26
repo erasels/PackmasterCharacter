@@ -18,11 +18,11 @@ CoreSetPack	3	3	3	3	3
 CosmosCommandPack
 CreativityPack
 CthulhuPack
-DefectPack
+DefectPack	4	4	3	4	3
 DimensionGatePack
 DimensionGate2Pack
 DimensionGate3Pack
-DistortionPack
+DistortionPack	4	2	3	4	5
 DownfallPack
 DragonwrathPack	4	2	1	2	5
 EnergyAndEchoPack
