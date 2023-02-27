@@ -127,7 +127,7 @@ public class PackSummaryReader {
 
         HashMap<String, Integer> tags = new HashMap<>();
         c.forEach(s -> s.tags.forEach(m -> tags.put(m, tags.getOrDefault(m, 0) + 1)));
-        SpireAnniversary5Mod.logger.info("Mechanic appearances:");
+        SpireAnniversary5Mod.logger.info("Tag counts:");
         for (Map.Entry<String, Integer> entry : tags.entrySet()) {
             SpireAnniversary5Mod.logger.info(entry.getKey() + ": " + entry.getValue());
         }
