@@ -14,8 +14,8 @@
     "NAME": "Tainted",
     "DESCRIPTIONS": [
       "Doubles any debuffs you apply to this enemy.",
-      "Doubles any debuffs you apply to this enemy #b",
-      " times."
+      "Multiplies any debuffs you apply to this enemy by #b",
+      "."
     ]
   }
 }
