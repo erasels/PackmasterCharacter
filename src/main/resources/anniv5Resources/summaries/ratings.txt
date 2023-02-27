@@ -37,40 +37,40 @@ HermitPack	4	3	3	3	2
 HighEnergyPack	2	3	4	2	3
 InfestPack	3	3	3	2	2
 IntoTheBreachPack	3	3	3	2	1
-IroncladPack
-LegacyPack
-MadSciencePack
-MarisaPack
-MetaPack
+IroncladPack	4	2	3	4	2
+LegacyPack	3	2	2	3	2
+MadSciencePack	2	2	4	2	3
+MarisaPack	4	1	4	4	3
+MetaPack	3	2	2	3	3
 MonsterHunterPack	4	2	2	4	3
 OdditiesPack	2	1	5	2	3
-OrbPack
-PinnaclePack
-PixiePack
-PoisonPack
+OrbPack	1	3	4	3	4
+PinnaclePack	2	2	4	1	3
+PixiePack	4	3	1	4	3
+PoisonPack	5	1	2	2	5
 PrismaticPack	3	2	4	2	3
-PsychicPack
-QuantaPack
-QuietPack
+PsychicPack	2	2	4	4	4
+QuantaPack	3	4	3	4	2
+QuietPack	4	4	4	4	2
 ReplicatorsPack	2	2	5	2	5
-RimworldPack
-RingOfPainPack
+RimworldPack	3	3	4	2	3
+RingOfPainPack	4	2	3	2	3
 RipPack	3	3	2	5	2
-SentinelPack
-SerpentinePack
+SentinelPack	4	4	2	4	2
+SerpentinePack	4	1	3	2	4
 ShamanPack	4	3	2	1	4
-SilentPack
-SneckoPack
+SilentPack	3	3	4	3	3
+SneckoPack	3	1	4	3	2
 StatusPack	4	2	5	4	3
 StrikesPack	4	1	2	4	1
 SummonsPack	3	3	4	2	4
-ThieveryPack
+ThieveryPack	2	2	4	3	3
 TransmutationPack	3	3	4	3	2
 UtilityPack	2	2	5	2	3
-WardenPack
+WardenPack	3	2	4	2	3
 WarlockPack	3	2	2	3	4
-WarriorPack
-WatcherPack
-WeaponsPack
+WarriorPack	4	2	1	3	2
+WatcherPack	4	3	4	4	2
+WeaponsPack	4	1	2	3	1
 WitchesStrikePack	3	2	4	3	3
 WomanInBluePack	2	2	4	4	2
