@@ -41,7 +41,6 @@ public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
     public void initializeDescriptionCN() {
         super.initializeDescriptionCN();
         if (Settings.language == Settings.GameLanguage.ZHS ) {
-            StringBuilder first_line = new StringBuilder();
             if(this.description.size()!=0){
                 this.description.remove(1);
             }
