@@ -49,6 +49,9 @@ public class PackSummaryReader {
 
             String line;
             while ((line = br.readLine()) != null) {
+                if (line.contains(" ")) {
+                    throw new RuntimeException("Space found in ratings.txt; tabs should be used to separate elements instead");
+                }
                 String[] entries = line.split("\t");
                 String packID = SpireAnniversary5Mod.modID + ":" + entries[0];
                 if (!SpireAnniversary5Mod.packsByID.containsKey(packID)) {
@@ -80,6 +83,9 @@ public class PackSummaryReader {
 
             String line;
             while ((line = br.readLine()) != null) {
+                if (line.contains(" ")) {
+                    throw new RuntimeException("Space found in tags.txt; tabs should be used to separate the pack ID from the tags, and commas should be used to separate the tags");
+                }
                 String[] entries = line.split("\t");
                 String packID = SpireAnniversary5Mod.modID + ":" + entries[0];
                 if (!SpireAnniversary5Mod.packsByID.containsKey(packID)) {
