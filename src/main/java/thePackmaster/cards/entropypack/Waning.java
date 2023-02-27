@@ -16,7 +16,7 @@ public class Waning extends AbstractEntropyCard {
     public final static String ID = makeID("Waning");
 
     public Waning() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 22;
     }
 

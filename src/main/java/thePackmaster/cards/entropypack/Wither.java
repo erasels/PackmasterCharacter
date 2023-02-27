@@ -14,8 +14,8 @@ public class Wither extends AbstractEntropyCard {
 
     public Wither() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 3;
-        baseMagicNumber = magicNumber = 6;
+        baseDamage = 4;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
