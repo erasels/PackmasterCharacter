@@ -15,6 +15,7 @@ public class PackSummaryReader {
     private static final String TAGS_FILE = "anniv5Resources/summaries/tags.txt";
 
     private static HashMap<String, PackSummary> packSummaries = null;
+    public static final String NONE_TAG = "None";
 
     public static PackSummary getPackSummary(String packID) {
         if (packSummaries == null) {
@@ -95,7 +96,7 @@ public class PackSummaryReader {
                     continue;
                 }
                 String[] tags = entries[1].split(",");
-                if (tags[0].equals("None")) {
+                if (tags[0].equals(NONE_TAG)) {
                     if (tags.length > 1) {
                         throw new RuntimeException("Pack is tagged as None but has other tags too: " + packID);
                     }

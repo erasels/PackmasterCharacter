@@ -83,6 +83,6 @@ public class PackSummaryDisplay {
         if (!uiStrings.TEXT_DICT.containsKey(tag)) {
             throw new RuntimeException("Unrecognized tag: " + tag);
         }
-        return "#y" + uiStrings.TEXT_DICT.get(tag);
+        return (!tag.equals(PackSummaryReader.NONE_TAG) ? "#y" : "") + uiStrings.TEXT_DICT.get(tag);
     }
 }
