@@ -19,13 +19,13 @@ CosmosCommandPack	3	2	4	1	4
 CreativityPack	3	3	4	3	1
 CthulhuPack	2	4	3	1	3
 DefectPack	4	4	3	4	3
-DimensionGatePack
-DimensionGate2Pack
-DimensionGate3Pack
+DimensionGatePack	4	3	3	2	4
+DimensionGate2Pack	3	3	2	2	2
+DimensionGate3Pack	3	4	4	4	2
 DistortionPack	4	2	3	4	5
-DownfallPack
+DownfallPack	2	3	3	3	3
 DragonwrathPack	4	2	1	2	5
-EnergyAndEchoPack
+EnergyAndEchoPack	3	2	4	4	2
 EntropyPack
 EvenOddPack
 FarmerPack
@@ -52,7 +52,7 @@ PrismaticPack	3	2	4	2	3
 PsychicPack
 QuantaPack
 QuietPack
-ReplicatorsPack
+ReplicatorsPack	2	2	5	2	5
 RimworldPack
 RingOfPainPack
 RipPack	3	3	2	5	2
