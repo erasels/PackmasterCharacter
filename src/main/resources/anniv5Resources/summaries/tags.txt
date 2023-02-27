@@ -38,7 +38,7 @@ HighEnergyPack	None
 InfestPack	None
 IntoTheBreachPack	None
 IroncladPack	Strength
-LegacyPack	None
+LegacyPack	Exhaust
 MadSciencePack	None
 MarisaPack	Exhaust
 MetaPack	None
