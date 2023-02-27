@@ -12,7 +12,7 @@ BitingColdPack	Debuffs
 BlacksmithsPack	None
 BoardGamePack	None
 ClawPack	None
-ConjurerPack	Debuff
+ConjurerPack	Debuffs
 ContentCreatorPack	Orbs
 CoreSetPack	None
 CosmosCommandPack	Exhaust,Debuffs
@@ -47,7 +47,7 @@ OdditiesPack	None
 OrbPack	Orbs
 PinnaclePack	None
 PixiePack	None
-PoisonPack	Debuff
+PoisonPack	Debuffs
 PrismaticPack	None
 PsychicPack	Exhaust
 QuantaPack	None
