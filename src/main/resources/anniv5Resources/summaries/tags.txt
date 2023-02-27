@@ -39,7 +39,7 @@ InfestPack	None
 IntoTheBreachPack	None
 IroncladPack	Strength
 LegacyPack	Exhaust
-MadSciencePack	None
+MadSciencePack	Orbs
 MarisaPack	Exhaust
 MetaPack	None
 MonsterHunterPack	None
