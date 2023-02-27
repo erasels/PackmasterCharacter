@@ -26,7 +26,7 @@ DistortionPack	Exhaust
 DownfallPack	Stances,Orbs
 DragonwrathPack	Debuffs
 EnergyAndEchoPack	Exhaust
-EntropyPack	Debuffs,Orbs
+EntropyPack	Discard,Debuffs,Orbs
 EvenOddPack	None
 FarmerPack	None
 GemsPack	Orbs
