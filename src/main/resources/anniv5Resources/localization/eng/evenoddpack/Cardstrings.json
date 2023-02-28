@@ -2,7 +2,7 @@
   "${ModID}:SwordAndBoard": {
     "NAME": "Sword and Board",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["${ModID}:Even:", " Deal !D! damage.", " NL ","${ModID}:Odd ", " Gain !B! Block"]
+    "EXTENDED_DESCRIPTION": ["${ModID}:Even:", " Deal !D! damage.", " NL ","${ModID}:Odd: ", " Gain !B! Block."]
   },
   "${ModID}:QuickReflex": {
     "NAME": "Quick Reflex",
