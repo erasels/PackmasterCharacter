@@ -84,8 +84,13 @@ After you've finished your pack, please add ratings and tags for it to the files
 Ratings:
 * Intended to give a rough sense of what a pack is and isn't good at
 * Five categories: offense, defense, support (including things like card draw and energy generation), frontload (how good the pack is at quickly having an impact in combat), and scaling.
-* On a scale of 1-5, where a 1 means that a pack is one of the worst packs on that dimension and a 5 means that it's one of the best
-* Don't worry about getting the ratings exactly right, these are easy to change later based on play experience and feedback
+* On a scale of 1-5, where the ratings describe how the pack compares in that category:
+  * 1: One of the weakest (the bottom 5-10%)
+  * 2: Below average
+  * 3: Average (the middle 30-40%)
+  * 4: Above average
+  * 5: One of the strongest (the top 5-10%)
+* Don't worry too much about the exact values, these are easy to change later based on play experience and feedback
 * Each entry in the file is the ID of the pack followed by ratings in the five categories, in the order listed, separated by tabs
 
 Tags:
