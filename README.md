@@ -104,7 +104,7 @@ Tags:
   * Orbs: any amount of orb generating cards
   * Stances: any amount of stance entering cards
   * None: if no other tags apply
-* Each entry in the file is the ID of the pack, followed by a tab, followed by a comma-separated list of tags,
+* Each entry in the file is the ID of the pack, followed by a tab, followed by a comma-separated list of tags
 
 ### HATS
 
