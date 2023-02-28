@@ -7,7 +7,7 @@ ArcanaPack	3	2	3	3	2
 BardInspirePack	3	3	4	2	3
 BasicsPack	3	3	2	4	2
 BatterPack	4	2	2	4	2
-BellordPack	2	2	2	4	1
+BellordPack	2	3	2	4	1
 BitingColdPack	3	2	2	3	2
 BlacksmithsPack	3	3	4	4	4
 BoardGamePack	4	3	2	4	2
