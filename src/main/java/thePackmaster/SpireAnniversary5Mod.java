@@ -442,13 +442,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveEditCards() {
         CustomIconHelper.addCustomIcon(InfestTextIcon.get());
-        CustomIconHelper.addCustomIcon(new RatingCircles.RatingCircle1());
-        CustomIconHelper.addCustomIcon(new RatingCircles.RatingCircle2());
-        CustomIconHelper.addCustomIcon(new RatingCircles.RatingCircle3());
-        CustomIconHelper.addCustomIcon(new RatingCircles.RatingCircle4());
-        CustomIconHelper.addCustomIcon(new RatingCircles.RatingCircle5());
         CustomIconHelper.addCustomIcon(new RatingStar());
-        CustomIconHelper.addCustomIcon(new RatingEmptyStar());
         CustomIconHelper.addCustomIcon(new RatingDarkStar());
 
         BaseMod.addDynamicVariable(new SecondMagicNumber());
