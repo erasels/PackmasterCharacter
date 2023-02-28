@@ -186,7 +186,10 @@
       "Orbs": "Orbs",
       "Stances": "Stances",
       "Discard": "Discard",
-      "Debuffs": "Debuffs"
+      "Debuffs": "Debuffs",
+      "Attacks": "Attacks",
+      "Magic": "Magic",
+      "Tokens": "Tokens"
     }
   }
 }
