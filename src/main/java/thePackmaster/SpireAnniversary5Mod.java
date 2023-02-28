@@ -91,6 +91,9 @@ import thePackmaster.stances.cthulhupack.NightmareStance;
 import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
+import thePackmaster.summaries.PackSummary;
+import thePackmaster.summaries.PackSummaryDisplay;
+import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.util.JediUtil;
@@ -465,6 +468,7 @@ public class SpireAnniversary5Mod implements
 
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
+        loadAndCheckSummaries();
 
         logger.info("Checking playability annotations");
         OccultPatch.testPlayability();
@@ -973,6 +977,15 @@ public class SpireAnniversary5Mod implements
         //Calling this to fill the card pool after the currentPoolPacks are filled
         selectedCards = true;
         CardCrawlGame.dungeon.initializeCardPools();
+    }
+
+    private static void loadAndCheckSummaries() {
+        // We load the summary for each patch to catch any errors early
+        SpireAnniversary5Mod.logger.info("Loading and checking pack summaries");
+        for (AbstractCardPack p : unfilteredAllPacks) {
+            PackSummary summary = PackSummaryReader.getPackSummary(p.packID);
+            PackSummaryDisplay.getTooltip(summary);
+        }
     }
 
     @Override

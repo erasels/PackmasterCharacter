@@ -10,8 +10,8 @@ import java.util.HashSet;
 import java.util.stream.Collectors;
 
 public class PackSummaryDisplay {
-    public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID(PackSummaryDisplay.class.getSimpleName()));
-    public static String[] TEXT = uiStrings.TEXT;
+    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID(PackSummaryDisplay.class.getSimpleName()));
+    private static String[] TEXT = uiStrings.TEXT;
 
     public static String getTitle() {
         return TEXT[0];
@@ -79,7 +79,7 @@ public class PackSummaryDisplay {
         }
     }
 
-    public static String getTagString(String tag) {
+    private static String getTagString(String tag) {
         if (!uiStrings.TEXT_DICT.containsKey(tag)) {
             throw new RuntimeException("Unrecognized tag: " + tag);
         }
