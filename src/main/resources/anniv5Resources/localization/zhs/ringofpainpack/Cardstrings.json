@@ -2,7 +2,7 @@
   "${ModID}:Hound": {
     "NAME": "腐败狂犬",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 打出攻击时 ${ModID}:进化 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 并给予所有敌人 !M! 层 虚弱 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害 并给予 !M! 层 虚弱 。",
     "EXTENDED_DESCRIPTION": ["巨型腐败狂犬"]
   },
   "${ModID}:Slime": {
