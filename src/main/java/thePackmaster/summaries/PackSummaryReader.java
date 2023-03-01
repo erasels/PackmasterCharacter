@@ -107,8 +107,8 @@ public class PackSummaryReader {
                         throw new RuntimeException("Pack is tagged as None but has other tags too: " + packID);
                     }
                 }
-                for (String mechanic : tags) {
-                    packSummary.tags.add(mechanic.trim());
+                for (String tag : tags) {
+                    packSummary.tags.add(tag.trim());
                 }
             }
         } catch (IOException e) {
