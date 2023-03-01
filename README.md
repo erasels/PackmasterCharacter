@@ -95,7 +95,7 @@ Ratings:
 
 Tags:
 * Intended to give a rough sense of what synergies a pack might have
-* Only used for specific mechanics that are used across many packs; the description for your pack should cover anything unique to your pack
+* Used for specific mechanics that are used across many packs; the description for your pack should cover anything unique to your pack
 * Available tags and when to add them:
   * Strength: multiple cards that gain Strength (more than just one strength rare or uncommon) 
   * Exhaust: multiple cards that benefit from exhausting or most of the pack enabling exhaust
