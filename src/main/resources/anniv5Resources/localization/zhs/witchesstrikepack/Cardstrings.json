@@ -35,7 +35,7 @@
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "月色飞行",
-    "DESCRIPTION": "生成 充能球时， NL 获得 !M! 层临时 集中。"
+    "DESCRIPTION": "生成 充能球时， NL 获得 !M! 层临时 集中 。"
   },
   "${ModID}:ScarabPlague": {
     "NAME": "甲虫瘟疫",

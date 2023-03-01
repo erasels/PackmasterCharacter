@@ -1,8 +1,8 @@
 {
   "${ModID}:Wonder": {
     "NAME": "精妙",
-    "DESCRIPTION": "丢弃所有手牌。 NL 抽一张牌， NL 将能量设为其耗能点。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃所有手牌。 抽一张牌， NL 将能量设为其耗能点。"
+    "DESCRIPTION": "丢弃所有手牌。 NL 抽一张牌， NL 将能量变为其耗能点。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃所有手牌。 NL 抽一张牌， NL 将能量变为其耗能点。"
   },
   "${ModID}:FreeSpace": {
     "NAME": "发挥空间",
