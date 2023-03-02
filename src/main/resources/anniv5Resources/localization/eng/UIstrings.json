@@ -83,6 +83,19 @@
       "Watcher Veil"
     ]
   },
+  "${ModID}:BulwarkPack": {
+    "TEXT": [
+      "Bulwark",
+      "The greatest defensive tools of the Spire, together for the first time in one place.",
+      "modargo"
+    ]
+  },
+  "${ModID}:BulwarkPackHat": {
+    "TEXT": [
+      "TBD",
+      "TBD"
+    ]
+  },
   "${ModID}:PackMainMenuUI": {
     "TEXT": [
       "Custom Draft Mode",
