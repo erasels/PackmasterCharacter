@@ -978,7 +978,12 @@ public class SpireAnniversary5Mod implements
         SpireAnniversary5Mod.logger.info("Loading and checking pack summaries");
         for (AbstractCardPack p : unfilteredAllPacks) {
             PackSummary summary = PackSummaryReader.getPackSummary(p.packID);
-            PackSummaryDisplay.getTooltip(summary);
+            if (summary != null) {
+                PackSummaryDisplay.getTooltip(summary);
+            }
+            else {
+                SpireAnniversary5Mod.logger.error("Please fill out the ratings and tags before releasing pack " + p.packID);
+            }
         }
     }
 
