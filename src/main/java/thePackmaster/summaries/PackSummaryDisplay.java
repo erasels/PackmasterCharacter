@@ -28,7 +28,7 @@ public class PackSummaryDisplay {
         sb.append(TEXT[5].replace("{0}", getStatString(summary.scaling)));
         if (!summary.tags.isEmpty()) {
             sb.append(" NL ");
-            String tags = summary.tags.stream().map(PackSummaryDisplay::getTagString).collect(Collectors.joining(", "));
+            String tags = summary.tags.stream().map(PackSummaryDisplay::getTagString).collect(Collectors.joining(TEXT[7]));
             sb.append(TEXT[6].replace("{0}", tags));
         }
         return sb.toString();

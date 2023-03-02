@@ -177,7 +177,8 @@
       "Support: {0}",
       "Frontload: {0}",
       "Scaling: {0}",
-      "Tags: {0}"
+      "Tags: {0}",
+      ", "
     ],
     "TEXT_DICT": {
       "None": "None",
