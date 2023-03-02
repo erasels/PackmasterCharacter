@@ -6,8 +6,8 @@
   },
   "${ModID}:QuickReflex": {
     "NAME": "Quick Reflex",
-    "DESCRIPTION": "Gain !B! Block",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First:", " Gain !B! Block"]
+    "DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:First:", " Gain !B! Block."]
   },
   "${ModID}:PrimeDirective": {
     "NAME": "Prime Directive",
