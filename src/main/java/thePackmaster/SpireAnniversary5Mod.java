@@ -91,10 +91,11 @@ import thePackmaster.stances.cthulhupack.NightmareStance;
 import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
-import thePackmaster.ui.CurrentRunCardsTopPanelItem;
+import thePackmaster.summaries.PackSummary;
+import thePackmaster.summaries.PackSummaryDisplay;
+import thePackmaster.summaries.PackSummaryReader;
+import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
-import thePackmaster.ui.InfestTextIcon;
-import thePackmaster.ui.PackFilterMenu;
 import thePackmaster.util.JediUtil;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
@@ -441,6 +442,8 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveEditCards() {
         CustomIconHelper.addCustomIcon(InfestTextIcon.get());
+        CustomIconHelper.addCustomIcon(new RatingStar());
+        CustomIconHelper.addCustomIcon(new RatingDarkStar());
 
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
@@ -459,6 +462,7 @@ public class SpireAnniversary5Mod implements
 
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
+        loadAndCheckSummaries();
 
         logger.info("Checking playability annotations");
         OccultPatch.testPlayability();
@@ -967,6 +971,20 @@ public class SpireAnniversary5Mod implements
         //Calling this to fill the card pool after the currentPoolPacks are filled
         selectedCards = true;
         CardCrawlGame.dungeon.initializeCardPools();
+    }
+
+    private static void loadAndCheckSummaries() {
+        // We load the summary for each patch to catch any errors early
+        SpireAnniversary5Mod.logger.info("Loading and checking pack summaries");
+        for (AbstractCardPack p : unfilteredAllPacks) {
+            PackSummary summary = PackSummaryReader.getPackSummary(p.packID);
+            if (summary != null) {
+                PackSummaryDisplay.getTooltip(summary);
+            }
+            else {
+                SpireAnniversary5Mod.logger.error("Please fill out the ratings and tags before releasing pack " + p.packID);
+            }
+        }
     }
 
     @Override
