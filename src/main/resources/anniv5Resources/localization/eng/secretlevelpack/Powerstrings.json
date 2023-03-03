@@ -5,5 +5,13 @@
       "At the end of your turn, enemies with #yWeak or #yVulnerable lose #b",
       " HP."
     ]
+  },
+  "${ModID}:AchievementHunterPower": {
+    "NAME": "Achievement Hunter",
+    "DESCRIPTIONS": [
+      "Whenever you play a glowing card, gain #b1 #yStrength. After #b",
+      " more triggers, gain #b2 #yDexterity.",
+      "Whenever you play a glowing card, gain #b1 #yStrength. #g100% #gCompletion!"
+    ]
   }
 }

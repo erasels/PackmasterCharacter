@@ -22,5 +22,22 @@
   "${ModID}:Conglaturation": {
     "NAME": "Conglaturation!",
     "DESCRIPTION": "Deal !D! damage. NL If you played a glowing card this turn, gain [E] and draw 1 card."
+  },
+  "${ModID}:EnoughTalk": {
+    "NAME": "Enough Talk",
+    "DESCRIPTION": "Costs 0 if an enemy spoke last turn. NL Remove your Weak and Frail. NL Gain !M! Strength."
+  },
+  "${ModID}:DanseMacabre": {
+    "NAME": "Danse Macabre",
+    "DESCRIPTION": "At the end of your turn, enemies with Weak or Vulnerable lose !M! HP."
+  },
+  "${ModID}:TheDonut": {
+    "NAME": "The Donut",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you're having fun, play a random Power!"
+  },
+  "${ModID}:AchievementHunter": {
+    "NAME": "Achievement Hunter",
+    "DESCRIPTION": "Whenever you play a glowing card, gain 1 Strength. NL After 5 triggers, gain 2 Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a glowing card, gain 1 Strength. NL After 5 triggers, gain 2 Dexterity."
   }
 }
