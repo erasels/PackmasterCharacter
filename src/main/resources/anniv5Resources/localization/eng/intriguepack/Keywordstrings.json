@@ -1,0 +1,36 @@
+[
+  {
+    "PROPER_NAME": "Mundane",
+    "NAMES": [
+      "Mundane",
+      "mundane"
+    ],
+    "DESCRIPTION": "Common, basic and special cards are Mundane."
+  },
+  {
+    "PROPER_NAME": "Precious",
+    "NAMES": [
+      "Precious",
+      "precious"
+    ],
+    "DESCRIPTION": "Uncommon and rare cards are Precious."
+  },
+  {
+    "PROPER_NAME": "Promote",
+    "NAMES": [
+      "Promote",
+      "promote",
+      "Promoted",
+      "promoted"
+    ],
+    "DESCRIPTION": "Increases the rarity of a basic, common, special or uncommon card."
+  },
+  {
+    "PROPER_NAME": "Demote",
+    "NAMES": [
+      "Demote",
+      "demote"
+    ],
+    "DESCRIPTION": "Decreases the rarity of a rare or uncommon card."
+  }
+]
