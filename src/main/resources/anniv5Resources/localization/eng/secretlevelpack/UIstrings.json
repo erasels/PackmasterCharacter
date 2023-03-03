@@ -1,0 +1,15 @@
+{
+  "${ModID}:SecretLevelPack": {
+    "TEXT": [
+      "Secret Level",
+      "Another set of bizarre Vex cards. Debuff with ample Weak and Vulnerable, and take advantage of mystical payoff cards.",
+      "Vex"
+    ]
+  },
+  "${ModID}:OdditiesPackHat": {
+    "TEXT": [
+      "dudda dudda dudda.",
+      "The Plumber"
+    ]
+  }
+}

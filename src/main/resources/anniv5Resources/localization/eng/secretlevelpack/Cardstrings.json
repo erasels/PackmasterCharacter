@@ -1,0 +1,10 @@
+{
+  "${ModID}:MysteryBox": {
+    "NAME": "Mystery Box",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Add a random Attack into your hand. NL If in a ? room, it costs 0 this turn."
+  },
+  "${ModID}:SurpriseAttack": {
+    "NAME": "Surprise Attack",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL If it's turn 1, draw a card."
+  }
+}

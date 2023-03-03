@@ -1,0 +1,15 @@
+{
+  "${ModID}:AutoBattlerPower": {
+    "NAME": "Auto Battler",
+    "DESCRIPTIONS": [
+      "You automatically play cards from left to right at the frontmost foe."
+    ]
+  },
+  "${ModID}:FinalFormPower": {
+    "NAME": "Final Form",
+    "DESCRIPTIONS": [
+      "At the start of your turn, play and #yExhaust a copy of ",
+      "."
+    ]
+  }
+}
