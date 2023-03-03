@@ -6,5 +6,13 @@
   "${ModID}:SurpriseAttack": {
     "NAME": "Surprise Attack",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL If it's turn 1, draw a card."
+  },
+  "${ModID}:EscapeClause": {
+    "NAME": "Escape Clause",
+    "DESCRIPTION": "Gain !B! Block. NL If any enemy has Weak or Vulnerable, put a card from your discard pile into your hand."
+  },
+  "${ModID}:Banana": {
+    "NAME": "Banana",
+    "DESCRIPTION": "Heal !M! HP. NL Gain !${ModID}:m2! Dexterity. NL Put a *Trip on top of your draw pile."
   }
 }
