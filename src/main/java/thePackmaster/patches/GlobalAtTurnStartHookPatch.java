@@ -7,7 +7,6 @@ import javassist.CtBehavior;
 import thePackmaster.packs.EnergyAndEchoPack;
 import thePackmaster.patches.odditiespack.AutoBattlerPatches;
 import thePackmaster.patches.secretlevelpack.EnoughTalkPatch;
-import thePackmaster.patches.secretlevelpack.EnoughTalkpatch;
 import thePackmaster.patches.secretlevelpack.SpecialCardGlowCheckPatch;
 
 

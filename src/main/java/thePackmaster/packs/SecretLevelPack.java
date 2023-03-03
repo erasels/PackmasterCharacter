@@ -3,9 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.odditiespack.*;
-import thePackmaster.cards.secretlevelpack.MysteryBox;
-import thePackmaster.cards.secretlevelpack.SurpriseAttack;
+import thePackmaster.cards.secretlevelpack.*;
 
 import java.util.ArrayList;
 
@@ -25,6 +23,14 @@ public class SecretLevelPack extends AbstractCardPack {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(MysteryBox.ID);
         cards.add(SurpriseAttack.ID);
+        cards.add(EscapeClause.ID);
+        cards.add(Banana.ID);
+        cards.add(Joust.ID);
+        cards.add(Conglaturation.ID);
+        cards.add(EnoughTalk.ID);
+        cards.add(DanseMacabre.ID);
+        cards.add(TheDonut.ID);
+        cards.add(AchievementHunter.ID);
         return cards;
     }
 }
