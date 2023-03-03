@@ -1,15 +1,9 @@
 {
-  "${ModID}:AutoBattlerPower": {
-    "NAME": "Auto Battler",
+  "${ModID}:DanseMacabrePower": {
+    "NAME": "Danse Macabre",
     "DESCRIPTIONS": [
-      "You automatically play cards from left to right at the frontmost foe."
-    ]
-  },
-  "${ModID}:FinalFormPower": {
-    "NAME": "Final Form",
-    "DESCRIPTIONS": [
-      "At the start of your turn, play and #yExhaust a copy of ",
-      "."
+      "At the end of your turn, enemies with #yWeak or #yVulnerable lose #b",
+      " HP."
     ]
   }
 }
