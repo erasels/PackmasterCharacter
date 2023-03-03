@@ -25,13 +25,10 @@ public class Shakedown extends AbstractIntrigueCard {
     }
 
     public boolean hasRarity(CardRarity rar) {
-        Iterator var1 = Wiz.p().hand.group.iterator();
-
-        while(var1.hasNext()) {
-            AbstractCard c = (AbstractCard)var1.next();
-            if (c.rarity == rar && c.color != CardColor.CURSE) {
+        for (AbstractCard c : Wiz.p().hand.group)
+        {
+            if (c.rarity == rar && c.color != CardColor.CURSE)
                 return true;
-            }
         }
 
         return false;
@@ -41,12 +38,35 @@ public class Shakedown extends AbstractIntrigueCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
                 Wiz.atb(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
-                if (hasRarity(CardRarity.COMMON) || hasRarity(CardRarity.BASIC) || hasRarity(CardRarity.SPECIAL))
-                    Wiz.atb(new DrawCardAction(1));
-                if (hasRarity(CardRarity.UNCOMMON))
-                    Wiz.atb(new DrawCardAction(1));
-                if (upgraded && hasRarity(CardRarity.RARE))
-                    Wiz.atb(new DrawCardAction(1));
+                // lol aight
+                int drawnum = 0;
+                boolean com_d = false;
+                boolean unc_d = false;
+                boolean rar_d = false;
+
+                for(AbstractCard c : Wiz.p().hand.group)
+                {
+                    if (c.rarity == CardRarity.CURSE)
+                        continue;
+
+                    if (c.rarity == CardRarity.COMMON || c.rarity == CardRarity.BASIC || c.rarity == CardRarity.SPECIAL)
+                        com_d = true;
+                    else
+                    if (c.rarity == CardRarity.UNCOMMON)
+                        unc_d = true;
+                    else
+                    if (upgraded && c.rarity == CardRarity.RARE)
+                        rar_d = true;
+                }
+
+                if (com_d)
+                    drawnum++;
+                if (unc_d)
+                    drawnum++;
+                if (rar_d)
+                    drawnum++;
+
+                    Wiz.atb(new DrawCardAction(drawnum));
     }
 
     @Override

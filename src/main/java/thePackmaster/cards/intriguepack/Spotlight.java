@@ -11,7 +11,7 @@ public class Spotlight extends AbstractIntrigueCard {
     public final static String ID = makeID("Spotlight");
 
     public Spotlight() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

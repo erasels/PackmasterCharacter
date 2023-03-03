@@ -1,11 +1,11 @@
 {
   "${ModID}:Topple": {
     "NAME": "Topple",
-    "DESCRIPTION": "Deal !D! damage. NL Deals 1 more damage for each ${ModID}:Mundane card played this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! more damage for each ${ModID}:Mundane card played this combat."
   },
   "${ModID}:Vanguard": {
     "NAME": "Vanguard",
-    "DESCRIPTION": "Gain !B! Block. If you play a ${ModID}:Precious card with this in hand, play this."
+    "DESCRIPTION": "Gain !B! Block. NL If you play a ${ModID}:Precious card with this in hand, play this."
   },
   "${ModID}:Shakedown": {
     "NAME": "Shakedown",
@@ -14,13 +14,13 @@
   },
   "${ModID}:Favor": {
     "NAME": "Favor",
-    "DESCRIPTION": "Gain ${ModID}:Echo of a random rare card. It costs 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain ${ModID}:Echo of a random rare card. It costs 0 this turn."
+    "DESCRIPTION": "Gain an ${ModID}:Echo of a random rare card. It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain an ${ModID}:Echo of a random rare card. It costs 0 this turn."
   },
   "${ModID}:EtTu": {
     "NAME": "Et Tu?",
-    "DESCRIPTION": "Gain !M! Shivs. They have Retain. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Shivs and 1 rare Shiv. They have Retain. NL Exhaust."
+    "DESCRIPTION": "Gain !M! *Shivs. They have Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! *Shivs and 1 rare *Shiv. They have Retain. NL Exhaust."
   },
   "${ModID}:Spotlight": {
     "NAME": "Spotlight",

@@ -22,6 +22,7 @@ public class Topple extends AbstractIntrigueCard {
     public Topple() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
@@ -42,12 +43,11 @@ public class Topple extends AbstractIntrigueCard {
 
     public int countCards() {
         int counter = 0;
-        Iterator var1 = AbstractDungeon.actionManager.cardsPlayedThisCombat.iterator();
 
-        while(var1.hasNext()) {
-            AbstractCard c = (AbstractCard)var1.next();
+        for(AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat)
+        {
             if (isMundane(c)) {
-                counter++;
+                counter += magicNumber;
             }
         }
 

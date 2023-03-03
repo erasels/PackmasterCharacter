@@ -5,7 +5,7 @@
       "Mundane",
       "mundane"
     ],
-    "DESCRIPTION": "Common, basic and special cards are Mundane."
+    "DESCRIPTION": "Common, basic and special cards."
   },
   {
     "PROPER_NAME": "Precious",
@@ -13,7 +13,7 @@
       "Precious",
       "precious"
     ],
-    "DESCRIPTION": "Uncommon and rare cards are Precious."
+    "DESCRIPTION": "Uncommon and rare cards."
   },
   {
     "PROPER_NAME": "Promote",
