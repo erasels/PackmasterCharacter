@@ -23,7 +23,7 @@
       "Promoted",
       "promoted"
     ],
-    "DESCRIPTION": "Increases the rarity of a basic, common, special or uncommon card."
+    "DESCRIPTION": "Increases the rarity of a basic, common or special card to uncommon, or uncommon card to rare."
   },
   {
     "PROPER_NAME": "Demote",
@@ -31,6 +31,6 @@
       "Demote",
       "demote"
     ],
-    "DESCRIPTION": "Decreases the rarity of a rare or uncommon card."
+    "DESCRIPTION": "Decreases the rarity of a rare card to uncommon, or uncommon card to common."
   }
 ]

@@ -43,10 +43,16 @@ public class Apex extends AbstractIntrigueCard {
                 // Ascend if all cards in hand are precious.
                 if (ascend)
                 {
-                    CardCrawlGame.sound.playA("ATTACK_FLAME_BARRIER", 0.25F);
-                    CardCrawlGame.sound.play("STANCE_ENTER_WRATH");
+                    Wiz.atb(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            CardCrawlGame.sound.playA("ATTACK_FLAME_BARRIER", 0.25F);
+                            CardCrawlGame.sound.play("STANCE_ENTER_WRATH");
+                            AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.YELLOW, true));
+                            isDone = true;
+                        }
+                    });
                     this.addToBot(new VFXAction(p, new InflameEffect(p), 0.1F));
-                    AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.YELLOW, true));
 
                     this.addToBot(new GainEnergyAction(2));
                     this.addToBot(new DrawCardAction(2));
@@ -69,18 +75,16 @@ public class Apex extends AbstractIntrigueCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        boolean ascend = true;
-
         // Check if any card is not precious.
         for(AbstractCard c : Wiz.p().hand.group)
         {
             if (!isPrecious(c)) {
-                ascend = false;
                 this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-                break;
+                return;
             }
         }
+
+        this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
     }
 
     public void upp() {

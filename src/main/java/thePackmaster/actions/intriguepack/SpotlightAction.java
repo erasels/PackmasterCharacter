@@ -1,7 +1,7 @@
 package thePackmaster.actions.intriguepack;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.cards.intriguepack.AbstractIntrigueCard;
-
-import java.util.Iterator;
 
 public class SpotlightAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
@@ -31,12 +29,9 @@ public class SpotlightAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
             CardGroup tmp = new CardGroup(CardGroupType.UNSPECIFIED);
-            Iterator var5 = this.p.drawPile.group.iterator();
 
-            AbstractCard card;
-            while(var5.hasNext()) {
-                card = (AbstractCard) var5.next();
-
+            for (AbstractCard card : this.p.drawPile.group)
+            {
                 if (upgraded)
                 {
                     if (AbstractIntrigueCard.isMundane(card) || (card.rarity == AbstractCard.CardRarity.UNCOMMON && card.color != AbstractCard.CardColor.CURSE))
@@ -47,14 +42,13 @@ public class SpotlightAction extends AbstractGameAction {
                     if (AbstractIntrigueCard.isMundane(card))
                         tmp.addToRandomSpot(card);
                 }
-
             }
 
             if (tmp.size() == 0) {
                 this.isDone = true;
             } else if (tmp.size() == 1) {
-                card = tmp.getTopCard();
-                if (this.p.hand.size() == 10) {
+                AbstractCard card = tmp.getTopCard();
+                if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                     this.p.drawPile.moveToDiscardPile(card);
                     this.p.createHandIsFullDialog();
                 } else {
@@ -75,8 +69,8 @@ public class SpotlightAction extends AbstractGameAction {
                 this.isDone = true;
             } else if (tmp.size() <= this.amount) {
                 for(int i = 0; i < tmp.size(); ++i) {
-                    card = tmp.getNCardFromTop(i);
-                    if (this.p.hand.size() == 10) {
+                    AbstractCard card = tmp.getNCardFromTop(i);
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         this.p.drawPile.moveToDiscardPile(card);
                         this.p.createHandIsFullDialog();
                     } else {
@@ -107,19 +101,17 @@ public class SpotlightAction extends AbstractGameAction {
             }
         } else {
             if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
-                AbstractCard card;
-                Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-                while(var1.hasNext()) {
-                    card = (AbstractCard)var1.next();
-                    card.unhover();
-                    if (this.p.hand.size() == 10) {
-                        this.p.drawPile.moveToDiscardPile(card);
+                for( AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards)
+                {
+                    c.unhover();
+                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
+                        this.p.drawPile.moveToDiscardPile(c);
                         this.p.createHandIsFullDialog();
                     } else {
-                        this.p.drawPile.removeCard(card);
-                        this.p.hand.addToTop(card);
-                        AbstractIntrigueCard.promote(card);
+                        this.p.drawPile.removeCard(c);
+                        this.p.hand.addToTop(c);
+                        AbstractIntrigueCard.promote(c);
                     }
 
                     this.p.hand.refreshHandLayout();

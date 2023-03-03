@@ -14,7 +14,7 @@ public class Exultation extends AbstractIntrigueCard {
     public Exultation() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = 3;
-        baseBlock = 0;
+        baseBlock = -1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -22,11 +22,18 @@ public class Exultation extends AbstractIntrigueCard {
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
+                int blk = 0;
+
                 for(AbstractCard c : Wiz.p().hand.group)
                 {
-                    if (promote(c) && c != Exultation.this)
-                        Wiz.doBlk(magicNumber);
+                    if (c != Exultation.this)
+                    if (promote(c))
+                        blk += magicNumber;
                 }
+
+                if (blk > 0)
+                Wiz.doBlk(magicNumber);
+
                 isDone = true;
             }
         });
