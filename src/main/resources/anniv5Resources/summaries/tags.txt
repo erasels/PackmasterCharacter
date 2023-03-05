@@ -11,6 +11,7 @@ BellordPack	None
 BitingColdPack	Debuffs
 BlacksmithsPack	None
 BoardGamePack	None
+BulwarkPack	Exhaust
 ClawPack	Tokens
 ConjurerPack	Debuffs
 ContentCreatorPack	Orbs
