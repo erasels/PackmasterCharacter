@@ -1,0 +1,6 @@
+{
+  "${ModID}:Ignition": {
+    "NAME": "Ignition",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel a ${ModID}:Blaze."
+  }
+}

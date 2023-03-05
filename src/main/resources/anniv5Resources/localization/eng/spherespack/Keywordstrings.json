@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Blaze",
+    "NAMES": [
+      "blaze"
+    ],
+    "DESCRIPTION": "Orb: Increases amount every turn. When #yEvoked, applies #yIgnite to the enemy with the most HP."
+  },
+  {
+    "PROPER_NAME": "Ancient",
+    "NAMES": [
+      "ancient"
+    ],
+    "DESCRIPTION": "Stance: If you have less than #b6 Plated Armor at the start of your turn, gain #b2 Plated Armor. NL When you leave this Stance, gain #b1 Artifact."
+  }
+]
