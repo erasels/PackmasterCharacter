@@ -38,6 +38,7 @@ HermitPack	4	3	3	3	2
 HighEnergyPack	2	3	3	2	3
 InfestPack	3	3	3	2	2
 IntoTheBreachPack	3	3	3	2	1
+IntriguePack	3	3	4	2	1
 IroncladPack	4	2	3	4	2
 LegacyPack	3	2	2	3	2
 MadSciencePack	3	3	5	2	3
