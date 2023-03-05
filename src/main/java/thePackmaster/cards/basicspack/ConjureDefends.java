@@ -27,7 +27,8 @@ public class ConjureDefends extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard card = this.cardsToPreview.makeStatEquivalentCopy();addToBot(new ConjureCardsAction(p, this.freeToPlayOnce, this.energyOnUse, card));
+        AbstractCard card = this.cardsToPreview.makeStatEquivalentCopy();
+        addToBot(new ConjureCardsAction(p, this.freeToPlayOnce, this.energyOnUse, card));
         addToBot(new RefundAction(this, 1));
     }
 
