@@ -23,13 +23,17 @@ public class MagicModifier extends AbstractCardModifier {
     public boolean shouldApply(AbstractCard card) {
         if(secondMagic && card instanceof AbstractPackmasterCard){
             return ((AbstractPackmasterCard) card).secondMagic != 0;
-        } else return card.baseMagicNumber != 0;
+        } else return card.magicNumber != 0;
     }
 
     public void onInitialApplication(AbstractCard card) {
         if(secondMagic && card instanceof AbstractPackmasterCard){
+            ((AbstractPackmasterCard) card).secondMagic += value;
             ((AbstractPackmasterCard) card).baseSecondMagic += value;
-        } else card.baseMagicNumber += value;
+        } else {
+            card.magicNumber += value;
+            card.baseMagicNumber += value;
+        }
     }
 
     @Override
