@@ -15,8 +15,8 @@
   },
   "${ModID}:LoseIt": {
     "NAME": "Lose It",
-    "DESCRIPTION": "Add a *Rummage to your hand. Set the cost of your *Rummages to !M! this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Rummage+ to your hand. Set the cost of your *Rummages to !M! this combat. NL Exhaust."
+    "DESCRIPTION": "Add a *Rummage to your hand. Increase the number of cards drawn by your *Rummages by !M! this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Rummage+ to your hand. Increase the number of cards drawn by your *Rummages by !M! this combat. NL Exhaust."
   },
   "${ModID}:SimplifiedStrike": {
     "NAME": "Simplified Strike",
