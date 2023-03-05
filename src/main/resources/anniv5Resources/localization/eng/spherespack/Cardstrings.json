@@ -2,5 +2,13 @@
   "${ModID}:Ignition": {
     "NAME": "Ignition",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel a ${ModID}:Blaze."
+  },
+  "${ModID}:Sphere": {
+    "NAME": "Sphere",
+    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:randomized\u00a0Orb.",
+    "EXTENDED_DESCRIPTION": [
+      "{0} Sphere",
+      "Gain !B! Block. NL Channel a {0}."
+    ]
   }
 }

@@ -7,10 +7,10 @@
     "DESCRIPTION": "Orb: Increases amount every turn. When #yEvoked, applies #yIgnite to the enemy with the most HP."
   },
   {
-    "PROPER_NAME": "Ancient",
+    "PROPER_NAME": "Randomized Orb",
     "NAMES": [
-      "ancient"
+      "randomized\u00a0orb"
     ],
-    "DESCRIPTION": "Stance: If you have less than #b6 Plated Armor at the start of your turn, gain #b2 Plated Armor. NL When you leave this Stance, gain #b1 Artifact."
+    "DESCRIPTION": "When this card is created, the orb it channels is randomly chosen from #yLightning, #yFrost, #yDark, #yGhostflame, #yBlaze, #ySnow."
   }
 ]

@@ -31,7 +31,5 @@ public class Ignition extends AbstractSpheresCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
         this.addToBot(new ChannelAction(new Blaze()));
-        this.addToBot(new ChannelAction(new Snow()));
-        this.addToBot(new ChannelAction(new Hope()));
     }
 }
