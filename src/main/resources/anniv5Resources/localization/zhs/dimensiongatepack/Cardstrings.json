@@ -34,7 +34,7 @@
   },
   "${ModID}:Sustenance": {
     "NAME": "养料",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机给予 !M! 层 中毒 。 NL 长驻 !stslib:persist! 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机给予 !M! 层 中毒 。 NL stslib:长驻 !stslib:persist! 。"
   },
   "${ModID}:TheEncyclopedia": {
     "NAME": "百科全书",

@@ -24,7 +24,7 @@ public class StormStrike extends AbstractWarriorCard {
     public StormStrike(){
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         tags.add(CardTags.STRIKE);
-        baseDamage = 6;
+        baseDamage = 7;
         DamageModifierManager.addModifier(this, new FeralDamage());
         magicNumber = baseMagicNumber = 1;
     }

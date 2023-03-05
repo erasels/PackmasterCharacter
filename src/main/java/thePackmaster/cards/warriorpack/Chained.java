@@ -1,17 +1,12 @@
 package thePackmaster.cards.warriorpack;
 
-import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cardmodifiers.warriorpack.FrontDamage;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
-import static thePackmaster.util.Wiz.forAllMonstersLiving;
 
 public class Chained extends AbstractWarriorCard {
 

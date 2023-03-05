@@ -51,6 +51,9 @@ public class RippedPecs extends AbstractPackmasterCard {
     public void triggerOnGlowCheck() {
         if (hasSynergy()) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        } else this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
+        else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
     }
 }

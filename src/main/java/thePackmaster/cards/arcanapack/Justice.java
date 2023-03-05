@@ -15,7 +15,7 @@ public class Justice extends AbstractAstrologerCard {
 
     public Justice() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        baseBlock = 6;
+        baseBlock = 7;
 
         AnimatedCardsPatch.loadFrames(this, 11, 0.14f);
     }

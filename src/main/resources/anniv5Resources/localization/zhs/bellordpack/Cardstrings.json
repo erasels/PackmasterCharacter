@@ -28,8 +28,8 @@
   },
   "${ModID}:Cuckoo": {
     "NAME": "咕咕",
-    "DESCRIPTION": "抽到 诅咒 时，随机造成 !M! 点伤害。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 抽到 诅咒 时，随机造成 !M! 点伤害。"
+    "DESCRIPTION": "抽到 诅咒 时， NL 随机造成 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 抽到 诅咒 时， NL 随机造成 !M! 点伤害。"
   },
   "${ModID}:Dong": {
     "NAME": "咚！",

@@ -1,0 +1,51 @@
+package thePackmaster.cards.intriguepack;
+
+import basemod.cardmods.ExhaustMod;
+import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cardmodifiers.energyandechopack.EchoedEtherealMod;
+import thePackmaster.cardmodifiers.energyandechopack.GlowEchoMod;
+import thePackmaster.packs.AbstractCardPack;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static thePackmaster.SpireAnniversary5Mod.makeID;
+
+public class Favor extends AbstractIntrigueCard {
+    public final static String ID = makeID("Favor");
+
+    public Favor() {
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        this.exhaust = true;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractCardPack pack = SpireAnniversary5Mod.getRandomPackFromCurrentPool();
+
+        List<AbstractCard> validCards = pack.cards
+                .stream()
+                .filter(c -> c.rarity == AbstractCard.CardRarity.RARE)
+                .filter(c -> !c.hasTag(AbstractCard.CardTags.HEALING))
+                .collect(Collectors.toList());
+
+        if (validCards.size() > 0) {
+            AbstractCard cardy = validCards.get(AbstractDungeon.cardRandomRng.random(0, validCards.size() - 1)).makeCopy();
+            cardy.setCostForTurn(0);
+            CardModifierManager.addModifier(cardy, new ExhaustMod());
+            CardModifierManager.addModifier(cardy, new EchoedEtherealMod());
+            CardModifierManager.addModifier(cardy, new GlowEchoMod());
+            this.addToBot(new MakeTempCardInHandAction(cardy, true));
+        }
+    }
+
+
+    public void upp() {
+        this.exhaust = false;
+    }
+}

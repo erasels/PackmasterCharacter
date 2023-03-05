@@ -31,8 +31,8 @@
   },
   "${ModID}:Improvise": {
     "NAME": "Improvise",
-    "DESCRIPTION": "Gain !B! Block. If you are holding Innate cards, discard them and, your Attacks deal double damage next turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. If you are holding Innate cards, discard them and, your Attacks deal double damage next turn."
+    "DESCRIPTION": "Gain !B! Block. If you are holding Innate cards, discard them and your Attacks deal double damage next turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. If you are holding Innate cards, discard them and your Attacks deal double damage next turn."
   },
   "${ModID}:Debut": {
     "NAME": "Debut",
