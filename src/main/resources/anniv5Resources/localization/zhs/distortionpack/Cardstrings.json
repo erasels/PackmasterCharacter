@@ -37,11 +37,11 @@
   },
   "${ModID}:Static": {
     "NAME": "频噪声",
-    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 给予未被格挡伤害 层 ${ModID}:扭曲 。"
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 NL 给予未被格挡伤害 层 ${ModID}:扭曲 。"
   },
   "${ModID}:CursedCircle": {
     "NAME": "诅咒之圈",
-    "DESCRIPTION": "所有单位本回合失去你当前手牌数量点 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "所有单位本回合失去你当前手牌数量点 力量 。"
+    "DESCRIPTION": "所有单位临时失去你当前手牌数量点 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "所有单位临时失去你当前手牌数量点 力量 。"
   }
 }

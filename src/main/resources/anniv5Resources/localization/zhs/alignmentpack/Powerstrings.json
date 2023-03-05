@@ -16,7 +16,7 @@
     ]
   },
   "${ModID}:TrinePower": {
-    "NAME": "三位",
+    "NAME": "三分相",
     "DESCRIPTIONS": [
       "本回合下张牌打出 #b2 次。",
       "本回合下 #b",

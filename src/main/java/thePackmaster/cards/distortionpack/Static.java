@@ -1,9 +1,9 @@
 package thePackmaster.cards.distortionpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.distortionpack.StaticAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -26,4 +26,5 @@ public class Static extends AbstractDistortionCard {
     public void upp() {
         upgradeMagicNumber(1);
     }
+
 }

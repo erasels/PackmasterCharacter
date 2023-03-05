@@ -37,7 +37,7 @@
   },
   "${ModID}:Witchcraft": {
     "NAME": "女巫熬制品",
-    "DESCRIPTION": "窃取目标 !M! 点生命。 If 若 斩杀 ，获得一瓶提供8层 临时生命 的药水。 NL 消耗 。"
+    "DESCRIPTION": "窃取目标 !M! 点生命。 NL 若 斩杀 ，获得一瓶提供8层 临时生命 的药水。 NL 消耗 。"
   },
   "${ModID}:ThieveryMastery": {
     "NAME": "高超窃技",

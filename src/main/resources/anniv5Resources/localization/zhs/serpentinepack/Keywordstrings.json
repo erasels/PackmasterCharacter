@@ -12,6 +12,6 @@
   {
     "PROPER_NAME": "浸染",
     "NAMES": ["tainted","浸染"],
-    "DESCRIPTION": "给予被 #y浸染 的单位 #r负面效果 时，给予层数提高至 #y浸染 层数乘 #b2 倍。"
+    "DESCRIPTION": "给予被 #y浸染 的单位 #r负面效果 时，给予层数提高至 #y浸染 层数加 #b1 倍。"
   }
 ]
