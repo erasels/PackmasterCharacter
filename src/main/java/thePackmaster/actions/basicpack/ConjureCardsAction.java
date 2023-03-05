@@ -38,7 +38,7 @@ public class ConjureCardsAction extends AbstractGameAction {
             effect += 2;
             this.p.getRelic(ChemicalX.ID).flash();
         }
-        if(effect>0) {
+        if(effect>1) {
             CardModifierManager.addModifier(card, new DuplicateModifier(effect));
         }
         addToBot(new MakeTempCardInHandAction(card));
