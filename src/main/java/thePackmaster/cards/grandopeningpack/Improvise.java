@@ -38,6 +38,21 @@ public class Improvise extends AbstractGrandOpeningCard {
     }
 
     @Override
+    public void triggerOnGlowCheck() {
+        boolean holdingInnate = false;
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c.isInnate && c != this) {
+                holdingInnate = true;
+                break;
+            }
+        }
+        if (holdingInnate) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
+    }
+
+    @Override
     public void upp() {
         this.isInnate = true;
     }
