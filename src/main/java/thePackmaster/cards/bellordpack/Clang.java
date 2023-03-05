@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardColor.CURSE;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
