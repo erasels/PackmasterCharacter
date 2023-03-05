@@ -15,9 +15,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.monsterhunterpack.Focus;
 import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.util.TexLoader;
 
@@ -65,6 +67,17 @@ public class FullMoon extends CustomOrb implements PackmasterOrb {
     @Override
     public AbstractOrb makeCopy() {
         return new CrescentMoon();
+    }
+
+    //TODO: Make focus work, this doesn't
+    private int lastFoc = 0;
+    public void applyFocus() {
+        AbstractPower power = AbstractDungeon.player.getPower(Focus.ID);
+        int pA = power !=null ? power.amount : 0;
+        if(pA != lastFoc) {
+            baseEvokeAmount = evokeAmount = evokeAmount + pA - lastFoc;
+            lastFoc = pA;
+        }
     }
 
     public void passiveEffect(){

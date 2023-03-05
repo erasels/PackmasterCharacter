@@ -1,15 +1,13 @@
 package thePackmaster.cards.basicspack;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
-import thePackmaster.cardmodifiers.madsciencepack.CheapenModifier;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.Rummage;
+import thePackmaster.cardmodifiers.basicspack.MagicModifier;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -21,21 +19,21 @@ public class LoseIt extends AbstractPackmasterCard {
         this.exhaust = true;
         this.cardsToPreview = new Rummage();
         this.baseMagicNumber = this.magicNumber = 1;
-        this.cardsToPreview.modifyCostForCombat(-this.magicNumber);
+        CardModifierManager.addModifier(cardsToPreview, new MagicModifier(this.magicNumber, true));
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToTop(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy()));
         for(AbstractCard c : p.hand.group)
-            if (c.cardID.equals(Rummage.ID) && c.cost > this.magicNumber)
-                c.modifyCostForCombat(-this.magicNumber);
+            if (c.cardID.equals(Rummage.ID))
+                CardModifierManager.addModifier(c, new MagicModifier(this.magicNumber, true));
         for(AbstractCard c : p.drawPile.group)
-            if (c.cardID.equals(Rummage.ID) && c.cost > this.magicNumber)
-                c.modifyCostForCombat(-this.magicNumber);
+            if (c.cardID.equals(Rummage.ID))
+                CardModifierManager.addModifier(c, new MagicModifier(this.magicNumber, true));
         for(AbstractCard c : p.discardPile.group)
-            if (c.cardID.equals(Rummage.ID) && c.cost > this.magicNumber)
-                c.modifyCostForCombat(-this.magicNumber);
+            if (c.cardID.equals(Rummage.ID))
+                CardModifierManager.addModifier(c, new MagicModifier(this.magicNumber, true));
+        addToTop(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy()));
     }
 
     public void upp(){

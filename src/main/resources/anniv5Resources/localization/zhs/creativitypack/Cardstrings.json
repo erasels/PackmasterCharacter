@@ -9,7 +9,7 @@
   },
   "${ModID}:PaintBrush": {
     "NAME": "画刷",
-    "DESCRIPTION": "{@@}指定类型与耗能， NL 发现一张牌 {!Upgrades!|>0=+}。"
+    "DESCRIPTION": "{@@}指定类型与耗能， NL 发现一张牌。 NL 消耗{!Upgrades!|>0=性 !stslib:ex!} 。"
   },
   "${ModID}:Firewall": {
     "NAME": "防火墙",
@@ -41,13 +41,13 @@
   },
   "${ModID}:BrushModalTypeChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "选择发现的类型。"
+    "DESCRIPTION": "选择该类型。"
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "选择发现的耗能。",
+    "DESCRIPTION": "选择该耗能。",
     "EXTENDED_DESCRIPTION" : [
-      "Select this or higher card cost for Discovery."
+      "选择3或3以上耗能。"
     ],
     "COMMENTS": [
       "This array is not used in the game",

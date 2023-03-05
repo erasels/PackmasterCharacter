@@ -1,7 +1,7 @@
 {
   "${ModID}:ArsenalGear": {
     "NAME": "武库零件",
-    "DESCRIPTION": "下 !M! 个回合开始时，随机将一张 *罕见 或 *稀有 牌加入手牌，该回合其耗能首次为0。"
+    "DESCRIPTION": "下 !M! 个回合开始时，随机将一张 *罕见 或 *稀有 牌加入手牌，该回合其首次耗能为0。"
   },
   "${ModID}:ConjureBarrage": {
     "NAME": "咒唤箭幕",

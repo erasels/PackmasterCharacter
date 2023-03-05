@@ -2,7 +2,7 @@
   "${ModID}:FrontloadedBash": {
     "NAME": "即时重击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆每有 !M! 张牌， NL 本牌伤害增加1点。",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile."
+    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL 抽牌堆每有 !M! 张牌， NL 本牌伤害增加1点。"
   },
   "${ModID}:Preparation": {
     "NAME": "做准备",

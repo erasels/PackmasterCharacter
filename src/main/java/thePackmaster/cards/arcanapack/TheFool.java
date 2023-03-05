@@ -20,7 +20,7 @@ public class TheFool extends AbstractAstrologerCard {
 
         AnimatedCardsPatch.loadFrames(this, 28, 0.07f);
 
-        this.damage = this.baseDamage = 1;
+        this.damage = this.baseDamage = 3;
         this.magicNumber = this.baseMagicNumber = 3;
 
         isInnate = true;
@@ -33,6 +33,7 @@ public class TheFool extends AbstractAstrologerCard {
     }
 
     public void upp() {
+        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

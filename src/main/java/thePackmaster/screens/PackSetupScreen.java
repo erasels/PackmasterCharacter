@@ -1,5 +1,6 @@
 package thePackmaster.screens;
 
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomScreen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -462,7 +463,11 @@ public class PackSetupScreen extends CustomScreen {
             tooltips.add(new PowerTip(pack.creditsHeader, pack.credits));
         }
         if (!tooltips.isEmpty()) {
-            TipHelper.queuePowerTips(pack.previewPackCard.hb.x + pack.previewPackCard.hb.width, pack.previewPackCard.hb.y + pack.previewPackCard.hb.height, tooltips);
+            float x = pack.previewPackCard.hb.x + pack.previewPackCard.hb.width;
+            if(x + (float)ReflectionHacks.getPrivateStatic(TipHelper.class, "BOX_W") > Settings.WIDTH) {
+                x = pack.previewPackCard.hb.x - pack.previewPackCard.hb.width;
+            }
+            TipHelper.queuePowerTips(x, pack.previewPackCard.hb.y + pack.previewPackCard.hb.height, tooltips);
         }
     }
 

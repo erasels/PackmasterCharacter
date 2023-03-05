@@ -41,8 +41,8 @@
   },
   "${ModID}:BattlePrep": {
     "NAME": "作战准备",
-    "DESCRIPTION": "选择一张手牌，本局游戏其附带 固有 。 NL 将本牌从牌组移除。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 选择一张手牌，本局游戏其附带 固有 。 NL 将本牌从牌组移除。",
+    "DESCRIPTION": "选择一张手牌， NL 本局游戏其附带 固有 。 NL 将本牌从牌组移除。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 选择一张手牌， NL 本局游戏其附带 固有 。 NL 将本牌从牌组移除。",
     "EXTENDED_DESCRIPTION": [
       "将一张牌本局游戏附加固有。"
     ]

@@ -27,6 +27,6 @@ public class TheHierophant extends AbstractAstrologerCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(4);
     }
 }
