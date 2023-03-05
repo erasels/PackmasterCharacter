@@ -42,7 +42,6 @@ public class PlannedDefense extends AbstractGrandOpeningCard {
     @Override
     public void triggerOnGlowCheck() {
         boolean innatePlayed = false;
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         for(int c = 0; c<AbstractDungeon.actionManager.cardsPlayedThisTurn.size()-1; c++) {
             if(AbstractDungeon.actionManager.cardsPlayedThisTurn.get(c).isInnate) {
                 innatePlayed = true;
@@ -51,7 +50,7 @@ public class PlannedDefense extends AbstractGrandOpeningCard {
         }
         if (innatePlayed) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        }
+        } else this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     @Override

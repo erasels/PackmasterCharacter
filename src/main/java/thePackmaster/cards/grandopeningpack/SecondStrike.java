@@ -33,10 +33,9 @@ public class SecondStrike extends AbstractGrandOpeningCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         if (GameActionManager.turn > 1) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        }
+        } else this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     @Override
