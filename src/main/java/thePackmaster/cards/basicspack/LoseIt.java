@@ -19,7 +19,7 @@ public class LoseIt extends AbstractPackmasterCard {
         this.exhaust = true;
         this.cardsToPreview = new Rummage();
         this.baseMagicNumber = this.magicNumber = 1;
-        CardModifierManager.addModifier(this, new MagicModifier(this.magicNumber, true));
+        CardModifierManager.addModifier(cardsToPreview, new MagicModifier(this.magicNumber, true));
     }
 
     @Override
