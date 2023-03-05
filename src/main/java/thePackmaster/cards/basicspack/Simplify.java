@@ -18,8 +18,7 @@ public class Simplify extends AbstractPackmasterCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawFilteredCardsAndUpgradeAction(magicNumber, (c) -> c.rarity == CardRarity.BASIC, true, 1));
-        addToBot(new GainEnergyAction(secondMagic));
+        addToBot(new DrawFilteredCardsAndUpgradeAction(1, (c) -> c.rarity == CardRarity.BASIC, true, magicNumber));
     }
 
     @Override
