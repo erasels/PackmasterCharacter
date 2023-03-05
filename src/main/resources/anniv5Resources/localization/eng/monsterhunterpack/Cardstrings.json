@@ -112,7 +112,7 @@
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "Awakened Dagger",
-    "DESCRIPTION": "Deal !D! damage. If Fatal, Heal to full HP. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. If Fatal, heal to full HP. NL Exhaust."
   },
   "${ModID}:HuntingContract": {
     "NAME": "Hunting Contract",

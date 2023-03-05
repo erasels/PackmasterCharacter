@@ -9,7 +9,7 @@
   },
   "${ModID}:EscapeClause": {
     "NAME": "Escape Clause",
-    "DESCRIPTION": "Gain !B! Block. NL If any enemy has Weak or Vulnerable, put a card from your discard pile into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL If any enemy has Weak or Vulnerable, play the top card of your draw pile."
   },
   "${ModID}:Banana": {
     "NAME": "Banana",
@@ -17,7 +17,10 @@
   },
   "${ModID}:Joust": {
     "NAME": "Joust",
-    "DESCRIPTION": "Can only target Weak foes. NL Deal !D! damage. NL Apply !M! Weak."
+    "DESCRIPTION": "Can only target Weak foes. NL Deal !D! damage. NL Apply !M! Weak.",
+    "EXTENDED_DESCRIPTION": [
+      "That foe is not Weak!"
+    ]
   },
   "${ModID}:Conglaturation": {
     "NAME": "Conglaturation!",
@@ -33,11 +36,11 @@
   },
   "${ModID}:TheDonut": {
     "NAME": "The Donut",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you're having fun, play a random Power!"
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you're having fun, play a random Power!",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you're having fun, play a random Upgraded Power!"
   },
   "${ModID}:AchievementHunter": {
     "NAME": "Achievement Hunter",
-    "DESCRIPTION": "Whenever you play a glowing card, gain 1 Strength. NL After 5 triggers, gain 2 Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a glowing card, gain 1 Strength. NL After 5 triggers, gain 2 Dexterity."
+    "DESCRIPTION": "Whenever you play a glowing card, gain 1 Strength. NL After 5 triggers, gain 2 Dexterity."
   }
 }

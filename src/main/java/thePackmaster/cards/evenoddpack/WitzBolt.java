@@ -14,7 +14,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class WitzBolt extends AbstractEvenOddCard{
+public class WitzBolt extends AbstractEvenOddCard {
     public final static String ID = makeID(WitzBolt.class.getSimpleName());
     private static final int DAMAGE = 8;
     private static final int UDAMAGE = 3;
@@ -23,7 +23,7 @@ public class WitzBolt extends AbstractEvenOddCard{
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    
+
     public WitzBolt() {
         super(ID, COST, TYPE, RARITY, TARGET);
         rawDescription = cardStrings.DESCRIPTION;
@@ -34,12 +34,12 @@ public class WitzBolt extends AbstractEvenOddCard{
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
     }
-    
+
     @Override
     public void upp() {
         upgradeDamage(UDAMAGE);
     }
-    
+
     @Override
     public void onMoveToDiscard() {
         rawDescription = cardStrings.DESCRIPTION;
@@ -48,25 +48,22 @@ public class WitzBolt extends AbstractEvenOddCard{
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
         initializeDescription();
     }
-    
+
     @Override
     protected String createEvenOddText() {
-        if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0)
-        {
-            return   cardStrings.DESCRIPTION
-                + cardStrings.EXTENDED_DESCRIPTION[0]
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0) {
+            return cardStrings.DESCRIPTION
+                    + cardStrings.EXTENDED_DESCRIPTION[0]
                     + cardStrings.EXTENDED_DESCRIPTION[1]
-                + cardStrings.EXTENDED_DESCRIPTION[2];
-        }
-        else
-        {
+                    + cardStrings.EXTENDED_DESCRIPTION[2];
+        } else {
             return cardStrings.DESCRIPTION
                     + cardStrings.EXTENDED_DESCRIPTION[0]
                     + AbstractEvenOddCard.makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[1])
                     + AbstractEvenOddCard.makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2]);
         }
     }
-    
+
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
@@ -74,9 +71,10 @@ public class WitzBolt extends AbstractEvenOddCard{
             @Override
             public void update() {
                 if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1) {
-                    for(int i = 0; i <5; i++) {
+                    for (int i = 0; i < 5; i++) {
                         addToTop(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY), 0.05F));
-                    } Wiz.applyToEnemyTop(m, new VulnerablePower(m, magicNumber, false));
+                    }
+                    Wiz.applyToEnemyTop(m, new VulnerablePower(m, magicNumber, false));
                     Wiz.applyToEnemyTop(m, new WeakPower(m, magicNumber, false));
                     AbstractDungeon.actionManager.addToTop(new SFXAction("VO_CHAMP_2A", 0.5f, true));
                 }
@@ -84,5 +82,10 @@ public class WitzBolt extends AbstractEvenOddCard{
                 this.isDone = true;
             }
         });
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 }

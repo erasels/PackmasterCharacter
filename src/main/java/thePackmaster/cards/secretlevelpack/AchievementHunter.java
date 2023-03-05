@@ -13,7 +13,7 @@ public class AchievementHunter extends AbstractPackmasterCard {
     // intellij stuff power, self, rare, , , , , , 
 
     public AchievementHunter() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,6 +21,6 @@ public class AchievementHunter extends AbstractPackmasterCard {
     }
 
     public void upp() {
-        isInnate = true;
+        upgradeBaseCost(1);
     }
 }

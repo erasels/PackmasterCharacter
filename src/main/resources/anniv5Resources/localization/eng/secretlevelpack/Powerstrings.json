@@ -9,9 +9,9 @@
   "${ModID}:AchievementHunterPower": {
     "NAME": "Achievement Hunter",
     "DESCRIPTIONS": [
-      "Whenever you play a glowing card, gain #b1 #yStrength. After #b",
+      "Whenever you play a glowing card, gain #b1 #yStrength. NL After #b",
       " more triggers, gain #b2 #yDexterity.",
-      "Whenever you play a glowing card, gain #b1 #yStrength. #g100% #gCompletion!"
+      "Whenever you play a glowing card, gain #b1 #yStrength. NL #g100% #gCompletion!"
     ]
   }
 }

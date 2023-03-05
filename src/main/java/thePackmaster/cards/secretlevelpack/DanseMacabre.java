@@ -1,5 +1,6 @@
 package thePackmaster.cards.secretlevelpack;
 
+import com.megacrit.cardcrawl.actions.animations.AnimateHopAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
@@ -7,6 +8,7 @@ import thePackmaster.powers.secretlevelpack.DanseMacabrePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
+import static thePackmaster.util.Wiz.atb;
 
 public class DanseMacabre extends AbstractPackmasterCard {
     public final static String ID = makeID("DanseMacabre");
@@ -18,6 +20,7 @@ public class DanseMacabre extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new AnimateHopAction(p));
         applyToSelf(new DanseMacabrePower(magicNumber));
     }
 

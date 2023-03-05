@@ -1,6 +1,6 @@
 package thePackmaster.cards.secretlevelpack;
 
-import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
+import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -10,7 +10,6 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
 
 public class EscapeClause extends AbstractPackmasterCard {
     public final static String ID = makeID("EscapeClause");
@@ -18,13 +17,13 @@ public class EscapeClause extends AbstractPackmasterCard {
 
     public EscapeClause() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 8;
+        baseBlock = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         if (Wiz.getEnemies().stream().anyMatch(q -> q.hasPower(WeakPower.POWER_ID) || q.hasPower(VulnerablePower.POWER_ID))) {
-            atb(new BetterDiscardPileToHandAction(1));
+            this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
         }
     }
 

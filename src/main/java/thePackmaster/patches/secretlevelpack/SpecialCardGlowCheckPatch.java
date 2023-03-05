@@ -21,12 +21,17 @@ public class SpecialCardGlowCheckPatch {
         if (blueBorderGlowColor == null) {
             blueBorderGlowColor = ReflectionHacks.getPrivateStatic(AbstractCard.class, "BLUE_BORDER_GLOW_COLOR");
         }
-        if (abstractCard.glowColor != blueBorderGlowColor) {
+        if (!equalsIgnoreA(abstractCard.glowColor, blueBorderGlowColor)) {
             playedGlowingCardThisTurn = true;
-            AbstractPower p = AbstractDungeon.player.getPower(AchievementHunterPower.POWER_ID);
-            if (p != null) {
-                p.onSpecificTrigger();
+            for (AbstractPower q : AbstractDungeon.player.powers) {
+                if (q.ID.equals(AchievementHunterPower.POWER_ID)) {
+                    q.onSpecificTrigger();
+                }
             }
         }
+    }
+
+    private static boolean equalsIgnoreA(Color test, Color other) {
+        return test.r == other.r && test.b == other.b && test.g == other.g;
     }
 }

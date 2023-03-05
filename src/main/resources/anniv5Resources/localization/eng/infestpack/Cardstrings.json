@@ -5,7 +5,7 @@
   },
   "${ModID}:SwarmSword": {
     "NAME": "Swarm Strike",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Draw 1 card for each [bugIcon] ."
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Draw 1 card NL for each [bugIcon] ."
   },
   "${ModID}:GrassHop": {
     "NAME": "Locusts",
@@ -21,11 +21,11 @@
   },
   "${ModID}:ScarabShield": {
     "NAME": "Scarab Shield",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL Gain 1 Artifact for each [bugIcon] ."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL Gain 1 Artifact NL for each [bugIcon] ."
   },
   "${ModID}:Entomology": {
     "NAME": "Entomology",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL If this has any [bugIcon] , remove it to draw 1 card and gain [E] ."
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL If this has any [bugIcon] , remove one to draw 1 card and gain [E] ."
   },
   "${ModID}:Compoundeyes": {
     "NAME": "Compoundeyes",
