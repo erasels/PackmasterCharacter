@@ -25,10 +25,8 @@ public class TaintedEnemy extends AbstractPackmasterPower implements OnReceivePo
     public void updateDescription() {
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0];
-        } else if (Settings.language == Settings.GameLanguage.ZHS) {
-            this.description = DESCRIPTIONS[1] + this.amount*2 + DESCRIPTIONS[2];
         } else {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[1] + (this.amount + 1) + DESCRIPTIONS[2];
         }
     }
 
@@ -36,7 +34,7 @@ public class TaintedEnemy extends AbstractPackmasterPower implements OnReceivePo
     public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
         if (abstractPower.type == PowerType.DEBUFF && abstractCreature1 == AbstractDungeon.player && !abstractCreature.hasPower(ArtifactPower.POWER_ID)) {
             flashWithoutSound();
-            abstractPower.amount *= (2 * this.amount);
+            abstractPower.amount *= (this.amount + 1);
         }
             return true;
     }
@@ -45,7 +43,7 @@ public class TaintedEnemy extends AbstractPackmasterPower implements OnReceivePo
     public int onReceivePowerStacks(AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
         if (power.type == PowerType.DEBUFF && source == AbstractDungeon.player && !target.hasPower(ArtifactPower.POWER_ID)) {
             this.flashWithoutSound();
-            return stackAmount * (2 * this.amount);
+            return stackAmount * (this.amount + 1);
         }
         return stackAmount;
     }

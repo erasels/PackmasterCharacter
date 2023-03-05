@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.actions.arcanapack.AllEnemyLoseHPAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -31,10 +30,20 @@ public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
 
     @Override
     public void onObtainCard() {
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), Settings.WIDTH / 2, Settings.HEIGHT / 2));
+        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
     }
 
     public void upp() {
         upgradeMagicNumber(4);
+    }
+
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if (Settings.language == Settings.GameLanguage.ZHS ) {
+            if(this.description.size()!=0){
+                this.description.remove(1);
+            }
+        }
     }
 }

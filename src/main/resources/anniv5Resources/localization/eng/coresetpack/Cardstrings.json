@@ -1,7 +1,7 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "Backpack Smack",
-    "DESCRIPTION": "Deal !D! damage X times. NL ${ModID}:Synergy: Gain [E] ."
+    "DESCRIPTION": "Deal !D! damage X times. NL ${ModID}:Synergy: Apply X Weak and Vulnerable."
   },
   "${ModID}:BoosterTutor": {
     "NAME": "Booster Tutor",

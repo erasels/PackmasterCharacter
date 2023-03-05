@@ -22,7 +22,7 @@ public class Rapier extends AbstractWarriorCard {
 
     public Rapier(){
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 5;
         DamageModifierManager.addModifier(this, new FrontDamage());
         DamageModifierManager.addModifier(this, new FastDamage());
     }
@@ -36,6 +36,6 @@ public class Rapier extends AbstractWarriorCard {
 
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }

@@ -5,7 +5,7 @@
   },
   "${ModID}:FlameBlast": {
     "NAME": "火焰冲击",
-    "DESCRIPTION": "给予 !M! 层 ${ModID}:燃烧 。 NL 若目标已被 易伤 ，再给予一次。 NL 给予 !${ModID}:m2! 层 易伤。"
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:燃烧 。 NL 若目标已被 易伤 ， NL 再给予一次。 NL 给予 !${ModID}:m2! 层 易伤 。"
   },
   "${ModID}:IceWall": {
     "NAME": "冰墙",

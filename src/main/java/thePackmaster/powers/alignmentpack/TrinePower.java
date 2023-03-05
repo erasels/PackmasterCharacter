@@ -70,7 +70,7 @@ public class TrinePower extends AbstractPackmasterPower {
         }
         else
         {
-            this.description = DESCRIPTIONS[1] + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
     }
 }
