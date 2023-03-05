@@ -9,7 +9,7 @@
   },
   "${ModID}:Rummage": {
     "NAME": "Rummage",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw a card and reduce its cost by !M! this turn."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw {!M!|@=a card and reduce its|>1=!${ModID}:m2! cards and reduce their} cost by !M! this turn."
   },
   "${ModID}:Cardistry": {
     "NAME": "Cardistry",
