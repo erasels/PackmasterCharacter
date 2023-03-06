@@ -51,7 +51,7 @@ public class FinalFormPower extends AbstractPackmasterPower implements NonStacka
     @Override
     public void updateDescription() {
         if (card != null)
-            description = DESCRIPTIONS[0] + FontHelper.colorString(card.name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + amount + (amount == 1 ? DESCRIPTIONS[1] : DESCRIPTIONS[2]) + DESCRIPTIONS[3] + FontHelper.colorString(card.name, "y") + DESCRIPTIONS[4];
         else
             description = "";
     }
