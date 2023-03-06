@@ -16,31 +16,15 @@ public class Plunge extends AbstractFrostCard {
 
     public Plunge() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractOrb o = new Frost();
-        atb(new ChannelAction(o));
-
-        atb(new WaitAction(0.1F));
-        atb(new WaitAction(0.1F));
-
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                this.isDone = true;
-                if (p.orbs.contains(o)){
-                    o.onEvoke();
-                }
-            }
-        });
-        atb(new WaitAction(0.1F));
-
-        if (upgraded)
-            atb(new ChannelAction(new Frost()));
+        blck();
+        atb(new ChannelAction(new Frost()));
     }
 
     public void upp() {
-
+        upgradeBlock(3);
     }
 }
