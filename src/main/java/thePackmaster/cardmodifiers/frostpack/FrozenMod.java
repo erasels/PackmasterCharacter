@@ -6,6 +6,7 @@ import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -25,7 +26,7 @@ public class FrozenMod extends AbstractCardModifier {
     public static String ID = SpireAnniversary5Mod.makeID("FrozenMod");
 
     private int originalCost;
-    private boolean hadRetain;
+    private boolean hadRetain = false;
     private static final Texture tex = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/frozenOverlay.png");
 
     @Override
@@ -39,6 +40,24 @@ public class FrozenMod extends AbstractCardModifier {
         originalCost = card.cost;
         if (card.selfRetain) hadRetain = true;
         card.selfRetain = true;
+        card.tags.add(SpireAnniversary5Mod.FROZEN);
+    }
+
+    @Override
+    public void onRemove(AbstractCard card) {
+        card.tags.remove(SpireAnniversary5Mod.FROZEN);
+
+        //Adds another modifier which hands over the original cost of the card when Frozen, so the card can revert back to its original cost when played.
+        CardModifierManager.addModifier(card, new RevertCostWhenPlayedMod(originalCost));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                this.isDone = true;
+                if (!hadRetain) {
+                    card.selfRetain = false;
+                }
+            }
+        });
     }
 
     @Override
@@ -51,18 +70,22 @@ public class FrozenMod extends AbstractCardModifier {
 
     @Override
     public void atEndOfTurn(AbstractCard card, CardGroup group) {
-        card.modifyCostForCombat(-1);
-        if (card.cost <= 0){
-            CardModifierManager.removeSpecificModifier(card, this, true);
 
-            //Adds another modifier which hands over the original cost of the card when Frozen, so the card can revert back to its original cost when played.
-            CardModifierManager.addModifier(card, new RevertCostWhenPlayedMod(originalCost));
 
-            if (!hadRetain) {
-                card.selfRetain = false;
-                card.retain = true;  //Retains the card for one turn as this is called just before the end of turn discarding happens
-            }
-        }
+            //Used as an action here in case this is triggered immediately at end of turn from Cold Storage.
+            //If Cold Storage picks a 0-cost, it needs to freeze the card, then unfreeze immediately, which it can't unless this is an action.
+            Wiz.atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    this.isDone = true;
+                    card.modifyCostForCombat(-1);
+                    if (card.cost <= 0){
+                    CardModifierManager.removeSpecificModifier(card, FrozenMod.this, true);
+
+                    }
+                }
+            });
+
     }
 
     public AbstractCardModifier makeCopy() {

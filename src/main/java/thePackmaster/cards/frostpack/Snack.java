@@ -15,7 +15,7 @@ public class Snack extends AbstractFrostCard {
     public final static String ID = makeID("Snack");
 
     public Snack() {
-        super(ID, 3, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 4, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 8;
     }
 

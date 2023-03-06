@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.frostpack.FrozenMod;
 import thePackmaster.util.Wiz;
@@ -17,7 +18,7 @@ public class Prime extends AbstractFrostCard {
     public final static String ID = makeID("Prime");
 
     public Prime() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
     }
 
@@ -33,7 +34,7 @@ public class Prime extends AbstractFrostCard {
                     if (c.type==CardType.STATUS || c.type==CardType.CURSE){
                         Wiz.atb(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
                     } else {
-                        Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c));
+                        if (!c.hasTag(SpireAnniversary5Mod.FROZEN)) Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c));
                     }
 
                 }
