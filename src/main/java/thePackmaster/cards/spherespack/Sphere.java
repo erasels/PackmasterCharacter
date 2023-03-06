@@ -59,8 +59,6 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
         switch (orb) {
             case Lightning:
                 return new Lightning();
-            case Frost:
-                return new Frost();
             case Dark:
                 return new Dark();
             case Ghostflame:
@@ -79,14 +77,12 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
             case 0:
                 return SphereOrb.Lightning;
             case 1:
-                return SphereOrb.Frost;
-            case 2:
                 return SphereOrb.Dark;
-            case 3:
+            case 2:
                 return SphereOrb.Ghostflame;
-            case 4:
+            case 3:
                 return SphereOrb.Blaze;
-            case 5:
+            case 4:
                 return SphereOrb.Snow;
             default:
                 return null;
@@ -97,16 +93,14 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
         switch (orb) {
             case Lightning:
                 return 0;
-            case Frost:
-                return 1;
             case Dark:
-                return 2;
+                return 1;
             case Ghostflame:
-                return 3;
+                return 2;
             case Blaze:
-                return 4;
+                return 3;
             case Snow:
-                return 5;
+                return 4;
             default:
                 return null;
         }
@@ -125,7 +119,6 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
     public enum SphereOrb {
         Lightning,
         Dark,
-        Frost,
         Ghostflame,
         Blaze,
         Snow
