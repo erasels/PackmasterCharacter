@@ -11,6 +11,7 @@ BellordPack	2	3	2	4	1
 BitingColdPack	3	2	2	3	2
 BlacksmithsPack	3	3	4	4	4
 BoardGamePack	4	3	2	4	2
+BulwarkPack	2	5	1	4	4
 ClawPack	5	2	1	2	5
 ConjurerPack	3	4	2	2	3
 ContentCreatorPack	2	2	4	2	4
@@ -37,6 +38,7 @@ HermitPack	4	3	3	3	2
 HighEnergyPack	2	3	3	2	3
 InfestPack	3	3	3	2	2
 IntoTheBreachPack	3	3	3	2	1
+IntriguePack	3	3	4	2	1
 IroncladPack	4	2	3	4	2
 LegacyPack	3	2	2	3	2
 MadSciencePack	3	3	5	2	3

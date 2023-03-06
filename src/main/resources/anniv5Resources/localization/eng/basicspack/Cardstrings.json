@@ -10,13 +10,13 @@
   },
   "${ModID}:Simplify": {
     "NAME": "Simplify",
-    "DESCRIPTION": "Draw !M! ${ModID}:Basic card and Upgrade it. This can Upgrade it any number of times.",
-    "UPGRADE_DESCRIPTION": "Draw !M! ${ModID}:Basic cards and Upgrade them. This can Upgrade them any number of times."
+    "DESCRIPTION": "Draw a ${ModID}:Basic card and Upgrade it. This can Upgrade it any number of times.",
+    "UPGRADE_DESCRIPTION": "Draw a ${ModID}:Basic card and Upgrade it !M! times. This can Upgrade it any number of times."
   },
   "${ModID}:LoseIt": {
     "NAME": "Lose It",
-    "DESCRIPTION": "Add a *Rummage to your hand. Set the cost of your *Rummages to !M! this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Rummage+ to your hand. Set the cost of your *Rummages to !M! this combat. NL Exhaust."
+    "DESCRIPTION": "Add a *Rummage to your hand. Increase the number of cards drawn by your *Rummages by !M! this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Rummage+ to your hand. Increase the number of cards drawn by your *Rummages by !M! this combat. NL Exhaust."
   },
   "${ModID}:SimplifiedStrike": {
     "NAME": "Simplified Strike",
@@ -46,8 +46,8 @@
   },
   "${ModID}:ConjureDefends": {
     "NAME": "Conjure Defends",
-    "DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Play this X additional times\". Refund 1. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Play this X+1 additional times\". Refund 1. Exhaust."
+    "DESCRIPTION": "Add a *Defend to your hand and ${ModID}:Modify it: \"Play this X times\". Refund 1. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Play this X times\". Refund 1. Exhaust."
 
   },
   "${ModID}:SimpleTrick": {

@@ -1,8 +1,8 @@
 {
   "${ModID}:AutoBattlerPower": {
-    "NAME": "Auto Battler",
+    "NAME": "尖塔自走棋",
     "DESCRIPTIONS": [
-      "You automatically play 牌 from left to right at the frontmost foe。"
+      "你的手牌从左至右被自动打出，目标为敌人时打向最近的敌人，无牌可打出时自动结束回合。"
     ]
   },
   "${ModID}:FinalFormPower": {

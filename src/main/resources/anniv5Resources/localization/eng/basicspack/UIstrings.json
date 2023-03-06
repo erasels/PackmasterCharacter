@@ -1,10 +1,9 @@
 {
   "${ModID}:DuplicateModifier": {
     "TEXT": [
-      " NL Play this an additional time.",
       " NL Play this ",
-      " additional times.",
-      " NL Play this X additional times."
+      " times.",
+      " NL Play this X times."
     ]
   },
   "${ModID}:BasicsPack": {

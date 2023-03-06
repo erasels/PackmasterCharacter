@@ -10,7 +10,7 @@
   },
   "${ModID}:GrabBag": {
     "NAME": "手提包",
-    "DESCRIPTION": "随机将 !M! 张 ${ModID}:异色 牌加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "随机获得 !M! 张 ${ModID}:异色 牌。 NL 消耗 。"
   },
   "${ModID}:ShimmeringStrike": {
     "NAME": "荧光打击",

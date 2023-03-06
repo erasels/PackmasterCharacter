@@ -634,7 +634,8 @@ public class SpireAnniversary5Mod implements
             SilentPack.class.getName(),
             DefectPack.class.getName(),
             AllForOnePack.class.getName(),
-            WatcherPack.class.getName());
+            WatcherPack.class.getName(),
+            BulwarkPack.class.getName());
 
     public void loadPackStrings(Collection<CtClass> packClasses, String langKey) {
 

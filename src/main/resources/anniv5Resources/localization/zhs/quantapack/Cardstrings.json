@@ -24,7 +24,7 @@
   },
   "${ModID}:MAXPOWER": {
     "NAME": "极限之力",
-    "DESCRIPTION": "力量 变为11点。"
+    "DESCRIPTION": "力量 升为11点。"
   },
   "${ModID}:Flow": {
     "NAME": "心流",

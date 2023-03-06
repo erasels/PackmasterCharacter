@@ -1,6 +1,5 @@
 package thePackmaster.powers.boardgamepack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -60,7 +59,7 @@ public class DicePower extends AbstractPackmasterPower {
     @Override
     public float modifyBlock(float blockAmount)
     {
-        if(blockAmount < 1)
+        if(blockAmount < 0)
             return blockAmount;
         return Math.max(blockAmount + amount, 0);
     }

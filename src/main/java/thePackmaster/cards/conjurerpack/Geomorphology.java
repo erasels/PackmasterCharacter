@@ -1,14 +1,9 @@
 package thePackmaster.cards.conjurerpack;
 
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.conjurerpack.PlayRandomCardAction;
-import thePackmaster.powers.bellordpack.CuckooPower;
 import thePackmaster.powers.conjurerpack.GeomorphologyPower;
 
-import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
 public class Geomorphology extends ConjurerCard
