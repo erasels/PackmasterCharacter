@@ -17,8 +17,7 @@
   },
   "${ModID}:Plunge": {
     "NAME": "Plunge",
-    "DESCRIPTION": "Channel a Frost and trigger its Evoke effect.",
-    "UPGRADE_DESCRIPTION": "Channel a Frost and trigger its Evoke effect. NL Channel a Frost."
+    "DESCRIPTION": "Gain !B! Block. NL Channel a Frost."
   },
   "${ModID}:Prime": {
     "NAME": "Prime",
