@@ -6,6 +6,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.spherespack.DualBlade;
 import thePackmaster.cards.spherespack.Ignition;
 import thePackmaster.cards.spherespack.Sphere;
+import thePackmaster.cards.spherespack.Winterwisp;
 
 import java.util.ArrayList;
 
@@ -27,6 +28,7 @@ public class SpheresPack extends AbstractCardPack {
         cards.add(Ignition.ID);
         cards.add(DualBlade.ID);
         cards.add(Sphere.ID);
+        cards.add(Winterwisp.ID);
         return cards;
     }
 }

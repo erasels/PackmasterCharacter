@@ -14,5 +14,9 @@
       "{0} Sphere",
       "Gain !B! Block. NL Channel a {0}."
     ]
+  },
+  "${ModID}:Winterwisp": {
+    "NAME": "Winterwisp",
+    "DESCRIPTION": "Deal !D! damage. NL If you have any empty Orb Slots, channel a ${ModID}:Snow and trigger its passive ability."
   }
 }
