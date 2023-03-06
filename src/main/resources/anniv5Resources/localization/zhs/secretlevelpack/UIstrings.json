@@ -1,0 +1,15 @@
+{
+  "${ModID}:SecretLevelPack": {
+    "TEXT": [
+      "神秘关卡",
+      "针对 *虚弱 与 *易伤 的卡包...还有一些很Vex的小惊喜。",
+      "Vex"
+    ]
+  },
+  "${ModID}:OdditiesPackHat": {
+    "TEXT": [
+      "荡—荡—荡—",
+      "水管"
+    ]
+  }
+}

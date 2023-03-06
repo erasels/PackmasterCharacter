@@ -5,8 +5,8 @@
   },
   "${ModID}:LetsPlay8Ball": {
     "NAME": "8球开桌！",
-    "DESCRIPTION": "将一张 *8号球 加入抽牌堆。",
-    "UPGRADE_DESCRIPTION": "将一张 *9号球 加入抽牌堆。"
+    "DESCRIPTION": "将 *8号球 加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "将 *9号球 加入抽牌堆。"
   },
   "${ModID}:EightBall": {
     "NAME": "8号球",
@@ -20,7 +20,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 手牌中央的一两张牌。"
   },
   "${ModID}:LetsDraft": {
-    "NAME": "构筑卡牌！",
+    "NAME": "构筑牌组！",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 选择一张手牌，将其一张复制品加入抽牌堆。",
     "EXTENDED_DESCRIPTION": [
       "复制一张牌。"

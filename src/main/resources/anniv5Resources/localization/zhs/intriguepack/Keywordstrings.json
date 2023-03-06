@@ -1,0 +1,40 @@
+[
+  {
+    "PROPER_NAME": "平凡",
+    "NAMES": [
+      "Mundane",
+      "mundane",
+      "平凡"
+    ],
+    "DESCRIPTION": "基础、普通，与特殊牌。"
+  },
+  {
+    "PROPER_NAME": "珍贵",
+    "NAMES": [
+      "Precious",
+      "precious",
+      "珍贵"
+    ],
+    "DESCRIPTION": "罕见与稀有牌。"
+  },
+  {
+    "PROPER_NAME": "升格",
+    "NAMES": [
+      "Promote",
+      "promote",
+      "Promoted",
+      "promoted",
+      "升格"
+    ],
+    "DESCRIPTION": "将基础、普通，与特殊牌稀有度升至 #b罕见 ，或 #b罕见 升至 #y稀有 。"
+  },
+  {
+    "PROPER_NAME": "降格",
+    "NAMES": [
+      "Demote",
+      "demote",
+      "降格"
+    ],
+    "DESCRIPTION": "将 #y稀有 牌稀有度降至 #b罕见 ，或 #b罕见 降至普通。"
+  }
+]
