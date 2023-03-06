@@ -8,7 +8,7 @@ import thePackmaster.powers.secretlevelpack.AchievementHunterPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class AchievementHunter extends AbstractPackmasterCard {
+public class AchievementHunter extends AbstractSecretLevelCard {
     public final static String ID = makeID("AchievementHunter");
     // intellij stuff power, self, rare, , , , , , 
 

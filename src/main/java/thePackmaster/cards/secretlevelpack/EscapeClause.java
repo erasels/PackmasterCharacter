@@ -11,7 +11,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class EscapeClause extends AbstractPackmasterCard {
+public class EscapeClause extends AbstractSecretLevelCard {
     public final static String ID = makeID("EscapeClause");
     // intellij stuff skill, self, common, , , 7, 3, , 
 

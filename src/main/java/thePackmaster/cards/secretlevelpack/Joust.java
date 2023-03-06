@@ -14,7 +14,7 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
-public class Joust extends AbstractPackmasterCard {
+public class Joust extends AbstractSecretLevelCard {
     public final static String ID = makeID("Joust");
     // intellij stuff attack, enemy, uncommon, 16, 3, , , 1, 1
 

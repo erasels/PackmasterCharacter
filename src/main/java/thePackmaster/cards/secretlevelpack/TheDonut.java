@@ -11,7 +11,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class TheDonut extends AbstractPackmasterCard {
+public class TheDonut extends AbstractSecretLevelCard {
     public final static String ID = makeID("TheDonut");
     // intellij stuff attack, all_enemy, rare, 10, 2, , , , 
 

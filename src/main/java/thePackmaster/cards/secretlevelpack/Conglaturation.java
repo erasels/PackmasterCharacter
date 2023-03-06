@@ -11,7 +11,7 @@ import thePackmaster.patches.secretlevelpack.SpecialCardGlowCheckPatch;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class Conglaturation extends AbstractPackmasterCard {
+public class Conglaturation extends AbstractSecretLevelCard {
     public final static String ID = makeID("Conglaturation");
     // intellij stuff attack, enemy, uncommon, 9, 3, , , , 
 

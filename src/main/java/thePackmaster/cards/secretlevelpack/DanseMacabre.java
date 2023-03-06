@@ -10,7 +10,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
-public class DanseMacabre extends AbstractPackmasterCard {
+public class DanseMacabre extends AbstractSecretLevelCard {
     public final static String ID = makeID("DanseMacabre");
     // intellij stuff power, self, uncommon, , , , , 6, 3
 

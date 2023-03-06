@@ -10,7 +10,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Banana extends AbstractPackmasterCard {
+public class Banana extends AbstractSecretLevelCard {
     public final static String ID = makeID("Banana");
     // intellij stuff power, self, uncommon, , , , , 3, 1
 

@@ -12,7 +12,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.makeInHand;
 
-public class MysteryBox extends AbstractPackmasterCard {
+public class MysteryBox extends AbstractSecretLevelCard {
     public final static String ID = makeID("MysteryBox");
     // intellij stuff skill, enemy, common, , , , , 2, 1
 

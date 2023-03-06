@@ -17,7 +17,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
-public class EnoughTalk extends AbstractPackmasterCard {
+public class EnoughTalk extends AbstractSecretLevelCard {
     public final static String ID = makeID("EnoughTalk");
     // intellij stuff skill, self, uncommon, , , , , 2, 1
 

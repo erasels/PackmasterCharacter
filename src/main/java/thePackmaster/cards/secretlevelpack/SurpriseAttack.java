@@ -11,7 +11,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class SurpriseAttack extends AbstractPackmasterCard {
+public class SurpriseAttack extends AbstractSecretLevelCard {
     public final static String ID = makeID("SurpriseAttack");
     // intellij stuff attack, enemy, common, 4, 1, , , 1, 1
 
