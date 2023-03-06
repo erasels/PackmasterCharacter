@@ -41,7 +41,7 @@
   "${ModID}:WindUpBomb": {
     "NAME": "Windup Bomb",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["${ModID}:Even:", " Increase this cards damage by !M!.", " NL ", "${ModID}:Odd:", " Deal !D! damage."]
+    "EXTENDED_DESCRIPTION": ["${ModID}:Even:", " Increase this card's damage by !M!.", " NL ", "${ModID}:Odd:", " Deal !D! damage."]
   },
   "${ModID}:LeftHook": {
     "NAME": "Left Hook",
