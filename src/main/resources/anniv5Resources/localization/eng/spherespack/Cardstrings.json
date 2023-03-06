@@ -28,5 +28,10 @@
     "NAME": "Consolidate",
     "DESCRIPTION": "Remove your first 2 Orbs. NL Gain 1 Focus. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Remove your first 2 Orbs. NL Gain 1 Focus."
+  },
+  "${ModID}:VoidEngine": {
+    "NAME": "Void Engine",
+    "DESCRIPTION": "Gain 1 Focus. NL Gain 1 Orb Slot. NL Shuffle a Void into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Focus. NL Gain 1 Orb Slot. NL Add a Void to your discard pile."
   }
 }
