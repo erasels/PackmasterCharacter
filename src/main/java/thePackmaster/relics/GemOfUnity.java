@@ -15,10 +15,7 @@ import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -80,10 +77,22 @@ public class GemOfUnity extends AbstractPackmasterRelic {
         if (AbstractDungeon.isPlayerInDungeon()) {
             if (packsPlayed.size() > 0) {
                 desc.append(" NL ");
+                desc.append(" NL ");
                 desc.append(DESCRIPTIONS[1]);
                 for (AbstractCardPack p : packsPlayed) {
                     desc.append(" NL ");
                     desc.append(p.name);
+                }
+            }
+            if (!this.grayscale) {
+                desc.append(" NL ");
+                desc.append(" NL ");
+                desc.append(DESCRIPTIONS[4]);
+                for (AbstractCardPack p : SpireAnniversary5Mod.currentPoolPacks) {
+                    if (packsPlayed.stream().noneMatch(pack -> pack.packID.equals(p.packID))) {
+                        desc.append(" NL ");
+                        desc.append(p.name);
+                    }
                 }
             }
         }
