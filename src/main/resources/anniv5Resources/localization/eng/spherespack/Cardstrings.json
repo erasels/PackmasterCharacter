@@ -43,5 +43,10 @@
     "NAME": "Chaos Generator",
     "DESCRIPTION": "At the start of your turn, Channel !M! random Orb.",
     "UPGRADE_DESCRIPTION": "At the start of your turn, Channel !M! random Orbs."
+  },
+  "${ModID}:FrostConversion": {
+    "NAME": "Frost Conversion",
+    "DESCRIPTION": "Ethereal. NL Evoke all your Orbs. NL Channel that many Frost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Evoke all your Orbs. NL Channel that many Frost. NL Exhaust."
   }
 }
