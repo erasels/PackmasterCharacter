@@ -1,9 +1,11 @@
 package thePackmaster.powers.frostpack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.HandSelectAction;
 import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.frostpack.FrozenMod;
@@ -26,9 +28,19 @@ public class ColdStoragePower extends AbstractPackmasterPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer && !AbstractDungeon.player.hand.isEmpty()) {
-            this.addToTop(new HandSelectAction(this.amount, (c)->true, (cards)->{
+            this.addToTop(new HandSelectAction(this.amount, card -> (!card.hasTag(SpireAnniversary5Mod.FROZEN)), (cards)->{
                 for (AbstractCard c : cards) {
-                    Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c));
+                    FrozenMod f = new FrozenMod();
+                    Wiz.att(new SimpleAddModifierAction(f, c));
+
+                    //Trigger the FrozenMod's end of turn effect instantly as we've already passed the end of turn trigger for cardmods.
+                    Wiz.att(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            this.isDone = true;
+                            f.atEndOfTurn(c, AbstractDungeon.player.hand);
+                        }
+                    });
                 }
             }, null, DESCRIPTIONS[3], true, true, true));
         }

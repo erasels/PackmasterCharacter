@@ -11,7 +11,7 @@ public class ColdStorage extends AbstractFrostCard {
     public final static String ID = makeID("ColdStorage");
 
     public ColdStorage() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
