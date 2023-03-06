@@ -144,6 +144,13 @@ public class PackSetupScreen extends CustomScreen {
             pack.previewPackCard.updateHoverLogic();
             pack.previewPackCard.drawScale = curDrawScale;
             if (pack.previewPackCard.hb.hovered) {
+                pack.previewPackCard.targetDrawScale = (mode == PackSetupMode.CONFIRMING) ? HOVER_SELECTED_SCALE * 1.1f : HOVER_SELECTED_SCALE;
+            }
+            else {
+                pack.previewPackCard.targetDrawScale = (mode == PackSetupMode.CONFIRMING) ? HOVER_SELECTED_SCALE : SELECTED_SCALE;
+            }
+
+            if (pack.previewPackCard.hb.hovered) {
                 displayTooltips(pack);
             }
             if (pack.previewPackCard.hb.justHovered) {
@@ -155,13 +162,6 @@ public class PackSetupScreen extends CustomScreen {
             }
             else {
                 pack.previewPackCard.shadow();
-            }
-
-            if (pack.previewPackCard.hb.hovered) {
-                pack.previewPackCard.targetDrawScale = (mode == PackSetupMode.CONFIRMING) ? HOVER_SELECTED_SCALE * 1.1f : HOVER_SELECTED_SCALE;
-            }
-            else {
-                pack.previewPackCard.targetDrawScale = (mode == PackSetupMode.CONFIRMING) ? HOVER_SELECTED_SCALE : SELECTED_SCALE;
             }
         }
         if (mode != PackSetupMode.CONFIRMING) {
@@ -463,11 +463,17 @@ public class PackSetupScreen extends CustomScreen {
             tooltips.add(new PowerTip(pack.creditsHeader, pack.credits));
         }
         if (!tooltips.isEmpty()) {
-            float x = pack.previewPackCard.hb.x + pack.previewPackCard.hb.width;
+            // These values are taken from AbstractCard. We need to use them so we can calculate the position for the
+            // tooltips based on the target scale that the card will end up at (since we're always hovering the card
+            // when tooltips are displayed). This avoids jitter due to the height/width of the card changing.
+            final float HB_W = 300.0F * Settings.scale;
+            final float HB_H = 420.0F * Settings.scale;
+            float x = pack.previewPackCard.hb.cX + HB_W * pack.previewPackCard.targetDrawScale / 2.0f;
             if(x + (float)ReflectionHacks.getPrivateStatic(TipHelper.class, "BOX_W") > Settings.WIDTH) {
-                x = pack.previewPackCard.hb.x - pack.previewPackCard.hb.width;
+                x = pack.previewPackCard.hb.cX - HB_W * pack.previewPackCard.targetDrawScale / 2.0f;
             }
-            TipHelper.queuePowerTips(x, pack.previewPackCard.hb.y + pack.previewPackCard.hb.height, tooltips);
+            float y = pack.previewPackCard.hb.cY + HB_H * pack.previewPackCard.targetDrawScale / 2.0f;
+            TipHelper.queuePowerTips(x, y, tooltips);
         }
     }
 
