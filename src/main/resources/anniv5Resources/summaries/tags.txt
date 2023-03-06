@@ -57,7 +57,7 @@ ReplicatorsPack	Tokens
 RimworldPack	None
 RingOfPainPack	None
 RipPack	Exhaust,Tokens
-SecretLevelPack Debuffs
+SecretLevelPack	Debuffs
 SentinelPack	Stances
 SerpentinePack	Stances,Debuffs
 ShamanPack	Debuffs
