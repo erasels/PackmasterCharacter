@@ -1,0 +1,11 @@
+{
+  "${ModID}:ColdStoragePower": {
+    "NAME": "Cold Storage",
+    "DESCRIPTIONS": [
+      "At the end of your turn, you may #yFreeze #b",
+      " card.",
+      " cards.",
+      "Freeze"
+    ]
+  }
+}

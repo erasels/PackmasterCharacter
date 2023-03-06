@@ -1,0 +1,71 @@
+package thePackmaster.cardmodifiers.frostpack;
+
+import basemod.abstracts.AbstractCardModifier;
+import basemod.cardmods.ExhaustMod;
+import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cardmodifiers.energyandechopack.EchoedEtherealMod;
+import thePackmaster.cardmodifiers.energyandechopack.GlowEchoMod;
+import thePackmaster.util.TexLoader;
+import thePackmaster.util.Wiz;
+
+import static thePackmaster.util.Wiz.atb;
+
+public class FrozenMod extends AbstractCardModifier {
+    public static String ID = SpireAnniversary5Mod.makeID("FrozenMod");
+
+    private int originalCost;
+    private boolean hadRetain;
+    private static final Texture tex = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/frozenOverlay.png");
+
+    @Override
+    public boolean canPlayCard(AbstractCard card) {
+        return false;
+    }
+
+    @Override
+    public void onInitialApplication(AbstractCard card) {
+        CardCrawlGame.sound.play("ORB_FROST_CHANNEL", 0.1F);
+        originalCost = card.cost;
+        if (card.selfRetain) hadRetain = true;
+        card.selfRetain = true;
+    }
+
+    @Override
+    public void onRender(AbstractCard card, SpriteBatch sb) {
+        float drawX = card.current_x - 256.0F;
+        float drawY = card.current_y - 256.0F;
+        sb.draw(tex, drawX, drawY, 256.0F, 256.0F, 512.0F, 512.0F, card.drawScale * Settings.scale, card.drawScale * Settings.scale, card.angle, 0, 0, 512, 512, false, false);
+
+    }
+
+    @Override
+    public void atEndOfTurn(AbstractCard card, CardGroup group) {
+        card.modifyCostForCombat(-1);
+        if (card.cost <= 0){
+            CardModifierManager.removeSpecificModifier(card, this, true);
+
+            //Adds another modifier which hands over the original cost of the card when Frozen, so the card can revert back to its original cost when played.
+            CardModifierManager.addModifier(card, new RevertCostWhenPlayedMod(originalCost));
+
+            if (!hadRetain) {
+                card.selfRetain = false;
+                card.retain = true;  //Retains the card for one turn as this is called just before the end of turn discarding happens
+            }
+        }
+    }
+
+    public AbstractCardModifier makeCopy() {
+        return new FrozenMod();
+    }
+}
