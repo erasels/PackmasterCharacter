@@ -3,6 +3,7 @@ package thePackmaster.powers.odditiespack;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
 public class FinalFormPower extends AbstractPackmasterPower implements NonStackablePower {
@@ -22,7 +24,7 @@ public class FinalFormPower extends AbstractPackmasterPower implements NonStacka
     private AbstractCard card;
 
     public FinalFormPower(AbstractCard held) {
-        super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, -1);
+        super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, 5);
         card = held;
         canGoNegative = false;
         updateDescription();
@@ -43,14 +45,13 @@ public class FinalFormPower extends AbstractPackmasterPower implements NonStacka
                 att(new NewQueueCardAction(q, true, true, true));
             }
         });
-
-
+        atb(new ReducePowerAction(owner, owner, this, 1));
     }
 
     @Override
     public void updateDescription() {
         if (card != null)
-            description = DESCRIPTIONS[0] + FontHelper.colorString(card.name, "y") + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + FontHelper.colorString(card.name, "y") + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         else
             description = "";
     }

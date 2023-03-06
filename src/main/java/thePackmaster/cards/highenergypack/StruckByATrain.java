@@ -15,8 +15,8 @@ public class StruckByATrain extends AbstractHighEnergyCard {
 
     public StruckByATrain() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 25;
-        baseMagicNumber = magicNumber = 25;
+        baseDamage = 24;
+        baseMagicNumber = magicNumber = 24;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,7 +28,7 @@ public class StruckByATrain extends AbstractHighEnergyCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
-        upgradeMagicNumber(5);
+        upgradeDamage(4);
+        upgradeMagicNumber(4);
     }
 }
