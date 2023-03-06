@@ -1,0 +1,40 @@
+{
+  "${ModID}:Arson": {
+    "NAME": "Arson",
+    "DESCRIPTION": "Deal !D! damage. NL If you have a Frost, remove it to Channel a ${ModID}:Frostfire and gain 1 Focus."
+  },
+  "${ModID}:ColdStorage": {
+    "NAME": "Cold Storage",
+    "DESCRIPTION": "At the end of your turn, you may choose a card in hand to ${ModID}:Freeze.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, you may choose a card in hand to ${ModID}:Freeze."
+  },
+  "${ModID}:FlashFreeze": {
+    "NAME": "Flash Freeze",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Freeze a card in hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Freeze."
+    ]
+  },
+  "${ModID}:Plunge": {
+    "NAME": "Plunge",
+    "DESCRIPTION": "Channel and Evoke a Frost without removing it.",
+    "UPGRADE_DESCRIPTION": "Channel and Evoke a Frost without removing it. NL Channel a Frost."
+  },
+  "${ModID}:Prime": {
+    "NAME": "Prime",
+    "DESCRIPTION": "Gain !M! Orb slots. NL Exhaust any Status or Curse cards in hand, then ${ModID}:Freeze the rest."
+  },
+  "${ModID}:FrozenSnack": {
+    "NAME": "Frozen Snack",
+    "DESCRIPTION": "Add a *Snack to your hand and ${ModID}:Freeze it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Snack+ to your hand and ${ModID}:Freeze it. NL Exhaust."
+  },
+  "${ModID}:Snack": {
+    "NAME": "Snack",
+    "DESCRIPTION": "Heal !M! HP. NL Gain 1 Focus, 1 Orb Slot, 1 Strength, and 1 Dexterity."
+  },
+  "${ModID}:Hailstorm": {
+    "NAME": "Hailstorm",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Channel !M! Frost."
+  }
+}
