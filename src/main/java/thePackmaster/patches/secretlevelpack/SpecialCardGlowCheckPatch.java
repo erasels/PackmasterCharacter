@@ -32,6 +32,12 @@ public class SpecialCardGlowCheckPatch {
     }
 
     private static boolean equalsIgnoreA(Color test, Color other) {
+        if (test == null && other == null) {
+            return true;
+        }
+        if ((test == null) != (other == null)) {
+            return false;
+        }
         return test.r == other.r && test.b == other.b && test.g == other.g;
     }
 }

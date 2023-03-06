@@ -18,7 +18,7 @@ public class Trash extends AbstractHighEnergyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ExhaustAction(1, false));
+        atb(new ExhaustAction(1, true, false, false));
         atb(new GainEnergyAction(1));
     }
 

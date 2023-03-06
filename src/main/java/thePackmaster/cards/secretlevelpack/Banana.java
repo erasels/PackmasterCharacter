@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.colorless.Trip;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
@@ -19,6 +18,7 @@ public class Banana extends AbstractSecretLevelCard {
         baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 1;
         cardsToPreview = new Trip();
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
