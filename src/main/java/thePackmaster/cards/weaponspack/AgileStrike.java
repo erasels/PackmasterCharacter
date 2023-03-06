@@ -62,6 +62,10 @@ public class AgileStrike extends AbstractWeaponsPackCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.actionManager.orbsChanneledThisTurn.stream().anyMatch(q -> q instanceof AbstractWeaponOrb) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
 
     @Override
     public void upgrade() {

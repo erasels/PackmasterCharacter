@@ -11,7 +11,8 @@ public class MagnetRise extends AbstractEchoCard {
     public final static String ID = makeID(MagnetRise.class.getSimpleName());
 
     private static final int COST = 1;
-    public MagnetRise(){
+
+    public MagnetRise() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
     }
@@ -26,6 +27,11 @@ public class MagnetRise extends AbstractEchoCard {
         if (EnergyAndEchoPack.generatedEnergy > 0)
             this.setCostForTurn(0);
         super.applyPowers();
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = EnergyAndEchoPack.generatedEnergy > 0 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     @Override
