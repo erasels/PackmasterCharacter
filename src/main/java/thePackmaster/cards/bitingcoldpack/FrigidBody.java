@@ -18,7 +18,7 @@ public class FrigidBody extends BitingColdCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new FrigidBodyPower(p));
+        applyToSelf(new FrigidBodyPower(p, 1));
     }
 
     public void upp() {

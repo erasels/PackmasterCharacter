@@ -16,6 +16,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.relics.bitingcoldpack.Snowglobe;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
 public class FrostbitePower extends AbstractPackmasterPower implements HealthBarRenderPower {
     public static final String POWER_ID = makeID("FrostbitePower");
@@ -30,12 +31,7 @@ public class FrostbitePower extends AbstractPackmasterPower implements HealthBar
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             AbstractDungeon.actionManager.addToBottom(new FrostbiteDamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.HP_LOSS), this));
-            if (this.amount % 2 != 0) {
-                addToBot(new ReducePowerAction(this.owner, AbstractDungeon.player, this, (this.amount / 2)+1));
-            } else {
-                addToBot(new ReducePowerAction(this.owner, AbstractDungeon.player, this, this.amount / 2));
-            }
-            this.addToBot(new WaitAction(0.01F));
+            atb(new WaitAction(0.01F));
         }
     }
 

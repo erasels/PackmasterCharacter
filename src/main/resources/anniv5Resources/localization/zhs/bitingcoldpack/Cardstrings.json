@@ -1,8 +1,4 @@
 {
-  "${ModID}:ColdSeason": {
-    "NAME": "寒季",
-    "DESCRIPTION": "敌人因 ${ModID}:霜噬 掉血时， NL 给予其 !M! 层 ${ModID}:霜噬 。"
-  },
   "${ModID}:FrigidBody": {
     "NAME": "僵冻",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时，给予对方格挡住的伤害层 ${ModID}:霜噬 。"
