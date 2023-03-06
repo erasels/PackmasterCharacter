@@ -27,6 +27,7 @@ public class SpheresPack extends AbstractCardPack {
         cards.add(Sphere.ID);
         cards.add(Winterwisp.ID);
         cards.add(FrozenMagma.ID);
+        cards.add(Consolidate.ID);
         return cards;
     }
 }

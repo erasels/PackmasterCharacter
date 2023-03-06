@@ -23,5 +23,10 @@
     "NAME": "Frozen Magma",
     "DESCRIPTION": "Channel 1 ${ModID}:Snow. NL Channel 1 Frost. NL Channel 1 ${ModID}:Blaze. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Snow. NL Channel 1 Frost. NL Channel 1 ${ModID}:Blaze."
+  },
+  "${ModID}:Consolidate": {
+    "NAME": "Consolidate",
+    "DESCRIPTION": "Remove your first 2 Orbs. NL Gain 1 Focus. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove your first 2 Orbs. NL Gain 1 Focus."
   }
 }
