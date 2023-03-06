@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardVault;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
@@ -30,6 +31,11 @@ public class Anemia extends AbstractDimensionalCardVault {
         if (q.hasPower(PoisonPower.POWER_ID)) {
             applyToEnemy(q, new WeakPower(q, magicNumber, false));
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = Wiz.getEnemies().stream().anyMatch(q -> q.hasPower(WeakPower.POWER_ID)) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

@@ -1,0 +1,15 @@
+{
+  "${ModID}:SecretLevelPack": {
+    "TEXT": [
+      "Secret Level",
+      "A pack focusing on Weak, Vulnerable ... and Vexing mysteries to unlock.",
+      "Vex"
+    ]
+  },
+  "${ModID}:OdditiesPackHat": {
+    "TEXT": [
+      "dudda dudda dudda.",
+      "The Plumber"
+    ]
+  }
+}

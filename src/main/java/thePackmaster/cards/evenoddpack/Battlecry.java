@@ -10,7 +10,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Battlecry  extends AbstractEvenOddCard{
+public class Battlecry extends AbstractEvenOddCard {
     public final static String ID = makeID(Battlecry.class.getSimpleName());
     private static final int MAGIC = 2;
     private static final int UMAGIC = 1;
@@ -18,7 +18,7 @@ public class Battlecry  extends AbstractEvenOddCard{
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    
+
     public Battlecry() {
         super(ID, COST, TYPE, RARITY, TARGET);
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
@@ -27,12 +27,12 @@ public class Battlecry  extends AbstractEvenOddCard{
         initializeDescription();
         magicNumber = baseMagicNumber = MAGIC;
     }
-    
+
     @Override
     public void upp() {
         upgradeMagicNumber(UMAGIC);
     }
-    
+
     @Override
     public void onMoveToDiscard() {
         rawDescription = cardStrings.DESCRIPTION;
@@ -41,19 +41,16 @@ public class Battlecry  extends AbstractEvenOddCard{
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
         initializeDescription();
     }
-    
+
     @Override
     protected String createEvenOddText() {
-        if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 0)
-        {
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 0) {
             return cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[1] + cardStrings.EXTENDED_DESCRIPTION[2];
-        }
-        else
-        {
+        } else {
             return cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[1] + makeCardTextGray(cardStrings.EXTENDED_DESCRIPTION[2]);
         }
     }
-    
+
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new AbstractGameAction() {
@@ -66,5 +63,10 @@ public class Battlecry  extends AbstractEvenOddCard{
                 this.isDone = true;
             }
         });
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 }

@@ -29,7 +29,7 @@
   },
   "${ModID}:HolyWrath": {
     "NAME": "Holy Wrath",
-    "DESCRIPTION": "Take !M! damage. NL Return this from the discard pile to your hand whenever you gain ${ModID}:Confession"
+    "DESCRIPTION": "Take !M! damage. NL Return this from the discard pile to your hand whenever you gain ${ModID}:Confession."
   },
   "${ModID}:Absolution": {
     "NAME": "Absolution",

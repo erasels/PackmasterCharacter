@@ -33,6 +33,11 @@ public class Clang extends AbstractBellordCard {
         return super.canUse(p, m);
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.player.hand.group.stream().anyMatch(q -> q.type == CardType.CURSE || q.type == CardType.STATUS || q.color == CURSE) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeDamage(4);
     }
