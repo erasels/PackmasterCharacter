@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Frost;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.spherespack.Blaze;
-import thePackmaster.orbs.spherespack.Snow;
+import thePackmaster.orbs.spherespack.Scourge;
 
 public class FrozenMagma extends AbstractSpheresCard {
     public static final String ID = SpireAnniversary5Mod.makeID("FrozenMagma");
@@ -24,7 +24,7 @@ public class FrozenMagma extends AbstractSpheresCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ChannelAction(new Snow()));
+        this.addToBot(new ChannelAction(new Scourge()));
         this.addToBot(new ChannelAction(new Frost()));
         this.addToBot(new ChannelAction(new Blaze()));
     }

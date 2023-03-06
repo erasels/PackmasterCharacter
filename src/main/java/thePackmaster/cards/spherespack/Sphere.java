@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.orbs.Lightning;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.downfallpack.Ghostflame;
 import thePackmaster.orbs.spherespack.Blaze;
-import thePackmaster.orbs.spherespack.Snow;
+import thePackmaster.orbs.spherespack.Scourge;
 
 public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer> {
     public static final String ID = SpireAnniversary5Mod.makeID("Sphere");
@@ -68,7 +68,7 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
             case Blaze:
                 return new Blaze();
             case Snow:
-                return new Snow();
+                return new Scourge();
             default:
                 return null;
         }

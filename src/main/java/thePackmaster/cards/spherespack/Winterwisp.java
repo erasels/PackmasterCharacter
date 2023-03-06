@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.spherespack.Snow;
+import thePackmaster.orbs.spherespack.Scourge;
 
 public class Winterwisp extends AbstractSpheresCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Winterwisp");
@@ -33,7 +33,7 @@ public class Winterwisp extends AbstractSpheresCard {
             @Override
             public void update() {
                 if (p.hasEmptyOrb()) {
-                    AbstractOrb newOrb = new Snow();
+                    AbstractOrb newOrb = new Scourge();
                     addToTop(new AbstractGameAction() {
                         @Override
                         public void update() {

@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.spherespack.Blaze;
-import thePackmaster.orbs.spherespack.Hope;
-import thePackmaster.orbs.spherespack.Snow;
 
 public class Ignition extends AbstractSpheresCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Ignition");

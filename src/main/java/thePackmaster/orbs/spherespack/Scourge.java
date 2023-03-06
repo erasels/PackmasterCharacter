@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -25,7 +24,6 @@ import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.scene.TorchParticleXLEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
-import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -34,12 +32,12 @@ import java.util.Collections;
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.adp;
 
-public class Snow extends CustomOrb {
-    public static final String ORB_ID = SpireAnniversary5Mod.makeID(Snow.class.getSimpleName());
+public class Scourge extends CustomOrb {
+    public static final String ORB_ID = SpireAnniversary5Mod.makeID(Scourge.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH = makePath("/images/orbs/spherespack/Blaze.png");
+    private static final String IMG_PATH = makePath("/images/orbs/spherespack/Scourge.png");
     private static final float SPIRIT_WIDTH = 96.0f;
 
     private final static int BASE_PASSIVE = 3;
@@ -49,7 +47,7 @@ public class Snow extends CustomOrb {
 
     private final BobEffect fireBobEffect = new BobEffect(2f, 3f);
 
-    public Snow() {
+    public Scourge() {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH);
         applyFocus();
         updateDescription();
@@ -138,6 +136,6 @@ public class Snow extends CustomOrb {
 
     @Override
     public AbstractOrb makeCopy() {
-        return new Snow();
+        return new Scourge();
     }
 }

@@ -7,9 +7,9 @@
     "DESCRIPTION": "Orb: Increases amount every turn. When #yEvoked, applies #yIgnite to the enemy with the most HP."
   },
   {
-    "PROPER_NAME": "Snow",
+    "PROPER_NAME": "Scourge",
     "NAMES": [
-      "snow"
+      "scourge"
     ],
     "DESCRIPTION": "Orb: Applies #yFrostbite to random enemies. When #yEvoked, applies #yWeak and #yVulnerable to ALL enemies."
   },
