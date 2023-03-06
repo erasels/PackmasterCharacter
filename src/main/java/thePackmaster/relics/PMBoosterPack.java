@@ -51,10 +51,14 @@ public class PMBoosterPack extends AbstractPackmasterRelic {
         AbstractCardPack pack = SpireAnniversary5Mod.getRandomPackFromAll(new Random(Settings.seed + 41));
         ArrayList<String> cards = pack.getCards();
         for (String s : cards) {
-           if (CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.COMMON ||
-                   CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.UNCOMMON ||
-                   CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.RARE)
-               group.addToTop(CardLibrary.getCard(s).makeCopy());
+            if (CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.COMMON ||
+                    CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.UNCOMMON ||
+                    CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.RARE) {
+                AbstractCard toAdd = CardLibrary.getCard(s).makeCopy();
+                AbstractDungeon.player.relics.stream().forEach(q -> q.onPreviewObtainCard(toAdd));
+                group.addToTop(toAdd);
+            }
+
         }
         group.sortByRarity(false);
 
@@ -69,7 +73,7 @@ public class PMBoosterPack extends AbstractPackmasterRelic {
             this.cardSelected = true;
             CenterGridCardSelectScreen.centerGridSelect = false;
 
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0).makeCopy(), (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0).makeCopy(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             AbstractDungeon.getCurrRoom().phase = lastPhase;

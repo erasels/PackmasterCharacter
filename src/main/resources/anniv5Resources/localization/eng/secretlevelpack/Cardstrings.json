@@ -24,7 +24,7 @@
   },
   "${ModID}:Conglaturation": {
     "NAME": "Conglaturation!",
-    "DESCRIPTION": "Deal !D! damage. NL If you played a glowing card this turn, gain [E] and draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL If you played a gold-glowing card this turn, gain [E] and draw 1 card."
   },
   "${ModID}:EnoughTalk": {
     "NAME": "Enough Talk",
@@ -41,6 +41,6 @@
   },
   "${ModID}:AchievementHunter": {
     "NAME": "Achievement Hunter",
-    "DESCRIPTION": "Whenever you play a glowing card, gain 1 Strength. NL After !M! triggers, gain 2 Dexterity."
+    "DESCRIPTION": "Whenever you play a gold-glowing card, gain 1 Strength. NL After !M! triggers, gain 2 Dexterity."
   }
 }
