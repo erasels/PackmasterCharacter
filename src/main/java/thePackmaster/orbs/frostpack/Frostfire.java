@@ -35,8 +35,8 @@ public class Frostfire extends Frost {
     public void onEvoke() {
         super.onEvoke();
         AbstractMonster m = Wiz.getRandomEnemy();
-        applyToEnemy(m, new IgnitePower(m, passiveAmount));
         Wiz.vfx(new MissileStrikeEffect(m.hb.cX, m.hb.cY, randomFlareColor()), Settings.ACTION_DUR_FASTER);
+        Wiz.doDmg(m, evokeAmount);
     }
 
     public void updateAnimation() {
@@ -52,8 +52,8 @@ public class Frostfire extends Frost {
     public void onEndOfTurn() {
         super.onEndOfTurn();
         AbstractMonster m = Wiz.getRandomEnemy();
-        applyToEnemy(m, new IgnitePower(m, passiveAmount));
         Wiz.vfx(new MissileStrikeEffect(m.hb.cX, m.hb.cY, randomFlareColor()), Settings.ACTION_DUR_FASTER);
+        Wiz.doDmg(m, passiveAmount);
 
     }
 

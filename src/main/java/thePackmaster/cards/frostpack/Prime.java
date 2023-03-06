@@ -24,22 +24,6 @@ public class Prime extends AbstractFrostCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new IncreaseMaxOrbAction(this.magicNumber));
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                this.isDone = true;
-
-                for (AbstractCard c: AbstractDungeon.player.hand.group
-                ) {
-                    if (c.type==CardType.STATUS || c.type==CardType.CURSE){
-                        Wiz.atb(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
-                    } else {
-                        if (!c.hasTag(SpireAnniversary5Mod.FROZEN)) Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c));
-                    }
-
-                }
-            }
-        });
     }
 
     public void upp() {

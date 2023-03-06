@@ -38,6 +38,7 @@ public class FrozenMod extends AbstractCardModifier {
     public void onInitialApplication(AbstractCard card) {
         CardCrawlGame.sound.play("ORB_FROST_CHANNEL", 0.1F);
         originalCost = card.cost;
+        card.modifyCostForCombat(1);
         if (card.selfRetain) hadRetain = true;
         card.selfRetain = true;
         card.tags.add(SpireAnniversary5Mod.FROZEN);
