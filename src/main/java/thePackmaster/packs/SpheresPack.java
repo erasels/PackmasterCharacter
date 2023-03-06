@@ -3,6 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.spherespack.DualBlade;
 import thePackmaster.cards.spherespack.Ignition;
 import thePackmaster.cards.spherespack.Sphere;
 
@@ -24,6 +25,7 @@ public class SpheresPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(Ignition.ID);
+        cards.add(DualBlade.ID);
         cards.add(Sphere.ID);
         return cards;
     }

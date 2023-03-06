@@ -3,6 +3,10 @@
     "NAME": "Ignition",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel a ${ModID}:Blaze."
   },
+  "${ModID}:DualBlade": {
+    "NAME": "Dual Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Evoke your next Orb twice."
+  },
   "${ModID}:Sphere": {
     "NAME": "Sphere",
     "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:randomized\u00a0Orb.",
