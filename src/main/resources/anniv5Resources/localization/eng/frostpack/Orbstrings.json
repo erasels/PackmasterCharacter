@@ -3,9 +3,9 @@
     "NAME": "Frostfire",
     "DESCRIPTION": [
       "#yPassive: At the end of turn, gain #b",
-      " Block and apply #b",
-      " #yIgnite to a random enemy. NL #yEvoke: Gain #b",
-      " #yIgnite to a random enemy. NL Counts as a #yFrost orb."
+      " Block and deal #b",
+      " damage to a random enemy. NL #yEvoke: Gain #b",
+      " damage to a random enemy. NL Counts as a #yFrost orb."
     ]
   }
 }

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.HandSelectAction;
+import thePackmaster.actions.frostpack.ExtendedStallAction;
 import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.frostpack.FrozenMod;
 import thePackmaster.powers.AbstractPackmasterPower;
@@ -14,12 +15,12 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ColdStoragePower extends AbstractPackmasterPower {
-    public static final String POWER_ID = makeID("ColdStoragePower");
+public class ExtendedStallPower extends AbstractPackmasterPower {
+    public static final String POWER_ID = makeID("ExtendedStallPower");
     private static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     private static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public ColdStoragePower(final AbstractCreature owner, int amount) {
+    public ExtendedStallPower(final AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
 
         this.priority = 0;
@@ -27,23 +28,7 @@ public class ColdStoragePower extends AbstractPackmasterPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer && !AbstractDungeon.player.hand.isEmpty()) {
-            this.addToTop(new HandSelectAction(this.amount, card -> (!card.hasTag(SpireAnniversary5Mod.FROZEN)), (cards)->{
-                for (AbstractCard c : cards) {
-                    FrozenMod f = new FrozenMod();
-                    Wiz.att(new SimpleAddModifierAction(f, c));
-
-                    //Trigger the FrozenMod's end of turn effect instantly as we've already passed the end of turn trigger for cardmods.
-                    Wiz.att(new AbstractGameAction() {
-                        @Override
-                        public void update() {
-                            this.isDone = true;
-                            f.atEndOfTurn(c, AbstractDungeon.player.hand);
-                        }
-                    });
-                }
-            }, null, DESCRIPTIONS[3], true, true, true));
-        }
+        Wiz.atb(new ExtendedStallAction(this.amount));
     }
 
     public void updateDescription() {

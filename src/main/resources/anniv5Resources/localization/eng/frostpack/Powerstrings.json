@@ -1,11 +1,19 @@
 {
-  "${ModID}:ColdStoragePower": {
-    "NAME": "Cold Storage",
+  "${ModID}:ExtendedStallPower": {
+    "NAME": "Stall",
     "DESCRIPTIONS": [
       "At the end of your turn, you may #yFreeze #b",
       " card.",
       " cards.",
       "Freeze"
+    ]
+  },
+  "${ModID}:PrimePower": {
+    "NAME": "Prime",
+    "DESCRIPTIONS": [
+      "When you Channel an orb, trigger its passive effect.",
+      "When you Channel an orb, trigger its passive effect #b",
+      " times."
     ]
   }
 }

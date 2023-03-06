@@ -25,12 +25,12 @@ public class FrostPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(Arson.ID);
-        cards.add(ColdStorage.ID);
+        cards.add(ExtendedStall.ID);
         cards.add(FlashFreeze.ID);
         cards.add(Plunge.ID);
         cards.add(ColdSnap.ID);
         cards.add(Blizzard.ID);
-        cards.add(Chill.ID);
+        cards.add(MegaChill.ID);
         cards.add(Snack.ID);
         cards.add(FrozenSnack.ID);
         cards.add(Hailstorm.ID);
