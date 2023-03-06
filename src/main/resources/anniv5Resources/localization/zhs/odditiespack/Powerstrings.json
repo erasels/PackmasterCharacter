@@ -8,11 +8,11 @@
   "${ModID}:FinalFormPower": {
     "NAME": "最终形态",
     "DESCRIPTIONS": [
-      "At the start of your next #b",
-      " turn, ",
-      " turns ",
-      "play and #yExhaust a copy of ",
-      "."
+      "你的下 #b",
+      " 个回合开始时，",
+      " 个回合开始时，",
+      "打出并 #y消耗 一张 ",
+      " 。"
     ]
   }
 }
