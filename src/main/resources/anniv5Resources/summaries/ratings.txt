@@ -58,6 +58,7 @@ ReplicatorsPack	2	2	5	2	5
 RimworldPack	3	3	4	2	3
 RingOfPainPack	4	2	3	2	3
 RipPack	3	3	2	5	2
+SecretLevelPack	3	3	3	2	5
 SentinelPack	4	4	2	4	2
 SerpentinePack	4	1	3	2	4
 ShamanPack	4	3	2	1	4
