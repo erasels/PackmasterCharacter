@@ -62,7 +62,7 @@ public class FrostbiteDamageAction extends AbstractGameAction {
                     });
                 } else {
                     atb(new ReducePowerAction(target, AbstractDungeon.player, callingPower,
-                            this.amount % 2 != 0 ? (callingPower.amount / 2) + 1 : (callingPower.amount / 2)
+                            (callingPower.amount / 2) + (callingPower.amount % 2)
                     ));
                 }
             }
