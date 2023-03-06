@@ -3,13 +3,13 @@ package thePackmaster.cards.spherespack;
 import basemod.abstracts.CustomSavable;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.Dark;
-import com.megacrit.cardcrawl.orbs.Frost;
 import com.megacrit.cardcrawl.orbs.Lightning;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.downfallpack.Ghostflame;
@@ -25,8 +25,12 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
     private SphereOrb orb;
 
     public Sphere() {
+        this(!CardCrawlGame.isInARun() || AbstractDungeon.miscRng == null ? null : intToOrb(AbstractDungeon.miscRng.random(SphereOrb.values().length - 1)));
+    }
+
+    public Sphere (SphereOrb orb) {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        this.orb = !CardCrawlGame.isInARun() || AbstractDungeon.miscRng == null ? null : intToOrb(AbstractDungeon.miscRng.random(SphereOrb.values().length - 1));
+        this.orb = orb;
         this.baseBlock = BLOCK;
         this.updateNameAndDescription();
     }
@@ -52,7 +56,6 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
             this.initializeTitle();
             this.initializeDescription();
         }
-
     }
 
     private static AbstractOrb getOrb(SphereOrb orb) {
@@ -65,7 +68,7 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
                 return new Ghostflame();
             case Blaze:
                 return new Blaze();
-            case Snow:
+            case Scourge:
                 return new Scourge();
             default:
                 return null;
@@ -83,7 +86,7 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
             case 3:
                 return SphereOrb.Blaze;
             case 4:
-                return SphereOrb.Snow;
+                return SphereOrb.Scourge;
             default:
                 return null;
         }
@@ -99,7 +102,7 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
                 return 2;
             case Blaze:
                 return 3;
-            case Snow:
+            case Scourge:
                 return 4;
             default:
                 return null;
@@ -114,6 +117,12 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
     @Override
     public void onLoad(Integer n) {
         this.orb = intToOrb(n);
+        this.updateNameAndDescription();
+    }
+
+    @Override
+    public AbstractCard makeCopy() {
+        return this.orb == null ? new Sphere() : new Sphere(this.orb);
     }
 
     public enum SphereOrb {
@@ -121,6 +130,6 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
         Dark,
         Ghostflame,
         Blaze,
-        Snow
+        Scourge
     }
 }
