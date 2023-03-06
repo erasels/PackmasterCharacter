@@ -1,11 +1,11 @@
 {
   "${ModID}:MysteryBox": {
     "NAME": "Mystery Box",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL Add a random Attack into your hand. NL If in a ? room, it costs 0 this turn."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Add a random Attack into your hand. NL If in a ? room, NL it costs 0 this turn."
   },
   "${ModID}:SurpriseAttack": {
     "NAME": "Surprise Attack",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL If it's turn 1, draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL If it's turn 1, NL draw a card."
   },
   "${ModID}:EscapeClause": {
     "NAME": "Escape Clause",
@@ -17,14 +17,14 @@
   },
   "${ModID}:Joust": {
     "NAME": "Joust",
-    "DESCRIPTION": "Can only target Weak foes. NL Deal !D! damage. NL Apply !M! Weak.",
+    "DESCRIPTION": "Can only target Weak enemies. NL Deal !D! damage. NL Apply !M! Weak.",
     "EXTENDED_DESCRIPTION": [
       "That foe is not Weak!"
     ]
   },
   "${ModID}:Conglaturation": {
     "NAME": "Conglaturation!",
-    "DESCRIPTION": "Deal !D! damage. NL If you played a glowing card this turn, gain [E] and draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL If you played a gold-glowing card this turn, gain [E] and draw 1 card."
   },
   "${ModID}:EnoughTalk": {
     "NAME": "Enough Talk",
@@ -41,6 +41,6 @@
   },
   "${ModID}:AchievementHunter": {
     "NAME": "Achievement Hunter",
-    "DESCRIPTION": "Whenever you play a glowing card, gain 1 Strength. NL After 5 triggers, gain 2 Dexterity."
+    "DESCRIPTION": "Whenever you play a gold-glowing card, gain 1 Strength. NL After !M! triggers, gain 2 Dexterity."
   }
 }

@@ -2,7 +2,6 @@ package thePackmaster.cards.secretlevelpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.secretlevelpack.AchievementHunterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -13,14 +12,15 @@ public class AchievementHunter extends AbstractSecretLevelCard {
     // intellij stuff power, self, rare, , , , , , 
 
     public AchievementHunter() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new AchievementHunterPower());
+        applyToSelf(new AchievementHunterPower(magicNumber));
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeMagicNumber(-2);
     }
 }
