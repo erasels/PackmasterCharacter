@@ -3,10 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.spherespack.DualBlade;
-import thePackmaster.cards.spherespack.Ignition;
-import thePackmaster.cards.spherespack.Sphere;
-import thePackmaster.cards.spherespack.Winterwisp;
+import thePackmaster.cards.spherespack.*;
 
 import java.util.ArrayList;
 
@@ -29,6 +26,7 @@ public class SpheresPack extends AbstractCardPack {
         cards.add(DualBlade.ID);
         cards.add(Sphere.ID);
         cards.add(Winterwisp.ID);
+        cards.add(FrozenMagma.ID);
         return cards;
     }
 }

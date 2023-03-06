@@ -18,5 +18,10 @@
   "${ModID}:Winterwisp": {
     "NAME": "Winterwisp",
     "DESCRIPTION": "Deal !D! damage. NL If you have any empty Orb Slots, channel a ${ModID}:Snow and trigger its passive ability."
+  },
+  "${ModID}:FrozenMagma": {
+    "NAME": "Frozen Magma",
+    "DESCRIPTION": "Channel 1 ${ModID}:Snow. NL Channel 1 Frost. NL Channel 1 ${ModID}:Blaze. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Snow. NL Channel 1 Frost. NL Channel 1 ${ModID}:Blaze."
   }
 }
