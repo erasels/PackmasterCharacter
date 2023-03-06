@@ -6,27 +6,27 @@ import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.powers.spherespack.ChaosGeneratorPower;
 import thePackmaster.powers.spherespack.HopePower;
 
-public class Hope extends AbstractSpheresCard {
-    public static final String ID = SpireAnniversary5Mod.makeID("Hope");
-    private static final int COST = 1;
-    private static final int AMOUNT = 1;
+public class ChaosGenerator extends AbstractSpheresCard {
+    public static final String ID = SpireAnniversary5Mod.makeID("ChaosGenerator");
+    private static final int COST = 2;
+    private static final int ORBS = 1;
+    private static final int UPGRADE_ORBS = 1;
 
-    public Hope() {
+    public ChaosGenerator() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = AMOUNT;
+        this.magicNumber = this.baseMagicNumber = ORBS;
     }
 
     @Override
     public void upp() {
-        this.isInnate = true;
+        this.upgradeMagicNumber(UPGRADE_ORBS);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new HopePower(p, this.magicNumber)));
-        this.addToBot(new IncreaseMaxOrbAction(1));
-        this.addToBot(new ChannelAction(new thePackmaster.orbs.spherespack.Hope()));
+        this.addToBot(new ApplyPowerAction(p, p, new ChaosGeneratorPower(p, this.magicNumber)));
     }
 }

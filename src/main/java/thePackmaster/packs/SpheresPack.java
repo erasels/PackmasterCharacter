@@ -30,6 +30,7 @@ public class SpheresPack extends AbstractCardPack {
         cards.add(Consolidate.ID);
         cards.add(VoidEngine.ID);
         cards.add(Hope.ID);
+        cards.add(ChaosGenerator.ID);
         return cards;
     }
 }

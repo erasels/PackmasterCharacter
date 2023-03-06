@@ -2,5 +2,12 @@
   "${ModID}:Hope": {
     "NAME": "Hope",
     "DESCRIPTIONS": ["Whenever an Orb is #yEvoked, gain #b{0} #yTemporary #yHP."]
+  },
+  "${ModID}:ChaosGenerator": {
+    "NAME": "Chaos Generator",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yChannel #b{0} random Orb.",
+      "At the start of your turn, #yChannel #b{0} random Orbs."
+    ]
   }
 }

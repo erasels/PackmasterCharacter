@@ -31,12 +31,17 @@
   },
   "${ModID}:VoidEngine": {
     "NAME": "Void Engine",
-    "DESCRIPTION": "Gain 1 Focus. NL Gain 1 Orb Slot. NL Shuffle a Void into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Focus. NL Gain 1 Orb Slot. NL Add a Void to your discard pile."
+    "DESCRIPTION": "Gain !M! Focus. NL Gain 1 Orb Slot. NL Shuffle a Void into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Focus. NL Gain 1 Orb Slot. NL Add a Void to your discard pile."
   },
   "${ModID}:Hope": {
     "NAME": "Hope",
-    "DESCRIPTION": "Whenever you Evoke an Orb, gain 1 stslib:Temporary_HP. NL Channel 1 ${ModID}:Hope.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Evoke an Orb, gain 1 stslib:Temporary_HP. NL Channel 1 ${ModID}:Hope."
+    "DESCRIPTION": "Whenever you Evoke an Orb, gain !M! stslib:Temporary_HP. NL Channel 1 ${ModID}:Hope.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Evoke an Orb, gain !M! stslib:Temporary_HP. NL Channel 1 ${ModID}:Hope."
+  },
+  "${ModID}:ChaosGenerator": {
+    "NAME": "Chaos Generator",
+    "DESCRIPTION": "At the start of your turn, Channel !M! random Orb.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, Channel !M! random Orbs."
   }
 }
