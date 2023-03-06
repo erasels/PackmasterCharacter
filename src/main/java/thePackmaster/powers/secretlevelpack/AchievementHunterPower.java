@@ -22,8 +22,8 @@ public class AchievementHunterPower extends AbstractPackmasterPower implements N
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public AchievementHunterPower() {
-        super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, 5);
+    public AchievementHunterPower(int amount) {
+        super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
         canGoNegative = false;
     }
 
