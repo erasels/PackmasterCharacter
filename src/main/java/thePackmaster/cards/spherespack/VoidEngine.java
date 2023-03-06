@@ -23,7 +23,6 @@ public class VoidEngine extends AbstractSpheresCard {
 
     @Override
     public void upp() {
-        this.exhaust = false;
     }
 
     @Override

@@ -33,5 +33,10 @@
     "NAME": "Void Engine",
     "DESCRIPTION": "Gain 1 Focus. NL Gain 1 Orb Slot. NL Shuffle a Void into your draw pile.",
     "UPGRADE_DESCRIPTION": "Gain 1 Focus. NL Gain 1 Orb Slot. NL Add a Void to your discard pile."
+  },
+  "${ModID}:Hope": {
+    "NAME": "Hope",
+    "DESCRIPTION": "Whenever you Evoke an Orb, gain 1 stslib:Temporary_HP. NL Channel 1 ${ModID}:Hope.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Evoke an Orb, gain 1 stslib:Temporary_HP. NL Channel 1 ${ModID}:Hope."
   }
 }

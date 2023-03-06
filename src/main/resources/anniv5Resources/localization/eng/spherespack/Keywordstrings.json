@@ -14,6 +14,13 @@
     "DESCRIPTION": "Orb: Applies #yFrostbite to random enemies. When #yEvoked, applies #yWeak and #yVulnerable to ALL enemies."
   },
   {
+    "PROPER_NAME": "Hope",
+    "NAMES": [
+      "hope"
+    ],
+    "DESCRIPTION": "Orb: Gives #yInspiration at start of turn. When #yEvoked, gives #yArtifact and #yTemporary #yHP. Not affected by #yFocus."
+  },
+  {
     "PROPER_NAME": "Randomized Orb",
     "NAMES": [
       "randomized\u00a0orb"
