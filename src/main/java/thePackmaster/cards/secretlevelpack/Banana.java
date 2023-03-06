@@ -15,7 +15,7 @@ public class Banana extends AbstractSecretLevelCard {
 
     public Banana() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 1;
         cardsToPreview = new Trip();
         tags.add(CardTags.HEALING);
