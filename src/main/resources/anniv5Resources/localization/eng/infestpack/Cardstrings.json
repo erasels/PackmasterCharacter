@@ -29,7 +29,7 @@
   },
   "${ModID}:Compoundeyes": {
     "NAME": "Compoundeyes",
-    "DESCRIPTION": "Draw !M! cards. NL When you next play a card, end your turn."
+    "DESCRIPTION": "Innate. NL Draw !M! cards. NL When you next play a card, end your turn."
   },
   "${ModID}:Bees": {
     "NAME": "BEES!!!",
