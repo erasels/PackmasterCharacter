@@ -1,5 +1,6 @@
 package thePackmaster.cards.frostpack;
 
+import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -27,19 +28,22 @@ public class Arson extends AbstractFrostCard {
 
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 this.isDone = true;
 
-                for (AbstractCard c:AbstractDungeon.player.hand.group
+                for (AbstractCard c : AbstractDungeon.player.hand.group
                 ) {
-                    if (c.hasTag(SpireAnniversary5Mod.FROZEN)){
+                    if (c.hasTag(SpireAnniversary5Mod.FROZEN)) {
                         c.modifyCostForCombat(-99);
-                        CardModifierManager.removeModifiersById(c, FrozenMod.ID, true);
+                        if (CardModifierManager.hasModifier(c, FrozenMod.ID))
+                            for (AbstractCardModifier mod : CardModifierManager.getModifiers(c, FrozenMod.ID)
+                            ) {
+                                CardModifierManager.removeSpecificModifier(c, mod, true);
+                            }
                     }
                 }
             }
