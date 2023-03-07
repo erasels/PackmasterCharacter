@@ -77,7 +77,7 @@ public class Blaze extends CustomOrb {
 
     @Override
     public void triggerEvokeAnimation() {
-        CardCrawlGame.sound.play("ORB_DARK_EVOKE", 0.1F);
+        CardCrawlGame.sound.play("SOTE_SFX_FireIgnite_2_v1.ogg", 0.1f);
         AbstractDungeon.effectsQueue.add(new DarkOrbActivateEffect(this.cX, this.cY));
     }
 
