@@ -18,7 +18,7 @@ public class GrassHop extends AbstractInfestCard implements OnInfestCard {
     public GrassHop() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
         CardModifierManager.addModifier(this, new InfestModifier());
     }
 
@@ -33,6 +33,6 @@ public class GrassHop extends AbstractInfestCard implements OnInfestCard {
 
     public void upp() {
         upgradeBlock(2);
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }
