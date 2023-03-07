@@ -3,6 +3,7 @@ package thePackmaster.actions.frostpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.frostpack.FrozenMod;
 
@@ -25,12 +26,14 @@ public class ExtendedStallAction extends AbstractGameAction {
             int maxCost = -1;
             ArrayList<AbstractCard> maxCostCards = new ArrayList<>();
             for (AbstractCard c : tempHand) {
-                if (c.costForTurn > maxCost) {
-                    maxCost = c.costForTurn;
-                    maxCostCards.clear();
-                    maxCostCards.add(c);
-                } else if (c.costForTurn == maxCost) {
-                    maxCostCards.add(c);
+                if (!c.hasTag(SpireAnniversary5Mod.FROZEN)) {
+                    if (c.costForTurn > maxCost) {
+                        maxCost = c.costForTurn;
+                        maxCostCards.clear();
+                        maxCostCards.add(c);
+                    } else if (c.costForTurn == maxCost) {
+                        maxCostCards.add(c);
+                    }
                 }
             }
 
