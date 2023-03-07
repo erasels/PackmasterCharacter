@@ -28,10 +28,10 @@ public class SpheresPack extends AbstractCardPack {
         cards.add(Winterwisp.ID);
         cards.add(FrozenMagma.ID);
         cards.add(Consolidate.ID);
-        cards.add(VoidEngine.ID);
-        cards.add(Hope.ID);
-        cards.add(ChaosGenerator.ID);
         cards.add(FrostConversion.ID);
+        cards.add(Fluctuate.ID);
+        cards.add(VoidEngine.ID);
+        cards.add(ChaosGenerator.ID);
         return cards;
     }
 }

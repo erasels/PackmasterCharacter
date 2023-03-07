@@ -6,49 +6,47 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.scene.TorchParticleXLEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.powers.bardinspirepack.InspirationPower;
-import thePackmaster.powers.shamanpack.IgnitePower;
+import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.util.Wiz;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.adp;
 
-public class Hope extends CustomOrb {
-    public static final String ORB_ID = SpireAnniversary5Mod.makeID(Hope.class.getSimpleName());
+public class Polar extends CustomOrb {
+    public static final String ORB_ID = SpireAnniversary5Mod.makeID(Polar.class.getSimpleName());
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String NAME = orbString.NAME;
     public static final String[] DESCRIPTIONS = orbString.DESCRIPTION;
-    private static final String IMG_PATH = makePath("/images/orbs/spherespack/Hope.png");
+    private static final String IMG_PATH = makePath("/images/orbs/spherespack/Polar.png");
     private static final float SPIRIT_WIDTH = 96.0f;
 
-    private final static int INSPIRATION = 25;
-    private final static int ARTIFACT = 1;
-    private final static int TEMP_HP = 5;
+    private final static int BASE_PASSIVE = 3;
+    private final static int BASE_EVOKE = 3;
 
     private float sparkTimer = 0.2f;
 
     private final BobEffect fireBobEffect = new BobEffect(2f, 3f);
 
-    public Hope() {
-        super(ORB_ID, NAME, INSPIRATION, TEMP_HP, "", "", IMG_PATH);
+    public Polar() {
+        super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH);
         applyFocus();
         updateDescription();
     }
@@ -60,20 +58,30 @@ public class Hope extends CustomOrb {
 
     @Override
     public void applyFocus() {
-        // This orb is not affected by focus
+        AbstractPower power = adp().getPower(FocusPower.POWER_ID);
+        this.passiveAmount = power != null ? Math.max(0, basePassiveAmount + power.amount) : this.basePassiveAmount;
+        this.evokeAmount = power != null ? Math.max(0, baseEvokeAmount + power.amount) : this.baseEvokeAmount;
     }
 
     @Override
     public void onStartOfTurn() {
         float speedTime = Settings.FAST_MODE ? 0.0F : 0.6F / (float)AbstractDungeon.player.orbs.size();
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), speedTime));
-        Wiz.applyToSelf(new InspirationPower(AbstractDungeon.player, 1, INSPIRATION));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.DARK), speedTime));
+        AbstractMonster m = Wiz.getRandomEnemy();
+        if (m != null && this.passiveAmount > 0) {
+            Wiz.applyToEnemy(m, new FrostbitePower(m, this.passiveAmount));
+        }
     }
 
     @Override
     public void onEvoke() {
-        Wiz.att(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, TEMP_HP));
-        Wiz.applyToSelfTop(new ArtifactPower(AbstractDungeon.player, ARTIFACT));
+        if (this.evokeAmount > 0) {
+            ArrayList<AbstractMonster> monsters = Wiz.getEnemies();
+            Collections.reverse(monsters);
+            for (AbstractMonster m : monsters) {
+                Wiz.applyToEnemyTop(m, new FrostbitePower(m, this.evokeAmount));
+            }
+        }
     }
 
     @Override
@@ -120,17 +128,13 @@ public class Hope extends CustomOrb {
     }
 
     @Override
-    protected void renderText(SpriteBatch sb) {
-    }
-
-    @Override
     public void updateDescription() {
         this.applyFocus();
-        this.description = DESCRIPTIONS[0].replace("{0}", INSPIRATION + "").replace("{1}", ARTIFACT + "").replace("{2}", TEMP_HP + "");
+        this.description = DESCRIPTIONS[0].replace("{0}", this.passiveAmount + "").replace("{1}", this.evokeAmount + "");
     }
 
     @Override
     public AbstractOrb makeCopy() {
-        return new Hope();
+        return new Polar();
     }
 }

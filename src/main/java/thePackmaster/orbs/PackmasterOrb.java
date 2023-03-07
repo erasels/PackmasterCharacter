@@ -10,8 +10,7 @@ import thePackmaster.orbs.contentcreatorpack.Wanderbot;
 import thePackmaster.orbs.downfallpack.Ghostflame;
 import thePackmaster.orbs.entropy.Oblivion;
 import thePackmaster.orbs.spherespack.Blaze;
-import thePackmaster.orbs.spherespack.Hope;
-import thePackmaster.orbs.spherespack.Scourge;
+import thePackmaster.orbs.spherespack.Polar;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.orbs.summonspack.SwarmOfBees;
@@ -56,8 +55,7 @@ public interface PackmasterOrb {
             }
             if (pack instanceof SpheresPack) {
                 orbs.add(new Blaze());
-                orbs.add(new Scourge());
-                orbs.add(new Hope());
+                orbs.add(new Polar());
             }
         }
 

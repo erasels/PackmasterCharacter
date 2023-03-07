@@ -7,24 +7,17 @@
     "DESCRIPTION": "Orb: Increases amount every turn. When #yEvoked, applies #yIgnite to the enemy with the most HP."
   },
   {
-    "PROPER_NAME": "Scourge",
+    "PROPER_NAME": "Polar",
     "NAMES": [
-      "scourge"
+      "polar"
     ],
-    "DESCRIPTION": "Orb: Applies #yFrostbite to random enemies. When #yEvoked, applies #yWeak and #yVulnerable to ALL enemies."
-  },
-  {
-    "PROPER_NAME": "Hope",
-    "NAMES": [
-      "hope"
-    ],
-    "DESCRIPTION": "Orb: Gives #yInspiration at start of turn. When #yEvoked, gives #yArtifact and #yTemporary #yHP. Not affected by #yFocus."
+    "DESCRIPTION": "Orb: Applies #yFrostbite to random enemies. When #yEvoked, applies #yFrostbite to ALL enemies."
   },
   {
     "PROPER_NAME": "Randomized Orb",
     "NAMES": [
       "randomized\u00a0orb"
     ],
-    "DESCRIPTION": "When this card is created, the orb it channels is randomly chosen from #yLightning, #yDark, #yGhostflame, #yBlaze, and #yScourge."
+    "DESCRIPTION": "When this card is created, the orb it channels is randomly chosen from #yLightning, #yDark, #yGhostflame, #yBlaze, and #yPolar."
   }
 ]

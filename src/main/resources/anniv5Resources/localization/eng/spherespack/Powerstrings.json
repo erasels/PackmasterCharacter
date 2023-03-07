@@ -1,8 +1,4 @@
 {
-  "${ModID}:Hope": {
-    "NAME": "Hope",
-    "DESCRIPTIONS": ["Whenever an Orb is #yEvoked, gain #b{0} #yTemporary #yHP."]
-  },
   "${ModID}:ChaosGenerator": {
     "NAME": "Chaos Generator",
     "DESCRIPTIONS": [

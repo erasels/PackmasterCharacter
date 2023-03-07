@@ -1,27 +1,34 @@
 package thePackmaster.cards.spherespack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
-import com.megacrit.cardcrawl.orbs.Frost;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.util.Wiz;
 
-public class FrostConversion extends AbstractSpheresCard {
-    public static final String ID = SpireAnniversary5Mod.makeID("FrostConversion");
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Fluctuate extends AbstractSpheresCard {
+    public static final String ID = SpireAnniversary5Mod.makeID("Fluctuate");
     private static final int COST = 1;
+    private static final int AMOUNT = 1;
+    private static final int EXTRA_AMOUNT = 1;
+    private static final int UPGRADE_EXTRA_AMOUNT = 1;
 
-    public FrostConversion() {
-        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.isEthereal = true;
+    public Fluctuate() {
+        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        this.magicNumber = this.baseMagicNumber = EXTRA_AMOUNT;
     }
 
     @Override
     public void upp() {
-        this.isEthereal = false;
+        this.upgradeMagicNumber(UPGRADE_EXTRA_AMOUNT);
     }
 
     @Override
@@ -29,9 +36,15 @@ public class FrostConversion extends AbstractSpheresCard {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                this.addToTop(new ChannelAction(new Frost()));
+                int amount = AMOUNT;
                 if (checkUniqueOrbs()) {
-                    this.addToTop(new ChannelAction(new Frost()));
+                    amount += Fluctuate.this.magicNumber;
+                }
+                ArrayList<AbstractMonster> monsters = Wiz.getEnemies();
+                Collections.reverse(monsters);
+                for (AbstractMonster m : monsters) {
+                    Wiz.applyToEnemyTop(m, new WeakPower(m, amount, false));
+                    Wiz.applyToEnemyTop(m, new VulnerablePower(m, amount, false));
                 }
                 this.isDone = true;
             }

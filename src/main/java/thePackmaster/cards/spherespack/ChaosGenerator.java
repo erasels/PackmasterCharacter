@@ -1,13 +1,10 @@
 package thePackmaster.cards.spherespack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
-import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.spherespack.ChaosGeneratorPower;
-import thePackmaster.powers.spherespack.HopePower;
 
 public class ChaosGenerator extends AbstractSpheresCard {
     public static final String ID = SpireAnniversary5Mod.makeID("ChaosGenerator");

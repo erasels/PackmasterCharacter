@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.orbs.Lightning;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.downfallpack.Ghostflame;
 import thePackmaster.orbs.spherespack.Blaze;
-import thePackmaster.orbs.spherespack.Scourge;
+import thePackmaster.orbs.spherespack.Polar;
 
 public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer> {
     public static final String ID = SpireAnniversary5Mod.makeID("Sphere");
@@ -52,7 +52,7 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
     private void updateNameAndDescription() {
         if (this.orb != null) {
             this.name = cardStrings.EXTENDED_DESCRIPTION[0].replace("{0}", this.orb.name());
-            String orbNameForDescription = ((this.orb == SphereOrb.Blaze || this.orb == SphereOrb.Scourge || this.orb == SphereOrb.Ghostflame) ? SpireAnniversary5Mod.modID + ":" : "") + this.orb.name();
+            String orbNameForDescription = ((this.orb == SphereOrb.Blaze || this.orb == SphereOrb.Polar || this.orb == SphereOrb.Ghostflame) ? SpireAnniversary5Mod.modID + ":" : "") + this.orb.name();
             this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[1].replace("{0}", orbNameForDescription);
             this.initializeTitle();
             this.initializeDescription();
@@ -69,8 +69,8 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
                 return new Ghostflame();
             case Blaze:
                 return new Blaze();
-            case Scourge:
-                return new Scourge();
+            case Polar:
+                return new Polar();
             default:
                 return null;
         }
@@ -87,7 +87,7 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
             case 3:
                 return SphereOrb.Blaze;
             case 4:
-                return SphereOrb.Scourge;
+                return SphereOrb.Polar;
             default:
                 return null;
         }
@@ -103,7 +103,7 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
                 return 2;
             case Blaze:
                 return 3;
-            case Scourge:
+            case Polar:
                 return 4;
             default:
                 return null;
@@ -131,6 +131,6 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
         Dark,
         Ghostflame,
         Blaze,
-        Scourge
+        Polar
     }
 }

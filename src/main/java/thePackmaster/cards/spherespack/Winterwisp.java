@@ -8,16 +8,16 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.spherespack.Scourge;
+import thePackmaster.orbs.spherespack.Polar;
 
 public class Winterwisp extends AbstractSpheresCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Winterwisp");
     private static final int COST = 1;
     private static final int DAMAGE = 8;
-    private static final int UPGRADE_DAMAGE = 3;
+    private static final int UPGRADE_DAMAGE = 11;
 
     public Winterwisp() {
-        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
     }
 
@@ -32,8 +32,9 @@ public class Winterwisp extends AbstractSpheresCard {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                if (p.hasEmptyOrb()) {
-                    AbstractOrb newOrb = new Scourge();
+                boolean hasEmptyOrb = p.hasEmptyOrb();
+                AbstractOrb newOrb = new Polar();
+                if (hasEmptyOrb) {
                     addToTop(new AbstractGameAction() {
                         @Override
                         public void update() {
@@ -41,8 +42,8 @@ public class Winterwisp extends AbstractSpheresCard {
                             this.isDone = true;
                         }
                     });
-                    addToTop(new ChannelAction(newOrb));
                 }
+                addToTop(new ChannelAction(newOrb));
                 this.isDone = true;
             }
         });
