@@ -38,9 +38,9 @@ public class Blaze extends CustomOrb {
 
     private final static int BASE_PASSIVE = 3;
 
-    private float sparkTimer = 0.2f;
+    private float vfxTimer = 0.2f;
 
-    private final BobEffect fireBobEffect = new BobEffect(2f, 3f);
+    private final BobEffect bobEffect = new BobEffect(2f, 3f);
 
     public Blaze() {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_PASSIVE, "", "", IMG_PATH);
@@ -83,9 +83,9 @@ public class Blaze extends CustomOrb {
 
     @Override
     public void updateAnimation() {
-        fireBobEffect.update();
+        bobEffect.update();
 
-        sparkTimer -= Gdx.graphics.getDeltaTime();
+        vfxTimer -= Gdx.graphics.getDeltaTime();
 
         cX = MathHelper.orbLerpSnap(cX, adp().animX + tX);
         cY = MathHelper.orbLerpSnap(cY, adp().animY + tY);
@@ -99,11 +99,11 @@ public class Blaze extends CustomOrb {
         c.a = Interpolation.pow2In.apply(1.0F, 0.01F, channelAnimTimer / 0.5F);
         scale = Interpolation.swingIn.apply(Settings.scale, 0.01F, channelAnimTimer / 0.5F);
 
-        if (sparkTimer <= 0) {
+        if (vfxTimer <= 0) {
             AbstractDungeon.effectsQueue.add(
                     new TorchParticleXLEffect(cX + MathUtils.random(-30.0F, 30.0F) * Settings.scale,
                             cY + MathUtils.random(-25.0F, 25.0F) * Settings.scale));
-            sparkTimer = MathUtils.random(0.05f, 0.5f);
+            vfxTimer = MathUtils.random(0.05f, 0.5f);
         }
     }
 
@@ -111,7 +111,7 @@ public class Blaze extends CustomOrb {
     public void render(SpriteBatch sb) {
         sb.setColor(Color.WHITE.cpy());
         sb.setBlendFunction(770, 771);
-        sb.draw(img, cX - SPIRIT_WIDTH /2F, cY - SPIRIT_WIDTH /2F + fireBobEffect.y, SPIRIT_WIDTH /2F, SPIRIT_WIDTH /2F,
+        sb.draw(img, cX - SPIRIT_WIDTH /2F, cY - SPIRIT_WIDTH /2F + bobEffect.y, SPIRIT_WIDTH /2F, SPIRIT_WIDTH /2F,
                 SPIRIT_WIDTH, SPIRIT_WIDTH, scale, scale, 0f, 0, 0, (int) SPIRIT_WIDTH, (int) SPIRIT_WIDTH,
                 false, false);
         this.renderText(sb);
