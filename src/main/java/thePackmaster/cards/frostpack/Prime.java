@@ -29,7 +29,7 @@ public class Prime extends AbstractFrostCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new IncreaseMaxOrbAction(this.magicNumber));
         Wiz.applyToSelf(new FocusPower(p, 1));
-        applyToSelf(new PrimePower(p, this.magicNumber));
+        applyToSelf(new PrimePower(p, 1));
     }
 
     public void upp() {
