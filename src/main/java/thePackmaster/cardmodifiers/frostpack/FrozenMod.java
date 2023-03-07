@@ -29,6 +29,8 @@ public class FrozenMod extends AbstractCardModifier {
     private boolean hadRetain = false;
     private static final Texture tex = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/frozenOverlay.png");
 
+
+
     @Override
     public boolean canPlayCard(AbstractCard card) {
         return false;
@@ -36,6 +38,7 @@ public class FrozenMod extends AbstractCardModifier {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
+
         CardCrawlGame.sound.play("ORB_FROST_CHANNEL", 0.1F);
         originalCost = card.cost;
         card.modifyCostForCombat(1);
@@ -43,6 +46,11 @@ public class FrozenMod extends AbstractCardModifier {
         card.selfRetain = true;
         card.tags.add(SpireAnniversary5Mod.FROZEN);
     }
+
+    public String identifier(AbstractCard card) {
+        return ID;
+    }
+
 
     @Override
     public void onRemove(AbstractCard card) {
