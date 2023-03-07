@@ -31,7 +31,8 @@
   },
   "${ModID}:FrostConversion": {
     "NAME": "Frost Conversion",
-    "DESCRIPTION": "Ethereal. NL If you have 3+ unique Orbs, Channel 1 Frost. NL Channel 1 Frost."
+    "DESCRIPTION": "Ethereal. NL If you have 3+ unique Orbs, Channel 1 Frost. NL Channel 1 Frost.",
+    "UPGRADE_DESCRIPTION": "If you have 3+ unique Orbs, Channel 1 Frost. NL Channel 1 Frost."
   },
   "${ModID}:Fluctuate": {
     "NAME": "Fluctuate",
