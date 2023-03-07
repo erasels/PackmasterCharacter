@@ -15,7 +15,7 @@ public class Ignition extends AbstractSpheresCard {
     private static final int UPGRADE_DAMAGE = 3;
 
     public Ignition() {
-        super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = DAMAGE;
         this.isMultiDamage = true;
     }

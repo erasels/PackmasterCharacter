@@ -35,7 +35,7 @@
   },
   "${ModID}:Fluctuate": {
     "NAME": "Fluctuate",
-    "DESCRIPTION": "Apply 1 Weak and Vulnerable to ALL enemies. NL If you have 3+ unique Orbs, increase the amount by !M!."
+    "DESCRIPTION": "Apply 1 Weak and Vulnerable to ALL enemies. NL If you have 3+ unique Orbs, apply !M! more."
   },
   "${ModID}:VoidEngine": {
     "NAME": "Void Engine",
