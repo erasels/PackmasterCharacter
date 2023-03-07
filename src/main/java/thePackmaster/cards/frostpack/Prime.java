@@ -7,12 +7,16 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.frostpack.FrozenMod;
+import thePackmaster.powers.frostpack.ExtendedStallPower;
+import thePackmaster.powers.frostpack.PrimePower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class Prime extends AbstractFrostCard {
     public final static String ID = makeID("Prime");
@@ -24,6 +28,8 @@ public class Prime extends AbstractFrostCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new IncreaseMaxOrbAction(this.magicNumber));
+        Wiz.applyToSelf(new FocusPower(p, 1));
+        applyToSelf(new PrimePower(p, this.magicNumber));
     }
 
     public void upp() {
