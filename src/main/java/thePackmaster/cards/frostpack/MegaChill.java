@@ -34,7 +34,7 @@ public class MegaChill extends AbstractFrostCard {
                     if (c.hasTag(FROZEN)){
                         Wiz.atb(new ChannelAction(new Frost()));
                     } else {
-                        if (!c.hasTag(SpireAnniversary5Mod.FROZEN)) Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c));
+                        Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c));
                     }
                 }
             }
