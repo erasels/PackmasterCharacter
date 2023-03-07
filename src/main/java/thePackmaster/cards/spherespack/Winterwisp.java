@@ -14,7 +14,7 @@ public class Winterwisp extends AbstractSpheresCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Winterwisp");
     private static final int COST = 1;
     private static final int DAMAGE = 8;
-    private static final int UPGRADE_DAMAGE = 11;
+    private static final int UPGRADE_DAMAGE = 3;
 
     public Winterwisp() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
