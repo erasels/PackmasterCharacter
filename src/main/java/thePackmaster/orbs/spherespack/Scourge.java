@@ -77,12 +77,13 @@ public class Scourge extends CustomOrb {
 
     @Override
     public void onEvoke() {
-        if (this.evokeAmount > 0) {
+        int amount = this.evokeAmount + 1 / 2;
+        if (amount > 0) {
             ArrayList<AbstractMonster> monsters = Wiz.getEnemies();
             Collections.reverse(monsters);
             for (AbstractMonster m : monsters) {
-                Wiz.applyToEnemyTop(m, new VulnerablePower(m, this.evokeAmount, false));
-                Wiz.applyToEnemyTop(m, new WeakPower(m, this.evokeAmount, false));
+                Wiz.applyToEnemyTop(m, new VulnerablePower(m, amount, false));
+                Wiz.applyToEnemyTop(m, new WeakPower(m, amount, false));
             }
         }
     }
