@@ -36,7 +36,7 @@ public class GainCannonballModifier extends AbstractMadScienceModifier {
     @Override
     public void onInitialApplication(AbstractCard card) {
         super.onInitialApplication(card);
-        if (card.cardsToPreview != null) {
+        if (card.cardsToPreview == null) {
             AbstractCard c = new Cannonball();
             if (value>0) c.upgrade();
             card.cardsToPreview = c;
