@@ -47,6 +47,6 @@ public class FrostConversion extends AbstractSpheresCard {
     }
 
     private static boolean checkUniqueOrbs() {
-        return AbstractDungeon.player.orbs.stream().filter(o -> !(o instanceof EmptyOrbSlot)).map(o -> o.ID).distinct().count() > 3;
+        return AbstractDungeon.player.orbs.stream().filter(o -> !(o instanceof EmptyOrbSlot)).map(o -> o.ID).distinct().count() >= 3;
     }
 }
