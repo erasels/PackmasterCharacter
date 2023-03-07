@@ -83,6 +83,19 @@
       "观者面纱"
     ]
   },
+  "${ModID}:BulwarkPack": {
+    "TEXT": [
+      "堡垒",
+      "尖塔最为优秀的防御工具，首次被整合在一起。",
+      "modargo"
+    ]
+  },
+  "${ModID}:BulwarkPackHat": {
+    "TEXT": [
+      "TBD",
+      "TBD"
+    ]
+  },
   "${ModID}:PackMainMenuUI": {
     "TEXT": [
       "自定义构筑模式",
