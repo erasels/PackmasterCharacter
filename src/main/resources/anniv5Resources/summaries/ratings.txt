@@ -65,6 +65,7 @@ SentinelPack	4	4	2	4	2
 SerpentinePack	4	1	3	2	4
 ShamanPack	4	3	2	1	4
 SilentPack	3	3	4	3	3
+SpheresPack	4	3	1	4	3
 SneckoPack	3	1	4	3	2
 StatusPack	4	2	5	5	3
 StrikesPack	4	1	2	4	1
