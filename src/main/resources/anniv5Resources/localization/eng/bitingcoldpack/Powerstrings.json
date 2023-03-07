@@ -6,16 +6,26 @@
       " HP and this is halved. Whenever this creature receives attack damage, apply #b1 #yFrostbite."
     ]
   },
-  "${ModID}:ColdSeasonPower": {
-    "NAME": "Cold Season",
-    "DESCRIPTIONS": ["Whenever an enemy loses HP from #yFrostbite, apply #b", " #yFrostbite."]
-  },
   "${ModID}:FrigidBodyPower": {
     "NAME": "Frigid Body",
-    "DESCRIPTIONS": ["Whenever you are attacked this turn, apply #yFrostbite equal to blocked damage received."]
+    "DESCRIPTIONS": [
+      "Whenever you are attacked this turn,",
+      "For #b",
+      " turns, whenever you are attacked,",
+      " apply #yFrostbite equal to blocked damage received."
+    ]
   },
   "${ModID}:GlaciatePower": {
     "NAME": "Glaciate",
     "DESCRIPTIONS": ["Whenever you apply #yFrostbite, gain #b", " #yVigor."]
+  },
+  "${ModID}:SnowedInPower": {
+    "NAME": "Snowed In",
+    "DESCRIPTIONS": [
+      "This enemy's #yFrostbite is not halved ",
+      "this turn.",
+      "for #b",
+      " turns."
+    ]
   }
 }

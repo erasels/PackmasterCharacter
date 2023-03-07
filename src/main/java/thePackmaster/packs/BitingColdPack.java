@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.bitingcoldpack.*;
+import thePackmaster.powers.bitingcoldpack.SnowedInPower;
 
 import java.util.ArrayList;
 
@@ -21,7 +22,6 @@ public class BitingColdPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(ColdSeason.ID);
         cards.add(FrigidBody.ID);
         cards.add(Frostburn.ID);
         cards.add(Glaciate.ID);
@@ -30,6 +30,7 @@ public class BitingColdPack extends AbstractCardPack {
         cards.add(InsultToInjury.ID);
         cards.add(Refrigerate.ID);
         cards.add(RelentlessHail.ID);
+        cards.add(SnowedIn.ID);
         cards.add(Subdue.ID);
         return cards;
     }
