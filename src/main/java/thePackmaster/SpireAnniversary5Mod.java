@@ -295,6 +295,7 @@ public class SpireAnniversary5Mod implements
 
         try {
             Properties defaults = new Properties();
+            defaults.put("PackmasterCustomDraftEnabled", "FALSE");
             defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, CHOICE, CHOICE, CHOICE));
             defaults.put("PackmasterUnlockedHats", "");
             defaults.put("PackmasterAllPacksMode", "FALSE");
@@ -308,6 +309,21 @@ public class SpireAnniversary5Mod implements
             loadModConfigData();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public static boolean getCustomDraftEnabled() {
+        if (modConfig == null) return false;
+        return modConfig.getBool("PackmasterCustomDraftEnabled");
+    }
+
+    public static void saveCustomDraftEnabled(boolean enabled) {
+        try {
+            if (modConfig == null) return;
+            modConfig.setBool("PackmasterCustomDraftEnabled", enabled);
+            modConfig.save();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
