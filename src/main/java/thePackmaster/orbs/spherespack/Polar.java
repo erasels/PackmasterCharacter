@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
+import com.megacrit.cardcrawl.vfx.combat.FrostOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.FrostOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import thePackmaster.SpireAnniversary5Mod;
@@ -53,7 +54,7 @@ public class Polar extends CustomOrb {
 
     @Override
     public void playChannelSFX() {
-        CardCrawlGame.sound.play("SOTE_SFX_FireIgnite_2_v1.ogg", 0.1f);
+        CardCrawlGame.sound.play("ORB_FROST_CHANNEL", -0.1F);
     }
 
     @Override
@@ -86,8 +87,8 @@ public class Polar extends CustomOrb {
 
     @Override
     public void triggerEvokeAnimation() {
-        CardCrawlGame.sound.play("ORB_DARK_EVOKE", 0.1F);
-        AbstractDungeon.effectsQueue.add(new DarkOrbActivateEffect(this.cX, this.cY));
+        CardCrawlGame.sound.play("ORB_FROST_EVOKE", -0.1F);
+        AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(this.cX, this.cY));
     }
 
     @Override
