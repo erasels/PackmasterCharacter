@@ -8,8 +8,8 @@
   },
   "${ModID}:FrostPackHat": {
     "TEXT": [
-      "Sometimes less is more.",
-      "Hatless"
+      "The new face of the Packmaster. Thanks for playing.",
+      "Frostface"
     ]
   }
 }
