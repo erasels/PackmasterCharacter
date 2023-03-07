@@ -52,7 +52,8 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
     private void updateNameAndDescription() {
         if (this.orb != null) {
             this.name = cardStrings.EXTENDED_DESCRIPTION[0].replace("{0}", this.orb.name());
-            this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[1].replace("{0}", this.orb.name());
+            String orbNameForDescription = ((this.orb == SphereOrb.Blaze || this.orb == SphereOrb.Scourge) ? SpireAnniversary5Mod.modID + ":" : "") + this.orb.name();
+            this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[1].replace("{0}", orbNameForDescription);
             this.initializeTitle();
             this.initializeDescription();
         }
