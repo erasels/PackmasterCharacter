@@ -17,7 +17,8 @@
   },
   "${ModID}:Refrigerate": {
     "NAME": "Refrigerate",
-    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite."
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Frostbite. NL If the enemy already had ${ModID}:Frostbite, they lose HP equal to it. NL Exhaust."
   },
   "${ModID}:IceShatter": {
     "NAME": "Ice Shatter",
