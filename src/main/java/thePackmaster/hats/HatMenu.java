@@ -138,6 +138,8 @@ public class HatMenu {
                 showRainbowButton = true;
             } else if ("Base".equals(lastPickedId) && currentlyUnlockedRainbows.contains(CoreSetPack.ID)) {
                 showRainbowButton = true;
+            } else if ("Random".equals(lastPickedId) && !currentlyUnlockedRainbows.isEmpty()) {
+                showRainbowButton = true;
             } else {
                 showRainbowButton = false;
                 if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
@@ -207,9 +209,10 @@ public class HatMenu {
     }
 
     public static void randomizeHat() {
-        currentHat = Wiz.getRandomItem(currentlyUnlockedHats);
-        if (!currentlyUnlockedRainbows.contains(currentHat)) {
-            SpireAnniversary5Mod.isHatRainbow = false;
+        if (rainbowButton.toggle.enabled) {
+            currentHat = Wiz.getRandomItem(currentlyUnlockedRainbows);
+        } else {
+            currentHat = Wiz.getRandomItem(currentlyUnlockedHats);
         }
         Hats.addHat(true, currentHat);
         SpireAnniversary5Mod.logger.info("Randomizer chose hat: " + currentHat);
