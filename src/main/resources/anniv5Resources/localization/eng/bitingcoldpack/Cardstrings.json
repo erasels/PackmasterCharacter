@@ -1,8 +1,4 @@
 {
-  "${ModID}:ColdSeason": {
-    "NAME": "Cold Season",
-    "DESCRIPTION": "Whenever an enemy loses HP from ${ModID}:Frostbite, apply !M! ${ModID}:Frostbite."
-  },
   "${ModID}:FrigidBody": {
     "NAME": "Frigid Body",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply ${ModID}:Frostbite equal to blocked damage."
@@ -34,6 +30,10 @@
   "${ModID}:RelentlessHail": {
     "NAME": "Relentless Hail",
     "DESCRIPTION": "Deal !D! damage !M! times."
+  },
+  "${ModID}:SnowedIn": {
+    "NAME": "Snowed In",
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite. NL The enemy's ${ModID}:Frostbite is not halved this turn. NL Exhaust."
   },
   "${ModID}:Subdue": {
     "NAME": "Subdue",
