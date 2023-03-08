@@ -29,7 +29,12 @@
   },
   "${ModID}:StrengthPredictMod": {
     "TEXT": [
-      "Gain !anniv5:sM! Strength."
+      "Gain !anniv5:m2! Strength."
+    ]
+  },
+  "${ModID}:BlockPredictMod": {
+    "TEXT": [
+      "Gain !B! Block."
     ]
   }
 }

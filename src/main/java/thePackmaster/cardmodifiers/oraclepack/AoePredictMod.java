@@ -33,6 +33,7 @@ public class AoePredictMod extends AbstractPredictMod {
         card.baseDamage = amount;
         ((Prophecy)card).setMultiDamage();
         ((Prophecy)card).setType(AbstractCard.CardType.ATTACK);
+        ((Prophecy)card).addTarget(AbstractCard.CardTarget.ALL_ENEMY);
     }
 
     @Override
@@ -42,7 +43,9 @@ public class AoePredictMod extends AbstractPredictMod {
 
     @Override
     public void updateAmount(AbstractCard card, int newAmount) {
-        card.baseDamage = amount;
+        card.baseDamage = newAmount;
+        amount = newAmount;
+        priority = -4;
     }
 
     @Override

@@ -24,11 +24,13 @@ public class StrengthPredictMod extends AbstractPredictMod {
 
     public StrengthPredictMod(int amount) {
         this.amount = amount;
+        priority = 10; //try to always have strength happen last
     }
 
     @Override
     public void onInitialApplication(AbstractCard card) {
         ((Prophecy)card).baseSecondMagic = ((Prophecy)card).secondMagic = amount;
+        ((Prophecy)card).addTarget(AbstractCard.CardTarget.SELF);
     }
 
     @Override
@@ -39,6 +41,7 @@ public class StrengthPredictMod extends AbstractPredictMod {
     @Override
     public void updateAmount(AbstractCard card, int newAmount) {
         ((Prophecy)card).baseSecondMagic = ((Prophecy)card).secondMagic = newAmount;
+        amount = newAmount;
     }
 
     @Override
@@ -50,4 +53,5 @@ public class StrengthPredictMod extends AbstractPredictMod {
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         Wiz.atb(new ApplyPowerAction(Wiz.adp(),Wiz.adp(), new StrengthPower(Wiz.adp(), ((Prophecy)card).secondMagic)));
     }
+
 }

@@ -26,21 +26,24 @@ public class BlockPredictMod extends AbstractPredictMod {
 
     public BlockPredictMod(int amount) {
         this.amount = amount;
+        priority = -10; //try to make block happen first
     }
 
     @Override
     public void onInitialApplication(AbstractCard card) {
         card.baseBlock = amount;
+        ((Prophecy)card).addTarget(AbstractCard.CardTarget.SELF);
     }
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new AoePredictMod(amount);
+        return new BlockPredictMod(amount);
     }
 
     @Override
     public void updateAmount(AbstractCard card, int newAmount) {
-        card.baseBlock = amount;
+        card.baseBlock = newAmount;
+        amount = newAmount;
     }
 
     @Override

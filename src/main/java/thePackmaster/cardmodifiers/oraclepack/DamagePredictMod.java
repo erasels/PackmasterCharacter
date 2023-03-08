@@ -31,6 +31,7 @@ public class DamagePredictMod extends AbstractPredictMod {
     public void onInitialApplication(AbstractCard card) {
         ((Prophecy)card).baseSecondDamage = amount;
         ((Prophecy)card).setType(AbstractCard.CardType.ATTACK);
+        ((Prophecy)card).addTarget(AbstractCard.CardTarget.ENEMY);
     }
 
     @Override
@@ -40,7 +41,9 @@ public class DamagePredictMod extends AbstractPredictMod {
 
     @Override
     public void updateAmount(AbstractCard card, int newAmount) {
-        ((Prophecy)card).baseSecondDamage = amount;
+        ((Prophecy)card).baseSecondDamage = newAmount;
+        amount = newAmount;
+        priority = -5;
     }
 
     @Override

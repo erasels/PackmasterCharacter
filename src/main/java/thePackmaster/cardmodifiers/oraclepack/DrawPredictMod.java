@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.oraclepack.Prophecy;
 import thePackmaster.util.Wiz;
 
 public class DrawPredictMod extends AbstractPredictMod {
@@ -23,11 +24,13 @@ public class DrawPredictMod extends AbstractPredictMod {
 
     public DrawPredictMod(int amount) {
         this.amount = amount;
+        priority = -1;
     }
 
     @Override
     public void onInitialApplication(AbstractCard card) {
         card.baseMagicNumber = card.magicNumber = amount;
+        ((Prophecy)card).addTarget(AbstractCard.CardTarget.SELF);
     }
 
     @Override
@@ -37,7 +40,8 @@ public class DrawPredictMod extends AbstractPredictMod {
 
     @Override
     public void updateAmount(AbstractCard card, int newAmount) {
-        card.baseMagicNumber = card.magicNumber = amount;
+        card.baseMagicNumber = card.magicNumber = newAmount;
+        amount = newAmount;
     }
 
     @Override
