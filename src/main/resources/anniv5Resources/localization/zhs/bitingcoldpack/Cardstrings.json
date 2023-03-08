@@ -34,5 +34,9 @@
   "${ModID}:Subdue": {
     "NAME": "制服",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本场战斗打出的上张牌为攻击，再获得一次。"
+  },
+  "${ModID}:SnowedIn": {
+    "NAME": "积雪",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:霜噬 。 NL 本回合目标 ${ModID}:霜噬 不减半。 NL 消耗 。"
   }
 }
