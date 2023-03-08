@@ -8,6 +8,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class Refrigerate extends BitingColdCard {
+    // TODO: Update this
     public final static String ID = makeID("Refrigerate");
 
     public Refrigerate() {

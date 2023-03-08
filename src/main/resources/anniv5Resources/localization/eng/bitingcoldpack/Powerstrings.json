@@ -19,6 +19,13 @@
     "NAME": "Glaciate",
     "DESCRIPTIONS": ["Whenever you apply #yFrostbite, gain #b", " #yVigor."]
   },
+  "${ModID}:IceShatterPower": {
+    "NAME": "Ice Shatter",
+    "DESCRIPTIONS": [
+      "Whenever this enemy loses HP during their next turn, deal #b",
+      " damage."
+    ]
+  },
   "${ModID}:SnowedInPower": {
     "NAME": "Snowed In",
     "DESCRIPTIONS": [

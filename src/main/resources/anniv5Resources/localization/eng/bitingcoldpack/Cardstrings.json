@@ -7,17 +7,9 @@
     "NAME": "Frostburn",
     "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add a *Burn into your discard pile."
   },
-  "${ModID}:Glaciate": {
-    "NAME": "Glaciate",
-    "DESCRIPTION": "Whenever you apply ${ModID}:Frostbite, gain !M! Vigor."
-  },
   "${ModID}:GrowingAffliction": {
     "NAME": "Growing Affliction",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you apply a debuff, return this from the discard pile to your hand."
-  },
-  "${ModID}:IcicleSpear": {
-    "NAME": "Icicle Spear",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Frostbite."
   },
   "${ModID}:InsultToInjury": {
     "NAME": "Insult to Injury",
@@ -27,13 +19,13 @@
     "NAME": "Refrigerate",
     "DESCRIPTION": "Apply !M! ${ModID}:Frostbite."
   },
-  "${ModID}:RelentlessHail": {
-    "NAME": "Relentless Hail",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+  "${ModID}:IceShatter": {
+    "NAME": "Ice Shatter",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever the enemy loses HP during their next turn, deal !M! damage."
   },
   "${ModID}:SnowedIn": {
     "NAME": "Snowed In",
-    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite. NL The enemy's ${ModID}:Frostbite is not halved this turn. NL Exhaust."
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite. NL The enemy's ${ModID}:Frostbite is not halved this turn."
   },
   "${ModID}:Subdue": {
     "NAME": "Subdue",
