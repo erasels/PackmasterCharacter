@@ -22,11 +22,6 @@ public class Prophecy extends AbstractOracleCard {
         exhaust = true;
     }
 
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        // If adp has self fulfillment power, exhaust = false
-    }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {

@@ -31,6 +31,8 @@ public class OraclePack extends AbstractCardPack {
         cards.add(ReadTheSigns.ID);
         cards.add(SeeingTheThreads.ID);
         cards.add(Untanglement.ID);
+        cards.add(ButterflyEffect.ID);
+        cards.add(SelfFulfillment.ID);
         return cards;
     }
 }

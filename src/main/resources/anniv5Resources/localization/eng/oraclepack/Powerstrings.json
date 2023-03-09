@@ -1,0 +1,23 @@
+{
+  "${ModID}:SelfFulfillmentPower": {
+    "NAME": "Self Fulfillment",
+    "DESCRIPTIONS": [
+      "Your #yProphecies do not #yExhaust."
+    ]
+  },
+  "${ModID}:ButterflyEffectPower": {
+    "NAME": "Butterfly Effect",
+    "DESCRIPTIONS": [
+      "This turn, when you play an Attack, draw #b",
+      "card.",
+      "cards."
+    ]
+  },
+  "${ModID}:FlowOfTimePower": {
+    "NAME": "Flow of Time",
+    "DESCRIPTIONS": [
+      "Whenever you shuffle your discard pile into your draw pile, draw #b",
+      "cards."
+    ]
+  }
+}

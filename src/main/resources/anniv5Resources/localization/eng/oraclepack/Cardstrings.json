@@ -30,5 +30,17 @@
   "${ModID}:Doomsayer": {
     "NAME": "Doomsayer",
     "DESCRIPTION": "${ModID}:Predict : Deal !M! damage to ALL enemies."
+  },
+  "${ModID}:SelfFulfillment": {
+    "NAME": "Self Fulfillment",
+    "DESCRIPTION": "{@@}{!Upgrades!|<1=Ethereal. NL }Your *Prophecies no longer Exhaust."
+  },
+  "${ModID}:ButterflyEffect": {
+    "NAME": "Butterfly Effect",
+    "DESCRIPTION": "{@@}This turn, whenever you play an Attack, put a random card from your draw pile into your hand.{!Upgrades!|<1= NL Exhaust.}"
+  },
+  "${ModID}:FlowOfTime": {
+    "NAME": "Flow Of Time",
+    "DESCRIPTION": "Whenever you shuffle your discard pile into your draw pile, draw !M! cards."
   }
 }
