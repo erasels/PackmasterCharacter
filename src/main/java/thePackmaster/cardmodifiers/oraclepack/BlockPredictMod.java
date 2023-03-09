@@ -48,7 +48,7 @@ public class BlockPredictMod extends AbstractPredictMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return strings.TEXT[0] + rawDescription;
+        return strings.TEXT[0] + " NL " + rawDescription;
     }
 
     @Override

@@ -50,7 +50,7 @@ public class AoePredictMod extends AbstractPredictMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + " NL " + strings.TEXT[0];
+        return strings.TEXT[0] + " NL " + rawDescription;
     }
 
     @Override

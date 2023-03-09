@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.apache.logging.log4j.util.TriConsumer;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.function.BiConsumer;
@@ -18,6 +19,13 @@ public class Prophecy extends AbstractOracleCard {
 
     public Prophecy() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE);
+        exhaust = true;
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        // If adp has self fulfillment power, exhaust = false
     }
 
     @Override
@@ -32,7 +40,7 @@ public class Prophecy extends AbstractOracleCard {
 
     public void setType(CardType type) {
         this.type = type;
-
+        //change the image
     }
 
     public void addTarget(CardTarget t) {

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.odditiespack.*;
+import thePackmaster.cards.oraclepack.*;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,13 @@ public class OraclePack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(Strike_Red.ID);
+        cards.add(AppeaseFate.ID);
+        cards.add(BadOmen.ID);
+        cards.add(BrowsingFate.ID);
+        cards.add(Doomsayer.ID);
+        cards.add(ReadTheSigns.ID);
+        cards.add(SeeingTheThreads.ID);
+        cards.add(Untanglement.ID);
         return cards;
     }
 }

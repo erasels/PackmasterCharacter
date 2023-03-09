@@ -17,6 +17,18 @@
   },
   "${ModID}:Prophecy": {
     "NAME": "Prophecy",
-    "DESCRIPTION": ""
+    "DESCRIPTION": "Exhaust."
+  },
+  "${ModID}:Untanglement": {
+    "NAME": "Untanglement",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Predict : Draw !M! cards."
+  },
+  "${ModID}:BrowsingFate": {
+    "NAME": "Browsing Fate",
+    "DESCRIPTION": "Discard your hand. NL Scry !M!. NL Draw !M! cards."
+  },
+  "${ModID}:Doomsayer": {
+    "NAME": "Doomsayer",
+    "DESCRIPTION": "${ModID}:Predict : Deal !M! damage to ALL enemies."
   }
 }
