@@ -5,9 +5,7 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.util.Wiz;
 
@@ -17,7 +15,7 @@ public class RevertCostWhenPlayedMod extends AbstractCardModifier {
 
     private int originalCost;
 
-    public RevertCostWhenPlayedMod(int costIn){
+    public RevertCostWhenPlayedMod(int costIn) {
         this.originalCost = costIn;
     }
 
@@ -35,7 +33,6 @@ public class RevertCostWhenPlayedMod extends AbstractCardModifier {
         });
 
     }
-
 
 
     public AbstractCardModifier makeCopy() {

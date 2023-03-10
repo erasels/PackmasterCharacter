@@ -1,7 +1,6 @@
 package thePackmaster.packs;
 
 import com.megacrit.cardcrawl.cards.blue.Blizzard;
-import com.megacrit.cardcrawl.cards.blue.Chill;
 import com.megacrit.cardcrawl.cards.blue.ColdSnap;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -19,7 +18,7 @@ public class FrostPack extends AbstractCardPack {
 
     public FrostPack() {
         super(ID, NAME, DESC, AUTHOR);
-        hatHidesHair=true;
+        hatHidesHair = true;
     }
 
     @Override

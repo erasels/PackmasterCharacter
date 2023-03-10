@@ -5,12 +5,5 @@
       "freeze"
     ],
     "DESCRIPTION": "Grant a card Unplayable and Retain and raise its cost by 1. Reduce its cost by 1 at the end of each turn. Becomes Unfrozen when its cost reaches 0, and remains 0 until the card is played."
-  },
-  {
-    "PROPER_NAME": "Frostfire",
-    "NAMES": [
-      "frostfire"
-    ],
-    "DESCRIPTION": "Orb: Gains #yBlock and deals damage to a random enemy. Counts as a Frost orb."
   }
 ]
