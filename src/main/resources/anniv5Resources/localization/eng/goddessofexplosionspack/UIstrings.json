@@ -1,0 +1,29 @@
+{
+  "${ModID}:GoddessOfExplosionsPack": {
+    "TEXT": [
+      "Goddess of Explosions",
+      "POWER! VALUE! EXPLOSIONS! NL Strong scaling, powers and non-attack damage.",
+      "AlexMdle",
+      "#yGoddess #yof #yExplosions originally created by #yLudosity"
+    ]
+  },
+  "${ModID}:HandpickUI": {
+    "TEXT": [
+      "play twice.",
+      "turn into a bomb."
+    ]
+  },
+  "${ModID}:KillerQueenTooltip": {
+    "TEXT": [
+      "Killer Queen",
+      "When played, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "${ModID}:GoddessOfExplosionsPackHat": {
+    "TEXT": [
+      "Should have specified where you want those wings.",
+      "Apotheosis"
+    ]
+  }
+}
