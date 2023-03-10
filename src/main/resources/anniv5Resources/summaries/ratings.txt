@@ -31,6 +31,7 @@ EntropyPack	4	2	2	3	3
 EvenOddPack	3	3	4	4	3
 FarmerPack	3	2	3	2	1
 GemsPack	1	1	5	1	4
+GoddessOfExplosionsPack	5	2	3	1	5
 GoWithTheFlowPack	3	3	4	3	2
 GrandOpeningPack	2	2	3	3	2
 GraveyardPack	3	1	4	3	4
