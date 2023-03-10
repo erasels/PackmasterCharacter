@@ -67,7 +67,7 @@ public class Polar extends CustomOrb {
     @Override
     public void onStartOfTurn() {
         float speedTime = Settings.FAST_MODE ? 0.0F : 0.6F / (float)AbstractDungeon.player.orbs.size();
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.DARK), speedTime));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), speedTime));
         AbstractMonster m = Wiz.getRandomEnemy();
         if (m != null && this.passiveAmount > 0) {
             Wiz.applyToEnemy(m, new FrostbitePower(m, this.passiveAmount));
