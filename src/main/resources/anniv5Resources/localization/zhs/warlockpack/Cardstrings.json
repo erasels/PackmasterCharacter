@@ -40,7 +40,7 @@
   },
   "${ModID}:TheSoularium": {
     "NAME": "莫瑞甘的灵界",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 将其附加 虚无 。 NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌， NL 将其附加 虚无 。 NL 消耗 。"
   },
   "${ModID}:RunedMithrilRod": {
     "NAME": "符文秘银杖",
