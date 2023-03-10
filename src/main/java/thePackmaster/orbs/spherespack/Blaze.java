@@ -18,12 +18,12 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
-import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
-import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.scene.TorchParticleXLEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
+import thePackmaster.vfx.spherespack.BlazeOrbActivateEffect;
+import thePackmaster.vfx.spherespack.BlazeOrbFlareEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 import static thePackmaster.util.Wiz.adp;
@@ -62,7 +62,7 @@ public class Blaze extends CustomOrb {
     @Override
     public void onEndOfTurn() {
         float speedTime = Settings.FAST_MODE ? 0.0F : 0.6F / (float)AbstractDungeon.player.orbs.size();
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.DARK), speedTime));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new BlazeOrbFlareEffect(this), speedTime));
         this.evokeAmount += this.passiveAmount;
         this.updateDescription();
     }
@@ -78,7 +78,7 @@ public class Blaze extends CustomOrb {
     @Override
     public void triggerEvokeAnimation() {
         CardCrawlGame.sound.play("SOTE_SFX_FireIgnite_2_v1.ogg", 0.1f);
-        AbstractDungeon.effectsQueue.add(new DarkOrbActivateEffect(this.cX, this.cY));
+        AbstractDungeon.effectsQueue.add(new BlazeOrbActivateEffect(this.cX, this.cY));
     }
 
     @Override
