@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.goddessofexplosionspack.ChainReactionPower;
+import thePackmaster.powers.goddessofexplosionspack.FalloutPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -28,7 +28,7 @@ public class ChainReaction extends AbstractGoddessOfExplosionsCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.atb(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        Wiz.atb(new ApplyPowerAction(m,p, new ChainReactionPower(m,magicNumber),magicNumber,true));
+        Wiz.atb(new ApplyPowerAction(m,p, new FalloutPower(m,magicNumber),magicNumber,true));
     }
 
     @Override

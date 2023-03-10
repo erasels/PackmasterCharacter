@@ -1,6 +1,6 @@
 {
-  "${ModID}:ChainReactionPower": {
-    "NAME": "Chain Reaction",
+  "${ModID}:FalloutPower": {
+    "NAME": "Fallout",
     "DESCRIPTIONS": [
       "Whenever you play a #yPower, the targeted enemy takes #b",
       " damage."

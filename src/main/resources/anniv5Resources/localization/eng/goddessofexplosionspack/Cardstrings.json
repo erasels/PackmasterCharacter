@@ -1,7 +1,7 @@
 {
   "${ModID}:ChainReaction": {
     "NAME": "Chain Reaction",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a Power, the enemy takes !M! damage."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Fallout."
   },
   "${ModID}:WaveMotionCannon": {
     "NAME": "Wave Motion Cannon",
