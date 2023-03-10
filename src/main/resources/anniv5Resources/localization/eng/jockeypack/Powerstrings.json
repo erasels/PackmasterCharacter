@@ -3,7 +3,9 @@
     "NAME": "Derby",
     "DESCRIPTIONS": [
       "At the end of your turn, if you played #b6 or more cards, gain #b",
-      " #yStrength."
+      " #yStrength. ",
+      "Played #b",
+      " cards this turn."
     ]
   },
   "${ModID}:GiddyapPower": {
