@@ -13,7 +13,7 @@ public class Horse extends AbstractPackmasterCard {
     // intellij stuff skill, self, special, , , , , 2, 1
 
     public Horse() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
     }

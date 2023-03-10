@@ -3,7 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.jockeypack.Horse;
+import thePackmaster.cards.jockeypack.*;
 
 import java.util.ArrayList;
 
@@ -22,6 +22,16 @@ public class JockeyPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(Horse.ID);
+        cards.add(StartingGun.ID);
+        cards.add(Trample.ID);
+        cards.add(TakeTheLead.ID);
+        cards.add(ReinIn.ID);
+        cards.add(Homestretch.ID);
+        cards.add(LuckyHorseshoe.ID);
+        cards.add(Derby.ID);
+        cards.add(Giddyap.ID);
+        cards.add(TheSpin.ID);
+        cards.add(OffToTheRaces.ID);
         return cards;
     }
 }

@@ -2,14 +2,13 @@ package thePackmaster.cards.jockeypack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.arcanapack.HangedPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.makeInHand;
 
-public class Homestretch extends AbstractPackmasterCard {
+public class Homestretch extends AbstractJockeyCard {
     public final static String ID = makeID("Homestretch");
     // intellij stuff skill, self, uncommon, , , , , 2, 1
 

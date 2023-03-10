@@ -4,12 +4,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ChokePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
-public class Trample extends AbstractPackmasterCard {
+public class Trample extends AbstractJockeyCard {
     public final static String ID = makeID("Trample");
     // intellij stuff skill, enemy, common, , , , , 2, 
 

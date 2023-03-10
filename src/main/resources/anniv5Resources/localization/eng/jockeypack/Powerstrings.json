@@ -1,0 +1,24 @@
+{
+  "${ModID}:DerbyPower": {
+    "NAME": "Derby",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if you played #b6 or more cards, gain #b",
+      " #yStrength."
+    ]
+  },
+  "${ModID}:GiddyapPower": {
+    "NAME": "Giddyap",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b1 #yHorse into your hand.",
+      "At the start of your turn, add #b",
+      " #yHorses into your hand."
+    ]
+  },
+  "${ModID}:OffToTheRacesPower": {
+    "NAME": "Off to the Races",
+    "DESCRIPTIONS": [
+      "This turn, whenever you play a card, gain #b",
+      " #yStrength."
+    ]
+  }
+}

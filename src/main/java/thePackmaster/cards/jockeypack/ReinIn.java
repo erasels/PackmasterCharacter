@@ -1,28 +1,29 @@
 package thePackmaster.cards.jockeypack;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.cthulhupack.NamelessMistPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
+import static thePackmaster.util.Wiz.atb;
 
-public class ReinIn extends AbstractPackmasterCard {
+public class ReinIn extends AbstractJockeyCard {
     public final static String ID = makeID("ReinIn");
     // intellij stuff skill, self, uncommon, , , 2, 1, , 
 
     public ReinIn() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 2;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-        applyToSelf(new NamelessMistPower(p, block));
+        atb(new DrawCardAction(1));
+        applyToSelf(new NamelessMistPower(p, magicNumber));
     }
 
     public void upp() {
-        upgradeBlock(1);
+        upgradeMagicNumber(1);
     }
 }

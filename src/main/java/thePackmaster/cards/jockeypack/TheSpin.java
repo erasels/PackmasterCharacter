@@ -4,12 +4,11 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class TheSpin extends AbstractPackmasterCard {
+public class TheSpin extends AbstractJockeyCard {
     public final static String ID = makeID("TheSpin");
     // intellij stuff attack, enemy, rare, 4, 1, , , , 
 
@@ -28,9 +27,29 @@ public class TheSpin extends AbstractPackmasterCard {
                 }
             }
         });
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
     }
 
-    //TODO: Annoying text thing
+    public void applyPowers() {
+        super.applyPowers();
+        int count = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
+
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + count;
+        if (count == 1) {
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
+        } else {
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
+        }
+
+        this.initializeDescription();
+    }
+
+    public void onMoveToDiscard() {
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
+    }
 
     public void upp() {
         upgradeDamage(1);

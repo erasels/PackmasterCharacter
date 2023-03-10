@@ -4,12 +4,11 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class TakeTheLead extends AbstractPackmasterCard {
+public class TakeTheLead extends AbstractJockeyCard {
     public final static String ID = makeID("TakeTheLead");
     // intellij stuff attack, enemy, common, 5, 2, , , , 
 

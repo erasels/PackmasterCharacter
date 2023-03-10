@@ -2,12 +2,13 @@ package thePackmaster.cards.jockeypack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import thePackmaster.powers.jockeypack.OffToTheRacesPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToSelf;
 
-public class OffToTheRaces extends AbstractPackmasterCard {
+public class OffToTheRaces extends AbstractJockeyCard {
     public final static String ID = makeID("OffToTheRaces");
     // intellij stuff power, self, rare, , , , , , 
 
@@ -16,7 +17,8 @@ public class OffToTheRaces extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO: Off to the Races power
+        applyToSelf(new DexterityPower(p, 2));
+        applyToSelf(new OffToTheRacesPower(p, 1));
     }
 
     public void upp() {
