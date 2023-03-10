@@ -1,0 +1,29 @@
+{
+  "${ModID}:GoddessOfExplosionsPack": {
+    "TEXT": [
+      "爆炸女神",
+      "能力！ 价值！ 爆炸！ NL 高成长性能力与非攻击伤害。",
+      "AlexMdle",
+      "#y卡牌创意来自Ludosity设计的角色Goddess #yof #yExplosions 。"
+    ]
+  },
+  "${ModID}:HandpickUI": {
+    "TEXT": [
+      "打出两次。",
+      "变成一枚小炸弹。"
+    ]
+  },
+  "${ModID}:KillerQueenTooltip": {
+    "TEXT": [
+      "杀人女王",
+      "打出时，对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:GoddessOfExplosionsPackHat": {
+    "TEXT": [
+      "该预先定好这双翅膀该放哪的。",
+      "神化之翅"
+    ]
+  }
+}
