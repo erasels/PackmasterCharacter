@@ -30,7 +30,7 @@ public class LuckyHorseshoe extends AbstractJockeyCard {
             public void update() {
                 isDone = true;
                 AbstractMonster tar = AbstractDungeon.getRandomMonster();
-                dmgTop(m, AttackEffect.NONE);
+                dmgTop(tar, AttackEffect.NONE);
                 att(new VFXAction(new FlickCoinEffect(p.hb.cX, p.hb.cY, tar.hb.cX, tar.hb.cY), 0.3F));
             }
         });
