@@ -1,26 +1,17 @@
 package thePackmaster.cardmodifiers.frostpack;
 
 import basemod.abstracts.AbstractCardModifier;
-import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cardmodifiers.energyandechopack.EchoedEtherealMod;
-import thePackmaster.cardmodifiers.energyandechopack.GlowEchoMod;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
-
-import static thePackmaster.util.Wiz.atb;
 
 public class FrozenMod extends AbstractCardModifier {
     public static String ID = SpireAnniversary5Mod.makeID("FrozenMod");
@@ -28,7 +19,6 @@ public class FrozenMod extends AbstractCardModifier {
     private int originalCost;
     private boolean hadRetain = false;
     private static final Texture tex = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/frozenOverlay.png");
-
 
 
     @Override
@@ -81,19 +71,19 @@ public class FrozenMod extends AbstractCardModifier {
     public void atEndOfTurn(AbstractCard card, CardGroup group) {
 
 
-            //Used as an action here in case this is triggered immediately at end of turn from Cold Storage.
-            //If Cold Storage picks a 0-cost, it needs to freeze the card, then unfreeze immediately, which it can't unless this is an action.
-            Wiz.atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    this.isDone = true;
-                    card.modifyCostForCombat(-1);
-                    if (card.cost <= 0){
+        //Used as an action here in case this is triggered immediately at end of turn from Cold Storage.
+        //If Cold Storage picks a 0-cost, it needs to freeze the card, then unfreeze immediately, which it can't unless this is an action.
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                this.isDone = true;
+                card.modifyCostForCombat(-1);
+                if (card.cost <= 0) {
                     CardModifierManager.removeSpecificModifier(card, FrozenMod.this, true);
 
-                    }
                 }
-            });
+            }
+        });
 
     }
 
