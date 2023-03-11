@@ -13,13 +13,11 @@ public class Snack extends AbstractFrostCard {
     public final static String ID = makeID("Snack");
 
     public Snack() {
-        super(ID, 3, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //Wiz.atb(new HealAction(p, p, magicNumber));
-        //Wiz.atb(new IncreaseMaxOrbAction(1));
         Wiz.applyToSelf(new StrengthPower(p, 2));
         Wiz.applyToSelf(new DexterityPower(p, 2));
         Wiz.applyToSelf(new FocusPower(p, 2));

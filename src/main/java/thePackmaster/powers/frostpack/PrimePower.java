@@ -23,6 +23,7 @@ public class PrimePower extends AbstractPackmasterPower {
     public void onChannel(AbstractOrb orb) {
         for (int i = 0; i < amount; i++) {
             if (orb instanceof PackmasterOrb) ((PackmasterOrb) orb).passiveEffect();
+            orb.onStartOfTurn();
             orb.onEndOfTurn();
         }
     }

@@ -2,17 +2,17 @@
   "${ModID}:ExtendedStallPower": {
     "NAME": "Stall",
     "DESCRIPTIONS": [
-      "At the end of your turn, you may #yFreeze #b",
-      " card.",
-      " cards.",
+      "At the end of your turn, #yFreeze the highest-cost card in your hand.",
+      "At the end of your turn, #yFreeze the #b",
+      " highest-cost cards in your hand.",
       "Freeze"
     ]
   },
   "${ModID}:PrimePower": {
     "NAME": "Prime",
     "DESCRIPTIONS": [
-      "When you Channel an orb, trigger its passive effect.",
-      "When you Channel an orb, trigger its passive effect #b",
+      "When you #yChannel an orb, trigger its passive effect.",
+      "When you #yChannel an orb, trigger its passive effect #b",
       " times."
     ]
   }

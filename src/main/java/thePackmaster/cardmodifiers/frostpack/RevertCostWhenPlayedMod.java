@@ -14,9 +14,11 @@ public class RevertCostWhenPlayedMod extends AbstractCardModifier {
 
 
     private int originalCost;
+    private boolean originalIsCostModified;
 
-    public RevertCostWhenPlayedMod(int costIn) {
+    public RevertCostWhenPlayedMod(int costIn, boolean isCostModified) {
         this.originalCost = costIn;
+        this.originalIsCostModified = isCostModified;
     }
 
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
@@ -28,7 +30,7 @@ public class RevertCostWhenPlayedMod extends AbstractCardModifier {
             public void update() {
                 this.isDone = true;
                 CardModifierManager.removeSpecificModifier(card, RevertCostWhenPlayedMod.this, true);
-                card.isCostModified = false;
+                card.isCostModified = originalIsCostModified;
             }
         });
 
@@ -36,6 +38,6 @@ public class RevertCostWhenPlayedMod extends AbstractCardModifier {
 
 
     public AbstractCardModifier makeCopy() {
-        return new RevertCostWhenPlayedMod(originalCost);
+        return new RevertCostWhenPlayedMod(originalCost, originalIsCostModified);
     }
 }

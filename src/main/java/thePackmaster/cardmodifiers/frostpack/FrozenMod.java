@@ -17,6 +17,7 @@ public class FrozenMod extends AbstractCardModifier {
     public static String ID = SpireAnniversary5Mod.makeID("FrozenMod");
 
     private int originalCost;
+    private boolean originalIsCostModified;
     private boolean hadRetain = false;
     private static final Texture tex = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/frozenOverlay.png");
 
@@ -31,10 +32,11 @@ public class FrozenMod extends AbstractCardModifier {
 
         CardCrawlGame.sound.play("ORB_FROST_CHANNEL", 0.1F);
         originalCost = card.cost;
+        originalIsCostModified = card.isCostModified;
+        if (card.costForTurn == 0) card.costForTurn++;
         card.modifyCostForCombat(1);
         if (card.selfRetain) hadRetain = true;
         card.selfRetain = true;
-        card.tags.add(SpireAnniversary5Mod.FROZEN);
     }
 
     public String identifier(AbstractCard card) {
@@ -44,10 +46,8 @@ public class FrozenMod extends AbstractCardModifier {
 
     @Override
     public void onRemove(AbstractCard card) {
-        card.tags.remove(SpireAnniversary5Mod.FROZEN);
-
         //Adds another modifier which hands over the original cost of the card when Frozen, so the card can revert back to its original cost when played.
-        CardModifierManager.addModifier(card, new RevertCostWhenPlayedMod(originalCost));
+        CardModifierManager.addModifier(card, new RevertCostWhenPlayedMod(originalCost, originalIsCostModified));
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -71,8 +71,8 @@ public class FrozenMod extends AbstractCardModifier {
     public void atEndOfTurn(AbstractCard card, CardGroup group) {
 
 
-        //Used as an action here in case this is triggered immediately at end of turn from Cold Storage.
-        //If Cold Storage picks a 0-cost, it needs to freeze the card, then unfreeze immediately, which it can't unless this is an action.
+        //Used as an action here in case this is triggered immediately at end of turn from Extended Stall.
+        //If Extended Stall picks a 0-cost, it needs to freeze the card, then unfreeze immediately, which it can't unless this is an action.
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {

@@ -1,5 +1,6 @@
 package thePackmaster.cards.frostpack;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,7 +12,6 @@ import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.frostpack.FrozenMod;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.FROZEN;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MegaChill extends AbstractFrostCard {
@@ -27,10 +27,10 @@ public class MegaChill extends AbstractFrostCard {
             public void update() {
                 this.isDone = true;
                 for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                    if (c.hasTag(FROZEN)) {
+                    if (CardModifierManager.hasModifier(c, FrozenMod.ID)) {
                         Wiz.atb(new ChannelAction(new Frost()));
                     } else {
-                        Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c));
+                        Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c, false));
                     }
                 }
             }
