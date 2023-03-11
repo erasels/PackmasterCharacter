@@ -41,7 +41,7 @@ public class ExtendedStallAction extends AbstractGameAction {
             //Stop if no freezable cards are left
             if (maxCost < 0) break;
 
-            //choose which are randomized, remove them from tempHand
+            //choose which are frozen, remove them from tempHand
             while (maxCostCards.size() > 0 && toFreeze.size() < amount) {
                 int r = AbstractDungeon.cardRandomRng.random(maxCostCards.size() -1);
                 AbstractCard card = maxCostCards.get(r);
