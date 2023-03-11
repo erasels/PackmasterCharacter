@@ -6,7 +6,7 @@
   "${ModID}:ExtendedStall": {
     "NAME": "Extended Stall",
     "DESCRIPTION": "At the end of your turn, ${ModID}:Freeze the highest-cost card in hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, ${ModID}:Freeze the highest-cost card in hand."
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, ${ModID}:Freeze the highest-cost card in your hand."
   },
   "${ModID}:FlashFreeze": {
     "NAME": "Flash Freeze",
