@@ -1,4 +1,4 @@
-package thePackmaster;
+package thePackmaster.util.creativitypack;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 public interface onGenerateCardMidcombatInterface
 {
