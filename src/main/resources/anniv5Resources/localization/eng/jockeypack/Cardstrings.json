@@ -33,7 +33,7 @@
   },
   "${ModID}:Giddyap": {
     "NAME": "Giddyap",
-    "DESCRIPTION": "At the start of the turn, add a *Horse into your hand."
+    "DESCRIPTION": "At the start of your turn, add a *Horse into your hand."
   },
   "${ModID}:TheSpin": {
     "NAME": "The Spin",
