@@ -31,6 +31,7 @@ EntropyPack	Discard,Debuffs,Orbs
 EvenOddPack	None
 FarmerPack	None
 GemsPack	Orbs
+GoddessOfExplosionsPack	Powers
 GoWithTheFlowPack	Discard
 GrandOpeningPack	None
 GraveyardPack	Exhaust
