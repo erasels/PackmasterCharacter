@@ -37,7 +37,7 @@ public class ExtendedStallAction extends AbstractGameAction {
                 }
             }
 
-            //Stop if no randomizable cards are left
+            //Stop if no freezable cards are left
             if (maxCost < 0) break;
 
             //choose which are randomized, remove them from tempHand
