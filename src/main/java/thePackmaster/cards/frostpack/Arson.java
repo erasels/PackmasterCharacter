@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.frostpack.FrozenMod;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -31,35 +30,17 @@ public class Arson extends AbstractFrostCard {
 
                 for (AbstractCard c : AbstractDungeon.player.hand.group
                 ) {
-                    if (c.hasTag(SpireAnniversary5Mod.FROZEN)) {
+                    if (CardModifierManager.hasModifier(c, FrozenMod.ID))
                         c.modifyCostForCombat(-99);
-                        if (CardModifierManager.hasModifier(c, FrozenMod.ID))
-                            for (AbstractCardModifier mod : CardModifierManager.getModifiers(c, FrozenMod.ID)
-                            ) {
-                                CardModifierManager.removeSpecificModifier(c, mod, true);
-                            }
+                    for (AbstractCardModifier mod : CardModifierManager.getModifiers(c, FrozenMod.ID)
+                    ) {
+                        CardModifierManager.removeSpecificModifier(c, mod, true);
                     }
                 }
             }
+
         });
 
-        /*
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                this.isDone = true;
-
-                for (AbstractOrb o:AbstractDungeon.player.orbs
-                     ) {
-                    if (o instanceof Frost){
-                        Wiz.att(new EvokeSpecificOrbAction(o));
-                        Wiz.att(new ChannelAction(new Frostfire()));
-                    }
-                }
-            }
-        });
-
-         */
     }
 
     public void upp() {
