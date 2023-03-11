@@ -49,8 +49,8 @@ public class ExtendedStallAction extends AbstractGameAction {
                 maxCostCards.remove(card);
             }
         }
-        if (toFreeze.size() > 0) {
-            addToTop(new SimpleAddModifierAction(new FrozenMod(), toFreeze.get(0)));
+        for (AbstractCard c : toFreeze) {
+            addToTop(new SimpleAddModifierAction(new FrozenMod(), c));
         }
         isDone = true;
     }
