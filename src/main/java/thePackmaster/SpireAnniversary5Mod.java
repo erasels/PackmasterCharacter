@@ -252,6 +252,7 @@ public class SpireAnniversary5Mod implements
     @SpireEnum
     public static AbstractCard.CardTags CLAW;
 
+
     public SpireAnniversary5Mod() {
         BaseMod.subscribe(this);
 

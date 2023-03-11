@@ -1,0 +1,19 @@
+{
+  "${ModID}:ExtendedStallPower": {
+    "NAME": "Stall",
+    "DESCRIPTIONS": [
+      "At the end of your turn, you may #yFreeze #b",
+      " card.",
+      " cards.",
+      "Freeze"
+    ]
+  },
+  "${ModID}:PrimePower": {
+    "NAME": "Prime",
+    "DESCRIPTIONS": [
+      "When you #yChannel an Orb, trigger its passive ability.",
+      "When you #yChannel an Orb, trigger its passive ability #b",
+      " times."
+    ]
+  }
+}
