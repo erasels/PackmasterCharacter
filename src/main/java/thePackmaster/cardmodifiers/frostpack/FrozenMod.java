@@ -33,8 +33,8 @@ public class FrozenMod extends AbstractCardModifier {
         CardCrawlGame.sound.play("ORB_FROST_CHANNEL", 0.1F);
         originalCost = card.cost;
         originalIsCostModified = card.isCostModified;
-        if (card.costForTurn == 0) card.costForTurn++;
         card.modifyCostForCombat(1);
+        if (card.costForTurn == 0) card.costForTurn++;
         if (card.selfRetain) hadRetain = true;
         card.selfRetain = true;
     }
