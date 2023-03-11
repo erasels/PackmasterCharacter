@@ -22,7 +22,7 @@
   "${ModID}:Prime": {
     "NAME": "Prime",
     "DESCRIPTION": "Gain 1 Orb slot and 1 Focus. NL Whenever you Channel an Orb, trigger its passive ability.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Orb slots and 1 Focus. NL Whenever you Channel an orb, trigger its passive effect."
+    "UPGRADE_DESCRIPTION": "Gain !M! Orb slots and 1 Focus. NL Whenever you Channel an Orb, trigger its passive ability."
   },
   "${ModID}:FrozenSnack": {
     "NAME": "Frozen Snack",
