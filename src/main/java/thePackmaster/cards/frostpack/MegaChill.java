@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Frost;
 import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.frostpack.FrozenMod;
+import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -27,7 +28,7 @@ public class MegaChill extends AbstractFrostCard {
             public void update() {
                 this.isDone = true;
                 for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                    if (CardModifierManager.hasModifier(c, FrozenMod.ID)) {
+                    if (CardModifierManager.hasModifier(c, FrozenMod.ID) && !OccultPatch.isUnplayable(Wiz.p(), c)) {
                         Wiz.atb(new ChannelAction(new Frost()));
                     } else {
                         Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c, false));
