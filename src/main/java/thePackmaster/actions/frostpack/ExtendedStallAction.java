@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.frostpack.FrozenMod;
+import thePackmaster.patches.psychicpack.occult.OccultPatch;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -27,7 +29,7 @@ public class ExtendedStallAction extends AbstractGameAction {
             int maxCost = -1;
             ArrayList<AbstractCard> maxCostCards = new ArrayList<>();
             for (AbstractCard c : tempHand) {
-                if (!CardModifierManager.hasModifier(c, FrozenMod.ID)) {
+                if (!CardModifierManager.hasModifier(c, FrozenMod.ID) && !OccultPatch.isUnplayable(Wiz.p(), c)) {
                     if (c.costForTurn > maxCost) {
                         maxCost = c.costForTurn;
                         maxCostCards.clear();
