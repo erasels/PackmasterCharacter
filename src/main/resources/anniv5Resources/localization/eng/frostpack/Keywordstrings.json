@@ -2,8 +2,8 @@
   {
     "PROPER_NAME": "Freeze",
     "NAMES": [
-      "freeze"
+      "freeze", "frozen"
     ],
-    "DESCRIPTION": "Grant a card Unplayable and Retain and raise its cost by 1. Reduce its cost by 1 at the end of each turn. Becomes Unfrozen when its cost reaches 0, and remains 0 until the card is played."
+    "DESCRIPTION": "Grant a card #yUnplayable and #yRetain and raise its cost by #b1. Reduce its cost by #b1 at the end of each turn. Becomes #yUnfrozen when its cost reaches #b0, and remains #b0 until the card is played."
   }
 ]
