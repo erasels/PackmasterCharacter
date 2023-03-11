@@ -22,7 +22,7 @@ public class EveOfDestructionPower extends AbstractPackmasterPower {
     @Override
     public void atStartOfTurn() {
         for(int i = 0; i < amount; i++)
-        Wiz.atb(new ApplyPowerAction(owner, owner, new TheBombPower(owner, 3, 40), 3));
+        Wiz.applyToSelf(new TheBombPower(owner, 3, 40));
         flash();
     }
 
