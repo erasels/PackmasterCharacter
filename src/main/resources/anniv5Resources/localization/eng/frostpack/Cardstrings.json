@@ -17,7 +17,7 @@
   },
   "${ModID}:Plunge": {
     "NAME": "Plunge",
-    "DESCRIPTION": "Gain !B! Block. NL Channel a Frost."
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 Frost."
   },
   "${ModID}:Prime": {
     "NAME": "Prime",
