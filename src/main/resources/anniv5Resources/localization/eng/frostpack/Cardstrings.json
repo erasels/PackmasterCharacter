@@ -39,6 +39,6 @@
   },
   "${ModID}:MegaChill": {
     "NAME": "MegaChill",
-    "DESCRIPTION": "Channel a Frost for each *Frozen card. NL ${ModID}:Freeze your hand."
+    "DESCRIPTION": "Channel 1 Frost for each *Frozen card in hand. NL ${ModID}:Freeze your hand."
   }
 }
