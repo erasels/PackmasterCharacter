@@ -10,7 +10,7 @@
   },
   "${ModID}:FlashFreeze": {
     "NAME": "Flash Freeze",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Freeze a card in hand.",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Freeze a card in your hand.",
     "EXTENDED_DESCRIPTION": [
       "Freeze."
     ]
