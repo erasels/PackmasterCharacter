@@ -23,7 +23,7 @@ public class FlashFreeze extends AbstractFrostCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        atb(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0], card -> ((CardModifierManager.hasModifier(card, FrozenMod.ID))), (cards) -> {
+        atb(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0], card -> ((!CardModifierManager.hasModifier(card, FrozenMod.ID))), (cards) -> {
             att(new SimpleAddModifierAction(new FrozenMod(), cards.get(0), false));
 
         }));
