@@ -35,7 +35,7 @@ public class StarShower extends AbstractPixieCard {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (AbstractDungeon.player.hand.contains(this) && PixiePack.isForeign(c) && c.type==CardType.ATTACK)
+        if (AbstractDungeon.player.hand.contains(this) && PixiePack.isForeign(c) && c.type==CardType.ATTACK && !c.hasTag(PixiePack.pixieTags.ENCHANTMENT))
         {
             flash();
             AbstractCard toPlay = makeStatEquivalentCopy();
