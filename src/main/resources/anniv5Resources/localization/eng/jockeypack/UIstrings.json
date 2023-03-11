@@ -11,5 +11,10 @@
       "You know, for riding horses.",
       "The Jockey"
     ]
+  },
+  "${ModID}:LuckyModifier": {
+    "TEXT": [
+      "Lucky "
+    ]
   }
 }
