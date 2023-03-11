@@ -14,7 +14,7 @@ public class Derby extends AbstractJockeyCard {
 
     public Derby() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         cardsToPreview = new Horse();
     }
 
