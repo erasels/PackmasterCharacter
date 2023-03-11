@@ -12,7 +12,7 @@
     "NAME": "Prime",
     "DESCRIPTIONS": [
       "When you Channel an orb, trigger its passive effect.",
-      "When you Channel an orb, trigger its passive effect #b",
+      "When you #yChannel an Orb, trigger its passive ability #b",
       " times."
     ]
   }
