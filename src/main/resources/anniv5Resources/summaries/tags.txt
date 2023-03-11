@@ -30,6 +30,7 @@ EnergyAndEchoPack	Exhaust,Tokens
 EntropyPack	Discard,Debuffs,Orbs
 EvenOddPack	None
 FarmerPack	None
+FrostPack	Orbs
 GemsPack	Orbs
 GoWithTheFlowPack	Discard
 GrandOpeningPack	None
