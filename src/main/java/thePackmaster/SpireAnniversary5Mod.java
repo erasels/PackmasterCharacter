@@ -96,7 +96,7 @@ import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
-import thePackmaster.util.JediUtil;
+import thePackmaster.util.creativitypack.JediUtil;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
