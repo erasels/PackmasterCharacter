@@ -1,7 +1,7 @@
 {
   "${ModID}:Arson": {
     "NAME": "Arson",
-    "DESCRIPTION": "Deal !D! damage. NL Unfreeze any *Frozen cards in hand (reducing their cost to 0 until played)."
+    "DESCRIPTION": "Deal !D! damage. NL Unfreeze any ${ModID}:Frozen cards in your hand (reducing their cost to 0 until played)."
   },
   "${ModID}:ExtendedStall": {
     "NAME": "Extended Stall",
