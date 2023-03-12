@@ -29,6 +29,7 @@ public class CountdownPower extends AbstractPackmasterPower implements NonStacka
             reducePower(1);
         else {
             AbstractCard ap = new AtomicPiledriver();
+
             if (upgraded)
                 ap.upgrade();
 

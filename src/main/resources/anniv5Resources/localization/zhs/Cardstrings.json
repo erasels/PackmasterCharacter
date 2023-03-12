@@ -9,7 +9,7 @@
   },
   "${ModID}:Rummage": {
     "NAME": "翻捣",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张牌， NL 本回合其耗能减 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !${ModID}:m2! 张牌， NL 本回合其耗能减 !M! 。"
   },
   "${ModID}:Cardistry": {
     "NAME": "牌技",

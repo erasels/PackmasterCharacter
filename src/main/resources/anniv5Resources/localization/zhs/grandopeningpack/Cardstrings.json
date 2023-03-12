@@ -31,8 +31,8 @@
   },
   "${ModID}:Improvise": {
     "NAME": "即兴",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃所有 固有 手牌。 NL 若成功丢弃，下回合造成两倍攻击伤害。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !B! 点 格挡 。 NL 丢弃所有 固有 手牌。 NL 若成功丢弃，下回合造成两倍攻击伤害。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若手中有 固有 牌，将其丢弃，下回合造成两倍攻击伤害。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !B! 点 格挡 。 NL 若手中有 固有 牌，将其丢弃，下回合造成两倍攻击伤害。"
   },
   "${ModID}:Debut": {
     "NAME": "出道",

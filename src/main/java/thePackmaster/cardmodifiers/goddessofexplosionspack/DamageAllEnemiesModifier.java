@@ -51,6 +51,7 @@ public class DamageAllEnemiesModifier extends AbstractCardModifier{
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         CardCrawlGame.sound.playV(SpireAnniversary5Mod.DETONATOR_KEY, 1.0f);
         Wiz.atb(new DamageAllEnemiesAction(Wiz.p(), DamageInfo.createDamageMatrix(value, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+
     }
 
     public AbstractCardModifier makeCopy() {
