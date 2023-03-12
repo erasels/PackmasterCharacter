@@ -10,7 +10,7 @@
   },
   "${ModID}:MultiTool": {
     "NAME": "Multi-Tool",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL If you end your turn with unused Energy, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL If you end this turn with Energy, ALL enemies lose !M! HP."
   },
   "${ModID}:LastResort": {
     "NAME": "Last Resort",
