@@ -34,8 +34,8 @@
     "DESCRIPTION": "Whenever you draw a Power, gain [E] .",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Power, gain [E] ."
   },
-  "${ModID}:EveOfDestruction": {
-    "NAME": "Eve of Destruction",
+  "${ModID}:ExplosiveForm": {
+    "NAME": "Explosive Form",
     "DESCRIPTION": "At the start of each turn, set up *The *Bomb.",
     "UPGRADE_DESCRIPTION": "At the start of each turn and right now, set up *The *Bomb."
   },
@@ -43,9 +43,9 @@
     "NAME": "Killer Queen",
     "DESCRIPTION": "Pick a card in your hand. Whenever you play it, deal !M! damage to ALL enemies."
   },
-  "${ModID}:ExplosiveForm": {
-    "NAME": "Explosive Form",
-    "DESCRIPTION": "Ethereal. NL You deal 100% more non-attack damage.",
-    "UPGRADE_DESCRIPTION": "You deal 100% more non-attack damage."
+  "${ModID}:EveOfDestruction": {
+    "NAME": "Eve of Destruction",
+    "DESCRIPTION": "You deal 100% more non-attack damage.",
+    "UPGRADE_DESCRIPTION": "Innate. NL You deal 100% more non-attack damage."
   }
 }
