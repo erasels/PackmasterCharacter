@@ -40,7 +40,7 @@ HermitPack	None
 HighEnergyPack	None
 InfestPack	None
 IntoTheBreachPack	None
-IntriguePack    None
+IntriguePack	None
 IroncladPack	Strength
 LegacyPack	Exhaust
 MadSciencePack	Orbs
