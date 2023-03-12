@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.FlexibleDiscoveryAction;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.util.JediUtil;
+import thePackmaster.util.creativitypack.JediUtil;
 
 import java.util.ArrayList;
 

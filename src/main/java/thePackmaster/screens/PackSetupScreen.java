@@ -29,6 +29,7 @@ import thePackmaster.patches.InfiniteSpirePatch;
 import thePackmaster.summaries.PackSummary;
 import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.summaries.PackSummaryReader;
+import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 
 import java.util.*;
 
@@ -51,6 +52,8 @@ public class PackSetupScreen extends CustomScreen {
 
     private static final float SELECTING_SCALE = 0.8f;
     private static final float SELECTING_PACK_SPACING = AbstractCard.IMG_WIDTH * 0.8F + Settings.CARD_VIEW_PAD_X * 2;
+
+    private static FixedModLabeledToggleButton summaryToggleButton;
 
     private Random rng;
 
@@ -85,6 +88,13 @@ public class PackSetupScreen extends CustomScreen {
             AbstractDungeon.previousScreen = AbstractDungeon.screen;
         AbstractDungeon.screen = curScreen();
         AbstractDungeon.isScreenUp = true;
+        summaryToggleButton = new FixedModLabeledToggleButton(uiStrings.TEXT[2],
+                Settings.WIDTH * 0.025f, Settings.HEIGHT * 0.05f,
+                Settings.CREAM_COLOR, FontHelper.buttonLabelFont,
+                showPackSummaries(),
+                null, l -> {},
+                b -> togglePackSummaries()
+        );
 
         confirmButton.hideInstantly();
 
@@ -130,12 +140,16 @@ public class PackSetupScreen extends CustomScreen {
             pack.previewPackCard.stopGlowing();
             pack.previewPackCard.noShadow();
         }
+
+        summaryToggleButton = null;
     }
 
     @Override
     public void update() {
         updateTransition();
         updateControllerInput();
+
+        summaryToggleButton.update();
 
         for (AbstractCardPack pack : currentPoolPacks) {
             pack.previewPackCard.stopGlowing();
@@ -317,6 +331,7 @@ public class PackSetupScreen extends CustomScreen {
 
     @Override
     public void render(SpriteBatch sb) {
+        summaryToggleButton.render(sb);
         for (AbstractCardPack pack : currentPoolPacks)
             pack.previewPackCard.render(sb);
 

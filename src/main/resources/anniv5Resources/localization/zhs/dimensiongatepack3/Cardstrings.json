@@ -1,7 +1,7 @@
 {
   "${ModID}:Knighthood": {
     "NAME": "骑士之授",
-    "DESCRIPTION": "失去 !M!  点生命。 NL 选择一张牌， NL 本局游戏将其 升级 。 NL 消耗 。",
+    "DESCRIPTION": "失去 !M! 点生命。 NL 选择一张手牌， NL 本局游戏将其 升级 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "将其升级。"
     ]

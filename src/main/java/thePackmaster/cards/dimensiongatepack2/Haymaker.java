@@ -5,10 +5,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGrift;
-import thePackmaster.onGenerateCardMidcombatInterface;
+import thePackmaster.util.creativitypack.onGenerateCardMidcombatInterface;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Haymaker extends AbstractDimensionalCardGrift implements onGenerateCardMidcombatInterface {
