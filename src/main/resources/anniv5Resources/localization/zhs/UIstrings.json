@@ -190,7 +190,8 @@
       "Debuffs": "负面效果",
       "Attacks": "攻击",
       "Magic": "魔法",
-      "Tokens": "代币牌"
+      "Tokens": "代币牌",
+      "Powers": "Powers"
     }
   }
 }
