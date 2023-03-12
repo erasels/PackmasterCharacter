@@ -47,9 +47,11 @@ public class LuckyHorseshoe extends AbstractJockeyCard {
                             validCards.add(q);
                         }
                     }
-                    AbstractCard target = Wiz.getRandomItem(validCards, AbstractDungeon.cardRandomRng);
-                    target.setCostForTurn(0);
-                    CardModifierManager.addModifier(target, new LuckyModifier());
+                    if (!validCards.isEmpty()) {
+                        AbstractCard target = Wiz.getRandomItem(validCards, AbstractDungeon.cardRandomRng);
+                        target.setCostForTurn(0);
+                        CardModifierManager.addModifier(target, new LuckyModifier());
+                    }
                 }
             }
         });
