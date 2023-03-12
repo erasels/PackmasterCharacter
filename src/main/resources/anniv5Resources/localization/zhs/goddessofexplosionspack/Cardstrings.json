@@ -18,7 +18,7 @@
   },
   "${ModID}:AtomicPiledriver": {
     "NAME": "原子倾灭",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:辐射 。 NL 消耗。"
   },
   "${ModID}:NuclearFusion": {
     "NAME": "核聚变",
