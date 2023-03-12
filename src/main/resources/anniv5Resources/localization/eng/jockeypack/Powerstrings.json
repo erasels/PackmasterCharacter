@@ -5,6 +5,7 @@
       "At the end of your turn, if you played #b6 or more cards, gain #b",
       " #yStrength. ",
       "Played #b",
+      " card this turn.",
       " cards this turn."
     ]
   },

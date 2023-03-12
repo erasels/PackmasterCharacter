@@ -37,7 +37,7 @@
   },
   "${ModID}:TheSpin": {
     "NAME": "The Spin",
-    "DESCRIPTION": "Deal !D! damage for each card played this turn.",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card played this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " card played.)",

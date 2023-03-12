@@ -32,7 +32,7 @@ public class DerbyPower extends AbstractPackmasterPower {
     public void updateDescription() {
         StringBuilder sb = new StringBuilder();
         sb.append(DESCRIPTIONS[0] + amount + DESCRIPTIONS[1]);
-        sb.append(DESCRIPTIONS[2] + AbstractDungeon.actionManager.cardsPlayedThisTurn.size() + DESCRIPTIONS[3]);
+        sb.append(DESCRIPTIONS[2] + AbstractDungeon.actionManager.cardsPlayedThisTurn.size() + (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 1 ? DESCRIPTIONS[3] : DESCRIPTIONS[4]));
         description = sb.toString();
     }
 }
