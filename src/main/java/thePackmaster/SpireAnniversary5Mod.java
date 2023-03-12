@@ -186,6 +186,8 @@ public class SpireAnniversary5Mod implements
     private static final String BEES_OGG = makePath("audio/summonspack/SwarmOfBees.ogg");
     public static final String ELEPHANT_KEY = makeID("elephant");
     private static final String ELEPHANT_OGG = makePath("audio/summonspack/Elephant.ogg");
+    public static final String DETONATOR_KEY = makeID("Detonator");
+    private static final String DETONATOR_OGG = makePath("audio/goddessofexplosionspack/bokudan.ogg");
     public static final String PEW_KEY = makeID("Pew");
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
     public static final String EVIL_KEY = makeID("Evil");
@@ -741,6 +743,7 @@ public class SpireAnniversary5Mod implements
     public void receiveAddAudio() {
         BaseMod.addAudio(BEES_KEY, BEES_OGG);
         BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
+        BaseMod.addAudio(DETONATOR_KEY, DETONATOR_OGG);
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
         BaseMod.addAudio(EVIL_KEY, EVIL_OGG);
         BaseMod.addAudio(PANDA_KEY, PANDA_OGG);
