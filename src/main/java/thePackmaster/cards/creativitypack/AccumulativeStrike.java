@@ -1,16 +1,12 @@
 package thePackmaster.cards.creativitypack;
 
-import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.FlexibleDiscoveryAction;
 import thePackmaster.cardmodifiers.creativitypack.AccumulativeDamageModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.util.JediUtil;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

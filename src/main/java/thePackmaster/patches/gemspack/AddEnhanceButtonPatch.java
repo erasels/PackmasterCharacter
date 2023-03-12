@@ -5,7 +5,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
+import javassist.CannotCompileException;
 import javassist.CtBehavior;
+import javassist.expr.ExprEditor;
+import javassist.expr.FieldAccess;
 import thePackmaster.packs.GemsPack;
 import thePackmaster.ui.EnhanceBonfireOption;
 import thePackmaster.vfx.gemspack.SocketGemEffect;
@@ -33,6 +36,22 @@ public class AddEnhanceButtonPatch {
                 GemsPack.socketBonfireOption = new EnhanceBonfireOption(active);
                 ___buttons.add(GemsPack.socketBonfireOption);
 
+        }
+
+        @SpireInstrumentPatch
+        public static ExprEditor fixProceedLogicPatch() {
+            return new FixProceedLogicExprEditor();
+        }
+
+        // We want the Enhance option to be ignored by the proceed logic since it's optional and you can still use other
+        // options after it. To achieve this, we have the Enhance option always treated as unusable by this logic.
+        public static class FixProceedLogicExprEditor extends ExprEditor {
+            @Override
+            public void edit(FieldAccess fieldAccess) throws CannotCompileException {
+                if (fieldAccess.getClassName().equals(AbstractCampfireOption.class.getName()) && fieldAccess.getFieldName().equals("usable") && fieldAccess.isReader()) {
+                    fieldAccess.replace(String.format("{ $_ = $proceed($$) && !($0 instanceof %1$s); }", EnhanceBonfireOption.class.getName()));
+                }
+            }
         }
     }
 

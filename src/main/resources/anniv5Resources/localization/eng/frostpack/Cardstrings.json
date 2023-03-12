@@ -1,0 +1,45 @@
+{
+  "${ModID}:Arson": {
+    "NAME": "Arson",
+    "DESCRIPTION": "Deal !D! damage. NL Unfreeze any ${ModID}:Frozen cards in your hand (reducing their cost to 0 until played)."
+  },
+  "${ModID}:ExtendedStall": {
+    "NAME": "Extended Stall",
+    "DESCRIPTION": "At the end of your turn, ${ModID}:Freeze the highest-cost card in your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, ${ModID}:Freeze the highest-cost card in your hand."
+  },
+  "${ModID}:FlashFreeze": {
+    "NAME": "Flash Freeze",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Freeze a card in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Freeze."
+    ]
+  },
+  "${ModID}:Plunge": {
+    "NAME": "Plunge",
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 Frost."
+  },
+  "${ModID}:Prime": {
+    "NAME": "Prime",
+    "DESCRIPTION": "Gain 1 Orb slot and 1 Focus. NL Whenever you Channel an Orb, trigger its passive ability.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Orb slots and 1 Focus. NL Whenever you Channel an Orb, trigger its passive ability."
+  },
+  "${ModID}:FrozenSnack": {
+    "NAME": "Frozen Snack",
+    "DESCRIPTION": "Add a *Snack to your hand and ${ModID}:Freeze it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Snack+ to your hand and ${ModID}:Freeze it. NL Exhaust."
+  },
+  "${ModID}:Snack": {
+    "NAME": "Snack",
+    "DESCRIPTION": "Gain 2 Strength, 2 Dexterity, and 2 Focus."
+  },
+  "${ModID}:Hailstorm": {
+    "NAME": "Hailstorm",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Channel !M! Frost."
+  },
+  "${ModID}:MegaChill": {
+    "NAME": "Mega Chill",
+    "DESCRIPTION": "Channel !M! Frost for each *Frozen card in hand. NL ${ModID}:Freeze your hand.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Freeze your hand. NL Channel !M! Frost for each *Frozen card in hand."
+  }
+}

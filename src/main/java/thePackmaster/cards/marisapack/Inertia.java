@@ -14,7 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Inertia extends AbstractMarisaCard implements AmplifyCard{
     public final static String ID = makeID(Inertia.class.getSimpleName());
-    private static final int MAGIC = 4, UPG_MAGIC = 1, ADD = 2;
+    private static final int MAGIC = 4, UPG_MAGIC = 2, ADD = 2;
     private static TooltipInfo ablation;
 
     public Inertia() {
@@ -28,7 +28,7 @@ public class Inertia extends AbstractMarisaCard implements AmplifyCard{
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        //upgradeMagicNumber(UPG_MAGIC);
         upgradeSecondMagic(UPG_MAGIC);
     }
 

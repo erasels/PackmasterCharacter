@@ -1,22 +1,13 @@
 package thePackmaster.cards.creativitypack.special;
 
 import basemod.AutoAdd;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.EasyModalChoiceAction;
 import thePackmaster.actions.FlexibleDiscoveryAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.creativitypack.AbstractCreativityCard;
-import thePackmaster.util.JediUtil;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import thePackmaster.util.creativitypack.JediUtil;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

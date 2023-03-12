@@ -30,7 +30,9 @@ EnergyAndEchoPack	Exhaust,Tokens
 EntropyPack	Discard,Debuffs,Orbs
 EvenOddPack	None
 FarmerPack	None
+FrostPack	Orbs
 GemsPack	Orbs
+GoddessOfExplosionsPack	Powers
 GoWithTheFlowPack	Discard
 GrandOpeningPack	None
 GraveyardPack	Exhaust
@@ -38,6 +40,7 @@ HermitPack	None
 HighEnergyPack	None
 InfestPack	None
 IntoTheBreachPack	None
+IntriguePack	None
 IroncladPack	Strength
 LegacyPack	Exhaust
 MadSciencePack	Orbs

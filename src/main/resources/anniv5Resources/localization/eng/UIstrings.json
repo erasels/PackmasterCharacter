@@ -109,7 +109,8 @@
   "${ModID}:PackSetup": {
     "TEXT": [
       "Draft a Pack!",
-      "Current Packs"
+      "Current Packs",
+      "Show Pack ratings"
     ]
   },
   "${ModID}:CurrentRunCardsTopPanelItem": {
@@ -203,7 +204,8 @@
       "Debuffs": "Debuffs",
       "Attacks": "Attacks",
       "Magic": "Magic",
-      "Tokens": "Tokens"
+      "Tokens": "Tokens",
+      "Powers": "Powers"
     }
   }
 }

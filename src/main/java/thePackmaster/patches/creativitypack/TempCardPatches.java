@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
-import thePackmaster.util.JediUtil;
+import thePackmaster.util.creativitypack.JediUtil;
 
 //Due to different constructors for these effects adding a different card instance to the relevant pile, they need to be seaparated like this
 public class TempCardPatches {

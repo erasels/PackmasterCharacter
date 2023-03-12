@@ -83,6 +83,19 @@
       "观者面纱"
     ]
   },
+  "${ModID}:BulwarkPack": {
+    "TEXT": [
+      "堡垒",
+      "尖塔最为优秀的防御工具，首次被整合在一起。",
+      "modargo"
+    ]
+  },
+  "${ModID}:BulwarkPackHat": {
+    "TEXT": [
+      "TBD",
+      "TBD"
+    ]
+  },
   "${ModID}:PackMainMenuUI": {
     "TEXT": [
       "自定义构筑模式",
@@ -96,7 +109,8 @@
   "${ModID}:PackSetup": {
     "TEXT": [
       "选择一组卡包来将其加入本局游戏的牌池！",
-      "已选定卡包："
+      "已选定卡包：",
+      "显示卡包评分"
     ]
   },
   "${ModID}:CurrentRunCardsTopPanelItem": {
@@ -181,16 +195,17 @@
       " 、 "
     ],
     "TEXT_DICT": {
-      "None": "无",
+      "None":     "无",
       "Strength": "力量",
-      "Exhaust": "消耗",
-      "Orbs": "充能球",
-      "Stances": "姿态",
-      "Discard": "弃牌",
-      "Debuffs": "负面效果",
-      "Attacks": "攻击",
-      "Magic": "魔法",
-      "Tokens": "代币牌"
+      "Exhaust":  "消耗",
+      "Orbs":     "充能球",
+      "Stances":  "姿态",
+      "Discard":  "弃牌",
+      "Debuffs":  "负面效果",
+      "Attacks":  "攻击",
+      "Magic":    "魔法",
+      "Tokens":   "代币牌",
+      "Powers":   "能力"
     }
   }
 }

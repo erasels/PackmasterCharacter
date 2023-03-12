@@ -1,11 +1,10 @@
-package thePackmaster.util;
+package thePackmaster.util.creativitypack;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import thePackmaster.onGenerateCardMidcombatInterface;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;

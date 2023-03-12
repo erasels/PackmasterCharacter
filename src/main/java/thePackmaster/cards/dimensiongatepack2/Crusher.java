@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGrift;
-import thePackmaster.onGenerateCardMidcombatInterface;
+import thePackmaster.util.creativitypack.onGenerateCardMidcombatInterface;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
