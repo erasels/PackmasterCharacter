@@ -12,7 +12,7 @@
   "${ModID}:BlockVial": {
     "NAME": "格挡药剂",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得1层 *残影 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 !${ModID}:m2! 点 格挡 。 NL 消耗 。"
   },
   "${ModID}:DynamicVial": {
     "NAME": "多变药剂",

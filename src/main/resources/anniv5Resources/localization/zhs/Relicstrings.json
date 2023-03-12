@@ -45,7 +45,7 @@
       "本场战斗已打出过的卡包： ",
       "已触发次数： #b{0} 次，",
       "平均 #b{0} 次/战斗 。 ",
-      "Packs not yet played: "
+      "未打出的卡包： "
     ]
   },
   "${ModID}:HandyHaversack": {

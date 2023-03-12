@@ -22,7 +22,7 @@
   },
   "${ModID}:HandOfGulDan": {
     "NAME": "古尔丹之手",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 若本牌被 消耗 ， NL  抽 !M! 张牌。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若本牌被 消耗 ， NL 抽 !M! 张牌。"
   },
   "${ModID}:SeedsOfDestruction": {
     "NAME": "毁灭之种",
@@ -40,7 +40,7 @@
   },
   "${ModID}:TheSoularium": {
     "NAME": "莫瑞甘的灵界",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 将其附加 虚无 。 NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌， NL 将其附加 虚无 。 NL 消耗 。"
   },
   "${ModID}:RunedMithrilRod": {
     "NAME": "符文秘银杖",

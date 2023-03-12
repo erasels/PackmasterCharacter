@@ -1,5 +1,6 @@
 package thePackmaster.powers.goddessofexplosionspack;
 
+
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -18,6 +19,7 @@ public class RedshiftPower extends AbstractPackmasterPower implements NonStackab
 
     public RedshiftPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+
     }
 
     @Override
