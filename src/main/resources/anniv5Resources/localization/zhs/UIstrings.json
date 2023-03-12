@@ -109,7 +109,8 @@
   "${ModID}:PackSetup": {
     "TEXT": [
       "选择一组卡包来将其加入本局游戏的牌池！",
-      "已选定卡包："
+      "已选定卡包：",
+      "显示卡包评分"
     ]
   },
   "${ModID}:CurrentRunCardsTopPanelItem": {

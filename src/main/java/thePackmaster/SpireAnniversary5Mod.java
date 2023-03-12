@@ -306,6 +306,7 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterUnlockedRainbows","");
             defaults.put("PackmasterRainbowEnabled","FALSE");
             defaults.put("PackmasterUnseenHats","");
+            defaults.put("PackmasterShowSummaries","TRUE");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
             modConfig.load();
 
@@ -368,6 +369,25 @@ public class SpireAnniversary5Mod implements
             modConfig.save();
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    private static Boolean _showPackSummaries = null;
+    public static Boolean showPackSummaries() {
+        if(modConfig == null) return true;
+        if(_showPackSummaries == null)
+            _showPackSummaries = modConfig.getBool("PackmasterShowSummaries");
+        return _showPackSummaries;
+    }
+
+    public static void togglePackSummaries() {
+        if(modConfig == null) return;
+        try {
+            modConfig.setBool("PackmasterShowSummaries", !_showPackSummaries);
+            _showPackSummaries = !_showPackSummaries;
+            modConfig.save();
+        } catch (Exception e) {
+            logger.error(e);
         }
     }
 
