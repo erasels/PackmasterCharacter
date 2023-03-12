@@ -18,7 +18,7 @@
   },
   "${ModID}:AtomicPiledriver": {
     "NAME": "Atomic Piledriver",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !M! ${ModID}:Fallout. NL Exhaust."
   },
   "${ModID}:NuclearFusion": {
     "NAME": "Nuclear Fusion",
