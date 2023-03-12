@@ -28,7 +28,7 @@
     "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL If this has any [bugIcon] , remove one to draw 1 card and gain [E] ."
   },
   "${ModID}:Compoundeyes": {
-    "NAME": "Compoundeyes",
+    "NAME": "Compound Eyes",
     "DESCRIPTION": "Innate. NL Draw !M! cards. NL When you next play a card, end your turn."
   },
   "${ModID}:Bees": {
