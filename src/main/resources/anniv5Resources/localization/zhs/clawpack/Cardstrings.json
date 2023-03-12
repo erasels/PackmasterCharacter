@@ -10,7 +10,7 @@
   "${ModID}:CloakAndClaw": {
     "NAME": "斗篷与爪击",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得一张 *幽灵爪击 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! *幽灵爪击 。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *幽灵爪击 。"
   },
   "${ModID}:Conclawd": {
     "NAME": "爪末",
@@ -23,8 +23,8 @@
   },
   "${ModID}:MutateClaw": {
     "NAME": "变异爪击",
-    "DESCRIPTION": "选择 ${ModID}:修改 一张攻击手牌： NL 牌名加上'爪击'，效果加上'获得一张 *幽灵爪击 '。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择 ${ModID}:修改 一张攻击手牌： NL 牌名加上'爪击'，效果加上'获得一张 *幽灵爪击 '。"
+    "DESCRIPTION": "选择 ${ModID}:修改 一张攻击手牌： NL 牌名附加'爪击'，效果附加'获得一张 *幽灵爪击 '。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择 ${ModID}:修改 一张攻击手牌： NL 牌名附加'爪击'，效果附加'获得一张 *幽灵爪击 '。"
   },
   "${ModID}:SearingClaw": {
     "NAME": "灼热爪击",
@@ -32,7 +32,7 @@
   },
   "${ModID}:TalkToTheClaw": {
     "NAME": "以爪拒之",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 之后对目标爪击时， NL 获得 !M! 点 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 之后对目标 *爪击 时， NL 获得 !M! 点 格挡 。 NL 消耗 。"
   },
   "${ModID}:TwinClaw": {
     "NAME": "双重爪击",

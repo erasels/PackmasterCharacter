@@ -5,8 +5,8 @@
   },
   "${ModID}:Trash": {
     "NAME": "垃圾",
-    "DESCRIPTION": "消耗 1 张牌。 NL 获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 消耗 1 张牌。 NL 获得 [E] 。"
+    "DESCRIPTION": "随机 消耗 1 张牌。 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 随机 消耗 1 张牌。 NL 获得 [E] 。"
   },
   "${ModID}:MultiTool": {
     "NAME": "多用途工具",
@@ -14,7 +14,7 @@
   },
   "${ModID}:LastResort": {
     "NAME": "终极手段",
-    "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 若X为0， NL 获得 [E] 并消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 X次。 NL 若X为0， NL 下回合获得 [E] 。"
   },
   "${ModID}:LotsOfIronWaves": {
     "NAME": "铁斩四波",

@@ -1,0 +1,9 @@
+{
+  "${ModID}:PowerStrugglePower": {
+    "NAME": "权欲",
+    "DESCRIPTIONS": [
+      "每当你打出一张稀有牌，获得 #b",
+      " [E] 并将其 #y降格 。"
+    ]
+  }
+}

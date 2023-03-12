@@ -11,14 +11,23 @@ public class SimpleAddModifierAction extends AbstractGameAction {
     private AbstractCardModifier mod;
     private AbstractCard card;
 
+    private boolean checkAgainstMadScience;
+
     public SimpleAddModifierAction(AbstractCardModifier mod, AbstractCard card) {
         this.mod = mod;
         this.card = card;
+        this.checkAgainstMadScience = true;
+    }
+
+    public SimpleAddModifierAction(AbstractCardModifier mod, AbstractCard card, boolean checkAgainstIsCardModified) {
+        this.mod = mod;
+        this.card = card;
+        this.checkAgainstMadScience = checkAgainstIsCardModified;
     }
     @Override
     public void update() {
         if (!isDone) {
-            if (!card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED)) {
+            if (!checkAgainstMadScience || !card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED))
                 CardModifierManager.addModifier(card, mod);
                 card.superFlash(Color.CHARTREUSE.cpy());
             }
@@ -26,4 +35,3 @@ public class SimpleAddModifierAction extends AbstractGameAction {
             isDone = true;
         }
     }
-}
