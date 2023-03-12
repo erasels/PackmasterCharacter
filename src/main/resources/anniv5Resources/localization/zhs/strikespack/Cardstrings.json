@@ -17,8 +17,8 @@
   },
   "${ModID}:DifferentStrikes": {
     "NAME": "各色打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL  消耗 一张手牌，将其随机变为一张耗能低1点且带 消耗 的打击牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL  消耗 一张手牌，将其随机变为一张耗能低1点且带 消耗 的打击牌+。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张手牌，将其随机变为一张耗能低1点且带 消耗 的打击牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张手牌，将其随机变为一张耗能低1点且带 消耗 的打击牌+。"
   },
   "${ModID}:StrikeOfGenius": {
     "NAME": "打击天才",

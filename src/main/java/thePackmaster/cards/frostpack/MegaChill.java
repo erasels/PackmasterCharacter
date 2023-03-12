@@ -20,6 +20,7 @@ public class MegaChill extends AbstractFrostCard {
 
     public MegaChill() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,16 +29,29 @@ public class MegaChill extends AbstractFrostCard {
             public void update() {
                 this.isDone = true;
                 for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                    if (CardModifierManager.hasModifier(c, FrozenMod.ID) && !OccultPatch.isUnplayable(Wiz.p(), c)) {
-                        Wiz.atb(new ChannelAction(new Frost()));
+                    if(MegaChill.this.upgraded) {
+                        if (!CardModifierManager.hasModifier(c, FrozenMod.ID) && !OccultPatch.isUnplayable(Wiz.p(), c)) {
+                            Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c, false));
+                            channelFrost();
+                        } else if(CardModifierManager.hasModifier(c, FrozenMod.ID)) {
+                            channelFrost();
+                        }
                     } else {
-                        Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c, false));
+                        if (CardModifierManager.hasModifier(c, FrozenMod.ID) && !OccultPatch.isUnplayable(Wiz.p(), c)) {
+                            channelFrost();
+                        } else {
+                            Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c, false));
+                        }
                     }
                 }
             }
         });
+    }
 
-
+    private void channelFrost() {
+        for (int i = 0; i < magicNumber; i++) {
+            Wiz.atb(new ChannelAction(new Frost()));
+        }
     }
 
     public void upp() {

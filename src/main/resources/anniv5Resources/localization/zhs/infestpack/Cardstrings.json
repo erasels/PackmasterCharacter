@@ -25,7 +25,7 @@
   },
   "${ModID}:Entomology": {
     "NAME": "昆虫学",
-    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 若本牌有 [bugIcon] ， NL 全部移除来抽一张牌并获得 [E] 。"
+    "DESCRIPTION": "${ModID}:滋生 。 NL 造成 !D! 点伤害。 NL 若本牌有 [bugIcon] ， NL 失去1点来抽一张牌并获得 [E] 。"
   },
   "${ModID}:Compoundeyes": {
     "NAME": "复眼",

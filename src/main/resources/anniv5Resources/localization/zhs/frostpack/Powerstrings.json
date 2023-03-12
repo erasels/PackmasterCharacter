@@ -1,0 +1,19 @@
+{
+  "${ModID}:ExtendedStallPower": {
+    "NAME": "冰封",
+    "DESCRIPTIONS": [
+      "你的回合结束时，可选择 #y冻结 #b",
+      " 张手牌。",
+      " 张手牌。",
+      "冻结"
+    ]
+  },
+  "${ModID}:PrimePower": {
+    "NAME": "冻核",
+    "DESCRIPTIONS": [
+      "每当你 #y生成 一个 充能球时，触发其被动效果。",
+      "每当你 #y生成 一个 充能球时，触发其被动效果 #b",
+      " 次。"
+    ]
+  }
+}
