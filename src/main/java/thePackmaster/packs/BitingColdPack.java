@@ -23,12 +23,12 @@ public class BitingColdPack extends AbstractCardPack {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(FrigidBody.ID);
         cards.add(Frostburn.ID);
-        // TODO: cards.add(Glaciate.ID);
+        cards.add(FrostedEdge.ID);
         cards.add(GrowingAffliction.ID);
+        cards.add(Hailstorm.ID);
         cards.add(IceShatter.ID);
         cards.add(InsultToInjury.ID);
         cards.add(Refrigerate.ID);
-        // TODO: cards.add(RelentlessHail.ID);
         cards.add(SnowedIn.ID);
         cards.add(Subdue.ID);
         return cards;

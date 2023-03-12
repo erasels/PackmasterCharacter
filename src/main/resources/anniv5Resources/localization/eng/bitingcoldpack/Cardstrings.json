@@ -7,9 +7,17 @@
     "NAME": "Frostburn",
     "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add a *Burn into your discard pile."
   },
+  "${ModID}:FrostedEdge": {
+    "NAME": "Frosted Edge",
+    "DESCRIPTION": "Whenever you apply ${ModID}:Frostbite, gain !M! Temporary Strength."
+  },
   "${ModID}:GrowingAffliction": {
     "NAME": "Growing Affliction",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you apply a debuff, return this from the discard pile to your hand."
+  },
+  "${ModID}:Hailstorm": {
+    "NAME": "Hailstorm",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL Increase this card's hits by 1 this combat."
   },
   "${ModID}:InsultToInjury": {
     "NAME": "Insult to Injury",

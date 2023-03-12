@@ -15,9 +15,9 @@
       " apply #yFrostbite equal to blocked damage received."
     ]
   },
-  "${ModID}:GlaciatePower": {
-    "NAME": "Glaciate",
-    "DESCRIPTIONS": ["Whenever you apply #yFrostbite, gain #b", " #yVigor."]
+  "${ModID}:FrostedEdgePower": {
+    "NAME": "Frosted Edge",
+    "DESCRIPTIONS": ["Whenever you apply #yFrostbite, gain #b", " Temporary #yStrength."]
   },
   "${ModID}:IceShatterPower": {
     "NAME": "Ice Shatter",
