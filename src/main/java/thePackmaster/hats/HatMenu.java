@@ -265,6 +265,8 @@ public class HatMenu {
             currentHat = null;
             Hats.addHat(false, "Locked");
             flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[3];
+            showRainbowButton = false;
+            if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
         } else if (name.contains(TEXT[6])) {
             invalidHatSelected = true;
             currentHat = null;
