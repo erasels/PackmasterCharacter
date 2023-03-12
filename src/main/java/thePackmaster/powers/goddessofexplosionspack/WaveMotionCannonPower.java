@@ -23,7 +23,7 @@ public class WaveMotionCannonPower extends AbstractPackmasterPower {
 
     @Override
     public void atStartOfTurnPostDraw() {
-        Wiz.atb(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+        Wiz.atb(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
         Wiz.atb(new RemoveSpecificPowerAction(owner,owner,this));
     }
 

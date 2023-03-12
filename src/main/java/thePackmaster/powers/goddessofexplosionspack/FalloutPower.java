@@ -24,9 +24,8 @@ public class FalloutPower extends AbstractPackmasterPower {
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        super.onPlayCard(card, m);
         if (card.type == AbstractCard.CardType.POWER) {
-            Wiz.atb(new DamageAction(owner, new DamageInfo((AbstractCreature)null,amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            Wiz.atb(new DamageAction(owner, new DamageInfo(owner,amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
             flash();
         }
     }

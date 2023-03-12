@@ -1,43 +1,25 @@
 package thePackmaster.powers.goddessofexplosionspack;
 
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.goddessofexplosionspack.AtomicPiledriver;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 
-public class CountdownPower extends AbstractPackmasterPower {
+public class CountdownPower extends AbstractPackmasterPower implements NonStackablePower {
     public static final String POWER_ID = makeID("CountdownPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
-    private static int idOffset;
     private final boolean upgraded;
 
     public CountdownPower(AbstractCreature owner, int amount, boolean upgrade) {
-        super(POWER_ID+idOffset, NAME, PowerType.BUFF, false, owner, amount);
-
-        // Prevent offset from screwing up the icons.
-        Texture normalTexture = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/powers/CountdownPower32.png");
-        Texture hiDefImage = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/powers/CountdownPower84.png");
-        if (hiDefImage != null) {
-            region128 = new TextureAtlas.AtlasRegion(hiDefImage, 0, 0, hiDefImage.getWidth(), hiDefImage.getHeight());
-            if (normalTexture != null)
-                region48 = new TextureAtlas.AtlasRegion(normalTexture, 0, 0, normalTexture.getWidth(), normalTexture.getHeight());
-        } else if (normalTexture != null) {
-            this.img = normalTexture;
-            region48 = new TextureAtlas.AtlasRegion(normalTexture, 0, 0, normalTexture.getWidth(), normalTexture.getHeight());
-        }
-
-        ++idOffset;
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         upgraded = upgrade;
     }
 
@@ -46,7 +28,8 @@ public class CountdownPower extends AbstractPackmasterPower {
         if (amount > 1)
             reducePower(1);
         else {
-            AbstractCard ap = new AtomicPiledriver().makeCopy();
+            AbstractCard ap = new AtomicPiledriver();
+
             if (upgraded)
                 ap.upgrade();
 

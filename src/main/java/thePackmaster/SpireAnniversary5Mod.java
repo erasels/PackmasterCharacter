@@ -96,7 +96,7 @@ import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
-import thePackmaster.util.JediUtil;
+import thePackmaster.util.creativitypack.JediUtil;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
@@ -253,6 +253,7 @@ public class SpireAnniversary5Mod implements
 
     @SpireEnum
     public static AbstractCard.CardTags CLAW;
+
 
     public SpireAnniversary5Mod() {
         BaseMod.subscribe(this);

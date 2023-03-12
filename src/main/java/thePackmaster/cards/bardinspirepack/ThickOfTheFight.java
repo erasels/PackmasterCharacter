@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.bardinspirepack.ThickOfTheFightAction;
-import thePackmaster.onGenerateCardMidcombatInterface;
+import thePackmaster.util.creativitypack.onGenerateCardMidcombatInterface;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
