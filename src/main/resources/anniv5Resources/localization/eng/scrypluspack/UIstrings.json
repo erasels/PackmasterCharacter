@@ -1,0 +1,15 @@
+{
+  "${ModID}:ScryPlusPack": {
+    "TEXT": [
+      "Scry Plus",
+      "Look into your draw pile. Some of those cards benefit from being seen, others - from being discarded.",
+      "Jedi"
+    ]
+  },
+  "${ModID}:ScryPlusPackHat": {
+    "TEXT": [
+      "",
+      ""
+    ]
+  }
+}
