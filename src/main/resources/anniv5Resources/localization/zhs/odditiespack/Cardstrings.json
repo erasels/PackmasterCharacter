@@ -5,8 +5,8 @@
   },
   "${ModID}:LetsPlay8Ball": {
     "NAME": "8球开桌！",
-    "DESCRIPTION": "将一张 *8号球 加入抽牌堆。",
-    "UPGRADE_DESCRIPTION": "将一张 *9号球 加入抽牌堆。"
+    "DESCRIPTION": "将 *8号球 加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "将 *9号球 加入抽牌堆。"
   },
   "${ModID}:EightBall": {
     "NAME": "8号球",
@@ -20,7 +20,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 手牌中央的一两张牌。"
   },
   "${ModID}:LetsDraft": {
-    "NAME": "构筑卡牌！",
+    "NAME": "构筑牌组！",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 选择一张手牌，将其一张复制品加入抽牌堆。",
     "EXTENDED_DESCRIPTION": [
       "复制一张牌。"
@@ -29,7 +29,7 @@
   "${ModID}:Beacon": {
     "NAME": "灯标",
     "DESCRIPTION": "选择 !M! 张手牌， NL 将其 升级 并附加 保留 。",
-    "UPGRADE_DESCRIPTION": "选择 !M! 张手牌， NL 将其 升级 并附加 保留 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 选择 !M! 张手牌， NL 将其 升级 并附加 保留 。",
     "EXTENDED_DESCRIPTION": [
       "升级并附加保留。"
     ]
@@ -48,8 +48,8 @@
   },
   "${ModID}:FinalForm": {
     "NAME": "最终形态",
-    "DESCRIPTION": "虚无 。 NL 随机 消耗 一张手牌。 NL 回合开始时，打出并 消耗 其一张复制品。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 选择 消耗 一张手牌。 NL 回合开始时，打出并 消耗 其一张复制品。",
+    "DESCRIPTION": "虚无 。 NL 随机 消耗 一张手牌。 NL 下5个回合开始时，打出并 消耗 其一张复制品。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 选择 消耗 一张手牌。 NL 下5个回合开始时，打出并 消耗 其一张复制品。",
     "EXTENDED_DESCRIPTION": [
       "为最终形态消耗一张牌。"
     ]
