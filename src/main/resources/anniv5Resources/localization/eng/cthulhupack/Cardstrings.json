@@ -6,7 +6,7 @@
   },
   "${ModID}:NamelessMist": {
     "NAME": "Nameless Mist",
-    "DESCRIPTION": "Gain !B! Block. NL Gain another !M! whenever you play a card this turn."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Flurry: Gain !M! Block."
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
