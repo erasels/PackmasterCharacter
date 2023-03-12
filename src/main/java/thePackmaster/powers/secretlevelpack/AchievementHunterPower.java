@@ -43,6 +43,7 @@ public class AchievementHunterPower extends AbstractPackmasterPower implements N
                     }
                 });
             }
+            updateDescription();
         }
     }
 
@@ -50,8 +51,7 @@ public class AchievementHunterPower extends AbstractPackmasterPower implements N
     public void updateDescription() {
         if (amount > 0) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-        }
-        else {
+        } else {
             description = DESCRIPTIONS[2];
         }
     }
