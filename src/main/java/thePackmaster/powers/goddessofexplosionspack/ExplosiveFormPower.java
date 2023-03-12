@@ -2,7 +2,9 @@ package thePackmaster.powers.goddessofexplosionspack;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.powers.TheBombPower;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -17,7 +19,17 @@ public class ExplosiveFormPower extends AbstractPackmasterPower {
     }
 
     @Override
+    public void atStartOfTurn() {
+        for(int i = 0; i < amount; i++)
+        Wiz.applyToSelf(new TheBombPower(owner, 3, 40));
+        flash();
+    }
+
+    @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount*100 + DESCRIPTIONS[1];
+        if (amount == 1)
+            description = DESCRIPTIONS[0];
+        else
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 }
