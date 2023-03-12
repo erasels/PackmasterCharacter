@@ -25,7 +25,6 @@ public class StartingGun extends AbstractJockeyCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
     }
 }
