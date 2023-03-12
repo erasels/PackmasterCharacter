@@ -273,6 +273,8 @@ public class HatMenu {
             //SpireAnniversary5Mod.logger.info("Selected a missing hat.");
             Hats.removeHat(false);
             flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[7];
+            showRainbowButton = false;
+            if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
         } else {
             invalidHatSelected = false;
             //SpireAnniversary5Mod.logger.info("Add new hat at index " + index);
