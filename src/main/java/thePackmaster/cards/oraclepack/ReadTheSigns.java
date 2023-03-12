@@ -16,7 +16,7 @@ public class ReadTheSigns extends AbstractOracleCard {
 
     public ReadTheSigns() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 8;
         baseMagicNumber = magicNumber = 10;
     }
 

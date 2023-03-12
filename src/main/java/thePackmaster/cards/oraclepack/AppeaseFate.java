@@ -18,7 +18,7 @@ public class AppeaseFate extends AbstractOracleCard {
 
     public AppeaseFate() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 12;
+        baseDamage = 14;
         baseMagicNumber = magicNumber = 7;
     }
 
