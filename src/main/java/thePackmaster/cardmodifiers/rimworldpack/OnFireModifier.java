@@ -53,7 +53,7 @@ public class OnFireModifier extends AbstractCardModifier {
                 public void update() {
                     isDone = true;
                     card.superFlash(Color.ORANGE.cpy());
-                    addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, fireCounter, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                    //addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, fireCounter, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
                     fireCounter++;
                 }
             });
@@ -63,7 +63,7 @@ public class OnFireModifier extends AbstractCardModifier {
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         if(!card.purgeOnUse) {
-        for (int i = 1; i < fireCounter; i++) {
+        for (int i = 0; i < fireCounter; i++) {
                 AbstractMonster m = null;
                 if (action.target != null)
                     m = (AbstractMonster)action.target;
