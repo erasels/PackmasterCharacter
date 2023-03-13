@@ -9,10 +9,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.actions.arcanapack.AllEnemyLoseHPAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
 public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
@@ -26,8 +28,10 @@ public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction("BELL"));
+        if (MathUtils.randomBoolean())
+            atb(new SFXAction("BELL"));
         atb(new AllEnemyLoseHPAction(p, magicNumber));
+        applyToSelf(new DrawCardNextTurnPower(p, 1));
     }
 
     @Override
@@ -43,8 +47,8 @@ public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
     @Override //zhs card text thing
     public void initializeDescriptionCN() {
         super.initializeDescriptionCN();
-        if (Settings.language == Settings.GameLanguage.ZHS ) {
-            if(this.description.size()!=0){
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            if (this.description.size() != 0) {
                 this.description.remove(1);
             }
         }
