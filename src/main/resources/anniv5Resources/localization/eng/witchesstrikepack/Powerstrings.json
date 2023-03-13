@@ -2,7 +2,7 @@
   "${ModID}:MoonlightFlightPower": {
     "NAME": "Moonlight Flight",
     "DESCRIPTIONS": [
-      "Whenever you #ychannel an orb, gain #b",
+      "Whenever you #ychannel an Orb, gain #b",
       " #yFocus until your next turn."
     ]
   },

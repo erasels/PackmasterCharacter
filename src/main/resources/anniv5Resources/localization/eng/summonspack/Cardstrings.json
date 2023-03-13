@@ -47,7 +47,7 @@
   },
   "${ModID}:Training": {
     "NAME": "Training",
-    "DESCRIPTION": "At the end of your turn Evoke your next orb !M! times.",
+    "DESCRIPTION": "At the end of your turn Evoke your next Orb !M! times.",
     "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
   },
   "${ModID}:Ambush": {

@@ -17,7 +17,7 @@
   },
   "${ModID}:Winterwisp": {
     "NAME": "Winterwisp",
-    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Polar. NL If it filled an empty orb slot, trigger its passive ability."
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Polar. NL If it filled an empty Orb slot, trigger its passive ability."
   },
   "${ModID}:FrozenMagma": {
     "NAME": "Frozen Magma",
