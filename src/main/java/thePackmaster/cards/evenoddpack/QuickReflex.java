@@ -71,4 +71,9 @@ public class QuickReflex extends AbstractEvenOddCard{
             }
         });
     }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
 }

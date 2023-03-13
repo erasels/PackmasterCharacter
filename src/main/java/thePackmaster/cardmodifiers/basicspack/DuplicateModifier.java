@@ -26,16 +26,14 @@ public class DuplicateModifier extends AbstractMadScienceModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        if (this.value == 1) {
-            return rawDescription + description[0];
-        } else return rawDescription + description[1] + this.value + description[2];
+        return rawDescription + description[0] + this.value + description[1];
     }
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         if(card.purgeOnUse)
             return;
-        for(int i = 0; i<this.value; i++){
+        for(int i = 1; i<this.value; i++){
             Wiz.atb(new RepeatCardAction(card.makeStatEquivalentCopy()));
         }
     }

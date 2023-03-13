@@ -1,11 +1,13 @@
 package thePackmaster.cards.bellordpack;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -35,6 +37,7 @@ public class Midnight extends AbstractBellordCard implements OnObtainCard {
 
     @Override
     public void onObtainCard() {
+        CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
         AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), Settings.WIDTH / 2, Settings.HEIGHT / 2));
     }
 

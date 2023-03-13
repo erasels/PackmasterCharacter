@@ -15,8 +15,8 @@ public class MercuryFist extends IntoTheBreachCard {
     public final static String ID = makeID("MercuryFist");
 
     public MercuryFist() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        damage = baseDamage = 18;
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        damage = baseDamage = 12;
         magicNumber = baseMagicNumber = 3;
         this.exhaust = true;
     }
@@ -29,7 +29,6 @@ public class MercuryFist extends IntoTheBreachCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
-        upgradeMagicNumber(1);
+        upgradeDamage(6);
     }
 }

@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -32,11 +31,16 @@ public class Execute extends AbstractDownfallCard {
         atb(new VFXAction(new GoldenSlashEffect(m.hb.cX - 30.0F * Settings.scale, m.hb.cY, true), 0.2F));
         dmg(m, AbstractGameAction.AttackEffect.NONE);
 
-        if (!(AbstractDungeon.player.stance instanceof NeutralStance)){
+        if (!(AbstractDungeon.player.stance instanceof NeutralStance)) {
             atb(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true), 0.1F));
             dmg(m, AbstractGameAction.AttackEffect.NONE);
         }
-      }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = !(AbstractDungeon.player.stance instanceof NeutralStance) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
 
     public void upp() {
         upgradeDamage(UPGRADE_DAMAGE);

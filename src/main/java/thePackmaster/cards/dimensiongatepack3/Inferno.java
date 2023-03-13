@@ -1,13 +1,9 @@
 package thePackmaster.cards.dimensiongatepack3;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.dimensiongatepack.SelfDamageAction;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardTrain;
-import thePackmaster.powers.entropypack.RuinPower;
 import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
 
