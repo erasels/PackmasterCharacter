@@ -28,10 +28,15 @@ public class IceShatterPower extends AbstractPackmasterPower {
     public void wasHPLost(DamageInfo info, int damageAmount) {
         if (damageAmount > 0 && AbstractDungeon.actionManager.turnHasEnded && notActivatedForThisHPLoss) {
             notActivatedForThisHPLoss = false;
+            att(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    notActivatedForThisHPLoss = true;
+                    this.isDone = true;
+                }
+            });
             att(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
             this.flash();
-        } else {
-            notActivatedForThisHPLoss = true;
         }
     }
 
