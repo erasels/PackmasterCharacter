@@ -11,7 +11,6 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
 public class Refrigerate extends BitingColdCard {
-    // TODO: add art lmao
     public final static String ID = makeID("Refrigerate");
 
     public Refrigerate() {

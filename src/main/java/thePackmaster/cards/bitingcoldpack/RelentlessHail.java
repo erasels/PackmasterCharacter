@@ -10,11 +10,10 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Hailstorm extends BitingColdCard {
-    // TODO: add art lmao
-    public final static String ID = makeID("Hailstorm");
+public class RelentlessHail extends BitingColdCard {
+    public final static String ID = makeID("RelentlessHail");
 
-    public Hailstorm() {
+    public RelentlessHail() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         damage = baseDamage = 6;
         magicNumber = baseMagicNumber = 2;

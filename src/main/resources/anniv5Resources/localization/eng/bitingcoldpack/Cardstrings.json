@@ -15,8 +15,8 @@
     "NAME": "Growing Affliction",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you apply a debuff, return this from the discard pile to your hand."
   },
-  "${ModID}:Hailstorm": {
-    "NAME": "Hailstorm",
+  "${ModID}:RelentlessHail": {
+    "NAME": "Relentless Hail",
     "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL Increase this card's hits by 1 this combat."
   },
   "${ModID}:InsultToInjury": {

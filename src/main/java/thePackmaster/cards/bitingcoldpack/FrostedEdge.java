@@ -8,7 +8,6 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
 public class FrostedEdge extends BitingColdCard {
-    // TODO: add art lmao
     public final static String ID = makeID("FrostedEdge");
 
     public FrostedEdge() {

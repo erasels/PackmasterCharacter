@@ -9,7 +9,6 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class IceShatter extends BitingColdCard {
-    // TODO: add art lmao
     public final static String ID = makeID("IceShatter");
 
     public IceShatter() {
