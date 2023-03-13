@@ -2,6 +2,7 @@ package thePackmaster.cards.highenergypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -41,5 +42,8 @@ public class ManifestMeal extends AbstractHighEnergyCard {
 
     public void upp() {
         upgradeDamage(1);
+        AbstractCard q = new Food();
+        q.upgrade();
+        cardsToPreview = q;
     }
 }
