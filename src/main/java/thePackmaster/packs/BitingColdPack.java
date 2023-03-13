@@ -25,10 +25,10 @@ public class BitingColdPack extends AbstractCardPack {
         cards.add(Frostburn.ID);
         cards.add(FrostedEdge.ID);
         cards.add(GrowingAffliction.ID);
-        cards.add(RelentlessHail.ID);
         cards.add(IceShatter.ID);
         cards.add(InsultToInjury.ID);
         cards.add(Refrigerate.ID);
+        cards.add(RelentlessHail.ID);
         cards.add(SnowedIn.ID);
         cards.add(Subdue.ID);
         return cards;
