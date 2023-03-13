@@ -15,10 +15,6 @@
     "NAME": "Growing Affliction",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you apply a debuff, return this from the discard pile to your hand."
   },
-  "${ModID}:RelentlessHail": {
-    "NAME": "Relentless Hail",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL Increase this card's hits by 1 this combat."
-  },
   "${ModID}:InsultToInjury": {
     "NAME": "Insult to Injury",
     "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique debuff the enemy has."
@@ -27,6 +23,10 @@
     "NAME": "Refrigerate",
     "DESCRIPTION": "Apply !M! ${ModID}:Frostbite. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Frostbite. NL If the enemy already had ${ModID}:Frostbite, they lose HP equal to it. NL Exhaust."
+  },
+  "${ModID}:RelentlessHail": {
+    "NAME": "Relentless Hail",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL Increase this card's hits by 1 this combat."
   },
   "${ModID}:IceShatter": {
     "NAME": "Ice Shatter",
