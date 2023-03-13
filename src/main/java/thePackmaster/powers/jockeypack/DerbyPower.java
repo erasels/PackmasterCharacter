@@ -1,6 +1,8 @@
 package thePackmaster.powers.jockeypack;
 
 
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -18,6 +20,12 @@ public class DerbyPower extends AbstractPackmasterPower {
 
     public DerbyPower() {
         super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, 1);
+        updateDescription();
+    }
+
+    @Override
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        updateDescription();
     }
 
     @Override

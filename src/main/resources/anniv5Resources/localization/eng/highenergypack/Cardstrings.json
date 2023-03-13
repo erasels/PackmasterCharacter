@@ -22,7 +22,8 @@
   },
   "${ModID}:ManifestMeal": {
     "NAME": "Manifest Meal",
-    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your draw pile."
+    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food+ into your draw pile."
   },
   "${ModID}:Food": {
     "NAME": "Food",
