@@ -49,10 +49,10 @@ public class DicePower extends AbstractPackmasterPower {
             if(card instanceof AbstractBoardCard)
             {
                 if(!((AbstractBoardCard) card).reroll)
-                    addToTop(new ReducePowerAction(owner, owner, ID, amount));
+                    addToBot(new ReducePowerAction(owner, owner, ID, amount));
             }
             else
-                addToTop(new ReducePowerAction(owner, owner, ID, amount));
+                addToBot(new ReducePowerAction(owner, owner, ID, amount));
         }
     }
 
