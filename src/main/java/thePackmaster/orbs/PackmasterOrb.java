@@ -38,10 +38,6 @@ public interface PackmasterOrb {
                 orbs.add(new CrescentMoon());
                 orbs.add(new FullMoon());
             }
-            if (pack instanceof StrikesPack) {
-                orbs.add(new Dark());
-                orbs.add(new Lightning());
-            }
             if (pack instanceof SummonsPack) {
                 orbs.add(new Louse());
                 orbs.add(new Panda());
