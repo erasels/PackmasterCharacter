@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.compendium.CardLibSortHeader;
+import com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.SortHeaderButton;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
@@ -149,6 +150,15 @@ public class CompendiumPatches {
                         .filter(c -> SpireAnniversary5Mod.cardParentMap.containsKey(c.cardID))
                         .collect(Collectors.toList());
                 group.group.addAll(baseGameCards);
+
+                // We've found that having the special rarity cards associated with the packs show up in the Packmaster's
+                // tab is not very useful, and we want to have each pack of 10 cards in two nicely organized rows (when
+                // sorted by packs). In the future we might make all these cards colorless (and remove or change this code),
+                // but for now we just move them to the list that the compendium uses for colorless cards
+                List<AbstractCard> specialRarityCards = group.group.stream().filter(c -> c.rarity == AbstractCard.CardRarity.SPECIAL).collect(Collectors.toList());
+                CardGroup colorlessCards = ReflectionHacks.getPrivate(__obj_instance, CardLibraryScreen.class, "colorlessCards");
+                colorlessCards.group.addAll(specialRarityCards);
+                group.group.removeIf(c -> c.rarity == AbstractCard.CardRarity.SPECIAL);
             }
         }
     }
