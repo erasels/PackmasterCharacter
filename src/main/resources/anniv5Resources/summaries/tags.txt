@@ -43,6 +43,7 @@ IntoTheBreachPack	None
 IntriguePack	None
 IroncladPack	Strength
 LegacyPack	Exhaust
+JockeyPack	None
 MadSciencePack	Orbs
 MarisaPack	Exhaust,Attacks
 MetaPack	Magic
