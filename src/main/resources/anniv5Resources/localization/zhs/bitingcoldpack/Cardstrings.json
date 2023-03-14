@@ -34,7 +34,7 @@
   },
   "${ModID}:Subdue": {
     "NAME": "制服",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本场战斗打出的上张牌为攻击，再获得一次。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若所用上张牌为攻击， NL 再获得一次。"
   },
   "${ModID}:SnowedIn": {
     "NAME": "积雪",
