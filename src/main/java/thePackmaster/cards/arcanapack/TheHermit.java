@@ -21,12 +21,15 @@ public class TheHermit extends AbstractAstrologerCard {
 
     public TheHermit() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        baseBlock = block = 3;
         exhaust = true;
 
         AnimatedCardsPatch.loadFrames(this, 5, 0.1f);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
+
         atb(new AbstractGameAction() {
             boolean first = true;
             @Override
