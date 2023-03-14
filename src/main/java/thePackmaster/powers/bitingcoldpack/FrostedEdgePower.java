@@ -6,18 +6,20 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
+import static thePackmaster.util.Wiz.atb;
 
-public class GlaciatePower extends AbstractPackmasterPower implements BetterOnApplyPowerPower {
-    public static final String POWER_ID = makeID("GlaciatePower");
+public class FrostedEdgePower extends AbstractPackmasterPower implements BetterOnApplyPowerPower {
+    public static final String POWER_ID = makeID("FrostedEdgePower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public GlaciatePower(AbstractCreature owner, int amount) {
+    public FrostedEdgePower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
@@ -30,11 +32,8 @@ public class GlaciatePower extends AbstractPackmasterPower implements BetterOnAp
     public boolean betterOnApplyPower(AbstractPower pow, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
         if(FrostbitePower.POWER_ID.equals(pow.ID)) {
             flash();
-            if (Settings.FAST_MODE)
-                addToBot(new WaitAction(0.1F));
-            else
-                addToBot(new WaitAction(0.2F));
-            applyToSelf(new VigorPower(owner, amount));
+            applyToSelf(new StrengthPower(owner, amount));
+            applyToSelf(new LoseStrengthPower(owner, amount));
         }
         return true;
     }
