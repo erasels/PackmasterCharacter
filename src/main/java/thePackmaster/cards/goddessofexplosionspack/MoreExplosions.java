@@ -44,6 +44,7 @@ public class MoreExplosions extends AbstractGoddessOfExplosionsCard {
                     .stream()
                     .filter(c -> c.type == CardType.POWER)
                     .filter(c -> !c.hasTag(AbstractCard.CardTags.HEALING))
+                    .filter(c -> c.rarity == CardRarity.COMMON || c.rarity == CardRarity.UNCOMMON || c.rarity == CardRarity.RARE)
                     .collect(Collectors.toList());
 
             eligibleCards.addAll(validCards);
