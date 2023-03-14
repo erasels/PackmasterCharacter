@@ -43,8 +43,8 @@ public class Fluctuate extends AbstractSpheresCard {
                 ArrayList<AbstractMonster> monsters = Wiz.getEnemies();
                 Collections.reverse(monsters);
                 for (AbstractMonster m : monsters) {
-                    Wiz.applyToEnemyTop(m, new WeakPower(m, amount, false));
                     Wiz.applyToEnemyTop(m, new VulnerablePower(m, amount, false));
+                    Wiz.applyToEnemyTop(m, new WeakPower(m, amount, false));
                 }
                 this.isDone = true;
             }
