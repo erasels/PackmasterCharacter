@@ -18,25 +18,18 @@ public class Exultation extends AbstractIntrigueCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.applyPowers();
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
-                int blk = 0;
-
                 for(AbstractCard c : Wiz.p().hand.group)
                 {
                     if (c != Exultation.this)
-                    if (promote(c))
-                        blk += magicNumber;
+                        promote(c);
                 }
-
-                if (blk > 0)
-                Wiz.doBlk(magicNumber);
-
                 isDone = true;
             }
         });
+        blck();
     }
 
     public void applyPowers() {
