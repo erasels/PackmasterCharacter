@@ -37,9 +37,9 @@ public class MegaChill extends AbstractFrostCard {
                             channelFrost();
                         }
                     } else {
-                        if (CardModifierManager.hasModifier(c, FrozenMod.ID) && !OccultPatch.isUnplayable(Wiz.p(), c)) {
+                        if (CardModifierManager.hasModifier(c, FrozenMod.ID)) {
                             channelFrost();
-                        } else {
+                        } else if (!OccultPatch.isUnplayable(Wiz.p(), c)) {
                             Wiz.atb(new SimpleAddModifierAction(new FrozenMod(), c, false));
                         }
                     }
