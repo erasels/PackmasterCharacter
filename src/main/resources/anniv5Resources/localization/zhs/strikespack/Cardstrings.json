@@ -22,7 +22,7 @@
   },
   "${ModID}:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 下张攻击牌使你获得未被格挡伤害点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下张攻击牌使你获得 ${ModID}:突破 量点 格挡 。"
   },
   "${ModID}:StrikeABargain": {
     "NAME": "协商打击",
