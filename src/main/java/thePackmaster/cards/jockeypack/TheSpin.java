@@ -49,7 +49,6 @@ public class TheSpin extends AbstractJockeyCard {
     }
 
     public void applyPowers() {
-        super.applyPowers();
         int count = 0;
         boolean discountedSelf = false;
         for (AbstractCard q : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
