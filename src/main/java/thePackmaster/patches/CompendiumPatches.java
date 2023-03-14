@@ -1,10 +1,13 @@
 package thePackmaster.patches;
 
 import basemod.ReflectionHacks;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.EverythingFix;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.compendium.CardLibSortHeader;
@@ -14,9 +17,12 @@ import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.ThePackmaster;
 
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CompendiumPatches {
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("Compendium"));
@@ -129,6 +135,21 @@ public class CompendiumPatches {
                                     .thenComparing(o -> ((AbstractCard) o).name)
                     )
             );
+        }
+    }
+
+    @SpirePatch2(clz = EverythingFix.Initialize.class, method = "Insert")
+    public static class ShowBaseGameCards {
+        @SpirePostfixPatch
+        public static void showBaseGameCards(Object __obj_instance) {
+            if (EverythingFix.Fields.cardGroupMap.containsKey(ThePackmaster.Enums.PACKMASTER_RAINBOW)) {
+                CardGroup group = EverythingFix.Fields.cardGroupMap.get(ThePackmaster.Enums.PACKMASTER_RAINBOW);
+                List<AbstractCard> baseGameCards = CardLibrary.getAllCards().stream()
+                        .filter(c -> (c.color == AbstractCard.CardColor.RED || c.color == AbstractCard.CardColor.GREEN || c.color == AbstractCard.CardColor.BLUE || c.color == AbstractCard.CardColor.PURPLE))
+                        .filter(c -> SpireAnniversary5Mod.cardParentMap.containsKey(c.cardID))
+                        .collect(Collectors.toList());
+                group.group.addAll(baseGameCards);
+            }
         }
     }
 }

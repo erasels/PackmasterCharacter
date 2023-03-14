@@ -39,7 +39,7 @@ public class SingleCardViewBorderTextPatch {
             AbstractCard card = (AbstractCard)cardField.get(__instance);
             if (card instanceof AbstractPackmasterCard) {
                 ((AbstractPackmasterCard)card).renderBorderText(sb, Settings.WIDTH / 2.0F, (float)yField.get(__instance), yOffsetBase, drawScale);
-            } else if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER && card.getClass().getSuperclass().equals(AbstractCard.class)) {
+            } else if (RenderBaseGameCardPackTopTextPatches.shouldShowPackName(card)) {
                 AbstractCardPack pack = Wiz.getPackByCard(card);
                 if (pack != null) {
                     float xPos, yPos, offsetY;
