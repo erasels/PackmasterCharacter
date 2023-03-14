@@ -5,7 +5,7 @@
   },
   "${ModID}:Frostburn": {
     "NAME": "霜灼",
-    "DESCRIPTION": "给予所有敌人 !M! 层 ${ModID}:霜噬 。 NL 将一张 *灼烧 加入弃牌堆。"
+    "DESCRIPTION": "给予 !M! 层群体 ${ModID}:霜噬 。 NL 将一张 *灼烧 加入弃牌堆。"
   },
   "${ModID}:FrostedEdge": {
     "NAME": "冰尖",
@@ -26,7 +26,7 @@
   },
   "${ModID}:IceShatter": {
     "NAME": "冰裂",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 下回合每当目标掉血， NL 其受到 !M! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本轮敌方回合内，每当目标生命流失，其额外受到 !M! 点伤害。"
   },
   "${ModID}:RelentlessHail": {
     "NAME": "狂烈冰雹",
