@@ -66,6 +66,7 @@ SentinelPack	Stances
 SerpentinePack	Stances,Debuffs
 ShamanPack	Debuffs
 SilentPack	Discard
+SpheresPack	Debuffs,Orbs
 SneckoPack	None
 StatusPack	Exhaust,Tokens
 StrikesPack	Orbs,Attacks

@@ -1,0 +1,23 @@
+[
+  {
+    "PROPER_NAME": "Blaze",
+    "NAMES": [
+      "blaze"
+    ],
+    "DESCRIPTION": "Orb: Increases amount every turn. When #yEvoked, applies #yIgnite to the enemy with the most HP."
+  },
+  {
+    "PROPER_NAME": "Polar",
+    "NAMES": [
+      "polar"
+    ],
+    "DESCRIPTION": "Orb: Applies #yFrostbite to random enemies. When #yEvoked, applies #yFrostbite to ALL enemies."
+  },
+  {
+    "PROPER_NAME": "Randomized Orb",
+    "NAMES": [
+      "randomized\u00a0orb"
+    ],
+    "DESCRIPTION": "When this card is created, the Orb it channels is randomly chosen from #yLightning, #yDark, #yGhostflame, #yBlaze, and #yPolar."
+  }
+]

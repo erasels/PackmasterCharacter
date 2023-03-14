@@ -5,13 +5,13 @@
   },
   "${ModID}:MysticFlourish": {
     "NAME": "Tetsuzanko",
-    "DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next orb",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next orb twice"
+    "DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next Orb.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Activate the passive effect of your next Orb twice."
   },
   "${ModID}:CrystalMoonlight": {
     "NAME": "Crystal Moonlight",
-    "DESCRIPTION": "${ModID}:Manifest !M! random orb. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Manifest !M! random orbs. NL Exhaust."
+    "DESCRIPTION": "${ModID}:Manifest !M! random Orb. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Manifest !M! random Orbs. NL Exhaust."
   },
   "${ModID}:FullMoonHalo": {
     "NAME": "Full Moon Halo",
@@ -19,7 +19,7 @@
   },
   "${ModID}:MoonlightBarrage": {
     "NAME": "Moonlight Barrage",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each channeled orb."
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each channeled Orb."
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "Chittering Punt",
@@ -35,7 +35,7 @@
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "Moonlight Flight",
-    "DESCRIPTION": "Whenever you channel an orb gain !M! Focus until your next turn."
+    "DESCRIPTION": "Whenever you channel an Orb, gain !M! Focus until your next turn."
   },
   "${ModID}:ScarabPlague": {
     "NAME": "Scarab Plague",

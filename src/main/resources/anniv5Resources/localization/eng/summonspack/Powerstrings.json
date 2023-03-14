@@ -17,15 +17,15 @@
   "${ModID}:AmbushPower": {
     "NAME": "Ambush",
     "DESCRIPTIONS": [
-      "Whenever you #yChannel an orb, #yEvoke it #b1 time without removing it.",
-      "Whenever you #yChannel an orb, #yEvoke it #b",
+      "Whenever you #yChannel an Orb, #yEvoke it #b1 time without removing it.",
+      "Whenever you #yChannel an Orb, #yEvoke it #b",
       " times without removing it."
     ]
   },
   "${ModID}:TrainingPower": {
     "NAME": "Trained",
     "DESCRIPTIONS": [
-      "At the end of your turn, evoke your next orb #b",
+      "At the end of your turn, evoke your next Orb #b",
       " times."
     ]
   }

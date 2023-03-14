@@ -9,6 +9,8 @@ import thePackmaster.orbs.WitchesStrike.FullMoon;
 import thePackmaster.orbs.contentcreatorpack.Wanderbot;
 import thePackmaster.orbs.downfallpack.Ghostflame;
 import thePackmaster.orbs.entropy.Oblivion;
+import thePackmaster.orbs.spherespack.Blaze;
+import thePackmaster.orbs.spherespack.Polar;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.orbs.summonspack.SwarmOfBees;
@@ -36,10 +38,6 @@ public interface PackmasterOrb {
                 orbs.add(new CrescentMoon());
                 orbs.add(new FullMoon());
             }
-            if (pack instanceof StrikesPack) {
-                orbs.add(new Dark());
-                orbs.add(new Lightning());
-            }
             if (pack instanceof SummonsPack) {
                 orbs.add(new Louse());
                 orbs.add(new Panda());
@@ -50,6 +48,10 @@ public interface PackmasterOrb {
             }
             if (pack instanceof ContentCreatorPack) {
                 orbs.add(new Wanderbot());
+            }
+            if (pack instanceof SpheresPack) {
+                orbs.add(new Blaze());
+                orbs.add(new Polar());
             }
         }
 

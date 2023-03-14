@@ -1,0 +1,16 @@
+{
+  "${ModID}:SpheresPack": {
+    "TEXT": [
+      "Spheres",
+      "A flexible orb-focused pack with two new orbs that apply *Ignite and *Frostbite.",
+      "modargo",
+      "Card art from MtG"
+    ]
+  },
+  "${ModID}:SpheresPackHat": {
+    "TEXT": [
+      "TBD",
+      "TBD"
+    ]
+  }
+}
