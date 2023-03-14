@@ -31,8 +31,8 @@
   },
   "${ModID}:Meltdown": {
     "NAME": "熔化",
-    "DESCRIPTION": "打出 *能力 牌时， NL 获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 打出 *能力 牌时， NL 获得 [E] 。"
+    "DESCRIPTION": "抽到 *能力 牌时， NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 抽到 *能力 牌时， NL 获得 [E] 。"
   },
   "${ModID}:EveOfDestruction": {
     "NAME": "毁灭之夜",
