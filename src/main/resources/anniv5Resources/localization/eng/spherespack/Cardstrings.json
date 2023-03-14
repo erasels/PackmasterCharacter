@@ -17,7 +17,7 @@
   },
   "${ModID}:Winterwisp": {
     "NAME": "Winterwisp",
-    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Polar. NL If it filled an empty Orb slot, trigger its passive ability."
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Polar. NL If it filled an empty Orb slot, trigger its passive."
   },
   "${ModID}:FrozenMagma": {
     "NAME": "Frozen Magma",
@@ -31,8 +31,8 @@
   },
   "${ModID}:FrostConversion": {
     "NAME": "Frost Conversion",
-    "DESCRIPTION": "Ethereal. NL If you have 3+ unique Orbs, Channel 1 Frost. NL Channel 1 Frost.",
-    "UPGRADE_DESCRIPTION": "If you have 3+ unique Orbs, Channel 1 Frost. NL Channel 1 Frost."
+    "DESCRIPTION": "If you have 3+ unique Orbs, Channel 1 Frost. NL Channel 1 Frost.",
+    "UPGRADE_DESCRIPTION": "If you have 3+ unique Orbs, Channel 1 Frost and trigger its passive. NL Channel 1 Frost."
   },
   "${ModID}:Fluctuate": {
     "NAME": "Fluctuate",

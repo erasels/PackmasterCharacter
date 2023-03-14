@@ -41,6 +41,7 @@ public class Winterwisp extends AbstractSpheresCard {
                         @Override
                         public void update() {
                             newOrb.onStartOfTurn();
+                            newOrb.onEndOfTurn();
                             this.isDone = true;
                         }
                     });
