@@ -16,12 +16,10 @@ public class Consolidate extends AbstractSpheresCard {
     public Consolidate() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = FOCUS;
-        this.exhaust = true;
     }
 
     @Override
     public void upp() {
-        this.exhaust = false;
     }
 
     @Override
@@ -29,7 +27,9 @@ public class Consolidate extends AbstractSpheresCard {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                AbstractDungeon.player.removeNextOrb();
+                if (!upgraded) {
+                    AbstractDungeon.player.removeNextOrb();
+                }
                 AbstractDungeon.player.removeNextOrb();
                 this.isDone = true;
             }
