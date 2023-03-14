@@ -60,6 +60,16 @@ public class AutoBattlerPatches {
     }
 
     @SpirePatch(
+            clz = PressEndTurnButtonAction.class,
+            method = SpirePatch.CONSTRUCTOR
+    )
+    public static class NoClashPlz {
+        public static void Postfix(PressEndTurnButtonAction __instance) {
+            OnRefreshHandCheckToPlayCardPatch.isEndingTurn = true;
+        }
+    }
+
+    @SpirePatch(
             clz = CardGroup.class,
             method = "refreshHandLayout"
     )
@@ -75,7 +85,6 @@ public class AutoBattlerPatches {
                 if (!AbstractDungeon.isScreenUp && AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.actionManager.currentAction == null && !isEndingTurn) {
                     AbstractMonster target = Wiz.getFrontmostEnemy();
                     if (target == null) {
-                        isEndingTurn = true;
                         AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
                     } else {
                         boolean foundACard = false;
@@ -91,7 +100,6 @@ public class AutoBattlerPatches {
                             }
                         }
                         if (!foundACard) {
-                            isEndingTurn = true;
                             AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
                         }
                     }

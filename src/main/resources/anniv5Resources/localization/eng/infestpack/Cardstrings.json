@@ -9,11 +9,11 @@
   },
   "${ModID}:GrassHop": {
     "NAME": "Locusts",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL When this gains [bugIcon] , ALL enemies lose !M! HP."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL When this gains [bugIcon] , NL ALL enemies lose !M! HP."
   },
   "${ModID}:Bzzzzz": {
     "NAME": "Bzzzzzz",
-    "DESCRIPTION": "Apply !M! Weak. NL Draw !M! cards."
+    "DESCRIPTION": "Apply 1 Weak and Vulnerable. NL Draw !M! cards."
   },
   "${ModID}:BugOut": {
     "NAME": "Bug Out",
@@ -21,7 +21,7 @@
   },
   "${ModID}:ScarabShield": {
     "NAME": "Scarab Shield",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL Gain 1 Artifact NL for each [bugIcon] ."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL Draw 1 card. NL When this gains [bugIcon] , NL gain 1 Artifact."
   },
   "${ModID}:Entomology": {
     "NAME": "Entomology",
