@@ -36,8 +36,8 @@
   },
   "${ModID}:ExplosiveForm": {
     "NAME": "爆炸形态",
-    "DESCRIPTION": "回合开始时，布置一枚 *炸弹 。",
-    "UPGRADE_DESCRIPTION": "布置一枚 *炸弹 。 NL 回合开始时，布置一枚 *炸弹 。"
+    "DESCRIPTION": "回合开始时， NL 布置一枚 *炸弹 。",
+    "UPGRADE_DESCRIPTION": "布置一枚 *炸弹 。 NL 回合开始时， NL 布置一枚 *炸弹 。"
   },
   "${ModID}:KillerQueen": {
     "NAME": "杀人女王",
