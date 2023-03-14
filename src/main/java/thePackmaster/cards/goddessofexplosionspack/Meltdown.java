@@ -12,7 +12,7 @@ public class Meltdown extends AbstractGoddessOfExplosionsCard {
     public final static String ID = makeID("Meltdown");
 
     public Meltdown() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
     }
 

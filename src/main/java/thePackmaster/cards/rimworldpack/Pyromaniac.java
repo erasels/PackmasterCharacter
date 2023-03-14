@@ -11,7 +11,7 @@ public class Pyromaniac extends AbstractRimCard {
     public final static String ID = makeID(Pyromaniac.class.getSimpleName());
 
     public Pyromaniac() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

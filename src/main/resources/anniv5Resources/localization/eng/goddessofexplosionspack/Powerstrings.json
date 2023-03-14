@@ -36,16 +36,16 @@
       " Energy."
     ]
   },
-  "${ModID}:EveOfDestructionPower": {
-    "NAME": "Eve of Destruction",
+  "${ModID}:ExplosiveFormPower": {
+    "NAME": "Explosive Form",
     "DESCRIPTIONS": [
       "At the start of each turn, set up #yThe #yBomb.",
       "At the start of each turn, set up #yThe #yBomb #b",
       " times."
     ]
   },
-  "${ModID}:ExplosiveFormPower": {
-    "NAME": "Explosive Form",
+  "${ModID}:EveOfDestructionPower": {
+    "NAME": "Eve Of Destruction",
     "DESCRIPTIONS": [
       "You deal #b",
       "% more non-attack damage."

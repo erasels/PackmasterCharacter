@@ -39,6 +39,7 @@
   },
   "${ModID}:MegaChill": {
     "NAME": "寒意",
-    "DESCRIPTION": "手中每有一张被冻牌， NL 生成1个 冰霜 充能球。 NL ${ModID}:冻结 其他 手牌。"
+    "DESCRIPTION": "手中每有一张被冻牌， NL 生成 !M! 个 冰霜 充能球。 NL ${ModID}:冻结 其他 手牌。",
+    "UPGRADE_DESCRIPTION": "${ModID}:冻结 其他 手牌。 NL 手中每有一张被冻牌， NL 生成 !M! 个 冰霜 充能球。"
   }
 }

@@ -5,7 +5,7 @@
       "on fire",
       "on_fire"
     ],
-    "DESCRIPTION": "At the end of your turn, cards in your hand with #yFire #yCounters make you take damage equal to their #yFire #yCounter. They then increase the #yFire #yCounter. Cards with #yFire #yCounters play an additional copy of themselves for every #yFire #yCounter above #b1, and #yExhaust."
+    "DESCRIPTION": "Play an additional time for each #yFire #yCounter and #yExhaust. Increase #yFire #yCounter by #b1 at the end of your turn while in your hand."
   },
   {
     "PROPER_NAME": "Addiction",

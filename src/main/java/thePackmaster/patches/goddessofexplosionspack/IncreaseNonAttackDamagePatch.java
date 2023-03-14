@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import thePackmaster.powers.goddessofexplosionspack.ExplosiveFormPower;
-
+import thePackmaster.powers.goddessofexplosionspack.EveOfDestructionPower;
 import thePackmaster.util.Wiz;
 
 
@@ -19,7 +18,7 @@ public class IncreaseNonAttackDamagePatch {
         if (AbstractDungeon.player != null && (info.owner == null || info.owner == AbstractDungeon.player) && !m.hasPower(IntangiblePower.POWER_ID) && !m.hasPower(IntangiblePlayerPower.POWER_ID)) {
 
             if (info.type != DamageInfo.DamageType.NORMAL) {
-                AbstractPower imExplosive = Wiz.p().getPower(ExplosiveFormPower.POWER_ID);
+                AbstractPower imExplosive = Wiz.p().getPower(EveOfDestructionPower.POWER_ID);
 
                 if (imExplosive != null) {
                     info.output += info.output*imExplosive.amount;
