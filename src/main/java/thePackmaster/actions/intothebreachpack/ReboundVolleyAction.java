@@ -58,7 +58,9 @@ public class ReboundVolleyAction extends AbstractGameAction {
                     this.currentX = targetEnemy.hb.cX;
                     this.currentY = targetEnemy.hb.cY;
                     card.superCalculateCardDamage(targetEnemy);
-                    actionsHoldingQueue.add(new DamageAction(targetEnemy, new DamageInfo(adp(), firstHit ? this.card.damage : this.card.secondDamage, this.card.damageTypeForTurn), AttackEffect.BLUNT_HEAVY));
+                    actionsHoldingQueue.add(new DamageAction(targetEnemy,
+                            new DamageInfo(adp(), firstHit ? this.card.damage : this.card.secondDamage, this.card.damageTypeForTurn),
+                            firstHit ? AttackEffect.BLUNT_LIGHT : AttackEffect.BLUNT_HEAVY));
                     firstHit = false;
                 }
             }

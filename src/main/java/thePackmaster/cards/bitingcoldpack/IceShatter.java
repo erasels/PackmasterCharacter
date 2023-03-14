@@ -3,27 +3,28 @@ package thePackmaster.cards.bitingcoldpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.bitingcoldpack.FrostbitePower;
+import thePackmaster.powers.bitingcoldpack.IceShatterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 
-public class IcicleSpear extends BitingColdCard {
-    public final static String ID = makeID("IcicleSpear");
+public class IceShatter extends BitingColdCard {
+    public final static String ID = makeID("IceShatter");
 
-    public IcicleSpear() {
+    public IceShatter() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        damage = baseDamage = 5;
-        magicNumber = baseMagicNumber = 5;
+        damage = baseDamage = 8;
+        magicNumber = baseMagicNumber = 8;
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        applyToEnemy(m, new FrostbitePower(m, magicNumber));
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        applyToEnemy(m, new IceShatterPower(m, magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(2);
+        upgradeDamage(3);
+        upgradeMagicNumber(3);
     }
 }

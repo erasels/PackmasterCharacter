@@ -17,6 +17,6 @@ public class Snowglobe extends AbstractPackmasterRelic {
 
     // Hey there! Welcome to my code!
     // I know that this relic doesn't look to be doing anything...
-    // Its functionality is actually in the FrostbiteDamageAction
+    // Its functionality is actually in FrostbitePower
     // If you want to see this relic's function, go there ^^
 }

@@ -13,8 +13,7 @@ public class SnowedIn extends BitingColdCard {
 
     public SnowedIn() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        magicNumber = baseMagicNumber = 13;
-        this.exhaust = true;
+        magicNumber = baseMagicNumber = 11;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,6 +22,6 @@ public class SnowedIn extends BitingColdCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(3);
     }
 }

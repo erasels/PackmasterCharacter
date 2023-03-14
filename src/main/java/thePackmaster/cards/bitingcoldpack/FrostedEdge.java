@@ -2,25 +2,25 @@ package thePackmaster.cards.bitingcoldpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.bitingcoldpack.GlaciatePower;
+import thePackmaster.powers.bitingcoldpack.FrostedEdgePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class Glaciate extends BitingColdCard {
-    public final static String ID = makeID("Glaciate");
+public class FrostedEdge extends BitingColdCard {
+    public final static String ID = makeID("FrostedEdge");
 
-    public Glaciate() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+    public FrostedEdge() {
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new GlaciatePower(p, magicNumber));
+        applyToSelf(new FrostedEdgePower(p, magicNumber));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(1);
     }
 }

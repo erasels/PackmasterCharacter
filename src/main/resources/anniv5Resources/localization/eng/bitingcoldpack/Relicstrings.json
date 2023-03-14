@@ -3,8 +3,8 @@
     "NAME": "Snowglobe",
     "FLAVOR": "A depiction of the Spire during snowy weather. It growls when you shake it.",
     "DESCRIPTIONS": [
-      "Enemies take #b",
-      " additional damage from #y${ModID}:Frostbite."
+      "Whenever you apply #y${ModID}:Frostbite by attacking an enemy, apply #b",
+      " more."
     ]
   }
 }

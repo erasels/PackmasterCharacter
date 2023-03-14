@@ -3,13 +3,14 @@ package thePackmaster.powers.bitingcoldpack;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import thePackmaster.actions.bitingcoldpack.FrostbiteDamageAction;
 import thePackmaster.powers.AbstractPackmasterPower;
@@ -30,7 +31,7 @@ public class FrostbitePower extends AbstractPackmasterPower implements HealthBar
     @Override
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            AbstractDungeon.actionManager.addToBottom(new FrostbiteDamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.HP_LOSS), this));
+            atb(new FrostbiteDamageAction(this.owner, this));
             atb(new WaitAction(0.01F));
         }
     }
@@ -38,7 +39,16 @@ public class FrostbitePower extends AbstractPackmasterPower implements HealthBar
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
-            addToBot(new ApplyPowerAction(this.owner, info.owner, new FrostbitePower(owner, 1)));
+            // Application of Frostbite
+            // includes Snowglobe check
+            AbstractRelic s = AbstractDungeon.player.getRelic(Snowglobe.ID);
+            if (s != null) {
+                atb(new ApplyPowerAction(this.owner, info.owner, new FrostbitePower(owner, 2)));
+                atb(new RelicAboveCreatureAction(this.owner, s));
+                s.flash();
+            } else {
+                atb(new ApplyPowerAction(this.owner, info.owner, new FrostbitePower(owner, 1)));
+            }
         }
         return damageAmount;
     }
@@ -55,11 +65,7 @@ public class FrostbitePower extends AbstractPackmasterPower implements HealthBar
 
     @Override
     public int getHealthBarAmount() {
-        if(AbstractDungeon.player.hasRelic(Snowglobe.ID)) {
-            return this.amount + 1;
-        } else {
-            return this.amount;
-        }
+        return this.amount;
     }
 
     @Override
