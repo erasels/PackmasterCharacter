@@ -1,7 +1,7 @@
 {
   "${ModID}:BeyondTheStars": {
     "NAME": "跨越星辰",
-    "DESCRIPTION": "造成 !D! 群体点伤害。 NL 获得一张 *疯狂 。",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 获得一张 *疯狂 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 群体点伤害。 NL 获得一张 *疯狂+ 。"
   },
   "${ModID}:NamelessMist": {
