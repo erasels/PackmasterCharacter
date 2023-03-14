@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import thePackmaster.actions.highenergypack.AllEnemyApplyPowerAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
@@ -28,7 +26,8 @@ public class VoDo extends AbstractBellordCard implements OnObtainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction("BELL"));
+        if (MathUtils.randomBoolean())
+            atb(new SFXAction("BELL"));
         applyToSelf(new StrengthPower(p, magicNumber));
         applyToEnemy(m, new StrengthPower(m, -2));
     }

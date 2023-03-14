@@ -1,0 +1,20 @@
+{
+  "${ModID}:JockeyPack": {
+    "TEXT": [
+      "Jockey",
+      "Ride Horse cards to make a deadly megaturn.",
+      "Vex"
+    ]
+  },
+  "${ModID}:JockeyPackHat": {
+    "TEXT": [
+      "You know, for riding horses.",
+      "The Jockey"
+    ]
+  },
+  "${ModID}:LuckyModifier": {
+    "TEXT": [
+      "Lucky "
+    ]
+  }
+}

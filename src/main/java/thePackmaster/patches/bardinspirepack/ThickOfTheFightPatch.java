@@ -15,13 +15,13 @@ import com.megacrit.cardcrawl.monsters.beyond.Darkling;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import javassist.CtBehavior;
 import thePackmaster.cards.bardinspirepack.ThickOfTheFight;
+import thePackmaster.patches.secretlevelpack.EnoughTalkPatch;
+import thePackmaster.patches.secretlevelpack.SpecialCardGlowCheckPatch;
 
 import java.util.ArrayList;
 
-public class ThickOfTheFightPatch
-{
-    private static void updateCards()
-    {
+public class ThickOfTheFightPatch {
+    private static void updateCards() {
         ArrayList<AbstractMonster> monsters;
         try {
             monsters = AbstractDungeon.getMonsters().monsters;
@@ -66,24 +66,20 @@ public class ThickOfTheFightPatch
     }
 
     @SpirePatch(
-            clz=SpawnMonsterAction.class,
-            method="update"
+            clz = SpawnMonsterAction.class,
+            method = "update"
     )
-    public static class MonsterSpawn
-    {
+    public static class MonsterSpawn {
         @SpireInsertPatch(
-                locator=Locator.class
+                locator = Locator.class
         )
-        public static void Insert(SpawnMonsterAction __instance)
-        {
+        public static void Insert(SpawnMonsterAction __instance) {
             updateCards();
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractMonster.class, "showHealthBar");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -91,24 +87,20 @@ public class ThickOfTheFightPatch
     }
 
     @SpirePatch(
-            clz=ReviveMonsterAction.class,
-            method="update"
+            clz = ReviveMonsterAction.class,
+            method = "update"
     )
-    public static class MonsterRevive
-    {
+    public static class MonsterRevive {
         @SpireInsertPatch(
-                locator=Locator.class
+                locator = Locator.class
         )
-        public static void Insert(ReviveMonsterAction __instance)
-        {
+        public static void Insert(ReviveMonsterAction __instance) {
             updateCards();
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractCreature.class, "healthBarRevivedEvent");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -116,24 +108,20 @@ public class ThickOfTheFightPatch
     }
 
     @SpirePatch(
-            clz=SummonGremlinAction.class,
-            method="update"
+            clz = SummonGremlinAction.class,
+            method = "update"
     )
-    public static class SummonGremlin
-    {
+    public static class SummonGremlin {
         @SpireInsertPatch(
-                locator=Locator.class
+                locator = Locator.class
         )
-        public static void Insert(SummonGremlinAction __instance)
-        {
+        public static void Insert(SummonGremlinAction __instance) {
             updateCards();
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractMonster.class, "showHealthBar");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -141,37 +129,33 @@ public class ThickOfTheFightPatch
     }
 
     @SpirePatch(
-            clz=AbstractPlayer.class,
-            method="applyStartOfCombatPreDrawLogic"
+            clz = AbstractPlayer.class,
+            method = "applyStartOfCombatPreDrawLogic"
     )
-    public static class BattleStart
-    {
-        public static void Prefix(AbstractPlayer __instance)
-        {
+    public static class BattleStart {
+        public static void Prefix(AbstractPlayer __instance) {
             updateCards();
+            EnoughTalkPatch.spokeLastTurn = false;
+            SpecialCardGlowCheckPatch.playedGlowingCardThisTurn = false;
         }
     }
 
     @SpirePatch(
-            clz=AbstractMonster.class,
-            method="die",
-            paramtypez={boolean.class}
+            clz = AbstractMonster.class,
+            method = "die",
+            paramtypez = {boolean.class}
     )
-    public static class MonsterDeath
-    {
+    public static class MonsterDeath {
         @SpireInsertPatch(
-                locator=Locator.class
+                locator = Locator.class
         )
-        public static void Insert(AbstractMonster __instance, boolean triggerRelics)
-        {
+        public static void Insert(AbstractMonster __instance, boolean triggerRelics) {
             updateCards();
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractPlayer.class, "relics");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -179,24 +163,20 @@ public class ThickOfTheFightPatch
     }
 
     @SpirePatch(
-            clz=Darkling.class,
-            method="damage"
+            clz = Darkling.class,
+            method = "damage"
     )
-    public static class DarklingHalfDeath
-    {
+    public static class DarklingHalfDeath {
         @SpireInsertPatch(
-                locator=Locator.class
+                locator = Locator.class
         )
-        public static void Insert(Darkling __instance, DamageInfo inf)
-        {
+        public static void Insert(Darkling __instance, DamageInfo inf) {
             updateCards();
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractPlayer.class, "relics");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -204,24 +184,20 @@ public class ThickOfTheFightPatch
     }
 
     @SpirePatch(
-            clz=AwakenedOne.class,
-            method="damage"
+            clz = AwakenedOne.class,
+            method = "damage"
     )
-    public static class AwakenedOneHalfDeath
-    {
+    public static class AwakenedOneHalfDeath {
         @SpireInsertPatch(
-                locator=Locator.class
+                locator = Locator.class
         )
-        public static void Insert(AwakenedOne __instance, DamageInfo inf)
-        {
+        public static void Insert(AwakenedOne __instance, DamageInfo inf) {
             updateCards();
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractPlayer.class, "relics");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -230,17 +206,15 @@ public class ThickOfTheFightPatch
 
     // Because Darklings and Awakened One don't revive normally
     @SpirePatch(
-            clz=Darkling.class,
-            method="changeState"
+            clz = Darkling.class,
+            method = "changeState"
     )
     @SpirePatch(
-            clz=AwakenedOne.class,
-            method="changeState"
+            clz = AwakenedOne.class,
+            method = "changeState"
     )
-    public static class Heal
-    {
-        public static void Postfix(AbstractMonster __instance, String key)
-        {
+    public static class Heal {
+        public static void Postfix(AbstractMonster __instance, String key) {
             updateCards();
         }
     }

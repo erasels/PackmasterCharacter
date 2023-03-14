@@ -4,9 +4,9 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
@@ -23,7 +23,8 @@ public class Bzzzzz extends AbstractInfestCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SFXAction(SpireAnniversary5Mod.BEES_KEY));
-        applyToEnemy(m, new WeakPower(m, magicNumber, false));
+        applyToEnemy(m, new WeakPower(m, 1, false));
+        applyToEnemy(m, new VulnerablePower(m, 1, false));
         atb(new DrawCardAction(magicNumber));
     }
 

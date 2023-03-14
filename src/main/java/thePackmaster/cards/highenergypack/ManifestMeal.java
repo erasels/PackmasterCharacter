@@ -2,11 +2,11 @@ package thePackmaster.cards.highenergypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.actions.EasyXCostAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -18,7 +18,7 @@ public class ManifestMeal extends AbstractHighEnergyCard {
 
     public ManifestMeal() {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 6;
         cardsToPreview = new Food();
     }
 
@@ -28,6 +28,9 @@ public class ManifestMeal extends AbstractHighEnergyCard {
         }
         atb(new EasyXCostAction(this, (effect, params) -> {
             Food delociousFoob = new Food();
+            if (ManifestMeal.this.upgraded) {
+                delociousFoob.upgrade();
+            }
             delociousFoob.setX(effect);
             att(new MakeTempCardInDrawPileAction(delociousFoob, 1, true, true));
             for (int i = 0; i < effect; i++) {
@@ -38,6 +41,9 @@ public class ManifestMeal extends AbstractHighEnergyCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
+        AbstractCard q = new Food();
+        q.upgrade();
+        cardsToPreview = q;
     }
 }

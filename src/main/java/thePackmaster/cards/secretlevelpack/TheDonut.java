@@ -17,7 +17,7 @@ public class TheDonut extends AbstractSecretLevelCard {
 
     public TheDonut() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 10;
+        baseDamage = 9;
         isMultiDamage = true;
     }
 
@@ -34,6 +34,6 @@ public class TheDonut extends AbstractSecretLevelCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
     }
 }
