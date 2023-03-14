@@ -29,7 +29,8 @@ public class Midnight extends AbstractBellordCard implements OnObtainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction("BELL"));
+        if (MathUtils.randomBoolean())
+            atb(new SFXAction("BELL"));
         blck();
         atb(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
         dmg(m, AbstractGameAction.AttackEffect.NONE);

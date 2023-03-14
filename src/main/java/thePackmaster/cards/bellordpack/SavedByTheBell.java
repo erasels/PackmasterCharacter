@@ -35,10 +35,9 @@ public class SavedByTheBell extends AbstractBellordCard implements OnObtainCard 
     @Override
     public void onObtainCard() {
         CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
-        float fractical = Settings.WIDTH / 4;
+        float fractical = Settings.WIDTH / 3;
         AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), fractical, Settings.HEIGHT / 2));
         AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), fractical * 2, Settings.HEIGHT / 2));
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), fractical * 3, Settings.HEIGHT / 2));
     }
 
     public void upp() {

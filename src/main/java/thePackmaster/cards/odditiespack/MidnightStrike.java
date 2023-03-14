@@ -17,7 +17,7 @@ public class MidnightStrike extends AbstractOdditiesCard {
     public MidnightStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 12;
-        baseSecondDamage = 48;
+        baseSecondDamage = 36;
         tags.add(CardTags.STRIKE);
     }
 
