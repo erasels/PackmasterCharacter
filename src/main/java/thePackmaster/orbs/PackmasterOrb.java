@@ -11,9 +11,7 @@ import thePackmaster.orbs.downfallpack.Ghostflame;
 import thePackmaster.orbs.entropy.Oblivion;
 import thePackmaster.orbs.spherespack.Blaze;
 import thePackmaster.orbs.spherespack.Polar;
-import thePackmaster.orbs.summonspack.Louse;
-import thePackmaster.orbs.summonspack.Panda;
-import thePackmaster.orbs.summonspack.SwarmOfBees;
+import thePackmaster.orbs.summonspack.*;
 import thePackmaster.packs.*;
 
 import java.util.ArrayList;
@@ -39,9 +37,13 @@ public interface PackmasterOrb {
                 orbs.add(new FullMoon());
             }
             if (pack instanceof SummonsPack) {
+                orbs.add(new FireSpirit());
+                orbs.add(new Leprechaun());
                 orbs.add(new Louse());
                 orbs.add(new Panda());
+                orbs.add(new Porcupine());
                 orbs.add(new SwarmOfBees());
+                orbs.add(new Wolf());
             }
             if (pack instanceof EntropyPack) {
                 orbs.add(new Oblivion());
