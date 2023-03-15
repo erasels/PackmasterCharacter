@@ -9,44 +9,44 @@
   },
   "${ModID}:Trample": {
     "NAME": "Trample",
-    "DESCRIPTION": "Apply 2 Weak. NL ${ModID}:Flurry: Enemy loses !M! HP."
+    "DESCRIPTION": "给予2层虚弱. NL ${ModID}:疾风 ： 目标失去 !M! 点生命。"
   },
   "${ModID}:TakeTheLead": {
     "NAME": "Take the Lead",
-    "DESCRIPTION": "Deal !D! damage. NL If you've played 5 or more cards this turn, deal !D! damage again."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合已用5+张牌， NL 再造成一次。"
   },
   "${ModID}:ReinIn": {
     "NAME": "Rein In",
-    "DESCRIPTION": "Draw 1 card. NL ${ModID}:Flurry: Gain !M! Block."
+    "DESCRIPTION": "抽一张牌。 NL ${ModID}:疾风 ： 获得 !M! 格挡 。"
   },
   "${ModID}:Homestretch": {
     "NAME": "Homestretch",
-    "DESCRIPTION": "Add a *Horse into your hand. NL Whenever you draw a card this turn, ALL enemies lose !M! HP."
+    "DESCRIPTION": "获得一张 *赛马 。 NL 本回合每再抽一张牌， NL 所有敌人失去 !M! 点生命。"
   },
   "${ModID}:LuckyHorseshoe": {
     "NAME": "幸运马蹄铁",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL A random card in your draw pile costs 0 this turn."
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 随机将抽牌堆一张牌的本回合打出前耗能变为0。"
   },
   "${ModID}:Derby": {
     "NAME": "Derby",
-    "DESCRIPTION": "Shuffle !M! *Horses into your draw pile. NL At the end of your turn, if you played 6+ cards, gain 1 Strength."
+    "DESCRIPTION": "将 !M! 张 *赛马 加入抽牌堆。 NL 每回合结束时若打出过6+张牌，获得1点 力量 。"
   },
   "${ModID}:Giddyap": {
     "NAME": "Giddyap",
-    "DESCRIPTION": "At the start of your turn, add a *Horse into your hand."
+    "DESCRIPTION": "回合开始时， NL 获得一张 *赛马 。"
   },
   "${ModID}:TheSpin": {
     "NAME": "The Spin",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card played this turn.",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过一张牌， NL 本牌伤害加 !M! 。",
     "EXTENDED_DESCRIPTION": [
-      " NL (",
-      " card played.)",
-      " cards played.)"
+      " NL (已打出",
+      " 张牌)",
+      " 张牌)"
     ]
   },
   "${ModID}:OffToTheRaces": {
     "NAME": "Off to the Races",
-    "DESCRIPTION": "Gain 2 Dexterity. NL ${ModID}:Flurry: Gain 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain 2 Dexterity. NL ${ModID}:Flurry: Gain 1 Strength."
+    "DESCRIPTION": "获得2点敏捷. NL ${ModID}:疾风 ： 获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 获得2点敏捷. NL ${ModID}:疾风 ： 获得1点 力量 。"
   }
 }
