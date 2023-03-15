@@ -1,0 +1,52 @@
+{
+  "${ModID}:Horse": {
+    "NAME": "赛马",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗。"
+  },
+  "${ModID}:StartingGun": {
+    "NAME": "Starting Gun",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 将 !M! 张 *赛马 加入抽牌堆。"
+  },
+  "${ModID}:Trample": {
+    "NAME": "Trample",
+    "DESCRIPTION": "Apply 2 Weak. NL ${ModID}:Flurry: Enemy loses !M! HP."
+  },
+  "${ModID}:TakeTheLead": {
+    "NAME": "Take the Lead",
+    "DESCRIPTION": "Deal !D! damage. NL If you've played 5 or more cards this turn, deal !D! damage again."
+  },
+  "${ModID}:ReinIn": {
+    "NAME": "Rein In",
+    "DESCRIPTION": "Draw 1 card. NL ${ModID}:Flurry: Gain !M! Block."
+  },
+  "${ModID}:Homestretch": {
+    "NAME": "Homestretch",
+    "DESCRIPTION": "Add a *Horse into your hand. NL Whenever you draw a card this turn, ALL enemies lose !M! HP."
+  },
+  "${ModID}:LuckyHorseshoe": {
+    "NAME": "幸运马蹄铁",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL A random card in your draw pile costs 0 this turn."
+  },
+  "${ModID}:Derby": {
+    "NAME": "Derby",
+    "DESCRIPTION": "Shuffle !M! *Horses into your draw pile. NL At the end of your turn, if you played 6+ cards, gain 1 Strength."
+  },
+  "${ModID}:Giddyap": {
+    "NAME": "Giddyap",
+    "DESCRIPTION": "At the start of your turn, add a *Horse into your hand."
+  },
+  "${ModID}:TheSpin": {
+    "NAME": "The Spin",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each card played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " card played.)",
+      " cards played.)"
+    ]
+  },
+  "${ModID}:OffToTheRaces": {
+    "NAME": "Off to the Races",
+    "DESCRIPTION": "Gain 2 Dexterity. NL ${ModID}:Flurry: Gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain 2 Dexterity. NL ${ModID}:Flurry: Gain 1 Strength."
+  }
+}
