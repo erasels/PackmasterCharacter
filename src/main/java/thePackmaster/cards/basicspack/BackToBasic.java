@@ -34,6 +34,6 @@ public class BackToBasic extends AbstractPackmasterCard {
 
     @Override
     public void upp() {
-        this.retain = true;
+        this.selfRetain = true;
     }
 }
