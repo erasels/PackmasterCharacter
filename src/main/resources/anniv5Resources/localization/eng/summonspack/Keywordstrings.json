@@ -31,7 +31,7 @@
     "NAMES": [
       "wolf"
     ],
-    "DESCRIPTION": "Orb: Deals damage to the enemy with the least HP. Damage is increased by the number of orbs that are #yChanneled. When #yEvoked, gain an orb slot."
+    "DESCRIPTION": "Orb: Deals damage to the enemy with the least HP. Damage is increased by the number of orbs that are #yChanneled. When #yEvoked, gain an Orb slot."
   },
   {
     "PROPER_NAME": "Porcupine",

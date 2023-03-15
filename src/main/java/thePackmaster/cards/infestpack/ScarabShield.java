@@ -1,16 +1,18 @@
 package thePackmaster.cards.infestpack;
 
 import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import thePackmaster.cardmodifiers.infestpack.InfestModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
+import static thePackmaster.util.Wiz.atb;
 
-public class ScarabShield extends AbstractInfestCard {
+public class ScarabShield extends AbstractInfestCard implements OnInfestCard {
     public final static String ID = makeID("ScarabShield");
     // intellij stuff skill, self, uncommon, , , 15, 5, , 
 
@@ -21,11 +23,13 @@ public class ScarabShield extends AbstractInfestCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int infestCount = InfestModifier.getInfestCount(this);
         blck();
-        if (infestCount >= 1) {
-            applyToSelf(new ArtifactPower(p, infestCount));
-        }
+        atb(new DrawCardAction(1));
+    }
+
+    @Override
+    public void onInfest(int infestCounter) {
+        applyToSelf(new ArtifactPower(AbstractDungeon.player, 1));
     }
 
     public void upp() {

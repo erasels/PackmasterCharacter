@@ -1,0 +1,51 @@
+{
+  "${ModID}:Ignition": {
+    "NAME": "Ignition",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel 1 ${ModID}:Blaze."
+  },
+  "${ModID}:DualBlade": {
+    "NAME": "Dual Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Evoke your next Orb twice."
+  },
+  "${ModID}:Sphere": {
+    "NAME": "Sphere",
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 ${ModID}:randomized\u00a0Orb.",
+    "EXTENDED_DESCRIPTION": [
+      "{0} Sphere",
+      "Gain !B! Block. NL Channel a {0}."
+    ]
+  },
+  "${ModID}:Winterwisp": {
+    "NAME": "Winterwisp",
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Polar. NL If it filled an empty Orb slot, trigger its passive."
+  },
+  "${ModID}:FrozenMagma": {
+    "NAME": "Frozen Magma",
+    "DESCRIPTION": "Channel 1 ${ModID}:Polar. NL Channel 1 Frost. NL Channel 1 ${ModID}:Blaze. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Polar. NL Channel 1 Frost. NL Channel 1 ${ModID}:Blaze."
+  },
+  "${ModID}:Consolidate": {
+    "NAME": "Consolidate",
+    "DESCRIPTION": "Remove your first 2 Orbs. NL Gain 1 Focus.",
+    "UPGRADE_DESCRIPTION": "Remove your first Orb. NL Gain 1 Focus."
+  },
+  "${ModID}:FrostConversion": {
+    "NAME": "Frost Conversion",
+    "DESCRIPTION": "If you have 3+ unique Orbs, Channel 1 Frost. NL Channel 1 Frost.",
+    "UPGRADE_DESCRIPTION": "If you have 3+ unique Orbs, Channel 1 Frost and trigger its passive. NL Channel 1 Frost."
+  },
+  "${ModID}:Fluctuate": {
+    "NAME": "Fluctuate",
+    "DESCRIPTION": "Apply 1 Weak and Vulnerable to ALL enemies. NL If you have 3+ unique Orbs, apply !M! more."
+  },
+  "${ModID}:VoidEngine": {
+    "NAME": "Void Engine",
+    "DESCRIPTION": "Gain !M! Focus. NL Gain 1 Orb Slot. NL Shuffle a Void into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Focus. NL Gain 1 Orb Slot. NL Add a Void to your discard pile."
+  },
+  "${ModID}:ChaosGenerator": {
+    "NAME": "Chaos Generator",
+    "DESCRIPTION": "At the start of your turn, Channel !M! random Orb.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, Channel !M! random Orbs."
+  }
+}

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
@@ -25,6 +26,11 @@ public class FrozenMod extends AbstractCardModifier {
     @Override
     public boolean canPlayCard(AbstractCard card) {
         return false;
+    }
+
+    @Override
+    public boolean shouldApply(AbstractCard card) {
+        return !OccultPatch.isUnplayable(Wiz.p(), card);
     }
 
     @Override
