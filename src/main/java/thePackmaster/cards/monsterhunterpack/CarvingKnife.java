@@ -56,6 +56,7 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
     public CarvingKnife() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
+        this.exhaust = true;
         tags.add(CardTags.HEALING);
     }
 

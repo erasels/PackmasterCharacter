@@ -108,7 +108,7 @@
   },
   "${ModID}:CarvingKnife": {
     "NAME": "Carving Knife",
-    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss enemy, gain its weapon or armor card and remove this from your deck permanently."
+    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss enemy, gain its weapon or armor card and remove this from your deck permanently. NL Exhaust."
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "Awakened Dagger",
