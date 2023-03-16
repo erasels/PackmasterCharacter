@@ -49,19 +49,9 @@ public class CarveAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SLASH_HORIZONTAL));
             this.target.damage(this.info);
             if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.monsterTarget.type == AbstractMonster.EnemyType.BOSS || this.monsterTarget.type == AbstractMonster.EnemyType.ELITE)) {
+                CarvingKnife tmp = (CarvingKnife)thisKnife;
+                tmp.SetFleeting(true);
                 addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id)));
-            }
-            else if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.target.id.equals("SpikeSlime_L") || this.target.id.equals("AcidSlime_L"))){
-                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
-                    addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id)));
-                }
-            }
-            else if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.target.id.equals("AcidSlime_M") || this.target.id.equals("SpikeSlime_M"))){
-                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
-                    addToTop(new AddCardToDeckAction(thisKnife.makeStatEquivalentCopy()));
-                    addToTop(new MakeTempCardInDiscardAction(thisKnife.makeStatEquivalentCopy(), 1));
-                    addToBot(new TalkAction(AbstractDungeon.player, "Not enough materials", 1.0f, 1.4f));
-                }
             }
         }
         this.tickDuration();
@@ -89,6 +79,14 @@ public class CarveAction extends AbstractGameAction {
                     return new SlimeHammer();
                 }
             case "AcidSlime_L":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
+            case "SpikeSlime_M":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
+            case "AcidSlime_M":
                 if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
                     return new SlimeHammer();
                 }

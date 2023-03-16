@@ -19,7 +19,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class CarvingKnife extends AbstractMonsterHunterCard {
     public final static String ID = makeID("CarvingKnife");
 
-    public static final int DAMAGE = 5;
+    public static final int DAMAGE = 6;
     public static final int UPG_DAMAGE = 3;
     private final ArrayList<AbstractCard> cardToPreview = new ArrayList<>();
     private float rotationTimer;
@@ -56,7 +56,6 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
     public CarvingKnife() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
-        FleetingField.fleeting.set(this, true);
         tags.add(CardTags.HEALING);
     }
 
@@ -110,6 +109,14 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
                 if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
                     return new SlimeHammer();
                 }
+            case "SpikeSlime_M":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
+            case "AcidSlime_M":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
             case "BookOfStabbing":
                 return new StabManual();
             case "SlaverBoss":
@@ -143,6 +150,10 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
             default:
                 return new Hyperbeam();
         }
+    }
+
+    public void SetFleeting(boolean set){
+        FleetingField.fleeting.set(this, set);
     }
 
     public void upp() {
