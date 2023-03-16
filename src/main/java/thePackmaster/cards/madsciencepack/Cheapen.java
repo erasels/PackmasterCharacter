@@ -1,17 +1,13 @@
 package thePackmaster.cards.madsciencepack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.DelayActionAction;
+import thePackmaster.actions.ChangePlayedCardExhaustAction;
 import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
 import thePackmaster.cardmodifiers.madsciencepack.CheapenModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.marisapack.AmplifyCard;
 import thePackmaster.util.Wiz;
-import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -39,15 +35,7 @@ public class Cheapen extends AbstractMadScienceCard implements AmplifyCard {
 
     @Override
     public void useAmplified(AbstractPlayer p, AbstractMonster m) {
-        exhaust = false;
-        //Add a delayed action that sets exhaust to true again after the UseCardAction has run through
-        Wiz.atb(new DelayActionAction(new AbstractGameAction() {
-            @Override
-            public void update() {
-                Cheapen.this.exhaust = true;
-                isDone = true;
-            }
-        }));
+        Wiz.atb(new ChangePlayedCardExhaustAction(this, false));
     }
 
     @Override

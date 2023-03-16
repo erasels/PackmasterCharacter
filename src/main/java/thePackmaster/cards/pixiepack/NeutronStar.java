@@ -16,8 +16,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class NeutronStar extends AbstractPixieCard {
     public final static String ID = makeID("NeutronStar");
 
-    private static final int baseMgk = 1;
-    private static final int upgradeMgk = 2;
+    private static final int baseMgk = 2;
+    private static final int upgradeMgk = 3;
 
     public NeutronStar() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -42,7 +42,7 @@ public class NeutronStar extends AbstractPixieCard {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (AbstractDungeon.player.hand.contains(this) && PixiePack.isForeign(c) && c.type==CardType.ATTACK)
+        if (AbstractDungeon.player.hand.contains(this) && PixiePack.isForeign(c) && c.type==CardType.ATTACK && !c.hasTag(PixiePack.pixieTags.ENCHANTMENT))
         {
             flash();
             AbstractCard toPlay = makeStatEquivalentCopy();

@@ -22,7 +22,7 @@
   },
   "${ModID}:StrengthSap": {
     "NAME": "力量耗竭",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标 力量 大于0，窃取 !${ModID}:m2! 点。 NL 消耗性 !stslib:ex! 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标 力量 大于0， NL 窃取 !${ModID}:m2! 点。 NL 消耗性 !stslib:ex! 。"
   },
   "${ModID}:CunningPoison": {
     "NAME": "狡猾毒药",
@@ -30,14 +30,14 @@
   },
   "${ModID}:MindControl": {
     "NAME": "精神操控",
-    "DESCRIPTION": "选择一名生命值不高于 !M! 乘X的敌人。 NL 本场战斗其将攻击其他敌人。 NL 消耗 。",
+    "DESCRIPTION": "选择一名生命值不高于X乘 !M! 的敌人，本场战斗其将攻击其他敌人。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "该敌人生命值过高。"
     ]
   },
   "${ModID}:Witchcraft": {
     "NAME": "女巫熬制品",
-    "DESCRIPTION": "窃取目标 !M! 点生命。 If 若 斩杀 ，获得一瓶提供8层 临时生命 的药水。 NL 消耗 。"
+    "DESCRIPTION": "窃取目标 !M! 点生命。 NL 若 斩杀 ，获得一瓶提供8层 临时生命 的药水。 NL 消耗 。"
   },
   "${ModID}:ThieveryMastery": {
     "NAME": "高超窃技",

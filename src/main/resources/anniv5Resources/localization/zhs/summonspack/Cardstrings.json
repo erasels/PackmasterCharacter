@@ -1,7 +1,7 @@
 {
   "${ModID}:Leprechaun": {
-    "NAME": "矮精灵",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 一个 ${ModID}:矮精灵 充能球。",
+    "NAME": "魔法精灵",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 一个 ${ModID}:魔法精灵 充能球。",
     "EXTENDED_DESCRIPTION": [
       "骰子",
       "#y骰子 的点数等量提高下张打出牌的伤害 与 #y格挡 ，两项都没有的牌不消耗使用次数。",
@@ -22,7 +22,7 @@
   },
   "${ModID}:Elephant": {
     "NAME": "大象",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 受到 !M!  点伤害。",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 受到 !M! 点伤害。",
     "FLAVOR": "我最喜欢的牌，希望你也喜欢。"
   },
   "${ModID}:FireSpirit": {
@@ -52,8 +52,8 @@
   },
   "${ModID}:Ambush": {
     "NAME": "埋伏",
-    "DESCRIPTION": "生成 充能球时，触发一次其 激发 效果。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 生成 充能球时，触发一次其 激发 效果。",
+    "DESCRIPTION": "生成 充能球时， NL 触发一次其 激发 效果。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 生成 充能球时， NL 触发一次其 激发 效果。",
     "FLAVOR": "我实在找不到契合埋伏的卡图了，所以只能整个谐音梗 (Ham + Bush)。"
   },
   "${ModID}:Pandas": {

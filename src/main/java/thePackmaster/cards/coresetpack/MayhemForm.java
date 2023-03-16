@@ -17,15 +17,16 @@ public class MayhemForm extends AbstractPackmasterCard {
     public MayhemForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.tags.add(BaseModCardTags.FORM);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new MayhemFormPower(2));
+        applyToSelf(new MayhemFormPower(magicNumber));
     }
 
     @Override
     public void upp() {
-        selfRetain = true;
+        upgradeMagicNumber(1);
     }
 
 

@@ -17,8 +17,8 @@
   },
   "${ModID}:ReboundVolley": {
     "NAME": "Rebound Volley",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !${ModID}:sd! damage to a random enemy.",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Deal !${ModID}:sd! damage to a random enemy !M! times."]
+    "DESCRIPTION": "Deal !D! damage. NL Deal !${ModID}:sd! damage to a random other enemy.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage. NL Deal !${ModID}:sd! damage to !M! random other enemies."]
   },
   "${ModID}:SmokePellets": {
     "NAME": "Smoke Pellets",
@@ -38,6 +38,6 @@
   },
   "${ModID}:VoidShocker": {
     "NAME": "Void Shocker",
-    "DESCRIPTION": "Whenever an enemy deals only blocked damage, deal !M! damage to it."
+    "DESCRIPTION": "Whenever an enemy deals only blocked damage, deal !M! damage back."
   }
 }

@@ -17,7 +17,7 @@
       "Rainbow\u00a0louse",
       "彩虱虫"
     ],
-    "DESCRIPTION": "充能球：回合开始时额外抽一张牌。 #y激发 时抽2张牌。。"
+    "DESCRIPTION": "充能球：回合开始时额外抽一张牌。 #y激发 时抽2张牌。"
   },
   {
     "PROPER_NAME": "熊猫",
@@ -46,10 +46,10 @@
     "DESCRIPTION": "充能球： 生成 #y荆刺 。 #y激发 时，获得 #y荆棘 。"
   },
   {
-    "PROPER_NAME": "矮精灵",
+    "PROPER_NAME": "魔法精灵",
     "NAMES": [
       "leprechaun",
-      "矮精灵"
+      "魔法精灵"
     ],
     "DESCRIPTION": "充能球：投掷固定点数的 #y骰子 。 #y激发 时对所有敌人给予 #y厄运 。"
   },

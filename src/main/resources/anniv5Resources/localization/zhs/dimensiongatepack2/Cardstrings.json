@@ -1,7 +1,7 @@
 {
   "${ModID}:ArsenalGear": {
     "NAME": "武库零件",
-    "DESCRIPTION": "下 !M! 个回合开始时，随机将一张 *罕见 或 *稀有 牌加入手牌，该回合其耗能首次为0。"
+    "DESCRIPTION": "下 !M! 个回合开始时，随机将一张 *罕见 或 *稀有 牌加入手牌，该回合其首次耗能为0。"
   },
   "${ModID}:ConjureBarrage": {
     "NAME": "咒唤箭幕",
@@ -26,7 +26,7 @@
   },
   "${ModID}:FlamePillar": {
     "NAME": "火柱",
-    "DESCRIPTION": "*魔法 。 NL 给予 !M! 层 ${ModID}:燃烧 。 NL 将一张 *施法 加入手牌。"
+    "DESCRIPTION": "*魔法 。 NL 给予 !M! 层 ${ModID}:燃烧 。 NL 将一张 *施法 加入手牌。 NL 消耗 。"
   },
   "${ModID}:Haymaker": {
     "NAME": "强力一击",
@@ -47,7 +47,7 @@
   },
   "${ModID}:Crusher": {
     "NAME": "破坏者",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点 伤害。 NL 本牌在手时，每当一张牌被创造，本牌下次耗能减1。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点 伤害。 NL 本牌在手时，每当一张牌被 ${ModID}:创造 ，本牌下次耗能减1。"
   },
   "${ModID}:PreservedThorns": {
     "NAME": "荆棘标本",

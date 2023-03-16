@@ -4,7 +4,7 @@ import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,7 +14,6 @@ import thePackmaster.packs.PixiePack;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -23,8 +22,7 @@ public class PortalPunch extends AbstractPixieCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
-    private static final int baseAtk = 9;
-    private static final int upgradeAtk = 12;
+    private static final int baseAtk = 11;
     private static final int baseMgk = 1;
     private static final int upgradeMgk = 2;
 
@@ -43,7 +41,6 @@ public class PortalPunch extends AbstractPixieCard {
 
     @Override
     public void upp() {
-        this.upgradeDamage(upgradeAtk-baseAtk);
         this.upgradeMagicNumber(upgradeMgk-baseMgk);
     }
 

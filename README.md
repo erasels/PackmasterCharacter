@@ -62,7 +62,7 @@ To test your cards simply use the Custom Draft toggle in the character select sc
 * If you want to add your own CardBack for your Pack preview card, you can do so by adding it to the `images/512` and `1024` with the png file having the same name as your pack
 * Additional Credits can be added to a pack where assets or inspiration have been taken from elsewhere. This can simply be done by passing a credits string to the super method of the pack's constructor
 * AbstractPackMasterOrb exists to manage pack orbs with non standard effect timing for interaction purposes.
-* Additionally this file contains getpacklimitedorb(usecardrng) to pull a random orb from what would be available in your packs.
+* Additionally this file contains getPackLimitedOrb(boolean useCardRng) to pull a random orb from what would be available in your packs.
 
 ### Reminders and veto ruling
 Please look at the Google Docs to get a full refresher of the rules for your contribution. Specifically the complexity cap is important.
@@ -77,6 +77,37 @@ Here is a TL;DR:
 
 And finally, as the person merging all PRs other reviewers or I (Gk/erasels) may ask you to make changes to your Pack in case some cards lie outside the power curve or skirt the rules too much.
 Please don't be discouraged if your Pack isn't instantly merged.
+
+### Ratings and tags
+After you've finished your pack, please add ratings and tags for it to the files `ratings.txt` and `tags.txt` (both in the folder `resources/anniv5resources/summaries`).
+
+Ratings:
+* Intended to give a rough sense of what a pack is and isn't good at
+* Five categories: offense, defense, support (including things like card draw and energy generation), frontload (how good the pack is at quickly having an impact in combat), and scaling.
+* On a scale of 1-5, where the ratings describe how the pack compares in that category:
+  * 1: One of the weakest (the bottom 5-10%)
+  * 2: Below average
+  * 3: Average (the middle 30-40%)
+  * 4: Above average
+  * 5: One of the strongest (the top 5-10%)
+* Don't worry too much about the exact values, these are easy to change later based on play experience and feedback
+* Each entry in the file is the ID of the pack followed by ratings in the five categories, in the order listed, separated by tabs
+
+Tags:
+* Intended to give a rough sense of what synergies a pack might have
+* Used for specific mechanics that are used across many packs; the description for your pack should cover anything unique to your pack
+* Available tags and when to add them:
+  * Strength: multiple cards that gain Strength (more than just one strength rare or uncommon) 
+  * Exhaust: multiple cards that benefit from exhausting or most of the pack enabling exhaust
+  * Discard: multiple cards that benefit from discard or most of the pack enabling discard
+  * Debuff: substantial number of cards that add debuffs or having a debuff that's core to the pack
+  * Orbs: any amount of orb generating cards
+  * Stances: any amount of stance entering cards
+  * Attacks: the design of the pack is focused on attacks and attack synergy
+  * Magic: any amount of cards using the Magic keyword
+  * Tokens: substantial number of cards that create temporary cards or interact with them
+  * None: if no other tags apply
+* Each entry in the file is the ID of the pack, followed by a tab, followed by a comma-separated list of tags
 
 ### HATS
 

@@ -1,12 +1,9 @@
 package thePackmaster.ui;
 
 import basemod.ReflectionHacks;
-import com.badlogic.gdx.assets.loaders.TextureLoader;
-import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
@@ -54,10 +51,7 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
     }
 
     public void reCheck() {
-        if (SocketGemEffect.getModifiableCards().isEmpty()) {
-            this.usable = false;
-        }
-        if (SocketGemEffect.getGems().isEmpty()) {
+        if (SocketGemEffect.getModifiableCards().isEmpty() || SocketGemEffect.getGems().isEmpty() || AbstractDungeon.player.gold < GemsPack.goldCostToSocket) {
             this.usable = false;
         }
         if (this.usable) {
@@ -67,7 +61,6 @@ public class EnhanceBonfireOption extends AbstractCampfireOption {
             this.description = DESCRIPTIONS[3] + GemsPack.goldCostToSocket + DESCRIPTIONS[4];
             this.img = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/scrapcampfiredisabled.png"));
         }
-
     }
 
     @Override

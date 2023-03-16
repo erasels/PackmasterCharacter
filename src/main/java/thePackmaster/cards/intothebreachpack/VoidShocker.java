@@ -12,7 +12,7 @@ public class VoidShocker extends IntoTheBreachCard {
 
     public VoidShocker() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 10;
+        magicNumber = baseMagicNumber = 9;
     }
 
     @Override
@@ -21,6 +21,6 @@ public class VoidShocker extends IntoTheBreachCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(3);
     }
 }

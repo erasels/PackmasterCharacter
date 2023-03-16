@@ -5,15 +5,15 @@
   },
   "${ModID}:SwarmSword": {
     "NAME": "Swarm Strike",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Draw 1 card for each [bugIcon] ."
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL Draw 1 card NL for each [bugIcon] ."
   },
   "${ModID}:GrassHop": {
     "NAME": "Locusts",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL When this gains [bugIcon] , ALL enemies lose !M! HP."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL When this gains [bugIcon] , NL ALL enemies lose !M! HP."
   },
   "${ModID}:Bzzzzz": {
     "NAME": "Bzzzzzz",
-    "DESCRIPTION": "Apply !M! Weak. NL Draw !M! cards."
+    "DESCRIPTION": "Apply 1 Weak and Vulnerable. NL Draw !M! cards."
   },
   "${ModID}:BugOut": {
     "NAME": "Bug Out",
@@ -21,15 +21,15 @@
   },
   "${ModID}:ScarabShield": {
     "NAME": "Scarab Shield",
-    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL Gain 1 Artifact for each [bugIcon] ."
+    "DESCRIPTION": "${ModID}:Infest. NL Gain !B! Block. NL Draw 1 card. NL When this gains [bugIcon] , NL gain 1 Artifact."
   },
   "${ModID}:Entomology": {
     "NAME": "Entomology",
-    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL If this has any [bugIcon] , remove it to draw 1 card and gain [E] ."
+    "DESCRIPTION": "${ModID}:Infest. NL Deal !D! damage. NL If this has any [bugIcon] , remove one to draw 1 card and gain [E] ."
   },
   "${ModID}:Compoundeyes": {
-    "NAME": "Compoundeyes",
-    "DESCRIPTION": "Draw !M! cards. NL When you next play a card, end your turn."
+    "NAME": "Compound Eyes",
+    "DESCRIPTION": "Innate. NL Draw !M! cards. NL When you next play a card, end your turn."
   },
   "${ModID}:Bees": {
     "NAME": "BEES!!!",

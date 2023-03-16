@@ -1,8 +1,8 @@
 {
   "${ModID}:TempStrengthGem": {
     "NAME": "红宝石",
-    "DESCRIPTION": "${ModID}:宝石 。 NL \"获得2层临时 力量 \"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得2层临时 力量 \""
+    "DESCRIPTION": "${ModID}:宝石 。 NL \"获得2层临时 力量 。\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得2层临时 力量 。\""
   },
   "${ModID}:WardGem": {
     "NAME": "蓝晶",
@@ -13,6 +13,16 @@
     "NAME": "宝石碎片",
     "DESCRIPTION": "${ModID}:宝石 。 NL \"获得一张 *小刀 。\"",
     "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得一张 *小刀 。\""
+  },
+  "${ModID}:FrostGem": {
+    "NAME": "蓝晶",
+    "DESCRIPTION": "${ModID}:宝石 。 NL \" 生成 一个 冰霜 球。\"",
+    "UPGRADE_DESCRIPTION": "$${ModID}:宝石 (可镶嵌2次)。 NL \" 生成 一个 冰霜 球。\""
+  },
+  "${ModID}:LightningGem": {
+    "NAME": "宝石碎片",
+    "DESCRIPTION": "${ModID}:宝石 。 NL \" 生成 一个 闪电 球。\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \" 生成 一个 闪电 球。\""
   },
   "${ModID}:RetainGem": {
     "NAME": "琥珀",
@@ -50,7 +60,7 @@
   },
   "${ModID}:PersistGem": {
     "NAME": "石榴石",
-    "DESCRIPTION": "无法打出的 ${ModID}:宝石 。 NL \"牌附加 长驻 2\"",
-    "UPGRADE_DESCRIPTION": "无法打出的 ${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 长驻 2\""
+    "DESCRIPTION": "无法打出的 ${ModID}:宝石 。 NL \"牌附加 stslib:长驻 2\"",
+    "UPGRADE_DESCRIPTION": "无法打出的 ${ModID}:宝石 (可镶嵌2次)。 NL \"牌附加 stslib:长驻 2\""
   }
 }

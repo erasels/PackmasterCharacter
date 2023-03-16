@@ -1,0 +1,49 @@
+{
+  "${ModID}:Topple": {
+    "NAME": "Topple",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! more damage for each ${ModID}:Mundane card played this combat."
+  },
+  "${ModID}:Vanguard": {
+    "NAME": "Vanguard",
+    "DESCRIPTION": "Gain !B! Block. NL If you play a ${ModID}:Precious card with this in hand, play this."
+  },
+  "${ModID}:Shakedown": {
+    "NAME": "Shakedown",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card each if you hold a ${ModID}:Mundane or uncommon card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw 1 card each if you hold a ${ModID}:Mundane, uncommon or rare card."
+  },
+  "${ModID}:Favor": {
+    "NAME": "Favor",
+    "DESCRIPTION": "Gain an ${ModID}:Echo of a random rare card. It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain an ${ModID}:Echo of a random rare card. It costs 0 this turn."
+  },
+  "${ModID}:EtTu": {
+    "NAME": "Et Tu?",
+    "DESCRIPTION": "Gain !M! *Shivs. They have Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! *Shivs and 1 rare *Shiv. They have Retain. NL Exhaust."
+  },
+  "${ModID}:Spotlight": {
+    "NAME": "Spotlight",
+    "DESCRIPTION": "Add a ${ModID}:Mundane card from your draw pile to your hand and ${ModID}:Promote it.",
+    "UPGRADE_DESCRIPTION": "Add a ${ModID}:Mundane or uncommon card from your draw pile to your hand and ${ModID}:Promote it."
+  },
+  "${ModID}:Exultation": {
+    "NAME": "Exultation",
+    "DESCRIPTION": "${ModID}:Promote all other cards in hand. Gain !M! Block for each card ${ModID}:Promoted.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gain !B! Block.)"
+    ]
+  },
+  "${ModID}:Radiance": {
+    "NAME": "Radiance",
+    "DESCRIPTION": "If this card is rare, deal !D! damage and apply !M! Vulnerable to ALL enemies. NL ${ModID}:Demote this."
+  },
+  "${ModID}:Apex": {
+    "NAME": "Apex",
+    "DESCRIPTION": "If all cards in hand are ${ModID}:Precious, ${ModID}:Ascend. ${ModID}:Demote all cards in hand to common."
+  },
+  "${ModID}:PowerStruggle": {
+    "NAME": "Power Struggle",
+    "DESCRIPTION": "Whenever you play a rare card, gain [E] and ${ModID}:Demote it."
+  }
+}

@@ -13,8 +13,7 @@
   },
   "${ModID}:LuminousStrike": {
     "NAME": "声光冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] [E] ： NL 伤害加当前能量乘 !M! 。",
-    "EXTENDED_DESCRIPTION": [" *增幅 伤害："]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] ： NL 获得 !M! 层 ${ModID}:蓄力 。"
   },
   "${ModID}:ShootingEcho": {
     "NAME": "流星共鸣",
@@ -22,12 +21,11 @@
   },
   "${ModID}:StardustReverie": {
     "NAME": "星屑幻想",
-    "DESCRIPTION": "消耗 !M! 张牌。 获得其合计耗能2倍层 ${ModID}:蓄力 ，包括 ${ModID}:增幅 所需 能量 。 NL 抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "消耗 !M! 张牌。 获得其合计耗能2倍层 ${ModID}:蓄力 ，包括 ${ModID}:增幅 所需 能量 。 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "消耗 打出的下张牌来获得 !M! 层 ${ModID}:蓄力 并抽一张牌。"
   },
   "${ModID}:Inertia": {
-    "NAME": "惯性",
-    "DESCRIPTION": "牌被 消耗 或 ${ModID}:增幅 时， NL 获得 !M! 层 ${ModID}:蓄力 。"
+    "NAME": "奥尔特云",
+    "DESCRIPTION": "获得 !M! 层 *消融 。 NL ${ModID}:增幅 [E] ： NL 额外获得 !${ModID}:m2! 层。"
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "极超短波",

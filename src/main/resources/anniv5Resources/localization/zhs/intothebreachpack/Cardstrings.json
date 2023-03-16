@@ -9,7 +9,7 @@
   },
   "${ModID}:EnrageShot": {
     "NAME": "暴怒射击",
-    "DESCRIPTION": "击晕目标并并给予2点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "击晕目标并给予2点 力量 。 NL 消耗 。"
   },
   "${ModID}:MercuryFist": {
     "NAME": "水银拳套",
@@ -18,7 +18,7 @@
   "${ModID}:ReboundVolley": {
     "NAME": "回弹齐射",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 随机造成 !${ModID}:sd! 点伤害。",
-    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。 NL 随机造成 !${ModID}:sd! 点伤害 !M! 次。"]
+    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害。 NL 随机对其他敌人造成 !${ModID}:sd! 点伤害 !M! 次。"]
   },
   "${ModID}:SmokePellets": {
     "NAME": "烟雾弹",

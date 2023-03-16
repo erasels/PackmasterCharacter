@@ -14,7 +14,7 @@
       " 个 #y熊猫 充能球。"
     ]
   },
-  "${ModID}:Ambus生命ower": {
+  "${ModID}:AmbushPower": {
     "NAME": "埋伏",
     "DESCRIPTIONS": [
       "每当你 #y生成 一个充能球，触发其 #y激发 效果。",

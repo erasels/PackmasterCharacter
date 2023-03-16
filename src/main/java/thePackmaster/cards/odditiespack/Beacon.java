@@ -41,6 +41,6 @@ public class Beacon extends AbstractOdditiesCard {
 
 
     public void upp() {
-        upgradeMagicNumber(1);
+        selfRetain = true;
     }
 }

@@ -3,6 +3,7 @@ package thePackmaster.actions.highenergypack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.util.Wiz;
@@ -31,10 +32,12 @@ public class AllEnemyApplyPowerAction extends AbstractGameAction {
     @Override
     public void update() {
         isDone = true;
-        for (AbstractGameAction action : actions) {
-            if (!action.isDone) {
-                action.update();
-                isDone = false;
+        if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+            for (AbstractGameAction action : actions) {
+                if (!action.isDone) {
+                    action.update();
+                    isDone = false;
+                }
             }
         }
     }

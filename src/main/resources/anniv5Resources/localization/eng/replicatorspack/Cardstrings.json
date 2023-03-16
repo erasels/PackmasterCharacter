@@ -2,7 +2,7 @@
   "${ModID}:FrontloadedBash": {
     "NAME": "Frontloaded Bash",
     "DESCRIPTION": "Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile. NL Draw 1 card."
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile."
   },
   "${ModID}:Preparation": {
     "NAME": "Preparation",
@@ -12,7 +12,7 @@
   },
   "${ModID}:SmallAdaptation": {
     "NAME": "Small Adaptation",
-    "DESCRIPTION": "Gain !B! Block. NL Choose a card that costs 1 or 0. NL Add a copy of that card into your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL Choose a non-Power card that costs 1 or 0. NL Add a copy of that card into your hand.",
     "EXTENDED_DESCRIPTION": ["Choose a card to copy."]
   },
   "${ModID}:ExperimentalMerge": {
@@ -39,8 +39,8 @@
   },
   "${ModID}:MagicHand": {
     "NAME": "Magic Hand",
-    "DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 this turn and exhausts.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 this turn."
+    "DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It exhausts. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL Exhaust."
   },
   "${ModID}:EnergyDrink": {
     "NAME": "Energy Drink",

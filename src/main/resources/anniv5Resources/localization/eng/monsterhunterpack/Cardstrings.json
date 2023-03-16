@@ -13,7 +13,7 @@
   },
   "${ModID}:Greatsword": {
     "NAME": "Greatsword",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each until played."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each."
   },
   "${ModID}:HuntingInstincts": {
     "NAME": "Hunter's Instincts",
@@ -36,7 +36,7 @@
   "${ModID}:CoreBlinder": {
     "NAME": "Core Blinder",
     "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster+ to your draw pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL Add a *Core *Blaster+ to your draw pile. NL Exhaust."
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",
@@ -112,7 +112,7 @@
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "Awakened Dagger",
-    "DESCRIPTION": "Deal !D! damage. If Fatal, Heal to full HP. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. If Fatal, heal to full HP. NL Exhaust."
   },
   "${ModID}:HuntingContract": {
     "NAME": "Hunting Contract",

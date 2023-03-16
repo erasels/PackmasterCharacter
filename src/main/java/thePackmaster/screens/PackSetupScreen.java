@@ -1,5 +1,6 @@
 package thePackmaster.screens;
 
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomScreen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
@@ -24,6 +26,10 @@ import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.patches.InfiniteSpirePatch;
+import thePackmaster.summaries.PackSummary;
+import thePackmaster.summaries.PackSummaryDisplay;
+import thePackmaster.summaries.PackSummaryReader;
+import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 
 import java.util.*;
 
@@ -46,6 +52,8 @@ public class PackSetupScreen extends CustomScreen {
 
     private static final float SELECTING_SCALE = 0.8f;
     private static final float SELECTING_PACK_SPACING = AbstractCard.IMG_WIDTH * 0.8F + Settings.CARD_VIEW_PAD_X * 2;
+
+    private static FixedModLabeledToggleButton summaryToggleButton;
 
     private Random rng;
 
@@ -80,6 +88,13 @@ public class PackSetupScreen extends CustomScreen {
             AbstractDungeon.previousScreen = AbstractDungeon.screen;
         AbstractDungeon.screen = curScreen();
         AbstractDungeon.isScreenUp = true;
+        summaryToggleButton = new FixedModLabeledToggleButton(uiStrings.TEXT[2],
+                Settings.WIDTH * 0.025f, Settings.HEIGHT * 0.05f,
+                Settings.CREAM_COLOR, FontHelper.buttonLabelFont,
+                showPackSummaries(),
+                null, l -> {},
+                b -> togglePackSummaries()
+        );
 
         confirmButton.hideInstantly();
 
@@ -125,6 +140,8 @@ public class PackSetupScreen extends CustomScreen {
             pack.previewPackCard.stopGlowing();
             pack.previewPackCard.noShadow();
         }
+
+        summaryToggleButton = null;
     }
 
     @Override
@@ -132,19 +149,27 @@ public class PackSetupScreen extends CustomScreen {
         updateTransition();
         updateControllerInput();
 
+        summaryToggleButton.update();
+
         for (AbstractCardPack pack : currentPoolPacks) {
             pack.previewPackCard.stopGlowing();
             pack.previewPackCard.update();
             float curDrawScale = pack.previewPackCard.drawScale;
             pack.previewPackCard.updateHoverLogic();
             pack.previewPackCard.drawScale = curDrawScale;
-            if (pack.previewPackCard.hb.hovered && pack.credits != null)
-                TipHelper.renderGenericTip(
-                        pack.previewPackCard.hb.x + pack.previewPackCard.hb.width,
-                        pack.previewPackCard.hb.y + pack.previewPackCard.hb.height,
-                        pack.creditsHeader, pack.credits);
-            if (pack.previewPackCard.hb.justHovered)
+            if (pack.previewPackCard.hb.hovered) {
+                pack.previewPackCard.targetDrawScale = (mode == PackSetupMode.CONFIRMING) ? HOVER_SELECTED_SCALE * 1.1f : HOVER_SELECTED_SCALE;
+            }
+            else {
+                pack.previewPackCard.targetDrawScale = (mode == PackSetupMode.CONFIRMING) ? HOVER_SELECTED_SCALE : SELECTED_SCALE;
+            }
+
+            if (pack.previewPackCard.hb.hovered) {
+                displayTooltips(pack);
+            }
+            if (pack.previewPackCard.hb.justHovered) {
                 CardCrawlGame.sound.playV("CARD_OBTAIN", 0.4F);
+            }
 
             if (mode == PackSetupMode.CONFIRMING || pack.previewPackCard.hb.hovered) {
                 pack.previewPackCard.noShadow();
@@ -152,29 +177,22 @@ public class PackSetupScreen extends CustomScreen {
             else {
                 pack.previewPackCard.shadow();
             }
-
-            if (pack.previewPackCard.hb.hovered) {
-                pack.previewPackCard.targetDrawScale = (mode == PackSetupMode.CONFIRMING) ? HOVER_SELECTED_SCALE * 1.1f : HOVER_SELECTED_SCALE;
-            }
-            else {
-                pack.previewPackCard.targetDrawScale = (mode == PackSetupMode.CONFIRMING) ? HOVER_SELECTED_SCALE : SELECTED_SCALE;
-            }
         }
         if (mode != PackSetupMode.CONFIRMING) {
             for (AbstractCardPack pack : choiceSet) {
                 pack.previewPackCard.beginGlowing();
                 pack.previewPackCard.update();
                 pack.previewPackCard.updateHoverLogic();
-                if (!pack.previewPackCard.hb.hovered)
+                if (!pack.previewPackCard.hb.hovered) {
                     pack.previewPackCard.targetDrawScale = SELECTING_SCALE;
-                else if (pack.credits != null)
-                    TipHelper.renderGenericTip(
-                            pack.previewPackCard.hb.x + pack.previewPackCard.hb.width,
-                            pack.previewPackCard.hb.y + pack.previewPackCard.hb.height,
-                            pack.creditsHeader, pack.credits);
+                }
+                else {
+                    displayTooltips(pack);
+                }
 
-                if (pack.previewPackCard.hb.justHovered)
+                if (pack.previewPackCard.hb.justHovered) {
                     CardCrawlGame.sound.playV("CARD_OBTAIN", 0.4F);
+                }
             }
         }
 
@@ -313,6 +331,7 @@ public class PackSetupScreen extends CustomScreen {
 
     @Override
     public void render(SpriteBatch sb) {
+        summaryToggleButton.render(sb);
         for (AbstractCardPack pack : currentPoolPacks)
             pack.previewPackCard.render(sb);
 
@@ -449,6 +468,29 @@ public class PackSetupScreen extends CustomScreen {
         potionList.addAll(potionsToAdd);
     }
 
+    private static void displayTooltips(AbstractCardPack pack) {
+        ArrayList<PowerTip> tooltips = new ArrayList<>();
+        PackSummary packSummary = PackSummaryReader.getPackSummary(pack.packID);
+        if (packSummary != null) {
+            tooltips.add(new PowerTip(PackSummaryDisplay.getTitle(), PackSummaryDisplay.getTooltip(packSummary)));
+        }
+        if (pack.credits != null) {
+            tooltips.add(new PowerTip(pack.creditsHeader, pack.credits));
+        }
+        if (!tooltips.isEmpty()) {
+            // These values are taken from AbstractCard. We need to use them so we can calculate the position for the
+            // tooltips based on the target scale that the card will end up at (since we're always hovering the card
+            // when tooltips are displayed). This avoids jitter due to the height/width of the card changing.
+            final float HB_W = 300.0F * Settings.scale;
+            final float HB_H = 420.0F * Settings.scale;
+            float x = pack.previewPackCard.hb.cX + HB_W * pack.previewPackCard.targetDrawScale / 2.0f;
+            if(x + (float)ReflectionHacks.getPrivateStatic(TipHelper.class, "BOX_W") > Settings.WIDTH) {
+                x = pack.previewPackCard.hb.cX - HB_W * pack.previewPackCard.targetDrawScale / 2.0f;
+            }
+            float y = pack.previewPackCard.hb.cY + HB_H * pack.previewPackCard.targetDrawScale / 2.0f;
+            TipHelper.queuePowerTips(x, y, tooltips);
+        }
+    }
 
     public static class Enum
     {

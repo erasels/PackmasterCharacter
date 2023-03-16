@@ -1,0 +1,51 @@
+{
+  "${ModID}:ChainReaction": {
+    "NAME": "Chain Reaction",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Fallout."
+  },
+  "${ModID}:WaveMotionCannon": {
+    "NAME": "Wave Motion Cannon",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:Redshift": {
+    "NAME": "Redshift",
+    "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, draw a card."
+  },
+  "${ModID}:Countdown": {
+    "NAME": "Countdown",
+    "DESCRIPTION": "After you draw !M! more cards, gain [E] [E] and *Atomic *Piledriver.",
+    "UPGRADE_DESCRIPTION": "After you draw !M! more cards, gain [E] [E] and *Atomic *Piledriver+."
+  },
+  "${ModID}:AtomicPiledriver": {
+    "NAME": "Atomic Piledriver",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !M! ${ModID}:Fallout. NL Exhaust."
+  },
+  "${ModID}:NuclearFusion": {
+    "NAME": "Nuclear Fusion",
+    "DESCRIPTION": "Play a card in your hand with a cost of X or lower twice. Add X *Burns to your hand.",
+    "UPGRADE_DESCRIPTION": "Play a card in your hand with a cost of X+1 or lower twice. Add X *Burns to your hand."
+  },
+  "${ModID}:MoreExplosions": {
+    "NAME": "More Explosions!",
+    "DESCRIPTION": "Shuffle !M! random Powers into your draw pile."
+  },
+  "${ModID}:Meltdown": {
+    "NAME": "Meltdown",
+    "DESCRIPTION": "Whenever you draw a Power, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Power, gain [E] ."
+  },
+  "${ModID}:ExplosiveForm": {
+    "NAME": "Explosive Form",
+    "DESCRIPTION": "At the start of each turn, set up *The *Bomb.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn and right now, set up *The *Bomb."
+  },
+  "${ModID}:KillerQueen": {
+    "NAME": "Killer Queen",
+    "DESCRIPTION": "Pick a card in your hand. Whenever you play it, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:EveOfDestruction": {
+    "NAME": "Eve of Destruction",
+    "DESCRIPTION": "You deal 100% more non-attack damage.",
+    "UPGRADE_DESCRIPTION": "Innate. NL You deal 100% more non-attack damage."
+  }
+}

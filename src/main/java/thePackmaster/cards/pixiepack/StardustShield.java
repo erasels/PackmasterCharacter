@@ -14,8 +14,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class StardustShield extends AbstractPixieCard {
     public final static String ID = makeID("StardustShield");
 
-    private static final int baseDef = 2;
-    private static final int upgradeDef = 3;
+    private static final int baseDef = 3;
+    private static final int upgradeDef = 4;
 
     public StardustShield() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -35,7 +35,7 @@ public class StardustShield extends AbstractPixieCard {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (AbstractDungeon.player.hand.contains(this) && PixiePack.isForeign(c) && c.type==CardType.SKILL)
+        if (AbstractDungeon.player.hand.contains(this) && PixiePack.isForeign(c) && c.type==CardType.SKILL && !c.hasTag(PixiePack.pixieTags.ENCHANTMENT))
         {
             flash();
             AbstractCard toPlay = makeStatEquivalentCopy();

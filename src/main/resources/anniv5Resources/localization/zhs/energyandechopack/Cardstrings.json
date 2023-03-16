@@ -23,15 +23,15 @@
   "${ModID}:Discharge": {
     "NAME": "释能",
     "DESCRIPTION": "造成本回合已使用的能量的5倍伤害。",
-    "EXTENDED_DESCRIPTION": ["造成本回合已使用的能量的5倍伤害。 NL (造成 !D! 点伤害。)"]
+    "EXTENDED_DESCRIPTION": ["造成本回合已使用的能量的5倍伤害。 NL (造成 !D! 点伤害)"]
   },
   "${ModID}:Overload": {
     "NAME": "过负荷",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗提高本牌 !M! 点 伤害与1点耗能。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗耗能加1， NL 伤害加 !M! 。"
   },
   "${ModID}:Panacher": {
     "NAME": "混杂",
-    "DESCRIPTION": "每创造5张牌，对所有敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "每 ${ModID}:创造 5张牌，对所有敌人造成 !M! 点伤害。"
   },
   "${ModID}:Slowing": {
     "NAME": "迟缓",
@@ -40,7 +40,7 @@
   },
   "${ModID}:Crystallize": {
     "NAME": "晶体化",
-    "DESCRIPTION": "每有1点能量，获得 !M! 点 格挡 。",
-    "EXTENDED_DESCRIPTION": ["每有1点能量，获得 !M! 点 格挡 。 NL (获得 !B! 点 格挡 。)"]
+    "DESCRIPTION": "每有1点能量， NL 获得 !M! 点 格挡 。",
+    "EXTENDED_DESCRIPTION": ["每有1点能量， NL 获得 !M! 点 格挡 。 NL (获得 !B! 点 格挡 。)"]
   }
 }

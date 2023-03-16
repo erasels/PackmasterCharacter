@@ -77,7 +77,9 @@ public class Porcupine extends CustomOrb {
 
     @Override
     public void onEvoke() {
-        applyToSelf(new ThornsPower(adp(), evokeAmount));
+        if(evokeAmount > 0) {
+            applyToSelf(new ThornsPower(adp(), evokeAmount));
+        }
     }
 
     @Override

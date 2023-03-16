@@ -52,15 +52,16 @@ public class BrushModalTypeChoice extends AbstractCreativityCard {
         {
             if (    c.type == type &&
                     !c.hasTag(CardTags.HEALING) &&
-                    c.rarity != CardRarity.SPECIAL)
+                    c.rarity != CardRarity.SPECIAL &&
+                    c.cost < 4)
             {
                 costList.add(c.cost);
             }
         }
+        // Leave the thing for random stuff like "unplayable attacks aren't real" / but what if /  yada yada
         costList.stream().sorted().forEach(i ->
         {
             AbstractCard c = new BrushModalCostChoice(i, type);
-            if (upgraded) c.upgrade();
             retVal.add(c);
         });
         return retVal;

@@ -1,38 +1,56 @@
 package thePackmaster.cards.coresetpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
+import thePackmaster.actions.EasyXCostAction;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
 public class BackpackSmack extends AbstractPackmasterCard {
     public final static String ID = makeID("BackpackSmack");
-    // intellij stuff attack, enemy, basic, 6, 3,  , , ,
+
+    private boolean synergyOn;
 
     public BackpackSmack() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 6;
         magicNumber = baseMagicNumber = 2;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        if (p.drawPile.size() >= 10) {
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+        synergyOn = (hasSynergy());
+
+        atb(new EasyXCostAction(this, (effect, params) -> {
+            if (synergyOn && effect > 0) {
+                Wiz.applyToEnemyTop(m, new VulnerablePower(m, effect, false));
+                Wiz.applyToEnemyTop(m, new WeakPower(m, effect, false));
+            }
+            for (int i = 0; i < effect; i++) {
+                dmgTop(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+            }
+            return true;
+        }));
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if (hasSynergy()) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
         else {
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
     }
 }

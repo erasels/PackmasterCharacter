@@ -155,8 +155,9 @@ public class Leprechaun extends CustomOrb {
 
     @Override
     public void onEvoke() {
-        for (AbstractMonster m : Wiz.getEnemies())
-            applyToEnemyTop(m, new JinxPower(m, evokeAmount));
+        if(evokeAmount > 0)
+            for (AbstractMonster m : Wiz.getEnemies())
+                applyToEnemyTop(m, new JinxPower(m, evokeAmount));
     }
 
     @Override

@@ -20,11 +20,12 @@ public class Rummage extends AbstractPackmasterCard {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         damage = baseDamage = 10;
         magicNumber = baseMagicNumber = 1;
+        secondMagic = baseSecondMagic = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        Wiz.atb(new DrawCardAction(1, new RummageDrawAction(magicNumber)));
+        Wiz.atb(new DrawCardAction(secondMagic, new RummageDrawAction(magicNumber)));
     }
 
 

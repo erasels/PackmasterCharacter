@@ -26,7 +26,7 @@ import java.util.*;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MainMenuUIPatch {
-    public static boolean customDraft = false;
+    public static boolean customDraft;
 
     private static final Hitbox packDraftToggle = new Hitbox(40.0f * Settings.scale, 40.0f * Settings.scale);
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("PackMainMenuUI"));
@@ -88,6 +88,8 @@ public class MainMenuUIPatch {
             optionIDs[i] = packID;
             idToIndex.put(packID, i);
         }
+
+        customDraft = SpireAnniversary5Mod.getCustomDraftEnabled();
 
         //Validate the saved CDraftSelection - this is necessary in the event that any packs are removed.
         //Without this validation, Packmaster will crash on attempting to load a Pack that is no longer in the pack list.
@@ -231,6 +233,7 @@ public class MainMenuUIPatch {
                         }
                         if (packDraftToggle.clicked) {
                             customDraft = !customDraft;
+                            SpireAnniversary5Mod.saveCustomDraftEnabled(customDraft);
                             packDraftToggle.clicked = false;
                         }
                     }

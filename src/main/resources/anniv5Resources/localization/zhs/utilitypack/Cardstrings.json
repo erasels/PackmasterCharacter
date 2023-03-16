@@ -27,13 +27,13 @@
   },
   "${ModID}:Replenish": {
     "NAME": "补满",
-    "DESCRIPTION": "选择将弃牌堆2张牌加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择将弃牌堆2张牌加入手牌。"
+    "DESCRIPTION": "选择将弃牌堆2张牌返回手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择将弃牌堆2张牌返回手牌。"
   },
   "${ModID}:LesserHex": {
     "NAME": "低阶巫鬼",
-    "DESCRIPTION": "给予 !M! 层 虚弱 与 易伤 。 NL 目标失去 !M! 点 力量 。 NL 将一张 *高阶巫婆 加入弃牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 与 易伤 。 NL 目标失去 !M! 点 力量 。 NL 将一张 *高阶巫婆+ 加入弃牌堆。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 与 易伤 。 NL 目标失去 !M! 点 力量 。 NL 将一张 *高阶巫鬼 加入弃牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 与 易伤 。 NL 目标失去 !M! 点 力量 。 NL 将一张 *高阶巫鬼+ 加入弃牌堆。 NL 消耗 。"
   },
   "${ModID}:GreaterHex": {
     "NAME": "高阶巫鬼",

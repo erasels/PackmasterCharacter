@@ -1,13 +1,18 @@
 package thePackmaster.cards.coresetpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
@@ -15,49 +20,48 @@ import thePackmaster.util.Wiz;
 import java.util.HashSet;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.att;
 
 public class RippedPecs extends AbstractPackmasterCard {
     public final static String ID = makeID("RippedPecs");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
+    private boolean synergyOn;
     public RippedPecs() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        this.exhaust = true;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new AbstractGameAction() {
+        synergyOn = (hasSynergy());
+
+        addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                int strength = getPacksPlayedThisCombat(false);
-                if (strength > 0)
-                    Wiz.applyToSelfTop(new StrengthPower(p, strength));
-                this.isDone = true;
+                isDone = true;
+                if (synergyOn) {
+                    Wiz.applyToSelfTop(new StrengthPower(p, magicNumber));
+                    att(new VFXAction(p, new InflameEffect(p), 0.25F));
+                    att(new VFXAction(p, new InflameEffect(p), 0.25F));
+                    att(new VFXAction(p, new InflameEffect(p), 0.25F));
+                    att(new SFXAction("MONSTER_CHAMP_CHARGE"));
+                } else {
+                    Wiz.applyToSelfTop(new StrengthPower(p, 1));
+                }
             }
         });
     }
 
     public void upp() {
-        this.exhaust = false;
+        upgradeMagicNumber(1);
     }
 
     @Override
-    public void applyPowers() {
-        this.rawDescription = (this.upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION) + cardStrings.EXTENDED_DESCRIPTION[0].replace("{0}", this.getPacksPlayedThisCombat(true) + "");
-        this.initializeDescription();
-    }
-
-    private int getPacksPlayedThisCombat(boolean forApplyPowers) {
-        int n = forApplyPowers ? 1 : 2;
-        HashSet<String> packs = new HashSet<>();
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= n) {
-            for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat.subList(0, AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - n + 1)) {
-                String parentID = SpireAnniversary5Mod.cardParentMap.get(c.cardID);
-                if (parentID != null) {
-                    packs.add(parentID);
-                }
-            }
+    public void triggerOnGlowCheck() {
+        if (hasSynergy()) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
-        return packs.size();
+        else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
     }
 }

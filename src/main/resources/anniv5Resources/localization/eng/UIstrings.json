@@ -83,6 +83,19 @@
       "Watcher Veil"
     ]
   },
+  "${ModID}:BulwarkPack": {
+    "TEXT": [
+      "Bulwark",
+      "The greatest defensive tools of the Spire, together for the first time in one place.",
+      "modargo"
+    ]
+  },
+  "${ModID}:BulwarkPackHat": {
+    "TEXT": [
+      "TBD",
+      "TBD"
+    ]
+  },
   "${ModID}:PackMainMenuUI": {
     "TEXT": [
       "Custom Draft Mode",
@@ -96,7 +109,8 @@
   "${ModID}:PackSetup": {
     "TEXT": [
       "Draft a Pack!",
-      "Current Packs"
+      "Current Packs",
+      "Show Pack ratings"
     ]
   },
   "${ModID}:CurrentRunCardsTopPanelItem": {
@@ -162,5 +176,36 @@
       "Add a booster box card",
       "Choose a booster box card"
     ]
+  },
+  "${ModID}:SingleCardReward": {
+    "TEXT": [
+      "[Card] ",
+      "Tip: Right-click for detailed card view!"
+    ]
+  },
+  "${ModID}:PackSummaryDisplay": {
+    "TEXT": [
+      "Pack Summary",
+      "Offense: {0}",
+      "Defense: {0}",
+      "Support: {0}",
+      "Frontload: {0}",
+      "Scaling: {0}",
+      "Tags: {0}",
+      ", "
+    ],
+    "TEXT_DICT": {
+      "None": "None",
+      "Strength": "Strength",
+      "Exhaust": "Exhaust",
+      "Orbs": "Orbs",
+      "Stances": "Stances",
+      "Discard": "Discard",
+      "Debuffs": "Debuffs",
+      "Attacks": "Attacks",
+      "Magic": "Magic",
+      "Tokens": "Tokens",
+      "Powers": "Powers"
+    }
   }
 }

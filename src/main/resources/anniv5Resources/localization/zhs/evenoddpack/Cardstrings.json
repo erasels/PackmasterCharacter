@@ -11,7 +11,7 @@
   },
   "${ModID}:PrimeDirective": {
     "NAME": "最高指令",
-    "DESCRIPTION": "所有攻击牌附加效果： NL ' ${ModID}:累奇 ：增加 !M! 点伤害。'"
+    "DESCRIPTION": "所有攻击牌附加效果： NL \" ${ModID}:累奇 ：伤害加 !M! 。\""
   },
   "${ModID}:WitzBolt": {
     "NAME": "智慧箭弹",
@@ -26,7 +26,7 @@
   "${ModID}:GammaWard": {
     "NAME": "伽玛护纹",
     "DESCRIPTION": "获得 !B! 点 格挡 。",
-    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:累偶 ：", "你打出的下张技能牌附带效果' ${ModID}:累偶 ：获得 !M! 点 格挡 。'"]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:累偶 ：", "你本回合打出的下张技能牌临时附带效果' ${ModID}:累偶 ：获得 !M! 点 格挡 。'"]
   },
   "${ModID}:Flourish": {
     "NAME": "繁盛",

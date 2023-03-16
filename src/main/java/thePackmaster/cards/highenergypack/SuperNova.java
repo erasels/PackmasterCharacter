@@ -17,7 +17,7 @@ public class SuperNova extends AbstractHighEnergyCard {
 
     public SuperNova() {
         super(ID, 6, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 67;
+        baseMagicNumber = magicNumber = 60;
         baseSecondMagic = secondMagic = 3;
     }
 

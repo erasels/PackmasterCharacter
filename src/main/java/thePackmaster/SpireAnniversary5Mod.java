@@ -14,6 +14,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
@@ -83,17 +84,19 @@ import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.rewards.CustomRewardTypes;
 import thePackmaster.rewards.PMBoosterBoxCardReward;
+import thePackmaster.rewards.SingleCardReward;
 import thePackmaster.screens.PackSetupScreen;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 import thePackmaster.stances.cthulhupack.NightmareStance;
 import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
-import thePackmaster.ui.CurrentRunCardsTopPanelItem;
+import thePackmaster.summaries.PackSummary;
+import thePackmaster.summaries.PackSummaryDisplay;
+import thePackmaster.summaries.PackSummaryReader;
+import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
-import thePackmaster.ui.InfestTextIcon;
-import thePackmaster.ui.PackFilterMenu;
-import thePackmaster.util.JediUtil;
+import thePackmaster.util.creativitypack.JediUtil;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
@@ -131,7 +134,8 @@ public class SpireAnniversary5Mod implements
         PostExhaustSubscriber,
         OnPlayerTurnStartSubscriber,
         OnCreateDescriptionSubscriber,
-        OnPlayerLoseBlockSubscriber {
+        OnPlayerLoseBlockSubscriber,
+        PostRenderSubscriber {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -182,6 +186,8 @@ public class SpireAnniversary5Mod implements
     private static final String BEES_OGG = makePath("audio/summonspack/SwarmOfBees.ogg");
     public static final String ELEPHANT_KEY = makeID("elephant");
     private static final String ELEPHANT_OGG = makePath("audio/summonspack/Elephant.ogg");
+    public static final String DETONATOR_KEY = makeID("Detonator");
+    private static final String DETONATOR_OGG = makePath("audio/goddessofexplosionspack/bokudan.ogg");
     public static final String PEW_KEY = makeID("Pew");
     private static final String PEW_OGG = makePath("audio/summonspack/Pew.ogg");
     public static final String EVIL_KEY = makeID("Evil");
@@ -248,6 +254,7 @@ public class SpireAnniversary5Mod implements
     @SpireEnum
     public static AbstractCard.CardTags CLAW;
 
+
     public SpireAnniversary5Mod() {
         BaseMod.subscribe(this);
 
@@ -291,6 +298,7 @@ public class SpireAnniversary5Mod implements
 
         try {
             Properties defaults = new Properties();
+            defaults.put("PackmasterCustomDraftEnabled", "FALSE");
             defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, CHOICE, CHOICE, CHOICE));
             defaults.put("PackmasterUnlockedHats", "");
             defaults.put("PackmasterAllPacksMode", "FALSE");
@@ -298,12 +306,28 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterUnlockedRainbows","");
             defaults.put("PackmasterRainbowEnabled","FALSE");
             defaults.put("PackmasterUnseenHats","");
+            defaults.put("PackmasterShowSummaries","TRUE");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
             modConfig.load();
 
             loadModConfigData();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public static boolean getCustomDraftEnabled() {
+        if (modConfig == null) return false;
+        return modConfig.getBool("PackmasterCustomDraftEnabled");
+    }
+
+    public static void saveCustomDraftEnabled(boolean enabled) {
+        try {
+            if (modConfig == null) return;
+            modConfig.setBool("PackmasterCustomDraftEnabled", enabled);
+            modConfig.save();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -345,6 +369,25 @@ public class SpireAnniversary5Mod implements
             modConfig.save();
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    private static Boolean _showPackSummaries = null;
+    public static Boolean showPackSummaries() {
+        if(modConfig == null) return true;
+        if(_showPackSummaries == null)
+            _showPackSummaries = modConfig.getBool("PackmasterShowSummaries");
+        return _showPackSummaries;
+    }
+
+    public static void togglePackSummaries() {
+        if(modConfig == null) return;
+        try {
+            modConfig.setBool("PackmasterShowSummaries", !_showPackSummaries);
+            _showPackSummaries = !_showPackSummaries;
+            modConfig.save();
+        } catch (Exception e) {
+            logger.error(e);
         }
     }
 
@@ -438,6 +481,8 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveEditCards() {
         CustomIconHelper.addCustomIcon(InfestTextIcon.get());
+        CustomIconHelper.addCustomIcon(new RatingStar());
+        CustomIconHelper.addCustomIcon(new RatingDarkStar());
 
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
@@ -456,6 +501,7 @@ public class SpireAnniversary5Mod implements
 
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
+        loadAndCheckSummaries();
 
         logger.info("Checking playability annotations");
         OccultPatch.testPlayability();
@@ -627,7 +673,8 @@ public class SpireAnniversary5Mod implements
             SilentPack.class.getName(),
             DefectPack.class.getName(),
             AllForOnePack.class.getName(),
-            WatcherPack.class.getName());
+            WatcherPack.class.getName(),
+            BulwarkPack.class.getName());
 
     public void loadPackStrings(Collection<CtClass> packClasses, String langKey) {
 
@@ -716,6 +763,7 @@ public class SpireAnniversary5Mod implements
     public void receiveAddAudio() {
         BaseMod.addAudio(BEES_KEY, BEES_OGG);
         BaseMod.addAudio(ELEPHANT_KEY, ELEPHANT_OGG);
+        BaseMod.addAudio(DETONATOR_KEY, DETONATOR_OGG);
         BaseMod.addAudio(PEW_KEY, PEW_OGG);
         BaseMod.addAudio(EVIL_KEY, EVIL_OGG);
         BaseMod.addAudio(PANDA_KEY, PANDA_OGG);
@@ -890,6 +938,18 @@ public class SpireAnniversary5Mod implements
                 CustomRewardTypes.PACKMASTER_PMBOOSTERBOXCARD,
                 (rewardSave) -> new PMBoosterBoxCardReward(),
                 (customReward) -> new RewardSave(customReward.type.toString(), null, 0, 0));
+
+        BaseMod.registerCustomReward(CustomRewardTypes.PACKMASTER_SINGLECARDREWARD,
+                rewardSave -> new SingleCardReward(rewardSave.id),
+                reward -> {
+                    String s = ((SingleCardReward) reward).card.cardID +
+                            "|" +
+                            ((SingleCardReward) reward).card.timesUpgraded +
+                            "|" +
+                            ((SingleCardReward) reward).card.misc;
+                    return new RewardSave(CustomRewardTypes.PACKMASTER_SINGLECARDREWARD.toString(), s);
+                }
+        );
     }
 
     public static void startOfGamePackSetup() {
@@ -954,6 +1014,20 @@ public class SpireAnniversary5Mod implements
         CardCrawlGame.dungeon.initializeCardPools();
     }
 
+    private static void loadAndCheckSummaries() {
+        // We load the summary for each patch to catch any errors early
+        SpireAnniversary5Mod.logger.info("Loading and checking pack summaries");
+        for (AbstractCardPack p : unfilteredAllPacks) {
+            PackSummary summary = PackSummaryReader.getPackSummary(p.packID);
+            if (summary != null) {
+                PackSummaryDisplay.getTooltip(summary);
+            }
+            else {
+                SpireAnniversary5Mod.logger.error("Please fill out the ratings and tags before releasing pack " + p.packID);
+            }
+        }
+    }
+
     @Override
     public void receivePostUpdate() {
         time += Gdx.graphics.getDeltaTime();
@@ -1012,6 +1086,16 @@ public class SpireAnniversary5Mod implements
             //SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
+    }
+
+    //Due to reward scrolling's orthographic camera and render order of rewards, the card needs to be rendered outside of the render method
+    public static SingleCardReward hoverRewardWorkaround;
+    @Override
+    public void receivePostRender(SpriteBatch sb) {
+        if(hoverRewardWorkaround != null) {
+            hoverRewardWorkaround.renderCardOnHover(sb);
+            hoverRewardWorkaround = null;
+        }
     }
 
     @Override

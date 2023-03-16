@@ -9,8 +9,8 @@
   "${ModID}:PetraPower": {
     "NAME": "Petra",
     "DESCRIPTIONS": [
-      "When you attack this creature, gain ",
-      "% of damage dealt as #yBlock next turn."
+      "When you attack this creature, gain #b",
+      "% of unblocked damage dealt as #yBlock next turn."
     ]
   }
 }

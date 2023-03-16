@@ -23,5 +23,11 @@
     "DESCRIPTIONS": [
       "Whenever you play a card this turn, gain #b%s #yCharge #yUp."
     ]
+  },
+  "${ModID}:StardustReverie": {
+    "NAME": "Stardust Reverie",
+    "DESCRIPTIONS": [
+      "#yExhaust the next card you play to gain #b%s #yCharge #yUp and draw #b1 card."
+    ]
   }
 }

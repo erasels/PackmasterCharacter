@@ -1,13 +1,13 @@
 {
   "${ModID}:FastHandsPower": {
-    "NAME": "手快",
+    "NAME": "迅疾之手",
     "DESCRIPTIONS": [
       "每当你打出 #y异色 牌时，抽 #b",
       " 张牌。"
     ]
   },
   "${ModID}:UpgradedFastHandsPower": {
-    "NAME": "手快+",
+    "NAME": "迅疾之手+",
     "DESCRIPTIONS": [
       "每当你打出 #y异色 牌时，抽 #b",
       " 张牌，并将所抽的牌本回合耗能降低 #b1 点。"

@@ -1,5 +1,6 @@
 package thePackmaster.powers.clawpack;
 
+import basemod.ReflectionHacks;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,7 +25,7 @@ public class ReturnBlockOnClawPower extends AbstractPackmasterPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK && card.hasTag(CLAW) && owner == action.target) {
+        if (card.type == AbstractCard.CardType.ATTACK && card.hasTag(CLAW) && (owner == action.target || (boolean) ReflectionHacks.getPrivate(card, AbstractCard.class, "isMultiDamage"))) {
             this.flash();
             this.addToTop(new GainBlockAction(AbstractDungeon.player, this.amount, Settings.FAST_MODE));
         }

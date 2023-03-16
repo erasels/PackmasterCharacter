@@ -10,7 +10,7 @@
   "${ModID}:Louse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": [
-      "#yPassive: Draw a card at the start of your turn. #yEvoke: Draw 2 cards."
+      "#yPassive: Draw a card at the start of your turn. #yEvoke: Draw #b2 cards."
     ]
   },
   "${ModID}:Panda": {
@@ -33,7 +33,7 @@
     "NAME": "Wolf",
     "DESCRIPTION": [
       "#yPassive: At the end of your turn, deal #b",
-      " damage to the enemy with the least HP. NL Damage increases with number of channeled orbs. NL #yEvoke: Gain an orb slot."
+      " damage to the enemy with the least HP. NL Damage increases with number of channeled orbs. NL #yEvoke: Gain an Orb slot."
     ]
   },
   "${ModID}:Leprechaun": {
@@ -48,7 +48,7 @@
     "NAME": "Fire Spirit",
     "DESCRIPTION": [
       "#yPassive: At the end of your turn apply #b",
-      " #yIgnite to ALL enemies. NL #yEvoke: Gain 1 #yFocus."
+      " #yIgnite to ALL enemies. NL #yEvoke: Gain #b1 #yFocus."
     ]
   }
 }

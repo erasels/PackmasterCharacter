@@ -1,21 +1,11 @@
 package thePackmaster.powers.conjurerpack;
 
-import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import thePackmaster.actions.bitingcoldpack.FrostbiteDamageAction;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.powers.marisapack.ChargeUpPower;
-import thePackmaster.relics.bitingcoldpack.Snowglobe;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -39,7 +29,8 @@ public class PetraPower extends AbstractPackmasterPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             int amt = getBlockAmount(damageAmount);
-            addToBot(new ApplyPowerAction(info.owner, info.owner, new NextTurnBlockPower(info.owner, amt), amt));
+            if(amt > 0)
+                addToBot(new ApplyPowerAction(info.owner, info.owner, new NextTurnBlockPower(info.owner, amt), amt));
         }
         return damageAmount;
     }
@@ -51,6 +42,6 @@ public class PetraPower extends AbstractPackmasterPower {
 
     public int getBlockAmount(int damage)
     {
-        return Math.max(1, (int) (damage * EFFECT / 100f));
+        return Math.max(0, (int) (damage * EFFECT / 100f));
     }
 }

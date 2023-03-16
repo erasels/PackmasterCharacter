@@ -16,7 +16,7 @@ public class ElectricWhip extends IntoTheBreachCard {
 
     public ElectricWhip() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        damage = baseDamage = 4;
+        damage = baseDamage = 5;
         this.isMultiDamage = true;
     }
 

@@ -1,12 +1,16 @@
 package thePackmaster.powers.warriorpack;
 
-import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
+import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cardmodifiers.IncreaseDamageModifier;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 public class PolishingPower extends AbstractPackmasterPower {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID(PolishingPower.class.getSimpleName());
@@ -22,7 +26,15 @@ public class PolishingPower extends AbstractPackmasterPower {
     public void onAfterCardPlayed(AbstractCard usedCard) {
         if (usedCard.type.equals(AbstractCard.CardType.ATTACK) && usedCard.baseDamage > 0) {
             this.flash();
-            this.addToBot(new ModifyDamageAction(usedCard.uuid, this.amount));
+            for (AbstractCard c : GetAllInBattleInstances.get(usedCard.uuid)) {
+                Wiz.atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        CardModifierManager.addModifier(c, new IncreaseDamageModifier(PolishingPower.this.amount));
+                        isDone = true;
+                    }
+                });
+            }
         }
     }
 

@@ -1,10 +1,7 @@
 {
   "${ModID}:VenemousExitPower": {
-    "NAME": "Exit Venemous",
-    "DESCRIPTIONS": [
-      "At the start of your turn, exit #yVenomous.",
-      ""
-    ]
+    "NAME": "Exit Venomous",
+    "DESCRIPTIONS": ["At the start of your turn, exit #yVenomous."]
   },
   "${ModID}:EvasiveTacticsPower": {
     "NAME": "Evasive Tactics",
@@ -17,8 +14,8 @@
     "NAME": "Tainted",
     "DESCRIPTIONS": [
       "Doubles any debuffs you apply to this enemy.",
-      "Doubles any debuffs you apply to this enemy #b",
-      " times."
+      "Multiplies any debuffs you apply to this enemy by #b",
+      "."
     ]
   }
 }

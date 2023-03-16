@@ -37,7 +37,7 @@ public class StarLane extends AbstractPixieCard {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (AbstractDungeon.player.hand.contains(this) && PixiePack.isForeign(c) && c.type==CardType.SKILL)
+        if (AbstractDungeon.player.hand.contains(this) && PixiePack.isForeign(c) && c.type==CardType.SKILL && !c.hasTag(PixiePack.pixieTags.ENCHANTMENT))
         {
             flash();
             AbstractCard toPlay = makeStatEquivalentCopy();

@@ -1,7 +1,7 @@
 {
   "${ModID}:Sharpen": {
     "NAME": "磨利打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 ${ModID}:修改 一张手牌：\"增加 !M! 点伤害\""
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 ${ModID}:修改 一张手牌： NL \"伤害增加 !M! 点\""
   },
   "${ModID}:Fortify": {
     "NAME": "稳固",
@@ -13,7 +13,7 @@
   },
 "${ModID}:Discombobulate": {
     "NAME": "迷惑",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若手中有 ${ModID}:修改 牌， NL 伤害翻倍。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若手中有被 ${ModID}:修改 牌， NL 伤害翻倍。"
   },
   "${ModID}:Attach": {
     "NAME": "附加",
@@ -22,21 +22,21 @@
   },
   "${ModID}:Improve": {
     "NAME": "改进",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 随机 ${ModID}:修改 一张手牌：\"抽一张牌。\" NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 选择 ${ModID}:修改 一张手牌：\"抽一张牌。\" NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 随机 ${ModID}:修改 一张手牌： NL \"抽一张牌。\" NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 选择 ${ModID}:修改 一张手牌： NL \"抽一张牌。\" NL 消耗 。"
   },
   "${ModID}:Enhance": {
     "NAME": "增强",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择 ${ModID}:修改 一张手牌： \"获得 !M! 点 格挡 。\""
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择 ${ModID}:修改 一张手牌： NL \"获得 !M! 点 格挡 。\""
   },
   "${ModID}:Cheapen": {
     "NAME": "平易化",
     "DESCRIPTION": "随机 ${ModID}:修改 抽牌堆一张牌：\"耗能变为0。\" NL ${ModID}:增幅 [E] : 不 消耗 。",
-    "UPGRADE_DESCRIPTION": "${ModID}:修改 一张牌 in your 抽牌堆: \"Costs 0.\" NL ${ModID}:增幅 [E] : Don't 消耗 。"
+    "UPGRADE_DESCRIPTION": "随机 ${ModID}:修改 抽牌堆一张牌：\"耗能变为0。\" NL ${ModID}:增幅 [E] : 不 消耗 。"
   },
   "${ModID}:Expand": {
     "NAME": "扩大化",
-    "DESCRIPTION": "${ModID}:修改 一张手牌：\"耗能加1。\" 与 \"再打出一次。\" NL 消耗 。"
+    "DESCRIPTION": "${ModID}:修改 一张手牌： NL \"耗能加1。\" NL 且\"再打出一次。\" NL 消耗 。"
   },
   "${ModID}:Piratify": {
     "NAME": "海盗化",

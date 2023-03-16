@@ -15,7 +15,7 @@ public class Reverberation extends AbstractBellordCard {
 
     public Reverberation() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 8;
+        baseBlock = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -14,8 +14,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class StarShower extends AbstractPixieCard {
     public final static String ID = makeID("StarShower");
 
-    private static final int baseAtk = 3;
-    private static final int upgradeAtk = 4;
+    private static final int baseAtk = 4;
+    private static final int upgradeAtk = 6;
 
     public StarShower() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -35,7 +35,7 @@ public class StarShower extends AbstractPixieCard {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (AbstractDungeon.player.hand.contains(this) && PixiePack.isForeign(c) && c.type==CardType.ATTACK)
+        if (AbstractDungeon.player.hand.contains(this) && PixiePack.isForeign(c) && c.type==CardType.ATTACK && !c.hasTag(PixiePack.pixieTags.ENCHANTMENT))
         {
             flash();
             AbstractCard toPlay = makeStatEquivalentCopy();

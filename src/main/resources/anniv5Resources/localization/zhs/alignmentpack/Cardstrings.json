@@ -9,7 +9,7 @@
   },
   "${ModID}:Quincunx": {
     "NAME": "十二分相",
-    "DESCRIPTION": "虚无 。 NL 抽到本牌时，所有敌人本回合失去 !M! 点 力量 。"
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时，所有敌人临时失去 !M! 点 力量 。"
   },
   "${ModID}:Novile": {
     "NAME": "九分相",

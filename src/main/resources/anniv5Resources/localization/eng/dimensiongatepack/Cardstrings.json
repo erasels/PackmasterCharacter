@@ -34,7 +34,7 @@
   },
   "${ModID}:Sustenance": {
     "NAME": "Sustenance",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Poison to a random enemy. NL stslib:Persist !stslib:persist!"
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Poison to a random enemy. NL stslib:Persist !stslib:persist!."
   },
   "${ModID}:TheEncyclopedia": {
     "NAME": "The Encyclopedia",

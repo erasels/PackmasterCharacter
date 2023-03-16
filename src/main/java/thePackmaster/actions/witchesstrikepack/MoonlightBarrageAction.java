@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
-import thePackmaster.orbs.PackmasterOrb;
 
 public class MoonlightBarrageAction extends AbstractGameAction
 {
@@ -30,7 +29,7 @@ public class MoonlightBarrageAction extends AbstractGameAction
         if (!AbstractDungeon.player.orbs.isEmpty()) {
             for (AbstractOrb orb : AbstractDungeon.player.orbs){
                 if (!(orb instanceof EmptyOrbSlot)){
-                    addToBot(new AttackDamageRandomEnemyAction(card,effect));
+                    addToTop(new AttackDamageRandomEnemyAction(card,effect));
                 }
             }
         }

@@ -23,11 +23,11 @@
   },
   "${ModID}:ChitteringPunt": {
     "NAME": "横扫一拳",
-    "DESCRIPTION": "NL 造成 !D! 点伤害。 ${ModID}:展现 一个 ${ModID}:新月 充能球。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:展现 一个 ${ModID}:新月 充能球。"
   },
   "${ModID}:HornetWithin": {
     "NAME": "黄蜂附体",
-    "DESCRIPTION": "${ModID}:滋生 。 NL 获得 !B! 点 格挡 。 NL 本牌 ${ModID}:滋生 时，激发最右侧的充能球 !M! 次并失去一个充能球栏位。"
+    "DESCRIPTION": "${ModID}:滋生 。 NL 获得 !B! 点 格挡 。 NL 本牌 ${ModID}:滋生 时，激发 !M! 个充能球并失去一个充能球栏位。"
   },
   "${ModID}:WitchTwist": {
     "NAME": "乱射升龙击",
@@ -35,7 +35,7 @@
   },
   "${ModID}:MoonlightFlight": {
     "NAME": "月色飞行",
-    "DESCRIPTION": "生成 充能球时， NL 获得 !M! 层临时 集中。"
+    "DESCRIPTION": "生成 充能球时， NL 获得 !M! 层临时 集中 。"
   },
   "${ModID}:ScarabPlague": {
     "NAME": "甲虫瘟疫",

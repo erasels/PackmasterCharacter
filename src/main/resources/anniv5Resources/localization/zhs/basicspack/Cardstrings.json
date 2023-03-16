@@ -1,0 +1,59 @@
+{
+  "${ModID}:BasicWave": {
+    "NAME": "基斩波",
+    "DESCRIPTION": "打出 *防御 与 *打击 各一张。 NL 本牌被视为 ${ModID}:基础 牌。",
+    "EXTENDED_DESCRIPTION": [
+      "打出 *防御+ ",
+      "与 *打击+ ",
+      "各一张。 NL 本牌被视为 ${ModID}:基础 牌。"
+      ]
+  },
+  "${ModID}:Simplify": {
+    "NAME": "简化",
+    "DESCRIPTION": "${ModID}:取 一张 ${ModID}:基础 牌并将其 升级 !M! 次，效果突破升级次数限制。",
+    "UPGRADE_DESCRIPTION": "${ModID}:取 一张 ${ModID}:基础 牌并将其 升级 !M! 次，效果突破升级次数限制。"
+  },
+  "${ModID}:LoseIt": {
+    "NAME": "背包清理",
+    "DESCRIPTION": "获得一张 *翻捣 ，将所有 *翻捣 的抽牌数加 !M! 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得一张 *翻捣+ ，将所有 *翻捣 的抽牌数加 !M! 。 NL 消耗 。"
+  },
+  "${ModID}:SimplifiedStrike": {
+    "NAME": "精简打击",
+    "DESCRIPTION": "造成本场战斗打出的 ${ModID}:基础 牌数 !M! 倍的伤害。",
+    "UPGRADE_DESCRIPTION": "${ModID}:固无 。 NL 造成本场战斗打出的 ${ModID}:基础 牌数 !M! 倍的伤害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (造成 !D! 点伤害)"
+    ]
+  },
+  "${ModID}:FamiliarKit": {
+    "NAME": "仆从箱",
+    "DESCRIPTION": "获得 !M! 点 力量 ， !M! 点 敏捷 与 !${ModID}:m2! 点 集中 。 NL ${ModID}:拾起 ：将一张 *痛 *击 、 *生 *存 *者 与 *电 *击 各加入牌组。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !M! 点 力量 ， !M! 点 敏捷 与 !${ModID}:m2! 点 集中 。 NL ${ModID}:拾起 ：将一张 *痛 *击 、 *生 *存 *者 与 *电 *击 各加入牌组。"
+  },
+  "${ModID}:OckhamsRazor": {
+    "NAME": "奥卡姆剃刀",
+    "DESCRIPTION": "打出 ${ModID}:基础 牌时， NL 造成 !M! 点群体伤害。"
+  },
+  "${ModID}:BackToBasic": {
+    "NAME": "返璞归真",
+    "DESCRIPTION": "将弃牌堆一张牌返回手牌，若其非 ${ModID}:基础 牌，本牌 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 将弃牌堆一张牌返回手牌，若其非 ${ModID}:基础 牌，本牌 消耗 。"
+  },
+  "${ModID}:BasicHit": {
+    "NAME": "基础一击",
+    "DESCRIPTION": "获得一张 *打击 + !M! 。 NL 消耗 。"
+  },
+  "${ModID}:ConjureDefends": {
+    "NAME": "聚能成盾",
+    "DESCRIPTION": "获得一张 *防御+ 并将其 ${ModID}:修改 ： NL \"再获得X次\"。 NL 回馈 1。 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得一张 *防御+ 并将其 ${ModID}:修改 ： NL \"再获得X+1次\"。 NL 回馈 1。 消耗 。"
+
+  },
+  "${ModID}:SimpleTrick": {
+    "NAME": "简单伎俩",
+    "DESCRIPTION": "获得一张 *牌技 。 NL 下 !M! 次打出 *牌技 时， NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得一张 *牌技+ 。 NL 下 !M! 次打出 *牌技 时， NL 获得 [E] 。 NL 消耗 。"
+
+  }
+}

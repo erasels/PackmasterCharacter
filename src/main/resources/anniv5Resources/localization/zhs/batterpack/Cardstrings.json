@@ -25,7 +25,7 @@
   },
   "${ModID}:OptimizedBlur": {
     "NAME": "视晕校正",
-    "DESCRIPTION": "造成未被格挡伤害时， NL 获得 !M! 点 格挡 。"
+    "DESCRIPTION": "你的攻击未被防住时， NL 获得 !M! 点 格挡 。"
   },
   "${ModID}:HardCaramel": {
     "NAME": "硬焦糖",
@@ -35,7 +35,7 @@
   "${ModID}:UltimateHomerun": {
     "NAME": "终极全垒打",
     "DESCRIPTION": "造成本场战斗造成过的最高未被格挡点伤害。",
-    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害。)", " NL (造成 !D! 点伤害。 哇哦！)"]
+    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害)", " NL (造成 !D! 点伤害。 哇哦！)"]
   },
   "${ModID}:AvatarBeat": {
     "NAME": "漂亮一击",

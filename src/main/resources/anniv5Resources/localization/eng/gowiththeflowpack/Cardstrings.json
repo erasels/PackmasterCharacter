@@ -9,7 +9,7 @@
   },
   "${ModID}:Hail": {
     "NAME": "Hail",
-    "DESCRIPTION": "Deal !D! damage. NL Deal an additional !D! damage for each time this was discarded this combat.",
+    "DESCRIPTION": "Deal !D! damage. NL Hits an additional time for each time this was discarded this combat.",
     "EXTENDED_DESCRIPTION": [" NL (Hits !M! times)"]
   },
   "${ModID}:HighTide": {
@@ -36,8 +36,7 @@
   },
   "${ModID}:Reservoir": {
     "NAME": "Reservoir",
-    "DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards discarded this way. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards discarded this way."
+    "DESCRIPTION": "${ModID}:Flow. Draw cards equal to the number of cards discarded this way. NL Exhaust."
   },
   "${ModID}:StormFront": {
     "NAME": "Storm Front",

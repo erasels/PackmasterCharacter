@@ -19,11 +19,16 @@ public class HunterRank extends AbstractMonsterHunterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        doCalc(); //To fix amount not being correct for This Isnt Even My...
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
     }
 
     public void update(){
         super.update();
+        doCalc();
+    }
+
+    private void doCalc() {
         baseMagicNumber = CardCrawlGame.elites1Slain + CardCrawlGame.elites2Slain + CardCrawlGame.elites3Slain + CardCrawlGame.elitesModdedSlain + AbstractDungeon.bossCount+1;
         magicNumber = baseMagicNumber;
         this.name = originalName + ": "+magicNumber;

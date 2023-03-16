@@ -1,10 +1,10 @@
 {
   "${ModID}:OlexasCloak": {
-    "NAME": "Olexa's　Cloak",
-    "DESCRIPTION": "保留 。 NL 再打出 !hoard! 次后： NL 获得 !B! 点 格挡 。 NL 长驻 !stslib:persist! 。"
+    "NAME": "Olexa's Cloak",
+    "DESCRIPTION": "保留 。 NL 打出 !hoard! 次后： NL 获得 !B! 点 格挡 。 NL stslib:长驻 !stslib:persist! 。"
   },
   "${ModID}:HuttsGamble": {
-    "NAME": "Hutts'　Gamble",
+    "NAME": "Hutts' Gamble",
     "DESCRIPTION": "若本回合不因攻击伤害失去生命，下回合获得 [E] 并抽一张牌。",
     "UPGRADE_DESCRIPTION": "若本回合不因攻击伤害失去生命，下回合获得 [E] [E] 并抽一张牌。"
   },
@@ -13,12 +13,12 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 本回合每抽过一张牌， NL 伤害增加 !M! 点。"
   },
   "${ModID}:SneakyteakStrike": {
-    "NAME": "Sneakyteak　Strike",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｄａｒｋｓｉｄｅ　Ｓｌａｐ 加入抽牌堆顶部。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｄａｒｋｓｉｄｅ　Ｓｌａｐ+ 加入抽牌堆顶部。"
+    "NAME": "Sneakyteak Strike",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将预览牌加入抽牌堆顶部。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将预览牌加入抽牌堆顶部。"
   },
   "${ModID}:DarksideSlap": {
-    "NAME": "Darkside　Slap",
+    "NAME": "Darkside Slap",
     "DESCRIPTION": "${ModID}:超虚无 。 NL 造成 !D! 点伤害。"
   },
   "${ModID}:Wanderbots": {
@@ -28,10 +28,10 @@
   },
   "${ModID}:Retromation": {
     "NAME": "Retromation",
-    "DESCRIPTION": "回合开始时，随机获得本局已选卡包外的一张牌， NL 其附带 虚无 。"
+    "DESCRIPTION": "回合开始时，随机获得本局已选卡包外的一张牌，其附带 虚无 。"
   },
   "${ModID}:OddOne": {
-    "NAME": "Odd　One",
+    "NAME": "Odd One",
     "DESCRIPTION": "${ModID}:累奇 ：随机造成 !D! 点伤害。 NL ${ModID}:累偶 ：抽一张牌。",
     "EXTENDED_DESCRIPTION": [
       " NL NL (累计 ",
@@ -42,23 +42,23 @@
   },
   "${ModID}:Rhapsody": {
     "NAME": "Rhapsody",
-    "DESCRIPTION": "获得一层 !M! 级 ${ModID}:灵感 。 NL 抽2张牌。"
+    "DESCRIPTION": "获得1层 !M! 级 ${ModID}:灵感 。 NL 抽2张牌。"
   },
   "${ModID}:Frostprime": {
-    "NAME": "Frost　Prime",
+    "NAME": "Frost Prime",
     "DESCRIPTION": "回合开始时， 生成 1个 冰霜 充能球并给予所有敌人 !M! 层 ${ModID}:霜噬 。"
   },
   "${ModID}:BaalorBash": {
-    "NAME": "Baalorlord's　Bash",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *Ｂａａｌｏｒ＇ｓ　Ｂｌｕｅｐｒｉｎｔ 加入抽牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL 将一张 *Ｂａａｌｏｒ＇ｓ　Ｂｌｕｅｐｒｉｎｔ 加入抽牌堆。 NL 消耗 。"
+    "NAME": "Baalorlord's Bash",
+    "DESCRIPTION": "${ModID}:固无 。 NL 造成 !D! 点伤害。 NL 将预览牌加入抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将预览牌加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:BaalorBlueprint": {
-    "NAME": "Baalor's　Blueprint",
-    "DESCRIPTION": "将弃牌堆洗入抽牌堆， NL 并将一张 Ｔｈｅ　Ｃｏｚｙ　Ｃｈａｉｒ 加入抽牌堆底部。 消耗 。"
+    "NAME": "Comfy Blueprint",
+    "DESCRIPTION": "消耗 。 NL 将弃牌堆洗入抽牌堆，并将一张预览牌加入弃牌堆。"
   },
   "${ModID}:TheCozyChair": {
-    "NAME": "The　Cozy　Chair",
+    "NAME": "The Cozy Chair",
     "DESCRIPTION": "所有牌打出时额外被打出一次。"
   }
 }

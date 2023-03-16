@@ -13,7 +13,7 @@
   },
   "${ModID}:Greatsword": {
     "NAME": "巨剑",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 保留 时若有未使用的能量，下次打出前本牌伤害加8。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 保留 时每有未使用的 [E] ，本场战斗伤害加8。"
   },
   "${ModID}:HuntingInstincts": {
     "NAME": "猎人本能",
@@ -108,7 +108,7 @@
   },
   "${ModID}:CarvingKnife": {
     "NAME": "猎刀",
-    "DESCRIPTION": "造成 !D! 点伤害。 若击杀一名精英或首领，获得其专属战利品。 NL 即逝。"
+    "DESCRIPTION": "造成 !D! 点伤害。 若击杀一名精英或首领，获得其专属战利品。 NL 即逝 。"
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "觉醒者匕首",
@@ -120,7 +120,7 @@
   },
   "${ModID}:HunterRank": {
     "NAME": "猎人排名",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 每击杀过一名精英或首领， 力量 获得量加1。 "
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 每击杀过一名精英或首领， 力量 获得量加1。"
   },
   "${ModID}:TranqBomb": {
     "NAME": "镇静炸弹",
@@ -132,7 +132,7 @@
     "UPGRADE_DESCRIPTION": "给予 !M! 层 ${ModID}:追猎 。 NL 本回合可 保留 !${ModID}:m2! 张牌。"
   },
   "${ModID}:SerpentineDagger": {
-    "NAME": "蛇女匕首",
+    "NAME": "蛇术士匕首",
     "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害 !M! 次。 NL 将本牌2张复制品加入抽牌堆。 NL 消耗 。"
   }
 }

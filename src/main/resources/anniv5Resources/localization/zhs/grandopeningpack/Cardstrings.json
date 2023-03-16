@@ -26,13 +26,13 @@
   },
   "${ModID}:Cross": {
     "NAME": "叉击",
-    "DESCRIPTION": "造成 !D! 点伤害两次。 所有 *叉击 本场战斗伤害增加1点。将一张 *叉击 加入抽牌堆。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 点伤害两次。 所有 *叉击 本场战斗伤害增加1点。将一张 *叉击+ 加入抽牌堆。"
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 所有 *叉击 本场战斗伤害加1。 NL 将一张 *叉击 加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 点伤害两次。 NL 所有 *叉击 本场战斗伤害加1。 NL 将一张 *叉击 加入抽牌堆。"
   },
   "${ModID}:Improvise": {
     "NAME": "即兴",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃所有 固有 手牌。 NL 若成功丢弃，下回合造成两倍攻击伤害。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !B! 点 格挡 。 NL 丢弃所有 固有 手牌。 NL 若成功丢弃，下回合造成两倍攻击伤害。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若手中有 固有 牌，将其丢弃，下回合造成两倍攻击伤害。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !B! 点 格挡 。 NL 若手中有 固有 牌，将其丢弃，下回合造成两倍攻击伤害。"
   },
   "${ModID}:Debut": {
     "NAME": "出道",
@@ -41,8 +41,8 @@
   },
   "${ModID}:BattlePrep": {
     "NAME": "作战准备",
-    "DESCRIPTION": "选择一张手牌，本局游戏其附带 固有 。 NL 将本牌从牌组移除。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 选择一张手牌，本局游戏其附带 固有 。 NL 将本牌从牌组移除。",
+    "DESCRIPTION": "选择一张手牌， NL 本局游戏其附带 固有 。 NL 将本牌从牌组移除。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 选择一张手牌， NL 本局游戏其附带 固有 。 NL 将本牌从牌组移除。",
     "EXTENDED_DESCRIPTION": [
       "将一张牌本局游戏附加固有。"
     ]

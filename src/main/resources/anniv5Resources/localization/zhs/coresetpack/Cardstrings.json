@@ -1,7 +1,7 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "背包甩掴",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若抽牌堆有10+张牌， NL 抽 !M! 张牌， NL 否则获得 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL ${ModID}:配合 ： 给予X层 虚弱 与 易伤 。"
   },
   "${ModID}:BoosterTutor": {
     "NAME": "奇寻卡包",
@@ -17,14 +17,12 @@
   },
   "${ModID}:MayhemForm": {
     "NAME": "不懈形态",
-    "DESCRIPTION": "每回合手中只剩不超过2张牌时触发一次： NL 抽2张牌。 NL 获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 每回合手中只剩不超过2张牌时触发一次： NL 抽2张牌。 NL 获得 [E] [E] 。"
+    "DESCRIPTION": "每回合手中只剩不超过2张牌时触发一次： NL 抽2张牌。 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "每回合手中只剩不超过2张牌时触发一次： NL 抽2张牌。 NL 获得 [E] [E] 。"
   },
   "${ModID}:RippedPecs": {
     "NAME": "腹肌",
-    "DESCRIPTION": "本场战斗每用过一种卡包的牌，获得1点 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "本场战斗每用过一种卡包的牌，获得1点 力量 。",
-    "EXTENDED_DESCRIPTION": [" NL (获得 {0} 点 力量 。)"]
+    "DESCRIPTION": "获得1点 力量 。 NL ${ModID}:配合 ： NL 获得量提高至 !M! 点。"
   },
   "${ModID}:Showoff": {
     "NAME": "狂炫",
@@ -36,11 +34,10 @@
   },
   "${ModID}:SmithingHammer": {
     "NAME": "锻造锤击",
-    "DESCRIPTION": "造成 !D! 点伤害3次。 NL 随机 升级 !M! 张手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害3次。 NL 随机 升级 !M! 张手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 随机 升级 2张手牌。"
   },
   "${ModID}:Synergize": {
     "NAME": "套路配合",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若手中至少有2种其他卡包的牌，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:配合 ： NL 获得 !B! 点 格挡 。"
   }
 }

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
@@ -40,6 +41,10 @@ public class OverwhelmingPower extends AbstractHermitCard {
 
     @Override
     public float getTitleFontSize() {
-        return 20.0F;
+        if(Settings.language== Settings.GameLanguage.ZHS){
+            return -1.0F;
+        }else {
+            return 20.0f;
+        }
     }
 }

@@ -8,12 +8,10 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.combat.IronWaveEffect;
 import com.megacrit.cardcrawl.vfx.stance.DivinityStanceChangeParticle;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -23,16 +21,10 @@ public class Greatsword extends AbstractMonsterHunterCard {
     public static final int DAMAGE = 28;
     public static final int UPG_DAMAGE = 8;
     public static final int MAGIC = 8;
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    public int originalDamage;
 
     public Greatsword() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
-        originalDamage = baseDamage;
         baseMagicNumber = magicNumber = UPG_DAMAGE;
         this.selfRetain = true;
     }
@@ -40,11 +32,6 @@ public class Greatsword extends AbstractMonsterHunterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new IronWaveEffect(p.hb.cX, p.hb.cY, m.hb.cX), 0.8F));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.baseDamage = damage = originalDamage;
-        if (upgraded){
-            upgradeDamage(UPG_DAMAGE);
-        }
-        initializeDescription();
     }
 
     public void onRetained() {

@@ -17,8 +17,8 @@
   },
   "${ModID}:DashIn": {
     "NAME": "Dash In",
-    "DESCRIPTION": "Innate NL Gain !B! Block. NL Deal !D! damage to all enemies X times.",
-    "UPGRADE_DESCRIPTION": "Innate NL Gain !B! Block. NL Deal !D! damage to all enemies X+1 times."
+    "DESCRIPTION": "Innate NL Gain !B! Block. NL Deal !D! damage to ALL enemies X times.",
+    "UPGRADE_DESCRIPTION": "Innate NL Gain !B! Block. NL Deal !D! damage to ALL enemies X+1 times."
   },
   "${ModID}:InstinctiveThinking": {
     "NAME": "Instinctive Thinking",
@@ -31,8 +31,8 @@
   },
   "${ModID}:Improvise": {
     "NAME": "Improvise",
-    "DESCRIPTION": "Gain !B! Block. Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. Discard all Innate cards in your hand. If you do, next turn, your Attacks deal double damage"
+    "DESCRIPTION": "Gain !B! Block. If you are holding Innate cards, discard them and your Attacks deal double damage next turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !B! Block. If you are holding Innate cards, discard them and your Attacks deal double damage next turn."
   },
   "${ModID}:Debut": {
     "NAME": "Debut",

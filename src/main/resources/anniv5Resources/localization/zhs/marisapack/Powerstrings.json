@@ -2,7 +2,7 @@
   "${ModID}:ChargeUp": {
     "NAME": "蓄力",
     "DESCRIPTIONS": [
-      "再获得 #b%s 层以上的 #y蓄力后，下次攻击造成双倍伤害并失去 #b%s 层 #y蓄力 。"
+      "再获得 #b%s 层以上的 #y蓄力 后，下次攻击造成双倍伤害并失去 #b%s 层 #y蓄力 。"
     ]
   },
   "${ModID}:Inertia": {
@@ -22,6 +22,12 @@
     "NAME": "聚力",
     "DESCRIPTIONS": [
       "本回合每打出一张牌，获得 #b%s 层 #y蓄力 。"
+    ]
+  },
+  "${ModID}:StardustReverie": {
+    "NAME": "星屑幻想",
+    "DESCRIPTIONS": [
+      "#y消耗 你打出的下张牌来获得 #b%s 层 #y蓄力 ，并抽 #b1 张牌。"
     ]
   }
 }
