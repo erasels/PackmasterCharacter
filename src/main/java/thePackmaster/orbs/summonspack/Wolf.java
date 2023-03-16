@@ -134,7 +134,7 @@ public class Wolf extends CustomOrb {
     }
 
     @Override
-    public void render(SpriteBatch sb) {;
+    public void render(SpriteBatch sb) {
         sb.setBlendFunction(770, 771);
         sb.setColor(colorNormal);
         sb.draw(img, cX - WOLF_WIDTH /2F, cY - WOLF_WIDTH /2F + wolfBobEffect.y, WOLF_WIDTH /2F, WOLF_WIDTH /2F,

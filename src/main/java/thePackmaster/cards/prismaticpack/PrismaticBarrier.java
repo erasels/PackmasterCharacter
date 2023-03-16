@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.ChangePlayedCardExhaustAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public class PrismaticBarrier extends AbstractPrismaticCard {
@@ -37,24 +38,10 @@ public class PrismaticBarrier extends AbstractPrismaticCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard card = this;
         this.addToBot(new GainBlockAction(p, this.block));
         if (this.playedDifferentColorCardCheck()) {
             this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber)));
-            this.addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    for (AbstractGameAction a : AbstractDungeon.actionManager.actions) {
-                        if (a instanceof UseCardAction) {
-                            if (ReflectionHacks.getPrivate(a, UseCardAction.class, "targetCard") == card) {
-                                ((UseCardAction) a).exhaustCard = true;
-                                break;
-                            }
-                        }
-                    }
-                    this.isDone = true;
-                }
-            });
+            this.addToBot(new ChangePlayedCardExhaustAction(this, true));
         }
     }
 
