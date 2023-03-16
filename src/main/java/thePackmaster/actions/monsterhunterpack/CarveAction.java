@@ -49,9 +49,12 @@ public class CarveAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SLASH_HORIZONTAL));
             this.target.damage(this.info);
             if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.monsterTarget.type == AbstractMonster.EnemyType.BOSS || this.monsterTarget.type == AbstractMonster.EnemyType.ELITE)) {
-                CarvingKnife tmp = (CarvingKnife)thisKnife;
-                tmp.SetFleeting(true);
-                addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id)));
+                addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id), thisKnife));
+            }
+            else if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.target.id.equals("SpikeSlime_L") || this.target.id.equals("AcidSlime_L") || this.target.id.equals("SpikeSlime_M") || this.target.id.equals("AcidSlime_M"))){
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
+                    addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id), thisKnife));
+                }
             }
         }
         this.tickDuration();

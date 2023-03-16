@@ -15,9 +15,11 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 public class QuestCompleteAction extends AbstractGameAction {
 
     AbstractCard cardToObtain;
+    AbstractCard cardToRemove;
 
-    public QuestCompleteAction(AbstractCard card) {
+    public QuestCompleteAction(AbstractCard card, AbstractCard knife) {
         this.cardToObtain = card;
+        this.cardToRemove = knife;
         this.duration = 1.5F;
     }
 
@@ -28,6 +30,20 @@ public class QuestCompleteAction extends AbstractGameAction {
         s.startingDuration = 1.4f;
         AbstractDungeon.effectList.add(s);
         AbstractDungeon.effectList.add(new UpgradeShineEffect( (float) Settings.WIDTH * 3.0f / 4.0F, (float)Settings.HEIGHT / 2.0F));
+        AbstractCard cToRemove = null;
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.uuid.equals(cardToRemove.uuid)) {
+                cToRemove = c;
+                break;
+            }
+        }
+        if (cToRemove != null){
+            AbstractDungeon.player.masterDeck.removeCard(cToRemove);
+        }
+        else {
+            System.out.println("Knife not found, something went wrong.");
+        }
+
         this.isDone = true;
     }
 
