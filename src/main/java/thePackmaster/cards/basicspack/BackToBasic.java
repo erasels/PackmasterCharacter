@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.actions.ChangePlayedCardExhaustAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -22,11 +23,7 @@ public class BackToBasic extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new FetchAction(p.discardPile, 1, (cards)->{
             if(!cards.isEmpty() && cards.get(0).rarity != CardRarity.BASIC) {
-                for (AbstractGameAction a : AbstractDungeon.actionManager.actions)
-                    if (a instanceof UseCardAction) {
-                        if (BackToBasic.this.equals(ReflectionHacks.getPrivate(a, UseCardAction.class, "targetCard")))
-                            ((UseCardAction) a).exhaustCard = true;
-                    }
+                this.addToTop(new ChangePlayedCardExhaustAction(this, true));
             }
         }));
 
