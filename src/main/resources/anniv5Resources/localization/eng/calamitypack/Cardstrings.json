@@ -19,5 +19,9 @@
   "${ModID}:ChillingCurse": {
     "NAME": "Chilling Curse",
     "DESCRIPTION": "Apply !M! ${ModID}:Frostbite and Weak. NL Exhaust."
+  },
+  "${ModID}:Suffer": {
+    "NAME": "Suffer",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite, ${ModID}:Frostbite, Poison, and ${ModID}:Jinx. NL Exhaust."
   }
 }
