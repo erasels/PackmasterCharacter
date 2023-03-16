@@ -31,6 +31,7 @@ public class CalamityPack extends AbstractCardPack {
         cards.add(ArmorOfMalice.ID);
         cards.add(AllIsFire.ID);
         cards.add(DreadOmen.ID);
+        cards.add(Firespitter.ID);
         return cards;
     }
 }

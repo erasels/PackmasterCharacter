@@ -37,5 +37,9 @@
   "${ModID}:DreadOmen": {
     "NAME": "Dread Omen",
     "DESCRIPTION": "Apply !M! ${ModID}:Jinx."
+  },
+  "${ModID}:Firespitter": {
+    "NAME": "Firespitter",
+    "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! ${ModID}:Ignite."
   }
 }

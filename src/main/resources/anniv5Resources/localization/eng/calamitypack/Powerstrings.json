@@ -1,2 +1,6 @@
 {
+  "${ModID}:Firespitter": {
+    "NAME": "Firespitter",
+    "DESCRIPTIONS": ["Whenever an Attack deals unblocked damage, apply #b{0} #yIgnite."]
+  }
 }
