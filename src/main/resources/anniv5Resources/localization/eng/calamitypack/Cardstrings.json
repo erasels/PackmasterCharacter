@@ -6,5 +6,9 @@
   "${ModID}:BindingChains": {
     "NAME": "Binding Chains",
     "DESCRIPTION": "Gain !B! Block. NL Enemy loses !M! Strength this turn. NL Exhaust."
+  },
+  "${ModID}:FreezingVenom": {
+    "NAME": "Freezing Venom",
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Frostbite and Poison to ALL enemies."
   }
 }
