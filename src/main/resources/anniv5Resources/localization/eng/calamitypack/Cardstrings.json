@@ -2,5 +2,9 @@
   "${ModID}:Doomtouch": {
     "NAME": "Doomtouch",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Jinx."
+  },
+  "${ModID}:BindingChains": {
+    "NAME": "Binding Chains",
+    "DESCRIPTION": "Gain !B! Block. NL Enemy loses !M! Strength this turn. NL Exhaust."
   }
 }

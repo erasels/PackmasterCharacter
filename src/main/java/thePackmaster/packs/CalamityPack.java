@@ -3,8 +3,8 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.calamitypack.BindingChains;
 import thePackmaster.cards.calamitypack.Doomtouch;
-import thePackmaster.cards.spherespack.*;
 
 import java.util.ArrayList;
 
@@ -24,6 +24,7 @@ public class CalamityPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(Doomtouch.ID);
+        cards.add(BindingChains.ID);
         return cards;
     }
 }
