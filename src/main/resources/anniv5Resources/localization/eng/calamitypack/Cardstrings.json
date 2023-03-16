@@ -1,0 +1,6 @@
+{
+  "${ModID}:Doomtouch": {
+    "NAME": "Doomtouch",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Jinx."
+  }
+}
