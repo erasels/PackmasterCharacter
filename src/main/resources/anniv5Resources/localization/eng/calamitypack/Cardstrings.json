@@ -23,5 +23,11 @@
   "${ModID}:Suffer": {
     "NAME": "Suffer",
     "DESCRIPTION": "Apply !M! ${ModID}:Ignite, ${ModID}:Frostbite, Poison, and ${ModID}:Jinx. NL Exhaust."
+  },
+  "${ModID}:ArmorOfMalice": {
+    "NAME": "Armor of Malice",
+    "DESCRIPTION": "Gain Block equal to the number of debuffs on ALL enemies +3.",
+    "UPGRADE_DESCRIPTION": "Gain Block equal to the number of debuffs on ALL enemies +6.",
+    "EXTENDED_DESCRIPTION": [" NL (Gains !B! Block.)"]
   }
 }

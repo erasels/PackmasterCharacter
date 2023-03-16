@@ -28,6 +28,7 @@ public class CalamityPack extends AbstractCardPack {
         cards.add(EssenceGrasp.ID);
         cards.add(ChillingCurse.ID);
         cards.add(Suffer.ID);
+        cards.add(ArmorOfMalice.ID);
         return cards;
     }
 }
