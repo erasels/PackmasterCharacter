@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.calamitypack.BindingChains;
 import thePackmaster.cards.calamitypack.Doomtouch;
+import thePackmaster.cards.calamitypack.EssenceGrasp;
 import thePackmaster.cards.calamitypack.FreezingVenom;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class CalamityPack extends AbstractCardPack {
         cards.add(Doomtouch.ID);
         cards.add(BindingChains.ID);
         cards.add(FreezingVenom.ID);
+        cards.add(EssenceGrasp.ID);
         return cards;
     }
 }

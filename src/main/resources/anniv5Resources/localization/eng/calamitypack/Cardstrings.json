@@ -10,5 +10,10 @@
   "${ModID}:FreezingVenom": {
     "NAME": "Freezing Venom",
     "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Frostbite and Poison to ALL enemies."
+  },
+  "${ModID}:EssenceGrasp": {
+    "NAME": "Essence Grasp",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card for each of ${ModID}:Ignite, ${ModID}:Frostbite, and Poison the enemy has.",
+    "EXTENDED_DESCRIPTION": [" NL (Draws !M! card.)", " NL (Draws !M! cards.)"]
   }
 }
