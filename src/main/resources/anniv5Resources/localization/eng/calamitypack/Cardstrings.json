@@ -29,5 +29,9 @@
     "DESCRIPTION": "Gain Block equal to the number of debuffs on ALL enemies +3.",
     "UPGRADE_DESCRIPTION": "Gain Block equal to the number of debuffs on ALL enemies +6.",
     "EXTENDED_DESCRIPTION": [" NL (Gains !B! Block.)"]
+  },
+  "${ModID}:AllIsFire": {
+    "NAME": "All is Fire",
+    "DESCRIPTION": "Convert all ${ModID}:Frostbite and Poison to ${ModID}:Ignite, then double the enemy's ${ModID}:Ignite. NL Exhaustive !stslib:ex!."
   }
 }
