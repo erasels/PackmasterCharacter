@@ -8,8 +8,8 @@
   },
   "${ModID}:JockeyPackHat": {
     "TEXT": [
-      "You know, for riding horses.",
-      "The Jockey"
+      "你懂的，骑马用的。",
+      "骑师帽"
     ]
   },
   "${ModID}:LuckyModifier": {
