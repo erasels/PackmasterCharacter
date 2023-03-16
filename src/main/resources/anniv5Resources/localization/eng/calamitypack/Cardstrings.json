@@ -33,5 +33,9 @@
   "${ModID}:AllIsFire": {
     "NAME": "All is Fire",
     "DESCRIPTION": "Convert all ${ModID}:Frostbite and Poison to ${ModID}:Ignite, then double the enemy's ${ModID}:Ignite. NL Exhaustive !stslib:ex!."
+  },
+  "${ModID}:DreadOmen": {
+    "NAME": "Dread Omen",
+    "DESCRIPTION": "Apply !M! ${ModID}:Jinx."
   }
 }
