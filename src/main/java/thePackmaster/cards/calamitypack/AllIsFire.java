@@ -1,6 +1,5 @@
 package thePackmaster.cards.calamitypack;
 
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -20,7 +19,7 @@ public class AllIsFire extends AbstractCalamityCard {
     private static final int UPGRADE_EXHAUSTIVE = 1;
 
     public AllIsFire() {
-        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         ExhaustiveVariable.setBaseValue(this, EXHAUSTIVE);
     }
 

@@ -1,6 +1,6 @@
 {
-  "${ModID}:Firespitter": {
-    "NAME": "Firespitter",
-    "DESCRIPTIONS": ["Whenever an Attack deals unblocked damage, apply #b{0} #yIgnite."]
+  "${ModID}:GrowingFlames": {
+    "NAME": "Growing Flames",
+    "DESCRIPTIONS": ["At the start of your turn, apply #b{0} #yIgnite to ALL enemies."]
   }
 }

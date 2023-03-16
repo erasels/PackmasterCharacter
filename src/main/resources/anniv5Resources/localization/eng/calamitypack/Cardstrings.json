@@ -26,8 +26,7 @@
   },
   "${ModID}:ArmorOfMalice": {
     "NAME": "Armor of Malice",
-    "DESCRIPTION": "Gain Block equal to the number of debuffs on ALL enemies +3.",
-    "UPGRADE_DESCRIPTION": "Gain Block equal to the number of debuffs on ALL enemies +6.",
+    "DESCRIPTION": "Gain Block equal to !M! times the number of debuffs on ALL enemies.",
     "EXTENDED_DESCRIPTION": [" NL (Gains !B! Block.)"]
   },
   "${ModID}:AllIsFire": {
@@ -38,8 +37,12 @@
     "NAME": "Dread Omen",
     "DESCRIPTION": "Apply !M! ${ModID}:Jinx."
   },
-  "${ModID}:Firespitter": {
-    "NAME": "Firespitter",
-    "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! ${ModID}:Ignite."
+  "${ModID}:GrowingFlames": {
+    "NAME": "Growing Flames",
+    "DESCRIPTION": "At the start of your turn, apply !M! ${ModID}:Ignite to ALL enemies."
+  },
+  "${ModID}:CobrasGift": {
+    "NAME": "Cobra's Gift",
+    "DESCRIPTION": "Apply !M! Poison. NL Gain [E]. NL Exhaust."
   }
 }

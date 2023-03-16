@@ -4,16 +4,16 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.powers.calamitypack.FirespitterPower;
+import thePackmaster.powers.calamitypack.GrowingFlamesPower;
 
-public class Firespitter extends AbstractCalamityCard {
-    public static final String ID = SpireAnniversary5Mod.makeID("Firespitter");
-    private static final int COST = 2;
-    private static final int AMOUNT = 1;
+public class GrowingFlames extends AbstractCalamityCard {
+    public static final String ID = SpireAnniversary5Mod.makeID("GrowingFlames");
+    private static final int COST = 1;
+    private static final int AMOUNT = 2;
     private static final int UPGRADE_AMOUNT = 1;
 
-    public Firespitter() {
-        super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+    public GrowingFlames() {
+        super(ID, COST, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = AMOUNT;
     }
 
@@ -24,6 +24,6 @@ public class Firespitter extends AbstractCalamityCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new FirespitterPower(p, this.magicNumber)));
+        this.addToBot(new ApplyPowerAction(p, p, new GrowingFlamesPower(p, this.magicNumber)));
     }
 }

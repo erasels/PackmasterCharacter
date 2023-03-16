@@ -27,11 +27,11 @@ public class CalamityPack extends AbstractCardPack {
         cards.add(FreezingVenom.ID);
         cards.add(EssenceGrasp.ID);
         cards.add(ChillingCurse.ID);
+        cards.add(GrowingFlames.ID);
         cards.add(Suffer.ID);
+        cards.add(CobrasGift.ID);
         cards.add(ArmorOfMalice.ID);
         cards.add(AllIsFire.ID);
-        cards.add(DreadOmen.ID);
-        cards.add(Firespitter.ID);
         return cards;
     }
 }

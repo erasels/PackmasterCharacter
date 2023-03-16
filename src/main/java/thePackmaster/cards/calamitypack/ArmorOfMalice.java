@@ -9,27 +9,30 @@ import thePackmaster.util.Wiz;
 
 public class ArmorOfMalice extends AbstractCalamityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("ArmorOfMalice");
-    private static final int COST = 1;
-    private static final int BLOCK = 3;
-    private static final int UPGRADE_BLOCK = 3;
+    private static final int COST = 2;
+    private static final int BLOCK_MULTIPLIER = 4;
+    private static final int UPGRADE_BLOCK_MULTIPLIER = 1;
 
     public ArmorOfMalice() {
-        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseBlock = BLOCK;
+        super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        this.baseBlock = 0;
+        this.baseMagicNumber = this.magicNumber = BLOCK_MULTIPLIER;
     }
 
     @Override
     public void upp() {
+        this.upgradeMagicNumber(UPGRADE_BLOCK_MULTIPLIER);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.applyPowers();
         this.addToBot(new GainBlockAction(p, this.block));
     }
 
     @Override
     public void applyPowers() {
-        this.baseBlock = this.getDebuffCount() + BLOCK + (this.upgraded ? UPGRADE_BLOCK : 0);
+        this.baseBlock = this.getDebuffCount() * this.magicNumber;
         super.applyPowers();
         this.rawDescription = (this.upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION) + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
