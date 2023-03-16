@@ -38,7 +38,6 @@ public class PrismaticBarrier extends AbstractPrismaticCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard card = this;
         this.addToBot(new GainBlockAction(p, this.block));
         if (this.playedDifferentColorCardCheck()) {
             this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber)));
