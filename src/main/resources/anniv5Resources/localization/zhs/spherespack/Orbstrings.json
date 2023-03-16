@@ -1,14 +1,14 @@
 {
   "${ModID}:Blaze": {
-    "NAME": "Blaze",
+    "NAME": "烈焰",
     "DESCRIPTION": [
-      "#yPassive: At the end of turn, increase this Orbs amount by #b{0}. NL #yEvoke: Apply #b{1} #yIgnite to the enemy with highest HP."
+      "#被动： At the end of turn, increase this Orbs amount by #b{0}. NL #yEvoke: Apply #b{1} #yIgnite to the enemy with highest HP."
     ]
   },
   "${ModID}:Polar": {
-    "NAME": "Polar",
+    "NAME": "极寒",
     "DESCRIPTION": [
-      "#yPassive: At the start of turn, apply #b{0} #yFrostbite to a random enemy. NL #yEvoke: Apply #b{1} #yFrostbite to ALL enemies."
+      "#y被动： At the start of turn, apply #b{0} #yFrostbite to a random enemy. NL #yEvoke: Apply #b{1} #yFrostbite to ALL enemies."
     ]
   }
 }

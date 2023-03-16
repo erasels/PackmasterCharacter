@@ -1,23 +1,26 @@
 [
   {
-    "PROPER_NAME": "Blaze",
+    "PROPER_NAME": "烈焰",
     "NAMES": [
-      "blaze"
+      "blaze",
+      "烈焰"
     ],
-    "DESCRIPTION": "Orb: Increases amount every turn. When #yEvoked, applies #yIgnite to the enemy with the most HP."
+    "DESCRIPTION": "充能球： 每回合层数加 #b1 。 #y激发 ：给予当前生命值最高的敌人 #y燃烧 。"
   },
   {
-    "PROPER_NAME": "Polar",
+    "PROPER_NAME": "极寒",
     "NAMES": [
-      "polar"
+      "polar",
+      "极寒"
     ],
-    "DESCRIPTION": "Orb: Applies #yFrostbite to random enemies. When #yEvoked, applies #yFrostbite to ALL enemies."
+    "DESCRIPTION": "充能球： 随机给予一名敌人 #y霜噬 。 #y激发 ：给予所有敌人 #y霜噬 。"
   },
   {
-    "PROPER_NAME": "Randomized Orb",
+    "PROPER_NAME": "多变",
     "NAMES": [
-      "randomized\u00a0orb"
+      "randomized\u00a0orb",
+      "多变"
     ],
-    "DESCRIPTION": "When this card is created, the Orb it channels is randomly chosen from #yLightning, #yDark, #yGhostflame, #yBlaze, and #yPolar."
+    "DESCRIPTION": "每场战斗随机变化为 #y闪电 、 #y黑暗 、 #y鬼火 、 #y烈焰 ，以及 #y极寒 中的其中一种，持续整场战斗。"
   }
 ]
