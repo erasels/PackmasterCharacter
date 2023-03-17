@@ -34,7 +34,7 @@
   },
   "${ModID}:ManaShield": {
     "NAME": "魔力护盾",
-    "DESCRIPTION": "*魔法 。 NL 获得 !B! 点 格挡 。 NL 获得一张 *施法 。",
+    "DESCRIPTION": "*魔法 。 NL 获得 !B! 点 格挡 。 NL 获得1张 *施法 。",
     "UPGRADE_DESCRIPTION": "*魔法 。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 张 *施法 。"
   },
   "${ModID}:MuscleMemory": {
