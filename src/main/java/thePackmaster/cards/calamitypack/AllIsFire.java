@@ -33,22 +33,12 @@ public class AllIsFire extends AbstractCalamityCard {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                int igniteAmount = Wiz.pwrAmt(m, FrostbitePower.POWER_ID) + Wiz.pwrAmt(m, PoisonPower.POWER_ID);
+                int igniteAmount = Wiz.pwrAmt(m, IgnitePower.POWER_ID) + 2 * (Wiz.pwrAmt(m, FrostbitePower.POWER_ID) + Wiz.pwrAmt(m, PoisonPower.POWER_ID));
                 if (igniteAmount > 0) {
                     this.addToTop(new ApplyPowerAction(m, p, new IgnitePower(m, igniteAmount)));
                 }
                 this.addToTop(new RemoveSpecificPowerAction(m, p, PoisonPower.POWER_ID));
                 this.addToTop(new RemoveSpecificPowerAction(m, p, FrostbitePower.POWER_ID));
-                this.isDone = true;
-            }
-        });
-        this.addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                int igniteAmount = Wiz.pwrAmt(m, IgnitePower.POWER_ID);
-                if (igniteAmount > 0) {
-                    this.addToTop(new ApplyPowerAction(m, p, new IgnitePower(m, igniteAmount)));
-                }
                 this.isDone = true;
             }
         });
