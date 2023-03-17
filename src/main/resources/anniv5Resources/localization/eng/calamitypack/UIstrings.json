@@ -2,7 +2,7 @@
   "${ModID}:CalamityPack": {
     "TEXT": [
       "Calamity",
-      "Bring down your foes with many different debuffs and debuff synergy.",
+      "Bring down your foes with ${ModID}:Ignite, ${ModID}:Frostbite, Poison, and debuff synergy.",
       "modargo",
       "Card art from MtG"
     ]
