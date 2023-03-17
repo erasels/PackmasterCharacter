@@ -57,7 +57,7 @@ public class PlayCardModifier extends AbstractMadScienceModifier {
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         AbstractCard cpy = toPlayCard.makeSameInstanceOf();
         cpy.purgeOnUse = true;
-        Wiz.atb(new NewQueueCardAction(cpy, true, false, true));
+        Wiz.atb(new NewQueueCardAction(cpy, true, true, true));
     }
 
     @Override

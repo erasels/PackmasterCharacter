@@ -28,7 +28,7 @@ public class VoraciousSigilAction extends AbstractGameAction {
             AbstractCard card = this.p.hand.getRandomCard(AbstractCard.CardType.SKILL, true);
             Wiz.atb(new ExhaustSpecificCardAction(card, p.hand));
             CardModifierManager.addModifier(sigil, new SigilModifier(card));
-            addToBot(new NewQueueCardAction(card.makeSameInstanceOf(), true, false, true));
+            addToBot(new NewQueueCardAction(card.makeSameInstanceOf(), true, true, true));
         }
         this.isDone = true;
     }
