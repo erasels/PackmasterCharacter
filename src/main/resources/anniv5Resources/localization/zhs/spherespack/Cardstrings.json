@@ -31,12 +31,12 @@
   },
   "${ModID}:FrostConversion": {
     "NAME": "冰变",
-    "DESCRIPTION": "生成 1个 冰霜 充能球。 NL 若有3种及以上充能球， NL 再生成 1个。",
-    "UPGRADE_DESCRIPTION": "生成 1个 冰霜 充能球。 NL 若有3种及以上充能球， NL 再生成 1个并触发它的被动效果。"
+    "DESCRIPTION": "生成 1个 冰霜 充能球。 NL 若有3种以上充能球， NL 再生成 1个。",
+    "UPGRADE_DESCRIPTION": "生成 1个 冰霜 充能球。 NL 若有3种以上充能球， NL 再生成 1个并触发它的被动效果。"
   },
   "${ModID}:Fluctuate": {
     "NAME": "起伏",
-    "DESCRIPTION": "给予1层群体 虚弱 。 NL 给予1层群体 易伤 。 NL 若有3种及以上充能球， NL 再各给予 !M! 层。"
+    "DESCRIPTION": "给予1层群体 虚弱 。 NL 给予1层群体 易伤 。 NL 若有3种以上充能球， NL 再各给予 !M! 层。"
   },
   "${ModID}:VoidEngine": {
     "NAME": "虚空自动机",

@@ -21,7 +21,7 @@
   },
   "${ModID}:Tragedy": {
     "NAME": "悲剧",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若有6+张手牌， NL ${ModID}:暴击 。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 若有6+张手牌， NL ${ModID}:暴击 。"
   },
   "${ModID}:OptimizedBlur": {
     "NAME": "视晕校正",

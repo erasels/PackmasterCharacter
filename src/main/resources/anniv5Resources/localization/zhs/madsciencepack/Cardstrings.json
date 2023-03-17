@@ -13,7 +13,7 @@
   },
 "${ModID}:Discombobulate": {
     "NAME": "迷惑",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若手中有被 ${ModID}:修改 牌， NL 伤害翻倍。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 若手中有被 ${ModID}:修改 牌， NL 伤害翻倍。"
   },
   "${ModID}:Attach": {
     "NAME": "附加",

@@ -9,15 +9,15 @@
   },
   "${ModID}:Trample": {
     "NAME": "践踏",
-    "DESCRIPTION": "给予2层虚弱. NL ${ModID}:疾风 ： 目标失去 !M! 点生命。"
+    "DESCRIPTION": "给予2层虚弱. NL ${ModID}:疾风 ： NL 目标失去 !M! 点生命。"
   },
   "${ModID}:TakeTheLead": {
     "NAME": "领先",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合已用5+张牌， NL 再造成一次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合已用5张牌， NL 再造成一次。"
   },
   "${ModID}:ReinIn": {
     "NAME": "勒马",
-    "DESCRIPTION": "抽一张牌。 NL ${ModID}:疾风 ： 获得 !M! 格挡 。"
+    "DESCRIPTION": "抽一张牌。 NL ${ModID}:疾风 ： 获得 !M! 点 格挡 。"
   },
   "${ModID}:Homestretch": {
     "NAME": "冲刺道",
@@ -37,7 +37,7 @@
   },
   "${ModID}:TheSpin": {
     "NAME": "球旋",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过一张牌， NL 本牌伤害加 !M! 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过一张牌， NL 本回合本牌伤害加 !M! 。",
     "EXTENDED_DESCRIPTION": [
       " NL (已打出",
       " 张牌)",
@@ -46,7 +46,7 @@
   },
   "${ModID}:OffToTheRaces": {
     "NAME": "开赛",
-    "DESCRIPTION": "获得2点敏捷. NL ${ModID}:疾风 ： 获得1点 力量 。",
-    "UPGRADE_DESCRIPTION": "保留。 NL 获得2点敏捷. NL ${ModID}:疾风 ： 获得1点 力量 。"
+    "DESCRIPTION": "获得2点 敏捷 。 NL ${ModID}:疾风 ： 获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 获得2点 敏捷 。 NL ${ModID}:疾风 ： 获得1点 力量 。"
   }
 }

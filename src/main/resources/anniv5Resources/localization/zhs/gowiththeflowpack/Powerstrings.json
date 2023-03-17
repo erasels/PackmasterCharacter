@@ -1,7 +1,7 @@
 {
   "${ModID}:AqueductsPower": {
     "NAME": "引水渠",
-    "DESCRIPTIONS": ["每当你在每回合固定抽牌之外的情况抽牌，对所有敌人造成 #b", " 点伤害。"]
+    "DESCRIPTIONS": ["每当你在每回合固定抽牌之外的情况下抽牌，对所有敌人造成 #b", " 点伤害。"]
   },
   "${ModID}:FlowPower": {
     "NAME": "自流",

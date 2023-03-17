@@ -29,7 +29,7 @@
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "极超短波",
-    "DESCRIPTION": "获得 !M! [E] 与 !${ModID}:m2! 层 ${ModID}:蓄力 。 NL ${ModID}:增幅 [E] ：本场战斗数值各加1。"
+    "DESCRIPTION": "获得 !M! [E] 与 !${ModID}:m2! 层 ${ModID}:蓄力 。 NL ${ModID}:增幅 [E] ： NL 本场战斗数值各加1。"
   },
   "${ModID}:DragonMeteor": {
     "NAME": "龙陨星",

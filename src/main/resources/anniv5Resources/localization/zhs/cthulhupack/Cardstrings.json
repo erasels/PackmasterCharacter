@@ -19,7 +19,7 @@
   },
   "${ModID}:FamilialCurse": {
     "NAME": "家族诅咒",
-    "DESCRIPTION": "对所有敌人给予 !M! 层 ${ModID}:毁灭 。 NL 下回合获得一张 *疯狂 并失去1点生命。"
+    "DESCRIPTION": "给予 !M! 层群体 ${ModID}:毁灭 。 NL 下回合获得一张 *疯狂 并失去1点生命。"
   },
   "${ModID}:GazeTheVoid": {
     "NAME": "凝视虚无",

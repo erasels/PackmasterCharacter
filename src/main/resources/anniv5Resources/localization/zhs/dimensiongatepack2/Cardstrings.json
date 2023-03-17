@@ -30,7 +30,7 @@
   },
   "${ModID}:Haymaker": {
     "NAME": "强力一击",
-    "DESCRIPTION": "对所有敌人造成 !D! 点 伤害。 NL 本回合每用过一张牌， NL 本牌伤害增加 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 本回合每用过一张牌， NL 本牌伤害增加 !M! 点。"
   },
   "${ModID}:ManaShield": {
     "NAME": "魔力护盾",

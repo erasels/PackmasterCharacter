@@ -43,7 +43,7 @@
   },
   "${ModID}:BucketOfDregsUncommonSkill": {
     "NAME": "渣滓桶",
-    "DESCRIPTION": "不能被打出 。 保留 。 NL 被 保留 时，所有敌人回复 !M! 点生命并获得 !B! 点 格挡 。"
+    "DESCRIPTION": "不能被打出 。 保留 。 NL 被 保留 时，获得 !B! 点 格挡 ，所有敌人回复 !M! 点生命。"
   },
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "口袋大赛",
