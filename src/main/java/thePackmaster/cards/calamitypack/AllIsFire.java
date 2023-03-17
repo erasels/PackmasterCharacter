@@ -16,7 +16,8 @@ public class AllIsFire extends AbstractCalamityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("AllIsFire");
     private static final int COST = 1;
     private static final int EXHAUSTIVE = 2;
-    private static final int UPGRADE_EXHAUSTIVE = 1;
+    private static final float MULTIPLIER = 0.5f;
+    private static final float UPGRADE_MULTIPLIER = 1.0f;
 
     public AllIsFire() {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
@@ -25,7 +26,6 @@ public class AllIsFire extends AbstractCalamityCard {
 
     @Override
     public void upp() {
-        ExhaustiveVariable.upgrade(this, UPGRADE_EXHAUSTIVE);
     }
 
     @Override
@@ -33,7 +33,8 @@ public class AllIsFire extends AbstractCalamityCard {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                int igniteAmount = Wiz.pwrAmt(m, IgnitePower.POWER_ID) + 2 * (Wiz.pwrAmt(m, FrostbitePower.POWER_ID) + Wiz.pwrAmt(m, PoisonPower.POWER_ID));
+                float multiplier = upgraded ? UPGRADE_MULTIPLIER : MULTIPLIER;
+                int igniteAmount = (int)(multiplier * Wiz.pwrAmt(m, IgnitePower.POWER_ID) + (1 + multiplier) * (Wiz.pwrAmt(m, FrostbitePower.POWER_ID) + Wiz.pwrAmt(m, PoisonPower.POWER_ID)));
                 if (igniteAmount > 0) {
                     this.addToTop(new ApplyPowerAction(m, p, new IgnitePower(m, igniteAmount)));
                 }
