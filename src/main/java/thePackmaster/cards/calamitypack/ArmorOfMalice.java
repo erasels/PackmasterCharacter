@@ -10,7 +10,7 @@ import thePackmaster.util.Wiz;
 public class ArmorOfMalice extends AbstractCalamityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("ArmorOfMalice");
     private static final int COST = 2;
-    private static final int BLOCK_MULTIPLIER = 4;
+    private static final int BLOCK_MULTIPLIER = 3;
     private static final int UPGRADE_BLOCK_MULTIPLIER = 1;
 
     public ArmorOfMalice() {
