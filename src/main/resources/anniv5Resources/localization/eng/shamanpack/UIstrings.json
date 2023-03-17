@@ -2,7 +2,7 @@
   "${ModID}:ShamanPack": {
     "TEXT": [
       "Shaman",
-      "Cards from and inspired by the Shaman character mod.",
+      "Cards from and inspired by the Shaman character mod. ${ModID}:Ignite your enemies for long-lasting damage.",
       "modargo",
       "Card art from MtG"
     ]
