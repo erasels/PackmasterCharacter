@@ -34,7 +34,7 @@ public class ArmorOfMalice extends AbstractCalamityCard {
     public void applyPowers() {
         this.baseBlock = this.getDebuffCount() * this.magicNumber;
         super.applyPowers();
-        this.rawDescription = (this.upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION) + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 
