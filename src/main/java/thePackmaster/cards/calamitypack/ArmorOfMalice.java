@@ -39,6 +39,6 @@ public class ArmorOfMalice extends AbstractCalamityCard {
     }
 
     private int getDebuffCount() {
-        return (int)Wiz.getEnemies().stream().flatMap(m -> m.powers.stream()).filter(p -> p.type == AbstractPower.PowerType.DEBUFF).count();
+        return (int)Wiz.getEnemies().stream().flatMap(m -> m.powers.stream()).filter(p -> p.type == AbstractPower.PowerType.DEBUFF).map(p -> p.ID).distinct().count();
     }
 }

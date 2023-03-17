@@ -26,7 +26,7 @@
   },
   "${ModID}:ArmorOfMalice": {
     "NAME": "Armor of Malice",
-    "DESCRIPTION": "Gain Block equal to !M! times the number of debuffs on ALL enemies.",
+    "DESCRIPTION": "Gain Block equal to !M! times the number of unique debuffs on ALL enemies.",
     "EXTENDED_DESCRIPTION": [" NL (Gains !B! Block.)"]
   },
   "${ModID}:AllIsFire": {
