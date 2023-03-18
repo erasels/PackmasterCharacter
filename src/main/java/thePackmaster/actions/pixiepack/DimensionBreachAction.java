@@ -21,7 +21,7 @@ public class DimensionBreachAction extends AbstractGameAction {
     }
     @Override
     public void update() {
-        AbstractCard toPlay = PixiePack.pixieGenerate(null,null, AbstractCard.CardType.ATTACK);
+        AbstractCard toPlay = PixiePack.pixieGenerate(null,null, AbstractCard.CardType.ATTACK,null);
         toPlay.purgeOnUse = true;
         AbstractDungeon.player.limbo.group.add(toPlay);
         toPlay.target_x = (float)Settings.WIDTH / 2.0F + 200.0F * Settings.xScale;
