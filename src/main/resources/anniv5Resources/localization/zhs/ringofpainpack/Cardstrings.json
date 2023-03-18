@@ -40,7 +40,7 @@
     "NAME": "猫头鹰",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 消耗 牌时 ${ModID}:进化 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予未被格挡伤害一半层 ${ModID}:狂扯 。 NL 给予 !M! 层 易伤 。",
-    "EXTENDED_DESCRIPTION": ["魇鸮兽"]
+    "EXTENDED_DESCRIPTION": ["梦魇猫头鹰"]
   },
   "${ModID}:Vision": {
     "NAME": "明视",
