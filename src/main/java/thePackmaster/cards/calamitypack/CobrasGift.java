@@ -16,7 +16,6 @@ public class CobrasGift extends AbstractCalamityCard {
     public CobrasGift() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = POISON;
-        this.exhaust = true;
     }
 
     @Override
