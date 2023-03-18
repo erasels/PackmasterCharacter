@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import java.text.MessageFormat;
 
@@ -37,7 +38,7 @@ public class IgnitePower extends AbstractPackmasterPower implements HealthBarRen
     public void atEndOfTurn(boolean isPlayer) {
         if (owner.isPlayer) {
             flashWithoutSound();
-            addToBot(new DamageAction(this.owner, new DamageInfo(null, amount, DamageInfo.DamageType.HP_LOSS)));
+            addToBot(new DamageAction(this.owner, new DamageInfo(Wiz.p(), amount, DamageInfo.DamageType.HP_LOSS)));
         }
     }
 
