@@ -39,7 +39,7 @@ public class FrostbiteDamageAction extends AbstractGameAction {
 
                 callingPower.flashWithoutSound();
                 CardCrawlGame.sound.play("ORB_FROST_EVOKE", 0.05F);
-                this.target.damage(new DamageInfo(target, damage, DamageInfo.DamageType.HP_LOSS));
+                this.target.damage(new DamageInfo(null, damage, DamageInfo.DamageType.HP_LOSS));
 
                 // Reduction of Frostbite
                 // includes Snowed In check

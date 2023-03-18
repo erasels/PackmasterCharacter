@@ -27,28 +27,28 @@ public class IgnitePower extends AbstractPackmasterPower implements HealthBarRen
     @Override
     public void atStartOfTurn() {
         if (!this.owner.isPlayer && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.flashWithoutSound();
-            this.playApplyPowerSfx();
-            this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.HP_LOSS)));
+            flashWithoutSound();
+            playApplyPowerSfx();
+            addToBot(new DamageAction(this.owner, new DamageInfo(null, amount, DamageInfo.DamageType.HP_LOSS)));
         }
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if (this.owner.isPlayer) {
-            this.flashWithoutSound();
-            this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.HP_LOSS)));
+        if (owner.isPlayer) {
+            flashWithoutSound();
+            addToBot(new DamageAction(this.owner, new DamageInfo(null, amount, DamageInfo.DamageType.HP_LOSS)));
         }
     }
 
     @Override
     public void updateDescription() {
-        this.description = MessageFormat.format(this.owner.isPlayer ? DESCRIPTIONS[0] : DESCRIPTIONS[1], this.amount);
+        description = MessageFormat.format(this.owner.isPlayer ? DESCRIPTIONS[0] : DESCRIPTIONS[1], this.amount);
     }
 
     @Override
     public int getHealthBarAmount() {
-        return this.owner.isPlayer ? 0 : this.amount;
+        return owner.isPlayer ? 0 : this.amount;
     }
 
     @Override
