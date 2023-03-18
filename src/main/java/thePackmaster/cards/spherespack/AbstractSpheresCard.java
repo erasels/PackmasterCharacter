@@ -6,7 +6,7 @@ public abstract class AbstractSpheresCard extends AbstractPackmasterCard
 {
     public AbstractSpheresCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target)
     {
-        super(cardID, cost, type, rarity, target, (String)null);
+        super(cardID, cost, type, rarity, target, "spheres");
     }
 
     @Override
