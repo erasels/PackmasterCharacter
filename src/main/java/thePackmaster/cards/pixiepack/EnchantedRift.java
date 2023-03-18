@@ -42,8 +42,9 @@ public class EnchantedRift extends AbstractPixieCard {
             }
         }
         if (lastDifferent != null) {
-            CardModifierManager.addModifier(lastDifferent, new EtherealMod());
-            addToBot(new MakeTempCardInHandAction(lastDifferent));
+            AbstractCard toAdd = lastDifferent.makeStatEquivalentCopy();
+            CardModifierManager.addModifier(toAdd, new EtherealMod());
+            addToBot(new MakeTempCardInHandAction(toAdd));
         }
     }
 }
