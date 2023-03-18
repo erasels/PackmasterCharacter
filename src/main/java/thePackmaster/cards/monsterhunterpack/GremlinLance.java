@@ -14,7 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class GremlinLance extends AbstractMonsterHunterCard {
     public final static String ID = makeID("GremlinLance");
 
-    public static final int DAMAGE = 18;
+    public static final int DAMAGE = 22;
     public static final int UPG_DAMAGE = 4;
     public static final int MAGIC = 1;
     public static final int BLOCK = 8;

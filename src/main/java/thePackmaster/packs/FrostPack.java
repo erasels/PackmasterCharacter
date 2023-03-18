@@ -18,7 +18,6 @@ public class FrostPack extends AbstractCardPack {
 
     public FrostPack() {
         super(ID, NAME, DESC, AUTHOR);
-        hatHidesHair = true;
     }
 
     @Override
