@@ -9,7 +9,7 @@
   },
   "${ModID}:FreezingVenom": {
     "NAME": "Freezing Venom",
-    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Frostbite and Poison to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! ${ModID}:Frostbite and Poison to ALL enemies."
   },
   "${ModID}:EssenceGrasp": {
     "NAME": "Essence Grasp",
@@ -31,8 +31,8 @@
   },
   "${ModID}:AllIsFire": {
     "NAME": "All is Fire",
-    "DESCRIPTION": "Convert all ${ModID}:Frostbite and Poison to ${ModID}:Ignite, then increase the enemy's ${ModID}:Ignite by 50%. NL Exhaustive !stslib:ex!.",
-    "UPGRADE_DESCRIPTION": "Convert all ${ModID}:Frostbite and Poison to ${ModID}:Ignite, then double the enemy's ${ModID}:Ignite. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Convert all ${ModID}:Frostbite and Poison to ${ModID}:Ignite. NL Increase the enemy's ${ModID}:Ignite by 50%. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Convert all ${ModID}:Frostbite and Poison to ${ModID}:Ignite. NL Double the enemy's ${ModID}:Ignite. NL Exhaustive !stslib:ex!."
   },
   "${ModID}:DreadOmen": {
     "NAME": "Dread Omen",
