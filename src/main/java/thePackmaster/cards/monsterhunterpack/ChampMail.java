@@ -16,7 +16,7 @@ public class ChampMail extends AbstractMonsterHunterCard {
     public final static String ID = makeID("ChampMail");
 
     private static final int MAGIC = 2;
-    private static final int BLOCK = 15;
+    private static final int BLOCK = 18;
 
     public ChampMail() {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);

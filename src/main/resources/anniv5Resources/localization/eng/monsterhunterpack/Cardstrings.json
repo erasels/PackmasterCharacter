@@ -25,8 +25,8 @@
   },
   "${ModID}:ShellPauldrons": {
     "NAME": "Shell Platemail",
-    "DESCRIPTION": "Gain !M! ${ModID}:Glass_Armor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! ${ModID}:Glass_Armor."
+    "DESCRIPTION": "Gain !M! ${ModID}:Plated_Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! ${ModID}:Plated_Armor."
   },
   "${ModID}:CoreBlaster": {
     "NAME": "Core Blaster",
@@ -96,7 +96,7 @@
   },
   "${ModID}:DecaAmulet": {
     "NAME": "Deca Amulet",
-    "DESCRIPTION": "Gain !M! *Plated *Armor."
+    "DESCRIPTION": "Gain !M! ${ModID}:Plated_Armor."
   },
   "${ModID}:SpireSpear": {
     "NAME": "Spire Spear",
@@ -108,7 +108,7 @@
   },
   "${ModID}:CarvingKnife": {
     "NAME": "Carving Knife",
-    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss enemy, gain its weapon or armor card. NL Fleeting."
+    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss enemy, gain its weapon or armor card and remove this from your deck permanently. NL Exhaust."
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "Awakened Dagger",
