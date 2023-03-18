@@ -1,23 +1,35 @@
 {
-  "${ModID}:FastHandsPower": {
-    "NAME": "Fast Hands",
+  "${ModID}:CosmicConverterPower": {
+    "NAME": "Cosmic Converter",
     "DESCRIPTIONS": [
-      "After playing a #ydifferent #ycolor card, draw #b",
-      " cards."
+      "At the start of your turn, add a #ydifferent #ycolor card of the same type and cost as the last card played into your hand. Currently adding: #b",
+      "-cost ",
+      " Attack",
+      " Skill",
+      " Power",
+      ".",
+      "X",
+      "Unplayable "
     ]
   },
-  "${ModID}:UpgradedFastHandsPower": {
-    "NAME": "Fast Hands",
+  "${ModID}:FetchPower": {
+    "NAME": "Fetch",
     "DESCRIPTIONS": [
-      "After playing a #ydifferent #ycolor card, draw #b",
-      " cards and reduce their cost by 1 this turn."
+      "After playing a #ydifferent #ycolor Skill, draw a card."
     ]
   },
-  "${ModID}:HorizonboundPower": {
-    "NAME": "Horizonbound",
+  "${ModID}:NeutronStarPower": {
+    "NAME": "Neutron Star",
     "DESCRIPTIONS": [
-      "Your different color cards cost #b",
-      " less. Increases with each #ydifferent #ycolor card played. Resets every turn."
+      "After playing a #ydifferent #ycolor Attack, gain #b",
+      " Temporary #yStrength."
+    ]
+  },
+  "${ModID}:StarShowerPower": {
+    "NAME": "Star Shower",
+    "DESCRIPTIONS": [
+      "After playing a #ydifferent #ycolor Attack, deal #b",
+      " damage to a random enemy."
     ]
   }
 }
