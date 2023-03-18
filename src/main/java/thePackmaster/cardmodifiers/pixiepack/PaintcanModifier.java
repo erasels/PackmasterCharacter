@@ -26,7 +26,7 @@ public class PaintcanModifier  extends AbstractCardModifier {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        if(color == 0) color = AbstractDungeon.cardRng.random(1,4);
+        if(color == 0) color = AbstractDungeon.cardRandomRng.random(1,4);
         switch (color)
         {
             case 1:

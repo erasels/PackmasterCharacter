@@ -40,7 +40,7 @@
   "${ModID}:FastHands": {
     "NAME": "Fast Hands",
     "DESCRIPTION": "Retain. NL Put a random ${ModID}:different color card from your draw pile into your hand. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. Retain. NL Put a random ${ModID}:different color card from your draw pile into your hand. Exhaust."
+    "UPGRADE_DESCRIPTION": "Retain. NL Put a random ${ModID}:different color card from your draw pile into your hand."
   },
   "${ModID}:DimensionBreach": {
     "NAME": "Dimension Breach",

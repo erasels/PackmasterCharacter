@@ -35,17 +35,14 @@ public class EnchantedRift extends AbstractPixieCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new GainBlockAction(abstractPlayer, block));
         AbstractCard lastDifferent = null;
-        for (int i = AbstractDungeon.actionManager.cardsPlayedThisCombat.size()-2; i>0; i++)
-        {
-            if (PixiePack.isForeign(AbstractDungeon.actionManager.cardsPlayedThisCombat.get(i)))
-            {
+        for (int i = AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2; i > 0; i--) {
+            if (PixiePack.isForeign(AbstractDungeon.actionManager.cardsPlayedThisCombat.get(i))) {
                 lastDifferent = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(i);
                 break;
             }
         }
-        if(lastDifferent!=null)
-        {
-            CardModifierManager.addModifier(lastDifferent,new EtherealMod());
+        if (lastDifferent != null) {
+            CardModifierManager.addModifier(lastDifferent, new EtherealMod());
             addToBot(new MakeTempCardInHandAction(lastDifferent));
         }
     }

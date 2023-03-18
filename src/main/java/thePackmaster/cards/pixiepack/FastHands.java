@@ -22,7 +22,7 @@ public class FastHands extends AbstractPixieCard {
 
     @Override
     public void upp() {
-        this.isInnate = true;
+        this.exhaust = false;
     }
 
     @Override

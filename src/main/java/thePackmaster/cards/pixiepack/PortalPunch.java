@@ -24,10 +24,13 @@ public class PortalPunch extends AbstractPixieCard {
 
     private static final int baseAtk = 9;
     private static final int upgradeAtk = 10;
+    private static final int baseMgk = 1;
+    private static final int upgradeMgk = 2;
 
     public PortalPunch() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = this.damage = baseAtk;
+        this.baseMagicNumber = this.magicNumber = baseMgk;
     }
 
     @Override
@@ -40,6 +43,7 @@ public class PortalPunch extends AbstractPixieCard {
     @Override
     public void upp() {
         this.upgradeDamage(upgradeAtk - baseAtk);
+        this.upgradeMagicNumber(upgradeMgk-baseMgk);
     }
 
     @Override
