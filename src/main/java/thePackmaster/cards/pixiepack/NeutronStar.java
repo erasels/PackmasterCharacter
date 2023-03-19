@@ -3,6 +3,7 @@ package thePackmaster.cards.pixiepack;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
@@ -36,4 +37,14 @@ public class NeutronStar extends AbstractPixieCard {
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new LoseStrengthPower(abstractPlayer,magicNumber)));
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new NeutronStarPower(abstractPlayer,magicNumber)));
     }
+
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if (Settings.language == Settings.GameLanguage.ZHS && this.description.size() != 0 ) {
+            this.description.get(1).text = this.description.get(1).text + "，";
+            this.description.remove(2);
+        }
+    }
+
 }

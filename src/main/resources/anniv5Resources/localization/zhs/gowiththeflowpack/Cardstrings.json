@@ -1,7 +1,7 @@
 {
   "${ModID}:Aqueducts": {
     "NAME": "引水渠",
-    "DESCRIPTION": "固定抽牌外抽牌时，对对所有敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "固定抽牌外抽牌时， NL 造成 !M! 点群体伤害。"
   },
   "${ModID}:Cascade": {
     "NAME": "连瀑",

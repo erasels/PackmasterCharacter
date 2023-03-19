@@ -22,7 +22,7 @@
   },
   "${ModID}:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 下张攻击牌使你获得未被格挡伤害点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下张攻击牌使你获得 ${ModID}:突破 量点 格挡 。"
   },
   "${ModID}:StrikeABargain": {
     "NAME": "协商打击",
@@ -31,7 +31,7 @@
   },
   "${ModID}:Backstrike": {
     "NAME": "回身打击",
-    "DESCRIPTION": "固有。 NL 造成 !D! 点伤害。 NL ${ModID}:修改 所有攻击手牌： NL 牌名加上打击。 NL 消耗 。"
+    "DESCRIPTION": "固有。 NL 造成 !D! 点伤害。 NL ${ModID}:修改 所有攻击手牌： NL \"牌名加上打击\"。 NL 消耗 。"
   },
   "${ModID}:LightningStrike": {
     "NAME": "闪电打击",

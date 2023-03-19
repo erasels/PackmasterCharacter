@@ -1,7 +1,7 @@
 {
   "${ModID}:MissileStrike": {
     "NAME": "导弹打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 对所有敌人造成 !${ModID}:sd! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 造成 !${ModID}:sd! 点群体伤害。"
   },
   "${ModID}:MagicDart": {
     "NAME": "魔法飞镖",
