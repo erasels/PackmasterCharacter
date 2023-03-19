@@ -35,6 +35,7 @@ public class NeutronStarPower extends AbstractPackmasterPower implements NonStac
         {
             addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new StrengthPower(AbstractDungeon.player,amount)));
             addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new LoseStrengthPower(AbstractDungeon.player,amount)));
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }
 

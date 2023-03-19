@@ -17,20 +17,16 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class NeutronStar extends AbstractPixieCard {
     public final static String ID = makeID("NeutronStar");
 
-    private static final int baseMgk = 2;
-    private static final int upgradeMgk = 3;
+    private static final int baseMgk = 3;
 
     public NeutronStar() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = baseMgk;
-        this.isEthereal = true;
         this.exhaust = true;
     }
 
     @Override
     public void upp() {
-        this.upgradeMagicNumber(upgradeMgk-baseMgk);
-        this.isEthereal = false;
         this.exhaust = false;
     }
 

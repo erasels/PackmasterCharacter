@@ -31,6 +31,7 @@ public class StarShowerPower extends AbstractPackmasterPower implements NonStack
         if (PixiePack.isForeign(card) && card.type == AbstractCard.CardType.ATTACK)
         {
             AbstractDungeon.actionManager.addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player,amount), AbstractGameAction.AttackEffect.LIGHTNING));
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }
 

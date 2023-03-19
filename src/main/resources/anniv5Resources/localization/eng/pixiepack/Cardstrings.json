@@ -9,7 +9,7 @@
   },
   "${ModID}:StarShower": {
     "NAME": "Star Shower",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. Whenever you play a ${ModID}:different color Attack this turn, repeat this."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. The next time you play a ${ModID}:different color Attack this turn, repeat this."
   },
   "${ModID}:Paintcan": {
     "NAME": "Paintcan",
@@ -29,13 +29,13 @@
   },
   "${ModID}:Fetch": {
     "NAME": "Fetch!",
-    "DESCRIPTION": "Ethereal. NL Draw a card. NL Whenever you play a ${ModID}:different color Skill this turn, repeat this.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL Whenever you play a ${ModID}:different color Skill this turn, repeat this."
+    "DESCRIPTION": "Draw !M! cards. NL The next time you play a ${ModID}:different color Skill this turn, repeat this. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL The next time you play a ${ModID}:different color Skill this turn, repeat this."
   },
   "${ModID}:NeutronStar": {
     "NAME": "Neutron Star",
-    "DESCRIPTION": "Gain !M! Temporary Strength. NL Whenever you play a ${ModID}:different color Attack this turn, repeat this. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Temporary Strength. NL Whenever you play a ${ModID}:different color Attack this turn, repeat this."
+    "DESCRIPTION": "Gain !M! Temporary Strength. NL The next time you play a ${ModID}:different color attack this turn, repeat this. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Temporary Strength. NL The next time you play a ${ModID}:different color attack this turn, repeat this."
   },
   "${ModID}:FastHands": {
     "NAME": "Fast Hands",
@@ -52,7 +52,6 @@
   },
   "${ModID}:CosmicConverter": {
     "NAME": "Cosmic Converter",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, add a ${ModID}:different color card of the same type and cost as the last card played into your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a ${ModID}:different color card of the same type and cost as the last card played into your hand."
-  }
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, add a ${ModID}:different color card of the same type and cost as the last card played into your hand."
+    }
 }

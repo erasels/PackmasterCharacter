@@ -11,14 +11,14 @@ public class CosmicConverter extends AbstractPixieCard {
     public final static String ID = makeID("CosmicConverter");
 
     public CosmicConverter() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.isEthereal = true;
     }
 
     @Override
     public void upp()
     {
-        this.isEthereal=false;
+       this.upgradeBaseCost(1);
     }
 
     @Override
