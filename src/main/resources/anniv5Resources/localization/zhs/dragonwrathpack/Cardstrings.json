@@ -1,7 +1,7 @@
 {
   "${ModID}:PenanceShock": {
     "NAME": "忏悔冲击",
-    "DESCRIPTION": "造成 !D! 点伤害 并给予 !M! 层 ${ModID}:忏悔 。 NL 生成 一个 闪电 充能球。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:忏悔 。 NL 生成 一个 闪电 充能球。"
   },
   "${ModID}:Condemn": {
     "NAME": "谴责",
@@ -21,7 +21,7 @@
   },
   "${ModID}:ChainsofTruth": {
     "NAME": "真理之链",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害，并给予 !M! 层 ${ModID}:忏悔 。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 给予 !M! 层群体 ${ModID}:忏悔 。"
   },
   "${ModID}:SacredTrial": {
     "NAME": "神圣试炼",
@@ -29,7 +29,7 @@
   },
   "${ModID}:HolyWrath": {
     "NAME": "圣洁怒火",
-    "DESCRIPTION": "受到 !M! 点伤害。 NL 获得 ${ModID}:告罪 时，本牌从弃牌堆返回手牌。 "
+    "DESCRIPTION": "受到 !M! 点伤害。 NL 获得 ${ModID}:告罪 时， NL 本牌从弃牌堆返回手牌。 "
   },
   "${ModID}:Absolution": {
     "NAME": "坚决",

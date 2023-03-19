@@ -5,7 +5,7 @@
   },
   "${ModID}:ElectricWhip": {
     "NAME": "电鞭",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 生成 一个 闪电 充能球。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 生成 一个 闪电 充能球。"
   },
   "${ModID}:EnrageShot": {
     "NAME": "暴怒射击",

@@ -1,0 +1,52 @@
+{
+  "${ModID}:Horse": {
+    "NAME": "赛马",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗。"
+  },
+  "${ModID}:StartingGun": {
+    "NAME": "发令枪",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 将 !M! 张 *赛马 加入抽牌堆。"
+  },
+  "${ModID}:Trample": {
+    "NAME": "践踏",
+    "DESCRIPTION": "给予2层虚弱. NL ${ModID}:疾风 ： NL 目标失去 !M! 点生命。"
+  },
+  "${ModID}:TakeTheLead": {
+    "NAME": "领先",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合已用5张牌， NL 再造成一次。"
+  },
+  "${ModID}:ReinIn": {
+    "NAME": "勒马",
+    "DESCRIPTION": "抽一张牌。 NL ${ModID}:疾风 ： 获得 !M! 点 格挡 。"
+  },
+  "${ModID}:Homestretch": {
+    "NAME": "冲刺道",
+    "DESCRIPTION": "获得一张 *赛马 。 NL 本回合每再抽一张牌， NL 所有敌人失去 !M! 点生命。"
+  },
+  "${ModID}:LuckyHorseshoe": {
+    "NAME": "幸运马蹄铁",
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 随机将抽牌堆一张牌的本回合打出前耗能变为0。"
+  },
+  "${ModID}:Derby": {
+    "NAME": "周年赛",
+    "DESCRIPTION": "将 !M! 张 *赛马 加入抽牌堆。 NL 每回合结束时若打出过6+张牌，获得1点 力量 。"
+  },
+  "${ModID}:Giddyap": {
+    "NAME": "驾",
+    "DESCRIPTION": "回合开始时， NL 获得一张 *赛马 。"
+  },
+  "${ModID}:TheSpin": {
+    "NAME": "球旋",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每用过一张牌， NL 本回合本牌伤害加 !M! 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (已打出",
+      " 张牌)",
+      " 张牌)"
+    ]
+  },
+  "${ModID}:OffToTheRaces": {
+    "NAME": "开赛",
+    "DESCRIPTION": "获得2点 敏捷 。 NL ${ModID}:疾风 ： 获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 获得2点 敏捷 。 NL ${ModID}:疾风 ： 获得1点 力量 。"
+  }
+}

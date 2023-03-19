@@ -12,7 +12,7 @@
   },
   "${ModID}:Minniegun": {
     "NAME": "迷你枪",
-    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 NL 将一张 *阻塞 加入弃牌堆。 "
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 NL 将 *阻塞 加入弃牌堆。 "
   },
   "${ModID}:Ouroboros": {
     "NAME": "含尾蛇",
