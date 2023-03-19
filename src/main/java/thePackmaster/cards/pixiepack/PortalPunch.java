@@ -22,7 +22,8 @@ public class PortalPunch extends AbstractPixieCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
-    private static final int baseAtk = 11;
+    private static final int baseAtk = 9;
+    private static final int upgradeAtk = 10;
     private static final int baseMgk = 1;
     private static final int upgradeMgk = 2;
 
@@ -41,16 +42,16 @@ public class PortalPunch extends AbstractPixieCard {
 
     @Override
     public void upp() {
+        this.upgradeDamage(upgradeAtk - baseAtk);
         this.upgradeMagicNumber(upgradeMgk-baseMgk);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         dmg(abstractMonster, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        for(int i = 0; i < this.magicNumber; i++)
-        {
-            AbstractCard toAdd = PixiePack.pixieGenerate(null,null,null);
-            CardModifierManager.addModifier(toAdd,new EtherealMod());
+        for (int i = 0; i < this.magicNumber; i++) {
+            AbstractCard toAdd = PixiePack.pixieGenerate(null, null, null, null);
+            CardModifierManager.addModifier(toAdd, new EtherealMod());
             addToBot(new MakeTempCardInHandAction(toAdd));
         }
     }

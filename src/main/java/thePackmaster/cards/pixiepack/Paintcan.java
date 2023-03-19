@@ -3,12 +3,15 @@ package thePackmaster.cards.pixiepack;
 import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.TooltipInfo;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.cardmodifiers.pixiepack.PaintcanModifier;
 import thePackmaster.packs.PixiePack;
 
 import java.util.ArrayList;
@@ -16,38 +19,30 @@ import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class BoosterPack extends AbstractPixieCard {
-    public final static String ID = makeID("BoosterPack");
+public class Paintcan extends AbstractPixieCard {
+    public final static String ID = makeID("Paintcan");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
-    private static final int baseMagic = 3;
-    private static final int upgradeMagic = 5;
+    private static final int baseAtk = 9;
+    private static final int upgradeAtk = 12;
 
-    public BoosterPack() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = baseMagic;
-    }
-
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        List<TooltipInfo> tooltips = new ArrayList<>();
-        tooltips.add(new TooltipInfo(EXTENDED_DESCRIPTION[0], EXTENDED_DESCRIPTION[1]));
-        return tooltips;
+    public Paintcan() {
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.baseDamage = this.damage = baseAtk;
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeDamage(upgradeAtk - baseAtk);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        for(int i = 0; i < this.magicNumber; i++)
-        {
-            AbstractCard toAdd = PixiePack.pixieGenerate(null,null,null,null);
-            CardModifierManager.addModifier(toAdd,new EtherealMod());
-            addToBot(new MakeTempCardInHandAction(toAdd));
+        dmg(abstractMonster, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        for (AbstractCard c : AbstractDungeon.player.hand.group
+        ) {
+            CardModifierManager.addModifier(c, new PaintcanModifier(0));
         }
     }
 }

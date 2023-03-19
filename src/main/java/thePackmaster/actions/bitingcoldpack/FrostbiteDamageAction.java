@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.powers.bitingcoldpack.SnowedInPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.util.Wiz.atb;
 
@@ -39,7 +40,7 @@ public class FrostbiteDamageAction extends AbstractGameAction {
 
                 callingPower.flashWithoutSound();
                 CardCrawlGame.sound.play("ORB_FROST_EVOKE", 0.05F);
-                this.target.damage(new DamageInfo(target, damage, DamageInfo.DamageType.HP_LOSS));
+                this.target.damage(new DamageInfo(Wiz.p(), damage, DamageInfo.DamageType.HP_LOSS));
 
                 // Reduction of Frostbite
                 // includes Snowed In check

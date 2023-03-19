@@ -3,14 +3,14 @@ package thePackmaster.cards.pixiepack;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.pixiepack.HorizonboundPower;
+import thePackmaster.powers.pixiepack.CosmicConverterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Horizonbound extends AbstractPixieCard {
-    public final static String ID = makeID("Horizonbound");
+public class CosmicConverter extends AbstractPixieCard {
+    public final static String ID = makeID("CosmicConverter");
 
-    public Horizonbound() {
+    public CosmicConverter() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.isEthereal = true;
     }
@@ -24,6 +24,6 @@ public class Horizonbound extends AbstractPixieCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new HorizonboundPower(abstractPlayer, 0)));
+        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new CosmicConverterPower(abstractPlayer, 1)));
     }
 }

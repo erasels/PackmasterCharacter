@@ -10,9 +10,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.pixiepack.*;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 public class PixiePack extends AbstractCardPack {
     public static final String ID = SpireAnniversary5Mod.makeID("PixiePack");
@@ -27,24 +25,19 @@ public class PixiePack extends AbstractCardPack {
         super(ID, NAME, DESC, AUTHOR);
     }
 
-    public static class pixieTags
-    {
-        @SpireEnum public static AbstractCard.CardTags ENCHANTMENT;
-    }
-
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(BoosterPack.ID);
-        cards.add(StardustShield.ID);
+        cards.add(Paintcan.ID);
         cards.add(StarShower.ID);
         cards.add(PortalPunch.ID);
-        cards.add(BackupRift.ID);
-        cards.add(StarLane.ID);
+        cards.add(EnchantedRift.ID);
+        cards.add(Fetch.ID);
         cards.add(NeutronStar.ID);
         cards.add(FastHands.ID);
         cards.add(DimensionBreach.ID);
-        cards.add(Horizonbound.ID);
+        cards.add(CosmicConverter.ID);
         return cards;
     }
 
@@ -72,10 +65,10 @@ public class PixiePack extends AbstractCardPack {
         }
     }
 
-    public static AbstractCard pixieGenerate(Integer cost, Enum color, AbstractCard.CardType type) {
+    public static AbstractCard pixieGenerate(Integer cost, Enum color, AbstractCard.CardType type, AbstractCard.CardRarity rarity) {
         if (possibleToGenerate == null || possibleToGenerate.size() == 0) fillGenerateList();
         ArrayList<AbstractCard> AllCards = new ArrayList<>(possibleToGenerate);
-        AllCards.removeIf(C -> (cost != null && C.cost != cost) || (type != null && C.type != type) || (color != null && C.color != color));
+        AllCards.removeIf(C -> (cost != null && C.cost != cost) || (type != null && C.type != type) || (color != null && C.color != color)|| (rarity != null && C.rarity != rarity));
         AbstractCard output = null;
         if (AllCards.size() > 0) {
             output = AllCards.get(AbstractDungeon.cardRandomRng.random(0, AllCards.size() - 1));
