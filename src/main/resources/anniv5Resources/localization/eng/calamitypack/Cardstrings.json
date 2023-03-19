@@ -44,6 +44,7 @@
   },
   "${ModID}:CobrasGift": {
     "NAME": "Cobra's Gift",
-    "DESCRIPTION": "Apply !M! Poison. NL Gain [E]."
+    "DESCRIPTION": "Apply !M! Poison. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Gain [E]."
   }
 }

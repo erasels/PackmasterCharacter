@@ -11,16 +11,16 @@ public class CobrasGift extends AbstractCalamityCard {
     public static final String ID = SpireAnniversary5Mod.makeID("CobrasGift");
     private static final int COST = 0;
     private static final int POISON = 2;
-    private static final int UPGRADE_POISON = 1;
 
     public CobrasGift() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = POISON;
+        this.exhaust = true;
     }
 
     @Override
     public void upp() {
-        this.upgradeMagicNumber(UPGRADE_POISON);
+        this.exhaust = false;
     }
 
     @Override
