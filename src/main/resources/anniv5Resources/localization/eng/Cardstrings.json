@@ -19,5 +19,9 @@
     "NAME": "Conjure Pack",
     "DESCRIPTION": "Choose 1 of !M! Packs available to your run. NL At the start of the next 5 turns, add 2 of its cards to your hand.",
     "UPGRADE_DESCRIPTION": "Innate. NL Choose 1 of !M! Packs available to your run. NL At the start of the next 5 turns, add 2 of its cards to your hand."
+  },
+  "${ModID}:Vexed": {
+    "NAME": "Vexed",
+    "DESCRIPTION": "Unplayable. NL Cannot be removed from your deck. NL While in hand, Exhaust this when you play a *Foil card."
   }
 }
