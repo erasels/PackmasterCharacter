@@ -1,0 +1,25 @@
+{
+  "${ModID}:Manifest": {
+    "NAME": "Manifest",
+    "DESCRIPTION": "Deal !D! damage. NL Play a cost 1 or 0 card from your discard pile."
+  },
+  "${ModID}:Bunker": {
+    "NAME": "Bunker",
+    "DESCRIPTION": "Gain !B! Block. NL At the start of next turn, add a *Golf *Ball into your hand."
+  },
+  "${ModID}:GolfBall": {
+    "NAME": "Golf Ball",
+    "DESCRIPTION": "Ethereal. NL Deal damage equal to your unused Block. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Ethereal. NL Deal !D! damage. NL Exhaust."
+    ]
+  },
+  "${ModID}:Slapstick": {
+    "NAME": "Slapstick",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle *Dramatic *Entrance, *Trip, or *Blind at random into your draw pile."
+  },
+  "${ModID}:Ghost": {
+    "NAME": "Ghost",
+    "DESCRIPTION": "Enemy loses !M! HP each turn. NL Startup: Disguise this as another card in your deck."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "${ModID}:ColorlessPack": {
+    "TEXT": [
+      "Halloween",
+      "Ride Horse cards to make a deadly megaturn.",
+      "Vex"
+    ]
+  },
+  "${ModID}:ColorlessPackHat": {
+    "TEXT": [
+      "You know, for riding horses.",
+      "The Jockey"
+    ]
+  }
+}
