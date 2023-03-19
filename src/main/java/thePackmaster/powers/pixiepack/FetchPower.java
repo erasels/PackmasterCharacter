@@ -23,14 +23,14 @@ public class FetchPower extends AbstractPackmasterPower implements NonStackableP
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public FetchPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF,true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
     }
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (PixiePack.isForeign(card) && card.type == AbstractCard.CardType.SKILL)
-        {
-            AbstractDungeon.actionManager.addToTop(new DrawCardAction(1));
+        if (PixiePack.isForeign(card) && card.type == AbstractCard.CardType.SKILL) {
+            AbstractDungeon.actionManager.addToTop(new DrawCardAction(amount));
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }
 
@@ -41,6 +41,6 @@ public class FetchPower extends AbstractPackmasterPower implements NonStackableP
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

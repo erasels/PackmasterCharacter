@@ -74,6 +74,7 @@ public class PixiePack extends AbstractCardPack {
             output = AllCards.get(AbstractDungeon.cardRandomRng.random(0, AllCards.size() - 1));
             UnlockTracker.markCardAsSeen(output.cardID);
         }
-        return output.makeStatEquivalentCopy();
+        if (output != null) return output.makeStatEquivalentCopy();
+        else return null;
     }
 }

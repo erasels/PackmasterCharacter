@@ -26,6 +26,7 @@ public class CosmicConverterPower extends AbstractPackmasterPower {
 
     public CosmicConverterPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
+        updateDescription();
     }
 
     @Override
@@ -63,13 +64,13 @@ public class CosmicConverterPower extends AbstractPackmasterPower {
         switch (lastPlayed.costForTurn)
         {
             default:
-                this.description = DESCRIPTIONS[0] + lastPlayed.costForTurn + DESCRIPTIONS[1];
+                this.description = DESCRIPTIONS[0] + " NL #b" + lastPlayed.costForTurn + DESCRIPTIONS[1];
                 break;
             case -1:
-                this.description = DESCRIPTIONS[0] + DESCRIPTIONS[6] + DESCRIPTIONS[1];
+                this.description = DESCRIPTIONS[0] + " NL #b" + DESCRIPTIONS[6] + DESCRIPTIONS[1];
                 break;
             case -2:
-                this.description = DESCRIPTIONS[0] + DESCRIPTIONS[7];
+                this.description = DESCRIPTIONS[0] + " NL #b" + DESCRIPTIONS[7];
                 break;
         }
         switch (lastPlayed.type) {

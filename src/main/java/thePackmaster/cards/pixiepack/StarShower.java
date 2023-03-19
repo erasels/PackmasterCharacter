@@ -19,8 +19,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class StarShower extends AbstractPixieCard {
     public final static String ID = makeID("StarShower");
 
-    private static final int baseAtk = 4;
-    private static final int upgradeAtk = 6;
+    private static final int baseAtk = 5;
+    private static final int upgradeAtk = 7;
 
     public StarShower() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);

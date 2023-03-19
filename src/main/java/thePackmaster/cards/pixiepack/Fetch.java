@@ -15,7 +15,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Fetch extends AbstractPixieCard {
     public final static String ID = makeID("Fetch");
 
-    private static final int baseMag = 1;
+    private static final int baseMag = 2;
 
     public Fetch() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -33,6 +33,6 @@ public class Fetch extends AbstractPixieCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DrawCardAction(magicNumber));
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new FetchPower(abstractPlayer, damage)));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new FetchPower(abstractPlayer, magicNumber)));
     }
 }
