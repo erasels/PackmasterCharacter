@@ -30,7 +30,7 @@ public class IgnitePower extends AbstractPackmasterPower implements HealthBarRen
         if (!this.owner.isPlayer && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flashWithoutSound();
             playApplyPowerSfx();
-            addToBot(new DamageAction(this.owner, new DamageInfo(null, amount, DamageInfo.DamageType.HP_LOSS)));
+            addToBot(new DamageAction(this.owner, new DamageInfo(Wiz.p(), amount, DamageInfo.DamageType.HP_LOSS)));
         }
     }
 
