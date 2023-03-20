@@ -8,8 +8,8 @@
   },
   "${ModID}:InstantDeathHat": {
     "TEXT": [
-      "You're not a protagonist if your hair isn't unreasonably flashy.",
-      "Protagonist Hat"
+      "The mark of someone to fear.",
+      "Arbiter Hat"
     ]
   }
 }
