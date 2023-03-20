@@ -16,7 +16,7 @@ public class Deconstruct extends AbstractDistortionCard {
 
     public Deconstruct() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 5;
 
         exhaust = true;
     }
@@ -32,6 +32,6 @@ public class Deconstruct extends AbstractDistortionCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

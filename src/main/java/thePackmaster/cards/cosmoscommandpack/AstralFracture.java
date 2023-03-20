@@ -18,7 +18,7 @@ public class AstralFracture extends AbstractCosmosCard implements AmplifyCard {
 
     public AstralFracture() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

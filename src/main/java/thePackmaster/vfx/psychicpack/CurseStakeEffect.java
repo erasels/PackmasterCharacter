@@ -70,12 +70,13 @@ public class CurseStakeEffect extends AbstractGameEffect {
             this.y = Interpolation.exp10Out.apply(this.fY, this.tY, this.duration * 2.0F);
         }
 
+        this.duration -= Gdx.graphics.getDeltaTime();
+
         if (this.duration < 0.05F && !this.shownSlash) {
             AbstractDungeon.effectsQueue.add(new ScaledAdditiveSlashImpactEffect(this.fX + (float)img.packedWidth / 2.0F, this.fY + (float)img.packedHeight / 2.0F, 0.7f, 1.1f, this.color.cpy()));
             this.shownSlash = true;
         }
 
-        this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration < 0.0F) {
             this.isDone = true;
             CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, MathUtils.randomBoolean());

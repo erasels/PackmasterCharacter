@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -41,16 +42,24 @@ public class DistortionPower extends AbstractPackmasterPower implements EnemyOnE
 
     @Override
     public void enemyOnExhaust(AbstractCard c) {
-        powerEffects.add(new GainPowerEffect(this));
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            @Override
-            public void update() {
-                if (!DistortionPower.this.owner.isDeadOrEscaped())
-                    AbstractDungeon.effectList.add(new FlashPowerEffect(DistortionPower.this));
-                this.isDone = true;
-            }
-        });
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(Wiz.p(), this.amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.NONE, true));
+        if (this.amount > 0) {
+            powerEffects.add(new GainPowerEffect(this));
+            int amt = this.amount;
+            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    if (!DistortionPower.this.owner.isDeadOrEscaped())
+                        AbstractDungeon.effectList.add(new FlashPowerEffect(DistortionPower.this));
+                    this.isDone = true;
+                }
+            });
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(Wiz.p(), amt, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.NONE, true));
+            --this.amount;
+        }
+
+        if (this.amount <= 0) {
+            addToBot(new ReducePowerAction(this.owner, this.owner, this, 0));
+        }
     }
 
     @Override
