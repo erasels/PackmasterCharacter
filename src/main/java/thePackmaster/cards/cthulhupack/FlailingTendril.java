@@ -14,7 +14,7 @@ public class FlailingTendril extends AbstractCthulhuCard {
     private static final int ATTACK_DMG = 9;
     private static final int UPGRADE_PLUS_ATTACK_DMG = 1;
     private static final int UPGRADE_PLUS_DISTORTION_AMT = 1;
-    private static final int DISTORTION_AMT = 2;
+    private static final int DISTORTION_AMT = 3;
 
     public FlailingTendril() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);

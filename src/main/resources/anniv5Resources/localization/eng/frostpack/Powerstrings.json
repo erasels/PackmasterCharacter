@@ -2,9 +2,9 @@
   "${ModID}:ExtendedStallPower": {
     "NAME": "Stall",
     "DESCRIPTIONS": [
-      "At the end of your turn, you may #yFreeze #b",
-      " card.",
-      " cards.",
+      "At the end of your turn, #yFreeze the #b",
+      " highest-cost card.",
+      " highest-cost cards.",
       "Freeze"
     ]
   },

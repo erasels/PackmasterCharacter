@@ -10,7 +10,7 @@
   },
   "${ModID}:Tricky": {
     "NAME": "Tricky",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 本回合每抽过一张牌， NL 伤害增加 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 本回合每抽过一张牌， NL 伤害增加 !M! 点。"
   },
   "${ModID}:SneakyteakStrike": {
     "NAME": "Sneakyteak Strike",

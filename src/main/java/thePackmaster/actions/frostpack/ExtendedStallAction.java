@@ -4,13 +4,13 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
 import thePackmaster.cardmodifiers.frostpack.FrozenMod;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class ExtendedStallAction extends AbstractGameAction {
 
@@ -21,39 +21,15 @@ public class ExtendedStallAction extends AbstractGameAction {
     @Override
     public void update() {
         ArrayList<AbstractCard> toFreeze = new ArrayList<>();
-        ArrayList<AbstractCard> tempHand = new ArrayList<>();
-        tempHand.addAll(AbstractDungeon.player.hand.group);
-        while (toFreeze.size() < amount && tempHand.size() > 0) {
-
-            //identify highest cost cards
-            int maxCost = -1;
-            ArrayList<AbstractCard> maxCostCards = new ArrayList<>();
-            for (AbstractCard c : tempHand) {
-                if (!CardModifierManager.hasModifier(c, FrozenMod.ID) && !OccultPatch.isUnplayable(Wiz.p(), c)) {
-                    if (c.costForTurn > maxCost) {
-                        maxCost = c.costForTurn;
-                        maxCostCards.clear();
-                        maxCostCards.add(c);
-                    } else if (c.costForTurn == maxCost) {
-                        maxCostCards.add(c);
-                    }
-                }
-            }
-
-            //Stop if no randomizable cards are left
-            if (maxCost < 0) break;
-
-            //choose which are randomized, remove them from tempHand
-            while (maxCostCards.size() > 0 && toFreeze.size() < amount) {
-                int r = AbstractDungeon.cardRandomRng.random(maxCostCards.size() -1);
-                AbstractCard card = maxCostCards.get(r);
-                toFreeze.add(card);
-                tempHand.remove(card);
-                maxCostCards.remove(card);
-            }
+        ArrayList<AbstractCard> tempHand = new ArrayList<>(AbstractDungeon.player.hand.group);
+        tempHand.removeIf(c -> CardModifierManager.hasModifier(c, FrozenMod.ID) || OccultPatch.isUnplayable(Wiz.p(), c) || c.cost == -1);
+        tempHand.sort(Comparator.comparingInt(Wiz::getLogicalCardCost));
+        for (int i = tempHand.size() - 1; i >= 0 && toFreeze.size() < amount; i--) {
+            toFreeze.add(tempHand.get(i));
         }
-        if (toFreeze.size() > 0) {
-            addToTop(new SimpleAddModifierAction(new FrozenMod(), toFreeze.get(0), false));
+
+        for(AbstractCard c : toFreeze) {
+            addToTop(new SimpleAddModifierAction(new FrozenMod(), c, false));
         }
         isDone = true;
     }

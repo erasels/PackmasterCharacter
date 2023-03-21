@@ -1,0 +1,51 @@
+{
+  "${ModID}:Ignition": {
+    "NAME": "点燃",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 生成 1个 ${ModID}:烈焰 充能球。"
+  },
+  "${ModID}:DualBlade": {
+    "NAME": "双剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 激发最右侧充能球两次。"
+  },
+  "${ModID}:Sphere": {
+    "NAME": "球体",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 生成 1个 ${ModID}:多变 充能球 。",
+    "EXTENDED_DESCRIPTION": [
+      "{0}球体",
+      "获得 !B! 点 格挡 。 NL 生成1个 {0} 充能球。"
+    ]
+  },
+  "${ModID}:Winterwisp": {
+    "NAME": "冬缕",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 生成 1个 ${ModID}:极寒 充能球。 NL 若 生成 在空栏位， NL 触发其被动效果。"
+  },
+  "${ModID}:FrozenMagma": {
+    "NAME": "冰冻岩浆",
+    "DESCRIPTION": "生成 1个 ${ModID}:极寒 充能球。 NL 生成 1个 冰霜 充能球。 NL 生成 1个 ${ModID}:烈焰 充能球。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "生成 1个 ${ModID}:极寒 充能球。 NL 生成 1个 冰霜 充能球。 NL 生成 1个 ${ModID}:烈焰 充能球。"
+  },
+  "${ModID}:Consolidate": {
+    "NAME": "凝聚",
+    "DESCRIPTION": "失去右侧2个充能球。 NL 获得1点 集中 。",
+    "UPGRADE_DESCRIPTION": "失去右侧1个充能球。 NL 获得1点 集中 。"
+  },
+  "${ModID}:FrostConversion": {
+    "NAME": "冰变",
+    "DESCRIPTION": "生成 1个 冰霜 充能球。 NL 若有3种以上充能球， NL 再生成 1个。",
+    "UPGRADE_DESCRIPTION": "生成 1个 冰霜 充能球。 NL 若有3种以上充能球， NL 再生成 1个并触发它的被动效果。"
+  },
+  "${ModID}:Fluctuate": {
+    "NAME": "起伏",
+    "DESCRIPTION": "给予1层群体 虚弱 。 NL 给予1层群体 易伤 。 NL 若有3种以上充能球， NL 再各给予 !M! 层。"
+  },
+  "${ModID}:VoidEngine": {
+    "NAME": "虚空自动机",
+    "DESCRIPTION": "获得 !M! 点 集中 。 NL 获得1个充能球栏位。 NL 将一张 虚空 加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 集中 。 NL 获得1个充能球栏位。 NL 将一张 虚空 加入弃牌堆。"
+  },
+  "${ModID}:ChaosGenerator": {
+    "NAME": "混乱散播器",
+    "DESCRIPTION": "回合开始时， NL 随机 生成 !M! 个充能球。",
+    "UPGRADE_DESCRIPTION": "回合开始时， NL 随机 生成 !M! 个充能球。"
+  }
+}

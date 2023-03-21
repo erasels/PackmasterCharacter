@@ -15,9 +15,16 @@
       "给予攻击者你在该次被击过程中格挡住的伤害层 #y霜噬 。"
     ]
   },
-  "${ModID}:GlaciatePower": {
-    "NAME": "霜覆",
-    "DESCRIPTIONS": ["每当你给予 #y霜噬 时，获得 #b", " 层 #y活力 。"]
+  "${ModID}:FrostedEdgePower": {
+    "NAME": "冰尖",
+    "DESCRIPTIONS": ["每当你给予 #y霜噬 时，获得 #b", " 层临时 #y力量 。"]
+  },
+  "${ModID}:IceShatterPower": {
+    "NAME": "冰裂",
+    "DESCRIPTIONS": [
+      "下回合每当该单位失去生命时，其再额外受到 #b",
+      " 点伤害(该伤害不计)。"
+    ]
   },
   "${ModID}:SnowedInPower": {
     "NAME": "积雪",

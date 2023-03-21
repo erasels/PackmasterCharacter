@@ -3,6 +3,7 @@ package thePackmaster.cards.pixiepack;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
@@ -17,20 +18,16 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class NeutronStar extends AbstractPixieCard {
     public final static String ID = makeID("NeutronStar");
 
-    private static final int baseMgk = 2;
-    private static final int upgradeMgk = 3;
+    private static final int baseMgk = 3;
 
     public NeutronStar() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = baseMgk;
-        this.isEthereal = true;
         this.exhaust = true;
     }
 
     @Override
     public void upp() {
-        this.upgradeMagicNumber(upgradeMgk-baseMgk);
-        this.isEthereal = false;
         this.exhaust = false;
     }
 
@@ -40,4 +37,14 @@ public class NeutronStar extends AbstractPixieCard {
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new LoseStrengthPower(abstractPlayer,magicNumber)));
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new NeutronStarPower(abstractPlayer,magicNumber)));
     }
+
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if (Settings.language == Settings.GameLanguage.ZHS && this.description.size() != 0 ) {
+            this.description.get(1).text = this.description.get(1).text + "，";
+            this.description.remove(2);
+        }
+    }
+
 }

@@ -2,7 +2,7 @@
   "${ModID}:CosmicConverterPower": {
     "NAME": "Cosmic Converter",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a #ydifferent #ycolor card of the same type and cost as the last card played into your hand. Currently adding: #b",
+      "At the start of your turn, add a #ydifferent #ycolor card of the same type and cost as the last card played into your hand. Currently adding: ",
       "-cost ",
       " Attack",
       " Skill",
@@ -15,7 +15,8 @@
   "${ModID}:FetchPower": {
     "NAME": "Fetch",
     "DESCRIPTIONS": [
-      "After playing a #ydifferent #ycolor Skill, draw a card."
+      "After playing a #ydifferent #ycolor Skill, draw ",
+      " cards."
     ]
   },
   "${ModID}:NeutronStarPower": {

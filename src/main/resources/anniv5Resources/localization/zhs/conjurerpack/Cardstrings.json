@@ -37,8 +37,8 @@
 		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:燃烧 。"
 	},
 	"${ModID}:TectonicQuake":	{
-		"DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 ${ModID}:土元素 与 虚弱 。 NL 消耗 。",
+		"DESCRIPTION": "造成 !D! 点群体伤害并给予 !M! 层 ${ModID}:土元素 与 虚弱 。 NL 消耗 。",
 		"NAME": "地壳震荡",
-		"UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 ${ModID}:土元素 与 虚弱 。"
+		"UPGRADE_DESCRIPTION": "造成 !D! 点群体伤害并给予 !M! 层 ${ModID}:土元素 与 虚弱 。"
 	}
 }
