@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cardmodifiers.colorlesspack.IsGhostModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
 
@@ -18,7 +17,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToEnemy;
 import static thePackmaster.util.Wiz.att;
 
-public class Ghost extends AbstractPackmasterCard implements StartupCard {
+public class Ghost extends AbstractColorlessPackCard implements StartupCard {
     public final static String ID = makeID("Ghost");
     // intellij stuff skill, enemy, uncommon, , , , , 12, 4
 
@@ -41,7 +40,7 @@ public class Ghost extends AbstractPackmasterCard implements StartupCard {
                 AbstractDungeon.player.drawPile.removeCard(Ghost.this);
                 ArrayList<AbstractCard> possibilities = new ArrayList<>();
                 AbstractDungeon.player.drawPile.group.forEach(q -> {
-                    if (!q.cardID.equals(Ghost.ID)) {
+                    if (!q.cardID.equals(Ghost.ID) && !q.cardID.equals(ThePrism.ID)) { // Sometime hook this later than other startups; not a bug or anything but it'll prevent easy guesses
                         possibilities.add(q);
                     }
                 });

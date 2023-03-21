@@ -12,24 +12,26 @@ import thePackmaster.powers.AbstractPackmasterPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class BunkerPower extends AbstractPackmasterPower {
-    public static final String POWER_ID = makeID("BunkerPower");
+public class ColorlessMasteryPower extends AbstractPackmasterPower {
+    public static final String POWER_ID = makeID("ColorlessMasteryPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public BunkerPower() {
+    public ColorlessMasteryPower() {
         super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, 1);
     }
 
+    @Override
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (card.color == AbstractCard.CardColor.COLORLESS) {
+            flash();
+            applyToSelf(new StrengthPower(owner, amount));
+        }
+    }
 
     @Override
     public void updateDescription() {
-        if (amount == 1) {
-            description = DESCRIPTIONS[0];
-        }
-        else {
-            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
-        }
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

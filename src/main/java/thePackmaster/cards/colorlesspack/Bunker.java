@@ -2,13 +2,12 @@ package thePackmaster.cards.colorlesspack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.colorlesspack.BunkerPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class Bunker extends AbstractPackmasterCard {
+public class Bunker extends AbstractColorlessPackCard {
     public final static String ID = makeID("Bunker");
     // intellij stuff skill, self, common, , , 12, 4, , 
 

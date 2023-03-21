@@ -7,13 +7,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.PlayFromDiscardAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.att;
 
-public class Manifest extends AbstractPackmasterCard {
+public class Manifest extends AbstractColorlessPackCard {
     public final static String ID = makeID("Manifest");
     // intellij stuff attack, enemy, common, 18, 6, , , , 
 

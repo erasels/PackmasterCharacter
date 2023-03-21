@@ -1,15 +1,15 @@
 {
   "${ModID}:ColorlessPack": {
     "TEXT": [
-      "Halloween",
-      "Ride Horse cards to make a deadly megaturn.",
+      "Colorless Creations",
+      "Use Colorless cards in creative ways!",
       "Vex"
     ]
   },
   "${ModID}:ColorlessPackHat": {
     "TEXT": [
-      "You know, for riding horses.",
-      "The Jockey"
+      "Link! Let's stop gabbing and get a move on!",
+      "Ezlo"
     ]
   }
 }

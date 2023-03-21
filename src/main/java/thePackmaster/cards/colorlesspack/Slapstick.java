@@ -8,9 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,7 +16,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.getRandomItem;
 import static thePackmaster.util.Wiz.shuffleIn;
 
-public class Slapstick extends AbstractPackmasterCard {
+public class Slapstick extends AbstractColorlessPackCard {
     public final static String ID = makeID("Slapstick");
     // intellij stuff attack, enemy, common, 9, 3, , , , 
 
@@ -27,7 +25,7 @@ public class Slapstick extends AbstractPackmasterCard {
         baseDamage = 9;
     }
 
-    private static List<String> options = Arrays.asList(
+    private static final List<String> options = Arrays.asList(
             DramaticEntrance.ID,
             Trip.ID,
             Blind.ID
