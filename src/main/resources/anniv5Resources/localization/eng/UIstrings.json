@@ -101,9 +101,10 @@
       "Custom Draft Mode",
       "Turn this on to choose how your Packs are determined.",
       "Random",
-      "Choice of 3",
+      "Choice of ",
       "Pack Filtering Menu",
-      "Hat Menu"
+      "Hat Menu",
+      ""
     ]
   },
   "${ModID}:PackSetup": {
