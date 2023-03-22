@@ -16,13 +16,20 @@ import static thePackmaster.util.Wiz.att;
 
 public class ThePrism extends AbstractColorlessPackCard implements StartupCard {
     public final static String ID = makeID("ThePrism");
+    private boolean showPreview;
     // intellij stuff attack, all_enemy, rare, 8, 1, , , 8, 1
 
-    public ThePrism() {
+    public ThePrism(boolean showPreview) {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        this.showPreview = showPreview;
         baseDamage = 8;
         baseMagicNumber = magicNumber = 8;
         selfRetain = true;
+        if (showPreview) cardsToPreview = new PrismShard(false);
+    }
+
+    public ThePrism() {
+        this(true);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,6 +46,13 @@ public class ThePrism extends AbstractColorlessPackCard implements StartupCard {
                 AbstractDungeon.player.drawPile.removeCard(ThePrism.this);
                 AbstractCard q = new PrismShard();
                 if (upgraded) q.upgrade();
+                att(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        AbstractDungeon.player.exhaustPile.addToBottom(q.makeStatEquivalentCopy());
+                    }
+                });
                 att(new MakeTempCardInHandAction(q));
                 att(new MakeTempCardInDiscardAndDeckAction(q));
             }
@@ -50,5 +64,10 @@ public class ThePrism extends AbstractColorlessPackCard implements StartupCard {
     public void upp() {
         upgradeDamage(1);
         upgradeMagicNumber(1);
+    }
+
+    @Override
+    public AbstractCard makeCopy() {
+        return new ThePrism(showPreview);
     }
 }

@@ -1,5 +1,6 @@
 package thePackmaster.cards.colorlesspack;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.colorless.GoodInstincts;
@@ -19,6 +20,7 @@ public class AdventurersSword extends AbstractColorlessPackCard implements OnObt
     public AdventurersSword() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 11;
+        MultiCardPreview.add(this, new GoodInstincts(), new SwiftStrike());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

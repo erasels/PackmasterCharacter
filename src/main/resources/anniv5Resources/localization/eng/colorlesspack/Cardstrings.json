@@ -1,11 +1,11 @@
 {
   "${ModID}:Manifest": {
     "NAME": "Manifest",
-    "DESCRIPTION": "Deal !D! damage. NL Play a cost 1 or 0 card from your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Play a 0 or 1 cost card from your discard pile."
   },
   "${ModID}:Bunker": {
     "NAME": "Bunker",
-    "DESCRIPTION": "Gain !B! Block. NL At the start of next turn, add a *Golf *Ball into your hand."
+    "DESCRIPTION": "Gain !B! Block. NL At the start of your next turn, add a *Golf *Ball into your hand."
   },
   "${ModID}:GolfBall": {
     "NAME": "Golf Ball",
@@ -20,11 +20,11 @@
   },
   "${ModID}:Ghost": {
     "NAME": "Ghost",
-    "DESCRIPTION": "Enemy loses !M! HP each turn. NL Startup: Disguise this as another card in your deck."
+    "DESCRIPTION": "At the end of its turns, enemy loses !M! HP. NL Startup: Disguise this as another card."
   },
   "${ModID}:LunchBox": {
     "NAME": "Lunch Box",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Your next Colorless card this turn is played twice."
+    "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice. NL ${ModID}:Pickup: Heal 3 HP."
   },
   "${ModID}:ColorlessMastery": {
     "NAME": "Colorless Mastery",
@@ -33,18 +33,18 @@
   },
   "${ModID}:VisitAMonastery": {
     "NAME": "Visit a Monastery",
-    "DESCRIPTION": "Over the start of your next 4 turns, add into your hand in order: NL *Madness. NL *Purity. NL *Enlightenment. NL *Apotheosis.",
+    "DESCRIPTION": "Over the start of your next 4 turns, gain: NL *Madness, *Purity, *Enlightenment, *Apotheosis.",
     "UPGRADE_DESCRIPTION": "Innate. NL Over the start of your next 4 turns, add into your hand in order: NL *Madness. NL *Purity. NL *Enlightenment. NL *Apotheosis."
   },
   "${ModID}:ThePrism": {
     "NAME": "The Prism",
-    "DESCRIPTION": "Retain. NL Deal !D! damage to a random enemy !M! times. NL Startup: Split into *Shards in your hand, draw pile, and discard pile.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Startup: Split into *Shards in your hand and each pile.",
     "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage to a random enemy !M! times. NL Startup: Split into *Shards+ in your hand, draw pile, and discard pile."
   },
   "${ModID}:PrismShard": {
-    "NAME": "Prism Shard",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL If your exhaust pile contains at least 2 *Prism *Shards, add *The *Prism into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL If your exhaust pile contains at least 2 *Prism *Shards, add *The *Prism+ into your hand. NL Exhaust."
+    "NAME": "Shard",
+    "DESCRIPTION": "Deal !D! damage. NL After playing 3 Shards, shuffle *The *Prism into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If your exhaust pile contains at least 2 *Shards, add *The *Prism+ into your hand. NL Exhaust."
   },
   "${ModID}:RealityMaster": {
     "NAME": "Reality Master",

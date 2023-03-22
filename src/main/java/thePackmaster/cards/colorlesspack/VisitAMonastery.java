@@ -1,5 +1,10 @@
 package thePackmaster.cards.colorlesspack;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
+import com.megacrit.cardcrawl.cards.colorless.Apotheosis;
+import com.megacrit.cardcrawl.cards.colorless.Enlightenment;
+import com.megacrit.cardcrawl.cards.colorless.Madness;
+import com.megacrit.cardcrawl.cards.colorless.Purity;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.colorlesspack.MonasteryPower;
@@ -13,6 +18,7 @@ public class VisitAMonastery extends AbstractColorlessPackCard {
 
     public VisitAMonastery() {
         super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        MultiCardPreview.add(this, new Madness(), new Purity(), new Enlightenment(), new Apotheosis());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

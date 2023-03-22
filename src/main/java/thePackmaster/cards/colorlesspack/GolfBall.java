@@ -3,15 +3,16 @@ package thePackmaster.cards.colorlesspack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class GolfBall extends AbstractColorlessPackCard {
+public class GolfBall extends AbstractPackmasterCard {
     public final static String ID = makeID("GolfBall");
     // intellij stuff attack, enemy, special, , , , , , 
 
     public GolfBall() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         isEthereal = true;
         exhaust = true;
     }

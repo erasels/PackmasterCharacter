@@ -1,5 +1,6 @@
 package thePackmaster.cards.colorlesspack;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.colorless.Blind;
 import com.megacrit.cardcrawl.cards.colorless.DramaticEntrance;
@@ -23,6 +24,7 @@ public class Slapstick extends AbstractColorlessPackCard {
     public Slapstick() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 9;
+        MultiCardPreview.add(this, new DramaticEntrance(), new Trip(), new Blind());
     }
 
     private static final List<String> options = Arrays.asList(
