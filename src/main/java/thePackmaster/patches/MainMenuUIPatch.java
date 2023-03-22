@@ -154,7 +154,8 @@ public class MainMenuUIPatch {
         options.set(1, TEXT[3] + PACKS_PER_CHOICE + TEXT[6]);
 
         for (DropdownMenu dropdown : dropdowns) {
-            ReflectionHacks.setPrivate(dropdown.rows.get(1), DropdownMenu.class, "text", options.get(1));
+            Object o = dropdown.rows.get(1);
+            ReflectionHacks.setPrivate(o, o.getClass(), "text", options.get(1));
         }
     }
 
