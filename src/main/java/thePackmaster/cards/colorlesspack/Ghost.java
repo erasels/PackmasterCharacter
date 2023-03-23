@@ -8,16 +8,16 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
-import com.megacrit.cardcrawl.vfx.combat.GhostIgniteEffect;
 import thePackmaster.cardmodifiers.colorlesspack.IsGhostModifier;
 import thePackmaster.powers.colorlesspack.GhostPower;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
@@ -32,8 +32,8 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction(scream(), MathUtils.random(0.8F, 1.2F)));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new FireballEffect(this.hb.cX, this.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+        atb(new SFXAction(scream(), 0.75F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
         applyToEnemy(m, new GhostPower(m, magicNumber));
     }
 
@@ -46,23 +46,29 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
         }
     }
 
+    private static boolean canDisguiseAs(AbstractCard target) {
+        return target.cost != -2 && !target.cardID.equals(Ghost.ID) && !target.cardID.equals(ThePrism.ID);
+    }
+
     @Override
     public boolean atBattleStartPreDraw() {
         att(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                int index = AbstractDungeon.player.drawPile.group.indexOf(Ghost.this);
-                AbstractDungeon.player.drawPile.removeCard(Ghost.this);
-                ArrayList<AbstractCard> possibilities = new ArrayList<>();
-                AbstractDungeon.player.drawPile.group.forEach(q -> {
-                    if (!q.cardID.equals(Ghost.ID) && !q.cardID.equals(ThePrism.ID)) { // Sometime hook this later than other startups; not a bug or anything but it'll prevent easy guesses
-                        possibilities.add(q);
+                List<AbstractCard> possibilities = AbstractDungeon.player.drawPile.group.stream().filter(Ghost::canDisguiseAs).collect(Collectors.toList());
+                // Sometime hook this later than other startups; not a bug or anything but it'll prevent easy guesses
+                if (!possibilities.isEmpty()) {
+                    int index = AbstractDungeon.player.drawPile.group.indexOf(Ghost.this);
+                    AbstractDungeon.player.drawPile.removeCard(Ghost.this);
+                    AbstractCard disguise = Wiz.getRandomItem(possibilities, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
+                    CardModifierManager.addModifier(disguise, new IsGhostModifier(Ghost.this));
+                    if (index > 0) {
+                        AbstractDungeon.player.drawPile.group.add(index, disguise);
+                    } else {
+                        AbstractDungeon.player.drawPile.addToRandomSpot(disguise);
                     }
-                });
-                AbstractCard disguise = Wiz.getRandomItem(possibilities, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
-                CardModifierManager.addModifier(disguise, new IsGhostModifier(Ghost.this));
-                AbstractDungeon.player.drawPile.group.add(index, disguise);
+                }
             }
         });
         return true;
