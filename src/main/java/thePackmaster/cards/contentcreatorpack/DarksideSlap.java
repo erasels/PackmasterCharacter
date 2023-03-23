@@ -10,7 +10,7 @@ public class DarksideSlap extends AbstractContentCard implements MegaEtherealCar
     public final static String ID = makeID("DarksideSlap");
 
     public DarksideSlap() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 22;
     }
 

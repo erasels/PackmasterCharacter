@@ -32,7 +32,7 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction(scream(), 0.75F));
+        atb(new SFXAction(scream(), 1.25F));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
         applyToEnemy(m, new GhostPower(m, magicNumber));
     }
@@ -57,8 +57,7 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
             public void update() {
                 isDone = true;
                 List<AbstractCard> possibilities = AbstractDungeon.player.drawPile.group.stream().filter(Ghost::canDisguiseAs).collect(Collectors.toList());
-                // Sometime hook this later than other startups; not a bug or anything but it'll prevent easy guesses
-                if (!possibilities.isEmpty()) {
+                if (!possibilities.isEmpty() && AbstractDungeon.player.drawPile.contains(Ghost.this)) {
                     int index = AbstractDungeon.player.drawPile.group.indexOf(Ghost.this);
                     AbstractDungeon.player.drawPile.removeCard(Ghost.this);
                     AbstractCard disguise = Wiz.getRandomItem(possibilities, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
@@ -71,7 +70,7 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
                 }
             }
         });
-        return true;
+        return false;
     }
 
     public void upp() {
