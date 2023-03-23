@@ -1,0 +1,14 @@
+{
+  "${ModID}:SpellStone": {
+    "NAME": "Spell Stone",
+    "DESCRIPTION": "Deal !D! damage. NL The neighboring cards grant !M! Block when played this turn."
+  },
+  "${ModID}:PolarBlessing": {
+    "NAME": "Polar Blessing",
+    "DESCRIPTION": "Gain !B! Block. NL The neighboring cards are Retained this turn."
+  },
+  "${ModID}:MysticCycle": {
+    "NAME": "Mystic Cycle",
+    "DESCRIPTION": "{@@}Discard up to 2 cards and draw that many. NL Gain {!M!|1=[E]|2=[E][E]|@=!M! [E]}."
+  }
+}
