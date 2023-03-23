@@ -18,11 +18,11 @@ public class Manifest extends AbstractColorlessPackCard {
 
     public Manifest() {
         super(ID, 3, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 18;
+        baseDamage = 20;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         atb(new SelectCardsAction(AbstractDungeon.player.discardPile.group, cardStrings.EXTENDED_DESCRIPTION[0], abstractCard -> (abstractCard.costForTurn >= 0 && abstractCard.costForTurn <= 1) || abstractCard.freeToPlayOnce,
                 (cards) -> {
                     for (AbstractCard q : cards) {
