@@ -1,12 +1,11 @@
 package thePackmaster.packs;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.dragonwrathpack.*;
-import thePackmaster.cards.enchanterpack.MysticCycle;
-import thePackmaster.cards.enchanterpack.PolarBlessing;
-import thePackmaster.cards.enchanterpack.SpellStone;
+import thePackmaster.cards.enchanterpack.*;
 
 import java.util.ArrayList;
 
@@ -28,6 +27,8 @@ public class EnchanterPack extends AbstractCardPack {
         cards.add(SpellStone.ID);
         cards.add(PolarBlessing.ID);
         cards.add(MysticCycle.ID);
+        cards.add(GravitySlam.ID);
+        cards.add(GrantSwiftness.ID);
         return cards;
     }
 }

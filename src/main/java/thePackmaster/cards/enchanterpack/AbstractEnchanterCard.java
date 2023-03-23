@@ -41,6 +41,9 @@ public abstract class AbstractEnchanterCard extends AbstractPackmasterCard {
         return neighbors;
     }
 
+    public void onPlayedNeighbor(AbstractCard playedCard) {
+    }
+
     /*public void modifyNeighbor(AbstractCard c) {}
 
     @Override

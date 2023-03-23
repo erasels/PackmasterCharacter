@@ -21,5 +21,10 @@
     "TEXT": [
       "discard."
     ]
+  },
+  "${ModID}:DrawEnchantModifier": {
+    "TEXT": [
+      " NL Draw "," card."
+    ]
   }
 }

@@ -9,6 +9,22 @@
   },
   "${ModID}:MysticCycle": {
     "NAME": "Mystic Cycle",
-    "DESCRIPTION": "{@@}Discard up to 2 cards and draw that many. NL Gain {!M!|1=[E]|2=[E][E]|@=!M! [E]}."
+    "DESCRIPTION": "{@@}Discard up to 2 cards and draw that many. NL Gain {!M!|1=[E]|2=[E] [E]|@=!M! [E]}."
+  },
+  "${ModID}:GravitySlam": {
+    "NAME": "Gravity Slam",
+    "DESCRIPTION": "Deal !D! damage. NL Discard the neighboring cards."
+  },
+  "${ModID}:GrantSwiftness": {
+  "NAME": "Grant Swiftness",
+  "DESCRIPTION": "Draw !M! cards. NL The neighboring cards draw 1 card when played this turn."
+  },
+  "${ModID}:WhiteSteelCharm": {
+    "NAME": "White Steel Charm",
+    "DESCRIPTION": "Unplayable. NL When you play a neighboring card, random enemy takes !M! damage."
+  },
+  "${ModID}:EclipseCharm": {
+    "NAME": "Eclipse Charm",
+    "DESCRIPTION": "Unplayable. NL When you play a neighboring card !M! times in one turn, gain 1 Strength and Dexterity."
   }
 }
