@@ -33,6 +33,7 @@ public class EnchanterPack extends AbstractCardPack {
         cards.add(EclipseCharm.ID);
         cards.add(Chronobooster.ID);
         cards.add(MirrorsCurse.ID);
+        cards.add(BattleFocus.ID);
         return cards;
     }
 }

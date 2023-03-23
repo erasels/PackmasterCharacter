@@ -1,11 +1,11 @@
 {
   "${ModID}:SpellStone": {
     "NAME": "Spell Stone",
-    "DESCRIPTION": "Deal !D! damage. NL The neighboring cards grant !M! Block when played this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Modify adjacent cards until the end of your turn: NL Add !M! Block."
   },
   "${ModID}:PolarBlessing": {
     "NAME": "Polar Blessing",
-    "DESCRIPTION": "Gain !B! Block. NL The neighboring cards are Retained this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Retain adjacent cards this turn."
   },
   "${ModID}:MysticCycle": {
     "NAME": "Mystic Cycle",
@@ -13,27 +13,27 @@
   },
   "${ModID}:GravitySlam": {
     "NAME": "Gravity Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Discard the neighboring cards."
+    "DESCRIPTION": "Deal !D! damage. NL Discard adjacent cards."
   },
   "${ModID}:GrantSwiftness": {
   "NAME": "Grant Swiftness",
-  "DESCRIPTION": "Draw !M! cards. NL The neighboring cards draw 1 card when played this turn."
+  "DESCRIPTION": "Draw !M! cards. NL Modify adjacent cards until the end of your turn: NL Draw 1 card."
   },
   "${ModID}:WhiteSteelCharm": {
     "NAME": "White Steel Charm",
-    "DESCRIPTION": "Unplayable. NL When you play a neighboring card, random enemy takes !M! damage."
+    "DESCRIPTION": "Unplayable. NL When you play an adjacent card, a random enemy takes !M! damage."
   },
   "${ModID}:EclipseCharm": {
     "NAME": "Eclipse Charm",
-    "DESCRIPTION": "Unplayable. NL When you play a neighboring card !M! times in one turn, gain 1 Strength and Dexterity."
+    "DESCRIPTION": "Unplayable. NL When you play an adjacent card !M! times in one turn, gain 1 Strength and Dexterity."
   },
   "${ModID}:Chronobooster": {
     "NAME": "Chronobooster",
-    "DESCRIPTION": "{@@}Unplayable. NL When you play a neighboring card, play it twice and {!Upgrades!|>0=discard|@=Exhaust} this."
+    "DESCRIPTION": "{@@}Unplayable. NL When you play an adjacent card, play it twice and {!Upgrades!|>0=discard|@=Exhaust} this."
   },
   "${ModID}:MirrorsCurse": {
     "NAME": "Mirror's Curse",
-    "DESCRIPTION": "Deal !D! damage. NL The neighboring cards play a copy of this when played. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Modify adjacent cards until the end of combat: NL Play a copy of this. NL Exhaust."
   },
   "${ModID}:BattleFocus": {
     "NAME": "Battle Focus",
