@@ -6,27 +6,12 @@
       " HP."
     ]
   },
-  "${ModID}:SummonPandasPower": {
-    "NAME": "Summoning Pandas",
-    "DESCRIPTIONS": [
-      "At the start of your turn, Channel #b1 Panda",
-      "At the start of your turn, Channel #b",
-      " #yPandas."
-    ]
-  },
   "${ModID}:AmbushPower": {
     "NAME": "Ambush",
     "DESCRIPTIONS": [
       "Whenever you #yChannel an Orb, #yEvoke it #b1 time without removing it.",
       "Whenever you #yChannel an Orb, #yEvoke it #b",
       " times without removing it."
-    ]
-  },
-  "${ModID}:TrainingPower": {
-    "NAME": "Trained",
-    "DESCRIPTIONS": [
-      "At the end of your turn, evoke your next Orb #b",
-      " times."
     ]
   }
 }

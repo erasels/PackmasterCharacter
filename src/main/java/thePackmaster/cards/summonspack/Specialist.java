@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import thePackmaster.powers.basicspack.SimpleTrickPower;
-import thePackmaster.powers.summonspack.TrainingPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
