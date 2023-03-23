@@ -3,7 +3,7 @@
     "NAME": "Blue Skull",
     "FLAVOR": "A small skull, oddly blue with no signs of dye or paint.",
     "DESCRIPTIONS": [
-      "While your HP is at or below 50%, you have #b",
+      "While your HP is at or below #b50%, you have #b",
       " additional #yFocus."
     ]
   }
