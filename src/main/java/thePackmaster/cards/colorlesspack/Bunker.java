@@ -13,7 +13,7 @@ public class Bunker extends AbstractColorlessPackCard {
 
     public Bunker() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 12;
+        baseBlock = 14;
         cardsToPreview = new GolfBall();
     }
 
