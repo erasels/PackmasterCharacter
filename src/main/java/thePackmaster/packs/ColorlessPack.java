@@ -28,6 +28,7 @@ public class ColorlessPack extends AbstractCardPack {
         cards.add(Ghost.ID);
         cards.add(LunchBox.ID);
         cards.add(AdventurersSword.ID);
+        cards.add(Triforce.ID);
         cards.add(ColorlessMastery.ID);
         cards.add(VisitAMonastery.ID);
         cards.add(ThePrism.ID);

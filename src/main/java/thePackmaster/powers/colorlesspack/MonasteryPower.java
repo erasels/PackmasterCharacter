@@ -26,36 +26,30 @@ public class MonasteryPower extends AbstractPackmasterPower implements NonStacka
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public MonasteryPower() {
-        super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, -1);
+        super(POWER_ID, NAME, PowerType.BUFF, true, AbstractDungeon.player, 3);
         canGoNegative = false;
     }
-
-    private int stage = 0;
 
     private static List<String> cards = Arrays.asList(
             Madness.ID,
             Purity.ID,
-            Enlightenment.ID,
             Apotheosis.ID
     );
 
     @Override
     public void atStartOfTurnPostDraw() {
         flash();
-        makeInHand(CardLibrary.getCopy(cards.get(stage)));
-        stage++;
-        if (stage >= cards.size()) {
+        makeInHand(CardLibrary.getCopy(cards.get(amount-1)));
+        amount--;
+        if (amount == 0) {
             removeThis();
         }
     }
 
     @Override
     public void updateDescription() {
-        if (amount == 1) {
-            description = DESCRIPTIONS[0];
-        }
-        else {
-            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
-        }
+        StringBuilder sb = new StringBuilder();
+        sb.append(DESCRIPTIONS[0]);
+
     }
 }

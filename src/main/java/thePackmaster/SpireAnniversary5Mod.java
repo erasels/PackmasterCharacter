@@ -51,6 +51,7 @@ import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
+import thePackmaster.cards.colorlesspack.GolfBall;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.commands.PackAddCommand;
 import thePackmaster.commands.UnlockHatCommand;
@@ -1114,6 +1115,7 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public int receiveOnPlayerLoseBlock(int i) {
+        GolfBall.BLOCK_AMT_LOST = i;
         i = Serene.receiveOnPlayerLoseBlock(i);
         return i;
     }

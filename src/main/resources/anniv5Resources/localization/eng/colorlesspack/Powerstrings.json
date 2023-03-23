@@ -1,27 +1,37 @@
 {
-  "${ModID}:DerbyPower": {
-    "NAME": "Derby",
+  "${ModID}:BunkerPower": {
+    "NAME": "Bunker",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you played #b6 or more cards, gain #b",
-      " #yStrength. ",
-      "Played #b",
-      " card this turn.",
-      " cards this turn."
+      "At the start of your next turn, add #b1 #yGolf #yBall into your hand.",
+      "At the start of your next turn, add #b",
+      " #yGolf #yBalls into your hand."
     ]
   },
-  "${ModID}:GiddyapPower": {
-    "NAME": "Giddyap",
+  "${ModID}:ColorlessMasteryPower": {
+    "NAME": "Colorless Mastery",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b1 #yHorse into your hand.",
-      "At the start of your turn, add #b",
-      " #yHorses into your hand."
-    ]
-  },
-  "${ModID}:OffToTheRacesPower": {
-    "NAME": "Off to the Races",
-    "DESCRIPTIONS": [
-      "This turn, whenever you play a card, gain #b",
+      "Whenever you play a Colorless card, gain #b",
       " #yStrength."
+    ]
+  },
+  "${ModID}:LunchBoxPower": {
+    "NAME": "Lunch Box",
+    "DESCRIPTIONS": [
+      "The next Colorless card you play this turn is played twice.",
+      "The next #b",
+      " Colorless cards you play this turn are played twice."
+    ]
+  },
+  "${ModID}:MonasteryPower": {
+    "NAME": "Visiting a Monastery",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      "turn",
+      "turns",
+      "add ",
+      ",",
+      ", and ",
+      " into your hand in order."
     ]
   }
 }

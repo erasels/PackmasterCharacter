@@ -1,7 +1,10 @@
 {
   "${ModID}:Manifest": {
     "NAME": "Manifest",
-    "DESCRIPTION": "Deal !D! damage. NL Play a 0 or 1 cost card from your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Play a 0 or 1 cost card from your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to play."
+    ]
   },
   "${ModID}:Bunker": {
     "NAME": "Bunker",
@@ -9,9 +12,9 @@
   },
   "${ModID}:GolfBall": {
     "NAME": "Golf Ball",
-    "DESCRIPTION": "Ethereal. NL Deal damage equal to your unused Block. NL Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Deal damage equal to your unused Block last turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Ethereal. NL Deal !D! damage. NL Exhaust."
+      " NL (Deals !D! damage.)"
     ]
   },
   "${ModID}:Slapstick": {
@@ -33,18 +36,17 @@
   },
   "${ModID}:VisitAMonastery": {
     "NAME": "Visit a Monastery",
-    "DESCRIPTION": "Over the start of your next 4 turns, gain: NL *Madness, *Purity, *Enlightenment, *Apotheosis.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Over the start of your next 4 turns, add into your hand in order: NL *Madness. NL *Purity. NL *Enlightenment. NL *Apotheosis."
+    "DESCRIPTION": "At the start of your next 3 turns, add into your hand: NL *Madness, NL *Purity, NL *Apotheosis."
   },
   "${ModID}:ThePrism": {
     "NAME": "The Prism",
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Startup: Split into *Shards in your hand and each pile.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage to a random enemy !M! times. NL Startup: Split into *Shards+ in your hand, draw pile, and discard pile."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Startup: Split into *Shards+ in your hand and each pile."
   },
   "${ModID}:PrismShard": {
     "NAME": "Shard",
     "DESCRIPTION": "Deal !D! damage. NL After playing 3 Shards, shuffle *The *Prism into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If your exhaust pile contains at least 2 *Shards, add *The *Prism+ into your hand. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL After playing 3 Shards, shuffle *The *Prism+ into your draw pile. NL Exhaust."
   },
   "${ModID}:RealityMaster": {
     "NAME": "Reality Master",
@@ -53,6 +55,10 @@
   },
   "${ModID}:AdventurersSword": {
     "NAME": "Adventurer's Sword",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Pickup: Learn some *Good *Instincts and *Swiftly *Strike out on your own."
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Golden *Triangle into your draw pile."
+  },
+  "${ModID}:Triforce": {
+    "NAME": "Golden Triangle",
+    "DESCRIPTION": "Gain 1 Strength. NL Draw 1 card."
   }
 }

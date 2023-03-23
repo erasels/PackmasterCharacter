@@ -1,13 +1,19 @@
 package thePackmaster.cards.colorlesspack;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.colorlesspack.PrismAction;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.vfx.colorlesspack.ColoredVerticalAttackEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -32,18 +38,8 @@ public class PrismShard extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new PrismAction(this));
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (AbstractDungeon.player.exhaustPile.group.stream().filter(q -> q.cardID.equals(PrismShard.ID)).count() >= 2) {
-                    AbstractCard q = new ThePrism();
-                    if (upgraded) q.upgrade();
-                    att(new MakeTempCardInHandAction(q));
-                }
-            }
-        });
+        atb(new VFXAction(new ColoredVerticalAttackEffect(m.hb.x + MathUtils.random(m.hb.width / 3, ((m.hb.width / 3) * 2)), m.hb.cY, true, new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1))));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
     }
 
     public void upp() {
