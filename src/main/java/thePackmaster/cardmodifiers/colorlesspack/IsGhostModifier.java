@@ -25,6 +25,6 @@ public class IsGhostModifier extends AbstractCardModifier {
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new IsGhostModifier(ghost); // Might need to do stat equiv copy of the ghost too
+        return new IsGhostModifier(ghost.makeStatEquivalentCopy()); // Might need to do stat equiv copy of the ghost too
     }
 }
