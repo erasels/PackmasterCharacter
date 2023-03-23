@@ -27,7 +27,7 @@ public class AdventurersSword extends AbstractColorlessPackCard {
         shuffleIn(new Triforce());
         if (AbstractDungeon.player.currentHealth == AbstractDungeon.player.maxHealth) {
             atb(new SFXAction("RELIC_DROP_MAGICAL"));
-            atb(new LoseHPAction(m, p, magicNumber));
+            atb(new LoseHPAction(m, p, magicNumber, AbstractGameAction.AttackEffect.FIRE));
         }
     }
 
