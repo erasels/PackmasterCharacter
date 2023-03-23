@@ -1,15 +1,15 @@
 {
   "${ModID}:ColorlessPack": {
     "TEXT": [
-      "Colorless Creations",
-      "Use Colorless cards in creative ways!",
+      "Vexation",
+      "Use Colorless cards in creative ways! Vex's final pack!?",
       "Vex"
     ]
   },
   "${ModID}:ColorlessPackHat": {
     "TEXT": [
-      "Link! Let's stop gabbing and get a move on!",
-      "Ezlo"
+      "Green hat beared by the hero of legend!?",
+      "The Phrygian"
     ]
   }
 }
