@@ -12,7 +12,7 @@
   },
   "${ModID}:GolfBall": {
     "NAME": "Golf Ball",
-    "DESCRIPTION": "Ethereal. NL Deal damage equal to your unused Block last turn. NL Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Deal damage equal to unused Block last turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
