@@ -32,7 +32,7 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction(scream(), 1.25F));
+        atb(new SFXAction(scream()));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
         applyToEnemy(m, new GhostPower(m, magicNumber));
     }
