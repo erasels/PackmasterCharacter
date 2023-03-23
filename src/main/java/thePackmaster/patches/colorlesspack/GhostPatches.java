@@ -6,10 +6,12 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import thePackmaster.cardmodifiers.colorlesspack.IsGhostModifier;
+import thePackmaster.vfx.colorlesspack.PurpleNonmovingBlur;
 
 public class GhostPatches {
     @SpirePatch(clz = GameActionManager.class, method = "getNextAction")
@@ -28,6 +30,10 @@ public class GhostPatches {
                     __instance.cardQueue.get(0).card = mod.ghost;
                     mod.ghost.current_x = c.current_x;
                     mod.ghost.current_y = c.current_y;
+                    CardCrawlGame.sound.play("ATTACK_WHIFF_2");
+                    for (int itr = 0; itr < 90; itr++) {
+                        AbstractDungeon.effectsQueue.add(new PurpleNonmovingBlur(mod.ghost.current_x, mod.ghost.current_y));
+                    }
                 }
             }
         }

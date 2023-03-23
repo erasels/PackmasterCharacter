@@ -36,7 +36,8 @@
   },
   "${ModID}:VisitAMonastery": {
     "NAME": "Visit a Monastery",
-    "DESCRIPTION": "At the start of your next 3 turns, add into your hand: NL *Madness, NL *Purity, NL *Apotheosis."
+    "DESCRIPTION": "At the start of your next 3 turns, add into your hand: NL *Madness, *Purity, NL *Apotheosis.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your next 3 turns, add into your hand: NL *Madness, *Purity, NL *Apotheosis."
   },
   "${ModID}:ThePrism": {
     "NAME": "The Prism",

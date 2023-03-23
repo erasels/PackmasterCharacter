@@ -1,21 +1,26 @@
 package thePackmaster.cards.colorlesspack;
 
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
+import com.megacrit.cardcrawl.vfx.combat.GhostIgniteEffect;
 import thePackmaster.cardmodifiers.colorlesspack.IsGhostModifier;
-import thePackmaster.powers.shamanpack.IgnitePower;
+import thePackmaster.powers.colorlesspack.GhostPower;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.applyToEnemy;
-import static thePackmaster.util.Wiz.att;
+import static thePackmaster.util.Wiz.*;
 
 public class Ghost extends AbstractColorlessPackCard implements StartupCard {
     public final static String ID = makeID("Ghost");
@@ -27,7 +32,18 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new IgnitePower(m, magicNumber));
+        atb(new SFXAction(scream(), MathUtils.random(0.8F, 1.2F)));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new FireballEffect(this.hb.cX, this.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+        applyToEnemy(m, new GhostPower(m, magicNumber));
+    }
+
+    private static String scream() {
+        int roll = MathUtils.random(1);
+        if (roll == 0) {
+            return "VO_NEMESIS_2A";
+        } else {
+            return "VO_NEMESIS_2B";
+        }
     }
 
     @Override

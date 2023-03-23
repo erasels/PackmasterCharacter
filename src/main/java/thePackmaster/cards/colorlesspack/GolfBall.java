@@ -30,7 +30,7 @@ public class GolfBall extends AbstractPackmasterCard {
         this.baseDamage = BLOCK_AMT_LOST;
         super.applyPowers();
         this.rawDescription = cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.UPGRADE_DESCRIPTION;
+        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 
@@ -42,7 +42,7 @@ public class GolfBall extends AbstractPackmasterCard {
     public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
         this.rawDescription = cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.UPGRADE_DESCRIPTION;
+        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 

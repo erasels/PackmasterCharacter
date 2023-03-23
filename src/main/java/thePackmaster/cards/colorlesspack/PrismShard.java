@@ -22,7 +22,7 @@ public class PrismShard extends AbstractPackmasterCard {
     private boolean preview = false;
 
     public PrismShard(boolean showPreview) {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 8;
         exhaust = true;
         if (showPreview) cardsToPreview = new ThePrism(false);

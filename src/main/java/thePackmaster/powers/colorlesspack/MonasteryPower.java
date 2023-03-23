@@ -42,6 +42,8 @@ public class MonasteryPower extends AbstractPackmasterPower implements NonStacka
         amount--;
         if (amount == 0) {
             removeThis();
+        } else {
+            updateDescription();
         }
     }
 
@@ -53,17 +55,27 @@ public class MonasteryPower extends AbstractPackmasterPower implements NonStacka
             sb.append(DESCRIPTIONS[1]);
         } else {
             sb.append(DESCRIPTIONS[2]);
+            sb.append(amount);
+            sb.append(DESCRIPTIONS[3]);
         }
-        sb.append(DESCRIPTIONS[3]);
-        for (int i = 0; i <= 3 - amount; i++) {
+        sb.append(DESCRIPTIONS[4]);
+        // 1 - Add Madness, Purity, and Apotheosis into your hand
+        // 2 - Add Purity and Apotheosis into your hand
+        // 3 - Add Apotheosis into your hand
+        for (int i = 3 - amount; i < 3; i++) {
             sb.append(FontHelper.colorString(CardLibrary.getCard(cards.get(i)).originalName, "y"));
-            if (i < 3 - amount) {
-                sb.append(DESCRIPTIONS[4]);
-            } else {
-                sb.append(DESCRIPTIONS[5]);
+            if (i == 2) { // Apotheosis
+                // Never add anything, Apotheosis is the last one
+            } else if (i == 1) { // Purity
+                if (amount == 3) {
+                    sb.append(DESCRIPTIONS[6]); // Only add ', and' in case 1.
+                }
+                // Otherwise, add nothing (case 2)
+            } else if (i == 0) { // Madness (me tinkering with this code for so long)
+                sb.append(DESCRIPTIONS[5]); // Always add a comma, only case is 1
             }
         }
-        sb.append(DESCRIPTIONS[6]);
+        sb.append(DESCRIPTIONS[7]);
         description = sb.toString();
     }
 }

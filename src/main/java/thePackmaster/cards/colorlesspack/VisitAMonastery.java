@@ -17,7 +17,7 @@ public class VisitAMonastery extends AbstractColorlessPackCard {
     // intellij stuff power, self, rare, , , , , , 
 
     public VisitAMonastery() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         MultiCardPreview.add(this, new Madness(), new Purity(), new Apotheosis());
     }
 
@@ -26,6 +26,6 @@ public class VisitAMonastery extends AbstractColorlessPackCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        isInnate = true;
     }
 }

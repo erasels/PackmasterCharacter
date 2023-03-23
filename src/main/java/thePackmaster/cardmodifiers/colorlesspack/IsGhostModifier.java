@@ -27,9 +27,4 @@ public class IsGhostModifier extends AbstractCardModifier {
     public AbstractCardModifier makeCopy() {
         return new IsGhostModifier(ghost); // Might need to do stat equiv copy of the ghost too
     }
-
-    @Override
-    public String modifyName(String cardName, AbstractCard card) {
-        return "Ghostly " + cardName; //TODO: Remove this
-    }
 }

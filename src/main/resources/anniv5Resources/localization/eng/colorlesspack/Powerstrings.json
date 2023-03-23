@@ -25,11 +25,12 @@
   "${ModID}:MonasteryPower": {
     "NAME": "Visiting a Monastery",
     "DESCRIPTIONS": [
-      "At the start of your next #b",
-      "turn, ",
-      "turns, ",
+      "At the start of your next",
+      " turn, ",
+      " #b",
+      " turns, ",
       "add ",
-      ",",
+      ", ",
       ", and ",
       " into your hand in order."
     ]
@@ -40,6 +41,13 @@
       "When you assemble #b3 #yShards, add ",
       "+",
       " into your hand."
+    ]
+  },
+  "${ModID}:GhostPower": {
+    "NAME": "Haunted",
+    "DESCRIPTIONS": [
+      "At the #rend of its turn, loses #b",
+      " HP."
     ]
   }
 }

@@ -17,7 +17,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class PrismShardPower extends AbstractPackmasterPower implements NonStackablePower {
-    public static final String POWER_ID = makeID("BunkerPower");
+    public static final String POWER_ID = makeID("PrismShardPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

@@ -43,6 +43,7 @@ public class ThePrism extends AbstractColorlessPackCard implements StartupCard {
         att(new AbstractGameAction() {
             @Override
             public void update() {
+                isDone = true;
                 AbstractDungeon.player.drawPile.removeCard(ThePrism.this);
                 AbstractCard q = new PrismShard();
                 if (upgraded) q.upgrade();
@@ -53,8 +54,8 @@ public class ThePrism extends AbstractColorlessPackCard implements StartupCard {
                         AbstractDungeon.player.exhaustPile.addToBottom(q.makeStatEquivalentCopy());
                     }
                 });
-                att(new MakeTempCardInHandAction(q));
                 att(new MakeTempCardInDiscardAndDeckAction(q));
+                att(new MakeTempCardInHandAction(q));
             }
         });
 

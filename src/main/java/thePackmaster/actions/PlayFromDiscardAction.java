@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.util.Wiz;
 
 public class PlayFromDiscardAction extends AbstractGameAction {
 
@@ -21,6 +23,7 @@ public class PlayFromDiscardAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
+            AbstractMonster targetFoe = Wiz.getRandomEnemy();
             AbstractDungeon.player.discardPile.group.remove(toPlay);
             AbstractDungeon.getCurrRoom().souls.remove(toPlay);
             AbstractDungeon.player.limbo.group.add(toPlay);
@@ -32,7 +35,7 @@ public class PlayFromDiscardAction extends AbstractGameAction {
             toPlay.drawScale = 0.12F;
             toPlay.targetDrawScale = 0.75F;
             toPlay.applyPowers();
-            this.addToTop(new NewQueueCardAction(toPlay, this.target, false, true));
+            this.addToTop(new NewQueueCardAction(toPlay, targetFoe, false, true));
             this.addToTop(new UnlimboAction(toPlay));
             if (!Settings.FAST_MODE) {
                 this.addToTop(new WaitAction(Settings.ACTION_DUR_MED));
