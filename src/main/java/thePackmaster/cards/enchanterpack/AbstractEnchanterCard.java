@@ -2,6 +2,7 @@ package thePackmaster.cards.enchanterpack;
 
 import basemod.Pair;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
@@ -41,7 +42,7 @@ public abstract class AbstractEnchanterCard extends AbstractPackmasterCard {
         return neighbors;
     }
 
-    public void onPlayedNeighbor(AbstractCard playedCard) {
+    public void onPlayedNeighbor(AbstractCard playedCard, AbstractMonster monster) {
     }
 
     /*public void modifyNeighbor(AbstractCard c) {}

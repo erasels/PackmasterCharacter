@@ -17,7 +17,7 @@
       " NL Add "," Block."
     ]
   },
-  "${ModID}:MysticCycle": {
+  "${ModID}:LimitedGambleAction": {
     "TEXT": [
       "discard."
     ]

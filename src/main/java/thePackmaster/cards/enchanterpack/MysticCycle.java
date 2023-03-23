@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.enchanterpack.LimitedGambleAction;
 import thePackmaster.util.Wiz;
 
 public class MysticCycle extends AbstractEnchanterCard {
 
     public static final String ID = SpireAnniversary5Mod.makeID("MysticCycle");
-    public static final UIStrings strings = CardCrawlGame.languagePack.getUIString(ID);
 
     public MysticCycle(){
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -29,14 +29,7 @@ public class MysticCycle extends AbstractEnchanterCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new SelectCardsInHandAction(2, strings.TEXT[0], true,true, card -> true,
-                (list) -> {
-                    for (AbstractCard c : list) {
-                        addToBot(new DiscardSpecificCardAction(c));
-                        addToBot(new DrawCardAction(1));
-                    }
-                }
-        ));
+        addToBot(new LimitedGambleAction(2));
         addToBot(new GainEnergyAction(magicNumber));
     }
 

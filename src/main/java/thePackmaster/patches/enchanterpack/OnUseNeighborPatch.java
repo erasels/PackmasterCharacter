@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import javassist.CtBehavior;
 import thePackmaster.cards.enchanterpack.AbstractEnchanterCard;
 import thePackmaster.packs.EnchanterPack;
@@ -13,19 +14,19 @@ import thePackmaster.util.Wiz;
 public class OnUseNeighborPatch {
 
     @SpireInsertPatch(locator = Locator.class)
-    public static void onUseNeighbor(AbstractCard c) {
+    public static void onUseNeighbor(AbstractCard c, AbstractMonster monster) {
         if (Wiz.hand().contains(c)) {
             int index = Wiz.hand().group.indexOf(c);
             if (index > 0) {
                 AbstractCard lNeighbor = Wiz.hand().group.get(index -1);
                 if (lNeighbor instanceof AbstractEnchanterCard) {
-                    ((AbstractEnchanterCard)lNeighbor).onPlayedNeighbor(c);
+                    ((AbstractEnchanterCard)lNeighbor).onPlayedNeighbor(c,monster);
                 }
             }
             if (index < Wiz.hand().size() - 1) {
                 AbstractCard rNeighbor = Wiz.hand().group.get(index + 1);
                 if (rNeighbor instanceof AbstractEnchanterCard) {
-                    ((AbstractEnchanterCard)rNeighbor).onPlayedNeighbor(c);
+                    ((AbstractEnchanterCard)rNeighbor).onPlayedNeighbor(c,monster);
                 }
             }
         }

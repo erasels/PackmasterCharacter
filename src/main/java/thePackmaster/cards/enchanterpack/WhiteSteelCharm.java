@@ -35,7 +35,7 @@ public class WhiteSteelCharm extends AbstractEnchanterCard {
     }
 
     @Override
-    public void onPlayedNeighbor(AbstractCard playedCard) {
+    public void onPlayedNeighbor(AbstractCard playedCard, AbstractMonster monster) {
         addToBot(new DamageRandomEnemyAction(new DamageInfo(Wiz.adp(),damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 }

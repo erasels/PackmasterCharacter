@@ -26,5 +26,17 @@
   "${ModID}:EclipseCharm": {
     "NAME": "Eclipse Charm",
     "DESCRIPTION": "Unplayable. NL When you play a neighboring card !M! times in one turn, gain 1 Strength and Dexterity."
+  },
+  "${ModID}:Chronobooster": {
+    "NAME": "Chronobooster",
+    "DESCRIPTION": "{@@}Unplayable. NL When you play a neighboring card, play it twice and {!Upgrades!|>0=discard|@=Exhaust} this."
+  },
+  "${ModID}:MirrorsCurse": {
+    "NAME": "Mirror's Curse",
+    "DESCRIPTION": "Deal !D! damage. NL The neighboring cards play a copy of this when played. NL Exhaust."
+  },
+  "${ModID}:BattleFocus": {
+    "NAME": "Battle Focus",
+    "DESCRIPTION": "At the start of your turn, discard up to !M! cards and draw that many."
   }
 }

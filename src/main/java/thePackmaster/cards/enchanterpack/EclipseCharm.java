@@ -39,7 +39,7 @@ public class EclipseCharm extends AbstractEnchanterCard {
     }
 
     @Override
-    public void onPlayedNeighbor(AbstractCard playedCard) {
+    public void onPlayedNeighbor(AbstractCard playedCard, AbstractMonster monster) {
         counter++;
         if (counter >= magicNumber) {
             addToBot(new ApplyPowerAction(Wiz.adp(),Wiz.adp(),new StrengthPower(Wiz.adp(),1)));
