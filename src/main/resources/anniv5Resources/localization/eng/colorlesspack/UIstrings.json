@@ -2,13 +2,13 @@
   "${ModID}:ColorlessPack": {
     "TEXT": [
       "Vexation",
-      "Use Colorless cards in creative ways! Vex's final pack!?",
+      "Use the basegame Colorless cards in creative ways! NL Vex's final Pack!?",
       "Vex"
     ]
   },
   "${ModID}:ColorlessPackHat": {
     "TEXT": [
-      "Green hat borne by the hero of legend!?",
+      "Green hat borne by the hero of legend!",
       "The Phrygian"
     ]
   }
