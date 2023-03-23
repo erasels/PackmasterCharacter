@@ -1,6 +1,7 @@
 package thePackmaster.cards.enchanterpack;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,7 +32,7 @@ public class MysticCycle extends AbstractEnchanterCard {
         addToBot(new SelectCardsInHandAction(2, strings.TEXT[0], true,true, card -> true,
                 (list) -> {
                     for (AbstractCard c : list) {
-                        Wiz.hand().moveToDiscardPile(c);
+                        addToBot(new DiscardSpecificCardAction(c));
                         addToBot(new DrawCardAction(1));
                     }
                 }

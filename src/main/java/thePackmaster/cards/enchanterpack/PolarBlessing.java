@@ -25,15 +25,15 @@ public class PolarBlessing extends AbstractEnchanterCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         blck();
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                for (AbstractCard c : getNeighbors()) {
+        for (AbstractCard c : getNeighbors()) {
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
                     c.retain = true;
                     c.flash();
+                    isDone = true;
                 }
-                isDone = true;
-            }
-        });
+            });
+        }
     }
 }

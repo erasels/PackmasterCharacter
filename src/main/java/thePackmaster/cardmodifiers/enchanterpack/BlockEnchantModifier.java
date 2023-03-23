@@ -48,6 +48,6 @@ public class BlockEnchantModifier extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + strings.TEXT[0];
+        return rawDescription + strings.TEXT[0] + amount + strings.TEXT[1];
     }
 }
