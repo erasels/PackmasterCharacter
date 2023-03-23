@@ -34,8 +34,8 @@ public class BagOfHolding extends AbstractPackmasterRelic {
     public void atTurnStart() {
         if (!this.grayscale) {
             flash();
-            addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToTop(new GainEnergyAction(1));
+            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            addToBot(new GainEnergyAction(1));
             this.counter--;
             this.incrementEnergyStat();
 
