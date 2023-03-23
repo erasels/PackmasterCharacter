@@ -50,7 +50,7 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL After playing 3 Shards, shuffle *The *Prism+ into your draw pile. NL Exhaust."
   },
   "${ModID}:RealityMaster": {
-    "NAME": "Reality Master",
+    "NAME": "MC Reality",
     "DESCRIPTION": "You know the drill; NL when you make a card, NL give it an upgrade NL for working so hard!",
     "UPGRADE_DESCRIPTION": "Innate, that's great! NL You know the drill; NL when you make a card, NL give it an upgrade NL for working so hard!"
   },
