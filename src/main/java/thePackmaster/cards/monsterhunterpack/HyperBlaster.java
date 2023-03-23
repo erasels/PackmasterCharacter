@@ -29,7 +29,7 @@ public class HyperBlaster extends AbstractMonsterHunterCard {
     private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     public HyperBlaster() {
-        super(ID, 3, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 3, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
     }

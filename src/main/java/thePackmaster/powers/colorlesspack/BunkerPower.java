@@ -17,7 +17,7 @@ public class BunkerPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public BunkerPower() {
-        super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, 1);
+        super(POWER_ID, NAME, PowerType.BUFF, true, AbstractDungeon.player, 1);
     }
 
     @Override

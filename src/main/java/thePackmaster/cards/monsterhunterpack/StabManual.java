@@ -17,7 +17,7 @@ public class StabManual extends AbstractMonsterHunterCard {
     private static final int MAGIC = 2;
 
     public StabManual() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         this.cardsToPreview = new Shiv();

@@ -28,7 +28,7 @@ public class CoreBlaster extends AbstractMonsterHunterCard {
 
 
     public CoreBlaster() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = damage = DAMAGE;
         prev = new CoreBlinder(true);
         this.cardsToPreview = prev;
@@ -37,7 +37,7 @@ public class CoreBlaster extends AbstractMonsterHunterCard {
     }
 
     public CoreBlaster(boolean generated) {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = damage = DAMAGE;
         if (!generated) {
             prev = new CoreBlinder(true);

@@ -13,6 +13,7 @@ BlacksmithsPack	None
 BoardGamePack	None
 BulwarkPack	Exhaust
 ClawPack	Tokens
+ColorlessPack	Tokens
 ConjurerPack	Debuffs
 ContentCreatorPack	Orbs
 CoreSetPack	None

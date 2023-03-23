@@ -27,7 +27,7 @@ public class CoreBlinder extends AbstractMonsterHunterCard {
     boolean previewCard;
 
     public CoreBlinder() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = MAGIC;
         prev = new CoreBlaster(true);
         this.cardsToPreview = prev;
@@ -36,7 +36,7 @@ public class CoreBlinder extends AbstractMonsterHunterCard {
     }
 
     public CoreBlinder(boolean generated) {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = MAGIC;
         if (!generated) {
             prev = new CoreBlaster(true);

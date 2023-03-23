@@ -21,7 +21,7 @@ public class GremlinLance extends AbstractMonsterHunterCard {
     public static final int UPG_BLOCK = 2;
 
     public GremlinLance() {
-        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         //baseBlock = block = BLOCK;

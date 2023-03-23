@@ -70,12 +70,14 @@ public class MonasteryPower extends AbstractPackmasterPower implements NonStacka
                 if (amount == 3) {
                     sb.append(DESCRIPTIONS[6]); // Only add ', and' in case 1.
                 }
-                // Otherwise, add nothing (case 2)
+                else if (amount == 2) {
+                    sb.append(DESCRIPTIONS[7]); // Add ' and ' in case 2
+                }
             } else if (i == 0) { // Madness (me tinkering with this code for so long)
                 sb.append(DESCRIPTIONS[5]); // Always add a comma, only case is 1
             }
         }
-        sb.append(DESCRIPTIONS[7]);
+        sb.append(DESCRIPTIONS[8]);
         description = sb.toString();
     }
 }

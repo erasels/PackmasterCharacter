@@ -18,7 +18,7 @@ public class StoneHelm extends AbstractMonsterHunterCard {
     private int originalBlock = 24;
 
     public StoneHelm() {
-        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = block = BLOCK;
     }
 

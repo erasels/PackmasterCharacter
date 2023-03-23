@@ -18,7 +18,7 @@ public class SlimeHammer extends AbstractMonsterHunterCard {
     public static final int DAMAGE = 32;
 
     public SlimeHammer() {
-        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = damage = DAMAGE;
     }
 
