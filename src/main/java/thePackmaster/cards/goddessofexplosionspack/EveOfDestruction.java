@@ -14,7 +14,6 @@ public class EveOfDestruction extends AbstractGoddessOfExplosionsCard {
     public EveOfDestruction() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = 1;
-        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
