@@ -342,7 +342,9 @@ public class BlackMarketDealerEvent extends PhasedEvent {
 
         CardGroup buyablesGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard original : buyables) {
-            buyablesGroup.addToTop(original.makeCopy());
+            AbstractCard b = original.makeCopy();
+            AbstractDungeon.player.relics.forEach(q -> q.onPreviewObtainCard(b));
+            buyablesGroup.addToTop(b);
         }
         return buyablesGroup;
     }
