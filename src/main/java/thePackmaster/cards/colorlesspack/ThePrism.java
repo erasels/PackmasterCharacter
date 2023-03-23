@@ -64,6 +64,11 @@ public class ThePrism extends AbstractColorlessPackCard implements StartupCard {
     public void upp() {
         upgradeDamage(1);
         upgradeMagicNumber(1);
+        if (showPreview) {
+            AbstractCard q = new PrismShard(false);
+            q.upgrade();
+            cardsToPreview = q;
+        }
     }
 
     @Override

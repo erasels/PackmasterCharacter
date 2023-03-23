@@ -26,12 +26,20 @@
     "NAME": "Visiting a Monastery",
     "DESCRIPTIONS": [
       "At the start of your next #b",
-      "turn",
-      "turns",
+      "turn, ",
+      "turns, ",
       "add ",
       ",",
       ", and ",
       " into your hand in order."
+    ]
+  },
+  "${ModID}:PrismShardPower": {
+    "NAME": "Prism Shards",
+    "DESCRIPTIONS": [
+      "When you assemble #b3 #yShards, add ",
+      "+",
+      " into your hand."
     ]
   }
 }

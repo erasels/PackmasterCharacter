@@ -18,7 +18,7 @@ public class VisitAMonastery extends AbstractColorlessPackCard {
 
     public VisitAMonastery() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        MultiCardPreview.add(this, new Madness(), new Purity(), new Enlightenment(), new Apotheosis());
+        MultiCardPreview.add(this, new Madness(), new Purity(), new Apotheosis());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

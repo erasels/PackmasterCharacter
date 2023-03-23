@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.cards.colorlesspack.ThePrism;
@@ -55,10 +57,11 @@ public class PrismShardPower extends AbstractPackmasterPower implements NonStack
 
     @Override
     public void updateDescription() {
-        if (amount == 1) {
-            description = DESCRIPTIONS[0];
-        } else {
-            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
-        }
+        StringBuilder sb = new StringBuilder();
+        sb.append(DESCRIPTIONS[0]);
+        sb.append(FontHelper.colorString(CardLibrary.getCard(ThePrism.ID).originalName, "y"));
+        if (upgraded) sb.append(DESCRIPTIONS[1]);
+        sb.append(DESCRIPTIONS[2]);
+        description = sb.toString();
     }
 }

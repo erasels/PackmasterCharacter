@@ -2,7 +2,6 @@ package thePackmaster.cards.colorlesspack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
@@ -20,7 +19,11 @@ public class GolfBall extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.baseDamage = BLOCK_AMT_LOST;
+        this.calculateCardDamage(m);
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
     }
 
     public void applyPowers() {
