@@ -28,7 +28,7 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
 
     public Ghost() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 13;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -74,6 +74,6 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(4);
     }
 }
