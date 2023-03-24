@@ -13,7 +13,7 @@ public class FamilialCurse extends AbstractCthulhuCard {
 
     public FamilialCurse() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         baseBlock = 10;
         cardsToPreview = new Lunacy();
 

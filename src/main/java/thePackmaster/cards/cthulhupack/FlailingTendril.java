@@ -12,7 +12,7 @@ public class FlailingTendril extends AbstractCthulhuCard {
     public final static String ID = makeID("FlailingTendril");
 
     private static final int ATTACK_DMG = 9;
-    private static final int UPGRADE_PLUS_ATTACK_DMG = 1;
+    private static final int UPGRADE_PLUS_ATTACK_DMG = 3;
 
     public FlailingTendril() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);

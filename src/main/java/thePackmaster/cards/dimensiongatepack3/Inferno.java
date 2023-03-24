@@ -19,6 +19,7 @@ public class Inferno extends AbstractDimensionalCardTrain {
         baseDamage = 10;
         baseMagicNumber = magicNumber = 5;
         isMultiDamage = true;
+        cardsToPreview = new Burn();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

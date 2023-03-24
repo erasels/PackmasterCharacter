@@ -17,6 +17,7 @@ public class Corset extends AbstractDimensionalCardEden {
     public Corset() {
         super(ID, 1, CardRarity.COMMON, CardType.SKILL, CardTarget.SELF);
         baseBlock = 10;
+        cardsToPreview = new Jam();
     }
 
 
