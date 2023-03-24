@@ -21,16 +21,27 @@ public class Stockpile extends AbstractOrbCard {
     public Stockpile() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
+
+        showEvokeValue = true;
+        showEvokeOrbCount = magicNumber;
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        showEvokeOrbCount = magicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int orbs = magicNumber;
         atb(new HandSelectAction(1, (c)->true, (cards) -> {
             for (AbstractCard c : cards) {
                 p.hand.moveToDiscardPile(c);
                 c.triggerOnManualDiscard();
                 GameActionManager.incrementDiscard(false);
 
-                att(new ChannelAction(c.type == CardType.POWER ? new Plasma() : new Lightning()));
+                for (int i = 0; i < orbs; ++i)
+                    att(new ChannelAction(c.type == CardType.POWER ? new Plasma() : new Lightning()));
             }
         }, null, DiscardAction.TEXT[0], false, false, false));
     }

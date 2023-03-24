@@ -22,6 +22,7 @@ public class Ambush extends AbstractSummonsCard {
         super(ID, COST, TYPE, RARITY, TARGET);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
+        isEthereal = true;
     }
 
     @Override
@@ -31,6 +32,6 @@ public class Ambush extends AbstractSummonsCard {
 
     @Override
     public void upp() {
-        isInnate = true;
+        isEthereal = false;
     }
 }
