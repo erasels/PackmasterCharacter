@@ -28,6 +28,7 @@ public class ClawPowerPotion extends CustomPotion {
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = Color.TAN.cpy();
+        this.resetTips();
     }
 
 
