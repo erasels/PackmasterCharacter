@@ -12,5 +12,12 @@
     "DESCRIPTIONS": [
       "At the end of your turn, gain #b%s #yTemporary #yHP, then reduce this by #b1."
     ]
+  },
+  "${ModID}:MantisStrikePower": {
+    "NAME": "Mantis Recoil",
+    "DESCRIPTIONS": [
+      "When you fully block any source of damage this turn, deal #b",
+      " damage to a random enemy."
+    ]
   }
 }

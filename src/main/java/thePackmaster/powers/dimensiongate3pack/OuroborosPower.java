@@ -23,7 +23,7 @@ public class OuroborosPower extends AbstractPackmasterPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount < Wiz.p().currentBlock && !triggeredThisTurn) {
+        if (damageAmount <= Wiz.p().currentBlock && !triggeredThisTurn) {
             triggeredThisTurn = true;
             this.flash();
             updateDescription();

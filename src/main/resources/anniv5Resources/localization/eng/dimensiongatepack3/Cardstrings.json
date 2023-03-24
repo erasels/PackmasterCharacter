@@ -8,7 +8,7 @@
   },
   "${ModID}:Inferno": {
     "NAME": "Inferno",
-    "DESCRIPTION": "Deal !D! damage and apply 10 ${ModID}:Ignite to ALL enemies. NL Gain !M! ${ModID}:Ignite."
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Ignite to ALL enemies. NL Add 2 *Burns to your hand."
   },
   "${ModID}:Minniegun": {
     "NAME": "Minniegun",
@@ -21,7 +21,7 @@
   },
   "${ModID}:Corset": {
     "NAME": "Corset",
-    "DESCRIPTION": "Take 3 damage. NL Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Jam to your hand."
   },
   "${ModID}:Jam": {
     "NAME": "Jam",
@@ -29,7 +29,7 @@
   },
   "${ModID}:MantisStrike": {
     "NAME": "Mantis Strike",
-    "DESCRIPTION": "Take 3 damage. NL Deal !${ModID}:sd! damage. NL Deal !D! damage to a random enemy, twice."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat whenever you fully block a source of damage this turn."
   },
   "${ModID}:RestorationDetonation": {
     "NAME": "R. Detonation",
