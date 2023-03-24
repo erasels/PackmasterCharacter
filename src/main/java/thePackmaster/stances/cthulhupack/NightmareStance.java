@@ -4,11 +4,10 @@ import basemod.devcommands.draw.Draw;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
@@ -22,6 +21,7 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
+import thePackmaster.powers.cthulhupack.SanityPower;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.downfallpack.AncientStanceParticleEffect;
 
@@ -77,18 +77,24 @@ public class NightmareStance extends AbstractStance {
 
     @Override
     public void onPlayCard(AbstractCard card) {
-        super.onPlayCard(card);
-        if (card instanceof Madness){
-            atb(new ChangeStanceAction(new NeutralStance()));
-        }
+        Wiz.applyToSelf(new SanityPower(Wiz.p(), -1));
+
     }
 
     @Override
     public void onExitStance() {
-        super.onExitStance();
-        Wiz.atb(new DrawCardAction(2));
-        Wiz.atb(new GainEnergyAction(1));
-        Wiz.atb(new LoseHPAction(Wiz.p(), Wiz.p(), 1));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                this.isDone = true;
+                if (Wiz.p().hasPower(SanityPower.POWER_ID)){
+                    Wiz.p().getPower(SanityPower.POWER_ID).onSpecificTrigger();
+                } else {
+                    Wiz.applyToSelf(new SanityPower(Wiz.p(), -1));
+                }
+            }
+        });
+
     }
 
 

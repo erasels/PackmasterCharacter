@@ -1,26 +1,27 @@
 package thePackmaster.powers.cthulhupack;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.cards.cthulhupack.AbstractCthulhuCard;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class AllSeeingPower extends AbstractPackmasterPower {
-    public static final String POWER_ID = makeID("AllSeeingPower");
+public class AllSeeingPowerTriggerOnCard extends AbstractPackmasterPower {
+    public static final String POWER_ID = makeID("AllSeeingPowerTriggerOnCard");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public AllSeeingPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, amount);
+    public AllSeeingPowerTriggerOnCard(AbstractCreature owner, int amount) {
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
-    public void atStartOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            AbstractCthulhuCard.loseSanity(amount);
-        }
+    @Override
+    public void onSpecificTrigger() {
+        Wiz.atb(new GainBlockAction(Wiz.p(), Wiz.p(), amount));
     }
+
 
     @Override
     public void updateDescription() {

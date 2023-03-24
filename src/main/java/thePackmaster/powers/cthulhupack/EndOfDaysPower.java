@@ -1,15 +1,11 @@
 package thePackmaster.powers.cthulhupack;
 
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
-import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.Dark;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
