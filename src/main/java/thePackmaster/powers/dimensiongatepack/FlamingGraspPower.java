@@ -26,12 +26,11 @@ public class FlamingGraspPower extends AbstractPackmasterPower implements Invisi
     }
 
     @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.hasTag(MAGIC)) {
-            for (int i = 0; i < amount; i++) {
-                addToBot(new MakeTempCardInHandAction(new FlamePillar()));
-            }
-            Wiz.atb(new ReducePowerAction(owner, owner, this, amount));
+    public void atStartOfTurn() {
+        for (int i = 0; i < amount; i++) {
+            addToBot(new MakeTempCardInHandAction(new FlamePillar()));
         }
+        removeThisInvisibly();
     }
+
 }

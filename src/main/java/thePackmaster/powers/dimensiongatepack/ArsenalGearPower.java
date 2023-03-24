@@ -32,12 +32,7 @@ public class ArsenalGearPower extends AbstractPackmasterPower {
         if (!validCards.isEmpty()) {
             c = Wiz.getRandomItem(validCards).makeCopy();
             if (c.cost > 0) {
-                c.cost = 0;
-                c.costForTurn = 0;
-                c.isCostModified = true;
-            }
-            if (!c.exhaust && c.type != AbstractCard.CardType.POWER) {
-                CardModifierManager.addModifier(c, new ExhaustMod());
+                c.modifyCostForCombat(-1);
             }
             addToBot(new MakeTempCardInHandAction(c));
         }
