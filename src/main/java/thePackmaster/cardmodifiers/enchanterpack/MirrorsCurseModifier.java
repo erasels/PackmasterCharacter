@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.enchanterpack.MirrorsCurse;
 import thePackmaster.util.Wiz;
 
@@ -21,11 +22,8 @@ public class MirrorsCurseModifier extends AbstractCardModifier {
     }
 
     public void onInitialApplication(AbstractCard card) {
-        if (card.cardsToPreview != null) {
-            MultiCardPreview.add(card, card.cardsToPreview);
-            card.cardsToPreview = null;
-        }
         MultiCardPreview.add(card, toPlayCard);
+        card.tags.add(SpireAnniversary5Mod.ISCARDMODIFIED);
     }
 
     @Override

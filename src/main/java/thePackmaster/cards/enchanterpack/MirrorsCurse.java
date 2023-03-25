@@ -20,7 +20,7 @@ public class MirrorsCurse extends AbstractEnchanterCard {
 
     public MirrorsCurse(){
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 7;
         exhaust = true;
     }
 
@@ -34,7 +34,7 @@ public class MirrorsCurse extends AbstractEnchanterCard {
         dmg(abstractMonster, AbstractGameAction.AttackEffect.FIRE);
         if (!hasRightNeighbors) neighbors = getNeighbors(); //had to jump through some hoops to give it the right neighbors when played via the modifier
         for (AbstractCard c : neighbors) {
-            addToBot(new SimpleAddModifierAction(new MirrorsCurseModifier(this),c));
+            addToBot(new SimpleAddModifierAction(new MirrorsCurseModifier(this),c, true));
         }
         hasRightNeighbors = false;
     }

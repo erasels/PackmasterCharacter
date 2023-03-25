@@ -13,8 +13,8 @@ public class PolarBlessing extends AbstractEnchanterCard {
     public static final String ID = SpireAnniversary5Mod.makeID("PolarBlessing");
 
     public PolarBlessing(){
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 8;
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 15;
     }
 
     @Override

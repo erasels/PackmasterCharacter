@@ -1,7 +1,7 @@
 {
   "${ModID}:SpellStone": {
     "NAME": "Spell Stone",
-    "DESCRIPTION": "Deal !D! damage. NL Modify adjacent cards until the end of your turn: NL Add !M! Block."
+    "DESCRIPTION": "Deal !D! damage. NL Modify adjacent cards until the end of your turn: NL Grant !M! Block."
   },
   "${ModID}:PolarBlessing": {
     "NAME": "Polar Blessing",
@@ -33,7 +33,7 @@
   },
   "${ModID}:MirrorsCurse": {
     "NAME": "Mirror's Curse",
-    "DESCRIPTION": "Deal !D! damage. NL Modify adjacent cards until the end of combat: NL Play a copy of this. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify adjacent cards: \"Play a copy of *Mirror's *Curse.\" NL Exhaust."
   },
   "${ModID}:BattleFocus": {
     "NAME": "Battle Focus",
