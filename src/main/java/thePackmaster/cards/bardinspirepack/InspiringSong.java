@@ -25,6 +25,8 @@ public class InspiringSong extends AbstractBardCard
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = ORBS;
         secondMagic = baseSecondMagic = INSPIRATION;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = ORBS;
     }
 
     @Override

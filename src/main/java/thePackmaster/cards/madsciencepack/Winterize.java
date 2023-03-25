@@ -17,6 +17,8 @@ public class Winterize extends AbstractMadScienceCard {
     public Winterize() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

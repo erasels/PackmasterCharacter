@@ -21,6 +21,8 @@ public class StrikeOfMidnight extends AbstractStrikePackCard {
     public StrikeOfMidnight() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = ATTACK_DMG;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
         this.tags.add(CardTags.STRIKE);
     }
 
