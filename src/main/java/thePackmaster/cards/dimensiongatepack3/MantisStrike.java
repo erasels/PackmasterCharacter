@@ -18,7 +18,7 @@ public class MantisStrike extends AbstractDimensionalCardInscryp {
     public final static String ID = makeID("MantisStrike");
 
     public MantisStrike() {
-        super(ID, 1, CardRarity.COMMON, CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, 1, CardRarity.COMMON, CardType.ATTACK, CardTarget.ALL_ENEMY);
         baseDamage = 4;
         tags.add(CardTags.STRIKE);
 
@@ -26,8 +26,8 @@ public class MantisStrike extends AbstractDimensionalCardInscryp {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        Wiz.applyToSelf(new MantisStrikePower(p, damage));
         addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        Wiz.applyToSelf(new MantisStrikePower(p, this));
 
     }
 

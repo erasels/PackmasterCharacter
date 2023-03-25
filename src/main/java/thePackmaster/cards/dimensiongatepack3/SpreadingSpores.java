@@ -40,6 +40,7 @@ public class SpreadingSpores extends AbstractDimensionalCardTrain {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

@@ -18,12 +18,11 @@ public class MantisStrikePower extends AbstractPackmasterPower implements NonSta
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private final AbstractCard owningCard;
-
-    public MantisStrikePower(AbstractCreature owner, AbstractCard card) {
+    public MantisStrikePower(AbstractCreature owner, int damageAmount) {
         super(POWER_ID, NAME, PowerType.BUFF, true, owner, 1);
 
-        owningCard = card;
+        amount = damageAmount;
+        updateDescription();
     }
 
     @Override
@@ -31,7 +30,8 @@ public class MantisStrikePower extends AbstractPackmasterPower implements NonSta
         if (damageAmount <= Wiz.p().currentBlock) {
             this.flash();
             updateDescription();
-            addToBot(new AttackDamageRandomEnemyAction(owningCard, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            Wiz.doDmg(Wiz.getRandomEnemy(), amount, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+
         }
         return damageAmount;
     }
