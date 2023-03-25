@@ -31,8 +31,8 @@
   },
   "${ModID}:EndOfDays": {
     "NAME": "End of Days",
-    "DESCRIPTION": "At end of turn, Channel a Dark for each [E] unspent.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Focus. NL At end of turn, Channel a Dark for each [E] unspent."
+    "DESCRIPTION": "At end of turn, Channel 1 Dark for each [E] unspent.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Focus. NL At end of turn, Channel 1 Dark for each [E] unspent."
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "R'lyeh Fhtagn",
@@ -41,6 +41,6 @@
   },
   "${ModID}:StarSpawn": {
     "NAME": "Star Spawn",
-    "DESCRIPTION": "Deal !D! damage twice. NL Heal !M! HP. NL Channel a Plasma. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage twice. NL Heal !M! HP. NL Channel 1 Plasma. NL Exhaust."
   }
 }

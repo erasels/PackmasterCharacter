@@ -18,6 +18,8 @@ public class ElectricWhip extends IntoTheBreachCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         damage = baseDamage = 5;
         this.isMultiDamage = true;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
