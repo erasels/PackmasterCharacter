@@ -32,6 +32,8 @@ public class DrawClawsPotion extends CustomPotion {
     public void initializeData() {
         this.potency = getPotency();
         this.description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
     }
 
     public void use(AbstractCreature target) {
