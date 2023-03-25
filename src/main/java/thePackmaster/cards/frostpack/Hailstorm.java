@@ -23,6 +23,8 @@ public class Hailstorm extends AbstractFrostCard {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = 2;
         baseMagicNumber = magicNumber = 5;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = this.magicNumber;
     }
 
 
@@ -49,6 +51,7 @@ public class Hailstorm extends AbstractFrostCard {
     @Override
     public void upp() {
         upgradeMagicNumber(1);
+        this.showEvokeOrbCount = this.magicNumber;
     }
 
 }

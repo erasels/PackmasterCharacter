@@ -16,6 +16,8 @@ public class Wanderbots extends AbstractContentCard {
     public Wanderbots() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 6;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
