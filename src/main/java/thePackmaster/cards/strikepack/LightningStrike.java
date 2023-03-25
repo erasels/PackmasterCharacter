@@ -16,6 +16,8 @@ public class LightningStrike extends AbstractStrikePackCard {
     public LightningStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 6;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 2;
         this.tags.add(CardTags.STRIKE);
     }
 
