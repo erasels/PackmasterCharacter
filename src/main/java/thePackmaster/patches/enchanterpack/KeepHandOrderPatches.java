@@ -1,16 +1,11 @@
 package thePackmaster.patches.enchanterpack;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.screens.select.HandCardSelectScreen;
 import javassist.CtBehavior;
 import thePackmaster.ThePackmaster;
-
-import javax.smartcardio.Card;
-import java.util.Iterator;
 
 @SpirePatch2(clz = CardGroup.class, method = "refreshHandLayout")
 public class KeepHandOrderPatches {

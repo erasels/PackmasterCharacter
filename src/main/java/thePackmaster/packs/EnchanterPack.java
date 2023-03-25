@@ -1,10 +1,8 @@
 package thePackmaster.packs;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.dragonwrathpack.*;
 import thePackmaster.cards.enchanterpack.*;
 
 import java.util.ArrayList;

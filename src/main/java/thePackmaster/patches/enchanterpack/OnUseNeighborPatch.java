@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import javassist.CtBehavior;
 import thePackmaster.cards.enchanterpack.AbstractEnchanterCard;
-import thePackmaster.packs.EnchanterPack;
 import thePackmaster.util.Wiz;
 
 @SpirePatch2(clz = AbstractPlayer.class, method = "useCard")

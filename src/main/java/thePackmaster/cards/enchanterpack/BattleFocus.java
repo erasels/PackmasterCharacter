@@ -1,11 +1,9 @@
 package thePackmaster.cards.enchanterpack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.enchanterpack.LimitedGambleAction;
 import thePackmaster.powers.enchanterpack.BattleFocusPower;
 
 public class BattleFocus extends AbstractEnchanterCard {
