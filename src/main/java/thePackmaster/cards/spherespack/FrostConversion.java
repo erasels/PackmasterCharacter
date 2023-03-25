@@ -17,6 +17,8 @@ public class FrostConversion extends AbstractSpheresCard {
 
     public FrostConversion() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     @Override

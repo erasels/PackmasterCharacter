@@ -24,6 +24,9 @@ public class MaterialBoost extends AbstractOrbCard {
 
     public MaterialBoost() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+
+        showEvokeValue = true;
+        showEvokeOrbCount = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

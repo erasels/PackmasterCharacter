@@ -15,6 +15,8 @@ public class FrozenMagma extends AbstractSpheresCard {
     public FrozenMagma() {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 3;
     }
 
     @Override
