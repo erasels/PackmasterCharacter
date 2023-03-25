@@ -34,9 +34,7 @@ public class AttackPotionButClaw extends CustomPotion {
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = Color.TAN.cpy();
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("anniv5:modify")), BaseMod.getKeywordDescription("anniv5:modify")));
+        this.resetTips();
     }
 
 
@@ -47,6 +45,13 @@ public class AttackPotionButClaw extends CustomPotion {
         } else {
             this.description = potionStrings.DESCRIPTIONS[0];
         }
+        this.resetTips();
+    }
+
+    private void resetTips() {
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("anniv5:modify")), BaseMod.getKeywordDescription("anniv5:modify")));
     }
 
     public void use(AbstractCreature target) {

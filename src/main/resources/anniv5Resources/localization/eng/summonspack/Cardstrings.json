@@ -45,15 +45,15 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel a ${ModID}:Swarm\u00a0of\u00a0Bees.",
     "FLAVOR": "Absolutely terrifying."
   },
-  "${ModID}:Training": {
-    "NAME": "Training",
-    "DESCRIPTION": "At the end of your turn Evoke your next Orb !M! times.",
-    "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
+  "${ModID}:Specialist": {
+    "NAME": "Specialist",
+    "DESCRIPTION": "Gain !M! Focus. NL Lose 1 Strength and Dexterity.",
+    "FLAVOR": "I skip leg day."
   },
   "${ModID}:Ambush": {
     "NAME": "Ambush",
-    "DESCRIPTION": "Whenever you Channel an Orb, Evoke it without removing it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Channel an Orb, Evoke it without removing it.",
+    "DESCRIPTION": "Ethereal. NL Whenever you Channel an Orb, Evoke it without removing it.",
+    "UPGRADE_DESCRIPTION": "Whenever you Channel an Orb, Evoke it without removing it.",
     "FLAVOR": "I couldn't find good ambush art so have a pun."
   },
   "${ModID}:Pandas": {
