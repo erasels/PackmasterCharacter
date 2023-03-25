@@ -29,6 +29,8 @@ public class RainbowLouse extends AbstractSummonsCard {
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         AnimatedCardsPatch.loadFrames(this, 36, 2f/36f);
         baseMagicNumber = magicNumber = MAGIC;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     @Override
