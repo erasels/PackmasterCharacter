@@ -1,0 +1,17 @@
+{
+  "${ModID}:RedHotSword": {
+    "NAME": "Red Hot Sword",
+    "DESCRIPTION": "Deal !D! Damage. NL This card is not transformed when consumed.",
+    "FLAVOR": "Why choose between stabbing and burning when you can do both?"
+  },
+  "${ModID}:IridiumShield": {
+    "NAME": "Iridium Shield",
+    "DESCRIPTION": "Gain !B! Block. NL This card is not transformed when consumed.",
+    "FLAVOR": "Able to withstand the strongest heat."
+  },
+  "${ModID}:FlameBlast": {
+    "NAME": "Flame Blast",
+    "DESCRIPTION": "Consume a card to Deal !D! damage.",
+    "FLAVOR": "Burninating the spire."
+  }
+}

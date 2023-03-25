@@ -1,0 +1,14 @@
+[
+  {
+    "PROPER_NAME": "Consume",
+    "NAMES": [
+      "Consume",
+      "consume",
+      "Ashes",
+      "ashes",
+      "Ash",
+      "ash"
+    ],
+    "DESCRIPTION": "Consuming a card transforms it into an Ash card. Curse, Status, and Ash cards can't be consumed."
+  }
+]

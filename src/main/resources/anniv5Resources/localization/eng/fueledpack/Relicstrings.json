@@ -1,0 +1,9 @@
+{
+  "${ModID}:ChemistryTextbook": {
+    "NAME": "Chemistry Textbook",
+    "FLAVOR": "It's difficult to turn the oily pages.",
+    "DESCRIPTIONS": [
+      "You can now consume status, curse, and ash cards. NL This exhausts them."
+    ]
+  }
+}

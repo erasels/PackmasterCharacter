@@ -1,0 +1,11 @@
+{
+  "${ModID}:UnquenchablePower": {
+    "NAME": "Unquenchable",
+    "DESCRIPTIONS": [
+      "At the start of your turn #yConsume a card and gain [E]",
+      "At the start of your turn #yConsume #b",
+      " cards and gain #b",
+      " [E]"
+    ]
+  }
+}
