@@ -25,7 +25,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:霜噬 。 NL 进入 ${ModID}:狡诈 。"
 },"${ModID}:EvasiveTactics": {
     "NAME": "规避性策略",
-    "DESCRIPTION": "若回合结束处于 姿态 ， NL 获得 !M! 点 格挡。 NL 获得后的下回合， NL 退出该 姿态 。"
+    "DESCRIPTION": "若回合结束处于 姿态 ， NL 获得 !M! 点 格挡 。 NL 获得后的下回合， NL 退出该 姿态 。"
 },"${ModID}:SinisterConcoction": {
     "NAME": "恶性调制品",
     "DESCRIPTION": "给予 !M! 层 ${ModID}:浸染 。 NL 进入 ${ModID}:恶毒 。 NL 消耗 。"

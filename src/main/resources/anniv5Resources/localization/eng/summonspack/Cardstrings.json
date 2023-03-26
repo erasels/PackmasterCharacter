@@ -1,7 +1,7 @@
 {
   "${ModID}:Leprechaun": {
     "NAME": "Leprechaun",
-    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Leprechaun.",
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 ${ModID}:Leprechaun.",
     "EXTENDED_DESCRIPTION": [
       "Dice",
       "Dice increase the damage or #yBlock of the next card you play that deals damage or #yBlocks.",
@@ -12,12 +12,12 @@
   },
   "${ModID}:Porcupine": {
     "NAME": "Porcupine",
-    "DESCRIPTION": "Channel a ${ModID}:Porcupine. NL Add !M! *Quills into your hand.",
+    "DESCRIPTION": "Channel 1 ${ModID}:Porcupine. NL Add !M! *Quills into your hand.",
     "FLAVOR": "The Silent in animal form."
   },
   "${ModID}:Wolves": {
     "NAME": "Wolves",
-    "DESCRIPTION": "Deal !D! damage. NL Channel a ${ModID}:Wolf.",
+    "DESCRIPTION": "Deal !D! damage. NL Channel 1 ${ModID}:Wolf.",
     "FLAVOR": "Pack animals for the Packmaster."
   },
   "${ModID}:Elephant": {
@@ -27,7 +27,7 @@
   },
   "${ModID}:FireSpirit": {
     "NAME": "Fire Spirit",
-    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Fire\u00a0Spirit.",
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 ${ModID}:Fire\u00a0Spirit.",
     "EXTENDED_DESCRIPTION": [
       "Ignite",
       "Ignited creatures lose #b1 HP per stack at the start of their turn."
@@ -36,24 +36,24 @@
   },
   "${ModID}:RainbowLouse": {
     "NAME": "Rainbow Louse",
-    "DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse.",
-    "UPGRADE_DESCRIPTION": "Channel a ${ModID}:Rainbow\u00a0Louse. NL Draw 1 card.",
+    "DESCRIPTION": "Channel 1 ${ModID}:Rainbow\u00a0Louse.",
+    "UPGRADE_DESCRIPTION": "Channel 1 ${ModID}:Rainbow\u00a0Louse. NL Draw 1 card.",
     "FLAVOR": "The result of an unwise magic experiment."
   },
   "${ModID}:SwarmOfBees": {
     "NAME": "Swarm of Bees",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel a ${ModID}:Swarm\u00a0of\u00a0Bees.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Channel 1 ${ModID}:Swarm\u00a0of\u00a0Bees.",
     "FLAVOR": "Absolutely terrifying."
   },
-  "${ModID}:Training": {
-    "NAME": "Training",
-    "DESCRIPTION": "At the end of your turn Evoke your next Orb !M! times.",
-    "FLAVOR": "It isn't just about what you can summon, but how effectively you can direct them."
+  "${ModID}:Specialist": {
+    "NAME": "Specialist",
+    "DESCRIPTION": "Gain !M! Focus. NL Lose 1 Strength and Dexterity.",
+    "FLAVOR": "I skip leg day."
   },
   "${ModID}:Ambush": {
     "NAME": "Ambush",
-    "DESCRIPTION": "Whenever you Channel an Orb, Evoke it without removing it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Channel an Orb, Evoke it without removing it.",
+    "DESCRIPTION": "Ethereal. NL Whenever you Channel an Orb, Evoke it without removing it.",
+    "UPGRADE_DESCRIPTION": "Whenever you Channel an Orb, Evoke it without removing it.",
     "FLAVOR": "I couldn't find good ambush art so have a pun."
   },
   "${ModID}:Pandas": {

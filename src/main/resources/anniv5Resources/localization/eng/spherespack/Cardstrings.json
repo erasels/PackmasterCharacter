@@ -12,7 +12,7 @@
     "DESCRIPTION": "Gain !B! Block. NL Channel 1 ${ModID}:randomized\u00a0Orb.",
     "EXTENDED_DESCRIPTION": [
       "{0} Sphere",
-      "Gain !B! Block. NL Channel a {0}."
+      "Gain !B! Block. NL Channel 1 {0}."
     ]
   },
   "${ModID}:Winterwisp": {
