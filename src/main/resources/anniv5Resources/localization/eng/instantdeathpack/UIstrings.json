@@ -6,10 +6,10 @@
       "Alchyr"
     ]
   },
-  "${ModID}:InstantDeathHat": {
+  "${ModID}:InstantDeathPackHat": {
     "TEXT": [
-      "The mark of someone to fear.",
-      "Arbiter Hat"
+      "A mark of power.",
+      "Ascended Hat"
     ]
   }
 }

@@ -14,7 +14,7 @@ public class Mirror extends AbstractInstadeathCard {
     public final static String ID = makeID("Mirror");
 
     public Mirror() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
     }
 
     @Override

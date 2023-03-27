@@ -20,7 +20,7 @@ public class Needle extends AbstractInstadeathCard {
 
     public Needle() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 6;
         this.magicNumber = this.baseMagicNumber = 2;
     }
 
