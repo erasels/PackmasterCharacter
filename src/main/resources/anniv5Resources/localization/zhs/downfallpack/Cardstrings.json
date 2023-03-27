@@ -21,8 +21,8 @@
   },
   "${ModID}:HyperBeam": {
     "NAME": "超能射线",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 下回合失去 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 下回合失去 [E] 。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 下回合失去 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点群体伤害。 NL 下回合失去 [E] 。"
   },
   "${ModID}:InvincibleStrength": {
     "NAME": "坚不可摧",

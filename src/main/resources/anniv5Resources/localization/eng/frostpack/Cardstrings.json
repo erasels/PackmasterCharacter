@@ -38,7 +38,8 @@
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Channel !M! Frost."
   },
   "${ModID}:MegaChill": {
-    "NAME": "MegaChill",
-    "DESCRIPTION": "Channel 1 Frost for each *Frozen card in hand. NL ${ModID}:Freeze your hand."
+    "NAME": "Mega Chill",
+    "DESCRIPTION": "Channel !M! Frost for each *Frozen card in hand. NL ${ModID}:Freeze your hand.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Freeze your hand. NL Channel !M! Frost for each *Frozen card in hand."
   }
 }

@@ -33,6 +33,7 @@ public class NuclearFusion extends AbstractGoddessOfExplosionsCard {
         Wiz.atb(new EasyXCostAction(this,(effect, params) -> {
             Wiz.att(new MakeTempCardInHandAction(new Burn(), effect));
             Wiz.att(new HandSelectAction(1, card -> Wiz.getLogicalCardCost(card) <= effect+params[0],
+
                     list -> {
                         for (AbstractCard c : list) {
                             AbstractCard tmp = c.makeStatEquivalentCopy();

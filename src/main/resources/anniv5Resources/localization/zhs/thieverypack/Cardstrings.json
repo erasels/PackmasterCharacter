@@ -30,7 +30,7 @@
   },
   "${ModID}:MindControl": {
     "NAME": "精神操控",
-    "DESCRIPTION": "选择一名生命值不高于 !M! 乘X的敌人。 NL 本场战斗其将攻击其他敌人。 NL 消耗 。",
+    "DESCRIPTION": "选择一名生命值不高于X乘 !M! 的敌人，本场战斗其将攻击其他敌人。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "该敌人生命值过高。"
     ]
