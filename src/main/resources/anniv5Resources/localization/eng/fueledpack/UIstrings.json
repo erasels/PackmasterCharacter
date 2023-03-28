@@ -1,18 +1,17 @@
 {
-  "${ModID}:SummonsPack": {
+  "${ModID}:FueledPack": {
     "TEXT": [
-      "Summoner's Menagerie",
-      "Pack with a variety of orbs. Also an elephant. No foxes.",
+      "Fueled",
+      "Burn your cards to ash in order to fuel a powerful offense.",
       "Bryan K"
     ]
   },
-  "${ModID}:ConsumeCardAction": {
+  "${ModID}:ConsumeUiText": {
     "TEXT": [
-      "consume.",
-      "wut."
+      "consume."
     ]
   },
-  "${ModID}:SummonsPackHat": {
+  "${ModID}:FueledPackHat": {
     "TEXT": [
       "From Mia's point of view, you're the accessory.",
       "Summoned Cat"

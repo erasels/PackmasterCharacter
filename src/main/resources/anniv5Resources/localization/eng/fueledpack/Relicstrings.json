@@ -1,9 +1,9 @@
 {
-  "${ModID}:ChemistryTextbook": {
-    "NAME": "Chemistry Textbook",
+  "${ModID}:FuelTank": {
+    "NAME": "Fuel Tank",
     "FLAVOR": "It's difficult to turn the oily pages.",
     "DESCRIPTIONS": [
-      "You can now consume status, curse, and ash cards. NL This exhausts them."
+      "You can now #y${ModID}:Consume #yStatus, #yCurse, and #yAsh cards. NL Doing so #yExhausts them."
     ]
   }
 }

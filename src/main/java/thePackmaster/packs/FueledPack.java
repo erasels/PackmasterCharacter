@@ -5,8 +5,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.potions.FocusPotion;
 import com.megacrit.cardcrawl.potions.PotionOfCapacity;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.fueledpack.IridiumShield;
-import thePackmaster.cards.fueledpack.RedHotSword;
+import thePackmaster.cards.fueledpack.*;
 
 import java.util.ArrayList;
 
@@ -24,8 +23,18 @@ public class FueledPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(RedHotSword.ID);
+        cards.add(HotAsh.ID);
+        cards.add(GrittyAsh.ID);
+        cards.add(PowderyAsh.ID);
+        cards.add(BurningSword.ID);
         cards.add(IridiumShield.ID);
+        cards.add(FlameBlastMkTwo.ID);
+        cards.add(InfernoMkTwo.ID);
+        cards.add(FlamingLeap.ID);
+        cards.add(SmokeScreen.ID);
+        cards.add(UncontrolledBurn.ID);
+        cards.add(Embers.ID);
+        cards.add(PhoenixHeart.ID);
         return cards;
     }
 

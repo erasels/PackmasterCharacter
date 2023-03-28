@@ -1,11 +1,18 @@
 {
-  "${ModID}:UnquenchablePower": {
-    "NAME": "Unquenchable",
+  "${ModID}:PhoenixHeartPower": {
+    "NAME": "Phoenix Heart",
     "DESCRIPTIONS": [
-      "At the start of your turn #yConsume a card and gain [E]",
-      "At the start of your turn #yConsume #b",
-      " cards and gain #b",
-      " [E]"
+      "The first time each turn you #yConsume a card, gain [E] and draw a card.",
+      "The first #b",
+      " times each turn you #yConsume a card, gain [E] and draw a card."
+    ]
+  },
+  "${ModID}:EmbersPower": {
+    "NAME": "Embers",
+    "DESCRIPTIONS": [
+      "Whenever you create an #yAsh card, #yUpgrade it.",
+      "Whenever you create an #yAsh card, #yUpgrade it #b",
+      " times."
     ]
   }
 }
