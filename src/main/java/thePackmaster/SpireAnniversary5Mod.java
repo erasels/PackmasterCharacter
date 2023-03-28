@@ -3,6 +3,7 @@ package thePackmaster;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.ModPanel;
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomSavable;
 import basemod.devcommands.ConsoleCommand;
 import basemod.eventUtil.AddEventParams;
@@ -1048,6 +1049,7 @@ public class SpireAnniversary5Mod implements
         HashMap<AbstractCard.CardType, Integer> types = new HashMap<>();
         HashMap<AbstractCard.CardRarity, Integer> rarities = new HashMap<>();
         HashMap<AbstractCard.CardColor, Integer> colors = new HashMap<>();
+        int aoeattack = 0;
         int block = 0;
         int exhaust = 0;
         int exhaustive = 0;
@@ -1072,6 +1074,7 @@ public class SpireAnniversary5Mod implements
             types.put(c.type, types.getOrDefault(c.type, 0) + 1);
             rarities.put(c.rarity, rarities.getOrDefault(c.rarity, 0) + 1);
             colors.put(c.color, colors.getOrDefault(c.color, 0) + 1);
+            if (c.type == AbstractCard.CardType.ATTACK && c.baseDamage >= 0 && (boolean)ReflectionHacks.getPrivate(c, AbstractCard.class, "isMultiDamage")) { aoeattack++; }
             if (c.baseBlock >= 0) { block++; }
             if (c.exhaust) { exhaust++; }
             if (ExhaustiveField.ExhaustiveFields.baseExhaustive.get(c) > 0) { exhaustive++; }
@@ -1099,7 +1102,7 @@ public class SpireAnniversary5Mod implements
         SpireAnniversary5Mod.logger.info("Types: " + typeInfo);
         SpireAnniversary5Mod.logger.info("Rarities: " + rarityInfo);
         SpireAnniversary5Mod.logger.info("Colors: " + colorInfo);
-        SpireAnniversary5Mod.logger.info("Mechanics: Block: " + block + ", Exhaust: " + exhaust + ", Exhaustive: " + exhaustive + ", Ethereal: " + ethereal + ", Retain: " + retain + ", Strike: " + strike + ", Healing: " + healing + ", Iron Waves: " + ironwave + ", Multiple upgrades: " + multiUpgrade);
+        SpireAnniversary5Mod.logger.info("Mechanics: AoE damage: " + aoeattack + ", Block: " + block + ", Exhaust: " + exhaust + ", Exhaustive: " + exhaustive + ", Ethereal: " + ethereal + ", Retain: " + retain + ", Strike: " + strike + ", Healing: " + healing + ", Iron Waves: " + ironwave + ", Multiple upgrades: " + multiUpgrade);
         SpireAnniversary5Mod.logger.info("Upgrades that: Reduce cost: " + upgradeCost + ", Remove exhaust: " + upgradeDontExhaust + ", Exhaust to exhaustive: " + upgradeExhaustive + ", Remove ethereal: " + upgradeNotEthereal + ", Add innate: " + upgradeInnate + ", Add retain: " + upgradeRetain);
         SpireAnniversary5Mod.logger.info("Iron waves: " + String.join(", ", ironWaves));
     }
