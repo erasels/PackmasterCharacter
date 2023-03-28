@@ -1,45 +1,36 @@
 package thePackmaster.powers.cosmoscommandpack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.actions.cosmoscommandpack.ExhumeAndAddPurgeAction;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.powers.marisapack.AmplifyPowerHook;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class RecallPower extends AbstractPackmasterPower implements AmplifyPowerHook {
-    public static final String POWER_ID = makeID("RecallPower");
+public class ArcingEnergyPower extends AbstractPackmasterPower implements AmplifyPowerHook {
+    public static final String POWER_ID = makeID("ArcingEnergyPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
-    public int usesThisTurn = 0;
+    public int usesThisTurn;
 
-    public RecallPower(AbstractCreature owner, int amount) {
+    public ArcingEnergyPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
+        usesThisTurn = 0;
     }
 
     @Override
     public void atStartOfTurn() {
         usesThisTurn = 0;
-        updateDescription();
     }
 
     @Override
     public void onAmplify(AbstractCard c) {
         if (usesThisTurn < amount) {
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    flash();
-                    this.isDone = true;
-                }
-            });
-            atb(new WaitAction(0.1F));
-            atb(new ExhumeAndAddPurgeAction());
+            this.flash();
+            atb(new GainEnergyAction(1));
             usesThisTurn++;
             updateDescription();
         }
