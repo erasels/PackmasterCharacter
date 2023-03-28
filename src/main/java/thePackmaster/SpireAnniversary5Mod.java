@@ -31,9 +31,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
@@ -51,7 +49,9 @@ import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
+import thePackmaster.cards.evenoddpack.SwordAndBoard;
 import thePackmaster.cards.ringofpainpack.Slime;
+import thePackmaster.cards.transmutationpack.DimensionalIcicles;
 import thePackmaster.commands.PackAddCommand;
 import thePackmaster.commands.UnlockHatCommand;
 import thePackmaster.events.BlackMarketDealerEvent;
@@ -110,6 +110,7 @@ import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.CHOICE;
@@ -498,6 +499,7 @@ public class SpireAnniversary5Mod implements
     public void receivePostInitialize() {
         declarePacks();
         logger.info("Full list of packs: " + unfilteredAllPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
+        logCardStats();
 
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
@@ -1026,6 +1028,80 @@ public class SpireAnniversary5Mod implements
                 SpireAnniversary5Mod.logger.error("Please fill out the ratings and tags before releasing pack " + p.packID);
             }
         }
+    }
+
+    public static void logCardStats() {
+        // This is here so that developers putting together stats can enable and run it without making things take longer
+        // to load for everyone (even if the impact is only in the range of 10-20ms)
+        // Could be done with some kind of build config for this, but implementing that seems like overkill given that the
+        // goal here is to let one or two developers occasional calculate these numbers for informational purposes
+        if (true) {
+            return;
+        }
+        SpireAnniversary5Mod.logger.info("Calculating card statistics");
+        List<AbstractCard> cards = SpireAnniversary5Mod.unfilteredAllPacks.stream()
+                .flatMap(p -> p.getCards().stream())
+                .map(CardLibrary::getCard)
+                .collect(Collectors.toList());
+        HashMap<Integer, Integer> costs = new HashMap<>();
+        HashMap<AbstractCard.CardType, Integer> types = new HashMap<>();
+        HashMap<AbstractCard.CardRarity, Integer> rarities = new HashMap<>();
+        HashMap<AbstractCard.CardColor, Integer> colors = new HashMap<>();
+        int block = 0;
+        int exhaust = 0;
+        int ethereal = 0;
+        int retain = 0;
+        int strike = 0;
+        int healing = 0;
+        List<String> notIronWaves = Arrays.asList(DimensionalIcicles.ID, SwordAndBoard.ID);
+        List<String> ironWaves = new ArrayList<>();
+        int ironwave = 0;
+        int upgradeCost = 0;
+        int upgradeDontExhaust = 0;
+        int upgradeNotEthereal = 0;
+        int upgradeRetain = 0;
+        int upgradeInnate = 0;
+        for (AbstractCard c : cards) {
+            AbstractCard cu = c.makeCopy();
+            cu.upgrade();
+            costs.put(c.cost, costs.getOrDefault(c.cost, 0) + 1);
+            types.put(c.type, types.getOrDefault(c.type, 0) + 1);
+            rarities.put(c.rarity, rarities.getOrDefault(c.rarity, 0) + 1);
+            colors.put(c.color, colors.getOrDefault(c.color, 0) + 1);
+            if (c.baseBlock >= 0) { block++; }
+            if (c.exhaust) { exhaust++; }
+            if (c.isEthereal) { ethereal++; }
+            if (c.selfRetain) { retain++; }
+            if (c.hasTag(AbstractCard.CardTags.STRIKE)) { strike++; }
+            if (c.hasTag(AbstractCard.CardTags.HEALING)) { healing++; }
+            if (c.type == AbstractCard.CardType.ATTACK && c.baseDamage > 0 && c.baseBlock > 0 && !notIronWaves.contains(c.cardID)) { ironwave++; ironWaves.add(c.name); }
+            if (c.cost > cu.cost) { upgradeCost++; }
+            if (c.exhaust && !cu.exhaust) { upgradeDontExhaust++; }
+            if (c.isEthereal && !cu.isEthereal) { upgradeNotEthereal++; }
+            if (!c.selfRetain && cu.selfRetain) { upgradeRetain++; }
+            if (!c.isInnate && cu.isInnate) { upgradeInnate++; }
+        }
+
+        Function<String, String> formatName = s -> s.substring(0, 1).toUpperCase(Locale.ROOT) + s.substring(1).toLowerCase(Locale.ROOT);
+        String costInfo = getSummaryString(costs, e -> e, k -> k + "");
+        String typeInfo = getSummaryString(types, Enum::ordinal, k -> formatName.apply(k.name()));
+        String rarityInfo = getSummaryString(rarities, Enum::ordinal, k -> formatName.apply(k.name()));
+        String colorInfo = getSummaryString(colors, Enum::ordinal, k -> formatName.apply(k.name()));
+        SpireAnniversary5Mod.logger.info("Cards: " + cards.size());
+        SpireAnniversary5Mod.logger.info("Costs: " + costInfo);
+        SpireAnniversary5Mod.logger.info("Types: " + typeInfo);
+        SpireAnniversary5Mod.logger.info("Rarities: " + rarityInfo);
+        SpireAnniversary5Mod.logger.info("Colors: " + colorInfo);
+        SpireAnniversary5Mod.logger.info("Mechanics: Block: " + block + ", Exhaust: " + exhaust + ", Ethereal: " + ethereal + ", Retain: " + retain + ", Strike: " + strike + ", Healing: " + healing + ", Iron Waves: " + ironwave);
+        SpireAnniversary5Mod.logger.info("Upgrades that: Reduce cost: " + upgradeCost + ", Remove exhaust: " + upgradeDontExhaust + ", Remove ethereal: " + upgradeNotEthereal + ", Add innate: " + upgradeInnate + ", Add retain: " + upgradeRetain);
+        SpireAnniversary5Mod.logger.info("Iron waves: " + String.join(", ", ironWaves));
+    }
+
+    private static <T> String getSummaryString(HashMap<T, Integer> m, Function<T, Integer> getComparisonValue, Function<T, String> getName) {
+        return m.entrySet().stream()
+                .sorted(Comparator.comparingInt(e -> getComparisonValue.apply(e.getKey())))
+                .map(e -> getName.apply(e.getKey()) + ": " + e.getValue())
+                .collect(Collectors.joining(", "));
     }
 
     @Override
