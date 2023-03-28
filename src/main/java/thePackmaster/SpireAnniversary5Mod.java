@@ -1105,6 +1105,19 @@ public class SpireAnniversary5Mod implements
         SpireAnniversary5Mod.logger.info("Mechanics: AoE damage: " + aoeattack + ", Block: " + block + ", Exhaust: " + exhaust + ", Exhaustive: " + exhaustive + ", Ethereal: " + ethereal + ", Retain: " + retain + ", Strike: " + strike + ", Healing: " + healing + ", Iron Waves: " + ironwave + ", Multiple upgrades: " + multiUpgrade);
         SpireAnniversary5Mod.logger.info("Upgrades that: Reduce cost: " + upgradeCost + ", Remove exhaust: " + upgradeDontExhaust + ", Exhaust to exhaustive: " + upgradeExhaustive + ", Remove ethereal: " + upgradeNotEthereal + ", Add innate: " + upgradeInnate + ", Add retain: " + upgradeRetain);
         SpireAnniversary5Mod.logger.info("Iron waves: " + String.join(", ", ironWaves));
+
+        HashSet<String> cardNames = new HashSet<>();
+        boolean foundDuplicate = false;
+        for (AbstractCard card : cards) {
+            if(cardNames.contains(card.name)) {
+                SpireAnniversary5Mod.logger.info("Duplicate card name: " + card.name);
+                foundDuplicate = true;
+            }
+            cardNames.add(card.name);
+        }
+        if (!foundDuplicate) {
+            SpireAnniversary5Mod.logger.info("No duplicate card names.");
+        }
     }
 
     private static <T> String getSummaryString(HashMap<T, Integer> m, Function<T, Integer> getComparisonValue, Function<T, String> getName) {
