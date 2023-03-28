@@ -24,6 +24,7 @@ public class ArcingEnergyPower extends AbstractPackmasterPower implements Amplif
     @Override
     public void atStartOfTurn() {
         usesThisTurn = 0;
+        updateDescription();
     }
 
     @Override
