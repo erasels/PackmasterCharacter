@@ -1082,7 +1082,7 @@ public class SpireAnniversary5Mod implements
             if (c.selfRetain) { retain++; }
             if (c.hasTag(AbstractCard.CardTags.STRIKE)) { strike++; }
             if (c.hasTag(AbstractCard.CardTags.HEALING)) { healing++; }
-            if (c.type == AbstractCard.CardType.ATTACK && c.baseDamage > 0 && c.baseBlock > 0 && !notIronWaves.contains(c.cardID)) { ironwave++; ironWaves.add(c.name); }
+            if (c.type == AbstractCard.CardType.ATTACK && c.baseDamage >= 0 && c.baseBlock >= 0 && !notIronWaves.contains(c.cardID)) { ironwave++; ironWaves.add(c.name); }
             if (c.cost > cu.cost) { upgradeCost++; }
             if (c.exhaust && !cu.exhaust && ExhaustiveField.ExhaustiveFields.baseExhaustive.get(cu) == -1) { upgradeDontExhaust++; }
             if (c.exhaust && !cu.exhaust && ExhaustiveField.ExhaustiveFields.baseExhaustive.get(cu) > 0) { upgradeExhaustive++; }
