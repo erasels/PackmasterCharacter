@@ -1,4 +1,8 @@
 {
+  "${ModID}:ArcingEnergy": {
+    "NAME": "Arcing Energy",
+    "DESCRIPTION": "The first time a card is ${ModID}:Amplified each turn, gain [E] ."
+  },
   "${ModID}:AstralFracture": {
     "NAME": "Astral Fracture",
     "DESCRIPTION": "Apply !M! ${ModID}:Distortion to ALL enemies. NL ${ModID}:Amplify [E] : Exhaust a card."
@@ -18,10 +22,6 @@
   "${ModID}:HeatEngine": {
     "NAME": "Heat Engine",
     "DESCRIPTION": "Whenever a card with a cost of 2 or greater, including ${ModID}:Amplify, is Exhausted, gain !M! Strength."
-  },
-  "${ModID}:Recall": {
-    "NAME": "Recall",
-    "DESCRIPTION": "The first time a card is ${ModID}:Amplified each turn, put a card from your Exhaust pile into your hand. It gains stslib:Purge."
   },
   "${ModID}:RefractEnergy": {
     "NAME": "Refract Energy",

@@ -3,7 +3,6 @@ package thePackmaster.cards.cosmoscommandpack;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.cosmoscommandpack.FalseGritAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.marisapack.AmplifyCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
