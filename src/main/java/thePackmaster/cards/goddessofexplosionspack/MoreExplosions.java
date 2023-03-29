@@ -1,5 +1,6 @@
 package thePackmaster.cards.goddessofexplosionspack;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -55,6 +56,9 @@ public class MoreExplosions extends AbstractGoddessOfExplosionsCard {
             if (eligibleCards.size() > 0)
             powerList.add(eligibleCards.get(AbstractDungeon.cardRandomRng.random(0, eligibleCards.size() - 1)).makeCopy());
         }
+
+        // Draw.
+        Wiz.atb(new DrawCardAction(magicNumber));
 
         // Shuffle powers into draw pile.
         for(AbstractCard c : powerList)
