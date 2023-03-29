@@ -1,0 +1,18 @@
+{
+  "${ModID}:GlockOn": {
+    "NAME": "Glock-on",
+    "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by Focus and Lock-on."
+  },
+  "${ModID}:LocknLoad": {
+    "NAME": "Lock'n'Load",
+    "DESCRIPTION": "Apply !M! Lock-on. NL Channel !M! Lightning."
+  },
+  "${ModID}:Reiji": {
+    "NAME": "Reiji",
+    "DESCRIPTION": "{@@}Innate. NL Apply !${ModID}:m2! Lock-on.{!M!|>0= NL If the target already had Lock-on, gain !M! Focus.} NL Exhaust."
+  },
+  "${ModID}:Sharpshooter": {
+    "NAME": "Sharpshooter",
+    "DESCRIPTION": "Channel !M! Lightning. NL if the target has Lock-on, NL gain [E] and draw a card."
+  }
+}
