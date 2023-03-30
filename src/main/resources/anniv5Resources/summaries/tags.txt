@@ -39,6 +39,7 @@ GraveyardPack	Exhaust
 HermitPack	None
 HighEnergyPack	None
 InfestPack	None
+InstantDeathPack	Attacks
 IntoTheBreachPack	None
 IntriguePack	None
 IroncladPack	Strength
