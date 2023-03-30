@@ -26,12 +26,18 @@ public class GemOfUnity extends AbstractPackmasterRelic {
     public GemOfUnity() {
         super(ID, RelicTier.UNCOMMON, LandingSound.FLAT);
         resetCounter();
+    }
+
+    @Override
+    public void atBattleStartPreDraw() {
+        resetCounter();
         description = getUpdatedDescription();
     }
 
     @Override
     public void onVictory() {
         resetCounter();
+        description = DESCRIPTIONS[0];
     }
 
     public void resetCounter(){
