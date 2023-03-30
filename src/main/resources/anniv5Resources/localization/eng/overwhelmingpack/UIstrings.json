@@ -1,0 +1,15 @@
+{
+  "${ModID}:OverwhelmingPack": {
+    "TEXT": [
+      "Overwhelming",
+      "Overcome expensive costs through sheer determination.",
+      "Mixmaw, Alchyr"
+    ]
+  },
+  "${ModID}:OverwhelmingPackHat": {
+    "TEXT": [
+      "description",
+      "name"
+    ]
+  }
+}

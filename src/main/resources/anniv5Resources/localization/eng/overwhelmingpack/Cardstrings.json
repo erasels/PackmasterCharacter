@@ -1,0 +1,46 @@
+{
+  "${ModID}:Lariat": {
+    "NAME": "Lariat",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Your next Skill costs 0."
+  },
+  "${ModID}:GigaDrill": {
+    "NAME": "Giga Drill",
+    "DESCRIPTION": "Deal !D! damage for each [E] this card costs. NL Increase this card's cost by 1 this combat."
+  },
+  "${ModID}:OpeningStrike": {
+    "NAME": "Opening Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of all cards in your hand by 1 this turn."
+  },
+  "${ModID}:Withstand": {
+    "NAME": "Withstand",
+    "DESCRIPTION": "Retain. NL Gain !B! Block X times."
+  },
+  "${ModID}:Approach": {
+    "NAME": "Approach",
+    "DESCRIPTION": "Scry !M!. NL Draw cards until you draw a 1 cost."
+  },
+  "${ModID}:SheerEffort": {
+    "NAME": "Sheer Effort",
+    "DESCRIPTION": "Play !M! cards in your hand. NL Increase their costs by 1 this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play !M! cards in your hand. NL Increase their costs by 1 this combat."
+  },
+  "${ModID}:Overcome": {
+    "NAME": "Overcome",
+    "DESCRIPTION": "Whenever you play a card with an original cost higher than your [E], gain !M! Block."
+  },
+  "${ModID}:FurtherBeyond": {
+    "NAME": "Further Beyond",
+    "DESCRIPTION": "Can only be played if you have no [E]. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "I have too much ENERGY."
+    ]
+  },
+  "${ModID}:MakeRoom": {
+    "NAME": "Make Room",
+    "DESCRIPTION": "Draw !M! cards. NL For each, if your hand is full, play the leftmost card in your hand first."
+  },
+  "${ModID}:FinalForm": {
+    "NAME": "Final Form",
+    "DESCRIPTION": "Add 2 random Form Powers to your hand. NL They cost !M! less this combat."
+  }
+}

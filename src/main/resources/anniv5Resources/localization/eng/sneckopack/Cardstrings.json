@@ -26,7 +26,7 @@
   },
   "${ModID}:Gulp": {
     "NAME": "Meal Prep",
-    "DESCRIPTION" : "Deal !D! damage for each energy this card costs."
+    "DESCRIPTION" : "Deal !D! damage for each [E] this card costs."
   },
   "${ModID}:SnazzySwagger": {
     "NAME": "Snazzy Swagger",
