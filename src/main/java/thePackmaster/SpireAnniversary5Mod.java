@@ -1115,7 +1115,6 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public int receiveOnPlayerLoseBlock(int i) {
-        GolfBall.BLOCK_AMT_LOST = i;
         i = Serene.receiveOnPlayerLoseBlock(i);
         return i;
     }

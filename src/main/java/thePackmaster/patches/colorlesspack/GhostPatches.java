@@ -21,7 +21,7 @@ import thePackmaster.vfx.colorlesspack.PurpleNonmovingBlur;
 
 public class GhostPatches {
     @SpirePatch(clz = GameActionManager.class, method = "getNextAction")
-    public static class MakeStatEquivalentCopy {
+    public static class GhostSubvertPlay {
         @SpireInsertPatch(locator = Locator.class)
         public static void Insert(GameActionManager __instance) {
             AbstractCard c = __instance.cardQueue.get(0).card;
