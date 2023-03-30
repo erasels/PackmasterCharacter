@@ -16,7 +16,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Needle extends AbstractInstadeathCard {
     public final static String ID = makeID("Needle");
 
-    private static final int VIGOR = 3;
+    private static final int PRECISION = 3;
 
     public Needle() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -34,7 +34,7 @@ public class Needle extends AbstractInstadeathCard {
             int amt = 0;
             for (AbstractCard c : cards) {
                 if (c.type == CardType.SKILL) {
-                    amt += VIGOR;
+                    amt += PRECISION;
                 }
             }
             if (amt > 0) {
@@ -44,6 +44,7 @@ public class Needle extends AbstractInstadeathCard {
     }
 
     public void upp() {
+        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

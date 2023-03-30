@@ -18,7 +18,7 @@ public class Nail extends AbstractInstadeathCard {
     public Nail() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = 6;
-        this.magicNumber = this.baseMagicNumber = 9;
+        this.magicNumber = this.baseMagicNumber = 6;
     }
 
     @Override
@@ -35,6 +35,6 @@ public class Nail extends AbstractInstadeathCard {
 
     public void upp() {
         upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }
