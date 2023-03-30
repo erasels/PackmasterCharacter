@@ -92,8 +92,8 @@
   },
   "${ModID}:BulwarkPackHat": {
     "TEXT": [
-      "TBD",
-      "TBD"
+      "绝对的防御性。",
+      "头堡"
     ]
   },
   "${ModID}:PackMainMenuUI": {
@@ -207,5 +207,19 @@
       "Tokens":   "代币牌",
       "Powers":   "能力"
     }
+  },
+  "${ModID}:MerchantSpeech": {
+    "TEXT": [
+      "@真漂亮的帽子@",
+      "和我打交道要比在黑市好",
+      "你那个背包真 ~大~",
+      "你这样的家伙我最近看见几回了"
+    ]
+  },
+  "${ModID}:MerchantEndingSpeech": {
+    "TEXT": [
+      "所以你那里面装的到底是什么？",
+      "也许有一天他们会做出最终卡包。"
+    ]
   }
 }

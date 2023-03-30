@@ -32,6 +32,8 @@ public class Sphere extends AbstractSpheresCard implements CustomSavable<Integer
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.orb = orb;
         this.baseBlock = BLOCK;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
         this.updateNameAndDescription();
     }
 

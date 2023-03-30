@@ -21,6 +21,15 @@ public class Emptiness extends AbstractOrbCard {
     public Emptiness() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
+
+        showEvokeValue = true;
+        showEvokeOrbCount = magicNumber;
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        showEvokeOrbCount = magicNumber;
     }
 
     @Override
@@ -42,5 +51,6 @@ public class Emptiness extends AbstractOrbCard {
 
     public void upp() {
         upgradeMagicNumber(1);
+        showEvokeOrbCount = magicNumber;
     }
 }

@@ -20,7 +20,7 @@ public class ExtendedStallPower extends AbstractPackmasterPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         Wiz.atb(new ExtendedStallAction(this.amount));
     }
 

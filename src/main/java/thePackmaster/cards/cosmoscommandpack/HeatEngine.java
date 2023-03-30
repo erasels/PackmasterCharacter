@@ -2,7 +2,6 @@ package thePackmaster.cards.cosmoscommandpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.cosmoscommandpack.HeatEnginePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
