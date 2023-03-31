@@ -23,6 +23,7 @@ public class PrismShardPower extends AbstractPackmasterPower implements NonStack
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     private boolean upgraded;
+    private static final int NUM_NEEDED = 3;
 
     public PrismShardPower(boolean upgraded) {
         super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, 1);
@@ -35,11 +36,11 @@ public class PrismShardPower extends AbstractPackmasterPower implements NonStack
 
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        if (this.amount >= 3) {
+        if (this.amount >= NUM_NEEDED) {
             AbstractCard q = new ThePrism();
             if (upgraded) q.upgrade();
             addToTop(new MakeTempCardInHandAction(q));
-            this.amount -= 10;
+            this.amount -= NUM_NEEDED;
             if (this.amount <= 0) {
                 this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             }

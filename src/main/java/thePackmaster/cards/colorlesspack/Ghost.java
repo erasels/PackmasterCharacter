@@ -15,7 +15,6 @@ import thePackmaster.cardmodifiers.colorlesspack.IsGhostModifier;
 import thePackmaster.powers.colorlesspack.GhostPower;
 import thePackmaster.util.Wiz;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -47,7 +46,7 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
     }
 
     private static boolean canDisguiseAs(AbstractCard target) {
-        return target.cost != -2 && !target.cardID.equals(Ghost.ID) && !target.cardID.equals(ThePrism.ID);
+        return target.cost != -2 && !target.cardID.equals(Ghost.ID) && !target.cardID.equals(ThePrism.ID) && !CardModifierManager.hasModifier(target, IsGhostModifier.ID);
     }
 
     @Override
