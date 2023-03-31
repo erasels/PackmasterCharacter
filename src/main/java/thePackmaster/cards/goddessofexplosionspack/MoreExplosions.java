@@ -23,7 +23,7 @@ public class MoreExplosions extends AbstractGoddessOfExplosionsCard {
     public final static String ID = makeID("MoreExplosions");
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("PlayTwiceUI"));
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int MAGIC_UP = 1;
 
     public MoreExplosions() {
