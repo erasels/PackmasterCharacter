@@ -32,7 +32,7 @@ public class HardCaramelPower extends AbstractPackmasterPower{
                 public void update() {
                     if (!realtarget.hasPower(VulnerablePower.POWER_ID)) {
                         HardCaramelPower.this.flash();
-                        Wiz.att(new ApplyPowerAction(realtarget, realtarget, new VulnerablePower(realtarget, 1, false), 1));
+                        Wiz.att(new ApplyPowerAction(realtarget, owner, new VulnerablePower(realtarget, 1, false), 1));
                     }
                     isDone = true;
                 }

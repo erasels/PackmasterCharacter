@@ -17,9 +17,9 @@
   "${ModID}:LunchBoxPower": {
     "NAME": "Lunch Box",
     "DESCRIPTIONS": [
-      "The next Colorless card you play this turn is played twice.",
-      "The next #b",
-      " Colorless cards you play this turn are played twice."
+      "Your next Colorless card is played twice this turn.",
+      "Your next #b",
+      " Colorless cards are played twice this turn."
     ]
   },
   "${ModID}:MonasteryPower": {

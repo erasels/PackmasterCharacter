@@ -1,11 +1,11 @@
 {
   "${ModID}:ShedWeight": {
     "NAME": "Shed Weight",
-    "DESCRIPTION": "Gain !B! Block. NL Discard a card. NL If that card was [#EFC851]Unplayable, draw a card."
+    "DESCRIPTION": "Gain !B! Block. NL Discard a card. NL If that card was *Unplayable, draw a card."
   },
   "${ModID}:RayOfFrost": {
     "NAME": "Ray Of Frost",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL Whenever you play a *Magic card this turn, Channel !M! Frost."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Channel !M! Frost."
   },
   "${ModID}:Swipe": {
     "NAME": "Swipe",
@@ -23,11 +23,11 @@
   },
   "${ModID}:EldritchBlast": {
     "NAME": "Eldritch Blast",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage. Reduce the cost of a random *Magic card in hand by 1 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a Power, return this from your discard pile to your hand."
   },
   "${ModID}:DeathWish": {
     "NAME": "Death Wish",
-    "DESCRIPTION": "If your HP is above 50%, lose !M! HP. NL Gain !M! Strength and [#EFC851]Vigor."
+    "DESCRIPTION": "If your HP is above 50%, lose !M! HP. NL Gain !M! Strength and *Vigor."
   },
   "${ModID}:KillerInstinct": {
     "NAME": "Killer Instinct",
