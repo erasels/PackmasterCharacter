@@ -24,7 +24,6 @@ public class ThePrism extends AbstractColorlessPackCard implements StartupCard {
         this.showPreview = showPreview;
         baseDamage = 8;
         baseMagicNumber = magicNumber = 8;
-        selfRetain = true;
         if (showPreview) cardsToPreview = new PrismShard(false);
     }
 

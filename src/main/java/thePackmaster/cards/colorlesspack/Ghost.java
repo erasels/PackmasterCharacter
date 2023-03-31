@@ -14,7 +14,9 @@ import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import thePackmaster.cardmodifiers.colorlesspack.IsGhostModifier;
 import thePackmaster.powers.colorlesspack.GhostPower;
 import thePackmaster.util.Wiz;
+import thePackmaster.vfx.transmutationpack.TransmuteCardEffect;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -66,6 +68,9 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
                     } else {
                         AbstractDungeon.player.drawPile.addToRandomSpot(disguise);
                     }
+                    HashMap<AbstractCard, AbstractCard> toFrom = new HashMap<>();
+                    toFrom.put(Ghost.this.makeStatEquivalentCopy(), disguise.makeStatEquivalentCopy());
+                    AbstractDungeon.effectsQueue.add(new TransmuteCardEffect(toFrom, 0.5F));
                 }
             }
         });
