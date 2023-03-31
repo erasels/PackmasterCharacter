@@ -1,3 +1,14 @@
 {
-
+  "${ModID}:BlockOnPower": {
+    "NAME": "Block-On",
+    "DESCRIPTIONS": [
+      "Whenever you are attacked this turn, apply #b%d #yLock-On back."
+    ]
+  },
+  "${ModID}:TunnelVisionPower": {
+    "NAME": "Tunnel Vision",
+    "DESCRIPTIONS": [
+      "#yLock-On further increases #yOrb damage by #b25% per additional #yLock-On."
+    ]
+  }
 }

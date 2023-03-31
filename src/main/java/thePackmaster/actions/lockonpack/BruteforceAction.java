@@ -38,5 +38,6 @@ public class BruteforceAction
                 isDone = true;
             }
         });
+        isDone = true;
     }
 }

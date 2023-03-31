@@ -23,15 +23,18 @@ public class LockonPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(GlockOn.ID);
-        cards.add(Reiji.ID);
-        cards.add(LocknLoad.ID);
-        cards.add(Sharpshooter.ID);
-        cards.add(LockOn.ID);
         cards.add(AC.ID);
         cards.add(DC.ID);
-
+        cards.add(BlockOn.ID);
+        cards.add(Bruteforce.ID);
         cards.add(GatheringStorm.ID);
+        cards.add(GlockOn.ID);
+        cards.add(LocknLoad.ID);
+        cards.add(Reiji.ID);
+        cards.add(Sharpshooter.ID);
+        cards.add(TunnelVision.ID);
+        cards.add(LockOn.ID);
+
         return cards;
     }
 }

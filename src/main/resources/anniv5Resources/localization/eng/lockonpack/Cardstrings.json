@@ -1,18 +1,42 @@
 {
+  "${ModID}:AC": {
+    "NAME": "AC",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Add a DC{!Upgrades!|>0=+} to your hand."
+  },
+  "${ModID}:DC": {
+    "NAME": "DC",
+    "DESCRIPTION": "{@@}Retain. NL Channel a Lightning. NL Trigger its{!Upgrades!|>0= passive and} Evoke effects. NL Exhaust."
+  },
+  "${ModID}:BlockOn": {
+    "NAME": "BLock-On",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! Lock-On back."
+  },
+  "${ModID}:Bruteforce": {
+    "NAME": "Bruteforce",
+    "DESCRIPTION": "Evoke your rightmost Lightning !M! times. NL Exhaust."
+  },
+  "${ModID}:GatheringStorm": {
+    "NAME": "Gathering Storm",
+    "DESCRIPTION": "{@@}Channel a Lightning for each{!Upgrades!|0= non-Lightning} Orb Channeled."
+  },
   "${ModID}:GlockOn": {
-    "NAME": "Glock-on",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by Focus and Lock-on."
+    "NAME": "GLock-On",
+    "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by Focus and Lock-On."
   },
   "${ModID}:LocknLoad": {
     "NAME": "Lock'n'Load",
-    "DESCRIPTION": "Apply !M! Lock-on. NL Channel !M! Lightning."
+    "DESCRIPTION": "Apply !M! Lock-On. NL Channel !M! Lightning."
   },
   "${ModID}:Reiji": {
     "NAME": "Reiji",
-    "DESCRIPTION": "{@@}Innate. NL Apply !${ModID}:m2! Lock-on.{!M!|>0= NL If the target already had Lock-on, gain !M! Focus.} NL Exhaust."
+    "DESCRIPTION": "{@@}Innate. NL Apply !${ModID}:m2! Lock-On.{!M!|>0= NL If the target already had Lock-On, gain !M! Focus.} NL Exhaust."
   },
   "${ModID}:Sharpshooter": {
     "NAME": "Sharpshooter",
-    "DESCRIPTION": "Channel !M! Lightning. NL if the target has Lock-on, NL gain [E] and draw a card."
+    "DESCRIPTION": "Channel !M! Lightning. NL if the target has Lock-On, NL gain [E] and draw a card."
+  },
+  "${ModID}:TunnelVision": {
+    "NAME": "Tunnel Vision",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Apply !M! Lock-On to ALL enemies. NL }Lock-On further increases Orb damage by 25% per additional Lock-On."
   }
 }

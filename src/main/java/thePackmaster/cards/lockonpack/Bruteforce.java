@@ -1,11 +1,7 @@
 package thePackmaster.cards.lockonpack;
 
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.Lightning;
 import thePackmaster.actions.lockonpack.BruteforceAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

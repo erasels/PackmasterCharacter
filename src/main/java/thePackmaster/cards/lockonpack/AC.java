@@ -17,6 +17,7 @@ public class AC extends AbstractLockonCard {
     public AC() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = 10;
+        cardsToPreview = new DC();
     }
 
     @Override
