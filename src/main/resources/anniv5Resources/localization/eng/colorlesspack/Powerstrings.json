@@ -25,15 +25,9 @@
   "${ModID}:MonasteryPower": {
     "NAME": "Visiting a Monastery",
     "DESCRIPTIONS": [
-      "At the start of your next",
-      " turn, ",
-      " #b",
-      " turns, ",
-      "add ",
-      ", ",
-      ", and ",
-      " and ",
-      " into your hand in order."
+      "At the start of your next #b3 turns, add #yMadness, #yPurity, and #yApotheosis into your hand.",
+      "At the start of your next #b2 turns, add #yPurity and #yApotheosis into your hand.",
+      "At the start of your next turn, add #yApotheosis into your hand."
     ]
   },
   "${ModID}:PrismShardPower": {

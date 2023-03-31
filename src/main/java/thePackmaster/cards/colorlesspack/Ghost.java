@@ -70,7 +70,7 @@ public class Ghost extends AbstractColorlessPackCard implements StartupCard {
                     }
                     HashMap<AbstractCard, AbstractCard> toFrom = new HashMap<>();
                     toFrom.put(Ghost.this.makeStatEquivalentCopy(), disguise.makeStatEquivalentCopy());
-                    AbstractDungeon.effectsQueue.add(new TransmuteCardEffect(toFrom, 0.5F));
+                    AbstractDungeon.effectsQueue.add(new TransmuteCardEffect(toFrom, 1F));
                 }
             }
         });
