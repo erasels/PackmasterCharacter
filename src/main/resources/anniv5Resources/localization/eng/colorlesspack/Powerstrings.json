@@ -19,7 +19,7 @@
     "DESCRIPTIONS": [
       "Your next Colorless card is played twice this turn.",
       "Your next #b",
-      " Colorless cards you play this turn are played twice."
+      " Colorless cards are played twice this turn."
     ]
   },
   "${ModID}:MonasteryPower": {
