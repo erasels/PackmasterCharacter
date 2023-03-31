@@ -17,7 +17,7 @@ public class GhostPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public GhostPower(AbstractMonster target, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, false, target, amount);
+        super(POWER_ID, NAME, PowerType.DEBUFF, false, target, amount);
     }
 
     @Override
