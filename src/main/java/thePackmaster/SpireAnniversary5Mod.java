@@ -7,6 +7,7 @@ import basemod.abstracts.CustomSavable;
 import basemod.devcommands.ConsoleCommand;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
+import basemod.helpers.BaseModCardTags;
 import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
@@ -65,6 +66,7 @@ import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
+import thePackmaster.patches.overwhelmingpack.MakeRoomPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.patches.sneckopack.EnergyCountPatch;
@@ -96,6 +98,7 @@ import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
+import thePackmaster.util.Wiz;
 import thePackmaster.util.creativitypack.JediUtil;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
@@ -545,6 +548,8 @@ public class SpireAnniversary5Mod implements
 
         ConsoleCommand.addCommand("addhat", UnlockHatCommand.class);
         ConsoleCommand.addCommand("pack", PackAddCommand.class);
+
+        genFormPool();
     }
 
     public static void addPotions() {
@@ -813,6 +818,7 @@ public class SpireAnniversary5Mod implements
         combatExhausts = 0;
         PenancePower.Power = 20;
         MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
+        MakeRoomPatch.reset();
         EnergyAndEchoPack.resetvalues();
         EnergyCountPatch.energySpentThisCombat = 0;
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
@@ -1120,6 +1126,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         ImproveEffect._clean();
+        MakeRoomPatch.reset();
         DynamicDynamicVariableManager.clearVariables();
         combatExhausts = 0;
     }
@@ -1264,7 +1271,13 @@ public class SpireAnniversary5Mod implements
                 }
                 for (String packID : strings) {
                     logger.info("adding pack " + packID + " from load");
-                    currentPoolPacks.add(packsByID.get(packID));
+                    AbstractCardPack pack = packsByID.get(packID);
+                    if (pack == null) {
+                        logger.error("Pack not found.");
+                    }
+                    else {
+                        currentPoolPacks.add(pack);
+                    }
                 }
             }
         });
@@ -1309,6 +1322,12 @@ public class SpireAnniversary5Mod implements
     }
 
     public static float time = 0f;
+
+    public static final List<AbstractCard> formCards = new ArrayList<>();
+    private static void genFormPool() {
+        formCards.clear();
+        formCards.addAll(Wiz.getCardsMatchingPredicate((card) -> card.type == AbstractCard.CardType.POWER && card.hasTag(BaseModCardTags.FORM), true));
+    }
 
 
     public static AbstractStance getPackmasterStanceInstance(boolean useCardRng) {

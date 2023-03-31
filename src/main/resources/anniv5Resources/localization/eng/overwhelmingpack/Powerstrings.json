@@ -6,5 +6,12 @@
       "Ignore energy cost on the next #b",
       " #ySkills you play."
     ]
+  },
+  "${ModID}:OvercomePower": {
+    "NAME": "Overcome",
+    "DESCRIPTIONS": [
+      "Whenever you play a card with an original cost higher than your energy, gain #b",
+      " #yBlock."
+    ]
   }
 }

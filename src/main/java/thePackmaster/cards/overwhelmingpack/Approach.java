@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static thePackmaster.SpireAnniversary5Mod.louseList;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Approach extends AbstractOverwhelmingCard {
@@ -20,19 +21,27 @@ public class Approach extends AbstractOverwhelmingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ScryAction(this.magicNumber));
-        addToBot(new DrawCardAction(1, new AbstractGameAction() {
+        addToBot(new DrawCardAction(1, approachCallback()));
+    }
+
+    private static AbstractGameAction approachCallback() {
+        return new AbstractGameAction() {
             @Override
             public void update() {
                 this.isDone = true;
+
+                if (DrawCardAction.drawnCards.isEmpty()) //couldn't draw
+                    return;
+
                 for (AbstractCard c : DrawCardAction.drawnCards) {
                     if (c.costForTurn == 1) {
                         return;
                     }
                 }
 
-                addToTop(new DrawCardAction(1, this));
+                addToTop(new DrawCardAction(1, approachCallback()));
             }
-        }));
+        };
     }
 
     public void upp() {

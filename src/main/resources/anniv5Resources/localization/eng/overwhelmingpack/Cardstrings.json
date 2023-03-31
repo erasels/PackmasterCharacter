@@ -21,12 +21,16 @@
   },
   "${ModID}:SheerEffort": {
     "NAME": "Sheer Effort",
-    "DESCRIPTION": "Play !M! cards in your hand. NL Increase their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Play !M! cards in your hand. NL Increase their costs by 1 this combat."
+    "DESCRIPTION": "Play !M! cards in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play !M! cards in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "play.",
+      "Used in hand card selection screen."
+    ]
   },
   "${ModID}:Overcome": {
     "NAME": "Overcome",
-    "DESCRIPTION": "Whenever you play a card with an original cost higher than your [E], gain !M! Block."
+    "DESCRIPTION": "Whenever you play a card with an original cost higher than your energy, gain !M! Block."
   },
   "${ModID}:FurtherBeyond": {
     "NAME": "Further Beyond",
@@ -37,9 +41,9 @@
   },
   "${ModID}:MakeRoom": {
     "NAME": "Make Room",
-    "DESCRIPTION": "Draw !M! cards. NL For each, if your hand is full, play the leftmost card in your hand first."
+    "DESCRIPTION": "Draw !M! cards. NL If you would draw while your hand is full, play the leftmost card first."
   },
-  "${ModID}:FinalForm": {
+  "${ModID}:ActuallyFinalForm": {
     "NAME": "Final Form",
     "DESCRIPTION": "Add 2 random Form Powers to your hand. NL They cost !M! less this combat."
   }

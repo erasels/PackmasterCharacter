@@ -16,7 +16,7 @@ public class Lariat extends AbstractOverwhelmingCard {
     public Lariat() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
 
-        this.baseDamage = this.damage = 4;
+        this.baseDamage = this.damage = 5;
         this.isMultiDamage = true;
     }
 

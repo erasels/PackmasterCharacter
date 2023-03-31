@@ -17,6 +17,7 @@ public class OpeningStrike extends AbstractOverwhelmingCard {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
 
         this.baseDamage = this.damage = 12;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

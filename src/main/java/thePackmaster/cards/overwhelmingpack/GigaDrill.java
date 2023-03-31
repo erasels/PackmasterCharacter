@@ -18,7 +18,7 @@ public class GigaDrill extends AbstractOverwhelmingCard {
     public GigaDrill() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
 
-        this.baseDamage = this.damage = 9;
+        this.baseDamage = this.damage = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
