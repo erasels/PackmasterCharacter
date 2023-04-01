@@ -37,7 +37,7 @@ public class AdditiveLockOnPatch {
                             + ".applyMultiLockOn((" + AbstractMonster.class.getName() + ")"
                             + AbstractDungeon.class.getName()
                             + ".getMonsters().monsters.get(i), info.base);" +
-                            "$_ = $proceed($$);");
+                            "$proceed($$);");
 
                 }
             };
@@ -46,20 +46,15 @@ public class AdditiveLockOnPatch {
 
     @SpirePatch2(clz = AbstractOrb.class, method = "applyLockOn")
     public static class SinglehitLightning {
-        static int origDmg;
-        public static void Prefix(AbstractCreature target, int dmg)
-        {
-            origDmg = dmg;
-        }
-        public static int Postfix(AbstractCreature target, int dmg)
+        public static int Postfix(AbstractCreature target, int dmg, int __result)
         {
             if (!Wiz.adp().hasPower(TunnelVisionPower.POWER_ID) || !target.hasPower(LockOnPower.POWER_ID)) return dmg;
 
             float damageModifier = 1
-                    + (float)origDmg/(float)dmg
+                    + (float)dmg/(float)__result
                     + 0.25F
                     * (Wiz.getLogicalPowerAmount(target, LockOnPower.POWER_ID) - 1);
-            return (int)(origDmg * damageModifier);
+            return (int)(dmg * damageModifier);
         }
     }
 }

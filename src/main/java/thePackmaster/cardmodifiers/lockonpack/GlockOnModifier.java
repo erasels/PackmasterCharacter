@@ -22,7 +22,7 @@ public class GlockOnModifier extends AbstractCardModifier {
         LockOnPower pow = (LockOnPower) target.getPower(LockOnPower.POWER_ID);
         if (pow == null)    return super.modifyDamage(damage, type, card, target);
 
-        float leftover = damage - (int) damage; //TODO: fix this shit
+        float leftover = damage - (int) damage; //This shit can't be fixed
         return AbstractOrb.applyLockOn(target, (int)damage) + leftover;
     }
 
