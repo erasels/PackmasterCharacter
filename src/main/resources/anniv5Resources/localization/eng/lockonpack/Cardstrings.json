@@ -1,26 +1,27 @@
 {
   "${ModID}:AC": {
     "NAME": "AC",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Add a DC{!Upgrades!|>0=+} to your hand."
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Add a *DC{!Upgrades!|>0=+} to your hand."
   },
   "${ModID}:DC": {
     "NAME": "DC",
-    "DESCRIPTION": "{@@}Retain. NL Channel a Lightning. NL Trigger its{!Upgrades!|>0= passive and} Evoke effects. NL Exhaust."
+    "DESCRIPTION": "{@@}Retain. NL Channel a Lightning. NL Trigger its{!Upgrades!|>0= passive and} Evoke effect{!Upgrades!|>0=s}. NL Exhaust."
   },
   "${ModID}:BlockOn": {
-    "NAME": "BLock-On",
+    "NAME": "Block-On",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! Lock-On back."
   },
   "${ModID}:Bruteforce": {
     "NAME": "Bruteforce",
-    "DESCRIPTION": "Evoke your rightmost Lightning !M! times. NL Exhaust."
+    "DESCRIPTION": "{@@}Evoke your rightmost Lightning !M! times hitting ALL enemies{!Upgrades!|0= NL Exhaust.|>0=.}"
   },
-  "${ModID}:GatheringStorm": {
-    "NAME": "Gathering Storm",
-    "DESCRIPTION": "{@@}Channel a Lightning for each{!Upgrades!|0= non-Lightning} Orb Channeled."
+  "${ModID}:LightsOut": {
+    "NAME": "Lights Out",
+    "DESCRIPTION": "Replace your Lightning with Dark. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Evoke your Lightning and Channel Dark for each Lightning Evoked. NL Exhaust."
   },
   "${ModID}:GlockOn": {
-    "NAME": "GLock-On",
+    "NAME": "Glock-On",
     "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by Focus and Lock-On."
   },
   "${ModID}:LocknLoad": {
@@ -31,9 +32,9 @@
     "NAME": "Reiji",
     "DESCRIPTION": "{@@}Innate. NL Apply !${ModID}:m2! Lock-On.{!M!|>0= NL If the target already had Lock-On, gain !M! Focus.} NL Exhaust."
   },
-  "${ModID}:Sharpshooter": {
-    "NAME": "Sharpshooter",
-    "DESCRIPTION": "Channel !M! Lightning. NL if the target has Lock-On, NL gain [E] and draw a card."
+  "${ModID}:LightningRod": {
+    "NAME": "Lightning Rod",
+    "DESCRIPTION": "{@@}Lightning targets this enemy for !M! turn{!M!|>1=s}. NL Channel a Lightning."
   },
   "${ModID}:TunnelVision": {
     "NAME": "Tunnel Vision",

@@ -11,7 +11,7 @@ public class Bruteforce extends AbstractLockonCard {
     public final static String ID = makeID(Bruteforce.class.getSimpleName());
 
     public Bruteforce() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         magicNumber = baseMagicNumber = 2;
         exhaust = true;
     }
@@ -19,7 +19,7 @@ public class Bruteforce extends AbstractLockonCard {
     @Override
     public void upp()
     {
-        upgradeMagicNumber(1);
+        exhaust = false;
     }
 
     @Override

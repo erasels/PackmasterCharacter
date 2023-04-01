@@ -1,13 +1,12 @@
 package thePackmaster.powers.lockonpack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.LockOnPower;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -35,6 +34,6 @@ public class BlockOnPower extends AbstractPackmasterPower {
 
     @Override
     public void atStartOfTurn() {
-        addToBot(new ReducePowerAction(owner, owner, this, 1));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 }

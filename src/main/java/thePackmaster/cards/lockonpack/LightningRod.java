@@ -1,20 +1,19 @@
 package thePackmaster.cards.lockonpack;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Lightning;
-import com.megacrit.cardcrawl.powers.LockOnPower;
+import thePackmaster.powers.lockonpack.LightningRodPower;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Sharpshooter extends AbstractLockonCard {
+public class LightningRod extends AbstractLockonCard {
 
-    public final static String ID = makeID(Sharpshooter.class.getSimpleName());
+    public final static String ID = makeID(LightningRod.class.getSimpleName());
 
-    public Sharpshooter() {
+    public LightningRod() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         magicNumber = baseMagicNumber = 1;
     }
@@ -26,12 +25,8 @@ public class Sharpshooter extends AbstractLockonCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i=0;i<magicNumber;i++) addToBot(new ChannelAction(new Lightning()));
-
-        if (m.hasPower(LockOnPower.POWER_ID)) {
-            addToBot(new GainEnergyAction(1));
-            addToBot(new DrawCardAction(1));
-        }
+        Wiz.applyToEnemy(m, new LightningRodPower(m, magicNumber));
+        addToBot(new ChannelAction(new Lightning()));
     }
 
 }

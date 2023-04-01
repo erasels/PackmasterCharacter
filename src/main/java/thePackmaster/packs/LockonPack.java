@@ -1,6 +1,6 @@
 package thePackmaster.packs;
 
-import com.megacrit.cardcrawl.cards.blue.LockOn;
+import com.megacrit.cardcrawl.cards.blue.StaticDischarge;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
@@ -27,13 +27,14 @@ public class LockonPack extends AbstractCardPack {
         cards.add(DC.ID);
         cards.add(BlockOn.ID);
         cards.add(Bruteforce.ID);
-        cards.add(GatheringStorm.ID);
+        cards.add(LightsOut.ID);
         cards.add(GlockOn.ID);
         cards.add(LocknLoad.ID);
         cards.add(Reiji.ID);
-        cards.add(Sharpshooter.ID);
+        cards.add(LightningRod.ID);
         cards.add(TunnelVision.ID);
-        cards.add(LockOn.ID);
+
+        cards.add(StaticDischarge.ID);
 
         return cards;
     }

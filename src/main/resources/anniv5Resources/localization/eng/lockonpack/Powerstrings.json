@@ -5,6 +5,13 @@
       "Whenever you are attacked this turn, apply #b%d #yLock-On back."
     ]
   },
+  "${ModID}:LightningRodPower": {
+    "NAME": "Lightning Rod",
+    "DESCRIPTIONS": [
+      "#yLightning targets this enemy this turn.",
+	  "#yLightning targets this enemy for #b%d turns."
+    ]
+  },
   "${ModID}:TunnelVisionPower": {
     "NAME": "Tunnel Vision",
     "DESCRIPTIONS": [
