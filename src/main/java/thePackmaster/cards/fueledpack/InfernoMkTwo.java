@@ -18,10 +18,10 @@ public class InfernoMkTwo extends AbstractFueledCard {
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     private static final int DAMAGE = 16;
-    private static final int UPGRADE_DAMAGE = 20;
+    private static final int UPGRADE_DAMAGE = 4;
 
     public InfernoMkTwo() {
         super(ID, COST, TYPE, RARITY, TARGET);

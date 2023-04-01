@@ -9,13 +9,13 @@ import thePackmaster.powers.AbstractPackmasterPower;
 import static thePackmaster.util.Wiz.adp;
 import static thePackmaster.util.Wiz.att;
 
-public class PhoenixHeartPower extends AbstractPackmasterPower {
-    public static String POWER_ID = SpireAnniversary5Mod.makeID(PhoenixHeartPower.class.getSimpleName());
+public class ControlledBurnPower extends AbstractPackmasterPower {
+    public static String POWER_ID = SpireAnniversary5Mod.makeID(ControlledBurnPower.class.getSimpleName());
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     int counter;
 
-    public PhoenixHeartPower(int amount) {
+    public ControlledBurnPower(int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, adp(), amount);
         counter = amount;
     }

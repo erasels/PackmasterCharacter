@@ -20,8 +20,8 @@ public class FlameBlastMkTwo extends AbstractFueledCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
-    private static final int DAMAGE = 12;
-    private static final int UPGRADE_DAMAGE = 4;
+    private static final int DAMAGE = 15;
+    private static final int UPGRADE_DAMAGE = 5;
 
     public FlameBlastMkTwo() {
         super(ID, COST, TYPE, RARITY, TARGET);

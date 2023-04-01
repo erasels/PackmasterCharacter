@@ -4,11 +4,9 @@
     "NAMES": [
       "Consume",
       "consume",
-      "Ashes",
-      "ashes",
-      "Ash",
-      "ash"
+      "Consumed",
+      "consumed"
     ],
-    "DESCRIPTION": "Consuming a card transforms it into an Ash card. Curse, Status, and Ash cards can't be consumed."
+    "DESCRIPTION": "Consuming a card transforms it into #yHot #yAsh. Curse, Status, and #yHot #yAsh cards can't be consumed."
   }
 ]

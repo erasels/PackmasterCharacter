@@ -1,64 +1,50 @@
 {
   "${ModID}:BurningSword": {
     "NAME": "Burning Sword",
-    "DESCRIPTION": "Deal !D! Damage. NL This card is not transformed when consumed.",
-    "FLAVOR": "Why choose between stabbing and burning when you can do both?"
+    "DESCRIPTION": "Deal !D! Damage. NL Deal !M! damage to ALL enemies when ${ModID}:Consumed."
   },
   "${ModID}:IridiumShield": {
     "NAME": "Iridium Shield",
-    "DESCRIPTION": "Gain !B! Block. NL This card is not transformed when consumed.",
-    "FLAVOR": "Able to withstand the strongest heat."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block when ${ModID}:Consumed."
   },
   "${ModID}:FlameBlastMkTwo": {
     "NAME": "Flame Blast Mk 2",
-    "DESCRIPTION": "Consume a card to deal !D! damage.",
+    "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage.",
     "FLAVOR": "Burninating the spire."
   },
   "${ModID}:Napalm": {
     "NAME": "Napalm",
-    "DESCRIPTION": "Consume a card to apply !M! ${ModID}:Ignite.",
-    "FLAVOR": "Sticky Fire."
+    "DESCRIPTION": "${ModID}:Consume a card to apply !M! ${ModID}:Ignite."
   },
   "${ModID}:FlamingLeap": {
     "NAME": "Flaming Leap",
-    "DESCRIPTION": "Consume a card to draw !M! cards.",
-    "FLAVOR": "It's like your legs are a jetpack."
+    "DESCRIPTION": "${ModID}:Consume a card to draw !M! cards and Gain [E]."
   },
   "${ModID}:InfernoMkTwo": {
     "NAME": "Inferno Mk 2",
-    "DESCRIPTION": "Consume a card to apply !M! ${ModID}:Ignite.",
+    "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage to ALL enemies.",
     "FLAVOR": "The original version sets you on fire.  0/10 would not cast again."
   },
-  "${ModID}:SmokeScreen": {
-    "NAME": "Smoke Screen",
-    "DESCRIPTION": "Consume your hand and gain !B! Block for each card consumed.",
-    "FLAVOR": "You can't hit me if you can't see me. Probably."
-  },
-  "${ModID}:UncontrolledBurn": {
-    "NAME": "Uncontrolled Burn",
-    "DESCRIPTION": "Consume your hand and gain !M! Strength for each card consumed.",
-    "FLAVOR": "If fire doesn't work, try more of it."
-  },
-  "${ModID}:Embers": {
-    "NAME": "Embers",
-    "DESCRIPTION": "Whenever you create an ${ModID}:Ash card, upgrade it.",
-    "FLAVOR": "Sometimes you can nurture a tiny spark back into an inferno."
+  "${ModID}:PoisonousSmoke": {
+    "NAME": "Poisonous Smoke",
+    "DESCRIPTION": "${ModID}:Consume a card to cause ALL enemies to lose !M! Strength. NL Exhaust."
   },
   "${ModID}:PhoenixHeart": {
     "NAME": "Phoenix Heart",
-    "DESCRIPTION": "The first time each turn you consume a card, gain [E] and draw a card.",
-    "FLAVOR": "Reborn from the flames."
+    "DESCRIPTION": "Exhaust all *Hot *Ash in your hand and add a random card into your have for each. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust all *Hot *Ash in your hand and add a random card into your have for each."
+  },
+  "${ModID}:BurnBright": {
+    "NAME": "Burn Bright",
+    "DESCRIPTION": "${ModID}:Consume X cards to play your next X powers twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Consume X cards to play your next X+1 powers twice. NL Exhaust."
+  },
+  "${ModID}:ControlledBurn": {
+    "NAME": "Controlled Burn",
+    "DESCRIPTION": "The first time each turn you ${ModID}:Consume a card, gain [E] and draw a card."
   },
   "${ModID}:HotAsh": {
     "NAME": "Hot Ash",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "${ModID}:GrittyAsh": {
-    "NAME": "Gritty Ash",
-    "DESCRIPTION": "Gain !B! Block."
-  },
-  "${ModID}:PowderyAsh": {
-    "NAME": "Powdery Ash",
-    "DESCRIPTION": "Gain !M! Strength."
+    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage."
   }
 }

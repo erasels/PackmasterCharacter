@@ -6,26 +6,25 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import org.lwjgl.Sys;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.fueledpack.HotAsh;
+import thePackmaster.powers.fueledpack.BurnBrightPower;
 import thePackmaster.relics.fueledpack.FuelTank;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-import static thePackmaster.util.Wiz.adp;
-import static thePackmaster.util.Wiz.att;
+import static thePackmaster.util.Wiz.*;
 
-public class ConsumeToDoAction extends AbstractGameAction {
+public class BurnBrightAction extends AbstractGameAction {
     private static final String UI_KEY = SpireAnniversary5Mod.makeID("ConsumeUiText");
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private final AbstractGameAction action;
     private final ArrayList<AbstractCard> unsuitableCards = new ArrayList<>();
+    private final int upgraded;
 
-    public ConsumeToDoAction(AbstractGameAction action) {
-        this.action = action;
+    public BurnBrightAction(int effect, int upgraded) {
+        amount = effect;
+        this.upgraded = upgraded;
         duration = startDuration = Settings.ACTION_DUR_FAST;
         actionType = ActionType.DAMAGE;
     }
@@ -42,25 +41,23 @@ public class ConsumeToDoAction extends AbstractGameAction {
 
             if (adp().hand.size() == 0) {
                 isDone = true;
-                finish(null);
+                finish(null, upgraded);
                 return;
             }
 
-            if (adp().hand.size() == 1) {
-                AbstractCard c = adp().hand.getTopCard();
-                finish(c);
+            if (adp().hand.size() <= amount) {
+                finish(adp().hand.group, adp().hand.size() + upgraded);
                 return;
             }
 
-            AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false);
+            AbstractDungeon.handCardSelectScreen.open(TEXT[0], amount, false, false);
             tickDuration();
             return;
         }
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             if (!AbstractDungeon.handCardSelectScreen.selectedCards.group.isEmpty()) {
-                AbstractCard c = AbstractDungeon.handCardSelectScreen.selectedCards.group.get(0);
-                finish(c);
+                finish(AbstractDungeon.handCardSelectScreen.selectedCards.group, amount + upgraded);
             }
 
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
@@ -69,15 +66,18 @@ public class ConsumeToDoAction extends AbstractGameAction {
         tickDuration();
     }
 
-    private void finish(AbstractCard card) {
+    private void finish(ArrayList<AbstractCard> cards, int amount) {
+        if (amount > 0)
+            applyToSelfTop(new BurnBrightPower(amount));
+
+        if (!cards.isEmpty())
+            att(new ConsumeCardsAction(cards));
+
         for (AbstractCard c : unsuitableCards)
             adp().hand.addToTop(c);
 
         adp().hand.refreshHandLayout();
-        if (card != null) {
-            att(action);
-            att(new ConsumeCardsAction(card));
-        }
+
         isDone = true;
     }
 

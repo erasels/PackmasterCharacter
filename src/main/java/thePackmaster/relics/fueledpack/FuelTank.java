@@ -9,7 +9,7 @@ public class FuelTank extends AbstractPackmasterRelic {
     public static final String ID = SpireAnniversary5Mod.makeID(FuelTank.class.getSimpleName());
 
     public FuelTank() {
-        super(ID, RelicTier.COMMON, LandingSound.CLINK, SummonsPack.ID, OrbPack.ID, DefectPack.ID, SpheresPack.ID, FrostPack.ID);
+        super(ID, RelicTier.RARE, LandingSound.CLINK, FueledPack.ID);
     }
 
     public String getUpdatedDescription() {

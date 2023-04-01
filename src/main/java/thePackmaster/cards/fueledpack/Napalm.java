@@ -1,14 +1,12 @@
 package thePackmaster.cards.fueledpack;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.fueledpack.ConsumeToDoAction;
 import thePackmaster.powers.shamanpack.IgnitePower;
 
-import static thePackmaster.SpireAnniversary5Mod.FUEL;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_TEXT_COLOR;
@@ -22,8 +20,8 @@ public class Napalm extends AbstractFueledCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
-    private static final int MAGIC = 6;
-    private static final int UPGRADE_MAGIC = 2;
+    private static final int MAGIC = 7;
+    private static final int UPGRADE_MAGIC = 3;
 
     public Napalm() {
         super(ID, COST, TYPE, RARITY, TARGET);
