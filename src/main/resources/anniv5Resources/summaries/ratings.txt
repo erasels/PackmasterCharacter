@@ -23,7 +23,7 @@ DefectPack	3	4	3	4	3
 DimensionGatePack	4	3	3	2	4
 DimensionGate2Pack	3	3	2	2	2
 DimensionGate3Pack	3	4	3	4	2
-DistortionPack	4	2	3	4	5
+DistortionPack	4	2	3	4	4
 DownfallPack	2	3	3	3	3
 DragonwrathPack	4	2	1	2	5
 EnergyAndEchoPack	3	2	4	4	2
