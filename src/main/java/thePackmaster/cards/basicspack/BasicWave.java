@@ -1,26 +1,16 @@
 package thePackmaster.cards.basicspack;
 
 import basemod.helpers.CardModifierManager;
-import com.badlogic.gdx.scenes.scene2d.actions.RemoveAction;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
-import com.evacipated.cardcrawl.mod.stslib.patches.relicInterfaces.OnRemoveCardFromMasterDeckPatch;
 import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.MonsterRoom;
-import com.megacrit.cardcrawl.rooms.VictoryRoom;
-import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.cardmodifiers.basicspack.BasicMod;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.Defend;
-import thePackmaster.cards.Rummage;
 import thePackmaster.cards.Strike;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -30,7 +20,7 @@ public class BasicWave extends AbstractMultipleCardPreviewCard implements OnObta
 
     public BasicWave() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, "basics");
-        if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode.room instanceof MonsterRoom)
+        if (CardCrawlGame.dungeon != null && AbstractDungeon.getCurrMapNode() != null && AbstractDungeon.getCurrRoom() instanceof MonsterRoom)
             CardModifierManager.addModifier(this, new BasicMod());
         this.cardToPreview.add(new Strike());
         this.cardToPreview.add(new Defend());

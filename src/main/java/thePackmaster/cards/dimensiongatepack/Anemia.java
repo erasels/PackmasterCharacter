@@ -35,7 +35,7 @@ public class Anemia extends AbstractDimensionalCardVault {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = Wiz.getEnemies().stream().anyMatch(q -> q.hasPower(WeakPower.POWER_ID)) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = Wiz.getEnemies().stream().anyMatch(q -> q.hasPower(PoisonPower.POWER_ID)) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

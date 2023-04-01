@@ -55,6 +55,7 @@ public class DistortionPower extends AbstractPackmasterPower implements EnemyOnE
             });
             AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(Wiz.p(), amt, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.NONE, true));
             --this.amount;
+            updateDescription();
         }
 
         if (this.amount <= 0) {
