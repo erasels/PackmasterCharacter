@@ -21,8 +21,8 @@
   },
   "${ModID}:Prime": {
     "NAME": "冻核",
-    "DESCRIPTION": "获得1个充能球栏位与1点 集中 。 NL 生成 充能球时， NL 触发其被动效果一次。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 个充能球栏位与1点 集中 。 NL 生成 充能球时， NL 触发其被动效果一次。"
+    "DESCRIPTION": "获得1个充能球栏位。 NL 获得1点 集中 。 NL 生成 充能球时， NL 触发其被动效果一次。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 个充能球栏位。 NL 获得1点 集中 。 NL 生成 充能球时， NL 触发其被动效果一次。"
   },
   "${ModID}:FrozenSnack": {
     "NAME": "被冻零食",

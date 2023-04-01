@@ -45,7 +45,7 @@ public class BoosterPack extends AbstractPixieCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         for(int i = 0; i < this.magicNumber; i++)
         {
-            AbstractCard toAdd = PixiePack.pixieGenerate(null,null,null);
+            AbstractCard toAdd = PixiePack.pixieGenerate(null,null,null,null);
             CardModifierManager.addModifier(toAdd,new EtherealMod());
             addToBot(new MakeTempCardInHandAction(toAdd));
         }

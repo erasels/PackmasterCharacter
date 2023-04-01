@@ -5,8 +5,8 @@
   },
   "${ModID}:Trash": {
     "NAME": "垃圾",
-    "DESCRIPTION": "随机 消耗 1 张牌。 NL 获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 随机 消耗 1 张牌。 NL 获得 [E] 。"
+    "DESCRIPTION": "消耗 最左端手牌。 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 消耗 最左端手牌。 NL 获得 [E] 。"
   },
   "${ModID}:MultiTool": {
     "NAME": "多用途工具",
@@ -22,7 +22,8 @@
   },
   "${ModID}:ManifestMeal": {
     "NAME": "进餐展示",
-    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 将一张 *食物 加入抽牌堆。"
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 将一张 *食物 加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害X次。 NL 将一张 *食物+ 加入抽牌堆。"
   },
   "${ModID}:Food": {
     "NAME": "食物",

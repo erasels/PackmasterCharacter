@@ -23,6 +23,7 @@ public class DualBlade extends AbstractSpheresCard {
     public DualBlade() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
+        this.showEvokeValue = true;
     }
 
     @Override

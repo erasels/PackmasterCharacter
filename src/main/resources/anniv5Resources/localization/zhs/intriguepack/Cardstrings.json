@@ -9,7 +9,7 @@
   },
   "${ModID}:Shakedown": {
     "NAME": "勒索",
-    "DESCRIPTION": "造成 !D! 点 伤害。 NL 手中每有一张 ${ModID}:平凡 或罕见牌， NL 抽一张牌。",
+    "DESCRIPTION": "造成 !D! 点 伤害。 NL 手中每有一张 ${ModID}:平凡 或罕见牌，抽一张牌。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点 伤害。 NL 手中每有 ${ModID}:平凡 、罕见，或稀有牌，抽一张牌。"
   },
   "${ModID}:Favor": {

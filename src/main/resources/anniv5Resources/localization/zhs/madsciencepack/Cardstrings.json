@@ -13,7 +13,7 @@
   },
 "${ModID}:Discombobulate": {
     "NAME": "迷惑",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 若手中有被 ${ModID}:修改 牌， NL 伤害翻倍。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 若手中有被 ${ModID}:修改 牌， NL 伤害翻倍。"
   },
   "${ModID}:Attach": {
     "NAME": "附加",
@@ -31,7 +31,7 @@
   },
   "${ModID}:Cheapen": {
     "NAME": "平易化",
-    "DESCRIPTION": "随机 ${ModID}:修改 抽牌堆一张牌：\"耗能变为0。\" NL ${ModID}:增幅 [E] : 不 消耗 。",
+    "DESCRIPTION": "随机 ${ModID}:修改 抽牌堆一张牌：\"耗能变为0， NL ${ModID}:增幅 [E] : 不 消耗 \"。",
     "UPGRADE_DESCRIPTION": "随机 ${ModID}:修改 抽牌堆一张牌：\"耗能变为0。\" NL ${ModID}:增幅 [E] : 不 消耗 。"
   },
   "${ModID}:Expand": {

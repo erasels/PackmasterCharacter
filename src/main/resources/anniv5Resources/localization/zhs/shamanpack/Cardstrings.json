@@ -21,7 +21,7 @@
   },
   "${ModID}:FieryMantle": {
     "NAME": "火焰覆罩",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时， 给予对方 !M! 层 ${ModID}:燃烧 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时， NL 给予对方 !M! 层 ${ModID}:燃烧 。"
   },
   "${ModID}:SnowMelt": {
     "NAME": "雪融",

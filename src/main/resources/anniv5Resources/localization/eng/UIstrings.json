@@ -92,8 +92,8 @@
   },
   "${ModID}:BulwarkPackHat": {
     "TEXT": [
-      "TBD",
-      "TBD"
+      "Comprehensive protection.",
+      "The Headfort"
     ]
   },
   "${ModID}:PackMainMenuUI": {
@@ -207,5 +207,19 @@
       "Tokens": "Tokens",
       "Powers": "Powers"
     }
+  },
+  "${ModID}:MerchantSpeech": {
+    "TEXT": [
+      "@Nice@ @hat@",
+      "Better deals here than at the black market",
+      "That's a ~big~ backpack",
+      "Seen a lot of you recently"
+    ]
+  },
+  "${ModID}:MerchantEndingSpeech": {
+    "TEXT": [
+      "What do you keep in there anyway?",
+      "One day they will make the final pack."
+    ]
   }
 }

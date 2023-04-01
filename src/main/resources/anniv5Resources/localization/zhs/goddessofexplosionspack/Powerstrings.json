@@ -36,16 +36,16 @@
       " 点 #y能量 。"
     ]
   },
-  "${ModID}:EveOfDestructionPower": {
-    "NAME": "毁灭之夜",
+  "${ModID}:ExplosiveFormPower": {
+    "NAME": "爆炸形态",
     "DESCRIPTIONS": [
       "你的回合开始时，布置 #b1 枚 #y炸弹 。",
       "你的回合开始时，布置 #b",
       " 枚 #y炸弹 。"
     ]
   },
-  "${ModID}:ExplosiveFormPower": {
-    "NAME": "爆炸形态",
+  "${ModID}:EveOfDestructionPower": {
+    "NAME": "毁灭之夜",
     "DESCRIPTIONS": [
       "你造成的非攻击伤害提高 #b",
       "% 。"

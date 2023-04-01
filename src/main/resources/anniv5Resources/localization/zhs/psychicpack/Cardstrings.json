@@ -33,7 +33,7 @@
   },
   "${ModID}:OneIsEnough": {
     "NAME": "一张足够",
-    "DESCRIPTION": "抽 !M! 张牌并选择其中一张。 NL 本回合无法打出其他手牌。",
+    "DESCRIPTION": "抽 !M! 张牌并选择一张。 NL 所抽其他牌本回合无法被打出。",
     "EXTENDED_DESCRIPTION": [
       "选择可打出的牌。"
     ]

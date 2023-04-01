@@ -22,6 +22,8 @@ public class PlasmaShield extends AbstractUtilityCard {
         super(ID, COST, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = AMOUNT;
         this.secondMagic = this.baseSecondMagic = PLASMA;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     @Override

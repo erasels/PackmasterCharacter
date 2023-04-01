@@ -7,14 +7,14 @@
       " #yStrength."
       ]
   },
-  "${ModID}:RecallPower": {
-    "NAME": "Recall",
+  "${ModID}:ArcingEnergyPower": {
+    "NAME": "Arcing Energy",
     "DESCRIPTIONS": [
       "The first ",
       "time",
       "#b",
       " times",
-      " a card is #yAmplified each turn, put a card from your #yExhaust pile into your hand. Cards chosen gain #yPurge.",
+      " a card is #yAmplified each turn, gain [E] .",
       " NL (Used #b",
       " time this turn.)",
       " times this turn.)",

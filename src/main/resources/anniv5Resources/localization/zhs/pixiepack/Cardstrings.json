@@ -13,7 +13,11 @@
   },
   "${ModID}:StarShower": {
     "NAME": "流星雨",
-    "DESCRIPTION": "攻击 ${ModID}:咒语 。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 本回合下次打出 ${ModID}:异色 攻击时，再造成一次。"
+  },
+  "${ModID}:Paintcan": {
+    "NAME": "颜料桶",
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 其他手牌变为 ${ModID}:异色 。"
   },
   "${ModID}:PortalPunch": {
     "NAME": "异次元重击",
@@ -23,24 +27,24 @@
       "本牌 #y创造 牌时低稀有度的牌比重更高。"
     ]
   },
-  "${ModID}:BackupRift": {
+  "${ModID}:EnchantedRift": {
     "NAME": "咒术裂隙",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL ${ModID}:取 !M! 张 ${ModID}:咒语 牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得上张打出的 ${ModID}:异色 牌的复制品，将其附加 虚无 。"
   },
-  "${ModID}:StarLane": {
+  "${ModID}:Fetch": {
     "NAME": "获取",
-    "DESCRIPTION": "虚无 。 NL 技能 ${ModID}:咒语 。 NL 抽一张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "技能 ${ModID}:咒语 。 NL 抽一张牌。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 本回合下次打出 ${ModID}:异色 技能时，再抽一次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 本回合下次打出 ${ModID}:异色 技能时，再抽一次。"
   },
   "${ModID}:NeutronStar": {
     "NAME": "中子星",
-    "DESCRIPTION": "虚无 。 NL 攻击 ${ModID}:咒语 。 NL 获得 !M! 层临时 力量 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "攻击 ${ModID}:咒语 。 NL 获得 !M! 层临时 力量 。"
+    "DESCRIPTION": "获得 !M! 层临时 力量 。 NL 本回合下次打出 ${ModID}:异色 攻击时，再获得一次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层临时 力量 。 NL 本回合下次打出 ${ModID}:异色 攻击时，再获得一次。"
   },
   "${ModID}:FastHands": {
     "NAME": "迅疾之手",
-    "DESCRIPTION": "打出 ${ModID}:异色 牌时， NL 抽一张牌。",
-    "UPGRADE_DESCRIPTION": "打出 ${ModID}:异色 牌时，抽一张牌且所抽牌该回合耗能减1。"
+    "DESCRIPTION": "保留 。 NL 随机将抽牌堆一张 ${ModID}:异色 牌加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 随机将抽牌堆一张 ${ModID}:异色 牌加入手牌。"
   },
   "${ModID}:DimensionBreach": {
     "NAME": "次元突破",
@@ -50,9 +54,9 @@
       "本牌 #y创造 牌时低稀有度的牌比重更高。"
     ]
   },
-  "${ModID}:Horizonbound": {
-    "NAME": "宇宙界限",
-    "DESCRIPTION": "虚无 。 NL 打出 ${ModID}:异色 牌时，所有其他 *异色 手牌该回合耗能减1。",
-    "UPGRADE_DESCRIPTION": "打出 ${ModID}:异色 牌时，所有其他 *异色 手牌该回合耗能减1。"
+  "${ModID}:CosmicConverter": {
+    "NAME": "宙宇转换器",
+    "DESCRIPTION": "虚无 。 NL 回合开始时，获得一张与上张打出牌同类型与耗能的 ${ModID}:异色 牌。",
+    "UPGRADE_DESCRIPTION": "回合开始时，获得一张与上张打出牌同类型与耗能的 ${ModID}:异色 牌。"
   }
 }

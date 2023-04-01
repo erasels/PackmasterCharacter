@@ -13,12 +13,11 @@ import static thePackmaster.util.Wiz.*;
 
 public class S_r_ke extends AbstractDistortionCard {
     public final static String ID = makeID("S_r_ke");
-    // intellij stuff ATTACK, ENEMY, COMMON, 7, 2, , , 2, 1
 
     public S_r_ke() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
 
         tags.add(CardTags.STRIKE);
     }
@@ -31,7 +30,6 @@ public class S_r_ke extends AbstractDistortionCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
     }
 }

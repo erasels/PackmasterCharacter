@@ -37,7 +37,7 @@
   },
   "${ModID}:Static": {
     "NAME": "频噪声",
-    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 NL 给予未被格挡伤害 层 ${ModID}:扭曲 。"
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 NL 给予 ${ModID}:突破 量层 ${ModID}:扭曲 。"
   },
   "${ModID}:CursedCircle": {
     "NAME": "诅咒之圈",

@@ -5,8 +5,8 @@
   },
   "${ModID}:ConjureBarrage": {
     "NAME": "咒唤箭幕",
-    "DESCRIPTION": "*魔法 。 NL 将 !M! 张 *魔法导弹 加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "*魔法 。 NL 将 !M! 张 *魔法导弹+ 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "*魔法 。 NL 获得 !M! 张 *魔法导弹 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "*魔法 。 NL 获得 !M! 张 *魔法导弹+ 。 NL 消耗 。"
   },
   "${ModID}:MagicMissile": {
     "NAME": "魔法导弹",
@@ -26,16 +26,16 @@
   },
   "${ModID}:FlamePillar": {
     "NAME": "火柱",
-    "DESCRIPTION": "*魔法 。 NL 给予 !M! 层 ${ModID}:燃烧 。 NL 将一张 *施法 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "*魔法 。 NL 给予 !M! 层 ${ModID}:燃烧 。 NL 获得一张 *施法 。 NL 消耗 。"
   },
   "${ModID}:Haymaker": {
     "NAME": "强力一击",
-    "DESCRIPTION": "对所有敌人造成 !D! 点 伤害。 NL 本回合每用过一张牌， NL 本牌伤害增加 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 本回合每用过一张牌， NL 本牌伤害增加 !M! 点。"
   },
   "${ModID}:ManaShield": {
     "NAME": "魔力护盾",
-    "DESCRIPTION": "*魔法 。 NL 获得 !B! 点 格挡 。 NL 将一张 *施法 加入手牌。",
-    "UPGRADE_DESCRIPTION": "*魔法 。 NL 获得 !B! 点 格挡 。 NL 将 !M! 张 *施法 加入手牌。"
+    "DESCRIPTION": "*魔法 。 NL 获得 !B! 点 格挡 。 NL 获得1张 *施法 。",
+    "UPGRADE_DESCRIPTION": "*魔法 。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 张 *施法 。"
   },
   "${ModID}:MuscleMemory": {
     "NAME": "肌肉记忆",
@@ -51,15 +51,15 @@
   },
   "${ModID}:PreservedThorns": {
     "NAME": "荆棘标本",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将1张 *叮咬 加入手牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张 *叮咬 加入手牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得1张 *叮咬 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *叮咬 。"
   },
   "${ModID}:Sting": {
     "NAME": "叮咬",
-    "DESCRIPTION": "造成 !D! 点 伤害. NL 下回合额外抽一张牌。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点 伤害。 NL 下回合额外抽一张牌。 NL 消耗 。"
   },
   "${ModID}:WallOfFire": {
     "NAME": "火墙",
-    "DESCRIPTION": "*魔法 。 NL 随机造成 !D! 点 伤害 !M! 次。 NL 将3张 *火柱 加入手牌。"
+    "DESCRIPTION": "*魔法 。 NL 随机造成 !D! 点 伤害 !M! 次。 NL 获得3张 *火柱 。"
   }
 }
