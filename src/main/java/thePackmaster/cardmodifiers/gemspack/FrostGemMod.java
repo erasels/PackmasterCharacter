@@ -28,6 +28,12 @@ public class FrostGemMod extends AbstractMadScienceModifier {
     }
 
     @Override
+    public void onInitialApplication(AbstractCard card) {
+        card.showEvokeValue = true;
+        card.showEvokeOrbCount += 1;
+    }
+
+    @Override
     public AbstractCardModifier makeCopy() {
         return new FrostGemMod();
     }

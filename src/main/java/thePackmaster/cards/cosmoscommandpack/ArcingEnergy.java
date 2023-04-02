@@ -2,24 +2,24 @@ package thePackmaster.cards.cosmoscommandpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.cosmoscommandpack.RecallPower;
+import thePackmaster.powers.cosmoscommandpack.ArcingEnergyPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
 
-public class Recall extends AbstractCosmosCard {
-    public final static String ID = makeID("Recall");
+public class ArcingEnergy extends AbstractCosmosCard {
+    public final static String ID = makeID("ArcingEnergy");
 
-    public Recall() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+    public ArcingEnergy() {
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new RecallPower(p, 1));
+        applyToSelf(new ArcingEnergyPower(p, 1));
     }
 
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeBaseCost(0);
     }
 }

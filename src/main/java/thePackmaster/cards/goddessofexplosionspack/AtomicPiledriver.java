@@ -25,10 +25,10 @@ public class AtomicPiledriver extends AbstractGoddessOfExplosionsCard {
     public final static String ID = makeID("AtomicPiledriver");
 
 
-    private static final int DAMAGE = 20;
-    private static final int DAMAGE_UP = 4;
+    private static final int DAMAGE = 22;
+    private static final int DAMAGE_UP = 6;
     private static final int MAGIC = 8;
-    private static final int MAGIC_UP = 2;
+    private static final int MAGIC_UP = 4;
 
 
     public AtomicPiledriver() {

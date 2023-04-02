@@ -1,6 +1,6 @@
 {
   "${ModID}:AcidProjector": {
-    "NAME": "A.C.I.D Projector",
+    "NAME": "A.C.I.D. Projector",
     "DESCRIPTION": "The enemy takes double damage from Attacks this turn. NL Exhaust."
   },
   "${ModID}:ElectricWhip": {

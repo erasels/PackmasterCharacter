@@ -2,7 +2,6 @@ package thePackmaster.cards.cosmoscommandpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.distortionpack.DistortionPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -13,7 +12,7 @@ public class RopeTrick extends AbstractCosmosCard {
 
     public RopeTrick() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 4;
         block = baseBlock = 5;
     }
 
@@ -23,7 +22,6 @@ public class RopeTrick extends AbstractCosmosCard {
     }
 
     public void upp() {
-        upgradeBlock(2);
-        upgradeMagicNumber(1);
+        upgradeBlock(3);
     }
 }

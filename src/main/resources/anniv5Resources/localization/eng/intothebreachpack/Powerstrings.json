@@ -18,7 +18,7 @@
     "NAME": "Void Shocker",
     "DESCRIPTIONS": [
       "Whenever an enemy deals only blocked damage, deal #b",
-      " damage to it."
+      " damage back."
     ]
   }
 }
