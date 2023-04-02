@@ -10,6 +10,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
+import basemod.helpers.TextCodeInterpreter;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -165,6 +166,7 @@ public class SpireAnniversary5Mod implements
     public static boolean openedStarterScreen = false;
     public static boolean skipDefaultCardRewards = false;
     public static int PACKS_PER_RUN = 7;
+    public static int PACKS_PER_CHOICE = 3;
     public static CurrentRunCardsTopPanelItem currentRunCardsTopPanelItem;
 
     public static final String modID = "anniv5";
@@ -547,6 +549,9 @@ public class SpireAnniversary5Mod implements
 
         ConsoleCommand.addCommand("addhat", UnlockHatCommand.class);
         ConsoleCommand.addCommand("pack", PackAddCommand.class);
+
+        TextCodeInterpreter.addAccessible("PackmasterMenu", MainMenuUIPatch.class);
+        TextCodeInterpreter.addAccessible("Packmaster", SpireAnniversary5Mod.class);
     }
 
     public static void addPotions() {
