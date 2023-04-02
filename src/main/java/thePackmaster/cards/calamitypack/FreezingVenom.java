@@ -3,11 +3,13 @@ package thePackmaster.cards.calamitypack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.highenergypack.AllEnemyApplyPowerAction;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 import thePackmaster.util.Wiz;
 
@@ -23,6 +25,7 @@ public class FreezingVenom extends AbstractCalamityCard {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = FROSTBITE_POISON;
+        this.isMultiDamage = true;
     }
 
     @Override
@@ -33,10 +36,8 @@ public class FreezingVenom extends AbstractCalamityCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster unused) {
-        for (AbstractMonster m : Wiz.getEnemies()) {
-            this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
-            this.addToBot(new ApplyPowerAction(m, p, new FrostbitePower(m, this.magicNumber)));
-            this.addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber)));
-        }
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.POISON));
+        this.addToBot(new AllEnemyApplyPowerAction(p, this.magicNumber, m -> new FrostbitePower(m, this.magicNumber)));
+        this.addToBot(new AllEnemyApplyPowerAction(p, this.magicNumber, m -> new PoisonPower(m, p, this.magicNumber)));
     }
 }
