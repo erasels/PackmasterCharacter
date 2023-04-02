@@ -16,8 +16,8 @@ public class S_r_ke extends AbstractDistortionCard {
 
     public S_r_ke() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
-        baseMagicNumber = magicNumber = 3;
+        baseDamage = 6;
+        baseMagicNumber = magicNumber = 4;
 
         tags.add(CardTags.STRIKE);
     }
@@ -30,6 +30,6 @@ public class S_r_ke extends AbstractDistortionCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeMagicNumber(1);
     }
 }
