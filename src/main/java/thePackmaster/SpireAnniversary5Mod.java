@@ -1041,6 +1041,7 @@ public class SpireAnniversary5Mod implements
             return;
         }
         SpireAnniversary5Mod.logger.info("Calculating card statistics");
+        int packs = SpireAnniversary5Mod.unfilteredAllPacks.size();
         List<AbstractCard> cards = SpireAnniversary5Mod.unfilteredAllPacks.stream()
                 .flatMap(p -> p.getCards().stream())
                 .map(CardLibrary::getCard)
@@ -1101,6 +1102,7 @@ public class SpireAnniversary5Mod implements
         String typeInfo = getSummaryString(types, Enum::ordinal, k -> formatName.apply(k.name()));
         String rarityInfo = getSummaryString(rarities, Enum::ordinal, k -> formatName.apply(k.name()));
         String colorInfo = getSummaryString(colors, Enum::ordinal, k -> formatName.apply(k.name()));
+        SpireAnniversary5Mod.logger.info("Packs: " + packs);
         SpireAnniversary5Mod.logger.info("Cards: " + cards.size());
         SpireAnniversary5Mod.logger.info("Costs: " + costInfo);
         SpireAnniversary5Mod.logger.info("Types: " + typeInfo);
