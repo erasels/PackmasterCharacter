@@ -12,7 +12,7 @@ public class PolarBlessing extends AbstractArtificerCard {
 
     public PolarBlessing(){
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 15;
+        baseBlock = 14;
     }
 
     @Override

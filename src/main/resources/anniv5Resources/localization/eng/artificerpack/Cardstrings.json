@@ -1,7 +1,7 @@
 {
   "${ModID}:SpellStone": {
     "NAME": "Spell Stone",
-    "DESCRIPTION": "Deal !D! damage. NL Modify adjacent cards until the end of your turn: NL \"Grant !M! Block\"."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Boost adjacent cards: NL \"Gain !M! Block\""
   },
   "${ModID}:PolarBlessing": {
     "NAME": "Polar Blessing",
@@ -17,7 +17,7 @@
   },
   "${ModID}:GrantSwiftness": {
   "NAME": "Grant Swiftness",
-  "DESCRIPTION": "Draw !M! cards. NL Modify adjacent cards until the end of your turn: NL \"Draw 1 card.\""
+  "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Boost adjacent cards: NL \"Draw 1 card\""
   },
   "${ModID}:WhiteSteelCharm": {
     "NAME": "White Steel Charm",
@@ -25,7 +25,7 @@
   },
   "${ModID}:EclipseCharm": {
     "NAME": "Eclipse Charm",
-    "DESCRIPTION": "{@@}Unplayable. NL Each time you play an adjacent card !M! times{!Upgrades!|<1= in one turn}, gain 1 Strength and Dexterity."
+    "DESCRIPTION": "{@@}Unplayable. NL After you play an adjacent card !M! times{!Upgrades!|<1= in one turn}, gain 1 Strength and Dexterity."
   },
   "${ModID}:Chronobooster": {
     "NAME": "Chronobooster",
