@@ -12,6 +12,7 @@ BitingColdPack	Debuffs
 BlacksmithsPack	None
 BoardGamePack	None
 BulwarkPack	Exhaust
+CalamityPack	Debuffs
 ClawPack	Tokens
 ConjurerPack	Debuffs
 ContentCreatorPack	Orbs

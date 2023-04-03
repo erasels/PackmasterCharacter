@@ -12,6 +12,7 @@ BitingColdPack	4	2	2	3	3
 BlacksmithsPack	3	3	4	4	4
 BoardGamePack	4	3	2	4	2
 BulwarkPack	2	5	1	4	4
+CalamityPack	4	2	2	3	4
 ClawPack	5	2	1	2	5
 ConjurerPack	3	4	2	2	3
 ContentCreatorPack	2	2	4	2	4
