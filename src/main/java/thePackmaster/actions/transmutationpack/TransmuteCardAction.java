@@ -123,6 +123,8 @@ public class TransmuteCardAction extends AbstractGameAction {
                     isDone = true;
                 } else if (AbstractDungeon.player.hand.size() <= cards && !anyNumber) {
                     AbstractDungeon.handCardSelectScreen.selectedCards.group.addAll(AbstractDungeon.player.hand.group);
+                    AbstractDungeon.player.releaseCard();
+                    AbstractDungeon.player.hand.stopGlowing();
                     AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = false;
                 } else {
                     AbstractDungeon.handCardSelectScreen.open(TEXT[0], Math.min(AbstractDungeon.player.hand.size(), cards), anyNumber, anyNumber);
