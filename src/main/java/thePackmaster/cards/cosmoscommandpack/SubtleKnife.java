@@ -17,8 +17,8 @@ public class SubtleKnife extends AbstractCosmosCard implements AmplifyCard {
 
     public SubtleKnife() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        damage = baseDamage = 5;
-        magicNumber = baseMagicNumber = 5;
+        damage = baseDamage = 6;
+        magicNumber = baseMagicNumber = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

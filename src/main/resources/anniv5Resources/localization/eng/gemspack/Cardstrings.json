@@ -4,16 +4,6 @@
     "DESCRIPTION": "${ModID}:Gem. NL \"Gain 2 Temp. Strength\"",
     "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain 2 Temp. Strength\""
   },
-  "${ModID}:WardGem": {
-    "NAME": "Aquamarine",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Ward\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Ward\""
-  },
-  "${ModID}:ShivGem": {
-    "NAME": "Fragmented Gem",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Gain a *Shiv\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Gain a *Shiv\""
-  },
   "${ModID}:FrostGem": {
     "NAME": "Aquamarine",
     "DESCRIPTION": "${ModID}:Gem. NL \"Channel 1 Frost\"",
@@ -43,10 +33,6 @@
     "NAME": "Onyx",
     "DESCRIPTION": "${ModID}:Gem. NL \"Reduce debuffs by 1\"",
     "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Reduce debuffs by 1\""
-  },
-  "${ModID}:Ward": {
-    "NAME": "Ward",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
   },
   "${ModID}:DiceGem": {
     "NAME": "Tourmaline",

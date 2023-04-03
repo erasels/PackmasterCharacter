@@ -15,20 +15,21 @@
   "${ModID}:FetchPower": {
     "NAME": "获取",
     "DESCRIPTIONS": [
-      "本回合每当你打出一张 #y异色 技能牌时，抽一张牌。"
+      "本回合打出下张 #y异色 技能牌后，抽 #b",
+      " 张牌。"
     ]
   },
   "${ModID}:NeutronStarPower": {
     "NAME": "中子星",
     "DESCRIPTIONS": [
-      "本回合每当你打出一张 #y异色 攻击牌时，获得 #b",
+      "本回合打出下张 #y异色 攻击牌后，获得 #b",
       " 层临时 #y力量 。"
     ]
   },
   "${ModID}:StarShowerPower": {
     "NAME": "流星雨",
     "DESCRIPTIONS": [
-      "本回合每当你打出一张 #y异色 攻击牌时，随机对一名敌人造成 #b",
+      "本回合打出下张 #y异色 攻击牌后，随机对一名敌人造成 #b",
       " 点伤害。"
     ]
   }

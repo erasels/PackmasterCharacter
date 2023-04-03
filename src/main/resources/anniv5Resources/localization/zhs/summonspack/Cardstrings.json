@@ -45,15 +45,15 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 生成 一个 ${ModID}:蜂群 充能球。",
     "FLAVOR": "很吓人。"
   },
-  "${ModID}:Training": {
-    "NAME": "驯化",
-    "DESCRIPTION": "回合结束时 激发 最右侧的充能球 !M! 次。",
+  "${ModID}:Specialist": {
+    "NAME": "驯兽师",
+    "DESCRIPTION": "获得 !M! 点 集中 。 NL 失去1点 力量 与 敏捷 。",
     "FLAVOR": "不仅仅你能召唤什么很重要，更重要的是如何驾驭它们。"
   },
   "${ModID}:Ambush": {
     "NAME": "埋伏",
-    "DESCRIPTION": "生成 充能球时， NL 触发一次其 激发 效果。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 生成 充能球时， NL 触发一次其 激发 效果。",
+    "DESCRIPTION": "虚无 。 NL 生成 充能球时， NL 触发一次其 激发 效果。",
+    "UPGRADE_DESCRIPTION": "生成 充能球时， NL 触发一次其 激发 效果。",
     "FLAVOR": "我实在找不到契合埋伏的卡图了，所以只能整个谐音梗 (Ham + Bush)。"
   },
   "${ModID}:Pandas": {
