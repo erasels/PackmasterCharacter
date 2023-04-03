@@ -2,9 +2,9 @@ Pack	Offense	Defense	Support	Frontload	Scaling
 AggressionPack	5	2	2	4	3
 AlignmentPack	2	3	5	2	2
 AllForOnePack	4	2	3	4	3
-AnomalyPack 2	3	4	1	4
-ArcanaPack  3	3	3	3	2
-ArtificerPack   3	2	4	4	3
+AnomalyPack	2	3	4	1	4
+ArcanaPack	3	3	3	3	2
+ArtificerPack	3	2	4	4	3
 BardInspirePack	3	3	4	2	3
 BasicsPack	3	3	2	4	2
 BatterPack	4	2	2	4	2

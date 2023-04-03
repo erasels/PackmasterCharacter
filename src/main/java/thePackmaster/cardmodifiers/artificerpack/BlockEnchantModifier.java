@@ -25,12 +25,13 @@ public class BlockEnchantModifier extends AbstractCardModifier {
     @Override
     public void onInitialApplication(AbstractCard card) {
         for (AbstractCardModifier m : CardModifierManager.modifiers(card)) {
-            if (m instanceof BlockEnchantModifier) {
-                if (((BlockEnchantModifier) m).amount != 0) {
-                    ((BlockEnchantModifier) m).amount += amount;
-                    amount = 0;
-                }
+            if (m instanceof BlockEnchantModifier && m != this) {
+                ((BlockEnchantModifier) m).amount += amount;
+                amount = 0;
             }
+        }
+        if (amount == 0) {
+            CardModifierManager.removeSpecificModifier(card, this, true);
         }
     }
 

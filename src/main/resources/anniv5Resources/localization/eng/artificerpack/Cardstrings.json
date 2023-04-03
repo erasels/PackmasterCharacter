@@ -21,7 +21,7 @@
   },
   "${ModID}:WhiteSteelCharm": {
     "NAME": "White Steel Charm",
-    "DESCRIPTION": "Unplayable. NL When you play an adjacent card, a random enemy takes !M! damage."
+    "DESCRIPTION": "Unplayable. NL Whenever you play an adjacent card, a random enemy takes !M! damage."
   },
   "${ModID}:EclipseCharm": {
     "NAME": "Eclipse Charm",
@@ -29,7 +29,7 @@
   },
   "${ModID}:Chronobooster": {
     "NAME": "Chronobooster",
-    "DESCRIPTION": "{@@}Unplayable. NL When you play an adjacent card, play it twice and {!Upgrades!|>0=discard|@=Exhaust} this."
+    "DESCRIPTION": "{@@}Unplayable. NL Whenever you play an adjacent card, play it twice and {!Upgrades!|>0=discard|@=Exhaust} this."
   },
   "${ModID}:MirrorsCurse": {
     "NAME": "Mirror's Curse",

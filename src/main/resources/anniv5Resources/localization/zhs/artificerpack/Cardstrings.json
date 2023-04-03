@@ -1,7 +1,7 @@
 {
   "${ModID}:SpellStone": {
     "NAME": "Spell Stone",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Boost adjacent cards: NL \"Gain !M! Block\"."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Boost adjacent cards: NL \"Gain !M! Block\""
   },
   "${ModID}:PolarBlessing": {
     "NAME": "Polar Blessing",
@@ -17,11 +17,11 @@
   },
   "${ModID}:GrantSwiftness": {
   "NAME": "Grant Swiftness",
-  "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Boost adjacent cards: NL \"Draw 1 card.\""
+  "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Boost adjacent cards: NL \"Draw 1 card\""
   },
   "${ModID}:WhiteSteelCharm": {
     "NAME": "White Steel Charm",
-    "DESCRIPTION": "Unplayable. NL When you play an adjacent card, a random enemy takes !M! damage."
+    "DESCRIPTION": "Unplayable. NL Whenever you play an adjacent card, a random enemy takes !M! damage."
   },
   "${ModID}:EclipseCharm": {
     "NAME": "Eclipse Charm",
@@ -29,7 +29,7 @@
   },
   "${ModID}:Chronobooster": {
     "NAME": "Chronobooster",
-    "DESCRIPTION": "{@@}Unplayable. NL When you play an adjacent card, play it twice and {!Upgrades!|>0=discard|@=Exhaust} this."
+    "DESCRIPTION": "{@@}Unplayable. NL Whenever you play an adjacent card, play it twice and {!Upgrades!|>0=discard|@=Exhaust} this."
   },
   "${ModID}:MirrorsCurse": {
     "NAME": "Mirror's Curse",

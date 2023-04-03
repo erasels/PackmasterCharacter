@@ -14,7 +14,7 @@
   },
   "${ModID}:BlockEnchantModifier": {
     "TEXT": [
-      " NL Add "," Block."
+      " NL Gain "," Block."
     ]
   },
   "${ModID}:LimitedGambleAction": {
@@ -24,7 +24,7 @@
   },
   "${ModID}:DrawEnchantModifier": {
     "TEXT": [
-      " NL Draw "," card."
+      " NL Draw "," card."," cards."
     ]
   }
 }

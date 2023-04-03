@@ -2,6 +2,6 @@
   {
   "PROPER_NAME": "Boost",
   "NAMES": ["boost"],
-  "DESCRIPTION": "Add an effect to a card until the end of your turn, or until after it is played."
+  "DESCRIPTION": "Add an effect to a card. This effect is removed at the end of your turn or after playing the card."
   }
 ]

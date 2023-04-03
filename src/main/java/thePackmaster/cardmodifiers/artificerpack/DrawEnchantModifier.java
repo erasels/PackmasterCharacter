@@ -25,12 +25,13 @@ public class DrawEnchantModifier extends AbstractCardModifier {
     @Override
     public void onInitialApplication(AbstractCard card) {
         for (AbstractCardModifier m : CardModifierManager.modifiers(card)) {
-            if (m instanceof DrawEnchantModifier) {
-                if (((DrawEnchantModifier) m).amount != 0) {
-                    ((DrawEnchantModifier) m).amount += amount;
-                    amount = 0;
-                }
+            if (m instanceof DrawEnchantModifier && m != this) {
+                ((DrawEnchantModifier) m).amount += amount;
+                amount = 0;
             }
+        }
+        if (amount == 0) {
+            CardModifierManager.removeSpecificModifier(card,this,true);
         }
     }
 
@@ -63,6 +64,9 @@ public class DrawEnchantModifier extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + strings.TEXT[0] + amount + strings.TEXT[1]; //only for 1 card at a time for now
+        if (amount > 1) {
+            return rawDescription + strings.TEXT[0] + amount + strings.TEXT[2];
+        }
+        return rawDescription + strings.TEXT[0] + amount + strings.TEXT[1];
     }
 }
