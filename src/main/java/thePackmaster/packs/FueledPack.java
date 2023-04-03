@@ -2,8 +2,6 @@ package thePackmaster.packs;
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.potions.FocusPotion;
-import com.megacrit.cardcrawl.potions.PotionOfCapacity;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.fueledpack.*;
 
@@ -35,13 +33,5 @@ public class FueledPack extends AbstractCardPack {
         cards.add(BurnBright.ID);
         cards.add(ControlledBurn.ID);
         return cards;
-    }
-
-    @Override
-    public ArrayList<String> getPackPotions() {
-        ArrayList<String> list = new ArrayList<>();
-        list.add(FocusPotion.POTION_ID);
-        list.add(PotionOfCapacity.POTION_ID);
-        return list;
     }
 }

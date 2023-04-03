@@ -16,14 +16,12 @@ public class HotAsh extends AbstractFueledCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_DAMAGE = 3;
-    private static final int MAGIC = 1;
+    private static final int DAMAGE = 4;
+    private static final int UPGRADE_DAMAGE = 2;
 
     public HotAsh() {
         super(ID, COST, TYPE, RARITY, TARGET, CardColor.COLORLESS);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
     }
 
     @Override

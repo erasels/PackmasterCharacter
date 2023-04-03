@@ -1,7 +1,7 @@
 {
   "${ModID}:BurningSword": {
     "NAME": "Burning Sword",
-    "DESCRIPTION": "Deal !D! Damage. NL Deal !M! damage to ALL enemies when ${ModID}:Consumed."
+    "DESCRIPTION": "Deal !D! Damage. NL This card is not transformed when ${ModID}:Consumed."
   },
   "${ModID}:IridiumShield": {
     "NAME": "Iridium Shield",
@@ -18,11 +18,11 @@
   },
   "${ModID}:FlamingLeap": {
     "NAME": "Flaming Leap",
-    "DESCRIPTION": "${ModID}:Consume a card to draw !M! cards and Gain [E]."
+    "DESCRIPTION": "${ModID}:Consume a card to Gain [E] and draw !M! cards. NL Exhaust."
   },
   "${ModID}:InfernoMkTwo": {
     "NAME": "Inferno Mk 2",
-    "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage to ALL enemies.",
+    "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage and apply !M! ${ModID}:Ignite to ALL enemies.",
     "FLAVOR": "The original version sets you on fire.  0/10 would not cast again."
   },
   "${ModID}:PoisonousSmoke": {
@@ -36,8 +36,7 @@
   },
   "${ModID}:BurnBright": {
     "NAME": "Burn Bright",
-    "DESCRIPTION": "${ModID}:Consume X cards to play your next X powers twice. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Consume X cards to play your next X+1 powers twice. NL Exhaust."
+    "DESCRIPTION": "${ModID}:Consume a card to play a Power you've already played this combat."
   },
   "${ModID}:ControlledBurn": {
     "NAME": "Controlled Burn",
@@ -45,6 +44,6 @@
   },
   "${ModID}:HotAsh": {
     "NAME": "Hot Ash",
-    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage."
   }
 }

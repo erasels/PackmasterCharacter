@@ -2,13 +2,18 @@
   "${ModID}:FueledPack": {
     "TEXT": [
       "Fueled",
-      "Burn your cards to ash in order to fuel a powerful offense.",
+      "Burn your cards to ash in order to fuel a powerful offense.",
       "Bryan K"
     ]
   },
   "${ModID}:ConsumeUiText": {
     "TEXT": [
       "consume."
+    ]
+  },
+  "${ModID}:BurnBrightUiText": {
+    "TEXT": [
+      "Choose a Power to play."
     ]
   },
   "${ModID}:FueledPackHat": {

@@ -136,6 +136,7 @@ public class SpireAnniversary5Mod implements
         OnPlayerTurnStartSubscriber,
         OnCreateDescriptionSubscriber,
         OnPlayerLoseBlockSubscriber,
+        OnCardUseSubscriber,
         PostRenderSubscriber {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
@@ -234,6 +235,7 @@ public class SpireAnniversary5Mod implements
 
     public static final ArrayList<Panda> pandaList = new ArrayList<>();
     public static final ArrayList<Louse> louseList = new ArrayList<>();
+    public static final ArrayList<AbstractCard> powerList = new ArrayList<>();
 
     public static boolean isHatRainbow = false;
 
@@ -809,6 +811,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         pandaList.clear();
+        powerList.clear();
         UltimateHomerun.HIGH_SCORE = 0;
         combatExhausts = 0;
         PenancePower.Power = 20;
@@ -1162,6 +1165,13 @@ public class SpireAnniversary5Mod implements
             //SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
+    }
+
+    @Override
+    public void receiveCardUsed(AbstractCard card) {
+        if (card.type == AbstractCard.CardType.POWER
+                && !card.purgeOnUse)
+            powerList.add(card);
     }
 
     //Due to reward scrolling's orthographic camera and render order of rewards, the card needs to be rendered outside of the render method

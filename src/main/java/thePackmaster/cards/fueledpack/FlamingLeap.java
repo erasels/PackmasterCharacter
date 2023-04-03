@@ -27,6 +27,7 @@ public class FlamingLeap extends AbstractFueledCard {
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         baseMagicNumber = magicNumber = MAGIC;
+        exhaust = true;
     }
 
     @Override

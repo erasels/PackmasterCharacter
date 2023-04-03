@@ -15,8 +15,8 @@ public class ControlledBurn extends AbstractFueledCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
 
     public ControlledBurn() {
         super(ID, COST, TYPE, RARITY, TARGET);

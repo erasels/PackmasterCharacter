@@ -6,13 +6,5 @@
       "The first #b",
       " times each turn you #yConsume a card, gain [E] and draw a card."
     ]
-  },
-  "${ModID}:BurnBrightPower": {
-    "NAME": "Burn Bright",
-    "DESCRIPTIONS": [
-      "Your next Power card is played twice.",
-      "Your next #b" ,
-      " Power cards are played twice."
-    ]
   }
 }
