@@ -1,0 +1,50 @@
+{
+  "${ModID}:Doomtouch": {
+    "NAME": "Doomtouch",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Jinx."
+  },
+  "${ModID}:BindingChains": {
+    "NAME": "Binding Chains",
+    "DESCRIPTION": "Gain !B! Block. NL Enemy loses !M! Strength this turn. NL Exhaust."
+  },
+  "${ModID}:FreezingVenom": {
+    "NAME": "Freezing Venom",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! ${ModID}:Frostbite and Poison to ALL enemies."
+  },
+  "${ModID}:EssenceGrasp": {
+    "NAME": "Essence Grasp",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card for each of ${ModID}:Ignite, ${ModID}:Frostbite, and Poison the enemy has.",
+    "EXTENDED_DESCRIPTION": [" NL (Draws !M! card.)", " NL (Draws !M! cards.)"]
+  },
+  "${ModID}:ChillingCurse": {
+    "NAME": "Chilling Curse",
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite and Weak. NL Exhaust."
+  },
+  "${ModID}:Suffer": {
+    "NAME": "Suffer",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite, ${ModID}:Frostbite, Poison, and ${ModID}:Jinx. NL Exhaust."
+  },
+  "${ModID}:ArmorOfMalice": {
+    "NAME": "Armor of Malice",
+    "DESCRIPTION": "Gain Block equal to !M! times the number of unique debuffs on ALL enemies.",
+    "EXTENDED_DESCRIPTION": [" NL (Gains !B! Block.)"]
+  },
+  "${ModID}:AllIsFire": {
+    "NAME": "All is Fire",
+    "DESCRIPTION": "Convert all ${ModID}:Frostbite and Poison to ${ModID}:Ignite. NL Increase the enemy's ${ModID}:Ignite by 50%. NL Exhaustive !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Convert all ${ModID}:Frostbite and Poison to ${ModID}:Ignite. NL Double the enemy's ${ModID}:Ignite. NL Exhaustive !stslib:ex!."
+  },
+  "${ModID}:DreadOmen": {
+    "NAME": "Dread Omen",
+    "DESCRIPTION": "Apply !M! ${ModID}:Jinx."
+  },
+  "${ModID}:GrowingFlames": {
+    "NAME": "Growing Flames",
+    "DESCRIPTION": "At the start of your turn, apply !M! ${ModID}:Ignite to ALL enemies."
+  },
+  "${ModID}:CobrasGift": {
+    "NAME": "Cobra's Gift",
+    "DESCRIPTION": "Apply !M! Poison. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Gain [E]."
+  }
+}

@@ -15,7 +15,7 @@ public class Refrigerate extends BitingColdCard {
 
     public Refrigerate() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        magicNumber = baseMagicNumber = 13;
+        magicNumber = baseMagicNumber = 11;
         exhaust = true;
     }
 
