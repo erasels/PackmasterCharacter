@@ -1,7 +1,7 @@
 {
   "${ModID}:FuelTank": {
     "NAME": "Fuel Tank",
-    "FLAVOR": "It's difficult to turn the oily pages.",
+    "FLAVOR": "FWOOSH!.",
     "DESCRIPTIONS": [
       "You can now #y${ModID}:Consume #yStatus, #yCurse, and #yAsh cards. NL Doing so #yExhausts them."
     ]

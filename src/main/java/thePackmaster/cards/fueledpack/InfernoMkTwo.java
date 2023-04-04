@@ -36,10 +36,16 @@ public class InfernoMkTwo extends AbstractFueledCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        DamageAllEnemiesAction action = new DamageAllEnemiesAction(adp(), multiDamage, damageTypeForTurn,
-                AbstractGameAction.AttackEffect.FIRE);
+        AbstractGameAction action = new AbstractGameAction() {
+            @Override
+            public void update() {
+                forAllMonstersLiving(mo -> applyToEnemyTop(mo, new IgnitePower(mo, magicNumber)));
+                att(new DamageAllEnemiesAction(adp(), multiDamage, damageTypeForTurn,
+                        AbstractGameAction.AttackEffect.FIRE));
+                isDone = true;
+            }
+        };
         atb(new ConsumeToDoAction(action));
-        forAllMonstersLiving(mo -> applyToEnemy(mo, new IgnitePower(mo, magicNumber)));
     }
 
     @Override

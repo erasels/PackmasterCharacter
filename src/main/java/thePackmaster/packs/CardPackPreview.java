@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 
 public class CardPackPreview extends AbstractPackPreviewCard {
-    // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public CardPackPreview(String cardID, AbstractCardPack parentPack) {
         super(cardID, parentPack);
