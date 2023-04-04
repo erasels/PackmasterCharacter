@@ -1,13 +1,10 @@
 package thePackmaster.cards.fueledpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.adp;
-import static thePackmaster.util.Wiz.atb;
 
 public class HotAsh extends AbstractFueledCard {
     public final static String ID = makeID(HotAsh.class.getSimpleName());
@@ -16,8 +13,8 @@ public class HotAsh extends AbstractFueledCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int DAMAGE = 3;
+    private static final int UPGRADE_DAMAGE = 1;
 
     public HotAsh() {
         super(ID, COST, TYPE, RARITY, TARGET, CardColor.COLORLESS);
@@ -26,7 +23,6 @@ public class HotAsh extends AbstractFueledCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new LoseHPAction(adp(), adp(), magicNumber, AbstractGameAction.AttackEffect.FIRE));
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 

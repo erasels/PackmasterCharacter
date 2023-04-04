@@ -1,11 +1,12 @@
 {
   "${ModID}:BurningSword": {
     "NAME": "Burning Sword",
-    "DESCRIPTION": "Deal !D! Damage. NL This card is not transformed when ${ModID}:Consumed."
+    "DESCRIPTION": "Deal !D! Damage. NL Draw !M! cards."
   },
   "${ModID}:IridiumShield": {
     "NAME": "Iridium Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block when ${ModID}:Consumed."
+    "DESCRIPTION": "Gain !B! Block. NL You may Exhaust !M! card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust up to !M! cards."
   },
   "${ModID}:FlameBlastMkTwo": {
     "NAME": "Flame Blast Mk 2",
@@ -25,22 +26,23 @@
     "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage and apply !M! ${ModID}:Ignite to ALL enemies.",
     "FLAVOR": "The original version sets you on fire.  0/10 would not cast again."
   },
-  "${ModID}:PoisonousSmoke": {
-    "NAME": "Poisonous Smoke",
-    "DESCRIPTION": "${ModID}:Consume a card to cause ALL enemies to lose !M! Strength. NL Exhaust."
+  "${ModID}:AshCloud": {
+    "NAME": "Ash Cloud",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block for each *Hot *Ash in your hand."
   },
   "${ModID}:PhoenixHeart": {
     "NAME": "Phoenix Heart",
-    "DESCRIPTION": "Exhaust all *Hot *Ash in your hand and add a random card into your have for each. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust all *Hot *Ash in your hand and add a random card into your have for each."
+    "DESCRIPTION": "Exhaust all *Hot *Ash in your hand and add a random card into your hand for each."
   },
   "${ModID}:BurnBright": {
     "NAME": "Burn Bright",
-    "DESCRIPTION": "${ModID}:Consume a card to play a Power you've already played this combat."
+    "DESCRIPTION": "${ModID}:Consume a card to play a Power you've already played this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Consume a card to play a Power you've already played this combat."
   },
   "${ModID}:ControlledBurn": {
     "NAME": "Controlled Burn",
-    "DESCRIPTION": "The first time each turn you ${ModID}:Consume a card, gain [E] and draw a card."
+    "DESCRIPTION": "The first time each turn you ${ModID}:Consume a card, gain [E] and draw a card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time each turn you ${ModID}:Consume a card, gain [E] and draw a card."
   },
   "${ModID}:HotAsh": {
     "NAME": "Hot Ash",

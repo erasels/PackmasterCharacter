@@ -48,6 +48,8 @@ public class ConsumeToDoAction extends AbstractGameAction {
 
             if (adp().hand.size() == 1) {
                 AbstractCard c = adp().hand.getTopCard();
+                adp().releaseCard();
+                adp().hand.stopGlowing();
                 finish(c);
                 return;
             }

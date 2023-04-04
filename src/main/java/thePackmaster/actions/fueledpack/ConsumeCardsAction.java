@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.cards.fueledpack.BurningSword;
 import thePackmaster.cards.fueledpack.HotAsh;
-import thePackmaster.cards.fueledpack.OnConsumedCard;
 import thePackmaster.powers.fueledpack.ControlledBurnPower;
 import thePackmaster.vfx.fueledpack.ConsumeCardEffect;
 
@@ -61,10 +60,6 @@ public class ConsumeCardsAction extends AbstractGameAction {
 
             for (AbstractCard c : removeList)
                 consumePairs.remove(c);
-
-            for (AbstractCard c : consumePairs.keySet())
-                if (c instanceof OnConsumedCard)
-                    ((OnConsumedCard) c).OnConsumed();
 
             if (consumePairs.size() == 0) {
                 isDone = true;

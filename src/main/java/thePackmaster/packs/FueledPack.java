@@ -28,7 +28,7 @@ public class FueledPack extends AbstractCardPack {
         cards.add(Napalm.ID);
         cards.add(InfernoMkTwo.ID);
         cards.add(FlamingLeap.ID);
-        cards.add(PoisonousSmoke.ID);
+        cards.add(AshCloud.ID);
         cards.add(PhoenixHeart.ID);
         cards.add(BurnBright.ID);
         cards.add(ControlledBurn.ID);

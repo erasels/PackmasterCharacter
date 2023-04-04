@@ -15,7 +15,8 @@ import static thePackmaster.util.Wiz.*;
 
 public class PhoenixHeart extends AbstractFueledCard {
     public final static String ID = makeID(PhoenixHeart.class.getSimpleName());
-    private static final int COST = 0;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -25,7 +26,6 @@ public class PhoenixHeart extends AbstractFueledCard {
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         cardsToPreview = new HotAsh();
-        exhaust = true;
     }
 
     @Override
@@ -43,6 +43,6 @@ public class PhoenixHeart extends AbstractFueledCard {
 
     @Override
     public void upp() {
-        exhaust = false;
+        upgradeBaseCost(UPGRADED_COST);
     }
 }
