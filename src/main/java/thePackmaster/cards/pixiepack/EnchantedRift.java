@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.pixiepack.DrawSpecificCardAction;
 import thePackmaster.packs.PixiePack;
 
@@ -35,7 +36,7 @@ public class EnchantedRift extends AbstractPixieCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new GainBlockAction(abstractPlayer, block));
         AbstractCard lastDifferent = null;
-        for (int i = AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2; i > 0; i--) {
+        for (int i = AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2; i >= 0; i--) {
             if (PixiePack.isForeign(AbstractDungeon.actionManager.cardsPlayedThisCombat.get(i))) {
                 lastDifferent = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(i);
                 break;

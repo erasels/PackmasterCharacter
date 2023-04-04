@@ -3,12 +3,14 @@ package thePackmaster;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.ModPanel;
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomSavable;
 import basemod.devcommands.ConsoleCommand;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
+import basemod.helpers.TextCodeInterpreter;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -17,6 +19,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
@@ -163,6 +166,7 @@ public class SpireAnniversary5Mod implements
     public static boolean openedStarterScreen = false;
     public static boolean skipDefaultCardRewards = false;
     public static int PACKS_PER_RUN = 7;
+    public static int PACKS_PER_CHOICE = 3;
     public static CurrentRunCardsTopPanelItem currentRunCardsTopPanelItem;
 
     public static final String modID = "anniv5";
@@ -545,6 +549,9 @@ public class SpireAnniversary5Mod implements
 
         ConsoleCommand.addCommand("addhat", UnlockHatCommand.class);
         ConsoleCommand.addCommand("pack", PackAddCommand.class);
+
+        TextCodeInterpreter.addAccessible("PackmasterMenu", MainMenuUIPatch.class);
+        TextCodeInterpreter.addAccessible("Packmaster", SpireAnniversary5Mod.class);
     }
 
     public static void addPotions() {
@@ -1039,6 +1046,7 @@ public class SpireAnniversary5Mod implements
             return;
         }
         SpireAnniversary5Mod.logger.info("Calculating card statistics");
+        int packs = SpireAnniversary5Mod.unfilteredAllPacks.size();
         List<AbstractCard> cards = SpireAnniversary5Mod.unfilteredAllPacks.stream()
                 .flatMap(p -> p.getCards().stream())
                 .map(CardLibrary::getCard)
@@ -1047,10 +1055,14 @@ public class SpireAnniversary5Mod implements
         HashMap<AbstractCard.CardType, Integer> types = new HashMap<>();
         HashMap<AbstractCard.CardRarity, Integer> rarities = new HashMap<>();
         HashMap<AbstractCard.CardColor, Integer> colors = new HashMap<>();
+        List<String> specialRarityNotColorless = new ArrayList<>();
+        int aoeattack = 0;
         int block = 0;
         int exhaust = 0;
+        int exhaustive = 0;
         int ethereal = 0;
         int retain = 0;
+        int innate = 0;
         int strike = 0;
         int healing = 0;
         List<String> notIronWaves = Arrays.asList(DimensionalIcicles.ID, SwordAndBoard.ID);
@@ -1058,9 +1070,11 @@ public class SpireAnniversary5Mod implements
         int ironwave = 0;
         int upgradeCost = 0;
         int upgradeDontExhaust = 0;
+        int upgradeExhaustive = 0;
         int upgradeNotEthereal = 0;
         int upgradeRetain = 0;
         int upgradeInnate = 0;
+        int multiUpgrade = 0;
         for (AbstractCard c : cards) {
             AbstractCard cu = c.makeCopy();
             cu.upgrade();
@@ -1068,18 +1082,24 @@ public class SpireAnniversary5Mod implements
             types.put(c.type, types.getOrDefault(c.type, 0) + 1);
             rarities.put(c.rarity, rarities.getOrDefault(c.rarity, 0) + 1);
             colors.put(c.color, colors.getOrDefault(c.color, 0) + 1);
+            if (c.rarity == AbstractCard.CardRarity.SPECIAL && c.color != AbstractCard.CardColor.COLORLESS) { specialRarityNotColorless.add(c.cardID); }
+            if (c.type == AbstractCard.CardType.ATTACK && c.baseDamage >= 0 && (boolean)ReflectionHacks.getPrivate(c, AbstractCard.class, "isMultiDamage")) { aoeattack++; }
             if (c.baseBlock >= 0) { block++; }
             if (c.exhaust) { exhaust++; }
+            if (ExhaustiveField.ExhaustiveFields.baseExhaustive.get(c) > 0) { exhaustive++; }
             if (c.isEthereal) { ethereal++; }
             if (c.selfRetain) { retain++; }
+            if (c.isInnate) { innate++; }
             if (c.hasTag(AbstractCard.CardTags.STRIKE)) { strike++; }
             if (c.hasTag(AbstractCard.CardTags.HEALING)) { healing++; }
-            if (c.type == AbstractCard.CardType.ATTACK && c.baseDamage > 0 && c.baseBlock > 0 && !notIronWaves.contains(c.cardID)) { ironwave++; ironWaves.add(c.name); }
+            if (c.type == AbstractCard.CardType.ATTACK && c.baseDamage >= 0 && c.baseBlock >= 0 && !notIronWaves.contains(c.cardID)) { ironwave++; ironWaves.add(c.name); }
             if (c.cost > cu.cost) { upgradeCost++; }
-            if (c.exhaust && !cu.exhaust) { upgradeDontExhaust++; }
+            if (c.exhaust && !cu.exhaust && ExhaustiveField.ExhaustiveFields.baseExhaustive.get(cu) == -1) { upgradeDontExhaust++; }
+            if (c.exhaust && !cu.exhaust && ExhaustiveField.ExhaustiveFields.baseExhaustive.get(cu) > 0) { upgradeExhaustive++; }
             if (c.isEthereal && !cu.isEthereal) { upgradeNotEthereal++; }
             if (!c.selfRetain && cu.selfRetain) { upgradeRetain++; }
             if (!c.isInnate && cu.isInnate) { upgradeInnate++; }
+            if (cu.canUpgrade()) { multiUpgrade++; }
         }
 
         Function<String, String> formatName = s -> s.substring(0, 1).toUpperCase(Locale.ROOT) + s.substring(1).toLowerCase(Locale.ROOT);
@@ -1087,14 +1107,35 @@ public class SpireAnniversary5Mod implements
         String typeInfo = getSummaryString(types, Enum::ordinal, k -> formatName.apply(k.name()));
         String rarityInfo = getSummaryString(rarities, Enum::ordinal, k -> formatName.apply(k.name()));
         String colorInfo = getSummaryString(colors, Enum::ordinal, k -> formatName.apply(k.name()));
+        SpireAnniversary5Mod.logger.info("Packs: " + packs);
         SpireAnniversary5Mod.logger.info("Cards: " + cards.size());
         SpireAnniversary5Mod.logger.info("Costs: " + costInfo);
         SpireAnniversary5Mod.logger.info("Types: " + typeInfo);
         SpireAnniversary5Mod.logger.info("Rarities: " + rarityInfo);
         SpireAnniversary5Mod.logger.info("Colors: " + colorInfo);
-        SpireAnniversary5Mod.logger.info("Mechanics: Block: " + block + ", Exhaust: " + exhaust + ", Ethereal: " + ethereal + ", Retain: " + retain + ", Strike: " + strike + ", Healing: " + healing + ", Iron Waves: " + ironwave);
-        SpireAnniversary5Mod.logger.info("Upgrades that: Reduce cost: " + upgradeCost + ", Remove exhaust: " + upgradeDontExhaust + ", Remove ethereal: " + upgradeNotEthereal + ", Add innate: " + upgradeInnate + ", Add retain: " + upgradeRetain);
+        SpireAnniversary5Mod.logger.info("Mechanics: AoE damage: " + aoeattack + ", Block: " + block + ", Exhaust: " + exhaust + ", Exhaustive: " + exhaustive + ", Ethereal: " + ethereal + ", Retain: " + retain + ", Innate: " + innate + ", Strike: " + strike + ", Healing: " + healing + ", Iron Waves: " + ironwave + ", Multiple upgrades: " + multiUpgrade);
+        SpireAnniversary5Mod.logger.info("Upgrades that: Reduce cost: " + upgradeCost + ", Remove exhaust: " + upgradeDontExhaust + ", Exhaust to exhaustive: " + upgradeExhaustive + ", Remove ethereal: " + upgradeNotEthereal + ", Add innate: " + upgradeInnate + ", Add retain: " + upgradeRetain);
         SpireAnniversary5Mod.logger.info("Iron waves: " + String.join(", ", ironWaves));
+
+        HashSet<String> cardNames = new HashSet<>();
+        boolean foundDuplicate = false;
+        for (AbstractCard card : cards) {
+            if(cardNames.contains(card.name)) {
+                SpireAnniversary5Mod.logger.info("Duplicate card name: " + card.name);
+                foundDuplicate = true;
+            }
+            cardNames.add(card.name);
+        }
+        if (!foundDuplicate) {
+            SpireAnniversary5Mod.logger.info("No duplicate card names.");
+        }
+
+        if (!specialRarityNotColorless.isEmpty()) {
+            SpireAnniversary5Mod.logger.info("Colorless cards that aren't special rarity: " + String.join(", ", specialRarityNotColorless));
+        }
+        else {
+            SpireAnniversary5Mod.logger.info("No colorless cards that aren't special rarity.");
+        }
     }
 
     private static <T> String getSummaryString(HashMap<T, Integer> m, Function<T, Integer> getComparisonValue, Function<T, String> getName) {

@@ -27,7 +27,7 @@
   },
   "${ModID}:MoreExplosions": {
     "NAME": "More Explosions!",
-    "DESCRIPTION": "Shuffle !M! random Powers into your draw pile."
+    "DESCRIPTION": "Draw !M! cards. NL Shuffle !M! random Powers into your draw pile."
   },
   "${ModID}:Meltdown": {
     "NAME": "Meltdown",

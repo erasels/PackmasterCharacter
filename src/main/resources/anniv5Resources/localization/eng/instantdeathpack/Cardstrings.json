@@ -1,0 +1,44 @@
+{
+  "${ModID}:Needle": {
+    "NAME": "Needle",
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL Gain 3 ${ModID}:Precision for each Skill discarded."
+  },
+  "${ModID}:Lock": {
+    "NAME": "Lock",
+    "DESCRIPTION": "Retain a card in your hand and gain !M! Block at the end of each turn until you play it."
+  },
+  "${ModID}:Curtain": {
+    "NAME": "Curtain",
+    "DESCRIPTION": "Scry !M!. NL Gain !B! Block for each card discarded."
+  },
+  "${ModID}:Mirror": {
+    "NAME": "Mirror",
+    "DESCRIPTION": "Put a copy of the top card of your draw pile into your hand."
+  },
+  "${ModID}:Nail": {
+    "NAME": "Nail",
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Exhausted, gain !M! ${ModID}:Precision."
+  },
+  "${ModID}:Thread": {
+    "NAME": "Thread",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw a Skill. NL Shuffle this card into your draw pile."
+  },
+  "${ModID}:Cloud": {
+    "NAME": "Cloud",
+    "DESCRIPTION": "Take 50% less attack damage this turn. NL Exhaust a card in your discard pile.",
+    "UPGRADE_DESCRIPTION": "Take 50% less attack damage this turn. NL Exhaust a card in your draw or discard pile."
+  },
+  "${ModID}:SlashDraw": {
+    "NAME": "Slash Draw",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw a card. If it was an Attack, play this card again with {!M!|2=twice|3=thrice|@=!M! times} as much damage."
+  },
+  "${ModID}:PathToVictory": {
+    "NAME": "Path to Victory",
+    "DESCRIPTION": "Put any number of cards from your hand on top of your draw pile and gain !M! ${ModID}:Precision for each."
+  },
+  "${ModID}:AnotherMoment": {
+    "NAME": "Another Moment",
+    "DESCRIPTION": "Ethereal. NL The first time you play a Skill each turn, Exhaust it and gain 1 Dexterity.",
+    "UPGRADE_DESCRIPTION": "The first time you play a Skill each turn, Exhaust it and gain 1 Dexterity."
+  }
+}
