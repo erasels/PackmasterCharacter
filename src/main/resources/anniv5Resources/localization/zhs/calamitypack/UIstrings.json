@@ -1,0 +1,16 @@
+{
+  "${ModID}:CalamityPack": {
+    "TEXT": [
+      "异变",
+      "用 ${ModID}:燃烧 、 ${ModID}:霜噬 、 中毒 ，以及其他负面效果来解决敌人。",
+      "modargo",
+      "卡牌贴图源自游戏：万智牌(Magic: The　Gathering)"
+    ]
+  },
+  "${ModID}:CalamityPackHat": {
+    "TEXT": [
+      "据说世界将于焰烬中终结。",
+      "火"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "${ModID}:Precision": {
+    "NAME": "精确",
+    "DESCRIPTIONS": [
+      "你的下张攻击牌本场战斗额外造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:LockPower": {
+    "NAME": "锁锢",
+    "DESCRIPTIONS": [
+      "将 ",
+      " #y保留 ，直到将其打出。在打出前，每回合结束时获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "${ModID}:CloudPower": {
+    "NAME": "云",
+    "DESCRIPTIONS": [
+      "本回合少受到 #b50% 攻击伤害。",
+      "#b",
+      " 回合内少受到 #b50% 攻击伤害。"
+    ]
+  },
+  "${ModID}:AnotherMomentPower": {
+    "NAME": "另一时刻",
+    "DESCRIPTIONS": [
+      "将每回合打出的第 #b1 张技能牌 #y消耗 ，并获得 #b1 点 #y敏捷 。",
+      "将每回合打出的前 #b",
+      " 张技能牌 #y消耗 ，并获得 #b1 点 #y敏捷 。"
+    ]
+  }
+}
