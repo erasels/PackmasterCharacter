@@ -2,6 +2,7 @@ package thePackmaster.cardmodifiers.artificerpack;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,7 +32,14 @@ public class DrawEnchantModifier extends AbstractCardModifier {
             }
         }
         if (amount == 0) {
-            CardModifierManager.removeSpecificModifier(card,this,true);
+            AbstractCardModifier modifier = this;
+            Wiz.atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    CardModifierManager.removeSpecificModifier(card, modifier, true);
+                    isDone = true;
+                }
+            });
         }
     }
 
