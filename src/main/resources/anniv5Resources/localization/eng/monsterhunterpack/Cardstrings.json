@@ -100,7 +100,7 @@
   },
   "${ModID}:SpireSpear": {
     "NAME": "Spire Spear",
-    "DESCRIPTION": "Deal !D! damage. !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "${ModID}:SpireShield": {
     "NAME": "Spire Shield",
