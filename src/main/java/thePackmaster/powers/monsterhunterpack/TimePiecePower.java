@@ -23,14 +23,14 @@ public class TimePiecePower extends AbstractPackmasterPower {
         super(POWER_ID, LOC_NAME, PowerType.BUFF, false, owner, amount);
         name = LOC_NAME;
         canGoNegative = false;
-        updateDescription();
 
         isTwoAmount = true;
         amount2 = 0;
+        updateDescription();
     }
 
     @Override
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+    public void onUseCard(AbstractCard card, UseCardAction action) {
         ++this.amount2;
         if (this.amount2 >= 12) {
             addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
@@ -40,6 +40,7 @@ public class TimePiecePower extends AbstractPackmasterPower {
         else {
             this.flashWithoutSound();
         }
+        updateDescription();
     }
 
     @Override
