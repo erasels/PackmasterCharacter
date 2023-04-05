@@ -36,12 +36,22 @@ public class MakeRoom extends AbstractOverwhelmingCard {
             if (AbstractDungeon.player.hand.size() >= BaseMod.MAX_HAND_SIZE && !AbstractDungeon.player.hand.isEmpty()) {
                 //The hand is full, play the leftmost card.
                 //This action is on pause until the card is used.
-                //Will be re-queued after the card is used.
+                //A new one will be queued after.
+
+                AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
+
                 for (AbstractCard c : AbstractDungeon.player.hand.group) {
                     if (AbstractDungeon.actionManager.cardQueue.stream().anyMatch(queueItem->queueItem.card==c))
                         continue; //Card is already queued
 
-                    MakeRoomPatch.makeRoom(c, new MakeRoomAction(amount));
+                    c.isInAutoplay = true;
+                    if (!c.canUse(AbstractDungeon.player, m)) {
+                        c.isInAutoplay = false;
+                        continue; //No good
+                    }
+                    c.isInAutoplay = false;
+
+                    MakeRoomPatch.makeRoom(c, m, new MakeRoomAction(amount));
                     break;
                 }
                 //If the whole hand is queued already... well, uh... alright.

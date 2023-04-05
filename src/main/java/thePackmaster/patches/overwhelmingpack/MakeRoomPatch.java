@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.overwhelmingpack.MakeRoom;
 import thePackmaster.util.Wiz;
 
@@ -24,10 +25,10 @@ public class MakeRoomPatch {
         makeRoomCards.clear();
     }
 
-    public static void makeRoom(AbstractCard toPlay, MakeRoom.MakeRoomAction action) {
+    public static void makeRoom(AbstractCard toPlay, AbstractMonster target, MakeRoom.MakeRoomAction action) {
         makeRoomCards.put(toPlay, action);
         toPlay.flash();
-        Wiz.att(new NewQueueCardAction(toPlay, true, true, true));
+        Wiz.att(new NewQueueCardAction(toPlay, target, true, true));
     }
 
     @SpirePostfixPatch
