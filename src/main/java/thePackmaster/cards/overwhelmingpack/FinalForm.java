@@ -18,7 +18,7 @@ public class FinalForm extends AbstractOverwhelmingCard {
     public final static String ID = makeID("ActuallyFinalForm");
 
     public FinalForm() {
-        super(ID, 5, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        super(ID, 4, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
 
         this.magicNumber = this.baseMagicNumber = 1;
     }
