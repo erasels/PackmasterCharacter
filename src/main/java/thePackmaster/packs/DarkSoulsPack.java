@@ -24,6 +24,8 @@ public class DarkSoulsPack extends AbstractCardPack {
         cards.add(DungPie.ID);
         cards.add(LifehuntScythe.ID);
         cards.add(ChaosBlade.ID);
+        cards.add(MorionBlade.ID);
+        cards.add(Replenishment.ID);
         return cards;
     }
 }

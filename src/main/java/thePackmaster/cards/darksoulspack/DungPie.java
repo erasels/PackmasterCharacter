@@ -1,5 +1,6 @@
 package thePackmaster.cards.darksoulspack;
 
+import com.megacrit.cardcrawl.cards.green.Catalyst;
 import com.megacrit.cardcrawl.cards.green.DeadlyPoison;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -30,6 +31,6 @@ public class DungPie extends AbstractDarkSoulsCard{
 
     @Override
     public String cardArtCopy() {
-        return DeadlyPoison.ID;
+        return Catalyst.ID;
     }
 }
