@@ -2,15 +2,15 @@
   "${ModID}:ReplenishmentPower": {
     "NAME": "Replenishment",
     "DESCRIPTIONS": [
-      "If you lost HP during your turn, Heal #b",
-      "."
+      "At the end of your turn, if you lost HP, Heal #b ",
+      " HP."
     ]
   },
   "${ModID}:EndTurnRestorePower": {
     "NAME": "Replenish",
     "DESCRIPTIONS": [
       "At the end of your turn, Heal #b ",
-      "HP."
+      " HP."
     ]
   }
 }
