@@ -4,7 +4,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractFueledCard extends AbstractPackmasterCard
 {
-    public static final String FRAME_ID = "summoner";
+    public static final String FRAME_ID = null;
 
     public AbstractFueledCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target)
     {

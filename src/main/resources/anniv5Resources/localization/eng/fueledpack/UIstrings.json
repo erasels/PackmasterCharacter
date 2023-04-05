@@ -18,8 +18,8 @@
   },
   "${ModID}:FueledPackHat": {
     "TEXT": [
-      "From Mia's point of view, you're the accessory.",
-      "Summoned Cat"
+      "I got no hat.",
+      "Hat is non existent"
     ]
   }
 }
