@@ -25,10 +25,8 @@ public class Crenellations extends AbstractBrickCard implements StartupCard {
 
     @Override
     public boolean atBattleStartPreDraw() {
-        if (damage < 15)
-            allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        else
-            allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        calculateCardDamage(null);
+        allDmg(AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         return true;
     }
 

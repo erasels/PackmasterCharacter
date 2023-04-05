@@ -18,7 +18,7 @@ public class LeaningTower extends AbstractBrickCard implements StartupCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int MAGIC = 40;
-    private static final int UPGRADE_DAMAGE = 10;
+    private static final int UPGRADE_MAGIC = 10;
     private static final int SECOND_MAGIC = 5;
 
     public LeaningTower() {
@@ -45,6 +45,6 @@ public class LeaningTower extends AbstractBrickCard implements StartupCard {
 
     @Override
     public void upp() {
-        upgradeDamage(UPGRADE_DAMAGE);
+        upMagic(UPGRADE_MAGIC);
     }
 }

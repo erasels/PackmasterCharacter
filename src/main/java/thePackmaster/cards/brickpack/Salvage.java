@@ -2,8 +2,11 @@ package thePackmaster.cards.brickpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
@@ -30,14 +33,21 @@ public class Salvage extends AbstractBrickCard {
             @Override
             public void update() {
                 int count = magicNumber;
-                for (AbstractCard c : adp().drawPile.group) {
+                ArrayList<AbstractCard> discardList = new ArrayList<>();
+                CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                for (AbstractCard c : adp().drawPile.group)
+                    group.addToBottom(c);
+                for (AbstractCard c : group.group) {
                     if (c.cost == -2) {
                         count--;
-                        adp().drawPile.moveToDiscardPile(c);
+                        discardList.add(c);
                     }
                     if (count < 1)
                         break;
                 }
+
+                for (AbstractCard c :discardList)
+                    adp().drawPile.moveToDiscardPile(c);
 
                 isDone = true;
             }

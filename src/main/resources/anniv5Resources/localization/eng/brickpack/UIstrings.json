@@ -1,8 +1,8 @@
 {
   "${ModID}:BrickPack": {
     "TEXT": [
-      "Brick",
-      "Defeat enemies with the power of ${ModID}:Dice!",
+      "Bricked",
+      "A pack of powerful cards, but beware of bricking your hand.",
       "Bryan K"
     ]
   },

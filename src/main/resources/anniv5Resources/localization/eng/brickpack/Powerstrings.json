@@ -6,12 +6,5 @@
       "At the start of your turn, Exhaust #b",
       " random #yBricks or die."
     ]
-  },
-  "${ModID}:GolemPower": {
-    "NAME": "Golem",
-    "DESCRIPTIONS": [
-      "Reduce all attack damage you take by #b",
-      "."
-    ]
   }
 }

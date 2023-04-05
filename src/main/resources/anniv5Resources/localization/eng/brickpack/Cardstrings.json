@@ -33,7 +33,7 @@
   },
   "${ModID}:BrickGolem": {
     "NAME": "Brick Golem",
-    "DESCRIPTION": "Unplayable. NL Gain !M! Metallicize. NL Gain !${ModID}:m2! Artifact. NL Take 1 less damage from attacks. NL Pickup: Obtain 2 *Heavy *Brick."
+    "DESCRIPTION": "Unplayable. NL Gain !M! Metallicize, !${ModID}:m2! Dexterity, and !${ModID}:m2! Artifact. NL Pickup: Obtain 2 *Heavy *Brick."
   },
   "${ModID}:Salvage": {
     "NAME": "Salvage",
