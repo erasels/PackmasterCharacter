@@ -11,6 +11,7 @@ BellordPack	None
 BitingColdPack	Debuffs
 BlacksmithsPack	None
 BoardGamePack	None
+BrickPack   None
 BulwarkPack	Exhaust
 CalamityPack	Debuffs
 ClawPack	Tokens

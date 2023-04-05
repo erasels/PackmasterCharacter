@@ -1,0 +1,15 @@
+{
+  "${ModID}:BrickPack": {
+    "TEXT": [
+      "Brick",
+      "Defeat enemies with the power of ${ModID}:Dice!",
+      "Bryan K"
+    ]
+  },
+  "${ModID}:BrickPackHat": {
+    "TEXT": [
+      "I got no hat.",
+      "Hat is null"
+    ]
+  }
+}

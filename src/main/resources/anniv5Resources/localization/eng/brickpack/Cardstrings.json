@@ -1,0 +1,50 @@
+{
+  "${ModID}:Demolish": {
+    "NAME": "Demolish",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Add a *Loose *Brick into your draw pile."
+  },
+  "${ModID}:HastyConstruction": {
+    "NAME": "Hasty Construction",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies. NL Add a *Loose *Brick into your draw pile."
+  },
+  "${ModID}:Blueprints": {
+    "NAME": "Blueprints",
+    "DESCRIPTION": "Scry !M!."
+  },
+  "${ModID}:Crenellations": {
+    "NAME": "Crenellations",
+    "DESCRIPTION": "Unplayable. NL Startup: Deal !D! damage to ALL enemies."
+  },
+  "${ModID}:LeaningTower": {
+    "NAME": "Leaning Tower",
+    "DESCRIPTION": "Unplayable. NL Startup: At the end of !${ModID}:m2! turns, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:PerfectedBrick": {
+    "NAME": "Perfected Brick",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your ${ModID}:Bricks."
+  },
+  "${ModID}:ThrowDebris": {
+    "NAME": "Throw Debris",
+    "DESCRIPTION": "Deal !D! damage !M! times."
+  },
+  "${ModID}:Jenga": {
+    "NAME": "Jenga",
+    "DESCRIPTION": "Gain !M! Strength. NL At the start of your turn, Exhaust a random ${ModID}:Brick or die."
+  },
+  "${ModID}:BrickGolem": {
+    "NAME": "Brick Golem",
+    "DESCRIPTION": "Unplayable. NL Gain !M! Metallicize. NL Gain !${ModID}:m2! Artifact. NL Take 1 less damage from attacks. NL Pickup: Obtain 2 *Heavy *Brick."
+  },
+  "${ModID}:Salvage": {
+    "NAME": "Salvage",
+    "DESCRIPTION": "Innate. NL Discard the first !M! ${ModID}:Bricks in your draw pile."
+  },
+  "${ModID}:LooseBrick": {
+    "NAME": "Loose Brick",
+    "DESCRIPTION": "Unplayable."
+  },
+  "${ModID}:HeavyBrick": {
+    "NAME": "Heavy Brick",
+    "DESCRIPTION": "Unplayable."
+  }
+}

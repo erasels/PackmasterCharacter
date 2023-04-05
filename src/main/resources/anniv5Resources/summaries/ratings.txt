@@ -11,6 +11,7 @@ BellordPack	2	3	2	4	1
 BitingColdPack	4	2	2	3	3
 BlacksmithsPack	3	3	4	4	4
 BoardGamePack	4	3	2	4	2
+BrickPack   4   3   1   5   3
 BulwarkPack	2	5	1	4	4
 CalamityPack	4	2	2	3	4
 ClawPack	5	2	1	2	5
