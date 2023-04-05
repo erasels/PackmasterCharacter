@@ -23,7 +23,7 @@ public class LifehuntScythe extends AbstractDarkSoulsCard{
     }
 
     public void use(AbstractPlayer p, AbstractMonster m){
-        allDmg(AbstractGameAction.AttackEffect.NONE);
+        allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         Wiz.atb(new LoseHPAction(p,p,magicNumber));
     }
 
