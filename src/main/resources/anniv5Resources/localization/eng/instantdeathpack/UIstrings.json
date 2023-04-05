@@ -1,0 +1,15 @@
+{
+  "${ModID}:InstantDeathPack": {
+    "TEXT": [
+      "Instant Death",
+      "Aspire towards idealistic fantasy for excessive force.",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:InstantDeathPackHat": {
+    "TEXT": [
+      "A mark of power.",
+      "Ascended Hat"
+    ]
+  }
+}

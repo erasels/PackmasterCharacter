@@ -1,0 +1,6 @@
+{
+  "${ModID}:GrowingFlames": {
+    "NAME": "Growing Flames",
+    "DESCRIPTIONS": ["At the start of your turn, apply #b{0} #yIgnite to ALL enemies."]
+  }
+}

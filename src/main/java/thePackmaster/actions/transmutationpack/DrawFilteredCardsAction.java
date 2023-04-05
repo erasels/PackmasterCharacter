@@ -42,8 +42,8 @@ public class DrawFilteredCardsAction extends AbstractGameAction {
             }
         }
         for (AbstractCard card : foundInDraw) {
-            p().drawPile.removeCard(card);
-            p().drawPile.moveToDeck(card, false);
+            p().drawPile.group.remove(card);
+            p().drawPile.addToTop(card);
         }
         for (AbstractCard card : foundInDiscard) {
             p().discardPile.removeCard(card);

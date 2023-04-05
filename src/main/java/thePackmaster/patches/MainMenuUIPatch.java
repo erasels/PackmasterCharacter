@@ -23,6 +23,7 @@ import thePackmaster.ui.PackFilterMenu;
 import java.io.IOException;
 import java.util.*;
 
+import static thePackmaster.SpireAnniversary5Mod.PACKS_PER_CHOICE;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MainMenuUIPatch {
@@ -71,7 +72,7 @@ public class MainMenuUIPatch {
 
     static {
         options.add(TEXT[2]);
-        options.add(TEXT[3]);
+        options.add(TEXT[3] + PACKS_PER_CHOICE + TEXT[6]);
         List<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
         sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
         for (AbstractCardPack c : sortedPacks) {
@@ -95,8 +96,7 @@ public class MainMenuUIPatch {
         //Without this validation, Packmaster will crash on attempting to load a Pack that is no longer in the pack list.
         ArrayList<String> packSetupsInit = new ArrayList<>(SpireAnniversary5Mod.getSavedCDraftSelection());
 
-        for (String s : packSetupsInit
-        ) {
+        for (String s : packSetupsInit) {
             if (Objects.equals(s, RANDOM) || Objects.equals(s, CHOICE)) {
                 packSetups.add(s);
             } else if (SpireAnniversary5Mod.packsByID.getOrDefault(s, null) != null) {
@@ -148,6 +148,15 @@ public class MainMenuUIPatch {
                 (button) -> filterMenu.toggle());
 
         openHatMenuButton = new FixedModLabeledButton(uiStrings.TEXT[5], HATBUTTON_X, HATBUTTON_Y, null, (button) -> hatMenu.toggle());
+    }
+
+    public static void updateChoiceCount() {
+        options.set(1, TEXT[3] + PACKS_PER_CHOICE + TEXT[6]);
+
+        for (DropdownMenu dropdown : dropdowns) {
+            Object o = dropdown.rows.get(1);
+            ReflectionHacks.setPrivate(o, o.getClass(), "text", options.get(1));
+        }
     }
 
 

@@ -1,0 +1,9 @@
+{
+  "${ModID}:BattleFocusPower": {
+    "NAME": "Battle Focus",
+    "DESCRIPTIONS": ["At the start of your turn, discard up to #b1 card and draw that many.",
+      "At the start of your turn, discard up to #b",
+      " cards and draw that many."
+    ]
+  }
+}
