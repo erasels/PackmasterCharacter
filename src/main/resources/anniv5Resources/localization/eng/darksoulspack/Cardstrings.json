@@ -1,0 +1,42 @@
+{
+  "${ModID}:MorionBlade": {
+    "NAME": "Morion Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage again if you have lost HP from a card this turn."
+  },
+  "${ModID}:DungPie": {
+    "NAME": "Dung Pie",
+    "DESCRIPTION": "Apply !M! Poison. NL Gain 2 Poison."
+  },
+  "${ModID}:EstusFlask": {
+    "NAME": "Estus Flask",
+    "DESCRIPTION": "${ModID}:Recover 5. NL Exhaustive !M!."
+  },
+  "${ModID}:GreenBlossom": {
+    "NAME": "Green Blossom",
+    "DESCRIPTION": "At the start of your next !M! turns, gain [E] . NL Exhaust."
+  },
+  "${ModID}:LifehuntScythe": {
+    "NAME": "Lifehunt Scythe",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Lose !M! HP."
+  },
+  "${ModID}:ChaosBlade": {
+    "NAME": "Chaos Blade",
+    "DESCRIPTION": "For each enemy in combat, deal !D! damage to a random enemy and lose !M! HP."
+  },
+  "${ModID}:Replenishment": {
+    "NAME": "Replenishment",
+    "DESCRIPTION": "At the end of each turn, if you lost HP, ${ModID}:Recover !M!."
+  },
+  "${ModID}:Bonfire": {
+    "NAME": "Bonfire",
+    "DESCRIPTION": "${ModID}:Unnate. Recover !M!. ALL enemies heal !M! HP. Exhaust."
+  },
+  "${ModID}:KarmicJustice": {
+    "NAME": "Karmic Justice",
+    "DESCRIPTION": "Whenever you lose HP !M! times, deal !D! damage to ALL enemies."
+  },
+  "${ModID}:Avarice": {
+    "NAME": "Symbol of Avarice",
+    "DESCRIPTION": "Ethereal. Innate. Lose !M! HP at the start of your turn. When you kill a non-minion enemy, gain 15 gold."
+  }
+}
