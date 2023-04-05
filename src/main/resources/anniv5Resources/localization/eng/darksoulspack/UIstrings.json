@@ -1,0 +1,15 @@
+{
+  "${ModID}:DarkSoulsPack": {
+    "TEXT": [
+      "Dark Souls",
+      "description of dark souls pack :p",
+      "Doodle"
+    ]
+  },
+  "${ModID}:DarkSoulsPackHat": {
+    "TEXT": [
+      "Praise the sun?",
+      "Sunlight Maggot"
+    ]
+  }
+}

@@ -3,7 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.darksoulspack;
+import thePackmaster.cards.darksoulspack.*;
 
 import java.util.ArrayList;
 
@@ -21,6 +21,7 @@ public class DarkSoulsPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
+        cards.add(DungPie.ID);
         return cards;
     }
 }
