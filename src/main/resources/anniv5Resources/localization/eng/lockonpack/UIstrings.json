@@ -5,5 +5,11 @@
       "Lock onto your enemies and unleash the Unlimited Power of lightning!",
       "Jedi"
     ]
+  },
+  "${ModID}:LockonPackHat": {
+    "TEXT": [
+      "There is no hat. But it could be anything. Shocking, I know. HP-style scar? Golden eyepatch? Irish cap?",
+      "N/A"
+    ]
   }
 }
