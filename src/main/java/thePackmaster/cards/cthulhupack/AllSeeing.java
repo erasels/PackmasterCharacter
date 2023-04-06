@@ -2,6 +2,7 @@ package thePackmaster.cards.cthulhupack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 import thePackmaster.powers.cthulhupack.AllSeeingPower;
 import thePackmaster.powers.cthulhupack.AllSeeingPowerTriggerOnCard;
 import thePackmaster.powers.cthulhupack.AllSeeingPowerTriggerOnTurn;
@@ -23,7 +24,7 @@ public class AllSeeing extends AbstractCthulhuCard {
         if (upgraded) {
             Wiz.applyToSelf(new AllSeeingPowerTriggerOnCard(p, magicNumber));
         } else {
-            Wiz.applyToSelf(new AllSeeingPowerTriggerOnTurn(p, magicNumber));
+            Wiz.applyToSelf(new MetallicizePower(p, magicNumber));
         }
         Wiz.applyToSelf(new AllSeeingPower(p, magicNumber));
     }

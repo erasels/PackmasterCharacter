@@ -1,6 +1,7 @@
 package thePackmaster.cards.dimensiongatepack3;
 
 import basemod.helpers.TooltipInfo;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -21,8 +22,7 @@ public class SpreadingSpores extends AbstractDimensionalCardTrain {
 
     public SpreadingSpores() {
         super(ID, 1, CardRarity.UNCOMMON, CardType.POWER, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
-        baseSecondMagic = secondMagic = 2;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override
@@ -35,12 +35,11 @@ public class SpreadingSpores extends AbstractDimensionalCardTrain {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.applyToSelf(new ThornsPower(p, secondMagic));
+        Wiz.applyToSelf(new ThornsPower(p, magicNumber));
         Wiz.applyToSelf(new TempHPRegenPower(p, magicNumber));
+        if (upgraded) Wiz.atb(new MakeTempCardInDrawPileAction(this.makeStatEquivalentCopy(), 1, true, true));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
     }
 }

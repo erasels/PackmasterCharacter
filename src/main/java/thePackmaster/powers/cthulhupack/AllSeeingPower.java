@@ -16,10 +16,9 @@ public class AllSeeingPower extends AbstractPackmasterPower {
         super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, amount);
     }
 
-    public void atStartOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            AbstractCthulhuCard.loseSanity(amount);
-        }
+    @Override
+    public void atStartOfTurnPostDraw() {
+        AbstractCthulhuCard.loseSanity(amount);
     }
 
     @Override

@@ -38,7 +38,7 @@
   },
   "${ModID}:SelfWound": {
     "NAME": "Self Wound",
-    "DESCRIPTION": "Take 3 damage. NL Heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Take 3 damage. NL Gain !M! Temporary_HP."
   },
   "${ModID}:SignInBlood": {
     "NAME": "Sign in Blood",
@@ -46,6 +46,7 @@
   },
   "${ModID}:SpreadingSpores": {
     "NAME": "Spreading Spores",
-    "DESCRIPTION": "Gain !${ModID}:m2! Thorns. NL Gain !M! *Ablation."
+    "DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Ablation.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Ablation. NL Shuffle a copy of this into your draw pile."
   }
 }

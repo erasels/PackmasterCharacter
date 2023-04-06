@@ -34,7 +34,8 @@ public class SanityPower extends AbstractPackmasterPower {
         //The power string reads "if you have negative sanity" for flavor.  Since there is no positive sanity,
         //Amount check is technically unnecessary but who knows, maybe someone down the road wants to make a positive sanity pack.
         if (amount < 0) {
-            reducePower(1);
+            this.fontScale = 8.0F;
+            this.amount -= 1;
             updateDescription();
             AbstractDungeon.onModifyPower();
         }

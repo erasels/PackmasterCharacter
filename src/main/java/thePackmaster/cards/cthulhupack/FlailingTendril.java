@@ -11,7 +11,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class FlailingTendril extends AbstractCthulhuCard {
     public final static String ID = makeID("FlailingTendril");
 
-    private static final int ATTACK_DMG = 9;
+    private static final int ATTACK_DMG = 10;
     private static final int UPGRADE_PLUS_ATTACK_DMG = 3;
 
     public FlailingTendril() {
