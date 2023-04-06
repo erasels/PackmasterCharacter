@@ -65,8 +65,8 @@ public class RenderBaseGameCardPackTopTextPatches {
         return AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER;
     }
 
-    private static boolean isInPackmasterCardLibraryScreen() {
-        if (AbstractDungeon.player == null && CardCrawlGame.mainMenuScreen.screen == MainMenuScreen.CurScreen.CARD_LIBRARY) {
+    public static boolean isInPackmasterCardLibraryScreen() {
+        if (!CardCrawlGame.isInARun() && CardCrawlGame.mainMenuScreen.screen == MainMenuScreen.CurScreen.CARD_LIBRARY) {
             ColorTabBar colorBar = ReflectionHacks.getPrivate(CardCrawlGame.mainMenuScreen.cardLibraryScreen, CardLibraryScreen.class, "colorBar");
             if (colorBar.curTab == ColorTabBarFix.Enums.MOD) {
                 ColorTabBarFix.ModColorTab modColorTab = ColorTabBarFix.Fields.getModTab();

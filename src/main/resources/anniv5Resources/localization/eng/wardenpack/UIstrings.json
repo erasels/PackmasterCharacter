@@ -2,7 +2,7 @@
   "${ModID}:WardenPack": {
     "TEXT": [
       "Warden",
-      "Manipulate the power of foresight, think ahead, bend the unknown into your favor.",
+      "Manipulate the power of foresight, think ahead, bend the unknown\u00a0into your favor.",
       "AlexMdle",
       "Pack art by #yStardustSwirl"
     ]

@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.marisapack.AmplifyCard;
 import thePackmaster.powers.distortionpack.DistortionPower;
 
@@ -18,7 +17,7 @@ public class AstralFracture extends AbstractCosmosCard implements AmplifyCard {
 
     public AstralFracture() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

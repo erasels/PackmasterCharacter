@@ -23,7 +23,5 @@ public abstract class AbstractMadScienceModifier extends AbstractCardModifier {
     @Override
     public void onInitialApplication(AbstractCard card) {
         card.tags.add(SpireAnniversary5Mod.ISCARDMODIFIED);
-        modifyName(card.name, card);
     }
-
 }

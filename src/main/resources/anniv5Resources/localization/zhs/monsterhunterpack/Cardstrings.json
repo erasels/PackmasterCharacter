@@ -25,8 +25,8 @@
   },
   "${ModID}:ShellPauldrons": {
     "NAME": "骨铠甲",
-    "DESCRIPTION": "获得 !M! 层 ${ModID}:玻璃护甲 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !M! 层 ${ModID}:玻璃护甲 。"
+    "DESCRIPTION": "获得 !M! 层 *多层护甲 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !M! 层 *多层护甲 。"
   },
   "${ModID}:CoreBlaster": {
     "NAME": "核心射线",
@@ -108,7 +108,7 @@
   },
   "${ModID}:CarvingKnife": {
     "NAME": "猎刀",
-    "DESCRIPTION": "造成 !D! 点伤害。 若击杀一名精英或首领，获得其专属战利品。 NL 即逝 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 若击杀精英或首领， NL 获得其专属战利品， NL 并将本牌从牌组移除。"
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "觉醒者匕首",

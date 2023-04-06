@@ -7,7 +7,7 @@
     ]
   },
   "${ModID}:ConnectionPower": {
-    "NAME": "联结",
+    "NAME": "联系",
     "DESCRIPTIONS": [
       "每当你打出一张牌时， #y升级 其所有同名牌。"
     ]

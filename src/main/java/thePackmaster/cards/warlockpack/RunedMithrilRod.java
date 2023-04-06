@@ -28,7 +28,6 @@ public class RunedMithrilRod extends AbstractWarlockCard {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         this.magicNumber = this.baseMagicNumber = CARDS;
         this.selfRetain = true;
-        this.exhaust = true;
     }
 
     @Override

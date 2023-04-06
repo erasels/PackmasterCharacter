@@ -1,10 +1,13 @@
 package thePackmaster.cards.pixiepack;
 
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.pixiepack.FastHandsPower;
-import thePackmaster.powers.pixiepack.UpgradedFastHandsPower;
+import thePackmaster.actions.pixiepack.DrawSpecificCardAction;
+import thePackmaster.packs.PixiePack;
+
+import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -12,15 +15,27 @@ public class FastHands extends AbstractPixieCard {
     public final static String ID = makeID("FastHands");
 
     public FastHands() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        this.retain = true;
+        this.exhaust = true;
     }
 
     @Override
-    public void upp(){}
+    public void upp() {
+        this.exhaust = false;
+    }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if (!upgraded) addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new FastHandsPower(abstractPlayer, 1)));
-        else addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new UpgradedFastHandsPower(abstractPlayer, 1)));
+        ArrayList<AbstractCard> toDraw = new ArrayList<AbstractCard>();
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group
+        ) {
+            if (PixiePack.isForeign(c)) {
+                toDraw.add(c);
+            }
+        }
+        if (toDraw.size() > 0) {
+            AbstractDungeon.actionManager.addToTop(new DrawSpecificCardAction(toDraw.get(AbstractDungeon.cardRng.random(0, toDraw.size() - 1))));
+        }
     }
 }

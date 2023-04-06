@@ -25,6 +25,8 @@ public class Porcupine extends AbstractSummonsCard {
     public Porcupine() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         cardsToPreview = new Quill();

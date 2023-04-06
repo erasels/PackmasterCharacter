@@ -1,23 +1,36 @@
 {
-  "${ModID}:FastHandsPower": {
-    "NAME": "迅疾之手",
+  "${ModID}:CosmicConverterPower": {
+    "NAME": "宙宇转换器",
     "DESCRIPTIONS": [
-      "每当你打出 #y异色 牌时，抽 #b",
+      "你的回合开始时，将一张与上张打出牌同类型(除了 #y诅咒 与 #y状态 )与耗能的 ${ModID}:异色 牌加入手牌。下回合会将一张 #b",
+      " 耗能的 ",
+      " 攻击牌",
+      " 技能牌",
+      " 能力牌",
+      "加入手牌。",
+      "X",
+      "无法打出的 "
+    ]
+  },
+  "${ModID}:FetchPower": {
+    "NAME": "获取",
+    "DESCRIPTIONS": [
+      "本回合打出下张 #y异色 技能牌后，抽 #b",
       " 张牌。"
     ]
   },
-  "${ModID}:UpgradedFastHandsPower": {
-    "NAME": "迅疾之手+",
+  "${ModID}:NeutronStarPower": {
+    "NAME": "中子星",
     "DESCRIPTIONS": [
-      "每当你打出 #y异色 牌时，抽 #b",
-      " 张牌，并将所抽的牌本回合耗能降低 #b1 点。"
+      "本回合打出下张 #y异色 攻击牌后，获得 #b",
+      " 层临时 #y力量 。"
     ]
   },
-  "${ModID}:HorizonboundPower": {
-    "NAME": "宇宙界限",
+  "${ModID}:StarShowerPower": {
+    "NAME": "流星雨",
     "DESCRIPTIONS": [
-      "本回合已在手的 #y异色 耗能减 #b",
-      " 。每打出一张 #y异色 牌，降低量加 #b1 。每回合开始时降低量重置。"
+      "本回合打出下张 #y异色 攻击牌后，随机对一名敌人造成 #b",
+      " 点伤害。"
     ]
   }
 }

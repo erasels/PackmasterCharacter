@@ -18,7 +18,7 @@
   },
   "${ModID}:AtomicPiledriver": {
     "NAME": "原子倾灭",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:辐射 。 NL 消耗。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:辐射 。 NL 消耗 。"
   },
   "${ModID}:NuclearFusion": {
     "NAME": "核聚变",
@@ -34,18 +34,18 @@
     "DESCRIPTION": "抽到 *能力 牌时， NL 获得 [E] 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 抽到 *能力 牌时， NL 获得 [E] 。"
   },
-  "${ModID}:EveOfDestruction": {
-    "NAME": "毁灭之夜",
-    "DESCRIPTION": "回合开始时，布置一枚 *炸弹 。",
-    "UPGRADE_DESCRIPTION": "布置一枚 *炸弹 。 NL 回合开始时，布置一枚 *炸弹 。"
+  "${ModID}:ExplosiveForm": {
+    "NAME": "爆炸形态",
+    "DESCRIPTION": "回合开始时， NL 布置一枚 *炸弹 。",
+    "UPGRADE_DESCRIPTION": "布置一枚 *炸弹 。 NL 回合开始时， NL 布置一枚 *炸弹 。"
   },
   "${ModID}:KillerQueen": {
     "NAME": "杀人女王",
     "DESCRIPTION": "选择一张手牌， NL 将其附加效果： NL \"造成 !M! 点群体伤害\"。"
   },
-  "${ModID}:ExplosiveForm": {
-    "NAME": "爆炸形态",
-    "DESCRIPTION": "虚无 。 NL 非攻击伤害提高100%。",
-    "UPGRADE_DESCRIPTION": "非攻击伤害提高100%。"
+  "${ModID}:EveOfDestruction": {
+    "NAME": "毁灭之夜",
+    "DESCRIPTION": "非攻击伤害提高100%。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 非攻击伤害提高100%。"
   }
 }

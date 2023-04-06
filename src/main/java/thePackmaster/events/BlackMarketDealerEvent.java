@@ -4,7 +4,6 @@ import basemod.abstracts.events.PhasedEvent;
 import basemod.abstracts.events.phases.TextPhase;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,6 +17,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.ConjurePack;
+import thePackmaster.cards.Vexed;
 import thePackmaster.hats.Hats;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.CoreSetPack;
@@ -149,10 +149,9 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                 }
 
                         .addOption(new TextPhase.OptionInfo(OPTIONS[11], new ConjurePack()), (i) -> {   //Curse & Pack Rip
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), (Settings.WIDTH * .33F), (float) (Settings.HEIGHT / 2)));
-                            //AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), (Settings.WIDTH * .75F), (float) (Settings.HEIGHT / 2)));
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Vexed(), (Settings.WIDTH * .33F), (float) (Settings.HEIGHT / 2)));
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new ConjurePack(), (Settings.WIDTH * .66F), (float) (Settings.HEIGHT / 2)));
-                            logMetricObtainCards(ID, "Conjure Pack", Arrays.asList(ConjurePack.ID, CurseOfTheBell.ID));
+                            logMetricObtainCards(ID, "Conjure Pack", Arrays.asList(ConjurePack.ID, Vexed.ID));
                             transitionKey("magicLearnEnd");
                         }).addOption(OPTIONS[12], (i) -> {   //Pack in a Jar Potion
                             AbstractDungeon.getCurrRoom().rewards.clear();
@@ -343,7 +342,9 @@ public class BlackMarketDealerEvent extends PhasedEvent {
 
         CardGroup buyablesGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard original : buyables) {
-            buyablesGroup.addToTop(original.makeCopy());
+            AbstractCard b = original.makeCopy();
+            AbstractDungeon.player.relics.forEach(q -> q.onPreviewObtainCard(b));
+            buyablesGroup.addToTop(b);
         }
         return buyablesGroup;
     }

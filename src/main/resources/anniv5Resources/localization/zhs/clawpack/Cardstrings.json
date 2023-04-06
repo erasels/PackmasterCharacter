@@ -14,7 +14,7 @@
   },
   "${ModID}:Conclawd": {
     "NAME": "爪末",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:磨爪 !M! 。 NL 结束你的回合。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL ${ModID}:磨爪 !M! 。 NL 结束你的回合。"
   },
   "${ModID}:InfiniteClaws": {
     "NAME": "无限爪击",

@@ -13,7 +13,7 @@
   },
   "${ModID}:Slam": {
     "NAME": "猛击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得未被格挡伤害点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 ${ModID}:突破 量点 格挡 。"
   },
   "${ModID}:Decapitate": {
     "NAME": "斩首",

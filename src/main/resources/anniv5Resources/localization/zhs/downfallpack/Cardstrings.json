@@ -9,7 +9,7 @@
   },
   "${ModID}:DefensiveMode": {
     "NAME": "防御模式",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 虚弱"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 虚弱 。"
   },
   "${ModID}:Execute": {
     "NAME": "处决",
@@ -40,7 +40,7 @@
   "${ModID}:SlimeCrush": {
     "NAME": "史莱姆猛击！",
     "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 造成 !D! 点群体伤害。 NL 消耗 。"
   },
   "${ModID}:YouAreMine": {
     "NAME": "你是我的了！",

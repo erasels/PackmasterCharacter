@@ -16,9 +16,9 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Paintball extends AbstractMonsterHunterCard {
     public final static String ID = makeID("Paintball");
 
-    private static final int MAGIC = 2;
-    private static final int MAGIC2 = 1;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
+    private static final int MAGIC2 = 1;
 
     public Paintball() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
