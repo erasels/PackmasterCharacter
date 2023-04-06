@@ -1,7 +1,7 @@
 {
   "${ModID}:PenanceShock": {
     "NAME": "Penance Shock",
-    "DESCRIPTION": "Deal !D! damage and Apply !M! ${ModID}:Penance. NL Channel Lightning"
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Penance. NL Channel 1 Lightning."
   },
   "${ModID}:Condemn": {
     "NAME": "Condemn",
@@ -9,7 +9,7 @@
   },
   "${ModID}:SearingLight": {
     "NAME": "Searing Light",
-    "DESCRIPTION": "Gain !B! Block. NL Channel ${ModID}:Light"
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 ${ModID}:Light."
   },
   "${ModID}:RazorWind": {
     "NAME": "Razor Wind",
@@ -25,7 +25,7 @@
   },
   "${ModID}:SacredTrial": {
     "NAME": "Sacred Trial",
-    "DESCRIPTION": "Take !M! damage. NL Channel !${ModID}:m2! Lightning"
+    "DESCRIPTION": "Take !M! damage. NL Channel !${ModID}:m2! Lightning."
   },
   "${ModID}:HolyWrath": {
     "NAME": "Holy Wrath",
@@ -33,10 +33,10 @@
   },
   "${ModID}:Absolution": {
     "NAME": "Absolution",
-    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL Whenever a creature is damaged by ${ModID}:Penance this turn apply !${ModID}:m2! Weak."
+    "DESCRIPTION": "Apply !M! ${ModID}:Penance. NL Whenever a creature is damaged by ${ModID}:Penance this turn, apply !${ModID}:m2! Weak."
   },
   "${ModID}:JudgementDay": {
     "NAME": "Judgement Day",
-    "DESCRIPTION": "${ModID}:Manifest !M! Lightning. NL Whenever a Lightning orbs passive effect activates gain !${ModID}:m2! ${ModID}:Confession."
+    "DESCRIPTION": "${ModID}:Manifest !M! Lightning. NL Whenever a Lightning orbs passive effect activates, gain !${ModID}:m2! ${ModID}:Confession."
   }
 }

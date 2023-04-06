@@ -26,12 +26,22 @@ public class GemOfUnity extends AbstractPackmasterRelic {
     public GemOfUnity() {
         super(ID, RelicTier.UNCOMMON, LandingSound.FLAT);
         resetCounter();
+        description = DESCRIPTIONS[0];
+        this.resetTips();
+    }
+
+    @Override
+    public void atBattleStartPreDraw() {
+        resetCounter();
         description = getUpdatedDescription();
+        this.resetTips();
     }
 
     @Override
     public void onVictory() {
         resetCounter();
+        description = DESCRIPTIONS[0];
+        this.resetTips();
     }
 
     public void resetCounter(){
@@ -39,11 +49,15 @@ public class GemOfUnity extends AbstractPackmasterRelic {
             packsPlayed.clear();
             counter = SpireAnniversary5Mod.currentPoolPacks.size();
             this.description = getUpdatedDescription();
-            tips.clear();
-            tips.add(new PowerTip(name, description));
-            initializeTips();
+            this.resetTips();
             grayscale = false;
         }
+    }
+
+    private void resetTips() {
+        tips.clear();
+        tips.add(new PowerTip(name, description));
+        initializeTips();
     }
 
     @Override

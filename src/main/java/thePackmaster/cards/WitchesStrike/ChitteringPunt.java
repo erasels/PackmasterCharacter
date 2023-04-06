@@ -17,6 +17,8 @@ public class ChitteringPunt extends AbstractWitchStrikeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 9;
         baseMagicNumber = magicNumber = 1;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

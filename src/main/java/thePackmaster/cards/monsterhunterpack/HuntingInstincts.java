@@ -11,8 +11,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class HuntingInstincts extends AbstractMonsterHunterCard {
     public final static String ID = makeID("HuntingInstincts");
 
-    private static final int BLOCK = 3;
-    private static final int UPG_BLOCK = 1;
+    private static final int BLOCK = 4;
+    private static final int UPG_BLOCK = 2;
 
     public HuntingInstincts() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

@@ -18,8 +18,8 @@ public class KillerQueen extends AbstractGoddessOfExplosionsCard {
     public final static String ID = makeID("KillerQueen");
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HandpickUI"));
 
-    private static final int MAGIC = 10;
-    private static final int MAGIC_UP = 5;
+    private static final int MAGIC = 8;
+    private static final int MAGIC_UP = 4;
 
     public KillerQueen() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);

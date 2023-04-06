@@ -34,13 +34,4 @@ public class StarShower extends AbstractPixieCard {
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StarShowerPower(abstractPlayer, damage)));
     }
 
-    @Override //zhs card text thing
-    public void initializeDescriptionCN() {
-        super.initializeDescriptionCN();
-        if (Settings.language == Settings.GameLanguage.ZHS && this.description.size() != 0 ) {
-                this.description.get(1).text = this.description.get(1).text + "，";
-                this.description.remove(2);
-        }
-    }
-
 }

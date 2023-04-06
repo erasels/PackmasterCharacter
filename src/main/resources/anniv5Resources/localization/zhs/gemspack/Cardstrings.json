@@ -4,16 +4,6 @@
     "DESCRIPTION": "${ModID}:宝石 。 NL \"获得2层临时 力量 。\"",
     "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得2层临时 力量 。\""
   },
-  "${ModID}:WardGem": {
-    "NAME": "蓝晶",
-    "DESCRIPTION": "${ModID}:宝石 。 NL \"获得一张 *守卫 。\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得一张 *守卫 。\""
-  },
-  "${ModID}:ShivGem": {
-    "NAME": "宝石碎片",
-    "DESCRIPTION": "${ModID}:宝石 。 NL \"获得一张 *小刀 。\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得一张 *小刀 。\""
-  },
   "${ModID}:FrostGem": {
     "NAME": "蓝晶",
     "DESCRIPTION": "${ModID}:宝石 。 NL \" 生成 一个 冰霜 球。\"",
@@ -43,10 +33,6 @@
     "NAME": "玛瑙",
     "DESCRIPTION": "${ModID}:宝石 。 NL \"失去所有负面效果1层。\"",
     "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"失去所有负面效果1层。\""
-  },
-  "${ModID}:Ward": {
-    "NAME": "守卫",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。"
   },
   "${ModID}:DiceGem": {
     "NAME": "碧玺",

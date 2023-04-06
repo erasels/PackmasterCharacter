@@ -19,7 +19,7 @@ public class SlaverWhip extends AbstractMonsterHunterCard {
     public final static String ID = makeID("SlaverWhip");
 
     public static final int DAMAGE = 12;
-    public static final int UPG_DAMAGE = 4;
+    public static final int UPG_DAMAGE = 3;
     public static final int MAGIC = 1;
 
     public SlaverWhip() {
