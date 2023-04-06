@@ -2,15 +2,16 @@
   "${ModID}:ReplenishmentPower": {
     "NAME": "Replenishment",
     "DESCRIPTIONS": [
-      "At the end of your turn, if you lost HP, Heal #b ",
-      " HP."
+      "At the end of your turn, if you lost HP, gain #b",
+      " #yTemporary #yHP."
     ]
   },
-  "${ModID}:EndTurnRestorePower": {
-    "NAME": "Replenish",
+  "${ModID}:GreenBlossomPower": {
+    "NAME": "Green Blossom",
     "DESCRIPTIONS": [
-      "At the end of your turn, Heal #b ",
-      " HP."
+      "At the start of your next turn, gain [E].",
+      "At the start of your next #b",
+      " turns, gain [E]."
     ]
   }
 }

@@ -1,15 +1,15 @@
 {
   "${ModID}:MorionBlade": {
     "NAME": "Morion Blade",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage again if you have lost HP from a card this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage again if you have lost HP since your last turn."
   },
   "${ModID}:DungPie": {
     "NAME": "Dung Pie",
-    "DESCRIPTION": "Apply !M! Poison. NL Gain 2 Poison."
+    "DESCRIPTION": "Apply !M! Poison. NL Gain !${ModID}:m2! Poison."
   },
   "${ModID}:EstusFlask": {
     "NAME": "Estus Flask",
-    "DESCRIPTION": "${ModID}:Recover 5. NL Exhaustive !M!."
+    "DESCRIPTION": "${ModID}:Gain !M! Temporary HP."
   },
   "${ModID}:GreenBlossom": {
     "NAME": "Green Blossom",
@@ -25,11 +25,11 @@
   },
   "${ModID}:Replenishment": {
     "NAME": "Replenishment",
-    "DESCRIPTION": "At the end of each turn, if you lost HP, ${ModID}:Recover !M!."
+    "DESCRIPTION": "At the end of your turn, if you lost HP, gain !M! Temporary HP."
   },
   "${ModID}:Bonfire": {
     "NAME": "Bonfire",
-    "DESCRIPTION": "${ModID}:Unnate. Recover !M!. ALL enemies heal !M! HP. Exhaust."
+    "DESCRIPTION": "${ModID}:Unnate. Gain !M! Temporary HP. NL ALL enemies heal !M! HP. Exhaust."
   },
   "${ModID}:KarmicJustice": {
     "NAME": "Karmic Justice",

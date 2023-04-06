@@ -10,8 +10,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Replenishment extends AbstractDarkSoulsCard{
     public final static String ID = makeID("Replenishment");
 
-    private static final int MAGIC = 2;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int MAGIC = 4;
+    private static final int UPGRADE_MAGIC = 3;
 
     public Replenishment(){
         super(ID,1,CardType.POWER,CardRarity.UNCOMMON,CardTarget.SELF);

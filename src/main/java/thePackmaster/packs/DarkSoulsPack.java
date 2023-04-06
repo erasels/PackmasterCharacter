@@ -21,10 +21,12 @@ public class DarkSoulsPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
+        cards.add(MorionBlade.ID);
         cards.add(DungPie.ID);
+        cards.add(EstusFlask.ID);
+        cards.add(GreenBlossom.ID);
         cards.add(LifehuntScythe.ID);
         cards.add(ChaosBlade.ID);
-        cards.add(MorionBlade.ID);
         cards.add(Replenishment.ID);
         return cards;
     }

@@ -1,5 +1,6 @@
 package thePackmaster.powers.darksoulspack;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,24 +15,27 @@ public class ReplenishmentPower extends AbstractPackmasterPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private boolean appliedThisTurn = false;
+    private boolean apply = false;
 
 
     public ReplenishmentPower(AbstractCreature owner, int amount){
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         updateDescription();
     }
 
-    public void atStartOfTurn(){
-        appliedThisTurn = false;
+    public void atEndOfTurn(boolean isPlayer) {
+        if (apply) {
+            Wiz.atb(new AddTemporaryHPAction(owner, owner, amount));
+            apply = false;
+        }
     }
 
+    //should trigger on temp HP loss but DOESNT
     @Override
     public void wasHPLost(DamageInfo info, int damageAmount) {
-        if (!appliedThisTurn && !AbstractDungeon.actionManager.turnHasEnded) {
+        if (!apply && info.owner == owner) {
             this.flash();
-            Wiz.applyToSelf(new EndTurnRestorePower(owner, amount));
-            appliedThisTurn = true;
+            apply = true;
         }
     }
 

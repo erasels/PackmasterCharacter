@@ -1,12 +1,13 @@
 package thePackmaster.cards.darksoulspack;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnLoseTempHpPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.green.DeadlyPoison;
 import com.megacrit.cardcrawl.cards.red.InfernalBlade;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static com.megacrit.cardcrawl.actions.GameActionManager.damageReceivedThisTurn;
+import static com.megacrit.cardcrawl.actions.GameActionManager.playerHpLastTurn;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MorionBlade extends AbstractDarkSoulsCard{
@@ -20,8 +21,14 @@ public class MorionBlade extends AbstractDarkSoulsCard{
         baseDamage = damage = DAMAGE;
     }
 
+    ///NEED TO MAKE TRIGGER IN ENEMY TURN AS WELL
+
+    public boolean wasHPLost(AbstractPlayer p){
+        return damageReceivedThisTurn > 0 || playerHpLastTurn > p.currentHealth;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m){
-        if(damageReceivedThisTurn > 0){
+        if(wasHPLost(p)){
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         }
