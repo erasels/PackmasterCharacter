@@ -24,7 +24,7 @@ public class LightsOutAction
     @Override
     public void update() {
         ArrayList<AbstractOrb> orbs = Wiz.adp().orbs;
-        for (int i = 0; i < orbs.size()-1; i++)
+        for (int i = 0; i < orbs.size(); i++)
         {
             if (orbs.get(i) instanceof Lightning)
             {
