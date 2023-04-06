@@ -24,7 +24,7 @@ public class AllSeeing extends AbstractCthulhuCard {
         if (upgraded) {
             Wiz.applyToSelf(new AllSeeingPowerTriggerOnCard(p, magicNumber));
         } else {
-            Wiz.applyToSelf(new MetallicizePower(p, magicNumber));
+            Wiz.applyToSelf(new AllSeeingPowerTriggerOnTurn(p, magicNumber));
         }
         Wiz.applyToSelf(new AllSeeingPower(p, magicNumber));
     }

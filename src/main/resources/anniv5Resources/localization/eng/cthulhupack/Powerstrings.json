@@ -14,9 +14,16 @@
     ]
   },
   "${ModID}:AllSeeingPowerTriggerOnCard": {
-    "NAME": "Eldritch Pact",
+    "NAME": "Eldritch Pact+",
     "DESCRIPTIONS": [
       "Whenever you lose #ySanity, gain #b",
+      " Block."
+    ]
+  },
+  "${ModID}:AllSeeingPowerTriggerOnTurn": {
+    "NAME": "Eldritch Pact",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
       " Block."
     ]
   },
