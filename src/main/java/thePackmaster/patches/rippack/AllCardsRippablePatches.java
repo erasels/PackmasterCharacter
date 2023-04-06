@@ -70,7 +70,7 @@ public class AllCardsRippablePatches {
 
     @SpirePatch(clz = AbstractCard.class, method = SpirePatch.CLASS)
     public static class AbstractCardFields {
-        public static SpireField<RipStatus> ripStatus = new SpireField(() -> RipStatus.WHOLE);
+        public static SpireField<RipStatus> ripStatus = new SpireField<>(() -> RipStatus.WHOLE);
     }
 
     @SpirePatch(clz = AbstractCard.class, method = "update")
@@ -162,9 +162,9 @@ public class AllCardsRippablePatches {
     public static class MakeReflexNotHaveAUse {
 
         @SpirePrefixPatch
-        public static SpireReturn Prefix(AbstractCard __instance, AbstractPlayer p, AbstractMonster m) {
+        public static SpireReturn<?> Prefix(AbstractCard __instance, AbstractPlayer p, AbstractMonster m) {
             if(isTextCard(__instance)) {
-                return SpireReturn.Return(true);
+                return SpireReturn.Return();
             } else {
                 return SpireReturn.Continue();
             }
@@ -175,7 +175,7 @@ public class AllCardsRippablePatches {
     public static class MakeArtNormalityDoNothing {
 
         @SpirePrefixPatch
-        public static SpireReturn Prefix(Normality __instance, AbstractCard card) {
+        public static SpireReturn<Boolean> Prefix(Normality __instance, AbstractCard card) {
             if(isArtCard(__instance)) {
                 return SpireReturn.Return(true);
             } else {

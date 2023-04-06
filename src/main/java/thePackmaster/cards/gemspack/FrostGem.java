@@ -15,6 +15,8 @@ public class FrostGem extends AbstractGemsCard {
 
     public FrostGem() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     @Override

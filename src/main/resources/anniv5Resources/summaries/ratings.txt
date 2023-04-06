@@ -4,6 +4,7 @@ AlignmentPack	2	3	5	2	2
 AllForOnePack	4	2	3	4	3
 AnomalyPack	2	3	4	1	4
 ArcanaPack	3	3	3	3	2
+ArtificerPack	3	2	4	4	3
 BardInspirePack	3	3	4	2	3
 BasicsPack	3	3	2	4	2
 BatterPack	4	2	2	4	2
@@ -12,6 +13,7 @@ BitingColdPack	4	2	2	3	3
 BlacksmithsPack	3	3	4	4	4
 BoardGamePack	4	3	2	4	2
 BulwarkPack	2	5	1	4	4
+CalamityPack	4	2	2	3	4
 ClawPack	5	2	1	2	5
 ConjurerPack	3	4	2	2	3
 ContentCreatorPack	2	2	4	2	4
@@ -23,7 +25,7 @@ DefectPack	3	4	3	4	3
 DimensionGatePack	4	3	3	2	4
 DimensionGate2Pack	3	3	2	2	2
 DimensionGate3Pack	3	4	3	4	2
-DistortionPack	4	2	3	4	5
+DistortionPack	4	2	3	4	4
 DownfallPack	2	3	3	3	3
 DragonwrathPack	4	2	1	2	5
 EnergyAndEchoPack	3	2	4	4	2
@@ -39,6 +41,7 @@ GraveyardPack	3	1	4	3	4
 HermitPack	4	3	3	3	2
 HighEnergyPack	2	3	3	2	3
 InfestPack	3	3	3	2	2
+InstantDeathPack    4	3	3	2	3
 IntoTheBreachPack	4	3	3	3	1
 IntriguePack	3	3	4	2	1
 IroncladPack	4	2	3	4	2

@@ -1,0 +1,30 @@
+{
+  "${ModID}:ArtificerPack": {
+    "TEXT": [
+      "Artificer",
+      "Use powerful magical charms that affect their adjacent cards in your hand.",
+      "Pandemonium"
+    ]
+  },
+  "${ModID}:ArtificerPackHat": {
+    "TEXT": [
+      "I promise you can still breathe. It's magic.",
+      "Large Crystal"
+    ]
+  },
+  "${ModID}:BlockEnchantModifier": {
+    "TEXT": [
+      " NL Gain "," Block."
+    ]
+  },
+  "${ModID}:LimitedGambleAction": {
+    "TEXT": [
+      "discard."
+    ]
+  },
+  "${ModID}:DrawEnchantModifier": {
+    "TEXT": [
+      " NL Draw "," card."," cards."
+    ]
+  }
+}

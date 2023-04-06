@@ -1,0 +1,16 @@
+{
+  "${ModID}:CalamityPack": {
+    "TEXT": [
+      "Calamity",
+      "Bring down your foes with ${ModID}:Ignite, ${ModID}:Frostbite, Poison, and debuff synergy.",
+      "modargo",
+      "Card art from MtG"
+    ]
+  },
+  "${ModID}:CalamityPackHat": {
+    "TEXT": [
+      "Some say the world will end in fire.",
+      "Fire"
+    ]
+  }
+}

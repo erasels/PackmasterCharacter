@@ -18,7 +18,7 @@ public class IncreaseDamageModifier extends AbstractCardModifier {
 
     @Override
     public float modifyBaseDamage(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
-        return damage += amount;
+        return damage + amount;
     }
 
     @Override
