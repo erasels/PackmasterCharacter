@@ -13,8 +13,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class HuntingStrike extends AbstractMonsterHunterCard {
     public final static String ID = makeID("HuntingStrike");
 
-    public static final int DAMAGE = 7;
-    public static final int UPG_DAMAGE = 2;
+    public static final int DAMAGE = 8;
+    public static final int UPG_DAMAGE = 3;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public HuntingStrike() {
@@ -30,7 +30,7 @@ public class HuntingStrike extends AbstractMonsterHunterCard {
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
-        if (mo.type == AbstractMonster.EnemyType.BOSS || mo.type == AbstractMonster.EnemyType.ELITE){
+        if (mo.type == AbstractMonster.EnemyType.BOSS || mo.type == AbstractMonster.EnemyType.ELITE) {
             isDamageModified = true;
             damage *= 2;
         }
@@ -39,6 +39,5 @@ public class HuntingStrike extends AbstractMonsterHunterCard {
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeSecondDamage(UPG_DAMAGE*2);
     }
 }
