@@ -6,7 +6,7 @@
   },
   "${ModID}:Brainwave": {
     "NAME": "脑力波",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 随机将一张攻击手牌附加 ${ModID}:灵秘 。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 随机将一张攻击手牌附加 ${ModID}:灵秘 。"
   },
   "${ModID}:TelephonePole": {
     "NAME": "电线杆",
