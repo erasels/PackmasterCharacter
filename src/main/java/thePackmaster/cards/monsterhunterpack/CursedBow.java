@@ -23,7 +23,7 @@ public class CursedBow extends AbstractMonsterHunterCard {
     public static final int UPG_MAGIC = 3;
 
     public CursedBow() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;

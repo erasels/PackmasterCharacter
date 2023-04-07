@@ -12,7 +12,7 @@ public class TimepieceTiara extends AbstractMonsterHunterCard {
     public final static String ID = makeID("TimepieceTiara");
 
     public TimepieceTiara() {
-        super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         this.isInnate = false;
     }
 

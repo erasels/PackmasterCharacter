@@ -23,7 +23,7 @@ public class SlaverWhip extends AbstractMonsterHunterCard {
     public static final int MAGIC = 1;
 
     public SlaverWhip() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
     }

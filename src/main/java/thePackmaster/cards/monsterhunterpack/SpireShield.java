@@ -14,7 +14,7 @@ public class SpireShield extends AbstractMonsterHunterCard {
     public static final int UPG_BLOCK = 10;
 
     public SpireShield() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseBlock = block = BLOCK;
     }
 

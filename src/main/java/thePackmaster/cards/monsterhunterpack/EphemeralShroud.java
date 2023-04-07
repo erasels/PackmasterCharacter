@@ -17,7 +17,7 @@ public class EphemeralShroud extends AbstractMonsterHunterCard {
     private static final int UPGRADED_COST = 0;
 
     public EphemeralShroud() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;
     }

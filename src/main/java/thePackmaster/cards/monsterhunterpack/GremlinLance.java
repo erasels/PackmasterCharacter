@@ -19,7 +19,7 @@ public class GremlinLance extends AbstractMonsterHunterCard {
     //public static final int MAGIC = 1;
 
     public GremlinLance() {
-        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
         //baseMagicNumber = magicNumber = MAGIC;
     }

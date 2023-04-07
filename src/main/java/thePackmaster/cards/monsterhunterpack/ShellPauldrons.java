@@ -14,7 +14,7 @@ public class ShellPauldrons extends AbstractMonsterHunterCard {
     private static final int MAGIC = 6;
 
     public ShellPauldrons() {
-        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         this.isInnate = false;
     }

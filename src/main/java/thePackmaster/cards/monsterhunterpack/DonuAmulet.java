@@ -14,7 +14,7 @@ public class DonuAmulet extends AbstractMonsterHunterCard {
     public final static int UPG_MAGIC = 2;
 
     public DonuAmulet() {
-        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 

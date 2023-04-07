@@ -14,7 +14,7 @@ public class DecaAmulet extends AbstractMonsterHunterCard {
     public final static int UPG_MAGIC = 2;
 
     public DecaAmulet() {
-        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 1, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 

@@ -19,7 +19,7 @@ public class ChampMail extends AbstractMonsterHunterCard {
     private static final int BLOCK = 18;
 
     public ChampMail() {
-        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;

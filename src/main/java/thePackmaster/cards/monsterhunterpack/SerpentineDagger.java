@@ -16,7 +16,7 @@ public class SerpentineDagger extends AbstractMonsterHunterCard {
     public final static int UPG_DAMAGE = 2;
 
     public SerpentineDagger() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;

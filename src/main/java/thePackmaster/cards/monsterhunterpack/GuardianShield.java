@@ -16,7 +16,7 @@ public class GuardianShield extends AbstractMonsterHunterCard {
     private static final int UPG_MAGIC = 1;
 
     public GuardianShield() {
-        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 
