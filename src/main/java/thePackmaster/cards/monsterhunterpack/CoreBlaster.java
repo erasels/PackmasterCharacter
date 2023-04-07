@@ -22,7 +22,7 @@ public class CoreBlaster extends AbstractMonsterHunterCard {
     public final static String ID = makeID("CoreBlaster");
 
     public static final int DAMAGE = 10;
-    public static final int UPG_DAMAGE = 2;
+    public static final int UPG_DAMAGE = 3;
     AbstractCard prev;
     boolean previewCard;
 

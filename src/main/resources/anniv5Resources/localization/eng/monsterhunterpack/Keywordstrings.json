@@ -48,6 +48,6 @@
       "non-lethal",
       "non_lethal"
     ],
-    "DESCRIPTION": "Non-lethal damage will leave targets at 1 hp."
+    "DESCRIPTION": "Non-lethal damage will leave targets at 1 HP."
   }
 ]

@@ -4,6 +4,7 @@ AlignmentPack	Exhaust,Discard
 AllForOnePack	None
 AnomalyPack	Exhaust,Discard
 ArcanaPack	None
+ArtificerPack	Discard
 BardInspirePack	None
 BasicsPack	None
 BatterPack	Attacks
@@ -12,6 +13,7 @@ BitingColdPack	Debuffs
 BlacksmithsPack	None
 BoardGamePack	None
 BulwarkPack	Exhaust
+CalamityPack	Debuffs
 ClawPack	Tokens
 ColorlessPack	Tokens
 ConjurerPack	Debuffs
@@ -40,6 +42,7 @@ GraveyardPack	Exhaust
 HermitPack	None
 HighEnergyPack	None
 InfestPack	None
+InstantDeathPack	Attacks
 IntoTheBreachPack	None
 IntriguePack	None
 IroncladPack	Strength

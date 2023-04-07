@@ -5,19 +5,18 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.distortionpack.ImproveAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.distortionpack.DistortionPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class S_r_ke extends AbstractDistortionCard {
     public final static String ID = makeID("S_r_ke");
 
     public S_r_ke() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
-        baseMagicNumber = magicNumber = 3;
+        baseDamage = 6;
+        baseMagicNumber = magicNumber = 4;
 
         tags.add(CardTags.STRIKE);
     }
@@ -30,6 +29,7 @@ public class S_r_ke extends AbstractDistortionCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 }
