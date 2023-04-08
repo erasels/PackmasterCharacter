@@ -5,19 +5,19 @@
   },
   "${ModID}:GrievousIgnite": {
     "NAME": "Grievous Ignite",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Ignite. NL Apply Grievous Wounds."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Ignite. NL Whenever this enemy is healed, it loses that much HP instead."
   },
   "${ModID}:WitheringExhaust": {
     "NAME": "Withering Exhaust",
-    "DESCRIPTION": "Apply !M! Weak. NL If the target is attacking, it hits half as many times this turn (rounded up)."
+    "DESCRIPTION": "Apply !M! Weak. NL The enemy hits half as many times this turn (rounded up)."
   },
-  "${ModID}:Teleport": {
-    "NAME": "Teleport",
-    "DESCRIPTION": "Put a card from your draw pile on top of your discard pile, and vice versa. (Gain 1 Ghosted.)"
+  "${ModID}:ClutchTeleport": {
+    "NAME": "Clutch Teleport",
+    "DESCRIPTION": "Put a random card from your draw pile, discard pile and exhaust pile into your hand. NL Exhaust."
   },
-  "${ModID}:Heal": {
-    "NAME": "Heal",
-    "DESCRIPTION": "You and target enemy both heal !M! HP. NL Gain !M2! Ghosted. NL Exhaust."
+  "${ModID}:DuoHeal": {
+    "NAME": "Duo Heal",
+    "DESCRIPTION": "You and target enemy both heal !M! HP. NL Gain !${ModID}:m2! Ghosted. NL Exhaust."
   },
   "${ModID}:Barrier": {
     "NAME": "Barrier",
@@ -29,19 +29,19 @@
   },
   "${ModID}:Flash": {
     "NAME": "Flash",
-    "DESCRIPTION": "Draw !M! cards. NL Add a Hexflash to your hand. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Ghosted."
   },
   "${ModID}:Hexflash": {
     "NAME": "Hexflash",
-    "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust.",
+    "DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this turn.",
     "UPGRADE_DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this combat."
   },
   "${ModID}:Ghost": {
     "NAME": "Ghost",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Ghosted."
+    "DESCRIPTION": "Draw !M! cards. NL Add a Hexflash to your hand. NL Exhaust."
   },
   "${ModID}:Cleanse": {
     "NAME": "Cleanse",
-    "DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this turn."
+    "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
   }
 }
