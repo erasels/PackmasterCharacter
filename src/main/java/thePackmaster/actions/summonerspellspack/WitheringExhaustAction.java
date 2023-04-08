@@ -9,8 +9,6 @@ import thePackmaster.powers.summonerspellspack.WitheringExhaustPower;
 
 public class WitheringExhaustAction extends AbstractGameAction {
 
-    private EnemyMoveInfo expectedMoveInfo = null;
-
     public WitheringExhaustAction(AbstractCreature target, AbstractCreature source) {
         this.source = source;
         this.target = target;
