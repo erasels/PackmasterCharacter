@@ -41,6 +41,7 @@ import thePackmaster.vfx.rippack.ShowCardAndRipEffect;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 import static thePackmaster.cardmodifiers.rippack.RippableModifier.isRippable;
@@ -131,10 +132,9 @@ public class AllCardsRippablePatches {
     //I'm sorry
     @SpirePatch(clz = AbstractPlayer.class, method = "useCard")
     public static class DontDoStuffWhenArtCardUnlessArtAttackWhoopsLol {
-
-        @SpirePrefixPatch()
-        public static SpireReturn Prefix(AbstractPlayer __instance, AbstractCard card, AbstractMonster monster, int energyOnUse) {
-            if (AllCardsRippablePatches.AbstractCardFields.ripStatus.get(card) == ART && card.cardID != ArtAttack.ID) {
+        @SpirePrefixPatch
+        public static SpireReturn<?> Prefix(AbstractPlayer __instance, AbstractCard card, AbstractMonster monster, int energyOnUse) {
+            if (AllCardsRippablePatches.AbstractCardFields.ripStatus.get(card) == ART && !Objects.equals(card.cardID, ArtAttack.ID)) {
                 AbstractDungeon.actionManager.addToBottom(new UseCardAction(card, monster));
                 if (!card.dontTriggerOnUseCard) {
                     __instance.hand.triggerOnOtherCardPlayed(card);
