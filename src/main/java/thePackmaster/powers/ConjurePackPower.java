@@ -11,7 +11,6 @@ import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -32,12 +31,12 @@ public class ConjurePackPower extends AbstractPackmasterPower implements NonStac
     }
 
     private void resetPackCards() {
-
         cards.clear();
-        for (AbstractCard c : pack.cards
-        ) {
-            if (c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
-            cards.add(c.makeCopy());
+        for (AbstractCard c : pack.cards) {
+            if (!c.hasTag(AbstractCard.CardTags.HEALING) &&
+                    (c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)) {
+                cards.add(c.makeCopy());
+            }
         }
     }
 
@@ -65,7 +64,6 @@ public class ConjurePackPower extends AbstractPackmasterPower implements NonStac
     public void updateDescription() {
         if (pack != null) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + FontHelper.colorString(pack.name, "y") + DESCRIPTIONS[2];
-
         }
     }
 }
