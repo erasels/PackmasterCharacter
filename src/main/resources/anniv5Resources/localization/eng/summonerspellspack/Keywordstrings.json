@@ -1,0 +1,9 @@
+[
+  {
+    "PROPER_NAME": "Ghosted",
+    "NAMES": [
+      "ghosted"
+    ],
+    "DESCRIPTION": "Draw extra cards at the start of your turn, then reduce this amount by #b1."
+  }
+]

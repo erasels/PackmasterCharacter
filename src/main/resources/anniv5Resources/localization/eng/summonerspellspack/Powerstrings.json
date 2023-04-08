@@ -1,0 +1,24 @@
+{
+  "${ModID}:GhostedPower": {
+    "NAME": "Ghosted",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " extra cards at the start of your turn, then reduce this amount by #b1. NL Kills grant #b1 #yGhosted.",
+      " extra card at the start of your turn, then reduce this amount by #b1. NL Kills grant #b1 #yGhosted."
+    ]
+  },
+  "${ModID}:GrievousWoundsPower": {
+    "NAME": "Grievous Wounds",
+    "DESCRIPTIONS": [
+      "When healed, loses that much HP instead."
+    ]
+  },
+  "${ModID}:WitheringExhaustPower": {
+    "NAME": "Withering Exhaust",
+    "DESCRIPTIONS": [
+      "This enemy's attacks have been halved.",
+      "This enemy's attacks have been halved #b",
+      " times."
+    ]
+  }
+}

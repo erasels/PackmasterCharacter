@@ -1,0 +1,47 @@
+{
+  "${ModID}:SmitingStrike": {
+    "NAME": "Smiting Strike",
+    "DESCRIPTION": "Deal !D! damage. NL If target is a minion, kill it instead."
+  },
+  "${ModID}:GrievousIgnite": {
+    "NAME": "Grievous Ignite",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Ignite. NL Apply Grievous Wounds."
+  },
+  "${ModID}:WitheringExhaust": {
+    "NAME": "Withering Exhaust",
+    "DESCRIPTION": "Apply !M! Weak. NL If the target is attacking, it hits half as many times this turn (rounded up)."
+  },
+  "${ModID}:Teleport": {
+    "NAME": "Teleport",
+    "DESCRIPTION": "Put a card from your draw pile on top of your discard pile, and vice versa. (Gain 1 Ghosted.)"
+  },
+  "${ModID}:Heal": {
+    "NAME": "Heal",
+    "DESCRIPTION": "You and target enemy both heal !M! HP. NL Gain !M2! Ghosted. NL Exhaust."
+  },
+  "${ModID}:Barrier": {
+    "NAME": "Barrier",
+    "DESCRIPTION": "Gain 1 Dexterity for each card in your hand."
+  },
+  "${ModID}:Clarity": {
+    "NAME": "Clarity",
+    "DESCRIPTION": "Gain 1 [E] for each card in your hand. Exhaust."
+  },
+  "${ModID}:Flash": {
+    "NAME": "Flash",
+    "DESCRIPTION": "Draw !M! cards. NL Add a Hexflash to your hand. NL Exhaust."
+  },
+  "${ModID}:Hexflash": {
+    "NAME": "Hexflash",
+    "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this combat."
+  },
+  "${ModID}:Ghost": {
+    "NAME": "Ghost",
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Ghosted."
+  },
+  "${ModID}:Cleanse": {
+    "NAME": "Cleanse",
+    "DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this turn."
+  }
+}

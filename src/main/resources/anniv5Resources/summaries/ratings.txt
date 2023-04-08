@@ -73,6 +73,7 @@ SpheresPack	4	3	1	4	3
 SneckoPack	3	1	4	3	2
 StatusPack	4	2	5	5	3
 StrikesPack	4	1	2	4	1
+SummonerSpellsPack  2   3   5   1   2
 SummonsPack	3	3	4	2	4
 ThieveryPack	2	2	4	3	3
 TransmutationPack	3	3	4	3	2

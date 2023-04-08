@@ -73,6 +73,7 @@ SpheresPack	Debuffs,Orbs
 SneckoPack	None
 StatusPack	Exhaust,Tokens
 StrikesPack	Orbs,Attacks
+SummonerSpellsPack  None
 SummonsPack	Orbs
 ThieveryPack	Strength
 TransmutationPack	None
