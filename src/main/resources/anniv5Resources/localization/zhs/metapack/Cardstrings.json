@@ -10,7 +10,7 @@
   "${ModID}:Swipe": {
     "NAME": "挥击",
     "DESCRIPTION": "每有一点缺失的 [E] ， NL 造成 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [" NL (造成 !M! 次。"]
+    "EXTENDED_DESCRIPTION": [" NL (造成 !M! 次)"]
   },
   "${ModID}:Ambition": {
     "NAME": "野心",
