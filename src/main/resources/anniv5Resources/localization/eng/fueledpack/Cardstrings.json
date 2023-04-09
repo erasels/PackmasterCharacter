@@ -28,7 +28,7 @@
   },
   "${ModID}:PlayingWithFire": {
     "NAME": "Playing With Fire",
-    "DESCRIPTION": "At the start of your turn roll 2${ModID}:d8. NL Gain 1 ${ModID}:Ignire for each 1 or 2 you roll."
+    "DESCRIPTION": "At the start of your turn roll !M! ${ModID}:D8. NL Gain 1 ${ModID}:Ignite for each 7 or 8 you roll."
   },
   "${ModID}:PhoenixHeart": {
     "NAME": "Phoenix Heart",
