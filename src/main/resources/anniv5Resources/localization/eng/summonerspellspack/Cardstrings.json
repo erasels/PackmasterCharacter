@@ -19,9 +19,9 @@
     "NAME": "Duo Heal",
     "DESCRIPTION": "You and target enemy both heal !M! HP. NL Gain !${ModID}:m2! Ghosted. NL Exhaust."
   },
-  "${ModID}:Barrier": {
-    "NAME": "Barrier",
-    "DESCRIPTION": "Gain 1 Dexterity for each card in your hand."
+  "${ModID}:SpiritBarrier": {
+    "NAME": "Spirit Barrier",
+    "DESCRIPTION": "Gain 1 Temporary HP for each card in your hand."
   },
   "${ModID}:PerfectClarity": {
     "NAME": "Perfect Clarity",
@@ -31,10 +31,9 @@
     "NAME": "Artful Ghost",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Ghosted."
   },
-  "${ModID}:Cleanse": {
-    "NAME": "Cleanse",
-    "DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this turn.",
-    "UPGRADE_DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this combat."
+  "${ModID}:CleansingFountain": {
+    "NAME": "Cleansing Fountain",
+    "DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact for !${ModID}:m2! turns."
   },
   "${ModID}:Flash": {
     "NAME": "Flash",

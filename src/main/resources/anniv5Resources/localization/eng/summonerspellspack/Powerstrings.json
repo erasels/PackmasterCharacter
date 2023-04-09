@@ -1,4 +1,12 @@
 {
+  "${ModID}:CleansingFountainPower": {
+    "NAME": "Cleansing Fountain",
+    "DESCRIPTIONS": [
+      "Cannot lose #yArtifact for #b",
+      " turn.",
+      " turns."
+    ]
+  },
   "${ModID}:GhostedPower": {
     "NAME": "Ghosted",
     "DESCRIPTIONS": [

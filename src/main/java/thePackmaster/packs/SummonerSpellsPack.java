@@ -30,6 +30,7 @@ public class SummonerSpellsPack extends AbstractCardPack {
         cards.add(SpiritBarrierCard.ID);
         cards.add(PerfectClarityCard.ID);
         cards.add(ArtfulGhostCard.ID);
+        cards.add(CleansingFountainCard.ID);
 
 
 
