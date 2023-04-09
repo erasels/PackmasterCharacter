@@ -23,25 +23,25 @@
     "NAME": "Barrier",
     "DESCRIPTION": "Gain 1 Dexterity for each card in your hand."
   },
-  "${ModID}:Clarity": {
-    "NAME": "Clarity",
-    "DESCRIPTION": "Gain 1 [E] for each card in your hand. Exhaust."
+  "${ModID}:PerfectClarity": {
+    "NAME": "Perfect Clarity",
+    "DESCRIPTION": "Gain 1 [E] for each card in your hand. NL Exhaust."
   },
-  "${ModID}:Flash": {
-    "NAME": "Flash",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Ghosted."
-  },
-  "${ModID}:Hexflash": {
-    "NAME": "Hexflash",
-    "DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this turn.",
-    "UPGRADE_DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this combat."
-  },
-  "${ModID}:Ghost": {
-    "NAME": "Ghost",
-    "DESCRIPTION": "Draw !M! cards. NL Add a Hexflash to your hand. NL Exhaust."
+  "${ModID}:ArtfulGhost": {
+    "NAME": "Artful Ghost",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Ghosted."
   },
   "${ModID}:Cleanse": {
     "NAME": "Cleanse",
+    "DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this turn.",
+    "UPGRADE_DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact this combat."
+  },
+  "${ModID}:Flash": {
+    "NAME": "Flash",
+    "DESCRIPTION": "Draw !M! cards. NL Add a Hexflash to your hand. NL Exhaust."
+  },
+  "${ModID}:Hexflash": {
+    "NAME": "Hexflash",
     "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
   }
 }

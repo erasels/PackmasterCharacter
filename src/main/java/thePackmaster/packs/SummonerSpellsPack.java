@@ -3,8 +3,7 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.summonerspellspack.GrievousIgniteCard;
-import thePackmaster.cards.summonerspellspack.SmitingStrikeCard;
+import thePackmaster.cards.summonerspellspack.*;
 
 import java.util.ArrayList;
 
@@ -25,6 +24,15 @@ public class SummonerSpellsPack extends AbstractCardPack {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(SmitingStrikeCard.ID);
         cards.add(GrievousIgniteCard.ID);
+        cards.add(WitheringExhaustCard.ID);
+        cards.add(ClutchTeleportCard.ID);
+        cards.add(DuoHealCard.ID);
+        cards.add(SpiritBarrierCard.ID);
+        cards.add(PerfectClarityCard.ID);
+        cards.add(ArtfulGhostCard.ID);
+
+
+
         //TODO
         return cards;
     }
