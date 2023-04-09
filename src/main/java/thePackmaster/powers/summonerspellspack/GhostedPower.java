@@ -31,9 +31,9 @@ public class GhostedPower extends AbstractPackmasterPower {
         this.addToBot(new DrawCardAction(this.amount));
 
         if (this.amount > 1)
-            this.addToBot(new ReducePowerAction(this.owner, this.owner, "GhostedPower", 1));
+            this.addToBot(new ReducePowerAction(this.owner, this.owner, GhostedPower.POWER_ID, 1));
         else
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "GhostedPower"));
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, GhostedPower.POWER_ID));
     }
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
