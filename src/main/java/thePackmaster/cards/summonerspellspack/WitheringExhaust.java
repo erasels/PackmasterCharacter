@@ -7,13 +7,13 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.summonerspellspack.WitheringExhaustAction;
 
-public class WitheringExhaustCard extends AbstractSummonerSpellsCard {
+public class WitheringExhaust extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("WitheringExhaust");
     private static final int COST = 1;
     private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 2;
 
-    public WitheringExhaustCard() {
+    public WitheringExhaust() {
         super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = MAGIC;
     }

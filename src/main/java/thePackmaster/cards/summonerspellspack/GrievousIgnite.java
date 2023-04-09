@@ -1,22 +1,16 @@
 package thePackmaster.cards.summonerspellspack;
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.MinionPower;
-import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.summonerspellspack.SmitingStrikeAction;
 import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.powers.summonerspellspack.GrievousWoundsPower;
 
-public class GrievousIgniteCard extends AbstractSummonerSpellsCard {
+public class GrievousIgnite extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("GrievousIgnite");
     private static final int COST = 1;
     private static final int DAMAGE = 5;
@@ -24,7 +18,7 @@ public class GrievousIgniteCard extends AbstractSummonerSpellsCard {
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 
-    public GrievousIgniteCard() {
+    public GrievousIgnite() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = MAGIC;

@@ -6,11 +6,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.summonerspellspack.SpiritBarrierAction;
 import thePackmaster.powers.summonerspellspack.CleansingFountainPower;
-import thePackmaster.powers.summonerspellspack.GhostedPower;
 
-public class CleansingFountainCard extends AbstractSummonerSpellsCard {
+public class CleansingFountain extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("CleansingFountain");
     private static final int COST = 2;
     private static final int MAGIC = 1;
@@ -18,7 +16,7 @@ public class CleansingFountainCard extends AbstractSummonerSpellsCard {
     private static final int UPG_MAGIC2 = 97;
 
 
-    public CleansingFountainCard() {
+    public CleansingFountain() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         magicNumber = baseMagicNumber = MAGIC;
         secondMagic = baseSecondMagic = MAGIC2;

@@ -5,10 +5,9 @@ import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.summonerspellspack.ClutchTeleportAction;
 import thePackmaster.powers.summonerspellspack.GhostedPower;
 
-public class DuoHealCard extends AbstractSummonerSpellsCard {
+public class DualHeal extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("DuoHeal");
     private static final int COST = 1;
     private static final int MAGIC = 7;
@@ -16,7 +15,7 @@ public class DuoHealCard extends AbstractSummonerSpellsCard {
     private static final int MAGIC2 = 1;
 
 
-    public DuoHealCard() {
+    public DualHeal() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         exhaust = true;
         magicNumber = baseMagicNumber = MAGIC;

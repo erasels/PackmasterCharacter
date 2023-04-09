@@ -10,7 +10,7 @@ import thePackmaster.SpireAnniversary5Mod;
 
 import static thePackmaster.util.Wiz.p;
 
-public class HexflashCard extends AbstractSummonerSpellsCard {
+public class Hexflash extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Hexflash");
     private static final int COST = 0;
     private static final int MAGIC = 2;
@@ -18,7 +18,7 @@ public class HexflashCard extends AbstractSummonerSpellsCard {
     public static final int TIMER_MAX = 3;
     public int timer = 3;
 
-    public HexflashCard() {
+    public Hexflash() {
         super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE);
         magicNumber = baseMagicNumber = MAGIC;
         exhaust = true;
@@ -43,7 +43,7 @@ public class HexflashCard extends AbstractSummonerSpellsCard {
         if (timer < 1) {
             this.addToBot(new ExhaustSpecificCardAction(this, p().hand, true));
 
-            AbstractCard c = new FlashCard();
+            AbstractCard c = new Flash();
             if (upgraded)
                 c.upgrade();
             this.addToBot(new MakeTempCardInHandAction(c, 1));

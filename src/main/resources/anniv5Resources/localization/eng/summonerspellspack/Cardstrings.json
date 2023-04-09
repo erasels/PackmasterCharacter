@@ -15,8 +15,8 @@
     "NAME": "Clutch Teleport",
     "DESCRIPTION": "Put a random card from your draw pile, discard pile and exhaust pile into your hand. NL Exhaust."
   },
-  "${ModID}:DuoHeal": {
-    "NAME": "Duo Heal",
+  "${ModID}:DualHeal": {
+    "NAME": "Dual Heal",
     "DESCRIPTION": "You and target enemy both heal !M! HP. NL Gain !${ModID}:m2! Ghosted. NL Exhaust."
   },
   "${ModID}:SpiritBarrier": {
@@ -35,14 +35,14 @@
     "NAME": "Cleansing Fountain",
     "DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact for !${ModID}:m2! turns."
   },
-  "${ModID}:FlashOfInspiration": {
-    "NAME": "Flash Of Inspiration",
+  "${ModID}:Flash": {
+    "NAME": "Flash",
     "DESCRIPTION": "Draw !M! cards. NL Add a Hexflash to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Add a Hexflash+ to your hand. NL Exhaust."
   },
   "${ModID}:Hexflash": {
     "NAME": "Hexflash",
-    "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust. NL If retained for 3 turns, exhausts and adds Flash Of Inspiration to your hand.",
+    "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust. NL If retained for 3 turns, exhausts and adds Flash to your hand.",
     "EXTENDED_DESCRIPTION": [" (", " turn left.)", " turns left.)"]
   }
 }
