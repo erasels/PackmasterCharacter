@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 
 public class Flash extends AbstractSummonerSpellsCard {
-    public static final String ID = SpireAnniversary5Mod.makeID("FlashOfInspiration");
+    public static final String ID = SpireAnniversary5Mod.makeID("Flash");
     private static final int COST = 0;
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
