@@ -21,6 +21,7 @@ public class DuoHealCard extends AbstractSummonerSpellsCard {
         exhaust = true;
         magicNumber = baseMagicNumber = MAGIC;
         secondMagic = baseSecondMagic = MAGIC2;
+        tags.add(CardTags.HEALING);
     }
 
     @Override

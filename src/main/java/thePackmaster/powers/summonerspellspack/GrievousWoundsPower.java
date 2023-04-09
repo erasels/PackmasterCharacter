@@ -32,7 +32,7 @@ public class GrievousWoundsPower extends AbstractPackmasterPower {
     @Override
     public int onHeal(int healAmount) {
         this.flash();
-        this.addToBot(new LoseHPAction(owner, owner, healAmount));
+        this.addToTop(new LoseHPAction(owner, owner, healAmount));
         return 0;
     }
 
