@@ -15,7 +15,8 @@ public class Demolish extends AbstractBrickCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 6;
+    private static final int UPGRADE_DAMAGE = 1;
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
 
@@ -28,16 +29,15 @@ public class Demolish extends AbstractBrickCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (damage < 12)
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        else
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         applyToEnemy(m, new VulnerablePower(m, magicNumber, false));
         shuffleIn(new LooseBrick());
     }
 
     @Override
     public void upp() {
+        upgradeDamage(UPGRADE_DAMAGE);
         upMagic(UPGRADE_MAGIC);
     }
 }

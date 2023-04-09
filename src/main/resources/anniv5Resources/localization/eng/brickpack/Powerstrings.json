@@ -2,9 +2,18 @@
   "${ModID}:JengaPower": {
     "NAME": "Jenga",
     "DESCRIPTIONS": [
-      "At the start of your turn, Exhaust a random #yBrick or die.",
-      "At the start of your turn, Exhaust #b",
-      " random #yBricks or die."
+      "At the start of your turn gain #b",
+      " Strength and #yExhaust a random #yBrick. NL If you can't #yExhaust a #yBrick, die.",
+      " Strength and #yExhaust #b",
+      " random #yBricks. NL If you can't #yExhaust #b",
+      " #yBricks, die."
+    ]
+  },
+  "${ModID}:SalvagePower": {
+    "NAME": "Salvage",
+    "DESCRIPTIONS": [
+      "Whenever you draw a #yBrick, gain #b",
+      " #yVigor."
     ]
   }
 }

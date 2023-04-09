@@ -11,8 +11,8 @@ import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.atb;
 
-public class BurningSword extends AbstractFueledCard {
-    public final static String ID = makeID(BurningSword.class.getSimpleName());
+public class BurningStrike extends AbstractFueledCard {
+    public final static String ID = makeID(BurningStrike.class.getSimpleName());
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -22,7 +22,7 @@ public class BurningSword extends AbstractFueledCard {
     private static final int UPGRADE_DAMAGE = 4;
     private static final int MAGIC = 2;
 
-    public BurningSword() {
+    public BurningStrike() {
         super(ID, COST, TYPE, RARITY, TARGET);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);

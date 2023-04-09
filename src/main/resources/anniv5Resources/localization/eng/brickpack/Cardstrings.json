@@ -1,11 +1,11 @@
 {
   "${ModID}:Demolish": {
     "NAME": "Demolish",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Add a *Loose *Brick into your draw pile."
+    "DESCRIPTION": "Deal !D! damage 2 times. NL Apply !M! Vulnerable. NL Add a *Loose *Brick into your draw pile."
   },
   "${ModID}:HastyConstruction": {
     "NAME": "Hasty Construction",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies. NL Add a *Loose *Brick into your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards."
   },
   "${ModID}:Blueprints": {
     "NAME": "Blueprints",
@@ -13,7 +13,7 @@
   },
   "${ModID}:Crenellations": {
     "NAME": "Crenellations",
-    "DESCRIPTION": "Unplayable. NL Startup: Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Unplayable. NL Startup: Deal !D! damage and apply !M! Weak to ALL enemies."
   },
   "${ModID}:LeaningTower": {
     "NAME": "Leaning Tower",
@@ -29,15 +29,15 @@
   },
   "${ModID}:Jenga": {
     "NAME": "Jenga",
-    "DESCRIPTION": "Gain !M! Strength. NL At the start of your turn, Exhaust a random ${ModID}:Brick or die."
+    "DESCRIPTION": "At the start of your turn gain !M! Strength and Exhaust a random ${ModID}:Brick. NL If you can't exhaust a brick, die."
   },
   "${ModID}:BrickGolem": {
     "NAME": "Brick Golem",
-    "DESCRIPTION": "Unplayable. NL Gain !M! Metallicize, !${ModID}:m2! Dexterity, and !${ModID}:m2! Artifact. NL Pickup: Obtain 2 *Heavy *Brick."
+    "DESCRIPTION": "Unplayable. NL Gain !M! Metallicize. NL Gain !${ModID}:m2! Artifact. NL Pickup: Obtain 2 *Heavy *Brick."
   },
   "${ModID}:Salvage": {
     "NAME": "Salvage",
-    "DESCRIPTION": "Innate. NL Discard the first !M! ${ModID}:Bricks in your draw pile."
+    "DESCRIPTION": "Whenever you draw a ${ModID}:Brick, gain !M! Vigor."
   },
   "${ModID}:LooseBrick": {
     "NAME": "Loose Brick",

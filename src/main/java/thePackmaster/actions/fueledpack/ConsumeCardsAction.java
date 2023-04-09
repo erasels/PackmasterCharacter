@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import thePackmaster.cards.fueledpack.BurningSword;
+import thePackmaster.cards.fueledpack.BurningStrike;
 import thePackmaster.cards.fueledpack.HotAsh;
 import thePackmaster.powers.fueledpack.ControlledBurnPower;
 import thePackmaster.vfx.fueledpack.ConsumeCardEffect;
@@ -88,7 +88,7 @@ public class ConsumeCardsAction extends AbstractGameAction {
     private static AbstractCard getAshesCard(AbstractCard oldCard) {
         if (oldCard instanceof HotAsh)
             return null;
-        else if (oldCard instanceof BurningSword)
+        else if (oldCard instanceof BurningStrike)
             return oldCard.makeCopy();
         else if (oldCard.type == AbstractCard.CardType.ATTACK
                 || oldCard.type == AbstractCard.CardType.SKILL

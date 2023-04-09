@@ -1,6 +1,7 @@
 package thePackmaster.cards.brickpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,8 +20,8 @@ public class PerfectedBrick extends AbstractBrickCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int DAMAGE = 6;
-    private static final int MAGIC = 3;
+    private static final int DAMAGE = 8;
+    private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 1;
 
     public PerfectedBrick() {
@@ -31,10 +32,7 @@ public class PerfectedBrick extends AbstractBrickCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (damage < 15)
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        else
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
     }
 
     public void calculateCardDamage(AbstractMonster mo) {

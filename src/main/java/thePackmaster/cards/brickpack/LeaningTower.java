@@ -1,7 +1,6 @@
 package thePackmaster.cards.brickpack;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.TheBombPower;
@@ -17,14 +16,15 @@ public class LeaningTower extends AbstractBrickCard implements StartupCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int MAGIC = 40;
-    private static final int UPGRADE_MAGIC = 10;
+    private static final int MAGIC = 50;
     private static final int SECOND_MAGIC = 5;
+    private static final int UPGRADE_SECOND = -1;
 
     public LeaningTower() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
         baseSecondMagic = secondMagic = SECOND_MAGIC;
+        tags.add(CardTags.HEALING);
     }
 
     @Override
@@ -45,6 +45,6 @@ public class LeaningTower extends AbstractBrickCard implements StartupCard {
 
     @Override
     public void upp() {
-        upMagic(UPGRADE_MAGIC);
+        upgradeSecondMagic(UPGRADE_SECOND);
     }
 }

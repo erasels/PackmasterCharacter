@@ -6,5 +6,12 @@
       "The first #b",
       " times each turn you #yConsume a card, gain [E] and draw a card."
     ]
+  },
+  "${ModID}:PlayingWithFirePower": {
+    "NAME": "Playing With Fire",
+    "DESCRIPTIONS": [
+      "At the start of your turn, roll #b",
+      "d8. Gain #b1 #yIgnite for each 1 or 2 you roll."
+    ]
   }
 }

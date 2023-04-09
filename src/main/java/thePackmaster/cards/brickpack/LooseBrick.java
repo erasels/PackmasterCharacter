@@ -14,7 +14,6 @@ public class LooseBrick extends AbstractBrickCard {
 
     public LooseBrick() {
         super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

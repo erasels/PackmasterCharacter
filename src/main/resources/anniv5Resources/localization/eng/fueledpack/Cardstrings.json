@@ -1,6 +1,6 @@
 {
-  "${ModID}:BurningSword": {
-    "NAME": "Burning Sword",
+  "${ModID}:BurningStrike": {
+    "NAME": "Burning Strike",
     "DESCRIPTION": "Deal !D! Damage. NL Draw !M! cards."
   },
   "${ModID}:IridiumShield": {
@@ -13,9 +13,9 @@
     "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage.",
     "FLAVOR": "Burninating the spire."
   },
-  "${ModID}:Napalm": {
-    "NAME": "Napalm",
-    "DESCRIPTION": "${ModID}:Consume a card to apply !M! ${ModID}:Ignite."
+  "${ModID}:Conflaguration": {
+    "NAME": "Conflaguration",
+    "DESCRIPTION": "${ModID}:Consume a card to apply !M! ${ModID}:Ignite and Channel a ${ModID}:Blaze."
   },
   "${ModID}:FlamingLeap": {
     "NAME": "Flaming Leap",
@@ -26,9 +26,9 @@
     "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage and apply !M! ${ModID}:Ignite to ALL enemies.",
     "FLAVOR": "The original version sets you on fire.  0/10 would not cast again."
   },
-  "${ModID}:AshCloud": {
-    "NAME": "Ash Cloud",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block for each *Hot *Ash in your hand."
+  "${ModID}:PlayingWithFire": {
+    "NAME": "Playing With Fire",
+    "DESCRIPTION": "At the start of your turn roll 2${ModID}:d8. NL Gain 1 ${ModID}:Ignire for each 1 or 2 you roll."
   },
   "${ModID}:PhoenixHeart": {
     "NAME": "Phoenix Heart",

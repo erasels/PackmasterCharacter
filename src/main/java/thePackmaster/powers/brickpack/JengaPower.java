@@ -7,12 +7,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
 
-import static thePackmaster.util.Wiz.adp;
-import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.*;
 
 public class JengaPower extends AbstractPackmasterPower {
     public static String POWER_ID = SpireAnniversary5Mod.makeID(JengaPower.class.getSimpleName());
@@ -26,6 +26,8 @@ public class JengaPower extends AbstractPackmasterPower {
 
     @Override
     public void atStartOfTurn() {
+        applyToSelf(new StrengthPower(adp(), amount));
+
         int count = 0;
         CardGroup pile = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
@@ -79,8 +81,8 @@ public class JengaPower extends AbstractPackmasterPower {
     @Override
     public void updateDescription() {
         if (amount == 1)
-            description = DESCRIPTIONS[0];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         else
-            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[2] + amount + DESCRIPTIONS[3] + amount + DESCRIPTIONS[4];
     }
 }

@@ -1,8 +1,8 @@
 package thePackmaster.cards.brickpack;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
@@ -14,7 +14,7 @@ public class HastyConstruction extends AbstractBrickCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BLOCK = 12;
+    private static final int BLOCK = 8;
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
 
@@ -22,14 +22,12 @@ public class HastyConstruction extends AbstractBrickCard {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
         baseBlock = BLOCK;
-        cardsToPreview = new LooseBrick();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        forAllMonstersLiving(mo -> applyToEnemy(mo, new WeakPower(mo, magicNumber, false)));
-        shuffleIn(new LooseBrick());
+        atb(new DrawCardAction(magicNumber));
     }
 
     @Override

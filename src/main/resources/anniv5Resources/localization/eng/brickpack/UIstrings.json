@@ -8,8 +8,8 @@
   },
   "${ModID}:BrickPackHat": {
     "TEXT": [
-      "I got no hat.",
-      "Hat is null"
+      "Protect your head from falling bricks.",
+      "Hard Hat"
     ]
   }
 }

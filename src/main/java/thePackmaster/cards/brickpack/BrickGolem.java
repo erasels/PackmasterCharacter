@@ -2,7 +2,6 @@ package thePackmaster.cards.brickpack;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
-import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,14 +24,15 @@ public class BrickGolem extends AbstractBrickCard implements StartupCard, OnObta
 
     private static final int MAGIC = 6;
     private static final int UPGRADE_MAGIC = 2;
-    private static final int SECOND_MAGIC = 2;
-    private static final int UPGRADE_SECOND = 1;
+    private static final int SECOND_MAGIC = 3;
+    private static final int UPGRADE_SECOND = 2;
 
     public BrickGolem() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
         baseSecondMagic = secondMagic = SECOND_MAGIC;
         cardsToPreview = new HeavyBrick();
+        tags.add(CardTags.HEALING);
     }
 
     @Override
@@ -47,7 +47,6 @@ public class BrickGolem extends AbstractBrickCard implements StartupCard, OnObta
     @Override
     public boolean atBattleStartPreDraw() {
         applyToSelf(new MetallicizePower(adp(), magicNumber));
-        applyToSelf(new DexterityPower(adp(), secondMagic));
         applyToSelf(new ArtifactPower(adp(), secondMagic));
         return true;
     }

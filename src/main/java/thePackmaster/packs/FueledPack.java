@@ -22,13 +22,13 @@ public class FueledPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(HotAsh.ID);
-        cards.add(BurningSword.ID);
+        cards.add(BurningStrike.ID);
         cards.add(IridiumShield.ID);
         cards.add(FlameBlastMkTwo.ID);
-        cards.add(Napalm.ID);
+        cards.add(Conflaguration.ID);
         cards.add(InfernoMkTwo.ID);
         cards.add(FlamingLeap.ID);
-        cards.add(AshCloud.ID);
+        cards.add(PlayingWithFire.ID);
         cards.add(PhoenixHeart.ID);
         cards.add(BurnBright.ID);
         cards.add(ControlledBurn.ID);
