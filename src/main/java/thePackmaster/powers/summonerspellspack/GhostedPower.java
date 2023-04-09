@@ -21,9 +21,8 @@ public class GhostedPower extends AbstractPackmasterPower {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if (target.currentHealth <= damageAmount) {
+        if (target.currentHealth <= damageAmount)
             addToBot(new ApplyPowerAction(Wiz.p(), Wiz.p(), new GhostedPower(Wiz.p(), 1), 1));
-        }
     }
 
     @Override
