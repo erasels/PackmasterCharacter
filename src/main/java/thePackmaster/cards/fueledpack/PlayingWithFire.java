@@ -13,7 +13,7 @@ import static thePackmaster.util.Wiz.*;
 
 public class PlayingWithFire extends AbstractFueledCard {
     public final static String ID = makeID(PlayingWithFire.class.getSimpleName());
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 2;

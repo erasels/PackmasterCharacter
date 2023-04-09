@@ -30,9 +30,9 @@ public class PlayingWithFirePower extends AbstractPackmasterPower {
 
         for (int i = 0; i < amount; i++) {
             DicePower power = new DicePower(adp(), SIDES, false);
-            applyToSelf(power);
             if (power.amount == SIDES || power.amount == SIDES - 1)
                 applyToSelf(new IgnitePower(adp(), 1));
+            applyToSelf(power);
         }
     }
 

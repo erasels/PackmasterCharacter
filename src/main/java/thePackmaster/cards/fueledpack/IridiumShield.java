@@ -18,6 +18,7 @@ public class IridiumShield extends AbstractFueledCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int BLOCK = 6;
+    private static final int UPGRADE_BLOCK = 1;
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
 
@@ -37,6 +38,7 @@ public class IridiumShield extends AbstractFueledCard {
 
     @Override
     public void upp() {
+        upgradeBlock(UPGRADE_BLOCK);
         upMagic(UPGRADE_MAGIC);
     }
 }
