@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import thePackmaster.util.Wiz;
 
-import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 import static thePackmaster.util.Wiz.adp;
@@ -35,8 +34,7 @@ public class ShineAction extends AbstractGameAction {
         } else {
             AbstractCard c = Wiz.getRandomItem(adp().hand.group.stream()
                     .filter(card -> card != originalCard)
-                    .collect(Collectors.toCollection(ArrayList::new)
-                    ));
+                    .collect(Collectors.toList()));
 
             if (c.canUpgrade()) {
                 c.upgrade();
