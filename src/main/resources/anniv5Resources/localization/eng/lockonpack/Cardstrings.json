@@ -5,7 +5,7 @@
   },
   "${ModID}:DC": {
     "NAME": "DC",
-    "DESCRIPTION": "{@@}Retain. NL Channel a Lightning. NL Trigger its{!Upgrades!|>0= passive and} Evoke effect{!Upgrades!|>0=s}. NL Exhaust."
+    "DESCRIPTION": "{@@}Retain. NL Channel a Lightning. NL Trigger its Evoke{!Upgrades!|>0= and passive} effect{!Upgrades!|>0=s}. NL Exhaust."
   },
   "${ModID}:BlockOn": {
     "NAME": "Block-On",

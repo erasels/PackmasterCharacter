@@ -1,13 +1,11 @@
 package thePackmaster.cards.lockonpack.special;
 
-import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Lightning;
-import thePackmaster.cardmodifiers.lockonpack.GlockOnModifier;
 import thePackmaster.cards.lockonpack.AbstractLockonCard;
-import thePackmaster.patches.hermitpack.EnumPatch;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -30,7 +28,14 @@ public class DC extends AbstractLockonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         Lightning orb = new Lightning();
         addToBot(new ChannelAction(orb));
-        if (upgraded) orb.onEndOfTurn();
-        orb.onEvoke();
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (!Wiz.adp().orbs.contains(orb)) return;
+                if (upgraded) orb.onEndOfTurn();
+                orb.onEvoke();
+            }
+        });
     }
 }
