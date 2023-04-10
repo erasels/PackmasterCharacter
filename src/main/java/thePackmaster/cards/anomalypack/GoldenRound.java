@@ -10,7 +10,7 @@ public class GoldenRound extends AbstractAnomalyCard {
     private static final int COST = 1;
 
     public GoldenRound() {
-        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
     }
 
     @Override

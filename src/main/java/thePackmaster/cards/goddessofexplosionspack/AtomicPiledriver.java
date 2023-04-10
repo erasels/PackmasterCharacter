@@ -32,7 +32,7 @@ public class AtomicPiledriver extends AbstractGoddessOfExplosionsCard {
 
 
     public AtomicPiledriver() {
-        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
 
         magicNumber = baseMagicNumber = MAGIC;

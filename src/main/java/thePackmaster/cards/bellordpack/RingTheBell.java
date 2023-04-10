@@ -2,6 +2,7 @@ package thePackmaster.cards.bellordpack;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,12 +10,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.actions.arcanapack.AllEnemyLoseHPAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.applyToSelf;
 import static thePackmaster.util.Wiz.atb;
 
 public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
@@ -31,7 +30,7 @@ public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
         if (MathUtils.randomBoolean())
             atb(new SFXAction("BELL"));
         atb(new AllEnemyLoseHPAction(p, magicNumber));
-        applyToSelf(new DrawCardNextTurnPower(p, 1));
+        atb(new DrawCardAction(1));
     }
 
     @Override

@@ -1,0 +1,48 @@
+{
+  "${ModID}:BunkerPower": {
+    "NAME": "Bunker",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, add #b1 #yGolf #yBall into your hand.",
+      "At the start of your next turn, add #b",
+      " #yGolf #yBalls into your hand."
+    ]
+  },
+  "${ModID}:ColorlessMasteryPower": {
+    "NAME": "Colorless Mastery",
+    "DESCRIPTIONS": [
+      "Whenever you play a Colorless card, gain #b",
+      " #yStrength."
+    ]
+  },
+  "${ModID}:LunchBoxPower": {
+    "NAME": "Lunch Box",
+    "DESCRIPTIONS": [
+      "Your next Colorless card is played twice this turn.",
+      "Your next #b",
+      " Colorless cards are played twice this turn."
+    ]
+  },
+  "${ModID}:MonasteryPower": {
+    "NAME": "Visiting a Monastery",
+    "DESCRIPTIONS": [
+      "At the start of your next #b3 turns, add #yMadness, #yPurity, and #yApotheosis into your hand.",
+      "At the start of your next #b2 turns, add #yPurity and #yApotheosis into your hand.",
+      "At the start of your next turn, add #yApotheosis into your hand."
+    ]
+  },
+  "${ModID}:PrismShardPower": {
+    "NAME": "Prism Shards",
+    "DESCRIPTIONS": [
+      "When you assemble #b3 #yShards, add ",
+      "+",
+      " into your hand."
+    ]
+  },
+  "${ModID}:GhostPower": {
+    "NAME": "Haunted",
+    "DESCRIPTIONS": [
+      "At the #rend of its turn, loses #b",
+      " HP."
+    ]
+  }
+}
