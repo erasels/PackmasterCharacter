@@ -23,13 +23,12 @@ public class AC extends AbstractLockonCard {
     @Override
     public void upp() {
         upgradeBlock(4);
+        cardsToPreview.upgrade();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.doBlk(block);
-        AbstractCard dc = new DC();
-        if (upgraded) dc.upgrade();
-        Wiz.makeInHand(dc);
+        Wiz.makeInHand(cardsToPreview.makeStatEquivalentCopy());
     }
 }
