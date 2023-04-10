@@ -15,6 +15,7 @@ BoardGamePack	None
 BulwarkPack	Exhaust
 CalamityPack	Debuffs
 ClawPack	Tokens
+ColorlessPack	Tokens
 ConjurerPack	Debuffs
 ContentCreatorPack	Orbs
 CoreSetPack	None
