@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.powers.LockOnPower;
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.FieldAccess;
+import thePackmaster.powers.lockonpack.LightningRodPower;
 import thePackmaster.powers.lockonpack.TunnelVisionPower;
 import thePackmaster.util.Wiz;
 
@@ -17,6 +18,8 @@ public class AdditiveLockOnPatch {
 
     public static int applyMultiLockOn(AbstractMonster m, int damage)
     {
+        if (!Wiz.adp().hasPower(LightningRodPower.POWER_ID)) return damage;
+        
         float damageModifier = 1.5F
                 + 0.25F
                 * (Wiz.getLogicalPowerAmount(m, LockOnPower.POWER_ID) - 1);
