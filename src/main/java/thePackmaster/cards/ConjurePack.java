@@ -1,19 +1,13 @@
 package thePackmaster.cards;
 
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.EasyModalChoiceAction;
-import thePackmaster.cards.strikepack.AbstractStrikePackCard;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.powers.ConjurePackPower;
-import thePackmaster.powers.strikepack.StrikeDummyJrPower;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
