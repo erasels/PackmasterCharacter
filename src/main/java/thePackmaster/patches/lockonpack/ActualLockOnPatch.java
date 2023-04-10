@@ -10,6 +10,7 @@ import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 import thePackmaster.powers.lockonpack.LightningRodPower;
+import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -22,7 +23,7 @@ public class ActualLockOnPatch {
     {
         if (originalTarget.hasPower(LightningRodPower.POWER_ID)) return originalTarget;
 
-        ArrayList<AbstractMonster> lockedList = AbstractDungeon.getMonsters().monsters.stream().
+        ArrayList<AbstractMonster> lockedList = Wiz.getEnemies().stream().
                 filter(m -> m.hasPower(LightningRodPower.POWER_ID)).collect(Collectors.toCollection(ArrayList::new));
 
         if (lockedList.size() == 0) return originalTarget;
