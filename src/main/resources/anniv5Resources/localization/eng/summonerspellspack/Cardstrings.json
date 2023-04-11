@@ -13,7 +13,7 @@
   },
   "${ModID}:ClutchTeleport": {
     "NAME": "Clutch Teleport",
-    "DESCRIPTION": "Put a random card from your draw pile, discard pile and exhaust pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Add !M! random cards from the Summoner Spells pack to your hand. They cost 0 this turn."
   },
   "${ModID}:DualHeal": {
     "NAME": "Dual Heal",
