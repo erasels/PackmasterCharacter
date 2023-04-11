@@ -21,14 +21,14 @@ public class HandyHaversack extends AbstractPackmasterRelic {
     @Override
     public void atBattleStart() {
         flash();
-        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToTop(new com.megacrit.cardcrawl.actions.common.DrawCardAction(1));
+        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        addToBot(new com.megacrit.cardcrawl.actions.common.DrawCardAction(1));
     }
 
     @Override
     public void atTurnStart() {
         if (this.firstTurn) {
-            addToTop(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
+            addToBot(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(1));
             this.firstTurn = false;
         }
     }

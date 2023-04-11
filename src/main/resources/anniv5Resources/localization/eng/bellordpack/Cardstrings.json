@@ -20,7 +20,7 @@
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",
-    "DESCRIPTION": "ALL enemies lose !M! HP. NL Next turn, draw 1 additional card. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+    "DESCRIPTION": "ALL enemies lose !M! HP. NL Draw 1 card. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
   },
   "${ModID}:TimeOut": {
     "NAME": "Time Out",
