@@ -22,7 +22,7 @@
   },
   "${ModID}:GlockOn": {
     "NAME": "Glock-On",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by Focus and Lock-On."
+    "DESCRIPTION": "Deal !D! damage."
   },
   "${ModID}:LocknLoad": {
     "NAME": "Lock'n'Load",
