@@ -18,6 +18,7 @@ public class BlueTearstone extends AbstractDarkSoulsCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {

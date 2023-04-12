@@ -22,7 +22,6 @@ public class DarkSoulsPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(MorionBlade.ID);
-        cards.add(EstusFlask.ID);
         cards.add(LifehuntScythe.ID);
         cards.add(Remedy.ID);
         cards.add(BlueTearstone.ID);

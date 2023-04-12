@@ -14,7 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class MorionBlade extends AbstractDarkSoulsCard{
     public final static String ID = makeID("MorionBlade");
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_DAMAGE = 2;
 
     public MorionBlade(){
@@ -23,6 +23,7 @@ public class MorionBlade extends AbstractDarkSoulsCard{
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
