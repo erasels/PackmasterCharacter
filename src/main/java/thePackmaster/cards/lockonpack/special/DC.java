@@ -15,7 +15,8 @@ public class DC extends AbstractLockonCard {
     public final static String ID = makeID(DC.class.getSimpleName());
 
     public DC() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE);
+        // cardID, cost, type, rarity, target,  color)
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE, CardColor.COLORLESS);
         selfRetain = true;
         exhaust = true;
     }
