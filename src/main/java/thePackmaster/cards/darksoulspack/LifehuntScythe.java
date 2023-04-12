@@ -13,8 +13,8 @@ public class LifehuntScythe extends AbstractDarkSoulsCard{
     public final static String ID = makeID("LifehuntScythe");
 
     private static final int DAMAGE = 25;
-    private static final int UPGRADE_DAMAGE = 7;
     private static final int MAGIC = 6;
+    private static final int UPGRADE_MAGIC = -1;
 
     public LifehuntScythe(){
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -24,11 +24,11 @@ public class LifehuntScythe extends AbstractDarkSoulsCard{
 
     public void use(AbstractPlayer p, AbstractMonster m){
         allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        Wiz.applyToSelf(new FrailPower(p, 2, false));
+        Wiz.applyToSelf(new FrailPower(p, magicNumber, false));
     }
 
     public void upp(){
-        upgradeDamage(UPGRADE_DAMAGE);
+        upgradeMagicNumber(UPGRADE_MAGIC);
     }
 
     @Override
