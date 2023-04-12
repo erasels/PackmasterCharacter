@@ -15,12 +15,12 @@ import java.util.ArrayList;
 
 public class ClutchTeleport extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("ClutchTeleport");
-    private static final int COST = 3;
+    private static final int COST = 1;
     private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 2;
+    private static final int UPG_MAGIC = 1;
 
     public ClutchTeleport() {
-        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         exhaust = true;
         magicNumber = baseMagicNumber = MAGIC;
     }
@@ -36,9 +36,14 @@ public class ClutchTeleport extends AbstractSummonerSpellsCard {
 
         for (int i = 0; i < this.magicNumber; i++) {
             AbstractCard c = SpireAnniversary5Mod.getRandomCardFromPack(new SummonerSpellsPack()).makeStatEquivalentCopy();
-            c.setCostForTurn(0);
+            if (hasSynergy())
+                c.setCostForTurn(0);
             addToBot(new MakeTempCardInHandAction(c, 1));
         }
+    }
 
+    @Override
+    public void triggerOnGlowCheck() {
+            this.glowColor = hasSynergy() ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 }
