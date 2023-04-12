@@ -1,11 +1,10 @@
 package thePackmaster.cards.darksoulspack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.red.Cleave;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.FrailPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -25,7 +24,7 @@ public class LifehuntScythe extends AbstractDarkSoulsCard{
 
     public void use(AbstractPlayer p, AbstractMonster m){
         allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        Wiz.applyToSelf(new VulnerablePower(p, 2, false));
+        Wiz.applyToSelf(new FrailPower(p, 2, false));
     }
 
     public void upp(){
