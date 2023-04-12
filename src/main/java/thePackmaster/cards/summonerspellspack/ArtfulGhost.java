@@ -10,8 +10,8 @@ public class ArtfulGhost extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("ArtfulGhost");
     private static final int COST = 1;
     private static final int BLOCK = 5;
+    private static final int UPG_BLOCK = 3;
     private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
 
     public ArtfulGhost() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -21,7 +21,7 @@ public class ArtfulGhost extends AbstractSummonerSpellsCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeBlock(UPG_BLOCK);
     }
 
     @Override
