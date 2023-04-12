@@ -22,13 +22,10 @@ public class DarkSoulsPack extends AbstractCardPack {
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(MorionBlade.ID);
-        cards.add(DungPie.ID);
         cards.add(EstusFlask.ID);
-        cards.add(GreenBlossom.ID);
         cards.add(LifehuntScythe.ID);
         cards.add(Remedy.ID);
         cards.add(BlueTearstone.ID);
-        cards.add(Bonfire.ID);
         cards.add(SmoughsHammer.ID);
         cards.add(EmbraceHollowing.ID);
         return cards;

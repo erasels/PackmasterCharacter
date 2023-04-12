@@ -3,17 +3,17 @@
     "NAME": "Morion Blade",
     "DESCRIPTION": "Deal !D! damage for each unique debuff you have."
   },
-  "${ModID}:DungPie": {
-    "NAME": "Dung Pie",
-    "DESCRIPTION": "Apply !M! Poison. NL Gain !${ModID}:m2! Poison."
+  "${ModID}:": {
+    "NAME": "",
+    "DESCRIPTION": ""
   },
-  "${ModID}:EstusFlask": {
-    "NAME": "Estus Flask",
-    "DESCRIPTION": "Gain !M! Temporary_HP."
+  "${ModID}:": {
+    "NAME": "",
+    "DESCRIPTION": ""
   },
-  "${ModID}:GreenBlossom": {
-    "NAME": "Green Blossom",
-    "DESCRIPTION": "At the start of your next !M! turns, gain [E] . NL Exhaust."
+  "${ModID}:": {
+    "NAME": "",
+    "DESCRIPTION": ""
   },
   "${ModID}:LifehuntScythe": {
     "NAME": "Lifehunt Scythe",
@@ -27,18 +27,17 @@
     "NAME": "Blue Tearstone",
     "DESCRIPTION": "Gain !B! Block for each unique debuff you have."
   },
-  "${ModID}:Bonfire": {
-    "NAME": "Bonfire",
-    "DESCRIPTION": "${ModID}:Unnate. NL Gain !M! Temporary_HP. NL ALL enemies heal !${ModID}:m2! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Temporary_HP. NL ALL enemies heal !${ModID}:m2! HP. NL Exhaust."
+  "${ModID}:": {
+    "NAME": "",
+    "DESCRIPTION": ""
   },
   "${ModID}:SmoughsHammer": {
     "NAME": "Smough's Hammer",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Weak, Frail and Vulnerable.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !M! Weak, Frail and Vulnerable. NL Gain 10 Temporary_HP."
   },
-  "${ModID}:EmbraceHollowing": {
-    "NAME": "Embrace Hollowing",
-    "DESCRIPTION": "Whenever a debuff is applied to you, gain !M! Temporary_HP."
+  "${ModID}:": {
+    "NAME": "",
+    "DESCRIPTION": ""
   }
 }

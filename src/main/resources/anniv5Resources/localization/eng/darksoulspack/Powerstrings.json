@@ -1,36 +1,13 @@
 {
-  "${ModID}:ReplenishmentPower": {
-    "NAME": "Replenishment",
-    "DESCRIPTIONS": [
-      "At the end of your turn, if you lost HP, gain #b",
-      " #yTemporary #yHP.",
-      " NL Has triggered this turn."
-    ]
-  },
-  "${ModID}:GreenBlossomPower": {
-    "NAME": "Green Blossom",
-    "DESCRIPTIONS": [
-      "At the start of your next turn, gain [E] .",
-      "At the start of your next #b",
-      " turns, gain [E] ."
-    ]
-  },
-  "${ModID}:KarmicJusticePower": {
-    "NAME": "Karmic Justice",
-    "DESCRIPTIONS": [
-      "Whenever you lose HP #b",
-      " times, deal #b20 damage to ALL enemies."
-    ]
-  },
   "${ModID}:EmbraceHollowingPower": {
     "NAME": "Embrace Hollowing",
     "DESCRIPTIONS": [
       "Whenever a debuff is applied to you, gain #b",
-      " #yTemporary #yHP."
+      " #yVigor."
     ]
   },
   "${ModID}:RemedyPower": {
-    "NAME": "Embrace Hollowing",
+    "NAME": "Remedy",
     "DESCRIPTIONS": [
       "Reduce the next #b",
       " debuffs you receive by #b",
