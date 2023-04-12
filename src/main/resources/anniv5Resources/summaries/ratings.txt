@@ -4,6 +4,7 @@ AlignmentPack	2	3	5	2	2
 AllForOnePack	4	2	3	4	3
 AnomalyPack	2	3	4	1	4
 ArcanaPack	3	3	3	3	2
+ArtificerPack	3	2	4	4	3
 BardInspirePack	3	3	4	2	3
 BasicsPack	3	3	2	4	2
 BatterPack	4	2	2	4	2
@@ -15,6 +16,7 @@ BrickPack   4   3   1   5   3
 BulwarkPack	2	5	1	4	4
 CalamityPack	4	2	2	3	4
 ClawPack	5	2	1	2	5
+ColorlessPack	4	3	3	2	4
 ConjurerPack	3	4	2	2	3
 ContentCreatorPack	2	2	4	2	4
 CoreSetPack	3	3	3	3	3
@@ -65,7 +67,7 @@ ReplicatorsPack	2	2	5	2	5
 RimworldPack	3	3	4	2	3
 RingOfPainPack	4	2	3	2	3
 RipPack	3	3	2	5	2
-SecretLevelPack	3	3	3	2	5
+SecretLevelPack	3	3	3	2	4
 SentinelPack	4	4	2	4	2
 SerpentinePack	4	1	3	2	4
 ShamanPack	4	3	2	1	4

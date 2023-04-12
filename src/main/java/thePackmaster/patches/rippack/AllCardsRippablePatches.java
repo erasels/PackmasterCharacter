@@ -41,6 +41,7 @@ import thePackmaster.vfx.rippack.ShowCardAndRipEffect;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 import static thePackmaster.cardmodifiers.rippack.RippableModifier.isRippable;
@@ -70,7 +71,7 @@ public class AllCardsRippablePatches {
 
     @SpirePatch(clz = AbstractCard.class, method = SpirePatch.CLASS)
     public static class AbstractCardFields {
-        public static SpireField<RipStatus> ripStatus = new SpireField(() -> RipStatus.WHOLE);
+        public static SpireField<RipStatus> ripStatus = new SpireField<>(() -> RipStatus.WHOLE);
     }
 
     @SpirePatch(clz = AbstractCard.class, method = "update")
@@ -131,10 +132,9 @@ public class AllCardsRippablePatches {
     //I'm sorry
     @SpirePatch(clz = AbstractPlayer.class, method = "useCard")
     public static class DontDoStuffWhenArtCardUnlessArtAttackWhoopsLol {
-
-        @SpirePrefixPatch()
-        public static SpireReturn Prefix(AbstractPlayer __instance, AbstractCard card, AbstractMonster monster, int energyOnUse) {
-            if (AllCardsRippablePatches.AbstractCardFields.ripStatus.get(card) == ART && card.cardID != ArtAttack.ID) {
+        @SpirePrefixPatch
+        public static SpireReturn<?> Prefix(AbstractPlayer __instance, AbstractCard card, AbstractMonster monster, int energyOnUse) {
+            if (AllCardsRippablePatches.AbstractCardFields.ripStatus.get(card) == ART && !Objects.equals(card.cardID, ArtAttack.ID)) {
                 AbstractDungeon.actionManager.addToBottom(new UseCardAction(card, monster));
                 if (!card.dontTriggerOnUseCard) {
                     __instance.hand.triggerOnOtherCardPlayed(card);
@@ -162,9 +162,9 @@ public class AllCardsRippablePatches {
     public static class MakeReflexNotHaveAUse {
 
         @SpirePrefixPatch
-        public static SpireReturn Prefix(AbstractCard __instance, AbstractPlayer p, AbstractMonster m) {
+        public static SpireReturn<?> Prefix(AbstractCard __instance, AbstractPlayer p, AbstractMonster m) {
             if(isTextCard(__instance)) {
-                return SpireReturn.Return(true);
+                return SpireReturn.Return();
             } else {
                 return SpireReturn.Continue();
             }
@@ -175,7 +175,7 @@ public class AllCardsRippablePatches {
     public static class MakeArtNormalityDoNothing {
 
         @SpirePrefixPatch
-        public static SpireReturn Prefix(Normality __instance, AbstractCard card) {
+        public static SpireReturn<Boolean> Prefix(Normality __instance, AbstractCard card) {
             if(isArtCard(__instance)) {
                 return SpireReturn.Return(true);
             } else {

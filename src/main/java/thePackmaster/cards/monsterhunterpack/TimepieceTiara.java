@@ -17,7 +17,7 @@ public class TimepieceTiara extends AbstractMonsterHunterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new TimePiecePower(p, 0), 0));
+        addToBot(new ApplyPowerAction(p, p, new TimePiecePower(p, 3), 3));
     }
 
     public void upp() {

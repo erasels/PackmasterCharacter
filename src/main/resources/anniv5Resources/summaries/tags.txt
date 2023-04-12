@@ -4,6 +4,7 @@ AlignmentPack	Exhaust,Discard
 AllForOnePack	None
 AnomalyPack	Exhaust,Discard
 ArcanaPack	None
+ArtificerPack	Discard
 BardInspirePack	None
 BasicsPack	None
 BatterPack	Attacks
@@ -15,6 +16,7 @@ BrickPack   None
 BulwarkPack	Exhaust
 CalamityPack	Debuffs
 ClawPack	Tokens
+ColorlessPack	Tokens
 ConjurerPack	Debuffs
 ContentCreatorPack	Orbs
 CoreSetPack	None
