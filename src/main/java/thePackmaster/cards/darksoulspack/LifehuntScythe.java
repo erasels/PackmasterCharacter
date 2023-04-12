@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.red.Cleave;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -13,7 +14,7 @@ public class LifehuntScythe extends AbstractDarkSoulsCard{
     public final static String ID = makeID("LifehuntScythe");
 
     private static final int DAMAGE = 25;
-    private static final int UPGRADE_DAMAGE = 5;
+    private static final int UPGRADE_DAMAGE = 7;
     private static final int MAGIC = 6;
 
     public LifehuntScythe(){
@@ -24,7 +25,7 @@ public class LifehuntScythe extends AbstractDarkSoulsCard{
 
     public void use(AbstractPlayer p, AbstractMonster m){
         allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        Wiz.atb(new LoseHPAction(p,p,magicNumber));
+        Wiz.applyToSelf(new VulnerablePower(p, 2, false));
     }
 
     public void upp(){

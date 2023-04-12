@@ -1,10 +1,11 @@
 package thePackmaster.cards.darksoulspack;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnLoseTempHpPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.red.InfernalBlade;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import thePackmaster.util.Wiz;
 
 import static com.megacrit.cardcrawl.actions.GameActionManager.damageReceivedThisTurn;
 import static com.megacrit.cardcrawl.actions.GameActionManager.playerHpLastTurn;
@@ -21,20 +22,17 @@ public class MorionBlade extends AbstractDarkSoulsCard{
         baseDamage = damage = DAMAGE;
     }
 
-    ///NEED TO MAKE TRIGGER IN ENEMY TURN AS WELL
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                Wiz.p().powers.stream()
+                        .filter(p -> p.type == AbstractPower.PowerType.DEBUFF)
+                        .forEach(p -> dmg(m, AttackEffect.SLASH_DIAGONAL));
+                isDone = true;
+            }
+        });
 
-    public boolean wasHPLost(AbstractPlayer p){
-        return damageReceivedThisTurn > 0 || playerHpLastTurn > p.currentHealth;
-    }
-
-    public void use(AbstractPlayer p, AbstractMonster m){
-        if(wasHPLost(p)){
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        }
-        else {
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        }
     }
 
     public void upp(){

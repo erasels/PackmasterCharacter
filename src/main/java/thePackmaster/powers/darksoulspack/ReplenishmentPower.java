@@ -1,21 +1,24 @@
 package thePackmaster.powers.darksoulspack;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnLoseTempHpPower;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ReplenishmentPower extends AbstractPackmasterPower {
+public class ReplenishmentPower extends AbstractPackmasterPower implements OnLoseTempHpPower {
+
+    //DEPRECATED - NOT PLANNED FOR USE
+
     public static final String POWER_ID = makeID("ReplenishmentPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private boolean apply = false;
+    private boolean triggeredThisTurn = false;
 
 
     public ReplenishmentPower(AbstractCreature owner, int amount){
@@ -24,23 +27,37 @@ public class ReplenishmentPower extends AbstractPackmasterPower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        if (apply) {
+        if (triggeredThisTurn) {
             Wiz.atb(new AddTemporaryHPAction(owner, owner, amount));
-            apply = false;
+            triggeredThisTurn = false;
+            updateDescription();
         }
     }
 
-    //should trigger on temp HP loss but DOESNT
     @Override
     public void wasHPLost(DamageInfo info, int damageAmount) {
-        if (!apply && info.owner == owner) {
+        if (!triggeredThisTurn && info.owner == owner) {
             this.flash();
-            apply = true;
+            triggeredThisTurn = true;
+            updateDescription();
         }
+    }
+
+    public int onLoseTempHp(DamageInfo info, int amount){
+        if (!triggeredThisTurn && info.owner == owner) {
+            this.flash();
+            triggeredThisTurn = true;
+            updateDescription();
+        }
+        return info.output;
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (triggeredThisTurn) {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[2];
+        } else {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        }
     }
 }

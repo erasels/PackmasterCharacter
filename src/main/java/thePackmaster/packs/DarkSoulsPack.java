@@ -26,8 +26,11 @@ public class DarkSoulsPack extends AbstractCardPack {
         cards.add(EstusFlask.ID);
         cards.add(GreenBlossom.ID);
         cards.add(LifehuntScythe.ID);
-        cards.add(ChaosBlade.ID);
-        cards.add(Replenishment.ID);
+        cards.add(Remedy.ID);
+        cards.add(BlueTearstone.ID);
+        cards.add(Bonfire.ID);
+        cards.add(SmoughsHammer.ID);
+        cards.add(EmbraceHollowing.ID);
         return cards;
     }
 }

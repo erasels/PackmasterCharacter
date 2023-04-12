@@ -8,6 +8,9 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Replenishment extends AbstractDarkSoulsCard{
+
+    //DEPRECATED - NOT PLANNED FOR USE
+
     public final static String ID = makeID("Replenishment");
 
     private static final int MAGIC = 4;

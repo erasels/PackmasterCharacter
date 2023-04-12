@@ -16,6 +16,7 @@ public class GreenBlossom extends AbstractDarkSoulsCard{
     public GreenBlossom(){
         super(ID,1,CardType.SKILL,CardRarity.UNCOMMON,CardTarget.SELF);
         baseMagicNumber=magicNumber=MAGIC;
+        exhaust=true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m){
