@@ -26,6 +26,7 @@ public class ControlledBurn extends AbstractFueledCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new ControlledBurnPower(1));
+        ControlledBurnPower power = new ControlledBurnPower(1);
     }
 
     @Override

@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -20,7 +19,9 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.powers.boardgamepack.AdvantagePower;
 import thePackmaster.powers.boardgamepack.DicePower;
+import thePackmaster.powers.boardgamepack.OneTimeAdvantagePower;
 import thePackmaster.powers.summonspack.JinxPower;
 import thePackmaster.util.Wiz;
 
@@ -129,28 +130,13 @@ public class Leprechaun extends CustomOrb {
 
     @Override
     public void onStartOfTurn() {
+        int diceSum = 0;
         for (int die : dice)
-            applyToSelf(new DicePower(adp(), die, false));
-        if (modifier == -1) {
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    AbstractPower pow = adp().getPower(DicePower.POWER_ID);
-                    if (pow != null)
-                        att(new ReducePowerAction(adp(), adp(), pow, 1));
-                    isDone = true;
-                }
-            });
-        } else if (modifier == 1)
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    AbstractPower pow = adp().getPower(DicePower.POWER_ID);
-                    if (pow != null)
-                        pow.amount++;
-                    isDone = true;
-                }
-            });
+            diceSum += roll(die);
+        diceSum += modifier;
+
+        if (diceSum > 0)
+            applyToSelf(new DicePower(adp(), diceSum, false));
     }
 
     @Override
@@ -247,6 +233,30 @@ public class Leprechaun extends CustomOrb {
                 }
             }
         });
+    }
+
+    public static int roll(int sides) {
+        int curRoll = 0;
+        int advantage = getAdvantage();
+        for(int roll = 0; roll <= advantage; roll++)
+        {
+            int newRoll = AbstractDungeon.cardRandomRng.random(sides - 1) + 1;
+            //ADD VFX HERE
+            if(newRoll > curRoll)
+                curRoll = newRoll;
+        }
+        return curRoll;
+    }
+
+    private static int getAdvantage() {
+        //ADD ADVANTAGE CHECKS HERE
+        int adv = 0;
+        if(adp().hasPower(OneTimeAdvantagePower.POWER_ID))
+            adv += adp().getPower(OneTimeAdvantagePower.POWER_ID).amount;
+
+        if(adp().hasPower(AdvantagePower.POWER_ID))
+            adv += adp().getPower(AdvantagePower.POWER_ID).amount;
+        return adv;
     }
 
     @Override

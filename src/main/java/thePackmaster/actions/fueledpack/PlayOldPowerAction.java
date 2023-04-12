@@ -25,7 +25,9 @@ public class PlayOldPowerAction extends AbstractGameAction {
     public void update() {
         if (duration == startDuration) {
             CardGroup powerGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-            powerGroup.group.addAll(SpireAnniversary5Mod.powerList);
+            for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat)
+                if (c.type == AbstractCard.CardType.POWER)
+                    powerGroup.group.add(c);
 
             if (powerGroup.size() == 0) {
                 isDone = true;

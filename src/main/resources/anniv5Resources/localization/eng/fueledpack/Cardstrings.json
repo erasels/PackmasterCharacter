@@ -1,17 +1,16 @@
 {
   "${ModID}:BurningStrike": {
     "NAME": "Burning Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
   },
   "${ModID}:IridiumShield": {
     "NAME": "Iridium Shield",
-    "DESCRIPTION": "Gain !B! Block. NL You may Exhaust !M! card.",
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust up to !M! card.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust up to !M! cards."
   },
-  "${ModID}:FlameBlastMkTwo": {
-    "NAME": "Flame Blast Mk 2",
-    "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage.",
-    "FLAVOR": "Burninating the spire."
+  "${ModID}:Burninate": {
+    "NAME": "Burninate",
+    "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage."
   },
   "${ModID}:Conflaguration": {
     "NAME": "Conflaguration",
@@ -19,25 +18,23 @@
   },
   "${ModID}:FlamingLeap": {
     "NAME": "Flaming Leap",
-    "DESCRIPTION": "${ModID}:Consume a card to Gain [E] and draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "${ModID}:Consume a card to gain [E] and draw !M! cards. NL Exhaust."
   },
-  "${ModID}:InfernoMkTwo": {
-    "NAME": "Inferno Mk 2",
-    "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage and apply !M! ${ModID}:Ignite to ALL enemies.",
-    "FLAVOR": "The original version sets you on fire.  0/10 would not cast again."
+  "${ModID}:InfernalBlaze": {
+    "NAME": "Infernal Blaze",
+    "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage and apply !M! ${ModID}:Ignite to ALL enemies."
   },
   "${ModID}:PlayingWithFire": {
     "NAME": "Playing With Fire",
-    "DESCRIPTION": "At the start of your turn roll !M! ${ModID}:D8. NL Gain 1 ${ModID}:Ignite for each 7 or 8 you roll."
+    "DESCRIPTION": "At the start of your turn roll !M! ${ModID}:D6. NL Gain 1 ${ModID}:Ignite for each 5 or 6 you roll."
   },
   "${ModID}:PhoenixHeart": {
     "NAME": "Phoenix Heart",
-    "DESCRIPTION": "Exhaust all *Hot *Ash in your hand and add a random card into your hand for each."
+    "DESCRIPTION": "Exhaust all *Hot *Ash in your hand. NL Add a random card into your hand for each Exhausted card."
   },
   "${ModID}:BurnBright": {
     "NAME": "Burn Bright",
-    "DESCRIPTION": "${ModID}:Consume a card to play a Power you've already played this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Consume a card to play a Power you've already played this combat."
+    "DESCRIPTION": "${ModID}:Consume a card to play a Power you've already played this combat. NL Exhaust."
   },
   "${ModID}:ControlledBurn": {
     "NAME": "Controlled Burn",
@@ -46,6 +43,6 @@
   },
   "${ModID}:HotAsh": {
     "NAME": "Hot Ash",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL Lose !M! HP."
   }
 }

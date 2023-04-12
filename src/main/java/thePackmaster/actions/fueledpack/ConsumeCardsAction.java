@@ -88,8 +88,6 @@ public class ConsumeCardsAction extends AbstractGameAction {
     private static AbstractCard getAshesCard(AbstractCard oldCard) {
         if (oldCard instanceof HotAsh)
             return null;
-        else if (oldCard instanceof BurningStrike)
-            return oldCard.makeCopy();
         else if (oldCard.type == AbstractCard.CardType.ATTACK
                 || oldCard.type == AbstractCard.CardType.SKILL
                 || oldCard.type == AbstractCard.CardType.POWER)

@@ -17,12 +17,14 @@ public class BurnBright extends AbstractFueledCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
 
     public BurnBright() {
         super(ID, COST, TYPE, RARITY, TARGET);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         exhaust = true;
+        cardsToPreview = new HotAsh();
     }
 
     @Override
@@ -32,6 +34,6 @@ public class BurnBright extends AbstractFueledCard {
 
     @Override
     public void upp() {
-        exhaust = false;
+        upgradeBaseCost(UPGRADED_COST);
     }
 }

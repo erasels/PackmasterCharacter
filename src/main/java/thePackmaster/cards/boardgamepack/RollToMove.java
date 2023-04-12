@@ -1,11 +1,11 @@
 package thePackmaster.cards.boardgamepack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.boardgamepack.DicePower;
+import thePackmaster.actions.boardgamepack.RollAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
 public class RollToMove extends AbstractBoardCard {
     public final static String ID = makeID(RollToMove.class.getSimpleName());
@@ -19,8 +19,7 @@ public class RollToMove extends AbstractBoardCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        addToBot(new ApplyPowerAction(p, p, new DicePower(p, DICE), DICE));
-        addToBot(new ApplyPowerAction(p, p, new DicePower(p, DICE), DICE));
+        atb(new RollAction(DICE, 2));
     }
 
     public void upp() {
