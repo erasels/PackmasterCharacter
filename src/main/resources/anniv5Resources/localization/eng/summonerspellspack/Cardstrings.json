@@ -1,11 +1,11 @@
 {
   "${ModID}:SmitingStrike": {
     "NAME": "Smiting Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If target is a minion, kill it instead."
+    "DESCRIPTION": "Deal !D! damage. NL If target is a minion, kill it instead. NL Persist !stslib:persist!."
   },
   "${ModID}:GrievousIgnite": {
     "NAME": "Grievous Ignite",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Ignite. NL Whenever this enemy is healed, it loses that much HP instead."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Ignite. NL Whenever target is healed, it loses that much HP instead."
   },
   "${ModID}:WitheringExhaust": {
     "NAME": "Withering Exhaust",
@@ -13,7 +13,7 @@
   },
   "${ModID}:ClutchTeleport": {
     "NAME": "Clutch Teleport",
-    "DESCRIPTION": "Add !M! random cards from the Summoner Spells pack to your hand. They cost 0 this turn."
+    "DESCRIPTION": "Add !M! random Summoner Spells pack cards to your hand. NL Synergy: They cost 0 this turn. NL Exhaust."
   },
   "${ModID}:DualHeal": {
     "NAME": "Dual Heal",
