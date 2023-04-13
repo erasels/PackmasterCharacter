@@ -1,7 +1,7 @@
 {
   "${ModID}:Manifest": {
     "NAME": "Manifest",
-    "DESCRIPTION": "Deal !D! damage. NL Play a 1 or 0 cost card from your discard pile.",
+    "DESCRIPTION": "Deal !D! damage. NL Play a 0 or 1 cost card from your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "Choose a card to play."
     ]
