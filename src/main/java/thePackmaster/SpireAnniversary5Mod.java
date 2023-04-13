@@ -52,6 +52,7 @@ import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
+import thePackmaster.cards.colorlesspack.GolfBall;
 import thePackmaster.cards.evenoddpack.SwordAndBoard;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.cards.transmutationpack.DimensionalIcicles;

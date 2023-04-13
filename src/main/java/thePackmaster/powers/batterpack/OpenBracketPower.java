@@ -13,7 +13,7 @@ public class OpenBracketPower extends AbstractPackmasterPower{
 
     public static final String POWER_ID = makeID("OpenBracketPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public OpenBracketPower(final AbstractCreature owner, final int amount) {
         super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, -1);

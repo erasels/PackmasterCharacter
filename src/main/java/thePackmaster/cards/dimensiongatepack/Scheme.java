@@ -1,10 +1,8 @@
 package thePackmaster.cards.dimensiongatepack;
 
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGrift;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardVault;
 import thePackmaster.powers.dimensiongate2pack.SchemeNextTurnPower;
 import thePackmaster.util.Wiz;

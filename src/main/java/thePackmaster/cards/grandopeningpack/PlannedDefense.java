@@ -35,7 +35,7 @@ public class PlannedDefense extends AbstractGrandOpeningCard {
             }
         }
         if (innatePlayed) {
-            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) p, (AbstractCreature) p, (AbstractPower) new NextTurnBlockPower((AbstractCreature) p, this.block/2), this.block/2));
+            addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block/2), this.block/2));
         }
     }
 

@@ -30,7 +30,7 @@ public class ChaosVial extends AbstractWomanInBlueCard {
         for (int i = 0; i < 3; ++i) {
             this.addToBot(new AbstractGameAction() {
                 public void update() {
-                    this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng), false));
+                    this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
                     this.isDone = true;
                 }
             });
