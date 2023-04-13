@@ -16,7 +16,7 @@
   },
   "${ModID}:Ouroboros": {
     "NAME": "Ouroboros",
-    "DESCRIPTION": "The first time you fully block any source of damage each turn, gain 1 Strength.",
+    "DESCRIPTION": "The first time you fully block\u200b any source of damage each turn, gain 1 Strength.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you fully block any source of damage each turn, gain 1 Strength."
   },
   "${ModID}:Corset": {
