@@ -1,43 +1,43 @@
 {
   "${ModID}:AC": {
-    "NAME": "交流电",
-    "DESCRIPTION": "{@@}获得 !B! 点 格挡。 NL 获得一张 *直流电 {!Upgrades!|>0=*+} 。"
+    "NAME": "AC",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Add a *DC{!Upgrades!|>0=+} to your hand."
   },
   "${ModID}:DC": {
-    "NAME": "直流电",
-    "DESCRIPTION": "{@@}保留 。 NL 生成 一个 闪电 充能球， NL 触发其 激发 {!Upgrades!|>0=与被动} 效果。 NL 消耗 。"
+    "NAME": "DC",
+    "DESCRIPTION": "{@@}Retain. NL Channel a Lightning. NL Trigger its Evoke{!Upgrades!|>0= and passive} effect{!Upgrades!|>0=s}. NL Exhaust."
   },
   "${ModID}:BlockOn": {
-    "NAME": "锁挡",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合受到攻击时， NL 反弹 !M! 层 ${ModID}:锁定 。"
+    "NAME": "Block-On",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! Lock-On back."
   },
   "${ModID}:Bruteforce": {
-    "NAME": "蛮力",
-    "DESCRIPTION": "{@@}激发 最右侧 闪电 充能球 !M! 次 ，本次造成群体伤害。 {!Upgrades!|0= NL 消耗 。}"
+    "NAME": "Bruteforce",
+    "DESCRIPTION": "{@@}Evoke your rightmost Lightning !M! times hitting ALL enemies{!Upgrades!|0= NL Exhaust.|>0=.}"
   },
   "${ModID}:LightsOut": {
-    "NAME": "灯灭",
-    "DESCRIPTION": "将所有 闪电 变为 黑暗 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "激发 所有 闪电 充能球， NL 将其变为 黑暗 。 NL 消耗 。"
+    "NAME": "Lights Out",
+    "DESCRIPTION": "Replace your Lightning with Dark. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Evoke your Lightning and Channel Dark for each Lightning Evoked. NL Exhaust."
   },
   "${ModID}:GlockOn": {
-    "NAME": "开火",
-    "DESCRIPTION": "造成 !D! 点伤害。"
+    "NAME": "Glock-On",
+    "DESCRIPTION": "Deal !D! damage."
   },
   "${ModID}:LocknLoad": {
-    "NAME": "上膛",
-    "DESCRIPTION": "给予 !M! 层 ${ModID}:锁定。 NL 生成 !M! 个 闪电 充能球。"
+    "NAME": "Lock'n'Load",
+    "DESCRIPTION": "Apply !M! Lock-On. NL Channel !M! Lightning."
   },
   "${ModID}:Reiji": {
-    "NAME": "雷激",
-    "DESCRIPTION": "{@@}固有 。 NL 给予 !${ModID}:m2! 层 ${ModID}:锁定 。{!M!|>0= NL 若目标已被锁定， NL 获得 !M! 点 集中 。} NL 消耗 。"
+    "NAME": "Reiji",
+    "DESCRIPTION": "{@@}Innate. NL Apply !${ModID}:m2! Lock-On.{!M!|>0= NL If the target already had Lock-On, gain !M! Focus.} NL Exhaust."
   },
   "${ModID}:LightningRod": {
-    "NAME": "引雷针",
-    "DESCRIPTION": "!M! 回合内， NL 闪电 必定 攻击目标。 NL 生成一个 闪电 充能球。"
+    "NAME": "Lightning Rod",
+    "DESCRIPTION": "{@@}Lightning targets this enemy for !M! turn{!M!|>1=s}. NL Channel a Lightning."
   },
   "${ModID}:TunnelVision": {
-    "NAME": "隧洞思维",
-    "DESCRIPTION": "{@@}{!Upgrades!|>0=给予 !M! 层群体 ${ModID}:锁定 。 NL } 每层 ${ModID}:锁定 额外使敌人受到的充能球伤害提高25%。"
+    "NAME": "Tunnel Vision",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Apply !M! Lock-On to ALL enemies. NL }Lock-On further increases Orb damage by 25% per additional Lock-On."
   }
 }
