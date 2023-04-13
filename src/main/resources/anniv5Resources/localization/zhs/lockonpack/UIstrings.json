@@ -1,8 +1,8 @@
 {
   "${ModID}:LockonPack": {
     "TEXT": [
-      "Shock'n'Lock",
-      "Lock onto your enemies and unleash the Unlimited Power of lightning!",
+      "雷霆定位",
+      "锁定你的敌人来发挥闪电的潜力！",
       "Jedi"
     ]
   },
@@ -14,7 +14,7 @@
   },
   "${ModID}:GlockOnModifier": {
     "TEXT": [
-      "%s NL Affected by Focus and Lock-On."
+      "%s NL 伤害受 集中 与 ${ModID}:锁定 加成。"
     ]
   }
 }
