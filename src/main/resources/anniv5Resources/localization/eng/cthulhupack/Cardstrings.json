@@ -14,7 +14,7 @@
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
     "DESCRIPTION": "Lose !M! ${ModID}:Sanity. NL Add a random Attack that costs 2 to your hand.",
-    "UPGRADE_DESCRIPTION": "Lose !M! ${ModID}:Sanity. NL Add a random *Upgraded Attack that costs 2 to your hand."
+    "UPGRADE_DESCRIPTION": "Lose !M! ${ModID}:Sanity. NL Add a random Upgraded Attack that costs 2 to your hand."
   },
   "${ModID}:FamilialCurse": {
     "NAME": "Familial Curse",
