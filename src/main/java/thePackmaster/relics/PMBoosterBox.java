@@ -167,9 +167,9 @@ public class PMBoosterBox extends AbstractPackmasterRelic implements CustomSavab
     private static final String REWARDS_STAT = "rewards";
 
     public String getStatsDescription() {
-        AbstractCardPack pack1 = SpireAnniversary5Mod.packsByID.getOrDefault((String)stats.get(PACK1_STAT), null);
-        AbstractCardPack pack2 = SpireAnniversary5Mod.packsByID.getOrDefault((String)stats.get(PACK2_STAT), null);
-        AbstractCardPack pack3 = SpireAnniversary5Mod.packsByID.getOrDefault((String)stats.get(PACK3_STAT), null);
+        AbstractCardPack pack1 = SpireAnniversary5Mod.packsByID.getOrDefault(stats.get(PACK1_STAT), null);
+        AbstractCardPack pack2 = SpireAnniversary5Mod.packsByID.getOrDefault(stats.get(PACK2_STAT), null);
+        AbstractCardPack pack3 = SpireAnniversary5Mod.packsByID.getOrDefault(stats.get(PACK3_STAT), null);
         String rewards = stats.get(REWARDS_STAT) + "";
         return pack1 != null && pack2 != null && pack3 != null ? DESCRIPTIONS[3].replace("{0}", pack1.name).replace("{1}", pack2.name).replace("{2}", pack3.name).replace("{3}", rewards) : "";
     }

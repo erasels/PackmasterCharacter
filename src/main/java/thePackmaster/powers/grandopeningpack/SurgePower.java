@@ -49,13 +49,13 @@ public class SurgePower extends AbstractPackmasterPower {
             AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
             this.amount--;
             if (this.amount == 0)
-                addToTop((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, SurgePower.POWER_ID));
+                addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, SurgePower.POWER_ID));
         }
         updateDescription();
     }
 
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer)
-            addToBot((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, SurgePower.POWER_ID));
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, SurgePower.POWER_ID));
     }
 }
