@@ -29,7 +29,7 @@
   },
   "${ModID}:MantisStrike": {
     "NAME": "Mantis Strike",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat whenever you fully block a source of damage this turn."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat whenever you fully block​\u200b a source of damage this turn."
   },
   "${ModID}:RestorationDetonation": {
     "NAME": "R. Detonation",

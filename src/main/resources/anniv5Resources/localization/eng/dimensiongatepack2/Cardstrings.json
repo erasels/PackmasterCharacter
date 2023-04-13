@@ -1,7 +1,7 @@
 {
   "${ModID}:ArsenalGear": {
     "NAME": "Arsenal Gear",
-    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare to your hand. It costs 1 less."
+    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare to your hand. It costs 1 less this combat."
   },
   "${ModID}:ConjureBarrage": {
     "NAME": "Conjure Barrage",
@@ -18,7 +18,7 @@
   },
   "${ModID}:Daggerstorm": {
     "NAME": "Daggerstorm",
-    "DESCRIPTION": "When you create a *non-Shiv, create and play a *Shiv on a random target."
+    "DESCRIPTION": "When you create a *non-Shiv card, create and play a *Shiv on a random target."
   },
   "${ModID}:FlamingGrasp": {
     "NAME": "Flaming Grasp",

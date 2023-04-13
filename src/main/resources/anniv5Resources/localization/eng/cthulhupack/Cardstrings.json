@@ -5,11 +5,11 @@
   },
   "${ModID}:NamelessMist": {
     "NAME": "Nameless Mist",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Flurry: Gain !M! Temporary HP."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Flurry: Gain !M! Temporary_HP."
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
-    "DESCRIPTION": "Deal !D! damage to a random enemy and lose !M! ${ModID}:Sanity. NL If this costs 0, it hits twice."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Lose !M! ${ModID}:Sanity. NL If this costs 0, it hits twice."
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
@@ -36,7 +36,7 @@
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "R'lyeh Fhtagn",
-    "DESCRIPTION": "Go to sleep (end your turn). Next turn, gain !M! Temporary HP, gain NL [E] [E] [E] , and enter ${ModID}:Nightmare. Exhaust."
+    "DESCRIPTION": "Go to sleep (end your turn). Next turn, gain !M! Temporary_HP, gain NL [E] [E] [E] , and enter ${ModID}:Nightmare. Exhaust."
   },
   "${ModID}:StarSpawn": {
     "NAME": "Star Spawn",
