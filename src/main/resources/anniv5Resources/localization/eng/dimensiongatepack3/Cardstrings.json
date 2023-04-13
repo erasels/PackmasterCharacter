@@ -16,8 +16,8 @@
   },
   "${ModID}:Ouroboros": {
     "NAME": "Ouroboros",
-    "DESCRIPTION": "At the end of each turn, if you fully blocked any source of damage, gain 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the end of each turn, if you fully blocked any source of damage, gain 1 Strength."
+    "DESCRIPTION": "The first time you fully block any source of damage each turn, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you fully block any source of damage each turn, gain 1 Strength."
   },
   "${ModID}:Corset": {
     "NAME": "Corset",
@@ -46,7 +46,7 @@
   },
   "${ModID}:SpreadingSpores": {
     "NAME": "Spreading Spores",
-    "DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Ablation.",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL Gain !M! *Ablation. NL Shuffle a copy of this into your draw pile.",
     "UPGRADE_DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Ablation. NL Shuffle a copy of this into your draw pile."
   }
 }

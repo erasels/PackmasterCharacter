@@ -16,8 +16,8 @@ public class Inferno extends AbstractDimensionalCardTrain {
 
     public Inferno() {
         super(ID, 1, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ALL_ENEMY);
-        baseDamage = 10;
-        baseMagicNumber = magicNumber = 5;
+        baseDamage = 8;
+        baseMagicNumber = magicNumber = 4;
         isMultiDamage = true;
         cardsToPreview = new Burn();
     }

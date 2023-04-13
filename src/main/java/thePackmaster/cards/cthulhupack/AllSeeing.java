@@ -21,14 +21,11 @@ public class AllSeeing extends AbstractCthulhuCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) {
-            Wiz.applyToSelf(new AllSeeingPowerTriggerOnCard(p, magicNumber));
-        } else {
-            Wiz.applyToSelf(new AllSeeingPowerTriggerOnTurn(p, magicNumber));
-        }
         Wiz.applyToSelf(new AllSeeingPower(p, magicNumber));
+        Wiz.applyToSelf(new AllSeeingPowerTriggerOnCard(p, magicNumber));
     }
 
     public void upp() {
+        upgradeMagicNumber(1);
     }
 }

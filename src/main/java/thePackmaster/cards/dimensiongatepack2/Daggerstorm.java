@@ -1,5 +1,6 @@
 package thePackmaster.cards.dimensiongatepack2;
 
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardRoguebook;
@@ -14,6 +15,7 @@ public class Daggerstorm extends AbstractDimensionalCardRoguebook {
 
     public Daggerstorm() {
         super(ID, 3, CardRarity.RARE, CardType.POWER, CardTarget.SELF);
+        cardsToPreview = new Shiv();
     }
 
 

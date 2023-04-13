@@ -1,5 +1,6 @@
 package thePackmaster.powers.cthulhupack;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.NeutralPowertypePatch;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -25,7 +26,7 @@ public class SanityPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public SanityPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, amount);
+        super(POWER_ID, NAME, NeutralPowertypePatch.NEUTRAL, false, owner, amount);
         canGoNegative = true;
     }
 
@@ -38,6 +39,15 @@ public class SanityPower extends AbstractPackmasterPower {
             this.amount -= 1;
             updateDescription();
             AbstractDungeon.onModifyPower();
+        }
+    }
+
+    @Override
+    public void onInitialApplication() {
+        while (amount <= -5) {
+            amount += 5;
+            flash();
+            Wiz.atb(new MakeTempCardInHandAction(new Lunacy()));
         }
     }
 

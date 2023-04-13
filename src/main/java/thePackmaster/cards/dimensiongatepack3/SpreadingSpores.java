@@ -23,6 +23,7 @@ public class SpreadingSpores extends AbstractDimensionalCardTrain {
     public SpreadingSpores() {
         super(ID, 1, CardRarity.UNCOMMON, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        isEthereal = true;
     }
 
     @Override
@@ -37,9 +38,10 @@ public class SpreadingSpores extends AbstractDimensionalCardTrain {
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.applyToSelf(new ThornsPower(p, magicNumber));
         Wiz.applyToSelf(new TempHPRegenPower(p, magicNumber));
-        if (upgraded) Wiz.atb(new MakeTempCardInDrawPileAction(this.makeStatEquivalentCopy(), 1, true, true));
+        Wiz.atb(new MakeTempCardInDrawPileAction(this.makeStatEquivalentCopy(), 1, true, true));
     }
 
     public void upp() {
+        isEthereal = false;
     }
 }

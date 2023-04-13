@@ -17,8 +17,7 @@ public class FlamePillar extends AbstractDimensionalCardGordian {
         super(ID, 0, CardRarity.SPECIAL, CardType.SKILL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseMagicNumber = magicNumber = 3;
         exhaust = true;
-        
-        cardsToPreview = new Channel();
+
     }
 
 
