@@ -21,7 +21,6 @@ public class MantisStrikePower extends AbstractPackmasterPower {
     public MantisStrikePower(AbstractCreature owner, int damageAmount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, damageAmount);
 
-        updateDescription();
     }
 
     @Override
