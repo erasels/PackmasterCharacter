@@ -24,7 +24,7 @@ public class FlailingTendril extends AbstractCthulhuCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractMonster m2 = Wiz.getRandomEnemy();
         dmg(m2, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        if (freeToPlayOnce || costForTurn == 0 || cost == 0) {
+        if (freeToPlay() || costForTurn == 0 || cost == 0) {
             m2 = Wiz.getRandomEnemy();
             dmg(m2, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         }
