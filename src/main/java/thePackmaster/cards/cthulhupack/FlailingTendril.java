@@ -34,7 +34,7 @@ public class FlailingTendril extends AbstractCthulhuCard {
 
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractPackmasterCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if (freeToPlay()) {
+        if (freeToPlay() || costForTurn == 0 || cost == 0) {
             this.glowColor = AbstractPackmasterCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
     }
