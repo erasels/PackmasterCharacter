@@ -28,7 +28,7 @@ public class Cross extends AbstractGrandOpeningCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (abstractMonster != null)
-            addToBot((AbstractGameAction)new VFXAction(new ClashEffect(abstractMonster.hb.cX, abstractMonster.hb.cY), 0.1F));
+            addToBot(new VFXAction(new ClashEffect(abstractMonster.hb.cX, abstractMonster.hb.cY), 0.1F));
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
         Wiz.applyToSelf(new CrossPower(abstractPlayer, 1));
