@@ -22,8 +22,8 @@
   },
   "${ModID}:ManifestMeal": {
     "NAME": "进餐展示",
-    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 将一张 *食物 加入抽牌堆。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害X次。 NL 将一张 *食物+ 加入抽牌堆。"
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 将 *食物 加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害X次。 NL 将 *食物+ 加入抽牌堆。"
   },
   "${ModID}:Food": {
     "NAME": "食物",

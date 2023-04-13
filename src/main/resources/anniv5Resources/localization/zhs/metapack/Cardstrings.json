@@ -19,11 +19,11 @@
   },
   "${ModID}:Diehard": {
     "NAME": "宁死不屈",
-    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL 下回合，获得1层 虚弱 与 脆弱 。"
+    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL 下回合， NL 获得1层 虚弱 与 脆弱 。"
   },
   "${ModID}:EldritchBlast": {
     "NAME": "怪异冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 打出能力牌时， NL 本牌从弃牌堆返回手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出能力牌时， NL 本牌从弃牌堆返回手牌。"
   },
   "${ModID}:DeathWish": {
     "NAME": "死亡愿望",
