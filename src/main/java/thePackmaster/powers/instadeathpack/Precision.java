@@ -19,7 +19,7 @@ public class Precision extends AbstractPackmasterPower {
 
     public Precision(final AbstractCreature owner, int amount)
     {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
