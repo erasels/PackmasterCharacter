@@ -5,7 +5,7 @@
   },
   "${ModID}:NamelessMist": {
     "NAME": "Nameless Mist",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Flurry: Gain !M! Temporary HP."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Flurry: Gain !M! Temporary_HP."
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
