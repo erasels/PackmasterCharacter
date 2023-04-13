@@ -12,7 +12,7 @@
   },
   "${ModID}:Minniegun": {
     "NAME": "Minniegun",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Put a *Jam in your discard pile."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Shuffle a *Jam into your draw pile."
   },
   "${ModID}:Ouroboros": {
     "NAME": "Ouroboros",
