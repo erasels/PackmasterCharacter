@@ -10,7 +10,7 @@
     "NAME": "Arsenal Gear",
     "DESCRIPTIONS": [
       "At the start of your next #b",
-      " turn(s), add a random #yUncommon or #yRare card to your hand. It costs #b1 less."
+      " turn(s), add a random #yUncommon or #yRare card to your hand. It costs #b1 less this combat."
     ]
   },
   "${ModID}:DaggerstormPower": {
