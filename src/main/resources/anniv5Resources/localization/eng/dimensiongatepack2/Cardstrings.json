@@ -18,7 +18,7 @@
   },
   "${ModID}:Daggerstorm": {
     "NAME": "Daggerstorm",
-    "DESCRIPTION": "When you create a *non-Shiv, create and play a *Shiv on a random target."
+    "DESCRIPTION": "When you create a *non-Shiv card, create and play a *Shiv on a random target."
   },
   "${ModID}:FlamingGrasp": {
     "NAME": "Flaming Grasp",
