@@ -19,7 +19,7 @@ public class MantisStrikePower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     public MantisStrikePower(AbstractCreature owner, int damageAmount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, 1);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, damageAmount);
 
         amount = damageAmount;
         updateDescription();
