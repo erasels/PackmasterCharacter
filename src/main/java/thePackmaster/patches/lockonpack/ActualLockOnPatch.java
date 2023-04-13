@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 public class ActualLockOnPatch {
     public static AbstractMonster getLockedMonster(AbstractMonster originalTarget)
     {
-        if (originalTarget.hasPower(LightningRodPower.POWER_ID)) return originalTarget;
+        if (originalTarget == null || originalTarget.hasPower(LightningRodPower.POWER_ID)) return originalTarget;
 
         ArrayList<AbstractMonster> lockedList = Wiz.getEnemies().stream().
                 filter(m -> m.hasPower(LightningRodPower.POWER_ID)).collect(Collectors.toCollection(ArrayList::new));
