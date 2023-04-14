@@ -5,7 +5,7 @@
   },
   "${ModID}:GigaDrill": {
     "NAME": "Giga Drill",
-    "DESCRIPTION": "Deal !D! damage for each [E] this card costs. NL Increase this card's cost by 1 this combat."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL The top {!M!|1=card|@=!M! cards} of your draw pile costs 0 until played."
   },
   "${ModID}:OpeningStrike": {
     "NAME": "Opening Strike",

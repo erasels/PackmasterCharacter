@@ -13,7 +13,7 @@ public class Overcome extends AbstractOverwhelmingCard {
     public Overcome() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
 
-        this.magicNumber = this.baseMagicNumber = 6;
+        this.magicNumber = this.baseMagicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -21,6 +21,6 @@ public class Overcome extends AbstractOverwhelmingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(2);
     }
 }

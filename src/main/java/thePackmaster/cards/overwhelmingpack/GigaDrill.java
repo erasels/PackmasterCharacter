@@ -2,7 +2,9 @@ package thePackmaster.cards.overwhelmingpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.jockeypack.Horse;
 import thePackmaster.cards.sneckopack.Gulp;
@@ -16,33 +18,33 @@ public class GigaDrill extends AbstractOverwhelmingCard {
     public final static String ID = makeID("GigaDrill");
 
     public GigaDrill() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
 
-        this.baseDamage = this.damage = 10;
+        this.baseDamage = this.damage = 14;
+        this.baseMagicNumber = this.magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amt = Wiz.getLogicalCardCost(this), dmg = this.damage;
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                for (int i = 0; i < amt; i++) {
-                    //att(new VFXAction(new ));
-                    Wiz.doDmg(m, dmg, damageTypeForTurn, AttackEffect.SLASH_HEAVY, true, true);
-                }
-                isDone = true;
-            }
-        });
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        int amt = magicNumber;
         atb(new AbstractGameAction() {
             @Override
             public void update() {
-                updateCost(1);
-                isDone = true;
+                this.isDone = true;
+
+                int remaining = amt;
+                for (int i = AbstractDungeon.player.drawPile.size() - 1; i >= 0 && remaining > 0; --i) {
+                    AbstractCard c = AbstractDungeon.player.drawPile.group.get(i);
+                    if (c.cost >= 0)
+                        c.freeToPlayOnce = true;
+
+                    --remaining;
+                }
             }
         });
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeMagicNumber(1);
     }
 }

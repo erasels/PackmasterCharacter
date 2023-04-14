@@ -12,9 +12,11 @@ public class FurtherBeyond extends AbstractOverwhelmingCard {
     public final static String ID = makeID("FurtherBeyond");
 
     public FurtherBeyond() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
 
-        this.damage = this.baseDamage = 50;
+        this.damage = this.baseDamage = 30;
+
+        this.isMultiDamage = true;
     }
 
     @Override
@@ -33,10 +35,11 @@ public class FurtherBeyond extends AbstractOverwhelmingCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //Add Vfx :)
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        allDmg(AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        //dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeDamage(10);
     }
 }

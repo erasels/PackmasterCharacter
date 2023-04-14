@@ -23,7 +23,7 @@ public class SheerEffort extends AbstractOverwhelmingCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new HandSelectAction(magicNumber, card -> card.canUse(p, null),
+        addToBot(new HandSelectAction(magicNumber, card -> true,
                 list -> {
                     for (AbstractCard c : list) {
                         c.exhaustOnUseOnce = true;
