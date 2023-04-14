@@ -27,7 +27,8 @@
   },
   "${ModID}:MoreExplosions": {
     "NAME": "愈烈",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 随机将 !M! 张能力牌加入抽牌堆。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 随机将 !M! 张能力牌加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 随机将 !M! 张能力牌加入抽牌堆。"
   },
   "${ModID}:Meltdown": {
     "NAME": "熔化",

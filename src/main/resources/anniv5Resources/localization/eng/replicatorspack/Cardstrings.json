@@ -12,7 +12,7 @@
   },
   "${ModID}:SmallAdaptation": {
     "NAME": "Small Adaptation",
-    "DESCRIPTION": "Gain !B! Block. NL Choose a non-Power card that costs 1 or 0. NL Add a copy of that card into your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL Choose a non-Power card that costs 0 or 1. NL Add a copy of that card into your hand.",
     "EXTENDED_DESCRIPTION": ["Choose a card to copy."]
   },
   "${ModID}:ExperimentalMerge": {
