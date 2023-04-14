@@ -1,7 +1,7 @@
 {
   "${ModID}:SmitingStrike": {
     "NAME": "Smiting Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If target is a minion, kill it instead. NL Persist !stslib:persist!."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If target is a minion, kill it instead."
   },
   "${ModID}:GrievousIgnite": {
     "NAME": "Grievous Ignite",

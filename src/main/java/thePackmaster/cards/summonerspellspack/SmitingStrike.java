@@ -15,8 +15,8 @@ public class SmitingStrike extends AbstractSummonerSpellsCard {
     public SmitingStrike() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.tags.add(CardTags.STRIKE);
-        PersistFields.setBaseValue(this, 2);
         this.damage = this.baseDamage = DAMAGE;
+        this.selfRetain = true;
     }
 
     @Override
