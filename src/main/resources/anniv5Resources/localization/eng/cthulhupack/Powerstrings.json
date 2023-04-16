@@ -17,7 +17,7 @@
     "NAME": "Eldritch Pact+",
     "DESCRIPTIONS": [
       "Whenever you lose #ySanity, gain #b",
-      " Block."
+      " #yBlock."
     ]
   },
   "${ModID}:AllSeeingPowerTriggerOnTurn": {
