@@ -3,7 +3,7 @@
     "NAME": "Nameless Mist",
     "DESCRIPTIONS": [
       "Whenever you play a card this turn, gain #b",
-      " Temporary HP."
+      " #yTemporary #yHP."
     ]
   },
   "${ModID}:AllSeeingPower": {
