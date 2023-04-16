@@ -1,5 +1,7 @@
 package thePackmaster.cards.darksoulspack;
 
+import basemod.ReflectionHacks;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawReductionPower;
@@ -23,7 +25,10 @@ public class IronFlesh extends AbstractDarkSoulsCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        Wiz.applyToSelfTop(new DrawReductionPower(p, magicNumber));
+        DrawReductionPower pow = new DrawReductionPower(p,magicNumber);
+        ReflectionHacks.setPrivate(pow,DrawReductionPower.class,"justApplied",false);
+
+        this.addToBot(new ApplyPowerAction(p, p, pow, magicNumber));
 
     }
 

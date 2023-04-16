@@ -24,11 +24,12 @@ public class DarkSoulsPack extends AbstractCardPack {
         cards.add(MorionBlade.ID);
         cards.add(Bloodlust.ID);
         cards.add(IronFlesh.ID);
+        cards.add(PrisonersChain.ID);
         cards.add(LifehuntScythe.ID);
         cards.add(Remedy.ID);
         cards.add(BlueTearstone.ID);
-        cards.add(SmoughsHammer.ID);
         cards.add(EmbraceHollowing.ID);
+        cards.add(SmoughsHammer.ID);
         return cards;
     }
 }

@@ -16,7 +16,7 @@ import static thePackmaster.util.Wiz.*;
 
 public class Bloodlust extends AbstractDarkSoulsCard {
     public final static String ID = makeID("Bloodlust");
-    // intellij stuff attack, enemyandself, common, 12, 4, , , 1, 
+    // intellij stuff attack, enemy, common, 12, 4, , , 1,
 
     public Bloodlust() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -28,8 +28,8 @@ public class Bloodlust extends AbstractDarkSoulsCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         Wiz.applyToSelf(new VulnerablePower(p, 1, false));
         for (AbstractMonster c : AbstractDungeon.getMonsters().monsters){
-            if (!m.isDead && !m.isDying) {
-                this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false)));
+            if (!c.isDead && !c.isDying) {
+                this.addToBot(new ApplyPowerAction(c, p, new VulnerablePower(c, this.magicNumber, false)));
             }
         }
     }

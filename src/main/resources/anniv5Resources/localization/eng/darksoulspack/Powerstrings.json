@@ -1,6 +1,6 @@
 {
-  "${ModID}:EmbraceHollowingPower": {
-    "NAME": "Embrace Hollowing",
+  "${ModID}:PrisonersChainPower": {
+    "NAME": "Prisoner's Chain",
     "DESCRIPTIONS": [
       "Whenever a debuff is applied to you, gain #b",
       " #yVigor."

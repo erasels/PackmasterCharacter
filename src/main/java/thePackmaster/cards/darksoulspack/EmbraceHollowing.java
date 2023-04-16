@@ -15,7 +15,7 @@ public class EmbraceHollowing extends AbstractDarkSoulsCard {
 
     public EmbraceHollowing() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

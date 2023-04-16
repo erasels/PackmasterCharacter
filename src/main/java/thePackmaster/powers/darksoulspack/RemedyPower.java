@@ -2,6 +2,7 @@ package thePackmaster.powers.darksoulspack;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -26,7 +27,7 @@ public class RemedyPower extends AbstractPackmasterPower implements OnReceivePow
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power.type == PowerType.DEBUFF){
             flashWithoutSound();
-            Wiz.reducePower(power, amount2);
+            Wiz.att(new ReducePowerAction(target, source, power.ID, amount2));
             this.reducePower(1);
         }
         if (this.amount <= 0){

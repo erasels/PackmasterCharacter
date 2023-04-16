@@ -3,15 +3,15 @@
     "NAME": "Morion Blade",
     "DESCRIPTION": "Deal !D! damage. Repeat for each unique debuff you have."
   },
-  "${ModID}Bloodlust:": {
+  "${ModID}:Bloodlust": {
     "NAME": "Bloodlust",
     "DESCRIPTION": "Deal !D! damage. Apply 1 Vulnerable to EVERYONE."
   },
-  "${ModID}IronFlesh:": {
+  "${ModID}:IronFlesh": {
     "NAME": "Iron Flesh",
     "DESCRIPTION": "Gain !B! Block. Draw 1 less card next turn."
   },
-  "${ModID}PrisonersChain:": {
+  "${ModID}:PrisonersChain": {
     "NAME": "Prisoner's Chain",
     "DESCRIPTION": "Whenever a debuff is applied to you, gain !M! Vigor."
   },
