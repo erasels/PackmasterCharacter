@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.util.Wiz;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 import static com.megacrit.cardcrawl.actions.GameActionManager.damageReceivedThisTurn;
 import static com.megacrit.cardcrawl.actions.GameActionManager.playerHpLastTurn;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -23,16 +25,18 @@ public class MorionBlade extends AbstractDarkSoulsCard{
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        AtomicInteger count= new AtomicInteger(1);
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
                 Wiz.p().powers.stream()
                         .filter(p -> p.type == AbstractPower.PowerType.DEBUFF)
-                        .forEach(p -> dmg(m, AttackEffect.SLASH_DIAGONAL));
+                        .forEach(p -> count.getAndIncrement());
                 isDone = true;
             }
         });
+        for (int i = 0; i < count.get(); i++)
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
 
     }
 

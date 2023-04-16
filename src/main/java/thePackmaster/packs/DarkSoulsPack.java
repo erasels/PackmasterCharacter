@@ -30,6 +30,7 @@ public class DarkSoulsPack extends AbstractCardPack {
         cards.add(BlueTearstone.ID);
         cards.add(EmbraceHollowing.ID);
         cards.add(SmoughsHammer.ID);
+        cards.add(CloranthyRing.ID);
         return cards;
     }
 }
