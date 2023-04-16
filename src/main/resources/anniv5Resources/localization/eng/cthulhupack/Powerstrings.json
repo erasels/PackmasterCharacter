@@ -24,7 +24,7 @@
     "NAME": "Eldritch Pact",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
-      " Block."
+      " #yBlock."
     ]
   },
   "${ModID}:EndOfDaysPower": {
