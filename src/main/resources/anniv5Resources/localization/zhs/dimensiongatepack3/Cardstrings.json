@@ -46,6 +46,7 @@
   },
   "${ModID}:SpreadingSpores": {
     "NAME": "孢子散播",
-    "DESCRIPTION": "获得 !${ModID}:m2! 层 荆棘 。 NL 获得 !M! 层 *消融 。"
+    "DESCRIPTION": "获得 !${ModID}:m2! 层 荆棘 。 NL 获得 !M! 层 *消融 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 荆棘 。 NL 获得 !M! 层 *消融 。 NL Shuffle a copy of this into your draw pile."
   }
 }

@@ -825,6 +825,7 @@ public class SpireAnniversary5Mod implements
         EnergyCountPatch.energySpentThisCombat = 0;
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
         JediUtil.receiveOnBattleStart(room);
+        CthulhuPack.madnessThisCombat = 0;
     }
 
     @Override
