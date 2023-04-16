@@ -19,18 +19,12 @@ public class EmbraceHollowing extends AbstractDarkSoulsCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int count = Wiz.countDebuffs(p);
         if (this.upgraded){
-            Wiz.applyToSelfTop(new StrengthPower(p, 2));
+            count++;
         }
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                Wiz.p().powers.stream()
-                        .filter(pow -> pow.type == AbstractPower.PowerType.DEBUFF)
-                        .forEach(pow -> Wiz.applyToSelf(new StrengthPower(p, 2)));
-                isDone = true;
-            }
-        });
+        for (int i = 0; i < count; i++)
+            Wiz.applyToSelf(new StrengthPower(p, 2));
     }
 
     public void upp() {

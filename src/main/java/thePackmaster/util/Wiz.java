@@ -27,6 +27,7 @@ import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.patches.rippack.AllCardsRippablePatches;
 
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -405,6 +406,12 @@ public class Wiz {
             return c.costForTurn;
         }
         return 0;
+    }
+
+    public static int countDebuffs(AbstractCreature c){
+        return (int) c.powers.stream()
+                .filter(pow -> pow.type == AbstractPower.PowerType.DEBUFF )
+                .count();
     }
 
     // Packmaster specific utilities

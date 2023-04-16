@@ -20,19 +20,8 @@ public class BlueTearstone extends AbstractDarkSoulsCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AtomicInteger count= new AtomicInteger(1);
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                Wiz.p().powers.stream()
-                        .filter(p -> p.type == AbstractPower.PowerType.DEBUFF)
-                        .forEach(p -> count.getAndIncrement());
-                isDone = true;
-            }
-        });
-        for (int i = 0; i < count.get(); i++) {
+        for (int i = 0; i < Wiz.countDebuffs(p) + 1; i++)
             blck();
-        }
     }
 
     public void upp() {

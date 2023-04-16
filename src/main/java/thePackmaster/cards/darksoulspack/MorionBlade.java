@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.red.InfernalBlade;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import thePackmaster.actions.darksoulspack.CountSelfDebuffsAction;
 import thePackmaster.util.Wiz;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -25,19 +26,8 @@ public class MorionBlade extends AbstractDarkSoulsCard{
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AtomicInteger count= new AtomicInteger(1);
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                Wiz.p().powers.stream()
-                        .filter(p -> p.type == AbstractPower.PowerType.DEBUFF)
-                        .forEach(p -> count.getAndIncrement());
-                isDone = true;
-            }
-        });
-        for (int i = 0; i < count.get(); i++)
+        for (int i = 0; i < Wiz.countDebuffs(p) + 1; i++)
             dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-
     }
 
     public void upp(){
