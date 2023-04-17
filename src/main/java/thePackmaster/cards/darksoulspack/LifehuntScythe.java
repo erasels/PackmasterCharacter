@@ -15,7 +15,7 @@ public class LifehuntScythe extends AbstractDarkSoulsCard{
 
     private static final int DAMAGE = 18;
     private static final int MAGIC = 2;
-    private static final int UPGRADE_DAMAGE = 4;
+    private static final int UPGRADE_DAMAGE = 6;
 
     public LifehuntScythe(){
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);

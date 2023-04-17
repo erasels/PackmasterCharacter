@@ -5,9 +5,6 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -18,7 +15,7 @@ public class CloranthyRing extends AbstractDarkSoulsCard {
     // intellij stuff skill, self, rare, , , , , 2, 1
 
     public CloranthyRing() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         this.exhaust=true;
     }
@@ -31,6 +28,6 @@ public class CloranthyRing extends AbstractDarkSoulsCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(1);
     }
 }

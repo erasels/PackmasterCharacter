@@ -28,13 +28,15 @@ public class RemedyPower extends AbstractPackmasterPower implements OnReceivePow
             Wiz.att(new ReducePowerAction(target, source, power.ID, 2));
             this.reducePower(1);
         }
+        if (amount <= 0)
+            removeThis();
         this.updateDescription();
         return true;
     }
 
     @Override
     public void updateDescription() {
-        if (amount == 1) {
+        if (amount != 1) {
             description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[3];
         } else {
             description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3];

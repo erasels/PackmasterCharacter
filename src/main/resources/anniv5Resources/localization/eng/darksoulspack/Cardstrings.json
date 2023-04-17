@@ -21,7 +21,7 @@
   },
   "${ModID}:Remedy": {
     "NAME": "Remedy",
-    "DESCRIPTION": "The next !M! times you receive a debuff, reduce it by !${ModID}:m2!."
+    "DESCRIPTION": "The next !M! times you receive a debuff, reduce it by 2."
   },
   "${ModID}:BlueTearstone": {
     "NAME": "Blue Tearstone",
