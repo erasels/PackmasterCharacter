@@ -10,9 +10,9 @@
     "NAME": "Remedy",
     "DESCRIPTIONS": [
       "Reduce the next #b",
-      " debuffs you receive by #b",
-      " debuff you receive by #b",
-      "."
+      " debuffs",
+      " debuff",
+      " you receive by #b2."
     ]
   }
 }

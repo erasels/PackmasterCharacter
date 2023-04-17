@@ -16,22 +16,17 @@ public class RemedyPower extends AbstractPackmasterPower implements OnReceivePow
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public RemedyPower(AbstractCreature owner, int amount, int secondAmount) {
+    public RemedyPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, AbstractPower.PowerType.BUFF, false, owner, amount);
-        isTwoAmount = true;
-        amount2 = secondAmount;
         updateDescription();
     }
 
     @Override
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.type == PowerType.DEBUFF){
+        if (power.type == PowerType.DEBUFF && (amount > 0)){
             flashWithoutSound();
-            Wiz.att(new ReducePowerAction(target, source, power.ID, amount2));
+            Wiz.att(new ReducePowerAction(target, source, power.ID, 2));
             this.reducePower(1);
-        }
-        if (this.amount <= 0){
-            removeThis();
         }
         this.updateDescription();
         return true;
@@ -39,10 +34,10 @@ public class RemedyPower extends AbstractPackmasterPower implements OnReceivePow
 
     @Override
     public void updateDescription() {
-        if (amount > 1) {
-            description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount2 + DESCRIPTIONS[3];
+        if (amount == 1) {
+            description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[3];
         } else {
-            description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2] + this.amount2 + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3];
         }
     }
 

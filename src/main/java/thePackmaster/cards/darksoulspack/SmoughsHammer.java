@@ -27,21 +27,21 @@ public class SmoughsHammer extends AbstractDarkSoulsCard {
     public SmoughsHammer() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = damage = 40;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, new Color(1.0F, 1.0F, 0.1F, 0.0F))));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
+
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        Wiz.applyToSelf(new WeakPower(p, magicNumber, false));
-        Wiz.applyToSelf(new FrailPower(p, magicNumber, false));
+        Wiz.applyToSelf(new WeakPower(p, 1, false));
+        Wiz.applyToSelf(new FrailPower(p, 1, false));
         Wiz.applyToSelf(new VulnerablePower(p, magicNumber, false));
-        if (this.upgraded){
-            Wiz.atb(new AddTemporaryHPAction(p, p, 10));
-        }
     }
 
     public void upp() {
+        upgradeDamage(5);
+        upgradeMagicNumber(-1);
     }
 }
