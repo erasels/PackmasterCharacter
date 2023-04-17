@@ -3,8 +3,8 @@
     "NAME": "Stall",
     "DESCRIPTIONS": [
       "At the end of your turn, #yFreeze the #b",
-      " highest-cost card.",
-      " highest-cost cards.",
+      " highest-cost card and reduce its cost by #b1.",
+      " highest-cost cards and reduce their cost by #b1.",
       "Freeze"
     ]
   },
