@@ -15,7 +15,7 @@ public class CloranthyRing extends AbstractDarkSoulsCard {
     // intellij stuff skill, self, rare, , , , , 2, 1
 
     public CloranthyRing() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         this.exhaust=true;
     }
@@ -28,6 +28,6 @@ public class CloranthyRing extends AbstractDarkSoulsCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(0);
     }
 }
