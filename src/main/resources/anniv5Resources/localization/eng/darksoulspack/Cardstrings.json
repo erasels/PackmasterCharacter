@@ -1,7 +1,7 @@
 {
   "${ModID}:MorionBlade": {
     "NAME": "Morion Blade",
-    "DESCRIPTION": "Deal !D! damage. Repeat for each unique debuff you have."
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique debuff you have."
   },
   "${ModID}:Bloodlust": {
     "NAME": "Bloodlust",
@@ -21,16 +21,16 @@
   },
   "${ModID}:Remedy": {
     "NAME": "Remedy",
-    "DESCRIPTION": "Reduce the next !M! debuffs you receive by !${ModID}:m2!."
+    "DESCRIPTION": "The next !M! times you receive a debuff, reduce it by !${ModID}:m2!."
   },
   "${ModID}:BlueTearstone": {
     "NAME": "Blue Tearstone",
-    "DESCRIPTION": "Gain !B! Block. Repeat for each unique debuff you have."
+    "DESCRIPTION": "Gain !B! Block. NL Repeat for each unique debuff you have."
   },
   "${ModID}:EmbraceHollowing": {
     "NAME": "Embrace Hollowing",
     "DESCRIPTION": "Gain !M! Strength for each unique debuff you have.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Strength. Gain !M! Strength for each unique debuff you have."
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Repeat for each unique debuff you have."
   },
   "${ModID}:SmoughsHammer": {
     "NAME": "Smough's Hammer",
