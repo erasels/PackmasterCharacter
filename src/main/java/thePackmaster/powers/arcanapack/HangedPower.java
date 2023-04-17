@@ -25,7 +25,7 @@ public class HangedPower extends AbstractPackmasterPower {
     private final ArrayList<AbstractGameEffect> powerEffects;
 
     public HangedPower(final AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
 
         powerEffects = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
     }
