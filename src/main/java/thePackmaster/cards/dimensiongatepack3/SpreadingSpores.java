@@ -1,6 +1,5 @@
 package thePackmaster.cards.dimensiongatepack3;
 
-import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,8 +11,6 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class SpreadingSpores extends AbstractDimensionalCardTrain {
-    private static TooltipInfo ablation;
-
     public final static String ID = makeID("SpreadingSpores");
 
     public SpreadingSpores() {
