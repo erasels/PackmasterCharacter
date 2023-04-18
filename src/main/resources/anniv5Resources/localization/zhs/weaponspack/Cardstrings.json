@@ -17,7 +17,7 @@
   },
   "${ModID}:PowderKeg": {
     "NAME": "火药桶",
-    "DESCRIPTION": "装备一件 0 / 1 ${ModID}:武器 。 NL 其耐久耗尽时对所有敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "装备一件 0 / 1 ${ModID}:武器 。 NL 其耐久耗尽时， 造成 !M! 点群体伤害。"
   },
   "${ModID}:RearmingStrike": {
     "NAME": "重整打击",
@@ -42,7 +42,7 @@
   },
   "${ModID}:SwordOfFire": {
     "NAME": "火焰之剑",
-    "DESCRIPTION": "装备一件 3 / !M! ${ModID}:武器 。 NL 使用时，对所有敌人造成3点伤害。"
+    "DESCRIPTION": "装备一件 3 / !M! ${ModID}:武器 。 NL 使用时， NL 造成3点群体伤害。"
   },
   "${ModID}:SwordOfWisdom": {
     "NAME": "智慧之剑",

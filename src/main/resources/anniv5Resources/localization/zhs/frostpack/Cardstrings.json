@@ -5,8 +5,8 @@
   },
   "${ModID}:ExtendedStall": {
     "NAME": "冰封",
-    "DESCRIPTION": "回合结束时， NL ${ModID}:冻结 手中耗能最高牌。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合结束时， NL ${ModID}:冻结 手中耗能最高牌。"
+    "DESCRIPTION": "回合结束时， NL ${ModID}:冻结 手中耗能最高牌， NL 并降低其耗能1点。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合结束时， NL ${ModID}:冻结 手中耗能最高牌， NL 并降低其耗能1点。"
   },
   "${ModID}:FlashFreeze": {
     "NAME": "冰光",

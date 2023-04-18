@@ -1,7 +1,7 @@
 {
   "${ModID}:Horse": {
     "NAME": "赛马",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。"
   },
   "${ModID}:StartingGun": {
     "NAME": "发令枪",
