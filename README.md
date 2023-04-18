@@ -104,7 +104,6 @@ Tags:
   * Orbs: any amount of orb generating cards
   * Stances: any amount of stance entering cards
   * Attacks: the design of the pack is focused on attacks and attack synergy
-  * Magic: any amount of cards using the Magic keyword
   * Tokens: substantial number of cards that create temporary cards or interact with them
   * None: if no other tags apply
 * Each entry in the file is the ID of the pack, followed by a tab, followed by a comma-separated list of tags
