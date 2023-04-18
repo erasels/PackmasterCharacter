@@ -22,15 +22,15 @@ public class SummonerSpellsPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(SmitingStrike.ID);
+        cards.add(SnowballStrike.ID);
         cards.add(GrievousIgnite.ID);
         cards.add(WitheringExhaust.ID);
-        cards.add(ClutchTeleport.ID);
+        cards.add(UnleashedSmite.ID);
         cards.add(DualHeal.ID);
-        cards.add(SpiritBarrier.ID);
+        cards.add(SonicBarrier.ID);
         cards.add(PerfectClarity.ID);
-        cards.add(ArtfulGhost.ID);
-        cards.add(CleansingFountain.ID);
+        cards.add(GhostingMaelstrom.ID);
+        cards.add(AggressiveTeleport.ID);
         cards.add(Flash.ID);
         return cards;
     }

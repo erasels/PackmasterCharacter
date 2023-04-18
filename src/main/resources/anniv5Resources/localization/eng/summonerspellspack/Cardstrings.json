@@ -1,48 +1,54 @@
 {
-  "${ModID}:SmitingStrike": {
-    "NAME": "Smiting Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If target is a minion, kill it instead."
+  "${ModID}:UnleashedSmite": {
+    "NAME": "Unleashed Smite",
+    "DESCRIPTION": "Deal !D! damage. NL Every time this card is played, increase its damage by !M! for each card in your hand."
+  },
+  "${ModID}:SnowballStrike": {
+    "NAME": "Snowball Strike",
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, add a *Dashing *Strike to your hand."
+  },
+  "${ModID}:DashSlap": {
+    "NAME": "Dash Slap",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
   },
   "${ModID}:GrievousIgnite": {
     "NAME": "Grievous Ignite",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Ignite. NL Whenever target is healed, it loses that much HP instead."
+    "DESCRIPTION": "Apply !M! Ignite and !M! Antiheal for each card in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Ignite and !M! Grievous Wounds for each card in your hand."
   },
   "${ModID}:WitheringExhaust": {
     "NAME": "Withering Exhaust",
-    "DESCRIPTION": "Apply !M! Weak. NL The enemy hits half as many times this turn (rounded up)."
-  },
-  "${ModID}:ClutchTeleport": {
-    "NAME": "Clutch Teleport",
-    "DESCRIPTION": "Add !M! random Summoner Spells pack cards to your hand. NL Synergy: They cost 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL Overextended: Apply !M! Vulnerable."
   },
   "${ModID}:DualHeal": {
     "NAME": "Dual Heal",
-    "DESCRIPTION": "You and target enemy both heal !M! HP. NL Gain !${ModID}:m2! Ghosted. NL Exhaust."
+    "DESCRIPTION": "You and target heal !M! HP. NL Gain !${ModID}:m2! Ghosted. NL Exhaust."
   },
-  "${ModID}:SpiritBarrier": {
-    "NAME": "Spirit Barrier",
-    "DESCRIPTION": "Gain 1 Temporary HP for each card in your hand."
+  "${ModID}:SonicBarrier": {
+    "NAME": "Sonic Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Overextended: Gain !M! Ghosted."
   },
   "${ModID}:PerfectClarity": {
     "NAME": "Perfect Clarity",
-    "DESCRIPTION": "Gain 1 [E] for each card in your hand. NL Exhaust."
+    "DESCRIPTION": "Add !M! Miracles into your hand. NL Exhaust."
   },
-  "${ModID}:ArtfulGhost": {
-    "NAME": "Artful Ghost",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Ghosted."
+  "${ModID}:GhostingMaelstrom": {
+    "NAME": "Ghosting Maelstrom",
+    "DESCRIPTION": "Whenever you play a card while overextended, deal !M! damage to all enemies. NL Gain !${ModID}:m2! Ghosted."
   },
-  "${ModID}:CleansingFountain": {
-    "NAME": "Cleansing Fountain",
-    "DESCRIPTION": "Remove all of your debuffs. NL Gain !M! Artifact. NL You cannot lose Artifact for !${ModID}:m2! turns."
+  "${ModID}:AggressiveTeleport": {
+    "NAME": "Aggressive Teleport",
+    "DESCRIPTION": "At the start of your turn, put the highest damage Attack from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, put the highest damage Attack from your discard pile into your hand."
   },
   "${ModID}:Flash": {
     "NAME": "Flash",
-    "DESCRIPTION": "Draw !M! cards. NL Add a Hexflash to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Add a Hexflash+ to your hand. NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Add a *Hexflash to your hand. NL Exhaust."
   },
   "${ModID}:Hexflash": {
     "NAME": "Hexflash",
-    "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust. NL If retained for 3 turns, exhausts and adds Flash to your hand.",
+    "DESCRIPTION": "Retain. NL Draw !M! card. NL Exhaust. NL If retained for 3 turns, exhausts and adds *Flash to your hand.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust. NL If retained for 3 turns, exhausts and adds *Flash to your hand.",
     "EXTENDED_DESCRIPTION": [" (", " turn left.)", " turns left.)"]
   }
 }

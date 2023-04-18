@@ -13,7 +13,7 @@ import static thePackmaster.util.Wiz.p;
 public class Hexflash extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Hexflash");
     private static final int COST = 0;
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
     public static final int TIMER_MAX = 3;
     public int timer = 3;

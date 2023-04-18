@@ -11,14 +11,15 @@
     "NAME": "Ghosted",
     "DESCRIPTIONS": [
       "Draw #b",
-      " extra card at the start of your turn, then reduce this amount by #b1. NL Kills grant #b1 #yGhosted.",
-      " extra cards at the start of your turn, then reduce this amount by #b1. NL Kills grant #b1 #yGhosted."
+      " extra card at the start of your turn, then reduce this amount by #b1.",
+      " extra cards at the start of your turn, then reduce this amount by #b1."
     ]
   },
-  "${ModID}:GrievousWoundsPower": {
-    "NAME": "Grievous Wounds",
+  "${ModID}:AntihealPower": {
+    "NAME": "Antiheal",
     "DESCRIPTIONS": [
-      "When healed, loses that much HP instead."
+      "The next #b",
+      " HP of healing is negated."
     ]
   },
   "${ModID}:WitheringExhaustPower": {
@@ -27,6 +28,29 @@
       "This enemy's attacks have been halved.",
       "This enemy's attacks have been halved #b",
       " times."
+    ]
+  },
+  "${ModID}:SnowballStrikePower": {
+    "NAME": "Dash",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " Dashing Strike to your hand.",
+      " Dashing Strikes to your hand."
+    ]
+  },
+  "${ModID}:AggressiveTeleportPower": {
+    "NAME": "Aggressive Teleport",
+    "DESCRIPTIONS": [
+      "At the start of your turn, put the highest damage Attack from your discard pile into your hand.",
+      "At the start of your turn, put the highest damage Attack from your discard pile into your hand #b",
+      " times."
+    ]
+  },
+  "${ModID}:MaelstromPower": {
+    "NAME": "Maelstrom",
+    "DESCRIPTIONS": [
+      "Whenever you play a card while overextended, deal #b",
+      " damage to ALL enemies."
     ]
   }
 }

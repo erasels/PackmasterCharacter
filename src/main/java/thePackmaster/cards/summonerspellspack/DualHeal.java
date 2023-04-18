@@ -12,7 +12,7 @@ public class DualHeal extends AbstractSummonerSpellsCard {
     private static final int COST = 1;
     private static final int MAGIC = 7;
     private static final int UPG_MAGIC = 3;
-    private static final int MAGIC2 = 1;
+    private static final int MAGIC2 = 2;
 
 
     public DualHeal() {
@@ -31,7 +31,7 @@ public class DualHeal extends AbstractSummonerSpellsCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new HealAction(p, p, this.magicNumber, 0));
-        addToBot(new HealAction(m, p, this.magicNumber, 1));
+        addToBot(new HealAction(m, p, this.magicNumber, 0.2f));
 
         addToBot(new ApplyPowerAction(p, p, new GhostedPower(p, this.secondMagic), this.secondMagic));
     }

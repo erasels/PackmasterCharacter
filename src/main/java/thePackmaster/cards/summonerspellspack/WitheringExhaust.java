@@ -1,8 +1,10 @@
 package thePackmaster.cards.summonerspellspack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.summonerspellspack.WitheringExhaustAction;
@@ -10,11 +12,11 @@ import thePackmaster.actions.summonerspellspack.WitheringExhaustAction;
 public class WitheringExhaust extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("WitheringExhaust");
     private static final int COST = 1;
-    private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC = 1;
 
     public WitheringExhaust() {
-        super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = MAGIC;
     }
 
@@ -26,6 +28,12 @@ public class WitheringExhaust extends AbstractSummonerSpellsCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
-        addToBot(new WitheringExhaustAction(m, p));
+        if (isOverextended())
+            addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = isOverextended() ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 }
