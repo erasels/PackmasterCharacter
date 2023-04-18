@@ -46,7 +46,7 @@
   },
   "${ModID}:SpreadingSpores": {
     "NAME": "Spreading Spores",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL Gain !M! *Ablation. NL Shuffle a copy of this into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Thorns. NL Gain !M! *Ablation. NL Shuffle a copy of this into your draw pile."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL Gain !M! stslib:Temporary_HP. NL Shuffle a copy of this into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Thorns. NL Gain !M! stslib:Temporary_HP. NL Shuffle a copy of this into your draw pile."
   }
 }

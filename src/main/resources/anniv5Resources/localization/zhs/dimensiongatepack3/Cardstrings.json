@@ -46,7 +46,7 @@
   },
   "${ModID}:SpreadingSpores": {
     "NAME": "孢子散播",
-    "DESCRIPTION": "虚无 。 NL 获得 !M! 层 荆棘 。 NL 获得 !M! 层 *消融 。 NL 将本牌复制加入抽牌堆。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 荆棘 。 NL 获得 !M! 层 *消融 。 NL 将本牌复制加入抽牌堆。"
+    "DESCRIPTION": "虚无 。 NL 获得 !M! 层 荆棘 。 NL Gain !M! stslib:Temporary_HP 。 NL 将本牌复制加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 荆棘 。 NL Gain !M! stslib:Temporary_HP 。 NL 将本牌复制加入抽牌堆。"
   }
 }
