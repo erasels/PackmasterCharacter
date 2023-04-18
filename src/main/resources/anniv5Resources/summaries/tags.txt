@@ -47,6 +47,7 @@ IntoTheBreachPack	None
 IntriguePack	None
 IroncladPack	Strength
 LegacyPack	Exhaust
+LockonPack	Orbs
 JockeyPack	None
 MadSciencePack	Orbs
 MarisaPack	Exhaust,Attacks
