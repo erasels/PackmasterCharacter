@@ -12,7 +12,6 @@ public class GazeTheVoid extends AbstractCthulhuCard {
 
     private static final int ATTACK_DMG = 5;
     private static final int HITS = 3;
-    private static final int UPGRADE_PLUS_HITS = 1;
 
     public GazeTheVoid() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -28,6 +27,7 @@ public class GazeTheVoid extends AbstractCthulhuCard {
     }
 
     public void applyPowers() {
+        super.applyPowers();
         this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + (CthulhuPack.madnessThisCombat + 1) + cardStrings.EXTENDED_DESCRIPTION[1];
         this.initializeDescription();
     }
