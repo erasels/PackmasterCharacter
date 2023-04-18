@@ -34,7 +34,7 @@
   },
     "${ModID}:Tombstone": {
     "NAME": "Tombstone",
-    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Exhaust."
   },
     "${ModID}:DarkOfNight": {
     "NAME": "Dark of Night",
