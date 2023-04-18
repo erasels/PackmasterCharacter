@@ -36,7 +36,7 @@
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "R'lyeh Fhtagn",
-    "DESCRIPTION": "Go to sleep (end your turn). Next turn, gain !M! Temporary_HP, gain NL [E] [E] [E] , and enter ${ModID}:Nightmare. Exhaust."
+    "DESCRIPTION": "End your turn. NL Next turn, gain !M! Temporary_HP, gain NL [E] [E] [E] , and enter ${ModID}:Nightmare. Exhaust."
   },
   "${ModID}:StarSpawn": {
     "NAME": "Star Spawn",
