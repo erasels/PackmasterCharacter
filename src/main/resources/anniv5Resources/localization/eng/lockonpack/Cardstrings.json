@@ -13,7 +13,7 @@
   },
   "${ModID}:Bruteforce": {
     "NAME": "Bruteforce",
-    "DESCRIPTION": "{@@}Evoke your rightmost Lightning !M! times hitting ALL enemies{!Upgrades!|0= NL Exhaust.|>0=.}"
+    "DESCRIPTION": "{@@}Evoke your rightmost Lightning !M! times, hitting ALL enemies.{!Upgrades!|0= NL Exhaust.|@=}"
   },
   "${ModID}:LightsOut": {
     "NAME": "Lights Out",
