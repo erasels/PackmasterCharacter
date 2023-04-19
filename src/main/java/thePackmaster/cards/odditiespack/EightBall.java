@@ -5,16 +5,17 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class EightBall extends AbstractOdditiesCard {
+public class EightBall extends AbstractPackmasterCard {
     public final static String ID = makeID("EightBall");
     // intellij stuff attack, enemy, special, 12, 3, 10, 2, , 
 
     public EightBall() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 22;
+        baseDamage = 21;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

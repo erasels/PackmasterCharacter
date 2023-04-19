@@ -1,5 +1,6 @@
 package thePackmaster.cards.goddessofexplosionspack;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,7 +23,7 @@ public class MoreExplosions extends AbstractGoddessOfExplosionsCard {
     public final static String ID = makeID("MoreExplosions");
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("PlayTwiceUI"));
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int MAGIC_UP = 1;
 
     public MoreExplosions() {
@@ -44,6 +45,7 @@ public class MoreExplosions extends AbstractGoddessOfExplosionsCard {
                     .stream()
                     .filter(c -> c.type == CardType.POWER)
                     .filter(c -> !c.hasTag(AbstractCard.CardTags.HEALING))
+                    .filter(c -> c.rarity == CardRarity.COMMON || c.rarity == CardRarity.UNCOMMON || c.rarity == CardRarity.RARE)
                     .collect(Collectors.toList());
 
             eligibleCards.addAll(validCards);
@@ -54,6 +56,9 @@ public class MoreExplosions extends AbstractGoddessOfExplosionsCard {
             if (eligibleCards.size() > 0)
             powerList.add(eligibleCards.get(AbstractDungeon.cardRandomRng.random(0, eligibleCards.size() - 1)).makeCopy());
         }
+
+        // Draw.
+        Wiz.atb(new DrawCardAction(magicNumber));
 
         // Shuffle powers into draw pile.
         for(AbstractCard c : powerList)

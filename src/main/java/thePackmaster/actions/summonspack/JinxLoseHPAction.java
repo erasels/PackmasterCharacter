@@ -25,7 +25,7 @@ public class JinxLoseHPAction extends AbstractGameAction {
 
     public void update() {
         if (duration == DURATION && target.currentHealth > 0 && !quiet)
-            CardCrawlGame.sound.play(SpireAnniversary5Mod.EVIL_KEY, 0.1f);
+            CardCrawlGame.sound.playAV(SpireAnniversary5Mod.EVIL_KEY, 0.1f, 0.5f);
         tickDuration();
         if (isDone) {
             if (target.currentHealth > 0) {

@@ -12,9 +12,9 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class PerfectDodge extends AbstractMonsterHunterCard {
     public final static String ID = makeID("PerfectDodge");
 
-    private static final int MAGIC = 2;
     private static final int BLOCK = 7;
-    private static final int UPG_BLOCK = 2;
+    private static final int UPG_BLOCK = 3;
+    private static final int MAGIC = 4;
 
     public PerfectDodge() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

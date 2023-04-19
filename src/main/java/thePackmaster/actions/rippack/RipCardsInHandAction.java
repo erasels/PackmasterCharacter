@@ -50,7 +50,7 @@ public class RipCardsInHandAction extends AbstractGameAction {
                 artCard = cardToRip.makeStatEquivalentCopy();
                 artCard.rawDescription = "";
                 artCard.initializeDescription();
-                artCard.target = artCard.cardID == ArtAttack.ID ? artCard.target : AbstractCard.CardTarget.NONE;
+                artCard.target = artCard.cardID.equals(ArtAttack.ID) ? artCard.target : AbstractCard.CardTarget.NONE;
                 AllCardsRippablePatches.AbstractCardFields.ripStatus.set(artCard, AllCardsRippablePatches.RipStatus.ART);
 
                 //Set up Text Half properties

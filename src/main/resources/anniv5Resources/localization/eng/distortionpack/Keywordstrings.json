@@ -4,6 +4,6 @@
     "NAMES": [
       "distortion"
     ],
-    "DESCRIPTION": "Creatures with #yDistortion lose HP whenever a card is #yExhausted."
+    "DESCRIPTION": "Creatures with #yDistortion lose HP whenever a card is #yExhausted, then lose #b1 #yDistortion."
   }
 ]

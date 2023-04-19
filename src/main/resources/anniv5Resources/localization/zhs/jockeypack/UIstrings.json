@@ -1,0 +1,20 @@
+{
+  "${ModID}:JockeyPack": {
+    "TEXT": [
+      "骑师",
+      "骑马来进行一回合的冲锋。",
+      "Vex"
+    ]
+  },
+  "${ModID}:JockeyPackHat": {
+    "TEXT": [
+      "你懂的，骑马用的。",
+      "骑师帽"
+    ]
+  },
+  "${ModID}:LuckyModifier": {
+    "TEXT": [
+      "幸运"
+    ]
+  }
+}

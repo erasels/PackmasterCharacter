@@ -24,12 +24,9 @@ import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.packs.CoreSetPack;
 import thePackmaster.patches.rippack.AllCardsRippablePatches;
 import thePackmaster.util.CardArtRoller;
 import thePackmaster.util.Wiz;
-
-import java.util.Objects;
 
 import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.SpireAnniversary5Mod.modID;
@@ -100,21 +97,23 @@ public abstract class AbstractPackmasterCard extends CustomCard {
                 needsArtRefresh = true;
         }
 
-        if (frameFolder == null || SpireAnniversary5Mod.oneFrameMode){
-            setBackgroundTexture(
-                    "anniv5Resources/images/512/coreset/" + getTypeName() + ".png",
-                    "anniv5Resources/images/1024/coreset/" + getTypeName() + ".png");
-        } else {
-            setBackgroundTexture("anniv5Resources/images/512/" + frameFolder + "/" + getTypeName() + ".png",
-                    "anniv5Resources/images/1024/" + frameFolder + "/" + getTypeName() + ".png");
+        if (color != CardColor.COLORLESS) {
+            if (frameFolder == null || SpireAnniversary5Mod.oneFrameMode) {
+                setBackgroundTexture(
+                        "anniv5Resources/images/512/coreset/" + getTypeName() + ".png",
+                        "anniv5Resources/images/1024/coreset/" + getTypeName() + ".png");
+            } else {
+                setBackgroundTexture("anniv5Resources/images/512/" + frameFolder + "/" + getTypeName() + ".png",
+                        "anniv5Resources/images/1024/" + frameFolder + "/" + getTypeName() + ".png");
 
-        }
+            }
 
-        if (orbString != null && !SpireAnniversary5Mod.oneFrameMode){
-            setOrbTexture(
-                    "anniv5Resources/images/512/" + orbString,
-                    "anniv5Resources/images/1024/" + orbString
-            );
+            if (orbString != null && !SpireAnniversary5Mod.oneFrameMode) {
+                setOrbTexture(
+                        "anniv5Resources/images/512/" + orbString,
+                        "anniv5Resources/images/1024/" + orbString
+                );
+            }
         }
 
     }
@@ -314,7 +313,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
 
     public String getParentName() {
         AbstractCardPack p = getParent();
-        if(p != null)
+        if (p != null)
             return p.name;
         return "No Parent Pack!";
     }
@@ -329,14 +328,14 @@ public abstract class AbstractPackmasterCard extends CustomCard {
     }
 
     public void renderBorderText(SpriteBatch sb, float xPos, float yPos, float yOffsetBase, float scale, boolean renderBottom) {
-        String text = renderBottom? getBottomText() : getTopText();
+        String text = renderBottom ? getBottomText() : getTopText();
         if (text != null) {
             float offsetY;
             BitmapFont font;
             if (this.isFlipped || this.isLocked || this.transparency <= 0.0F)
                 return;
             font = FontHelper.cardTitleFont;
-            if(renderBottom) {
+            if (renderBottom) {
                 yOffsetBase *= -1;
                 yOffsetBase += 15f;
             }
@@ -351,18 +350,20 @@ public abstract class AbstractPackmasterCard extends CustomCard {
                     scaleMulti = 0.5F;
             }
             fontData.setScale(scaleMulti * (scale * 0.85f));
-            Color color = renderBottom? getBottomTextColor().cpy() : getTopTextColor().cpy();
+            Color color = renderBottom ? getBottomTextColor().cpy() : getTopTextColor().cpy();
             color.a = this.transparency;
             FontHelper.renderRotatedText(sb, font, text, xPos, yPos, 0.0F, offsetY, this.angle, true, color);
             fontData.setScale(originalScale);
         }
     }
 
-    public String getBottomText() {return null;}
+    public String getBottomText() {
+        return null;
+    }
 
     public String getTopText() {
         AbstractCardPack parent = getParent(); //Hide top text on ripped text cards
-        if(parent != null && AllCardsRippablePatches.AbstractCardFields.ripStatus.get(this) != AllCardsRippablePatches.RipStatus.TEXT) {
+        if (parent != null && AllCardsRippablePatches.AbstractCardFields.ripStatus.get(this) != AllCardsRippablePatches.RipStatus.TEXT) {
             return parent.name;
         }
 

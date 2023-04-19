@@ -14,6 +14,8 @@ public class Plunge extends AbstractFrostCard {
     public Plunge() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 5;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

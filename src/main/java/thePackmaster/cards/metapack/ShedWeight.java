@@ -1,13 +1,17 @@
 package thePackmaster.cards.metapack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.actions.HandSelectAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
@@ -24,15 +28,19 @@ public class ShedWeight extends AbstractMetaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new GainBlockAction(p, p, block));
-        Wiz.discard(this.magicNumber);
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                AbstractDungeon.handCardSelectScreen.selectedCards.group.stream().filter(c -> c.cost == -2).forEach(c -> Wiz.att(new DrawCardAction(1)));
-                isDone = true;
+        Wiz.atb(new GainBlockAction(p, p, block));
+        Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {}, list -> {
+            for (AbstractCard c : list)
+            {
+                Wiz.p().hand.moveToDiscardPile(c);
+                c.triggerOnManualDiscard();
+                GameActionManager.incrementDiscard(false);
+
+                if (c.cost == -2)
+                    Wiz.att(new DrawCardAction(1));
             }
-        });
+            list.clear();
+        }, uiStrings.TEXT[0],false,false,false));
     }
 
     public void upp() {

@@ -92,8 +92,8 @@
   },
   "${ModID}:BulwarkPackHat": {
     "TEXT": [
-      "TBD",
-      "TBD"
+      "Comprehensive protection.",
+      "The Headfort"
     ]
   },
   "${ModID}:PackMainMenuUI": {
@@ -101,9 +101,10 @@
       "Custom Draft Mode",
       "Turn this on to choose how your Packs are determined.",
       "Random",
-      "Choice of 3",
+      "Choice of ",
       "Pack Filtering Menu",
-      "Hat Menu"
+      "Hat Menu",
+      ""
     ]
   },
   "${ModID}:PackSetup": {
@@ -203,9 +204,22 @@
       "Discard": "Discard",
       "Debuffs": "Debuffs",
       "Attacks": "Attacks",
-      "Magic": "Magic",
       "Tokens": "Tokens",
       "Powers": "Powers"
     }
+  },
+  "${ModID}:MerchantSpeech": {
+    "TEXT": [
+      "@Nice@ @hat@",
+      "Better deals here than at the black market",
+      "That's a ~big~ backpack",
+      "Seen a lot of you recently"
+    ]
+  },
+  "${ModID}:MerchantEndingSpeech": {
+    "TEXT": [
+      "What do you keep in there anyway?",
+      "One day they will make the final pack."
+    ]
   }
 }

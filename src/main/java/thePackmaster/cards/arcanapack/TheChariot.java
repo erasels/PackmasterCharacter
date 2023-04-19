@@ -10,7 +10,6 @@ import static thePackmaster.util.Wiz.*;
 
 public class TheChariot extends AbstractAstrologerCard {
     public final static String ID = makeID("TheChariot");
-    // intellij stuff power, self, rare, , , , , 4, 2
 
     public TheChariot() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);

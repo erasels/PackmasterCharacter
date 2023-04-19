@@ -11,6 +11,7 @@ import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.creativitypack.JediUtil;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -28,7 +29,6 @@ public class Mimicry extends AbstractCreativityCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        AbstractCard origin = this;
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
@@ -40,10 +40,14 @@ public class Mimicry extends AbstractCreativityCard {
                 }
                 list.removeIf(c -> c.rarity != CardRarity.COMMON);
                 CardGroup tmpGrp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-                tmpGrp.group = list;
-                addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(tmpGrp), c -> {
-                    if (origin.upgraded) c.upgrade();
-                }, false));
+                tmpGrp.group = list.stream().map(c -> {
+                    AbstractCard o = c.makeCopy();
+                    if (upgraded) {
+                        o.upgrade();
+                    }
+                    return o;
+                }).collect(Collectors.toCollection(ArrayList::new));
+                addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(tmpGrp), false));
                 isDone = true;
             }
         });

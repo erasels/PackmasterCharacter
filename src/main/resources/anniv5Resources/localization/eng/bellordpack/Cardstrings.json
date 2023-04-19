@@ -20,7 +20,7 @@
   },
   "${ModID}:RingTheBell": {
     "NAME": "Ring the Bell",
-    "DESCRIPTION": "ALL enemies lose !M! HP. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
+    "DESCRIPTION": "ALL enemies lose !M! HP. NL Draw 1 card. NL ${ModID}:Pickup: Obtain a *Curse *of *the *Bell."
   },
   "${ModID}:TimeOut": {
     "NAME": "Time Out",
@@ -41,6 +41,6 @@
   },
   "${ModID}:SavedByTheBell": {
     "NAME": "Saved by the Bell",
-    "DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Exhaust. NL ${ModID}:Pickup: Obtain 3 *Curses *of *the *Bell."
+    "DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Exhaust. NL ${ModID}:Pickup: Obtain 2 *Curses *of *the *Bell."
   }
 }

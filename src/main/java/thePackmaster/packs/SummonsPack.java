@@ -32,7 +32,7 @@ public class SummonsPack extends AbstractCardPack {
         cards.add(SwarmOfBees.ID);
         cards.add(Ambush.ID);
         cards.add(Pandas.ID);
-        cards.add(Training.ID);
+        cards.add(Specialist.ID);
         cards.add(Quill.ID);
         return cards;
     }

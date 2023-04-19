@@ -31,7 +31,7 @@
   },
   "${ModID}:Purgatory": {
     "NAME": "炼狱",
-    "DESCRIPTION": "虚无 。 NL 对所有敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点群体伤害。"
   },
   "${ModID}:OverwhelmingPower": {
     "NAME": "压倒性力量",

@@ -2,6 +2,7 @@ package thePackmaster.cards.bellordpack;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -26,8 +27,10 @@ public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction("BELL"));
+        if (MathUtils.randomBoolean())
+            atb(new SFXAction("BELL"));
         atb(new AllEnemyLoseHPAction(p, magicNumber));
+        atb(new DrawCardAction(1));
     }
 
     @Override
@@ -43,10 +46,8 @@ public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
     @Override //zhs card text thing
     public void initializeDescriptionCN() {
         super.initializeDescriptionCN();
-        if (Settings.language == Settings.GameLanguage.ZHS ) {
-            if(this.description.size()!=0){
+        if (Settings.language == Settings.GameLanguage.ZHS && this.description!=null && this.description.size() >= 1 ) {
                 this.description.remove(1);
-            }
         }
     }
 }

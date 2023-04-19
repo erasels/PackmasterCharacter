@@ -1,0 +1,16 @@
+{
+  "${ModID}:SpheresPack": {
+    "TEXT": [
+      "球体",
+      "一套韧性十足的充能球卡包，包括2种给予 *燃烧 与 *霜噬 的新充能球。",
+      "modargo",
+      "卡牌贴图源自游戏：万智牌(Magic: The　Gathering)"
+    ]
+  },
+  "${ModID}:SpheresPackHat": {
+    "TEXT": [
+      "精美而令人着迷",
+      "镂空球"
+    ]
+  }
+}

@@ -9,8 +9,8 @@
   },
   "${ModID}:TheHermit": {
     "NAME": "隐者",
-    "DESCRIPTION": "丢弃一张牌， NL 抽其耗能张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "丢弃一张牌， NL 抽其耗能张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃一张牌， NL 抽其耗能张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃一张牌， NL 抽其耗能张牌。"
   },
   "${ModID}:TheHangedMan": {
     "NAME": "倒吊者",
@@ -35,7 +35,7 @@
   },
   "${ModID}:TheSun": {
     "NAME": "太阳",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予当前生命最高的敌人 !M! 层 易伤 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 给予当前生命最高的敌人 !M! 层 易伤 。 NL 消耗 。"
   },
   "${ModID}:TheChariot": {
     "NAME": "战车",

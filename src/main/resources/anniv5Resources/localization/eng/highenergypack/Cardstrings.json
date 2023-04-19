@@ -5,12 +5,12 @@
   },
   "${ModID}:Trash": {
     "NAME": "Trash",
-    "DESCRIPTION": "Exhaust 1 card at random. NL Gain [E] .",
-    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust 1 card at random. NL Gain [E] ."
+    "DESCRIPTION": "Exhaust the leftmost card in your hand. NL Gain [E] .",
+    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust the leftmost card in your hand. NL Gain [E] ."
   },
   "${ModID}:MultiTool": {
     "NAME": "Multi-Tool",
-    "DESCRIPTION": "Deal !D! damage. NL If you end your turn with unused Energy, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL If you end this turn with Energy, ALL enemies lose !M! HP."
   },
   "${ModID}:LastResort": {
     "NAME": "Last Resort",
@@ -22,7 +22,8 @@
   },
   "${ModID}:ManifestMeal": {
     "NAME": "Manifest Meal",
-    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your draw pile."
+    "DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage X times. NL Shuffle a *Food+ into your draw pile."
   },
   "${ModID}:Food": {
     "NAME": "Food",

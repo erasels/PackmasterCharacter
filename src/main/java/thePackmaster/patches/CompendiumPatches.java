@@ -1,22 +1,34 @@
 package thePackmaster.patches;
 
 import basemod.ReflectionHacks;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.EverythingFix;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.DescriptionLine;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.compendium.CardLibSortHeader;
+import com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.SortHeaderButton;
+import com.megacrit.cardcrawl.ui.buttons.ReturnToMenuButton;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
+import javassist.expr.MethodCall;
 import javassist.expr.NewExpr;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.ThePackmaster;
+import thePackmaster.patches.shamanpack.FineTuneLineWidthPatch;
 
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CompendiumPatches {
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("Compendium"));
@@ -60,7 +72,7 @@ public class CompendiumPatches {
     public static class CustomOrdering {
         @SpirePostfixPatch
         public static void catchSort(CardLibSortHeader __instance, SortHeaderButton button, boolean isAscending) {
-            if (button == packButton) {
+            if (button == packButton && RenderBaseGameCardPackTopTextPatches.isInPackmasterCardLibraryScreen()) {
                 packSort(__instance, isAscending);
                 __instance.group.sortByStatus(false);
                 __instance.justSorted = true;
@@ -85,7 +97,7 @@ public class CompendiumPatches {
         @SpirePostfixPatch
         public static void patch(CardLibSortHeader __instance) {
             for(SortHeaderButton b : __instance.buttons) {
-                if(b == packButton && (boolean) ReflectionHacks.getPrivate(b, SortHeaderButton.class, "isActive")) {
+                if(b == packButton && (boolean) ReflectionHacks.getPrivate(b, SortHeaderButton.class, "isActive") && RenderBaseGameCardPackTopTextPatches.isInPackmasterCardLibraryScreen()) {
                     packSort(__instance, true);
                 }
             }
@@ -129,6 +141,58 @@ public class CompendiumPatches {
                                     .thenComparing(o -> ((AbstractCard) o).name)
                     )
             );
+        }
+    }
+
+    @SpirePatch2(clz = CardLibSortHeader.class, method = "renderButtons")
+    public static class HideSortButtonForOtherTabs {
+        public static class HideSortButtonForOtherTabsExprEditor extends ExprEditor {
+            @Override
+            public void edit(MethodCall methodCall) throws CannotCompileException {
+                if (methodCall.getClassName().equals(SortHeaderButton.class.getName()) && methodCall.getMethodName().equals("render")) {
+                    methodCall.replace(String.format("{ if(%1$s.isInPackmasterCardLibraryScreen() || $0 != %2$s.packButton) { $proceed($$); } }", RenderBaseGameCardPackTopTextPatches.class.getName(), CompendiumPatches.class.getName()));
+                }
+            }
+        }
+
+        @SpireInstrumentPatch
+        public static ExprEditor HideSortButtonForOtherTabsPatch() {
+            return new HideSortButtonForOtherTabs.HideSortButtonForOtherTabsExprEditor();
+        }
+    }
+
+    @SpirePatch2(clz = SortHeaderButton.class, method = "update")
+    public static class DisableClickForOtherTabs {
+        @SpirePrefixPatch
+        public static SpireReturn<Void> disableClickForOtherTabs(SortHeaderButton __instance) {
+            if (__instance == packButton && !RenderBaseGameCardPackTopTextPatches.isInPackmasterCardLibraryScreen()) {
+                return SpireReturn.Return();
+            }
+            return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch2(clz = EverythingFix.Initialize.class, method = "Insert")
+    public static class ShowBaseGameCards {
+        @SpirePostfixPatch
+        public static void showBaseGameCards(Object __obj_instance) {
+            if (EverythingFix.Fields.cardGroupMap.containsKey(ThePackmaster.Enums.PACKMASTER_RAINBOW)) {
+                CardGroup group = EverythingFix.Fields.cardGroupMap.get(ThePackmaster.Enums.PACKMASTER_RAINBOW);
+                List<AbstractCard> baseGameCards = CardLibrary.getAllCards().stream()
+                        .filter(c -> (c.color == AbstractCard.CardColor.RED || c.color == AbstractCard.CardColor.GREEN || c.color == AbstractCard.CardColor.BLUE || c.color == AbstractCard.CardColor.PURPLE))
+                        .filter(c -> SpireAnniversary5Mod.cardParentMap.containsKey(c.cardID))
+                        .collect(Collectors.toList());
+                group.group.addAll(baseGameCards);
+
+                // We've found that having the special rarity cards associated with the packs show up in the Packmaster's
+                // tab is not very useful, and we want to have each pack of 10 cards in two nicely organized rows (when
+                // sorted by packs). In the future we might make all these cards colorless (and remove or change this code),
+                // but for now we just move them to the list that the compendium uses for colorless cards
+                List<AbstractCard> specialRarityCards = group.group.stream().filter(c -> c.rarity == AbstractCard.CardRarity.SPECIAL).collect(Collectors.toList());
+                CardGroup colorlessCards = ReflectionHacks.getPrivate(__obj_instance, CardLibraryScreen.class, "colorlessCards");
+                colorlessCards.group.addAll(specialRarityCards);
+                group.group.removeIf(c -> c.rarity == AbstractCard.CardRarity.SPECIAL);
+            }
         }
     }
 }

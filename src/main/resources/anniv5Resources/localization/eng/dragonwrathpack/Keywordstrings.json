@@ -15,7 +15,7 @@
       "Confession",
       "confession"
     ],
-    "DESCRIPTION": "Whenever you take damage or lose hp, deal damage equal to your #yConfession to ALL enemies. NL If it isn't your turn reduce Confession by half."
+    "DESCRIPTION": "Whenever you take damage or lose HP, deal damage equal to your #yConfession to ALL enemies. NL If it isn't your turn, reduce #yConfession by half."
   },
   {
     "PROPER_NAME": "Light",
@@ -23,6 +23,6 @@
       "Light",
       "light"
     ],
-    "DESCRIPTION": "#yOrb - #yPassive : At the end of your turn gain #b1 #yConfession. NL #yEvoke : Gain #b3 #yConfession."
+    "DESCRIPTION": "#yOrb - #yPassive: At the end of your turn gain #b1 #yConfession. NL #yEvoke: Gain #b3 #yConfession."
   }
 ]

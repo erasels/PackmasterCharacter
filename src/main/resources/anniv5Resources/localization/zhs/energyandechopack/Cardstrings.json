@@ -31,7 +31,7 @@
   },
   "${ModID}:Panacher": {
     "NAME": "混杂",
-    "DESCRIPTION": "每 ${ModID}:创造 5张牌，对所有敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "每 ${ModID}:创造 5张牌， NL 造成 !M! 点群体伤害。"
   },
   "${ModID}:Slowing": {
     "NAME": "迟缓",

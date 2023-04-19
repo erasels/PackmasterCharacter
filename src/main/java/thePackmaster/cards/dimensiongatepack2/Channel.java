@@ -19,7 +19,7 @@ public class Channel extends AbstractDimensionalCardGordian {
         super(ID, 0, CardRarity.SPECIAL, CardType.SKILL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
-        tags.add(MAGIC);
+        
         selfRetain = true;
     }
 
@@ -28,7 +28,7 @@ public class Channel extends AbstractDimensionalCardGordian {
         ArrayList<AbstractCard> targets = new ArrayList<>();
         for (AbstractCard c : p.hand.group
         ) {
-            if (c.hasTag(MAGIC) && c.cost >= 0 && c.costForTurn > 0) {
+            if (c.cost >= 0 && c.costForTurn > 0) {
                 targets.add(c);
             }
         }

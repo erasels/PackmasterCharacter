@@ -17,10 +17,11 @@
     "DESCRIPTION": "#y蓄力 #b6 层及以上时，下次攻击造成双倍伤害，并失去 #b6 层 #y蓄力 。"
   },
   {
-    "PROPER_NAME": "Flurry",
+    "PROPER_NAME": "疾风",
     "NAMES": [
-      "flurry"
+      "flurry",
+      "疾风"
     ],
-    "DESCRIPTION": "本回合Specified effect triggers every time you play 一张牌 本回合。"
+    "DESCRIPTION": "本回合之后每打出一张牌，触发该效果。"
   }
 ]

@@ -214,7 +214,7 @@ public class PackSetupScreen extends CustomScreen {
             case DRAFTING:
                 AbstractCardPack clicked = null;
                 for (AbstractCardPack pack : choiceSet) {
-                    if (pack.previewPackCard.hb.hovered && InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed()) {
+                    if (pack.previewPackCard.hb.hovered && (InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed())) {
                         clicked = pack;
                         break;
                     }
@@ -435,10 +435,15 @@ public class PackSetupScreen extends CustomScreen {
         --packChoices;
 
         choiceSet.clear();
-        while (choiceSet.size() < 3 && !packPool.isEmpty()) {
+        while (choiceSet.size() < PACKS_PER_CHOICE && !packPool.isEmpty()) {
             AbstractCardPack target = packPool.remove(rng.random(packPool.size() - 1));
             target.previewPackCard.noShadow();
             choiceSet.add(target);
+        }
+
+        if (choiceSet.isEmpty()) {
+            mode = PackSetupMode.CONFIRMING;
+            return;
         }
 
         for (AbstractCardPack pack : choiceSet) {

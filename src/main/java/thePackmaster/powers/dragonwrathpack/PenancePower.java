@@ -9,14 +9,10 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.actions.dragonwrathpack.SmiteAction;
-import thePackmaster.cards.dragonwrathpack.Absolution;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -54,7 +50,7 @@ public class PenancePower extends TwoAmountPower implements CloneablePowerInterf
         if (this.amount >= 8){
             amount -= 8;
             CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
-            addToBot(new SmiteAction(owner,new DamageInfo(owner,Power, DamageInfo.DamageType.HP_LOSS)).fromPenance());
+            addToBot(new SmiteAction(owner,new DamageInfo(Wiz.p(),Power, DamageInfo.DamageType.HP_LOSS)).fromPenance());
             Power += 10;
             if (amount < 1){
                 addToBot(new RemoveSpecificPowerAction(owner,owner,this));
@@ -90,7 +86,7 @@ public class PenancePower extends TwoAmountPower implements CloneablePowerInterf
         if (this.amount >= 8){
            amount -= 8;
             CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
-           addToBot(new SmiteAction(owner,new DamageInfo(owner,Power, DamageInfo.DamageType.HP_LOSS)).fromPenance());
+           addToBot(new SmiteAction(owner,new DamageInfo(Wiz.p(),Power, DamageInfo.DamageType.HP_LOSS)).fromPenance());
            Power += 10;
            updateDescription();
         }

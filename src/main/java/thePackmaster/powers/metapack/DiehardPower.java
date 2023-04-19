@@ -18,7 +18,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class DiehardPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("DiehardPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     private static int diehardIDOffset;
 
     public DiehardPower(AbstractCreature owner, int amount) {

@@ -5,12 +5,12 @@
   },
   "${ModID}:RayOfFrost": {
     "NAME": "冰霜光束",
-    "DESCRIPTION": "*魔法 。 NL 造成 !D! 点伤害。 NL 之后本回合每打出一张 *魔法 牌，生成 !M! 个 冰霜 充能球。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] ： NL 生成 !M! 个 冰霜 充能球。"
   },
   "${ModID}:Swipe": {
     "NAME": "挥击",
     "DESCRIPTION": "每有一点缺失的 [E] ， NL 造成 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [" NL (造成 !M! 次。"]
+    "EXTENDED_DESCRIPTION": [" NL (造成 !M! 次)"]
   },
   "${ModID}:Ambition": {
     "NAME": "野心",
@@ -19,11 +19,11 @@
   },
   "${ModID}:Diehard": {
     "NAME": "宁死不屈",
-    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL 下回合，获得1层 虚弱 与 脆弱 。"
+    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL 下回合， NL 获得1层 虚弱 与 脆弱 。"
   },
   "${ModID}:EldritchBlast": {
     "NAME": "怪异冲击",
-    "DESCRIPTION": "*魔法 。 NL 造成 !D! 点伤害。 随机降低手中一张 *魔法 牌的本回合耗能1点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出能力牌时， NL 本牌从弃牌堆返回手牌。"
   },
   "${ModID}:DeathWish": {
     "NAME": "死亡愿望",

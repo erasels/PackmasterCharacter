@@ -1,7 +1,7 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "背包甩掴",
-    "DESCRIPTION": "造成 !D! 点伤害X次。 NL ${ModID}:配合 ： 给予X层 虚弱 与 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL ${ModID}:配合 ： NL 给予X层 虚弱 与 易伤 。"
   },
   "${ModID}:BoosterTutor": {
     "NAME": "奇寻卡包",
@@ -38,6 +38,6 @@
   },
   "${ModID}:Synergize": {
     "NAME": "套路配合",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:配合 ： NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL ${ModID}:配合 ： NL 获得 !B! 点 格挡 。"
   }
 }

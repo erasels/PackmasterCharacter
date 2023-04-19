@@ -13,12 +13,10 @@ import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.hats.specialhats.AlignmentHat;
+import thePackmaster.hats.specialhats.InstantDeathHat;
 import thePackmaster.hats.specialhats.PsychicHat;
 import thePackmaster.hats.specialhats.SpecialHat;
-import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.packs.AlignmentPack;
-import thePackmaster.packs.CoreSetPack;
-import thePackmaster.packs.PsychicPack;
+import thePackmaster.packs.*;
 import thePackmaster.patches.DropdownColorsPatch;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.util.Wiz;
@@ -47,6 +45,7 @@ public class HatMenu {
     static {
         specialHats.put(AlignmentPack.ID, new AlignmentHat());
         specialHats.put(PsychicPack.ID, new PsychicHat());
+        specialHats.put(InstantDeathPack.ID, new InstantDeathHat());
     }
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
@@ -265,12 +264,16 @@ public class HatMenu {
             currentHat = null;
             Hats.addHat(false, "Locked");
             flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[3];
+            showRainbowButton = false;
+            if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
         } else if (name.contains(TEXT[6])) {
             invalidHatSelected = true;
             currentHat = null;
             //SpireAnniversary5Mod.logger.info("Selected a missing hat.");
             Hats.removeHat(false);
             flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[7];
+            showRainbowButton = false;
+            if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
         } else {
             invalidHatSelected = false;
             //SpireAnniversary5Mod.logger.info("Add new hat at index " + index);
