@@ -1174,8 +1174,19 @@ public class SpireAnniversary5Mod implements
             // Growing Affliction (Return to hand)
             if (source == adp() && !target.hasPower(ArtifactPower.POWER_ID))
                 for (AbstractCard c : AbstractDungeon.player.discardPile.group)
-                    if (c.cardID.equals(GrowingAffliction.ID))
+                    if (c.cardID.equals(GrowingAffliction.ID)) {
                         AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(c));
+                        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                            @Override
+                            public void update() {
+                                c.cost = 1;
+                                c.costForTurn = 1;
+                                c.isCostModified = false;
+                                this.isDone = true;
+                            }
+                        });
+
+                    }
 
             //Ring of Pain pack
             if (!target.hasPower(ArtifactPower.POWER_ID)) {
