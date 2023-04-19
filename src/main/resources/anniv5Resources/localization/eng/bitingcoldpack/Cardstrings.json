@@ -13,7 +13,7 @@
   },
   "${ModID}:GrowingAffliction": {
     "NAME": "Growing Affliction",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you apply a debuff, return this from the discard pile to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you apply a debuff, return this from the discard pile to your hand and set its cost to 1."
   },
   "${ModID}:InsultToInjury": {
     "NAME": "Insult to Injury",
