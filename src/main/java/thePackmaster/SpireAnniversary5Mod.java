@@ -52,6 +52,7 @@ import thePackmaster.cards.batterpack.UltimateHomerun;
 import thePackmaster.cards.bitingcoldpack.GrowingAffliction;
 import thePackmaster.cards.cardvars.SecondDamage;
 import thePackmaster.cards.cardvars.SecondMagicNumber;
+import thePackmaster.cards.colorlesspack.GolfBall;
 import thePackmaster.cards.evenoddpack.SwordAndBoard;
 import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.cards.transmutationpack.DimensionalIcicles;
@@ -824,6 +825,7 @@ public class SpireAnniversary5Mod implements
         EnergyCountPatch.energySpentThisCombat = 0;
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
         JediUtil.receiveOnBattleStart(room);
+        CthulhuPack.madnessThisCombat = 0;
     }
 
     @Override
@@ -1082,7 +1084,7 @@ public class SpireAnniversary5Mod implements
             types.put(c.type, types.getOrDefault(c.type, 0) + 1);
             rarities.put(c.rarity, rarities.getOrDefault(c.rarity, 0) + 1);
             colors.put(c.color, colors.getOrDefault(c.color, 0) + 1);
-            if (c.rarity == AbstractCard.CardRarity.SPECIAL && c.color != AbstractCard.CardColor.COLORLESS) { specialRarityNotColorless.add(c.cardID); }
+            if (c.rarity == AbstractCard.CardRarity.SPECIAL && c.color != AbstractCard.CardColor.COLORLESS && !cardParentMap.get(c.cardID).equals(MonsterHunterPack.ID)) { specialRarityNotColorless.add(c.cardID); }
             if (c.type == AbstractCard.CardType.ATTACK && c.baseDamage >= 0 && (boolean)ReflectionHacks.getPrivate(c, AbstractCard.class, "isMultiDamage")) { aoeattack++; }
             if (c.baseBlock >= 0) { block++; }
             if (c.exhaust) { exhaust++; }
@@ -1131,7 +1133,7 @@ public class SpireAnniversary5Mod implements
         }
 
         if (!specialRarityNotColorless.isEmpty()) {
-            SpireAnniversary5Mod.logger.info("Colorless cards that aren't special rarity: " + String.join(", ", specialRarityNotColorless));
+            SpireAnniversary5Mod.logger.info("Colorless cards that aren't special rarity, other than the Monster Hunter cards: " + String.join(", ", specialRarityNotColorless));
         }
         else {
             SpireAnniversary5Mod.logger.info("No colorless cards that aren't special rarity.");

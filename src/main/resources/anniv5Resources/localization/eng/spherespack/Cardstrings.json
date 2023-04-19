@@ -26,7 +26,7 @@
   },
   "${ModID}:Consolidate": {
     "NAME": "Consolidate",
-    "DESCRIPTION": "Remove your first 2 Orbs. NL Gain 1 Focus.",
+    "DESCRIPTION": "Ethereal. NL Remove your first Orb. NL Gain 1 Focus.",
     "UPGRADE_DESCRIPTION": "Remove your first Orb. NL Gain 1 Focus."
   },
   "${ModID}:FrostConversion": {

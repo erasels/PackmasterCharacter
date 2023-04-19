@@ -88,7 +88,7 @@ public class VictoryConfettiEffect extends AbstractGameEffect {
         sb.draw(this.FinalTexture, x-w2/2f, y-h2/2f,
                 w/2f, h/2f,
                 w2, h2,
-                (float) (this.scale)*Settings.scale*this.totalscale, 1.0F*Settings.scale*this.totalscale,
+                this.scale *Settings.scale*this.totalscale, 1.0F*Settings.scale*this.totalscale,
                 this.rotation,
                 0, 0,
                 w2, h2,

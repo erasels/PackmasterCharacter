@@ -15,20 +15,18 @@ public class FlamePillar extends AbstractDimensionalCardGordian {
 
     public FlamePillar() {
         super(ID, 0, CardRarity.SPECIAL, CardType.SKILL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         exhaust = true;
-        tags.add(MAGIC);
-        cardsToPreview = new Channel();
+
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.applyToEnemy(m, new IgnitePower(m, magicNumber));
-        Wiz.atb(new MakeTempCardInHandAction(new Channel()));
 
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

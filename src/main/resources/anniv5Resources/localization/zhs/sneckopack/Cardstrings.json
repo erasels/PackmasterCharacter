@@ -9,7 +9,7 @@
   },
   "${ModID}:TailFlail": {
     "NAME": "尾威",
-    "DESCRIPTION": "对所有敌人造成 !D! ~ !${ModID}:sd! 点伤害。 NL 随机变化 !M! 张手牌的耗能。"
+    "DESCRIPTION": "造成 !D! ~ !${ModID}:sd! 点群体伤害。 NL 随机变化 !M! 张手牌的耗能。"
   },
   "${ModID}:Sneckpot": {
     "NAME": "蛇壶",

@@ -1,0 +1,21 @@
+{
+  "${ModID}:BlockOnPower": {
+    "NAME": "锁挡",
+    "DESCRIPTIONS": [
+      "本回合每当你被攻击，给予攻击者 #b%d 层 #y跟踪锁定 。"
+    ]
+  },
+  "${ModID}:LightningRodPower": {
+    "NAME": "引雷针",
+    "DESCRIPTIONS": [
+      "本回合 #y闪电 充能球必定攻击该单位。",
+	  "#b%d 回合内， #y闪电 充能球必定攻击该单位。"
+    ]
+  },
+  "${ModID}:TunnelVisionPower": {
+    "NAME": "隧洞思维",
+    "DESCRIPTIONS": [
+      "每层 #y跟踪锁定 额外使敌人受到 #b25% 的充能球伤害。"
+    ]
+  }
+}

@@ -28,7 +28,7 @@ public class Improvise extends AbstractGrandOpeningCard {
         int cardsDiscarded = 0;
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.isInnate && c != this) {
-                addToBot((AbstractGameAction) new DiscardSpecificCardAction(c));
+                addToBot(new DiscardSpecificCardAction(c));
                 cardsDiscarded++;
             }
         }

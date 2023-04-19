@@ -1,5 +1,6 @@
 package thePackmaster.cards.dimensiongatepack3;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -16,15 +17,13 @@ public class SelfWound extends AbstractDimensionalCardTowerTactics {
 
     public SelfWound() {
         super(ID, 0, CardRarity.COMMON, CardType.SKILL, CardTarget.SELF);
-        exhaust = true;
-        baseMagicNumber = magicNumber = 3;
-        tags.add(CardTags.HEALING);
+        baseMagicNumber = magicNumber = 4;
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SelfDamageAction(new DamageInfo(p, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-        Wiz.atb(new HealAction(p, p, magicNumber));
+        Wiz.atb(new AddTemporaryHPAction(p,p, magicNumber));
     }
 
     public void upp() {

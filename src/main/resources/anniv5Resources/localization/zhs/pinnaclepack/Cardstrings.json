@@ -14,7 +14,7 @@
   },
   "${ModID}:ArrowStormRareAttack": {
     "NAME": "箭矢风暴",
-    "DESCRIPTION": "消耗 其他攻击手牌。 NL 若成功 消耗 ，对所有敌人造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "消耗 其他攻击手牌。 NL 若成功 消耗 ， NL 造成 !D! 点群体伤害 !M! 次。"
   },
   "${ModID}:MarvelousFeastUncommonPower": {
     "NAME": "盛大宴会",

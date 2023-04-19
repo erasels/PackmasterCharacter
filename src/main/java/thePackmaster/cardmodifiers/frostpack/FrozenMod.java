@@ -7,8 +7,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
 import thePackmaster.util.TexLoader;
@@ -21,7 +23,15 @@ public class FrozenMod extends AbstractCardModifier {
     private boolean originalIsCostModified;
     private boolean hadRetain = false;
     private boolean removalActionQueued = false;
+    private boolean noCostIncrease = false;
     private static final Texture tex = TexLoader.getTexture(SpireAnniversary5Mod.modID + "Resources/images/ui/frozenOverlay.png");
+
+    public FrozenMod() {
+    }
+    public FrozenMod(boolean noIncrease) {
+        noCostIncrease = noIncrease;
+    }
+
 
 
     @Override
@@ -40,7 +50,7 @@ public class FrozenMod extends AbstractCardModifier {
         CardCrawlGame.sound.play("ORB_FROST_CHANNEL", 0.1F);
         originalCost = card.cost;
         originalIsCostModified = card.isCostModified;
-        card.modifyCostForCombat(1);
+        if (!noCostIncrease) card.modifyCostForCombat(1);
         if (card.costForTurn == 0) card.costForTurn++;
         if (card.selfRetain) hadRetain = true;
         card.selfRetain = true;

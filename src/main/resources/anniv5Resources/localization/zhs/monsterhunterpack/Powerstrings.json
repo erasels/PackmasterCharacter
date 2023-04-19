@@ -45,7 +45,8 @@
   "${ModID}:TimePiecePower": {
     "NAME": "时间加速",
     "DESCRIPTIONS": [
-      "每打出 #b12 张牌，获得 #b3 点 #y力量 。已打出 #b",
+      "每打出 #b12 张牌，获得 #b",
+      " 点 #y力量 。已打出 #b",
       " 张。"
     ]
   }

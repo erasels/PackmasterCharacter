@@ -37,7 +37,7 @@
   },
   "${ModID}:EarthlightRay": {
     "NAME": "地球光",
-    "DESCRIPTION": "获得 ${ModID}:蓄力 时，对所有敌人造成 *蓄力 层数点伤害 !M! 次。"
+    "DESCRIPTION": "获得 ${ModID}:蓄力 时，造成 *蓄力 层数点群体伤害 !M! 次。"
   },
   "${ModID}:Spark": {
     "NAME": "火花",

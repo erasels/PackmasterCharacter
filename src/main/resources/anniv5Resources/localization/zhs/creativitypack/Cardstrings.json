@@ -37,7 +37,7 @@
   },
   "${ModID}:AccumulativeStrike": {
     "NAME": "累积性打击",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL 本场战斗每 ${ModID}:创造 过一张{!Upgrades!|0= 非状态}牌，伤害增加 !M! 点。"
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL 本场战斗每 ${ModID}:创造 过一张{!Upgrades!|0= 非状态}牌，伤害加 !M! 。"
   },
   "${ModID}:BrushModalTypeChoice": {
     "NAME": "You should never see this",

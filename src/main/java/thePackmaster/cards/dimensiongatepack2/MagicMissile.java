@@ -19,7 +19,7 @@ public class MagicMissile extends AbstractDimensionalCardGordian {
         super(ID, 1, CardRarity.SPECIAL, AbstractCard.CardType.ATTACK, AbstractCard.CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 5;
         baseMagicNumber = magicNumber = 5;
-        tags.add(MAGIC);
+        
         selfRetain = true;
     }
 

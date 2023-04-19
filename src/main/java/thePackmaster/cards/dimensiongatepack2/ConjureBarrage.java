@@ -18,7 +18,7 @@ public class ConjureBarrage extends AbstractDimensionalCardGordian {
         baseMagicNumber = magicNumber = 3;
         exhaust = true;
         cardsToPreview = new MagicMissile();
-        tags.add(MAGIC);
+        
     }
 
 

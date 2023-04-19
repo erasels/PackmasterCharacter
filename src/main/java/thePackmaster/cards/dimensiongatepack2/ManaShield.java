@@ -14,9 +14,9 @@ public class ManaShield extends AbstractDimensionalCardGordian {
 
     public ManaShield() {
         super(ID, 2, CardRarity.COMMON, CardType.SKILL, CardTarget.SELF);
-        baseBlock = 12;
+        baseBlock = 10;
         baseMagicNumber = magicNumber = 1;
-        tags.add(MAGIC);
+        
         cardsToPreview = new Channel();
     }
 

@@ -12,7 +12,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class OuroborosPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("OuroborosPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private boolean triggeredThisTurn = false;
 
@@ -23,7 +23,8 @@ public class OuroborosPower extends AbstractPackmasterPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount < Wiz.p().currentBlock && !triggeredThisTurn) {
+        if (damageAmount <= Wiz.p().currentBlock && !triggeredThisTurn) {
+            Wiz.applyToSelf(new StrengthPower(Wiz.p(), amount));
             triggeredThisTurn = true;
             this.flash();
             updateDescription();
@@ -33,20 +34,12 @@ public class OuroborosPower extends AbstractPackmasterPower {
 
     @Override
     public void atEndOfRound() {
-
-        if (triggeredThisTurn) {
-            Wiz.applyToSelf(new StrengthPower(Wiz.p(), amount));
-        }
         triggeredThisTurn = false;
         updateDescription();
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-
-        if (triggeredThisTurn) {
-            Wiz.applyToSelf(new StrengthPower(Wiz.p(), amount));
-        }
         triggeredThisTurn = false;
         updateDescription();
     }
