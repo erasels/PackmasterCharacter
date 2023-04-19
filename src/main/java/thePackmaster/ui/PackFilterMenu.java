@@ -1,5 +1,6 @@
 package thePackmaster.ui;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.options.DropdownMenu.DropdownColoring;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -13,7 +14,6 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.patches.DropdownColorsPatch;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 
@@ -61,7 +61,7 @@ public class PackFilterMenu {
 
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setViewedPack(index)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
-        DropdownColorsPatch.DropdownRowToColor.function.set(dropdown, (index) -> getFilterConfig(packs.get(index).packID) ? null : DISABLED_COLOR);
+        DropdownColoring.RowToColor.function.set(dropdown, (index) -> getFilterConfig(packs.get(index).packID) ? null : DISABLED_COLOR);
 
         checkbox = new FixedModLabeledToggleButton(TEXT[0], CHECKBOX_X, CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont, true, null, (label) -> {
         },
