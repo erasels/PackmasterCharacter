@@ -214,7 +214,7 @@ public class PackSetupScreen extends CustomScreen {
             case DRAFTING:
                 AbstractCardPack clicked = null;
                 for (AbstractCardPack pack : choiceSet) {
-                    if (pack.previewPackCard.hb.hovered && InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed()) {
+                    if (pack.previewPackCard.hb.hovered && (InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed())) {
                         clicked = pack;
                         break;
                     }
