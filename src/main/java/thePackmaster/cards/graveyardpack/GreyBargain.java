@@ -38,8 +38,7 @@ public class GreyBargain
   public void use(AbstractPlayer p, AbstractMonster m) {
 	  if(p.hand.size()>0) {
 		  Predicate<AbstractCard> classy = card -> !(card.color.equals(AbstractCard.CardColor.COLORLESS) || card.color.equals(AbstractCard.CardColor.CURSE) || card.type.equals(AbstractCard.CardType.CURSE) || card.type.equals(AbstractCard.CardType.STATUS));
-		  AbstractDungeon.actionManager.addToBottom(new MoveCardsAction(p.drawPile, p.exhaustPile, classy));
-		  AbstractDungeon.actionManager.addToBottom(new ShuffleAction(p.drawPile));
+		  AbstractDungeon.actionManager.addToBottom(new MoveCardsAction(p.drawPile, p.exhaustPile, classy, (c) -> c.forEach(card -> { p.drawPile.removeCard(card); p.drawPile.addToRandomSpot(card); })));
 		  AbstractDungeon.actionManager.addToBottom(new ExhaustAction(p,p,1,false));
 	  }
 	  if(this.upgraded) {

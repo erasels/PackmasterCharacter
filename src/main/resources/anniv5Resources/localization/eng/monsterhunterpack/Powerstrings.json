@@ -45,7 +45,8 @@
   "${ModID}:TimePiecePower": {
     "NAME": "Time Piece Power",
     "DESCRIPTIONS": [
-      "Gain #b3 #yStrength every 12 cards you play. Cards played: #b",
+      "Gain #b",
+      " #yStrength every 12 cards you play. Cards played: #b",
       ""
     ]
   }

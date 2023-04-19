@@ -13,7 +13,7 @@ public class Ouroboros extends AbstractDimensionalCardInscryp {
     public final static String ID = makeID("Ouroboros");
 
     public Ouroboros() {
-        super(ID, 1, CardRarity.UNCOMMON, CardType.POWER, AbstractCard.CardTarget.SELF);
+        super(ID, 1, CardRarity.RARE, CardType.POWER, AbstractCard.CardTarget.SELF);
     }
 
 

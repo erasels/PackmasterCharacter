@@ -3,22 +3,28 @@
     "NAME": "Nameless Mist",
     "DESCRIPTIONS": [
       "Whenever you play a card this turn, gain #b",
-      " #yBlock."
-    ]
-  },
-  "${ModID}:PageOfTheDeadPower": {
-    "NAME": "Page of the Dead",
-    "DESCRIPTIONS": [
-      "The next #b",
-      " Attack(s) played that cost #b2 or more are played twice."
+      " #yTemporary #yHP."
     ]
   },
   "${ModID}:AllSeeingPower": {
-    "NAME": "All Seeing",
+    "NAME": "Being Watched",
     "DESCRIPTIONS": [
-      "At the end of each turn, Scry #b",
-      " and take ",
-      " damage."
+      "At the start of each turn, lose #b",
+      " #ySanity."
+    ]
+  },
+  "${ModID}:AllSeeingPowerTriggerOnCard": {
+    "NAME": "Eldritch Pact+",
+    "DESCRIPTIONS": [
+      "Whenever you lose #ySanity, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:AllSeeingPowerTriggerOnTurn": {
+    "NAME": "Eldritch Pact",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yBlock."
     ]
   },
   "${ModID}:EndOfDaysPower": {
@@ -26,6 +32,12 @@
     "DESCRIPTIONS": [
       "At the end of your turn, #yChannel #b",
       " #yDark for each [E] unspent."
+    ]
+  },
+  "${ModID}:SanityPower": {
+    "NAME": "Sanity",
+    "DESCRIPTIONS": [
+      "While you have negative #ySanity, lose #b1 at the start of each turn. NL For every #b5 #ySanity lost, add a #yLunacy to your hand, then gain #b5 #ySanity."
     ]
   }
 }

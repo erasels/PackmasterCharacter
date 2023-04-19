@@ -7,14 +7,14 @@
       " #y力量 。"
       ]
   },
-  "${ModID}:RecallPower": {
-    "NAME": "召回",
+  "${ModID}:ArcingEnergyPower": {
+    "NAME": "弧能量",
     "DESCRIPTIONS": [
       "每回合前 ",
       "#b1 次",
       "#b",
       " 次",
-      " #y增幅 时，选择将一张消耗堆的牌返回手牌，将其附加 #y抹除 。",
+      " #y增幅 时，获得 [E] 。",
       " NL (本回合已触发 #b",
       " 次。)",
       " 次。)",

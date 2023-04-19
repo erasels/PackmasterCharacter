@@ -13,7 +13,7 @@
     "DESCRIPTION": "${ModID}:增变化 时， NL 获得 !M! 点 力量 。"
   },
   "${ModID}:Drench": {
-    "NAME": "湿透",
+    "NAME": "浸透",
     "DESCRIPTION": "${ModID}:固在 ： 获得 !B! 点 格挡 。 NL ${ModID}:固在 ： 造成 !D! 点伤害。"
   },
   "${ModID}:FrozenCapsule": {

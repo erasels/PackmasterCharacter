@@ -2,7 +2,7 @@
   "${ModID}:MagicMissilePower": {
     "NAME": "Magical Power",
     "DESCRIPTIONS": [
-      "#yMagic cards deal #b",
+      "#yMagic #yMissiles deal #b",
       " more damage this turn."
     ]
   },
@@ -10,15 +10,15 @@
     "NAME": "Arsenal Gear",
     "DESCRIPTIONS": [
       "At the start of your next #b",
-      " turn(s), add a random #yUncommon or #yRare card to your hand. It costs #b0 and gains #yExhaust."
+      " turn(s), add a random #yUncommon or #yRare card to your hand. It costs #b1 less this combat."
     ]
   },
   "${ModID}:DaggerstormPower": {
     "NAME": "Daggerstorm",
     "DESCRIPTIONS": [
-      "#b0-Cost #yExhaust cards are played #b",
-      " additional times.",
-      " additional time."
+      "When you generate a non-Shiv card, create and play a #yShiv.",
+      "When you generate a non-Shiv card, create and play #b",
+      " #yShivs."
     ]
   }
 }

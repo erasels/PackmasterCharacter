@@ -15,7 +15,7 @@ public class Focus extends AbstractMonsterHunterCard {
 
     private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 6;
     private static final int UPG_BLOCK = 2;
 
     public Focus() {

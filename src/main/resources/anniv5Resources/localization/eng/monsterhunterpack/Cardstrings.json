@@ -1,7 +1,7 @@
 {
   "${ModID}:HuntingStrike": {
     "NAME": "Hunting Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deals double damage to elites and bosses."
+    "DESCRIPTION": "Deal !D! damage. NL Deals double damage to Elites and Bosses."
   },
   "${ModID}:Focus": {
     "NAME": "Track",
@@ -17,7 +17,7 @@
   },
   "${ModID}:HuntingInstincts": {
     "NAME": "Hunter's Instincts",
-    "DESCRIPTION": "Gain !B! Block. NL Gains double Block if facing an elite or boss."
+    "DESCRIPTION": "Gain !B! Block. NL Gains double Block if facing an Elite or Boss."
   },
   "${ModID}:SkullClub": {
     "NAME": "Skull Club",
@@ -40,7 +40,7 @@
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",
-    "DESCRIPTION": "Gain !M! Block at the end of your turn. NL Whenever you are attacked, deal !M! damage back."
+    "DESCRIPTION": "At the end of your turn, gain !M! Block. NL Whenever you are attacked, deal !M! damage back."
   },
   "${ModID}:InfernoDaggers": {
     "NAME": "Inferno Daggers",
@@ -100,7 +100,7 @@
   },
   "${ModID}:SpireSpear": {
     "NAME": "Spire Spear",
-    "DESCRIPTION": "Deal !D! damage. !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "${ModID}:SpireShield": {
     "NAME": "Spire Shield",
@@ -108,11 +108,11 @@
   },
   "${ModID}:CarvingKnife": {
     "NAME": "Carving Knife",
-    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss enemy, gain its weapon or armor card and remove this from your deck permanently. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an Elite or Boss, gain its weapon or armor card and remove this from your deck permanently. NL Exhaust."
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "Awakened Dagger",
-    "DESCRIPTION": "Deal !D! damage. If Fatal, heal to full HP. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, heal to full HP. NL Exhaust."
   },
   "${ModID}:HuntingContract": {
     "NAME": "Hunting Contract",
@@ -120,11 +120,11 @@
   },
   "${ModID}:HunterRank": {
     "NAME": "Hunter Rank",
-    "DESCRIPTION": "Gain !M! Strength. Increases by 1 for each Elite and Boss enemy you've defeated."
+    "DESCRIPTION": "Gain !M! Strength. NL Increases by 1 for each Elite and Boss enemy you've defeated."
   },
   "${ModID}:TranqBomb": {
     "NAME": "Tranquilizer Bomb",
-    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target enemy loses !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Enemy loses !M! Strength. NL Exhaust."
   },
   "${ModID}:Paintball": {
     "NAME": "Paintball",

@@ -1,6 +1,5 @@
 package thePackmaster.cards.darksoulspack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
 
 public class CloranthyRing extends AbstractDarkSoulsCard {
     public final static String ID = makeID("CloranthyRing");
@@ -16,7 +14,7 @@ public class CloranthyRing extends AbstractDarkSoulsCard {
 
     public CloranthyRing() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         this.exhaust=true;
     }
 

@@ -22,7 +22,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class AwakenDeathPower extends AbstractPackmasterPower implements OnPlayerDeathPower, CloneablePowerInterface {
     public static final String POWER_ID = makeID("AwakenDeathPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 
     public AwakenDeathPower(AbstractCreature owner, int amount) {

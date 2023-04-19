@@ -34,10 +34,10 @@ public class BagOfHolding extends AbstractPackmasterRelic {
     public void atTurnStart() {
         if (!this.grayscale) {
             flash();
-            addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToTop(new GainEnergyAction(1));
+            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            addToBot(new GainEnergyAction(1));
             this.counter--;
-            this.incrementEnergyStat();
+            incrementEnergyStat();
 
             if (this.counter <= 0) {
                 this.counter = -1;
@@ -76,7 +76,7 @@ public class BagOfHolding extends AbstractPackmasterRelic {
         // Colorize the starter relic's name. Thanks Bard!!! Thanks Nelly!!!!! HAPPY BIRTHDAY, STS MODDING!!!
         String name = new HandyHaversack().name;
         StringBuilder sb = new StringBuilder();
-        if(Settings.language==Settings.language.ZHS||Settings.language==Settings.language.ZHT){
+        if(Settings.language==Settings.GameLanguage.ZHS ||Settings.language==Settings.GameLanguage.ZHT){
             sb.append("[#").append(SpireAnniversary5Mod.characterColor.toString()).append("]").append(name).append("[]");
         }else {
             for (String word : name.split(" ")) {

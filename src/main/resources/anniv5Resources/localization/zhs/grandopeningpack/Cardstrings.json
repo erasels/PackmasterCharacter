@@ -17,7 +17,7 @@
   },
   "${ModID}:DashIn": {
     "NAME": "急冲冲",
-    "DESCRIPTION": "固有 。 NL 获得 !B! 点 格挡 。 NL 造成 !D! 群体点伤害X次。",
+    "DESCRIPTION": "固有 。 NL 获得 !B! 点 格挡 。 NL 造成 !D! 点群体伤害X次。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 获得 !B! 点 格挡 。 NL 造成 !D! 点群体伤害X+1次。"
   },
   "${ModID}:InstinctiveThinking": {
