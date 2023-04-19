@@ -1,21 +1,15 @@
 package thePackmaster.stances.cthulhupack;
 
-import basemod.devcommands.draw.Draw;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.Madness;
-import com.megacrit.cardcrawl.cards.green.Nightmare;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
@@ -26,8 +20,6 @@ import thePackmaster.util.Wiz;
 import thePackmaster.vfx.downfallpack.AncientStanceParticleEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.applyToSelf;
-import static thePackmaster.util.Wiz.atb;
 
 
 public class NightmareStance extends AbstractStance {
@@ -94,9 +86,12 @@ public class NightmareStance extends AbstractStance {
                 }
             }
         });
-
     }
 
+    @Override
+    public void onEndOfTurn() {
+        Wiz.atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
+    }
 
     @Override
     public void updateDescription() {
