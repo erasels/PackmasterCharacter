@@ -5,8 +5,6 @@ import com.megacrit.cardcrawl.cards.red.InfernalBlade;
 import com.megacrit.cardcrawl.cards.red.PerfectedStrike;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import thePackmaster.actions.darksoulspack.CountSelfDebuffsAction;
 import thePackmaster.util.Wiz;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -33,9 +31,5 @@ public class MorionBlade extends AbstractDarkSoulsCard{
 
     public void upp(){
         upgradeDamage(UPGRADE_DAMAGE);
-    }
-
-    public String cardArtCopy() {
-        return PerfectedStrike.ID;
     }
 }
