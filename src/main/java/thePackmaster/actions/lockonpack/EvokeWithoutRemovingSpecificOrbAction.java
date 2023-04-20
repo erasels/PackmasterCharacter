@@ -32,7 +32,7 @@ public class EvokeWithoutRemovingSpecificOrbAction
     {
         for (AbstractOrb o : Wiz.p().orbs)
         {
-            if (o.ID.equals(orbID))
+            if (orbID.equals(o.ID))
             {
                 return o;
             }
