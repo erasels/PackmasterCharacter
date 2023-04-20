@@ -33,7 +33,7 @@
   },
   "${ModID}:MirrorsCurse": {
     "NAME": "Mirror's Curse",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify adjacent cards: \"Play a copy of *Mirror's *Curse.\" NL Exhaust."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL ${ModID}:Modify adjacent cards: \"Play a copy of this *Mirror's *Curse.\" NL Exhaust."
   },
   "${ModID}:BattleFocus": {
     "NAME": "Battle Focus",
