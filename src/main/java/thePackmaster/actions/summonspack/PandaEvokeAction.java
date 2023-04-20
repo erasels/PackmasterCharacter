@@ -67,7 +67,7 @@ public class PandaEvokeAction extends AbstractGameAction {
             panda.cX = targetX;
             panda.cY = targetY;
             if (target != null && target.currentHealth > 0 && adp() != null) {
-                DamageInfo info = new DamageInfo(adp(), panda.evokeAmount, DamageInfo.DamageType.THORNS);
+                DamageInfo info = new DamageInfo(adp(), Panda.applyLockOn(target, panda.evokeAmount), DamageInfo.DamageType.THORNS);
                 att(new DamageAction(target, info, AttackEffect.BLUNT_HEAVY, true));
             }
             AbstractDungeon.effectList.add(new PandaExitEffect(panda));

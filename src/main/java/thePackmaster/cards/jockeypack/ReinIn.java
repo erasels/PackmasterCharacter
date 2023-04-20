@@ -3,7 +3,7 @@ package thePackmaster.cards.jockeypack;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.cthulhupack.NamelessMistPower;
+import thePackmaster.powers.jockeypack.ReinInPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
@@ -20,7 +20,7 @@ public class ReinIn extends AbstractJockeyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DrawCardAction(1));
-        applyToSelf(new NamelessMistPower(p, magicNumber));
+        applyToSelf(new ReinInPower(p, magicNumber));
     }
 
     public void upp() {
