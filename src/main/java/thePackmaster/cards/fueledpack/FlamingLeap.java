@@ -40,7 +40,7 @@ public class FlamingLeap extends AbstractFueledCard {
             public void update() {
                 att(new DrawCardAction(magicNumber));
                 att(new GainEnergyAction(1));
-
+                isDone = true;
             }
         };
         atb(new ConsumeToDoAction(action));
