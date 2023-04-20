@@ -18,7 +18,7 @@
   "${ModID}:MayhemForm": {
     "NAME": "Unrelenting Form",
     "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] .",
-    "UPGRADE_DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] ."
+    "UPGRADE_DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain !M! [E] ."
   },
   "${ModID}:RippedPecs": {
     "NAME": "Ripped Pecs",

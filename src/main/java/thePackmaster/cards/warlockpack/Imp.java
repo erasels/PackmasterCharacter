@@ -1,6 +1,5 @@
 package thePackmaster.cards.warlockpack;
 
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AutoplayField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
@@ -29,7 +28,7 @@ public class Imp extends AbstractWarlockCard {
     public Imp() {
         super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ALL_ENEMY, CardColor.COLORLESS);
         magicNumber = baseMagicNumber = DAMAGE;
-        secondDamage = baseSecondMagic = DAMAGE_INCREASE;
+        secondMagic = baseSecondMagic = DAMAGE_INCREASE;
         exhaust = true;
         this.applyPowers();
     }
@@ -49,6 +48,8 @@ public class Imp extends AbstractWarlockCard {
                 cards.addAll(AbstractDungeon.player.hand.group);
                 cards.addAll(AbstractDungeon.player.drawPile.group);
                 cards.addAll(AbstractDungeon.player.discardPile.group);
+                cards.addAll(AbstractDungeon.player.limbo.group);
+                cards.addAll(AbstractDungeon.player.exhaustPile.group);
 
                 for (AbstractCard c : cards) {
                     if (c instanceof Imp) {

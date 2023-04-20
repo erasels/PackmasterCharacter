@@ -1,0 +1,43 @@
+{
+  "${ModID}:AC": {
+    "NAME": "AC",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Add a *DC{!Upgrades!|>0=+} to your hand."
+  },
+  "${ModID}:DC": {
+    "NAME": "DC",
+    "DESCRIPTION": "{@@}Retain. NL Channel a Lightning. NL Trigger its Evoke{!Upgrades!|>0= and passive} effect{!Upgrades!|>0=s}. NL Exhaust."
+  },
+  "${ModID}:BlockOn": {
+    "NAME": "Block-On",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! Lock-On back."
+  },
+  "${ModID}:Bruteforce": {
+    "NAME": "Bruteforce",
+    "DESCRIPTION": "{@@}Evoke your rightmost Lightning !M! times, hitting ALL enemies.{!Upgrades!|0= NL Exhaust.|@=}"
+  },
+  "${ModID}:LightsOut": {
+    "NAME": "Lights Out",
+    "DESCRIPTION": "Replace your Lightning with Dark. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Evoke your Lightning and Channel Dark for each Lightning Evoked. NL Exhaust."
+  },
+  "${ModID}:GlockOn": {
+    "NAME": "Glock-On",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:LocknLoad": {
+    "NAME": "Lock'n'Load",
+    "DESCRIPTION": "Apply !M! Lock-On. NL Channel !M! Lightning."
+  },
+  "${ModID}:Reiji": {
+    "NAME": "Reiji",
+    "DESCRIPTION": "{@@}Innate. NL Apply !${ModID}:m2! Lock-On.{!M!|>0= NL If the target already had Lock-On, gain !M! Focus.} NL Exhaust."
+  },
+  "${ModID}:LightningRod": {
+    "NAME": "Lightning Rod",
+    "DESCRIPTION": "{@@}Lightning targets this enemy for !M! turn{!M!|>1=s}. NL Channel a Lightning."
+  },
+  "${ModID}:TunnelVision": {
+    "NAME": "Tunnel Vision",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Apply !M! Lock-On to ALL enemies. NL }Lock-On further increases Orb damage by 25% per additional Lock-On."
+  }
+}

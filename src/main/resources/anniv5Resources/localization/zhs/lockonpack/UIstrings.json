@@ -1,0 +1,20 @@
+{
+  "${ModID}:LockonPack": {
+    "TEXT": [
+      "雷霆定位",
+      "锁定你的敌人来发挥闪电的潜力！",
+      "Jedi"
+    ]
+  },
+  "${ModID}:LockonPackHat": {
+    "TEXT": [
+      "There is no hat. But it could be anything. Shocking, I know. HP-style scar? Golden eyepatch? Irish cap?",
+      "N/A"
+    ]
+  },
+  "${ModID}:GlockOnModifier": {
+    "TEXT": [
+      "%s NL 伤害受 集中 与 ${ModID}:锁定 加成。"
+    ]
+  }
+}

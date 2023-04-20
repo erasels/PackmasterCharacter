@@ -65,6 +65,12 @@ public class Wiz {
         }
     }
 
+    public static int getLogicalPowerAmount(AbstractCreature ac, String powerId) {
+        AbstractPower pow = ac.getPower(powerId);
+        if (pow == null) return 0;
+        return pow.amount;
+    }
+
     public static ArrayList<AbstractCard> getAllCardsInCardGroups(boolean includeHand, boolean includeExhaust) {
         ArrayList<AbstractCard> masterCardsList = new ArrayList<>();
         masterCardsList.addAll(AbstractDungeon.player.drawPile.group);

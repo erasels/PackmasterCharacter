@@ -2,7 +2,7 @@
   "${ModID}:OuroborosPower": {
     "NAME": "Ouroboros",
     "DESCRIPTIONS": [
-      "At the end of each turn, if you fully blocked any source of damage, gain #b",
+      "The first time you fully block any source of damage each turn, gain #b",
       " #yStrength.",
       " NL Has triggered this turn."
     ]
@@ -11,6 +11,13 @@
     "NAME": "Ablation",
     "DESCRIPTIONS": [
       "At the end of your turn, gain #b%s #yTemporary #yHP, then reduce this by #b1."
+    ]
+  },
+  "${ModID}:MantisStrikePower": {
+    "NAME": "Mantis Recoil",
+    "DESCRIPTIONS": [
+      "When you fully block any source of damage this turn, deal #b",
+      " damage to a random enemy."
     ]
   }
 }

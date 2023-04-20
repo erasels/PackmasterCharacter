@@ -24,7 +24,7 @@ CreativityPack	Tokens
 CthulhuPack	None
 DefectPack	Orbs
 DimensionGatePack	Debuffs
-DimensionGate2Pack	Magic
+DimensionGate2Pack	None
 DimensionGate3Pack	None
 DistortionPack	Exhaust
 DownfallPack	Stances,Orbs
@@ -48,10 +48,11 @@ IntoTheBreachPack	None
 IntriguePack	None
 IroncladPack	Strength
 LegacyPack	Exhaust
+LockonPack	Orbs
 JockeyPack	None
 MadSciencePack	Orbs
 MarisaPack	Exhaust,Attacks
-MetaPack	Magic
+MetaPack	None
 MonsterHunterPack	None
 OdditiesPack	None
 OrbPack	Orbs
@@ -79,7 +80,7 @@ SummonsPack	Orbs
 ThieveryPack	Strength
 TransmutationPack	None
 UtilityPack	Orbs
-WardenPack	Magic
+WardenPack	None
 WarlockPack	Exhaust
 WarriorPack	Debuffs,Attacks
 WatcherPack	None

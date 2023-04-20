@@ -22,7 +22,7 @@
   },
   "${ModID}:Elephant": {
     "NAME": "大象",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 受到 !M! 点伤害。",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 受到 !M! 点伤害。",
     "FLAVOR": "我最喜欢的牌，希望你也喜欢。"
   },
   "${ModID}:FireSpirit": {
@@ -42,7 +42,7 @@
   },
   "${ModID}:SwarmOfBees": {
     "NAME": "蜂群",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 生成 一个 ${ModID}:蜂群 充能球。",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 生成 一个 ${ModID}:蜂群 充能球。",
     "FLAVOR": "很吓人。"
   },
   "${ModID}:Specialist": {

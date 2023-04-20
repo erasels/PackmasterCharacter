@@ -17,7 +17,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class ConjurePackPower extends AbstractPackmasterPower implements NonStackablePower {
     public static final String POWER_ID = makeID("ConjurePackPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private ArrayList<AbstractCard> cards = new ArrayList<>();
     private AbstractCardPack pack;

@@ -1,0 +1,44 @@
+{
+  "${ModID}:Needle": {
+    "NAME": "针",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 预见 !M! ， NL 每丢弃一张技能牌， NL 获得3层 ${ModID}:精确 。"
+  },
+  "${ModID}:Lock": {
+    "NAME": "锁锢",
+    "DESCRIPTION": "保留 一张手牌，并在打出它前每回合获得 !M! 点 格挡 。"
+  },
+  "${ModID}:Curtain": {
+    "NAME": "遮帘",
+    "DESCRIPTION": "预见 !M! ， NL 每丢弃一张牌， NL 获得 !B! 点 格挡 。"
+  },
+  "${ModID}:Mirror": {
+    "NAME": "镜像",
+    "DESCRIPTION": "获得抽牌堆顶部牌的一张复制品。"
+  },
+  "${ModID}:Nail": {
+    "NAME": "长钉",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本牌被 消耗 ， NL 获得 !M! 层 ${ModID}:精确 。"
+  },
+  "${ModID}:Thread": {
+    "NAME": "线",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL ${ModID}:取 一张技能牌。 NL 将本牌洗入抽牌堆。"
+  },
+  "${ModID}:Cloud": {
+    "NAME": "云",
+    "DESCRIPTION": "本回合少受到50%攻击伤害。 NL 消耗 弃牌堆 一张牌。",
+    "UPGRADE_DESCRIPTION": "本回合少受到50%攻击伤害。 NL 消耗 抽或弃牌堆 一张牌。"
+  },
+  "${ModID}:SlashDraw": {
+    "NAME": "居合之抽",
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL 抽一张牌， NL 若为一张攻击， NL 再打出本牌 {!M!|2=2次|3=3次|@=!M! 次} 。"
+  },
+  "${ModID}:PathToVictory": {
+    "NAME": "胜利之路",
+    "DESCRIPTION": "将任意张手牌放回抽牌堆顶部，每张使你获得 !M! 层 ${ModID}:精确 。"
+  },
+  "${ModID}:AnotherMoment": {
+    "NAME": "另一时刻",
+    "DESCRIPTION": "虚无 。 NL 每回合首次打出一张技能牌时，将其 消耗 并获得1点 敏捷 。",
+    "UPGRADE_DESCRIPTION": "每回合首次打出一张技能牌时，将其 消耗 并获得1点 敏捷 。"
+  }
+}

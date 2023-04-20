@@ -39,7 +39,7 @@ public class RipCardAction extends AbstractGameAction {
             artCard = rippedCard.makeStatEquivalentCopy();
             artCard.rawDescription = "";
             artCard.initializeDescription();
-            artCard.target = artCard.cardID == ArtAttack.ID ? artCard.target : AbstractCard.CardTarget.NONE;
+            artCard.target = artCard.cardID.equals(ArtAttack.ID) ? artCard.target : AbstractCard.CardTarget.NONE;
             artCard.cost = rippedCard.cost;
             artCard.costForTurn = rippedCard.costForTurn;
             AllCardsRippablePatches.AbstractCardFields.ripStatus.set(artCard, AllCardsRippablePatches.RipStatus.ART);

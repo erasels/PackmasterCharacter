@@ -1,7 +1,7 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "背包甩掴",
-    "DESCRIPTION": "造成 !D! 点伤害X次。 NL ${ModID}:配合 ： 给予X层 虚弱 与 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL ${ModID}:配合 ： NL 给予X层 虚弱 与 易伤 。"
   },
   "${ModID}:BoosterTutor": {
     "NAME": "奇寻卡包",
