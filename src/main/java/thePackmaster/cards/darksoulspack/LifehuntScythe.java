@@ -1,11 +1,14 @@
 package thePackmaster.cards.darksoulspack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.red.Cleave;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -25,7 +28,9 @@ public class LifehuntScythe extends AbstractDarkSoulsCard{
     }
 
     public void use(AbstractPlayer p, AbstractMonster m){
-        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        this.addToBot(new SFXAction("ATTACK_HEAVY"));
+        this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         Wiz.applyToSelf(new FrailPower(p, magicNumber, false));
     }
 

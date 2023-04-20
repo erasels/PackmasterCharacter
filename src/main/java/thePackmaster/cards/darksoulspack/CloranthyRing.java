@@ -1,5 +1,6 @@
 package thePackmaster.cards.darksoulspack;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,10 +20,9 @@ public class CloranthyRing extends AbstractDarkSoulsCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DrawCardAction(this.magicNumber));
-
         for (int i = 0; i < Wiz.countDebuffs(p); i++)
             this.addToBot(new GainEnergyAction(1));
+        Wiz.atb(new DrawCardAction(this.magicNumber));
     }
 
     public void upp() {

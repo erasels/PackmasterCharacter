@@ -3,6 +3,7 @@ package thePackmaster.cards.darksoulspack;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.AnimateJumpAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -31,6 +32,7 @@ public class SmoughsHammer extends AbstractDarkSoulsCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        Wiz.atb(new AnimateJumpAction(p));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, new Color(1.0F, 1.0F, 0.1F, 0.0F))));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
 
