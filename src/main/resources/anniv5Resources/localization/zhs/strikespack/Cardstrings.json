@@ -31,7 +31,7 @@
   },
   "${ModID}:Backstrike": {
     "NAME": "回身打击",
-    "DESCRIPTION": "固有。 NL 造成 !D! 点伤害。 NL ${ModID}:修改 所有攻击手牌： NL \"牌名加上打击\"。 NL 消耗 。"
+    "DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL ${ModID}:修改 所有攻击手牌： NL \"牌名加上打击\"。 NL 消耗 。"
   },
   "${ModID}:LightningStrike": {
     "NAME": "闪电打击",

@@ -17,7 +17,7 @@
   },
   "${ModID}:BugOut": {
     "NAME": "生虫",
-    "DESCRIPTION": "${ModID}:滋生 。 NL 每有一枚 [bugIcon] ，获得1点 力量 与 敏捷 。"
+    "DESCRIPTION": "${ModID}:滋生 。 NL 每有一枚 [bugIcon] ， NL 获得1点 力量 与 敏捷 。"
   },
   "${ModID}:ScarabShield": {
     "NAME": "金龟子壳",
