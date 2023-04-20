@@ -29,7 +29,7 @@
   },
   "${ModID}:Chronobooster": {
     "NAME": "Chronobooster",
-    "DESCRIPTION": "{@@}Unplayable. NL Whenever you play an adjacent card, play it twice and {!Upgrades!|>0=discard|@=Exhaust} this."
+    "DESCRIPTION": "{@@}Unplayable. NL Whenever you play an adjacent card, play it twice, Exhaust it and {!Upgrades!|>0=discard|@=Exhaust} this."
   },
   "${ModID}:MirrorsCurse": {
     "NAME": "Mirror's Curse",
