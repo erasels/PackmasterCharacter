@@ -44,6 +44,8 @@ public class SmoughsHammer extends AbstractDarkSoulsCard {
 
     public void upp() {
         upgradeDamage(5);
-        upgradeMagicNumber(-1);
+        if(magicNumber > 0) {
+            upgradeMagicNumber(-1);
+        }
     }
 }
