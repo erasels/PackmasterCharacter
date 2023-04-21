@@ -30,7 +30,7 @@
   "${ModID}:EmbraceHollowing": {
     "NAME": "Embrace Hollowing",
     "DESCRIPTION": "Gain !M! Strength for each unique debuff you have.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Repeat for each unique debuff you have."
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength for each unique debuff you have + !M!."
   },
   "${ModID}:SmoughsHammer": {
     "NAME": "Smough's Hammer",
