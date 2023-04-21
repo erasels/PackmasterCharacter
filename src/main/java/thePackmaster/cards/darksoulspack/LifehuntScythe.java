@@ -37,9 +37,4 @@ public class LifehuntScythe extends AbstractDarkSoulsCard{
     public void upp(){
         upgradeDamage(UPGRADE_DAMAGE);
     }
-
-    @Override
-    public String cardArtCopy() {
-        return Cleave.ID;
-    }
 }
