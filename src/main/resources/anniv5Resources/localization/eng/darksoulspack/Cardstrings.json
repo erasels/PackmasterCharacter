@@ -39,6 +39,6 @@
   },
   "${ModID}:CloranthyRing": {
     "NAME": "Cloranthy Ring",
-    "DESCRIPTION": "Gain [E]  for each unique debuff you have. NL Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Gain [E] for each unique debuff you have. NL Draw !M! cards. NL Exhaust."
   }
 }
