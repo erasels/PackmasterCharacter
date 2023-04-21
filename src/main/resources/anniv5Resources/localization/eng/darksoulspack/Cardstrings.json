@@ -34,8 +34,7 @@
   },
   "${ModID}:SmoughsHammer": {
     "NAME": "Smough's Hammer",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Weak and Frail. NL Gain !M! Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !M! Weak, Frail and Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Weak and Frail. NL Gain !M! Vulnerable."
   },
   "${ModID}:CloranthyRing": {
     "NAME": "Cloranthy Ring",
