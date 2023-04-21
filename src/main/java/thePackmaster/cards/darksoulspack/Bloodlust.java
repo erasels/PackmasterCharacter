@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.*;
+import thePackmaster.actions.highenergypack.AllEnemyApplyPowerAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
@@ -33,11 +34,7 @@ public class Bloodlust extends AbstractDarkSoulsCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
 
         Wiz.applyToSelf(new VulnerablePower(p, 1, false));
-        for (AbstractMonster c : AbstractDungeon.getMonsters().monsters){
-            if (!c.isDead && !c.isDying) {
-                this.addToBot(new ApplyPowerAction(c, p, new VulnerablePower(c, this.magicNumber, false)));
-            }
-        }
+        Wiz.atb(new AllEnemyApplyPowerAction(p, magicNumber, (q) -> new VulnerablePower(q, magicNumber, false)));
     }
 
     public void upp() {
