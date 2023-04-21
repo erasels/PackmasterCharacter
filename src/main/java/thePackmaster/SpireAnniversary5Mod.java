@@ -1155,7 +1155,6 @@ public class SpireAnniversary5Mod implements
                 .map(e -> e.getKey() + ": " + e.getValue())
                 .collect(Collectors.joining("\n"));
         SpireAnniversary5Mod.logger.info("Pack count by author:\n" + authorCounts);
-
     }
 
     private static <T> String getSummaryString(HashMap<T, Integer> m, Function<T, Integer> getComparisonValue, Function<T, String> getName) {
