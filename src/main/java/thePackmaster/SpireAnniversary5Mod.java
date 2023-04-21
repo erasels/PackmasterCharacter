@@ -505,6 +505,7 @@ public class SpireAnniversary5Mod implements
         declarePacks();
         logger.info("Full list of packs: " + unfilteredAllPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
         logCardStats();
+        logPackAuthors();
 
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
@@ -1138,6 +1139,23 @@ public class SpireAnniversary5Mod implements
         else {
             SpireAnniversary5Mod.logger.info("No colorless cards that aren't special rarity.");
         }
+    }
+
+    public static void logPackAuthors() {
+        // This is here so that developers putting together stats can enable and run it without making things take longer
+        // to load for everyone (even if the impact is small)
+        if (true) {
+            return;
+        }
+        String authorCounts = SpireAnniversary5Mod.unfilteredAllPacks.stream()
+                .collect(Collectors.groupingBy(p -> p.author, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                .map(e -> e.getKey() + ": " + e.getValue())
+                .collect(Collectors.joining("\n"));
+        SpireAnniversary5Mod.logger.info("Pack count by author:\n" + authorCounts);
+
     }
 
     private static <T> String getSummaryString(HashMap<T, Integer> m, Function<T, Integer> getComparisonValue, Function<T, String> getName) {
