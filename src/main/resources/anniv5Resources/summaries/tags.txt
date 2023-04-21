@@ -22,7 +22,7 @@ CoreSetPack	None
 CosmosCommandPack	Exhaust,Debuffs
 CreativityPack	Tokens
 CthulhuPack	None
-DarkSoulsPack   None
+DarkSoulsPack	None
 DefectPack	Orbs
 DimensionGatePack	Debuffs
 DimensionGate2Pack	None
