@@ -5,7 +5,7 @@
   },
   "${ModID}:Bloodlust": {
     "NAME": "Bloodlust",
-    "DESCRIPTION": "Deal !D! damage. Apply 1 Vulnerable to EVERYONE."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Vulnerable to EVERYONE."
   },
   "${ModID}:IronFlesh": {
     "NAME": "Iron Flesh",
