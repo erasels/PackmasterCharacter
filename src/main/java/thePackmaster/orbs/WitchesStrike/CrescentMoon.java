@@ -56,10 +56,18 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
 
     @Override
     public void onEvoke() {
+        applyFocus();
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
-        updateDescription();
-        AbstractDungeon.actionManager.addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player,passiveAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractMonster m = Wiz.getRandomEnemy();
+                if(m != null)
+                    Wiz.att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, passiveAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                isDone = true;
+            }
+        });
     }
 
     @Override
@@ -115,7 +123,6 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
             this.passiveAmount = this.basePassiveAmount;
         }
         this.evokeAmount = this.baseEvokeAmount;
-
     }
 
     @Override
