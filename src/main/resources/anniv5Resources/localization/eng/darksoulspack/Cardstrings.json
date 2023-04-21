@@ -17,7 +17,7 @@
   },
   "${ModID}:LifehuntScythe": {
     "NAME": "Lifehunt Scythe",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain 2 Frail."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Frail."
   },
   "${ModID}:Remedy": {
     "NAME": "Remedy",
