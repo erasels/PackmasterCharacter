@@ -9,7 +9,7 @@
   },
   "${ModID}:IronFlesh": {
     "NAME": "Iron Flesh",
-    "DESCRIPTION": "Gain !B! Block. Draw 1 less card next turn."
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 less card next turn."
   },
   "${ModID}:PrisonersChain": {
     "NAME": "Prisoner's Chain",

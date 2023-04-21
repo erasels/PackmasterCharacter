@@ -20,8 +20,7 @@ public class CloranthyRing extends AbstractDarkSoulsCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < Wiz.countDebuffs(p); i++)
-            this.addToBot(new GainEnergyAction(1));
+        Wiz.atb(new GainEnergyAction(Wiz.countDebuffs(p)));
         Wiz.atb(new DrawCardAction(this.magicNumber));
     }
 
