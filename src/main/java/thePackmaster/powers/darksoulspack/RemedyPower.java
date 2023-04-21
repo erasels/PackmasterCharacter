@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
+import static java.lang.Math.max;
+import static org.apache.commons.lang3.math.NumberUtils.min;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class RemedyPower extends AbstractPackmasterPower implements OnReceivePowerPower {
@@ -23,9 +25,13 @@ public class RemedyPower extends AbstractPackmasterPower implements OnReceivePow
 
     @Override
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.type == PowerType.DEBUFF && (amount > 0)){
+        if (power.type == PowerType.DEBUFF && (this.amount > 0)){
             flashWithoutSound();
-            Wiz.att(new ReducePowerAction(target, source, power.ID, 2));
+            if (power.amount > 0)
+                Wiz.att(new ReducePowerAction(target, source, power.ID, 2));
+            else if (power.amount < 0) {
+                Wiz.att(new ReducePowerAction(target, source, power.ID, max(power.amount, -2)));
+            }
             this.reducePower(1);
         }
         if (amount <= 0)
