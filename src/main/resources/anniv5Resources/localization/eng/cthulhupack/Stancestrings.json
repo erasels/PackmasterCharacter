@@ -2,7 +2,7 @@
   "${ModID}:Nightmare": {
     "NAME": "Nightmare",
     "DESCRIPTION": [
-      "While in #yNightmare #yStance, lose #b1 #ySanity when you play a card, and draw #b2 cards when you play a #yMadness. NL Exit #yNightmare #yStance at the end of your turn."
+      "Whenever you play a card, lose #b1 #ySanity. Whenever you play a #yLunacy, draw #b1 card. NL Exit this #yStance at the end of your turn."
     ]
   }
 }
