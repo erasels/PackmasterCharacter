@@ -13,7 +13,7 @@
       "The next #b",
       " HP of healing is negated."
     ]
-  }
+  },
   "${ModID}:SnowballStrikePower": {
     "NAME": "Dash",
     "DESCRIPTIONS": [

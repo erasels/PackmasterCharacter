@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.summonerspellspack.WitheringExhaustAction;
 
 public class WitheringExhaust extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("WitheringExhaust");
