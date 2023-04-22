@@ -13,7 +13,6 @@ public class GhostingMaelstrom extends AbstractSummonerSpellsCard {
     private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
     private static final int MAGICTWO = 2;
-    private static final int UPG_MAGICTWO = 1;
 
     public GhostingMaelstrom() {
         super(ID, COST, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
@@ -24,7 +23,6 @@ public class GhostingMaelstrom extends AbstractSummonerSpellsCard {
     @Override
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);
-        upgradeSecondMagic(UPG_MAGICTWO);
     }
 
     @Override

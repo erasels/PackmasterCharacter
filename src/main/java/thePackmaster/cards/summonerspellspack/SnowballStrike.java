@@ -13,8 +13,8 @@ public class SnowballStrike extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("SnowballStrike");
     private static final int COST = 1;
     private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 3;
     private static final int MAGIC = 1;
+    private static final int UPG_MAGIC = 1;
 
 
     public SnowballStrike() {
@@ -22,11 +22,12 @@ public class SnowballStrike extends AbstractSummonerSpellsCard {
         this.tags.add(CardTags.STRIKE);
         this.damage = this.baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = MAGIC;
+        cardsToPreview = new DashSlap();
     }
 
     @Override
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        upgradeMagicNumber(UPG_MAGIC);
     }
 
     @Override

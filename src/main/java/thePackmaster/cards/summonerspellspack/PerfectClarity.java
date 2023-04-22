@@ -10,8 +10,8 @@ import thePackmaster.actions.summonerspellspack.PerfectClarityAction;
 
 public class PerfectClarity extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("PerfectClarity");
-    private static final int COST = 2;
-    private static final int MAGIC = 3;
+    private static final int COST = 1;
+    private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 
 
@@ -19,6 +19,7 @@ public class PerfectClarity extends AbstractSummonerSpellsCard {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         exhaust = true;
         magicNumber = baseMagicNumber = MAGIC;
+        cardsToPreview = new Miracle();
     }
 
     @Override

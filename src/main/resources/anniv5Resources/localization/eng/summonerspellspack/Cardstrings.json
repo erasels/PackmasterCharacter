@@ -1,11 +1,12 @@
 {
   "${ModID}:UnleashedSmite": {
     "NAME": "Unleashed Smite",
-    "DESCRIPTION": "Deal !D! damage. NL Every time this card is played, increase its damage by !M! for each card in your hand."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL stslib:Persist !stslib:persist!."
   },
   "${ModID}:SnowballStrike": {
     "NAME": "Snowball Strike",
-    "DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, add a *Dashing *Strike to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, add !M! *Dash *Slap to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, add !M! *Dash *Slaps to your hand."
   },
   "${ModID}:DashSlap": {
     "NAME": "Dash Slap",
@@ -13,37 +14,37 @@
   },
   "${ModID}:GrievousIgnite": {
     "NAME": "Grievous Ignite",
-    "DESCRIPTION": "Apply !M! Ignite and !M! Antiheal for each card in your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Ignite and !M! Grievous Wounds for each card in your hand."
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite and !M! ${ModID}:Antiheal for each card in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Ignite and !M! ${ModID}:Antiheal for each card in your hand."
   },
   "${ModID}:WitheringExhaust": {
     "NAME": "Withering Exhaust",
-    "DESCRIPTION": "Apply !M! Weak. NL Overextended: Apply !M! Vulnerable."
+    "DESCRIPTION": "Apply !M! Weak. NL ${ModID}:Overextended: Apply !M! Vulnerable."
   },
   "${ModID}:DualHeal": {
     "NAME": "Dual Heal",
-    "DESCRIPTION": "You and target heal !M! HP. NL Gain !${ModID}:m2! Ghosted. NL Exhaust."
+    "DESCRIPTION": "Heal !M! HP. NL Target heals !M! HP. NL Gain !${ModID}:m2! ${ModID}:Ghosted. NL Exhaust."
   },
   "${ModID}:SonicBarrier": {
     "NAME": "Sonic Barrier",
-    "DESCRIPTION": "Gain !B! Block. NL Overextended: Gain !M! Ghosted."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Overextended: Gain !M! ${ModID}:Ghosted."
   },
   "${ModID}:PerfectClarity": {
     "NAME": "Perfect Clarity",
-    "DESCRIPTION": "Add !M! Miracles into your hand. NL Exhaust."
+    "DESCRIPTION": "Add !M! *Miracles into your hand. NL Exhaust."
   },
   "${ModID}:GhostingMaelstrom": {
     "NAME": "Ghosting Maelstrom",
-    "DESCRIPTION": "Whenever you play a card while overextended, deal !M! damage to all enemies. NL Gain !${ModID}:m2! Ghosted."
+    "DESCRIPTION": "Whenever you play a card while ${ModID}:Overextended, deal !M! damage to all enemies. NL Gain !${ModID}:m2! ${ModID}:Ghosted."
   },
   "${ModID}:AggressiveTeleport": {
     "NAME": "Aggressive Teleport",
-    "DESCRIPTION": "At the start of your turn, put the highest damage Attack from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, put the highest damage Attack from your discard pile into your hand."
+    "DESCRIPTION": "At the start of your turn, put a random Attack from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, put a random Attack from your discard pile into your hand."
   },
   "${ModID}:Flash": {
     "NAME": "Flash",
-    "DESCRIPTION": "Draw !M! cards. NL Add a *Hexflash to your hand. NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Excess draw is converted into Ghosted."
   },
   "${ModID}:Hexflash": {
     "NAME": "Hexflash",

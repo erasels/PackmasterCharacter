@@ -1,5 +1,6 @@
 package thePackmaster.cards.summonerspellspack;
 
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PersistFields;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,15 +14,17 @@ import thePackmaster.powers.summonerspellspack.SnowballStrikePower;
 
 public class UnleashedSmite extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("UnleashedSmite");
-    private static final int COST = 1;
-    private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 4;
+    private static final int COST = 0;
+    private static final int DAMAGE = 2;
+    private static final int UPG_DAMAGE = 2;
     private static final int MAGIC = 1;
 
     public UnleashedSmite() {
-        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = MAGIC;
+        PersistFields.setBaseValue(this, 2);
+        selfRetain = true;
     }
 
     @Override
@@ -32,6 +35,6 @@ public class UnleashedSmite extends AbstractSummonerSpellsCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
-        this.addToBot(new ModifyDamageAction(this.uuid, this.magicNumber * p.hand.group.size()));
+        //this.addToBot(new ModifyDamageAction(this.uuid, this.magicNumber * p.hand.group.size()));
     }
 }

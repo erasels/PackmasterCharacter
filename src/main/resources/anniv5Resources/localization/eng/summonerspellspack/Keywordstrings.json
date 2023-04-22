@@ -4,6 +4,20 @@
     "NAMES": [
       "ghosted"
     ],
-    "DESCRIPTION": "Draw extra cards at the start of your turn, then reduce this amount by #b1."
+    "DESCRIPTION": "At the start of your turn, draw extra cards then reduce this amount by #b1."
+  },
+  {
+    "PROPER_NAME": "Overextended",
+    "NAMES": [
+      "overextended"
+    ],
+    "DESCRIPTION": "Triggers if you are holding #b6 or more cards."
+  },
+  {
+    "PROPER_NAME": "Antiheal",
+    "NAMES": [
+      "antiheal"
+    ],
+    "DESCRIPTION": "Prevents a certain amount of healing this combat."
   }
 ]

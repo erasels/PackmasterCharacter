@@ -10,7 +10,7 @@ import thePackmaster.powers.summonerspellspack.MaelstromPower;
 
 public class AggressiveTeleport extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("AggressiveTeleport");
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int MAGIC = 1;
 
     public AggressiveTeleport() {

@@ -8,10 +8,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 
 public class DashSlap extends AbstractSummonerSpellsCard {
-    public static final String ID = SpireAnniversary5Mod.makeID("DashingStrike");
+    public static final String ID = SpireAnniversary5Mod.makeID("DashSlap");
     private static final int COST = 1;
+    private static final int UPG_COST = 0;
     private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 3;
 
 
     public DashSlap() {
@@ -23,7 +23,7 @@ public class DashSlap extends AbstractSummonerSpellsCard {
 
     @Override
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        upgradeBaseCost(UPG_COST);
     }
 
     @Override

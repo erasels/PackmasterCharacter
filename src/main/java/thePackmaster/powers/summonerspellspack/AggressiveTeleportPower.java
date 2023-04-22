@@ -30,24 +30,10 @@ public class AggressiveTeleportPower extends AbstractPackmasterPower {
     @Override
     public void atStartOfTurnPostDraw() {
         boolean flashed = false;
-
-        if (!p().discardPile.getAttacks().isEmpty()) {
-            CardGroup g = p().discardPile.getAttacks();
-            for (int i = 0; i < this.amount; i++) {
-                int highestAttack = -999;
-                AbstractCard highestAttackCard = null;
-                for (int j = 0; j < g.size(); j++) {
-                    AbstractCard c = g.group.get(j);
-                    if (c.damage > highestAttack) {
-                        highestAttackCard = c;
-                        highestAttack = c.damage;
-                    }
-                }
-                if (highestAttackCard != null) {
-                    addToBot(new DiscardToHandAction(highestAttackCard));
-                    g.removeCard(highestAttackCard);
-                }
-
+        for (int i = 0; i < this.amount; i++) {
+            if (!p().discardPile.getAttacks().isEmpty()) {
+                AbstractCard c = p().discardPile.getAttacks().getRandomCard(true);
+                addToBot(new DiscardToHandAction(c));
                 if (!flashed) {
                     flash();
                     flashed = true;

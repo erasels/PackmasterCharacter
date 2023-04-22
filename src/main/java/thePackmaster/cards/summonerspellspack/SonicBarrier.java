@@ -10,12 +10,12 @@ import thePackmaster.powers.summonerspellspack.GhostedPower;
 public class SonicBarrier extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("SonicBarrier");
     private static final int COST = 2;
-    private static final int BLOCK = 11;
+    private static final int BLOCK = 12;
     private static final int UPG_BLOCK = 3;
     private static final int MAGIC = 2;
 
     public SonicBarrier() {
-        super(ID, COST, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = MAGIC;
     }

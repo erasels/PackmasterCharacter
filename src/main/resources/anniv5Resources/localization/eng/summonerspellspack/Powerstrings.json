@@ -1,12 +1,4 @@
 {
-  "${ModID}:CleansingFountainPower": {
-    "NAME": "Cleansing Fountain",
-    "DESCRIPTIONS": [
-      "Cannot lose #yArtifact for #b",
-      " turn.",
-      " turns."
-    ]
-  },
   "${ModID}:GhostedPower": {
     "NAME": "Ghosted",
     "DESCRIPTIONS": [
@@ -21,35 +13,27 @@
       "The next #b",
       " HP of healing is negated."
     ]
-  },
-  "${ModID}:WitheringExhaustPower": {
-    "NAME": "Withering Exhaust",
-    "DESCRIPTIONS": [
-      "This enemy's attacks have been halved.",
-      "This enemy's attacks have been halved #b",
-      " times."
-    ]
-  },
+  }
   "${ModID}:SnowballStrikePower": {
     "NAME": "Dash",
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
-      " Dashing Strike to your hand.",
-      " Dashing Strikes to your hand."
+      " #yDash #ySlap to your hand.",
+      " #yDash #ySlaps to your hand."
     ]
   },
   "${ModID}:AggressiveTeleportPower": {
     "NAME": "Aggressive Teleport",
     "DESCRIPTIONS": [
-      "At the start of your turn, put the highest damage Attack from your discard pile into your hand.",
-      "At the start of your turn, put the highest damage Attack from your discard pile into your hand #b",
-      " times."
+      "At the start of your turn, put a random Attack from your discard pile into your hand.",
+      "At the start of your turn, put #b",
+      " random Attacks from your discard pile into your hand."
     ]
   },
   "${ModID}:MaelstromPower": {
     "NAME": "Maelstrom",
     "DESCRIPTIONS": [
-      "Whenever you play a card while overextended, deal #b",
+      "Whenever you play a card while #yOverextended, deal #b",
       " damage to ALL enemies."
     ]
   }
