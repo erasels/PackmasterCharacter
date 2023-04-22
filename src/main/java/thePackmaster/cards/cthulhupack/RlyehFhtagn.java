@@ -1,6 +1,5 @@
 package thePackmaster.cards.cthulhupack;
 
-import com.megacrit.cardcrawl.actions.common.EndTurnAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,7 +14,7 @@ public class RlyehFhtagn extends AbstractCthulhuCard {
     public RlyehFhtagn() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
-        baseMagicNumber = magicNumber = 15;
+        baseMagicNumber = magicNumber = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
