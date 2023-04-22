@@ -45,6 +45,6 @@
   "${ModID}:Lunacy": {
     "NAME": "Lunacy",
     "DESCRIPTION": "Reduce the cost of a random card in your hand to 0 this turn. NL Lose !M! HP and 1 ${ModID}:Sanity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Reduce the cost of a random card in your hand to 0 this turn. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Reduce the cost of a random card in your hand to 0 this turn. NL Lose 1 ${ModID}:Sanity. NL Exhaust."
   }
 }
