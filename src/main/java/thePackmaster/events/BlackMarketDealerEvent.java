@@ -156,9 +156,9 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                         }).addOption(OPTIONS[12], (i) -> {   //Pack in a Jar Potion
                             AbstractDungeon.getCurrRoom().rewards.clear();
                             AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(new PackInAJar()));
-                            skipDefaultCardRewards = true;
+                            noCardsInRewards = true;
                             AbstractDungeon.combatRewardScreen.open();
-                            skipDefaultCardRewards = false;
+                            noCardsInRewards = false;
                             logMetric(ID, "Pack in a Jar", null, null, null, null, null, Collections.singletonList(PackInAJar.POTION_ID), null, 0, 0, 0, 0, 0, 0);
                             transitionKey("magicSampleEnd");
                         })  //Remove a card.
