@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.cthulhupack.*;
-import thePackmaster.cards.legacypack.*;
 
 import java.util.ArrayList;
 
@@ -15,7 +14,7 @@ public class CthulhuPack extends AbstractCardPack {
     public static final String DESC = UI_STRINGS.TEXT[1];
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
-    public static int madnessThisCombat;
+    public static int lunacyThisCombat;
 
     public CthulhuPack() {
         super(ID, NAME, DESC, AUTHOR);
