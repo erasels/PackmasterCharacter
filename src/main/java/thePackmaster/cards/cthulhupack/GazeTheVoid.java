@@ -1,6 +1,7 @@
 package thePackmaster.cards.cthulhupack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.packs.CthulhuPack;
@@ -20,9 +21,9 @@ public class GazeTheVoid extends AbstractCthulhuCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SMASH);
+        addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         for (int i = 0; i < CthulhuPack.lunacyThisCombat; i++) {
-            dmg(m, AbstractGameAction.AttackEffect.SMASH);
+            addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         }
     }
 
