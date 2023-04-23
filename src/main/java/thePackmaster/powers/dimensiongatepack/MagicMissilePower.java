@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import thePackmaster.cards.dimensiongatepack2.MagicMissile;
 import thePackmaster.powers.AbstractPackmasterPower;
 
-import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MagicMissilePower extends AbstractPackmasterPower {

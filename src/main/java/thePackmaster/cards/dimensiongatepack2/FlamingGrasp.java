@@ -7,7 +7,6 @@ import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGordian
 import thePackmaster.powers.dimensiongatepack.FlamingGraspPower;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class FlamingGrasp extends AbstractDimensionalCardGordian {

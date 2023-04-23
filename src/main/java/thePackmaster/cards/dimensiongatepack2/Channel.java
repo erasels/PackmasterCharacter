@@ -9,7 +9,6 @@ import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
-import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Channel extends AbstractDimensionalCardGordian {
