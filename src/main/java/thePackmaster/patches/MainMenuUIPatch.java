@@ -89,6 +89,7 @@ public class MainMenuUIPatch {
         idToIndex.put(CHOICE, 1);
         idToIndex.put(NONE, 2);
         int autoOptions = idToIndex.size();
+        //I have some jank code in the dropdowns below that excludes the last option here which is NONE so keep that in mind in case you add more.
         for (int i = autoOptions; i < optionIDs.length; ++i) {
             String packID = sortedPacks.get(i - autoOptions).packID;
             optionIDs[i] = packID;
@@ -122,7 +123,10 @@ public class MainMenuUIPatch {
             int index = i;
             DropdownMenu d = new DropdownMenu((dropdownMenu, optionIndex, s) -> {
                 packSetups.set(index, optionIDs[optionIndex]);
-                if (optionIndex >= autoOptions) {
+                //Jank to allow config for allowing multiple Nones to be chosen
+                int excluded = autoOptions;
+                if(!SpireAnniversary5Mod.allowMultiNone()) excluded--;
+                if (optionIndex >= excluded) {
                     for (DropdownMenu other : dropdowns) {
                         if (other != dropdownMenu && other.getSelectedIndex() == optionIndex) {
                             other.setSelectedIndex(0);

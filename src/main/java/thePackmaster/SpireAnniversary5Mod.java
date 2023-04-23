@@ -34,7 +34,9 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
@@ -99,10 +101,10 @@ import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
-import thePackmaster.util.creativitypack.JediUtil;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
+import thePackmaster.util.creativitypack.JediUtil;
 import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
@@ -110,7 +112,6 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
-import java.text.MessageFormat;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -303,6 +304,7 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, CHOICE, CHOICE, CHOICE));
             defaults.put("PackmasterUnlockedHats", "");
             defaults.put("PackmasterAllPacksMode", "FALSE");
+            defaults.put("PackmasterAllowMultipleNONE", "FALSE");
             defaults.put("PackmasterSelectedHatIndex", "0");
             defaults.put("PackmasterUnlockedRainbows","");
             defaults.put("PackmasterRainbowEnabled","FALSE");
@@ -386,6 +388,21 @@ public class SpireAnniversary5Mod implements
         try {
             modConfig.setBool("PackmasterShowSummaries", !_showPackSummaries);
             _showPackSummaries = !_showPackSummaries;
+            modConfig.save();
+        } catch (Exception e) {
+            logger.error(e);
+        }
+    }
+
+    public static Boolean allowMultiNone() {
+        if(modConfig == null) return false;
+        return modConfig.getBool("PackmasterAllowMultipleNONE");
+    }
+
+    public static void toggleMultiNone() {
+        if(modConfig == null) return;
+        try {
+            modConfig.setBool("PackmasterAllowMultipleNONE", !modConfig.getBool("PackmasterAllowMultipleNONE"));
             modConfig.save();
         } catch (Exception e) {
             logger.error(e);
@@ -1282,32 +1299,33 @@ public class SpireAnniversary5Mod implements
         settingsPanel = new ModPanel();
         //int configStep = 40;
 
-        FixedModLabeledToggleButton allPacksModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[3], 350.0f, 600F, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
+        FixedModLabeledToggleButton allPacksModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[3], 350.0f, 750F, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             allPacksMode = button.enabled;
             saveAllPacksMode();
         });
-
         settingsPanel.addUIElement(allPacksModeBtn);
 
-        FixedModLabeledToggleButton oneFrameModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[4], 350.0f, 400F, Settings.CREAM_COLOR, FontHelper.charDescFont, oneFrameMode, settingsPanel, (label) -> {
-
-        }, (button) -> {
-            oneFrameMode = button.enabled;
-            saveOneFrameMode();
-        });
-
-        settingsPanel.addUIElement(oneFrameModeBtn);
-
-        FixedModLabeledToggleButton sharedContentBtn = new FixedModLabeledToggleButton(configStrings.TEXT[5], 350.0f, 500F, Settings.CREAM_COLOR, FontHelper.charDescFont, sharedContentMode, settingsPanel, (label) -> {
+        FixedModLabeledToggleButton sharedContentBtn = new FixedModLabeledToggleButton(configStrings.TEXT[5], 350.0f, 700F, Settings.CREAM_COLOR, FontHelper.charDescFont, sharedContentMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             sharedContentMode = button.enabled;
             saveContentSharingMode();
         });
-
         settingsPanel.addUIElement(sharedContentBtn);
+
+        FixedModLabeledToggleButton oneFrameModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[4], 350.0f, 650F, Settings.CREAM_COLOR, FontHelper.charDescFont, oneFrameMode, settingsPanel, (label) -> {
+
+        }, (button) -> {
+            oneFrameMode = button.enabled;
+            saveOneFrameMode();
+        });
+        settingsPanel.addUIElement(oneFrameModeBtn);
+
+        FixedModLabeledToggleButton multiNoneBtn = new FixedModLabeledToggleButton(configStrings.TEXT[6], 350.0f, 600F, Settings.CREAM_COLOR, FontHelper.charDescFont, allowMultiNone(), settingsPanel,
+                (label) -> {}, (button) -> toggleMultiNone());
+        settingsPanel.addUIElement(multiNoneBtn);
 
         BaseMod.registerModBadge(badge, configStrings.TEXT[0], configStrings.TEXT[1], configStrings.TEXT[2], settingsPanel);
     }
