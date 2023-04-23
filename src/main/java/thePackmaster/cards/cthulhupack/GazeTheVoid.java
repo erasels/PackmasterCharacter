@@ -21,14 +21,14 @@ public class GazeTheVoid extends AbstractCthulhuCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SMASH);
-        for (int i = 0; i < CthulhuPack.madnessThisCombat; i++) {
+        for (int i = 0; i < CthulhuPack.lunacyThisCombat; i++) {
             dmg(m, AbstractGameAction.AttackEffect.SMASH);
         }
     }
 
     public void applyPowers() {
         super.applyPowers();
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + (CthulhuPack.madnessThisCombat + 1) + cardStrings.EXTENDED_DESCRIPTION[1];
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + (CthulhuPack.lunacyThisCombat + 1) + cardStrings.EXTENDED_DESCRIPTION[1];
         this.initializeDescription();
     }
 

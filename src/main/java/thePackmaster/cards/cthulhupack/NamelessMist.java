@@ -25,6 +25,6 @@ public class NamelessMist extends AbstractCthulhuCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBlock(3);
     }
 }

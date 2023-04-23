@@ -28,6 +28,4 @@ public class NextTurnGainMadnessPower extends AbstractPackmasterPower implements
         Wiz.atb(new ChangeStanceAction(new NightmareStance()));
         removeThisInvisibly();
     }
-
-
 }
