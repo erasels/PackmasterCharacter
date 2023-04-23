@@ -22,8 +22,8 @@ public class Conflaguration extends AbstractFueledCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
-    private static final int MAGIC = 4;
-    private static final int UPGRADE_MAGIC = 6;
+    private static final int MAGIC = 7;
+    private static final int UPGRADE_MAGIC = 2;
 
     public Conflaguration() {
         super(ID, COST, TYPE, RARITY, TARGET);
@@ -35,16 +35,7 @@ public class Conflaguration extends AbstractFueledCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         ApplyPowerAction igniteAction = new ApplyPowerAction(m, adp(), new IgnitePower(m, magicNumber));
-        ChannelAction blazeAction = new ChannelAction(new Blaze());
-        AbstractGameAction action = new AbstractGameAction() {
-            @Override
-            public void update() {
-                att(blazeAction);
-                att(igniteAction);
-                isDone = true;
-            }
-        };
-        atb(new ConsumeToDoAction(action));
+        atb(new ConsumeToDoAction(igniteAction));
     }
 
     @Override

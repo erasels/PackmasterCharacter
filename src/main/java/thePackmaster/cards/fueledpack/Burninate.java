@@ -20,8 +20,8 @@ public class Burninate extends AbstractFueledCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
-    private static final int DAMAGE = 13;
-    private static final int UPGRADE_DAMAGE = 4;
+    private static final int DAMAGE = 14;
+    private static final int UPGRADE_DAMAGE = 5;
 
     public Burninate() {
         super(ID, COST, TYPE, RARITY, TARGET);

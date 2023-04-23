@@ -18,8 +18,8 @@
   },
   "${ModID}:FueledPackHat": {
     "TEXT": [
-      "I got no hat.",
-      "Hat is non existent"
+      "Hard and protective.",
+      "Fireman Helmet"
     ]
   }
 }

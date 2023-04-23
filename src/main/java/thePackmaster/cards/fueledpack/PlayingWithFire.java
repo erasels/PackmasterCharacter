@@ -1,10 +1,9 @@
 package thePackmaster.cards.fueledpack;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.fueledpack.PlayingWithFirePower;
+import thePackmaster.actions.fueledpack.PlayingWithFireAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_BOX_COLOR;
@@ -13,13 +12,14 @@ import static thePackmaster.util.Wiz.*;
 
 public class PlayingWithFire extends AbstractFueledCard {
     public final static String ID = makeID(PlayingWithFire.class.getSimpleName());
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 2;
+    public static final int SIDES = 6;
 
-    private static final int MAGIC = 3;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int MAGIC = 4;
+    private static final int UPGRADE_MAGIC = 2;
 
     public PlayingWithFire() {
         super(ID, COST, TYPE, RARITY, TARGET);
@@ -30,7 +30,7 @@ public class PlayingWithFire extends AbstractFueledCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PlayingWithFirePower(magicNumber));
+        atb(new PlayingWithFireAction(SIDES, magicNumber));
     }
 
     @Override

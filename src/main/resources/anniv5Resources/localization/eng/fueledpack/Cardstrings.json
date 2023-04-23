@@ -14,7 +14,7 @@
   },
   "${ModID}:Conflaguration": {
     "NAME": "Conflaguration",
-    "DESCRIPTION": "${ModID}:Consume a card to apply !M! ${ModID}:Ignite and Channel a ${ModID}:Blaze."
+    "DESCRIPTION": "${ModID}:Consume a card to apply !M! ${ModID}:Ignite."
   },
   "${ModID}:FlamingLeap": {
     "NAME": "Flaming Leap",
@@ -26,7 +26,7 @@
   },
   "${ModID}:PlayingWithFire": {
     "NAME": "Playing With Fire",
-    "DESCRIPTION": "At the start of your turn roll !M! ${ModID}:D6. NL Gain 1 ${ModID}:Ignite for each 5 or 6 you roll."
+    "DESCRIPTION": "Roll !M! ${ModID}:D6. NL Gain 1 ${ModID}:Ignite for each 5 or 6 you roll."
   },
   "${ModID}:PhoenixHeart": {
     "NAME": "Phoenix Heart",
