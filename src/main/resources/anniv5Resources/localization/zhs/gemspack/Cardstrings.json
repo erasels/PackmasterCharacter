@@ -1,18 +1,18 @@
 {
   "${ModID}:TempStrengthGem": {
     "NAME": "红宝石",
-    "DESCRIPTION": "${ModID}:宝石 。 NL \"获得2层临时 力量 。\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得2层临时 力量 。\""
+    "DESCRIPTION": "${ModID}:宝石 。 NL \"获得2层临时 力量 \"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"获得2层临时 力量 \""
   },
   "${ModID}:FrostGem": {
     "NAME": "蓝晶",
-    "DESCRIPTION": "${ModID}:宝石 。 NL \" 生成 一个 冰霜 球。\"",
-    "UPGRADE_DESCRIPTION": "$${ModID}:宝石 (可镶嵌2次)。 NL \" 生成 一个 冰霜 球。\""
+    "DESCRIPTION": "${ModID}:宝石 。 NL \" 生成 一个 冰霜 球\"",
+    "UPGRADE_DESCRIPTION": "$${ModID}:宝石 (可镶嵌2次)。 NL \" 生成 一个 冰霜 球\""
   },
   "${ModID}:LightningGem": {
     "NAME": "宝石碎片",
     "DESCRIPTION": "${ModID}:宝石 。 NL \" 生成 一个 闪电 球。\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \" 生成 一个 闪电 球。\""
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \" 生成 一个 闪电 球\""
   },
   "${ModID}:RetainGem": {
     "NAME": "琥珀",
@@ -26,13 +26,13 @@
   },
   "${ModID}:EnergyGem": {
     "NAME": "茶晶",
-    "DESCRIPTION": "${ModID}:宝石 。 NL \"下回合获得 [E] 。\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"下回合获得 [E] 。\""
+    "DESCRIPTION": "${ModID}:宝石 。 NL \"下回合获得 [E] \"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"下回合获得 [E] \""
   },
   "${ModID}:CleanseGem": {
     "NAME": "玛瑙",
-    "DESCRIPTION": "${ModID}:宝石 。 NL \"失去所有负面效果1层。\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"失去所有负面效果1层。\""
+    "DESCRIPTION": "${ModID}:宝石 。 NL \"失去所有负面效果1层\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:宝石 (可镶嵌2次)。 NL \"失去所有负面效果1层\""
   },
   "${ModID}:DiceGem": {
     "NAME": "碧玺",

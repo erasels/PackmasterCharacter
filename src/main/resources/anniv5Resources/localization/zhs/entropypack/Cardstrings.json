@@ -6,7 +6,7 @@
   "${ModID}:Wither": {
     "NAME": "凋零",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:毁灭 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予所有敌人 !M! 层 ${ModID}:毁灭 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层群体 ${ModID}:毁灭 。"
   },
   "${ModID}:Collapse": {
     "NAME": "崩溃",

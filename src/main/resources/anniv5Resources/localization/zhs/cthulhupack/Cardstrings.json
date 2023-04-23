@@ -36,7 +36,7 @@
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "弢莜燊暠",
-    "DESCRIPTION": "陷入沉睡(结束回合)。 NL 下回合： NL 获得 !M! 层 临时生命 。 NL 获得 [E] [E] [E] 。 NL 进入 ${ModID}:梦魇 。 NL 消耗 。"
+    "DESCRIPTION": "结束你的回合。 NL 下回合： NL 获得 !M! 层 临时生命 。 NL 获得 [E] [E] [E] 。 NL 进入 ${ModID}:梦魇 。 NL 消耗 。"
   },
   "${ModID}:StarSpawn": {
     "NAME": "斗星召唤",
@@ -44,7 +44,7 @@
   },
   "${ModID}:Lunacy": {
     "NAME": "失常",
-    "DESCRIPTION": "随机将手中一张牌的下次耗能变为0。 NL 失去 !M! 点生命。 NL 失去1层 ${ModID}:神志 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "随机将手中一张牌的下次耗能变为0。 NL 失去1层 ${ModID}:神志 。 NL 消耗 。"
+    "DESCRIPTION": "随机将手中一张牌的本回合下次耗能变为0。 NL 失去 !M! 点生命。 NL 失去1层 ${ModID}:神志 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "随机将手中一张牌的本回合下次耗能变为0。 NL 失去1层 ${ModID}:神志 。 NL 消耗 。"
   }
 }
