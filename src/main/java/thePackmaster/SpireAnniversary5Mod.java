@@ -254,9 +254,6 @@ public class SpireAnniversary5Mod implements
     public static AbstractCard.CardTags ISCARDMODIFIED;
 
     @SpireEnum
-    public static AbstractCard.CardTags MAGIC;
-
-    @SpireEnum
     public static AbstractCard.CardTags CLAW;
 
 
