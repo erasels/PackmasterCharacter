@@ -104,7 +104,8 @@
       "Choice of ",
       "Pack Filtering Menu",
       "Hat Menu",
-      ""
+      "",
+      "None"
     ]
   },
   "${ModID}:PackSetup": {

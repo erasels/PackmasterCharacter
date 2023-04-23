@@ -42,6 +42,7 @@ public class MainMenuUIPatch {
     private static final String[] optionIDs;
     public static final String RANDOM = "Random";
     public static final String CHOICE = "Choice";
+    public static final String NONE = "None";
 
     private static final float CHECKBOX_X_OFF = 32.0f * Settings.xScale;
     private static final float CHECKBOX_X;
@@ -73,6 +74,7 @@ public class MainMenuUIPatch {
     static {
         options.add(TEXT[2]);
         options.add(TEXT[3] + PACKS_PER_CHOICE + TEXT[6]);
+        options.add(TEXT[7]);
         List<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
         sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
         for (AbstractCardPack c : sortedPacks) {
@@ -82,10 +84,13 @@ public class MainMenuUIPatch {
         optionIDs = new String[options.size()];
         optionIDs[0] = RANDOM;
         optionIDs[1] = CHOICE;
+        optionIDs[2] = NONE;
         idToIndex.put(RANDOM, 0);
         idToIndex.put(CHOICE, 1);
-        for (int i = 2; i < optionIDs.length; ++i) {
-            String packID = sortedPacks.get(i - 2).packID;
+        idToIndex.put(NONE, 2);
+        int autoOptions = idToIndex.size();
+        for (int i = autoOptions; i < optionIDs.length; ++i) {
+            String packID = sortedPacks.get(i - autoOptions).packID;
             optionIDs[i] = packID;
             idToIndex.put(packID, i);
         }
@@ -97,14 +102,19 @@ public class MainMenuUIPatch {
         ArrayList<String> packSetupsInit = new ArrayList<>(SpireAnniversary5Mod.getSavedCDraftSelection());
 
         for (String s : packSetupsInit) {
-            if (Objects.equals(s, RANDOM) || Objects.equals(s, CHOICE)) {
-                packSetups.add(s);
-            } else if (SpireAnniversary5Mod.packsByID.getOrDefault(s, null) != null) {
-                packSetups.add(s);
-            } else {
-                packSetups.add(RANDOM); //This will only get hit if there is an invalid entry being loaded, such as Pack that no longer exists.  In that event, replace it with RANDOM.
+            switch (s) {
+                case RANDOM:
+                case CHOICE:
+                    packSetups.add(s);
+                case NONE:
+                    break;
+                default:
+                    if (SpireAnniversary5Mod.packsByID.getOrDefault(s, null) != null) {
+                        packSetups.add(s);
+                    } else {
+                        packSetups.add(RANDOM); //This will only get hit if there is an invalid entry being loaded, such as Pack that no longer exists.  In that event, replace it with RANDOM.
+                    }
             }
-
         }
         packSetupsInit.clear();
 
@@ -112,7 +122,7 @@ public class MainMenuUIPatch {
             int index = i;
             DropdownMenu d = new DropdownMenu((dropdownMenu, optionIndex, s) -> {
                 packSetups.set(index, optionIDs[optionIndex]);
-                if (optionIndex >= 2) {
+                if (optionIndex >= autoOptions) {
                     for (DropdownMenu other : dropdowns) {
                         if (other != dropdownMenu && other.getSelectedIndex() == optionIndex) {
                             other.setSelectedIndex(0);

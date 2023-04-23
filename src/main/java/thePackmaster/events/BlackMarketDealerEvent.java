@@ -302,6 +302,10 @@ public class BlackMarketDealerEvent extends PhasedEvent {
             for (AbstractCardPack p : currentPoolPacks) {
                 validPacks.remove(p);
             }
+            if (validPacks.size() < 5) {
+                validPacks.clear();
+                validPacks.addAll(allPacks);
+            }
         }
         AbstractCard c;
         AbstractCardPack p;
