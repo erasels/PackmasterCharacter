@@ -116,8 +116,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static thePackmaster.patches.MainMenuUIPatch.CHOICE;
-import static thePackmaster.patches.MainMenuUIPatch.RANDOM;
+import static thePackmaster.patches.MainMenuUIPatch.*;
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -934,9 +933,10 @@ public class SpireAnniversary5Mod implements
         }
 
         for (int i = 0; i < count; i++) {
-            AbstractCardPack p = allChoices.get(AbstractDungeon.cardRandomRng.random(0, allChoices.size() - 1));
+            if (allChoices.isEmpty())
+                break;
+            AbstractCardPack p = allChoices.remove(AbstractDungeon.cardRandomRng.random(0, allChoices.size() - 1));
             valid.add(p);
-            allChoices.remove(p);
         }
         return valid;
     }
@@ -991,6 +991,8 @@ public class SpireAnniversary5Mod implements
                 case CHOICE:
                     choicesToSetup++;
                     break;
+                case NONE:
+                    break;
                 default:
                     for (AbstractCardPack pack : unfilteredAllPacks) {
                         if (pack.packID.equals(setupType)) {
@@ -1008,9 +1010,9 @@ public class SpireAnniversary5Mod implements
         logger.info("Total packs: " + currentPoolPacks.toString());
         CardGroup packDisplays = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
-        if (currentPoolPacks.size() != PACKS_PER_RUN) {
+        /*if (currentPoolPacks.size() != PACKS_PER_RUN) {
             logger.error(MessageFormat.format("Less packs in pool than expected: {0}/{1}", currentPoolPacks.size(), PACKS_PER_RUN));
-        }
+        }*/
 
         for (AbstractCardPack pack : currentPoolPacks) {
             packDisplays.addToTop(pack.previewPackCard);

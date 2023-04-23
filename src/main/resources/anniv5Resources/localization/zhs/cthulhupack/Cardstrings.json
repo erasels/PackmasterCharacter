@@ -45,6 +45,6 @@
   "${ModID}:Lunacy": {
     "NAME": "失常",
     "DESCRIPTION": "随机将手中一张牌的本回合下次耗能变为0。 NL 失去 !M! 点生命。 NL 失去1层 ${ModID}:神志 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "随机将手中一张牌的本回合下次耗能变为0。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "随机将手中一张牌的本回合下次耗能变为0。 NL 失去1层 ${ModID}:神志 。 NL 消耗 。"
   }
 }
