@@ -1,7 +1,7 @@
 {
   "${ModID}:Manifest": {
     "NAME": "现身",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择打出弃牌堆一张1或0耗能牌。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择打出弃牌堆一张0或1耗能牌。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌打出。"
     ]

@@ -32,7 +32,7 @@
   "${ModID}:AllIsFire": {
     "NAME": "皆化烈火",
     "DESCRIPTION": "将所有 ${ModID}:霜噬 与 中毒 转化为 ${ModID}:燃烧 。 NL 目标的 ${ModID}:燃烧 增加50%。 NL 消耗性 !stslib:ex! 。",
-    "UPGRADE_DESCRIPTION": "将所有 ${ModID}:霜噬 与 中毒 转化为 ${ModID}:燃烧 。 NL 翻倍目标的 ${ModID}:燃烧 。 NL 消耗性 !stslib:ex! 。"
+    "UPGRADE_DESCRIPTION": "将所有 ${ModID}:霜噬 与 中毒 转化为 ${ModID}:燃烧 。 NL 目标的 ${ModID}:燃烧 翻倍。 NL 消耗性 !stslib:ex! 。"
   },
   "${ModID}:DreadOmen": {
     "NAME": "可怖愿景",

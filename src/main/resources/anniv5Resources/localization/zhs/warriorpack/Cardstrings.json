@@ -9,7 +9,7 @@
   },
   "${ModID}:Chained": {
     "NAME": "被链",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 点群体 格挡 。"
   },
   "${ModID}:StormStrike": {
     "NAME": "风暴打击",

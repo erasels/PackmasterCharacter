@@ -4,7 +4,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:咒化 相邻手牌： NL \"获得 !M! 点 格挡 \""
   },
   "${ModID}:PolarBlessing": {
-    "NAME": "极化祝福",
+    "NAME": "寒极祝福",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合 保留 相邻手牌。"
   },
   "${ModID}:MysticCycle": {
