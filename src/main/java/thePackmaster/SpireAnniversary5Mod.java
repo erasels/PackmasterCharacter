@@ -1063,8 +1063,55 @@ public class SpireAnniversary5Mod implements
         if (true) {
             return;
         }
-        SpireAnniversary5Mod.logger.info("Calculating card statistics");
-        int packs = SpireAnniversary5Mod.unfilteredAllPacks.size();
+        SpireAnniversary5Mod.logger.info("Calculating pack and card statistics");
+        int numPacks = SpireAnniversary5Mod.unfilteredAllPacks.size();
+        List<String> noAttacks = new ArrayList<>();
+        List<String> noSkills = new ArrayList<>();
+        List<String> noPowers = new ArrayList<>();
+        HashMap<AbstractCard.CardRarity, HashMap<Integer, Integer>> packRarities = new HashMap<>();
+        List<String> anomalousRarityPacks = new ArrayList<>();
+        for (AbstractCardPack p : SpireAnniversary5Mod.unfilteredAllPacks.stream().sorted(Comparator.comparing(p -> p.name)).collect(Collectors.toList())) {
+            boolean hasAttack = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
+                    .anyMatch(c -> c.type == AbstractCard.CardType.ATTACK);
+            boolean hasSkill = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
+                    .anyMatch(c -> c.type == AbstractCard.CardType.SKILL);
+            boolean hasPower = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
+                    .anyMatch(c -> c.type == AbstractCard.CardType.POWER);
+            if (!hasAttack) { noAttacks.add(p.name); }
+            if (!hasSkill) { noSkills.add(p.name); }
+            if (!hasPower) { noPowers.add(p.name); }
+            long commons = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.COMMON).count();
+            long uncommons = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.UNCOMMON).count();
+            long rares = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.RARE).count();
+            Map<AbstractCard.CardRarity, List<AbstractCard>> rarityCounts = p.cards.stream().collect(Collectors.groupingBy(c -> c.rarity));
+            for (Map.Entry<AbstractCard.CardRarity, List<AbstractCard>> e : rarityCounts.entrySet()) {
+                if (!packRarities.containsKey(e.getKey())) {
+                    packRarities.put(e.getKey(), new HashMap<>());
+                }
+                HashMap<Integer, Integer> rarities = packRarities.get(e.getKey());
+                int n = e.getValue().size();
+                rarities.put(n, rarities.getOrDefault(n, 0) + 1);
+                if ((e.getKey() == AbstractCard.CardRarity.COMMON || e.getKey() == AbstractCard.CardRarity.RARE) && e.getValue().size() > 4) {
+                    anomalousRarityPacks.add(p.name);
+                }
+                if (e.getKey() == AbstractCard.CardRarity.UNCOMMON && e.getValue().size() > 5) {
+                    anomalousRarityPacks.add(p.name);
+                }
+            }
+        }
+
+        Function<String, String> formatName = s -> s.substring(0, 1).toUpperCase(Locale.ROOT) + s.substring(1).toLowerCase(Locale.ROOT);
+        Function<List<String>, String> t = l -> String.join(", ", l);
+        String commonInfo = getSummaryString(packRarities.get(AbstractCard.CardRarity.COMMON), k -> k, k -> k + "");
+        String uncommonInfo = getSummaryString(packRarities.get(AbstractCard.CardRarity.UNCOMMON), k -> k, k -> k + "");
+        String rareInfo = getSummaryString(packRarities.get(AbstractCard.CardRarity.RARE), k -> k, k -> k + "");
+        SpireAnniversary5Mod.logger.info("Packs: " + numPacks);
+        SpireAnniversary5Mod.logger.info("Packs without normal rarity: Attacks: " + t.apply(noAttacks) + ", Skills: " + t.apply(noSkills) + ", Powers: " + t.apply(noPowers));
+        SpireAnniversary5Mod.logger.info("Common counts: " + commonInfo);
+        SpireAnniversary5Mod.logger.info("Uncommon counts: " + uncommonInfo);
+        SpireAnniversary5Mod.logger.info("Rare counts: " + rareInfo);
+        SpireAnniversary5Mod.logger.info("Packs with anomalous rarity counts: " + t.apply(anomalousRarityPacks));
+
         List<AbstractCard> cards = SpireAnniversary5Mod.unfilteredAllPacks.stream()
                 .flatMap(p -> p.getCards().stream())
                 .map(CardLibrary::getCard)
@@ -1120,12 +1167,10 @@ public class SpireAnniversary5Mod implements
             if (cu.canUpgrade()) { multiUpgrade++; }
         }
 
-        Function<String, String> formatName = s -> s.substring(0, 1).toUpperCase(Locale.ROOT) + s.substring(1).toLowerCase(Locale.ROOT);
         String costInfo = getSummaryString(costs, e -> e, k -> k + "");
         String typeInfo = getSummaryString(types, Enum::ordinal, k -> formatName.apply(k.name()));
         String rarityInfo = getSummaryString(rarities, Enum::ordinal, k -> formatName.apply(k.name()));
         String colorInfo = getSummaryString(colors, Enum::ordinal, k -> formatName.apply(k.name()));
-        SpireAnniversary5Mod.logger.info("Packs: " + packs);
         SpireAnniversary5Mod.logger.info("Cards: " + cards.size());
         SpireAnniversary5Mod.logger.info("Costs: " + costInfo);
         SpireAnniversary5Mod.logger.info("Types: " + typeInfo);
@@ -1133,7 +1178,7 @@ public class SpireAnniversary5Mod implements
         SpireAnniversary5Mod.logger.info("Colors: " + colorInfo);
         SpireAnniversary5Mod.logger.info("Mechanics: AoE damage: " + aoeattack + ", Block: " + block + ", Exhaust: " + exhaust + ", Exhaustive: " + exhaustive + ", Ethereal: " + ethereal + ", Retain: " + retain + ", Innate: " + innate + ", Strike: " + strike + ", Healing: " + healing + ", Iron Waves: " + ironwave + ", Multiple upgrades: " + multiUpgrade);
         SpireAnniversary5Mod.logger.info("Upgrades that: Reduce cost: " + upgradeCost + ", Remove exhaust: " + upgradeDontExhaust + ", Exhaust to exhaustive: " + upgradeExhaustive + ", Remove ethereal: " + upgradeNotEthereal + ", Add innate: " + upgradeInnate + ", Add retain: " + upgradeRetain);
-        SpireAnniversary5Mod.logger.info("Iron waves: " + String.join(", ", ironWaves));
+        SpireAnniversary5Mod.logger.info("Iron waves: " + t.apply(ironWaves));
 
         HashSet<String> cardNames = new HashSet<>();
         boolean foundDuplicate = false;
@@ -1149,7 +1194,7 @@ public class SpireAnniversary5Mod implements
         }
 
         if (!specialRarityNotColorless.isEmpty()) {
-            SpireAnniversary5Mod.logger.info("Colorless cards that aren't special rarity, other than the Monster Hunter cards: " + String.join(", ", specialRarityNotColorless));
+            SpireAnniversary5Mod.logger.info("Colorless cards that aren't special rarity, other than the Monster Hunter cards: " + t.apply(specialRarityNotColorless));
         }
         else {
             SpireAnniversary5Mod.logger.info("No colorless cards that aren't special rarity.");
