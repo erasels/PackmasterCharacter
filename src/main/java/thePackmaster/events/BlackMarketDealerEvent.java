@@ -38,8 +38,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
     private final Set<Integer> availableMarkets = new HashSet<>();
 
     public BlackMarketDealerEvent() {
-        super(NAME, eventStrings.NAME, SpireAnniversary5Mod.makeImagePath("events/blackMarket.png"));
-
+        super(ID, eventStrings.NAME, SpireAnniversary5Mod.makeImagePath("events/blackMarket.png"));
 
         if (!hasEnoughGoldForBuyCard() && !canRemoveCardForSell())
         {
