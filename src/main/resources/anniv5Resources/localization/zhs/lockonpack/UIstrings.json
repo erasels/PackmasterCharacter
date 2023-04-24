@@ -8,8 +8,8 @@
   },
   "${ModID}:LockonPackHat": {
     "TEXT": [
-      "There is no hat. But it could be anything. Shocking, I know. HP-style scar? Golden eyepatch? Irish cap?",
-      "N/A"
+      "锁定最细微的事实，戴上此帽后没有什么线索能逃脱你的目光。",
+      "侦探帽"
     ]
   },
   "${ModID}:GlockOnModifier": {
