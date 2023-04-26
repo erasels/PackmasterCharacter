@@ -15,8 +15,8 @@
     "NAME": "Conflagration",
     "DESCRIPTION": "${ModID}:Consume a card to apply !M! ${ModID}:Ignite."
   },
-  "${ModID}:SmokeScreen": {
-    "NAME": "Smoke Screen",
+  "${ModID}:SmokeCover": {
+    "NAME": "Smoke Cover",
     "DESCRIPTION": "Consume a card to prevent the next time you would lose HP."
   },
   "${ModID}:InfernalBlaze": {
