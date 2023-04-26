@@ -2,7 +2,7 @@
   "${ModID}:Precision": {
     "NAME": "Precision",
     "DESCRIPTIONS": [
-      "Your next Attack gains #b",
+      "Your next #yAttack gains #b",
       " additional damage for the rest of combat."
     ]
   },
@@ -25,9 +25,9 @@
   "${ModID}:AnotherMomentPower": {
     "NAME": "Another Moment",
     "DESCRIPTIONS": [
-      "Exhaust the first Skill you play each turn and gain #b1 #yDexterity.",
-      "Exhaust the first #b",
-      " Skills you play each turn and gain #b1 #yDexterity."
+      "#yExhaust the first #ySkill you play each turn and gain #b1 #yDexterity.",
+      "#yExhaust the first #b",
+      " #ySkills you play each turn and gain #b1 #yDexterity."
     ]
   }
 }

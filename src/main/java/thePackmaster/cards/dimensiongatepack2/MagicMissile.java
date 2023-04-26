@@ -8,7 +8,6 @@ import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGordian
 import thePackmaster.powers.dimensiongatepack.MagicMissilePower;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MagicMissile extends AbstractDimensionalCardGordian {

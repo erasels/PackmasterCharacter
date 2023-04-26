@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGordian;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class ManaShield extends AbstractDimensionalCardGordian {

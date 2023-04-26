@@ -1,13 +1,11 @@
 package thePackmaster.cards.dimensiongatepack2;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGordian;
 import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class FlamePillar extends AbstractDimensionalCardGordian {

@@ -8,8 +8,8 @@
   },
   "${ModID}:LockonPackHat": {
     "TEXT": [
-      "There is no hat. But it could be anything. Shocking, I know. HP-style scar? Golden eyepatch? Irish cap?",
-      "N/A"
+      "Locked on to the smallest details, with this stylish cap no detail will evade your sight.",
+      "The Detective"
     ]
   },
   "${ModID}:GlockOnModifier": {

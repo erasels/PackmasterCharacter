@@ -5,14 +5,20 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class DoubleDamageModifier extends AbstractCardModifier {
+public class DamageMultiplierModifier extends AbstractCardModifier {
+    private final int multiplier;
+
+    public DamageMultiplierModifier(int multiplier) {
+        this.multiplier = multiplier;
+    }
+
     @Override
     public float modifyDamageFinal(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
-        return damage * 2;
+        return damage * multiplier;
     }
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new DoubleDamageModifier();
+        return new DamageMultiplierModifier(multiplier);
     }
 }

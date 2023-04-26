@@ -5,7 +5,7 @@
   },
   "${ModID}:DC": {
     "NAME": "直流电",
-    "DESCRIPTION": "{@@}保留 。 NL 生成 一个 闪电 充能球， NL 触发其 激发 {!Upgrades!|>0=与被动} 效果。 NL 消耗 。"
+    "DESCRIPTION": "{@@}保留 。 NL 生成 一个 闪电 充能球， NL 触发其 激发 {!Upgrades!|>0=与被动}效果。 NL 消耗 。"
   },
   "${ModID}:BlockOn": {
     "NAME": "锁挡",

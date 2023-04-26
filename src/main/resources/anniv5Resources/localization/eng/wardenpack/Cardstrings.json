@@ -27,7 +27,7 @@
   },
   "${ModID}:ForceBolt": {
     "NAME": "Force Bolt",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL Increase the damage dealt by *Magic cards by !M! this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
   },
   "${ModID}:Enigmancy": {
     "NAME": "Enigmancy",

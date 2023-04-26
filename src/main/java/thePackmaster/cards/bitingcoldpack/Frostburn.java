@@ -5,13 +5,13 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
+import thePackmaster.actions.highenergypack.AllEnemyApplyPowerAction;
 import thePackmaster.powers.bitingcoldpack.FrostbitePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.applyToEnemy;
+import static thePackmaster.util.Wiz.atb;
 
 public class Frostburn extends BitingColdCard {
     public final static String ID = makeID("Frostburn");
@@ -28,8 +28,7 @@ public class Frostburn extends BitingColdCard {
 
         addToBot(new WaitAction(0.4F));
 
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
-            applyToEnemy(mo, new FrostbitePower(mo, magicNumber));
+        atb(new AllEnemyApplyPowerAction(p, magicNumber, (q) -> new FrostbitePower(q, magicNumber)));
 
         addToBot(new WaitAction(0.6F));
         addToBot(new MakeTempCardInDiscardAction(this.cardsToPreview,1));

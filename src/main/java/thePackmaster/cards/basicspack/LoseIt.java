@@ -33,7 +33,7 @@ public class LoseIt extends AbstractPackmasterCard {
         for(AbstractCard c : p.discardPile.group)
             if (c.cardID.equals(Rummage.ID))
                 CardModifierManager.addModifier(c, new MagicModifier(this.magicNumber, true));
-        addToTop(new MakeTempCardInHandAction(cardsToPreview.makeStatEquivalentCopy()));
+        addToTop(new MakeTempCardInHandAction(cardsToPreview));
     }
 
     public void upp(){

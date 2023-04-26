@@ -104,7 +104,8 @@
       "Choice of ",
       "Pack Filtering Menu",
       "Hat Menu",
-      ""
+      "",
+      "None"
     ]
   },
   "${ModID}:PackSetup": {
@@ -169,7 +170,8 @@
       "Adds a new character: The Packmaster.",
       "ALL PACKS MODE. Ignores Custom Draft, Doesn't Unlock Hats",
       "One Frame For All. All Pack cards have normal Packmaster frames (Requires Restart).",
-      "Share Content. Some Relics/ Potions can appear on other characters (Requires Restart)."
+      "Share Content. Some Relics/ Potions can appear on other characters (Requires Restart).",
+      "Allow selecting None multiple times in custom draft mode (may cause crashes/freezes for some pack choices)"
     ]
   },
   "${ModID}:PMBoosterBoxCardReward": {

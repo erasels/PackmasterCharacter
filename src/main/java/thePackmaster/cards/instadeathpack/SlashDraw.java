@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cardmodifiers.instadeathpack.DoubleDamageModifier;
+import thePackmaster.cardmodifiers.instadeathpack.DamageMultiplierModifier;
 import thePackmaster.vfx.instadeathpack.RandomReversingSlashEffect;
 
 
@@ -75,7 +75,7 @@ public class SlashDraw extends AbstractInstadeathCard {
                         return;
                     }
 
-                    queueDoubledCard(SlashDraw.this, m);
+                    queueMultipliedCard(SlashDraw.this, m);
                 }
             }));
         }
@@ -87,13 +87,13 @@ public class SlashDraw extends AbstractInstadeathCard {
 
 
 
-    private static void queueDoubledCard(SlashDraw c, AbstractMonster m) {
+    private static void queueMultipliedCard(SlashDraw c, AbstractMonster m) {
         AbstractCard tmp = c.makeSameInstanceOf();
         if (!(tmp instanceof SlashDraw))
             return; //???????
 
         SlashDraw slash = (SlashDraw) tmp;
-        CardModifierManager.addModifier(slash, new DoubleDamageModifier());
+        CardModifierManager.addModifier(slash, new DamageMultiplierModifier(c.magicNumber));
         ((SlashDraw) tmp).activeVfx = c.activeVfx;
 
         AbstractDungeon.player.limbo.addToBottom(slash);
