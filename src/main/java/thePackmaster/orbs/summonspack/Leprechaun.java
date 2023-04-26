@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -19,8 +20,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.boardgamepack.RollAction;
 import thePackmaster.powers.boardgamepack.AdvantagePower;
-import thePackmaster.powers.boardgamepack.DicePower;
 import thePackmaster.powers.boardgamepack.OneTimeAdvantagePower;
 import thePackmaster.powers.summonspack.JinxPower;
 import thePackmaster.util.Wiz;
@@ -130,13 +131,10 @@ public class Leprechaun extends CustomOrb {
 
     @Override
     public void onStartOfTurn() {
-        int diceSum = 0;
-        for (int die : dice)
-            diceSum += roll(die);
-        diceSum += modifier;
+        ArrayList<Integer> sides = new ArrayList<>(dice);
 
-        if (diceSum > 0)
-            applyToSelf(new DicePower(adp(), diceSum, false));
+        if (sides.size() > 0)
+            atb(new RollAction(sides, modifier, false));
     }
 
     @Override
@@ -241,7 +239,7 @@ public class Leprechaun extends CustomOrb {
         for(int roll = 0; roll <= advantage; roll++)
         {
             int newRoll = AbstractDungeon.cardRandomRng.random(sides - 1) + 1;
-            //ADD VFX HERE
+
             if(newRoll > curRoll)
                 curRoll = newRoll;
         }
@@ -249,11 +247,12 @@ public class Leprechaun extends CustomOrb {
     }
 
     private static int getAdvantage() {
-        //ADD ADVANTAGE CHECKS HERE
         int adv = 0;
         if(adp().hasPower(OneTimeAdvantagePower.POWER_ID))
+        {
             adv += adp().getPower(OneTimeAdvantagePower.POWER_ID).amount;
-
+            att(new RemoveSpecificPowerAction(adp(), adp(), adp().getPower(OneTimeAdvantagePower.POWER_ID)));
+        }
         if(adp().hasPower(AdvantagePower.POWER_ID))
             adv += adp().getPower(AdvantagePower.POWER_ID).amount;
         return adv;

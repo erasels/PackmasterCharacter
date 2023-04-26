@@ -22,14 +22,7 @@ public class PerceptionCheckPower extends AbstractPackmasterPower {
     public void atStartOfTurn()
     {
         if(!owner.hasPower(DicePower.POWER_ID))
-            atb(new RollAction(SIDES, 1));
-        // When I rewrote this part, the original code ignored amount.  Is the below intended?
-        // Is it intended not to stack for balance reasons?
-        // This is going to surprise players when it doesn't stack
-        // Also non-stacking uncommon powers are a bad idea
-        // If there is a concern about this being too powerful AND it doesn't stack it should definitely be rare
-
-        // atb(new RollAction(SIDES, AMOUNT);
+            atb(new RollAction(SIDES, amount));
     }
 
     @Override

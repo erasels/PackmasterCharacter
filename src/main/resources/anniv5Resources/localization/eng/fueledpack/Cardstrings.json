@@ -5,20 +5,19 @@
   },
   "${ModID}:IridiumShield": {
     "NAME": "Iridium Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust up to !M! card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust up to !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust up to !M! card."
   },
   "${ModID}:Burninate": {
     "NAME": "Burninate",
     "DESCRIPTION": "${ModID}:Consume a card to deal !D! damage."
   },
-  "${ModID}:Conflaguration": {
-    "NAME": "Conflaguration",
+  "${ModID}:Conflagration": {
+    "NAME": "Conflagration",
     "DESCRIPTION": "${ModID}:Consume a card to apply !M! ${ModID}:Ignite."
   },
-  "${ModID}:FlamingLeap": {
-    "NAME": "Flaming Leap",
-    "DESCRIPTION": "${ModID}:Consume a card to gain [E] and draw !M! cards. NL Exhaust."
+  "${ModID}:SmokeScreen": {
+    "NAME": "Smoke Screen",
+    "DESCRIPTION": "Consume a card to prevent the next time you would lose HP."
   },
   "${ModID}:InfernalBlaze": {
     "NAME": "Infernal Blaze",
@@ -26,7 +25,7 @@
   },
   "${ModID}:PlayingWithFire": {
     "NAME": "Playing With Fire",
-    "DESCRIPTION": "Roll !M! ${ModID}:D6. NL Gain 1 ${ModID}:Ignite for each 5 or 6 you roll."
+    "DESCRIPTION": "Roll !M! ${ModID}:D8. NL Gain 1 ${ModID}:Ignite for each 7 or 8 you roll."
   },
   "${ModID}:PhoenixHeart": {
     "NAME": "Phoenix Heart",

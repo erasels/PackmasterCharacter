@@ -1,6 +1,5 @@
 package thePackmaster.cards.fueledpack;
 
-import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -9,8 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.fueledpack.ConsumeToDoAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_BOX_COLOR;
-import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.*;
 
 public class Burninate extends AbstractFueledCard {
@@ -25,8 +22,6 @@ public class Burninate extends AbstractFueledCard {
 
     public Burninate() {
         super(ID, COST, TYPE, RARITY, TARGET);
-        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
-        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         baseDamage = DAMAGE;
         cardsToPreview = new HotAsh();
     }

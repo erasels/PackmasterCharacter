@@ -1,52 +1,69 @@
 package thePackmaster.actions.boardgamepack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.powers.boardgamepack.AdvantagePower;
 import thePackmaster.powers.boardgamepack.DicePower;
 import thePackmaster.powers.boardgamepack.OneTimeAdvantagePower;
 
+import java.util.ArrayList;
+import java.util.function.Consumer;
+
 import static thePackmaster.util.Wiz.*;
 
 public class RollAction extends AbstractGameAction {
-    private final int sides;
+    private final ArrayList<Integer> sides = new ArrayList<>();
     private final boolean sound;
+    private final Consumer<Integer> dieConsumer;
+    private int modifier = 0;
 
     public RollAction(int sides, int num) {
-        this.sides = sides;
-        amount = num;
-        sound = true;
+        this(sides, num, true);
     }
+
     public RollAction(int sides, int num, boolean sound) {
-        this.sides = sides;
         this.sound = sound;
-        amount = num;
+        dieConsumer = null;
+        for (int i = 0; i < num; i++)
+            this.sides.add(sides);
     }
+
+    public RollAction(ArrayList<Integer> sides, int modifier, boolean sound) {
+        this(sides, modifier, null, sound);
+    }
+
+    public RollAction(ArrayList<Integer> sides, int modifier, Consumer<Integer> dieConsumer, boolean sound) {
+        this.sound = sound;
+        this.modifier = modifier;
+        this.sides.addAll(sides);
+        this.dieConsumer = dieConsumer;
+    }
+
     public void update() {
         int diceSum = 0;
-        for (int i = 0; i < amount; i++)
-            diceSum += roll(sides);
-        applyToSelf(new DicePower(adp(), diceSum, sound));
+        int advantage = getAdvantage();
+        for (Integer side : sides)
+            diceSum += roll(side, advantage);
+        diceSum += modifier;
+        applyToSelfTop(new DicePower(adp(), diceSum, sound));
         isDone = true;
     }
 
-    private static int roll(int sides) {
+    private int roll(int sides, int advantage) {
         int curRoll = 0;
-        int advantage = getAdvantage();
-        for(int roll = 0; roll <= advantage; roll++)
+        for(int i = 0; i <= advantage; i++)
         {
             int newRoll = AbstractDungeon.cardRandomRng.random(sides - 1) + 1;
-            //ADD VFX HERE
             if(newRoll > curRoll)
                 curRoll = newRoll;
         }
+        if (dieConsumer != null)
+            dieConsumer.accept(curRoll);
         return curRoll;
     }
 
     private static int getAdvantage() {
-        //ADD ADVANTAGE CHECKS HERE
         int adv = 0;
         if(adp().hasPower(OneTimeAdvantagePower.POWER_ID))
         {

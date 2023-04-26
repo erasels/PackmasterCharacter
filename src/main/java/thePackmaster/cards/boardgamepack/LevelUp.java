@@ -22,7 +22,7 @@ public class LevelUp extends AbstractBoardCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new AdvantagePower(p, magicNumber), magicNumber));
-        atb( new DelayedDiceRollAction(SIDES, NUM_DICE));
+        atb(new DelayedDiceRollAction(SIDES, NUM_DICE));
     }
 
     public void upp() {

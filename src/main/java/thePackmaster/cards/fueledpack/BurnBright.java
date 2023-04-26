@@ -1,14 +1,11 @@
 package thePackmaster.cards.fueledpack;
 
-import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.fueledpack.ConsumeToDoAction;
 import thePackmaster.actions.fueledpack.PlayOldPowerAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_BOX_COLOR;
-import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.*;
 
 public class BurnBright extends AbstractFueledCard {
@@ -21,8 +18,6 @@ public class BurnBright extends AbstractFueledCard {
 
     public BurnBright() {
         super(ID, COST, TYPE, RARITY, TARGET);
-        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
-        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         exhaust = true;
         cardsToPreview = new HotAsh();
     }

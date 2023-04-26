@@ -1,13 +1,10 @@
 package thePackmaster.cards.fueledpack;
 
-import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.fueledpack.PlayingWithFireAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_BOX_COLOR;
-import static thePackmaster.cards.fueledpack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.*;
 
 public class PlayingWithFire extends AbstractFueledCard {
@@ -16,15 +13,14 @@ public class PlayingWithFire extends AbstractFueledCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 2;
-    public static final int SIDES = 6;
+    public static final int SIDES = 8;
+    public static final int IGNITE_THRESHOLD = 7;
 
-    private static final int MAGIC = 4;
-    private static final int UPGRADE_MAGIC = 2;
+    private static final int MAGIC = 3;
+    private static final int UPGRADE_MAGIC = 1;
 
     public PlayingWithFire() {
         super(ID, COST, TYPE, RARITY, TARGET);
-        FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
-        FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         baseMagicNumber = magicNumber = MAGIC;
     }
 
