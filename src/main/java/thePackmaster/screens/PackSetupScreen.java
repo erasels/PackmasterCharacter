@@ -25,7 +25,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.patches.InfiniteSpirePatch;
+import thePackmaster.patches.compatibility.InfiniteSpirePatch;
 import thePackmaster.summaries.PackSummary;
 import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.summaries.PackSummaryReader;

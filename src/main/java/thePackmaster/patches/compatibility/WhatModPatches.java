@@ -1,4 +1,4 @@
-package thePackmaster.patches;
+package thePackmaster.patches.compatibility;
 
 import basemod.patches.whatmod.WhatMod;
 import com.evacipated.cardcrawl.modthespire.lib.*;

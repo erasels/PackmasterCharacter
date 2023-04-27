@@ -12,6 +12,7 @@ import javassist.expr.Expr;
 import javassist.expr.FieldAccess;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
+import thePackmaster.patches.compatibility.InfiniteSpirePatch;
 
 @SpirePatch(
         clz = NeowEvent.class,
