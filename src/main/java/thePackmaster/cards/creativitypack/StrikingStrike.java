@@ -26,7 +26,6 @@ public class StrikingStrike extends AbstractCreativityCard {
 
     @Override
     public void upp() {
-        upgradeDamage(3);
     }
 
     @Override
