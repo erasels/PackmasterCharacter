@@ -36,7 +36,7 @@ public class TaintedEnemy extends AbstractPackmasterPower implements OnReceivePo
             flashWithoutSound();
             abstractPower.amount *= (this.amount + 1);
         }
-            return true;
+        return true;
     }
 
     @Override
