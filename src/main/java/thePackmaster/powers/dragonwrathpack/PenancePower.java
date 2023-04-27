@@ -25,7 +25,7 @@ public class PenancePower extends TwoAmountPower implements CloneablePowerInterf
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static int Power = 20;
-    
+
     public PenancePower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
