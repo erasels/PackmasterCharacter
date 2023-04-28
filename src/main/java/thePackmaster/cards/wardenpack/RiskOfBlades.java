@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -25,10 +24,10 @@ public class RiskOfBlades extends AbstractWardenCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        this.magicNumber = this.baseMagicNumber = hitAmount(4);
+        magicNumber = this.baseMagicNumber = hitAmount(3)+1;
 
         for (int a = 0; a < this.magicNumber; a++)
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        Wiz.atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 
     public int hitAmount(int hits)
@@ -44,12 +43,12 @@ public class RiskOfBlades extends AbstractWardenCard {
     }
 
     public void applyPowers() {
-        this.magicNumber = this.baseMagicNumber = hitAmount(4);
+        magicNumber = baseMagicNumber = hitAmount(3);
 
         super.applyPowers();
 
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-        this.initializeDescription();
+        rawDescription = cardStrings.DESCRIPTION + (magicNumber == 1 ? cardStrings.EXTENDED_DESCRIPTION[0] : cardStrings.EXTENDED_DESCRIPTION[1]);
+        initializeDescription();
     }
 
     public void upp() {
