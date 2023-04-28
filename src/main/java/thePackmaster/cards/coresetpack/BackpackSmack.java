@@ -20,9 +20,7 @@ public class BackpackSmack extends AbstractPackmasterCard {
 
     public BackpackSmack() {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
-        magicNumber = baseMagicNumber = 2;
-
+        baseDamage = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
