@@ -20,7 +20,7 @@ public class MakeshiftShield extends AbstractCreativityCard {
 
     @Override
     public void upp() {
-        upMagic(2);
+        upMagic(1);
     }
 
     @Override
