@@ -15,8 +15,9 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class CountdownPower extends AbstractPackmasterPower implements NonStackablePower {
     public static final String POWER_ID = makeID("CountdownPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     private final boolean upgraded;
+    private boolean triggered = false;
 
     public CountdownPower(AbstractCreature owner, int amount, boolean upgrade) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
@@ -27,7 +28,7 @@ public class CountdownPower extends AbstractPackmasterPower implements NonStacka
     public void onCardDraw(AbstractCard card) {
         if (amount > 1)
             reducePower(1);
-        else {
+        else if (!this.triggered){
             AbstractCard ap = new AtomicPiledriver();
 
             if (upgraded)
@@ -36,6 +37,7 @@ public class CountdownPower extends AbstractPackmasterPower implements NonStacka
             Wiz.att(new GainEnergyAction(2));
             Wiz.att(new MakeTempCardInHandAction(ap, 1, false));
             Wiz.att(new RemoveSpecificPowerAction(owner, owner, this));
+            this.triggered = true;
         }
     }
 

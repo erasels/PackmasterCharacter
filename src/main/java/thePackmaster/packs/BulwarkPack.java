@@ -25,6 +25,7 @@ public class BulwarkPack extends AbstractCardPack {
 
     public BulwarkPack() {
         super(ID, NAME, DESC, AUTHOR);
+        this.hatHidesHair = true;
     }
 
     @Override

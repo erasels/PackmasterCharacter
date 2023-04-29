@@ -21,6 +21,7 @@ public class Flick extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         atb(new SelectCardsInHandAction(1, name + ".", (cards) -> {
             att(new DiscardSpecificCardAction(cards.get(0)));
             int cost = Wiz.getLogicalCardCost(cards.get(0));

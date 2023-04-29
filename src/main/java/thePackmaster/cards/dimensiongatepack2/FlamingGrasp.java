@@ -7,7 +7,6 @@ import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGordian
 import thePackmaster.powers.dimensiongatepack.FlamingGraspPower;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class FlamingGrasp extends AbstractDimensionalCardGordian {
@@ -16,18 +15,19 @@ public class FlamingGrasp extends AbstractDimensionalCardGordian {
     public FlamingGrasp() {
         super(ID, 1, CardRarity.COMMON, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 6;
-        tags.add(MAGIC);
+        
         cardsToPreview = new FlamePillar();
+        baseMagicNumber = magicNumber = 1;
 
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        Wiz.applyToSelf(new FlamingGraspPower(p, 1));
+        Wiz.applyToSelf(new FlamingGraspPower(p, magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeMagicNumber(1);
     }
 }

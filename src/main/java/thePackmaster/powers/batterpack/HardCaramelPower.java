@@ -16,7 +16,7 @@ public class HardCaramelPower extends AbstractPackmasterPower{
 
     public static final String POWER_ID = makeID("HardCaramelPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 
     public HardCaramelPower(final AbstractCreature owner, final int amount) {
@@ -32,7 +32,7 @@ public class HardCaramelPower extends AbstractPackmasterPower{
                 public void update() {
                     if (!realtarget.hasPower(VulnerablePower.POWER_ID)) {
                         HardCaramelPower.this.flash();
-                        Wiz.att(new ApplyPowerAction(realtarget, realtarget, new VulnerablePower(realtarget, 1, false), 1));
+                        Wiz.att(new ApplyPowerAction(realtarget, owner, new VulnerablePower(realtarget, 1, false), 1));
                     }
                     isDone = true;
                 }

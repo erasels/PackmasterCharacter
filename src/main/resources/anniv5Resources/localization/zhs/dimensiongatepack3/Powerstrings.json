@@ -2,7 +2,7 @@
   "${ModID}:OuroborosPower": {
     "NAME": "含尾蛇",
     "DESCRIPTIONS": [
-      "敌方回合结束时，若你本回合防住过任何伤害，获得 #b",
+      "每回合首次防住任何伤害时，获得 #b",
       " 点 #y力量 。",
       " NL 本回合已触发。"
     ]
@@ -11,6 +11,13 @@
     "NAME": "消融",
     "DESCRIPTIONS": [
       "你的回合结束时，获得 #b%s 层 #y临时生命 ，并失去 #b1 层 #y消融 。"
+    ]
+  },
+  "${ModID}:MantisStrikePower": {
+    "NAME": "螳螂反击",
+    "DESCRIPTIONS": [
+      "本回合防住任何伤害时，随机对一名敌人造成 #b",
+      " 点伤害。"
     ]
   }
 }

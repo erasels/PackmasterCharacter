@@ -19,7 +19,7 @@ public class StrikeOfGeniusPower extends AbstractPackmasterPower {
 
     private AbstractCard source;
     public StrikeOfGeniusPower(AbstractCreature owner, int amount, AbstractCard source) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         this.source = source;
 
     }

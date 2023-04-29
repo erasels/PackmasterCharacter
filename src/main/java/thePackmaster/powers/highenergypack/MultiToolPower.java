@@ -18,7 +18,7 @@ public class MultiToolPower extends AbstractPackmasterPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public MultiToolPower(int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, AbstractDungeon.player, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
     }
 
     @Override

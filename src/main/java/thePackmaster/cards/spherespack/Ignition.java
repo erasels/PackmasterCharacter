@@ -18,6 +18,8 @@ public class Ignition extends AbstractSpheresCard {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = DAMAGE;
         this.isMultiDamage = true;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     @Override

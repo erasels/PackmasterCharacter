@@ -1,0 +1,42 @@
+{
+  "${ModID}:SpellStone": {
+    "NAME": "Spell Stone",
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Boost adjacent cards: NL \"Gain !M! Block\""
+  },
+  "${ModID}:PolarBlessing": {
+    "NAME": "Polar Blessing",
+    "DESCRIPTION": "Gain !B! Block. NL Retain adjacent cards this turn."
+  },
+  "${ModID}:MysticCycle": {
+    "NAME": "Mystic Cycle",
+    "DESCRIPTION": "Discard up to !M! cards and draw that many."
+  },
+  "${ModID}:GravitySlam": {
+    "NAME": "Gravity Slam",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust adjacent cards."
+  },
+  "${ModID}:GrantSwiftness": {
+  "NAME": "Grant Swiftness",
+  "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Boost adjacent cards: NL \"Draw 1 card\""
+  },
+  "${ModID}:WhiteSteelCharm": {
+    "NAME": "White Steel Charm",
+    "DESCRIPTION": "Unplayable. NL Whenever you play an adjacent card, a random enemy takes !M! damage."
+  },
+  "${ModID}:EclipseCharm": {
+    "NAME": "Eclipse Charm",
+    "DESCRIPTION": "{@@}Unplayable. NL After you play an adjacent card !M! times{!Upgrades!|<1= in one turn}, gain 1 Strength and Dexterity."
+  },
+  "${ModID}:Chronobooster": {
+    "NAME": "Chronobooster",
+    "DESCRIPTION": "{@@}Unplayable. NL Whenever you play an adjacent card, play it twice, Exhaust it and {!Upgrades!|>0=discard|@=Exhaust} this."
+  },
+  "${ModID}:MirrorsCurse": {
+    "NAME": "Mirror's Curse",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL ${ModID}:Modify adjacent cards: \"Play a copy of this *Mirror's *Curse.\" NL Exhaust."
+  },
+  "${ModID}:BattleFocus": {
+    "NAME": "Battle Focus",
+    "DESCRIPTION": "At the start of your turn, discard up to !M! cards and draw that many."
+  }
+}

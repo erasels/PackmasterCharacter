@@ -13,7 +13,7 @@ public class FlickDice extends AbstractBoardCard {
 
     public FlickDice() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        damage = baseDamage = 10;
+        damage = baseDamage = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

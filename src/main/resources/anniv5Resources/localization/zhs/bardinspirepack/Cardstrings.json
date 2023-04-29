@@ -26,7 +26,7 @@
   },
   "${ModID}:LifeDrain": {
     "NAME": "生命汲取",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得未被格挡伤害的半量层 临时生命 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 ${ModID}:突破 的半量层 临时生命 。"
   },
   "${ModID}:Shifting": {
     "NAME": "物移",

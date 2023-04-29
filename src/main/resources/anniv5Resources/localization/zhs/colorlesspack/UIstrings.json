@@ -1,0 +1,15 @@
+{
+  "${ModID}:ColorlessPack": {
+    "TEXT": [
+      "威克斯化",
+      "创造性地使用原版无色牌！ NL 发现鬼魂与阴暗！ NL Vex的最后卡包!?",
+      "Vex"
+    ]
+  },
+  "${ModID}:ColorlessPackHat": {
+    "TEXT": [
+      "传说中那位英雄所戴之帽！",
+      "自由帽"
+    ]
+  }
+}

@@ -53,7 +53,7 @@ public class Wanderbot extends AbstractOrb {
             public void update() {
                 AbstractMonster target = Wiz.getFrontmostEnemy();
                 if (target != null) {
-                    att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, evokeAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                    att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, Wanderbot.applyLockOn(target, evokeAmount), DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
                     att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
                     att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
                 }
@@ -69,7 +69,7 @@ public class Wanderbot extends AbstractOrb {
             public void update() {
                 AbstractMonster target = Wiz.getFrontmostEnemy();
                 if (target != null) {
-                    att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, evokeAmount, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                    att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, Wanderbot.applyLockOn(target, evokeAmount), DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
                     att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
                     att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
                 }

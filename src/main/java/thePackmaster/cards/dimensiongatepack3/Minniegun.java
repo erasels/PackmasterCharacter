@@ -3,6 +3,7 @@ package thePackmaster.cards.dimensiongatepack3;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -28,7 +29,7 @@ public class Minniegun extends AbstractDimensionalCardEden {
         for (int i = 0; i < magicNumber; i++) {
             dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         }
-        Wiz.atb(new MakeTempCardInDiscardAction(new Jam(), 1));
+        Wiz.atb(new MakeTempCardInDrawPileAction(new Jam(), 1, true, true));
     }
 
     public void upp() {

@@ -28,15 +28,20 @@ public class ClawPowerPotion extends CustomPotion {
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = Color.TAN.cpy();
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(Keywords.SHARPEN.PROPER_NAME, Keywords.SHARPEN.DESCRIPTION));
+        this.resetTips();
     }
 
 
     public void initializeData() {
         this.potency = getPotency();
         this.description = potionStrings.DESCRIPTIONS[0] + potency + LocalizedStrings.PERIOD;
+        this.resetTips();
+    }
+
+    private void resetTips() {
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(Keywords.SHARPEN.PROPER_NAME, Keywords.SHARPEN.DESCRIPTION));
     }
 
     public void use(AbstractCreature target) {

@@ -34,7 +34,7 @@
   },
   "${ModID}:HammerThrow": {
     "NAME": "投掷铅锤",
-    "DESCRIPTION": "一张牌被 保留 时，对所有敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "一张牌被 保留 时， NL 造成 !M! 点群体伤害。"
   },
   "${ModID}:Flail": {
     "NAME": "乱锤",

@@ -8,7 +8,7 @@
     "DESCRIPTIONS": ["攻击后，若目标无 #y易伤 ，给予 #b", " 层。"]
   },
   "${ModID}:AvatarBeatPower": {
-    "NAME": "漂亮一击",
+    "NAME": "绝妙一击",
     "DESCRIPTIONS": [
       "每当你造成 #b",
       " 点以上的未被格挡伤害时，获得 #b",

@@ -13,7 +13,7 @@
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "冻燃",
-    "DESCRIPTION": "所有敌人本回合失去 !M! 点 力量。 NL 下回合,对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "所有敌人本回合失去 !M! 点 力量。 NL 下回合， NL 造成 !D! 点群体伤害。 NL 消耗 。"
   },
   "${ModID}:Frostfire": {
     "NAME": "霜火",
@@ -21,7 +21,7 @@
   },
   "${ModID}:FieryMantle": {
     "NAME": "火焰覆罩",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时， 给予对方 !M! 层 ${ModID}:燃烧 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时， NL 给予对方 !M! 层 ${ModID}:燃烧 。"
   },
   "${ModID}:SnowMelt": {
     "NAME": "雪融",

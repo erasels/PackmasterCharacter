@@ -4,7 +4,7 @@
     "DESCRIPTIONS": [
       "Whenever a card is #yExhausted, lose #b",
       "Whenever a card is #yExhausted, loses #b",
-      " HP."
+      " HP and reduce this by #b1."
     ]
   },
   "${ModID}:RuePower": {

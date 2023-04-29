@@ -1,0 +1,43 @@
+{
+  "${ModID}:AC": {
+    "NAME": "交流电",
+    "DESCRIPTION": "{@@}获得 !B! 点 格挡。 NL 获得一张 *直流电{!Upgrades!|>0=+} 。"
+  },
+  "${ModID}:DC": {
+    "NAME": "直流电",
+    "DESCRIPTION": "{@@}保留 。 NL 生成 一个 闪电 充能球， NL 触发其 激发 {!Upgrades!|>0=与被动}效果。 NL 消耗 。"
+  },
+  "${ModID}:BlockOn": {
+    "NAME": "锁挡",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合受到攻击时， NL 反弹 !M! 层 ${ModID}:锁定 。"
+  },
+  "${ModID}:Bruteforce": {
+    "NAME": "蛮力",
+    "DESCRIPTION": "{@@}激发 最右侧 闪电 充能球 !M! 次 ，造成群体伤害。{!Upgrades!|0= NL 消耗 。}"
+  },
+  "${ModID}:LightsOut": {
+    "NAME": "灯灭",
+    "DESCRIPTION": "将所有 闪电 变为 黑暗 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "激发 所有 闪电 充能球， NL 将其变为 黑暗 。 NL 消耗 。"
+  },
+  "${ModID}:GlockOn": {
+    "NAME": "开火",
+    "DESCRIPTION": "造成 !D! 点伤害，"
+  },
+  "${ModID}:LocknLoad": {
+    "NAME": "上膛",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:锁定 。 NL 生成 !M! 个 闪电 充能球。"
+  },
+  "${ModID}:Reiji": {
+    "NAME": "雷激",
+    "DESCRIPTION": "{@@}固有 。 NL 给予 !${ModID}:m2! 层 ${ModID}:锁定 。{!M!|>0= NL 若目标已被锁定， NL 获得 !M! 点 集中 。} NL 消耗 。"
+  },
+  "${ModID}:LightningRod": {
+    "NAME": "引雷针",
+    "DESCRIPTION": "!M! 回合内， NL 闪电 必定 攻击目标。 NL 生成一个 闪电 充能球。"
+  },
+  "${ModID}:TunnelVision": {
+    "NAME": "隧洞思维",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=给予 !M! 层群体 ${ModID}:锁定 。 NL } 每层 ${ModID}:锁定 额外使敌人受到的充能球伤害提高25%。"
+  }
+}

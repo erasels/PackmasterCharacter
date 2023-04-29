@@ -23,8 +23,8 @@
   },
   "${ModID}:Wanderbots": {
     "NAME": "Wanderbots",
-    "DESCRIPTION": "Gain !B! Block. NL Channel a ${ModID}:Wanderbot.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Inscribed. NL Gain !B! Block. NL Channel a ${ModID}:Wanderbot."
+    "DESCRIPTION": "Gain !B! Block. NL Channel 1 ${ModID}:Wanderbot.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Inscribed. NL Gain !B! Block. NL Channel 1 ${ModID}:Wanderbot."
   },
   "${ModID}:Retromation": {
     "NAME": "Retromation",

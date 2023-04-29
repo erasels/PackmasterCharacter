@@ -49,7 +49,8 @@
   },
   "${ModID}:MalleableFire": {
     "NAME": "Malleable Fire",
-    "DESCRIPTION": "Deal !D! damage X times. NL Add a *Molded *Fire that costs X to your draw pile. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage X times. NL Add a *Molded *Fire that costs X to your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage X times. NL Add a *Molded *Fire+ that costs X to your draw pile. NL Exhaust."
   },
   "${ModID}:MoldedFire": {
     "NAME": "Molded Fire",

@@ -1,11 +1,13 @@
 package thePackmaster.cards.dimensiongatepack3;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.dimensiongatepack.SelfDamageAction;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardEden;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -14,13 +16,14 @@ public class Corset extends AbstractDimensionalCardEden {
 
     public Corset() {
         super(ID, 1, CardRarity.COMMON, CardType.SKILL, CardTarget.SELF);
-        baseBlock = 14;
+        baseBlock = 10;
+        cardsToPreview = new Jam();
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelfDamageAction(new DamageInfo(p, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         blck();
+        Wiz.atb(new MakeTempCardInHandAction(new Jam()));
     }
 
     public void upp() {

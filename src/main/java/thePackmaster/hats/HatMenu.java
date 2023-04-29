@@ -1,5 +1,6 @@
 package thePackmaster.hats;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.options.DropdownMenu.DropdownColoring;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -13,13 +14,10 @@ import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.hats.specialhats.AlignmentHat;
+import thePackmaster.hats.specialhats.InstantDeathHat;
 import thePackmaster.hats.specialhats.PsychicHat;
 import thePackmaster.hats.specialhats.SpecialHat;
-import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.packs.AlignmentPack;
-import thePackmaster.packs.CoreSetPack;
-import thePackmaster.packs.PsychicPack;
-import thePackmaster.patches.DropdownColorsPatch;
+import thePackmaster.packs.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.util.Wiz;
 
@@ -47,6 +45,7 @@ public class HatMenu {
     static {
         specialHats.put(AlignmentPack.ID, new AlignmentHat());
         specialHats.put(PsychicPack.ID, new PsychicHat());
+        specialHats.put(InstantDeathPack.ID, new InstantDeathHat());
     }
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;
@@ -125,7 +124,7 @@ public class HatMenu {
 
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index, s)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
-        DropdownColorsPatch.DropdownRowToColor.function.set(dropdown, HatMenu::getColorFromIndex);
+        DropdownColoring.RowToColor.function.set(dropdown, HatMenu::getColorFromIndex);
 
         for (int i = 0; i < hats.size(); i++) {
             hatsToIndexes.put(hats.get(i), i);

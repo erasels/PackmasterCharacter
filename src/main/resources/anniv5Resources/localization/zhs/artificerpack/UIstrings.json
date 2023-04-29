@@ -1,0 +1,30 @@
+{
+  "${ModID}:ArtificerPack": {
+    "TEXT": [
+      "咒艺师",
+      "使用强力的，能影响相邻手牌的魔力。",
+      "Pandemonium"
+    ]
+  },
+  "${ModID}:ArtificerPackHat": {
+    "TEXT": [
+      "我保证你戴上后还能呼吸，它很魔幻。",
+      "大块水晶"
+    ]
+  },
+  "${ModID}:BlockEnchantModifier": {
+    "TEXT": [
+      " NL 获得 "," 点 格挡 。"
+    ]
+  },
+  "${ModID}:LimitedGambleAction": {
+    "TEXT": [
+      "丢弃。"
+    ]
+  },
+  "${ModID}:DrawEnchantModifier": {
+    "TEXT": [
+      " NL 抽 "," 张牌。"," 张牌。"
+    ]
+  }
+}

@@ -1,14 +1,14 @@
 package thePackmaster.powers.cthulhupack;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.InvisiblePower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.Madness;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.powers.AbstractPackmasterPower;
+import thePackmaster.stances.cthulhupack.NightmareStance;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -16,22 +16,16 @@ public class NextTurnGainMadnessPower extends AbstractPackmasterPower implements
     public static final String POWER_ID = makeID("NextTurnGainMadnessPower");
     public static final String NAME = "";
 
-    private boolean upgradeMadness;
 
-    public NextTurnGainMadnessPower(AbstractCreature owner, int amount, boolean upgraded) {
-        super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+    public NextTurnGainMadnessPower(AbstractCreature owner, int amount) {
+        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
 
-        upgradeMadness = upgraded;
     }
 
     public void atStartOfTurn() {
-        AbstractCard c = new Madness();
-        if (upgradeMadness) c.upgrade();
-
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, this.amount));
-        addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, amount));
+        Wiz.atb(new AddTemporaryHPAction(Wiz.p(), Wiz.p(), amount));
+        Wiz.atb(new GainEnergyAction(3));
+        Wiz.atb(new ChangeStanceAction(new NightmareStance()));
         removeThisInvisibly();
     }
-
-
 }

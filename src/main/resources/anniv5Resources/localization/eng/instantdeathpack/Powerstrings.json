@@ -1,0 +1,33 @@
+{
+  "${ModID}:Precision": {
+    "NAME": "Precision",
+    "DESCRIPTIONS": [
+      "Your next #yAttack gains #b",
+      " additional damage for the rest of combat."
+    ]
+  },
+  "${ModID}:LockPower": {
+    "NAME": "Lock",
+    "DESCRIPTIONS": [
+      "#yRetain ",
+      " until played. Gain #b",
+      " #yBlock at the end of each turn until you play it."
+    ]
+  },
+  "${ModID}:CloudPower": {
+    "NAME": "Cloud",
+    "DESCRIPTIONS": [
+      "Take #b50% less damage this turn.",
+      "Take #b50% less damage for #b",
+      " turns."
+    ]
+  },
+  "${ModID}:AnotherMomentPower": {
+    "NAME": "Another Moment",
+    "DESCRIPTIONS": [
+      "#yExhaust the first #ySkill you play each turn and gain #b1 #yDexterity.",
+      "#yExhaust the first #b",
+      " #ySkills you play each turn and gain #b1 #yDexterity."
+    ]
+  }
+}

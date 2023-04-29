@@ -1,32 +1,33 @@
 {
   "${ModID}:ArsenalGear": {
     "NAME": "Arsenal Gear",
-    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare to your hand. It costs 0 and *Exhausts."
+    "DESCRIPTION": "At the start of the next !M! turns, add a random *Uncommon or *Rare to your hand. It costs 1 less this combat."
   },
   "${ModID}:ConjureBarrage": {
     "NAME": "Conjure Barrage",
-    "DESCRIPTION": "*Magic. NL Add !M! *Magic *Missiles to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "*Magic. NL Add !M! *Magic *Missiles+ to your hand. NL Exhaust."
+    "DESCRIPTION": "Add !M! *Magic *Missiles to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Magic *Missiles+ to your hand. NL Exhaust."
   },
   "${ModID}:MagicMissile": {
     "NAME": "Magic Missile",
-    "DESCRIPTION": "*Magic. Retain. NL Deal !D! damage. NL Increase the damage dealt by *Magic cards by !M! this turn."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Increase the damage dealt by *Magic *Missiles by !M! this turn."
   },
   "${ModID}:Channel": {
     "NAME": "Channel",
-    "DESCRIPTION": "*Magic. Retain. NL Reduce the cost of a random *Magic card in hand by !M! this turn. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Reduce the cost of a random card in hand by !M! this turn. NL Exhaust."
   },
   "${ModID}:Daggerstorm": {
     "NAME": "Daggerstorm",
-    "DESCRIPTION": "0-cost Exhaust cards are played an additional time."
+    "DESCRIPTION": "When you create a *non-Shiv card, create and play a *Shiv on a random target."
   },
   "${ModID}:FlamingGrasp": {
     "NAME": "Flaming Grasp",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL The next *Magic card played adds a *Flame *Pillar to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, add a *Flame *Pillar to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Next turn, add !M! *Flame *Pillars to your hand."
   },
   "${ModID}:FlamePillar": {
     "NAME": "Flame Pillar",
-    "DESCRIPTION": "*Magic. NL Apply !M! ${ModID}:Ignite. NL Add a *Channel to your hand. NL Exhaust."
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite. NL Exhaust."
   },
   "${ModID}:Haymaker": {
     "NAME": "Haymaker",
@@ -34,8 +35,8 @@
   },
   "${ModID}:ManaShield": {
     "NAME": "Mana Shield",
-    "DESCRIPTION": "*Magic. NL Gain !B! Block. NL Add a *Channel to your hand.",
-    "UPGRADE_DESCRIPTION": "*Magic. NL Gain !B! Block. NL Add !M! *Channels to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Channel to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Channels to your hand."
   },
   "${ModID}:MuscleMemory": {
     "NAME": "Muscle Memory",
@@ -60,6 +61,7 @@
   },
   "${ModID}:WallOfFire": {
     "NAME": "Wall of Fire",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage to a random enemy !M! times. NL Add 3 *Flame *Pillars to your hand."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Add 3 *Flame *Pillars to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Add 3 *Flame *Pillars+ to your hand."
   }
 }

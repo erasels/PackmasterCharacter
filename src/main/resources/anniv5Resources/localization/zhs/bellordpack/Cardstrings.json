@@ -20,7 +20,7 @@
   },
   "${ModID}:RingTheBell": {
     "NAME": "铃响",
-    "DESCRIPTION": "所有敌人失去 !M! 点生命。 NL ${ModID}:拾起 ： NL 将 *铃铛的诅咒 加入牌组。"
+    "DESCRIPTION": "所有敌人失去 !M! 点生命。 NL 下回合额外抽1张牌。 NL ${ModID}:拾起 ： NL 将 *铃铛的诅咒 加入牌组。"
   },
   "${ModID}:TimeOut": {
     "NAME": "恶时",
@@ -41,6 +41,6 @@
   },
   "${ModID}:SavedByTheBell": {
     "NAME": "铃铛援救",
-    "DESCRIPTION": "保留 。 NL 获得1层 无实体 。 NL 消耗 。 NL ${ModID}:拾起 ：将3张 *铃铛的诅咒 加入牌组。"
+    "DESCRIPTION": "保留 。 NL 获得1层 无实体 。 NL 消耗 。 NL ${ModID}:拾起 ：将2张 *铃铛的诅咒 加入牌组。"
   }
 }

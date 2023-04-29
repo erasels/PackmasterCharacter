@@ -1,6 +1,6 @@
 {
   "${ModID}:VenomDip": {
     "NAME": "毒液渗透",
-    "DESCRIPTION": "本回合造成未被格挡的伤害时，给予 !M! 层 中毒 。"
+    "DESCRIPTION": "本回合每当你 ${ModID}:突破 时， NL 给予 !M! 层 中毒 。"
   }
 }

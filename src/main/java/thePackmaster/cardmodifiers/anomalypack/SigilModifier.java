@@ -1,13 +1,18 @@
 package thePackmaster.cardmodifiers.anomalypack;
 
 import basemod.abstracts.AbstractCardModifier;
+import basemod.helpers.CardModifierManager;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.RepeatCardAction;
+import thePackmaster.cardmodifiers.frostpack.FrozenMod;
 import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
 import thePackmaster.util.Wiz;
 
@@ -23,31 +28,30 @@ public class SigilModifier extends AbstractCardModifier {
 
     public SigilModifier(AbstractCard absorbed) {
         super();
-        toPlayCard = absorbed;
+        toPlayCard = absorbed.makeSameInstanceOf();
     }
 
-    //TODO: For reasons I don't know, this doesn't actually add the card preview.  Maybe happening too early in the stack, that toPlayCard is still null. Commenting out for now.
-    /*
     public void onInitialApplication(AbstractCard card) {
-        super.onInitialApplication(card);
-        if (card.cardsToPreview == null){
-            card.cardsToPreview = toPlayCard;
-        }
-
+        MultiCardPreview.add(card, toPlayCard);
     }
-
-     */
 
     @Override
     public void onExhausted(AbstractCard card) {
-        super.onExhausted(card);
         Wiz.atb(new MakeTempCardInHandAction(toPlayCard.makeStatEquivalentCopy()));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                this.isDone = true;
+                CardModifierManager.removeSpecificModifier(card, SigilModifier.this, true);
+            }
+        });
     }
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-     
-        Wiz.atb(new RepeatCardAction(toPlayCard));
+        AbstractCard cpy = toPlayCard.makeSameInstanceOf();
+        cpy.purgeOnUse = true;
+        Wiz.atb(new NewQueueCardAction(cpy, true, false, true));
     }
 
     @Override
