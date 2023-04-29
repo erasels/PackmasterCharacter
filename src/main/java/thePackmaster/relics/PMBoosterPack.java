@@ -55,7 +55,7 @@ public class PMBoosterPack extends AbstractPackmasterRelic {
                     CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.UNCOMMON ||
                     CardLibrary.getCard(s).rarity == AbstractCard.CardRarity.RARE) {
                 AbstractCard toAdd = CardLibrary.getCard(s).makeCopy();
-                AbstractDungeon.player.relics.stream().forEach(q -> q.onPreviewObtainCard(toAdd));
+                AbstractDungeon.player.relics.forEach(q -> q.onPreviewObtainCard(toAdd));
                 group.addToTop(toAdd);
             }
 
