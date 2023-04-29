@@ -134,5 +134,9 @@
   "${ModID}:SerpentineDagger": {
     "NAME": "Serpentine Dagger",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage !M! times. NL Add two copies of this into your draw pile. NL Exhaust."
+  },
+  "${ModID}:CorruptedBlade": {
+    "NAME": "Corrupted Blade",
+    "DESCRIPTION": "Gain 3 *Ritual. NL Gain !M! ${ModID}:Invincible. NL Deal !D! damage 15 times."
   }
 }
