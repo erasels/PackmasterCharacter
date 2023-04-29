@@ -5,8 +5,6 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.monsterhunterpack.GlassArmorPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
