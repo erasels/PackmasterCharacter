@@ -1,5 +1,6 @@
 package thePackmaster.cards.summonerspellspack;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,7 +12,7 @@ import thePackmaster.actions.summonerspellspack.FlashAction;
 public class Flash extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("Flash");
     private static final int COST = 1;
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 4;
     private static final int UPG_MAGIC = 2;
 
     public Flash() {

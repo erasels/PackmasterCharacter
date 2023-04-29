@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.powers.summonerspellspack.GhostedPower;
 import thePackmaster.util.Wiz;
 
@@ -24,7 +25,7 @@ public class FlashAction extends AbstractGameAction {
         if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE)
             this.addToTop(new DrawCardAction(this.source, 1));
         else
-            this.addToTop(new ApplyPowerAction(p(), p(), new GhostedPower(p(), 1), 1));
+            AbstractDungeon.player.gainEnergy(1);
 
         this.isDone = true;
     }

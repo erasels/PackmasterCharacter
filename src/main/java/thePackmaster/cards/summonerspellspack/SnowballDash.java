@@ -7,14 +7,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 
-public class DashSlap extends AbstractSummonerSpellsCard {
-    public static final String ID = SpireAnniversary5Mod.makeID("DashSlap");
+public class SnowballDash extends AbstractSummonerSpellsCard {
+    public static final String ID = SpireAnniversary5Mod.makeID("SnowballDash");
     private static final int COST = 1;
     private static final int UPG_COST = 0;
     private static final int DAMAGE = 8;
 
 
-    public DashSlap() {
+    public SnowballDash() {
         super(ID, COST, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         this.damage = this.baseDamage = DAMAGE;
         this.isEthereal = true;
@@ -28,6 +28,6 @@ public class DashSlap extends AbstractSummonerSpellsCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
     }
 }

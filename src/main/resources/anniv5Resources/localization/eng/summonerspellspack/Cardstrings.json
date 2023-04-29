@@ -1,33 +1,36 @@
 {
   "${ModID}:UnleashedSmite": {
     "NAME": "Unleashed Smite",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL stslib:Persist !stslib:persist!."
+    "DESCRIPTION": "Deal !M! damage for each card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !M! damage for each card in your hand. NL stslib:Persist !stslib:persist!.",
+    "EXTENDED_DESCRIPTION": [" NL (Deal !D! damage.)"]
   },
   "${ModID}:SnowballStrike": {
     "NAME": "Snowball Strike",
-    "DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, add !M! *Dash *Slap to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, add !M! *Dash *Slaps to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, add !M! *Snowball *Dash to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, add !M! *Snowball *Dashes to your hand."
   },
-  "${ModID}:DashSlap": {
-    "NAME": "Dash Slap",
+  "${ModID}:SnowballDash": {
+    "NAME": "Snowball Dash",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
   },
   "${ModID}:GrievousIgnite": {
     "NAME": "Grievous Ignite",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ignite and !M! ${ModID}:Antiheal for each card in your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Ignite and !M! ${ModID}:Antiheal for each card in your hand."
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite for each card in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Ignite for each card in your hand.",
+    "EXTENDED_DESCRIPTION": [" NL (Apply !${ModID}:m2! *Ignite.)"]
   },
   "${ModID}:WitheringExhaust": {
     "NAME": "Withering Exhaust",
-    "DESCRIPTION": "Apply !M! Weak. NL ${ModID}:Overextended: Apply !M! Vulnerable."
+    "DESCRIPTION": "Apply !M! Weak. NL If you are holding 6 or more cards, also apply !M! Vulnerable."
   },
   "${ModID}:DualHeal": {
     "NAME": "Dual Heal",
-    "DESCRIPTION": "Heal !M! HP. NL Target heals !M! HP. NL Gain !${ModID}:m2! ${ModID}:Ghosted. NL Exhaust."
+    "DESCRIPTION": "Heal self and enemy for !M! HP. NL Does not heal enemies that have ${ModID}:Ignite. NL Exhaust."
   },
-  "${ModID}:SonicBarrier": {
-    "NAME": "Sonic Barrier",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Overextended: Gain !M! ${ModID}:Ghosted."
+  "${ModID}:DeftBarrier": {
+    "NAME": "Deft Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! more card next turn."
   },
   "${ModID}:PerfectClarity": {
     "NAME": "Perfect Clarity",
@@ -35,21 +38,15 @@
   },
   "${ModID}:GhostingMaelstrom": {
     "NAME": "Ghosting Maelstrom",
-    "DESCRIPTION": "Whenever you play a card while ${ModID}:Overextended, deal !M! damage to all enemies. NL Gain !${ModID}:m2! ${ModID}:Ghosted."
+    "DESCRIPTION": "Whenever you play a card while you are holding 6 or more cards, deal !M! damage to ALL enemies."
   },
-  "${ModID}:AggressiveTeleport": {
-    "NAME": "Aggressive Teleport",
-    "DESCRIPTION": "At the start of your turn, put a random Attack from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, put a random Attack from your discard pile into your hand."
+  "${ModID}:TeleportBot": {
+    "NAME": "Teleport Bot",
+    "DESCRIPTION": "At the start of your turn, put the bottom card of your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, put the bottom card of your discard pile into your hand."
   },
   "${ModID}:Flash": {
     "NAME": "Flash",
-    "DESCRIPTION": "Draw !M! cards. NL Excess draw is converted into Ghosted."
-  },
-  "${ModID}:Hexflash": {
-    "NAME": "Hexflash",
-    "DESCRIPTION": "Retain. NL Draw !M! card. NL Exhaust. NL If retained for 3 turns, exhausts and adds *Flash to your hand.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust. NL If retained for 3 turns, exhausts and adds *Flash to your hand.",
-    "EXTENDED_DESCRIPTION": [" (", " turn left.)", " turns left.)"]
+    "DESCRIPTION": "Draw !M! cards. NL Excess draw is converted into [E] . NL Exhaust."
   }
 }

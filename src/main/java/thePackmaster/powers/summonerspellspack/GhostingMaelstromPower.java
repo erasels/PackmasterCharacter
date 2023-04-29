@@ -10,26 +10,24 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import thePackmaster.cards.summonerspellspack.AbstractSummonerSpellsCard;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MaelstromPower extends AbstractPackmasterPower {
-    public static final String POWER_ID = makeID("MaelstromPower");
+public class GhostingMaelstromPower extends AbstractPackmasterPower {
+    public static final String POWER_ID = makeID("GhostingMaelstromPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    public MaelstromPower(AbstractCreature owner, int amount) {
+    public GhostingMaelstromPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
     @Override
     public void onAfterCardPlayed(AbstractCard usedCard) {
-        if (AbstractSummonerSpellsCard.isOverextended()) {
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && AbstractDungeon.player.hand.group.size() >= 6) {
             this.flash();
             this.addToBot(new SFXAction("ATTACK_HEAVY"));
             if (Settings.FAST_MODE)
@@ -39,7 +37,6 @@ public class MaelstromPower extends AbstractPackmasterPower {
 
             this.addToBot(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE, true));
         }
-
     }
 
     public void stackPower(int stackAmount) {

@@ -13,8 +13,4 @@ public abstract class AbstractSummonerSpellsCard extends AbstractPackmasterCard
     @Override
     public void upp() {
     }
-
-    static public boolean isOverextended() {
-        return AbstractDungeon.player.hand.group.size() >= 6;
-    }
 }

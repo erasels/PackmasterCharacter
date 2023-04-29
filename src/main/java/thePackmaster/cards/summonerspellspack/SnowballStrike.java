@@ -7,7 +7,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.actions.legacypack.ShootAnythingAction;
 import thePackmaster.powers.summonerspellspack.SnowballStrikePower;
+import thePackmaster.util.TexLoader;
 
 public class SnowballStrike extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("SnowballStrike");
@@ -22,7 +24,7 @@ public class SnowballStrike extends AbstractSummonerSpellsCard {
         this.tags.add(CardTags.STRIKE);
         this.damage = this.baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = MAGIC;
-        cardsToPreview = new DashSlap();
+        cardsToPreview = new SnowballDash();
     }
 
     @Override
@@ -32,7 +34,8 @@ public class SnowballStrike extends AbstractSummonerSpellsCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        addToBot(new ShootAnythingAction(m, TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("vfx/snowball.png")), false));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         addToBot(new ApplyPowerAction(p, p, new SnowballStrikePower(p, magicNumber), magicNumber));
     }

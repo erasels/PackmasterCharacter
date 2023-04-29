@@ -27,10 +27,10 @@ public class SummonerSpellsPack extends AbstractCardPack {
         cards.add(WitheringExhaust.ID);
         cards.add(UnleashedSmite.ID);
         cards.add(DualHeal.ID);
-        cards.add(SonicBarrier.ID);
+        cards.add(DeftBarrier.ID);
         cards.add(PerfectClarity.ID);
         cards.add(GhostingMaelstrom.ID);
-        cards.add(AggressiveTeleport.ID);
+        cards.add(TeleportBot.ID);
         cards.add(Flash.ID);
         return cards;
     }

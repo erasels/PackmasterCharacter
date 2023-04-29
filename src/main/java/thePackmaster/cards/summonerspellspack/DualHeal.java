@@ -5,21 +5,20 @@ import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.powers.summonerspellspack.GhostedPower;
 
 public class DualHeal extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("DualHeal");
-    private static final int COST = 1;
-    private static final int MAGIC = 7;
-    private static final int UPG_MAGIC = 3;
-    private static final int MAGIC2 = 2;
+    private static final int COST = 0;
+    private static final int MAGIC = 4;
+    private static final int UPG_MAGIC = 2;
 
 
     public DualHeal() {
         super(ID, COST, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         exhaust = true;
         magicNumber = baseMagicNumber = MAGIC;
-        secondMagic = baseSecondMagic = MAGIC2;
         tags.add(CardTags.HEALING);
     }
 
@@ -31,8 +30,7 @@ public class DualHeal extends AbstractSummonerSpellsCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new HealAction(p, p, this.magicNumber, 0));
-        addToBot(new HealAction(m, p, this.magicNumber, 0.2f));
-
-        addToBot(new ApplyPowerAction(p, p, new GhostedPower(p, this.secondMagic), this.secondMagic));
+        if (m != null && !m.hasPower(IgnitePower.POWER_ID))
+            addToBot(new HealAction(m, p, this.magicNumber,0.2f));
     }
 }

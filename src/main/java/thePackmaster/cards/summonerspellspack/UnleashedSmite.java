@@ -4,7 +4,9 @@ import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PersistFiel
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,29 +14,55 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.summonerspellspack.SnowballStrikePower;
 
+import java.util.Iterator;
+
 public class UnleashedSmite extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("UnleashedSmite");
-    private static final int COST = 0;
-    private static final int DAMAGE = 2;
-    private static final int UPG_DAMAGE = 2;
-    private static final int MAGIC = 1;
+    private static final int COST = 1;
+    private static final int MAGIC = 2;
+    private static final int DAMAGE = 0;
+    private static final int PERSIST = 1;
+    private static final int UPG_PERSIST = 1;
 
     public UnleashedSmite() {
-        super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.damage = this.baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = MAGIC;
-        PersistFields.setBaseValue(this, 2);
-        selfRetain = true;
+        super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC;
+        PersistFields.setBaseValue(this, PERSIST);
     }
 
     @Override
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        PersistFields.upgrade(this, UPG_PERSIST);
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        this.baseDamage = AbstractDungeon.player.hand.size() * MAGIC;
+        this.calculateCardDamage(m);
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+        this.initializeDescription();
+    }
+
+    public void applyPowers() {
+        int tmp = baseDamage;
+        this.baseDamage = AbstractDungeon.player.hand.size() * MAGIC;
+        super.applyPowers();
+        if(tmp != baseDamage) isDamageModified = true;
+        baseDamage = tmp;
+
+        this.rawDescription = this.upgraded ?
+                cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] :
+                cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+
+        this.initializeDescription();
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
-        //this.addToBot(new ModifyDamageAction(this.uuid, this.magicNumber * p.hand.group.size()));
+    public void calculateCardDamage(AbstractMonster mo) {
+        int tmp = baseDamage;
+        this.baseDamage = AbstractDungeon.player.hand.size() * MAGIC;
+        super.calculateCardDamage(mo);
+        if(tmp != baseDamage) isDamageModified = true;
+        baseDamage = tmp;
     }
 }
