@@ -12,7 +12,7 @@ import thePackmaster.SpireAnniversary5Mod;
 public class IceWall extends AbstractShamanCard {
     public static final String ID = SpireAnniversary5Mod.makeID("IceWall");
     private static final int COST = 1;
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 7;
     private static final int UPGRADE_BLOCK = 2;
 
     public IceWall() {
