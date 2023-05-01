@@ -1,8 +1,8 @@
 {
   "${ModID}:UnleashedSmite": {
     "NAME": "Unleashed Smite",
-    "DESCRIPTION": "Deal !M! damage for each card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !M! damage for each card in your hand. NL stslib:Persist !stslib:persist!.",
+    "DESCRIPTION": "Deal damage equal to !M! times the number of cards in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to !M! times the number of cards in your hand. NL stslib:Persist !stslib:persist!.",
     "EXTENDED_DESCRIPTION": [" NL (Deal !D! damage.)"]
   },
   "${ModID}:SnowballStrike": {
@@ -22,7 +22,7 @@
   },
   "${ModID}:WitheringExhaust": {
     "NAME": "Withering Exhaust",
-    "DESCRIPTION": "Apply !M! Weak. NL If you are holding 6 or more cards, also apply !M! Vulnerable."
+    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL If you are holding 6 or more cards, also apply !${ModID}:m2! Weak."
   },
   "${ModID}:DualHeal": {
     "NAME": "Dual Heal",

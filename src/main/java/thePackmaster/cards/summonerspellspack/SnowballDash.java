@@ -9,9 +9,9 @@ import thePackmaster.SpireAnniversary5Mod;
 
 public class SnowballDash extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("SnowballDash");
-    private static final int COST = 1;
-    private static final int UPG_COST = 0;
-    private static final int DAMAGE = 8;
+    private static final int COST = 0;
+    private static final int DAMAGE = 4;
+    private static final int UPG_DAMAGE = 2;
 
 
     public SnowballDash() {
@@ -23,7 +23,7 @@ public class SnowballDash extends AbstractSummonerSpellsCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(UPG_COST);
+        upgradeDamage(UPG_DAMAGE);
     }
 
     @Override
