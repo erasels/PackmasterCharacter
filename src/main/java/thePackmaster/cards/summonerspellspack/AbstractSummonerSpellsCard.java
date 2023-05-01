@@ -1,6 +1,5 @@
 package thePackmaster.cards.summonerspellspack;
 
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractSummonerSpellsCard extends AbstractPackmasterCard

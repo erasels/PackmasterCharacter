@@ -1,12 +1,10 @@
 package thePackmaster.cards.summonerspellspack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.shamanpack.IgnitePower;
-import thePackmaster.powers.summonerspellspack.GhostedPower;
 
 public class DualHeal extends AbstractSummonerSpellsCard {
     public static final String ID = SpireAnniversary5Mod.makeID("DualHeal");

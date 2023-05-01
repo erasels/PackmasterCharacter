@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.shamanpack.IgnitePower;
-import thePackmaster.powers.summonerspellspack.AntihealPower;
 
 import static thePackmaster.util.Wiz.p;
 
