@@ -12,8 +12,8 @@ public class TunnelVisionPower extends AbstractPackmasterPower {
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     //Patches
-    public TunnelVisionPower(AbstractCreature owner) {
-        super(POWER_ID, NAME, PowerType.BUFF, false, owner, -1);
+    public TunnelVisionPower(AbstractCreature owner, int amt) {
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amt);
     }
 
     public void updateDescription() {
