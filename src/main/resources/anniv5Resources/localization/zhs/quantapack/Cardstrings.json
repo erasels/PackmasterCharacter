@@ -11,7 +11,7 @@
   },
   "${ModID}:Cull": {
     "NAME": "宰杀",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 所有单位失去 !M! 点生命。"
+    "DESCRIPTION": "受到 !M! 点伤害。 NL 获得 !B! 点 格挡 。"
   },
   "${ModID}:Potential": {
     "NAME": "潜能",

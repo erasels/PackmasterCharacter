@@ -9,8 +9,8 @@
   },
   "${ModID}:RiskOfBlades": {
     "NAME": "刀刃之险",
-    "DESCRIPTION": "抽牌堆顶部4张牌每有一张攻击，造成 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [" NL (造成 !M! 次。)"]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆顶部3张牌每有一张攻击，再造成一次。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !M! 次)"]
   },
   "${ModID}:Crossroads": {
     "NAME": "交岔口",
