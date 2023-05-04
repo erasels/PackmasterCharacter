@@ -7,7 +7,6 @@ import thePackmaster.actions.weaponspack.EquipAction;
 import thePackmaster.orbs.weaponspack.SwordOfFireOrb;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.SpireAnniversary5Mod.modID;
 
 public class SwordOfFire extends AbstractWeaponsPackCard {
 
@@ -19,7 +18,7 @@ public class SwordOfFire extends AbstractWeaponsPackCard {
 
 
     public SwordOfFire() {
-        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS, getCardTextureString(Sword.ID.replace(modID + ":", ""), CardType.SKILL));
+        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
 
         this.baseMagicNumber = this.magicNumber = WEAPON_DURABILITY;
     }

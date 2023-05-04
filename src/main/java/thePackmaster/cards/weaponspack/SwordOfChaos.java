@@ -7,7 +7,6 @@ import thePackmaster.actions.weaponspack.EquipAction;
 import thePackmaster.orbs.weaponspack.SwordOfChaosOrb;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.SpireAnniversary5Mod.modID;
 
 public class SwordOfChaos extends AbstractWeaponsPackCard {
 
@@ -18,7 +17,7 @@ public class SwordOfChaos extends AbstractWeaponsPackCard {
     private static final int UPGRADE_PLUS_WEAPON_DURABILITY = 1;
 
     public SwordOfChaos() {
-        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS, getCardTextureString(Sword.ID.replace(modID + ":", ""), CardType.SKILL));
+        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
 
         this.baseMagicNumber = this.magicNumber = WEAPON_DURABILITY;
     }

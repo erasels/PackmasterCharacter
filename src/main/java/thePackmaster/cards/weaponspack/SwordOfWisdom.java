@@ -18,7 +18,7 @@ public class SwordOfWisdom extends AbstractWeaponsPackCard {
     private static final int UPGRADE_PLUS_WEAPON_DURABILITY = 1;
 
     public SwordOfWisdom() {
-        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS, getCardTextureString(Sword.ID.replace(modID + ":", ""), CardType.SKILL));
+        super(ID, COST, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
 
         this.baseMagicNumber = this.magicNumber = WEAPON_DURABILITY;
     }
