@@ -7,7 +7,6 @@ import thePackmaster.actions.weaponspack.EquipAction;
 import thePackmaster.orbs.weaponspack.SwordOfWisdomOrb;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.SpireAnniversary5Mod.modID;
 
 public class SwordOfWisdom extends AbstractWeaponsPackCard {
 
