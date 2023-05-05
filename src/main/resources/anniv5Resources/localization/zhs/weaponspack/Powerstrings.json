@@ -4,7 +4,7 @@
     "DESCRIPTIONS": []
   },
   "${ModID}:SalvagerPower": {
-    "NAME": "回收器",
+    "NAME": "残兵回收器",
     "DESCRIPTIONS": [
       "每当一件 #y武器 耐久耗尽时，获得 #b",
       " [E] 。"
