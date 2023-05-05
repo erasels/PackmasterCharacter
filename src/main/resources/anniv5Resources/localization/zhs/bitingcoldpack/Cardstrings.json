@@ -13,7 +13,7 @@
   },
   "${ModID}:GrowingAffliction": {
     "NAME": "无间折磨",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予负面效果时， NL 本牌从弃牌堆返回手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予负面效果时， NL 本牌从弃牌堆返回手牌。 NL 且耗能变为1。"
   },
   "${ModID}:InsultToInjury": {
     "NAME": "讥讽伤口",
