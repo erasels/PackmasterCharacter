@@ -17,12 +17,12 @@ public class DirtyTrick extends AbstractSerpentineCard {
 
     public DirtyTrick() {
         super(ID, COST, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.SELF, CardColor.COLORLESS);
+        this.isEthereal = true;
+        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        this.isEthereal = true;
-        this.exhaust = true;
         addToBot(new ChangeStanceAction(new CunningStance()));
     }
 
