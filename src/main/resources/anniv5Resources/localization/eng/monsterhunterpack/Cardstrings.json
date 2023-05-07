@@ -124,7 +124,7 @@
   },
   "${ModID}:TranqBomb": {
     "NAME": "Tranquilizer Bomb",
-    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target enemy loses !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target loses !M! Strength. NL Exhaust."
   },
   "${ModID}:Paintball": {
     "NAME": "Paintball",
