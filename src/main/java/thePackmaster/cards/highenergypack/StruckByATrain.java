@@ -22,6 +22,7 @@ public class StruckByATrain extends AbstractHighEnergyCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractMonster q = getFrontmostEnemy();
         if (q != null) {
+            calculateCardDamage(q);
             dmg(q, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         }
         atb(new ModifyDamageAction(this.uuid, this.magicNumber));
