@@ -148,6 +148,8 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
                 return new SpireSpear();
             case "Reptomancer":
                 return new SerpentineDagger();
+            case "CorruptHeart":
+                return new CorruptedBlade();
             default:
                 return new Hyperbeam();
         }
