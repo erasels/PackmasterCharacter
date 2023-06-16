@@ -2,7 +2,7 @@
   "${ModID}:DarkSoulsPack": {
     "TEXT": [
       "Dark Souls",
-      "A Dark Souls themed pack based around self-debuff synergies.",
+      "A Dark\u00a0Souls themed pack based around self-debuff synergies.",
       "Doodle"
     ]
   },
