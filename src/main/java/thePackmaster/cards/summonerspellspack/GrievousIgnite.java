@@ -35,7 +35,7 @@ public class GrievousIgnite extends AbstractSummonerSpellsCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        this.baseSecondMagic = p().hand.group.size() * this.magicNumber;
+        this.secondMagic = this.baseSecondMagic = p().hand.group.size() * this.magicNumber;
 
         this.rawDescription = this.upgraded ?
                 cardStrings.UPGRADE_DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] :

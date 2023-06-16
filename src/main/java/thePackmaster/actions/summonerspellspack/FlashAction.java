@@ -10,7 +10,7 @@ public class FlashAction extends AbstractGameAction {
 
     public FlashAction(AbstractCreature source) {
         this.setValues(this.target, source, 1);
-        this.actionType = ActionType.WAIT;
+        this.actionType = ActionType.DRAW;
     }
 
     public void update() {

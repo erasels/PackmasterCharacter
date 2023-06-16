@@ -21,13 +21,16 @@ public class TeleportBotPower extends AbstractPackmasterPower {
     @Override
     public void atStartOfTurnPostDraw() {
         boolean flashed = false;
-        for (int i = 0; i < this.amount; i++) {
-            if (!p().discardPile.isEmpty()) {
-                AbstractCard c = p().discardPile.group.get(0);
-                addToBot(new DiscardToHandAction(c));
-                if (!flashed) {
-                    flash();
-                    flashed = true;
+
+        if (!p().discardPile.isEmpty()) {
+            for (int i = 0; i < this.amount; i++) {
+                if (i < p().discardPile.group.size()) {
+                    AbstractCard c = p().discardPile.group.get(i);
+                    addToBot(new DiscardToHandAction(c));
+                    if (!flashed) {
+                        flash();
+                        flashed = true;
+                    }
                 }
             }
         }

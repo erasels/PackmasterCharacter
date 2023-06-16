@@ -31,7 +31,8 @@
     "Jack Renoson",
     "lobbien",
     "Jedi",
-    "Mwalls"
+    "Mwalls",
+    "MaybeLater_x"
   ],
   "description": "${project.description}",
   "version": "${project.version}",
