@@ -1,42 +1,42 @@
 {
   "${ModID}:SpellStone": {
-    "NAME": "Spell Stone",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Boost adjacent cards: NL \"Gain !M! Block\""
+    "NAME": "符能石",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:咒化 相邻手牌： NL \"获得 !M! 点 格挡 \""
   },
   "${ModID}:PolarBlessing": {
-    "NAME": "Polar Blessing",
-    "DESCRIPTION": "Gain !B! Block. NL Retain adjacent cards this turn."
+    "NAME": "寒极祝福",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合 保留 相邻手牌。"
   },
   "${ModID}:MysticCycle": {
-    "NAME": "Mystic Cycle",
-    "DESCRIPTION": "Discard up to !M! cards and draw that many."
+    "NAME": "潜修",
+    "DESCRIPTION": "可丢弃 !M! 张手牌， NL 抽等量的牌。"
   },
   "${ModID}:GravitySlam": {
-    "NAME": "Gravity Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust adjacent cards."
+    "NAME": "重力之握",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 相邻手牌。"
   },
   "${ModID}:GrantSwiftness": {
-  "NAME": "Grant Swiftness",
-  "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Boost adjacent cards: NL \"Draw 1 card\""
+  "NAME": "超迅捷",
+  "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:咒化 相邻手牌： NL \"抽一张牌\""
   },
   "${ModID}:WhiteSteelCharm": {
-    "NAME": "White Steel Charm",
-    "DESCRIPTION": "Unplayable. NL Whenever you play an adjacent card, a random enemy takes !M! damage."
+    "NAME": "白钢咒",
+    "DESCRIPTION": "不能被打出 。 NL 打出本牌相邻牌时， NL 随机造成 !M! 点伤害。"
   },
   "${ModID}:EclipseCharm": {
-    "NAME": "Eclipse Charm",
-    "DESCRIPTION": "{@@}Unplayable. NL After you play an adjacent card !M! times{!Upgrades!|<1= in one turn}, gain 1 Strength and Dexterity."
+    "NAME": "蚀咒",
+    "DESCRIPTION": "{@@}不能被打出 。 NL {!Upgrades!|<1=单回合}打出本牌相邻牌 !M! 次后，获得1点 力量 与 敏捷 。"
   },
   "${ModID}:Chronobooster": {
-    "NAME": "Chronobooster",
-    "DESCRIPTION": "{@@}Unplayable. NL Whenever you play an adjacent card, play it twice and {!Upgrades!|>0=discard|@=Exhaust} this."
+    "NAME": "时空加速器",
+    "DESCRIPTION": "{@@}不能被打出 。 NL 打出本牌相邻牌时， NL 额外将其打出一次， NL 并将本牌 {!Upgrades!|>0=丢弃|@=消耗} 。"
   },
   "${ModID}:MirrorsCurse": {
-    "NAME": "Mirror's Curse",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Modify adjacent cards: \"Play a copy of *Mirror's *Curse.\" NL Exhaust."
+    "NAME": "镜像诅咒",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:修改 相邻手牌： NL \"打出一张 *镜 *像 *诅 *咒 \" NL 消耗 。"
   },
   "${ModID}:BattleFocus": {
-    "NAME": "Battle Focus",
-    "DESCRIPTION": "At the start of your turn, discard up to !M! cards and draw that many."
+    "NAME": "战意集中",
+    "DESCRIPTION": "回合开始时， NL 可丢弃最多 !M! 张手牌， NL 并抽等量的牌。"
   }
 }

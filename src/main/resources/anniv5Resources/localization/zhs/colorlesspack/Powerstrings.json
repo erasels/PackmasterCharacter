@@ -1,0 +1,48 @@
+{
+  "${ModID}:BunkerPower": {
+    "NAME": "沙坑",
+    "DESCRIPTIONS": [
+      "你的下回合开始时，将一张 #y高尔夫球 加入手牌。",
+      "你的下回合开始时，将 #b",
+      " 张 #y高尔夫球 加入手牌。"
+    ]
+  },
+  "${ModID}:ColorlessMasteryPower": {
+    "NAME": "无色精通",
+    "DESCRIPTIONS": [
+      "每当你打出一张无色牌时，获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
+  "${ModID}:LunchBoxPower": {
+    "NAME": "午餐盒",
+    "DESCRIPTIONS": [
+      "本回合你打出的下张无色牌额外打出一次。",
+      "本回合你打出的下 #b",
+      " 张无色牌额外打出一次。"
+    ]
+  },
+  "${ModID}:MonasteryPower": {
+    "NAME": "修道拜访",
+    "DESCRIPTIONS": [
+      "接下来 #b3 个回合开始时，依次将一张 #y疯狂 、 #y净化 ，与 #y神化 加入手牌。",
+      "接下来 #b2 个回合开始时，依次将一张 #y净化 与 #y神化 加入手牌。",
+      "下回合开始时，将一张 #y神化 加入手牌。"
+    ]
+  },
+  "${ModID}:PrismShardPower": {
+    "NAME": "万棱镜片",
+    "DESCRIPTIONS": [
+      "当你拼凑 #b3 张 #y万棱镜片 后，将一张 ",
+      "+",
+      " 加入手牌。"
+    ]
+  },
+  "${ModID}:GhostPower": {
+    "NAME": "闹鬼",
+    "DESCRIPTIONS": [
+      "该单位回合开始时。其失去 #b",
+      " 点生命。"
+    ]
+  }
+}

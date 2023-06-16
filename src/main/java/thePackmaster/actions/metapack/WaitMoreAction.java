@@ -9,7 +9,7 @@ import thePackmaster.util.Wiz;
 
 public class WaitMoreAction extends AbstractGameAction {
     public WaitMoreAction(float setDur) {
-        this.setValues((AbstractCreature) null, (AbstractCreature) null, 0);
+        this.setValues(null, null, 0);
         this.duration = setDur;
         this.actionType = ActionType.WAIT;
 

@@ -34,7 +34,9 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
@@ -99,10 +101,10 @@ import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
-import thePackmaster.util.creativitypack.JediUtil;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
+import thePackmaster.util.creativitypack.JediUtil;
 import thePackmaster.util.dynamicdynamic.DynamicDynamicVariableManager;
 import thePackmaster.vfx.distortionpack.ImproveEffect;
 
@@ -110,14 +112,12 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
-import java.text.MessageFormat;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static thePackmaster.patches.MainMenuUIPatch.CHOICE;
-import static thePackmaster.patches.MainMenuUIPatch.RANDOM;
+import static thePackmaster.patches.MainMenuUIPatch.*;
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -254,9 +254,6 @@ public class SpireAnniversary5Mod implements
     public static AbstractCard.CardTags ISCARDMODIFIED;
 
     @SpireEnum
-    public static AbstractCard.CardTags MAGIC;
-
-    @SpireEnum
     public static AbstractCard.CardTags CLAW;
 
 
@@ -307,6 +304,7 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterCustomDraftSelection", String.join(",", makeID("CoreSetPack"), RANDOM, RANDOM, RANDOM, CHOICE, CHOICE, CHOICE));
             defaults.put("PackmasterUnlockedHats", "");
             defaults.put("PackmasterAllPacksMode", "FALSE");
+            defaults.put("PackmasterAllowMultipleNONE", "FALSE");
             defaults.put("PackmasterSelectedHatIndex", "0");
             defaults.put("PackmasterUnlockedRainbows","");
             defaults.put("PackmasterRainbowEnabled","FALSE");
@@ -390,6 +388,21 @@ public class SpireAnniversary5Mod implements
         try {
             modConfig.setBool("PackmasterShowSummaries", !_showPackSummaries);
             _showPackSummaries = !_showPackSummaries;
+            modConfig.save();
+        } catch (Exception e) {
+            logger.error(e);
+        }
+    }
+
+    public static Boolean allowMultiNone() {
+        if(modConfig == null) return false;
+        return modConfig.getBool("PackmasterAllowMultipleNONE");
+    }
+
+    public static void toggleMultiNone() {
+        if(modConfig == null) return;
+        try {
+            modConfig.setBool("PackmasterAllowMultipleNONE", !modConfig.getBool("PackmasterAllowMultipleNONE"));
             modConfig.save();
         } catch (Exception e) {
             logger.error(e);
@@ -504,6 +517,7 @@ public class SpireAnniversary5Mod implements
         declarePacks();
         logger.info("Full list of packs: " + unfilteredAllPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
         logCardStats();
+        logPackAuthors();
 
         AmplifyPatches.receivePostInit();
         BaseMod.addCustomScreen(new PackSetupScreen());
@@ -824,6 +838,7 @@ public class SpireAnniversary5Mod implements
         EnergyCountPatch.energySpentThisCombat = 0;
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
         JediUtil.receiveOnBattleStart(room);
+        CthulhuPack.lunacyThisCombat = 0;
     }
 
     @Override
@@ -935,9 +950,10 @@ public class SpireAnniversary5Mod implements
         }
 
         for (int i = 0; i < count; i++) {
-            AbstractCardPack p = allChoices.get(AbstractDungeon.cardRandomRng.random(0, allChoices.size() - 1));
+            if (allChoices.isEmpty())
+                break;
+            AbstractCardPack p = allChoices.remove(AbstractDungeon.cardRandomRng.random(0, allChoices.size() - 1));
             valid.add(p);
-            allChoices.remove(p);
         }
         return valid;
     }
@@ -992,6 +1008,8 @@ public class SpireAnniversary5Mod implements
                 case CHOICE:
                     choicesToSetup++;
                     break;
+                case NONE:
+                    break;
                 default:
                     for (AbstractCardPack pack : unfilteredAllPacks) {
                         if (pack.packID.equals(setupType)) {
@@ -1009,9 +1027,9 @@ public class SpireAnniversary5Mod implements
         logger.info("Total packs: " + currentPoolPacks.toString());
         CardGroup packDisplays = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
-        if (currentPoolPacks.size() != PACKS_PER_RUN) {
+        /*if (currentPoolPacks.size() != PACKS_PER_RUN) {
             logger.error(MessageFormat.format("Less packs in pool than expected: {0}/{1}", currentPoolPacks.size(), PACKS_PER_RUN));
-        }
+        }*/
 
         for (AbstractCardPack pack : currentPoolPacks) {
             packDisplays.addToTop(pack.previewPackCard);
@@ -1045,8 +1063,55 @@ public class SpireAnniversary5Mod implements
         if (true) {
             return;
         }
-        SpireAnniversary5Mod.logger.info("Calculating card statistics");
-        int packs = SpireAnniversary5Mod.unfilteredAllPacks.size();
+        SpireAnniversary5Mod.logger.info("Calculating pack and card statistics");
+        int numPacks = SpireAnniversary5Mod.unfilteredAllPacks.size();
+        List<String> noAttacks = new ArrayList<>();
+        List<String> noSkills = new ArrayList<>();
+        List<String> noPowers = new ArrayList<>();
+        HashMap<AbstractCard.CardRarity, HashMap<Integer, Integer>> packRarities = new HashMap<>();
+        List<String> anomalousRarityPacks = new ArrayList<>();
+        for (AbstractCardPack p : SpireAnniversary5Mod.unfilteredAllPacks.stream().sorted(Comparator.comparing(p -> p.name)).collect(Collectors.toList())) {
+            boolean hasAttack = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
+                    .anyMatch(c -> c.type == AbstractCard.CardType.ATTACK);
+            boolean hasSkill = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
+                    .anyMatch(c -> c.type == AbstractCard.CardType.SKILL);
+            boolean hasPower = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
+                    .anyMatch(c -> c.type == AbstractCard.CardType.POWER);
+            if (!hasAttack) { noAttacks.add(p.name); }
+            if (!hasSkill) { noSkills.add(p.name); }
+            if (!hasPower) { noPowers.add(p.name); }
+            long commons = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.COMMON).count();
+            long uncommons = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.UNCOMMON).count();
+            long rares = p.cards.stream().filter(c -> c.rarity == AbstractCard.CardRarity.RARE).count();
+            Map<AbstractCard.CardRarity, List<AbstractCard>> rarityCounts = p.cards.stream().collect(Collectors.groupingBy(c -> c.rarity));
+            for (Map.Entry<AbstractCard.CardRarity, List<AbstractCard>> e : rarityCounts.entrySet()) {
+                if (!packRarities.containsKey(e.getKey())) {
+                    packRarities.put(e.getKey(), new HashMap<>());
+                }
+                HashMap<Integer, Integer> rarities = packRarities.get(e.getKey());
+                int n = e.getValue().size();
+                rarities.put(n, rarities.getOrDefault(n, 0) + 1);
+                if ((e.getKey() == AbstractCard.CardRarity.COMMON || e.getKey() == AbstractCard.CardRarity.RARE) && e.getValue().size() > 4) {
+                    anomalousRarityPacks.add(p.name);
+                }
+                if (e.getKey() == AbstractCard.CardRarity.UNCOMMON && e.getValue().size() > 5) {
+                    anomalousRarityPacks.add(p.name);
+                }
+            }
+        }
+
+        Function<String, String> formatName = s -> s.substring(0, 1).toUpperCase(Locale.ROOT) + s.substring(1).toLowerCase(Locale.ROOT);
+        Function<List<String>, String> t = l -> String.join(", ", l);
+        String commonInfo = getSummaryString(packRarities.get(AbstractCard.CardRarity.COMMON), k -> k, k -> k + "");
+        String uncommonInfo = getSummaryString(packRarities.get(AbstractCard.CardRarity.UNCOMMON), k -> k, k -> k + "");
+        String rareInfo = getSummaryString(packRarities.get(AbstractCard.CardRarity.RARE), k -> k, k -> k + "");
+        SpireAnniversary5Mod.logger.info("Packs: " + numPacks);
+        SpireAnniversary5Mod.logger.info("Packs without normal rarity: Attacks: " + t.apply(noAttacks) + ", Skills: " + t.apply(noSkills) + ", Powers: " + t.apply(noPowers));
+        SpireAnniversary5Mod.logger.info("Common counts: " + commonInfo);
+        SpireAnniversary5Mod.logger.info("Uncommon counts: " + uncommonInfo);
+        SpireAnniversary5Mod.logger.info("Rare counts: " + rareInfo);
+        SpireAnniversary5Mod.logger.info("Packs with anomalous rarity counts: " + t.apply(anomalousRarityPacks));
+
         List<AbstractCard> cards = SpireAnniversary5Mod.unfilteredAllPacks.stream()
                 .flatMap(p -> p.getCards().stream())
                 .map(CardLibrary::getCard)
@@ -1082,7 +1147,7 @@ public class SpireAnniversary5Mod implements
             types.put(c.type, types.getOrDefault(c.type, 0) + 1);
             rarities.put(c.rarity, rarities.getOrDefault(c.rarity, 0) + 1);
             colors.put(c.color, colors.getOrDefault(c.color, 0) + 1);
-            if (c.rarity == AbstractCard.CardRarity.SPECIAL && c.color != AbstractCard.CardColor.COLORLESS) { specialRarityNotColorless.add(c.cardID); }
+            if (c.rarity == AbstractCard.CardRarity.SPECIAL && c.color != AbstractCard.CardColor.COLORLESS && !cardParentMap.get(c.cardID).equals(MonsterHunterPack.ID)) { specialRarityNotColorless.add(c.cardID); }
             if (c.type == AbstractCard.CardType.ATTACK && c.baseDamage >= 0 && (boolean)ReflectionHacks.getPrivate(c, AbstractCard.class, "isMultiDamage")) { aoeattack++; }
             if (c.baseBlock >= 0) { block++; }
             if (c.exhaust) { exhaust++; }
@@ -1102,12 +1167,10 @@ public class SpireAnniversary5Mod implements
             if (cu.canUpgrade()) { multiUpgrade++; }
         }
 
-        Function<String, String> formatName = s -> s.substring(0, 1).toUpperCase(Locale.ROOT) + s.substring(1).toLowerCase(Locale.ROOT);
         String costInfo = getSummaryString(costs, e -> e, k -> k + "");
         String typeInfo = getSummaryString(types, Enum::ordinal, k -> formatName.apply(k.name()));
         String rarityInfo = getSummaryString(rarities, Enum::ordinal, k -> formatName.apply(k.name()));
         String colorInfo = getSummaryString(colors, Enum::ordinal, k -> formatName.apply(k.name()));
-        SpireAnniversary5Mod.logger.info("Packs: " + packs);
         SpireAnniversary5Mod.logger.info("Cards: " + cards.size());
         SpireAnniversary5Mod.logger.info("Costs: " + costInfo);
         SpireAnniversary5Mod.logger.info("Types: " + typeInfo);
@@ -1115,7 +1178,7 @@ public class SpireAnniversary5Mod implements
         SpireAnniversary5Mod.logger.info("Colors: " + colorInfo);
         SpireAnniversary5Mod.logger.info("Mechanics: AoE damage: " + aoeattack + ", Block: " + block + ", Exhaust: " + exhaust + ", Exhaustive: " + exhaustive + ", Ethereal: " + ethereal + ", Retain: " + retain + ", Innate: " + innate + ", Strike: " + strike + ", Healing: " + healing + ", Iron Waves: " + ironwave + ", Multiple upgrades: " + multiUpgrade);
         SpireAnniversary5Mod.logger.info("Upgrades that: Reduce cost: " + upgradeCost + ", Remove exhaust: " + upgradeDontExhaust + ", Exhaust to exhaustive: " + upgradeExhaustive + ", Remove ethereal: " + upgradeNotEthereal + ", Add innate: " + upgradeInnate + ", Add retain: " + upgradeRetain);
-        SpireAnniversary5Mod.logger.info("Iron waves: " + String.join(", ", ironWaves));
+        SpireAnniversary5Mod.logger.info("Iron waves: " + t.apply(ironWaves));
 
         HashSet<String> cardNames = new HashSet<>();
         boolean foundDuplicate = false;
@@ -1131,11 +1194,27 @@ public class SpireAnniversary5Mod implements
         }
 
         if (!specialRarityNotColorless.isEmpty()) {
-            SpireAnniversary5Mod.logger.info("Colorless cards that aren't special rarity: " + String.join(", ", specialRarityNotColorless));
+            SpireAnniversary5Mod.logger.info("Colorless cards that aren't special rarity, other than the Monster Hunter cards: " + t.apply(specialRarityNotColorless));
         }
         else {
             SpireAnniversary5Mod.logger.info("No colorless cards that aren't special rarity.");
         }
+    }
+
+    public static void logPackAuthors() {
+        // This is here so that developers putting together stats can enable and run it without making things take longer
+        // to load for everyone (even if the impact is small)
+        if (true) {
+            return;
+        }
+        String authorCounts = SpireAnniversary5Mod.unfilteredAllPacks.stream()
+                .collect(Collectors.groupingBy(p -> p.author, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                .map(e -> e.getKey() + ": " + e.getValue())
+                .collect(Collectors.joining("\n"));
+        SpireAnniversary5Mod.logger.info("Pack count by author:\n" + authorCounts);
     }
 
     private static <T> String getSummaryString(HashMap<T, Integer> m, Function<T, Integer> getComparisonValue, Function<T, String> getName) {
@@ -1172,8 +1251,19 @@ public class SpireAnniversary5Mod implements
             // Growing Affliction (Return to hand)
             if (source == adp() && !target.hasPower(ArtifactPower.POWER_ID))
                 for (AbstractCard c : AbstractDungeon.player.discardPile.group)
-                    if (c.cardID.equals(GrowingAffliction.ID))
+                    if (c.cardID.equals(GrowingAffliction.ID)) {
                         AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(c));
+                        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                            @Override
+                            public void update() {
+                                c.cost = 1;
+                                c.costForTurn = 1;
+                                c.isCostModified = false;
+                                this.isDone = true;
+                            }
+                        });
+
+                    }
 
             //Ring of Pain pack
             if (!target.hasPower(ArtifactPower.POWER_ID)) {
@@ -1254,32 +1344,33 @@ public class SpireAnniversary5Mod implements
         settingsPanel = new ModPanel();
         //int configStep = 40;
 
-        FixedModLabeledToggleButton allPacksModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[3], 350.0f, 600F, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
+        FixedModLabeledToggleButton allPacksModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[3], 350.0f, 750F, Settings.CREAM_COLOR, FontHelper.charDescFont, allPacksMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             allPacksMode = button.enabled;
             saveAllPacksMode();
         });
-
         settingsPanel.addUIElement(allPacksModeBtn);
 
-        FixedModLabeledToggleButton oneFrameModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[4], 350.0f, 400F, Settings.CREAM_COLOR, FontHelper.charDescFont, oneFrameMode, settingsPanel, (label) -> {
-
-        }, (button) -> {
-            oneFrameMode = button.enabled;
-            saveOneFrameMode();
-        });
-
-        settingsPanel.addUIElement(oneFrameModeBtn);
-
-        FixedModLabeledToggleButton sharedContentBtn = new FixedModLabeledToggleButton(configStrings.TEXT[5], 350.0f, 500F, Settings.CREAM_COLOR, FontHelper.charDescFont, sharedContentMode, settingsPanel, (label) -> {
+        FixedModLabeledToggleButton sharedContentBtn = new FixedModLabeledToggleButton(configStrings.TEXT[5], 350.0f, 700F, Settings.CREAM_COLOR, FontHelper.charDescFont, sharedContentMode, settingsPanel, (label) -> {
 
         }, (button) -> {
             sharedContentMode = button.enabled;
             saveContentSharingMode();
         });
-
         settingsPanel.addUIElement(sharedContentBtn);
+
+        FixedModLabeledToggleButton oneFrameModeBtn = new FixedModLabeledToggleButton(configStrings.TEXT[4], 350.0f, 650F, Settings.CREAM_COLOR, FontHelper.charDescFont, oneFrameMode, settingsPanel, (label) -> {
+
+        }, (button) -> {
+            oneFrameMode = button.enabled;
+            saveOneFrameMode();
+        });
+        settingsPanel.addUIElement(oneFrameModeBtn);
+
+        FixedModLabeledToggleButton multiNoneBtn = new FixedModLabeledToggleButton(configStrings.TEXT[6], 350.0f, 600F, Settings.CREAM_COLOR, FontHelper.charDescFont, allowMultiNone(), settingsPanel,
+                (label) -> {}, (button) -> toggleMultiNone());
+        settingsPanel.addUIElement(multiNoneBtn);
 
         BaseMod.registerModBadge(badge, configStrings.TEXT[0], configStrings.TEXT[1], configStrings.TEXT[2], settingsPanel);
     }

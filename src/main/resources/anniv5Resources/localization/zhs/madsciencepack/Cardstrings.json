@@ -17,30 +17,30 @@
   },
   "${ModID}:Attach": {
     "NAME": "附加",
-    "DESCRIPTION": "选择一张非能力手牌，再选择一张弃牌堆的牌将该手牌 ${ModID}:吞并 ，再将弃牌堆的牌 ${ModID}:修改 ：\"打出 *吞并 的牌。\"。 NL 消耗 。",
+    "DESCRIPTION": "选择一张非能力手牌，再选择一张弃牌堆的牌将该手牌 ${ModID}:吞并 ，再将弃牌堆的牌 ${ModID}:修改 ：\"打出 *吞并 的牌\"。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": ["进行吞并。"]
   },
   "${ModID}:Improve": {
     "NAME": "改进",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 随机 ${ModID}:修改 一张手牌： NL \"抽一张牌。\" NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 选择 ${ModID}:修改 一张手牌： NL \"抽一张牌。\" NL 消耗 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 随机 ${ModID}:修改 一张手牌： NL \"抽一张牌\" NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 选择 ${ModID}:修改 一张手牌： NL \"抽一张牌\" NL 消耗 。"
   },
   "${ModID}:Enhance": {
     "NAME": "增强",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择 ${ModID}:修改 一张手牌： NL \"获得 !M! 点 格挡 。\""
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择 ${ModID}:修改 一张手牌： NL \"获得 !M! 点 格挡 \""
   },
   "${ModID}:Cheapen": {
     "NAME": "平易化",
-    "DESCRIPTION": "随机 ${ModID}:修改 抽牌堆一张牌：\"耗能变为0， NL ${ModID}:增幅 [E] : 不 消耗 \"。",
-    "UPGRADE_DESCRIPTION": "随机 ${ModID}:修改 抽牌堆一张牌：\"耗能变为0。\" NL ${ModID}:增幅 [E] : 不 消耗 。"
+    "DESCRIPTION": "随机 ${ModID}:修改 抽牌堆一张牌： NL \"耗能变为0\" NL 消耗 。 NL ${ModID}:增幅 [E] : 不 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择 ${ModID}:修改 抽牌堆一张牌： NL \"耗能变为0\" NL 消耗 。 NL ${ModID}:增幅 [E] : 不 消耗 。"
   },
   "${ModID}:Expand": {
     "NAME": "扩大化",
-    "DESCRIPTION": "${ModID}:修改 一张手牌： NL \"耗能加1。\" NL 且\"再打出一次。\" NL 消耗 。"
+    "DESCRIPTION": "${ModID}:修改 一张手牌： NL \"耗能加1\" NL 且\"再打出一次\" NL 消耗 。"
   },
   "${ModID}:Piratify": {
     "NAME": "海盗化",
-    "DESCRIPTION": "回合开始时，随机 ${ModID}:修改 一张手牌：\"获得一张 *加农炮弹 。\"",
-    "UPGRADE_DESCRIPTION": "回合开始时，随机 ${ModID}:修改 一张手牌：\"获得一张 *加农炮弹+ 。\""
+    "DESCRIPTION": "回合开始时，随机 ${ModID}:修改 一张手牌：\"获得一张 *加农炮弹 \"",
+    "UPGRADE_DESCRIPTION": "回合开始时，随机 ${ModID}:修改 一张手牌：\"获得一张 *加农炮弹+ \""
   }
 }

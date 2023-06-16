@@ -9,8 +9,8 @@
   },
   "${ModID}:RiskOfBlades": {
     "NAME": "Risk Of Blades",
-    "DESCRIPTION": "Deal !D! damage for each Attack in the top 4 cards of your draw pile.",
-    "EXTENDED_DESCRIPTION": [" NL (Hits !M! times.)"]
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each Attack in the top 3 cards of your draw pile.",
+    "EXTENDED_DESCRIPTION": [" NL (Hits !M! more time.)", " NL (Hits !M! more times.)"]
   },
   "${ModID}:Crossroads": {
     "NAME": "Crossroads",
@@ -27,7 +27,7 @@
   },
   "${ModID}:ForceBolt": {
     "NAME": "Force Bolt",
-    "DESCRIPTION": "*Magic. NL Deal !D! damage. NL Increase the damage dealt by *Magic cards by !M! this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
   },
   "${ModID}:Enigmancy": {
     "NAME": "Enigmancy",

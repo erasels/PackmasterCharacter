@@ -4,6 +4,14 @@
     "NAMES": [
       "nightmare"
     ],
-    "DESCRIPTION": "#yStance: When you use #y'Madness', exit #yNightmare #yStance. NL When you exit #yNightmare #yStance, draw 2 cards, gain [E] , and lose 1 HP."
+    "DESCRIPTION": "In this #yStance, lose #b1 #ySanity whenever you play a card, and draw #b2 cards when you play a #yLunacy. NL Exit this #yStance at the end of your turn."
+  },
+  {
+    "PROPER_NAME": "Sanity",
+    "NAMES": [
+      "sanity"
+    ],
+    "DESCRIPTION": "While you have negative #ySanity, lose #b1 at the start of each turn. NL For every #b5 #ySanity you lose, add a #yLunacy to your hand, then gain #b5 #ySanity."
+
   }
 ]

@@ -1,0 +1,15 @@
+{
+  "${ModID}:InstantDeathPack": {
+    "TEXT": [
+      "即死",
+      "对无穷力量之境界的向往。",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:InstantDeathPackHat": {
+    "TEXT": [
+      "能力的象征。",
+      "进阶之帽"
+    ]
+  }
+}

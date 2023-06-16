@@ -17,7 +17,7 @@ public class Lock extends AbstractInstadeathCard {
     public Lock() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
 
-        this.baseMagicNumber = this.magicNumber = 2;
+        this.baseMagicNumber = this.magicNumber = 3;
     }
 
     @Override

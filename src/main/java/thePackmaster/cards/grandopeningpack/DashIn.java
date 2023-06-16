@@ -25,8 +25,8 @@ public class DashIn extends AbstractGrandOpeningCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot((AbstractGameAction)new GainBlockAction((AbstractCreature)abstractPlayer, this.block));
-        addToBot((AbstractGameAction)new WhirlwindAction(abstractPlayer, this.multiDamage, DamageInfo.DamageType.NORMAL, this.freeToPlayOnce, this.energyOnUse+this.magicNumber));
+        addToBot(new GainBlockAction(abstractPlayer, this.block));
+        addToBot(new WhirlwindAction(abstractPlayer, this.multiDamage, DamageInfo.DamageType.NORMAL, this.freeToPlayOnce, this.energyOnUse+this.magicNumber));
     }
 
     @Override

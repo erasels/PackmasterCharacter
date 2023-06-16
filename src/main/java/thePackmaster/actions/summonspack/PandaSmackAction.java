@@ -61,7 +61,7 @@ public class PandaSmackAction extends AbstractGameAction {
             panda.cX = targetX;
             panda.cY = targetY;
             if (target != null && target.currentHealth > 0 && adp() != null) {
-                DamageInfo info = new DamageInfo(adp(), panda.passiveAmount, DamageInfo.DamageType.THORNS);
+                DamageInfo info = new DamageInfo(adp(), Panda.applyLockOn(target, panda.passiveAmount), DamageInfo.DamageType.THORNS);
                 att(new DamageAction(target, info, AttackEffect.BLUNT_HEAVY, true));
             }
             panda.startBounce(targetX, targetY);

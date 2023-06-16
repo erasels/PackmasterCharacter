@@ -25,10 +25,7 @@ import thePackmaster.potions.PackInAJar;
 import thePackmaster.relics.BanishingDecree;
 import thePackmaster.relics.PMCollection;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Objects;
+import java.util.*;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 
@@ -37,93 +34,93 @@ public class BlackMarketDealerEvent extends PhasedEvent {
     private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString(ID);
     private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     private static final String[] OPTIONS = eventStrings.OPTIONS;
-    private boolean forRemoval = false;
-    private int choice = 0;
 
-    private int chosenDailyMarket;
-    private AbstractCard cardRemoved;
+    private final Set<Integer> availableMarkets = new HashSet<>();
 
     public BlackMarketDealerEvent() {
-        super(NAME, eventStrings.NAME, SpireAnniversary5Mod.makeImagePath("events/blackMarket.png"));
+        super(ID, eventStrings.NAME, SpireAnniversary5Mod.makeImagePath("events/blackMarket.png"));
 
-
-        if (AbstractDungeon.player.gold < getGoldCostForBuy() && getCardsForDraftedPurge().isEmpty())
+        if (!hasEnoughGoldForBuyCard() && !canRemoveCardForSell())
         {
             //If the top option cannot do any of its three options (EXTREMELY rare edge case), only pick from the other two vendors
-            chosenDailyMarket = AbstractDungeon.eventRng.random(1, 2);
+            availableMarkets.add(1);
+            availableMarkets.add(2);
         } else {
-            chosenDailyMarket = AbstractDungeon.eventRng.random(0, 2);
+            int a = AbstractDungeon.eventRng.random(0, 2);
+            int b = (a + 1) % 3;
+            availableMarkets.add(a);
+            availableMarkets.add(b);
         }
 
 
         registerPhase("base", new TextPhase(DESCRIPTIONS[0])
-                .addOption(new TextPhase.OptionInfo(chosenDailyMarket == 0 ? OPTIONS[0] : OPTIONS[22]).enabledCondition(this::isDailyMarket0), ((t) -> this.transitionKey("cardDealer")))
-                .addOption(new TextPhase.OptionInfo(chosenDailyMarket == 1 ? OPTIONS[1] : OPTIONS[22]).enabledCondition(this::isDailyMarket1), ((t) -> this.transitionKey("magicDealer")))
-                .addOption(new TextPhase.OptionInfo(chosenDailyMarket == 2 ? OPTIONS[2] : OPTIONS[22]).enabledCondition(this::isDailyMarket2), ((t) -> this.transitionKey("relicDealer")))
+                .addOption(new TextPhase.OptionInfo(OPTIONS[0]).enabledCondition(()->availableMarkets.contains(0), OPTIONS[22]), ((t) -> this.transitionKey("cardDealer")))
+                .addOption(new TextPhase.OptionInfo(OPTIONS[1]).enabledCondition(()->availableMarkets.contains(1), OPTIONS[22]), ((t) -> this.transitionKey("magicDealer")))
+                .addOption(new TextPhase.OptionInfo(OPTIONS[2]).enabledCondition(()->availableMarkets.contains(2), OPTIONS[22]), ((t) -> this.transitionKey("relicDealer")))
         );
 
-        registerPhase("cardDealer", new TextPhase(DESCRIPTIONS[1]) {
-                    @Override
-                    public void update() {
-                        if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-                            AbstractCard c2 = null;
-                            if (forRemoval) {
-                                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                                AbstractDungeon.player.masterDeck.removeCard(c);
-                                cardRemoved = c;
-                            } else {
-                                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH * .33F, (float) Settings.HEIGHT / 2.0F));
-                                if (choice == 2) {
-                                    c2 = AbstractDungeon.gridSelectScreen.selectedCards.get(1);
-                                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c2, (float) Settings.WIDTH * .66F, (float) Settings.HEIGHT / 2.0F));
-                                }
-                                if (choice == 0) {
+        registerPhase("cardDealer", new TextPhase(DESCRIPTIONS[1])
+                .addOption(new TextPhase.OptionInfo(OPTIONS[4] + getGoldCostForBuy() + OPTIONS[5])    //Buy
+                        .enabledCondition(this::hasEnoughGoldForBuyCard, OPTIONS[9] + getGoldCostForBuy() + OPTIONS[7])
+                        .cardSelectOption("cardBuyEnd", this::getCardsForLibraryEffect, TheLibrary.OPTIONS[4], 1, false, false, false, false,
+                                (cards)-> {
+                                    AbstractCard c = cards.get(0);
+                                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH * .33F, (float) Settings.HEIGHT / 2.0F));
+
                                     AbstractDungeon.player.loseGold(getGoldCostForBuy());
                                     logMetric(ID, "Buy", Collections.singletonList(c.cardID), null, null, null, null, null, null, 0, 0, 0, 0, 0, getGoldCostForBuy());
-                                    transitionKey("cardBuyEnd");
                                 }
-                            }
+                        )
+                )
+                .addOption(new TextPhase.OptionInfo(OPTIONS[6] + getGoldGainForSell() + OPTIONS[7])   //Sell
+                        .enabledCondition(this::canRemoveCardForSell, OPTIONS[10])
+                        .cardSelectOption("cardSellEnd", this::getCardsForDraftedPurge, Beggar.OPTIONS[6], 1, false, false, false, true,
+                                (cards) -> {
+                                    AbstractCard c = cards.get(0);
+                                    AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                                    AbstractDungeon.player.masterDeck.removeCard(c);
 
-                            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                                    AbstractDungeon.effectList.add(new RainingGoldEffect(getGoldGainForSell()));
+                                    AbstractDungeon.player.gainGold(getGoldGainForSell());
+                                    logMetric(ID, "Sell", null, Collections.singletonList(c.cardID), null, null, null, null, null, 0, 0, 0, 0, getGoldGainForSell(), 0);
+                                }
+                        )
+                )
+                .addOption(new TextPhase.OptionInfo(OPTIONS[8])     //Trade In
+                        .enabledCondition(this::canRemoveCardForSell, OPTIONS[10])
+                        .cardSelectOption(null, this::getCardsForDraftedPurge, Beggar.OPTIONS[6], 1, false, false, false, true,
+                                (cards) -> {
+                                    AbstractCard sold = cards.get(0);
+                                    AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(sold, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                                    AbstractDungeon.player.masterDeck.removeCard(sold);
 
-                            if (choice == 2) {
-                                if (forRemoval) {
-                                    forRemoval = false;
+                                    //Buy 2
                                     AbstractDungeon.gridSelectScreen.open(getCardsForLibraryEffect(), 2, TheLibrary.OPTIONS[4], false, false, false, false);
-                                } else {
-                                    logMetric(ID, "Trade", Arrays.asList(c.cardID, c2.cardID), Collections.singletonList(cardRemoved.cardID), null, null, null, null, null, 0, 0, 0, 0, 0, 0);
-                                    transitionKey("cardTradeEnd");
+                                    currentPhase.setUpdateHandler(
+                                            (phase)->{
+                                                if (AbstractDungeon.isScreenUp)
+                                                    return;
+
+                                                List<String> bought = new ArrayList<>();
+                                                if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+                                                    float x = Settings.WIDTH * 0.33f;
+                                                    for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
+                                                        bought.add(c.cardID);
+                                                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, x, Settings.HEIGHT / 2.0F));
+                                                        x += Settings.WIDTH * 0.33f;
+                                                    }
+                                                    AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                                                }
+
+                                                logMetric(ID, "Trade", bought, Collections.singletonList(sold.cardID), null, null, null, null, null, 0, 0, 0, 0, 0, 0);
+                                                phase.setUpdateHandler(null);
+                                                transitionKey("cardTradeEnd");
+                                            }
+                                    );
                                 }
-                            } else if (choice == 1) {
-                                AbstractDungeon.effectList.add(new RainingGoldEffect(getGoldGainForSell()));
-                                AbstractDungeon.player.gainGold(getGoldGainForSell());
-                                logMetric(ID, "Sell", null, Collections.singletonList(c.cardID), null, null, null, null, null, 0, 0, 0, 0, getGoldGainForSell(), 0);
-                                transitionKey("cardSellEnd");
-                            }
-                        }
-                    }
-                }.addOption(new TextPhase.OptionInfo(hasEnoughGoldForBuyCard() ? OPTIONS[4] + getGoldCostForBuy() + OPTIONS[5] : OPTIONS[9] + getGoldCostForBuy() + OPTIONS[7]).enabledCondition(this::hasEnoughGoldForBuyCard), (i) -> {   //Buy
-
-                            choice = 0;
-                            forRemoval = false;
-                            AbstractDungeon.gridSelectScreen.open(getCardsForLibraryEffect(), 1, TheLibrary.OPTIONS[4], false, false, false, false);
-                        })
-                        .addOption(new TextPhase.OptionInfo(canRemoveCardsForSell() ? OPTIONS[6] + getGoldGainForSell() + OPTIONS[7] : OPTIONS[10]).enabledCondition(this::canRemoveCardsForSell), (i) -> {   //Sell
-
-                            choice = 1;
-                            forRemoval = true;
-
-                            AbstractDungeon.gridSelectScreen.open(getCardsForDraftedPurge(), 1, Beggar.OPTIONS[6], false, false, false, true);
-                        })
-                        .addOption(new TextPhase.OptionInfo(canRemoveCardsForSell() ? OPTIONS[8] : OPTIONS[10]).enabledCondition(this::canRemoveCardsForSell), (i) -> {     //Trade In
-
-                            choice = 2;
-                            forRemoval = true;
-                            AbstractDungeon.gridSelectScreen.open(getCardsForDraftedPurge(), 1, Beggar.OPTIONS[6], false, false, false, true);
-
-                        })
-                        .addOption(OPTIONS[3], (t) -> this.ignoreAndLeave())
+                        )
+                )
+                .addOption(OPTIONS[3], (t) -> this.ignoreAndLeave())
         );
 
         registerPhase("cardBuyEnd", new TextPhase(DESCRIPTIONS[4]).addOption(OPTIONS[3], (t) -> this.openMap()));
@@ -131,43 +128,26 @@ public class BlackMarketDealerEvent extends PhasedEvent {
         registerPhase("cardTradeEnd", new TextPhase(DESCRIPTIONS[6]).addOption(OPTIONS[3], (t) -> this.openMap()));
 
 
-        registerPhase("magicDealer", new TextPhase(DESCRIPTIONS[2]) {
-                    @Override
-                    public void update() {
-                        if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-                            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                            AbstractDungeon.player.masterDeck.removeCard(c);
-
-                            AbstractDungeon.gridSelectScreen.selectedCards.clear();
-
-                            logMetricRemoveCards(ID, "Cleanse", Collections.singletonList(c.cardID));
-                            transitionKey("magicCleanseEnd");
-
-                        }
-                    }
-                }
-
-                        .addOption(new TextPhase.OptionInfo(OPTIONS[11], new ConjurePack()), (i) -> {   //Curse & Pack Rip
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Vexed(), (Settings.WIDTH * .33F), (float) (Settings.HEIGHT / 2)));
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new ConjurePack(), (Settings.WIDTH * .66F), (float) (Settings.HEIGHT / 2)));
-                            logMetricObtainCards(ID, "Conjure Pack", Arrays.asList(ConjurePack.ID, Vexed.ID));
-                            transitionKey("magicLearnEnd");
-                        }).addOption(OPTIONS[12], (i) -> {   //Pack in a Jar Potion
-                            AbstractDungeon.getCurrRoom().rewards.clear();
-                            AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(new PackInAJar()));
-                            skipDefaultCardRewards = true;
-                            AbstractDungeon.combatRewardScreen.open();
-                            skipDefaultCardRewards = false;
-                            logMetric(ID, "Pack in a Jar", null, null, null, null, null, Collections.singletonList(PackInAJar.POTION_ID), null, 0, 0, 0, 0, 0, 0);
-                            transitionKey("magicSampleEnd");
-                        })  //Remove a card.
-                        .addOption(new TextPhase.OptionInfo(canRemoveCardsForCleanse() ? OPTIONS[13] : OPTIONS[14]).enabledCondition(this::canRemoveCardsForCleanse), (i) -> {   //Cleansing Ritual
-
-                            AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getPurgeableCards(), 1, Beggar.OPTIONS[6], false, false, false, true);
-
-                        })
-                        .addOption(OPTIONS[3], (t) -> this.ignoreAndLeave())
+        registerPhase("magicDealer", new TextPhase(DESCRIPTIONS[2])
+                .addOption(new TextPhase.OptionInfo(OPTIONS[11], new ConjurePack()), (i) -> {   //Curse & Pack Rip
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Vexed(), (Settings.WIDTH * .33F), (float) (Settings.HEIGHT / 2)));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new ConjurePack(), (Settings.WIDTH * .66F), (float) (Settings.HEIGHT / 2)));
+                    logMetricObtainCards(ID, "Conjure Pack", Arrays.asList(ConjurePack.ID, Vexed.ID));
+                    transitionKey("magicLearnEnd");
+                }).addOption(OPTIONS[12], (i) -> {   //Pack in a Jar Potion
+                    AbstractDungeon.getCurrRoom().rewards.clear();
+                    AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(new PackInAJar()));
+                    noCardsInRewards = true;
+                    AbstractDungeon.combatRewardScreen.open();
+                    noCardsInRewards = false;
+                    logMetric(ID, "Pack in a Jar", null, null, null, null, null, Collections.singletonList(PackInAJar.POTION_ID), null, 0, 0, 0, 0, 0, 0);
+                    transitionKey("magicSampleEnd");
+                })  //Remove a card.
+                .addOption(new TextPhase.OptionInfo(OPTIONS[13])
+                        .enabledCondition(this::canRemoveCardForCleanse, OPTIONS[14])
+                        .cardRemovalOption("magicCleanseEnd", Beggar.OPTIONS[6], 1)
+                )
+                .addOption(OPTIONS[3], (t) -> this.ignoreAndLeave())
         );
 
 
@@ -177,35 +157,41 @@ public class BlackMarketDealerEvent extends PhasedEvent {
 
 
         registerPhase("relicDealer", new TextPhase(DESCRIPTIONS[3])
-
-
-                .addOption(new TextPhase.OptionInfo(hasCollection() ? OPTIONS[23] : hasEnoughGoldForBuyCollection() ? OPTIONS[15] + getGoldCostForBuyCollection() + OPTIONS[16] : OPTIONS[9] + getGoldCostForBuyCollection() + OPTIONS[7], new PMCollection()).enabledCondition(this::canBuyCollection), (i) -> {   //PM Collection
-                    AbstractDungeon.player.loseGold(getGoldCostForBuyCollection());
-                    AbstractRelic relic = new PMCollection();
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, relic);
-                    AbstractDungeon.shopRelicPool.remove(PMCollection.ID);
-                    logMetricObtainRelicAtCost(ID, "PM Collection", relic, getGoldCostForBuyCollection());
-                    transitionKey("relicCollectionEnd");
-                })
-
-                .addOption(new TextPhase.OptionInfo(hasDecree() ? OPTIONS[23] : hasEnoughGoldForBuyDecree() ? OPTIONS[17] + getGoldCostForBuyDecree() + OPTIONS[18] : OPTIONS[9] + getGoldCostForBuyDecree() + OPTIONS[7], new BanishingDecree()).enabledCondition(this::canBuyDecree), (i) -> {   //Banishing Decree
-                    AbstractDungeon.player.loseGold(getGoldCostForBuyDecree());
-                    AbstractRelic relic = new BanishingDecree();
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, relic);
-                    AbstractDungeon.shopRelicPool.remove(BanishingDecree.ID);
-                    logMetricObtainRelicAtCost(ID, "Banishing Decree", relic, getGoldCostForBuyDecree());
-                    transitionKey("relicBanishingEnd");
-                })
-
-                .addOption(new TextPhase.OptionInfo(hasHat() ? OPTIONS[19] + getGoldGainForSellHat() + OPTIONS[20] : OPTIONS[21]).enabledCondition(this::hasHat), (i) -> {
-                    AbstractDungeon.effectList.add(new RainingGoldEffect(getGoldGainForSellHat()));
-                    AbstractDungeon.player.gainGold(getGoldGainForSellHat());
-                    Hats.addHat(true, CoreSetPack.ID);
-                    Hats.currentHat = CoreSetPack.ID;
-                    logMetricGainGold(ID, "Sell Hat", getGoldGainForSellHat());
-                    transitionKey("relicSellHatEnd");
-                })
-
+                .addOption(new TextPhase.OptionInfo(OPTIONS[15] + getGoldCostForBuyCollection() + OPTIONS[16], new PMCollection())
+                                .enabledCondition(()->!hasCollection(), OPTIONS[23])
+                                .enabledCondition(this::hasEnoughGoldForBuyCollection, OPTIONS[9] + getGoldCostForBuyCollection() + OPTIONS[7]),
+                        (i) -> {   //PM Collection
+                            AbstractDungeon.player.loseGold(getGoldCostForBuyCollection());
+                            AbstractRelic relic = new PMCollection();
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, relic);
+                            AbstractDungeon.shopRelicPool.remove(PMCollection.ID);
+                            logMetricObtainRelicAtCost(ID, "PM Collection", relic, getGoldCostForBuyCollection());
+                            transitionKey("relicCollectionEnd");
+                        }
+                )
+                .addOption(new TextPhase.OptionInfo(OPTIONS[17] + getGoldCostForBuyDecree() + OPTIONS[18], new BanishingDecree())
+                                .enabledCondition(()->!hasDecree(), OPTIONS[23])
+                                .enabledCondition(this::hasEnoughGoldForBuyDecree, OPTIONS[9] + getGoldCostForBuyDecree() + OPTIONS[7]),
+                        (i) -> {   //Banishing Decree
+                            AbstractDungeon.player.loseGold(getGoldCostForBuyDecree());
+                            AbstractRelic relic = new BanishingDecree();
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, relic);
+                            AbstractDungeon.shopRelicPool.remove(BanishingDecree.ID);
+                            logMetricObtainRelicAtCost(ID, "Banishing Decree", relic, getGoldCostForBuyDecree());
+                            transitionKey("relicBanishingEnd");
+                        }
+                )
+                .addOption(new TextPhase.OptionInfo(OPTIONS[19] + getGoldGainForSellHat() + OPTIONS[20])
+                                .enabledCondition(this::hasHat, OPTIONS[21]),
+                        (i) -> {
+                            AbstractDungeon.effectList.add(new RainingGoldEffect(getGoldGainForSellHat()));
+                            AbstractDungeon.player.gainGold(getGoldGainForSellHat());
+                            Hats.addHat(true, CoreSetPack.ID);
+                            Hats.currentHat = CoreSetPack.ID;
+                            logMetricGainGold(ID, "Sell Hat", getGoldGainForSellHat());
+                            transitionKey("relicSellHatEnd");
+                        }
+                )
                 .addOption(OPTIONS[3], (t) -> this.ignoreAndLeave())
         );
 
@@ -227,20 +213,12 @@ public class BlackMarketDealerEvent extends PhasedEvent {
         return AbstractDungeon.player.gold >= getGoldCostForBuy();
     }
 
-    private boolean canBuyCollection() {
-        return !hasCollection() && hasEnoughGoldForBuyCollection();
-    }
-
     private boolean hasCollection() {
         return AbstractDungeon.player.hasRelic(PMCollection.ID);
     }
 
     private boolean hasEnoughGoldForBuyCollection() {
         return AbstractDungeon.player.gold >= getGoldCostForBuyCollection();
-    }
-
-    private boolean canBuyDecree() {
-        return !hasDecree() && hasEnoughGoldForBuyDecree();
     }
 
     private boolean hasDecree() {
@@ -256,9 +234,8 @@ public class BlackMarketDealerEvent extends PhasedEvent {
     }
 
 
-    private boolean canRemoveCardsForSell() {
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group
-        ) {
+    private boolean canRemoveCardForSell() {
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).group) {
             if (c.rarity != AbstractCard.CardRarity.BASIC && c.type != AbstractCard.CardType.CURSE) {
                 return true;
             }
@@ -267,13 +244,8 @@ public class BlackMarketDealerEvent extends PhasedEvent {
     }
 
 
-    private boolean canRemoveCardsForCleanse() {
-
-            if (AbstractDungeon.player.masterDeck.getPurgeableCards().group.isEmpty()) {
-                return false;
-            }
-
-        return true;
+    private boolean canRemoveCardForCleanse() {
+        return !CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).group.isEmpty();
     }
 
 
@@ -329,6 +301,10 @@ public class BlackMarketDealerEvent extends PhasedEvent {
             for (AbstractCardPack p : currentPoolPacks) {
                 validPacks.remove(p);
             }
+            if (validPacks.size() < 5) {
+                validPacks.clear();
+                validPacks.addAll(allPacks);
+            }
         }
         AbstractCard c;
         AbstractCardPack p;
@@ -351,8 +327,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
 
     private CardGroup getCardsForDraftedPurge() {
         ArrayList<AbstractCard> purgeables = new ArrayList<>();
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group
-        ) {
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).group) {
             if (c.rarity != AbstractCard.CardRarity.BASIC && c.type != AbstractCard.CardType.CURSE) {
                 purgeables.add(c);
             }
@@ -362,17 +337,4 @@ public class BlackMarketDealerEvent extends PhasedEvent {
         purgablesGroup.group = purgeables;
         return purgablesGroup;
     }
-
-    private boolean isDailyMarket0() {
-        return (chosenDailyMarket == 0);
-    }
-
-    private boolean isDailyMarket1() {
-        return (chosenDailyMarket == 1);
-    }
-
-    private boolean isDailyMarket2() {
-        return (chosenDailyMarket == 2);
-    }
-
 }

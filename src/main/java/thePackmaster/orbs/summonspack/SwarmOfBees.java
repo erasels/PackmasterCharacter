@@ -192,7 +192,7 @@ public class SwarmOfBees extends CustomOrb {
                     isDone = true;
                     if (m == null || m.isDeadOrEscaped())
                         return;
-                    DamageInfo info = new DamageInfo(adp(), passiveAmount, DamageInfo.DamageType.THORNS);
+                    DamageInfo info = new DamageInfo(adp(), SwarmOfBees.applyLockOn(m, passiveAmount), DamageInfo.DamageType.THORNS);
                     AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
                     ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
                     ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.SLOW);
@@ -205,7 +205,7 @@ public class SwarmOfBees extends CustomOrb {
     @Override
     public void onEvoke() {
         for (AbstractMonster m : Wiz.getEnemies()) {
-            DamageInfo info = new DamageInfo(adp(), evokeAmount, DamageInfo.DamageType.THORNS);
+            DamageInfo info = new DamageInfo(adp(), SwarmOfBees.applyLockOn(m, evokeAmount), DamageInfo.DamageType.THORNS);
             AbstractGameAction action = new DamageAction(m, info, Wiz.getRandomSlash());
             ColoredDamagePatch.DamageActionColorField.damageColor.set(action, STING_COLOR);
             ColoredDamagePatch.DamageActionColorField.fadeSpeed.set(action, ColoredDamagePatch.FadeSpeed.SLOW);

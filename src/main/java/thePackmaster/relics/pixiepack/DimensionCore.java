@@ -18,7 +18,7 @@ public class DimensionCore extends AbstractPackmasterRelic {
     public void atBattleStart() {
         super.atBattleStart();
         int count = AbstractDungeon.player.masterDeck.size();
-        for (int i = 0; i < ((int)(count/10))*3; i++)
+        for (int i = 0; i < count/10 *3; i++)
         {
             AbstractCard toAdd = PixiePack.pixieGenerate(null,null,null,null);
             addToBot(new MakeTempCardInDrawPileAction(toAdd,1,true,false,false,currentX,currentY));

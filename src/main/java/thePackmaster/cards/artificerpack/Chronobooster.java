@@ -37,6 +37,7 @@ public class Chronobooster extends AbstractArtificerCard {
 
     @Override
     public void onPlayedNeighbor(AbstractCard playedCard,AbstractMonster monster) {
+        playedCard.exhaustOnUseOnce = true;
         if (!playedCard.purgeOnUse) {
             this.flash();
             AbstractMonster m = null;

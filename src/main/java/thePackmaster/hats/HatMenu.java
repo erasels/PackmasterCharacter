@@ -1,5 +1,6 @@
 package thePackmaster.hats;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.options.DropdownMenu.DropdownColoring;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -17,7 +18,6 @@ import thePackmaster.hats.specialhats.InstantDeathHat;
 import thePackmaster.hats.specialhats.PsychicHat;
 import thePackmaster.hats.specialhats.SpecialHat;
 import thePackmaster.packs.*;
-import thePackmaster.patches.DropdownColorsPatch;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.util.Wiz;
 
@@ -124,7 +124,7 @@ public class HatMenu {
 
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setCurrentHat(index, s)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
-        DropdownColorsPatch.DropdownRowToColor.function.set(dropdown, HatMenu::getColorFromIndex);
+        DropdownColoring.RowToColor.function.set(dropdown, HatMenu::getColorFromIndex);
 
         for (int i = 0; i < hats.size(); i++) {
             hatsToIndexes.put(hats.get(i), i);

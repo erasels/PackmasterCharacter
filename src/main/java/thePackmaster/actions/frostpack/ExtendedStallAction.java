@@ -29,7 +29,8 @@ public class ExtendedStallAction extends AbstractGameAction {
         }
 
         for(AbstractCard c : toFreeze) {
-            addToTop(new SimpleAddModifierAction(new FrozenMod(), c, false));
+
+            addToTop(new SimpleAddModifierAction(new FrozenMod(true), c, false));
         }
         isDone = true;
     }

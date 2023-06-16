@@ -6,7 +6,7 @@
   },
   "${ModID}:Brainwave": {
     "NAME": "脑力波",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 随机将一张攻击手牌附加 ${ModID}:灵秘 。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 随机将一张攻击手牌附加 ${ModID}:灵秘 。"
   },
   "${ModID}:TelephonePole": {
     "NAME": "电线杆",
@@ -33,7 +33,7 @@
   },
   "${ModID}:OneIsEnough": {
     "NAME": "一张足够",
-    "DESCRIPTION": "抽 !M! 张牌并选择一张。 NL 所抽其他牌本回合无法被打出。",
+    "DESCRIPTION": "抽 !M! 张牌并选择一张，所抽其他牌本回合无法被打出。",
     "EXTENDED_DESCRIPTION": [
       "选择可打出的牌。"
     ]
@@ -49,7 +49,8 @@
   },
   "${ModID}:MalleableFire": {
     "NAME": "可塑之火",
-    "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL 将一张耗能为X的 *被塑之火 加入抽牌堆。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL 将一张耗能为X的 *被 *塑 *之 *火 加入抽牌堆。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 X 次。 NL 将一张耗能为X的 *被 *塑 *之 *火 *+ 加入抽牌堆。 NL 消耗 。"
   },
   "${ModID}:MoldedFire": {
     "NAME": "被塑之火",

@@ -1,10 +1,9 @@
 package thePackmaster.cards.cthulhupack;
 
-import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.powers.cthulhupack.NextTurnGainMadnessPower;
-import thePackmaster.powers.entropypack.RuinPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -14,19 +13,22 @@ public class FamilialCurse extends AbstractCthulhuCard {
 
     public FamilialCurse() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 10;
-        cardsToPreview = new Madness();
+        baseMagicNumber = magicNumber = 1;
+        baseBlock = 10;
+        cardsToPreview = new Lunacy();
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.forAllMonstersLiving((mo)->
-                Wiz.applyToEnemy(mo, new RuinPower(mo, this.magicNumber)));
-        Wiz.applyToSelf(new NextTurnGainMadnessPower(p, 1, false));
+        blck();
+        Wiz.forAllMonstersLiving((mo) ->
+                Wiz.applyToEnemy(mo, new WeakPower(mo, this.magicNumber, false)));
+
+        loseSanity(4);
 
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(1);
     }
 }

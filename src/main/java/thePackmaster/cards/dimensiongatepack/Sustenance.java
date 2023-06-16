@@ -15,7 +15,7 @@ public class Sustenance extends AbstractDimensionalCardVault {
     public Sustenance() {
         super(ID, 1, CardRarity.COMMON, CardType.SKILL, CardTarget.ALL_ENEMY);
         baseBlock = 5;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         PersistFields.setBaseValue(this, 2);
     }
 

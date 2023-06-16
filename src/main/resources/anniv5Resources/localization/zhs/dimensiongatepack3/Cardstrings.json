@@ -8,20 +8,20 @@
   },
   "${ModID}:Inferno": {
     "NAME": "狱焱",
-    "DESCRIPTION": "造成 !D! 点 伤害并给予所有敌人 10 层 ${ModID}:燃烧 。 NL 获得 !M! 层 ${ModID}:燃烧 。"
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 给予 !M! 层群体 ${ModID}:燃烧 。 NL 获得两张 灼烧 。"
   },
   "${ModID}:Minniegun": {
     "NAME": "迷你枪",
-    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 NL 将 *阻塞 加入弃牌堆。 "
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 将 *阻塞 加入抽牌堆。 "
   },
   "${ModID}:Ouroboros": {
     "NAME": "含尾蛇",
-    "DESCRIPTION": "敌方回合结束时，若你本回合防住过任何伤害，获得1点 力量 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 敌方回合结束时，若你本回合防住过任何伤害，获得1点 力量 。"
+    "DESCRIPTION": "每回合首次防住任何伤害时，获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合首次防住任何伤害时，获得1点 力量 。"
   },
   "${ModID}:Corset": {
     "NAME": "紧身马甲",
-    "DESCRIPTION": "受到3点伤害。 NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得一张 *阻塞 。"
   },
   "${ModID}:Jam": {
     "NAME": "阻塞",
@@ -29,7 +29,7 @@
   },
   "${ModID}:MantisStrike": {
     "NAME": "螳螂打击",
-    "DESCRIPTION": "受到3点伤害。 NL 造成 !${ModID}:sd! 点伤害。 NL 随机造成 !D! 点 伤害两次。"
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 本回合防住伤害时， NL 再随机造成一次。"
   },
   "${ModID}:RestorationDetonation": {
     "NAME": "回复爆弹",
@@ -38,7 +38,7 @@
   },
   "${ModID}:SelfWound": {
     "NAME": "自我伤害",
-    "DESCRIPTION": "受到3点伤害。 NL 回复 !M! 点生命。 NL 消耗 。"
+    "DESCRIPTION": "受到3点伤害。 NL 获得 !M! 层 临时生命 。"
   },
   "${ModID}:SignInBlood": {
     "NAME": "血液契约",
@@ -46,6 +46,7 @@
   },
   "${ModID}:SpreadingSpores": {
     "NAME": "孢子散播",
-    "DESCRIPTION": "获得 !${ModID}:m2! 层 荆棘 。 NL 获得 !M! 层 *消融 。"
+    "DESCRIPTION": "虚无 。 NL 获得 !M! 层 荆棘 。 NL 获得 !M! 层 临时生命 。 NL 将本牌复制加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 荆棘 。 NL 获得 !M! 层 临时生命 。 NL 将本牌复制加入抽牌堆。"
   }
 }

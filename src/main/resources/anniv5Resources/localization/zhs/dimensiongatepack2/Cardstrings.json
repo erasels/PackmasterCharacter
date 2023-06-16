@@ -1,32 +1,33 @@
 {
   "${ModID}:ArsenalGear": {
     "NAME": "武库零件",
-    "DESCRIPTION": "下 !M! 个回合开始时，随机将一张 *罕见 或 *稀有 牌加入手牌，该回合其首次耗能为0。"
+    "DESCRIPTION": "下 !M! 个回合开始时，随机将一张 *罕见 或 *稀有 牌加入手牌，其耗能减1。"
   },
   "${ModID}:ConjureBarrage": {
     "NAME": "咒唤箭幕",
-    "DESCRIPTION": "*魔法 。 NL 获得 !M! 张 *魔法导弹 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "*魔法 。 NL 获得 !M! 张 *魔法导弹+ 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 张 *魔法导弹 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 张 *魔法导弹+ 。 NL 消耗 。"
   },
   "${ModID}:MagicMissile": {
     "NAME": "魔法导弹",
-    "DESCRIPTION": "*魔法 。 保留 。 NL 造成 !D! 点伤害。 NL 本回合提高所有 *魔法 牌的伤害 !M! 点。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本回合提高所有 *魔 *法 *导 *弹 的伤害 !M! 点。"
   },
   "${ModID}:Channel": {
     "NAME": "施法",
-    "DESCRIPTION": "*魔法 。 保留 。 NL 随机降低一张 *魔法 手牌的本回合耗能 !M! 点。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 随机降低一张手牌的本回合耗能 !M! 点。 NL 消耗 。"
   },
   "${ModID}:Daggerstorm": {
     "NAME": "匕首风暴",
-    "DESCRIPTION": "0耗能 消耗 牌额外打出一次。"
+    "DESCRIPTION": "${ModID}:创造 非 *小刀 牌时， NL ${ModID}:创造 并打出一张 *小刀 。"
   },
   "${ModID}:FlamingGrasp": {
     "NAME": "燃烧之握",
-    "DESCRIPTION": "*魔法 。 NL 造成 !D! 点 伤害。 NL 本回合打出的下张 *魔法 牌会将一张 *火柱 加入手牌"
+    "DESCRIPTION": "造成 !D! 点 伤害。 NL 下回合， NL 获得1张 *火柱 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点 伤害。 NL 下回合， NL 获得 !M! 张 *火柱 。"
   },
   "${ModID}:FlamePillar": {
     "NAME": "火柱",
-    "DESCRIPTION": "*魔法 。 NL 给予 !M! 层 ${ModID}:燃烧 。 NL 获得一张 *施法 。 NL 消耗 。"
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:燃烧 。 NL 消耗 。"
   },
   "${ModID}:Haymaker": {
     "NAME": "强力一击",
@@ -34,8 +35,8 @@
   },
   "${ModID}:ManaShield": {
     "NAME": "魔力护盾",
-    "DESCRIPTION": "*魔法 。 NL 获得 !B! 点 格挡 。 NL 获得1张 *施法 。",
-    "UPGRADE_DESCRIPTION": "*魔法 。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 张 *施法 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得1张 *施法 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *施法 。"
   },
   "${ModID}:MuscleMemory": {
     "NAME": "肌肉记忆",
@@ -60,6 +61,7 @@
   },
   "${ModID}:WallOfFire": {
     "NAME": "火墙",
-    "DESCRIPTION": "*魔法 。 NL 随机造成 !D! 点 伤害 !M! 次。 NL 获得3张 *火柱 。"
+    "DESCRIPTION": "随机造成 !D! 点 伤害 !M! 次。 NL 获得3张 *火柱 。",
+    "UPGRADE_DESCRIPTION": "随机造成 !D! 点 伤害 !M! 次。 NL 获得3张 *火柱+ 。"
   }
 }

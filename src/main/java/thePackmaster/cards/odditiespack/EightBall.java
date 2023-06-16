@@ -15,7 +15,7 @@ public class EightBall extends AbstractPackmasterCard {
 
     public EightBall() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 22;
+        baseDamage = 21;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

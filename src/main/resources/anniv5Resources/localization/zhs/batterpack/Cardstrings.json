@@ -38,7 +38,7 @@
     "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害)", " NL (造成 !D! 点伤害。 哇哦！)"]
   },
   "${ModID}:AvatarBeat": {
-    "NAME": "漂亮一击",
-    "DESCRIPTION": "造成10点以上 ${ModID}:突破 伤害时， 获得 !M! 点 力量 ，抽一张牌，并将触发条件的伤害阈值提高5点。"
+    "NAME": "绝妙一击",
+    "DESCRIPTION": "造成10点以上 ${ModID}:突破 伤害时，获得 !M! 点 力量 ，抽一张牌，并将触发条件的伤害阈值提高5点。"
   }
 }

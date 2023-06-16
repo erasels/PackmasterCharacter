@@ -8,6 +8,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,12 +16,15 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.PackmasterOrb;
 import thePackmaster.util.TexLoader;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeOrbPath;
 
@@ -52,10 +56,18 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
 
     @Override
     public void onEvoke() {
+        applyFocus();
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
-        updateDescription();
-        AbstractDungeon.actionManager.addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player,passiveAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractMonster m = Wiz.getRandomEnemy();
+                if(m != null)
+                    Wiz.att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, passiveAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                isDone = true;
+            }
+        });
     }
 
     @Override
@@ -73,7 +85,15 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
         applyFocus();
         AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
                 new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
-        AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player,passiveAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        Wiz.atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractMonster m = Wiz.getRandomEnemy();
+                if(m != null)
+                    Wiz.att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, applyLockOn(m, passiveAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                isDone = true;
+            }
+        });
         evokeAmount -= 1;
         baseEvokeAmount = evokeAmount;
         if (evokeAmount < 1 && !evoking) {
@@ -92,7 +112,17 @@ public class CrescentMoon extends CustomOrb implements PackmasterOrb {
     }
     @Override
     public void playChannelSFX() {
+    }
 
+    @Override
+    public void applyFocus() {
+        AbstractPower power = AbstractDungeon.player.getPower("Focus");
+        if (power != null) {
+            this.passiveAmount = Math.max(0, this.basePassiveAmount + power.amount);
+        } else {
+            this.passiveAmount = this.basePassiveAmount;
+        }
+        this.evokeAmount = this.baseEvokeAmount;
     }
 
     @Override

@@ -1,0 +1,50 @@
+{
+  "${ModID}:Doomtouch": {
+    "NAME": "毁灭之触",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:厄运 。"
+  },
+  "${ModID}:BindingChains": {
+    "NAME": "束缚锁链",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 目标本回合失去 !M! 点 力量 。 NL 消耗 。"
+  },
+  "${ModID}:FreezingVenom": {
+    "NAME": "寒冷之毒",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 给予 !M! 层群体 ${ModID}:霜噬 。 NL 给予 !M! 层群体 中毒 。"
+  },
+  "${ModID}:EssenceGrasp": {
+    "NAME": "精华汲取",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标每各有 ${ModID}:燃烧 、 ${ModID}:霜噬 ，或 中毒 ，抽一张牌。",
+    "EXTENDED_DESCRIPTION": [" NL (抽 !M! 张牌)", " NL (抽 !M! 张牌)"]
+  },
+  "${ModID}:ChillingCurse": {
+    "NAME": "冰寒诅咒",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:霜噬 与 虚弱 。 NL 消耗 。"
+  },
+  "${ModID}:Suffer": {
+    "NAME": "苦楚",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:燃烧 。 NL 给予 !M! 层 ${ModID}:霜噬 。 NL 给予 !M! 层 中毒 。 NL 给予 !M! 层 ${ModID}:厄运 。 NL 消耗 。"
+  },
+  "${ModID}:ArmorOfMalice": {
+    "NAME": "怨怒盔甲",
+    "DESCRIPTION": "敌方每有一种不同的负面效果，获得 !M! 点 格挡 。",
+    "EXTENDED_DESCRIPTION": [" NL (获得 !B! 点 格挡 )"]
+  },
+  "${ModID}:AllIsFire": {
+    "NAME": "皆化烈火",
+    "DESCRIPTION": "将所有 ${ModID}:霜噬 与 中毒 转化为 ${ModID}:燃烧 。 NL 目标的 ${ModID}:燃烧 增加50%。 NL 消耗性 !stslib:ex! 。",
+    "UPGRADE_DESCRIPTION": "将所有 ${ModID}:霜噬 与 中毒 转化为 ${ModID}:燃烧 。 NL 目标的 ${ModID}:燃烧 翻倍。 NL 消耗性 !stslib:ex! 。"
+  },
+  "${ModID}:DreadOmen": {
+    "NAME": "可怖愿景",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:厄运 。"
+  },
+  "${ModID}:GrowingFlames": {
+    "NAME": "蔓延",
+    "DESCRIPTION": "回合开始时， NL 给予 !M! 层群体 ${ModID}:燃烧 。"
+  },
+  "${ModID}:CobrasGift": {
+    "NAME": "眼镜蛇之礼",
+    "DESCRIPTION": "给予 !M! 层 中毒 。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 中毒 。 NL 获得 [E] 。"
+  }
+}

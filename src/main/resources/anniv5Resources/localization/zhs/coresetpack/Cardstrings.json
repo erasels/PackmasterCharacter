@@ -1,7 +1,7 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "背包甩掴",
-    "DESCRIPTION": "造成 !D! 点伤害X次。 NL ${ModID}:配合 ： 给予X层 虚弱 与 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL ${ModID}:配合 ： NL 给予X层 虚弱 与 易伤 。"
   },
   "${ModID}:BoosterTutor": {
     "NAME": "奇寻卡包",
@@ -13,7 +13,7 @@
   },
   "${ModID}:Flick": {
     "NAME": "弹牌",
-    "DESCRIPTION": "丢弃一张牌。 NL 造成 !D! 点伤害其耗能次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃一张牌。 NL 造成 !D! 点伤害其耗能次。"
   },
   "${ModID}:MayhemForm": {
     "NAME": "不懈形态",

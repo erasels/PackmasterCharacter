@@ -1,4 +1,8 @@
 {
+  "${ModID}:ArcingEnergy": {
+  "NAME": "弧能量",
+  "DESCRIPTION": "每回合首次 ${ModID}:增幅 时， NL 获得 [E] 。"
+  },
   "${ModID}:AstralFracture": {
     "NAME": "星屑",
     "DESCRIPTION": "给予 !M! 层群体 ${ModID}:扭曲 。 NL ${ModID}:增幅 [E] : 消耗 一张牌。"
@@ -18,10 +22,6 @@
   "${ModID}:HeatEngine": {
     "NAME": "热力机",
     "DESCRIPTION": "2及以上耗能的牌，包括 ${ModID}:增幅 所需的能量，被消耗时， 获得 !M! 点 力量 。"
-  },
-  "${ModID}:Recall": {
-    "NAME": "召回",
-    "DESCRIPTION": "每回合首次 ${ModID}:增幅 时，选择将消耗堆一张牌返回手牌，并将其附加 stslib:抹除 。"
   },
   "${ModID}:RefractEnergy": {
     "NAME": "能量折配",

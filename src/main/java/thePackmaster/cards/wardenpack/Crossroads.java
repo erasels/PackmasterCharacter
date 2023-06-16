@@ -21,7 +21,7 @@ public class Crossroads extends AbstractWardenCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ScryAction(this.magicNumber));
-        this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), false));
+        this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
     }
 
     public void upp() {

@@ -15,7 +15,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class CountdownPower extends AbstractPackmasterPower implements NonStackablePower {
     public static final String POWER_ID = makeID("CountdownPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     private final boolean upgraded;
     private boolean triggered = false;
 
