@@ -13,7 +13,7 @@
   },
   "${ModID}:Flick": {
     "NAME": "Flick",
-    "DESCRIPTION": "Discard a card. NL Deal !D! damage a number of times equal to its cost."
+    "DESCRIPTION": "Deal !D! damage. NL Discard a card. NL Deal !D! damage a number of times equal to its cost."
   },
   "${ModID}:MayhemForm": {
     "NAME": "Unrelenting Form",

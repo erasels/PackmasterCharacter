@@ -422,6 +422,12 @@ public class Wiz {
         return 0;
     }
 
+    public static int countDebuffs(AbstractCreature c){
+        return (int) c.powers.stream()
+                .filter(pow -> pow.type == AbstractPower.PowerType.DEBUFF )
+                .count();
+    }
+
     // Packmaster specific utilities
     public static AbstractCardPack getPackByCard(AbstractCard c) {
         return SpireAnniversary5Mod.packsByID.get(SpireAnniversary5Mod.cardParentMap.get(c.cardID));

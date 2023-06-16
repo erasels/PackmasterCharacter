@@ -11,7 +11,7 @@
   },
   "${ModID}:Cull": {
     "NAME": "Cull",
-    "DESCRIPTION": "Gain !B! Block. NL EVERYONE loses !M! HP."
+    "DESCRIPTION": "Take !M! damage. NL Gain !B! Block."
   },
   "${ModID}:Potential": {
     "NAME": "Potential",

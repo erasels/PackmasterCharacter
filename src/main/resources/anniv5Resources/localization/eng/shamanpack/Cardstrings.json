@@ -9,7 +9,7 @@
   },
   "${ModID}:IceWall": {
     "NAME": "Ice Wall",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block next turn. NL Add a Void to the top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block next turn. NL Add a Dazed to the top of your draw pile."
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "Freeze and Burn",
