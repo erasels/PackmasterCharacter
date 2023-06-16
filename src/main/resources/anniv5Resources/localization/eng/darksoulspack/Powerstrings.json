@@ -1,0 +1,18 @@
+{
+  "${ModID}:PrisonersChainPower": {
+    "NAME": "Prisoner's Chain",
+    "DESCRIPTIONS": [
+      "Whenever a debuff is applied to you, gain #b",
+      " #yVigor."
+    ]
+  },
+  "${ModID}:RemedyPower": {
+    "NAME": "Remedy",
+    "DESCRIPTIONS": [
+      "Reduce the next #b",
+      " debuffs",
+      " debuff",
+      " you receive by #b2."
+    ]
+  }
+}
