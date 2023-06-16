@@ -2,7 +2,7 @@
   "${ModID}:OverwhelmingPack": {
     "TEXT": [
       "Overwhelming",
-      "Overcome expensive costs through sheer determination.",
+      "Defy the restrictions of energy.",
       "Mixmaw, Alchyr"
     ]
   },
@@ -10,6 +10,12 @@
     "TEXT": [
       "description",
       "name"
+    ]
+  },
+  "${ModID}:ActuallyFinalFormAction": {
+    "TEXT": [
+      "Choose a Card that costs less than ",
+      " to play."
     ]
   }
 }

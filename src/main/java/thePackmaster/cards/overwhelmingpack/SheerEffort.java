@@ -20,12 +20,19 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class SheerEffort extends AbstractOverwhelmingCard {
     public final static String ID = makeID("SheerEffort");
 
+    private static final String[] ACTION_TEXT = CardCrawlGame.languagePack.getUIString(makeID("ActuallyFinalFormAction")).TEXT;
+
     public SheerEffort() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new HandSelectAction(2147483632, card -> true, list -> { },
+        addToBot(new HandSelectAction(2147483632, card -> true,
+                list -> {
+                    for (AbstractCard c : list) {
+                        p.hand.moveToExhaustPile(c);
+                    }
+                },
                 list -> {
                     int max = list.size();
                     addToTop(new AbstractGameAction() {
@@ -48,7 +55,7 @@ public class SheerEffort extends AbstractOverwhelmingCard {
 
                                 temp.sortAlphabetically(true);
                                 temp.sortByRarityPlusStatusCardType(false);
-                                AbstractDungeon.gridSelectScreen.open(temp, 1, OmniscienceAction.TEXT[0], false);
+                                AbstractDungeon.gridSelectScreen.open(temp, 1, ACTION_TEXT[0] + max + ACTION_TEXT[1], false);
                             }
                             else {
                                 if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {

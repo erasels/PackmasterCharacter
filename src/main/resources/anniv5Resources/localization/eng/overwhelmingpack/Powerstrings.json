@@ -7,6 +7,14 @@
       " #ySkills you play."
     ]
   },
+  "${ModID}:ActuallyFinalFormPower": {
+    "NAME": "Final Form",
+    "DESCRIPTIONS": [
+      "At the end of your turn, play the highest card card in your hand.",
+      "At the end of your turn, play the highest card card in your hand #b",
+      " times."
+    ]
+  },
   "${ModID}:OvercomePower": {
     "NAME": "Overcome",
     "DESCRIPTIONS": [
