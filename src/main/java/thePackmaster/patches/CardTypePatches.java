@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import thePackmaster.cards.boardgamepack.AbstractBoardCard;
-import thePackmaster.cards.rimworldpack.Despair;
 
 import java.util.ArrayList;
 
@@ -41,9 +40,7 @@ public class CardTypePatches {
                 TEXT = uiStrings.TEXT;
             }
             AbstractCard reflectedCard = ReflectionHacks.getPrivate(__instance, SingleCardViewPopup.class, "card");
-            boolean isChance = false;
-            if(reflectedCard instanceof AbstractBoardCard && ((AbstractBoardCard)reflectedCard).isChance)
-                isChance = true;
+            boolean isChance = reflectedCard instanceof AbstractBoardCard && ((AbstractBoardCard) reflectedCard).isChance;
             if (isChance)
                 label[0] = TEXT[0];
         }

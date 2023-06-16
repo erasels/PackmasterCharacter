@@ -2,49 +2,36 @@ package thePackmaster.cards.overwhelmingpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.actions.HandSelectAction;
 
-import static thePackmaster.SpireAnniversary5Mod.louseList;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Approach extends AbstractOverwhelmingCard {
     public final static String ID = makeID("Approach");
 
     public Approach() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
 
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ScryAction(this.magicNumber));
-        addToBot(new DrawCardAction(1, approachCallback()));
+        addToBot(new DrawCardAction(this.magicNumber, approachCallback(1)));
     }
 
-    private static AbstractGameAction approachCallback() {
-        return new AbstractGameAction() {
-            @Override
-            public void update() {
-                this.isDone = true;
-
-                if (DrawCardAction.drawnCards.isEmpty()) //couldn't draw
-                    return;
-
-                for (AbstractCard c : DrawCardAction.drawnCards) {
-                    if (c.costForTurn == 1) {
-                        return;
-                    }
-                }
-
-                addToTop(new DrawCardAction(1, approachCallback()));
+    private AbstractGameAction approachCallback(int reduction) {
+        return new HandSelectAction(1, (c)->DrawCardAction.drawnCards.contains(c), cards -> {
+            for (AbstractCard c : cards) {
+                if (c.costForTurn > 0)
+                    c.setCostForTurn(c.costForTurn - reduction);
             }
-        };
+        }, null, cardStrings.EXTENDED_DESCRIPTION[0], true, false, false);
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

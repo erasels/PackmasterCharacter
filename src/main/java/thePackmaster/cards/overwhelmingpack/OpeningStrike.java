@@ -14,9 +14,9 @@ public class OpeningStrike extends AbstractOverwhelmingCard {
     public final static String ID = makeID("OpeningStrike");
 
     public OpeningStrike() {
-        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
 
-        this.baseDamage = this.damage = 12;
+        this.baseDamage = this.damage = 11;
         tags.add(CardTags.STRIKE);
     }
 
@@ -26,7 +26,7 @@ public class OpeningStrike extends AbstractOverwhelmingCard {
             @Override
             public void update() {
                 for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                    if (c.costForTurn >= 1)
+                    if (c.type == CardType.ATTACK && c.costForTurn >= 1)
                         c.setCostForTurn(c.costForTurn - 1);
                 }
                 isDone = true;

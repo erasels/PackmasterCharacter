@@ -569,7 +569,6 @@ public class SpireAnniversary5Mod implements
         ConsoleCommand.addCommand("addhat", UnlockHatCommand.class);
         ConsoleCommand.addCommand("pack", PackAddCommand.class);
 
-        genFormPool();
         TextCodeInterpreter.addAccessible("PackmasterMenu", MainMenuUIPatch.class);
         TextCodeInterpreter.addAccessible("Packmaster", SpireAnniversary5Mod.class);
     }
@@ -1464,12 +1463,6 @@ public class SpireAnniversary5Mod implements
     }
 
     public static float time = 0f;
-
-    public static final List<AbstractCard> formCards = new ArrayList<>();
-    private static void genFormPool() {
-        formCards.clear();
-        formCards.addAll(Wiz.getCardsMatchingPredicate((card) -> card.type == AbstractCard.CardType.POWER && card.hasTag(BaseModCardTags.FORM), true));
-    }
 
 
     public static AbstractStance getPackmasterStanceInstance(boolean useCardRng) {

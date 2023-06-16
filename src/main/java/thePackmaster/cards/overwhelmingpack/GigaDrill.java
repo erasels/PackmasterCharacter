@@ -18,9 +18,9 @@ public class GigaDrill extends AbstractOverwhelmingCard {
     public final static String ID = makeID("GigaDrill");
 
     public GigaDrill() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
 
-        this.baseDamage = this.damage = 14;
+        this.baseDamage = this.damage = 12;
         this.baseMagicNumber = this.magicNumber = 1;
     }
 
@@ -45,6 +45,6 @@ public class GigaDrill extends AbstractOverwhelmingCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(4);
     }
 }
