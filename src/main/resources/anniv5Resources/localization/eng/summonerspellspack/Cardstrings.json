@@ -22,7 +22,7 @@
   },
   "${ModID}:WitheringExhaust": {
     "NAME": "Withering Exhaust",
-    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL If you are holding 6 or more cards, also apply !${ModID}:m2! Weak."
+    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL If you are holding 6 or more cards, apply !${ModID}:m2! Weak."
   },
   "${ModID}:DualHeal": {
     "NAME": "Dual Heal",
