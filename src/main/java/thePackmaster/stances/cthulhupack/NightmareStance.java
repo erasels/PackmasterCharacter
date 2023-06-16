@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
+import thePackmaster.cards.cthulhupack.AbstractCthulhuCard;
 import thePackmaster.cards.cthulhupack.Lunacy;
 import thePackmaster.powers.cthulhupack.SanityPower;
 import thePackmaster.util.Wiz;
@@ -60,7 +61,7 @@ public class NightmareStance extends AbstractStance {
 
     @Override
     public void onPlayCard(AbstractCard card) {
-        Wiz.applyToSelf(new SanityPower(Wiz.p(), -1));
+        AbstractCthulhuCard.loseSanity(1);
 
         if (Lunacy.ID.equals(card.cardID)) {
             Wiz.atb(new DrawCardAction(2));
