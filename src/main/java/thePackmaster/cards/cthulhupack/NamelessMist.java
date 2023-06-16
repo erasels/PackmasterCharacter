@@ -10,13 +10,13 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class NamelessMist extends AbstractCthulhuCard {
     public final static String ID = makeID("NamelessMist");
 
-    private static final int BLOCK_VALUE = 4;
-    private static final int UPGRADE_AFTER_IMAGE_VALUE = 1;
+    private static final int BLOCK_VALUE = 5;
+
     public NamelessMist() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
 
         baseBlock = BLOCK_VALUE;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,6 +25,6 @@ public class NamelessMist extends AbstractCthulhuCard {
     }
 
     public void upp() {
-        this.upgradeMagicNumber(UPGRADE_AFTER_IMAGE_VALUE);
+        upgradeBlock(3);
     }
 }

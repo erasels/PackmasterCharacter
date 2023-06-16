@@ -25,7 +25,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.patches.InfiniteSpirePatch;
+import thePackmaster.patches.compatibility.InfiniteSpirePatch;
 import thePackmaster.summaries.PackSummary;
 import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.summaries.PackSummaryReader;
@@ -214,7 +214,7 @@ public class PackSetupScreen extends CustomScreen {
             case DRAFTING:
                 AbstractCardPack clicked = null;
                 for (AbstractCardPack pack : choiceSet) {
-                    if (pack.previewPackCard.hb.hovered && InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed()) {
+                    if (pack.previewPackCard.hb.hovered && (InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed())) {
                         clicked = pack;
                         break;
                     }

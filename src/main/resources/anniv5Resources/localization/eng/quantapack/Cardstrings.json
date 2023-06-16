@@ -5,13 +5,13 @@
   },
   "${ModID}:MagicDart": {
     "NAME": "Magic Dart",
-    "DESCRIPTION": "Deal damage equal to your hand size.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal damage equal to your hand size.",
+    "DESCRIPTION": "Deal damage equal to the number of cards in your hand.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal damage equal to the number of cards in your hand.",
     "EXTENDED_DESCRIPTION": [" NL (Deals !D! damage.)"]
   },
   "${ModID}:Cull": {
     "NAME": "Cull",
-    "DESCRIPTION": "Gain !B! Block. NL EVERYONE loses !M! HP."
+    "DESCRIPTION": "Take !M! damage. NL Gain !B! Block."
   },
   "${ModID}:Potential": {
     "NAME": "Potential",

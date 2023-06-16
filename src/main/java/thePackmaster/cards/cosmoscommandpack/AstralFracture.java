@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
+import thePackmaster.actions.highenergypack.AllEnemyApplyPowerAction;
 import thePackmaster.cards.marisapack.AmplifyCard;
 import thePackmaster.powers.distortionpack.DistortionPower;
 
@@ -26,9 +27,7 @@ public class AstralFracture extends AbstractCosmosCard implements AmplifyCard {
             vfx(new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.GREEN_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F);
         else
             vfx(new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.GREEN_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 1.5F);
-        for (AbstractMonster mo : getEnemies()) {
-            applyToEnemy(mo, new DistortionPower(mo, p, magicNumber));
-        }
+        atb(new AllEnemyApplyPowerAction(p, magicNumber, (q) -> new DistortionPower(q, p, magicNumber)));
     }
 
     @Override

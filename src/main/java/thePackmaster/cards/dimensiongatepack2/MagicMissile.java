@@ -8,7 +8,6 @@ import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardGordian
 import thePackmaster.powers.dimensiongatepack.MagicMissilePower;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.MAGIC;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MagicMissile extends AbstractDimensionalCardGordian {
@@ -19,7 +18,7 @@ public class MagicMissile extends AbstractDimensionalCardGordian {
         super(ID, 1, CardRarity.SPECIAL, AbstractCard.CardType.ATTACK, AbstractCard.CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 5;
         baseMagicNumber = magicNumber = 5;
-        tags.add(MAGIC);
+        
         selfRetain = true;
     }
 

@@ -54,7 +54,7 @@ public class MoreExplosions extends AbstractGoddessOfExplosionsCard {
         // Add from eligible cards to power list.
         for(int hm = 0; hm < magicNumber; hm++) {
             if (eligibleCards.size() > 0)
-            powerList.add(eligibleCards.get(AbstractDungeon.cardRandomRng.random(0, eligibleCards.size() - 1)).makeCopy());
+                powerList.add(eligibleCards.get(AbstractDungeon.cardRandomRng.random(0, eligibleCards.size() - 1)).makeCopy());
         }
 
         // Draw.

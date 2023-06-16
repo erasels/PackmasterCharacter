@@ -27,7 +27,8 @@
   },
   "${ModID}:MoreExplosions": {
     "NAME": "愈烈",
-    "DESCRIPTION": "随机将 !M! 张能力牌加入抽牌堆。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 随机将 !M! 张能力牌加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 随机将 !M! 张能力牌加入抽牌堆。"
   },
   "${ModID}:Meltdown": {
     "NAME": "熔化",
@@ -46,6 +47,6 @@
   "${ModID}:EveOfDestruction": {
     "NAME": "毁灭之夜",
     "DESCRIPTION": "非攻击伤害提高100%。",
-    "UPGRADE_DESCRIPTION": "固有。 NL 非攻击伤害提高100%。"
+    "UPGRADE_DESCRIPTION": "固有 。 NL 非攻击伤害提高100%。"
   }
 }

@@ -46,7 +46,7 @@
   },
   "${ModID}:TotalWeakness": {
     "NAME": "完全无效",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 虚弱 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层群体 虚弱 。"
   },
   "${ModID}:LeftBrain": {
     "NAME": "左脑",

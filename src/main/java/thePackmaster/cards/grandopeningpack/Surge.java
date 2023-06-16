@@ -22,7 +22,7 @@ public class Surge extends AbstractGrandOpeningCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
-        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new SurgePower((AbstractCreature)p, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new SurgePower(p, this.magicNumber), this.magicNumber));
     }
 
     @Override

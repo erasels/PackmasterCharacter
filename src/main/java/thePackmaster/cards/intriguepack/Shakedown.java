@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.util.Wiz;
 
-import java.util.Iterator;
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Shakedown extends AbstractIntrigueCard {
@@ -25,8 +23,7 @@ public class Shakedown extends AbstractIntrigueCard {
     }
 
     public boolean hasRarity(CardRarity rar) {
-        for (AbstractCard c : Wiz.p().hand.group)
-        {
+        for (AbstractCard c : Wiz.p().hand.group) {
             if (c.rarity == rar && c.color != CardColor.CURSE)
                 return true;
         }
@@ -36,41 +33,38 @@ public class Shakedown extends AbstractIntrigueCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-                Wiz.atb(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        Wiz.atb(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
-                // lol aight
-                int drawnum = 0;
-                boolean com_d = false;
-                boolean unc_d = false;
-                boolean rar_d = false;
+        int drawnum = 0;
+        boolean com_d = false;
+        boolean unc_d = false;
+        boolean rar_d = false;
 
-                for(AbstractCard c : Wiz.p().hand.group)
-                {
-                    if (c.rarity == CardRarity.CURSE)
-                        continue;
+        for (AbstractCard c : Wiz.p().hand.group) {
+            if (c.rarity == CardRarity.CURSE)
+                continue;
 
-                    if (c.rarity == CardRarity.COMMON || c.rarity == CardRarity.BASIC || c.rarity == CardRarity.SPECIAL)
-                        com_d = true;
-                    else
-                    if (c.rarity == CardRarity.UNCOMMON)
-                        unc_d = true;
-                    else
-                    if (upgraded && c.rarity == CardRarity.RARE)
-                        rar_d = true;
-                }
+            if (c.rarity == CardRarity.COMMON || c.rarity == CardRarity.BASIC || c.rarity == CardRarity.SPECIAL)
+                com_d = true;
+            else if (c.rarity == CardRarity.UNCOMMON)
+                unc_d = true;
+            else if (upgraded && c.rarity == CardRarity.RARE)
+                rar_d = true;
+        }
 
-                if (com_d)
-                    drawnum++;
-                if (unc_d)
-                    drawnum++;
-                if (rar_d)
-                    drawnum++;
+        if (com_d)
+            drawnum++;
+        if (unc_d)
+            drawnum++;
+        if (rar_d)
+            drawnum++;
 
-                    Wiz.atb(new DrawCardAction(drawnum));
+        if(drawnum > 0)
+            Wiz.atb(new DrawCardAction(drawnum));
     }
 
     @Override
     public void upp() {
-            upgradeDamage(UPGRADE_PLUS_DMG);
+        upgradeDamage(UPGRADE_PLUS_DMG);
     }
 }

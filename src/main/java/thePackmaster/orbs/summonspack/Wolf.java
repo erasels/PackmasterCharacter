@@ -87,7 +87,7 @@ public class Wolf extends CustomOrb {
                     isDone = true;
                     return;
                 }
-                doDmg(m, passiveAmount, DamageInfo.DamageType.THORNS, AttackEffect.NONE, false, true);
+                doDmg(m, Wolf.applyLockOn(m, passiveAmount), DamageInfo.DamageType.THORNS, AttackEffect.NONE, false, true);
                 Wiz.att(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F));
                 isDone = true;
             }

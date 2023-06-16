@@ -1,0 +1,65 @@
+{
+  "${ModID}:Manifest": {
+    "NAME": "Manifest",
+    "DESCRIPTION": "Deal !D! damage. NL Play a 0 or 1 cost card from your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to play."
+    ]
+  },
+  "${ModID}:Bunker": {
+    "NAME": "Bunker",
+    "DESCRIPTION": "Gain !B! Block. NL At the start of your next turn, add a *Golf *Ball into your hand."
+  },
+  "${ModID}:GolfBall": {
+    "NAME": "Golf Ball",
+    "DESCRIPTION": "Ethereal. NL Deal damage equal to unused Block last turn. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
+  },
+  "${ModID}:Slapstick": {
+    "NAME": "Slapstick",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle *Dramatic *Entrance, *Trip, or *Blind at random into your draw pile."
+  },
+  "${ModID}:Ghost": {
+    "NAME": "Ghost",
+    "DESCRIPTION": "At the end of its turns, enemy loses !M! HP. NL Startup: Disguise this as another card."
+  },
+  "${ModID}:LunchBox": {
+    "NAME": "Lunch Box",
+    "DESCRIPTION": "Gain !B! Block. NL Your next Colorless card this turn is played twice. NL ${ModID}:Pickup: Heal 3 HP."
+  },
+  "${ModID}:ColorlessMastery": {
+    "NAME": "Colorless Mastery",
+    "DESCRIPTION": "Whenever you play a Colorless card, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a Colorless card, gain 1 Strength."
+  },
+  "${ModID}:VisitAMonastery": {
+    "NAME": "Visit a Monastery",
+    "DESCRIPTION": "At the start of your next 3 turns, add into your hand: NL *Madness, *Purity, NL *Apotheosis.",
+    "UPGRADE_DESCRIPTION": "Innate. At the start of your next 3 turns, add into your hand: NL *Madness, *Purity, NL *Apotheosis."
+  },
+  "${ModID}:ThePrism": {
+    "NAME": "The Prism",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Startup: Split into *Shards in your hand and each pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Startup: Split into *Shards+ in your hand and each pile."
+  },
+  "${ModID}:PrismShard": {
+    "NAME": "Shard",
+    "DESCRIPTION": "Deal !D! damage. NL After playing 3 Shards, add *The *Prism into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL After playing 3 Shards, add *The *Prism+ into your hand. NL Exhaust."
+  },
+  "${ModID}:RealityMaster": {
+    "NAME": "MC Reality",
+    "DESCRIPTION": "You know the drill; NL when you make a card, NL give it an upgrade NL for working so hard!",
+    "UPGRADE_DESCRIPTION": "Innate, that's great! NL You know the drill; NL when you make a card, NL give it an upgrade NL for working so hard!"
+  },
+  "${ModID}:AdventurersSword": {
+    "NAME": "Adventurer's Sword",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle a *Triangle into your draw pile. NL If you're at Max HP, enemy loses !M! HP."
+  },
+  "${ModID}:Triforce": {
+    "NAME": "Triangle",
+    "DESCRIPTION": "Gain 1 Strength. NL Draw 1 card."
+  }
+}

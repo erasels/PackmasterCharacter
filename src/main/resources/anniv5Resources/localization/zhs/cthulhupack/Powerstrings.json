@@ -3,29 +3,41 @@
     "NAME": "无名之雾",
     "DESCRIPTIONS": [
       "本回合每打出一张牌， 获得 #b",
-      " 点 #y格挡 。"
-    ]
-  },
-  "${ModID}:PageOfTheDeadPower": {
-    "NAME": "死灵之页",
-    "DESCRIPTIONS": [
-      "下 #b",
-      " 张 #b2 耗能以上的 #y攻击 牌打出两次。"
+      " 层 #y临时生命 。"
     ]
   },
   "${ModID}:AllSeeingPower": {
-    "NAME": "全知",
+    "NAME": "被凝视",
     "DESCRIPTIONS": [
-      "你的回合结束时，预见 #b",
-      " 并受到 #b",
-      " 点伤害。"
+      "你的回合开始时，失去 #b",
+      " 层 #y神志 。"
+    ]
+  },
+  "${ModID}:AllSeeingPowerTriggerOnCard": {
+    "NAME": "怪异协议",
+    "DESCRIPTIONS": [
+      "每当你失去 #y神志 ，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "${ModID}:AllSeeingPowerTriggerOnTurn": {
+    "NAME": "Eldritch Pact",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yBlock."
     ]
   },
   "${ModID}:EndOfDaysPower": {
-    "NAME": "End of Days",
+    "NAME": "余日",
     "DESCRIPTIONS": [
       "回合结束时，每有 #b1 点未使用的 [E] ， #y生成 #b",
       " 个 #y黑暗 充能球。"
+    ]
+  },
+  "${ModID}:SanityPower": {
+    "NAME": "神志",
+    "DESCRIPTIONS": [
+      "#y神志 层数为负时，你的回合开始时失去 #b1 层。 NL 每失去 #b5 层，将一张 #y失常 加入手牌并获得 #b5 层 #y神志 。"
     ]
   }
 }

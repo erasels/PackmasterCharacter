@@ -1,0 +1,20 @@
+{
+  "${ModID}:LockonPack": {
+    "TEXT": [
+      "Shock'n'Lock",
+      "Lock onto your enemies and unleash the Unlimited Power of lightning!",
+      "Jedi"
+    ]
+  },
+  "${ModID}:LockonPackHat": {
+    "TEXT": [
+      "Locked on to the smallest details, with this stylish cap no detail will evade your sight.",
+      "The Detective"
+    ]
+  },
+  "${ModID}:GlockOnModifier": {
+    "TEXT": [
+      "%s NL Affected by Focus and Lock-On."
+    ]
+  }
+}

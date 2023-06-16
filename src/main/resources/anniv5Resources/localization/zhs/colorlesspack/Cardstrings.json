@@ -1,0 +1,65 @@
+{
+  "${ModID}:Manifest": {
+    "NAME": "现身",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择打出弃牌堆一张0或1耗能牌。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张牌打出。"
+    ]
+  },
+  "${ModID}:Bunker": {
+    "NAME": "沙坑",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 获得一张 *高 *尔 *夫 *球 。"
+  },
+  "${ModID}:GolfBall": {
+    "NAME": "高尔夫球",
+    "DESCRIPTION": "虚无 。 NL 造成上回合所剩 格挡 点伤害。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (造成 !D! 点伤害)"
+    ]
+  },
+  "${ModID}:Slapstick": {
+    "NAME": "闹剧",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机将 *闪 *亮 *登 *场 、 *绊 *倒 ，或 *致 *盲 中的一张加入抽牌堆。"
+  },
+  "${ModID}:Ghost": {
+    "NAME": "鬼魂",
+    "DESCRIPTION": "敌方回合结束时， NL 目标失去 !M! 点生命。 NL 起动 ： NL 本牌伪装为另一张牌。"
+  },
+  "${ModID}:LunchBox": {
+    "NAME": "午餐盒",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合下张无色牌打出两次。 NL ${ModID}:拾起 ： 回复3点生命。"
+  },
+  "${ModID}:ColorlessMastery": {
+    "NAME": "无色精通",
+    "DESCRIPTION": "打出无色牌时， NL 获得1点 力量 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 打出无色牌时， NL 获得1点 力量 。"
+  },
+  "${ModID}:VisitAMonastery": {
+    "NAME": "修道拜访",
+    "DESCRIPTION": "接下来3个回合开始时，依次获得一张 *疯 *狂 、 *净 *化 ，与 *神 *化 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 接下来3个回合开始时，依次获得一张 *疯 *狂 、 *净 *化 ，与 *神 *化 。"
+  },
+  "${ModID}:ThePrism": {
+    "NAME": "万棱之镜",
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 NL 起动 ：本牌分别碎至手牌与抽弃牌堆。",
+    "UPGRADE_DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。 NL 起动 ：本牌分别碎至手牌与抽弃牌堆。"
+  },
+  "${ModID}:PrismShard": {
+    "NAME": "万棱镜片",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出3张同名牌后， NL 获得 *万 *棱 *之 *镜 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 打出3张同名牌后， NL 获得 *万 *棱 *之 *镜 *+ 。 NL 消耗 。"
+  },
+  "${ModID}:RealityMaster": {
+    "NAME": "现实操控师",
+    "DESCRIPTION": "${ModID}:创造 一张牌时， NL 将其 升级 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL ${ModID}:创造 一张牌时， NL 将其 升级 。"
+  },
+  "${ModID}:AdventurersSword": {
+    "NAME": "冒险者之剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *三相 加入抽牌堆。 NL 若你满生命值， NL 目标失去 !M! 点生命。"
+  },
+  "${ModID}:Triforce": {
+    "NAME": "三相",
+    "DESCRIPTION": "获得1点 力量 。 NL 抽一张牌。"
+  }
+}

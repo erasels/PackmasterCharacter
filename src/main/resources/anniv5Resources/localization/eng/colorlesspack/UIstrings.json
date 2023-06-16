@@ -1,0 +1,15 @@
+{
+  "${ModID}:ColorlessPack": {
+    "TEXT": [
+      "Vexation",
+      "Use the basegame Colorless cards in creative ways! NL Discover ghosts and shadows! NL Vex's final Pack!?",
+      "Vex"
+    ]
+  },
+  "${ModID}:ColorlessPackHat": {
+    "TEXT": [
+      "Green hat borne by the hero of legend!",
+      "The Phrygian"
+    ]
+  }
+}

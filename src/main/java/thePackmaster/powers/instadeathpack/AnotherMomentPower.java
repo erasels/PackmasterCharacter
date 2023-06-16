@@ -16,15 +16,9 @@ public class AnotherMomentPower extends AbstractPackmasterPower {
     private static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     private static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private int exhaustedThisTurn = 0;
-
     public AnotherMomentPower(final AbstractCreature owner, int amount)
     {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
-    }
-
-    public void atStartOfTurn() {
-        this.exhaustedThisTurn = 0;
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
@@ -33,11 +27,10 @@ public class AnotherMomentPower extends AbstractPackmasterPower {
             for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
                 if (c.type == AbstractCard.CardType.SKILL) {
                     ++played;
-                    if (played > amount - exhaustedThisTurn)
+                    if (played > amount)
                         return;
                 }
             }
-            ++exhaustedThisTurn;
             this.flash();
             action.exhaustCard = true;
             addToBot(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, 1), 1));

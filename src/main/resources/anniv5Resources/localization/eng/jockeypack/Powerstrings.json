@@ -23,5 +23,12 @@
       "This turn, whenever you play a card, gain #b",
       " #yStrength."
     ]
+  },
+  "${ModID}:ReinInPower": {
+    "NAME": "Rein In",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn, gain #b",
+      " #yBlock."
+    ]
   }
 }

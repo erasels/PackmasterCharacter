@@ -8,20 +8,20 @@
   },
   "${ModID}:Inferno": {
     "NAME": "Inferno",
-    "DESCRIPTION": "Deal !D! damage and apply 10 ${ModID}:Ignite to ALL enemies. NL Gain !M! ${ModID}:Ignite."
+    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Ignite to ALL enemies. NL Add 2 *Burns to your hand."
   },
   "${ModID}:Minniegun": {
     "NAME": "Minniegun",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Put a *Jam in your discard pile."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Shuffle a *Jam into your draw pile."
   },
   "${ModID}:Ouroboros": {
     "NAME": "Ouroboros",
-    "DESCRIPTION": "At the end of each turn, if you fully blocked any source of damage, gain 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the end of each turn, if you fully blocked any source of damage, gain 1 Strength."
+    "DESCRIPTION": "The first time you fully block\u00a0any source of damage each turn, gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you fully block\u00a0any source of damage each turn, gain 1 Strength."
   },
   "${ModID}:Corset": {
     "NAME": "Corset",
-    "DESCRIPTION": "Take 3 damage. NL Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block. NL Add a *Jam to your hand."
   },
   "${ModID}:Jam": {
     "NAME": "Jam",
@@ -29,7 +29,7 @@
   },
   "${ModID}:MantisStrike": {
     "NAME": "Mantis Strike",
-    "DESCRIPTION": "Take 3 damage. NL Deal !${ModID}:sd! damage. NL Deal !D! damage to a random enemy, twice."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat whenever you fully block\u00a0a source of damage this turn."
   },
   "${ModID}:RestorationDetonation": {
     "NAME": "R. Detonation",
@@ -38,7 +38,7 @@
   },
   "${ModID}:SelfWound": {
     "NAME": "Self Wound",
-    "DESCRIPTION": "Take 3 damage. NL Heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Take 3 damage. NL Gain !M! Temporary_HP."
   },
   "${ModID}:SignInBlood": {
     "NAME": "Sign in Blood",
@@ -46,6 +46,7 @@
   },
   "${ModID}:SpreadingSpores": {
     "NAME": "Spreading Spores",
-    "DESCRIPTION": "Gain !${ModID}:m2! Thorns. NL Gain !M! *Ablation."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns. NL Gain !M! stslib:Temporary_HP. NL Shuffle a copy of this into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Thorns. NL Gain !M! stslib:Temporary_HP. NL Shuffle a copy of this into your draw pile."
   }
 }

@@ -1,33 +1,33 @@
 {
   "${ModID}:BeyondTheStars": {
       "NAME": "Beyond the Stars",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain a *Madness.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain a *Madness+."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Lose !M! ${ModID}:Sanity for each enemy hit."
   },
   "${ModID}:NamelessMist": {
     "NAME": "Nameless Mist",
-    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Flurry: Gain !M! Block."
+    "DESCRIPTION": "Gain !B! Block. NL ${ModID}:Flurry: Gain !M! Temporary_HP."
   },
   "${ModID}:FlailingTendril": {
     "NAME": "Flailing Tendril",
-    "DESCRIPTION": "Deal !D! damage and apply !M! ${ModID}:Distortion to a random enemy."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Lose !M! ${ModID}:Sanity. NL If this costs 0, it hits twice."
   },
   "${ModID}:PageOfTheDead": {
     "NAME": "Page of the Dead",
-    "DESCRIPTION": "Gain a *Necronomicurse. NL The next Attack you play that costs 2 or more is played twice.",
-    "UPGRADE_DESCRIPTION": "The next Attack you play that costs 2 or more is played twice."
+    "DESCRIPTION": "Lose !M! ${ModID}:Sanity. NL Add a random Attack that costs 2 to your hand.",
+    "UPGRADE_DESCRIPTION": "Lose !M! ${ModID}:Sanity. NL Add a random Upgraded Attack that costs 2 to your hand."
   },
   "${ModID}:FamilialCurse": {
     "NAME": "Familial Curse",
-    "DESCRIPTION": "Apply !M! ${ModID}:Ruin to ALL enemies. NL Next turn, gain a *Madness and lose 1 HP."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies. NL Lose 4 ${ModID}:Sanity."
   },
   "${ModID}:GazeTheVoid": {
     "NAME": "Gaze the Void",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Enter ${ModID}:Nightmare."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each *Lunacy played this combat.",
+    "EXTENDED_DESCRIPTION": [" NL (Hits ", " times.)"]
   },
   "${ModID}:AllSeeing": {
-    "NAME": "All Seeing",
-    "DESCRIPTION": "At the end of each turn, Scry !M! and take 3 damage."
+    "NAME": "Eldritch Pact",
+    "DESCRIPTION": "At the start of each turn, lose !M! ${ModID}:Sanity. NL Whenever you lose ${ModID}:Sanity, gain !M! Block."
   },
   "${ModID}:EndOfDays": {
     "NAME": "End of Days",
@@ -36,11 +36,15 @@
   },
   "${ModID}:RlyehFhtagn": {
     "NAME": "R'lyeh Fhtagn",
-    "DESCRIPTION": "Put EVERYONE to sleep. Next turn, gain 3 *Madness and lose 3 HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put EVERYONE to sleep. Next turn, gain 3 *Madness+ and lose 3 HP. NL Exhaust."
+    "DESCRIPTION": "End your turn. NL Next turn, gain !M! Temporary_HP, gain NL [E] [E] [E] , and enter ${ModID}:Nightmare. Exhaust."
   },
   "${ModID}:StarSpawn": {
     "NAME": "Star Spawn",
     "DESCRIPTION": "Deal !D! damage twice. NL Heal !M! HP. NL Channel 1 Plasma. NL Exhaust."
+  },
+  "${ModID}:Lunacy": {
+    "NAME": "Lunacy",
+    "DESCRIPTION": "Reduce the cost of a random card in your hand to 0 this turn. NL Lose !M! HP and 1 ${ModID}:Sanity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Reduce the cost of a random card in your hand to 0 this turn. NL Lose 1 ${ModID}:Sanity. NL Exhaust."
   }
 }

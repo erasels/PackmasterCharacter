@@ -18,7 +18,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class ChronoBoostPower extends AbstractPackmasterPower implements CloneablePowerInterface {
     public static final String POWER_ID = makeID("ChronoBoostPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 
     public ChronoBoostPower(AbstractCreature owner, int amount) {
