@@ -46,7 +46,8 @@
     "NAME": "Time Piece Power",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yStrength every 12 cards you play. Cards played: #b"
+      " #yStrength every 12 cards you play. Cards played: #b",
+      ""
     ]
   }
 }
