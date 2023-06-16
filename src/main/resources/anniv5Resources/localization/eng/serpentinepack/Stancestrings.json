@@ -5,6 +5,6 @@
   },
   "${ModID}:Cunning": {
     "NAME": "Cunning",
-    "DESCRIPTION": ["When you enter this #yStance, gain #b2 #yVigor for each unique debuff among ALL enemies."]
+    "DESCRIPTION": ["When you enter this #yStance, gain #b3 #yVigor for each unique debuff among ALL enemies."]
   }
 }

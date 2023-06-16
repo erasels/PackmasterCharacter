@@ -17,7 +17,7 @@
   },
   "${ModID}:HuntingInstincts": {
     "NAME": "Hunter's Instincts",
-    "DESCRIPTION": "Gain !B! Block. NL Gains double Block if facing an Elite or Boss."
+    "DESCRIPTION": "Gain !B! Block. NL Gains double Block if facing an elite or boss."
   },
   "${ModID}:SkullClub": {
     "NAME": "Skull Club",
@@ -40,7 +40,7 @@
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block. NL Whenever you are attacked, deal !M! damage back."
+    "DESCRIPTION": "Gain !M! Block at the end of your turn. NL Whenever you are attacked, deal !M! damage back."
   },
   "${ModID}:InfernoDaggers": {
     "NAME": "Inferno Daggers",
@@ -108,11 +108,11 @@
   },
   "${ModID}:CarvingKnife": {
     "NAME": "Carving Knife",
-    "DESCRIPTION": "Deal !D! damage. NL If this kills an Elite or Boss, gain its weapon or armor card and remove this from your deck permanently. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss, gain its weapon or armor card and remove this from your deck permanently. NL Exhaust."
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "Awakened Dagger",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal, heal to full HP. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. If Fatal, heal to full HP. NL Exhaust."
   },
   "${ModID}:HuntingContract": {
     "NAME": "Hunting Contract",
@@ -120,11 +120,11 @@
   },
   "${ModID}:HunterRank": {
     "NAME": "Hunter Rank",
-    "DESCRIPTION": "Gain !M! Strength. NL Increases by 1 for each Elite and Boss enemy you've defeated."
+    "DESCRIPTION": "Gain !M! Strength. Increases by 1 for each Elite and Boss combat you've defeated."
   },
   "${ModID}:TranqBomb": {
     "NAME": "Tranquilizer Bomb",
-    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Enemy loses !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target loses !M! Strength. NL Exhaust."
   },
   "${ModID}:Paintball": {
     "NAME": "Paintball",
@@ -134,5 +134,9 @@
   "${ModID}:SerpentineDagger": {
     "NAME": "Serpentine Dagger",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage !M! times. NL Add two copies of this into your draw pile. NL Exhaust."
+  },
+  "${ModID}:CorruptedBlade": {
+    "NAME": "Corrupted Blade",
+    "DESCRIPTION": "Gain 3 *Ritual. NL Gain !M! ${ModID}:Invincible. NL Deal !D! damage 15 times."
   }
 }

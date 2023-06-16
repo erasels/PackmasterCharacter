@@ -1,6 +1,5 @@
 package thePackmaster.cards.weaponspack;
 
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 

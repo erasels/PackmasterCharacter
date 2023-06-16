@@ -16,6 +16,7 @@ public class TunnelVision extends AbstractLockonCard {
     public TunnelVision() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
+        baseSecondMagic = secondMagic = 1;
     }
 
     @Override
@@ -29,6 +30,6 @@ public class TunnelVision extends AbstractLockonCard {
         {
             addToBot(new AllEnemyApplyPowerAction(p, magicNumber, (mon) -> new LockOnPower(mon, magicNumber)));
         }
-        addToBot(new ApplyPowerAction(p, p, new TunnelVisionPower(p)));
+        addToBot(new ApplyPowerAction(p, p, new TunnelVisionPower(p, secondMagic)));
     }
 }

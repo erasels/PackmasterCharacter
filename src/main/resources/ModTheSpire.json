@@ -33,6 +33,7 @@
     "Jedi",
     "Mwalls",
     "MaybeLater_x"
+    "Doodle"
   ],
   "description": "${project.description}",
   "version": "${project.version}",
