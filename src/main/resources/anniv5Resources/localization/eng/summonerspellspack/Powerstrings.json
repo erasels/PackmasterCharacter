@@ -1,0 +1,25 @@
+{
+  "${ModID}:SnowballStrikePower": {
+    "NAME": "Dash",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " #ySnowball #yDash to your hand.",
+      " #ySnowball #yDashes to your hand."
+    ]
+  },
+  "${ModID}:TeleportBotPower": {
+    "NAME": "Teleport Bot",
+    "DESCRIPTIONS": [
+      "At the start of your turn, put the bottom card of your discard pile into your hand.",
+      "At the start of your turn, put the bottom #b",
+      " cards of your discard pile into your hand."
+    ]
+  },
+  "${ModID}:GhostingMaelstromPower": {
+    "NAME": "Ghosting Maelstrom",
+    "DESCRIPTIONS": [
+      "Whenever you play a card while you are holding 6 or more cards, deal #b",
+      " damage to ALL enemies."
+    ]
+  }
+}

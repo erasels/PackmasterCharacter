@@ -1,0 +1,52 @@
+{
+  "${ModID}:UnleashedSmite": {
+    "NAME": "Unleashed Smite",
+    "DESCRIPTION": "Deal damage equal to !M! times the number of cards in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to !M! times the number of cards in your hand. NL stslib:Persist !stslib:persist!.",
+    "EXTENDED_DESCRIPTION": [" NL (Deal !D! damage.)"]
+  },
+  "${ModID}:SnowballStrike": {
+    "NAME": "Snowball Strike",
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, add !M! *Snowball *Dash to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL At the start of your next turn, add !M! *Snowball *Dashes to your hand."
+  },
+  "${ModID}:SnowballDash": {
+    "NAME": "Snowball Dash",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+  },
+  "${ModID}:GrievousIgnite": {
+    "NAME": "Grievous Ignite",
+    "DESCRIPTION": "Apply !M! ${ModID}:Ignite for each card in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Ignite for each card in your hand.",
+    "EXTENDED_DESCRIPTION": [" NL (Apply !${ModID}:m2! *Ignite.)"]
+  },
+  "${ModID}:WitheringExhaust": {
+    "NAME": "Withering Exhaust",
+    "DESCRIPTION": "Enemy loses !M! Strength this turn. NL If you are holding 6 or more cards, apply !${ModID}:m2! Weak."
+  },
+  "${ModID}:DualHeal": {
+    "NAME": "Dual Heal",
+    "DESCRIPTION": "Heal self and enemy for !M! HP. NL Does not heal enemies that have ${ModID}:Ignite. NL Exhaust."
+  },
+  "${ModID}:DeftBarrier": {
+    "NAME": "Deft Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! more card next turn."
+  },
+  "${ModID}:PerfectClarity": {
+    "NAME": "Perfect Clarity",
+    "DESCRIPTION": "Add !M! *Miracles into your hand. NL Exhaust."
+  },
+  "${ModID}:GhostingMaelstrom": {
+    "NAME": "Ghosting Maelstrom",
+    "DESCRIPTION": "Whenever you play a card while you are holding 6 or more cards, deal !M! damage to ALL enemies."
+  },
+  "${ModID}:TeleportBot": {
+    "NAME": "Teleport Bot",
+    "DESCRIPTION": "At the start of your turn, put the bottom card of your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, put the bottom card of your discard pile into your hand."
+  },
+  "${ModID}:Flash": {
+    "NAME": "Flash",
+    "DESCRIPTION": "Draw !M! cards. NL Excess draw is converted into [E] . NL Exhaust."
+  }
+}
