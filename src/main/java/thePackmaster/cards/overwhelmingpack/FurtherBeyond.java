@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -69,9 +70,14 @@ public class FurtherBeyond extends AbstractOverwhelmingCard {
         }, 0.1f));
 
         int zap = MathUtils.random(3, 5);
+        boolean sound = true;
         for (int i = 0; i < zap; ++i) {
             float offset = MathUtils.random(p.hb.width / 4, p.hb.width) * MathUtils.randomSign();
             addToBot(new VFXAction(new LightningEffect(p.drawX + offset, p.drawY), MathUtils.random(0, Settings.FAST_MODE ? 0.05f: 0.1f)));
+            if (sound) {
+                addToBot(new SFXAction("ORB_LIGHTNING_EVOKE"));
+            }
+            sound = !sound;
         }
 
         addToBot(new AbstractGameAction() {
@@ -81,6 +87,8 @@ public class FurtherBeyond extends AbstractOverwhelmingCard {
                 ZOOMAnimationPatch.useZOOMAnimation(p);
             }
         });
+
+        addToBot(new SFXAction("ATTACK_DAGGER_4", 0.3f, true));
         addToBot(new WaitAction(0.1f));
         addToBot(new VFXAction(new ExplosionSmallEffect(m.hb.cX, p.hb.y + p.hb.height * 0.33f)));
         dmg(m, AbstractGameAction.AttackEffect.SMASH);
