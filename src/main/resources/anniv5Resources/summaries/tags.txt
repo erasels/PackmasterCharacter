@@ -55,6 +55,7 @@ MetaPack	None
 MonsterHunterPack	None
 OdditiesPack	None
 OrbPack	Orbs
+OverwhelmingPack    None
 PinnaclePack	None
 PixiePack	Tokens
 PoisonPack	Debuffs
