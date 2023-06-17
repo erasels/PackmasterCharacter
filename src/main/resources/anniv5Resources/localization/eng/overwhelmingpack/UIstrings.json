@@ -8,8 +8,8 @@
   },
   "${ModID}:OverwhelmingPackHat": {
     "TEXT": [
-      "description",
-      "name"
+      "The spikiness helps display your power level.",
+      "Super Hair"
     ]
   },
   "${ModID}:ActuallyFinalFormAction": {
