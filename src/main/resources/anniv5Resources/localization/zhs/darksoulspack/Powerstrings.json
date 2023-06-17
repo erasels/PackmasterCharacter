@@ -1,0 +1,18 @@
+{
+  "${ModID}:PrisonersChainPower": {
+    "NAME": "俘虏锁链",
+    "DESCRIPTIONS": [
+      "每当你获得或被给予一层 #r负面效果 ，同时获得 #b",
+      " 层 #y活力 。"
+    ]
+  },
+  "${ModID}:RemedyPower": {
+    "NAME": "治疗",
+    "DESCRIPTIONS": [
+      "接下来 #b",
+      " 次获得或被 给予 #r负面效果 时，",
+      " 次获得或被 给予 #r负面效果 时，",
+      " 降低其层数 #b2 层。"
+    ]
+  }
+}

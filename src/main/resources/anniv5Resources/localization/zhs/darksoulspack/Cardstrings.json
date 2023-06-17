@@ -1,0 +1,43 @@
+{
+  "${ModID}:MorionBlade": {
+    "NAME": "摩利安刃剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你每有一种负面效果， 再造成一次。"
+  },
+  "${ModID}:Bloodlust": {
+    "NAME": "嗜血",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予所有单位1层 易伤 。"
+  },
+  "${ModID}:IronFlesh": {
+    "NAME": "铁身躯",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合少抽1张牌。"
+  },
+  "${ModID}:PrisonersChain": {
+    "NAME": "俘虏锁链",
+    "DESCRIPTION": "获得负面效果时， NL 同时获得 !M! 层 活力 。"
+  },
+  "${ModID}:LifehuntScythe": {
+    "NAME": "夺魂镰刀",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 获得 !M! 层 脆弱 。"
+  },
+  "${ModID}:Remedy": {
+    "NAME": "治疗",
+    "DESCRIPTION": "接下来 !M! 次获得负面效果时，少获得2层。"
+  },
+  "${ModID}:BlueTearstone": {
+    "NAME": "蓝泪石戒指",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你每有一种负面效果， NL 再获得一次。"
+  },
+  "${ModID}:EmbraceHollowing": {
+    "NAME": "拥抱虚空",
+    "DESCRIPTION": "你每有一种负面效果， NL 获得 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 力量 。 NL 你每有一种负面效果， NL 获得 !M! 点 力量 。"
+  },
+  "${ModID}:SmoughsHammer": {
+    "NAME": "斯摩之锤",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得1层 虚弱 与 脆弱 。 NL 获得 !M! 层 易伤 。"
+  },
+  "${ModID}:CloranthyRing": {
+    "NAME": "绿花戒指",
+    "DESCRIPTION": "你每有一种负面效果， NL 获得 [E] 。 NL 抽 !M! 张牌。 NL 消耗 。"
+  }
+}
