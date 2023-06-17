@@ -1,9 +1,11 @@
 package thePackmaster.cards.gowiththeflowpack;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.transmutationpack.AbstractHydrologistCard;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.p;
@@ -25,7 +27,19 @@ public class StormFront extends AbstractHydrologistCard {
     @Override
     public void triggerOnManualDiscard() {
         baseDamage += magicNumber;
-        addToBot(new MoveCardsAction(p().hand, p().discardPile, c -> c == this));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if(Wiz.discardPile().contains(StormFront.this)) {
+                    addToTop(new MoveCardsAction(p().hand, p().discardPile, c -> c == StormFront.this));
+                } else if (Wiz.drawPile().contains(StormFront.this)) {
+                    //Fix Storm Front not returning to hand after being discarded if it was shuffled into the draw pile again due to wonky action ordering
+                    addToTop(new MoveCardsAction(p().hand, p().drawPile, c -> c == StormFront.this));
+                }
+
+                isDone = true;
+            }
+        });
     }
 
     public void upp() {
