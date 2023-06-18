@@ -120,7 +120,7 @@
   },
   "${ModID}:HunterRank": {
     "NAME": "猎人排名",
-    "DESCRIPTION": "获得 !M! 点 力量 。 NL 每击杀过一名精英或首领， 力量 获得量加1。"
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 每在一场精英或首领战斗中获胜， 力量 获得量加1。"
   },
   "${ModID}:TranqBomb": {
     "NAME": "镇静炸弹",
@@ -134,5 +134,9 @@
   "${ModID}:SerpentineDagger": {
     "NAME": "蛇术士匕首",
     "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害 !M! 次。 NL 将本牌2张复制品加入抽牌堆。 NL 消耗 。"
+  },
+  "${ModID}:CorruptedBlade": {
+    "NAME": "腐化之刃",
+    "DESCRIPTION": "获得 3层 *仪式 。 NL 获得 !M! 层 ${ModID}:坚不可摧 。 NL 造成 !D! 点伤害15次。"
   }
 }

@@ -1,18 +1,18 @@
 {
 "${ModID}:ApplyPoison": {
     "NAME": "浸毒",
-    "DESCRIPTION": "进入 ${ModID}:恶毒 。 NL 下回合退出。"
+    "DESCRIPTION": "进入 ${ModID}:恶毒 。 NL 下回合退出。",
+    "UPGRADE_DESCRIPTION": "进入 ${ModID}:恶毒 。 NL 下回合退出。 NL 抽一张牌。"
 },"${ModID}:Guile": {
     "NAME": "诡计",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 丢弃2张牌。 NL 进入 ${ModID}:狡诈 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 丢弃2张牌。 NL 获得一张 *阴招 。"
 },"${ModID}:Toxicology": {
     "NAME": "毒药学",
     "DESCRIPTION": "若已处于 ${ModID}:恶毒 ， NL 退出并获得 [E] ， NL 否则进入 ${ModID}:恶毒 ， NL 并抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": "若已处于 ${ModID}:恶毒 ， NL 退出并获得 [E] [E] ， NL 否则进入 ${ModID}:恶毒 ， NL 并抽 !M! 张牌。"
 },"${ModID}:Patience": {
     "NAME": "耐心",
-    "DESCRIPTION": "保留 。 NL 进入 ${ModID}:狡诈 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 进入 ${ModID}:狡诈 。 NL 保留时获得 !B! 点 格挡 。"
+    "DESCRIPTION": "保留 。 NL 进入 ${ModID}:狡诈 。 NL 保留时获得 !B! 点 格挡 。"
 },"${ModID}:DaggerRush": {
     "NAME": "匕首蛇击",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 若处于 姿态 ， NL 额外造成一次。"
@@ -32,5 +32,8 @@
 },"${ModID}:BrutalStrikes": {
     "NAME": "残暴打击",
     "DESCRIPTION": "造成 !D! 点伤害两次。 NL 本牌发挥 !M! 倍的 活力 与 ${ModID}:骰子 效果。"
+},"${ModID}:DirtyTrick": {
+    "NAME": "阴招",
+    "DESCRIPTION": "虚无 。 NL 进入 ${ModID}:狡诈 。 NL 消耗 。"
 }
 }

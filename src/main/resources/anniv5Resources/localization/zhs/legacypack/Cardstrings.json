@@ -18,7 +18,7 @@
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *加农炮弹 。"
   },
   "${ModID}:TerrorOfTheSeas": {
-    "NAME": "海洋之怒",
+    "NAME": "海洋之怖",
     "DESCRIPTION": "给予所有敌人 !M! 层 易伤 与 !${ModID}:m2! 层 ${ModID}:毁灭 。 NL 消耗 。"
   },
   "${ModID}:MassProduction": {

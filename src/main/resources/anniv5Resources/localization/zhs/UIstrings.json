@@ -105,7 +105,7 @@
       "卡包剔除列表",
       "帽子列表",
       "选1",
-      "无"
+      "牌池卡包数减1"
     ]
   },
   "${ModID}:PackSetup": {
@@ -171,7 +171,7 @@
       "全卡包模式：每局卡池都为所有卡包之和，该模式无法解锁帽子。",
       "卡框大师：所有卡包的卡框都使用卡包大师基础牌的牌框。(需要重启游戏)",
       "分享内容：一些卡包大师的遗物与药水可出现在其他角色的游戏中。(需要重启游戏)",
-      "Allow selecting None multiple times in custom draft mode (may cause crashes/freezes for some pack choices)"
+      "允许在自定义构筑模式中降低一局牌池所需的卡包数。(提示：牌池牌数过低可能会导致游戏中闪退)"
     ]
   },
   "${ModID}:PMBoosterBoxCardReward": {

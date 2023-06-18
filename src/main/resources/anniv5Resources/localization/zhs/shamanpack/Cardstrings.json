@@ -9,7 +9,7 @@
   },
   "${ModID}:IceWall": {
     "NAME": "冰墙",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 !B! 点 格挡 。 NL 将一张 虚空 加入抽牌堆顶部。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合获得 !B! 点 格挡 。 NL 将一张 晕眩 加入抽牌堆顶部。"
   },
   "${ModID}:FreezeAndBurn": {
     "NAME": "冻燃",

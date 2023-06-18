@@ -1,0 +1,15 @@
+{
+  "${ModID}:DarkSoulsPack": {
+    "TEXT": [
+      "黑暗之魂",
+      "一套围绕自我负面效果的黑暗之魂主题牌。",
+      "Doodle"
+    ]
+  },
+  "${ModID}:DarkSoulsPackHat": {
+    "TEXT": [
+      "赞美太阳？",
+      "太阳虫头盔"
+    ]
+  }
+}
