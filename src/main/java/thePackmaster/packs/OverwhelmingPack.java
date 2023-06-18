@@ -16,6 +16,7 @@ public class OverwhelmingPack extends AbstractCardPack {
 
     public OverwhelmingPack() {
         super(ID, NAME, DESC, AUTHOR);
+        hatHidesHair = true;
     }
 
     @Override
