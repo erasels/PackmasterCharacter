@@ -1,0 +1,21 @@
+{
+  "${ModID}:OverwhelmingPack": {
+    "TEXT": [
+      "Overwhelming",
+      "Defy the restrictions of energy.",
+      "Mixmaw, Alchyr"
+    ]
+  },
+  "${ModID}:OverwhelmingPackHat": {
+    "TEXT": [
+      "The spikiness helps display your power level.",
+      "Super Hair"
+    ]
+  },
+  "${ModID}:ActuallyFinalFormAction": {
+    "TEXT": [
+      "Choose a Card that costs less than ",
+      " to play."
+    ]
+  }
+}
