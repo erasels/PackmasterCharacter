@@ -93,7 +93,7 @@ public class SwordAndBoard extends AbstractEvenOddCard{
             @Override
             public void update() {
                 if ((AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1) % 2 == 1) {
-                    this.addToTop(new DamageAction(abstractMonster, new DamageInfo(abstractMonster, damage, damageTypeForTurn), AttackEffect.SLASH_HORIZONTAL));
+                    this.addToTop(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, damageTypeForTurn), AttackEffect.SLASH_HORIZONTAL));
                 }
                 else
                 {

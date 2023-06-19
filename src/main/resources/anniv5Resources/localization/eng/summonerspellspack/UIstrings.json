@@ -1,0 +1,16 @@
+{
+  "${ModID}:SummonerSpellsPack": {
+    "TEXT": [
+      "Summoner Spells",
+      "A League of Legends inspired pack centered around holding tons of cards to deal tons of damage.",
+      "MaybeLater_x",
+      "#yLeague #yof #yLegends originally created by #yRiot #yGames"
+    ]
+  },
+  "${ModID}:SummonerSpellsPackHat": {
+    "TEXT": [
+      "Size doesn't mean everything.",
+      "Teemo Hat"
+    ]
+  }
+}

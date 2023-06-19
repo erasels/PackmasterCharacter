@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.LockOnPower;
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
@@ -17,10 +18,12 @@ public class AdditiveLockOnPatch {
 
     public static int applyMultiLockOn(AbstractMonster m, int damage)
     {
-        if (!Wiz.adp().hasPower(TunnelVisionPower.POWER_ID)) return damage;
+        AbstractPower tunnelVision = Wiz.adp().getPower(TunnelVisionPower.POWER_ID);
+        if (tunnelVision == null) return damage;
         
         float damageModifier = 1.5F
                 + 0.25F
+                * tunnelVision.amount
                 * (Wiz.getLogicalPowerAmount(m, LockOnPower.POWER_ID) - 1);
         return (int)(damage * damageModifier);
     }
@@ -50,10 +53,12 @@ public class AdditiveLockOnPatch {
     public static class SinglehitLightning {
         public static int Postfix(AbstractCreature target, int dmg, int __result)
         {
-            if (!Wiz.adp().hasPower(TunnelVisionPower.POWER_ID) || !target.hasPower(LockOnPower.POWER_ID)) return __result;
+            AbstractPower tunnelVision = Wiz.adp().getPower(TunnelVisionPower.POWER_ID);
+            if (tunnelVision == null || !target.hasPower(LockOnPower.POWER_ID)) return __result;
 
             float damageModifier = (float)__result/(float)dmg // what if something modifies lockon damage cough cough paper faux
                     + 0.25F
+                    * tunnelVision.amount
                     * (Wiz.getLogicalPowerAmount(target, LockOnPower.POWER_ID) - 1);
             return (int)(dmg * damageModifier);
         }

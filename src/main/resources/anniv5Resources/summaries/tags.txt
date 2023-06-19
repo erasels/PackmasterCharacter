@@ -22,6 +22,7 @@ CoreSetPack	None
 CosmosCommandPack	Exhaust,Debuffs
 CreativityPack	Tokens
 CthulhuPack	None
+DarkSoulsPack	None
 DefectPack	Orbs
 DimensionGatePack	Debuffs
 DimensionGate2Pack	None
@@ -56,6 +57,7 @@ MetaPack	None
 MonsterHunterPack	None
 OdditiesPack	None
 OrbPack	Orbs
+OverwhelmingPack    None
 PinnaclePack	None
 PixiePack	Tokens
 PoisonPack	Debuffs
@@ -76,6 +78,7 @@ SpheresPack	Debuffs,Orbs
 SneckoPack	None
 StatusPack	Exhaust,Tokens
 StrikesPack	Orbs,Attacks
+SummonerSpellsPack  None
 SummonsPack	Orbs
 ThieveryPack	Strength
 TransmutationPack	None

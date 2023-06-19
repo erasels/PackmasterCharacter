@@ -1,0 +1,49 @@
+{
+  "${ModID}:Lariat": {
+    "NAME": "Lariat",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL The next Skill you play costs 0."
+  },
+  "${ModID}:GigaDrill": {
+    "NAME": "Giga Drill",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL The top {!M!|1=card|@=!M! cards} of your draw pile cost{!M!|1=s} 0 until played."
+  },
+  "${ModID}:OpeningStrike": {
+    "NAME": "Opening Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of all Attacks in your hand by 1 this turn."
+  },
+  "${ModID}:Withstand": {
+    "NAME": "Withstand",
+    "DESCRIPTION": "Gain !B! Block for each card in your hand that costs !M! or less."
+  },
+  "${ModID}:Approach": {
+    "NAME": "Approach",
+    "DESCRIPTION": "Draw !M! cards and choose one. NL Reduce its cost by 1 this turn.",
+    "EXTENDED_DESCRIPTION": [
+      "reduce the cost."
+    ]
+  },
+  "${ModID}:SheerEffort": {
+    "NAME": "Sheer Effort",
+    "DESCRIPTION": "Exhaust any number of cards. NL Play a card in your draw pile that costs less than the number of cards Exhausted."
+  },
+  "${ModID}:Overcome": {
+    "NAME": "Overcome",
+    "DESCRIPTION": "Whenever you play a card with an original cost higher than your [E] , gain !M! Block."
+  },
+  "${ModID}:FurtherBeyond": {
+    "NAME": "Further Beyond",
+    "DESCRIPTION": "Can only be played if you have no [E]. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "I have too much ENERGY."
+    ]
+  },
+  "${ModID}:MakeRoom": {
+    "NAME": "Make Room",
+    "DESCRIPTION": "Draw !M! cards. NL If you would draw while your hand is full, play the leftmost card first."
+  },
+  "${ModID}:ActuallyFinalForm": {
+    "NAME": "Final Form",
+    "DESCRIPTION": "Ethereal. NL At the end of your turn, play the highest cost card in your hand.",
+    "UPGRADE_DESCRIPTION": "At the end of your turn, play the highest cost card in your hand."
+  }
+}

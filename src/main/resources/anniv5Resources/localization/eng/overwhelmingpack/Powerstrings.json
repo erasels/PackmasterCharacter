@@ -1,0 +1,25 @@
+{
+  "${ModID}:FreeSkillPower": {
+    "NAME": "Free Skill",
+    "DESCRIPTIONS": [
+      "Ignore energy cost on the next #ySkill you play.",
+      "Ignore energy cost on the next #b",
+      " #ySkills you play."
+    ]
+  },
+  "${ModID}:ActuallyFinalFormPower": {
+    "NAME": "Final Form",
+    "DESCRIPTIONS": [
+      "At the end of your turn, play the highest cost card in your hand.",
+      "At the end of your turn, play the highest cost card in your hand #b",
+      " times."
+    ]
+  },
+  "${ModID}:OvercomePower": {
+    "NAME": "Overcome",
+    "DESCRIPTIONS": [
+      "Whenever you play a card with an original cost higher than your energy, gain #b",
+      " #yBlock."
+    ]
+  }
+}

@@ -1,10 +1,11 @@
 package thePackmaster.powers.colorlesspack;
 
 
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -16,7 +17,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class PrismShardPower extends AbstractPackmasterPower implements NonStackablePower {
+public class PrismShardPower extends AbstractPackmasterPower implements OnReceivePowerPower {
     public static final String POWER_ID = makeID("PrismShardPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
@@ -28,6 +29,7 @@ public class PrismShardPower extends AbstractPackmasterPower implements NonStack
     public PrismShardPower(boolean upgraded) {
         super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, 1);
         this.upgraded = upgraded;
+        updateDescription();
     }
 
     public void playApplyPowerSfx() {
@@ -45,15 +47,6 @@ public class PrismShardPower extends AbstractPackmasterPower implements NonStack
                 this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             }
         }
-
-    }
-
-    @Override
-    public boolean isStackable(AbstractPower power) {
-        if (power instanceof PrismShardPower) {
-            return upgraded == ((PrismShardPower) power).upgraded;
-        }
-        return false;
     }
 
     @Override
@@ -64,5 +57,23 @@ public class PrismShardPower extends AbstractPackmasterPower implements NonStack
         if (upgraded) sb.append(DESCRIPTIONS[1]);
         sb.append(DESCRIPTIONS[2]);
         description = sb.toString();
+    }
+
+    @Override
+    public boolean onReceivePower(AbstractPower p, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
+        if(!upgraded && p instanceof PrismShardPower && ((PrismShardPower) p).upgraded) {
+            upgraded = true;
+            updateDescription();
+        }
+        return true;
+    }
+
+    @Override
+    public int onReceivePowerStacks(AbstractPower p, AbstractCreature target, AbstractCreature source, int stackAmount) {
+        if(!upgraded && p instanceof PrismShardPower && ((PrismShardPower) p).upgraded) {
+            upgraded = true;
+            updateDescription();
+        }
+        return stackAmount;
     }
 }

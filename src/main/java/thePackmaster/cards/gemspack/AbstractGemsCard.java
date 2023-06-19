@@ -3,8 +3,6 @@ package thePackmaster.cards.gemspack;
 import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.TooltipInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 

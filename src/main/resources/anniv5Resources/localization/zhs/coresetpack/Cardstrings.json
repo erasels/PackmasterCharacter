@@ -13,7 +13,7 @@
   },
   "${ModID}:Flick": {
     "NAME": "弹牌",
-    "DESCRIPTION": "丢弃一张牌。 NL 造成 !D! 点伤害其耗能次。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃一张牌。 NL 造成 !D! 点伤害其耗能次。"
   },
   "${ModID}:MayhemForm": {
     "NAME": "不懈形态",

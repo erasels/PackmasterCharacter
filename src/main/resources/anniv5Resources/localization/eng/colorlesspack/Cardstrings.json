@@ -47,7 +47,7 @@
   "${ModID}:PrismShard": {
     "NAME": "Shard",
     "DESCRIPTION": "Deal !D! damage. NL After playing 3 Shards, add *The *Prism into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL After playing 3 Shards, shuffle *The *Prism+ into your draw pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL After playing 3 Shards, add *The *Prism+ into your hand. NL Exhaust."
   },
   "${ModID}:RealityMaster": {
     "NAME": "MC Reality",

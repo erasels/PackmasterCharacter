@@ -106,8 +106,8 @@ public class MainMenuUIPatch {
             switch (s) {
                 case RANDOM:
                 case CHOICE:
-                    packSetups.add(s);
                 case NONE:
+                    packSetups.add(s);
                     break;
                 default:
                     if (SpireAnniversary5Mod.packsByID.getOrDefault(s, null) != null) {
@@ -116,6 +116,13 @@ public class MainMenuUIPatch {
                         packSetups.add(RANDOM); //This will only get hit if there is an invalid entry being loaded, such as Pack that no longer exists.  In that event, replace it with RANDOM.
                     }
             }
+        }
+        // As part of adding NONE as an option, a bug was introduced that didn't include anything in the pack setups for
+        // the NONE option, leaving it with fewer entries than the expected amount. To fix this, we fill any missing
+        // entries with NONE here, so saved pack setups loaded while this bug existed will work properly (and so that
+        // downstream code doesn't need to check for this everywhere)
+        for (int i = packSetups.size(); i < PACK_COUNT; i++) {
+            packSetups.add(NONE);
         }
         packSetupsInit.clear();
 

@@ -29,7 +29,7 @@
   },
   "${ModID}:BarrierBeacon": {
     "NAME": "Barrier Beacon",
-    "DESCRIPTION": "{@@}Gain !B! Block, create a{!Upgrades!|>0=n Upgraded} copy of this in hand. NL Exhaust."
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Create a{!Upgrades!|>0=n Upgraded} *Barrier\u00a0Beacon in hand. NL Exhaust."
   },
   "${ModID}:StrikingStrike": {
     "NAME": "Striking Strike",

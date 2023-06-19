@@ -1,4 +1,4 @@
-package thePackmaster.patches;
+package thePackmaster.patches.compatibility;
 
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.FlexibleDiscoveryAction;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.CreativityPack;
 import thePackmaster.util.creativitypack.JediUtil;
 
 import java.util.ArrayList;
@@ -34,11 +35,16 @@ public class Mimicry extends AbstractCreativityCard {
             public void update() {
                 ArrayList<AbstractCard> list = new ArrayList<>();
                 for (AbstractCardPack pack : SpireAnniversary5Mod.currentPoolPacks) {
-                    if (!pack.packID.equals(getParent().packID)) {
+                    if (!CreativityPack.ID.equals(pack.packID)) {
                         list.addAll(pack.cards);
                     }
                 }
                 list.removeIf(c -> c.rarity != CardRarity.COMMON);
+                if (list.isEmpty()) {
+                    isDone = true;
+                    return;
+                }
+
                 CardGroup tmpGrp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
                 tmpGrp.group = list.stream().map(c -> {
                     AbstractCard o = c.makeCopy();

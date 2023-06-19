@@ -21,7 +21,7 @@ public class PiratifyPower extends AbstractPackmasterPower {
 
     @Override
     public void atStartOfTurnPostDraw() {
-        addToBot(new FindCardForAddModifierAction(new GainCannonballModifier(0),1,true, AbstractDungeon.player.hand, card -> card.cost>-2));
+        addToBot(new FindCardForAddModifierAction(new GainCannonballModifier(0), this.amount,true, AbstractDungeon.player.hand, card -> card.cost>-2));
 
     }
 

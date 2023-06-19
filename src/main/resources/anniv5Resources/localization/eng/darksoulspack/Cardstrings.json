@@ -1,0 +1,43 @@
+{
+  "${ModID}:MorionBlade": {
+    "NAME": "Morion Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each unique debuff you have."
+  },
+  "${ModID}:Bloodlust": {
+    "NAME": "Bloodlust",
+    "DESCRIPTION": "Deal !D! damage. NL Apply 1 Vulnerable to EVERYONE."
+  },
+  "${ModID}:IronFlesh": {
+    "NAME": "Iron Flesh",
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 less card next turn."
+  },
+  "${ModID}:PrisonersChain": {
+    "NAME": "Prisoner's Chain",
+    "DESCRIPTION": "Whenever a debuff is applied to you, gain !M! Vigor."
+  },
+  "${ModID}:LifehuntScythe": {
+    "NAME": "Lifehunt Scythe",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Frail."
+  },
+  "${ModID}:Remedy": {
+    "NAME": "Remedy",
+    "DESCRIPTION": "The next !M! times you receive a debuff, reduce the received amount by 2."
+  },
+  "${ModID}:BlueTearstone": {
+    "NAME": "Blue Tearstone",
+    "DESCRIPTION": "Gain !B! Block. NL Repeat for each unique debuff you have."
+  },
+  "${ModID}:EmbraceHollowing": {
+    "NAME": "Embrace Hollowing",
+    "DESCRIPTION": "Gain !M! Strength for each unique debuff you have.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength for each unique debuff you have + !M!."
+  },
+  "${ModID}:SmoughsHammer": {
+    "NAME": "Smough's Hammer",
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Weak and Frail. NL Gain !M! Vulnerable."
+  },
+  "${ModID}:CloranthyRing": {
+    "NAME": "Cloranthy Ring",
+    "DESCRIPTION": "Gain [E] for each unique debuff you have. NL Draw !M! cards. NL Exhaust."
+  }
+}

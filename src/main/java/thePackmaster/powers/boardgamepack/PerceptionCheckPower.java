@@ -15,7 +15,7 @@ public class PerceptionCheckPower extends AbstractPackmasterPower {
     private static final int SIDES = 8;
 
     public PerceptionCheckPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
     @Override
