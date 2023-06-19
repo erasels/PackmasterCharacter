@@ -14,26 +14,22 @@ public class IridiumShield extends AbstractFueledCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BLOCK = 6;
-    private static final int UPGRADE_BLOCK = 1;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_BLOCK = 3;
 
     public IridiumShield() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new ExhaustAction(magicNumber, false, true, true));
+        atb(new ExhaustAction(1, false, true, true));
     }
 
     @Override
     public void upp() {
         upgradeBlock(UPGRADE_BLOCK);
-        upMagic(UPGRADE_MAGIC);
     }
 }

@@ -14,10 +14,12 @@ import static thePackmaster.util.Wiz.*;
 
 public class PlayingWithFireAction extends AbstractGameAction {
     private final ArrayList<Integer> sides = new ArrayList<>();
+    private final int num;
 
     public PlayingWithFireAction(int sides, int num) {
         for (int i = 0; i < num; i++)
             this.sides.add(sides);
+        this.num = num;
     }
 
     public void update() {
@@ -31,11 +33,11 @@ public class PlayingWithFireAction extends AbstractGameAction {
     }
 
     private void playSFX() {
-        if (amount == 1)
+        if (num == 1)
             CardCrawlGame.sound.play(DIE_KEY, 0.1f);
-        else if (amount >= 2 && amount <= 4)
+        else if (num >= 2 && num <= 4)
             CardCrawlGame.sound.play(DICE_KEY, 0.1f);
-        else if (amount >= 5)
+        else if (num >= 5)
             CardCrawlGame.sound.play(DICELOTS_KEY, 0.1f);
     }
 }

@@ -17,7 +17,7 @@ public class InfernalBlaze extends AbstractFueledCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final int COST = 2;
 
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 10;
     private static final int UPGRADE_DAMAGE = 3;
     private static final int MAGIC = 5;
     private static final int UPGRADE_MAGIC = 2;

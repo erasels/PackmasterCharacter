@@ -9,8 +9,8 @@ import thePackmaster.powers.shamanpack.IgnitePower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class Confalgration extends AbstractFueledCard {
-    public final static String ID = makeID(Confalgration.class.getSimpleName());
+public class Conflagration extends AbstractFueledCard {
+    public final static String ID = makeID(Conflagration.class.getSimpleName());
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -19,7 +19,7 @@ public class Confalgration extends AbstractFueledCard {
     private static final int MAGIC = 7;
     private static final int UPGRADE_MAGIC = 2;
 
-    public Confalgration() {
+    public Conflagration() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
     }

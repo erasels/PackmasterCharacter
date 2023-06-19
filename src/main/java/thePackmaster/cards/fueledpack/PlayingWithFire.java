@@ -12,7 +12,7 @@ public class PlayingWithFire extends AbstractFueledCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
     public static final int SIDES = 8;
     public static final int IGNITE_THRESHOLD = 7;
 

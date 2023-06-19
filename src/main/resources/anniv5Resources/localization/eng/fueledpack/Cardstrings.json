@@ -5,7 +5,7 @@
   },
   "${ModID}:IridiumShield": {
     "NAME": "Iridium Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust up to !M! card."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust up to 1 card."
   },
   "${ModID}:Burninate": {
     "NAME": "Burninate",
@@ -15,9 +15,9 @@
     "NAME": "Conflagration",
     "DESCRIPTION": "${ModID}:Consume a card to apply !M! ${ModID}:Ignite."
   },
-  "${ModID}:SmokeCover": {
-    "NAME": "Smoke Cover",
-    "DESCRIPTION": "Consume a card to prevent the next time you would lose HP."
+  "${ModID}:ChokingSmoke": {
+    "NAME": "Choking Smoke",
+    "DESCRIPTION": "${ModID}:Consume a card to apply !M! Weak to ALL enemies."
   },
   "${ModID}:InfernalBlaze": {
     "NAME": "Infernal Blaze",
