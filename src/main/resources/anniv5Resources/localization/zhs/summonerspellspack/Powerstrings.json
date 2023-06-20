@@ -1,0 +1,25 @@
+{
+  "${ModID}:SnowballStrikePower": {
+    "NAME": "突击",
+    "DESCRIPTIONS": [
+      "你的回合开始时。将 #b",
+      " 张 #y雪球突击 加入手牌。",
+      " 张 #y雪球突击 加入手牌。"
+    ]
+  },
+  "${ModID}:TeleportBotPower": {
+    "NAME": "传送机",
+    "DESCRIPTIONS": [
+      "你的回合开始时，将弃牌堆底部的牌返回手牌。",
+      "你的回合开始时，将弃牌堆底部的 #b",
+      " 张牌返回手牌。"
+    ]
+  },
+  "${ModID}:GhostingMaelstromPower": {
+    "NAME": "幽灵漩歩",
+    "DESCRIPTIONS": [
+      "每当你在手牌数大于等于 #6 时打出一张牌，对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  }
+}

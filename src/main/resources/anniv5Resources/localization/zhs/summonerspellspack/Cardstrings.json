@@ -1,0 +1,52 @@
+{
+  "${ModID}:UnleashedSmite": {
+    "NAME": "爆发惩戒",
+    "DESCRIPTION": "造成手牌数x !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成手牌数x !M! 点伤害。 NL stslib:长驻 !stslib:persist! 。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害)"]
+  },
+  "${ModID}:SnowballStrike": {
+    "NAME": "雪球打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下回合， NL 获得 !M! 张 *雪球突击 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 下回合， NL 获得 !M! 张 *雪球突击 。"
+  },
+  "${ModID}:SnowballDash": {
+    "NAME": "雪球突击",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗 。"
+  },
+  "${ModID}:GrievousIgnite": {
+    "NAME": "致命点燃",
+    "DESCRIPTION": "给予手牌数x !M! 层 ${ModID}:点燃 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予手牌数x !M! 层 ${ModID}:点燃 。",
+    "EXTENDED_DESCRIPTION": [" NL (给予 !${ModID}:m2! 层)"]
+  },
+  "${ModID}:WitheringExhaust": {
+    "NAME": "枯虚萎弱",
+    "DESCRIPTION": "目标本回合失去 !M! 点 力量 。 NL 若手牌数大于5， NL 给予 !${ModID}:m2! 层 虚弱 。"
+  },
+  "${ModID}:DualHeal": {
+    "NAME": "双重治疗",
+    "DESCRIPTION": "回复目标与自身 !M! 点生命。 NL 被 ${ModID}:点燃 的目标不受到回复效果。 NL 消耗 。"
+  },
+  "${ModID}:DeftBarrier": {
+    "NAME": "急时屏障",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合额外抽 !M! 张牌。"
+  },
+  "${ModID}:PerfectClarity": {
+    "NAME": "至晰术",
+    "DESCRIPTION": "获得 !M! 张 *奇迹 。 NL 消耗 。"
+  },
+  "${ModID}:GhostingMaelstrom": {
+    "NAME": "幽灵漩歩",
+    "DESCRIPTION": "打出一张牌时， NL 若手牌数大于5， NL 造成 !M! 点群体伤害。"
+  },
+  "${ModID}:TeleportBot": {
+    "NAME": "传送机",
+    "DESCRIPTION": "回合开始时，将弃牌堆底牌返回手牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，将弃牌堆底牌返回手牌。"
+  },
+  "${ModID}:Flash": {
+    "NAME": "闪现",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 超出手牌上限的牌不被丢弃，而是转为获得等量的 [E] 。 NL 消耗 。"
+  }
+}

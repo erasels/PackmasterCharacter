@@ -1,0 +1,16 @@
+{
+  "${ModID}:SummonerSpellsPack": {
+    "TEXT": [
+      "召唤师技能",
+      "一套受到英雄联盟启发的牌，围绕手牌数发挥效力。",
+      "MaybeLater_x",
+      "卡牌与贴图创意来自 #y拳头游戏 的 #y英雄联盟 "
+    ]
+  },
+  "${ModID}:SummonerSpellsPackHat": {
+    "TEXT": [
+      "尺寸不代表所有。",
+      "提莫帽"
+    ]
+  }
+}

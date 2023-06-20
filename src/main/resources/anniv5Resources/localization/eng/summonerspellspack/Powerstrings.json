@@ -18,7 +18,7 @@
   "${ModID}:GhostingMaelstromPower": {
     "NAME": "Ghosting Maelstrom",
     "DESCRIPTIONS": [
-      "Whenever you play a card while you are holding 6 or more cards, deal #b",
+      "Whenever you play a card while you are holding #b6 or more cards, deal #b",
       " damage to ALL enemies."
     ]
   }
