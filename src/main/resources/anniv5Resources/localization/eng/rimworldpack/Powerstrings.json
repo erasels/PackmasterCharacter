@@ -9,9 +9,9 @@
   "${ModID}:CatharsisPower": {
     "NAME": "Catharsis",
     "DESCRIPTIONS": [
-      "Your next card costs #b0 and plays twice!",
-      "Play your next #b",
-      " cards cost #b0 and play twice!"
+      "The next card you play this turn costs #b0 and plays twice!",
+      "The next #b",
+      " cards you play this turn cost #b0 and play twice!"
     ]
   },
   "${ModID}:PyromaniacPower": {
@@ -25,7 +25,7 @@
   "${ModID}:BurningPassionPower": {
     "NAME": "Burning Passion",
     "DESCRIPTIONS": [
-      "The first time you gain a buff during your turn, multiply it by #b",
+      "The first time you gain a buff each turn, multiply it by #b",
       "."
     ]
   },
