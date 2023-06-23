@@ -9,14 +9,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.ThePackmaster;
 import thePackmaster.packs.GemsPack;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
-import static thePackmaster.SpireAnniversary5Mod.allPacks;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.makeInHand;
 
@@ -26,38 +27,30 @@ public class RetromationPower extends AbstractPackmasterPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private ArrayList<AbstractCardPack> potentialPacks = new ArrayList<>();
+    private List<AbstractCard> potentialCards = new ArrayList<>();
 
     public RetromationPower(int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, AbstractDungeon.player, amount);
-        if (SpireAnniversary5Mod.allPacksMode) {
+        potentialCards = this.getPotentialCards();
+    }
 
-            //If in ALL PACKS mode, then this has to naturally just include everything.
-            potentialPacks = allPacks;
-
-        } else {
-            for (AbstractCardPack p : allPacks) {
-                if (!SpireAnniversary5Mod.currentPoolPacks.contains(p) && !(p instanceof GemsPack)) {
-                    potentialPacks.add(p);
-                }
-            }
-        }
+    private List<AbstractCard> getPotentialCards() {
+        return CardLibrary.getAllCards().stream()
+                .filter(c -> c.color == ThePackmaster.Enums.PACKMASTER_RAINBOW)
+                .filter(c -> c.rarity == AbstractCard.CardRarity.COMMON || c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.RARE)
+                .filter(c -> !c.hasTag(AbstractCard.CardTags.HEALING))
+                .filter(c -> (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER && SpireAnniversary5Mod.allPacksMode) || !SpireAnniversary5Mod.currentPoolPacks.stream().map(p -> p.packID).collect(Collectors.toList()).contains(SpireAnniversary5Mod.cardParentMap.getOrDefault(c.cardID, null)))
+                .filter(c -> !GemsPack.ID.equals(SpireAnniversary5Mod.cardParentMap.getOrDefault(c.cardID, null)))
+                .collect(Collectors.toList());
     }
 
     public void atStartOfTurnPostDraw() {
-        if (!potentialPacks.isEmpty()) {
+        if (!potentialCards.isEmpty()) {
             this.flash();
             for (int i = 0; i < amount; i++) {
-                ArrayList<String> potentialCardIDs = Wiz.getRandomItem(potentialPacks, AbstractDungeon.cardRandomRng).getCards();
-                ArrayList<AbstractCard> potentialCards = new ArrayList<>();
-                for (String s : potentialCardIDs) {
-                    AbstractCard test = CardLibrary.getCard(s).makeCopy();
-                    if (!test.hasTag(AbstractCard.CardTags.HEALING) && test.rarity != AbstractCard.CardRarity.SPECIAL)
-                        potentialCards.add(test);
-                }
-                AbstractCard q = Wiz.getRandomItem(potentialCards, AbstractDungeon.cardRandomRng);
-                CardModifierManager.addModifier(q, new EtherealMod());
-                makeInHand(q);
+                AbstractCard c = Wiz.getRandomItem(potentialCards, AbstractDungeon.cardRandomRng).makeCopy();
+                CardModifierManager.addModifier(c, new EtherealMod());
+                makeInHand(c);
             }
         }
     }

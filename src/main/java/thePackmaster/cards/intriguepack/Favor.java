@@ -9,14 +9,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cardmodifiers.energyandechopack.EchoedEtherealMod;
 import thePackmaster.cardmodifiers.energyandechopack.GlowEchoMod;
-import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import static thePackmaster.SpireAnniversary5Mod.currentPoolPacks;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Favor extends AbstractIntrigueCard {
@@ -29,19 +25,7 @@ public class Favor extends AbstractIntrigueCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         // List of rares.
-        List<AbstractCard> eligibleCards = new ArrayList<>();
-
-        // Compile ALL eligible cards.
-        for(AbstractCardPack pack : currentPoolPacks)
-        {
-            List<AbstractCard> validCards = pack.cards
-                    .stream()
-                    .filter(c -> c.rarity == CardRarity.RARE)
-                    .filter(c -> !c.hasTag(AbstractCard.CardTags.HEALING))
-                    .collect(Collectors.toList());
-
-            eligibleCards.addAll(validCards);
-        }
+        List<AbstractCard> eligibleCards = Wiz.getCardsMatchingPredicate(c -> c.rarity == CardRarity.RARE && !c.hasTag(AbstractCard.CardTags.HEALING));
 
         // Add one of them to hand.
         if (eligibleCards.size() > 0) {
