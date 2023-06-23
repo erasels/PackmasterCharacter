@@ -140,6 +140,7 @@ public class SpireAnniversary5Mod implements
         PostBattleSubscriber,
         PostPowerApplySubscriber,
         StartGameSubscriber,
+        PreStartGameSubscriber,
         PostExhaustSubscriber,
         OnPlayerTurnStartSubscriber,
         OnCreateDescriptionSubscriber,
@@ -1298,6 +1299,10 @@ public class SpireAnniversary5Mod implements
         }
     }
 
+    @Override
+    public void receivePreStartGame() {
+        SpireAnniversary5Mod.currentPoolPacks.clear();
+    }
 
     @Override
     public void receiveStartGame() {

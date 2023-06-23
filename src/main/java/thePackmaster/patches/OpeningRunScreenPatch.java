@@ -29,7 +29,7 @@ public class OpeningRunScreenPatch {
     )
     public static void SetTheThing(AbstractEvent __instance) {
         if(!Settings.isEndless || AbstractDungeon.floorNum <= 1) {
-            if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
+            if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER && SpireAnniversary5Mod.currentPoolPacks.isEmpty()) {
                 if (SpireAnniversary5Mod.allPacksMode) {
                     SpireAnniversary5Mod.logger.info("Vex's All Packs Override Enabled. Skipping intro screen");
                     SpireAnniversary5Mod.currentPoolPacks.clear();
