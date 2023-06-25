@@ -34,7 +34,7 @@ public class MetricsPatches {
                     Method sendPostMethod = ReflectionHacks.getCachedMethod(Metrics.class, "sendPost", String.class, String.class);
                     sendPostMethod.invoke(metrics, "http://www._____TODO_____.com/metrics/", fileName);
                 } catch (IllegalAccessException | InvocationTargetException e) {
-                    logger.error("Could not send metrics for The Blackbeard", e);
+                    logger.error("Could not send metrics for The packmaster", e);
                 }
             }
         }
