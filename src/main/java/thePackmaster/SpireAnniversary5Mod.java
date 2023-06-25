@@ -8,7 +8,6 @@ import basemod.abstracts.CustomSavable;
 import basemod.devcommands.ConsoleCommand;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
-import basemod.helpers.BaseModCardTags;
 import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.helpers.TextCodeInterpreter;
@@ -70,6 +69,7 @@ import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.patches.MetricsPatches;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
@@ -105,7 +105,6 @@ import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
-import thePackmaster.util.Wiz;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
@@ -1463,6 +1462,20 @@ public class SpireAnniversary5Mod implements
                                 PackmasterFoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
                         }
                     }
+            }
+        });
+
+        BaseMod.addSaveField("PackmasterPackChoiceMetrics", new CustomSavable<ArrayList<String>>() {
+            @Override
+            public ArrayList<String> onSave() {
+                return MetricsPatches.packChoices;
+            }
+
+            @Override
+            public void onLoad(ArrayList<String> l) {
+                if (l != null) {
+                    MetricsPatches.packChoices = l;
+                }
             }
         });
     }

@@ -25,6 +25,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.patches.MetricsPatches;
 import thePackmaster.patches.compatibility.InfiniteSpirePatch;
 import thePackmaster.summaries.PackSummary;
 import thePackmaster.summaries.PackSummaryDisplay;
@@ -32,6 +33,7 @@ import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 
@@ -103,6 +105,7 @@ public class PackSetupScreen extends CustomScreen {
         rng = new Random(Settings.seed);
 
         packPool.clear();
+        MetricsPatches.packChoices.clear();
         for (AbstractCardPack p : SpireAnniversary5Mod.allPacks) {
             if (!currentPoolPacks.contains(p)) {
                 packPool.add(p);
@@ -220,6 +223,11 @@ public class PackSetupScreen extends CustomScreen {
                     }
                 }
                 if (clicked != null) {
+                    AbstractCardPack finalClicked = clicked;
+                    MetricsPatches.packChoices.add(choiceSet.stream()
+                            .map(p -> finalClicked == p ? "*" : "" + p.packID)
+                            .collect(Collectors.joining("|")));
+
                     choiceSet.remove(clicked);
                     insertPack(clicked);
 
