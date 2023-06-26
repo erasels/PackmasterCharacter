@@ -70,7 +70,9 @@ import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
+import thePackmaster.patches.CompendiumPatches;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.patches.RenderBaseGameCardPackTopTextPatches;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
@@ -281,6 +283,14 @@ public class SpireAnniversary5Mod implements
 
     public static void subscribe(ISubscriber sub) {
         subscribeIfInstance(editPacksSubscribers, sub, EditPacksSubscriber.class);
+    }
+
+    public static void allowCardClass(Class<? extends AbstractCard> clazz) {
+        RenderBaseGameCardPackTopTextPatches.allowedCardClasses.add(clazz);
+    }
+
+    public static void allowCardColor(AbstractCard.CardColor color) {
+        CompendiumPatches.allowedCardColors.add(color);
     }
 
     public static String makePath(String resourcePath) {
@@ -873,7 +883,6 @@ public class SpireAnniversary5Mod implements
     }
 
     private static void declarePacks() {
-        // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
         packsByID = new HashMap<>();
         new AutoAdd(modID)
             .packageFilter(AbstractCardPack.class)
@@ -881,6 +890,7 @@ public class SpireAnniversary5Mod implements
     }
 
     public static void declarePack(AbstractCardPack pack) {
+        // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
         if (packsByID.containsKey(pack.packID))
             throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Pack class 1: " + packsByID.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
         packsByID.put(pack.packID, pack);

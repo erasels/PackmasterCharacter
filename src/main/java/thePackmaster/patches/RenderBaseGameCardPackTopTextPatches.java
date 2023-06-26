@@ -20,9 +20,13 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
 
+import java.util.ArrayList;
+
 @SpirePatch2(clz = AbstractCard.class, method = "render", paramtypez = {SpriteBatch.class})
 @SpirePatch2(clz = AbstractCard.class, method = "renderInLibrary", paramtypez = {SpriteBatch.class})
 public class RenderBaseGameCardPackTopTextPatches {
+    public static ArrayList<Class<? extends AbstractCard>> allowedCardClasses = new ArrayList<>();
+
     @SpirePostfixPatch
     public static void patch(AbstractCard __instance, SpriteBatch sb) {
         if(shouldShowPackName(__instance)) {
@@ -56,9 +60,12 @@ public class RenderBaseGameCardPackTopTextPatches {
     }
 
     public static boolean shouldShowPackName(AbstractCard c) {
-        return !Settings.hideCards
-                && c.getClass().getSuperclass().equals(AbstractCard.class)
-                && (isInPackmasterRun() || isInPackmasterCardLibraryScreen());
+        if (!Settings.hideCards && (isInPackmasterRun() || isInPackmasterCardLibraryScreen())) {
+            if (c.getClass().getSuperclass().equals(AbstractCard.class)) return true;
+            for (Class<?> clazz : allowedCardClasses)
+                if (clazz.isAssignableFrom(c.getClass())) return true;
+        }
+        return false;
     }
 
     private static boolean isInPackmasterRun() {
