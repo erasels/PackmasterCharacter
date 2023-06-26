@@ -109,6 +109,15 @@ public class PackSummaryReader {
             e.printStackTrace();
         }
 
+        SpireAnniversary5Mod.unfilteredAllPacks.stream()
+                .filter(p -> !packSummaries.containsKey(p.packID))
+                .forEach(p -> {
+                    PackSummary pSum = p.getPackSummary();
+                    if (pSum != null) {
+                        packSummaries.put(p.packID, pSum);
+                    }
+                });
+
         packDiagnostics(packSummaries);
 
         return packSummaries;

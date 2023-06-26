@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.hats.HatMenu;
+import thePackmaster.summaries.PackSummary;
 
 import java.util.ArrayList;
 
@@ -76,4 +77,8 @@ public abstract class AbstractCardPack {
         return hatStrings.TEXT[0];
     }
 
+    //Allows for generating your own PackSummary instead of modifying the text file
+    public PackSummary getPackSummary() {
+        return null;
+    }
 }

@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.marisapack.*;
+import thePackmaster.summaries.PackSummary;
 
 import java.util.ArrayList;
 
@@ -34,5 +35,13 @@ public class MarisaPack extends AbstractCardPack {
         cards.add(DragonMeteor.ID);
         cards.add(EarthlightRay.ID);
         return cards;
+    }
+
+    @Override
+    public PackSummary getPackSummary() {
+        PackSummary pSum = new PackSummary(4, 1, 3, 4,3);
+        pSum.setTags("Exhaust", "Attacks");
+
+        return pSum;
     }
 }

@@ -51,7 +51,6 @@ LegacyPack	Exhaust
 LockonPack	Orbs
 JockeyPack	None
 MadSciencePack	Orbs
-MarisaPack	Exhaust,Attacks
 MetaPack	None
 MonsterHunterPack	None
 OdditiesPack	None

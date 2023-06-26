@@ -8,7 +8,6 @@ import basemod.abstracts.CustomSavable;
 import basemod.devcommands.ConsoleCommand;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
-import basemod.helpers.BaseModCardTags;
 import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.helpers.TextCodeInterpreter;
@@ -105,7 +104,6 @@ import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
-import thePackmaster.util.Wiz;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
@@ -1055,8 +1053,7 @@ public class SpireAnniversary5Mod implements
             PackSummary summary = PackSummaryReader.getPackSummary(p.packID);
             if (summary != null) {
                 PackSummaryDisplay.getTooltip(summary);
-            }
-            else {
+            } else {
                 SpireAnniversary5Mod.logger.error("Please fill out the ratings and tags before releasing pack " + p.packID);
             }
         }
