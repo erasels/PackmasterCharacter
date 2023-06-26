@@ -17,7 +17,7 @@ public class CthulhuPack extends AbstractCardPack {
     public static int lunacyThisCombat;
 
     public CthulhuPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(0, 0, 0, 0, 0));
     }
 
     @Override

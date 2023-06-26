@@ -16,7 +16,7 @@ public class EvenOddPack extends AbstractCardPack {
     public static final String GRAY = "[#808080]";
     
     public EvenOddPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(0, 0, 0, 0, 0));
     }
     
     @Override

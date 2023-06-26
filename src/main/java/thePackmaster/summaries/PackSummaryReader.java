@@ -59,7 +59,7 @@ public class PackSummaryReader {
                     continue;
                 }
 
-                PackSummary packSummary = new PackSummary();
+                PackSummary packSummary = new AbstractCardPack.PackSummary();
                 packSummary.offense = Integer.parseInt(entries[1], 10);
                 packSummary.defense = Integer.parseInt(entries[2], 10);
                 packSummary.support = Integer.parseInt(entries[3], 10);

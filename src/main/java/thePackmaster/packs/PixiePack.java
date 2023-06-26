@@ -23,7 +23,7 @@ public class PixiePack extends AbstractCardPack {
     private static AbstractCard.CardColor lastColor;
 
     public PixiePack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(0, 0, 0, 0, 0));
     }
 
     @Override
