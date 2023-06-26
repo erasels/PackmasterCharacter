@@ -100,9 +100,7 @@ import thePackmaster.stances.cthulhupack.NightmareStance;
 import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
-import thePackmaster.summaries.PackSummary;
 import thePackmaster.summaries.PackSummaryDisplay;
-import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.util.Wiz;
@@ -1051,15 +1049,8 @@ public class SpireAnniversary5Mod implements
     private static void loadAndCheckSummaries() {
         // We load the summary for each patch to catch any errors early
         SpireAnniversary5Mod.logger.info("Loading and checking pack summaries");
-        for (AbstractCardPack p : unfilteredAllPacks) {
-            PackSummary summary = PackSummaryReader.getPackSummary(p.packID);
-            if (summary != null) {
-                PackSummaryDisplay.getTooltip(summary);
-            }
-            else {
-                SpireAnniversary5Mod.logger.error("Please fill out the ratings and tags before releasing pack " + p.packID);
-            }
-        }
+        for (AbstractCardPack p : unfilteredAllPacks)
+            PackSummaryDisplay.getTooltip(p.summary);
     }
 
     public static void logCardStats() {
