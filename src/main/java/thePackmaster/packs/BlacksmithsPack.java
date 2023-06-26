@@ -16,7 +16,7 @@ public class BlacksmithsPack extends AbstractCardPack{
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public BlacksmithsPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(0, 0, 0, 0, 0));
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(3, 3, 4, 4, 4));
     }
     @Override
     public ArrayList<String> getCards() {

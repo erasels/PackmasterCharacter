@@ -16,7 +16,7 @@ public class RingOfPainPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public RingOfPainPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS, new AbstractCardPack.PackSummary(0, 0, 0, 0, 0));
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new AbstractCardPack.PackSummary(4, 2, 3, 2, 3));
     }
 
     @Override

@@ -25,7 +25,7 @@ public class GemsPack extends AbstractCardPack {
 
 
     public GemsPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(0, 0, 0, 0, 0));
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(1, 1, 5, 1, 4, "Orbs"));
     }
 
     @Override

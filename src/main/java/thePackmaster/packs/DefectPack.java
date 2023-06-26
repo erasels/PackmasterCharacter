@@ -15,7 +15,7 @@ public class DefectPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public DefectPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(0, 0, 0, 0, 0));
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(3, 4, 3, 4, 3, "Orbs"));
     }
 
     @Override

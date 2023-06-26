@@ -18,7 +18,7 @@ public class StatusPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public StatusPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(0, 0, 0, 0, 0));
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 2, 5, 5, 3, "Exhaust", "Tokens"));
     }
 
     @Override
