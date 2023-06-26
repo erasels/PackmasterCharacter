@@ -12,11 +12,13 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
@@ -27,7 +29,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.SpireAnniversary5Mod.modID;
 
 @AutoAdd.Ignore
-public abstract class AbstractPackPreviewCard extends CustomCard {
+public class AbstractPackPreviewCard extends CustomCard {
     public static final String ID = SpireAnniversary5Mod.makeID("AbstractPackPreviewCard");
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
     private Color typeColor = new Color(0.35F, 0.35F, 0.35F, 1f);
@@ -85,9 +87,8 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         return textureString;
     }
 
-    public void upgrade() {
-
-    }
+    public void upgrade() {}
+    public void use(AbstractPlayer p, AbstractMonster m) {}
 
     @SpireOverride
     protected void renderType(SpriteBatch sb) {
