@@ -78,6 +78,10 @@ public abstract class AbstractCardPack {
         return hatStrings.TEXT[0];
     }
 
+    public String getHatPath() {
+        return SpireAnniversary5Mod.modID + "Resources/images/hats/" + packID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
+    }
+
     public static class PackSummary {
         public static final String NONE_TAG = "None";
 
