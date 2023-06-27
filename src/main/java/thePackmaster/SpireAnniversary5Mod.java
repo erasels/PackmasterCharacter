@@ -280,6 +280,11 @@ public class SpireAnniversary5Mod implements
 	}
 
     /*Subscriber for other mods to set up their pack adding, example usage from Ocean's Cranky character mod:
+    In the constructor of the main mod file:
+    if (Loader.isModLoaded("anniv5"))
+        SpireAnniversary5Mod.subscribe(new PackLoader());
+    -------
+    As a separate class:
     public class PackLoader implements EditPacksSubscriber {
         @Override
         public void receiveEditPacks() {

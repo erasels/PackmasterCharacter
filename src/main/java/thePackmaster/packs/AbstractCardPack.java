@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.hats.HatMenu;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -85,6 +86,7 @@ public abstract class AbstractCardPack {
     public static class PackSummary {
         public static final String NONE_TAG = "None";
 
+
         public int offense, defense, support, frontload, scaling;
         public HashSet<String> tags = new HashSet<>();
 
@@ -94,9 +96,8 @@ public abstract class AbstractCardPack {
             this.support = support;
             this.frontload = frontload;
             this.scaling = scaling;
-            for (String tag : tags)
-                this.tags.add(tag);
-            if (this.tags.size() == 0)
+            Collections.addAll(this.tags, tags);
+            if (this.tags.isEmpty())
                 this.tags.add(NONE_TAG);
         }
     }
