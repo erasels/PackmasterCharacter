@@ -15,7 +15,7 @@ public class BellordPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public BellordPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 3, 2, 4, 1));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 3, 2, 4, 1));
         hatHidesHair = true;
     }
 

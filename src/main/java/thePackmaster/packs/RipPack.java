@@ -15,7 +15,7 @@ public class RipPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public RipPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(3, 3, 2, 5, 2, "Exhaust", "Tokens"));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 3, 2, 5, 2, PackSummary.Tags.Exhaust, PackSummary.Tags.Tokens));
     }
 
     @Override

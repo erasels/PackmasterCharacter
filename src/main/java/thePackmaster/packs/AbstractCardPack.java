@@ -85,13 +85,14 @@ public abstract class AbstractCardPack {
     }
 
     public static class PackSummary {
-        public static final String NONE_TAG = "None";
-
+        public enum Tags {
+            None, Strength, Exhaust, Orbs, Stances, Discard, Debuffs, Attacks, Tokens, Powers
+        }
 
         public int offense, defense, support, frontload, scaling;
-        public HashSet<String> tags = new HashSet<>();
+        public HashSet<Tags> tags = new HashSet<>();
 
-        public PackSummary(int offense, int defense, int support, int frontload, int scaling, String... tags) {
+        public PackSummary(int offense, int defense, int support, int frontload, int scaling, Tags... tags) {
             this.offense = offense;
             this.defense = defense;
             this.support = support;
@@ -99,7 +100,7 @@ public abstract class AbstractCardPack {
             this.scaling = scaling;
             Collections.addAll(this.tags, tags);
             if (this.tags.isEmpty())
-                this.tags.add(NONE_TAG);
+                this.tags.add(Tags.None);
         }
     }
 }

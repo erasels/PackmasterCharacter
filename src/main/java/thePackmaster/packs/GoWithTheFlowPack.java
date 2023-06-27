@@ -15,7 +15,7 @@ public class GoWithTheFlowPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public GoWithTheFlowPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(3, 3, 4, 3, 2, "Discard"));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 3, 4, 3, 2, PackSummary.Tags.Discard));
         hatHidesHair = true;
     }
 

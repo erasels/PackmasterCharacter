@@ -15,7 +15,7 @@ public class DownfallPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public DownfallPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 3, 3, 3, 3, "Stances", "Orbs"));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 3, 3, 3, 3, PackSummary.Tags.Stances, PackSummary.Tags.Orbs));
     }
 
     @Override
