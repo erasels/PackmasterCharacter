@@ -38,8 +38,8 @@ public class AlignmentPack extends AbstractCardPack {
     }
 
     @Override
-    public AbstractPackPreviewCard makePreviewCard() {
-        AbstractPackPreviewCard c = super.makePreviewCard();
+    public PackPreviewCard makePreviewCard() {
+        PackPreviewCard c = super.makePreviewCard();
         AnimatedCardsPatch.loadFrames(c, AbstractPackmasterCard.getCardTextureString("AlignmentPack", AbstractCard.CardType.SKILL), 15, 0.08F);
         return c;
     }

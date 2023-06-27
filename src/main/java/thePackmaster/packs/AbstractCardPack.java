@@ -20,7 +20,7 @@ public abstract class AbstractCardPack {
     public String credits;
     public ArrayList<AbstractCard> cards;
     public PackSummary summary;
-    public AbstractPackPreviewCard previewPackCard;
+    public PackPreviewCard previewPackCard;
     public boolean hatHidesHair;
 
     public AbstractCardPack(String id, String name, String description, String author, String credits, PackSummary summary) {
@@ -57,8 +57,8 @@ public abstract class AbstractCardPack {
         SpireAnniversary5Mod.cardParentMap.put(previewPackCard.cardID, packID);
     }
 
-    public AbstractPackPreviewCard makePreviewCard() {
-        return new AbstractPackPreviewCard(packID, this);
+    public PackPreviewCard makePreviewCard() {
+        return new PackPreviewCard(packID, this);
     }
 
     public ArrayList<String> getPackPotions() {
