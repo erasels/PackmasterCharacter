@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Interpolation;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -55,6 +56,11 @@ public class AbstractPackPreviewCard extends CustomCard {
         initializeTitle();
         initializeDescription();
         setBackgroundTextures();
+    }
+
+    public AbstractPackPreviewCard(String cardID, AbstractCardPack parentPack, String basegameImg) {
+        this(cardID, null, parentPack);
+        this.portrait = ((TextureAtlas) ReflectionHacks.getPrivateStatic(AbstractCard.class, "cardAtlas")).findRegion(basegameImg);
     }
 
     @Override

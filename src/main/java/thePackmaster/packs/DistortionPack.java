@@ -51,7 +51,7 @@ public class DistortionPack extends AbstractCardPack {
         return new DistortionPackPreview(packID, this);
     }
 
-    private static class DistortionPackPreview extends CardPackPreview {
+    private static class DistortionPackPreview extends AbstractPackPreviewCard {
         private static Texture distortionPackTexture = null;
 
         public DistortionPackPreview(String cardID, AbstractCardPack parentPack) {
