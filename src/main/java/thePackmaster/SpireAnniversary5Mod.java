@@ -8,7 +8,6 @@ import basemod.abstracts.CustomSavable;
 import basemod.devcommands.ConsoleCommand;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
-import basemod.helpers.BaseModCardTags;
 import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.helpers.TextCodeInterpreter;
@@ -106,7 +105,6 @@ import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
-import thePackmaster.util.Wiz;
 import thePackmaster.util.Keywords;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
@@ -281,14 +279,29 @@ public class SpireAnniversary5Mod implements
 			list.add(clazz.cast(sub));
 	}
 
+    /*Subscriber for other mods to set up their pack adding, example usage from Ocean's Cranky character mod:
+    public class PackLoader implements EditPacksSubscriber {
+        @Override
+        public void receiveEditPacks() {
+            SpireAnniversary5Mod.allowCardClass(AbstractCrankyCard.class);
+            SpireAnniversary5Mod.allowCardColor(Cranky.Enums.CLOCKWORK_BROWN_COLOR);
+            new AutoAdd(CrankyMod.modID)
+                .packageFilter("clockworkchar.packs")
+                .any(AbstractCardPack.class, (info, pack) -> SpireAnniversary5Mod.declarePack(pack));
+        }
+    }
+    It's important not to have the receiveEditPacks in your main mod file because it'll crash if Packmaster is not enabled.
+     */
     public static void subscribe(ISubscriber sub) {
         subscribeIfInstance(editPacksSubscribers, sub, EditPacksSubscriber.class);
     }
 
+    //Method for other mods to use to add their card class (or super class rather) which will then render the pack name text on the card automatically
     public static void allowCardClass(Class<? extends AbstractCard> clazz) {
         RenderBaseGameCardPackTopTextPatches.allowedCardClasses.add(clazz);
     }
 
+    //Method for other mods to use to add their CardColor which will then let them show on the Packmaster's compendium page
     public static void allowCardColor(AbstractCard.CardColor color) {
         CompendiumPatches.allowedCardColors.add(color);
     }
