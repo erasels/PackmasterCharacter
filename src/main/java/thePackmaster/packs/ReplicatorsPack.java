@@ -15,7 +15,7 @@ public class ReplicatorsPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public ReplicatorsPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 2, 5, 2, 5, PackSummary.Tags.Tokens));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 2, 5, 2, 5, PackSummary.Tags.Tokens));
     }
 
     @Override

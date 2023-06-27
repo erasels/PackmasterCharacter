@@ -16,7 +16,7 @@ public class QuietPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public QuietPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 4, 4, 4, 2, PackSummary.Tags.Discard));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 4, 4, 4, 2, PackSummary.Tags.Discard));
     }
 
     @Override

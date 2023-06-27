@@ -24,7 +24,7 @@ public class EnergyAndEchoPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public EnergyAndEchoPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(3, 2, 4, 4, 2, PackSummary.Tags.Exhaust, PackSummary.Tags.Tokens));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 2, 4, 4, 2, PackSummary.Tags.Exhaust, PackSummary.Tags.Tokens));
     }
     public static int generatedEnergy = 0;
     public static int usedEnergy = 0;

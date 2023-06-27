@@ -18,7 +18,7 @@ public class AlignmentPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public AlignmentPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 3, 5, 2, 2, PackSummary.Tags.Exhaust, PackSummary.Tags.Discard));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 3, 5, 2, 2, PackSummary.Tags.Exhaust, PackSummary.Tags.Discard));
     }
 
     @Override

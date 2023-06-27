@@ -15,7 +15,7 @@ public class EntropyPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public EntropyPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 2, 2, 3, 3, PackSummary.Tags.Discard, PackSummary.Tags.Debuffs, PackSummary.Tags.Orbs));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 2, 3, 3, PackSummary.Tags.Discard, PackSummary.Tags.Debuffs, PackSummary.Tags.Orbs));
     }
 
     @Override

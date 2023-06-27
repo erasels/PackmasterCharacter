@@ -17,7 +17,7 @@ public class SerpentinePack extends AbstractCardPack {
     //public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public SerpentinePack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 1, 3, 2, 4, PackSummary.Tags.Stances, PackSummary.Tags.Debuffs));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 1, 3, 2, 4, PackSummary.Tags.Stances, PackSummary.Tags.Debuffs));
     }
 
     @Override

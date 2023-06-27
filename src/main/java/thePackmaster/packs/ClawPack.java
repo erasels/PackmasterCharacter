@@ -15,7 +15,7 @@ public class ClawPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public ClawPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(5, 2, 1, 2, 5, PackSummary.Tags.Tokens));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(5, 2, 1, 2, 5, PackSummary.Tags.Tokens));
     }
 
     @Override
