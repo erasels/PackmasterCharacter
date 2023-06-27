@@ -5,7 +5,7 @@
       "Choose."
     ]
   },
-  "${ModID}:AbstractPackPreviewCard": {
+  "${ModID}:PackPreviewCard": {
     "TEXT": [
       "By: ",
       "Pack",

@@ -31,7 +31,7 @@ import static thePackmaster.SpireAnniversary5Mod.modID;
 
 @AutoAdd.Ignore
 public class PackPreviewCard extends CustomCard {
-    public static final String ID = SpireAnniversary5Mod.makeID("AbstractPackPreviewCard");
+    public static final String ID = SpireAnniversary5Mod.makeID("PackPreviewCard");
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
     private Color typeColor = new Color(0.35F, 0.35F, 0.35F, 1f);
     protected String author;
