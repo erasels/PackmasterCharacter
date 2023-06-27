@@ -36,7 +36,7 @@ public class OrbPack extends AbstractCardPack {
     }
 
     @Override
-    public AbstractPackPreviewCard makePreviewCard() {
-        return new CardPackPreview(packID, "blue/skill/chaos", this);
+    public PackPreviewCard makePreviewCard() {
+        return new PackPreviewCard(packID, this, "blue/skill/chaos");
     }
 }

@@ -47,11 +47,11 @@ public class DistortionPack extends AbstractCardPack {
     }
 
     @Override
-    public AbstractPackPreviewCard makePreviewCard() {
+    public PackPreviewCard makePreviewCard() {
         return new DistortionPackPreview(packID, this);
     }
 
-    private static class DistortionPackPreview extends CardPackPreview {
+    private static class DistortionPackPreview extends PackPreviewCard {
         private static Texture distortionPackTexture = null;
 
         public DistortionPackPreview(String cardID, AbstractCardPack parentPack) {
