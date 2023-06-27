@@ -16,7 +16,7 @@ public class GoddessOfExplosionsPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public GoddessOfExplosionsPack() {
-        super(ID, NAME, DESC, AUTHOR,CREDITS);
+        super(ID, NAME, DESC, AUTHOR,CREDITS, new AbstractCardPack.PackSummary(4, 2, 3, 1, 5, "Powers"));
     }
 
     @Override

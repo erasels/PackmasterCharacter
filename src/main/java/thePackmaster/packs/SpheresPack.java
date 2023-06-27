@@ -16,7 +16,7 @@ public class SpheresPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public SpheresPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS);
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new AbstractCardPack.PackSummary(4, 3, 1, 4, 3, "Debuffs", "Orbs"));
     }
 
     @Override

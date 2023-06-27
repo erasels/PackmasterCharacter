@@ -16,7 +16,7 @@ public class RimworldPack  extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public RimworldPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS);
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new AbstractCardPack.PackSummary(3, 3, 4, 2, 3));
     }
 
     @Override

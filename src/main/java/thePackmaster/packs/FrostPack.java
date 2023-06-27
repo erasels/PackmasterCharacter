@@ -17,7 +17,7 @@ public class FrostPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public FrostPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 5, 3, 1, 4, "Orbs"));
     }
 
     @Override

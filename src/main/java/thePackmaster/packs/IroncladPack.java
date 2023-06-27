@@ -15,7 +15,7 @@ public class IroncladPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public IroncladPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 2, 3, 4, 2, "Strength"));
     }
 
     @Override

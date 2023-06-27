@@ -15,7 +15,7 @@ public class OdditiesPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public OdditiesPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 1, 5, 2, 3));
     }
 
     @Override

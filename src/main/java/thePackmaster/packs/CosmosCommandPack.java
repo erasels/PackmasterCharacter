@@ -15,7 +15,7 @@ public class CosmosCommandPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public CosmosCommandPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(3, 2, 4, 1, 4, "Exhaust", "Debuffs"));
     }
 
     @Override

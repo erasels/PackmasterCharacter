@@ -15,7 +15,7 @@ public class StrikesPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public StrikesPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 1, 2, 4, 1, "Orbs", "Attacks"));
     }
 
     @Override

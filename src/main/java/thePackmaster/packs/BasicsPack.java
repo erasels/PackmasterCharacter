@@ -15,7 +15,7 @@ public class BasicsPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public BasicsPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(3, 3, 2, 4, 2));
     }
 
     @Override

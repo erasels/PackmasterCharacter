@@ -15,7 +15,7 @@ public class BitingColdPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public BitingColdPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 2, 2, 3, 3, "Debuffs"));
     }
 
     @Override

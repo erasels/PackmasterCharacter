@@ -16,7 +16,7 @@ public class SentinelPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public SentinelPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 4, 2, 4, 2, "Stances"));
     }
 
     @Override

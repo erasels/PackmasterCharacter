@@ -15,7 +15,7 @@ public class OverwhelmingPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public OverwhelmingPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 2, 4, 3, 4));
         hatHidesHair = true;
     }
 

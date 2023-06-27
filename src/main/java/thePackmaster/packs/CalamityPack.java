@@ -16,7 +16,7 @@ public class CalamityPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public CalamityPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS);
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new AbstractCardPack.PackSummary(4, 2, 2, 3, 4, "Debuffs"));
     }
 
     @Override

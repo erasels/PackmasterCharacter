@@ -18,7 +18,7 @@ public class ArcanaPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public ArcanaPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(3, 3, 3, 3, 2));
     }
 
     @Override

@@ -14,7 +14,7 @@ public class PinnaclePack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public PinnaclePack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 2, 4, 1, 3));
     }
 
     @Override

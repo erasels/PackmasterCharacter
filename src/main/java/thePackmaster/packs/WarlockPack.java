@@ -21,7 +21,7 @@ public class WarlockPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public WarlockPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS);
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new AbstractCardPack.PackSummary(3, 2, 2, 3, 4, "Exhaust"));
         hatHidesHair = true;
     }
 

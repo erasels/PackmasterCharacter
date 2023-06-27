@@ -17,7 +17,7 @@ public class DimensionGatePack2 extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public DimensionGatePack2() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 3, 3, 2, 4, "Debuffs"));
     }
 
     @Override

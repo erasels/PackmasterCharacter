@@ -27,7 +27,7 @@ public class DistortionPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public DistortionPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 2, 3, 4, 4, "Exhaust"));
     }
 
     @Override

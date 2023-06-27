@@ -16,7 +16,7 @@ public class DragonwrathPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public DragonwrathPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 2, 1, 2, 5, "Debuffs"));
     }
 
     @Override

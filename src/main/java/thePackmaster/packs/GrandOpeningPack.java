@@ -15,7 +15,7 @@ public class GrandOpeningPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public GrandOpeningPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 2, 3, 3, 2));
     }
 
     @Override

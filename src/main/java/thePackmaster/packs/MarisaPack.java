@@ -16,7 +16,7 @@ public class MarisaPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public MarisaPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS);
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new AbstractCardPack.PackSummary(4, 1, 3, 4, 3, "Exhaust", "Attacks"));
     }
 
     @Override

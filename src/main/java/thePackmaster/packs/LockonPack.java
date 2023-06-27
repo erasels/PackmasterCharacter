@@ -17,7 +17,7 @@ public class LockonPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public LockonPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(3, 2, 3, 2, 4, "Orbs"));
     }
 
     @Override

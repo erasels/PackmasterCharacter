@@ -16,7 +16,7 @@ public class AggressionPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public AggressionPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS);
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new AbstractCardPack.PackSummary(5, 2, 2, 4, 3, "Strength", "Stances", "Attacks"));
     }
 
     @Override

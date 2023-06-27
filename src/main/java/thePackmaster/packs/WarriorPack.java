@@ -15,7 +15,7 @@ public class WarriorPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public WarriorPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 2, 1, 3, 2, "Debuffs", "Attacks"));
         hatHidesHair = true;
     }
 

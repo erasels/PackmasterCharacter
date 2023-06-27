@@ -16,7 +16,7 @@ public class UtilityPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public UtilityPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS);
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new AbstractCardPack.PackSummary(2, 2, 5, 2, 3, "Orbs"));
     }
 
     @Override

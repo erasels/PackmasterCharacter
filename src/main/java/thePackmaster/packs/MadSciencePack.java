@@ -15,7 +15,7 @@ public class MadSciencePack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public MadSciencePack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(3, 3, 5, 2, 3, "Orbs"));
     }
 
     @Override

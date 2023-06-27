@@ -15,7 +15,7 @@ public class MonsterHunterPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public MonsterHunterPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(4, 2, 2, 3, 3));
     }
 
     @Override

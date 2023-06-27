@@ -15,7 +15,7 @@ public class WomanInBluePack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public WomanInBluePack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 2, 4, 4, 2, "Exhaust"));
     }
 
     @Override
