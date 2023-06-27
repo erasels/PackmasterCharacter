@@ -106,6 +106,7 @@ import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.util.Keywords;
+import thePackmaster.util.MultiModAutoAdd;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.util.creativitypack.JediUtil;
@@ -177,6 +178,7 @@ public class SpireAnniversary5Mod implements
     private static ArrayList<EditPacksSubscriber> editPacksSubscribers = new ArrayList<>();
 
     public static final String modID = "anniv5";
+    public static final String expansionPackModID = "expansionPacks";
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = modID + "Resources/images/char/mainChar/corpse.png";
@@ -522,7 +524,7 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditRelics() {
-        new AutoAdd(modID)
+        getAutoAdd()
                 .packageFilter(AbstractPackmasterRelic.class)
                 .any(AbstractPackmasterRelic.class, (info, relic) -> {
                     if (relic.color == null) {
@@ -549,7 +551,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
         BaseMod.addDynamicVariable(new HoardVar());
-        new AutoAdd(modID)
+        getAutoAdd()
                 .packageFilter(AbstractPackmasterCard.class)
                 .setDefaultSeen(true)
                 .cards();
@@ -678,7 +680,7 @@ public class SpireAnniversary5Mod implements
     public void receiveEditStrings() {
         loadStrings("eng");
 
-        Collection<CtClass> packClasses = new AutoAdd(modID)
+        Collection<CtClass> packClasses = getAutoAdd()
                 .packageFilter(AbstractCardPack.class)
                 .findClasses(AbstractCardPack.class)
                 .stream()
@@ -785,7 +787,7 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditKeywords() {
-        Collection<CtClass> packClasses = new AutoAdd(modID)
+        Collection<CtClass> packClasses = getAutoAdd()
                 .packageFilter(AbstractCardPack.class)
                 .findClasses(AbstractCardPack.class)
                 .stream()
@@ -902,7 +904,7 @@ public class SpireAnniversary5Mod implements
 
     private static void declarePacks() {
         packsByID = new HashMap<>();
-        new AutoAdd(modID)
+        getAutoAdd()
             .packageFilter(AbstractCardPack.class)
             .any(AbstractCardPack.class, (info, pack) -> declarePack(pack));
     }
@@ -1537,6 +1539,10 @@ public class SpireAnniversary5Mod implements
         stances.remove(p().stance.ID);
 
         return useCardRng ? stances.get(AbstractDungeon.cardRandomRng.random(stances.size() - 1)) : stances.get(MathUtils.random(stances.size() - 1));
+    }
+
+    private static AutoAdd getAutoAdd() {
+        return new MultiModAutoAdd(modID, expansionPackModID);
     }
 }
 
