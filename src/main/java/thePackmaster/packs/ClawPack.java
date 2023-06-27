@@ -1,11 +1,9 @@
 package thePackmaster.packs;
 
-import com.megacrit.cardcrawl.cards.blue.Claw;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.clawpack.*;
-import thePackmaster.cards.downfallpack.*;
 
 import java.util.ArrayList;
 
@@ -17,7 +15,7 @@ public class ClawPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public ClawPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(5, 2, 1, 2, 5, "Tokens"));
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(5, 2, 1, 2, 5, PackSummary.Tags.Tokens));
     }
 
     @Override

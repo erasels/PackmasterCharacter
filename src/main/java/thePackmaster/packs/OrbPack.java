@@ -16,7 +16,7 @@ public class OrbPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public OrbPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(1, 3, 4, 3, 4, "Orbs"));
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(1, 3, 4, 3, 4, PackSummary.Tags.Orbs));
     }
 
     @Override

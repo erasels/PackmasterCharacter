@@ -24,7 +24,7 @@ public class BulwarkPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public BulwarkPack() {
-        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 5, 1, 4, 4, "Exhaust"));
+        super(ID, NAME, DESC, AUTHOR, new AbstractCardPack.PackSummary(2, 5, 1, 4, 4, PackSummary.Tags.Exhaust));
         this.hatHidesHair = true;
     }
 
