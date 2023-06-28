@@ -52,7 +52,7 @@ public class MetricsPatches {
     public static class ShouldUploadMetricData {
         @SpirePostfixPatch
         public static boolean patch(boolean returnValue) {
-            if (AbstractDungeon.player.chosenClass == THE_PACKMASTER) {
+            if (AbstractDungeon.player.chosenClass == THE_PACKMASTER && AbstractDungeon.floorNum > 5) {
                 returnValue = Settings.UPLOAD_DATA;
             }
             return returnValue;
