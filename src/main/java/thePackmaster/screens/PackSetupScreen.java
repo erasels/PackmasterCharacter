@@ -220,13 +220,13 @@ public class PackSetupScreen extends CustomScreen {
                     }
                 }
                 if (clicked != null) {
-                    AbstractCardPack finalClicked = clicked;
-                    MetricsPatches.packChoices.add(choiceSet.stream()
-                            .map(p -> (finalClicked == p ? "*" : "") + p.packID)
-                            .collect(Collectors.joining("|")));
-
                     choiceSet.remove(clicked);
                     insertPack(clicked);
+
+                    HashMap choiceMap = new HashMap<>();
+                    choiceMap.put("picked", clicked.packID);
+                    choiceMap.put("not_picked", new ArrayList<>(choiceSet.stream().map(p -> p.packID).collect(Collectors.toCollection(ArrayList::new))));
+                    MetricsPatches.packChoices.add(choiceMap);
 
                     if (packChoices > 0) {
                         mode = PackSetupMode.TRANSITION_OUT_DRAFT;

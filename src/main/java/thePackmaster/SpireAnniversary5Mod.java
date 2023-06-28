@@ -1501,14 +1501,14 @@ public class SpireAnniversary5Mod implements
             }
         });
 
-        BaseMod.addSaveField("PackmasterPackChoiceMetrics", new CustomSavable<ArrayList<String>>() {
+        BaseMod.addSaveField("PackmasterPackChoiceMetrics", new CustomSavable<ArrayList<HashMap>>() {
             @Override
-            public ArrayList<String> onSave() {
+            public ArrayList<HashMap> onSave() {
                 return MetricsPatches.packChoices;
             }
 
             @Override
-            public void onLoad(ArrayList<String> l) {
+            public void onLoad(ArrayList<HashMap> l) {
                 if (l != null) {
                     MetricsPatches.packChoices = l;
                 }

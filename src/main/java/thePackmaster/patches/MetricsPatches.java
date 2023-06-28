@@ -18,6 +18,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.stream.Collectors;
 
 import static thePackmaster.ThePackmaster.Enums.THE_PACKMASTER;
@@ -26,7 +27,7 @@ public class MetricsPatches {
     private static final String PMMetricsURL = "http://metrics.twentyfourfuckingletters.com/";
     private static final Logger logger = LogManager.getLogger(MetricsPatches.class);
 
-    public static ArrayList<String> packChoices = new ArrayList<>();
+    public static ArrayList<HashMap> packChoices = new ArrayList<>();
 
     @SpirePatch(clz = Metrics.class, method = "sendPost", paramtypez = {String.class, String.class})
     public static class SendPutInsteadOfPostPatch {
@@ -77,10 +78,10 @@ public class MetricsPatches {
                     addDataMethod.invoke(metrics, "filteredPacks", filteredPacks);
 
                     //Pack choices at the beginning formatted as Pack1|*Pack2|Pack3,Pack1... * signifying the selected pack
-                    String packChoiceString;
-                    if(SpireAnniversary5Mod.allPacksMode) packChoiceString = "All Packs Mode";
-                    else packChoiceString = String.join(",", packChoices);
-                    addDataMethod.invoke(metrics, "packChoices", packChoiceString);
+                    addDataMethod.invoke(metrics, "allPacksMode", SpireAnniversary5Mod.allPacksMode);
+                    if(!SpireAnniversary5Mod.allPacksMode) {
+                        addDataMethod.invoke(metrics, "packChoices", packChoices);
+                    }
 
                     String otherModPackIDs = SpireAnniversary5Mod.unfilteredAllPacks.stream()
                             .filter(p -> !p.packID.startsWith(SpireAnniversary5Mod.modID))
