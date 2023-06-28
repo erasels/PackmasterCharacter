@@ -25,11 +25,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.patches.MetricsPatches;
 import thePackmaster.patches.compatibility.InfiniteSpirePatch;
 import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 
@@ -220,6 +222,11 @@ public class PackSetupScreen extends CustomScreen {
                 if (clicked != null) {
                     choiceSet.remove(clicked);
                     insertPack(clicked);
+
+                    HashMap choiceMap = new HashMap<>();
+                    choiceMap.put("picked", clicked.packID);
+                    choiceMap.put("not_picked", new ArrayList<>(choiceSet.stream().map(p -> p.packID).collect(Collectors.toCollection(ArrayList::new))));
+                    MetricsPatches.packChoices.add(choiceMap);
 
                     if (packChoices > 0) {
                         mode = PackSetupMode.TRANSITION_OUT_DRAFT;
