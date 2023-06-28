@@ -1,11 +1,12 @@
 package thePackmaster.cards.intriguepack;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.util.Wiz;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -23,7 +24,7 @@ public class Vanguard extends AbstractIntrigueCard {
 
     public void triggerOnOtherCardPlayed(AbstractCard c) {
         if (isPrecious(c)) {
-            Wiz.atb(new NewQueueCardAction(this, true, false, true));
+            AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true, EnergyPanel.getCurrentEnergy(), true, true));
         }
     }
 
