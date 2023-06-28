@@ -1,14 +1,15 @@
 package thePackmaster.patches;
 
 import basemod.ReflectionHacks;
+import com.badlogic.gdx.Net;
 import com.evacipated.cardcrawl.modthespire.Loader;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
+import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.metrics.Metrics;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.screens.GameOverScreen;
+import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
@@ -22,25 +23,12 @@ import java.util.stream.Collectors;
 import static thePackmaster.ThePackmaster.Enums.THE_PACKMASTER;
 
 public class MetricsPatches {
+    private static final String PMMetricsURL = "http://metrics.twentyfourfuckingletters.com/";
     private static final Logger logger = LogManager.getLogger(MetricsPatches.class);
 
     public static ArrayList<String> packChoices = new ArrayList<>();
 
-    @SpirePatch(clz = Metrics.class, method = "sendPost", paramtypez = {String.class})
-    public static class SendPostPatch {
-        public static void triggerSendPatch(Metrics metrics, String fileName) {
-            if (AbstractDungeon.player.chosenClass == THE_PACKMASTER) {
-                try {
-                    Method sendPostMethod = ReflectionHacks.getCachedMethod(Metrics.class, "sendPost", String.class, String.class);
-                    sendPostMethod.invoke(metrics, "http://www._____TODO_____.com/metrics/", fileName);
-                } catch (IllegalAccessException | InvocationTargetException e) {
-                    logger.error("Could not send metrics for The packmaster", e);
-                }
-            }
-        }
-    }
-
-    /*@SpirePatch(clz = Metrics.class, method = "sendPost", paramtypez = {String.class, String.class})
+    @SpirePatch(clz = Metrics.class, method = "sendPost", paramtypez = {String.class, String.class})
     public static class SendPutInsteadOfPostPatch {
         @SpireInsertPatch(locator = Locator.class, localvars = "httpRequest")
         public static void Insert(Metrics metrics, String url, String fileName, Net.HttpRequest httpRequest) {
@@ -56,7 +44,7 @@ public class MetricsPatches {
                 return LineFinder.findInOrder(method, matcher);
             }
         }
-    }*/
+    }
 
 
     @SpirePatch(clz = GameOverScreen.class, method = "shouldUploadMetricData")
@@ -96,11 +84,15 @@ public class MetricsPatches {
                         addDataMethod.invoke(metrics, "customDraftConfiguration", SpireAnniversary5Mod.modConfig.getString("PackmasterCustomDraftSelection"));
 
                     addDataMethod.invoke(metrics, "pickedHat", SpireAnniversary5Mod.getLastPickedHatID());
+                    addDataMethod.invoke(metrics, "enabledExpansionPacks", Loader.isModLoaded("expansionPacks")); //TODO: Actually use the correct field once both branches are merged
 
 
-                    Method gatherAllDataAndSendMethod = Metrics.class.getDeclaredMethod("gatherAllDataAndSend", boolean.class, boolean.class, MonsterGroup.class);
-                    gatherAllDataAndSendMethod.setAccessible(true);
-                    gatherAllDataAndSendMethod.invoke(metrics, metrics.death, metrics.trueVictory, metrics.monsters);
+                    Method gatherAllDataMethod = Metrics.class.getDeclaredMethod("gatherAllData", boolean.class, boolean.class, MonsterGroup.class);
+                    gatherAllDataMethod.setAccessible(true);
+                    gatherAllDataMethod.invoke(metrics, metrics.death, metrics.trueVictory, metrics.monsters);
+
+                    ReflectionHacks.RMethod sendPostMethod = ReflectionHacks.privateMethod(Metrics.class, "sendPost", String.class, String.class);
+                    sendPostMethod.invoke(metrics, PMMetricsURL, null);
                 } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
                     logger.error("Exception while sending metrics", e);
                 }
@@ -108,7 +100,7 @@ public class MetricsPatches {
         }
 
         private static String findTheModVersion() {
-            return Arrays.stream(Loader.MODINFOS).filter(modInfo -> "anniv5".equals(modInfo.getIDName()))
+            return Arrays.stream(Loader.MODINFOS).filter(modInfo -> SpireAnniversary5Mod.modID.equals(modInfo.getIDName()))
                     .findFirst()
                     .map(modInfo -> modInfo.ModVersion.toString())
                     .orElse("Unknown");
