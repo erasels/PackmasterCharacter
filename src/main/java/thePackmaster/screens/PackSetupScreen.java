@@ -225,7 +225,7 @@ public class PackSetupScreen extends CustomScreen {
                 if (clicked != null) {
                     AbstractCardPack finalClicked = clicked;
                     MetricsPatches.packChoices.add(choiceSet.stream()
-                            .map(p -> finalClicked == p ? "*" : "" + p.packID)
+                            .map(p -> (finalClicked == p ? "*" : "") + p.packID)
                             .collect(Collectors.joining("|")));
 
                     choiceSet.remove(clicked);
