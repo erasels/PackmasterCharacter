@@ -15,7 +15,7 @@ public class ThieveryPack extends AbstractCardPack {
 	public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
 	public ThieveryPack() {
-		super(ID, NAME, DESC, AUTHOR);
+		super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 2, 4, 3, 3, PackSummary.Tags.Strength));
 	}
 
 	@Override

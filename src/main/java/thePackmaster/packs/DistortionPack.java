@@ -27,7 +27,7 @@ public class DistortionPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public DistortionPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 3, 4, 4, PackSummary.Tags.Exhaust));
     }
 
     @Override
@@ -47,11 +47,11 @@ public class DistortionPack extends AbstractCardPack {
     }
 
     @Override
-    public AbstractPackPreviewCard makePreviewCard() {
+    public PackPreviewCard makePreviewCard() {
         return new DistortionPackPreview(packID, this);
     }
 
-    private static class DistortionPackPreview extends CardPackPreview {
+    private static class DistortionPackPreview extends PackPreviewCard {
         private static Texture distortionPackTexture = null;
 
         public DistortionPackPreview(String cardID, AbstractCardPack parentPack) {

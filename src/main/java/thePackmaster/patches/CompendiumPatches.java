@@ -24,7 +24,8 @@ import javassist.expr.NewExpr;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.patches.shamanpack.FineTuneLineWidthPatch;
-
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -33,6 +34,7 @@ import java.util.stream.Collectors;
 public class CompendiumPatches {
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("Compendium"));
     public static SortHeaderButton packButton = null;
+    public static ArrayList<AbstractCard.CardColor> allowedCardColors = new ArrayList<>(Arrays.asList(AbstractCard.CardColor.RED, AbstractCard.CardColor.GREEN, AbstractCard.CardColor.BLUE, AbstractCard.CardColor.PURPLE));
 
     @SpirePatch2(clz = CardLibSortHeader.class, method = SpirePatch.CONSTRUCTOR)
     public static class AddSortButton {
@@ -179,7 +181,7 @@ public class CompendiumPatches {
             if (EverythingFix.Fields.cardGroupMap.containsKey(ThePackmaster.Enums.PACKMASTER_RAINBOW)) {
                 CardGroup group = EverythingFix.Fields.cardGroupMap.get(ThePackmaster.Enums.PACKMASTER_RAINBOW);
                 List<AbstractCard> baseGameCards = CardLibrary.getAllCards().stream()
-                        .filter(c -> (c.color == AbstractCard.CardColor.RED || c.color == AbstractCard.CardColor.GREEN || c.color == AbstractCard.CardColor.BLUE || c.color == AbstractCard.CardColor.PURPLE))
+                        .filter(c -> (allowedCardColors.contains(c.color)))
                         .filter(c -> SpireAnniversary5Mod.cardParentMap.containsKey(c.cardID))
                         .collect(Collectors.toList());
                 group.group.addAll(baseGameCards);

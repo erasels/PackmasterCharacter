@@ -9,14 +9,17 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Interpolation;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
@@ -27,8 +30,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.SpireAnniversary5Mod.modID;
 
 @AutoAdd.Ignore
-public abstract class AbstractPackPreviewCard extends CustomCard {
-    public static final String ID = SpireAnniversary5Mod.makeID("AbstractPackPreviewCard");
+public class PackPreviewCard extends CustomCard {
+    public static final String ID = SpireAnniversary5Mod.makeID("PackPreviewCard");
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
     private Color typeColor = new Color(0.35F, 0.35F, 0.35F, 1f);
     protected String author;
@@ -38,11 +41,11 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
 
     public static AbstractCardPack parentPack;
 
-    public AbstractPackPreviewCard(final String cardID, AbstractCardPack owningParent) {
+    public PackPreviewCard(final String cardID, AbstractCardPack owningParent) {
         this(cardID, getCardTextureString(cardID.replace(modID + ":", ""), CardType.SKILL), owningParent);
     }
 
-    public AbstractPackPreviewCard(final String cardID, final String img, AbstractCardPack owningParent) {
+    public PackPreviewCard(final String cardID, final String img, AbstractCardPack owningParent) {
         super(cardID, "", img,
                 -2, "", CardType.SKILL, ThePackmaster.Enums.PACKMASTER_RAINBOW, CardRarity.SPECIAL, CardTarget.SELF);
         parentPack = owningParent;
@@ -53,6 +56,11 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         initializeTitle();
         initializeDescription();
         setBackgroundTextures();
+    }
+
+    public PackPreviewCard(String cardID, AbstractCardPack parentPack, String basegameImg) {
+        this(cardID, null, parentPack);
+        this.portrait = ((TextureAtlas) ReflectionHacks.getPrivateStatic(AbstractCard.class, "cardAtlas")).findRegion(basegameImg);
     }
 
     @Override
@@ -85,9 +93,8 @@ public abstract class AbstractPackPreviewCard extends CustomCard {
         return textureString;
     }
 
-    public void upgrade() {
-
-    }
+    public void upgrade() {}
+    public void use(AbstractPlayer p, AbstractMonster m) {}
 
     @SpireOverride
     protected void renderType(SpriteBatch sb) {

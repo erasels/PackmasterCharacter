@@ -64,12 +64,15 @@ import thePackmaster.commands.UnlockHatCommand;
 import thePackmaster.events.BlackMarketDealerEvent;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.Hats;
+import thePackmaster.interfaces.EditPacksSubscriber;
 import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
+import thePackmaster.patches.CompendiumPatches;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.MetricsPatches;
+import thePackmaster.patches.RenderBaseGameCardPackTopTextPatches;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
@@ -100,9 +103,7 @@ import thePackmaster.stances.cthulhupack.NightmareStance;
 import thePackmaster.stances.downfallpack.AncientStance;
 import thePackmaster.stances.sentinelpack.Angry;
 import thePackmaster.stances.sentinelpack.Serene;
-import thePackmaster.summaries.PackSummary;
 import thePackmaster.summaries.PackSummaryDisplay;
-import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.util.Keywords;
@@ -173,6 +174,8 @@ public class SpireAnniversary5Mod implements
     public static int PACKS_PER_RUN = 7;
     public static int PACKS_PER_CHOICE = 3;
     public static CurrentRunCardsTopPanelItem currentRunCardsTopPanelItem;
+
+    private static ArrayList<EditPacksSubscriber> editPacksSubscribers = new ArrayList<>();
 
     public static final String modID = "anniv5";
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
@@ -270,6 +273,43 @@ public class SpireAnniversary5Mod implements
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
                 CARD_ENERGY_L, TEXT_ENERGY);
+    }
+
+	private static <T> void subscribeIfInstance(ArrayList<T> list, ISubscriber sub, Class<T> clazz) {
+		if (clazz.isInstance(sub))
+			list.add(clazz.cast(sub));
+	}
+
+    /*Subscriber for other mods to set up their pack adding, example usage from Ocean's Cranky character mod:
+    In the constructor of the main mod file:
+    if (Loader.isModLoaded("anniv5"))
+        SpireAnniversary5Mod.subscribe(new PackLoader());
+    -------
+    As a separate class:
+    public class PackLoader implements EditPacksSubscriber {
+        @Override
+        public void receiveEditPacks() {
+            SpireAnniversary5Mod.allowCardClass(AbstractCrankyCard.class);
+            SpireAnniversary5Mod.allowCardColor(Cranky.Enums.CLOCKWORK_BROWN_COLOR);
+            new AutoAdd(CrankyMod.modID)
+                .packageFilter("clockworkchar.packs")
+                .any(AbstractCardPack.class, (info, pack) -> SpireAnniversary5Mod.declarePack(pack));
+        }
+    }
+    It's important not to have the receiveEditPacks in your main mod file because it'll crash if Packmaster is not enabled.
+     */
+    public static void subscribe(ISubscriber sub) {
+        subscribeIfInstance(editPacksSubscribers, sub, EditPacksSubscriber.class);
+    }
+
+    //Method for other mods to use to add their card class (or super class rather) which will then render the pack name text on the card automatically
+    public static void allowCardClass(Class<? extends AbstractCard> clazz) {
+        RenderBaseGameCardPackTopTextPatches.allowedCardClasses.add(clazz);
+    }
+
+    //Method for other mods to use to add their CardColor which will then let them show on the Packmaster's compendium page
+    public static void allowCardColor(AbstractCard.CardColor color) {
+        CompendiumPatches.allowedCardColors.add(color);
     }
 
     public static String makePath(String resourcePath) {
@@ -520,6 +560,8 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostInitialize() {
         declarePacks();
+        for (EditPacksSubscriber sub : editPacksSubscribers)
+            sub.receiveEditPacks();
         logger.info("Full list of packs: " + unfilteredAllPacks.stream().map(pack -> pack.name).collect(Collectors.toList()));
         logCardStats();
         logPackAuthors();
@@ -859,23 +901,22 @@ public class SpireAnniversary5Mod implements
         cardsRippedThisTurn = 0;
     }
 
-    public static void declarePacks() {
-        // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
+    private static void declarePacks() {
         packsByID = new HashMap<>();
         new AutoAdd(modID)
-                .packageFilter(AbstractCardPack.class)
-                .any(AbstractCardPack.class, (info, pack) -> {
-                    if (packsByID.containsKey(pack.packID)) {
-                        throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Pack class 1: " + packsByID.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
-                    }
-                    packsByID.put(pack.packID, pack);
-                    unfilteredAllPacks.add(pack);
-                    if (PackFilterMenu.getFilterConfig(pack.packID)) {
-                        allPacks.add(pack);
-                    }
-                    packExclusivePotions.addAll(pack.getPackPotions());
-                });
+            .packageFilter(AbstractCardPack.class)
+            .any(AbstractCardPack.class, (info, pack) -> declarePack(pack));
+    }
 
+    public static void declarePack(AbstractCardPack pack) {
+        // We prefer to catch duplicate pack IDs here, instead of letting them break in unexpected ways downstream of this code
+        if (packsByID.containsKey(pack.packID))
+            throw new RuntimeException("Duplicate pack detected with ID: " + pack.packID + ". Pack class 1: " + packsByID.get(pack.packID).getClass().getName() + ", pack class 2: " + pack.getClass().getName());
+        packsByID.put(pack.packID, pack);
+        unfilteredAllPacks.add(pack);
+        if (PackFilterMenu.getFilterConfig(pack.packID))
+            allPacks.add(pack);
+        packExclusivePotions.addAll(pack.getPackPotions());
     }
 
     public static AbstractCardPack getRandomPackFromAll(Random rng) {
@@ -1050,15 +1091,8 @@ public class SpireAnniversary5Mod implements
     private static void loadAndCheckSummaries() {
         // We load the summary for each patch to catch any errors early
         SpireAnniversary5Mod.logger.info("Loading and checking pack summaries");
-        for (AbstractCardPack p : unfilteredAllPacks) {
-            PackSummary summary = PackSummaryReader.getPackSummary(p.packID);
-            if (summary != null) {
-                PackSummaryDisplay.getTooltip(summary);
-            }
-            else {
-                SpireAnniversary5Mod.logger.error("Please fill out the ratings and tags before releasing pack " + p.packID);
-            }
-        }
+        for (AbstractCardPack p : unfilteredAllPacks)
+            PackSummaryDisplay.getTooltip(p.summary);
     }
 
     public static void logCardStats() {
