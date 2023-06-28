@@ -77,14 +77,27 @@ public class MetricsPatches {
                     addDataMethod.invoke(metrics, "filteredPacks", filteredPacks);
 
                     //Pack choices at the beginning formatted as Pack1|*Pack2|Pack3,Pack1... * signifying the selected pack
-                    addDataMethod.invoke(metrics, "packChoices", String.join(",", packChoices));
+                    String packChoiceString;
+                    if(SpireAnniversary5Mod.allPacksMode) packChoiceString = "All Packs Mode";
+                    else packChoiceString = String.join(",", packChoices);
+                    addDataMethod.invoke(metrics, "packChoices", packChoiceString);
+
+                    String otherModPackIDs = SpireAnniversary5Mod.unfilteredAllPacks.stream()
+                            .filter(p -> !p.packID.startsWith(SpireAnniversary5Mod.modID))
+                            .map(p -> p.packID)
+                            .collect(Collectors.joining(","));
+                    if(!otherModPackIDs.isEmpty())
+                        addDataMethod.invoke(metrics, "otherModPacks", otherModPackIDs);
+
+                    addDataMethod.invoke(metrics, "packSummariesEnabled", SpireAnniversary5Mod.showPackSummaries());
+
                     boolean draftEnabled = SpireAnniversary5Mod.getCustomDraftEnabled();
                     addDataMethod.invoke(metrics, "customDraftEnabled", draftEnabled);
                     if(draftEnabled)
                         addDataMethod.invoke(metrics, "customDraftConfiguration", SpireAnniversary5Mod.modConfig.getString("PackmasterCustomDraftSelection"));
 
                     addDataMethod.invoke(metrics, "pickedHat", SpireAnniversary5Mod.getLastPickedHatID());
-                    addDataMethod.invoke(metrics, "enabledExpansionPacks", Loader.isModLoaded("expansionPacks")); //TODO: Actually use the correct field once both branches are merged
+                    addDataMethod.invoke(metrics, "enabledExpansionPacks", Loader.isModLoaded(SpireAnniversary5Mod.expansionPackModID));
 
 
                     Method gatherAllDataMethod = Metrics.class.getDeclaredMethod("gatherAllData", boolean.class, boolean.class, MonsterGroup.class);

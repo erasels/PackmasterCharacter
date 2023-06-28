@@ -178,6 +178,7 @@ public class SpireAnniversary5Mod implements
     private static ArrayList<EditPacksSubscriber> editPacksSubscribers = new ArrayList<>();
 
     public static final String modID = "anniv5";
+    public static final String expansionPackModID = "expansionPacks";
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = modID + "Resources/images/char/mainChar/corpse.png";
@@ -1335,6 +1336,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePreStartGame() {
         SpireAnniversary5Mod.currentPoolPacks.clear();
+        MetricsPatches.packChoices.clear();
     }
 
     @Override

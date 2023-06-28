@@ -103,7 +103,6 @@ public class PackSetupScreen extends CustomScreen {
         rng = new Random(Settings.seed);
 
         packPool.clear();
-        MetricsPatches.packChoices.clear();
         for (AbstractCardPack p : SpireAnniversary5Mod.allPacks) {
             if (!currentPoolPacks.contains(p)) {
                 packPool.add(p);
