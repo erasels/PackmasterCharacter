@@ -71,6 +71,7 @@ import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
 import thePackmaster.patches.CompendiumPatches;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.patches.MetricsPatches;
 import thePackmaster.patches.RenderBaseGameCardPackTopTextPatches;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
@@ -1336,6 +1337,7 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePreStartGame() {
         SpireAnniversary5Mod.currentPoolPacks.clear();
+        MetricsPatches.packChoices.clear();
     }
 
     @Override
@@ -1497,6 +1499,20 @@ public class SpireAnniversary5Mod implements
                                 PackmasterFoilPatches.makeFoil(AbstractDungeon.player.masterDeck.group.get(i));
                         }
                     }
+            }
+        });
+
+        BaseMod.addSaveField("PackmasterPackChoiceMetrics", new CustomSavable<ArrayList<HashMap>>() {
+            @Override
+            public ArrayList<HashMap> onSave() {
+                return MetricsPatches.packChoices;
+            }
+
+            @Override
+            public void onLoad(ArrayList<HashMap> l) {
+                if (l != null) {
+                    MetricsPatches.packChoices = l;
+                }
             }
         });
     }
