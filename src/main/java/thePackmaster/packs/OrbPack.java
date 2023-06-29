@@ -16,7 +16,7 @@ public class OrbPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public OrbPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(1, 3, 4, 3, 4, PackSummary.Tags.Orbs));
     }
 
     @Override
@@ -36,7 +36,7 @@ public class OrbPack extends AbstractCardPack {
     }
 
     @Override
-    public AbstractPackPreviewCard makePreviewCard() {
-        return new CardPackPreview(packID, "blue/skill/chaos", this);
+    public PackPreviewCard makePreviewCard() {
+        return new PackPreviewCard(packID, this, "blue/skill/chaos");
     }
 }

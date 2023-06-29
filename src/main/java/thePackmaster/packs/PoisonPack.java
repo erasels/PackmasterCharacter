@@ -16,7 +16,7 @@ public class PoisonPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public PoisonPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(5, 1, 2, 2, 5, PackSummary.Tags.Debuffs));
     }
 
     @Override

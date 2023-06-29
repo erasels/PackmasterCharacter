@@ -18,7 +18,7 @@ public class ArcanaPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public ArcanaPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 3, 3, 3, 2));
     }
 
     @Override
@@ -38,8 +38,8 @@ public class ArcanaPack extends AbstractCardPack {
     }
 
     @Override
-    public AbstractPackPreviewCard makePreviewCard() {
-        AbstractPackPreviewCard c = super.makePreviewCard();
+    public PackPreviewCard makePreviewCard() {
+        PackPreviewCard c = super.makePreviewCard();
         AnimatedCardsPatch.loadFrames(c, AbstractPackmasterCard.getCardTextureString("Temperance", AbstractCard.CardType.SKILL), 37, 0.12f);
         return c;
     }

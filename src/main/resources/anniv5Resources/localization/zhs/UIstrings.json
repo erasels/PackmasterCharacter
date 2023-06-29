@@ -5,7 +5,7 @@
       "选择。"
     ]
   },
-  "${ModID}:AbstractPackPreviewCard": {
+  "${ModID}:PackPreviewCard": {
     "TEXT": [
       "作者：",
       "卡包",
