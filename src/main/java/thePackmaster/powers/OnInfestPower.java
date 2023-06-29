@@ -1,4 +1,4 @@
-package thePackmaster.powers.infestpack;
+package thePackmaster.powers;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 

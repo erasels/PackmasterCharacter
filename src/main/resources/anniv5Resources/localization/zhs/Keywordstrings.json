@@ -61,5 +61,14 @@
       "铭印"
     ],
     "DESCRIPTION": "打出时触发最右侧充能球，与所有 #y新月 充能球的被动效果。"
+  },
+  {
+    "PROPER_NAME": "滋生",
+    "NAMES": [
+      "infest",
+      "infests",
+      "滋生"
+    ],
+    "DESCRIPTION": "回合结束时，若本牌在手中，将其洗入抽牌堆并附加 #b1 点 #y滋生 点数( [bugIcon] )。"
   }
 ]

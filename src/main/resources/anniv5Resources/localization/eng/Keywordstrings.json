@@ -29,5 +29,13 @@
       "inscribe"
     ],
     "DESCRIPTION": "When played, activate the passive of your next Orb, then of all #yFull and #yCrescent #yMoon Orbs."
+  },
+  {
+    "PROPER_NAME": "Infest",
+    "NAMES": [
+      "infest",
+      "infests"
+    ],
+    "DESCRIPTION": "At the end of your turn, if this is in your hand, shuffle it into your draw pile and put an infestation counter on it."
   }
 ]

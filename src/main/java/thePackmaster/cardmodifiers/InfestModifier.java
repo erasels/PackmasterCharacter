@@ -1,4 +1,4 @@
-package thePackmaster.cardmodifiers.infestpack;
+package thePackmaster.cardmodifiers;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.infestpack.OnInfestCard;
-import thePackmaster.powers.infestpack.OnInfestPower;
+import thePackmaster.cards.OnInfestCard;
+import thePackmaster.powers.OnInfestPower;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.Wiz;
 
