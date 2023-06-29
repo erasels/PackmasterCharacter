@@ -42,5 +42,24 @@
       "湮没"
     ],
     "DESCRIPTION": "#y充能球 : #y激发 时给予生命值最高的敌人 #y毁灭 。每当你丢弃一张牌时，给予层数加 #b1 。"
+  },
+  {
+    "PROPER_NAME": "展现",
+    "NAMES": [
+      "manifest",
+      "展现"
+    ],
+    "DESCRIPTION": "获得一个充能球栏位后，再 #y生成 充能球。达 #b10 个栏位上限后不再获得栏位。"
+  },
+  {
+    "PROPER_NAME": "铭印",
+    "NAMES": [
+      "Inscribed",
+      "inscribed",
+      "Inscribe",
+      "inscribe",
+      "铭印"
+    ],
+    "DESCRIPTION": "打出时触发最右侧充能球，与所有 #y新月 充能球的被动效果。"
   }
 ]

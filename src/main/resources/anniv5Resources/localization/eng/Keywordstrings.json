@@ -12,5 +12,22 @@
       "oblivion"
     ],
     "DESCRIPTION": "Orb: When evoked, applies #yRuin to the enemy with the most HP. Increases #yRuin applied whenever you discard a card."
+  },
+  {
+    "PROPER_NAME": "Manifest",
+    "NAMES": [
+      "manifest"
+    ],
+    "DESCRIPTION": "Gain an Orb slot then channel the listed Orb."
+  },
+  {
+    "PROPER_NAME": "Inscribed",
+    "NAMES": [
+      "Inscribed",
+      "inscribed",
+      "Inscribe",
+      "inscribe"
+    ],
+    "DESCRIPTION": "When played, activate the passive of your next Orb, then of all #yFull and #yCrescent #yMoon Orbs."
   }
 ]

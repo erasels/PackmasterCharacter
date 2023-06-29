@@ -4,11 +4,12 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.*;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.WitchesStrike.CrescentMoon;
-import thePackmaster.orbs.WitchesStrike.FullMoon;
 import thePackmaster.orbs.contentcreatorpack.Wanderbot;
 import thePackmaster.orbs.summonspack.*;
-import thePackmaster.packs.*;
+import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.ContentCreatorPack;
+import thePackmaster.packs.OrbPack;
+import thePackmaster.packs.SummonsPack;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -54,13 +55,6 @@ public interface PackmasterOrb {
     static Map<String, List<Supplier<AbstractOrb>>> makePackSuppliers() {
         Map<String, List<Supplier<AbstractOrb>>> supplierMap = new HashMap<>();
         List<Supplier<AbstractOrb>> suppliers;
-
-
-        suppliers = new ArrayList<>();
-        suppliers.add(CrescentMoon::new);
-        suppliers.add(FullMoon::new);
-        supplierMap.put(WitchesStrikePack.ID, suppliers);
-
 
         suppliers = new ArrayList<>();
         suppliers.add(FireSpirit::new);

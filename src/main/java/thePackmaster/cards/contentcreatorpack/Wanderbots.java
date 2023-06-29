@@ -4,7 +4,7 @@ import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cardmodifiers.witchesstrikepack.InscribedMod;
+import thePackmaster.cardmodifiers.InscribedMod;
 import thePackmaster.orbs.contentcreatorpack.Wanderbot;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

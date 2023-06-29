@@ -1,4 +1,4 @@
-package thePackmaster.cardmodifiers.witchesstrikepack;
+package thePackmaster.cardmodifiers;
 
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
@@ -13,8 +13,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.PackmasterOrb;
-import thePackmaster.orbs.WitchesStrike.CrescentMoon;
-import thePackmaster.orbs.WitchesStrike.FullMoon;
 import thePackmaster.util.Wiz;
 
 public class InscribedMod extends AbstractCardModifier {
@@ -46,15 +44,15 @@ public class InscribedMod extends AbstractCardModifier {
                         }
                     }
 
-                    for(AbstractOrb orb : Wiz.p().orbs) {
-                        if(orb instanceof FullMoon || orb instanceof CrescentMoon) {
-                            ((PackmasterOrb)orb).passiveEffect();
-                        }
-                    }
+                    patchHook();
                 }
                 isDone = true;
             }
         });
+    }
+
+    private static void patchHook() {
+        //Just here so the expansion mod can patch into it
     }
 
     @Override
