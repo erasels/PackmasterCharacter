@@ -15,9 +15,6 @@ import com.megacrit.cardcrawl.monsters.beyond.Darkling;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import javassist.CtBehavior;
 import thePackmaster.cards.bardinspirepack.ThickOfTheFight;
-import thePackmaster.cards.colorlesspack.GolfBall;
-import thePackmaster.patches.secretlevelpack.EnoughTalkPatch;
-import thePackmaster.patches.secretlevelpack.SpecialCardGlowCheckPatch;
 
 import java.util.ArrayList;
 
@@ -136,9 +133,6 @@ public class ThickOfTheFightPatch {
     public static class BattleStart {
         public static void Prefix(AbstractPlayer __instance) {
             updateCards();
-            EnoughTalkPatch.spokeLastTurn = false;
-            SpecialCardGlowCheckPatch.playedGlowingCardThisTurn = false;
-            GolfBall.BLOCK_AMT_LOST = 0;
         }
     }
 

@@ -1,4 +1,4 @@
-package thePackmaster.actions.dimensiongate2pack;
+package thePackmaster.actions.dimensiongatepack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;

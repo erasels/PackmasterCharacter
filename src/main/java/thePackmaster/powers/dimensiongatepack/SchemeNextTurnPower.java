@@ -1,6 +1,5 @@
-package thePackmaster.powers.dimensiongate2pack;
+package thePackmaster.powers.dimensiongatepack;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.InvisiblePower;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import thePackmaster.powers.AbstractPackmasterPower;

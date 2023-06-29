@@ -9,8 +9,6 @@ import thePackmaster.orbs.WitchesStrike.FullMoon;
 import thePackmaster.orbs.contentcreatorpack.Wanderbot;
 import thePackmaster.orbs.downfallpack.Ghostflame;
 import thePackmaster.orbs.entropy.Oblivion;
-import thePackmaster.orbs.spherespack.Blaze;
-import thePackmaster.orbs.spherespack.Polar;
 import thePackmaster.orbs.summonspack.*;
 import thePackmaster.packs.*;
 
@@ -90,12 +88,6 @@ public interface PackmasterOrb {
         suppliers = new ArrayList<>();
         suppliers.add(Wanderbot::new);
         supplierMap.put(ContentCreatorPack.ID, suppliers);
-
-
-        suppliers = new ArrayList<>();
-        suppliers.add(Blaze::new);
-        suppliers.add(Polar::new);
-        supplierMap.put(SpheresPack.ID, suppliers);
 
 
         return supplierMap;

@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import javassist.CtBehavior;
 import thePackmaster.packs.EnergyAndEchoPack;
 import thePackmaster.patches.odditiespack.AutoBattlerPatches;
-import thePackmaster.patches.secretlevelpack.SpecialCardGlowCheckPatch;
 
 
 @SpirePatch(
@@ -20,7 +19,6 @@ public class GlobalAtTurnStartHookPatch {
     public static void Insert(GameActionManager __instance) {
         EnergyAndEchoPack.resetvalues();
         AutoBattlerPatches.OnRefreshHandCheckToPlayCardPatch.isEndingTurn = false;
-        SpecialCardGlowCheckPatch.playedGlowingCardThisTurn = false;
     }
 
     private static class Locator extends SpireInsertLocator {

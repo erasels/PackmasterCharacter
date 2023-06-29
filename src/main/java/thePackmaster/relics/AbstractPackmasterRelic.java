@@ -34,8 +34,7 @@ public abstract class AbstractPackmasterRelic extends CustomRelic {
             this.color = ThePackmaster.Enums.PACKMASTER_RAINBOW;
         }
         this.parentPacks = new HashSet<>();
-        for (String pack : packIDs)
-            parentPacks.add(pack);
+        parentPacks.addAll(Arrays.asList(packIDs));
     }
 
     public String getUpdatedDescription() {
