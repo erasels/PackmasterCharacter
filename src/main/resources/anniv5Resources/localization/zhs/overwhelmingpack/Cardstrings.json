@@ -1,0 +1,49 @@
+{
+  "${ModID}:Lariat": {
+    "NAME": "套索",
+    "DESCRIPTION": "造成 !D! 点群体伤害两次。 NL 下张技能单次耗能为0。"
+  },
+  "${ModID}:GigaDrill": {
+    "NAME": "究级钻头",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆顶部 !M! 张牌单次耗能变为0。"
+  },
+  "${ModID}:OpeningStrike": {
+    "NAME": "开幕打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将所有攻击手牌的本回合单次耗能减1。"
+  },
+  "${ModID}:Withstand": {
+    "NAME": "承顶",
+    "DESCRIPTION": "手中每有一张耗能小于等于 !M! 的牌，获得 !B! 点 格挡 。"
+  },
+  "${ModID}:Approach": {
+    "NAME": "靠近",
+    "DESCRIPTION": "抽 !M! 张牌并选择一张， NL 将其本回合单次耗能减1。",
+    "EXTENDED_DESCRIPTION": [
+      "减低耗能。"
+    ]
+  },
+  "${ModID}:SheerEffort": {
+    "NAME": "竭尽全力",
+    "DESCRIPTION": "消耗 任意张手牌，选择打出抽牌堆一张耗能比所消耗牌数低的牌。"
+  },
+  "${ModID}:Overcome": {
+    "NAME": "克服",
+    "DESCRIPTION": "打出原耗能高于你当前 [E] 的牌时，获得 !M! 点 格挡 。"
+  },
+  "${ModID}:FurtherBeyond": {
+    "NAME": "过竭",
+    "DESCRIPTION": "[E] 耗尽时才能打出。 NL 造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "我的 能 量 过多。"
+    ]
+  },
+  "${ModID}:MakeRoom": {
+    "NAME": "腾位",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若抽的过程中爆牌， NL 自动先打出最左端的牌。"
+  },
+  "${ModID}:ActuallyFinalForm": {
+    "NAME": "极能形态",
+    "DESCRIPTION": "虚无 。 NL 回合结束时， NL 打出耗能最高的手牌。",
+    "UPGRADE_DESCRIPTION": "回合结束时， NL 打出耗能最高的手牌。"
+  }
+}

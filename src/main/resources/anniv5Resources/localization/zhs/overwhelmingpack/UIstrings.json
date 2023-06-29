@@ -1,0 +1,21 @@
+{
+  "${ModID}:OverwhelmingPack": {
+    "TEXT": [
+      "极能",
+      "对抗能量的限制。",
+      "Mixmaw, Alchyr"
+    ]
+  },
+  "${ModID}:OverwhelmingPackHat": {
+    "TEXT": [
+      "这些突起有助于展示你的能级。",
+      "赛亚发"
+    ]
+  },
+  "${ModID}:ActuallyFinalFormAction": {
+    "TEXT": [
+      "选择一张耗能低于",
+      "的牌来打出。"
+    ]
+  }
+}

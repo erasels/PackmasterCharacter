@@ -34,8 +34,8 @@
   },
   "${ModID}:SneckoEyes": {
     "NAME": "异蛇之眼",
-    "DESCRIPTION" : "获得混乱。 NL 回合开始时， NL 额外抽2张牌。",
-    "UPGRADE_DESCRIPTION": "回合开始时， NL 额外抽2张牌。 NL 起动 ：获得混乱。"
+    "DESCRIPTION" : "获得 混乱 。 NL 回合开始时， NL 额外抽2张牌。",
+    "UPGRADE_DESCRIPTION": "回合开始时， NL 额外抽2张牌。 NL 起动 ：获得 混乱 。"
   },
   "${ModID}:Shedding": {
     "NAME": "摆脱",

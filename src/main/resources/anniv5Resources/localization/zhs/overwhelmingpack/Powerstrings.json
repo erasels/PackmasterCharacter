@@ -1,0 +1,25 @@
+{
+  "${ModID}:FreeSkillPower": {
+    "NAME": "免费技能",
+    "DESCRIPTIONS": [
+      "下张 #y技能牌 可不耗能打出。",
+      "接下来的 #b",
+      " 张 #y技能牌 可不耗能打出。"
+    ]
+  },
+  "${ModID}:ActuallyFinalFormPower": {
+    "NAME": "极能形态",
+    "DESCRIPTIONS": [
+      "你的回合结束时，打出手中耗能最高的牌。",
+      "你的回合结束时，打出手中耗能最高的牌 #b",
+      " 次。"
+    ]
+  },
+  "${ModID}:OvercomePower": {
+    "NAME": "克服",
+    "DESCRIPTIONS": [
+      "每当你打出一张原耗能大于你当前能量的牌，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  }
+}

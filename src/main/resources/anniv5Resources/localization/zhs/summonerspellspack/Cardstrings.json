@@ -16,8 +16,8 @@
   },
   "${ModID}:GrievousIgnite": {
     "NAME": "致命点燃",
-    "DESCRIPTION": "给予手牌数x !M! 层 ${ModID}:点燃 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予手牌数x !M! 层 ${ModID}:点燃 。",
+    "DESCRIPTION": "给予手牌数层 ${ModID}:燃烧 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予手牌数层 ${ModID}:燃烧 。",
     "EXTENDED_DESCRIPTION": [" NL (给予 !${ModID}:m2! 层)"]
   },
   "${ModID}:WitheringExhaust": {
@@ -26,7 +26,7 @@
   },
   "${ModID}:DualHeal": {
     "NAME": "双重治疗",
-    "DESCRIPTION": "回复目标与自身 !M! 点生命。 NL 被 ${ModID}:点燃 的目标不受到回复效果。 NL 消耗 。"
+    "DESCRIPTION": "回复目标与自身 !M! 点生命。 NL ${ModID}:燃烧 中的目标不受到回复效果。 NL 消耗 。"
   },
   "${ModID}:DeftBarrier": {
     "NAME": "急时屏障",

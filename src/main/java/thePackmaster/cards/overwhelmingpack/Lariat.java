@@ -2,6 +2,7 @@ package thePackmaster.cards.overwhelmingpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.overwhelmingpack.FreeSkillPower;
 import thePackmaster.util.Wiz;
@@ -28,5 +29,14 @@ public class Lariat extends AbstractOverwhelmingCard {
 
     public void upp() {
         upgradeDamage(2);
+    }
+
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if(Settings.language == Settings.GameLanguage.ZHS && this.description!=null && this.description.size()>=1 ) {
+            for(int i=0; i < this.description.size(); i++){
+                if(this.description.get(i).text.equals("。")) this.description.remove(i);
+            }
+        }
     }
 }

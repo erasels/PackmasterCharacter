@@ -30,7 +30,7 @@
   },
   "${ModID}:Reiji": {
     "NAME": "雷激",
-    "DESCRIPTION": "{@@}固有 。 NL 给予 !${ModID}:m2! 层 ${ModID}:锁定 。{!M!|>0= NL 若目标已被锁定， NL 获得 !M! 点 集中 。} NL 消耗 。"
+    "DESCRIPTION": "{@@}固有 。 NL 给予 !${ModID}:m2! 层 ${ModID}:锁定 。{!M!|>0= NL 若目标已被 *锁定 ， NL 获得 !M! 点 集中 。} NL 消耗 。"
   },
   "${ModID}:LightningRod": {
     "NAME": "引雷针",

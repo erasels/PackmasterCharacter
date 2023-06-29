@@ -30,7 +30,7 @@
   },
   "${ModID}:SlashDraw": {
     "NAME": "居合之抽",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL 抽一张牌， NL 若为一张攻击， NL 再打出本牌 {!M!|2=2次|3=3次|@=!M! 次} 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张牌， NL 若为一张攻击， NL 再打出本牌 !M! 次。"
   },
   "${ModID}:PathToVictory": {
     "NAME": "胜利之路",
