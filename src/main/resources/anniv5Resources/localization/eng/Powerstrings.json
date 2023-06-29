@@ -14,5 +14,11 @@
       " turns, add #b2 cards from the ",
       " Pack to your hand."
     ]
+  },
+  "${ModID}:TempHPRegenPower": {
+    "NAME": "Ablation",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b%s #yTemporary #yHP, then reduce this by #b1."
+    ]
   }
 }

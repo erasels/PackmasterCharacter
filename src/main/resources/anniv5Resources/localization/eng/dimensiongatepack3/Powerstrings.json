@@ -7,12 +7,6 @@
       " NL Has triggered this turn."
     ]
   },
-  "${ModID}:TempHPRegenPower": {
-    "NAME": "Ablation",
-    "DESCRIPTIONS": [
-      "At the end of your turn, gain #b%s #yTemporary #yHP, then reduce this by #b1."
-    ]
-  },
   "${ModID}:MantisStrikePower": {
     "NAME": "Mantis Recoil",
     "DESCRIPTIONS": [
