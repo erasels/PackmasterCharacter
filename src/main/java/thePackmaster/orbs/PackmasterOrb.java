@@ -7,7 +7,6 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 import thePackmaster.orbs.WitchesStrike.FullMoon;
 import thePackmaster.orbs.contentcreatorpack.Wanderbot;
-import thePackmaster.orbs.downfallpack.Ghostflame;
 import thePackmaster.orbs.summonspack.*;
 import thePackmaster.packs.*;
 
@@ -55,10 +54,6 @@ public interface PackmasterOrb {
     static Map<String, List<Supplier<AbstractOrb>>> makePackSuppliers() {
         Map<String, List<Supplier<AbstractOrb>>> supplierMap = new HashMap<>();
         List<Supplier<AbstractOrb>> suppliers;
-
-        suppliers = new ArrayList<>();
-        suppliers.add(Ghostflame::new);
-        supplierMap.put(DownfallPack.ID, suppliers);
 
 
         suppliers = new ArrayList<>();

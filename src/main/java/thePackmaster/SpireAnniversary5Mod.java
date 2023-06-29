@@ -875,7 +875,6 @@ public class SpireAnniversary5Mod implements
         EnergyAndEchoPack.resetvalues();
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
         JediUtil.receiveOnBattleStart(room);
-        CthulhuPack.lunacyThisCombat = 0;
     }
 
     @Override
