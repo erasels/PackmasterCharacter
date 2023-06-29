@@ -1,7 +1,5 @@
 package thePackmaster.powers.rimworldpack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -12,8 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import thePackmaster.cards.rimworldpack.Despair;
 import thePackmaster.cards.rimworldpack.FreeToPlayPower;
 import thePackmaster.powers.AbstractPackmasterPower;
 
@@ -65,10 +61,6 @@ public class CatharsisPower extends AbstractPackmasterPower implements FreeToPla
             description = DESCRIPTIONS[0];
         else
             description = DESCRIPTIONS[1]+ amount + DESCRIPTIONS[2];
-    }
-    @Override
-    public void atStartOfTurn() {
-        addToTop(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
