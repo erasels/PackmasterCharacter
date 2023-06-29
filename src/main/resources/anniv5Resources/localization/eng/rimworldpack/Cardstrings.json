@@ -30,7 +30,7 @@
   },
   "${ModID}:Catharsis": {
     "NAME": "Catharsis",
-    "DESCRIPTION": "{@@}Add a *Despair to your hand. The next {!M!|1=card|@=!M! cards} you play {!M!|1=costs|@=cost} 0 and {!M!|1=plays|@=play} twice. NL Exhaust."
+    "DESCRIPTION": "{@@}Shuffle a *Despair into your draw pile. The next {!M!|1=card|@=!M! cards} you play this turn {!M!|1=costs|@=cost} 0 and {!M!|1=plays|@=play} twice. Exhaust."
   },
   "${ModID}:TradeBeacon": {
     "NAME": "Trade Beacon",
@@ -38,7 +38,7 @@
   },
   "${ModID}:BurningPassion": {
     "NAME": "Burning Passion",
-    "DESCRIPTION": "Double the first buff you gain during your turn."
+    "DESCRIPTION": "Double the first buff you gain each turn."
   },
   "${ModID}:TaintedWeapon": {
     "NAME": "Tainted Weapon",

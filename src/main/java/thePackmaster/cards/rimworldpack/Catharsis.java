@@ -1,10 +1,9 @@
 package thePackmaster.cards.rimworldpack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.rimworldpack.CatharsisPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -20,7 +19,7 @@ public class Catharsis extends AbstractRimCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new MakeTempCardInHandAction(new Despair(), 1));
+        addToBot(new MakeTempCardInDrawPileAction(new Despair(), 1, true, true));
         addToBot(new ApplyPowerAction(p, p, new CatharsisPower(p, magicNumber), magicNumber));
     }
 
