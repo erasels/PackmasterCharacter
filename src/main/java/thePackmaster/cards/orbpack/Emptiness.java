@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.orbs.entropy.Oblivion;
+import thePackmaster.orbs.Oblivion;
 
 import java.util.ArrayList;
 import java.util.List;

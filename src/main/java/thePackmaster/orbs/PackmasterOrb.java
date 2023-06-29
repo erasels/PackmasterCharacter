@@ -8,7 +8,6 @@ import thePackmaster.orbs.WitchesStrike.CrescentMoon;
 import thePackmaster.orbs.WitchesStrike.FullMoon;
 import thePackmaster.orbs.contentcreatorpack.Wanderbot;
 import thePackmaster.orbs.downfallpack.Ghostflame;
-import thePackmaster.orbs.entropy.Oblivion;
 import thePackmaster.orbs.summonspack.*;
 import thePackmaster.packs.*;
 
@@ -81,7 +80,6 @@ public interface PackmasterOrb {
 
         suppliers = new ArrayList<>();
         suppliers.add(Oblivion::new);
-        supplierMap.put(EntropyPack.ID, suppliers);
         supplierMap.put(OrbPack.ID, suppliers);
 
 
