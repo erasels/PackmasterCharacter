@@ -1,9 +1,0 @@
-{
-  "${ModID}:DiehardPower": {
-    "NAME": "Diehard",
-    "DESCRIPTIONS": [
-      "Next turn, gain #b",
-      " #yWeak and #yFrail."
-    ]
-  }
-}
