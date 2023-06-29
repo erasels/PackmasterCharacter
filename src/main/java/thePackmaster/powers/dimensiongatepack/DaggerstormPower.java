@@ -1,16 +1,10 @@
 package thePackmaster.powers.dimensiongatepack;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 import thePackmaster.util.creativitypack.onGenerateCardMidcombatInterface;
@@ -27,12 +21,13 @@ public class DaggerstormPower extends AbstractPackmasterPower implements onGener
 
     }
 
-
     @Override
     public void onCreateCard(AbstractCard card) {
         if (!(card instanceof Shiv)){
             for (int i = 0; i < amount; i++) {
-                Wiz.atb(new NewQueueCardAction(new Shiv(), true));
+                Shiv shiv = new Shiv();
+                shiv.purgeOnUse = true;
+                Wiz.atb(new NewQueueCardAction(shiv, true));
             }
         }
     }

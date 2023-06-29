@@ -228,9 +228,9 @@ public class Hats {
 
 
     public static String getImagePathFromHatID(String hatID) {
-        //SpireAnniversary5Mod.logger.info(SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png");
+        AbstractCardPack p = SpireAnniversary5Mod.packsByID.get(hatID);
+        if (p != null) return p.getHatPath();
         return SpireAnniversary5Mod.modID + "Resources/images/hats/" + hatID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
-
     }
 
     public static void atRunStart() {

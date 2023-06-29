@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.ThePackmaster;
 import thePackmaster.actions.FlexibleDiscoveryAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.AbstractCardPack;
@@ -22,7 +23,7 @@ public class DestinyDraw extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCardPack> choices = SpireAnniversary5Mod.getRandomPacks(true, 3);
+        ArrayList<AbstractCardPack> choices = SpireAnniversary5Mod.getRandomPacks(p.chosenClass == ThePackmaster.Enums.THE_PACKMASTER, 3);
 
         ArrayList<AbstractCard> packCards = new ArrayList<>();
 

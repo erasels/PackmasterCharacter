@@ -91,7 +91,7 @@ public abstract class AbstractPackmasterCard extends CustomCard {
         initializeDescription();
 
         if (textureImg.contains("ui/missing.png")) {
-            if (CardLibrary.getAllCards() != null && !CardLibrary.getAllCards().isEmpty()) {
+            if (CardLibrary.cards != null && !CardLibrary.cards.isEmpty()) {
                 CardArtRoller.computeCard(this);
             } else
                 needsArtRefresh = true;

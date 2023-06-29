@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.metapack.DiehardPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -13,7 +12,7 @@ public class Diehard extends AbstractMetaCard {
     public final static String ID = makeID("Diehard");
 
     public Diehard() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         magicNumber = baseMagicNumber = 2;
     }
 

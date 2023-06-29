@@ -25,13 +25,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.patches.MetricsPatches;
 import thePackmaster.patches.compatibility.InfiniteSpirePatch;
-import thePackmaster.summaries.PackSummary;
 import thePackmaster.summaries.PackSummaryDisplay;
-import thePackmaster.summaries.PackSummaryReader;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 
@@ -222,6 +222,11 @@ public class PackSetupScreen extends CustomScreen {
                 if (clicked != null) {
                     choiceSet.remove(clicked);
                     insertPack(clicked);
+
+                    HashMap choiceMap = new HashMap<>();
+                    choiceMap.put("picked", clicked.packID);
+                    choiceMap.put("not_picked", new ArrayList<>(choiceSet.stream().map(p -> p.packID).collect(Collectors.toCollection(ArrayList::new))));
+                    MetricsPatches.packChoices.add(choiceMap);
 
                     if (packChoices > 0) {
                         mode = PackSetupMode.TRANSITION_OUT_DRAFT;
@@ -475,13 +480,9 @@ public class PackSetupScreen extends CustomScreen {
 
     private static void displayTooltips(AbstractCardPack pack) {
         ArrayList<PowerTip> tooltips = new ArrayList<>();
-        PackSummary packSummary = PackSummaryReader.getPackSummary(pack.packID);
-        if (packSummary != null) {
-            tooltips.add(new PowerTip(PackSummaryDisplay.getTitle(), PackSummaryDisplay.getTooltip(packSummary)));
-        }
-        if (pack.credits != null) {
+        tooltips.add(new PowerTip(PackSummaryDisplay.getTitle(), PackSummaryDisplay.getTooltip(pack.summary)));
+        if (pack.credits != null)
             tooltips.add(new PowerTip(pack.creditsHeader, pack.credits));
-        }
         if (!tooltips.isEmpty()) {
             // These values are taken from AbstractCard. We need to use them so we can calculate the position for the
             // tooltips based on the target scale that the card will end up at (since we're always hovering the card

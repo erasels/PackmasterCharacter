@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.ThePackmaster;
-import thePackmaster.packs.AbstractPackPreviewCard;
+import thePackmaster.packs.PackPreviewCard;
 import thePackmaster.packs.AlignmentPack;
 import thePackmaster.packs.ArcanaPack;
 import thePackmaster.patches.arcanapack.AnimatedCardsPatch;

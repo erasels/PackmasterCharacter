@@ -15,7 +15,7 @@ public class ColorlessPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public ColorlessPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 3, 3, 2, 4, PackSummary.Tags.Tokens));
     }
 
     @Override

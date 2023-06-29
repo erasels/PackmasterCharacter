@@ -9,19 +9,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import static thePackmaster.SpireAnniversary5Mod.currentPoolPacks;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MoreExplosions extends AbstractGoddessOfExplosionsCard {
     public final static String ID = makeID("MoreExplosions");
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("PlayTwiceUI"));
 
     private static final int MAGIC = 1;
     private static final int MAGIC_UP = 1;
@@ -33,23 +29,9 @@ public class MoreExplosions extends AbstractGoddessOfExplosionsCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // I'll be moderately mad if there's an automated way of doing this.
         // List of powers.
-        List<AbstractCard> eligibleCards = new ArrayList<>();
+        List<AbstractCard> eligibleCards = Wiz.getCardsMatchingPredicate(c -> c.type == CardType.POWER && !c.hasTag(AbstractCard.CardTags.HEALING));
         List<AbstractCard> powerList = new ArrayList<>();
-
-        // Compile ALL eligible cards.
-        for(AbstractCardPack pack : currentPoolPacks)
-        {
-            List<AbstractCard> validCards = pack.cards
-                    .stream()
-                    .filter(c -> c.type == CardType.POWER)
-                    .filter(c -> !c.hasTag(AbstractCard.CardTags.HEALING))
-                    .filter(c -> c.rarity == CardRarity.COMMON || c.rarity == CardRarity.UNCOMMON || c.rarity == CardRarity.RARE)
-                    .collect(Collectors.toList());
-
-            eligibleCards.addAll(validCards);
-        }
 
         // Add from eligible cards to power list.
         for(int hm = 0; hm < magicNumber; hm++) {
