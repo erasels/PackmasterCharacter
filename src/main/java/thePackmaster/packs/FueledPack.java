@@ -15,7 +15,7 @@ public class FueledPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public FueledPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(5, 2, 2, 5, 2));
     }
 
     @Override
