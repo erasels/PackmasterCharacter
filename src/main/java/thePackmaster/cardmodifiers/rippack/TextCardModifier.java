@@ -5,7 +5,6 @@ import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import thePackmaster.cardmodifiers.infestpack.InfestModifier;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -9,11 +9,6 @@ import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.RepeatCardAction;
-import thePackmaster.cardmodifiers.frostpack.FrozenMod;
-import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
 import thePackmaster.util.Wiz;
 
 @AbstractCardModifier.SaveIgnore

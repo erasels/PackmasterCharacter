@@ -2,7 +2,7 @@ package thePackmaster.cards.dimensiongatepack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.dimensiongate2pack.EncyclopediaAction;
+import thePackmaster.actions.dimensiongatepack.EncyclopediaAction;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardObelisk;
 import thePackmaster.util.Wiz;
 

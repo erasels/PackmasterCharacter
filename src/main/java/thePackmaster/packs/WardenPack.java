@@ -3,7 +3,6 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.metapack.*;
 import thePackmaster.cards.wardenpack.*;
 
 import java.util.ArrayList;

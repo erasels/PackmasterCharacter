@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
-import thePackmaster.actions.metapack.WaitMoreAction;
+import thePackmaster.actions.WaitMoreAction;
 import thePackmaster.cardmodifiers.colorlesspack.IsGhostModifier;
 import thePackmaster.cards.colorlesspack.Ghost;
 import thePackmaster.vfx.colorlesspack.PurpleNonmovingBlur;

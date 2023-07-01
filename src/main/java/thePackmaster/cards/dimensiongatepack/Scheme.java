@@ -4,7 +4,7 @@ import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.dimensiongateabstracts.AbstractDimensionalCardVault;
-import thePackmaster.powers.dimensiongate2pack.SchemeNextTurnPower;
+import thePackmaster.powers.dimensiongatepack.SchemeNextTurnPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

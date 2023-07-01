@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
-import thePackmaster.actions.metapack.WaitMoreAction;
+import thePackmaster.actions.WaitMoreAction;
 
 import static thePackmaster.SpireAnniversary5Mod.CLAW;
 import static thePackmaster.SpireAnniversary5Mod.makeID;

@@ -30,7 +30,7 @@
   },
   "${ModID}:Catharsis": {
     "NAME": "宣泄",
-    "DESCRIPTION": "将一张 *绝望 加入手牌。 下 !M! 张牌耗能为0且打出两次。 NL 消耗 。"
+    "DESCRIPTION": "将 *绝望 洗入抽牌堆。 本回合下 !M! 张牌耗能为0且打出两次。 NL 消耗 。"
   },
   "${ModID}:TradeBeacon": {
     "NAME": "交易信号",

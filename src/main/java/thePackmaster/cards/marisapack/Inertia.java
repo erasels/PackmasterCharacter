@@ -4,7 +4,7 @@ import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import thePackmaster.powers.dimensiongate3pack.TempHPRegenPower;
+import thePackmaster.powers.TempHPRegenPower;
 import thePackmaster.util.Wiz;
 
 import java.util.Arrays;

@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.hats.specialhats.AlignmentHat;
-import thePackmaster.hats.specialhats.InstantDeathHat;
 import thePackmaster.hats.specialhats.PsychicHat;
 import thePackmaster.hats.specialhats.SpecialHat;
 import thePackmaster.packs.*;
@@ -45,7 +44,6 @@ public class HatMenu {
     static {
         specialHats.put(AlignmentPack.ID, new AlignmentHat());
         specialHats.put(PsychicPack.ID, new PsychicHat());
-        specialHats.put(InstantDeathPack.ID, new InstantDeathHat());
     }
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("HatMenu")).TEXT;

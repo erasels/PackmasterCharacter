@@ -19,7 +19,7 @@ public class BlueSkull extends AbstractPackmasterRelic {
     private boolean isActive = false;
 
     public BlueSkull() {
-        super(ID, RelicTier.COMMON, LandingSound.FLAT, SummonsPack.ID, OrbPack.ID, DefectPack.ID, SpheresPack.ID, FrostPack.ID);
+        super(ID, RelicTier.COMMON, LandingSound.FLAT, SummonsPack.ID, OrbPack.ID, DefectPack.ID);
     }
 
     public void atBattleStart() {

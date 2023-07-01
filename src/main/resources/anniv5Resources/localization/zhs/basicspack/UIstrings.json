@@ -1,7 +1,6 @@
 {
   "${ModID}:DuplicateModifier": {
     "TEXT": [
-      " NL 再获得一次。",
       " NL 再获得 ",
       " 次。",
       " NL 再获得X次。"

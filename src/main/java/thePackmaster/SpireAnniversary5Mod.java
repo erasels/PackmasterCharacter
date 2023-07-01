@@ -17,7 +17,6 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
@@ -45,8 +44,6 @@ import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.stances.AbstractStance;
-import com.megacrit.cardcrawl.stances.CalmStance;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import org.apache.logging.log4j.LogManager;
@@ -76,10 +73,8 @@ import thePackmaster.patches.RenderBaseGameCardPackTopTextPatches;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
-import thePackmaster.patches.overwhelmingpack.MakeRoomPatch;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.patches.psychicpack.occult.OccultPatch;
-import thePackmaster.patches.sneckopack.EnergyCountPatch;
 import thePackmaster.potions.BoosterBrew;
 import thePackmaster.potions.ModdersDelight;
 import thePackmaster.potions.PackInAJar;
@@ -98,15 +93,11 @@ import thePackmaster.rewards.CustomRewardTypes;
 import thePackmaster.rewards.PMBoosterBoxCardReward;
 import thePackmaster.rewards.SingleCardReward;
 import thePackmaster.screens.PackSetupScreen;
-import thePackmaster.stances.aggressionpack.AggressionStance;
-import thePackmaster.stances.cthulhupack.NightmareStance;
-import thePackmaster.stances.downfallpack.AncientStance;
-import thePackmaster.stances.sentinelpack.Angry;
-import thePackmaster.stances.sentinelpack.Serene;
 import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.util.Keywords;
+import thePackmaster.util.MultiModAutoAdd;
 import thePackmaster.util.TexLoader;
 import thePackmaster.util.cardvars.HoardVar;
 import thePackmaster.util.creativitypack.JediUtil;
@@ -144,7 +135,6 @@ public class SpireAnniversary5Mod implements
         PostExhaustSubscriber,
         OnPlayerTurnStartSubscriber,
         OnCreateDescriptionSubscriber,
-        OnPlayerLoseBlockSubscriber,
         PostRenderSubscriber {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
@@ -524,7 +514,7 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditRelics() {
-        new AutoAdd(modID)
+        getAutoAdd()
                 .packageFilter(AbstractPackmasterRelic.class)
                 .any(AbstractPackmasterRelic.class, (info, relic) -> {
                     if (relic.color == null) {
@@ -551,7 +541,7 @@ public class SpireAnniversary5Mod implements
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
         BaseMod.addDynamicVariable(new HoardVar());
-        new AutoAdd(modID)
+        getAutoAdd()
                 .packageFilter(AbstractPackmasterCard.class)
                 .setDefaultSeen(true)
                 .cards();
@@ -680,7 +670,7 @@ public class SpireAnniversary5Mod implements
     public void receiveEditStrings() {
         loadStrings("eng");
 
-        Collection<CtClass> packClasses = new AutoAdd(modID)
+        Collection<CtClass> packClasses = getAutoAdd()
                 .packageFilter(AbstractCardPack.class)
                 .findClasses(AbstractCardPack.class)
                 .stream()
@@ -787,7 +777,7 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receiveEditKeywords() {
-        Collection<CtClass> packClasses = new AutoAdd(modID)
+        Collection<CtClass> packClasses = getAutoAdd()
                 .packageFilter(AbstractCardPack.class)
                 .findClasses(AbstractCardPack.class)
                 .stream()
@@ -882,12 +872,9 @@ public class SpireAnniversary5Mod implements
         combatExhausts = 0;
         PenancePower.Power = 20;
         MindControlledPower.targetRng = new Random(Settings.seed + AbstractDungeon.floorNum);
-        MakeRoomPatch.reset();
         EnergyAndEchoPack.resetvalues();
-        EnergyCountPatch.energySpentThisCombat = 0;
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
         JediUtil.receiveOnBattleStart(room);
-        CthulhuPack.lunacyThisCombat = 0;
     }
 
     @Override
@@ -904,7 +891,7 @@ public class SpireAnniversary5Mod implements
 
     private static void declarePacks() {
         packsByID = new HashMap<>();
-        new AutoAdd(modID)
+        getAutoAdd()
             .packageFilter(AbstractCardPack.class)
             .any(AbstractCardPack.class, (info, pack) -> declarePack(pack));
     }
@@ -1290,7 +1277,6 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         ImproveEffect._clean();
-        MakeRoomPatch.reset();
         DynamicDynamicVariableManager.clearVariables();
         combatExhausts = 0;
     }
@@ -1373,12 +1359,6 @@ public class SpireAnniversary5Mod implements
             }
         }
         return currentRaw;
-    }
-
-    @Override
-    public int receiveOnPlayerLoseBlock(int i) {
-        i = Serene.receiveOnPlayerLoseBlock(i);
-        return i;
     }
 
     public static class Enums {
@@ -1519,41 +1499,9 @@ public class SpireAnniversary5Mod implements
     public static float time = 0f;
 
 
-    public static AbstractStance getPackmasterStanceInstance(boolean useCardRng) {
-        String stance = getPackmasterStance(useCardRng);
 
-        //Is there a cleaner way to do this without instantiating an arraylist of stances objects?
-        //Case can't use .STANCE_ID
-
-        if (Objects.equals(stance, Angry.STANCE_ID)) {
-            return new Angry();
-        } else if (Objects.equals(stance, CalmStance.STANCE_ID)) {
-            return new CalmStance();
-        } else if (Objects.equals(stance, Serene.STANCE_ID)) {
-            return new Serene();
-        } else if (Objects.equals(stance, AncientStance.STANCE_ID)) {
-            return new AncientStance();
-        } else if (Objects.equals(stance, AggressionStance.STANCE_ID)) {
-            return new AggressionStance();
-        } else {
-
-            return new NightmareStance();
-        }
-
-    }
-
-    public static String getPackmasterStance(boolean useCardRng) {
-        ArrayList<String> stances = new ArrayList<>();
-        stances.add(Angry.STANCE_ID);
-        stances.add(Serene.STANCE_ID);
-        stances.add(CalmStance.STANCE_ID);
-        stances.add(AncientStance.STANCE_ID);
-        stances.add(AggressionStance.STANCE_ID);
-        stances.add(NightmareStance.STANCE_ID);
-
-        stances.remove(p().stance.ID);
-
-        return useCardRng ? stances.get(AbstractDungeon.cardRandomRng.random(stances.size() - 1)) : stances.get(MathUtils.random(stances.size() - 1));
+    private static AutoAdd getAutoAdd() {
+        return new MultiModAutoAdd(modID, expansionPackModID);
     }
 }
 

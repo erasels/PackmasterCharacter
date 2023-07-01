@@ -4,15 +4,12 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.*;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.WitchesStrike.CrescentMoon;
-import thePackmaster.orbs.WitchesStrike.FullMoon;
 import thePackmaster.orbs.contentcreatorpack.Wanderbot;
-import thePackmaster.orbs.downfallpack.Ghostflame;
-import thePackmaster.orbs.entropy.Oblivion;
-import thePackmaster.orbs.spherespack.Blaze;
-import thePackmaster.orbs.spherespack.Polar;
 import thePackmaster.orbs.summonspack.*;
-import thePackmaster.packs.*;
+import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.ContentCreatorPack;
+import thePackmaster.packs.OrbPack;
+import thePackmaster.packs.SummonsPack;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -60,17 +57,6 @@ public interface PackmasterOrb {
         List<Supplier<AbstractOrb>> suppliers;
 
         suppliers = new ArrayList<>();
-        suppliers.add(Ghostflame::new);
-        supplierMap.put(DownfallPack.ID, suppliers);
-
-
-        suppliers = new ArrayList<>();
-        suppliers.add(CrescentMoon::new);
-        suppliers.add(FullMoon::new);
-        supplierMap.put(WitchesStrikePack.ID, suppliers);
-
-
-        suppliers = new ArrayList<>();
         suppliers.add(FireSpirit::new);
         suppliers.add(Leprechaun::new);
         suppliers.add(Louse::new);
@@ -83,19 +69,12 @@ public interface PackmasterOrb {
 
         suppliers = new ArrayList<>();
         suppliers.add(Oblivion::new);
-        supplierMap.put(EntropyPack.ID, suppliers);
         supplierMap.put(OrbPack.ID, suppliers);
 
 
         suppliers = new ArrayList<>();
         suppliers.add(Wanderbot::new);
         supplierMap.put(ContentCreatorPack.ID, suppliers);
-
-
-        suppliers = new ArrayList<>();
-        suppliers.add(Blaze::new);
-        suppliers.add(Polar::new);
-        supplierMap.put(SpheresPack.ID, suppliers);
 
 
         return supplierMap;

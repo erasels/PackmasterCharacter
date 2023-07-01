@@ -1,9 +1,0 @@
-{
-  "${ModID}:DiehardPower": {
-    "NAME": "宁死不屈",
-    "DESCRIPTIONS": [
-      "下回合获得 #b",
-      " 层 #y虚弱 与 #y脆弱 。"
-    ]
-  }
-}
