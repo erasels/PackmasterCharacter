@@ -2,6 +2,7 @@ package thePackmaster.cards.fueledpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -15,14 +16,15 @@ public class BurningStrike extends AbstractFueledCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_DAMAGE = 4;
-    private static final int MAGIC = 2;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_DAMAGE = 1;
+    private static final int MAGIC = 1;
+    private static final int UPGRADE_MAGIC = 1;
 
     public BurningStrike() {
         super(ID, COST, TYPE, RARITY, TARGET);
-        baseMagicNumber = magicNumber = MAGIC;
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC;
     }
 
     @Override
@@ -34,5 +36,6 @@ public class BurningStrike extends AbstractFueledCard {
     @Override
     public void upp() {
         upgradeDamage(UPGRADE_DAMAGE);
+        upMagic(UPGRADE_MAGIC);
     }
 }

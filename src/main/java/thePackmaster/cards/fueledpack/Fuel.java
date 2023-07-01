@@ -1,19 +1,18 @@
 package thePackmaster.cards.fueledpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ConservePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.actions.fueledpack.ConsumeToDoAction;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.*;
 
-public class ChokingSmoke extends AbstractFueledCard {
-    public final static String ID = makeID(ChokingSmoke.class.getSimpleName());
+public class Fuel extends AbstractFueledCard {
+    public final static String ID = makeID(Fuel.class.getSimpleName());
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -21,7 +20,7 @@ public class ChokingSmoke extends AbstractFueledCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_MAGIC = 1;
 
-    public ChokingSmoke() {
+    public Fuel() {
         super(ID, COST, TYPE, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
     }
@@ -31,9 +30,11 @@ public class ChokingSmoke extends AbstractFueledCard {
         atb(new ConsumeToDoAction(new AbstractGameAction() {
             @Override
             public void update() {
-                forAllMonstersLiving(mo -> applyToEnemyTop(mo, new WeakPower(mo, magicNumber, false)));
+                att(new GainEnergyAction(magicNumber));
+                isDone = true;
             }
         }));
+        applyToSelf(new ConservePower(adp(), 1));
     }
 
     @Override

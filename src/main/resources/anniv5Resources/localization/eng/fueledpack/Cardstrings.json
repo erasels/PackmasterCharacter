@@ -1,11 +1,12 @@
 {
   "${ModID}:BurningStrike": {
     "NAME": "Burning Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
   },
-  "${ModID}:IridiumShield": {
-    "NAME": "Iridium Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust up to 1 card."
+  "${ModID}:FireOfLife": {
+    "NAME": "Fire of Life",
+    "DESCRIPTION": "Gain !M! Temporary_HP."
   },
   "${ModID}:Burninate": {
     "NAME": "Burninate",
@@ -15,9 +16,10 @@
     "NAME": "Conflagration",
     "DESCRIPTION": "${ModID}:Consume a card to apply !M! ${ModID}:Ignite."
   },
-  "${ModID}:ChokingSmoke": {
-    "NAME": "Choking Smoke",
-    "DESCRIPTION": "${ModID}:Consume a card to apply !M! Weak to ALL enemies."
+  "${ModID}:Fuel": {
+    "NAME": "Fuel",
+    "DESCRIPTION": "${ModID}:Consume a card to gain [E] [E] . NL Energy is conserved for next turn.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Consume a card to gain [E] [E] [E] . NL Energy is conserved for next turn."
   },
   "${ModID}:InfernalBlaze": {
     "NAME": "Infernal Blaze",
@@ -29,7 +31,8 @@
   },
   "${ModID}:PhoenixHeart": {
     "NAME": "Phoenix Heart",
-    "DESCRIPTION": "Exhaust all *Hot *Ash in your hand. NL Add a random card into your hand for each Exhausted card."
+    "DESCRIPTION": "Exhaust all *Hot *Ash in your hand. NL Add a random card into your hand for each Exhausted card.",
+    "UPGRADE_DESCRIPTION": "Exhaust all *Hot *Ash in your hand. NL Add a random Upgraded card into your hand for each Exhausted card."
   },
   "${ModID}:BurnBright": {
     "NAME": "Burn Bright",

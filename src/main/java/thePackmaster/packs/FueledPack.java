@@ -23,11 +23,11 @@ public class FueledPack extends AbstractCardPack {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(HotAsh.ID);
         cards.add(BurningStrike.ID);
-        cards.add(IridiumShield.ID);
+        cards.add(FireOfLife.ID);
         cards.add(Burninate.ID);
         cards.add(Conflagration.ID);
         cards.add(InfernalBlaze.ID);
-        cards.add(ChokingSmoke.ID);
+        cards.add(Fuel.ID);
         cards.add(PlayingWithFire.ID);
         cards.add(PhoenixHeart.ID);
         cards.add(BurnBright.ID);

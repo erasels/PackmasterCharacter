@@ -1,35 +1,34 @@
 package thePackmaster.cards.fueledpack;
 
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class IridiumShield extends AbstractFueledCard {
-    public final static String ID = makeID(IridiumShield.class.getSimpleName());
+public class FireOfLife extends AbstractFueledCard {
+    public final static String ID = makeID(FireOfLife.class.getSimpleName());
     private static final int COST = 1;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BLOCK = 3;
+    private static final int MAGIC = 7;
+    private static final int UPGRADE_MAGIC = 3;
 
-    public IridiumShield() {
+    public FireOfLife() {
         super(ID, COST, TYPE, RARITY, TARGET);
-        baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = MAGIC;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-        atb(new ExhaustAction(1, false, true, true));
+        atb(new AddTemporaryHPAction(p, p, magicNumber));
     }
 
     @Override
     public void upp() {
-        upgradeBlock(UPGRADE_BLOCK);
+        upMagic(UPGRADE_MAGIC);
     }
 }
