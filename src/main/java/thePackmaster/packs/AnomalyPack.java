@@ -15,7 +15,7 @@ public class AnomalyPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public AnomalyPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 3, 4, 1, 4, PackSummary.Tags.Exhaust, PackSummary.Tags.Discard));
         hatHidesHair = true;
     }
 

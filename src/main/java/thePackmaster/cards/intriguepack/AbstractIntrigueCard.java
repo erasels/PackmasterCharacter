@@ -4,21 +4,18 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-public abstract class AbstractIntrigueCard extends AbstractPackmasterCard
-{
-    public AbstractIntrigueCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target)
-    {
+public abstract class AbstractIntrigueCard extends AbstractPackmasterCard {
+    public AbstractIntrigueCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target) {
         super(cardID, cost, type, rarity, target, "intrigue");
 
     }
-    public AbstractIntrigueCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color)
-    {
-        super(cardID, cost, type, rarity, target, color,"intrigue");
+
+    public AbstractIntrigueCard(String cardID, int cost, CardType type, CardRarity rarity, CardTarget target, CardColor color) {
+        super(cardID, cost, type, rarity, target, color, "intrigue");
 
     }
 
-    public static boolean isMundane(AbstractCard c)
-    {
+    public static boolean isMundane(AbstractCard c) {
         if (c.color == CardColor.CURSE)
             return false;
 
@@ -27,33 +24,25 @@ public abstract class AbstractIntrigueCard extends AbstractPackmasterCard
         return false;
     }
 
-    public static boolean isPrecious(AbstractCard c)
-    {
+    public static boolean isPrecious(AbstractCard c) {
         if (c.color == CardColor.CURSE)
             return false;
 
-        if (c.rarity == CardRarity.UNCOMMON || c.rarity == CardRarity.RARE)
-            return true;
-        return false;
+        return c.rarity == CardRarity.UNCOMMON || c.rarity == CardRarity.RARE;
     }
 
-    public static boolean isPromotable(AbstractCard c)
-    {
+    public static boolean isPromotable(AbstractCard c) {
         if (c.color == CardColor.CURSE)
             return false;
 
-        if (c.rarity == CardRarity.COMMON || c.rarity == CardRarity.BASIC || c.rarity == CardRarity.SPECIAL || c.rarity == CardRarity.UNCOMMON)
-            return true;
-        return false;
+        return c.rarity == CardRarity.COMMON || c.rarity == CardRarity.BASIC || c.rarity == CardRarity.SPECIAL || c.rarity == CardRarity.UNCOMMON;
     }
 
-    public static boolean promote(AbstractCard c)
-    {
+    public static boolean promote(AbstractCard c) {
         if (c.color == CardColor.CURSE)
             return false;
 
-        if (c.rarity == CardRarity.COMMON || c.rarity == CardRarity.BASIC || c.rarity == CardRarity.SPECIAL || c.rarity == CardRarity.UNCOMMON)
-        {
+        if (c.rarity == CardRarity.COMMON || c.rarity == CardRarity.BASIC || c.rarity == CardRarity.SPECIAL || c.rarity == CardRarity.UNCOMMON) {
             if (c.rarity == CardRarity.UNCOMMON)
                 c.rarity = CardRarity.RARE;
             else
@@ -65,8 +54,7 @@ public abstract class AbstractIntrigueCard extends AbstractPackmasterCard
         return false;
     }
 
-    public static boolean demote(AbstractCard c)
-    {
+    public static boolean demote(AbstractCard c) {
         if (c.color == CardColor.CURSE)
             return false;
 
@@ -75,8 +63,7 @@ public abstract class AbstractIntrigueCard extends AbstractPackmasterCard
             c.superFlash(Color.GRAY.cpy());
             return true;
         }
-        if (c.rarity == CardRarity.UNCOMMON)
-        {
+        if (c.rarity == CardRarity.UNCOMMON) {
             c.rarity = CardRarity.COMMON;
             c.superFlash(Color.GRAY.cpy());
             return true;
@@ -85,8 +72,7 @@ public abstract class AbstractIntrigueCard extends AbstractPackmasterCard
         return false;
     }
 
-    public static boolean fullDemote(AbstractCard c)
-    {
+    public static boolean fullDemote(AbstractCard c) {
         if (c.color == CardColor.CURSE)
             return false;
 
