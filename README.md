@@ -11,7 +11,7 @@ https://docs.google.com/document/d/1Gs004Gur4DfZ8vly8rFDjcnRojt6Ptsk6rH_GyZx_XY
 The sheet for maintaining information on your booster pack can be found here:  
 https://docs.google.com/spreadsheets/d/1MoLN5qyNtclCqOPgAW9_poDS4HPhTGOmahWSIA1FgCg  
   
-The cut-off point for PRs that will be included in the first release will be 18th of January 2023. Although, PRs made after that point will still be merged and maintained, so don't be discouraged if you're late.  
+Any pull requests for additional packs should directed to this https://github.com/erasels/Packmaster-Expansion-Packs repository. 
   
 To make a contribution, you must have a GitHub account. 
 For the specifics of how to fork this repo and then make a pull request, please look at this guide:
