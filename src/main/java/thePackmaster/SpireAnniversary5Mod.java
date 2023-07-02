@@ -169,6 +169,7 @@ public class SpireAnniversary5Mod implements
 
     public static final String modID = "anniv5";
     public static final String expansionPackModID = "expansionPacks";
+    public static boolean isExpansionLoaded = false;
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = modID + "Resources/images/char/mainChar/corpse.png";
@@ -550,6 +551,7 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostInitialize() {
+        isExpansionLoaded = Loader.isModLoaded(SpireAnniversary5Mod.expansionPackModID);
         declarePacks();
         for (EditPacksSubscriber sub : editPacksSubscribers)
             sub.receiveEditPacks();
