@@ -78,8 +78,6 @@ public class MainMenuExpansionPacksButton extends Button {
                 }
                 if (!found) {
                     SpireAnniversary5Mod.logger.error("Could not find expansion packs??? Please open a bug report on the steam workshop.");
-                } else {
-                    //show that it's enabled remind them to restart and remove this button
                 }
                 singleTimeSetup = false;
             }
