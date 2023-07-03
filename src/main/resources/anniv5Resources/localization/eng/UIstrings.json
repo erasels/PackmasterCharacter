@@ -223,5 +223,12 @@
       "What do you keep in there anyway?",
       "One day they will make the final pack."
     ]
+  },
+  "${ModID}:MainMenuExpansionPacksButton": {
+    "TEXT": [
+      "Enable Additional Packs!",
+      "You're missing some packs, #gclick #gthis #gto #genable #gthem. More variety, but longer initial load time. NL #yRequires #yRestart!",
+      "Restart Required!"
+    ]
   }
 }

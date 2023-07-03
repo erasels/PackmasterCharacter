@@ -18,7 +18,7 @@ public class MainMenuExpansionReminderPatches {
     public static class RenderPatch {
         @SpirePostfixPatch
         public static void patch(TitleBackground __instance, SpriteBatch sb) {
-            if(!SpireAnniversary5Mod.isExpansionLoaded) {
+            if(!SpireAnniversary5Mod.isExpansionLoaded && SpireAnniversary5Mod.initializedStrings) {
                 reminderButton.render(sb);
             }
         }
@@ -28,7 +28,7 @@ public class MainMenuExpansionReminderPatches {
     public static class UpdatePatch {
         @SpirePostfixPatch
         public static void patch(TitleBackground __instance) {
-            if(!SpireAnniversary5Mod.isExpansionLoaded) {
+            if(!SpireAnniversary5Mod.isExpansionLoaded && SpireAnniversary5Mod.initializedStrings) {
                 reminderButton.update();
             }
         }

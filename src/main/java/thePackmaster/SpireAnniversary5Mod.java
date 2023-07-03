@@ -66,10 +66,7 @@ import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
-import thePackmaster.patches.CompendiumPatches;
-import thePackmaster.patches.MainMenuUIPatch;
-import thePackmaster.patches.MetricsPatches;
-import thePackmaster.patches.RenderBaseGameCardPackTopTextPatches;
+import thePackmaster.patches.*;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
@@ -244,6 +241,8 @@ public class SpireAnniversary5Mod implements
     public static boolean selectedCards = false;
     public static int combatExhausts = 0;
     public static int cardsRippedThisTurn;
+
+    public static boolean initializedStrings = false;
 
 
     public static String makeID(String idText) {
@@ -552,6 +551,9 @@ public class SpireAnniversary5Mod implements
     @Override
     public void receivePostInitialize() {
         isExpansionLoaded = Loader.isModLoaded(SpireAnniversary5Mod.expansionPackModID);
+        initializedStrings = true;
+        MainMenuExpansionPacksButton.initStrings();
+
         declarePacks();
         for (EditPacksSubscriber sub : editPacksSubscribers)
             sub.receiveEditPacks();
