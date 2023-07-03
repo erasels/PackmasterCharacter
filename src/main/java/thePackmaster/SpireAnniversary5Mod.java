@@ -66,10 +66,7 @@ import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
-import thePackmaster.patches.CompendiumPatches;
-import thePackmaster.patches.MainMenuUIPatch;
-import thePackmaster.patches.MetricsPatches;
-import thePackmaster.patches.RenderBaseGameCardPackTopTextPatches;
+import thePackmaster.patches.*;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
@@ -169,6 +166,7 @@ public class SpireAnniversary5Mod implements
 
     public static final String modID = "anniv5";
     public static final String expansionPackModID = "expansionPacks";
+    public static boolean isExpansionLoaded = false;
     public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = modID + "Resources/images/char/mainChar/corpse.png";
@@ -243,6 +241,8 @@ public class SpireAnniversary5Mod implements
     public static boolean selectedCards = false;
     public static int combatExhausts = 0;
     public static int cardsRippedThisTurn;
+
+    public static boolean initializedStrings = false;
 
 
     public static String makeID(String idText) {
@@ -346,6 +346,7 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterRainbowEnabled","FALSE");
             defaults.put("PackmasterUnseenHats","");
             defaults.put("PackmasterShowSummaries","TRUE");
+            defaults.put("PackmasterEPSEEN","FALSE");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
             modConfig.load();
 
@@ -439,6 +440,20 @@ public class SpireAnniversary5Mod implements
         if(modConfig == null) return;
         try {
             modConfig.setBool("PackmasterAllowMultipleNONE", !modConfig.getBool("PackmasterAllowMultipleNONE"));
+            modConfig.save();
+        } catch (Exception e) {
+            logger.error(e);
+        }
+    }
+
+    public static boolean isEPSEEN() {
+        if(modConfig == null) return true;
+        return modConfig.getBool("PackmasterEPSEEN");
+    }
+    public static void saveEPSEEN() {
+        if(modConfig == null) return;
+        try {
+            SpireAnniversary5Mod.modConfig.setBool("PackmasterEPSEEN", true);
             modConfig.save();
         } catch (Exception e) {
             logger.error(e);
@@ -550,6 +565,10 @@ public class SpireAnniversary5Mod implements
 
     @Override
     public void receivePostInitialize() {
+        isExpansionLoaded = Loader.isModLoaded(SpireAnniversary5Mod.expansionPackModID);
+        initializedStrings = true;
+        MainMenuExpansionPacksButton.initStrings();
+
         declarePacks();
         for (EditPacksSubscriber sub : editPacksSubscribers)
             sub.receiveEditPacks();

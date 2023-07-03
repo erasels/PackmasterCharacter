@@ -98,7 +98,7 @@ public class MetricsPatches {
                         addDataMethod.invoke(metrics, "customDraftConfiguration", SpireAnniversary5Mod.modConfig.getString("PackmasterCustomDraftSelection"));
 
                     addDataMethod.invoke(metrics, "pickedHat", SpireAnniversary5Mod.getLastPickedHatID());
-                    addDataMethod.invoke(metrics, "enabledExpansionPacks", Loader.isModLoaded(SpireAnniversary5Mod.expansionPackModID));
+                    addDataMethod.invoke(metrics, "enabledExpansionPacks", SpireAnniversary5Mod.isExpansionLoaded);
 
 
                     Method gatherAllDataMethod = Metrics.class.getDeclaredMethod("gatherAllData", boolean.class, boolean.class, MonsterGroup.class);

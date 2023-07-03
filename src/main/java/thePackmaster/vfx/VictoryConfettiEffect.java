@@ -50,6 +50,11 @@ public class VictoryConfettiEffect extends AbstractGameEffect {
         );
     }
 
+    public VictoryConfettiEffect(float x, float y, float imgScale) {
+        this(x, y);
+        totalscale = imgScale;
+    }
+
     public VictoryConfettiEffect(float x, float y) {
         int randomtex = MathUtils.random(0,2);
 
@@ -127,7 +132,7 @@ public class VictoryConfettiEffect extends AbstractGameEffect {
             this.FinalTexture = texture_back;
 
         this.duration -= dt;
-        if (this.duration < 0.0F) {
+        if (this.duration < 0.0F || y > Settings.HEIGHT + FinalTexture.getHeight() || y < -FinalTexture.getHeight()) {
             this.isDone = true;
         }
     }
