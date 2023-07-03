@@ -1,9 +1,0 @@
-{
-  "${ModID}:IchorGobletPower": {
-    "NAME": "灵液之杯",
-    "DESCRIPTIONS": [
-      "下 #b",
-      " 个回合开始时获得 [E] 。若失去生命，立即获得全部。"
-    ]
-  }
-}

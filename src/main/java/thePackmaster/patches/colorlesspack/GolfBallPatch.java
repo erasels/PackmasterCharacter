@@ -26,4 +26,12 @@ public class GolfBallPatch {
         }
     }
 
+    @SpirePatch2(clz= AbstractPlayer.class, method = "applyStartOfCombatPreDrawLogic")
+    public static class BattleStartHookPatch {
+        @SpirePrefixPatch
+        public static void patch(AbstractPlayer __instance) {
+            GolfBall.BLOCK_AMT_LOST = 0;
+        }
+    }
+
 }

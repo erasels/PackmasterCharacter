@@ -1,8 +1,0 @@
-{
-  "${ModID}:Nightmare": {
-    "NAME": "Nightmare",
-    "DESCRIPTION": [
-      "Whenever you play a card, lose #b1 #ySanity. Whenever you play a #yLunacy, draw #b2 cards. NL Exit this #yStance at the end of your turn."
-    ]
-  }
-}

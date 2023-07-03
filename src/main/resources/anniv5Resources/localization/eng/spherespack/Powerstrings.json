@@ -1,9 +1,0 @@
-{
-  "${ModID}:ChaosGenerator": {
-    "NAME": "Chaos Generator",
-    "DESCRIPTIONS": [
-      "At the start of your turn, #yChannel #b{0} random Orb.",
-      "At the start of your turn, #yChannel #b{0} random Orbs."
-    ]
-  }
-}

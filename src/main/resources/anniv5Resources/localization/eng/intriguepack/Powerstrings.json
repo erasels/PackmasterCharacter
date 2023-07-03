@@ -1,9 +1,0 @@
-{
-  "${ModID}:PowerStrugglePower": {
-    "NAME": "Power Struggle",
-    "DESCRIPTIONS": [
-      "Whenever you play a rare card, gain #b",
-      " Energy and #yDemote it."
-    ]
-  }
-}
