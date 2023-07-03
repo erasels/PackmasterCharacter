@@ -230,5 +230,12 @@
       "You're missing some packs, #gclick #gthis #gto #genable #gthem. More variety, but longer initial load time. NL #yRequires #yRestart!",
       "Restart Required!"
     ]
+  },
+  "${ModID}:MainMenuFTUE": {
+    "TEXT": [
+      "Packmaster Expansion packs!",
+      "Hey, due to memory issues we made Packmaster modular. Due to this you'll have to enable \"The Packmaster: Expansion Packs\" to get all packs. NL Either enable it yourself, or use the convenient button to the right on the main menu screen.",
+      "Continue"
+    ]
   }
 }

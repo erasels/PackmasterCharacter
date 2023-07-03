@@ -29,7 +29,7 @@ import java.util.ArrayList;
 public class MainMenuExpansionPacksButton extends Button {
     private static String[] TEXT;
     public static final Texture tex = TexLoader.getTexture(SpireAnniversary5Mod.makeImagePath("ui/MMReminderBtn.png"));
-    private static boolean singleTimeSetup = true;
+    public static boolean singleTimeSetup = true;
     private static final float PARTICLE_CD = 0.7f;
     private float particleTimer = PARTICLE_CD;
     private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
@@ -51,6 +51,9 @@ public class MainMenuExpansionPacksButton extends Button {
         fadeOutUpdate();
 
         super.update();
+
+        updateGlow();
+        updateParticles();
 
         if(pressed) {
             if(singleTimeSetup) {
@@ -84,26 +87,6 @@ public class MainMenuExpansionPacksButton extends Button {
 
             return;
         }
-
-        updateGlow();
-
-        this.particleTimer -= Gdx.graphics.getDeltaTime();
-        if (this.particleTimer < 0.0F) {
-            this.particleTimer = PARTICLE_CD;
-            float expandMod = 20f * Settings.xScale;
-
-            for (int i = 0; i < MathUtils.random(1, 3); i++) {
-                float starX = hb.x - expandMod, endX = starX + hb.width + expandMod;
-                float startY = hb.y - expandMod, endY = startY + hb.height + expandMod;
-
-                effects.add(new VictoryConfettiEffect(MathUtils.random(starX, endX), MathUtils.random(startY, endY), MathUtils.random(0.2f, 0.5f)));
-            }
-        }
-
-        glows.forEach(AbstractGameEffect::update);
-        effects.forEach(AbstractGameEffect::update);
-        glows.removeIf(g -> g.isDone);
-        effects.removeIf(e -> e.isDone);
 
         if(hb.hovered) {
             TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.xScale,
@@ -141,10 +124,39 @@ public class MainMenuExpansionPacksButton extends Button {
     private float glowtimer = 0;
 
     protected void updateGlow() {
+        glows.forEach(AbstractGameEffect::update);
+        glows.removeIf(g -> g.isDone);
+
+        if(pressed) {
+            return;
+        }
+
         glowtimer -= Gdx.graphics.getDeltaTime();
         if(glowtimer <= 0) {
             glowtimer = GLOW_TIME;
             glows.add(new GlowParticle(tex, hb.cX, hb.cY, 0, 1.5f));
+        }
+    }
+
+    protected void updateParticles() {
+        effects.forEach(AbstractGameEffect::update);
+        effects.removeIf(e -> e.isDone);
+
+        if(pressed) {
+            return;
+        }
+
+        this.particleTimer -= Gdx.graphics.getDeltaTime();
+        if (this.particleTimer < 0.0F) {
+            this.particleTimer = PARTICLE_CD;
+            float expandMod = 20f * Settings.xScale;
+
+            for (int i = 0; i < MathUtils.random(1, 3); i++) {
+                float starX = hb.x - expandMod, endX = starX + hb.width + expandMod;
+                float startY = hb.y - expandMod, endY = startY + hb.height + expandMod;
+
+                effects.add(new VictoryConfettiEffect(MathUtils.random(starX, endX), MathUtils.random(startY, endY), MathUtils.random(0.2f, 0.5f)));
+            }
         }
     }
 

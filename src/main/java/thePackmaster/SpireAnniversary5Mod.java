@@ -346,6 +346,7 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterRainbowEnabled","FALSE");
             defaults.put("PackmasterUnseenHats","");
             defaults.put("PackmasterShowSummaries","TRUE");
+            defaults.put("PackmasterEPSEEN","FALSE");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
             modConfig.load();
 
@@ -439,6 +440,20 @@ public class SpireAnniversary5Mod implements
         if(modConfig == null) return;
         try {
             modConfig.setBool("PackmasterAllowMultipleNONE", !modConfig.getBool("PackmasterAllowMultipleNONE"));
+            modConfig.save();
+        } catch (Exception e) {
+            logger.error(e);
+        }
+    }
+
+    public static boolean isEPSEEN() {
+        if(modConfig == null) return true;
+        return modConfig.getBool("PackmasterEPSEEN");
+    }
+    public static void saveEPSEEN() {
+        if(modConfig == null) return;
+        try {
+            SpireAnniversary5Mod.modConfig.setBool("PackmasterEPSEEN", true);
             modConfig.save();
         } catch (Exception e) {
             logger.error(e);
