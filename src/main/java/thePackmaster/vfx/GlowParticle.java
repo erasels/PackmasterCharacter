@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class GlowParticle extends AbstractGameEffect {
     private static final float DURATION = 3f;
-    private float scale = 0.01f, maxScale = 2f;
+    private float scale = 0.01f, maxScale;
     private Texture img;
     private float x, y;
 
@@ -32,7 +32,7 @@ public class GlowParticle extends AbstractGameEffect {
     @Override
     public void update() {
         duration -= Gdx.graphics.getDeltaTime();
-        scale = Interpolation.fade.apply(Settings.scale, maxScale * Settings.scale, 1f - duration / DURATION);
+        scale = Interpolation.fade.apply(1f, maxScale, 1f - duration / DURATION);
         color.a = Interpolation.fade.apply(1f, 0f, 1f - duration / DURATION) / 2f;
 
         if (duration < 0f) {
@@ -44,7 +44,7 @@ public class GlowParticle extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setBlendFunction(GL30.GL_SRC_ALPHA, GL30.GL_ONE); // Additive Mode
         sb.setColor(color);
-        float imageWidth = img.getWidth(), imageHeight = img.getHeight();
+        float imageWidth = img.getWidth() * Settings.scale, imageHeight = img.getHeight() * Settings.scale;
         sb.draw(
                 img,
                 x - imageWidth / 2f,
@@ -58,10 +58,11 @@ public class GlowParticle extends AbstractGameEffect {
                 rotation,
                 0,
                 0,
-                (int) imageWidth,
-                (int) imageHeight,
+                img.getWidth(),
+                img.getHeight(),
                 false,
-                false);
+                false
+        );
         sb.setBlendFunction(GL30.GL_SRC_ALPHA, GL30.GL_ONE_MINUS_SRC_ALPHA); // NORMAL
     }
 

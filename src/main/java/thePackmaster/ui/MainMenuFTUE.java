@@ -99,7 +99,13 @@ public class MainMenuFTUE {
         //Render texture
         if(img != null) {
             sb.setColor(Color.WHITE);
-            sb.draw(img, x - ((W * Settings.xScale) /2f) - img.getWidth(), y - (img.getHeight() / 2f));
+            sb.draw(
+                    img,
+                    x - ((W * Settings.xScale) /2f) - (img.getWidth() * Settings.scale),
+                    y - ((img.getHeight() * Settings.scale) / 2f),
+                    img.getWidth() * Settings.scale,
+                    img.getHeight() * Settings.scale
+            );
         }
 
 
