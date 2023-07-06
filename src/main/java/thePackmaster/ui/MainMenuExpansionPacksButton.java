@@ -12,6 +12,7 @@ import com.evacipated.cardcrawl.modthespire.ModList;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
@@ -41,6 +42,7 @@ public class MainMenuExpansionPacksButton extends Button {
 
     public MainMenuExpansionPacksButton(float x, float y) {
         super(x, y, tex);
+        hb = new Hitbox(x, y, tex.getWidth() * Settings.xScale, tex.getHeight() * Settings.yScale);
     }
 
     @Override
@@ -108,7 +110,14 @@ public class MainMenuExpansionPacksButton extends Button {
             sb.setColor(activeColor);
         }
 
-        sb.draw(tex, x, y);
+        sb.draw(
+                tex,
+                x,
+                y,
+                tex.getWidth() * Settings.scale,
+                tex.getHeight() * Settings.scale
+        );
+
         sb.setColor(Color.WHITE);
 
         if(pressed) {
@@ -149,11 +158,11 @@ public class MainMenuExpansionPacksButton extends Button {
         this.particleTimer -= Gdx.graphics.getDeltaTime();
         if (this.particleTimer < 0.0F) {
             this.particleTimer = PARTICLE_CD;
-            float expandMod = 20f * Settings.xScale;
+            float expandMod = 5f * Settings.xScale;
 
             for (int i = 0; i < MathUtils.random(1, 3); i++) {
                 float starX = hb.x - expandMod, endX = starX + hb.width + expandMod;
-                float startY = hb.y - expandMod, endY = startY + hb.height + expandMod;
+                float startY = hb.y, endY = startY + hb.height;
 
                 effects.add(new VictoryConfettiEffect(MathUtils.random(starX, endX), MathUtils.random(startY, endY), MathUtils.random(0.2f, 0.5f)));
             }

@@ -23,8 +23,8 @@ import java.util.ArrayList;
 public class MainMenuExpansionReminderPatches {
     //Button logic
     public static Button reminderButton = new MainMenuExpansionPacksButton(
-            Settings.WIDTH * 0.95f - (MainMenuExpansionPacksButton.tex.getWidth() /2f),
-            Settings.HEIGHT * 0.35f - (MainMenuExpansionPacksButton.tex.getHeight() /2f)
+            Settings.WIDTH * 0.93f - ((MainMenuExpansionPacksButton.tex.getWidth() * Settings.xScale) /2f),
+            Settings.HEIGHT * 0.35f - ((MainMenuExpansionPacksButton.tex.getHeight() * Settings.yScale) /2f)
     );
 
     @SpirePatch2(clz = TitleBackground.class, method = "render")
