@@ -2,7 +2,6 @@ package thePackmaster.cards.boardgamepack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -10,16 +9,9 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.boardgamepack.DicePower;
 import thePackmaster.powers.boardgamepack.SkipNextTurnPower;
 import thePackmaster.util.Wiz;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

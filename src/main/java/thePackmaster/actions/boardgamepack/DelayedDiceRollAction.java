@@ -1,10 +1,7 @@
 package thePackmaster.actions.boardgamepack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import thePackmaster.powers.boardgamepack.DicePower;
-
-import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.atb;
 
 public class DelayedDiceRollAction extends AbstractGameAction {
 
@@ -14,10 +11,7 @@ public class DelayedDiceRollAction extends AbstractGameAction {
         amount = num;
     }
     public void update() {
-
-        for (int i = 0; i < amount; i++) {
-            addToBot(new ApplyPowerAction(adp(), adp(), new DicePower(adp(), sides), sides));
-        }
+        atb(new RollAction(sides, amount));
         isDone = true;
     }
 }
