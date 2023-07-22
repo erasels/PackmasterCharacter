@@ -34,7 +34,9 @@
     "Mwalls",
     "MaybeLater_x",
     "Doodle",
-    "Mixmaw"
+    "Mixmaw",
+    "iryan72",
+    "BattleFeed!"
   ],
   "description": "${project.description}",
   "version": "${project.version}",
