@@ -66,7 +66,10 @@ import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
-import thePackmaster.patches.*;
+import thePackmaster.patches.CompendiumPatches;
+import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.patches.MetricsPatches;
+import thePackmaster.patches.RenderBaseGameCardPackTopTextPatches;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
@@ -167,11 +170,6 @@ public class SpireAnniversary5Mod implements
     public static final String modID = "anniv5";
     public static final String expansionPackModID = "expansionPacks";
     public static boolean isExpansionLoaded = false;
-    public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
-    public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";
-    public static final String CORPSE = modID + "Resources/images/char/mainChar/corpse.png";
-    public static final String SKELETON_JSON = modID + "Resources/images/char/mainChar/PackmasterAnim.json";
-    public static final String SKELETON_ATLAS = modID + "Resources/images/char/mainChar/PackmasterAnim.atlas";
     private static final String ATTACK_S_ART = modID + "Resources/images/512/attack.png";
     private static final String SKILL_S_ART = modID + "Resources/images/512/skill.png";
     private static final String POWER_S_ART = modID + "Resources/images/512/power.png";
@@ -347,8 +345,8 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterUnseenHats","");
             defaults.put("PackmasterShowSummaries","TRUE");
             defaults.put("PackmasterEPSEEN","FALSE");
+            defaults.put("PackmasterCurrentSkin", "1");
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
-            modConfig.load();
 
             loadModConfigData();
         } catch (Exception e) {
@@ -460,10 +458,25 @@ public class SpireAnniversary5Mod implements
         }
     }
 
+    public static int getCurCharSkin() {
+        if(modConfig == null) return 1;
+        return ThePackmaster.currentSkinIndex > -1 ? ThePackmaster.currentSkinIndex : modConfig.getInt("PackmasterCurrentSkin");
+    }
+    public static void saveCurCharSkin() {
+        if(modConfig == null) return;
+        try {
+            SpireAnniversary5Mod.modConfig.setInt("PackmasterCurrentSkin", ThePackmaster.currentSkinIndex);
+            modConfig.save();
+        } catch (Exception e) {
+            logger.error(e);
+        }
+    }
+
     public static void loadModConfigData() {
         allPacksMode = modConfig.getBool("PackmasterAllPacksMode");
         oneFrameMode = modConfig.getBool("PackmasterOneFrameMode");
         sharedContentMode = modConfig.getBool("PackmasterContentSharingMode");
+        ThePackmaster.currentSkinIndex = getCurCharSkin();
     }
 
     public static ArrayList<String> getUnlockedHats() {
@@ -1287,6 +1300,9 @@ public class SpireAnniversary5Mod implements
             if (CardCrawlGame.isInARun() && doPackSetup && !AbstractDungeon.isScreenUp) {
                 logger.info("Starting Packmaster setup.");
                 if (HatMenu.randomHatMode) HatMenu.randomizeHat();
+                if(getCurCharSkin() == 0) {
+                    //TODO: Add random skin loading
+                }
                 startOfGamePackSetup();
                 openedStarterScreen = true;
             }

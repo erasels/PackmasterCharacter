@@ -38,6 +38,12 @@ import static thePackmaster.SpireAnniversary5Mod.*;
 import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 
 public class ThePackmaster extends CustomPlayer {
+    private static final String SKINS_DIR = modID + "Resources/images/char/mainChar/skins/";
+    public static final String SHOULDER1 =  "shoulder.png";
+    public static final String SHOULDER2 = "shoulder2.png";
+    public static final String CORPSE = "corpse.png";
+    public static final String SKELETON_JSON = "PackmasterAnim.json";
+    public static final String SKELETON_ATLAS = "PackmasterAnim.atlas";
     private static final String[] orbTextures = {
             modID + "Resources/images/char/mainChar/orb/layer1-bag.png",
             modID + "Resources/images/char/mainChar/orb/layer2-bag.png",
@@ -55,20 +61,21 @@ public class ThePackmaster extends CustomPlayer {
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
     public static float update_timer = 0;
+    public static int currentSkinIndex = -1;
     public static boolean glow_fade = false;
 
 
     public ThePackmaster(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), null, null);
         initializeClass(null,
-                SHOULDER1,
-                SHOULDER2,
-                CORPSE,
+                makeSkinPath(SHOULDER1),
+                makeSkinPath(SHOULDER2),
+                makeSkinPath(CORPSE),
                 getLoadout(), 0.0F, -10.0F, 206.0F, 230.0F, new EnergyManager(3));
 
         loadAnimation(
-                SKELETON_ATLAS,
-                SKELETON_JSON,
+                makeSkinPath(SKELETON_ATLAS),
+                makeSkinPath(SKELETON_JSON),
                 1.0f);
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         this.stateData.setMix("Hit", "Idle", 0.1F);
@@ -243,6 +250,19 @@ public class ThePackmaster extends CustomPlayer {
         }
 
         return poolCards;
+    }
+
+    public void changeSkin(int skinIndex) {
+        //TODO: Implement
+    }
+
+    private String makeSkinPath(String input) {
+        int skinIndex = SpireAnniversary5Mod.getCurCharSkin();
+        return makeSkinPath(input, skinIndex > 0 ? skinIndex : 1);
+    }
+
+    private String makeSkinPath(String input, int index) {
+        return SKINS_DIR + index + "/"+ input;
     }
 
     @Override
