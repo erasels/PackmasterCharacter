@@ -6,6 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -24,10 +25,14 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import thePackmaster.cards.*;
+import thePackmaster.cards.Cardistry;
+import thePackmaster.cards.Defend;
+import thePackmaster.cards.Rummage;
+import thePackmaster.cards.Strike;
 import thePackmaster.hats.Hats;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.relics.HandyHaversack;
+import thePackmaster.util.TexLoader;
 import thePackmaster.vfx.VictoryConfettiEffect;
 import thePackmaster.vfx.VictoryGlow;
 
@@ -67,20 +72,14 @@ public class ThePackmaster extends CustomPlayer {
 
     public ThePackmaster(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), null, null);
+        if(currentSkinIndex == -1) currentSkinIndex = SpireAnniversary5Mod.getCurCharSkin();
         initializeClass(null,
-                makeSkinPath(SHOULDER1),
-                makeSkinPath(SHOULDER2),
-                makeSkinPath(CORPSE),
+                null, //Fixes crash this would cause in SkinSystemPatches
+                null,
+                null,
                 getLoadout(), 0.0F, -10.0F, 206.0F, 230.0F, new EnergyManager(3));
 
-        loadAnimation(
-                makeSkinPath(SKELETON_ATLAS),
-                makeSkinPath(SKELETON_JSON),
-                1.0f);
-        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
-        this.stateData.setMix("Hit", "Idle", 0.1F);
-        e.setTime(e.getEndTime() * MathUtils.random());
-
+        changeSkin();
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
@@ -252,17 +251,40 @@ public class ThePackmaster extends CustomPlayer {
         return poolCards;
     }
 
+    private void changeSkin() {
+        changeSkin(SpireAnniversary5Mod.getCurCharSkin()); //Returns base skin when random and randomizes later in postUpdateSubscriber
+    }
+
     public void changeSkin(int skinIndex) {
-        //TODO: Implement
+        shoulderImg = TexLoader.getTexture(makeSkinPath(SHOULDER1, skinIndex));
+        shoulder2Img = TexLoader.getTexture(makeSkinPath(SHOULDER2, skinIndex));
+        corpseImg = TexLoader.getTexture(makeSkinPath(CORPSE, skinIndex));
+
+        //Memory leak fixed in SkinSystemPatches
+        loadAnimation(
+                makeSkinPath(SKELETON_ATLAS, skinIndex),
+                makeSkinPath(SKELETON_JSON, skinIndex),
+                1.0f);
+        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
+        this.stateData.setMix("Hit", "Idle", 0.1F);
+        e.setTime(e.getEndTime() * MathUtils.random());
     }
 
     private String makeSkinPath(String input) {
-        int skinIndex = SpireAnniversary5Mod.getCurCharSkin();
-        return makeSkinPath(input, skinIndex > 0 ? skinIndex : 1);
+        return makeSkinPath(input, SpireAnniversary5Mod.getCurCharSkin());
     }
 
     private String makeSkinPath(String input, int index) {
-        return SKINS_DIR + index + "/"+ input;
+        String skinPath = SKINS_DIR + index + "/"+ input;
+        if(!Gdx.files.internal(skinPath).exists()) {
+            skinPath = SKINS_DIR + 1 + "/"+ input; //return base skinPath if the image doesn't exist
+        }
+        return skinPath;
+    }
+
+    @Override
+    public void dispose() {
+        //Please don't dispose our cached textures, thanks
     }
 
     @Override
@@ -282,5 +304,9 @@ public class ThePackmaster extends CustomPlayer {
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_2.png")));
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_3.png")));
         return panels;
+    }
+
+    public TextureAtlas getAtlas() {
+        return atlas;
     }
 }

@@ -476,7 +476,6 @@ public class SpireAnniversary5Mod implements
         allPacksMode = modConfig.getBool("PackmasterAllPacksMode");
         oneFrameMode = modConfig.getBool("PackmasterOneFrameMode");
         sharedContentMode = modConfig.getBool("PackmasterContentSharingMode");
-        ThePackmaster.currentSkinIndex = getCurCharSkin();
     }
 
     public static ArrayList<String> getUnlockedHats() {
