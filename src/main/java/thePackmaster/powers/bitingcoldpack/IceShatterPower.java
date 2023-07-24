@@ -13,7 +13,7 @@ import thePackmaster.util.Wiz;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class IceShatterPower extends AbstractPackmasterPower {
+public class IceShatterPower extends AbstractPackmasterPower implements OnLoseBlockPower {
     public static final String POWER_ID = makeID("IceShatterPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
@@ -29,21 +29,24 @@ public class IceShatterPower extends AbstractPackmasterPower {
     }
 
     public void wasHPLost(DamageInfo info, int damageAmount) {
-        if (!activated) return;
-
-        if (damageAmount > 0 && AbstractDungeon.actionManager.turnHasEnded) {
+        if (damageAmount > 0 && AbstractDungeon.actionManager.turnHasEnded && !activated) {
+            activated = true;
             Wiz.doDmg(owner, amount, DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_HEAVY, false, true);
             flash();
+        } else if (activated) {
+            activated = false;
         }
     }
 
     @Override
+    public int onLoseBlock(DamageInfo damageInfo, int i) {
+        if (damageInfo.final <= i && activated) activated = false;
+        return i;
+    }
+
+    @Override
     public void atEndOfRound() {
-        if (!activated) {
-            activated = true;
-        } else {
-            atb(new RemoveSpecificPowerAction(owner, owner, this));
-        }
+        atb(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
