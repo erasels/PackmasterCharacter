@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 public class SkinHandler {
     private static SkinHandler instance;
-    public static final String CONFIG_CURRENT_HAT = "PackmasterCurrentSkinID";
+    public static final String CONFIG_CURRENT_SKIN = "PackmasterCurrentSkinID";
     public static HashMap<String, AbstractSkin> skinMap;
 
     private AbstractSkin currentSkin;
@@ -21,7 +21,7 @@ public class SkinHandler {
         registerSkin(PackmasterSkin.getInstance());
 
         //No data is being loaded yet
-        currentSkin = skinMap.get(SpireAnniversary5Mod.modConfig.getString(CONFIG_CURRENT_HAT));
+        currentSkin = skinMap.get(SpireAnniversary5Mod.modConfig.getString(CONFIG_CURRENT_SKIN));
     }
 
     public void initializeStrings() {
@@ -51,7 +51,7 @@ public class SkinHandler {
 
     public void saveCurSkin() {
         try {
-            SpireAnniversary5Mod.modConfig.setString(CONFIG_CURRENT_HAT, currentSkin.id);
+            SpireAnniversary5Mod.modConfig.setString(CONFIG_CURRENT_SKIN, currentSkin.id);
             SpireAnniversary5Mod.modConfig.save();
         } catch (Exception e) {
             SpireAnniversary5Mod.logger.error(e);

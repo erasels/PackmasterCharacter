@@ -116,7 +116,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.*;
-import static thePackmaster.skins.SkinHandler.CONFIG_CURRENT_HAT;
+import static thePackmaster.skins.SkinHandler.CONFIG_CURRENT_SKIN;
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -349,7 +349,7 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterUnseenHats","");
             defaults.put("PackmasterShowSummaries","TRUE");
             defaults.put("PackmasterEPSEEN","FALSE");
-            defaults.put(CONFIG_CURRENT_HAT, PackmasterSkin.SKINID);
+            defaults.put(CONFIG_CURRENT_SKIN, PackmasterSkin.SKINID);
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
 
             loadModConfigData();
