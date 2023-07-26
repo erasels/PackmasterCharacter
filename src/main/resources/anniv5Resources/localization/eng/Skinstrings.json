@@ -1,6 +1,7 @@
 {
   "${ModID}:SkinSystemUI": {
     "TEXT": [
+      "Skins",
       "Artist: "
     ]
   },
