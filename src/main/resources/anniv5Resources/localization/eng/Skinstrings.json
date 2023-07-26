@@ -1,0 +1,13 @@
+{
+  "${ModID}:SkinSystemUI": {
+    "TEXT": [
+      "Artist: "
+    ]
+  },
+  "${ModID}:packmasterSkin": {
+    "TEXT": [
+      "The Packmaster",
+      "AlexMdle"
+    ]
+  }
+}

@@ -93,6 +93,8 @@ import thePackmaster.rewards.CustomRewardTypes;
 import thePackmaster.rewards.PMBoosterBoxCardReward;
 import thePackmaster.rewards.SingleCardReward;
 import thePackmaster.screens.PackSetupScreen;
+import thePackmaster.skins.SkinHandler;
+import thePackmaster.skins.instances.PackmasterSkin;
 import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
@@ -114,6 +116,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.*;
+import static thePackmaster.skins.SkinHandler.CONFIG_CURRENT_HAT;
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -156,6 +159,7 @@ public class SpireAnniversary5Mod implements
 
     public static SpireAnniversary5Mod thismod;
     public static SpireConfig modConfig = null;
+    public static SkinHandler skinHandler = null;
 
     public static boolean doPackSetup = false;
     public static String lastCardsPackID = null;
@@ -345,13 +349,15 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterUnseenHats","");
             defaults.put("PackmasterShowSummaries","TRUE");
             defaults.put("PackmasterEPSEEN","FALSE");
-            defaults.put("PackmasterCurrentSkin", "1");
+            defaults.put(CONFIG_CURRENT_HAT, PackmasterSkin.SKINID);
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
 
             loadModConfigData();
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        skinHandler = SkinHandler.getInstance();
     }
 
     public static boolean getCustomDraftEnabled() {
@@ -452,20 +458,6 @@ public class SpireAnniversary5Mod implements
         if(modConfig == null) return;
         try {
             SpireAnniversary5Mod.modConfig.setBool("PackmasterEPSEEN", true);
-            modConfig.save();
-        } catch (Exception e) {
-            logger.error(e);
-        }
-    }
-
-    public static int getCurCharSkin() {
-        if(modConfig == null) return 1;
-        return ThePackmaster.currentSkinIndex > -1 ? ThePackmaster.currentSkinIndex : modConfig.getInt("PackmasterCurrentSkin");
-    }
-    public static void saveCurCharSkin() {
-        if(modConfig == null) return;
-        try {
-            SpireAnniversary5Mod.modConfig.setInt("PackmasterCurrentSkin", ThePackmaster.currentSkinIndex);
             modConfig.save();
         } catch (Exception e) {
             logger.error(e);
@@ -580,6 +572,7 @@ public class SpireAnniversary5Mod implements
         isExpansionLoaded = Loader.isModLoaded(SpireAnniversary5Mod.expansionPackModID);
         initializedStrings = true;
         MainMenuExpansionPacksButton.initStrings();
+        skinHandler.initializeStrings();
 
         declarePacks();
         for (EditPacksSubscriber sub : editPacksSubscribers)
@@ -737,6 +730,10 @@ public class SpireAnniversary5Mod implements
             BaseMod.loadCustomStringsFile(PowerStrings.class, filepath);
         }
         filepath = modID + "Resources/localization/" + langKey + "/UIstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(UIStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Skinstrings.json";
         if (Gdx.files.internal(filepath).exists()) {
             BaseMod.loadCustomStringsFile(UIStrings.class, filepath);
         }
@@ -1299,9 +1296,6 @@ public class SpireAnniversary5Mod implements
             if (CardCrawlGame.isInARun() && doPackSetup && !AbstractDungeon.isScreenUp) {
                 logger.info("Starting Packmaster setup.");
                 if (HatMenu.randomHatMode) HatMenu.randomizeHat();
-                if(getCurCharSkin() == 0) {
-                    //TODO: Add random skin loading
-                }
                 startOfGamePackSetup();
                 openedStarterScreen = true;
             }
@@ -1357,6 +1351,7 @@ public class SpireAnniversary5Mod implements
     public void receivePreStartGame() {
         SpireAnniversary5Mod.currentPoolPacks.clear();
         MetricsPatches.packChoices.clear();
+        //TODO: Add random skin loading
     }
 
     @Override

@@ -32,6 +32,7 @@ import thePackmaster.cards.Strike;
 import thePackmaster.hats.Hats;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.relics.HandyHaversack;
+import thePackmaster.skins.AbstractSkin;
 import thePackmaster.util.TexLoader;
 import thePackmaster.vfx.VictoryConfettiEffect;
 import thePackmaster.vfx.VictoryGlow;
@@ -43,7 +44,6 @@ import static thePackmaster.SpireAnniversary5Mod.*;
 import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 
 public class ThePackmaster extends CustomPlayer {
-    private static final String SKINS_DIR = modID + "Resources/images/char/mainChar/skins/";
     public static final String SHOULDER1 =  "shoulder.png";
     public static final String SHOULDER2 = "shoulder2.png";
     public static final String CORPSE = "corpse.png";
@@ -66,20 +66,18 @@ public class ThePackmaster extends CustomPlayer {
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
     public static float update_timer = 0;
-    public static int currentSkinIndex = -1;
     public static boolean glow_fade = false;
 
 
     public ThePackmaster(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), null, null);
-        if(currentSkinIndex == -1) currentSkinIndex = SpireAnniversary5Mod.getCurCharSkin();
         initializeClass(null,
                 null, //Fixes crash this would cause in SkinSystemPatches
                 null,
                 null,
                 getLoadout(), 0.0F, -10.0F, 206.0F, 230.0F, new EnergyManager(3));
 
-        changeSkin();
+        SpireAnniversary5Mod.skinHandler.loadCurrentSkin(this);
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
@@ -251,35 +249,20 @@ public class ThePackmaster extends CustomPlayer {
         return poolCards;
     }
 
-    private void changeSkin() {
-        changeSkin(SpireAnniversary5Mod.getCurCharSkin()); //Returns base skin when random and randomizes later in postUpdateSubscriber
-    }
-
-    public void changeSkin(int skinIndex) {
-        shoulderImg = TexLoader.getTexture(makeSkinPath(SHOULDER1, skinIndex));
-        shoulder2Img = TexLoader.getTexture(makeSkinPath(SHOULDER2, skinIndex));
-        corpseImg = TexLoader.getTexture(makeSkinPath(CORPSE, skinIndex));
+    public void loadSkinData(AbstractSkin skin) {
+        shoulderImg = TexLoader.getTexture(skin.getShoulder1Path());
+        shoulder2Img = TexLoader.getTexture(skin.getShoulder2Path());
+        corpseImg = TexLoader.getTexture(skin.getCorpsePath());
 
         //Memory leak fixed in SkinSystemPatches
         loadAnimation(
-                makeSkinPath(SKELETON_ATLAS, skinIndex),
-                makeSkinPath(SKELETON_JSON, skinIndex),
-                1.0f);
+                skin.getSkeletonAtlasPath(),
+                skin.getSkeletonJSONPath(),
+                skin.getScale()
+        );
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTime(e.getEndTime() * MathUtils.random());
-    }
-
-    private String makeSkinPath(String input) {
-        return makeSkinPath(input, SpireAnniversary5Mod.getCurCharSkin());
-    }
-
-    private String makeSkinPath(String input, int index) {
-        String skinPath = SKINS_DIR + index + "/"+ input;
-        if(!Gdx.files.internal(skinPath).exists()) {
-            skinPath = SKINS_DIR + 1 + "/"+ input; //return base skinPath if the image doesn't exist
-        }
-        return skinPath;
     }
 
     @Override
