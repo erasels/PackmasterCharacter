@@ -6,18 +6,18 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.skins.instances.PackmasterSkin;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class SkinHandler {
     private static SkinHandler instance;
     public static final String CONFIG_CURRENT_SKIN = "PackmasterCurrentSkinID";
-    public static HashMap<String, AbstractSkin> skinMap;
+    public static LinkedHashMap<String, AbstractSkin> skinMap;
 
     private AbstractSkin currentSkin;
 
     private SkinHandler() {
         //Populate skinMap
-        skinMap = new HashMap<>();
+        skinMap = new LinkedHashMap<>();
         registerSkin(PackmasterSkin.getInstance());
 
         //No data is being loaded yet
