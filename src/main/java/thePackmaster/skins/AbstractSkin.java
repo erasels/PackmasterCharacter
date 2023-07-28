@@ -13,6 +13,7 @@ public abstract class AbstractSkin {
 
     public String id, author, name, texturePath;
     protected float scale = 1f;
+    protected boolean renderHats = true;
 
     public AbstractSkin() {
     }

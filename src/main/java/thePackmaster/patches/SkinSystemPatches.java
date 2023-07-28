@@ -1,22 +1,47 @@
 package thePackmaster.patches;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInstrumentPatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 import javassist.expr.NewExpr;
 import thePackmaster.ThePackmaster;
+import thePackmaster.ui.SkinSelectionUI;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class SkinSystemPatches {
+    //UI
+    @SpirePatch2(clz = CharacterOption.class, method = "renderRelics")
+    public static class RenderSkinSelection {
+        @SpirePostfixPatch
+        public static void patch(CharacterOption __instance, SpriteBatch sb) {
+            if (__instance.c instanceof ThePackmaster && __instance.selected) {
+                SkinSelectionUI.render(sb);
+            }
+        }
+    }
+
+    @SpirePatch(clz = CharacterOption.class, method = "update")
+    public static class UpdateSkinSelection {
+        @SpirePostfixPatch
+        public static void patch(CharacterOption __instance) {
+            if (__instance.c instanceof ThePackmaster && __instance.selected) {
+                SkinSelectionUI.update();
+            }
+        }
+    }
+
     //To prevent memory leaks caused by constantly instantiating an atlas with loadAnimation, we cache
     private static Map<String, TextureAtlas> atlasCache = new HashMap<>();
 
@@ -79,9 +104,9 @@ public class SkinSystemPatches {
                             String.format(
                                     "if(%s.isPM(this) && $1 == null) {" +
                                             "$_ = null;" +
-                                    "} else {" +
+                                            "} else {" +
                                             "$_ = $proceed($$);" +
-                                    "}",
+                                            "}",
                                     SetImageEditor.class.getName()
                             )
                     );
