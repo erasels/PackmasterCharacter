@@ -66,7 +66,10 @@ import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.orbs.summonspack.Panda;
 import thePackmaster.packs.*;
-import thePackmaster.patches.*;
+import thePackmaster.patches.CompendiumPatches;
+import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.patches.MetricsPatches;
+import thePackmaster.patches.RenderBaseGameCardPackTopTextPatches;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
@@ -90,6 +93,8 @@ import thePackmaster.rewards.CustomRewardTypes;
 import thePackmaster.rewards.PMBoosterBoxCardReward;
 import thePackmaster.rewards.SingleCardReward;
 import thePackmaster.screens.PackSetupScreen;
+import thePackmaster.skins.SkinHandler;
+import thePackmaster.skins.instances.PackmasterSkin;
 import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.ui.*;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
@@ -111,6 +116,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.*;
+import static thePackmaster.skins.SkinHandler.*;
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -153,6 +159,7 @@ public class SpireAnniversary5Mod implements
 
     public static SpireAnniversary5Mod thismod;
     public static SpireConfig modConfig = null;
+    public static SkinHandler skinHandler = null;
 
     public static boolean doPackSetup = false;
     public static String lastCardsPackID = null;
@@ -167,11 +174,6 @@ public class SpireAnniversary5Mod implements
     public static final String modID = "anniv5";
     public static final String expansionPackModID = "expansionPacks";
     public static boolean isExpansionLoaded = false;
-    public static final String SHOULDER1 = modID + "Resources/images/char/mainChar/shoulder.png";
-    public static final String SHOULDER2 = modID + "Resources/images/char/mainChar/shoulder2.png";
-    public static final String CORPSE = modID + "Resources/images/char/mainChar/corpse.png";
-    public static final String SKELETON_JSON = modID + "Resources/images/char/mainChar/PackmasterAnim.json";
-    public static final String SKELETON_ATLAS = modID + "Resources/images/char/mainChar/PackmasterAnim.atlas";
     private static final String ATTACK_S_ART = modID + "Resources/images/512/attack.png";
     private static final String SKILL_S_ART = modID + "Resources/images/512/skill.png";
     private static final String POWER_S_ART = modID + "Resources/images/512/power.png";
@@ -347,13 +349,15 @@ public class SpireAnniversary5Mod implements
             defaults.put("PackmasterUnseenHats","");
             defaults.put("PackmasterShowSummaries","TRUE");
             defaults.put("PackmasterEPSEEN","FALSE");
+            defaults.put(CONFIG_CURRENT_SKIN, PackmasterSkin.SKINID);
             modConfig = new SpireConfig(modID, "GeneralConfig", defaults);
-            modConfig.load();
 
             loadModConfigData();
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        skinHandler = SkinHandler.getInstance();
     }
 
     public static boolean getCustomDraftEnabled() {
@@ -568,6 +572,7 @@ public class SpireAnniversary5Mod implements
         isExpansionLoaded = Loader.isModLoaded(SpireAnniversary5Mod.expansionPackModID);
         initializedStrings = true;
         MainMenuExpansionPacksButton.initStrings();
+        skinHandler.initializeStrings();
 
         declarePacks();
         for (EditPacksSubscriber sub : editPacksSubscribers)
@@ -725,6 +730,10 @@ public class SpireAnniversary5Mod implements
             BaseMod.loadCustomStringsFile(PowerStrings.class, filepath);
         }
         filepath = modID + "Resources/localization/" + langKey + "/UIstrings.json";
+        if (Gdx.files.internal(filepath).exists()) {
+            BaseMod.loadCustomStringsFile(UIStrings.class, filepath);
+        }
+        filepath = modID + "Resources/localization/" + langKey + "/Skinstrings.json";
         if (Gdx.files.internal(filepath).exists()) {
             BaseMod.loadCustomStringsFile(UIStrings.class, filepath);
         }
@@ -1351,6 +1360,7 @@ public class SpireAnniversary5Mod implements
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
 
             Hats.atRunStart();
+            skinHandler.setUpRandom(CardCrawlGame.loadingSave);
             //SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
@@ -1510,6 +1520,20 @@ public class SpireAnniversary5Mod implements
             public void onLoad(ArrayList<HashMap> l) {
                 if (l != null) {
                     MetricsPatches.packChoices = l;
+                }
+            }
+        });
+
+        BaseMod.addSaveField("PackmasterRandomSkinId", new CustomSavable<String>() {
+            @Override
+            public String onSave() {
+                return SkinHandler.randomId;
+            }
+
+            @Override
+            public void onLoad(String s) {
+                if (s != null) {
+                    SkinHandler.randomId = s;
                 }
             }
         });
