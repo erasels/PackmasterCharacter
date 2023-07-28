@@ -1,5 +1,6 @@
 package thePackmaster.skins;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -8,6 +9,7 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.skins.instances.PackmasterSkin;
 import thePackmaster.skins.instances.PackmistressSkin;
+import thePackmaster.skins.instances.RandomSkin;
 import thePackmaster.ui.SkinSelectionUI;
 
 import java.util.ArrayList;
@@ -16,6 +18,7 @@ import java.util.LinkedHashMap;
 public class SkinHandler {
     private static SkinHandler instance;
     public static final String CONFIG_CURRENT_SKIN = "PackmasterCurrentSkinID";
+    public static String randomId;
     public static LinkedHashMap<String, AbstractSkin> skinMap;
 
     private AbstractSkin currentSkin;
@@ -23,6 +26,7 @@ public class SkinHandler {
     private SkinHandler() {
         //Populate skinMap
         skinMap = new LinkedHashMap<>();
+        registerSkin(RandomSkin.getInstance());
         registerSkin(PackmasterSkin.getInstance());
         registerSkin(PackmistressSkin.getInstance());
 
@@ -77,6 +81,20 @@ public class SkinHandler {
 
         saveCurSkin();
         loadCurrentSkin(player);
+    }
+
+    public void setUpRandom(boolean loadingSave) {
+        if(!currentSkin.id.equals(RandomSkin.SKINID)) return; //Will be the correct skin when loading during the same run so this will be skipped.
+
+        if(loadingSave) {
+            loadSkin(randomId);
+        } else {
+            ArrayList<AbstractSkin> skins = new ArrayList<>(skinMap.values());
+            AbstractSkin randSkin = skins.get(MathUtils.random(skinMap.size()-2) + 1);
+            currentSkin = randSkin;
+            randomId = randSkin.id;
+            loadSkin(randSkin.id);
+        }
     }
 
     public static String makeSkinID(String id) {

@@ -116,7 +116,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.*;
-import static thePackmaster.skins.SkinHandler.CONFIG_CURRENT_SKIN;
+import static thePackmaster.skins.SkinHandler.*;
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -1351,7 +1351,6 @@ public class SpireAnniversary5Mod implements
     public void receivePreStartGame() {
         SpireAnniversary5Mod.currentPoolPacks.clear();
         MetricsPatches.packChoices.clear();
-        //TODO: Add random skin loading
     }
 
     @Override
@@ -1361,6 +1360,7 @@ public class SpireAnniversary5Mod implements
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
 
             Hats.atRunStart();
+            skinHandler.setUpRandom(CardCrawlGame.loadingSave);
             //SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
@@ -1520,6 +1520,20 @@ public class SpireAnniversary5Mod implements
             public void onLoad(ArrayList<HashMap> l) {
                 if (l != null) {
                     MetricsPatches.packChoices = l;
+                }
+            }
+        });
+
+        BaseMod.addSaveField("PackmasterRandomSkinId", new CustomSavable<String>() {
+            @Override
+            public String onSave() {
+                return SkinHandler.randomId;
+            }
+
+            @Override
+            public void onLoad(String s) {
+                if (s != null) {
+                    SkinHandler.randomId = s;
                 }
             }
         });

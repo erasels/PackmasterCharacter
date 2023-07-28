@@ -16,5 +16,11 @@
       "The Packmistress",
       "TheLethargicWeirdo"
     ]
+  },
+  "${ModID}:randomSkin": {
+    "TEXT": [
+      "Random",
+      "multiple"
+    ]
   }
 }
