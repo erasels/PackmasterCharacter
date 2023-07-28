@@ -2,10 +2,15 @@ package thePackmaster.skins;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import org.apache.commons.lang3.math.NumberUtils;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.skins.instances.PackmasterSkin;
+import thePackmaster.skins.instances.PackmistressSkin;
+import thePackmaster.ui.SkinSelectionUI;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 public class SkinHandler {
@@ -19,6 +24,7 @@ public class SkinHandler {
         //Populate skinMap
         skinMap = new LinkedHashMap<>();
         registerSkin(PackmasterSkin.getInstance());
+        registerSkin(PackmistressSkin.getInstance());
 
         //No data is being loaded yet
         currentSkin = skinMap.get(SpireAnniversary5Mod.modConfig.getString(CONFIG_CURRENT_SKIN));
@@ -58,6 +64,21 @@ public class SkinHandler {
         }
     }
 
+    public void iterateSkin(AbstractPlayer player, boolean forward) {
+        ArrayList<AbstractSkin> skins = new ArrayList<>(skinMap.values());
+
+        int curIndex = skins.indexOf(currentSkin);
+        if(forward) {
+            if(++curIndex >= skins.size()) curIndex = 0;
+        } else {
+            if(--curIndex < 0) curIndex = skins.size()-1;
+        }
+        currentSkin = skins.get(curIndex);
+
+        saveCurSkin();
+        loadCurrentSkin(player);
+    }
+
     public static String makeSkinID(String id) {
         return SpireAnniversary5Mod.makeID(id + "Skin");
     }
@@ -71,5 +92,14 @@ public class SkinHandler {
 
     private void registerSkin(AbstractSkin skin) {
         skinMap.put(skin.id, skin);
+    }
+
+    public float getMaxNameLength() {
+        float max = -1;
+        for(AbstractSkin skin : skinMap.values()) {
+            max = NumberUtils.max(FontHelper.getWidth(SkinSelectionUI.skinNameFont, skin.name, 1f), max);
+        }
+
+        return max;
     }
 }

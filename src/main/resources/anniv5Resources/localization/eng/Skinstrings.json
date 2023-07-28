@@ -10,5 +10,11 @@
       "The Packmaster",
       "AlexMdle"
     ]
+  },
+  "${ModID}:packmistressSkin": {
+    "TEXT": [
+      "The Packmistress",
+      "TheLethargicWeirdo"
+    ]
   }
 }
