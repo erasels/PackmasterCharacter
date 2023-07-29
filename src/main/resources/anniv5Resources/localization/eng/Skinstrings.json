@@ -1,0 +1,26 @@
+{
+  "${ModID}:SkinSystemUI": {
+    "TEXT": [
+      "Skins",
+      "Artist: "
+    ]
+  },
+  "${ModID}:packmasterSkin": {
+    "TEXT": [
+      "The Packmaster",
+      "AlexMdle"
+    ]
+  },
+  "${ModID}:packmistressSkin": {
+    "TEXT": [
+      "The Packmistress",
+      "TheLethargicWeirdo"
+    ]
+  },
+  "${ModID}:randomSkin": {
+    "TEXT": [
+      "Random",
+      "multiple"
+    ]
+  }
+}

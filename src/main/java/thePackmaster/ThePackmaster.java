@@ -6,6 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -24,10 +25,15 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import thePackmaster.cards.*;
+import thePackmaster.cards.Cardistry;
+import thePackmaster.cards.Defend;
+import thePackmaster.cards.Rummage;
+import thePackmaster.cards.Strike;
 import thePackmaster.hats.Hats;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.relics.HandyHaversack;
+import thePackmaster.skins.AbstractSkin;
+import thePackmaster.util.TexLoader;
 import thePackmaster.vfx.VictoryConfettiEffect;
 import thePackmaster.vfx.VictoryGlow;
 
@@ -38,6 +44,11 @@ import static thePackmaster.SpireAnniversary5Mod.*;
 import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 
 public class ThePackmaster extends CustomPlayer {
+    public static final String SHOULDER1 =  "shoulder.png";
+    public static final String SHOULDER2 = "shoulder2.png";
+    public static final String CORPSE = "corpse.png";
+    public static final String SKELETON_JSON = "PackmasterAnim.json";
+    public static final String SKELETON_ATLAS = "PackmasterAnim.atlas";
     private static final String[] orbTextures = {
             modID + "Resources/images/char/mainChar/orb/layer1-bag.png",
             modID + "Resources/images/char/mainChar/orb/layer2-bag.png",
@@ -61,19 +72,12 @@ public class ThePackmaster extends CustomPlayer {
     public ThePackmaster(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), null, null);
         initializeClass(null,
-                SHOULDER1,
-                SHOULDER2,
-                CORPSE,
+                null, //Fixes crash this would cause in SkinSystemPatches
+                null,
+                null,
                 getLoadout(), 0.0F, -10.0F, 206.0F, 230.0F, new EnergyManager(3));
 
-        loadAnimation(
-                SKELETON_ATLAS,
-                SKELETON_JSON,
-                1.0f);
-        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
-        this.stateData.setMix("Hit", "Idle", 0.1F);
-        e.setTime(e.getEndTime() * MathUtils.random());
-
+        SpireAnniversary5Mod.skinHandler.loadCurrentSkin(this);
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
@@ -245,6 +249,27 @@ public class ThePackmaster extends CustomPlayer {
         return poolCards;
     }
 
+    public void loadSkinData(AbstractSkin skin) {
+        shoulderImg = TexLoader.getTexture(skin.getShoulder1Path());
+        shoulder2Img = TexLoader.getTexture(skin.getShoulder2Path());
+        corpseImg = TexLoader.getTexture(skin.getCorpsePath());
+
+        //Memory leak fixed in SkinSystemPatches
+        loadAnimation(
+                skin.getSkeletonAtlasPath(),
+                skin.getSkeletonJSONPath(),
+                skin.getScale()
+        );
+        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
+        this.stateData.setMix("Hit", "Idle", 0.1F);
+        e.setTime(e.getEndTime() * MathUtils.random());
+    }
+
+    @Override
+    public void dispose() {
+        //Please don't dispose our cached textures, thanks
+    }
+
     @Override
     public void renderPlayerImage(SpriteBatch sb) {
         Hats.preRenderPlayer(sb, this);
@@ -262,5 +287,9 @@ public class ThePackmaster extends CustomPlayer {
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_2.png")));
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_3.png")));
         return panels;
+    }
+
+    public TextureAtlas getAtlas() {
+        return atlas;
     }
 }
