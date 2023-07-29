@@ -36,7 +36,7 @@
   },
   "${ModID}:PremiumSelection": {
     "NAME": "优质之选",
-    "DESCRIPTION": "从 !M! 张随机 ${ModID}:异色 稀有牌红选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "从 !M! 张随机 ${ModID}:异色 稀有牌中选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
   },
   "${ModID}:FlawlessPrism": {
     "NAME": "无暇棱镜",
