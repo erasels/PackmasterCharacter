@@ -44,6 +44,10 @@ public class SkinManager {
         return currentSkin;
     }
 
+    public static boolean shouldRenderHat() {
+        return getInstance().currentSkin.renderHats;
+    }
+
     public void loadSkin(String skinID, AbstractPlayer player) {
         currentSkin = skinMap.get(skinID);
         if(player instanceof ThePackmaster) {
