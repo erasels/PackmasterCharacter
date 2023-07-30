@@ -33,6 +33,7 @@ import thePackmaster.cards.Cardistry;
 import thePackmaster.cards.Defend;
 import thePackmaster.cards.Rummage;
 import thePackmaster.cards.Strike;
+import thePackmaster.hats.HatMenu;
 import thePackmaster.hats.HatsManager;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.relics.HandyHaversack;
@@ -294,6 +295,11 @@ public class ThePackmaster extends CustomPlayer {
         if (headBone == null) {
             findHatFields();
         }
+
+        if(HatMenu.specialHats.containsKey(hatID)) {
+            hatID = "No"; //Don't render hat on special hats
+        }
+
         if (checkHat(hatID))
             return;
         setHat(hatID);
@@ -404,9 +410,6 @@ public class ThePackmaster extends CustomPlayer {
 
     @Override
     public void renderPlayerImage(SpriteBatch sb) {
-        if (headSlot == null) {
-            findHatFields();
-        }
         float x = skeleton.getX() + headSlot.getBone().getWorldX();
         float y = skeleton.getY() + headSlot.getBone().getWorldY() - HAT_Y_OFF * headSlot.getBone().getScaleY();
         HatsManager.preRenderPlayer(sb, this, x, y);
