@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.options.DropdownMenu;
@@ -26,7 +27,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-import static thePackmaster.hats.Hats.currentHat;
+import static thePackmaster.hats.HatsManager.currentHat;
 
 public class HatMenu {
     public boolean isOpen = false;
@@ -161,9 +162,9 @@ public class HatMenu {
         currentlyUnseenHats.clear();
         for (AbstractCardPack s : sortedPacks) {
             //if (unlockedHats.contains(s.packID)) SpireAnniversary5Mod.logger.info("Hat unlock exists: " + s.packID);
-            //if (UNLOCK_ALL_HATS) SpireAnniversary5Mod.logger.info("Unlock All Hats enabled and is unlocking " + s.packID);
+            //if (UNLOCK_ALL_HATS) SpireAnniversary5Mod.logger.info("Unlock All HatsManager enabled and is unlocking " + s.packID);
 
-            if (Gdx.files.internal(Hats.getImagePathFromHatID(s.packID)).exists() || specialHats.containsKey(s.packID)) {
+            if (Gdx.files.internal(HatsManager.getImagePathFromHatID(s.packID)).exists() || specialHats.containsKey(s.packID)) {
                 if (UNLOCK_ALL_HATS || unlockedHats.contains(s.packID)) {
                     hats.add(s.packID);
                     if (unlockedHats.contains(s.packID)) {
@@ -211,7 +212,7 @@ public class HatMenu {
         } else {
             currentHat = Wiz.getRandomItem(currentlyUnlockedHats);
         }
-        Hats.addHat(true, currentHat);
+        HatsManager.addHat(AbstractDungeon.player, currentHat);
         SpireAnniversary5Mod.logger.info("Randomizer chose hat: " + currentHat);
     }
 
@@ -229,7 +230,7 @@ public class HatMenu {
             invalidHatSelected = false;
             currentHat = null;
             //SpireAnniversary5Mod.logger.info("Removing hat.");
-            Hats.removeHat(false);
+            HatsManager.removeHat(getDummy());
             flavorText = "";
             if (currentlyUnlockedRainbows.contains(CoreSetPack.ID)) {
                 showRainbowButton = true;
@@ -239,14 +240,14 @@ public class HatMenu {
             if (currentlyUnlockedHats.isEmpty()) {
                 invalidHatSelected = true;
                 SpireAnniversary5Mod.logger.info("Selected Random but no hats are unlocked.");
-                Hats.removeHat(false);
+                HatsManager.removeHat(getDummy());
                 flavorText = TEXT[8];
                 showRainbowButton = false;
                 if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
             } else {
                 invalidHatSelected = false;
                 //SpireAnniversary5Mod.logger.info("Selected Random.");
-                Hats.addHat(false, "Locked");
+                HatsManager.addHat(getDummy(), "Locked");
                 randomHatMode = true;
                 flavorText = TEXT[8];
                 if (!currentlyUnlockedRainbows.isEmpty()) {
@@ -260,7 +261,7 @@ public class HatMenu {
             //SpireAnniversary5Mod.logger.info("Selected a locked hat.");
             invalidHatSelected = true;
             currentHat = null;
-            Hats.addHat(false, "Locked");
+            HatsManager.addHat(getDummy(), "Locked");
             flavorText = TEXT[2] + SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[3];
             showRainbowButton = false;
             if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
@@ -268,7 +269,7 @@ public class HatMenu {
             invalidHatSelected = true;
             currentHat = null;
             //SpireAnniversary5Mod.logger.info("Selected a missing hat.");
-            Hats.removeHat(false);
+            HatsManager.removeHat(getDummy());
             flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[7];
             showRainbowButton = false;
             if (rainbowButton.toggle.enabled) rainbowButton.toggle.toggle();
@@ -276,7 +277,7 @@ public class HatMenu {
             invalidHatSelected = false;
             //SpireAnniversary5Mod.logger.info("Add new hat at index " + index);
             currentHat = hats.get(index);
-            Hats.addHat(false, currentHat);
+            HatsManager.addHat(getDummy(), currentHat);
             flavorText = SpireAnniversary5Mod.packsByID.get(hats.get(index)).name + TEXT[10] + '\n' +
                     SpireAnniversary5Mod.packsByID.get(currentHat).getHatFlavor();
             doRainbowButtonLogic(currentHat);

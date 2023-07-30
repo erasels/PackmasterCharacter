@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.ConjurePack;
 import thePackmaster.cards.Vexed;
-import thePackmaster.hats.Hats;
+import thePackmaster.hats.HatsManager;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.CoreSetPack;
 import thePackmaster.potions.PackInAJar;
@@ -186,8 +186,8 @@ public class BlackMarketDealerEvent extends PhasedEvent {
                         (i) -> {
                             AbstractDungeon.effectList.add(new RainingGoldEffect(getGoldGainForSellHat()));
                             AbstractDungeon.player.gainGold(getGoldGainForSellHat());
-                            Hats.addHat(true, CoreSetPack.ID);
-                            Hats.currentHat = CoreSetPack.ID;
+                            HatsManager.addHat(AbstractDungeon.player, CoreSetPack.ID);
+                            HatsManager.currentHat = CoreSetPack.ID;
                             logMetricGainGold(ID, "Sell Hat", getGoldGainForSellHat());
                             transitionKey("relicSellHatEnd");
                         }
@@ -230,7 +230,7 @@ public class BlackMarketDealerEvent extends PhasedEvent {
     }
 
     private boolean hasHat() {
-        return !Objects.equals(Hats.currentHat, CoreSetPack.ID);
+        return !Objects.equals(HatsManager.currentHat, CoreSetPack.ID);
     }
 
 

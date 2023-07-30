@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
-import thePackmaster.hats.Hats;
+import thePackmaster.hats.HatsManager;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.CoreSetPack;
 import thePackmaster.util.Wiz;
@@ -31,8 +31,8 @@ public class StylePoints extends AbstractOdditiesCard {
 
         if (CardCrawlGame.isInARun()) {
             AbstractCardPack pack = SpireAnniversary5Mod.packsByID.get(CoreSetPack.ID);
-            if (AbstractDungeon.player instanceof ThePackmaster && Hats.currentHat != null) {
-                pack = SpireAnniversary5Mod.packsByID.getOrDefault(Hats.currentHat, pack);
+            if (AbstractDungeon.player instanceof ThePackmaster && HatsManager.currentHat != null) {
+                pack = SpireAnniversary5Mod.packsByID.getOrDefault(HatsManager.currentHat, pack);
             }
             if (pack != null)
                 this.cardsToPreview = pack.makePreviewCard();
@@ -43,8 +43,8 @@ public class StylePoints extends AbstractOdditiesCard {
         blck();
         atb(new RemoveSpecificPowerAction(p, p, WeakPower.POWER_ID));
         AbstractCardPack pack = SpireAnniversary5Mod.packsByID.get(CoreSetPack.ID);
-        if (AbstractDungeon.player instanceof ThePackmaster && Hats.currentHat != null) {
-            pack = SpireAnniversary5Mod.packsByID.getOrDefault(Hats.currentHat, pack);
+        if (AbstractDungeon.player instanceof ThePackmaster && HatsManager.currentHat != null) {
+            pack = SpireAnniversary5Mod.packsByID.getOrDefault(HatsManager.currentHat, pack);
         }
         ArrayList<AbstractCard> possCards = new ArrayList<>();
         for (String cardID : pack.getCards()) {

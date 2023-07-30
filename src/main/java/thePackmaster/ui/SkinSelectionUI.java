@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.hats.HatMenu;
+import thePackmaster.hats.HatsManager;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.skins.AbstractSkin;
 import thePackmaster.skins.SkinHandler;
@@ -75,9 +76,15 @@ public class SkinSelectionUI {
         if (InputHelper.justClickedLeft) {
             if (skinRightHb.hovered) {
                 SkinHandler.getInstance().iterateSkin(HatMenu.getDummy(), true);
+                if(HatMenu.randomHatMode || HatMenu.invalidHatSelected) {
+                    HatsManager.addHat(HatMenu.getDummy(), "Locked");
+                }
                 if(!MainMenuUIPatch.hatMenu.isOpen) MainMenuUIPatch.hatMenu.toggle();
             } else if (skinLeftHb.hovered) {
                 SkinHandler.getInstance().iterateSkin(HatMenu.getDummy(), false);
+                if(HatMenu.randomHatMode || HatMenu.invalidHatSelected) {
+                    HatsManager.addHat(HatMenu.getDummy(), "Locked");
+                }
                 if(!MainMenuUIPatch.hatMenu.isOpen) MainMenuUIPatch.hatMenu.toggle();
             }
         }

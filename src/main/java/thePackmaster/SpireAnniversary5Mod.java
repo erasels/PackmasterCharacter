@@ -60,7 +60,7 @@ import thePackmaster.commands.PackAddCommand;
 import thePackmaster.commands.UnlockHatCommand;
 import thePackmaster.events.BlackMarketDealerEvent;
 import thePackmaster.hats.HatMenu;
-import thePackmaster.hats.Hats;
+import thePackmaster.hats.HatsManager;
 import thePackmaster.interfaces.EditPacksSubscriber;
 import thePackmaster.orbs.summonspack.Leprechaun;
 import thePackmaster.orbs.summonspack.Louse;
@@ -1359,7 +1359,7 @@ public class SpireAnniversary5Mod implements
         if (AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER) {
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
 
-            Hats.atRunStart();
+            HatsManager.atRunStart();
             skinHandler.setUpRandom(CardCrawlGame.loadingSave);
             //SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
@@ -1475,15 +1475,15 @@ public class SpireAnniversary5Mod implements
         BaseMod.addSaveField("PackmasterWornHat", new CustomSavable<String>() {
             @Override
             public String onSave() {
-                return AbstractDungeon.player instanceof ThePackmaster ? Hats.currentHat : null;
+                return AbstractDungeon.player instanceof ThePackmaster ? HatsManager.currentHat : null;
             }
 
             @Override
             public void onLoad(String s) {
                 logger.info("Loading. Hat: " + s);
                 if (s != null && AbstractDungeon.player instanceof ThePackmaster) {
-                    Hats.currentHat = s;
-                    Hats.addHat(true, Hats.currentHat);
+                    HatsManager.currentHat = s;
+                    HatsManager.addHat(AbstractDungeon.player, HatsManager.currentHat);
                 }
             }
         });
