@@ -43,7 +43,7 @@ public abstract class AbstractSkin {
     }
 
     protected void loadStrings() {
-        UIStrings str = CardCrawlGame.languagePack.getUIString(SkinHandler.makeSkinID(id));
+        UIStrings str = CardCrawlGame.languagePack.getUIString(SkinManager.makeSkinID(id));
         name = str.TEXT[0];
         author = str.TEXT[1];
     }

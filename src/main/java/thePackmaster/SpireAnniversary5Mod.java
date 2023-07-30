@@ -93,7 +93,7 @@ import thePackmaster.rewards.CustomRewardTypes;
 import thePackmaster.rewards.PMBoosterBoxCardReward;
 import thePackmaster.rewards.SingleCardReward;
 import thePackmaster.screens.PackSetupScreen;
-import thePackmaster.skins.SkinHandler;
+import thePackmaster.skins.SkinManager;
 import thePackmaster.skins.instances.PackmasterSkin;
 import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.ui.*;
@@ -116,7 +116,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.*;
-import static thePackmaster.skins.SkinHandler.*;
+import static thePackmaster.skins.SkinManager.*;
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -159,7 +159,7 @@ public class SpireAnniversary5Mod implements
 
     public static SpireAnniversary5Mod thismod;
     public static SpireConfig modConfig = null;
-    public static SkinHandler skinHandler = null;
+    public static SkinManager skinManager = null;
 
     public static boolean doPackSetup = false;
     public static String lastCardsPackID = null;
@@ -357,7 +357,7 @@ public class SpireAnniversary5Mod implements
             e.printStackTrace();
         }
 
-        skinHandler = SkinHandler.getInstance();
+        skinManager = SkinManager.getInstance();
     }
 
     public static boolean getCustomDraftEnabled() {
@@ -572,7 +572,7 @@ public class SpireAnniversary5Mod implements
         isExpansionLoaded = Loader.isModLoaded(SpireAnniversary5Mod.expansionPackModID);
         initializedStrings = true;
         MainMenuExpansionPacksButton.initStrings();
-        skinHandler.initializeStrings();
+        skinManager.initializeStrings();
 
         declarePacks();
         for (EditPacksSubscriber sub : editPacksSubscribers)
@@ -1360,7 +1360,7 @@ public class SpireAnniversary5Mod implements
             BaseMod.addTopPanelItem(currentRunCardsTopPanelItem);
 
             HatsManager.atRunStart();
-            skinHandler.setUpRandom(CardCrawlGame.loadingSave);
+            skinManager.setUpRandom(CardCrawlGame.loadingSave);
             //SpireAnniversary5Mod.logger.info("completed start of game hats");
         }
 
@@ -1527,13 +1527,13 @@ public class SpireAnniversary5Mod implements
         BaseMod.addSaveField("PackmasterRandomSkinId", new CustomSavable<String>() {
             @Override
             public String onSave() {
-                return SkinHandler.randomId;
+                return SkinManager.randomID;
             }
 
             @Override
             public void onLoad(String s) {
                 if (s != null) {
-                    SkinHandler.randomId = s;
+                    SkinManager.randomID = s;
                 }
             }
         });

@@ -83,7 +83,7 @@ public class ThePackmaster extends CustomPlayer {
                 null,
                 getLoadout(), 0.0F, -10.0F, 206.0F, 230.0F, new EnergyManager(3));
 
-        SpireAnniversary5Mod.skinHandler.loadCurrentSkin(this);
+        SpireAnniversary5Mod.skinManager.loadCurrentSkin(this);
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);

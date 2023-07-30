@@ -15,15 +15,15 @@ import thePackmaster.ui.SkinSelectionUI;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
-public class SkinHandler {
-    private static SkinHandler instance;
+public class SkinManager {
+    private static SkinManager instance;
     public static final String CONFIG_CURRENT_SKIN = "PackmasterCurrentSkinID";
-    public static String randomId;
+    public static String randomID;
     public static LinkedHashMap<String, AbstractSkin> skinMap;
 
     private AbstractSkin currentSkin;
 
-    private SkinHandler() {
+    private SkinManager() {
         //Populate skinMap
         skinMap = new LinkedHashMap<>();
         registerSkin(RandomSkin.getInstance());
@@ -87,12 +87,12 @@ public class SkinHandler {
         if(!currentSkin.id.equals(RandomSkin.SKINID)) return; //Will be the correct skin when loading during the same run so this will be skipped.
 
         if(loadingSave) {
-            loadSkin(randomId);
+            loadSkin(randomID);
         } else {
             ArrayList<AbstractSkin> skins = new ArrayList<>(skinMap.values());
             AbstractSkin randSkin = skins.get(MathUtils.random(skinMap.size()-2) + 1);
             currentSkin = randSkin;
-            randomId = randSkin.id;
+            randomID = randSkin.id;
             loadSkin(randSkin.id);
         }
     }
@@ -101,9 +101,9 @@ public class SkinHandler {
         return SpireAnniversary5Mod.makeID(id + "Skin");
     }
 
-    public static SkinHandler getInstance() {
+    public static SkinManager getInstance() {
         if(instance == null) {
-            instance = new SkinHandler();
+            instance = new SkinManager();
         }
         return instance;
     }
