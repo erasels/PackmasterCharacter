@@ -410,6 +410,9 @@ public class ThePackmaster extends CustomPlayer {
 
     @Override
     public void renderPlayerImage(SpriteBatch sb) {
+        if(headSlot == null) {
+            findHatFields();
+        }
         float x = skeleton.getX() + headSlot.getBone().getWorldX();
         float y = skeleton.getY() + headSlot.getBone().getWorldY() - HAT_Y_OFF * headSlot.getBone().getScaleY();
         HatsManager.preRenderPlayer(sb, this, x, y);
