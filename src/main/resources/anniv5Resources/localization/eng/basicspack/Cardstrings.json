@@ -46,8 +46,8 @@
   },
   "${ModID}:ConjureDefends": {
     "NAME": "Conjure Defends",
-    "DESCRIPTION": "Add a *Defend to your hand and ${ModID}:Modify it: \"Play this X times\". Refund 1. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a *Defend+ to your hand and ${ModID}:Modify it: \"Play this X times\". Refund 1. Exhaust."
+    "DESCRIPTION": "Ethereal. NL Add a *Defend to your hand and ${ModID}:Modify it: \"Play this X times\". Refund 1. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Defend to your hand and ${ModID}:Modify it: \"Play this X times\". Refund 1. Exhaust."
 
   },
   "${ModID}:SimpleTrick": {
