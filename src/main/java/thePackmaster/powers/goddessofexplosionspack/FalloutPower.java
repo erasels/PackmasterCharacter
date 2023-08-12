@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
@@ -25,7 +26,7 @@ public class FalloutPower extends AbstractPackmasterPower {
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if (card.type == AbstractCard.CardType.POWER) {
-            Wiz.atb(new DamageAction(owner, new DamageInfo(owner,amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            Wiz.atb(new DamageAction(owner, new DamageInfo(AbstractDungeon.player,amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
             flash();
         }
     }
