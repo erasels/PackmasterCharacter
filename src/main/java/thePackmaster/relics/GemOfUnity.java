@@ -86,6 +86,13 @@ public class GemOfUnity extends AbstractPackmasterRelic {
         super.onPlayCard(c, m);
     }
 
+    @Override
+    public boolean canSpawn() {
+        // Gem of Unity is balanced around there being 7 packs in the pool, so if you're playing with a different number
+        // (e.g. by using all packs mode or by using a custom draft setup), we prevent it from spawning
+        return SpireAnniversary5Mod.currentPoolPacks.size() == SpireAnniversary5Mod.PACKS_PER_RUN;
+    }
+
     public String getUpdatedDescription() {
         StringBuilder desc = new StringBuilder(DESCRIPTIONS[0]);
         if (AbstractDungeon.isPlayerInDungeon()) {
