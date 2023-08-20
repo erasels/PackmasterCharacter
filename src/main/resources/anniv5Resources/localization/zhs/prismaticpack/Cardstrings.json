@@ -27,8 +27,7 @@
   },
   "${ModID}:QuirionDryad": {
     "NAME": "奎利恩妖女",
-    "DESCRIPTION": "每次新打出一种颜色的牌，获得 !M! 点 力量 与 !M! 点 敏捷 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每次新打出一种颜色的牌，获得 !M! 点 力量 与 !M! 点 敏捷 。"
+    "DESCRIPTION": "每次新打出一种颜色的牌，获得 !M! 点 力量 与 !M! 点 敏捷 。"
   },
   "${ModID}:ManyAsOne": {
     "NAME": "异众一心",
