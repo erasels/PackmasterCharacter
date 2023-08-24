@@ -1,7 +1,7 @@
 {
   "${ModID}:HuntingStrike": {
     "NAME": "猎杀打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 对精英与首领造成双倍伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对精英与首领造成双倍伤害。 NL 抽1张牌。"
   },
   "${ModID}:Focus": {
     "NAME": "猎迹追踪",
