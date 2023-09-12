@@ -30,7 +30,7 @@
     "NAME": "Collector Badge",
     "FLAVOR": "Gotta collect 'em all.",
     "DESCRIPTIONS": [
-      "Each turn, after you play a card from #b4 different Packs, gain [E] [REMOVE_SPACE].",
+      "Each turn, after you play a card from #b3 different Packs, gain [E] next turn.",
       " NL NL Packs used this turn: ",
       " NL NL This has triggered this turn. ",
       "Energy gained: {0}",
