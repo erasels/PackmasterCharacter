@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class ShootAnythingEffect extends AbstractGameEffect {
 
     private static final float DROP_ON_HEAD_STARTING_DURATION = 0.40f;
-    private static final float SHOOT_ANYTHING_STARTING_DURATION = 0.50f;
+    private static final float SHOOT_ANYTHING_STARTING_DURATION = 0.45f;
 
     private Projectile projectile;
     private boolean dropOnHead;
@@ -61,8 +61,8 @@ public class ShootAnythingEffect extends AbstractGameEffect {
         Projectile(int count) {
             this.startingDuration = dropOnHead ? getDropOnHeadStartingDuration(count) : SHOOT_ANYTHING_STARTING_DURATION;
 
-            targetX = abstractCreature.hb.cX + MathUtils.random(abstractCreature.hb.width) - abstractCreature.hb.width * 1 / 4;
-            targetY = abstractCreature.hb.cY + MathUtils.random(abstractCreature.hb.height) - abstractCreature.hb.height * 1 / 4;
+            targetX = abstractCreature.hb.cX + MathUtils.random(abstractCreature.hb.width / 2) - abstractCreature.hb.width * 1 / 4;
+            targetY = abstractCreature.hb.cY + MathUtils.random(abstractCreature.hb.height / 2) - abstractCreature.hb.height * 1 / 4;
 
             if (dropOnHead) {
                 x = abstractCreature.hb.cX;

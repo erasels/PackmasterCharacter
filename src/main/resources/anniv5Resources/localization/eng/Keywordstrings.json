@@ -1,2 +1,41 @@
 [
+  {
+    "PROPER_NAME": "Ruin",
+    "NAMES": [
+      "ruin"
+    ],
+    "DESCRIPTION": "The next time a creature with #yRuin takes unblocked attack damage, they lose HP equal to their #yRuin for each buff and debuff they have."
+  },
+  {
+    "PROPER_NAME": "Oblivion",
+    "NAMES": [
+      "oblivion"
+    ],
+    "DESCRIPTION": "Orb: When evoked, applies #yRuin to the enemy with the most HP. Increases #yRuin applied whenever you discard a card."
+  },
+  {
+    "PROPER_NAME": "Manifest",
+    "NAMES": [
+      "manifest"
+    ],
+    "DESCRIPTION": "Gain an Orb slot then channel the listed Orb."
+  },
+  {
+    "PROPER_NAME": "Inscribed",
+    "NAMES": [
+      "Inscribed",
+      "inscribed",
+      "Inscribe",
+      "inscribe"
+    ],
+    "DESCRIPTION": "When played, activate the passive of your next Orb, then of all #yFull and #yCrescent #yMoon Orbs."
+  },
+  {
+    "PROPER_NAME": "Infest",
+    "NAMES": [
+      "infest",
+      "infests"
+    ],
+    "DESCRIPTION": "At the end of your turn, if this is in your hand, shuffle it into your draw pile and put an infestation counter on it."
+  }
 ]

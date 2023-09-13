@@ -3,11 +3,11 @@ package thePackmaster.relics;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.util.Wiz;
 
@@ -21,6 +21,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class CollectorBadge extends AbstractPackmasterRelic {
     public static final String ID = makeID("CollectorBadge");
+    private static final int THRESHOLD = 3;
 
     public ArrayList<String> usedPacks = new ArrayList<>();
 
@@ -60,10 +61,10 @@ public class CollectorBadge extends AbstractPackmasterRelic {
             if (!usedPacks.contains(Wiz.getPackByCard(c).name)) {
                 usedPacks.add(Wiz.getPackByCard(c).name);
                 counter++;
-                if (usedPacks.size() == 4) {
+                if (usedPacks.size() == THRESHOLD) {
                     flash();
                     Wiz.atb(new RelicAboveCreatureAction(Wiz.p(), this));
-                    addToBot(new GainEnergyAction(1));
+                    Wiz.applyToSelf(new EnergizedPower(Wiz.p(), 1));
                     incrementEnergyStat();
                 }
                 setDescriptionAfterLoading();
@@ -73,7 +74,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
 
 
     private void setDescriptionAfterLoading() {
-        if (usedPacks.size() > 3) {
+        if (usedPacks.size() >= THRESHOLD) {
             description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
         } else if (usedPacks.size() > 0) {
             String st = usedPacks.get(0);

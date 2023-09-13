@@ -4,10 +4,15 @@ import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
-import com.esotericsoftware.spine.AnimationState;
+import com.badlogic.gdx.utils.Array;
+import com.esotericsoftware.spine.*;
+import com.esotericsoftware.spine.attachments.RegionAttachment;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,20 +29,32 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import thePackmaster.cards.*;
-import thePackmaster.hats.Hats;
+import thePackmaster.cards.Cardistry;
+import thePackmaster.cards.Defend;
+import thePackmaster.cards.Rummage;
+import thePackmaster.cards.Strike;
+import thePackmaster.hats.HatMenu;
+import thePackmaster.hats.HatsManager;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.relics.HandyHaversack;
+import thePackmaster.skins.AbstractSkin;
+import thePackmaster.util.TexLoader;
 import thePackmaster.vfx.VictoryConfettiEffect;
 import thePackmaster.vfx.VictoryGlow;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.*;
 import static thePackmaster.ThePackmaster.Enums.PACKMASTER_RAINBOW;
 
 public class ThePackmaster extends CustomPlayer {
+    public static final String SHOULDER1 = "shoulder.png";
+    public static final String SHOULDER2 = "shoulder2.png";
+    public static final String CORPSE = "corpse.png";
+    public static final String SKELETON_JSON = "PackmasterAnim.json";
+    public static final String SKELETON_ATLAS = "PackmasterAnim.atlas";
     private static final String[] orbTextures = {
             modID + "Resources/images/char/mainChar/orb/layer1-bag.png",
             modID + "Resources/images/char/mainChar/orb/layer2-bag.png",
@@ -54,6 +71,7 @@ public class ThePackmaster extends CustomPlayer {
     static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
+    private static final float HAT_Y_OFF = 13f;
     public static float update_timer = 0;
     public static boolean glow_fade = false;
 
@@ -61,19 +79,12 @@ public class ThePackmaster extends CustomPlayer {
     public ThePackmaster(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), null, null);
         initializeClass(null,
-                SHOULDER1,
-                SHOULDER2,
-                CORPSE,
+                null, //Fixes crash this would cause in SkinSystemPatches
+                null,
+                null,
                 getLoadout(), 0.0F, -10.0F, 206.0F, 230.0F, new EnergyManager(3));
 
-        loadAnimation(
-                SKELETON_ATLAS,
-                SKELETON_JSON,
-                1.0f);
-        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
-        this.stateData.setMix("Hit", "Idle", 0.1F);
-        e.setTime(e.getEndTime() * MathUtils.random());
-
+        SpireAnniversary5Mod.skinManager.loadCurrentSkin(this);
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
@@ -132,7 +143,7 @@ public class ThePackmaster extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 8;
+        return 4;
     }
 
     @Override
@@ -245,11 +256,168 @@ public class ThePackmaster extends CustomPlayer {
         return poolCards;
     }
 
+    public void loadSkinData(AbstractSkin skin) {
+        shoulderImg = TexLoader.getTexture(skin.getShoulder1Path());
+        shoulder2Img = TexLoader.getTexture(skin.getShoulder2Path());
+        corpseImg = TexLoader.getTexture(skin.getCorpsePath());
+
+        //Memory leak fixed in SkinSystemPatches
+        loadAnimation(
+                skin.getSkeletonAtlasPath(),
+                skin.getSkeletonJSONPath(),
+                skin.getScale()
+        );
+        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
+        this.stateData.setMix("Hit", "Idle", 0.1F);
+        e.setTime(e.getEndTime() * MathUtils.random());
+    }
+
+    @Override
+    public void dispose() {
+        //Please don't dispose our cached textures, thanks
+    }
+
+    protected Bone headBone;
+    protected Slot headSlot;
+    protected RegionAttachment attachment;
+    protected int headSlotIndex = 0, attachmentSlotIndex = 0;
+
+    @Override
+    protected void loadAnimation(String atlasUrl, String skeletonUrl, float scale) {
+        super.loadAnimation(atlasUrl, skeletonUrl, scale);
+        invalidateHatVariables();
+        if (HatsManager.currentHat != null) {
+            setUpHat(HatsManager.currentHat);
+        }
+    }
+
+    public void setUpHat(String hatID) {
+        if (headBone == null) {
+            findHatFields();
+        }
+
+        if(HatMenu.specialHats.containsKey(hatID)) {
+            hatID = "No"; //Don't render hat on special hats
+        }
+
+        if (checkHat(hatID))
+            return;
+        setHat(hatID);
+    }
+
+    protected boolean checkHat(String hatID) {
+        String imgPath = HatsManager.getImagePathFromHatID(hatID);
+        if (!TexLoader.testTexture(imgPath)) {
+            resetHat();
+            return true;
+        }
+        return false;
+    }
+
+    protected void setHat(String hatID) {
+        String imgPath = HatsManager.getImagePathFromHatID(hatID);
+        TextureRegion region = TexLoader.getTextureAsAtlasRegion(imgPath);
+
+        if (attachment == null) {
+            String attachName = headBone.toString();
+
+            // Create a new slot for the attachment
+            Slot origSlot = headSlot;
+            Slot slotClone = new Slot(new SlotData(origSlot.getData().getIndex(), attachName, origSlot.getBone().getData()), origSlot.getBone());
+            slotClone.getData().setBlendMode(origSlot.getData().getBlendMode());
+            skeleton.getSlots().insert(headSlotIndex, slotClone);
+
+            Array<Slot> drawOrder = skeleton.getDrawOrder();
+            drawOrder.add(slotClone);
+            skeleton.setDrawOrder(drawOrder);
+
+            Texture tex = TexLoader.getTexture(imgPath);
+
+            tex.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+
+            attachment = new RegionAttachment("hat");
+            attachment.setRegion(region);
+            attachment.setWidth(tex.getWidth());
+            attachment.setHeight(tex.getHeight());
+            attachment.setX(1F);
+            attachment.setY(38F * Settings.scale);
+            attachment.setScaleX(Settings.scale);
+            attachment.setScaleY(Settings.scale);
+            attachment.updateOffset();
+
+            Skin skin = skeleton.getData().getDefaultSkin();
+            skin.addAttachment(headSlotIndex, attachment.getName(), attachment);
+            attachmentSlotIndex = headSlotIndex;
+
+
+            skeleton.setAttachment(attachName, attachment.getName());
+
+            skeleton.findBone("HatBone").setScale(0F);
+            AbstractCardPack p = SpireAnniversary5Mod.packsByID.get(hatID);
+            if (p != null && p.hatHidesHair) {
+                skeleton.findBone("HairBone").setScale(0F);
+            }
+        } else {
+            attachment.setRegion(region);
+
+            skeleton.findBone("HatBone").setScale(0F);
+            AbstractCardPack p = SpireAnniversary5Mod.packsByID.get(hatID);
+            if (p != null && p.hatHidesHair) {
+                skeleton.findBone("HairBone").setScale(0F);
+            } else {
+                skeleton.findBone("HairBone").setScale(1F);
+            }
+        }
+    }
+
+    public void resetHat() {
+        skeleton.findBone("HatBone").setScale(1F);
+        skeleton.findBone("HairBone").setScale(1F);
+        String imgPath = HatsManager.getImagePathFromHatID("No");
+        skeleton.getAttachment(attachmentSlotIndex, "hat");
+        if (attachment != null) {
+            TextureRegion region = TexLoader.getTextureAsAtlasRegion(imgPath);
+            attachment.setRegion(region);
+        }
+    }
+
+    protected void findHatFields() {
+        Array<Bone> possiblebones = skeleton.getBones();
+        for (Bone b : possiblebones) {
+            if (b.toString().toLowerCase(Locale.ROOT).equals("head")) {
+                headBone = b;
+                break;
+            }
+        }
+
+        Array<Slot> possibleslots = skeleton.getSlots();
+        for (Slot s : possibleslots) {
+            if (s.getBone().toString().toLowerCase(Locale.ROOT).equals("head")) {
+                headSlot = s;
+                break;
+            }
+            headSlotIndex++;
+        }
+    }
+
+    protected void invalidateHatVariables() {
+        headBone = null;
+        headSlot = null;
+        attachment = null;
+        headSlotIndex = 0;
+        attachmentSlotIndex = 0;
+    }
+
     @Override
     public void renderPlayerImage(SpriteBatch sb) {
-        Hats.preRenderPlayer(sb, this);
+        if(headSlot == null) {
+            findHatFields();
+        }
+        float x = skeleton.getX() + headSlot.getBone().getWorldX();
+        float y = skeleton.getY() + headSlot.getBone().getWorldY() - HAT_Y_OFF * headSlot.getBone().getScaleY();
+        HatsManager.preRenderPlayer(sb, this, x, y);
         super.renderPlayerImage(sb);
-        Hats.postRenderPlayer(sb, this);
+        HatsManager.postRenderPlayer(sb, this, x, y);
     }
 
     @Override
@@ -262,5 +430,9 @@ public class ThePackmaster extends CustomPlayer {
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_2.png")));
         panels.add(new CutscenePanel(makeImagePath("ending/EndingSlice_3.png")));
         return panels;
+    }
+
+    public TextureAtlas getAtlas() {
+        return atlas;
     }
 }

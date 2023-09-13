@@ -3,12 +3,12 @@ package thePackmaster.potions;
 
 import basemod.abstracts.CustomPotion;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.UpgradeSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import thePackmaster.SpireAnniversary5Mod;
@@ -46,22 +46,27 @@ public class SmithingOil extends CustomPotion {
 
     public void use(AbstractCreature target) {
 
-        atb(new SelectCardsInHandAction(potency, potionStrings.DESCRIPTIONS[3], AbstractCard::canUpgrade, (cards) -> {
-            for (AbstractCard c2 : cards
-            ) {
+        atb(new SelectCardsInHandAction(potency, potionStrings.DESCRIPTIONS[3], this::upgradeCheck, (cards) -> {
+            for (AbstractCard c2 : cards) {
                 addToBot(new UpgradeSpecificCardAction(c2));
 
-                for (AbstractCard c : Wiz.p().masterDeck.group
-                ) {
+                for (AbstractCard c : Wiz.p().masterDeck.group) {
                     if (c.uuid == c2.uuid) {
                         c.upgrade();
                         break;
                     }
-
                 }
             }
-
         }));
+    }
+
+    private boolean upgradeCheck(AbstractCard c) {
+        if(c.canUpgrade()) return true;
+        if(c.upgraded) {
+            AbstractCard mstEquiv = StSLib.getMasterDeckEquivalent(c);
+            return mstEquiv != null && mstEquiv.canUpgrade();
+        }
+        return false;
     }
 
     public CustomPotion makeCopy() {

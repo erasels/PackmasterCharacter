@@ -1,7 +1,0 @@
-{
-  "${ModID}:SwaggerPower": {
-    "NAME": "Swagger",
-    "DESCRIPTIONS": ["If you end your turn in a #yStance, gain #b",
-      " #yStrength and #yDexterity."]
-  }
-}

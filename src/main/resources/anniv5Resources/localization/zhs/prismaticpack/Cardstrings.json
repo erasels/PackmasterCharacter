@@ -27,8 +27,7 @@
   },
   "${ModID}:QuirionDryad": {
     "NAME": "奎利恩妖女",
-    "DESCRIPTION": "每次新打出一种颜色的牌，获得 !M! 点 力量 与 !M! 点 敏捷 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每次新打出一种颜色的牌，获得 !M! 点 力量 与 !M! 点 敏捷 。"
+    "DESCRIPTION": "每次新打出一种颜色的牌，获得 !M! 点 力量 与 !M! 点 敏捷 。"
   },
   "${ModID}:ManyAsOne": {
     "NAME": "异众一心",
@@ -36,7 +35,7 @@
   },
   "${ModID}:PremiumSelection": {
     "NAME": "优质之选",
-    "DESCRIPTION": "从 !M! 张随机 ${ModID}:异色 稀有牌红选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
+    "DESCRIPTION": "从 !M! 张随机 ${ModID}:异色 稀有牌中选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
   },
   "${ModID}:FlawlessPrism": {
     "NAME": "无暇棱镜",

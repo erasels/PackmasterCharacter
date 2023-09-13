@@ -79,9 +79,6 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
                 <filtering>false</filtering>
                 <excludes>
                     <exclude>${ModID}Resources/**/*.json</exclude>

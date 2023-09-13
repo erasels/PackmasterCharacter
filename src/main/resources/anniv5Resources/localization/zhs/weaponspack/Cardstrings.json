@@ -24,7 +24,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 装备一件 4 / 2 ${ModID}:武器 。"
   },
   "${ModID}:Salvager": {
-    "NAME": "营救者",
+    "NAME": "残兵重铸",
     "DESCRIPTION": "${ModID}:武器 耐久耗尽时， NL 获得 [E] 。",
     "UPGRADE_DESCRIPTION": "${ModID}:武器 耐久耗尽时， NL 获得 [E] [E] 。"
   },

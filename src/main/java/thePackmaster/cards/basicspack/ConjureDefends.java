@@ -1,8 +1,6 @@
 package thePackmaster.cards.basicspack;
 
-import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.RefundAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -19,6 +17,7 @@ public class ConjureDefends extends AbstractPackmasterCard {
 
     public ConjureDefends() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, "basics");
+        this.isEthereal = true;
         this.exhaust = true;
         this.cardsToPreview = new Defend();
         this.cardsToPreview.rawDescription += CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("DuplicateModifier")).TEXT[2];
@@ -33,6 +32,6 @@ public class ConjureDefends extends AbstractPackmasterCard {
     }
 
     public void upp(){
-        this.cardsToPreview.upgrade();
+        this.isEthereal = false;
     }
 }
