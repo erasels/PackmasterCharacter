@@ -61,7 +61,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
             if (!usedPacks.contains(Wiz.getPackByCard(c).name)) {
                 usedPacks.add(Wiz.getPackByCard(c).name);
                 counter++;
-                if (usedPacks.size() >= THRESHOLD) {
+                if (usedPacks.size() == THRESHOLD) {
                     flash();
                     Wiz.atb(new RelicAboveCreatureAction(Wiz.p(), this));
                     Wiz.applyToSelf(new EnergizedPower(Wiz.p(), 1));
