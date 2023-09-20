@@ -30,7 +30,7 @@
   },
   "${ModID}:Flourish": {
     "NAME": "Flourish",
-    "DESCRIPTION": "Gain !M! Plated Armor.",
+    "DESCRIPTION": "Gain !M! ${ModID}:Plated_Armor.",
     "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Even:", " Heal !M! HP.", "${ModID}:Odd:", " Gain [E] ."]
   },
   "${ModID}:EvenOddAppend": {
