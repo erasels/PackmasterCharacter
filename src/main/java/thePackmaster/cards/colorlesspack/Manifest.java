@@ -23,7 +23,7 @@ public class Manifest extends AbstractColorlessPackCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new SelectCardsAction(AbstractDungeon.player.discardPile.group, cardStrings.EXTENDED_DESCRIPTION[0], abstractCard -> (abstractCard.costForTurn >= 0 && abstractCard.costForTurn <= 1) || abstractCard.freeToPlayOnce,
+        atb(new SelectCardsAction(AbstractDungeon.player.discardPile.group, cardStrings.EXTENDED_DESCRIPTION[0], abstractCard -> (abstractCard.cost >= 0 && abstractCard.cost <= 1) || abstractCard.freeToPlayOnce,
                 (cards) -> {
                     for (AbstractCard q : cards) {
                         att(new PlayFromDiscardAction(q));
