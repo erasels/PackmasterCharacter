@@ -21,6 +21,7 @@ public class AvatarBeatPower extends AbstractPackmasterPower {
 
     public AvatarBeatPower(AbstractCreature owner, int amount) {
         super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        isTurnBased = false;
         isTwoAmount = true;
         amount2 = 10;
         updateDescription();
