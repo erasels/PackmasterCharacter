@@ -21,7 +21,7 @@ public class GemsPack extends AbstractCardPack {
     public static boolean gridScreenForGems = false;
     public static boolean gridScreenForSockets = false;
 
-    public static final int goldCostToSocket = 20; //BE SURE TO UPDATE KEYWORDSTRINGS IF YOU CHANGE THIS
+    public static final int goldCostToSocket = 25; //BE SURE TO UPDATE KEYWORDSTRINGS IF YOU CHANGE THIS
 
 
     public GemsPack() {
