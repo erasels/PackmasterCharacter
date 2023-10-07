@@ -14,7 +14,7 @@ import static thePackmaster.util.Wiz.atb;
 public class Vision extends AbstractRingOfPainCard {
     public final static String ID = makeID(Vision.class.getSimpleName());
 
-    private static final int SEEK = 2;
+    private static final int SEEK = 1;
     private static final int UP_SEEK = 1;
 
     public Vision() {

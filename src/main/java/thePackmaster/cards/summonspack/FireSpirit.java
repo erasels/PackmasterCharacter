@@ -21,7 +21,7 @@ public class FireSpirit extends AbstractSummonsCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BLOCK = 9;
+    private static final int BLOCK = 8;
     private static final int UPGRADE_BLOCK = 4;
 
     private final TooltipInfo igniteTip = new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[0], cardStrings.EXTENDED_DESCRIPTION[1]);
