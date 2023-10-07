@@ -14,7 +14,7 @@ public class BleedItOut extends AbstractDimensionalCardVault {
 
     public BleedItOut() {
         super(ID, 1, CardRarity.RARE, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 6;
         baseMagicNumber = magicNumber = 4;
     }
 
@@ -34,7 +34,7 @@ public class BleedItOut extends AbstractDimensionalCardVault {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
         upgradeMagicNumber(1);
     }
 }
