@@ -19,7 +19,7 @@ public class RuinPower extends AbstractPackmasterPower implements HealthBarRende
     private static final Color c = Color.LIGHT_GRAY.cpy();
 
     public RuinPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.DEBUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.DEBUFF, false, owner, amount);
     }
 
     @Override
