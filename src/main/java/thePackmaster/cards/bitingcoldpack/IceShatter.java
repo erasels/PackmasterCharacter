@@ -13,8 +13,8 @@ public class IceShatter extends BitingColdCard {
 
     public IceShatter() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        damage = baseDamage = 8;
-        magicNumber = baseMagicNumber = 8;
+        damage = baseDamage = 9;
+        magicNumber = baseMagicNumber = 9;
     }
 
     @Override
