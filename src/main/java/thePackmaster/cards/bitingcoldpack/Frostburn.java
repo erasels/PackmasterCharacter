@@ -18,7 +18,7 @@ public class Frostburn extends BitingColdCard {
 
     public Frostburn() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        magicNumber = baseMagicNumber = 16;
+        magicNumber = baseMagicNumber = 18;
         this.cardsToPreview = new Burn();
 
     }
