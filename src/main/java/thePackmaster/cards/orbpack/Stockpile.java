@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.Lightning;
 import com.megacrit.cardcrawl.orbs.Plasma;
 import thePackmaster.actions.HandSelectAction;
@@ -21,6 +22,7 @@ public class Stockpile extends AbstractOrbCard {
     public Stockpile() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
+        baseSecondMagic = secondMagic = 2;
 
         showEvokeValue = true;
         showEvokeOrbCount = magicNumber;
@@ -33,15 +35,17 @@ public class Stockpile extends AbstractOrbCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int orbs = magicNumber;
         atb(new HandSelectAction(1, (c)->true, (cards) -> {
             for (AbstractCard c : cards) {
                 p.hand.moveToDiscardPile(c);
                 c.triggerOnManualDiscard();
                 GameActionManager.incrementDiscard(false);
 
-                for (int i = 0; i < orbs; ++i)
-                    att(new ChannelAction(c.type == CardType.POWER ? new Plasma() : new Lightning()));
+                int orbs = c.type == CardType.POWER ? magicNumber : secondMagic;
+                for (int i = 0; i < orbs; ++i) {
+                    AbstractOrb orb = c.type == CardType.POWER ? new Plasma() : new Lightning();
+                    att(new ChannelAction(orb));
+                }
             }
         }, null, DiscardAction.TEXT[0], false, false, false));
     }

@@ -12,7 +12,7 @@ public class FrigidBody extends BitingColdCard {
 
     public FrigidBody() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        block = baseBlock = 8;
+        block = baseBlock = 9;
     }
 
     @Override

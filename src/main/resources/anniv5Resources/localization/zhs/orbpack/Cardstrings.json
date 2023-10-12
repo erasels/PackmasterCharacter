@@ -15,7 +15,7 @@
   },
   "${ModID}:Stockpile": {
     "NAME": "储备",
-    "DESCRIPTION": "丢弃一张牌。 NL 若为能力牌， 生成 !M! 个 等离子 充能球，否则 生成 !M! 个 闪电 充能球。"
+    "DESCRIPTION": "丢弃一张牌。 NL 若为能力牌， 生成 !M! 个 等离子 充能球，否则 生成 !${ModID}:m2! 个 闪电 充能球。"
   },
   "${ModID}:IcicleCrash": {
     "NAME": "冰锥撞击",
