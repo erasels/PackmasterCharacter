@@ -15,7 +15,7 @@ public class Fear extends AbstractOrbCard {
 
     public Fear() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 13;
+        baseBlock = 14;
         baseMagicNumber = magicNumber = 1;
 
         showEvokeValue = true;
