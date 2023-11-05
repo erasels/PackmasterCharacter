@@ -1,10 +1,7 @@
 package thePackmaster.cards.pixiepack;
 
-import basemod.cardmods.EtherealMod;
 import basemod.helpers.CardModifierManager;
-import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,10 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cardmodifiers.pixiepack.PaintcanModifier;
-import thePackmaster.packs.PixiePack;
-
-import java.util.ArrayList;
-import java.util.List;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -28,7 +22,7 @@ public class Paintcan extends AbstractPixieCard {
     private static final int upgradeAtk = 12;
 
     public Paintcan() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = this.damage = baseAtk;
     }
 
@@ -39,9 +33,8 @@ public class Paintcan extends AbstractPixieCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        dmg(abstractMonster, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        for (AbstractCard c : AbstractDungeon.player.hand.group
-        ) {
+        dmg(Wiz.getRandomEnemy(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
             CardModifierManager.addModifier(c, new PaintcanModifier(0));
         }
     }
