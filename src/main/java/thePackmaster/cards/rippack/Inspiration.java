@@ -22,7 +22,7 @@ public class Inspiration extends AbstractRipCard {
 
 
     public Inspiration() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseDamage = damage = 12;
         baseMagicNumber = magicNumber = 12;
         exhaust = true;
