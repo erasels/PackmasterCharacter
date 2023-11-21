@@ -17,7 +17,7 @@
   },
   "${ModID}:Souvenirs": {
     "NAME": "Souvenirs",
-    "DESCRIPTION": "{@@}Create a *Smite or *Safety in hand. It draws a card. {!Upgrades!|>0= NL Do it again.}"
+    "DESCRIPTION": "{@@}Create a *Smite{!Upgrades!|>0=+} or *Safety{!Upgrades!|>0=+} in hand. It draws a card."
   },
   "${ModID}:Mimicry": {
     "NAME": "Mimicry",
