@@ -29,20 +29,27 @@ public class Souvenirs extends AbstractCreativityCard {
 
     @Override
     public void upp() {
+        ArrayList<AbstractCard> previewCards = MultiCardPreview.multiCardPreview.get(this);
+        if (previewCards != null) {
+            for (AbstractCard c : MultiCardPreview.multiCardPreview.get(this)) {
+                c.upgrade();
+            }
+        }
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        for (int i = 0; i <= timesUpgraded; i++)
-        {
-            ArrayList<AbstractCard> list = new ArrayList<>();
-            Smite smite = new Smite();
-            Safety safety = new Safety();
-            CardModifierManager.addModifier(smite, new DrawCardModifier());
-            CardModifierManager.addModifier(safety, new DrawCardModifier());
-            list.add(smite);
-            list.add(safety);
-            addToBot(new FlexibleDiscoveryAction(list, false));
+        ArrayList<AbstractCard> list = new ArrayList<>();
+        Smite smite = new Smite();
+        Safety safety = new Safety();
+        CardModifierManager.addModifier(smite, new DrawCardModifier());
+        CardModifierManager.addModifier(safety, new DrawCardModifier());
+        if (this.upgraded) {
+            smite.upgrade();
+            safety.upgrade();
         }
+        list.add(smite);
+        list.add(safety);
+        addToBot(new FlexibleDiscoveryAction(list, false));
     }
 }

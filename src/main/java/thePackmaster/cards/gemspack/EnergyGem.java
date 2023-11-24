@@ -14,7 +14,7 @@ public class EnergyGem extends AbstractGemsCard {
     public final static String ID = makeID("EnergyGem");
 
     public EnergyGem() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override

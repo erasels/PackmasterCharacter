@@ -15,7 +15,7 @@ public class FragileShrug extends AbstractRipCard implements OnRipInterface{
 
     public FragileShrug() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        baseBlock = block = 7;
+        baseBlock = block = 6;
         baseMagicNumber = magicNumber = 1;
         CardModifierManager.addModifier(this, new RippableModifier());
     }

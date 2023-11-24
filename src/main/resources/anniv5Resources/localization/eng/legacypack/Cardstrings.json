@@ -42,7 +42,7 @@
   },
   "${ModID}:SlimeSpray": {
     "NAME": "Slime Spray",
-    "DESCRIPTION": "Retain. NL Deal !D! damage, apply !M! Poison, and apply Slow to ALL enemies."
+    "DESCRIPTION": "Retain. NL Deal !D! damage, apply !M! Poison, and apply *Slow to ALL enemies."
   },
   "${ModID}:StickStrike": {
     "NAME": "Stick Strike",
