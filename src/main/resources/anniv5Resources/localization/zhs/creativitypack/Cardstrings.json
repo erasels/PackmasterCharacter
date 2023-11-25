@@ -17,7 +17,8 @@
   },
   "${ModID}:Souvenirs": {
     "NAME": "纪念物",
-    "DESCRIPTION": "{@@}选择 ${ModID}:创造 *惩恶 或 *平安 {!Upgrades!|>0=2次|@=1次} ，其附带抽牌效果。"
+    "DESCRIPTION": "${ModID}:创造 *惩恶 或 *平安 ， NL 其附带抽牌效果。",
+    "UPGRADE_DESCRIPTION": "${ModID}:创造 *惩恶+ 或 *平安+ ， NL 其附带抽牌效果。"
   },
   "${ModID}:Mimicry": {
     "NAME": "模仿",
@@ -33,7 +34,7 @@
   },
   "${ModID}:StrikingStrike": {
     "NAME": "打击性打击",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL 发现一张打击{!Upgrades!|>0=+}，其耗能为0且附带 消耗 。"
+    "DESCRIPTION": "{@@}造成 !D! 点伤害。 NL 发现一张打击，其耗能为0且附带 消耗 。"
   },
   "${ModID}:AccumulativeStrike": {
     "NAME": "累积性打击",
