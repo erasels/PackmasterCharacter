@@ -18,12 +18,14 @@ public class AccumulativeStrike extends AbstractCreativityCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         magicNumber = baseMagicNumber = 2;
         CardModifierManager.addModifier(this, new AccumulativeDamageModifier(magicNumber));
-        baseDamage = damage = 12;
+        baseDamage = damage = 8;
         tags.add(CardTags.STRIKE);
     }
 
     @Override
     public void upp() {
+        upgradeMagicNumber(1);
+        CardModifierManager.getModifiers(this, AccumulativeDamageModifier.ID).forEach(m -> ((AccumulativeDamageModifier)m).setDamageRamp((this.magicNumber)));
     }
 
     @Override
