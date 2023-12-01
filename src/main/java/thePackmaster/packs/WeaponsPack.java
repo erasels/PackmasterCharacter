@@ -21,16 +21,15 @@ public class WeaponsPack extends AbstractCardPack {
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(AgileStrike.ID);
+        cards.add(PirateHook.ID);
         cards.add(CatONineTails.ID);
         cards.add(DeadlyArsenal.ID);
         cards.add(MegaUpgrade.ID);
         cards.add(PowderKeg.ID);
         cards.add(RearmingStrike.ID);
         cards.add(Salvager.ID);
-        cards.add(ForgingHammer.ID);
+        cards.add(ArmorUp.ID);
         cards.add(Sword.ID);
-        cards.add(WeaponMastery.ID);
         cards.add(SwordOfChaos.ID);
         cards.add(SwordOfFire.ID);
         cards.add(SwordOfWisdom.ID);

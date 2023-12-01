@@ -1,15 +1,11 @@
 {
-  "${ModID}:AgileStrike": {
-    "NAME": "Agile Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If you have equipped a ${ModID}:Weapon this turn, reduce cost of this NL card to 0."
-  },
   "${ModID}:CatONineTails": {
     "NAME": "Cat O' Nine Tails",
     "DESCRIPTION": "Equip a !M! / 3 ${ModID}:Weapon. NL After you attack with this ${ModID}:Weapon, give it +2 Attack."
   },
   "${ModID}:DeadlyArsenal": {
     "NAME": "Deadly Arsenal",
-    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card for each unique ${ModID}:Weapon you have currently equipped."
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card + 1 card for each unique ${ModID}:Weapon you have currently equipped."
   },
   "${ModID}:MegaUpgrade": {
     "NAME": "Mega Upgrade",
@@ -28,21 +24,17 @@
     "DESCRIPTION": "Whenever a ${ModID}:Weapon is destroyed, gain [E].",
     "UPGRADE_DESCRIPTION": "Whenever a ${ModID}:Weapon is destroyed, gain [E] [E]."
   },
-  "${ModID}:ForgingHammer": {
-    "NAME": "Forging Hammer",
-    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL After you attack with this ${ModID}:Weapon, Upgrade a random card in your hand for the rest of combat."
-  },
   "${ModID}:Sword": {
     "NAME": "Sword",
     "DESCRIPTION": "Choose 1 of 3 Swords. NL Equip a 3 / !M! ${ModID}:Weapon with an additional effect.",
     "EXTENDED_DESCRIPTION": [
       "Additional Effects",
-      "#rFire: Whenever you attack with this Weapon, deal #b3 damage to ALL enemies. NL #yWisdom: Whenever you attack with this Weapon, draw a card. NL #pChaos: Whenever you attack with this Weapon, add a random card into your hand."
+      "#rFire: Whenever you attack with this Weapon, deal #b4 damage to ALL enemies. NL #yWisdom: Whenever you attack with this Weapon, draw a card. NL #pChaos: Whenever you attack with this Weapon, add a random card into your hand."
     ]
   },
   "${ModID}:SwordOfFire": {
     "NAME": "Sword of Fire",
-    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, deal 3 damage to ALL enemies."
+    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, deal 4 damage to ALL enemies."
   },
   "${ModID}:SwordOfWisdom": {
     "NAME": "Sword of Wisdom",
@@ -52,9 +44,16 @@
     "NAME": "Sword of Chaos",
     "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, add a random card into your hand."
   },
-  "${ModID}:WeaponMastery": {
-    "NAME": "Weapon Mastery",
-    "DESCRIPTION": "Whenever you equip a ${ModID}:Weapon, draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Whenever you equip a ${ModID}:Weapon, draw !M! cards."
+  "${ModID}:ArmorUp": {
+    "NAME": "Armor Up",
+    "DESCRIPTION": "Whenever an attack deals at least 3 more damage than its base damage, gain !M! Block."
+  },
+  "${ModID}:PirateHook": {
+    "NAME": "Pirate Hook",
+    "DESCRIPTION": "Deal !D! damage. NL If this deals at least 10 damage, deal !D! damage again."
+  },
+  "${ModID}:ReapersScythe": {
+    "NAME": "Reaper's Scythe",
+    "DESCRIPTION": "Equip a !M! / {D} ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, apply 1 ${ModID}:Reaper's Mark to a target per hit."
   }
 }

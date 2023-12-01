@@ -10,12 +10,11 @@
       " [E] 。"
     ]
   },
-  "${ModID}:WeaponMasteryPower": {
-    "NAME": "武器专精",
+  "${ModID}:ArmorUpPower": {
+    "NAME": "Armor Up",
     "DESCRIPTIONS": [
-      "每当你装备一件 #y武器 时，抽 #b",
-      " 张牌。",
-      " 张牌。"
+      "Whenever an attack deals at least 3 more damage than its base damage, gain #b",
+      " #yBlock."
     ]
   }
 }

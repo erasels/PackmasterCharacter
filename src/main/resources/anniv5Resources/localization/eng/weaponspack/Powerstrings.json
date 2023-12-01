@@ -10,12 +10,11 @@
       " [E] ."
     ]
   },
-  "${ModID}:WeaponMasteryPower": {
-    "NAME": "Weapon Mastery",
+  "${ModID}:ArmorUpPower": {
+    "NAME": "Armor Up",
     "DESCRIPTIONS": [
-      "Whenever you equip a #yWeapon, draw #b",
-      " card.",
-      " cards."
+      "Whenever an attack deals at least 3 more damage than its base damage, gain #b",
+      " #yBlock."
     ]
   }
 }
