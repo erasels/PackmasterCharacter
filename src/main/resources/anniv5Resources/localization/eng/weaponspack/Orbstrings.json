@@ -48,7 +48,13 @@
   "${ModID}:SwordOfFireOrb": {
     "NAME": "Sword of Fire",
     "DESCRIPTION": [
-      "Whenever you attack with this Weapon, deal #b3 damage to ALL enemies."
+      "Whenever you attack with this Weapon, deal #b4 damage to ALL enemies."
+    ]
+  },
+  "${ModID}:ReapersScytheOrb": {
+    "NAME": "Reaper's Scythe",
+    "DESCRIPTION": [
+      "Whenever you attack with this Weapon, apply #b1 #yReaper's #yMark to a target per hit."
     ]
   }
 }

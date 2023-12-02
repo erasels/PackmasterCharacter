@@ -10,12 +10,17 @@
       " [E] ."
     ]
   },
-  "${ModID}:WeaponMasteryPower": {
-    "NAME": "Weapon Mastery",
+  "${ModID}:ArmorUpPower": {
+    "NAME": "Armor Up",
     "DESCRIPTIONS": [
-      "Whenever you equip a #yWeapon, draw #b",
-      " card.",
-      " cards."
+      "Whenever you play an Attack that deals at least 3 more damage than its base damage, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:ReapersMarkPower": {
+    "NAME": "Reaper's Mark",
+    "DESCRIPTIONS": [
+      "Whenever #b3 stacks are applied, they are removed and the creature loses HP equal to #b40% of its missing HP."
     ]
   }
 }

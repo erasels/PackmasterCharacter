@@ -10,12 +10,10 @@
       " [E] 。"
     ]
   },
-  "${ModID}:WeaponMasteryPower": {
-    "NAME": "武器专精",
+  "${ModID}:ReapersMarkPower": {
+    "NAME": "收割之镰",
     "DESCRIPTIONS": [
-      "每当你装备一件 #y武器 时，抽 #b",
-      " 张牌。",
-      " 张牌。"
+      "每当获得 #b3 层时，移除这些层，该生物失去等于已损失生命值 #b40% 的生命值。"
     ]
   }
 }
