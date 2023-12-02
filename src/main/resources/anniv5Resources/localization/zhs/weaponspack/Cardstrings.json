@@ -5,7 +5,7 @@
   },
   "${ModID}:DeadlyArsenal": {
     "NAME": "致命军火",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽一张牌加每装备有一把不同的 武器 ，抽一张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽一张牌加每装备有一把不同的 ${ModID}:武器 ，抽一张牌。"
   },
   "${ModID}:MegaUpgrade": {
     "NAME": "超升级",
