@@ -37,7 +37,7 @@
   },
   "${ModID}:AccumulativeStrike": {
     "NAME": "Accumulative Strike",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Deals !M! additional damage for ALL your {!Upgrades!|0= non-Status} created cards."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Deals !M! additional damage for ALL your created cards."
   },
   "${ModID}:BrushModalTypeChoice": {
     "NAME": "You should never see this",
