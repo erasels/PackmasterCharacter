@@ -44,16 +44,12 @@
     "NAME": "混乱之剑",
     "DESCRIPTION": "装备一件 3 / !M! ${ModID}:武器 。 NL 使用时，随机将一张牌加入手牌。"
   },
-  "${ModID}:ArmorUp": {
-    "NAME": "Armor Up",
-    "DESCRIPTION": "Whenever an attack deals at least 3 more damage than its base damage, gain !M! Block."
-  },
   "${ModID}:PirateHook": {
     "NAME": "海盗之钩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌造成了至少10点伤害, 再次 造成 !D! 点伤害。"
   },
   "${ModID}:ReapersScythe": {
     "NAME": "收割之镰",
-    "DESCRIPTION": "装备一把 !M! / {D} 的 ${ModID}:武器 。 NL 每当你使用这把 ${ModID}:武器 攻击，每次攻击给予目标敌人1层 ${ModID}:收割者印记 。"
+    "DESCRIPTION": "装备一把 !M! / 3 的 ${ModID}:武器 。 NL 每当你使用这把 ${ModID}:武器 攻击，每次攻击给予目标敌人1层 ${ModID}:收割者印记 。"
   }
 }

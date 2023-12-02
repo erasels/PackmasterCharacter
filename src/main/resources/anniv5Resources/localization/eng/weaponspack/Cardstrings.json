@@ -46,7 +46,7 @@
   },
   "${ModID}:ArmorUp": {
     "NAME": "Armor Up",
-    "DESCRIPTION": "Whenever an attack deals at least 3 more damage than its base damage, gain !M! Block."
+    "DESCRIPTION": "Whenever you play an Attack that deals at least 3 more damage than its base damage, gain !M! Block."
   },
   "${ModID}:PirateHook": {
     "NAME": "Pirate Hook",
@@ -54,6 +54,6 @@
   },
   "${ModID}:ReapersScythe": {
     "NAME": "Reaper's Scythe",
-    "DESCRIPTION": "Equip a !M! / {D} ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, apply 1 ${ModID}:Reaper's Mark to a target per hit."
+    "DESCRIPTION": "Equip a !M! / 3 ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, apply 1 ${ModID}:Reaper's Mark to a target per hit."
   }
 }
