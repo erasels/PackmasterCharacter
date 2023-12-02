@@ -37,7 +37,8 @@
   },
   "${ModID}:LikeClockwork": {
     "NAME": "Like Clockwork",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block for each Curse or Status card in your hand."
+    "DESCRIPTION": "At the end of your turn, gain !M! Block for each Curse or Status card in your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, gain !M! Block for each Curse or Status card in your hand."
   },
   "${ModID}:SavedByTheBell": {
     "NAME": "Saved by the Bell",

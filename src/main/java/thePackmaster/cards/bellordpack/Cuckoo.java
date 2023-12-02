@@ -13,7 +13,7 @@ public class Cuckoo extends AbstractBellordCard {
     // intellij stuff power, self, uncommon, , , , , 13, 
 
     public Cuckoo() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 13;
     }
 
