@@ -37,7 +37,8 @@
   },
   "${ModID}:LikeClockwork": {
     "NAME": "钟表机械",
-    "DESCRIPTION": "回合结束时，手中每有一张 诅咒 或 *状态 ，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "回合结束时，手中每有一张 诅咒 或 *状态 ，获得 !M! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合结束时，手中每有一张 诅咒 或 *状态 ，获得 !M! 点 格挡 。"
   },
   "${ModID}:SavedByTheBell": {
     "NAME": "铃铛援救",
