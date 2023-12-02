@@ -33,15 +33,15 @@
   },
   "${ModID}:StrikingStrike": {
     "NAME": "Striking Strike",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Discover a strike. It Exhausts when played and costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Discover a strike. It Exhausts when played and costs 0 this turn."
   },
   "${ModID}:AccumulativeStrike": {
     "NAME": "Accumulative Strike",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Deals !M! additional damage for ALL your created cards."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your created cards."
   },
   "${ModID}:BrushModalTypeChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}Select this card type for Discovery."
+    "DESCRIPTION": "Select this card type for Discovery."
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
