@@ -1,15 +1,11 @@
 {
-  "${ModID}:AgileStrike": {
-    "NAME": "敏锐打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合装备过 ${ModID}:武器 ，本牌耗能变为0。"
-  },
   "${ModID}:CatONineTails": {
     "NAME": "九尾鞭",
     "DESCRIPTION": "装备一件 !M! / 3 ${ModID}:武器 。 NL 使用该 ${ModID}:武器 时，其伤害值增加2点。"
   },
   "${ModID}:DeadlyArsenal": {
     "NAME": "致命军火",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每装备有一把不同的 ${ModID}:武器 ，抽一张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽一张牌加每装备有一把不同的 ${ModID}:武器 ，抽一张牌。"
   },
   "${ModID}:MegaUpgrade": {
     "NAME": "超升级",
@@ -28,21 +24,17 @@
     "DESCRIPTION": "${ModID}:武器 耐久耗尽时， NL 获得 [E] 。",
     "UPGRADE_DESCRIPTION": "${ModID}:武器 耐久耗尽时， NL 获得 [E] [E] 。"
   },
-  "${ModID}:ForgingHammer": {
-    "NAME": "锻锤",
-    "DESCRIPTION": "装备一件 3 / !M! ${ModID}:武器 。 NL 使用该 ${ModID}:武器 时，随机 升级 一张手牌。"
-  },
   "${ModID}:Sword": {
     "NAME": "剑",
     "DESCRIPTION": "从三种剑选择一种，装备一件附加其效果的 3 / !M! ${ModID}:武器 。",
     "EXTENDED_DESCRIPTION": [
       "附加效果",
-      "#r火焰 ：使用时，对所有敌人造成 #b3 点伤害。 NL #y智慧 ：使用时，抽 #b1 张牌。 NL #p混乱 ：使用时，随机将一张牌加入手牌。"
+      "#r火焰 ：使用时，对所有敌人造成 #b4 点伤害。 NL #y智慧 ：使用时，抽 #b1 张牌。 NL #p混乱 ：使用时，随机将一张牌加入手牌。"
     ]
   },
   "${ModID}:SwordOfFire": {
     "NAME": "火焰之剑",
-    "DESCRIPTION": "装备一件 3 / !M! ${ModID}:武器 。 NL 使用时， NL 造成3点群体伤害。"
+    "DESCRIPTION": "装备一件 3 / !M! ${ModID}:武器 。 NL 使用时， NL 造成4点群体伤害。"
   },
   "${ModID}:SwordOfWisdom": {
     "NAME": "智慧之剑",
@@ -52,9 +44,12 @@
     "NAME": "混乱之剑",
     "DESCRIPTION": "装备一件 3 / !M! ${ModID}:武器 。 NL 使用时，随机将一张牌加入手牌。"
   },
-  "${ModID}:WeaponMastery": {
-    "NAME": "武器专精",
-    "DESCRIPTION": "装备 ${ModID}:武器 时，抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "装备 ${ModID}:武器 时，抽 !M! 张牌。"
+  "${ModID}:PirateHook": {
+    "NAME": "海盗之钩",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌造成了至少10点伤害, 再次 造成 !D! 点伤害。"
+  },
+  "${ModID}:ReapersScythe": {
+    "NAME": "收割之镰",
+    "DESCRIPTION": "装备一把 !M! / 3 的 ${ModID}:武器 。 NL 每当你使用这把 ${ModID}:武器 攻击，每次攻击给予目标敌人1层 ${ModID}:收割者印记 。"
   }
 }

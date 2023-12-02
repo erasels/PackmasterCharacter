@@ -6,5 +6,12 @@
       "weapons"
     ],
     "DESCRIPTION": "Whenever you play an attack card, one Durability of your rightmost Weapon is used and card's damage is increased by Weapon's Attack. NL Orb slots are created and destroyed automatically."
+  },
+  {
+    "PROPER_NAME": "Reaper's Mark",
+    "NAMES": [
+      "reaper's mark"
+    ],
+    "DESCRIPTION": "Whenever #b3 stacks are applied, they are removed and the creature loses HP equal to #b40% of its missing HP."
   }
 ]

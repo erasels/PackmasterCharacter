@@ -12,7 +12,7 @@ public class DeadlyArsenal extends AbstractWeaponsPackCard {
 
     public static final String ID = makeID("DeadlyArsenal");
     private static final int COST = 1;
-    private static final int BLOCK_AMOUNT = 7;
+    private static final int BLOCK_AMOUNT = 6;
     private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 3;
 
     public DeadlyArsenal() {
