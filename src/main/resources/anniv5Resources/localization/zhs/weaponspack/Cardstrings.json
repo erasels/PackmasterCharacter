@@ -44,6 +44,10 @@
     "NAME": "混乱之剑",
     "DESCRIPTION": "装备一件 3 / !M! ${ModID}:武器 。 NL 使用时，随机将一张牌加入手牌。"
   },
+  "${ModID}:ArmorUp": {
+    "NAME": "全副武装",
+    "DESCRIPTION": "每当你的攻击造成伤害比基础伤害高至少3点，获得 !M! 点格挡。"
+  },
   "${ModID}:PirateHook": {
     "NAME": "海盗之钩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌造成了至少10点伤害, 再次 造成 !D! 点伤害。"

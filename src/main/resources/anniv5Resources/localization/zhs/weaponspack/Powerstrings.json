@@ -10,6 +10,13 @@
       " [E] 。"
     ]
   },
+  "${ModID}:ArmorUpPower": {
+    "NAME": "全副武装",
+    "DESCRIPTIONS": [
+      "每当你的攻击造成伤害比基础伤害高至少3点，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
   "${ModID}:ReapersMarkPower": {
     "NAME": "收割之镰",
     "DESCRIPTIONS": [
