@@ -20,7 +20,7 @@ public class Smokescreen extends AbstractThieveryCard {
 	private static final int BLOCK = 5;
 	private static final int UPGRADE_BLOCK = 2;
 	private static final int HP_LOSS = 7;
-	private static final int UPGRADE_HP_LOSS = 3;
+	private static final int UPGRADE_HP_LOSS = 2;
 
 	public Smokescreen() {
 		super(ID, COST, TYPE, RARITY, TARGET);
