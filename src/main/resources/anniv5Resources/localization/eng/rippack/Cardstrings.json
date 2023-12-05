@@ -42,7 +42,7 @@
   },
   "${ModID}:HazardousStrike": {
     "NAME": "Hazardous Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL When *ripped, Exhaust !M! cards at random."
+    "DESCRIPTION": "Deal !D! damage. NL When *ripped, Exhaust !M! cards at random."
   },
   "${ModID}:TotalWeakness": {
     "NAME": "Total Weakness",
