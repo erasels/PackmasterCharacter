@@ -33,7 +33,7 @@
   "${ModID}:LesserHex": {
     "NAME": "Lesser Hex",
     "DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex to your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex+ to your discard pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. NL Enemy loses !M! Strength. NL Add a *Greater\u00a0Hex+ to your discard pile. NL Exhaust."
   },
   "${ModID}:GreaterHex": {
     "NAME": "Greater Hex",
