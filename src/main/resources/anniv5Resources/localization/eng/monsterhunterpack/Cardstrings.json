@@ -62,7 +62,7 @@
   },
   "${ModID}:GremlinLance": {
     "NAME": "Gremlin Lance",
-    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E] and draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E] and draw 1 card."
   },
   "${ModID}:ChampMail": {
     "NAME": "Champion's Platemail",

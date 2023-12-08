@@ -1,13 +1,13 @@
 {
   "${ModID}:Wonder": {
     "NAME": "Wonder",
-    "DESCRIPTION": "Discard your hand. NL Draw a card and set your Energy to its cost.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Discard your hand. Draw a card and set your Energy to its cost."
+    "DESCRIPTION": "Discard your hand. NL Draw 1 card and set your Energy to its cost.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Discard your hand. Draw 1 card and set your Energy to its cost."
   },
   "${ModID}:FreeSpace": {
     "NAME": "Free Space",
-    "DESCRIPTION": "Ethereal. NL When you draw, discard, Exhaust or play this, draw a card.",
-    "UPGRADE_DESCRIPTION": "When you draw, discard, Exhaust or play this, draw a card."
+    "DESCRIPTION": "Ethereal. NL When you draw, discard, Exhaust or play this, draw 1 card.",
+    "UPGRADE_DESCRIPTION": "When you draw, discard, Exhaust or play this, draw 1 card."
   },
   "${ModID}:MidnightOil": {
     "NAME": "Midnight Oil",
@@ -44,7 +44,7 @@
   },
   "${ModID}:Thoughtweaving": {
     "NAME": "Thoughtweaving",
-    "DESCRIPTION": "Whenever you play a Skill or Attack, draw a card of the opposite type from a different Pack."
+    "DESCRIPTION": "Whenever you play a Skill or Attack, draw 1 card of the opposite type from a different Pack."
   },
   "${ModID}:SealedSword": {
   "NAME": "Sealed Sword",

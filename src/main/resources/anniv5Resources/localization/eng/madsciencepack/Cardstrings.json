@@ -22,8 +22,8 @@
   },
   "${ModID}:Improve": {
     "NAME": "Improve",
-    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a random card in hand: \"Draw a card\" NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a card in hand: \"Draw a card\" NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a random card in hand: \"Draw 1 card\" NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL ${ModID}:Modify a card in hand: \"Draw 1 card\" NL Exhaust."
   },
   "${ModID}:Enhance": {
     "NAME": "Enhance",

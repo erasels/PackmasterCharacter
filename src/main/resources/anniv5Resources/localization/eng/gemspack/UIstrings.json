@@ -27,7 +27,7 @@
     "TEXT": [
       " NL Reduce debuffs by 1.",
       " NL Roll a ${ModID}:D6.",
-      " NL Draw a card.",
+      " NL Draw 1 card.",
       " NL Gain [E] next turn.",
       " NL stslib:Persist !stslib:persist!.",
       "Retain. NL ",

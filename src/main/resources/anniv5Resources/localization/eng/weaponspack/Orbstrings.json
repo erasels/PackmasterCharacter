@@ -24,7 +24,7 @@
   "${ModID}:SwordOfWisdomOrb": {
     "NAME": "Sword of Wisdom",
     "DESCRIPTION": [
-      "Whenever you attack with this Weapon, draw a card."
+      "Whenever you attack with this Weapon, draw 1 card."
     ]
   },
   "${ModID}:SwordOfChaosOrb": {

@@ -21,8 +21,8 @@
   },
   "${ModID}:DrawGem": {
     "NAME": "Opal",
-    "DESCRIPTION": "${ModID}:Gem. NL \"Draw a card\"",
-    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Draw a card\""
+    "DESCRIPTION": "${ModID}:Gem. NL \"Draw 1 card\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Gem (2 Uses). NL \"Draw 1 card\""
   },
   "${ModID}:EnergyGem": {
     "NAME": "Citrine",

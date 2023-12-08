@@ -29,7 +29,7 @@
     "DESCRIPTION": "Choose 1 of 3 Swords. NL Equip a 3 / !M! ${ModID}:Weapon with an additional effect.",
     "EXTENDED_DESCRIPTION": [
       "Additional Effects",
-      "#rFire: Whenever you attack with this Weapon, deal #b4 damage to ALL enemies. NL #yWisdom: Whenever you attack with this Weapon, draw a card. NL #pChaos: Whenever you attack with this Weapon, add a random card into your hand."
+      "#rFire: Whenever you attack with this Weapon, deal #b4 damage to ALL enemies. NL #yWisdom: Whenever you attack with this Weapon, draw 1 card. NL #pChaos: Whenever you attack with this Weapon, add a random card into your hand."
     ]
   },
   "${ModID}:SwordOfFire": {
@@ -38,7 +38,7 @@
   },
   "${ModID}:SwordOfWisdom": {
     "NAME": "Sword of Wisdom",
-    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, draw a card."
+    "DESCRIPTION": "Equip a 3 / !M! ${ModID}:Weapon. NL Whenever you attack with this ${ModID}:Weapon, draw 1 card."
   },
   "${ModID}:SwordOfChaos": {
     "NAME": "Sword of Chaos",
