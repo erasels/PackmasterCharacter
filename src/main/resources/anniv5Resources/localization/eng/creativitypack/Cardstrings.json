@@ -25,7 +25,7 @@
   },
   "${ModID}:CraftyMove": {
     "NAME": "Crafty Move",
-    "DESCRIPTION": "Deal !D! damage. If a card has been created this turn, gain [E] and draw a card."
+    "DESCRIPTION": "Deal !D! damage. If a card has been created this turn, gain [E] and draw 1 card."
   },
   "${ModID}:BarrierBeacon": {
     "NAME": "Barrier Beacon",

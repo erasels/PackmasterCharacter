@@ -18,7 +18,7 @@
   },
   "${ModID}:Anticipation": {
     "NAME": "Anticipation",
-    "DESCRIPTION": "Draw a card. NL Gain Strength equal to its cost.",
+    "DESCRIPTION": "Draw 1 card. NL Gain Strength equal to its cost.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain Strength equal to their cost."
   },
   "${ModID}:Prediction": {

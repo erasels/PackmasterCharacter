@@ -18,7 +18,7 @@
   },
   "${ModID}:FrozenCapsule": {
     "NAME": "Frozen Capsule",
-    "DESCRIPTION": "${ModID}:Mutable: Deal !D! damage. NL ${ModID}:Mutable: When ${ModID}:Transmuted, draw a card.",
+    "DESCRIPTION": "${ModID}:Mutable: Deal !D! damage. NL ${ModID}:Mutable: When ${ModID}:Transmuted, draw 1 card.",
     "UPGRADE_DESCRIPTION": "${ModID}:Mutable: Deal !D! damage. NL ${ModID}:Mutable: When ${ModID}:Transmuted, draw !M! cards."
   },
   "${ModID}:GhostlyMist": {
@@ -60,7 +60,7 @@
   },
   "${ModID}:DrawWhenTransmutedEffect": {
     "EXTENDED_DESCRIPTION": [
-      "When ${ModID}:Transmuted, draw a card.",
+      "When ${ModID}:Transmuted, draw 1 card.",
       "When ${ModID}:Transmuted, draw ",
       " cards."
     ]

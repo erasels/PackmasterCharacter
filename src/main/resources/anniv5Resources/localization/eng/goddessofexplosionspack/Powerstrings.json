@@ -16,9 +16,9 @@
   "${ModID}:RedshiftPower": {
     "NAME": "Redshift",
     "DESCRIPTIONS": [
-      "At the start of your next turn, draw a card.",
+      "At the start of your next turn, draw 1 card.",
       "At the start of your next #b",
-      " turns, draw a card."
+      " turns, draw 1 card."
     ]
   },
   "${ModID}:CountdownPower": {

@@ -16,7 +16,7 @@
       " NL Gain 8 Block.",
       " NL Play again, unmodified.",
       " NL Gain a *Cannonball.",
-      " NL Draw a card."
+      " NL Draw 1 card."
     ]
   },
   "${ModID}:AddModifierUI": {
