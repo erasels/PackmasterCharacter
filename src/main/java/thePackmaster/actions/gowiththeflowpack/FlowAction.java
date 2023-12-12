@@ -81,7 +81,9 @@ public class FlowAction extends AbstractGameAction {
                     }
                 }
                 int drawAmount = cardsDiscarded.size() / 2;
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FlowPower(AbstractDungeon.player, drawAmount)));
+                if (drawAmount > 0) {
+                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FlowPower(AbstractDungeon.player, drawAmount)));
+                }
             }
         }
         tickDuration();
