@@ -17,7 +17,7 @@ public class Flick extends AbstractPackmasterCard {
 
     public Flick() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
