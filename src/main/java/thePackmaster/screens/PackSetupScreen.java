@@ -101,7 +101,8 @@ public class PackSetupScreen extends CustomScreen {
         AbstractDungeon.overlayMenu.showBlackScreen();
 
         rng = new Random(Settings.seed);
-
+        // Be careful of any changes in this code. Together In Spire may rely on targeting the packPool.clear() here
+        // for overwriting the pack choice rng to be per-player
         packPool.clear();
         for (AbstractCardPack p : SpireAnniversary5Mod.allPacks) {
             if (!currentPoolPacks.contains(p)) {
