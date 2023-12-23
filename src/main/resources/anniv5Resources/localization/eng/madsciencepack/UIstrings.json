@@ -8,8 +8,8 @@
   },
   "${ModID}:MadScienceModifiers": {
     "TEXT": [
-      " NL Apply ",
-      " ${ModID}:Frostbite.",
+      " NL Channel ",
+      " Frost.",
       "Retain. NL ",
       " NL Play ",
       " NL Gain 6 Block.",

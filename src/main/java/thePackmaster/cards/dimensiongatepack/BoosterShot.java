@@ -17,7 +17,7 @@ public class BoosterShot extends AbstractDimensionalCardEden {
 
     public BoosterShot() {
         super(ID, 0, CardRarity.UNCOMMON, CardType.ATTACK, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 8;
         baseSecondMagic = secondMagic = 10;
         baseDamage = 1;
     }
@@ -31,6 +31,7 @@ public class BoosterShot extends AbstractDimensionalCardEden {
     }
 
     public void upp() {
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(2);
+        upgradeSecondMagic(-2);
     }
 }
