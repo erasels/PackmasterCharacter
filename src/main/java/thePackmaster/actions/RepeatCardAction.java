@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.util.Wiz;
 
 public class RepeatCardAction extends AbstractGameAction {
     private AbstractCard funCard;
@@ -26,7 +27,8 @@ public class RepeatCardAction extends AbstractGameAction {
         if (target == null) {
             target = AbstractDungeon.getRandomMonster();
         }
-        GameActionManager.queueExtraCard(funCard, (AbstractMonster) target);
+        if (target == null || target instanceof AbstractMonster)
+            Wiz.queueExtraCard(funCard, (AbstractMonster) target);
 
         this.isDone = true;
     }

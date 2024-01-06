@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import thePackmaster.cardmodifiers.basicspack.BasicMod;
 import thePackmaster.cards.Defend;
 import thePackmaster.cards.Strike;
+import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -29,7 +30,7 @@ public class BasicWave extends AbstractMultipleCardPreviewCard implements OnObta
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for(AbstractCard c : this.cardToPreview)
-            GameActionManager.queueExtraCard(c, m);
+            Wiz.queueExtraCard(c, m);
     }
 
     public void upp(){
