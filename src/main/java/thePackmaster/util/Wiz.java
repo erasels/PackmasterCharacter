@@ -1,15 +1,18 @@
 package thePackmaster.util;
 
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.Hitbox;
@@ -426,6 +429,50 @@ public class Wiz {
         return (int) c.powers.stream()
                 .filter(pow -> pow.type == AbstractPower.PowerType.DEBUFF )
                 .count();
+    }
+
+    //Improved version of GameActionManager.queueExtraCard that won't cause crashes.
+    public static void queueExtraCard(AbstractCard card, AbstractMonster m) {
+        AbstractCard tmp = card.makeSameInstanceOf();
+        AbstractDungeon.player.limbo.addToBottom(tmp);
+        tmp.current_x = card.current_x;
+        tmp.current_y = card.current_y;
+        int extraCount = 0;
+
+        for (CardQueueItem c : AbstractDungeon.actionManager.cardQueue) {
+            if (c.card != null && c.card.uuid.equals(card.uuid)) {
+                ++extraCount;
+            }
+        }
+
+        tmp.target_y = (float) Settings.HEIGHT / 2.0F;
+        switch (extraCount) {
+            case 0:
+                tmp.target_x = (float)Settings.WIDTH / 2.0F - 300.0F * Settings.xScale;
+                break;
+            case 1:
+                tmp.target_x = (float)Settings.WIDTH / 2.0F + 300.0F * Settings.xScale;
+                break;
+            case 2:
+                tmp.target_x = (float)Settings.WIDTH / 2.0F - 600.0F * Settings.xScale;
+                break;
+            case 3:
+                tmp.target_x = (float)Settings.WIDTH / 2.0F + 600.0F * Settings.xScale;
+                break;
+            default:
+                tmp.target_x = MathUtils.random((float)Settings.WIDTH * 0.2F, (float)Settings.WIDTH * 0.8F);
+                tmp.target_y = MathUtils.random((float)Settings.HEIGHT * 0.3F, (float)Settings.HEIGHT * 0.7F);
+        }
+
+        if (m != null) {
+            tmp.calculateCardDamage(m);
+        }
+        else {
+            tmp.applyPowers();
+        }
+
+        tmp.purgeOnUse = true;
+        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
     }
 
     // Packmaster specific utilities
