@@ -37,7 +37,7 @@ public class PMCollection extends AbstractPackmasterRelic {
                     c.rarity == AbstractCard.CardRarity.UNCOMMON ||
                     c.rarity == AbstractCard.CardRarity.RARE) {
 
-                AbstractDungeon.getCurrRoom().rewards.add(new SingleCardReward(c));
+                AbstractDungeon.getCurrRoom().rewards.add(new SingleCardReward(c.makeCopy()));
             }
         }
 
