@@ -58,7 +58,7 @@ public class OpeningRunScreenPatch {
     }
 
     //Fixes the event not spawning with ActLikeIt's custom event on run start feature
-    @SpirePatch2(cls="actlikeit.dungeons.CustomDungeon", method = SpirePatch.CONSTRUCTOR, paramtypes = {"actlikeit.dungeons.CustomDungeon", "com.megacrit.cardcrawl.characters.AbstractPlayer", "java.util.ArrayList"})
+    @SpirePatch2(cls="actlikeit.dungeons.CustomDungeon", method = SpirePatch.CONSTRUCTOR, paramtypes = {"actlikeit.dungeons.CustomDungeon", "com.megacrit.cardcrawl.characters.AbstractPlayer", "java.util.ArrayList"}, optional = true)
     public static class CustomNeowReplacementEventFix {
         @SpireInsertPatch(locator = Locator.class, localvars = {"ae"})
         public static void lookAtWhatIDoForYouDark(AbstractEvent ae) {
