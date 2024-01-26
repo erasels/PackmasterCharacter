@@ -9,7 +9,7 @@
   },
   "${ModID}:Winterize": {
     "NAME": "Winterize",
-    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random enemy-targeted cards in your draw pile: \"Apply !M! ${ModID}:Frostbite\""
+    "DESCRIPTION": "Channel 3 Frost. NL ${ModID}:Modify !M! random cards in your draw pile: \"Channel 1 Frost\". NL Exhaust."
   },
 "${ModID}:Discombobulate": {
     "NAME": "Discombobulate",
