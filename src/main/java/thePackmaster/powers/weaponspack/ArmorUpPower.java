@@ -22,7 +22,7 @@ public class ArmorUpPower extends AbstractPackmasterPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK && card.baseDamage != -1 && card.damage >= card.baseDamage + 3) {
+        if (card.type == AbstractCard.CardType.ATTACK && action.target != null && card.baseDamage != -1 && card.damage >= card.baseDamage + 3) {
             this.flash();
             this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
         }

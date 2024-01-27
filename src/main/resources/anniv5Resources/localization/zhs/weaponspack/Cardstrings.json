@@ -9,7 +9,7 @@
   },
   "${ModID}:MegaUpgrade": {
     "NAME": "超升级",
-    "DESCRIPTION": "升级所有装备中的 ${ModID}:武器 ： NL + !M! / + !M! 。"
+    "DESCRIPTION": "保留 。 NL 升级所有装备中的 ${ModID}:武器 ： NL + !M! / + !M! 。"
   },
   "${ModID}:PowderKeg": {
     "NAME": "火药桶",
@@ -46,7 +46,7 @@
   },
   "${ModID}:ArmorUp": {
     "NAME": "全副武装",
-    "DESCRIPTION": "每当你的攻击造成伤害比基础伤害高至少3点，获得 !M! 点格挡。"
+    "DESCRIPTION": "每当你的单体攻击造成伤害比基础伤害高至少3点，获得 !M! 点格挡。"
   },
   "${ModID}:PirateHook": {
     "NAME": "海盗之钩",
