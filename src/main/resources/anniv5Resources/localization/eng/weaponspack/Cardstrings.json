@@ -9,7 +9,7 @@
   },
   "${ModID}:MegaUpgrade": {
     "NAME": "Mega Upgrade",
-    "DESCRIPTION": "Give all your equipped ${ModID}:Weapons + !M! / + !M!."
+    "DESCRIPTION": "Retain. NL Give all your equipped ${ModID}:Weapons + !M! / + !M!."
   },
   "${ModID}:PowderKeg": {
     "NAME": "Powder Keg",
@@ -46,7 +46,7 @@
   },
   "${ModID}:ArmorUp": {
     "NAME": "Armor Up",
-    "DESCRIPTION": "Whenever you play an Attack that deals at least 3 more damage than its base damage, gain !M! Block."
+    "DESCRIPTION": "Whenever you play a single-target Attack that deals at least 3 more damage than its base damage, gain !M! Block."
   },
   "${ModID}:PirateHook": {
     "NAME": "Pirate Hook",

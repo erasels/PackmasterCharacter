@@ -13,7 +13,7 @@
   "${ModID}:ArmorUpPower": {
     "NAME": "Armor Up",
     "DESCRIPTIONS": [
-      "Whenever you play an Attack that deals at least 3 more damage than its base damage, gain #b",
+      "Whenever you play a single-target Attack that deals at least 3 more damage than its base damage, gain #b",
       " #yBlock."
     ]
   },
