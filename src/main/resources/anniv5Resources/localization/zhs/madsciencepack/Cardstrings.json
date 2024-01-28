@@ -9,7 +9,7 @@
   },
   "${ModID}:Winterize": {
     "NAME": "冬日化",
-    "DESCRIPTION": "生成 3个 冰霜 充能球。 NL 随机 ${ModID}:修改 抽牌堆中 !M! 张以敌人为目标的牌：\"给予 !M! 层 ${ModID}:霜噬 \""
+    "DESCRIPTION": "生成 3个 冰霜 充能球。 NL 随机 ${ModID}:修改 抽牌堆中 !M! 张牌：\"生成 1个 冰霜 充能球\"。 NL 消耗 。"
   },
 "${ModID}:Discombobulate": {
     "NAME": "迷惑",

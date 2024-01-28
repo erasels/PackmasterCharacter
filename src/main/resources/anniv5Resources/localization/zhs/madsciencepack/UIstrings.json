@@ -8,8 +8,8 @@
   },
   "${ModID}:MadScienceModifiers": {
     "TEXT": [
-      " NL 给予 ",
-      " 层 ${ModID}:霜噬 。",
+      " NL 生成 ",
+      " 个 冰霜 充能球。",
       "保留 。 NL ",
       " NL 打出 ",
       " NL 获得6点 格挡 。",
