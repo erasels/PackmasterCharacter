@@ -10,7 +10,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.att;
+import static thePackmaster.util.Wiz.atb;
 
 public class ChargeUpPower extends AbstractPackmasterPower implements CloneablePowerInterface {
     public static final String POWER_ID = makeID(ChargeUpPower.class.getSimpleName().replace("Power", ""));
@@ -26,7 +26,7 @@ public class ChargeUpPower extends AbstractPackmasterPower implements CloneableP
     public void onAfterCardPlayed(AbstractCard card) {
         if (amount >= THRESHOLD && (card.type == AbstractCard.CardType.ATTACK)) {
             flash();
-            att(new ReducePowerAction(owner, owner, this, THRESHOLD));
+            atb(new ReducePowerAction(owner, owner, this, THRESHOLD));
         }
     }
 
