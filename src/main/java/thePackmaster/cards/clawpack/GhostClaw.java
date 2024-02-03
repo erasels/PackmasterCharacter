@@ -19,7 +19,7 @@ public class GhostClaw extends AbstractClawCard {
     public GhostClaw() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 3;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         tags.add(CLAW);
         exhaust = true;
     }
