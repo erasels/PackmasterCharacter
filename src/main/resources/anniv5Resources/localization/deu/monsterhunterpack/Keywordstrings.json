@@ -1,0 +1,50 @@
+[
+  {
+    "PROPER_NAME": "Gejagt",
+    "NAMES": [
+      "verfolgt",
+      "gejagt"
+    ],
+    "DESCRIPTION": "Erleidet #b10% mehr Schaden für jeden Stapel Gejagt. Bei Anwendung werden alle anderen gejagten Feinde nicht mehr gejagt und andere Feinde erleiden für jeden Stapel #b10% weniger Schaden. Reduziert sich jeden Zug um #b1."
+  },
+  {
+    "PROPER_NAME": "Nicht gejagt",
+    "NAMES": [
+      "nichtgejagt",
+      "nichtgejagt"
+    ],
+    "DESCRIPTION": "Erleidet #b10% weniger Schaden von Angriffen für jeden Stapel Gejagt. Reduziert sich um #b1 pro Zug. Wenn der gejagte Gegner stirbt, entferne dies."
+  },
+  {
+    "PROPER_NAME": "Wütend",
+    "NAMES": [
+      "wütend!",
+      "wütend"
+    ],
+    "DESCRIPTION": "Falls am Ende des Zugs kein Gegner die Absicht hat dich anzugreifen, erhalte #b2 Stärke."
+  },
+  {
+    "PROPER_NAME": "Glasrüstung",
+    "NAMES": [
+      "glasrüstung"
+    ],
+    "DESCRIPTION": "Am Ende des Zugs, erhalte Block. Wenn du ungeblockten Schaden erleidest, entferne dies."
+  },
+  {
+    "PROPER_NAME": "Panzerrüstung",
+    "NAMES": [
+      "panzerrüstung"
+
+    ],
+    "DESCRIPTION": "Am Ende des Zugs, erhalte Block. Wenn du ungeblockten Schaden erleidest, reduziere dies um 1."
+  },
+  {
+    "PROPER_NAME": "Nichttödlich",
+    "NAMES": [
+      "nichttödlich",
+      "nicht-tödlich",
+      "nichttödlichen"
+    ],
+    "DESCRIPTION": "Nicht tödlicher Schaden lässt das Leben von Zielen nicht unter 1 fallen."
+  }
+]

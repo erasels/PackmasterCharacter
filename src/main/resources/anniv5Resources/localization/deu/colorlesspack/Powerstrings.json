@@ -1,0 +1,48 @@
+{
+  "anniv5:BunkerPower": {
+    "NAME": "bunker",
+    "DESCRIPTIONS": [
+      "Am Anfang deines nächsten Zuges füge deiner Hand einen #yGolf #yBall hinzu.",
+      "Am Anfang deines nächsten Zuges füge #b",
+      " #yGolf #yBälle deiner Hand hinzu."
+    ]
+  },
+  "anniv5:ColorlessMasteryPower": {
+    "NAME": "farblose Meisterschaft",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine farblose Karte spielst, erhältst du #b",
+      " Stärke."
+    ]
+  },
+  "anniv5:LunchBoxPower": {
+    "NAME": "lunchbox",
+    "DESCRIPTIONS": [
+      "Deine nächste farblose Karte wird in diesem Zug zweimal gespielt.",
+      "Deine nächsten #b",
+      " farblosen Karten werden in diesem Zug zweimal gespielt."
+    ]
+  },
+  "anniv5:MonasteryPower": {
+    "NAME": "besuch eines Klosters",
+    "DESCRIPTIONS": [
+      "Zu Beginn deiner nächsten #b3 Züge füge deiner Hand nacheinander #yWahnsinn, #yReinheit und #yApotheose hinzu.",
+      "Zu Beginn deiner nächsten #b2 Züge füge deiner Hand nacheinander #yReinheit und #yApotheose hinzu.",
+      "Zu Beginn deines nächsten Zuges füge deiner Hand #yApotheose hinzu."
+    ]
+  },
+  "anniv5:PrismShardPower": {
+    "NAME": "prismascherbe",
+    "DESCRIPTIONS": [
+      "Wenn du #b3 #yScherben zusammensetzt, füge ",
+      "+",
+      " deiner Hand hinzu."
+    ]
+  },
+  "anniv5:GhostPower": {
+    "NAME": "verfolgt",
+    "DESCRIPTIONS": [
+      "Am #rEnde ihres Zuges verliert das Ziel #b",
+      " Lebenspunkte."
+    ]
+  }
+}

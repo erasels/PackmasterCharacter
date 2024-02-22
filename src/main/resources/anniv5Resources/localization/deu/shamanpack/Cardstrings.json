@@ -1,0 +1,48 @@
+{
+  "anniv5:Flare": {
+    "NAME": "Feuerblitz",
+    "DESCRIPTION": "Fügt !D! Schaden zu. NL Verursacht !M! anniv5:Entzünden."
+  },
+  "anniv5:FlameBlast": {
+    "NAME": "Flammenstoß",
+    "DESCRIPTION": "Verursacht !M! anniv5:Entzünden. NL Wenn der Gegner verwundbar ist, verursache erneut !M! anniv5:Entzünden. NL Verursacht !anniv5:m2! Verwundbar."
+  },
+  "anniv5:IceWall": {
+    "NAME": "Eiswand",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte nächste Runde erneut !B! Block. NL Füge deinem Nachziehstapel eine Benommenheit hinzu."
+  },
+  "anniv5:FreezeAndBurn": {
+    "NAME": "Einfrieren und Brennen",
+    "DESCRIPTION": "Alle Gegner verlieren in dieser Runde !M! Stärke. NL Verursache nächsten Zug !D! Schaden an ALLEN Gegnern. NL Erschöpfen."
+  },
+  "anniv5:Frostfire": {
+    "NAME": "Frostfeuer",
+    "DESCRIPTION": "Verursacht !M! anniv5:Entzünden und !anniv5:m2! Schwach an ALLEN Gegnern. NL Erschöpfen."
+  },
+  "anniv5:FieryMantle": {
+    "NAME": "Feuerumhang",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn du in diesem Zug angegriffen wirst, verursache !M! anniv5:Entzünden."
+  },
+  "anniv5:SnowMelt": {
+    "NAME": "Schneeschmelze",
+    "DESCRIPTION": "Flüchtig. NL Ziehe !M! Karten. NL Nächstes Mal, ziehe zusätzlich !M! Karten.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Nächstes Mal, ziehe zusätzlich !M! Karten."
+  },
+  "anniv5:Pyromastery": {
+    "NAME": "Pyromanie",
+    "DESCRIPTION": "Wenn du anniv5:Entzünden anwendest, wende zusätzlich !M! anniv5:Entzünden an."
+  },
+  "anniv5:ReadTheFlames": {
+    "NAME": "Lies die Flammen",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Spähe !anniv5:m2!. NL Mische ein *verblassende *Glut in deinen Nachziehstapel."
+  },
+  "anniv5:FueledByEmbers": {
+    "NAME": "Von Glut genährt",
+    "DESCRIPTION": "Zu Beginn deines Zuges ziehe !M! Karte und füge deiner Hand und deinem Nachziehstapel jeweils !M! *Verblassende *Glut hinzu.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Zu Beginn deines Zuges ziehe !M! Karte und füge deiner Hand und deinem Nachziehstapel jeweils !M! *VSSerblassende *Glut hinzu."
+  },
+  "anniv5:FadingEmber": {
+    "NAME": "Verblassende Glut",
+    "DESCRIPTION": "Verursacht !M! anniv5:Entzünden. NL Erschöpfen."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "anniv5:RollToMove": {
+    "NAME": "Würfeln für Bewegung",
+    "DESCRIPTION": "Erhalte !B! Block. NL Würfle 2 anniv5:D6."
+  },
+  "anniv5:FlickDice": {
+    "NAME": "Würfeln für Schlag",
+    "DESCRIPTION": "{@@}Verursache !D! Schaden. NL Würfle einen anniv5:D6."
+  },
+  "anniv5:ThrowChips": {
+    "NAME": "Chips werfen",
+    "DESCRIPTION": "{@@}Verursache an einem zufälligen Gegner X Mal !D! Schaden. NL anniv5:Neuwürfeln."
+  },
+  "anniv5:PocketAce": {
+    "NAME": "Ass im Ärmel",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Lege !anniv5:m2! Karten ab. NL Erschöpfen."
+  },
+  "anniv5:Reroller": {
+    "NAME": "Neuwürfler",
+    "DESCRIPTION": "{@@}Erhalte !B! Block. NL Verursache !D! Schaden. NL anniv5:Neuwürfeln."
+  },
+  "anniv5:PerceptionCheck": {
+    "NAME": "Wahrnehmungsprüfung",
+    "DESCRIPTION": "Zu Beginn deines Zuges, wenn du keine anniv5:Würfel hast, wirf einen anniv5:D8."
+  },
+  "anniv5:AllIn": {
+    "NAME": "Alles oder Nichts",
+    "DESCRIPTION": "{@@}Verursache !D! Schaden. NL Ziehe !M! Karten. NL Erhalte !M! [E]. NL Überspringe deinen nächsten Zug. NL Erschöpfen."
+  },
+  "anniv5:D20": {
+    "NAME": "D20!",
+    "DESCRIPTION": "Wirf einen [#efc851]D20[]. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wirf einen [#efc851]D20[]."
+  },
+  "anniv5:GoToJail": {
+    "NAME": "Ab ins Gefängnis",
+    "DESCRIPTION": "Gehe direkt zum anniv5:Gefängnis. NL Gehe nicht über LOS. NL Erhalte keine $200.",
+    "UPGRADE_DESCRIPTION": "Gehe direkt zum anniv5:Gefängnis. NL Gehe nicht über LOS. NL Erhalte $20."
+  },
+  "anniv5:LevelUp": {
+    "NAME": "Level aufsteigen!",
+    "DESCRIPTION": "Erhalte !M! anniv5:Vorteil. NL Wirf 2 anniv5:D6."
+  },
+  "anniv5:BoardGameKeywordManager": {
+    "NAME": "Stichwort-Manager",
+    "DESCRIPTION": "Hilfsmittel für Übersetzungen und einfachen Zugriff auf Schlüsselwort-IDs",
+    "EXTENDED_DESCRIPTION": [
+      "anniv5:würfel",
+      "anniv5:chance"
+    ]
+  }
+}

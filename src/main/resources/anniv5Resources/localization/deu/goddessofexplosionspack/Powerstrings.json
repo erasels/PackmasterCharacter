@@ -1,0 +1,55 @@
+{
+  "anniv5:FalloutPower": {
+    "NAME": "Fallout",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yMacht Karte spielst, erleidet das Ziel #b",
+      " Schaden."
+    ]
+  },
+  "anniv5:WaveMotionCannonPower": {
+    "NAME": "Wellen Kanone",
+    "DESCRIPTIONS": [
+      "Nächste Runde füge ALLEN Gegnern #b",
+      " Schaden zu."
+    ]
+  },
+  "anniv5:RedshiftPower": {
+    "NAME": "Rotverschiebung",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines nächsten Zugs, ziehe 1 Karte.",
+      "Zu Beginn deiner nächsten #b",
+      " Züge, ziehe 1 Karte."
+    ]
+  },
+  "anniv5:CountdownPower": {
+    "NAME": "Countdown",
+    "DESCRIPTIONS": [
+      "Nachdem du #b",
+      " weitere Karten gezogen hast, erhalte [E] [E] und einen #yAtomarer #yRammblock.",
+      "Nachdem du #b",
+      " weitere Karten gezogen hast, erhalte [E] [E] und einen #yAtomarer #yRammblock+."
+    ]
+  },
+  "anniv5:MeltdownPower": {
+    "NAME": "Kernschmelze",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yMacht Karte ziehst, erhalte #b",
+      " Energie."
+    ]
+  },
+  "anniv5:ExplosiveFormPower": {
+    "NAME": "Explosive Form",
+    "DESCRIPTIONS": [
+      "Zu Beginn jedes Zuges, platziere #yDie #yBombe.",
+      "Zu Beginn jedes Zuges, platziere #b",
+      " #yBomben."
+    ]
+  },
+  "anniv5:EveOfDestructionPower": {
+    "NAME": "Vorabend der Vernichtung",
+    "DESCRIPTIONS": [
+      "Du verursachst #b",
+      "% mehr Nichtangriffsschaden."
+    ]
+  }
+}

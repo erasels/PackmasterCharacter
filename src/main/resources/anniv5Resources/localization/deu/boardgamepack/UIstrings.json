@@ -1,0 +1,20 @@
+{
+  "anniv5:BoardGamePack": {
+    "TEXT": [
+      "Brettspiele",
+      "Besiege Gegner mit der Kraft von anniv5:Würfel!",
+      "Laugic"
+    ]
+  },
+  "anniv5:BoardGameChance": {
+    "TEXT": [
+      "Chance"
+    ]
+  },
+  "anniv5:BoardGamePackHat": {
+    "TEXT": [
+      "Dein vermarktbarster Hut.",
+      "Brettspiel-Hut"
+    ]
+  }
+}

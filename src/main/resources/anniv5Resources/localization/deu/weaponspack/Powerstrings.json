@@ -1,0 +1,26 @@
+{
+  "anniv5:WeaponPower": {
+    "NAME": "Waffe",
+    "DESCRIPTIONS": []
+  },
+  "anniv5:SalvagerPower": {
+    "NAME": "Bergungsschiff",
+    "DESCRIPTIONS": [
+      "Immer wenn eine #yWaffe zerstört wird, erhalte #b",
+      " [E] ."
+    ]
+  },
+  "anniv5:ArmorUpPower": {
+    "NAME": "Rüstung aufbauen",
+    "DESCRIPTIONS": [
+      "Immer wenn du einen Einzelzielschaden verursachenden Angriff spielst, der mindestens 3 Schaden über seinem Grundschaden liegt, erhalte #b",
+      " #yBlock."
+    ]
+  },
+  "anniv5:ReapersMarkPower": {
+    "NAME": "Todbringers Sense",
+    "DESCRIPTIONS": [
+      "Immer wenn #b3 Stacks angewendet werden, entferne sie und die Kreatur verliert TP abhänging von #b40% ihrer fehlenden LP."
+    ]
+  }
+}

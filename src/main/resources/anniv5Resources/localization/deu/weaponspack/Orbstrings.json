@@ -1,0 +1,60 @@
+{
+  "anniv5:AbstractWeaponOrb": {
+    "NAME": "Waffe",
+    "DESCRIPTION": [
+      " NL ",
+      "Angriff: #b",
+      " NL ",
+      "Haltbarkeit: #b"
+    ]
+  },
+  "anniv5:CutlassOrb": {
+    "NAME": "Säbel",
+    "DESCRIPTION": [
+      ""
+    ]
+  },
+  "anniv5:PowderKegOrb": {
+    "NAME": "Pulverfass",
+    "DESCRIPTION": [
+      "Wenn zerstört, füge ALLEN Gegnern #b",
+      " Schaden zu."
+    ]
+  },
+  "anniv5:SwordOfWisdomOrb": {
+    "NAME": "Schwert der Weisheit",
+    "DESCRIPTION": [
+      "Immer wenn du mit dieser Waffe angreifst, ziehe 1 Karte."
+    ]
+  },
+  "anniv5:SwordOfChaosOrb": {
+    "NAME": "Schwert des Chaos",
+    "DESCRIPTION": [
+      "Immer wenn du mit dieser Waffe angreifst, füge deiner Hand eine zufällige Karte hinzu."
+    ]
+  },
+  "anniv5:CatONineTailsOrb": {
+    "NAME": "Peitsche mit neun Schwänzen",
+    "DESCRIPTION": [
+      "Nachdem du mit dieser Waffe angegriffen hast, erhöhe ihren Angriff um #b2."
+    ]
+  },
+  "anniv5:ForgingHammerOrb": {
+    "NAME": "Schmiedehammer",
+    "DESCRIPTION": [
+      "Nachdem du mit dieser Waffe angegriffen hast, verbessere eine zufällige Karte in deiner Hand für den Rest des Kampfes."
+    ]
+  },
+  "anniv5:SwordOfFireOrb": {
+    "NAME": "Schwert des Feuers",
+    "DESCRIPTION": [
+      "Immer wenn du mit dieser Waffe angreifst, füge ALLEN Gegnern #b4 Schaden zu."
+    ]
+  },
+  "anniv5:ReapersScytheOrb": {
+    "NAME": "Todbringers Sense",
+    "DESCRIPTION": [
+      "Immer wenn du mit dieser Waffe angreifst, trage pro Treffer #b1 #yTodbringer auf ein Ziel auf."
+    ]
+  }
+}

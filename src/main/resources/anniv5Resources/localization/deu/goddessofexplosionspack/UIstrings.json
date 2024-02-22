@@ -1,0 +1,29 @@
+{
+  "anniv5:GoddessOfExplosionsPack": {
+    "TEXT": [
+      "Göttin der Explosionen",
+      "MACHT! WERT! EXPLOSIONEN! NL Starke Skalierung, Mächte und Nichtangriffsschaden.",
+      "AlexMdle",
+      "#yGöttin #yder #yExplosionen ursprünglich erstellt von #yLudosity"
+    ]
+  },
+  "anniv5:HandpickUI": {
+    "TEXT": [
+      "zweimal spielen.",
+      "in eine Bombe verwandeln."
+    ]
+  },
+  "anniv5:KillerQueenTooltip": {
+    "TEXT": [
+      "Killer Queen",
+      "Beim Spielen, füge ALLEN Gegnern #b",
+      " Schaden zu."
+    ]
+  },
+  "anniv5:GoddessOfExplosionsPackHat": {
+    "TEXT": [
+      "Hättest angeben sollen, wo du diese Flügel haben möchtest.",
+      "Apotheose"
+    ]
+  }
+}

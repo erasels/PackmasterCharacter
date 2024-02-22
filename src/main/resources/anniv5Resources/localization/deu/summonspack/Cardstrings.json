@@ -1,0 +1,70 @@
+{
+  "anniv5:Leprechaun": {
+    "NAME": "Kobold",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 anniv5:Kobold.",
+    "EXTENDED_DESCRIPTION": [
+      "Würfel",
+      "Würfel erhöhen den Schaden oder den #yBlock der nächsten Karte, die du spielst.",
+      "Pech",
+      "Von Pech betroffene Gegner verlieren TP, wenn sie gedebufft werden."
+    ],
+    "FLAVOR": "Lobpreise RNGesus."
+  },
+  "anniv5:Porcupine": {
+    "NAME": "Stachelschwein",
+    "DESCRIPTION": "Erschaffe 1 anniv5:Stachelschwein. NL Füge deiner Hand !M! *Stachel hinzu.",
+    "FLAVOR": "Die Stille in tierischer Form."
+  },
+  "anniv5:Wolves": {
+    "NAME": "Wölfe",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschaffe 1 anniv5:Wolf.",
+    "FLAVOR": "Rudeltiere für den Rudelführer."
+  },
+  "anniv5:Elephant": {
+    "NAME": "Elefant",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte !M! Schaden.",
+    "FLAVOR": "Das ist meine Lieblingskarte. Ich hoffe, sie gefällt dir auch."
+  },
+  "anniv5:FireSpirit": {
+    "NAME": "Feuergeist",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 anniv5:Feuergeist.",
+    "EXTENDED_DESCRIPTION": [
+      "Entzünden",
+      "Entzündete Kreaturen verlieren pro Stapel am Anfang ihres Zuges #b1 TP."
+      ],
+    "FLAVOR": "Sei vorsichtig, Feuergeister kuscheln gerne."
+  },
+  "anniv5:RainbowLouse": {
+    "NAME": "Regenbogenlaus",
+    "DESCRIPTION": "Erschaffe 1 anniv5:Regenbogenlaus.",
+    "UPGRADE_DESCRIPTION": "Erschaffe 1 anniv5:Regenbogenlaus. NL Ziehe 1 Karte.",
+    "FLAVOR": "Das Ergebnis eines unklugen magischen Experiments."
+  },
+  "anniv5:SwarmOfBees": {
+    "NAME": "Bienenschwarm",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erschaffe 1 anniv5:Bienenschwarm.",
+    "FLAVOR": "Absolut furchterregend."
+  },
+  "anniv5:Specialist": {
+    "NAME": "Spezialist",
+    "DESCRIPTION": "Erhalte !M! Fokus. NL Verliere 1 Stärke und Geschicklichkeit.",
+    "FLAVOR": "Ich überspringe das Training für die Beine."
+  },
+  "anniv5:Ambush": {
+    "NAME": "Hinterhalt",
+    "DESCRIPTION": "Flüchtig. NL Immer wenn du einen Orb erschaffst, löse ihn aus, ohne ihn zu entfernen.",
+    "UPGRADE_DESCRIPTION": "Immer wenn du einen Orb erschaffst, löse ihn aus, ohne ihn zu entfernen.",
+    "FLAVOR": "Ich konnte keine guten Hinterhalt-Kunstwerke finden, also gibt es hier einen Wortwitz."
+  },
+  "anniv5:Pandas": {
+    "NAME": "Pandas",
+    "DESCRIPTION": "Erschaffe X anniv5:Pandas.",
+    "UPGRADE_DESCRIPTION": "Erschaffe X+1 anniv5:Pandas.",
+    "FLAVOR": "Pandamonium."
+  },
+  "anniv5:Quill": {
+    "NAME": "Stachel",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfen.",
+    "FLAVOR": "Stich."
+  }
+}

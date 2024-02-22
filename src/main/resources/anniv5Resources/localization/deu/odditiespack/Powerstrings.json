@@ -1,0 +1,18 @@
+{
+  "anniv5:AutoBattlerPower": {
+    "NAME": "Auto Battler",
+    "DESCRIPTIONS": [
+      "Du spielst Karten automatisch von links nach rechts auf den vorderen Gegner."
+    ]
+  },
+  "anniv5:FinalFormPower": {
+    "NAME": "Final Form",
+    "DESCRIPTIONS": [
+      "Zu Beginn der nächsten #b",
+      " Runde, ",
+      " Runden, ",
+      "spiele und #yErschöpfe eine Kopie von ",
+      "."
+    ]
+  }
+}

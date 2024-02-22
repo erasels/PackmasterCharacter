@@ -1,0 +1,56 @@
+{
+  "anniv5:DividedFury": {
+    "NAME": "Geteilte Wut",
+    "DESCRIPTION": "Zu Beginn deines Zuges gib !M! Karten in deiner Hand anniv5:rip.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Zu Beginn deines Zuges gib !M! Karten in deiner Hand anniv5:rip."
+  },
+  "anniv5:ViciousCycle": {
+    "NAME": "Teuflischer Kreislauf",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge für jede Karte, die in diesem Zug *rip wurde, zusätzlichen !D! Schaden zu.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Karte rip.)",
+      " Karten rip.)"
+    ]
+  },
+  "anniv5:ArtAttack": {
+    "NAME": "Kunstangriff",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Die Malerei Karte verursacht beim Ziel !M! LP Verlust."
+  },
+  "anniv5:SurprisePack": {
+    "NAME": "Überraschungspaket",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Wenn *rip, erhalte [E].",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Wenn *rip, NL erhalte [E] [E]."
+  },
+  "anniv5:Inspiration": {
+    "NAME": "Inspiration",
+    "DESCRIPTION": "Ziehe Karten entsprechend der Anzahl von anniv5:Malerei und Status Karten in deinem Auslagestapel. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Ziehe Karten entsprechend der Anzahl von anniv5:Malerei und Status Karten in deinem Auslagestapel.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Ziehe ",
+      " Karte.)",
+      " Karten.)"
+    ]
+  },
+  "anniv5:FlimsyBash": {
+    "NAME": "Brüchiger Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge !M! Verwundbar hinzu."
+  },
+  "anniv5:FragileShrug": {
+    "NAME": "Brüchiges Schulterzucken",
+    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karte. NL Wenn *rip, ziehe !M! Karte."
+  },
+  "anniv5:HazardousStrike": {
+    "NAME": "Gefährlicher Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn *rip, Erschöpfe !M! Karten zufällig."
+  },
+  "anniv5:TotalWeakness": {
+    "NAME": "Totale Schwäche",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge ALLEN Gegnern !M! Schwach hinzu."
+  },
+  "anniv5:LeftBrain": {
+    "NAME": "Linke Gehirnhälfte",
+    "DESCRIPTION": "Erschöpfe ALLE deine anniv5:Malerei und Status Karten. Erhalte für jede erschöpfte Karte !M! Stärke.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erschöpfe ALLE deine anniv5:Malerei und Status Karten. Erhalte für jede erschöpfte Karte !M! Stärke."
+  }
+}

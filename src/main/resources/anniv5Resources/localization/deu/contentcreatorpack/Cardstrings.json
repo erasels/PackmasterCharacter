@@ -1,0 +1,65 @@
+{
+  "anniv5:OlexasCloak": {
+    "NAME": "Olexa's Umhang",
+    "DESCRIPTION": "{@@}Behalten. NL Wenn diese Karte noch !hoard! Mal gespielt wird, erhalte !B! Block. NL stslib:Persist !stslib:persist!."
+  },
+  "anniv5:HuttsGamble": {
+    "NAME": "Hutts' Wette",
+    "DESCRIPTION": "Wenn du in diesem Zug keinen ungeblockten Angriffsschaden erhältst, erhalte [E] und ziehe im nächsten Zug 1 Karte mehr.",
+    "UPGRADE_DESCRIPTION": "Wenn du in diesem Zug ungeblockten Angriffsschaden erhältst, erhalte [E] [E] und ziehe im nächsten Zug 1 Karte mehr."
+  },
+  "anniv5:Tricky": {
+    "NAME": "Tricky",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Fügt für jede in diesem Zug gezogene Karte !M! zusätzlichen Schaden zu."
+  },
+  "anniv5:SneakyteakStrike": {
+    "NAME": "Sneakyteak Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege einen *Schattenseiten *Schlag oben auf deinen Nachziehstapel.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Lege einen *Schattenseiten *Schlag+ oben auf deinen Nachziehstapel."
+  },
+  "anniv5:DarksideSlap": {
+    "NAME": "Schattenseiten Schlag",
+    "DESCRIPTION": "anniv5:MEGAthereal. NL Füge !D! Schaden zu."
+  },
+  "anniv5:Wanderbots": {
+    "NAME": "Wanderbots",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 anniv5:Wanderbot.",
+    "UPGRADE_DESCRIPTION": "anniv5:Eingraviert. NL Erhalte !B! Block. NL Erschaffe 1 anniv5:Wanderbot."
+  },
+  "anniv5:Retromation": {
+    "NAME": "Retromation",
+    "DESCRIPTION": "Zu Beginn deines Zuges erhalte eine Karte aus einem Paket, die in deinem normalen Draft nicht verfügbar ist. NL Sie wird Flüchtig."
+  },
+  "anniv5:OddOne": {
+    "NAME": "Odd One",
+    "DESCRIPTION": "anniv5:Ungerade: Füge einem zufälligen Feind !D! Schaden zu. NL anniv5:Gerade: Ziehe 1 Karte.",
+    "EXTENDED_DESCRIPTION": [
+      " NL NL (Gespielt ",
+      ". ",
+      "Gerade!)",
+      "Ungerade!)"
+    ]
+  },
+  "anniv5:Rhapsody": {
+    "NAME": "Rhapsody",
+    "DESCRIPTION": "Erhalte !M! anniv5:Inspiration. NL Ziehe !anniv5:m2! Karte.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! anniv5:Inspiration. NL Ziehe !anniv5:m2! Karten."
+  },
+  "anniv5:Frostprime": {
+    "NAME": "Frost Prime",
+    "DESCRIPTION": "Zu Beginn deines Zuges, Erschaffe 1 Frost Orb und wende !M! anniv5:Frostbiss auf ALLE Gegner an."
+  },
+  "anniv5:BaalorBash": {
+    "NAME": "Baalorlord's Schlag",
+    "DESCRIPTION": "anniv5:Ungeboren. NL Füge !D! Schaden zu. NL Füge deinem Ablagestapel *Gemütlicher *Bauplan hinzu. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Füge deinem Ablagestapel *Gemütlicher *Bauplan hinzu. NL Erschöpfen."
+  },
+  "anniv5:BaalorBlueprint": {
+    "NAME": "Gemütlicher Bauplan",
+    "DESCRIPTION": "Mische deinen Ablagestapel in deinen Nachziehstapel. Lege *Der *Gemütliche *Stuhl unten darauf. Erschöpfen."
+  },
+  "anniv5:TheCozyChair": {
+    "NAME": "Der Gemütliche Stuhl",
+    "DESCRIPTION": "Deine Karten werden zweimal gespielt."
+  }
+}

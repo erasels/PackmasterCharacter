@@ -1,0 +1,57 @@
+{
+  "anniv5:MiracleWorker": {
+    "NAME": "Wunderarbeiter",
+    "DESCRIPTION": "Erhalte !B! Block. NL Lege ein *Wunder oben auf deinen Nachziehstapel."
+  },
+  "anniv5:Trash": {
+    "NAME": "Müll",
+    "DESCRIPTION": "Erschöpfe die Karte ganz links auf deiner Hand. NL Erhalte [E] .",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erschöpfe die Karte ganz links auf deiner Hand. NL Erhalte [E] ."
+  },
+  "anniv5:MultiTool": {
+    "NAME": "Multifunktionswerkzeug",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe 1 Karte. NL Wenn du diesen Zug mit Energie beendest, verlieren ALLE Gegner !M! LP."
+  },
+  "anniv5:LastResort": {
+    "NAME": "Letztes Mittel",
+    "DESCRIPTION": "Erhalte X Mal !B! Block. NL Wenn X 0 ist, erhalte nächste Runde [E] ."
+  },
+  "anniv5:LotsOfIronWaves": {
+    "NAME": "Eisenhagel",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu."
+  },
+  "anniv5:ManifestMeal": {
+    "NAME": "Manifest Mahl",
+    "DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Mische ein *Essen in deinen Nachziehstapel.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden X Mal zu. NL Mische ein *Essen+ in deinen Nachziehstapel."
+  },
+  "anniv5:Food": {
+    "NAME": "Essen",
+    "DESCRIPTION": "Erhalte X [E] . NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte X [E] . NL Erschöpfen.",
+    "EXTENDED_DESCRIPTION": [
+      "Erhalte ",
+      "Behalten. NL Erhalte ",
+      " . NL Erschöpfen.",
+      "Du erhältst nichts! NL Guten Tag, der Herr! NL Erschöpfen.",
+      "Mmm, lecker"
+    ]
+  },
+  "anniv5:Investor": {
+    "NAME": "Investor",
+    "DESCRIPTION": "Wann immer du 2 oder mehr Energie für eine Karte ausgibst, erhalte !M! Block."
+  },
+  "anniv5:StruckByATrain": {
+    "NAME": "Von einem Zug erwischt",
+    "DESCRIPTION": "Füge dem vordersten Gegner !D! Schaden zu. NL Erhöhe den Schaden dieser Karte um !M! in diesem Kampf."
+  },
+  "anniv5:StormForm": {
+    "NAME": "Sturmform",
+    "DESCRIPTION": "Zu Beginn deines Zuges, erhalte [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Zu Beginn deines Zuges, erhalte [E] [E] [E] ."
+  },
+  "anniv5:SuperNova": {
+    "NAME": "Supernova",
+    "DESCRIPTION": "ALLE Gegner verlieren !M! LP. NL Füge ALLEN Gegnern !anniv5:m2! Schwach und Verwundbar zu."
+  }
+}

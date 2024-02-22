@@ -1,0 +1,46 @@
+{
+  "anniv5:MasterSpark": {
+    "NAME": "Meisterfunke",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Verstärken [E] : NL Füge stattdessen !anniv5:sd! Schaden zu."
+  },
+  "anniv5:RisingStrike": {
+    "NAME": "Aufwärtshieb",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Aufgeregt: Erhalte !M! anniv5:Aufladen."
+  },
+  "anniv5:GalacticHalo": {
+    "NAME": "Galaktisches Echo",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! anniv5:Aufladen."
+  },
+  "anniv5:LuminousStrike": {
+    "NAME": "Leuchtender Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Verstärken [E] : NL Erhalte !M! anniv5:Aufladen."
+  },
+  "anniv5:ShootingEcho": {
+    "NAME": "Schallendes Echo",
+    "DESCRIPTION": "Füge !D! Schaden zu. Erschöpfe eine zufällige Karte, um eine Kopie davon zu erhalten. NL Erschöpfen."
+  },
+  "anniv5:StardustReverie": {
+    "NAME": "Sternenstaub Phantasie",
+    "DESCRIPTION": "Erschöpfe die nächste Karte, die du spielst, um !M! anniv5:Aufladen zu erhalten und ziehe 1 Karte."
+  },
+  "anniv5:Inertia": {
+    "NAME": "Trägheit",
+    "DESCRIPTION": "Erhalte !M! *Abtragung. NL anniv5:Verstärken [E] : NL Erhalte zusätzlich !anniv5:m2! *Abtragung."
+  },
+  "anniv5:UltimateShortwave": {
+    "NAME": "Ultimative Kurzwelle",
+    "DESCRIPTION": "Erhalte !M! [E] und !anniv5:m2! anniv5:Aufladen. NL anniv5:Verstärken [E] : NL Erhöhe beide Werte in diesem Kampf um 1."
+  },
+  "anniv5:DragonMeteor": {
+    "NAME": "Drachenmeteor",
+    "DESCRIPTION": "Füge !D! Schaden zu. Für jede Karte in deinem Erschöpfungsstapel füge !M! zusätzlichen Schaden zu."
+  },
+  "anniv5:EarthlightRay": {
+    "NAME": "Erdlichtstrahl",
+    "DESCRIPTION": "Nachdem du anniv5:Aufladen erhalten hast, füge ALLEN Gegnern Schaden in Höhe von !M! Mal dem Gesamtwert zu."
+  },
+  "anniv5:Spark": {
+    "NAME": "Funke",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Verstärken [E] : NL Erhalte !M! anniv5:Aufladen. NL Erschöpfen."
+  }
+}

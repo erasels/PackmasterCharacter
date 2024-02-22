@@ -1,0 +1,52 @@
+{
+  "anniv5:Conjunction": {
+    "NAME": "Konjunktion",
+    "DESCRIPTION": "Flüchtig. NL Wenn diese Karte gezogen wird, erhalte !B! Block."
+  },
+  "anniv5:Opposition": {
+    "NAME": "Opposition",
+    "DESCRIPTION": "Flüchtig. NL Wenn diese Karte gezogen wird, verliert ein zufälliger Gegner !M! TP."
+  },
+  "anniv5:Quincunx": {
+    "NAME": "Quincunx",
+    "DESCRIPTION": "Flüchtig. NL Wenn diese Karte gezogen wird, verlieren ALLE Gegner in diesem Zug !M! Stärke."
+  },
+  "anniv5:Novile": {
+    "NAME": "Novile",
+    "DESCRIPTION": "Flüchtig. NL Wenn diese Karte gezogen wird, erhalte [E].",
+    "EXTENDED_DESCRIPTION": [
+      "Flüchtig. NL Wenn diese Karte gezogen wird, erhalte",
+      " [E]",
+      "."
+    ]
+  },
+  "anniv5:Square": {
+    "NAME": "Quadrat",
+    "DESCRIPTION": "{@@}Flüchtig. NL Wenn diese Karte gezogen wird, ziehe !M! Karte{!M!|1=|@=n} mehr."
+  },
+  "anniv5:Trine": {
+    "NAME": "Trigon",
+    "DESCRIPTION": "Flüchtig. NL Wenn diese Karte gezogen wird, wird die nächste Karte, die du in diesem Zug spielst, zweimal gespielt."
+  },
+  "anniv5:Divination": {
+    "NAME": "Divination",
+    "DESCRIPTION": "Lege eine Karte aus deiner Hand unten in deinen Nachziehstapel. NL Ziehe !M! Karten.",
+    "UPGRADE_DESCRIPTION": "Lege beliebig viele Karten aus deiner Hand unten in deinen Nachziehstapel. NL Ziehe !M! Karten.",
+    "EXTENDED_DESCRIPTION": [
+      "Lege unten in deinen Nachziehstapel"
+    ]
+  },
+  "anniv5:Glimpse": {
+    "NAME": "Ausblick",
+    "DESCRIPTION": "Immer wenn du eine Flüchtig Karte ziehst, erhalte !M! Block."
+  },
+  "anniv5:Remember": {
+    "NAME": "Erinnern",
+    "DESCRIPTION": "{@@}Am Ende deines Zuges mische bis zu !M! Karte{!M!|1=|@=n} aus deiner Hand in deinen Nachziehstapel."
+  },
+  "anniv5:Alignment": {
+    "NAME": "Ausrichtung",
+    "DESCRIPTION": "Ziehe X Karten. NL Diese Karten kosten in diesem Zug X weniger. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Ziehe X Karten. NL Diese Karten kosten in diesem Zug X weniger."
+  }
+}

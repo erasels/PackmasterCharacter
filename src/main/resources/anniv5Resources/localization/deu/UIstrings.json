@@ -1,0 +1,242 @@
+{
+  "anniv5:ModalChoice": {
+    "TEXT": [
+      "Wähle ein Pack aus.",
+      "Auswählen."
+    ]
+  },
+  "anniv5:PackPreviewCard": {
+    "TEXT": [
+      "Künstler: ",
+      "Pack",
+      "Hut freigeschaltet",
+      "Hut gesperrt"
+    ]
+  },
+  "anniv5:AtGameStart": {
+    "TEXT": [
+      "Dies sind die verfügbaren Packs für dieses Lauf. Klicke auf Bestätigen, um fortzufahren."
+    ]
+  },
+  "anniv5:IroncladPack": {
+    "TEXT": [
+      "Der Eiserne - Ideale",
+      "Eine Sammlung zuverlässiger Eisernen Karten, inklusive Zugang zu Stärke.",
+      "MegaCrit"
+    ]
+  },
+  "anniv5:IroncladPackHat": {
+    "TEXT": [
+      "Eine harte Maske für einen harten Kerl.",
+      "Eisenhelm"
+    ]
+  },
+  "anniv5:SilentPack": {
+    "TEXT": [
+      "Die Stille - Showdown",
+      "Eine Sammlung zuverlässiger Stille Karten, inklusive Zugang zu Messer und Abwurf.",
+      "MegaCrit"
+    ]
+  },
+  "anniv5:SilentPackHat": {
+    "TEXT": [
+      "Ein makabres Andenken, das jetzt dein Haupt schmückt.",
+      " Die Stille Trophäe"
+    ]
+  },
+  "anniv5:DefectPack": {
+    "TEXT": [
+      "Defekte Träume",
+      "Eine Sammlung von Defekt Karten, die sich auf Orb Erschaffung konzentriert.",
+      "MegaCrit"
+    ]
+  },
+  "anniv5:DefectPackHat": {
+    "TEXT": [
+      "Du verspürst einen seltsamen Drang, Gleichgewicht herzustellen.",
+      "Defekt-Schnittstelle"
+    ]
+  },
+  "anniv5:AllForOnePack": {
+    "TEXT": [
+      "Alle für einen",
+      "Eine Sammlung von Basis-Spielkarten mit Schwerpunkt auf 0-Kosten und Ziehen.",
+      "MegaCrit"
+    ]
+  },
+  "anniv5:AllForOnePackHat": {
+    "TEXT": [
+      "Gemeinsam stehen wir stark, und getrennt fallen wir.",
+      "Musketeers Kappe"
+    ]
+  },
+  "anniv5:WatcherPack": {
+    "TEXT": [
+      "Wille der Seherin",
+      "Eine Sammlung zuverlässiger Seherin Karten (kein Zugang zu Haltungen).",
+      "MegaCrit"
+    ]
+  },
+  "anniv5:WatcherPackHat": {
+    "TEXT": [
+      "Nachdenkliches Gesichtsaccessoire & Zubehör.",
+      "Seherin Schleier"
+    ]
+  },
+  "anniv5:BulwarkPack": {
+    "TEXT": [
+      "Bollwerk",
+      "Die größten Verteidigungswerkzeuge des Spire, erstmals an einem Ort vereint.",
+      "modargo"
+    ]
+  },
+  "anniv5:BulwarkPackHat": {
+    "TEXT": [
+      "Umfassender Schutz.",
+      "Die Kopfbefestigung"
+    ]
+  },
+  "anniv5:PackMainMenuUI": {
+    "TEXT": [
+      "Benutzerdefinierten Draft-Modus",
+      "Aktivieren Sie dies, um zu wählen, wie Ihre Packs bestimmt werden.",
+      "Zufällig",
+      "Wahl von ",
+      "Pack-Filtermenü",
+      "Hut Menü",
+      "",
+      "Keiner"
+    ]
+  },
+  "anniv5:PackSetup": {
+    "TEXT": [
+      "Draften Sie ein Pack!",
+      "Aktuelle Packs",
+      "Packbewertungen anzeigen"
+    ]
+  },
+  "anniv5:CurrentRunCardsTopPanelItem": {
+    "TEXT": [
+      "Packs",
+      "{0} NL NL Klicken Sie hier, um den Kartenpool für diesen Lauf anzuzeigen.",
+      "Karten verfügbar in diesem Lauf"
+    ]
+  },
+  "anniv5:CreditsRenderStrings": {
+    "TEXT": [
+      "Zusätzliche Credits"
+    ]
+  },
+  "anniv5:PackFilterMenu": {
+    "TEXT": [
+      "Pack aktivieren"
+    ]
+  },
+  "anniv5:Compendium": {
+    "TEXT": [
+      "Nach Packs"
+    ]
+  },
+  "anniv5:RunHistory": {
+    "TEXT": [
+      "Packs:"
+    ]
+  },
+  "anniv5:CardTypeStrings": {
+    "TEXT": [
+      "Chance"
+    ]
+  },
+  "anniv5:HatMenu": {
+    "TEXT": [
+      "Basis Hut",
+      "(L)",
+      "Besiege Akt 3 mit dem ",
+      " Pack, um diesen Hut für zukünftige Läufe freizuschalten.",
+      "Der Hut für das ",
+      " Pack. Echter Geschmack kommt!",
+      "(!)",
+      " hat kein entsprechendes Hutbild. Bitte beheben.",
+      "Ein zufälliger Hut wird zu Beginn jedes Laufs ausgewählt.",
+      "Zufälliger Hut",
+      " Pack",
+      "Regenbogenhut"
+    ]
+  },
+  "anniv5:ConfigMenuText": {
+    "TEXT": [
+      "Der Packmeister",
+      "StS Modding Community",
+      "Fügt einen neuen Charakter hinzu: Der Packmeister.",
+      "ALLE PACKS-MODUS. Ignoriert benutzerdefinierten Draft, schaltet keine Hüte frei",
+      "Ein Rahmen für alle. Alle Pack-Karten haben normale Packmeister-Rahmen (erfordert Neustart).",
+      "Inhalte teilen. Einige Relikte/Tränke können bei anderen Charakteren erscheinen (erfordert Neustart).",
+      "Erlauben Sie das mehrmalige Auswählen von Keiner im benutzerdefinierten Draft-Modus (kann bei einigen Packauswahlen zu Abstürzen/Freezes führen)"
+    ]
+  },
+  "anniv5:PMBoosterBoxCardReward": {
+    "TEXT": [
+      "Fügen Sie eine Booster Box Karte hinzu",
+      "Wählen Sie eine Booster Box Karte aus"
+    ]
+  },
+  "anniv5:SingleCardReward": {
+    "TEXT": [
+      "[Karte] ",
+      "Tipp: Rechtsklick für detaillierte Kartenansicht!"
+    ]
+  },
+  "anniv5:PackSummaryDisplay": {
+    "TEXT": [
+      "Packzusammenfassung",
+      "Angriff: {0}",
+      "Verteidigung: {0}",
+      "Unterstützung: {0}",
+      "Geschwindigkeit: {0}",
+      "Skalierung: {0}",
+      "Tags: {0}",
+      ", "
+    ],
+    "TEXT_DICT": {
+      "None": "Keiner",
+      "Strength": "Stärke",
+      "Exhaust": "Erschöpfen",
+      "Orbs": "Orbs",
+      "Stances": "Haltungen",
+      "Discard": "Abwerfen",
+      "Debuffs": "Debuffs",
+      "Attacks": "Angriffe",
+      "Magic":  "Magie",
+      "Tokens": "Marken",
+      "Powers": "Mächte"
+    }
+  },
+  "anniv5:MerchantSpeech": {
+    "TEXT": [
+      "@Schicker Hut@",
+      "Bessere Angebote hier als auf dem Schwarzmarkt",
+      "Das ist ein ~großer~ Rucksack",
+      "Dich habe ich in letzter Zeit oft gesehen"
+    ]
+  },
+  "anniv5:MerchantEndingSpeech": {
+    "TEXT": [
+      "Was hast du darin eigentlich?",
+      "Eines Tages werden sie das letzte Pack machen."
+    ]
+  },
+  "anniv5:MainMenuExpansionPacksButton": {
+    "TEXT": [
+      "Zusätzliche Packs aktivieren!",
+      "Dir fehlen einige Packs, #gklicke #ghier #gum #gsie #gzu #gaktivieren. Mehr Vielfalt, aber längere initiale Ladezeit. NL #yErfordert #yNeustart!",
+      "Neustart erforderlich!"
+    ]
+  },
+  "anniv5:MainMenuFTUE": {
+    "TEXT": [
+      "Packmaster-Erweiterungspacks!",
+      "Hey, aufgrund von Speicherproblemen haben wir Packmaster modular gestaltet. Daher müssen Sie \"Der Packmeister: Erweiterungspacks\" aktivieren, um alle Packs zu erhalten. NL Aktivieren Sie es selbst oder verwenden Sie die praktische Schaltfläche auf der rechten Seite des Hauptmenüs.",
+      "Fortsetzen"
+    ]
+  }
+}

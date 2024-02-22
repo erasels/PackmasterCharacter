@@ -1,0 +1,45 @@
+{
+  "anniv5:FrigidBody": {
+    "NAME": "Erstarrter Körper",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wann immer du in diesem Zug angegriffen wirst, wende abhänging vom geblockten Schaden anniv5:Frostbiss an."
+  },
+  "anniv5:Frostburn": {
+    "NAME": "Frostbrand",
+    "DESCRIPTION": "Wende !M! anniv5:Frostbiss auf ALLE Gegner an. NL Füge deinem Ablagestapel ein *Brennen hinzu."
+  },
+  "anniv5:FrostedEdge": {
+    "NAME": "Gefrorene Klinge",
+    "DESCRIPTION": "Immer wenn du anniv5:Frostbiss anwendest, erhalte !M! temporäre Stärke."
+  },
+  "anniv5:GrowingAffliction": {
+    "NAME": "Wachsende Plage",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du einen Debuff anwendest, kehrt diese Karte aus dem Ablagestapel zurück und ihre Kosten werden auf 1 gesetzt."
+  },
+  "anniv5:InsultToInjury": {
+    "NAME": "Hohn und Spott",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole dies für jeden einzigartigen Debuff, den der Gegner hat."
+  },
+  
+  "anniv5:Refrigerate": {
+    "NAME": "Kühlung",
+    "DESCRIPTION": "Wende !M! anniv5:Frostbiss an. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wende !M! anniv5:Frostbiss an. NL Wenn der Feind bereits anniv5:Frostbiss hatte, verliert er TP in Höhe dessen. NL Erschöpfen."
+  },
+  "anniv5:RelentlessHail": {
+    "NAME": "Unerbittlicher Hagel",
+    "DESCRIPTION": "Füge ALLEN Gegnern !M! Mal !D! Schaden zu. NL Erhöhe die Treffer dieser Karte in diesem Kampf um 1."
+  },
+  "anniv5:IceShatter": {
+    "NAME": "Eisiger Splitter",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn der Gegner während seines nächsten Zuges LP verliert, füge !M! Schaden zu."
+  },
+ "anniv5:SnowedIn": {
+    "NAME": "Eingeschneit",
+    "DESCRIPTION": "Wende !M! anniv5:Frostbiss an. NL Der anniv5:Frostbiss des Ziels wird in diesem Zug nicht halbiert."
+  },
+  "anniv5:Subdue": {
+    "NAME": "Unterwerfen",
+    "DESCRIPTION": "Erhalte !B! Block. NL Falls die letzte Karte, die in diesem Kampf gespielt wurde, ein Angriff war, erhalte zusätzlich !B! Block."
+  }
+ 
+}

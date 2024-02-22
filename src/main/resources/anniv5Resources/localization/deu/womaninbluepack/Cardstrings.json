@@ -1,0 +1,55 @@
+{
+  "anniv5:FireVial": {
+    "NAME": "Feuer Phiole",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Verursache !D! Schaden und wende !M! anniv5:Entzünden an. NL Erschöpfen."
+  },
+  "anniv5:ExplosiveVial": {
+    "NAME": "Explosions Phiole",
+    "DESCRIPTION": "Verursache an ALLEN Gegnern !D! Schaden. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Verursache an ALLEN Gegnern !D! Schaden und wende !M! anniv5:Entzünden an. NL Erschöpfen."
+  },
+  "anniv5:BlockVial": {
+    "NAME": "Block Fläschchen",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug !anniv5:m2! Block. NL Erschöpfen."
+  },
+  "anniv5:DynamicVial": {
+    "NAME": "Flexibles Fläschchen",
+    "DESCRIPTION": "Wähle: Erhalte [E] [E] oder Ziehe 3 Karten. NL Erschöpfen.",
+    "EXTENDED_DESCRIPTION": ["Erhalte [E] [E].", "Ziehe 3 Karten."]
+  },
+  "anniv5:MetallicVial": {
+    "NAME": "Metallischer Trank",
+    "DESCRIPTION": "Wähle: Erhalte 4 anniv5:Panzerrüstung, Erhalte 3 Dornen oder Erhalte 2 Artefakte. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle: Erhalte anniv5:Panzerrüstung, Erhalte 3 Dornen oder Erhalte 2 Artefakte. NL (2x pro Kampf verwendbar). !stslib:ex!.",
+    "EXTENDED_DESCRIPTION": ["Erhalte 4 anniv5:Panzerrüstung.", "Erhalte 3 Dornen.","Erhalte 2 Artefakte."]
+  },
+  "anniv5:QuickBrew": {
+    "NAME": "Schnelles Gebräu",
+    "DESCRIPTION": "Wähle: Erhalte !M! Stärke oder Erhalte !M! Fokus.",
+    "UPGRADE_DESCRIPTION": "Wähle: Erhalte !M! Stärke, Erhalte !M! Geschicklichkeit oder Erhalte !M! Fokus.",
+    "EXTENDED_DESCRIPTION": ["Erhalte !M! Stärke.", "Erhalte !M! Geschicklichkeit.","Erhalte !M! Fokus."]
+  },
+  "anniv5:ToxicVial": {
+    "NAME": "Gift Phiole",
+    "DESCRIPTION": "Wähle: Wende 3 Schwach an oder Füge 8 Gift an. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wähle: Wende 3 Verwundbar an, wende 3 Schwach an oder wende 8 Gift an. NL Erschöpfen.",
+    "EXTENDED_DESCRIPTION": ["Wende 3 Verwundbar an.", "Wende 3 Schwach an.","Wende 8 Gift an."]
+  },
+  "anniv5:AttackVial": {
+    "NAME": "Angriff Phiole",
+    "DESCRIPTION": "Wähle 1 von 3 Angriffen zum Erhalten. Er kostet 0, bis er gespielt wird. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wähle 1 von 3 Angriffen zum Erhalten. Er kostet 0, bis er gespielt wird. NL (2x pro Kampf verwendbar) !stslib:ex!.",
+    "EXTENDED_DESCRIPTION": ["Wähle 1 von 3 Angriffen zum Erhalten. Er kostet 0, bis er gespielt wird."]
+  },
+  "anniv5:ChaosVial": {
+    "NAME": "Flüssiges Chaos",
+    "DESCRIPTION": "Spiele die obersten 3 Karten deines Nachziehstapels aus. NL Erschöpfen."
+  },
+  "anniv5:VialOfMemory": {
+    "NAME": "Flüssige Erinnerung",
+    "DESCRIPTION": "Wähle eine Karte in deinem Abwurfstapel und bringe sie auf deine Hand zurück. Sie kostet 0, bis sie gespielt wird. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wähle eine Karte in deinem Abwurfstapel und bringe sie auf deine Hand zurück. Sie kostet 0, bis sie gespielt wird. NL (2x pro Kampf verwendbar) !stslib:ex!."
+  }
+}

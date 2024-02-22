@@ -1,0 +1,61 @@
+{
+  "anniv5:BoosterPack": {
+    "NAME": "Booster-Pack",
+    "DESCRIPTION": "Füge deiner Hand !M! zufällige anniv5:unterschiedlich\u00a0farbige Karten hinzu. Sie sind Flüchtig.",
+    "EXTENDED_DESCRIPTION": [
+      "Zufällige",
+      "Die von dieser Karte erzeugten Karten tendieren dazu, eine niedrigere Seltenheit zu haben."
+    ]
+  },
+  "anniv5:StardustShield": {
+    "NAME": "Sternenstaubschild",
+    "DESCRIPTION": "Erhalte !B! Block. NL Eine Auswahl anniv5:unterschiedlich\u00a0farbige Karten."
+  },
+  "anniv5:StarShower": {
+    "NAME": "Sternenregen",
+    "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Das nächste Mal, wenn du in diesem Zug einen anniv5:unterschiedlich\u00a0farbigen Angriff spielst, wiederhole dies."
+  },
+  "anniv5:Paintcan": {
+    "NAME": "Farbeimer",
+    "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Die Karten in deiner Hand werden zu einer unterschiedlichen Farbe."
+  },
+  "anniv5:PortalPunch": {
+    "NAME": "Portal Schlag",
+    "DESCRIPTION": "{@@}Füge !D! Schaden zu. NL Füge deiner Hand {!M!|@=eine|>1=!M!} zufällig anniv5:unterschiedlich\u00a0farbige {!M!|@=Karte|>1=Karten} hinzu. Gib {!M!|@=ihr|>1=ihnen} Flüchtig.",
+    "EXTENDED_DESCRIPTION": [
+      "Zufällig",
+      "Die von dieser Karte erzeugten Karten tendieren dazu, eine niedrigere Seltenheit zu haben."
+    ]
+  },
+  "anniv5:EnchantedRift": {
+    "NAME": "Verzauberter Riss",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge deiner Hand eine Kopie der zuletzt gespielten anniv5:unterschiedlich\u00a0farbige Karte hinzu. Gib ihr Flüchtig."
+  },
+  "anniv5:Fetch": {
+    "NAME": "Holen",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Das nächste Mal, wenn du in diesem Zug eine anniv5:unterschiedlich\u00a0farbige Karte spielst, wiederhole dies. Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Das nächste Mal, wenn du in diesem Zug eine anniv5:unterschiedlich\u00a0farbige Karte spielst, wiederhole dies."
+  },
+  "anniv5:NeutronStar": {
+    "NAME": "Neutronenstern",
+    "DESCRIPTION": "Erhalte !M! temporäre Stärke. NL Das nächste Mal, wenn du in diesem Zug einen anniv5:unterschiedlich\u00a0farbigen Angriff spielst, wiederhole dies. Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! temporäre Stärke. NL Das nächste Mal, wenn du in diesem Zug einen anniv5:unterschiedlich\u00a0farbigen Angriff spielst, wiederhole dies."
+  },
+  "anniv5:FastHands": {
+    "NAME": "Schnelle Hände",
+    "DESCRIPTION": "Behalten. NL Füge deiner Hand eine zufällige anniv5:unterschiedlich\u00a0farbige Karte aus deinem Nachziehstapel hinzu. Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Füge deiner Hand eine zufällige anniv5:unterschiedlich\u00a0farbige Karte aus deinem Nachziehstapel hinzu."
+  },
+  "anniv5:DimensionBreach": {
+    "NAME": "Dimensionsbruch",
+    "DESCRIPTION": "Spiele !M! zufällige anniv5:unterschiedlich\u00a0farbige Angriffskarten gegen den Gegner. Erschöpfen.",
+    "EXTENDED_DESCRIPTION": [
+      "Zufällig",
+      "Die von dieser Karte erzeugten Karten tendieren dazu, eine niedrigere Seltenheit zu haben."
+    ]
+  },
+  "anniv5:CosmicConverter": {
+    "NAME": "Kosmischer Konverter",
+    "DESCRIPTION": "Flüchtig. NL Zu Beginn deines Zuges füge deiner Hand eine anniv5:unterschiedlich\u00a0farbige Karte desselben Typs und Kosten wie die zuletzt gespielte Karte hinzu."
+  }
+}

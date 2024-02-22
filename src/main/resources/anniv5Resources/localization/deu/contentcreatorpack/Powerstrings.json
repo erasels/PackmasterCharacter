@@ -1,0 +1,44 @@
+{
+  "anniv5:HuttsGambleEnergyPower": {
+    "NAME": "hutts' Energetisiert",
+    "DESCRIPTIONS": [
+      "Wenn du in diesem Zug keinen unblockierten Angriffsschaden erleidest, erhalte nächsten Zug #b",
+      " Energie."
+    ]
+  },
+  "anniv5:HuttsGambleDrawPower": {
+    "NAME": "hutts' Zug",
+    "DESCRIPTIONS": [
+      "Wenn du in diesem Zug keinen unblockierten Angriffsschaden erleidest, ziehe nächsten Zug #b",
+      " Karte.",
+      " Karten."
+    ]
+  },
+  "anniv5:RetromationPower": {
+    "NAME": "retromation",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges erhalte #b",
+      " Karte",
+      " Karten",
+      " aus einem nicht in deinem Draft verfügbaren Set. NL ",
+      "Sie erhält #yFlüchtig.",
+      "Sie erhalten #yFlüchtig."
+    ]
+  },
+  "anniv5:FrostprimePower": {
+    "NAME": "frost Prime",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges: #yErschaffe #b",
+      " #yFrost und füge ALLEN Gegnern #b",
+      " #yFrostbiss hinzu."
+    ]
+  },
+  "anniv5:CozyChairPower": {
+    "NAME": "gemütlicher Stuhl",
+    "DESCRIPTIONS": [
+      "Deine Karten werden zusätzlich #b1 Mal gespielt.",
+      "Deine Karten werden zusätzlich #b",
+      " Mal gespielt."
+    ]
+  }
+}

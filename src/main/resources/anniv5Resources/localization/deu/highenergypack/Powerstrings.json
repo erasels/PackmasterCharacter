@@ -1,0 +1,16 @@
+{
+  "anniv5:MultiToolPower": {
+    "NAME": "Multifunktionswerkzeug",
+    "DESCRIPTIONS": [
+      "Wenn du deinen Zug mit ungenutzer Energie beendest verlieren ALLE Gegner #b",
+      " LP."
+    ]
+  },
+  "anniv5:InvestorPower": {
+    "NAME": "Investor",
+    "DESCRIPTIONS": [
+      "Wann immer du 2 oder mehr Energie für eine Karte ausgibst, erhalte #b",
+      " #yBlock."
+    ]
+  }
+}

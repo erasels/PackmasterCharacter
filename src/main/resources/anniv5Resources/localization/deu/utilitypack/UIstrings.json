@@ -1,0 +1,21 @@
+{
+  "anniv5:UtilityPack": {
+    "TEXT": [
+      "Nützlichkeit",
+      "Karten, die gut mit einer Vielzahl von Mechaniken und Paketen harmonieren.",
+      "modargo",
+      "Karten kunst von MtG"
+    ]
+  },
+  "anniv5:ConjurationAction": {
+    "TEXT": [
+      "Wähle eine Karte zum Spielen."
+    ]
+  },
+  "anniv5:UtilityPackHat": {
+    "TEXT": [
+      "Sicherheit geht vor!",
+      "Schutzhelm"
+    ]
+  }
+}

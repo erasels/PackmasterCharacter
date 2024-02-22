@@ -1,0 +1,16 @@
+{
+  "anniv5:HangedPower": {
+    "NAME": "der Gehängte",
+    "DESCRIPTIONS": [
+      "Wenn du in diesem Zug eine Karte ziehst, verlieren ALLE Gegner #b",
+      " Lebenspunkte."
+    ]
+  },
+  "anniv5:TheChariotPower": {
+    "NAME": "der Streitwagen",
+    "DESCRIPTIONS": [
+      "Immer wenn du während deines Zuges eine Karte abwirfst, erhalte #b",
+      " #ySchwung."
+    ]
+  }
+}

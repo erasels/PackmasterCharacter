@@ -1,0 +1,18 @@
+{
+  "anniv5:AqueductsPower": {
+    "NAME": "Aquädukte",
+    "DESCRIPTIONS": ["Immer wenn du eine zusätzliche Karte ziehst, füge ALLEN Gegnern #b", " Schaden zu."]
+  },
+  "anniv5:FlowPower": {
+    "NAME": "Fließend",
+    "DESCRIPTIONS": ["Zu Beginn deines nächsten Zugs, ", "ziehe #b", " Karten.", "ziehe 1 Karte."]
+  },
+  "anniv5:PneumaticsPower": {
+    "NAME": "Pneumatik",
+    "DESCRIPTIONS": ["Zu Beginn deines nächsten Zugs.", "Zu Beginn der nächsten #b", " Züge, #yFluss."]
+  },
+  "anniv5:ReleaseValvePower": {
+    "NAME": "Entlüftungsventil",
+    "DESCRIPTIONS": ["Wenn du #yFluss aktivierst, erleidet dieser Gegner #b", " Schaden für jede abgelegte Karte."]
+  }
+}

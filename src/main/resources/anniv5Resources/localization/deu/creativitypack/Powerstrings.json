@@ -1,0 +1,20 @@
+{
+  "anniv5:MakeshiftSwordPower": {
+    "NAME": "improvisiertes Schwert",
+    "DESCRIPTIONS": [
+      "Immer wenn während des Kampfes eine Karte erstellt wird, erhalte #b%d zusätzlichen Schaden für deinen nächsten Angriff."
+    ]
+  },
+  "anniv5:MakeshiftShieldPower": {
+    "NAME": "improvisierter Schild",
+    "DESCRIPTIONS": [
+      "Immer wenn während des Kampfes eine Karte erstellt wird, erhalte #b%d #yBlock."
+    ]
+  },
+  "anniv5:FirewallPower": {
+    "NAME": "feuerwand",
+    "DESCRIPTIONS": [
+      "Wenn eine #yStatuskarte entsteht wird, #yErschöpfe sie."
+    ]
+  }
+}

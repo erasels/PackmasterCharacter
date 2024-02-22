@@ -1,0 +1,15 @@
+{
+  "anniv5:StatusPack": {
+    "TEXT": [
+      "Status",
+      "Schlag aufs Dach, dieses Deck kann so viele Status erzeugen.",
+      "(Gk) Erasels"
+    ]
+  },
+  "anniv5:StatusPackHat": {
+    "TEXT": [
+      "Medizin!",
+      "Bandagen"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "anniv5:TarredFeather": {
+    "NAME": "Geteerte Feder",
+    "FLAVOR": "Seinen früheren Träger möchte man nicht wiedersehen.",
+    "DESCRIPTIONS": [
+      "Erhöhe deine maximale Handgröße um #b2. NL Zu Beginn jedes Kampfes, füge #b2 #yGewichte deiner Hand hinzu."
+    ]
+  }
+}

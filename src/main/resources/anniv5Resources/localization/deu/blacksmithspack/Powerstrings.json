@@ -1,0 +1,9 @@
+{
+  "anniv5:BlacksmithsShieldPower": {
+    "NAME": "schmiedeschild",
+    "DESCRIPTIONS": [
+      "Nachdem du eine Karte gespielt hast, erhalte #b",
+      " #yBlock für jedes #yUpgrade darauf."
+    ]
+  }
+}

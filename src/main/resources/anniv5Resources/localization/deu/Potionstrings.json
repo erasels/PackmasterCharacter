@@ -1,0 +1,33 @@
+{
+  "anniv5:BoosterBrew": {
+    "NAME": "Booster Gebräu",
+    "DESCRIPTIONS": [
+      "Wähle #b1 von #b3 Packs aus. Füge #b",
+      " zufällige Karten davon deinem Nachziehstapel hinzu. Sie kosten in diesem Kampf #b0."
+    ]
+  },
+  "anniv5:ModdersDelight": {
+    "NAME": "Modder's Freude-Trank",
+    "DESCRIPTIONS": [
+      "Mische deinen Abwurfstapel in deinen Nachziehstapel. Nimm #b",
+      " zufällige Karten aus verschiedenen Packs von deinem Nachziehstapel auf deine Hand."
+    ]
+  },
+  "anniv5:PackInAJar": {
+    "NAME": "Pack-im-Glas-Trank",
+    "DESCRIPTIONS": [
+      "Lege deine Handkarten ab, wähle dann #b1 von #b3 Packs aus. Füge #b",
+      " Kopie jeder Karte daraus deiner Hand hinzu.",
+      " Kopien jeder Karte daraus deiner Hand hinzu."
+    ]
+  },
+  "anniv5:SmithingOil": {
+    "NAME": "Schmiedeöl",
+    "DESCRIPTIONS": [
+      "Wähle #b",
+      " Karte von deiner Hand, um sie dauerhaft zu #yVerbessern.",
+      " Karten von deiner Hand, um sie dauerhaft zu #yVerbessern.",
+      "Verbessere sie dauerhaft."
+    ]
+  }
+}

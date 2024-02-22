@@ -1,0 +1,9 @@
+[
+  {
+    "PROPER_NAME": "Kopfgeld",
+    "NAMES": [
+      "belohnung"
+    ],
+    "DESCRIPTION": "Normaler Gegner: #b15 Gold.      Elite Gegner: #b40 Gold.            Boss: #b100 Gold."
+  }
+]

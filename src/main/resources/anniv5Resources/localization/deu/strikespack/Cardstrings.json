@@ -1,0 +1,44 @@
+{
+  "anniv5:StrikeOfMidnight": {
+    "NAME": "Mitternachtsschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschaffe 1 Schatten."
+  },
+  "anniv5:StrikeOfLuck": {
+    "NAME": "Glücksschlag",
+    "DESCRIPTION": "Füge einem zufälligen Gegner 1 bis 3 Mal !D! Schaden zu."
+  },
+  "anniv5:WorkersStrike": {
+    "NAME": "Arbeiterstreik",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe einen Angriff. Wenn es sich um einen Schlag handelt, erhalte [E]."
+  },
+  "anniv5:StrikeDummyJr": {
+    "NAME": "Dummy's Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! Stärke. NL Schläge verursachen in diesem Kampf 2 zusätzlichen Schaden. NL Erschöpfen."
+  },
+  "anniv5:DifferentStrikes": {
+    "NAME": "Verschiedene Schläge",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte. Erhalte einen zufälligen Schlag, der 1 weniger kostet. Gib ihm Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte. Erhalte einen zufälligen aufgewerteten Schlag, der 1 weniger kostet. Gib ihm Erschöpfen."
+  },
+  "anniv5:StrikeOfGenius": {
+    "NAME": "Genieschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Der nächste Angriff, den du spielst, erhält 'Erhalte Block in Höhe des ungeblockten Schadens'."
+  },
+  "anniv5:StrikeABargain": {
+    "NAME": "Einigungsschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Reduziere die Kosten von Angriffen in der Hand auf 0, bis sie gespielt werden. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Reduziere die Kosten von Angriffen in der Hand auf 0, bis sie gespielt werden."
+  },
+  "anniv5:Backstrike": {
+    "NAME": "Schlag von hinten",
+    "DESCRIPTION": "Angeboren. NL Füge !D! Schaden zu. NL Angriffe in der Hand gelten in diesem Kampf als *Schläge. NL Erschöpfen."
+  },
+  "anniv5:LightningStrike": {
+    "NAME": "Blitzschlag",
+    "DESCRIPTION": "Füge !D! Schaden zweimal zu. NL Erschaffe 2 Blitz."
+  },
+  "anniv5:PenaltyStrike": {
+    "NAME": "Strafschlag",
+    "DESCRIPTION": "Füge zweimal !D! Schaden zu. NL Der Gegner verliert in diesem Zug !M! Stärke."
+  }
+}

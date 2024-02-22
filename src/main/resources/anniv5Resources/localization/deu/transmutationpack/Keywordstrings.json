@@ -1,0 +1,19 @@
+[
+  {
+    "PROPER_NAME": "Transmutieren",
+    "NAMES": [
+      "transmutiere",
+      "transmutiert",
+      "transmutierst"
+    ],
+    "DESCRIPTION": "Verwandelt eine Karte im Kampf in eine beliebige Karte derselben Seltenheit, die über aktuelle Kartenbelohnungen verfügbar ist. Die neue Karte verursacht #b1 mehr Schaden und erhält #b1 mehr #yBlock für den Rest des Kampfes. Dieser Effekt ist stapelbar."
+  },
+  {
+    "PROPER_NAME": "Formbar",
+    "NAMES": [
+      "formbar",
+      "formbare"
+    ],
+    "DESCRIPTION": "Wenn eine Karte #yTransmutiert wird, wird jeder #yFormbar Effekt für den Rest des Kampfes an die nächste Karte weitergegeben."
+  }
+]

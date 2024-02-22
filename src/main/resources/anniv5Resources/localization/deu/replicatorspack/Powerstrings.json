@@ -1,0 +1,24 @@
+{
+  "anniv5:IterativeDesignPower": {
+    "NAME": "Iteratives Design",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine in diesem Kampf erstellte Karte spielst oder eine Karte *duplizierst, erhalte #b",
+      " #yBlock."
+    ]
+  },
+  "anniv5:EnergyDrinkPower": {
+    "NAME": "Energy Drink",
+    "DESCRIPTIONS": [
+      "Erhalte #b",
+      " #yDuplikation für alle #b10 Karten die du in deinen Nachziehstapel mischt."
+    ]
+  },
+  "anniv5:DuplicationPackmasterPower": {
+    "NAME": "Duplikation",
+    "DESCRIPTIONS": [
+      "Deine nächste Karte wird 2x gespielt.",
+      "Deine nächsten #b",
+      " Karten werden 2x gespielt."
+    ]
+  }
+}

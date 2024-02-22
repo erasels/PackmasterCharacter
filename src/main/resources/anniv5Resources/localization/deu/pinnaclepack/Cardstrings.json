@@ -1,0 +1,60 @@
+{
+  "anniv5:DroneSwarmRareSkill": {
+    "NAME": "Drohnen Schwarm",
+    "DESCRIPTION": "Erhöhe deine maximale Handgröße in diesem Zug um !anniv5:m2!. NL Ziehe !M! Karten."
+  },
+  "anniv5:TheSuckamidRareSkill": {
+    "NAME": "Der Saugamid",
+    "DESCRIPTION": "Heile !M! LP. NL Behalte deine Hand für !anniv5:m2! Züge. NL Erschöpfen."
+  },
+  "anniv5:ElectromagneticBurstRarePower": {
+    "NAME": "Elektromagnetischer Ausbruch",
+    "DESCRIPTION": "Immer wenn du Block erhältst, füge einem zufälligen Gegner !M! Schaden zu."
+  },
+  "anniv5:ArrowStormRareAttack": {
+    "NAME": "Pfeilregen",
+    "DESCRIPTION": "Erschöpfe alle Angriffskarten auf deiner Hand. NL Wenn du eine Karte erschöpfst, füge ALLEN Gegnern !M! Mal !D! Schaden zu."
+  },
+  "anniv5:MarvelousFeastUncommonPower": {
+    "NAME": "Großartiges Festmahl",
+    "DESCRIPTION": "Angeboren. Erhalte pro beendetem Zug eine anniv5:Krokette Karte mit je einem Effekt in dieser Reihenfolge:  Block, Schwach, Stärke und Verwundbar.",
+    "UPGRADE_DESCRIPTION": "Angeboren. Erhalte pro beendetem Zug eine verbesserte anniv5:Krokette Karte mit je einem Effekt in dieser Reihenfolge:  Block, Schwach, Stärke und Verwundbar."
+  },
+  "anniv5:MeatyCroquettesSpecialColourless": {
+    "NAME": "Fleischige Krokette",
+    "DESCRIPTION": "anniv5:Krokette. NL Erhalte !M! Stärke."
+  },
+  "anniv5:FishyCroquettesSpecialColourless": {
+    "NAME": "Fischige Krokette",
+    "DESCRIPTION": "anniv5:Krokette. NL Verursache !M! Schwach. NL Erschöpfen."
+  },
+  "anniv5:FriendshipCroquettesSpecialColourless": {
+    "NAME": "Freundschafts Krokette",
+    "DESCRIPTION": "anniv5:Krokette. NL Erhalte !B! Block, Erschöpfen. NL Beim Behalten erhöhe den Block um !M! für diesem Kampf."
+  },
+  "anniv5:MysteryCroquettesSpecialColourless": {
+    "NAME": "Geheime Krokette",
+    "DESCRIPTION": "anniv5:Krokette. NL Verursache !M! Verwundbar. NL Erschöpfen."
+  },
+  "anniv5:TopOfTheSkyUncommonAttack": {
+    "NAME": "Höhe des Himmels",
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Erhalte !B! Block. NL Kehrt beim Spielen zurück in deine Hand. Erschöpfend !stslib:ex!."
+  },
+  "anniv5:BucketOfDregsUncommonSkill": {
+    "NAME": "Eimer voller Rückstände",
+    "DESCRIPTION": "Unspielbar. Behalten. NL Beim Behalten: Heile ALLE Gegner um !M! LP und erhalte !B! Block."
+  },
+  "anniv5:PocketTournamentUncommonSkill": {
+    "NAME": "Taschenturnier",
+    "DESCRIPTION": "Nächster Zug, zufällig, 2X mal: NL Ziehe 1 Karte und erhalte [E] , NL Erhalte 1 Stärke, NL Erhalte 3 Block. NL Erschöpfen."
+  },
+  "anniv5:StoneSwordCommonAttack": {
+    "NAME": "Steinschwert",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! Geschicklichkeit. NL Erschöpfen."
+  },
+  "anniv5:Rea__dyCommonSkill": {
+    "NAME": "Bereit machen!",
+    "DESCRIPTION": "Erhalte !M! Ausdauer. NL Erhalte !anniv5:m2! temporäre Geschicklichkeit. NL Erschöpfend !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! Ausdauer. NL Erhalte !anniv5:m2! temporäre Geschicklichkeit. NL Ziehe 1 Karte. NL Erschöpfend !stslib:ex!."
+  }
+}

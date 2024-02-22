@@ -1,0 +1,10 @@
+{
+  "anniv5:Oblivion": {
+    "NAME": "vergessen",
+    "DESCRIPTION": [
+      "#yPassive: Jedes Mal, wenn du eine Karte abwirfst, erhöhe den #yRuin dieses Orbs um #b",
+      ". NL #yEntladen: Füge dem Gegner mit den meisten LP #b",
+      " #yRuin zu."
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "PROPER_NAME": "Ruin",
+    "NAMES": [
+      "ruin"
+    ],
+    "DESCRIPTION": "Das nächste Mal, wenn ein Gegner mit #yRuin ungeblockten Angriffsschaden erleidet, verliert sie LP in Höhe ihres #yRuin für jeden Buff und Debuff, den sie hat."
+  },
+  {
+    "PROPER_NAME": "Oblivion",
+    "NAMES": [
+      "vergessen"
+    ],
+    "DESCRIPTION": "Orb: Wenn ausgelöst, verleiht es dem Feind mit den meisten LP #yRuin. Erhöht #yRuin, wenn du eine Karte ablegst."
+  },
+  {
+    "PROPER_NAME": "Manifest",
+    "NAMES": [
+      "manifestieren",
+      "manifestiere"
+    ],
+    "DESCRIPTION": "Erhalte einen Orb-Slot und erschaffe dann den aufgeführten Orb."
+  },
+  {
+    "PROPER_NAME": "Inscribed",
+    "NAMES": [
+      "eingraviert",
+      "Inscribed",
+      "inscribed",
+      "Inscribe",
+      "inscribe"
+    ],
+    "DESCRIPTION": "Bei Einsatz aktiviere das Passiv deines nächsten Orbs und dann aller #yVoll und #ySichelform #yMond Orbs."
+  },
+  {
+    "PROPER_NAME": "Infest",
+    "NAMES": [
+      "befallen",
+      "infest",
+      "infests"
+    ],
+    "DESCRIPTION": "Am Ende deines Zuges, wenn sich dies in deiner Hand befindet, mische es in deinen Nachziehstapel und füge ihm eine Befallen Markierung hinzu."
+  }
+]

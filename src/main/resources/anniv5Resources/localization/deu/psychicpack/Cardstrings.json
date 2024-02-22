@@ -1,0 +1,63 @@
+{
+  "anniv5:RuleCancel": {
+    "NAME": "Regel ignorieren",
+    "DESCRIPTION": "Gib einer Karte in deiner Hand anniv5:Okkult. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Gib einer Karte in deiner Hand anniv5:Okkult."
+  },
+  "anniv5:Brainwave": {
+    "NAME": "Gehirnwellen",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Gib einem zufälligen Angriff in deiner Hand anniv5:Okkult."
+  },
+  "anniv5:TelephonePole": {
+    "NAME": "Telefonmast",
+    "DESCRIPTION": "anniv5:Verriegelt. NL Füge !D! Schaden zu. NL Wende !M! Verwundbar an.",
+    "EXTENDED_DESCRIPTION": [
+      "anniv5:Verriegelt. NL Füge !D! Schaden zu. NL Wende !M! Verwundbar an."
+    ]
+  },
+  "anniv5:Gravity": {
+    "NAME": "Schwerkraft",
+    "DESCRIPTION": "Flüchtig. NL Immer wenn du eine anniv5:Verriegelt oder nicht spielbare Karte ziehst, ziehe 1 Karte.",
+    "UPGRADE_DESCRIPTION": "Immer wenn du eine anniv5:Verriegelt oder nicht spielbare Karte ziehst, ziehe 1 Karte."
+  },
+  "anniv5:PhantomStep": {
+    "NAME": "Phantomschritt",
+    "DESCRIPTION": "Erhalte !B! Block. NL Gib einer Karte in deinem Nachziehstapel anniv5:Okkult."
+  },
+  "anniv5:Repel": {
+    "NAME": "Abwehr",
+    "DESCRIPTION": "anniv5:Verriegelt. NL Erhalte !B! Block. NL Füge !D! Schaden zu. NL Wende !M! Schwach an.",
+    "EXTENDED_DESCRIPTION": [
+      "anniv5:Verriegelt. NL Erhalte !B! Block. NL Füge !D! Schaden zu. NL Wende !M! Schwach an."
+    ]
+  },
+  "anniv5:OneIsEnough": {
+    "NAME": "Eine reicht",
+    "DESCRIPTION": "{@@}Ziehe !M! Karte{!M!|0=n.|1=.|2=n und wähle eine. NL Du kannst die anderen in diesem Zug nicht spielen.|@=n und wähle eine. NL Du kannst die anderen in diesem Zug nicht spielen.}",
+    "EXTENDED_DESCRIPTION": [
+      "ist spielbar"
+    ]
+  },
+  "anniv5:Curse": {
+    "NAME": "Fluch",
+    "DESCRIPTION": "anniv5:Verriegelt. NL Der Gegner verliert !M! Stärke.",
+    "UPGRADE_DESCRIPTION": "anniv5:Verriegelt. NL Behalten. NL Der Gegner verliert !M! Stärke.",
+    "EXTENDED_DESCRIPTION": [
+      "anniv5:Verriegelt. NL Der Gegner verliert !M! Stärke.",
+      "anniv5:Verriegelt. NL Behalten. NL Der Gegner verliert !M! Stärke."
+    ]
+  },
+  "anniv5:MalleableFire": {
+    "NAME": "Formbares Feuer",
+    "DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Füge deinem Nachziehstapel ein *Geformtes *Feuer hinzu, das X kostet. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Füge deinem Nachziehstapel ein *Geformtes *Feuer+ hinzu, das X kostet. NL Erschöpfen."
+  },
+  "anniv5:MoldedFire": {
+    "NAME": "Geformtes Feuer",
+    "DESCRIPTION": "anniv5:Okkult. NL Füge !D! Schaden zu. Erhöhe den Schaden für jede [E], die die Kartenkosten übersteigt."
+  },
+  "anniv5:DeepDream": {
+    "NAME": "Tiefer Traum",
+    "DESCRIPTION": "Immer wenn du in diesem Zug eine Karte spielst, gib einer zufällige Karte in deiner Hand anniv5:Okkult. NL Erschöpfen."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "anniv5:DeterminationPower": {
+    "NAME": "Entschlossenheit",
+    "DESCRIPTIONS": ["Wann immer du einen Debuff bekommst, erhalte #b", " #yStrength."]
+  },
+  "anniv5:OverwhelmingPowerPower": {
+    "NAME": "Überwältigende Macht",
+    "DESCRIPTIONS": ["Verliere #b"," LP falls du deinen Zug mit 0 Energie beendest."]
+  }
+}

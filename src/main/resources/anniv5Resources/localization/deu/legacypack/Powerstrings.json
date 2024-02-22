@@ -1,0 +1,9 @@
+{
+  "anniv5:PoisonMasteryPower": {
+    "NAME": "Giftmeisterschaft",
+    "DESCRIPTIONS": [
+      "Erhöhe den LP-Verlust durch Gift um #b",
+      "%."
+    ]
+  }
+}

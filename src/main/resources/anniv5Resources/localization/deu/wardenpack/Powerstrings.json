@@ -1,0 +1,15 @@
+{
+  "anniv5:EnigmancyPower": {
+    "NAME": "Rätselhaftigkeit",
+    "DESCRIPTIONS": [
+      "Erhalte jeden Zug #b",
+      " Energie und reduziere diesen Erhalt um #b1."
+    ]
+  },
+  "anniv5:DivineMightPower": {
+    "NAME": "Göttliche Macht",
+    "DESCRIPTIONS": [
+      "Wenn #yGöttliche #yMacht zweimal gespielt wurde, erhalte [E] [E] , ziehe #b2 Karten and erhalte #b10 Stärke für diesen Zug."
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "anniv5:StrikesPack": {
+    "TEXT": [
+      "Schläge? Schläge!!",
+      "Verursache 6 Schaden.",
+      "MichaelMayhem"
+    ]
+  },
+  "anniv5:StrikesPackHat": {
+    "TEXT": [
+      "Ein winziges Schwert, ungefähr groß genug, um als Haarnadel verwendet zu werden.",
+      "Schlagstift"
+    ]
+  },
+  "anniv5:AddStrikeTagModifier": {
+    "TEXT": [
+      " Schlag"
+    ]
+  }
+}

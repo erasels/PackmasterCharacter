@@ -1,0 +1,24 @@
+[
+  {
+    "PROPER_NAME": "Okkult",
+    "NAMES": [
+      "okkult"
+    ],
+    "DESCRIPTION": "#yOkkult Karten können unabhängig von den Bedingungen für ihre Spielbarkeit gespielt werden. Karten, die auf diese Weise gespielt werden, werden #yErschöpft."
+  },
+  {
+    "PROPER_NAME": "Verriegelung",
+    "NAMES": [
+      "verriegelt"
+    ],
+    "DESCRIPTION": "#yVerriegelte Karten werden #yUnspielbar, sobald sie gespielt wurden."
+  },
+  {
+    "PROPER_NAME": "Verschlossen",
+    "NAMES": [
+      "verschlossen"
+    ],
+    "DESCRIPTION": "Verschlossene Karten sind unspielbar."
+  }
+]
+

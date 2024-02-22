@@ -1,0 +1,41 @@
+{
+  "anniv5:Emptiness": {
+    "NAME": "Vakuum",
+    "DESCRIPTION": "Wirf 1 Karte ab. NL Erschaffe !M! anniv5:Vergessen."
+  },
+  "anniv5:Augment": {
+    "NAME": "Augment",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn du keine leeren Orb-Slots hast, erhalte 1 Orb Slot.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !B! Block. NL Wenn du keine leeren Orb Slots hast, erhalte 1 Orb Slot."
+  },
+  "anniv5:Allocate": {
+    "NAME": "Zuweisen",
+    "DESCRIPTION": "Erhalte 1 Orb Slot für jeden Gegner im Kampf.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte 1 Orb Slot für jeden Gegner im Kampf."
+  },
+  "anniv5:Stockpile": {
+    "NAME": "Vorrat",
+    "DESCRIPTION": "Wirf eine Karte ab. NL Wenn es eine Fähigkeitskarte war, Erschaffe !M! Plasma. Andernfalls Erschaffe !anniv5:m2! Blitz."
+  },
+  "anniv5:IcicleCrash": {
+    "NAME": "Eissturz",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschaffe !M! Frost für jeden leeren Orb Slot."
+  },
+  "anniv5:Fear": {
+    "NAME": "Furcht",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe !M! Schatten."
+  },
+  "anniv5:Charge": {
+    "NAME": "Aufladung",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Aktiviere die passiven Fähigkeiten deiner erschaffenen Orbs."
+  },
+  "anniv5:MaterialBoost": {
+    "NAME": "Materialverstärkung",
+    "DESCRIPTION": "Wirf eine beliebige Anzahl von Karten ab. NL Entlade deinen nächsten Orb für jede abgeworfene Karte einmal.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Wirf eine beliebige Anzahl von Karten ab. NL Entlade deinen nächsten Orb für jede abgeworfene Karte einmal."
+  },
+  "anniv5:Thunderstruck": {
+    "NAME": "Donnerschlag",
+    "DESCRIPTION": "Wenn du eine Karte spielst, die \"Schlag\" enthält, erschaffe !M! Blitz."
+  }
+}

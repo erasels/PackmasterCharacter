@@ -1,0 +1,17 @@
+{
+  "anniv5:OckhamsPower": {
+    "NAME": "ockhams Rasiermesser",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yBasis Karte spielst, füge allen Gegnern #b",
+      " Schaden zu."
+    ]
+  },
+  "anniv5:SimpleTrickPower": {
+    "NAME": "einfacher Trick",
+    "DESCRIPTIONS": [
+      "Das nächste Mal, wenn du eine #yKartenzauberei spielst, erhalte [E].",
+      "Die nächsten #b",
+      " Male, wenn du eine #yKartenzauberei spielst, erhalte [E]."
+    ]
+  }
+}

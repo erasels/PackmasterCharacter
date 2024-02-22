@@ -1,0 +1,15 @@
+{
+  "anniv5:BardInspirePack": {
+    "TEXT": [
+      "Bardische Inspiration",
+      "Eine Sammlung von Bardenkarten, um dir etwas anniv5:Inspiration zu geben.",
+      "kiooeht"
+    ]
+  },
+  "anniv5:BardInspirePackHat": {
+    "TEXT": [
+      "Elegante Kopfbedeckung.",
+      "Bardische Baskenmütze"
+    ]
+  }
+}

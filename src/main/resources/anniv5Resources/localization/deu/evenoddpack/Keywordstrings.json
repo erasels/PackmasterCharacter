@@ -1,0 +1,23 @@
+[
+  {
+    "PROPER_NAME": "Gerade",
+    "NAMES": [
+      "gerade"
+    ],
+    "DESCRIPTION": "Zusätzlicher Effekt, wenn du in diesem Zug eine gerade Anzahl von Karten gespielt hast (einschließlich dieser)."
+  },
+  {
+    "PROPER_NAME": "Ungerade",
+    "NAMES": [
+      "ungerade"
+    ],
+    "DESCRIPTION": "Zusätzlicher Effekt, wenn du in diesem Zug eine ungerade Anzahl von Karten gespielt hast (einschließlich dieser)."
+  },
+  {
+    "PROPER_NAME": "Erster",
+    "NAMES": [
+      "erste"
+    ],
+    "DESCRIPTION": "Zusätzlicher Effekt, wenn dies die erste Karte ist, die in diesem Zug gespielt wird."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "anniv5:OptimizedBlurPower": {
+    "NAME": "optimierte Unschärfe",
+    "DESCRIPTIONS": ["Immer wenn du unblockierten Angriffsschaden verursachst, erhalte #b", " #yBlock."]
+  },
+  "anniv5:HardCaramelPower": {
+    "NAME": "harter Karamell",
+    "DESCRIPTIONS": ["Nach dem Angriff wird #b", " #yVerwundbar angewendet, wenn das Ziel noch nicht Verwundbar ist."]
+  },
+  "anniv5:AvatarBeatPower": {
+    "NAME": "avatar-Schlag",
+    "DESCRIPTIONS": ["Immer wenn du #b", " unblockierten Angriffsschaden verursachst, erhältst du #b", " #yStärke, ziehst #b", " Karte und erhöhst diese Leiste um #b5.", " Karten und erhöhst diese Leiste um #b5."]
+  },
+  "anniv5:OpenBracketPower": {
+    "NAME": "auftakt",
+    "DESCRIPTIONS": ["Du kannst für den Rest des Zuges nur #yAngriffskarten spielen."]
+  }
+}

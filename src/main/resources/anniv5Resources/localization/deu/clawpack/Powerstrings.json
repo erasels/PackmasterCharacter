@@ -1,0 +1,17 @@
+{
+  "anniv5:InfiniteClawsPower": {
+    "NAME": "unendliche Krallen",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges, erhalte #b",
+      " #yGeist #yKrallen.",
+      " #yGeist #yKralle."
+    ]
+  },
+  "anniv5:ReturnBlockOnClawPower": {
+    "NAME": "sprich zur Kralle",
+    "DESCRIPTIONS": [
+      "Wenn du mit einer #yKralle angegriffen wirst, erhältst du #b",
+      " #yBlock."
+    ]
+  }
+}

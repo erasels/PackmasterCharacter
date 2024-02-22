@@ -1,0 +1,9 @@
+[
+  {
+    "PROPER_NAME": "Horten",
+    "NAMES": [
+      "horten"
+    ],
+    "DESCRIPTION": "Beim Ausspielen, wenn die Kosten dieser Karte größer als 0 und kleiner als ihr Horten: Reduziere das Horten um die Kosten der Karte und ignoriere alle anderen Karteneffekte. Lege die Karte zurück auf deine Hand. Die Karte behält diesen Zug bei."
+  }
+]

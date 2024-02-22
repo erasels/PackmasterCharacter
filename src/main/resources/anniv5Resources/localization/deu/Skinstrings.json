@@ -1,0 +1,30 @@
+{
+  "anniv5:SkinSystemUI": {
+    "NAME": "Skin-System",
+    "TEXT": [
+      "Skins",
+      "Künstler: "
+    ]
+  },
+  "anniv5:packmasterSkin": {
+    "NAME": "Packmeister",
+    "TEXT": [
+      "Der Packmeister",
+      "AlexMdle"
+    ]
+  },
+  "anniv5:packmistressSkin": {
+    "NAME": "Pack-Herrin",
+    "TEXT": [
+      "Die Pack-Herrin",
+      "TheLethargicWeirdo"
+    ]
+  },
+  "anniv5:randomSkin": {
+    "NAME": "Zufällig",
+    "TEXT": [
+      "Zufällig",
+      "Mehrere"
+    ]
+  }
+}

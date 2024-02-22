@@ -1,0 +1,41 @@
+{
+  "anniv5:GemsPack": {
+    "TEXT": [
+      "Juwelier Set",
+      "Reines Unterstützungspaket. Enthält 0-Kosten-Edelsteine, die an Rastplätzen in Karten mit einem Kostenaufwand von 1 oder mehr eingesetzt werden können.",
+      "MichaelMayhem"
+    ]
+  },
+  "anniv5:GemsPackHat": {
+    "TEXT": [
+      "Gar nicht protzig!",
+      "Kronjuwel"
+    ]
+  },
+  "anniv5:EnhanceBonfireOptions": {
+    "TEXT": [
+      "Verbessern",
+      "(Freie Aktion) Gebe ",
+      " Gold aus, um einen Edelstein in eine Karte einzusetzen.",
+      "Benötigt einen Edelstein, ",
+      " Gold und eine unveränderte Karte mit einem Kostenaufwand von 1 oder mehr.",
+      "Wähle einen Edelstein aus.",
+      "Wähle eine Karte aus, um den Edelstein zu erhalten."
+    ]
+  },
+  "anniv5:GemModifiers": {
+    "TEXT": [
+      " NL Reduziere alle negativen Effekte um 1.",
+      " NL Wirf einen anniv5:D6.",
+      " NL Ziehe 1 Karte.",
+      " NL Erhalte [E] im nächsten Zug.",
+      " NL stslib:Persist !stslib:persist!.",
+      "Behalten. NL ",
+      " NL Erhalte ein *Messer.",
+      " NL Erhalte 2 temporäre Stärke.",
+      " NL Erhalte einen *Schutz.",
+      " NL Erschaffe 1 Blitz.",
+      " NL Erschaffe  1 Frost."
+    ]
+  }
+}

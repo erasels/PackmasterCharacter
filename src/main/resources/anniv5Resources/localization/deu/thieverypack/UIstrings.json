@@ -1,0 +1,21 @@
+{
+  "anniv5:ThieveryPack": {
+    "TEXT": [
+      "Dieb, der Betrüger",
+      "Es ist nicht nötig alles vorzubereiten; stehle was du brauchst.",
+      "Celicath"
+    ]
+  },
+  "anniv5:StealPowerAction": {
+    "TEXT": [
+      "%s ist für mich nutzlos.",
+      "%s sind für mich nutzlos."
+    ]
+  },
+  "anniv5:ThieveryPackHat": {
+    "TEXT": [
+      "Das Vermächtnis von Lord Red Mask fängt gerade erst an.",
+      "Rote Maske"
+    ]
+  }
+}

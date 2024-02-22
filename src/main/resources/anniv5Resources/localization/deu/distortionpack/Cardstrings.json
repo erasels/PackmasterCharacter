@@ -1,0 +1,47 @@
+{
+  "anniv5:S_r_ke": {
+    "NAME": "S h ag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! anniv5:Verzerrung an."
+  },
+  "anniv5:Deconstruct": {
+    "NAME": "Dekonstruktion",
+    "DESCRIPTION": "Wende an ALLEN Gegnern !M! anniv5:Verzerrung an. NL Erschöpfen."
+  },
+  "anniv5:Darken": {
+    "NAME": "Verdunkelung",
+    "DESCRIPTION": "Wende !M! anniv5:Verzerrung an. Falls das Ziel einen anderen Debuff hat, füge !anniv5:m2! mehr hinzu."
+  },
+  "anniv5:BurningAct": {
+    "NAME": "Brennende Handlung",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfe zufällig 2 davon .",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfe 2 davon."
+  },
+  "anniv5:MindMaze": {
+    "NAME": "Gedankenlabyrinth",
+    "DESCRIPTION": "Erhalte X Mal !B! Block. NL Lege X *Benommenheit oben auf deinen Nachziehstapel."
+  },
+  "anniv5:Deterioration": {
+    "NAME": "Verschlechterung",
+    "DESCRIPTION": "Am Ende deines Zuges erschöpfe eine zufällige Karte in deinem Ablagestapel und erhalte !M! Block."
+  },
+  "anniv5:Shatter": {
+    "NAME": "Zersplitterung",
+    "DESCRIPTION": "{@@}Verursache jedes Mal, wenn der Gegner in diesem Zug LP verliert, !D! Schaden.",
+    "EXTENDED_DESCRIPTION": [
+      "{@@}Verursache jedes Mal, wenn der Gegner in diesem Zug LP verliert, !D! Schaden. NL (Trifft !M! Mal.)"
+    ]
+  },
+  "anniv5:Rue": {
+    "NAME": "Reue",
+    "DESCRIPTION": "{@@}Erhalte [E] [E] und ziehe !M! Karte{!M!|1=|@=n}. NL Erschöpfe die nächsten 3 Karten, die du spielst."
+  },
+  "anniv5:Static": {
+    "NAME": "Statisch",
+    "DESCRIPTION": "Füge einem zufälligen Gegner !M! Mal !D! Schaden zu. Wende anniv5:Verzerrung in Höhe des unblockierten Schadens an."
+  },
+  "anniv5:CursedCircle": {
+    "NAME": "Verfluchter Kreis",
+    "DESCRIPTION": "Du und ALLE Gegner verlieren in diesem Zug Stärke, entsprechend der Anzahl der Karten auf deiner Hand. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Du und ALLE Gegner verlieren in diesem Zug Stärke, entsprechend der Anzahl der Karten auf deiner Hand."
+  }
+}

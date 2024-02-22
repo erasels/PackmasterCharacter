@@ -1,0 +1,44 @@
+{
+  "anniv5:PierceVeil": {
+    "NAME": "Durchdringender Blick",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Nimm eine der obersten !M! Karten deines Nachziehstapels auf die Hand."
+  },
+  "anniv5:Stall": {
+    "NAME": "Verzögerung",
+    "DESCRIPTION": "Erhalte !B! Block. NL Lege bis zu !M! Karten von deiner Hand oben auf deinen Nachziehstapel zurück."
+  },
+  "anniv5:RiskOfBlades": {
+    "NAME": "Klingenrisiko",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Wiederhole dies für jede Angriffskarte in den obersten 3 Karten deines Nachziehstapels.",
+    "EXTENDED_DESCRIPTION": [" NL (Trifft !M! weiteres Mal.)", " NL (Trifft !M! weitere Male.)"]
+  },
+  "anniv5:Crossroads": {
+    "NAME": "Wegkreuzung",
+    "DESCRIPTION": "Spähe !M!. NL Spiele die oberste Karte deines Nachziehstapels. NL Erschöpfen."
+  },
+  "anniv5:Anticipation": {
+    "NAME": "Vorahnung",
+    "DESCRIPTION": "Ziehe 1 Karte. NL Erhalte Stärke entsprechend ihrer Kosten.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erhalte Stärke entsprechend ihrer Kosten."
+  },
+  "anniv5:Prediction": {
+    "NAME": "Vorhersage",
+    "DESCRIPTION": "Erhalte !B! Block. NL Falls kein Gegner anzugreift, erhalte ihn stattdessen im nächsten Zug."
+  },
+  "anniv5:ForceBolt": {
+    "NAME": "Kraftblitz",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Füge !M! Verwundbar hinzu."
+  },
+  "anniv5:Enigmancy": {
+    "NAME": "Rätselhaftigkeit",
+    "DESCRIPTION": "Spähe !M!. NL Erhalte jeden Zug !anniv5:m2! Energie. Reduziere dies jeden Zug um 1."
+  },
+  "anniv5:Recurrence": {
+    "NAME": "Wiederkehr",
+    "DESCRIPTION": "Mische eine Kopie deiner Hand in deinen Nachziehstapel. NL Erschöpfen."
+  },
+  "anniv5:DivineMight": {
+    "NAME": "Göttliche Macht",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Wenn [#EFC851]Göttliche [#EFC851]Macht zweimal gespielt wurde, anniv5:Aufstieg."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "anniv5:FrostbitePower": {
+    "NAME": "frostiss",
+    "DESCRIPTIONS": [
+      "Zu Beginn seines Zuges verliert dieser Gegner #b",
+      " TP, und sein #yFrostbiss wird halbiert. Immer wenn diese Kreatur Angriffsschaden erleidet, wird #b1 #yFrostbiss verursacht."
+    ]
+  },
+  "anniv5:FrigidBodyPower": {
+    "NAME": "erstarrter Körper",
+    "DESCRIPTIONS": [
+      "Immer wenn du in diesem Zug angegriffen wirst,",
+      "Für #b",
+      " Runden, immer wenn du angegriffen wirst,",
+      "verursache #yFrostbiss in Höhe des blockierten Schadens."
+    ]
+  },
+  "anniv5:FrostedEdgePower": {
+    "NAME": "gefrorene Klinge",
+    "DESCRIPTIONS": ["Immer wenn du #yFrostbiss verursachst, erhalte #b", " temporäre #yStärke."]
+  },
+  "anniv5:IceShatterPower": {
+    "NAME": "eisiger Splitter",
+    "DESCRIPTIONS": [
+      "Im nächsten Zug, wenn dieser Gegner TP verliert, erleidet er zusätzlich #b",
+      " Schaden (dieser Schaden wird nicht reduziert)."
+    ]
+  },
+  "anniv5:SnowedInPower": {
+    "NAME": "eingeschneit",
+    "DESCRIPTIONS": [
+      "Der #yFrostbiss dieses Gegners wird in diesem Zug nicht halbiert ",
+      "Dieser Effekt hält für die nächsten #b",
+      " Runden an, nachdem er ausgelöst wurde, wird die #yFrostbiss nicht halbiert."
+    ]
+  }
+}

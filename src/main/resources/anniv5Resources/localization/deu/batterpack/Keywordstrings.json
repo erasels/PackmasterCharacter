@@ -1,0 +1,12 @@
+[
+  {
+    "PROPER_NAME": "Kritischer Treffer",
+    "NAMES": [
+      "kritischen",
+      "critical hit",
+      "Critical_Hit",
+      "critical_hit"
+    ],
+    "DESCRIPTION": "Kritische Treffer verursachen #b50% mehr Schaden."
+  }
+]

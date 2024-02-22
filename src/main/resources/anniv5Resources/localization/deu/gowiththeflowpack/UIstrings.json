@@ -1,0 +1,20 @@
+{
+  "anniv5:GoWithTheFlowPack": {
+    "TEXT": [
+      "Im Strom schwimmen",
+      "Entsorge Karten, die du diesen Zug nicht brauchst, für mehr Karten im nächsten Zug.",
+      "NellyDevo"
+    ]
+  },
+  "anniv5:FlowAction": {
+    "TEXT": [
+      "abwerfen."
+    ]
+  },
+  "anniv5:GoWithTheFlowPackHat": {
+    "TEXT": [
+      "Angemessene Kleidung für Minusgrade.",
+      "Wasserbiege-Kapuze"
+    ]
+  }
+}

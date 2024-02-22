@@ -1,0 +1,17 @@
+{
+  "anniv5:JinxPower": {
+    "NAME": "verhext",
+    "DESCRIPTIONS": [
+      "Wenn diese Kreatur mit einem anderen Debuff geschwächt wurde, verliert sie #b",
+      " TP."
+    ]
+  },
+  "anniv5:AmbushPower": {
+    "NAME": "hinterhalt",
+    "DESCRIPTIONS": [
+      "Wann immer du einen Orb #yerschaffst, #yEntade in #b1 mal ohne ihn zu entfernen.",
+      "Wann immer du einen Orb #yerschaffst, #yEntade in #b",
+      " mal ohne ihn zu entfernen."
+    ]
+  }
+}

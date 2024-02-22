@@ -1,0 +1,15 @@
+{
+  "anniv5:HighEnergyPack": {
+    "TEXT": [
+      "Energiegeladen",
+      "Konzentrieren deine Kraft darauf, jede Menge Energie zu gewinnen und diese für teure Karten auszugeben!",
+      "Vex"
+    ]
+  },
+  "anniv5:HighEnergyPackHat": {
+    "TEXT": [
+      "Die Rückseite beschreibt 'solarbetriebenes-Gerät'.",
+      "Energetische Farbtöne"
+    ]
+  }
+}

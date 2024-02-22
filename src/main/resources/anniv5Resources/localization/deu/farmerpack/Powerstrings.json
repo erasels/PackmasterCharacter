@@ -1,0 +1,16 @@
+{
+  "anniv5:OutToMarketPower": {
+    "NAME": "auf den Markt",
+    "DESCRIPTIONS": [
+      "Verursache #b",
+      " Schaden an ALLEN Gegnern, wann immer du eine Karte spielst, die einen anderen Typ als die letzte hat. Zuletzt gespielt:", "Angriff", "Fertigkeit", "Macht", "Status", "Fluch"
+    ]
+  },
+  "anniv5:SupplyChainPower": {
+    "NAME": "versorgungskette",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn jedes Zuges #b",
+      " Dünger auf deine Hand."
+    ]
+  }
+}

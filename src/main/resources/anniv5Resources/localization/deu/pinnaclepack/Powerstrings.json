@@ -1,0 +1,21 @@
+{
+  "anniv5:Capacitor": {
+    "NAME": "Kondensator",
+    "DESCRIPTIONS": [
+      "Erhöhe deine maximale Handgröße in diesem Zug um #b",
+      "."
+    ]
+  },
+  "anniv5:Cooking": {
+    "NAME": "Küchen Macht",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zugs, brate eine #yKrokette."
+    ]
+  },
+  "anniv5:Cooking_": {
+    "NAME": "Küchen Macht+",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zugs, brate eine #yVerbesserte #yKrokette."
+    ]
+  }
+}

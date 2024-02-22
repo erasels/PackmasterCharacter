@@ -1,0 +1,56 @@
+{
+  "anniv5:Fertilizer": {
+    "NAME": "Dünger",
+    "DESCRIPTION": "Ziehe 1 Karte. NL Erschöpfen. NL Dies ist ein Status.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfen. NL Dies ist ein Status."
+  },
+  "anniv5:FertilizerPlaceholder": {
+    "NAME": "Dünger",
+    "DESCRIPTION": "Ziehe 1 Karte. NL Erschöpfen. NL Dies ist entweder ein Status oder ein Fluch.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfen. NL Dies ist entweder ein Status oder ein Fluch."
+  },
+  "anniv5:HarvestBeans": {
+    "NAME": "Bohnen Ernte",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge ALLEN Gegnern Schaden zu, wenn die letzte in diesem Kampf gespielte Karte keine Angriffskarte war."
+  },
+  "anniv5:HarvestCarrots": {
+    "NAME": "Karotten Ernte",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wiederhole dies für jeden Kartentyp, den du in diesem Zug gespielt hast.",
+    "EXTENDED_DESCRIPTION": [" NL (Wiederholt sich !M! Mal.)"]
+  },
+  "anniv5:HarvestPotatoes": {
+    "NAME": "Kartoffel Ernte",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn die letzte in diesem Kampf gespielte Karte keine Fertigkeit war, erhalte erneut !B! Block."
+  },
+  "anniv5:HarvestRadishes": {
+    "NAME": "Radieschen Ernte",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende für jeden in diesem Zug gespielten Kartentyp 1 Schwach an.",
+    "EXTENDED_DESCRIPTION": [" NL (Wiederholt sich !M! Mal.)"]
+  },
+  "anniv5:OutToMarket": {
+    "NAME": "Auf den Markt",
+    "DESCRIPTION": "Immer wenn du eine Karte spielst, die einen anderen Typ als die letzte hat, füge ALLEN Gegnern !M! Schaden zu."
+  },
+  "anniv5:PestControl": {
+    "NAME": "Schädlingsbekämpfung",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole dies für jeden Kartentyp, den du in diesem Zug gespielt hast.",
+    "EXTENDED_DESCRIPTION": [" NL (Wiederholt sich !M! Mal.)"]
+  },
+  "anniv5:SoilResiliency": {
+    "NAME": "Widerstandsfähigkeit",
+    "DESCRIPTION": "Erhalte !M! Stärke. NL Verdopple dies auf maximal 10, nachdem du in diesem Zug 3 oder mehr Kartentypen gespielt hast. NL (Diesen Kampf noch !stslib:ex! Mal einsetzbar)."
+  },
+  "anniv5:SupplyChain": {
+    "NAME": "Versorgungskette",
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges einen *Dünger.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte zu Beginn jedes Zuges einen *Dünger."
+  },
+  "anniv5:SowTheSeeds": {
+    "NAME": "Die Samen aussäen",
+    "DESCRIPTION": "Erhalte einen *Dünger. NL Suche !M! zufällige Karten mit unterschiedlichen Typen aus deinem Deck."
+  },
+  "anniv5:TillTheEarth": {
+    "NAME": "Bis zur Erde",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen *Dünger."
+  }
+}

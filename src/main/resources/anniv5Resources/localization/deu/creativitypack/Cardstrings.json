@@ -1,0 +1,60 @@
+{
+  "anniv5:MakeshiftSword": {
+    "NAME": "Improvisiertes Schwert",
+    "DESCRIPTION": "Erhalte !M! zusätzlichen Schaden für den nächsten Angriff, wenn eine Karte während des Kampfes erstellt wird"
+  },
+  "anniv5:MakeshiftShield": {
+    "NAME": "Improvisierter Schild",
+    "DESCRIPTION": "Erhalte !M! Block, wenn eine Karte während des Kampfes erstellt wird."
+  },
+  "anniv5:PaintBrush": {
+    "NAME": "Pinsel",
+    "DESCRIPTION": "{@@}Entdecke eine Karte mit ausgewähltem Typ und Kosten. Exaust{!Upgrades!|>0=ive !stslib:ex!}."
+  },
+  "anniv5:Firewall": {
+    "NAME": "Feuerwand",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Angeboren. NL }Wenn eine Statuskarte erstellt wird, NL erschöpfe sie."
+  },
+  "anniv5:Souvenirs": {
+    "NAME": "Souvenir",
+    "DESCRIPTION": "Erstelle eine *Zertrümmern oder *Geborgenheit in deiner Hand. Ziehe eine Karte.",
+    "UPGRADE_DESCRIPTION": "Erstelle eine *Zertrümmern+ oder *Geborgenheit+ in deiner Hand. Ziehe eine Karte."
+  },
+  "anniv5:Mimicry": {
+    "NAME": "Mimikry",
+    "DESCRIPTION": "{@@}Entdecke eine gewöhnliche Karte aus anderen von dir ausgewählten Kartenpaketen.",
+    "UPGRADE_DESCRIPTION": "{@@}Entdecke eine verbesserte gewöhnliche Karte aus anderen von dir ausgewählten Kartenpaketen."
+  },
+  "anniv5:CraftyMove": {
+    "NAME": "Listiger Zug",
+    "DESCRIPTION": "Füge !D! Schaden zu. Wenn in diesem Zug eine Karte erstellt wurde, erhalte [E] und ziehe 1 Karte."
+  },
+  "anniv5:BarrierBeacon": {
+    "NAME": "Barriere Leuchtfeuer",
+    "DESCRIPTION": "Erhalte !B! Block. Erstelle ein *Barriere\u00a0Leuchtfeuer in deiner Hand. Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. Erstelle ein *Barriere\u00a0Leuchtfeuer in deiner Hand. Erschöpfen."
+  },
+  "anniv5:StrikingStrike": {
+    "NAME": "Schlagender Schlag",
+    "DESCRIPTION": "{@@}Füge !D! Schaden zu. Entdecke einen Schlag. Er erschöpft sich, wenn er gespielt wird, und kostet in diesem Zug 0."
+  },
+  "anniv5:AccumulativeStrike": {
+    "NAME": "Kumulativer Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. Fügt !M! zusätzlichen Schaden für ALLE deine erstellten Karten zu."
+  },
+  "anniv5:BrushModalTypeChoice": {
+    "NAME": "Das solltest du niemals sehen",
+    "DESCRIPTION": "Wähle diesen Kartentyp für die Entdeckung."
+  },
+  "anniv5:BrushModalCostChoice": {
+    "NAME": "Das solltest du niemals sehen",
+    "DESCRIPTION": "Wähle diese Kosten für die Entdeckung.",
+    "EXTENDED_DESCRIPTION" : [
+      "Wähle diese oder höhere Kosten für die Entdeckung."
+    ],
+    "COMMENTS": [
+      "Dieses Array wird im Spiel nicht verwendet.",
+      "EX_DESC is used for cost 3+."
+    ]
+  }
+}

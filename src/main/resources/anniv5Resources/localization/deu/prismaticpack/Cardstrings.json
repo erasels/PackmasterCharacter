@@ -1,0 +1,45 @@
+{
+  "anniv5:SwordAndDagger": {
+    "NAME": "Schwert und Dolch",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge deiner Hand !M! *Messer hinzu.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Füge deiner Hand !M! *Messer hinzu."
+  },
+  "anniv5:PrismaticBarrier": {
+    "NAME": "Prismatische Barriere",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn du in diesem Zug eine anniv5:unterschiedlich\u00a0farbige Karte gespielt hast, erhalte !M! *Panzerrüstung und erschöpfe sie."
+  },
+  "anniv5:GrabBag": {
+    "NAME": "Griff in die Tasche",
+    "DESCRIPTION": "Füge deiner Hand !M! zufällige anniv5:unterschiedlich\u00a0farbige Karten hinzu. NL Erschöpfen."
+  },
+  "anniv5:ShimmeringStrike": {
+    "NAME": "Schimmernder Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Für jede, in diesem Kampf gespielte anniv5:unterschiedlich\u00a0farbige Karte, verursache !M! zusätzlichen Schaden."
+  },
+  "anniv5:ExoticKnowledge": {
+    "NAME": "Exotisches Wissen",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Wenn du in diesem Zug eine anniv5:unterschiedlich\u00a0farbige Karte gespielt hast, ziehe zusätzlich !anniv5:m2! Karten."
+  },
+  "anniv5:ChoiceCut": {
+    "NAME": "Auserwählter Schnitt",
+    "DESCRIPTION": "Wähle eine der Karten *Kinnhaken, *Dunkles *Schicksal, *Jagd oder *Den *Himmel *erreichen aus, um sie deiner Hand hinzuzufügen. In diesem Zug kostet sie 0. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wähle eine der Karten *Kinnhaken+, *Dunkles *Schicksal+, *Jagd+ oder *Den *Himmel *erreichen+ aus, um sie deiner Hand hinzuzufügen. In diesem Zug kostet sie 0. NL Erschöpfen."
+  },
+  "anniv5:QuirionDryad": {
+    "NAME": "Quirion Dryade",
+    "DESCRIPTION": "Erhalte jedes Mal, wenn du in diesem Kampf eine Karte einer neuen Farbe spielst, !M! Stärke und !M! Geschicklichkeit."
+  },
+  "anniv5:ManyAsOne": {
+    "NAME": "Viele wie Einer",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge alle anniv5:unterschiedlich\u00a0farbige Karten aus deinem Ablagestapel deiner Hand hinzu."
+  },
+  "anniv5:PremiumSelection": {
+    "NAME": "Premium Auswahl",
+    "DESCRIPTION": "Wähle 1 von !M! zufälligen anniv5:unterschiedlich\u00a0farbige seltenen Karten aus, um sie deiner Hand hinzuzufügen. In diesem Zug kostet sie 0. NL Erschöpfen."
+  },
+  "anniv5:FlawlessPrism": {
+    "NAME": "Makelloses Prisma",
+    "DESCRIPTION": "Am Anfang deines Zuges füge deiner Hand !M! zufällige anniv5:unterschiedlich\u00a0farbige Macht Karte hinzu.",
+    "UPGRADE_DESCRIPTION": "Am Anfang deines Zuges füge deiner Hand !M! zufällige anniv5:unterschiedlich\u00a0farbige Macht Karte hinzu."
+  }
+}

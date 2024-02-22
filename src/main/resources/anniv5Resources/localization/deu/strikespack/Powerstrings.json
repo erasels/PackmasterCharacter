@@ -1,0 +1,17 @@
+{
+  "anniv5:StrikeDummyJrPower": {
+    "NAME": "Schlag Puppe Jr.",
+    "DESCRIPTIONS": [
+      "Deine Schläge verursachen #b",
+      " mehr Schaden."
+    ]
+  },
+  "anniv5:StrikeOfGeniusPower": {
+    "NAME": "Genieschlag",
+    "DESCRIPTIONS": [
+      "Der nächste Angriff erhält #yBlock abhänging vom ungeblockten verursachten Schaden.",
+      "Die nächsten #b",
+      " Angriffe erhalten #yBlock abhänging vom ungeblockten verursachten Schaden."
+    ]
+  }
+}

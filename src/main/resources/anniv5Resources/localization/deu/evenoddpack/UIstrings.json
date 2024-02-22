@@ -1,0 +1,15 @@
+{
+  "anniv5:EvenOddPack": {
+    "TEXT": [
+      "Gerade/Ungerade",
+      "Karten mit unterschiedlichen Effekten, je nachdem, wann sie gespielt werden.",
+      "Lobbien"
+    ]
+  },
+  "anniv5:EvenOddPackHat": {
+    "TEXT": [
+      "Eine Kopfbedeckung der Superlative für Modulo Fans.",
+      "Das oberste Prozent"
+    ]
+  }
+}

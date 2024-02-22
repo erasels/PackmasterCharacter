@@ -1,0 +1,15 @@
+{
+  "anniv5:PixiePack": {
+    "TEXT": [
+      "Pixie",
+      "Ein Paket mit Karten der dimensionspringenden Pixie.",
+      "FieryChocobo"
+    ]
+  },
+  "anniv5:PixiePackHat": {
+    "TEXT": [
+      "Ohhh. Glänzend!",
+      "Elfen Krone"
+    ]
+  }
+}

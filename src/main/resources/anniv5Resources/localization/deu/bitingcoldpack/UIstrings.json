@@ -1,0 +1,15 @@
+{
+  "anniv5:BitingColdPack": {
+    "TEXT": [
+      "Frostbiss",
+      "Füge Feinden anniv5:Frostbiss zu und lass sie der Kälte erliegen.",
+      "Enbeon"
+    ]
+  },
+  "anniv5:BitingColdPackHat": {
+    "TEXT": [
+      "Dieser festliche Hut hält die Kälte fern.",
+      "Weihnachtsmann-Hut"
+    ]
+  }
+}

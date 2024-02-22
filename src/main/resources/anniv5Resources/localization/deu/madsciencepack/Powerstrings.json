@@ -1,0 +1,16 @@
+{
+  "anniv5:PiratifyPower": {
+    "NAME": "Piratisieren",
+    "DESCRIPTIONS": [
+      "Zu Beginn jedes Zuges, modifiziere #b",
+      " zufällige Karten in deiner Hand: 'Erhalte eine Kanonenkugel.'"
+    ]
+  },
+  "anniv5:PiratifyPowerUpp": {
+    "NAME": "Piratisieren+",
+    "DESCRIPTIONS": [
+      "Zu Beginn jedes Zuges, modifiziere #b",
+      " zufällige Karten in deiner Hand: 'Erhalte eine Kanonenkugel+.'"
+    ]
+  }
+}

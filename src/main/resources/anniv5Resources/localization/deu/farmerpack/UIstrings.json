@@ -1,0 +1,15 @@
+{
+  "anniv5:FarmerPack": {
+    "TEXT": [
+      "Farmer",
+      "Wechseln Sie zwischen den Kartentypen, um den Ertrag zu erhöhen!",
+      "DJM"
+    ]
+  },
+  "anniv5:FarmerPackHat": {
+    "TEXT": [
+      "Schlichter Hut aus Stroh. Haltet Sonne und Regen fern.",
+      "Strohhut"
+    ]
+  }
+}

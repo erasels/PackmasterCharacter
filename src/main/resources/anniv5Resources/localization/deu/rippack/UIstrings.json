@@ -1,0 +1,28 @@
+{
+  "anniv5:RipPack": {
+    "TEXT": [
+      "Rip",
+      "A pack of perforated cards that can be ripped in half for various effects.",
+      "EricB"
+    ]
+  },
+  "anniv5:Rip": {
+    "TEXT": [
+      "Rippable",
+      "I need room for both halves of the card in my hand.",
+      "Attack",
+      "Skill"
+    ]
+  },
+  "anniv5:RipPackHat": {
+    "TEXT": [
+      "Just the right touch of pizzazz.",
+      "Artisan Hat"
+    ]
+  },
+  "anniv5:RippableModifier": {
+    "TEXT": [
+      "Rippable "
+    ]
+  }
+}

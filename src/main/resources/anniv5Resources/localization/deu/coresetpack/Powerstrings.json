@@ -1,0 +1,13 @@
+{
+  "anniv5:MayhemFormPower": {
+    "NAME": "unnachgiebige Form",
+    "DESCRIPTIONS": [
+      "Einmal pro Runde, wenn du #b2 oder weniger Karten auf der Hand hast, ziehe #b2",
+      " Karten und erhalte ",
+      " [E] ",
+      ". ",
+      " Wurde in dieser Runde nicht ausgelöst.",
+      " Wurde in dieser Runde ausgelöst."
+    ]
+  }
+}
