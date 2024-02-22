@@ -1,12 +1,12 @@
 {
-  "anniv5:StrikeDummyJrPower": {
+  "${ModID}:StrikeDummyJrPower": {
     "NAME": "Schlag Puppe Jr.",
     "DESCRIPTIONS": [
       "Deine Schläge verursachen #b",
       " mehr Schaden."
     ]
   },
-  "anniv5:StrikeOfGeniusPower": {
+  "${ModID}:StrikeOfGeniusPower": {
     "NAME": "Genieschlag",
     "DESCRIPTIONS": [
       "Der nächste Angriff erhält #yBlock abhänging vom ungeblockten verursachten Schaden.",

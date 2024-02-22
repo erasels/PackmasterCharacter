@@ -1,7 +1,7 @@
 {
-  "anniv5:Leprechaun": {
+  "${ModID}:Leprechaun": {
     "NAME": "Kobold",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 anniv5:Kobold.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 ${ModID}:Kobold.",
     "EXTENDED_DESCRIPTION": [
       "Würfel",
       "Würfel erhöhen den Schaden oder den #yBlock der nächsten Karte, die du spielst.",
@@ -10,59 +10,59 @@
     ],
     "FLAVOR": "Lobpreise RNGesus."
   },
-  "anniv5:Porcupine": {
+  "${ModID}:Porcupine": {
     "NAME": "Stachelschwein",
-    "DESCRIPTION": "Erschaffe 1 anniv5:Stachelschwein. NL Füge deiner Hand !M! *Stachel hinzu.",
+    "DESCRIPTION": "Erschaffe 1 ${ModID}:Stachelschwein. NL Füge deiner Hand !M! *Stachel hinzu.",
     "FLAVOR": "Die Stille in tierischer Form."
   },
-  "anniv5:Wolves": {
+  "${ModID}:Wolves": {
     "NAME": "Wölfe",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschaffe 1 anniv5:Wolf.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschaffe 1 ${ModID}:Wolf.",
     "FLAVOR": "Rudeltiere für den Rudelführer."
   },
-  "anniv5:Elephant": {
+  "${ModID}:Elephant": {
     "NAME": "Elefant",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte !M! Schaden.",
     "FLAVOR": "Das ist meine Lieblingskarte. Ich hoffe, sie gefällt dir auch."
   },
-  "anniv5:FireSpirit": {
+  "${ModID}:FireSpirit": {
     "NAME": "Feuergeist",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 anniv5:Feuergeist.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 ${ModID}:Feuergeist.",
     "EXTENDED_DESCRIPTION": [
       "Entzünden",
       "Entzündete Kreaturen verlieren pro Stapel am Anfang ihres Zuges #b1 TP."
       ],
     "FLAVOR": "Sei vorsichtig, Feuergeister kuscheln gerne."
   },
-  "anniv5:RainbowLouse": {
+  "${ModID}:RainbowLouse": {
     "NAME": "Regenbogenlaus",
-    "DESCRIPTION": "Erschaffe 1 anniv5:Regenbogenlaus.",
-    "UPGRADE_DESCRIPTION": "Erschaffe 1 anniv5:Regenbogenlaus. NL Ziehe 1 Karte.",
+    "DESCRIPTION": "Erschaffe 1 ${ModID}:Regenbogenlaus.",
+    "UPGRADE_DESCRIPTION": "Erschaffe 1 ${ModID}:Regenbogenlaus. NL Ziehe 1 Karte.",
     "FLAVOR": "Das Ergebnis eines unklugen magischen Experiments."
   },
-  "anniv5:SwarmOfBees": {
+  "${ModID}:SwarmOfBees": {
     "NAME": "Bienenschwarm",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erschaffe 1 anniv5:Bienenschwarm.",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erschaffe 1 ${ModID}:Bienenschwarm.",
     "FLAVOR": "Absolut furchterregend."
   },
-  "anniv5:Specialist": {
+  "${ModID}:Specialist": {
     "NAME": "Spezialist",
     "DESCRIPTION": "Erhalte !M! Fokus. NL Verliere 1 Stärke und Geschicklichkeit.",
     "FLAVOR": "Ich überspringe das Training für die Beine."
   },
-  "anniv5:Ambush": {
+  "${ModID}:Ambush": {
     "NAME": "Hinterhalt",
     "DESCRIPTION": "Flüchtig. NL Immer wenn du einen Orb erschaffst, löse ihn aus, ohne ihn zu entfernen.",
     "UPGRADE_DESCRIPTION": "Immer wenn du einen Orb erschaffst, löse ihn aus, ohne ihn zu entfernen.",
     "FLAVOR": "Ich konnte keine guten Hinterhalt-Kunstwerke finden, also gibt es hier einen Wortwitz."
   },
-  "anniv5:Pandas": {
+  "${ModID}:Pandas": {
     "NAME": "Pandas",
-    "DESCRIPTION": "Erschaffe X anniv5:Pandas.",
-    "UPGRADE_DESCRIPTION": "Erschaffe X+1 anniv5:Pandas.",
+    "DESCRIPTION": "Erschaffe X ${ModID}:Pandas.",
+    "UPGRADE_DESCRIPTION": "Erschaffe X+1 ${ModID}:Pandas.",
     "FLAVOR": "Pandamonium."
   },
-  "anniv5:Quill": {
+  "${ModID}:Quill": {
     "NAME": "Stachel",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfen.",
     "FLAVOR": "Stich."

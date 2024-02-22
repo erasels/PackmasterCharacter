@@ -1,12 +1,12 @@
 {
-  "anniv5:MindOverMatterPower": {
+  "${ModID}:MindOverMatterPower": {
     "NAME": "geist über Materie",
     "DESCRIPTIONS": [
       "Immer wenn du eine Karte ziehst, erhalte #b",
       " #yBlock."
     ]
   },
-  "anniv5:ThoughtweavingPower": {
+  "${ModID}:ThoughtweavingPower": {
     "NAME": "gedankenweben",
     "DESCRIPTIONS": [
       "Immer wenn du eine #yFertigkeit oder #yAttacke spielst, ziehe ",

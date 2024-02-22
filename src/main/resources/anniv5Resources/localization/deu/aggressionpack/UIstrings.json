@@ -1,5 +1,5 @@
 {
-  "anniv5:AggressionPack": {
+  "${ModID}:AggressionPack": {
     "TEXT": [
       "Aggression",
       "Fokussiert auf Angriffe und die Aggressionshaltung, die deinen Angriffsschaden um 25% erhöht.",
@@ -7,7 +7,7 @@
       "Kartenkunst aus MtG"
     ]
   },
-  "anniv5:AggressionPackHat": {
+  "${ModID}:AggressionPackHat": {
     "TEXT": [
       "Jetzt bist du wirklich bereit, den Turm zu überfallen und zu plündern.",
       "Wikingerhelm"

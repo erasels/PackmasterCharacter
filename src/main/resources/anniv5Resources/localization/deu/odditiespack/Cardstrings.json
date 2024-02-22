@@ -1,32 +1,32 @@
 {
-  "anniv5:StylePoints": {
+  "${ModID}:StylePoints": {
     "NAME": "Stilpunkte",
     "DESCRIPTION": "Erhalte !B! Block. NL Entferne dein Schwach. NL Füge eine zufällige Karte aus dem Hut Karten Paket deiner Hand hinzu."
   },
-  "anniv5:LetsPlay8Ball": {
+  "${ModID}:LetsPlay8Ball": {
     "NAME": "Lasst uns 8 Ball spielen!",
     "DESCRIPTION": "Mische einen *8 *Ball in deinen Nachziehstapel.",
     "UPGRADE_DESCRIPTION": "Mische einen *9 *Ball in deinen Nachziehstapel."
   },
-  "anniv5:EightBall": {
+  "${ModID}:EightBall": {
     "NAME": "8 Ball",
     "DESCRIPTION": "Füge !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "9-Ball"
     ]
   },
-  "anniv5:ZaHando": {
+  "${ModID}:ZaHando": {
     "NAME": "Za Hando",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe die mittlere(n) Karte(n) in deiner Hand."
   },
-  "anniv5:LetsDraft": {
+  "${ModID}:LetsDraft": {
     "NAME": "Lasst uns draften!",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wähle eine Karte. Mische eine Kopie davon in deinen Nachziehstapel.",
     "EXTENDED_DESCRIPTION": [
       "erstelle eine Kopie davon."
     ]
   },
-  "anniv5:Beacon": {
+  "${ModID}:Beacon": {
     "NAME": "Leuchtfeuer",
     "DESCRIPTION": "Wähle !M! Karten auf deiner Hand aus. NL Verbessere sie und gib ihnen Behalten.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Wähle !M! Karten auf deiner Hand aus. NL Verbessere sie und gib ihnen Behalten.",
@@ -34,19 +34,19 @@
       "Verbessern und Behalten."
     ]
   },
-  "anniv5:SleeveUp": {
+  "${ModID}:SleeveUp": {
     "NAME": "Ärmel hochkrempeln",
     "DESCRIPTION": "Ziehe !M! Karten. NL Wenn diese Karte als Belohnung erscheint, werden die Karten *Foliert und erhalten Behalten."
   },
-  "anniv5:AutoBattler": {
+  "${ModID}:AutoBattler": {
     "NAME": "Auto Battler",
-    "DESCRIPTION": "Erhalte !M! Stärke. NL Erhalte !M! Geschicklichkeit. NL Erhalte !anniv5:m2! Fokus. NL Du spielst Karten automatisch."
+    "DESCRIPTION": "Erhalte !M! Stärke. NL Erhalte !M! Geschicklichkeit. NL Erhalte !${ModID}:m2! Fokus. NL Du spielst Karten automatisch."
   },
-  "anniv5:ShiningStyle": {
+  "${ModID}:ShiningStyle": {
     "NAME": "Glanzvoller Stil",
-    "DESCRIPTION": "Erhalte !M! Stärke. NL Erhalte !M! Geschicklichkeit. NL Startup: Erhalte !anniv5:m2! *Gold."
+    "DESCRIPTION": "Erhalte !M! Stärke. NL Erhalte !M! Geschicklichkeit. NL Startup: Erhalte !${ModID}:m2! *Gold."
   },
-  "anniv5:FinalForm": {
+  "${ModID}:FinalForm": {
     "NAME": "Das ist noch nicht einmal mein...",
     "DESCRIPTION": "Flüchtig. NL Erschöpfe 1 zufällige Karte. NL Am Anfang deiner nächsten 5 Züge spiele und erschöpfe eine Kopie davon.",
     "UPGRADE_DESCRIPTION": "Flüchtig. NL Erschöpfe 1 Karte. NL Am Anfang deiner nächsten 5 Züge spiele und erschöpfe eine Kopie davon.",
@@ -54,9 +54,9 @@
       "Erschöpfen für die finale Form."
     ]
   },
-  "anniv5:MidnightStrike": {
+  "${ModID}:MidnightStrike": {
     "NAME": "Mitternachtsschlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn dies die 12. Karte in diesem Kampf ist, füge stattdessen !anniv5:sd! Schaden zu.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn dies die 12. Karte in diesem Kampf ist, füge stattdessen !${ModID}:sd! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gespielte ",
       " Karte.)",

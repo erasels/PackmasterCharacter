@@ -1,55 +1,55 @@
 {
-  "anniv5:BasicWave": {
+  "${ModID}:BasicWave": {
     "NAME": "Basis Welle",
-    "DESCRIPTION": "Spiele ein *Verteidigen und einen *Schlag. NL Wird als eine anniv5:Basis Karte gezählt.",
+    "DESCRIPTION": "Spiele ein *Verteidigen und einen *Schlag. NL Wird als eine ${ModID}:Basis Karte gezählt.",
     "EXTENDED_DESCRIPTION": [
       "Spiele ein *Verteidigen+",
       " und einen *Schlag+",
-      ". NL Wird als eine anniv5:Basis Karte gezählt."
+      ". NL Wird als eine ${ModID}:Basis Karte gezählt."
     ]
   },
-  "anniv5:Simplify": {
+  "${ModID}:Simplify": {
     "NAME": "Vereinfachen",
-    "DESCRIPTION": "Ziehe eine anniv5:Basis Karte und verbessere sie. Dies kann beliebig oft verbessert werden.",
-    "UPGRADE_DESCRIPTION": "Ziehe eine anniv5:Basis Karte und verbessere sie !M! Mal. Dies kann beliebig oft verbessert werden."
+    "DESCRIPTION": "Ziehe eine ${ModID}:Basis Karte und verbessere sie. Dies kann beliebig oft verbessert werden.",
+    "UPGRADE_DESCRIPTION": "Ziehe eine ${ModID}:Basis Karte und verbessere sie !M! Mal. Dies kann beliebig oft verbessert werden."
   },
-  "anniv5:LoseIt": {
+  "${ModID}:LoseIt": {
     "NAME": "Verlieren",
     "DESCRIPTION": "Füge deiner Hand eine *Durchwühlen hinzu. Erhöhe die Anzahl der Karten, die von deinen vorhandenen *Durchwühlen gezogen werden, in diesem Kampf um !M!. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Füge deiner Hand eine *Durchwühlen+ hinzu. Erhöhe die Anzahl der Karten, die von deinen *Durchwühlen gezogen werden, in diesem Kampf um !M!. NL Erschöpfen."
   },
-  "anniv5:SimplifiedStrike": {
+  "${ModID}:SimplifiedStrike": {
     "NAME": "Vereinfachter Schlag",
-    "DESCRIPTION": "Verursacht Schaden, der !M! Mal der Anzahl der anniv5:Basis Karten entspricht, die in diesem Kampf gespielt wurden.",
-    "UPGRADE_DESCRIPTION": "anniv5:Angeboren. NL Verursacht Schaden, der !M! Mal der Anzahl der anniv5:Basis Karten entspricht, die in diesem Kampf gespielt wurden.",
+    "DESCRIPTION": "Verursacht Schaden, der !M! Mal der Anzahl der ${ModID}:Basis Karten entspricht, die in diesem Kampf gespielt wurden.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Angeboren. NL Verursacht Schaden, der !M! Mal der Anzahl der ${ModID}:Basis Karten entspricht, die in diesem Kampf gespielt wurden.",
     "EXTENDED_DESCRIPTION": [
       " NL (Verursacht !D! Schaden)"
     ]
   },
-  "anniv5:FamiliarKit": {
+  "${ModID}:FamiliarKit": {
     "NAME": "Vertrautes Set",
-    "DESCRIPTION": "Erhalte !M! Stärke, !M! Geschicklichkeit und !anniv5:m2! Fokus. anniv5:Aufnehmen: Erhalte ein *Schmettern, *Überlebenskünslerin und *Blitz.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte !M! Stärke, !M! Geschicklichkeit und !anniv5:m2! Fokus. anniv5:Aufnehmen: Erhalte eine *Schmettern, *Überlebenskünslerin und *Blitz."
+    "DESCRIPTION": "Erhalte !M! Stärke, !M! Geschicklichkeit und !${ModID}:m2! Fokus. ${ModID}:Aufnehmen: Erhalte ein *Schmettern, *Überlebenskünslerin und *Blitz.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte !M! Stärke, !M! Geschicklichkeit und !${ModID}:m2! Fokus. ${ModID}:Aufnehmen: Erhalte eine *Schmettern, *Überlebenskünslerin und *Blitz."
   },
-  "anniv5:OckhamsRazor": {
+  "${ModID}:OckhamsRazor": {
     "NAME": "Ockhams Rasiermesser",
-    "DESCRIPTION": "Immer wenn du eine anniv5:Basis Karte spielst, füge ALLEN Gegnern !M! Schaden zu."
+    "DESCRIPTION": "Immer wenn du eine ${ModID}:Basis Karte spielst, füge ALLEN Gegnern !M! Schaden zu."
   },
-  "anniv5:BackToBasic": {
+  "${ModID}:BackToBasic": {
     "NAME": "Zurück zu den Grundlagen",
-    "DESCRIPTION": "Nimm eine Karte aus deinem Ablagestapel auf deine Hand. Wenn es keine anniv5:Basis Karte war, erschöpfe sie.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm eine Karte aus deinem Ablagestapel auf deine Hand. Wenn es keine anniv5:Basis Karte war, erschöpfe sie."
+    "DESCRIPTION": "Nimm eine Karte aus deinem Ablagestapel auf deine Hand. Wenn es keine ${ModID}:Basis Karte war, erschöpfe sie.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm eine Karte aus deinem Ablagestapel auf deine Hand. Wenn es keine ${ModID}:Basis Karte war, erschöpfe sie."
   },
-  "anniv5:BasicHit": {
+  "${ModID}:BasicHit": {
     "NAME": "Vereinfachter Schlag",
     "DESCRIPTION": "Erhalte einen *Schlag und verbessere ihn !M! Mal. NL Erschöpfen."
   },
-  "anniv5:ConjureDefends": {
+  "${ModID}:ConjureDefends": {
     "NAME": "Verteidigungen beschwören",
     "DESCRIPTION": "Flüchtig. NL Füge deiner Hand eine *Verteidigen hinzu und modifiziere sie: \"Spiele dies X Mal\". Rückerstattung 1. Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Füge deiner Hand eine *Verteidigen hinzu und modifiziere sie: \"Spiele dies X+1 Mal\". Rückerstattung 1. Erschöpfen."
   },
-  "anniv5:SimpleTrick": {
+  "${ModID}:SimpleTrick": {
     "NAME": "Einfacher Trick",
     "DESCRIPTION": "Füge deiner Hand eine *Kartenzauberei hinzu. Die nächsten !M! Male, wenn du eine spielst, erhalte [E]. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Füge deiner Hand eine *Kartenzauberei+ hinzu. Die nächsten !M! Male, wenn du eine spielst, erhalte [E]. NL Erschöpfen."

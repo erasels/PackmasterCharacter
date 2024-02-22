@@ -1,46 +1,46 @@
 {
-  "anniv5:Sharpen": {
+  "${ModID}:Sharpen": {
     "NAME": "Schärfender Schlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Modify eine zufällige Attacke in der Hand: \"Füge !M! Schaden hinzu\""
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Modify eine zufällige Attacke in der Hand: \"Füge !M! Schaden hinzu\""
   },
-  "anniv5:Fortify": {
+  "${ModID}:Fortify": {
     "NAME": "Verstärken",
-    "DESCRIPTION": "Erhalte !B! Block. NL anniv5:Modify eine zufällige Blockkarte in der Hand: \"Erhalte !M! Block\""
+    "DESCRIPTION": "Erhalte !B! Block. NL ${ModID}:Modify eine zufällige Blockkarte in der Hand: \"Erhalte !M! Block\""
   },
-  "anniv5:Winterize": {
+  "${ModID}:Winterize": {
     "NAME": "Winterfest",
-    "DESCRIPTION": "Erschaffe 3 Frost. NL anniv5:Modify !M! zufällige Karten in deinem Nachziehstapel: \"Erschaffe 1 Frost\". NL Erschöpfen."
+    "DESCRIPTION": "Erschaffe 3 Frost. NL ${ModID}:Modify !M! zufällige Karten in deinem Nachziehstapel: \"Erschaffe 1 Frost\". NL Erschöpfen."
   },
-  "anniv5:Discombobulate": {
+  "${ModID}:Discombobulate": {
     "NAME": "Verwirren",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Wenn du eine *Modifizierte Karte auf der Hand hast, verursache doppelten Schaden."
   },
-  "anniv5:Attach": {
+  "${ModID}:Attach": {
     "NAME": "Anhängen",
-    "DESCRIPTION": "Wähle eine Nicht-Macht Karte auf der Hand, um sie in eine abgeworfene Karte zu anniv5:Absorbieren, dann anniv5:Modify sie: \"Spiele die *Absorbierte Karte\". NL Erschöpfen.",
+    "DESCRIPTION": "Wähle eine Nicht-Macht Karte auf der Hand, um sie in eine abgeworfene Karte zu ${ModID}:Absorbieren, dann ${ModID}:Modify sie: \"Spiele die *Absorbierte Karte\". NL Erschöpfen.",
     "EXTENDED_DESCRIPTION": ["Absorbieren. Wähle die abgeworfene Karte aus, modifiziere sie danach."]
   },
-  "anniv5:Improve": {
+  "${ModID}:Improve": {
     "NAME": "Verbessern",
-    "DESCRIPTION": "Ziehe !M! Karten. NL anniv5:Modify eine zufällige Karte auf der Hand: \"Ziehe 1 Karte\" NL Erschöpfen.",
-    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL anniv5:Modify eine Karte auf der Hand: \"Ziehe 1 Karte\" NL Erschöpfen."
+    "DESCRIPTION": "Ziehe !M! Karten. NL ${ModID}:Modify eine zufällige Karte auf der Hand: \"Ziehe 1 Karte\" NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL ${ModID}:Modify eine Karte auf der Hand: \"Ziehe 1 Karte\" NL Erschöpfen."
   },
-  "anniv5:Enhance": {
+  "${ModID}:Enhance": {
     "NAME": "Stärken",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Modify eine Karte auf der Hand: \"Erhalte !M! Block\""
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Modify eine Karte auf der Hand: \"Erhalte !M! Block\""
   },
-  "anniv5:Cheapen": {
+  "${ModID}:Cheapen": {
     "NAME": "Verbilligen",
-    "DESCRIPTION": "anniv5:Modify eine zufällige Karte in deinem Nachziehstapel: \"Kosten: 0\" NL anniv5:Verstärken [E] : Erschöpft nicht.",
-    "UPGRADE_DESCRIPTION": "anniv5:Modify eine Karte in deinem Nachziehstapel: \"Kosten: 0\" NL anniv5:Verstärken [E] : Erschöpft nicht."
+    "DESCRIPTION": "${ModID}:Modify eine zufällige Karte in deinem Nachziehstapel: \"Kosten: 0\" NL ${ModID}:Verstärken [E] : Erschöpft nicht.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Modify eine Karte in deinem Nachziehstapel: \"Kosten: 0\" NL ${ModID}:Verstärken [E] : Erschöpft nicht."
   },
-  "anniv5:Expand": {
+  "${ModID}:Expand": {
     "NAME": "Erweitern",
-    "DESCRIPTION": "anniv5:Modify eine Karte auf der Hand: \"Kostet um 1 mehr [E] .\" und \"Noch einmal spielen, unmodifiziert.\" NL Erschöpfen."
+    "DESCRIPTION": "${ModID}:Modify eine Karte auf der Hand: \"Kostet um 1 mehr [E] .\" und \"Noch einmal spielen, unmodifiziert.\" NL Erschöpfen."
   },
-  "anniv5:Piratify": {
+  "${ModID}:Piratify": {
     "NAME": "Piratisieren",
-    "DESCRIPTION": "Zu Beginn jedes Zuges, anniv5:Modify eine zufällige Karte auf der Hand: \"Erhalte eine *Kanonenkugel\"",
-    "UPGRADE_DESCRIPTION": "Zu Beginn jedes Zuges, anniv5:Modify eine zufällige Karte auf der Hand: \"Erhalte eine *Kanonenkugel+\""
+    "DESCRIPTION": "Zu Beginn jedes Zuges, ${ModID}:Modify eine zufällige Karte auf der Hand: \"Erhalte eine *Kanonenkugel\"",
+    "UPGRADE_DESCRIPTION": "Zu Beginn jedes Zuges, ${ModID}:Modify eine zufällige Karte auf der Hand: \"Erhalte eine *Kanonenkugel+\""
   }
 }

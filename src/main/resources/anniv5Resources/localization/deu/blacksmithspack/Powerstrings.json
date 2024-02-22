@@ -1,5 +1,5 @@
 {
-  "anniv5:BlacksmithsShieldPower": {
+  "${ModID}:BlacksmithsShieldPower": {
     "NAME": "schmiedeschild",
     "DESCRIPTIONS": [
       "Nachdem du eine Karte gespielt hast, erhalte #b",

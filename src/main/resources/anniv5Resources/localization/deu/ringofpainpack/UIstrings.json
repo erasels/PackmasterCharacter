@@ -1,5 +1,5 @@
 {
-  "anniv5:RingOfPainPack": {
+  "${ModID}:RingOfPainPack": {
     "TEXT": [
       "Ring des Schmerzes",
       "Aus dem Ring des Schmerzes steigen sie auf. Entwickle sie und deine Gegner werden zu Staub.",
@@ -7,7 +7,7 @@
       "#yRing #ydes #ySchmerzes original erstellt von #ySimon #yBoxer und #yTwice #yDifferent"
     ]
   },
-  "anniv5:RingOfPainPackHat": {
+  "${ModID}:RingOfPainPackHat": {
     "TEXT": [
       "Schön sich auszuruhen und zu träumen, \n In diesem provisorischen Nest sich zu säumen.",
       "Freund der Eule"

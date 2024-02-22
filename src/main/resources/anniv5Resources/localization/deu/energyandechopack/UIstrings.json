@@ -1,12 +1,12 @@
 {
-  "anniv5:EnergyAndEchoPack": {
+  "${ModID}:EnergyAndEchoPack": {
     "TEXT": [
       "Energie & Echo",
       "Generiere [E] und gib dein Bestes, um sie durch sich selbst vermehrende Karten auszugeben.",
       "Diamantschwert"
     ]
   },
-  "anniv5:EnergyAndEchoPackHat": {
+  "${ModID}:EnergyAndEchoPackHat": {
     "TEXT": [
       "Teils Helm, Teils Hochleistungs-Taschenlampe.",
       "Höhlenforscher-Hut"

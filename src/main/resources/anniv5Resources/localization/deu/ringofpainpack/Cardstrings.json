@@ -1,52 +1,52 @@
 {
-  "anniv5:Hound": {
+  "${ModID}:Hound": {
     "NAME": "Faulender Hund",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL anniv5:Entwickelt sich, wenn du eine *Attacke spielst.",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL ${ModID}:Entwickelt sich, wenn du eine *Attacke spielst.",
     "UPGRADE_DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und füge !M! Schwach hinzu.",
     "EXTENDED_DESCRIPTION": ["Riesiger Faulender Hund"]
   },
-  "anniv5:Slime": {
+  "${ModID}:Slime": {
     "NAME": "Einzelner Schleim",
-    "DESCRIPTION": "Wende !M! Gift an. NL anniv5:Entwickelt sich, wenn du einen Debuff anwendest.",
+    "DESCRIPTION": "Wende !M! Gift an. NL ${ModID}:Entwickelt sich, wenn du einen Debuff anwendest.",
     "UPGRADE_DESCRIPTION": "Wende !M! Gift an. NL Gegner verliert TP in Höhe seines Gifts.",
     "EXTENDED_DESCRIPTION": ["Zwillingsschleim"]
   },
-  "anniv5:Fright": {
+  "${ModID}:Fright": {
     "NAME": "Schleichender Schrecken",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn der Gegner angreifen will, ziehe !M! Karten."
   },
-  "anniv5:Shackles": {
+  "${ModID}:Shackles": {
     "NAME": "Fesseln",
-    "DESCRIPTION": "Behalten. NL Erhalte !B! Block. NL anniv5:Entwickelt sich, wenn du eine Karte spielst, die mindestens !M! kostet.",
+    "DESCRIPTION": "Behalten. NL Erhalte !B! Block. NL ${ModID}:Entwickelt sich, wenn du eine Karte spielst, die mindestens !M! kostet.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !B! Block. NL Der Block wird am Anfang  deines nächsten Zugs nicht enfernt.",
     "EXTENDED_DESCRIPTION": ["Riesige Fesseln"]
   },
-  "anniv5:IceBeast": {
+  "${ModID}:IceBeast": {
     "NAME": "Eisbestie",
     "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Entwickelt sich, wenn du Block erhältst.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Erschaffe !M! Frost.",
     "EXTENDED_DESCRIPTION": ["Uralte Eisbestie"]
   },
-  "anniv5:Loombird": {
+  "${ModID}:Loombird": {
     "NAME": "Verdrehter Webvogel",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! anniv5:Riss an."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! ${ModID}:Riss an."
   },
-  "anniv5:Hollower": {
+  "${ModID}:Hollower": {
     "NAME": "Leerer Gänger",
     "DESCRIPTION": "Erschöpfe eine Karte in deinem Nachziehstapel. NL Wenn du das tust, nimm eine Karte aus deinem Ablagestapel auf deine Hand.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Erschöpfe eine Karte in deinem Nachziehstapel. NL Wenn du das tust, nimm eine Karte aus deinem Ablagestapel auf deine Hand."
   },
-  "anniv5:Owl": {
+  "${ModID}:Owl": {
     "NAME": "Eule",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Verwundbar an. NL  anniv5:Entwickelt sich, wenn du eine Karte erschöpfst.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wende anniv5:Riss an, der der Hälfte des unblockierten Schadens entspricht. NL Wende !M! Verwundbar an.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Verwundbar an. NL  ${ModID}:Entwickelt sich, wenn du eine Karte erschöpfst.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wende ${ModID}:Riss an, der der Hälfte des unblockierten Schadens entspricht. NL Wende !M! Verwundbar an.",
     "EXTENDED_DESCRIPTION": ["Albtraum-Eule"]
   },
-  "anniv5:Vision": {
+  "${ModID}:Vision": {
     "NAME": "Vision",
     "DESCRIPTION": "{@@}Nimm !M! Karte{!M!|1=|@=n} aus deinem Nachziehstapel auf deine Hand. NL Behalte deine Hand in diesem Zug. NL Erschöpfen."
   },
-  "anniv5:Connection": {
+  "${ModID}:Connection": {
     "NAME": "Verbindung",
     "DESCRIPTION": "Immer wenn du eine Karte spielst, verbessere sie und ALLE Kopien davon.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Immer wenn du eine Karte spielst, verbessere sie und ALLE Kopien davon."

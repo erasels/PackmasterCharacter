@@ -1,42 +1,42 @@
 {
-  "anniv5:PenanceShock": {
+  "${ModID}:PenanceShock": {
     "NAME": "Bußschock",
-    "DESCRIPTION": "Verursache !D! Schaden und wende !M! anniv5:Buße an. NL Erschaffe 1 Blitz."
+    "DESCRIPTION": "Verursache !D! Schaden und wende !M! ${ModID}:Buße an. NL Erschaffe 1 Blitz."
   },
-  "anniv5:Condemn": {
+  "${ModID}:Condemn": {
     "NAME": "Verurteilung",
-    "DESCRIPTION": "Wende !M! anniv5:Buße an."
+    "DESCRIPTION": "Wende !M! ${ModID}:Buße an."
   },
-  "anniv5:SearingLight": {
+  "${ModID}:SearingLight": {
     "NAME": "Sengendes Licht",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 anniv5:Licht."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 ${ModID}:Licht."
   },
-  "anniv5:RazorWind": {
+  "${ModID}:RazorWind": {
     "NAME": "Scharfer Wind",
-    "DESCRIPTION": "Erhalte !anniv5:m2! anniv5:Beichte. NL Erhalte !M! Schaden."
+    "DESCRIPTION": "Erhalte !${ModID}:m2! ${ModID}:Beichte. NL Erhalte !M! Schaden."
   },
-  "anniv5:WeightofContrition": {
+  "${ModID}:WeightofContrition": {
     "NAME": "Gewicht der Reue",
-    "DESCRIPTION": "Wende !M! anniv5:Buße an. NL Erhöhe den durch anniv5:Buße verursachten Lebensverlust in diesem Kampf um !anniv5:m2!."
+    "DESCRIPTION": "Wende !M! ${ModID}:Buße an. NL Erhöhe den durch ${ModID}:Buße verursachten Lebensverlust in diesem Kampf um !${ModID}:m2!."
   },
-  "anniv5:ChainsofTruth": {
+  "${ModID}:ChainsofTruth": {
     "NAME": "Ketten der Wahrheit",
-    "DESCRIPTION": "Verursache an ALLEN Gegnern !D! Schaden. NL Wende !M! anniv5:Buße auf ALLE Gegner an."
+    "DESCRIPTION": "Verursache an ALLEN Gegnern !D! Schaden. NL Wende !M! ${ModID}:Buße auf ALLE Gegner an."
   },
-  "anniv5:SacredTrial": {
+  "${ModID}:SacredTrial": {
     "NAME": "Heilige Prüfung",
-    "DESCRIPTION": "Erhalte !M! Schaden. NL Erschaffe !anniv5:m2! Blitz."
+    "DESCRIPTION": "Erhalte !M! Schaden. NL Erschaffe !${ModID}:m2! Blitz."
   },
-  "anniv5:HolyWrath": {
+  "${ModID}:HolyWrath": {
     "NAME": "Heiliger Zorn",
-    "DESCRIPTION": "Erhalte !M! Schaden. NL Nimm diese Karte aus dem Ablagestapel auf deine Hand zurück, wann immer du anniv5:Beichte erhältst."
+    "DESCRIPTION": "Erhalte !M! Schaden. NL Nimm diese Karte aus dem Ablagestapel auf deine Hand zurück, wann immer du ${ModID}:Beichte erhältst."
   },
-  "anniv5:Absolution": {
+  "${ModID}:Absolution": {
     "NAME": "Absolution",
-    "DESCRIPTION": "Wende !M! anniv5:Buße an. NL Immer wenn eine Kreatur in diesem Zug durch anniv5:Buße Schaden erleidet, wende !anniv5:m2! Schwach an."
+    "DESCRIPTION": "Wende !M! ${ModID}:Buße an. NL Immer wenn eine Kreatur in diesem Zug durch ${ModID}:Buße Schaden erleidet, wende !${ModID}:m2! Schwach an."
   },
-  "anniv5:JudgementDay": {
+  "${ModID}:JudgementDay": {
     "NAME": "Tag des Gerichts",
-    "DESCRIPTION": "anniv5:Manifestiere !M! Blitz. NL Immer wenn der passive Effekt eines Blitz Orbs aktiviert wird, erhalte !anniv5:m2! anniv5:Beichte."
+    "DESCRIPTION": "${ModID}:Manifestiere !M! Blitz. NL Immer wenn der passive Effekt eines Blitz Orbs aktiviert wird, erhalte !${ModID}:m2! ${ModID}:Beichte."
   }
 }

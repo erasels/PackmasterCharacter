@@ -1,141 +1,141 @@
 {
-  "anniv5:HuntingStrike": {
+  "${ModID}:HuntingStrike": {
     "NAME": "Jagdstoß",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Fügt Eliten und Bossen doppelten Schaden zu. NL Ziehe 1 Karte."
   },
-  "anniv5:Focus": {
+  "${ModID}:Focus": {
     "NAME": "Spur",
-    "DESCRIPTION": "Erhalte !B! Block. NL Wende !M! anniv5:Gejagt an."
+    "DESCRIPTION": "Erhalte !B! Block. NL Wende !M! ${ModID}:Gejagt an."
   },
-  "anniv5:PerfectDodge": {
+  "${ModID}:PerfectDodge": {
     "NAME": "Perfektes Ausweichen",
     "DESCRIPTION": "Erhalte !B! Block. NL Wenn dein Block genau in diesem Zug gebrochen wird, erhalte !M! Stärke."
   },
-  "anniv5:Greatsword": {
+  "${ModID}:Greatsword": {
     "NAME": "Großschwert",
     "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Wenn du am Ende des Zuges ungenutzte Energie hast, erhöhe für jede den Schaden dieser Karte um 8."
   },
-  "anniv5:HuntingInstincts": {
+  "${ModID}:HuntingInstincts": {
     "NAME": "Jagdinstinkt",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte doppelten Block, wenn du einem Elite oder Boss gegenüberstehst."
   },
-  "anniv5:SkullClub": {
+  "${ModID}:SkullClub": {
     "NAME": "Schädelknüppel",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn das Ziel überlebt, werde anniv5:Wütend! NL Erschöpfen."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn das Ziel überlebt, werde ${ModID}:Wütend! NL Erschöpfen."
   },
-  "anniv5:ShellPauldrons": {
+  "${ModID}:ShellPauldrons": {
     "NAME": "Panzerplatten",
-    "DESCRIPTION": "Erhalte !M! anniv5:Panzerrüstung.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte !M! anniv5:Panzerrüstung."
+    "DESCRIPTION": "Erhalte !M! ${ModID}:Panzerrüstung.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte !M! ${ModID}:Panzerrüstung."
   },
-  "anniv5:CoreBlaster": {
+  "${ModID}:CoreBlaster": {
     "NAME": "Kernblaster",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Füge deinem Nachziehstapel eine *Kern *Blinder Karte hinzu. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Füge deinem Nachziehstapel eine *Kern *Blinder+ Karte hinzu. NL Erschöpfen."
   },
-  "anniv5:CoreBlinder": {
+  "${ModID}:CoreBlinder": {
     "NAME": "Kernblinder",
     "DESCRIPTION": "Wende !M! Schwach und Verwundbar an. NL Füge deinem Nachziehstapel eine *Kern *Blaster Karte hinzu. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Wende !M! Schwach und Verwundbar auf ALLE Gegner an. NL Füge deinem Nachziehstapel eine *Kern *Blaster+ Karte hinzu. NL Erschöpfen."
   },
-  "anniv5:GuardianShield": {
+  "${ModID}:GuardianShield": {
     "NAME": "Wächterschild",
     "DESCRIPTION": "Erhalte am Ende deines Zuges !M! Block. NL Immer wenn du angegriffen wirst, füge !M! Schaden zurück."
   },
-  "anniv5:InfernoDaggers": {
+  "${ModID}:InfernoDaggers": {
     "NAME": "Infernodolche",
     "DESCRIPTION": "Behalten. NL Füge !M! Mal !D! Schaden zu und setze die Kosten dieser Karte auf 6. NL Wenn behalten, reduziere die Kosten dieser Karte um 1."
   },
-  "anniv5:StabManual": {
+  "${ModID}:StabManual": {
     "NAME": "Stechhandbuch",
     "DESCRIPTION": "Erhalte !B! Block. NL Füge deiner Hand !M! *Messer hinzu. Erhöhe die Anzahl der *Messer, die dies für den Rest des Kampfes hinzufügt, um 1."
   },
-  "anniv5:SlimeHammer": {
+  "${ModID}:SlimeHammer": {
     "NAME": "Schleimhammer",
     "DESCRIPTION": "Füge am Ende des nächsten Zuges !D! Schaden zu.",
     "UPGRADE_DESCRIPTION": "Wende 1 Schwach an. NL Füge am Ende des nächsten Zuges !D! Schaden zu."
   },
-  "anniv5:SlaverWhip": {
+  "${ModID}:SlaverWhip": {
     "NAME": "Sklavenpeitsche",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Schwach und Verwundbar an. NL Wenn dies einen Gegner tötet, nimm die Karte zurück auf die Hand und setze die Kosten diesen Zug auf 0."
   },
-  "anniv5:GremlinLance": {
+  "${ModID}:GremlinLance": {
     "NAME": "Gremlinlanze",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn dies einen Gegner tötet, erhalte [E] und ziehe 1 Karte."
   },
-  "anniv5:ChampMail": {
+  "${ModID}:ChampMail": {
     "NAME": "Champion's Plattentarnung",
     "DESCRIPTION": "Erhalte !B! Block. NL Wenn du auf 50% Gesundheit oder weniger bist, entferne alle deine Debuffs und erhalte !M! Stärke. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Wenn du auf 50% Gesundheit oder weniger bist, entferne alle deine Debuffs und erhalte !M! Stärke."
   },
-  "anniv5:CursedBow": {
+  "${ModID}:CursedBow": {
     "NAME": "Verfluchter Bogen",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Schwach und Verwundbar an. NL Erschöpfen."
   },
-  "anniv5:HyperBlaster": {
+  "${ModID}:HyperBlaster": {
     "NAME": "Hyperblaster",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Mische !M! Leere in deinen Nachziehstapel."
   },
-  "anniv5:EphemeralShroud": {
+  "${ModID}:EphemeralShroud": {
     "NAME": "Vergänglicher Schleier",
     "DESCRIPTION": "Erhalte !M! Immateriell. NL Erschöpfen."
   },
-  "anniv5:StoneHelm": {
+  "${ModID}:StoneHelm": {
     "NAME": "Steinhelm",
     "DESCRIPTION": "Erhalte !B! Block. Verringert sich um 2 für jede Karte, die du in diesem Zug gespielt hast. NL Beende deinen Zug."
   },
-  "anniv5:TimepieceTiara": {
+  "${ModID}:TimepieceTiara": {
     "NAME": "Zeitmessertiara",
     "DESCRIPTION": "Erhalte 3 Stärke für alle 12 Karten die du spielst.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte 3 Stärke für alle 12 Karten die du spielst."
   },
-  "anniv5:DonuAmulet": {
+  "${ModID}:DonuAmulet": {
     "NAME": "Donu Amulett",
     "DESCRIPTION": "Erhalte !M! Stärke."
   },
-  "anniv5:DecaAmulet": {
+  "${ModID}:DecaAmulet": {
     "NAME": "Deca Amulett",
-    "DESCRIPTION": "Erhalte !M! anniv5:Plattenrüstung."
+    "DESCRIPTION": "Erhalte !M! ${ModID}:Plattenrüstung."
   },
-  "anniv5:SpireSpear": {
+  "${ModID}:SpireSpear": {
     "NAME": "Spitzenspeer",
     "DESCRIPTION": "Füge !M! Mal !D! Schaden zu."
   },
-  "anniv5:SpireShield": {
+  "${ModID}:SpireShield": {
     "NAME": "Spitzen Schild",
     "DESCRIPTION": "Erhalte !B! Block."
   },
-  "anniv5:CarvingKnife": {
+  "${ModID}:CarvingKnife": {
     "NAME": "Schnitzmesser",
     "DESCRIPTION": "Füge !D! Schaden zu. Wenn dies einen Elite oder Boss tötet, erhalte dessen Waffen- oder Rüstungskarte und entferne diese Karte dauerhaft aus deinem Deck. NL Erschöpfen."
   },
-  "anniv5:AwakenedRitualDagger": {
+  "${ModID}:AwakenedRitualDagger": {
     "NAME": "Erwachter Ritualdolch",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Falls tödlich, heile dich komplett. NL Erschöpfen."
   },
-  "anniv5:HuntingContract": {
+  "${ModID}:HuntingContract": {
     "NAME": "Jagdvertrag",
-    "DESCRIPTION": "Angeboren. NL Wende !M! anniv5:Gejagt an. NL Erschöpfen."
+    "DESCRIPTION": "Angeboren. NL Wende !M! ${ModID}:Gejagt an. NL Erschöpfen."
   },
-  "anniv5:HunterRank": {
+  "${ModID}:HunterRank": {
     "NAME": "Jägerrang",
     "DESCRIPTION": "Erhalte !M! Stärke. Erhöht sich um 1 für jede Elite und Boss-Kampf, die du besiegt hast."
   },
-  "anniv5:TranqBomb": {
+  "${ModID}:TranqBomb": {
     "NAME": "Beruhigungsbombe",
-    "DESCRIPTION": "Füge !D! anniv5:nichttödlichen Schaden zu. NL Das Ziel verliert !M! Stärke. NL Erschöpfen."
+    "DESCRIPTION": "Füge !D! ${ModID}:nichttödlichen Schaden zu. NL Das Ziel verliert !M! Stärke. NL Erschöpfen."
   },
-  "anniv5:Paintball": {
+  "${ModID}:Paintball": {
     "NAME": "Paintball",
-    "DESCRIPTION": "Wende !M! anniv5:Gejagt an. NL Behalte !anniv5:m2! Karte in diesem Zug.",
-    "UPGRADE_DESCRIPTION": "Wende !M! anniv5:Gejagt an. NL Behalte !anniv5:m2! Karten in diesem Zug."
+    "DESCRIPTION": "Wende !M! ${ModID}:Gejagt an. NL Behalte !${ModID}:m2! Karte in diesem Zug.",
+    "UPGRADE_DESCRIPTION": "Wende !M! ${ModID}:Gejagt an. NL Behalte !${ModID}:m2! Karten in diesem Zug."
   },
-  "anniv5:SerpentineDagger": {
+  "${ModID}:SerpentineDagger": {
     "NAME": "Schlangendolch",
     "DESCRIPTION": "Flüchtig. NL Füge !M! mal !D! Schaden zu. NL Füge zwei Kopien dieser Karte deinem Nachziehstapel hinzu. NL Erschöpfen."
   },
-  "anniv5:CorruptedBlade": {
+  "${ModID}:CorruptedBlade": {
     "NAME": "Korrupte Klinge",
-    "DESCRIPTION": "Erhalte 3 *Ritual. NL Erhalte !M! anniv5:Unverwundbar. NL Füge 15 mal !D! Schaden zu."
+    "DESCRIPTION": "Erhalte 3 *Ritual. NL Erhalte !M! ${ModID}:Unverwundbar. NL Füge 15 mal !D! Schaden zu."
   }
 }

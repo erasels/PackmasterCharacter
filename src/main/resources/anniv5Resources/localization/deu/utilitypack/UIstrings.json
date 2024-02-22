@@ -1,5 +1,5 @@
 {
-  "anniv5:UtilityPack": {
+  "${ModID}:UtilityPack": {
     "TEXT": [
       "Nützlichkeit",
       "Karten, die gut mit einer Vielzahl von Mechaniken und Paketen harmonieren.",
@@ -7,12 +7,12 @@
       "Karten kunst von MtG"
     ]
   },
-  "anniv5:ConjurationAction": {
+  "${ModID}:ConjurationAction": {
     "TEXT": [
       "Wähle eine Karte zum Spielen."
     ]
   },
-  "anniv5:UtilityPackHat": {
+  "${ModID}:UtilityPackHat": {
     "TEXT": [
       "Sicherheit geht vor!",
       "Schutzhelm"

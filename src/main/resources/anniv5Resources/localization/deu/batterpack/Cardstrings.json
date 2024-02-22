@@ -1,43 +1,43 @@
 {
-  "anniv5:BatterUp": {
+  "${ModID}:BatterUp": {
     "NAME": "Einschlag",
-    "DESCRIPTION": "Verursache !D! Schaden. NL Lande einen anniv5:kritischen Treffer, wenn das Ziel angreifen will."
+    "DESCRIPTION": "Verursache !D! Schaden. NL Lande einen ${ModID}:kritischen Treffer, wenn das Ziel angreifen will."
   },
-  "anniv5:Homerun": {
+  "${ModID}:Homerun": {
     "NAME": "Homerun",
-    "DESCRIPTION": "Verursache !D! Schaden. NL Lande einen anniv5:kritischen Treffer, wenn du in diesem Zug mindestens 2 Karten gespielt hast."
+    "DESCRIPTION": "Verursache !D! Schaden. NL Lande einen ${ModID}:kritischen Treffer, wenn du in diesem Zug mindestens 2 Karten gespielt hast."
   },
-  "anniv5:WideAngle": {
+  "${ModID}:WideAngle": {
     "NAME": "Weitwinkel",
     "DESCRIPTION": "Entziehe !M! Block. NL Wende 1 Schwach an."
   },
-  "anniv5:WindUp": {
+  "${ModID}:WindUp": {
     "NAME": "Aufziehen",
     "DESCRIPTION": "Wende !M! Verwundbar an. NL Erhalte [E]. NL Erschöpfen."
   },
-  "anniv5:OpenBracket": {
+  "${ModID}:OpenBracket": {
     "NAME": "Auftakt",
     "DESCRIPTION": "Ziehe !M! Karten. NL Du kannst für den Rest des Zuges nur Angriffskarten spielen."
   },
-  "anniv5:Tragedy": {
+  "${ModID}:Tragedy": {
     "NAME": "Tragödie",
-    "DESCRIPTION": "Verursache an ALLEN Gegnern !D! Schaden. NL Erziehle einen anniv5:kritischen Treffer, wenn du 6 oder mehr Karten auf der Hand hast."
+    "DESCRIPTION": "Verursache an ALLEN Gegnern !D! Schaden. NL Erziehle einen ${ModID}:kritischen Treffer, wenn du 6 oder mehr Karten auf der Hand hast."
   },
-  "anniv5:OptimizedBlur": {
+  "${ModID}:OptimizedBlur": {
     "NAME": "Optimierte Unschärfe",
     "DESCRIPTION": "Immer wenn du unblockierten Angriffsschaden verursachst, erhalte !M! Block."
   },
-  "anniv5:HardCaramel": {
+  "${ModID}:HardCaramel": {
     "NAME": "Harter Karamell",
     "DESCRIPTION": "Nach dem Angriff, wende 1 Verwundbar an, wenn das Ziel noch nicht Verwundbar ist.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Nach dem Angriff, wende 1 Verwundbar an, wenn das Ziel noch nicht Verwundbar ist."
   },
-  "anniv5:UltimateHomerun": {
+  "${ModID}:UltimateHomerun": {
     "NAME": "Ultimativer Homerun",
     "DESCRIPTION": "Verursache den höchsten unblockierten Angriffsschaden, den du in diesem Kampf bisher verursacht hast.",
     "EXTENDED_DESCRIPTION": [" NL (Fügt !D! Schaden zu.)", " NL (Fügt !D! Schaden zu. Wow!)"]
   },
-  "anniv5:AvatarBeat": {
+  "${ModID}:AvatarBeat": {
     "NAME": "Avatar-Schlag",
     "DESCRIPTION": "Immer wenn du 10 unblockierten Angriffsschaden verursachst, erhalte !M! Stärke und ziehe 1 Karte. Effektanforderungen erhöhen sich um 5 Angriffschaden."
   }

@@ -1,63 +1,63 @@
 {
-  "anniv5:RuleCancel": {
+  "${ModID}:RuleCancel": {
     "NAME": "Regel ignorieren",
-    "DESCRIPTION": "Gib einer Karte in deiner Hand anniv5:Okkult. NL Erschöpfen.",
-    "UPGRADE_DESCRIPTION": "Gib einer Karte in deiner Hand anniv5:Okkult."
+    "DESCRIPTION": "Gib einer Karte in deiner Hand ${ModID}:Okkult. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Gib einer Karte in deiner Hand ${ModID}:Okkult."
   },
-  "anniv5:Brainwave": {
+  "${ModID}:Brainwave": {
     "NAME": "Gehirnwellen",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Gib einem zufälligen Angriff in deiner Hand anniv5:Okkult."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Gib einem zufälligen Angriff in deiner Hand ${ModID}:Okkult."
   },
-  "anniv5:TelephonePole": {
+  "${ModID}:TelephonePole": {
     "NAME": "Telefonmast",
-    "DESCRIPTION": "anniv5:Verriegelt. NL Füge !D! Schaden zu. NL Wende !M! Verwundbar an.",
+    "DESCRIPTION": "${ModID}:Verriegelt. NL Füge !D! Schaden zu. NL Wende !M! Verwundbar an.",
     "EXTENDED_DESCRIPTION": [
-      "anniv5:Verriegelt. NL Füge !D! Schaden zu. NL Wende !M! Verwundbar an."
+      "${ModID}:Verriegelt. NL Füge !D! Schaden zu. NL Wende !M! Verwundbar an."
     ]
   },
-  "anniv5:Gravity": {
+  "${ModID}:Gravity": {
     "NAME": "Schwerkraft",
-    "DESCRIPTION": "Flüchtig. NL Immer wenn du eine anniv5:Verriegelt oder nicht spielbare Karte ziehst, ziehe 1 Karte.",
-    "UPGRADE_DESCRIPTION": "Immer wenn du eine anniv5:Verriegelt oder nicht spielbare Karte ziehst, ziehe 1 Karte."
+    "DESCRIPTION": "Flüchtig. NL Immer wenn du eine ${ModID}:Verriegelt oder nicht spielbare Karte ziehst, ziehe 1 Karte.",
+    "UPGRADE_DESCRIPTION": "Immer wenn du eine ${ModID}:Verriegelt oder nicht spielbare Karte ziehst, ziehe 1 Karte."
   },
-  "anniv5:PhantomStep": {
+  "${ModID}:PhantomStep": {
     "NAME": "Phantomschritt",
-    "DESCRIPTION": "Erhalte !B! Block. NL Gib einer Karte in deinem Nachziehstapel anniv5:Okkult."
+    "DESCRIPTION": "Erhalte !B! Block. NL Gib einer Karte in deinem Nachziehstapel ${ModID}:Okkult."
   },
-  "anniv5:Repel": {
+  "${ModID}:Repel": {
     "NAME": "Abwehr",
-    "DESCRIPTION": "anniv5:Verriegelt. NL Erhalte !B! Block. NL Füge !D! Schaden zu. NL Wende !M! Schwach an.",
+    "DESCRIPTION": "${ModID}:Verriegelt. NL Erhalte !B! Block. NL Füge !D! Schaden zu. NL Wende !M! Schwach an.",
     "EXTENDED_DESCRIPTION": [
-      "anniv5:Verriegelt. NL Erhalte !B! Block. NL Füge !D! Schaden zu. NL Wende !M! Schwach an."
+      "${ModID}:Verriegelt. NL Erhalte !B! Block. NL Füge !D! Schaden zu. NL Wende !M! Schwach an."
     ]
   },
-  "anniv5:OneIsEnough": {
+  "${ModID}:OneIsEnough": {
     "NAME": "Eine reicht",
     "DESCRIPTION": "{@@}Ziehe !M! Karte{!M!|0=n.|1=.|2=n und wähle eine. NL Du kannst die anderen in diesem Zug nicht spielen.|@=n und wähle eine. NL Du kannst die anderen in diesem Zug nicht spielen.}",
     "EXTENDED_DESCRIPTION": [
       "ist spielbar"
     ]
   },
-  "anniv5:Curse": {
+  "${ModID}:Curse": {
     "NAME": "Fluch",
-    "DESCRIPTION": "anniv5:Verriegelt. NL Der Gegner verliert !M! Stärke.",
-    "UPGRADE_DESCRIPTION": "anniv5:Verriegelt. NL Behalten. NL Der Gegner verliert !M! Stärke.",
+    "DESCRIPTION": "${ModID}:Verriegelt. NL Der Gegner verliert !M! Stärke.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Verriegelt. NL Behalten. NL Der Gegner verliert !M! Stärke.",
     "EXTENDED_DESCRIPTION": [
-      "anniv5:Verriegelt. NL Der Gegner verliert !M! Stärke.",
-      "anniv5:Verriegelt. NL Behalten. NL Der Gegner verliert !M! Stärke."
+      "${ModID}:Verriegelt. NL Der Gegner verliert !M! Stärke.",
+      "${ModID}:Verriegelt. NL Behalten. NL Der Gegner verliert !M! Stärke."
     ]
   },
-  "anniv5:MalleableFire": {
+  "${ModID}:MalleableFire": {
     "NAME": "Formbares Feuer",
     "DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Füge deinem Nachziehstapel ein *Geformtes *Feuer hinzu, das X kostet. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Füge deinem Nachziehstapel ein *Geformtes *Feuer+ hinzu, das X kostet. NL Erschöpfen."
   },
-  "anniv5:MoldedFire": {
+  "${ModID}:MoldedFire": {
     "NAME": "Geformtes Feuer",
-    "DESCRIPTION": "anniv5:Okkult. NL Füge !D! Schaden zu. Erhöhe den Schaden für jede [E], die die Kartenkosten übersteigt."
+    "DESCRIPTION": "${ModID}:Okkult. NL Füge !D! Schaden zu. Erhöhe den Schaden für jede [E], die die Kartenkosten übersteigt."
   },
-  "anniv5:DeepDream": {
+  "${ModID}:DeepDream": {
     "NAME": "Tiefer Traum",
-    "DESCRIPTION": "Immer wenn du in diesem Zug eine Karte spielst, gib einer zufällige Karte in deiner Hand anniv5:Okkult. NL Erschöpfen."
+    "DESCRIPTION": "Immer wenn du in diesem Zug eine Karte spielst, gib einer zufällige Karte in deiner Hand ${ModID}:Okkult. NL Erschöpfen."
   }
 }

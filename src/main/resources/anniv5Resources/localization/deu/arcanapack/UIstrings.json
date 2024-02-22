@@ -1,12 +1,12 @@
 {
-  "anniv5:ArcanaPack": {
+  "${ModID}:ArcanaPack": {
     "TEXT": [
       "Arkana",
       "Nutze die einzigartigen und vielfältigen Bedeutungen der großen Arkana.",
       "Alchyr"
     ]
   },
-  "anniv5:ArcanaPackHat": {
+  "${ModID}:ArcanaPackHat": {
     "TEXT": [
       "Groß, hell und Bonbonrot.",
       "Der Stern"

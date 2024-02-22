@@ -1,5 +1,5 @@
 {
-  "anniv5:Penance": {
+  "${ModID}:Penance": {
     "NAME": "buße",
     "DESCRIPTIONS": ["Wenn diese Kreatur #b",
       " #yBuße erhält, verliert sie #b",
@@ -7,19 +7,19 @@
       "."
     ]
   },
-  "anniv5:confession": {
+  "${ModID}:confession": {
     "NAME": "beichte",
     "DESCRIPTIONS": ["Wann immer du Schaden nimmst, verursache #b",
       " Schaden an ALLEN Gegnern. Wird halbiert wenn außerhalb des Zuges aktiviert."
     ]
   },
-  "anniv5:JudgementDay": {
+  "${ModID}:JudgementDay": {
     "NAME": "tag des Gerichts",
     "DESCRIPTIONS": ["Wann immer sich eine #yBlitz Orb #ypassive aktiviert erhalte #b",
       " #yBeichte."
     ]
   },
-  "anniv5:Absolution": {
+  "${ModID}:Absolution": {
     "NAME": "absolution",
     "DESCRIPTIONS": ["Wann immer ein Gegner LP durch #yBeichte verliert, füge #b",
       " #ySchwach hinzu."

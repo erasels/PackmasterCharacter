@@ -1,44 +1,44 @@
 {
-  "anniv5:Aqueducts": {
+  "${ModID}:Aqueducts": {
     "NAME": "Aquädukte",
     "DESCRIPTION": "Immer wenn du eine zusätzliche Karte ziehst, füge ALLEN Gegnern !M! Schaden zu."
   },
-  "anniv5:Cascade": {
+  "${ModID}:Cascade": {
     "NAME": "Kaskade",
-    "DESCRIPTION": "anniv5:Fluss. Für jede auf diese Weise abgeworfene Karte, erhalte !B! Block."
+    "DESCRIPTION": "${ModID}:Fluss. Für jede auf diese Weise abgeworfene Karte, erhalte !B! Block."
   },
-  "anniv5:Hail": {
+  "${ModID}:Hail": {
     "NAME": "Hagel",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft zusätzlich !M! Mal, für jede dieser Karten, die in diesem Kampf abgelegt wurden.",
     "EXTENDED_DESCRIPTION": [" NL (Trifft !M! Mal)"]
   },
-  "anniv5:HighTide": {
+  "${ModID}:HighTide": {
     "NAME": "Flut",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du anniv5:Fluss anwendest, kehre diese Karte vom Abwurfstapel auf deine Hand zurück."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du ${ModID}:Fluss anwendest, kehre diese Karte vom Abwurfstapel auf deine Hand zurück."
   },
-  "anniv5:Hydraulics": {
+  "${ModID}:Hydraulics": {
     "NAME": "Hydraulik",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Fluss."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Fluss."
   },
-  "anniv5:IcyFloe": {
+  "${ModID}:IcyFloe": {
     "NAME": "Eisfluss",
-    "DESCRIPTION": "anniv5:Fluss. NL Nächsten Zug, NL erhalte [E] [E].",
-    "UPGRADE_DESCRIPTION": "anniv5:Fluss. NL Nächsten Zug, NL erhalte [E] [E] [E]."
+    "DESCRIPTION": "${ModID}:Fluss. NL Nächsten Zug, NL erhalte [E] [E].",
+    "UPGRADE_DESCRIPTION": "${ModID}:Fluss. NL Nächsten Zug, NL erhalte [E] [E] [E]."
   },
-  "anniv5:Pneumatics": {
+  "${ModID}:Pneumatics": {
     "NAME": "Pneumatik",
-    "DESCRIPTION": "anniv5:Fluss. NL Zu Beginn deines nächsten Zugs, anniv5:Fluss. NL Erschöpfen.",
-    "UPGRADE_DESCRIPTION": "anniv5:Fluss. NL Zu Beginn deines nächsten Zugs, anniv5:Fluss."
+    "DESCRIPTION": "${ModID}:Fluss. NL Zu Beginn deines nächsten Zugs, ${ModID}:Fluss. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Fluss. NL Zu Beginn deines nächsten Zugs, ${ModID}:Fluss."
   },
-  "anniv5:ReleaseValve": {
+  "${ModID}:ReleaseValve": {
     "NAME": "Entlüftungsventil",
-    "DESCRIPTION": "Immer wenn du anniv5:Fluss anwendest und eine Karte abwirfst, erleidet das Ziel !M! Schaden. NL Erschöpfen."
+    "DESCRIPTION": "Immer wenn du ${ModID}:Fluss anwendest und eine Karte abwirfst, erleidet das Ziel !M! Schaden. NL Erschöpfen."
   },
-  "anniv5:Reservoir": {
+  "${ModID}:Reservoir": {
     "NAME": "Wasserreservoir",
-    "DESCRIPTION": "anniv5:Fluss. Ziehe Karten in Höhe der Anzahl der auf diese Weise abgeworfenen Karten. NL Erschöpfen."
+    "DESCRIPTION": "${ModID}:Fluss. Ziehe Karten in Höhe der Anzahl der auf diese Weise abgeworfenen Karten. NL Erschöpfen."
   },
-  "anniv5:StormFront": {
+  "${ModID}:StormFront": {
     "NAME": "Sturmfront",
     "DESCRIPTION": "Behalten. Füge !D! Schaden zu. NL Beim Abwerfen, nimm diese Karte sofort auf deine Hand und erhöhe den Schaden um !M!."
   }

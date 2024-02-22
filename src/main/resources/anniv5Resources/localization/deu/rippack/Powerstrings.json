@@ -1,5 +1,5 @@
 {
-  "anniv5:DividedFuryPower": {
+  "${ModID}:DividedFuryPower": {
     "NAME": "Geteilte Wut",
     "DESCRIPTIONS": [
       "Zu Beginn deines Zuges gib #b",

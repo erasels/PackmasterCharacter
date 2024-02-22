@@ -1,5 +1,5 @@
 {
-  "anniv5:ToxicDipPower": {
+  "${ModID}:ToxicDipPower": {
     "NAME": "Giftpaste",
     "DESCRIPTIONS": [
       "Immer wenn in diesem Zug ein Angriff ungeblockten Schaden verursacht, wende #b",

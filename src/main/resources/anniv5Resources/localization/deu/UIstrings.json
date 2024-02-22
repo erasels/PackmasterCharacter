@@ -1,11 +1,11 @@
 {
-  "anniv5:ModalChoice": {
+  "${ModID}:ModalChoice": {
     "TEXT": [
       "Wähle ein Pack aus.",
       "Auswählen."
     ]
   },
-  "anniv5:PackPreviewCard": {
+  "${ModID}:PackPreviewCard": {
     "TEXT": [
       "Künstler: ",
       "Pack",
@@ -13,90 +13,90 @@
       "Hut gesperrt"
     ]
   },
-  "anniv5:AtGameStart": {
+  "${ModID}:AtGameStart": {
     "TEXT": [
       "Dies sind die verfügbaren Packs für dieses Lauf. Klicke auf Bestätigen, um fortzufahren."
     ]
   },
-  "anniv5:IroncladPack": {
+  "${ModID}:IroncladPack": {
     "TEXT": [
       "Der Eiserne - Ideale",
       "Eine Sammlung zuverlässiger Eisernen Karten, inklusive Zugang zu Stärke.",
       "MegaCrit"
     ]
   },
-  "anniv5:IroncladPackHat": {
+  "${ModID}:IroncladPackHat": {
     "TEXT": [
       "Eine harte Maske für einen harten Kerl.",
       "Eisenhelm"
     ]
   },
-  "anniv5:SilentPack": {
+  "${ModID}:SilentPack": {
     "TEXT": [
       "Die Stille - Showdown",
       "Eine Sammlung zuverlässiger Stille Karten, inklusive Zugang zu Messer und Abwurf.",
       "MegaCrit"
     ]
   },
-  "anniv5:SilentPackHat": {
+  "${ModID}:SilentPackHat": {
     "TEXT": [
       "Ein makabres Andenken, das jetzt dein Haupt schmückt.",
       " Die Stille Trophäe"
     ]
   },
-  "anniv5:DefectPack": {
+  "${ModID}:DefectPack": {
     "TEXT": [
       "Defekte Träume",
       "Eine Sammlung von Defekt Karten, die sich auf Orb Erschaffung konzentriert.",
       "MegaCrit"
     ]
   },
-  "anniv5:DefectPackHat": {
+  "${ModID}:DefectPackHat": {
     "TEXT": [
       "Du verspürst einen seltsamen Drang, Gleichgewicht herzustellen.",
       "Defekt-Schnittstelle"
     ]
   },
-  "anniv5:AllForOnePack": {
+  "${ModID}:AllForOnePack": {
     "TEXT": [
       "Alle für einen",
       "Eine Sammlung von Basis-Spielkarten mit Schwerpunkt auf 0-Kosten und Ziehen.",
       "MegaCrit"
     ]
   },
-  "anniv5:AllForOnePackHat": {
+  "${ModID}:AllForOnePackHat": {
     "TEXT": [
       "Gemeinsam stehen wir stark, und getrennt fallen wir.",
       "Musketeers Kappe"
     ]
   },
-  "anniv5:WatcherPack": {
+  "${ModID}:WatcherPack": {
     "TEXT": [
       "Wille der Seherin",
       "Eine Sammlung zuverlässiger Seherin Karten (kein Zugang zu Haltungen).",
       "MegaCrit"
     ]
   },
-  "anniv5:WatcherPackHat": {
+  "${ModID}:WatcherPackHat": {
     "TEXT": [
       "Nachdenkliches Gesichtsaccessoire & Zubehör.",
       "Seherin Schleier"
     ]
   },
-  "anniv5:BulwarkPack": {
+  "${ModID}:BulwarkPack": {
     "TEXT": [
       "Bollwerk",
       "Die größten Verteidigungswerkzeuge des Spire, erstmals an einem Ort vereint.",
       "modargo"
     ]
   },
-  "anniv5:BulwarkPackHat": {
+  "${ModID}:BulwarkPackHat": {
     "TEXT": [
       "Umfassender Schutz.",
       "Die Kopfbefestigung"
     ]
   },
-  "anniv5:PackMainMenuUI": {
+  "${ModID}:PackMainMenuUI": {
     "TEXT": [
       "Benutzerdefinierten Draft-Modus",
       "Aktivieren Sie dies, um zu wählen, wie Ihre Packs bestimmt werden.",
@@ -108,46 +108,46 @@
       "Keiner"
     ]
   },
-  "anniv5:PackSetup": {
+  "${ModID}:PackSetup": {
     "TEXT": [
       "Draften Sie ein Pack!",
       "Aktuelle Packs",
       "Packbewertungen anzeigen"
     ]
   },
-  "anniv5:CurrentRunCardsTopPanelItem": {
+  "${ModID}:CurrentRunCardsTopPanelItem": {
     "TEXT": [
       "Packs",
       "{0} NL NL Klicken Sie hier, um den Kartenpool für diesen Lauf anzuzeigen.",
       "Karten verfügbar in diesem Lauf"
     ]
   },
-  "anniv5:CreditsRenderStrings": {
+  "${ModID}:CreditsRenderStrings": {
     "TEXT": [
       "Zusätzliche Credits"
     ]
   },
-  "anniv5:PackFilterMenu": {
+  "${ModID}:PackFilterMenu": {
     "TEXT": [
       "Pack aktivieren"
     ]
   },
-  "anniv5:Compendium": {
+  "${ModID}:Compendium": {
     "TEXT": [
       "Nach Packs"
     ]
   },
-  "anniv5:RunHistory": {
+  "${ModID}:RunHistory": {
     "TEXT": [
       "Packs:"
     ]
   },
-  "anniv5:CardTypeStrings": {
+  "${ModID}:CardTypeStrings": {
     "TEXT": [
       "Chance"
     ]
   },
-  "anniv5:HatMenu": {
+  "${ModID}:HatMenu": {
     "TEXT": [
       "Basis Hut",
       "(L)",
@@ -163,7 +163,7 @@
       "Regenbogenhut"
     ]
   },
-  "anniv5:ConfigMenuText": {
+  "${ModID}:ConfigMenuText": {
     "TEXT": [
       "Der Packmeister",
       "StS Modding Community",
@@ -174,19 +174,19 @@
       "Erlauben Sie das mehrmalige Auswählen von Keiner im benutzerdefinierten Draft-Modus (kann bei einigen Packauswahlen zu Abstürzen/Freezes führen)"
     ]
   },
-  "anniv5:PMBoosterBoxCardReward": {
+  "${ModID}:PMBoosterBoxCardReward": {
     "TEXT": [
       "Fügen Sie eine Booster Box Karte hinzu",
       "Wählen Sie eine Booster Box Karte aus"
     ]
   },
-  "anniv5:SingleCardReward": {
+  "${ModID}:SingleCardReward": {
     "TEXT": [
       "[Karte] ",
       "Tipp: Rechtsklick für detaillierte Kartenansicht!"
     ]
   },
-  "anniv5:PackSummaryDisplay": {
+  "${ModID}:PackSummaryDisplay": {
     "TEXT": [
       "Packzusammenfassung",
       "Angriff: {0}",
@@ -211,7 +211,7 @@
       "Powers": "Mächte"
     }
   },
-  "anniv5:MerchantSpeech": {
+  "${ModID}:MerchantSpeech": {
     "TEXT": [
       "@Schicker Hut@",
       "Bessere Angebote hier als auf dem Schwarzmarkt",
@@ -219,20 +219,20 @@
       "Dich habe ich in letzter Zeit oft gesehen"
     ]
   },
-  "anniv5:MerchantEndingSpeech": {
+  "${ModID}:MerchantEndingSpeech": {
     "TEXT": [
       "Was hast du darin eigentlich?",
       "Eines Tages werden sie das letzte Pack machen."
     ]
   },
-  "anniv5:MainMenuExpansionPacksButton": {
+  "${ModID}:MainMenuExpansionPacksButton": {
     "TEXT": [
       "Zusätzliche Packs aktivieren!",
       "Dir fehlen einige Packs, #gklicke #ghier #gum #gsie #gzu #gaktivieren. Mehr Vielfalt, aber längere initiale Ladezeit. NL #yErfordert #yNeustart!",
       "Neustart erforderlich!"
     ]
   },
-  "anniv5:MainMenuFTUE": {
+  "${ModID}:MainMenuFTUE": {
     "TEXT": [
       "Packmaster-Erweiterungspacks!",
       "Hey, aufgrund von Speicherproblemen haben wir Packmaster modular gestaltet. Daher müssen Sie \"Der Packmeister: Erweiterungspacks\" aktivieren, um alle Packs zu erhalten. NL Aktivieren Sie es selbst oder verwenden Sie die praktische Schaltfläche auf der rechten Seite des Hauptmenüs.",

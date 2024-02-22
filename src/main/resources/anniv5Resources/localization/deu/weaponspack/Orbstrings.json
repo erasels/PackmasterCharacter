@@ -1,5 +1,5 @@
 {
-  "anniv5:AbstractWeaponOrb": {
+  "${ModID}:AbstractWeaponOrb": {
     "NAME": "Waffe",
     "DESCRIPTION": [
       " NL ",
@@ -8,50 +8,50 @@
       "Haltbarkeit: #b"
     ]
   },
-  "anniv5:CutlassOrb": {
+  "${ModID}:CutlassOrb": {
     "NAME": "Säbel",
     "DESCRIPTION": [
       ""
     ]
   },
-  "anniv5:PowderKegOrb": {
+  "${ModID}:PowderKegOrb": {
     "NAME": "Pulverfass",
     "DESCRIPTION": [
       "Wenn zerstört, füge ALLEN Gegnern #b",
       " Schaden zu."
     ]
   },
-  "anniv5:SwordOfWisdomOrb": {
+  "${ModID}:SwordOfWisdomOrb": {
     "NAME": "Schwert der Weisheit",
     "DESCRIPTION": [
       "Immer wenn du mit dieser Waffe angreifst, ziehe 1 Karte."
     ]
   },
-  "anniv5:SwordOfChaosOrb": {
+  "${ModID}:SwordOfChaosOrb": {
     "NAME": "Schwert des Chaos",
     "DESCRIPTION": [
       "Immer wenn du mit dieser Waffe angreifst, füge deiner Hand eine zufällige Karte hinzu."
     ]
   },
-  "anniv5:CatONineTailsOrb": {
+  "${ModID}:CatONineTailsOrb": {
     "NAME": "Peitsche mit neun Schwänzen",
     "DESCRIPTION": [
       "Nachdem du mit dieser Waffe angegriffen hast, erhöhe ihren Angriff um #b2."
     ]
   },
-  "anniv5:ForgingHammerOrb": {
+  "${ModID}:ForgingHammerOrb": {
     "NAME": "Schmiedehammer",
     "DESCRIPTION": [
       "Nachdem du mit dieser Waffe angegriffen hast, verbessere eine zufällige Karte in deiner Hand für den Rest des Kampfes."
     ]
   },
-  "anniv5:SwordOfFireOrb": {
+  "${ModID}:SwordOfFireOrb": {
     "NAME": "Schwert des Feuers",
     "DESCRIPTION": [
       "Immer wenn du mit dieser Waffe angreifst, füge ALLEN Gegnern #b4 Schaden zu."
     ]
   },
-  "anniv5:ReapersScytheOrb": {
+  "${ModID}:ReapersScytheOrb": {
     "NAME": "Todbringers Sense",
     "DESCRIPTION": [
       "Immer wenn du mit dieser Waffe angreifst, trage pro Treffer #b1 #yTodbringer auf ein Ziel auf."

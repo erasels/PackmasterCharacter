@@ -1,5 +1,5 @@
 {
-  "anniv5:BlueSkull": {
+  "${ModID}:BlueSkull": {
     "NAME": "Blauer Schädel",
     "FLAVOR": "Ein kleiner Schädel, seltsam blau ohne Spuren von Farbstoff oder Farbe.",
     "DESCRIPTIONS": [

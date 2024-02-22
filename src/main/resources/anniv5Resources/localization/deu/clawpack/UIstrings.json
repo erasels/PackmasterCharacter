@@ -1,18 +1,18 @@
 {
-  "anniv5:AddClawTagAndMakeClawModifier": {
+  "${ModID}:AddClawTagAndMakeClawModifier": {
     "TEXT": [
       " NL Erhalte eine *Geist *Kralle.",
       " Claw"
     ]
   },
-  "anniv5:ClawPack": {
+  "${ModID}:ClawPack": {
     "TEXT": [
       "Krallen Paket",
       "Das ultimative KS Stretch Goal - Eine Packung Krallen.",
       "MichaelMayhem"
     ]
   },
-  "anniv5:ClawPackHat": {
+  "${ModID}:ClawPackHat": {
     "TEXT": [
       "Edel! Scharf! Unangenehm!",
       "Der Clan"

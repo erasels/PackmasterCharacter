@@ -1,5 +1,5 @@
 {
-  "anniv5:SwarmOfBees": {
+  "${ModID}:SwarmOfBees": {
     "NAME": "Bienen",
     "DESCRIPTION": [
       "#yPassive: Verursache #b",
@@ -7,13 +7,13 @@
       " Schaden an ALLEN Gegnern."
     ]
   },
-  "anniv5:Louse": {
+  "${ModID}:Louse": {
     "NAME": "Regenbogenlaus",
     "DESCRIPTION": [
       "#yPassive: Ziehe zu Beginn deines Zugs eine Karte. #yEntladen: Ziehe #b2 Karten."
     ]
   },
-  "anniv5:Panda": {
+  "${ModID}:Panda": {
     "NAME": "Panda",
     "DESCRIPTION": [
       "#yPassive: Am Ende deines Zugs, verursache #b",
@@ -21,7 +21,7 @@
       " Schaden an einem zufälligen Gegner."
     ]
   },
-  "anniv5:Porcupine": {
+  "${ModID}:Porcupine": {
     "NAME": "Stachelschwein",
     "DESCRIPTION": [
       "#yPassive: Zu Beginn deines Zuges füge einen #b",
@@ -29,14 +29,14 @@
       " #yDornen."
     ]
   },
-  "anniv5:Wolf": {
+  "${ModID}:Wolf": {
     "NAME": "Wolf",
     "DESCRIPTION": [
       "#yPassive: Am Ende deines Zugs, verursache #b",
       " Schaden am Gegner mit den wenigsten TP. NL Der Schaden erhöht sich mit der Anzahl der erschaffenen Orbs. NL #yEntladen: Erhalte einen Orb Slot."
     ]
   },
-  "anniv5:Leprechaun": {
+  "${ModID}:Leprechaun": {
     "NAME": "Kobold",
     "DESCRIPTION": [
       "#yPassive: Zu beginn deines Zugs würfle #b",
@@ -44,7 +44,7 @@
       " #yPech auf ALLE Gegner an."
     ]
   },
-  "anniv5:FireSpirit": {
+  "${ModID}:FireSpirit": {
     "NAME": "Feuergeist",
     "DESCRIPTION": [
       "#yPassive: Am Ende deines Zuges verursache #b",

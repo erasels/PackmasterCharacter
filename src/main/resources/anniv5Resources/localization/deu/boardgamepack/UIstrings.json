@@ -1,17 +1,17 @@
 {
-  "anniv5:BoardGamePack": {
+  "${ModID}:BoardGamePack": {
     "TEXT": [
       "Brettspiele",
-      "Besiege Gegner mit der Kraft von anniv5:Würfel!",
+      "Besiege Gegner mit der Kraft von ${ModID}:Würfel!",
       "Laugic"
     ]
   },
-  "anniv5:BoardGameChance": {
+  "${ModID}:BoardGameChance": {
     "TEXT": [
       "Chance"
     ]
   },
-  "anniv5:BoardGamePackHat": {
+  "${ModID}:BoardGamePackHat": {
     "TEXT": [
       "Dein vermarktbarster Hut.",
       "Brettspiel-Hut"

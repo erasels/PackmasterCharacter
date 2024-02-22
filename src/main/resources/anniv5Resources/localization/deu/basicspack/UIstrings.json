@@ -1,19 +1,19 @@
 {
-  "anniv5:DuplicateModifier": {
+  "${ModID}:DuplicateModifier": {
     "TEXT": [
       " NL Spiele diese ",
       " mal.",
       " NL Spiele diese X-mal."
     ]
   },
-  "anniv5:BasicsPack": {
+  "${ModID}:BasicsPack": {
     "TEXT": [
       "Grundlagen",
-      "Ein Paket mit gewöhnlichen anniv5:Basis Karten.",
+      "Ein Paket mit gewöhnlichen ${ModID}:Basis Karten.",
       "Jack Renoson"
     ]
   },
-  "anniv5:BasicsPackHat": {
+  "${ModID}:BasicsPackHat": {
     "TEXT": [
       "Ein einfacher Hut für einen unkomplizierten Abenteurer.",
       "Grundlegendes Fedora"

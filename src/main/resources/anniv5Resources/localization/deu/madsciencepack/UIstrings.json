@@ -1,12 +1,12 @@
 {
-  "anniv5:MadSciencePack": {
+  "${ModID}:MadSciencePack": {
     "TEXT": [
       "Verrückte Wissenschaft!",
       "Modifiziere deine Karten mit Bonus Effekten, werde unschlagbar!",
       "MichaelMayhem"
     ]
   },
-  "anniv5:MadScienceModifiers": {
+  "${ModID}:MadScienceModifiers": {
     "TEXT": [
       " NL Erschaffe ",
       " Frost.",
@@ -19,12 +19,12 @@
       " NL Ziehe 1 Karte."
     ]
   },
-  "anniv5:AddModifierUI": {
+  "${ModID}:AddModifierUI": {
     "TEXT": [
       "Wähle eine Karte zum Modifizieren."
     ]
   },
-  "anniv5:MadSciencePackHat": {
+  "${ModID}:MadSciencePackHat": {
     "TEXT": [
       "Du wirst es ihnen zeigen. Du wirst es ihnen allen zeigen!!",
       "Völlig verrückte Wissenschaft "

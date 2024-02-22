@@ -1,33 +1,33 @@
 {
-  "anniv5:PsychicPack": {
+  "${ModID}:PsychicPack": {
     "TEXT": [
       "Hellseher",
       "Schaffe das Unmögliche mit Kräften, die über die Vernunft hinausgehen.",
       "Alchyr, (Gk) Erasels"
     ]
   },
-  "anniv5:Occult": {
+  "${ModID}:Occult": {
     "TEXT": [
-      "anniv5:Okkult. NL ",
-      "NL anniv5:Okkult. NL"
+      "${ModID}:Okkult. NL ",
+      "NL ${ModID}:Okkult. NL"
     ]
   },
-  "anniv5:RuleCancel": {
+  "${ModID}:RuleCancel": {
     "TEXT": [
       "Erzeuge Okkult"
     ]
   },
-  "anniv5:OccultInDrawPile": {
+  "${ModID}:OccultInDrawPile": {
     "TEXT": [
       "Wähle eine Karte, um sie okkult zu machen."
     ]
   },
-  "anniv5:UnplayableTurnModifier": {
+  "${ModID}:UnplayableTurnModifier": {
     "TEXT": [
       "Kann diesen Zug nicht gespielt werden. NL "
     ]
   },
-  "anniv5:PsychicPackHat": {
+  "${ModID}:PsychicPackHat": {
     "TEXT": [
       "Macht geht von dir aus.",
       "Runenhaft"

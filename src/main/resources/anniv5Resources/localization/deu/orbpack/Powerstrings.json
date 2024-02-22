@@ -1,5 +1,5 @@
 {
-  "anniv5:ThunderstruckPower": {
+  "${ModID}:ThunderstruckPower": {
     "NAME": "Donnerschlag",
     "DESCRIPTIONS": [
       "Wann immer du eine Karte spielst, die \"Strike\" enthält, #yerschaffe #b",

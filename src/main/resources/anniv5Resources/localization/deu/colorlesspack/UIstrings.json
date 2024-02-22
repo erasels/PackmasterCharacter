@@ -1,12 +1,12 @@
 {
-  "anniv5:ColorlessPack": {
+  "${ModID}:ColorlessPack": {
     "TEXT": [
       "Vexation",
       "Nutze die farblosen Karten aus dem Basisspiel auf kreative Weise! NL Entdecke Geister und Schatten! NL Vex's letztes Pack!?",
       "Vex"
     ]
   },
-  "anniv5:ColorlessPackHat": {
+  "${ModID}:ColorlessPackHat": {
     "TEXT": [
       "Grüner Hut, getragen von der Heldenlegende!",
       "Die Phrygische"

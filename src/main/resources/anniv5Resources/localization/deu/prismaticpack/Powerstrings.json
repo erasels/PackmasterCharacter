@@ -1,9 +1,9 @@
 {
-  "anniv5:QuirionDryad": {
+  "${ModID}:QuirionDryad": {
     "NAME": "Quirion Dryade",
     "DESCRIPTIONS": ["Das erste Mal wenn du in diesem Kampf alle verschiedenen Karten Farben gespielt hast, erhalte #b{0} Stärke and #b{0} Geschicklichkeit. NL (Farben gespielt: {1}.)", "Keine", "Rot", "Grün", "Blau", "Lila", "Farblos", "Fluch", "Packmaster"]
   },
-  "anniv5:FlawlessPrism": {
+  "${ModID}:FlawlessPrism": {
     "NAME": "Makelloses Prisma",
     "DESCRIPTIONS": ["Zu Beginn deines Zuges, nimm #b{0} zufällig #yunterschiedliche #yfarbige Macht Karte auf deine Hand.", "Zu Beginn deines Zuges, nimm #b{0} zufällig #yunterschiedliche #yfarbige Macht Karten auf deine Hand."]
   }

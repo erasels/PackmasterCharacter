@@ -1,5 +1,5 @@
 {
-  "anniv5:DimensionCore": {
+  "${ModID}:DimensionCore": {
     "NAME": "Kern der Dimension",
     "FLAVOR": "Eine Kristallkugel mit unendlichen Möglichkeiten. Sie ist gesprungen.",
     "DESCRIPTIONS": [

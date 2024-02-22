@@ -1,40 +1,40 @@
 {
-  "anniv5:HuntersMark": {
+  "${ModID}:HuntersMark": {
     "NAME": "Jagd Markierung",
     "DESCRIPTIONS": [
       "Erleidet #b",
       "% mehr Schaden von Angriffen."
     ]
   },
-  "anniv5:NotHunted": {
+  "${ModID}:NotHunted": {
     "NAME": "Nicht gejagt",
     "DESCRIPTIONS": [
       "Erleidet #b",
       "% weniger Schaden durch Angriffe. Falls das #ygejagte Ziel stirbt, entferne dies."
     ]
   },
-  "anniv5:PerfectGuardPower": {
+  "${ModID}:PerfectGuardPower": {
     "NAME": "Perfekter Wächter",
     "DESCRIPTIONS": [
       "Falls dein #yBlock genau diese Runde durchbrochen wird, erhalte #b",
       " Stärke."
     ]
   },
-  "anniv5:EnragePowerPlayer": {
+  "${ModID}:EnragePowerPlayer": {
     "NAME": "Wütend",
     "DESCRIPTIONS": [
       "Wenn kein Gegner die Absicht hat dich anzugreifen erhalte #b",
       " #yStärke am Ende deines Zugs."
     ]
   },
-  "anniv5:GlassArmorPower": {
+  "${ModID}:GlassArmorPower": {
     "NAME": "Glasrüstung",
     "DESCRIPTIONS": [
       "Erhalte #b",
       " #yBlock am Ende deines Zugs. Wenn du ungeblockten Schaden erleidest, verliere diese Macht."
     ]
   },
-  "anniv5:DelayedDamagePower": {
+  "${ModID}:DelayedDamagePower": {
     "NAME": "Verzögerter Schaden",
     "DESCRIPTIONS": [
       "Verursacht #b",
@@ -42,7 +42,7 @@
       " Zügen."
     ]
   },
-  "anniv5:TimePiecePower": {
+  "${ModID}:TimePiecePower": {
     "NAME": "Zeitmesser Macht",
     "DESCRIPTIONS": [
       "Erhalte #b",

@@ -1,48 +1,48 @@
 {
-  "anniv5:Flare": {
+  "${ModID}:Flare": {
     "NAME": "Feuerblitz",
-    "DESCRIPTION": "Fügt !D! Schaden zu. NL Verursacht !M! anniv5:Entzünden."
+    "DESCRIPTION": "Fügt !D! Schaden zu. NL Verursacht !M! ${ModID}:Entzünden."
   },
-  "anniv5:FlameBlast": {
+  "${ModID}:FlameBlast": {
     "NAME": "Flammenstoß",
-    "DESCRIPTION": "Verursacht !M! anniv5:Entzünden. NL Wenn der Gegner verwundbar ist, verursache erneut !M! anniv5:Entzünden. NL Verursacht !anniv5:m2! Verwundbar."
+    "DESCRIPTION": "Verursacht !M! ${ModID}:Entzünden. NL Wenn der Gegner verwundbar ist, verursache erneut !M! ${ModID}:Entzünden. NL Verursacht !${ModID}:m2! Verwundbar."
   },
-  "anniv5:IceWall": {
+  "${ModID}:IceWall": {
     "NAME": "Eiswand",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte nächste Runde erneut !B! Block. NL Füge deinem Nachziehstapel eine Benommenheit hinzu."
   },
-  "anniv5:FreezeAndBurn": {
+  "${ModID}:FreezeAndBurn": {
     "NAME": "Einfrieren und Brennen",
     "DESCRIPTION": "Alle Gegner verlieren in dieser Runde !M! Stärke. NL Verursache nächsten Zug !D! Schaden an ALLEN Gegnern. NL Erschöpfen."
   },
-  "anniv5:Frostfire": {
+  "${ModID}:Frostfire": {
     "NAME": "Frostfeuer",
-    "DESCRIPTION": "Verursacht !M! anniv5:Entzünden und !anniv5:m2! Schwach an ALLEN Gegnern. NL Erschöpfen."
+    "DESCRIPTION": "Verursacht !M! ${ModID}:Entzünden und !${ModID}:m2! Schwach an ALLEN Gegnern. NL Erschöpfen."
   },
-  "anniv5:FieryMantle": {
+  "${ModID}:FieryMantle": {
     "NAME": "Feuerumhang",
-    "DESCRIPTION": "Erhalte !B! Block. NL Wenn du in diesem Zug angegriffen wirst, verursache !M! anniv5:Entzünden."
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn du in diesem Zug angegriffen wirst, verursache !M! ${ModID}:Entzünden."
   },
-  "anniv5:SnowMelt": {
+  "${ModID}:SnowMelt": {
     "NAME": "Schneeschmelze",
     "DESCRIPTION": "Flüchtig. NL Ziehe !M! Karten. NL Nächstes Mal, ziehe zusätzlich !M! Karten.",
     "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Nächstes Mal, ziehe zusätzlich !M! Karten."
   },
-  "anniv5:Pyromastery": {
+  "${ModID}:Pyromastery": {
     "NAME": "Pyromanie",
-    "DESCRIPTION": "Wenn du anniv5:Entzünden anwendest, wende zusätzlich !M! anniv5:Entzünden an."
+    "DESCRIPTION": "Wenn du ${ModID}:Entzünden anwendest, wende zusätzlich !M! ${ModID}:Entzünden an."
   },
-  "anniv5:ReadTheFlames": {
+  "${ModID}:ReadTheFlames": {
     "NAME": "Lies die Flammen",
-    "DESCRIPTION": "Ziehe !M! Karten. NL Spähe !anniv5:m2!. NL Mische ein *verblassende *Glut in deinen Nachziehstapel."
+    "DESCRIPTION": "Ziehe !M! Karten. NL Spähe !${ModID}:m2!. NL Mische ein *verblassende *Glut in deinen Nachziehstapel."
   },
-  "anniv5:FueledByEmbers": {
+  "${ModID}:FueledByEmbers": {
     "NAME": "Von Glut genährt",
     "DESCRIPTION": "Zu Beginn deines Zuges ziehe !M! Karte und füge deiner Hand und deinem Nachziehstapel jeweils !M! *Verblassende *Glut hinzu.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Zu Beginn deines Zuges ziehe !M! Karte und füge deiner Hand und deinem Nachziehstapel jeweils !M! *VSSerblassende *Glut hinzu."
   },
-  "anniv5:FadingEmber": {
+  "${ModID}:FadingEmber": {
     "NAME": "Verblassende Glut",
-    "DESCRIPTION": "Verursacht !M! anniv5:Entzünden. NL Erschöpfen."
+    "DESCRIPTION": "Verursacht !M! ${ModID}:Entzünden. NL Erschöpfen."
   }
 }

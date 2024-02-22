@@ -1,12 +1,12 @@
 {
-  "anniv5:WeaponsPack": {
+  "${ModID}:WeaponsPack": {
     "TEXT": [
       "Waffen",
       "Waffen vom Blackbeard Mod. NL Rüste Waffen mit verschiedenen Zusatzeffekten aus, um den Schaden der Angriffskarten zu erhöhen.",
       "JohnnyBazooka89"
     ]
   },
-  "anniv5:WeaponsPackHat": {
+  "${ModID}:WeaponsPackHat": {
     "TEXT": [
       "Es gehörte einst einem berühmten Piratenkapitän.",
       "Piraten Hut"

@@ -1,47 +1,47 @@
 {
-  "anniv5:Reverberation": {
+  "${ModID}:Reverberation": {
     "NAME": "Widerhall",
     "DESCRIPTION": "Erhalte !B! Block. NL Zu Beginn deines Zuges, wenn sich diese Karte in deinem Abwurfstapel befindet, kommt sie auf deine Hand zurück."
   },
-  "anniv5:Midnight": {
+  "${ModID}:Midnight": {
     "NAME": "Glockenschlag",
-    "DESCRIPTION": "Erhalte !B! Block. NL Verursache !D! Schaden zu. NL anniv5:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
+    "DESCRIPTION": "Erhalte !B! Block. NL Verursache !D! Schaden zu. NL ${ModID}:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
   },
-  "anniv5:Clang": {
+  "${ModID}:Clang": {
     "NAME": "Klang",
     "DESCRIPTION": "Kann nur gespielt werden, wenn sich ein Fluch oder Status in deiner Hand befindet. NL Verursache !D! Schaden.",
     "EXTENDED_DESCRIPTION": [
       "Ich habe keine Fluch- oder Statuskarte."
     ]
   },
-  "anniv5:VoDo": {
+  "${ModID}:VoDo": {
     "NAME": "Voodoo",
-    "DESCRIPTION": "Erhalte !M! Stärke. NL Der Gegner verliert 2 Stärke. NL anniv5:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
+    "DESCRIPTION": "Erhalte !M! Stärke. NL Der Gegner verliert 2 Stärke. NL ${ModID}:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
   },
-  "anniv5:RingTheBell": {
+  "${ModID}:RingTheBell": {
     "NAME": "Glockenklang",
-    "DESCRIPTION": "ALLE Gegner verlieren !M! LP. NL Ziehe 1 Karte. NL anniv5:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
+    "DESCRIPTION": "ALLE Gegner verlieren !M! LP. NL Ziehe 1 Karte. NL ${ModID}:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
   },
-  "anniv5:TimeOut": {
+  "${ModID}:TimeOut": {
     "NAME": "Auszeit",
     "DESCRIPTION": "Erhalte !B! Block. NL Ziehe 1 Karte. NL Wenn es eine Fluch oder Status Karte ist, verlieren ALLE Gegner !M! Stärke."
   },
-  "anniv5:Cuckoo": {
+  "${ModID}:Cuckoo": {
     "NAME": "Kuckuck",
     "DESCRIPTION": "Immer wenn du eine Fluchkarte ziehst, füge einem zufälligen Gegner !M! Schaden zu.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Immer wenn du eine Fluchkarte ziehst, füge einem zufälligen Gegner !M! Schaden zu."
   },
-  "anniv5:Dong": {
+  "${ModID}:Dong": {
     "NAME": "DONG!",
-    "DESCRIPTION": "Verursache !D! Schaden. NL Wende !M! Schwach und Verwundbar an. NL anniv5:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
+    "DESCRIPTION": "Verursache !D! Schaden. NL Wende !M! Schwach und Verwundbar an. NL ${ModID}:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
   },
-  "anniv5:LikeClockwork": {
+  "${ModID}:LikeClockwork": {
     "NAME": "Wie ein Uhrwerk",
     "DESCRIPTION": "Am Ende deines Zuges erhältst du !M! Block für jede Fluch oder Status Karte in deiner Hand.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Am Ende deines Zuges erhältst du !M! Block für jede Fluch oder Status Karte in deiner Hand."
   },
-  "anniv5:SavedByTheBell": {
+  "${ModID}:SavedByTheBell": {
     "NAME": "Gerettet durch die Glocke",
-    "DESCRIPTION": "Behalte diese Karte. NL Erhalte 1 Immateriell. NL Erschöpfen. NL anniv5:Aufnehmen: Erhalte 2 *Flüche *der *Glocke."
+    "DESCRIPTION": "Behalte diese Karte. NL Erhalte 1 Immateriell. NL Erschöpfen. NL ${ModID}:Aufnehmen: Erhalte 2 *Flüche *der *Glocke."
   }
 }

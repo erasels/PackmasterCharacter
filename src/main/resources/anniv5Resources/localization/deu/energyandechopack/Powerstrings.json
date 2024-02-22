@@ -1,5 +1,5 @@
 {
-  "anniv5:SlowingPower": {
+  "${ModID}:SlowingPower": {
     "NAME": "verlangsamung",
     "DESCRIPTIONS": [
       "Zu Beginn deines Zuges erhältst du",
@@ -7,7 +7,7 @@
       " [E] ."
     ]
   },
-  "anniv5:PanacherPower": {
+  "${ModID}:PanacherPower": {
     "NAME": "panacher",
     "DESCRIPTIONS": [
       "Wenn #b",

@@ -1,12 +1,12 @@
 {
-  "anniv5:HermitPack": {
+  "${ModID}:HermitPack": {
     "TEXT": [
       "Einsiedler",
       "Eine Sammlung von Einsiedler Karten, die sich auf große Macht zu einem hohen Preis konzentrieren.",
       "AlexMdle"
     ]
   },
-  "anniv5:HermitPackHat": {
+  "${ModID}:HermitPackHat": {
     "TEXT": [
       "Robust und verbeult, aber immer noch tragbar.",
       "Einsiedler Hut"

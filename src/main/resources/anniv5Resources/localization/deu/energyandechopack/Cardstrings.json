@@ -1,44 +1,44 @@
 {
-  "anniv5:ShadowStrike": {
+  "${ModID}:ShadowStrike": {
     "NAME": "Schatten Angriff",
-    "DESCRIPTION": "Verursache !D! Schaden. NL anniv5:Echo."
+    "DESCRIPTION": "Verursache !D! Schaden. NL ${ModID}:Echo."
   },
-  "anniv5:MagnetRise": {
+  "${ModID}:MagnetRise": {
     "NAME": "Magnetische Erhebung",
     "DESCRIPTION": "Erhalte !B! Block. NL Wenn du in diesem Zug zusätzliche [E] erzeugt hast, kostet diese Karte 0."
   },
-  "anniv5:TearApart": {
+  "${ModID}:TearApart": {
     "NAME": "Zerreißen",
-    "DESCRIPTION": "Verursache !D! Schaden. NL Falls dies einen Gegner tötet, erhalte [E]. NL anniv5:Echo."
+    "DESCRIPTION": "Verursache !D! Schaden. NL Falls dies einen Gegner tötet, erhalte [E]. NL ${ModID}:Echo."
   },
-  "anniv5:Voices": {
+  "${ModID}:Voices": {
     "NAME": "Stimmen",
-    "DESCRIPTION": "Ziehe !M! Karten. NL anniv5:Echo. NL Erschöpfen."
+    "DESCRIPTION": "Ziehe !M! Karten. NL ${ModID}:Echo. NL Erschöpfen."
   },
-  "anniv5:Flashlight": {
+  "${ModID}:Flashlight": {
     "NAME": "Taschenlampe",
     "DESCRIPTION": "Angeboren. NL Erhalte [E]. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte [E]. NL Nächster Zug, erhalte [E]. NL Erschöpfen."
   },
-  "anniv5:Discharge": {
+  "${ModID}:Discharge": {
     "NAME": "Entladung",
     "DESCRIPTION": "Füge Schaden in Höhe von 5-mal [E] in diesem Zug ausgegebenem Schaden zu.",
     "EXTENDED_DESCRIPTION": ["Füge Schaden in Höhe von 5-mal [E] in diesem Zug ausgegebenem Schaden zu. NL (Fügt !D! Schaden zu.)"]
   },
-  "anniv5:Overload": {
+  "${ModID}:Overload": {
     "NAME": "Überlastung",
     "DESCRIPTION": "Verursache !D! Schaden. NL Erhöhe den Schaden dieser Karte in diesem Kampf um !M! und die Kosten um 1."
   },
-  "anniv5:Panacher": {
+  "${ModID}:Panacher": {
     "NAME": "Panacher",
     "DESCRIPTION": "Jedes Mal, wenn 5 Karten erstellt werden, verursache an ALLEN Gegnern !M! Schaden."
   },
-  "anniv5:Slowing": {
+  "${ModID}:Slowing": {
     "NAME": "Verlangsamung",
     "DESCRIPTION": "Zu Beginn deines Zuges erhalte [E]. NL Füge deiner Hand !M! *Wunden hinzu.",
     "UPGRADE_DESCRIPTION": "Zu Beginn deines Zuges erhalte [E]. NL Füge deiner Hand eine *Wunde hinzu."
   },
-  "anniv5:Crystallize": {
+  "${ModID}:Crystallize": {
     "NAME": "Kristallisieren",
     "DESCRIPTION": "Erhalte !M! Block für jede verfügbare [E].",
     "EXTENDED_DESCRIPTION": ["Erhalte !M! Block für jede verfügbare [E]. NL (Erhält !B! Block.)"]

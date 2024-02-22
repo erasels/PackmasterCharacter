@@ -1,5 +1,5 @@
 {
-  "anniv5:BagOfHolding": {
+  "${ModID}:BagOfHolding": {
     "NAME": "Beutel der Aufbewahrung",
     "FLAVOR": "\"Unglaublich! Es scheint, als ob dieser Beutel mit einem extradimensionalen Raum verbunden ist. Was passiert, wenn ich hineinspringe?\" - Ranwid",
     "DESCRIPTIONS": [
@@ -9,7 +9,7 @@
       " NL Pro Zug: {0} NL Pro Kampf: {1}"
     ]
   },
-  "anniv5:BanishingDecree": {
+  "${ModID}:BanishingDecree": {
     "NAME": "Bannungsdekret",
     "FLAVOR": "Nützliches absorbieren, Unnützes ablehnen und das Eigene hinzufügen.",
     "DESCRIPTIONS": [
@@ -26,7 +26,7 @@
       "Verbanntes Set: {0} NL Hinzugefügtes Set: {1}"
     ]
   },
-  "anniv5:CollectorBadge": {
+  "${ModID}:CollectorBadge": {
     "NAME": "Sammlerabzeichen",
     "FLAVOR": "Schnapp sie dir alle.",
     "DESCRIPTIONS": [
@@ -37,7 +37,7 @@
       " NL Pro Zug: {0} NL Pro Kampf: {1}"
     ]
   },
-  "anniv5:GemOfUnity": {
+  "${ModID}:GemOfUnity": {
     "NAME": "Einheitsedelstein",
     "FLAVOR": "In der Einheit liegt die Stärke.",
     "DESCRIPTIONS": [
@@ -48,14 +48,14 @@
       "Noch nicht gespielte Sets: "
     ]
   },
-  "anniv5:HandyHaversack": {
+  "${ModID}:HandyHaversack": {
     "NAME": "Handlicher Rucksack",
     "FLAVOR": "Hilft heldenhaften Hamstern, Hindernisse zu bewältigen.",
     "DESCRIPTIONS": [
       "Zu Beginn jedes Kampfes erhältst du [E] und ziehst #b1 Karte."
     ]
   },
-  "anniv5:PMBoosterBox": {
+  "${ModID}:PMBoosterBox": {
     "NAME": "PM-Booster-Box",
     "FLAVOR": "Bessere Preise beim Kauf in großen Mengen.",
     "DESCRIPTIONS": [
@@ -65,7 +65,7 @@
       "Packs: {0}, {1}, {2} NL Zusätzliche Kartenvorteile: {3}"
     ]
   },
-  "anniv5:PMBoosterPack": {
+  "${ModID}:PMBoosterPack": {
     "NAME": "PM-Booster-Pack",
     "FLAVOR": "Ein Paket Karten in einer Folienverpackung. Wie ist es in den Spire gekommen?",
     "DESCRIPTIONS": [
@@ -74,7 +74,7 @@
       "Pack: {0}"
     ]
   },
-  "anniv5:PMCollection": {
+  "${ModID}:PMCollection": {
     "NAME": "PM-Sammlung",
     "FLAVOR": "Angeblich von einem Konsortium von Zauberern zusammengestellt.",
     "DESCRIPTIONS": [

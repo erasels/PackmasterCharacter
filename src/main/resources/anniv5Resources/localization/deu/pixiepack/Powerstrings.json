@@ -1,5 +1,5 @@
 {
-  "anniv5:CosmicConverterPower": {
+  "${ModID}:CosmicConverterPower": {
     "NAME": "Kosmischer Konverter",
     "DESCRIPTIONS": [
       "u Beginn deines Zuges füge deiner Hand, eine eine #yunteschiedlich #yfarbige Karte desselben Typs und Kosten wie die zuletzt gespielte Karte, hinzu. Kürzlich hinzugefügt: ",
@@ -12,21 +12,21 @@
       "Unspielbar "
     ]
   },
-  "anniv5:FetchPower": {
+  "${ModID}:FetchPower": {
     "NAME": "Holen",
     "DESCRIPTIONS": [
       "Nachdem spielen einer #yunterschiedlich #yfarbigen Fertigkeit, ziehe #b",
       " Karten."
     ]
   },
-  "anniv5:NeutronStarPower": {
+  "${ModID}:NeutronStarPower": {
     "NAME": "Neutronenstern",
     "DESCRIPTIONS": [
       "Nachdem spielen eines #yunterschiedlich #yfarbigen Angriffs, erhalte #b",
       " temporäre #yStärke."
     ]
   },
-  "anniv5:StarShowerPower": {
+  "${ModID}:StarShowerPower": {
     "NAME": "Sternenregen",
     "DESCRIPTIONS": [
       "Nachdem spielen eines #yunterschiedlich #yfarbigen Angriffs, verursache #b",

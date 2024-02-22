@@ -1,26 +1,26 @@
 {
-  "anniv5:Strike": {
+  "${ModID}:Strike": {
     "NAME": "Schlag",
     "DESCRIPTION": "Füge !D! Schaden zu."
   },
-  "anniv5:Defend": {
+  "${ModID}:Defend": {
     "NAME": "Verteidigen",
     "DESCRIPTION": "Erhalte !B! Block."
   },
-  "anniv5:Rummage": {
+  "${ModID}:Rummage": {
     "NAME": "Durchwühlen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !anniv5:m2! Karte und reduziere ihre Kosten in diesem Zug um !M!."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !${ModID}:m2! Karte und reduziere ihre Kosten in diesem Zug um !M!."
   },
-  "anniv5:Cardistry": {
+  "${ModID}:Cardistry": {
     "NAME": "Kartenzauberei",
     "DESCRIPTION": "Erhalte !B! Block. NL Die nächste Karte, die du in diesem Zug spielst, wird an die Spitze deines Nachziehstapels zurückgelegt."
   },
-  "anniv5:ConjurePack": {
+  "${ModID}:ConjurePack": {
     "NAME": "Pack beschwören",
     "DESCRIPTION": "Wähle 1 von !M! verfügbaren Packs für deinen Lauf aus. NL Zu Beginn der nächsten 5 Züge füge 2 seiner Karten deiner Hand hinzu.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Wähle 1 von !M! verfügbaren Packs für deinen Lauf aus. NL Zu Beginn der nächsten 5 Züge füge 2 seiner Karten deiner Hand hinzu."
   },
-  "anniv5:Vexed": {
+  "${ModID}:Vexed": {
     "NAME": "Verärgert",
     "DESCRIPTION": "Nicht spielbar. NL Kann nicht aus deinem Deck entfernt werden. NL Wenn diese Karte in deiner Hand ist, verbrauche sie, wenn du eine *Foil-Karte spielst."
   }

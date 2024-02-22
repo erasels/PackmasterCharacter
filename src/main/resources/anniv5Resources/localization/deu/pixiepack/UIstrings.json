@@ -1,12 +1,12 @@
 {
-  "anniv5:PixiePack": {
+  "${ModID}:PixiePack": {
     "TEXT": [
       "Pixie",
       "Ein Paket mit Karten der dimensionspringenden Pixie.",
       "FieryChocobo"
     ]
   },
-  "anniv5:PixiePackHat": {
+  "${ModID}:PixiePackHat": {
     "TEXT": [
       "Ohhh. Glänzend!",
       "Elfen Krone"

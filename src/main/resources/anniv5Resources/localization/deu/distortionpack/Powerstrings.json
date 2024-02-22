@@ -1,5 +1,5 @@
 {
-  "anniv5:DistortionPower": {
+  "${ModID}:DistortionPower": {
     "NAME": "verzerrung",
     "DESCRIPTIONS": [
       "Immer wenn eine Karte erschöpft wird, verliere #b",
@@ -7,7 +7,7 @@
       " Lebenspunkte und reduziere dies um #b1."
     ]
   },
-  "anniv5:RuePower": {
+  "${ModID}:RuePower": {
     "NAME": "reue",
     "DESCRIPTIONS": [
       "#yErschöpfe die nächsten #b",
@@ -15,7 +15,7 @@
       "#yErschöpfe die nächste Karte, die du spielst."
     ]
   },
-  "anniv5:DeteriorationPower": {
+  "${ModID}:DeteriorationPower": {
     "NAME": "verschlechterung",
     "DESCRIPTIONS": [
       "Am Ende deines Zuges, #yerschöpfe eine zufällige Karte in deinem Abwurfstapel und erhalte #b",

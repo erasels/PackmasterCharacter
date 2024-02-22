@@ -1,9 +1,9 @@
 {
-  "anniv5:MiniHakkero": {
+  "${ModID}:MiniHakkero": {
     "NAME": "Mini Hakkero",
     "FLAVOR": "Ein kleiner Elementarofen der genug Wärme und Energie erzeugt um einen Berg zu zerstören.",
     "DESCRIPTIONS": [
-      "Erhalte zu Beginn deines Zuges #b%s #yanniv5:Aufladen."
+      "Erhalte zu Beginn deines Zuges #b%s #y${ModID}:Aufladen."
     ]
   }
 }

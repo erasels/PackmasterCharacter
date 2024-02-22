@@ -1,12 +1,12 @@
 {
-  "anniv5:CoreSetPack": {
+  "${ModID}:CoreSetPack": {
     "TEXT": [
       "Kern Paket",
       "Eine zuverlässige Auswahl einfacher, nützlicher Karten.",
       "Packmaster-Team"
     ]
   },
-  "anniv5:CoreSetPackHat": {
+  "${ModID}:CoreSetPackHat": {
     "TEXT": [
       "Manchmal ist weniger mehr.",
       "Hutlos"

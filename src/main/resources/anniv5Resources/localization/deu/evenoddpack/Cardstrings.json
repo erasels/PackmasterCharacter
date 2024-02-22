@@ -1,56 +1,56 @@
 {
-  "anniv5:SwordAndBoard": {
+  "${ModID}:SwordAndBoard": {
     "NAME": "Schwert und Schild",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["anniv5:Gerade:", " Füge !D! Schaden zu.", " NL ","anniv5:Ungerade: ", " Erhalte !B! Block."]
+    "EXTENDED_DESCRIPTION": ["${ModID}:Gerade:", " Füge !D! Schaden zu.", " NL ","${ModID}:Ungerade: ", " Erhalte !B! Block."]
   },
-  "anniv5:QuickReflex": {
+  "${ModID}:QuickReflex": {
     "NAME": "Schneller Reflex",
     "DESCRIPTION": "Erhalte !B! Block.",
-    "EXTENDED_DESCRIPTION": [" NL ", "anniv5:Erste:", " Erhalte !B! Block."]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Erste:", " Erhalte !B! Block."]
   },
-  "anniv5:PrimeDirective": {
+  "${ModID}:PrimeDirective": {
     "NAME": "Hauptziel",
-    "DESCRIPTION": "Deine Angriffe haben NL anniv5:Ungerade: + !M! Schaden."
+    "DESCRIPTION": "Deine Angriffe haben NL ${ModID}:Ungerade: + !M! Schaden."
   },
-  "anniv5:WitzBolt": {
+  "${ModID}:WitzBolt": {
     "NAME": "Witzblitz",
     "DESCRIPTION": "Füge !D! Schaden zu.",
-    "EXTENDED_DESCRIPTION": [" NL ", "anniv5:Ungerade:", " Verursache !M! Schwach und Verwundbar."]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Ungerade:", " Verursache !M! Schwach und Verwundbar."]
   },
-  "anniv5:ElementOfSurprise": {
+  "${ModID}:ElementOfSurprise": {
     "NAME": "Überraschungselement",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["anniv5:Erste:", " Deine nächste Karte wird zweimal gespielt."]
+    "EXTENDED_DESCRIPTION": ["${ModID}:Erste:", " Deine nächste Karte wird zweimal gespielt."]
   },
-  "anniv5:GammaWard": {
+  "${ModID}:GammaWard": {
     "NAME": "Gamma Schutz",
     "DESCRIPTION": "Erhalte !B! Block.",
-    "EXTENDED_DESCRIPTION": [" NL ", "anniv5:Gerade:", " Deine nächste Fähigkeit in diesem Zug hat NL anniv5:Gerade: Erhalte !M! Block."]
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Gerade:", " Deine nächste Fähigkeit in diesem Zug hat NL ${ModID}:Gerade: Erhalte !M! Block."]
   },
-  "anniv5:Flourish": {
+  "${ModID}:Flourish": {
     "NAME": "Florieren",
-    "DESCRIPTION": "Erhalte !M! anniv5:Panzerrüstung.",
-    "EXTENDED_DESCRIPTION": [" NL ", "anniv5:Gerade:", " Heile !M! LP.", "anniv5:Ungerade:", " Erhalte [E] ."]
+    "DESCRIPTION": "Erhalte !M! ${ModID}:Panzerrüstung.",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Gerade:", " Heile !M! LP.", "${ModID}:Ungerade:", " Erhalte [E] ."]
   },
-  "anniv5:EvenOddAppend": {
+  "${ModID}:EvenOddAppend": {
     "NAME": "",
     "DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": [" NL (+ ", " Schaden.)", " NL Erhalte ", " Block"]
   },
-  "anniv5:WindUpBomb": {
+  "${ModID}:WindUpBomb": {
     "NAME": "Aufziehbombe",
     "DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["anniv5:Gerade:", " Erhöhe den Schaden dieser Karte um !M!.", " NL ", "anniv5:Ungerade:", " Füge !D! Schaden zu."]
+    "EXTENDED_DESCRIPTION": ["${ModID}:Gerade:", " Erhöhe den Schaden dieser Karte um !M!.", " NL ", "${ModID}:Ungerade:", " Füge !D! Schaden zu."]
   },
-  "anniv5:LeftHook": {
+  "${ModID}:LeftHook": {
     "NAME": "Linker Haken",
     "DESCRIPTION": "Füge !D! Schaden zu.",
-    "EXTENDED_DESCRIPTION": [" NL ","anniv5:Ungerade:", " Bleibt in deiner Hand.", " NL (Diesen Kampf noch !stslib:ex! Mal einsetzbar)."]
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Ungerade:", " Bleibt in deiner Hand.", " NL (Diesen Kampf noch !stslib:ex! Mal einsetzbar)."]
   },
-  "anniv5:Battlecry": {
+  "${ModID}:Battlecry": {
     "NAME": "Schlachtruf",
     "DESCRIPTION": "Ziehe !M! Karten.",
-    "EXTENDED_DESCRIPTION": [" NL ","anniv5:Erste:", " Erhalte 2 Stärke."]
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Erste:", " Erhalte 2 Stärke."]
   }
 }

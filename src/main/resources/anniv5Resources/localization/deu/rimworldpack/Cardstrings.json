@@ -1,58 +1,58 @@
 {
-  "anniv5:ChainShotgun": {
+  "${ModID}:ChainShotgun": {
     "NAME": "Moderne Schrotflinte",
     "DESCRIPTION": "Füge einem zufälligen Gegner !M! Mal !D! Schaden zu."
   },
-  "anniv5:Despair": {
+  "${ModID}:Despair": {
     "NAME": "Verzweiflung",
     "DESCRIPTION": "Zählt als ein Fluch. NL Erschöpfen."
   },
-  "anniv5:EatWithoutTable": {
+  "${ModID}:EatWithoutTable": {
     "NAME": "Ohne Tisch essen",
     "DESCRIPTION": "Trinke einen zufälligen gewöhnlichen Trank. Füge deiner Hand eine *Verzweiflung hinzu. NL Erschöpfen."
   },
-  "anniv5:Luciferium": {
+  "${ModID}:Luciferium": {
     "NAME": "Luciferium",
-    "DESCRIPTION": "{@@}Erhalte [E] [E]. NL Erhalte 5 Stärke. NL Erhalte !M! Schichten anniv5:Sucht. NL Erschöpfen."
+    "DESCRIPTION": "{@@}Erhalte [E] [E]. NL Erhalte 5 Stärke. NL Erhalte !M! Schichten ${ModID}:Sucht. NL Erschöpfen."
   },
-  "anniv5:Pyromaniac": {
+  "${ModID}:Pyromaniac": {
     "NAME": "Pyromane",
-    "DESCRIPTION": "Am Anfang deines Zuges gib einer zufällige Karte in deiner Hand anniv5:Aufgedreht.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Am Anfang deines Zuges gib einer zufällige Karte in deiner Hand anniv5:Aufgedreht."
+    "DESCRIPTION": "Am Anfang deines Zuges gib einer zufällige Karte in deiner Hand ${ModID}:Aufgedreht.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Am Anfang deines Zuges gib einer zufällige Karte in deiner Hand ${ModID}:Aufgedreht."
   },
-  "anniv5:KillThirst": {
+  "${ModID}:KillThirst": {
     "NAME": "Durst stillen",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn das den Gegner nicht tötet, füge deiner Hand eine *Verzweiflung hinzu."
   },
-  "anniv5:SpikeTrap": {
+  "${ModID}:SpikeTrap": {
     "NAME": "Stachelfalle",
     "DESCRIPTION": "Erhalte !B! Block. NL Füge dem nächsten Gegner, der dich angreift, diesen Blockwert als Schaden zu."
   },
-  "anniv5:Catharsis": {
+  "${ModID}:Catharsis": {
     "NAME": "Katharsis",
     "DESCRIPTION": "{@@}Mische eine *Verzweiflung in deinen Nachziehstapel. Die nächsten {!M!|1=Karte|@=!M! Karten}, die du in diesem Zug spielst, kosten 0 und werden zweimal gespielt. Erschöpfen."
   },
-  "anniv5:TradeBeacon": {
+  "${ModID}:TradeBeacon": {
     "NAME": "Handelsfunktion",
     "DESCRIPTION": "Das erste Mal, wenn du während deines Zuges ziehst oder abwirfst, ziehe !M! Karten."
   },
-  "anniv5:BurningPassion": {
+  "${ModID}:BurningPassion": {
     "NAME": "Brennende Leidenschaft",
     "DESCRIPTION": "Verdopple den ersten Buff, den du pro Zug erhältst."
   },
-  "anniv5:TaintedWeapon": {
+  "${ModID}:TaintedWeapon": {
     "NAME": "Verseuchte Waffe",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Startup: Lege diese Karte in ein zufälliges Monster.",
     "EXTENDED_DESCRIPTION": [
       "Füge !D! Schaden zu."
     ]
   },
-  "anniv5:RimworldKeywordManager": {
+  "${ModID}:RimworldKeywordManager": {
     "NAME": "Stichwort-Manager",
     "DESCRIPTION": "Material für Übersetzungen und einfachen Zugriff auf Stichwort-IDs",
     "EXTENDED_DESCRIPTION": [
-      "anniv5:inspiration",
-      "anniv5:mental_break"
+      "${ModID}:inspiration",
+      "${ModID}:mental_break"
     ]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "anniv5:BatterPack": {
+  "${ModID}:BatterPack": {
     "TEXT": [
       "Batters",
       "Hochaggressives Booster-Packet. Entfessle göttliche Wut auf deine Gegner mit einzelnen, mächtigen Schlägen.",
@@ -7,7 +7,7 @@
       "#yOFF erstellt von #yMortis #yGhost"
     ]
   },
-  "anniv5:BatterPackHat": {
+  "${ModID}:BatterPackHat": {
     "TEXT": [
       "Reinigung in Bearbeitung.",
       "Baseballmütze"

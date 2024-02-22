@@ -1,5 +1,5 @@
 {
-  "anniv5:DarkerEmbrace": {
+  "${ModID}:DarkerEmbrace": {
     "NAME": "Dunklere Umarmung",
     "DESCRIPTION": "{@@}Wann immer eine Karte erschöpft wird, ziehe !M! Karte{!M!|1=|>1=n}."
   }

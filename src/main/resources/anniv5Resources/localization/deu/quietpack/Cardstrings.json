@@ -1,46 +1,46 @@
 {
-  "anniv5:Weight": {
+  "${ModID}:Weight": {
     "NAME": "Gewicht",
     "DESCRIPTION": "Unspielbar. Behalten. NL Wenn diese Karte von deiner Hand abgeworfen wird, erschöpfe sie."
   },
-  "anniv5:Oppressor": {
+  "${ModID}:Oppressor": {
     "NAME": "Unterdrücker",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf 1 Karte ab."
   },
-  "anniv5:IronShield": {
+  "${ModID}:IronShield": {
     "NAME": "Eisenschild",
     "DESCRIPTION": "Erhalte !B! Block. NL Füge deiner Hand ein *Gewicht hinzu."
   },
-  "anniv5:Shine": {
+  "${ModID}:Shine": {
     "NAME": "Glanz",
     "DESCRIPTION": "Unspielbar. Behalten. NL Wenn du diese Karte ziehst, verbessere eine andere zufällige Karte in deiner Hand für den Rest des Kampfes.",
     "UPGRADE_DESCRIPTION": "Unspielbar. Behalten. NL Wenn du diese Karte ziehst, verbessere ALLE Karten in deiner Hand für den Rest des Kampfes."
   },
-  "anniv5:GlaiveThrow": {
+  "${ModID}:GlaiveThrow": {
     "NAME": "Glevenwurf",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten. NL Wirf !M! Karten ab."
   },
-  "anniv5:Crunch": {
+  "${ModID}:Crunch": {
     "NAME": "Knirsch",
     "DESCRIPTION": "Unspielbar. Behalten. NL Wenn du diese Karte ziehst, ziehe !M! Karten."
   },
-  "anniv5:Lie": {
+  "${ModID}:Lie": {
     "NAME": "Lüge",
     "DESCRIPTION": "Gegner verliert !M! Stärke in diesem Zug. NL Füge deiner Hand ein *Gewicht hinzu."
   },
-  "anniv5:Frontflip": {
+  "${ModID}:Frontflip": {
     "NAME": "Frontflip",
     "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karten, lege unspielbare Karten ab."
   },
-  "anniv5:HammerThrow": {
+  "${ModID}:HammerThrow": {
     "NAME": "Hammerwurf",
     "DESCRIPTION": "Wenn eine Karte behalten wird, füge ALLEN Gegnern !M! Schaden zu."
   },
-  "anniv5:Flail": {
+  "${ModID}:Flail": {
     "NAME": "Peitsche",
     "DESCRIPTION": "Füge !D! Schaden zweimal zu. NL Füge deiner Hand 2 *Gewicht hinzu."
   },
-  "anniv5:Wisdom": {
+  "${ModID}:Wisdom": {
     "NAME": "Weisheit",
     "DESCRIPTION": "Erhalte [E]. NL Lege beliebig viele Karten aus deiner Hand ab. Ziehe so viele Karten. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Erhalte [E] [E]. NL Lege beliebig viele Karten aus deiner Hand ab. Ziehe so viele Karten. NL Erschöpfen."

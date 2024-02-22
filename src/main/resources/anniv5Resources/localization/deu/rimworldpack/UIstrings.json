@@ -1,5 +1,5 @@
 {
-  "anniv5:RimworldPack": {
+  "${ModID}:RimworldPack": {
     "TEXT": [
       "RimWorld",
       "Mentale Pausen und Essen ohne Tisch. Natürlich für enorme Leistung.",
@@ -7,18 +7,18 @@
       "#bRimWorld original erstellt von #bLudeon #bStudios"
     ]
   },
-  "anniv5:Potions": {
+  "${ModID}:Potions": {
     "TEXT": [
       "Lecker ",
       "!"
     ]
   },
-  "anniv5:OnFireModifier": {
+  "${ModID}:OnFireModifier": {
     "TEXT": [
-      "anniv5:Aufgedreht. NL "
+      "${ModID}:Aufgedreht. NL "
     ]
   },
-  "anniv5:RimworldPackHat": {
+  "${ModID}:RimworldPackHat": {
     "TEXT": [
       "Für Weltraum-Cowboys. Definitiv nicht aus menschlichem Leder.",
       "RimWorld Hut"

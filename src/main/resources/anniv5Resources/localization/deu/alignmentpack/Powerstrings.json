@@ -1,12 +1,12 @@
 {
-  "anniv5:GlimpsePower": {
+  "${ModID}:GlimpsePower": {
     "NAME": "Ausblick",
     "DESCRIPTIONS": [
       "Immer wenn du eine #yFlüchtig Karte ziehst, erhältst du #b",
       " #yBlock."
     ]
   },
-  "anniv5:RememberPower": {
+  "${ModID}:RememberPower": {
     "NAME": "Erinnern",
     "DESCRIPTIONS": [
       "Am Ende deines Zuges kannst du #b",
@@ -15,7 +15,7 @@
       "Karte in deinen Nachziehstapel mischen"
     ]
   },
-  "anniv5:TrinePower": {
+  "${ModID}:TrinePower": {
     "NAME": "Trigon",
     "DESCRIPTIONS": [
       "Die nächste Karte, die du in diesem Zug spielst, wird zweimal gespielt.",

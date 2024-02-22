@@ -1,9 +1,9 @@
 {
-  "anniv5:Snowglobe": {
+  "${ModID}:Snowglobe": {
     "NAME": "Schneekugel",
     "FLAVOR": "Eine Darstellung des Spire während winterlichen Wetters. Es knurrt, wenn du es schüttelst.",
     "DESCRIPTIONS": [
-      "Immer wenn du #yanniv5:Frostbiss durch Angriff auf einen Gegner anwendest, wende #b",
+      "Immer wenn du #y${ModID}:Frostbiss durch Angriff auf einen Gegner anwendest, wende #b",
       " zusätzlich an."
     ]
   }

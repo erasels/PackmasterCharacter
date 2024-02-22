@@ -1,5 +1,5 @@
 {
-  "anniv5:WardenPack": {
+  "${ModID}:WardenPack": {
     "TEXT": [
       "Aufseher",
       "Mannipuliere die Weitsicht, denke voraus und biege unknown\u00a0into zu deinem Vorteil.",
@@ -7,7 +7,7 @@
       "Paket Kunst Design von #yStardustSwirl"
     ]
   },
-  "anniv5:WardenPackHat": {
+  "${ModID}:WardenPackHat": {
     "TEXT": [
       "Welche Geheimnisse liegen in den schattigen Gewölben dieser geräumigen Kopfbedeckung?",
       "Götterhut"

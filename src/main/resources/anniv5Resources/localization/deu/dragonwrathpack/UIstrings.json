@@ -1,12 +1,12 @@
 {
-  "anniv5:DragonwrathPack": {
+  "${ModID}:DragonwrathPack": {
     "TEXT": [
       "Drachenzorn",
       "Führe die göttliche Macht eines Ausgestoßenen eines Ordens drakonischer Paladine aus.",
       "Silber"
     ]
   },
-  "anniv5:DragonwrathPackHat": {
+  "${ModID}:DragonwrathPackHat": {
     "TEXT": [
       "Schmale Türen können ein Problem sein ...",
       "Drachen Hörner"

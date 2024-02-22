@@ -1,59 +1,59 @@
 {
-  "anniv5:CatONineTails": {
+  "${ModID}:CatONineTails": {
     "NAME": "Peitsche mit neun Schwänzen",
-    "DESCRIPTION": "Rüste eine !M! / 3 anniv5:Waffe aus. NL Nachdem du mit dieser anniv5:Waffe angegriffen hast, erhöhe ihren Angriff um +2."
+    "DESCRIPTION": "Rüste eine !M! / 3 ${ModID}:Waffe aus. NL Nachdem du mit dieser ${ModID}:Waffe angegriffen hast, erhöhe ihren Angriff um +2."
   },
-  "anniv5:DeadlyArsenal": {
+  "${ModID}:DeadlyArsenal": {
     "NAME": "Tödliches Arsenal",
-    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe 1 Karte + 1 Karte für jede einzigartige anniv5:Waffe, die du derzeit ausgerüstet hast."
+    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe 1 Karte + 1 Karte für jede einzigartige ${ModID}:Waffe, die du derzeit ausgerüstet hast."
   },
-  "anniv5:MegaUpgrade": {
+  "${ModID}:MegaUpgrade": {
     "NAME": "Mega-Upgrade",
-    "DESCRIPTION": "Behalten. NL Verbessere alle deine ausgerüsteten anniv5:Waffen um +!M! / +!M!."
+    "DESCRIPTION": "Behalten. NL Verbessere alle deine ausgerüsteten ${ModID}:Waffen um +!M! / +!M!."
   },
-  "anniv5:PowderKeg": {
+  "${ModID}:PowderKeg": {
     "NAME": "Pulverfass",
-    "DESCRIPTION": "Rüste eine 0 / 1 anniv5:Waffe aus. NL Wenn sie zerstört wird, füge ALLEN Gegnern !M! Schaden zu."
+    "DESCRIPTION": "Rüste eine 0 / 1 ${ModID}:Waffe aus. NL Wenn sie zerstört wird, füge ALLEN Gegnern !M! Schaden zu."
   },
-  "anniv5:RearmingStrike": {
+  "${ModID}:RearmingStrike": {
     "NAME": "Erneuter angriff",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Rüste eine 4 / 2 anniv5:Waffe aus."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Rüste eine 4 / 2 ${ModID}:Waffe aus."
   },
-  "anniv5:Salvager": {
+  "${ModID}:Salvager": {
     "NAME": "Bergungsschiff",
-    "DESCRIPTION": "Immer wenn eine anniv5:Waffe zerstört wird, erhalte [E].",
-    "UPGRADE_DESCRIPTION": "Immer wenn eine anniv5:Waffe zerstört wird, erhalte [E] [E]."
+    "DESCRIPTION": "Immer wenn eine ${ModID}:Waffe zerstört wird, erhalte [E].",
+    "UPGRADE_DESCRIPTION": "Immer wenn eine ${ModID}:Waffe zerstört wird, erhalte [E] [E]."
   },
-  "anniv5:Sword": {
+  "${ModID}:Sword": {
     "NAME": "Schwert",
-    "DESCRIPTION": "Wähle 1 von 3 Schwertern aus. NL Rüste eine 3 / !M! anniv5:Waffe mit einem zusätzlichen Effekt aus.",
+    "DESCRIPTION": "Wähle 1 von 3 Schwertern aus. NL Rüste eine 3 / !M! ${ModID}:Waffe mit einem zusätzlichen Effekt aus.",
     "EXTENDED_DESCRIPTION": [
       "Zusätzliche Effekte",
       "#rFeuer: Immer wenn du mit dieser Waffe angreifst, füge ALLEN Gegnern #b4 Schaden zu. NL #yWeisheit: Immer wenn du mit dieser Waffe angreifst, ziehe 1 Karte. NL #pChaos: Immer wenn du mit dieser Waffe angreifst, füge deiner Hand eine zufällige Karte hinzu."
     ]
   },
-  "anniv5:SwordOfFire": {
+  "${ModID}:SwordOfFire": {
     "NAME": "Schwert des Feuers",
-    "DESCRIPTION": "Rüste eine 3 / !M! anniv5:Waffe aus. NL Immer wenn du mit dieser anniv5:Waffe angreifst, füge ALLEN Gegnern 4 Schaden zu."
+    "DESCRIPTION": "Rüste eine 3 / !M! ${ModID}:Waffe aus. NL Immer wenn du mit dieser ${ModID}:Waffe angreifst, füge ALLEN Gegnern 4 Schaden zu."
   },
-  "anniv5:SwordOfWisdom": {
+  "${ModID}:SwordOfWisdom": {
     "NAME": "Schwert der Weisheit",
-    "DESCRIPTION": "Rüste eine 3 / !M! anniv5:Waffe aus. NL Immer wenn du mit dieser anniv5:Waffe angreifst, ziehe 1 Karte."
+    "DESCRIPTION": "Rüste eine 3 / !M! ${ModID}:Waffe aus. NL Immer wenn du mit dieser ${ModID}:Waffe angreifst, ziehe 1 Karte."
   },
-  "anniv5:SwordOfChaos": {
+  "${ModID}:SwordOfChaos": {
     "NAME": "Schwert des Chaos",
-    "DESCRIPTION": "Rüste eine 3 / !M! anniv5:Waffe aus. NL Immer wenn du mit dieser anniv5:Waffe angreifst, füge deiner Hand eine zufällige Karte hinzu."
+    "DESCRIPTION": "Rüste eine 3 / !M! ${ModID}:Waffe aus. NL Immer wenn du mit dieser ${ModID}:Waffe angreifst, füge deiner Hand eine zufällige Karte hinzu."
   },
-  "anniv5:ArmorUp": {
+  "${ModID}:ArmorUp": {
     "NAME": "Rüstung aufbauen",
     "DESCRIPTION": "Immer wenn du einen Einzelzielschaden verursachenden Angriff spielst, der mindestens 3 Schaden über seinem Grundschaden liegt, erhalte !M! Block."
   },
-  "anniv5:PirateHook": {
+  "${ModID}:PirateHook": {
     "NAME": "Piratenhaken",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Falls dies mindestens 10 Schaden verursacht, füge erneut !D! Schaden zu."
   },
-  "anniv5:ReapersScythe": {
+  "${ModID}:ReapersScythe": {
     "NAME": "Todbringers Sense",
-    "DESCRIPTION": "Rüste eine !M! / 3 anniv5:Waffe aus. NL Immer wenn du mit dieser anniv5:Waffe angreifst, wende pro Treffer 1 anniv5:Todbringer auf ein Ziel an."
+    "DESCRIPTION": "Rüste eine !M! / 3 ${ModID}:Waffe aus. NL Immer wenn du mit dieser ${ModID}:Waffe angreifst, wende pro Treffer 1 ${ModID}:Todbringer auf ein Ziel an."
   }
 }

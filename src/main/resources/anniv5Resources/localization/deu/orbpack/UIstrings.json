@@ -1,12 +1,12 @@
 {
-  "anniv5:OrbPack": {
+  "${ModID}:OrbPack": {
     "TEXT": [
       "Orbs",
       "Erschaffe und mache dir Orbs nutzbar",
       "Alchyr"
     ]
   },
-  "anniv5:OrbPackHat": {
+  "${ModID}:OrbPackHat": {
     "TEXT": [
       "Zu Beginn deines Zugs, erschaffe 2 schicke Orbs.",
       "Orbs"

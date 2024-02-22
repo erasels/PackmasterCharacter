@@ -1,5 +1,5 @@
 {
-  "anniv5:BlackMarketDealerEvent": {
+  "${ModID}:BlackMarketDealerEvent": {
     "NAME": "Schwarzmarkt",
     "DESCRIPTIONS": [
       "\"HEY DU! Mit einem Rucksack dieser Größe musst du ein Sammler sein! NL NL Komm rein und stöbere - wir haben heute einen schönen temporären Pop-up-Markt eingerichtet, vollkommen legal natürlich. Ich bin sicher, du findest etwas, was du brauchst... aber sag niemandem, dass wir hier waren.\"",

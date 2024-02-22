@@ -1,43 +1,43 @@
 {
-  "anniv5:TheFool": {
+  "${ModID}:TheFool": {
     "NAME": "Der Narr",
     "DESCRIPTION": "Angeboren. NL Füge !D! Schaden zu. NL Verursache !M! schwach. NL Erschöpfen."
   },
-  "anniv5:Justice": {
+  "${ModID}:Justice": {
     "NAME": "Gerechtigkeit",
     "DESCRIPTION": "Erhalte !B! Block für jeden Gegner im Kampf."
   },
-  "anniv5:TheHermit": {
+  "${ModID}:TheHermit": {
     "NAME": "Der Einsiedler",
     "DESCRIPTION": "Erhalte !B! Block. NL Wirf eine Karte ab. Ziehe Karten in Höhe ihrer Kosten. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Lege eine Karte ab. Ziehe Karten in Höhe ihrer Kosten."
   },
-  "anniv5:TheHangedMan": {
+  "${ModID}:TheHangedMan": {
     "NAME": "Der Gehängte",
     "DESCRIPTION": "Jedes Mal, wenn du im Verlauf dieses Zuges eine Karte ziehst, verlieren alle Gegner !M! TP."
   },
-  "anniv5:TheTower": {
+  "${ModID}:TheTower": {
     "NAME": "Der Turm",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn dies einen Gegner tötet, spiele eine Kopie dieser Karte aus."
   },
-  "anniv5:Death": {
+  "${ModID}:Death": {
     "NAME": "Der Tod",
     "DESCRIPTION": "Verursache !D! Schaden. NL Töte den Gegner, wenn er danach 10% oder weniger seiner maximalen TP hat."
   },
-  "anniv5:Temperance": {
+  "${ModID}:Temperance": {
     "NAME": "Die Mäßigkeit",
     "DESCRIPTION": "Ziehe 1 Karte für jede Karte in deinem Erschöpfungs Ablagestapel. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Ziehe 1 Karte für jede Karte in deinem Erschöpfung Ablagestapel."
   },
-  "anniv5:TheHierophant": {
+  "${ModID}:TheHierophant": {
     "NAME": "Der Hierophant",
     "DESCRIPTION": "Erhalte !B! Block. NL Entferne alle deine Debuffs. NL Erschöpfen."
   },
-  "anniv5:TheSun": {
+  "${ModID}:TheSun": {
     "NAME": "Die Sonne",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Füge dem Gegner mit den höchsten HP !M! Verwundbar zu. NL Erschöpfen."
   },
-  "anniv5:TheChariot": {
+  "${ModID}:TheChariot": {
     "NAME": "Der Streitwagen",
     "DESCRIPTION": "Jedes Mal wenn während deines Zuges eine Karte abwirfst, erhalte !M! Schaden für deinen nächsten Angriff."
   }

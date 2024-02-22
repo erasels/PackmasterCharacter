@@ -1,12 +1,12 @@
 {
-  "anniv5:SpikeTrapPower": {
+  "${ModID}:SpikeTrapPower": {
     "NAME": "Stachelfalle",
     "DESCRIPTIONS": [
       "Füge dem nächsten Gegner, der dich angreift, #b",
       " Schaden zu."
     ]
   },
-  "anniv5:CatharsisPower": {
+  "${ModID}:CatharsisPower": {
     "NAME": "Katharsis",
     "DESCRIPTIONS": [
       "Die nächste Karte, die du in diesem Zug spielst, kostet #b0 und wird zweimal gespielt!",
@@ -14,7 +14,7 @@
       " Karten, die du in diesem Zug spielst, kosten #b0 und werden zweimal gestielt!"
     ]
   },
-  "anniv5:PyromaniacPower": {
+  "${ModID}:PyromaniacPower": {
     "NAME": "Pyromane",
     "DESCRIPTIONS": [
       "Zu Beginn deines Zuges gib einer zufällige Karte in deiner Hand #yAufgedreht.",
@@ -22,21 +22,21 @@
       " zufällige Karten in deiner Hand #yAufgedreht."
     ]
   },
-  "anniv5:BurningPassionPower": {
+  "${ModID}:BurningPassionPower": {
     "NAME": "Brennende Leidenschaft",
     "DESCRIPTIONS": [
       "Jedes Mal, wenn du in diesem Zug zum ersten Mal einen Buff erhältst, multipliziere ihn mit #b",
       "."
     ]
   },
-  "anniv5:HoldCardPower": {
+  "${ModID}:HoldCardPower": {
     "NAME": "Kartenhalter",
     "DESCRIPTIONS": [
       "Wenn diese Kreatur stirbt, füge deiner Hand eine ",
       " hinzu."
     ]
   },
-  "anniv5:LuciferiumAddictionPower": {
+  "${ModID}:LuciferiumAddictionPower": {
     "NAME": "Luciferium Sucht",
     "DESCRIPTIONS": [
       "Nach #b1 Zug füge deiner Hand #b2 #yVerzweiflungen hinzu und verliere #b5 #yStärke.",
@@ -44,7 +44,7 @@
       " Zügen füge deiner Hand #b2 #yVerzweiflungen hinzu und verliere #b5 #yStärke."
     ]
   },
-  "anniv5:TradeBeaconPower": {
+  "${ModID}:TradeBeaconPower": {
     "NAME": "Handelsfunk",
     "DESCRIPTIONS": [
       "Das erste Mal, wenn du in deinem Zug eine Karte ziehst oder abwirfst, ziehe #b",

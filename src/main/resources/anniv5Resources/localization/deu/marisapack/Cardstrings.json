@@ -1,46 +1,46 @@
 {
-  "anniv5:MasterSpark": {
+  "${ModID}:MasterSpark": {
     "NAME": "Meisterfunke",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Verstärken [E] : NL Füge stattdessen !anniv5:sd! Schaden zu."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Verstärken [E] : NL Füge stattdessen !${ModID}:sd! Schaden zu."
   },
-  "anniv5:RisingStrike": {
+  "${ModID}:RisingStrike": {
     "NAME": "Aufwärtshieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Aufgeregt: Erhalte !M! anniv5:Aufladen."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Aufgeregt: Erhalte !M! ${ModID}:Aufladen."
   },
-  "anniv5:GalacticHalo": {
+  "${ModID}:GalacticHalo": {
     "NAME": "Galaktisches Echo",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! anniv5:Aufladen."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! ${ModID}:Aufladen."
   },
-  "anniv5:LuminousStrike": {
+  "${ModID}:LuminousStrike": {
     "NAME": "Leuchtender Schlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Verstärken [E] : NL Erhalte !M! anniv5:Aufladen."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Verstärken [E] : NL Erhalte !M! ${ModID}:Aufladen."
   },
-  "anniv5:ShootingEcho": {
+  "${ModID}:ShootingEcho": {
     "NAME": "Schallendes Echo",
     "DESCRIPTION": "Füge !D! Schaden zu. Erschöpfe eine zufällige Karte, um eine Kopie davon zu erhalten. NL Erschöpfen."
   },
-  "anniv5:StardustReverie": {
+  "${ModID}:StardustReverie": {
     "NAME": "Sternenstaub Phantasie",
-    "DESCRIPTION": "Erschöpfe die nächste Karte, die du spielst, um !M! anniv5:Aufladen zu erhalten und ziehe 1 Karte."
+    "DESCRIPTION": "Erschöpfe die nächste Karte, die du spielst, um !M! ${ModID}:Aufladen zu erhalten und ziehe 1 Karte."
   },
-  "anniv5:Inertia": {
+  "${ModID}:Inertia": {
     "NAME": "Trägheit",
-    "DESCRIPTION": "Erhalte !M! *Abtragung. NL anniv5:Verstärken [E] : NL Erhalte zusätzlich !anniv5:m2! *Abtragung."
+    "DESCRIPTION": "Erhalte !M! *Abtragung. NL ${ModID}:Verstärken [E] : NL Erhalte zusätzlich !${ModID}:m2! *Abtragung."
   },
-  "anniv5:UltimateShortwave": {
+  "${ModID}:UltimateShortwave": {
     "NAME": "Ultimative Kurzwelle",
-    "DESCRIPTION": "Erhalte !M! [E] und !anniv5:m2! anniv5:Aufladen. NL anniv5:Verstärken [E] : NL Erhöhe beide Werte in diesem Kampf um 1."
+    "DESCRIPTION": "Erhalte !M! [E] und !${ModID}:m2! ${ModID}:Aufladen. NL ${ModID}:Verstärken [E] : NL Erhöhe beide Werte in diesem Kampf um 1."
   },
-  "anniv5:DragonMeteor": {
+  "${ModID}:DragonMeteor": {
     "NAME": "Drachenmeteor",
     "DESCRIPTION": "Füge !D! Schaden zu. Für jede Karte in deinem Erschöpfungsstapel füge !M! zusätzlichen Schaden zu."
   },
-  "anniv5:EarthlightRay": {
+  "${ModID}:EarthlightRay": {
     "NAME": "Erdlichtstrahl",
-    "DESCRIPTION": "Nachdem du anniv5:Aufladen erhalten hast, füge ALLEN Gegnern Schaden in Höhe von !M! Mal dem Gesamtwert zu."
+    "DESCRIPTION": "Nachdem du ${ModID}:Aufladen erhalten hast, füge ALLEN Gegnern Schaden in Höhe von !M! Mal dem Gesamtwert zu."
   },
-  "anniv5:Spark": {
+  "${ModID}:Spark": {
     "NAME": "Funke",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Verstärken [E] : NL Erhalte !M! anniv5:Aufladen. NL Erschöpfen."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Verstärken [E] : NL Erhalte !M! ${ModID}:Aufladen. NL Erschöpfen."
   }
 }

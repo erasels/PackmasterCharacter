@@ -1,51 +1,51 @@
 {
-  "anniv5:InspiringSong": {
+  "${ModID}:InspiringSong": {
     "NAME": "Inspirierendes Lied",
-    "DESCRIPTION": "Erschaffe !M! Frost. NL Erhalte !anniv5:m2! anniv5:Inspiration NL für jeden erschaffenen Orb."
+    "DESCRIPTION": "Erschaffe !M! Frost. NL Erhalte !${ModID}:m2! ${ModID}:Inspiration NL für jeden erschaffenen Orb."
   },
-  "anniv5:Sift": {
+  "${ModID}:Sift": {
     "NAME": "Sieben",
     "DESCRIPTION": "Ziehe !M! Karte. NL Erhalte [E] in Höhe ihres Kostenwertes.",
     "UPGRADE_DESCRIPTION": "Ziehe !M! Karte. NL Erhalte [E] in Höhe ihres Kostenwertes. NL Ziehe !M! Karte."
   },
-  "anniv5:EchoEcho": {
+  "${ModID}:EchoEcho": {
     "NAME": "Echo-Echo",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge !anniv5:sd! Schaden zu."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge !${ModID}:sd! Schaden zu."
   },
-  "anniv5:ThickOfTheFight": {
+  "${ModID}:ThickOfTheFight": {
     "NAME": "Im dichten Kampf",
     "DESCRIPTION": "Füge einem zufälligen Gegner für jeden lebenden Gegner !D! Schaden zu. NL Kostet 1 weniger [E] für jeden lebenden Gegner."
   },
-  "anniv5:EnGarde": {
+  "${ModID}:EnGarde": {
     "NAME": "Auf der Hut",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL anniv5:Inspiration beeinflusst diese Karte !M! Mal."
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL ${ModID}:Inspiration beeinflusst diese Karte !M! Mal."
   },
-  "anniv5:Heroism": {
+  "${ModID}:Heroism": {
     "NAME": "Heldentum",
-    "DESCRIPTION": "Erhalte !M! temporäre LP. NL Erhalte !anniv5:m2! anniv5:Inspiration."
+    "DESCRIPTION": "Erhalte !M! temporäre LP. NL Erhalte !${ModID}:m2! ${ModID}:Inspiration."
   },
-  "anniv5:LifeDrain": {
+  "${ModID}:LifeDrain": {
     "NAME": "Lebensentzug",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte temporäre LP für die Hälfte des ungeblockten Schadens."
   },
-  "anniv5:Shifting": {
+  "${ModID}:Shifting": {
     "NAME": "Wandel",
     "DESCRIPTION": "Füge !D! Schaden zu oder NL erhalte !B! Block. NL Füge !D! Schaden zu oder NL erhalte !B! Block."
   },
-  "anniv5:ShiftingAttack": {
+  "${ModID}:ShiftingAttack": {
     "NAME": "Angriff",
     "DESCRIPTION": "Füge !D! Schaden zu."
   },
-  "anniv5:ShiftingBlock": {
+  "${ModID}:ShiftingBlock": {
     "NAME": "Block",
     "DESCRIPTION": "Erhalte !B! Block."
   },
-  "anniv5:MagnumOpus": {
+  "${ModID}:MagnumOpus": {
     "NAME": "Meisterwerk",
-    "DESCRIPTION": "Erhalte !anniv5:m2! anniv5:Inspiration. NL Erhöhe dauerhaft die anniv5:Inspiration dieser Karte um !M!. NL Erschöpfen."
+    "DESCRIPTION": "Erhalte !${ModID}:m2! ${ModID}:Inspiration. NL Erhöhe dauerhaft die ${ModID}:Inspiration dieser Karte um !M!. NL Erschöpfen."
   },
-  "anniv5:SplendidForm": {
+  "${ModID}:SplendidForm": {
     "NAME": "Prächtige Form",
-    "DESCRIPTION": "Zu Beginn deines Zuges, erhalte !anniv5:m2! anniv5:Inspiration."
+    "DESCRIPTION": "Zu Beginn deines Zuges, erhalte !${ModID}:m2! ${ModID}:Inspiration."
   }
 }

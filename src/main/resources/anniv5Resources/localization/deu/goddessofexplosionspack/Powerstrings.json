@@ -1,19 +1,19 @@
 {
-  "anniv5:FalloutPower": {
+  "${ModID}:FalloutPower": {
     "NAME": "Fallout",
     "DESCRIPTIONS": [
       "Immer wenn du eine #yMacht Karte spielst, erleidet das Ziel #b",
       " Schaden."
     ]
   },
-  "anniv5:WaveMotionCannonPower": {
+  "${ModID}:WaveMotionCannonPower": {
     "NAME": "Wellen Kanone",
     "DESCRIPTIONS": [
       "Nächste Runde füge ALLEN Gegnern #b",
       " Schaden zu."
     ]
   },
-  "anniv5:RedshiftPower": {
+  "${ModID}:RedshiftPower": {
     "NAME": "Rotverschiebung",
     "DESCRIPTIONS": [
       "Zu Beginn deines nächsten Zugs, ziehe 1 Karte.",
@@ -21,7 +21,7 @@
       " Züge, ziehe 1 Karte."
     ]
   },
-  "anniv5:CountdownPower": {
+  "${ModID}:CountdownPower": {
     "NAME": "Countdown",
     "DESCRIPTIONS": [
       "Nachdem du #b",
@@ -30,14 +30,14 @@
       " weitere Karten gezogen hast, erhalte [E] [E] und einen #yAtomarer #yRammblock+."
     ]
   },
-  "anniv5:MeltdownPower": {
+  "${ModID}:MeltdownPower": {
     "NAME": "Kernschmelze",
     "DESCRIPTIONS": [
       "Immer wenn du eine #yMacht Karte ziehst, erhalte #b",
       " Energie."
     ]
   },
-  "anniv5:ExplosiveFormPower": {
+  "${ModID}:ExplosiveFormPower": {
     "NAME": "Explosive Form",
     "DESCRIPTIONS": [
       "Zu Beginn jedes Zuges, platziere #yDie #yBombe.",
@@ -45,7 +45,7 @@
       " #yBomben."
     ]
   },
-  "anniv5:EveOfDestructionPower": {
+  "${ModID}:EveOfDestructionPower": {
     "NAME": "Vorabend der Vernichtung",
     "DESCRIPTIONS": [
       "Du verursachst #b",

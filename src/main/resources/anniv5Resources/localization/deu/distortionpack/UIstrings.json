@@ -1,12 +1,12 @@
 {
-  "anniv5:DistortionPack": {
+  "${ModID}:DistortionPack": {
     "TEXT": [
       "Verzerrung",
       "Alles ist so wie es sein sollte.",
       "Alchyr"
     ]
   },
-  "anniv5:DistortionPackHat": {
+  "${ModID}:DistortionPackHat": {
     "TEXT": [
       "Dein marktfähigster Hut.",
       "Mascot Hat"

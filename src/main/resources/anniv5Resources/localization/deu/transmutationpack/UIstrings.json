@@ -1,18 +1,18 @@
 {
-  "anniv5:TransmutationPack": {
+  "${ModID}:TransmutationPack": {
     "TEXT": [
       "Transmutation",
       "Verwandelt Karten vorübergehend in andere Karten, um sie stärker zu machen.",
       "NellyDevo"
     ]
   },
-  "anniv5:TransmuteCardAction": {
+  "${ModID}:TransmuteCardAction": {
     "TEXT": [
       "transmutiere.",
       "Wähle eine neue Karte."
     ]
   },
-  "anniv5:TransmutationPackHat": {
+  "${ModID}:TransmutationPackHat": {
     "TEXT": [
       "Die Haarschlaufen werden gewöhnungsbedürftig sein.",
       "Transmutierte Frisur"

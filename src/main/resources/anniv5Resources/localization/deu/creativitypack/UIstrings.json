@@ -1,12 +1,12 @@
 {
-  "anniv5:CreativityPack": {
+  "${ModID}:CreativityPack": {
     "TEXT": [
       "Kreativität",
       "Erstelle Karten und profitiere von ihrer Erschaffung.",
       "Jedi"
     ]
   },
-  "anniv5:CreativityPackHat": {
+  "${ModID}:CreativityPackHat": {
     "TEXT": [
       "Mit ein wenig Vorstellungskraft kann alles zu einem Hut werden.",
       "Papierboot"

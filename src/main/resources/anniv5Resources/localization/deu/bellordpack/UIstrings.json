@@ -1,12 +1,12 @@
 {
-  "anniv5:BellordPack": {
+  "${ModID}:BellordPack": {
     "TEXT": [
       "Bellord",
       "Besiege Gegner mit verfluchten Karten! Reduziere ihre Stärke zu Staub!",
       "Vex"
     ]
   },
-  "anniv5:BellordPackHat": {
+  "${ModID}:BellordPackHat": {
     "TEXT": [
       "Bete, dass niemand sie läutet.",
       "Rufende Glocke"

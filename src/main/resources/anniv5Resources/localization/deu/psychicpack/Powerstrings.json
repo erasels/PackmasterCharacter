@@ -1,5 +1,5 @@
 {
-  "anniv5:GravityPower": {
+  "${ModID}:GravityPower": {
     "NAME": "Schwerkraft",
     "DESCRIPTIONS": [
       "Wann immer du eine #yverschlossen oder #yunspielbare Karte ziehst, ziehe eine weitere Karte.",
@@ -7,7 +7,7 @@
       " weitere Karten."
     ]
   },
-  "anniv5:DeepDreamPower": {
+  "${ModID}:DeepDreamPower": {
     "NAME": "Tiefer Traum",
     "DESCRIPTIONS": [
       "Wann immer du in diesem Zug eine Karte spielst, erzeuge eine zufällige Karte in deiner Hand #yOkkult.",

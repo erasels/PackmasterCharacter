@@ -1,12 +1,12 @@
 {
-  "anniv5:DicePower": {
+  "${ModID}:DicePower": {
     "NAME": "würfel",
     "DESCRIPTIONS": [
       "Die nächste Karte, die du spielst und die Schaden verursacht oder #yBlock gewinnt, erhöht sich um #b",
       " Punkte."
     ]
   },
-  "anniv5:SkipNextTurnPower": {
+  "${ModID}:SkipNextTurnPower": {
     "NAME": "nächste Runde überspringen",
     "DESCRIPTIONS": [
       "Überspringe deine nächste Runde.",
@@ -14,7 +14,7 @@
       " Runden."
     ]
   },
-  "anniv5:OneTimeAdvantagePower": {
+  "${ModID}:OneTimeAdvantagePower": {
     "NAME": "vorteil",
     "DESCRIPTIONS": [
       "Wirf den nächsten #yWürfel zusätzlich #b1",
@@ -22,7 +22,7 @@
       " Mal und nimm den höchsten Wert."
     ]
   },
-  "anniv5:AdvantagePower": {
+  "${ModID}:AdvantagePower": {
     "NAME": "vorteil",
     "DESCRIPTIONS": [
       "Wenn du #yWürfel wirfst, wirf zusätzlich 1 Mal und nimm den höchsten Wert.",
@@ -30,7 +30,7 @@
       " Mal und nimm den höchsten Wert."
     ]
   },
-  "anniv5:PerceptionCheckPower": {
+  "${ModID}:PerceptionCheckPower": {
     "NAME": "wahrnehmungsprüfung",
     "DESCRIPTIONS": [
       "Zu Beginn deines Zuges, wenn du keine #yWürfel hast, wirf einen D8.",
@@ -38,7 +38,7 @@
       " D8."
     ]
   },
-  "anniv5:JailPower": {
+  "${ModID}:JailPower": {
     "NAME": "gefängnis",
     "DESCRIPTIONS": [
       "In dieser Runde erleidest du keinen Schaden und kannst keine Angriffskarten spielen.",

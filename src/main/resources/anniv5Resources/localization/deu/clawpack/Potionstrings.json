@@ -1,5 +1,5 @@
 {
-  "anniv5:AttackPotionButClaw": {
+  "${ModID}:AttackPotionButClaw": {
     "NAME": "krallenangriffstrank",
     "DESCRIPTIONS": [
       "Wähle #b1 von #b3 zufälligen #yAngriffs Karten aus, um sie deiner Hand hinzuzufügen. Sie kostet in diesem Zug #b0 und wird modifiziert: 'Name erhält Kralle' und 'Erhalte eine #yGeist #yKralle'.",
@@ -8,21 +8,21 @@
       "Wähle einen Angriff aus, um ihn deiner Hand hinzuzufügen."
     ]
   },
-  "anniv5:ClawPowerPotion": {
+  "${ModID}:ClawPowerPotion": {
     "NAME": "schärföl",
     "DESCRIPTIONS": [
       "Modifiziere alle #yAngriffe in deiner Hand: 'Name erhält Kralle'. #ySchärfen #b",
       "."
     ]
   },
-  "anniv5:DrawClawsPotion": {
+  "${ModID}:DrawClawsPotion": {
     "NAME": "eiletrank",
     "DESCRIPTIONS": [
       "Ziehe #b",
       " Karten. Für jede gezogene #yKralle ziehe eine weitere Karte."
     ]
   },
-  "anniv5:GenerateClawsPotion": {
+  "${ModID}:GenerateClawsPotion": {
     "NAME": "fläschchen mit Krallen",
     "DESCRIPTIONS": [
       "Füge #b",

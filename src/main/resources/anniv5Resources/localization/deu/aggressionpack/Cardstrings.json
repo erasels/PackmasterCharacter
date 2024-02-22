@@ -1,42 +1,42 @@
 {
-  "anniv5:Vindicate": {
+  "${ModID}:Vindicate": {
     "NAME": "Rechtfertigung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du in diesem Zug eine Angriffskarte spielst, erhalte !M! Block."
   },
-  "anniv5:DarkLance": {
+  "${ModID}:DarkLance": {
     "NAME": "Dunkle Lanze",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn du in diesem Zug die Haltung gewechselt hast, ziehe !M! Karten."
   },
-  "anniv5:FuriousAssault": {
+  "${ModID}:FuriousAssault": {
     "NAME": "Wütender Angriff",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Betrete anniv5:Aggression."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Betrete ${ModID}:Aggression."
   },
-  "anniv5:Slam": {
+  "${ModID}:Slam": {
     "NAME": "Schmettern",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte Block in Höhe des ungeblockten zugefügten Schadens."
   },
-  "anniv5:Decapitate": {
+  "${ModID}:Decapitate": {
     "NAME": "Kopfabschlagen",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ein Gegner verliert in diesem Zug !M! Stärke. NL Erschöpfen."
   },
-  "anniv5:TitansStrength": {
+  "${ModID}:TitansStrength": {
     "NAME": "Stärke des Titanen",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! Stärke."
   },
-  "anniv5:Epiphany": {
+  "${ModID}:Epiphany": {
     "NAME": "Erleuchtung",
-    "DESCRIPTION": "Wenn du dich in einer Haltung befindest, verlasse sie und ziehe !M! Karten. NL Ansonsten betrete anniv5:Aggression."
+    "DESCRIPTION": "Wenn du dich in einer Haltung befindest, verlasse sie und ziehe !M! Karten. NL Ansonsten betrete ${ModID}:Aggression."
   },
-  "anniv5:InnerFury": {
+  "${ModID}:InnerFury": {
     "NAME": "Innere Wut",
-    "DESCRIPTION": "Immer wenn du anniv5:Aggression betrittst oder verlässt, erhalte !M! temporäre Stärke und !M! Block. NL Betrete anniv5:Aggression."
+    "DESCRIPTION": "Immer wenn du ${ModID}:Aggression betrittst oder verlässt, erhalte !M! temporäre Stärke und !M! Block. NL Betrete ${ModID}:Aggression."
   },
-  "anniv5:LunaticRage": {
+  "${ModID}:LunaticRage": {
     "NAME": "Verrückte Wut",
     "DESCRIPTION": "Ziehe !M! Karten. NL Erhalte [E] [E]. NL Lege alle Nicht-Angriff, Nicht-Status Karten ab. NL Erschöpfen."
   },
-  "anniv5:Animosity": {
+  "${ModID}:Animosity": {
     "NAME": "Feindseligkeit",
-    "DESCRIPTION": "Wenn du anniv5:Aggression betrittst, verlässt oder deinen Zug beginnst, erhalte !M! Stärke."
+    "DESCRIPTION": "Wenn du ${ModID}:Aggression betrittst, verlässt oder deinen Zug beginnst, erhalte !M! Stärke."
   }
 }

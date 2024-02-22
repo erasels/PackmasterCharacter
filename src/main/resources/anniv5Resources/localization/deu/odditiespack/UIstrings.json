@@ -1,18 +1,18 @@
 {
-  "anniv5:OdditiesPack": {
+  "${ModID}:OdditiesPack": {
     "TEXT": [
       "Kuriositäten",
       "Vex macht Vex Sachen. Manage dein Deck mitten im Kampf!",
       "Vex"
     ]
   },
-  "anniv5:OdditiesPackHat": {
+  "${ModID}:OdditiesPackHat": {
     "TEXT": [
       "Gut für ein Abenteuer.",
       "Der Sonnenhut"
     ]
   },
-  "anniv5:AutoBattlerPatches": {
+  "${ModID}:AutoBattlerPatches": {
     "TEXT": [
       "Ich muss Karten von links nach rechts spielen!"
     ]

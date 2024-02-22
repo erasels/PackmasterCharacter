@@ -1,5 +1,5 @@
   {
-    "anniv5:SchemePower": {
+    "${ModID}:SchemePower": {
       "NAME": "Verschwörung",
       "DESCRIPTIONS": [
         "Die nächsten #b",
@@ -7,7 +7,7 @@
         "Die nächste Karte, die in diesem Zug gespielt wird und #b1 oder weniger kostet, werden 2 Mal gespielt."
       ]
     },
-    "anniv5:SchemeNextTurnPower": {
+    "${ModID}:SchemeNextTurnPower": {
       "NAME": "Verschwörung",
       "DESCRIPTIONS": [
         "Nächste Runde werden die ersten #b",
@@ -15,7 +15,7 @@
         "Nächste Runde wird die erste Karte, die #b1 oder weniger kostet, 2 Mal gespielt."
       ]
     },
-    "anniv5:TomeOfIntellectPower": {
+    "${ModID}:TomeOfIntellectPower": {
       "NAME": "tome des Intellekts",
       "DESCRIPTIONS": [
         "Zu Beginn jedes Zuges werden #b",

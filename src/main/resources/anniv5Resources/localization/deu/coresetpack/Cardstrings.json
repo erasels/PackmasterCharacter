@@ -1,43 +1,43 @@
 {
-  "anniv5:BackpackSmack": {
+  "${ModID}:BackpackSmack": {
     "NAME": "Rucksack Hieb",
-    "DESCRIPTION": "Fügt X-mal !D! Schaden zu. NL anniv5:Synergie: Verursache X-mal Schwach und Verwundbar."
+    "DESCRIPTION": "Fügt X-mal !D! Schaden zu. NL ${ModID}:Synergie: Verursache X-mal Schwach und Verwundbar."
   },
-  "anniv5:BoosterTutor": {
+  "${ModID}:BoosterTutor": {
     "NAME": "Motivierter Mentor",
     "DESCRIPTION": "Füge !M! zufällige Karten aus verschiedenen Packs von deinem Nachziehstapel deiner Hand hinzu."
   },
-  "anniv5:DestinyDraw": {
+  "${ModID}:DestinyDraw": {
     "NAME": "Schicksalszug",
     "DESCRIPTION": "Wähle 1 von 3 zufälligen Karten aus verschiedenen Packs aus, um sie deiner Hand hinzuzufügen. Sie kostet in diesem Zug 0. Erschöpfen."
   },
-  "anniv5:Flick": {
+  "${ModID}:Flick": {
     "NAME": "Flinke Bewegung",
     "DESCRIPTION": "Fügt !D! Schaden zu. NL Werfe eine Karte ab. NL Verursache anhand der Kosten der abgeworfenen Karte weitere Male !D! Schaden."
   },
-  "anniv5:MayhemForm": {
+  "${ModID}:MayhemForm": {
     "NAME": "Unnachgiebige Form",
     "DESCRIPTION": "Einmal pro Runde, wenn du 2 oder weniger Karten auf der Hand hast, ziehe 2 Karten und erhalte [E].",
     "UPGRADE_DESCRIPTION": "Einmal pro Runde, wenn du 2 oder weniger Karten auf der Hand hast, ziehe 2 Karten und erhalte !M! [E]."
   },
-  "anniv5:RippedPecs": {
+  "${ModID}:RippedPecs": {
     "NAME": "Gestählte Muskeln",
-    "DESCRIPTION": "Erhalte 1 Stärke. NL anniv5:Synergie: Erhalte stattdessen !M! Stärke."
+    "DESCRIPTION": "Erhalte 1 Stärke. NL ${ModID}:Synergie: Erhalte stattdessen !M! Stärke."
   },
-  "anniv5:Showoff": {
+  "${ModID}:Showoff": {
     "NAME": "Angeber",
     "DESCRIPTION": "Erhalte !B! Block. NL Nächste Runde ziehe zusätzlich 2 Karten."
   },
-  "anniv5:Sideboard": {
+  "${ModID}:Sideboard": {
     "NAME": "Positionswechsel",
     "DESCRIPTION": "Erhalte !B! Block. NL Lege eine Karte aus deinem Abwurfstapel oben auf deinen Nachziehstapel."
   },
-  "anniv5:SmithingHammer": {
+  "${ModID}:SmithingHammer": {
     "NAME": "Schmiedehammer",
     "DESCRIPTION": "Fügt !M! Mal !D! Schaden zu. NL Verbessere 2 zufällige Karten in deiner Hand."
   },
-  "anniv5:Synergize": {
+  "${ModID}:Synergize": {
     "NAME": "Synergieren",
-    "DESCRIPTION": "Verursache !D! Schaden an ALLEN Gegnern. NL anniv5:Synergie: Erhalte !B! Block."
+    "DESCRIPTION": "Verursache !D! Schaden an ALLEN Gegnern. NL ${ModID}:Synergie: Erhalte !B! Block."
   }
 }

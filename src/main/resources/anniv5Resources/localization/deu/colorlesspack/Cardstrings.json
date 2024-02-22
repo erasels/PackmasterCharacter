@@ -1,64 +1,64 @@
 {
-  "anniv5:Manifest": {
+  "${ModID}:Manifest": {
     "NAME": "Manifestation",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Spiele eine Karte mit 0 oder 1 Kosten aus deinem Ablagestapel.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Karte zum Spielen aus."
     ]
   },
-  "anniv5:Bunker": {
+  "${ModID}:Bunker": {
     "NAME": "Bunker",
     "DESCRIPTION": "Erhalte !B! Block. NL Am Anfang deines nächsten Zuges füge deiner Hand einen *Golf *Ball hinzu."
   },
-  "anniv5:GolfBall": {
+  "${ModID}:GolfBall": {
     "NAME": "Golfball",
     "DESCRIPTION": "Flüchtig. NL Füge Schaden in Höhe des ungenutzten Blocks vom letzten Zug zu. NL Erschöpfen.",
     "EXTENDED_DESCRIPTION": [
       " NL (Fügt !D! Schaden zu.)"
     ]
   },
-  "anniv5:Slapstick": {
+  "${ModID}:Slapstick": {
     "NAME": "Slapstick",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Mische zufällig eine von *Dramatischer *Auftritt, *Straucheln oder *Blenden in deinen Nachziehstapel."
   },
-  "anniv5:Ghost": {
+  "${ModID}:Ghost": {
     "NAME": "Geist",
     "DESCRIPTION": "Am Ende seines Zuges verliert der Gegner !M! LP. NL Startup: Verkleide diese Karte als eine andere Karte."
   },
-  "anniv5:LunchBox": {
+  "${ModID}:LunchBox": {
     "NAME": "Lunchbox",
-    "DESCRIPTION": "Erhalte !B! Block. NL Deine nächste farblose Karte wird in diesem Zug zweimal gespielt. NL anniv5:Aufnehmen: Heile 3 LP."
+    "DESCRIPTION": "Erhalte !B! Block. NL Deine nächste farblose Karte wird in diesem Zug zweimal gespielt. NL ${ModID}:Aufnehmen: Heile 3 LP."
   },
-  "anniv5:ColorlessMastery": {
+  "${ModID}:ColorlessMastery": {
     "NAME": "Farblose Meisterschaft",
     "DESCRIPTION": "Immer wenn du eine farblose Karte spielst, erhöhe deine Stärke um 1.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Immer wenn du eine farblose Karte spielst, erhöhe deine Stärke um 1."
   },
-  "anniv5:VisitAMonastery": {
+  "${ModID}:VisitAMonastery": {
     "NAME": "Besuch eines Klosters",
     "DESCRIPTION": "Am Anfang deiner nächsten 3 Züge füge deiner Hand hinzu: NL *Wahnsinn, *Reinheit, NL *Apotheose.",
     "UPGRADE_DESCRIPTION": "Angeboren. Am Anfang deiner nächsten 3 Züge füge deiner Hand hinzu: NL *Wahnsinn, *Reinheit, NL *Apotheose."
   },
-  "anniv5:ThePrism": {
+  "${ModID}:ThePrism": {
     "NAME": "Das Prisma",
     "DESCRIPTION": "Füge einem zufälligen Gegner !M! Mal !D! Schaden zu. Startup: Teile diese Karte in deiner Hand und jedem Stapel auf.",
     "UPGRADE_DESCRIPTION": "Füge einem zufälligen Gegner!M! Mal !D! Schaden  zu. Startup: Teile diese Karte in deiner Hand und jedem Stapel auf."
   },
-  "anniv5:PrismShard": {
+  "${ModID}:PrismShard": {
     "NAME": "Prismascherbe",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Nach dem Spielen von 3 Scherben füge *Das *Prisma deiner Hand hinzu. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Nach dem Spielen von 3 Scherben füge *Das *Prisma+ deiner Hand hinzu. NL Erschöpfen."
   },
-  "anniv5:RealityMaster": {
+  "${ModID}:RealityMaster": {
     "NAME": "MC Reality",
     "DESCRIPTION": "Du kennst das Spiel; NL wenn du eine Karte machst, NL gib ihr ein Upgrade NL für die harte Arbeit!",
     "UPGRADE_DESCRIPTION": "Angeboren, das ist großartig! NL Du kennst das Spiel; NL wenn du eine Karte machst, NL gib ihr ein Upgrade NL für die harte Arbeit!"
   },
-  "anniv5:AdventurersSword": {
+  "${ModID}:AdventurersSword": {
     "NAME": "Abenteuerschwert",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Mische eine *Dreieinigkeit in deinen Nachziehstapel. NL Wenn du maximale LP hast, verliert der Gegner !M! LP."
   },
-  "anniv5:Triforce": {
+  "${ModID}:Triforce": {
     "NAME": "Dreieinigkeit",
     "DESCRIPTION": "Erhalte 1 Stärke. NL Ziehe 1 Karte."
   }

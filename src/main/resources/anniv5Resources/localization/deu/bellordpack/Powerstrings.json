@@ -1,12 +1,12 @@
 {
-  "anniv5:CuckooPower": {
+  "${ModID}:CuckooPower": {
     "NAME": "kuckuck",
     "DESCRIPTIONS": [
       "Immer wenn du eine #rFluch Karte ziehst, füge einem zufälligen Feind #b",
       " Schaden zu."
     ]
   },
-  "anniv5:LikeClockworkPower": {
+  "${ModID}:LikeClockworkPower": {
     "NAME": "wie ein Uhrwerk",
     "DESCRIPTIONS": [
       "Am Ende deines Zuges erhältst du #b",

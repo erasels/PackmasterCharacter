@@ -1,5 +1,5 @@
 {
-  "anniv5:ExampleTwoAmountPower": {
+  "${ModID}:ExampleTwoAmountPower": {
     "NAME": "Beispiel 2",
     "DESCRIPTIONS": [
       "Zu Beginn deines Zuges erhältst du #b",
@@ -7,7 +7,7 @@
       " #yGeschicklichkeit."
     ]
   },
-  "anniv5:ConjurePackPower": {
+  "${ModID}:ConjurePackPower": {
     "NAME": "Kartenbeschwörung",
     "DESCRIPTIONS": [
       "Zu Beginn der nächsten #b",
@@ -15,13 +15,13 @@
       " Kartenpack hinzu."
     ]
   },
-  "anniv5:TempHPRegenPower": {
+  "${ModID}:TempHPRegenPower": {
     "NAME": "Ablation",
     "DESCRIPTIONS": [
       "Am Ende deines Zuges erhältst du #b%s #yTemporäre #yHP, und reduziere dies dann um #b1."
     ]
   },
-  "anniv5:RuinPower": {
+  "${ModID}:RuinPower": {
     "NAME": "Ruin",
     "DESCRIPTIONS": [
       "Das nächste Mal, wenn dieser Gegner unblockierten Angriffsschaden erleidet, verliert er #b",

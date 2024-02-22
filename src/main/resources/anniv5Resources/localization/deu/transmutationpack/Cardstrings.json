@@ -1,89 +1,89 @@
 {
-  "anniv5:AmalgamateWaters": {
+  "${ModID}:AmalgamateWaters": {
     "NAME": "Wasservermischung",
-    "DESCRIPTION": "Ziehe eine anniv5:Formbare Karte. NL Erhalte anniv5:Formbare Effekte von einer beliebigen Anzahl von Karten auf deiner Hand und anniv5:Transmutiere sie dann.",
-    "UPGRADE_DESCRIPTION": "Ziehe !M! anniv5:Formbare Karten. NL Erhalte anniv5:Formbare Effekte von einer beliebigen Anzahl von Karten auf deiner Hand und anniv5:Transmutiere sie dann."
+    "DESCRIPTION": "Ziehe eine ${ModID}:Formbare Karte. NL Erhalte ${ModID}:Formbare Effekte von einer beliebigen Anzahl von Karten auf deiner Hand und ${ModID}:Transmutiere sie dann.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! ${ModID}:Formbare Karten. NL Erhalte ${ModID}:Formbare Effekte von einer beliebigen Anzahl von Karten auf deiner Hand und ${ModID}:Transmutiere sie dann."
   },
-  "anniv5:CrystalLattice": {
+  "${ModID}:CrystalLattice": {
     "NAME": "Kristallgitter",
-    "DESCRIPTION": "anniv5:Transmutiere eine Karte. Füge deiner Hand !M! zusätzliche Kopien der neuen Karte hinzu. NL Erschöpfen."
+    "DESCRIPTION": "${ModID}:Transmutiere eine Karte. Füge deiner Hand !M! zusätzliche Kopien der neuen Karte hinzu. NL Erschöpfen."
   },
-  "anniv5:CrystalResonance": {
+  "${ModID}:CrystalResonance": {
     "NAME": "Kristallschwingung",
-    "DESCRIPTION": "Immer wenn du anniv5:Transmutierst, erhalte !M! Stärke."
+    "DESCRIPTION": "Immer wenn du ${ModID}:Transmutierst, erhalte !M! Stärke."
   },
-  "anniv5:Drench": {
+  "${ModID}:Drench": {
     "NAME": "Durchnässt",
-    "DESCRIPTION": "anniv5:Formbar: Erhalte !B! Block. NL anniv5:Formbar: Füge !D! Schaden zu."
+    "DESCRIPTION": "${ModID}:Formbar: Erhalte !B! Block. NL ${ModID}:Formbar: Füge !D! Schaden zu."
   },
-  "anniv5:FrozenCapsule": {
+  "${ModID}:FrozenCapsule": {
     "NAME": "Gefrorene Kapsel",
-    "DESCRIPTION": "anniv5:Formbar: Füge !D! Schaden zu. NL anniv5:Formbar: Wenn anniv5:Transmutiert, ziehe 1 Karte.",
-    "UPGRADE_DESCRIPTION": "anniv5:Formbar: Füge !D! Schaden zu. NL anniv5:Formbar: Wenn anniv5:Transmutiert, ziehe !M! Karten."
+    "DESCRIPTION": "${ModID}:Formbar: Füge !D! Schaden zu. NL ${ModID}:Formbar: Wenn ${ModID}:Transmutiert, ziehe 1 Karte.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Formbar: Füge !D! Schaden zu. NL ${ModID}:Formbar: Wenn ${ModID}:Transmutiert, ziehe !M! Karten."
   },
-  "anniv5:GhostlyMist": {
+  "${ModID}:GhostlyMist": {
     "NAME": "Geisterhafter Nebel",
-    "DESCRIPTION": "anniv5:Formbar: Frei spielbar. NL anniv5:Formbar: anniv5:Transmutiere diese Karte.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL anniv5:Formbar: Frei spielbar. NL anniv5:Formbar: anniv5:Transmutiere diese Karte."
+    "DESCRIPTION": "${ModID}:Formbar: Frei spielbar. NL ${ModID}:Formbar: ${ModID}:Transmutiere diese Karte.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL ${ModID}:Formbar: Frei spielbar. NL ${ModID}:Formbar: ${ModID}:Transmutiere diese Karte."
   },
-  "anniv5:GlacialSynthesis": {
+  "${ModID}:GlacialSynthesis": {
     "NAME": "Gletschersynthese",
-    "DESCRIPTION": "Erhalte !B! Block. NL anniv5:Transmutiere eine Karte.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL anniv5:Transmutiere bis zu !M! Karten."
+    "DESCRIPTION": "Erhalte !B! Block. NL ${ModID}:Transmutiere eine Karte.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL ${ModID}:Transmutiere bis zu !M! Karten."
   },
-  "anniv5:SearingSynthesis": {
+  "${ModID}:SearingSynthesis": {
     "NAME": "Schmorende Synthese",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Transmutiere eine Karte.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL anniv5:Transmutiere bis zu !M! Karten."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Transmutiere eine Karte.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Transmutiere bis zu !M! Karten."
   },
-  "anniv5:ViscousShell": {
+  "${ModID}:ViscousShell": {
     "NAME": "Viskose Hülle",
-    "DESCRIPTION": "anniv5:Formbar: Erhalte !B! Block. NL anniv5:Transmutiere diese Karte."
+    "DESCRIPTION": "${ModID}:Formbar: Erhalte !B! Block. NL ${ModID}:Transmutiere diese Karte."
   },
-  "anniv5:DimensionalIcicles": {
+  "${ModID}:DimensionalIcicles": {
     "NAME": "Dimensionale Eiszapfen",
     "DESCRIPTION": "Füge !B! Mal !D! Schaden zu. Die Anzahl der Treffer wird von Block Modifikatoren beeinflusst."
   },
-  "anniv5:AbstractExtraEffectModifier": {
+  "${ModID}:AbstractExtraEffectModifier": {
     "EXTENDED_DESCRIPTION": [
-      "anniv5:Formbar: ",
+      "${ModID}:Formbar: ",
       " ",
       " Mal.",
       "."
     ]
   },
-  "anniv5:DamageEffect": {
+  "${ModID}:DamageEffect": {
     "EXTENDED_DESCRIPTION": [
       "Füge ",
       " Schaden zu"
     ]
   },
-  "anniv5:DrawWhenTransmutedEffect": {
+  "${ModID}:DrawWhenTransmutedEffect": {
     "EXTENDED_DESCRIPTION": [
-      "Wenn anniv5:Transmutiert, ziehe 1 Karte.",
-      "Wenn anniv5:Transmutiert, ziehe ",
+      "Wenn ${ModID}:Transmutiert, ziehe 1 Karte.",
+      "Wenn ${ModID}:Transmutiert, ziehe ",
       " Karten."
     ]
   },
-  "anniv5:FreeToPlayEffect": {
+  "${ModID}:FreeToPlayEffect": {
     "EXTENDED_DESCRIPTION": [
       "Frei spielbar."
     ]
   },
-  "anniv5:GainBlockEffect": {
+  "${ModID}:GainBlockEffect": {
     "EXTENDED_DESCRIPTION": [
       "Erhalte ",
       " Block"
     ]
   },
-  "anniv5:ReboundSelfEffect": {
+  "${ModID}:ReboundSelfEffect": {
     "EXTENDED_DESCRIPTION": [
       "Mische diese Karte zurück in deinen Nachziehstapel."
     ]
   },
-  "anniv5:TransmuteSelfEffect": {
+  "${ModID}:TransmuteSelfEffect": {
     "EXTENDED_DESCRIPTION": [
-      "anniv5:Transmutiere diese Karte."
+      "${ModID}:Transmutiere diese Karte."
     ]
   }
 }

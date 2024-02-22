@@ -1,20 +1,20 @@
 {
-  "anniv5:PrimeDirectivePower": {
+  "${ModID}:PrimeDirectivePower": {
     "NAME": "hauptziel",
     "DESCRIPTIONS": [
       "Deine Angriffskarten haben #yUngerade: Füge #b",
       " zusätzlichen Schaden zu.",
-      " NL anniv5:Ungerade:",
+      " NL ${ModID}:Ungerade:",
       " (+",
       " Schaden)."
     ]
   },
-  "anniv5:GammaWardPower": {
+  "${ModID}:GammaWardPower": {
     "NAME": "gamma Schutz",
     "DESCRIPTIONS": [
       "Deine nächste Fertigkeit in diesem Zug hat #yGerade: Erhalte #b",
       " #yBlock.",
-      " NL anniv5:Gerade:",
+      " NL ${ModID}:Gerade:",
       " Erhalte",
       " Block."
     ]

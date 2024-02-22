@@ -1,11 +1,11 @@
 {
-  "anniv5:AutoBattlerPower": {
+  "${ModID}:AutoBattlerPower": {
     "NAME": "Auto Battler",
     "DESCRIPTIONS": [
       "Du spielst Karten automatisch von links nach rechts auf den vorderen Gegner."
     ]
   },
-  "anniv5:FinalFormPower": {
+  "${ModID}:FinalFormPower": {
     "NAME": "Final Form",
     "DESCRIPTIONS": [
       "Zu Beginn der nächsten #b",

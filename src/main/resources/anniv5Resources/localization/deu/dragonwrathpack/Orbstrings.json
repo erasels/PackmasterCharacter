@@ -1,5 +1,5 @@
 {
-  "anniv5:Light": {
+  "${ModID}:Light": {
     "NAME": "licht",
     "DESCRIPTION": [
       "#yPassive: Am Ende deines Zugs, erhalte #b",

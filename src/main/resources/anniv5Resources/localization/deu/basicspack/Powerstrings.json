@@ -1,12 +1,12 @@
 {
-  "anniv5:OckhamsPower": {
+  "${ModID}:OckhamsPower": {
     "NAME": "ockhams Rasiermesser",
     "DESCRIPTIONS": [
       "Immer wenn du eine #yBasis Karte spielst, füge allen Gegnern #b",
       " Schaden zu."
     ]
   },
-  "anniv5:SimpleTrickPower": {
+  "${ModID}:SimpleTrickPower": {
     "NAME": "einfacher Trick",
     "DESCRIPTIONS": [
       "Das nächste Mal, wenn du eine #yKartenzauberei spielst, erhalte [E].",

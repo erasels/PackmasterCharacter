@@ -1,5 +1,5 @@
 {
-  "anniv5:PrismaticPack": {
+  "${ModID}:PrismaticPack": {
     "TEXT": [
       "Prismatisch",
       "Konzentriert sich auf die Herstellung und Nutzung von Karten in verschiedenen Farben.",
@@ -7,7 +7,7 @@
       "Karten Kunst von MtG"
     ]
   },
-  "anniv5:PrismaticPackHat": {
+  "${ModID}:PrismaticPackHat": {
     "TEXT": [
       "Die Kron juwelen von dir.",
       "Regenbogen Juwel"

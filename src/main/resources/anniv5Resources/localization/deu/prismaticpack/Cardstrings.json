@@ -1,45 +1,45 @@
 {
-  "anniv5:SwordAndDagger": {
+  "${ModID}:SwordAndDagger": {
     "NAME": "Schwert und Dolch",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Füge deiner Hand !M! *Messer hinzu.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Füge deiner Hand !M! *Messer hinzu."
   },
-  "anniv5:PrismaticBarrier": {
+  "${ModID}:PrismaticBarrier": {
     "NAME": "Prismatische Barriere",
-    "DESCRIPTION": "Erhalte !B! Block. NL Wenn du in diesem Zug eine anniv5:unterschiedlich\u00a0farbige Karte gespielt hast, erhalte !M! *Panzerrüstung und erschöpfe sie."
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn du in diesem Zug eine ${ModID}:unterschiedlich\u00a0farbige Karte gespielt hast, erhalte !M! *Panzerrüstung und erschöpfe sie."
   },
-  "anniv5:GrabBag": {
+  "${ModID}:GrabBag": {
     "NAME": "Griff in die Tasche",
-    "DESCRIPTION": "Füge deiner Hand !M! zufällige anniv5:unterschiedlich\u00a0farbige Karten hinzu. NL Erschöpfen."
+    "DESCRIPTION": "Füge deiner Hand !M! zufällige ${ModID}:unterschiedlich\u00a0farbige Karten hinzu. NL Erschöpfen."
   },
-  "anniv5:ShimmeringStrike": {
+  "${ModID}:ShimmeringStrike": {
     "NAME": "Schimmernder Schlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Für jede, in diesem Kampf gespielte anniv5:unterschiedlich\u00a0farbige Karte, verursache !M! zusätzlichen Schaden."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Für jede, in diesem Kampf gespielte ${ModID}:unterschiedlich\u00a0farbige Karte, verursache !M! zusätzlichen Schaden."
   },
-  "anniv5:ExoticKnowledge": {
+  "${ModID}:ExoticKnowledge": {
     "NAME": "Exotisches Wissen",
-    "DESCRIPTION": "Ziehe !M! Karten. NL Wenn du in diesem Zug eine anniv5:unterschiedlich\u00a0farbige Karte gespielt hast, ziehe zusätzlich !anniv5:m2! Karten."
+    "DESCRIPTION": "Ziehe !M! Karten. NL Wenn du in diesem Zug eine ${ModID}:unterschiedlich\u00a0farbige Karte gespielt hast, ziehe zusätzlich !${ModID}:m2! Karten."
   },
-  "anniv5:ChoiceCut": {
+  "${ModID}:ChoiceCut": {
     "NAME": "Auserwählter Schnitt",
     "DESCRIPTION": "Wähle eine der Karten *Kinnhaken, *Dunkles *Schicksal, *Jagd oder *Den *Himmel *erreichen aus, um sie deiner Hand hinzuzufügen. In diesem Zug kostet sie 0. NL Erschöpfen.",
     "UPGRADE_DESCRIPTION": "Wähle eine der Karten *Kinnhaken+, *Dunkles *Schicksal+, *Jagd+ oder *Den *Himmel *erreichen+ aus, um sie deiner Hand hinzuzufügen. In diesem Zug kostet sie 0. NL Erschöpfen."
   },
-  "anniv5:QuirionDryad": {
+  "${ModID}:QuirionDryad": {
     "NAME": "Quirion Dryade",
     "DESCRIPTION": "Erhalte jedes Mal, wenn du in diesem Kampf eine Karte einer neuen Farbe spielst, !M! Stärke und !M! Geschicklichkeit."
   },
-  "anniv5:ManyAsOne": {
+  "${ModID}:ManyAsOne": {
     "NAME": "Viele wie Einer",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge alle anniv5:unterschiedlich\u00a0farbige Karten aus deinem Ablagestapel deiner Hand hinzu."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge alle ${ModID}:unterschiedlich\u00a0farbige Karten aus deinem Ablagestapel deiner Hand hinzu."
   },
-  "anniv5:PremiumSelection": {
+  "${ModID}:PremiumSelection": {
     "NAME": "Premium Auswahl",
-    "DESCRIPTION": "Wähle 1 von !M! zufälligen anniv5:unterschiedlich\u00a0farbige seltenen Karten aus, um sie deiner Hand hinzuzufügen. In diesem Zug kostet sie 0. NL Erschöpfen."
+    "DESCRIPTION": "Wähle 1 von !M! zufälligen ${ModID}:unterschiedlich\u00a0farbige seltenen Karten aus, um sie deiner Hand hinzuzufügen. In diesem Zug kostet sie 0. NL Erschöpfen."
   },
-  "anniv5:FlawlessPrism": {
+  "${ModID}:FlawlessPrism": {
     "NAME": "Makelloses Prisma",
-    "DESCRIPTION": "Am Anfang deines Zuges füge deiner Hand !M! zufällige anniv5:unterschiedlich\u00a0farbige Macht Karte hinzu.",
-    "UPGRADE_DESCRIPTION": "Am Anfang deines Zuges füge deiner Hand !M! zufällige anniv5:unterschiedlich\u00a0farbige Macht Karte hinzu."
+    "DESCRIPTION": "Am Anfang deines Zuges füge deiner Hand !M! zufällige ${ModID}:unterschiedlich\u00a0farbige Macht Karte hinzu.",
+    "UPGRADE_DESCRIPTION": "Am Anfang deines Zuges füge deiner Hand !M! zufällige ${ModID}:unterschiedlich\u00a0farbige Macht Karte hinzu."
   }
 }

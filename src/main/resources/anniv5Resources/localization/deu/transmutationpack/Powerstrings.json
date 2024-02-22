@@ -1,8 +1,8 @@
 {
-  "anniv5:CrystalResonancePower": {
+  "${ModID}:CrystalResonancePower": {
     "NAME": "Kristallschwingung",
     "DESCRIPTIONS": [
-      "Immer wenn du anniv5:Transmutierst, erhalte #b", " #yStärke"
+      "Immer wenn du ${ModID}:Transmutierst, erhalte #b", " #yStärke"
     ]
   }
 }

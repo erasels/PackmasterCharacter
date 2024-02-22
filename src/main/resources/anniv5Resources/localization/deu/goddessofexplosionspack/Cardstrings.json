@@ -1,49 +1,49 @@
 {
-  "anniv5:ChainReaction": {
+  "${ModID}:ChainReaction": {
     "NAME": "Kettenreaktion",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Verursache !M! anniv5:Fallout."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Verursache !M! ${ModID}:Fallout."
   },
-  "anniv5:WaveMotionCannon": {
+  "${ModID}:WaveMotionCannon": {
     "NAME": "Wellen Kanone",
     "DESCRIPTION": "Erhalte !B! Block. NL Füge ALLEN Gegnern in der nächsten Runde !M! Schaden zu."
   },
-  "anniv5:Redshift": {
+  "${ModID}:Redshift": {
     "NAME": "Rotverschiebung",
     "DESCRIPTION": "Erhalte !B! Block. NL Ziehe zu Beginn deiner nächsten !M! Züge 1 Karte."
   },
-  "anniv5:Countdown": {
+  "${ModID}:Countdown": {
     "NAME": "Countdown",
     "DESCRIPTION": "Nachdem du !M! weitere Karten gezogen hast, erhalte [E] [E] und *Atomarer *Rammblock.",
     "UPGRADE_DESCRIPTION": "Nachdem du !M! weitere Karten gezogen hast, erhalte [E] [E] und *Atomarer *Rammblock+."
   },
-  "anniv5:AtomicPiledriver": {
+  "${ModID}:AtomicPiledriver": {
     "NAME": "Atomarer Rammblock",
-    "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Verursache !M! anniv5:Fallout. NL Erschöpfen."
+    "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Verursache !M! ${ModID}:Fallout. NL Erschöpfen."
   },
-  "anniv5:NuclearFusion": {
+  "${ModID}:NuclearFusion": {
     "NAME": "Kernfusion",
     "DESCRIPTION": "Spiele zweimal eine Karte aus deiner Hand mit Kosten von X oder weniger. Füge deiner Hand X *Brennen hinzu.",
     "UPGRADE_DESCRIPTION": "Spiele zweimal eine Karte aus deiner Hand mit Kosten von X+1 oder weniger. Füge deiner Hand X *Brennen hinzu."
   },
-  "anniv5:MoreExplosions": {
+  "${ModID}:MoreExplosions": {
     "NAME": "Mehr Explosionen!",
     "DESCRIPTION": "Ziehe !M! Karte. NL Mische !M! zufällige Fähigkeit in deinen Nachziehstapel.",
     "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Mische !M! zufällige Fähigkeiten in deinen Nachziehstapel."
   },
-  "anniv5:Meltdown": {
+  "${ModID}:Meltdown": {
     "NAME": "Kernschmelze",
     "DESCRIPTION": "Wenn du eine Macht Karte ziehst, erhalte [E].",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Wenn du eine Macht Karte ziehst, erhalte [E]."
   },
-  "anniv5:ExplosiveForm": {
+  "${ModID}:ExplosiveForm": {
     "NAME": "Explosive Form",
     "DESCRIPTION": "Zu Beginn jedes Zugs platziere *Die *Bombe."
   },
-  "anniv5:KillerQueen": {
+  "${ModID}:KillerQueen": {
     "NAME": "Killer Queen",
     "DESCRIPTION": "Wähle eine Karte auf deiner Hand aus. Immer wenn du sie spielst, füge ALLEN Gegnern !M! Schaden zu."
   },
-  "anniv5:EveOfDestruction": {
+  "${ModID}:EveOfDestruction": {
     "NAME": "Vorabend der Vernichtung",
     "DESCRIPTION": "Du verursachst 100% mehr Nichtangriffsschaden.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Du verursachst 100% mehr Nichtangriffsschaden."
