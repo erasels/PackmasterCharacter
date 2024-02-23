@@ -3,8 +3,6 @@ package thePackmaster.actions.ringofpainpack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -14,52 +12,47 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 public class HollowerAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
+    private final boolean isRandom;
 
-    public HollowerAction(int amount) {
+    public HollowerAction(int amount, boolean isRandom) {
         this.p = AbstractDungeon.player;
         this.setValues(this.p, AbstractDungeon.player, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
+        this.isRandom = isRandom;
     }
 
+    @Override
     public void update() {
-        AbstractCard card;
         if (this.duration == Settings.ACTION_DUR_MED) {
-            CardGroup tmp = new CardGroup(CardGroupType.UNSPECIFIED);
-
-            for (AbstractCard abstractCard : this.p.drawPile.group) {
-                card = abstractCard;
-                tmp.addToTop(card);
-            }
-
-            tmp.sortAlphabetically(true);
-            tmp.sortByRarityPlusStatusCardType(false);
-
-            if (tmp.size() == 0) {
+            if (this.p.hand.size() == 0) {
                 this.isDone = true;
-            } else if (tmp.size() <= amount) {
-                for (AbstractCard abstractCard : tmp.group) {
-                    this.p.drawPile.moveToExhaustPile(abstractCard);
+            } else if (this.p.hand.size() <= this.amount) {
+                for(int i = 0; i < this.p.hand.size(); ++i) {
+                    AbstractCard c = this.p.hand.getTopCard();
+                    this.p.hand.moveToExhaustPile(c);
                 }
                 onExhaustedCard();
-                this.isDone = true;
+            } else if (this.isRandom) {
+                for(int i = 0; i < this.amount; ++i) {
+                    this.p.hand.moveToExhaustPile(this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng));
+                }
+                onExhaustedCard();
             } else {
-                AbstractDungeon.gridSelectScreen.open(tmp, this.amount, TEXT[0], false);
+                AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, false);
                 this.tickDuration();
+                return;
             }
-        } else {
-            if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
-                for (AbstractCard abstractCard : AbstractDungeon.gridSelectScreen.selectedCards) {
-                    card = abstractCard;
-                    card.unhover();
-                    this.p.drawPile.moveToExhaustPile(card);
-                }
-                AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                onExhaustedCard();
-            }
-            this.tickDuration();
         }
+        if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
+                this.p.hand.moveToExhaustPile(c);
+            }
+            AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+            onExhaustedCard();
+        }
+        this.tickDuration();
     }
 
     private void onExhaustedCard() {
