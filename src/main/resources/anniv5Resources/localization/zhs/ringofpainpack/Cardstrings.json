@@ -33,8 +33,8 @@
   },
   "${ModID}:Hollower": {
     "NAME": "虚空怪",
-    "DESCRIPTION": "选择 消耗 抽牌堆一张牌。 NL 若成功 消耗 ，将弃牌堆一张牌返回手牌并附加 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL 选择 消耗 抽牌堆一张牌。 NL 若成功 消耗 ，将弃牌堆一张牌返回手牌并附加 消耗 。"
+    "DESCRIPTION": "消耗 一张随机手牌。 NL 将弃牌堆一张牌返回手牌。",
+    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 将弃牌堆一张牌返回手牌。"
   },
   "${ModID}:Owl": {
     "NAME": "猫头鹰",
