@@ -17,7 +17,7 @@ public class Augment extends AbstractOrbCard {
 
     public Augment() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        this.baseBlock = this.block = 5;
+        this.baseBlock = this.block = 7;
     }
 
     @Override
