@@ -19,6 +19,5 @@ public class Hollower extends AbstractRingOfPainCard {
     }
 
     public void upp() {
-        selfRetain = true;
     }
 }
