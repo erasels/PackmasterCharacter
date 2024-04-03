@@ -1,0 +1,26 @@
+{
+  "${ModID}:Dazzle": {
+    "NAME": "Dazzle",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
+  "${ModID}:Amaze": {
+  "NAME": "Amaze",
+  "DESCRIPTION": "All enemies lose !M! HP for each stack of Weak they have."
+},"${ModID}:Grandstand": {
+  "NAME": "Grandstand",
+  "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] .",
+  "UPGRADE_DESCRIPTION":  "Gain !B! Block. NL Next turn, gain [E] [E] ."
+},"${ModID}:FlashPower": {
+  "NAME": "Flash Powder",
+  "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies. NL Exhaust."
+},"${ModID}:ForMyNextTrick": {
+  "NAME": "For My Next Trick...",
+  "DESCRIPTION": "Add a random Power to your hand. NL Whenever you play a Power, gain !M! Block."
+},"${ModID}:SeeMe": {
+  "NAME": "Now You See Me...",
+  "DESCRIPTION": "Gain !M! Vigor. NL Next turn, add a *Now *You *Don't to your hand."
+},"${ModID}:NowYouDont": {
+  "NAME": "Now You Don't",
+  "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Exhaust."
+}
+}

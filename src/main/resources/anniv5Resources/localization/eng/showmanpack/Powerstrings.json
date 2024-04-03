@@ -1,0 +1,15 @@
+{
+  "${ModID}:NextTrickPower": {
+    "NAME": "For my next Trick...",
+    "DESCRIPTIONS": [
+      "Whenever you play a power, gain #b",
+      " Block."
+    ]
+  },"${ModID}:NowYouDontPower": {
+  "NAME": "NowYouDon't",
+  "DESCRIPTIONS": [
+    "At the start of your turn, add a #b",
+    " to your hand."
+  ]
+}
+}

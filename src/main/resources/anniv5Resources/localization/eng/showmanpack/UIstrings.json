@@ -1,0 +1,15 @@
+{
+  "${ModID}:ShowmanPack": {
+    "TEXT": [
+      "The Showman",
+      "Plan your turns masterfully to block attacks and put on a grand performance.",
+      "Dayvig"
+    ]
+  },
+  "${ModID}:MonsterHunterPackHat": {
+    "TEXT": [
+      "Spoils of the hunt.",
+      "Nemesis' Skull"
+    ]
+  }
+}
