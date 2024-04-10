@@ -26,7 +26,7 @@ public class SilentPack extends AbstractCardPack {
         cards.add(SneakyStrike.ID);
         cards.add(CloakAndDagger.ID);
         cards.add(CalculatedGamble.ID);
-        cards.add(Finisher.ID);
+        cards.add(LegSweep.ID);
         cards.add(Choke.ID);
         cards.add(Footwork.ID);
         cards.add(BulletTime.ID);
