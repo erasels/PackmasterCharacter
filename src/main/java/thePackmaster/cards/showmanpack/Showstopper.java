@@ -7,7 +7,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Showstopper extends AbstractPackmasterCard {
+public class Showstopper extends AbstractShowmanCard {
     public final static String ID = makeID("Showstopper");
     private final static int BLOCKTHRESHOLD = 100;
     private final static int DAMAGE = 50;

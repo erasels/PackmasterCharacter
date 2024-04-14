@@ -16,7 +16,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class HallOfMirrors extends AbstractPackmasterCard {
+public class HallOfMirrors extends AbstractShowmanCard {
     public final static String ID = makeID("HallOfMirrors");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 

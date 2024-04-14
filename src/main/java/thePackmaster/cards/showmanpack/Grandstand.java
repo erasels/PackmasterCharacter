@@ -10,7 +10,7 @@ import thePackmaster.effects.showmanpack.SmallSpotlightEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Grandstand extends AbstractPackmasterCard {
+public class Grandstand extends AbstractShowmanCard {
     public final static String ID = makeID("Grandstand");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 

@@ -13,7 +13,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class DramaticExit extends AbstractPackmasterCard {
+public class DramaticExit extends AbstractShowmanCard {
     public final static String ID = makeID("DramaticExit");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 

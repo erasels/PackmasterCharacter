@@ -17,7 +17,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class MagicCylinder extends AbstractPackmasterCard {
+public class MagicCylinder extends AbstractShowmanCard {
     public final static String ID = makeID("MagicCylinder");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 

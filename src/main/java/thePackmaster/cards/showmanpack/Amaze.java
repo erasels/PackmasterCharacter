@@ -17,7 +17,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Amaze extends AbstractPackmasterCard {
+public class Amaze extends AbstractShowmanCard {
     public final static String ID = makeID("Amaze");
 
     public Amaze() {

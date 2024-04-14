@@ -14,7 +14,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class SmokeAndMirrors extends AbstractPackmasterCard {
+public class SmokeAndMirrors extends AbstractShowmanCard {
     public final static String ID = makeID("SmokeAndMirrors");
 
     public SmokeAndMirrors() {

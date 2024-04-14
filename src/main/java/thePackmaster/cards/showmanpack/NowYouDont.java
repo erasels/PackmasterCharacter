@@ -13,7 +13,7 @@ import thePackmaster.powers.showmanpack.NowYouDontPower;
 import static thePackmaster.SpireAnniversary5Mod.addPotions;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class NowYouDont extends AbstractPackmasterCard {
+public class NowYouDont extends AbstractShowmanCard {
     public final static String ID = makeID("NowYouDont");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 

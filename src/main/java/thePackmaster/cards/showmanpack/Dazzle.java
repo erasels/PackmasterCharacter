@@ -16,7 +16,7 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Dazzle extends AbstractPackmasterCard {
+public class Dazzle extends AbstractShowmanCard {
     public final static String ID = makeID("Dazzle");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 

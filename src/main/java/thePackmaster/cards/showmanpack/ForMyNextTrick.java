@@ -20,7 +20,7 @@ import javax.smartcardio.Card;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class ForMyNextTrick extends AbstractPackmasterCard {
+public class ForMyNextTrick extends AbstractShowmanCard {
     public final static String ID = makeID("ForMyNextTrick");
     // intellij stuff skill, self, basic, , ,  5, 3, ,
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
