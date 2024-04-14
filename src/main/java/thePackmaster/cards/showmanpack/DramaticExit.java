@@ -19,7 +19,7 @@ public class DramaticExit extends AbstractPackmasterCard {
 
     public DramaticExit() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseBlock = block = 7;
+        baseBlock = block = 6;
         exhaust = true;
         this.selfRetain = true;
     }
