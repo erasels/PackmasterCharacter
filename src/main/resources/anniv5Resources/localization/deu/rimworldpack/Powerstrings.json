@@ -1,0 +1,54 @@
+{
+  "${ModID}:SpikeTrapPower": {
+    "NAME": "Stachelfalle",
+    "DESCRIPTIONS": [
+      "Füge dem nächsten Gegner, der dich angreift, #b",
+      " Schaden zu."
+    ]
+  },
+  "${ModID}:CatharsisPower": {
+    "NAME": "Katharsis",
+    "DESCRIPTIONS": [
+      "Die nächste Karte, die du in diesem Zug spielst, kostet #b0 und wird zweimal gespielt!",
+      "Die nächsten #b",
+      " Karten, die du in diesem Zug spielst, kosten #b0 und werden zweimal gestielt!"
+    ]
+  },
+  "${ModID}:PyromaniacPower": {
+    "NAME": "Pyromane",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges gib einer zufällige Karte in deiner Hand #yAufgedreht.",
+      "Zu Beginn deines Zuges gib #b",
+      " zufällige Karten in deiner Hand #yAufgedreht."
+    ]
+  },
+  "${ModID}:BurningPassionPower": {
+    "NAME": "Brennende Leidenschaft",
+    "DESCRIPTIONS": [
+      "Jedes Mal, wenn du in diesem Zug zum ersten Mal einen Buff erhältst, multipliziere ihn mit #b",
+      "."
+    ]
+  },
+  "${ModID}:HoldCardPower": {
+    "NAME": "Kartenhalter",
+    "DESCRIPTIONS": [
+      "Wenn diese Kreatur stirbt, füge deiner Hand eine ",
+      " hinzu."
+    ]
+  },
+  "${ModID}:LuciferiumAddictionPower": {
+    "NAME": "Luciferium Sucht",
+    "DESCRIPTIONS": [
+      "Nach #b1 Zug füge deiner Hand #b2 #yVerzweiflungen hinzu und verliere #b5 #yStärke.",
+      "Nach #b",
+      " Zügen füge deiner Hand #b2 #yVerzweiflungen hinzu und verliere #b5 #yStärke."
+    ]
+  },
+  "${ModID}:TradeBeaconPower": {
+    "NAME": "Handelsfunk",
+    "DESCRIPTIONS": [
+      "Das erste Mal, wenn du in deinem Zug eine Karte ziehst oder abwirfst, ziehe #b",
+      " Karten."
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "${ModID}:GravityPower": {
+    "NAME": "Schwerkraft",
+    "DESCRIPTIONS": [
+      "Wann immer du eine #yverschlossen oder #yunspielbare Karte ziehst, ziehe eine weitere Karte.",
+      "Wann immer du eine #yverschlossen oder #yunspielbare Karte ziehst, ziehe #b",
+      " weitere Karten."
+    ]
+  },
+  "${ModID}:DeepDreamPower": {
+    "NAME": "Tiefer Traum",
+    "DESCRIPTIONS": [
+      "Wann immer du in diesem Zug eine Karte spielst, erzeuge eine zufällige Karte in deiner Hand #yOkkult.",
+      "Wann immer du in diesem Zug eine Karte spielst, erzeuge #b",
+      " zufällige Karten in deiner Hand #yOkkult."
+    ]
+  }
+}

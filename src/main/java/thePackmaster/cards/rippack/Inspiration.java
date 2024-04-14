@@ -22,9 +22,7 @@ public class Inspiration extends AbstractRipCard {
 
 
     public Inspiration() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseDamage = damage = 12;
-        baseMagicNumber = magicNumber = 12;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         exhaust = true;
         CardModifierManager.addModifier(this, new RippableModifier());
     }
@@ -32,7 +30,7 @@ public class Inspiration extends AbstractRipCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        int statusAndArtCardsInExhaust = AbstractDungeon.player.exhaustPile.group.stream().filter(card -> isArtCard(card) || card.type == CardType.STATUS).collect(Collectors.toList()).size();
+        int statusAndArtCardsInExhaust = (int) AbstractDungeon.player.exhaustPile.group.stream().filter(card -> isArtCard(card) || card.type == CardType.STATUS).count();
         rawDescription = upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION;
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + statusAndArtCardsInExhaust;
         if (statusAndArtCardsInExhaust == 1) {
@@ -51,7 +49,7 @@ public class Inspiration extends AbstractRipCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int statusAndArtCardsInExhaust = AbstractDungeon.player.exhaustPile.group.stream().filter(card -> isArtCard(card) || card.type == CardType.STATUS).collect(Collectors.toList()).size();
+        int statusAndArtCardsInExhaust = (int) AbstractDungeon.player.exhaustPile.group.stream().filter(card -> isArtCard(card) || card.type == CardType.STATUS).count();
 
         AbstractGameEffect off = InspirationEffect.Off();
         atb(new VFXAction(off));

@@ -12,7 +12,7 @@ public class Hydraulics extends AbstractHydrologistCard {
 
     public Hydraulics() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, Subtype.WATER);
-        damage = baseDamage = 9;
+        damage = baseDamage = 11;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

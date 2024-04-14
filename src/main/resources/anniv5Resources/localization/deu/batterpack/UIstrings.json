@@ -1,0 +1,16 @@
+{
+  "${ModID}:BatterPack": {
+    "TEXT": [
+      "Batters",
+      "Hochaggressives Booster-Packet. Entfessle göttliche Wut auf deine Gegner mit einzelnen, mächtigen Schlägen.",
+      "AlexMdle",
+      "#yOFF erstellt von #yMortis #yGhost"
+    ]
+  },
+  "${ModID}:BatterPackHat": {
+    "TEXT": [
+      "Reinigung in Bearbeitung.",
+      "Baseballmütze"
+    ]
+  }
+}

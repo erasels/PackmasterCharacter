@@ -1,0 +1,42 @@
+{
+  "${ModID}:Vindicate": {
+    "NAME": "Rechtfertigung",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du in diesem Zug eine Angriffskarte spielst, erhalte !M! Block."
+  },
+  "${ModID}:DarkLance": {
+    "NAME": "Dunkle Lanze",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn du in diesem Zug die Haltung gewechselt hast, ziehe !M! Karten."
+  },
+  "${ModID}:FuriousAssault": {
+    "NAME": "Wütender Angriff",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Betrete ${ModID}:Aggression."
+  },
+  "${ModID}:Slam": {
+    "NAME": "Schmettern",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte Block in Höhe des ungeblockten zugefügten Schadens."
+  },
+  "${ModID}:Decapitate": {
+    "NAME": "Kopfabschlagen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ein Gegner verliert in diesem Zug !M! Stärke. NL Erschöpfen."
+  },
+  "${ModID}:TitansStrength": {
+    "NAME": "Stärke des Titanen",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! Stärke."
+  },
+  "${ModID}:Epiphany": {
+    "NAME": "Erleuchtung",
+    "DESCRIPTION": "Wenn du dich in einer Haltung befindest, verlasse sie und ziehe !M! Karten. NL Ansonsten betrete ${ModID}:Aggression."
+  },
+  "${ModID}:InnerFury": {
+    "NAME": "Innere Wut",
+    "DESCRIPTION": "Immer wenn du ${ModID}:Aggression betrittst oder verlässt, erhalte !M! temporäre Stärke und !M! Block. NL Betrete ${ModID}:Aggression."
+  },
+  "${ModID}:LunaticRage": {
+    "NAME": "Verrückte Wut",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Erhalte [E] [E]. NL Lege alle Nicht-Angriff, Nicht-Status Karten ab. NL Erschöpfen."
+  },
+  "${ModID}:Animosity": {
+    "NAME": "Feindseligkeit",
+    "DESCRIPTION": "Wenn du ${ModID}:Aggression betrittst, verlässt oder deinen Zug beginnst, erhalte !M! Stärke."
+  }
+}

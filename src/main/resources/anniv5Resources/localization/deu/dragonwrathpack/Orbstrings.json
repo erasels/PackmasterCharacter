@@ -1,0 +1,10 @@
+{
+  "${ModID}:Light": {
+    "NAME": "licht",
+    "DESCRIPTION": [
+      "#yPassive: Am Ende deines Zugs, erhalte #b",
+      " #yBeichte NL #yEntladen: Gain #b",
+      " #yBeichte."
+    ]
+  }
+}

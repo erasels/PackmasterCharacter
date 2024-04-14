@@ -1,0 +1,36 @@
+{
+  "${ModID}:PsychicPack": {
+    "TEXT": [
+      "Hellseher",
+      "Schaffe das Unmögliche mit Kräften, die über die Vernunft hinausgehen.",
+      "Alchyr, (Gk) Erasels"
+    ]
+  },
+  "${ModID}:Occult": {
+    "TEXT": [
+      "${ModID}:Okkult. NL ",
+      "NL ${ModID}:Okkult. NL"
+    ]
+  },
+  "${ModID}:RuleCancel": {
+    "TEXT": [
+      "Erzeuge Okkult"
+    ]
+  },
+  "${ModID}:OccultInDrawPile": {
+    "TEXT": [
+      "Wähle eine Karte, um sie okkult zu machen."
+    ]
+  },
+  "${ModID}:UnplayableTurnModifier": {
+    "TEXT": [
+      "Kann diesen Zug nicht gespielt werden. NL "
+    ]
+  },
+  "${ModID}:PsychicPackHat": {
+    "TEXT": [
+      "Macht geht von dir aus.",
+      "Runenhaft"
+    ]
+  }
+}

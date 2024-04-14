@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.TheBombPower;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -74,7 +75,7 @@ public class BurningPassionPower extends AbstractPackmasterPower implements Clon
     @Override
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if(power.amount != 0 && target == owner && power.type == PowerType.BUFF &&
-            !doubledOnReceivePower && postStartDraw)
+            !doubledOnReceivePower && postStartDraw && !isTheBomb(power))
         {
             flash();
             doubledOnReceivePower = true;
@@ -89,12 +90,26 @@ public class BurningPassionPower extends AbstractPackmasterPower implements Clon
     @Override
     public int onReceivePowerStacks(AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
         if(power.amount != 0 && target == owner && power.type == PowerType.BUFF &&
-                !doubledOnReceivePowerStacks && postStartDraw)
+                !doubledOnReceivePowerStacks && postStartDraw && !isTheBomb(power))
         {
             doubledOnReceivePowerStacks = true;
             flash();
             return stackAmount * amount;
         }
         return stackAmount;
+    }
+
+    private boolean isTheBomb(AbstractPower power) {
+        // We specifically exclude The Bomb, because its amount is the number of turns until it triggers,
+        // which means that doubling it is generally a bad thing (unlike all other buff amount). It's also a
+        // negative play experience to use up your Burning Passion stacks (a powerful and important ability)
+        // on something like this (especially since many players won't even realize that The Bomb's amount
+        // works like this).
+        // There's no built-in way to double The Bomb's damage, and while we could write the necessary patches
+        // to enable that, that doesn't seem like a good idea -- especially when the simple and intuitive solution
+        // of just having Burning Passion ignore The Bomb is available.
+        // We have to check for the ID starting with The Bomb's power ID because it adds a numeric offset to each
+        // instance in order to make them not stack with each other.
+        return power.ID.startsWith(TheBombPower.POWER_ID);
     }
 }

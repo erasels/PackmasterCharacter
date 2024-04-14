@@ -15,7 +15,7 @@ public class MakeshiftShield extends AbstractCreativityCard {
 
     public MakeshiftShield() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
     }
 
     @Override

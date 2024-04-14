@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Entwicklung",
+    "NAMES": [
+      "entwickelt"
+    ],
+    "DESCRIPTION": "Entwickelte Karten können bis zu #b3 Mal #yverbessert werden. Du erhälst in diesem Kampf eine #yVerbesserung, wenn die aufgeführte Bedingung erfüllt ist, während sich die Karte in Ihrer Hand befindet, und erhalten Bonuseffekte, wenn sie vollständig #yverbessert sind."
+  },
+  {
+    "PROPER_NAME": "Riss",
+    "NAMES": [
+      "riss"
+    ],
+    "DESCRIPTION": "Erhält durch Angriffe mehr Schaden abhängig der Höhe von Riss. Am Ende Zugs reduziert sich dieser Wert um die Hälfte."
+  }
+]

@@ -18,7 +18,7 @@ public class NullHammer extends AbstractThieveryCard {
 	private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
 	private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
-	private static final int POWER = 12;
+	private static final int POWER = 13;
 	private static final int UPGRADE_BONUS = 4;
 
 	public NullHammer() {

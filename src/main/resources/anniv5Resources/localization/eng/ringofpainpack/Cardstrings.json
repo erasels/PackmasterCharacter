@@ -33,8 +33,8 @@
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
-    "DESCRIPTION": "Exhaust a card in your draw pile. NL If you do, put a card from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust a card in your draw pile. NL If you do, put a card from your discard pile into your hand."
+    "DESCRIPTION": "Exhaust a random card. NL If you do, put a card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. NL If you do, put a card from your discard pile into your hand."
   },
   "${ModID}:Owl": {
     "NAME": "Owl",
@@ -44,7 +44,7 @@
   },
   "${ModID}:Vision": {
     "NAME": "Vision",
-    "DESCRIPTION": "Put !M! cards from your draw pile into your hand. NL Retain your hand this turn. NL Exhaust."
+    "DESCRIPTION": "{@@}Put !M! card{!M!|1=|@=s} from your draw pile into your hand. NL Retain your hand this turn. NL Exhaust."
   },
   "${ModID}:Connection": {
     "NAME": "Connection",

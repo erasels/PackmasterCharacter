@@ -1,0 +1,63 @@
+{
+  "${ModID}:Anemia": {
+    "NAME": "Anämie",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wende an ALLEN vergifteten Gegnern !M! Schwach an."
+  },
+  "${ModID}:LethalShot": {
+    "NAME": "Tödlicher Schuss",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Gift und !${ModID}:m2! Verwundbar an."
+  },
+  "${ModID}:BleedItOut": {
+    "NAME": "Kontaminieren",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Gift an. NL Aktiviere das Gift des Gegners."
+  },
+  "${ModID}:Trace": {
+    "NAME": "Spur",
+    "DESCRIPTION": "Spähe !M! Karten voraus."
+  },
+  "${ModID}:BoosterShot": {
+    "NAME": "Injektion",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Gift an. NL Gegner heilt !${ModID}:m2! LP."
+  },
+  "${ModID}:RangersSetup": {
+    "NAME": "Werkzeug des Schützen",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Lege 2 Karten aus deiner Hand auf den oberen Stapel deines Nachziehstapels."
+  },
+  "${ModID}:Scheme": {
+    "NAME": "Komplott",
+    "DESCRIPTION": "In der nächsten Runde wird die erste Karte, die du spielst und die 1 oder weniger kostet, zweimal gespielt. NL (Diesen Kampf noch !stslib:ex! Mal verwendbar)."
+  },
+  "${ModID}:ScrollOfIntellect": {
+    "NAME": "Schriftrolle des Intellekts",
+    "DESCRIPTION": "Ziehe 1 Karte. NL Erhalte [E]. NL Erschöpfen."
+  },
+  "${ModID}:Sustenance": {
+    "NAME": "Ernährung",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wende an einem zufälligen Gegner !M! Gift an. NL stslib:Persist !stslib:persist!."
+  },
+  "${ModID}:TheEncyclopedia": {
+    "NAME": "Die Enzyklopädie",
+    "DESCRIPTION": "Wähle 2 von !M! zufälligen Karten aus, um sie in deinen Nachziehstapel zu mischen. Sie kosten 2 weniger. NL Erschöpfen.",
+    "EXTENDED_DESCRIPTION": [
+      "Wähle 2 Karten aus, um sie in deinen Nachziehstapel zu mischen."
+    ]
+  },
+  "${ModID}:TomeOfIntellect": {
+    "NAME": "Tome des Intellekts",
+    "DESCRIPTION": "Mische !M! *Schriftrollen *des *Intellekts in deinen Nachziehstapel. Zu Beginn deines Zuges mische 1 weitere in den Nachziehstapel."
+  },
+  "${ModID}:DarkRitual": {
+    "NAME": "Dunkles Ritual",
+    "DESCRIPTION": "Verliere 10 Lebenspunkte. NL Erhalte !M! Goldmünzen. NL Entferne diese Karte aus deinem Deck.",
+    "UPGRADE_DESCRIPTION": "Verliere 10 Lebenspunkte. NL Erhalte !M! Goldmünzen. NL Senke das Niveau dieser Karte für dieses Spiel."
+  },
+  "${ModID}:PackRat": {
+    "NAME": "Packratte",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn keine Tränke vorhanden sind, erhalte einen und entferne diese Karte aus deinem Deck.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Wenn keine Tränke vorhanden sind, erhalte einen und senke das Niveau dieser Karte für dieses Spiel."
+  },
+  "${ModID}:ScorchedEarth": {
+    "NAME": "Verbrannte Erde",
+    "DESCRIPTION": "Entsorge alle Nicht-Angriffskarten aus deinem Ablagestapel. Füge jedem zufälligen Gegner !D! Schaden zu. NL Erschöpfen."
+  }
+}

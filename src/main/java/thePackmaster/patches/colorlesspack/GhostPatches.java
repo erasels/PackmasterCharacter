@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -24,7 +25,8 @@ public class GhostPatches {
     public static class GhostSubvertPlay {
         @SpireInsertPatch(locator = Locator.class)
         public static void Insert(GameActionManager __instance) {
-            AbstractCard c = __instance.cardQueue.get(0).card;
+            CardQueueItem cqi = __instance.cardQueue.get(0);
+            AbstractCard c = cqi.card;
             if (c != null) {
                 if (CardModifierManager.hasModifier(c, IsGhostModifier.ID)) {
                     if (__instance.cardQueue.get(0).monster == null) {
@@ -39,10 +41,7 @@ public class GhostPatches {
                     mod.ghost.target_x = Settings.WIDTH / 2F;
                     mod.ghost.target_y = Settings.HEIGHT / 2F;
 
-                    mod.ghost.dontTriggerOnUseCard = false;
-                    if (!mod.ghost.canUse(AbstractDungeon.player, null)) {
-                        mod.ghost.dontTriggerOnUseCard = true;
-                    }
+                    mod.ghost.dontTriggerOnUseCard = !cqi.autoplayCard && !mod.ghost.canUse(AbstractDungeon.player, null);
 
 
                     AbstractDungeon.actionManager.addToTop(new WaitMoreAction(0.25F));

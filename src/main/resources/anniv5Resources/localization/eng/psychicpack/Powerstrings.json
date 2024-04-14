@@ -2,7 +2,7 @@
   "${ModID}:GravityPower": {
     "NAME": "Gravity",
     "DESCRIPTIONS": [
-      "Whenever you draw a #yLocked or #yUnplayable card, draw a card.",
+      "Whenever you draw a #yLocked or #yUnplayable card, draw 1 card.",
       "Whenever you draw a #yLocked or #yUnplayable card, draw #b",
       " cards."
     ]

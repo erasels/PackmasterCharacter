@@ -1,0 +1,36 @@
+{
+  "${ModID}:CosmicConverterPower": {
+    "NAME": "Kosmischer Konverter",
+    "DESCRIPTIONS": [
+      "u Beginn deines Zuges füge deiner Hand, eine eine #yunteschiedlich #yfarbige Karte desselben Typs und Kosten wie die zuletzt gespielte Karte, hinzu. Kürzlich hinzugefügt: ",
+      "-kosten ",
+      " Angriff",
+      " Fertigkeit",
+      " Macht",
+      ".",
+      "X",
+      "Unspielbar "
+    ]
+  },
+  "${ModID}:FetchPower": {
+    "NAME": "Holen",
+    "DESCRIPTIONS": [
+      "Nachdem spielen einer #yunterschiedlich #yfarbigen Fertigkeit, ziehe #b",
+      " Karten."
+    ]
+  },
+  "${ModID}:NeutronStarPower": {
+    "NAME": "Neutronenstern",
+    "DESCRIPTIONS": [
+      "Nachdem spielen eines #yunterschiedlich #yfarbigen Angriffs, erhalte #b",
+      " temporäre #yStärke."
+    ]
+  },
+  "${ModID}:StarShowerPower": {
+    "NAME": "Sternenregen",
+    "DESCRIPTIONS": [
+      "Nachdem spielen eines #yunterschiedlich #yfarbigen Angriffs, verursache #b",
+      " Schaden gegen einen zufälligen Gegner."
+    ]
+  }
+}

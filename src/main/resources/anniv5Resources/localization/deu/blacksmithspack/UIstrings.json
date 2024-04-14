@@ -1,0 +1,25 @@
+{
+  "${ModID}:BlacksmithsPack": {
+    "TEXT": [
+      "Schmiede Paket",
+      "Werde wie der legendäre Schmied, der seine Zangen verloren hat.",
+      "Pandemonium"
+    ]
+  },
+  "${ModID}:SetUpShopScreen": {
+    "TEXT": [
+      "Verbessere und lege sie oben auf deinen Nachziehstapel."
+    ]
+  },
+  "${ModID}:MasterworkScreen": {
+    "TEXT": [
+      "Verbessere."
+    ]
+  },
+  "${ModID}:BlacksmithsPackHat": {
+    "TEXT": [
+      "Du bist gekommen, um Metallverarbeitung zu lernen.",
+      "Schweißmaske"
+    ]
+  }
+}

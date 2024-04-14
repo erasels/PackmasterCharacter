@@ -1,0 +1,15 @@
+{
+  "${ModID}:DragonwrathPack": {
+    "TEXT": [
+      "Drachenzorn",
+      "Führe die göttliche Macht eines Ausgestoßenen eines Ordens drakonischer Paladine aus.",
+      "Silber"
+    ]
+  },
+  "${ModID}:DragonwrathPackHat": {
+    "TEXT": [
+      "Schmale Türen können ein Problem sein ...",
+      "Drachen Hörner"
+    ]
+  }
+}

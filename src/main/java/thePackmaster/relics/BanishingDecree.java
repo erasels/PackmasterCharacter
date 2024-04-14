@@ -35,6 +35,15 @@ public class BanishingDecree extends AbstractPackmasterRelic implements CustomSa
         super(ID, RelicTier.SHOP, LandingSound.FLAT);
     }
 
+    @Override
+    public boolean canSpawn() {
+        // Banishing Decree doesn't work in all packs mode, so we prevent it from spawning (and for simplicity, we
+        // assume that anything with more than the standard number of packs is all packs mode)
+        // Also, just for paranoia, prevent this from spawning if you don't have any packs somehow
+        return SpireAnniversary5Mod.currentPoolPacks.size() > 0
+            && SpireAnniversary5Mod.currentPoolPacks.size() <= SpireAnniversary5Mod.PACKS_PER_RUN;
+    }
+
     // We should really only save and load the IDs, but this was originally written to save and load the names, and
     // we've kept that around to avoid potential backwards compatibility issues (e.g. breaking runs that people were in
     // the middle of when they get a code update)

@@ -15,10 +15,9 @@ public class Hollower extends AbstractRingOfPainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new HollowerAction(1));
+        atb(new HollowerAction(1, !upgraded));
     }
 
     public void upp() {
-        selfRetain = true;
     }
 }

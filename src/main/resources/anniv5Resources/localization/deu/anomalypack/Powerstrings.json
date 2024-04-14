@@ -1,0 +1,17 @@
+{
+  "${ModID}:MindOverMatterPower": {
+    "NAME": "geist über Materie",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine Karte ziehst, erhalte #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:ThoughtweavingPower": {
+    "NAME": "gedankenweben",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yFertigkeit oder #yAttacke spielst, ziehe ",
+      "eine Karte des gegenteiligen Typs aus einem anderen Set.",
+      " Karten des gegenteiligen Typs aus anderen Sets."
+    ]
+  }
+}

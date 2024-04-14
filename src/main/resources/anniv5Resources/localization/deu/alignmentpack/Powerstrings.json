@@ -1,0 +1,26 @@
+{
+  "${ModID}:GlimpsePower": {
+    "NAME": "Ausblick",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yFlüchtig Karte ziehst, erhältst du #b",
+      " #yBlock."
+    ]
+  },
+  "${ModID}:RememberPower": {
+    "NAME": "Erinnern",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zuges kannst du #b",
+      " Karte in deinen Nachziehstapel mischen.",
+      " Karten in deinen Nachziehstapel mischen.",
+      "Karte in deinen Nachziehstapel mischen"
+    ]
+  },
+  "${ModID}:TrinePower": {
+    "NAME": "Trigon",
+    "DESCRIPTIONS": [
+      "Die nächste Karte, die du in diesem Zug spielst, wird zweimal gespielt.",
+      "Die nächsten #b",
+      " Karten, die du in diesem Zug spielst, werden zweimal gespielt."
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "${ModID}:InspiringSong": {
+    "NAME": "Inspirierendes Lied",
+    "DESCRIPTION": "Erschaffe !M! Frost. NL Erhalte !${ModID}:m2! ${ModID}:Inspiration NL für jeden erschaffenen Orb."
+  },
+  "${ModID}:Sift": {
+    "NAME": "Sieben",
+    "DESCRIPTION": "Ziehe !M! Karte. NL Erhalte [E] in Höhe ihres Kostenwertes.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karte. NL Erhalte [E] in Höhe ihres Kostenwertes. NL Ziehe !M! Karte."
+  },
+  "${ModID}:EchoEcho": {
+    "NAME": "Echo-Echo",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge !${ModID}:sd! Schaden zu."
+  },
+  "${ModID}:ThickOfTheFight": {
+    "NAME": "Im dichten Kampf",
+    "DESCRIPTION": "Füge einem zufälligen Gegner für jeden lebenden Gegner !D! Schaden zu. NL Kostet 1 weniger [E] für jeden lebenden Gegner."
+  },
+  "${ModID}:EnGarde": {
+    "NAME": "Auf der Hut",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL ${ModID}:Inspiration beeinflusst diese Karte !M! Mal."
+  },
+  "${ModID}:Heroism": {
+    "NAME": "Heldentum",
+    "DESCRIPTION": "Erhalte !M! temporäre LP. NL Erhalte !${ModID}:m2! ${ModID}:Inspiration."
+  },
+  "${ModID}:LifeDrain": {
+    "NAME": "Lebensentzug",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte temporäre LP für die Hälfte des ungeblockten Schadens."
+  },
+  "${ModID}:Shifting": {
+    "NAME": "Wandel",
+    "DESCRIPTION": "Füge !D! Schaden zu oder NL erhalte !B! Block. NL Füge !D! Schaden zu oder NL erhalte !B! Block."
+  },
+  "${ModID}:ShiftingAttack": {
+    "NAME": "Angriff",
+    "DESCRIPTION": "Füge !D! Schaden zu."
+  },
+  "${ModID}:ShiftingBlock": {
+    "NAME": "Block",
+    "DESCRIPTION": "Erhalte !B! Block."
+  },
+  "${ModID}:MagnumOpus": {
+    "NAME": "Meisterwerk",
+    "DESCRIPTION": "Erhalte !${ModID}:m2! ${ModID}:Inspiration. NL Erhöhe dauerhaft die ${ModID}:Inspiration dieser Karte um !M!. NL Erschöpfen."
+  },
+  "${ModID}:SplendidForm": {
+    "NAME": "Prächtige Form",
+    "DESCRIPTION": "Zu Beginn deines Zuges, erhalte !${ModID}:m2! ${ModID}:Inspiration."
+  }
+}

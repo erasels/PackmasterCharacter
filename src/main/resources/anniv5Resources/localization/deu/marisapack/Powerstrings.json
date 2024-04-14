@@ -1,0 +1,33 @@
+{
+  "${ModID}:ChargeUp": {
+    "NAME": "Aufladen",
+    "DESCRIPTIONS": [
+      "Bei #b%s oder mehr Steigerungen, verdopple den Schaden deines nächsten Angriffs und verliere #b%s Steigerungen."
+    ]
+  },
+  "${ModID}:Inertia": {
+    "NAME": "Trägheit",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn eine Karte #yErschöpft oder #yVerstärkt wird #b%s #yAufladen."
+    ]
+  },
+  "${ModID}:EarthlightRay": {
+    "NAME": "Erdlichtstrahl",
+    "DESCRIPTIONS": [
+      "Verursache, nachdem du #yAufladen erhalten hast, Schaden an ALLEN Gegnern abhängig vom Maximalwert.",
+      "Nachdem du #yAufladen erhalten hast, füge ALLEN Gegnern Schaden in Höhe der Gesamtzahl #b%s zu."
+    ]
+  },
+  "${ModID}:BuildingCharge": {
+    "NAME": "Aufbauende Ladung",
+    "DESCRIPTIONS": [
+      "Wann immer du diese Runde eine Karte spielst, erhalte #b%s #yAufladen."
+    ]
+  },
+  "${ModID}:StardustReverie": {
+    "NAME": "Sternenstaub Phantasie",
+    "DESCRIPTIONS": [
+      "#yErschöpfe die nächste Karte die du spielst um #b%s #yAufladen zu erhalten und ziehe #b1 Karte."
+    ]
+  }
+}

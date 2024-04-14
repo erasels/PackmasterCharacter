@@ -1,0 +1,9 @@
+[
+  {
+    "PROPER_NAME": "Entzünden",
+    "NAMES": ["entzünden",
+              "entzünde"        
+    ],
+    "DESCRIPTION": "Entzündete Kreaturen verlieren zu Beginn ihres Zuges #b1 LP pro Stapel."
+  }
+]

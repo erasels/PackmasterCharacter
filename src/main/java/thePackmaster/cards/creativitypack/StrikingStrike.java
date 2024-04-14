@@ -19,22 +19,20 @@ public class StrikingStrike extends AbstractCreativityCard {
     public final static String ID = makeID(StrikingStrike.class.getSimpleName());
 
     public StrikingStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = damage = 6;
         tags.add(CardTags.STRIKE);
     }
 
     @Override
     public void upp() {
+        this.upgradeBaseCost(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         CardGroup cards = JediUtil.filterCardsForDiscovery(c -> c.hasTag(CardTags.STRIKE) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL && c.rarity != CardRarity.BASIC);
-        if (upgraded) {
-            cards.group.forEach(AbstractCard::upgrade);
-        }
         addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(cards), selectedCard -> {
             CardModifierManager.addModifier(selectedCard, new ExhaustMod());
             },

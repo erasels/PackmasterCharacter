@@ -1,0 +1,50 @@
+{
+  "${ModID}:Imp": {
+    "NAME": "Imp",
+    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn NL Fügt !M! Schaden zu. Erhöht den Schaden von *Imps in diesem Kampf um 1. NL Ziehe 1 Karte. NL Erschöpfen."
+  },
+  "${ModID}:HighPriestessJeklik": {
+    "NAME": "Hohepriesterin Jeklik",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn diese Karte erschöpft ist, füge davon 2 Kopien deiner Hand hinzu."
+  },
+  "${ModID}:SoulShear": {
+    "NAME": "Seelenscherbe",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Mische 1 *Imp in deinen Nachziehstapel."
+  },
+  "${ModID}:Soulfire": {
+    "NAME": "Seelenfeuer",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine zufällige Karte auf deiner Hand.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte auf deiner Hand."
+  },
+  "${ModID}:Doomguard": {
+    "NAME": "Verdammniswache",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe 2 zufällige Karten auf deiner Hand."
+  },
+  "${ModID}:HandOfGulDan": {
+    "NAME": "Hand von Gul'dan",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Wenn diese Karte erschöpft ist, ziehe !M! weitere Karten."
+  },
+  "${ModID}:SeedsOfDestruction": {
+    "NAME": "Samen der Zerstörung",
+    "DESCRIPTION": "Wähle aus, ob du !M! *Imps in deinen Nachziehstapel oder !${ModID}:m2! *Imps in deinen Abwurfstapel mischst.",
+    "EXTENDED_DESCRIPTION": ["Mische !M! *Imps in deinen Nachziehstapel.", "Füge !M! *Imps deinem Abwurfstapel hinzu."]
+  },
+  "${ModID}:AranasiBroodmother": {
+    "NAME": "Aranasi Brutmutter",
+    "DESCRIPTION": "Erhalte !B! Block. NL Mische diese Karte in deinen Nachziehstapel. NL Wenn du diese Karte ziehst, erhalte !M! Block."
+  },
+  "${ModID}:MalchezaarsImp": {
+    "NAME": "Malchezaars Imp",
+    "DESCRIPTION": "Immer wenn eine *nicht-Imp Karte erschöpft wird, füge deinem Abwurfstapel 1 *Imp hinzu.",
+    "UPGRADE_DESCRIPTION": "Immer wenn eine *nicht-Imp Karte erschöpft wird, mische 1 *Imp in deinen Nachziehstapel."
+  },
+  "${ModID}:TheSoularium": {
+    "NAME": "Das Seelenarium",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Sie werden Flüchtig. NL Erschöpfen."
+  },
+  "${ModID}:RunedMithrilRod": {
+    "NAME": "Runenverzierter Mithrilstab",
+    "DESCRIPTION": "Unspielbar. Behalten. NL Nachdem du !M! Karten gezogen hast, während diese Karte in deiner Hand ist, reduziere die Kosten von Karten in deiner Hand in diesem Zug um 1 und lege diese Karte ab.",
+    "EXTENDED_DESCRIPTION": ["Ich kann diese Karte nicht spielen.", " ({0} Karten gezogen.)"]
+  }
+}

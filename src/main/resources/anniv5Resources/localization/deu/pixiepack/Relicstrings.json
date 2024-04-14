@@ -1,0 +1,9 @@
+{
+  "${ModID}:DimensionCore": {
+    "NAME": "Kern der Dimension",
+    "FLAVOR": "Eine Kristallkugel mit unendlichen Möglichkeiten. Sie ist gesprungen.",
+    "DESCRIPTIONS": [
+      "Zu Beginn des Kampfes mische für alle #b10 Karten in deinem Deck #b3 #yverschiedene #yfarbige Karten in deinen Nachziehstapel. Ziehe in jeder Runde eine zusätzliche Karte."
+    ]
+  }
+}

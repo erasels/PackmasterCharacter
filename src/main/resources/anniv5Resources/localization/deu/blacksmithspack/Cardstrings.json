@@ -1,0 +1,42 @@
+{
+  "${ModID}:QuickFix": {
+    "NAME": "Schnelle Reparatur",
+    "DESCRIPTION": "Erhalte !B! Block. NL Eine zufällige Karte auf deiner Hand wird verbessert."
+  },
+  "${ModID}:RedHotHammer": {
+    "NAME": "Glühender Hammer",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Kann beliebig oft verbessert werden."
+  },
+  "${ModID}:HeartOfTheForge": {
+    "NAME": "Herz der Schmiede",
+    "DESCRIPTION": "{@@}Behalten. NL Erhalte{!M!|>1= !M!} [E]. Wenn behalten, verbessere diese Karte. NL Kann beliebig oft verbessert werden. NL Erschöpfen."
+  },
+  "${ModID}:SharpeningSheath": {
+    "NAME": "Schärfende Hülle",
+    "DESCRIPTION": "Ziehe !M! Karten und verbessere sie."
+  },
+  "${ModID}:CarelessSwing": {
+    "NAME": "Unvorsichtiger Schwung",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine zufällige *nicht verbesserte Karte auf deiner Hand."
+  },
+  "${ModID}:SetUpShop": {
+    "NAME": "Laden einrichten",
+    "DESCRIPTION": "Verbessere !M! Karten aus dem Nachzieh- oder Ablagestapel und lege sie oben auf deinen Nachziehstapel."
+  },
+  "${ModID}:MastersStrike": {
+    "NAME": "Meisterlicher Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Fügt für jede Verbesserung auf ALL deinen Karten zusätzlichen Schaden von !M! zu."
+  },
+  "${ModID}:ScrapMetal": {
+    "NAME": "Schrottsammlung",
+    "DESCRIPTION": "Verbessere eine zufällige Karte aus einem beliebigen Stapel für jeden Block, den du hast. NL Erschöpfen."
+  },
+  "${ModID}:BlacksmithsShield": {
+    "NAME": "Schmiedeschild",
+    "DESCRIPTION": "Nachdem du eine Karte spielst, erhalte 1 Block für jede Verbesserung darauf."
+  },
+  "${ModID}:Masterwork": {
+    "NAME": "Meisterstück",
+    "DESCRIPTION": "Wähle eine Karte aus und verbessere sie !M! Mal. NL Kann Karten beliebig oft verbessern. NL (Diesen Kampf noch !stslib:ex! Mal verwendbar)."
+  }
+}

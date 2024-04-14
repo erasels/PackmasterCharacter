@@ -1,12 +1,12 @@
 {
   "${ModID}:Fertilizer": {
     "NAME": "Fertilizer",
-    "DESCRIPTION": "Draw a card. NL Exhaust. NL This is a Status.",
+    "DESCRIPTION": "Draw 1 card. NL Exhaust. NL This is a Status.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust. NL This is a Status."
   },
   "${ModID}:FertilizerPlaceholder": {
     "NAME": "Fertilizer",
-    "DESCRIPTION": "Draw a card. NL Exhaust. NL When created, this is either a Status or Curse.",
+    "DESCRIPTION": "Draw 1 card. NL Exhaust. NL When created, this is either a Status or Curse.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust. NL When created, this is either a Status or Curse."
   },
   "${ModID}:HarvestBeans": {

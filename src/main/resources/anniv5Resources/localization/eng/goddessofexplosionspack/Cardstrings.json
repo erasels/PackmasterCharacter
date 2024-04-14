@@ -9,7 +9,7 @@
   },
   "${ModID}:Redshift": {
     "NAME": "Redshift",
-    "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, draw a card."
+    "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, draw 1 card."
   },
   "${ModID}:Countdown": {
     "NAME": "Countdown",

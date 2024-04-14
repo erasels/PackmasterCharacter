@@ -1,0 +1,16 @@
+{
+  "${ModID}:MalchezaarsImpPower": {
+    "NAME": "Malchezaars Imp",
+    "DESCRIPTIONS": [
+      "Immer wenn eine #ynicht-Imp Karte #yErschöpft wird, mische #b{0} #yImp in deinen Abwurfstapel.",
+      "Immer wenn eine #ynicht-Imp Karte #yErschöpft wird, mische #b{0} #yImps in deinen Abwurfstapel."
+    ]
+  },
+  "${ModID}:MalchezaarsImpUpgradedPower": {
+    "NAME": "Malchezaars Imp+",
+    "DESCRIPTIONS": [
+      "Immer wenn eine #ynicht-Imp Karte #yErschöpft wird, mische #b{0} #yImp in deinen Abwurfstapel.",
+      "Immer wenn eine #ynicht-Imp Karte #yErschöpft wird, mische #b{0} #yImps in deinen Abwurfstapel."
+    ]
+  }
+}

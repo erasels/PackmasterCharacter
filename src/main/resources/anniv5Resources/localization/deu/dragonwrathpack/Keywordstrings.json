@@ -1,0 +1,28 @@
+[
+  {
+    "PROPER_NAME": "Buße",
+    "NAMES": [
+      "buße",
+      "penance",
+      "Repentant",
+      "repentant"
+    ],
+    "DESCRIPTION": "Wenn eine Kreatur #b8 Buße erreicht, verliert sie #b20 LP und verliert #b8 #yBuße. NL Der LP Verlust durch #yBuße wird in diesem Kampf um #b10 erhöht."
+  },
+  {
+    "PROPER_NAME": "Beichte",
+    "NAMES": [
+      "beichte",
+      "confession"
+    ],
+    "DESCRIPTION": "Wenn du Schaden nimmst oder Lebenspunkte verlierst, füge allen Gegnern Schaden in Höhe deiner #yBeichte zu. NL Wenn es nicht dein Zug ist, reduziere #yBeichte um die Hälfte."
+  },
+  {
+    "PROPER_NAME": "Licht",
+    "NAMES": [
+      "licht",
+      "light"
+    ],
+    "DESCRIPTION": "#yOrb - #yPassiv: Am Ende deines Zuges erhalte #b1 #yBeichte. NL #yEntladen: Erhalte #b3 #yBeichte."
+  }
+]

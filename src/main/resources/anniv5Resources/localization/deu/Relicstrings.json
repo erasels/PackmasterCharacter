@@ -1,0 +1,86 @@
+{
+  "${ModID}:BagOfHolding": {
+    "NAME": "Beutel der Aufbewahrung",
+    "FLAVOR": "\"Unglaublich! Es scheint, als ob dieser Beutel mit einem extradimensionalen Raum verbunden ist. Was passiert, wenn ich hineinspringe?\" - Ranwid",
+    "DESCRIPTIONS": [
+      "Ersetzt ",
+      ".[] NL Erhalte [E] zu Beginn jedes Zuges. Für alle #b5 Karten in deinem Deck hält dieser Effekt einen weiteren Zug an.",
+      "Energie erhalten: {0}",
+      " NL Pro Zug: {0} NL Pro Kampf: {1}"
+    ]
+  },
+  "${ModID}:BanishingDecree": {
+    "NAME": "Bannungsdekret",
+    "FLAVOR": "Nützliches absorbieren, Unnützes ablehnen und das Eigene hinzufügen.",
+    "DESCRIPTIONS": [
+      "Beim Aufheben wähle eines deiner Kartensets aus. Karten daraus erscheinen nicht mehr als Belohnungskarten. Wähle dann #b1 von #b5 neuen Kartensets aus, um es zu ersetzen, und erhalte #b3 Kartenvorteile daraus.",
+      "Wähle ein Kartenset zum Verbannen mit ",
+      "Karten aus dem Kartenset '",
+      "' erscheinen nicht mehr als Belohnungskarten.",
+      "' werden als Belohnungskarten erscheinen.",
+      "Wähle ein Kartenset zum Gewinnen mit ",
+      "Kraft!",
+      ".",
+      ".",
+      "Anmerkung des Übersetzers: Die 2 Punkte hier oben folgen der Struktur 'Wähle ein Kartenset zum Verbannen mit '+'Bannungsdekret'+'.' und 'Wähle ein Kartenset zum Gewinnen mit '+'Bannungsdekret'+'.' entsprechend. ",
+      "Verbanntes Set: {0} NL Hinzugefügtes Set: {1}"
+    ]
+  },
+  "${ModID}:CollectorBadge": {
+    "NAME": "Sammlerabzeichen",
+    "FLAVOR": "Schnapp sie dir alle.",
+    "DESCRIPTIONS": [
+      "Nachdem du in jedem Zug eine Karte aus #b3 verschiedenen Kartensets gespielt hast, erhalte [E] im nächsten Zug.",
+      " NL NL Verwendete Sets in diesem Zug: ",
+      " NL NL Dies hat diesen Zug ausgelöst. ",
+      "Energie erhalten: {0}",
+      " NL Pro Zug: {0} NL Pro Kampf: {1}"
+    ]
+  },
+  "${ModID}:GemOfUnity": {
+    "NAME": "Einheitsedelstein",
+    "FLAVOR": "In der Einheit liegt die Stärke.",
+    "DESCRIPTIONS": [
+      "Einmal pro Kampf, nachdem du eine Karte aus jedem verfügbaren Kartenset dieser Runde gespielt hast, erhalte #b20 #yBlock, #b1 #yStärke, #b1 #yGeschicklichkeit und heile #b5 HP.",
+      "In diesem Kampf gespielte Sets: ",
+      "Ausgelöste Male: {0}",
+      " NL Pro Kampf: {0}",
+      "Noch nicht gespielte Sets: "
+    ]
+  },
+  "${ModID}:HandyHaversack": {
+    "NAME": "Handlicher Rucksack",
+    "FLAVOR": "Hilft heldenhaften Hamstern, Hindernisse zu bewältigen.",
+    "DESCRIPTIONS": [
+      "Zu Beginn jedes Kampfes erhältst du [E] und ziehst #b1 Karte."
+    ]
+  },
+  "${ModID}:PMBoosterBox": {
+    "NAME": "PM-Booster-Box",
+    "FLAVOR": "Bessere Preise beim Kauf in großen Mengen.",
+    "DESCRIPTIONS": [
+      "Beim Aufheben wähle #b1 von #b3 Packmaster-Boostern dreimal aus. Erhalte am Ende jedes Kampfes eine zusätzliche Karte aus diesen Boostern.",
+      " NL Ausgewählte Booster: ",
+      "Wähle einen Booster-Pack.",
+      "Packs: {0}, {1}, {2} NL Zusätzliche Kartenvorteile: {3}"
+    ]
+  },
+  "${ModID}:PMBoosterPack": {
+    "NAME": "PM-Booster-Pack",
+    "FLAVOR": "Ein Paket Karten in einer Folienverpackung. Wie ist es in den Spire gekommen?",
+    "DESCRIPTIONS": [
+      "Beim Aufheben füge deinem Deck eine Karte aus einem zufälligen Packmaster Paket hinzu.",
+      "Wähle eine Karte, um sie deinem Deck hinzuzufügen.",
+      "Pack: {0}"
+    ]
+  },
+  "${ModID}:PMCollection": {
+    "NAME": "PM-Sammlung",
+    "FLAVOR": "Angeblich von einem Konsortium von Zauberern zusammengestellt.",
+    "DESCRIPTIONS": [
+      "Beim Aufheben kannst du jede Karte, aus einem zufälligen Packmaster Paket, deinem Deck hinzufügen.",
+      "Du kannst dies zu deinem Deck hinzufügen.",
+      "Pack: {0}"
+    ]
+  }
+}

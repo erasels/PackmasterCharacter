@@ -1,0 +1,58 @@
+{
+  "${ModID}:ChainShotgun": {
+    "NAME": "Moderne Schrotflinte",
+    "DESCRIPTION": "Füge einem zufälligen Gegner !M! Mal !D! Schaden zu."
+  },
+  "${ModID}:Despair": {
+    "NAME": "Verzweiflung",
+    "DESCRIPTION": "Zählt als ein Fluch. NL Erschöpfen."
+  },
+  "${ModID}:EatWithoutTable": {
+    "NAME": "Ohne Tisch essen",
+    "DESCRIPTION": "Trinke einen zufälligen gewöhnlichen Trank. Füge deiner Hand eine *Verzweiflung hinzu. NL Erschöpfen."
+  },
+  "${ModID}:Luciferium": {
+    "NAME": "Luciferium",
+    "DESCRIPTION": "{@@}Erhalte [E] [E]. NL Erhalte 5 Stärke. NL Erhalte !M! Schichten ${ModID}:Sucht. NL Erschöpfen."
+  },
+  "${ModID}:Pyromaniac": {
+    "NAME": "Pyromane",
+    "DESCRIPTION": "Am Anfang deines Zuges gib einer zufällige Karte in deiner Hand ${ModID}:Aufgedreht.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Am Anfang deines Zuges gib einer zufällige Karte in deiner Hand ${ModID}:Aufgedreht."
+  },
+  "${ModID}:KillThirst": {
+    "NAME": "Durst stillen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn das den Gegner nicht tötet, füge deiner Hand eine *Verzweiflung hinzu."
+  },
+  "${ModID}:SpikeTrap": {
+    "NAME": "Stachelfalle",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge dem nächsten Gegner, der dich angreift, diesen Blockwert als Schaden zu."
+  },
+  "${ModID}:Catharsis": {
+    "NAME": "Katharsis",
+    "DESCRIPTION": "{@@}Mische eine *Verzweiflung in deinen Nachziehstapel. Die nächsten {!M!|1=Karte|@=!M! Karten}, die du in diesem Zug spielst, kosten 0 und werden zweimal gespielt. Erschöpfen."
+  },
+  "${ModID}:TradeBeacon": {
+    "NAME": "Handelsfunktion",
+    "DESCRIPTION": "Das erste Mal, wenn du während deines Zuges ziehst oder abwirfst, ziehe !M! Karten."
+  },
+  "${ModID}:BurningPassion": {
+    "NAME": "Brennende Leidenschaft",
+    "DESCRIPTION": "Verdopple den ersten Buff, den du pro Zug erhältst."
+  },
+  "${ModID}:TaintedWeapon": {
+    "NAME": "Verseuchte Waffe",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Startup: Lege diese Karte in ein zufälliges Monster.",
+    "EXTENDED_DESCRIPTION": [
+      "Füge !D! Schaden zu."
+    ]
+  },
+  "${ModID}:RimworldKeywordManager": {
+    "NAME": "Stichwort-Manager",
+    "DESCRIPTION": "Material für Übersetzungen und einfachen Zugriff auf Stichwort-IDs",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:inspiration",
+      "${ModID}:mental_break"
+    ]
+  }
+}

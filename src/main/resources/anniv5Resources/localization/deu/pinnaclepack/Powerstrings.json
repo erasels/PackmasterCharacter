@@ -1,0 +1,21 @@
+{
+  "${ModID}:Capacitor": {
+    "NAME": "Kondensator",
+    "DESCRIPTIONS": [
+      "Erhöhe deine maximale Handgröße in diesem Zug um #b",
+      "."
+    ]
+  },
+  "${ModID}:Cooking": {
+    "NAME": "Küchen Macht",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zugs, brate eine #yKrokette."
+    ]
+  },
+  "${ModID}:Cooking_": {
+    "NAME": "Küchen Macht+",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zugs, brate eine #yVerbesserte #yKrokette."
+    ]
+  }
+}

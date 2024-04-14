@@ -1,0 +1,11 @@
+[
+  {
+    "PROPER_NAME": "Aufnehmen",
+    "NAMES": [
+      "aufnehmen",
+      "pickup",
+      "pickup/removed"
+    ],
+    "DESCRIPTION": "Der Effekt wird ausgelöst wenn diese Karte dem Deck hinzugefügt wird."
+  }
+]

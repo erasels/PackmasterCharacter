@@ -1,0 +1,15 @@
+{
+  "${ModID}:EnergyAndEchoPack": {
+    "TEXT": [
+      "Energie & Echo",
+      "Generiere [E] und gib dein Bestes, um sie durch sich selbst vermehrende Karten auszugeben.",
+      "Diamantschwert"
+    ]
+  },
+  "${ModID}:EnergyAndEchoPackHat": {
+    "TEXT": [
+      "Teils Helm, Teils Hochleistungs-Taschenlampe.",
+      "Höhlenforscher-Hut"
+    ]
+  }
+}

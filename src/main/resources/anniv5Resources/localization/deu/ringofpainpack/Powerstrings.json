@@ -1,0 +1,15 @@
+{
+  "${ModID}:RendPower": {
+    "NAME": "Riss",
+    "DESCRIPTIONS": [
+      "Erhält #b",
+      " mehr Schaden von Angriffen. Reduziert sich um die Hälfe am Ende des Zugs."
+    ]
+  },
+  "${ModID}:ConnectionPower": {
+    "NAME": "Verbindung",
+    "DESCRIPTIONS": [
+      "Wann immer du eine Karte spielst, #yverbessere sie und ALLE Kopien von ihr."
+    ]
+  }
+}

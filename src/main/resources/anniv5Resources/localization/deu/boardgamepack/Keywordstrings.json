@@ -1,0 +1,43 @@
+[
+  {
+    "PROPER_NAME": "Würfeln",
+    "NAMES": [
+      "würfel",
+      "d4",
+      "d6",
+      "d8",
+      "d10",
+      "d12",
+      "d20"
+    ],
+    "DESCRIPTION": "Würfel erhöhen den Schaden und #yBlock der nächsten Karte, die du spielst, die Schaden verursacht oder #yBlocks."
+  },
+  {
+    "PROPER_NAME": "Neuwürfeln",
+    "NAMES": [
+      "neuwürfeln"
+    ],
+    "DESCRIPTION": "#yWürfel werden nicht verbraucht, wenn du diese Karte spielst."
+  },
+  {
+    "PROPER_NAME": "Gefängnis",
+    "NAMES": [
+      "gefängnis"
+    ],
+    "DESCRIPTION": "Du kannst in diesem Zug keine Angriffskarten spielen oder Schaden nehmen."
+  },
+  {
+    "PROPER_NAME": "Chance",
+    "NAMES": [
+      "chance"
+    ],
+    "DESCRIPTION": "Chance-Karten werden gespielt, wenn sie gezogen werden, und #yerschöpft, wenn sie gespielt werden."
+  },
+  {
+    "PROPER_NAME": "Vorteil",
+    "NAMES": [
+      "vorteil"
+    ],
+    "DESCRIPTION": "Wirf #yWürfel zusätzlich einige Male und nimm den höchsten Wert der Würfe."
+  }
+]

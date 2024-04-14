@@ -47,7 +47,7 @@ public class Mimicry extends AbstractCreativityCard {
                     }
                     return o;
                 }).collect(Collectors.toCollection(ArrayList::new));
-                addToBot(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(tmpGrp), false));
+                addToTop(new FlexibleDiscoveryAction(JediUtil.createCardsForDiscovery(tmpGrp), false));
                 isDone = true;
             }
         });

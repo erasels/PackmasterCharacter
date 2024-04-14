@@ -1,0 +1,33 @@
+{
+  "${ModID}:ExampleTwoAmountPower": {
+    "NAME": "Beispiel 2",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges erhältst du #b",
+      " #yStärke und #b",
+      " #yGeschicklichkeit."
+    ]
+  },
+  "${ModID}:ConjurePackPower": {
+    "NAME": "Kartenbeschwörung",
+    "DESCRIPTIONS": [
+      "Zu Beginn der nächsten #b",
+      " Züge, füge deiner Hand #b2 Karten aus dem ",
+      " Kartenpack hinzu."
+    ]
+  },
+  "${ModID}:TempHPRegenPower": {
+    "NAME": "Ablation",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zuges erhältst du #b%s #yTemporäre #yHP, und reduziere dies dann um #b1."
+    ]
+  },
+  "${ModID}:RuinPower": {
+    "NAME": "Ruin",
+    "DESCRIPTIONS": [
+      "Das nächste Mal, wenn dieser Gegner unblockierten Angriffsschaden erleidet, verliert er #b",
+      "Das nächste Mal, wenn du unblockierten Angriffsschaden erleidest, verliere #b",
+      " LP für jede positive und negative Wirkung, die er hat.",
+      " LP für jede positive und negative Wirkung, die du hast."
+    ]
+  }
+}

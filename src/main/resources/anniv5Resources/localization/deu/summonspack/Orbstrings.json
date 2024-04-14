@@ -1,0 +1,54 @@
+{
+  "${ModID}:SwarmOfBees": {
+    "NAME": "Bienen",
+    "DESCRIPTION": [
+      "#yPassive: Verursache #b",
+      " Schaden an ALLEN Gegnern. NL #yEntladen: Verursache #b",
+      " Schaden an ALLEN Gegnern."
+    ]
+  },
+  "${ModID}:Louse": {
+    "NAME": "Regenbogenlaus",
+    "DESCRIPTION": [
+      "#yPassive: Ziehe zu Beginn deines Zugs eine Karte. #yEntladen: Ziehe #b2 Karten."
+    ]
+  },
+  "${ModID}:Panda": {
+    "NAME": "Panda",
+    "DESCRIPTION": [
+      "#yPassive: Am Ende deines Zugs, verursache #b",
+      " Schaden an einem zufälligen Gegner. NL #yEntladen: Verursache #b",
+      " Schaden an einem zufälligen Gegner."
+    ]
+  },
+  "${ModID}:Porcupine": {
+    "NAME": "Stachelschwein",
+    "DESCRIPTION": [
+      "#yPassive: Zu Beginn deines Zuges füge einen #b",
+      " Schaden #yStachel into your hand. NL #yEntladen: Erhalte #b",
+      " #yDornen."
+    ]
+  },
+  "${ModID}:Wolf": {
+    "NAME": "Wolf",
+    "DESCRIPTION": [
+      "#yPassive: Am Ende deines Zugs, verursache #b",
+      " Schaden am Gegner mit den wenigsten TP. NL Der Schaden erhöht sich mit der Anzahl der erschaffenen Orbs. NL #yEntladen: Erhalte einen Orb Slot."
+    ]
+  },
+  "${ModID}:Leprechaun": {
+    "NAME": "Kobold",
+    "DESCRIPTION": [
+      "#yPassive: Zu beginn deines Zugs würfle #b",
+      ". NL #yEntladen: Wende #b",
+      " #yPech auf ALLE Gegner an."
+    ]
+  },
+  "${ModID}:FireSpirit": {
+    "NAME": "Feuergeist",
+    "DESCRIPTION": [
+      "#yPassive: Am Ende deines Zuges verursache #b",
+      " #yEntzünden an ALLEN Gegnern. NL #yEntladen: Erhalte #b1 #yFokus."
+    ]
+  }
+}

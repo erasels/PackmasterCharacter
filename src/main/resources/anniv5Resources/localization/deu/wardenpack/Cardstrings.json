@@ -1,0 +1,44 @@
+{
+  "${ModID}:PierceVeil": {
+    "NAME": "Durchdringender Blick",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Nimm eine der obersten !M! Karten deines Nachziehstapels auf die Hand."
+  },
+  "${ModID}:Stall": {
+    "NAME": "Verzögerung",
+    "DESCRIPTION": "Erhalte !B! Block. NL Lege bis zu !M! Karten von deiner Hand oben auf deinen Nachziehstapel zurück."
+  },
+  "${ModID}:RiskOfBlades": {
+    "NAME": "Klingenrisiko",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Wiederhole dies für jede Angriffskarte in den obersten 3 Karten deines Nachziehstapels.",
+    "EXTENDED_DESCRIPTION": [" NL (Trifft !M! weiteres Mal.)", " NL (Trifft !M! weitere Male.)"]
+  },
+  "${ModID}:Crossroads": {
+    "NAME": "Wegkreuzung",
+    "DESCRIPTION": "Spähe !M!. NL Spiele die oberste Karte deines Nachziehstapels. NL Erschöpfen."
+  },
+  "${ModID}:Anticipation": {
+    "NAME": "Vorahnung",
+    "DESCRIPTION": "Ziehe 1 Karte. NL Erhalte Stärke entsprechend ihrer Kosten.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erhalte Stärke entsprechend ihrer Kosten."
+  },
+  "${ModID}:Prediction": {
+    "NAME": "Vorhersage",
+    "DESCRIPTION": "Erhalte !B! Block. NL Falls kein Gegner anzugreift, erhalte ihn stattdessen im nächsten Zug."
+  },
+  "${ModID}:ForceBolt": {
+    "NAME": "Kraftblitz",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Füge !M! Verwundbar hinzu."
+  },
+  "${ModID}:Enigmancy": {
+    "NAME": "Rätselhaftigkeit",
+    "DESCRIPTION": "Spähe !M!. NL Erhalte jeden Zug !${ModID}:m2! Energie. Reduziere dies jeden Zug um 1."
+  },
+  "${ModID}:Recurrence": {
+    "NAME": "Wiederkehr",
+    "DESCRIPTION": "Mische eine Kopie deiner Hand in deinen Nachziehstapel. NL Erschöpfen."
+  },
+  "${ModID}:DivineMight": {
+    "NAME": "Göttliche Macht",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Wenn [#EFC851]Göttliche [#EFC851]Macht zweimal gespielt wurde, ${ModID}:Aufstieg."
+  }
+}

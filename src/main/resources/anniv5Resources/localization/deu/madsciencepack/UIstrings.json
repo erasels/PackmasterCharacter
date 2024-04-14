@@ -1,0 +1,33 @@
+{
+  "${ModID}:MadSciencePack": {
+    "TEXT": [
+      "Verrückte Wissenschaft!",
+      "Modifiziere deine Karten mit Bonus Effekten, werde unschlagbar!",
+      "MichaelMayhem"
+    ]
+  },
+  "${ModID}:MadScienceModifiers": {
+    "TEXT": [
+      " NL Erschaffe ",
+      " Frost.",
+      "Behalten. NL ",
+      " NL Spiele ",
+      " NL Erhalte 6 Block.",
+      " NL Erhalte 8 Block.",
+      " NL Nochmal spielen, unmodifiziert.",
+      " NL Erhalte eine *Kanonenkugel.",
+      " NL Ziehe 1 Karte."
+    ]
+  },
+  "${ModID}:AddModifierUI": {
+    "TEXT": [
+      "Wähle eine Karte zum Modifizieren."
+    ]
+  },
+  "${ModID}:MadSciencePackHat": {
+    "TEXT": [
+      "Du wirst es ihnen zeigen. Du wirst es ihnen allen zeigen!!",
+      "Völlig verrückte Wissenschaft "
+    ]
+  }
+}

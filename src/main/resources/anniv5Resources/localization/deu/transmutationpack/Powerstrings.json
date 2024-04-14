@@ -1,0 +1,8 @@
+{
+  "${ModID}:CrystalResonancePower": {
+    "NAME": "Kristallschwingung",
+    "DESCRIPTIONS": [
+      "Immer wenn du ${ModID}:Transmutierst, erhalte #b", " #yStärke"
+    ]
+  }
+}

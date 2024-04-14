@@ -1,0 +1,27 @@
+{
+  "${ModID}:Strike": {
+    "NAME": "Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu."
+  },
+  "${ModID}:Defend": {
+    "NAME": "Verteidigen",
+    "DESCRIPTION": "Erhalte !B! Block."
+  },
+  "${ModID}:Rummage": {
+    "NAME": "Durchwühlen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !${ModID}:m2! Karte und reduziere ihre Kosten in diesem Zug um !M!."
+  },
+  "${ModID}:Cardistry": {
+    "NAME": "Kartenzauberei",
+    "DESCRIPTION": "Erhalte !B! Block. NL Die nächste Karte, die du in diesem Zug spielst, wird an die Spitze deines Nachziehstapels zurückgelegt."
+  },
+  "${ModID}:ConjurePack": {
+    "NAME": "Pack beschwören",
+    "DESCRIPTION": "Wähle 1 von !M! verfügbaren Packs für deinen Lauf aus. NL Zu Beginn der nächsten 5 Züge füge 2 seiner Karten deiner Hand hinzu.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Wähle 1 von !M! verfügbaren Packs für deinen Lauf aus. NL Zu Beginn der nächsten 5 Züge füge 2 seiner Karten deiner Hand hinzu."
+  },
+  "${ModID}:Vexed": {
+    "NAME": "Verärgert",
+    "DESCRIPTION": "Nicht spielbar. NL Kann nicht aus deinem Deck entfernt werden. NL Wenn diese Karte in deiner Hand ist, verbrauche sie, wenn du eine *Foil-Karte spielst."
+  }
+}

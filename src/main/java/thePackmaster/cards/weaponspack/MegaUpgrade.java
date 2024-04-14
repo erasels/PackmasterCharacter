@@ -10,14 +10,15 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class MegaUpgrade extends AbstractWeaponsPackCard {
 
     public static final String ID = makeID("MegaUpgrade");
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int UPGRADE_VALUE = 3;
-    private static final int UPGRADE_PLUS_UPGRADE_VALUE = 2;
+    private static final int UPGRADE_PLUS_UPGRADE_VALUE = 1;
 
     public MegaUpgrade() {
         super(ID, COST, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = UPGRADE_VALUE;
+        this.selfRetain = true;
     }
 
     @Override

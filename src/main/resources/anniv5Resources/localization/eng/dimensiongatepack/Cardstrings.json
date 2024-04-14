@@ -29,7 +29,7 @@
   },
   "${ModID}:ScrollOfIntellect": {
     "NAME": "Scroll of Intellect",
-    "DESCRIPTION": "Draw a card. NL Gain [E]. NL Exhaust.",
+    "DESCRIPTION": "Draw 1 card. NL Gain [E]. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain [E]. NL Exhaust."
   },
   "${ModID}:Sustenance": {

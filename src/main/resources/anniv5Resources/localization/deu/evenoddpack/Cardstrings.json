@@ -1,0 +1,56 @@
+{
+  "${ModID}:SwordAndBoard": {
+    "NAME": "Schwert und Schild",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["${ModID}:Gerade:", " Füge !D! Schaden zu.", " NL ","${ModID}:Ungerade: ", " Erhalte !B! Block."]
+  },
+  "${ModID}:QuickReflex": {
+    "NAME": "Schneller Reflex",
+    "DESCRIPTION": "Erhalte !B! Block.",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Erste:", " Erhalte !B! Block."]
+  },
+  "${ModID}:PrimeDirective": {
+    "NAME": "Hauptziel",
+    "DESCRIPTION": "Deine Angriffe haben NL ${ModID}:Ungerade: + !M! Schaden."
+  },
+  "${ModID}:WitzBolt": {
+    "NAME": "Witzblitz",
+    "DESCRIPTION": "Füge !D! Schaden zu.",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Ungerade:", " Verursache !M! Schwach und Verwundbar."]
+  },
+  "${ModID}:ElementOfSurprise": {
+    "NAME": "Überraschungselement",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["${ModID}:Erste:", " Deine nächste Karte wird zweimal gespielt."]
+  },
+  "${ModID}:GammaWard": {
+    "NAME": "Gamma Schutz",
+    "DESCRIPTION": "Erhalte !B! Block.",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Gerade:", " Deine nächste Fähigkeit in diesem Zug hat NL ${ModID}:Gerade: Erhalte !M! Block."]
+  },
+  "${ModID}:Flourish": {
+    "NAME": "Florieren",
+    "DESCRIPTION": "Erhalte !M! ${ModID}:Panzerrüstung.",
+    "EXTENDED_DESCRIPTION": [" NL ", "${ModID}:Gerade:", " Heile !M! LP.", "${ModID}:Ungerade:", " Erhalte [E] ."]
+  },
+  "${ModID}:EvenOddAppend": {
+    "NAME": "",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [" NL (+ ", " Schaden.)", " NL Erhalte ", " Block"]
+  },
+  "${ModID}:WindUpBomb": {
+    "NAME": "Aufziehbombe",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["${ModID}:Gerade:", " Erhöhe den Schaden dieser Karte um !M!.", " NL ", "${ModID}:Ungerade:", " Füge !D! Schaden zu."]
+  },
+  "${ModID}:LeftHook": {
+    "NAME": "Linker Haken",
+    "DESCRIPTION": "Füge !D! Schaden zu.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Ungerade:", " Bleibt in deiner Hand.", " NL (Diesen Kampf noch !stslib:ex! Mal einsetzbar)."]
+  },
+  "${ModID}:Battlecry": {
+    "NAME": "Schlachtruf",
+    "DESCRIPTION": "Ziehe !M! Karten.",
+    "EXTENDED_DESCRIPTION": [" NL ","${ModID}:Erste:", " Erhalte 2 Stärke."]
+  }
+}

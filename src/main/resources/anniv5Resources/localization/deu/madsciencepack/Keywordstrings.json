@@ -1,0 +1,19 @@
+[
+  {
+    "PROPER_NAME": "Modifizieren",
+    "NAMES": [
+      "modify"
+
+    ],
+    "DESCRIPTION": "Modifiziere eine Karte für den Rest des Kampfes. NL Modifizierte Karten können nicht erneut modifiziert werden, bis der Kampf endet."
+  },
+  {
+    "PROPER_NAME": "Absorbieren",
+    "NAMES": [
+      "absorbiere",
+      "absorbiert",
+      "absorbieren"
+    ],
+    "DESCRIPTION": "Erschöpfe eine Karte. Wenn diese Karte erschöpft ist, füge alle Karten, die sie absorbiert hat, deiner Hand hinzu."
+  }
+]

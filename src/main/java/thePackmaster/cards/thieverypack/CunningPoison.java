@@ -21,7 +21,7 @@ public class CunningPoison extends AbstractThieveryCard {
 	private static final AbstractCard.CardTarget TARGET = CardTarget.ALL_ENEMY;
 
 	private static final int POISON = 4;
-	private static final int UPGRADE_POISON = 1;
+	private static final int UPGRADE_POISON = 2;
 	private static final int GOLD = 12;
 	private static final int UPGRADE_GOLD = 3;
 

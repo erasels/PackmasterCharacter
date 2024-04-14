@@ -1,0 +1,141 @@
+{
+  "${ModID}:HuntingStrike": {
+    "NAME": "Jagdstoß",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Fügt Eliten und Bossen doppelten Schaden zu. NL Ziehe 1 Karte."
+  },
+  "${ModID}:Focus": {
+    "NAME": "Spur",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wende !M! ${ModID}:Gejagt an."
+  },
+  "${ModID}:PerfectDodge": {
+    "NAME": "Perfektes Ausweichen",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn dein Block genau in diesem Zug gebrochen wird, erhalte !M! Stärke."
+  },
+  "${ModID}:Greatsword": {
+    "NAME": "Großschwert",
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Wenn du am Ende des Zuges ungenutzte Energie hast, erhöhe für jede den Schaden dieser Karte um 8."
+  },
+  "${ModID}:HuntingInstincts": {
+    "NAME": "Jagdinstinkt",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte doppelten Block, wenn du einem Elite oder Boss gegenüberstehst."
+  },
+  "${ModID}:SkullClub": {
+    "NAME": "Schädelknüppel",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn das Ziel überlebt, werde ${ModID}:Wütend! NL Erschöpfen."
+  },
+  "${ModID}:ShellPauldrons": {
+    "NAME": "Panzerplatten",
+    "DESCRIPTION": "Erhalte !M! ${ModID}:Panzerrüstung.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte !M! ${ModID}:Panzerrüstung."
+  },
+  "${ModID}:CoreBlaster": {
+    "NAME": "Kernblaster",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge deinem Nachziehstapel eine *Kern *Blinder Karte hinzu. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Füge deinem Nachziehstapel eine *Kern *Blinder+ Karte hinzu. NL Erschöpfen."
+  },
+  "${ModID}:CoreBlinder": {
+    "NAME": "Kernblinder",
+    "DESCRIPTION": "Wende !M! Schwach und Verwundbar an. NL Füge deinem Nachziehstapel eine *Kern *Blaster Karte hinzu. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wende !M! Schwach und Verwundbar auf ALLE Gegner an. NL Füge deinem Nachziehstapel eine *Kern *Blaster+ Karte hinzu. NL Erschöpfen."
+  },
+  "${ModID}:GuardianShield": {
+    "NAME": "Wächterschild",
+    "DESCRIPTION": "Erhalte am Ende deines Zuges !M! Block. NL Immer wenn du angegriffen wirst, füge !M! Schaden zurück."
+  },
+  "${ModID}:InfernoDaggers": {
+    "NAME": "Infernodolche",
+    "DESCRIPTION": "Behalten. NL Füge !M! Mal !D! Schaden zu und setze die Kosten dieser Karte auf 6. NL Wenn behalten, reduziere die Kosten dieser Karte um 1."
+  },
+  "${ModID}:StabManual": {
+    "NAME": "Stechhandbuch",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge deiner Hand !M! *Messer hinzu. Erhöhe die Anzahl der *Messer, die dies für den Rest des Kampfes hinzufügt, um 1."
+  },
+  "${ModID}:SlimeHammer": {
+    "NAME": "Schleimhammer",
+    "DESCRIPTION": "Füge am Ende des nächsten Zuges !D! Schaden zu.",
+    "UPGRADE_DESCRIPTION": "Wende 1 Schwach an. NL Füge am Ende des nächsten Zuges !D! Schaden zu."
+  },
+  "${ModID}:SlaverWhip": {
+    "NAME": "Sklavenpeitsche",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Schwach und Verwundbar an. NL Wenn dies einen Gegner tötet, nimm die Karte zurück auf die Hand und setze die Kosten diesen Zug auf 0."
+  },
+  "${ModID}:GremlinLance": {
+    "NAME": "Gremlinlanze",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn dies einen Gegner tötet, erhalte [E] und ziehe 1 Karte."
+  },
+  "${ModID}:ChampMail": {
+    "NAME": "Champion's Plattentarnung",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn du auf 50% Gesundheit oder weniger bist, entferne alle deine Debuffs und erhalte !M! Stärke. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Wenn du auf 50% Gesundheit oder weniger bist, entferne alle deine Debuffs und erhalte !M! Stärke."
+  },
+  "${ModID}:CursedBow": {
+    "NAME": "Verfluchter Bogen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Schwach und Verwundbar an. NL Erschöpfen."
+  },
+  "${ModID}:HyperBlaster": {
+    "NAME": "Hyperblaster",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Mische !M! Leere in deinen Nachziehstapel."
+  },
+  "${ModID}:EphemeralShroud": {
+    "NAME": "Vergänglicher Schleier",
+    "DESCRIPTION": "Erhalte !M! Immateriell. NL Erschöpfen."
+  },
+  "${ModID}:StoneHelm": {
+    "NAME": "Steinhelm",
+    "DESCRIPTION": "Erhalte !B! Block. Verringert sich um 2 für jede Karte, die du in diesem Zug gespielt hast. NL Beende deinen Zug."
+  },
+  "${ModID}:TimepieceTiara": {
+    "NAME": "Zeitmessertiara",
+    "DESCRIPTION": "Erhalte 3 Stärke für alle 12 Karten die du spielst.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte 3 Stärke für alle 12 Karten die du spielst."
+  },
+  "${ModID}:DonuAmulet": {
+    "NAME": "Donu Amulett",
+    "DESCRIPTION": "Erhalte !M! Stärke."
+  },
+  "${ModID}:DecaAmulet": {
+    "NAME": "Deca Amulett",
+    "DESCRIPTION": "Erhalte !M! ${ModID}:Plattenrüstung."
+  },
+  "${ModID}:SpireSpear": {
+    "NAME": "Spitzenspeer",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu."
+  },
+  "${ModID}:SpireShield": {
+    "NAME": "Spitzen Schild",
+    "DESCRIPTION": "Erhalte !B! Block."
+  },
+  "${ModID}:CarvingKnife": {
+    "NAME": "Schnitzmesser",
+    "DESCRIPTION": "Füge !D! Schaden zu. Wenn dies einen Elite oder Boss tötet, erhalte dessen Waffen- oder Rüstungskarte und entferne diese Karte dauerhaft aus deinem Deck. NL Erschöpfen."
+  },
+  "${ModID}:AwakenedRitualDagger": {
+    "NAME": "Erwachter Ritualdolch",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Falls tödlich, heile dich komplett. NL Erschöpfen."
+  },
+  "${ModID}:HuntingContract": {
+    "NAME": "Jagdvertrag",
+    "DESCRIPTION": "Angeboren. NL Wende !M! ${ModID}:Gejagt an. NL Erschöpfen."
+  },
+  "${ModID}:HunterRank": {
+    "NAME": "Jägerrang",
+    "DESCRIPTION": "Erhalte !M! Stärke. Erhöht sich um 1 für jede Elite und Boss-Kampf, die du besiegt hast."
+  },
+  "${ModID}:TranqBomb": {
+    "NAME": "Beruhigungsbombe",
+    "DESCRIPTION": "Füge !D! ${ModID}:nichttödlichen Schaden zu. NL Das Ziel verliert !M! Stärke. NL Erschöpfen."
+  },
+  "${ModID}:Paintball": {
+    "NAME": "Paintball",
+    "DESCRIPTION": "Wende !M! ${ModID}:Gejagt an. NL Behalte !${ModID}:m2! Karte in diesem Zug.",
+    "UPGRADE_DESCRIPTION": "Wende !M! ${ModID}:Gejagt an. NL Behalte !${ModID}:m2! Karten in diesem Zug."
+  },
+  "${ModID}:SerpentineDagger": {
+    "NAME": "Schlangendolch",
+    "DESCRIPTION": "Flüchtig. NL Füge !M! mal !D! Schaden zu. NL Füge zwei Kopien dieser Karte deinem Nachziehstapel hinzu. NL Erschöpfen."
+  },
+  "${ModID}:CorruptedBlade": {
+    "NAME": "Korrupte Klinge",
+    "DESCRIPTION": "Erhalte 3 *Ritual. NL Erhalte !M! ${ModID}:Unverwundbar. NL Füge 15 mal !D! Schaden zu."
+  }
+}

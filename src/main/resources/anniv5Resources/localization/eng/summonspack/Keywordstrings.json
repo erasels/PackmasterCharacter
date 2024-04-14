@@ -15,7 +15,7 @@
       "rainbow\u00a0louse",
       "Rainbow\u00a0louse"
     ],
-    "DESCRIPTION": "Orb: Draw a card at the start of your turn. When #yEvoked, draw 2 cards."
+    "DESCRIPTION": "Orb: Draw 1 card at the start of your turn. When #yEvoked, draw 2 cards."
   },
   {
     "PROPER_NAME": "Panda",

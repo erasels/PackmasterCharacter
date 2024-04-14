@@ -1,0 +1,19 @@
+{
+  "${ModID}:SlowingPower": {
+    "NAME": "verlangsamung",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges erhältst du",
+      " #b",
+      " [E] ."
+    ]
+  },
+  "${ModID}:PanacherPower": {
+    "NAME": "panacher",
+    "DESCRIPTIONS": [
+      "Wenn #b",
+      " weitere Karte erstellt wird, füge ALLEN Gegnern #b",
+      " weitere Karten erstellt werden, füge ALLEN Gegnern #b",
+      " Schaden zu."
+    ]
+  }
+}

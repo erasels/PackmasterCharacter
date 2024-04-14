@@ -15,7 +15,7 @@
   },
   "${ModID}:Stockpile": {
     "NAME": "Stockpile",
-    "DESCRIPTION": "Discard a card. NL If it was a Power card, Channel !M! Plasma. Otherwise, Channel !M! Lightning."
+    "DESCRIPTION": "Discard a card. NL If it was a Power card, Channel !M! Plasma. Otherwise, Channel !${ModID}:m2! Lightning."
   },
   "${ModID}:IcicleCrash": {
     "NAME": "Icicle Crash",

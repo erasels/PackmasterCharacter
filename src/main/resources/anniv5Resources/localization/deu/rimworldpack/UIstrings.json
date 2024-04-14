@@ -1,0 +1,27 @@
+{
+  "${ModID}:RimworldPack": {
+    "TEXT": [
+      "RimWorld",
+      "Mentale Pausen und Essen ohne Tisch. Natürlich für enorme Leistung.",
+      "Laugic",
+      "#bRimWorld original erstellt von #bLudeon #bStudios"
+    ]
+  },
+  "${ModID}:Potions": {
+    "TEXT": [
+      "Lecker ",
+      "!"
+    ]
+  },
+  "${ModID}:OnFireModifier": {
+    "TEXT": [
+      "${ModID}:Aufgedreht. NL "
+    ]
+  },
+  "${ModID}:RimworldPackHat": {
+    "TEXT": [
+      "Für Weltraum-Cowboys. Definitiv nicht aus menschlichem Leder.",
+      "RimWorld Hut"
+    ]
+  }
+}

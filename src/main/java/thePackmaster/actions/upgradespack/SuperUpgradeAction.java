@@ -30,6 +30,9 @@ public class SuperUpgradeAction extends AbstractGameAction {
                 forceUpgrade(c, true);
             }
         }
+        // In case this was played through an effect that didn't change the hand (e.g. a duplication effect),
+        // make sure that card text gets updated to reflect the new values
+        AbstractDungeon.player.hand.applyPowers();
         isDone = true;
     }
 

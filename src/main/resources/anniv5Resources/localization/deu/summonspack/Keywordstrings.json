@@ -1,0 +1,65 @@
+[
+  {
+    "PROPER_NAME": "Bienenschwarm",
+    "NAMES": [
+      "bienenschwarm",
+      "Bienenschwarm",
+      "swarms\u00a0of\u00a0bees",
+      "Swarms\u00a0of\u00a0bees"
+    ],
+    "DESCRIPTION": "Orb: Verursacht Schaden an ALLEN Gegnern."
+  },
+  {
+    "PROPER_NAME": "Regenbogenlaus",
+    "NAMES": [
+      "regenbogenlaus",
+      "Regenbogenlaus"
+    ],
+    "DESCRIPTION": "Orb: Ziehe zu Beginn deines Zugs eine Karte. Beim #yEntladen, ziehe 2 Karten."
+  },
+  {
+    "PROPER_NAME": "Panda",
+    "NAMES": [
+      "pandas",
+      "Panda",
+      "panda"
+    ],
+    "DESCRIPTION": "Orb: Verursacht, am Ende deines Zugs, Schaden bei einem zufälligen Gegner."
+  },
+  {
+    "PROPER_NAME": "Wolf",
+    "NAMES": [
+      "wolf"
+    ],
+    "DESCRIPTION": "Orb: Fügt dem Gegner mit den wenigsten TP Schaden zu. Der Schaden erhöht sich um die Anzahl der Orbs, die #yErschaffen wurden. Beim #yEntladen, erhältst du einen Orb-Slot."
+  },
+  {
+    "PROPER_NAME": "Stachelschwein",
+    "NAMES": [
+      "stachelschwein"
+    ],
+    "DESCRIPTION": "Orb: Generiert #yStacheln. Beim #yEntladen erhalte #yDornen."
+  },
+  {
+    "PROPER_NAME": "Kobold",
+    "NAMES": [
+      "kobold"
+    ],
+    "DESCRIPTION": "Orb: #yWürfelt. Beim #yEntladen, wende #yPech auf alle Gegner an."
+  },
+  {
+    "PROPER_NAME": "Pech",
+    "NAMES": [
+      "pech"
+    ],
+    "DESCRIPTION": "Verhexte Feinde verlieren TP, wenn sie einen Debuff erhalten."
+  },
+  {
+    "PROPER_NAME": "Feuergeist",
+    "NAMES": [
+      "feuergeist",
+      "Fire\u00a0spirit"
+    ],
+    "DESCRIPTION": "Orb: Gib ALLEN Gegnern #yIgnite. Beim Entladen, erhalte #yFocus."
+  }
+]

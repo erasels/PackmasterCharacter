@@ -1,0 +1,16 @@
+{
+  "${ModID}:CuckooPower": {
+    "NAME": "kuckuck",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #rFluch Karte ziehst, füge einem zufälligen Feind #b",
+      " Schaden zu."
+    ]
+  },
+  "${ModID}:LikeClockworkPower": {
+    "NAME": "wie ein Uhrwerk",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zuges erhältst du #b",
+      " #yBlock für jede #rFluch- oder #yStatus Karte in deiner Hand."
+    ]
+  }
+}

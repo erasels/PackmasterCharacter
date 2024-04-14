@@ -1,0 +1,9 @@
+[
+  {
+    "PROPER_NAME": "Verzerrung",
+    "NAMES": [
+      "verzerrung"
+    ],
+    "DESCRIPTION": "Kreaturen mit #yVerzerrung verlieren immer dann LP wenn eine Karte #yErschöpft wird. Verringert #yVerzerrung um #b1."
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "PROPER_NAME": "Reißbar",
+    "NAMES": [
+      "rippable",
+      "ripped",
+      "rip"
+      
+    ],
+    "DESCRIPTION": "Klicken Sie mit der rechten Maustaste auf diese Karte, um ihren Effekt von ihren Kosten zu trennen und beide Hälften zu erstellen. #yErschöpfen."
+  },
+  {
+    "PROPER_NAME": "Malerei",
+    "NAMES": [
+      "malerei"
+      
+    ],
+    "DESCRIPTION": "Die Kunsthälfte einer #yabcdefg Karte. Sie macht nichts und #yerschöpft immer."
+  },
+  {
+    "PROPER_NAME": "Textkarte",
+    "NAMES": [
+      "text card",
+      "text_card",
+      "text cards",
+      "text_cards"
+    ],
+    "DESCRIPTION": "Die Text Hälfte der #yabcdefg Karte. #yErschöpft immer."
+  },
+  {
+    "PROPER_NAME": "Ungeboren",
+    "NAMES": [
+      "ungeboren"
+    ],
+    "DESCRIPTION": "Beginnt jeden Kampf ganz unten deines Nachziehstapels."
+  }
+]

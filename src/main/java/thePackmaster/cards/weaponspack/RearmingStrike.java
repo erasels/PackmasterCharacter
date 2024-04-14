@@ -15,7 +15,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class RearmingStrike extends AbstractWeaponsPackCard {
     public static final String ID = makeID("RearmingStrike");
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DAMAGE = 3;
     private static final int WEAPON_ATTACK = 4;
     private static final int WEAPON_DURABILITY = 2;

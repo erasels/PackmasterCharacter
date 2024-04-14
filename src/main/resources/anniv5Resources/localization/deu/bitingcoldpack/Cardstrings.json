@@ -1,0 +1,45 @@
+{
+  "${ModID}:FrigidBody": {
+    "NAME": "Erstarrter Körper",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wann immer du in diesem Zug angegriffen wirst, wende abhänging vom geblockten Schaden ${ModID}:Frostbiss an."
+  },
+  "${ModID}:Frostburn": {
+    "NAME": "Frostbrand",
+    "DESCRIPTION": "Wende !M! ${ModID}:Frostbiss auf ALLE Gegner an. NL Füge deinem Ablagestapel ein *Brennen hinzu."
+  },
+  "${ModID}:FrostedEdge": {
+    "NAME": "Gefrorene Klinge",
+    "DESCRIPTION": "Immer wenn du ${ModID}:Frostbiss anwendest, erhalte !M! temporäre Stärke."
+  },
+  "${ModID}:GrowingAffliction": {
+    "NAME": "Wachsende Plage",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du einen Debuff anwendest, kehrt diese Karte aus dem Ablagestapel zurück und ihre Kosten werden auf 1 gesetzt."
+  },
+  "${ModID}:InsultToInjury": {
+    "NAME": "Hohn und Spott",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole dies für jeden einzigartigen Debuff, den der Gegner hat."
+  },
+  
+  "${ModID}:Refrigerate": {
+    "NAME": "Kühlung",
+    "DESCRIPTION": "Wende !M! ${ModID}:Frostbiss an. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wende !M! ${ModID}:Frostbiss an. NL Wenn der Feind bereits ${ModID}:Frostbiss hatte, verliert er TP in Höhe dessen. NL Erschöpfen."
+  },
+  "${ModID}:RelentlessHail": {
+    "NAME": "Unerbittlicher Hagel",
+    "DESCRIPTION": "Füge ALLEN Gegnern !M! Mal !D! Schaden zu. NL Erhöhe die Treffer dieser Karte in diesem Kampf um 1."
+  },
+  "${ModID}:IceShatter": {
+    "NAME": "Eisiger Splitter",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn der Gegner während seines nächsten Zuges LP verliert, füge !M! Schaden zu."
+  },
+ "${ModID}:SnowedIn": {
+    "NAME": "Eingeschneit",
+    "DESCRIPTION": "Wende !M! ${ModID}:Frostbiss an. NL Der ${ModID}:Frostbiss des Ziels wird in diesem Zug nicht halbiert."
+  },
+  "${ModID}:Subdue": {
+    "NAME": "Unterwerfen",
+    "DESCRIPTION": "Erhalte !B! Block. NL Falls die letzte Karte, die in diesem Kampf gespielt wurde, ein Angriff war, erhalte zusätzlich !B! Block."
+  }
+ 
+}

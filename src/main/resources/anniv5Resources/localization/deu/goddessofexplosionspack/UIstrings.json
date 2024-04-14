@@ -1,0 +1,29 @@
+{
+  "${ModID}:GoddessOfExplosionsPack": {
+    "TEXT": [
+      "Göttin der Explosionen",
+      "MACHT! WERT! EXPLOSIONEN! NL Starke Skalierung, Mächte und Nichtangriffsschaden.",
+      "AlexMdle",
+      "#yGöttin #yder #yExplosionen ursprünglich erstellt von #yLudosity"
+    ]
+  },
+  "${ModID}:HandpickUI": {
+    "TEXT": [
+      "zweimal spielen.",
+      "in eine Bombe verwandeln."
+    ]
+  },
+  "${ModID}:KillerQueenTooltip": {
+    "TEXT": [
+      "Killer Queen",
+      "Beim Spielen, füge ALLEN Gegnern #b",
+      " Schaden zu."
+    ]
+  },
+  "${ModID}:GoddessOfExplosionsPackHat": {
+    "TEXT": [
+      "Hättest angeben sollen, wo du diese Flügel haben möchtest.",
+      "Apotheose"
+    ]
+  }
+}

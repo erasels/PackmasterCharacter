@@ -15,7 +15,7 @@ public class BlockVial extends AbstractWomanInBlueCard {
     public final static String ID = makeID("BlockVial");
 
     public BlockVial() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 12;
         baseSecondMagic = 6;
         exhaust = true;

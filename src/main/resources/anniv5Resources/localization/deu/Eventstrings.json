@@ -1,0 +1,47 @@
+{
+  "${ModID}:BlackMarketDealerEvent": {
+    "NAME": "Schwarzmarkt",
+    "DESCRIPTIONS": [
+      "\"HEY DU! Mit einem Rucksack dieser Größe musst du ein Sammler sein! NL NL Komm rein und stöbere - wir haben heute einen schönen temporären Pop-up-Markt eingerichtet, vollkommen legal natürlich. Ich bin sicher, du findest etwas, was du brauchst... aber sag niemandem, dass wir hier waren.\"",
+      "Du gehst auf einen Händler zu, der vor einer Glasvitrine mit einer großen Auswahl an zum Verkauf stehenden Karten steht. NL NL Sie wären wahrscheinlich daran interessiert, einige deiner schwer zu findenden Karten zu kaufen.",
+      "In einer hinteren Ecke des Marktes gehst du zu einem Stand, der mit einem lila Tuch verhüllt ist. NL NL Eine stille, düstere, flüchtige Gestalt deutet auf das einzige Objekt, das sie ausgestellt haben - ein Buch, offensichtlich mit dunkler Magie verzaubert.",
+      "\"Wir treffen uns wieder!\" NL Ein fröhlicher, zerzauster Kamerad kommt freudig auf dich zu. NL NL \"Ich bin's, #yRanwid! Ich habe ein paar Sachen vom #bHändler gestohlen, um sie auf den Markt zu bringen - schau mal, schau mal!\"",
+      "\"Danke! Komm bald wieder! Besonders wenn du die superseltene Erstausgabe der G.K.-Karte findest, machen wir es dir lohnenswert! NL NL Du steckst deine neue Karte in deinen Rucksack und machst dich weiter auf den Weg.",
+      "\"Das ist ein ziemlich guter Zustand für ein Abenteurer im Spire! Wie schaffst du das mit all dem Zeug in deinem Rucksack?\" NL NL Du führst ein angenehmes Gespräch mit dem Ladenbesitzer über die Effektivität der Lagerung, bevor du den Markt verlässt.",
+      "\"Ein fairer Tausch ist das. Nicht etwas, was man hier im Spire oft findet!\" sagt er und wirft einen Blick zum Gremlin-Verkäufer und seinem Rad. NL NL Der Verkäufer schließt das Geschäft ab und tauscht deine Karte gegen die Glasvitrine aus. Es ist schön, mit einem Vagabund zu handeln, der dich nicht grundlos in die Rippen sticht.",
+      "Du blätterst um und schneidest irgendwie deinen Finger am Rand des Papiers. Das Blut sickert auf die Seite und breitet sich aus, bald ist deine Sicht von einem schwarzen Nebel umhüllt. NL NL Dein Geist wirbelt mit neuem Wissen, das die Gesetze der Karten Physik selbst trotzt! Aber zu welchem Preis...",
+      "Nichts von diesem Markt mit fragwürdiger Legalität spricht dich an, aber als du gehst, verschiebt sich die düstere magische Gestalt, um deinen Weg zu versperren, und lässt dir einen Trank in die Hand fallen. NL NL Du hörst eine Stimme in deinem Kopf... NL NL \"Du wirst... zurückkommen...\"",
+      "Das Wesen nickt, obwohl du eigentlich nichts gesagt hast - du dachtest nur, ob du der Leere etwas spenden könntest. NL NL Der Verkäufer streckt die Hand aus und zieht einen dicken Rauch aus deinem Körper, den er in seine eigene flüchtige Form absorbiert. Du fühlst dich sofort von einem toten Gewicht befreit und nickst zurück.",
+      "\"Ja, ja, eine ausgezeichnete Wahl! Eine vollständige Sammlung!\" NL NL #yRanwid steckt das #yGold weg und reicht dir einen ledergebundenen Kartenbinder. Der Einband hat ein paar verdunkelte Stellen... Wasserschaden? Blut? Wer kann das schon sagen.",
+      "\"Ah, versuchst du die Fehler der Vergangenheit rückgängig zu machen? Ja, ja... #yRanwid versteht...\" NL NL #yRanwid schaut traurig nach unten, als es dir das Dekret übergibt. Du fragst, was diesem Wesen so schwer auf dem Magen liegt, aber es sagt nichts, sofort wieder zu seiner gewohnt fröhlichen Art zurückkehrend. NL NL \"Wir sehen uns wieder!\", sagt es zum nächsten Kunden.",
+      "#yRanwids Augen werden weit, während sie direkt auf deinen glorreichen Hut starren. NL NL \"Du... Ich kann... dir nicht genug danken!\" NL NL #yRanwid setzt den Hut auf, was ihm den Blick und den Applaus vieler Kunden des Marktes einbringt.",
+      "Dieser Händler scheint nicht das zu haben, was du willst. Vielleicht ein anderer..."
+    ],
+    "OPTIONS": [
+      "#b[Unseriöser #bVerkäufer] Einzelne Karten durchstöbern.",
+      "#r[Arkaner #rMagier] Lerne Pakete zu beschwören.",
+      "#y[Zögerlicher #yBesitzer] Relikte durchstöbern.",
+      "[Verlassen]",
+      "[Kaufen] #rVerlieren #r",
+      " Gold. #gFüge #gdem #gDeck #g1 #gKarte #gaus #geiner #gAuswahl #gvon #g20 #gzufälligen #gKarten #gaus #gPaketen #gaußerhalb #gdeines #gPools #ghinzu.",
+      "[Verkaufen] #gEntferne #geine #gNicht-Basis, #gNicht-Fluch #gKarte #gaus #gdeinem #gDeck. #gErhalte #g",
+      " Gold.",
+      "[Umtauschen] #gVerkaufe #gzuerst, #gdann #gerhalte #gkostenlos #g2 #gKarten #gaus #geiner #gAuswahl #gvon #g20.",
+      "[Gesperrt] Erfordert ",
+      "[Gesperrt] Keine Karten zum Entfernen.",
+      "[Dunkle Künste lernen] #rWerde #rverflucht #r- #rverärgert. #gErhalte #gBeschwörung #gPaket.",
+      "[Probe entnehmen] #gErhalte #gPaket. #rEntferne #rden #rTrank.",
+      "[Reinigungsritual] #gEntferne #geine #gKarte #gaus #gdeinem #gDeck.",
+      "[Gesperrt] Keine Karten zum Entfernen.",
+      "[Kollektion kaufen] #rEntferne #r",
+      " Gold. #gErhalte #gMeister-Kollektion.",
+      "[Dekret kaufen] #rVerlieren #r",
+      " Gold. #gErhalte #gVerbannungsdekret.",
+      "[Hut verkaufen] #gErhalte #g",
+      " Gold. #rVerliere #rdeinen #rHut.",
+      "[Gesperrt] Kein Hut zum Verkaufen.",
+      "[Gesperrt] Der Verkäufer ist heute nicht hier.",
+      "[Gesperrt] Ausverkauft"
+    ]
+  }
+}

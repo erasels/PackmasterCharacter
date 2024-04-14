@@ -1,0 +1,52 @@
+{
+  "${ModID}:Conjunction": {
+    "NAME": "Konjunktion",
+    "DESCRIPTION": "Flüchtig. NL Wenn diese Karte gezogen wird, erhalte !B! Block."
+  },
+  "${ModID}:Opposition": {
+    "NAME": "Opposition",
+    "DESCRIPTION": "Flüchtig. NL Wenn diese Karte gezogen wird, verliert ein zufälliger Gegner !M! TP."
+  },
+  "${ModID}:Quincunx": {
+    "NAME": "Quincunx",
+    "DESCRIPTION": "Flüchtig. NL Wenn diese Karte gezogen wird, verlieren ALLE Gegner in diesem Zug !M! Stärke."
+  },
+  "${ModID}:Novile": {
+    "NAME": "Novile",
+    "DESCRIPTION": "Flüchtig. NL Wenn diese Karte gezogen wird, erhalte [E].",
+    "EXTENDED_DESCRIPTION": [
+      "Flüchtig. NL Wenn diese Karte gezogen wird, erhalte",
+      " [E]",
+      "."
+    ]
+  },
+  "${ModID}:Square": {
+    "NAME": "Quadrat",
+    "DESCRIPTION": "{@@}Flüchtig. NL Wenn diese Karte gezogen wird, ziehe !M! Karte{!M!|1=|@=n} mehr."
+  },
+  "${ModID}:Trine": {
+    "NAME": "Trigon",
+    "DESCRIPTION": "Flüchtig. NL Wenn diese Karte gezogen wird, wird die nächste Karte, die du in diesem Zug spielst, zweimal gespielt."
+  },
+  "${ModID}:Divination": {
+    "NAME": "Divination",
+    "DESCRIPTION": "Lege eine Karte aus deiner Hand unten in deinen Nachziehstapel. NL Ziehe !M! Karten.",
+    "UPGRADE_DESCRIPTION": "Lege beliebig viele Karten aus deiner Hand unten in deinen Nachziehstapel. NL Ziehe !M! Karten.",
+    "EXTENDED_DESCRIPTION": [
+      "Lege unten in deinen Nachziehstapel"
+    ]
+  },
+  "${ModID}:Glimpse": {
+    "NAME": "Ausblick",
+    "DESCRIPTION": "Immer wenn du eine Flüchtig Karte ziehst, erhalte !M! Block."
+  },
+  "${ModID}:Remember": {
+    "NAME": "Erinnern",
+    "DESCRIPTION": "{@@}Am Ende deines Zuges mische bis zu !M! Karte{!M!|1=|@=n} aus deiner Hand in deinen Nachziehstapel."
+  },
+  "${ModID}:Alignment": {
+    "NAME": "Ausrichtung",
+    "DESCRIPTION": "Ziehe X Karten. NL Diese Karten kosten in diesem Zug X weniger. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Ziehe X Karten. NL Diese Karten kosten in diesem Zug X weniger."
+  }
+}

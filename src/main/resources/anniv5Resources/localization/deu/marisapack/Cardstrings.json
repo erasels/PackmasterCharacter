@@ -1,0 +1,46 @@
+{
+  "${ModID}:MasterSpark": {
+    "NAME": "Meisterfunke",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Verstärken [E] : NL Füge stattdessen !${ModID}:sd! Schaden zu."
+  },
+  "${ModID}:RisingStrike": {
+    "NAME": "Aufwärtshieb",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Aufgeregt: Erhalte !M! ${ModID}:Aufladen."
+  },
+  "${ModID}:GalacticHalo": {
+    "NAME": "Galaktisches Echo",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! ${ModID}:Aufladen."
+  },
+  "${ModID}:LuminousStrike": {
+    "NAME": "Leuchtender Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Verstärken [E] : NL Erhalte !M! ${ModID}:Aufladen."
+  },
+  "${ModID}:ShootingEcho": {
+    "NAME": "Schallendes Echo",
+    "DESCRIPTION": "Füge !D! Schaden zu. Erschöpfe eine zufällige Karte, um eine Kopie davon zu erhalten. NL Erschöpfen."
+  },
+  "${ModID}:StardustReverie": {
+    "NAME": "Sternenstaub Phantasie",
+    "DESCRIPTION": "Erschöpfe die nächste Karte, die du spielst, um !M! ${ModID}:Aufladen zu erhalten und ziehe 1 Karte."
+  },
+  "${ModID}:Inertia": {
+    "NAME": "Trägheit",
+    "DESCRIPTION": "Erhalte !M! *Abtragung. NL ${ModID}:Verstärken [E] : NL Erhalte zusätzlich !${ModID}:m2! *Abtragung."
+  },
+  "${ModID}:UltimateShortwave": {
+    "NAME": "Ultimative Kurzwelle",
+    "DESCRIPTION": "Erhalte !M! [E] und !${ModID}:m2! ${ModID}:Aufladen. NL ${ModID}:Verstärken [E] : NL Erhöhe beide Werte in diesem Kampf um 1."
+  },
+  "${ModID}:DragonMeteor": {
+    "NAME": "Drachenmeteor",
+    "DESCRIPTION": "Füge !D! Schaden zu. Für jede Karte in deinem Erschöpfungsstapel füge !M! zusätzlichen Schaden zu."
+  },
+  "${ModID}:EarthlightRay": {
+    "NAME": "Erdlichtstrahl",
+    "DESCRIPTION": "Nachdem du ${ModID}:Aufladen erhalten hast, füge ALLEN Gegnern Schaden in Höhe von !M! Mal dem Gesamtwert zu."
+  },
+  "${ModID}:Spark": {
+    "NAME": "Funke",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Verstärken [E] : NL Erhalte !M! ${ModID}:Aufladen. NL Erschöpfen."
+  }
+}

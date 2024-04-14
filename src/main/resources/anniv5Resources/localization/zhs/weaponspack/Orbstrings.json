@@ -48,7 +48,13 @@
   "${ModID}:SwordOfFireOrb": {
     "NAME": "火焰之剑",
     "DESCRIPTION": [
-      "每当你使用本武器时，对所有敌人造成 #b3 点伤害。"
+      "每当你使用本武器时，对所有敌人造成 #b4 点伤害。"
+    ]
+  },
+  "${ModID}:ReapersScytheOrb": {
+    "NAME": "收割之镰",
+    "DESCRIPTION": [
+      "每当你使用这把 #y武器 攻击，每次攻击给予目标敌人 #b1 层 #y收割者印记 。"
     ]
   }
 }

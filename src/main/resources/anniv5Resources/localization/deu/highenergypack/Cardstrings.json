@@ -1,0 +1,57 @@
+{
+  "${ModID}:MiracleWorker": {
+    "NAME": "Wunderarbeiter",
+    "DESCRIPTION": "Erhalte !B! Block. NL Lege ein *Wunder oben auf deinen Nachziehstapel."
+  },
+  "${ModID}:Trash": {
+    "NAME": "Müll",
+    "DESCRIPTION": "Erschöpfe die Karte ganz links auf deiner Hand. NL Erhalte [E] .",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erschöpfe die Karte ganz links auf deiner Hand. NL Erhalte [E] ."
+  },
+  "${ModID}:MultiTool": {
+    "NAME": "Multifunktionswerkzeug",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe 1 Karte. NL Wenn du diesen Zug mit Energie beendest, verlieren ALLE Gegner !M! LP."
+  },
+  "${ModID}:LastResort": {
+    "NAME": "Letztes Mittel",
+    "DESCRIPTION": "Erhalte X Mal !B! Block. NL Wenn X 0 ist, erhalte nächste Runde [E] ."
+  },
+  "${ModID}:LotsOfIronWaves": {
+    "NAME": "Eisenhagel",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu."
+  },
+  "${ModID}:ManifestMeal": {
+    "NAME": "Manifest Mahl",
+    "DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Mische ein *Essen in deinen Nachziehstapel.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden X Mal zu. NL Mische ein *Essen+ in deinen Nachziehstapel."
+  },
+  "${ModID}:Food": {
+    "NAME": "Essen",
+    "DESCRIPTION": "Erhalte X [E] . NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte X [E] . NL Erschöpfen.",
+    "EXTENDED_DESCRIPTION": [
+      "Erhalte ",
+      "Behalten. NL Erhalte ",
+      " . NL Erschöpfen.",
+      "Du erhältst nichts! NL Guten Tag, der Herr! NL Erschöpfen.",
+      "Mmm, lecker"
+    ]
+  },
+  "${ModID}:Investor": {
+    "NAME": "Investor",
+    "DESCRIPTION": "Wann immer du 2 oder mehr Energie für eine Karte ausgibst, erhalte !M! Block."
+  },
+  "${ModID}:StruckByATrain": {
+    "NAME": "Von einem Zug erwischt",
+    "DESCRIPTION": "Füge dem vordersten Gegner !D! Schaden zu. NL Erhöhe den Schaden dieser Karte um !M! in diesem Kampf."
+  },
+  "${ModID}:StormForm": {
+    "NAME": "Sturmform",
+    "DESCRIPTION": "Zu Beginn deines Zuges, erhalte [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Zu Beginn deines Zuges, erhalte [E] [E] [E] ."
+  },
+  "${ModID}:SuperNova": {
+    "NAME": "Supernova",
+    "DESCRIPTION": "ALLE Gegner verlieren !M! LP. NL Füge ALLEN Gegnern !${ModID}:m2! Schwach und Verwundbar zu."
+  }
+}

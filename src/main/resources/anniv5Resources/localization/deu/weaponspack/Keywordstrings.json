@@ -1,0 +1,17 @@
+[
+  {
+    "PROPER_NAME": "Waffe",
+    "NAMES": [
+      "waffe",
+      "waffen"
+    ],
+    "DESCRIPTION": "Immer wenn du eine Angriffs karte ausspielst, wird Haltbarkeit deiner Waffe ganz rechts verwendet und der Schaden der Karte wird um den Angriff der Waffe erhöht. NL Orb-Slots werden automatisch erstellt und zerstört."
+  },
+  {
+    "PROPER_NAME": "Reaper's Mark",
+    "NAMES": [
+      "todbringer"
+    ],
+    "DESCRIPTION": "Immer wenn #b3 Stacks angewendet werden, werden sie entfernt und der Gegner verliert LP in Höhe von #b40% seiner fehlenden LP."
+  }
+]

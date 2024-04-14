@@ -33,16 +33,18 @@ public class CosmicConverterPower extends AbstractPackmasterPower {
     public void atStartOfTurnPostDraw() {
         for (int i = 0; i < amount; i++) {
             AbstractCard lastPlayed = null;
-            for (int j = AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1; j > 0; j--) {
+            for (int j = AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1; j >= 0; j--) {
                 if (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(j).type != AbstractCard.CardType.CURSE && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(j).type != AbstractCard.CardType.STATUS) {
                     lastPlayed = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(j);
                     break;
                 }
             }
-            AbstractCard toAdd = PixiePack.pixieGenerate(lastPlayed.costForTurn, null, lastPlayed.type, null);
-            if (toAdd == null) toAdd = new Madness();
-            CardModifierManager.addModifier(toAdd, new EtherealMod());
-            addToBot(new MakeTempCardInHandAction(toAdd));
+            if (lastPlayed != null) {
+                AbstractCard toAdd = PixiePack.pixieGenerate(lastPlayed.costForTurn, null, lastPlayed.type, null);
+                if (toAdd == null) toAdd = new Madness();
+                CardModifierManager.addModifier(toAdd, new EtherealMod());
+                addToBot(new MakeTempCardInHandAction(toAdd));
+            }
         }
     }
 

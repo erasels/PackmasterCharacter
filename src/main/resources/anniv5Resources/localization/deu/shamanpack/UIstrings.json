@@ -1,0 +1,16 @@
+{
+  "${ModID}:ShamanPack": {
+    "TEXT": [
+      "Schamane",
+      "Karten von und inspiriert von der Shaman Charakter Mod. ${ModID}:Entzünde deine Gegner für langanhaltenden Schaden.",
+      "modargo",
+      "Kartenkunst von MtG"
+    ]
+  },
+  "${ModID}:ShamanPackHat": {
+    "TEXT": [
+      "Durchdrungen von der Macht über die Elemente.",
+      "Perlenkette"
+    ]
+  }
+}

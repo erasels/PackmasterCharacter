@@ -1,0 +1,15 @@
+{
+  "${ModID}:AlignmentPack": {
+    "TEXT": [
+      "Sternenkonstellation",
+      "Die Macht ist vergänglich; Nimm sie an, wenn sie kommen sollte, und lass sie ziehen, wenn du sie nicht brauchst.",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:AlignmentPackHat": {
+    "TEXT": [
+      "Woher kommen diese Glitzerpartikel überhaupt?",
+      "Glanzstaub"
+    ]
+  }
+}

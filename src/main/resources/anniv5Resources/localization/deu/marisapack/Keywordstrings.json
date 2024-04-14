@@ -1,0 +1,25 @@
+[
+  {
+    "PROPER_NAME": "Verstärken",
+    "NAMES": [
+      "verstärken",
+      "verstärkt",
+      "verstärke"
+    ],
+    "DESCRIPTION": "Wenn du genug [E] hast zahle die zusätzlichen Kosten um den Effekt zu aktivieren."
+  },
+  {
+    "PROPER_NAME": "Aufladen",
+    "NAMES": [
+      "aufladen"
+    ],
+    "DESCRIPTION": "Bei #b6 oder mehr Steigerungen, verdopple den Schaden deines nächsten Angriffs und verliere #b6 Steigerungen."
+  },
+  {
+    "PROPER_NAME": "Aufgeregt",
+    "NAMES": [
+      "aufgeregt"
+    ],
+    "DESCRIPTION": "Der angegebene Effekt wird jedes Mal ausgelöst, wenn in diesem Zug eine Karte gespielt wird."
+  }
+]

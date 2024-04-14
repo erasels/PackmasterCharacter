@@ -21,7 +21,7 @@ public class ZaHando extends AbstractOdditiesCard {
 
     public ZaHando() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 13;
+        baseDamage = 14;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

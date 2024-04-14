@@ -12,7 +12,7 @@ public class LikeClockwork extends AbstractBellordCard {
     // intellij stuff power, self, rare, , , , , 5, 2
 
     public LikeClockwork() {
-        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 4;
     }
 
@@ -21,6 +21,6 @@ public class LikeClockwork extends AbstractBellordCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        isInnate = true;
     }
 }

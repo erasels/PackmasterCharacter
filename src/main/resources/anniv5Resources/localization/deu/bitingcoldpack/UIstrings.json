@@ -1,0 +1,15 @@
+{
+  "${ModID}:BitingColdPack": {
+    "TEXT": [
+      "Frostbiss",
+      "Füge Feinden ${ModID}:Frostbiss zu und lass sie der Kälte erliegen.",
+      "Enbeon"
+    ]
+  },
+  "${ModID}:BitingColdPackHat": {
+    "TEXT": [
+      "Dieser festliche Hut hält die Kälte fern.",
+      "Weihnachtsmann-Hut"
+    ]
+  }
+}

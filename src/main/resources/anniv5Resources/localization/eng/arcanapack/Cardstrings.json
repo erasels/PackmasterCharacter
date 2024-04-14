@@ -26,8 +26,8 @@
   },
   "${ModID}:Temperance": {
     "NAME": "Temperance",
-    "DESCRIPTION": "Draw a card for each card in your exhaust pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card for each card in your exhaust pile."
+    "DESCRIPTION": "Draw 1 card for each card in your exhaust pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card for each card in your exhaust pile."
   },
   "${ModID}:TheHierophant": {
     "NAME": "The Hierophant",

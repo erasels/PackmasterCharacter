@@ -24,9 +24,7 @@ public class Cheapen extends AbstractMadScienceCard implements AmplifyCard {
         addToBot(new FindCardForAddModifierAction(new CheapenModifier(0),1,!upgraded, AbstractDungeon.player.drawPile, card->card.cost>0));
     }
 
-    public void upp() {
-        upgradeBaseCost(0);
-    }
+    public void upp() {}
 
     @Override
     public boolean skipUseOnAmplify() {

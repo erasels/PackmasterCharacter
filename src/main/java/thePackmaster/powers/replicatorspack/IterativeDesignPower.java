@@ -26,7 +26,7 @@ public class IterativeDesignPower extends AbstractPackmasterPower implements Clo
 
 
     public IterativeDesignPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, AbstractPower.PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, AbstractPower.PowerType.BUFF, false, owner, amount);
 
     }
 

@@ -1,0 +1,16 @@
+{
+  "${ModID}:MarisaPack": {
+    "TEXT": [
+      "Marisa",
+      "Marisas Versorgung, variable Energiekosten, Schadensverdoppelung und eine Prise Erschöpfen.",
+      "(Gk) Erasels",
+      "Die ursprünglichen Autoren des Marisa Charakter Mods für die Ideen und künstlerische Inspiration."
+    ]
+  },
+  "${ModID}:MarisaPackHat": {
+    "TEXT": [
+      "Der Hut einer gewöhnlichen Zaubererin.",
+      "Marisas Hut"
+    ]
+  }
+}

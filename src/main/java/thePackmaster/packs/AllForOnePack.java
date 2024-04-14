@@ -1,8 +1,8 @@
 package thePackmaster.packs;
 
 import com.megacrit.cardcrawl.cards.blue.*;
-import com.megacrit.cardcrawl.cards.green.Deflect;
 import com.megacrit.cardcrawl.cards.green.EscapePlan;
+import com.megacrit.cardcrawl.cards.green.Finisher;
 import com.megacrit.cardcrawl.cards.red.Flex;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -31,7 +31,7 @@ public class AllForOnePack extends AbstractCardPack {
         cards.add(FTL.ID);
         cards.add(EscapePlan.ID);
         cards.add(Scrape.ID);
-        cards.add(Reprogram.ID);
+        cards.add(Finisher.ID);
         cards.add(MachineLearning.ID);
         cards.add(AllForOne.ID);
         return cards;

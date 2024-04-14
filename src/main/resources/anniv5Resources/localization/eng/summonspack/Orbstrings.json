@@ -10,7 +10,7 @@
   "${ModID}:Louse": {
     "NAME": "Rainbow Louse",
     "DESCRIPTION": [
-      "#yPassive: Draw a card at the start of your turn. #yEvoke: Draw #b2 cards."
+      "#yPassive: Draw 1 card at the start of your turn. #yEvoke: Draw #b2 cards."
     ]
   },
   "${ModID}:Panda": {
