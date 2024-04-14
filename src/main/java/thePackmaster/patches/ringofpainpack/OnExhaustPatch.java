@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CtBehavior;
 import thePackmaster.cards.ringofpainpack.Owl;
+import thePackmaster.cards.showmanpack.SmokeAndMirrors;
 
 @SpirePatch(
         clz = CardGroup.class,
@@ -22,6 +23,9 @@ public class OnExhaustPatch {
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
             if (card instanceof Owl) {
                 ((Owl) card).triggerEvolveOnExhaust();
+            }
+            if (card instanceof SmokeAndMirrors){
+                ((SmokeAndMirrors) card).triggerExhaustIncreaseBlock();
             }
         }
     }

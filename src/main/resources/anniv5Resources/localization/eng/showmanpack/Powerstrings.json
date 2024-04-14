@@ -8,8 +8,23 @@
   },"${ModID}:NowYouDontPower": {
   "NAME": "NowYouDon't",
   "DESCRIPTIONS": [
-    "At the start of your turn, add a #b",
+    "At the start of your turn, add a ",
     " to your hand."
+  ]
+},"${ModID}:HallOfMirrorsPower": {
+  "NAME": "Hall Of Mirrors",
+  "DESCRIPTIONS": [
+    "In #b",
+    " turns, add an #yAfter #yImage to your hand.",
+    " turns, add #b",
+    " #yAfter #yImages to your hand."
+  ]
+},"${ModID}:MagicCylinderPower": {
+  "NAME": "Magic Cylinder",
+  "DESCRIPTIONS": [
+    "The next time you would take unblocked attack damage, prevent it and deal it to the attacker instead.",
+    "The next #b",
+    " times you would take unblocked attack damage, prevent it and deal it to the attacker instead."
   ]
 }
 }

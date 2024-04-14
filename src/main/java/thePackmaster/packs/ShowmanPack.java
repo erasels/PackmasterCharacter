@@ -26,12 +26,12 @@ public class ShowmanPack extends AbstractCardPack {
         cards.add(Dazzle.ID);
         cards.add(SeeMe.ID);
         cards.add(ForMyNextTrick.ID);
-        cards.add(FlashPowder.ID);
+        cards.add(DramaticExit.ID);
         cards.add(Amaze.ID);
-        cards.add(LeftBrain.ID);
-        cards.add(SurprisePack.ID);
-        cards.add(TotalWeakness.ID);
-        cards.add(ViciousCycle.ID);
+        cards.add(Showstopper.ID);
+        cards.add(SmokeAndMirrors.ID);
+        cards.add(HallOfMirrors.ID);
+        cards.add(MagicCylinder.ID);
         return cards;
     }
 }

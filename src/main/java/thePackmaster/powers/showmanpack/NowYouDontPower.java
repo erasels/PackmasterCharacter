@@ -29,11 +29,17 @@ public class NowYouDontPower extends AbstractPackmasterPower implements NonStack
 
     @Override
     public void updateDescription() {
+        if (toGenerate == null){
+            toGenerate = new NowYouDont();
+        }
         this.description = DESCRIPTIONS[0] + toGenerate.name + DESCRIPTIONS[1];
     }
 
     @Override
     public void atStartOfTurnPostDraw() {
+        if (toGenerate == null){
+            toGenerate = new NowYouDont();
+        }
         this.addToBot(new MakeTempCardInHandAction(toGenerate.makeCopy()));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }

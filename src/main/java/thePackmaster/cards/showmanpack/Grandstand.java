@@ -1,10 +1,12 @@
 package thePackmaster.cards.showmanpack;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.effects.showmanpack.SmallSpotlightEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -21,6 +23,7 @@ public class Grandstand extends AbstractPackmasterCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, magicNumber), magicNumber));
+        this.addToBot(new VFXAction(new SmallSpotlightEffect()));
     }
 
     public void upp() {

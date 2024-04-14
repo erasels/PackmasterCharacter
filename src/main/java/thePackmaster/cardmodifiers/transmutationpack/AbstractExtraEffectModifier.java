@@ -150,13 +150,13 @@ public abstract class AbstractExtraEffectModifier extends AbstractCardModifier i
 
     }
 
-    protected void addToTop(AbstractGameAction action) {
+    /*protected void addToTop(AbstractGameAction action) {
         AbstractDungeon.actionManager.addToTop(action);
     }
 
     protected void addToBot(AbstractGameAction action) {
         AbstractDungeon.actionManager.addToBottom(action);
-    }
+    }*/
 
     protected String applyTimes(String s) {
         if (amount == 1) {
