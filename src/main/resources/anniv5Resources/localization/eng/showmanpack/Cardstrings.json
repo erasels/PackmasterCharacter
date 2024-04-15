@@ -11,7 +11,7 @@
   "UPGRADE_DESCRIPTION":  "Gain !B! Block. NL Next turn, gain [E] [E] ."
 },"${ModID}:DramaticExit": {
   "NAME": "Disappear",
-  "DESCRIPTION": "Retain. NL Gain !B! Block. Exhaust."
+  "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
 },"${ModID}:ForMyNextTrick": {
   "NAME": "For My Next Trick...",
   "DESCRIPTION": "Add a random Power card into your hand. NL Whenever you play a Power, gain !M! Block.",
