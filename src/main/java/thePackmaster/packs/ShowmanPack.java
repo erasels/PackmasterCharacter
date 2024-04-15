@@ -31,6 +31,7 @@ public class ShowmanPack extends AbstractCardPack {
         cards.add(SmokeAndMirrors.ID);
         cards.add(HallOfMirrors.ID);
         cards.add(MagicCylinder.ID);
+        cards.add(NowYouDont.ID);
         return cards;
     }
 }

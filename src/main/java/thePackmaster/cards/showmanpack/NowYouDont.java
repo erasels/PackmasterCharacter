@@ -1,18 +1,20 @@
 package thePackmaster.cards.showmanpack;
 
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.ExhaustBlurEffect;
+import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class NowYouDont extends AbstractShowmanCard {
+public class NowYouDont extends AbstractPackmasterCard {
     public final static String ID = makeID("NowYouDont");
 
     public NowYouDont() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = block = 16;
         this.isEthereal = true;
         this.exhaust = true;
