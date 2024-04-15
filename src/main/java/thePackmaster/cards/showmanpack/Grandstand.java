@@ -5,14 +5,12 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.effects.showmanpack.SmallSpotlightEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Grandstand extends AbstractShowmanCard {
     public final static String ID = makeID("Grandstand");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public Grandstand() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

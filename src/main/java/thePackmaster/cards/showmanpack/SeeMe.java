@@ -5,9 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.effects.showmanpack.SmallSpotlightEffect;
 import thePackmaster.powers.showmanpack.NowYouDontPower;
 
@@ -15,7 +13,6 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class SeeMe extends AbstractShowmanCard {
     public final static String ID = makeID("SeeMe");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public SeeMe() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

@@ -1,7 +1,7 @@
 {
   "${ModID}:HuntingStrike": {
     "NAME": "Hunting Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a card. NL Deals double damage to Elites and Bosses. NL Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. Deals double damage to Elites and Bosses. NL Draw 1 card."
   },
   "${ModID}:Focus": {
     "NAME": "Track",

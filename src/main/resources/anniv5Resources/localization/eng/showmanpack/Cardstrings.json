@@ -2,8 +2,7 @@
   "${ModID}:Dazzle": {
     "NAME": "Dazzle",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
-  },
-  "${ModID}:Amaze": {
+  },"${ModID}:Amaze": {
   "NAME": "Amaze",
   "DESCRIPTION": "ALL enemies lose !M! HP for each stack of Weak they have."
 },"${ModID}:Grandstand": {
