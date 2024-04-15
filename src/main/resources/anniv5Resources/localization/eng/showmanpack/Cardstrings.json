@@ -35,7 +35,7 @@
   "UPGRADE_DESCRIPTION": "Gain !M! Block X+1 times. NL If you have 100 or more Block, ALL enemies lose 50 HP. Exhaust."
 },"${ModID}:SmokeAndMirrors": {
   "NAME": "Smoke And Mirrors",
-  "DESCRIPTION": "Gain !B! Block. NL When a card is Exhausted while this is in your hand, increase this Block by !M!. NL Exhaust."
+  "DESCRIPTION": "Gain !B! Block. NL When a card is Exhausted while this is in your hand, increase this Block by !M! this combat. NL Exhaust."
 },"${ModID}:MagicCylinder": {
   "NAME": "Magic Cylinder",
   "DESCRIPTION": "The next time you would take unblocked attack damage, prevent it and deal it to the attacker instead."
