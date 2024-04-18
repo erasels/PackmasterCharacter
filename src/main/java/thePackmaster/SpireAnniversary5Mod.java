@@ -22,6 +22,7 @@ import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
+import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -138,7 +139,8 @@ public class SpireAnniversary5Mod implements
         PostExhaustSubscriber,
         OnPlayerTurnStartSubscriber,
         OnCreateDescriptionSubscriber,
-        PostRenderSubscriber {
+        PostRenderSubscriber,
+        OnCreateCardInterface {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -1388,6 +1390,11 @@ public class SpireAnniversary5Mod implements
             }
         }
         return currentRaw;
+    }
+
+    @Override
+    public void onCreateCard(AbstractCard c) {
+        JediUtil.onGenerateCardMidcombat(c);
     }
 
     public static class Enums {

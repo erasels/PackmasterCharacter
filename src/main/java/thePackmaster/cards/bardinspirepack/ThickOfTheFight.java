@@ -1,19 +1,18 @@
 package thePackmaster.cards.bardinspirepack;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.bardinspirepack.ThickOfTheFightAction;
-import thePackmaster.util.creativitypack.onGenerateCardMidcombatInterface;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
-public class ThickOfTheFight extends AbstractBardCard implements onGenerateCardMidcombatInterface
-{
+public class ThickOfTheFight extends AbstractBardCard implements OnCreateCardInterface {
     public final static String ID = makeID("ThickOfTheFight");
     private static final int COST = 3;
     private static final int DAMAGE = 12;
@@ -66,7 +65,9 @@ public class ThickOfTheFight extends AbstractBardCard implements onGenerateCardM
     }
 
     @Override
-    public void onCreateThisCard() {
-        monstersChanged(Wiz.getEnemies().size());
+    public void onCreateCard(AbstractCard c) {
+        if(c == this) {
+            monstersChanged(Wiz.getEnemies().size());
+        }
     }
 }
