@@ -11,7 +11,7 @@ public class DramaticExit extends AbstractShowmanCard {
     public final static String ID = makeID("DramaticExit");
 
     public DramaticExit() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = 6;
         exhaust = true;
         this.selfRetain = true;
