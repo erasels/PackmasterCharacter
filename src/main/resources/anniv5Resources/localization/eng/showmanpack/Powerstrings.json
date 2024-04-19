@@ -3,7 +3,7 @@
     "NAME": "For my next Trick...",
     "DESCRIPTIONS": [
       "Whenever you play a power, gain #b",
-      " Block."
+      " #yBlock."
     ]
   },"${ModID}:NowYouDontPower": {
   "NAME": "NowYouDon't",
