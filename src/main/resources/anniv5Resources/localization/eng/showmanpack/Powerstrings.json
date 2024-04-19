@@ -2,7 +2,7 @@
   "${ModID}:NextTrickPower": {
     "NAME": "For my next Trick...",
     "DESCRIPTIONS": [
-      "Whenever you play a power, gain #b",
+      "Whenever you play a #yPower, gain #b",
       " #yBlock."
     ]
   },"${ModID}:NowYouDontPower": {
