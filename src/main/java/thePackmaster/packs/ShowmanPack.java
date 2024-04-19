@@ -15,7 +15,7 @@ public class ShowmanPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public ShowmanPack() {
-        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 5, 1, 2, 3, PackSummary.Tags.Exhaust, PackSummary.Tags.Powers));
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 5, 2, 2, 2, PackSummary.Tags.Exhaust, PackSummary.Tags.Powers));
     }
 
     @Override
