@@ -27,7 +27,7 @@ public class NextTrickPower extends AbstractPackmasterPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type.equals(AbstractCard.CardType.POWER)) {
+        if (AbstractCard.CardType.POWER == card.type) {
             if (Settings.FAST_MODE) {
                 this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.amount, true));
             } else {
