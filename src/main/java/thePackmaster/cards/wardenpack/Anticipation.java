@@ -14,15 +14,11 @@ public class Anticipation extends AbstractWardenCard {
 
     public Anticipation() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
+        baseMagicNumber = 2;
+        magicNumber = baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new DrawCardAction(this.magicNumber, new AnticipationAction()));
-    }
-
-    public void upp() {
-        upgradeMagicNumber(1);
+        Wiz.atb(new DrawCardAction(this.magicNumber, new AnticipationAction(upgraded)));
     }
 }

@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.util.Wiz;
 
@@ -19,36 +18,21 @@ public class RiskOfBlades extends AbstractWardenCard {
     public RiskOfBlades() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int hitnum = 1;
 
-        magicNumber = this.baseMagicNumber = hitAmount(3)+1;
+        if (!Wiz.drawPile().isEmpty() && (Wiz.drawPile().getTopCard().type == CardType.ATTACK))
+            hitnum = 3;
 
-        for (int a = 0; a < this.magicNumber; a++)
+        for (int a = 0; a < hitnum; a++)
         Wiz.atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 
-    public int hitAmount(int hits)
-    {
-        int a = 0;
-
-        for(int i = 0; i < Math.min(hits, AbstractDungeon.player.drawPile.size()); ++i) {
-            if (Wiz.p().drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1).type == CardType.ATTACK)
-            a++;
-        }
-
-        return a;
-    }
-
-    public void applyPowers() {
-        magicNumber = baseMagicNumber = hitAmount(3);
-
-        super.applyPowers();
-
-        rawDescription = cardStrings.DESCRIPTION + (magicNumber == 1 ? cardStrings.EXTENDED_DESCRIPTION[0] : cardStrings.EXTENDED_DESCRIPTION[1]);
-        initializeDescription();
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = ((!Wiz.drawPile().isEmpty() && (Wiz.drawPile().getTopCard().type == CardType.ATTACK)) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR);
     }
 
     public void upp() {

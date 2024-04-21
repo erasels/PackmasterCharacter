@@ -17,7 +17,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class PierceVeil extends AbstractWardenCard {
     public final static String ID = makeID("PierceVeil");
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 8;
     private static final int DAMAGE_UPGRADE = 3;
 
     public PierceVeil() {

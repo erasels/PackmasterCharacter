@@ -1,9 +1,12 @@
 package thePackmaster.cards.wardenpack;
 
+import basemod.helpers.CardModifierManager;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PersistFields;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import thePackmaster.cardmodifiers.energyandechopack.EchoMod;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -11,10 +14,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class ForceBolt extends AbstractWardenCard {
     public final static String ID = makeID("ForceBolt");
 
-    private static final int DAMAGE = 5;
-    private static final int DAMAGE_UPGRADE = 2;
+    private static final int DAMAGE = 3;
     private static final int MAGIC_BASE = 1;
-    private static final int MAGIC_UP = 1;
 
     public ForceBolt() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -28,7 +29,6 @@ public class ForceBolt extends AbstractWardenCard {
     }
 
     public void upp() {
-        upgradeDamage(DAMAGE_UPGRADE);
-        upgradeMagicNumber(MAGIC_UP);
+        PersistFields.setBaseValue(this, 2);
     }
 }
