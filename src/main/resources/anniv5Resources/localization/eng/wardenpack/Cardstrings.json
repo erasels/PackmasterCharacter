@@ -9,8 +9,7 @@
   },
   "${ModID}:RiskOfBlades": {
     "NAME": "Risk Of Blades",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat for each Attack in the top 3 cards of your draw pile.",
-    "EXTENDED_DESCRIPTION": [" NL (Hits !M! more time.)", " NL (Hits !M! more times.)"]
+    "DESCRIPTION": "Deal !D! damage, thrice if the top card of your draw pile is an Attack."
   },
   "${ModID}:Crossroads": {
     "NAME": "Crossroads",
@@ -18,8 +17,8 @@
   },
   "${ModID}:Anticipation": {
     "NAME": "Anticipation",
-    "DESCRIPTION": "Draw 1 card. NL Gain Strength equal to its cost.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain Strength equal to their cost."
+    "DESCRIPTION": "Draw !M! cards. NL Gain Strength equal to the higher of their costs.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain Strength equal to their total cost."
   },
   "${ModID}:Prediction": {
     "NAME": "Prediction",
@@ -27,7 +26,8 @@
   },
   "${ModID}:ForceBolt": {
     "NAME": "Force Bolt",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL stslib:Persist !stslib:persist!."
   },
   "${ModID}:Enigmancy": {
     "NAME": "Enigmancy",

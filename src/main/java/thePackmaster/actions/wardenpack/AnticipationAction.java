@@ -11,8 +11,11 @@ import java.util.Iterator;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 
 public class AnticipationAction extends AbstractGameAction {
-    public AnticipationAction() {
+    private boolean upgraded;
+
+    public AnticipationAction(boolean upgraded) {
         this.duration = 0.001F;
+        this.upgraded = upgraded;
     }
 
     public void update() {
@@ -23,7 +26,16 @@ public class AnticipationAction extends AbstractGameAction {
 
             while(var1.hasNext()) {
                 AbstractCard c = (AbstractCard)var1.next();
-                truecost += Wiz.getLogicalCardCost(c);
+
+                int nextcost = Wiz.getLogicalCardCost(c);
+
+                if (upgraded)
+                    truecost += nextcost;
+                else
+                {
+                    if (nextcost > truecost)
+                        truecost = nextcost;
+                }
             }
 
             if (truecost > 0)
