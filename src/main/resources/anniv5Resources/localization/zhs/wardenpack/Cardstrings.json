@@ -9,8 +9,7 @@
   },
   "${ModID}:RiskOfBlades": {
     "NAME": "刀刃之险",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽牌堆顶部3张牌每有一张攻击，再造成一次。",
-    "EXTENDED_DESCRIPTION": [" NL (造成 !M! 次)", " NL (造成 !M! 次)"]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若牌堆顶为攻击牌，再造成2次伤害。"
   },
   "${ModID}:Crossroads": {
     "NAME": "交岔口",
@@ -18,8 +17,8 @@
   },
   "${ModID}:Anticipation": {
     "NAME": "预计",
-    "DESCRIPTION": "抽1张牌。 NL 获得其耗能点 力量 。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 获得其耗能点 力量 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得其中最高耗能的 力量 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 获得它们耗能总和的 力量 。"
   },
   "${ModID}:Prediction": {
     "NAME": "预言",
@@ -27,7 +26,8 @@
   },
   "${ModID}:ForceBolt": {
     "NAME": "力之矢",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL stslib:长驻 !stslib:persist! 。"
   },
   "${ModID}:Enigmancy": {
     "NAME": "高深",
