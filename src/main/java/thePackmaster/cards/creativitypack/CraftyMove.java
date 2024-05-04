@@ -28,7 +28,7 @@ public class CraftyMove extends AbstractCreativityCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        boolean cardCreatedThisTurn = JediUtil.cardsCreatedThisTurn.size() > 0;
+        boolean cardCreatedThisTurn = !JediUtil.cardsCreatedThisTurn.isEmpty();
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                 cardCreatedThisTurn ? AbstractGameAction.AttackEffect.BLUNT_LIGHT : AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if (cardCreatedThisTurn)
@@ -40,7 +40,7 @@ public class CraftyMove extends AbstractCreativityCard {
 
     public void triggerOnGlowCheck()
     {
-        if (JediUtil.cardsCreatedThisTurn.size() > 0) {
+        if (!JediUtil.cardsCreatedThisTurn.isEmpty()) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
         else {

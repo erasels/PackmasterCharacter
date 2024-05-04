@@ -1,7 +1,9 @@
 package thePackmaster.powers.energyandechopack;
 
+import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,7 +12,7 @@ import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class PanacherPower extends AbstractPackmasterPower {
+public class PanacherPower extends AbstractPackmasterPower implements OnCreateCardInterface {
     public AbstractCreature source;
 
     public static final String POWER_ID = makeID(PanacherPower.class.getSimpleName());
@@ -45,5 +47,10 @@ public class PanacherPower extends AbstractPackmasterPower {
         } else {
             this.description = DESCRIPTIONS[0] + this.amount2 + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3];
         }    }
+
+    @Override
+    public void onCreateCard(AbstractCard abstractCard) {
+        onSpecificTrigger();
+    }
 }
 
