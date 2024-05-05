@@ -6,7 +6,10 @@
   "${ModID}:LetsPlay8Ball": {
     "NAME": "8球开桌！",
     "DESCRIPTION": "将 *8号球 加入抽牌堆。",
-    "UPGRADE_DESCRIPTION": "将 *9号球 加入抽牌堆。"
+    "UPGRADE_DESCRIPTION": "将 *9号球 加入抽牌堆。",
+    "EXTENDED_DESCRIPTION": [
+      "9球开桌！"
+    ]
   },
   "${ModID}:EightBall": {
     "NAME": "8号球",

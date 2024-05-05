@@ -6,13 +6,16 @@
   "${ModID}:LetsPlay8Ball": {
     "NAME": "Lasst uns 8 Ball spielen!",
     "DESCRIPTION": "Mische einen *8 *Ball in deinen Nachziehstapel.",
-    "UPGRADE_DESCRIPTION": "Mische einen *9 *Ball in deinen Nachziehstapel."
+    "UPGRADE_DESCRIPTION": "Mische einen *9 *Ball in deinen Nachziehstapel.",
+    "EXTENDED_DESCRIPTION": [
+      "Lasst uns 9 Ball spielen!"
+    ]
   },
   "${ModID}:EightBall": {
     "NAME": "8 Ball",
     "DESCRIPTION": "Füge !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
-      "9-Ball"
+      "9 Ball"
     ]
   },
   "${ModID}:ZaHando": {
