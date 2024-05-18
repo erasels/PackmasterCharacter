@@ -3,7 +3,6 @@ package thePackmaster.cards.odditiespack;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.shuffleIn;
@@ -21,6 +20,20 @@ public class LetsPlay8Ball extends AbstractOdditiesCard {
         AbstractCard q = new EightBall();
         if (upgraded) q.upgrade();
         shuffleIn(q);
+    }
+
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            ++timesUpgraded;
+            upgraded = true;
+            name = cardStrings.EXTENDED_DESCRIPTION[0];
+            initializeTitle();
+            upp();
+            if (cardStrings.UPGRADE_DESCRIPTION != null) {
+                uDesc();
+            }
+        }
     }
 
     public void upp() {

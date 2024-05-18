@@ -6,7 +6,10 @@
   "${ModID}:LetsPlay8Ball": {
     "NAME": "Let's Play 8 Ball!",
     "DESCRIPTION": "Shuffle an *8 *Ball into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your draw pile."
+    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Let's Play 9 Ball!"
+    ]
   },
   "${ModID}:EightBall": {
     "NAME": "8 Ball",
