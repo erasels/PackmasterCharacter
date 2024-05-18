@@ -22,7 +22,7 @@
   "${ModID}:MetallicVial": {
     "NAME": "Metallischer Trank",
     "DESCRIPTION": "Wähle: Erhalte 4 ${ModID}:Panzerrüstung, Erhalte 3 Dornen oder Erhalte 2 Artefakte. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle: Erhalte ${ModID}:Panzerrüstung, Erhalte 3 Dornen oder Erhalte 2 Artefakte. NL (2x pro Kampf verwendbar). !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Wähle: Erhalte 4 ${ModID}:Panzerrüstung, Erhalte 3 Dornen oder Erhalte 2 Artefakte. NL (2x pro Kampf verwendbar). !stslib:ex!.",
     "EXTENDED_DESCRIPTION": ["Erhalte 4 ${ModID}:Panzerrüstung.", "Erhalte 3 Dornen.","Erhalte 2 Artefakte."]
   },
   "${ModID}:QuickBrew": {
