@@ -139,8 +139,7 @@ public class SpireAnniversary5Mod implements
         PostExhaustSubscriber,
         OnPlayerTurnStartSubscriber,
         OnCreateDescriptionSubscriber,
-        PostRenderSubscriber,
-        OnCreateCardInterface {
+        PostRenderSubscriber {
 
     public static final Logger logger = LogManager.getLogger("Packmaster");
 
@@ -1390,11 +1389,6 @@ public class SpireAnniversary5Mod implements
             }
         }
         return currentRaw;
-    }
-
-    @Override
-    public void onCreateCard(AbstractCard c) {
-        JediUtil.onGenerateCardMidcombat(c);
     }
 
     public static class Enums {
