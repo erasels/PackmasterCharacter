@@ -16,7 +16,7 @@ public class FastHands extends AbstractPixieCard {
 
     public FastHands() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        this.retain = true;
+        this.selfRetain = true;
         this.exhaust = true;
     }
 
