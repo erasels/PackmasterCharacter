@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import javassist.CtBehavior;
 import thePackmaster.powers.coresetpack.OnRefreshHandPower;
 
-import java.util.Set;
-
 @SpirePatch(
         clz = CardGroup.class,
         method = "refreshHandLayout"

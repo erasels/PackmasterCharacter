@@ -1,17 +1,14 @@
 package thePackmaster.patches.replicatorspack;
 
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.Soul;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.powers.replicatorspack.DuplicationPackmasterPower;
 import thePackmaster.powers.replicatorspack.EnergyDrinkPower;
-
 
 import static thePackmaster.util.Wiz.adp;
 import static thePackmaster.util.Wiz.atb;

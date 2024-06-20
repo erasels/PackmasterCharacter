@@ -2,12 +2,11 @@ package thePackmaster.cards.alignmentpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.arcanapack.AbstractAstrologerCard;
 import thePackmaster.powers.alignmentpack.RememberPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class Remember extends AbstractAstrologerCard {
     public final static String ID = makeID("Remember");

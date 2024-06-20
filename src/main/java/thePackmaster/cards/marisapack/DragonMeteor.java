@@ -7,12 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.SearingBlowEffect;
 import org.apache.commons.lang3.math.NumberUtils;
-import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
-
-import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

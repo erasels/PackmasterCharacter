@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlickCoinEffect;
 import thePackmaster.actions.monsterhunterpack.MarkEnemyAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.monsterhunterpack.HuntersMark;
 import thePackmaster.powers.monsterhunterpack.TempRetainCardsPower;
 

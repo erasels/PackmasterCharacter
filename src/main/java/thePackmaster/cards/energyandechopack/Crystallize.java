@@ -1,20 +1,11 @@
 package thePackmaster.cards.energyandechopack;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import thePackmaster.cards.AbstractPackmasterCard;
-
-import java.util.Iterator;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.applyToSelf;
-import static thePackmaster.util.Wiz.atb;
 
 public class Crystallize extends AbstractEchoCard {
 

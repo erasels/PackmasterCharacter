@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Rea__dyCommonSkill extends AbstractPinnacleCard {

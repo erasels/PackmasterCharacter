@@ -6,11 +6,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.vfx.psychicpack.CurseEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
 
 public class Curse extends LockingCard {
     public final static String ID = makeID("Curse");

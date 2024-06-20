@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.pinnaclepack.*;
+
 import java.util.ArrayList;
 
 public class PinnaclePack extends AbstractCardPack {

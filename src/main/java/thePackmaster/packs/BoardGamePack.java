@@ -1,7 +1,5 @@
 package thePackmaster.packs;
 
-import basemod.helpers.CardTags;
-import com.megacrit.cardcrawl.cards.blue.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;

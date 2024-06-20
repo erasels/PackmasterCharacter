@@ -9,10 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.EasyXCostAction;
 import thePackmaster.actions.upgradespack.SuperUpgradeAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
 
 public class MalleableFire extends AbstractPsychicCard {
     public final static String ID = makeID("MalleableFire");

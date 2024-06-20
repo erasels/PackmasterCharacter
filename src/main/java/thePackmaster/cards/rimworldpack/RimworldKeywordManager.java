@@ -3,7 +3,6 @@ package thePackmaster.cards.rimworldpack;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.boardgamepack.BoardGameKeywordManager;
 
 public class RimworldKeywordManager {
     public static final String ID = SpireAnniversary5Mod.makeID(RimworldKeywordManager.class.getSimpleName());

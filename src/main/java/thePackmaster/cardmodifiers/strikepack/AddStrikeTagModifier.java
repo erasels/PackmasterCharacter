@@ -4,10 +4,7 @@ import basemod.abstracts.AbstractCardModifier;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
-import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifierWithName;
 
 public class AddStrikeTagModifier extends AbstractCardModifier {
 

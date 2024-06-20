@@ -2,11 +2,10 @@ package thePackmaster.cards.arcanapack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.arcanapack.TheChariotPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class TheChariot extends AbstractAstrologerCard {
     public final static String ID = makeID("TheChariot");

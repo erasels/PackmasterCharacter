@@ -1,12 +1,11 @@
 package thePackmaster.cards.farmerpack;
 
-import static thePackmaster.util.Wiz.*;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
 public class Fertilizer extends AbstractFarmerCard {
     public final static String ID = makeID("Fertilizer");

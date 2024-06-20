@@ -1,17 +1,14 @@
 package thePackmaster.cards.alignmentpack;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.HandSelectAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.arcanapack.AbstractAstrologerCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class Divination extends AbstractAstrologerCard {
     public final static String ID = makeID("Divination");

@@ -1,15 +1,12 @@
 package thePackmaster.cards.farmerpack;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.Iterator;
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.att;
+import static thePackmaster.util.Wiz.p;
 
 public class HarvestCarrots extends AbstractFarmerCard {
     public final static String ID = makeID("HarvestCarrots");

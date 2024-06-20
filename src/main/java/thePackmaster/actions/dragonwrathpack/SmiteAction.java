@@ -12,7 +12,6 @@ import thePackmaster.util.Wiz;
 import thePackmaster.vfx.dragonwrathpack.DivineEyeParticle;
 import thePackmaster.vfx.dragonwrathpack.SmiteEffect;
 
-
 import java.util.function.Supplier;
 
 public class SmiteAction extends AbstractGameAction {

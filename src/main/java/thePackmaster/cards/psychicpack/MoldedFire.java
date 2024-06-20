@@ -8,14 +8,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import thePackmaster.actions.psychicpack.SuperFastDamageAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.psychicpack.occult.OccultFields;
 import thePackmaster.vfx.psychicpack.EradicationEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class MoldedFire extends AbstractPsychicCard {
     public final static String ID = makeID("MoldedFire");

@@ -22,7 +22,8 @@ import thePackmaster.powers.shamanpack.IgnitePower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class FireSpirit extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(FireSpirit.class.getSimpleName());

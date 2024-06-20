@@ -2,8 +2,6 @@ package thePackmaster.cards.rimworldpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.rimworldpack.SpikeTrapPower;
 import thePackmaster.powers.rimworldpack.TradeBeaconPower;
 import thePackmaster.util.Wiz;
 

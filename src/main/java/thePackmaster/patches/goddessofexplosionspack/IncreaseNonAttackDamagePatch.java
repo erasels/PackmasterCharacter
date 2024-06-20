@@ -1,13 +1,12 @@
 package thePackmaster.patches.goddessofexplosionspack;
+
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.dungeons.*;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
 import com.megacrit.cardcrawl.powers.AbstractPower;
-
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
-import com.evacipated.cardcrawl.modthespire.lib.*;
 import thePackmaster.powers.goddessofexplosionspack.EveOfDestructionPower;
 import thePackmaster.util.Wiz;
 

@@ -1,8 +1,6 @@
 package thePackmaster.cards.dragonwrathpack;
 
-import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.blue.Leap;
 import com.megacrit.cardcrawl.cards.purple.Alpha;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

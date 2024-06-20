@@ -3,10 +3,9 @@ package thePackmaster.cards.psychicpack;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.psychicpack.OccultInDrawAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class PhantomStep extends AbstractPsychicCard {
     public final static String ID = makeID("PhantomStep");

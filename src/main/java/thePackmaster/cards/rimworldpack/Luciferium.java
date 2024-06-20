@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.rimworldpack.LuciferiumAddictionPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

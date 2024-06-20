@@ -9,7 +9,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cardmodifiers.rippack.RippableModifier;
 
-import static thePackmaster.SpireAnniversary5Mod.*;
+import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 import static thePackmaster.util.Wiz.atb;
 
 public class SurprisePack extends AbstractRipCard implements OnRipInterface {

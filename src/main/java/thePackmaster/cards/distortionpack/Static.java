@@ -1,7 +1,6 @@
 package thePackmaster.cards.distortionpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.distortionpack.StaticAction;
 

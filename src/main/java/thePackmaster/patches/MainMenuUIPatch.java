@@ -21,7 +21,10 @@ import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledButton;
 import thePackmaster.ui.PackFilterMenu;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.PACKS_PER_CHOICE;
 import static thePackmaster.SpireAnniversary5Mod.makeID;

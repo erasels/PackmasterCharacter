@@ -6,7 +6,9 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.packs.*;
+import thePackmaster.packs.DefectPack;
+import thePackmaster.packs.OrbPack;
+import thePackmaster.packs.SummonsPack;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.util.Wiz;
 

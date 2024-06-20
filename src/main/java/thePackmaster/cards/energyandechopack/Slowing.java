@@ -3,7 +3,6 @@ package thePackmaster.cards.energyandechopack;
 import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.energyandechopack.SlowingPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

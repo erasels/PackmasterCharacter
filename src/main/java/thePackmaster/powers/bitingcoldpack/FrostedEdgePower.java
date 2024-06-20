@@ -1,10 +1,8 @@
 package thePackmaster.powers.bitingcoldpack;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -12,7 +10,6 @@ import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.applyToSelf;
-import static thePackmaster.util.Wiz.atb;
 
 public class FrostedEdgePower extends AbstractPackmasterPower implements BetterOnApplyPowerPower {
     public static final String POWER_ID = makeID("FrostedEdgePower");

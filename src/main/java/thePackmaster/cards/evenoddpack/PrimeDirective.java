@@ -7,7 +7,6 @@ import thePackmaster.powers.evenoddpack.PrimeDirectivePower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.SpireAnniversary5Mod.makeImagePath;
 
 public class PrimeDirective extends AbstractPackmasterCard {
     public final static String ID = makeID(PrimeDirective.class.getSimpleName());

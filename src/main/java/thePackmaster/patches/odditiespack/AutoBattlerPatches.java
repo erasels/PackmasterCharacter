@@ -6,17 +6,13 @@ import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.buttons.EndTurnButton;
 import javassist.CtBehavior;
 import thePackmaster.powers.odditiespack.AutoBattlerPower;
 import thePackmaster.util.Wiz;
-
-import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class AutoBattlerPatches {
 

@@ -1,6 +1,7 @@
 package thePackmaster.actions.summonspack;
 
 import basemod.helpers.VfxBuilder;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.patches.ColoredDamagePatch;
@@ -13,7 +14,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import com.badlogic.gdx.graphics.Color;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.util.TexLoader;
 

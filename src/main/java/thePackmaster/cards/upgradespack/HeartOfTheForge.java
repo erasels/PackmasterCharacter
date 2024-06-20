@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.upgradespack.SpecificUpgradeWithVfxAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 public class HeartOfTheForge extends AbstractBlacksmithCard {
 

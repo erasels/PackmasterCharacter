@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import thePackmaster.powers.AbstractPackmasterPower;
 
-import static thePackmaster.SpireAnniversary5Mod.CLAW;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class StrikeDummyJrPower extends AbstractPackmasterPower {

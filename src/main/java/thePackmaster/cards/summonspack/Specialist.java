@@ -10,7 +10,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class Specialist extends AbstractSummonsCard {
     public final static String ID = makeID(Specialist.class.getSimpleName());

@@ -2,11 +2,10 @@ package thePackmaster.cards.orbpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.orbpack.ThunderstruckPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class Thunderstruck extends AbstractOrbCard {
     public final static String ID = makeID("Thunderstruck");

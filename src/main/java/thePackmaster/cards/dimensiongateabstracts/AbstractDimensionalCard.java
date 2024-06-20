@@ -1,8 +1,6 @@
 package thePackmaster.cards.dimensiongateabstracts;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractDimensionalCard extends AbstractPackmasterCard {

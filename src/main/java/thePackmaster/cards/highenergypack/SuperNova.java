@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.actions.arcanapack.AllEnemyLoseHPAction;
 import thePackmaster.actions.highenergypack.AllEnemyApplyPowerAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;

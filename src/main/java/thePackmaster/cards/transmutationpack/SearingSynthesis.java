@@ -1,14 +1,11 @@
 package thePackmaster.cards.transmutationpack;
 
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.transmutationpack.HydrologistDamageAction;
 import thePackmaster.actions.transmutationpack.TransmuteCardAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class SearingSynthesis extends AbstractHydrologistCard {
     public final static String ID = makeID("SearingSynthesis");

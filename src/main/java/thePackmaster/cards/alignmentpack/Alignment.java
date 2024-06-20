@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.EasyXCostAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.arcanapack.AbstractAstrologerCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
 public class Alignment extends AbstractAstrologerCard {
     public final static String ID = makeID("Alignment");

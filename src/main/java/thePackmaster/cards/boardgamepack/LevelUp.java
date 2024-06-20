@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.boardgamepack.DelayedDiceRollAction;
-import thePackmaster.actions.boardgamepack.RollAction;
 import thePackmaster.powers.boardgamepack.AdvantagePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.psychicpack.*;
-import thePackmaster.cards.psychicpack.OneIsEnough;
 
 import java.util.ArrayList;
 

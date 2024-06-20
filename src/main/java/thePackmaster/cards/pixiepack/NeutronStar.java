@@ -1,16 +1,10 @@
 package thePackmaster.cards.pixiepack;
 
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
-import thePackmaster.actions.pixiepack.EnchantmentAction;
-import thePackmaster.packs.PixiePack;
 import thePackmaster.powers.pixiepack.NeutronStarPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

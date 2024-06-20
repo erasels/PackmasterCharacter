@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.cardmodifiers.basicspack.MagicModifier;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.cards.Rummage;
-import thePackmaster.cardmodifiers.basicspack.MagicModifier;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

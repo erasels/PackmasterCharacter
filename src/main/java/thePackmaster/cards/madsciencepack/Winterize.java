@@ -6,10 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Frost;
 import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
-import thePackmaster.cardmodifiers.gemspack.FrostGemMod;
-import thePackmaster.cardmodifiers.madsciencepack.ApplyFrosbiteModifier;
 import thePackmaster.cardmodifiers.madsciencepack.FrostOrbModifier;
-import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

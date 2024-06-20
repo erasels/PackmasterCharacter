@@ -1,6 +1,5 @@
 package thePackmaster.cards.strikepack;
 
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractStrikePackCard extends AbstractPackmasterCard

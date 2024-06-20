@@ -10,7 +10,8 @@ import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 import thePackmaster.vfx.arcanapack.SunEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToEnemy;
+import static thePackmaster.util.Wiz.atb;
 
 public class TheSun extends AbstractAstrologerCard {
     public final static String ID = makeID("TheSun");

@@ -17,7 +17,10 @@ import thePackmaster.ThePackmaster;
 import thePackmaster.hats.specialhats.AlignmentHat;
 import thePackmaster.hats.specialhats.PsychicHat;
 import thePackmaster.hats.specialhats.SpecialHat;
-import thePackmaster.packs.*;
+import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.packs.AlignmentPack;
+import thePackmaster.packs.CoreSetPack;
+import thePackmaster.packs.PsychicPack;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 import thePackmaster.util.Wiz;
 

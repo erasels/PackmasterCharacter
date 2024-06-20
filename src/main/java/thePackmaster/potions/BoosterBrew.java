@@ -3,21 +3,16 @@ package thePackmaster.potions;
 
 import basemod.abstracts.CustomPotion;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.EasyModalChoiceAction;
-import thePackmaster.actions.FlexibleDiscoveryAction;
 import thePackmaster.cards.PackmasterModalChoiceCard;
 import thePackmaster.packs.AbstractCardPack;
-import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 

@@ -1,19 +1,13 @@
 package thePackmaster.powers.clawpack;
 
-import basemod.cardmods.ExhaustMod;
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.blue.Claw;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.cards.clawpack.GhostClaw;
 import thePackmaster.powers.AbstractPackmasterPower;
 
-import static thePackmaster.SpireAnniversary5Mod.CLAW;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class InfiniteClawsPower extends AbstractPackmasterPower {

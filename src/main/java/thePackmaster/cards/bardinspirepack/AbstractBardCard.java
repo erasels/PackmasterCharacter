@@ -1,6 +1,5 @@
 package thePackmaster.cards.bardinspirepack;
 
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractBardCard extends AbstractPackmasterCard

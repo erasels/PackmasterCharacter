@@ -1,13 +1,9 @@
 package thePackmaster.actions.upgradespack;
 
-import basemod.BaseMod;
-import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.BranchingUpgradesCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.vfx.upgradespack.LightUpgradeShineEffect;
 
 import java.util.ArrayList;

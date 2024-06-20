@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.actions.summonspack.SetCardTargetCoordinatesAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.vfx.summonspack.ElephantDropEffect;
 import thePackmaster.vfx.summonspack.LongElephantDropEffect;
 import thePackmaster.vfx.summonspack.MediumElephantDropEffect;

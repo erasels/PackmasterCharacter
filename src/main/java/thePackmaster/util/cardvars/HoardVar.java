@@ -4,7 +4,6 @@ import basemod.abstracts.DynamicVariable;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 public class HoardVar extends DynamicVariable {
     @Override

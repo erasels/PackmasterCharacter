@@ -1,12 +1,9 @@
 package thePackmaster.cards.legacypack;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.PoisonPotion;
-
 import thePackmaster.powers.legacypack.PoisonMasteryPower;
 import thePackmaster.util.Wiz;
 

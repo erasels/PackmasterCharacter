@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.cardmodifiers.rippack.RippableModifier;
 import thePackmaster.vfx.rippack.InspirationEffect;
 
-import java.util.stream.Collectors;
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 import static thePackmaster.util.Wiz.isArtCard;

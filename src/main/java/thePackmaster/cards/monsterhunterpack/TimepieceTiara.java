@@ -1,9 +1,8 @@
 package thePackmaster.cards.monsterhunterpack;
 
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.monsterhunterpack.TimePiecePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

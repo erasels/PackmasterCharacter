@@ -13,10 +13,9 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.orbs.PackmasterOrb;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.att;
 
 public class Louse extends CustomOrb {
     public static final String ORB_ID = SpireAnniversary5Mod.makeID(Louse.class.getSimpleName());

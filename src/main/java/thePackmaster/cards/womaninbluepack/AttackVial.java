@@ -2,12 +2,9 @@ package thePackmaster.cards.womaninbluepack;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.unique.DiscoveryAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.vfx.womaninbluepack.PotionThrowEffect;
-
-import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

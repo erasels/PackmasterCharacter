@@ -1,9 +1,7 @@
 package thePackmaster.ui.FixedModLabeledToggleButton;
 
 import basemod.IUIElement;
-import basemod.ModLabel;
 import basemod.ModPanel;
-import basemod.ModToggleButton;
 import basemod.patches.com.megacrit.cardcrawl.helpers.TipHelper.HeaderlessTip;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;

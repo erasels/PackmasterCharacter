@@ -1,11 +1,7 @@
 package thePackmaster.cards.basicspack;
 
-import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.ChangePlayedCardExhaustAction;
 import thePackmaster.cards.AbstractPackmasterCard;

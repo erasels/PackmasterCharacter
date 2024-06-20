@@ -7,10 +7,6 @@ package thePackmaster.cardmodifiers.basicspack;
 
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
-import org.apache.commons.lang3.StringUtils;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

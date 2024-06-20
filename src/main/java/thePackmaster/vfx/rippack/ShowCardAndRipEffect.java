@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.CardPoofEffect;
-import thePackmaster.cards.rippack.*;
+import thePackmaster.cards.rippack.SurprisePack;
 import thePackmaster.patches.rippack.AllCardsRippablePatches;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

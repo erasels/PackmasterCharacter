@@ -10,7 +10,7 @@ import thePackmaster.cardmodifiers.transmutationpack.GainBlockEffect;
 import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class ViscousShell extends AbstractHydrologistCard implements TransmutableCard {
     public final static String ID = makeID("ViscousShell");

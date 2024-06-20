@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.legacypack.MassProductionAction;
 
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MassProduction extends AbstractLegacyCard {

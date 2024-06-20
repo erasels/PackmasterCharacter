@@ -3,7 +3,6 @@ package thePackmaster.cards.batterpack;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.batterpack.OptimizedBlurPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

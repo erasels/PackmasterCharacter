@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.hats.HatMenu;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;

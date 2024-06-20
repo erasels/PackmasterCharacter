@@ -1,13 +1,11 @@
 package thePackmaster.cards.farmerpack;
 
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-import java.util.Iterator;
 import java.util.Locale;
 
 public abstract class AbstractFarmerCard extends AbstractPackmasterCard {

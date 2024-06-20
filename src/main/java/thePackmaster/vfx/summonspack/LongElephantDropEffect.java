@@ -10,9 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.util.TexLoader;
-
-import java.util.Set;
 
 import static thePackmaster.SpireAnniversary5Mod.makePath;
 

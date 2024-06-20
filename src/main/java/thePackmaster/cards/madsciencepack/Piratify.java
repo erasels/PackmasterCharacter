@@ -2,7 +2,6 @@ package thePackmaster.cards.madsciencepack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
 import thePackmaster.cards.legacypack.Cannonball;
 import thePackmaster.powers.madsciencepack.PiratifyPower;
 import thePackmaster.powers.madsciencepack.PiratifyPowerUpp;

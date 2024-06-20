@@ -1,16 +1,9 @@
 package thePackmaster.cardmodifiers.pixiepack;
 
-import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
-import basemod.helpers.CardModifierManager;
-import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import thePackmaster.cardmodifiers.rippack.ArtCardModifier;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

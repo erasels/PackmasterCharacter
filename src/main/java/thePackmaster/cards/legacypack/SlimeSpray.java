@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.SlowPower;
-
 import thePackmaster.vfx.legacypack.SlimeSplashEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

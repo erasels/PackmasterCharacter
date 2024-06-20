@@ -2,10 +2,6 @@ package thePackmaster.actions.dimensiongatepack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.ChemicalX;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import thePackmaster.util.Wiz;
 import thePackmaster.util.cardvars.HoardField;
 
 public class HoardPayoffAction extends AbstractGameAction {
