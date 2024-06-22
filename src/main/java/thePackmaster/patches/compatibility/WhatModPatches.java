@@ -9,21 +9,18 @@ import thePackmaster.packs.AbstractCardPack;
 import java.util.Objects;
 import java.util.Set;
 
-public class WhatModPatches
-{
+public class WhatModPatches {
     @SpirePatch2(
             clz = WhatMod.class,
             method = "getBody"
     )
-    public static class Cards
-    {
+    public static class Cards {
         @SpireInsertPatch(
                 locator = Locator.class,
                 localvars = {"c", "name"}
         )
-        public static void AddPackName(Class<?> c, @ByRef String[] name)
-        {
-            if (Objects.equals(SpireAnniversary5Mod.modID, WhatMod.findModID(c))) {
+        public static void AddPackName(Class<?> c, @ByRef String[] name) {
+            if (shouldAdd(WhatMod.findModID(c))) {
                 String packID = SpireAnniversary5Mod.cardClassParentMap.get(c);
                 AbstractCardPack pack = SpireAnniversary5Mod.packsByID.get(packID);
                 if (pack != null) {
@@ -32,11 +29,13 @@ public class WhatModPatches
             }
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        public static boolean shouldAdd(String modId) {
+            return Objects.equals(SpireAnniversary5Mod.modID, modId);
+        }
+
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(Set.class, "add");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
