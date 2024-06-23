@@ -35,5 +35,12 @@
     "DESCRIPTIONS": [
       "Whenever you gain #yBlock, gain #b%s #yCharge #yUp."
     ]
+  },
+  "${ModID}:FreeAmplify": {
+    "NAME": "Free Amplify",
+    "DESCRIPTIONS": [
+      "The next #yAmplify effect does not consume energy.",
+      "The next #b%s #yAmplify effects do not consume energy."
+    ]
   }
 }

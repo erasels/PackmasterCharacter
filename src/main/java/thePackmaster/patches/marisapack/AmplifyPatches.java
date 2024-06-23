@@ -83,7 +83,7 @@ public class AmplifyPatches {
         }
         public static int getTotalCost(AbstractCard c, int costForTurn) {
             if(c == amplified) {
-                costForTurn += ((AmplifyCard)c).getAmplifyCost();
+                costForTurn += ((AmplifyCard)c)._costLogic();
                 didCost = true;
             }
 
@@ -95,9 +95,10 @@ public class AmplifyPatches {
         public static void beforeEndUseCard(AbstractPlayer __instance, AbstractCard c, AbstractMonster monster) {
             if(amplified == c) {
                 if(!didCost) {
-                    __instance.energy.use(((AmplifyCard) c).getAmplifyCost());
-                } else
+                    __instance.energy.use(((AmplifyCard) c)._costLogic());
+                } else {
                     didCost = false;
+                }
                 Wiz.p().powers.stream().filter(p -> p instanceof AmplifyPowerHook).forEach(p -> ((AmplifyPowerHook) p).onAmplify(c));
                 amplified = null;
             }

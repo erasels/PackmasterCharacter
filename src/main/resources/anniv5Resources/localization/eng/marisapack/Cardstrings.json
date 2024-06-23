@@ -13,7 +13,7 @@
   },
   "${ModID}:LuminousStrike": {
     "NAME": "Luminous Strike",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Apply Ignite equal to half the damage dealt."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Apply ${ModID}:Ignite equal to half the damage dealt."
   },
   "${ModID}:UltimateShortwave": {
     "NAME": "Ultimate Shortwave",
@@ -23,7 +23,14 @@
     "NAME": "Grand Cross",
     "DESCRIPTION": "Deal !D! damage. Costs 0 if you ${ModID}:amplified this turn, otherwise draw !M! cards."
   },
-
+  "${ModID}:CasketOfStars": {
+    "NAME": "Casket of Stars",
+    "DESCRIPTION": "Whenever you gain Block, gain !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Gain !M! Metallicize."
+  },
+  "${ModID}:BlazingStar": {
+    "NAME": "Blazing Star",
+    "DESCRIPTION": "Gain !M! Temp. Strength. NL The next ${ModID}:Amplify effect is free."
+  },
 
 
 
