@@ -52,7 +52,7 @@ public class GalacticHalo extends AbstractMarisaCard implements AmplifyCard {
         float playerX = Wiz.p().hb.cX;
         float playerY = Wiz.p().hb.cY;
 
-        float distance = 20 * Settings.scale;
+        float distance = 50 * Settings.scale;
 
         // Angles in radians
         float[] angles = {0, (float)Math.PI / 2, (float)Math.PI, 3 * (float)Math.PI / 2};
