@@ -2,6 +2,7 @@ package thePackmaster.cards.marisapack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
@@ -36,5 +37,9 @@ public class GrandCross extends AbstractMarisaCard {
 
     public void upp() {
         upgradeDamage(UPG_DMG);
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AmplifyPatches.amplifiedThisTurn ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 }
