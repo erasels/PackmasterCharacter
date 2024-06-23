@@ -1,10 +1,11 @@
-package thePackmaster.cards.marisapack;
+package thePackmaster.cards.marisapack.deprecated;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.upgradespack.ExhaustRandomPredicateCardAction;
+import thePackmaster.cards.marisapack.AbstractMarisaCard;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.marisapack.BetterFireballEffect;
 import thePackmaster.vfx.marisapack.MissileStrikeEffect;

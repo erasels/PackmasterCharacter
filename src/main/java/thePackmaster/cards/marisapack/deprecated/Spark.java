@@ -1,4 +1,4 @@
-package thePackmaster.cards.marisapack;
+package thePackmaster.cards.marisapack.deprecated;
 
 import basemod.AutoAdd;
 import basemod.ReflectionHacks;
@@ -11,13 +11,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.ImpactSparkEffect;
+import thePackmaster.cards.marisapack.AbstractMarisaCard;
+import thePackmaster.cards.marisapack.AmplifyCard;
 import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 @AutoAdd.Ignore
-public class Spark extends AbstractMarisaCard implements AmplifyCard{
+public class Spark extends AbstractMarisaCard implements AmplifyCard {
     public final static String ID = makeID(Spark.class.getSimpleName());
     private static final int DMG = 3, UPG_DMG = 4;
     private static final int MAGIC = 1, UPG_MAGIC = 1;

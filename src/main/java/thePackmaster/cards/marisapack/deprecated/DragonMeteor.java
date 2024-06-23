@@ -1,4 +1,4 @@
-package thePackmaster.cards.marisapack;
+package thePackmaster.cards.marisapack.deprecated;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.SearingBlowEffect;
 import org.apache.commons.lang3.math.NumberUtils;
+import thePackmaster.cards.marisapack.AbstractMarisaCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

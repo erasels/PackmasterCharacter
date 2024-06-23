@@ -1,9 +1,11 @@
-package thePackmaster.cards.marisapack;
+package thePackmaster.cards.marisapack.deprecated;
 
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import thePackmaster.cards.marisapack.AbstractMarisaCard;
+import thePackmaster.cards.marisapack.AmplifyCard;
 import thePackmaster.powers.TempHPRegenPower;
 import thePackmaster.util.Wiz;
 
@@ -12,7 +14,7 @@ import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class Inertia extends AbstractMarisaCard implements AmplifyCard{
+public class Inertia extends AbstractMarisaCard implements AmplifyCard {
     public final static String ID = makeID(Inertia.class.getSimpleName());
     private static final int MAGIC = 4, UPG_MAGIC = 2, ADD = 2;
     private static TooltipInfo ablation;
