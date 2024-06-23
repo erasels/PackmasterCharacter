@@ -26,6 +26,7 @@ public class MarisaPack extends AbstractCardPack {
         cards.add(GalacticHalo.ID);
         cards.add(RisingStrike.ID);
         cards.add(GrandCross.ID);
+        cards.add(CasketOfStars.ID);
         cards.add(LuminousStrike.ID);
         cards.add(UltimateShortwave.ID);
         return cards;
