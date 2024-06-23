@@ -35,7 +35,10 @@
     "NAME": "Escape Velocity",
     "DESCRIPTION": "Gain !B! Block. Gains additional Block equal to ${ModID}:Charge Up gained this combat."
   },
-
+  "${ModID}:EventHorizon": {
+    "NAME": "Event Horizon",
+    "DESCRIPTION": "At the start of your turn, gain !M! Vigor."
+  },
 
 
 
