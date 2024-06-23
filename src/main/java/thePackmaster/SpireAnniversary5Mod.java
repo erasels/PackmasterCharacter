@@ -22,7 +22,6 @@ import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
-import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -117,7 +116,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static thePackmaster.patches.MainMenuUIPatch.*;
-import static thePackmaster.skins.SkinManager.*;
+import static thePackmaster.skins.SkinManager.CONFIG_CURRENT_SKIN;
 import static thePackmaster.util.Wiz.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
@@ -904,6 +903,7 @@ public class SpireAnniversary5Mod implements
         EnergyAndEchoPack.resetvalues();
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
         JediUtil.receiveOnBattleStart(room);
+        AmplifyPatches.receiveBattleStart();
     }
 
     @Override
@@ -915,6 +915,7 @@ public class SpireAnniversary5Mod implements
     public void receiveOnPlayerTurnStart() {
         Leprechaun.staticStartOfTurn();
         JediUtil.receiveOnPlayerTurnStart();
+        AmplifyPatches.receiveStartOfTurn();
         cardsRippedThisTurn = 0;
     }
 

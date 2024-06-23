@@ -20,6 +20,8 @@ import thePackmaster.util.Wiz;
 
 public class AmplifyPatches {
     public static AbstractCard amplified = null;
+    public static boolean amplifiedThisTurn = false, amplifiedThisCombat = false;
+    public static int amtAmplifiedThisTurn = 0, amtAmplifiedThisCombat = 0;
 
     @SpirePatch2(clz= AbstractPlayer.class, method="useCard")
     public static class CatchUse {
@@ -58,6 +60,10 @@ public class AmplifyPatches {
             if (amplified == c) {
                 ((AmplifyCard)c).useAmplified(__instance, monster);
                 c.superFlash(AmplifyCard.AMPLIFY_GLOW_COLOR.cpy());
+                amplifiedThisCombat = true;
+                amplifiedThisTurn = true;
+                amtAmplifiedThisCombat++;
+                amtAmplifiedThisTurn++;
             }
         }
 
@@ -142,5 +148,17 @@ public class AmplifyPatches {
                 return SpireAnniversary5Mod.makeID("AmplifyGlow");
             }
         });
+    }
+
+    public static void receiveBattleStart() {
+        amplifiedThisCombat = false;
+        amplifiedThisTurn = false;
+        amtAmplifiedThisCombat = 0;
+        amtAmplifiedThisTurn = 0;
+    }
+
+    public static void receiveStartOfTurn() {
+        amplifiedThisTurn = false;
+        amtAmplifiedThisTurn = 0;
     }
 }

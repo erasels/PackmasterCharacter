@@ -15,6 +15,18 @@
     "NAME": "Luminous Strike",
     "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Apply Ignite equal to half the damage dealt."
   },
+  "${ModID}:UltimateShortwave": {
+    "NAME": "Ultimate Shortwave",
+    "DESCRIPTION": "Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat."
+  },
+  "${ModID}:GrandCross": {
+    "NAME": "Grand Cross",
+    "DESCRIPTION": "Deal !D! damage. Costs 0 if you ${ModID}:amplified this turn, otherwise draw !M! cards."
+  },
+
+
+
+
   "${ModID}:ShootingEcho": {
     "NAME": "Shooting Echo",
     "DESCRIPTION": "Deal !D! damage. Exhaust a random card to gain a copy of this. NL Exhaust."
@@ -26,10 +38,6 @@
   "${ModID}:Inertia": {
     "NAME": "Oort Cloud",
     "DESCRIPTION": "Gain !M! *Ablation. NL ${ModID}:Amplify [E] : Gain !${ModID}:m2! additional *Ablation."
-  },
-  "${ModID}:UltimateShortwave": {
-    "NAME": "Ultimate Shortwave",
-    "DESCRIPTION": "Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat."
   },
   "${ModID}:DragonMeteor": {
     "NAME": "Dragon Meteor",
