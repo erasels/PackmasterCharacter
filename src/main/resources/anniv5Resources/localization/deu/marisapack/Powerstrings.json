@@ -29,5 +29,24 @@
     "DESCRIPTIONS": [
       "#yErschöpfe die nächste Karte die du spielst um #b%s #yAufladen zu erhalten und ziehe #b1 Karte."
     ]
+  },
+  "${ModID}:StarCasket": {
+    "NAME": "Sternenschrein",
+    "DESCRIPTIONS": [
+      "Erhalte #b%s #yAufladung, immer wenn du #yBlock erhältst."
+    ]
+  },
+  "${ModID}:FreeAmplify": {
+    "NAME": "Verstärkt",
+    "DESCRIPTIONS": [
+      "Die nächste #yVerstärkung verbraucht keine Energie.",
+      "Die nächsten #b%s #yVerstärkungen verbrauchen keine Energie."
+    ]
+  },
+  "${ModID}:EventHorizon": {
+    "NAME": "Ereignishorizont",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn jeder Runde #b%s #yVitalität."
+    ]
   }
 }

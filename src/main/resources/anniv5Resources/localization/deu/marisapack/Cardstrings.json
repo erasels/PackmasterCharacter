@@ -48,7 +48,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Kostet 0, wenn du in diesem Zug ${ModID}:verstärkt hast, andernfalls ziehe !M! Karten."
   },
   "${ModID}:CasketOfStars": {
-    "NAME": "Sternenkiste",
+    "NAME": "Sternenschrein",
     "DESCRIPTION": "Immer wenn du Block erhältst, erhalte !${ModID}:m2! ${ModID}:Aufladen. NL ${ModID}:Verstärken [E] : Erhalte !M! Metallisch."
   },
   "${ModID}:BlazingStar": {
