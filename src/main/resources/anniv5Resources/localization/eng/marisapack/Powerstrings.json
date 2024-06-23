@@ -29,5 +29,11 @@
     "DESCRIPTIONS": [
       "#yExhaust the next card you play to gain #b%s #yCharge #yUp and draw #b1 card."
     ]
+  },
+  "${ModID}:StarCasket": {
+    "NAME": "Casket of Stars",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yBlock, gain #b%s #yCharge #yUp."
+    ]
   }
 }
