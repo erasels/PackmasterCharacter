@@ -1,7 +1,7 @@
 {
   "${ModID}:MasterSpark": {
     "NAME": "Master Spark",
-    "DESCRIPTION": "Deal !D! damage. ${ModID}:Amplify [E] : NL Deal !${ModID}:sd! damage instead."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Amplify [E] : NL Deal !${ModID}:sd! damage instead."
   },
   "${ModID}:RisingStrike": {
     "NAME": "Rising Strike",
@@ -9,7 +9,7 @@
   },
   "${ModID}:GalacticHalo": {
     "NAME": "Galactic Halo",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Charge Up."
+    "DESCRIPTION": "Gain !M! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] [E] : Gain !B! Block."
   },
   "${ModID}:LuminousStrike": {
     "NAME": "Luminous Strike",
