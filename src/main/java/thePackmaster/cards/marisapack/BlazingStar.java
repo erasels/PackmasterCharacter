@@ -22,7 +22,7 @@ public class BlazingStar  extends AbstractMarisaCard {
         Wiz.applyToSelf(new StrengthPower(p, magicNumber));
         Wiz.applyToSelf(new LoseStrengthPower(p, magicNumber));
 
-        Wiz.applyToSelf(new FreeAmplifyPower(magicNumber));
+        Wiz.applyToSelf(new FreeAmplifyPower(1));
     }
 
     public void upp() {
