@@ -28,6 +28,7 @@ public class MarisaPack extends AbstractCardPack {
         cards.add(GrandCross.ID);
         cards.add(CasketOfStars.ID);
         cards.add(LuminousStrike.ID);
+        cards.add(BlazingStar.ID);
         cards.add(UltimateShortwave.ID);
         return cards;
     }
