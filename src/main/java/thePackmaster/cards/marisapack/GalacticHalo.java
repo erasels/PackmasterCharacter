@@ -24,7 +24,7 @@ public class GalacticHalo extends AbstractMarisaCard implements AmplifyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.vfx(new BubbleEffect(Color.SKY, ""), Settings.ACTION_DUR_FAST);
+        Wiz.vfx(new BubbleEffect(isAmplified(this) ? Color.PURPLE : Color.SKY, ""), Settings.ACTION_DUR_FAST);
         Wiz.applyToSelf(new ChargeUpPower(magicNumber));
     }
 
@@ -52,7 +52,7 @@ public class GalacticHalo extends AbstractMarisaCard implements AmplifyCard {
         float playerX = Wiz.p().hb.cX;
         float playerY = Wiz.p().hb.cY;
 
-        float distance = 50 * Settings.scale;
+        float distance = 125f * Settings.scale;
 
         // Angles in radians
         float[] angles = {0, (float)Math.PI / 2, (float)Math.PI, 3 * (float)Math.PI / 2};
