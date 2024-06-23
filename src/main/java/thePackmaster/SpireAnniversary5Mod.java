@@ -87,6 +87,7 @@ import thePackmaster.potions.thieverypack.DivinePotion;
 import thePackmaster.powers.dragonwrathpack.PenancePower;
 import thePackmaster.powers.evenoddpack.GammaWardPower;
 import thePackmaster.powers.evenoddpack.PrimeDirectivePower;
+import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.powers.thieverypack.MindControlledPower;
 import thePackmaster.relics.AbstractPackmasterRelic;
 import thePackmaster.rewards.CustomRewardTypes;
@@ -904,6 +905,7 @@ public class SpireAnniversary5Mod implements
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
         JediUtil.receiveOnBattleStart(room);
         AmplifyPatches.receiveBattleStart();
+        ChargeUpPower.receiveBattleStart();
     }
 
     @Override

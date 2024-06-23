@@ -30,6 +30,8 @@ public class MarisaPack extends AbstractCardPack {
         cards.add(LuminousStrike.ID);
         cards.add(BlazingStar.ID);
         cards.add(UltimateShortwave.ID);
+
+
         return cards;
     }
 }
