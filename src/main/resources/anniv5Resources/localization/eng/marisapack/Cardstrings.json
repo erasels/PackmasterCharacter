@@ -13,7 +13,7 @@
   },
   "${ModID}:LuminousStrike": {
     "NAME": "Luminous Strike",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Gain !M! ${ModID}:Charge Up."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Apply Ignite equal to half the damage dealt."
   },
   "${ModID}:ShootingEcho": {
     "NAME": "Shooting Echo",
