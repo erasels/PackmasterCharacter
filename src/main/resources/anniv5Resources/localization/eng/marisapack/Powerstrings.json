@@ -42,5 +42,11 @@
       "The next #yAmplify effect does not consume energy.",
       "The next #b%s #yAmplify effects do not consume energy."
     ]
+  },
+  "${ModID}:EventHorizon": {
+    "NAME": "EventHorizon",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b%s #yVigor."
+    ]
   }
 }
