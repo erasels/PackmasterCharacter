@@ -9,7 +9,7 @@
   },
   "${ModID}:GalacticHalo": {
     "NAME": "Galactic Halo",
-    "DESCRIPTION": "Gain !M! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] [E] : Gain !B! Block."
+    "DESCRIPTION": "Gain !M! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] [E] : NL Gain !B! Block."
   },
   "${ModID}:LuminousStrike": {
     "NAME": "Luminous Strike",
@@ -21,7 +21,7 @@
   },
   "${ModID}:GrandCross": {
     "NAME": "Grand Cross",
-    "DESCRIPTION": "Deal !D! damage. Costs 0 if you ${ModID}:amplified this turn, otherwise draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if you ${ModID}:amplified this turn, otherwise draw !M! cards."
   },
   "${ModID}:CasketOfStars": {
     "NAME": "Casket of Stars",
