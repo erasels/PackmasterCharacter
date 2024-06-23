@@ -43,7 +43,7 @@ public class LuminousStrike extends AbstractMarisaCard implements AmplifyCard {
     public void useAmplified(AbstractPlayer p, AbstractMonster m) {
         Wiz.vfx(new FireIgniteEffect(m.hb.cX, m.hb.cY, damage));
         for (int i = 0; i < 4; i++) {
-            Wiz.vfx(new CasualFlameParticleEffect(m.hb.cX + (MathUtils.random(-10, 10) * Settings.scale), m.hb.cY + (MathUtils.random(-10, 10) * Settings.scale)));
+            Wiz.vfx(new CasualFlameParticleEffect(m.hb.cX + (MathUtils.random(-50, 50) * Settings.scale), m.hb.cY + (MathUtils.random(-50, 50) * Settings.scale)));
         }
         if (damage > 1) { // 1 damage would apply 0
             Wiz.applyToEnemy(m, new IgnitePower(m, damage / 2));
