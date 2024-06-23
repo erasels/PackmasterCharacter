@@ -1,7 +1,7 @@
 {
   "${ModID}:MasterSpark": {
     "NAME": "Master Spark",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Amplify [E] : NL Deal !${ModID}:sd! damage instead."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Amplify [E] : NL Deal !M! damage instead."
   },
   "${ModID}:RisingStrike": {
     "NAME": "Rising Strike",
