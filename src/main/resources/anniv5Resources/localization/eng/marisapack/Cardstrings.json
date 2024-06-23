@@ -31,6 +31,12 @@
     "NAME": "Blazing Star",
     "DESCRIPTION": "Gain !M! Temp. Strength. NL The next ${ModID}:Amplify effect is free."
   },
+  "${ModID}:EscapeVelocity": {
+    "NAME": "Escape Velocity",
+    "DESCRIPTION": "Gain !B! Block. Gains additional Block equal to ${ModID}:Charge Up gained this combat."
+  },
+
+
 
 
 
