@@ -22,7 +22,17 @@ public class ChargeUpPower extends AbstractPackmasterPower implements CloneableP
 
     public ChargeUpPower(int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, Wiz.p(), amount);
+    }
+
+    @Override
+    public void onInitialApplication() {
         chargeUpGainThisCombat += amount;
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        chargeUpGainThisCombat += stackAmount;
     }
 
     @Override
