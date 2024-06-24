@@ -20,7 +20,7 @@ public class EscapeVelocity extends AbstractMarisaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.vfx(new ExplosionSmallEffect(p.hb.cX, p.hb.cY), Settings.ACTION_DUR_XFAST);
+        Wiz.vfx(new ExplosionSmallEffect(p.hb.cX, p.hb.y), Settings.ACTION_DUR_XFAST);
         blck();
     }
 
