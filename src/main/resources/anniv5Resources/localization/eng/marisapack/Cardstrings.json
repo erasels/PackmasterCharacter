@@ -29,7 +29,7 @@
   },
   "${ModID}:BlazingStar": {
     "NAME": "Blazing Star",
-    "DESCRIPTION": "Gain !M! Temp. Strength. NL The next ${ModID}:Amplify effect is free."
+    "DESCRIPTION": "Gain !M! Temporary Strength. NL The next ${ModID}:Amplify effect is free."
   },
   "${ModID}:EscapeVelocity": {
     "NAME": "Escape Velocity",
