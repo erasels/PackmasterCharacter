@@ -1,7 +1,7 @@
 {
   "${ModID}:MasterSpark": {
     "NAME": "Master Spark",
-    "DESCRIPTION": "Deal !D! damage. ${ModID}:Amplify [E] : NL Deal !${ModID}:sd! damage instead."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Amplify [E] : NL Deal !M! damage instead."
   },
   "${ModID}:RisingStrike": {
     "NAME": "Rising Strike",
@@ -9,12 +9,40 @@
   },
   "${ModID}:GalacticHalo": {
     "NAME": "Galactic Halo",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${ModID}:Charge Up."
+    "DESCRIPTION": "Gain !M! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] [E] : NL Gain !B! Block."
   },
   "${ModID}:LuminousStrike": {
     "NAME": "Luminous Strike",
-    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Gain !M! ${ModID}:Charge Up."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Amplify [E] : Apply ${ModID}:Ignite equal to half the damage dealt."
   },
+  "${ModID}:UltimateShortwave": {
+    "NAME": "Ultimate Shortwave",
+    "DESCRIPTION": "Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat."
+  },
+  "${ModID}:GrandCross": {
+    "NAME": "Grand Cross",
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if you ${ModID}:amplified this turn, otherwise draw !M! cards."
+  },
+  "${ModID}:CasketOfStars": {
+    "NAME": "Casket of Stars",
+    "DESCRIPTION": "Whenever you gain Block, gain !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Gain !M! Metallicize."
+  },
+  "${ModID}:BlazingStar": {
+    "NAME": "Blazing Star",
+    "DESCRIPTION": "Gain !M! Temporary Strength. NL The next ${ModID}:Amplify effect is free."
+  },
+  "${ModID}:EscapeVelocity": {
+    "NAME": "Escape Velocity",
+    "DESCRIPTION": "Gain !B! Block. NL Gains additional Block equal to ${ModID}:Charge Up gained this combat."
+  },
+  "${ModID}:EventHorizon": {
+    "NAME": "Event Horizon",
+    "DESCRIPTION": "At the start of your turn, gain !M! Vigor."
+  },
+
+
+
+
   "${ModID}:ShootingEcho": {
     "NAME": "Shooting Echo",
     "DESCRIPTION": "Deal !D! damage. Exhaust a random card to gain a copy of this. NL Exhaust."
@@ -26,10 +54,6 @@
   "${ModID}:Inertia": {
     "NAME": "Oort Cloud",
     "DESCRIPTION": "Gain !M! *Ablation. NL ${ModID}:Amplify [E] : Gain !${ModID}:m2! additional *Ablation."
-  },
-  "${ModID}:UltimateShortwave": {
-    "NAME": "Ultimate Shortwave",
-    "DESCRIPTION": "Gain !M! [E] and !${ModID}:m2! ${ModID}:Charge Up. NL ${ModID}:Amplify [E] : Increase both values by 1 this combat."
   },
   "${ModID}:DragonMeteor": {
     "NAME": "Dragon Meteor",

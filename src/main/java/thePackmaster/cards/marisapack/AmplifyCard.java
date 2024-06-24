@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.patches.marisapack.AmplifyPatches;
+import thePackmaster.powers.marisapack.FreeAmplifyPower;
 import thePackmaster.util.Wiz;
 
 public interface AmplifyCard {
@@ -20,7 +21,7 @@ public interface AmplifyCard {
      */
     default boolean shouldAmplify(AbstractCard thisCard) {
         int cardCost = Wiz.getLogicalCardCost(thisCard);
-        return EnergyPanel.totalCount >= cardCost + ((AmplifyCard)thisCard).getAmplifyCost();
+        return EnergyPanel.totalCount >= cardCost + ((AmplifyCard)thisCard)._costLogic();
     }
 
 
@@ -42,4 +43,12 @@ public interface AmplifyCard {
 
     //Defines the amount of additional energy you need to activate the Amplify effect (on top of the card's energy cost)
     int getAmplifyCost();
+
+    // Includes amplify cost negation logic
+    default int _costLogic() {
+        if(Wiz.p().hasPower(FreeAmplifyPower.POWER_ID)) {
+            return 0;
+        }
+        return getAmplifyCost();
+    }
 }

@@ -20,15 +20,12 @@ public class RisingStrike extends AbstractMarisaCard {
         damage = baseDamage = DMG;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(CardTags.STRIKE);
-        //cardsToPreview = new Spark();
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.vfx(new PlasmaOrbActivateEffect(m.hb.cX, m.hb.cY), Settings.ACTION_DUR_FAST);
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         Wiz.applyToSelf(new BuildingChargePower(MAGIC));
-        //Wiz.makeInHand(cardsToPreview);
     }
 
     public void upp() {

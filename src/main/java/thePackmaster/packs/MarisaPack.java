@@ -16,7 +16,7 @@ public class MarisaPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public MarisaPack() {
-        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(4, 1, 3, 4, 3, PackSummary.Tags.Exhaust, PackSummary.Tags.Attacks));
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(4, 1, 3, 4, 3, PackSummary.Tags.Attacks));
     }
 
     @Override
@@ -25,14 +25,13 @@ public class MarisaPack extends AbstractCardPack {
         cards.add(MasterSpark.ID);
         cards.add(GalacticHalo.ID);
         cards.add(RisingStrike.ID);
-        //cards.add(Spark.ID);
+        cards.add(GrandCross.ID);
+        cards.add(CasketOfStars.ID);
         cards.add(LuminousStrike.ID);
-        cards.add(ShootingEcho.ID);
-        cards.add(Inertia.ID);
-        cards.add(StardustReverie.ID);
+        cards.add(BlazingStar.ID);
         cards.add(UltimateShortwave.ID);
-        cards.add(DragonMeteor.ID);
-        cards.add(EarthlightRay.ID);
+        cards.add(EscapeVelocity.ID);
+        cards.add(EventHorizon.ID);
         return cards;
     }
 }

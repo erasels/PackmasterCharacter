@@ -20,6 +20,8 @@ import thePackmaster.util.Wiz;
 
 public class AmplifyPatches {
     public static AbstractCard amplified = null;
+    public static boolean amplifiedThisTurn = false, amplifiedThisCombat = false;
+    public static int amtAmplifiedThisTurn = 0, amtAmplifiedThisCombat = 0;
 
     @SpirePatch2(clz= AbstractPlayer.class, method="useCard")
     public static class CatchUse {
@@ -58,6 +60,10 @@ public class AmplifyPatches {
             if (amplified == c) {
                 ((AmplifyCard)c).useAmplified(__instance, monster);
                 c.superFlash(AmplifyCard.AMPLIFY_GLOW_COLOR.cpy());
+                amplifiedThisCombat = true;
+                amplifiedThisTurn = true;
+                amtAmplifiedThisCombat++;
+                amtAmplifiedThisTurn++;
             }
         }
 
@@ -77,7 +83,7 @@ public class AmplifyPatches {
         }
         public static int getTotalCost(AbstractCard c, int costForTurn) {
             if(c == amplified) {
-                costForTurn += ((AmplifyCard)c).getAmplifyCost();
+                costForTurn += ((AmplifyCard)c)._costLogic();
                 didCost = true;
             }
 
@@ -89,9 +95,10 @@ public class AmplifyPatches {
         public static void beforeEndUseCard(AbstractPlayer __instance, AbstractCard c, AbstractMonster monster) {
             if(amplified == c) {
                 if(!didCost) {
-                    __instance.energy.use(((AmplifyCard) c).getAmplifyCost());
-                } else
+                    __instance.energy.use(((AmplifyCard) c)._costLogic());
+                } else {
                     didCost = false;
+                }
                 Wiz.p().powers.stream().filter(p -> p instanceof AmplifyPowerHook).forEach(p -> ((AmplifyPowerHook) p).onAmplify(c));
                 amplified = null;
             }
@@ -142,5 +149,17 @@ public class AmplifyPatches {
                 return SpireAnniversary5Mod.makeID("AmplifyGlow");
             }
         });
+    }
+
+    public static void receiveBattleStart() {
+        amplifiedThisCombat = false;
+        amplifiedThisTurn = false;
+        amtAmplifiedThisCombat = 0;
+        amtAmplifiedThisTurn = 0;
+    }
+
+    public static void receiveStartOfTurn() {
+        amplifiedThisTurn = false;
+        amtAmplifiedThisTurn = 0;
     }
 }

@@ -18,8 +18,21 @@ public class ChargeUpPower extends AbstractPackmasterPower implements CloneableP
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     public static int THRESHOLD = 6, MODIFY_AMT = 2;
 
+    public static int chargeUpGainThisCombat = 0;
+
     public ChargeUpPower(int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, Wiz.p(), amount);
+    }
+
+    @Override
+    public void onInitialApplication() {
+        chargeUpGainThisCombat += amount;
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        chargeUpGainThisCombat += stackAmount;
     }
 
     @Override
@@ -48,6 +61,9 @@ public class ChargeUpPower extends AbstractPackmasterPower implements CloneableP
         description = String.format(DESCRIPTIONS[0], THRESHOLD, THRESHOLD);
     }
 
+    public static void receiveBattleStart() {
+        chargeUpGainThisCombat = 0;
+    }
 }
 
 

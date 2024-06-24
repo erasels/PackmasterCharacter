@@ -1,7 +1,8 @@
-package thePackmaster.cards.marisapack;
+package thePackmaster.cards.marisapack.deprecated;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import thePackmaster.cards.marisapack.AbstractMarisaCard;
 import thePackmaster.powers.marisapack.StardustReveriePower;
 import thePackmaster.util.Wiz;
 
