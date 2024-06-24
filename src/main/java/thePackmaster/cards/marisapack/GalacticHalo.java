@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
+import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import thePackmaster.powers.marisapack.ChargeUpPower;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.marisapack.BubbleEffect;
@@ -60,7 +60,7 @@ public class GalacticHalo extends AbstractMarisaCard implements AmplifyCard {
         for (float angle : angles) {
             float vfxX = playerX + distance * (float)Math.cos(angle);
             float vfxY = playerY + distance * (float)Math.sin(angle);
-            Wiz.vfx(new DarkOrbActivateEffect(vfxX, vfxY));
+            Wiz.vfx(new PlasmaOrbActivateEffect(vfxX, vfxY));
         }
     }
 }
