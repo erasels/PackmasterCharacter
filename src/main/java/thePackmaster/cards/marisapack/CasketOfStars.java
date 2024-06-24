@@ -1,8 +1,10 @@
 package thePackmaster.cards.marisapack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
+import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import thePackmaster.powers.marisapack.StarCasketPower;
 import thePackmaster.util.Wiz;
 
@@ -19,6 +21,7 @@ public class CasketOfStars extends AbstractMarisaCard implements AmplifyCard{
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        queueVFXAroundPlayer(isAmplified(this) ? 20: 10);
         Wiz.applyToSelf(new StarCasketPower(secondMagic));
     }
 
@@ -39,5 +42,25 @@ public class CasketOfStars extends AbstractMarisaCard implements AmplifyCard{
     @Override
     public int getAmplifyCost() {
         return 1;
+    }
+
+    public void queueVFXAroundPlayer(int numEffects) {
+        float playerX = Wiz.p().hb.cX;
+        float playerY = Wiz.p().hb.cY;
+
+        float distance = 150f * Settings.scale;
+
+        float angleIncrement = (float) (2 * Math.PI / numEffects); // Divide the circle into 20 segments
+
+        float duration = 0.01f;
+        if(numEffects < 15) duration = 0.05f;
+
+        for (int i = 0; i < numEffects; i++) {
+            float angle = i * angleIncrement;
+            float vfxX = playerX + distance * (float) Math.cos(angle);
+            float vfxY = playerY + distance * (float) Math.sin(angle);
+
+            Wiz.vfx(new StarBounceEffect(vfxX, vfxY), duration);
+        }
     }
 }
