@@ -57,10 +57,10 @@
   },
   "${ModID}:EscapeVelocity": {
     "NAME": "Entweichgeschwindigkeit",
-    "DESCRIPTION": "Erhalte !B! Block. Erhalte zusätzlichen Block entsprechend dem in diesem Kampf erhaltenen ${ModID}:Aufladen."
+    "DESCRIPTION": "Erhalte !B! Block. Wenn ${ModID}:Aufladen konsumiert wird, füge diese Karte in die Hand hinzu."
   },
   "${ModID}:EventHorizon": {
     "NAME": "Ereignishorizont",
-    "DESCRIPTION": "Zu Beginn deines Zuges erhalte !M! Tatkraft."
+    "DESCRIPTION": "Zu Beginn deines Zuges erhalte !M! Kraft."
   }
 }

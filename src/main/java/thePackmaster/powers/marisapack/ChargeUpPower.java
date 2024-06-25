@@ -6,8 +6,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import thePackmaster.cards.marisapack.OnChargeUpCard;
 import thePackmaster.powers.AbstractPackmasterPower;
 import thePackmaster.util.Wiz;
+
+import java.util.stream.Stream;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -40,6 +43,9 @@ public class ChargeUpPower extends AbstractPackmasterPower implements CloneableP
         if (amount >= THRESHOLD && (card.type == AbstractCard.CardType.ATTACK)) {
             flash();
             atb(new ReducePowerAction(owner, owner, this, THRESHOLD));
+            Stream.concat(Wiz.drawPile().group.stream(), Wiz.discardPile().group.stream())
+                    .filter(c -> c instanceof OnChargeUpCard)
+                    .forEachOrdered(c -> ((OnChargeUpCard) c).onChargeUpConsumed(card));
         }
     }
 

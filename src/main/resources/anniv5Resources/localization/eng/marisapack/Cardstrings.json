@@ -33,7 +33,7 @@
   },
   "${ModID}:EscapeVelocity": {
     "NAME": "Escape Velocity",
-    "DESCRIPTION": "Gain !B! Block. NL Gains additional Block equal to ${ModID}:Charge Up gained this combat."
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you consume ${ModID}:Charge Up, add this to your hand."
   },
   "${ModID}:EventHorizon": {
     "NAME": "Event Horizon",

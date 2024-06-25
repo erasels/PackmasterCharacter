@@ -1,20 +1,22 @@
 package thePackmaster.cards.marisapack;
 
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
-import thePackmaster.powers.marisapack.ChargeUpPower;
+import thePackmaster.actions.DrawToHandAction;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class EscapeVelocity extends AbstractMarisaCard {
+public class EscapeVelocity extends AbstractMarisaCard implements OnChargeUpCard {
     public final static String ID = makeID(EscapeVelocity.class.getSimpleName());
-    private static final int BLK = 7, UPG_BLK = 4;
+    private static final int BLK = 8, UPG_BLK = 2;
 
     public EscapeVelocity() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = block = BLK;
 
     }
@@ -25,12 +27,9 @@ public class EscapeVelocity extends AbstractMarisaCard {
     }
 
     @Override
-    protected void applyPowersToBlock() {
-        int tmpBlk = baseBlock;
-        baseBlock += ChargeUpPower.chargeUpGainThisCombat;
-        super.applyPowersToBlock();
-        if(baseBlock != tmpBlk) isBlockModified = true;
-        baseBlock = tmpBlk;
+    public void onChargeUpConsumed(AbstractCard card) {
+        addToBot(new DrawToHandAction(this));
+        addToBot(new DiscardToHandAction(this));
     }
 
     public void upp() {
