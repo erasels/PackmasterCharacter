@@ -47,7 +47,6 @@ public class JediUtil {
         while (retVal.size() < 3) {
             AbstractCard tmpCard = list.getRandomCard(true);
             list.removeCard(tmpCard);
-            AbstractCard copy = tmpCard.makeCopy();
             if (tmpCard.upgraded) {
                 tmpCard.upgrade();
             }
