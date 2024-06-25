@@ -16,7 +16,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class LuminousStrike extends AbstractMarisaCard implements AmplifyCard {
     public final static String ID = makeID(LuminousStrike.class.getSimpleName());
-    private static final int DMG = 8, UPG_DMG = 3;
+    private static final int DMG = 9, UPG_DMG = 3;
 
     public LuminousStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
