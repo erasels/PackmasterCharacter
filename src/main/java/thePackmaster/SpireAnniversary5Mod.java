@@ -904,7 +904,7 @@ public class SpireAnniversary5Mod implements
         EnergyAndEchoPack.resetvalues();
         DisableCountingStartOfTurnDrawPatch.DRAWN_DURING_TURN = false;
         JediUtil.receiveOnBattleStart(room);
-        AmplifyPatches.receiveBattleStart();
+        AmplifyPatches.receiveBattleTransition();
         ChargeUpPower.receiveBattleStart();
     }
 
@@ -1311,6 +1311,7 @@ public class SpireAnniversary5Mod implements
         ImproveEffect._clean();
         DynamicDynamicVariableManager.clearVariables();
         combatExhausts = 0;
+        AmplifyPatches.receiveBattleTransition();
     }
 
     @Override

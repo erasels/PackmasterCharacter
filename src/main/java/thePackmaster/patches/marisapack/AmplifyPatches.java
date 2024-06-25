@@ -151,7 +151,7 @@ public class AmplifyPatches {
         });
     }
 
-    public static void receiveBattleStart() {
+    public static void receiveBattleTransition() {
         amplifiedThisCombat = false;
         amplifiedThisTurn = false;
         amtAmplifiedThisCombat = 0;
