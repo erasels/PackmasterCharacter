@@ -26,15 +26,17 @@ public class LuminousStrike extends AbstractMarisaCard implements AmplifyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                for (int i = 0; i < damage / 2; i++) {
-                    AbstractDungeon.effectList.add(new StarBounceEffect(m.hb.cX, m.hb.cY));
+        if(damage > 0) {
+            Wiz.atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    for (int i = 0; i < damage / 2; i++) {
+                        AbstractDungeon.effectList.add(new StarBounceEffect(m.hb.cX, m.hb.cY));
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
     public void upp() {
