@@ -11,7 +11,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class MasterSpark extends AbstractMarisaCard implements AmplifyCard {
     public final static String ID = makeID(MasterSpark.class.getSimpleName());
     private static final int DMG = 8, UPG_DMG = 2;
-    private static final int MAGIC = 17 - DMG, UPG_MAGIC = 23 - (DMG + UPG_DMG);
+    private static final int MAGIC = 9, UPG_MAGIC = 5;
 
     public MasterSpark() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
@@ -34,7 +34,6 @@ public class MasterSpark extends AbstractMarisaCard implements AmplifyCard {
         }
     }
 
-    // lots of jank here because using secondDamage will make the multiDamage array not upgrade
     @Override
     public void applyPowers() {
         int tmp = baseDamage;
@@ -67,6 +66,7 @@ public class MasterSpark extends AbstractMarisaCard implements AmplifyCard {
 
     public void upp() {
         upgradeDamage(UPG_DMG);
+        upgradeMagicNumber(UPG_MAGIC);
     }
 
     @Override
