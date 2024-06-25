@@ -12,7 +12,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class CasketOfStars extends AbstractMarisaCard implements AmplifyCard{
     public final static String ID = makeID(CasketOfStars.class.getSimpleName());
-    private static final int MAGIC = 4, UPG_MAGIC = 2, MAGIC2 = 1;
+    private static final int MAGIC = 3, UPG_MAGIC = 2, MAGIC2 = 1;
 
     public CasketOfStars() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
