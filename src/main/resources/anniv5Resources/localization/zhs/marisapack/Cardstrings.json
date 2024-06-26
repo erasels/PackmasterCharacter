@@ -1,7 +1,7 @@
 {
   "${ModID}:MasterSpark": {
     "NAME": "极限火花",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] ： NL 伤害提高至 !${ModID}:sd! 点。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${ModID}:增幅 [E] ： NL 伤害提高至 !M! 点。"
   },
   "${ModID}:RisingStrike": {
     "NAME": "升龙打击",
@@ -9,11 +9,35 @@
   },
   "${ModID}:GalacticHalo": {
     "NAME": "星晕",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 ${ModID}:蓄力 。"
+    "DESCRIPTION": "获得 !M! 层 ${ModID}:蓄力 。 ${ModID}:增幅 [E] [E] ： NL 获得 !B! 点 格挡 。"
   },
   "${ModID}:LuminousStrike": {
     "NAME": "声光冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] ： NL 获得 !M! 层 ${ModID}:蓄力 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:增幅 [E] ： NL 给予等同于伤害一半的 ${ModID}:燃烧 层数。"
+  },
+  "${ModID}:UltimateShortwave": {
+    "NAME": "极超短波",
+    "DESCRIPTION": "获得 !M! [E] 与 !${ModID}:m2! 层 ${ModID}:蓄力 。 NL ${ModID}:增幅 [E] ： NL 本场战斗数值各加1。"
+  },
+  "${ModID}:GrandCross": {
+    "NAME": "大十字",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你在本回合 ${ModID}:增幅 过，则消耗0点能量，否则抽 !M! 张牌。"
+  },
+  "${ModID}:CasketOfStars": {
+    "NAME": "星之器",
+    "DESCRIPTION": "每当你获得 格挡 时，获得 !${ModID}:m2! 层 ${ModID}:蓄力 。 NL ${ModID}:增幅 [E] ：获得 !M! 层 金属化 。"
+  },
+  "${ModID}:BlazingStar": {
+    "NAME": "彗星",
+    "DESCRIPTION": "获得 !M! 层临时 力量 。 NL 下一次 ${ModID}:增幅 效果免费。"
+  },
+  "${ModID}:EscapeVelocity": {
+    "NAME": "第二宇宙速度",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当你消耗 ${ModID}:蓄力 层数，将其加入手牌。"
+  },
+  "${ModID}:EventHorizon": {
+    "NAME": "事件视界",
+    "DESCRIPTION": "在你的回合开始时，获得 !M! 层 活力 。"
   },
   "${ModID}:ShootingEcho": {
     "NAME": "流星共鸣",
@@ -26,10 +50,6 @@
   "${ModID}:Inertia": {
     "NAME": "奥尔特云",
     "DESCRIPTION": "获得 !M! 层 *消融 。 NL ${ModID}:增幅 [E] ： NL 额外获得 !${ModID}:m2! 层。"
-  },
-  "${ModID}:UltimateShortwave": {
-    "NAME": "极超短波",
-    "DESCRIPTION": "获得 !M! [E] 与 !${ModID}:m2! 层 ${ModID}:蓄力 。 NL ${ModID}:增幅 [E] ： NL 本场战斗数值各加1。"
   },
   "${ModID}:DragonMeteor": {
     "NAME": "龙陨星",
