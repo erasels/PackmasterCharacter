@@ -18,7 +18,7 @@ public class Opposition extends AbstractAstrologerCard {
 
     public Opposition() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
-        this.magicNumber = this.baseMagicNumber = 10;
+        this.magicNumber = this.baseMagicNumber = 13;
         isEthereal = true;
     }
 
