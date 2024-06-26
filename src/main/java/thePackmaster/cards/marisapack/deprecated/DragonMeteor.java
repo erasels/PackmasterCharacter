@@ -1,5 +1,6 @@
 package thePackmaster.cards.marisapack.deprecated;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -12,6 +13,7 @@ import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
+@NoCompendium
 public class DragonMeteor extends AbstractMarisaCard {
     public final static String ID = makeID(DragonMeteor.class.getSimpleName());
     private static final int DMG = 6;

@@ -1,6 +1,7 @@
 package thePackmaster.cards.marisapack.deprecated;
 
 import basemod.helpers.TooltipInfo;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -14,6 +15,7 @@ import java.util.List;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
+@NoCompendium
 public class Inertia extends AbstractMarisaCard implements AmplifyCard {
     public final static String ID = makeID(Inertia.class.getSimpleName());
     private static final int MAGIC = 4, UPG_MAGIC = 2, ADD = 2;
