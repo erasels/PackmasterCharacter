@@ -1,8 +1,5 @@
 package thePackmaster.cards.dimensiongateabstracts;
 
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
 public abstract class AbstractDimensionalCardTowerTactics extends AbstractDimensionalCard {
 
     public AbstractDimensionalCardTowerTactics(final String cardID, final int cost, final CardRarity rarity, final CardType type, final CardTarget target) {

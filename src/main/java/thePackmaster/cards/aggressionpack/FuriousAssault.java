@@ -1,17 +1,12 @@
 package thePackmaster.cards.aggressionpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.RagePower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.stances.aggressionpack.AggressionStance;
 
 public class FuriousAssault extends AbstractAggressionCard {

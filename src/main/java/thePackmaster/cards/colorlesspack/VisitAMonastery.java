@@ -2,7 +2,6 @@ package thePackmaster.cards.colorlesspack;
 
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.cards.colorless.Apotheosis;
-import com.megacrit.cardcrawl.cards.colorless.Enlightenment;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.cards.colorless.Purity;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

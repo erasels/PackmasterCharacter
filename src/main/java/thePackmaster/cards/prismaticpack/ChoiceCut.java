@@ -1,12 +1,9 @@
 package thePackmaster.cards.prismaticpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.prismaticpack.ChoiceCutAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 public class ChoiceCut extends AbstractPrismaticCard {
     public static final String ID = SpireAnniversary5Mod.makeID("ChoiceCut");

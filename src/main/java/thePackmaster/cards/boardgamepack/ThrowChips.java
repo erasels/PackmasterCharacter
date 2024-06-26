@@ -3,7 +3,6 @@ package thePackmaster.cards.boardgamepack;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.boardgamepack.ThrowChipsAction;
-import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;

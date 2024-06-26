@@ -1,20 +1,14 @@
 package thePackmaster.cards.prismaticpack;
 
-import basemod.ReflectionHacks;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.ChangePlayedCardExhaustAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 public class PrismaticBarrier extends AbstractPrismaticCard {
     public static final String ID = SpireAnniversary5Mod.makeID("PrismaticBarrier");
