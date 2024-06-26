@@ -55,8 +55,8 @@ public class UnlockHatCommand extends ConsoleCommand {
     }
 
     private boolean addHatIfNotPresent(String hatId, ArrayList<String> unlockedHats, ArrayList<String> unseenHats) {
-        boolean hasHat = unlockedHats.contains(hatId);
-        if (!hasHat) {
+        boolean shouldAddHat = !unlockedHats.contains(hatId);
+        if (shouldAddHat) {
             try {
                 unlockedHats.add(hatId);
                 unseenHats.add(hatId);
@@ -65,7 +65,7 @@ public class UnlockHatCommand extends ConsoleCommand {
                 SpireAnniversary5Mod.logger.error(e);
             }
         }
-        return !hasHat;
+        return shouldAddHat;
     }
 
     private void saveHats(ArrayList<String> unlockedHats, ArrayList<String> unseenHats) {
