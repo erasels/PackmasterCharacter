@@ -18,7 +18,7 @@ public class IcicleCrash extends AbstractOrbCard {
     // intellij stuff attack, enemy, uncommon, 12, 5, , , , 
 
     public IcicleCrash() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 13;
         baseMagicNumber = magicNumber = 1;
     }
