@@ -24,13 +24,14 @@ import java.util.stream.Collectors;
 import static thePackmaster.SpireAnniversary5Mod.cardParentMap;
 
 public class Statistics {
-    public static final boolean LOG_STATISTICS = true;
+    public static final boolean LOG_STATISTICS = false;
 
     public static void logStatistics() {
         if(LOG_STATISTICS) {
-            //logCardStats();
-            //logPackAuthors();
-            logCardRaritiesJSON();
+            logCardStats();
+            logPackAuthors();
+            //logCardRaritiesJSON();
+            //logPackCardsJSON();
         }
     }
 
@@ -218,5 +219,16 @@ public class Statistics {
         Type typeObject = new TypeToken<HashMap<String, String>>() {}.getType();
         String gsonData = gson.toJson(cardIdToRarity, typeObject);
         SpireAnniversary5Mod.logger.info("Pack cards to rarity JSON:\n" + gsonData);
+    }
+
+    public static void logPackCardsJSON() {
+        HashMap<String, List<String>> packIdToCardIds = new HashMap<>();
+        for (AbstractCardPack p : SpireAnniversary5Mod.unfilteredAllPacks.stream().sorted(Comparator.comparing(p -> p.name)).collect(Collectors.toList())) {
+            packIdToCardIds.put(p.packID, p.getCards());
+        }
+        Gson gson = new Gson();
+        Type typeObject = new TypeToken<HashMap<String, List<String>>>() {}.getType();
+        String gsonData = gson.toJson(packIdToCardIds, typeObject);
+        SpireAnniversary5Mod.logger.info("Pack to cards JSON:\n" + gsonData);
     }
 }
