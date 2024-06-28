@@ -16,7 +16,7 @@ public class Charge extends AbstractOrbCard {
 
     public Charge() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

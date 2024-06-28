@@ -12,7 +12,7 @@ public class Thunderstruck extends AbstractOrbCard {
     // intellij stuff power, none, rare, , , , , 1, 
 
     public Thunderstruck() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -21,6 +21,6 @@ public class Thunderstruck extends AbstractOrbCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeMagicNumber(1);
     }
 }
