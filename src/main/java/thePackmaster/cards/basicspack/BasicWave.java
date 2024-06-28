@@ -19,7 +19,7 @@ public class BasicWave extends AbstractMultipleCardPreviewCard implements OnObta
     public final static String ID = makeID("BasicWave");
 
     public BasicWave() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, "basics");
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY, "basics");
         if (CardCrawlGame.dungeon != null && AbstractDungeon.getCurrMapNode() != null && AbstractDungeon.getCurrRoom() instanceof MonsterRoom)
             CardModifierManager.addModifier(this, new BasicMod());
         this.cardToPreview.add(new Strike());
