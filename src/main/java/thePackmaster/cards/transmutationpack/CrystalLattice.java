@@ -20,7 +20,7 @@ public class CrystalLattice extends AbstractHydrologistCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new TransmuteCardAction((oldCard, newCard) -> {
             for (int i = 0; i < magicNumber; ++i) {
-                addToTop(new MakeTempCardInHandAction(newCard));
+                addToTop(new MakeTempCardInHandAction(newCard.makeStatEquivalentCopy()));
             }
         }));
     }
