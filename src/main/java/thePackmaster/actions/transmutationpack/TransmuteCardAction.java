@@ -293,9 +293,6 @@ public class TransmuteCardAction extends AbstractGameAction {
                 ((TransmutableAffectingPower)power).affectTransmutedCard(newCard);
             }
         }
-        if (followup != null) {
-            followup.accept(oldCard, newCard);
-        }
         if (oldCard instanceof TransmutableCard) {
             ((TransmutableCard) oldCard).onTransmuted(newCard);
         }
@@ -316,6 +313,9 @@ public class TransmuteCardAction extends AbstractGameAction {
             if (effect instanceof PurityModifier) {
                 CardModifierManager.addModifier(newCard, effect.makeCopy());
             }
+        }
+        if (followup != null) {
+            followup.accept(oldCard, newCard);
         }
         newCard.applyPowers();
     }
