@@ -3,7 +3,6 @@ package thePackmaster.patches;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.Expectation;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
@@ -14,7 +13,6 @@ import javassist.expr.Expr;
 import javassist.expr.FieldAccess;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
-import thePackmaster.patches.compatibility.InfiniteSpirePatch;
 
 import java.util.ArrayList;
 
@@ -31,8 +29,7 @@ public class OpeningRunScreenPatch {
                         SpireAnniversary5Mod.logger.info("Vex's All Packs Override Enabled. Skipping intro screen");
                         SpireAnniversary5Mod.currentPoolPacks.clear();
                         SpireAnniversary5Mod.currentPoolPacks.addAll(SpireAnniversary5Mod.allPacks);
-                        CardCrawlGame.dungeon.initializeCardPools();
-                        InfiniteSpirePatch.generateQuestsIfInfiniteSpireIsLoaded();
+                        SpireAnniversary5Mod.initializeCardPools();
                     } else {
                         SpireAnniversary5Mod.logger.info("Packmaster is Ready To Do Thing");
                         SpireAnniversary5Mod.openedStarterScreen = false;
