@@ -46,7 +46,7 @@ public interface AmplifyCard {
 
     // Includes amplify cost negation logic
     default int _costLogic() {
-        if(Wiz.p().hasPower(FreeAmplifyPower.POWER_ID)) {
+        if(Wiz.p() != null && Wiz.p().hasPower(FreeAmplifyPower.POWER_ID)) {
             return 0;
         }
         return getAmplifyCost();
