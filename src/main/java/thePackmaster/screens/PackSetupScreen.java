@@ -26,7 +26,6 @@ import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.patches.MetricsPatches;
-import thePackmaster.patches.compatibility.InfiniteSpirePatch;
 import thePackmaster.summaries.PackSummaryDisplay;
 import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 
@@ -208,8 +207,7 @@ public class PackSetupScreen extends CustomScreen {
                     currentPoolPacks.sort(Comparator.comparing((pack)->pack.name));
                     SpireAnniversary5Mod.selectedCards = true;
                     editPotionPool(PotionHelper.potions);
-                    CardCrawlGame.dungeon.initializeCardPools();
-                    InfiniteSpirePatch.generateQuestsIfInfiniteSpireIsLoaded();
+                    SpireAnniversary5Mod.initializeCardPools();
                 }
                 break;
             case DRAFTING:

@@ -30,10 +30,12 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.daily.mods.Shiny;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
@@ -64,6 +66,7 @@ import thePackmaster.patches.CompendiumPatches;
 import thePackmaster.patches.MainMenuUIPatch;
 import thePackmaster.patches.MetricsPatches;
 import thePackmaster.patches.RenderBaseGameCardPackTopTextPatches;
+import thePackmaster.patches.compatibility.InfiniteSpirePatch;
 import thePackmaster.patches.contentcreatorpack.DisableCountingStartOfTurnDrawPatch;
 import thePackmaster.patches.marisapack.AmplifyPatches;
 import thePackmaster.patches.odditiespack.PackmasterFoilPatches;
@@ -1099,6 +1102,16 @@ public class SpireAnniversary5Mod implements
         //Calling this to fill the card pool after the currentPoolPacks are filled
         selectedCards = true;
         CardCrawlGame.dungeon.initializeCardPools();
+    }
+
+    public static void initializeCardPools() {
+        CardCrawlGame.dungeon.initializeCardPools();
+        if (ModHelper.isModEnabled(Shiny.ID)) {
+            CardGroup group = AbstractDungeon.getEachRare();
+            for (AbstractCard c : group.group)
+                AbstractDungeon.player.masterDeck.addToTop(c);
+        }
+        InfiniteSpirePatch.generateQuestsIfInfiniteSpireIsLoaded();
     }
 
     private static void loadAndCheckSummaries() {
