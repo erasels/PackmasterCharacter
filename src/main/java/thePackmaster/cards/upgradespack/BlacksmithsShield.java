@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.upgradespack.BlacksmithsShieldPower;
 
 public class BlacksmithsShield extends AbstractBlacksmithCard {

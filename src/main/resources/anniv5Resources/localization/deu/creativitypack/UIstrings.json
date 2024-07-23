@@ -1,0 +1,15 @@
+{
+  "${ModID}:CreativityPack": {
+    "TEXT": [
+      "Kreativität",
+      "Erstelle Karten und profitiere von ihrer Erschaffung.",
+      "Jedi"
+    ]
+  },
+  "${ModID}:CreativityPackHat": {
+    "TEXT": [
+      "Mit ein wenig Vorstellungskraft kann alles zu einem Hut werden.",
+      "Papierboot"
+    ]
+  }
+}

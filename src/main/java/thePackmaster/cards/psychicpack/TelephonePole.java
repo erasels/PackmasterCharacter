@@ -5,11 +5,11 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.vfx.psychicpack.ExplodingPoleEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToEnemy;
+import static thePackmaster.util.Wiz.atb;
 
 public class TelephonePole extends LockingCard {
     public final static String ID = makeID("TelephonePole");
@@ -17,7 +17,7 @@ public class TelephonePole extends LockingCard {
 
     public TelephonePole() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 14;
+        baseDamage = 15;
         baseMagicNumber = magicNumber = 2;
     }
 

@@ -6,8 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import thePackmaster.powers.entropypack.RuinPower;
-
+import thePackmaster.powers.RuinPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -16,8 +15,8 @@ public class TerrorOfTheSeas extends AbstractLegacyCard {
 
     private static final int VULNERABLE_VALUE = 2;
     private static final int UPGRADE_PLUS_VULNERABLE_VALUE = 1;
-    private static final int RUIN_VALUE = 6;
-    private static final int UPGRADE_PLUS_RUIN_VALUE = 4;
+    private static final int RUIN_VALUE = 3;
+    private static final int UPGRADE_PLUS_RUIN_VALUE = 1;
     public TerrorOfTheSeas() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 

@@ -6,5 +6,28 @@
       " #yStrength and #b",
       " #yDexterity."
     ]
+  },
+  "${ModID}:ConjurePackPower": {
+    "NAME": "Conjuring Pack",
+    "DESCRIPTIONS": [
+      "At the start of the next #b",
+      " turns, add #b2 cards from the ",
+      " Pack to your hand."
+    ]
+  },
+  "${ModID}:TempHPRegenPower": {
+    "NAME": "Ablation",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b%s #yTemporary #yHP, then reduce this by #b1."
+    ]
+  },
+  "${ModID}:RuinPower": {
+    "NAME": "Ruin",
+    "DESCRIPTIONS": [
+      "The next time this enemy takes unblocked attack damage, it loses #b",
+      "The next time you take unblocked attack damage, lose #b",
+      " HP for each buff and debuff it has.",
+      " HP for each buff and debuff you have."
+    ]
   }
 }

@@ -5,10 +5,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.madsciencepack.AbstractMadScienceCard;
-import thePackmaster.cards.dimensiongatepack.AbstractDimensionalCard;
 
+import static thePackmaster.SpireAnniversary5Mod.ISCARDMODIFIED;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Discombobulate extends AbstractMadScienceCard {
@@ -21,11 +19,22 @@ public class Discombobulate extends AbstractMadScienceCard {
 
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c.hasTag(ISCARDMODIFIED)) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                return;
+            }
+        }
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        for (AbstractCard c:AbstractDungeon.player.hand.group) {
-            if (c.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED)){
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c.hasTag(ISCARDMODIFIED)){
                 allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
                 return;
             }

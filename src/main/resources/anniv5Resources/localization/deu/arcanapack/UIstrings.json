@@ -1,0 +1,15 @@
+{
+  "${ModID}:ArcanaPack": {
+    "TEXT": [
+      "Arkana",
+      "Nutze die einzigartigen und vielfältigen Bedeutungen der großen Arkana.",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:ArcanaPackHat": {
+    "TEXT": [
+      "Groß, hell und Bonbonrot.",
+      "Der Stern"
+    ]
+  }
+}

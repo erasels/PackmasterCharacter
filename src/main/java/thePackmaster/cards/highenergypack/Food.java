@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.AbstractPackmasterCard;
 
-import java.util.ArrayList;
-
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
 
@@ -22,8 +20,10 @@ public class Food extends AbstractPackmasterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new TalkAction(true, cardStrings.EXTENDED_DESCRIPTION[4], 1F, 2F));
-        atb(new GainEnergyAction(magicNumber));
+        if (magicNumber > 0) {
+            atb(new TalkAction(true, cardStrings.EXTENDED_DESCRIPTION[4], 1F, 2F));
+            atb(new GainEnergyAction(magicNumber));
+        }
     }
 
     public void setX(int amount) {

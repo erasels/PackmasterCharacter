@@ -1,0 +1,15 @@
+{
+  "${ModID}:StatusPack": {
+    "TEXT": [
+      "状态",
+      "走过路过不要错过， NL 这个卡包里装了好多状态牌。",
+      "(Gk) Erasels"
+    ]
+  },
+  "${ModID}:StatusPackHat": {
+    "TEXT": [
+      "医疗兵！",
+      "绷带"
+    ]
+  }
+}

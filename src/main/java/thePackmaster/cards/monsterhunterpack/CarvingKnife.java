@@ -8,23 +8,18 @@ import com.megacrit.cardcrawl.cards.blue.Hyperbeam;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import thePackmaster.actions.monsterhunterpack.CarveAction;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.cards.ringofpainpack.Slime;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
 
-import static com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField.fleeting;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class CarvingKnife extends AbstractMonsterHunterCard {
     public final static String ID = makeID("CarvingKnife");
 
-    public static final int DAMAGE = 5;
+    public static final int DAMAGE = 6;
     public static final int UPG_DAMAGE = 3;
     private final ArrayList<AbstractCard> cardToPreview = new ArrayList<>();
     private float rotationTimer;
@@ -61,7 +56,7 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
     public CarvingKnife() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = DAMAGE;
-        FleetingField.fleeting.set(this, true);
+        this.exhaust = true;
         tags.add(CardTags.HEALING);
     }
 
@@ -115,6 +110,14 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
                 if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
                     return new SlimeHammer();
                 }
+            case "SpikeSlime_M":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
+            case "AcidSlime_M":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
             case "BookOfStabbing":
                 return new StabManual();
             case "SlaverBoss":
@@ -143,9 +146,17 @@ public class CarvingKnife extends AbstractMonsterHunterCard {
                 return new SpireShield();
             case "SpireSpear":
                 return new SpireSpear();
+            case "Reptomancer":
+                return new SerpentineDagger();
+            case "CorruptHeart":
+                return new CorruptedBlade();
             default:
                 return new Hyperbeam();
         }
+    }
+
+    public void SetFleeting(boolean set){
+        FleetingField.fleeting.set(this, set);
     }
 
     public void upp() {

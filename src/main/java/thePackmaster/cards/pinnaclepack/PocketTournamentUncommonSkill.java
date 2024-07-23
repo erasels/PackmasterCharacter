@@ -3,6 +3,7 @@ package thePackmaster.cards.pinnaclepack;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.pinnaclepack.actions.MinigameAction;
+
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class PocketTournamentUncommonSkill extends AbstractPinnacleCard {

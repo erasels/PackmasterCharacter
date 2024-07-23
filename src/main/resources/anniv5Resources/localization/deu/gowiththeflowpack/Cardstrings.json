@@ -1,0 +1,45 @@
+{
+  "${ModID}:Aqueducts": {
+    "NAME": "Aquädukte",
+    "DESCRIPTION": "Immer wenn du eine zusätzliche Karte ziehst, füge ALLEN Gegnern !M! Schaden zu."
+  },
+  "${ModID}:Cascade": {
+    "NAME": "Kaskade",
+    "DESCRIPTION": "${ModID}:Fluss. Für jede auf diese Weise abgeworfene Karte, erhalte !B! Block."
+  },
+  "${ModID}:Hail": {
+    "NAME": "Hagel",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft zusätzlich !M! Mal, für jede dieser Karten, die in diesem Kampf abgelegt wurden.",
+    "EXTENDED_DESCRIPTION": [" NL (Trifft !M! Mal)"]
+  },
+  "${ModID}:HighTide": {
+    "NAME": "Flut",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du ${ModID}:Fluss anwendest, kehre diese Karte vom Abwurfstapel auf deine Hand zurück."
+  },
+  "${ModID}:Hydraulics": {
+    "NAME": "Hydraulik",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Fluss."
+  },
+  "${ModID}:IcyFloe": {
+    "NAME": "Eisfluss",
+    "DESCRIPTION": "${ModID}:Fluss. NL Nächsten Zug, NL erhalte [E] [E].",
+    "UPGRADE_DESCRIPTION": "${ModID}:Fluss. NL Nächsten Zug, NL erhalte [E] [E] [E]."
+  },
+  "${ModID}:Pneumatics": {
+    "NAME": "Pneumatik",
+    "DESCRIPTION": "${ModID}:Fluss. NL Zu Beginn deines nächsten Zugs, ${ModID}:Fluss. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Fluss. NL Zu Beginn deines nächsten Zugs, ${ModID}:Fluss."
+  },
+  "${ModID}:ReleaseValve": {
+    "NAME": "Entlüftungsventil",
+    "DESCRIPTION": "Immer wenn du ${ModID}:Fluss anwendest und eine Karte abwirfst, erleidet das Ziel !M! Schaden. NL Erschöpfen."
+  },
+  "${ModID}:Reservoir": {
+    "NAME": "Wasserreservoir",
+    "DESCRIPTION": "${ModID}:Fluss. Ziehe Karten in Höhe der Anzahl der auf diese Weise abgeworfenen Karten. NL Erschöpfen."
+  },
+  "${ModID}:StormFront": {
+    "NAME": "Sturmfront",
+    "DESCRIPTION": "Behalten. Füge !D! Schaden zu. NL Beim Abwerfen, nimm diese Karte sofort auf deine Hand und erhöhe den Schaden um !M!."
+  }
+}

@@ -7,22 +7,15 @@ package thePackmaster.actions.monsterhunterpack;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.blue.Hyperbeam;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_L;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
-import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import thePackmaster.cards.monsterhunterpack.*;
 
@@ -49,18 +42,11 @@ public class CarveAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SLASH_HORIZONTAL));
             this.target.damage(this.info);
             if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.monsterTarget.type == AbstractMonster.EnemyType.BOSS || this.monsterTarget.type == AbstractMonster.EnemyType.ELITE)) {
-                addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id)));
+                addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id), thisKnife));
             }
-            else if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.target.id.equals("SpikeSlime_L") || this.target.id.equals("AcidSlime_L"))){
+            else if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.target.id.equals("SpikeSlime_L") || this.target.id.equals("AcidSlime_L") || this.target.id.equals("SpikeSlime_M") || this.target.id.equals("AcidSlime_M"))){
                 if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
-                    addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id)));
-                }
-            }
-            else if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion") && (this.target.id.equals("AcidSlime_M") || this.target.id.equals("SpikeSlime_M"))){
-                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
-                    addToTop(new AddCardToDeckAction(thisKnife.makeStatEquivalentCopy()));
-                    addToTop(new MakeTempCardInDiscardAction(thisKnife.makeStatEquivalentCopy(), 1));
-                    addToBot(new TalkAction(AbstractDungeon.player, "Not enough materials", 1.0f, 1.4f));
+                    addToTop(new QuestCompleteAction(MonsterWeapon(this.target.id), thisKnife));
                 }
             }
         }
@@ -92,6 +78,14 @@ public class CarveAction extends AbstractGameAction {
                 if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
                     return new SlimeHammer();
                 }
+            case "SpikeSlime_M":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
+            case "AcidSlime_M":
+                if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss){
+                    return new SlimeHammer();
+                }
             case "BookOfStabbing":
                 return new StabManual();
             case "SlaverBoss":
@@ -120,6 +114,10 @@ public class CarveAction extends AbstractGameAction {
                 return new SpireShield();
             case "SpireSpear":
                 return new SpireSpear();
+            case "Reptomancer":
+                return new SerpentineDagger();
+            case "CorruptHeart":
+                return new CorruptedBlade();
             default:
                 return new Hyperbeam();
         }

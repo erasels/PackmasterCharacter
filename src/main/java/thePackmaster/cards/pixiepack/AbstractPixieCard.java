@@ -1,9 +1,6 @@
 package thePackmaster.cards.pixiepack;
 
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
-
-import java.util.Locale;
 
 public abstract class AbstractPixieCard extends AbstractPackmasterCard
 {

@@ -3,12 +3,14 @@ package thePackmaster.cards.odditiespack;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.hats.Hats;
+import thePackmaster.ThePackmaster;
+import thePackmaster.hats.HatsManager;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.packs.CoreSetPack;
 import thePackmaster.util.Wiz;
@@ -26,14 +28,23 @@ public class StylePoints extends AbstractOdditiesCard {
     public StylePoints() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 8;
+
+        if (CardCrawlGame.isInARun()) {
+            AbstractCardPack pack = SpireAnniversary5Mod.packsByID.get(CoreSetPack.ID);
+            if (AbstractDungeon.player instanceof ThePackmaster && HatsManager.currentHat != null) {
+                pack = SpireAnniversary5Mod.packsByID.getOrDefault(HatsManager.currentHat, pack);
+            }
+            if (pack != null)
+                this.cardsToPreview = pack.makePreviewCard();
+         }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         atb(new RemoveSpecificPowerAction(p, p, WeakPower.POWER_ID));
         AbstractCardPack pack = SpireAnniversary5Mod.packsByID.get(CoreSetPack.ID);
-        if (Hats.currentHat != null && Hats.currentHat != "Base" && Hats.currentHat != "Random") {
-            pack = SpireAnniversary5Mod.packsByID.get(Hats.currentHat);
+        if (AbstractDungeon.player instanceof ThePackmaster && HatsManager.currentHat != null) {
+            pack = SpireAnniversary5Mod.packsByID.getOrDefault(HatsManager.currentHat, pack);
         }
         ArrayList<AbstractCard> possCards = new ArrayList<>();
         for (String cardID : pack.getCards()) {

@@ -146,79 +146,53 @@ public class ImproveEffect extends AbstractGameEffect {
             Pixmap re = t.getTextureData().consumePixmap();
             int altered;
             int alterations;
-            int[][] area;
-            int startX;
-            int startY;
-            int initX;
-            int i;
-            int initY;
-            int b;
+            int startX, dstX;
+            int startY, dstY;
             if (MathUtils.randomBoolean()) {
                 altered = 0;
 
                 for (alterations = alteration + MathUtils.random(-2, 2); altered < alterations; ++altered) {
                     int width = MathUtils.random(t.getWidth() / 8, t.getWidth() / 5);
                     int height = MathUtils.random(t.getHeight() / 5, t.getHeight() / 3);
+
                     float scale = (width * height) / MAX_AREA;
                     if (scale > 1) {
                         width /= Math.sqrt(scale);
                         height /= Math.sqrt(scale);
                     }
-                    area = new int[width][height];
-                    startX = MathUtils.random(0, re.getWidth() - area.length);
-                    startY = MathUtils.random(0, re.getHeight() - area[0].length);
-                    initX = startX;
 
-                    for(i = 0; i < area.length; i = ++initX - startX) {
-                        initY = startY;
+                    startX = MathUtils.random(0, re.getWidth() - width);
+                    startY = MathUtils.random(0, re.getHeight() - height);
 
-                        for(b = 0; b < area[0].length; b = ++initY - startY) {
-                            area[i][b] = re.getPixel(initX, initY);
-                        }
-                    }
+                    dstX = startX;
+                    dstY = startY + MathUtils.random(t.getHeight() / 9, t.getHeight() / 5) * MathUtils.randomSign();
+                    if (dstY >= height - 10)
+                        dstY -= height;
 
-                    startY += MathUtils.random(t.getHeight() / 9, t.getHeight() / 5) * (MathUtils.randomBoolean() ? 1 : -1);
-                    initX = startX;
-
-                    for(i = 0; i < area.length; i = ++initX - startX) {
-                        initY = startY;
-
-                        for(b = 0; b < area[0].length; b = ++initY - startY) {
-                            if (initY >= 0 && initY <= re.getHeight()) {
-                                re.drawPixel(initX, initY, area[i][b]);
-                            }
-                        }
-                    }
+                    re.drawPixmap(re, dstX, dstY, startX, startY, width, height);
                 }
             } else {
                 altered = 0;
 
                 for(alterations = MathUtils.random(11, 17); altered < alterations; ++altered) {
-                    area = new int[MathUtils.random(t.getWidth() / 5, t.getWidth() / 3)][MathUtils.random(t.getHeight() / 8, t.getHeight() / 5)];
-                    startX = MathUtils.random(0, re.getWidth() - area.length);
-                    startY = MathUtils.random(0, re.getHeight() - area[0].length);
-                    initX = startX;
+                    int width = MathUtils.random(t.getWidth() / 5, t.getWidth() / 3);
+                    int height = MathUtils.random(t.getHeight() / 8, t.getHeight() / 5);
 
-                    for(i = 0; i < area.length; i = ++initX - startX) {
-                        initY = startY;
-
-                        for(b = 0; b < area[0].length; b = ++initY - startY) {
-                            area[i][b] = re.getPixel(initX, initY);
-                        }
+                    float scale = (width * height) / MAX_AREA;
+                    if (scale > 1) {
+                        width /= Math.sqrt(scale);
+                        height /= Math.sqrt(scale);
                     }
 
-                    startX += MathUtils.random(t.getWidth() / 9, t.getWidth() / 5) * (MathUtils.randomBoolean() ? 1 : -1);
-                    initX = startX;
+                    startX = MathUtils.random(0, re.getWidth() - width);
+                    startY = MathUtils.random(0, re.getHeight() - height);
 
-                    for(i = 0; i < area.length; i = ++initX - startX) {
-                        initY = startY;
+                    dstX = startX + MathUtils.random(t.getWidth() / 9, t.getWidth() / 5) * MathUtils.randomSign();
+                    if (dstX >= width - 10)
+                        dstX -= width;
+                    dstY = startY;
 
-                        for(b = 0; b < area[0].length; b = ++initY - startY) {
-                            if (initX >= 0 && initX <= re.getWidth()) {
-                                re.drawPixel(initX, initY, area[i][b]);
-                            }
-                        }
-                    }
+                    re.drawPixmap(re, dstX, dstY, startX, startY, width, height);
                 }
             }
 

@@ -3,7 +3,6 @@ package thePackmaster.cards.poisonpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.EnvenomPower;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.poisonpack.ToxicDipPower;
 import thePackmaster.util.Wiz;

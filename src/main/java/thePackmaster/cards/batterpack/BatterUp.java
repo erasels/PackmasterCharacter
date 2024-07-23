@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -15,7 +14,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class BatterUp extends AbstractBatterCard {
     public final static String ID = makeID("BatterUp");
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 10;
     private static final int UPGRADE_PLUS_DMG = 3;
 
     public BatterUp() {

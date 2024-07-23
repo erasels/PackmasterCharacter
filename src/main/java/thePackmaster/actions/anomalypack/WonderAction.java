@@ -15,10 +15,11 @@ public class WonderAction extends AbstractGameAction {
     public void update() {
         this.tickDuration();
         if (this.isDone) {
-            EnergyPanel.setEnergy(0);
             for (AbstractCard c : DrawCardAction.drawnCards) {
                 Wiz.att(new GainEnergyAction(Wiz.getLogicalCardCost(c)));
             }
+            //We do this after so that X costs don't set your energy to 0
+            EnergyPanel.setEnergy(0);
         }
     }
 }

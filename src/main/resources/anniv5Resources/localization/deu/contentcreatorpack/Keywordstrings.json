@@ -1,0 +1,30 @@
+[
+  {
+    "PROPER_NAME": "Wanderbot",
+    "NAMES": [
+      "wanderbot"
+    ],
+    "DESCRIPTION": "Orb: Fügt dem vordersten Feind Schaden zu. Zieht eine Karte, wenn er beschworen wird."
+  },
+  {
+    "PROPER_NAME": "MEGAthereal",
+    "NAMES": [
+      "megathereal"
+    ],
+    "DESCRIPTION": "Karte Erschöpft sich am Ende des Zuges, unabhängig davon, wo sie sich befindet."
+  },
+  {
+    "PROPER_NAME": "Odd",
+    "NAMES": [
+      "ungerade"
+    ],
+    "DESCRIPTION": "Zusätzlicher Effekt, wenn du in diesem Zug eine ungerade Anzahl von Karten gespielt hast (einschließlich dieser)."
+  },
+  {
+    "PROPER_NAME": "Even",
+    "NAMES": [
+      "gerade"
+    ],
+    "DESCRIPTION": "Zusätzlicher Effekt, wenn du in diesem Zug eine gerade Anzahl von Karten gespielt hast (einschließlich dieser)."
+  }
+]

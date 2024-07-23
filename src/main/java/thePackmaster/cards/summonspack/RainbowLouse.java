@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.summonspack.Louse;
 import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 
@@ -29,6 +28,8 @@ public class RainbowLouse extends AbstractSummonsCard {
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         AnimatedCardsPatch.loadFrames(this, 36, 2f/36f);
         baseMagicNumber = magicNumber = MAGIC;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     @Override

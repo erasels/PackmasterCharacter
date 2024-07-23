@@ -1,0 +1,60 @@
+{
+  "${ModID}:DroneSwarmRareSkill": {
+    "NAME": "Drohnen Schwarm",
+    "DESCRIPTION": "Erhöhe deine maximale Handgröße in diesem Zug um !${ModID}:m2!. NL Ziehe !M! Karten."
+  },
+  "${ModID}:TheSuckamidRareSkill": {
+    "NAME": "Der Saugamid",
+    "DESCRIPTION": "Heile !M! LP. NL Behalte deine Hand für !${ModID}:m2! Züge. NL Erschöpfen."
+  },
+  "${ModID}:ElectromagneticBurstRarePower": {
+    "NAME": "Elektromagnetischer Ausbruch",
+    "DESCRIPTION": "Immer wenn du Block erhältst, füge einem zufälligen Gegner !M! Schaden zu."
+  },
+  "${ModID}:ArrowStormRareAttack": {
+    "NAME": "Pfeilregen",
+    "DESCRIPTION": "Erschöpfe alle Angriffskarten auf deiner Hand. NL Wenn du eine Karte erschöpfst, füge ALLEN Gegnern !M! Mal !D! Schaden zu."
+  },
+  "${ModID}:MarvelousFeastUncommonPower": {
+    "NAME": "Großartiges Festmahl",
+    "DESCRIPTION": "Angeboren. Erhalte pro beendetem Zug eine ${ModID}:Krokette Karte mit je einem Effekt in dieser Reihenfolge:  Block, Schwach, Stärke und Verwundbar.",
+    "UPGRADE_DESCRIPTION": "Angeboren. Erhalte pro beendetem Zug eine verbesserte ${ModID}:Krokette Karte mit je einem Effekt in dieser Reihenfolge:  Block, Schwach, Stärke und Verwundbar."
+  },
+  "${ModID}:MeatyCroquettesSpecialColourless": {
+    "NAME": "Fleischige Krokette",
+    "DESCRIPTION": "${ModID}:Krokette. NL Erhalte !M! Stärke."
+  },
+  "${ModID}:FishyCroquettesSpecialColourless": {
+    "NAME": "Fischige Krokette",
+    "DESCRIPTION": "${ModID}:Krokette. NL Verursache !M! Schwach. NL Erschöpfen."
+  },
+  "${ModID}:FriendshipCroquettesSpecialColourless": {
+    "NAME": "Freundschafts Krokette",
+    "DESCRIPTION": "${ModID}:Krokette. NL Erhalte !B! Block, Erschöpfen. NL Beim Behalten erhöhe den Block um !M! für diesem Kampf."
+  },
+  "${ModID}:MysteryCroquettesSpecialColourless": {
+    "NAME": "Geheime Krokette",
+    "DESCRIPTION": "${ModID}:Krokette. NL Verursache !M! Verwundbar. NL Erschöpfen."
+  },
+  "${ModID}:TopOfTheSkyUncommonAttack": {
+    "NAME": "Höhe des Himmels",
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Erhalte !B! Block. NL Kehrt beim Spielen zurück in deine Hand. Erschöpfend !stslib:ex!."
+  },
+  "${ModID}:BucketOfDregsUncommonSkill": {
+    "NAME": "Eimer voller Rückstände",
+    "DESCRIPTION": "Unspielbar. Behalten. NL Beim Behalten: Heile ALLE Gegner um !M! LP und erhalte !B! Block."
+  },
+  "${ModID}:PocketTournamentUncommonSkill": {
+    "NAME": "Taschenturnier",
+    "DESCRIPTION": "Nächster Zug, zufällig, 2X mal: NL Ziehe 1 Karte und erhalte [E] , NL Erhalte 1 Stärke, NL Erhalte 3 Block. NL Erschöpfen."
+  },
+  "${ModID}:StoneSwordCommonAttack": {
+    "NAME": "Steinschwert",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! Geschicklichkeit. NL Erschöpfen."
+  },
+  "${ModID}:Rea__dyCommonSkill": {
+    "NAME": "Bereit machen!",
+    "DESCRIPTION": "Erhalte !M! Ausdauer. NL Erhalte !${ModID}:m2! temporäre Geschicklichkeit. NL Erschöpfend !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! Ausdauer. NL Erhalte !${ModID}:m2! temporäre Geschicklichkeit. NL Ziehe 1 Karte. NL Erschöpfend !stslib:ex!."
+  }
+}

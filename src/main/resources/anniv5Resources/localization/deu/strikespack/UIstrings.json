@@ -1,0 +1,20 @@
+{
+  "${ModID}:StrikesPack": {
+    "TEXT": [
+      "Schläge? Schläge!!",
+      "Verursache 6 Schaden.",
+      "MichaelMayhem"
+    ]
+  },
+  "${ModID}:StrikesPackHat": {
+    "TEXT": [
+      "Ein winziges Schwert, ungefähr groß genug, um als Haarnadel verwendet zu werden.",
+      "Schlagstift"
+    ]
+  },
+  "${ModID}:AddStrikeTagModifier": {
+    "TEXT": [
+      " Schlag"
+    ]
+  }
+}

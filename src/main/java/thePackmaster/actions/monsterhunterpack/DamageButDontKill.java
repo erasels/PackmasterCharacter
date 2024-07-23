@@ -86,7 +86,7 @@ public class DamageButDontKill extends AbstractGameAction {
                     this.target.tint.changeColor(Color.WHITE.cpy());
                 }
 
-                if (this.info.output >= this.target.currentHealth){
+                if (this.info.output >= this.target.currentHealth + target.currentBlock){
                     this.info.output = this.target.currentHealth-1;
                 }
                 this.target.damage(this.info);

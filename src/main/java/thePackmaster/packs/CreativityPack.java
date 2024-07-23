@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.creativitypack.*;
-import thePackmaster.cards.downfallpack.*;
 
 import java.util.ArrayList;
 
@@ -16,7 +15,7 @@ public class CreativityPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public CreativityPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 4, 4, 3, 3, PackSummary.Tags.Tokens));
     }
 
     @Override

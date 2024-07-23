@@ -1,0 +1,47 @@
+[
+  {
+    "PROPER_NAME": "追猎",
+    "NAMES": [
+      "hunted",
+      "hunted",
+      "追猎"
+    ],
+    "DESCRIPTION": "被 #y追猎 的敌人每有 #b1 层 #y追猎 ，额外受到 #b10% 的攻击伤害，但其他敌人也额外少受到 #b10% 的攻击伤害。 #y追猎 任意目标时，其他目标不再被追猎。 #y追猎 层数每回合减 #b1 。"
+  },
+  {
+    "PROPER_NAME": "Not Hunted",
+    "NAMES": [
+      "nothunted",
+      "nothunted"
+    ],
+    "DESCRIPTION": "Takes #b10% less damage from attacks for each stack. Reduces by #b1 each turn. When the hunted enemy dies, remove this。"
+  },
+  {
+    "PROPER_NAME": "激怒",
+    "NAMES": [
+      "enraged",
+      "enraged!",
+      "激怒"
+    ],
+    "DESCRIPTION": "回合结束时若无敌人意图攻击，获得 #b2 点 力量 。"
+  },
+  {
+    "PROPER_NAME": "玻璃护甲",
+    "NAMES": [
+      "Glass Armor",
+      "Glass_Armor",
+      "glass_armor",
+      "玻璃护甲"
+    ],
+    "DESCRIPTION": "回合结束时获得层数点 #y格挡 ，受到未被格挡伤害后失去所有层数。"
+  },
+  {
+    "PROPER_NAME": "Nonlethal",
+    "NAMES": [
+      "nonlethal",
+      "non-lethal",
+      "non_lethal"
+    ],
+    "DESCRIPTION": "Non-lethal damage will leave targets at 1 生命。"
+  }
+]

@@ -3,7 +3,6 @@ package thePackmaster.cards.transmutationpack;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.transmutationpack.HydrologistDamageAction;
 import thePackmaster.cards.AbstractPackmasterCard;
 

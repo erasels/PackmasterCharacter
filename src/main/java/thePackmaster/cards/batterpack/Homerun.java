@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
 
@@ -16,7 +15,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class Homerun extends AbstractBatterCard {
     public final static String ID = makeID("Homerun");
 
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 16;
     private static final int UPGRADE_PLUS_DMG = 4;
 
     public Homerun() {

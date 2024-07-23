@@ -1,16 +1,14 @@
 package thePackmaster.cards.highenergypack;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.actions.EasyXCostAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.atb;
-import static thePackmaster.util.Wiz.att;
+import static thePackmaster.util.Wiz.*;
 
 public class LastResort extends AbstractHighEnergyCard {
     public final static String ID = makeID("LastResort");
@@ -25,12 +23,9 @@ public class LastResort extends AbstractHighEnergyCard {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
         }
-        if (energyOnUse == 0) {
-            exhaust = true;
-        }
         atb(new EasyXCostAction(this, (effect, params) -> {
             if (effect == 0) {
-                att(new GainEnergyAction(1));
+                applyToSelfTop(new EnergizedBluePower(p, 1));
             } else {
                 for (int i = 0; i < effect; i++) {
                     att(new GainBlockAction(p, block));

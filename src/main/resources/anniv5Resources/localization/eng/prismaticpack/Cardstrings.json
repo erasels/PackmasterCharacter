@@ -27,8 +27,7 @@
   },
   "${ModID}:QuirionDryad": {
     "NAME": "Quirion Dryad",
-    "DESCRIPTION": "The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "The first time you play each color of card this combat, gain !M! Strength and !M! Dexterity."
   },
   "${ModID}:ManyAsOne": {
     "NAME": "Many as One",

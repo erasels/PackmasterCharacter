@@ -6,13 +6,11 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.util.Wiz;
-import thePackmaster.ThePackmaster;
 
 import java.lang.reflect.Field;
 
@@ -39,7 +37,7 @@ public class SingleCardViewBorderTextPatch {
             AbstractCard card = (AbstractCard)cardField.get(__instance);
             if (card instanceof AbstractPackmasterCard) {
                 ((AbstractPackmasterCard)card).renderBorderText(sb, Settings.WIDTH / 2.0F, (float)yField.get(__instance), yOffsetBase, drawScale);
-            } else if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == ThePackmaster.Enums.THE_PACKMASTER && card.getClass().getSuperclass().equals(AbstractCard.class)) {
+            } else if (RenderBaseGameCardPackTopTextPatches.shouldShowPackName(card)) {
                 AbstractCardPack pack = Wiz.getPackByCard(card);
                 if (pack != null) {
                     float xPos, yPos, offsetY;

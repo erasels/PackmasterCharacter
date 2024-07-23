@@ -1,0 +1,60 @@
+{
+  "${ModID}:MakeshiftSword": {
+    "NAME": "Improvisiertes Schwert",
+    "DESCRIPTION": "Erhalte !M! zusätzlichen Schaden für den nächsten Angriff, wenn eine Karte während des Kampfes erstellt wird"
+  },
+  "${ModID}:MakeshiftShield": {
+    "NAME": "Improvisierter Schild",
+    "DESCRIPTION": "Erhalte !M! Block, wenn eine Karte während des Kampfes erstellt wird."
+  },
+  "${ModID}:PaintBrush": {
+    "NAME": "Pinsel",
+    "DESCRIPTION": "{@@}Entdecke eine Karte mit ausgewähltem Typ und Kosten. Exaust{!Upgrades!|>0=ive !stslib:ex!}."
+  },
+  "${ModID}:Firewall": {
+    "NAME": "Feuerwand",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=Angeboren. NL }Wenn eine Statuskarte erstellt wird, NL erschöpfe sie."
+  },
+  "${ModID}:Souvenirs": {
+    "NAME": "Souvenir",
+    "DESCRIPTION": "Erstelle eine *Zertrümmern oder *Geborgenheit in deiner Hand. Ziehe eine Karte.",
+    "UPGRADE_DESCRIPTION": "Erstelle eine *Zertrümmern+ oder *Geborgenheit+ in deiner Hand. Ziehe eine Karte."
+  },
+  "${ModID}:Mimicry": {
+    "NAME": "Mimikry",
+    "DESCRIPTION": "{@@}Entdecke eine gewöhnliche Karte aus anderen von dir ausgewählten Kartenpaketen.",
+    "UPGRADE_DESCRIPTION": "{@@}Entdecke eine verbesserte gewöhnliche Karte aus anderen von dir ausgewählten Kartenpaketen."
+  },
+  "${ModID}:CraftyMove": {
+    "NAME": "Listiger Zug",
+    "DESCRIPTION": "Füge !D! Schaden zu. Wenn in diesem Zug eine Karte erstellt wurde, erhalte [E] und ziehe 1 Karte."
+  },
+  "${ModID}:BarrierBeacon": {
+    "NAME": "Barriere Leuchtfeuer",
+    "DESCRIPTION": "Erhalte !B! Block. Erstelle ein *Barriere\u00a0Leuchtfeuer in deiner Hand. Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. Erstelle ein *Barriere\u00a0Leuchtfeuer in deiner Hand. Erschöpfen."
+  },
+  "${ModID}:StrikingStrike": {
+    "NAME": "Schlagender Schlag",
+    "DESCRIPTION": "{@@}Füge !D! Schaden zu. Entdecke einen Schlag. Er erschöpft sich, wenn er gespielt wird, und kostet in diesem Zug 0."
+  },
+  "${ModID}:AccumulativeStrike": {
+    "NAME": "Kumulativer Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. Fügt !M! zusätzlichen Schaden für ALLE deine erstellten Karten zu."
+  },
+  "${ModID}:BrushModalTypeChoice": {
+    "NAME": "Das solltest du niemals sehen",
+    "DESCRIPTION": "Wähle diesen Kartentyp für die Entdeckung."
+  },
+  "${ModID}:BrushModalCostChoice": {
+    "NAME": "Das solltest du niemals sehen",
+    "DESCRIPTION": "Wähle diese Kosten für die Entdeckung.",
+    "EXTENDED_DESCRIPTION" : [
+      "Wähle diese oder höhere Kosten für die Entdeckung."
+    ],
+    "COMMENTS": [
+      "Dieses Array wird im Spiel nicht verwendet.",
+      "EX_DESC is used for cost 3+."
+    ]
+  }
+}

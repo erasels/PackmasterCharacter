@@ -9,7 +9,8 @@ import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
 public class Flick extends AbstractPackmasterCard {
     public final static String ID = makeID("Flick");
@@ -17,19 +18,19 @@ public class Flick extends AbstractPackmasterCard {
 
     public Flick() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         atb(new SelectCardsInHandAction(1, name + ".", (cards) -> {
-            att(new DiscardSpecificCardAction(cards.get(0)));
             int cost = Wiz.getLogicalCardCost(cards.get(0));
             if (cost > 0) {
                 for (int i = 0; i < cost; i++) {
-                    dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+                    dmgTop(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
                 }
             }
-
+            att(new DiscardSpecificCardAction(cards.get(0)));
         }));
     }
 

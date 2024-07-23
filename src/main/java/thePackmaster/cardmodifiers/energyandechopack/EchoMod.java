@@ -1,7 +1,6 @@
 package thePackmaster.cardmodifiers.energyandechopack;
 
 import basemod.abstracts.AbstractCardModifier;
-import basemod.cardmods.EtherealMod;
 import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;

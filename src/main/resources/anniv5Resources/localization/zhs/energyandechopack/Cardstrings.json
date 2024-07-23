@@ -1,0 +1,46 @@
+{
+  "${ModID}:ShadowStrike": {
+    "NAME": "暗影打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:回响 。"
+  },
+  "${ModID}:MagnetRise": {
+    "NAME": "电磁浮游",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合生成过额外的 [E] ，本牌耗能变为0。"
+  },
+  "${ModID}:TearApart": {
+    "NAME": "裂击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若击杀目标， NL 获得 [E] 。 NL ${ModID}:回响 。"
+  },
+  "${ModID}:Voices": {
+    "NAME": "狂音",
+    "DESCRIPTION": "抽 !M! 张牌。 NL ${ModID}:回响 。 NL 消耗 。"
+  },
+  "${ModID}:Flashlight": {
+    "NAME": "手电筒",
+    "DESCRIPTION": "固有 。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 获得 [E] 。 NL 下回合获得 [E] 。 NL 消耗 。"
+  },
+  "${ModID}:Discharge": {
+    "NAME": "释能",
+    "DESCRIPTION": "造成本回合已使用的能量的5倍伤害。",
+    "EXTENDED_DESCRIPTION": ["造成本回合已使用的能量的5倍伤害。 NL (造成 !D! 点伤害)"]
+  },
+  "${ModID}:Overload": {
+    "NAME": "过负荷",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗耗能加1， NL 伤害加 !M! 。"
+  },
+  "${ModID}:Panacher": {
+    "NAME": "混杂",
+    "DESCRIPTION": "每 ${ModID}:创造 5张牌， NL 造成 !M! 点群体伤害。"
+  },
+  "${ModID}:Slowing": {
+    "NAME": "迟缓",
+    "DESCRIPTION": "回合开始时获得 [E] 。 NL 将 !M! 张 *伤口 加入手牌。",
+    "UPGRADE_DESCRIPTION": "回合开始时获得 [E] 。 NL 将1张 *伤口 加入手牌。"
+  },
+  "${ModID}:Crystallize": {
+    "NAME": "晶体化",
+    "DESCRIPTION": "每有1点能量， NL 获得 !M! 点 格挡 。",
+    "EXTENDED_DESCRIPTION": ["每有1点能量， NL 获得 !M! 点 格挡 。 NL (获得 !B! 点 格挡 。)"]
+  }
+}

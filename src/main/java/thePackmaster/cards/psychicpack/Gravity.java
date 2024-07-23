@@ -2,11 +2,10 @@ package thePackmaster.cards.psychicpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.psychicpack.GravityPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class Gravity extends AbstractPsychicCard {
     public final static String ID = makeID("Gravity");

@@ -5,14 +5,12 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
 import static thePackmaster.util.Wiz.atb;
-import static thePackmaster.util.Wiz.doDmg;
 
 public class SwarmOfBees extends AbstractSummonsCard {
     public final static String ID = makeID(SwarmOfBees.class.getSimpleName());
@@ -30,6 +28,8 @@ public class SwarmOfBees extends AbstractSummonsCard {
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         isMultiDamage = true;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
     }
 
     @Override

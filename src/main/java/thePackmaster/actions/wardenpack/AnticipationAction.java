@@ -2,17 +2,19 @@ package thePackmaster.actions.wardenpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.util.Wiz;
 
 import java.util.Iterator;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-
 public class AnticipationAction extends AbstractGameAction {
-    public AnticipationAction() {
+    private boolean upgraded;
+
+    public AnticipationAction(boolean upgraded) {
         this.duration = 0.001F;
+        this.upgraded = upgraded;
     }
 
     public void update() {
@@ -23,7 +25,16 @@ public class AnticipationAction extends AbstractGameAction {
 
             while(var1.hasNext()) {
                 AbstractCard c = (AbstractCard)var1.next();
-                truecost += Wiz.getLogicalCardCost(c);
+
+                int nextcost = Wiz.getLogicalCardCost(c);
+
+                if (upgraded)
+                    truecost += nextcost;
+                else
+                {
+                    if (nextcost > truecost)
+                        truecost = nextcost;
+                }
             }
 
             if (truecost > 0)

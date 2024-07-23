@@ -1,0 +1,52 @@
+{
+  "${ModID}:RollToMove": {
+    "NAME": "Würfeln für Bewegung",
+    "DESCRIPTION": "Erhalte !B! Block. NL Würfle 2 ${ModID}:D6."
+  },
+  "${ModID}:FlickDice": {
+    "NAME": "Würfeln für Schlag",
+    "DESCRIPTION": "{@@}Verursache !D! Schaden. NL Würfle einen ${ModID}:D6."
+  },
+  "${ModID}:ThrowChips": {
+    "NAME": "Chips werfen",
+    "DESCRIPTION": "{@@}Verursache an einem zufälligen Gegner X Mal !D! Schaden. NL ${ModID}:Neuwürfeln."
+  },
+  "${ModID}:PocketAce": {
+    "NAME": "Ass im Ärmel",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Lege !${ModID}:m2! Karten ab. NL Erschöpfen."
+  },
+  "${ModID}:Reroller": {
+    "NAME": "Neuwürfler",
+    "DESCRIPTION": "{@@}Erhalte !B! Block. NL Verursache !D! Schaden. NL ${ModID}:Neuwürfeln."
+  },
+  "${ModID}:PerceptionCheck": {
+    "NAME": "Wahrnehmungsprüfung",
+    "DESCRIPTION": "Zu Beginn deines Zuges, wenn du keine ${ModID}:Würfel hast, wirf einen ${ModID}:D8."
+  },
+  "${ModID}:AllIn": {
+    "NAME": "Alles oder Nichts",
+    "DESCRIPTION": "{@@}Verursache !D! Schaden. NL Ziehe !M! Karten. NL Erhalte !M! [E]. NL Überspringe deinen nächsten Zug. NL Erschöpfen."
+  },
+  "${ModID}:D20": {
+    "NAME": "D20!",
+    "DESCRIPTION": "Wirf einen [#efc851]D20[]. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wirf einen [#efc851]D20[]."
+  },
+  "${ModID}:GoToJail": {
+    "NAME": "Ab ins Gefängnis",
+    "DESCRIPTION": "Gehe direkt zum ${ModID}:Gefängnis. NL Gehe nicht über LOS. NL Erhalte keine $200.",
+    "UPGRADE_DESCRIPTION": "Gehe direkt zum ${ModID}:Gefängnis. NL Gehe nicht über LOS. NL Erhalte $20."
+  },
+  "${ModID}:LevelUp": {
+    "NAME": "Level aufsteigen!",
+    "DESCRIPTION": "Erhalte !M! ${ModID}:Vorteil. NL Wirf 2 ${ModID}:D6."
+  },
+  "${ModID}:BoardGameKeywordManager": {
+    "NAME": "Stichwort-Manager",
+    "DESCRIPTION": "Hilfsmittel für Übersetzungen und einfachen Zugriff auf Schlüsselwort-IDs",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:würfel",
+      "${ModID}:chance"
+    ]
+  }
+}

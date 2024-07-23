@@ -1,17 +1,16 @@
 package thePackmaster.cards.transmutationpack;
 
-import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.transmutationpack.TransmuteCardAction;
-import thePackmaster.cardmodifiers.transmutationpack.*;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.cardmodifiers.transmutationpack.AbstractExtraEffectModifier;
+import thePackmaster.cardmodifiers.transmutationpack.FreeToPlayEffect;
+import thePackmaster.cardmodifiers.transmutationpack.TransmuteSelfEffect;
 
 import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class GhostlyMist extends AbstractHydrologistCard implements TransmutableCard {
     public final static String ID = makeID("GhostlyMist");
@@ -40,7 +39,6 @@ public class GhostlyMist extends AbstractHydrologistCard implements Transmutable
         ArrayList<AbstractExtraEffectModifier> list = new ArrayList<>();
         list.add(new FreeToPlayEffect(true));
         list.add(new TransmuteSelfEffect(this, true));
-        list.add(new ReboundSelfEffect(true));
         return list;
     }
 }

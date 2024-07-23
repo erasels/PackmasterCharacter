@@ -1,0 +1,20 @@
+{
+  "${ModID}:OdditiesPack": {
+    "TEXT": [
+      "奇葩",
+      "Vex大仙作法搞了些Vex玩意。在战斗中操控牌组！",
+      "Vex"
+    ]
+  },
+  "${ModID}:OdditiesPackHat": {
+    "TEXT": [
+      "冒险时非常好用。",
+      "遮阳帽"
+    ]
+  },
+  "${ModID}:AutoBattlerPatches": {
+    "TEXT": [
+      "我必须从左向右打出牌！"
+    ]
+  }
+}

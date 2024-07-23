@@ -1,0 +1,15 @@
+{
+  "${ModID}:PixiePack": {
+    "TEXT": [
+      "咒术精灵",
+      "一套跨次元的咒语牌。",
+      "FieryChocobo"
+    ]
+  },
+  "${ModID}:PixiePackHat": {
+    "TEXT": [
+      "真闪亮！",
+      "精灵王冠"
+    ]
+  }
+}

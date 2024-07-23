@@ -10,7 +10,6 @@ import javassist.CtBehavior;
 import thePackmaster.cards.odditiespack.EightBall;
 import thePackmaster.cards.rippack.SurprisePack;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

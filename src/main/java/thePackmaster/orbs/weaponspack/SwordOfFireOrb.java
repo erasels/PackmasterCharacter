@@ -32,6 +32,6 @@ public class SwordOfFireOrb extends AbstractWeaponOrb {
                 AbstractDungeon.effectList.add(new DamageCurvyEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.901F, 0, 0, 1)));
             }
         }
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesWithDamageMatrixAction(3));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesWithDamageMatrixAction(4));
     }
 }

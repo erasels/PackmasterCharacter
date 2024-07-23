@@ -1,6 +1,5 @@
 package thePackmaster.cards.arcanapack;
 
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractAstrologerCard extends AbstractPackmasterCard {

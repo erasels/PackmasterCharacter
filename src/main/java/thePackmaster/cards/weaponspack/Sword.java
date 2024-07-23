@@ -40,6 +40,11 @@ public class Sword extends AbstractWeaponsPackCard {
                 c.upgrade();
             }
         }
+        for (AbstractCard c : choices) {
+            c.baseMagicNumber = this.baseMagicNumber;
+            c.magicNumber = this.magicNumber;
+            c.isMagicNumberModified = this.isMagicNumberModified;
+        }
         addToBot(new ChooseOneAction(choices));
     }
 

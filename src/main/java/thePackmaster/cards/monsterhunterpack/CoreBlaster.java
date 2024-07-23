@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -22,7 +21,7 @@ public class CoreBlaster extends AbstractMonsterHunterCard {
     public final static String ID = makeID("CoreBlaster");
 
     public static final int DAMAGE = 10;
-    public static final int UPG_DAMAGE = 2;
+    public static final int UPG_DAMAGE = 3;
     AbstractCard prev;
     boolean previewCard;
 

@@ -15,7 +15,7 @@ public class MonsterHunterPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public MonsterHunterPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 2, 3, 3));
     }
 
     @Override
@@ -52,6 +52,7 @@ public class MonsterHunterPack extends AbstractCardPack {
         cards.add(StabManual.ID);
         cards.add(StoneHelm.ID);
         cards.add(TimepieceTiara.ID);
+        cards.add(SerpentineDagger.ID);
 
         return cards;
     }

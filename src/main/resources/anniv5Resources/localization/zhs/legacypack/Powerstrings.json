@@ -1,0 +1,9 @@
+{
+  "${ModID}:PoisonMasteryPower": {
+    "NAME": "精湛毒艺",
+    "DESCRIPTIONS": [
+      "中毒 造成的生命流失增加 #b",
+      "% 。"
+    ]
+  }
+}

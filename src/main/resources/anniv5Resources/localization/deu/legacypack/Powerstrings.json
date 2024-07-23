@@ -1,0 +1,9 @@
+{
+  "${ModID}:PoisonMasteryPower": {
+    "NAME": "Giftmeisterschaft",
+    "DESCRIPTIONS": [
+      "Erhöhe den LP-Verlust durch Gift um #b",
+      "%."
+    ]
+  }
+}

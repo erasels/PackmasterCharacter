@@ -1,0 +1,58 @@
+{
+  "${ModID}:Wonder": {
+    "NAME": "Wunder",
+    "DESCRIPTION": "Wirf deine Handkarten ab. NL Ziehe 1 Karte und setze deine Energie auf ihre Kosten.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Wirf deine Handkarten ab. Ziehe 1 Karte und setze deine Energie auf ihre Kosten."
+  },
+  "${ModID}:FreeSpace": {
+    "NAME": "Freiraum",
+    "DESCRIPTION": "Flüchtig. NL Wenn du diese Karte ziehst, ablegst, erschöpfst oder spielst, ziehe 1 Karte.",
+    "UPGRADE_DESCRIPTION": "Wenn du diese Karte ziehst, ablegst, erschöpfst oder spielst, ziehe 1 Karte."
+  },
+  "${ModID}:MidnightOil": {
+    "NAME": "Mitternachtsöl",
+    "DESCRIPTION": "Erschöpfe eine zufällige Karte. NL Erhalte [E]. NL Solange diese erschöpft ist, erhalte [E] pro Runde.",
+    "UPGRADE_DESCRIPTION": "Erschöpfe eine Karte. NL Erhalte [E]. NL Solange diese erschöpft ist, erhalte [E] pro Runde."
+  },
+  "${ModID}:VoraciousSigil": {
+    "NAME": "Unersättliches Siegel",
+    "DESCRIPTION": "${ModID}:Absorbiere eine zufällige Fertigkeit in deiner Hand. Spiele alle Karten, die ${ModID}:Absorbieren haben.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL ${ModID}:Absorbiere eine zufällige Fertigkeit in deiner Hand. Spiele alle Karten, die ${ModID}:Absorbieren haben."
+  },
+  "${ModID}:StrikeThroughFate": {
+    "NAME": "Schlag durch das Schicksal",
+    "DESCRIPTION": "Füge !D! Schaden zu. Wenn dies deine 7. Karte in diesem Zug ist, füge stattdessen drei Mal !D! Schaden zu.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. Wenn dies deine 7. Karte in diesem Zug ist, füge stattdessen drei Mal !D! Schaden zu."
+  },
+  "${ModID}:MindOverMatter": {
+    "NAME": "Geist über Materie",
+    "DESCRIPTION": "Immer wenn du eine Karte ziehst, erhalte 1 Block.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Immer wenn du eine Karte ziehst, erhalte 1 Block."
+  },
+  "${ModID}:GoldenGun": {
+    "NAME": "Goldene Kanone",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Muss [#EFC851]geladen sein. NL Startup: Füge deinem Nachziehstapel eine [#EFC851]Goldene [#EFC851]Kugel hinzu."
+  },
+  "${ModID}:GoldenRound": {
+    "NAME": "Goldene Kugel",
+    "DESCRIPTION": "Lade die [#EFC851]Goldene [#EFC851]Kanone in deiner Hand. NL Wenn du keine hast, lege diese Karte oben auf deinen Nachziehstapel."
+  },
+  "${ModID}:RitualSight": {
+    "NAME": "Rituelle Sicht",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. Mische eine Kopie davon in deinen Nachziehstapel.",
+    "EXTENDED_DESCRIPTION": ["Erschöpfen und kopieren."]
+  },
+  "${ModID}:Thoughtweaving": {
+    "NAME": "Gedankenweben",
+    "DESCRIPTION": "Immer wenn du eine Fertigkeit oder einen Angriff spielst, ziehe 1 Karte des gegenteiligen Typs aus einem anderen Deck."
+  },
+  "${ModID}:SealedSword": {
+    "NAME": "Versiegeltes Schwert",
+    "DESCRIPTION": "Erschöpfen. NL Wenn dies erschöpft ist, mische einen [#EFC851]Seelenfresser [#EFC851]Schlag in deinen Nachziehstapel.",
+    "UPGRADE_DESCRIPTION": "Erschöpfen. NL Wenn dies erschöpft ist, mische einen [#EFC851]Seelenfresser [#EFC851]Schlag+ in deinen Nachziehstapel."
+  },
+  "${ModID}:SouleaterStrike": {
+    "NAME": "Seelenfresser Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge !M! verwundbar zu. NL Füge !M! schwach zu."
+  }
+}

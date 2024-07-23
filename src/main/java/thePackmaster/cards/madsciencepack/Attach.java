@@ -7,13 +7,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.madsciencepack.FindCardForAddModifierAction;
-import thePackmaster.actions.madsciencepack.SimpleAddModifierAction;
-import thePackmaster.cardmodifiers.madsciencepack.CheapenModifier;
 import thePackmaster.cardmodifiers.madsciencepack.PlayCardModifier;
 
 import static thePackmaster.SpireAnniversary5Mod.ISCARDMODIFIED;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
 public class Attach extends AbstractMadScienceCard {
     public final static String ID = makeID("Attach");

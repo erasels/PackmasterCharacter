@@ -1,0 +1,53 @@
+{
+  "${ModID}:HuntersMark": {
+    "NAME": "Jagd Markierung",
+    "DESCRIPTIONS": [
+      "Erleidet #b",
+      "% mehr Schaden von Angriffen."
+    ]
+  },
+  "${ModID}:NotHunted": {
+    "NAME": "Nicht gejagt",
+    "DESCRIPTIONS": [
+      "Erleidet #b",
+      "% weniger Schaden durch Angriffe. Falls das #ygejagte Ziel stirbt, entferne dies."
+    ]
+  },
+  "${ModID}:PerfectGuardPower": {
+    "NAME": "Perfekter Wächter",
+    "DESCRIPTIONS": [
+      "Falls dein #yBlock genau diese Runde durchbrochen wird, erhalte #b",
+      " Stärke."
+    ]
+  },
+  "${ModID}:EnragePowerPlayer": {
+    "NAME": "Wütend",
+    "DESCRIPTIONS": [
+      "Wenn kein Gegner die Absicht hat dich anzugreifen erhalte #b",
+      " #yStärke am Ende deines Zugs."
+    ]
+  },
+  "${ModID}:GlassArmorPower": {
+    "NAME": "Glasrüstung",
+    "DESCRIPTIONS": [
+      "Erhalte #b",
+      " #yBlock am Ende deines Zugs. Wenn du ungeblockten Schaden erleidest, verliere diese Macht."
+    ]
+  },
+  "${ModID}:DelayedDamagePower": {
+    "NAME": "Verzögerter Schaden",
+    "DESCRIPTIONS": [
+      "Verursacht #b",
+      " Schaden in #b",
+      " Zügen."
+    ]
+  },
+  "${ModID}:TimePiecePower": {
+    "NAME": "Zeitmesser Macht",
+    "DESCRIPTIONS": [
+      "Erhalte #b",
+      " #yStärke für alle 12 Karten die du spielst. Karten gespielt: #b",
+      ""
+    ]
+  }
+}

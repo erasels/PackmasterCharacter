@@ -1,8 +1,8 @@
 package thePackmaster.vfx.legacypack;
 
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
@@ -44,11 +44,11 @@ public class SlimeDropletEffect
 
         tmp = MathUtils.random(2);
         if (tmp == 0) {
-            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeDropA.png");;
+            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeDropA.png");
         } else if (tmp == 1) {
-            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeDropB.png");;
+            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeDropB.png");
         } else {
-            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeDropC.png");;
+            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeDropC.png");
         }
 
         this.scale = (MathUtils.random(0.1F, 0.8F) * Settings.scale);

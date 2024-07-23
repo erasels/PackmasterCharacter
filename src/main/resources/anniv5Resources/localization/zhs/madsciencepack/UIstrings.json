@@ -1,0 +1,33 @@
+{
+  "${ModID}:MadSciencePack": {
+    "TEXT": [
+      "疯狂科学！",
+      "修改你的牌来附带额外效果，突破游戏限制！",
+      "MichaelMayhem"
+    ]
+  },
+  "${ModID}:MadScienceModifiers": {
+    "TEXT": [
+      " NL 生成 ",
+      " 个 冰霜 充能球。",
+      "保留 。 NL ",
+      " NL 打出 ",
+      " NL 获得6点 格挡 。",
+      " NL 获得8点 格挡 。",
+      " NL 再打出一次。",
+      " NL 获得一张 *加农炮弹 。",
+      " NL 抽一张牌。"
+    ]
+  },
+  "${ModID}:AddModifierUI": {
+    "TEXT": [
+      "选择一张手牌进行修改。"
+    ]
+  },
+  "${ModID}:MadSciencePackHat": {
+    "TEXT": [
+      "秀给大家！惊艳大家！！",
+      "疯狂科学镜"
+    ]
+  }
+}

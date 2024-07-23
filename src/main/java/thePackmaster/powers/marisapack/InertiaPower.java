@@ -32,7 +32,7 @@ public class InertiaPower extends AbstractPackmasterPower implements CloneablePo
 
     @Override
     public AbstractPower makeCopy() {
-        return new ChargeUpPower(amount);
+        return new InertiaPower(amount);
     }
 
     @Override

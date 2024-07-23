@@ -1,0 +1,43 @@
+{
+  "${ModID}:BackpackSmack": {
+    "NAME": "背包甩掴",
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL ${ModID}:配合 ： NL 给予X层 虚弱 与 易伤 。"
+  },
+  "${ModID}:BoosterTutor": {
+    "NAME": "奇寻卡包",
+    "DESCRIPTION": "将抽牌堆中 !M! 张属于不同卡包的牌加入手牌。"
+  },
+  "${ModID}:DestinyDraw": {
+    "NAME": "命运之抽",
+    "DESCRIPTION": "随机从三张属于不同卡包的牌中选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
+  },
+  "${ModID}:Flick": {
+    "NAME": "弹牌",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃一张牌。 NL 造成 !D! 点伤害其耗能次。"
+  },
+  "${ModID}:MayhemForm": {
+    "NAME": "不懈形态",
+    "DESCRIPTION": "每回合手中只剩不超过2张牌时触发一次： NL 抽2张牌。 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "每回合手中只剩不超过2张牌时触发一次： NL 抽2张牌。 NL 获得 [E] [E] 。"
+  },
+  "${ModID}:RippedPecs": {
+    "NAME": "腹肌",
+    "DESCRIPTION": "获得1点 力量 。 NL ${ModID}:配合 ： NL 获得量提高至 !M! 点。"
+  },
+  "${ModID}:Showoff": {
+    "NAME": "狂炫",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合抽2张牌。"
+  },
+  "${ModID}:Sideboard": {
+    "NAME": "侧柜",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择一张弃牌堆的牌放入抽牌堆顶部。"
+  },
+  "${ModID}:SmithingHammer": {
+    "NAME": "锻造锤击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 随机 升级 2张手牌。"
+  },
+  "${ModID}:Synergize": {
+    "NAME": "套路配合",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL ${ModID}:配合 ： NL 获得 !B! 点 格挡 。"
+  }
+}

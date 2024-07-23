@@ -1,0 +1,16 @@
+{
+  "${ModID}:LegacyPack": {
+    "TEXT": [
+      "Ein großes Erbe",
+      "Eine Sensation aus der Vergangenheit, mit Karten inspiriert von traditionellen Charaktermods, aus der Zeit vor den Tagen des Steam Workshops.",
+      "Original Autoren",
+      "Original Mod Autoren: celicath, moocowgoesmoo, JohnnyBazooka, chronometrics, fiiiiilth"
+    ]
+  },
+  "${ModID}:LegacyPackHat": {
+    "TEXT": [
+      "Happy birthday, STS modding!",
+      "Geburtstags Junge"
+    ]
+  }
+}

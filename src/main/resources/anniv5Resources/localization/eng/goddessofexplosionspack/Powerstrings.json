@@ -1,0 +1,54 @@
+{
+  "${ModID}:FalloutPower": {
+    "NAME": "Fallout",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower, the targeted enemy takes #b",
+      " damage."
+    ]
+  },
+  "${ModID}:WaveMotionCannonPower": {
+    "NAME": "Wave Motion Cannon",
+    "DESCRIPTIONS": [
+      "Next turn, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
+  "${ModID}:RedshiftPower": {
+    "NAME": "Redshift",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, draw 1 card.",
+      "At the start of your next #b",
+      " turns, draw 1 card."
+    ]
+  },
+  "${ModID}:CountdownPower": {
+    "NAME": "Countdown",
+    "DESCRIPTIONS": [
+      "After you draw #b",
+      " more cards, gain #b2 Energy and #yAtomic #yPiledriver.",
+      " more cards, gain #b2 Energy and #yAtomic #yPiledriver+."
+    ]
+  },
+  "${ModID}:MeltdownPower": {
+    "NAME": "Meltdown",
+    "DESCRIPTIONS": [
+      "Whenever you draw a #yPower, gain #b",
+      " Energy."
+    ]
+  },
+  "${ModID}:ExplosiveFormPower": {
+    "NAME": "Explosive Form",
+    "DESCRIPTIONS": [
+      "At the start of each turn, set up #yThe #yBomb.",
+      "At the start of each turn, set up #yThe #yBomb #b",
+      " times."
+    ]
+  },
+  "${ModID}:EveOfDestructionPower": {
+    "NAME": "Eve Of Destruction",
+    "DESCRIPTIONS": [
+      "You deal #b",
+      "% more non-attack damage."
+    ]
+  }
+}

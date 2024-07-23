@@ -9,8 +9,8 @@
   },
   "${ModID}:TheHermit": {
     "NAME": "The Hermit",
-    "DESCRIPTION": "Discard a card. Draw cards equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Discard a card. Draw cards equal to its cost."
+    "DESCRIPTION": "Gain !B! Block. NL Discard a card. Draw cards equal to its cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Discard a card. Draw cards equal to its cost."
   },
   "${ModID}:TheHangedMan": {
     "NAME": "The Hanged Man",
@@ -26,8 +26,8 @@
   },
   "${ModID}:Temperance": {
     "NAME": "Temperance",
-    "DESCRIPTION": "Draw a card for each card in your exhaust pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card for each card in your exhaust pile."
+    "DESCRIPTION": "Draw 1 card for each card in your exhaust pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card for each card in your exhaust pile."
   },
   "${ModID}:TheHierophant": {
     "NAME": "The Hierophant",

@@ -6,21 +6,22 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import thePackmaster.cards.rippack.AbstractRippableCard;
+import thePackmaster.SpireAnniversary5Mod;
+import thePackmaster.cards.rippack.ArtAttack;
+import thePackmaster.cards.rippack.OnRipInterface;
+import thePackmaster.patches.rippack.AllCardsRippablePatches;
 
 import static thePackmaster.util.Wiz.att;
 
 public class RipCardAction extends AbstractGameAction {
-    private AbstractRippableCard rippedCard;
-    private AbstractCard artCard;
+    private AbstractCard rippedCard;
     private AbstractCard textCard;
+    private AbstractCard artCard;
 
-    public RipCardAction(AbstractRippableCard rippedCard, AbstractCard artCard, AbstractCard textCard) {
+    public RipCardAction(AbstractCard rippedCard) {
         this.actionType = ActionType.SPECIAL;
         this.duration = Settings.ACTION_DUR_MED;
         this.rippedCard = rippedCard;
-        this.artCard = artCard;
-        this.textCard = textCard;
     }
 
     @Override
@@ -34,24 +35,37 @@ public class RipCardAction extends AbstractGameAction {
             }
         }
         if(found && rippedCard != null) {
-            artCard.applyPowers();
-            textCard.applyPowers();
+            //Set up Art Half properties
+            artCard = rippedCard.makeStatEquivalentCopy();
+            artCard.rawDescription = "";
+            artCard.initializeDescription();
+            artCard.target = artCard.cardID.equals(ArtAttack.ID) ? artCard.target : AbstractCard.CardTarget.NONE;
             artCard.cost = rippedCard.cost;
-            artCard.costForTurn = rippedCard.costForTurn; //costs need to be updated if the base card's cost gets updated
+            artCard.costForTurn = rippedCard.costForTurn;
+            AllCardsRippablePatches.AbstractCardFields.ripStatus.set(artCard, AllCardsRippablePatches.RipStatus.ART);
+
+            //Set up Text Half properties
+            textCard = rippedCard.makeStatEquivalentCopy();
+            textCard.cost = 0;
+            textCard.costForTurn = 0;
+            textCard.name = "";
+            AllCardsRippablePatches.AbstractCardFields.ripStatus.set(textCard, AllCardsRippablePatches.RipStatus.TEXT);
+
             if (AbstractDungeon.player.hoveredCard == rippedCard) {
                 AbstractDungeon.player.releaseCard();
             }
             AbstractDungeon.actionManager.cardQueue.removeIf(q -> q.card == rippedCard);
-
-            att(new MakeTempCardInHandAction(textCard));
             att(new MakeTempCardInHandAction(artCard));
-            rippedCard.onRip();
+            att(new MakeTempCardInHandAction(textCard));
+            if(rippedCard instanceof OnRipInterface) {
+                ((OnRipInterface)rippedCard).onRip();
+            }
+            SpireAnniversary5Mod.cardsRippedThisTurn++;
             AbstractDungeon.player.hand.removeCard(rippedCard);
             p.hand.applyPowers();
             p.hand.glowCheck();
-            artCard.superFlash();
-            textCard.superFlash();
         }
         isDone = true;
     }
+
 }

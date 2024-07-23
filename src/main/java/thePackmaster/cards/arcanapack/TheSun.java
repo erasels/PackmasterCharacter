@@ -6,12 +6,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 import thePackmaster.vfx.arcanapack.SunEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToEnemy;
+import static thePackmaster.util.Wiz.atb;
 
 public class TheSun extends AbstractAstrologerCard {
     public final static String ID = makeID("TheSun");
@@ -20,7 +20,7 @@ public class TheSun extends AbstractAstrologerCard {
     public TheSun() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = 22;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 99;
         exhaust = true;
 
         this.isMultiDamage = true;
@@ -60,6 +60,6 @@ public class TheSun extends AbstractAstrologerCard {
     }
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(8);
     }
 }

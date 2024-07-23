@@ -2,7 +2,7 @@
   "${ModID}:FrontloadedBash": {
     "NAME": "Frontloaded Bash",
     "DESCRIPTION": "Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile. NL Draw 1 card."
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Deals 1 more damage for every !M! cards in your draw pile."
   },
   "${ModID}:Preparation": {
     "NAME": "Preparation",
@@ -12,12 +12,12 @@
   },
   "${ModID}:SmallAdaptation": {
     "NAME": "Small Adaptation",
-    "DESCRIPTION": "Gain !B! Block. NL Choose a card that costs 1 or 0. NL Add a copy of that card into your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL Choose a non-Power card that costs 0 or 1. NL Add a copy of that card into your hand.",
     "EXTENDED_DESCRIPTION": ["Choose a card to copy."]
   },
   "${ModID}:ExperimentalMerge": {
     "NAME": "Experimental Merge",
-    "DESCRIPTION": "Gain !B! Block. NL Shuffle your discard pile into your draw pile. Draw !M!."
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Shuffle your discard pile into your draw pile. NL Draw !M! card{!M!|>1=s}."
   },
   "${ModID}:ExhaustiveWork": {
     "NAME": "Exhaustive Work",
@@ -26,7 +26,7 @@
   },
   "${ModID}:IterativeDesign": {
     "NAME": "Iterative Design",
-    "DESCRIPTION": "Whenever your create a card this combat, gain !M! Block."
+    "DESCRIPTION": "Whenever you play a card created this combat or *Duplicate a card, gain  !M! Block."
   },
   "${ModID}:Xpansion": {
     "NAME": "Xpansion",
@@ -39,11 +39,11 @@
   },
   "${ModID}:MagicHand": {
     "NAME": "Magic Hand",
-    "DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 this turn and exhausts.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It costs 0 this turn."
+    "DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL It exhausts. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of !M! cards from your master deck to add to your hand. NL Exhaust."
   },
   "${ModID}:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain !M! stslib:Temporary_HP. Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your draw pile."
+    "DESCRIPTION": "Gain !M! stslib:Temporary_HP. NL Gain 1 ${ModID}:Duplication for every 10 cards you shuffle into your draw pile."
   }
 }

@@ -23,5 +23,30 @@
     "DESCRIPTIONS": [
       "Whenever you play a card this turn, gain #b%s #yCharge #yUp."
     ]
+  },
+  "${ModID}:StardustReverie": {
+    "NAME": "Stardust Reverie",
+    "DESCRIPTIONS": [
+      "#yExhaust the next card you play to gain #b%s #yCharge #yUp and draw #b1 card."
+    ]
+  },
+  "${ModID}:StarCasket": {
+    "NAME": "Casket of Stars",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yBlock, gain #b%s #yCharge #yUp."
+    ]
+  },
+  "${ModID}:FreeAmplify": {
+    "NAME": "Free Amplify",
+    "DESCRIPTIONS": [
+      "The next #yAmplify effect does not consume energy.",
+      "The next #b%s #yAmplify effects do not consume energy."
+    ]
+  },
+  "${ModID}:EventHorizon": {
+    "NAME": "EventHorizon",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b%s #yVigor."
+    ]
   }
 }

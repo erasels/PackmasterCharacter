@@ -1,0 +1,49 @@
+{
+  "${ModID}:DicePower": {
+    "NAME": "würfel",
+    "DESCRIPTIONS": [
+      "Die nächste Karte, die du spielst und die Schaden verursacht oder #yBlock gewinnt, erhöht sich um #b",
+      " Punkte."
+    ]
+  },
+  "${ModID}:SkipNextTurnPower": {
+    "NAME": "nächste Runde überspringen",
+    "DESCRIPTIONS": [
+      "Überspringe deine nächste Runde.",
+      "Überspringe deine nächsten #b",
+      " Runden."
+    ]
+  },
+  "${ModID}:OneTimeAdvantagePower": {
+    "NAME": "vorteil",
+    "DESCRIPTIONS": [
+      "Wirf den nächsten #yWürfel zusätzlich #b1",
+      "Wirf den nächsten #yWürfel zusätzlich #b",
+      " Mal und nimm den höchsten Wert."
+    ]
+  },
+  "${ModID}:AdvantagePower": {
+    "NAME": "vorteil",
+    "DESCRIPTIONS": [
+      "Wenn du #yWürfel wirfst, wirf zusätzlich 1 Mal und nimm den höchsten Wert.",
+      "Wenn du #yWürfel wirfst, wirf zusätzlich #b",
+      " Mal und nimm den höchsten Wert."
+    ]
+  },
+  "${ModID}:PerceptionCheckPower": {
+    "NAME": "wahrnehmungsprüfung",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges, wenn du keine #yWürfel hast, wirf einen D8.",
+      "Zu Beginn deines Zuges, wenn du keine #yWürfel hast, wirf #b",
+      " D8."
+    ]
+  },
+  "${ModID}:JailPower": {
+    "NAME": "gefängnis",
+    "DESCRIPTIONS": [
+      "In dieser Runde erleidest du keinen Schaden und kannst keine Angriffskarten spielen.",
+      "In den nächsten #b",
+      " Runden erleidest du keinen Schaden und kannst keine Angriffskarten spielen."
+    ]
+  }
+}

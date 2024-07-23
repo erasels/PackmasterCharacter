@@ -1,12 +1,9 @@
 package thePackmaster.cardmodifiers.clawpack;
 
 import basemod.abstracts.AbstractCardModifier;
-import basemod.cardmods.ExhaustMod;
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Claw;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import thePackmaster.SpireAnniversary5Mod;

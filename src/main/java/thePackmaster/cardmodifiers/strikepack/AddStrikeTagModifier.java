@@ -1,36 +1,33 @@
 package thePackmaster.cardmodifiers.strikepack;
 
 import basemod.abstracts.AbstractCardModifier;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifier;
-import thePackmaster.cardmodifiers.madsciencepack.AbstractMadScienceModifierWithName;
 
-public class AddStrikeTagModifier extends AbstractMadScienceModifierWithName {
+public class AddStrikeTagModifier extends AbstractCardModifier {
 
-    public AddStrikeTagModifier(int valueIn){
-        super(valueIn);
+    public AddStrikeTagModifier() {
+        super();
     }
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        super.onInitialApplication(card);
-        if (!card.hasTag(AbstractCard.CardTags.STRIKE)){
-            card.tags.add(AbstractCard.CardTags.STRIKE);
-            card.applyPowers();
-        }
+        card.tags.add(AbstractCard.CardTags.STRIKE);
+        card.applyPowers();
+        card.superFlash(Color.CHARTREUSE.cpy());
     }
 
+
     @Override
-    public String nameSuffix(String cardName) {
-        return CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("AddStrikeTagModifier")).TEXT[0];
+    public String modifyName(String cardName, AbstractCard card) {
+        return cardName + CardCrawlGame.languagePack.getUIString(SpireAnniversary5Mod.makeID("AddStrikeTagModifier")).TEXT[0];
     }
 
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new AddStrikeTagModifier(value);
+        return new AddStrikeTagModifier();
     }
 }

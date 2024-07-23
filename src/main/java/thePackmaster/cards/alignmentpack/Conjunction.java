@@ -9,7 +9,7 @@ import thePackmaster.cards.arcanapack.AbstractAstrologerCard;
 import thePackmaster.vfx.alignmentpack.FlashImageEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class Conjunction extends AbstractAstrologerCard {
     public final static String ID = makeID("Conjunction");

@@ -1,0 +1,26 @@
+{
+  "${ModID}:WeaponPower": {
+    "NAME": "武器",
+    "DESCRIPTIONS": []
+  },
+  "${ModID}:SalvagerPower": {
+    "NAME": "残兵重铸",
+    "DESCRIPTIONS": [
+      "每当一件 #y武器 耐久耗尽时，获得 #b",
+      " [E] 。"
+    ]
+  },
+  "${ModID}:ArmorUpPower": {
+    "NAME": "全副武装",
+    "DESCRIPTIONS": [
+      "每当你的单体攻击造成伤害比基础伤害高至少3点，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "${ModID}:ReapersMarkPower": {
+    "NAME": "收割之镰",
+    "DESCRIPTIONS": [
+      "每当获得 #b3 层时，移除这些层，该生物失去等于已损失生命值 #b40% 的生命值。"
+    ]
+  }
+}

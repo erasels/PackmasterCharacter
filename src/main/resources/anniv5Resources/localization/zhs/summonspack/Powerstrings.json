@@ -1,0 +1,32 @@
+{
+  "${ModID}:JinxPower": {
+    "NAME": "厄运",
+    "DESCRIPTIONS": [
+      "每当该单位被给予 #r负面效果 时，其失去 #b",
+      " 点生命。"
+    ]
+  },
+  "${ModID}:SummonPandasPower": {
+    "NAME": "召唤熊猫",
+    "DESCRIPTIONS": [
+      "你的回合开始时， 生成 #b1 个 #y熊猫 充能球。",
+      "你的回合开始时， 生成 #b",
+      " 个 #y熊猫 充能球。"
+    ]
+  },
+  "${ModID}:AmbushPower": {
+    "NAME": "埋伏",
+    "DESCRIPTIONS": [
+      "每当你 #y生成 一个充能球，触发其 #y激发 效果。",
+      "每当你 #y生成 一个充能球，触发其 #y激发 效果 #b",
+      " 次。"
+    ]
+  },
+  "${ModID}:TrainingPower": {
+    "NAME": "驯化",
+    "DESCRIPTIONS": [
+      "你的回合结束时， #y激发 最右侧的充能球 #b",
+      " 次。"
+    ]
+  }
+}

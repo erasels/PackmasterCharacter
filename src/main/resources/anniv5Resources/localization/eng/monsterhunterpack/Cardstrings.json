@@ -1,7 +1,7 @@
 {
   "${ModID}:HuntingStrike": {
     "NAME": "Hunting Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deals double damage to elites and bosses."
+    "DESCRIPTION": "Deal !D! damage. NL Deals double damage to Elites and Bosses. NL Draw 1 card."
   },
   "${ModID}:Focus": {
     "NAME": "Track",
@@ -13,7 +13,7 @@
   },
   "${ModID}:Greatsword": {
     "NAME": "Greatsword",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each until played."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If you have unspent energy at the end of the turn, increase this card's damage by 8 for each."
   },
   "${ModID}:HuntingInstincts": {
     "NAME": "Hunter's Instincts",
@@ -25,8 +25,8 @@
   },
   "${ModID}:ShellPauldrons": {
     "NAME": "Shell Platemail",
-    "DESCRIPTION": "Gain !M! ${ModID}:Glass_Armor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! ${ModID}:Glass_Armor."
+    "DESCRIPTION": "Gain !M! ${ModID}:Plated_Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! ${ModID}:Plated_Armor."
   },
   "${ModID}:CoreBlaster": {
     "NAME": "Core Blaster",
@@ -36,7 +36,7 @@
   "${ModID}:CoreBlinder": {
     "NAME": "Core Blinder",
     "DESCRIPTION": "Apply !M! Weak and Vulnerable. NL Add a *Core *Blaster to your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to all enemies. NL Add a *Core *Blaster+ to your draw pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies. NL Add a *Core *Blaster+ to your draw pile. NL Exhaust."
   },
   "${ModID}:GuardianShield": {
     "NAME": "Guardian Shield",
@@ -62,7 +62,7 @@
   },
   "${ModID}:GremlinLance": {
     "NAME": "Gremlin Lance",
-    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E] and draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E] and draw 1 card."
   },
   "${ModID}:ChampMail": {
     "NAME": "Champion's Platemail",
@@ -96,11 +96,11 @@
   },
   "${ModID}:DecaAmulet": {
     "NAME": "Deca Amulet",
-    "DESCRIPTION": "Gain !M! *Plated *Armor."
+    "DESCRIPTION": "Gain !M! ${ModID}:Plated_Armor."
   },
   "${ModID}:SpireSpear": {
     "NAME": "Spire Spear",
-    "DESCRIPTION": "Deal !D! damage. !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "${ModID}:SpireShield": {
     "NAME": "Spire Shield",
@@ -108,11 +108,11 @@
   },
   "${ModID}:CarvingKnife": {
     "NAME": "Carving Knife",
-    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss enemy, gain its weapon or armor card. NL Fleeting."
+    "DESCRIPTION": "Deal !D! damage. If this kills an Elite or Boss, gain its weapon or armor card and remove this from your deck permanently. NL Exhaust."
   },
   "${ModID}:AwakenedRitualDagger": {
     "NAME": "Awakened Dagger",
-    "DESCRIPTION": "Deal !D! damage. If Fatal, Heal to full HP. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. If Fatal, heal to full HP. NL Exhaust."
   },
   "${ModID}:HuntingContract": {
     "NAME": "Hunting Contract",
@@ -120,15 +120,23 @@
   },
   "${ModID}:HunterRank": {
     "NAME": "Hunter Rank",
-    "DESCRIPTION": "Gain !M! Strength. Increases by 1 for each Elite and Boss enemy you've defeated."
+    "DESCRIPTION": "Gain !M! Strength. Increases by 1 for each Elite and Boss combat you've defeated."
   },
   "${ModID}:TranqBomb": {
     "NAME": "Tranquilizer Bomb",
-    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target enemy loses !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! ${ModID}:Nonlethal damage. NL Target loses !M! Strength. NL Exhaust."
   },
   "${ModID}:Paintball": {
     "NAME": "Paintball",
     "DESCRIPTION": "Apply !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! card this turn.",
     "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Hunted. NL Retain !${ModID}:m2! cards this turn."
+  },
+  "${ModID}:SerpentineDagger": {
+    "NAME": "Serpentine Dagger",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage !M! times. NL Add two copies of this into your draw pile. NL Exhaust."
+  },
+  "${ModID}:CorruptedBlade": {
+    "NAME": "Corrupted Blade",
+    "DESCRIPTION": "Gain 3 *Ritual. NL Gain !M! ${ModID}:Invincible. NL Deal !D! damage 15 times."
   }
 }

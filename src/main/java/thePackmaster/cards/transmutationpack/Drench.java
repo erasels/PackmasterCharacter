@@ -6,12 +6,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cardmodifiers.transmutationpack.AbstractExtraEffectModifier;
 import thePackmaster.cardmodifiers.transmutationpack.DamageEffect;
 import thePackmaster.cardmodifiers.transmutationpack.GainBlockEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class Drench extends AbstractHydrologistCard implements TransmutableCard {
     public final static String ID = makeID("Drench");

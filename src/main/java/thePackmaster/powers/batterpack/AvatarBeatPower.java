@@ -16,11 +16,12 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class AvatarBeatPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID("AvatarBeatPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     public int carddraw = 1;
 
     public AvatarBeatPower(AbstractCreature owner, int amount) {
         super(POWER_ID,NAME,PowerType.BUFF,true,owner,amount);
+        isTurnBased = false;
         isTwoAmount = true;
         amount2 = 10;
         updateDescription();

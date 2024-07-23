@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Aufgedreht",
+    "NAMES": [
+      "aufgedreht"
+    ],
+    "DESCRIPTION": "Spielen Sie für jeden #yFeuer #yStapel und #yErschöpfen ein zusätzliches Mal aus. Erhöhe am Ende deines Zugs #yFeuer #yStapel um #b1 solange du es auf der Hand hast."
+  },
+  {
+    "PROPER_NAME": "Sucht",
+    "NAMES": [
+      "sucht"
+    ],
+    "DESCRIPTION": "Füge nach einigen Zügen #b2 #yVerzweiflung zu deiner Hand hinzu und verliere #b5 #yStärke."
+  }
+]

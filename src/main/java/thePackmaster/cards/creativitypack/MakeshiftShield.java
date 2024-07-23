@@ -3,9 +3,7 @@ package thePackmaster.cards.creativitypack;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.creativitypack.MakeshiftShieldPower;
-import thePackmaster.powers.creativitypack.MakeshiftSwordPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -15,12 +13,12 @@ public class MakeshiftShield extends AbstractCreativityCard {
 
     public MakeshiftShield() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
     }
 
     @Override
     public void upp() {
-        upMagic(2);
+        upMagic(1);
     }
 
     @Override

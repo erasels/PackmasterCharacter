@@ -1,15 +1,13 @@
 package thePackmaster.cards.arcanapack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToEnemy;
 
 public class TheFool extends AbstractAstrologerCard {
     public final static String ID = makeID("TheFool");
@@ -20,7 +18,7 @@ public class TheFool extends AbstractAstrologerCard {
 
         AnimatedCardsPatch.loadFrames(this, 28, 0.07f);
 
-        this.damage = this.baseDamage = 1;
+        this.damage = this.baseDamage = 3;
         this.magicNumber = this.baseMagicNumber = 3;
 
         isInnate = true;
@@ -33,6 +31,7 @@ public class TheFool extends AbstractAstrologerCard {
     }
 
     public void upp() {
+        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

@@ -10,7 +10,7 @@ import thePackmaster.powers.thieverypack.ThieveryMasteryPower;
 public class ThieveryMastery extends AbstractThieveryCard {
 	public static final String RAW_ID = "ThieveryMastery";
 	public static final String ID = SpireAnniversary5Mod.makeID(RAW_ID);
-	private static final int COST = 1;
+	private static final int COST = 0;
 	private static final AbstractCard.CardType TYPE = CardType.POWER;
 	private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
 	private static final AbstractCard.CardTarget TARGET = CardTarget.SELF;

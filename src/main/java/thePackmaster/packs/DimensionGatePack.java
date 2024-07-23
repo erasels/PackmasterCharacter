@@ -13,25 +13,26 @@ public class DimensionGatePack extends AbstractCardPack {
     public static final String NAME = UI_STRINGS.TEXT[0];
     public static final String DESC = UI_STRINGS.TEXT[1];
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
+    public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public DimensionGatePack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, CREDITS, new PackSummary(4, 3, 3, 2, 4, PackSummary.Tags.Debuffs));
     }
 
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
         cards.add(Anemia.ID);
-        cards.add(ArsenalGear.ID);
-        cards.add(ConjureBarrage.ID);
-        cards.add(DarkRitual.ID);
-        cards.add(Inferno.ID);
-        cards.add(Knighthood.ID);
         cards.add(LethalShot.ID);
-        cards.add(Minniegun.ID);
-        cards.add(PackRat.ID);
-        cards.add(ScorchedEarth.ID);
-        cards.add(MagicMissile.ID);
+        cards.add(BleedItOut.ID);
+        cards.add(BoosterShot.ID);
+        cards.add(RangersSetup.ID);
+        cards.add(Scheme.ID);
+        cards.add(ScrollOfIntellect.ID);
+        cards.add(Sustenance.ID);
+        cards.add(TheEncyclopedia.ID);
+        cards.add(TomeOfIntellect.ID);
+        cards.add(Trace.ID);
         return cards;
     }
 }

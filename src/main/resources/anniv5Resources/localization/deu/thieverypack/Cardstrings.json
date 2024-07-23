@@ -1,0 +1,47 @@
+{
+  "${ModID}:DrainShield": {
+    "NAME": "Schutz entziehen",
+    "DESCRIPTION": "Stehle alle Block Werte des Gegners. NL Verursache !D! Schaden."
+  },
+  "${ModID}:FairTrade": {
+    "NAME": "Fairer Handel",
+    "DESCRIPTION": "Füge zweimal !D! Schaden zu. NL Du und der Gegner erhalten jeweils !M! Stärke."
+  },
+  "${ModID}:Smokescreen": {
+    "NAME": "Rauchvorhang",
+    "DESCRIPTION": "ALLE erhalten !B! Block. NL ALLE Gegner verlieren !M! Lebenspunkte."
+  },
+  "${ModID}:NullHammer": {
+    "NAME": "Nullhammer",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Stehle alle Buffs, die dieser Gegner bis zu deinem nächsten Zug erhält."
+  },
+  "${ModID}:Magnet": {
+    "NAME": "Magnet",
+    "DESCRIPTION": "Stehle []Artefakt, Plattenrüstung, []Dornen und Metallisieren vom Gegner. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Stehle []Artefakt, Plattenrüstung, []Dornen und Metallisieren von ALLEN Gegnern. NL Erschöpfen."
+  },
+  "${ModID}:StrengthSap": {
+    "NAME": "Stärkeentzug",
+    "DESCRIPTION": "Wende !M! Schwach an. NL Wenn der Gegner positive Stärke hat, stehle !${ModID}:m2! Stärke. NL (Diesen Kampf noch !stslib:ex! Mal einsetzbar)."
+  },
+  "${ModID}:CunningPoison": {
+    "NAME": "Listiges Gift",
+    "DESCRIPTION": "Verursache am Gegner mit den höchsten Lebenspunkten !M! Gift. NL Wenn er vergiftet stirbt, erhalte !${ModID}:m2! Gold. NL Erschöpfen."
+  },
+  "${ModID}:MindControl": {
+    "NAME": "Gedankenkontrolle",
+    "DESCRIPTION": "Wähle einen Gegner mit !M! mal X oder weniger LP. NL Er wird für den Rest des Kampfes andere Gegner angreifen. NL Erschöpfen.",
+    "EXTENDED_DESCRIPTION": [
+      "Dieser Gegner hat zu hohe LP."
+    ]
+  },
+  "${ModID}:Witchcraft": {
+    "NAME": "Hexenkunst",
+    "DESCRIPTION": "Stehle !M! LP vom Gegner. Wenn tödlich, erhalte einen Trank, der 8 temporäre LP gewährt. NL Erschöpfen."
+  },
+  "${ModID}:ThieveryMastery": {
+    "NAME": "Diebesmeisterschaft",
+    "DESCRIPTION": "Du wirst zum Meisterdieb. NL (Immer wenn du etwas stiehlst, erhalte die doppelte Menge davon.)",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Du wirst zum Meisterdieb. NL (Immer wenn du etwas stiehlst, erhalte die doppelte Menge davon.)"
+  }
+}

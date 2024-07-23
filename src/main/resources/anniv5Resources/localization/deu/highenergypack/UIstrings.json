@@ -1,0 +1,15 @@
+{
+  "${ModID}:HighEnergyPack": {
+    "TEXT": [
+      "Energiegeladen",
+      "Konzentrieren deine Kraft darauf, jede Menge Energie zu gewinnen und diese für teure Karten auszugeben!",
+      "Vex"
+    ]
+  },
+  "${ModID}:HighEnergyPackHat": {
+    "TEXT": [
+      "Die Rückseite beschreibt 'solarbetriebenes-Gerät'.",
+      "Energetische Farbtöne"
+    ]
+  }
+}

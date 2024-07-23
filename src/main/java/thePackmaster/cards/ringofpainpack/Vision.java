@@ -5,8 +5,6 @@ import com.megacrit.cardcrawl.actions.common.BetterDrawPileToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EquilibriumPower;
-import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -14,7 +12,7 @@ import static thePackmaster.util.Wiz.atb;
 public class Vision extends AbstractRingOfPainCard {
     public final static String ID = makeID(Vision.class.getSimpleName());
 
-    private static final int SEEK = 2;
+    private static final int SEEK = 1;
     private static final int UP_SEEK = 1;
 
     public Vision() {

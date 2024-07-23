@@ -1,0 +1,52 @@
+{
+  "${ModID}:ChargeUp": {
+    "NAME": "蓄力",
+    "DESCRIPTIONS": [
+      "#y蓄力 达到 #b%s 层或以上时，下次攻击造成双倍伤害并失去 #b%s 层 #y蓄力 。"
+    ]
+  },
+  "${ModID}:Inertia": {
+    "NAME": "惯性",
+    "DESCRIPTIONS": [
+      "每当一张牌被 #y消耗 或 #y增幅 时，获得 #b%s 层 #y蓄力 。"
+    ]
+  },
+  "${ModID}:EarthlightRay": {
+    "NAME": "地球光",
+    "DESCRIPTIONS": [
+      "获得 #y蓄力 时，对所有敌人造成 #y蓄力 层数点的伤害。",
+      "获得 #y蓄力 时，对所有敌人造成 #y蓄力 层数 #b%s 倍点伤害。"
+    ]
+  },
+  "${ModID}:BuildingCharge": {
+    "NAME": "聚力",
+    "DESCRIPTIONS": [
+      "本回合每打出一张牌，获得 #b%s 层 #y蓄力 。"
+    ]
+  },
+  "${ModID}:StardustReverie": {
+    "NAME": "星屑幻想",
+    "DESCRIPTIONS": [
+      "#y消耗 你打出的下张牌来获得 #b%s 层 #y蓄力 ，并抽 #b1 张牌。"
+    ]
+  },
+  "${ModID}:StarCasket": {
+    "NAME": "星屑幻想",
+    "DESCRIPTIONS": [
+      "每当你获得 #y格挡 ，获得 #b%s 层 #y蓄力 。"
+    ]
+  },
+  "${ModID}:FreeAmplify": {
+    "NAME": "免费增幅",
+    "DESCRIPTIONS": [
+      "下一次 #y增幅 效果不会消耗能量。",
+      "下 #b%s 次 #y增幅 效果不会消耗能量。"
+    ]
+  },
+  "${ModID}:EventHorizon": {
+    "NAME": "事件视界",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b%s 层 #y活力。"
+    ]
+  }
+}

@@ -1,9 +1,11 @@
 package thePackmaster.cards.bellordpack;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -32,10 +34,10 @@ public class SavedByTheBell extends AbstractBellordCard implements OnObtainCard 
 
     @Override
     public void onObtainCard() {
-        float fractical = Settings.WIDTH / 4;
+        CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
+        float fractical = Settings.WIDTH / 3;
         AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), fractical, Settings.HEIGHT / 2));
         AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), fractical * 2, Settings.HEIGHT / 2));
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), fractical * 3, Settings.HEIGHT / 2));
     }
 
     public void upp() {

@@ -1,0 +1,15 @@
+{
+  "${ModID}:WomanInBluePack": {
+    "TEXT": [
+      "Blue's Gebräue",
+      "Eine Sammlung nützlicher Erschöpfungs Karten zum Thema Zaubertränke. Enthält mehrere Mehrfachauswahl Karten.",
+      "MichaelMayhem"
+    ]
+  },
+  "${ModID}:WomanInBluePackHat": {
+    "TEXT": [
+      "Wird überall dort getragen, wo sich Ärger zusammenbraut.",
+      "Der Hut in Blau"
+    ]
+  }
+}

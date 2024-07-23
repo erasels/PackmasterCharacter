@@ -1,0 +1,52 @@
+{
+  "${ModID}:Excitement": {
+    "NAME": "Begeisterung",
+    "DESCRIPTION": "Erhalte [E] [E] . NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] . NL (Diesen Kampf noch !stslib:ex! Mal einsetzbar) ."
+  },
+  "${ModID}:LayeredDefenses": {
+    "NAME": "Schichtabwehr",
+    "DESCRIPTION": "Erhalte !B! Block für jede Kartensorte in deiner Hand.",
+    "EXTENDED_DESCRIPTION": [" NL ({0} Kartentypen.)"]
+  },
+  "${ModID}:PreemptiveStrike": {
+    "NAME": "Präventivschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Füge erneut !D! Schaden zu, falls der Gegner beabsichtigt anzugreifen."
+  },
+  "${ModID}:PlasmaShield": {
+    "NAME": "Plasmaschild",
+    "DESCRIPTION": "Am Ende deines Zuges, erhalte !M! Block, wenn du Plasma hast. NL Erschaffe !${ModID}:m2! Plasma."
+  },
+  "${ModID}:Enrage": {
+    "NAME": "Raserei",
+    "DESCRIPTION": "Wirf !${ModID}:m2! Karten ab. NL Ziehe !M! Karten. NL Betrete ${ModID}:Aggression."
+  },
+  "${ModID}:Whispers": {
+    "NAME": "Flüstern",
+    "DESCRIPTION": "Ziehe !M! Karten. NL Füge deiner Hand eine *Benommenheit hinzu."
+  },
+  "${ModID}:Replenish": {
+    "NAME": "Auffüllen",
+    "DESCRIPTION": "Nimm zwei Karten aus deinem Abwurfstapel zurück auf deine Hand. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Nimm zwei Karten aus deinem Abwurfstapel zurück auf deine Hand."
+  },
+  "${ModID}:LesserHex": {
+    "NAME": "Geringer Fluch",
+    "DESCRIPTION": "Füge !M! Schwach und !M! Verwundbar hinzu. NL Der Gegner verliert !M! Stärke. NL Füge deinem Abwurfstapel eine *Großer\u00a0Fluch hinzu. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Füge !M! Schwach und !M! Verwundbar hinzu. NL Der Gegner verliert !M! Stärke. NL Füge deinem Abwurfstapel eine *Großer\u00a0Fluch+ hinzu. NL Erschöpfen."
+  },
+  "${ModID}:GreaterHex": {
+    "NAME": "Großer Fluch",
+    "DESCRIPTION": "Füge !M! Schwach und !M! Verwundbar hinzu. NL Der Gegner verliert !M! Stärke. NL Erschöpfen."
+  },
+  "${ModID}:Conjuration": {
+    "NAME": "Beschwörung",
+    "DESCRIPTION": "Wähle eine Karte aus deinem Nachziehstapel. NL Spiele sie und erschöpfe sie.",
+    "UPGRADE_DESCRIPTION": "Wähle eine Karte aus deinem Nachziehstapel. NL Spiele sie.",
+    "EXTENDED_DESCRIPTION": ["Da sind keine Karten in deinem Nachziehstapel."]
+  },
+  "${ModID}:RareStrike": {
+    "NAME": "Seltener Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Fügt für jede deiner *Seltenen Karten zusätzlichen Schaden von !M! zu."
+  }
+}

@@ -3,8 +3,6 @@ package thePackmaster.cards.utilitypack;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -15,8 +13,8 @@ import thePackmaster.vfx.utilitypack.HexEffect;
 
 public class GreaterHex extends AbstractPackmasterCard {
     public static final String ID = SpireAnniversary5Mod.makeID("GreaterHex");
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    private static final int COST = 2;
+    private static final int UPGRADE_COST = 1;
     private static final int STATS = 2;
 
     public GreaterHex() {

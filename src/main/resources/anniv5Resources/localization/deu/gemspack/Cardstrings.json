@@ -1,0 +1,52 @@
+{
+  "${ModID}:TempStrengthGem": {
+    "NAME": "Rubin",
+    "DESCRIPTION": "${ModID}:Edelstein. NL \"Erhalte 2 temporäre Stärke\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Edelstein (2 Anwendungen). NL \"Erhalte 2 temporäre Stärke\""
+  },
+  "${ModID}:FrostGem": {
+    "NAME": "Aquamarin",
+    "DESCRIPTION": "${ModID}:Edelstein. NL \"Erschaffe 1 Frost\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Edelstein (2 Anwendungen). NL \"Erschaffe 1 Frost\""
+  },
+  "${ModID}:LightningGem": {
+    "NAME": "Fragmentierter Edelstein",
+    "DESCRIPTION": "${ModID}:Edelstein. NL \"Erschaffe 1 Blitz\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Edelstein (2 Anwendungen). NL \"Erschaffe 1 Blitz\""
+  },
+  "${ModID}:RetainGem": {
+    "NAME": "Bernstein",
+    "DESCRIPTION": "Unspielbar ${ModID}:Edelstein. NL \"Karte erhält Behalten\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Edelstein (2 Anwendungen). NL \"Karte erhält Behalten\""
+  },
+  "${ModID}:DrawGem": {
+    "NAME": "Opal",
+    "DESCRIPTION": "${ModID}:Edelstein. NL \"Ziehe 1 Karte\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Edelstein (2 Anwendungen). NL \"Ziehe 1 Karte\""
+  },
+  "${ModID}:EnergyGem": {
+    "NAME": "Citrin",
+    "DESCRIPTION": "${ModID}:Edelstein. NL \"Erhalte [E] nächste Runde\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Edelstein (2 Anwendungen). NL \"Erhalte [E] nächste Runde\""
+  },
+  "${ModID}:CleanseGem": {
+    "NAME": "Onyx",
+    "DESCRIPTION": "${ModID}:Edelstein. NL \"Verringere Debuffs um 1\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Edelstein (2 Anwendungen). NL \"Verringere Debuffs um 1\""
+  },
+  "${ModID}:DiceGem": {
+    "NAME": "Turmalin",
+    "DESCRIPTION": "${ModID}:Edelstein. NL \"Würfele einen ${ModID}:D6\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Edelstein (2 Anwendungen). NL \"Würfele einen ${ModID}:D6\""
+  },
+  "${ModID}:OccultGem": {
+    "NAME": "Lapislazuli",
+    "DESCRIPTION": "Unspielbar ${ModID}:Edelstein. NL \"Karte erhält ${ModID}:Okkult\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Edelstein (2 Anwendungen). NL \"Karte erhält ${ModID}:Okkult\""
+  },
+  "${ModID}:PersistGem": {
+    "NAME": "Granat",
+    "DESCRIPTION": "Unspielbar ${ModID}:Edelstein. NL \"Karte erhält stslib:Persist 2\"",
+    "UPGRADE_DESCRIPTION": "${ModID}:Edelstein (2 Anwendungen). NL \"Karte erhält stslib:Persist 2\""
+  }
+}

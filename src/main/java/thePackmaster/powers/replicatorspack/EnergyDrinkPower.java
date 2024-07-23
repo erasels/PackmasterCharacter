@@ -13,11 +13,11 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class EnergyDrinkPower extends AbstractPackmasterPower implements CloneablePowerInterface {
     public static final String POWER_ID = makeID("EnergyDrinkPower");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
-    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 
     public EnergyDrinkPower(AbstractCreature owner, int amount) {
-        super(POWER_ID,NAME, AbstractPower.PowerType.BUFF,true,owner,amount);
+        super(POWER_ID,NAME, AbstractPower.PowerType.BUFF,false,owner,amount);
 
     }
 

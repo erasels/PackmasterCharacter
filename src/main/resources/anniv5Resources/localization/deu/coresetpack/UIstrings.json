@@ -1,0 +1,15 @@
+{
+  "${ModID}:CoreSetPack": {
+    "TEXT": [
+      "Kern Paket",
+      "Eine zuverlässige Auswahl einfacher, nützlicher Karten.",
+      "Packmaster-Team"
+    ]
+  },
+  "${ModID}:CoreSetPackHat": {
+    "TEXT": [
+      "Manchmal ist weniger mehr.",
+      "Hutlos"
+    ]
+  }
+}

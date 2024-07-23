@@ -1,0 +1,7 @@
+[
+  {
+    "PROPER_NAME": "Frostbiss",
+    "NAMES": ["frostbiss"],
+    "DESCRIPTION": "Ein Gegner verliert zu Beginn seines Zuges HP in Höhe von #yFrostbiss. Anschließend wird #yFrostbiss halbiert. NL Wenn ein Gegner mit #yFrostbiss Schaden durch Angriffe erleidet, wird #b1 #yFrostbiss hinzugefügt."
+  }
+]

@@ -15,21 +15,21 @@ public class BitingColdPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public BitingColdPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 2, 3, 3, PackSummary.Tags.Debuffs));
     }
 
     @Override
     public ArrayList<String> getCards() {
         ArrayList<String> cards = new ArrayList<>();
-        cards.add(ColdSeason.ID);
         cards.add(FrigidBody.ID);
         cards.add(Frostburn.ID);
-        cards.add(Glaciate.ID);
+        cards.add(FrostedEdge.ID);
         cards.add(GrowingAffliction.ID);
-        cards.add(IcicleSpear.ID);
+        cards.add(IceShatter.ID);
         cards.add(InsultToInjury.ID);
         cards.add(Refrigerate.ID);
         cards.add(RelentlessHail.ID);
+        cards.add(SnowedIn.ID);
         cards.add(Subdue.ID);
         return cards;
     }

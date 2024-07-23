@@ -13,7 +13,7 @@ public class Aqueducts extends AbstractHydrologistCard {
 
     public Aqueducts() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.NONE, Subtype.WATER);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

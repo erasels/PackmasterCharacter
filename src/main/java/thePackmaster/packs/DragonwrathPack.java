@@ -3,7 +3,6 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.WitchesStrike.ChitteringPunt;
 import thePackmaster.cards.dragonwrathpack.*;
 
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ public class DragonwrathPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public DragonwrathPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 2, 1, 2, 5, PackSummary.Tags.Debuffs));
     }
 
     @Override

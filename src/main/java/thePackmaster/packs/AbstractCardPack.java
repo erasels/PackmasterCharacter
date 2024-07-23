@@ -8,6 +8,8 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.hats.HatMenu;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -19,10 +21,11 @@ public abstract class AbstractCardPack {
     public String creditsHeader;
     public String credits;
     public ArrayList<AbstractCard> cards;
-    public AbstractPackPreviewCard previewPackCard;
+    public PackSummary summary;
+    public PackPreviewCard previewPackCard;
     public boolean hatHidesHair;
 
-    public AbstractCardPack(String id, String name, String description, String author, String credits) {
+    public AbstractCardPack(String id, String name, String description, String author, String credits, PackSummary summary) {
         this.packID = id;
         this.name = name;
         this.description = description;
@@ -30,12 +33,13 @@ public abstract class AbstractCardPack {
         this.credits = credits;
         this.creditsHeader = CardCrawlGame.languagePack.getUIString(makeID("CreditsRenderStrings")).TEXT[0];
         this.cards = new ArrayList<>();
+        this.summary = summary;
         hatStrings = CardCrawlGame.languagePack.getUIString(this.packID + "Hat");
         initializePack();
     }
 
-    public AbstractCardPack(String id, String name, String description, String author) {
-        this(id, name, description, author, null);
+    public AbstractCardPack(String id, String name, String description, String author, PackSummary summary) {
+        this(id, name, description, author, null, summary);
     }
 
     public abstract ArrayList<String> getCards();
@@ -52,10 +56,11 @@ public abstract class AbstractCardPack {
             cards.add(c.makeStatEquivalentCopy());
         }
         previewPackCard = makePreviewCard();
+        SpireAnniversary5Mod.cardParentMap.put(previewPackCard.cardID, packID);
     }
 
-    public AbstractPackPreviewCard makePreviewCard() {
-        return new CardPackPreview(packID, this);
+    public PackPreviewCard makePreviewCard() {
+        return new PackPreviewCard(packID, this);
     }
 
     public ArrayList<String> getPackPotions() {
@@ -76,4 +81,27 @@ public abstract class AbstractCardPack {
         return hatStrings.TEXT[0];
     }
 
+    public String getHatPath() {
+        return SpireAnniversary5Mod.modID + "Resources/images/hats/" + packID.replace(SpireAnniversary5Mod.modID + ":", "") + "Hat.png";
+    }
+
+    public static class PackSummary {
+        public enum Tags {
+            None, Strength, Exhaust, Orbs, Stances, Discard, Debuffs, Attacks, Tokens, Powers
+        }
+
+        public int offense, defense, support, frontload, scaling;
+        public HashSet<Tags> tags = new HashSet<>();
+
+        public PackSummary(int offense, int defense, int support, int frontload, int scaling, Tags... tags) {
+            this.offense = offense;
+            this.defense = defense;
+            this.support = support;
+            this.frontload = frontload;
+            this.scaling = scaling;
+            Collections.addAll(this.tags, tags);
+            if (this.tags.isEmpty())
+                this.tags.add(Tags.None);
+        }
+    }
 }

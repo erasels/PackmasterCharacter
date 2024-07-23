@@ -1,0 +1,242 @@
+{
+  "${ModID}:ModalChoice": {
+    "TEXT": [
+      "Wähle ein Pack aus.",
+      "Auswählen."
+    ]
+  },
+  "${ModID}:PackPreviewCard": {
+    "TEXT": [
+      "Künstler: ",
+      "Pack",
+      "Hut freigeschaltet",
+      "Hut gesperrt"
+    ]
+  },
+  "${ModID}:AtGameStart": {
+    "TEXT": [
+      "Dies sind die verfügbaren Packs für dieses Lauf. Klicke auf Bestätigen, um fortzufahren."
+    ]
+  },
+  "${ModID}:IroncladPack": {
+    "TEXT": [
+      "Der Eiserne - Ideale",
+      "Eine Sammlung zuverlässiger Eisernen Karten, inklusive Zugang zu Stärke.",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:IroncladPackHat": {
+    "TEXT": [
+      "Eine harte Maske für einen harten Kerl.",
+      "Eisenhelm"
+    ]
+  },
+  "${ModID}:SilentPack": {
+    "TEXT": [
+      "Die Stille - Showdown",
+      "Eine Sammlung zuverlässiger Stille Karten, inklusive Zugang zu Messer und Abwurf.",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:SilentPackHat": {
+    "TEXT": [
+      "Ein makabres Andenken, das jetzt dein Haupt schmückt.",
+      " Die Stille Trophäe"
+    ]
+  },
+  "${ModID}:DefectPack": {
+    "TEXT": [
+      "Defekte Träume",
+      "Eine Sammlung von Defekt Karten, die sich auf Orb Erschaffung konzentriert.",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:DefectPackHat": {
+    "TEXT": [
+      "Du verspürst einen seltsamen Drang, Gleichgewicht herzustellen.",
+      "Defekt-Schnittstelle"
+    ]
+  },
+  "${ModID}:AllForOnePack": {
+    "TEXT": [
+      "Alle für einen",
+      "Eine Sammlung von Basis-Spielkarten mit Schwerpunkt auf 0-Kosten und Ziehen.",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:AllForOnePackHat": {
+    "TEXT": [
+      "Gemeinsam stehen wir stark, und getrennt fallen wir.",
+      "Musketeers Kappe"
+    ]
+  },
+  "${ModID}:WatcherPack": {
+    "TEXT": [
+      "Wille der Seherin",
+      "Eine Sammlung zuverlässiger Seherin Karten (kein Zugang zu Haltungen).",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:WatcherPackHat": {
+    "TEXT": [
+      "Nachdenkliches Gesichtsaccessoire & Zubehör.",
+      "Seherin Schleier"
+    ]
+  },
+  "${ModID}:BulwarkPack": {
+    "TEXT": [
+      "Bollwerk",
+      "Die größten Verteidigungswerkzeuge des Spire, erstmals an einem Ort vereint.",
+      "modargo"
+    ]
+  },
+  "${ModID}:BulwarkPackHat": {
+    "TEXT": [
+      "Umfassender Schutz.",
+      "Die Kopfbefestigung"
+    ]
+  },
+  "${ModID}:PackMainMenuUI": {
+    "TEXT": [
+      "Benutzerdefinierten Draft-Modus",
+      "Aktivieren Sie dies, um zu wählen, wie Ihre Packs bestimmt werden.",
+      "Zufällig",
+      "Wahl von ",
+      "Pack-Filtermenü",
+      "Hut Menü",
+      "",
+      "Keiner"
+    ]
+  },
+  "${ModID}:PackSetup": {
+    "TEXT": [
+      "Draften Sie ein Pack!",
+      "Aktuelle Packs",
+      "Packbewertungen anzeigen"
+    ]
+  },
+  "${ModID}:CurrentRunCardsTopPanelItem": {
+    "TEXT": [
+      "Packs",
+      "{0} NL NL Klicken Sie hier, um den Kartenpool für diesen Lauf anzuzeigen.",
+      "Karten verfügbar in diesem Lauf"
+    ]
+  },
+  "${ModID}:CreditsRenderStrings": {
+    "TEXT": [
+      "Zusätzliche Credits"
+    ]
+  },
+  "${ModID}:PackFilterMenu": {
+    "TEXT": [
+      "Pack aktivieren"
+    ]
+  },
+  "${ModID}:Compendium": {
+    "TEXT": [
+      "Nach Packs"
+    ]
+  },
+  "${ModID}:RunHistory": {
+    "TEXT": [
+      "Packs:"
+    ]
+  },
+  "${ModID}:CardTypeStrings": {
+    "TEXT": [
+      "Chance"
+    ]
+  },
+  "${ModID}:HatMenu": {
+    "TEXT": [
+      "Basis Hut",
+      "(L)",
+      "Besiege Akt 3 mit dem ",
+      " Pack, um diesen Hut für zukünftige Läufe freizuschalten.",
+      "Der Hut für das ",
+      " Pack. Echter Geschmack kommt!",
+      "(!)",
+      " hat kein entsprechendes Hutbild. Bitte beheben.",
+      "Ein zufälliger Hut wird zu Beginn jedes Laufs ausgewählt.",
+      "Zufälliger Hut",
+      " Pack",
+      "Regenbogenhut"
+    ]
+  },
+  "${ModID}:ConfigMenuText": {
+    "TEXT": [
+      "Der Packmeister",
+      "StS Modding Community",
+      "Fügt einen neuen Charakter hinzu: Der Packmeister.",
+      "ALLE PACKS-MODUS. Ignoriert benutzerdefinierten Draft, schaltet keine Hüte frei",
+      "Ein Rahmen für alle. Alle Pack-Karten haben normale Packmeister-Rahmen (erfordert Neustart).",
+      "Inhalte teilen. Einige Relikte/Tränke können bei anderen Charakteren erscheinen (erfordert Neustart).",
+      "Erlauben Sie das mehrmalige Auswählen von Keiner im benutzerdefinierten Draft-Modus (kann bei einigen Packauswahlen zu Abstürzen/Freezes führen)"
+    ]
+  },
+  "${ModID}:PMBoosterBoxCardReward": {
+    "TEXT": [
+      "Fügen Sie eine Booster Box Karte hinzu",
+      "Wählen Sie eine Booster Box Karte aus"
+    ]
+  },
+  "${ModID}:SingleCardReward": {
+    "TEXT": [
+      "[Karte] ",
+      "Tipp: Rechtsklick für detaillierte Kartenansicht!"
+    ]
+  },
+  "${ModID}:PackSummaryDisplay": {
+    "TEXT": [
+      "Packzusammenfassung",
+      "Angriff: {0}",
+      "Verteidigung: {0}",
+      "Unterstützung: {0}",
+      "Geschwindigkeit: {0}",
+      "Skalierung: {0}",
+      "Tags: {0}",
+      ", "
+    ],
+    "TEXT_DICT": {
+      "None": "Keiner",
+      "Strength": "Stärke",
+      "Exhaust": "Erschöpfen",
+      "Orbs": "Orbs",
+      "Stances": "Haltungen",
+      "Discard": "Abwerfen",
+      "Debuffs": "Debuffs",
+      "Attacks": "Angriffe",
+      "Magic":  "Magie",
+      "Tokens": "Marken",
+      "Powers": "Mächte"
+    }
+  },
+  "${ModID}:MerchantSpeech": {
+    "TEXT": [
+      "@Schicker Hut@",
+      "Bessere Angebote hier als auf dem Schwarzmarkt",
+      "Das ist ein ~großer~ Rucksack",
+      "Dich habe ich in letzter Zeit oft gesehen"
+    ]
+  },
+  "${ModID}:MerchantEndingSpeech": {
+    "TEXT": [
+      "Was hast du darin eigentlich?",
+      "Eines Tages werden sie das letzte Pack machen."
+    ]
+  },
+  "${ModID}:MainMenuExpansionPacksButton": {
+    "TEXT": [
+      "Zusätzliche Packs aktivieren!",
+      "Dir fehlen einige Packs, #gklicke #ghier #gum #gsie #gzu #gaktivieren. Mehr Vielfalt, aber längere initiale Ladezeit. NL #yErfordert #yNeustart!",
+      "Neustart erforderlich!"
+    ]
+  },
+  "${ModID}:MainMenuFTUE": {
+    "TEXT": [
+      "Packmaster-Erweiterungspacks!",
+      "Hey, aufgrund von Speicherproblemen haben wir Packmaster modular gestaltet. Daher müssen Sie \"Der Packmeister: Erweiterungspacks\" aktivieren, um alle Packs zu erhalten. NL Aktivieren Sie es selbst oder verwenden Sie die praktische Schaltfläche auf der rechten Seite des Hauptmenüs.",
+      "Fortsetzen"
+    ]
+  }
+}

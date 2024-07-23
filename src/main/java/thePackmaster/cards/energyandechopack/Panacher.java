@@ -2,7 +2,6 @@ package thePackmaster.cards.energyandechopack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.energyandechopack.PanacherPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

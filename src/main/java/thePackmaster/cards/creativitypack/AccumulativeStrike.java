@@ -1,16 +1,12 @@
 package thePackmaster.cards.creativitypack;
 
-import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.actions.FlexibleDiscoveryAction;
 import thePackmaster.cardmodifiers.creativitypack.AccumulativeDamageModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.util.JediUtil;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -22,12 +18,14 @@ public class AccumulativeStrike extends AbstractCreativityCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         magicNumber = baseMagicNumber = 2;
         CardModifierManager.addModifier(this, new AccumulativeDamageModifier(magicNumber));
-        baseDamage = damage = 12;
+        baseDamage = damage = 8;
         tags.add(CardTags.STRIKE);
     }
 
     @Override
     public void upp() {
+        upgradeMagicNumber(1);
+        CardModifierManager.getModifiers(this, AccumulativeDamageModifier.ID).forEach(m -> ((AccumulativeDamageModifier)m).setDamageRamp((this.magicNumber)));
     }
 
     @Override

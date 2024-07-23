@@ -4,7 +4,6 @@ import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -25,6 +24,8 @@ public class Porcupine extends AbstractSummonsCard {
     public Porcupine() {
         super(ID, COST, TYPE, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
+        this.showEvokeValue = true;
+        this.showEvokeOrbCount = 1;
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
         cardsToPreview = new Quill();

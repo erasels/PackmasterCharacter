@@ -2,11 +2,10 @@ package thePackmaster.cards.distortionpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.distortionpack.DeteriorationPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class Deterioration extends AbstractDistortionCard {
     public final static String ID = makeID("Deterioration");

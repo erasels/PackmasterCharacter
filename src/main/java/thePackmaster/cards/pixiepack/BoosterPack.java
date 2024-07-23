@@ -25,7 +25,7 @@ public class BoosterPack extends AbstractPixieCard {
     private static final int upgradeMagic = 5;
 
     public BoosterPack() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = baseMagic;
     }
 
@@ -38,14 +38,14 @@ public class BoosterPack extends AbstractPixieCard {
 
     @Override
     public void upp() {
-        this.upgradeMagicNumber(upgradeMagic-baseMagic);
+        upgradeBaseCost(0);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         for(int i = 0; i < this.magicNumber; i++)
         {
-            AbstractCard toAdd = PixiePack.pixieGenerate(null,null,null);
+            AbstractCard toAdd = PixiePack.pixieGenerate(null,null,null,null);
             CardModifierManager.addModifier(toAdd,new EtherealMod());
             addToBot(new MakeTempCardInHandAction(toAdd));
         }

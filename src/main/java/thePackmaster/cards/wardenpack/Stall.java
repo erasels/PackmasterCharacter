@@ -18,7 +18,7 @@ public class Stall extends AbstractWardenCard {
 
     public Stall() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 8;
         baseMagicNumber = 2;
         magicNumber = baseMagicNumber;
     }

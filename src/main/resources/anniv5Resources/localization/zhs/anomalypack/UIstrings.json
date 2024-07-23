@@ -1,0 +1,15 @@
+{
+  "${ModID}:AnomalyPack": {
+    "TEXT": [
+      "异常",
+      "奇奇怪怪的牌，让你跳出思维定式。",
+      "PureQuestion"
+    ]
+  },
+  "${ModID}:AnomalyPackHat": {
+    "TEXT": [
+      "神秘且全知。",
+      "异常8号球"
+    ]
+  }
+}

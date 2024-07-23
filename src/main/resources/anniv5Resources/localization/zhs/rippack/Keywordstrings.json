@@ -1,0 +1,44 @@
+[
+  {
+    "PROPER_NAME": "可撕裂",
+    "NAMES": [
+      "rippable",
+      "ripped",
+      "rip",
+      "可撕裂",
+      "撕裂"
+    ],
+    "DESCRIPTION": "战斗中右键点击将其撕裂成两半， #y卡图 部分为原耗能且无效果， #y文本 部分为原效果且不耗能，两者都附带 #y消耗 。"
+  },
+  {
+    "PROPER_NAME": "卡图牌",
+    "NAMES": [
+      "art card",
+      "art_card",
+      "art cards",
+      "art_cards",
+      "art",
+      "卡图牌"
+    ],
+    "DESCRIPTION": "被 #y撕裂 牌的卡图部分，不造成任何效果且附带 #y消耗 。"
+  },
+  {
+    "PROPER_NAME": "文本牌",
+    "NAMES": [
+      "text card",
+      "text_card",
+      "text cards",
+      "text_cards",
+      "文本牌"
+    ],
+    "DESCRIPTION": "被 #y撕裂 牌的文本部分，附带 #y消耗 。"
+  },
+  {
+    "PROPER_NAME": "固无",
+    "NAMES": [
+      "unnate",
+      "固无"
+    ],
+    "DESCRIPTION": "每场战斗开始时，本牌被置于抽牌堆底部。"
+  }
+]

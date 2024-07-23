@@ -1,10 +1,8 @@
 package thePackmaster.cards.alignmentpack;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.cards.arcanapack.AbstractAstrologerCard;
 import thePackmaster.vfx.alignmentpack.FlashImageEffect;

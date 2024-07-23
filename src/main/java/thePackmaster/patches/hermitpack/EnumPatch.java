@@ -2,7 +2,6 @@ package thePackmaster.patches.hermitpack;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 
 public class EnumPatch {
     @SpireEnum

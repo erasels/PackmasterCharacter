@@ -9,7 +9,7 @@
   },
   "${ModID}:PaintBrush": {
     "NAME": "Paint Brush",
-    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n Upgraded} card with selected type and cost."
+    "DESCRIPTION": "{@@}Discover a card with selected type and cost. Exhaust{!Upgrades!|>0=ive !stslib:ex!}."
   },
   "${ModID}:Firewall": {
     "NAME": "Firewall",
@@ -17,7 +17,7 @@
   },
   "${ModID}:Souvenirs": {
     "NAME": "Souvenirs",
-    "DESCRIPTION": "{@@}Create a *Smite or *Safety in hand. It draws a card. {!Upgrades!|>0= NL Do it again.}"
+    "DESCRIPTION": "{@@}Create a *Smite{!Upgrades!|>0=+} or *Safety{!Upgrades!|>0=+} in hand. It draws a card."
   },
   "${ModID}:Mimicry": {
     "NAME": "Mimicry",
@@ -25,26 +25,33 @@
   },
   "${ModID}:CraftyMove": {
     "NAME": "Crafty Move",
-    "DESCRIPTION": "Deal !D! damage. If a card has been created this turn, gain [E] and draw a card."
+    "DESCRIPTION": "Deal !D! damage. If a card has been created this turn, gain [E] and draw 1 card."
   },
   "${ModID}:BarrierBeacon": {
     "NAME": "Barrier Beacon",
-    "DESCRIPTION": "{@@}Gain !B! Block, create a{!Upgrades!|>0=n Upgraded} copy of this in hand. NL Exhaust."
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Create a{!Upgrades!|>0=n Upgraded} *Barrier\u00a0Beacon in hand. NL Exhaust."
   },
   "${ModID}:StrikingStrike": {
     "NAME": "Striking Strike",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Discover a{!Upgrades!|>0=n Upgraded} strike. It Exhausts when played and costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Discover a strike. It Exhausts when played and costs 0 this turn."
   },
   "${ModID}:AccumulativeStrike": {
     "NAME": "Accumulative Strike",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Deals !M! additional damage for ALL your {!Upgrades!|0= non-Status} created cards."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your created cards."
   },
   "${ModID}:BrushModalTypeChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}Select this card type for Discovery."
+    "DESCRIPTION": "Select this card type for Discovery."
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "{@@}Select this card cost for Discovery."
+    "DESCRIPTION": "Select this card cost for Discovery.",
+    "EXTENDED_DESCRIPTION" : [
+      "Select this or higher card cost for Discovery."
+    ],
+    "COMMENTS": [
+      "This array is not used in the game",
+      "EX_DESC is used for cost 3+."
+    ]
   }
 }

@@ -1,45 +1,35 @@
 package thePackmaster.powers.creativitypack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import thePackmaster.onGenerateCardMidcombatInterface;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MakeshiftShieldPower
         extends AbstractPackmasterPower
-        implements onGenerateCardMidcombatInterface
-{
+        implements OnCreateCardInterface {
     public static final String POWER_ID = makeID(MakeshiftShieldPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public MakeshiftShieldPower(AbstractCreature owner, int amount)
-    {
+    public MakeshiftShieldPower(AbstractCreature owner, int amount) {
         super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
         loadRegion("blur");
     }
 
     @Override
-    public void updateDescription()
-    {
+    public void updateDescription() {
         description = String.format(DESCRIPTIONS[0], amount);
     }
 
     @Override
-    public void onCreateCard(AbstractCard card)
-    {
+    public void onCreateCard(AbstractCard card) {
         addToTop(new GainBlockAction(owner, owner, amount));
     }
 }

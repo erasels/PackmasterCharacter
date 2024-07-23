@@ -1,0 +1,22 @@
+{
+  "${ModID}:Inspiration": {
+    "NAME": "inspiration",
+    "DESCRIPTIONS": [
+      "Die nächste",
+      "Die nächsten #b",
+      " Karte, die du spielst, erhält um",
+      " Karten, die du spielst, erhalten um",
+      " #b",
+      "% erhöhten Schaden bzw. #yBlock."
+    ]
+  },
+  "${ModID}:SplendidForm": {
+    "NAME": "prächtige Form",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges erhältst du #yInspiration #b",
+      "Zu Beginn deines Zuges erhältst du #b",
+      " #yInspiration #b",
+      "."
+    ]
+  }
+}

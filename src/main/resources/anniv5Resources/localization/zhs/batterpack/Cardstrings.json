@@ -1,0 +1,44 @@
+{
+  "${ModID}:BatterUp": {
+    "NAME": "入区",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标意图攻击， NL ${ModID}:暴击 。"
+  },
+  "${ModID}:Homerun": {
+    "NAME": "全垒打",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本回合至少已打出2张牌， ${ModID}:暴击 。"
+  },
+  "${ModID}:WideAngle": {
+    "NAME": "广角",
+    "DESCRIPTION": "窃取 !M! 点 格挡 。 NL 给予1层 虚弱 。"
+  },
+  "${ModID}:WindUp": {
+    "NAME": "正面出击",
+    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 获得 [E] 。 NL 消耗 。"
+  },
+  "${ModID}:OpenBracket": {
+    "NAME": "开场一击",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 本回合接下来只能打出攻击牌。"
+  },
+  "${ModID}:Tragedy": {
+    "NAME": "悲剧",
+    "DESCRIPTION": "造成 !D! 点群体伤害。 NL 若有6+张手牌， NL ${ModID}:暴击 。"
+  },
+  "${ModID}:OptimizedBlur": {
+    "NAME": "视晕校正",
+    "DESCRIPTION": " ${ModID}:突破 时， NL 获得 !M! 点 格挡 。"
+  },
+  "${ModID}:HardCaramel": {
+    "NAME": "硬焦糖",
+    "DESCRIPTION": "攻击后若目标无 易伤 ，给予1层。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 攻击后若目标无 易伤 ，给予1层。"
+  },
+  "${ModID}:UltimateHomerun": {
+    "NAME": "终极全垒打",
+    "DESCRIPTION": "造成本场战斗造成过的最高 ${ModID}:突破 点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害)", " NL (造成 !D! 点伤害。 哇哦！)"]
+  },
+  "${ModID}:AvatarBeat": {
+    "NAME": "绝妙一击",
+    "DESCRIPTION": "造成10点以上 ${ModID}:突破 伤害时，获得 !M! 点 力量 ，抽一张牌，并将触发条件的伤害阈值提高5点。"
+  }
+}

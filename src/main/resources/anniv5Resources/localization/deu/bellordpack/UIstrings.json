@@ -1,0 +1,15 @@
+{
+  "${ModID}:BellordPack": {
+    "TEXT": [
+      "Bellord",
+      "Besiege Gegner mit verfluchten Karten! Reduziere ihre Stärke zu Staub!",
+      "Vex"
+    ]
+  },
+  "${ModID}:BellordPackHat": {
+    "TEXT": [
+      "Bete, dass niemand sie läutet.",
+      "Rufende Glocke"
+    ]
+  }
+}

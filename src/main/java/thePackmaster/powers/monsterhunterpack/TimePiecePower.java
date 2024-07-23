@@ -1,16 +1,11 @@
 package thePackmaster.powers.monsterhunterpack;
 
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.powers.AbstractPackmasterPower;
 
@@ -28,24 +23,28 @@ public class TimePiecePower extends AbstractPackmasterPower {
         super(POWER_ID, LOC_NAME, PowerType.BUFF, false, owner, amount);
         name = LOC_NAME;
         canGoNegative = false;
+
+        isTwoAmount = true;
+        amount2 = 0;
         updateDescription();
     }
 
     @Override
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        this.amount++;
-        if (this.amount > 12){
-            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 3), 3));
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        ++this.amount2;
+        if (this.amount2 >= 12) {
+            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
             this.flash();
             this.amount = 0;
         }
         else {
             this.flashWithoutSound();
         }
+        updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount2 + DESCRIPTIONS[2];
     }
 }

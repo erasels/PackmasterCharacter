@@ -1,0 +1,56 @@
+{
+  "${ModID}:AcidicSpray": {
+    "NAME": "酸液喷射",
+    "DESCRIPTION": "目标每有一种负面效果，造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
+  },
+  "${ModID}:PoisonMastery": {
+    "NAME": "精湛毒艺",
+    "DESCRIPTION": "中毒 造成的伤害翻倍。 NL 获得1瓶 *毒药水 。",
+    "UPGRADE_DESCRIPTION": "中毒 造成的伤害翻倍。 NL 获得 !M! 瓶 *毒药水 。"
+  },
+  "${ModID}:Cannonball": {
+    "NAME": "加农炮弹",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
+  },
+  "${ModID}:CaptainsCabin": {
+    "NAME": "舰长室",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *加农炮弹 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 张 *加农炮弹 。"
+  },
+  "${ModID}:TerrorOfTheSeas": {
+    "NAME": "海洋之怖",
+    "DESCRIPTION": "给予所有敌人 !M! 层 易伤 与 !${ModID}:m2! 层 ${ModID}:毁灭 。 NL 消耗 。"
+  },
+  "${ModID}:MassProduction": {
+    "NAME": "量产",
+    "DESCRIPTION": "选择抽牌堆一张牌， 消耗 所有手牌并将其变为已选牌。 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张手牌进行量产。"
+    ]
+  },
+  "${ModID}:ScrapCannon": {
+    "NAME": "破加农炮",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张牌。"
+  },
+  "${ModID}:BloodRitual": {
+    "NAME": "血液仪式",
+    "DESCRIPTION": "失去 !M! 点生命。 NL 获得1层 仪式 。"
+  },
+  "${ModID}:OverTime": {
+    "NAME": "超时",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗堆中每有一张牌，本牌伤害增加 !M! 点。"
+  },
+  "${ModID}:SlimeSpray": {
+    "NAME": "毒液喷剂",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害, 给予所有敌人 !M! 层 中毒 与 *缓慢 。"
+  },
+  "${ModID}:StickStrike": {
+    "NAME": "木棍打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *木棍 加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *木棍+ 加入抽牌堆。"
+  },
+  "${ModID}:Stick": {
+    "NAME": "木棍",
+    "DESCRIPTION": "本场战斗 *木棍打击 伤害增加 !M! 点。 NL 将上张打出的 *木棍打击 返回手牌。 NL 消耗 。"
+  }
+}

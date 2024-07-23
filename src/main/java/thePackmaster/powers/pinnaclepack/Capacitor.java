@@ -1,11 +1,11 @@
 package thePackmaster.powers.pinnaclepack;
 
-import thePackmaster.powers.AbstractPackmasterPower;
-
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import thePackmaster.powers.AbstractPackmasterPower;
+
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Capacitor extends AbstractPackmasterPower {

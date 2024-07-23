@@ -1,0 +1,242 @@
+{
+  "${ModID}:ModalChoice": {
+    "TEXT": [
+      "选择一种卡包。",
+      "选择。"
+    ]
+  },
+  "${ModID}:PackPreviewCard": {
+    "TEXT": [
+      "作者：",
+      "卡包",
+      "帽子已解锁",
+      "帽子未解锁"
+    ]
+  },
+  "${ModID}:AtGameStart": {
+    "TEXT": [
+      "这些卡包中的牌将会出现在本局游戏中，点击确认继续。"
+    ]
+  },
+  "${ModID}:IroncladPack": {
+    "TEXT": [
+      "铁甲战士的信念",
+      "一套可靠的战士牌，包括力量源。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:IroncladPackHat": {
+    "TEXT": [
+      "铁甲哥当戴铁甲盔。",
+      "战士头盔"
+    ]
+  },
+  "${ModID}:SilentPack": {
+    "TEXT": [
+      "静默猎手的收场",
+      "一套可靠的猎人牌，包括小刀与弃牌。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:SilentPackHat": {
+    "TEXT": [
+      "散发死亡气息的小物件，现在唯你命是从。",
+      "猎人战利品"
+    ]
+  },
+  "${ModID}:DefectPack": {
+    "TEXT": [
+      "故障性梦境",
+      "一套可靠的机器人牌，专注于充能球。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:DefectPackHat": {
+    "TEXT": [
+      "你感到一股奇怪的，想要确立平衡的欲望。",
+      "故障接口"
+    ]
+  },
+  "${ModID}:AllForOnePack": {
+    "TEXT": [
+      "万物一心",
+      "一套专注于0耗能与抽牌的原版牌。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:AllForOnePackHat": {
+    "TEXT": [
+      "合则挺，分则衰。",
+      "火枪手之帽"
+    ]
+  },
+  "${ModID}:WatcherPack": {
+    "TEXT": [
+      "观者之愿景",
+      "一套可靠的观者牌(不包含姿态牌)。",
+      "MegaCrit"
+    ]
+  },
+  "${ModID}:WatcherPackHat": {
+    "TEXT": [
+      "默祷者面饰。",
+      "观者面纱"
+    ]
+  },
+  "${ModID}:BulwarkPack": {
+    "TEXT": [
+      "堡垒",
+      "尖塔最为优秀的防御工具，首次被整合在一起。",
+      "modargo"
+    ]
+  },
+  "${ModID}:BulwarkPackHat": {
+    "TEXT": [
+      "绝对的防御性。",
+      "头堡"
+    ]
+  },
+  "${ModID}:PackMainMenuUI": {
+    "TEXT": [
+      "自定义构筑模式",
+      "启用此模式来自定义本局卡包的选择方式。",
+      "随机",
+      "随机",
+      "卡包剔除列表",
+      "帽子列表",
+      "选1",
+      "牌池卡包数减1"
+    ]
+  },
+  "${ModID}:PackSetup": {
+    "TEXT": [
+      "选择一组卡包来将其加入本局游戏的牌池！",
+      "已选定卡包：",
+      "显示卡包评分"
+    ]
+  },
+  "${ModID}:CurrentRunCardsTopPanelItem": {
+    "TEXT": [
+      "本局卡包：",
+      "{0} NL NL 点击查看本局牌池。",
+      "本局游戏作为卡牌奖励出现的牌"
+    ]
+  },
+  "${ModID}:CreditsRenderStrings": {
+    "TEXT": [
+      "额外标注"
+    ]
+  },
+  "${ModID}:PackFilterMenu": {
+    "TEXT": [
+      "启用该卡包"
+    ]
+  },
+  "${ModID}:Compendium": {
+    "TEXT": [
+      "卡包"
+    ]
+  },
+  "${ModID}:RunHistory": {
+    "TEXT": [
+      "卡包："
+    ]
+  },
+  "${ModID}:CardTypeStrings": {
+    "TEXT": [
+      "机会"
+    ]
+  },
+  "${ModID}:HatMenu": {
+    "TEXT": [
+      "基础帽子",
+      "(未解锁)",
+      "使用「",
+      "」卡包通过第3幕来解锁这顶帽子。",
+      "",
+      " 卡包的专属帽子，满满的沉浸感！",
+      "(!)",
+      " has no corresponding hat image. Please fix。",
+      "开局时使用随机一顶帽子。",
+      "随机帽子",
+      "卡包",
+      "彩虹帽子特效"
+    ]
+  },
+  "${ModID}:ConfigMenuText": {
+    "TEXT": [
+      "卡包大师",
+      "杀戮尖塔Mod社区",
+      "添加一名全新的角色：卡包大师。",
+      "全卡包模式：每局卡池都为所有卡包之和，该模式无法解锁帽子。",
+      "卡框大师：所有卡包的卡框都使用卡包大师基础牌的牌框。(需要重启游戏)",
+      "分享内容：一些卡包大师的遗物与药水可出现在其他角色的游戏中。(需要重启游戏)",
+      "允许在自定义构筑模式中降低一局牌池所需的卡包数。(提示：牌池牌数过低可能会导致游戏中闪退)"
+    ]
+  },
+  "${ModID}:PMBoosterBoxCardReward": {
+    "TEXT": [
+      "增强盒卡牌",
+      "选择是否将其加入牌组"
+    ]
+  },
+  "${ModID}:SingleCardReward": {
+    "TEXT": [
+      "[卡牌] ",
+      "提示：右键点击详细查看！"
+    ]
+  },
+  "${ModID}:PackSummaryDisplay": {
+    "TEXT": [
+      "卡包概要",
+      "伤害： {0}",
+      "防御： {0}",
+      "辅助： {0}",
+      "即效： {0}",
+      "成长： {0}",
+      "标签： {0}",
+      " 、 "
+    ],
+    "TEXT_DICT": {
+      "None":     "无",
+      "Strength": "力量",
+      "Exhaust":  "消耗",
+      "Orbs":     "充能球",
+      "Stances":  "姿态",
+      "Discard":  "弃牌",
+      "Debuffs":  "负面效果",
+      "Attacks":  "攻击",
+      "Magic":    "魔法",
+      "Tokens":   "代币牌",
+      "Powers":   "能力"
+    }
+  },
+  "${ModID}:MerchantSpeech": {
+    "TEXT": [
+      "@真漂亮的帽子@",
+      "和我打交道要比在黑市好",
+      "你那个背包真 ~大~",
+      "你这样的家伙我最近看见几回了"
+    ]
+  },
+  "${ModID}:MerchantEndingSpeech": {
+    "TEXT": [
+      "所以你那里面装的到底是什么？",
+      "也许有一天他们会做出最终卡包。"
+    ]
+  },
+  "${ModID}:MainMenuExpansionPacksButton": {
+    "TEXT": [
+      "启用额外卡包!",
+      "你缺少了一些新卡包， #g点击以启用它们 。额外卡包，额外玩法，不过加载时间更长。 NL #y需要重启游戏!",
+      "需要重启游戏!"
+    ]
+  },
+  "${ModID}:MainMenuFTUE": {
+    "TEXT": [
+      "卡包大师扩展包!",
+      "嘿，由于容量的问题我们制作了卡包大师的额外模组。所以你需要启用 \"卡包大师：扩展包\" 以获取所有的卡包。 NL 你可以自己启用它，或者点击主菜单右侧的按钮。",
+      "继续"
+    ]
+  }
+}

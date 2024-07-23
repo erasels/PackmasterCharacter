@@ -1,0 +1,16 @@
+{
+  "${ModID}:DimensionGatePack": {
+    "TEXT": [
+      "Tor 1: Schlangenrufe",
+      "Karten aus anderen Spielen beschworen! Hülle deine Feinde in Gift, während du durch dein Deck wühlst, um den richtigen Zug zu finden.",
+      "MichaelMayhem",
+      "Karten aus den Spielen: NL Vault of the Void NL Across the Obelisk NL One Step from Eden NL Griftlands NL NL Schau sie dir alle auf Steam an!"
+    ]
+  },
+  "${ModID}:DimensionGatePackHat": {
+    "TEXT": [
+      "Eine höchst heilige Verzierung.",
+      "Ottis' Hut"
+    ]
+  }
+}

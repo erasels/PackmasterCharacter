@@ -1,3 +1,4 @@
+/*
 package thePackmaster.cards;
 
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
@@ -51,3 +52,5 @@ public class PackRip extends AbstractPackmasterCard {
         upgradeBaseCost(0);
     }
 }
+
+ */

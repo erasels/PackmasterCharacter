@@ -1,19 +1,27 @@
 package thePackmaster.relics;
 
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.util.Wiz;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class CollectorBadge extends AbstractPackmasterRelic {
     public static final String ID = makeID("CollectorBadge");
+    private static final int THRESHOLD = 3;
 
     public ArrayList<String> usedPacks = new ArrayList<>();
 
@@ -53,10 +61,11 @@ public class CollectorBadge extends AbstractPackmasterRelic {
             if (!usedPacks.contains(Wiz.getPackByCard(c).name)) {
                 usedPacks.add(Wiz.getPackByCard(c).name);
                 counter++;
-                if (usedPacks.size() == 4) {
+                if (usedPacks.size() == THRESHOLD) {
                     flash();
                     Wiz.atb(new RelicAboveCreatureAction(Wiz.p(), this));
-                    addToBot(new GainEnergyAction(1));
+                    Wiz.applyToSelf(new EnergizedPower(Wiz.p(), 1));
+                    incrementEnergyStat();
                 }
                 setDescriptionAfterLoading();
             }
@@ -65,7 +74,7 @@ public class CollectorBadge extends AbstractPackmasterRelic {
 
 
     private void setDescriptionAfterLoading() {
-        if (usedPacks.size() > 3) {
+        if (usedPacks.size() >= THRESHOLD) {
             description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
         } else if (usedPacks.size() > 0) {
             String st = usedPacks.get(0);
@@ -86,4 +95,48 @@ public class CollectorBadge extends AbstractPackmasterRelic {
         initializeTips();
     }
 
+    private static final Map<String, Integer> stats = new HashMap<>();
+    public static String ENERGY_STAT = "energy";
+
+    public String getStatsDescription() {
+        if (stats.get(ENERGY_STAT) == null) {
+            return "";
+        }
+        return DESCRIPTIONS[3].replace("{0}", stats.get(ENERGY_STAT) + "");
+    }
+
+    public String getExtendedStatsDescription(int totalCombats, int totalTurns) {
+        if (stats.get(ENERGY_STAT) == null) {
+            return "";
+        }
+        DecimalFormat format = new DecimalFormat("#.###");
+        float block = stats.get(ENERGY_STAT);
+        String energyPerTurn = format.format(block / Math.max(totalTurns, 1));
+        String energyPerCombat = format.format(block / Math.max(totalCombats, 1));
+        return getStatsDescription() + DESCRIPTIONS[4].replace("{0}", energyPerTurn).replace("{1}", energyPerCombat);
+    }
+
+    public void resetStats() {
+        stats.put(ENERGY_STAT, 0);
+    }
+
+    public JsonElement onSaveStats() {
+        Gson gson = new Gson();
+        List<Integer> statsToSave = new ArrayList<>();
+        statsToSave.add(stats.get(ENERGY_STAT));
+        return gson.toJsonTree(statsToSave);
+    }
+
+    public void onLoadStats(JsonElement jsonElement) {
+        if (jsonElement != null) {
+            JsonArray jsonArray = jsonElement.getAsJsonArray();
+            stats.put(ENERGY_STAT, jsonArray.get(0).getAsInt());
+        } else {
+            resetStats();
+        }
+    }
+
+    public static void incrementEnergyStat() {
+        stats.put(ENERGY_STAT, stats.getOrDefault(ENERGY_STAT, 0) + 1);
+    }
 }

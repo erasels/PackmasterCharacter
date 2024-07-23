@@ -21,11 +21,11 @@ public class GemsPack extends AbstractCardPack {
     public static boolean gridScreenForGems = false;
     public static boolean gridScreenForSockets = false;
 
-    public static final int goldCostToSocket = 20; //BE SURE TO UPDATE KEYWORDSTRINGS IF YOU CHANGE THIS
+    public static final int goldCostToSocket = 25; //BE SURE TO UPDATE KEYWORDSTRINGS IF YOU CHANGE THIS
 
 
     public GemsPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(1, 1, 5, 1, 4, PackSummary.Tags.Orbs));
     }
 
     @Override
@@ -36,11 +36,11 @@ public class GemsPack extends AbstractCardPack {
         cards.add(EnergyGem.ID);
         cards.add(RetainGem.ID);
         cards.add(TempStrengthGem.ID);
-        cards.add(ShivGem.ID);
-        cards.add(WardGem.ID);
         cards.add(DiceGem.ID);
         cards.add(OccultGem.ID);
         cards.add(PersistGem.ID);
+        cards.add(FrostGem.ID);
+        cards.add(LightningGem.ID);
         return cards;
     }
 

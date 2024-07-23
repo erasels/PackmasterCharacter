@@ -6,18 +6,15 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.aggressionpack.DarkLancePatch;
 
 public class DarkLance extends AbstractAggressionCard {
     public static final String ID = SpireAnniversary5Mod.makeID("DarkLance");
     private static final int COST = 1;
-    private static final int DAMAGE = 9;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int DAMAGE = 11;
+    private static final int UPGRADE_DAMAGE = 3;
     private static final int DRAW = 2;
     private static final int UPGRADE_DRAW = 1;
 

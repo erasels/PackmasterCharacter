@@ -1,14 +1,16 @@
 package thePackmaster.patches.legacypack;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.mod.stslib.patches.powerInterfaces.HealthBarRenderPowerPatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import javassist.CtBehavior;
 import thePackmaster.powers.legacypack.PoisonMasteryPower;
+
+import java.util.Collections;
 
 public class PoisonDamagePatch {
     @SpirePatch(clz = PoisonLoseHpAction.class, method = "update")
@@ -41,6 +43,22 @@ public class PoisonDamagePatch {
             Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractCreature.class, "hasPower");
             final int[] all = LineFinder.findAllInOrder(ctMethodToPatch, finalMatcher);
             return new int[]{all[all.length - 1]};
+        }
+    }
+
+    @SpirePatch(clz = HealthBarRenderPowerPatch.RenderPowerHealthBar.class, method = "Insert")
+    public static class HealthBarRenderPower {
+        @SpireInsertPatch(locator = Locator.class, localvars = {"poisonAmt"})
+        public static void FixPoisonAmount(AbstractCreature __instance, SpriteBatch sb, float x, float y, float targetHealthBarWidth, float HEALTH_BAR_HEIGHT, float HEALTH_BAR_OFFSET_Y, @ByRef int[] poisonAmt) {
+            poisonAmt[0] = calcPoisonDamageWithPower(poisonAmt[0]);
+        }
+
+        private static class Locator extends SpireInsertLocator {
+            @Override
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
+                Matcher matcher = new Matcher.MethodCallMatcher(AbstractCreature.class, "hasPower");
+                return LineFinder.findInOrder(ctMethodToPatch, Collections.singletonList(matcher), matcher);
+            }
         }
     }
 

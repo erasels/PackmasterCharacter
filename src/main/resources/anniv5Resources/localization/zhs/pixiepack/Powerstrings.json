@@ -1,0 +1,36 @@
+{
+  "${ModID}:CosmicConverterPower": {
+    "NAME": "宙宇转换器",
+    "DESCRIPTIONS": [
+      "你的回合开始时，将一张与上张打出牌同类型(除了 #y诅咒 与 #y状态 )与耗能的 ${ModID}:异色 牌加入手牌。下回合会将一张 #b",
+      " 耗能的 ",
+      " 攻击牌",
+      " 技能牌",
+      " 能力牌",
+      "加入手牌。",
+      "X",
+      "无法打出的 "
+    ]
+  },
+  "${ModID}:FetchPower": {
+    "NAME": "获取",
+    "DESCRIPTIONS": [
+      "本回合打出下张 #y异色 技能牌后，抽 #b",
+      " 张牌。"
+    ]
+  },
+  "${ModID}:NeutronStarPower": {
+    "NAME": "中子星",
+    "DESCRIPTIONS": [
+      "本回合打出下张 #y异色 攻击牌后，获得 #b",
+      " 层临时 #y力量 。"
+    ]
+  },
+  "${ModID}:StarShowerPower": {
+    "NAME": "流星雨",
+    "DESCRIPTIONS": [
+      "本回合打出下张 #y异色 攻击牌后，随机对一名敌人造成 #b",
+      " 点伤害。"
+    ]
+  }
+}

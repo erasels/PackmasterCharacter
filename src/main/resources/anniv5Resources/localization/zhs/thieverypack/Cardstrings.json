@@ -1,0 +1,47 @@
+{
+  "${ModID}:DrainShield": {
+    "NAME": "护盾汲取",
+    "DESCRIPTION": "窃取目标所有 格挡 。 NL 造成 !D! 点伤害。"
+  },
+  "${ModID}:FairTrade": {
+    "NAME": "公平交易",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 你与目标各获得 !M! 点 力量 。"
+  },
+  "${ModID}:Smokescreen": {
+    "NAME": "灰屏",
+    "DESCRIPTION": "所有单位获得 !B! 点 格挡 。 NL 所有敌人失去 !M! 点生命。"
+  },
+  "${ModID}:NullHammer": {
+    "NAME": "零值抑制",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合目标获得的所有正面效果都被你窃取。"
+  },
+  "${ModID}:Magnet": {
+    "NAME": "磁铁",
+    "DESCRIPTION": "窃取目标所有的 *人 *工 *制 *品 、 *多 *层 *护 *甲 、 *荆 *棘 与 *金 *属 *化 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "窃取所有敌人的 *人 *工 *制 *品 、 *多 *层 *护 *甲 、 *荆 *棘 与 *金 *属 *化 。 NL 消耗 。"
+  },
+  "${ModID}:StrengthSap": {
+    "NAME": "力量耗竭",
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 若目标 力量 大于0， NL 窃取 !${ModID}:m2! 点。 NL 消耗性 !stslib:ex! 。"
+  },
+  "${ModID}:CunningPoison": {
+    "NAME": "狡猾毒药",
+    "DESCRIPTION": "给予生命值最高的敌人 !M! 层 中毒 。 NL 若其处于 中毒 时死亡， NL 获得 !${ModID}:m2! 金币。 NL 消耗 。"
+  },
+  "${ModID}:MindControl": {
+    "NAME": "精神操控",
+    "DESCRIPTION": "选择一名生命值不高于X乘 !M! 的敌人，本场战斗其将攻击其他敌人。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "该敌人生命值过高。"
+    ]
+  },
+  "${ModID}:Witchcraft": {
+    "NAME": "女巫熬制品",
+    "DESCRIPTION": "窃取目标 !M! 点生命。 NL 若 斩杀 ，获得一瓶提供8层 临时生命 的药水。 NL 消耗 。"
+  },
+  "${ModID}:ThieveryMastery": {
+    "NAME": "高超窃技",
+    "DESCRIPTION": "成为神偷。 NL (窃取时获得双倍量)",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 成为神偷。 NL (窃取时获得双倍量)"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "${ModID}:OdditiesPack": {
+    "TEXT": [
+      "Kuriositäten",
+      "Vex macht Vex Sachen. Manage dein Deck mitten im Kampf!",
+      "Vex"
+    ]
+  },
+  "${ModID}:OdditiesPackHat": {
+    "TEXT": [
+      "Gut für ein Abenteuer.",
+      "Der Sonnenhut"
+    ]
+  },
+  "${ModID}:AutoBattlerPatches": {
+    "TEXT": [
+      "Ich muss Karten von links nach rechts spielen!"
+    ]
+  }
+}

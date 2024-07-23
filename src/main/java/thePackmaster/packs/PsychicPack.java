@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.psychicpack.*;
-import thePackmaster.cards.psychicpack.OneIsEnough;
 
 import java.util.ArrayList;
 
@@ -16,7 +15,7 @@ public class PsychicPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public PsychicPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(2, 2, 3, 4, 4, PackSummary.Tags.Exhaust));
     }
 
     @Override

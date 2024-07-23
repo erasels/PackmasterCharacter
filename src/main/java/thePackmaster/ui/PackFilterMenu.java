@@ -1,6 +1,6 @@
 package thePackmaster.ui;
 
-import basemod.ModLabeledToggleButton;
+import basemod.patches.com.megacrit.cardcrawl.screens.options.DropdownMenu.DropdownColoring;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.screens.options.DropdownMenu;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.patches.MainMenuUIPatch;
+import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledToggleButton;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class PackFilterMenu {
     private final DropdownMenu dropdown;
     private AbstractCardPack viewedPack;
     private AbstractCard previewCard;
-    private ModLabeledToggleButton checkbox;
+    private FixedModLabeledToggleButton checkbox;
     private final ArrayList<AbstractCardPack> packs = new ArrayList<>();
 
 
@@ -36,16 +37,18 @@ public class PackFilterMenu {
     private static final TextureRegion MENU_BG = new TextureRegion(ImageMaster.loadImage("img/ModPanelBg.png"));
 
     //positions
-    private static final float BG_X_SCALE = Settings.scale * 0.31f;
-    private static final float BG_Y_SCALE = Settings.scale * 0.8f;
-    private static final float BG_X = 25f * Settings.scale;
-    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.scale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
-    private static final float DROPDOWN_X = 90f * Settings.scale;
-    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.scale;
+    private static final float BG_X_SCALE = Settings.xScale * 0.31f;
+    private static final float BG_Y_SCALE = Settings.yScale * 0.8f;
+    private static final float BG_X = 25f * Settings.xScale;
+    private static final float BG_Y = Settings.HEIGHT - 40f * Settings.yScale - MENU_BG.getRegionHeight() * BG_Y_SCALE;
+    private static final float DROPDOWN_X = 90f * Settings.xScale;
+    private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
     private static final float CHECKBOX_X = 150f;
     private static final float CHECKBOX_Y = 490f;
-    private static final float PREVIEW_X = 235f * Settings.scale;
-    private static final float PREVIEW_Y = 700f * Settings.scale;
+    private static final float PREVIEW_X = 235f * Settings.xScale;
+    private static final float PREVIEW_Y = 700f * Settings.yScale;
+
+    private static final Color DISABLED_COLOR = Settings.RED_TEXT_COLOR.cpy();
 
     public PackFilterMenu() {
         ArrayList<String> optionNames = new ArrayList<>();
@@ -58,8 +61,9 @@ public class PackFilterMenu {
 
         dropdown = new DropdownMenu(((dropdownMenu, index, s) -> setViewedPack(index)),
                 optionNames, FontHelper.tipBodyFont, Settings.CREAM_COLOR);
+        DropdownColoring.RowToColor.function.set(dropdown, (index) -> getFilterConfig(packs.get(index).packID) ? null : DISABLED_COLOR);
 
-        checkbox = new ModLabeledToggleButton(TEXT[0], CHECKBOX_X, CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont, true, null, (label) -> {
+        checkbox = new FixedModLabeledToggleButton(TEXT[0], CHECKBOX_X, CHECKBOX_Y, Color.WHITE, FontHelper.tipBodyFont, true, null, (label) -> {
         },
                 (button) -> clickCheckmark(button.enabled));
 

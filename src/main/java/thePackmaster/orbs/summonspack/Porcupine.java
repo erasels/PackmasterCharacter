@@ -43,7 +43,7 @@ public class Porcupine extends CustomOrb {
 
     public Porcupine() {
         super(ORB_ID, NAME, BASE_PASSIVE, BASE_EVOKE, "", "", IMG_PATH);
-        quillTimer = MathUtils.random(2f, 10f);
+        quillTimer = MathUtils.random(5f, 60f);
         applyFocus();
         updateDescription();
     }
@@ -77,7 +77,9 @@ public class Porcupine extends CustomOrb {
 
     @Override
     public void onEvoke() {
-        applyToSelf(new ThornsPower(adp(), evokeAmount));
+        if(evokeAmount > 0) {
+            applyToSelf(new ThornsPower(adp(), evokeAmount));
+        }
     }
 
     @Override
@@ -100,7 +102,7 @@ public class Porcupine extends CustomOrb {
             float x = MathUtils.random(-20f, 20f);
             float y = MathUtils.random(-20f, 20f);
             Wiz.vfx(new QuillEffect(hb.cX + x, hb.cY + y));
-            quillTimer = MathUtils.random(2f, 10f);
+            quillTimer = MathUtils.random(5f, 60f);
         }
     }
 

@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.effects.monsterhunterpack.LaserBeamEffectReversed;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

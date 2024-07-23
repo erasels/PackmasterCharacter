@@ -7,12 +7,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -53,7 +51,7 @@ public class OnFireModifier extends AbstractCardModifier {
                 public void update() {
                     isDone = true;
                     card.superFlash(Color.ORANGE.cpy());
-                    addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, fireCounter, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                    //addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, fireCounter, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
                     fireCounter++;
                 }
             });
@@ -63,7 +61,7 @@ public class OnFireModifier extends AbstractCardModifier {
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         if(!card.purgeOnUse) {
-        for (int i = 1; i < fireCounter; i++) {
+        for (int i = 0; i < fireCounter; i++) {
                 AbstractMonster m = null;
                 if (action.target != null)
                     m = (AbstractMonster)action.target;

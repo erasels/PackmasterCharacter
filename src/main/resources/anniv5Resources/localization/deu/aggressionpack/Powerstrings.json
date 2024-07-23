@@ -1,0 +1,10 @@
+{
+  "${ModID}:InnerFury": {
+    "NAME": "Innere Wut",
+    "DESCRIPTIONS": ["Wenn du #yAggression betrittst oder verlässt, erhalte #b{0} temporäre #yStärke und #b{0} #yBlock."]
+  },
+  "${ModID}:Animosity": {
+    "NAME": "Feindseligkeit",
+    "DESCRIPTIONS": ["Wenn du in #yAggression eintrittst, es verlässt oder deinen Zug beginnst, erhalte #b{0} #yStärke."]
+  }
+}

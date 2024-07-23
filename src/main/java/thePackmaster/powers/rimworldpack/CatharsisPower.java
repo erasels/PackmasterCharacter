@@ -50,6 +50,12 @@ public class CatharsisPower extends AbstractPackmasterPower implements FreeToPla
     }
 
     @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer)
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+    }
+
+    @Override
     public void updateDescription() {
         if(amount == 1)
             description = DESCRIPTIONS[0];

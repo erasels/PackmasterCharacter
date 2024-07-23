@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.hermitpack.*;
-import thePackmaster.cards.quantapack.MissileStrike;
 
 import java.util.ArrayList;
 
@@ -16,7 +15,7 @@ public class HermitPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public HermitPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 3, 3, 3, 2));
     }
 
     @Override

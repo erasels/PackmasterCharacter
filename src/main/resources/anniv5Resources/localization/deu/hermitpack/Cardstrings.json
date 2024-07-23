@@ -1,0 +1,44 @@
+{
+  "${ModID}:Quickdraw": {
+    "NAME": "Hastiger Zug",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Ziehe !M! Karten. NL Ziehe am nächsten Zug 1 Karte weniger."
+  },
+  "${ModID}:Glare": {
+    "NAME": "Starrblick",
+    "DESCRIPTION": "Wende !M! Schwach und Verwundbar an.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Wende !M! Schwach und Verwundbar an."
+  },
+  "${ModID}:HoleUp": {
+    "NAME": "Verschanzen",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! Schwach."
+  },
+  "${ModID}:Headshot": {
+    "NAME": "Kopfschuss",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Verursache doppelten Schaden, wenn es aus der Mitte deiner Hand gespielt wird."
+  },
+  "${ModID}:Determination": {
+    "NAME": "Entschlossenheit",
+    "DESCRIPTION": "Erhalte !M! Stärke, wenn dir ein Debuff zugefügt wird.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte !M! Stärke, wenn dir ein Debuff zugefügt wird."
+  },
+  "${ModID}:Virtue": {
+    "NAME": "Tugend",
+    "DESCRIPTION": "Behalten. NL Reduziere jeden deiner Debuffs um !M!."
+  },
+  "${ModID}:FlashPowder": {
+    "NAME": "Blitzpulver",
+    "DESCRIPTION": "Erhalte !B! Block. NL ALLE Gegner verlieren !M! Stärke. NL Erschöpfen."
+  },
+  "${ModID}:Purgatory": {
+    "NAME": "Fegefeuer",
+    "DESCRIPTION": "Flüchtig. NL Verursache an ALLEN Gegnern !D! Schaden."
+  },
+  "${ModID}:OverwhelmingPower": {
+    "NAME": "Überwältigende Macht",
+    "DESCRIPTION": "Erhalte [E] [E] [E]. NL Ziehe 3 Karten. NL Verliere !M! LP, wenn du am Ende deines Zuges keine Energie hast."
+  },
+  "${ModID}:DeadOrAlive": {
+    "NAME": "Tot oder lebendig",
+    "DESCRIPTION": "Verursacht X-mal !D! Schaden. NL Falls tödlich, erhalte eine ${ModID}:Belohnung. NL Erschöpfen."
+  }
+}

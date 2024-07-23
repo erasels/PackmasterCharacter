@@ -9,7 +9,6 @@ import thePackmaster.actions.pixiepack.DimensionBreachAction;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -24,6 +23,7 @@ public class DimensionBreach extends AbstractPixieCard {
     public DimensionBreach() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         this.baseMagicNumber = this.magicNumber = baseMgk;
+        exhaust = true;
     }
 
     @Override

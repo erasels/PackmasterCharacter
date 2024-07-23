@@ -6,19 +6,14 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.pixiepack.DrawSpecificCardAction;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
-import static thePackmaster.util.Wiz.att;
 
 public class SowTheSeeds extends AbstractFarmerCard {
     public final static String ID = makeID("SowTheSeeds");

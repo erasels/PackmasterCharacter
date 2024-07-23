@@ -1,7 +1,7 @@
 {
   "${ModID}:BackpackSmack": {
     "NAME": "Backpack Smack",
-    "DESCRIPTION": "Deal !D! damage. NL If your draw pile has 10 or more cards, draw !M! cards. NL Otherwise, gain [E] ."
+    "DESCRIPTION": "Deal !D! damage X times. NL ${ModID}:Synergy: Apply X Weak and Vulnerable."
   },
   "${ModID}:BoosterTutor": {
     "NAME": "Booster Tutor",
@@ -9,22 +9,20 @@
   },
   "${ModID}:DestinyDraw": {
     "NAME": "Destiny Draw",
-    "DESCRIPTION": "Choose 1 of 3 random cards from different Packs to add to your hand. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 random cards from different Packs to add to your hand. It costs 0 this turn. Exhaust."
   },
   "${ModID}:Flick": {
     "NAME": "Flick",
-    "DESCRIPTION": "Discard a card. NL Deal !D! damage a number of times equal to its cost."
+    "DESCRIPTION": "Deal !D! damage. NL Discard a card. NL Deal !D! damage a number of times equal to its cost."
   },
   "${ModID}:MayhemForm": {
     "NAME": "Unrelenting Form",
-    "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] .",
-    "UPGRADE_DESCRIPTION": "Retain. NL Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] [E] ."
+    "DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E] .",
+    "UPGRADE_DESCRIPTION": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain !M! [E] ."
   },
   "${ModID}:RippedPecs": {
     "NAME": "Ripped Pecs",
-    "DESCRIPTION": "Gain 1 Strength for each Pack you've played a card from this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength for each Pack you've played a card from this combat.",
-    "EXTENDED_DESCRIPTION": [" NL (Gains {0} Strength.)"]
+    "DESCRIPTION": "Gain 1 Strength. NL ${ModID}:Synergy: Gain !M! Strength instead."
   },
   "${ModID}:Showoff": {
     "NAME": "Showoff",
@@ -36,11 +34,10 @@
   },
   "${ModID}:SmithingHammer": {
     "NAME": "Smithing Hammer",
-    "DESCRIPTION": "Deal !D! damage 3 times. NL Upgrade a random card in your hand for the rest of combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL Upgrade !M! random cards in your hand for the rest of combat."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Upgrade 2 random cards in your hand."
   },
   "${ModID}:Synergize": {
     "NAME": "Synergize",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have cards from at least two other Packs in your hand, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${ModID}:Synergy: Gain !B! Block."
   }
 }

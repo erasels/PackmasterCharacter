@@ -3,7 +3,6 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.metapack.*;
 import thePackmaster.cards.wardenpack.*;
 
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ public class WardenPack extends AbstractCardPack {
     public static final String CREDITS = UI_STRINGS.TEXT[3];
 
     public WardenPack() {
-        super(ID, NAME, DESC, AUTHOR,CREDITS);
+        super(ID, NAME, DESC, AUTHOR,CREDITS, new PackSummary(3, 2, 4, 2, 3));
         hatHidesHair = true;
     }
 

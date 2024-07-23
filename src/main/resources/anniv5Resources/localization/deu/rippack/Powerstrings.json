@@ -1,0 +1,10 @@
+{
+  "${ModID}:DividedFuryPower": {
+    "NAME": "Geteilte Wut",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges gib #b",
+      " Karte in deiner Hand #yreißbar.",
+      " Karten in deiner Hand #yreißbar."
+    ]
+  }
+}

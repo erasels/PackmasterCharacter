@@ -7,14 +7,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.ThePackmaster;
-import thePackmaster.packs.AbstractPackPreviewCard;
-import thePackmaster.packs.AlignmentPack;
-import thePackmaster.packs.ArcanaPack;
 import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 import thePackmaster.util.CardArtRoller;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import static thePackmaster.SpireAnniversary5Mod.modID;
 

@@ -1,0 +1,51 @@
+{
+  "${ModID}:ChainReaction": {
+    "NAME": "Kettenreaktion",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Verursache !M! ${ModID}:Fallout."
+  },
+  "${ModID}:WaveMotionCannon": {
+    "NAME": "Wellen Kanone",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge ALLEN Gegnern in der nächsten Runde !M! Schaden zu."
+  },
+  "${ModID}:Redshift": {
+    "NAME": "Rotverschiebung",
+    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe zu Beginn deiner nächsten !M! Züge 1 Karte."
+  },
+  "${ModID}:Countdown": {
+    "NAME": "Countdown",
+    "DESCRIPTION": "Nachdem du !M! weitere Karten gezogen hast, erhalte [E] [E] und *Atomarer *Rammblock.",
+    "UPGRADE_DESCRIPTION": "Nachdem du !M! weitere Karten gezogen hast, erhalte [E] [E] und *Atomarer *Rammblock+."
+  },
+  "${ModID}:AtomicPiledriver": {
+    "NAME": "Atomarer Rammblock",
+    "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Verursache !M! ${ModID}:Fallout. NL Erschöpfen."
+  },
+  "${ModID}:NuclearFusion": {
+    "NAME": "Kernfusion",
+    "DESCRIPTION": "Spiele zweimal eine Karte aus deiner Hand mit Kosten von X oder weniger. Füge deiner Hand X *Brennen hinzu.",
+    "UPGRADE_DESCRIPTION": "Spiele zweimal eine Karte aus deiner Hand mit Kosten von X+1 oder weniger. Füge deiner Hand X *Brennen hinzu."
+  },
+  "${ModID}:MoreExplosions": {
+    "NAME": "Mehr Explosionen!",
+    "DESCRIPTION": "Ziehe !M! Karte. NL Mische !M! zufällige Fähigkeit in deinen Nachziehstapel.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Mische !M! zufällige Fähigkeiten in deinen Nachziehstapel."
+  },
+  "${ModID}:Meltdown": {
+    "NAME": "Kernschmelze",
+    "DESCRIPTION": "Wenn du eine Macht Karte ziehst, erhalte [E].",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Wenn du eine Macht Karte ziehst, erhalte [E]."
+  },
+  "${ModID}:ExplosiveForm": {
+    "NAME": "Explosive Form",
+    "DESCRIPTION": "Zu Beginn jedes Zugs platziere *Die *Bombe."
+  },
+  "${ModID}:KillerQueen": {
+    "NAME": "Killer Queen",
+    "DESCRIPTION": "Wähle eine Karte auf deiner Hand aus. Immer wenn du sie spielst, füge ALLEN Gegnern !M! Schaden zu."
+  },
+  "${ModID}:EveOfDestruction": {
+    "NAME": "Vorabend der Vernichtung",
+    "DESCRIPTION": "Du verursachst 100% mehr Nichtangriffsschaden.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Du verursachst 100% mehr Nichtangriffsschaden."
+  }
+}

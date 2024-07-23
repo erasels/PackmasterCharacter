@@ -1,0 +1,74 @@
+[
+  {
+    "PROPER_NAME": "取",
+    "NAMES": [
+      "取"
+    ],
+    "DESCRIPTION": "抽牌，但若抽牌堆无可抽之牌，不触发弃牌堆洗入抽牌堆效果。"
+  },
+  {
+    "PROPER_NAME": "创造",
+    "NAMES": [
+      "创造"
+    ],
+    "DESCRIPTION": "任何战斗中生成的牌，都视为被 #y创造 ，包括敌方给予你的 #y状态 与 #y诅咒 ， #y增变化 不算。"
+  },
+  {
+    "PROPER_NAME": "突破",
+    "NAMES": [
+      "突破"
+    ],
+    "DESCRIPTION": "(造成)未被格挡的攻击伤害。"
+  },
+  {
+    "PROPER_NAME": "锁定",
+    "NAMES": [
+      "锁定"
+    ],
+    "DESCRIPTION": "被 #y锁定 的单位额外受到 #b50% 的充能球伤害，每层持续 #b1 回合。"
+  },
+  {
+    "PROPER_NAME": "毁灭",
+    "NAMES": [
+      "ruin",
+      "毁灭"
+    ],
+    "DESCRIPTION": "带有 #y毁灭 的单位下次受到未被格挡的攻击伤害时，其每有一种持续效果，就失去 #y毁灭 层数点生命。"
+  },
+  {
+    "PROPER_NAME": "湮没",
+    "NAMES": [
+      "oblivion",
+      "湮没"
+    ],
+    "DESCRIPTION": "#y充能球 : #y激发 时给予生命值最高的敌人 #y毁灭 。每当你丢弃一张牌时，给予层数加 #b1 。"
+  },
+  {
+    "PROPER_NAME": "展现",
+    "NAMES": [
+      "manifest",
+      "展现"
+    ],
+    "DESCRIPTION": "获得一个充能球栏位后，再 #y生成 充能球。达 #b10 个栏位上限后不再获得栏位。"
+  },
+  {
+    "PROPER_NAME": "铭印",
+    "NAMES": [
+      "Inscribed",
+      "inscribed",
+      "Inscribe",
+      "inscribe",
+      "铭印"
+    ],
+    "DESCRIPTION": "打出时触发最右侧充能球，与所有 #y新月 充能球的被动效果。"
+  },
+  {
+    "PROPER_NAME": "滋生",
+    "NAMES": [
+      "infest",
+      "infests",
+      "滋生"
+    ],
+    "DESCRIPTION": "回合结束时，若本牌在手中，将其洗入抽牌堆并附加 #b1 点 #y滋生 点数( [bugIcon] )。"
+  }
+]

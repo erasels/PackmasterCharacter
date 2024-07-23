@@ -3,30 +3,46 @@ package thePackmaster.vfx.rippack;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.CardPoofEffect;
-import thePackmaster.cards.rippack.AbstractRippableCard;
-import thePackmaster.cards.rippack.AbstractRippedArtCard;
-import thePackmaster.cards.rippack.AbstractRippedTextCard;
-import thePackmaster.cards.rippack.SurprisePackArt;
+import thePackmaster.cards.rippack.SurprisePack;
+import thePackmaster.patches.rippack.AllCardsRippablePatches;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class ShowCardAndRipEffect extends AbstractGameEffect {
     private static final float EFFECT_DUR = 0.8F;
 
-    private AbstractRippedArtCard artCard;
-    private AbstractRippedTextCard textCard;
+    private AbstractCard artCard;
+    private AbstractCard textCard;
     private boolean hasPlayedSound;
+    private float x;
 
-    public ShowCardAndRipEffect(AbstractRippableCard card) {
-        this.artCard = (AbstractRippedArtCard) card.getRippedParts().get(0).makeStatEquivalentCopy();
-        this.artCard.costForTurn = card.costForTurn; //Update cost here for visual accuracy
-        this.textCard = (AbstractRippedTextCard) card.getRippedParts().get(1).makeStatEquivalentCopy();
-        identifySpawnLocation(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F);
+    public ShowCardAndRipEffect(AbstractCard sourceCard) {
+        this(sourceCard, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F);
+    }
+
+    public ShowCardAndRipEffect(AbstractCard sourceCard, float x, float y) {
+        this.x = x;
+
+        //Set up Art Half properties
+        artCard = sourceCard.makeStatEquivalentCopy();
+        artCard.rawDescription = "";
+        artCard.initializeDescription();
+        AllCardsRippablePatches.AbstractCardFields.ripStatus.set(artCard, AllCardsRippablePatches.RipStatus.ART);
+
+        //Set up Text Half properties
+        textCard = sourceCard.makeStatEquivalentCopy();
+        textCard.cost = 0;
+        textCard.costForTurn = 0;
+        textCard.name = "";
+        AllCardsRippablePatches.AbstractCardFields.ripStatus.set(textCard, AllCardsRippablePatches.RipStatus.TEXT);
+
+        identifySpawnLocation(x, y);
         this.duration = EFFECT_DUR;
 
         artCard.drawScale = 0.75F;
@@ -35,19 +51,19 @@ public class ShowCardAndRipEffect extends AbstractGameEffect {
         artCard.targetTransparency = 1.0F;
         artCard.fadingOut = false;
 
-        textCard.drawScale = 0.75F;
-        textCard.targetDrawScale = 0.75F;
-        textCard.transparency = 0.01F;
-        textCard.targetTransparency = 1.0F;
-        textCard.fadingOut = false;
+        sourceCard.drawScale = 0.75F;
+        sourceCard.targetDrawScale = 0.75F;
+        sourceCard.transparency = 0.01F;
+        sourceCard.targetTransparency = 1.0F;
+        sourceCard.fadingOut = false;
     }
 
     private void identifySpawnLocation(float x, float y) {
-        artCard.target_y = Settings.HEIGHT * 0.5F;
-        textCard.target_y = Settings.HEIGHT * 0.5F;
+        artCard.target_y = y;
+        textCard.target_y = y;
 
-        artCard.target_x = Settings.WIDTH * 0.5F;
-        textCard.target_x = Settings.WIDTH * 0.5F;
+        artCard.target_x = x;
+        textCard.target_x = x;
 
         artCard.current_x = artCard.target_x;
         textCard.current_x = artCard.target_x;
@@ -62,7 +78,7 @@ public class ShowCardAndRipEffect extends AbstractGameEffect {
             CardCrawlGame.sound.play(makeID("RipPack_Rip"));
         }
 
-        if(duration < EFFECT_DUR / 1.5f && !hasPlayedSound && artCard instanceof SurprisePackArt) {
+        if(duration < EFFECT_DUR / 1.5f && !hasPlayedSound && textCard instanceof SurprisePack) {
             if(MathUtils.randomBoolean(0.01f)) {
                 CardCrawlGame.sound.play(makeID("RipPack_Ohh"));
             } else {
@@ -72,14 +88,15 @@ public class ShowCardAndRipEffect extends AbstractGameEffect {
         }
         if(duration < EFFECT_DUR / 2.0F) {
 
-            artCard.target_x = Settings.WIDTH * 0.5F - 200.F * Settings.scale;
-            textCard.target_x = Settings.WIDTH * 0.5F + 200.F * Settings.scale;
+            artCard.target_x = x + 200.F * Settings.scale;
+            textCard.target_x = x - 200.F * Settings.scale;
         }
         duration -= Gdx.graphics.getDeltaTime();
         artCard.update();
         textCard.update();
-        if (duration < 0.0F)
+        if (duration < 0.0F) {
             isDone = true;
+        }
     }
 
     public void render(SpriteBatch sb) {

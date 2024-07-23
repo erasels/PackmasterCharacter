@@ -1,0 +1,21 @@
+{
+  "${ModID}:TransmutationPack": {
+    "TEXT": [
+      "Transmutation",
+      "Verwandelt Karten vorübergehend in andere Karten, um sie stärker zu machen.",
+      "NellyDevo"
+    ]
+  },
+  "${ModID}:TransmuteCardAction": {
+    "TEXT": [
+      "transmutiere.",
+      "Wähle eine neue Karte."
+    ]
+  },
+  "${ModID}:TransmutationPackHat": {
+    "TEXT": [
+      "Die Haarschlaufen werden gewöhnungsbedürftig sein.",
+      "Transmutierte Frisur"
+    ]
+  }
+}

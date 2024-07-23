@@ -1,0 +1,26 @@
+{
+  "${ModID}:GlimpsePower": {
+    "NAME": "轻瞥",
+    "DESCRIPTIONS": [
+      "每当你抽到一张 #y虚无 牌时， 获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "${ModID}:RememberPower": {
+    "NAME": "记忆",
+    "DESCRIPTIONS": [
+      "回合结束时，可将 #b",
+      " 张牌洗入抽牌堆。",
+      " 张牌洗入抽牌堆。",
+      "选择牌洗入抽牌堆"
+    ]
+  },
+  "${ModID}:TrinePower": {
+    "NAME": "三分相",
+    "DESCRIPTIONS": [
+      "本回合下张牌打出 #b2 次。",
+      "本回合下 #b",
+      " 张牌打出 #b2 次。"
+    ]
+  }
+}

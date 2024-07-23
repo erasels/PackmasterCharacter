@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.clawpack.GhostClaw;
 import thePackmaster.util.Wiz;
 
 
@@ -33,6 +32,8 @@ public class GenerateClawsPotion extends CustomPotion {
     public void initializeData() {
         this.potency = getPotency();
         this.description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
     }
 
     public void use(AbstractCreature target) {

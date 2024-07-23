@@ -1,11 +1,9 @@
 package thePackmaster.cards.quietpack;
 
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.quietpack.HammerThrowPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

@@ -3,7 +3,6 @@ package thePackmaster.cardmodifiers.transmutationpack;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -148,14 +147,6 @@ public abstract class AbstractExtraEffectModifier extends AbstractCardModifier i
 
     public void onCardTransmuted(AbstractCard card, AbstractCard newCard) {
 
-    }
-
-    protected void addToTop(AbstractGameAction action) {
-        AbstractDungeon.actionManager.addToTop(action);
-    }
-
-    protected void addToBot(AbstractGameAction action) {
-        AbstractDungeon.actionManager.addToBottom(action);
     }
 
     protected String applyTimes(String s) {

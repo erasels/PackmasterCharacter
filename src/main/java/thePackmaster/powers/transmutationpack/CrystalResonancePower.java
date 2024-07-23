@@ -1,15 +1,12 @@
 package thePackmaster.powers.transmutationpack;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.potions.StrengthPotion;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.actions.transmutationpack.TransmuteCardAction;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import java.util.HashMap;

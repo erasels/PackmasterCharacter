@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.orbs.entropy.Oblivion;
+import thePackmaster.orbs.Oblivion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +21,15 @@ public class Emptiness extends AbstractOrbCard {
     public Emptiness() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
+
+        showEvokeValue = true;
+        showEvokeOrbCount = magicNumber;
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        showEvokeOrbCount = magicNumber;
     }
 
     @Override
@@ -42,5 +51,6 @@ public class Emptiness extends AbstractOrbCard {
 
     public void upp() {
         upgradeMagicNumber(1);
+        showEvokeOrbCount = magicNumber;
     }
 }

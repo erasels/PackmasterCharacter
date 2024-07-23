@@ -1,0 +1,16 @@
+{
+  "${ModID}:ContentCreatorPack": {
+    "TEXT": [
+      "视频创作者",
+      "为一些历年来通过创作视频来支持杀戮尖塔模组社区的主播而作的感谢卡包。",
+      "MichaelMayhem & Vex",
+      "感谢主播： NL Baalorlord NL FrostPrime NL Rhapsody NL TheOddOne NL Retromation NL Wanderbots NL Sneakyteak NL Tricky NL Hutts NL Olexa"
+    ]
+  },
+  "${ModID}:ContentCreatorPackHat": {
+    "TEXT": [
+      "最英俊的脸庞。",
+      "Rhapso头部"
+    ]
+  }
+}

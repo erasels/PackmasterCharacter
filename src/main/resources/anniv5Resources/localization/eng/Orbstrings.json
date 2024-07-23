@@ -1,2 +1,10 @@
 {
+  "${ModID}:Oblivion": {
+    "NAME": "Oblivion",
+    "DESCRIPTION": [
+      "#yPassive: Whenever you discard a card, increase this Orb's #yRuin by #b",
+      ". NL #yEvoke: Apply #b",
+      " #yRuin to the enemy with the most HP."
+    ]
+  }
 }

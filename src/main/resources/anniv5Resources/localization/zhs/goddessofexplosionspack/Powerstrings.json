@@ -1,0 +1,54 @@
+{
+  "${ModID}:FalloutPower": {
+    "NAME": "辐射",
+    "DESCRIPTIONS": [
+      "每当你打出一张 #y能力 牌，该单位受到 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:WaveMotionCannonPower": {
+    "NAME": "波动加农炮",
+    "DESCRIPTIONS": [
+      "下回合，对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:RedshiftPower": {
+    "NAME": "红移",
+    "DESCRIPTIONS": [
+      "下回合开始时，抽一张牌",
+      "接下来的 #b",
+      " 个回合开始时，抽一张牌。"
+    ]
+  },
+  "${ModID}:CountdownPower": {
+    "NAME": "倒计时",
+    "DESCRIPTIONS": [
+      "再抽 #b",
+      " 张牌后，获得 [E] [E] 与一张 #y原子倾灭 。",
+      " 张牌后，获得 [E] [E] 与一张 #y原子倾灭+ 。"
+    ]
+  },
+  "${ModID}:MeltdownPower": {
+    "NAME": "熔化",
+    "DESCRIPTIONS": [
+      "每当你抽到一张 #y能力 牌，获得 #b",
+      " 点 #y能量 。"
+    ]
+  },
+  "${ModID}:ExplosiveFormPower": {
+    "NAME": "爆炸形态",
+    "DESCRIPTIONS": [
+      "你的回合开始时，布置 #b1 枚 #y炸弹 。",
+      "你的回合开始时，布置 #b",
+      " 枚 #y炸弹 。"
+    ]
+  },
+  "${ModID}:EveOfDestructionPower": {
+    "NAME": "毁灭之夜",
+    "DESCRIPTIONS": [
+      "你造成的非攻击伤害提高 #b",
+      "% 。"
+    ]
+  }
+}

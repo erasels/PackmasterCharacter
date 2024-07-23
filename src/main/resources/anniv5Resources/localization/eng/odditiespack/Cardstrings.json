@@ -6,7 +6,10 @@
   "${ModID}:LetsPlay8Ball": {
     "NAME": "Let's Play 8 Ball!",
     "DESCRIPTION": "Shuffle an *8 *Ball into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your draw pile."
+    "UPGRADE_DESCRIPTION": "Shuffle a *9 *Ball into your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Let's Play 9 Ball!"
+    ]
   },
   "${ModID}:EightBall": {
     "NAME": "8 Ball",
@@ -29,7 +32,7 @@
   "${ModID}:Beacon": {
     "NAME": "Beacon",
     "DESCRIPTION": "Choose !M! card in your hand. NL Upgrade it and give it Retain.",
-    "UPGRADE_DESCRIPTION": "Choose !M! cards in your hand. NL Upgrade them and give them Retain.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose !M! card in your hand. NL Upgrade it and give it Retain.",
     "EXTENDED_DESCRIPTION": [
       "Upgrade and give Retain."
     ]
@@ -40,7 +43,7 @@
   },
   "${ModID}:AutoBattler": {
     "NAME": "Auto Battler",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL You play cards automatically."
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Gain !${ModID}:m2! Focus. NL You play cards automatically."
   },
   "${ModID}:ShiningStyle": {
     "NAME": "Shining Style",
@@ -48,8 +51,8 @@
   },
   "${ModID}:FinalForm": {
     "NAME": "This Isn't Even My...",
-    "DESCRIPTION": "Ethereal. NL Exhaust 1 random card. NL At the start of your turn, play and Exhaust a copy of it.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL At the start of your turn, play and Exhaust a copy of it.",
+    "DESCRIPTION": "Ethereal. NL Exhaust 1 random card. NL At the start of your next 5 turns, play and Exhaust a copy of it.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Exhaust 1 card. NL At the start of your next 5 turns, play and Exhaust a copy of it.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for Final Form."
     ]

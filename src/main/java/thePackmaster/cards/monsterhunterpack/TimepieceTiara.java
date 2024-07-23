@@ -1,9 +1,8 @@
 package thePackmaster.cards.monsterhunterpack;
 
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.powers.monsterhunterpack.TimePiecePower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -17,7 +16,7 @@ public class TimepieceTiara extends AbstractMonsterHunterCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new TimePiecePower(p, 0), 0));
+        addToBot(new ApplyPowerAction(p, p, new TimePiecePower(p, 3), 3));
     }
 
     public void upp() {

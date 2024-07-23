@@ -3,20 +3,16 @@ package thePackmaster.cards.orbpack;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.defect.AnimateOrbAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeWithoutRemovingOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.Lightning;
-import com.megacrit.cardcrawl.orbs.Plasma;
 import thePackmaster.actions.HandSelectAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class MaterialBoost extends AbstractOrbCard {
     public final static String ID = makeID("MaterialBoost");
@@ -24,6 +20,9 @@ public class MaterialBoost extends AbstractOrbCard {
 
     public MaterialBoost() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+
+        showEvokeValue = true;
+        showEvokeOrbCount = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

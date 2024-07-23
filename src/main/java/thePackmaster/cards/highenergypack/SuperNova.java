@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import thePackmaster.actions.arcanapack.AllEnemyLoseHPAction;
 import thePackmaster.actions.highenergypack.AllEnemyApplyPowerAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -17,7 +16,7 @@ public class SuperNova extends AbstractHighEnergyCard {
 
     public SuperNova() {
         super(ID, 6, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 67;
+        baseMagicNumber = magicNumber = 60;
         baseSecondMagic = secondMagic = 3;
     }
 

@@ -1,0 +1,15 @@
+{
+  "${ModID}:AnomalyPack": {
+    "TEXT": [
+      "Anomalie",
+      "Eigenartige Karten, die dich dazu bringen, über den Tellerrand zu denken.",
+      "PureQuestion"
+    ]
+  },
+  "${ModID}:AnomalyPackHat": {
+    "TEXT": [
+      "Geheimnisvoll und allwissend.",
+      "Anomalie-Achtball"
+    ]
+  }
+}

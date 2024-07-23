@@ -1,0 +1,15 @@
+{
+  "${ModID}:BardInspirePack": {
+    "TEXT": [
+      "Bardische Inspiration",
+      "Eine Sammlung von Bardenkarten, um dir etwas ${ModID}:Inspiration zu geben.",
+      "kiooeht"
+    ]
+  },
+  "${ModID}:BardInspirePackHat": {
+    "TEXT": [
+      "Elegante Kopfbedeckung.",
+      "Bardische Baskenmütze"
+    ]
+  }
+}

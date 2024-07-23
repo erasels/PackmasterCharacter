@@ -44,6 +44,18 @@ public class VictoryConfettiEffect extends AbstractGameEffect {
     private float totalscale;
 
     public VictoryConfettiEffect() {
+        this(
+                MathUtils.random(0.0F, Settings.WIDTH),
+                Settings.HEIGHT + 40.0F * Settings.scale
+        );
+    }
+
+    public VictoryConfettiEffect(float x, float y, float imgScale) {
+        this(x, y);
+        totalscale = imgScale;
+    }
+
+    public VictoryConfettiEffect(float x, float y) {
         int randomtex = MathUtils.random(0,2);
 
         if (randomtex == 0)
@@ -70,11 +82,13 @@ public class VictoryConfettiEffect extends AbstractGameEffect {
 
 
         // Location
-        this.y = Settings.HEIGHT + 40.0F * Settings.scale;
-        this.x = MathUtils.random(0.0F, Settings.WIDTH);
+        this.y = y;
+        this.x = x;
 
         this.color = new Color(1, 1, 1, 1F);
     }
+
+
 
     @Override
     public void render(SpriteBatch sb) {
@@ -88,7 +102,7 @@ public class VictoryConfettiEffect extends AbstractGameEffect {
         sb.draw(this.FinalTexture, x-w2/2f, y-h2/2f,
                 w/2f, h/2f,
                 w2, h2,
-                (float) (this.scale)*Settings.scale*this.totalscale, 1.0F*Settings.scale*this.totalscale,
+                this.scale *Settings.scale*this.totalscale, 1.0F*Settings.scale*this.totalscale,
                 this.rotation,
                 0, 0,
                 w2, h2,
@@ -118,7 +132,7 @@ public class VictoryConfettiEffect extends AbstractGameEffect {
             this.FinalTexture = texture_back;
 
         this.duration -= dt;
-        if (this.duration < 0.0F) {
+        if (this.duration < 0.0F || y > Settings.HEIGHT + FinalTexture.getHeight() || y < -FinalTexture.getHeight()) {
             this.isDone = true;
         }
     }

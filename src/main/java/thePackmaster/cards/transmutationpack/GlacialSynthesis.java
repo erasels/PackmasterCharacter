@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.transmutationpack.TransmuteCardAction;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class GlacialSynthesis extends AbstractHydrologistCard {
     public final static String ID = makeID("GlacialSynthesis");

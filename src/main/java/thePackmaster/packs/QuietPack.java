@@ -3,7 +3,6 @@ package thePackmaster.packs;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
-import thePackmaster.cards.downfallpack.*;
 import thePackmaster.cards.quietpack.*;
 
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ public class QuietPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public QuietPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(4, 4, 4, 4, 2, PackSummary.Tags.Discard));
     }
 
     @Override

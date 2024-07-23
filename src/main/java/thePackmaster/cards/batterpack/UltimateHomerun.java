@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.vfx.arcanapack.SunBeamEffect;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -18,7 +17,7 @@ public class UltimateHomerun extends AbstractBatterCard {
     public static int HIGH_SCORE = 0;
 
     public UltimateHomerun() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
     }
 
@@ -67,6 +66,6 @@ public class UltimateHomerun extends AbstractBatterCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeBaseCost(1);
     }
 }

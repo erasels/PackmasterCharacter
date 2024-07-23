@@ -1,0 +1,47 @@
+{
+  "${ModID}:Reverberation": {
+    "NAME": "Widerhall",
+    "DESCRIPTION": "Erhalte !B! Block. NL Zu Beginn deines Zuges, wenn sich diese Karte in deinem Abwurfstapel befindet, kommt sie auf deine Hand zurück."
+  },
+  "${ModID}:Midnight": {
+    "NAME": "Glockenschlag",
+    "DESCRIPTION": "Erhalte !B! Block. NL Verursache !D! Schaden zu. NL ${ModID}:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
+  },
+  "${ModID}:Clang": {
+    "NAME": "Klang",
+    "DESCRIPTION": "Kann nur gespielt werden, wenn sich ein Fluch oder Status in deiner Hand befindet. NL Verursache !D! Schaden.",
+    "EXTENDED_DESCRIPTION": [
+      "Ich habe keine Fluch- oder Statuskarte."
+    ]
+  },
+  "${ModID}:VoDo": {
+    "NAME": "Voodoo",
+    "DESCRIPTION": "Erhalte !M! Stärke. NL Der Gegner verliert 2 Stärke. NL ${ModID}:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
+  },
+  "${ModID}:RingTheBell": {
+    "NAME": "Glockenklang",
+    "DESCRIPTION": "ALLE Gegner verlieren !M! LP. NL Ziehe 1 Karte. NL ${ModID}:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
+  },
+  "${ModID}:TimeOut": {
+    "NAME": "Auszeit",
+    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe 1 Karte. NL Wenn es eine Fluch oder Status Karte ist, verlieren ALLE Gegner !M! Stärke."
+  },
+  "${ModID}:Cuckoo": {
+    "NAME": "Kuckuck",
+    "DESCRIPTION": "Immer wenn du eine Fluchkarte ziehst, füge einem zufälligen Gegner !M! Schaden zu.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Immer wenn du eine Fluchkarte ziehst, füge einem zufälligen Gegner !M! Schaden zu."
+  },
+  "${ModID}:Dong": {
+    "NAME": "DONG!",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Wende !M! Schwach und Verwundbar an. NL ${ModID}:Aufnehmen: Erhalte einen *Fluch *der *Glocke."
+  },
+  "${ModID}:LikeClockwork": {
+    "NAME": "Wie ein Uhrwerk",
+    "DESCRIPTION": "Am Ende deines Zuges erhältst du !M! Block für jede Fluch oder Status Karte in deiner Hand.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Am Ende deines Zuges erhältst du !M! Block für jede Fluch oder Status Karte in deiner Hand."
+  },
+  "${ModID}:SavedByTheBell": {
+    "NAME": "Gerettet durch die Glocke",
+    "DESCRIPTION": "Behalte diese Karte. NL Erhalte 1 Immateriell. NL Erschöpfen. NL ${ModID}:Aufnehmen: Erhalte 2 *Flüche *der *Glocke."
+  }
+}

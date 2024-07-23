@@ -3,11 +3,10 @@ package thePackmaster.cards.arcanapack;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class TheHierophant extends AbstractAstrologerCard {
     public final static String ID = makeID("TheHierophant");
@@ -27,6 +26,6 @@ public class TheHierophant extends AbstractAstrologerCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(4);
     }
 }

@@ -1,13 +1,14 @@
 package thePackmaster.cards.quietpack;
 
 
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
+import thePackmaster.patches.quietpack.BackflipFrontflipPatch;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -23,6 +24,14 @@ public class Frontflip extends AbstractQuietCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (Loader.isModLoadedOrSideloaded("backflip")) {
+            try {
+                Class<?> actionClass = Class.forName("silentBackflip.ThingActionFuck");
+                AbstractGameAction action = (AbstractGameAction) actionClass.newInstance();
+                BackflipFrontflipPatch.Field.isFrontflip.set(action, true);
+                addToBot(action);
+            } catch (Exception ignored) {}
+        }
         blck();
         addToBot(new DrawCardAction(magicNumber, new AbstractGameAction() {
             @Override

@@ -1,0 +1,58 @@
+{
+  "${ModID}:Wonder": {
+    "NAME": "精妙",
+    "DESCRIPTION": "丢弃所有手牌。 NL 抽一张牌， NL 将能量变为其耗能点。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 丢弃所有手牌。 NL 抽一张牌， NL 将能量变为其耗能点。"
+  },
+  "${ModID}:FreeSpace": {
+    "NAME": "发挥空间",
+    "DESCRIPTION": "虚无 。 NL 本牌被抽到、丢弃、 消耗 ，或打出时，抽一张牌。",
+    "UPGRADE_DESCRIPTION": "本牌被抽到、丢弃、 消耗 ，或打出时，抽一张牌。"
+  },
+  "${ModID}:MidnightOil": {
+    "NAME": "夜灯油",
+    "DESCRIPTION": "随机 消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 获得 [E] 。 NL 本牌处于消耗堆时， NL 每回合获得 [E] 。"
+  },
+  "${ModID}:VoraciousSigil": {
+    "NAME": "暴吞铭印",
+    "DESCRIPTION": "随机 ${ModID}:吞并 手中一张技能牌。 NL 打出所有本场战斗本牌已 *吞并 的牌。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 随机 ${ModID}:吞并 手中一张技能牌。 NL 打出所有本场战斗本牌已 *吞并 的牌。"
+  },
+  "${ModID}:StrikeThroughFate": {
+    "NAME": "破命打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若为本回合第7张打出牌， 再造成两次。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 若为本回合第7张打出牌， 再造成两次。"
+  },
+  "${ModID}:MindOverMatter": {
+    "NAME": "心胜于物",
+    "DESCRIPTION": "抽牌时， NL 获得1点 格挡 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 抽牌时， NL 获得1点 格挡 。"
+  },
+  "${ModID}:GoldenGun": {
+    "NAME": "黄金大炮",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 被 *装炮 后才能打出。 NL 起动 ：将一张 *黄 *金 *炮 *弹 洗入抽牌堆。 "
+  },
+  "${ModID}:GoldenRound": {
+    "NAME": "黄金炮弹",
+    "DESCRIPTION": "*装炮 手中一张 *黄 *金 *大 *炮 。 NL 若手中无该牌，将本牌放入抽牌堆顶部。"
+  },
+  "${ModID}:RitualSight": {
+    "NAME": "仪式视界",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 一张牌，将其一张复制品洗入抽牌堆。",
+    "EXTENDED_DESCRIPTION": ["消耗并复制。"]
+  },
+  "${ModID}:Thoughtweaving": {
+    "NAME": "思绪交织",
+    "DESCRIPTION": "打出技能或攻击时， ${ModID}:取 一张与其不同卡包中相反类型的牌。"
+  },
+  "${ModID}:SealedSword": {
+  "NAME": "封印之剑",
+  "DESCRIPTION": "消耗 。 NL 本牌被 消耗 时，将一张 *汲魂打击 加入抽牌堆。",
+  "UPGRADE_DESCRIPTION": "消耗 。 NL 本牌被 消耗 时，将一张 *汲魂打击+ 加入抽牌堆。"
+},
+  "${ModID}:SouleaterStrike": {
+    "NAME": "汲魂打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。"
+  }
+}

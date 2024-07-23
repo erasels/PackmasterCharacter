@@ -33,7 +33,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.CurrentScreen.*;
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.CurrentScreen.MAP;
 import static thePackmaster.SpireAnniversary5Mod.selectedCards;
 
 public class CurrentRunCardsTopPanelItem extends TopPanelItem {

@@ -1,0 +1,16 @@
+{
+  "${ModID}:PrismaticPack": {
+    "TEXT": [
+      "Prismatisch",
+      "Konzentriert sich auf die Herstellung und Nutzung von Karten in verschiedenen Farben.",
+      "modargo",
+      "Karten Kunst von MtG"
+    ]
+  },
+  "${ModID}:PrismaticPackHat": {
+    "TEXT": [
+      "Die Kron juwelen von dir.",
+      "Regenbogen Juwel"
+    ]
+  }
+}

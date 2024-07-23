@@ -1,0 +1,15 @@
+{
+  "${ModID}:FarmerPack": {
+    "TEXT": [
+      "Farmer",
+      "Wechseln Sie zwischen den Kartentypen, um den Ertrag zu erhöhen!",
+      "DJM"
+    ]
+  },
+  "${ModID}:FarmerPackHat": {
+    "TEXT": [
+      "Schlichter Hut aus Stroh. Haltet Sonne und Regen fern.",
+      "Strohhut"
+    ]
+  }
+}

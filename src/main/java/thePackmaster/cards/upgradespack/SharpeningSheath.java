@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.upgradespack.SharpeningFollowUpAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 public class SharpeningSheath extends AbstractBlacksmithCard {
 

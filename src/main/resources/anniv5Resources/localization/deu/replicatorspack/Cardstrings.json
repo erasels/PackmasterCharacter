@@ -1,0 +1,49 @@
+{
+  "${ModID}:FrontloadedBash": {
+    "NAME": "Voreiliger Schlag",
+    "DESCRIPTION": "Verursache !D! Schaden. NL Verursacht 1 mehr Schaden für alle !M! Karten in deinem Nachziehstapel.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Verursache !D! Schaden. NL Verursacht 1 mehr Schaden für alle !M! Karten in deinem Nachziehstapel."
+  },
+  "${ModID}:Preparation": {
+    "NAME": "Vorbereitung",
+    "DESCRIPTION": "Wähle eine Angriffs- oder Fertigkeitskarte. NL Füge eine Kopie dieser Karte deiner Hand hinzu. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wähle eine Angriffs- oder Fertigkeitskarte. NL Füge eine Kopie dieser Karte deiner Hand hinzu.",
+    "EXTENDED_DESCRIPTION": ["Wähle eine Karte zum Kopieren."]
+  },
+  "${ModID}:SmallAdaptation": {
+    "NAME": "Kleine Anpassung",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wähle eine Nicht Machtkarte, die 0 oder 1 kostet. NL Füge eine Kopie dieser Karte deiner Hand hinzu.",
+    "EXTENDED_DESCRIPTION": ["Wähle eine Karte zum Kopieren."]
+  },
+  "${ModID}:ExperimentalMerge": {
+    "NAME": "Experimentelle Fusion",
+    "DESCRIPTION": "{@@}Erhalte !B! Block. NL Mische deinen Ablagestapel in deinen Nachziehstapel. NL Ziehe !M! Karte{!M!|>1=n}."
+  },
+  "${ModID}:ExhaustiveWork": {
+    "NAME": "Erschöpfende Arbeit",
+    "DESCRIPTION": "{@@}Ziehe !M! Karte{!M!|>1=n}. NL Wähle eine Karte. NL Erschöpfe diese Karte und füge eine Kopie davon deinem Nachziehstapel hinzu.",
+    "EXTENDED_DESCRIPTION": ["Wähle eine Karte zum Erschöpfen und Kopieren."]
+  },
+  "${ModID}:IterativeDesign": {
+    "NAME": "Iteratives Design",
+    "DESCRIPTION": "Immer wenn du eine in diesem Kampf erstellte Karte spielst oder eine Karte *duplizierst, erhalte !M! Block."
+  },
+  "${ModID}:Xpansion": {
+    "NAME": "Expansion",
+    "DESCRIPTION": "Erhalte X ${ModID}:Duplikation. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Erhalte X ${ModID}:Duplikation."
+  },
+  "${ModID}:ReduceOverhead": {
+    "NAME": "Überflüssiges reduzieren",
+    "DESCRIPTION": "Erschöpfe ALLE Karten, die Duplikate haben. NL Füge für jede erschöpfte Karte !D! Schaden zu. NL Erschöpfen."
+  },
+  "${ModID}:MagicHand": {
+    "NAME": "Magische Hand",
+    "DESCRIPTION": "Wähle 1 von !M! Karten aus deinem Hauptdeck, um sie deiner Hand hinzuzufügen. NL Sie hat erschöpfen. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wähle 1 von !M! Karten aus deinem Hauptdeck, um sie deiner Hand hinzuzufügen. NL Sie hat erschöpfen."
+  },
+  "${ModID}:EnergyDrink": {
+    "NAME": "Energy Drink",
+    "DESCRIPTION": "Erhalte !M! temporäre LP. NL Erhalte 1 ${ModID}:Duplikation für jeweils 10 Karten, die du in deinen Nachziehstapel mischst."
+  }
+}

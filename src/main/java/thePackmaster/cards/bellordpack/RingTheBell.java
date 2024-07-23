@@ -1,15 +1,17 @@
 package thePackmaster.cards.bellordpack;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import thePackmaster.actions.arcanapack.AllEnemyLoseHPAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -25,16 +27,29 @@ public class RingTheBell extends AbstractBellordCard implements OnObtainCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SFXAction("BELL"));
+        if (MathUtils.randomBoolean())
+            atb(new SFXAction("BELL"));
         atb(new AllEnemyLoseHPAction(p, magicNumber));
+        atb(new DrawCardAction(1));
     }
 
     @Override
     public void onObtainCard() {
-        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), Settings.WIDTH / 2, Settings.HEIGHT / 2));
+        CardCrawlGame.sound.playA("BELL", MathUtils.random(-0.2F, -0.3F));
+        AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new CurseOfTheBell(), Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
     }
 
     public void upp() {
         upgradeMagicNumber(4);
+    }
+
+    @Override //zhs card text thing
+    public void initializeDescriptionCN() {
+        super.initializeDescriptionCN();
+        if(Settings.language == Settings.GameLanguage.ZHS && this.description!=null && this.description.size()>=1 ) {
+            for(int i=0; i < this.description.size(); i++){
+                if(this.description.get(i).text.equals("。")) this.description.remove(i);
+            }
+        }
     }
 }

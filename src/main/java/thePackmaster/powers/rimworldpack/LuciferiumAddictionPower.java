@@ -1,21 +1,15 @@
 package thePackmaster.powers.rimworldpack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import thePackmaster.cards.rimworldpack.Despair;
-import thePackmaster.patches.DiscardHookPatch;
 import thePackmaster.powers.AbstractPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.adp;
 
 public class LuciferiumAddictionPower extends AbstractPackmasterPower {
     public static final String POWER_ID = makeID(LuciferiumAddictionPower.class.getSimpleName());

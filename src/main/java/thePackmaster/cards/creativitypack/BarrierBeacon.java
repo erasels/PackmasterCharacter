@@ -13,14 +13,14 @@ public class BarrierBeacon extends AbstractCreativityCard {
     public final static String ID = makeID(BarrierBeacon.class.getSimpleName());
 
     public BarrierBeacon() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = block = 9;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = block = 7;
         exhaust = true;
     }
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
     }
 
     @Override

@@ -1,0 +1,73 @@
+[
+  {
+    "PROPER_NAME": "蜂群",
+    "NAMES": [
+      "swarm\u00a0of\u00a0bees",
+      "Swarm\u00a0of\u00a0bees",
+      "swarms\u00a0of\u00a0bees",
+      "Swarms\u00a0of\u00a0bees",
+      "蜂群"
+    ],
+    "DESCRIPTION": "充能球：对所有敌人造成伤害。"
+  },
+  {
+    "PROPER_NAME": "彩虱虫",
+    "NAMES": [
+      "rainbow\u00a0louse",
+      "Rainbow\u00a0louse",
+      "彩虱虫"
+    ],
+    "DESCRIPTION": "充能球：回合开始时额外抽一张牌。 #y激发 时抽2张牌。"
+  },
+  {
+    "PROPER_NAME": "熊猫",
+    "NAMES": [
+      "panda",
+      "Pandas",
+      "pandas",
+      "熊猫"
+    ],
+    "DESCRIPTION": "充能球：回合结束时随机对一名敌人造成伤害。"
+  },
+  {
+    "PROPER_NAME": "狼",
+    "NAMES": [
+      "wolf",
+      "狼"
+    ],
+    "DESCRIPTION": "充能球：对生命值最低的敌人造成 #b2 点伤害。伤害量被 #y生成 过充能球数提高。 #y激发 时获得一个 充能球栏位。"
+  },
+  {
+    "PROPER_NAME": "豪猪",
+    "NAMES": [
+      "porcupine",
+      "豪猪"
+    ],
+    "DESCRIPTION": "充能球： 生成 #y荆刺 。 #y激发 时，获得 #y荆棘 。"
+  },
+  {
+    "PROPER_NAME": "魔法精灵",
+    "NAMES": [
+      "leprechaun",
+      "魔法精灵"
+    ],
+    "DESCRIPTION": "充能球：投掷固定点数的 #y骰子 。 #y激发 时对所有敌人给予 #y厄运 。"
+  },
+  {
+    "PROPER_NAME": "厄运",
+    "NAMES": [
+      "jinx",
+      "厄运"
+    ],
+    "DESCRIPTION": "陷入 #y厄运 的敌人获得负面效果时失去层数点生命。"
+  },
+  {
+    "PROPER_NAME": "火精灵",
+    "NAMES": [
+      "fire\u00a0spirit",
+      "Fire\u00a0spirit",
+      "火精灵"
+    ],
+    "DESCRIPTION": "充能球： 给予所有敌人 #y燃烧 。 NL #y激发 时获得 #y集中 。"
+  }
+]

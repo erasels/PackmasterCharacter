@@ -1,0 +1,21 @@
+{
+  "${ModID}:UtilityPack": {
+    "TEXT": [
+      "实用",
+      "与一大堆卡包都契合度较佳的卡包。",
+      "modargo",
+      "卡牌贴图源自游戏：万智牌(Magic: The　Gathering)"
+    ]
+  },
+  "${ModID}:ConjurationAction": {
+    "TEXT": [
+      "选择一张牌打出。"
+    ]
+  },
+  "${ModID}:UtilityPackHat": {
+    "TEXT": [
+      "安全第一！",
+      "安全帽"
+    ]
+  }
+}

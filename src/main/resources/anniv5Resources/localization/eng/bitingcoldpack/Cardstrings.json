@@ -1,8 +1,4 @@
 {
-  "${ModID}:ColdSeason": {
-    "NAME": "Cold Season",
-    "DESCRIPTION": "Whenever an enemy loses HP from ${ModID}:Frostbite, apply !M! ${ModID}:Frostbite."
-  },
   "${ModID}:FrigidBody": {
     "NAME": "Frigid Body",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply ${ModID}:Frostbite equal to blocked damage."
@@ -11,17 +7,13 @@
     "NAME": "Frostburn",
     "DESCRIPTION": "Apply !M! ${ModID}:Frostbite to ALL enemies. NL Add a *Burn into your discard pile."
   },
-  "${ModID}:Glaciate": {
-    "NAME": "Glaciate",
-    "DESCRIPTION": "Whenever you apply ${ModID}:Frostbite, gain !M! Vigor."
+  "${ModID}:FrostedEdge": {
+    "NAME": "Frosted Edge",
+    "DESCRIPTION": "Whenever you apply ${ModID}:Frostbite, gain !M! Temporary Strength."
   },
   "${ModID}:GrowingAffliction": {
     "NAME": "Growing Affliction",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you apply a debuff, return this from the discard pile to your hand."
-  },
-  "${ModID}:IcicleSpear": {
-    "NAME": "Icicle Spear",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Frostbite."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you apply a debuff, return this from the discard pile to your hand and set its cost to 1."
   },
   "${ModID}:InsultToInjury": {
     "NAME": "Insult to Injury",
@@ -29,11 +21,20 @@
   },
   "${ModID}:Refrigerate": {
     "NAME": "Refrigerate",
-    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite."
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! ${ModID}:Frostbite. NL If the enemy already had ${ModID}:Frostbite, they lose HP equal to it. NL Exhaust."
   },
   "${ModID}:RelentlessHail": {
     "NAME": "Relentless Hail",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL Increase this card's hits by 1 this combat."
+  },
+  "${ModID}:IceShatter": {
+    "NAME": "Ice Shatter",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever the enemy loses HP during their next turn, deal !M! damage."
+  },
+  "${ModID}:SnowedIn": {
+    "NAME": "Snowed In",
+    "DESCRIPTION": "Apply !M! ${ModID}:Frostbite. NL The enemy's ${ModID}:Frostbite is not halved this turn."
   },
   "${ModID}:Subdue": {
     "NAME": "Subdue",

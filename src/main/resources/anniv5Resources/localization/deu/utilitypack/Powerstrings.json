@@ -1,0 +1,6 @@
+{
+  "${ModID}:PlasmaShield": {
+    "NAME": "Plasmaschild",
+    "DESCRIPTIONS": ["Falls du #yPlasma kontrollierst erhältst du am Ende deines Zugs #b{0} #yBlock."]
+  }
+}

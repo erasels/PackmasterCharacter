@@ -1,0 +1,28 @@
+{
+  "${ModID}:Penance": {
+    "NAME": "buße",
+    "DESCRIPTIONS": ["Wenn diese Kreatur #b",
+      " #yBuße erhält, verliert sie #b",
+      " LP und der LP Verlust durch #yBuße wird in diesem Kampf um #b10 erhöht.",
+      "."
+    ]
+  },
+  "${ModID}:confession": {
+    "NAME": "beichte",
+    "DESCRIPTIONS": ["Wann immer du Schaden nimmst, verursache #b",
+      " Schaden an ALLEN Gegnern. Wird halbiert wenn außerhalb des Zuges aktiviert."
+    ]
+  },
+  "${ModID}:JudgementDay": {
+    "NAME": "tag des Gerichts",
+    "DESCRIPTIONS": ["Wann immer sich eine #yBlitz Orb #ypassive aktiviert erhalte #b",
+      " #yBeichte."
+    ]
+  },
+  "${ModID}:Absolution": {
+    "NAME": "absolution",
+    "DESCRIPTIONS": ["Wann immer ein Gegner LP durch #yBeichte verliert, füge #b",
+      " #ySchwach hinzu."
+    ]
+  }
+}

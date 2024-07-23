@@ -5,10 +5,8 @@ import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScre
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.BlueCandle;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 @NoCompendium
@@ -17,7 +15,7 @@ public class Despair extends AbstractRimworldCard {
     public final static String ID = makeID(Despair.class.getSimpleName());
 
     public Despair() {
-        super(ID, 2, CardType.STATUS, CardRarity.CURSE, CardTarget.SELF, CardColor.CURSE);
+        super(ID, 2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, CardColor.CURSE);
         exhaust = true;
     }
 

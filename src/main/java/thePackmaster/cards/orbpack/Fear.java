@@ -4,10 +4,9 @@ import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Dark;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class Fear extends AbstractOrbCard {
     public final static String ID = makeID("Fear");
@@ -15,8 +14,17 @@ public class Fear extends AbstractOrbCard {
 
     public Fear() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 13;
+        baseBlock = 14;
         baseMagicNumber = magicNumber = 1;
+
+        showEvokeValue = true;
+        showEvokeOrbCount = magicNumber;
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        showEvokeOrbCount = magicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -27,5 +35,6 @@ public class Fear extends AbstractOrbCard {
 
     public void upp() {
         upgradeMagicNumber(1);
+        showEvokeOrbCount = magicNumber;
     }
 }

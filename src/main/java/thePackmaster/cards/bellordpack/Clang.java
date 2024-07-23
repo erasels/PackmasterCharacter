@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardColor.CURSE;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -32,6 +31,11 @@ public class Clang extends AbstractBellordCard {
             return false;
         }
         return super.canUse(p, m);
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.player.hand.group.stream().anyMatch(q -> q.type == CardType.CURSE || q.type == CardType.STATUS || q.color == CURSE) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

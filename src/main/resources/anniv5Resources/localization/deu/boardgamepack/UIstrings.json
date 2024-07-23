@@ -1,0 +1,20 @@
+{
+  "${ModID}:BoardGamePack": {
+    "TEXT": [
+      "Brettspiele",
+      "Besiege Gegner mit der Kraft von ${ModID}:Würfel!",
+      "Laugic"
+    ]
+  },
+  "${ModID}:BoardGameChance": {
+    "TEXT": [
+      "Chance"
+    ]
+  },
+  "${ModID}:BoardGamePackHat": {
+    "TEXT": [
+      "Dein vermarktbarster Hut.",
+      "Brettspiel-Hut"
+    ]
+  }
+}

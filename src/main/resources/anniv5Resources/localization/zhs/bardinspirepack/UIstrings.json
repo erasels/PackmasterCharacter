@@ -1,0 +1,15 @@
+{
+  "${ModID}:BardInspirePack": {
+    "TEXT": [
+      "吟游灵感",
+      "一套可以给你一些 ${ModID}:灵感 的吟游诗人牌。",
+      "kiooeht"
+    ]
+  },
+  "${ModID}:BardInspirePackHat": {
+    "TEXT": [
+      "好看的织物。",
+      "吟诗贝雷帽"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "${ModID}:BlacksmithsPack": {
+    "TEXT": [
+      "铁匠",
+      "成为那个失去钳子的传奇铁匠。",
+      "Pandemonium"
+    ]
+  },
+  "${ModID}:SetUpShopScreen": {
+    "TEXT": [
+      "选择牌升级并放入抽牌堆顶部。"
+    ]
+  },
+  "${ModID}:MasterworkScreen": {
+    "TEXT": [
+      "升级。"
+    ]
+  },
+  "${ModID}:BlacksmithsPackHat": {
+    "TEXT": [
+      "玩弄两下金属制造。",
+      "焊接面具"
+    ]
+  }
+}

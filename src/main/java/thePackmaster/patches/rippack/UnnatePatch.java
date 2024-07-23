@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class UnnatePatch {
     @SpirePatch(clz = CardGroup.class, method = "initializeDeck")

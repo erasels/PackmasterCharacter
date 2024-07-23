@@ -1,0 +1,9 @@
+{
+  "${ModID}:HammerThrowPower": {
+    "NAME": "Hammerwurf",
+    "DESCRIPTIONS": [
+      "Immer wenn eine Karte behalten wird, füge ALLEN Gegnern #b",
+      " Schaden zu."
+    ]
+  }
+}

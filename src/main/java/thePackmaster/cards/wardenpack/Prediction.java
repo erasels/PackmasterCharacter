@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -23,9 +22,8 @@ public class Prediction extends AbstractWardenCard {
 
         boolean ursafe = true;
 
-        for(AbstractMonster monster: Wiz.getEnemies()) {
-            if (monster.getIntentBaseDmg() > 0)
-            {
+        for (AbstractMonster monster : Wiz.getEnemies()) {
+            if (monster.getIntentBaseDmg() > 0) {
                 ursafe = false;
                 break;
             }
@@ -35,6 +33,11 @@ public class Prediction extends AbstractWardenCard {
             this.addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
         else
             this.addToBot(new GainBlockAction(p, p, block));
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = Wiz.getEnemies().stream().noneMatch(q -> q.getIntentBaseDmg() > 0) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

@@ -1,0 +1,49 @@
+{
+  "${ModID}:Alclawmize": {
+    "NAME": "Alclawmize",
+    "DESCRIPTION": "Erhalte einen zufälligen einzigartigen *Krallen spezifischen Trank. NL Erschöpfen."
+  },
+  "${ModID}:ClawForOne": {
+    "NAME": "Kralle für Einen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm alle *Krallen Karten von deinem Ablagestapel auf deine Hand."
+  },
+  "${ModID}:CloakAndClaw": {
+    "NAME": "Mantel und Kralle",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte eine *Geist *Kralle.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Geist *Krallen."
+  },
+  "${ModID}:Conclawd": {
+    "NAME": "Krallkret",
+    "DESCRIPTION": "Füge allen Gegnern !D! Schaden zu. NL ${ModID}:Schärfen !M!. NL Beende deinen Zug."
+  },
+  "${ModID}:InfiniteClaws": {
+    "NAME": "Unendliche Krallen",
+    "DESCRIPTION": "Zu Beginn deines Zuges, erhalte eine *Geist *Kralle.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Zu Beginn deines Zuges, erhalte eine *Geist *Kralle."
+  },
+  "${ModID}:MutateClaw": {
+    "NAME": "Mutiere Kralle",
+    "DESCRIPTION": "Wähle eine Angriffskarte auf deiner Hand aus und ${ModID}:Modify diese: 'Name erhält Kralle' und 'Erhalte eine *Geist *Kralle'. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Wähle eine Angriffskarte auf deiner Hand aus und ${ModID}:Modify diese: 'Name erhält Kralle' und 'Erhalte eine *Geist *Kralle'."
+  },
+  "${ModID}:SearingClaw": {
+    "NAME": "Brennende Kralle",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Schärfen !M!. NL Kann beliebig oft aufgewertet werden."
+  },
+  "${ModID}:TalkToTheClaw": {
+    "NAME": "Rede mit der Kralle",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du diesen Gegner mit einer *Kralle angreifst, erhalte !M! Block. NL Erschöpfen."
+  },
+  "${ModID}:TwinClaw": {
+    "NAME": "Zwillingkrallen",
+    "DESCRIPTION": "Füge !D! Schaden zweimal zu. NL ${ModID}:Schärfen !M!."
+  },
+  "${ModID}:GhostClaw": {
+    "NAME": "Geist Kralle",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Schärfen !M!. NL Erschöpfen."
+  },
+  "${ModID}:PMClaw": {
+    "NAME": "Kralle",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL ${ModID}:Schärfen !M!."
+  }
+}

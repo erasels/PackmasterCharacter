@@ -5,11 +5,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.orbs.PackmasterOrb;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class Charge extends AbstractOrbCard {
     public final static String ID = makeID("Charge");
@@ -17,7 +16,7 @@ public class Charge extends AbstractOrbCard {
 
     public Charge() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

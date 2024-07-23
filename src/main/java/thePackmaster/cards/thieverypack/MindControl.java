@@ -17,8 +17,8 @@ public class MindControl extends AbstractThieveryCard {
 	private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
 	private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
-	private static final int POWER = 10;
-	private static final int UPGRADE_BONUS = 2;
+	private static final int POWER = 12;
+	private static final int UPGRADE_BONUS = 3;
 
 	public MindControl() {
 		super(ID, COST, TYPE, RARITY, TARGET);

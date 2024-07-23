@@ -3,8 +3,8 @@ package thePackmaster.cards.replicatorspack;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DuplicationPower;
 import thePackmaster.actions.EasyXCostAction;
+import thePackmaster.powers.replicatorspack.DuplicationPackmasterPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.util.Wiz.atb;
@@ -25,7 +25,7 @@ public class Xpansion extends AbstractReplicatorCard {
         atb(new EasyXCostAction(this,
                 (effect, params)->{
                     if (effect > 0) {
-                        att(new ApplyPowerAction(p, p, new DuplicationPower(p, effect)));
+                        att(new ApplyPowerAction(p, p, new DuplicationPackmasterPower(p, effect)));
                     }
                     return true;
                 }));

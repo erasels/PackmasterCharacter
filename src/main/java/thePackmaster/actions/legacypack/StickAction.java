@@ -1,17 +1,11 @@
 package thePackmaster.actions.legacypack;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.actions.unique.ExhumeAction;
-import com.megacrit.cardcrawl.actions.utility.ConditionalDrawAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
-import com.megacrit.cardcrawl.actions.utility.DrawPileToHandAction;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.cards.blue.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.cards.legacypack.StickStrike;
-
-import java.util.*;
 
 public class StickAction extends AbstractGameAction
 {

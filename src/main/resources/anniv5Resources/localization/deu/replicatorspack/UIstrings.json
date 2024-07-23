@@ -1,0 +1,15 @@
+{
+  "${ModID}:ReplicatorsPack": {
+    "TEXT": [
+      "Replikatoren",
+      "Vervielfachen Sie Ihre Karten und streben Sie nach einem großen Deck voller Wert",
+      "Mindbomber"
+    ]
+  },
+  "${ModID}:ReplicatorsPackHat": {
+    "TEXT": [
+      "Es will einfach nur spielen",
+      "Replikator Hut"
+    ]
+  }
+}

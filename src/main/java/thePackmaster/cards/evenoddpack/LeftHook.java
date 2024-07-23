@@ -1,6 +1,6 @@
 package thePackmaster.cards.evenoddpack;
 
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
+import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class LeftHook extends AbstractEvenOddCard{
+public class LeftHook extends AbstractEvenOddCard {
     public final static String ID = makeID(LeftHook.class.getSimpleName());
     private static final int DAMAGE = 3;
     private static final int UDAMAGE = 2;
@@ -17,7 +17,7 @@ public class LeftHook extends AbstractEvenOddCard{
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    
+
     public LeftHook() {
         super(ID, COST, TYPE, RARITY, TARGET);
         rawDescription = cardStrings.DESCRIPTION;
@@ -26,17 +26,16 @@ public class LeftHook extends AbstractEvenOddCard{
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
 
-        ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, EXH);
-        ExhaustiveField.ExhaustiveFields.exhaustive.set(this, EXH);
+        ExhaustiveVariable.setBaseValue(this, EXH);
         initializeDescription();
         baseDamage = DAMAGE;
     }
-    
+
     @Override
     public void upp() {
         upgradeDamage(UDAMAGE);
     }
-    
+
     @Override
     public void onMoveToDiscard() {
         rawDescription = cardStrings.DESCRIPTION;
@@ -46,19 +45,16 @@ public class LeftHook extends AbstractEvenOddCard{
         rawDescription += cardStrings.EXTENDED_DESCRIPTION[3];
         initializeDescription();
     }
-    
+
     @Override
     protected String createEvenOddText() {
-        if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0)
-        {
-            return   cardStrings.DESCRIPTION
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0) {
+            return cardStrings.DESCRIPTION
                     + cardStrings.EXTENDED_DESCRIPTION[0]
                     + cardStrings.EXTENDED_DESCRIPTION[1]
                     + cardStrings.EXTENDED_DESCRIPTION[2]
                     + cardStrings.EXTENDED_DESCRIPTION[3];
-        }
-        else
-        {
+        } else {
             return cardStrings.DESCRIPTION
                     + cardStrings.EXTENDED_DESCRIPTION[0]
                     + cardStrings.EXTENDED_DESCRIPTION[1]
@@ -66,10 +62,15 @@ public class LeftHook extends AbstractEvenOddCard{
                     + cardStrings.EXTENDED_DESCRIPTION[3];
         }
     }
-    
+
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         returnToHand = AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1;
         dmg(abstractMonster, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 0 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 }

@@ -17,7 +17,7 @@ public class SummonsPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public SummonsPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 3, 4, 2, 4, PackSummary.Tags.Orbs));
     }
 
     @Override
@@ -32,7 +32,7 @@ public class SummonsPack extends AbstractCardPack {
         cards.add(SwarmOfBees.ID);
         cards.add(Ambush.ID);
         cards.add(Pandas.ID);
-        cards.add(Training.ID);
+        cards.add(Specialist.ID);
         cards.add(Quill.ID);
         return cards;
     }

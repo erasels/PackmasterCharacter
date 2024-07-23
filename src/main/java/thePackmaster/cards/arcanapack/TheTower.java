@@ -4,11 +4,10 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.arcanapack.TheTowerAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class TheTower extends AbstractAstrologerCard {
     public final static String ID = makeID("TheTower");

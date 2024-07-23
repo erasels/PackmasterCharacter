@@ -12,8 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.SwiftPotion;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import thePackmaster.cards.AbstractPackmasterCard;
-import thePackmaster.powers.rimworldpack.SpikeTrapPower;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;

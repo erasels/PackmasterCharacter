@@ -1,7 +1,5 @@
 package thePackmaster.packs;
 
-import basemod.helpers.CardTags;
-import com.megacrit.cardcrawl.cards.blue.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import thePackmaster.SpireAnniversary5Mod;
@@ -17,7 +15,7 @@ public class BoardGamePack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public BoardGamePack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 3, 4, 4, 2));
     }
 
     @Override

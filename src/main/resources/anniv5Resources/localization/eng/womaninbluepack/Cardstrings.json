@@ -21,9 +21,9 @@
   },
   "${ModID}:MetallicVial": {
     "NAME": "Metallic Vial",
-    "DESCRIPTION": "Choose: Gain 4 Plated Armor, Gain 3 Thorns, or Gain 2 Artifact. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose: Gain 4 Plated Armor, Gain 3 Thorns, or Gain 2 Artifact. NL stslib:Exhaustive !stslib:ex!.",
-    "EXTENDED_DESCRIPTION": ["Gain 4 Plated Armor.", "Gain 3 Thorns.","Gain 2 Artifact."]
+    "DESCRIPTION": "Choose: Gain 4 ${ModID}:Plated_Armor, Gain 3 Thorns, or Gain 2 Artifact. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose: Gain 4 ${ModID}:Plated_Armor, Gain 3 Thorns, or Gain 2 Artifact. NL stslib:Exhaustive !stslib:ex!.",
+    "EXTENDED_DESCRIPTION": ["Gain 4 ${ModID}:Plated_Armor.", "Gain 3 Thorns.","Gain 2 Artifact."]
   },
   "${ModID}:QuickBrew": {
     "NAME": "Quick Brew",

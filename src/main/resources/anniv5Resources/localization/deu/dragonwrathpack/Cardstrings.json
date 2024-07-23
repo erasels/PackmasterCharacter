@@ -1,0 +1,42 @@
+{
+  "${ModID}:PenanceShock": {
+    "NAME": "Bußschock",
+    "DESCRIPTION": "Verursache !D! Schaden und wende !M! ${ModID}:Buße an. NL Erschaffe 1 Blitz."
+  },
+  "${ModID}:Condemn": {
+    "NAME": "Verurteilung",
+    "DESCRIPTION": "Wende !M! ${ModID}:Buße an."
+  },
+  "${ModID}:SearingLight": {
+    "NAME": "Sengendes Licht",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 ${ModID}:Licht."
+  },
+  "${ModID}:RazorWind": {
+    "NAME": "Scharfer Wind",
+    "DESCRIPTION": "Erhalte !${ModID}:m2! ${ModID}:Beichte. NL Erhalte !M! Schaden."
+  },
+  "${ModID}:WeightofContrition": {
+    "NAME": "Gewicht der Reue",
+    "DESCRIPTION": "Wende !M! ${ModID}:Buße an. NL Erhöhe den durch ${ModID}:Buße verursachten Lebensverlust in diesem Kampf um !${ModID}:m2!."
+  },
+  "${ModID}:ChainsofTruth": {
+    "NAME": "Ketten der Wahrheit",
+    "DESCRIPTION": "Verursache an ALLEN Gegnern !D! Schaden. NL Wende !M! ${ModID}:Buße auf ALLE Gegner an."
+  },
+  "${ModID}:SacredTrial": {
+    "NAME": "Heilige Prüfung",
+    "DESCRIPTION": "Erhalte !M! Schaden. NL Erschaffe !${ModID}:m2! Blitz."
+  },
+  "${ModID}:HolyWrath": {
+    "NAME": "Heiliger Zorn",
+    "DESCRIPTION": "Erhalte !M! Schaden. NL Nimm diese Karte aus dem Ablagestapel auf deine Hand zurück, wann immer du ${ModID}:Beichte erhältst."
+  },
+  "${ModID}:Absolution": {
+    "NAME": "Absolution",
+    "DESCRIPTION": "Wende !M! ${ModID}:Buße an. NL Immer wenn eine Kreatur in diesem Zug durch ${ModID}:Buße Schaden erleidet, wende !${ModID}:m2! Schwach an."
+  },
+  "${ModID}:JudgementDay": {
+    "NAME": "Tag des Gerichts",
+    "DESCRIPTION": "${ModID}:Manifestiere !M! Blitz. NL Immer wenn der passive Effekt eines Blitz Orbs aktiviert wird, erhalte !${ModID}:m2! ${ModID}:Beichte."
+  }
+}

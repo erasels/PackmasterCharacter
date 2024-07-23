@@ -10,11 +10,10 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class Showoff extends AbstractPackmasterCard {
     public final static String ID = makeID("Showoff");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public Showoff() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 14;
+        baseBlock = 13;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

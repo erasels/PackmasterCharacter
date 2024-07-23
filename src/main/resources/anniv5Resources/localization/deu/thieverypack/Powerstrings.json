@@ -1,0 +1,27 @@
+{
+  "${ModID}:DeceivedPower": {
+    "NAME": "Betrogen",
+    "DESCRIPTIONS": [
+      "Wenn dieser Gegner stirbt während er #yvergiftet ist, erhälst du #b",
+      " Gold."
+    ]
+  },
+  "${ModID}:HammeredPower": {
+    "NAME": "Gehämmert",
+    "DESCRIPTIONS": [
+      "Die Buffs der Kreatur werden bis zur nächsten Runde gestohlen."
+    ]
+  },
+  "${ModID}:ThieveryMasteryPower": {
+    "NAME": "Diebesmeisterschaft",
+    "DESCRIPTIONS": [
+      "Immer wenn du etwas stiehlst, erhalte die doppelte Menge davon."
+    ]
+  },
+  "${ModID}:MindControlledPower": {
+    "NAME": "Gedankenkontrolle",
+    "DESCRIPTIONS": [
+      "Dieser Feind wurde zum Verbündeten und beginnt andere Gegner anzugreifen."
+    ]
+  }
+}

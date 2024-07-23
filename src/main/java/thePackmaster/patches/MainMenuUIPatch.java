@@ -1,6 +1,5 @@
 package thePackmaster.patches;
 
-import basemod.ModLabeledButton;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -18,15 +17,20 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.ThePackmaster;
 import thePackmaster.hats.HatMenu;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.ui.FixedModLabeledToggleButton.FixedModLabeledButton;
 import thePackmaster.ui.PackFilterMenu;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
 
+import static thePackmaster.SpireAnniversary5Mod.PACKS_PER_CHOICE;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 public class MainMenuUIPatch {
-    public static boolean customDraft = false;
+    public static boolean customDraft;
 
     private static final Hitbox packDraftToggle = new Hitbox(40.0f * Settings.scale, 40.0f * Settings.scale);
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("PackMainMenuUI"));
@@ -41,10 +45,11 @@ public class MainMenuUIPatch {
     private static final String[] optionIDs;
     public static final String RANDOM = "Random";
     public static final String CHOICE = "Choice";
+    public static final String NONE = "None";
 
-    private static final float CHECKBOX_X_OFF = 32.0f * Settings.scale;
+    private static final float CHECKBOX_X_OFF = 32.0f * Settings.xScale;
     private static final float CHECKBOX_X;
-    private static final float CHECKBOX_Y = Settings.HEIGHT / 2.0f - 175.0f * Settings.scale;
+    private static final float CHECKBOX_Y = Settings.HEIGHT / 2.0f - 175.0f * Settings.yScale;
 
     private static final int PACK_COUNT = SpireAnniversary5Mod.PACKS_PER_RUN;
     private static final int DROPDOWN_ROWCOUNT = 10;
@@ -53,23 +58,26 @@ public class MainMenuUIPatch {
     private static final float DROPDOWNS_START_Y = CHECKBOX_Y + DROPDOWNS_SPACING * (PACK_COUNT + 0.5f);
 
     //filter button fields
+    // We pass these values to the button class, which does its own multiplication by xScale/yScale
     private static final float FILTERBUTTON_X = 55f;
     private static final float FILTERBUTTON_Y = 1080f - 122f;
 
     private static final PackFilterMenu filterMenu = new PackFilterMenu();
-    private static final ModLabeledButton openFilterMenuButton;
+    private static final FixedModLabeledButton openFilterMenuButton;
     private static final HashMap<String, Integer> idToIndex = new HashMap<>();
 
     //hat button fields
+    // We pass these values to the button class, which does its own multiplication by xScale/yScale
     private static final float HATBUTTON_X = 610f;
     private static final float HATBUTTON_Y = 1080f - 122f;
 
     public static final HatMenu hatMenu = new HatMenu();
-    private static final ModLabeledButton openHatMenuButton;
+    private static final FixedModLabeledButton openHatMenuButton;
 
     static {
         options.add(TEXT[2]);
-        options.add(TEXT[3]);
+        options.add(TEXT[3] + PACKS_PER_CHOICE + TEXT[6]);
+        options.add(TEXT[7]);
         List<AbstractCardPack> sortedPacks = new ArrayList<>(SpireAnniversary5Mod.unfilteredAllPacks);
         sortedPacks.sort(Comparator.comparing((pack) -> pack.name));
         for (AbstractCardPack c : sortedPacks) {
@@ -79,28 +87,45 @@ public class MainMenuUIPatch {
         optionIDs = new String[options.size()];
         optionIDs[0] = RANDOM;
         optionIDs[1] = CHOICE;
+        optionIDs[2] = NONE;
         idToIndex.put(RANDOM, 0);
         idToIndex.put(CHOICE, 1);
-        for (int i = 2; i < optionIDs.length; ++i) {
-            String packID = sortedPacks.get(i - 2).packID;
+        idToIndex.put(NONE, 2);
+        int autoOptions = idToIndex.size();
+        //I have some jank code in the dropdowns below that excludes the last option here which is NONE so keep that in mind in case you add more.
+        for (int i = autoOptions; i < optionIDs.length; ++i) {
+            String packID = sortedPacks.get(i - autoOptions).packID;
             optionIDs[i] = packID;
             idToIndex.put(packID, i);
         }
+
+        customDraft = SpireAnniversary5Mod.getCustomDraftEnabled();
 
         //Validate the saved CDraftSelection - this is necessary in the event that any packs are removed.
         //Without this validation, Packmaster will crash on attempting to load a Pack that is no longer in the pack list.
         ArrayList<String> packSetupsInit = new ArrayList<>(SpireAnniversary5Mod.getSavedCDraftSelection());
 
-        for (String s : packSetupsInit
-        ) {
-            if (Objects.equals(s, RANDOM) || Objects.equals(s, CHOICE)) {
-                packSetups.add(s);
-            } else if (SpireAnniversary5Mod.packsByID.getOrDefault(s, null) != null) {
-                packSetups.add(s);
-            } else {
-                packSetups.add(RANDOM); //This will only get hit if there is an invalid entry being loaded, such as Pack that no longer exists.  In that event, replace it with RANDOM.
+        for (String s : packSetupsInit) {
+            switch (s) {
+                case RANDOM:
+                case CHOICE:
+                case NONE:
+                    packSetups.add(s);
+                    break;
+                default:
+                    if (SpireAnniversary5Mod.packsByID.getOrDefault(s, null) != null) {
+                        packSetups.add(s);
+                    } else {
+                        packSetups.add(RANDOM); //This will only get hit if there is an invalid entry being loaded, such as Pack that no longer exists.  In that event, replace it with RANDOM.
+                    }
             }
-
+        }
+        // As part of adding NONE as an option, a bug was introduced that didn't include anything in the pack setups for
+        // the NONE option, leaving it with fewer entries than the expected amount. To fix this, we fill any missing
+        // entries with NONE here, so saved pack setups loaded while this bug existed will work properly (and so that
+        // downstream code doesn't need to check for this everywhere)
+        for (int i = packSetups.size(); i < PACK_COUNT; i++) {
+            packSetups.add(NONE);
         }
         packSetupsInit.clear();
 
@@ -108,7 +133,10 @@ public class MainMenuUIPatch {
             int index = i;
             DropdownMenu d = new DropdownMenu((dropdownMenu, optionIndex, s) -> {
                 packSetups.set(index, optionIDs[optionIndex]);
-                if (optionIndex >= 2) {
+                //Jank to allow config for allowing multiple Nones to be chosen
+                int excluded = autoOptions;
+                if(!SpireAnniversary5Mod.allowMultiNone()) excluded--;
+                if (optionIndex >= excluded) {
                     for (DropdownMenu other : dropdowns) {
                         if (other != dropdownMenu && other.getSelectedIndex() == optionIndex) {
                             other.setSelectedIndex(0);
@@ -140,10 +168,19 @@ public class MainMenuUIPatch {
             CHECKBOX_X = DROPDOWN_X + CHECKBOX_X_OFF;
         }
 
-        openFilterMenuButton = new ModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X, FILTERBUTTON_Y, null,
+        openFilterMenuButton = new FixedModLabeledButton(uiStrings.TEXT[4], FILTERBUTTON_X, FILTERBUTTON_Y, null,
                 (button) -> filterMenu.toggle());
 
-        openHatMenuButton = new ModLabeledButton(uiStrings.TEXT[5], HATBUTTON_X, HATBUTTON_Y, null, (button) -> hatMenu.toggle());
+        openHatMenuButton = new FixedModLabeledButton(uiStrings.TEXT[5], HATBUTTON_X, HATBUTTON_Y, null, (button) -> hatMenu.toggle());
+    }
+
+    public static void updateChoiceCount() {
+        options.set(1, TEXT[3] + PACKS_PER_CHOICE + TEXT[6]);
+
+        for (DropdownMenu dropdown : dropdowns) {
+            Object o = dropdown.rows.get(1);
+            ReflectionHacks.setPrivate(o, o.getClass(), "text", options.get(1));
+        }
     }
 
 
@@ -229,6 +266,7 @@ public class MainMenuUIPatch {
                         }
                         if (packDraftToggle.clicked) {
                             customDraft = !customDraft;
+                            SpireAnniversary5Mod.saveCustomDraftEnabled(customDraft);
                             packDraftToggle.clicked = false;
                         }
                     }

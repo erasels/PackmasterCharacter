@@ -2,12 +2,11 @@ package thePackmaster.cards.arcanapack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.patches.arcanapack.AnimatedCardsPatch;
 import thePackmaster.powers.arcanapack.HangedPower;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class TheHangedMan extends AbstractAstrologerCard {
     public final static String ID = makeID("TheHangedMan");
@@ -15,7 +14,7 @@ public class TheHangedMan extends AbstractAstrologerCard {
 
     public TheHangedMan() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
 
         AnimatedCardsPatch.loadFrames(this, 16, 0.20f);
     }

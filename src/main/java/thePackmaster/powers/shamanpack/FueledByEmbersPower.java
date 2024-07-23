@@ -10,8 +10,6 @@ import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.shamanpack.FadingEmber;
 import thePackmaster.powers.AbstractPackmasterPower;
 
-import java.text.MessageFormat;
-
 public class FueledByEmbersPower extends AbstractPackmasterPower {
     public static final String POWER_ID = SpireAnniversary5Mod.makeID("FueledByEmbers");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);

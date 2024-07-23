@@ -1,9 +1,6 @@
 package thePackmaster.cards.prismaticpack;
 
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
-
-import java.util.Locale;
 
 public abstract class AbstractPrismaticCard extends AbstractPackmasterCard
 {

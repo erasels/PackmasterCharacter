@@ -1,0 +1,43 @@
+{
+  "${ModID}:FrigidBody": {
+    "NAME": "僵冻",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合被攻击时，给予对方格挡住的伤害层 ${ModID}:霜噬 。"
+  },
+  "${ModID}:Frostburn": {
+    "NAME": "霜灼",
+    "DESCRIPTION": "给予 !M! 层群体 ${ModID}:霜噬 。 NL 将一张 *灼烧 加入弃牌堆。"
+  },
+  "${ModID}:FrostedEdge": {
+    "NAME": "冰尖",
+    "DESCRIPTION": "给予 ${ModID}:霜噬 时， NL 获得 !M! 层临时 力量 。"
+  },
+  "${ModID}:GrowingAffliction": {
+    "NAME": "无间折磨",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予负面效果时， NL 本牌从弃牌堆返回手牌。 NL 且耗能变为1。"
+  },
+  "${ModID}:InsultToInjury": {
+    "NAME": "讥讽伤口",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标每有负面效果， NL 再造成一次。"
+  },
+  "${ModID}:Refrigerate": {
+    "NAME": "冷却",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:霜噬 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 ${ModID}:霜噬 。 NL 若目标已被 ${ModID}:霜噬 ， NL 其失去层数点生命。 NL 消耗 。"
+  },
+  "${ModID}:IceShatter": {
+    "NAME": "冰裂",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本轮敌方回合内，每当目标生命流失，其额外受到 !M! 点伤害。"
+  },
+  "${ModID}:RelentlessHail": {
+    "NAME": "狂烈冰雹",
+    "DESCRIPTION": "造成 !D! 点群体伤害 !M! 次。 NL 本场战斗次数加1。"
+  },
+  "${ModID}:Subdue": {
+    "NAME": "制服",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若所用上张牌为攻击， NL 再获得一次。"
+  },
+  "${ModID}:SnowedIn": {
+    "NAME": "积雪",
+    "DESCRIPTION": "给予 !M! 层 ${ModID}:霜噬 。 NL 本回合目标 ${ModID}:霜噬 不减半。"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "${ModID}:PierceVeil": {
+    "NAME": "破掩",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 选择抽牌堆顶部 !M! 张中的一张牌加入手牌。"
+  },
+  "${ModID}:Stall": {
+    "NAME": "停滞",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择 !M! 张手牌移入抽牌堆顶部。"
+  },
+  "${ModID}:RiskOfBlades": {
+    "NAME": "刀刃之险",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若牌堆顶为攻击牌，再造成2次伤害。"
+  },
+  "${ModID}:Crossroads": {
+    "NAME": "交岔口",
+    "DESCRIPTION": "预见 !M! 。 NL 打出抽牌堆顶部的牌。 NL 消耗 。"
+  },
+  "${ModID}:Anticipation": {
+    "NAME": "预计",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得其中最高耗能的 力量 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 获得它们耗能总和的 力量 。"
+  },
+  "${ModID}:Prediction": {
+    "NAME": "预言",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若无敌人意图攻击， NL 改为下回合获得。"
+  },
+  "${ModID}:ForceBolt": {
+    "NAME": "力之矢",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL stslib:长驻 !stslib:persist! 。"
+  },
+  "${ModID}:Enigmancy": {
+    "NAME": "高深",
+    "DESCRIPTION": "预见 !M! 。 NL 回合开始时，获得 !${ModID}:m2! [E] ，每回合获得量减1。"
+  },
+  "${ModID}:Recurrence": {
+    "NAME": "重现",
+    "DESCRIPTION": "将所有手牌的复制品加入抽牌堆。 NL 消耗 。"
+  },
+  "${ModID}:DivineMight": {
+    "NAME": "神圣之力",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出两次 *神 *圣 *之 *力 后， ${ModID}:飞升 。"
+  }
+}

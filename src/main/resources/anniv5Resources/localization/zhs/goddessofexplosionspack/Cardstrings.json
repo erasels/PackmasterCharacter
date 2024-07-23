@@ -1,0 +1,52 @@
+{
+  "${ModID}:ChainReaction": {
+    "NAME": "链式反应",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:辐射 。"
+  },
+  "${ModID}:WaveMotionCannon": {
+    "NAME": "波动加农炮",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下回合， NL 造成 !M! 点群体伤害。"
+  },
+  "${ModID}:Redshift": {
+    "NAME": "红移",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下 !M! 个回合开始时， NL 抽一张牌。"
+  },
+  "${ModID}:Countdown": {
+    "NAME": "倒计时",
+    "DESCRIPTION": "再抽 !M! 张牌后，获得 [E] [E] 与一张 *原 *子 *倾 *灭 。",
+    "UPGRADE_DESCRIPTION": "再抽 !M! 张牌后，获得 [E] [E] 与一张 *原 *子 *倾 *灭+ 。"
+  },
+  "${ModID}:AtomicPiledriver": {
+    "NAME": "原子倾灭",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 ${ModID}:辐射 。 NL 消耗 。"
+  },
+  "${ModID}:NuclearFusion": {
+    "NAME": "核聚变",
+    "DESCRIPTION": "打出一张耗能不超过X的手牌两次。 NL 获得X张 *灼伤 。",
+    "UPGRADE_DESCRIPTION": "打出一张耗能不超过X+1的手牌两次。 NL 获得X张 *灼伤 。"
+  },
+  "${ModID}:MoreExplosions": {
+    "NAME": "愈烈",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 随机将 !M! 张能力牌加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 随机将 !M! 张能力牌加入抽牌堆。"
+  },
+  "${ModID}:Meltdown": {
+    "NAME": "熔化",
+    "DESCRIPTION": "抽到 *能力 牌时， NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 抽到 *能力 牌时， NL 获得 [E] 。"
+  },
+  "${ModID}:ExplosiveForm": {
+    "NAME": "爆炸形态",
+    "DESCRIPTION": "回合开始时， NL 布置一枚 *炸弹 。",
+    "UPGRADE_DESCRIPTION": "布置一枚 *炸弹 。 NL 回合开始时， NL 布置一枚 *炸弹 。"
+  },
+  "${ModID}:KillerQueen": {
+    "NAME": "杀人女王",
+    "DESCRIPTION": "选择一张手牌， NL 将其附加效果： NL \"造成 !M! 点群体伤害\"。"
+  },
+  "${ModID}:EveOfDestruction": {
+    "NAME": "毁灭之夜",
+    "DESCRIPTION": "非攻击伤害提高100%。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 非攻击伤害提高100%。"
+  }
+}

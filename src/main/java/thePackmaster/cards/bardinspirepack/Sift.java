@@ -30,10 +30,16 @@ public class Sift extends AbstractBardCard
             @Override
             public void update() {
                 for (AbstractCard c : DrawCardAction.drawnCards) {
-                    int cost = Wiz.getLogicalCardCost(c);
-                    if (cost > 0) {
-                        addToTop(new GainEnergyAction(c.costForTurn));
-                    }
+                    Wiz.att(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            int cost = Wiz.getLogicalCardCost(c);
+                            if (cost > 0) {
+                                Wiz.att(new GainEnergyAction(cost));
+                            }
+                            this.isDone = true;
+                        }
+                    });
                 }
                 isDone = true;
             }

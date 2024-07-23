@@ -1,0 +1,51 @@
+{
+  "${ModID}:InspiringSong": {
+    "NAME": "汇灵颂唱",
+    "DESCRIPTION": "生成 !M! 个 冰霜 充能球。 NL 每有一个充能球， NL 获得1层 !${ModID}:m2! 级 ${ModID}:灵感 。"
+  },
+  "${ModID}:Sift": {
+    "NAME": "灵揽",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得其耗能点 [E] 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 获得其耗能点 [E] 。 NL 抽 !M! 张牌。"
+  },
+  "${ModID}:EchoEcho": {
+    "NAME": "回响之回响",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 造成 !${ModID}:sd! 点伤害。"
+  },
+  "${ModID}:ThickOfTheFight": {
+    "NAME": "乱斗高潮",
+    "DESCRIPTION": "每有一名敌人， NL 随机造成 !D! 点伤害。 NL 每名敌人临时使本牌耗能减1。"
+  },
+  "${ModID}:EnGarde": {
+    "NAME": "战后待命",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 本牌发挥 !M! 倍 ${ModID}:灵感 。"
+  },
+  "${ModID}:Heroism": {
+    "NAME": "英勇",
+    "DESCRIPTION": "获得 !M! 层 临时生命 。 NL 获得1层 !${ModID}:m2! 级 ${ModID}:灵感 。"
+  },
+  "${ModID}:LifeDrain": {
+    "NAME": "生命汲取",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 ${ModID}:突破 的半量层 临时生命 。"
+  },
+  "${ModID}:Shifting": {
+    "NAME": "物移",
+    "DESCRIPTION": "造成 !D! 点伤害， NL 或获得 !B! 点 格挡 。 NL 造成 !D! 点伤害， NL 或获得 !B! 点 格挡 。"
+  },
+  "${ModID}:ShiftingAttack": {
+    "NAME": "攻击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${ModID}:ShiftingBlock": {
+    "NAME": "格挡",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "${ModID}:MagnumOpus": {
+    "NAME": "代表作",
+    "DESCRIPTION": "获得1层 !${ModID}:m2! 级 ${ModID}:灵感 。 NL 本局获得量加 !M! 级。 NL 消耗 。"
+  },
+  "${ModID}:SplendidForm": {
+    "NAME": "华丽形态",
+    "DESCRIPTION": "回合开始时， NL 获得1层 !${ModID}:m2! 级 ${ModID}:灵感 。"
+  }
+}

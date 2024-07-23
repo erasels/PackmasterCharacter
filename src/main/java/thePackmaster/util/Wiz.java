@@ -1,5 +1,6 @@
 package thePackmaster.util;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -21,11 +22,15 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.TimedVFXAction;
+import thePackmaster.cardmodifiers.rippack.RippableModifier;
 import thePackmaster.packs.AbstractCardPack;
+import thePackmaster.patches.rippack.AllCardsRippablePatches;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Wiz {
     //The wonderful Wizard of Oz allows access to most easy compilations of data, or functions.
@@ -42,6 +47,14 @@ public class Wiz {
         return AbstractDungeon.player.hand;
     }
 
+    public static CardGroup drawPile() {
+        return AbstractDungeon.player.drawPile;
+    }
+
+    public static CardGroup discardPile() {
+        return AbstractDungeon.player.discardPile;
+    }
+
     public static CardGroup deck() {
         return AbstractDungeon.player.masterDeck;
     }
@@ -50,6 +63,12 @@ public class Wiz {
         for (AbstractCard c : cardsList) {
             consumer.accept(c);
         }
+    }
+
+    public static int getLogicalPowerAmount(AbstractCreature ac, String powerId) {
+        AbstractPower pow = ac.getPower(powerId);
+        if (pow == null) return 0;
+        return pow.amount;
     }
 
     public static ArrayList<AbstractCard> getAllCardsInCardGroups(boolean includeHand, boolean includeExhaust) {
@@ -111,12 +130,20 @@ public class Wiz {
         return returnTrulyRandomPrediCardInCombat(pred, false);
     }
 
-    public static <T> T getRandomItem(ArrayList<T> list, Random rng) {
+    public static <T> T getRandomItem(List<T> list, Random rng) {
         return list.isEmpty() ? null : list.get(rng.random(list.size() - 1));
     }
 
-    public static <T> T getRandomItem(ArrayList<T> list) {
+    public static <T> T getRandomItem(List<T> list) {
         return getRandomItem(list, AbstractDungeon.cardRandomRng);
+    }
+
+    public static AbstractCard getRandomItem(CardGroup group, Random rng) {
+        return getRandomItem(group.group, rng);
+    }
+
+    public static AbstractCard getRandomItem(CardGroup group) {
+        return getRandomItem(group, AbstractDungeon.cardRandomRng);
     }
 
     private static boolean actuallyHovered(Hitbox hb) {
@@ -386,17 +413,44 @@ public class Wiz {
 
     public static int getLogicalCardCost(AbstractCard c) {
         if (!c.freeToPlay()) {
-            if(c.cost <= -2) {
+            if (c.cost <= -2) {
                 return 0;
-            } else if(c.cost == -1)
+            } else if (c.cost == -1)
                 return EnergyPanel.totalCount;
             return c.costForTurn;
         }
         return 0;
     }
 
+    public static int countDebuffs(AbstractCreature c){
+        return (int) c.powers.stream()
+                .filter(pow -> pow.type == AbstractPower.PowerType.DEBUFF )
+                .count();
+    }
+
     // Packmaster specific utilities
     public static AbstractCardPack getPackByCard(AbstractCard c) {
         return SpireAnniversary5Mod.packsByID.get(SpireAnniversary5Mod.cardParentMap.get(c.cardID));
+    }
+
+    public static boolean isArtCard(AbstractCard c) {
+        return AllCardsRippablePatches.AbstractCardFields.ripStatus.get(c) == AllCardsRippablePatches.RipStatus.ART;
+    }
+
+    public static boolean isTextCard(AbstractCard c) {
+        return AllCardsRippablePatches.AbstractCardFields.ripStatus.get(c) == AllCardsRippablePatches.RipStatus.TEXT;
+    }
+
+    public static boolean isWholeCard(AbstractCard c) {
+        return AllCardsRippablePatches.AbstractCardFields.ripStatus.get(c) == AllCardsRippablePatches.RipStatus.WHOLE;
+    }
+
+    //If a card is whole and isn't already rippable
+    public static boolean cardValidToMakeRippable(AbstractCard c) {
+        return isWholeCard(c) && !CardModifierManager.hasModifier(c, RippableModifier.ID);
+    }
+
+    public static int countValidCardsInHandToMakeRippable() {
+        return AbstractDungeon.player.hand.group.stream().filter(card -> cardValidToMakeRippable(card)).collect(Collectors.toList()).size();
     }
 }

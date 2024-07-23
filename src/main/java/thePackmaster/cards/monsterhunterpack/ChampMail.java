@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -17,7 +16,7 @@ public class ChampMail extends AbstractMonsterHunterCard {
     public final static String ID = makeID("ChampMail");
 
     private static final int MAGIC = 2;
-    private static final int BLOCK = 15;
+    private static final int BLOCK = 18;
 
     public ChampMail() {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
@@ -28,13 +27,18 @@ public class ChampMail extends AbstractMonsterHunterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, block));
-        if (p.currentHealth <= p.maxHealth/2) {
+        if (p.currentHealth <= p.maxHealth / 2) {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.25F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.25F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.25F));
             AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(p));
             addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.player.currentHealth <= AbstractDungeon.player.maxHealth / 2 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

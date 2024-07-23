@@ -2,10 +2,12 @@ package thePackmaster.actions.gemspack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
-import java.util.Iterator;
+import thePackmaster.SpireAnniversary5Mod;
 
 public class ReduceDebuffsAction extends AbstractGameAction {
     private AbstractCreature c;
@@ -17,10 +19,34 @@ public class ReduceDebuffsAction extends AbstractGameAction {
     }
 
     public void update() {
+        if (this.amount <= 0) {
+            SpireAnniversary5Mod.logger.error("ReduceDebuffsAction called with amount <= 0. amount: " + this.amount);
+            this.isDone = true;
+            return;
+        }
 
         for (AbstractPower p : this.c.powers) {
             if (p.type == PowerType.DEBUFF) {
-                this.addToTop(new ReducePowerAction(this.c, this.c, p.ID, amount));
+                // ReducePowerAction only works properly for powers with positive amount, so we use our own action to
+                // handle the various debuffs that have negative amount (e.g. Wraith Form, negative Dexterity). This also
+                // handles debuffs that don't stack (e.g. NoDrawPower from Battle Trance), since those use amount -1.
+                if (p.amount > 0) {
+                    this.addToTop(new ReducePowerAction(this.c, this.c, p.ID, this.amount));
+                }
+                else if (p.amount < 0 && Math.abs(p.amount) <= this.amount) {
+                    this.addToTop(new RemoveSpecificPowerAction(this.c, this.c, p));
+                }
+                else {
+                    this.addToTop(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            p.stackPower(ReduceDebuffsAction.this.amount);
+                            p.updateDescription();
+                            AbstractDungeon.onModifyPower();
+                            this.isDone = true;
+                        }
+                    });
+                }
             }
         }
 

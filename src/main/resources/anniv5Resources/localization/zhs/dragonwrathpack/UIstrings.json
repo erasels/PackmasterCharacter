@@ -1,0 +1,15 @@
+{
+  "${ModID}:DragonwrathPack": {
+    "TEXT": [
+      "龙怒",
+      "使用龙骑秩序下一名贱民的神圣之力。",
+      "Silver"
+    ]
+  },
+  "${ModID}:DragonwrathPackHat": {
+    "TEXT": [
+      "缩小的门径可能会有问题...",
+      "龙角"
+    ]
+  }
+}

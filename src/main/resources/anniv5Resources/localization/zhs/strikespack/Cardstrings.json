@@ -1,0 +1,44 @@
+{
+  "${ModID}:StrikeOfMidnight": {
+    "NAME": "午夜打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 生成1个 黑暗 充能球。"
+  },
+  "${ModID}:StrikeOfLuck": {
+    "NAME": "幸运打击",
+    "DESCRIPTION": "随机造成 !D! 点伤害1~3 次。"
+  },
+  "${ModID}:WorkersStrike": {
+    "NAME": "罢工打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:取 一张攻击牌，若为一张打击牌，获得 [E] 。"
+  },
+  "${ModID}:StrikeDummyJr": {
+    "NAME": "木偶打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 力量 。 NL 本场战斗打击牌伤害增加2点。 NL 消耗 。"
+  },
+  "${ModID}:DifferentStrikes": {
+    "NAME": "各色打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张手牌，将其随机变为一张耗能低1点且带 消耗 的打击牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张手牌，将其随机变为一张耗能低1点且带 消耗 的打击牌+。"
+  },
+  "${ModID}:StrikeOfGenius": {
+    "NAME": "打击天才",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 下张攻击牌使你获得 ${ModID}:突破 量点 格挡 。"
+  },
+  "${ModID}:StrikeABargain": {
+    "NAME": "协商打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 降低所有攻击手牌的下次耗能至0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 降低所有攻击手牌的下次耗能至0。"
+  },
+  "${ModID}:Backstrike": {
+    "NAME": "回身打击",
+    "DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL ${ModID}:修改 所有攻击手牌： NL \"牌名加上打击\"。 NL 消耗 。"
+  },
+  "${ModID}:LightningStrike": {
+    "NAME": "闪电打击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 生成 2个 闪电 充能球。"
+  },
+  "${ModID}:PenaltyStrike": {
+    "NAME": "惩罚打击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 目标临时失去 !M! 点 力量 。"
+  }
+}

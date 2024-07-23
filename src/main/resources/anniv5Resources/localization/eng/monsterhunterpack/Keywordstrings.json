@@ -33,12 +33,21 @@
     "DESCRIPTION": "At the end of the turn, gain Block. When taking unblocked attack damage, remove this."
   },
   {
+    "PROPER_NAME": "Plated Armor",
+    "NAMES": [
+      "Plated Armor",
+      "Plated_Armor",
+      "plated_armor"
+    ],
+    "DESCRIPTION": "At the end of the turn, gain Block. When taking unblocked attack damage, reduce by 1."
+  },
+  {
     "PROPER_NAME": "Nonlethal",
     "NAMES": [
       "nonlethal",
       "non-lethal",
       "non_lethal"
     ],
-    "DESCRIPTION": "Non-lethal damage will leave targets at 1 hp."
+    "DESCRIPTION": "Non-lethal damage will leave targets at 1 HP."
   }
 ]

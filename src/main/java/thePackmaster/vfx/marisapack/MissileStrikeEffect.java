@@ -50,6 +50,8 @@ public class MissileStrikeEffect extends AbstractGameEffect {
         this.rotation = fAngle;
         this.color = col.cpy();
         this.forcedAngle = true;
+        this.soundKey = null;
+        this.playedSound = true;
     }
 
     public void update()

@@ -1,0 +1,27 @@
+  {
+    "${ModID}:SchemePower": {
+      "NAME": "Verschwörung",
+      "DESCRIPTIONS": [
+        "Die nächsten #b",
+        " Karten, die in diesem Zug gespielt werden und #b1 oder weniger kosten, werden 2 Mal gespielt.",
+        "Die nächste Karte, die in diesem Zug gespielt wird und #b1 oder weniger kostet, werden 2 Mal gespielt."
+      ]
+    },
+    "${ModID}:SchemeNextTurnPower": {
+      "NAME": "Verschwörung",
+      "DESCRIPTIONS": [
+        "Nächste Runde werden die ersten #b",
+        " Karten, die #b1 oder weniger kosten, 2 Mal gespielt.",
+        "Nächste Runde wird die erste Karte, die #b1 oder weniger kostet, 2 Mal gespielt."
+      ]
+    },
+    "${ModID}:TomeOfIntellectPower": {
+      "NAME": "tome des Intellekts",
+      "DESCRIPTIONS": [
+        "Zu Beginn jedes Zuges werden #b",
+        " #ySchriftrolle #ydes #yIntellekts in deinen Nachziehstapel gemischt.",
+        " #ySchriftrolle #ydes #yIntellekts in deinen Nachziehstapel gemischt."
+      ]
+    }
+  }
+

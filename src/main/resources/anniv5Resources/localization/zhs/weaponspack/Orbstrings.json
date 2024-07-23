@@ -1,0 +1,60 @@
+{
+  "${ModID}:AbstractWeaponOrb": {
+    "NAME": "武器",
+    "DESCRIPTION": [
+      " NL ",
+      "伤害值: #b",
+      " NL ",
+      "耐久值： #b"
+    ]
+  },
+  "${ModID}:CutlassOrb": {
+    "NAME": "弯刀",
+    "DESCRIPTION": [
+      ""
+    ]
+  },
+  "${ModID}:PowderKegOrb": {
+    "NAME": "火药桶",
+    "DESCRIPTION": [
+      "耐久耗尽时对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "${ModID}:SwordOfWisdomOrb": {
+    "NAME": "智慧之剑",
+    "DESCRIPTION": [
+      "每当你使用本武器时，抽 #b1 张牌。"
+    ]
+  },
+  "${ModID}:SwordOfChaosOrb": {
+    "NAME": "混乱之剑",
+    "DESCRIPTION": [
+      "每当你使用本武器时，随机将一张牌加入手牌。"
+    ]
+  },
+  "${ModID}:CatONineTailsOrb": {
+    "NAME": "九尾鞭",
+    "DESCRIPTION": [
+      "每当你使用本武器时，其伤害值增加 #b2 点。"
+    ]
+  },
+  "${ModID}:ForgingHammerOrb": {
+    "NAME": "锻锤",
+    "DESCRIPTION": [
+      "每当你使用本武器时，随机 #y升级 一张手牌。"
+    ]
+  },
+  "${ModID}:SwordOfFireOrb": {
+    "NAME": "火焰之剑",
+    "DESCRIPTION": [
+      "每当你使用本武器时，对所有敌人造成 #b4 点伤害。"
+    ]
+  },
+  "${ModID}:ReapersScytheOrb": {
+    "NAME": "收割之镰",
+    "DESCRIPTION": [
+      "每当你使用这把 #y武器 攻击，每次攻击给予目标敌人 #b1 层 #y收割者印记 。"
+    ]
+  }
+}

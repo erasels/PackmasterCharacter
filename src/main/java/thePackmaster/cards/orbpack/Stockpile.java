@@ -6,13 +6,14 @@ import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.Lightning;
 import com.megacrit.cardcrawl.orbs.Plasma;
 import thePackmaster.actions.HandSelectAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
 public class Stockpile extends AbstractOrbCard {
     public final static String ID = makeID("Stockpile");
@@ -21,6 +22,16 @@ public class Stockpile extends AbstractOrbCard {
     public Stockpile() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = 1;
+        baseSecondMagic = secondMagic = 2;
+
+        showEvokeValue = true;
+        showEvokeOrbCount = magicNumber;
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        showEvokeOrbCount = magicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,7 +41,11 @@ public class Stockpile extends AbstractOrbCard {
                 c.triggerOnManualDiscard();
                 GameActionManager.incrementDiscard(false);
 
-                att(new ChannelAction(c.type == CardType.POWER ? new Plasma() : new Lightning()));
+                int orbs = c.type == CardType.POWER ? magicNumber : secondMagic;
+                for (int i = 0; i < orbs; ++i) {
+                    AbstractOrb orb = c.type == CardType.POWER ? new Plasma() : new Lightning();
+                    att(new ChannelAction(orb));
+                }
             }
         }, null, DiscardAction.TEXT[0], false, false, false));
     }

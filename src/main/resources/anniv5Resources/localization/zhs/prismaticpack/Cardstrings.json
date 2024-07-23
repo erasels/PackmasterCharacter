@@ -1,0 +1,45 @@
+{
+  "${ModID}:SwordAndDagger": {
+    "NAME": "剑与匕首",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *小刀 加入手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *小刀 加入手牌。"
+  },
+  "${ModID}:PrismaticBarrier": {
+    "NAME": "棱镜屏障",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 若本回合用过 ${ModID}:异色 牌，获得 !M! 层 *多层护甲 并 消耗 。"
+  },
+  "${ModID}:GrabBag": {
+    "NAME": "手提包",
+    "DESCRIPTION": "随机获得 !M! 张 ${ModID}:异色 牌。 NL 消耗 。"
+  },
+  "${ModID}:ShimmeringStrike": {
+    "NAME": "荧光打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗每打出过一张 ${ModID}:异色 牌，本牌伤害增加 !M! 点。"
+  },
+  "${ModID}:ExoticKnowledge": {
+    "NAME": "异色知识",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若本回合用过 ${ModID}:异色 牌，再抽 !${ModID}:m2! 张。"
+  },
+  "${ModID}:ChoiceCut": {
+    "NAME": "精准落刀",
+    "DESCRIPTION": "选择将一张 *上 *勾 *拳 、 *愁 *云 *惨 *淡 、 *猎 *杀 *者 或 *立 *地 *升 *天 加入手牌。 本回合其下次耗能为0 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择将一张 *上 *勾 *拳 *+ 、 *愁 *云 *惨 *淡 *+ 、 *猎 *杀 *者 *+ 或 *立 *地 *升 *天 *+ 加入手牌。 本回合其下次耗能为0 。 NL 消耗 。"
+  },
+  "${ModID}:QuirionDryad": {
+    "NAME": "奎利恩妖女",
+    "DESCRIPTION": "每次新打出一种颜色的牌，获得 !M! 点 力量 与 !M! 点 敏捷 。"
+  },
+  "${ModID}:ManyAsOne": {
+    "NAME": "异众一心",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将弃牌堆所有 ${ModID}:异色 牌加入手牌。"
+  },
+  "${ModID}:PremiumSelection": {
+    "NAME": "优质之选",
+    "DESCRIPTION": "从 !M! 张随机 ${ModID}:异色 稀有牌中选择一张加入手牌，本回合其下次耗能为0。 NL 消耗 。"
+  },
+  "${ModID}:FlawlessPrism": {
+    "NAME": "无暇棱镜",
+    "DESCRIPTION": "回合开始时，随机获得 !M! 张 ${ModID}:异色 能力牌。",
+    "UPGRADE_DESCRIPTION": "回合开始时，随机获得 !M! 张 ${ModID}:异色 能力牌。"
+  }
+}

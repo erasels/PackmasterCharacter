@@ -15,7 +15,7 @@ public class SilentPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public SilentPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 3, 4, 3, 3, PackSummary.Tags.Discard));
     }
 
     @Override
@@ -26,7 +26,7 @@ public class SilentPack extends AbstractCardPack {
         cards.add(SneakyStrike.ID);
         cards.add(CloakAndDagger.ID);
         cards.add(CalculatedGamble.ID);
-        cards.add(Finisher.ID);
+        cards.add(LegSweep.ID);
         cards.add(Choke.ID);
         cards.add(Footwork.ID);
         cards.add(BulletTime.ID);

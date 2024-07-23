@@ -1,0 +1,25 @@
+{
+  "${ModID}:Ignite": {
+    "NAME": "Entzünden",
+    "DESCRIPTIONS": ["Am Ende deines Zuges, verliere #b{0} LP.", "Am Beginn deines Zuges, verliere #b{0} LP."]
+  },
+  "${ModID}:FreezeAndBurn": {
+    "NAME": "Einfrieren und Brennen",
+    "DESCRIPTIONS": ["Zu Beginn deines nächsten Zuges, verursache #b{0} Schaden an ALLEN Gegnern."]
+  },
+  "${ModID}:FieryMantle": {
+    "NAME": "Feuerumhang",
+    "DESCRIPTIONS": ["Wann immer du diese Runde angegriffen wirst, wende #b{0} #yEntzünden an."]
+  },
+  "${ModID}:Pyromastery": {
+    "NAME": "Pyromanie",
+    "DESCRIPTIONS": ["Wenn du #yEntzünden verursachst, wende zusätzlich #b{0} #yEntzünden an."]
+  },
+  "${ModID}:FueledByEmbers": {
+    "NAME": "Von Glut genährt",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges, ziehe #b{0} Karten und füge eine #b{0} #yVerblassende #yGlut zu deiner Hand und deinem Nachziehstapel hinzu.",
+      "Zu Beginn deines Zuges, ziehe #b{0} Karten und füge #b{0} #yVerblassende #yGlut zu deiner Hand und deinem Nachziehstapel hinzu."
+    ]
+  }
+}

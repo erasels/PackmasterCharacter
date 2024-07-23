@@ -2,15 +2,13 @@ package thePackmaster.cards.distortionpack;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.defect.ReinforcedBodyAction;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.EasyXCostAction;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
 
 public class MindMaze extends AbstractDistortionCard {
     public final static String ID = makeID("MindMaze");
@@ -19,6 +17,7 @@ public class MindMaze extends AbstractDistortionCard {
     public MindMaze() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 11;
+        cardsToPreview = new Dazed();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,0 +1,22 @@
+{
+  "${ModID}:PrimeDirectivePower": {
+    "NAME": "hauptziel",
+    "DESCRIPTIONS": [
+      "Deine Angriffskarten haben #yUngerade: Füge #b",
+      " zusätzlichen Schaden zu.",
+      " NL ${ModID}:Ungerade:",
+      " (+",
+      " Schaden)."
+    ]
+  },
+  "${ModID}:GammaWardPower": {
+    "NAME": "gamma Schutz",
+    "DESCRIPTIONS": [
+      "Deine nächste Fertigkeit in diesem Zug hat #yGerade: Erhalte #b",
+      " #yBlock.",
+      " NL ${ModID}:Gerade:",
+      " Erhalte",
+      " Block."
+    ]
+  }
+}

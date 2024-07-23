@@ -4,11 +4,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.util.Wiz;
-
-import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
@@ -20,11 +17,12 @@ public class Rummage extends AbstractPackmasterCard {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         damage = baseDamage = 10;
         magicNumber = baseMagicNumber = 1;
+        secondMagic = baseSecondMagic = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        Wiz.atb(new DrawCardAction(1, new RummageDrawAction(magicNumber)));
+        Wiz.atb(new DrawCardAction(secondMagic, new RummageDrawAction(magicNumber)));
     }
 
 

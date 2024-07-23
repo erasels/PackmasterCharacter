@@ -5,11 +5,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import thePackmaster.cards.AbstractPackmasterCard;
 import thePackmaster.util.Wiz;
 
 import java.util.ArrayList;
@@ -24,7 +21,7 @@ public class ZaHando extends AbstractOdditiesCard {
 
     public ZaHando() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 13;
+        baseDamage = 14;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -59,14 +56,12 @@ public class ZaHando extends AbstractOdditiesCard {
     @Override
     public void unhover() {
         super.unhover();
-        if (CardCrawlGame.isInARun()) {
-            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-                for (AbstractCard q : getMiddleCards()) {
-                    q.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
-                    q.triggerOnGlowCheck();
-                }
-                AbstractDungeon.player.hand.applyPowers();
+        if (Wiz.isInCombat()) {
+            for (AbstractCard q : getMiddleCards()) {
+                q.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
+                q.triggerOnGlowCheck();
             }
+            AbstractDungeon.player.hand.applyPowers();
         }
     }
 

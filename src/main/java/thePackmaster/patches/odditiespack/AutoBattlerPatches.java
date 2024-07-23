@@ -2,23 +2,19 @@ package thePackmaster.patches.odditiespack;
 
 import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.buttons.EndTurnButton;
 import javassist.CtBehavior;
 import thePackmaster.powers.odditiespack.AutoBattlerPower;
 import thePackmaster.util.Wiz;
 
-import static thePackmaster.SpireAnniversary5Mod.makeID;
-
 public class AutoBattlerPatches {
-
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("AutoBattlerPatches"));
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -47,6 +43,29 @@ public class AutoBattlerPatches {
     }
 
     @SpirePatch(
+            clz = InputHelper.class,
+            method = "getCardSelectedByHotkey"
+    )
+    public static class NoHotkeys {
+        public static SpireReturn<AbstractCard> Prefix(CardGroup cards) {
+            if (AbstractDungeon.player.hasPower(AutoBattlerPower.POWER_ID) && !AbstractDungeon.isScreenUp) {
+                return SpireReturn.Return(null);
+            }
+            return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(
+            clz = PressEndTurnButtonAction.class,
+            method = SpirePatch.CONSTRUCTOR
+    )
+    public static class NoClashPlz {
+        public static void Postfix(PressEndTurnButtonAction __instance) {
+            OnRefreshHandCheckToPlayCardPatch.isEndingTurn = true;
+        }
+    }
+
+    @SpirePatch(
             clz = CardGroup.class,
             method = "refreshHandLayout"
     )
@@ -62,8 +81,7 @@ public class AutoBattlerPatches {
                 if (!AbstractDungeon.isScreenUp && AbstractDungeon.actionManager.actions.isEmpty() && AbstractDungeon.actionManager.currentAction == null && !isEndingTurn) {
                     AbstractMonster target = Wiz.getFrontmostEnemy();
                     if (target == null) {
-                        isEndingTurn = true;
-                        AbstractDungeon.actionManager.callEndTurnEarlySequence();
+                        AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
                     } else {
                         boolean foundACard = false;
                         for (AbstractCard q : AbstractDungeon.player.hand.group) {
@@ -78,8 +96,7 @@ public class AutoBattlerPatches {
                             }
                         }
                         if (!foundACard) {
-                            isEndingTurn = true;
-                            AbstractDungeon.actionManager.callEndTurnEarlySequence();
+                            AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
                         }
                     }
                 }

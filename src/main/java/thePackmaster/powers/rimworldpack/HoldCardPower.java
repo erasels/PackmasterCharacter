@@ -1,7 +1,6 @@
 package thePackmaster.powers.rimworldpack;
 
 import basemod.BaseMod;
-import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.patches.NeutralPowertypePatch;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
@@ -11,9 +10,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.powers.AbstractPackmasterPower;
-import thePackmaster.util.TexLoader;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

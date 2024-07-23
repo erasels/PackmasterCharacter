@@ -8,7 +8,8 @@ import thePackmaster.powers.summonspack.AmbushPower;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_BOX_COLOR;
 import static thePackmaster.cards.summonspack.FlavorConstants.FLAVOR_TEXT_COLOR;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.adp;
+import static thePackmaster.util.Wiz.applyToSelf;
 
 public class Ambush extends AbstractSummonsCard {
     public final static String ID = makeID(Ambush.class.getSimpleName());
@@ -22,6 +23,7 @@ public class Ambush extends AbstractSummonsCard {
         super(ID, COST, TYPE, RARITY, TARGET);
         FlavorText.AbstractCardFlavorFields.boxColor.set(this, FLAVOR_BOX_COLOR);
         FlavorText.AbstractCardFlavorFields.textColor.set(this, FLAVOR_TEXT_COLOR);
+        isEthereal = true;
     }
 
     @Override
@@ -31,6 +33,6 @@ public class Ambush extends AbstractSummonsCard {
 
     @Override
     public void upp() {
-        isInnate = true;
+        isEthereal = false;
     }
 }

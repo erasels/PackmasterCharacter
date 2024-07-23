@@ -1,10 +1,8 @@
 package thePackmaster.cards.womaninbluepack;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import thePackmaster.util.Wiz;
 import thePackmaster.vfx.womaninbluepack.PotionThrowEffect;
@@ -15,7 +13,7 @@ public class BlockVial extends AbstractWomanInBlueCard {
     public final static String ID = makeID("BlockVial");
 
     public BlockVial() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 12;
         baseSecondMagic = 6;
         exhaust = true;

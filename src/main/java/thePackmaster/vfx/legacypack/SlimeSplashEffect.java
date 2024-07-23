@@ -1,18 +1,14 @@
 package thePackmaster.vfx.legacypack;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class SlimeSplashEffect
         extends AbstractGameEffect
@@ -43,11 +39,11 @@ public class SlimeSplashEffect
 
         tmp = MathUtils.random(2);
         if (tmp == 0) {
-            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeSplashA.png");;
+            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeSplashA.png");
         } else if (tmp == 1) {
-            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeSplashB.png");;
+            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeSplashB.png");
         } else {
-            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeSplashC.png");;
+            this.img = ImageMaster.loadImage("anniv5Resources/images/vfx/slimeSplashC.png");
         }
 
         this.scale = (MathUtils.random(0.3F, 0.5F) * Settings.scale);

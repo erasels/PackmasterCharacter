@@ -1,0 +1,63 @@
+{
+  "${ModID}:RuleCancel": {
+    "NAME": "Regel ignorieren",
+    "DESCRIPTION": "Gib einer Karte in deiner Hand ${ModID}:Okkult. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Gib einer Karte in deiner Hand ${ModID}:Okkult."
+  },
+  "${ModID}:Brainwave": {
+    "NAME": "Gehirnwellen",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Gib einem zufälligen Angriff in deiner Hand ${ModID}:Okkult."
+  },
+  "${ModID}:TelephonePole": {
+    "NAME": "Telefonmast",
+    "DESCRIPTION": "${ModID}:Verriegelt. NL Füge !D! Schaden zu. NL Wende !M! Verwundbar an.",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Verriegelt. NL Füge !D! Schaden zu. NL Wende !M! Verwundbar an."
+    ]
+  },
+  "${ModID}:Gravity": {
+    "NAME": "Schwerkraft",
+    "DESCRIPTION": "Flüchtig. NL Immer wenn du eine ${ModID}:Verriegelt oder nicht spielbare Karte ziehst, ziehe 1 Karte.",
+    "UPGRADE_DESCRIPTION": "Immer wenn du eine ${ModID}:Verriegelt oder nicht spielbare Karte ziehst, ziehe 1 Karte."
+  },
+  "${ModID}:PhantomStep": {
+    "NAME": "Phantomschritt",
+    "DESCRIPTION": "Erhalte !B! Block. NL Gib einer Karte in deinem Nachziehstapel ${ModID}:Okkult."
+  },
+  "${ModID}:Repel": {
+    "NAME": "Abwehr",
+    "DESCRIPTION": "${ModID}:Verriegelt. NL Erhalte !B! Block. NL Füge !D! Schaden zu. NL Wende !M! Schwach an.",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Verriegelt. NL Erhalte !B! Block. NL Füge !D! Schaden zu. NL Wende !M! Schwach an."
+    ]
+  },
+  "${ModID}:OneIsEnough": {
+    "NAME": "Eine reicht",
+    "DESCRIPTION": "{@@}Ziehe !M! Karte{!M!|0=n.|1=.|2=n und wähle eine. NL Du kannst die anderen in diesem Zug nicht spielen.|@=n und wähle eine. NL Du kannst die anderen in diesem Zug nicht spielen.}",
+    "EXTENDED_DESCRIPTION": [
+      "ist spielbar"
+    ]
+  },
+  "${ModID}:Curse": {
+    "NAME": "Fluch",
+    "DESCRIPTION": "${ModID}:Verriegelt. NL Der Gegner verliert !M! Stärke.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Verriegelt. NL Behalten. NL Der Gegner verliert !M! Stärke.",
+    "EXTENDED_DESCRIPTION": [
+      "${ModID}:Verriegelt. NL Der Gegner verliert !M! Stärke.",
+      "${ModID}:Verriegelt. NL Behalten. NL Der Gegner verliert !M! Stärke."
+    ]
+  },
+  "${ModID}:MalleableFire": {
+    "NAME": "Formbares Feuer",
+    "DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Füge deinem Nachziehstapel ein *Geformtes *Feuer hinzu, das X kostet. NL Erschöpfen.",
+    "UPGRADE_DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Füge deinem Nachziehstapel ein *Geformtes *Feuer+ hinzu, das X kostet. NL Erschöpfen."
+  },
+  "${ModID}:MoldedFire": {
+    "NAME": "Geformtes Feuer",
+    "DESCRIPTION": "${ModID}:Okkult. NL Füge !D! Schaden zu. Erhöhe den Schaden für jede [E], die die Kartenkosten übersteigt."
+  },
+  "${ModID}:DeepDream": {
+    "NAME": "Tiefer Traum",
+    "DESCRIPTION": "Immer wenn du in diesem Zug eine Karte spielst, gib einer zufällige Karte in deiner Hand ${ModID}:Okkult. NL Erschöpfen."
+  }
+}

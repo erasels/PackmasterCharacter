@@ -2,7 +2,8 @@
   {
     "PROPER_NAME": "Pickup",
     "NAMES": [
-      "pickup"
+      "pickup",
+      "pickup/removed"
     ],
     "DESCRIPTION": "Effect triggers when you obtain this card."
   }

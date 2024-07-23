@@ -1,0 +1,45 @@
+{
+  "${ModID}:Aqueducts": {
+    "NAME": "引水渠",
+    "DESCRIPTION": "固定抽牌外抽牌时， NL 造成 !M! 点群体伤害。"
+  },
+  "${ModID}:Cascade": {
+    "NAME": "连瀑",
+    "DESCRIPTION": "${ModID}:自流 ， NL 本次每丢弃一张牌， NL 获得 !B! 点 格挡 。"
+  },
+  "${ModID}:Hail": {
+    "NAME": "冰雹",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗本牌每被丢弃过一次，再造成一次。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !M! 次。)"]
+  },
+  "${ModID}:HighTide": {
+    "NAME": "潮起",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:自流 时，将本牌从弃牌堆返回手牌。"
+  },
+  "${ModID}:Hydraulics": {
+    "NAME": "水力学",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${ModID}:自流 。"
+  },
+  "${ModID}:IcyFloe": {
+    "NAME": "浮冰",
+    "DESCRIPTION": "${ModID}:自流 。 NL 下回合获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:自流 。 NL 下回合获得 [E] [E] [E] 。"
+  },
+  "${ModID}:Pneumatics": {
+    "NAME": "气力学",
+    "DESCRIPTION": "${ModID}:自流 。 NL 下回合开始时， NL ${ModID}:自流 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${ModID}:自流 。 NL 下回合开始时， NL ${ModID}:自流 。"
+  },
+  "${ModID}:ReleaseValve": {
+    "NAME": "开阀",
+    "DESCRIPTION": "${ModID}:自流 时每丢弃一张牌，目标受到 !M! 点伤害。 NL 消耗 。"
+  },
+  "${ModID}:Reservoir": {
+    "NAME": "水库",
+    "DESCRIPTION": "${ModID}:自流 ， NL 抽本次丢弃量张牌。 NL 消耗 。"
+  },
+  "${ModID}:StormFront": {
+    "NAME": "风临雨骤",
+    "DESCRIPTION": "保留 。 造成 !D! 点伤害。 NL 被丢弃时，立即返回手牌且伤害增加 !M! 点。"
+  }
+}

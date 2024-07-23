@@ -1,0 +1,56 @@
+{
+  "${ModID}:AcidicSpray": {
+    "NAME": "Säurespray",
+    "DESCRIPTION": "Füge für jeden Debuff auf dem Ziel !D! Schaden zu. NL Wende !M! Schwach an."
+  },
+  "${ModID}:PoisonMastery": {
+    "NAME": "Giftmeisterschaft",
+    "DESCRIPTION": "Erhöhe den LP Verlust durch Gifte um 100%. NL Erhalte einen *Gift *Trank.",
+    "UPGRADE_DESCRIPTION": "Erhöhe den LP Verlust durch Gifte um 100%. NL Erhalte !M! *Gift *Tränke."
+  },
+  "${ModID}:Cannonball": {
+    "NAME": "Kanonenkugel",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfen."
+  },
+  "${ModID}:CaptainsCabin": {
+    "NAME": "Kapitänskabine",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Kanonenkugel.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Kanonenkugeln."
+  },
+  "${ModID}:TerrorOfTheSeas": {
+    "NAME": "Schrecken der Meere",
+    "DESCRIPTION": "Wende an ALLEN Gegnern !M! Verwundbar und !${ModID}:m2! ${ModID}:Ruin an. NL Erschöpfen."
+  },
+  "${ModID}:MassProduction": {
+    "NAME": "Massenproduktion",
+    "DESCRIPTION": "Wähle eine Karte in deinem Nachziehstapel aus. Erschöpfe deine Hand und ersetze sie durch Kopien dieser Karte. Erschöpfen.",
+    "EXTENDED_DESCRIPTION": [
+      "Wähle eine Karte zur Massenproduktion aus."
+    ]
+  },
+  "${ModID}:ScrapCannon": {
+    "NAME": "Schrottkanone",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte."
+  },
+  "${ModID}:BloodRitual": {
+    "NAME": "Blutritual",
+    "DESCRIPTION": "Verliere !M! LP. NL Erhalte 1 Ritual."
+  },
+  "${ModID}:OverTime": {
+    "NAME": "Überstunden",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Für jede Karte, die du in diesem Kampf *Erschöpft hast, erhöhe den Schaden um !M!."
+  },
+  "${ModID}:SlimeSpray": {
+    "NAME": "Schleimspray",
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu, wende !M! Gift an und gib ALLEN Gegnern *Langsamkeit."
+  },
+  "${ModID}:StickStrike": {
+    "NAME": "Stockschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Mische einen *Stock in deinen Nachziehstapel.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Mische einen *Stock+ in deinen Nachziehstapel."
+  },
+  "${ModID}:Stick": {
+    "NAME": "Stock",
+    "DESCRIPTION": "Erhöhe den Schaden von *Stock *Schlägen in diesem Kampf um !M!. Nimm den zuletzt gespielten zurück in deine Hand. Erschöpfen."
+  }
+}

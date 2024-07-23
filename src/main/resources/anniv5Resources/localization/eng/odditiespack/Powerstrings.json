@@ -8,7 +8,10 @@
   "${ModID}:FinalFormPower": {
     "NAME": "Final Form",
     "DESCRIPTIONS": [
-      "At the start of your turn, play and #yExhaust a copy of ",
+      "At the start of your next #b",
+      " turn, ",
+      " turns, ",
+      "play and #yExhaust a copy of ",
       "."
     ]
   }

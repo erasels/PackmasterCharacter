@@ -1,0 +1,10 @@
+{
+  "${ModID}:BlueSkull": {
+    "NAME": "Blauer Schädel",
+    "FLAVOR": "Ein kleiner Schädel, seltsam blau ohne Spuren von Farbstoff oder Farbe.",
+    "DESCRIPTIONS": [
+      "Wenn deine Lebenspunkte unter #b50% betragen, erhalte #b",
+      " zusätzlichen #yFokus."
+    ]
+  }
+}

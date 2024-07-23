@@ -1,0 +1,15 @@
+{
+  "${ModID}:EnergyAndEchoPack": {
+    "TEXT": [
+      "能量与回响",
+      "生成 [E] 并尽你所能，向自我复制的牌发挥其效能。",
+      "Diamsword"
+    ]
+  },
+  "${ModID}:EnergyAndEchoPackHat": {
+    "TEXT": [
+      "又能当头盔，又能当高能电筒。",
+      "工帽"
+    ]
+  }
+}

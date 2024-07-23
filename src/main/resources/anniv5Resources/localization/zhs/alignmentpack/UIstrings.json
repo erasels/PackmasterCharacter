@@ -1,0 +1,15 @@
+{
+  "${ModID}:AlignmentPack": {
+    "TEXT": [
+      "星相",
+      "诸力皆虚，适时用之，逆时弃之。",
+      "Alchyr"
+    ]
+  },
+  "${ModID}:AlignmentPackHat": {
+    "TEXT": [
+      "这玩意怎么发光的？",
+      "闪亮之尘"
+    ]
+  }
+}

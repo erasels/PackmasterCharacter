@@ -1,0 +1,52 @@
+{
+  "${ModID}:Conjunction": {
+    "NAME": "合相",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时， NL 获得 !B! 点 格挡 。"
+  },
+  "${ModID}:Opposition": {
+    "NAME": "对相",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时，随机一名敌人失去 !M! 点生命。"
+  },
+  "${ModID}:Quincunx": {
+    "NAME": "十二分相",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时，所有敌人临时失去 !M! 点 力量 。"
+  },
+  "${ModID}:Novile": {
+    "NAME": "九分相",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时， NL 获得 [E] 。",
+    "EXTENDED_DESCRIPTION": [
+      "虚无 。 NL 抽到本牌时， NL 获得",
+      " [E]",
+      " 。"
+    ]
+  },
+  "${ModID}:Square": {
+    "NAME": "四分相",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时， 抽 !M! 张牌。"
+  },
+  "${ModID}:Trine": {
+    "NAME": "三分相",
+    "DESCRIPTION": "虚无 。 NL 抽到本牌时，本回合下张牌打出两次。"
+  },
+  "${ModID}:Divination": {
+    "NAME": "占卜",
+    "DESCRIPTION": "选择一张手牌放入抽牌堆底部。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "选择任意张手牌放入抽牌堆底部。 NL 抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张牌放入抽牌堆底部"
+    ]
+  },
+  "${ModID}:Glimpse": {
+    "NAME": "瞥视",
+    "DESCRIPTION": "抽到 虚无 牌时， NL 获得 !M! 点 格挡 。"
+  },
+  "${ModID}:Remember": {
+    "NAME": "记忆",
+    "DESCRIPTION": "回合结束时，可将手中 !M! 张牌洗入抽牌堆。"
+  },
+  "${ModID}:Alignment": {
+    "NAME": "星相",
+    "DESCRIPTION": "抽X张牌， NL 本回合其耗能减X。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽X张牌， NL 本回合其耗能减X。"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "${ModID}:DuplicateModifier": {
+    "TEXT": [
+      " NL Spiele diese ",
+      " mal.",
+      " NL Spiele diese X-mal."
+    ]
+  },
+  "${ModID}:BasicsPack": {
+    "TEXT": [
+      "Grundlagen",
+      "Ein Paket mit gewöhnlichen ${ModID}:Basis Karten.",
+      "Jack Renoson"
+    ]
+  },
+  "${ModID}:BasicsPackHat": {
+    "TEXT": [
+      "Ein einfacher Hut für einen unkomplizierten Abenteurer.",
+      "Grundlegendes Fedora"
+    ]
+  }
+}

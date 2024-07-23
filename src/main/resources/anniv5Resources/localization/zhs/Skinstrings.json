@@ -1,0 +1,26 @@
+{
+  "${ModID}:SkinSystemUI": {
+    "TEXT": [
+      "皮肤",
+      "创作者: "
+    ]
+  },
+  "${ModID}:packmasterSkin": {
+    "TEXT": [
+      "卡包大师",
+      "AlexMdle"
+    ]
+  },
+  "${ModID}:packmistressSkin": {
+    "TEXT": [
+      "卡包女士",
+      "TheLethargicWeirdo"
+    ]
+  },
+  "${ModID}:randomSkin": {
+    "TEXT": [
+      "随机",
+      "多位创作者"
+    ]
+  }
+}

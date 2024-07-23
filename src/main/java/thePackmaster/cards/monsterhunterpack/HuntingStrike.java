@@ -2,6 +2,7 @@ package thePackmaster.cards.monsterhunterpack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,8 +14,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class HuntingStrike extends AbstractMonsterHunterCard {
     public final static String ID = makeID("HuntingStrike");
 
-    public static final int DAMAGE = 7;
-    public static final int UPG_DAMAGE = 2;
+    public static final int DAMAGE = 6;
+    public static final int UPG_DAMAGE = 4;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public HuntingStrike() {
@@ -25,12 +26,13 @@ public class HuntingStrike extends AbstractMonsterHunterCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new DrawCardAction(1));
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
-        if (mo.type == AbstractMonster.EnemyType.BOSS || mo.type == AbstractMonster.EnemyType.ELITE){
+        if (mo.type == AbstractMonster.EnemyType.BOSS || mo.type == AbstractMonster.EnemyType.ELITE) {
             isDamageModified = true;
             damage *= 2;
         }
@@ -39,6 +41,5 @@ public class HuntingStrike extends AbstractMonsterHunterCard {
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeSecondDamage(UPG_DAMAGE*2);
     }
 }

@@ -3,16 +3,14 @@ package thePackmaster.cards.odditiespack;
 import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
-import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Safety;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.att;
 
 public class Beacon extends AbstractOdditiesCard {
     public final static String ID = makeID("Beacon");
@@ -41,6 +39,6 @@ public class Beacon extends AbstractOdditiesCard {
 
 
     public void upp() {
-        upgradeMagicNumber(1);
+        selfRetain = true;
     }
 }

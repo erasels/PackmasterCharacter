@@ -1,0 +1,15 @@
+{
+  "${ModID}:StatusPack": {
+    "TEXT": [
+      "Status",
+      "Schlag aufs Dach, dieses Deck kann so viele Status erzeugen.",
+      "(Gk) Erasels"
+    ]
+  },
+  "${ModID}:StatusPackHat": {
+    "TEXT": [
+      "Medizin!",
+      "Bandagen"
+    ]
+  }
+}

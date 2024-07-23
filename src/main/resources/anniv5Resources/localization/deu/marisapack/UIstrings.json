@@ -1,0 +1,16 @@
+{
+  "${ModID}:MarisaPack": {
+    "TEXT": [
+      "Marisa",
+      "Marisas Grundausstattung, variable Energiekosten und Schadensverdoppelung.",
+      "(Gk) Erasels",
+      "Die ursprünglichen Autoren des Marisa Charakter Mods für die Ideen und künstlerische Inspiration."
+    ]
+  },
+  "${ModID}:MarisaPackHat": {
+    "TEXT": [
+      "Der Hut einer gewöhnlichen Zaubererin.",
+      "Marisas Hut"
+    ]
+  }
+}

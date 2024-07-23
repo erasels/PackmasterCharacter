@@ -1,13 +1,8 @@
 package thePackmaster.cards.gowiththeflowpack;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.Frost;
 import thePackmaster.cards.transmutationpack.AbstractHydrologistCard;
-
-import java.util.Iterator;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 

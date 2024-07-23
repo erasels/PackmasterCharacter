@@ -1,0 +1,10 @@
+{
+  "Wanderbot": {
+    "NAME": "wanderbot",
+    "DESCRIPTION": [
+      "#yPassiv: Am Ende des Zuges füge dem vordersten Gegner #b",
+      " Schaden zu. NL #yEntladung: Füge dem vordersten Gegner #b",
+      " Schaden zu und ziehe #b1 Karte."
+    ]
+  }
+}

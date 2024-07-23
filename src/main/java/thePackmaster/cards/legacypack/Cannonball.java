@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.legacypack.ShootAnythingAction;
-
 import thePackmaster.util.TexLoader;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;

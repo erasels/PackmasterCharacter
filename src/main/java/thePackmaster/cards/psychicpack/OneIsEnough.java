@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.HandSelectAction;
 import thePackmaster.cardmodifiers.psychicpack.UnplayableThisTurnModifier;
-import thePackmaster.cards.AbstractPackmasterCard;
 
 import java.util.ArrayList;
 

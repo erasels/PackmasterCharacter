@@ -5,14 +5,10 @@ import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cardmodifiers.energyandechopack.GlowEchoMod;
-import thePackmaster.cardmodifiers.warlockpack.GlowTheSoulariumMod;
 import thePackmaster.cards.energyandechopack.*;
-import thePackmaster.cards.quietpack.*;
 
 import java.util.ArrayList;
 
@@ -24,7 +20,7 @@ public class EnergyAndEchoPack extends AbstractCardPack {
     public static final String AUTHOR = UI_STRINGS.TEXT[2];
 
     public EnergyAndEchoPack() {
-        super(ID, NAME, DESC, AUTHOR);
+        super(ID, NAME, DESC, AUTHOR, new PackSummary(3, 2, 4, 4, 2, PackSummary.Tags.Exhaust, PackSummary.Tags.Tokens));
     }
     public static int generatedEnergy = 0;
     public static int usedEnergy = 0;

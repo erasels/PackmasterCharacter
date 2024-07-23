@@ -11,7 +11,8 @@ import thePackmaster.cardmodifiers.transmutationpack.DrawWhenTransmutedEffect;
 import java.util.ArrayList;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-import static thePackmaster.util.Wiz.*;
+import static thePackmaster.util.Wiz.atb;
+import static thePackmaster.util.Wiz.p;
 
 public class FrozenCapsule extends AbstractHydrologistCard implements TransmutableCard {
     public final static String ID = makeID("FrozenCapsule");

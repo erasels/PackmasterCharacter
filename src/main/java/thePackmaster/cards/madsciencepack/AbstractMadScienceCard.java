@@ -1,6 +1,5 @@
 package thePackmaster.cards.madsciencepack;
 
-import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.AbstractPackmasterCard;
 
 public abstract class AbstractMadScienceCard extends AbstractPackmasterCard

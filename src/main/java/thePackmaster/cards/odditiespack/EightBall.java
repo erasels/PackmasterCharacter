@@ -9,17 +9,17 @@ import thePackmaster.cards.AbstractPackmasterCard;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
-public class EightBall extends AbstractOdditiesCard {
+public class EightBall extends AbstractPackmasterCard {
     public final static String ID = makeID("EightBall");
     // intellij stuff attack, enemy, special, 12, 3, 10, 2, , 
 
     public EightBall() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseDamage = 20;
+        baseDamage = 21;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
     }
 
     @Override

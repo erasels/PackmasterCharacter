@@ -1,0 +1,15 @@
+{
+  "${ModID}:SummonsPack": {
+    "TEXT": [
+      "动物召唤师",
+      "一堆充能球，还有一只大象，没狐狸。",
+      "Bryan K"
+    ]
+  },
+  "${ModID}:SummonsPackHat": {
+    "TEXT": [
+      "在米娅看来，你才是那个饰品。",
+      "召唤只猫"
+    ]
+  }
+}

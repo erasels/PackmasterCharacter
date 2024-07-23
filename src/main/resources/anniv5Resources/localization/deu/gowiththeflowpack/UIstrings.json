@@ -1,0 +1,20 @@
+{
+  "${ModID}:GoWithTheFlowPack": {
+    "TEXT": [
+      "Im Strom schwimmen",
+      "Entsorge Karten, die du diesen Zug nicht brauchst, für mehr Karten im nächsten Zug.",
+      "NellyDevo"
+    ]
+  },
+  "${ModID}:FlowAction": {
+    "TEXT": [
+      "abwerfen."
+    ]
+  },
+  "${ModID}:GoWithTheFlowPackHat": {
+    "TEXT": [
+      "Angemessene Kleidung für Minusgrade.",
+      "Wasserbiege-Kapuze"
+    ]
+  }
+}

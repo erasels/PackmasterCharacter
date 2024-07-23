@@ -1,0 +1,70 @@
+{
+  "${ModID}:Leprechaun": {
+    "NAME": "Kobold",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 ${ModID}:Kobold.",
+    "EXTENDED_DESCRIPTION": [
+      "Würfel",
+      "Würfel erhöhen den Schaden oder den #yBlock der nächsten Karte, die du spielst.",
+      "Pech",
+      "Von Pech betroffene Gegner verlieren TP, wenn sie gedebufft werden."
+    ],
+    "FLAVOR": "Lobpreise RNGesus."
+  },
+  "${ModID}:Porcupine": {
+    "NAME": "Stachelschwein",
+    "DESCRIPTION": "Erschaffe 1 ${ModID}:Stachelschwein. NL Füge deiner Hand !M! *Stachel hinzu.",
+    "FLAVOR": "Die Stille in tierischer Form."
+  },
+  "${ModID}:Wolves": {
+    "NAME": "Wölfe",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschaffe 1 ${ModID}:Wolf.",
+    "FLAVOR": "Rudeltiere für den Rudelführer."
+  },
+  "${ModID}:Elephant": {
+    "NAME": "Elefant",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte !M! Schaden.",
+    "FLAVOR": "Das ist meine Lieblingskarte. Ich hoffe, sie gefällt dir auch."
+  },
+  "${ModID}:FireSpirit": {
+    "NAME": "Feuergeist",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschaffe 1 ${ModID}:Feuergeist.",
+    "EXTENDED_DESCRIPTION": [
+      "Entzünden",
+      "Entzündete Kreaturen verlieren pro Stapel am Anfang ihres Zuges #b1 TP."
+      ],
+    "FLAVOR": "Sei vorsichtig, Feuergeister kuscheln gerne."
+  },
+  "${ModID}:RainbowLouse": {
+    "NAME": "Regenbogenlaus",
+    "DESCRIPTION": "Erschaffe 1 ${ModID}:Regenbogenlaus.",
+    "UPGRADE_DESCRIPTION": "Erschaffe 1 ${ModID}:Regenbogenlaus. NL Ziehe 1 Karte.",
+    "FLAVOR": "Das Ergebnis eines unklugen magischen Experiments."
+  },
+  "${ModID}:SwarmOfBees": {
+    "NAME": "Bienenschwarm",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erschaffe 1 ${ModID}:Bienenschwarm.",
+    "FLAVOR": "Absolut furchterregend."
+  },
+  "${ModID}:Specialist": {
+    "NAME": "Spezialist",
+    "DESCRIPTION": "Erhalte !M! Fokus. NL Verliere 1 Stärke und Geschicklichkeit.",
+    "FLAVOR": "Ich überspringe das Training für die Beine."
+  },
+  "${ModID}:Ambush": {
+    "NAME": "Hinterhalt",
+    "DESCRIPTION": "Flüchtig. NL Immer wenn du einen Orb erschaffst, löse ihn aus, ohne ihn zu entfernen.",
+    "UPGRADE_DESCRIPTION": "Immer wenn du einen Orb erschaffst, löse ihn aus, ohne ihn zu entfernen.",
+    "FLAVOR": "Ich konnte keine guten Hinterhalt-Kunstwerke finden, also gibt es hier einen Wortwitz."
+  },
+  "${ModID}:Pandas": {
+    "NAME": "Pandas",
+    "DESCRIPTION": "Erschaffe X ${ModID}:Pandas.",
+    "UPGRADE_DESCRIPTION": "Erschaffe X+1 ${ModID}:Pandas.",
+    "FLAVOR": "Pandamonium."
+  },
+  "${ModID}:Quill": {
+    "NAME": "Stachel",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfen.",
+    "FLAVOR": "Stich."
+  }
+}

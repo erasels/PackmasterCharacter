@@ -1,0 +1,13 @@
+{
+  "${ModID}:ThePackmaster": {
+    "NAMES": [
+      "Der Packmeister",
+      "der Packmeister"
+    ],
+    "TEXT": [
+      "Ein Reisender mit einem unendlichen Pack voller Waffen und Werkzeuge.",
+      "NL Wer weiß, was das nächste Pack bereithalten wird?",
+      "Auf einem unbeleuchteten Straßenabschnitt kommst du an mehreren vermummten Gestalten mitten in einem dunklen Ritual vorbei. Als du näher kommst, wenden sie sich dir in unheimlicher Einigkeit zu. Der Größte von ihnen zeigt spitze Zähne und streckt eine lange, blasse Hand in deine Richtung. NL ~\"Schließ dich uns an, vereinter Einer, und spüre die Wärme der Spire.\"~"
+    ]
+  }
+}

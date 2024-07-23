@@ -1,0 +1,13 @@
+[
+  {
+    "PROPER_NAME": "暴击",
+    "NAMES": [
+      "Critical Hit",
+      "critical hit",
+      "Critical_Hit",
+      "critical_hit",
+      "暴击"
+    ],
+    "DESCRIPTION": "暴击造成 #b50% 额外伤害。"
+  }
+]
