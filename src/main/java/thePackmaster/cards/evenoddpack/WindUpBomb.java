@@ -92,7 +92,7 @@ public class WindUpBomb extends AbstractEvenOddCard{
             @Override
             public void update() {
                 if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() % 2 == 1) {
-                    this.addToTop(new DamageAction(abstractMonster,  new DamageInfo(abstractMonster, damage, damageTypeForTurn), AttackEffect.FIRE));
+                    this.addToTop(new DamageAction(abstractMonster,  new DamageInfo(abstractPlayer, damage, damageTypeForTurn), AttackEffect.FIRE));
                 }
                 else
                 {
