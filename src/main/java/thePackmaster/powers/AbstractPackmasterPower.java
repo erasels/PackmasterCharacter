@@ -7,7 +7,6 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import thePackmaster.SpireAnniversary5Mod;
@@ -64,9 +63,9 @@ public abstract class AbstractPackmasterPower extends AbstractPower {
     }
 
     public void removeThis(){
-        addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
     public void removeThisInvisibly(){
-        addToBot(new RemoveSpecificPowerActionNoIconOrText(AbstractDungeon.player, AbstractDungeon.player, this));
+        addToBot(new RemoveSpecificPowerActionNoIconOrText(owner, owner, this));
     }
 }
