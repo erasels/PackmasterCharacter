@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import thePackmaster.powers.AbstractPackmasterPower;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
@@ -39,7 +40,7 @@ public class OutToMarketPower extends AbstractPackmasterPower {
 
     public void onAfterCardPlayed(AbstractCard card) {
         int count = SeasonalMethod(card);
-        for(int j = 0; j < count; j++){
+        for (int j = 0; j < count; j++) {
             updateCardsPlayed(card.type);
             flash();
             addToBot(new SFXAction("ATTACK_HEAVY"));
@@ -57,12 +58,14 @@ public class OutToMarketPower extends AbstractPackmasterPower {
         desc = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
         this.description = desc;
     }
-        public int SeasonalMethod(AbstractCard c){
-        int returnValue = 0;
-        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).type != c.type){
-                returnValue = 1;}
-        //SpireAnniversary5Mod.logger.info("Completing seasonal method at value  " + returnValue);
-        return returnValue;}
+
+    public int SeasonalMethod(AbstractCard c) {
+        ArrayList<AbstractCard> combatPlayedCards = AbstractDungeon.actionManager.cardsPlayedThisCombat;
+        if (combatPlayedCards.size() >= 2 && combatPlayedCards.get(combatPlayedCards.size() - 2).type != c.type) {
+            return  1;
+        }
+        return 0;
+    }
 
     private void cleanUp() {
         played.clear();
