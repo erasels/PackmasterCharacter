@@ -54,7 +54,7 @@ public class MidnightStrike extends AbstractOdditiesCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
         upgradeSecondDamage(12);
     }
 }
