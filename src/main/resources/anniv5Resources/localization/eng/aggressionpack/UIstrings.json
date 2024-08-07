@@ -2,7 +2,7 @@
   "${ModID}:AggressionPack": {
     "TEXT": [
       "Aggression",
-      "Focused on attacks and the Aggression stance, which increases your attack damage by 25%.",
+      "Focused on attacks and the ${ModID}:Aggression Stance, which increases your attack damage by 25%.",
       "modargo",
       "Card art from MtG"
     ]

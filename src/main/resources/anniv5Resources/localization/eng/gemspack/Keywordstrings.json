@@ -2,7 +2,8 @@
   {
     "PROPER_NAME": "Gem",
     "NAMES": [
-      "gem"
+      "gem",
+      "gems"
     ],
     "DESCRIPTION": "At #yRest #ySites, you may spend #b25 Gold to socket a #yGem as a free action, permanently #yModifying a card that costs #b1 or more in your deck with 'this #yGem's effects'."
   }
