@@ -2,7 +2,7 @@
   "${ModID}:HighEnergyPack": {
     "TEXT": [
       "Energized",
-      "Focus your power on gaining tons of Energy and spending it on costly cards!",
+      "\u200bFocus your power on gaining tons of Energy and spending it on costly cards!",
       "Vex"
     ]
   },

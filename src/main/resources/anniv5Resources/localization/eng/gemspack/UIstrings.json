@@ -2,7 +2,7 @@
   "${ModID}:GemsPack": {
     "TEXT": [
       "Jeweler's Kit",
-      "Pure Support Pack. Contains 0-cost Gems that can be placed into cards that cost 1 or more at Rest sites.",
+      "Pure Support Pack. Contains 0-cost ${ModID}:Gems that can be placed into cards that cost 1 or more at Rest sites.",
       "MichaelMayhem"
     ]
   },
