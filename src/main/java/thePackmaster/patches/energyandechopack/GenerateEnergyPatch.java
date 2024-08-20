@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import thePackmaster.cards.energyandechopack.Crystallize;
+import thePackmaster.cards.energyandechopack.MagnetRise;
 import thePackmaster.packs.EnergyAndEchoPack;
 
 public class GenerateEnergyPatch {
@@ -16,16 +17,18 @@ public class GenerateEnergyPatch {
     public static class CatchEnergyGen {
         @SpirePostfixPatch
         public static void postfix(AbstractPlayer __instance, int e) {
-            // Just gaining energy doesn't call applyPowers, so we have this to avoid card text being out of date
+            if (!AbstractDungeon.actionManager.turnHasEnded || workaround) {
+                EnergyAndEchoPack.generatedEnergy += e;
+            }
+
+            // Just gaining energy doesn't call applyPowers, so we have this to avoid card text or glow being out of date
             // An example that was causing issues is the energy gain from Unrelenting Form
             for (int i = 0; i < AbstractDungeon.player.hand.group.size(); i++) {
                 AbstractCard c = AbstractDungeon.player.hand.group.get(i);
-                if (c instanceof Crystallize) {
+                if (c instanceof Crystallize || c instanceof MagnetRise) {
                     c.applyPowers();
+                    c.triggerOnGlowCheck();
                 }
-            }
-            if (!AbstractDungeon.actionManager.turnHasEnded || workaround) {
-                EnergyAndEchoPack.generatedEnergy += e;
             }
         }
     }
