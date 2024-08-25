@@ -1,0 +1,9 @@
+[
+  {
+    "PROPER_NAME": "Slow",
+    "NAMES": [
+      "slow"
+    ],
+    "DESCRIPTION": "Slowed creatures take #b10% more damage from Attacks for each card played this turn."
+  }
+]
