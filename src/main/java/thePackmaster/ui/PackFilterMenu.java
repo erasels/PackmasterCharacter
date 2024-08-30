@@ -44,9 +44,9 @@ public class PackFilterMenu {
     private static final float DROPDOWN_X = 90f * Settings.xScale;
     private static final float DROPDOWN_Y = Settings.HEIGHT - 160f * Settings.yScale;
     private static final float CHECKBOX_X = 150f;
-    private static final float CHECKBOX_Y = 490f;
+    private static final float CHECKBOX_Y = BG_Y / Settings.yScale + 45;
     private static final float PREVIEW_X = 235f * Settings.xScale;
-    private static final float PREVIEW_Y = 700f * Settings.yScale;
+    private static final float PREVIEW_Y = Settings.HEIGHT - (380f * Settings.yScale);
 
     private static final Color DISABLED_COLOR = Settings.RED_TEXT_COLOR.cpy();
 
