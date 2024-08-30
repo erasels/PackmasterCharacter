@@ -59,8 +59,9 @@ public class MainMenuUIPatch {
 
     //filter button fields
     // We pass these values to the button class, which does its own multiplication by xScale/yScale
+    // Since we want this to be offset by a constant amount from the top of the screen, we divide by yScale to cancel it out
     private static final float FILTERBUTTON_X = 55f;
-    private static final float FILTERBUTTON_Y = 1080f - 122f;
+    private static final float FILTERBUTTON_Y = (Settings.HEIGHT - 80f) / Settings.yScale;
 
     private static final PackFilterMenu filterMenu = new PackFilterMenu();
     private static final FixedModLabeledButton openFilterMenuButton;
@@ -68,8 +69,9 @@ public class MainMenuUIPatch {
 
     //hat button fields
     // We pass these values to the button class, which does its own multiplication by xScale/yScale
+    // Since we want this to be offset by a constant amount from the top of the screen, we divide by yScale to cancel it out
     private static final float HATBUTTON_X = 610f;
-    private static final float HATBUTTON_Y = 1080f - 122f;
+    private static final float HATBUTTON_Y = (Settings.HEIGHT - 80f) / Settings.yScale;
 
     public static final HatMenu hatMenu = new HatMenu();
     private static final FixedModLabeledButton openHatMenuButton;
