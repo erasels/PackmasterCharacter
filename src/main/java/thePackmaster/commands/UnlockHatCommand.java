@@ -27,7 +27,7 @@ public class UnlockHatCommand extends ConsoleCommand {
         if (tokens[1].equalsIgnoreCase("all")) {
             boolean addedHats = false;
             for (AbstractCardPack pack : SpireAnniversary5Mod.unfilteredAllPacks) {
-                addedHats = addedHats || addHatIfNotPresent(pack.packID, unlockedHats, unseenHats);
+                addedHats = addHatIfNotPresent(pack.packID, unlockedHats, unseenHats) || addedHats;
             }
             if (addedHats) {
                 saveHats(unlockedHats, unseenHats);
