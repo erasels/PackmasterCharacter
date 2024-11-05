@@ -21,7 +21,7 @@ public class StrikeOfGenius extends AbstractStrikePackCard {
 
         Wiz.doDmg(m, damage, AbstractGameAction.AttackEffect.FIRE);
 
-        Wiz.applyToSelf(new StrikeOfGeniusPower(p, 1, this));
+        Wiz.applyToSelf(new StrikeOfGeniusPower(p, 1));
     }
 
 
