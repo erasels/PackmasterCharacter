@@ -17,11 +17,11 @@ public class StrikeOfGeniusPower extends AbstractPackmasterPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private AbstractCard source;
-    public StrikeOfGeniusPower(AbstractCreature owner, int amount, AbstractCard source) {
-        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
-        this.source = source;
+    private boolean justApplied;
 
+    public StrikeOfGeniusPower(AbstractCreature owner, int amount) {
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
+        this.justApplied = true;
     }
 
     @Override
@@ -33,7 +33,10 @@ public class StrikeOfGeniusPower extends AbstractPackmasterPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK && card != source) {
+        if (this.justApplied) {
+            this.justApplied = false;
+        }
+        else if (card.type == AbstractCard.CardType.ATTACK) {
             Wiz.atb(new ReducePowerAction(Wiz.p(), Wiz.p(), this, 1));
         }
     }
