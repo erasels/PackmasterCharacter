@@ -1,0 +1,49 @@
+{
+  "anniv5:FrontloadedBash": {
+    "NAME": "즉발 강타",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미의 !M! 장의 카드마다 피해를 1 더 줍니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. NL 뽑을 카드 더미의 !M! 장의 카드마다 피해를 1 더 줍니다."
+  },
+  "anniv5:Preparation": {
+    "NAME": "준비",
+    "DESCRIPTION": "공격 또는 스킬 카드를 선택합니다. NL 그 카드의 복사본을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "공격 또는 스킬 카드를 선택합니다. NL 그 카드의 복사본을 얻습니다.",
+    "EXTENDED_DESCRIPTION": ["복사할 카드를 선택하십시오."]
+  },
+  "anniv5:SmallAdaptation": {
+    "NAME": "작은 번안",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 비용이 1 이하인 파워가 아닌 카드를 선택합니다. NL 그 카드의 복사본을 얻습니다.",
+    "EXTENDED_DESCRIPTION": ["복사할 카드를 선택하십시오."]
+  },
+  "anniv5:ExperimentalMerge": {
+    "NAME": "실험적 혼합",
+    "DESCRIPTION": "{@@}방어도를 !B! 얻습니다. NL 버린 카드 더미를 뽑을 카드 더미에 섞어 넣습니다. NL 카드를 !M! 장 뽑습니다."
+  },
+  "anniv5:ExhaustiveWork": {
+    "NAME": "소멸적인 일",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 카드를 선택합니다. NL 그 카드를 소멸시키고 복사본을 뽑을 카드 더미에 섞어 넣습니다.",
+    "EXTENDED_DESCRIPTION": ["소멸시키고 복사할 카드를 선택하십시오."]
+  },
+  "anniv5:IterativeDesign": {
+    "NAME": "반복적인 디자인",
+    "DESCRIPTION": "이번 전투 동안 카드를 생성하거나 *복사할 때마다, 방어도를 !M! 얻습니다."
+  },
+  "anniv5:Xpansion": {
+    "NAME": "확장",
+    "DESCRIPTION": "anniv5:복제를 X 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "anniv5:복제를 X 얻습니다."
+  },
+  "anniv5:ReduceOverhead": {
+    "NAME": "과부하 감축",
+    "DESCRIPTION": "복사본이 있는 모든 카드를 소멸시킵니다. NL 소멸시킨 카드마다 피해를 !D! 줍니다. NL 소멸."
+  },
+  "anniv5:MagicHand": {
+    "NAME": "매직 핸드",
+    "DESCRIPTION": "원래 덱에서 !M! 장 중 하나를 골라 손으로 가져옵니다. NL 그 카드는 소멸합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "원래 덱에서 !M! 장 중 하나를 골라 손으로 가져옵니다. NL 소멸."
+  },
+  "anniv5:EnergyDrink": {
+    "NAME": "에너지 드링크",
+    "DESCRIPTION": "stslib:임시체력 을 !M! 얻습니다. NL 뽑을 카드 더미에 섞어 넣는 10 장의 카드마다 anniv5:복제를 1 얻습니다."
+  }
+}

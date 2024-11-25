@@ -1,0 +1,61 @@
+[
+  {
+    "PROPER_NAME": "표적",
+    "NAMES": [
+      "표적",
+      "표적을",
+      "hunted",
+      "hunted"
+    ],
+    "DESCRIPTION": "스택마다 #b10% 피해를 더 받습니다. 부여될 때, 모든 표적이 된 적은 해제되고 표적이 아닌 적들은 스택마다 #b10% 피해를 덜 받습니다. 매 턴 #b1 감소합니다."
+  },
+  {
+    "PROPER_NAME": "비표적",
+    "NAMES": [
+      "비표적",
+      "nothunted",
+      "nothunted"
+    ],
+    "DESCRIPTION": "스택마다 #b10% 피해를 덜 받습니다. 매 턴 #b1 감소합니다. 표적이 된 적이 죽으면, 이것을 제거합니다."
+  },
+  {
+    "PROPER_NAME": "격분",
+    "NAMES": [
+      "격분합니다",
+      "격분합니다!",
+      "enraged",
+      "enraged!"
+    ],
+    "DESCRIPTION": "턴 종료 시 어떤 적도 공격할 의도가 없으면, 힘을 #b2 얻습니다."
+  },
+  {
+    "PROPER_NAME": "유리 갑옷",
+    "NAMES": [
+      "유리",
+      "Glass Armor",
+      "Glass_Armor",
+      "glass_armor"
+    ],
+    "DESCRIPTION": "턴 종료 시 방어도 를 얻습니다. 막히지 않은 공격 피해를 받으면 제거됩니다."
+  },
+  {
+    "PROPER_NAME": "판금 갑옷",
+    "NAMES": [
+      "판금",
+      "Plated Armor",
+      "Plated_Armor",
+      "plated_armor"
+    ],
+    "DESCRIPTION": "턴 종료 시 방어도 를 얻습니다. 막히지 않은 공격 피해를 받으면 판금 갑옷 이 1 감소합니다."
+  },
+  {
+    "PROPER_NAME": "비치명적",
+    "NAMES": [
+      "비치명적",
+      "nonlethal",
+      "non-lethal",
+      "non_lethal"
+    ],
+    "DESCRIPTION": "비치명적 피해는 적의 체력을 1까지만 깎을 수 있습니다."
+  }
+]

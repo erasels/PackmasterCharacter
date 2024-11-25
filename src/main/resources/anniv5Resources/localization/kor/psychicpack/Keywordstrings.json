@@ -1,0 +1,27 @@
+[
+  {
+    "PROPER_NAME": "오컬트",
+    "NAMES": [
+      "오컬트",
+      "오컬트로",
+      "occult"
+    ],
+    "DESCRIPTION": "#y오컬트 카드는 사용 제한 조건과 관계없이 사용될 수 있습니다. 이 방식으로 사용된 카드는 #y소멸됩니다."
+  },
+  {
+    "PROPER_NAME": "잠금",
+    "NAMES": [
+      "잠금",
+      "locking"
+    ],
+    "DESCRIPTION": "#y잠금 카드는 사용하면 #y사용불가 가 됩니다."
+  },
+  {
+    "PROPER_NAME": "잠김",
+    "NAMES": [
+      "잠김",
+      "locked"
+    ],
+    "DESCRIPTION": "잠긴 카드는 사용할 수 없습니다."
+  }
+]
