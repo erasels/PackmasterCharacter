@@ -1,0 +1,17 @@
+{
+  "anniv5:MindOverMatterPower": {
+    "NAME": "물질에 대한 마음",
+    "DESCRIPTIONS": [
+      "카드를 뽑을 때마다, #y방어도 를",
+      " #b 얻습니다."
+    ]
+  },
+  "anniv5:ThoughtweavingPower": {
+    "NAME": "생각의 짜임",
+    "DESCRIPTIONS": [
+      "#y스킬 또는 공격 카드를 사용할 때마다,",
+      "다른 팩에서 반대 유형의 카드를 1장 뽑습니다.",
+      " 다른 팩에서 반대 유형의 카드를 여러장 뽑습니다."
+    ]
+  }
+}

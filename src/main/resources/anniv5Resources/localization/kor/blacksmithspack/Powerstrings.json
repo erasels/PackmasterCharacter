@@ -1,0 +1,9 @@
+{
+  "anniv5:BlacksmithsShieldPower": {
+    "NAME": "대장장이의 방패",
+    "DESCRIPTIONS": [
+      "카드를 사용한 후, 그 카드의 재련 수만큼 #b",
+      " 방어도 를 얻습니다."
+    ]
+  }
+}

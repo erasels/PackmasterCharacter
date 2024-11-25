@@ -1,0 +1,51 @@
+{
+  "anniv5:InspiringSong": {
+    "NAME": "영감을 주는 노래",
+    "DESCRIPTION": "냉기 를 !M!번 영창 합니다. NL 영창 된 구체 하나당 영감 을 !anniv5:m2! 얻습니다."
+  },
+  "anniv5:Sift": {
+    "NAME": "선별",
+    "DESCRIPTION": "카드를 !M!장 가져옵니다. NL 그 카드의 비용만큼 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M!장 가져옵니다. NL 그 카드의 비용만큼 [E] 를 얻습니다. NL 카드를 !M!장 가져옵니다."
+  },
+  "anniv5:EchoEcho": {
+    "NAME": "메아리 메아리",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 피해를 !anniv5:sd! 줍니다."
+  },
+  "anniv5:ThickOfTheFight": {
+    "NAME": "전투의 중심",
+    "DESCRIPTION": "생존한 적 하나당 무작위 적에게 피해를 !D! 줍니다. NL 생존한 적 하나당 [E] 비용이 1 줄어듭니다."
+  },
+  "anniv5:EnGarde": {
+    "NAME": "앙 가르드",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL anniv5:영감 이 카드를 !M!회 적용합니다."
+  },
+  "anniv5:Heroism": {
+    "NAME": "영웅심",
+    "DESCRIPTION": "일시적으로 체력을 !M! 얻습니다. NL anniv5:영감 을 !anniv5:m2! 얻습니다."
+  },
+  "anniv5:LifeDrain": {
+    "NAME": "생명 흡수",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해량의 절반만큼 일시적으로 체력을 !M! 얻습니다."
+  },
+  "anniv5:Shifting": {
+    "NAME": "변화",
+    "DESCRIPTION": "피해를 !D! 주거나 NL 방어도 를 !B! 얻습니다. NL 피해를 !D! 주거나 NL 방어도 를 !B! 얻습니다."
+  },
+  "anniv5:ShiftingAttack": {
+    "NAME": "공격",
+    "DESCRIPTION": "피해를 !D! 줍니다."
+  },
+  "anniv5:ShiftingBlock": {
+    "NAME": "방어",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다."
+  },
+  "anniv5:MagnumOpus": {
+    "NAME": "걸작",
+    "DESCRIPTION": "anniv5:영감 을 !anniv5:m2! 얻습니다. NL 이 카드의 anniv5:영감 이 영구적으로 !M! 증가합니다. NL 소멸."
+  },
+  "anniv5:SplendidForm": {
+    "NAME": "화려한 형태",
+    "DESCRIPTION": "턴 시작 시 NL anniv5:영감 을 NL !anniv5:m2! 얻습니다."
+  }
+}

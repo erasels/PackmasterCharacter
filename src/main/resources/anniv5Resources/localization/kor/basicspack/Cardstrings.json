@@ -1,0 +1,57 @@
+{
+  "anniv5:BasicWave": {
+    "NAME": "기본 웨이브",
+    "DESCRIPTION": "*방어 와 *공격 을 사용합니다. NL anniv5:기본 카드로 간주됩니다.",
+    "EXTENDED_DESCRIPTION": [
+      "*방어+ 를 사용합니다.",
+      " 그리고 *공격+ 를 사용합니다.",
+      ". NL anniv5:기본 카드로 간주됩니다."
+    ]
+  },
+  "anniv5:Simplify": {
+    "NAME": "단순화",
+    "DESCRIPTION": "anniv5:기본 카드를 뽑고 이를 재련 합니다. 이 카드는 무제한으로 재련 할 수 있습니다.",
+    "UPGRADE_DESCRIPTION": "anniv5:기본 카드를 뽑고 이를 !M!회 재련합니다. 이 카드는 무제한으로 재련 할 수 있습니다."
+  },
+  "anniv5:LoseIt": {
+    "NAME": "잃어라",
+    "DESCRIPTION": "*들추기 를 손에 추가합니다. 이번 전투에서 기존 *들추기 들의 카드 드로우 수를 !M!만큼 증가시킵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "*들추기+ 를 손에 추가합니다. 이번 전투에서 기존 *들추기 들의 카드 드로우 수를 !M!만큼 증가시킵니다. NL 소멸."
+  },
+  "anniv5:SimplifiedStrike": {
+    "NAME": "단순화된 일격",
+    "DESCRIPTION": "이번 전투에서 사용된 anniv5:기본 카드 수에 !M!을 곱한 피해를 줍니다.",
+    "UPGRADE_DESCRIPTION": "비선천성. NL 이번 전투에서 사용된 anniv5:기본 카드 수에 !M!을 곱한 피해를 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (피해를 !D! 줍니다)"
+    ]
+  },
+  "anniv5:FamiliarKit": {
+    "NAME": "친숙한 키트",
+    "DESCRIPTION": "힘 을 !M! 얻고, 민첩 을 !M! 얻으며, 집중 을 !anniv5:m2! 얻습니다. anniv5:픽업 : *강타, *생존자, *파지직 을 획득합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 힘 을 !M! 얻고, 민첩 을 !M! 얻으며, 집중 을 !anniv5:m2! 얻습니다. anniv5:픽업 : *강타, *생존자, *파지직 을 획득합니다."
+  },
+  "anniv5:OckhamsRazor": {
+    "NAME": "오컴의 면도날",
+    "DESCRIPTION": "anniv5:기본 카드를 사용할 때마다 모든 적에게 !M! 피해를 줍니다."
+  },
+  "anniv5:BackToBasic": {
+    "NAME": "기본부터 다시",
+    "DESCRIPTION": "버린 카드 더미에서 카드를 손으로 가져옵니다. 그것이 anniv5:기본 카드가 아니었다면 소멸 됩니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 당신의 버린 카드 더미에서 카드를 손으로 가져옵니다. 그것이 anniv5:기본 카드가 아니었다면 소멸 됩니다."
+  },
+  "anniv5:BasicHit": {
+    "NAME": "기본 일격",
+    "DESCRIPTION": "*공격 을 획득하고 이를 !M!회 재련 합니다. NL 소멸."
+  },
+  "anniv5:ConjureDefends": {
+    "NAME": "방어 생성",
+    "DESCRIPTION": "휘발성. NL *방어 를 손에 추가하고 이를 다음과 같이 수정 합니다: \"이 카드를 X번 사용합니다.\" 1을 환급 합니다. 소멸.",
+    "UPGRADE_DESCRIPTION": "*방어 를 손에 추가하고 이를 다음과 같이 수정 합니다: \"이 카드를 X번 사용합니다.\" 1을 환급 합니다. 소멸."
+  },
+  "anniv5:SimpleTrick": {
+    "NAME": "단순한 속임수",
+    "DESCRIPTION": "*카디스트리 를 손에 추가합니다. 그것을 다음 !M!번 사용할 때마다 [E] 를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "*카디스트리+ 를 손에 추가합니다. 그것을 다음 !M!번 사용할 때마다 [E] 를 얻습니다. NL 소멸."
+  }
+}

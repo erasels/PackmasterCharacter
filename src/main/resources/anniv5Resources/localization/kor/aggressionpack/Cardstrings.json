@@ -1,0 +1,42 @@
+{
+  "anniv5:Vindicate": {
+    "NAME": "옹호",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 공격 카드를 사용할 때마다 방어도 를 !M! 얻습니다."
+  },
+  "anniv5:DarkLance": {
+    "NAME": "암흑 창",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 경지 를 변경했다면 카드를 !M!장 가져옵니다."
+  },
+  "anniv5:FuriousAssault": {
+    "NAME": "격렬한 돌격",
+    "DESCRIPTION": "!D! 피해를 !M!번 줍니다. NL anniv5:격노합니다."
+  },
+  "anniv5:Slam": {
+    "NAME": "강타",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해량만큼 방어도 를 얻습니다."
+  },
+  "anniv5:Decapitate": {
+    "NAME": "참수",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적의 힘 을 이번 턴 동안 !M! 감소시킵니다. NL 소멸."
+  },
+  "anniv5:TitansStrength": {
+    "NAME": "타이탄의 힘",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 힘 을 !M! 얻습니다."
+  },
+  "anniv5:Epiphany": {
+    "NAME": "깨달음",
+    "DESCRIPTION": "경지 에 있다면, 경지 를 벗어나고 카드를 !M!장 가져옵니다. NL 그렇지 않다면, anniv5:격노합니다."
+  },
+  "anniv5:InnerFury": {
+    "NAME": "내면의 분노",
+    "DESCRIPTION": "anniv5:격노 하거나 벗어날 때마다 일시적인 힘 과 방어도 를 !M! 얻습니다. NL anniv5:격노합니다."
+  },
+  "anniv5:LunaticRage": {
+    "NAME": "광기의 분노",
+    "DESCRIPTION": "카드를 !M!장 가져옵니다. NL [E] [E] 를 얻습니다. NL 공격 또는 상태이상 카드가 아닌 모든 카드를 버립니다. NL 소멸."
+  },
+  "anniv5:Animosity": {
+    "NAME": "적의",
+    "DESCRIPTION": "anniv5:격노 하거나, 벗어나거나, 턴을 시작할 때마다 힘 을 !M! 얻습니다."
+  }
+}

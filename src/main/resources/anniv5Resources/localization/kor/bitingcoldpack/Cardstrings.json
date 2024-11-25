@@ -1,0 +1,43 @@
+{
+  "anniv5:FrigidBody": {
+    "NAME": "차가운 몸",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 이번 턴 동안 공격받을 때마다, 방어된 피해량만큼 anniv5:동상 을 적용합니다."
+  },
+  "anniv5:Frostburn": {
+    "NAME": "서리 화상",
+    "DESCRIPTION": "모든 적에게 anniv5:동상 을 !M! 적용합니다. NL 버린 카드 더미에 *화상 을 추가합니다."
+  },
+  "anniv5:FrostedEdge": {
+    "NAME": "얼어붙은 칼날",
+    "DESCRIPTION": "anniv5:동상 을 적용할 때마다 일시적인 힘 을 !M! 얻습니다."
+  },
+  "anniv5:GrowingAffliction": {
+    "NAME": "증가하는 질병",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 디버프를 적용할 때마다 이 카드를 버린 카드 더미에서 손으로 가져오고 비용을 1로 설정합니다."
+  },
+  "anniv5:InsultToInjury": {
+    "NAME": "설상가상",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 가진 고유한 디버프마다 이를 반복합니다."
+  },
+  "anniv5:Refrigerate": {
+    "NAME": "냉각",
+    "DESCRIPTION": "anniv5:동상 을 !M! 적용합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "anniv5:동상 을 !M! 적용합니다. NL 적이 이미 anniv5:동상 을 가지고 있다면, 그 수치만큼 체력을 잃습니다. NL 소멸."
+  },
+  "anniv5:RelentlessHail": {
+    "NAME": "끊임없는 우박",
+    "DESCRIPTION": "모든 적에게 !D! 피해를 !M!번 줍니다. NL 이 카드의 공격 횟수가 이번 전투 동안 1 증가합니다."
+  },
+  "anniv5:IceShatter": {
+    "NAME": "얼음 분쇄",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 다음 턴에 체력을 잃을 때마다 피해를 !M! 줍니다."
+  },
+  "anniv5:SnowedIn": {
+    "NAME": "눈 속에 갇힘",
+    "DESCRIPTION": "anniv5:동상 을 !M! 적용합니다. NL 적의 anniv5:동상 은 이번 턴 동안 절반으로 줄어들지 않습니다."
+  },
+  "anniv5:Subdue": {
+    "NAME": "제압",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 이번 전투에서 마지막으로 사용한 카드가 공격 카드라면 추가로 방어도 를 !B! 얻습니다."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "anniv5:BlacksmithsPack": {
+    "TEXT": [
+      "대장장이",
+      "집게를 잃어버린 전설적인 대장장이가 되어 보세요.",
+      "Pandemonium"
+    ]
+  },
+  "anniv5:SetUpShopScreen": {
+    "TEXT": [
+      "재련하고 뽑을 카드 더미 맨 위에 놓습니다."
+    ]
+  },
+  "anniv5:MasterworkScreen": {
+    "TEXT": [
+      "재련합니다."
+    ]
+  },
+  "anniv5:BlacksmithsPackHat": {
+    "TEXT": [
+      "금속 세공을 연습하러 오셨군요.",
+      "용접 마스크"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "anniv5:OckhamsPower": {
+    "NAME": "옥캄의 면도날",
+    "DESCRIPTIONS": [
+      "#y기본 카드를 사용할 때마다 모든 적에게 #b 피해를 줍니다."
+    ]
+  },
+  "anniv5:SimpleTrickPower": {
+    "NAME": "간단한 속임수",
+    "DESCRIPTIONS": [
+      "다음에 #y카드리스트리 카드를 사용할 때 [E] 를 얻습니다.",
+      "다음 #b번 #y카드리스트리 카드를 사용할 때마다 [E] 를 얻습니다."
+    ]
+  }
+}

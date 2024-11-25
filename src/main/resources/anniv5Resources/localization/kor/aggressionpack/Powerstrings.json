@@ -1,0 +1,10 @@
+{
+  "anniv5:InnerFury": {
+    "NAME": "내면의 분노",
+    "DESCRIPTIONS": ["#y격노 하거나 벗어날 때, #b{0}의 일시적인 #y힘 과 #y방어도 를 #b{0} 얻습니다."]
+  },
+  "anniv5:Animosity": {
+    "NAME": "악의",
+    "DESCRIPTIONS": ["#y격노 하거나, 벗어나거나, 자신의 턴을 시작할 때 #y힘 을 #b{0} 얻습니다."]
+  }
+}

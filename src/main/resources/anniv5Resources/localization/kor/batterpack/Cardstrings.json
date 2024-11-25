@@ -1,0 +1,44 @@
+{
+  "anniv5:BatterUp": {
+    "NAME": "타자 준비",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상이 공격을 준비 중이라면 anniv5:치명타 로 간주합니다."
+  },
+  "anniv5:Homerun": {
+    "NAME": "홈런",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 2장 이상의 카드를 사용했다면 anniv5:치명타 로 간주합니다."
+  },
+  "anniv5:WideAngle": {
+    "NAME": "넓은 각도",
+    "DESCRIPTION": "방어도 를 !M! 훔칩니다. NL 약화 를 1 부여합니다."
+  },
+  "anniv5:WindUp": {
+    "NAME": "와인드업",
+    "DESCRIPTION": "취약 을 !M! 부여합니다. NL [E] 를 얻습니다. NL 소멸."
+  },
+  "anniv5:OpenBracket": {
+    "NAME": "오픈 자세",
+    "DESCRIPTION": "카드를 !M!장 가져옵니다. NL 이번 턴 동안 공격 카드만 사용할 수 있습니다."
+  },
+  "anniv5:Tragedy": {
+    "NAME": "비극",
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 당신이 손에 6장 이상의 카드를 들고 있다면 anniv5:치명타 로 간주합니다."
+  },
+  "anniv5:OptimizedBlur": {
+    "NAME": "최적화된 흐림 효과",
+    "DESCRIPTION": "막히지 않은 공격 피해를 입힐 때마다 방어도 를 !M! 얻습니다."
+  },
+  "anniv5:HardCaramel": {
+    "NAME": "단단한 타격",
+    "DESCRIPTION": "공격 후 대상에게 취약 상태가 없으면 취약 을 1 부여합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 공격 후 대상에게 취약 상태가 없으면 취약 을 1 부여합니다."
+  },
+  "anniv5:UltimateHomerun": {
+    "NAME": "궁극의 홈런",
+    "DESCRIPTION": "이번 전투에서 가한 가장 높은 막히지 않은 공격 피해를 줍니다.",
+    "EXTENDED_DESCRIPTION": [" NL (피해를 !D! 줍니다.)", " NL (피해를 !D! 줍니다. 대단합니다!)"]
+  },
+  "anniv5:AvatarBeat": {
+    "NAME": "아바타 비트",
+    "DESCRIPTION": "막히지 않은 공격 피해를 10 입힐 때마다, 힘 을 !M! 얻고, 카드를 1장 가져오며, 이 게이지를 5 증가시킵니다."
+  }
+}

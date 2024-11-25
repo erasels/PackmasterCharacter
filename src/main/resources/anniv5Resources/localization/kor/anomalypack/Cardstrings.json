@@ -1,0 +1,58 @@
+{
+  "anniv5:Wonder": {
+    "NAME": "경이",
+    "DESCRIPTION": "손에 있는 카드를 모두 버립니다. NL 카드를 1장 가져오고, 에너지를 그 카드의 비용으로 설정합니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 당신의 손에 있는 카드를 모두 버립니다. NL 카드를 1장 가져오고, 에너지를 그 카드의 비용으로 설정합니다."
+  },
+  "anniv5:FreeSpace": {
+    "NAME": "여유 공간",
+    "DESCRIPTION": "휘발성. NL 이 카드를 뽑거나 버리거나 소멸 시키거나 사용할 때, 카드를 1장 가져옵니다.",
+    "UPGRADE_DESCRIPTION": "이 카드를 뽑거나 버리거나 소멸 시키거나 사용할 때, 카드를 1장 가져옵니다."
+  },
+  "anniv5:MidnightOil": {
+    "NAME": "한밤중의 기름",
+    "DESCRIPTION": "무작위로 카드를 소멸 시킵니다. [E] 를 얻습니다. NL 이 카드가 소멸 된 상태라면, 매 턴 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 소멸 시킵니다. NL [E] 를 얻습니다. NL 이 카드가 소멸 된 상태라면, 매 턴 [E] 를 얻습니다."
+  },
+  "anniv5:VoraciousSigil": {
+    "NAME": "탐욕스러운 문양",
+    "DESCRIPTION": "손에 있는 무작위 스킬 을 anniv5:흡수 합니다. 이 카드가 anniv5:흡수 한 모든 카드를 사용합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 손에 있는 무작위 #y스킬 을 anniv5:흡수 합니다. 이 카드가 anniv5:흡수 한 모든 카드를 사용합니다."
+  },
+  "anniv5:StrikeThroughFate": {
+    "NAME": "운명을 꿰뚫는 일격",
+    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 7번째 카드라면, 피해를 3번 줍니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 피해를 !D! 줍니다. 이번 턴에 사용한 7번째 카드라면, 피해를 3번 줍니다."
+  },
+  "anniv5:MindOverMatter": {
+    "NAME": "정신의 우위",
+    "DESCRIPTION": "카드를 뽑을 때마다 방어도 를 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 카드를 뽑을 때마다 방어도 를 1 얻습니다."
+  },
+  "anniv5:GoldenGun": {
+    "NAME": "황금 총",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL [#EFC851]장전 되어야 합니다. NL 시작 시: [#EFC851]황금 [#EFC851]탄환 을 뽑을 카드 더미에 추가합니다."
+  },
+  "anniv5:GoldenRound": {
+    "NAME": "황금 탄환",
+    "DESCRIPTION": "손에 있는 [#EFC851]황금 [#EFC851]총 에 [#EFC851]장전 합니다. NL 없으면 이 카드를 뽑을 카드 더미 위에 놓습니다."
+  },
+  "anniv5:RitualSight": {
+    "NAME": "의식의 시선",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 소멸 시키고, 그것의 복사본을 뽑을 카드 더미에 섞어 넣습니다.",
+    "EXTENDED_DESCRIPTION": ["소멸 시키고 복사."]
+  },
+  "anniv5:Thoughtweaving": {
+    "NAME": "사고의 엮임",
+    "DESCRIPTION": "스킬 또는 공격 카드를 사용할 때마다, 다른 팩에서 반대 유형의 카드를 1장 가져옵니다."
+  },
+  "anniv5:SealedSword": {
+    "NAME": "봉인된 검",
+    "DESCRIPTION": "소멸. NL 이 카드가 소멸 되었을 때, 뽑을 카드 더미에 [#EFC851]영혼먹는 [#EFC851]일격 을 섞어 넣습니다.",
+    "UPGRADE_DESCRIPTION": "소멸. NL 이 카드가 소멸 되었을 때, 뽑을 카드 더미에 [#EFC851]영혼먹는 [#EFC851]일격+ 을 섞어 넣습니다."
+  },
+  "anniv5:SouleaterStrike": {
+    "NAME": "영혼먹는 일격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약 을 !M! 부여합니다. NL 약화 를 !M! 부여합니다."
+  }
+}

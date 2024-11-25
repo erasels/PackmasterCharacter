@@ -1,0 +1,13 @@
+[
+  {
+    "PROPER_NAME": "치명타",
+    "NAMES": [
+      "치명타",
+      "Critical Hit",
+      "critical hit",
+      "Critical_Hit",
+      "critical_hit"
+    ],
+    "DESCRIPTION": "#y치명타 는 피해량이 #b50% 증가합니다."
+  }
+]

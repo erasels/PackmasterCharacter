@@ -1,0 +1,12 @@
+[
+  {
+    "PROPER_NAME": "픽업",
+    "NAMES": [
+      "픽업",
+      "픽업/제거됨",
+      "pickup",
+      "pickup/removed"
+    ],
+    "DESCRIPTION": "이 카드를 가져올 때 효과가 발동됩니다."
+  }
+]

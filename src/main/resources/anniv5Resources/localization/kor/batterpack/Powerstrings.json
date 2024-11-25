@@ -1,0 +1,24 @@
+{
+  "anniv5:OptimizedBlurPower": {
+    "NAME": "최적화된 흐림 효과",
+    "DESCRIPTIONS": ["막히지 않은 공격 피해를 입힐 때마다 #y방어도 를", " #b얻습니다."]
+  },
+  "anniv5:HardCaramelPower": {
+    "NAME": "단단한 타격",
+    "DESCRIPTIONS": ["공격 후 대상에게 #y취약 상태가 없으면 #y취약 을", " #b 부여합니다."]
+  },
+  "anniv5:AvatarBeatPower": {
+    "NAME": "아바타 비트",
+    "DESCRIPTIONS": [
+      "막히지 않은 공격 피해를 #b",
+      " 입힐 때마다 #y힘 을",
+      " #b 얻고, 카드를 #b",
+      " 장 가져오며, 이 게이지를 #b5 증가시킵니다.",
+      " 장 가져오며, 이 게이지를 #b5 증가시킵니다."
+    ]
+  },
+  "anniv5:OpenBracketPower": {
+    "NAME": "오픈 자세",
+    "DESCRIPTIONS": ["이번 턴 동안 공격 카드만 사용할 수 있습니다."]
+  }
+}
