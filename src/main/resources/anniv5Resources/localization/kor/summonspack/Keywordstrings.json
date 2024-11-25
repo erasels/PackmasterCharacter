@@ -1,0 +1,75 @@
+[
+  {
+    "PROPER_NAME": "벌떼",
+    "NAMES": [
+      "벌떼를",
+      "swarm\u00a0of\u00a0bees",
+      "Swarm\u00a0of\u00a0bees",
+      "swarms\u00a0of\u00a0bees",
+      "Swarms\u00a0of\u00a0bees"
+    ],
+    "DESCRIPTION": "구체: (지속/발현)적 전체에게 피해를 줍니다."
+  },
+  {
+    "PROPER_NAME": "무지개\u00a0공벌레",
+    "NAMES": [
+      "무지개\u00a0공벌레를",
+      "rainbow\u00a0louse",
+      "Rainbow\u00a0louse"
+    ],
+    "DESCRIPTION": "구체: (지속)턴 시작 시 카드를 1 장 뽑습니다. (발현)카드를 2 장 뽑습니다."
+  },
+  {
+    "PROPER_NAME": "판다",
+    "NAMES": [
+      "판다를",
+      "panda",
+      "Pandas",
+      "pandas"
+    ],
+    "DESCRIPTION": "구체: (지속/발현)무작위 적에게 피해를 줍니다."
+  },
+  {
+    "PROPER_NAME": "늑대",
+    "NAMES": [
+      "늑대를",
+      "wolf"
+    ],
+    "DESCRIPTION": "구체: (지속)체력이 가장 낮은 적에게 피해를 줍니다. 피해량은 #y영창한 구체의 수만큼 증가합니다. (발현)구체 슬롯을 얻습니다."
+  },
+  {
+    "PROPER_NAME": "고슴도치",
+    "NAMES": [
+      "고슴도치를",
+      "porcupine"
+    ],
+    "DESCRIPTION": "구체: (지속) #y깃대를 생산합니다. (발현)#y가시를 얻습니다."
+  },
+  {
+    "PROPER_NAME": "요정",
+    "NAMES": [
+      "요정을",
+      "leprechaun"
+    ],
+    "DESCRIPTION": "구체: (지속) #y주사위를 굴립니다. (발현)적 전체에게 #y징크스를 부여합니다."
+  },
+  {
+    "PROPER_NAME": "징크스",
+    "NAMES": [
+      "징크스",
+      "징크스를",
+      "징크스에",
+      "jinx"
+    ],
+    "DESCRIPTION": "징스크에 걸린 적은 해로운 효과를 받을 때마다 체력을 잃습니다."
+  },
+  {
+    "PROPER_NAME": "불의\u00a0정령",
+    "NAMES": [
+      "불의\u00a0정령을",
+      "fire\u00a0spirit",
+      "Fire\u00a0spirit"
+    ],
+    "DESCRIPTION": "구체: (지속)적 전체에게 #y점화를 부여합니다. (발현) #y밀집을 얻습니다."
+  }
+]

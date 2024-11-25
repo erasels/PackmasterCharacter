@@ -1,0 +1,33 @@
+{
+  "anniv5:ExampleTwoAmountPower": {
+    "NAME": "예시 2",
+    "DESCRIPTIONS": [
+      "턴 시작 시,",
+      " #y힘 과",
+      " #y민첩 을 #b 얻습니다."
+    ]
+  },
+  "anniv5:ConjurePackPower": {
+    "NAME": "소환 팩",
+    "DESCRIPTIONS": [
+      "다음 #b 턴 시작 시,",
+      " #b2 장의 카드를 ",
+      " 그 팩에서 손에 추가합니다."
+    ]
+  },
+  "anniv5:TempHPRegenPower": {
+    "NAME": "탈피",
+    "DESCRIPTIONS": [
+      "턴 종료 시, #y일시적인 #y체력을 #b%s 얻고, 이후 이 수치를 #b1 만큼 줄입니다."
+    ]
+  },
+  "anniv5:RuinPower": {
+    "NAME": "파멸",
+    "DESCRIPTIONS": [
+      "이 적이 차단되지 않은 공격 피해를 받을 때, 체력을 #b",
+      "차단되지 않은 공격 피해를 받을 때, 체력을 #b",
+      " + 보유한 버프와 디버프의 수 만큼 잃습니다.",
+      " + 보유한 버프와 디버프의 수 만큼 회복합니다."
+    ]
+  }
+}
