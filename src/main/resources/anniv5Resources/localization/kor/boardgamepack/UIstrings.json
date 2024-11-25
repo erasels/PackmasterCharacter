@@ -1,0 +1,20 @@
+{
+  "anniv5:BoardGamePack": {
+    "TEXT": [
+      "보드 게임",
+      "anniv5:주사위 의 힘으로 적들을 물리치세요!",
+      "Laugic"
+    ]
+  },
+  "anniv5:BoardGameChance": {
+    "TEXT": [
+      "기회"
+    ]
+  },
+  "anniv5:BoardGamePackHat": {
+    "TEXT": [
+      "가장 상품성이 있는 모자입니다.",
+      "보드 게임 모자"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "anniv5:BackpackSmack": {
+    "NAME": "백팩 스매시",
+    "DESCRIPTION": "!D! 피해를 X번 줍니다. NL anniv5:시너지 : X 약화 와 취약 을 적용합니다."
+  },
+  "anniv5:BoosterTutor": {
+    "NAME": "부스터 튜터",
+    "DESCRIPTION": "뽑을 카드 더미에서 다른 팩에서 온 무작위 카드 !M!장을 손에 추가합니다."
+  },
+  "anniv5:DestinyDraw": {
+    "NAME": "운명의 드로우",
+    "DESCRIPTION": "다른 팩에서 온 무작위 카드 3장 중 1장을 선택하여 손에 추가합니다. 이 카드는 이번 턴 동안 비용이 0이 됩니다. 소멸."
+  },
+  "anniv5:Flick": {
+    "NAME": "플릭",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 버립니다. NL 해당 비용만큼 추가로 피해를 !D! 줍니다."
+  },
+  "anniv5:MayhemForm": {
+    "NAME": "끊임없는 형상",
+    "DESCRIPTION": "턴당 한 번, 손에 카드가 2장 이하가 되면, 카드를 2장 가져오고 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "턴당 한 번, 손에 카드가 2장 이하가 되면, 카드를 2장 가져오고 !M! [E] 를 얻습니다."
+  },
+  "anniv5:RippedPecs": {
+    "NAME": "갈라진 근육",
+    "DESCRIPTION": "힘 을 1 얻습니다. NL anniv5:시너지 : 대신 !M! 힘 을 얻습니다."
+  },
+  "anniv5:Showoff": {
+    "NAME": "과시하기",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 턴에 카드를 2장 추가로 가져옵니다."
+  },
+  "anniv5:Sideboard": {
+    "NAME": "사이드보드",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 버린 카드 더미에서 카드를 1장 가져와 뽑을 카드 더미 맨 위에 올립니다."
+  },
+  "anniv5:SmithingHammer": {
+    "NAME": "단조 망치",
+    "DESCRIPTION": "!D! 피해를 !M!번 줍니다. NL 손에 있는 무작위 카드 2장을 재련합니다."
+  },
+  "anniv5:Synergize": {
+    "NAME": "시너지화",
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL anniv5:시너지 : 방어도 를 !B! 얻습니다."
+  }
+}

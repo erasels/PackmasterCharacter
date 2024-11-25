@@ -1,0 +1,52 @@
+{
+  "anniv5:RollToMove": {
+    "NAME": "주사위 굴리기",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL anniv5:D6 두 개를 굴립니다."
+  },
+  "anniv5:FlickDice": {
+    "NAME": "주사위 튕기기",
+    "DESCRIPTION": "{@@}피해를 !D! 줍니다. NL anniv5:D6 하나를 굴립니다."
+  },
+  "anniv5:ThrowChips": {
+    "NAME": "칩 던지기",
+    "DESCRIPTION": "{@@}무작위 적에게 !D! 피해를 NL X번 줍니다. NL anniv5:재굴림."
+  },
+  "anniv5:PocketAce": {
+    "NAME": "포켓 에이스",
+    "DESCRIPTION": "{@@}카드를 !M!장 가져옵니다. NL 카드를 !anniv5:m2!장 버립니다. NL 소멸."
+  },
+  "anniv5:Reroller": {
+    "NAME": "재굴림 도구",
+    "DESCRIPTION": "{@@}방어도 를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL anniv5:재굴림."
+  },
+  "anniv5:PerceptionCheck": {
+    "NAME": "지각 확인",
+    "DESCRIPTION": "턴 시작 시, anniv5:주사위 가 없으면 anniv5:D8 을 굴립니다."
+  },
+  "anniv5:AllIn": {
+    "NAME": "올인",
+    "DESCRIPTION": "{@@}피해를 !D! 줍니다. NL 카드를 !M!장 가져옵니다. NL [E] 를 !M! 얻습니다. NL 다음 턴을 건너뜁니다. NL 소멸."
+  },
+  "anniv5:D20": {
+    "NAME": "D20!",
+    "DESCRIPTION": "[#efc851]D20[]을 굴립니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "[#efc851]D20[]을 굴립니다."
+  },
+  "anniv5:GoToJail": {
+    "NAME": "감옥으로",
+    "DESCRIPTION": "바로 anniv5:감옥 으로 이동합니다. NL 통과하지 않고 갑니다. NL 200 달러를 받지 않습니다.",
+    "UPGRADE_DESCRIPTION": "바로 anniv5:감옥 으로 이동합니다. NL 통과하지 않고 갑니다. NL 20 달러를 받습니다."
+  },
+  "anniv5:LevelUp": {
+    "NAME": "레벨 업!",
+    "DESCRIPTION": "anniv5:우위 를 !M! 얻습니다. NL anniv5:D6 두 개를 굴립니다."
+  },
+  "anniv5:BoardGameKeywordManager": {
+    "NAME": "키워드 관리자",
+    "DESCRIPTION": "번역 및 키워드 ID에 쉽게 접근하기 위한 기능입니다.",
+    "EXTENDED_DESCRIPTION": [
+      "anniv5:주사위",
+      "anniv5:기회"
+    ]
+  }
+}

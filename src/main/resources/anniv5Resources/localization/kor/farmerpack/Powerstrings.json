@@ -1,0 +1,15 @@
+{
+  "anniv5:OutToMarketPower": {
+    "NAME": "시장으로",
+    "DESCRIPTIONS": [
+      "다른 유형의 카드를 사용할 때마다 모든 적에게 #b 피해를 줍니다. 마지막으로 사용한 카드 유형: ",
+      "공격", "스킬", "파워", "상태이상", "저주"
+    ]
+  },
+  "anniv5:SupplyChainPower": {
+    "NAME": "공급망",
+    "DESCRIPTIONS": [
+      "턴 시작 시, 손에 #b개의 비료 를 추가합니다."
+    ]
+  }
+}

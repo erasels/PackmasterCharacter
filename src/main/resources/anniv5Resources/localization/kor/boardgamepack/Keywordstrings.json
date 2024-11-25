@@ -1,0 +1,48 @@
+[
+  {
+    "PROPER_NAME": "주사위",
+    "NAMES": [
+      "주사위",
+      "d4",
+      "d6",
+      "d8",
+      "d10",
+      "d12",
+      "d20",
+      "dice"
+    ],
+    "DESCRIPTION": "#y주사위 는 피해를 주거나 #y방어도 를 얻는 다음 카드의 피해량과 #y방어도 를 증가시킵니다."
+  },
+  {
+    "PROPER_NAME": "재굴림",
+    "NAMES": [
+      "재굴림",
+      "reroll"
+    ],
+    "DESCRIPTION": "이 카드를 사용할 때 #y주사위 는 소모되지 않습니다."
+  },
+  {
+    "PROPER_NAME": "감옥",
+    "NAMES": [
+      "감옥",
+      "jail"
+    ],
+    "DESCRIPTION": "이번 턴 동안 공격 카드를 사용할 수 없으며, 피해를 받지 않습니다."
+  },
+  {
+    "PROPER_NAME": "기회",
+    "NAMES": [
+      "기회",
+      "chance"
+    ],
+    "DESCRIPTION": "#y기회 카드는 뽑는 즉시 사용되며, 사용 후 #y소멸 됩니다."
+  },
+  {
+    "PROPER_NAME": "우위",
+    "NAMES": [
+      "우위",
+      "advantage"
+    ],
+    "DESCRIPTION": "#y주사위 를 추가로 여러 번 굴리고, 그중 가장 높은 값을 취합니다."
+  }
+]

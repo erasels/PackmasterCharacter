@@ -1,0 +1,54 @@
+{
+  "anniv5:FalloutPower": {
+    "NAME": "핵낙진",
+    "DESCRIPTIONS": [
+      "#y스킬 을 사용할 때마다, 타겟 적은 피해를 #b",
+      " 받습니다."
+    ]
+  },
+  "anniv5:WaveMotionCannonPower": {
+    "NAME": "파동 운동포",
+    "DESCRIPTIONS": [
+      "다음 턴에, 모든 적에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "anniv5:RedshiftPower": {
+    "NAME": "적색이동",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시, 카드를 1장 가져옵니다.",
+      "다음 #b 턴 시작 시,",
+      " 카드를 1장 가져옵니다."
+    ]
+  },
+  "anniv5:CountdownPower": {
+    "NAME": "카운트다운",
+    "DESCRIPTIONS": [
+      "#b 장의 카드를 더 가져오면 ",
+      " #b2 에너지를 얻고 #y원자 #y파일드라이버 를 얻습니다.",
+      " #b2 에너지를 얻고 #y원자 #y파일드라이버+ 를 얻습니다."
+    ]
+  },
+  "anniv5:MeltdownPower": {
+    "NAME": "핵붕괴",
+    "DESCRIPTIONS": [
+      "#y스킬 을 가져올 때마다, 에너지를 #b",
+      " 얻습니다."
+    ]
+  },
+  "anniv5:ExplosiveFormPower": {
+    "NAME": "폭발형태",
+    "DESCRIPTIONS": [
+      "턴 시작 시, #y폭탄 을 설치합니다.",
+      "턴 시작 시, #y폭탄 을 #b",
+      " 번 설치합니다."
+    ]
+  },
+  "anniv5:EveOfDestructionPower": {
+    "NAME": "파괴의 전야",
+    "DESCRIPTIONS": [
+      "비공격 피해량이 #b",
+      "% 증가합니다."
+    ]
+  }
+}

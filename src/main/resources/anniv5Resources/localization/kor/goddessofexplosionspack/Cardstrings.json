@@ -1,0 +1,52 @@
+{
+  "anniv5:ChainReaction": {
+    "NAME": "연쇄반응",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:핵낙진 을 !M! 적용합니다."
+  },
+  "anniv5:WaveMotionCannon": {
+    "NAME": "파동 운동포",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 턴에, 모든 적에게 !M! 피해를 줍니다."
+  },
+  "anniv5:Redshift": {
+    "NAME": "적색이동",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 !M! 턴 시작 시, 카드를 1장 가져옵니다."
+  },
+  "anniv5:Countdown": {
+    "NAME": "카운트다운",
+    "DESCRIPTION": "카드를 !M!개 더 가져오면, [E] [E] 를 얻고 *원자 *파일드라이버 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M!개 더 가져오면, [E] [E] 를 얻고 *원자 *파일드라이버+ 를 얻습니다."
+  },
+  "anniv5:AtomicPiledriver": {
+    "NAME": "원자 파일드라이버",
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL anniv5:핵낙진 을 !M! 적용합니다. NL 소멸."
+  },
+  "anniv5:NuclearFusion": {
+    "NAME": "핵융합",
+    "DESCRIPTION": "비용이 X 이하인 카드를 2번 사용합니다. X *화상 을 손에 추가합니다.",
+    "UPGRADE_DESCRIPTION": "비용이 X+1 이하인 카드를 2번 사용합니다. X *화상 을 손에 추가합니다."
+  },
+  "anniv5:MoreExplosions": {
+    "NAME": "더 많은 폭발!",
+    "DESCRIPTION": "카드를 !M!장 가져옵니다. NL !M!개의 무작위 스킬 을 카드 더미에 섞습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M!장 가져옵니다. NL !M!개의 무작위 스킬 을 카드 더미에 섞습니다."
+  },
+  "anniv5:Meltdown": {
+    "NAME": "핵붕괴",
+    "DESCRIPTION": "스킬 을 가져올 때마다 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 스킬 을 가져올 때마다 [E] 를 얻습니다."
+  },
+  "anniv5:ExplosiveForm": {
+    "NAME": "폭발형태",
+    "DESCRIPTION": "턴 시작 시, *폭탄 을 설치합니다.",
+    "UPGRADE_DESCRIPTION": "턴 시작 시, 그리고 지금 *폭탄 을 설치합니다."
+  },
+  "anniv5:KillerQueen": {
+    "NAME": "킬러 퀸",
+    "DESCRIPTION": "손에 있는 카드를 선택합니다. 그 카드를 사용 시, 모든 적에게 피해를 !M! 줍니다."
+  },
+  "anniv5:EveOfDestruction": {
+    "NAME": "파괴의 전야",
+    "DESCRIPTION": "비공격 피해량이 100% 증가합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 비공격 피해량이 100% 증가합니다."
+  }
+}

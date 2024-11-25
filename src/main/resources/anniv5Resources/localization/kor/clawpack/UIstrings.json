@@ -1,0 +1,21 @@
+{
+  "anniv5:AddClawTagAndMakeClawModifier": {
+    "TEXT": [
+      " NL *유령 *후벼 파기 를 얻습니다.",
+      " 후벼 파기"
+    ]
+  },
+  "anniv5:ClawPack": {
+    "TEXT": [
+      "후벼 파기",
+      "궁극의 후벼 파기 - 후벼 파기로 구성된 팩입니다.",
+      "MichaelMayhem"
+    ]
+  },
+  "anniv5:ClawPackHat": {
+    "TEXT": [
+      "위엄 있고! 날카롭고! 불편합니다!",
+      "후벼 파기 왕관"
+    ]
+  }
+}

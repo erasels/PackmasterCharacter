@@ -1,0 +1,44 @@
+{
+  "anniv5:Quickdraw": {
+    "NAME": "빠른 조준",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M!장 가져옵니다. NL 다음 턴에, 카드를 1장 적게 가져옵니다."
+  },
+  "anniv5:Glare": {
+    "NAME": "노려보기",
+    "DESCRIPTION": "약화 와 취약 을 !M! 적용합니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 약화 와 취약 을 !M! 적용합니다."
+  },
+  "anniv5:HoleUp": {
+    "NAME": "숨기",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 약화 를 !M! 얻습니다."
+  },
+  "anniv5:Headshot": {
+    "NAME": "헤드샷",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손의 중간에서 사용하면 피해가 두 배로 증가합니다."
+  },
+  "anniv5:Determination": {
+    "NAME": "결단력",
+    "DESCRIPTION": "상태이상 이 적용될 때마다 힘 을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 상태이상 이 적용될 때마다 힘 을 !M! 얻습니다."
+  },
+  "anniv5:Virtue": {
+    "NAME": "미덕",
+    "DESCRIPTION": "보존. NL 당신의 상태이상 을 각각을 !M! 만큼 줄입니다."
+  },
+  "anniv5:FlashPowder": {
+    "NAME": "섬광 가루",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 모든 적은 !M! 힘 을 잃습니다. NL 소멸."
+  },
+  "anniv5:Purgatory": {
+    "NAME": "연옥",
+    "DESCRIPTION": "휘발성. NL 모든 적에게 피해를 !D! 줍니다."
+  },
+  "anniv5:OverwhelmingPower": {
+    "NAME": "압도적인 힘",
+    "DESCRIPTION": "[E] [E] [E] 를 얻습니다. NL 카드를 3장 가져옵니다. NL 턴 종료 시 에너지가 0이라면 체력을 !M! 잃습니다."
+  },
+  "anniv5:DeadOrAlive": {
+    "NAME": "죽든 살든",
+    "DESCRIPTION": "!D! 피해를 X번 줍니다. NL 치명타 시, anniv5:현상수배 를 얻습니다. NL 소멸."
+  }
+}

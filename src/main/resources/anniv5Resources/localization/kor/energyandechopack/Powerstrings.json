@@ -1,0 +1,19 @@
+{
+  "anniv5:SlowingPower": {
+    "NAME": "느려짐",
+    "DESCRIPTIONS": [
+      "턴 시작 시,",
+      " #b",
+      " [E] 를 얻습니다."
+    ]
+  },
+  "anniv5:PanacherPower": {
+    "NAME": "화려함",
+    "DESCRIPTIONS": [
+      "#b 개 이상의 카드가 생성되면",
+      " 모든 적에게 피해를 #b 줍니다.",
+      " 모든 적에게 피해를 #b 줍니다",
+      " 모든 적에게 피해를 줍니다"
+    ]
+  }
+}

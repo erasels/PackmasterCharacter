@@ -1,0 +1,48 @@
+{
+  "anniv5:BunkerPower": {
+    "NAME": "벙커",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시, #y골프 #y공 1개를 손에 추가합니다.",
+      "다음 턴 시작 시, #b",
+      "개의 #y골프 #y공 을 손에 추가합니다."
+    ]
+  },
+  "anniv5:ColorlessMasteryPower": {
+    "NAME": "무색 숙련",
+    "DESCRIPTIONS": [
+      "무색 카드를 사용할 때마다 #b",
+      " 힘 을 얻습니다."
+    ]
+  },
+  "anniv5:LunchBoxPower": {
+    "NAME": "도시락 상자",
+    "DESCRIPTIONS": [
+      "이번 턴 동안, 다음 무색 카드를 두 번 사용합니다.",
+      "이번 턴 동안, 다음 #b",
+      "개의 무색 카드를 두 번 사용합니다."
+    ]
+  },
+  "anniv5:MonasteryPower": {
+    "NAME": "수도원 방문",
+    "DESCRIPTIONS": [
+      "다음 #b3턴 시작 시, #y광기, #y순수, 그리고 #y신성 을 손에 추가합니다.",
+      "다음 #b2턴 시작 시, #y순수 와 #y신성 을 손에 추가합니다.",
+      "다음 턴 시작 시, #y신성 을 손에 추가합니다."
+    ]
+  },
+  "anniv5:PrismShardPower": {
+    "NAME": "프리즘 조각",
+    "DESCRIPTIONS": [
+      "#y조각 3개를 모으면, ",
+      "+",
+      " 을 손에 추가합니다."
+    ]
+  },
+  "anniv5:GhostPower": {
+    "NAME": "유령",
+    "DESCRIPTIONS": [
+      "턴 #r종료 시, 체력을 #b",
+      " 잃습니다."
+    ]
+  }
+}

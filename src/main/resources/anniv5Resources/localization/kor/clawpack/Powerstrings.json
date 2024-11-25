@@ -1,0 +1,17 @@
+{
+  "anniv5:InfiniteClawsPower": {
+    "NAME": "무한 후벼 파기",
+    "DESCRIPTIONS": [
+      "턴 시작 시, #b",
+      " #y유령 #y후벼 #y파기 를 얻습니다.",
+      " #y유령 #y후벼 #y파기 를 얻습니다."
+    ]
+  },
+  "anniv5:ReturnBlockOnClawPower": {
+    "NAME": "후벼 파기와 대화하기",
+    "DESCRIPTIONS": [
+      "#y후벼 #y파기 로 공격받을 때, #b",
+      " 방어도 를 얻습니다."
+    ]
+  }
+}
