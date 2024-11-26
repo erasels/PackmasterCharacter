@@ -5,12 +5,12 @@
   },
   "anniv5:HuttsGamble": {
     "NAME": "허츠의 도박",
-    "DESCRIPTION": "이번 턴에 방어되지 않은 공격 피해를 받지 않으면, 다음 턴에 [E] 를 얻고 카드를 1장 가져옵니다.",
-    "UPGRADE_DESCRIPTION": "이번 턴에 방어되지 않은 공격 피해를 받지 않으면, 다음 턴에 [E] [E] 를 얻고 카드를 1장 가져옵니다."
+    "DESCRIPTION": "이번 턴에 방어되지 않은 공격 피해를 받지 않으면, 다음 턴에 [E] 를 얻고 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "이번 턴에 방어되지 않은 공격 피해를 받지 않으면, 다음 턴에 [E] [E] 를 얻고 카드를 1장 뽑습니다."
   },
   "anniv5:Tricky": {
     "NAME": "교활한 속임수",
-    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 이번 턴에 가져온 카드 1장당 추가로 !M! 피해를 줍니다."
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 이번 턴에 뽑은 카드 1장당 추가로 !M! 피해를 줍니다."
   },
   "anniv5:SneakyteakStrike": {
     "NAME": "스니키티크 스트라이크",
@@ -28,11 +28,11 @@
   },
   "anniv5:Retromation": {
     "NAME": "레트로메이션",
-    "DESCRIPTION": "턴 시작 시, 드래프트에 없는 팩에서 카드를 1장 가져옵니다. NL 이 카드는 휘발성 속성을 가집니다."
+    "DESCRIPTION": "턴 시작 시, 드래프트에 없는 팩에서 카드를 1장 뽑습니다. NL 이 카드는 휘발성 속성을 가집니다."
   },
   "anniv5:OddOne": {
     "NAME": "이상한 카드",
-    "DESCRIPTION": "anniv5:홀수 : 무작위 적에게 피해를 !D! 줍니다. NL anniv5:짝수 : 카드를 1장 가져옵니다.",
+    "DESCRIPTION": "anniv5:홀수 : 무작위 적에게 피해를 !D! 줍니다. NL anniv5:짝수 : 카드를 1장 뽑습니다.",
     "EXTENDED_DESCRIPTION": [
       " NL NL (사용됨 ",
       ". ",
@@ -42,8 +42,8 @@
   },
   "anniv5:Rhapsody": {
     "NAME": "랩소디",
-    "DESCRIPTION": "anniv5:영감 을 !M! 얻습니다. NL 카드를 !anniv5:m2! 장 가져옵니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:영감 을 !M! 얻습니다. NL 카드를 !anniv5:m2! 장 가져옵니다."
+    "DESCRIPTION": "anniv5:영감 을 !M! 얻습니다. NL 카드를 !anniv5:m2! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "anniv5:영감 을 !M! 얻습니다. NL 카드를 !anniv5:m2! 장 뽑습니다."
   },
   "anniv5:Frostprime": {
     "NAME": "프로스트 프라임",

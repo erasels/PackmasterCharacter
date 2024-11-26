@@ -22,7 +22,7 @@
   },
   "anniv5:Square": {
     "NAME": "사각형",
-    "DESCRIPTION": "{@@}휘발성. NL 이 카드를 뽑으면, 카드를 !M!장 가져옵니다."
+    "DESCRIPTION": "{@@}휘발성. NL 이 카드를 뽑으면, 카드를 !M!장 뽑습니다"
   },
   "anniv5:Trine": {
     "NAME": "삼각형",
@@ -30,8 +30,8 @@
   },
   "anniv5:Divination": {
     "NAME": "예지",
-    "DESCRIPTION": "손에서 카드를 하나 뽑을 카드 더미 아래에 넣습니다. NL 카드를 !M!장 가져옵니다.",
-    "UPGRADE_DESCRIPTION": "손에서 원하는 만큼의 카드를 뽑을 카드 더미 아래에 넣습니다. NL 카드를 !M!장 가져옵니다.",
+    "DESCRIPTION": "손에서 카드를 하나 뽑을 카드 더미 아래에 넣습니다. NL 카드를 !M!장 뽑습니다",
+    "UPGRADE_DESCRIPTION": "손에서 원하는 만큼의 카드를 뽑을 카드 더미 아래에 넣습니다. NL 카드를 !M!장 뽑습니다",
     "EXTENDED_DESCRIPTION": [
       "뽑을 카드 더미 아래에 넣습니다"
     ]
@@ -46,7 +46,7 @@
   },
   "anniv5:Alignment": {
     "NAME": "정렬",
-    "DESCRIPTION": "X장의 카드를 가져옵니다. NL 그 카드는 이번 턴 동안 비용이 X만큼 감소합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "X장의 카드를 가져옵니다. NL 그 카드는 이번 턴 동안 비용이 X만큼 감소합니다."
+    "DESCRIPTION": "X장의 카드를 뽑습니다 NL 그 카드는 이번 턴 동안 비용이 X만큼 감소합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "X장의 카드를 뽑습니다 NL 그 카드는 이번 턴 동안 비용이 X만큼 감소합니다."
   }
 }

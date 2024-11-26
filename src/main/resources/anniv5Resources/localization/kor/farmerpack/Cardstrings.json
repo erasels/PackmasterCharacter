@@ -1,13 +1,13 @@
 {
   "anniv5:Fertilizer": {
     "NAME": "비료",
-    "DESCRIPTION": "카드를 1장 가져옵니다. NL 소멸. NL 상태이상 으로 간주합니다.",
-    "UPGRADE_DESCRIPTION": "카드를 !M!장 가져옵니다. NL 소멸. NL 상태이상 으로 간주합니다."
+    "DESCRIPTION": "카드를 1장 뽑습니다. NL 소멸. NL 상태이상 으로 간주합니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M!장 뽑습니다. NL 소멸. NL 상태이상 으로 간주합니다."
   },
   "anniv5:FertilizerPlaceholder": {
     "NAME": "비료 자리 표시자",
-    "DESCRIPTION": "카드를 1장 가져옵니다. NL 소멸. NL 생성 시, 상태이상 또는 저주 로 간주합니다.",
-    "UPGRADE_DESCRIPTION": "카드를 !M!장 가져옵니다. NL 소멸. NL 생성 시, 상태이상 또는 저주 로 간주합니다."
+    "DESCRIPTION": "카드를 1장 뽑습니다. NL 소멸. NL 생성 시, 상태이상 또는 저주 로 간주합니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M!장 뽑습니다. NL 소멸. NL 생성 시, 상태이상 또는 저주 로 간주합니다."
   },
   "anniv5:HarvestBeans": {
     "NAME": "콩 수확",
@@ -47,7 +47,7 @@
   },
   "anniv5:SowTheSeeds": {
     "NAME": "씨앗 뿌리기",
-    "DESCRIPTION": "*비료 를 얻습니다. NL 뽑을 카드 더미에서 !M!개의 다른 유형의 무작위 카드를 가져옵니다."
+    "DESCRIPTION": "*비료 를 얻습니다. NL 뽑을 카드 더미에서 !M!개의 다른 유형의 무작위 카드를 뽑습니다."
   },
   "anniv5:TillTheEarth": {
     "NAME": "땅갈기",

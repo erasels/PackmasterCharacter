@@ -1,13 +1,13 @@
 {
   "anniv5:Wonder": {
     "NAME": "경이",
-    "DESCRIPTION": "손에 있는 카드를 모두 버립니다. NL 카드를 1장 가져오고, 에너지를 그 카드의 비용으로 설정합니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 당신의 손에 있는 카드를 모두 버립니다. NL 카드를 1장 가져오고, 에너지를 그 카드의 비용으로 설정합니다."
+    "DESCRIPTION": "손에 있는 카드를 모두 버립니다. NL 카드를 1장 뽑고, 에너지를 그 카드의 비용으로 설정합니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 당신의 손에 있는 카드를 모두 버립니다. NL 카드를 1장 뽑고, 에너지를 그 카드의 비용으로 설정합니다."
   },
   "anniv5:FreeSpace": {
     "NAME": "여유 공간",
-    "DESCRIPTION": "휘발성. NL 이 카드를 뽑거나 버리거나 소멸 시키거나 사용할 때, 카드를 1장 가져옵니다.",
-    "UPGRADE_DESCRIPTION": "이 카드를 뽑거나 버리거나 소멸 시키거나 사용할 때, 카드를 1장 가져옵니다."
+    "DESCRIPTION": "휘발성. NL 이 카드를 뽑거나 버리거나 소멸 시키거나 사용할 때, 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "이 카드를 뽑거나 버리거나 소멸 시키거나 사용할 때, 카드를 1장 뽑습니다."
   },
   "anniv5:MidnightOil": {
     "NAME": "한밤중의 기름",
@@ -44,7 +44,7 @@
   },
   "anniv5:Thoughtweaving": {
     "NAME": "사고의 엮임",
-    "DESCRIPTION": "스킬 또는 공격 카드를 사용할 때마다, 다른 팩에서 반대 유형의 카드를 1장 가져옵니다."
+    "DESCRIPTION": "스킬 또는 공격 카드를 사용할 때마다, 다른 팩에서 반대 유형의 카드를 1장 뽑습니다."
   },
   "anniv5:SealedSword": {
     "NAME": "봉인된 검",

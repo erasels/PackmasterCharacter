@@ -21,8 +21,8 @@
   },
   "anniv5:DrawGem": {
     "NAME": "오팔",
-    "DESCRIPTION": "anniv5:보석. NL \"카드를 1장 가져옵니다\"",
-    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"카드를 1장 가져옵니다\""
+    "DESCRIPTION": "anniv5:보석. NL \"카드를 1장 뽑습니다\"",
+    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"카드를 1장 뽑습니다\""
   },
   "anniv5:EnergyGem": {
     "NAME": "시트린",

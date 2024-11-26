@@ -9,12 +9,12 @@
   },
   "anniv5:Redshift": {
     "NAME": "적색이동",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 !M! 턴 시작 시, 카드를 1장 가져옵니다."
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 !M! 턴 시작 시, 카드를 1장 뽑습니다."
   },
   "anniv5:Countdown": {
     "NAME": "카운트다운",
-    "DESCRIPTION": "카드를 !M!개 더 가져오면, [E] [E] 를 얻고 *원자 *파일드라이버 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "카드를 !M!개 더 가져오면, [E] [E] 를 얻고 *원자 *파일드라이버+ 를 얻습니다."
+    "DESCRIPTION": "카드를 !M!개 더 뽑으면, [E] [E] 를 얻고 *원자 *파일드라이버 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M!개 더 뽑으면, [E] [E] 를 얻고 *원자 *파일드라이버+ 를 얻습니다."
   },
   "anniv5:AtomicPiledriver": {
     "NAME": "원자 파일드라이버",
@@ -27,13 +27,13 @@
   },
   "anniv5:MoreExplosions": {
     "NAME": "더 많은 폭발!",
-    "DESCRIPTION": "카드를 !M!장 가져옵니다. NL !M!개의 무작위 스킬 을 카드 더미에 섞습니다.",
-    "UPGRADE_DESCRIPTION": "카드를 !M!장 가져옵니다. NL !M!개의 무작위 스킬 을 카드 더미에 섞습니다."
+    "DESCRIPTION": "카드를 !M!장 뽑습니다. NL !M!개의 무작위 스킬 을 카드 더미에 섞습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M!장 뽑습니다. NL !M!개의 무작위 스킬 을 카드 더미에 섞습니다."
   },
   "anniv5:Meltdown": {
     "NAME": "핵붕괴",
-    "DESCRIPTION": "스킬 을 가져올 때마다 [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 스킬 을 가져올 때마다 [E] 를 얻습니다."
+    "DESCRIPTION": "스킬 을 뽑을 때마다 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 스킬 을 뽑을 때마다 [E] 를 얻습니다."
   },
   "anniv5:ExplosiveForm": {
     "NAME": "폭발형태",

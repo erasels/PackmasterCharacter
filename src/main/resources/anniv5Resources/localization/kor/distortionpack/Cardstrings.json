@@ -13,8 +13,8 @@
   },
   "anniv5:BurningAct": {
     "NAME": "불타는 행동",
-    "DESCRIPTION": "카드를 !M! 가져옵니다. NL 그 중 2개를 무작위로 소멸 시킵니다.",
-    "UPGRADE_DESCRIPTION": "카드를 !M! 가져옵니다. NL 그 중 2개를 소멸 시킵니다."
+    "DESCRIPTION": "카드를 !M! 뽑습니다. NL 그 중 2개를 무작위로 소멸 시킵니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 뽑습니다. NL 그 중 2개를 소멸 시킵니다."
   },
   "anniv5:MindMaze": {
     "NAME": "정신 미로",
@@ -33,7 +33,7 @@
   },
   "anniv5:Rue": {
     "NAME": "후회",
-    "DESCRIPTION": "{@@}[E] [E] 를 얻고 카드를 !M! 가져옵니다. NL 다음 3개의 카드를 사용 시 소멸 시킵니다."
+    "DESCRIPTION": "{@@}[E] [E] 를 얻고 카드를 !M! 뽑습니다. NL 다음 3개의 카드를 사용 시 소멸 시킵니다."
   },
   "anniv5:Static": {
     "NAME": "정적",

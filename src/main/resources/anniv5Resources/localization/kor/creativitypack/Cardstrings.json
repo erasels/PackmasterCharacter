@@ -17,7 +17,7 @@
   },
   "anniv5:Souvenirs": {
     "NAME": "기념품",
-    "DESCRIPTION": "{@@}손에 *엄벌{!Upgrades!|>0=+} 또는 *안전{!Upgrades!|>0=+}을 생성합니다. 카드를 1장 가져옵니다."
+    "DESCRIPTION": "{@@}손에 *엄벌{!Upgrades!|>0=+} 또는 *안전{!Upgrades!|>0=+}을 생성합니다. 카드를 1장 뽑습니다."
   },
   "anniv5:Mimicry": {
     "NAME": "모방",
@@ -25,7 +25,7 @@
   },
   "anniv5:CraftyMove": {
     "NAME": "교활한 움직임",
-    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 카드가 생성되었다면, [E] 를 얻고 카드를 1장 가져옵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 카드가 생성되었다면, [E] 를 얻고 카드를 1장 뽑습니다."
   },
   "anniv5:BarrierBeacon": {
     "NAME": "장벽 비콘",

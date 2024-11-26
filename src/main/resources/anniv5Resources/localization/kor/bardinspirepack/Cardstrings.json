@@ -5,8 +5,8 @@
   },
   "anniv5:Sift": {
     "NAME": "선별",
-    "DESCRIPTION": "카드를 !M!장 가져옵니다. NL 그 카드의 비용만큼 [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "카드를 !M!장 가져옵니다. NL 그 카드의 비용만큼 [E] 를 얻습니다. NL 카드를 !M!장 가져옵니다."
+    "DESCRIPTION": "카드를 !M!장 뽑습니다. NL 그 카드의 비용만큼 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M!장 뽑습니다. NL 그 카드의 비용만큼 [E] 를 얻습니다. NL 카드를 !M!장 뽑습니다."
   },
   "anniv5:EchoEcho": {
     "NAME": "메아리 메아리",

@@ -1,7 +1,7 @@
 {
   "anniv5:Quickdraw": {
     "NAME": "빠른 조준",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M!장 가져옵니다. NL 다음 턴에, 카드를 1장 적게 가져옵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M!장 뽑습니다. NL 다음 턴에, 카드를 1장 적게 뽑습니다."
   },
   "anniv5:Glare": {
     "NAME": "노려보기",
@@ -35,7 +35,7 @@
   },
   "anniv5:OverwhelmingPower": {
     "NAME": "압도적인 힘",
-    "DESCRIPTION": "[E] [E] [E] 를 얻습니다. NL 카드를 3장 가져옵니다. NL 턴 종료 시 에너지가 0이라면 체력을 !M! 잃습니다."
+    "DESCRIPTION": "[E] [E] [E] 를 얻습니다. NL 카드를 3장 뽑습니다. NL 턴 종료 시 에너지가 0이라면 체력을 !M! 잃습니다."
   },
   "anniv5:DeadOrAlive": {
     "NAME": "죽든 살든",

@@ -13,7 +13,7 @@
   },
   "anniv5:Voices": {
     "NAME": "목소리",
-    "DESCRIPTION": "카드를 !M! 가져옵니다. NL anniv5:메아리. NL 소멸."
+    "DESCRIPTION": "카드를 !M! 뽑습니다. NL anniv5:메아리. NL 소멸."
   },
   "anniv5:Flashlight": {
     "NAME": "손전등",

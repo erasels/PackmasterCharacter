@@ -17,8 +17,8 @@
   },
   "anniv5:MayhemForm": {
     "NAME": "끊임없는 형상",
-    "DESCRIPTION": "턴당 한 번, 손에 카드가 2장 이하가 되면, 카드를 2장 가져오고 [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "턴당 한 번, 손에 카드가 2장 이하가 되면, 카드를 2장 가져오고 !M! [E] 를 얻습니다."
+    "DESCRIPTION": "턴당 한 번, 손에 카드가 2장 이하가 되면, 카드를 2장 뽑고  [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "턴당 한 번, 손에 카드가 2장 이하가 되면, 카드를 2장 뽑고  !M! [E] 를 얻습니다."
   },
   "anniv5:RippedPecs": {
     "NAME": "갈라진 근육",
@@ -26,11 +26,11 @@
   },
   "anniv5:Showoff": {
     "NAME": "과시하기",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 턴에 카드를 2장 추가로 가져옵니다."
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 턴에 카드를 2장 추가로 뽑습니다."
   },
   "anniv5:Sideboard": {
     "NAME": "사이드보드",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 버린 카드 더미에서 카드를 1장 가져와 뽑을 카드 더미 맨 위에 올립니다."
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 버린 카드 더미에서 카드를 1장 뽑아 뽑을 카드 더미 맨 위에 올립니다."
   },
   "anniv5:SmithingHammer": {
     "NAME": "단조 망치",

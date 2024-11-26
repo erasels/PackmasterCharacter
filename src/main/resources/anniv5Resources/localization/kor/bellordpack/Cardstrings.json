@@ -20,11 +20,11 @@
   },
   "anniv5:RingTheBell": {
     "NAME": "종을 울려라",
-    "DESCRIPTION": "모든 적이 체력을 !M! 잃습니다. NL 카드를 1장 가져옵니다. NL anniv5:픽업 : *방울의 *저주 를 획득합니다."
+    "DESCRIPTION": "모든 적이 체력을 !M! 잃습니다. NL 카드를 1장 뽑습니다. NL anniv5:픽업 : *방울의 *저주 를 획득합니다."
   },
   "anniv5:TimeOut": {
     "NAME": "타임아웃",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 1장 가져옵니다. NL 그것이 저주 또는 상태이상 카드라면, 모든 적이 힘 을 !M! 잃습니다."
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 1장 뽑습니다. NL 그것이 저주 또는 상태이상 카드라면, 모든 적이 힘 을 !M! 잃습니다."
   },
   "anniv5:Cuckoo": {
     "NAME": "뻐꾸기",

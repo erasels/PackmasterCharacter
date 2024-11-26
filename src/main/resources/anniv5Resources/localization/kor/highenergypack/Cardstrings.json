@@ -10,7 +10,7 @@
   },
   "anniv5:MultiTool": {
     "NAME": "다기능 도구",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 가져옵니다. NL 에너지가 남은 채로 턴을 종료하면, 모든 적은 체력을 !M! 잃습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL 에너지가 남은 채로 턴을 종료하면, 모든 적은 체력을 !M! 잃습니다."
   },
   "anniv5:LastResort": {
     "NAME": "최후의 수단",

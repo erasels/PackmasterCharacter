@@ -13,7 +13,7 @@
   },
   "anniv5:PocketAce": {
     "NAME": "포켓 에이스",
-    "DESCRIPTION": "{@@}카드를 !M!장 가져옵니다. NL 카드를 !anniv5:m2!장 버립니다. NL 소멸."
+    "DESCRIPTION": "{@@}카드를 !M!장 뽑습니다. NL 카드를 !anniv5:m2!장 버립니다. NL 소멸."
   },
   "anniv5:Reroller": {
     "NAME": "재굴림 도구",
@@ -25,7 +25,7 @@
   },
   "anniv5:AllIn": {
     "NAME": "올인",
-    "DESCRIPTION": "{@@}피해를 !D! 줍니다. NL 카드를 !M!장 가져옵니다. NL [E] 를 !M! 얻습니다. NL 다음 턴을 건너뜁니다. NL 소멸."
+    "DESCRIPTION": "{@@}피해를 !D! 줍니다. NL 카드를 !M!장 뽑습니다. NL [E] 를 !M! 얻습니다. NL 다음 턴을 건너뜁니다. NL 소멸."
   },
   "anniv5:D20": {
     "NAME": "D20!",
