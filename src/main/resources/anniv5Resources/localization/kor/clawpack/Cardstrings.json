@@ -1,7 +1,7 @@
 {
   "anniv5:Alclawmize": {
     "NAME": "후벼 파기 연금",
-    "DESCRIPTION": "무작위로 고유한 *후벼 *파기 테마 물약을 획득합니다. NL 소멸."
+    "DESCRIPTION": "무작위로 고유한 *후벼 *파기 테마 물약을 얻습니다. NL 소멸."
   },
   "anniv5:ClawForOne": {
     "NAME": "하나를 위한 후벼 파기",
@@ -13,11 +13,11 @@
     "UPGRADE_DESCRIPTION": "방어도 를 !B! 얻습니다. NL *유령 *후벼 *파기 를 !M!개 얻습니다."
   },
   "anniv5:Conclawd": {
-    "NAME": "집단 후벼 파기",
+    "NAME": "결론은 후벼 파기",
     "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL anniv5:날카로움 !M!. NL 턴을 종료합니다."
   },
   "anniv5:InfiniteClaws": {
-    "NAME": "무한 후벼 파기",
+    "NAME": "무한의 후벼 파기",
     "DESCRIPTION": "턴 시작 시, *유령 *후벼 *파기 를 얻습니다.",
     "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시, *유령 *후벼 *파기 를 얻습니다."
   },
@@ -27,15 +27,15 @@
     "UPGRADE_DESCRIPTION": "손에 있는 공격 카드를 선택하여 anniv5:수정 : '카드 이름에 '후벼 파기' 추가'와 ' *유령 *후벼 *파기 획득'을 추가합니다."
   },
   "anniv5:SearingClaw": {
-    "NAME": "이글거리는 후벼 파기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:날카로움 !M!. NL 이 카드는 무제한으로 재련할 수 있습니다."
+    "NAME": "불태우는 후벼 파기",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:날카로움 !M!. NL 이 카드는 무제한으로 강화할 수 있습니다."
   },
   "anniv5:TalkToTheClaw": {
-    "NAME": "후벼 파기와 대화하기",
+    "NAME": "관계 후벼 파기",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이 적을 *후벼 *파기 로 공격할 때마다, 방어도 를 !M! 얻습니다. NL 소멸."
   },
   "anniv5:TwinClaw": {
-    "NAME": "쌍둥이 후벼 파기",
+    "NAME": "두 번 후벼 파기",
     "DESCRIPTION": "피해를 !D! 두 번 줍니다. NL anniv5:날카로움 !M!."
   },
   "anniv5:GhostClaw": {

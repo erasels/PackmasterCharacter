@@ -34,7 +34,7 @@
   },
   "anniv5:SmithingHammer": {
     "NAME": "단조 망치",
-    "DESCRIPTION": "!D! 피해를 !M!번 줍니다. NL 손에 있는 무작위 카드 2장을 재련합니다."
+    "DESCRIPTION": "!D! 피해를 !M!번 줍니다. NL 손에 있는 무작위 카드 2장을 강화 합니다."
   },
   "anniv5:Synergize": {
     "NAME": "시너지화",

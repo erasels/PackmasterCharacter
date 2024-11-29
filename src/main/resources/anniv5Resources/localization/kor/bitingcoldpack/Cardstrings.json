@@ -5,7 +5,7 @@
   },
   "anniv5:Frostburn": {
     "NAME": "서리 화상",
-    "DESCRIPTION": "모든 적에게 anniv5:동상 을 !M! 적용합니다. NL 버린 카드 더미에 *화상 을 추가합니다."
+    "DESCRIPTION": "모든 적에게 anniv5:동상 을 !M! 적용합니다. NL 버린 카드 더미에 *화상 을 넣습니다."
   },
   "anniv5:FrostedEdge": {
     "NAME": "얼어붙은 칼날",

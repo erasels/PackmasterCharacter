@@ -8,7 +8,7 @@
   },
   "anniv5:Bunker": {
     "NAME": "벙커",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 턴 시작 시, *골프 *공 을 손에 추가합니다."
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 턴 시작 시, *골프 *공 을 얻습니다."
   },
   "anniv5:GolfBall": {
     "NAME": "골프 공",
@@ -23,7 +23,7 @@
   },
   "anniv5:Ghost": {
     "NAME": "유령",
-    "DESCRIPTION": "턴 종료 시, 적의 체력을 !M! 잃게 합니다. NL 시작 시: 이 카드를 다른 카드로 위장합니다."
+    "DESCRIPTION": "턴 종료 시, 적의 체력을 !M! 잃게 합니다. NL 개막 : 이 카드를 다른 카드로 위장합니다."
   },
   "anniv5:LunchBox": {
     "NAME": "도시락 상자",
@@ -41,13 +41,13 @@
   },
   "anniv5:ThePrism": {
     "NAME": "프리즘",
-    "DESCRIPTION": "무작위 적에게 !M!번 피해를 !D! 줍니다. NL 시작 시: 손과 각 더미에 *조각 으로 나뉩니다.",
-    "UPGRADE_DESCRIPTION": "무작위 적에게 !M!번 피해를 !D! 줍니다. NL 시작 시: 손과 각 더미에 *조각+ 으로 나뉩니다."
+    "DESCRIPTION": "무작위 적에게 !M!번 피해를 !D! 줍니다. NL 개막 : 손과 각 더미에 *조각 으로 나뉩니다.",
+    "UPGRADE_DESCRIPTION": "무작위 적에게 !M!번 피해를 !D! 줍니다. NL 개막 : 손과 각 더미에 *조각+ 으로 나뉩니다."
   },
   "anniv5:PrismShard": {
     "NAME": "조각",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 조각 3장을 사용한 후 *프리즘 을 손에 추가합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 조각 3장을 사용한 후 *프리즘+ 을 손에 추가합니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 조각 3장을 사용한 후 *프리즘 을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 조각 3장을 사용한 후 *프리즘+ 을 얻습니다. NL 소멸."
   },
   "anniv5:RealityMaster": {
     "NAME": "현실의 주인",

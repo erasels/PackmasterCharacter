@@ -13,13 +13,13 @@
     "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 이번 턴에 뽑은 카드 1장당 추가로 !M! 피해를 줍니다."
   },
   "anniv5:SneakyteakStrike": {
-    "NAME": "스니키티크 스트라이크",
+    "NAME": "스니키티크 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL *다크사이드 *슬랩 을 뽑을 카드 더미 맨 위에 올립니다.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *다크사이드 *슬랩+ 을 뽑을 카드 더미 맨 위에 올립니다."
   },
   "anniv5:DarksideSlap": {
     "NAME": "다크사이드 슬랩",
-    "DESCRIPTION": "anniv5:메가휘발성. NL 피해를 !D! 줍니다."
+    "DESCRIPTION": "anniv5:슈퍼휘발성. NL 피해를 !D! 줍니다."
   },
   "anniv5:Wanderbots": {
     "NAME": "방랑 로봇",

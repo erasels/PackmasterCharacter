@@ -32,11 +32,11 @@
     "DESCRIPTION": "{@@}방어도 를 !B! 얻습니다. NL 손에 {!Upgrades!|>0=재련된} *장벽 비콘을 생성합니다. NL 소멸."
   },
   "anniv5:StrikingStrike": {
-    "NAME": "강타",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 강타 를 발견합니다. 사용 시 소멸 되며 이번 턴 동안 비용이 0이 됩니다."
+    "NAME": "강력한 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 타격 을 발견 합니다. 사용 시 소멸 되며 이번 턴 동안 비용이 0이 됩니다."
   },
   "anniv5:AccumulativeStrike": {
-    "NAME": "누적 강타",
+    "NAME": "누적 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 모든 생성된 카드에 대해 !M! 만큼 추가 피해를 줍니다."
   },
   "anniv5:BrushModalTypeChoice": {

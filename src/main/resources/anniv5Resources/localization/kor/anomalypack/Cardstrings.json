@@ -20,7 +20,7 @@
     "UPGRADE_DESCRIPTION": "선천성. NL 손에 있는 무작위 #y스킬 을 anniv5:흡수 합니다. 이 카드가 anniv5:흡수 한 모든 카드를 사용합니다."
   },
   "anniv5:StrikeThroughFate": {
-    "NAME": "운명을 꿰뚫는 일격",
+    "NAME": "운명을 꿰뚫는 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 사용한 7번째 카드라면, 피해를 3번 줍니다.",
     "UPGRADE_DESCRIPTION": "보존. NL 피해를 !D! 줍니다. 이번 턴에 사용한 7번째 카드라면, 피해를 3번 줍니다."
   },
@@ -31,7 +31,7 @@
   },
   "anniv5:GoldenGun": {
     "NAME": "황금 총",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL [#EFC851]장전 되어야 합니다. NL 시작 시: [#EFC851]황금 [#EFC851]탄환 을 뽑을 카드 더미에 추가합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL [#EFC851]장전 되어야 합니다. NL 개막 : [#EFC851]황금 [#EFC851]탄환 을 뽑을 카드 더미에 넣습니다."
   },
   "anniv5:GoldenRound": {
     "NAME": "황금 탄환",
@@ -52,7 +52,7 @@
     "UPGRADE_DESCRIPTION": "소멸. NL 이 카드가 소멸 되었을 때, 뽑을 카드 더미에 [#EFC851]영혼먹는 [#EFC851]일격+ 을 섞어 넣습니다."
   },
   "anniv5:SouleaterStrike": {
-    "NAME": "영혼먹는 일격",
+    "NAME": "영혼먹는 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 취약 을 !M! 부여합니다. NL 약화 를 !M! 부여합니다."
   }
 }
