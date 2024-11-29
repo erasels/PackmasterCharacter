@@ -1,10 +1,10 @@
 {
   "anniv5:Strike": {
-    "NAME": "공격",
+    "NAME": "타격",
     "DESCRIPTION": "피해를 !D! 줍니다."
   },
   "anniv5:Defend": {
-    "NAME": "방어",
+    "NAME": "수비",
     "DESCRIPTION": "방어도 를 !B! 얻습니다."
   },
   "anniv5:Rummage": {
