@@ -5,7 +5,7 @@
   },
   "anniv5:FlowPower": {
     "NAME": "흐름",
-    "DESCRIPTIONS": ["다음 턴 시작 시,, ", "카드를 #b장", " 가져옵니다.", "카드를 1장 가져옵니다."]
+    "DESCRIPTIONS": ["다음 턴 시작 시, ", "카드를 #b", " 뽑습니다.", "카드를 1장 뽑습니다."]
   },
   "anniv5:PneumaticsPower": {
     "NAME": "공압",

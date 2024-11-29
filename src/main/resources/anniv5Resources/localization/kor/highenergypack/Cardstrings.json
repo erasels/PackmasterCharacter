@@ -50,7 +50,7 @@
     "UPGRADE_DESCRIPTION": "턴 시작 시, [E] [E] [E] 를 얻습니다."
   },
   "anniv5:SuperNova": {
-    "NAME": "슈퍼 노바",
+    "NAME": "초신성 폭발",
     "DESCRIPTION": "모든 적은 체력을 !M! 잃습니다. NL 모든 적에게 !anniv5:m2! 약화 와 취약 을 적용합니다."
   }
 }

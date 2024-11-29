@@ -23,13 +23,13 @@
   },
   "anniv5:MassProduction": {
     "NAME": "대량 생산",
-    "DESCRIPTION": "당신의 뽑을 카드 더미에서 카드를 선택합니다. 손패를 소멸 시키고 해당 카드의 복사본으로 교체합니다. 소멸.",
+    "DESCRIPTION": "뽑을 카드 더미에서 카드를 선택합니다. 손패를 소멸 시키고 해당 카드의 복사본으로 교체합니다. 소멸.",
     "EXTENDED_DESCRIPTION": [
       "대량 생산할 카드를 선택하세요."
     ]
   },
   "anniv5:ScrapCannon": {
-    "NAME": "스크랩 대포",
+    "NAME": "고철 대포",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 소멸 시킵니다."
   },
   "anniv5:BloodRitual": {

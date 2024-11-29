@@ -22,8 +22,8 @@
   },
   "anniv5:NuclearFusion": {
     "NAME": "핵융합",
-    "DESCRIPTION": "비용이 X 이하인 카드를 2번 사용합니다. X *화상 을 손에 추가합니다.",
-    "UPGRADE_DESCRIPTION": "비용이 X+1 이하인 카드를 2번 사용합니다. X *화상 을 손에 추가합니다."
+    "DESCRIPTION": "비용이 X 이하인 카드를 2번 사용합니다. X *화상 을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "비용이 X+1 이하인 카드를 2번 사용합니다. X *화상 을 얻습니다."
   },
   "anniv5:MoreExplosions": {
     "NAME": "더 많은 폭발!",
