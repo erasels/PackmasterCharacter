@@ -8,7 +8,7 @@
   },
   "anniv5:Bunker": {
     "NAME": "벙커",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 턴 시작 시, *골프 *공 을 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴 시작 시, *골프 *공을 얻습니다."
   },
   "anniv5:GolfBall": {
     "NAME": "골프 공",
@@ -27,12 +27,12 @@
   },
   "anniv5:LunchBox": {
     "NAME": "도시락 상자",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 이번 턴 동안 다음 무색 카드를 두 번 사용합니다. NL anniv5:픽업 : 체력을 3 회복합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴 동안 다음 무색 카드를 두 번 사용합니다. NL anniv5:픽업 : 체력을 3 회복합니다."
   },
   "anniv5:ColorlessMastery": {
     "NAME": "무색 숙련",
-    "DESCRIPTION": "무색 카드를 사용할 때마다 힘 을 1 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 무색 카드를 사용할 때마다 힘 을 1 얻습니다."
+    "DESCRIPTION": "무색 카드를 사용할 때마다 힘을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 무색 카드를 사용할 때마다 힘을 1 얻습니다."
   },
   "anniv5:VisitAMonastery": {
     "NAME": "수도원 방문",
@@ -60,6 +60,6 @@
   },
   "anniv5:Triforce": {
     "NAME": "삼각형",
-    "DESCRIPTION": "힘 을 1 얻습니다. NL 카드를 1장 뽑습니다."
+    "DESCRIPTION": "힘을 1 얻습니다. NL 카드를 1장 뽑습니다."
   }
 }

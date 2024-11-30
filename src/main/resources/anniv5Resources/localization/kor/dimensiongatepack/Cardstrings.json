@@ -1,15 +1,15 @@
 {
   "anniv5:Anemia": {
     "NAME": "빈혈",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 모든 중독 에 걸린 적에게 약화 를 !M! 적용합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 모든 중독에 걸린 적에게 약화를 !M! 적용합니다."
   },
   "anniv5:LethalShot": {
     "NAME": "치명적인 사격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독을 !M! 적용하고, 취약 을 !anniv5:m2! 적용합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독을 !M! 적용하고, 취약을 !anniv5:m2! 적용합니다."
   },
   "anniv5:BleedItOut": {
     "NAME": "Bleed It Out",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독 을 !M! 적용합니다. NL 적의 중독 을 발동시킵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독을 !M! 적용합니다. NL 적의 중독을 발동시킵니다."
   },
   "anniv5:Trace": {
     "NAME": "추적",
@@ -17,7 +17,7 @@
   },
   "anniv5:BoosterShot": {
     "NAME": "부스터 샷",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독 을 !M! 적용합니다. NL 적의 체력을 !anniv5:m2! 회복합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독을 !M! 적용합니다. NL 적의 체력을 !anniv5:m2! 회복합니다."
   },
   "anniv5:RangersSetup": {
     "NAME": "레인저의 준비",
@@ -34,7 +34,7 @@
   },
   "anniv5:Sustenance": {
     "NAME": "영양 공급",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 무작위 적에게 중독 을 !M! 적용합니다. NL stslib:Persist !stslib:persist!."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 무작위 적에게 중독을 !M! 적용합니다. NL stslib:Persist !stslib:persist!."
   },
   "anniv5:TheEncyclopedia": {
     "NAME": "백과사전",

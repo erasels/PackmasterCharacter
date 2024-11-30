@@ -6,18 +6,18 @@
   },
   "anniv5:FreeSpace": {
     "NAME": "여유 공간",
-    "DESCRIPTION": "휘발성. NL 이 카드를 뽑거나 버리거나 소멸 시키거나 사용할 때, 카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "이 카드를 뽑거나 버리거나 소멸 시키거나 사용할 때, 카드를 1장 뽑습니다."
+    "DESCRIPTION": "휘발성. NL 이 카드를 뽑거나 버리거나 소멸시키거나 사용할 때, 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "이 카드를 뽑거나 버리거나 소멸시키거나 사용할 때, 카드를 1장 뽑습니다."
   },
   "anniv5:MidnightOil": {
     "NAME": "한밤중의 기름",
-    "DESCRIPTION": "무작위로 카드를 소멸 시킵니다. [E] 를 얻습니다. NL 이 카드가 소멸 된 상태라면, 매 턴 [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "카드를 소멸 시킵니다. NL [E] 를 얻습니다. NL 이 카드가 소멸 된 상태라면, 매 턴 [E] 를 얻습니다."
+    "DESCRIPTION": "무작위로 카드를 소멸시킵니다. [E] 를 얻습니다. NL 이 카드가 소멸 된 상태라면, 매 턴 [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 소멸시킵니다. NL [E] 를 얻습니다. NL 이 카드가 소멸 된 상태라면, 매 턴 [E] 를 얻습니다."
   },
   "anniv5:VoraciousSigil": {
     "NAME": "탐욕스러운 문양",
-    "DESCRIPTION": "손에 있는 무작위 스킬 을 anniv5:흡수 합니다. 이 카드가 anniv5:흡수 한 모든 카드를 사용합니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 손에 있는 무작위 #y스킬 을 anniv5:흡수 합니다. 이 카드가 anniv5:흡수 한 모든 카드를 사용합니다."
+    "DESCRIPTION": "손에 있는 무작위 스킬을 anniv5:흡수합니다. 이 카드가 anniv5:흡수한 모든 카드를 사용합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 손에 있는 무작위 #y스킬을 anniv5:흡수합니다. 이 카드가 anniv5:흡수한 모든 카드를 사용합니다."
   },
   "anniv5:StrikeThroughFate": {
     "NAME": "운명을 꿰뚫는 타격",
@@ -26,21 +26,21 @@
   },
   "anniv5:MindOverMatter": {
     "NAME": "정신의 우위",
-    "DESCRIPTION": "카드를 뽑을 때마다 방어도 를 1 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 카드를 뽑을 때마다 방어도 를 1 얻습니다."
+    "DESCRIPTION": "카드를 뽑을 때마다 방어도를 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 카드를 뽑을 때마다 방어도를 1 얻습니다."
   },
   "anniv5:GoldenGun": {
     "NAME": "황금 총",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL [#EFC851]장전 되어야 합니다. NL 개막 : [#EFC851]황금 [#EFC851]탄환 을 뽑을 카드 더미에 넣습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL [#EFC851]장전되어야 합니다. NL 개막 : [#EFC851]황금 [#EFC851]탄환을 뽑을 카드 더미에 넣습니다."
   },
   "anniv5:GoldenRound": {
     "NAME": "황금 탄환",
-    "DESCRIPTION": "손에 있는 [#EFC851]황금 [#EFC851]총 에 [#EFC851]장전 합니다. NL 없으면 이 카드를 뽑을 카드 더미 위에 놓습니다."
+    "DESCRIPTION": "손에 있는 [#EFC851]황금 [#EFC851]총에 [#EFC851]장전합니다. NL 없으면 이 카드를 뽑을 카드 더미 위에 놓습니다."
   },
   "anniv5:RitualSight": {
     "NAME": "의식의 시선",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 소멸 시키고, 그것의 복사본을 뽑을 카드 더미에 섞어 넣습니다.",
-    "EXTENDED_DESCRIPTION": ["소멸 시키고 복사."]
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 소멸시키고, 그것의 복사본을 뽑을 카드 더미에 섞어 넣습니다.",
+    "EXTENDED_DESCRIPTION": ["소멸시키고 복사."]
   },
   "anniv5:Thoughtweaving": {
     "NAME": "사고의 엮임",
@@ -48,11 +48,11 @@
   },
   "anniv5:SealedSword": {
     "NAME": "봉인된 검",
-    "DESCRIPTION": "소멸. NL 이 카드가 소멸 되었을 때, 뽑을 카드 더미에 [#EFC851]영혼먹는 [#EFC851]일격 을 섞어 넣습니다.",
-    "UPGRADE_DESCRIPTION": "소멸. NL 이 카드가 소멸 되었을 때, 뽑을 카드 더미에 [#EFC851]영혼먹는 [#EFC851]일격+ 을 섞어 넣습니다."
+    "DESCRIPTION": "소멸. NL 이 카드가 소멸되었을 때, 뽑을 카드 더미에 [#EFC851]영혼먹는 [#EFC851]일격을 섞어 넣습니다.",
+    "UPGRADE_DESCRIPTION": "소멸. NL 이 카드가 소멸되었을 때, 뽑을 카드 더미에 [#EFC851]영혼먹는 [#EFC851]일격+을 섞어 넣습니다."
   },
   "anniv5:SouleaterStrike": {
     "NAME": "영혼먹는 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약 을 !M! 부여합니다. NL 약화 를 !M! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL 약화를 !M! 부여합니다."
   }
 }

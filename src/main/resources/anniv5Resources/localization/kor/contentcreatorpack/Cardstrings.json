@@ -1,7 +1,7 @@
 {
   "anniv5:OlexasCloak": {
     "NAME": "올렉사의 망토",
-    "DESCRIPTION": "{@@}보존. NL !hoard!을(를) 더 많이 {!hoard!|1= 사용하면|>1= 사용할 때마다}, 방어도 를 !B! 얻습니다. NL stslib:Persist !stslib:persist!."
+    "DESCRIPTION": "{@@}보존. NL !hoard!을(를) 더 많이 {!hoard!|1= 사용하면|>1= 사용할 때마다}, 방어도를 !B! 얻습니다. NL stslib:Persist !stslib:persist!."
   },
   "anniv5:HuttsGamble": {
     "NAME": "허츠의 도박",
@@ -14,8 +14,8 @@
   },
   "anniv5:SneakyteakStrike": {
     "NAME": "스니키티크 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL *다크사이드 *슬랩 을 뽑을 카드 더미 맨 위에 올립니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *다크사이드 *슬랩+ 을 뽑을 카드 더미 맨 위에 올립니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *다크사이드 *슬랩을 뽑을 카드 더미 맨 위에 올립니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *다크사이드 *슬랩+을 뽑을 카드 더미 맨 위에 올립니다."
   },
   "anniv5:DarksideSlap": {
     "NAME": "다크사이드 슬랩",
@@ -23,8 +23,8 @@
   },
   "anniv5:Wanderbots": {
     "NAME": "방랑 로봇",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL anniv5:완더봇 1개를 영창 합니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:새기기. NL 방어도 를 !B! 얻습니다. NL anniv5:완더봇 1개를 영창 합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL anniv5:완더봇을 1개 영창합니다.",
+    "UPGRADE_DESCRIPTION": "anniv5:새기기. NL 방어도를 !B! 얻습니다. NL anniv5:완더봇을 1개 영창합니다."
   },
   "anniv5:Retromation": {
     "NAME": "레트로메이션",
@@ -42,17 +42,17 @@
   },
   "anniv5:Rhapsody": {
     "NAME": "랩소디",
-    "DESCRIPTION": "anniv5:영감 을 !M! 얻습니다. NL 카드를 !anniv5:m2! 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:영감 을 !M! 얻습니다. NL 카드를 !anniv5:m2! 장 뽑습니다."
+    "DESCRIPTION": " anniv5:영감을 !M! 얻습니다. NL 카드를 !anniv5:m2! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": " anniv5:영감을 !M! 얻습니다. NL 카드를 !anniv5:m2! 장 뽑습니다."
   },
   "anniv5:Frostprime": {
     "NAME": "프로스트 프라임",
-    "DESCRIPTION": "턴 시작 시, 냉기 1개를 영창 하고 모든 적에게 anniv5:동상 을 !M! 적용합니다."
+    "DESCRIPTION": "턴 시작 시, 냉기를 1개 영창하고 모든 적에게 anniv5:동상을 !M! 적용합니다."
   },
   "anniv5:BaalorBash": {
     "NAME": "발로르로드의 강타",
-    "DESCRIPTION": "anniv5:후천성. NL 피해를 !D! 줍니다. NL *안락한 *청사진 을 버린 카드 더미에 추가합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *안락한 *청사진 을 버린 카드 더미에 추가합니다. NL 소멸."
+    "DESCRIPTION": "anniv5:후천성. NL 피해를 !D! 줍니다. NL *안락한 *청사진을 버린 카드 더미에 추가합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *안락한 *청사진을 버린 카드 더미에 추가합니다. NL 소멸."
   },
   "anniv5:BaalorBlueprint": {
     "NAME": "안락한 청사진",

@@ -2,7 +2,7 @@
   "anniv5:FalloutPower": {
     "NAME": "핵낙진",
     "DESCRIPTIONS": [
-      "#y스킬 을 사용할 때마다, 타겟 적은 피해를 #b",
+      "#y스킬을 사용할 때마다, 타겟 적은 피해를 #b",
       " 입습니다."
     ]
   },
@@ -32,7 +32,7 @@
   "anniv5:MeltdownPower": {
     "NAME": "핵붕괴",
     "DESCRIPTIONS": [
-      "#y스킬 을 뽑을 때마다, 에너지를 #b",
+      "#y스킬을 뽑을 때마다, 에너지를 #b",
       " 얻습니다."
     ]
   },

@@ -1,42 +1,42 @@
 {
   "anniv5:PenanceShock": {
     "NAME": "속죄 충격",
-    "DESCRIPTION": "피해를 !D! 줍니다. 그리고 anniv5:속죄 를 !M! 적용합니다. NL 전기 1개를 영창 합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. 그리고 anniv5:속죄를 !M! 적용합니다. NL 전기를 1개 영창합니다."
   },
   "anniv5:Condemn": {
     "NAME": "비난",
-    "DESCRIPTION": "anniv5:속죄 를 !M! 적용합니다."
+    "DESCRIPTION": "anniv5:속죄를 !M! 적용합니다."
   },
   "anniv5:SearingLight": {
     "NAME": "타오르는 빛",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL anniv5:빛 1개를 영창 합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL anniv5:빛을 1개 영창합니다."
   },
   "anniv5:RazorWind": {
     "NAME": "칼날 바람",
-    "DESCRIPTION": "카드를 !anniv5:m2!만큼 anniv5:고백 을 얻습니다. NL !M! 피해를 받습니다."
+    "DESCRIPTION": "카드를 !anniv5:m2!만큼 anniv5:고백을 얻습니다. NL !M! 피해를 받습니다."
   },
   "anniv5:WeightofContrition": {
     "NAME": "참회의 무게",
-    "DESCRIPTION": "anniv5:속죄 를 !M! 적용합니다. NL 이번 전투에서 anniv5:속죄 로 인한 체력 손실을 !anniv5:m2!만큼 증가시킵니다."
+    "DESCRIPTION": "anniv5:속죄를 !M! 적용합니다. NL 이번 전투에서 anniv5:속죄로 인한 체력 손실을 !anniv5:m2!만큼 증가시킵니다."
   },
   "anniv5:ChainsofTruth": {
     "NAME": "진리의 사슬",
-    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 모든 적에게 anniv5:속죄 를 !M! 적용합니다."
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 모든 적에게 anniv5:속죄를 !M! 적용합니다."
   },
   "anniv5:SacredTrial": {
     "NAME": "신성한 시련",
-    "DESCRIPTION": "피해를 !M! 받습니다. NL !anniv5:m2! 전기 를 영창 합니다."
+    "DESCRIPTION": "피해를 !M! 받습니다. NL !anniv5:m2! 전기를 영창합니다."
   },
   "anniv5:HolyWrath": {
     "NAME": "신성한 분노",
-    "DESCRIPTION": "피해를 !M! 받습니다. NL anniv5:고백 을 얻을 때마다 버림 카드 더미에서 이 카드를 손으로 반환합니다."
+    "DESCRIPTION": "피해를 !M! 받습니다. NL anniv5:고백을 얻을 때마다 버림 카드 더미에서 이 카드를 손으로 반환합니다."
   },
   "anniv5:Absolution": {
     "NAME": "면죄",
-    "DESCRIPTION": "anniv5:속죄 를 !M! 를 적용합니다. NL 이번 턴에 생물이 anniv5:속죄 로 피해를 받을 때마다 !anniv5:m2! 약화 를 적용합니다."
+    "DESCRIPTION": "anniv5:속죄를 !M! 를 적용합니다. NL 이번 턴에 생물이 anniv5:속죄로 피해를 받을 때마다 !anniv5:m2! 약화를 적용합니다."
   },
   "anniv5:JudgementDay": {
     "NAME": "심판의 날",
-    "DESCRIPTION": "anniv5:매니페스트 !M! 전기. NL 전기 구체 지속효과 가 발동할 때마다 고백 을 !anniv5:m2! 얻습니다."
+    "DESCRIPTION": "anniv5:매니페스트 !M! 전기. NL 전기 구체 지속효과 가 발동할 때마다 anniv5:고백을 !anniv5:m2! 얻습니다."
   }
 }

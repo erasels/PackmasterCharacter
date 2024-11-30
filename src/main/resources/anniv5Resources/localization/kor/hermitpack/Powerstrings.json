@@ -1,7 +1,7 @@
 {
   "anniv5:DeterminationPower": {
     "NAME": "결단력",
-    "DESCRIPTIONS": ["상태이상이 적용될 때마다, #y힘 을 #b", " 얻습니다."]
+    "DESCRIPTIONS": ["상태이상이 적용될 때마다, #y힘을 #b", " 얻습니다."]
   },
   "anniv5:OverwhelmingPowerPower": {
     "NAME": "압도적인 힘",

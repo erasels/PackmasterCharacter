@@ -1,7 +1,7 @@
 {
   "anniv5:AcidicSpray": {
     "NAME": "산성 분사",
-    "DESCRIPTION": "대상의 디버프 수에 따라 !D! 피해를 줍니다. NL 약화 를 !M! 적용합니다."
+    "DESCRIPTION": "대상의 디버프 수에 따라 !D! 피해를 줍니다. NL 약화를 !M! 적용합니다."
   },
   "anniv5:PoisonMastery": {
     "NAME": "중독 숙련",
@@ -14,8 +14,8 @@
   },
   "anniv5:CaptainsCabin": {
     "NAME": "선장의 선실",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL *포탄 을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "방어도 를 !B! 얻습니다. NL *포탄 을 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *포탄 을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL *포탄 을 !M! 얻습니다."
   },
   "anniv5:TerrorOfTheSeas": {
     "NAME": "바다의 공포",
@@ -23,14 +23,14 @@
   },
   "anniv5:MassProduction": {
     "NAME": "대량 생산",
-    "DESCRIPTION": "뽑을 카드 더미에서 카드를 선택합니다. 손패를 소멸 시키고 해당 카드의 복사본으로 교체합니다. 소멸.",
+    "DESCRIPTION": "뽑을 카드 더미에서 카드를 선택합니다. 손패를 소멸시키고 해당 카드의 복사본으로 교체합니다. 소멸.",
     "EXTENDED_DESCRIPTION": [
       "대량 생산할 카드를 선택하세요."
     ]
   },
   "anniv5:ScrapCannon": {
     "NAME": "고철 대포",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 소멸 시킵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 소멸시킵니다."
   },
   "anniv5:BloodRitual": {
     "NAME": "피의 의식",
@@ -42,7 +42,7 @@
   },
   "anniv5:SlimeSpray": {
     "NAME": "슬라임 분사",
-    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다, 중독 을 !M! 적용하고 모든 적에게 anniv5:감속 을 적용합니다."
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다, 중독을 !M! 적용하고 모든 적에게 anniv5:감속 을 적용합니다."
   },
   "anniv5:StickStrike": {
     "NAME": "막대기 타격",

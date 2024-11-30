@@ -1,11 +1,11 @@
 {
   "anniv5:MakeshiftSword": {
     "NAME": "임시 검",
-    "DESCRIPTION": "전투 중 카드를 생성할 때마다, 활력 을 !M! 얻습니다."
+    "DESCRIPTION": "전투 중 카드를 생성할 때마다, 활력을 !M! 얻습니다."
   },
   "anniv5:MakeshiftShield": {
     "NAME": "임시 방패",
-    "DESCRIPTION": "전투 중 카드를 생성할 때마다, 방어도 를 !M! 얻습니다."
+    "DESCRIPTION": "전투 중 카드를 생성할 때마다, 방어도를 !M! 얻습니다."
   },
   "anniv5:PaintBrush": {
     "NAME": "페인트 브러시",
@@ -13,7 +13,7 @@
   },
   "anniv5:Firewall": {
     "NAME": "방화벽",
-    "DESCRIPTION": "{@@}{!Upgrades!|>0=선천성. NL }상태이상 카드가 생성되면, NL 소멸 시킵니다."
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=선천성. NL }상태이상 카드가 생성되면, NL 소멸시킵니다."
   },
   "anniv5:Souvenirs": {
     "NAME": "기념품",
@@ -29,7 +29,7 @@
   },
   "anniv5:BarrierBeacon": {
     "NAME": "장벽 비콘",
-    "DESCRIPTION": "{@@}방어도 를 !B! 얻습니다. NL 손에 {!Upgrades!|>0=재련된} *장벽 비콘을 생성합니다. NL 소멸."
+    "DESCRIPTION": "{@@}방어도를 !B! 얻습니다. NL 손에 {!Upgrades!|>0=재련된} *장벽 비콘을 생성합니다. NL 소멸."
   },
   "anniv5:StrikingStrike": {
     "NAME": "강력한 타격",

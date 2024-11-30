@@ -1,7 +1,7 @@
 {
   "anniv5:RollToMove": {
     "NAME": "주사위 굴리기",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL anniv5:D6 두 개를 굴립니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL anniv5:D6 두 개를 굴립니다."
   },
   "anniv5:FlickDice": {
     "NAME": "주사위 튕기기",
@@ -17,11 +17,11 @@
   },
   "anniv5:Reroller": {
     "NAME": "재굴림 도구",
-    "DESCRIPTION": "{@@}방어도 를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL anniv5:재굴림."
+    "DESCRIPTION": "{@@}방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL anniv5:재굴림."
   },
   "anniv5:PerceptionCheck": {
     "NAME": "지각 확인",
-    "DESCRIPTION": "턴 시작 시, anniv5:주사위 가 없으면 anniv5:D8 을 굴립니다."
+    "DESCRIPTION": "턴 시작 시, anniv5:주사위가 없으면 anniv5:D8을 굴립니다."
   },
   "anniv5:AllIn": {
     "NAME": "올인",
@@ -34,12 +34,12 @@
   },
   "anniv5:GoToJail": {
     "NAME": "감옥으로",
-    "DESCRIPTION": "바로 anniv5:감옥 으로 이동합니다. NL 통과하지 않고 갑니다. NL 200 달러를 받지 않습니다.",
-    "UPGRADE_DESCRIPTION": "바로 anniv5:감옥 으로 이동합니다. NL 통과하지 않고 갑니다. NL 20 달러를 받습니다."
+    "DESCRIPTION": "바로 anniv5:감옥으로 이동합니다. NL 통과하지 않고 갑니다. NL 200 달러를 받지 않습니다.",
+    "UPGRADE_DESCRIPTION": "바로 anniv5:감옥으로 이동합니다. NL 통과하지 않고 갑니다. NL 20 달러를 받습니다."
   },
   "anniv5:LevelUp": {
     "NAME": "레벨 업!",
-    "DESCRIPTION": "anniv5:우위 를 !M! 얻습니다. NL anniv5:D6 두 개를 굴립니다."
+    "DESCRIPTION": "anniv5:우위를 !M! 얻습니다. NL anniv5:D6 두 개를 굴립니다."
   },
   "anniv5:BoardGameKeywordManager": {
     "NAME": "키워드 관리자",

@@ -5,7 +5,7 @@
   },
   "anniv5:MagnetRise": {
     "NAME": "자기 상승",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 이번 턴에 추가로 [E] 가 생성되었다면, 이 카드는 비용이 0이 됩니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 추가로 [E] 가 생성되었다면, 이 카드는 비용이 0이 됩니다."
   },
   "anniv5:TearApart": {
     "NAME": "찢어버리기",
@@ -40,7 +40,7 @@
   },
   "anniv5:Crystallize": {
     "NAME": "결정화",
-    "DESCRIPTION": "사용 가능한 [E] 마다 방어도 를 !M! 얻습니다.",
-    "EXTENDED_DESCRIPTION": ["사용 가능한 [E] 마다 방어도 를 !M! 얻습니다. NL (방어도 를 !B! 얻습니다.)"]
+    "DESCRIPTION": "사용 가능한 [E] 마다 방어도를 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": ["사용 가능한 [E] 마다 방어도를 !M! 얻습니다. NL (방어도를 !B! 얻습니다.)"]
   }
 }

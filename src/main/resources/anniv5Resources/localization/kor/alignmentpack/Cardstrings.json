@@ -1,7 +1,7 @@
 {
   "anniv5:Conjunction": {
     "NAME": "결합",
-    "DESCRIPTION": "휘발성. NL 이 카드를 뽑으면, 방어도 를 !B! 얻습니다."
+    "DESCRIPTION": "휘발성. NL 이 카드를 뽑으면, 방어도를 !B! 얻습니다."
   },
   "anniv5:Opposition": {
     "NAME": "대립",
@@ -9,7 +9,7 @@
   },
   "anniv5:Quincunx": {
     "NAME": "오각형",
-    "DESCRIPTION": "휘발성. NL 이 카드를 뽑으면, 모든 적이 이번 턴 동안 힘 을 !M! 잃습니다."
+    "DESCRIPTION": "휘발성. NL 이 카드를 뽑으면, 모든 적이 이번 턴 동안 힘을 !M! 잃습니다."
   },
   "anniv5:Novile": {
     "NAME": "노빌",
@@ -38,7 +38,7 @@
   },
   "anniv5:Glimpse": {
     "NAME": "흘깃",
-    "DESCRIPTION": "휘발성 카드를 뽑을 때마다 방어도 를 !M! 얻습니다."
+    "DESCRIPTION": "휘발성 카드를 뽑을 때마다 방어도를 !M! 얻습니다."
   },
   "anniv5:Remember": {
     "NAME": "회상",

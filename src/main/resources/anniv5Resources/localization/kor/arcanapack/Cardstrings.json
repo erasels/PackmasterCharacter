@@ -1,16 +1,16 @@
 {
   "anniv5:TheFool": {
     "NAME": "바보",
-    "DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. NL 약화 를 !M! 부여합니다. NL 소멸."
+    "DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. NL 약화를 !M! 부여합니다. NL 소멸."
   },
   "anniv5:Justice": {
     "NAME": "정의",
-    "DESCRIPTION": "전투 중인 적 하나당 방어도 를 !B! 얻습니다."
+    "DESCRIPTION": "전투 중인 적 하나당 방어도를 !B! 얻습니다."
   },
   "anniv5:TheHermit": {
     "NAME": "은둔자",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 버립니다. 그 카드의 비용만큼 카드를 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "방어도 를 !B! 얻습니다. NL 카드를 버립니다. 그 카드의 비용만큼 카드를 뽑습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 버립니다. 그 카드의 비용만큼 카드를 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 버립니다. 그 카드의 비용만큼 카드를 뽑습니다."
   },
   "anniv5:TheHangedMan": {
     "NAME": "매달린 사람",
@@ -31,14 +31,14 @@
   },
   "anniv5:TheHierophant": {
     "NAME": "교황",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 모든 디버프를 제거합니다. NL 소멸."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 모든 디버프를 제거합니다. NL 소멸."
   },
   "anniv5:TheSun": {
     "NAME": "태양",
-    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 체력이 가장 높은 적에게 취약 을 !M! 부여합니다. NL 소멸."
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 체력이 가장 높은 적에게 취약을 !M! 부여합니다. NL 소멸."
   },
   "anniv5:TheChariot": {
     "NAME": "전차",
-    "DESCRIPTION": "자신의 턴 동안 카드를 버릴 때마다 활력 을 !M! 얻습니다."
+    "DESCRIPTION": "자신의 턴 동안 카드를 버릴 때마다 활력을 !M! 얻습니다."
   }
 }

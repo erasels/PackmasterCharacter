@@ -1,12 +1,12 @@
 {
   "anniv5:MiracleWorker": {
     "NAME": "기적의 일꾼",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL *기적 을 카드 더미 맨 위에 추가합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL *기적 을 카드 더미 맨 위에 추가합니다."
   },
   "anniv5:Trash": {
     "NAME": "쓰레기",
-    "DESCRIPTION": "손의 가장 왼쪽 카드를 소멸 시킵니다. NL [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 손의 가장 왼쪽 카드를 소멸 시킵니다. NL [E] 를 얻습니다."
+    "DESCRIPTION": "손의 가장 왼쪽 카드를 소멸시킵니다. NL [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 손의 가장 왼쪽 카드를 소멸시킵니다. NL [E] 를 얻습니다."
   },
   "anniv5:MultiTool": {
     "NAME": "다기능 도구",
@@ -14,11 +14,11 @@
   },
   "anniv5:LastResort": {
     "NAME": "최후의 수단",
-    "DESCRIPTION": "!B! 방어도 를 X번 얻습니다. NL X가 0이면, NL 다음 턴에 [E] 를 얻습니다."
+    "DESCRIPTION": "!B! 방어도를 X번 얻습니다. NL X가 0이면, NL 다음 턴에 [E] 를 얻습니다."
   },
   "anniv5:LotsOfIronWaves": {
     "NAME": "철파도",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 피해를 !D! 줍니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다."
   },
   "anniv5:ManifestMeal": {
     "NAME": "기적의 식사",
@@ -38,7 +38,7 @@
   },
   "anniv5:Investor": {
     "NAME": "투자자",
-    "DESCRIPTION": "카드에 2 이상 에너지를 사용하면, 방어도 를 !M! 얻습니다."
+    "DESCRIPTION": "카드에 2 이상 에너지를 사용하면, 방어도를 !M! 얻습니다."
   },
   "anniv5:StruckByATrain": {
     "NAME": "기차에 치이다",
@@ -51,6 +51,6 @@
   },
   "anniv5:SuperNova": {
     "NAME": "초신성 폭발",
-    "DESCRIPTION": "모든 적은 체력을 !M! 잃습니다. NL 모든 적에게 !anniv5:m2! 약화 와 취약 을 적용합니다."
+    "DESCRIPTION": "모든 적은 체력을 !M! 잃습니다. NL 모든 적에게 !anniv5:m2! 약화와 취약을 적용합니다."
   }
 }

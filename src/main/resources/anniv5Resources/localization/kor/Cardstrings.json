@@ -5,7 +5,7 @@
   },
   "anniv5:Defend": {
     "NAME": "수비",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다."
   },
   "anniv5:Rummage": {
     "NAME": "들추기",
@@ -13,7 +13,7 @@
   },
   "anniv5:Cardistry": {
     "NAME": "카디스트리",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 이번 턴에 사용하는 다음 카드는 뽑을 카드 더미 맨 위로 되돌아갑니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 사용하는 다음 카드는 뽑을 카드 더미 맨 위로 되돌아갑니다."
   },
   "anniv5:ConjurePack": {
     "NAME": "소환 팩",

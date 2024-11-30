@@ -1,7 +1,7 @@
 {
   "anniv5:BackpackSmack": {
     "NAME": "백팩 스매시",
-    "DESCRIPTION": "!D! 피해를 X번 줍니다. NL anniv5:시너지 : X 약화 와 취약 을 적용합니다."
+    "DESCRIPTION": "!D! 피해를 X번 줍니다. NL anniv5:시너지 : X 약화와 취약을 적용합니다."
   },
   "anniv5:BoosterTutor": {
     "NAME": "부스터 튜터",
@@ -22,22 +22,22 @@
   },
   "anniv5:RippedPecs": {
     "NAME": "갈라진 근육",
-    "DESCRIPTION": "힘 을 1 얻습니다. NL anniv5:시너지 : 대신 !M! 힘 을 얻습니다."
+    "DESCRIPTION": "힘을 1 얻습니다. NL anniv5:시너지 : 대신 !M! 힘을 얻습니다."
   },
   "anniv5:Showoff": {
     "NAME": "과시하기",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음 턴에 카드를 2장 추가로 뽑습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 카드를 2장 추가로 뽑습니다."
   },
   "anniv5:Sideboard": {
     "NAME": "사이드보드",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 버린 카드 더미에서 카드를 1장 뽑아 뽑을 카드 더미 맨 위에 올립니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 버린 카드 더미에서 카드를 1장 뽑아 뽑을 카드 더미 맨 위에 올립니다."
   },
   "anniv5:SmithingHammer": {
     "NAME": "단조 망치",
-    "DESCRIPTION": "!D! 피해를 !M!번 줍니다. NL 손에 있는 무작위 카드 2장을 강화 합니다."
+    "DESCRIPTION": "!D! 피해를 !M!번 줍니다. NL 손에 있는 무작위 카드 2장을 강화합니다."
   },
   "anniv5:Synergize": {
     "NAME": "시너지화",
-    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL anniv5:시너지 : 방어도 를 !B! 얻습니다."
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL anniv5:시너지 : 방어도를 !B! 얻습니다."
   }
 }

@@ -2,8 +2,10 @@
   {
     "PROPER_NAME": "왜곡",
     "NAMES": [
-      "왜곡", "distortion"
+      "왜곡",
+      "왜곡을",
+      "distortion"
     ],
-    "DESCRIPTION": "카드가 #y소멸 될 때마다 #y왜곡 이 있는 생물은 체력을 잃고, 그 후 #b1만큼 #y왜곡 을 잃습니다."
+    "DESCRIPTION": "카드가 #y소멸될 때마다 #y왜곡이 있는 생물은 체력을 잃고, 그 후 #b1만큼 #y왜곡을 잃습니다."
   }
 ]

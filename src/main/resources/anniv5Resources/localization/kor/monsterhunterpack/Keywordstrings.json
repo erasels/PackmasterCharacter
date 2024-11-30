@@ -36,7 +36,7 @@
       "Glass_Armor",
       "glass_armor"
     ],
-    "DESCRIPTION": "턴 종료 시 방어도 를 얻습니다. 막히지 않은 공격 피해를 받으면 제거됩니다."
+    "DESCRIPTION": "턴 종료 시 방어도를 얻습니다. 막히지 않은 공격 피해를 받으면 제거됩니다."
   },
   {
     "PROPER_NAME": "판금 갑옷",
@@ -46,7 +46,7 @@
       "Plated_Armor",
       "plated_armor"
     ],
-    "DESCRIPTION": "턴 종료 시 방어도 를 얻습니다. 막히지 않은 공격 피해를 받으면 판금 갑옷 이 1 감소합니다."
+    "DESCRIPTION": "턴 종료 시 방어도를 얻습니다. 막히지 않은 공격 피해를 받으면 판금 갑옷 이 1 감소합니다."
   },
   {
     "PROPER_NAME": "비치명적",

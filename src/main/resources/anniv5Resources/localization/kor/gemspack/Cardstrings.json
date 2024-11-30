@@ -1,18 +1,18 @@
 {
   "anniv5:TempStrengthGem": {
     "NAME": "루비",
-    "DESCRIPTION": "anniv5:보석. NL \"일시적인 힘 을 2 얻습니다\"",
-    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"일시적인 힘 을 2 얻습니다\""
+    "DESCRIPTION": "anniv5:보석. NL \"일시적인 힘을 2 얻습니다\"",
+    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"일시적인 힘을 2 얻습니다\""
   },
   "anniv5:FrostGem": {
     "NAME": "수정",
-    "DESCRIPTION": "anniv5:보석. NL \"냉기 1개를 영창 합니다\"",
-    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"냉기 1개를 영창 합니다\""
+    "DESCRIPTION": "anniv5:보석. NL \"냉기를 1개 영창합니다\"",
+    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"냉기를 1개 영창합니다\""
   },
   "anniv5:LightningGem": {
     "NAME": "조각난 보석",
-    "DESCRIPTION": "anniv5:보석. NL \"전기 1개를 영창 합니다\"",
-    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"전기 1개를 영창 합니다\""
+    "DESCRIPTION": "anniv5:보석. NL \"전기를 1개 영창합니다\"",
+    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"전기를 1개 영창합니다\""
   },
   "anniv5:RetainGem": {
     "NAME": "호박",
@@ -31,18 +31,18 @@
   },
   "anniv5:CleanseGem": {
     "NAME": "호박석",
-    "DESCRIPTION": "anniv5:보석. NL \"약화 를 1만큼 줄입니다\"",
-    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"약화 를 1만큼 줄입니다\""
+    "DESCRIPTION": "anniv5:보석. NL \"약화를 1만큼 줄입니다\"",
+    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"약화를 1만큼 줄입니다\""
   },
   "anniv5:DiceGem": {
     "NAME": "투어말린",
     "DESCRIPTION": "anniv5:보석. NL \"anniv5:D6을 굴립니다\"",
-    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"anniv5:D6 를 굴립니다\""
+    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"anniv5:D6를 굴립니다\""
   },
   "anniv5:OccultGem": {
     "NAME": "라피스 라줄리",
-    "DESCRIPTION": "사용 불가능한 anniv5:보석. NL \"카드에 anniv5:신비 를 부여합니다\"",
-    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"카드에 anniv5:신비 를 부여합니다\""
+    "DESCRIPTION": "사용 불가능한 anniv5:보석. NL \"카드에 anniv5:오컬트를 부여합니다\"",
+    "UPGRADE_DESCRIPTION": "anniv5:보석 (2회 사용). NL \"카드에 anniv5:오컬트를 부여합니다\""
   },
   "anniv5:PersistGem": {
     "NAME": "가넷",

@@ -5,7 +5,7 @@
   },
   "anniv5:Cascade": {
     "NAME": "폭포",
-    "DESCRIPTION": "anniv5:흐름. 이 방식으로 버린 카드 수만큼 방어도 를 !B! 얻습니다."
+    "DESCRIPTION": "anniv5:흐름. 이 방식으로 버린 카드 수만큼 방어도를 !B! 얻습니다."
   },
   "anniv5:Hail": {
     "NAME": "우박",
@@ -14,7 +14,7 @@
   },
   "anniv5:HighTide": {
     "NAME": "만조",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:흐름 을 사용할 때마다 이 카드를 버림 카드 더미에서 손으로 반환합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:흐름을 사용할 때마다 이 카드를 버림 카드 더미에서 손으로 반환합니다."
   },
   "anniv5:Hydraulics": {
     "NAME": "수압",
@@ -32,7 +32,7 @@
   },
   "anniv5:ReleaseValve": {
     "NAME": "배출 밸브",
-    "DESCRIPTION": "anniv5:흐름 을 사용할 때마다, 버린 카드 수 만큼 적은 피해를 !M! 받습니다. NL 소멸."
+    "DESCRIPTION": "anniv5:흐름을 사용할 때마다, 버린 카드 수 만큼 적은 피해를 !M! 받습니다. NL 소멸."
   },
   "anniv5:Reservoir": {
     "NAME": "저수지",

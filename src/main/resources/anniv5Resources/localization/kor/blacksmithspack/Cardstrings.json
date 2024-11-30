@@ -1,23 +1,23 @@
 {
   "anniv5:QuickFix": {
     "NAME": "빠른 수리",
-    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 손에 있는 무작위 카드를 강화 합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 손에 있는 무작위 카드를 강화합니다."
   },
   "anniv5:RedHotHammer": {
     "NAME": "뜨거운 망치",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드는 무제한으로 강화 할 수 있습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드는 무제한으로 강화할 수 있습니다."
   },
   "anniv5:HeartOfTheForge": {
     "NAME": "대장간의 심장",
-    "DESCRIPTION": "{@@}보존. NL {!M!|>1= !M!} [E] 를 얻습니다. 보존 될 때, 이 카드를 강화 합니다. NL 이 카드는 무제한으로 강화 할 수 있습니다. NL 소멸."
+    "DESCRIPTION": "{@@}보존. NL {!M!|>1= !M!} [E] 를 얻습니다. 보존될 때, 이 카드를 강화합니다. NL 이 카드는 무제한으로 강화할 수 있습니다. NL 소멸."
   },
   "anniv5:SharpeningSheath": {
     "NAME": "날을 세우는 칼집",
-    "DESCRIPTION": "카드를 !M!장 뽑고, 그것들을 강화 합니다."
+    "DESCRIPTION": "카드를 !M!장 뽑고, 그것들을 강화합니다."
   },
   "anniv5:CarelessSwing": {
     "NAME": "부주의한 휘두름",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 무작위 *강화되지 *않은 *카드 를 소멸 시킵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 무작위 *강화되지 *않은 *카드를 소멸시킵니다."
   },
   "anniv5:SetUpShop": {
     "NAME": "가게 설치",
@@ -29,11 +29,11 @@
   },
   "anniv5:ScrapMetal": {
     "NAME": "고철",
-    "DESCRIPTION": "방어도 !M! 마다, 어떤 더미에서든 무작위 카드를 강화 합니다. NL 소멸."
+    "DESCRIPTION": "방어도 !M! 마다, 어떤 더미에서든 무작위 카드를 강화합니다. NL 소멸."
   },
   "anniv5:BlacksmithsShield": {
     "NAME": "대장장이의 방패",
-    "DESCRIPTION": "카드를 사용한 후, 그 카드의 강화 수만큼 방어도 를 1 얻습니다."
+    "DESCRIPTION": "카드를 사용한 후, 그 카드의 강화 수만큼 방어도를 1 얻습니다."
   },
   "anniv5:Masterwork": {
     "NAME": "장인의 작품",
