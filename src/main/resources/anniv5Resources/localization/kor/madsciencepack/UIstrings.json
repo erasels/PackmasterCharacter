@@ -1,0 +1,33 @@
+{
+  "anniv5:MadSciencePack": {
+    "TEXT": [
+      "매드 사이언스!",
+      "보너스 효과로 카드를 수정하고 게임을 터뜨리세요!",
+      "MichaelMayhem"
+    ]
+  },
+  "anniv5:MadScienceModifiers": {
+    "TEXT": [
+      " NL 냉기를 ",
+      " 번 영창합니다.",
+      "보존. NL ",
+      " NL 카드를 사용합니다: ",
+      " NL 방어도를 6 얻습니다.",
+      " NL 방어도를 8 얻습니다.",
+      " NL 다시 사용하고, 수정이 취소됩니다.",
+      " NL *캐논볼 을 얻습니다.",
+      " NL 카드를 1 장 뽑습니다."
+    ]
+  },
+  "anniv5:AddModifierUI": {
+    "TEXT": [
+      "수정할 카드를 선택하십시오."
+    ]
+  },
+  "anniv5:MadSciencePackHat": {
+    "TEXT": [
+      "보여주면 돼. 내가 보여주는 거야!!",
+      "매드 매드 사이언스"
+    ]
+  }
+}

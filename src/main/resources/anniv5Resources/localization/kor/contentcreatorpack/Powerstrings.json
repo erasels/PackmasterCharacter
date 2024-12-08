@@ -1,0 +1,44 @@
+{
+  "anniv5:HuttsGambleEnergyPower": {
+    "NAME": "헛츠의 기운",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 방어되지 않은 공격 피해를 받지 않으면, 다음 턴에 #b",
+      " 에너지를 얻습니다."
+    ]
+  },
+  "anniv5:HuttsGambleDrawPower": {
+    "NAME": "헛츠의 드로우",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 방어되지 않은 공격 피해를 받지 않으면, 다음 턴에 카드를 #b",
+      " 장 가져옵니다.",
+      " 장 가져옵니다."
+    ]
+  },
+  "anniv5:RetromationPower": {
+    "NAME": "레트로메이션",
+    "DESCRIPTIONS": [
+      "턴 시작 시, 드래프트에서 사용할 수 없는 팩에서 카드를 #b",
+      " 장",
+      " 장",
+      " 얻습니다. NL ",
+      "그 카드는 #y휘발성을 얻습니다.",
+      "그 카드들은 #y휘발성을 얻습니다."
+    ]
+  },
+  "anniv5:FrostprimePower": {
+    "NAME": "프로스트 프라임",
+    "DESCRIPTIONS": [
+      "턴 시작 시, 냉기를 #b",
+      "개 영창하고, 모든 적에게 anniv5:동상을 #b 적용합니다.",
+      " 적용합니다."
+    ]
+  },
+  "anniv5:CozyChairPower": {
+    "NAME": "안락한 의자",
+    "DESCRIPTIONS": [
+      "당신의 카드는 두 번 사용됩니다.",
+      "당신의 카드는 추가로 #b",
+      " 번 사용됩니다."
+    ]
+  }
+}

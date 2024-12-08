@@ -1,0 +1,9 @@
+{
+  "anniv5:DivinePotion": {
+    "NAME": "신성한 포션",
+    "DESCRIPTIONS": [
+      "#y임시 #y체력을 #b",
+      " 얻습니다."
+    ]
+  }
+}

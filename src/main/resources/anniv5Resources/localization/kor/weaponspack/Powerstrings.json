@@ -1,0 +1,26 @@
+{
+  "anniv5:WeaponPower": {
+    "NAME": "무기",
+    "DESCRIPTIONS": []
+  },
+  "anniv5:SalvagerPower": {
+    "NAME": "재사용",
+    "DESCRIPTIONS": [
+      "#y무기가 파괴되면, [E] 를 #b",
+      " 번 얻습니다."
+    ]
+  },
+  "anniv5:ArmorUpPower": {
+    "NAME": "갑옷 착용",
+    "DESCRIPTIONS": [
+      "기본 대미지보다 3 이상의 단일 대상 공격 카드를 사용하면 #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "anniv5:ReapersMarkPower": {
+    "NAME": "사신의 표식",
+    "DESCRIPTIONS": [
+      "#b3 스택이 부여되면 표식은 제거되고 대상은 잃은 체력의 #b40% 만큼을 잃습니다."
+    ]
+  }
+}

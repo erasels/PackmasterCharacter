@@ -1,0 +1,62 @@
+{
+  "anniv5:DroneSwarmRareSkill": {
+    "NAME": "드론 무리",
+    "DESCRIPTION": "이번 턴 동안 손의 최대 크기를 !anniv5:m2! 늘립니다. NL 카드를 !M! 장 뽑습니다."
+  },
+  "anniv5:TheSuckamidRareSkill": {
+    "NAME": "흡입형 피라미드",
+    "DESCRIPTION": "체력을 !M! 회복합니다. NL !anniv5:m2! 턴 동안 손에 있는 카드를 보존합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "체력을 !M! 회복합니다. NL !anniv5:m2! 턴 동안 손에 있는 카드를 보존합니다. NL 소멸."
+  },
+  "anniv5:ElectromagneticBurstRarePower": {
+    "NAME": "전자기 버스트",
+    "DESCRIPTION": "방어도를 얻을 때마다 무작위 적에게 !M! 의 피해를 줍니다."
+  },
+  "anniv5:ArrowStormRareAttack": {
+    "NAME": "화살 폭풍",
+    "DESCRIPTION": "손에 있는 모든 공격 카드를 소멸시킵니다. NL 소멸시켰다면, 적 전체에게 피해를 !D! 만큼 !M! 번 줍니다."
+  },
+  "anniv5:MarvelousFeastUncommonPower": {
+    "NAME": "기묘한 축제",
+    "DESCRIPTION": "선천성. 순서대로: 방어도, 약화, 힘, 취약을 주는 anniv5:크로켓을 얻습니다. 턴 종료 당 한번씩.",
+    "UPGRADE_DESCRIPTION": "선천성. 순서대로, 강화된: 방어도, 약화, 힘, 취약을 주는 anniv5:크로켓을 얻습니다. 턴 종료 당 한번씩."
+  },
+  "anniv5:MeatyCroquettesSpecialColourless": {
+    "NAME": "고기 크로켓",
+    "DESCRIPTION": "anniv5:크로켓. NL 힘을 !M! 얻습니다."
+  },
+  "anniv5:FishyCroquettesSpecialColourless": {
+    "NAME": "생선 크로켓",
+    "DESCRIPTION": "anniv5:크로켓. NL 약화를 !M! 부여합니다. NL 소멸."
+  },
+  "anniv5:FriendshipCroquettesSpecialColourless": {
+    "NAME": "우정 크로켓",
+    "DESCRIPTION": "anniv5:크로켓. NL 방어도를 !B! 얻습니다. 소멸. NL 보존될 때마다 이번 전투 동안 이 카드의 방어도가 !M! 증가합니다."
+  },
+  "anniv5:MysteryCroquettesSpecialColourless": {
+    "NAME": "미스터리 크로켓",
+    "DESCRIPTION": "anniv5:크로켓. NL 취약을 !M! 부여합니다. NL 소멸."
+  },
+  "anniv5:TopOfTheSkyUncommonAttack": {
+    "NAME": "하늘 탄생의 날",
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL 사용하면 손으로 돌아옵니다. 소멸성 !stslib:ex!."
+  },
+  "anniv5:BucketOfDregsUncommonSkill": {
+    "NAME": "찌거기 양동이",
+    "DESCRIPTION": "사용불가. 보존. NL 보존될 때, 모든 적의 체력을 !M! 회복하고 방어도를 !B! 얻습니다."
+  },
+  "anniv5:PocketTournamentUncommonSkill": {
+    "NAME": "소규모 토너먼트",
+    "DESCRIPTION": "다음 턴에 무작위로, 2X 번: NL 카드를 1 장 뽑거나, [E] 를 얻거나, 활력을 5 얻거나, 방어도를 3 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "다음 턴에 무작위로, 2X+2 번: NL 카드를 1 장 뽑거나, [E] 를 얻거나, 활력을 5 얻거나, 방어도를 3 얻습니다. NL 소멸."
+  },
+  "anniv5:StoneSwordCommonAttack": {
+    "NAME": "돌 검",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 민첩을 !M! 얻습니다. NL 소멸."
+  },
+  "anniv5:Rea__dyCommonSkill": {
+    "NAME": "시--작!",
+    "DESCRIPTION": "활력을 !M! 얻습니다. NL 임시 민첩을 !anniv5:m2! 얻습니다. NL 소멸성 !stslib:ex!.",
+    "UPGRADE_DESCRIPTION": "활력을 !M! 얻습니다. NL 임시 민첩을 !anniv5:m2! 얻습니다. NL 카드를 1 장 뽑습니다. NL 소멸성 !stslib:ex!."
+  }
+}

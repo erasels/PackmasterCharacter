@@ -1,0 +1,25 @@
+{
+  "anniv5:DistortionPower": {
+    "NAME": "왜곡",
+    "DESCRIPTIONS": [
+      "카드가 #y소멸될 때마다, 체력을 #b",
+      "카드가 #y소멸될 때마다, 체력을 #b",
+      " 만큼 잃고 #y왜곡 을 #b만큼 줄입니다."
+    ]
+  },
+  "anniv5:RuePower": {
+    "NAME": "후회",
+    "DESCRIPTIONS": [
+      "다음에 사용하는 #b",
+      " 장의 카드를 #y소멸시킵니다.",
+      "다음에 사용하는 카드를 #y소멸시킵니다."
+    ]
+  },
+  "anniv5:DeteriorationPower": {
+    "NAME": "퇴화",
+    "DESCRIPTIONS": [
+      "턴 종료 시, 버린 카드 더미에서 무작위 카드 1장을 #y소멸시키고 방어도를 #b",
+      " 얻습니다."
+    ]
+  }
+}

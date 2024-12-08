@@ -1,0 +1,9 @@
+{
+  "anniv5:PoisonMasteryPower": {
+    "NAME": "중독 숙련",
+    "DESCRIPTIONS": [
+      "중독 으로 입히는 피해가 #b",
+      "% 증가합니다."
+    ]
+  }
+}
