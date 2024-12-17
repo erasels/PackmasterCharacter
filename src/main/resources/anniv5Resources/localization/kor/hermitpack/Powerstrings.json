@@ -1,0 +1,10 @@
+{
+  "anniv5:DeterminationPower": {
+    "NAME": "결단력",
+    "DESCRIPTIONS": ["상태이상이 적용될 때마다, #y힘을 #b", " 얻습니다."]
+  },
+  "anniv5:OverwhelmingPowerPower": {
+    "NAME": "압도적인 힘",
+    "DESCRIPTIONS": ["턴 종료 시 에너지가 0이라면, "," 체력을 #b 잃습니다."]
+  }
+}

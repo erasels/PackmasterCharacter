@@ -1,0 +1,30 @@
+[
+  {
+    "PROPER_NAME": "증폭",
+    "NAMES": [
+      "증폭",
+      "증폭을",
+      "증폭은",
+      "amplify",
+      "amplified"
+    ],
+    "DESCRIPTION": "충분한 [E] 가 있다면 추가로 소모해서 효과를 발동시킵니다."
+  },
+  {
+    "PROPER_NAME": "충전",
+    "NAMES": [
+      "충전",
+      "충전을",
+      "charge up"
+    ],
+    "DESCRIPTION": "충전이 #b6 이상이라면, 다음 공격의 피해량을 두 배로 늘리고 충전을 #b6 잃습니다."
+  },
+  {
+    "PROPER_NAME": "돌풍",
+    "NAMES": [
+      "돌풍",
+      "flurry"
+    ],
+    "DESCRIPTION": "이번 턴에 카드를 사용할 때마다 발동하는 특정한 효과입니다."
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "anniv5:ThieveryPack": {
+    "TEXT": [
+      "도둑 - 속이는 자",
+      "스스로 모든 걸 준비할 필요는 없습니다; 도둑질로 원하는 걸 얻을 수 있습니다.",
+      "Celicath"
+    ]
+  },
+  "anniv5:StealPowerAction": {
+    "TEXT": [
+      "%s 는 나한테 필요없어.",
+      "%s 는 나한테 필요없어."
+    ]
+  },
+  "anniv5:ThieveryPackHat": {
+    "TEXT": [
+      "붉은 가면의 후예는 지금부터 시작된다.",
+      "붉은 가면"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "anniv5:HammerThrowPower": {
+    "NAME": "망치 던지기",
+    "DESCRIPTIONS": [
+      "카드가 보존될 때마다, 적 전체에게 피해를 #b",
+      " 줍니다."
+    ]
+  }
+}

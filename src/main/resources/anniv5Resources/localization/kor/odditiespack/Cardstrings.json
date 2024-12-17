@@ -1,0 +1,69 @@
+{
+  "anniv5:StylePoints": {
+    "NAME": "스타일 포인트",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 보유한 약화를 제거합니다. NL 현재 착용하고 있는 모자의 팩에서 무작위 카드를 얻습니다."
+  },
+  "anniv5:LetsPlay8Ball": {
+    "NAME": "8볼 게임 하자!",
+    "DESCRIPTION": "뽑을 카드 더미에 *8볼 을 섞어 넣습니다.",
+    "UPGRADE_DESCRIPTION": "뽑을 카드 더미에 *9볼 을 섞어 넣습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "9볼 게임 하자!"
+    ]
+  },
+  "anniv5:EightBall": {
+    "NAME": "8볼",
+    "DESCRIPTION": "피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      "9볼"
+    ]
+  },
+  "anniv5:ZaHando": {
+    "NAME": "더 핸드",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 가운데 카드(들)을 소멸시킵니다."
+  },
+  "anniv5:LetsDraft": {
+    "NAME": "드래프트 하자!",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 선택합니다. 복사본을 뽑을 카드 더미에 섞어 넣습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "복사본 제작."
+    ]
+  },
+  "anniv5:Beacon": {
+    "NAME": "신호기",
+    "DESCRIPTION": "손에 있는 !M! 장의 카드를 선택합니다. NL 강화하고 보존을 부여합니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 손에 있는 !M! 장의 카드를 선택합니다. NL 강화하고 보존을 부여합니다.",
+    "EXTENDED_DESCRIPTION": [
+      "강화하고 보존을 부여합니다."
+    ]
+  },
+  "anniv5:SleeveUp": {
+    "NAME": "본격적인 계획",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이 카드가 카드 보상에서 나올 경우, 카드들은 *포일 이 되고 보존을 가집니다."
+  },
+  "anniv5:AutoBattler": {
+    "NAME": "오토 배틀러",
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 민첩을 !M! 얻습니다. NL 밀집을 !anniv5:m2! 얻습니다. NL 카드를 자동으로 사용합니다."
+  },
+  "anniv5:ShiningStyle": {
+    "NAME": "반짝이는 스타일",
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 민첩을 !M! 얻습니다. NL 개전: *골드 를 !anniv5:m2! 얻습니다."
+  },
+  "anniv5:FinalForm": {
+    "NAME": "이건 아직 내...",
+    "DESCRIPTION": "휘발성. NL 무작위 1 장의 카드를 소멸시킵니다. NL 5 턴 동안 턴 시작 시, 그 카드의 복사본을 사용하고 소멸시킵니다.",
+    "UPGRADE_DESCRIPTION": "휘발성. NL 1 장의 카드를 소멸시킵니다. NL 5 턴 동안 턴 시작 시, 그 카드의 복사본을 사용하고 소멸시킵니다.",
+    "EXTENDED_DESCRIPTION": [
+      "최종 형상을 위한 소멸."
+    ]
+  },
+  "anniv5:MidnightStrike": {
+    "NAME": "자정 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투에서 12번째로 사용되는 카드일 경우, 대신 피해를 !anniv5:sd! 줍니다.",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( ",
+      " 장 사용함.)",
+      " 장 사용함.)"
+    ]
+  }
+}

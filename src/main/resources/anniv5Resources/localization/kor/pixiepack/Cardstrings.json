@@ -1,0 +1,57 @@
+{
+  "anniv5:BoosterPack": {
+    "NAME": "부스터 팩",
+    "DESCRIPTION": "무작위 !M! 장의 anniv5:다른\u00a0색 카드를 얻습니다. 그 카드들은 휘발성을 가집니다.",
+    "EXTENDED_DESCRIPTION": [
+      "무작위",
+      "이 카드들로 생성된 카드들은 낮은 희귀도로 나올 확률이 높습니다."
+    ]
+  },
+  "anniv5:StarShower": {
+    "NAME": "유성우",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. 이번 턴에 다음으로 anniv5:다른\u00a0색 공격 카드를 사용했을 때 이것을 반복합니다."
+  },
+  "anniv5:Paintcan": {
+    "NAME": "페인트통",
+    "DESCRIPTION": "무작위 적에게 피해를 !D! 줍니다. NL 손에 있는 카드는 anniv5:다른\u00a0색 이 됩니다."
+  },
+  "anniv5:PortalPunch": {
+    "NAME": "포탈 펀치",
+    "DESCRIPTION": "{@@}피해를 !D! 줍니다. NL 무작위 anniv5:다른\u00a0색 카드를 !M! 장 얻습니다. 그 카드들은 휘발성을 가집니다.",
+    "EXTENDED_DESCRIPTION": [
+      "무작위",
+      "이 카드들로 생성된 카드들은 낮은 희귀도로 나올 확률이 높습니다."
+    ]
+  },
+  "anniv5:EnchantedRift": {
+    "NAME": "마법의 균열",
+    "DESCRIPTION": "{@@}방어도를 !B! 얻습니다. NL 마지막으로 사용한 anniv5:다른\u00a0색 카드의 복사본을 얻습니다. 그 카드들은 휘발성을 가집니다."
+  },
+  "anniv5:Fetch": {
+    "NAME": "물어와!",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이번 턴에 다음으로 anniv5:다른\u00a0색 스킬 카드를 사용했을 때 이것을 반복합니다. 소멸.",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이번 턴에 다음으로 anniv5:다른\u00a0색 스킬 카드를 사용했을 때 이것을 반복합니다."
+  },
+  "anniv5:NeutronStar": {
+    "NAME": "중성자별",
+    "DESCRIPTION": "임시 힘을 !M! 얻습니다. NL 이번 턴에 다음으로 anniv5:다른\u00a0색 공격 카드를 사용했을 때 이것을 반복합니다. 소멸.",
+    "UPGRADE_DESCRIPTION": "임시 힘을 !M! 얻습니다. NL 이번 턴에 다음으로 anniv5:다른\u00a0색 공격 카드를 사용했을 때 이것을 반복합니다."
+  },
+  "anniv5:FastHands": {
+    "NAME": "빠른 손놀림",
+    "DESCRIPTION": "보존. NL 뽑을 카드 더미에서 무작위 anniv5:다른\u00a0색 카드를 손으로 가져옵니다. 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL 뽑을 카드 더미에서 무작위 anniv5:다른\u00a0색 카드를 손으로 가져옵니다."
+  },
+  "anniv5:DimensionBreach": {
+    "NAME": "차원의 균열",
+    "DESCRIPTION": "적에게 무작위 !M! 장의 anniv5:다른\u00a0색 공격 카드를 사용합니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "무작위",
+      "이 카드들로 생성된 카드들은 낮은 희귀도로 나올 확률이 높습니다."
+    ]
+  },
+  "anniv5:CosmicConverter": {
+    "NAME": "우주 변환기",
+    "DESCRIPTION": "휘발성. NL 턴 시작 시, 마지막으로 사용한 카드와 종류, 비용이 같은 anniv5:다른\u00a0색 카드를 얻습니다."
+    }
+}

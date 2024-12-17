@@ -1,0 +1,48 @@
+{
+  "anniv5:Flare": {
+    "NAME": "불꽃",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:점화를 !M! 부여합니다."
+  },
+  "anniv5:FlameBlast": {
+    "NAME": "화염 돌풍",
+    "DESCRIPTION": "anniv5:점화를 !M! 부여합니다. NL 적이 취약을 가지고 있을 경우, anniv5:점화를 !M! 부여합니다. NL 취약을 !anniv5:m2! 부여합니다."
+  },
+  "anniv5:IceWall": {
+    "NAME": "얼음 장벽",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 방어도를 !B! 얻습니다. NL *어지러움 을 뽑을 카드 더미에 섞어 넣습니다."
+  },
+  "anniv5:FreezeAndBurn": {
+    "NAME": "얼리고 불태우기",
+    "DESCRIPTION": "적 전체의 힘을 이번 턴 동안 !M! 감소시킵니다. NL 다음 턴, 적 전체에게 피해를 !D! 줍니다. NL 소멸."
+  },
+  "anniv5:Frostfire": {
+    "NAME": "서리불꽃",
+    "DESCRIPTION": "적 전체에게 anniv5:점화를 !M! 부여하고 약화를 !anniv5:m2! 부여합니다. NL 소멸."
+  },
+  "anniv5:FieryMantle": {
+    "NAME": "작열하는 망토",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격받을 때마다, anniv5:점화를 !M! 부여합니다."
+  },
+  "anniv5:SnowMelt": {
+    "NAME": "눈 녹이기",
+    "DESCRIPTION": "휘발성. NL 카드를 !M! 장 뽑습니다. NL 다음 턴, 카드를 !M! 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 다음 턴, 카드를 !M! 장 뽑습니다."
+  },
+  "anniv5:Pyromastery": {
+    "NAME": "화염의 대가",
+    "DESCRIPTION": "anniv5:점화를 부여할 때마다, 추가로 !M! 부여합니다."
+  },
+  "anniv5:ReadTheFlames": {
+    "NAME": "불길 읽기",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 예지 !anniv5:m2!. NL 뽑을 카드 더미에 *희미해지는 *불씨 를 섞어 넣습니다."
+  },
+  "anniv5:FueledByEmbers": {
+    "NAME": "장작 연료",
+    "DESCRIPTION": "턴 시작 시, 카드를 !M! 장 뽑고 *희미해지는 *불씨 !M! 장을 손과 뽑을 카드 더미에 넣습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시, 카드를 !M! 장 뽑고 *희미해지는 *불씨 !M! 장을 손과 뽑을 카드 더미에 넣습니다."
+  },
+  "anniv5:FadingEmber": {
+    "NAME": "희미해지는 불씨",
+    "DESCRIPTION": "anniv5:점화를 !M! 부여합니다. NL 소멸."
+  }
+}

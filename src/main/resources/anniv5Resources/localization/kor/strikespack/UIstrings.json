@@ -1,0 +1,20 @@
+{
+  "anniv5:StrikesPack": {
+    "TEXT": [
+      "타격? 타격!",
+      "피해를 6 줍니다.",
+      "MichaelMayhem"
+    ]
+  },
+  "anniv5:StrikesPackHat": {
+    "TEXT": [
+      "머리핀으로 사용할 수 있을 만큼 거대한, 소형 검입니다.",
+      "타격 헤어핀"
+    ]
+  },
+  "anniv5:AddStrikeTagModifier": {
+    "TEXT": [
+      " 타격"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "anniv5:SwordAndBoard": {
+    "NAME": "검과 방패",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["anniv5:짝:", " 피해를 !D! 줍니다.", " NL ","anniv5:홀: ", " 방어도를 !B! 얻습니다."]
+  },
+  "anniv5:QuickReflex": {
+    "NAME": "빠른 반사",
+    "DESCRIPTION": "방어도를 !B! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ", "anniv5:최초:", " 방어도를 !B! 얻습니다."]
+  },
+  "anniv5:PrimeDirective": {
+    "NAME": "주요 지령",
+    "DESCRIPTION": "공격 카드가 다음을 가집니다: NL anniv5:홀: (+ 피해를 !M! 더 줍니다)."
+  },
+  "anniv5:WitzBolt": {
+    "NAME": "지혜 볼트",
+    "DESCRIPTION": "피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [" NL ", "anniv5:홀:", " 약화와 취약을 !M! 부여합니다."]
+  },
+  "anniv5:ElementOfSurprise": {
+    "NAME": "놀라움의 요소",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["anniv5:최초:", " 다음 사용되는 카드가 두 번 사용됩니다."]
+  },
+  "anniv5:GammaWard": {
+    "NAME": "감마 와드",
+    "DESCRIPTION": "방어도를 !B! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ", "anniv5:짝:", " 다음 사용되는 스킬 카드가 다음을 가집니다: NL anniv5:짝: 방어도를 !B! 얻습니다."]
+  },
+  "anniv5:Flourish": {
+    "NAME": "번창",
+    "DESCRIPTION": "anniv5:판금 *갑옷을 !M! 얻습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ", "anniv5:짝:", " 체력을 !M! 회복합니다.", "anniv5:홀:", " [E] 를 얻습니다."]
+  },
+  "anniv5:EvenOddAppend": {
+    "NAME": "",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [" NL (+ ", " 더 줍니다.)", " NL 방어도를 ", " 얻습니다"]
+  },
+  "anniv5:WindUpBomb": {
+    "NAME": "태엽 폭탄",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["anniv5:짝:", " 이 카드의 피해량을 !M! 증가시킵니다.", " NL ", "anniv5:홀:", " 피해를 !D! 줍니다."]
+  },
+  "anniv5:LeftHook": {
+    "NAME": "왼쪽 걸기",
+    "DESCRIPTION": "피해를 !D! 줍니다.",
+    "EXTENDED_DESCRIPTION": [" NL ","anniv5:홀:", " 손에 남아 있습니다.", " NL 소멸성 !stslib:ex!."]
+  },
+  "anniv5:Battlecry": {
+    "NAME": "전투의 함성",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다.",
+    "EXTENDED_DESCRIPTION": [" NL ","anniv5:최초:", " 힘을 2 얻습니다."]
+  }
+}

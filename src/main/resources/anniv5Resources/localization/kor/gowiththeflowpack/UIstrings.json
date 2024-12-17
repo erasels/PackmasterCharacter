@@ -1,0 +1,20 @@
+{
+  "anniv5:GoWithTheFlowPack": {
+    "TEXT": [
+      "정해진 흐름",
+      "이번 턴에 필요 없는 카드를 버려서 다음 턴에 더 많은 카드를 손에 넣으세요.",
+      "NellyDevo"
+    ]
+  },
+  "anniv5:FlowAction": {
+    "TEXT": [
+      "버리기."
+    ]
+  },
+  "anniv5:GoWithTheFlowPackHat": {
+    "TEXT": [
+      "영하의 온도에서 적합한 복장입니다.",
+      "수문을 조절하는 후드"
+    ]
+  }
+}
