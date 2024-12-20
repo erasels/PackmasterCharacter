@@ -6,7 +6,7 @@
   },
   "${ModID}:HarvestBeans": {
     "NAME": "收获豌豆",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本场战斗上张打出牌非攻击牌，造成群体伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若本场战斗上张打出牌非攻击牌，造成 !D! 点群体伤害。"
   },
   "${ModID}:HarvestCarrots": {
     "NAME": "收获胡萝卜",

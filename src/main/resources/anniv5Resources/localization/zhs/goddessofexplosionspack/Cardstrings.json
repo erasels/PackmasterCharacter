@@ -41,7 +41,7 @@
     "UPGRADE_DESCRIPTION": "布置一枚 *炸弹 。 NL 回合开始时， NL 布置一枚 *炸弹 。"
   },
   "${ModID}:KillerQueen": {
-    "NAME": "杀人女王",
+    "NAME": "杀手皇后",
     "DESCRIPTION": "选择一张手牌， NL 将其附加效果： NL \"造成 !M! 点群体伤害\"。"
   },
   "${ModID}:EveOfDestruction": {
