@@ -1,0 +1,21 @@
+{
+  "anniv5:UtilityPack": {
+    "TEXT": [
+      "유틸",
+      "넓은 범위의 메커니즘, 팩과 시너지가 좋은 카드들입니다.",
+      "modargo",
+      "카드 이미지 - 매직 더 개더링"
+    ]
+  },
+  "anniv5:ConjurationAction": {
+    "TEXT": [
+      "사용할 카드를 선택하십시오."
+    ]
+  },
+  "anniv5:UtilityPackHat": {
+    "TEXT": [
+      "안전이 최우선!",
+      "안전모"
+    ]
+  }
+}

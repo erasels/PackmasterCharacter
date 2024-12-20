@@ -1,0 +1,46 @@
+[
+  {
+    "PROPER_NAME": "파멸",
+    "NAMES": [
+      "파멸",
+      "ruin"
+    ],
+    "DESCRIPTION": "다음으로 #y파멸 을 가진 대상이 차단되지 않은 공격 피해를 받을 때, 보유한 모든 버프와 디버프의 수만큼 #y파멸 만큼의 체력을 잃습니다."
+  },
+  {
+    "PROPER_NAME": "망각",
+    "NAMES": [
+      "망각",
+      "oblivion"
+    ],
+    "DESCRIPTION": "구체: 발현 시, 가장 많은 체력을 가진 적에게 #y파멸 을 적용합니다. 카드를 버릴 때마다 적용되는 #y파멸 이 증가합니다."
+  },
+  {
+    "PROPER_NAME": "매니페스트",
+    "NAMES": [
+      "매니페스트",
+      "manifest"
+    ],
+    "DESCRIPTION": "구체 슬롯을 하나 얻고, 그 후 목록에 있는 구체 를 영창합니다."
+  },
+  {
+    "PROPER_NAME": "새기기",
+    "NAMES": [
+      "새기기",
+      "Inscribed",
+      "inscribed",
+      "Inscribe",
+      "inscribe"
+    ],
+    "DESCRIPTION": "사용 시, 다음 구체 의 지속효과 를 발동하고, 이어서 모든 #y보름달 및 #y초승달 구체 의 지속효과 를 발동합니다."
+  },
+  {
+    "PROPER_NAME": "감염",
+    "NAMES": [
+      "감염",
+      "infest",
+      "infests"
+    ],
+    "DESCRIPTION": "턴 종료 시, 이 카드가 손에 있을 경우, 이 카드를 뽑을 카드 더미에 섞고 그 위에 감염 카운터를 놓습니다."
+  }
+]

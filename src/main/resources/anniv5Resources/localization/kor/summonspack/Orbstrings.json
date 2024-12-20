@@ -1,0 +1,54 @@
+{
+  "anniv5:SwarmOfBees": {
+    "NAME": "벌떼",
+    "DESCRIPTION": [
+      "#y지속: 적 전체에게 피해를 #b",
+      " 줍니다. NL #y발현: 적 전체에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "anniv5:Louse": {
+    "NAME": "무지개 공벌레",
+    "DESCRIPTION": [
+      "#y지속: 턴 시작 시 카드를 #b1 장 뽑습니다. #y발현: 카드를 #b2 장 뽑습니다."
+    ]
+  },
+  "anniv5:Panda": {
+    "NAME": "판다",
+    "DESCRIPTION": [
+      "#y지속: 무작위 적에게 피해를 #b",
+      " 줍니다. NL #y발현: 무작위 적에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "anniv5:Porcupine": {
+    "NAME": "고슴도치",
+    "DESCRIPTION": [
+      "#y지속: 턴 시작 시 #b",
+      " 피해의 #y깃대를 얻습니다. NL #y발현: #y가시를 #b",
+      " 얻습니다."
+    ]
+  },
+  "anniv5:Wolf": {
+    "NAME": "늑대",
+    "DESCRIPTION": [
+      "#y지속: 턴 종료 시, 체력이 가장 낮은 적에게 피해를 #b",
+      " 줍니다. NL 피해량은 영창한 구체만큼 증가합니다. NL #y발현: 구체 슬롯을 얻습니다."
+    ]
+  },
+  "anniv5:Leprechaun": {
+    "NAME": "요정",
+    "DESCRIPTION": [
+      "#y지속: 턴 시작 시 #b",
+      " 번 굴립니다. NL #y발현: #y징크스를 적 전체에게 #b",
+      " 부여합니다."
+    ]
+  },
+  "anniv5:FireSpirit": {
+    "NAME": "불의 정령",
+    "DESCRIPTION": [
+      "#y지속: 턴 종료 시 적 전체에게 #y점화를 #b",
+      " 부여합니다. NL #y발현: #y밀집을 #b1 얻습니다."
+    ]
+  }
+}
