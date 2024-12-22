@@ -1,0 +1,41 @@
+{
+  "anniv5:Emptiness": {
+    "NAME": "공허함",
+    "DESCRIPTION": "카드를 1 장 버립니다. NL anniv5:망각 을 !M! 번 영창합니다."
+  },
+  "anniv5:Augment": {
+    "NAME": "증강",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 구체 슬롯이 없다면, 구체 슬롯을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 방어도를 !B! 얻습니다. NL 구체 슬롯이 없다면, 구체 슬롯을 1 얻습니다."
+  },
+  "anniv5:Allocate": {
+    "NAME": "할당",
+    "DESCRIPTION": "전투 중인 적 하나당 구체 슬롯을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 전투 중인 적 하나당 구체 슬롯을 1 얻습니다."
+  },
+  "anniv5:Stockpile": {
+    "NAME": "비축",
+    "DESCRIPTION": "카드를 1 장 버립니다. NL 파워 카드라면 플라즈마를 !M! 번 영창합니다. 아니라면 전기를 !anniv5:m2! 번 영창합니다."
+  },
+  "anniv5:IcicleCrash": {
+    "NAME": "고드름 충돌",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 비어있는 구체 슬롯만큼 냉기를 !M! 번 영창합니다."
+  },
+  "anniv5:Fear": {
+    "NAME": "두려움",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 암흑을 !M! 번 영창합니다."
+  },
+  "anniv5:Charge": {
+    "NAME": "충전",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 영창된 구체의 지속 효과를 발동시킵니다."
+  },
+  "anniv5:MaterialBoost": {
+    "NAME": "물질 가속",
+    "DESCRIPTION": "원하는 만큼 카드를 버립니다. NL 버린 카드만큼 가장 오른쪽의 구체를 영창합니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 원하는 만큼 카드를 버립니다. NL 버린 카드만큼 가장 오른쪽의 구체를 영창합니다."
+  },
+  "anniv5:Thunderstruck": {
+    "NAME": "벼락",
+    "DESCRIPTION": "이름에 \"타격\"이 들어간 카드를 사용할 때마다 전기를 !M! 번 영창합니다."
+  }
+}

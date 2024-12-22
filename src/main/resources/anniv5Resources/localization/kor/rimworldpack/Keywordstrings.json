@@ -1,0 +1,19 @@
+[
+  {
+    "PROPER_NAME": "불붙음",
+    "NAMES": [
+      "불붙음",
+      "on fire",
+      "on_fire"
+    ],
+    "DESCRIPTION": "각 #y화염 #y수치마다 추가로 사용되고 #y소멸합니다. 턴 종료 시 손에 있을 경우 #y화염 #y수치를 #b1 증가시킵니다."
+  },
+  {
+    "PROPER_NAME": "중독",
+    "NAMES": [
+      "중독을",
+      "addiction"
+    ],
+    "DESCRIPTION": "몇 턴 뒤에, #b2 장의 #y절망을 얻고 #y힘을 #b5 잃습니다."
+  }
+]

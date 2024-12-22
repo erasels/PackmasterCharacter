@@ -1,0 +1,15 @@
+{
+  "anniv5:EnigmancyPower": {
+    "NAME": "수수께끼",
+    "DESCRIPTIONS": [
+      "매 턴, 에너지를 #b",
+      " 얻고 얻는 에너지를 #b1 감소시킵니다."
+    ]
+  },
+  "anniv5:DivineMightPower": {
+    "NAME": "신성한 힘",
+    "DESCRIPTIONS": [
+      "#y신성한 #y힘이 다시 사용되면, [E] [E] 를 얻고, 카드를 #b2 장 뽑고 이번 턴 동안 #b10 힘을 얻습니다."
+    ]
+  }
+}

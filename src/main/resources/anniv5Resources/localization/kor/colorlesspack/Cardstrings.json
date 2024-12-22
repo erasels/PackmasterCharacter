@@ -1,0 +1,65 @@
+{
+  "anniv5:Manifest": {
+    "NAME": "현현",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 버린 카드 더미에서 비용이 0 또는 1인 카드를 사용합니다.",
+    "EXTENDED_DESCRIPTION": [
+      "사용할 카드를 선택하세요."
+    ]
+  },
+  "anniv5:Bunker": {
+    "NAME": "벙커",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴 시작 시, *골프 *공을 얻습니다."
+  },
+  "anniv5:GolfBall": {
+    "NAME": "골프 공",
+    "DESCRIPTION": "휘발성. NL 지난 턴에 사용되지 않은 방어도 만큼 피해를 줍니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (피해를 !D! 줍니다.)"
+    ]
+  },
+  "anniv5:Slapstick": {
+    "NAME": "슬랩스틱",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *극적인 *입장, *헛디딤, 또는 *실명 중 하나를 무작위로 뽑을 카드 더미에 섞습니다."
+  },
+  "anniv5:Ghost": {
+    "NAME": "유령",
+    "DESCRIPTION": "턴 종료 시, 적의 체력을 !M! 잃게 합니다. NL 개막 : 이 카드를 다른 카드로 위장합니다."
+  },
+  "anniv5:LunchBox": {
+    "NAME": "도시락 상자",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴 동안 다음 무색 카드를 두 번 사용합니다. NL anniv5:픽업 : 체력을 3 회복합니다."
+  },
+  "anniv5:ColorlessMastery": {
+    "NAME": "무색 숙련",
+    "DESCRIPTION": "무색 카드를 사용할 때마다 힘을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 무색 카드를 사용할 때마다 힘을 1 얻습니다."
+  },
+  "anniv5:VisitAMonastery": {
+    "NAME": "수도원 방문",
+    "DESCRIPTION": "다음 3턴 시작 시, 손에 추가: NL *광기, *순수, NL *신성.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 다음 3턴 시작 시, 손에 추가: NL *광기, *순수, NL *신성."
+  },
+  "anniv5:ThePrism": {
+    "NAME": "프리즘",
+    "DESCRIPTION": "무작위 적에게 !M!번 피해를 !D! 줍니다. NL 개막 : 손과 각 더미에 *조각 으로 나뉩니다.",
+    "UPGRADE_DESCRIPTION": "무작위 적에게 !M!번 피해를 !D! 줍니다. NL 개막 : 손과 각 더미에 *조각+ 으로 나뉩니다."
+  },
+  "anniv5:PrismShard": {
+    "NAME": "조각",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 조각 3장을 사용한 후 *프리즘 을 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 조각 3장을 사용한 후 *프리즘+ 을 얻습니다. NL 소멸."
+  },
+  "anniv5:RealityMaster": {
+    "NAME": "현실의 주인",
+    "DESCRIPTION": "알고 있죠, NL 카드를 만들 때마다, NL 열심히 일한 보답으로 NL 업그레이드를 제공합니다!",
+    "UPGRADE_DESCRIPTION": "선천성, 멋지죠! NL 알고 있죠, NL 카드를 만들 때마다, NL 열심히 일한 보답으로 NL 업그레이드를 제공합니다!"
+  },
+  "anniv5:AdventurersSword": {
+    "NAME": "모험가의 검",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *삼각형 을 뽑을 카드 더미에 섞습니다. NL 최대 체력일 경우 적의 체력을 !M! 잃게 합니다."
+  },
+  "anniv5:Triforce": {
+    "NAME": "삼각형",
+    "DESCRIPTION": "힘을 1 얻습니다. NL 카드를 1장 뽑습니다."
+  }
+}

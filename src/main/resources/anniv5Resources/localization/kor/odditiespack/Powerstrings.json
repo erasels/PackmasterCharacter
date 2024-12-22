@@ -1,0 +1,18 @@
+{
+  "anniv5:AutoBattlerPower": {
+    "NAME": "오토 배틀러",
+    "DESCRIPTIONS": [
+      "당신은 카드를 왼쪽에서 오른쪽으로 가장 앞에 있는 적에게 사용합니다."
+    ]
+  },
+  "anniv5:FinalFormPower": {
+    "NAME": "최종 형상이 아니다!",
+    "DESCRIPTIONS": [
+      "#b",
+      " 턴 동안 턴 시작 시, ",
+      " 턴 동안 턴 시작 시, ",
+      " ",
+      " 를 사용하고 #y소멸시킵니다."
+    ]
+  }
+}

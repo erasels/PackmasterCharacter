@@ -1,0 +1,20 @@
+{
+  "anniv5:MakeshiftSwordPower": {
+    "NAME": "임시 검",
+    "DESCRIPTIONS": [
+      "전투 중 카드를 생성할 때마다, #y활력을 #b%d 얻습니다."
+    ]
+  },
+  "anniv5:MakeshiftShieldPower": {
+    "NAME": "임시 방패",
+    "DESCRIPTIONS": [
+      "전투 중 카드를 생성할 때마다, #y방어도를 #b%d 얻습니다."
+    ]
+  },
+  "anniv5:FirewallPower": {
+    "NAME": "방화벽",
+    "DESCRIPTIONS": [
+      "상태이상 카드를 생성하면, #y소멸시킵니다."
+    ]
+  }
+}

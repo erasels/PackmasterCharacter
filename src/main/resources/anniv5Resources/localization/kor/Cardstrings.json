@@ -1,0 +1,27 @@
+{
+  "anniv5:Strike": {
+    "NAME": "타격",
+    "DESCRIPTION": "피해를 !D! 줍니다."
+  },
+  "anniv5:Defend": {
+    "NAME": "수비",
+    "DESCRIPTION": "방어도를 !B! 얻습니다."
+  },
+  "anniv5:Rummage": {
+    "NAME": "들추기",
+    "DESCRIPTION": "{@@}피해를 !D! 줍니다. NL 카드를 !anniv5:m2!장 가져오고 이번 턴동안 {@@}{!anniv5:m2!|@=카드|>1=카드들}의 비용을 !M! 줄입니다."
+  },
+  "anniv5:Cardistry": {
+    "NAME": "카디스트리",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 사용하는 다음 카드는 뽑을 카드 더미 맨 위로 되돌아갑니다."
+  },
+  "anniv5:ConjurePack": {
+    "NAME": "소환 팩",
+    "DESCRIPTION": "게임에 사용 가능한 !M!개의 팩 중 1개를 선택합니다. NL 다음 5턴 시작 시, 그 팩에서 카드를 2장씩 손에 추가합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 게임에 사용 가능한 !M!개의 팩 중 1개를 선택합니다. NL 다음 5턴 시작 시, 그 팩에서 카드를 2장씩 손에 추가합니다."
+  },
+  "anniv5:Vexed": {
+    "NAME": "혼란",
+    "DESCRIPTION": "사용불가. NL 덱에서 제거할 수 없습니다. NL 손에 있을 때, *호일 카드를 사용할 때 이 카드를 소멸시킵니다."
+  }
+}
