@@ -29,7 +29,7 @@
     ]
   },
   "${ModID}:ScrapCannon": {
-    "NAME": "破加农炮",
+    "NAME": "废品加农炮",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 一张牌。"
   },
   "${ModID}:BloodRitual": {
