@@ -17,7 +17,7 @@
     "DESCRIPTION": "每有一名敌人， NL 随机造成 !D! 点伤害。 NL 每名敌人临时使本牌耗能减1。"
   },
   "${ModID}:EnGarde": {
-    "NAME": "战后待命",
+    "NAME": "准备战斗",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 本牌发挥 !M! 倍 ${ModID}:灵感 。"
   },
   "${ModID}:Heroism": {
