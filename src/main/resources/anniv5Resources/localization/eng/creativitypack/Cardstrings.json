@@ -9,7 +9,7 @@
   },
   "${ModID}:PaintBrush": {
     "NAME": "Paint Brush",
-    "DESCRIPTION": "{@@}Discover a card with selected type and cost. Exhaust{!Upgrades!|>0=ive !stslib:ex!}."
+    "DESCRIPTION": "{@@}${ModID}:Discover a card with selected type and cost. Exhaust{!Upgrades!|>0=ive !stslib:ex!}."
   },
   "${ModID}:Firewall": {
     "NAME": "Firewall",
@@ -21,7 +21,7 @@
   },
   "${ModID}:Mimicry": {
     "NAME": "Mimicry",
-    "DESCRIPTION": "{@@}Discover a{!Upgrades!|>0=n Upgraded} common card from other Packs you've selected."
+    "DESCRIPTION": "{@@}${ModID}:Discover a{!Upgrades!|>0=n Upgraded} common card from other Packs you've selected."
   },
   "${ModID}:CraftyMove": {
     "NAME": "Crafty Move",
@@ -33,7 +33,7 @@
   },
   "${ModID}:StrikingStrike": {
     "NAME": "Striking Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Discover a strike. It Exhausts when played and costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL ${ModID}:Discover a strike. It Exhausts when played and costs 0 this turn."
   },
   "${ModID}:AccumulativeStrike": {
     "NAME": "Accumulative Strike",
@@ -41,13 +41,13 @@
   },
   "${ModID}:BrushModalTypeChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "Select this card type for Discovery."
+    "DESCRIPTION": "Select this card type for ${ModID}:Discovery."
   },
   "${ModID}:BrushModalCostChoice": {
     "NAME": "You should never see this",
-    "DESCRIPTION": "Select this card cost for Discovery.",
+    "DESCRIPTION": "Select this card cost for ${ModID}:Discovery.",
     "EXTENDED_DESCRIPTION" : [
-      "Select this or higher card cost for Discovery."
+      "Select this or higher card cost for ${ModID}:Discovery."
     ],
     "COMMENTS": [
       "This array is not used in the game",
