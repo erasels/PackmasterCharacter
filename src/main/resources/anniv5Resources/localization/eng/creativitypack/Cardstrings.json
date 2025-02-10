@@ -21,7 +21,7 @@
   },
   "${ModID}:Mimicry": {
     "NAME": "Mimicry",
-    "DESCRIPTION": "{@@}${ModID}:Discover a{!Upgrades!|>0=n Upgraded} common card from other Packs you've selected."
+    "DESCRIPTION": "{@@}${ModID}:Discover a{!Upgrades!|>0=n Upgraded} Common card from other Packs you've selected."
   },
   "${ModID}:CraftyMove": {
     "NAME": "Crafty Move",

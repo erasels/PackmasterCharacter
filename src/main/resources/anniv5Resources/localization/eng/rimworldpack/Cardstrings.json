@@ -9,7 +9,7 @@
   },
   "${ModID}:EatWithoutTable": {
     "NAME": "Eat Without Table",
-    "DESCRIPTION": "Drink a random common Potion. Add a *Despair to your hand. NL Exhaust."
+    "DESCRIPTION": "Drink a random Common Potion. Add a *Despair to your hand. NL Exhaust."
   },
   "${ModID}:Luciferium": {
     "NAME": "Luciferium",
