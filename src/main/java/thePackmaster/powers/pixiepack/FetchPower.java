@@ -20,7 +20,7 @@ public class FetchPower extends AbstractPackmasterPower implements NonStackableP
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public FetchPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, NAME, PowerType.BUFF, true, owner, amount);
+        super(POWER_ID, NAME, PowerType.BUFF, false, owner, amount);
     }
 
     @Override
