@@ -33,13 +33,12 @@ import static thePackmaster.SpireAnniversary5Mod.modID;
 public class PackPreviewCard extends CustomCard {
     public static final String ID = SpireAnniversary5Mod.makeID("PackPreviewCard");
     private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(ID);
-    private Color typeColor = new Color(0.35F, 0.35F, 0.35F, 1f);
+    private final Color typeColor = new Color(0.35F, 0.35F, 0.35F, 1f);
     protected String author;
     protected String parentID;
 
-    private boolean needsArtRefresh = false;
-
-    public static AbstractCardPack parentPack;
+    private final AbstractCardPack parentPack;
+    private String basegameImg;
 
     public PackPreviewCard(final String cardID, AbstractCardPack owningParent) {
         this(cardID, getCardTextureString(cardID.replace(modID + ":", ""), CardType.SKILL), owningParent);
@@ -60,6 +59,7 @@ public class PackPreviewCard extends CustomCard {
 
     public PackPreviewCard(String cardID, AbstractCardPack parentPack, String basegameImg) {
         this(cardID, null, parentPack);
+        this.basegameImg = basegameImg;
         this.portrait = ((TextureAtlas) ReflectionHacks.getPrivateStatic(AbstractCard.class, "cardAtlas")).findRegion(basegameImg);
     }
 
@@ -242,5 +242,10 @@ public class PackPreviewCard extends CustomCard {
             path1024 = "anniv5Resources/images/1024/"+ name +".png";
         }
         this.setBackgroundTexture(path512, path1024);
+    }
+
+    @Override
+    public AbstractCard makeCopy() {
+        return this.basegameImg == null ? new PackPreviewCard(this.cardID, this.parentPack) : new PackPreviewCard(this.cardID, this.parentPack, this.basegameImg);
     }
 }
