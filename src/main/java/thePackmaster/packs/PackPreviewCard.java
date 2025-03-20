@@ -38,7 +38,6 @@ public class PackPreviewCard extends CustomCard {
     protected String parentID;
 
     private final AbstractCardPack parentPack;
-    private String basegameImg;
 
     public PackPreviewCard(final String cardID, AbstractCardPack owningParent) {
         this(cardID, getCardTextureString(cardID.replace(modID + ":", ""), CardType.SKILL), owningParent);
@@ -59,7 +58,6 @@ public class PackPreviewCard extends CustomCard {
 
     public PackPreviewCard(String cardID, AbstractCardPack parentPack, String basegameImg) {
         this(cardID, null, parentPack);
-        this.basegameImg = basegameImg;
         this.portrait = ((TextureAtlas) ReflectionHacks.getPrivateStatic(AbstractCard.class, "cardAtlas")).findRegion(basegameImg);
     }
 
@@ -246,6 +244,6 @@ public class PackPreviewCard extends CustomCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return this.basegameImg == null ? new PackPreviewCard(this.cardID, this.parentPack) : new PackPreviewCard(this.cardID, this.parentPack, this.basegameImg);
+        return this.parentPack.makePreviewCard();
     }
 }
