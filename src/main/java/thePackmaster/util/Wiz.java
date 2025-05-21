@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.actions.TimedVFXAction;
 import thePackmaster.cardmodifiers.rippack.RippableModifier;
+import thePackmaster.cards.marisapack.AmplifyCard;
 import thePackmaster.packs.AbstractCardPack;
 import thePackmaster.patches.rippack.AllCardsRippablePatches;
 
@@ -452,5 +453,13 @@ public class Wiz {
 
     public static int countValidCardsInHandToMakeRippable() {
         return AbstractDungeon.player.hand.group.stream().filter(card -> cardValidToMakeRippable(card)).collect(Collectors.toList()).size();
+    }
+    
+    public static int getLogicalCardCostPlusAmplify(AbstractCard c) {
+        int cost = getLogicalCardCost(c);
+        if (c instanceof AmplifyCard && ((AmplifyCard) c).isAmplified(c)) {
+            cost += ((AmplifyCard) c)._costLogic();
+        }
+        return cost;
     }
 }
