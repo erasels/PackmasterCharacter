@@ -1,0 +1,15 @@
+{
+  "anniv5:EvenOddPack": {
+    "TEXT": [
+      "홀/짝",
+      "사용한 카드 수에 따라 효과가 달라지는 카드들입니다.",
+      "Lobbien"
+    ]
+  },
+  "anniv5:EvenOddPackHat": {
+    "TEXT": [
+      "The superlative modulo enjoyer's choice of headwear.",
+      "The Top Percent"
+    ]
+  }
+}

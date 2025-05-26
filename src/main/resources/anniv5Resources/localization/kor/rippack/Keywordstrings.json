@@ -1,0 +1,45 @@
+[
+  {
+    "PROPER_NAME": "찢을 수 있는",
+    "NAMES": [
+      "찢을 수 있는",
+      "찢어진",
+      "찢을",
+      "rippable",
+      "ripped",
+      "rip"
+    ],
+    "DESCRIPTION": "이 카드를 에너지와 효과를 분리하고 #y소멸하게 만들려면 우클릭하세요."
+  },
+  {
+    "PROPER_NAME": "그림 카드",
+    "NAMES": [
+      "그림",
+      "art card",
+      "art_card",
+      "art cards",
+      "art_cards",
+      "art"
+    ],
+    "DESCRIPTION": "#y찢어진 카드의 그림 부분입니다. 아무것도 하지 않고 항상 #y소멸합니다."
+  },
+  {
+    "PROPER_NAME": "설명 카드",
+    "NAMES": [
+      "설명",
+      "text card",
+      "text_card",
+      "text cards",
+      "text_cards"
+    ],
+    "DESCRIPTION": "#y찢어진 카드의 설명 부분입니다. 항상 #y소멸합니다."
+  },
+  {
+    "PROPER_NAME": "후천성",
+    "NAMES": [
+      "후천성",
+      "unnate"
+    ],
+    "DESCRIPTION": "전투 시작 시 뽑을 카드 더미 맨 밑에서 시작합니다."
+  }
+]

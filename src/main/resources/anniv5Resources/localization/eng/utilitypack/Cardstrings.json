@@ -47,6 +47,6 @@
   },
   "${ModID}:RareStrike": {
     "NAME": "Rare Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your *Rares."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your Rares."
   }
 }

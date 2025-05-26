@@ -4,7 +4,6 @@ import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -280,7 +279,6 @@ public class ThePackmaster extends CustomPlayer {
     protected Bone headBone;
     protected Slot headSlot;
     protected RegionAttachment attachment;
-    protected int headSlotIndex = 0, attachmentSlotIndex = 0;
 
     @Override
     protected void loadAnimation(String atlasUrl, String skeletonUrl, float scale) {
@@ -323,22 +321,18 @@ public class ThePackmaster extends CustomPlayer {
 
             // Create a new slot for the attachment
             Slot origSlot = headSlot;
-            Slot slotClone = new Slot(new SlotData(origSlot.getData().getIndex(), attachName, origSlot.getBone().getData()), origSlot.getBone());
+            Slot slotClone = new Slot(new SlotData(skeleton.getSlots().size, attachName, origSlot.getBone().getData()), origSlot.getBone());
             slotClone.getData().setBlendMode(origSlot.getData().getBlendMode());
-            skeleton.getSlots().insert(headSlotIndex, slotClone);
+            skeleton.getSlots().add(slotClone);
 
             Array<Slot> drawOrder = skeleton.getDrawOrder();
             drawOrder.add(slotClone);
             skeleton.setDrawOrder(drawOrder);
 
-            Texture tex = TexLoader.getTexture(imgPath);
-
-            tex.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-
             attachment = new RegionAttachment("hat");
             attachment.setRegion(region);
-            attachment.setWidth(tex.getWidth());
-            attachment.setHeight(tex.getHeight());
+            attachment.setWidth(region.getRegionWidth());
+            attachment.setHeight(region.getRegionHeight());
             attachment.setX(1F);
             attachment.setY(38F * Settings.scale);
             attachment.setScaleX(Settings.scale);
@@ -346,10 +340,9 @@ public class ThePackmaster extends CustomPlayer {
             attachment.updateOffset();
 
             Skin skin = skeleton.getData().getDefaultSkin();
-            skin.addAttachment(headSlotIndex, attachment.getName(), attachment);
-            attachmentSlotIndex = headSlotIndex;
+            skin.addAttachment(slotClone.getData().getIndex(), attachment.getName(), attachment);
 
-
+            slotClone.getData().setAttachmentName(attachment.getName());
             skeleton.setAttachment(attachName, attachment.getName());
 
             skeleton.findBone("HatBone").setScale(0F);
@@ -374,7 +367,6 @@ public class ThePackmaster extends CustomPlayer {
         skeleton.findBone("HatBone").setScale(1F);
         skeleton.findBone("HairBone").setScale(1F);
         String imgPath = HatsManager.getImagePathFromHatID("No");
-        skeleton.getAttachment(attachmentSlotIndex, "hat");
         if (attachment != null) {
             TextureRegion region = TexLoader.getTextureAsAtlasRegion(imgPath);
             attachment.setRegion(region);
@@ -396,7 +388,6 @@ public class ThePackmaster extends CustomPlayer {
                 headSlot = s;
                 break;
             }
-            headSlotIndex++;
         }
     }
 
@@ -404,8 +395,6 @@ public class ThePackmaster extends CustomPlayer {
         headBone = null;
         headSlot = null;
         attachment = null;
-        headSlotIndex = 0;
-        attachmentSlotIndex = 0;
     }
 
     @Override

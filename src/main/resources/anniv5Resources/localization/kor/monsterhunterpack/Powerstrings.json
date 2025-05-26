@@ -1,0 +1,53 @@
+{
+  "anniv5:HuntersMark": {
+    "NAME": "사냥꾼의 표식",
+    "DESCRIPTIONS": [
+      "공격 카드로부터 피해를 #b",
+      "% 더 받습니다."
+    ]
+  },
+  "anniv5:NotHunted": {
+    "NAME": "비표적",
+    "DESCRIPTIONS": [
+      "공격 카드로부터 피해를 #b",
+      "% 덜 받습니다. #y표적이 된 적이 죽으면 이것을 제거합니다."
+    ]
+  },
+  "anniv5:PerfectGuardPower": {
+    "NAME": "완벽한 방어",
+    "DESCRIPTIONS": [
+      "이번 턴에 정확하게 막았을 경우, 힘을 #b",
+      " 얻습니다."
+    ]
+  },
+  "anniv5:EnragePowerPlayer": {
+    "NAME": "격분",
+    "DESCRIPTIONS": [
+      "어떤 적도 공격할 의도가 없다면 턴 종료 시 #y힘을 #b",
+      " 얻습니다."
+    ]
+  },
+  "anniv5:GlassArmorPower": {
+    "NAME": "유리 갑옷",
+    "DESCRIPTIONS": [
+      "턴 종료 시 #y방어도를 #b",
+      " 얻습니다. 막히지 않은 공격 피해를 받을 경우 이것을 제거합니다."
+    ]
+  },
+  "anniv5:DelayedDamagePower": {
+    "NAME": "연기된 피해",
+    "DESCRIPTIONS": [
+      "피해를 #b",
+      " 줍니다 - #b",
+      " 턴 뒤에."
+    ]
+  },
+  "anniv5:TimePiecePower": {
+    "NAME": "시간 왜곡",
+    "DESCRIPTIONS": [
+      "12장의 카드를 사용할 때마다 #y힘을 #b",
+      " 얻습니다. 사용한 카드: #b",
+      ""
+    ]
+  }
+}

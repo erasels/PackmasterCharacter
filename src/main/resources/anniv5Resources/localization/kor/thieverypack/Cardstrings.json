@@ -1,0 +1,47 @@
+{
+  "anniv5:DrainShield": {
+    "NAME": "흡수 방패",
+    "DESCRIPTION": "적에게서 모든 방어도를 훔칩니다. NL 피해를 !D! 줍니다."
+  },
+  "anniv5:FairTrade": {
+    "NAME": "공정한 거래",
+    "DESCRIPTION": "피해를 !D! 만큼 두 번 줍니다. NL 자신과 적은 각각 힘을 !M! 얻습니다."
+  },
+  "anniv5:Smokescreen": {
+    "NAME": "연막",
+    "DESCRIPTION": "모두가 방어도를 !B! 얻습니다. NL 모든 적이 체력을 !M! 잃습니다."
+  },
+  "anniv5:NullHammer": {
+    "NAME": "공백 망치",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴까지 이 적이 얻는 이로운 효과를 모두 훔칩니다."
+  },
+  "anniv5:Magnet": {
+    "NAME": "자석",
+    "DESCRIPTION": "적에게서 모든 []인공물, 판금 갑옷, []가시, 금속화를 훔칩니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "적 전체에게서 모든 []인공물, 판금 갑옷, []가시, 금속화를 훔칩니다. NL 소멸."
+  },
+  "anniv5:StrengthSap": {
+    "NAME": "힘 짜내기",
+    "DESCRIPTION": "약화를 !M! 부여합니다. NL 적이 양수 힘을 가지고 있을 경우, 힘을 !anniv5:m2! 훔칩니다. NL 소멸성 !stslib:ex!."
+  },
+  "anniv5:CunningPoison": {
+    "NAME": "교활함 포션",
+    "DESCRIPTION": "체력이 가장 많은 적에게 중독을 !M! 부여합니다. NL 중독된 채로 죽을 경우, 골드를 !anniv5:m2! 훔칩니다. NL 소멸."
+  },
+  "anniv5:MindControl": {
+    "NAME": "정신 지배",
+    "DESCRIPTION": "체력이 !M! 의 X 배보다 작거나 같은 적을 선택합니다. NL 이 적은 남은 전투 동안 다른 적을 공격합니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "이 적은 체력이 너무 많아."
+    ]
+  },
+  "anniv5:Witchcraft": {
+    "NAME": "위치크래프트",
+    "DESCRIPTION": "적에게서 체력을 !M! 훔칩니다. 치명타라면, 8 임시 체력을 주는 포션을 얻습니다. NL 소멸."
+  },
+  "anniv5:ThieveryMastery": {
+    "NAME": "도둑질 마스터리",
+    "DESCRIPTION": "마스터 도둑이 됩니다. NL (무언갈 훔칠 때, 그것의 두배를 얻습니다.)",
+    "UPGRADE_DESCRIPTION": "선천성. NL 마스터 도둑이 됩니다. NL (무언갈 훔칠 때, 그것의 두배를 얻습니다.)"
+  }
+}
