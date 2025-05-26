@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.BlueCandle;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
-@NoCompendium
+
 @NoPools
 public class Despair extends AbstractRimworldCard {
     public final static String ID = makeID(Despair.class.getSimpleName());
