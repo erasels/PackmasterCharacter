@@ -38,12 +38,12 @@
   },
   "${ModID}:BurningPassion": {
     "NAME": "Burning Passion",
-    "DESCRIPTION": "Exhaust your hand. NL Gain [E] \u00a0and draw 1 card for each card Exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust any number of cards. Gain [E] \u00a0and draw 1 card for each card Exhausted. NL Exhaust."
+    "DESCRIPTION": "Exhaust your hand. NL Gain [E] \u00a0and draw 1 card for each Exhausted card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust any number of cards. Gain [E] \u00a0and draw 1 card for each Exhausted card. NL Exhaust."
   },
   "${ModID}:TaintedWeapon": {
     "NAME": "Tainted Weapon",
-    "DESCRIPTION": "Deal !D! damage. NL Put this card in the enemy if they are not dead."
+    "DESCRIPTION": "Deal !D! damage. NL If this card doesn't kill, put it in the enemy."
   },
   "${ModID}:RimworldKeywordManager": {
     "NAME": "KeywordManager",

@@ -24,9 +24,7 @@ public class TaintedWeapon extends AbstractRimCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        if(!m.isDeadOrEscaped() && !m.isDying && m.currentHealth > 0)
-            addToBot(new PutCardInMonsterAction(this, m));
-//            addToBot(new HoldCardInMonsterAction(m, this));
+        addToBot(new PutCardInMonsterAction(this, m));
     }
 
     public void upp() {

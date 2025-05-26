@@ -37,38 +37,6 @@ public class EatWithoutTable extends AbstractRimCard {
         addToBot(new MakeTempCardInHandAction(new Despair()));
     }
 
-    //    public void use(AbstractPlayer p, AbstractMonster m) {
-//        //Drink a random potion
-//        addToBot(new AbstractGameAction() {
-//            @Override
-//            public void update() {
-//                AbstractPotion potion = null;
-//                ArrayList<AbstractPotion> potions = PotionHelper.getPotionsByRarity(AbstractPotion.PotionRarity.COMMON);
-//                ArrayList<AbstractPotion> drinkable = new ArrayList<>();
-//
-//                for (AbstractPotion pot: potions) {
-//                    if(pot.canUse() && !pot.isThrown)
-//                        drinkable.add(pot);
-//                }
-//
-//                if(drinkable.size() > 0)
-//                    potion = drinkable.get(AbstractDungeon.cardRandomRng.random(drinkable.size()-1)).makeCopy();
-//
-//                if(potion == null)
-//                    potion = new SwiftPotion();
-//
-//                potion.flash();
-//                potion.use(Wiz.adp());
-//                for (AbstractRelic relic: Wiz.adp().relics)
-//                    relic.onUsePotion();
-//                UIStrings potionStrings = CardCrawlGame.languagePack.getUIString(modID + ":Potions");
-//                addToBot(new TalkAction(true, potionStrings.TEXT[0] + potion.name + potionStrings.TEXT[1], 2.5f, 2.5f));
-//                isDone = true;
-//            }
-//        });
-//        addToBot(new MakeTempCardInHandAction(new Despair()));
-//    }
-
     public void upp() {
         upgradeBlock(2);
         upgradeMagicNumber(1);
