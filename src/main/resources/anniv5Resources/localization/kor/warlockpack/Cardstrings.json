@@ -1,0 +1,50 @@
+{
+  "anniv5:Imp": {
+    "NAME": "임프",
+    "DESCRIPTION": "anniv5:뽑을\u00a0때\u00a0시전. NL 피해를 !M! 줍니다. 이번 전투에서 *임프 의 피해량을 1 증가시킵니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+  "anniv5:HighPriestessJeklik": {
+    "NAME": "대여사제 제클릭",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이 카드가 소멸되면, 2 장의 복사본을 얻습니다."
+  },
+  "anniv5:SoulShear": {
+    "NAME": "영혼 절단",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에 1 장의 *임프 를 섞어 넣습니다."
+  },
+  "anniv5:Soulfire": {
+    "NAME": "영혼의 불꽃",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 카드를 소멸시킵니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 소멸시킵니다."
+  },
+  "anniv5:Doomguard": {
+    "NAME": "파멸수호병",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 2 장의 카드를 소멸시킵니다."
+  },
+  "anniv5:HandOfGulDan": {
+    "NAME": "굴단의 손",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이 카드가 소멸되면, 카드를 !M! 장 뽑습니다."
+  },
+  "anniv5:SeedsOfDestruction": {
+    "NAME": "파괴의 씨앗",
+    "DESCRIPTION": " !M! 장의 *임프 를 뽑을 카드 더미에 섞어 넣거나 !anniv5:m2! 장의 *임프 를 버린 카드 더미에 섞어 넣는 것 중 선택합니다.",
+    "EXTENDED_DESCRIPTION": [" !M! 장의 *임프 를 뽑을 카드 더미에 섞어 넣습니다.", " !M! 장의 *임프 를 버린 카드 더미에 섞어 넣습니다."]
+  },
+  "anniv5:AranasiBroodmother": {
+    "NAME": "아라나시 무리어미",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이 카드를 뽑을 카드 더미에 섞어 넣습니다. NL 이 카드를 뽑으면, 방어도를 !M! 얻습니다."
+  },
+  "anniv5:MalchezaarsImp": {
+    "NAME": "말체자르의 임프",
+    "DESCRIPTION": "*임프 가 아닌 카드가 소멸될 때마다 1 장의 *임프 를 버린 카드 더미에 넣습니다.",
+    "UPGRADE_DESCRIPTION": "*임프 가 아닌 카드가 소멸될 때마다 1 장의 *임프 를 뽑을 카드 더미에 섞어 넣습니다."
+  },
+  "anniv5:TheSoularium": {
+    "NAME": "영혼관",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 그것들은 휘발성을 가집니다. NL 소멸."
+  },
+  "anniv5:RunedMithrilRod": {
+    "NAME": "룬새김 미스릴 마법막대",
+    "DESCRIPTION": "사용불가. 보존. NL 이 카드가 손에 있을 때 !M! 장의 카드를 뽑으면, 손에 있는 카드들의 비용이 1 감소하고 이 카드를 버립니다.",
+    "EXTENDED_DESCRIPTION": ["이 카드를 사용할 수 없어.", " ({0} 장 뽑음.)"]
+  }
+}

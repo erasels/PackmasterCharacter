@@ -24,7 +24,7 @@ public class InvestorPower extends AbstractPackmasterPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (Wiz.getLogicalCardCost(card) >= 2) {
+        if (Wiz.getLogicalCardCostPlusAmplify(card) >= 2) {
             flash();
             addToBot(new GainBlockAction(owner, amount));
         }

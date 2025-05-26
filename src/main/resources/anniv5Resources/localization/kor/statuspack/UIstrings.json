@@ -1,0 +1,15 @@
+{
+  "anniv5:StatusPack": {
+    "TEXT": [
+      "상태이상",
+      "이 팩은 매우 많은 상태이상을 만들어냅니다.",
+      "(Gk) Erasels"
+    ]
+  },
+  "anniv5:StatusPackHat": {
+    "TEXT": [
+      "의료팀!",
+      "붕대"
+    ]
+  }
+}

@@ -47,8 +47,8 @@
   },
   "${ModID}:PocketTournamentUncommonSkill": {
     "NAME": "口袋大赛",
-    "DESCRIPTION": "下回合，随机触发以下其中一种效果2X次： NL 抽一张牌并获得 [E] ， NL 获得1点 力量 ， NL 获得3点 格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "下回合，随机触发以下其中一种效果2X+2次： NL 抽一张牌并获得 [E] ， NL 获得1点 力量 ， NL 获得3点 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "随机抽取2X次在下个回合触发： NL 抽1张牌， NL 获得 [E] ， NL 获得5层 活力 ， NL 获得3点 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "随机抽取2X+2次在下个回合触发： NL 抽1张牌， NL 获得 [E] ， NL 获得5层 活力 ， NL 获得3点 格挡 。 NL 消耗 。"
   },
   "${ModID}:StoneSwordCommonAttack": {
     "NAME": "石剑",

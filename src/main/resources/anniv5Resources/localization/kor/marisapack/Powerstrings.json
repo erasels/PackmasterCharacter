@@ -1,0 +1,52 @@
+{
+  "anniv5:ChargeUp": {
+    "NAME": "충전",
+    "DESCRIPTIONS": [
+      "#b%s 이상의 충전이 있다면, 다음 사용하는 공격 카드의 피해량이 두 배가 되고 충전을 #b%s 잃습니다."
+    ]
+  },
+  "anniv5:Inertia": {
+    "NAME": "Inertia",
+    "DESCRIPTIONS": [
+      "Whenever a card is #yExhausted or #yAmplified, gain #b%s #yCharge #yUp."
+    ]
+  },
+  "anniv5:EarthlightRay": {
+    "NAME": "어스라이트 레이",
+    "DESCRIPTIONS": [
+      "After you gain #yCharge #yUp, deal damage equal to its total to ALL enemies.",
+      "After you gain #yCharge #yUp, deal damage equal to its total times #b%s to ALL enemies."
+    ]
+  },
+  "anniv5:BuildingCharge": {
+    "NAME": "충전 모으기",
+    "DESCRIPTIONS": [
+      "이번 턴에 카드를 사용할 때마다, #y충전을 #b%s 얻습니다."
+    ]
+  },
+  "anniv5:StardustReverie": {
+    "NAME": "스타더스트 레버리",
+    "DESCRIPTIONS": [
+      "#yExhaust the next card you play to gain #b%s #yCharge #yUp and draw #b1 card."
+    ]
+  },
+  "anniv5:StarCasket": {
+    "NAME": "별이 담긴 상자",
+    "DESCRIPTIONS": [
+      "#y방어도를 얻을 때마다 #y충전을 #b%s 얻습니다."
+    ]
+  },
+  "anniv5:FreeAmplify": {
+    "NAME": "무료 증폭",
+    "DESCRIPTIONS": [
+      "다음 #y증폭 효과는 에너지를 소모하지 않습니다.",
+      "다음 #b%s 번의 #y증폭 효과는 에너지를 소모하지 않습니다."
+    ]
+  },
+  "anniv5:EventHorizon": {
+    "NAME": "사건의 지평선",
+    "DESCRIPTIONS": [
+      "턴 시작 시, #y활력을 #b%s 얻습니다."
+    ]
+  }
+}

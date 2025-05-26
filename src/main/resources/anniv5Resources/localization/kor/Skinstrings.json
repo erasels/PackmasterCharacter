@@ -1,0 +1,26 @@
+{
+  "anniv5:SkinSystemUI": {
+    "TEXT": [
+      "스킨",
+      "아티스트: "
+    ]
+  },
+  "anniv5:packmasterSkin": {
+    "TEXT": [
+      "팩마스터",
+      "AlexMdle"
+    ]
+  },
+  "anniv5:packmistressSkin": {
+    "TEXT": [
+      "여성 팩마스터",
+      "TheLethargicWeirdo"
+    ]
+  },
+  "anniv5:randomSkin": {
+    "TEXT": [
+      "랜덤",
+      "다중"
+    ]
+  }
+}

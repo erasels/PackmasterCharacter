@@ -1,0 +1,16 @@
+{
+  "anniv5:MultiToolPower": {
+    "NAME": "다기능 도구",
+    "DESCRIPTIONS": [
+      "에너지가 남은 채로 턴을 종료하면, 모든 적은 체력을 #b",
+      " 잃습니다."
+    ]
+  },
+  "anniv5:InvestorPower": {
+    "NAME": "투자자",
+    "DESCRIPTIONS": [
+      "카드에 #b2 이상의 에너지를 사용하면, #y방어도를 #b",
+      " 얻습니다."
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "anniv5:EnergyAndEchoPack": {
+    "TEXT": [
+      "에너지 & 메아리",
+      "[E] 를 생성하고 이를 자기 복제 카드로 최선을 다해 사용하는 법을 배워보세요.",
+      "Diamsword"
+    ]
+  },
+  "anniv5:EnergyAndEchoPackHat": {
+    "TEXT": [
+      "부분 헬멧, 부분 고출력 손전등.",
+      "동굴 탐험 모자"
+    ]
+  }
+}

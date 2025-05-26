@@ -1,0 +1,16 @@
+{
+  "anniv5:HangedPower": {
+    "NAME": "매달린 힘",
+    "DESCRIPTIONS": [
+      "이번 턴에 당신이 카드를 뽑을 때마다, 모든 적이 체력을 #b",
+      " 잃습니다."
+    ]
+  },
+  "anniv5:TheChariotPower": {
+    "NAME": "전차",
+    "DESCRIPTIONS": [
+      "당신의 턴 동안 카드를 버릴 때마다, #y활기 를 #b",
+      " 얻습니다."
+    ]
+  }
+}

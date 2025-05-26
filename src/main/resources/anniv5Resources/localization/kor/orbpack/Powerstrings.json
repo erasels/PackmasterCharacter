@@ -1,0 +1,9 @@
+{
+  "anniv5:ThunderstruckPower": {
+    "NAME": "벼락",
+    "DESCRIPTIONS": [
+      "이름에 \"타격\"이 들어간 카드를 사용할 때마다, #y전기를 #b",
+      " 번 #y영창합니다."
+    ]
+  }
+}

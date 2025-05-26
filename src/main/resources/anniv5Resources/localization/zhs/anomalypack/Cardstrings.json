@@ -26,8 +26,8 @@
   },
   "${ModID}:MindOverMatter": {
     "NAME": "心胜于物",
-    "DESCRIPTION": "抽牌时， NL 获得1点 格挡 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 抽牌时， NL 获得1点 格挡 。"
+    "DESCRIPTION": "每当你抽一张牌， NL 获得1点 格挡 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你抽一张牌， NL 获得1点 格挡 。"
   },
   "${ModID}:GoldenGun": {
     "NAME": "黄金大炮",

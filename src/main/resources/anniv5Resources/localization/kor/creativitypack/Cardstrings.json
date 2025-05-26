@@ -1,0 +1,57 @@
+{
+  "anniv5:MakeshiftSword": {
+    "NAME": "임시 검",
+    "DESCRIPTION": "전투 중 카드를 생성할 때마다, 활력을 !M! 얻습니다."
+  },
+  "anniv5:MakeshiftShield": {
+    "NAME": "임시 방패",
+    "DESCRIPTION": "전투 중 카드를 생성할 때마다, 방어도를 !M! 얻습니다."
+  },
+  "anniv5:PaintBrush": {
+    "NAME": "페인트 브러시",
+    "DESCRIPTION": "{@@}선택한 유형과 비용의 카드를 발견합니다. 소멸{!Upgrades!|>0=ive !stslib:ex!}."
+  },
+  "anniv5:Firewall": {
+    "NAME": "방화벽",
+    "DESCRIPTION": "{@@}{!Upgrades!|>0=선천성. NL }상태이상 카드가 생성되면, NL 소멸시킵니다."
+  },
+  "anniv5:Souvenirs": {
+    "NAME": "기념품",
+    "DESCRIPTION": "{@@}손에 *엄벌{!Upgrades!|>0=+} 또는 *안전{!Upgrades!|>0=+}을 생성합니다. 카드를 1장 뽑습니다."
+  },
+  "anniv5:Mimicry": {
+    "NAME": "모방",
+    "DESCRIPTION": "{@@}선택한 다른 팩에서 재련된 중립 카드를 발견합니다."
+  },
+  "anniv5:CraftyMove": {
+    "NAME": "교활한 움직임",
+    "DESCRIPTION": "피해를 !D! 줍니다. 이번 턴에 카드가 생성되었다면, [E] 를 얻고 카드를 1장 뽑습니다."
+  },
+  "anniv5:BarrierBeacon": {
+    "NAME": "장벽 비콘",
+    "DESCRIPTION": "{@@}방어도를 !B! 얻습니다. NL 손에 {!Upgrades!|>0=재련된} *장벽 비콘을 생성합니다. NL 소멸."
+  },
+  "anniv5:StrikingStrike": {
+    "NAME": "강력한 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 타격 을 발견 합니다. 사용 시 소멸 되며 이번 턴 동안 비용이 0이 됩니다."
+  },
+  "anniv5:AccumulativeStrike": {
+    "NAME": "누적 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 모든 생성된 카드에 대해 !M! 만큼 추가 피해를 줍니다."
+  },
+  "anniv5:BrushModalTypeChoice": {
+    "NAME": "절대 볼 수 없는 카드",
+    "DESCRIPTION": "이 카드 유형을 선택하여 발견합니다."
+  },
+  "anniv5:BrushModalCostChoice": {
+    "NAME": "절대 볼 수 없는 카드",
+    "DESCRIPTION": "이 카드 비용을 선택하여 발견합니다.",
+    "EXTENDED_DESCRIPTION": [
+      "이거나 그 이상의 카드 비용을 선택하여 발견합니다."
+    ],
+    "COMMENTS": [
+      "이 배열은 게임에서 사용되지 않습니다.",
+      "EX_DESC는 비용 3 이상의 카드를 위해 사용됩니다."
+    ]
+  }
+}

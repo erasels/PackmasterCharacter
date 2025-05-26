@@ -1,0 +1,20 @@
+{
+  "anniv5:OdditiesPack": {
+    "TEXT": [
+      "괴상함",
+      "Vex가 Vex 행동을 하고 있습니다. 전투 도중에 덱을 관리하세요!",
+      "Vex"
+    ]
+  },
+  "anniv5:OdditiesPackHat": {
+    "TEXT": [
+      "모험을 떠나기 좋네요.",
+      "챙 모자"
+    ]
+  },
+  "anniv5:AutoBattlerPatches": {
+    "TEXT": [
+      "나는 무조건 카드를 왼쪽에서 오른쪽으로 사용해야 해!"
+    ]
+  }
+}

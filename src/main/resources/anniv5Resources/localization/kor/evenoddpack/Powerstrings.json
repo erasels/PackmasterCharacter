@@ -1,0 +1,22 @@
+{
+  "anniv5:PrimeDirectivePower": {
+    "NAME": "주요 지령",
+    "DESCRIPTIONS": [
+      "공격 카드가 다음을 가집니다: #y홀: 피해를 #b",
+      " 더 줍니다.",
+      " NL anniv5:짝:",
+      " (+",
+      " 더 줍니다)."
+    ]
+  },
+  "anniv5:GammaWardPower": {
+    "NAME": "감마 와드",
+    "DESCRIPTIONS": [
+      "다음 사용되는 스킬 카드가 다음을 가집니다: #y짝: #y방어도를 #b",
+      " 얻습니다.",
+      " NL anniv5:짝:",
+      " 방어도를",
+      " 얻습니다."
+    ]
+  }
+}

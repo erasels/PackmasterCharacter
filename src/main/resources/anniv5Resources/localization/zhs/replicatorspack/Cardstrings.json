@@ -35,12 +35,12 @@
   },
   "${ModID}:ReduceOverhead": {
     "NAME": "精简头脑",
-    "DESCRIPTION": "消耗 所有复制牌的牌。每张造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "消耗 所有拥有同名牌的牌。每张造成 !D! 点伤害。 NL 消耗 。"
   },
   "${ModID}:MagicHand": {
     "NAME": "魔法之手",
-    "DESCRIPTION": "从牌组中随机 !M! 张牌中选择一张加入手牌，本回合其耗能为0且 消耗 。",
-    "UPGRADE_DESCRIPTION": "从牌组中随机 !M! 张牌中选择一张加入手牌，本回合其耗能为0。"
+    "DESCRIPTION": "从牌组内 !M! 张牌中选择一张加入手牌并附加 消耗 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从牌组内 !M! 张牌中选择一张加入手牌。 NL 消耗 。"
   },
   "${ModID}:EnergyDrink": {
     "NAME": "能量饮料",
