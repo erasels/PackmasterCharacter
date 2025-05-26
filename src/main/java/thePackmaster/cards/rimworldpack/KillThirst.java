@@ -12,15 +12,15 @@ public class KillThirst extends AbstractRimCard {
 
     public KillThirst() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        damage = baseDamage = 16;
+        damage = baseDamage = 8;
         cardsToPreview = new Despair();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new KillThirstAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
+        addToBot(new KillThirstAction(this, m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(2);
     }
 }

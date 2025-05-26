@@ -9,7 +9,7 @@
   },
   "${ModID}:EatWithoutTable": {
     "NAME": "Eat Without Table",
-    "DESCRIPTION": "Drink a random Common Potion. Add a *Despair to your hand. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Temporary_HP. Add a *Despair to your hand."
   },
   "${ModID}:Luciferium": {
     "NAME": "Luciferium",
@@ -22,7 +22,7 @@
   },
   "${ModID}:KillThirst": {
     "NAME": "Kill Thirst",
-    "DESCRIPTION": "Deal !D! damage. NL If this doesn't kill the enemy, add a *Despair to your hand."
+    "DESCRIPTION": "Deal !D! damage. If this card doesn't kill, double its damage and shuffle a *Despair into your draw pile."
   },
   "${ModID}:SpikeTrap": {
     "NAME": "Spike Trap",
@@ -38,14 +38,12 @@
   },
   "${ModID}:BurningPassion": {
     "NAME": "Burning Passion",
-    "DESCRIPTION": "Double the first buff you gain each turn."
+    "DESCRIPTION": "Exhaust your hand. NL Gain [E] \u00a0and draw 1 card for each Exhausted card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust any number of cards. Gain [E] \u00a0and draw 1 card for each Exhausted card. NL Exhaust."
   },
   "${ModID}:TaintedWeapon": {
     "NAME": "Tainted Weapon",
-    "DESCRIPTION": "Deal !D! damage. NL Startup: Put this card in a random monster.",
-    "EXTENDED_DESCRIPTION": [
-      "Deal !D! damage."
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL If this card doesn't kill, put it in the enemy."
   },
   "${ModID}:RimworldKeywordManager": {
     "NAME": "KeywordManager",
