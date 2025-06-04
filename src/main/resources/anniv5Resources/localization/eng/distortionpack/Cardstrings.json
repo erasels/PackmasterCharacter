@@ -22,7 +22,7 @@
   },
   "${ModID}:Deterioration": {
     "NAME": "Deterioration",
-    "DESCRIPTION": "At the end of your turn, Exhaust a random card in your discard pile and gain !M! Block."
+    "DESCRIPTION": "At the end of your turn, Exhaust 1 random card in your discard pile and gain !M! Block."
   },
   "${ModID}:Shatter": {
     "NAME": "Shatter",

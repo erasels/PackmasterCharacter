@@ -12,6 +12,6 @@
       "absorb",
       "absorbed"
     ],
-    "DESCRIPTION": "Exhaust a card. When this card is exhausted, add all cards it absorbed to your hand."
+    "DESCRIPTION": "Exhaust #b1 card. When this card is exhausted, add all cards it absorbed to your hand."
   }
 ]

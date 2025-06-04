@@ -17,7 +17,7 @@
   },
   "${ModID}:CarelessSwing": {
     "NAME": "Careless Swing",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a random *Unupgraded card in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 random *Unupgraded card in your hand."
   },
   "${ModID}:SetUpShop": {
     "NAME": "Set Up Shop",

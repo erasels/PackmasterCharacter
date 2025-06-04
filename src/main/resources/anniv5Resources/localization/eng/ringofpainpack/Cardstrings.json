@@ -33,8 +33,8 @@
   },
   "${ModID}:Hollower": {
     "NAME": "Hollower",
-    "DESCRIPTION": "Exhaust a random card. NL If you do, put a card from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. NL If you do, put a card from your discard pile into your hand."
+    "DESCRIPTION": "Exhaust 1 card at random. NL If you do, put a card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust 1 card. NL If you do, put a card from your discard pile into your hand."
   },
   "${ModID}:Owl": {
     "NAME": "Owl",
