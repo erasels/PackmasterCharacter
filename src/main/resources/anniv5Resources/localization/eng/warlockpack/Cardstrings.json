@@ -13,12 +13,12 @@
   },
   "${ModID}:Soulfire": {
     "NAME": "Soulfire",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card at random.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 random card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card."
   },
   "${ModID}:Doomguard": {
     "NAME": "Doomguard",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 2 cards at random."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 2 random cards."
   },
   "${ModID}:HandOfGulDan": {
     "NAME": "Hand of Gul'dan",

@@ -11,7 +11,7 @@
   },
   "${ModID}:MidnightOil": {
     "NAME": "Midnight Oil",
-    "DESCRIPTION": "Exhaust 1 card at random. Gain [E]. NL While this is Exhausted, gain [E] each turn.",
+    "DESCRIPTION": "Exhaust 1 random card. Gain [E]. NL While this is Exhausted, gain [E] each turn.",
     "UPGRADE_DESCRIPTION": "Exhaust 1 card. NL Gain [E]. NL While this is Exhausted, gain [E] each turn."
   },
   "${ModID}:VoraciousSigil": {
