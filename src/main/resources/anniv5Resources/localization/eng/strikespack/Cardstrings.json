@@ -17,8 +17,8 @@
   },
   "${ModID}:DifferentStrikes": {
     "NAME": "Different Strikes",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. Gain a random Strike that costs 1 less and Exhausts.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card. Gain a random Upgraded Strike that costs 1 less and Exhausts."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. Gain a random Strike that costs 1 less and Exhausts.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. Gain a random Upgraded Strike that costs 1 less and Exhausts."
   },
   "${ModID}:StrikeOfGenius": {
     "NAME": "Strike of Genius",

@@ -18,7 +18,7 @@
   "${ModID}:DeteriorationPower": {
     "NAME": "Deterioration",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yExhaust a random card in your discard pile and gain #b",
+      "At the end of your turn, #yExhaust #b1 random card in your discard pile and gain #b",
       " #yBlock."
     ]
   }

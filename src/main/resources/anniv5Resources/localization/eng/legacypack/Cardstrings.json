@@ -30,7 +30,7 @@
   },
   "${ModID}:ScrapCannon": {
     "NAME": "Scrap Cannon",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card."
   },
   "${ModID}:BloodRitual": {
     "NAME": "Blood Ritual",
