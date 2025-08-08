@@ -41,7 +41,7 @@ public class ChainsofTruth extends AbstractDragonwrathCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p,baseDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.LIGHTNING));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.LIGHTNING));
         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters){
             Wiz.applyToEnemy(monster,new PenancePower(monster,p,magicNumber));
         }
