@@ -1,9 +1,9 @@
 {
-  "anniv5:QuirionDryad": {
+  "${ModID}:QuirionDryad": {
     "NAME": "퀴리온 드라이어드",
     "DESCRIPTIONS": ["이번 전투에서 각 카드의 색을 사용할 때마다, 힘과 민첩을 #b{0} 얻습니다. NL (사용된 색상: {1}.)", "없음", "빨강", "초록", "파랑", "보라", "무색", "저주", "팩마스터"]
   },
-  "anniv5:FlawlessPrism": {
+  "${ModID}:FlawlessPrism": {
     "NAME": "완벽한 프리즘",
     "DESCRIPTIONS": ["턴 시작 시, 무작위 #b{0} 장의 #y다른 #y색 파워 카드를 얻습니다.", "턴 시작 시, 무작위 #b{0} 장의 #y다른 #y색 파워 카드를 얻습니다."]
   }

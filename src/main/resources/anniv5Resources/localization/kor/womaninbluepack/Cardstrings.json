@@ -1,53 +1,53 @@
 {
-  "anniv5:FireVial": {
+  "${ModID}:FireVial": {
     "NAME": "화염 포션",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 주고 anniv5:점화를 !M! 부여합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "피해를 !D! 주고 ${ModID}:점화를 !M! 부여합니다. NL 소멸."
   },
-  "anniv5:ExplosiveVial": {
+  "${ModID}:ExplosiveVial": {
     "NAME": "폭발 포션",
     "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 주고 anniv5:점화를 !M! 부여합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 주고 ${ModID}:점화를 !M! 부여합니다. NL 소멸."
   },
-  "anniv5:BlockVial": {
+  "${ModID}:BlockVial": {
     "NAME": "방어도 포션",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 방어도를 !anniv5:m2! 얻습니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 방어도를 !${ModID}:m2! 얻습니다. NL 소멸."
   },
-  "anniv5:DynamicVial": {
+  "${ModID}:DynamicVial": {
     "NAME": "역동적인 포션",
     "DESCRIPTION": "하나 선택: [E] [E] 를 얻거나, 카드를 3 장 뽑습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": ["[E] [E] 를 얻습니다.", "카드를 3 장 뽑습니다."]
   },
-  "anniv5:MetallicVial": {
+  "${ModID}:MetallicVial": {
     "NAME": "무쇠의 심장",
-    "DESCRIPTION": "하나 선택: anniv5:판금 *갑옷을 4 얻거나, 가시를 3 얻거나, 인공물을 2 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "하나 선택: anniv5:판금 *갑옷을 4 얻거나, 가시를 3 얻거나, 인공물을 2 얻습니다. NL stslib:소멸성 !stslib:ex!.",
-    "EXTENDED_DESCRIPTION": ["anniv5:판금 *갑옷을 4 얻습니다.", "가시를 3 얻습니다.","인공물을 2 얻습니다."]
+    "DESCRIPTION": "하나 선택: ${ModID}:판금 *갑옷을 4 얻거나, 가시를 3 얻거나, 인공물을 2 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "하나 선택: ${ModID}:판금 *갑옷을 4 얻거나, 가시를 3 얻거나, 인공물을 2 얻습니다. NL stslib:소멸성 !stslib:ex!.",
+    "EXTENDED_DESCRIPTION": ["${ModID}:판금 *갑옷을 4 얻습니다.", "가시를 3 얻습니다.","인공물을 2 얻습니다."]
   },
-  "anniv5:QuickBrew": {
+  "${ModID}:QuickBrew": {
     "NAME": "재빠른 양조",
     "DESCRIPTION": "하나 선택: 힘을 !M! 얻거나, 밀집을 !M! 얻습니다.",
     "UPGRADE_DESCRIPTION": "하나 선택: 힘을 !M! 얻거나, 민첩을 !M! 얻거나, 밀집을 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": ["힘을 !M! 얻습니다.", "민첩을 !M! 얻습니다.","밀집을 !M! 얻습니다."]
   },
-  "anniv5:ToxicVial": {
+  "${ModID}:ToxicVial": {
     "NAME": "신경독 포션",
     "DESCRIPTION": "하나 선택: 약화를 3 부여하거나, 중독을 8 부여합니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "하나 선택: 취약을 3 부여하거나, 약화를 3 부여하거나, 중독을 8 부여합니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": ["취약을 3 부여합니다.", "약화를 3 부여합니다.","중독을 8 부여합니다."]
   },
-  "anniv5:AttackVial": {
+  "${ModID}:AttackVial": {
     "NAME": "공격 포션",
     "DESCRIPTION": "공격 카드 셋 중 하나를 선택해 얻습니다. 이번 턴 동안 그 카드의 비용이 0 이 됩니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "공격 카드 셋 중 하나를 선택해 얻습니다. 이번 턴 동안 그 카드의 비용이 0 이 됩니다. NL stslib:소멸성 !stslib:ex!.",
     "EXTENDED_DESCRIPTION": ["공격 카드 셋 중 하나를 선택해 얻습니다. 이번 턴 동안 그 카드의 비용이 0 이 됩니다."]
   },
-  "anniv5:ChaosVial": {
+  "${ModID}:ChaosVial": {
     "NAME": "정제된 혼돈",
     "DESCRIPTION": "뽑을 카드 더미 위에서부터 3 장의 카드를 사용합니다. NL 소멸."
   },
-  "anniv5:VialOfMemory": {
+  "${ModID}:VialOfMemory": {
     "NAME": "액상 기억",
     "DESCRIPTION": "버린 카드 더미에서 카드를 선택해 손으로 들고 옵니다. 이번 턴에 비용이 0 이 됩니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "버린 카드 더미에서 카드를 선택해 손으로 들고 옵니다. 이번 턴에 비용이 0 이 됩니다. NL stslib:소멸성 !stslib:ex!."

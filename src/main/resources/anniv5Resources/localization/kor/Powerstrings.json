@@ -1,5 +1,5 @@
 {
-  "anniv5:ExampleTwoAmountPower": {
+  "${ModID}:ExampleTwoAmountPower": {
     "NAME": "예시 2",
     "DESCRIPTIONS": [
       "턴 시작 시,",
@@ -7,7 +7,7 @@
       " #y민첩을 #b 얻습니다."
     ]
   },
-  "anniv5:ConjurePackPower": {
+  "${ModID}:ConjurePackPower": {
     "NAME": "소환 팩",
     "DESCRIPTIONS": [
       "다음 #b 턴 시작 시,",
@@ -15,13 +15,13 @@
       " 그 팩에서 손에 추가합니다."
     ]
   },
-  "anniv5:TempHPRegenPower": {
+  "${ModID}:TempHPRegenPower": {
     "NAME": "탈피",
     "DESCRIPTIONS": [
       "턴 종료 시, #y일시적인 #y체력을 #b%s 얻고, 이후 이 수치를 #b1 만큼 줄입니다."
     ]
   },
-  "anniv5:RuinPower": {
+  "${ModID}:RuinPower": {
     "NAME": "파멸",
     "DESCRIPTIONS": [
       "이 적이 차단되지 않은 공격 피해를 받을 때, 체력을 #b",

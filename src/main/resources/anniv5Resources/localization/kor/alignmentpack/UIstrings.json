@@ -1,12 +1,12 @@
 {
-  "anniv5:AlignmentPack": {
+  "${ModID}:AlignmentPack": {
     "TEXT": [
       "조정",
       "힘은 천상의 것입니다. 필요할 때 받아들이고, 필요하지 않으면 놓아버리세요.",
       "Alchyr"
     ]
   },
-  "anniv5:AlignmentPackHat": {
+  "${ModID}:AlignmentPackHat": {
     "TEXT": [
       "이 반짝임은 도대체 어디서 나오는 걸까요?",
       "반짝이는 가루"

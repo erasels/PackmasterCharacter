@@ -1,5 +1,5 @@
 {
-  "anniv5:LegacyPack": {
+  "${ModID}:LegacyPack": {
     "TEXT": [
       "위대한 유산",
       "과거에서 온 폭발, 스팀 창작마당 이전의 레거시 캐릭터 모드에서 영감을 받은 카드들이 포함되어 있습니다.",
@@ -7,7 +7,7 @@
       "원작 모드 작성자들: celicath, moocowgoesmoo, JohnnyBazooka, chronometrics, fiiiiilth"
     ]
   },
-  "anniv5:LegacyPackHat": {
+  "${ModID}:LegacyPackHat": {
     "TEXT": [
       "STS 모딩의 생일을 축하합니다!",
       "생일 소년"

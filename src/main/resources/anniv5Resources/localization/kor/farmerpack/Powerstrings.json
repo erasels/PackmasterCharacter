@@ -1,5 +1,5 @@
 {
-  "anniv5:OutToMarketPower": {
+  "${ModID}:OutToMarketPower": {
     "NAME": "시장으로",
     "DESCRIPTIONS": [
       "다른 유형의 카드를 사용할 때마다 모든 적에게 피해를 #b",
@@ -7,7 +7,7 @@
       "공격", "스킬", "파워", "상태이상", "저주"
     ]
   },
-  "anniv5:SupplyChainPower": {
+  "${ModID}:SupplyChainPower": {
     "NAME": "공급망",
     "DESCRIPTIONS": [
       "턴 시작 시, 비료 를 #b",

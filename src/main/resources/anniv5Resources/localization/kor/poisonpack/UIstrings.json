@@ -1,12 +1,12 @@
 {
-  "anniv5:PoisonPack": {
+  "${ModID}:PoisonPack": {
     "TEXT": [
       "독성",
       "독에만 초점을 맞춘 사일런트 카드 모음집입니다.",
       "MegaCrit"
     ]
   },
-  "anniv5:PoisonPackHat": {
+  "${ModID}:PoisonPackHat": {
     "TEXT": [
       "스네코 혐오자의 꿈이 이루어졌습니다.",
       "스네코의 해골"

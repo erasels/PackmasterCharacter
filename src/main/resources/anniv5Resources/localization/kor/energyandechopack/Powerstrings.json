@@ -1,5 +1,5 @@
 {
-  "anniv5:SlowingPower": {
+  "${ModID}:SlowingPower": {
     "NAME": "느려짐",
     "DESCRIPTIONS": [
       "턴 시작 시, [E] 를",
@@ -7,7 +7,7 @@
       " 얻습니다."
     ]
   },
-  "anniv5:PanacherPower": {
+  "${ModID}:PanacherPower": {
     "NAME": "화려함",
     "DESCRIPTIONS": [
       "카드가 #b",

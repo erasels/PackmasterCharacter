@@ -1,19 +1,19 @@
 {
-  "anniv5:FalloutPower": {
+  "${ModID}:FalloutPower": {
     "NAME": "핵낙진",
     "DESCRIPTIONS": [
       "#y스킬을 사용할 때마다, 타겟 적은 피해를 #b",
       " 입습니다."
     ]
   },
-  "anniv5:WaveMotionCannonPower": {
+  "${ModID}:WaveMotionCannonPower": {
     "NAME": "파동 운동포",
     "DESCRIPTIONS": [
       "다음 턴에, 모든 적에게 피해를 #b",
       " 줍니다."
     ]
   },
-  "anniv5:RedshiftPower": {
+  "${ModID}:RedshiftPower": {
     "NAME": "적색이동",
     "DESCRIPTIONS": [
       "다음 턴 시작 시, 카드를 1장 가져옵니다.",
@@ -21,7 +21,7 @@
       " 카드를 1장 가져옵니다."
     ]
   },
-  "anniv5:CountdownPower": {
+  "${ModID}:CountdownPower": {
     "NAME": "카운트다운",
     "DESCRIPTIONS": [
       "카드를 #b",
@@ -29,14 +29,14 @@
       " 더 뽑으면, #b2 에너지를 얻고 #y원자 #y파일드라이버+ 를 얻습니다."
     ]
   },
-  "anniv5:MeltdownPower": {
+  "${ModID}:MeltdownPower": {
     "NAME": "핵붕괴",
     "DESCRIPTIONS": [
       "#y스킬을 뽑을 때마다, 에너지를 #b",
       " 얻습니다."
     ]
   },
-  "anniv5:ExplosiveFormPower": {
+  "${ModID}:ExplosiveFormPower": {
     "NAME": "폭발형태",
     "DESCRIPTIONS": [
       "턴 시작 시, #y폭탄 을 설치합니다.",
@@ -44,7 +44,7 @@
       " 번 설치합니다."
     ]
   },
-  "anniv5:EveOfDestructionPower": {
+  "${ModID}:EveOfDestructionPower": {
     "NAME": "파괴의 전야",
     "DESCRIPTIONS": [
       "비공격 피해량이 #b",

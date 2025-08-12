@@ -1,5 +1,5 @@
 {
-  "anniv5:CosmicConverterPower": {
+  "${ModID}:CosmicConverterPower": {
     "NAME": "우주 변환기",
     "DESCRIPTIONS": [
       "턴 시작 시, 마지막으로 사용한 카드와 종류, 비용이 같은 #y다른 #y색 카드를 얻습니다. 현재 얻을 것: ",
@@ -12,21 +12,21 @@
       "사용불가 "
     ]
   },
-  "anniv5:FetchPower": {
+  "${ModID}:FetchPower": {
     "NAME": "물어와",
     "DESCRIPTIONS": [
       "#y다른 #y색 스킬 카드를 사용하고 나서, 카드를 #b",
       " 장 뽑습니다."
     ]
   },
-  "anniv5:NeutronStarPower": {
+  "${ModID}:NeutronStarPower": {
     "NAME": "중성자별",
     "DESCRIPTIONS": [
       "#y다른 #y색 공격 카드를 사용하고 나서, 임시 #y힘을 #b",
       " 얻습니다."
     ]
   },
-  "anniv5:StarShowerPower": {
+  "${ModID}:StarShowerPower": {
     "NAME": "유성우",
     "DESCRIPTIONS": [
       "#y다른 #y색 공격 카드를 사용하고 나서, 무작위 적에게 피해를 #b",

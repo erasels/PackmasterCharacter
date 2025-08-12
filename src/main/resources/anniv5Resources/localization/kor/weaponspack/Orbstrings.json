@@ -1,5 +1,5 @@
 {
-  "anniv5:AbstractWeaponOrb": {
+  "${ModID}:AbstractWeaponOrb": {
     "NAME": "무기",
     "DESCRIPTION": [
       " NL ",
@@ -8,50 +8,50 @@
       "내구도: #b"
     ]
   },
-  "anniv5:CutlassOrb": {
+  "${ModID}:CutlassOrb": {
     "NAME": "단검",
     "DESCRIPTION": [
       ""
     ]
   },
-  "anniv5:PowderKegOrb": {
+  "${ModID}:PowderKegOrb": {
     "NAME": "화약통",
     "DESCRIPTION": [
       "파괴되면 적 전체에게 #b",
       " 피해를 줍니다."
     ]
   },
-  "anniv5:SwordOfWisdomOrb": {
+  "${ModID}:SwordOfWisdomOrb": {
     "NAME": "지혜의 검",
     "DESCRIPTION": [
       "이 무기로 공격할 때마다 카드를 1 장 뽑습니다."
     ]
   },
-  "anniv5:SwordOfChaosOrb": {
+  "${ModID}:SwordOfChaosOrb": {
     "NAME": "혼돈의 검",
     "DESCRIPTION": [
       "이 무기로 공격할 때마다 무작위 카드를 얻습니다."
     ]
   },
-  "anniv5:CatONineTailsOrb": {
+  "${ModID}:CatONineTailsOrb": {
     "NAME": "아홉꼬리 고양이",
     "DESCRIPTION": [
       "이 무기로 공격할 때마다 공격력 +2 를 얻습니다."
     ]
   },
-  "anniv5:ForgingHammerOrb": {
+  "${ModID}:ForgingHammerOrb": {
     "NAME": "강화 망치",
     "DESCRIPTION": [
       "이 무기로 공격할 때마다 손에 있는 무작위 카드를 이번 전투 동안 강화합니다."
     ]
   },
-  "anniv5:SwordOfFireOrb": {
+  "${ModID}:SwordOfFireOrb": {
     "NAME": "화염의 검",
     "DESCRIPTION": [
       "이 무기로 공격할 때마다 적 전체에게 피해를 #b4 줍니다."
     ]
   },
-  "anniv5:ReapersScytheOrb": {
+  "${ModID}:ReapersScytheOrb": {
     "NAME": "사신의 낫",
     "DESCRIPTION": [
       "이 무기로 공격할 때 대상에게 피해마다 사신의 표식을 부여합니다."

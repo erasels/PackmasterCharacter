@@ -1,46 +1,46 @@
 {
-  "anniv5:Weight": {
+  "${ModID}:Weight": {
     "NAME": "역기",
     "DESCRIPTION": "사용불가. 보존. NL 이 카드가 버려질 경우, 소멸됩니다."
   },
-  "anniv5:Oppressor": {
+  "${ModID}:Oppressor": {
     "NAME": "압박",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1 장 버립니다."
   },
-  "anniv5:IronShield": {
+  "${ModID}:IronShield": {
     "NAME": "철제 방패",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL *역기 를 얻습니다."
   },
-  "anniv5:Shine": {
+  "${ModID}:Shine": {
     "NAME": "반짝임",
     "DESCRIPTION": "사용불가. 보존. NL 이 카드를 뽑으면 이번 전투 동안 손에 있는 무작위 카드를 강화합니다.",
     "UPGRADE_DESCRIPTION": "사용불가. 보존. NL 이 카드를 뽑으면 이번 전투 동안 손에 있는 모든 카드를 강화합니다."
   },
-  "anniv5:GlaiveThrow": {
+  "${ModID}:GlaiveThrow": {
     "NAME": "검 투척",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 뽑습니다. NL 카드를 !M! 장 버립니다."
   },
-  "anniv5:Crunch": {
+  "${ModID}:Crunch": {
     "NAME": "크런치",
     "DESCRIPTION": "사용불가. 보존. NL 이 카드를 뽑으면 카드를 !M! 장 뽑습니다."
   },
-  "anniv5:Lie": {
+  "${ModID}:Lie": {
     "NAME": "거짓말",
     "DESCRIPTION": "적이 이번 턴 동안 힘을 !M! 잃습니다. NL *역기 를 얻습니다."
   },
-  "anniv5:Frontflip": {
+  "${ModID}:Frontflip": {
     "NAME": "공중 돌기",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 !M! 장 뽑고 뽑은 사용불가 카드를 버립니다."
   },
-  "anniv5:HammerThrow": {
+  "${ModID}:HammerThrow": {
     "NAME": "망치 던지기",
     "DESCRIPTION": "카드가 보존될 때마다 적 전체에게 피해를 !M! 줍니다."
   },
-  "anniv5:Flail": {
+  "${ModID}:Flail": {
     "NAME": "도리깨",
     "DESCRIPTION": "피해를 !D! 만큼 두 번 줍니다. NL *역기 를 2 장 얻습니다."
   },
-  "anniv5:Wisdom": {
+  "${ModID}:Wisdom": {
     "NAME": "지혜",
     "DESCRIPTION": "[E] 를 얻습니다. NL 손에 있는 카드를 원하는 만큼 버립니다. 그만큼 카드를 뽑습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "[E] [E] 를 얻습니다. NL 손에 있는 카드를 원하는 만큼 버립니다. 그만큼 카드를 뽑습니다. NL 소멸."

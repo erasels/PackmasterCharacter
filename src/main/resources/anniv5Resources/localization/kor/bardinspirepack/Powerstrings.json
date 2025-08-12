@@ -1,5 +1,5 @@
 {
-  "anniv5:Inspiration": {
+  "${ModID}:Inspiration": {
     "NAME": "영감",
     "DESCRIPTIONS": [
       "다음에 사용하는",
@@ -10,7 +10,7 @@
       "% 증가합니다."
     ]
   },
-  "anniv5:SplendidForm": {
+  "${ModID}:SplendidForm": {
     "NAME": "화려한 형태",
     "DESCRIPTIONS": [
       "턴 시작 시, #y영감 을 #b 얻습니다.",

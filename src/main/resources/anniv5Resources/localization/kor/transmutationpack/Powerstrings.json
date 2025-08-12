@@ -1,5 +1,5 @@
 {
-  "anniv5:CrystalResonancePower": {
+  "${ModID}:CrystalResonancePower": {
     "NAME": "결정 울림",
     "DESCRIPTIONS": [
       "#y변형시킬 때마다, #y힘을 #b", " 얻습니다."

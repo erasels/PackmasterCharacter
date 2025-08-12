@@ -1,5 +1,5 @@
 {
-  "anniv5:BlueSkull": {
+  "${ModID}:BlueSkull": {
     "NAME": "푸른 해골",
     "FLAVOR": "장식용 도색은 보이지 않는데도 이상하게 작고 푸른 해골입니다.",
     "DESCRIPTIONS": [

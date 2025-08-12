@@ -1,12 +1,12 @@
 {
-  "anniv5:CoreSetPack": {
+  "${ModID}:CoreSetPack": {
     "TEXT": [
       "코어 세트",
       "단순하고 유용한 카드들로 구성된 신뢰할 수 있는 세트.",
       "팩마스터 팀"
     ]
   },
-  "anniv5:CoreSetPackHat": {
+  "${ModID}:CoreSetPackHat": {
     "TEXT": [
       "때로는 적은 것이 더 많은 것을 의미합니다.",
       "모자 없음"

@@ -1,12 +1,12 @@
   {
-  "anniv5:FarmerPack": {
+  "${ModID}:FarmerPack": {
     "TEXT": [
       "농부",
       "카드 유형을 회전시켜 당신의 힘을 최적화하세요!",
       "DJM"
     ]
   },
-  "anniv5:FarmerPackHat": {
+  "${ModID}:FarmerPackHat": {
     "TEXT": [
       "짚으로 만든 간단한 모자. 태양과 비를 막아줍니다.",
       "짚모자"

@@ -1,7 +1,7 @@
 {
-  "anniv5:Leprechaun": {
+  "${ModID}:Leprechaun": {
     "NAME": "작은 요정",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL anniv5:요정을 1번 영창합니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:요정을 1번 영창합니다.",
     "EXTENDED_DESCRIPTION": [
       "주사위",
       "주사위는 다음으로 피해를 주거나 #y방어도를 얻는 카드의 피해량이나 #y방어도를 증가시킵니다.",
@@ -10,59 +10,59 @@
     ],
     "FLAVOR": "운빨좆망겜."
   },
-  "anniv5:Porcupine": {
+  "${ModID}:Porcupine": {
     "NAME": "고슴도치",
-    "DESCRIPTION": "anniv5:고슴도치를 1번 영창합니다. NL *깃대 를 !M! 장 얻습니다.",
+    "DESCRIPTION": "${ModID}:고슴도치를 1번 영창합니다. NL *깃대 를 !M! 장 얻습니다.",
     "FLAVOR": "동물이 된 사일런트."
   },
-  "anniv5:Wolves": {
+  "${ModID}:Wolves": {
     "NAME": "늑대",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:늑대를 1번 영창합니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:늑대를 1번 영창합니다.",
     "FLAVOR": "팩마스터를 위한 팩 동물."
   },
-  "anniv5:Elephant": {
+  "${ModID}:Elephant": {
     "NAME": "코끼리",
     "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 피해를 !M! 받습니다.",
     "FLAVOR": "이건 제가 제일 좋아하는 카드에요.  당신도 좋으셨길 바라요."
   },
-  "anniv5:FireSpirit": {
+  "${ModID}:FireSpirit": {
     "NAME": "불의 정령",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL anniv5:불의\u00a0정령을 1번 영창합니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:불의\u00a0정령을 1번 영창합니다.",
     "EXTENDED_DESCRIPTION": [
       "점화",
       "점화된 대상은 그들의 턴 시작 시 스택당 체력을 #b1 잃습니다."
       ],
     "FLAVOR": "조심하세요, 불의 정령들은 달라붙기를 좋아합니다."
   },
-  "anniv5:RainbowLouse": {
+  "${ModID}:RainbowLouse": {
     "NAME": "무지개 공벌레",
-    "DESCRIPTION": "anniv5:무지개\u00a0공벌레를 1번 영창합니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:무지개\u00a0공벌레를 1번 영창합니다. NL 카드를 1 장 뽑습니다.",
+    "DESCRIPTION": "${ModID}:무지개\u00a0공벌레를 1번 영창합니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:무지개\u00a0공벌레를 1번 영창합니다. NL 카드를 1 장 뽑습니다.",
     "FLAVOR": "어리석은 마법 실험의 결과입니다."
   },
-  "anniv5:SwarmOfBees": {
+  "${ModID}:SwarmOfBees": {
     "NAME": "벌떼",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL anniv5:벌떼를 1번 영창합니다.",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL ${ModID}:벌떼를 1번 영창합니다.",
     "FLAVOR": "완전히 끔찍하네요."
   },
-  "anniv5:Specialist": {
+  "${ModID}:Specialist": {
     "NAME": "스페셜리스트",
     "DESCRIPTION": "밀집을 !M! 얻습니다. NL 힘과 민첩을 1 잃습니다.",
     "FLAVOR": "상체만 할게요."
   },
-  "anniv5:Ambush": {
+  "${ModID}:Ambush": {
     "NAME": "복병",
     "DESCRIPTION": "휘발성. NL 구체를 영창할 때마다, 발현 효과를 발동시킵니다.",
     "UPGRADE_DESCRIPTION": "구체를 영창할 때마다, 발현 효과를 발동시킵니다.",
     "FLAVOR": "좋은 카드 아트를 찾을 수 없어서 말장난을 했습니다(원제: Ambush)."
   },
-  "anniv5:Pandas": {
+  "${ModID}:Pandas": {
     "NAME": "판다",
-    "DESCRIPTION": "anniv5:판다를 X 번 영창합니다",
-    "UPGRADE_DESCRIPTION": "anniv5:판다를 X+1 번 영창합니다",
+    "DESCRIPTION": "${ModID}:판다를 X 번 영창합니다",
+    "UPGRADE_DESCRIPTION": "${ModID}:판다를 X+1 번 영창합니다",
     "FLAVOR": "판다모니움."
   },
-  "anniv5:Quill": {
+  "${ModID}:Quill": {
     "NAME": "깃대",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 소멸.",
     "FLAVOR": "쿡."

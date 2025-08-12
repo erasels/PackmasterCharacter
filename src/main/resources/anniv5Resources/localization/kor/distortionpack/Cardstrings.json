@@ -1,45 +1,45 @@
 {
-  "anniv5:S_r_ke": {
+  "${ModID}:S_r_ke": {
     "NAME": "S r ke",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:왜곡을 !M! 적용합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:왜곡을 !M! 적용합니다."
   },
-  "anniv5:Deconstruct": {
+  "${ModID}:Deconstruct": {
     "NAME": "해체",
-    "DESCRIPTION": "모든 적에게 anniv5:왜곡을 !M! 적용합니다. NL 소멸시킵니다."
+    "DESCRIPTION": "모든 적에게 ${ModID}:왜곡을 !M! 적용합니다. NL 소멸시킵니다."
   },
-  "anniv5:Darken": {
+  "${ModID}:Darken": {
     "NAME": "어두워지다",
-    "DESCRIPTION": "anniv5:왜곡을 !M! 적용합니다. 적이 다른 디버프를 가지고 있다면, !anniv5:m2!만큼 더 적용합니다."
+    "DESCRIPTION": "${ModID}:왜곡을 !M! 적용합니다. 적이 다른 디버프를 가지고 있다면, !${ModID}:m2!만큼 더 적용합니다."
   },
-  "anniv5:BurningAct": {
+  "${ModID}:BurningAct": {
     "NAME": "불타는 행동",
     "DESCRIPTION": "카드를 !M! 뽑습니다. NL 그 중 2개를 무작위로 소멸시킵니다.",
     "UPGRADE_DESCRIPTION": "카드를 !M! 뽑습니다. NL 그 중 2개를 소멸시킵니다."
   },
-  "anniv5:MindMaze": {
+  "${ModID}:MindMaze": {
     "NAME": "정신 미로",
     "DESCRIPTION": "방어도를 !B! 얻습니다. X번. NL *혼란 을 X개 뽑을 카드 더미 맨 위에 올립니다."
   },
-  "anniv5:Deterioration": {
+  "${ModID}:Deterioration": {
     "NAME": "퇴화",
     "DESCRIPTION": "턴 종료 시, 버린 카드 더미에서 무작위 카드 1장을 소멸시키고 방어도를 !M! 얻습니다."
   },
-  "anniv5:Shatter": {
+  "${ModID}:Shatter": {
     "NAME": "산산조각",
     "DESCRIPTION": "{@@}이번 턴에 적이 체력을 잃을 때마다 피해를 !D! 줍니다.",
     "EXTENDED_DESCRIPTION": [
       "{@@}이번 턴에 적이 체력을 잃을 때마다 피해를 !D! 줍니다. NL (적이 체력을 !M!번 잃었습니다.)"
     ]
   },
-  "anniv5:Rue": {
+  "${ModID}:Rue": {
     "NAME": "후회",
     "DESCRIPTION": "{@@}[E] [E] 를 얻고 카드를 !M! 뽑습니다. NL 다음 3개의 카드를 사용 시 소멸시킵니다."
   },
-  "anniv5:Static": {
+  "${ModID}:Static": {
     "NAME": "정적",
-    "DESCRIPTION": "무작위 적에게 !D! 피해를 !M!번 줍니다. 주는 피해만큼 anniv5:왜곡을 적용합니다."
+    "DESCRIPTION": "무작위 적에게 !D! 피해를 !M!번 줍니다. 주는 피해만큼 ${ModID}:왜곡을 적용합니다."
   },
-  "anniv5:CursedCircle": {
+  "${ModID}:CursedCircle": {
     "NAME": "저주받은 원",
     "DESCRIPTION": "모든 적은 이번 턴 동안 손에 있는 카드 수만큼 힘을 잃습니다. NL 소멸시킵니다.",
     "UPGRADE_DESCRIPTION": "모든 적은 이번 턴 동안 손에 있는 카드 수만큼 힘을 잃습니다."

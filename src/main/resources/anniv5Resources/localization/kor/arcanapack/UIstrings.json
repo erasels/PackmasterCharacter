@@ -1,12 +1,12 @@
 {
-  "anniv5:ArcanaPack": {
+  "${ModID}:ArcanaPack": {
     "TEXT": [
       "아르카나",
       "메이저 아르카나의 독특하고 다양한 의미를 사용하세요.",
       "Alchyr"
     ]
   },
-  "anniv5:ArcanaPackHat": {
+  "${ModID}:ArcanaPackHat": {
     "TEXT": [
       "크고 밝은 캔디 레드.",
       "더 스타"

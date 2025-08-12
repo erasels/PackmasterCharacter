@@ -1,52 +1,52 @@
 {
-  "anniv5:Hound": {
+  "${ModID}:Hound": {
     "NAME": "부패 사냥개",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *공격 카드를 사용하면 anniv5:진화합니다.",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *공격 카드를 사용하면 ${ModID}:진화합니다.",
     "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 주고 약화를 !M! 부여합니다.",
     "EXTENDED_DESCRIPTION": ["거대 부패 사냥개"]
   },
-  "anniv5:Slime": {
+  "${ModID}:Slime": {
     "NAME": "점액 괴물",
-    "DESCRIPTION": "중독을 !M! 부여합니다. NL 해로운 효과를 부여할 때마다 anniv5:진화합니다.",
+    "DESCRIPTION": "중독을 !M! 부여합니다. NL 해로운 효과를 부여할 때마다 ${ModID}:진화합니다.",
     "UPGRADE_DESCRIPTION": "중독을 !M! 부여합니다. NL 적은 중독만큼 체력을 잃습니다.",
     "EXTENDED_DESCRIPTION": ["점액 괴물 쌍둥이"]
   },
-  "anniv5:Fright": {
+  "${ModID}:Fright": {
     "NAME": "섬뜩한 지네",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 공격할 의도가 있을 경우, 카드를 !M! 장 뽑습니다."
   },
-  "anniv5:Shackles": {
+  "${ModID}:Shackles": {
     "NAME": "지박령",
-    "DESCRIPTION": "보존. NL 방어도를 !B! 얻습니다. NL 비용이 !M! 이상인 카드를 사용할 때마다 anniv5:진화합니다.",
+    "DESCRIPTION": "보존. NL 방어도를 !B! 얻습니다. NL 비용이 !M! 이상인 카드를 사용할 때마다 ${ModID}:진화합니다.",
     "UPGRADE_DESCRIPTION": "보존. NL 방어도를 !B! 얻습니다. NL 다음 턴 시작 시 방어도가 사라지지 않습니다.",
     "EXTENDED_DESCRIPTION": ["거대 지박령"]
   },
-  "anniv5:IceBeast": {
+  "${ModID}:IceBeast": {
     "NAME": "얼음 야수",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 방어도를 얻을 때마다 anniv5:진화합니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 방어도를 얻을 때마다 ${ModID}:진화합니다.",
     "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 냉기를 !M! 영창합니다.",
     "EXTENDED_DESCRIPTION": ["고대 얼음 야수"]
   },
-  "anniv5:Loombird": {
+  "${ModID}:Loombird": {
     "NAME": "뒤틀린 팔척귀",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:분열을 !M! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:분열을 !M! 부여합니다."
   },
-  "anniv5:Hollower": {
+  "${ModID}:Hollower": {
     "NAME": "영혼 포식자",
     "DESCRIPTION": "무작위 카드를 소멸시킵니다. NL 소멸시켰다면, 버린 카드 더미에서 카드를 손으로 가져옵니다.",
     "UPGRADE_DESCRIPTION": "카드를 소멸시킵니다. NL 소멸시켰다면, 버린 카드 더미에서 카드를 손으로 가져옵니다."
   },
-  "anniv5:Owl": {
+  "${ModID}:Owl": {
     "NAME": "올빼미",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL 카드를 소멸시킬 때마다 anniv5:진화합니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해의 절반만큼 anniv5:분열을 부여합니다. NL 취약을 !M! 부여합니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL 카드를 소멸시킬 때마다 ${ModID}:진화합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해의 절반만큼 ${ModID}:분열을 부여합니다. NL 취약을 !M! 부여합니다.",
     "EXTENDED_DESCRIPTION": ["악몽 올빼미"]
   },
-  "anniv5:Vision": {
+  "${ModID}:Vision": {
     "NAME": "시야",
     "DESCRIPTION": "뽑을 카드 더미에서 !M! 장의 카드를 손으로 가져옵니다. NL 이번 턴 손에 있는 카드를 보존합니다. NL 소멸."
   },
-  "anniv5:Connection": {
+  "${ModID}:Connection": {
     "NAME": "유대",
     "DESCRIPTION": "카드를 사용할 때마다, 그것과 같은 카드를 모두 강화합니다.",
     "UPGRADE_DESCRIPTION": "선천성. NL 카드를 사용할 때마다, 그것과 같은 카드를 모두 강화합니다."

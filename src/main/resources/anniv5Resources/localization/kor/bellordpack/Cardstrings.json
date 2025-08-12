@@ -1,47 +1,47 @@
 {
-  "anniv5:Reverberation": {
+  "${ModID}:Reverberation": {
     "NAME": "잔향",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 턴 시작 시, 이 카드가 버린 카드 더미에 있다면 손으로 돌아옵니다."
   },
-  "anniv5:Midnight": {
+  "${ModID}:Midnight": {
     "NAME": "종소리",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL anniv5:픽업 : *방울의 *저주를 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL ${ModID}:픽업 : *방울의 *저주를 얻습니다."
   },
-  "anniv5:Clang": {
+  "${ModID}:Clang": {
     "NAME": "쿵",
     "DESCRIPTION": "손에 저주 또는 상태이상 카드가 있어야만 사용할 수 있습니다. NL 피해를 !D! 줍니다.",
     "EXTENDED_DESCRIPTION": [
       "저주 또는 상태이상 카드가 없습니다."
     ]
   },
-  "anniv5:VoDo": {
+  "${ModID}:VoDo": {
     "NAME": "보-두",
-    "DESCRIPTION": "힘을 !M! 얻습니다. NL 적이 힘을 2 잃습니다. NL anniv5:픽업 : *방울의 *저주를 얻습니다."
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 적이 힘을 2 잃습니다. NL ${ModID}:픽업 : *방울의 *저주를 얻습니다."
   },
-  "anniv5:RingTheBell": {
+  "${ModID}:RingTheBell": {
     "NAME": "종을 울려라",
-    "DESCRIPTION": "모든 적이 체력을 !M! 잃습니다. NL 카드를 1장 뽑습니다. NL anniv5:픽업 : *방울의 *저주를 얻습니다."
+    "DESCRIPTION": "모든 적이 체력을 !M! 잃습니다. NL 카드를 1장 뽑습니다. NL ${ModID}:픽업 : *방울의 *저주를 얻습니다."
   },
-  "anniv5:TimeOut": {
+  "${ModID}:TimeOut": {
     "NAME": "타임아웃",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 1장 뽑습니다. NL 그것이 저주 또는 상태이상 카드라면, 모든 적이 힘을 !M! 잃습니다."
   },
-  "anniv5:Cuckoo": {
+  "${ModID}:Cuckoo": {
     "NAME": "뻐꾸기",
     "DESCRIPTION": "저주 카드를 뽑을 때마다, 무작위 적에게 피해를 !M! 줍니다.",
     "UPGRADE_DESCRIPTION": "선천성. NL 저주 카드를 뽑을 때마다, 무작위 적에게 피해를 !M! 줍니다."
   },
-  "anniv5:Dong": {
+  "${ModID}:Dong": {
     "NAME": "동!",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화와 취약을 !M! 부여합니다. NL anniv5:픽업 : *방울의 *저주를 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화와 취약을 !M! 부여합니다. NL ${ModID}:픽업 : *방울의 *저주를 얻습니다."
   },
-  "anniv5:LikeClockwork": {
+  "${ModID}:LikeClockwork": {
     "NAME": "시계처럼",
     "DESCRIPTION": "턴 종료 시, 손에 있는 저주 또는 상태이상 카드 하나당 방어도를 !M! 얻습니다.",
     "UPGRADE_DESCRIPTION": "선천성. NL 턴 종료 시, 손에 있는 저주 또는 상태이상 카드 하나당 방어도를 !M! 얻습니다."
   },
-  "anniv5:SavedByTheBell": {
+  "${ModID}:SavedByTheBell": {
     "NAME": "종으로 구원받다",
-    "DESCRIPTION": "보존. NL 불가침을 1 얻습니다. NL 소멸. NL anniv5:픽업 : *방울의 *저주를 2장 얻습니다."
+    "DESCRIPTION": "보존. NL 불가침을 1 얻습니다. NL 소멸. NL ${ModID}:픽업 : *방울의 *저주를 2장 얻습니다."
   }
 }

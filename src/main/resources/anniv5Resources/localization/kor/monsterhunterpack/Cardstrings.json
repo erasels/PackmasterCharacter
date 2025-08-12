@@ -1,142 +1,142 @@
 {
-  "anniv5:HuntingStrike": {
+  "${ModID}:HuntingStrike": {
     "NAME": "사냥 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 엘리트와 보스에게 두 배의 피해를 줍니다. NL 카드를 1 장 뽑습니다."
   },
-  "anniv5:Focus": {
+  "${ModID}:Focus": {
     "NAME": "추적",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL anniv5:표적을 !M! 부여합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:표적을 !M! 부여합니다."
   },
-  "anniv5:PerfectDodge": {
+  "${ModID}:PerfectDodge": {
     "NAME": "완벽한 회피",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 정확하게 막았을 경우, 힘을 !M! 얻습니다."
   },
-  "anniv5:Greatsword": {
+  "${ModID}:Greatsword": {
     "NAME": "그레이트소드",
     "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 턴 종료 시 남은 에너지가 있다면 에너지마다 이 카드의 피해량을 8 증가시킵니다."
   },
-  "anniv5:HuntingInstincts": {
+  "${ModID}:HuntingInstincts": {
     "NAME": "사냥꾼의 본능",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 엘리트나 보스와 전투 중일 경우 두 배로 얻습니다."
   },
-  "anniv5:SkullClub": {
+  "${ModID}:SkullClub": {
     "NAME": "두개골 곤봉",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상이 생존할 경우, anniv5:격분합니다! NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 대상이 생존할 경우, ${ModID}:격분합니다! NL 소멸."
   },
-  "anniv5:ShellPauldrons": {
+  "${ModID}:ShellPauldrons": {
     "NAME": "판금 갑각",
-    "DESCRIPTION": "anniv5:판금 *갑옷을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL anniv5:판금 *갑옷을 !M! 얻습니다."
+    "DESCRIPTION": "${ModID}:판금 *갑옷을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL ${ModID}:판금 *갑옷을 !M! 얻습니다."
   },
-  "anniv5:CoreBlaster": {
+  "${ModID}:CoreBlaster": {
     "NAME": "핵 블래스터",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에 *코어 *블라인더 를 섞어 넣습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에 *코어 *블라인더+ 를 섞어 넣습니다. NL 소멸."
   },
-  "anniv5:CoreBlinder": {
+  "${ModID}:CoreBlinder": {
     "NAME": "핵 블라인더",
     "DESCRIPTION": "약화와 취약을 !M! 부여합니다. NL 뽑을 카드 더미에 *코어 *블래스터 를 섞어 넣습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "약화와 취약을 !M! 부여합니다. NL 뽑을 카드 더미에 *코어 *블래스터+ 를 섞어 넣습니다.NL 소멸."
   },
-  "anniv5:GuardianShield": {
+  "${ModID}:GuardianShield": {
     "NAME": "수호자 방패",
     "DESCRIPTION": "턴 종료 시 방어도를 !M! 얻습니다. NL 공격받을 때마다 피해를 !M! 줍니다."
   },
-  "anniv5:InfernoDaggers": {
+  "${ModID}:InfernoDaggers": {
     "NAME": "지옥염 단검",
     "DESCRIPTION": "보존. NL 피해를 !D! 만큼 !M! 주고 이 카드의 비용을 6으로 만듭니다. NL 보존될 때마다 이 카드의 비용이 1 만큼 줄어듭니다.",
     "UPGRADE_DESCRIPTION": "선천성. 보존. NL 피해를 !D! 만큼 !M! 주고 이 카드의 비용을 6으로 만듭니다. NL 보존될 때마다 이 카드의 비용이 1 만큼 줄어듭니다."
   },
-  "anniv5:StabManual": {
+  "${ModID}:StabManual": {
     "NAME": "칼부림 교본",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL *단도 를 !M! 장 얻습니다. 이번 전투 동안 이 카드로 얻는 *단도 의 양을 1 증가시킵니다."
   },
-  "anniv5:SlimeHammer": {
+  "${ModID}:SlimeHammer": {
     "NAME": "슬라임 망치",
     "DESCRIPTION": "다음 턴 종료 시 피해를 !D! 줍니다.",
     "UPGRADE_DESCRIPTION": "약화를 1 부여합니다. NL 다음 턴 종료 시 피해를 !D! 줍니다."
   },
-  "anniv5:SlaverWhip": {
+  "${ModID}:SlaverWhip": {
     "NAME": "노예 관리자의 채찍",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 약화와 취약을 !M! 부여합니다. NL 이 카드가 적을 죽일 경우 손으로 돌아오고 이번 턴에 비용이 0이 됩니다."
   },
-  "anniv5:GremlinLance": {
+  "${ModID}:GremlinLance": {
     "NAME": "그렘린 창",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 적을 죽일 경우 [E] 를 얻고 카드를 1 장 뽑습니다."
   },
-  "anniv5:ChampMail": {
+  "${ModID}:ChampMail": {
     "NAME": "투사의 갑주",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 체력이 50% 이하가 되면 모든 해로운 효과를 제거하고 힘을 !M! 얻습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 체력이 50% 이하가 되면 모든 해로운 효과를 제거하고 힘을 !M! 얻습니다."
   },
-  "anniv5:CursedBow": {
+  "${ModID}:CursedBow": {
     "NAME": "저주받은 활",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 약화와 취약을 !M! 부여합니다. NL 소멸."
   },
-  "anniv5:HyperBlaster": {
+  "${ModID}:HyperBlaster": {
     "NAME": "파괴 블래스터",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미에 공허를 !M! 장 섞어 넣습니다."
   },
-  "anniv5:EphemeralShroud": {
+  "${ModID}:EphemeralShroud": {
     "NAME": "일시적 장막",
     "DESCRIPTION": "불가침을 !M! 얻습니다. NL 소멸."
   },
-  "anniv5:StoneHelm": {
+  "${ModID}:StoneHelm": {
     "NAME": "석재 조각",
     "DESCRIPTION": "방어도를 !B! 얻습니다. 이번 턴에 사용한 카드만큼 2 감소합니다. NL 턴을 종료합니다."
   },
-  "anniv5:TimepieceTiara": {
+  "${ModID}:TimepieceTiara": {
     "NAME": "시계 왕관",
     "DESCRIPTION": "카드를 12장 사용할 때마다 힘을 3 얻습니다.",
     "UPGRADE_DESCRIPTION": "선천성. NL 카드를 12장 사용할 때마다 힘을 3 얻습니다."
   },
-  "anniv5:DonuAmulet": {
+  "${ModID}:DonuAmulet": {
     "NAME": "도누 상징",
     "DESCRIPTION": "힘을 !M! 얻습니다."
   },
-  "anniv5:DecaAmulet": {
+  "${ModID}:DecaAmulet": {
     "NAME": "데카 상징",
-    "DESCRIPTION": "anniv5:판금 *갑옷을 !M! 얻습니다."
+    "DESCRIPTION": "${ModID}:판금 *갑옷을 !M! 얻습니다."
   },
-  "anniv5:SpireSpear": {
+  "${ModID}:SpireSpear": {
     "NAME": "첨탑의 창",
     "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다."
   },
-  "anniv5:SpireShield": {
+  "${ModID}:SpireShield": {
     "NAME": "첨탑의 방패",
     "DESCRIPTION": "방어도를 !B! 얻습니다."
   },
-  "anniv5:CarvingKnife": {
+  "${ModID}:CarvingKnife": {
     "NAME": "조각칼",
     "DESCRIPTION": "피해를 !D! 줍니다. 이 카드가 엘리트나 보스를 죽이면 그 대상의 무기나 방어구 카드를 얻고 이 카드는 덱에서 영구적으로 제거됩니다. NL 소멸."
   },
-  "anniv5:AwakenedRitualDagger": {
+  "${ModID}:AwakenedRitualDagger": {
     "NAME": "깨어난 단검",
     "DESCRIPTION": "피해를 !D! 줍니다. 치명타라면, 체력을 모두 회복합니다. NL 소멸."
   },
-  "anniv5:HuntingContract": {
+  "${ModID}:HuntingContract": {
     "NAME": "사냥 계약",
-    "DESCRIPTION": "선천성. NL anniv5:표적을 !M! 부여합니다. NL 소멸."
+    "DESCRIPTION": "선천성. NL ${ModID}:표적을 !M! 부여합니다. NL 소멸."
   },
-  "anniv5:HunterRank": {
+  "${ModID}:HunterRank": {
     "NAME": "사냥꾼 랭크",
     "DESCRIPTION": "힘을 !M! 얻습니다. 승리한 엘리트와 보스 전투마다 1 증가합니다."
   },
-  "anniv5:TranqBomb": {
+  "${ModID}:TranqBomb": {
     "NAME": "진정제 폭탄",
-    "DESCRIPTION": "anniv5:비치명적 피해를 !D! 줍니다. NL 적은 힘을 !M! 잃습니다. NL 소멸."
+    "DESCRIPTION": "${ModID}:비치명적 피해를 !D! 줍니다. NL 적은 힘을 !M! 잃습니다. NL 소멸."
   },
-  "anniv5:Paintball": {
+  "${ModID}:Paintball": {
     "NAME": "페인트볼",
-    "DESCRIPTION": "anniv5:표적을 !M! 부여합니다. NL 이번 턴에 !anniv5:m2! 장의 카드를 보존합니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:표적을 !M! 부여합니다. NL 이번 턴에 !anniv5:m2! 장의 카드를 보존합니다."
+    "DESCRIPTION": "${ModID}:표적을 !M! 부여합니다. NL 이번 턴에 !${ModID}:m2! 장의 카드를 보존합니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:표적을 !M! 부여합니다. NL 이번 턴에 !${ModID}:m2! 장의 카드를 보존합니다."
   },
-  "anniv5:SerpentineDagger": {
+  "${ModID}:SerpentineDagger": {
     "NAME": "뱀 모양 단검",
     "DESCRIPTION": "휘발성. NL 피해를 !D! 만큼 !M! 번 줍니다. NL 뽑을 카드 더미에 복사본을 2 장 섞어 넣습니다. NL 소멸."
   },
-  "anniv5:CorruptedBlade": {
+  "${ModID}:CorruptedBlade": {
     "NAME": "타락한 칼날",
-    "DESCRIPTION": "*의식을 3 얻습니다. NL anniv5:천하무적을 !M! 얻습니다. NL 피해를 !D! 만큼 15 번 줍니다."
+    "DESCRIPTION": "*의식을 3 얻습니다. NL ${ModID}:천하무적을 !M! 얻습니다. NL 피해를 !D! 만큼 15 번 줍니다."
   }
 }

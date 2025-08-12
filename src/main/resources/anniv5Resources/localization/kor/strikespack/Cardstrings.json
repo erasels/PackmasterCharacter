@@ -1,43 +1,43 @@
 {
-  "anniv5:StrikeOfMidnight": {
+  "${ModID}:StrikeOfMidnight": {
     "NAME": "자정의 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 암흑을 1번 영창합니다."
   },
-  "anniv5:StrikeOfLuck": {
+  "${ModID}:StrikeOfLuck": {
     "NAME": "행운의 타격",
     "DESCRIPTION": "무작위 적에게 피해를 !D! 만큼 1에서 3번 줍니다."
   },
-  "anniv5:WorkersStrike": {
+  "${ModID}:WorkersStrike": {
     "NAME": "파업 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 공격 카드를 뽑습니다. 타격 일 경우, [E] 를 얻습니다."
   },
-  "anniv5:StrikeDummyJr": {
+  "${ModID}:StrikeDummyJr": {
     "NAME": "인형용 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 힘을 !M! 얻습니다. NL 타격 은 이번 전투 동안 2 피해를 더 줍니다. NL 소멸."
   },
-  "anniv5:DifferentStrikes": {
+  "${ModID}:DifferentStrikes": {
     "NAME": "다른 타격들",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 소멸시킵니다. 비용이 1 감소하고 소멸되는 타격 을 얻습니다.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 소멸시킵니다. 비용이 1 감소하고 소멸되는 강화된 타격 을 얻습니다."
   },
-  "anniv5:StrikeOfGenius": {
+  "${ModID}:StrikeOfGenius": {
     "NAME": "천재적인 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 사용하는 공격 카드는 '막히지 않은 피해량만큼 방어도를 얻습니다' 를 얻습니다."
   },
-  "anniv5:StrikeABargain": {
+  "${ModID}:StrikeABargain": {
     "NAME": "합의 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 공격 카드의 비용이 사용하기 전까지 0 이 됩니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 손에 있는 공격 카드의 비용이 사용하기 전까지 0 이 됩니다."
   },
-  "anniv5:Backstrike": {
+  "${ModID}:Backstrike": {
     "NAME": "배신 타격",
     "DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. NL 손에 있는 공격 카드는 이번 전투 동안 *타격들로 취급됩니다. NL 소멸."
   },
-  "anniv5:LightningStrike": {
+  "${ModID}:LightningStrike": {
     "NAME": "번개 타격",
     "DESCRIPTION": "피해를 !D! 만큼 두 번 줍니다. NL 전기를 2번 영창합니다."
   },
-  "anniv5:PenaltyStrike": {
+  "${ModID}:PenaltyStrike": {
     "NAME": "페널티 타격",
     "DESCRIPTION": "피해를 !D! 만큼 두 번 줍니다. NL 적이 이번 턴 동안 힘을 !M! 잃습니다."
   }

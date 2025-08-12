@@ -1,12 +1,12 @@
 {
-  "anniv5:WomanInBluePack": {
+  "${ModID}:WomanInBluePack": {
     "TEXT": [
       "파란 옷의 양조",
       "포션 테마의 유용한 소멸 카드 모음집입니다. 몇몇 선택 카드를 포함합니다.",
       "MichaelMayhem"
     ]
   },
-  "anniv5:WomanInBluePackHat": {
+  "${ModID}:WomanInBluePackHat": {
     "TEXT": [
       "문제가 생길 때마다 쓰고 있는 게 발견되었습니다.",
       "파란 색의 모자"

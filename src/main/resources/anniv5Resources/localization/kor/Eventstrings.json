@@ -1,5 +1,5 @@
 {
-  "anniv5:BlackMarketDealerEvent": {
+  "${ModID}:BlackMarketDealerEvent": {
     "NAME": "암시장",
     "DESCRIPTIONS": [
       "\"저기, 너! 그런 크기의 배낭을 가지고 있다면, 분명히 수집가일 거야! NL NL 들어와서 구경해 - 오늘은 아주 멋진 임시 팝업 마켓이 열렸어, 물론 합법적이야. 네가 필요한 뭔가를 찾을 수 있을 거야... 그냥 우리가 여기에 있었다는 얘기는 하지 마!\"",

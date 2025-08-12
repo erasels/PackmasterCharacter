@@ -1,12 +1,12 @@
 {
-  "anniv5:OrbPack": {
+  "${ModID}:OrbPack": {
     "TEXT": [
       "구체",
       "구체를 영창하고 이용하세요.",
       "Alchyr"
     ]
   },
-  "anniv5:OrbPackHat": {
+  "${ModID}:OrbPackHat": {
     "TEXT": [
       "턴 시작 시, 멋진 구체를 2번 영창합니다.",
       "구체"

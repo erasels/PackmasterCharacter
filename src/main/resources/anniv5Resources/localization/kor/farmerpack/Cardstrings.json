@@ -1,55 +1,55 @@
 {
-  "anniv5:Fertilizer": {
+  "${ModID}:Fertilizer": {
     "NAME": "비료",
     "DESCRIPTION": "카드를 1장 뽑습니다. NL 소멸. NL 상태이상으로 간주합니다.",
     "UPGRADE_DESCRIPTION": "카드를 !M!장 뽑습니다. NL 소멸. NL 상태이상으로 간주합니다."
   },
-  "anniv5:FertilizerPlaceholder": {
+  "${ModID}:FertilizerPlaceholder": {
     "NAME": "비료 자리 표시자",
     "DESCRIPTION": "카드를 1장 뽑습니다. NL 소멸. NL 생성 시, 상태이상 또는 저주로간주합니다.",
     "UPGRADE_DESCRIPTION": "카드를 !M!장 뽑습니다. NL 소멸. NL 생성 시, 상태이상 또는 저주로간주합니다."
   },
-  "anniv5:HarvestBeans": {
+  "${ModID}:HarvestBeans": {
     "NAME": "콩 수확",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투에서 마지막으로 사용한 카드가 공격이 아니면 모든 적에게 피해를 !D! 줍니다."
   },
-  "anniv5:HarvestCarrots": {
+  "${ModID}:HarvestCarrots": {
     "NAME": "당근 수확",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 사용한 카드 유형마다 반복됩니다.",
     "EXTENDED_DESCRIPTION": [" NL (반복 횟수: !M!회.)"]
   },
-  "anniv5:HarvestPotatoes": {
+  "${ModID}:HarvestPotatoes": {
     "NAME": "감자 수확",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 전투에서 마지막으로 사용한 카드가 스킬이 아니면 방어도를 !B! 다시 얻습니다."
   },
-  "anniv5:HarvestRadishes": {
+  "${ModID}:HarvestRadishes": {
     "NAME": "무 수확",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 카드 유형마다 1개의 약화를 적용합니다.",
     "EXTENDED_DESCRIPTION": [" NL (반복 횟수: !M!회.)"]
   },
-  "anniv5:OutToMarket": {
+  "${ModID}:OutToMarket": {
     "NAME": "시장으로",
     "DESCRIPTION": "마지막으로 사용한 카드와 다른 유형의 카드를 사용할 때마다 모든 적에게 !M! 피해를 줍니다."
   },
-  "anniv5:PestControl": {
+  "${ModID}:PestControl": {
     "NAME": "해충 퇴치",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 카드 유형마다 반복됩니다.",
     "EXTENDED_DESCRIPTION": [" NL (반복 횟수: !M!회.)"]
   },
-  "anniv5:SoilResiliency": {
+  "${ModID}:SoilResiliency": {
     "NAME": "토양 탄력성",
     "DESCRIPTION": "힘을 !M! 얻습니다. NL 이번 턴에 3개 이상의 카드 유형을 사용했다면, 재사용 후 최대 10까지 두 배로 증가합니다. NL 소멸성 !stslib:ex!."
   },
-  "anniv5:SupplyChain": {
+  "${ModID}:SupplyChain": {
     "NAME": "공급망",
     "DESCRIPTION": "매 턴 시작 시 *비료 를 얻습니다.",
     "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 시작 시 *비료 를 얻습니다."
   },
-  "anniv5:SowTheSeeds": {
+  "${ModID}:SowTheSeeds": {
     "NAME": "씨앗 뿌리기",
     "DESCRIPTION": "*비료 를 얻습니다. NL 뽑을 카드 더미에서 !M!개의 다른 유형의 무작위 카드를 뽑습니다."
   },
-  "anniv5:TillTheEarth": {
+  "${ModID}:TillTheEarth": {
     "NAME": "땅갈기",
     "DESCRIPTION": "피해를 !D! 줍니다. NL *비료 를 얻습니다."
   }

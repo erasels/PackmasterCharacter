@@ -1,5 +1,5 @@
 {
-  "anniv5:MiniHakkero": {
+  "${ModID}:MiniHakkero": {
     "NAME": "작은 팔괘로",
     "FLAVOR": "산을 파괴할 정도의 열과 에너지를 생성하는 작은 원소 용광로입니다.",
     "DESCRIPTIONS": [

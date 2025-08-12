@@ -1,5 +1,5 @@
 {
-  "anniv5:BunkerPower": {
+  "${ModID}:BunkerPower": {
     "NAME": "벙커",
     "DESCRIPTIONS": [
       "다음 턴 시작 시, #y골프 #y공을 1 얻습니다.",
@@ -7,14 +7,14 @@
       " 얻습니다."
     ]
   },
-  "anniv5:ColorlessMasteryPower": {
+  "${ModID}:ColorlessMasteryPower": {
     "NAME": "무색 숙련",
     "DESCRIPTIONS": [
       "무색 카드를 사용할 때마다 힘을 #b",
       " 얻습니다."
     ]
   },
-  "anniv5:LunchBoxPower": {
+  "${ModID}:LunchBoxPower": {
     "NAME": "도시락 상자",
     "DESCRIPTIONS": [
       "이번 턴 동안, 다음 무색 카드를 두 번 사용합니다.",
@@ -22,7 +22,7 @@
       "개의 무색 카드를 두 번 사용합니다."
     ]
   },
-  "anniv5:MonasteryPower": {
+  "${ModID}:MonasteryPower": {
     "NAME": "수도원 방문",
     "DESCRIPTIONS": [
       "다음 #b3턴 시작 시, #y광기, #y순수, 그리고 #y신성 을 얻습니다.",
@@ -30,7 +30,7 @@
       "다음 턴 시작 시, #y신성 을 얻습니다."
     ]
   },
-  "anniv5:PrismShardPower": {
+  "${ModID}:PrismShardPower": {
     "NAME": "프리즘 조각",
     "DESCRIPTIONS": [
       "#y조각 3개를 모으면, ",
@@ -38,7 +38,7 @@
       " 를 얻습니다."
     ]
   },
-  "anniv5:GhostPower": {
+  "${ModID}:GhostPower": {
     "NAME": "유령",
     "DESCRIPTIONS": [
       "턴 #r종료 시, 체력을 #b",

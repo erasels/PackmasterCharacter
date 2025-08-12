@@ -1,5 +1,5 @@
 {
-  "anniv5:BatterPack": {
+  "${ModID}:BatterPack": {
     "TEXT": [
       "타자",
       "매우 공격적인 부스터 팩입니다. 강력하고 단일한 일격으로 적들에게 정의로운 분노를 퍼부으세요.",
@@ -7,7 +7,7 @@
       "#yOFF created by #yMortis #yGhost"
     ]
   },
-  "anniv5:BatterPackHat": {
+  "${ModID}:BatterPackHat": {
     "TEXT": [
       "정화가 진행중입니다.",
       "야구 모자"

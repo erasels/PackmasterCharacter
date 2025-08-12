@@ -1,5 +1,5 @@
 {
-  "anniv5:GravityPower": {
+  "${ModID}:GravityPower": {
     "NAME": "중력",
     "DESCRIPTIONS": [
       "#y잠김 또는 #y사용불가 카드를 뽑을 때마다, 카드를 1 장 뽑습니다.",
@@ -7,7 +7,7 @@
       " 장 뽑습니다."
     ]
   },
-  "anniv5:DeepDreamPower": {
+  "${ModID}:DeepDreamPower": {
     "NAME": "깊은 꿈",
     "DESCRIPTIONS": [
       "이번 턴에 카드를 사용할 때마다, 손에 있는 무작위 카드를 #y오컬트로 만듭니다.",

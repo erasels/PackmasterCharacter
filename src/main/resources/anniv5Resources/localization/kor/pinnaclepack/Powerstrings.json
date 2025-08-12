@@ -1,18 +1,18 @@
 {
-  "anniv5:Capacitor": {
+  "${ModID}:Capacitor": {
     "NAME": "축전지",
     "DESCRIPTIONS": [
       "이번 턴, #b",
       " 장의 카드를 더 들고있을 수 있습니다."
     ]
   },
-  "anniv5:Cooking": {
+  "${ModID}:Cooking": {
     "NAME": "요리 파워",
     "DESCRIPTIONS": [
       "턴 종료 시, #y크로켓을 요리합니다."
     ]
   },
-  "anniv5:Cooking_": {
+  "${ModID}:Cooking_": {
     "NAME": "요리 파워+",
     "DESCRIPTIONS": [
       "턴 종료 시, #y강화된 #y크로켓을 요리합니다."

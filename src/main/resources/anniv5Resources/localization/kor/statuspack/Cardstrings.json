@@ -1,5 +1,5 @@
 {
-  "anniv5:DarkerEmbrace": {
+  "${ModID}:DarkerEmbrace": {
     "NAME": "암흑의 포옹",
     "DESCRIPTION": "카드가 소멸될 때마다, 카드를 !M! 장 뽑습니다."
   }

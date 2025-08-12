@@ -1,51 +1,51 @@
 {
-  "anniv5:Excitement": {
+  "${ModID}:Excitement": {
     "NAME": "흥분",
     "DESCRIPTION": " [E] [E] 를 얻습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": " [E] [E] 를 얻습니다. NL 소멸성 !stslib:ex!."
   },
-  "anniv5:LayeredDefenses": {
+  "${ModID}:LayeredDefenses": {
     "NAME": "층상 방어",
     "DESCRIPTION": "손에 있는 카드 종류만큼 방어도를 !B! 얻습니다.",
     "EXTENDED_DESCRIPTION": [" NL ({0} 카드 종류.)"]
   },
-  "anniv5:PreemptiveStrike": {
+  "${ModID}:PreemptiveStrike": {
     "NAME": "선제 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 공격하려는 의도가 있다면 피해를 !D! 줍니다."
   },
-  "anniv5:PlasmaShield": {
+  "${ModID}:PlasmaShield": {
     "NAME": "플라즈마 방패",
-    "DESCRIPTION": "턴 종료 시, 플라즈마가 있다면 방어도를 !M! 얻습니다. NL 플라즈마를 !anniv5:m2! 번 영창합니다."
+    "DESCRIPTION": "턴 종료 시, 플라즈마가 있다면 방어도를 !M! 얻습니다. NL 플라즈마를 !${ModID}:m2! 번 영창합니다."
   },
-  "anniv5:Enrage": {
+  "${ModID}:Enrage": {
     "NAME": "격분",
-    "DESCRIPTION": "카드를 !anniv5:m2! 장 버립니다. NL 카드를 !M! 장 뽑습니다. NL anniv5:격노합니다."
+    "DESCRIPTION": "카드를 !${ModID}:m2! 장 버립니다. NL 카드를 !M! 장 뽑습니다. NL ${ModID}:격노합니다."
   },
-  "anniv5:Whispers": {
+  "${ModID}:Whispers": {
     "NAME": "속삭임",
     "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL *어지러움을 1 장 얻습니다."
   },
-  "anniv5:Replenish": {
+  "${ModID}:Replenish": {
     "NAME": "보급",
     "DESCRIPTION": "버린 카드 더미에서 카드 2 장을 손으로 가져옵니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "버린 카드 더미에서 카드 2 장을 손으로 가져옵니다."
   },
-  "anniv5:LesserHex": {
+  "${ModID}:LesserHex": {
     "NAME": "약한 주술",
     "DESCRIPTION": "약화를 !M! 부여합니다. NL 취약을 !M! 부여합니다. NL 적이 힘을 !M! 잃습니다. NL *강한\u00a0주술 을 버린 카드 더미에 섞어 넣습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "약화를 !M! 부여합니다. NL 취약을 !M! 부여합니다. NL 적이 힘을 !M! 잃습니다. NL *강한\u00a0주술+ 을 버린 카드 더미에 섞어 넣습니다. NL 소멸."
   },
-  "anniv5:GreaterHex": {
+  "${ModID}:GreaterHex": {
     "NAME": "강한 주술",
     "DESCRIPTION": "약화를 !M! 부여합니다. NL 취약을 !M! 부여합니다. NL 적이 힘을 !M! 잃습니다. NL 소멸."
   },
-  "anniv5:Conjuration": {
+  "${ModID}:Conjuration": {
     "NAME": "주문",
     "DESCRIPTION": "뽑을 카드 더미에서 카드를 선택합니다. NL 그 카드를 사용하고 소멸시킵니다.",
     "UPGRADE_DESCRIPTION": "뽑을 카드 더미에서 카드를 선택합니다. NL 그 카드를 사용합니다.",
     "EXTENDED_DESCRIPTION": ["뽑을 카드 더미에 카드가 없어."]
   },
-  "anniv5:RareStrike": {
+  "${ModID}:RareStrike": {
     "NAME": "희귀한 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 가지고 있는 모든 *희귀 카드마다 !M! 피해를 더 줍니다."
   }

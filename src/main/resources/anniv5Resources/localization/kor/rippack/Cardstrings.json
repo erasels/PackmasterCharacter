@@ -1,10 +1,10 @@
 {
-  "anniv5:DividedFury": {
+  "${ModID}:DividedFury": {
     "NAME": "분산된 분노",
-    "DESCRIPTION": "턴 시작 시, 손에 있는 !M! 장의 카드를 anniv5:찢을 *수 *있게 합니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시, 손에 있는 !M! 장의 카드를 anniv5:찢을 *수 *있게 합니다."
+    "DESCRIPTION": "턴 시작 시, 손에 있는 !M! 장의 카드를 ${ModID}:찢을 *수 *있게 합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시, 손에 있는 !M! 장의 카드를 ${ModID}:찢을 *수 *있게 합니다."
   },
-  "anniv5:ViciousCycle": {
+  "${ModID}:ViciousCycle": {
     "NAME": "악랄한 순환",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 찢어진 카드마다 피해를 !D! 더 줍니다.",
     "EXTENDED_DESCRIPTION": [
@@ -13,44 +13,44 @@
       " 장 찢어짐.)"
     ]
   },
-  "anniv5:ArtAttack": {
+  "${ModID}:ArtAttack": {
     "NAME": "그림 공격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:그림 카드는 대상에게 체력을 !M! 잃게 합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:그림 카드는 대상에게 체력을 !M! 잃게 합니다."
   },
-  "anniv5:SurprisePack": {
+  "${ModID}:SurprisePack": {
     "NAME": "서프라이즈 팩",
     "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL *찢어지면, [E] 를 얻습니다.",
     "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL *찢어지면, [E] 를 얻습니다."
   },
-  "anniv5:Inspiration": {
+  "${ModID}:Inspiration": {
     "NAME": "영감",
-    "DESCRIPTION": "소멸된 더미의 anniv5:그림 카드와 상태이상 만큼 카드를 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "소멸된 더미의 anniv5:그림 카드와 상태이상 만큼 카드를 뽑습니다.",
+    "DESCRIPTION": "소멸된 더미의 ${ModID}:그림 카드와 상태이상 만큼 카드를 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "소멸된 더미의 ${ModID}:그림 카드와 상태이상 만큼 카드를 뽑습니다.",
     "EXTENDED_DESCRIPTION": [
       " NL (카드를 ",
       " 장 뽑습니다.)",
       " 장 뽑습니다.)"
     ]
   },
-  "anniv5:FlimsyBash": {
+  "${ModID}:FlimsyBash": {
     "NAME": "얇은 강타",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다."
   },
-  "anniv5:FragileShrug": {
+  "${ModID}:FragileShrug": {
     "NAME": "연약한 흘려보내기",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 !M! 장 뽑습니다. NL *찢어지면, 카드를 !M! 장 뽑습니다."
   },
-  "anniv5:HazardousStrike": {
+  "${ModID}:HazardousStrike": {
     "NAME": "위험한 타격",
     "DESCRIPTION": "피해를 !D! 줍니다. NL *찢어지면, 무작위 !M! 장의 카드를 소멸시킵니다."
   },
-  "anniv5:TotalWeakness": {
+  "${ModID}:TotalWeakness": {
     "NAME": "총체적 약점",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적 전체에게 약화를 !M! 부여합니다."
   },
-  "anniv5:LeftBrain": {
+  "${ModID}:LeftBrain": {
     "NAME": "좌뇌",
-    "DESCRIPTION": "모든 anniv5:그림 카드와 상태이상을 소멸시킵니다. 소멸시킨 카드마다 힘을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:후천성. NL 모든 anniv5:그림 카드와 상태이상을 소멸시킵니다. 소멸시킨 카드마다 힘을 !M! 얻습니다."
+    "DESCRIPTION": "모든 ${ModID}:그림 카드와 상태이상을 소멸시킵니다. 소멸시킨 카드마다 힘을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:후천성. NL 모든 ${ModID}:그림 카드와 상태이상을 소멸시킵니다. 소멸시킨 카드마다 힘을 !M! 얻습니다."
   }
 }

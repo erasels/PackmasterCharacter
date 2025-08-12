@@ -1,12 +1,12 @@
 {
-  "anniv5:MindOverMatterPower": {
+  "${ModID}:MindOverMatterPower": {
     "NAME": "물질에 대한 마음",
     "DESCRIPTIONS": [
       "카드를 뽑을 때마다, #y방어도를 #b",
       " 얻습니다."
     ]
   },
-  "anniv5:ThoughtweavingPower": {
+  "${ModID}:ThoughtweavingPower": {
     "NAME": "생각의 짜임",
     "DESCRIPTIONS": [
       "#y스킬 또는 공격 카드를 사용할 때마다,",

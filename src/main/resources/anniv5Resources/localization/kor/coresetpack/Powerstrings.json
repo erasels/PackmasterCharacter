@@ -1,5 +1,5 @@
 {
-  "anniv5:MayhemFormPower": {
+  "${ModID}:MayhemFormPower": {
     "NAME": "끊임없는 형상",
     "DESCRIPTIONS": [
       "턴당 한 번, 손에 카드가 #b2장 이하가 되면, 카드를 #b2",

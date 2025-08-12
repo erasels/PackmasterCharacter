@@ -1,63 +1,63 @@
 {
-  "anniv5:RuleCancel": {
+  "${ModID}:RuleCancel": {
     "NAME": "규칙 취소",
-    "DESCRIPTION": "손에 있는 카드를 anniv5:오컬트로 만듭니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "손에 있는 카드를 anniv5:오컬트로 만듭니다."
+    "DESCRIPTION": "손에 있는 카드를 ${ModID}:오컬트로 만듭니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "손에 있는 카드를 ${ModID}:오컬트로 만듭니다."
   },
-  "anniv5:Brainwave": {
+  "${ModID}:Brainwave": {
     "NAME": "뇌파",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 손에 있는 무작위 공격 카드를 anniv5:오컬트로 만듭니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 손에 있는 무작위 공격 카드를 ${ModID}:오컬트로 만듭니다."
   },
-  "anniv5:TelephonePole": {
+  "${ModID}:TelephonePole": {
     "NAME": "전신주",
-    "DESCRIPTION": "anniv5:잠금. NL 피해를 !D! 줍니다. NL 취약을 !M! 부여합니다.",
+    "DESCRIPTION": "${ModID}:잠금. NL 피해를 !D! 줍니다. NL 취약을 !M! 부여합니다.",
     "EXTENDED_DESCRIPTION": [
-      "anniv5:잠김. NL 피해를 !D! 줍니다. NL 취약을 !M! 부여합니다."
+      "${ModID}:잠김. NL 피해를 !D! 줍니다. NL 취약을 !M! 부여합니다."
     ]
   },
-  "anniv5:Gravity": {
+  "${ModID}:Gravity": {
     "NAME": "중력",
-    "DESCRIPTION": "휘발성. NL anniv5:잠김 또는 사용불가 카드를 뽑을 때마다, 카드를 1 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:잠김 또는 사용불가 카드를 뽑을 때마다, 카드를 1 장 뽑습니다."
+    "DESCRIPTION": "휘발성. NL ${ModID}:잠김 또는 사용불가 카드를 뽑을 때마다, 카드를 1 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:잠김 또는 사용불가 카드를 뽑을 때마다, 카드를 1 장 뽑습니다."
   },
-  "anniv5:PhantomStep": {
+  "${ModID}:PhantomStep": {
     "NAME": "환영 걸음",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 뽑을 카드 더미의 카드 1 장을 anniv5:오컬트로 만듭니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 뽑을 카드 더미의 카드 1 장을 ${ModID}:오컬트로 만듭니다."
   },
-  "anniv5:Repel": {
+  "${ModID}:Repel": {
     "NAME": "반발",
-    "DESCRIPTION": "anniv5:잠금. NL 방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 약화를 !M! 부여합니다.",
+    "DESCRIPTION": "${ModID}:잠금. NL 방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 약화를 !M! 부여합니다.",
     "EXTENDED_DESCRIPTION": [
-      "anniv5:잠김. NL 방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 약화를 !M! 부여합니다."
+      "${ModID}:잠김. NL 방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다. NL 약화를 !M! 부여합니다."
     ]
   },
-  "anniv5:OneIsEnough": {
+  "${ModID}:OneIsEnough": {
     "NAME": "하나면 충분해",
     "DESCRIPTION": "{@@}카드를 !M! 장 {!M!|0=뽑습니다.|1=뽑습니다.|2=뽑고 하나를 선택합니다. NL 나머지는 이번 턴에 사용할 수 없습니다.|@=뽑고 하나를 선택합니다. NL 나머지는 이번 턴에 사용할 수 없습니다.}",
     "EXTENDED_DESCRIPTION": [
       "사용할 수 있게 하기"
     ]
   },
-  "anniv5:Curse": {
+  "${ModID}:Curse": {
     "NAME": "저주",
-    "DESCRIPTION": "anniv5:잠금. NL 적이 힘을 !M! 잃습니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:잠금. NL 보존. NL 적이 힘을 !M! 잃습니다.",
+    "DESCRIPTION": "${ModID}:잠금. NL 적이 힘을 !M! 잃습니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:잠금. NL 보존. NL 적이 힘을 !M! 잃습니다.",
     "EXTENDED_DESCRIPTION": [
-      "anniv5:잠금. NL 적이 힘을 !M! 잃습니다.",
-      "anniv5:잠김. NL 보존. NL 적이 힘을 !M! 잃습니다."
+      "${ModID}:잠금. NL 적이 힘을 !M! 잃습니다.",
+      "${ModID}:잠김. NL 보존. NL 적이 힘을 !M! 잃습니다."
     ]
   },
-  "anniv5:MalleableFire": {
+  "${ModID}:MalleableFire": {
     "NAME": "재련용 불꽃",
     "DESCRIPTION": "피해를 !D! 만큼 X 번 줍니다. NL 뽑을 카드 더미에 비용이 X인 *형성된 *불꽃 을 섞어 넣습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 만큼 X 번 줍니다. NL 뽑을 카드 더미에 비용이 X인 *형성된 *불꽃+ 을 섞어 넣습니다. NL 소멸."
   },
-  "anniv5:MoldedFire": {
+  "${ModID}:MoldedFire": {
     "NAME": "형성된 불꽃",
-    "DESCRIPTION": "anniv5:오컬트. NL 이 카드의 비용이 현재 에너지에 비해 초과하는 [E] 마다 피해를 !D! 줍니다."
+    "DESCRIPTION": "${ModID}:오컬트. NL 이 카드의 비용이 현재 에너지에 비해 초과하는 [E] 마다 피해를 !D! 줍니다."
   },
-  "anniv5:DeepDream": {
+  "${ModID}:DeepDream": {
     "NAME": "깊은 꿈",
-    "DESCRIPTION": "이번 턴에 카드를 사용할 때마다, 손에 있는 무작위 카드를 anniv5:오컬트로 만듭니다. NL 소멸."
+    "DESCRIPTION": "이번 턴에 카드를 사용할 때마다, 손에 있는 무작위 카드를 ${ModID}:오컬트로 만듭니다. NL 소멸."
   }
 }

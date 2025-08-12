@@ -1,21 +1,21 @@
 {
-  "anniv5:Ignite": {
+  "${ModID}:Ignite": {
     "NAME": "점화",
     "DESCRIPTIONS": ["턴 종료 시, 체력을 #b{0} 잃습니다.", "이 적의 턴 시작 시, 체력을 #b{0} 잃습니다."]
   },
-  "anniv5:FreezeAndBurn": {
+  "${ModID}:FreezeAndBurn": {
     "NAME": "얼리고 불태우기",
     "DESCRIPTIONS": ["다음 턴 시작 시, 적 전체에게 피해를 #b{0} 줍니다."]
   },
-  "anniv5:FieryMantle": {
+  "${ModID}:FieryMantle": {
     "NAME": "작열하는 망토",
     "DESCRIPTIONS": ["이번 턴에 공격을 받을 때마다, #y점화를 #b{0} 부여합니다."]
   },
-  "anniv5:Pyromastery": {
+  "${ModID}:Pyromastery": {
     "NAME": "화염의 대가",
     "DESCRIPTIONS": ["#y점화를 부여할 때마다, 추가로 #b{0} 부여합니다."]
   },
-  "anniv5:FueledByEmbers": {
+  "${ModID}:FueledByEmbers": {
     "NAME": "장작 연료",
     "DESCRIPTIONS": [
       "턴 시작 시, 카드를 #b{0} 장 뽑고 #y희미해지는 #y불씨 #b{0} 장을 손과 뽑을 카드 더미에 넣습니다.",

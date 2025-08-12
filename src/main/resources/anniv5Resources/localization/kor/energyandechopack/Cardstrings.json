@@ -1,44 +1,44 @@
 {
-  "anniv5:ShadowStrike": {
+  "${ModID}:ShadowStrike": {
     "NAME": "그림자 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:메아리."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:메아리."
   },
-  "anniv5:MagnetRise": {
+  "${ModID}:MagnetRise": {
     "NAME": "자기 상승",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 추가로 [E] 가 생성되었다면, 이 카드는 비용이 0이 됩니다."
   },
-  "anniv5:TearApart": {
+  "${ModID}:TearApart": {
     "NAME": "찢어버리기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 적을 처치하면 [E] 를 얻습니다. NL anniv5:메아리."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 적을 처치하면 [E] 를 얻습니다. NL ${ModID}:메아리."
   },
-  "anniv5:Voices": {
+  "${ModID}:Voices": {
     "NAME": "목소리",
-    "DESCRIPTION": "카드를 !M! 뽑습니다. NL anniv5:메아리. NL 소멸."
+    "DESCRIPTION": "카드를 !M! 뽑습니다. NL ${ModID}:메아리. NL 소멸."
   },
-  "anniv5:Flashlight": {
+  "${ModID}:Flashlight": {
     "NAME": "손전등",
     "DESCRIPTION": "선천성. NL [E] 를 얻습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "선천성. NL [E] 를 얻습니다. NL 다음 턴에 [E] 를 얻습니다. NL 소멸."
   },
-  "anniv5:Discharge": {
+  "${ModID}:Discharge": {
     "NAME": "방출",
     "DESCRIPTION": "이번 턴에 사용된 [E] 의 5배만큼 피해를 줍니다.",
     "EXTENDED_DESCRIPTION": ["이번 턴에 사용된 [E] 의 5배만큼 피해를 줍니다. NL (피해를 !D! 줍니다.)"]
   },
-  "anniv5:Overload": {
+  "${ModID}:Overload": {
     "NAME": "과부하",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드의 피해는 !M!만큼 증가하고 비용은 이번 전투에서 1만큼 증가합니다."
   },
-  "anniv5:Panacher": {
+  "${ModID}:Panacher": {
     "NAME": "화려함",
     "DESCRIPTION": "카드 5장이 생성될 때마다 모든 적에게 !M! 피해를 줍니다."
   },
-  "anniv5:Slowing": {
+  "${ModID}:Slowing": {
     "NAME": "느려짐",
     "DESCRIPTION": "턴 시작 시 [E] 를 얻습니다. NL 손에 !M! *상처 를 추가합니다.",
     "UPGRADE_DESCRIPTION": "턴 시작 시 [E] 를 얻습니다. NL 손에 *상처 를 1장 추가합니다."
   },
-  "anniv5:Crystallize": {
+  "${ModID}:Crystallize": {
     "NAME": "결정화",
     "DESCRIPTION": "사용 가능한 [E] 마다 방어도를 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": ["사용 가능한 [E] 마다 방어도를 !M! 얻습니다. NL (방어도를 !B! 얻습니다.)"]

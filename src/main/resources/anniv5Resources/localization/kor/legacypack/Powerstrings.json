@@ -1,5 +1,5 @@
 {
-  "anniv5:PoisonMasteryPower": {
+  "${ModID}:PoisonMasteryPower": {
     "NAME": "중독 숙련",
     "DESCRIPTIONS": [
       "중독 으로 입히는 피해가 #b",

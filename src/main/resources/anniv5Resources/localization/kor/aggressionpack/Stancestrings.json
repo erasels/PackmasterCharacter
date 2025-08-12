@@ -1,5 +1,5 @@
 {
-  "anniv5:Aggression": {
+  "${ModID}:Aggression": {
     "NAME": "격노",
     "DESCRIPTION": ["공격 시 피해량이 #b{0}% 증가합니다. 이 #y경지에서 벗어나면 #y힘을 #b2 얻습니다."]
   }

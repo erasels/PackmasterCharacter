@@ -1,19 +1,19 @@
 {
-  "anniv5:DuplicateModifier": {
+  "${ModID}:DuplicateModifier": {
     "TEXT": [
       " NL 이 카드를 ",
       " 번 사용합니다.",
       " NL 이 카드를 X번 사용합니다."
     ]
   },
-  "anniv5:BasicsPack": {
+  "${ModID}:BasicsPack": {
     "TEXT": [
       "기본",
-      "anniv5:기본 카드에 초점을 맞춘 팩입니다.",
+      "${ModID}:기본 카드에 초점을 맞춘 팩입니다.",
       "Jack Renoson"
     ]
   },
-  "anniv5:BasicsPackHat": {
+  "${ModID}:BasicsPackHat": {
     "TEXT": [
       "모험가를 위한 단순한 기본 모자입니다.",
       "기본 페도라"

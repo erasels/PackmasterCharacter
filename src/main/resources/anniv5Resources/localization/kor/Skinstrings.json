@@ -1,23 +1,23 @@
 {
-  "anniv5:SkinSystemUI": {
+  "${ModID}:SkinSystemUI": {
     "TEXT": [
       "스킨",
       "아티스트: "
     ]
   },
-  "anniv5:packmasterSkin": {
+  "${ModID}:packmasterSkin": {
     "TEXT": [
       "팩마스터",
       "AlexMdle"
     ]
   },
-  "anniv5:packmistressSkin": {
+  "${ModID}:packmistressSkin": {
     "TEXT": [
       "여성 팩마스터",
       "TheLethargicWeirdo"
     ]
   },
-  "anniv5:randomSkin": {
+  "${ModID}:randomSkin": {
     "TEXT": [
       "랜덤",
       "다중"

@@ -1,12 +1,12 @@
 {
-  "anniv5:MadSciencePack": {
+  "${ModID}:MadSciencePack": {
     "TEXT": [
       "매드 사이언스!",
       "보너스 효과로 카드를 수정하고 게임을 터뜨리세요!",
       "MichaelMayhem"
     ]
   },
-  "anniv5:MadScienceModifiers": {
+  "${ModID}:MadScienceModifiers": {
     "TEXT": [
       " NL 냉기를 ",
       " 번 영창합니다.",
@@ -19,12 +19,12 @@
       " NL 카드를 1 장 뽑습니다."
     ]
   },
-  "anniv5:AddModifierUI": {
+  "${ModID}:AddModifierUI": {
     "TEXT": [
       "수정할 카드를 선택하십시오."
     ]
   },
-  "anniv5:MadSciencePackHat": {
+  "${ModID}:MadSciencePackHat": {
     "TEXT": [
       "보여주면 돼. 내가 보여주는 거야!!",
       "매드 매드 사이언스"

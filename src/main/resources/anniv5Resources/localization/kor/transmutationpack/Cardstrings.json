@@ -1,89 +1,89 @@
 {
-  "anniv5:AmalgamateWaters": {
+  "${ModID}:AmalgamateWaters": {
     "NAME": "혼합수",
-    "DESCRIPTION": "anniv5:변화가능 카드를 뽑습니다. NL 원하는 만큼 손에 있는 카드에 anniv5:변화가능 효과를 주고 anniv5:변형시킵니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:변화가능 카드를 !M! 장 뽑습니다. NL 원하는 만큼 손에 있는 카드에 anniv5:변화가능 효과를 주고 anniv5:변형시킵니다."
+    "DESCRIPTION": "${ModID}:변화가능 카드를 뽑습니다. NL 원하는 만큼 손에 있는 카드에 ${ModID}:변화가능 효과를 주고 ${ModID}:변형시킵니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:변화가능 카드를 !M! 장 뽑습니다. NL 원하는 만큼 손에 있는 카드에 ${ModID}:변화가능 효과를 주고 ${ModID}:변형시킵니다."
   },
-  "anniv5:CrystalLattice": {
+  "${ModID}:CrystalLattice": {
     "NAME": "결정 격자",
-    "DESCRIPTION": "카드를 anniv5:변형시킵니다. 새 카드의 추가 복사본을 !M! 장 얻습니다. NL 소멸."
+    "DESCRIPTION": "카드를 ${ModID}:변형시킵니다. 새 카드의 추가 복사본을 !M! 장 얻습니다. NL 소멸."
   },
-  "anniv5:CrystalResonance": {
+  "${ModID}:CrystalResonance": {
     "NAME": "결정 울림",
-    "DESCRIPTION": "anniv5:변형시킬 때마다, 힘을 !M! 얻습니다."
+    "DESCRIPTION": "${ModID}:변형시킬 때마다, 힘을 !M! 얻습니다."
   },
-  "anniv5:Drench": {
+  "${ModID}:Drench": {
     "NAME": "호우",
-    "DESCRIPTION": "anniv5:변화가능: 방어도를 !B! 얻습니다. NL anniv5:변화가능: 피해를 !D! 줍니다."
+    "DESCRIPTION": "${ModID}:변화가능: 방어도를 !B! 얻습니다. NL ${ModID}:변화가능: 피해를 !D! 줍니다."
   },
-  "anniv5:FrozenCapsule": {
+  "${ModID}:FrozenCapsule": {
     "NAME": "얼어붙은 캡슐",
-    "DESCRIPTION": "anniv5:변화가능: 피해를 !D! 줍니다. NL anniv5:변화가능: anniv5:변형될 때, 카드를 1 장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:변화가능: 피해를 !D! 줍니다. NL anniv5:변화가능: anniv5:변형될 때, 카드를 !M! 장 뽑습니다."
+    "DESCRIPTION": "${ModID}:변화가능: 피해를 !D! 줍니다. NL ${ModID}:변화가능: ${ModID}:변형될 때, 카드를 1 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:변화가능: 피해를 !D! 줍니다. NL ${ModID}:변화가능: ${ModID}:변형될 때, 카드를 !M! 장 뽑습니다."
   },
-  "anniv5:GhostlyMist": {
+  "${ModID}:GhostlyMist": {
     "NAME": "음산한 안개",
-    "DESCRIPTION": "anniv5:변화가능: 비용 없이 사용 가능. NL anniv5:변화가능: 이 카드를 anniv5:변형시킵니다.",
-    "UPGRADE_DESCRIPTION": "Innate. NL anniv5:변화가능: 비용 없이 사용 가능. NL anniv5:변화가능: 이 카드를 anniv5:변형시킵니다."
+    "DESCRIPTION": "${ModID}:변화가능: 비용 없이 사용 가능. NL ${ModID}:변화가능: 이 카드를 ${ModID}:변형시킵니다.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:변화가능: 비용 없이 사용 가능. NL ${ModID}:변화가능: 이 카드를 ${ModID}:변형시킵니다."
   },
-  "anniv5:GlacialSynthesis": {
+  "${ModID}:GlacialSynthesis": {
     "NAME": "빙하 합성",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 anniv5:변형시킵니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 !M! 장 까지 anniv5:변형시킵니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 ${ModID}:변형시킵니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 카드를 !M! 장 까지 ${ModID}:변형시킵니다."
   },
-  "anniv5:SearingSynthesis": {
+  "${ModID}:SearingSynthesis": {
     "NAME": "그을린 합성",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 anniv5:변형시킵니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 까지 anniv5:변형시킵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 ${ModID}:변형시킵니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 !M! 장 까지 ${ModID}:변형시킵니다."
   },
-  "anniv5:ViscousShell": {
+  "${ModID}:ViscousShell": {
     "NAME": "끈적한 껍데기",
-    "DESCRIPTION": "anniv5:변화가능: 방어도를 !B! 얻습니다. NL 이 카드를 anniv5:변형시킵니다."
+    "DESCRIPTION": "${ModID}:변화가능: 방어도를 !B! 얻습니다. NL 이 카드를 ${ModID}:변형시킵니다."
   },
-  "anniv5:DimensionalIcicles": {
+  "${ModID}:DimensionalIcicles": {
     "NAME": "차원의 고드름",
     "DESCRIPTION": "피해를 !D! 만큼 !B! 번 줍니다. 공격 횟수는 방어도와 관련된 것에 영향을 받습니다."
   },
-  "anniv5:AbstractExtraEffectModifier": {
+  "${ModID}:AbstractExtraEffectModifier": {
     "EXTENDED_DESCRIPTION": [
-      "anniv5:변화가능: ",
+      "${ModID}:변화가능: ",
       " ",
       " 번.",
       "."
     ]
   },
-  "anniv5:DamageEffect": {
+  "${ModID}:DamageEffect": {
     "EXTENDED_DESCRIPTION": [
       "피해를 ",
       " 줍니다"
     ]
   },
-  "anniv5:DrawWhenTransmutedEffect": {
+  "${ModID}:DrawWhenTransmutedEffect": {
     "EXTENDED_DESCRIPTION": [
-      "anniv5:변형될 때, 카드를 1 장 뽑습니다.",
-      "anniv5:변형될 때, 카드를 ",
+      "${ModID}:변형될 때, 카드를 1 장 뽑습니다.",
+      "${ModID}:변형될 때, 카드를 ",
       " 장 뽑습니다."
     ]
   },
-  "anniv5:FreeToPlayEffect": {
+  "${ModID}:FreeToPlayEffect": {
     "EXTENDED_DESCRIPTION": [
       "비용 없이 사용 가능."
     ]
   },
-  "anniv5:GainBlockEffect": {
+  "${ModID}:GainBlockEffect": {
     "EXTENDED_DESCRIPTION": [
       "방어도를 ",
       " 얻습니다"
     ]
   },
-  "anniv5:ReboundSelfEffect": {
+  "${ModID}:ReboundSelfEffect": {
     "EXTENDED_DESCRIPTION": [
       "이 카드를 뽑을 카드 더미에 섞어 넣습니다."
     ]
   },
-  "anniv5:TransmuteSelfEffect": {
+  "${ModID}:TransmuteSelfEffect": {
     "EXTENDED_DESCRIPTION": [
-      "이 카드를 anniv5:변형시킵니다."
+      "이 카드를 ${ModID}:변형시킵니다."
     ]
   }
 }

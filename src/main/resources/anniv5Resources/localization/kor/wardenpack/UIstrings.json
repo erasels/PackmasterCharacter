@@ -1,5 +1,5 @@
 {
-  "anniv5:WardenPack": {
+  "${ModID}:WardenPack": {
     "TEXT": [
       "워든",
       "예지의 힘을 조절하고, 앞을 내다보고, 미지의 것을 마음대로 만듭니다.",
@@ -7,7 +7,7 @@
       "팩 이미지 -  #yStardustSwirl"
     ]
   },
-  "anniv5:WardenPackHat": {
+  "${ModID}:WardenPackHat": {
     "TEXT": [
       "이 넓은 모자의 그늘진 공간에는 무엇이 숨겨져 있을까요?",
       "신의 후드"

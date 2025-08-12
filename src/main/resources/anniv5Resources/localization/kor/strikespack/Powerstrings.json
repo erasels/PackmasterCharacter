@@ -1,12 +1,12 @@
 {
-  "anniv5:StrikeDummyJrPower": {
+  "${ModID}:StrikeDummyJrPower": {
     "NAME": "인형용 타격",
     "DESCRIPTIONS": [
       "타격들이 피해를 #b",
       " 더 줍니다."
     ]
   },
-  "anniv5:StrikeOfGeniusPower": {
+  "${ModID}:StrikeOfGeniusPower": {
     "NAME": "천재적인 타격",
     "DESCRIPTIONS": [
       "다음 사용하는 공격 카드는 막히지 않은 피해량만큼 #y방어도를 얻습니다 를 얻습니다.",

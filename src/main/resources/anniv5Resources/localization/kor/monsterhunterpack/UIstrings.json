@@ -1,12 +1,12 @@
 {
-  "anniv5:MonsterHunterPack": {
+  "${ModID}:MonsterHunterPack": {
     "TEXT": [
       "몬스터 헌터",
       "엘리트와 보스를 사냥하고, 그들의 독특한 무기와 방어구를 조각칼로 도려내세요!",
       "Dayvig"
     ]
   },
-  "anniv5:MonsterHunterPackHat": {
+  "${ModID}:MonsterHunterPackHat": {
     "TEXT": [
       "사냥의 전리품.",
       "네메시스의 해골"

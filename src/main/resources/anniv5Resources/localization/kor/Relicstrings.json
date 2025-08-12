@@ -1,5 +1,5 @@
 {
-  "anniv5:BagOfHolding": {
+  "${ModID}:BagOfHolding": {
     "NAME": "소지품 가방",
     "FLAVOR": "\"놀라워! 이 가방이 차원 외 공간과 연결되어 있는 것 같아요. 내가 안에 들어가면 어떻게 될까?\" - Ranwid",
     "DESCRIPTIONS": [
@@ -9,7 +9,7 @@
       " NL 턴 당: {0} NL 전투 당: {1}"
     ]
   },
-  "anniv5:BanishingDecree": {
+  "${ModID}:BanishingDecree": {
     "NAME": "추방 명령서",
     "FLAVOR": "유용한 것은 흡수하고, 쓸모없는 것은 거부하며, 본질적으로 나의 것만을 더하라.",
     "DESCRIPTIONS": [
@@ -26,7 +26,7 @@
       "추방된 팩: {0} NL 추가된 팩: {1}"
     ]
   },
-  "anniv5:CollectorBadge": {
+  "${ModID}:CollectorBadge": {
     "NAME": "수집가 배지",
     "FLAVOR": "모두 수집해야 해.",
     "DESCRIPTIONS": [
@@ -37,7 +37,7 @@
       " NL 턴 당: {0} NL 전투 당: {1}"
     ]
   },
-  "anniv5:GemOfUnity": {
+  "${ModID}:GemOfUnity": {
     "NAME": "통합의 보석",
     "FLAVOR": "연합에 강함이 있다.",
     "DESCRIPTIONS": [
@@ -48,14 +48,14 @@
       "아직 사용되지 않은 팩: "
     ]
   },
-  "anniv5:HandyHaversack": {
+  "${ModID}:HandyHaversack": {
     "NAME": "편리한 배낭",
     "FLAVOR": "영웅적인 수집가들이 방해물을 다룰 수 있도록 도와줍니다.",
     "DESCRIPTIONS": [
       "전투 시작 시, [E] 를 얻고, #b1 장의 카드를 뽑습니다."
     ]
   },
-  "anniv5:PMBoosterBox": {
+  "${ModID}:PMBoosterBox": {
     "NAME": "P.M. 부스터 박스",
     "FLAVOR": "대량 구매 시 더 좋은 가격.",
     "DESCRIPTIONS": [
@@ -65,7 +65,7 @@
       "팩: {0}, {1}, {2} NL 추가 카드 보상: {3}"
     ]
   },
-  "anniv5:PMBoosterPack": {
+  "${ModID}:PMBoosterPack": {
     "NAME": "P.M. 부스터 팩",
     "FLAVOR": "호일 랩에 포장된 카드 팩. 어떻게 첨탑에 들어왔을까?",
     "DESCRIPTIONS": [
@@ -74,7 +74,7 @@
       "팩: {0}"
     ]
   },
-  "anniv5:PMCollection": {
+  "${ModID}:PMCollection": {
     "NAME": "P.M. 컬렉션",
     "FLAVOR": "마법사들의 컨소시엄에 의해 수집되었다고 전해진다.",
     "DESCRIPTIONS": [

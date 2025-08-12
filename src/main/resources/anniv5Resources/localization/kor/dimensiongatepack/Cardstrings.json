@@ -1,49 +1,49 @@
 {
-  "anniv5:Anemia": {
+  "${ModID}:Anemia": {
     "NAME": "빈혈",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 모든 중독에 걸린 적에게 약화를 !M! 적용합니다."
   },
-  "anniv5:LethalShot": {
+  "${ModID}:LethalShot": {
     "NAME": "치명적인 사격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독을 !M! 적용하고, 취약을 !anniv5:m2! 적용합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독을 !M! 적용하고, 취약을 !${ModID}:m2! 적용합니다."
   },
-  "anniv5:BleedItOut": {
+  "${ModID}:BleedItOut": {
     "NAME": "Bleed It Out",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 중독을 !M! 적용합니다. NL 적의 중독을 발동시킵니다."
   },
-  "anniv5:Trace": {
+  "${ModID}:Trace": {
     "NAME": "추적",
     "DESCRIPTION": "카드를 !M! 장 엿봅니다."
   },
-  "anniv5:BoosterShot": {
+  "${ModID}:BoosterShot": {
     "NAME": "부스터 샷",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독을 !M! 적용합니다. NL 적의 체력을 !anniv5:m2! 회복합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독을 !M! 적용합니다. NL 적의 체력을 !${ModID}:m2! 회복합니다."
   },
-  "anniv5:RangersSetup": {
+  "${ModID}:RangersSetup": {
     "NAME": "레인저의 준비",
     "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 손에 있는 카드 2장을 뽑을 카드 더미 맨 위에 올립니다."
   },
-  "anniv5:Scheme": {
+  "${ModID}:Scheme": {
     "NAME": "계략",
     "DESCRIPTION": "다음 턴에, 사용한 첫 번째 카드 중 비용이 1 이하인 카드는 두 번 사용됩니다. NL 소멸성 !stslib:ex!."
   },
-  "anniv5:ScrollOfIntellect": {
+  "${ModID}:ScrollOfIntellect": {
     "NAME": "지성의 두루마리",
     "DESCRIPTION": "카드를 1장 뽑습니다. NL [E] 를 얻습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL [E] 를 얻습니다. NL 소멸."
   },
-  "anniv5:Sustenance": {
+  "${ModID}:Sustenance": {
     "NAME": "영양 공급",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 무작위 적에게 중독을 !M! 적용합니다. NL stslib:Persist !stslib:persist!."
   },
-  "anniv5:TheEncyclopedia": {
+  "${ModID}:TheEncyclopedia": {
     "NAME": "백과사전",
     "DESCRIPTION": "!M!개의 무작위 카드 중 2개를 선택하여 뽑을 카드 더미에 섞어 넣습니다. 이 카드는 2만큼 비용이 줄어듭니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "카드를 2장 선택하여 뽑을 카드 더미에 추가합니다."
     ]
   },
-  "anniv5:TomeOfIntellect": {
+  "${ModID}:TomeOfIntellect": {
     "NAME": "지성의 책",
     "DESCRIPTION": "!M!개의 *지성의 *두루마리를 뽑을 카드 더미에 섞어 넣습니다. 턴 시작 시, 1개를 더 섞어 넣습니다."
   }

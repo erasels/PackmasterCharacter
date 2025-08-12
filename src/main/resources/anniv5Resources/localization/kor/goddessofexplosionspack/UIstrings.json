@@ -1,5 +1,5 @@
 {
-  "anniv5:GoddessOfExplosionsPack": {
+  "${ModID}:GoddessOfExplosionsPack": {
     "TEXT": [
       "폭발의 여신",
       "힘 ! 가치! 폭발! NL 강력한 스케일링, 파워 및 비공격 피해.",
@@ -7,20 +7,20 @@
       "#y폭발의 #y여신 은 원래 #yLudosity 에 의해 창조되었습니다."
     ]
   },
-  "anniv5:HandpickUI": {
+  "${ModID}:HandpickUI": {
     "TEXT": [
       "두 번 사용합니다.",
       "폭탄으로 변환됩니다."
     ]
   },
-  "anniv5:KillerQueenTooltip": {
+  "${ModID}:KillerQueenTooltip": {
     "TEXT": [
       "킬러 퀸",
       "사용 시, 모든 적에게 #b",
       " 피해를 줍니다."
     ]
   },
-  "anniv5:GoddessOfExplosionsPackHat": {
+  "${ModID}:GoddessOfExplosionsPackHat": {
     "TEXT": [
       "날개가 어디에 필요한지 말했어야 했습니다.",
       "신성화"

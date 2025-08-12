@@ -1,5 +1,5 @@
 {
-  "anniv5:AttackPotionButClaw": {
+  "${ModID}:AttackPotionButClaw": {
     "NAME": "후벼 파기 물약",
     "DESCRIPTIONS": [
       "무작위 #y공격 카드 3장 중 #b1장을 선택하여 손에 추가합니다. NL 이번 턴 동안 비용이 #b0이 되고, 수정됩니다: '카드 이름에 '후벼 파기' 추가'와 '#y유령 #y후벼 #y파기 1개 획득'.",
@@ -8,21 +8,21 @@
       "손에 추가할 공격 카드를 선택하세요."
     ]
   },
-  "anniv5:ClawPowerPotion": {
+  "${ModID}:ClawPowerPotion": {
     "NAME": "날카로운 기름",
     "DESCRIPTIONS": [
-      "손에 있는 모든 #y공격 카드에 수정 추가: '카드 이름에 '후벼 파기' 추가'. NL anniv5:날카로움 #b",
+      "손에 있는 모든 #y공격 카드에 수정 추가: '카드 이름에 '후벼 파기' 추가'. NL ${ModID}:날카로움 #b",
       "."
     ]
   },
-  "anniv5:DrawClawsPotion": {
+  "${ModID}:DrawClawsPotion": {
     "NAME": "신속 물약",
     "DESCRIPTIONS": [
       "카드를 #b",
       " 장 가져옵니다. NL 가져온 카드 중 #y후벼 #y파기가 포함되어 있다면, 추가로 카드를 1장 가져옵니다."
     ]
   },
-  "anniv5:GenerateClawsPotion": {
+  "${ModID}:GenerateClawsPotion": {
     "NAME": "병에 담긴 후벼 파기",
     "DESCRIPTIONS": [
       "#b",

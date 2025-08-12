@@ -1,12 +1,12 @@
 {
-  "anniv5:SummonsPack": {
+  "${ModID}:SummonsPack": {
     "TEXT": [
       "소환사의 동물원",
       "다양한 구체가 있는 팩입니다. 코끼리도 함께요. 여우는 없습니다.",
       "Bryan K"
     ]
   },
-  "anniv5:SummonsPackHat": {
+  "${ModID}:SummonsPackHat": {
     "TEXT": [
       "야옹이의 관점에서 보면, 당신이 악세사리입니다.",
       "소환된 고양이"

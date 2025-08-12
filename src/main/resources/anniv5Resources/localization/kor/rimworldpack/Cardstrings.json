@@ -1,58 +1,58 @@
 {
-  "anniv5:ChainShotgun": {
+  "${ModID}:ChainShotgun": {
     "NAME": "체인 샷건",
     "DESCRIPTION": "무작위 적에게 피해를 !D! 만큼 !M! 번 줍니다."
   },
-  "anniv5:Despair": {
+  "${ModID}:Despair": {
     "NAME": "절망",
     "DESCRIPTION": "저주로 취급됩니다. NL 소멸."
   },
-  "anniv5:EatWithoutTable": {
+  "${ModID}:EatWithoutTable": {
     "NAME": "바닥에서 식사함",
     "DESCRIPTION": "무작위 일반 등급 포션을 마십니다. *절망 을 얻습니다. NL 소멸."
   },
-  "anniv5:Luciferium": {
+  "${ModID}:Luciferium": {
     "NAME": "루시페륨",
-    "DESCRIPTION": "{@@} [E] [E] 를 얻습니다. NL 힘을 5 얻습니다. NL anniv5:중독을 !M! 얻습니다. NL 소멸."
+    "DESCRIPTION": "{@@} [E] [E] 를 얻습니다. NL 힘을 5 얻습니다. NL ${ModID}:중독을 !M! 얻습니다. NL 소멸."
   },
-  "anniv5:Pyromaniac": {
+  "${ModID}:Pyromaniac": {
     "NAME": "방화광",
-    "DESCRIPTION": "턴 시작 시, 손에 있는 무작위 카드를 anniv5:불붙음 상태로 만듭니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시, 손에 있는 무작위 카드를 anniv5:불붙음 상태로 만듭니다."
+    "DESCRIPTION": "턴 시작 시, 손에 있는 무작위 카드를 ${ModID}:불붙음 상태로 만듭니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 턴 시작 시, 손에 있는 무작위 카드를 ${ModID}:불붙음 상태로 만듭니다."
   },
-  "anniv5:KillThirst": {
+  "${ModID}:KillThirst": {
     "NAME": "살인 갈망",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 적을 죽이지 않을 경우, *절망 을 얻습니다."
   },
-  "anniv5:SpikeTrap": {
+  "${ModID}:SpikeTrap": {
     "NAME": "가시 함정",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 공격하는 적에게 이만큼의 피해를 줍니다."
   },
-  "anniv5:Catharsis": {
+  "${ModID}:Catharsis": {
     "NAME": "정신 차림",
     "DESCRIPTION": "{@@}뽑을 카드 더미에 *절망 을 섞어 넣습니다. 이번 턴에 다음으로 사용하는 !M! 장의 카드는 비용이 0 이 되고 두 번 사용됩니다. 소멸."
   },
-  "anniv5:TradeBeacon": {
+  "${ModID}:TradeBeacon": {
     "NAME": "무역 송신기",
     "DESCRIPTION": "턴 도중 처음으로 카드를 뽑거나 버릴 때, 카드를 !M! 장 뽑습니다."
   },
-  "anniv5:BurningPassion": {
+  "${ModID}:BurningPassion": {
     "NAME": "불타는 열정",
     "DESCRIPTION": "매 턴 처음으로 얻는 이로운 효과가 두 배가 됩니다."
   },
-  "anniv5:TaintedWeapon": {
+  "${ModID}:TaintedWeapon": {
     "NAME": "무기 유품",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 개전: 이 카드를 무작위 적에 넣습니다.",
     "EXTENDED_DESCRIPTION": [
       "피해를 !D! 줍니다."
     ]
   },
-  "anniv5:RimworldKeywordManager": {
+  "${ModID}:RimworldKeywordManager": {
     "NAME": "키워드매니저",
     "DESCRIPTION": "Stuff for translations and easy access to keyword ids",
     "EXTENDED_DESCRIPTION": [
-      "anniv5:inspiration",
-      "anniv5:mental_break"
+      "${ModID}:inspiration",
+      "${ModID}:mental_break"
     ]
   }
 }

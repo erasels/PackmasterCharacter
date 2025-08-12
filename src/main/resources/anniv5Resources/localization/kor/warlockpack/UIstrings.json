@@ -1,5 +1,5 @@
 {
-  "anniv5:WarlockPack": {
+  "${ModID}:WarlockPack": {
     "TEXT": [
       "흑마법사",
       "흑마법사가 되어 지옥 주문을 사용하고 카드를 소멸시키며 임프를 소환해서 적을 파괴하세요.",
@@ -7,7 +7,7 @@
       "원작은 #y블리자드 #y엔터테인먼트 의 #y하스스톤 입니다."
     ]
   },
-  "anniv5:WarlockPackHat": {
+  "${ModID}:WarlockPackHat": {
     "TEXT": [
       "여기엔 사악한 것이 없습니다, 없어요.",
       "그림자 망토"

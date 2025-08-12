@@ -1,13 +1,13 @@
 {
-  "anniv5:AggressionPack": {
+  "${ModID}:AggressionPack": {
     "TEXT": [
       "격노",
-      "공격과 anniv5:격노에 초점을 맞추어, 공격 시 입히는 피해량을 25% 증가시킵니다.",
+      "공격과 ${ModID}:격노에 초점을 맞추어, 공격 시 입히는 피해량을 25% 증가시킵니다.",
       "modargo",
       "Card art from MtG"
     ]
   },
-  "anniv5:AggressionPackHat": {
+  "${ModID}:AggressionPackHat": {
     "TEXT": [
       "이제 첨탑을 침략하고 약탈할 준비가 되었습니다.",
       "바이킹 투구"

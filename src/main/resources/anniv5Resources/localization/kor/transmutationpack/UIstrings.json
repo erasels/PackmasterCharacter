@@ -1,18 +1,18 @@
 {
-  "anniv5:TransmutationPack": {
+  "${ModID}:TransmutationPack": {
     "TEXT": [
       "변형",
       "당신의 카드를 일시적으로 바꿔서 더 강하게 만듭니다.",
       "NellyDevo"
     ]
   },
-  "anniv5:TransmuteCardAction": {
+  "${ModID}:TransmuteCardAction": {
     "TEXT": [
       "변형.",
       "새로운 카드를 선택하십시오."
     ]
   },
-  "anniv5:TransmutationPackHat": {
+  "${ModID}:TransmutationPackHat": {
     "TEXT": [
       "이 헤어 루프는 조금 익숙해질 것입니다.",
       "변형된 헤어스타일"

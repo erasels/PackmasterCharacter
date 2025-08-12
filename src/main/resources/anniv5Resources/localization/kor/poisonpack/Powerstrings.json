@@ -1,5 +1,5 @@
 {
-  "anniv5:ToxicDipPower": {
+  "${ModID}:ToxicDipPower": {
     "NAME": "독액 담그기",
     "DESCRIPTIONS": [
       "이번 턴, 막히지 않은 공격 피해를 줄 때마다 #y중독을 #b",

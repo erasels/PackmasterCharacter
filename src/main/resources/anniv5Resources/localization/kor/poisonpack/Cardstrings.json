@@ -1,5 +1,5 @@
 {
-  "anniv5:VenomDip": {
+  "${ModID}:VenomDip": {
     "NAME": "독액 담그기",
     "DESCRIPTION": "이번 턴, 막히지 않은 피해를 줄 때마다 중독을 !M! 부여합니다."
   }

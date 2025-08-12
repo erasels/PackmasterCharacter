@@ -1,17 +1,17 @@
 {
-  "anniv5:Conjunction": {
+  "${ModID}:Conjunction": {
     "NAME": "결합",
     "DESCRIPTION": "휘발성. NL 이 카드를 뽑으면, 방어도를 !B! 얻습니다."
   },
-  "anniv5:Opposition": {
+  "${ModID}:Opposition": {
     "NAME": "대립",
     "DESCRIPTION": "휘발성. NL 이 카드를 뽑으면, 무작위 적이 체력을 !M! 잃습니다."
   },
-  "anniv5:Quincunx": {
+  "${ModID}:Quincunx": {
     "NAME": "오각형",
     "DESCRIPTION": "휘발성. NL 이 카드를 뽑으면, 모든 적이 이번 턴 동안 힘을 !M! 잃습니다."
   },
-  "anniv5:Novile": {
+  "${ModID}:Novile": {
     "NAME": "노빌",
     "DESCRIPTION": "휘발성. NL 이 카드를 뽑으면, [E] 를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
@@ -20,15 +20,15 @@
       "를 얻습니다."
     ]
   },
-  "anniv5:Square": {
+  "${ModID}:Square": {
     "NAME": "사각형",
     "DESCRIPTION": "{@@}휘발성. NL 이 카드를 뽑으면, 카드를 !M!장 뽑습니다"
   },
-  "anniv5:Trine": {
+  "${ModID}:Trine": {
     "NAME": "삼각형",
     "DESCRIPTION": "휘발성. NL 이 카드를 뽑으면, 이번 턴에 사용하는 다음 카드가 두 번 발동됩니다."
   },
-  "anniv5:Divination": {
+  "${ModID}:Divination": {
     "NAME": "예지",
     "DESCRIPTION": "손에서 카드를 하나 뽑을 카드 더미 아래에 넣습니다. NL 카드를 !M!장 뽑습니다",
     "UPGRADE_DESCRIPTION": "손에서 원하는 만큼의 카드를 뽑을 카드 더미 아래에 넣습니다. NL 카드를 !M!장 뽑습니다",
@@ -36,15 +36,15 @@
       "뽑을 카드 더미 아래에 넣습니다"
     ]
   },
-  "anniv5:Glimpse": {
+  "${ModID}:Glimpse": {
     "NAME": "흘깃",
     "DESCRIPTION": "휘발성 카드를 뽑을 때마다 방어도를 !M! 얻습니다."
   },
-  "anniv5:Remember": {
+  "${ModID}:Remember": {
     "NAME": "회상",
     "DESCRIPTION": "{@@}턴 종료 시, 손에서 최대 !M!장의 카드를 뽑을 카드 더미에 섞어 넣습니다."
   },
-  "anniv5:Alignment": {
+  "${ModID}:Alignment": {
     "NAME": "정렬",
     "DESCRIPTION": "X장의 카드를 뽑습니다 NL 그 카드는 이번 턴 동안 비용이 X만큼 감소합니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "X장의 카드를 뽑습니다 NL 그 카드는 이번 턴 동안 비용이 X만큼 감소합니다."

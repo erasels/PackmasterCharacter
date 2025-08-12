@@ -1,41 +1,41 @@
 {
-  "anniv5:MasterSpark": {
+  "${ModID}:MasterSpark": {
     "NAME": "마스터 스파크",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL anniv5:증폭 [E] : NL 대신 피해를 !M! 줍니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL ${ModID}:증폭 [E] : NL 대신 피해를 !M! 줍니다."
   },
-  "anniv5:RisingStrike": {
+  "${ModID}:RisingStrike": {
     "NAME": "라이징 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:돌풍: anniv5:충전을 !M! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:돌풍: ${ModID}:충전을 !M! 얻습니다."
   },
-  "anniv5:GalacticHalo": {
+  "${ModID}:GalacticHalo": {
     "NAME": "은하 헤일로",
-    "DESCRIPTION": "anniv5:충전을 !M! 얻습니다. NL anniv5:증폭 [E] [E] : NL 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "${ModID}:충전을 !M! 얻습니다. NL ${ModID}:증폭 [E] [E] : NL 방어도를 !B! 얻습니다."
   },
-  "anniv5:LuminousStrike": {
+  "${ModID}:LuminousStrike": {
     "NAME": "루미너스 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL anniv5:증폭 [E] : 피해량의 절반만큼 anniv5:점화를 부여합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL ${ModID}:증폭 [E] : 피해량의 절반만큼 ${ModID}:점화를 부여합니다."
   },
-  "anniv5:UltimateShortwave": {
+  "${ModID}:UltimateShortwave": {
     "NAME": "얼티밋 쇼트웨이브",
-    "DESCRIPTION": "[E] 를 !M! 얻고 anniv5:충전을 !anniv5:m2! 얻습니다. NL anniv5:증폭 [E] : 이번 전투 동안 두 수치가 1 증가합니다."
+    "DESCRIPTION": "[E] 를 !M! 얻고 ${ModID}:충전을 !${ModID}:m2! 얻습니다. NL ${ModID}:증폭 [E] : 이번 전투 동안 두 수치가 1 증가합니다."
   },
-  "anniv5:GrandCross": {
+  "${ModID}:GrandCross": {
     "NAME": "그랜드 크로스",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 anniv5:증폭을 발동했다면 비용이 0이 되고, 아니라면 카드를 !M! 장 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 ${ModID}:증폭을 발동했다면 비용이 0이 되고, 아니라면 카드를 !M! 장 뽑습니다."
   },
-  "anniv5:CasketOfStars": {
+  "${ModID}:CasketOfStars": {
     "NAME": "별이 담긴 상자",
-    "DESCRIPTION": "방어도를 얻을 때마다, anniv5:충전을 !anniv5:m2! 얻습니다. NL anniv5:증폭 [E] : 금속화를 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 얻을 때마다, ${ModID}:충전을 !${ModID}:m2! 얻습니다. NL ${ModID}:증폭 [E] : 금속화를 !M! 얻습니다."
   },
-  "anniv5:BlazingStar": {
+  "${ModID}:BlazingStar": {
     "NAME": "블레이징 스타",
-    "DESCRIPTION": "임시 힘을 !M! 얻습니다. NL 다음으로 사용하는 anniv5:증폭은 에너지를 소모하지 않습니다."
+    "DESCRIPTION": "임시 힘을 !M! 얻습니다. NL 다음으로 사용하는 ${ModID}:증폭은 에너지를 소모하지 않습니다."
   },
-  "anniv5:EscapeVelocity": {
+  "${ModID}:EscapeVelocity": {
     "NAME": "탈출 속도",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL anniv5:충전을 소비할 때마다, 이 카드를 손으로 가져옵니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL ${ModID}:충전을 소비할 때마다, 이 카드를 손으로 가져옵니다."
   },
-  "anniv5:EventHorizon": {
+  "${ModID}:EventHorizon": {
     "NAME": "사건의 지평선",
     "DESCRIPTION": "턴 시작 시, 활력을 !M! 얻습니다."
   },
@@ -43,28 +43,28 @@
 
 
 
-  "anniv5:ShootingEcho": {
+  "${ModID}:ShootingEcho": {
     "NAME": "슈팅 에코",
     "DESCRIPTION": "Deal !D! damage. Exhaust a random card to gain a copy of this. NL Exhaust."
   },
-  "anniv5:StardustReverie": {
+  "${ModID}:StardustReverie": {
     "NAME": "스타더스트 래버리",
-    "DESCRIPTION": "Exhaust the next card you play to gain !M! anniv5:충전 and draw 1 card."
+    "DESCRIPTION": "Exhaust the next card you play to gain !M! ${ModID}:충전 and draw 1 card."
   },
-  "anniv5:Inertia": {
+  "${ModID}:Inertia": {
     "NAME": "오오트 구름",
-    "DESCRIPTION": "Gain !M! *Ablation. NL anniv5:증폭 [E] : Gain !anniv5:m2! additional *Ablation."
+    "DESCRIPTION": "Gain !M! *Ablation. NL ${ModID}:증폭 [E] : Gain !${ModID}:m2! additional *Ablation."
   },
-  "anniv5:DragonMeteor": {
+  "${ModID}:DragonMeteor": {
     "NAME": "드래곤 미티어",
     "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each card in your exhaust pile."
   },
-  "anniv5:EarthlightRay": {
+  "${ModID}:EarthlightRay": {
     "NAME": "어스라이트 레이",
-    "DESCRIPTION": "After you gain anniv5:충전, deal damage equal to !M! times its total to ALL enemies."
+    "DESCRIPTION": "After you gain ${ModID}:충전, deal damage equal to !M! times its total to ALL enemies."
   },
-  "anniv5:Spark": {
+  "${ModID}:Spark": {
     "NAME": "스파크",
-    "DESCRIPTION": "Deal !D! damage. anniv5:증폭 [E] : NL Gain !M! anniv5:충전. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. ${ModID}:증폭 [E] : NL Gain !M! ${ModID}:충전. NL Exhaust."
   }
 }

@@ -1,5 +1,5 @@
 {
-  "anniv5:Snowglobe": {
+  "${ModID}:Snowglobe": {
     "NAME": "스노우글로브",
     "FLAVOR": "눈 오는 날의 첨탑을 묘사한 물건입니다. 흔들면 으르렁거리는 소리를 냅니다.",
     "DESCRIPTIONS": [

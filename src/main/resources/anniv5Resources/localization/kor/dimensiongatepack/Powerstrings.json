@@ -1,19 +1,19 @@
 {
-  "anniv5:SchemePower": {
+  "${ModID}:SchemePower": {
     "NAME": "계략",
     "DESCRIPTIONS": [
       "이번 턴에 사용된 다음 #b개의 카드 중 비용이 #b1 이하인 카드는 두 번 사용됩니다.",
       "이번 턴에 사용된 다음 카드 중 비용이 #b1 이하인 카드는 두 번 사용됩니다."
     ]
   },
-  "anniv5:SchemeNextTurnPower": {
+  "${ModID}:SchemeNextTurnPower": {
     "NAME": "계획 중인 계략",
     "DESCRIPTIONS": [
       "다음 턴에, 첫 번째 #b개의 카드 중 비용이 #b1 이하인 카드는 두 번 사용됩니다.",
       "다음 턴에, 첫 번째 카드 중 비용이 #b1 이하인 카드는 두 번 사용됩니다."
     ]
   },
-  "anniv5:TomeOfIntellectPower": {
+  "${ModID}:TomeOfIntellectPower": {
     "NAME": "지성의 책",
     "DESCRIPTIONS": [
       "매 턴 시작 시, #b개의 #y지성의 #y두루마리를 뽑을 카드 더미에 섞습니다.",

@@ -1,12 +1,12 @@
 {
-  "anniv5:BardInspirePack": {
+  "${ModID}:BardInspirePack": {
     "TEXT": [
       "바드 영감",
-      "바드 카드 모음으로 일부  anniv5:영감을 제공합니다.",
+      "바드 카드 모음으로 일부  ${ModID}:영감을 제공합니다.",
       "kiooeht"
     ]
   },
-  "anniv5:BardInspirePackHat": {
+  "${ModID}:BardInspirePackHat": {
     "TEXT": [
       "멋진 잡화점.",
       "바르딕 베레모"

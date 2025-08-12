@@ -1,45 +1,45 @@
 {
-  "anniv5:SwordAndDagger": {
+  "${ModID}:SwordAndDagger": {
     "NAME": "검과 단검",
     "DESCRIPTION": "피해를 !D! 줍니다. NL *단도 를 !M! 장 얻습니다.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *단도 를 !M! 장 얻습니다."
   },
-  "anniv5:PrismaticBarrier": {
+  "${ModID}:PrismaticBarrier": {
     "NAME": "프리즈마틱 방어막",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 anniv5:다른\u00a0색 카드를 사용했을 경우, *판금 *갑옷을 !M! 얻고 소멸합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 ${ModID}:다른\u00a0색 카드를 사용했을 경우, *판금 *갑옷을 !M! 얻고 소멸합니다."
   },
-  "anniv5:GrabBag": {
+  "${ModID}:GrabBag": {
     "NAME": "복주머니",
-    "DESCRIPTION": "무작위 !M! 장의 anniv5:다른\u00a0색 카드를 얻습니다. NL 소멸."
+    "DESCRIPTION": "무작위 !M! 장의 ${ModID}:다른\u00a0색 카드를 얻습니다. NL 소멸."
   },
-  "anniv5:ShimmeringStrike": {
+  "${ModID}:ShimmeringStrike": {
     "NAME": "반짝이는 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투 동안 사용된 anniv5:다른\u00a0색 카드마다 피해를 !M! 더 줍니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 전투 동안 사용된 ${ModID}:다른\u00a0색 카드마다 피해를 !M! 더 줍니다."
   },
-  "anniv5:ExoticKnowledge": {
+  "${ModID}:ExoticKnowledge": {
     "NAME": "색다른 지식",
-    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이번 턴에 anniv5:다른\u00a0색 카드를 사용했을 경우, 카드를 !anniv5:m2! 장 뽑습니다."
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 이번 턴에 ${ModID}:다른\u00a0색 카드를 사용했을 경우, 카드를 !${ModID}:m2! 장 뽑습니다."
   },
-  "anniv5:ChoiceCut": {
+  "${ModID}:ChoiceCut": {
     "NAME": "선택지 제거",
     "DESCRIPTION": "*어퍼컷, *암울한 *전망, *천적, *천국의 *계단 중 하나를 선택해 얻습니다. 이번 턴 동안 비용이 0이 됩니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "*어퍼컷+, *암울한 *전망+, *천적+, *천국의 *계단+ 중 하나를 선택해 얻습니다. 이번 턴 동안 비용이 0이 됩니다. NL 소멸."
   },
-  "anniv5:QuirionDryad": {
+  "${ModID}:QuirionDryad": {
     "NAME": "퀴리온 드라이어드",
     "DESCRIPTION": "이번 전투에서 각 카드의 색을 사용할 때마다, 힘과 민첩을 !M! 얻습니다."
   },
-  "anniv5:ManyAsOne": {
+  "${ModID}:ManyAsOne": {
     "NAME": "모두가 하나",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 버린 카드 더미의 모든 anniv5:다른\u00a0색 카드를 손으로 가져옵니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 버린 카드 더미의 모든 ${ModID}:다른\u00a0색 카드를 손으로 가져옵니다."
   },
-  "anniv5:PremiumSelection": {
+  "${ModID}:PremiumSelection": {
     "NAME": "프리미엄 선택지",
-    "DESCRIPTION": "무작위 !M! 중 1 장의 anniv5:다른\u00a0색 희귀 카드를 얻습니다. 이번 턴 동안 비용이 0이 됩니다. NL 소멸."
+    "DESCRIPTION": "무작위 !M! 중 1 장의 ${ModID}:다른\u00a0색 희귀 카드를 얻습니다. 이번 턴 동안 비용이 0이 됩니다. NL 소멸."
   },
-  "anniv5:FlawlessPrism": {
+  "${ModID}:FlawlessPrism": {
     "NAME": "완벽한 프리즘",
-    "DESCRIPTION": "턴 시작 시, 무작위 !M! 장의 anniv5:다른\u00a0색 파워 카드를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "턴 시작 시, 무작위 !M! 장의 anniv5:다른\u00a0색 파워 카드를 얻습니다."
+    "DESCRIPTION": "턴 시작 시, 무작위 !M! 장의 ${ModID}:다른\u00a0색 파워 카드를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "턴 시작 시, 무작위 !M! 장의 ${ModID}:다른\u00a0색 파워 카드를 얻습니다."
   }
 }

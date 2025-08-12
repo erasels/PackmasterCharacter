@@ -1,19 +1,19 @@
 {
-  "anniv5:IterativeDesignPower": {
+  "${ModID}:IterativeDesignPower": {
     "NAME": "반복적인 디자인",
     "DESCRIPTIONS": [
       "이번 전투 동안 카드를 생성하거나 #y복사할 때마다, #y방어도를 #b",
       " 얻습니다."
     ]
   },
-  "anniv5:EnergyDrinkPower": {
+  "${ModID}:EnergyDrinkPower": {
     "NAME": "에너지 드링크",
     "DESCRIPTIONS": [
       "뽑을 카드 더미에 #10 장의 카드를 섞어 넣을 때마다 #y복제를 #b",
       " 얻습니다."
     ]
   },
-  "anniv5:DuplicationPackmasterPower": {
+  "${ModID}:DuplicationPackmasterPower": {
     "NAME": "복제",
     "DESCRIPTIONS": [
       "다음 카드가 두 번 사용됩니다.",

@@ -1,5 +1,5 @@
 {
-  "anniv5:RimworldPack": {
+  "${ModID}:RimworldPack": {
     "TEXT": [
       "림월드",
       "정신 붕괴와 바닥에서 식사함. 물론 엄청난 힘을 위해서입니다.",
@@ -7,18 +7,18 @@
       "원작은 #bLudeon #bStudios 가 제작한 #b림월드 입니다."
     ]
   },
-  "anniv5:Potions": {
+  "${ModID}:Potions": {
     "TEXT": [
       "맛있는 ",
       "!"
     ]
   },
-  "anniv5:OnFireModifier": {
+  "${ModID}:OnFireModifier": {
     "TEXT": [
-      "anniv5:불붙음. NL "
+      "${ModID}:불붙음. NL "
     ]
   },
-  "anniv5:RimworldPackHat": {
+  "${ModID}:RimworldPackHat": {
     "TEXT": [
       "우주 카우보이들을 위한 것입니다. 인간 가죽으로 만든 게 절대 아닙니다.",
       "림월드 모자"

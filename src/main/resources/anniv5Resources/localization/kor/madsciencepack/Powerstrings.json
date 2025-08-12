@@ -1,12 +1,12 @@
 {
-  "anniv5:PiratifyPower": {
+  "${ModID}:PiratifyPower": {
     "NAME": "해적질",
     "DESCRIPTIONS": [
       "턴 시작 시, 손에 있는 무작위 #b",
       " 장의 카드를 수정합니다: '캐논볼 을 얻습니다.'"
     ]
   },
-  "anniv5:PiratifyPowerUpp": {
+  "${ModID}:PiratifyPowerUpp": {
     "NAME": "해적질+",
     "DESCRIPTIONS": [
       "턴 시작 시, 손에 있는 무작위 #b",

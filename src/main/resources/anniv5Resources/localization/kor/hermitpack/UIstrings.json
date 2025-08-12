@@ -1,12 +1,12 @@
 {
-  "anniv5:HermitPack": {
+  "${ModID}:HermitPack": {
     "TEXT": [
       "허밋",
       "큰 비용으로 큰 힘을 얻는 허밋 카드의 모음.",
       "AlexMdle"
     ]
   },
-  "anniv5:HermitPackHat": {
+  "${ModID}:HermitPackHat": {
     "TEXT": [
       "거칠고 상처투성이지만 여전히 쓸 수 있습니다.",
       "허밋 모자"

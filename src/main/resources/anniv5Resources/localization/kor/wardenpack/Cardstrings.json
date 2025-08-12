@@ -1,44 +1,44 @@
 {
-  "anniv5:PierceVeil": {
+  "${ModID}:PierceVeil": {
     "NAME": "베일 꿰뚫기",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 뽑을 카드 더미 맨 위 !M! 장의 카드 중 한 장을 골라 손으로 가져옵니다."
   },
-  "anniv5:Stall": {
+  "${ModID}:Stall": {
     "NAME": "시간 벌기",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 손에서 !M! 장까지 뽑을 카드 더미 맨 위로 올립니다."
   },
-  "anniv5:RiskOfBlades": {
+  "${ModID}:RiskOfBlades": {
     "NAME": "칼날의 위험",
     "DESCRIPTION": "피해를 !D! 주고, 뽑을 카드 더미 맨 위의 카드가 공격 카드일 경우 세 배로 줍니다."
   },
-  "anniv5:Crossroads": {
+  "${ModID}:Crossroads": {
     "NAME": "교차로",
     "DESCRIPTION": "예지 !M!. NL 뽑을 카드 더미 맨 위의 카드를 사용합니다. NL 소멸."
   },
-  "anniv5:Anticipation": {
+  "${ModID}:Anticipation": {
     "NAME": "기대",
     "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 그것들 중 최대 비용만큼 힘을 얻습니다.",
     "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL 그것들의 비용을 합한 만큼 힘을 얻습니다."
   },
-  "anniv5:Prediction": {
+  "${ModID}:Prediction": {
     "NAME": "예측",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 공격하려는 적이 없을 경우, 대신 다음 턴에 얻습니다."
   },
-  "anniv5:ForceBolt": {
+  "${ModID}:ForceBolt": {
     "NAME": "강제 볼트",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 취약을 !M! 부여합니다. NL stslib:Persist !stslib:persist!."
   },
-  "anniv5:Enigmancy": {
+  "${ModID}:Enigmancy": {
     "NAME": "수수께끼",
-    "DESCRIPTION": "예지 !M!. NL 매 턴, 에너지를 !anniv5:m2! 얻고 얻는 에너지를 1 감소시킵니다."
+    "DESCRIPTION": "예지 !M!. NL 매 턴, 에너지를 !${ModID}:m2! 얻고 얻는 에너지를 1 감소시킵니다."
   },
-  "anniv5:Recurrence": {
+  "${ModID}:Recurrence": {
     "NAME": "재현",
     "DESCRIPTION": "손에 있는 카드를 복사해서 뽑을 카드 더미에 섞어 넣습니다. NL 소멸."
   },
-  "anniv5:DivineMight": {
+  "${ModID}:DivineMight": {
     "NAME": "신성한 힘",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL [#EFC851]신성한 [#EFC851]힘 이 두 번 사용될 때, anniv5:승천 합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL [#EFC851]신성한 [#EFC851]힘 이 두 번 사용될 때, ${ModID}:승천 합니다."
   }
 }

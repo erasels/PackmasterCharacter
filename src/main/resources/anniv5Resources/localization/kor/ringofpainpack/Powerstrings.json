@@ -1,12 +1,12 @@
 {
-  "anniv5:RendPower": {
+  "${ModID}:RendPower": {
     "NAME": "분열",
     "DESCRIPTIONS": [
       "공격으로부터 #b",
       " 피해를 더 받습니다. 적의 턴 종료 시 반으로 감소합니다."
     ]
   },
-  "anniv5:ConnectionPower": {
+  "${ModID}:ConnectionPower": {
     "NAME": "Connection",
     "DESCRIPTIONS": [
       "카드를 사용할 때마다, 그것과 같은 카드를 모두 #y강화합니다."

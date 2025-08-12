@@ -1,59 +1,59 @@
 {
-  "anniv5:CatONineTails": {
+  "${ModID}:CatONineTails": {
     "NAME": "아홉꼬리 고양이",
-    "DESCRIPTION": " !M! / 3 anniv5:무기를 얻습니다. NL 이 anniv5:무기로 공격하고 나서, 공격력 +2 를 얻습니다."
+    "DESCRIPTION": " !M! / 3 ${ModID}:무기를 얻습니다. NL 이 ${ModID}:무기로 공격하고 나서, 공격력 +2 를 얻습니다."
   },
-  "anniv5:DeadlyArsenal": {
+  "${ModID}:DeadlyArsenal": {
     "NAME": "치명적인 무기고",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 현재 장비한 서로 다른 anniv5:무기마다 1 장 + 1 장만큼 카드를 뽑습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 현재 장비한 서로 다른 ${ModID}:무기마다 1 장 + 1 장만큼 카드를 뽑습니다."
   },
-  "anniv5:MegaUpgrade": {
+  "${ModID}:MegaUpgrade": {
     "NAME": "메가 강화",
-    "DESCRIPTION": "보존. NL 모든 장비한 anniv5:무기가 + !M! / + !M! 를 얻습니다."
+    "DESCRIPTION": "보존. NL 모든 장비한 ${ModID}:무기가 + !M! / + !M! 를 얻습니다."
   },
-  "anniv5:PowderKeg": {
+  "${ModID}:PowderKeg": {
     "NAME": "화약통",
-    "DESCRIPTION": " 0 / 1 anniv5:무기를 장비합니다. NL 파괴되면 적 전체에게 피해를 !M! 줍니다."
+    "DESCRIPTION": " 0 / 1 ${ModID}:무기를 장비합니다. NL 파괴되면 적 전체에게 피해를 !M! 줍니다."
   },
-  "anniv5:RearmingStrike": {
+  "${ModID}:RearmingStrike": {
     "NAME": "재장비 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 4 / 2 anniv5:무기를 장비합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 4 / 2 ${ModID}:무기를 장비합니다."
   },
-  "anniv5:Salvager": {
+  "${ModID}:Salvager": {
     "NAME": "재사용",
-    "DESCRIPTION": "anniv5:무기가 파괴될 때, [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "anniv5:무기가 파괴될 때, [E] [E] 를 얻습니다."
+    "DESCRIPTION": "${ModID}:무기가 파괴될 때, [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "${ModID}:무기가 파괴될 때, [E] [E] 를 얻습니다."
   },
-  "anniv5:Sword": {
+  "${ModID}:Sword": {
     "NAME": "검",
-    "DESCRIPTION": "3 중 1 개의 검을 선택합니다. NL 부가 효과가 있는 3 / !M! anniv5:무기를 장착합니다.",
+    "DESCRIPTION": "3 중 1 개의 검을 선택합니다. NL 부가 효과가 있는 3 / !M! ${ModID}:무기를 장착합니다.",
     "EXTENDED_DESCRIPTION": [
       "부가 효과",
       "#r화염: 이 무기로 공격할 때마다 적 전체에게 피해를 #b4 줍니다. NL #y지혜: 이 무기로 공격할 때마다 카드를 1 장 뽑습니다. NL #p혼돈: 이 무기로 공격할 때마다 무작위 카드를 얻습니다."
     ]
   },
-  "anniv5:SwordOfFire": {
+  "${ModID}:SwordOfFire": {
     "NAME": "화염의 검",
-    "DESCRIPTION": "3 / !M! anniv5:무기를 장착합니다. NL 이 anniv5:무기로 공격할 때마다 적 전체에게 피해를 4 줍니다."
+    "DESCRIPTION": "3 / !M! ${ModID}:무기를 장착합니다. NL 이 ${ModID}:무기로 공격할 때마다 적 전체에게 피해를 4 줍니다."
   },
-  "anniv5:SwordOfWisdom": {
+  "${ModID}:SwordOfWisdom": {
     "NAME": "지혜의 검",
-    "DESCRIPTION": "3 / !M! anniv5:무기를 장착합니다. NL 이 anniv5:무기로 공격할 때마다 카드를 1 장 뽑습니다."
+    "DESCRIPTION": "3 / !M! ${ModID}:무기를 장착합니다. NL 이 ${ModID}:무기로 공격할 때마다 카드를 1 장 뽑습니다."
   },
-  "anniv5:SwordOfChaos": {
+  "${ModID}:SwordOfChaos": {
     "NAME": "혼돈의 검",
-    "DESCRIPTION": "3 / !M! anniv5:무기를 장착합니다. NL 이 anniv5:무기로 공격할 때마다 무작위 카드를 얻습니다."
+    "DESCRIPTION": "3 / !M! ${ModID}:무기를 장착합니다. NL 이 ${ModID}:무기로 공격할 때마다 무작위 카드를 얻습니다."
   },
-  "anniv5:ArmorUp": {
+  "${ModID}:ArmorUp": {
     "NAME": "갑옷 착용",
     "DESCRIPTION": "기존 대미지보다 3 이상의 단일 대상 공격 카드를 사용할 때마다 방어도를 !M! 얻습니다."
   },
-  "anniv5:PirateHook": {
+  "${ModID}:PirateHook": {
     "NAME": "해적 후크",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 10 이상의 피해를 준다면 피해를 !D! 더 줍니다."
   },
-  "anniv5:ReapersScythe": {
+  "${ModID}:ReapersScythe": {
     "NAME": "사신의 낫",
-    "DESCRIPTION": "3 / !M! anniv5:무기를 장착합니다. NL 이 anniv5:무기로 공격할 때 대상에게 피해마다 anniv5:사신의  *표식 을 부여합니다."
+    "DESCRIPTION": "3 / !M! ${ModID}:무기를 장착합니다. NL 이 ${ModID}:무기로 공격할 때 대상에게 피해마다 ${ModID}:사신의  *표식 을 부여합니다."
   }
 }

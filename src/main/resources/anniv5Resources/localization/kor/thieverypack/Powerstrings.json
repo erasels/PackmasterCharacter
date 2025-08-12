@@ -1,24 +1,24 @@
 {
-  "anniv5:DeceivedPower": {
+  "${ModID}:DeceivedPower": {
     "NAME": "속음",
     "DESCRIPTIONS": [
       "이 대상이 #y중독된 채로 죽는다면, 골드를 #b",
       " 얻습니다."
     ]
   },
-  "anniv5:HammeredPower": {
+  "${ModID}:HammeredPower": {
     "NAME": "망치",
     "DESCRIPTIONS": [
       "이 대상은 다음 턴까지 이로운 효과를 도둑맞습니다."
     ]
   },
-  "anniv5:ThieveryMasteryPower": {
+  "${ModID}:ThieveryMasteryPower": {
     "NAME": "마스터 도둑",
     "DESCRIPTIONS": [
       "무언가 훔칠 때, 그것의 두배를 얻습니다."
     ]
   },
-  "anniv5:MindControlledPower": {
+  "${ModID}:MindControlledPower": {
     "NAME": "정신 지배됨",
     "DESCRIPTIONS": [
       "이 적은 당신의 동료가 되어 다른 적을 공격합니다."

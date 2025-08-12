@@ -1,12 +1,12 @@
 {
-  "anniv5:BitingColdPack": {
+  "${ModID}:BitingColdPack": {
     "TEXT": [
       "살을 에는 추위",
-      "적들에게 anniv5:동상을 적용해 추위에 굴복하게 만드세요.",
+      "적들에게 ${ModID}:동상을 적용해 추위에 굴복하게 만드세요.",
       "Enbeon"
     ]
   },
-  "anniv5:BitingColdPackHat": {
+  "${ModID}:BitingColdPackHat": {
     "TEXT": [
       "이 축제 모자는 추위를 막아줄 것입니다.",
       "산타 모자"

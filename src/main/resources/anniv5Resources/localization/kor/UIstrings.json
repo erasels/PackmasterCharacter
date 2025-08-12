@@ -1,11 +1,11 @@
 {
-  "anniv5:ModalChoice": {
+  "${ModID}:ModalChoice": {
     "TEXT": [
       "팩을 선택하세요.",
       "선택하세요."
     ]
   },
-  "anniv5:PackPreviewCard": {
+  "${ModID}:PackPreviewCard": {
     "TEXT": [
       "제작자: ",
       "팩",
@@ -13,90 +13,90 @@
       "모자 잠금"
     ]
   },
-  "anniv5:AtGameStart": {
+  "${ModID}:AtGameStart": {
     "TEXT": [
       "이것들은 이번 진행에서 사용 가능한 팩입니다. 확인을 클릭하여 진행하세요."
     ]
   },
-  "anniv5:IroncladPack": {
+  "${ModID}:IroncladPack": {
     "TEXT": [
       "강철의 이상",
       "힘을 사용할 수 있는 신뢰할 수 있는 강철 카드들이 모여 있습니다.",
       "MegaCrit"
     ]
   },
-  "anniv5:IroncladPackHat": {
+  "${ModID}:IroncladPackHat": {
     "TEXT": [
       "강인한 남자를 위한 강력한 마스크.",
       "강철 헬멧"
     ]
   },
-  "anniv5:SilentPack": {
+  "${ModID}:SilentPack": {
     "TEXT": [
       "고요한 결투",
       "쉬브와 버리기 기능을 제공하는 신뢰할 수 있는 Silent 카드들.",
       "MegaCrit"
     ]
   },
-  "anniv5:SilentPackHat": {
+  "${ModID}:SilentPackHat": {
     "TEXT": [
       "기괴한 기념품, 이제 당신의 머리에.",
       "Silent 트로피"
     ]
   },
-  "anniv5:DefectPack": {
+  "${ModID}:DefectPack": {
     "TEXT": [
       "결함의 꿈",
       "구슬을 사용할 수 있는 Defect 카드들의 모음.",
       "MegaCrit"
     ]
   },
-  "anniv5:DefectPackHat": {
+  "${ModID}:DefectPackHat": {
     "TEXT": [
       "균형을 유지하려는 이상한 충동을 느낍니다.",
       "Defect 인터페이스"
     ]
   },
-  "anniv5:AllForOnePack": {
+  "${ModID}:AllForOnePack": {
     "TEXT": [
       "모두를 위해",
       "0비용과 드로우에 중점을 둔 기본 게임 카드들.",
       "MegaCrit"
     ]
   },
-  "anniv5:AllForOnePackHat": {
+  "${ModID}:AllForOnePackHat": {
     "TEXT": [
       "하나로 뭉치면, 나누어지면 우리는 쓰러진다.",
       "머스킷터 모자"
     ]
   },
-  "anniv5:WatcherPack": {
+  "${ModID}:WatcherPack": {
     "TEXT": [
       "관찰자의 의지",
       "스탠스를 제외한 신뢰할 수 있는 Watcher 카드들.",
       "MegaCrit"
     ]
   },
-  "anniv5:WatcherPackHat": {
+  "${ModID}:WatcherPackHat": {
     "TEXT": [
       "사색적인 얼굴 착용물 & 액세서리.",
       "Watcher 베일"
     ]
   },
-  "anniv5:BulwarkPack": {
+  "${ModID}:BulwarkPack": {
     "TEXT": [
       "방어의 요새",
       "첨탑의 가장 강력한 방어 도구들이 처음으로 한 곳에 모였습니다.",
       "modargo"
     ]
   },
-  "anniv5:BulwarkPackHat": {
+  "${ModID}:BulwarkPackHat": {
     "TEXT": [
       "종합적인 보호.",
       "The Headfort"
     ]
   },
-  "anniv5:PackMainMenuUI": {
+  "${ModID}:PackMainMenuUI": {
     "TEXT": [
       "커스텀 드래프트 모드",
       "이 옵션을 켜면 팩 선택 방식을 지정할 수 있습니다.",
@@ -108,46 +108,46 @@
       "없음"
     ]
   },
-  "anniv5:PackSetup": {
+  "${ModID}:PackSetup": {
     "TEXT": [
       "팩을 드래프트하세요!",
       "현재 팩",
       "팩 등급 표시"
     ]
   },
-  "anniv5:CurrentRunCardsTopPanelItem": {
+  "${ModID}:CurrentRunCardsTopPanelItem": {
     "TEXT": [
       "팩",
       "{0} NL NL 이번 진행에서 카드 풀을 보려면 클릭하세요.",
       "이번 진행에서 사용 가능한 카드들"
     ]
   },
-  "anniv5:CreditsRenderStrings": {
+  "${ModID}:CreditsRenderStrings": {
     "TEXT": [
       "추가 크레딧"
     ]
   },
-  "anniv5:PackFilterMenu": {
+  "${ModID}:PackFilterMenu": {
     "TEXT": [
       "팩 활성화"
     ]
   },
-  "anniv5:Compendium": {
+  "${ModID}:Compendium": {
     "TEXT": [
       "팩별"
     ]
   },
-  "anniv5:RunHistory": {
+  "${ModID}:RunHistory": {
     "TEXT": [
       "팩:"
     ]
   },
-  "anniv5:CardTypeStrings": {
+  "${ModID}:CardTypeStrings": {
     "TEXT": [
       "기회"
     ]
   },
-  "anniv5:HatMenu": {
+  "${ModID}:HatMenu": {
     "TEXT": [
       "기본 모자",
       "(L)",
@@ -163,7 +163,7 @@
       "무지개 모자"
     ]
   },
-  "anniv5:ConfigMenuText": {
+  "${ModID}:ConfigMenuText": {
     "TEXT": [
       "팩마스터",
       "StS 모딩 커뮤니티",
@@ -174,19 +174,19 @@
       "커스텀 드래프트 모드에서 '없음'을 여러 번 선택 가능 (일부 팩 선택에서 충돌/정지 발생 가능)"
     ]
   },
-  "anniv5:PMBoosterBoxCardReward": {
+  "${ModID}:PMBoosterBoxCardReward": {
     "TEXT": [
       "부스터 박스 카드 추가",
       "부스터 박스 카드 선택"
     ]
   },
-  "anniv5:SingleCardReward": {
+  "${ModID}:SingleCardReward": {
     "TEXT": [
       "[카드] ",
       "팁: 카드 자세한 보기 위해 우클릭!"
     ]
   },
-  "anniv5:PackSummaryDisplay": {
+  "${ModID}:PackSummaryDisplay": {
     "TEXT": [
       "팩 요약",
       "공격: {0}",
@@ -210,7 +210,7 @@
       "Powers": "스킬"
     }
   },
-  "anniv5:MerchantSpeech": {
+  "${ModID}:MerchantSpeech": {
     "TEXT": [
       "@좋은@ @모자@",
       "블랙 마켓보다 더 나은 거래",
@@ -218,20 +218,20 @@
       "최근 자주 봤어요"
     ]
   },
-  "anniv5:MerchantEndingSpeech": {
+  "${ModID}:MerchantEndingSpeech": {
     "TEXT": [
       "그 배낭에 뭐가 들어 있나요?",
       "언젠가 그들은 마지막 팩을 만들 거예요."
     ]
   },
-  "anniv5:MainMenuExpansionPacksButton": {
+  "${ModID}:MainMenuExpansionPacksButton": {
     "TEXT": [
       "추가 팩 활성화!",
       "일부 팩이 누락되었습니다. #g이 버튼을 클릭하여 #g활성화하세요. 다양성을 증가시키지만 초기 로딩 시간이 길어집니다. NL #y재시작 #y필요!",
       "재시작 필요!"
     ]
   },
-  "anniv5:MainMenuFTUE": {
+  "${ModID}:MainMenuFTUE": {
     "TEXT": [
       "팩마스터 확장팩!",
       "메모리 문제로 인해 팩마스터는 모듈화되었습니다. 이로 인해 '팩마스터: 확장팩'을 활성화해야 모든 팩을 사용할 수 있습니다. NL 이를 활성화하거나, 메인 메뉴 화면 오른쪽의 편리한 버튼을 사용하세요.",

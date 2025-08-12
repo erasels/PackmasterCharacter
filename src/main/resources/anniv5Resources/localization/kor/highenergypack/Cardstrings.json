@@ -1,31 +1,31 @@
 {
-  "anniv5:MiracleWorker": {
+  "${ModID}:MiracleWorker": {
     "NAME": "기적의 일꾼",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL *기적 을 카드 더미 맨 위에 추가합니다."
   },
-  "anniv5:Trash": {
+  "${ModID}:Trash": {
     "NAME": "쓰레기",
     "DESCRIPTION": "손의 가장 왼쪽 카드를 소멸시킵니다. NL [E] 를 얻습니다.",
     "UPGRADE_DESCRIPTION": "보존. NL 손의 가장 왼쪽 카드를 소멸시킵니다. NL [E] 를 얻습니다."
   },
-  "anniv5:MultiTool": {
+  "${ModID}:MultiTool": {
     "NAME": "다기능 도구",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL 에너지가 남은 채로 턴을 종료하면, 모든 적은 체력을 !M! 잃습니다."
   },
-  "anniv5:LastResort": {
+  "${ModID}:LastResort": {
     "NAME": "최후의 수단",
     "DESCRIPTION": "!B! 방어도를 X번 얻습니다. NL X가 0이면, NL 다음 턴에 [E] 를 얻습니다."
   },
-  "anniv5:LotsOfIronWaves": {
+  "${ModID}:LotsOfIronWaves": {
     "NAME": "철파도",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 피해를 !D! 줍니다."
   },
-  "anniv5:ManifestMeal": {
+  "${ModID}:ManifestMeal": {
     "NAME": "기적의 식사",
     "DESCRIPTION": "!D! 피해를 X번 줍니다. NL *음식 을 카드 더미에 섞습니다.",
     "UPGRADE_DESCRIPTION": "!D! 피해를 X번 줍니다. NL *음식+ 을 카드 더미에 섞습니다."
   },
-  "anniv5:Food": {
+  "${ModID}:Food": {
     "NAME": "음식",
     "DESCRIPTION": "X만큼 [E] 를 얻습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "보존. NL X만큼 [E] 를 얻습니다. NL 소멸.",
@@ -36,21 +36,21 @@
       "맛있어요."
     ]
   },
-  "anniv5:Investor": {
+  "${ModID}:Investor": {
     "NAME": "투자자",
     "DESCRIPTION": "카드에 2 이상 에너지를 사용하면, 방어도를 !M! 얻습니다."
   },
-  "anniv5:StruckByATrain": {
+  "${ModID}:StruckByATrain": {
     "NAME": "기차에 치이다",
     "DESCRIPTION": "가장 앞에 있는 적에게 피해를 !D! 줍니다. NL 이 카드의 피해는 이번 전투에서 !M!만큼 증가합니다."
   },
-  "anniv5:StormForm": {
+  "${ModID}:StormForm": {
     "NAME": "폭풍형태",
     "DESCRIPTION": "턴 시작 시, [E] [E] 를 얻습니다.",
     "UPGRADE_DESCRIPTION": "턴 시작 시, [E] [E] [E] 를 얻습니다."
   },
-  "anniv5:SuperNova": {
+  "${ModID}:SuperNova": {
     "NAME": "초신성 폭발",
-    "DESCRIPTION": "모든 적은 체력을 !M! 잃습니다. NL 모든 적에게 !anniv5:m2! 약화와 취약을 적용합니다."
+    "DESCRIPTION": "모든 적은 체력을 !M! 잃습니다. NL 모든 적에게 !${ModID}:m2! 약화와 취약을 적용합니다."
   }
 }

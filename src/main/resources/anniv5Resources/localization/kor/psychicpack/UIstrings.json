@@ -1,33 +1,33 @@
 {
-  "anniv5:PsychicPack": {
+  "${ModID}:PsychicPack": {
     "TEXT": [
       "사이킥",
       "합리를 넘어서 불가능한 것을 실현하십시오.",
       "Alchyr, (Gk) Erasels"
     ]
   },
-  "anniv5:Occult": {
+  "${ModID}:Occult": {
     "TEXT": [
-      "anniv5:오컬트. NL ",
-      "NL anniv5:오컬트. NL"
+      "${ModID}:오컬트. NL ",
+      "NL ${ModID}:오컬트. NL"
     ]
   },
-  "anniv5:RuleCancel": {
+  "${ModID}:RuleCancel": {
     "TEXT": [
       "오컬트로 만들기"
     ]
   },
-  "anniv5:OccultInDrawPile": {
+  "${ModID}:OccultInDrawPile": {
     "TEXT": [
       "오컬트로 만들 카드를 선택하십시오"
     ]
   },
-  "anniv5:UnplayableTurnModifier": {
+  "${ModID}:UnplayableTurnModifier": {
     "TEXT": [
       "이번 턴에 사용할 수 없습니다. NL "
     ]
   },
-  "anniv5:PsychicPackHat": {
+  "${ModID}:PsychicPackHat": {
     "TEXT": [
       "당신에게서 힘이 나옵니다.",
       "룬"

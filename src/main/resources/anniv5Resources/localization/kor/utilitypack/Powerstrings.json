@@ -1,5 +1,5 @@
 {
-  "anniv5:PlasmaShield": {
+  "${ModID}:PlasmaShield": {
     "NAME": "플라즈마 방패",
     "DESCRIPTIONS": ["턴 종료 시, #y플라즈마가 있다면 #y방어도를 #b{0} 얻습니다."]
   }

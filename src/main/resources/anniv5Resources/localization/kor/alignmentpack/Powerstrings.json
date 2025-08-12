@@ -1,12 +1,12 @@
 {
-  "anniv5:GlimpsePower": {
+  "${ModID}:GlimpsePower": {
     "NAME": "일견",
     "DESCRIPTIONS": [
       "#y휘발성 카드를 뽑을 때마다, #y방어도를 #b",
       " 얻습니다."
     ]
   },
-  "anniv5:RememberPower": {
+  "${ModID}:RememberPower": {
     "NAME": "기억",
     "DESCRIPTIONS": [
       "턴이 끝날 때, 원하는 카드를 #b",
@@ -15,7 +15,7 @@
       "뽑을 카드 더미에 섞어 넣습니다."
     ]
   },
-  "anniv5:TrinePower": {
+  "${ModID}:TrinePower": {
     "NAME": "트리플",
     "DESCRIPTIONS": [
       "이번 턴에 사용하는 다음 카드가 두 번 발동됩니다.",

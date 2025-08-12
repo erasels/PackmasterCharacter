@@ -1,5 +1,5 @@
 {
-  "anniv5:TarredFeather": {
+  "${ModID}:TarredFeather": {
     "NAME": "타르 묻은 깃털",
     "FLAVOR": "이전 사용자를 만나고 싶지 않을 것입니다.",
     "DESCRIPTIONS": [
