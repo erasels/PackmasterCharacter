@@ -35,8 +35,8 @@ public class DifferentStrikes extends AbstractStrikePackCard {
                 AbstractCard strike = Wiz.returnTrulyRandomPrediCardInCombat(card -> card.hasTag(CardTags.STRIKE) && !card.hasTag(CardTags.HEALING) && (card.rarity == CardRarity.COMMON || card.rarity == CardRarity.UNCOMMON || card.rarity == CardRarity.RARE), true);
                 if (strike != null) {
                     strike.modifyCostForCombat(-1);
-                    if (!strike.exhaust) CardModifierManager.addModifier(strike, new ExhaustMod());
                     if (upgraded) strike.upgrade();
+                    if (!strike.exhaust) CardModifierManager.addModifier(strike, new ExhaustMod());
                     addToBot(new MakeTempCardInHandAction(strike));
                 } else { //Give a basic Strike if there were no Strikes in the pool somehow
                     AbstractCard dumbStrike = new Strike();
