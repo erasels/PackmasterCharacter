@@ -3,6 +3,7 @@
     "PROPER_NAME": "완더봇",
     "NAMES": [
       "완더봇",
+      "완더봇을",
       "wanderbot"
     ],
     "DESCRIPTION": "지속: 가장 앞에 있는 적에게 피해를 줍니다. 발현: 카드를 1장 뽑습니다."
@@ -10,8 +11,9 @@
   {
     "PROPER_NAME": "슈퍼휘발성",
     "NAMES": [
+      "megathereal",
       "슈퍼휘발성",
-      "megathereal"
+      "슈퍼휘발성,"
     ],
     "DESCRIPTION": "턴 종료 시, 위치에 상관없이 소멸됩니다."
   },

@@ -9,7 +9,7 @@
   },
   "${ModID}:EatWithoutTable": {
     "NAME": "바닥에서 식사함",
-    "DESCRIPTION": "무작위 일반 등급 포션을 마십니다. *절망 을 얻습니다. NL 소멸."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. 임시 체력을 !M! 얻습니다. *절망 을 얻습니다. NL 소멸."
   },
   "${ModID}:Luciferium": {
     "NAME": "루시페륨",
@@ -22,7 +22,7 @@
   },
   "${ModID}:KillThirst": {
     "NAME": "살인 갈망",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 적을 죽이지 않을 경우, *절망 을 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 적을 죽이지 않을 경우, 피해가 두 배가 되고 *절망 을 얻습니다."
   },
   "${ModID}:SpikeTrap": {
     "NAME": "가시 함정",
@@ -38,11 +38,12 @@
   },
   "${ModID}:BurningPassion": {
     "NAME": "불타는 열정",
-    "DESCRIPTION": "매 턴 처음으로 얻는 이로운 효과가 두 배가 됩니다."
+    "DESCRIPTION": "손에 있는 카드를 모두 소멸시킵니다. NL 소멸된 카드마다 [E] 를 얻고 카드를 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "손에서 원하는 만큼 카드를 소멸시킵니다. NL 소멸된 카드마다 [E] 를 얻고 카드를 뽑습니다. NL 소멸."
   },
   "${ModID}:TaintedWeapon": {
     "NAME": "무기 유품",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 개전: 이 카드를 무작위 적에 넣습니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드가 적을 죽이지 않을 경우, 이 카드를 그 적에 넣습니다.",
     "EXTENDED_DESCRIPTION": [
       "피해를 !D! 줍니다."
     ]

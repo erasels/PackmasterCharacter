@@ -20,7 +20,7 @@
   "${ModID}:SurprisePack": {
     "NAME": "서프라이즈 팩",
     "DESCRIPTION": "카드를 !M! 장 뽑습니다. NL *찢어지면, [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL *찢어지면, [E] 를 얻습니다."
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 뽑습니다. NL *찢어지면, [E] [E] 를 얻습니다."
   },
   "${ModID}:Inspiration": {
     "NAME": "영감",
