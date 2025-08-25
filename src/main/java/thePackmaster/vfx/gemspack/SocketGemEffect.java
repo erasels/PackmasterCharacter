@@ -1,5 +1,6 @@
 package thePackmaster.vfx.gemspack;
 
+import basemod.ReflectionHacks;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -11,16 +12,21 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
+import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
+import com.megacrit.cardcrawl.ui.campfire.SmithOption;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import thePackmaster.SpireAnniversary5Mod;
 import thePackmaster.cards.gemspack.AbstractGemsCard;
 import thePackmaster.packs.GemsPack;
+
+import java.util.ArrayList;
 
 public class SocketGemEffect extends AbstractGameEffect {
     public static final String[] TEXT;
@@ -97,11 +103,28 @@ public class SocketGemEffect extends AbstractGameEffect {
             if (CampfireUI.hidden) {
                 AbstractRoom.waitTimer = 0.0F;
                 if (AbstractDungeon.getCurrRoom() instanceof RestRoom) {
+                    RestRoom room = ((RestRoom) AbstractDungeon.getCurrRoom());
                     GemsPack.socketBonfireOption.reCheck();
-                    ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
+                    boolean reinitialize = false;
+                    ArrayList<AbstractCampfireOption> buttons = ReflectionHacks.getPrivate(room.campfireUI, CampfireUI.class, "buttons");
+                    for (AbstractCampfireOption option : buttons) {
+                        if (option instanceof SmithOption && option.usable && !(AbstractDungeon.player.masterDeck.getUpgradableCards().size() > 0 && !ModHelper.isModEnabled("Midas"))) {
+                            reinitialize = true;
+                        }
+                    }
+                    // In theory, we could always reinitialize the buttons since it shouldn't have side effects and it
+                    // would catch other cases where button usability changed (instead of just the case of socketing the
+                    // last upgradeable card in your deck). But it's possible other mods add undesirable side effects,
+                    // so only call this method when we know we need to fix the upgrade option to reduce the chance of
+                    // weird issues.
+                    if (reinitialize) {
+                        buttons.clear();
+                        ReflectionHacks.privateMethod(CampfireUI.class, "initializeButtons").invoke(room.campfireUI);
+                    }
+                    room.campfireUI.reopen();
                     // there was a bug with the fire sound persisting and I'm not sure why,
                     // so this is basically a randomly thrown out preventative measure.
-                    ((RestRoom) AbstractDungeon.getCurrRoom()).cutFireSound();
+                    room.cutFireSound();
 
                 }
             }
