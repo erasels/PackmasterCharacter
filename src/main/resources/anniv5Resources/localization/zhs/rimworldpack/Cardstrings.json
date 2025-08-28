@@ -9,7 +9,7 @@
   },
   "${ModID}:EatWithoutTable": {
     "NAME": "无桌进食",
-    "DESCRIPTION": "随机制造一瓶药水并立即喝下。 NL 将一张 *绝望 加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 点 临时生命 。 NL 将一张 *绝望 加入手牌。"
   },
   "${ModID}:Luciferium": {
     "NAME": "魔鬼素",
@@ -22,7 +22,7 @@
   },
   "${ModID}:KillThirst": {
     "NAME": "杀戮饥渴",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若未击杀目标， NL 将一张 *绝望 加入手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若未击杀目标， NL 将其伤害翻倍， NL 并将一张 *绝望 加入抽牌堆。"
   },
   "${ModID}:SpikeTrap": {
     "NAME": "钉刺陷阱",
@@ -38,14 +38,12 @@
   },
   "${ModID}:BurningPassion": {
     "NAME": "燃烧激情",
-    "DESCRIPTION": "每回合首次获得正面效果时，额外获得一次。"
+    "DESCRIPTION": "消耗 所有手牌。 NL 每消耗1张牌，获得 [E] 并抽1张牌。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "消耗 任意数量手牌。 NL 每消耗1张牌，获得 [E] 并抽1张牌。 NL 消耗。"
   },
   "${ModID}:TaintedWeapon": {
     "NAME": "腐化武器",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 起动 ：本牌被随机一名敌人偷走。",
-    "EXTENDED_DESCRIPTION": [
-      "造成 !D! 点伤害。"
-    ]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若未击杀目标， NL 将本卡放在该目标上。"
   },
   "${ModID}:RimworldKeywordManager": {
     "NAME": "KeywordManager",
