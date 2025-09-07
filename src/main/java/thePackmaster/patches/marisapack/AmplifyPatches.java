@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -189,7 +190,7 @@ public class AmplifyPatches {
 
         private static int costLogic(AbstractCard c) {
             int ampCost = ((AmplifyCard) c)._costLogic();
-            if (ampCost > 0 && ampCost + Wiz.getLogicalCardCost(c) <= EnergyPanel.totalCount) {
+            if (!CardCrawlGame.isInARun() || (ampCost > 0 && ampCost + Wiz.getLogicalCardCost(c) <= EnergyPanel.totalCount)) {
                 return ampCost;
             } else if (ampCost == 0) { // Doesn't support reducing amplify cost as opposed to making it free, however that effect is not planned or implemented
                 return 0;
