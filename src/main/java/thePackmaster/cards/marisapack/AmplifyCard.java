@@ -3,6 +3,7 @@ package thePackmaster.cards.marisapack;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import thePackmaster.patches.marisapack.AmplifyPatches;
@@ -20,6 +21,7 @@ public interface AmplifyCard {
      *                 This should be used in applyPowers/calculateCardDamage
      */
     default boolean shouldAmplify(AbstractCard thisCard) {
+        if (!CardCrawlGame.isInARun()) return true;
         int cardCost = Wiz.getLogicalCardCost(thisCard);
         return EnergyPanel.totalCount >= cardCost + ((AmplifyCard)thisCard)._costLogic();
     }
@@ -46,7 +48,7 @@ public interface AmplifyCard {
 
     // Includes amplify cost negation logic
     default int _costLogic() {
-        if(Wiz.p() != null && Wiz.p().hasPower(FreeAmplifyPower.POWER_ID)) {
+        if(CardCrawlGame.isInARun() && Wiz.p() != null && Wiz.p().hasPower(FreeAmplifyPower.POWER_ID)) {
             return 0;
         }
         return getAmplifyCost();
