@@ -14,7 +14,7 @@
   },
   "${ModID}:LastResort": {
     "NAME": "최후의 수단",
-    "DESCRIPTION": "!B! 방어도를 X번 얻습니다. NL X가 0이면, NL 다음 턴에 [E] 를 얻습니다."
+    "DESCRIPTION": "!B! 방어도를 X 번 얻습니다. NL X 가 0이면, NL 다음 턴에 [E] 를 얻습니다."
   },
   "${ModID}:LotsOfIronWaves": {
     "NAME": "철파도",
@@ -22,16 +22,17 @@
   },
   "${ModID}:ManifestMeal": {
     "NAME": "기적의 식사",
-    "DESCRIPTION": "!D! 피해를 X번 줍니다. NL *음식 을 카드 더미에 섞습니다.",
-    "UPGRADE_DESCRIPTION": "!D! 피해를 X번 줍니다. NL *음식+ 을 카드 더미에 섞습니다."
+    "DESCRIPTION": "!D! 피해를 X 번 줍니다. NL *음식 을 카드 더미에 섞습니다.",
+    "UPGRADE_DESCRIPTION": "!D! 피해를 X 번 줍니다. NL *음식+ 을 카드 더미에 섞습니다."
   },
   "${ModID}:Food": {
     "NAME": "음식",
-    "DESCRIPTION": "X만큼 [E] 를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL X만큼 [E] 를 얻습니다. NL 소멸.",
+    "DESCRIPTION": "X 만큼 [E] 를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL X 만큼 [E] 를 얻습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
-      "X만큼 [E] 를 얻습니다.",
-      "보존. NL X만큼 [E] 를 얻습니다. NL 소멸.",
+      "얻습니다: ",
+      "보존. NL 얻습니다: ",
+      " . NL 소멸.",
       "아무것도 얻지 않습니다! NL 좋은 하루 되세요! NL 소멸.",
       "맛있어요."
     ]
