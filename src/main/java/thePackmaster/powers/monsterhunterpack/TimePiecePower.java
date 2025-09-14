@@ -35,7 +35,7 @@ public class TimePiecePower extends AbstractPackmasterPower {
         if (this.amount2 >= 12) {
             addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
             this.flash();
-            this.amount = 0;
+            this.amount2 = 0;
         }
         else {
             this.flashWithoutSound();
