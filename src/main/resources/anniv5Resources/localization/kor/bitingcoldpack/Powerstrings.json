@@ -17,7 +17,7 @@
   },
   "${ModID}:FrostedEdgePower": {
     "NAME": "얼어붙은 칼날",
-    "DESCRIPTIONS": ["#y동상을 적용할 때마다, 일시적인 #y힘을 #b 얻습니다."]
+    "DESCRIPTIONS": ["#y동상을 적용할 때마다, 일시적인 #y힘을 #b", " 얻습니다."]
   },
   "${ModID}:IceShatterPower": {
     "NAME": "얼음 분쇄",
