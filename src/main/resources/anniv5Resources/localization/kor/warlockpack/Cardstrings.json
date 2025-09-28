@@ -1,7 +1,7 @@
 {
   "${ModID}:Imp": {
     "NAME": "임프",
-    "DESCRIPTION": "${ModID}:뽑을\u00a0때\u00a0시전. NL 피해를 !M! 줍니다. 이번 전투에서 *임프 의 피해량을 1 증가시킵니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+    "DESCRIPTION": "${ModID}:뽑을\u00a0때\u00a0시전. NL 피해를 !M! 줍니다. 이번 전투에서 *임프 의 피해량을 !${ModID}:m2! 증가시킵니다. NL 카드를 1 장 뽑습니다. NL 소멸."
   },
   "${ModID}:HighPriestessJeklik": {
     "NAME": "대여사제 제클릭",
