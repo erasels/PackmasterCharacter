@@ -64,7 +64,6 @@ public class DynamicVial extends AbstractWomanInBlueCard {
         }
 
         addToBot(new EasyModalChoiceAction(choiceCards, 1, CardCrawlGame.languagePack.getUIString(makeID("ModalChoice")).TEXT[0]));
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
 
