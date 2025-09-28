@@ -1,7 +1,7 @@
 {
   "${ModID}:Imp": {
     "NAME": "小鬼",
-    "DESCRIPTION": "${ModID}:自动打出 。 NL 造成 !M! 点伤害。 NL 本场战斗 *小鬼 牌伤害增加1点。 NL 抽一张牌。 NL 消耗 。"
+    "DESCRIPTION": "${ModID}:自动打出 。 NL 造成 !M! 点伤害。 NL 本场战斗 *小鬼 牌伤害增加 !${ModID}:m2! 点。 NL 抽一张牌。 NL 消耗 。"
   },
   "${ModID}:HighPriestessJeklik": {
     "NAME": "高阶祭司耶克里克",
