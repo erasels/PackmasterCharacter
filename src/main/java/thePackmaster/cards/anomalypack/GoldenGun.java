@@ -64,8 +64,15 @@ public class GoldenGun extends AbstractAnomalyCard implements StartupCard {
     }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return this.loaded;
+        boolean canUse = super.canUse(p, m);
+        if (!canUse) {
+            return false;
+        } else if (!this.loaded) {
+            if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
+                this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
+            }
+            return false;
+        }
+        return true;
     }
-
-
 }
