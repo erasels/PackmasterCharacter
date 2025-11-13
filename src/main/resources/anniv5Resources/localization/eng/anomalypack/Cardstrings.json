@@ -31,7 +31,8 @@
   },
   "${ModID}:GoldenGun": {
     "NAME": "Golden Gun",
-    "DESCRIPTION": "Deal !D! damage. NL Must be [#EFC851]Loaded. NL Startup: Add a [#EFC851]Golden [#EFC851]Round to your draw pile. "
+    "DESCRIPTION": "Deal !D! damage. NL Must be [#EFC851]Loaded. NL Startup: Add a [#EFC851]Golden [#EFC851]Round to your draw pile. ",
+    "EXTENDED_DESCRIPTION": ["Must be loaded!"]
   },
   "${ModID}:GoldenRound": {
     "NAME": "Golden Round",

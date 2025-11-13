@@ -1,7 +1,7 @@
 {
   "${ModID}:Imp": {
     "NAME": "Imp",
-    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn NL Fügt !M! Schaden zu. Erhöht den Schaden von *Imps in diesem Kampf um 1. NL Ziehe 1 Karte. NL Erschöpfen."
+    "DESCRIPTION": "${ModID}:Casts\u00a0When\u00a0Drawn NL Fügt !M! Schaden zu. Erhöht den Schaden von *Imps in diesem Kampf um !${ModID}:m2!. NL Ziehe 1 Karte. NL Erschöpfen."
   },
   "${ModID}:HighPriestessJeklik": {
     "NAME": "Hohepriesterin Jeklik",
