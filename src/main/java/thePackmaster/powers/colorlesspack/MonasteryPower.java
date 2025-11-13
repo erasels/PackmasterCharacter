@@ -47,6 +47,11 @@ public class MonasteryPower extends AbstractPackmasterPower implements NonStacka
     }
 
     @Override
+    public void onInitialApplication() {
+        updateDescription();
+    }
+
+    @Override
     public void updateDescription() {
         if (amount > 0 && amount < 4) {
             description = DESCRIPTIONS[amount - 1];
