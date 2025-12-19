@@ -1,5 +1,6 @@
 package thePackmaster.cards.prismaticpack;
 
+import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
@@ -20,7 +21,8 @@ public class PrismaticUtil {
             boolean isValidType = card.type == cardType || (cardType == null && card.type != AbstractCard.CardType.STATUS && card.type != AbstractCard.CardType.CURSE);
             boolean isUnlocked = Settings.treatEverythingAsUnlocked() || !UnlockTracker.isCardLocked(card.cardID);
             boolean isNotHealing = !card.hasTag(AbstractCard.CardTags.HEALING);
-            if (isDifferentColor && isValidRarity && isValidType && isUnlocked && isNotHealing) {
+            boolean inNormalPools = !card.getClass().isAnnotationPresent(NoPools.class);
+            if (isDifferentColor && isValidRarity && isValidType && isUnlocked && isNotHealing && inNormalPools) {
                 validCards.addToTop(card);
             }
         }

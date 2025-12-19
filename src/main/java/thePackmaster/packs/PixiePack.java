@@ -1,5 +1,6 @@
 package thePackmaster.packs;
 
+import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -51,7 +52,8 @@ public class PixiePack extends AbstractCardPack {
             if (isForeign(C)
                     && (C.rarity == AbstractCard.CardRarity.COMMON || C.rarity == AbstractCard.CardRarity.UNCOMMON || C.rarity == AbstractCard.CardRarity.RARE)
                     && (!C.hasTag(AbstractCard.CardTags.HEALING))
-                    && (C.type != AbstractCard.CardType.STATUS && C.type != AbstractCard.CardType.CURSE)) {
+                    && (C.type != AbstractCard.CardType.STATUS && C.type != AbstractCard.CardType.CURSE)
+                    && (!C.getClass().isAnnotationPresent(NoPools.class))) {
                 int amt = 4;
                 if (C.rarity == AbstractCard.CardRarity.UNCOMMON) amt = 2;
                 if (C.rarity == AbstractCard.CardRarity.RARE) amt = 1;
