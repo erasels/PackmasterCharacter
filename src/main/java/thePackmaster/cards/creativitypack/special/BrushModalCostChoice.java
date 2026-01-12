@@ -1,6 +1,7 @@
 package thePackmaster.cards.creativitypack.special;
 
 import basemod.AutoAdd;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -55,5 +56,10 @@ public class BrushModalCostChoice extends AbstractCreativityCard {
 
     @Override
     public void upp() {
+    }
+
+    @Override
+    public AbstractCard makeCopy() {
+        return new BrushModalCostChoice(this.cost, this.type);
     }
 }
