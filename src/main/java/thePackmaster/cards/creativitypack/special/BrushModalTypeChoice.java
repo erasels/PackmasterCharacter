@@ -75,4 +75,9 @@ public class BrushModalTypeChoice extends AbstractCreativityCard {
     @Override
     public void upp() {
     }
+
+    @Override
+    public AbstractCard makeCopy() {
+        return new BrushModalTypeChoice(this.type);
+    }
 }
